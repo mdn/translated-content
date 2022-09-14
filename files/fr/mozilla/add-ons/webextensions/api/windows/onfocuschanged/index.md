@@ -36,7 +36,7 @@ Les événements ont trois événements :
 - `hasListener(listener)`
   - : Vérifiez si un auditeur est enregistré pour cet événement. Renvoie **vrai** si elle écoute, **faux** sinon..
 
-## syntaxe addListener
+## Syntaxe addListener
 
 ### Paramètres
 

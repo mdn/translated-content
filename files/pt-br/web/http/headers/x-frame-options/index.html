@@ -14,7 +14,7 @@ translation_of: Web/HTTP/Headers/X-Frame-Options
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>O cabeçalho de resposta <a href="/en-US/docs/Web/HTTP">HTTP</a> <strong><code>X-Frame-Options</code></strong> pode ser usado para indicar se o navegador deve ou não renderizar a página em um {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} ou {{HTMLElement("object")}}. Sites podem usar isso para evitar ataques <em><a href="/en-US/docs/Web/Security/Types_of_attacks#Click-jacking">click-jacking</a></em>, assegurando que seus conteúdos não sejam embebedados em outros sites.</p>
+<p>O cabeçalho de resposta <a href="/en-US/docs/Web/HTTP">HTTP</a> <strong><code>X-Frame-Options</code></strong> pode ser usado para indicar se o navegador deve ou não renderizar a página em um {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} ou {{HTMLElement("object")}}. Sites podem usar isso para evitar ataques <em><a href="/en-US/docs/Web/Security/Types_of_attacks#Click-jacking">click-jacking</a></em>, assegurando que seus conteúdos não sejam embebedados em outros sites.</p>
 
 <p>A segurança adicionada é provida somente se o usuário acessando o documento está usando o navegador que suporte <code>X-Frame-Options</code>.</p>
 
@@ -59,7 +59,7 @@ X-Frame-Options: SAMEORIGIN
 <h2 id="Exemplos">Exemplos</h2>
 
 <div class="note">
-<p><strong>Nota:</strong> Colocar X-Frame-Options dentro de um elemento {{HTMLElement("meta")}} é inútil! Por enquanto, <code>&lt;meta http-equiv="X-Frame-Options" content="deny"&gt;</code> não tem nenhum efeito. Não o utilize!  <code>X-Frame-Options</code> funciona somenete colocando a configuração através do cabeçalho HTTP, como nos exemplos abaixo.</p>
+<p><strong>Nota:</strong> Colocar X-Frame-Options dentro de um elemento {{HTMLElement("meta")}} é inútil! Por enquanto, <code>&lt;meta http-equiv="X-Frame-Options" content="deny"&gt;</code> não tem nenhum efeito. Não o utilize!  <code>X-Frame-Options</code> funciona somenete colocando a configuração através do cabeçalho HTTP, como nos exemplos abaixo.</p>
 </div>
 
 <h3 id="Configurando_o_Apache">Configurando o Apache</h3>

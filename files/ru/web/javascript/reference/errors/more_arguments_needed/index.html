@@ -22,11 +22,11 @@ TypeError: Object.defineProperties requires more than 0 arguments
 
 <h2 id="Что_пошло_не_так">Что пошло не так?</h2>
 
-<p>Ошибка в вызове функции. Необходимо передать больше аргументов.</p>
+<p>Ошибка в вызове функции. Необходимо передать больше аргументов.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
-<p>Метод {{jsxref("Object.create()")}} требует хотя бы один аргумент, а {{jsxref("Object.setPrototypeOf()")}} минимум двух:</p>
+<p>Метод {{jsxref("Object.create()")}} требует хотя бы один аргумент, а {{jsxref("Object.setPrototypeOf()")}} минимум двух:</p>
 
 <pre class="brush: js example-bad">var obj = Object.create();
 // TypeError: Object.create requires more than 0 arguments
@@ -35,7 +35,7 @@ var obj = Object.setPrototypeOf({});
 // TypeError: Object.setPrototypeOf requires more than 1 argument
 </pre>
 
-<p>Вы можете исправить это, установив {{jsxref("null")}} в качестве прототипа, например:</p>
+<p>Вы можете исправить это, установив {{jsxref("null")}} в качестве прототипа, например:</p>
 
 <pre class="brush: js example-good">var obj = Object.create(null);
 

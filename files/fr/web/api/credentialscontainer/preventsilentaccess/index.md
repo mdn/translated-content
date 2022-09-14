@@ -19,7 +19,9 @@ Dans des versions antérieures de la spécification, cette méthode était intit
 
 ## Syntaxe
 
-    var Promise = CredentialsContainer.preventSilentAccess()
+```js
+var Promise = CredentialsContainer.preventSilentAccess()
+```
 
 ### Paramètres
 
@@ -31,10 +33,8 @@ Une promesse ({{jsxref("Promise")}}) vide.
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | État                                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('Credential Management','#dom-credentialscontainer-preventsilentaccess','preventSilentAccess()')}} | {{Spec2('Credential Management')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CredentialsContainer.preventSilentAccess")}}
+{{Compat}}

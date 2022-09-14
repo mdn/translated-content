@@ -1,13 +1,6 @@
 ---
 title: シャドウ DOM の使用
 slug: Web/Web_Components/Using_shadow_DOM
-tags:
-  - API
-  - DOM
-  - ガイド
-  - ウェブコンポーネント
-  - シャドウ DOM
-translation_of: Web/Web_Components/Using_shadow_DOM
 ---
 {{DefaultAPISidebar("Web Components")}}
 
@@ -147,7 +140,7 @@ icon.appendChild(img);
 
 ### シャドウ DOM のスタイル付け
 
-<p class="brush: js">そのあと、 {{htmlelement("style")}} 要素を作り CSS でスタイルを付けます。</p>
+<p class="brush: js">そのあと、 {{htmlelement("style")}} 要素を作り CSS でスタイルを付けます。</p>
 
 ```js
 // CSS を生成してシャドウ DOM に適用

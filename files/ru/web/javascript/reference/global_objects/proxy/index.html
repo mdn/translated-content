@@ -10,7 +10,7 @@ tags:
   - Прокси
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
 ---
-<div><font><font>Объект </font></font><code>Proxy</code><font><font> позволяет создать прокси</font><font> для другого объекта, может перехватывать и переопределить основные операции для данного объекта.</font></font></div>
+<div><font><font>Объект </font></font><code>Proxy</code><font><font> позволяет создать прокси</font><font> для другого объекта, может перехватывать и переопределить основные операции для данного объекта.</font></font></div>
 
 <h2 id="Введение">Введение</h2>
 
@@ -66,7 +66,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
    <td><code>Object.getOwnPropertyDescriptor(proxy, name)</code></td>
    <td><code><strong>getOwnPropertyDescriptor</strong><br>
     function(target, name) -&gt; PropertyDescriptor | undefined</code></td>
-   <td>Должен возвращать верный объект-описание свойства или <code>undefined</code>, чтобы показать, что свойство с именем <code>name</code> существует в эмулируемом объекте.</td>
+   <td>Должен возвращать верный объект-описание свойства или <code>undefined</code>, чтобы показать, что свойство с именем <code>name</code> существует в эмулируемом объекте.</td>
   </tr>
   <tr>
    <td>
@@ -80,12 +80,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
   <tr>
    <td><code>Object.defineProperty(proxy,name,pd)</code></td>
    <td><code><strong>defineProperty</strong> function(target, name, propertyDescriptor) -&gt; any</code></td>
-   <td>Задаёт новое свойство, атрибуты которого определяются предоставленным <code>propertyDescriptor</code>. Возвращаемое значение метода игнорируется.</td>
+   <td>Задаёт новое свойство, атрибуты которого определяются предоставленным <code>propertyDescriptor</code>. Возвращаемое значение метода игнорируется.</td>
   </tr>
   <tr>
    <td><code>delete proxy.name</code></td>
    <td><code><strong>deleteProperty</strong> function(target, name) -&gt; boolean</code></td>
-   <td>Удаляет именованное свойство из прокси. Возвращает <code>true</code> в случае успешного удаления свойства <code>name</code>.</td>
+   <td>Удаляет именованное свойство из прокси. Возвращает <code>true</code> в случае успешного удаления свойства <code>name</code>.</td>
   </tr>
   <tr>
    <td><code>Object.preventExtensions(proxy)</code></td>
@@ -104,7 +104,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
     <p><code>receiver.name</code> (if <code>receiver</code> inherits from a proxy and does not override <code>name</code>)</p>
    </td>
    <td><code><strong>get</strong> function(target, name, receiver) -&gt; any</code></td>
-   <td><code>receiver</code> — это прокси или объект, унаследованный от прокси.</td>
+   <td><code>receiver</code> — это прокси или объект, унаследованный от прокси.</td>
   </tr>
   <tr>
    <td>
@@ -113,7 +113,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
     <p><code>receiver.name = val</code> (if <code>receiver</code> inherits from a proxy and does not override <code>name</code>)</p>
    </td>
    <td><code><strong>set</strong> function(target, name, val, receiver) -&gt; boolean</code></td>
-   <td><code style="font-style: normal;">receiver</code> — это прокси или объект, унаследованный от прокси.</td>
+   <td><code style="font-style: normal;">receiver</code> — это прокси или объект, унаследованный от прокси.</td>
   </tr>
   <tr>
    <td>
@@ -122,26 +122,26 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
      proxy.call(thisValue, ...args)</code></p>
    </td>
    <td><code><strong>apply</strong> function(target, thisValue, args) -&gt; any</code></td>
-   <td><code>target</code> должен быть функцией.</td>
+   <td><code>target</code> должен быть функцией.</td>
   </tr>
   <tr>
    <td><code>new proxy(...args)</code></td>
    <td><code><strong>construct</strong> function(target, args) -&gt; object</code></td>
-   <td><code>target</code> должен быть функцией.</td>
+   <td><code>target</code> должен быть функцией.</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Инварианты">Инварианты</h2>
 
-<p>Несмотря на то, что прокси предоставляют много возможностей пользователям, некоторые операции не перехватываются для сохранения постоянства языка:</p>
+<p>Несмотря на то, что прокси предоставляют много возможностей пользователям, некоторые операции не перехватываются для сохранения постоянства языка:</p>
 
 <ul>
- <li>Простой и строгий оператор равенства (<code>==</code>, <code>===</code>) не перехватывается. <code>p1 === p2</code> равны, только если <code>p1</code> и <code>p2</code> ссылаются на один и тот же прокси.</li>
- <li>Текущая реализация <code>Object.getPrototypeOf(proxy)</code> всегда возвращает <code>Object.getPrototypeOf(target)</code>, потому что в ES2015 перехватчик getPrototypeOf пока не реализован.</li>
- <li><code>typeof proxy</code> всегда возвращает  <code>typeof target</code>. В частности, <code>proxy</code> может быть использован как функция только если <code>target </code>является функцией.</li>
- <li><code>Array.isArray(proxy)</code> всегда возвращает  <code>Array.isArray(target)</code>.</li>
- <li><code>Object.prototype.toString.call(proxy)</code> всегда возвращает <code>Object.prototype.toString.call(target)</code>, потому что в  ES2015 перехватчик Symbol.toStringTag пока не реализован.</li>
+ <li>Простой и строгий оператор равенства (<code>==</code>, <code>===</code>) не перехватывается. <code>p1 === p2</code> равны, только если <code>p1</code> и <code>p2</code> ссылаются на один и тот же прокси.</li>
+ <li>Текущая реализация <code>Object.getPrototypeOf(proxy)</code> всегда возвращает <code>Object.getPrototypeOf(target)</code>, потому что в ES2015 перехватчик getPrototypeOf пока не реализован.</li>
+ <li><code>typeof proxy</code> всегда возвращает  <code>typeof target</code>. В частности, <code>proxy</code> может быть использован как функция только если <code>target </code>является функцией.</li>
+ <li><code>Array.isArray(proxy)</code> всегда возвращает  <code>Array.isArray(target)</code>.</li>
+ <li><code>Object.prototype.toString.call(proxy)</code> всегда возвращает <code>Object.prototype.toString.call(target)</code>, потому что в  ES2015 перехватчик Symbol.toStringTag пока не реализован.</li>
 </ul>
 
 <h2 id="Примеры">Примеры</h2>
@@ -180,7 +180,7 @@ console.log(target.a); // 37. Операция была успешно пере�
 
 <h3 id="Проверка">Проверка</h3>
 
-<p>При помощи <code>Proxy</code> вы можете легко проверять передаваемые объекту значения:</p>
+<p>При помощи <code>Proxy</code> вы можете легко проверять передаваемые объекту значения:</p>
 
 <pre class="brush: js">let validator = {
   set: function(obj, prop, value) {
@@ -214,38 +214,38 @@ person.age = 300; // Вызовет исключение
 <p>Функция прокси может легко дополнить конструктор новым:</p>
 
 <pre class="brush: js">function extend(sup, base) {
-    var descriptor = Object.getOwnPropertyDescriptor(
-        base.prototype, 'constructor',
-    );
+    var descriptor = Object.getOwnPropertyDescriptor(
+        base.prototype, 'constructor',
+    );
 
-    const prototype = {...base.prototype}
+    const prototype = {...base.prototype}
 
-    base.prototype = Object.create(sup.prototype);
-    base.prototype = Object.assign(base.prototype, prototype);
+    base.prototype = Object.create(sup.prototype);
+    base.prototype = Object.assign(base.prototype, prototype);
 
-    var handler = {
-        construct: function(target, args) {
-            var obj = Object.create(base.prototype);
-            this.apply(target, obj, args);
-            return obj;
-        },
-        apply: function(target, that, args) {
-            sup.apply(that, args);
-            base.apply(that, args);
-        },
-    };
-    var proxy = new Proxy(base, handler);
-    descriptor.value = proxy;
-    Object.defineProperty(base.prototype, 'constructor', descriptor);
-    return proxy;
+    var handler = {
+        construct: function(target, args) {
+            var obj = Object.create(base.prototype);
+            this.apply(target, obj, args);
+            return obj;
+        },
+        apply: function(target, that, args) {
+            sup.apply(that, args);
+            base.apply(that, args);
+        },
+    };
+    var proxy = new Proxy(base, handler);
+    descriptor.value = proxy;
+    Object.defineProperty(base.prototype, 'constructor', descriptor);
+    return proxy;
 }
 
 var Person = function(name) {
-    this.name = name;
+    this.name = name;
 };
 
 var Boy = extend(Person, function(name, age) {
-    this.age = age;
+    this.age = age;
 });
 
 Boy.prototype.sex = 'M';
@@ -256,7 +256,7 @@ console.log(Peter.name); // "Peter"
 console.log(Peter.age); // 13
 </pre>
 
-<h3 id="Манипуляция_DOM_элементами">Манипуляция<span style="font-size: 1.71428571428571rem;"> DOM </span><span style="font-size: 1.71428571428571rem;">элементами</span></h3>
+<h3 id="Манипуляция_DOM_элементами">Манипуляция<span style="font-size: 1.71428571428571rem;"> DOM </span><span style="font-size: 1.71428571428571rem;">элементами</span></h3>
 
 <p>Иногда возникает необходимость переключить атрибут или имя класса у двух разных элементов:</p>
 
@@ -291,7 +291,7 @@ console.log(i2.getAttribute('aria-selected')); // 'true'
 
 <h3 id="Изменение_значений_и_дополнительные_свойства">Изменение значений и дополнительные свойства</h3>
 
-<p>Прокси объект <code>products</code> проверяет передаваемые значения и преобразует их в массив в случае необходимости. Объект также поддерживает дополнительное свойство <code>latestBrowser</code> на чтение и запись.</p>
+<p>Прокси объект <code>products</code> проверяет передаваемые значения и преобразует их в массив в случае необходимости. Объект также поддерживает дополнительное свойство <code>latestBrowser</code> на чтение и запись.</p>
 
 <pre class="brush: js">let products = new Proxy({
   browsers: ['Internet Explorer', 'Netscape']
@@ -334,7 +334,7 @@ console.log(products.latestBrowser); // 'Chrome'
 
 <h3 id="Поиск_элемента_массива_по_его_свойству">Поиск элемента массива по его свойству</h3>
 
-<p>Данный прокси расширяет массив дополнительными возможностями. Как вы видите, вы можете гибко "задавать" свойства без использования <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineProperties"><code>Object.defineProperties</code></a>. Данный пример также может быть использован для поиска строки таблицы по её ячейке. В этом случае целью будет <a href="/en-US/docs/DOM/table.rows"><code>table.rows</code></a>.</p>
+<p>Данный прокси расширяет массив дополнительными возможностями. Как вы видите, вы можете гибко "задавать" свойства без использования <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineProperties"><code>Object.defineProperties</code></a>. Данный пример также может быть использован для поиска строки таблицы по её ячейке. В этом случае целью будет <a href="/en-US/docs/DOM/table.rows"><code>table.rows</code></a>.</p>
 
 <pre class="brush: js">let products = new Proxy([
   { name: 'Firefox', type: 'browser' },
@@ -395,71 +395,71 @@ console.log(products.number); // 3
 
 <h3 id="Пример_использования_всех_перехватчиков">Пример использования всех перехватчиков</h3>
 
-<p>В данном примере, использующем все виды перехватчиков, мы попытаемся проксировать <em>не нативный</em> объект, который частично приспособлен для этого - <code>docCookies,</code> созданном в разделе <a href="https://developer.mozilla.org/en-US/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support" title="https://developer.mozilla.org/en-US/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support">"little framework" и опубликованном на странице <code>document.cookie</code></a>.</p>
+<p>В данном примере, использующем все виды перехватчиков, мы попытаемся проксировать <em>не нативный</em> объект, который частично приспособлен для этого - <code>docCookies,</code> созданном в разделе <a href="https://developer.mozilla.org/en-US/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support" title="https://developer.mozilla.org/en-US/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support">"little framework" и опубликованном на странице <code>document.cookie</code></a>.</p>
 
 <pre class="brush: js">/*
   var docCookies = ... получить объект "docCookies" можно здесь:
-  https://developer.mozilla.org/en-US/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support
+  https://developer.mozilla.org/en-US/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support
 */
 
 var docCookies = new Proxy(docCookies, {
-  "get": function (oTarget, sKey) {
-    return oTarget[sKey] || oTarget.getItem(sKey) || undefined;
-  },
-  "set": function (oTarget, sKey, vValue) {
-    if (sKey in oTarget) { return false; }
-    return oTarget.setItem(sKey, vValue);
-  },
-  "deleteProperty": function (oTarget, sKey) {
-    if (sKey in oTarget) { return false; }
-    return oTarget.removeItem(sKey);
-  },
-  "enumerate": function (oTarget, sKey) {
-    return oTarget.keys();
-  },
-  "iterate": function (oTarget, sKey) {
-    return oTarget.keys();
-  },
-  "ownKeys": function (oTarget, sKey) {
-    return oTarget.keys();
-  },
-  "has": function (oTarget, sKey) {
-    return sKey in oTarget || oTarget.hasItem(sKey);
-  },
-  "hasOwn": function (oTarget, sKey) {
-    return oTarget.hasItem(sKey);
-  },
-  "defineProperty": function (oTarget, sKey, oDesc) {
-    if (oDesc &amp;&amp; "value" in oDesc) { oTarget.setItem(sKey, oDesc.value); }
-    return oTarget;
-  },
-  "getPropertyNames": function (oTarget) {
-    return Object.getPropertyNames(oTarget).concat(oTarget.keys());
-  },
-  "getOwnPropertyNames": function (oTarget) {
-    return Object.getOwnPropertyNames(oTarget).concat(oTarget.keys());
-  },
-  "getPropertyDescriptor": function (oTarget, sKey) {
-    var vValue = oTarget[sKey] || oTarget.getItem(sKey)
-    return vValue ? {
-      "value": vValue,
-      "writable": true,
-      "enumerable": true,
-      "configurable": false
-    } : undefined;
-  },
-  "getOwnPropertyDescriptor": function (oTarget, sKey) {
-    var vValue = oTarget.getItem(sKey);
-    return vValue ? {
-      "value": vValue,
-      "writable": true,
-      "enumerable": true,
-      "configurable": false
-    } : undefined;
-  },
-  "fix":  function (oTarget) {
-    return "not implemented yet!";
-  },
+  "get": function (oTarget, sKey) {
+    return oTarget[sKey] || oTarget.getItem(sKey) || undefined;
+  },
+  "set": function (oTarget, sKey, vValue) {
+    if (sKey in oTarget) { return false; }
+    return oTarget.setItem(sKey, vValue);
+  },
+  "deleteProperty": function (oTarget, sKey) {
+    if (sKey in oTarget) { return false; }
+    return oTarget.removeItem(sKey);
+  },
+  "enumerate": function (oTarget, sKey) {
+    return oTarget.keys();
+  },
+  "iterate": function (oTarget, sKey) {
+    return oTarget.keys();
+  },
+  "ownKeys": function (oTarget, sKey) {
+    return oTarget.keys();
+  },
+  "has": function (oTarget, sKey) {
+    return sKey in oTarget || oTarget.hasItem(sKey);
+  },
+  "hasOwn": function (oTarget, sKey) {
+    return oTarget.hasItem(sKey);
+  },
+  "defineProperty": function (oTarget, sKey, oDesc) {
+    if (oDesc &amp;&amp; "value" in oDesc) { oTarget.setItem(sKey, oDesc.value); }
+    return oTarget;
+  },
+  "getPropertyNames": function (oTarget) {
+    return Object.getPropertyNames(oTarget).concat(oTarget.keys());
+  },
+  "getOwnPropertyNames": function (oTarget) {
+    return Object.getOwnPropertyNames(oTarget).concat(oTarget.keys());
+  },
+  "getPropertyDescriptor": function (oTarget, sKey) {
+    var vValue = oTarget[sKey] || oTarget.getItem(sKey)
+    return vValue ? {
+      "value": vValue,
+      "writable": true,
+      "enumerable": true,
+      "configurable": false
+    } : undefined;
+  },
+  "getOwnPropertyDescriptor": function (oTarget, sKey) {
+    var vValue = oTarget.getItem(sKey);
+    return vValue ? {
+      "value": vValue,
+      "writable": true,
+      "enumerable": true,
+      "configurable": false
+    } : undefined;
+  },
+  "fix":  function (oTarget) {
+    return "not implemented yet!";
+  },
 });
 
 /* Проверка cookies */
@@ -474,12 +474,12 @@ alert(docCookies.my_cookie1);</pre>
 
 <ul>
  <li><a class="external" href="http://jsconf.eu/2010/speaker/be_proxy_objects.html">"Proxies are awesome" презентация Brendan Eich на JSConf</a> (<a class="external" href="http://www.slideshare.net/BrendanEich/metaprog-5303821">слайды</a>)</li>
- <li><a class="external" href="http://wiki.ecmascript.org/doku.php?id=harmony:proxies">Страница предложения ECMAScript Harmony Proxy</a> и <a class="external" href="http://wiki.ecmascript.org/doku.php?id=harmony:proxies_semantics">страница ECMAScript Harmony proxy semantics</a></li>
+ <li><a class="external" href="http://wiki.ecmascript.org/doku.php?id=harmony:proxies">Страница предложения ECMAScript Harmony Proxy</a> и <a class="external" href="http://wiki.ecmascript.org/doku.php?id=harmony:proxies_semantics">страница ECMAScript Harmony proxy semantics</a></li>
  <li><a class="external" href="http://soft.vub.ac.be/~tvcutsem/proxies/">Руководство по прокси</a></li>
  <li><a href="/en-US/docs/JavaScript/Old_Proxy_API" title="/en-US/docs/JavaScript/Old_Proxy_API">Старая страница Proxy API</a></li>
- <li><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/watch"><code>Object.watch</code></a> - не стандартная возможность, поддерживается только в движке Gecko.</li>
+ <li><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/watch"><code>Object.watch</code></a> - не стандартная возможность, поддерживается только в движке Gecko.</li>
 </ul>
 
 <h2 id="Лицензионные_примечания">Лицензионные примечания</h2>
 
-<p>Некоторое содержимое (текст, примеры) данной страницы было скопировано или адаптировано со страниц <a class="external" href="http://wiki.ecmascript.org/doku.php">вики ECMAScript</a>, имеющей лицензию <a class="external" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">CC 2.0 BY-NC-SA</a></p>
+<p>Некоторое содержимое (текст, примеры) данной страницы было скопировано или адаптировано со страниц <a class="external" href="http://wiki.ecmascript.org/doku.php">вики ECMAScript</a>, имеющей лицензию <a class="external" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">CC 2.0 BY-NC-SA</a></p>

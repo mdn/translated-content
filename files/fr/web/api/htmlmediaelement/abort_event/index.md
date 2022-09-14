@@ -56,14 +56,11 @@ video.appendChild(source);
 
 ## Spécifications
 
-| Specification                                                                                | Status                           |
-| -------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', "media.html#event-media-abort")}}             | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-abort")}} | {{Spec2('HTML5 W3C')}}     |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.HTMLMediaElement.abort_event")}}
+{{Compat}}
 
 ## Voir aussi
 

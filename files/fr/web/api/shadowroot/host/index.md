@@ -15,7 +15,9 @@ La propriété **`host`** est une propriété en lecture seule, rattachée à l'
 
 ## Syntaxe
 
-    var element = shadowRoot.host
+```js
+var element = shadowRoot.host
+```
 
 ### Valeur
 
@@ -35,10 +37,8 @@ let hostElem = shadow.host;
 
 ## Spécifications
 
-| Spécification                                                                            | État                             | Commentaires |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('DOM WHATWG','#dom-shadowroot-host','ShadowRoot.host')}} | {{Spec2('DOM WHATWG')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.ShadowRoot.host")}}
+{{Compat}}

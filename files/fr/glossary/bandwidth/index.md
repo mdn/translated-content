@@ -11,4 +11,4 @@ La bande passante est la mesure de la quantité d'informations qui peut passer d
 
 ## Pour en savoir plus
 
-- {{Interwiki("wikipedia", "Bande passante")}} sur Wikipedia
+- [Bande passante](https://fr.wikipedia.org/wiki/Bande_passante) sur Wikipédia

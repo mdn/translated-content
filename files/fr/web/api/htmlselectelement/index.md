@@ -44,7 +44,7 @@ _Cette interface hérite des propriétés de {{domxref("HTMLElement")}}, de {{do
 - {{domxref("HTMLSelectElement.validity")}} {{ReadOnlyInline}}
   - : Un {{domxref("ValidityState")}} reflétant l'état de validité dans lequel se trouve ce contrôle.
 - {{domxref("HTMLSelectElement.value")}}
-  - : Une chapine de caractères {{domxref("DOMString")}} reflétant la valeur du contrôle de formulaire. Renvoie la propriété `value` du premier élément d'option sélectionné s'il y en a un, sinon la chaîne vide.
+  - : Une chaîne de caractères {{domxref("DOMString")}} reflétant la valeur du contrôle de formulaire. Renvoie la propriété `value` du premier élément d'option sélectionné s'il y en a un, sinon la chaîne vide.
 - {{domxref("HTMLSelectElement.willValidate")}} {{ReadOnlyInline}}
   - : Un {{jsxref("Boolean")}} qui indique si le bouton est un candidat à la validation des contraintes. Il vaut `false` si des conditions l'empêchent de bénéficier de la validation par contrainte.
 
@@ -54,11 +54,11 @@ _Cette interface hérite des méthodes de {{domxref("HTMLElement")}}, et de {{do
 
 - {{domxref("HTMLSelectElement.add()")}}
   - : Ajoute un élément à la collection d'éléments `option` pour cet élément `select`.
-- {{domxref("HTMLSelectElement.blur()")}} {{obsolete_inline}}
+- {{domxref("HTMLSelectElement.blur()")}} {{deprecated_inline}}
   - : Supprime le focus d'entrée de cet élément. _Cette méthode est maintenant mise en œuvre sur {{domxref("HTMLElement")}}._.
 - {{domxref("HTMLSelectElement.checkValidity()")}}
   - : Vérifie si l'élément a des contraintes et s'il les satisfait. Si l'élément ne respecte pas ses contraintes, le navigateur déclenche un événement {{domxref("HTMLInputElement/invalid_event", "invalid")}} annulable sur l'élément (et retourne `false`).
-- {{domxref("HTMLSelectElement.focus()")}} {{obsolete_inline}}
+- {{domxref("HTMLSelectElement.focus()")}} {{deprecated_inline}}
   - : Donne le focus d'entrée à cet élément. _Cette méthode est maintenant mise en œuvre sur {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLSelectElement.item()")}}
   - : Obtient un élément de la collection d'options de l'élément {{HTMLElement("select")}}. Vous pouvez également accéder à un élément en spécifiant l'index entre des parenthèses ou des crochets de style tableau, sans appeler cette méthode explicitement.
@@ -104,16 +104,11 @@ Une meilleure façon de suivre les modifications apportées à la sélection de 
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire                                                                                                                                                                                                                                                                                                                                         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#htmlselectelement', 'HTMLSelectElement')}}             | {{Spec2('HTML WHATWG')}} | Ajoute la propriété `autocomplete` et la méthode `reportValidity()`.                                                                                                                                                                                                                                                                                |
-| {{SpecName('HTML5 W3C', 'forms.html#htmlselectelement', 'HTMLSelectElement')}} | {{Spec2('HTML5 W3C')}}     | Ajoute les propriétés `autofocus`, `form`, `required`, `labels`, `selectedOptions`, `willValidate`, `validity` et `validationMessage`. La propriété `tabindex` et les méthodes `blur()` et `focus()` ont été déplacées vers {{domxref("HTMLElement")}}. Les méthodes `item()`, `namedItem()`, `checkValidity()` et `setCustomValidity()`. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-94282980', 'HTMLSelectElement')}}         | {{Spec2('DOM2 HTML')}}     | `options` retourne désormais un {{domxref("HTMLOptionsCollection")}}. `length` retourne désormais un `unsigned long`.                                                                                                                                                                                                                   |
-| {{SpecName('DOM1', 'level-one-html.html#ID-94282980', 'HTMLSelectElement')}}     | {{Spec2('DOM1')}}         | Définition initiale.                                                                                                                                                                                                                                                                                                                                |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLSelectElement")}}
+{{Compat}}
 
 ## Voir aussi
 

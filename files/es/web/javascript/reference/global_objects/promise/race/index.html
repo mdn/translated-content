@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/race
 ---
 <div>{{JSRef}}</div>
 
-<p>El método <code><strong>Promise.race(iterable)</strong></code> retorna una promesa que se cumplirá o no tan pronto como una de las promesas del argumento iterable se cumpla o se rechace, con el valor o razón de rechazo de ésta.</p>
+<p>El método <code><strong>Promise.race(iterable)</strong></code> retorna una promesa que se cumplirá o no tan pronto como una de las promesas del argumento iterable se cumpla o se rechace, con el valor o razón de rechazo de ésta.</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -22,7 +22,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/race
 
 <dl>
  <dt>iterable</dt>
- <dd>Un objeto iterable , como por ejemplo un {{jsxref("Array")}}. Vea <a href="/en-US/docs/Web/JavaScript/Guide/iterable">iterable</a>.</dd>
+ <dd>Un objeto iterable , como por ejemplo un {{jsxref("Array")}}. Vea <a href="/en-US/docs/Web/JavaScript/Guide/iterable">iterable</a>.</dd>
 </dl>
 
 <h3 id="Retorna">Retorna</h3>
@@ -31,51 +31,51 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/race
 
 <h2 id="Descripción">Descripción</h2>
 
-<p>La función <code>race</code> retorna una <code>Promise</code> que se comporta como tal. Se cumple o se rechaza, lo que suceda antes en alguno de sus argumentos (iterable).</p>
+<p>La función <code>race</code> retorna una <code>Promise</code> que se comporta como tal. Se cumple o se rechaza, lo que suceda antes en alguno de sus argumentos (iterable).</p>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
-<h3 id="Usando_Promise.race_–_ejemplos_con_setTimeout">Usando <code>Promise.race</code> – ejemplos con <code>setTimeout</code></h3>
+<h3 id="Usando_Promise.race_–_ejemplos_con_setTimeout">Usando <code>Promise.race</code> – ejemplos con <code>setTimeout</code></h3>
 
 <pre class="brush: js">var p1 = new Promise( (resolve, reject) =&gt; {
-    setTimeout(resolve, 500, "uno");
+    setTimeout(resolve, 500, "uno");
 });
 var p2 = new Promise( (resolve, reject) =&gt; {
-    setTimeout(resolve, 100, "dos");
+    setTimeout(resolve, 100, "dos");
 });
 
 Promise.race([p1, p2]).then( value =&gt; {
-  console.log(value); // "dos"
-  // Ambas se resuelven, pero la p2 antes.
+  console.log(value); // "dos"
+  // Ambas se resuelven, pero la p2 antes.
 });
 
-  // Ejemplo con un resolve y un reject en el mismo método race.
+  // Ejemplo con un resolve y un reject en el mismo método race.
 var p3 = new Promise( (resolve, reject) =&gt; {
-    setTimeout(resolve, 100, "tres");
+    setTimeout(resolve, 100, "tres");
 });
 var p4 = new Promise( (resolve, reject) =&gt; {
-    setTimeout(reject, 500, "cuatro");
+    setTimeout(reject, 500, "cuatro");
 });
 
 Promise.race([p3, p4]).then( value =&gt; {
-  console.log(value); // "tres"
-  // p3 es mas rápida, así que se resuelve el race
+  console.log(value); // "tres"
+  // p3 es mas rápida, así que se resuelve el race
 }, reason =&gt; {
-  // No es llamado
+  // No es llamado
 });
 
 var p5 = new Promise( (resolve, reject) =&gt; {
-    setTimeout(resolve, 500, "cinoc");
+    setTimeout(resolve, 500, "cinco");
 });
 var p6 = new Promise( (resolve, reject) =&gt; {
-    setTimeout(reject, 100, "seis");
+    setTimeout(reject, 100, "seis");
 });
 
 Promise.race([p5, p6]).then( value =&gt; {
-  // No es llamado
+  // No es llamado
 }, reason =&gt; {
-  console.log(reason); // "seis"
-  // p6 es mas rápida, así que se rechaza
+  console.log(reason); // "seis"
+  // p6 es mas rápida, así que se rechaza
 });
 </pre>
 
@@ -96,7 +96,7 @@ Promise.race([p5, p6]).then( value =&gt; {
   <tr>
    <td>{{SpecName('ESDraft', '#sec-promise.race', 'Promise.race')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

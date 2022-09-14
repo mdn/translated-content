@@ -22,77 +22,31 @@ translation_of: Web/API/Document/querySelectorAll
 
 <ul>
  <li><code>elementList</code> é uma {{ domxref("NodeList") }} não-viva (alterações no DOM não refletem na lista) de objetos {{ domxref("Element") }}.</li>
- <li><code>selectors</code> é uma <em>string</em> contendo um ou mais seletores CSS separados por vírgulas.</li>
+ <li><code>selectors</code> é uma <em>string</em> contendo um ou mais seletores CSS separados por vírgulas.</li>
 </ul>
 
-<p>A NodeList retornada irá conter todos os elementos do documento que coincidam com os seletores especificados. Se a string <code><em>selectors</em></code> conter um CSS {{ cssxref("PseudoElements") }}, o retorno será uma NodeList vazia.</p>
+<p>A NodeList retornada irá conter todos os elementos do documento que coincidam com os seletores especificados. Se a string <code><em>selectors</em></code> conter um CSS {{ cssxref("PseudoElements") }}, o retorno será uma NodeList vazia.</p>
 
 <h2 id="Example" name="Example">Exemplo</h2>
 
-<p>Esse exemplo retorna uma lista de todos os elementos <code>div</code> presentes no <code>document</code> que contenham as classes "<code>note</code>" ou "<code>alert</code>":</p>
+<p>Esse exemplo retorna uma lista de todos os elementos <code>div</code> presentes no <code>document</code> que contenham as classes "<code>note</code>" ou "<code>alert</code>":</p>
 
 <pre class="brush: js">var matches = document.querySelectorAll("div.note, div.alert");
 </pre>
 
 <h2 id="Notes" name="Notes">Notas</h2>
 
-<p>Retorna uma {{ jsxref("NodeList") }} não-viva (alterações no DOM não refletem na lista) de todos os elementos que coincidam com os seletores informados.</p>
+<p>Retorna uma {{ jsxref("NodeList") }} não-viva (alterações no DOM não refletem na lista) de todos os elementos que coincidam com os seletores informados.</p>
 
 <p>Lança uma exceção <code>SYNTAX_ERR</code> se o grupo especificado de seletores for inválido.</p>
 
-<p><code>querySelectorAll()</code> foi introduzida na WebApps API.</p>
+<p><code>querySelectorAll()</code> foi introduzida na WebApps API.</p>
 
-<p>Navegadores baseados em <em>WebKit</em> têm um <em>bug</em>: quando a string <code><em>seletores</em></code> contém um <a href="/en-US/docs/CSS/Pseudo-elements" title="/en-US/docs/CSS/Pseudo-elements">pseudo-elemento CSS</a>, a {{ jsxref("NodeList") }} retornada não esta vazia, neste caso ela contém o elemento {{ HTMLElement("html") }}.</p>
+<p>Navegadores baseados em <em>WebKit</em> têm um <em>bug</em>: quando a string <code><em>seletores</em></code> contém um <a href="/en-US/docs/CSS/Pseudo-elements" title="/en-US/docs/CSS/Pseudo-elements">pseudo-elemento CSS</a>, a {{ jsxref("NodeList") }} retornada não esta vazia, neste caso ela contém o elemento {{ HTMLElement("html") }}.</p>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Possui</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>1</td>
-   <td>3.5 (1.9.1)</td>
-   <td>8</td>
-   <td>10</td>
-   <td>3.2 (525.3)</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Possui</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>2.1</td>
-   <td>sim</td>
-   <td>9</td>
-   <td>10.0</td>
-   <td>3.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Document.querySelectorAll")}}
 
 <h2 id="Specification" name="Specification">Especificação</h2>
 

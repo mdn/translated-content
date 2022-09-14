@@ -1,17 +1,6 @@
 ---
 title: Intl.DateTimeFormat.prototype.formatRange()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange
-tags:
-  - DateTimeFormat
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Intl.DateTimeFormat.formatRange
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange
 ---
 {{JSRef}}
 
@@ -19,7 +8,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/form
 
 {{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-formatrange.html",
   "taller")}}
-
 
 ## 構文
 

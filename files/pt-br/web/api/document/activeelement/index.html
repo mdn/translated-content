@@ -15,15 +15,15 @@ original_slug: Web/API/DocumentOrShadowRoot/activeElement
 
 <p>Retorna o {{ domxref("Element", "elemento") }} atualmente em foco, ou seja, o elemento que receberá os eventos do teclado caso o usuário digite algo. Esse atributo é somente-leitura.</p>
 
-<p>Geralmente retorna um {{ HTMLElement("input") }} ou {{ HTMLElement("textarea") }}, caso esteja com uma seleção de texto ativa. Caso esteja, pode obter mais informações sobre a seleção utilizando as propriedades <code>selectionStart</code> e <code>selectionEnd</code>. Caso o elemento em foco seja um {{ HTMLElement("select") }}(menu) ou {{ HTMLElement("input") }} do tipo <code>button</code>, <code>checkbox</code> ou <code>radio</code>.</p>
+<p>Geralmente retorna um {{ HTMLElement("input") }} ou {{ HTMLElement("textarea") }}, caso esteja com uma seleção de texto ativa. Caso esteja, pode obter mais informações sobre a seleção utilizando as propriedades <code>selectionStart</code> e <code>selectionEnd</code>. Caso o elemento em foco seja um {{ HTMLElement("select") }}(menu) ou {{ HTMLElement("input") }} do tipo <code>button</code>, <code>checkbox</code> ou <code>radio</code>.</p>
 
-<div class="note"><strong>Note:</strong> No Mac, elementos que nao sejam campos de texto geralmente não recebem foco.</div>
+<div class="note"><strong>Note:</strong> No Mac, elementos que nao sejam campos de texto geralmente não recebem foco.</div>
 
 <p>Normalmente o usuário pode navegar entre os elementos que pode receber foco na página com o uso da tecla <code>tab</code> e ativar estes elementos com a tecla <code>espaço</code> (apertar um botão ou selecionar uma opção).</p>
 
 <p>Não confunda foco com uma seleção de texto no documento, que consiste em sua maioria de nódos de texto estáticos. Veja {{ domxref("window.getSelection()") }}.</p>
 
-<p>Quando não há nada selecionado, o <code>activeElement</code> da página é o {{ HTMLElement("body") }} ou <code>null</code>. </p>
+<p>Quando não há nada selecionado, o <code>activeElement</code> da página é o {{ HTMLElement("body") }} ou <code>null</code>. </p>
 
 <div class="note">
 <p>Este atributo é parte da seção "Em desenvolvimento" da especificação do HTML 5.</p>
@@ -99,62 +99,14 @@ Selected Text: &lt;span id="output-text"&gt;&lt;/span&gt;
   <tr>
    <td>{{SpecName('HTML WHATWG', 'interaction.html#dom-document-activeelement', 'activeElement')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>2</td>
-   <td>3.0</td>
-   <td>4 [1]</td>
-   <td>9.6</td>
-   <td>4.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1]: O IE9 tem um bug que ao tentar acessar o activeElement do {{domxref("window.parent")}} {{domxref("Document")}} de um {{HTMLElement("iframe")}}(i.e. <code>parent.document.activeElement</code>) é lançado um erro</p>
+{{Compat("api.Document.activeElement")}}
 
 <h2 id="Eventos_relacionados">Eventos relacionados</h2>
 

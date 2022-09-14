@@ -13,9 +13,11 @@ original_slug: Web/JavaScript/Reference/Erreurs/Invalid_for-in_initializer
 
 ## Message
 
-    SyntaxError: for-in loop head declarations cannot have an initializer (Edge)
-    SyntaxError: for-in loop head declarations may not have initializers (Firefox)
-    SyntaxError: for-in loop variable declaration may not have an initializer. (Chrome)
+```
+SyntaxError: for-in loop head declarations cannot have an initializer (Edge)
+SyntaxError: for-in loop head declarations may not have initializers (Firefox)
+SyntaxError: for-in loop variable declaration may not have an initializer. (Chrome)
+```
 
 ## Type d'erreur
 

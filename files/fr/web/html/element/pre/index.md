@@ -53,21 +53,23 @@ Pour légender un tel diagramme, on pourra utiliser une combinaison d'éléments
 
 ### Exemple
 
-    <figure role="img" aria-labelledby="legende-vache">
-      <pre>
-      _____________
-    < Oh la vache !>
-      -------------
-             \   ^__^
-              \  (oo)\_______
-                 (__)\       )\/\
-                     ||----w |
-                     ||     ||
-      </pre>
-      <figcaption id="legende-vache">
-        Une vache qui dit « Oh la vache ! ». La vache est illustrée avec du texte à chasse fixe.
-      </figcaption>
-    </figure>
+```html
+<figure role="img" aria-labelledby="legende-vache">
+  <pre>
+  _____________
+< Oh la vache !>
+  -------------
+         \   ^__^
+          \  (oo)\_______
+             (__)\       )\/\
+                 ||----w |
+                 ||     ||
+  </pre>
+  <figcaption id="legende-vache">
+    Une vache qui dit « Oh la vache ! ». La vache est illustrée avec du texte à chasse fixe.
+  </figcaption>
+</figure>
+```
 
 - [Comprendre les règles WCAG 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_—_Providing_text_alternatives_for_non-text_content)
 - [_H86: Providing text alternatives for ASCII art, emoticons, and leetspeak | W3C Techniques for WCAG 2.0_ (en anglais)](https://www.w3.org/TR/WCAG20-TECHS/H86.html)
@@ -125,15 +127,11 @@ Pour légender un tel diagramme, on pourra utiliser une combinaison d'éléments
 
 ## Spécifications
 
-| Spécification                                                                                                | État                             | Commentaires                                                         |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-pre-element', '&lt;pre&gt;')}}         | {{Spec2('HTML WHATWG')}} | Aucune modification majure depuis {{SpecName("HTML5 W3C")}}   |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-pre-element', '&lt;pre&gt;')}} | {{Spec2('HTML5 W3C')}}     | Aucune modification majeure depuis {{SpecName("HTML4.01")}}. |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.3.4', '&lt;pre&gt;')}}                     | {{Spec2('HTML4.01')}}     | Dépréciation de l'attribut  `cols`.                                  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.pre")}}
+{{Compat}}
 
 ## Voir aussi
 

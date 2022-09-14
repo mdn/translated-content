@@ -1,16 +1,6 @@
 ---
 title: WebAssembly.Table.prototype.get()
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get
-tags:
-  - API
-  - JavaScript
-  - メソッド
-  - Reference
-  - WebAssembly
-  - get
-  - table
-browser-compat: javascript.builtins.WebAssembly.Table.get
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get
 ---
 {{JSRef}}
 
@@ -45,9 +35,9 @@ _index_ が {{jsxref("WebAssembly/Table/length","Table.prototype.length")}} 以�
 ```js
 WebAssembly.instantiateStreaming(fetch('table.wasm'))
 .then(function(obj) {
-  var tbl = obj.instance.exports.tbl;
-  console.log(tbl.get(0)());  // 13
-  console.log(tbl.get(1)());  // 42
+  var tbl = obj.instance.exports.tbl;
+  console.log(tbl.get(0)());  // 13
+  console.log(tbl.get(1)());  // 42
 });
 ```
 

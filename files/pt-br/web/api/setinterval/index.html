@@ -6,9 +6,9 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<div> </div>
+<div> </div>
 
-<p>O método <strong><code>setInterval() </code></strong>oferecido das interfaces {{domxref("Window")}} e {{domxref("Worker")}}, repetem chamadas de funções or executam trechos de código, com um tempo de espera fixo entre cada chamada. Isso retorna um ID único para o intervalo, podendo remove-lo mais tarde apenas o chamando {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}}. Este metodo é definido pelo mixin {{domxref("WindowOrWorkerGlobalScope")}}.</p>
+<p>O método <strong><code>setInterval() </code></strong>oferecido das interfaces {{domxref("Window")}} e {{domxref("Worker")}}, repetem chamadas de funções ou executam trechos de código, com um tempo de espera fixo entre cada chamada. Isso retorna um ID único para o intervalo, podendo remove-lo mais tarde apenas o chamando {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}}. Este metodo é definido pelo mixin {{domxref("WindowOrWorkerGlobalScope")}}.</p>
 
 <h2 id="Sintaxe.">Sintaxe.</h2>
 
@@ -20,13 +20,13 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 
 <dl>
  <dt><code>func</code></dt>
- <dd>Uma {{jsxref("function")}} para ser executada a cada <code>delay</code> em milisegundos.  Não é passado nenhum parâmetro para a função, e não retorna nenhum valor esperado.</dd>
+ <dd>Uma {{jsxref("function")}} para ser executada a cada <code>delay</code> em milisegundos.  Não é passado nenhum parâmetro para a função, e não retorna nenhum valor esperado.</dd>
  <dt><code>code</code></dt>
- <dd>Uma sintaxe opcional permite você incuir uma string ao invés de uma função, no qual é compilado e executada a cada <code>delay</code> em milisegundos. Esta sintaxe <em>não é recomendada </em>pelos mesmos motivos que envolvem riscos de segurança de {{jsxref("eval", "eval()")}}.</dd>
+ <dd>Uma sintaxe opcional permite você incuir uma string ao invés de uma função, no qual é compilado e executada a cada <code>delay</code> em milisegundos. Esta sintaxe <em>não é recomendada </em>pelos mesmos motivos que envolvem riscos de segurança de {{jsxref("eval", "eval()")}}.</dd>
  <dt><code>delay</code></dt>
- <dd>O tempo, em milisegundos (milésimos de segundo), o temporizador deve atrasar entre cada execução de uma especifica função ou código. Se esse parâmetro for menos que 10, um valor de 10 é usado. Note que o atraso pode vir a ser mais longo; veja {{SectionOnPage("/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout", "Reasons for delays longer than specified")}} para exemplos.</dd>
+ <dd>O tempo, em milisegundos (milésimos de segundo), o temporizador deve atrasar entre cada execução de uma especifica função ou código. Se esse parâmetro for menos que 10, um valor de 10 é usado. Note que o atraso pode vir a ser mais longo; veja {{SectionOnPage("/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout", "Reasons for delays longer than specified")}} para exemplos.</dd>
  <dt><code>param1, ..., paramN</code> {{optional_inline}}</dt>
- <dd>Parâmetros adicionais que são passados através da função especificada pela <em>func</em> quando o temporizador expirar.</dd>
+ <dd>Parâmetros adicionais que são passados através da função especificada pela <em>func</em> quando o temporizador expirar.</dd>
 </dl>
 
 <div class="note">
@@ -35,17 +35,17 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 
 <h3 id="Return_value">Return value</h3>
 
-<p>O <code>intervalID</code> retornado é um número, non-zero valor que identifica o temporizador criado pela chamada do <code>setInterval()</code>; este valor pode ser passado para {{domxref("WindowOrWorkerGlobalScope.clearInterval()")}} afim de cancelar o timeout.</p>
+<p>O <code>intervalID</code> retornado é um número, non-zero valor que identifica o temporizador criado pela chamada do <code>setInterval()</code>; este valor pode ser passado para {{domxref("WindowOrWorkerGlobalScope.clearInterval()")}} afim de cancelar o timeout.</p>
 
-<p>Isso pode ser útil, estar ciente que o <code>setInterval()</code> e {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} compartilham o mesmo grupo de IDs, e que o <code>clearInterval()</code> e {{domxref("WindowOrWorkerGlobalScope.clearTimeout", "clearTimeout()")}} podem tecnicamente serem usados em conjunto. Para deixar claro, contudo, você deve sempre tentar evitar combina-los, afim de evitar confusão na manutenção do seu código.</p>
+<p>Isso pode ser útil, estar ciente que o <code>setInterval()</code> e {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} compartilham o mesmo grupo de IDs, e que o <code>clearInterval()</code> e {{domxref("WindowOrWorkerGlobalScope.clearTimeout", "clearTimeout()")}} podem tecnicamente serem usados em conjunto. Para deixar claro, contudo, você deve sempre tentar evitar combina-los, afim de evitar confusão na manutenção do seu código.</p>
 
-<div class="note"><strong>Note</strong>: The <code>delay</code> parameter is converted to a signed 32-bit integer. This effectively limits <code>delay</code> to 2147483647 ms, since it's specified as a signed integer in the IDL.</div>
+<div class="note"><strong>Note</strong>: The <code>delay</code> parameter is converted to a signed 32-bit integer. This effectively limits <code>delay</code> to 2147483647 ms, since it's specified as a signed integer in the IDL.</div>
 
 <h2 id="Exemplos">Exemplos</h2>
 
 <h3 id="Exemplo_1_Sintaxe_básica">Exemplo 1: Sintaxe básica</h3>
 
-<p>O seguinte exemplo mostra a sintaxe básica do <code>setInterval()</code></p>
+<p>O seguinte exemplo mostra a sintaxe básica do <code>setInterval()</code></p>
 
 <pre class="brush:js">var intervalID = window.setInterval(myCallback, 500);
 
@@ -56,7 +56,7 @@ function myCallback() {
 
 <h3 id="Exemplo_2_Alternando_duas_cores">Exemplo 2: Alternando duas cores</h3>
 
-<p>O seguinte exemplo chama a função <code>flashtext()</code> uma vez por segundo até o botão de parar ser pressionado.</p>
+<p>O seguinte exemplo chama a função <code>flashtext()</code> uma vez por segundo até o botão de parar ser pressionado.</p>
 
 <pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -95,7 +95,7 @@ function myCallback() {
 
 <h3 id="Exemplo_3_Simulação_de_máquina_de_escrever">Exemplo 3: Simulação de máquina de escrever</h3>
 
-<p>O seguinte exemplo simula uma máquina de escrever primeiro limpando e digitando lentamente o conteúdo para  <code><a href="https://developer.mozilla.org/en-US/docs/DOM/NodeList">NodeList</a></code> que corresponde a um grupo especificado de seletores.</p>
+<p>O seguinte exemplo simula uma máquina de escrever primeiro limpando e digitando lentamente o conteúdo para  <code><a href="https://developer.mozilla.org/en-US/docs/DOM/NodeList">NodeList</a></code> que corresponde a um grupo especificado de seletores.</p>
 
 <pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -258,7 +258,7 @@ Vivamus blandit massa ut metus mattis in fringilla lectus imperdiet. Proin ac an
 
 <h2 id="Argumentos_callback">Argumentos callback</h2>
 
-<p>Como já foi discutido, Internet Explorer 9 e versões anteriores não suportam passar argumentos para a função callback em ambos <code>setTimeout()</code> ou <code>setInterval()</code>. O seguinte código <strong>IE-specific</strong> demonstra um método para superar esta limitação. Para usar, apenas adicione o seguinte código no topo do seu script.</p>
+<p>Como já foi discutido, Internet Explorer 9 e versões anteriores não suportam passar argumentos para a função callback em ambos <code>setTimeout()</code> ou <code>setInterval()</code>. O seguinte código <strong>IE-specific</strong> demonstra um método para superar esta limitação. Para usar, apenas adicione o seguinte código no topo do seu script.</p>
 
 <pre class="brush:js">/*\
 |*|
@@ -303,21 +303,21 @@ if (document.all &amp;&amp; !window.setInterval.isPolyfill) {
 
 <pre class="brush:js">var intervalID = setInterval(function() { myFunc('one', 'two', 'three'); }, 1000);</pre>
 
-<p>Outra possibilidade é usar o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">function's bind</a>. Exemplo:</p>
+<p>Outra possibilidade é usar o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">function's bind</a>. Exemplo:</p>
 
 <pre class="brush:js">var intervalID = setInterval(function(arg1) {}.bind(undefined, 10), 1000);</pre>
 
-<p>{{h3_gecko_minversion("Inactive tabs", "5.0")}}</p>
+<h3>Abas inativas</h3>
 
-<p>Starting in Gecko 5.0 {{geckoRelease("5.0")}}, intervals are clamped to fire no more often than once per second in inactive tabs.</p>
+<p>Iniciado no Gecko 5.0 {{geckoRelease("5.0")}}, intervalos são fixados para disparar não mais do que uma vez por segundo em abas inativas.</p>
 
 <h2 id="O_problema_do_this">O problema do "<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a>"</h2>
 
-<p>Quando você passa um método para <code>setInterval()</code> ou qualquer outra função, ela é chamada com o valor do <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code> errado. Este problema é explicado em detalhes em <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this#As_an_object_method">JavaScript reference</a>.</p>
+<p>Quando você passa um método para <code>setInterval()</code> ou qualquer outra função, ela é chamada com o valor do <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code> errado. Este problema é explicado em detalhes em <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this#As_an_object_method">JavaScript reference</a>.</p>
 
 <h3 id="Explicação">Explicação</h3>
 
-<p>O código executado pelo <code>setInterval()</code> roda em um contexto de execução separado da função que foi chamada. Como uma consequência, o <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code> da função chamada, é setado como o objeto <code>window</code> (ou <code>global</code>), esse não é o mesmo valor do <code>this</code> para a função chamada em setTimeout. veja o seguinte exemplo (que usa <code>setTimeout()</code> ao invés de <code>setInterval()</code> - o problema segue para ambos os temporizadores)</p>
+<p>O código executado pelo <code>setInterval()</code> roda em um contexto de execução separado da função que foi chamada. Como uma consequência, o <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code> da função chamada, é setado como o objeto <code>window</code> (ou <code>global</code>), esse não é o mesmo valor do <code>this</code> para a função chamada em setTimeout. veja o seguinte exemplo (que usa <code>setTimeout()</code> ao invés de <code>setInterval()</code> - o problema segue para ambos os temporizadores)</p>
 
 <pre class="brush:js">myArray = ['zero', 'one', 'two'];
 
@@ -337,15 +337,15 @@ setTimeout.call(myArray, myArray.myMethod, 2000); // error: "NS_ERROR_XPC_BAD_OP
 setTimeout.call(myArray, myArray.myMethod, 2500, 2); // same error
 </pre>
 
-<p> </p>
+<p> </p>
 
 <p>Como você pode ver, não há maneiras de passar o objeto <code>this</code> para a função callback.</p>
 
-<p> </p>
+<p> </p>
 
 <h3 id="Uma_possível_solução">Uma possível solução</h3>
 
-<p>Um possível caminho para resolver o problema do <code>this</code>, é sobreescrever as duas funções globais nativas <code>setTimeout()</code> ou <code>setInterval()</code> com duas <em>non-native</em> que permitem sua invocação através do método <code><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/call">Function.prototype.call</a></code>. O seguinte exemplo mostra a possível substituição.</p>
+<p>Um possível caminho para resolver o problema do <code>this</code>, é sobreescrever as duas funções globais nativas <code>setTimeout()</code> ou <code>setInterval()</code> com duas <em>non-native</em> que permitem sua invocação através do método <code><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/call">Function.prototype.call</a></code>. O seguinte exemplo mostra a possível substituição.</p>
 
 <pre class="brush:js">// Enable the passage of the 'this' object through the JavaScript timers
 
@@ -365,7 +365,7 @@ window.setInterval = function (vCallback, nDelay /*, argumentToPass1, argumentTo
   } : vCallback, nDelay);
 };</pre>
 
-<div class="note">These two replacements also enable the HTML5 standard passage of arbitrary arguments to the callback functions of timers in IE. So they can be used as <em>non-standard-compliant</em> polyfills also. See the <a href="#Callback_arguments">callback arguments paragraph</a> for a <em>standard-compliant</em> polyfill.</div>
+<div class="note">These two replacements also enable the HTML5 standard passage of arbitrary arguments to the callback functions of timers in IE. So they can be used as <em>non-standard-compliant</em> polyfills also. See the <a href="#Callback_arguments">callback arguments paragraph</a> for a <em>standard-compliant</em> polyfill.</div>
 
 <p>Teste da nova implementação:</p>
 
@@ -382,13 +382,13 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2,5 s
 
 <p>Outra, mais complexa, solução para o problema do <code>this</code> é <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/setInterval$edit#A_little_framework">the following framework</a>.</p>
 
-<div class="note">JavaScript 1.8.5 introduces the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">Function.prototype.bind()</a></code> method, which lets you specify the value that should be used as <code>this</code> for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Also, ES2015 supports <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a>, with lexical this allowing us to write setInterval( () =&gt; this.myMethod) if we're inside myArray method.</div>
+<div class="note">JavaScript 1.8.5 introduces the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">Function.prototype.bind()</a></code> method, which lets you specify the value that should be used as <code>this</code> for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Also, ES2015 supports <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a>, with lexical this allowing us to write setInterval( () =&gt; this.myMethod) if we're inside myArray method.</div>
 
 <h2 id="MiniDaemon_-_A_framework_for_managing_timers">MiniDaemon - A framework for managing timers</h2>
 
-<p>In pages requiring many timers, it can often be difficult to keep track of all of the running timer events. One approach to solving this problem is to store information about the state of a timer in an object. Following is a minimal example of such an abstraction. The constructor architecture explicitly avoids the use of closures. It also offers an alternative way to pass the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> object to the callback function (see <a href="#The_.22this.22_problem">The "this" problem</a> for details). The following code is also <a href="https://github.com/madmurphy/minidaemon.js">available on GitHub</a>.</p>
+<p>In pages requiring many timers, it can often be difficult to keep track of all of the running timer events. One approach to solving this problem is to store information about the state of a timer in an object. Following is a minimal example of such an abstraction. The constructor architecture explicitly avoids the use of closures. It also offers an alternative way to pass the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> object to the callback function (see <a href="#The_.22this.22_problem">The "this" problem</a> for details). The following code is also <a href="https://github.com/madmurphy/minidaemon.js">available on GitHub</a>.</p>
 
-<div class="note">For a more complex but still modular version of it (<code><em>Daemon</em></code>) see <a href="/en-US/Add-ons/Code_snippets/Timers/Daemons">JavaScript Daemons Management</a>. This more complex version is nothing but a big and scalable collection of methods for the <code><em>Daemon</em></code> constructor. However, the <code><em>Daemon</em></code> constructor itself is nothing but a clone of <code><em>MiniDaemon</em></code> with an added support for <em>init</em> and <em>onstart</em> functions declarable during the instantiation of the <code><em>daemon</em></code>. <strong>So the <code><em>MiniDaemon</em></code> framework remains the recommended way for simple animations</strong>, because <code><em>Daemon</em></code> without its collection of methods is essentially a clone of it.</div>
+<div class="note">For a more complex but still modular version of it (<code><em>Daemon</em></code>) see <a href="/en-US/Add-ons/Code_snippets/Timers/Daemons">JavaScript Daemons Management</a>. This more complex version is nothing but a big and scalable collection of methods for the <code><em>Daemon</em></code> constructor. However, the <code><em>Daemon</em></code> constructor itself is nothing but a clone of <code><em>MiniDaemon</em></code> with an added support for <em>init</em> and <em>onstart</em> functions declarable during the instantiation of the <code><em>daemon</em></code>. <strong>So the <code><em>MiniDaemon</em></code> framework remains the recommended way for simple animations</strong>, because <code><em>Daemon</em></code> without its collection of methods is essentially a clone of it.</div>
 
 <h3 id="minidaemon.js">minidaemon.js</h3>
 
@@ -462,7 +462,7 @@ MiniDaemon.prototype.start = function (bReverse) {
 };
 </pre>
 
-<div class="note">MiniDaemon passes arguments to the callback function. If you want to work on it with browsers that natively do not support this feature, use one of the methods proposed above.</div>
+<div class="note">MiniDaemon passes arguments to the callback function. If you want to work on it with browsers that natively do not support this feature, use one of the methods proposed above.</div>
 
 <h3 id="Syntax">Syntax</h3>
 
@@ -537,10 +537,10 @@ MiniDaemon.prototype.start = function (bReverse) {
 
 &lt;body&gt;
   &lt;p&gt;
-    &lt;input type="button" onclick="fadeInOut.start(false /* optional */);" value="fade in" /&gt;
+    &lt;input type="button" onclick="fadeInOut.start(false /* optional */);" value="fade in" /&gt;
     &lt;input type="button" onclick="fadeInOut.start(true);" value="fade out"&gt;
-    &lt;input type="button" onclick="fadeInOut.pause();" value="pause" /&gt;
-  &lt;/p&gt;
+    &lt;input type="button" onclick="fadeInOut.pause();" value="pause" /&gt;
+  &lt;/p&gt;
 
   &lt;div id="sample_div"&gt;Some text here&lt;/div&gt;
 
@@ -571,7 +571,7 @@ MiniDaemon.prototype.start = function (bReverse) {
 
 <p>If there is a possibility that your logic could take longer to execute than the interval time, it is recommended that you recursively call a named function using {{domxref("WindowOrWorkerGlobalScope.setTimeout")}}. For example, if using <code>setInterval</code> to poll a remote server every 5 seconds, network latency, an unresponsive server, and a host of other issues could prevent the request from completing in its allotted time. As such, you may find yourself with queued up XHR requests that won't necessarily return in order.</p>
 
-<p>In these cases, a recursive <code>setTimeout()</code> pattern is preferred:</p>
+<p>In these cases, a recursive <code>setTimeout()</code> pattern is preferred:</p>
 
 <pre class="brush:js">(function loop(){
    setTimeout(function() {

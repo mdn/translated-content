@@ -5,9 +5,9 @@ translation_of: Web/API/Window/prompt
 ---
 <div>{{ApiRef("Window")}}</div>
 
-<div>O <span style="font-family: Consolas,Monaco,'Andale Mono',monospace;">Window.prompt()</span> exibe uma caixa de diálogo com uma mensagem opcional solicitando ao usuário a entrada de algum texto.</div>
+<div>O <span style="font-family: Consolas,Monaco,'Andale Mono',monospace;">Window.prompt()</span> exibe uma caixa de diálogo com uma mensagem opcional solicitando ao usuário a entrada de algum texto.</div>
 
-<p> </p>
+<p> </p>
 
 <h2 id="Syntax" name="Syntax">Sintaxe</h2>
 
@@ -15,9 +15,9 @@ translation_of: Web/API/Window/prompt
 </pre>
 
 <ul>
- <li><code>resultado</code> é uma cadeia de caracteres contendo o texto digitado pelo usuário, ou um valor nulo.</li>
+ <li><code>resultado</code> é uma cadeia de caracteres contendo o texto digitado pelo usuário, ou um valor nulo.</li>
  <li><code>texto</code> é uma cadeia de caracteres para exibir ao usuário. Este parâmetro é opcional e pode ser omitido se não há nada para mostrar na janela de prompt.</li>
- <li><code>valor</code> é uma cadeia de caracteres contendo o valor padrão exibido na caixa de entrada de texto. É um parâmetro opcional. Note que no Internet Explorer 7 e 8, se você não fornecer este parâmetro, a cadeia de caracteres "undefined" é o valor padrão.</li>
+ <li><code>valor</code> é uma cadeia de caracteres contendo o valor padrão exibido na caixa de entrada de texto. É um parâmetro opcional. Note que no Internet Explorer 7 e 8, se você não fornecer este parâmetro, a cadeia de caracteres "undefined" é o valor padrão.</li>
 </ul>
 
 <h2 id="Example" name="Example">Exemplo</h2>
@@ -34,7 +34,7 @@ var sign = prompt();       //  abrir uma janela de promtpt em branco
 var sign = window.prompt('Você está se sentindo com sorte'); // abrir uma janela com o texto "Você está se sentindo com sorte"
 var sign = window.prompt('Você está se sentindo com sorte', 'certamente'); // abrir uma janela com o texto "Você está se sentindo com sorte" e com o valor padrão "certamente"</pre>
 
-<p>Quando o usuário pressiona o botão OK, o texto digitado no campo de texto é retornado. Se o usuário pressionar OK sem ter digitado qualquer texto, uma cadeia de caracteres vazia é retornada. Se o usuário pressionar o botão Cancelar, esta função retornará <code>null</code>.</p>
+<p>Quando o usuário pressiona o botão OK, o texto digitado no campo de texto é retornado. Se o usuário pressionar OK sem ter digitado qualquer texto, uma cadeia de caracteres vazia é retornada. Se o usuário pressionar o botão Cancelar, esta função retornará <code>null</code>.</p>
 
 <p>{{todo("external image!")}} O prompt acima aparece da seguinte forma (no Chrome do Windows 7):</p>
 
@@ -46,9 +46,9 @@ var sign = window.prompt('Você está se sentindo com sorte', 'certamente'); // 
 
 <p><span class="comment">The following text is shared between this article, DOM:window.confirm and DOM:window.alert</span>As caixas de diálogo são janelas modais; eles impedem o usuário de acessar o resto da interface do programa até que a caixa de diálogo seja fechada. Por esta razão, você não deve abusar de qualquer função que crie uma caixa de diálogo (ou janela modal).</p>
 
-<p>Por favor, note que o resultado é uma cadeia de caracteres. Isso significa que você deve, algumas vezes, converter o valor dado pelo usuário. Por exemplo, se a resposta deve ser um número, você deve converter o valor para <code>Number:</code> <span style='background-color: #f6f6f2; font-family: "Courier New","Andale Mono",monospace; font-size: 12px; line-height: normal;'>var aNumber = Number(window.prompt("Digite um número", "")); </span></p>
+<p>Por favor, note que o resultado é uma cadeia de caracteres. Isso significa que você deve, algumas vezes, converter o valor dado pelo usuário. Por exemplo, se a resposta deve ser um número, você deve converter o valor para <code>Number:</code> <span style='background-color: #f6f6f2; font-family: "Courier New","Andale Mono",monospace; font-size: 12px; line-height: normal;'>var aNumber = Number(window.prompt("Digite um número", "")); </span></p>
 
-<p>Os códigos do <a href="/en-US/docs/Chrome" title="Chrome">Mozilla Chrome</a> (e.g. Firefox extensions) ao invés disso, devem usar os métodos da interface {{interface("nsIPromptService")}}.</p>
+<p>Os códigos do <a href="/en-US/docs/Chrome" title="Chrome">Mozilla Chrome</a> (e.g. Firefox extensions) ao invés disso, devem usar os métodos da interface <code>nsIPromptService</code>.</p>
 
 <p>No Safari, se o usuário clicar em Cancelar, a função retornará uma cadeia de caracteres vazia. Portanto, ele não diferenciará o cancelamento do usuário de uma cadeia de caracteres vazia na caixa de texto.</p>
 

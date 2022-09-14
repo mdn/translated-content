@@ -74,13 +74,9 @@ navigator.storage.estimate().then(estimate => {
 
 ## Spécifications
 
-| Spécification                    | Statut                       | Commentaire          |
-| -------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('Storage')}} | {{Spec2('Storage')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
-
-### `StorageManager`
 
 {{Compat("api.StorageManager")}}
 

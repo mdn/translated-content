@@ -1,15 +1,6 @@
 ---
 title: ServiceWorkerRegistration.updateViaCache
 slug: Web/API/ServiceWorkerRegistration/updateViaCache
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - サービスワーカー
-  - ServiceWorkerRegistration
-  - updateViaCache
-browser-compat: api.ServiceWorkerRegistration.updateViaCache
-translation_of: Web/API/ServiceWorkerRegistration/updateViaCache
 ---
 {{APIRef("Service Workers API")}}
 

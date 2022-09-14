@@ -1,15 +1,6 @@
 ---
 title: File.type
 slug: Web/API/File/type
-tags:
-  - API
-  - File API
-  - リファレンス
-  - ファイル
-  - ファイルタイプ
-  - プロパティ
-browser-compat: api.File.type
-translation_of: Web/API/File/type
 ---
 {{APIRef("File API")}}
 
@@ -37,7 +28,7 @@ function showType(fileInput) {
 
   for (var i = 0; i < files.length; i++) {
     var name = files[i].name;
-    var type = files[i].type;
+    var type = files[i].type;
     alert("Filename: " + name + " , Type: " + type);
   }
 }

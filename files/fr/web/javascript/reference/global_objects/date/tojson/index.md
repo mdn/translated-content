@@ -18,7 +18,9 @@ La méthode **`toJSON()`** renvoie une chaîne représentant l'objet {{jsxref("D
 
 ## Syntaxe
 
-    dateObj.toJSON()
+```js
+dateObj.toJSON()
+```
 
 ### Valeur de retour
 

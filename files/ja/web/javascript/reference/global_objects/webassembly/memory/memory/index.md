@@ -1,13 +1,6 @@
 ---
 title: WebAssembly.Memory() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory
-tags:
-  - コンストラクター
-  - JavaScript
-  - Reference
-  - WebAssembly
-browser-compat: javascript.builtins.WebAssembly.Memory.Memory
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory
 ---
 {{JSRef}}
 
@@ -56,12 +49,12 @@ var memory = new WebAssembly.Memory({initial:10, maximum:100});
 ```js
 WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
 .then(obj => {
-  var i32 = new Uint32Array(memory.buffer);
-  for (var i = 0; i < 10; i++) {
-    i32[i] = i;
-  }
-  var sum = obj.instance.exports.accumulate(0, 10);
-  console.log(sum);
+  var i32 = new Uint32Array(memory.buffer);
+  for (var i = 0; i < 10; i++) {
+    i32[i] = i;
+  }
+  var sum = obj.instance.exports.accumulate(0, 10);
+  console.log(sum);
 });
 ```
 

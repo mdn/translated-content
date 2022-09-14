@@ -1,11 +1,6 @@
 ---
 title: DOMTokenList.keys()
 slug: Web/API/DOMTokenList/keys
-tags:
-- メソッド
-- リファレンス
-browser-compat: api.DOMTokenList.keys
-translation_of: Web/API/DOMTokenList/keys
 ---
 {{APIRef("DOM")}}
 

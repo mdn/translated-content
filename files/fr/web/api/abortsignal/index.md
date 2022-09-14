@@ -23,7 +23,7 @@ _L'interface AbortSignal hérite des propriétés de son interface parent {{domx
 ### Gestionnaire d'évènement
 
 - {{domxref("AbortSignal.onabort")}}
-  - : appelé quand un évènement {{event("abort_(dom_abort_api)", "abort")}} est lancé, c'est-à-dire quand les requêtes DOM avec lesquelles le signal communique sont annulées.
+  - : appelé quand un évènement `abort` est lancé, c'est-à-dire quand les requêtes DOM avec lesquelles le signal communique sont annulées.
 
 ## Méthodes
 
@@ -67,13 +67,11 @@ vous pouvez trouver un exemple de travail complet sur GitHub — voir [abort-api
 
 ## Spécifications
 
-| Spécification                                                                            | Status                           | Comment             |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG', '#interface-AbortSignal', 'AbortSignal')}} | {{Spec2('DOM WHATWG')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.AbortSignal")}}
+{{Compat}}
 
 ## Voir aussi
 

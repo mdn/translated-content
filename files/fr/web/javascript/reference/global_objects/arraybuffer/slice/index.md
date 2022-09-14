@@ -18,7 +18,9 @@ La méthode **`slice()`** renvoie un nouvel `ArrayBuffer` dont le contenu est un
 
 ## Syntaxe
 
-    arraybuffer.slice(début[, fin])
+```js
+arraybuffer.slice(début[, fin])
+```
 
 ### Paramètres
 

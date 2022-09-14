@@ -1,14 +1,6 @@
 ---
 title: Object.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
-tags:
-  - JavaScript
-  - メソッド
-  - Object
-  - リファレンス
-  - ポリフィル
-browser-compat: javascript.builtins.Object.entries
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
 ---
 {{JSRef}}
 
@@ -47,14 +39,14 @@ Object.entries(obj)
 
 ```js
 if (!Object.entries) {
-  Object.entries = function( obj ){
+  Object.entries = function( obj ){
     var ownProps = Object.keys( obj ),
-        i = ownProps.length,
+        i = ownProps.length,
         resArray = new Array(i); // preallocate the Array
-    while (i--)
-      resArray[i] = [ownProps[i], obj[ownProps[i]]];
+    while (i--)
+      resArray[i] = [ownProps[i], obj[ownProps[i]]];
 
-    return resArray;
+    return resArray;
   };
 }
 ```

@@ -1,17 +1,6 @@
 ---
 title: scroll-margin
 slug: Web/CSS/scroll-margin
-tags:
-  - CSS
-  - プロパティ
-  - Reference
-  - margin
-  - recipe:css-shorthand-property
-  - scroll-margin
-  - scrollbar
-  - scrolling
-browser-compat: css.properties.scroll-margin
-translation_of: Web/CSS/scroll-margin
 ---
 {{CSSRef}}
 
@@ -123,7 +112,6 @@ scroll-margin: unset;
 ```
 
 ここで最も重要なのは `scroll-snap-align: start` で、これは左側の端 (ここでは x 軸に沿った「先頭」) をスナップ点として指定するものです。
-
 
 最後に、スクロールのマージン値を指定しますが、これは 2 番目と 3 番目の子要素に対して異なる値を指定します。
 

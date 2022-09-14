@@ -18,7 +18,9 @@ La méthode **`Promise.any()`** prend comme argument un itérable contenant des 
 
 ## Syntaxe
 
-    Promise.any(iterable);
+```js
+Promise.any(iterable);
+```
 
 ### Paramètres
 

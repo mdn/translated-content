@@ -11,7 +11,9 @@ La méthode **`setLineDash()`** de l'interface Canvas 2D API's {{domxref("Canvas
 
 ## Syntaxe
 
-    ctx.setLineDash(segments);
+```js
+ctx.setLineDash(segments);
+```
 
 ### Paramètres
 
@@ -107,21 +109,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Specification                                                                                                                                        | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-setlinedash", "CanvasRenderingContext2D.setLineDash")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
-## Compatibilité des navivgateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.setLineDash")}}
-
-## Notes spécifiques pour Gecko
-
-- Depuis Gecko 7.0 {{geckoRelease("7.0")}}, la propriété non standard et dépréciée `mozDash` a été implémentée comme liste de définition pour les pointillés. Cette propriété sera dépréciée et supprimée dans le futur, voir {{bug(931643)}}. Utilisez `setLineDash()` à la place.
-
-## Notes spécifiques pour WebKit
-
-- Dans les navigateurs à base de WebKit (e.g. Safari), la propriété non standard et dépréciée `webkitLineDash` est implémentée en plus de cette méthode. Utilisez `setLineDash()` à la place.
+{{Compat}}
 
 ## Voir aussi
 

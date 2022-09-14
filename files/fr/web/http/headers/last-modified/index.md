@@ -33,7 +33,9 @@ L'entête HTTP de réponse **`Last-Modified`** contient la date et l'heure à la
 
 ## Syntaxe
 
-    Last-Modified: <nom-jour>, <jour> <mois> <année> <heure>:<minute>:<seconde> GMT
+```
+Last-Modified: <nom-jour>, <jour> <mois> <année> <heure>:<minute>:<seconde> GMT
+```
 
 ## Directives
 
@@ -56,7 +58,9 @@ L'entête HTTP de réponse **`Last-Modified`** contient la date et l'heure à la
 
 ## Exemples
 
-    Last-Modified: Wed, 21 Oct 2015 07:28:00 GMT
+```
+Last-Modified: Wed, 21 Oct 2015 07:28:00 GMT
+```
 
 ## Spécifications
 

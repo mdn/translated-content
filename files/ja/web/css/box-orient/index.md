@@ -1,13 +1,6 @@
 ---
 title: box-orient
 slug: Web/CSS/box-orient
-tags:
-  - CSS
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.box-orient
-translation_of: Web/CSS/box-orient
 ---
 {{CSSRef}}{{Non-standard_header}}
 
@@ -89,7 +82,7 @@ div.example {
 
 ### 結果
 
-{{ EmbedLiveSample('Setting_horizontal_box_orientation', 600, 50, '', 'Web/CSS/box-orient') }}
+{{ EmbedLiveSample('Setting horizontal box orientation', '', 100) }}
 
 ## 仕様書
 

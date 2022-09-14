@@ -1,15 +1,6 @@
 ---
 title: place-items
 slug: Web/CSS/place-items
-tags:
-  - CSS
-  - CSS フレックスボックス
-  - CSS グリッドレイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.place-items
-translation_of: Web/CSS/place-items
 ---
 {{CSSRef}}
 
@@ -219,7 +210,6 @@ values.addEventListener('change', function (evt) {
 #### 結果
 
 {{EmbedLiveSample("Placing_items_in_a_flex_container", 260, 290)}}
-
 
 <h3 id="Placing_items_in_a_grid_container">グリッドコンテナーでのアイテムの配置</h3>
 

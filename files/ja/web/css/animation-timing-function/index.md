@@ -1,14 +1,6 @@
 ---
 title: animation-timing-function
 slug: Web/CSS/animation-timing-function
-tags:
-  - CSS
-  - CSS アニメーション
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.animation-timing-function
-translation_of: Web/CSS/animation-timing-function
 ---
 {{CSSRef}}
 

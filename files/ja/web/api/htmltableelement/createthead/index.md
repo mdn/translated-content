@@ -1,15 +1,6 @@
 ---
 title: HTMLTableElement.createTHead()
 slug: Web/API/HTMLTableElement/createTHead
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - メソッド
-  - NeedsSpecTable
-  - リファレンス
-browser-compat: api.HTMLTableElement.createTHead
-translation_of: Web/API/HTMLTableElement/createTHead
 ---
 {{APIRef("HTML DOM")}}
 

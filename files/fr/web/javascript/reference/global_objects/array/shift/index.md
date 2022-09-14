@@ -18,7 +18,9 @@ La méthode **`shift()`** permet de retirer le **premier** élément d'un tablea
 
 ## Syntaxe
 
-    arr.shift()
+```js
+arr.shift()
+```
 
 ### Valeur de retour
 

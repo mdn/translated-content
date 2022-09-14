@@ -1,17 +1,6 @@
 ---
 title: 分割代入
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
-tags:
-  - Destructuring
-  - 分割代入
-  - ECMAScript 2015
-  - ES6
-  - JavaScript
-  - 言語機能
-  - 階層オブジェクトと配列の分割代入
-  - 演算子
-browser-compat: javascript.operators.destructuring
-translation_of: Web/JavaScript/Reference/Operators/Destructuring_assignment
 ---
 {{jsSidebar("Operators")}}
 
@@ -336,9 +325,11 @@ drawChart({
 ```
 
 > **Note:** 上記の **`drawChart`** の関数シグネチャでは、次のようにして、分割代入の左辺に、右辺側で空のオブジェクトリテラルを代入しています。
+>
 > ```js
 > {size = 'big', coords = {x: 0, y: 0}, radius = 25} = {}
 > ```
+>
 > 右辺の代入がない関数を書くこともできます。
 > しかし、右辺の代入を取り除いた場合、関数は実行されたときに少なくともひとつの引数が提供されることを期待しますが、この形式では何も引数を指定せずに単純に **`drawChart()`** を呼び出すことができます。
 > この設計は引数を指定せずに関数を呼び出せるようにしたい場合に役に立ちますし、もう一方の形式は、オブジェクトを確実に関数に渡したい場合に役に立ちます。

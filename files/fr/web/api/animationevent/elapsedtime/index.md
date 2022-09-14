@@ -18,17 +18,17 @@ La propriété en lecture seule **`AnimationEvent.elapsedTime`** est un `float` 
 
 ## Syntaxe
 
-    temps = AnimationEvent.elapsedTime
+```js
+temps = AnimationEvent.elapsedTime
+```
 
 ## Spécifications
 
-| Spécification                                                                                                                | Statut                                   | Commentaire         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{ SpecName('CSS3 Animations', '#AnimationEvent-elapsedTime', 'AnimationEvent.elapsedTime') }} | {{ Spec2('CSS3 Animations')}} | Première définition |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.AnimationEvent.elapsedTime")}}
+{{Compat}}
 
 ## Voir aussi
 

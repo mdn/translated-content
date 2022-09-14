@@ -13,7 +13,7 @@ translation_of: Web/API/USB/getDevices
 ---
 <p>{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}</p>
 
-<p>Метод<strong> <code>getDevices</code> </strong>интерфейса {{DOMxRef("USB")}} возвращает {{JSxRef("Promise")}}, который разрешается с массивом {{DOMxRef("USBDevice")}} объектов сопряжённых подключённых устройств. Для информации о сопряжённых устройствах, смотрите {{DOMxRef("USB.requestDevice()")}}.</p>
+<p>Метод<strong> <code>getDevices</code> </strong>интерфейса {{DOMxRef("USB")}} возвращает {{JSxRef("Promise")}}, который разрешается с массивом {{DOMxRef("USBDevice")}} объектов сопряжённых подключённых устройств. Для информации о сопряжённых устройствах, смотрите {{DOMxRef("USB.requestDevice()")}}.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -29,14 +29,14 @@ translation_of: Web/API/USB/getDevices
 
 <h2 id="Пример">Пример</h2>
 
-<p>В следующем примере имена продуктов и серийные номера сопряжённых устройств выводятся в консоль. Для информации о сопряжённых устройствах, смотрите {{DOMxRef("USB.requestDevice","USB.requestDevice()")}}.</p>
+<p>В следующем примере имена продуктов и серийные номера сопряжённых устройств выводятся в консоль. Для информации о сопряжённых устройствах, смотрите {{DOMxRef("USB.requestDevice","USB.requestDevice()")}}.</p>
 
 <pre class="brush: js">navigator.usb.getDevices()
 .then(devices =&gt; {
-  console.log("Total devices: " + devices.length);
-  devices.forEach(device =&gt; {
-    console.log("Product name: " + device.productName + ", serial number " + device.serialNumber);
-  });
+  console.log("Total devices: " + devices.length);
+  devices.forEach(device =&gt; {
+    console.log("Product name: " + device.productName + ", serial number " + device.serialNumber);
+  });
 });</pre>
 
 <h2 id="Спецификация">Спецификация</h2>

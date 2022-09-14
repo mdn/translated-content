@@ -12,7 +12,9 @@ La fonction `element-available` détermine si un élément est disponible et ret
 
 ### Syntaxe
 
-    element-available( QName )
+```
+element-available( QName )
+```
 
 ### Arguments
 

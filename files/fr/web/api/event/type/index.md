@@ -19,7 +19,9 @@ Pour une liste des types d'événements disponibles, aller voir la page [Référ
 
 ## Syntaxe
 
-    event.type
+```js
+event.type
+```
 
 ## Exemples
 
@@ -74,11 +76,8 @@ Pour une liste des types d'événements disponibles, aller voir la page [Référ
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('DOM WHATWG', '#dom-event-type', 'Event.type')}}     | {{ Spec2('DOM WHATWG') }}     |                      |
-| {{SpecName('DOM2 Events', '#Events-Event-type', 'Event.type')}} | {{ Spec2('DOM2 Events') }} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Event.type")}}
+{{Compat}}

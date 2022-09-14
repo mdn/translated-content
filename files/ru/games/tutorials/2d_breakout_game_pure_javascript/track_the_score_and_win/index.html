@@ -16,18 +16,18 @@ translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score
 <p>{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Обнаружение_столкновений", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Управление_мышью")}}</p>
 
 <div class="summary">
-<p>Это 8й шаг из 10 в <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a>. Вы можете найти исходный код для этого урока по ссылке <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson08.html">Gamedev-Canvas-workshop/lesson8.html</a>.</p>
+<p>Это 8й шаг из 10 в <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a>. Вы можете найти исходный код для этого урока по ссылке <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson08.html">Gamedev-Canvas-workshop/lesson8.html</a>.</p>
 </div>
 
 <p><span class="seoSummary">Уничтожение кирпичей действительно классно, но, чтобы быть ещё более удивительным, игра должна присуждать очки за каждый кирпич, в который попадает игрок, и подсчитывать общий балл.</span></p>
 
 <h2 id="Подсчёт_очков">Подсчёт очков</h2>
 
-<p>Если вы можете увидеть свои очки на протяжении всей игры, вы можете произвести впечатление на своих друзей. Вам нужна переменная для записи очков. Добавьте следующие данные в свой JavaScript, после остальных переменных:</p>
+<p>Если вы можете увидеть свои очки на протяжении всей игры, вы можете произвести впечатление на своих друзей. Вам нужна переменная для записи очков. Добавьте следующие данные в свой JavaScript, после остальных переменных:</p>
 
 <pre class="brush: js">var score = 0;</pre>
 
-<p>Вам также нужна функция <code>drawScore()</code> для создания и обновления отображения оценки. Добавьте после функции <code>collisionDetection()</code> следующий код:</p>
+<p>Вам также нужна функция <code>drawScore()</code> для создания и обновления отображения оценки. Добавьте после функции <code>collisionDetection()</code> следующий код:</p>
 
 <pre class="brush: js">function drawScore() {
     ctx.font = "16px Arial";
@@ -35,7 +35,7 @@ translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score
     ctx.fillText("Score: "+score, 8, 20);
 }</pre>
 
-<p>Рисование текста на канве аналогично рисованию фигур. Определение шрифта выглядит точно так же, как и в CSS - вы можете установить размер и тип шрифта в {{domxref("CanvasRenderingContext2D.font","font()")}} методе. Затем используйте {{domxref("CanvasRenderingContext2D.fillStyle()","fillStyle()")}} для установки цвета шрифта и  {{domxref("CanvasRenderingContext2D.fillText","fillText()")}} для установки фактического текста, который будет помещён на канву, и где он будет размещён. Первым параметром является сам текст - приведённый выше код показывает текущее количество точек, а два последних параметра - это координаты, в которых текст будет помещён на канву.</p>
+<p>Рисование текста на канве аналогично рисованию фигур. Определение шрифта выглядит точно так же, как и в CSS - вы можете установить размер и тип шрифта в {{domxref("CanvasRenderingContext2D.font","font()")}} методе. Затем используйте {{domxref("CanvasRenderingContext2D.fillStyle()","fillStyle()")}} для установки цвета шрифта и  {{domxref("CanvasRenderingContext2D.fillText","fillText()")}} для установки фактического текста, который будет помещён на канву, и где он будет размещён. Первым параметром является сам текст - приведённый выше код показывает текущее количество точек, а два последних параметра - это координаты, в которых текст будет помещён на канву.</p>
 
 <p>Чтобы начислять баллы каждый раз при ударе кирпича, добавьте строку в функцию <code>collisionDetection()</code>, чтобы увеличить значение переменной оценки каждый раз при обнаружении столкновения. Добавьте в код следующую выделенную строку:</p>
 
@@ -60,7 +60,7 @@ translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score
 
 <h2 id="Отображение_сообщения_о_победе_когда_все_кирпичи_были_уничтожены">Отображение сообщения о победе, когда все кирпичи были уничтожены</h2>
 
-<p>В конце концов, это главная цель игры, поэтому вы должны отобразить сообщение о победе, если все доступные кирпичи уничтожены. Добавьте следующий код в свою функцию <code>collisionDetection()</code> :</p>
+<p>В конце концов, это главная цель игры, поэтому вы должны отобразить сообщение о победе, если все доступные кирпичи уничтожены. Добавьте следующий код в свою функцию <code>collisionDetection()</code> :</p>
 
 <pre class="brush: js; highlight:[10,11,12,13]">function collisionDetection() {
     for(var c=0; c&lt;brickColumnCount; c++) {
@@ -90,7 +90,7 @@ translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score
 <p>{{JSFiddleEmbed("https://jsfiddle.net/yumetodo/2m74vr9r/1/","","395")}}</p>
 
 <div class="note">
-<p><strong>Упражнение: добавьте больше очков за каждый разбитый кирпич, выведите количество набранных очков в конце игры</strong>.</p>
+<p><strong>Упражнение: добавьте больше очков за каждый разбитый кирпич, выведите количество набранных очков в конце игры</strong>.</p>
 </div>
 
 <h2 id="Следующие_шаги">Следующие шаги</h2>

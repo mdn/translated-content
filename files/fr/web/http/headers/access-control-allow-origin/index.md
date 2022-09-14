@@ -22,9 +22,11 @@ L'entête **`Access-Control-Allow-Origin`** renvoie une réponse indiquant si le
 
 ## Syntaxe
 
-    Access-Control-Allow-Origin: *
-    Access-Control-Allow-Origin: <origin>
-    Access-Control-Allow-Origin: null
+```
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Origin: <origin>
+Access-Control-Allow-Origin: null
+```
 
 ## Directives
 
@@ -37,18 +39,24 @@ L'entête **`Access-Control-Allow-Origin`** renvoie une réponse indiquant si le
 
 Pour permettre à n'importe quelle ressource d'accéder à vos ressources, vous pouvez indiquer :
 
-    Access-Control-Allow-Origin: *
+```
+Access-Control-Allow-Origin: *
+```
 
 Pour permettre `https://developer.mozilla.org` d'accéder à vos ressources, vous pouvez indiquer :
 
-    Access-Control-Allow-Origin: https://developer.mozilla.org
+```
+Access-Control-Allow-Origin: https://developer.mozilla.org
+```
 
 ### CORS et le cache
 
 Si le serveur spécifie un hôte d'origine plutôt que "\*", il doit également inclure "_Origin_" dans l'en-tête de réponse "_[Vary](/fr/docs/Web/HTTP/Headers/Vary)_" pour indiquer aux clients que les réponses du serveur seront différentes en fonction de la valeur de la demande d'origine entête.
 
-    Access-Control-Allow-Origin: https://developer.mozilla.org
-    Vary: Origin
+```
+Access-Control-Allow-Origin: https://developer.mozilla.org
+Vary: Origin
+```
 
 ## Caractéristiques
 

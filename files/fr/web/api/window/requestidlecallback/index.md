@@ -9,7 +9,9 @@ La méthode **`window.requestIdleCallback()`** mémorise une fonction qui sera a
 
 ## Syntaxe
 
-    var idleCallbackId = window.requestIdleCallback(fonction[, options])
+```js
+var idleCallbackId = window.requestIdleCallback(fonction[, options])
+```
 
 ### Retour de l'appel
 
@@ -31,13 +33,11 @@ Un entier long non-signé qui peut être utilisé pour annulé l'appel à la fon
 
 ## Spécifications
 
-| Spécification                                | Status                                   | Comment              |
-| -------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Background Tasks')}} | {{Spec2('Background Tasks')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.requestIdleCallback")}}
+{{Compat}}
 
 ## Voir aussi
 

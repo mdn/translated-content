@@ -18,7 +18,9 @@ La méthode **`slice()`** extrait une section d'une chaine de caractères et la 
 
 ## Syntaxe
 
-    chn.slice(indiceDebut[, indiceFin])
+```js
+chn.slice(indiceDebut[, indiceFin])
+```
 
 ### Paramètres
 

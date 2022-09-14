@@ -18,7 +18,9 @@ Retourne/définit la partie domaine de l'origine du document courant, telle qu'u
 
 ## Syntaxe
 
-    var chaineDomaine = document.domain; document.domain = chaine;
+```js
+var chaineDomaine = document.domain; document.domain = chaine;
+```
 
 ## Exemple
 
@@ -41,7 +43,7 @@ var domaine = document.domain;
 
 Cette propriété retourne `null` si le domaine du document ne peut pas être identifié.
 
-Mozilla vous laissera la définir à un superdomaine de la valeur courante, contraint par son [domaine de base](/en-US/docs/XPCOM_Interface_Reference/nsIEffectiveTLDService#getBaseDomain.28.29). Par exemple, sur developer.mozilla.org, il est possible de la définir à "mozilla.org" mais pas à "mozilla.com" ou "org".
+Mozilla vous laissera la définir à un superdomaine de la valeur courante, contraint par son [domaine de base](/fr/docs/XPCOM_Interface_Reference/nsIEffectiveTLDService#getBaseDomain.28.29). Par exemple, sur developer.mozilla.org, il est possible de la définir à "mozilla.org" mais pas à "mozilla.com" ou "org".
 
 Si cette propriété est définie avec succès, la partie "port" de l'origine est également définie à null.
 

@@ -12,8 +12,10 @@ original_slug: Web/JavaScript/Reference/Erreurs/Missing_curly_after_function_bod
 
 ## Message
 
-    SyntaxError: Expected '}' (Edge)
-    SyntaxError: missing } after function body (Firefox)
+```
+SyntaxError: Expected '}' (Edge)
+SyntaxError: missing } after function body (Firefox)
+```
 
 ## Type d'erreur
 

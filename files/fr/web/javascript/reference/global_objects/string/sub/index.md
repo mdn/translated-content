@@ -18,7 +18,9 @@ La méthode **`sub()`** crée un élément HTML {{HTMLElement("sub")}} qui entra
 
 ## Syntaxe
 
-    str.sub()
+```js
+str.sub()
+```
 
 ### Valeur de retour
 

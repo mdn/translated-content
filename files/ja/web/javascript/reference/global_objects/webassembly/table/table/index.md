@@ -1,13 +1,6 @@
 ---
 title: WebAssembly.Table() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table
-tags:
-  - コンストラクター
-  - JavaScript
-  - Reference
-  - WebAssembly
-browser-compat: javascript.builtins.WebAssembly.Table.Table
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table
 ---
 {{JSRef}}
 
@@ -65,9 +58,9 @@ var importObj = {
 ```js
 WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)
 .then(function(obj) {
-  console.log(tbl.length);
-  console.log(tbl.get(0)());
-  console.log(tbl.get(1)());
+  console.log(tbl.length);
+  console.log(tbl.get(0)());
+  console.log(tbl.get(1)());
 });
 ```
 

@@ -25,9 +25,11 @@ Des cas inappropriés d'utilisation comprennent :
 
 ## Syntaxe
 
-    estCaché = HTMLElement.hidden;
+```js
+estCaché = HTMLElement.hidden;
 
-    HTMLElement.hidden = true | false;
+HTMLElement.hidden = true | false;
+```
 
 ### Valeur
 
@@ -108,15 +110,11 @@ h1 {
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "interaction.html#dom-hidden", "HTMLElement.hidden")}}     | {{Spec2('HTML WHATWG')}} |             |
-| {{SpecName('HTML5.1', "editing.html#the-hidden-attribute", "HTMLElement.hidden")}}     | {{Spec2('HTML5.1')}}     |             |
-| {{SpecName('HTML5 W3C', "editing.html#the-hidden-attribute", "HTMLElement.hidden")}} | {{Spec2('HTML5 W3C')}}     |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLElement.hidden")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -21,14 +21,16 @@ La méthode **`then()`** renvoie un objet {{jsxref("Promise")}}. Elle peut prend
 
 ## Syntaxe
 
-    p.then(siTenue);
-    p.then(siTenue, siRejetée);
+```js
+p.then(siTenue);
+p.then(siTenue, siRejetée);
 
-    p.then((valeur) => {
-        // Promesse tenue
-      }, (raison) => {
-        // Rejet de la promesse
-    });
+p.then((valeur) => {
+    // Promesse tenue
+  }, (raison) => {
+    // Rejet de la promesse
+});
+```
 
 ### Paramètres
 

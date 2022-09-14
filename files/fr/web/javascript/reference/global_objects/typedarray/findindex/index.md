@@ -22,7 +22,9 @@ Voir aussi la méthode {{jsxref("TypedArray.find", "find()")}} qui renvoie la **
 
 ## Syntaxe
 
-    typedarray.findIndex(callback[, thisArg])
+```js
+typedarray.findIndex(callback[, thisArg])
+```
 
 ### Paramètres
 

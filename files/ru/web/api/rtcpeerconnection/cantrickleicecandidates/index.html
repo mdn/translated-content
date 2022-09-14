@@ -7,13 +7,13 @@ translation_of: Web/API/RTCPeerConnection/canTrickleIceCandidates
 
 
 
-<div><span class="seoSummary">Свойство только для чтения <code><strong>canTrickleIceCandidates</strong></code> , объекта <strong>{{domxref("RTCPeerConnection")}}</strong>, возвращает значение типа {{jsxref("Boolean")}} , которое указывает на то, может ли удалённый пир принимать кандидаты, согласно спецификации  <a href="https://tools.ietf.org/html/draft-ietf-mmusic-trickle-ice">trickled ICE candidates</a>.</span></div>
+<div><span class="seoSummary">Свойство только для чтения <code><strong>canTrickleIceCandidates</strong></code> , объекта <strong>{{domxref("RTCPeerConnection")}}</strong>, возвращает значение типа {{jsxref("Boolean")}} , которое указывает на то, может ли удалённый пир принимать кандидаты, согласно спецификации  <a href="https://tools.ietf.org/html/draft-ietf-mmusic-trickle-ice">trickled ICE candidates</a>.</span></div>
 
-<p><strong>ICE trickling (ICE просачивание)</strong>  - процесс продолжающейся отправки кандидатов, после первоначальной передачи предложения или ответа удалённому пиру..</p>
+<p><strong>ICE trickling (ICE просачивание)</strong>  - процесс продолжающейся отправки кандидатов, после первоначальной передачи предложения или ответа удалённому пиру..</p>
 
-<p>Свойство инициализируется только после вызова метода  {{domxref("RTCPeerConnection.setRemoteDescription()")}}.  Было бы идеально, если бы ваш протокол сигнализации предоставлял способ определения поддержки просачивания кандидатов, для того, что бы не полагаться на это свойство. Браузер, поддерживающий WebRTC, всегда будет поддерживать ICE просачивание.</p>
+<p>Свойство инициализируется только после вызова метода  {{domxref("RTCPeerConnection.setRemoteDescription()")}}.  Было бы идеально, если бы ваш протокол сигнализации предоставлял способ определения поддержки просачивания кандидатов, для того, что бы не полагаться на это свойство. Браузер, поддерживающий WebRTC, всегда будет поддерживать ICE просачивание.</p>
 
-<p>Если оно не поддерживается, или о поддержке неизвестно, то проверив ложное значение этого свойства, необходимо подождать, пока значение свойства {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} измениться на  <code>"completed"</code> до создания и передачи первоначального предложения. Таким образом, отправка предложения сдерживается до сборки всех кандидатов.</p>
+<p>Если оно не поддерживается, или о поддержке неизвестно, то проверив ложное значение этого свойства, необходимо подождать, пока значение свойства {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} измениться на  <code>"completed"</code> до создания и передачи первоначального предложения. Таким образом, отправка предложения сдерживается до сборки всех кандидатов.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -21,10 +21,10 @@ translation_of: Web/API/RTCPeerConnection/canTrickleIceCandidates
 
 <h3 id="Значение">Значение</h3>
 
-<p>Тип  {{jsxref("Boolean")}} содержит <code>true</code> , если удалённый пир может принимать просвечивающие ICE кандидаты, и  <code>false</code> , если не может. Если удалённый пир ещё не инициализирован, свойство возвращает <code>null</code>.</p>
+<p>Тип  {{jsxref("Boolean")}} содержит <code>true</code> , если удалённый пир может принимать просвечивающие ICE кандидаты, и  <code>false</code> , если не может. Если удалённый пир ещё не инициализирован, свойство возвращает <code>null</code>.</p>
 
 <div class="note">
-<p><strong>Примечание :</strong> Значение свойства инициализируется после того, как локальный пир вызовет метод {{domxref("RTCPeerConnection.setRemoteDescription()")}};  Возвращаемый объект описания используется агентом ICE для определения возможности удалённого пира поддерживать просачивающихся  ICE кандидатов.</p>
+<p><strong>Примечание :</strong> Значение свойства инициализируется после того, как локальный пир вызовет метод {{domxref("RTCPeerConnection.setRemoteDescription()")}};  Возвращаемый объект описания используется агентом ICE для определения возможности удалённого пира поддерживать просачивающихся  ICE кандидатов.</p>
 </div>
 
 <h2 id="Пример">Пример</h2>
@@ -72,5 +72,5 @@ pc.addEventListener('icecandidate', e =&gt; {
 <ul>
  <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
  <li>{{domxref("RTCPeerConnection.addIceCandidate()")}}</li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Жизненный цикл сессии WebRTC</a></li>
+ <li><a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Жизненный цикл сессии WebRTC</a></li>
 </ul>

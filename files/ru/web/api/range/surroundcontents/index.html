@@ -5,11 +5,11 @@ translation_of: Web/API/Range/surroundContents
 ---
 <div>{{ApiRef("DOM")}}</div>
 
-<p>Метод <strong><code>Range.surroundContents()</code></strong> перемещает содержимое {{ domxref("Range") }} в новый элемент, который расположится в начале указанного диапазона.</p>
+<p>Метод <strong><code>Range.surroundContents()</code></strong> перемещает содержимое {{ domxref("Range") }} в новый элемент, который расположится в начале указанного диапазона.</p>
 
-<p>Этот метод приблизительно эквивалентен коду <code>newNode.appendChild(<a href="/en/DOM/range.extractContents" title="en/DOM/range.extractContents">range.extractContents()</a>); <a href="/en-US/docs/DOM/range.insertNode" title="/en-US/docs/DOM/range.insertNode">range.insertNode</a>(newNode)</code>. После его работы крайние точки диапазона будут включать в себя <code>newNode</code>.</p>
+<p>Этот метод приблизительно эквивалентен коду <code>newNode.appendChild(<a href="/en/DOM/range.extractContents" title="en/DOM/range.extractContents">range.extractContents()</a>); <a href="/en-US/docs/DOM/range.insertNode" title="/en-US/docs/DOM/range.insertNode">range.insertNode</a>(newNode)</code>. После его работы крайние точки диапазона будут включать в себя <code>newNode</code>.</p>
 
-<p>Если {{ domxref("Range") }} разделяет любой не <a href="https://developer.mozilla.org/en-US/docs/Web/API/Text">текстовый</a> элемент хотя бы одной точкой, произойдёт исключение. В отличие от альтернативы выше, если в диапазоне есть частично выделенные элементы, они не будут клонированы, а вместо этого производит ошибка.</p>
+<p>Если {{ domxref("Range") }} разделяет любой не <a href="https://developer.mozilla.org/en-US/docs/Web/API/Text">текстовый</a> элемент хотя бы одной точкой, произойдёт исключение. В отличие от альтернативы выше, если в диапазоне есть частично выделенные элементы, они не будут клонированы, а вместо этого производит ошибка.</p>
 
 <h2 id="Syntax">Синтаксис</h2>
 
@@ -20,7 +20,7 @@ translation_of: Web/API/Range/surroundContents
 
 <dl>
  <dt><em>newNode</em></dt>
- <dd><a href="/en-US/docs/Glossary/Node/DOM">Элемент</a> который будет содержать в себе выделенный текст. </dd>
+ <dd><a href="/en-US/docs/Glossary/Node/DOM">Элемент</a> который будет содержать в себе выделенный текст. </dd>
 </dl>
 
 <h2 id="Example">Пример</h2>

@@ -74,11 +74,13 @@ Vous êtes probablement en train de lire ces mots à l'aide d'un navigateur web 
 
 Hypertext Transfer Protocol, ou [HTTP](/fr/docs/Web/HTTP/Basics_of_HTTP), est un protocole de communication permettant aux navigateurs web de communiquer avec des serveurs web (qui hébergent les sites web). Une conversation type ressemble à quelque chose comme
 
-    "Bonjour Serveur Web. Peux-tu me fournir les fichiers requis pour afficher bbc.co.uk"?
+```
+"Bonjour Serveur Web. Peux-tu me fournir les fichiers requis pour afficher bbc.co.uk"?
 
-    "Bien sûr Navigateur Web - Les voilà"
+"Bien sûr Navigateur Web - Les voilà"
 
-    [Télécharge les fichiers et affiche la page]
+[Télécharge les fichiers et affiche la page]
+```
 
 La véritable syntaxe des messages HTTP (appelés requêtes et réponses) ne ressemble pas vraiment à une conversation humaine, mais cela permet d'en avoir un aperçu.
 

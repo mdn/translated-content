@@ -14,45 +14,47 @@ Cet article et son exemple associé montrent comment utiliser du [SVG](fr/SVG) e
 
 Voici le code source de cet exemple :
 
-    <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-      <title>XTech SVG Demo</title>
-      <style>
-        stop.begin { stop-color:yellow; }
-        stop.end { stop-color:green; }
-        body.invalid stop.end { stop-color:red; }
-        #err { display:none; }
-        body.invalid #err { display:inline; }
-      </style>
-      <script>
-        function signalError() {
-          document.getElementById('body').setAttribute("class", "invalid");
-        }
-      </script>
-    </head>
-    <body id="body"
-       style="position:absolute; z-index:0; border:1px solid black; left:5%; top:5%; width:90%; height:90%;">
-      <form>
-         <fieldset>
-           <legend>HTML Form</legend>
-           <p><label>Enter something:</label>
-              <input type="text"/>
-              <span id="err">Incorrect value!</span></p>
-           <p><button onclick="signalError();">Activate!</button></p>
-         </fieldset>
-      </form>
-      <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-        viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice"
-        style="width:100%; height:100%; position:absolute; top:0; left:0; z-index:-1;">
-        <linearGradient id="gradient">
-          <stop class="begin" offset="0%"/>
-          <stop class="end" offset="100%"/>
-        </linearGradient>
-        <rect x="0" y="0" width="100" height="100" style="fill:url(#gradient)" />
-        <circle cx="50" cy="50" r="30" style="fill:url(#gradient)" />
-      </svg>
-    </body>
-    </html>
+```html
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>XTech SVG Demo</title>
+  <style>
+    stop.begin { stop-color:yellow; }
+    stop.end { stop-color:green; }
+    body.invalid stop.end { stop-color:red; }
+    #err { display:none; }
+    body.invalid #err { display:inline; }
+  </style>
+  <script>
+    function signalError() {
+      document.getElementById('body').setAttribute("class", "invalid");
+    }
+  </script>
+</head>
+<body id="body"
+    style="position:absolute; z-index:0; border:1px solid black; left:5%; top:5%; width:90%; height:90%;">
+  <form>
+      <fieldset>
+        <legend>HTML Form</legend>
+        <p><label>Enter something:</label>
+          <input type="text"/>
+          <span id="err">Incorrect value!</span></p>
+        <p><button onclick="signalError();">Activate!</button></p>
+      </fieldset>
+  </form>
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+    viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice"
+    style="width:100%; height:100%; position:absolute; top:0; left:0; z-index:-1;">
+    <linearGradient id="gradient">
+      <stop class="begin" offset="0%"/>
+      <stop class="end" offset="100%"/>
+    </linearGradient>
+    <rect x="0" y="0" width="100" height="100" style="fill:url(#gradient)" />
+    <circle cx="50" cy="50" r="30" style="fill:url(#gradient)" />
+  </svg>
+</body>
+</html>
+```
 
 ### Discussion
 
@@ -78,5 +80,5 @@ L'attribut `style` ancre l'élément SVG en arrière plan du formulaire.
 
 ### Liens sur le sujet
 
-- L'article wikipedia sur le format [SVG](http://fr.wikipedia.org/wiki/Scalable_Vector_Graphics)
+- L'article Wikipédia sur le format [SVG](http://fr.wikipedia.org/wiki/Scalable_Vector_Graphics)
 - La page [Inline SVG](http://svg-whiz.com/wiki/index.php?title=Inline_SVG) sur le wiki SVG

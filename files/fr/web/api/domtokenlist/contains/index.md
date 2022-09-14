@@ -9,7 +9,9 @@ La méthode **`contains()`** de l'interface {{domxref("DOMTokenList")}} renvoie 
 
 ## Syntaxe
 
-    tokenList.contains(token);
+```js
+tokenList.contains(token);
+```
 
 ### Paramètres
 
@@ -49,10 +51,8 @@ La sortie ressemble à ceci :
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG','#dom-domtokenlist-contains','contains()')}} | {{Spec2('DOM WHATWG')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMTokenList.contains")}}
+{{Compat}}

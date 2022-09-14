@@ -13,4 +13,4 @@ original_slug: Glossaire/Arpanet
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Arpanet")}} sur Wikipédia
+- [Arpanet](https://fr.wikipedia.org/wiki/ARPANET) sur Wikipédia

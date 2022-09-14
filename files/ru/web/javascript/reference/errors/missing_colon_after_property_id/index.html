@@ -16,14 +16,14 @@ translation_of: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
 
 <h2 id="Что_пошло_не_так">Что пошло не так?</h2>
 
-<p>При создании объекта с помощью <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Object_initializer">инициализатора объекта</a>, двоеточие (<code>:</code>) разделяет ключи и значения свойств объекта.</p>
+<p>При создании объекта с помощью <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Object_initializer">инициализатора объекта</a>, двоеточие (<code>:</code>) разделяет ключи и значения свойств объекта.</p>
 
 <pre class="brush: js">var obj = { propertyKey: 'value' };
 </pre>
 
 <h2 id="Примеры">Примеры</h2>
 
-<h3 id="Двоеточие_vs._знака_равенства">Двоеточие vs. знака равенства</h3>
+<h3 id="Двоеточие_vs._знака_равенства">Двоеточие vs. знака равенства</h3>
 
 <p>Этот код не работает, потому что знак равенства не может быть использован при инициализации объекта.</p>
 
@@ -31,7 +31,7 @@ translation_of: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
 // SyntaxError: missing : after property id
 </pre>
 
-<p>Корректно будет использовать двоеточие или квадратные скобки для назначения нового свойства после того, как объект уже был создан.</p>
+<p>Корректно будет использовать двоеточие или квадратные скобки для назначения нового свойства после того, как объект уже был создан.</p>
 
 <pre class="brush: js example-good">var obj = { propertyKey: 'value' };
 
@@ -41,7 +41,7 @@ var obj = { };
 obj['propertyKey'] = 'value';
 </pre>
 
-<h3 id="Пустые_свойства">Пустые свойства</h3>
+<h3 id="Пустые_свойства">Пустые свойства</h3>
 
 <p>Вы не можете создать пустые свойства, подобные этому:</p>
 
@@ -49,7 +49,7 @@ obj['propertyKey'] = 'value';
 // SyntaxError: missing : after property id
 </pre>
 
-<p>Если вам необходимо задать свойство без значения, то вы можете использовать {{jsxref("null")}}.</p>
+<p>Если вам необходимо задать свойство без значения, то вы можете использовать {{jsxref("null")}}.</p>
 
 <pre class="brush: js example-good">var obj = { propertyKey: null };</pre>
 
@@ -61,7 +61,7 @@ obj['propertyKey'] = 'value';
 // SyntaxError: missing : after property id
 </pre>
 
-<p>Поместите выражение в скобки <code>[]</code>:</p>
+<p>Поместите выражение в скобки <code>[]</code>:</p>
 
 <pre class="brush: js example-good">var obj = { ['b'+'ar']: 'foo' };</pre>
 

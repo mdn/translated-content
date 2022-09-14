@@ -9,7 +9,7 @@ translation_of: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criter
 ---
 <div>{{DefaultAPISidebar("IndexedDB")}}</div>
 
-<p class="summary">Существует целый ряд веб-технологий, которые хранят данные того или иного рода на стороне клиента (то есть на локальном диске). Процесс, с помощью которого браузер решает, сколько места выделить для хранения веб-данных и что удалить, когда этот предел будет достигнут, не прост и отличается между браузерами. В этой статье описывается, как браузеры определяют, какой локальный контент следует очистить и когда, чтобы освободить необходимое локальное пространство для хранения.</p>
+<p class="summary">Существует целый ряд веб-технологий, которые хранят данные того или иного рода на стороне клиента (то есть на локальном диске). Процесс, с помощью которого браузер решает, сколько места выделить для хранения веб-данных и что удалить, когда этот предел будет достигнут, не прост и отличается между браузерами. В этой статье описывается, как браузеры определяют, какой локальный контент следует очистить и когда, чтобы освободить необходимое локальное пространство для хранения.</p>
 
 <div class="note">
 <p><strong>Примечание</strong>: приведённая ниже информация должна быть достаточно точной для большинства современных браузеров, но специфика браузера вызывается там, где она известна. Opera и Chrome должны вести себя одинаково во всех случаях. Opera Mini (все ещё основанная на presto, серверная визуализация) не хранит никаких данных на клиенте.</p>
@@ -17,7 +17,7 @@ translation_of: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criter
 
 <h2 id="Какие_технологии_используют_браузерные_хранилища_данных">Какие технологии используют браузерные хранилища данных?</h2>
 
-<p>В Firefox следующие технологии используют хранилище данных браузера для хранения данных, когда это необходимо. В этом контексте мы называем их "квотными клиентами": </p>
+<p>В Firefox следующие технологии используют хранилище данных браузера для хранения данных, когда это необходимо. В этом контексте мы называем их "квотными клиентами": </p>
 
 <ul>
  <li><a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a></li>
@@ -46,7 +46,7 @@ translation_of: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criter
 
 <ul>
  <li>Persistent: This is data that is intended to be kept around for a long time. This will only be evicted if the user chooses to (for example, in Firefox you can choose to delete all stored data or only stored data from selected origins by going to <em>Preferences</em> and using the options under <em>Privacy &amp; Security &gt; Cookies &amp; Site Data</em>).</li>
- <li>Temporary: This is data that doesn't need to persist for a very long time. This will be evicted under a least recently used ({{anch("LRU policy")}}) when {{anch("Storage limits")}} are reached.</li>
+ <li>Temporary: This is data that doesn't need to persist for a very long time. This will be evicted under a least recently used (<a href="#lru_policy">LRU policy</a>) when <a href="#storage_limits">Storage limits</a> are reached.</li>
 </ul>
 
 <p>In Firefox, when persistent storage is used, the user is given a UI popup to alert them that this data will persist, and asks if they are happy with that. Temporary data storage does not elicit any user prompts.</p>
@@ -66,7 +66,7 @@ translation_of: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criter
 
 <div>
 <div class="note">
-<p><strong>Note</strong>: After introducing <a href="/en-US/docs/Web/API/Storage_API">Storage API</a>, the "permanent" folder can be considered obsolete; the "permanent" folder only stores IndexedDB persistent-type databases. It doesn't matter if box mode is "best-effort" or "persistent" — data is stored under &lt;profile&gt;/storage/default.</p>
+<p><strong>Note</strong>: After introducing <a href="/en-US/docs/Web/API/Storage_API">Storage API</a>, the "permanent" folder can be considered obsolete; the "permanent" folder only stores IndexedDB persistent-type databases. It doesn't matter if box mode is "best-effort" or "persistent" — data is stored under &lt;profile&gt;/storage/default.</p>
 </div>
 </div>
 

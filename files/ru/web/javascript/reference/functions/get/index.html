@@ -117,11 +117,11 @@ console.log(obj.foo); // "bar"</pre>
 
 <p>Для Firefox смотрите также модуль XPCOMUtils.jsm , который определяет функцию <code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#defineLazyGetter()">defineLazyGetter()</a></code>.</p>
 
-<h3 id="get_и_defineProperty"><code>get</code> и <code>defineProperty</code></h3>
+<h3 id="get_и_defineProperty"><code>get</code> и <code>defineProperty</code></h3>
 
-<p>Использование ключевого слова <code>get</code> и {{jsxref("Object.defineProperty()")}} даёт похожие результаты, но при использовании в {{jsxref("classes")}} между ними есть тонкая разница.</p>
+<p>Использование ключевого слова <code>get</code> и {{jsxref("Object.defineProperty()")}} даёт похожие результаты, но при использовании в {{jsxref("classes")}} между ними есть тонкая разница.</p>
 
-<p>При использовании <code>get</code> свойство будет определено в прототипе объекта, в то время, как при использовании {{jsxref ("Object.defineProperty ()")}} свойство будет определено в экземпляре, к которому применяется.</p>
+<p>При использовании <code>get</code> свойство будет определено в прототипе объекта, в то время, как при использовании {{jsxref ("Object.defineProperty ()")}} свойство будет определено в экземпляре, к которому применяется.</p>
 
 <pre class="brush: js">class Example {
   get hello() {

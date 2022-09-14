@@ -22,7 +22,7 @@ Dans un navigateur utilisant des onglets, comme Firefox, chaque onglet contient 
 
 ## Propriétés
 
-_Cette interface hérite des propriétés de l'interface {{domxref("EventTarget")}} et implémente les propriétés des mixins {{domxref("WindowOrWorkerGlobalScope")}} et {{domxref("WindowEventHandlers")}}._
+_Cette interface hérite des propriétés de l'interface {{domxref("EventTarget")}}._
 
 Notez que les propriétés qui sont des objets (par exemple, pour redéfinir le prototype d'éléments intrinsèques) sont répertoriées dans une section distincte ci-dessous.
 
@@ -30,7 +30,7 @@ Notez que les propriétés qui sont des objets (par exemple, pour redéfinir le 
   - : Cette propriété indique si la fenêtre en cours est fermée ou non.
 - {{domxref("Window.console")}} {{ReadOnlyInline}}
   - : Renvoie une référence à l'objet console qui fournit l'accès à la console de débogage du navigateur.
-- {{domxref("Window.content")}} et `Window._content` {{Non-standard_inline}} {{obsolete_inline}}{{ReadOnlyInline}}
+- {{domxref("Window.content")}} et `Window._content` {{Non-standard_inline}} {{deprecated_inline}}{{ReadOnlyInline}}
   - : Renvoie une référence à l'élément de contenu dans la fenêtre en cours. Depuis Firefox 57 (initialement Nightly uniquement), les deux versions sont uniquement disponibles à partir du code chrome (privilégié) et ne sont plus disponibles sur le Web.
 - {{domxref("Window.controllers")}}{{non-standard_inline}}{{ReadOnlyInline}}
   - : Renvoie les objets du contrôleur XUL pour la fenêtre chrome en cours.
@@ -38,13 +38,13 @@ Notez que les propriétés qui sont des objets (par exemple, pour redéfinir le 
   - : renvoie une référence à l'objet {{domxref("CustomElementRegistry")}}, qui peut être utilisée pour enregistrer de nouveaux [éléments personnalisés](/fr-FR/docs/Web/Web_Components/Using_custom_elements) et obtenir des informations à propos d'éléments personnalisés précédemment enregistrés.
 - {{domxref("Window.crypto")}} {{readOnlyInline}}
   - : Retourne l'objet crypto du navigateur.
-- {{domxref("Window.defaultStatus")}} {{Obsolete_inline("gecko23")}}
+- {{domxref("Window.defaultStatus")}} {{deprecated_inline}}
   - : Récupère / définit le texte de la barre d'état pour la fenêtre donnée.
 - {{domxref("Window.devicePixelRatio")}} {{non-standard_inline}}{{ReadOnlyInline}}
   - : Renvoie le rapport entre les pixels physiques et les pixels indépendants du périphérique dans l'affichage en cours.
 - {{domxref("Window.dialogArguments")}} {{ReadOnlyInline}}
   - : Récupère les arguments passés à la fenêtre (si c'est une boîte de dialogue) au moment où {{domxref ("window.showModalDialog()")}} a été appelé. C'est un `nsIArray`.
-- {{domxref("Window.directories")}} {{obsolete_inline}}
+- {{domxref("Window.directories")}} {{deprecated_inline}}
   - : Synonyme de {{domxref("window.personalbar")}}
 - {{domxref("Window.document")}} {{ReadOnlyInline}}
   - : Renvoie une référence au document que la fenêtre contient.
@@ -68,7 +68,7 @@ Notez que les propriétés qui sont des objets (par exemple, pour redéfinir le 
   - : Renvoie un tableau des sous-cadres dans la fenêtre en cours.
 - {{domxref("Window.fullScreen")}}
   - : Cette propriété indique si la fenêtre est affichée en plein écran ou non.
-- {{domxref("Window.globalStorage")}} {{Non-standard_inline}} {{Obsolete_inline("gecko13")}}
+- {{domxref("Window.globalStorage")}} {{Non-standard_inline}} {{deprecated_inline}}
   - : Non supporté depuis Gecko 13 (Firefox 13). Utilisez {{domxref("Window.localStorage")}} à la place.
     Était : divers objets de stockage utilisés pour stocker des données sur plusieurs pages.
 - {{domxref("Window.history")}} {{ReadOnlyInline}}
@@ -125,7 +125,7 @@ Notez que les propriétés qui sont des objets (par exemple, pour redéfinir le 
   - : Renvoie un objet {{domxref("Performance")}}, qui inclut les attributs {{domxref("Performance.timing", "timing")}} et {{domxref("Performance.navigation", "navigation")}}, dont chacun est un objet fournissant des données liées aux performances. Voir aussi [Utilisation de Chronométrage de Navigation](/fr-FR/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing) pour plus d'informations et d'exemples.
 - {{domxref("Window.personalbar")}} {{readOnlyInline}}
   - : Renvoie l'objet barre personnelle, dont la visibilité peut être inversée dans la fenêtre.
-- {{domxref("Window.pkcs11")}} {{obsolete_inline(29)}}
+- {{domxref("Window.pkcs11")}} {{deprecated_inline}}
   - : Fournissait précédemment un accès pour installer et supprimer des modules PKCS11.
 - {{domxref("Window.returnValue")}}
   - : La valeur de retour à renvoyer à la fonction qui a appelé {{domxref("window.showModalDialog()")}} pour afficher la fenêtre comme boîte de dialogue modale.
@@ -170,22 +170,22 @@ Notez que les propriétés qui sont des objets (par exemple, pour redéfinir le 
 
 ### Propriétés implémentées depuis ailleurs
 
-- {{domxref("WindowOrWorkerGlobalScope.caches")}} {{readOnlyinline}}
+- [`caches`](/fr/docs/Web/API/caches) {{readOnlyinline}}
   - : Renvoie l'objet {{domxref("CacheStorage")}} associé au contexte en cours. Cet objet active des fonctionnalités telles que le stockage des ressources pour une utilisation hors connexion, et la génération de réponses personnalisées aux requêtes.
-- {{domxref("WindowOrWorkerGlobalScope.indexedDB")}} {{readonlyInline}}
+- [`indexedDB`](/fr/docs/Web/API/indexedDB) {{readonlyInline}}
   - : Fournit un mécanisme permettant aux applications d'accéder de manière asynchrone à des bases de données indexées ; renvoie un objet {{domxref("IDBFactory")}}.
-- {{domxref("WindowOrWorkerGlobalScope.isSecureContext")}} {{readOnlyinline}}
+- [`isSecureContext`](/fr/docs/Web/API/isSecureContext) {{readOnlyinline}}
   - : Renvoie un booléen indiquant si le contexte actuel est sécurisé (`true`) ou non (`false`).
-- {{domxref("WindowOrWorkerGlobalScope.origin")}} {{readOnlyinline}}
+- [`origin`](/fr/docs/Web/API/origin) {{readOnlyinline}}
   - : Renvoie l'origine de l'objet global, sérialisé comme une chaîne. (Cela ne semble pas encore être implémenté dans aucun navigateur.)
 
 ## Méthodes
 
-_Cette interface hérite des méthodes de l'interface {{domxref("EventTarget")}} et implémente les méthodes de {{domxref("WindowOrWorkerGlobalScope")}} et {{domxref("EventTarget")}}._
+_Cette interface hérite des méthodes de l'interface {{domxref("EventTarget")}}._
 
 - {{domxref("Window.alert()")}}
   - : Affiche une boîte de message d'alerte.
-- {{domxref("Window.back()")}} {{Non-standard_inline}} {{obsolete_inline}}
+- {{domxref("Window.back()")}} {{Non-standard_inline}} {{deprecated_inline}}
   - : Recule d'une page dans l'historique de la fenêtre.
 - {{domxref("Window.blur()")}}
   - : Déplace la focalisation hors de la fenêtre.
@@ -201,21 +201,21 @@ _Cette interface hérite des méthodes de l'interface {{domxref("EventTarget")}}
   - : Ferme la fenêtre en cours.
 - {{domxref("Window.confirm()")}}
   - : Affiche une boîte de dialogue avec un message auquel l'utilisateur doit répondre.
-- {{domxref("Window.disableExternalCapture()")}} {{obsolete_inline(24)}}
+- {{domxref("Window.disableExternalCapture()")}} {{deprecated_inline}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Window.dispatchEvent()")}}
   - : Utilisé pour déclencher un évènement.
 - {{domxref("Window.dump()")}} {{Non-standard_inline}}
   - : Écrit un message à la console.
-- {{domxref("Window.enableExternalCapture()")}} {{obsolete_inline(24)}}
+- {{domxref("Window.enableExternalCapture()")}} {{deprecated_inline}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Window.find()")}}
   - : Recherche la chaîne de caractères donnée dans une fenêtre.
 - {{domxref("Window.focus()")}}
   - : Donne la focalisation à la fenêtre en cours.
-- {{domxref("Window.forward()")}} {{Non-standard_inline}} {{obsolete_inline}}
+- {{domxref("Window.forward()")}} {{Non-standard_inline}} {{deprecated_inline}}
   - : Avance la fenêtre d'un document dans l'historique.
-- {{domxref("Window.getAttention()")}} {{Non-standard_inline}} {{obsolete_inline}}
+- {{domxref("Window.getAttention()")}} {{Non-standard_inline}} {{deprecated_inline}}
   - : Fait flasher l'icône de l'application.
 - {{domxref("Window.getAttentionWithCycleCount()")}}
   - : {{todo("NeedsContents")}}
@@ -225,7 +225,7 @@ _Cette interface hérite des méthodes de l'interface {{domxref("EventTarget")}}
   - : Récupère le style calculé par défaut pour l'élément indiqué, en ignorant les feuilles de style d'auteur.
 - {{domxref("Window.getSelection()")}}
   - : Renvoie l'objet de sélection représentant les éléments sélectionnés.
-- {{domxref("Window.home()")}} {{Non-standard_inline}} {{obsolete_inline}}
+- {{domxref("Window.home()")}} {{Non-standard_inline}} {{deprecated_inline}}
   - : Renvoie le navigateur à la page d'accueil.
 - {{domxref("Window.matchMedia()")}}
   - : Renvoie un objet {{domxref("MediaQueryList")}} représentant la chaîne d'interrogation de média spécifiée.
@@ -239,7 +239,7 @@ _Cette interface hérite des méthodes de l'interface {{domxref("EventTarget")}}
   - : Déplace la fenêtre vers les coordonnées spécifiées.
 - {{domxref("Window.open()")}}
   - : Ouvre une nouvelle fenêtre.
-- {{domxref("Window.openDialog()")}} {{Non-standard_inline}} {{obsolete_inline}}
+- {{domxref("Window.openDialog()")}} {{Non-standard_inline}} {{deprecated_inline}}
   - : Ouvre une nouvelle fenêtre de dialogue.
 - {{domxref("Window.postMessage()")}}
   - : Fournit un moyen sécurisé pour une fenêtre d'envoyer une chaîne de données à une autre fenêtre, qui n'a pas besoin d'être dans le même domaine que la première.
@@ -257,9 +257,9 @@ _Cette interface hérite des méthodes de l'interface {{domxref("EventTarget")}}
   - : Redimensionne la fenêtre en cours d'une certaine quantité.
 - {{domxref("Window.resizeTo()")}}
   - : Redimensionne dynamiquement la fenêtre.
-- {{domxref("Window.restore()")}} {{Non-standard_inline}} {{obsolete_inline}}
+- {{domxref("Window.restore()")}} {{Non-standard_inline}} {{deprecated_inline}}
   - : {{todo("NeedsContents")}}
-- {{domxref("Window.routeEvent()")}} {{obsolete_inline(24)}}
+- {{domxref("Window.routeEvent()")}} {{deprecated_inline}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Window.scroll()")}}
   - : Fait défiler la fenêtre à un endroit particulier dans le document.
@@ -288,28 +288,28 @@ _Cette interface hérite des méthodes de l'interface {{domxref("EventTarget")}}
 
 - {{domxref("EventTarget.addEventListener()")}}
   - : Enregistre un gestionnaire d'événement pour un type d'événement spécifique dans la fenêtre.
-- {{domxref("WindowOrWorkerGlobalScope.atob()")}}
+- [`atob()`](/fr/docs/Web/API/atob)
   - : Décode une chaîne de données qui a été codée en utilisant l'encodage en base 64.
-- {{domxref("WindowOrWorkerGlobalScope.btoa()")}}
+- [`btoa()`](/fr/docs/Web/API/btoa)
   - : Crée une chaîne ASCII codée en base 64 à partir d'une chaîne de données binaires.
-- {{domxref("WindowOrWorkerGlobalScope.clearInterval()")}}
-  - : Annule l'exécution répétée définie en utilisant {{domxref("WindowOrWorkerGlobalScope.setInterval ()")}}.
-- {{domxref("WindowOrWorkerGlobalScope.clearTimeout()")}}
-  - : Annule l'exécution différée définie en utilisant {{domxref("WindowOrWorkerGlobalScope.setTimeout ()")}}.
-- {{domxref("WindowOrWorkerGlobalScope.createImageBitmap()")}}
+- [`clearInterval()`](/fr/docs/Web/API/clearInterval)
+  - : Annule l'exécution répétée définie en utilisant [`setInterval()`](/fr/docs/Web/API/setInterval).
+- [`clearTimeout()`](/fr/docs/Web/API/atob)
+  - : Annule l'exécution différée définie en utilisant [`setTimeout()`](/fr/docs/Web/API/setTimeout).
+- [`createImageBitmap()`](/fr/docs/Web/API/createImageBitmap)
   - : Accepte une variété de sources d'images différentes, et renvoie un {{domxref("Promise")}} qui se résout en une {{domxref("ImageBitmap")}}. En option, la source est détourée avec le rectangle des pixels d'origine en (sx, sy) et de largeur sw, et de hauteur sh.
-- {{domxref("WindowOrWorkerGlobalScope.fetch()")}}
+- [`fetch()`](/fr/docs/Web/API/fetch)
   - : Démarre le processus de récupération d'une ressource à partir du réseau.
 - {{domxref("EventTarget.removeEventListener")}}
   - : Supprime un gestionnaire d'événement de la fenêtre.
-- {{domxref("WindowOrWorkerGlobalScope.setInterval()")}}
+- [`setInterval()`](/fr/docs/Web/API/setInterval)
   - : Planifie une fonction à exécuter à chaque fois qu'un nombre donné de millisecondes s'est écoulé.
-- {{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}
+- [`setTimeout()`](/fr/docs/Web/API/setTimeout)
   - : Planifie une fonction à exécuter dans un laps de temps donné.
 
 ### Méthodes obsolètes
 
-- {{domxref("Window.showModalDialog()")}} {{obsolete_inline}}
+- {{domxref("Window.showModalDialog()")}} {{deprecated_inline}}
   - : Affiche un dialogue modal. **Cette méthode a été complètement supprimée dans Chrome 43, et dans Firefox 55**.
 
 ## Gestionnaires d'évènements
@@ -321,8 +321,6 @@ _Cette interface hérite des gestionnaires d'événements de l'interface {{domxr
 > **Note :** à partir de {{Gecko ("9.0")}}, vous pouvez maintenant utiliser la syntaxe `if ("onabort" in window)` pour déterminer si une propriété de gestionnaire d'événements donnée existe ou non. Cela est dû au fait que les interfaces du gestionnaire d'événements ont été mises à jour pour être des interfaces Web IDL correctes. Voir les gestionnaires d'événements DOM pour plus de détails.
 
 - {{domxref("GlobalEventHandlers.onabort")}}
-
-
 
   - : Appelé quand le chargement d'une ressource a été avorté, comme par le fait qu'un utilisateur annule un chargement alors qu'il était encore en cours.
 
@@ -537,7 +535,7 @@ Voir aussi les [Interfaces DOM](/fr-FR/docs/DOM/DOM_Reference).
 - {{domxref("Window.XMLSerializer")}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Worker")}}
-  - : Used for creating a [Web worker](/en-US/docs/DOM/Using_web_workers)
+  - : Used for creating a [Web worker](/fr/docs/DOM/Using_web_workers)
 - {{domxref("Window.XPCNativeWrapper")}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Window.XPCSafeJSObjectWrapper")}}

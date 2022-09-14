@@ -20,7 +20,7 @@ translation_of: Web/API/Event/timeStamp
 
 <p>Значение - это миллисекунды, прошедшие с начала жизненного цикла текущего документа до создания события.</p>
 
-<p>In newer implementations, the value is a {{domxref("DOMHighResTimeStamp")}}  accurate to 5 microseconds (0.005 ms). In older implementations, the value is a {{domxref("DOMTimeStamp")}}, accurate to a millisecond.</p>
+<p>In newer implementations, the value is a {{domxref("DOMHighResTimeStamp")}}  accurate to 5 microseconds (0.005 ms). In older implementations, the value is a {{domxref("DOMTimeStamp")}}, accurate to a millisecond.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -47,7 +47,7 @@ document.body.addEventListener("keypress", getTime);</pre>
 <h2 id="Reduced_time_precision">Reduced time precision</h2>
 
 <p>To offer protection against timing attacks and fingerprinting, the precision of <code>event.timeStamp</code> might get rounded depending on browser settings.<br>
- In Firefox, the <code>privacy.reduceTimerPrecision</code>  preference is enabled by default and defaults to 20us in Firefox 59; in 60 it will be 2ms.</p>
+ In Firefox, the <code>privacy.reduceTimerPrecision</code>  preference is enabled by default and defaults to 20us in Firefox 59; in 60 it will be 2ms.</p>
 
 <pre class="brush: js">// reduced time precision (2ms) in Firefox 60
 event.timeStamp;
@@ -81,12 +81,12 @@ event.timeStamp;
   <tr>
    <td>{{SpecName("DOM WHATWG", "#dom-event-timestamp", "Event.timeStamp")}}</td>
    <td>{{Spec2("DOM WHATWG")}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName("DOM4", "#dom-event-timestamp", "Event.timeStamp")}}</td>
    <td>{{Spec2("DOM4")}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName("DOM2 Events", "#Events-Event-timeStamp", "Event.timeStamp")}}</td>

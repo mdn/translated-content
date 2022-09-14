@@ -11,9 +11,9 @@ translation_of: Web/API/Window/resize_event
 
 <p>Событие <strong><code>resize</code></strong> срабатывает при изменении размера представления документа (окна).</p>
 
-<p>В некоторых более ранних браузерах можно было зарегистрировать обработчики событий <code>resize</code> на любом HTML-элементе. По-прежнему можно установить атрибуты <code>onresize</code> или использовать {{domxref("EventTarget.addEventListener", "addEventListener()")}} чтобы установить обработчик для любого элемента. Однако, событие <code>resize</code>  запускается только на объекте {{domxref("Window", "window")}}. Только обработчики, зарегистрированные на объекте window, будут получать события <code>resize</code> .</p>
+<p>В некоторых более ранних браузерах можно было зарегистрировать обработчики событий <code>resize</code> на любом HTML-элементе. По-прежнему можно установить атрибуты <code>onresize</code> или использовать {{domxref("EventTarget.addEventListener", "addEventListener()")}} чтобы установить обработчик для любого элемента. Однако, событие <code>resize</code>  запускается только на объекте {{domxref("Window", "window")}}. Только обработчики, зарегистрированные на объекте window, будут получать события <code>resize</code> .</p>
 
-<p>Существует предложение разрешить всем элементам получать уведомления об изменениях размера. См. раздел <a href="https://wicg.github.io/ResizeObserver/">Resize Observer</a>, чтобы ознакомиться с проектом документа, и <a href="https://github.com/WICG/ResizeObserver/issues">GitHub вопросы</a>, чтобы ознакомиться с текущими обсуждениями.</p>
+<p>Существует предложение разрешить всем элементам получать уведомления об изменениях размера. См. раздел <a href="https://wicg.github.io/ResizeObserver/">Resize Observer</a>, чтобы ознакомиться с проектом документа, и <a href="https://github.com/WICG/ResizeObserver/issues">GitHub вопросы</a>, чтобы ознакомиться с текущими обсуждениями.</p>
 
 <h2 id="Основная_информация">Основная информация</h2>
 
@@ -27,7 +27,7 @@ translation_of: Web/API/Window/resize_event
  <dt style="float: left; text-align: right; width: 120px;">Отмена</dt>
  <dd style="margin: 0 0 0 120px;">Нет</dd>
  <dt style="float: left; text-align: right; width: 120px;">Цель</dt>
- <dd style="margin: 0 0 0 120px;">вид по умолчанию (window)</dd>
+ <dd style="margin: 0 0 0 120px;">вид по умолчанию (window)</dd>
  <dt style="float: left; text-align: right; width: 120px;">Действие по умолчанию</dt>
  <dd style="margin: 0 0 0 120px;">Нет</dd>
 </dl>
@@ -76,9 +76,9 @@ translation_of: Web/API/Window/resize_event
 
 <h2 id="Примеры">Примеры</h2>
 
-<p>Так как события изменения размера могут срабатывать с высокой скоростью, обработчик событий не должен выполнять дорогостоящие операции, такие как модификации DOM. Вместо этого рекомендуется регулировать событие, используя requestAnimationFrame, setTimeout или customEvent *, следующим образом:</p>
+<p>Так как события изменения размера могут срабатывать с высокой скоростью, обработчик событий не должен выполнять дорогостоящие операции, такие как модификации DOM. Вместо этого рекомендуется регулировать событие, используя requestAnimationFrame, setTimeout или customEvent *, следующим образом:</p>
 
-<p><strong>* ВАЖНО:</strong> Обратите внимание, что для работы в IE11 необходимо, чтобы <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent#Polyfill">customEvent</a> заполнялся в функцию правильно.</p>
+<p><strong>* ВАЖНО:</strong> Обратите внимание, что для работы в IE11 необходимо, чтобы <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent#Polyfill">customEvent</a> заполнялся в функцию правильно.</p>
 
 <h3 id="requestAnimationFrame_customEvent">requestAnimationFrame + customEvent</h3>
 

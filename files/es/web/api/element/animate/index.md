@@ -4,11 +4,11 @@ slug: Web/API/Element/animate
 translation_of: Web/API/Element/animate
 browser-compat: api.Element.animate
 ---
-{{APIRef('Web Animations')}} 
+{{APIRef('Web Animations')}}
 
 El método **`animate()`** de la interfaz {{domxref("Element")}} es un método abreviado el cual crea un nuevo {{domxref("Animation")}}, aplicado al elemento, luego reproduce la animación. Devuelve la instancia creada de un objeto {{domxref("Animation")}}.
 
-> **Nota:** Los elementos pueden tener multiples animaciones aplicadas a ellos. Puedes obtener una 
+> **Nota:** Los elementos pueden tener multiples animaciones aplicadas a ellos. Puedes obtener una
 > lista de las animaciones que afectan a un elemento llamando a {{domxref("Element.getAnimations()")}}.
 
 ## Síntaxis
@@ -25,11 +25,11 @@ animate(keyframes, options)
     para más detalles.
 - `options`
   
-  - : Puede ser un **entero representando la duración de la animación** (en milisegundos), **o** un 
-    objeto que contiene una o más propiedades acerca del tiempo descritas en los 
-    [los parametros de opciones del `KeyframeEffect()`](/es/docs/Web/API/KeyframeEffect) y/o las 
+  - : Puede ser un **entero representando la duración de la animación** (en milisegundos), **o** un
+    objeto que contiene una o más propiedades acerca del tiempo descritas en los
+    [los parametros de opciones del `KeyframeEffect()`](/es/docs/Web/API/KeyframeEffect) y/o las
     siguientes opciones:
-   
+
     - `id {{optional_inline}}`
       - : Una propiedad única `animate()` para animar: una [`DOMString`](/es/docs/Web/API/DOMString) la cual hace referencia a la animación.
 
@@ -39,19 +39,19 @@ Regresa una {{domxref("Animation")}}.
 
 ## Ejemplos
 
-En la demostración [Down the Rabbit Hole (con la API de Animaciones Web)](https://codepen.io/rachelnabors/pen/rxpmJL/?editors=0010), 
-utilizamos el método conveniente, `animate()` para inmediatamente crear y reproducir una animación en el elemento `#tunnel` 
+En la demostración [Down the Rabbit Hole (con la API de Animaciones Web)](https://codepen.io/rachelnabors/pen/rxpmJL/?editors=0010),
+utilizamos el método conveniente, `animate()` para inmediatamente crear y reproducir una animación en el elemento `#tunnel`
 para hacerlo fluir hacia arriba, indefinidamente. Observa el arreglo de los objetos enviados como fotogramas clave y también el bloque de opciones de sincronización.
 
 ```js
 document.getElementById("tunnel").animate([
-  // fotogramas clave
-  { transform: 'translateY(0px)' },
-  { transform: 'translateY(-300px)' }
+  // fotogramas clave
+  { transform: 'translateY(0px)' },
+  { transform: 'translateY(-300px)' }
 ], {
-  // opciones de sincronización
-  duration: 1000,
-  iterations: Infinity
+  // opciones de sincronización
+  duration: 1000,
+  iterations: Infinity
 });
 ```
 

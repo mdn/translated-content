@@ -16,7 +16,9 @@ La propriété **`arguments.length`** contient le nombre d'arguments passés à 
 
 ## Syntaxe
 
-    arguments.length
+```js
+arguments.length
+```
 
 ## Description
 

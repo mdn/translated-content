@@ -5,18 +5,18 @@ translation_of: Web/API/Window/self
 ---
 <p>{{ APIRef() }}</p>
 
-<p>Свойство <code><strong>Window.self</strong></code> доступно только для чтения и возвращает объект window в виде объекта {{domxref("WindowProxy")}}. Для доступа к данному свойству возможно использовать точечную нотацию и объект <code>window</code> (<code>window.self</code>) или переменную <code>self</code>. Преимущество доступа через переменную <code>self</code> заключается в том, что её можно использовать в окружениях, в которых нет window, например {{domxref("Worker", "Web Workers")}}. Использование <code>self</code> даёт возможность обращаться к глобальному объекту не только в окружениях где есть window (в таком случае <code>self</code> эквивалентна <code>window.self</code>), но также в воркерах (в случае воркера <code>self</code> эквивалентна {{domxref("WorkerGlobalScope.self")}}).</p>
+<p>Свойство <code><strong>Window.self</strong></code> доступно только для чтения и возвращает объект window в виде объекта {{domxref("WindowProxy")}}. Для доступа к данному свойству возможно использовать точечную нотацию и объект <code>window</code> (<code>window.self</code>) или переменную <code>self</code>. Преимущество доступа через переменную <code>self</code> заключается в том, что её можно использовать в окружениях, в которых нет window, например {{domxref("Worker", "Web Workers")}}. Использование <code>self</code> даёт возможность обращаться к глобальному объекту не только в окружениях где есть window (в таком случае <code>self</code> эквивалентна <code>window.self</code>), но также в воркерах (в случае воркера <code>self</code> эквивалентна {{domxref("WorkerGlobalScope.self")}}).</p>
 
 <h2 id="Notes">Пример</h2>
 
-<p>В следующем примере <code>window.self</code> точно также может быть заменено на <code>window</code>.</p>
+<p>В следующем примере <code>window.self</code> точно также может быть заменено на <code>window</code>.</p>
 
-<pre class="brush:js">if (window.parent.frames[0] != window.self) {
+<pre class="brush:js">if (window.parent.frames[0] != window.self) {
     // этот window не является первым frame в списке
 }
 </pre>
 
-<p>Кроме того, когда код выполняется в активном документе браузера, объект <code>window</code> является ссылкой на текущий глобальный объект и таким образом:</p>
+<p>Кроме того, когда код выполняется в активном документе браузера, объект <code>window</code> является ссылкой на текущий глобальный объект и таким образом:</p>
 
 <pre class="brush:js">var w1 = window;
 var w2 = self;
@@ -57,7 +57,7 @@ var w4 = window.self;
 
 <p>{{Compat}}</p>
 
-<p> </p>
+<p> </p>
 
 <h2 class="noinclude" id="Смотрите_также">Смотрите также</h2>
 

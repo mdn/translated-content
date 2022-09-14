@@ -14,10 +14,10 @@ Que l'on traite des fichiers audio pré-enregistrés ou des flux en directs, le 
 
 Pour distribuer du contenu audio et vidéo, le processus général se déroule comme suit&nbsp;:
 
-1.  Vérifier quels formats sont pris en charge par le navigateur via la détection de fonctionnalité&nbsp;;
-2.  Si le navigateur ne lit pas nativement les formats fournis, utiliser un contenu de secours dans un autre format&nbsp;;
-3.  Définir la façon dont vous voulez lire/instancier le média (par exemple un élément [`<video>`](/fr/docs/Web/HTML/Element/video), ou peut-être via JavaScript avec `document.createElement('video')`)&nbsp;;
-4.  Ajouter le fichier média au lecteur.
+1. Vérifier quels formats sont pris en charge par le navigateur via la détection de fonctionnalité&nbsp;;
+2. Si le navigateur ne lit pas nativement les formats fournis, utiliser un contenu de secours dans un autre format&nbsp;;
+3. Définir la façon dont vous voulez lire/instancier le média (par exemple un élément [`<video>`](/fr/docs/Web/HTML/Element/video), ou peut-être via JavaScript avec `document.createElement('video')`)&nbsp;;
+4. Ajouter le fichier média au lecteur.
 
 ### Audio HTML
 
@@ -312,7 +312,9 @@ Lors de la définition de l'URI du média d'un élément [`<audio>`](/fr/docs/We
 
 Un intervalle temporel se définit avec la syntaxe suivante :
 
-    #t=[tempsdebut][,tempsfin]
+```
+#t=[tempsdebut][,tempsfin]
+```
 
 La valeur temporelle peut être définie en nombre de secondes (avec une valeur décimale) ou avec un horodatage en heures/minutes/secondes avec un deux-points comme séparateur (par exemple 2:05:01 pour indiquer 2 heures, 5 minutes et 1 seconde).
 
@@ -350,18 +352,20 @@ Si ces fichiers fonctionnent mais que votre fichier ne fonctionne pas, il y a de
 
 Bien que les serveurs les prennent généralement en charge, vous allez peut-être avoir besoin d'ajouter ce qui suit à votre fichier `.htaccess`&nbsp;:
 
-    # AddType TYPE/SUBTYPE EXTENSION
+```
+# AddType TYPE/SUBTYPE EXTENSION
 
-    AddType audio/mpeg mp3
-    AddType audio/mp4 m4a
-    AddType audio/ogg ogg
-    AddType audio/ogg oga
+AddType audio/mpeg mp3
+AddType audio/mp4 m4a
+AddType audio/ogg ogg
+AddType audio/ogg oga
 
-    AddType video/mp4 mp4
-    AddType video/mp4 m4v
-    AddType video/ogg ogv
-    AddType video/webm webm
-    AddType video/webm webmv
+AddType video/mp4 mp4
+AddType video/mp4 m4v
+AddType video/ogg ogv
+AddType video/webm webm
+AddType video/webm webmv
+```
 
 #### 2. Votre fichier n'est pas encodé correctement
 

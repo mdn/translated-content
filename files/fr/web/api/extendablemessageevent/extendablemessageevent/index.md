@@ -15,7 +15,9 @@ Le constructeur **`Extendable.MessageEvent()`** crée une nouvelle instance d'un
 
 ## Syntaxe
 
-    var myEME = new ExtendableMessageEvent(type, init);
+```js
+var myEME = new ExtendableMessageEvent(type, init);
+```
 
 ### Paramètres
 
@@ -45,17 +47,15 @@ var myEME = new ExtendableMessageEvent('message', init);
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                               | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#extendablemessage-event-interface', 'ExtendableMessageEvent')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilités des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.ExtendableMessageEvent.ExtendableMessageEvent")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Utiliser les Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Utiliser les Service Workers](/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Exemple simple de service workers](https://github.com/mdn/sw-test)
 - [Les Services Workers sont-ils prêts ?](https://jakearchibald.github.io/isserviceworkerready/)
-- [Canal de messages](/en-US/docs/Web/API/Channel_Messaging_API)
+- [Canal de messages](/fr/docs/Web/API/Channel_Messaging_API)

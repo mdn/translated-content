@@ -15,7 +15,9 @@ La méthode **`WebGLRenderingContext.getAttribLocation()`** de l'[API WebGL](/fr
 
 ## Syntaxe
 
-    GLint gl.getAttribLocation(programme, nom);
+```js
+GLint gl.getAttribLocation(programme, nom);
+```
 
 ### Paramètres
 
@@ -36,14 +38,11 @@ gl.getAttribLocation(programme, 'vColor');
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                               | Commentaire                      |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------- |
-| {{SpecName('WebGL', "#5.14.10", "getAttribLocation")}}                                 | {{Spec2('WebGL')}}             | Définition initiale.             |
-| {{SpecName('OpenGL ES 2.0', "glGetAttribLocation.xml", "glGetAttribLocation")}} | {{Spec2('OpenGL ES 2.0')}} | Page principale de l'API OpenGL. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.getAttribLocation")}}
+{{Compat}}
 
 ## Voir aussi
 

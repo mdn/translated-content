@@ -19,7 +19,7 @@ line-height-step: 18pt;
 
 ## Syntaxe
 
-La propriété `line-height-step` peut être définie avec une valeur de type [`<length>`](#<length>).
+La propriété `line-height-step` peut être définie avec une valeur de type [`<length>`](#length).
 
 ### Valeurs
 

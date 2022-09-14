@@ -25,11 +25,11 @@ translation_of: Web/API/KeyboardEvent
 
 <h2 id="Методы">Методы</h2>
 
-<p><em>Этот интерфейс также наследует методы от своих родителей: {{domxref("UIEvent")}} и {{domxref("Event")}}.</em></p>
+<p><em>Этот интерфейс также наследует методы от своих родителей: {{domxref("UIEvent")}} и {{domxref("Event")}}.</em></p>
 
 <dl>
  <dt><a id="getModifierState" name="getModifierState"></a>{{domxref("KeyboardEvent.getModifierState()")}}</dt>
- <dd>Возвращает {{jsxref("Boolean")}}, показывающий, что использовалась клавиша-модификатор, такая как <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd> или <kbd>Meta</kbd>, которая была нажата, когда создалось событие.</dd>
+ <dd>Возвращает {{jsxref("Boolean")}}, показывающий, что использовалась клавиша-модификатор, такая как <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd> или <kbd>Meta</kbd>, которая была нажата, когда создалось событие.</dd>
  <dt>{{domxref("KeyboardEvent.initKeyEvent()")}}{{deprecated_inline}}</dt>
  <dd>Инициализирует объект <code>KeyboardEvent</code>. Этот метод реализован только в движке Gecko (остальные использовали метод {{domxref("KeyboardEvent.initKeyboardEvent()")}}), и он не должен в дальнейшем использоваться. Новый стандартный способ - это использование конструктора {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}.</dd>
  <dt>{{domxref("KeyboardEvent.initKeyboardEvent()")}}{{deprecated_inline}}</dt>
@@ -56,14 +56,14 @@ translation_of: Web/API/KeyboardEvent
  <dt>{{domxref("KeyboardEvent.code")}} {{Readonlyinline}}</dt>
  <dd>Возвращает {{domxref("DOMString")}} с кодом клавиши, представленного события.</dd>
  <dt>{{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}</dt>
- <dd>Возвращает {{jsxref("Boolean")}}, которое <code>true</code>, если клавиша  <kbd>Ctrl</kbd> была активна, когда возникло событие.</dd>
+ <dd>Возвращает {{jsxref("Boolean")}}, которое <code>true</code>, если клавиша  <kbd>Ctrl</kbd> была активна, когда возникло событие.</dd>
  <dt>{{domxref("KeyboardEvent.isComposing")}} {{Readonlyinline}}</dt>
  <dd>Возвращает {{jsxref("Boolean")}}, которое <code>true</code>, если событие возникло между "после-<code>compositionstart</code>" и "до-<code>compositionend</code>".</dd>
  <dt>{{domxref("KeyboardEvent.key")}} {{Readonlyinline}}</dt>
  <dd>Возвращает {{domxref("DOMString")}}, представляющее значение клавиши, на которой возникло событие.</dd>
- <dt>{{domxref("KeyboardEvent.keyCode")}} {{deprecated_inline}} {{Readonlyinline}}</dt>
+ <dt>{{domxref("KeyboardEvent.keyCode")}} {{deprecated_inline}} {{Readonlyinline}}</dt>
  <dd>Возвращает {{jsxref("Number")}}, представляющее системный и зависящий от конкретной реализации числовой код, идентифицирующий немодифицированное значение нажатой клавиши.
- <div class="warning"><strong>Предупреждение:</strong> Это нерекомендуемый  к эксплуатации атрибут; по возможности вам нужно использовать вместо него {{domxref("KeyboardEvent.key")}}.</div>
+ <div class="warning"><strong>Предупреждение:</strong> Это нерекомендуемый  к эксплуатации атрибут; по возможности вам нужно использовать вместо него {{domxref("KeyboardEvent.key")}}.</div>
  </dd>
  <dt>{{domxref("KeyboardEvent.keyIdentifier")}} {{Non-standard_inline}}{{deprecated_inline}}{{Readonlyinline}}</dt>
  <dd>Это свойство нестандартное, и его использование не рекомендуется в пользу {{domxref("KeyboardEvent.key")}}. Это часть устаревшего "DOM Level 3 Events".</dd>
@@ -83,7 +83,7 @@ translation_of: Web/API/KeyboardEvent
  <dd>Возвращает {{jsxref("Boolean")}}, которое <code>true</code>, если клавиша <kbd>Shift</kbd> была активна, когда возникло событие.</dd>
  <dt>{{domxref("KeyboardEvent.which")}} {{deprecated_inline}} {{Readonlyinline}}</dt>
  <dd>Возвращает {{jsxref("Number")}}, представляющее зависящее от конкретной реализации значение системного кода нажатой клавиши, который представляет собой немодифицируемое значение; это обычно то же, что свойство <code>keyCode</code>.
- <div class="warning"><strong>Предупреждение:</strong> Это нерекомендуемый  к эксплуатации атрибут; по возможности вам нужно использовать вместо него {{domxref("KeyboardEvent.key")}}.</div>
+ <div class="warning"><strong>Предупреждение:</strong> Это нерекомендуемый  к эксплуатации атрибут; по возможности вам нужно использовать вместо него {{domxref("KeyboardEvent.key")}}.</div>
  </dd>
 </dl>
 
@@ -170,23 +170,23 @@ document.addEventListener('keydown', (event) =&gt; {
     return;
   }
 
-  if (event.ctrlKey) {
-    // Хотя event.key это не 'Control' (например, нажата клавиша 'a'),
-    // то всё же event.ctrlKey может быть true, если ударживается клавиша Ctrl.
-    alert(`Combination of ctrlKey + ${keyName}`);
-  } else {
-    alert(`Key pressed ${keyName}`);
-  }
+  if (event.ctrlKey) {
+    // Хотя event.key это не 'Control' (например, нажата клавиша 'a'),
+    // то всё же event.ctrlKey может быть true, если ударживается клавиша Ctrl.
+    alert(`Combination of ctrlKey + ${keyName}`);
+  } else {
+    alert(`Key pressed ${keyName}`);
+  }
 }, false);
 
 document.addEventListener('keyup', (event) =&gt; {
-  const keyName = event.key;
+  const keyName = event.key;
 
-  // Как только пользователь отпустит клавишу Ctrl, то она больше не будет активной.
-  // Поэтому event.ctrlKey = false.
-  if (keyName === 'Control') {
-    alert('Control key was released');
-  }
+  // Как только пользователь отпустит клавишу Ctrl, то она больше не будет активной.
+  // Поэтому event.ctrlKey = false.
+  if (keyName === 'Control') {
+    alert('Control key was released');
+  }
 }, false);
 
 &lt;/script&gt;

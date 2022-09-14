@@ -5,7 +5,7 @@ translation_of: Web/API/Element/matches
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>O método <strong><code>Element.matches()</code></strong> retorna verdadeiro se o elemento puder ser selecionado pela sequência de caracteres específica; caso contrário retorna falso.</p>
+<p>O método <strong><code>Element.matches()</code></strong> retorna verdadeiro se o elemento puder ser selecionado pela sequência de caracteres específica; caso contrário retorna falso.</p>
 
 <div class="warning">
 <p>Diversos navegadores implementam isto, prefixado, sob nome não padronizado <code>matchesSelector()</code>.</p>
@@ -18,7 +18,7 @@ translation_of: Web/API/Element/matches
 
 <ul>
  <li><code>result contém o valor de retorno true ou false.</code></li>
- <li><code>selectorString</code> é uma string representando o seletor para teste.</li>
+ <li><code>selectorString</code> é uma string representando o seletor para teste.</li>
 </ul>
 
 <h2 id="Exemplo">Exemplo</h2>
@@ -40,18 +40,18 @@ translation_of: Web/API/Element/matches
 &lt;/script&gt;
 </pre>
 
-<p>Isto irá logar "The Philippine eagle is endangered!" para o console, desde que o elemento tenha de fato um atributo de classe com o valor <code>endangered</code>.</p>
+<p>Isto irá logar "The Philippine eagle is endangered!" para o console, desde que o elemento tenha de fato um atributo de classe com o valor <code>endangered</code>.</p>
 
 <h2 id="Exceções">Exceções</h2>
 
 <dl>
  <dt><code>SYNTAX_ERR</code></dt>
- <dd>O seletor de string específico é inválido.</dd>
+ <dd>O seletor de string específico é inválido.</dd>
 </dl>
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>Para navegadores que não suportam <code>Element.matches()</code> ou <code>Element.matchesSelector()</code>,  mass possuem suporte para <code>document.querySelectorAll()</code>, existe um polyfill:</p>
+<p>Para navegadores que não suportam <code>Element.matches()</code> ou <code>Element.matchesSelector()</code>,  mass possuem suporte para <code>document.querySelectorAll()</code>, existe um polyfill:</p>
 
 <pre>if (!Element.prototype.matches) {
     Element.prototype.matches =
@@ -89,77 +89,4 @@ translation_of: Web/API/Element/matches
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Original support with a non-standard name</td>
-   <td>
-    <p>{{CompatVersionUnknown}}<sup>[1]</sup></p>
-   </td>
-   <td>{{CompatGeckoDesktop("1.9.2")}}<sup>[2]</sup></td>
-   <td>9.0<sup>[3]</sup></td>
-   <td>11.5<sup>[4]</sup><br>
-    15.0<sup>[1]</sup></td>
-   <td>5.0<sup>[1]</sup></td>
-  </tr>
-  <tr>
-   <td>Specified version</td>
-   <td>{{CompatChrome("34")}}</td>
-   <td>{{CompatGeckoDesktop("34")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>21.0</td>
-   <td>7.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Original support with a non-standard name</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.9.2")}}<sup>[2]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Specified version</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("34")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>8</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Esta feature foi implementada com o nome não padronizado <code>webkitMatchesSelector</code>.</p>
-
-<p>[2] Esta feature foi implementada com o nome não padronizado <code>mozMatchesSelector</code>. Anteriormente para o Gecko 2.0, seletores de string inválido faziam com que retornasse false ao invés de empurrar uma exceção.</p>
-
-<p>[3] Esta feature foi implementada com o nome não padronizado <code>msMatchesSelector</code>.</p>
-
-<p>[4] Esta feature foi implementada com o nome não padronizado <code>oMatchesSelector</code>.</p>
+{{Compat("api.Element.matches")}}

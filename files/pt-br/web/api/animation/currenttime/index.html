@@ -5,9 +5,9 @@ translation_of: Web/API/Animation/currentTime
 ---
 <p>{{APIRef("Web Animations")}}{{SeeCompatTable}}</p>
 
-<p>A propriedade <code><strong>Animation</strong></code><strong><code>.currentTime</code></strong> da <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> retorna e altera o tempo atual da animação em milésimos de segundos, seja estando em execução ou pausada.</p>
+<p>A propriedade <code><strong>Animation</strong></code><strong><code>.currentTime</code></strong> da <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> retorna e altera o tempo atual da animação em milésimos de segundos, seja estando em execução ou pausada.</p>
 
-<p>Se a animação não tem uma {{domxref("AnimationTimeline", "timeline")}}, está inativa, ou ainda não foi colocada em execução, o valor de retorno do <code>currentTime </code>será<code> null</code>. </p>
+<p>Se a animação não tem uma {{domxref("AnimationTimeline", "timeline")}}, está inativa, ou ainda não foi colocada em execução, o valor de retorno do <code>currentTime </code>será<code> null</code>. </p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -16,11 +16,11 @@ translation_of: Web/API/Animation/currentTime
 
 <h3 id="Valor">Valor</h3>
 
-<p>Um número que representará no tempo atual da animação em milésimos de segundos, ou <code>null</code> para desativar a animação.</p>
+<p>Um número que representará no tempo atual da animação em milésimos de segundos, ou <code>null</code> para desativar a animação.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>No <a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">jogo Drink Me/Eat Me</a>, O tamanho da Alice é animado e pode crescer ou diminuir. No início do jogo, o tamanho dela foi colocado entre os dois extremos do animation's <code>currentTime</code> no meio do <a href="/en-US/docs/Web/API/Web_Animations_API/Animation_timing_options"><code>KeyframeEffect</code>'s duration</a>, desta maneira:</p>
+<p>No <a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">jogo Drink Me/Eat Me</a>, O tamanho da Alice é animado e pode crescer ou diminuir. No início do jogo, o tamanho dela foi colocado entre os dois extremos do animation's <code>currentTime</code> no meio do <a href="/en-US/docs/Web/API/Web_Animations_API/Animation_timing_options"><code>KeyframeEffect</code>'s duration</a>, desta maneira:</p>
 
 <pre class="brush: js">aliceChange<strong>.</strong>currentTime = aliceChange.effect.timing.duration / 2;</pre>
 
@@ -42,66 +42,14 @@ translation_of: Web/API/Animation/currentTime
   <tr>
    <td>{{SpecName('Web Animations', '#dom-animation-currenttime', 'currentTime')}}</td>
    <td>{{Spec2("Web Animations")}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(39.0)}}</td>
-   <td>{{CompatGeckoDesktop(48)}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(39.0)}}</td>
-   <td>{{CompatGeckoMobile(48)}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(39.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] A Web Animations API está ativa por padrão apenas no Firefox Developer Edition e nas versões do Nightly. Você pode habilitá-la em versões beta configurando a preferência <code>dom.animations-api.core.enabled</code> para <code>true</code>, e também desativar em qualquer Firefox mudando esta mesma preferência para <code>false</code>.</p>
+{{Compat("api.Animation.currentTime")}}
 
 <h2 id="Veja_também" style="line-height: 30px; font-size: 2.14285714285714rem;">Veja também</h2>
 

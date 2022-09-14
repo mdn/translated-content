@@ -13,7 +13,7 @@ original_slug: Web/HTML/Elemento/select
 ---
 <h2 id="Resumen">Resumen</h2>
 
-<p>El elemento select (<code>&lt;select&gt;</code>) de HTML representa un control que muestra un menú de opciones. Las opciones contenidas en el menú son representadas por elementos {{HTMLElement("option")}}, los cuales pueden ser agrupados por elementos {{HTMLElement("optgroup")}}. La opcion puede estar preseleccionada por el usuario.</p>
+<p>El elemento select (<code>&lt;select&gt;</code>) de HTML representa un control que muestra un menú de opciones. Las opciones contenidas en el menú son representadas por elementos {{HTMLElement("option")}}, los cuales pueden ser agrupados por elementos {{HTMLElement("optgroup")}}. La opcion puede estar preseleccionada por el usuario.</p>
 
 <h2 id="Contenido">Contenido</h2>
 
@@ -21,7 +21,7 @@ original_slug: Web/HTML/Elemento/select
  <tbody>
   <tr>
    <td><a href="/en-US/docs/HTML/Content_categories" title="HTML/Content categories">Content categories</a></td>
-   <td>Elementos <a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">flow content</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content categories#Phrasing content">phrasing content</a>, <a href="/en-US/docs/HTML/Content_categories#Interactive_content" title="HTML/Content categories#Interactive content">interactive content</a>, <a href="/en-US/docs/HTML/Content_categories#Form_listed" title="HTML/Content categories#Form listed">listed</a>, <a href="/en-US/docs/HTML/Content_categories#Form_labelable" title="HTML/Content categories#Form labelable">labelable</a>, <a href="/en-US/docs/HTML/Content_categories#Form_resettable" title="HTML/Content categories#Form resettable">resettable</a>, y <a href="/en-US/docs/HTML/Content_categories#Form_submittable" title="HTML/Content categories#Form submittable">submittable</a> <a href="/en-US/docs/HTML/Content_categories#Form-associated_" title="HTML/Content categories#Form-associated ">form-associated</a>.</td>
+   <td>Elementos <a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">flow content</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content categories#Phrasing content">phrasing content</a>, <a href="/en-US/docs/HTML/Content_categories#Interactive_content" title="HTML/Content categories#Interactive content">interactive content</a>, <a href="/en-US/docs/HTML/Content_categories#Form_listed" title="HTML/Content categories#Form listed">listed</a>, <a href="/en-US/docs/HTML/Content_categories#Form_labelable" title="HTML/Content categories#Form labelable">labelable</a>, <a href="/en-US/docs/HTML/Content_categories#Form_resettable" title="HTML/Content categories#Form resettable">resettable</a>, y <a href="/en-US/docs/HTML/Content_categories#Form_submittable" title="HTML/Content categories#Form submittable">submittable</a> <a href="/en-US/docs/HTML/Content_categories#Form-associated_" title="HTML/Content categories#Form-associated ">form-associated</a>.</td>
   </tr>
   <tr>
    <td>Contenido permitido</td>
@@ -33,14 +33,14 @@ original_slug: Web/HTML/Elemento/select
   </tr>
   <tr>
    <td>Elementos padre permitidos</td>
-   <td>Cualquier elemento que permita phrasing content.</td>
+   <td>Cualquier elemento que permita phrasing content.</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Atributos">Atributos</h2>
 
-<p><span style="line-height: 21px;">Este elemento incluye </span><a href="/en-US/docs/Web/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">global attributes</a><span style="line-height: 21px;">.</span></p>
+<p><span style="line-height: 21px;">Este elemento incluye </span><a href="/en-US/docs/Web/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">global attributes</a><span style="line-height: 21px;">.</span></p>
 
 <dl>
  <dt>{{htmlattrdef("autofocus")}} {{HTMLVersionInline("5")}}</dt>
@@ -59,22 +59,22 @@ original_slug: Web/HTML/Elemento/select
  <dd>Si el control se presenta como una lista con scroll en caja, este atributo representa el numero de filas que la list tendrá visible la primera vez. Los navegadores no están requeridos a presentar un elemento select como una lista con escroll en caja. El valor por defecto es cero.</dd>
 </dl>
 
-<div class="note"><strong>Nota de Firefox: </strong>De acuerdo con las especificaciones de HTML5, el tamaño por defecto debe ser 1; sin embargo, en la práctica, esto hace que se rompan algunas páginas webs, y ningun otro navegador actualmente hace esto, así que Mozilla ha optado por continuar usando 0 desde que empezó con Firefox.</div>
+<div class="note"><strong>Nota de Firefox: </strong>De acuerdo con las especificaciones de HTML5, el tamaño por defecto debe ser 1; sin embargo, en la práctica, esto hace que se rompan algunas páginas webs, y ningun otro navegador actualmente hace esto, así que Mozilla ha optado por continuar usando 0 desde que empezó con Firefox.</div>
 
 <dl>
 </dl>
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+<h2 id="DOM_Interface">DOM Interface</h2>
 
-<p>Este elemento implementa la interfaz <code><a href="/en-US/docs/DOM/HTMLSelectElement" title="DOM/select">HTMLSelectElement</a>.</code></p>
+<p>Este elemento implementa la interfaz <code><a href="/en-US/docs/DOM/HTMLSelectElement" title="DOM/select">HTMLSelectElement</a>.</code></p>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
 <pre class="brush: html">&lt;!-- The second value will be selected initially --&gt;
 &lt;select name="select"&gt;
-  &lt;option value="value1"&gt;Value 1&lt;/option&gt;
-  &lt;option value="value2" selected&gt;Value 2&lt;/option&gt;
-  &lt;option value="value3"&gt;Value 3&lt;/option&gt;
+  &lt;option value="value1"&gt;Value 1&lt;/option&gt;
+  &lt;option value="value2" selected&gt;Value 2&lt;/option&gt;
+  &lt;option value="value3"&gt;Value 3&lt;/option&gt;
 &lt;/select&gt;
 </pre>
 
@@ -84,11 +84,11 @@ original_slug: Web/HTML/Elemento/select
 
 <h3 id="Notas">Notas</h3>
 
-<p>El contenido de este elemento es estático y no <a href="/en-US/docs/HTML/Content_Editable" title="HTML/Content_Editable">editable</a>.</p>
+<p>El contenido de este elemento es estático y no <a href="/en-US/docs/HTML/Content_Editable" title="HTML/Content_Editable">editable</a>.</p>
 
-<p>El siguiente ejemplo muestra como simular una lista con opciones editables, pero ten cuidado ya que algunos lectores de pantallas y dispositivos de ayuda no lo interpretarán de forma correcta; este ejemplo sería html inválido si usas los elementos correctos:</p>
+<p>El siguiente ejemplo muestra como simular una lista con opciones editables, pero ten cuidado ya que algunos lectores de pantallas y dispositivos de ayuda no lo interpretarán de forma correcta; este ejemplo sería html inválido si usas los elementos correctos:</p>
 
-<p><a href="/files/4563/editable_select.html" style="line-height: 1.5;" title="Simulating an editable select through a fieldset of radioboxes and textboxes">This is an example</a> de un select editable mediante un<span style="line-height: 1.5;"> {{HTMLElement("fieldset")}} de </span><a href="/en-US/docs/HTML/Element/Input" style="line-height: 1.5;" title="HTML/Element/Input">radioboxes</a><span style="line-height: 1.5;"> y </span><a href="/en-US/docs/HTML/Element/Input" style="line-height: 1.5;" title="HTML/Element/Input">textboxes</a><span style="line-height: 1.5;"> (<strong>escrito en CSS puro</strong></span><span style="line-height: 1.5;">, sin JavaScript), </span></p>
+<p><a href="/files/4563/editable_select.html" style="line-height: 1.5;" title="Simulating an editable select through a fieldset of radioboxes and textboxes">This is an example</a> de un select editable mediante un<span style="line-height: 1.5;"> {{HTMLElement("fieldset")}} de </span><a href="/en-US/docs/HTML/Element/Input" style="line-height: 1.5;" title="HTML/Element/Input">radioboxes</a><span style="line-height: 1.5;"> y </span><a href="/en-US/docs/HTML/Element/Input" style="line-height: 1.5;" title="HTML/Element/Input">textboxes</a><span style="line-height: 1.5;"> (<strong>escrito en CSS puro</strong></span><span style="line-height: 1.5;">, sin JavaScript), </span></p>
 
 <h2 id="Especificaciones">Especificaciones</h2>
 
@@ -104,12 +104,12 @@ original_slug: Web/HTML/Elemento/select
   <tr>
    <td>{{SpecName('HTML5 W3C', 'forms.html#the-select-element', '&lt;select&gt;')}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('HTML4.01', 'interact/forms.html#h-17.6', '&lt;select&gt;')}}</td>
    <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

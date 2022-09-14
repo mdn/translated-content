@@ -12,7 +12,9 @@ L'élément `<xsl:copy-of>` fait une copie complète dans le document de sortie 
 
 ### Syntaxe
 
-    <xsl:copy-of select=EXPRESSION />
+```xml
+<xsl:copy-of select=EXPRESSION />
+```
 
 ### Attributs obligatoires
 

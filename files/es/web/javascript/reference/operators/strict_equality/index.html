@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Referencia/Operadores/Strict_equality
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p>El operador de estricta igualdad (<code>===</code>) revisa si dos operandos son iguales y produce un resultado Booleano. A diferencia del operador de igualdad regular (==), el operador de estricta igualdad siempre considera que los operandos de distinto tipo de valor son diferentes y nunca similares.</p>
+<p>El operador de estricta igualdad (<code>===</code>) revisa si dos operandos son iguales y produce un resultado Booleano. A diferencia del operador de igualdad regular (==), el operador de estricta igualdad siempre considera que los operandos de distinto tipo de valor son diferentes y nunca similares.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-strict-equality.html")}}</div>
 
@@ -18,23 +18,23 @@ original_slug: Web/JavaScript/Referencia/Operadores/Strict_equality
 
 <h2 id="Descripción">Descripción</h2>
 
-<p>Los operadores de estricta igualdad (<code>===</code> y <code>!==</code>) usan el <a class="external external-icon" href="http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.6" rel="noopener">Algoritmo Estricto Comparativo de Igualdad </a> para comparar dos operandos:</p>
+<p>Los operadores de estricta igualdad (<code>===</code> y <code>!==</code>) usan el <a class="external external-icon" href="http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.6" rel="noopener">Algoritmo Estricto Comparativo de Igualdad </a> para comparar dos operandos:</p>
 
 <ul>
- <li>Si los operandos son de diferente tipo de valor, produce <code>false</code>.</li>
- <li> Si ambos operandos son objetos, produce <code>true</code> solo si se refiere al mismo objeto.</li>
- <li>Si ambos operandos son de tipo <code>null</code> o ambos operandos son <code>undefined</code>, produce <code>true</code>.</li>
+ <li>Si los operandos son de diferente tipo de valor, produce <code>false</code>.</li>
+ <li> Si ambos operandos son objetos, produce <code>true</code> solo si se refiere al mismo objeto.</li>
+ <li>Si ambos operandos son de tipo <code>null</code> o ambos operandos son <code>undefined</code>, produce <code>true</code>.</li>
  <li>Si cualquier operando es de tipo <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">NaN</span></font>, produce <code>false</code>.</li>
- <li>En otros casos, compara los valores de ambos operandos:
+ <li>En otros casos, compara los valores de ambos operandos:
   <ul>
-   <li>Los números deben tener el mismo valor numérico, aunque <code>+0</code> y <code>-0</code> son considerados como del mismo valor.</li>
+   <li>Los números deben tener el mismo valor numérico, aunque <code>+0</code> y <code>-0</code> son considerados como del mismo valor.</li>
    <li>Los strings deben tener los mismos caracteres en el mismo orden.</li>
-   <li>Los booleanos deben ambos ser <code>true</code> o ambos ser <code>false</code>.</li>
+   <li>Los booleanos deben ambos ser <code>true</code> o ambos ser <code>false</code>.</li>
   </ul>
  </li>
 </ul>
 
-<p>La diferencia más notable entre este operador y el operador de <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Equality">igualdad</a> regular (<code>==</code>) es que si los operandos son de distinto tipo de valor, el operador <code>==</code> intenta convertir los valores a un mismo tipo de dato antes de compararlos.</p>
+<p>La diferencia más notable entre este operador y el operador de <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Equality">igualdad</a> regular (<code>==</code>) es que si los operandos son de distinto tipo de valor, el operador <code>==</code> intenta convertir los valores a un mismo tipo de dato antes de compararlos.</p>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 

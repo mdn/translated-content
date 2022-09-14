@@ -14,7 +14,7 @@ CalDAV (extensions de gestion de calendrier pour {{Glossary("WebDAV")}}) est un 
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "CalDAV")}} sur Wikipédia
+- [CalDAV](https://fr.wikipedia.org/wiki/CalDAV) sur Wikipédia
 
 ### Référence technique
 

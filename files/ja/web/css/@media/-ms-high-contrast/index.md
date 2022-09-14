@@ -48,7 +48,7 @@ original_slug: Web/CSS/-ms-high-contrast
 
 ```css
 @media screen and (-ms-high-contrast: black-on-white) {
-  div { background-image: url('image-bw.png'); }
+  div { background-image: url('image-bw.png'); }
 }
 ```
 
@@ -56,7 +56,7 @@ original_slug: Web/CSS/-ms-high-contrast
 
 ```css
 @media screen and (-ms-high-contrast: white-on-black) {
-  div { background-image: url('image-wb.png'); }
+  div { background-image: url('image-wb.png'); }
 }
 ```
 

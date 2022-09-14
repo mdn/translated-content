@@ -17,7 +17,9 @@ Indique si l'événement donné se propage à travers le DOM ou non.
 
 ## Syntaxe
 
-    event.bubbles
+```js
+event.bubbles
+```
 
 ### Valeur
 
@@ -41,16 +43,12 @@ function goInput(e) {
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('DOM WHATWG', '#dom-event-bubbles', 'Event.bubbles')}}         | {{ Spec2('DOM WHATWG') }}     |                      |
-| {{SpecName('DOM4', '#dom-event-bubbles', 'Event.bubbles')}}                 | {{ Spec2('DOM4') }}             |                      |
-| {{SpecName('DOM2 Events', '#Events-Event-canBubble', 'Event.bubbles')}} | {{ Spec2('DOM2 Events') }} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Event.bubbles")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [stopPropagation](/en-US/docs/Web/API/Event/stopPropagation) pour empêcher la propagation
+- [stopPropagation](/fr/docs/Web/API/Event/stopPropagation) pour empêcher la propagation

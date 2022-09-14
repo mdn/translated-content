@@ -12,11 +12,11 @@ translation_of: Web/API/MouseEvent
 ---
 <p id="Summary">{{APIRef("DOM Events")}}</p>
 
-<p>Интерфейс <code><strong>MouseEvent</strong></code> представляет собой событие, которое происходит в результате взаимодействия пользователя с  манипулятором ( например, мышью). Наиболее частые из таких событий: {{event("click")}}, {{event("dblclick")}}, {{event("mouseup")}}, {{event("mousedown")}}.</p>
+<p>Интерфейс <code><strong>MouseEvent</strong></code> представляет собой событие, которое происходит в результате взаимодействия пользователя с  манипулятором ( например, мышью). Наиболее частые из таких событий: {{event("click")}}, {{event("dblclick")}}, {{event("mouseup")}}, {{event("mousedown")}}.</p>
 
-<p><code>MouseEvent</code> выводится из метода {{domxref("UIEvent")}}, который в свою очередь происходит из метода {{domxref("Event")}}. Метод {{domxref("MouseEvent.initMouseEvent()")}} допустимо использовать для лучшей совместимости с предыдущими версиями, однако, для создания  <code>MouseEvent </code>рекомендуется использовать конструктор метода  {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}.</p>
+<p><code>MouseEvent</code> выводится из метода {{domxref("UIEvent")}}, который в свою очередь происходит из метода {{domxref("Event")}}. Метод {{domxref("MouseEvent.initMouseEvent()")}} допустимо использовать для лучшей совместимости с предыдущими версиями, однако, для создания  <code>MouseEvent </code>рекомендуется использовать конструктор метода  {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}.</p>
 
-<p>Несколько более конкретные события, производные от события mouseevent: {{domxref("WheelEvent")}} and {{domxref("DragEvent")}}.</p>
+<p>Несколько более конкретные события, производные от события mouseevent: {{domxref("WheelEvent")}} and {{domxref("DragEvent")}}.</p>
 
 <h2 id="Конструктор">Конструктор</h2>
 
@@ -31,7 +31,7 @@ translation_of: Web/API/MouseEvent
 
 <dl>
  <dt>{{domxref("MouseEvent.altKey")}} {{readonlyinline}}</dt>
- <dd>Возвращает значение <code>true,</code> если клавиша  <kbd>alt</kbd> была нажата во время движения мыши.</dd>
+ <dd>Возвращает значение <code>true,</code> если клавиша  <kbd>alt</kbd> была нажата во время движения мыши.</dd>
  <dt>{{domxref("MouseEvent.button")}} {{readonlyinline}}</dt>
  <dd>Представляет код клавиши, нажатой в то время, когда произошло событие мыши.</dd>
  <dt>{{domxref("MouseEvent.buttons")}} {{readonlyinline}} {{gecko_minversion_inline("15.0")}}</dt>
@@ -39,25 +39,25 @@ translation_of: Web/API/MouseEvent
  <p>Отображает, какие клавиши были нажаты во время движения мыши.</p>
  </dd>
  <dt>{{domxref("MouseEvent.clientX")}} {{readonlyinline}}</dt>
- <dd>Отображение X координат курсора мыши в локальной системе координат (DOM контент).</dd>
+ <dd>Отображение X координат курсора мыши в локальной системе координат (DOM контент).</dd>
  <dt>{{domxref("MouseEvent.clientY")}} {{readonlyinline}}</dt>
- <dd>Отображение Y координат курсора мыши в локальной системе координат (DOM контент).</dd>
+ <dd>Отображение Y координат курсора мыши в локальной системе координат (DOM контент).</dd>
  <dt>{{domxref("MouseEvent.ctrlKey")}} {{readonlyinline}}</dt>
- <dd>Возвращает значение <code>true,</code> если клавиша <kbd>control</kbd> была нажата во время движения мыши.</dd>
+ <dd>Возвращает значение <code>true,</code> если клавиша <kbd>control</kbd> была нажата во время движения мыши.</dd>
  <dt>{{domxref("MouseEvent.metaKey")}} {{readonlyinline}}</dt>
- <dd>Возвращает значение <code>true,</code> если клавиша <kbd>meta</kbd> была нажата во время движения мыши.</dd>
+ <dd>Возвращает значение <code>true,</code> если клавиша <kbd>meta</kbd> была нажата во время движения мыши.</dd>
  <dt>{{domxref("MouseEvent.movementX")}} {{readonlyinline}}</dt>
  <dd>Отображает X координат указателя мыши относительно позиции последнего {{event("mousemove")}} события.</dd>
  <dt>{{domxref("MouseEvent.movementY")}} {{readonlyinline}}</dt>
- <dd>Отображает Y координат указателя мыши относительно позиции последнего {{event("mousemove")}} события.</dd>
+ <dd>Отображает Y координат указателя мыши относительно позиции последнего {{event("mousemove")}} события.</dd>
  <dt>{{domxref("MouseEvent.offsetX")}} {{readonlyinline}}{{experimental_inline}}</dt>
  <dd>Отображает X координат указателя мыши относительно позиции границы отступа целевого узла.</dd>
  <dt>{{domxref("MouseEvent.offsetY")}} {{readonlyinline}}{{experimental_inline}}</dt>
- <dd>Отображает Y координат указателя мыши относительно позиции границы отступа целевого узла.</dd>
+ <dd>Отображает Y координат указателя мыши относительно позиции границы отступа целевого узла.</dd>
  <dt>{{domxref("MouseEvent.pageX")}} {{readonlyinline}}{{experimental_inline}}</dt>
  <dd>Отображает X координат указателя мыши относительно всего документа.</dd>
  <dt>{{domxref("MouseEvent.pageY")}} {{readonlyinline}}{{experimental_inline}}</dt>
- <dd>Отображает Y координат указателя мыши относительно всего документа.</dd>
+ <dd>Отображает Y координат указателя мыши относительно всего документа.</dd>
  <dt>{{domxref("MouseEvent.region")}} {{readonlyinline}}</dt>
  <dd>Возвращает id затронутого событием региона. Если ни какой регион затронут не был, возвращает null.</dd>
  <dt>{{domxref("MouseEvent.relatedTarget")}} {{readonlyinline}}</dt>
@@ -65,7 +65,7 @@ translation_of: Web/API/MouseEvent
  <dt>{{domxref("MouseEvent.screenX")}} {{readonlyinline}}</dt>
  <dd>Отображает X координат указателя мыши в пространстве экрана.</dd>
  <dt>{{domxref("MouseEvent.screenY")}} {{readonlyinline}}</dt>
- <dd>Отображает Y координат указателя мыши в пространстве экрана.</dd>
+ <dd>Отображает Y координат указателя мыши в пространстве экрана.</dd>
  <dt>{{domxref("MouseEvent.shiftKey")}} {{readonlyinline}}</dt>
  <dd>Возвращает true если клавиша <kbd>shift</kbd> была нажата, когда произошло событие мыши.</dd>
  <dt>{{domxref("MouseEvent.which")}} {{non-standard_inline}} {{readonlyinline}}</dt>
@@ -79,9 +79,9 @@ translation_of: Web/API/MouseEvent
  <dt>{{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{readonlyinline}}</dt>
  <dd>Отображает количество приложенного давления при клике.</dd>
  <dt>{{domxref("MouseEvent.x")}} {{experimental_inline}}{{readonlyinline}}</dt>
- <dd>Alias для {{domxref("MouseEvent.clientX")}}.</dd>
+ <dd>Alias для {{domxref("MouseEvent.clientX")}}.</dd>
  <dt>{{domxref("MouseEvent.y")}} {{experimental_inline}}{{readonlyinline}}</dt>
- <dd>Alias для {{domxref("MouseEvent.clientY")}}</dd>
+ <dd>Alias для {{domxref("MouseEvent.clientY")}}</dd>
 </dl>
 
 <h2 id="Константы">Константы</h2>

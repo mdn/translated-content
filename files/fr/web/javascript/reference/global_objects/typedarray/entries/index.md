@@ -20,7 +20,9 @@ La méthode **`entries()`** renvoie un nouvel objet `Array Iterator` qui contien
 
 ## Syntaxe
 
-    arr.entries()
+```js
+arr.entries()
+```
 
 ### Valeur de retour
 

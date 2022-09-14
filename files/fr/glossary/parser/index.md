@@ -11,7 +11,7 @@ Le module d'un compilateur ou d'un interprête qui effectue **l'**{{glossary("pa
 
 Plus généralement, c'est une partie de logiciel qui analyse des textes et transforme leur contenu en une autre représentation.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

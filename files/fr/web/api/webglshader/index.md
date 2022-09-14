@@ -63,13 +63,11 @@ var shaderDeFragment = creerShader(gl, sourceShaderDeFragment, gl.FRAGMENT_SHADE
 
 ## Spécifications
 
-| Spécification                                                | Statut                   | Commentaire          |
-| ------------------------------------------------------------ | ------------------------ | -------------------- |
-| {{SpecName('WebGL', "#5.8", "WebGLShader")}} | {{Spec2('WebGL')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLShader.WebGLShader")}}
+{{Compat}}
 
 ## Voir aussi
 

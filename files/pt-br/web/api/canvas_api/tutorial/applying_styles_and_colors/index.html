@@ -7,27 +7,27 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}</div>
 
 <div class="summary">
-<p><span id="result_box" lang="pt"><span>No capítulo sobre</span></span> <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes" title="Web/Guide/HTML/Canvas_tutorial/Drawing_shapes">desenhando formas com canvas</a>, <span id="result_box" lang="pt"><span>usamos apenas os estilos padrões de preenchimento e linha.</span> <span>Aqui vamos explorar as opções do canvas que temos à nossa disposição para tornar nossos desenhos um pouco mais atraentes.</span> <span>Você aprenderá a adicionar cores diferentes, estilos de linhas, gradientes, padrões e sombras aos seus desenhos.</span></span></p>
+<p>No capítulo sobre <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes" title="Web/Guide/HTML/Canvas_tutorial/Drawing_shapes">desenhando formas com canvas</a>, usamos apenas os estilos padrões de preenchimento e linha. Aqui vamos explorar as opções do canvas que temos à nossa disposição para tornar nossos desenhos um pouco mais atraentes. Você aprenderá a adicionar cores diferentes, estilos de linhas, gradientes, padrões e sombras aos seus desenhos.</p>
 </div>
 
 <h2 id="Colors" name="Colors">Cores</h2>
 
-<p><span id="result_box" lang="pt"><span>Até agora só vimos métodos do contexto de desenho.</span> <span>Se quisermos aplicar cores a uma forma, existem duas propriedades importantes que podemos utilizar:</span></span> <code>fillStyle</code> e <code>strokeStyle</code>.</p>
+<p>Até agora só vimos métodos do contexto de desenho. Se quisermos aplicar cores a uma forma, existem duas propriedades importantes que podemos utilizar: <code>fillStyle</code> e <code>strokeStyle</code>.</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle = color")}}</dt>
- <dd><span class="short_text" id="result_box" lang="pt"><span>Define o estilo usado ao preencher (fill) formas</span></span>.</dd>
+ <dd>Define o estilo usado ao preencher (fill) formas.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle = color")}}</dt>
- <dd><span class="short_text" id="result_box" lang="pt"><span>Define o estilo para os contornos (strokes) das formas.</span></span></dd>
+ <dd>Define o estilo para os contornos (strokes) das formas.</dd>
 </dl>
 
-<p><code>color</code> é uma string que representa um CSS {{cssxref("&lt;color&gt;")}}, um objeto gradiente, ou um objeto padrão. <span id="result_box" lang="pt"><span>Examinaremos sobre objetos de gradiente e padrão mais tarde.</span> <span>Por padrão, a cor do contorno (stroke color) e a cor de preenchimento (fill color) estão definidos como preto</span></span> (valor de cor no CSS é <code>#000000</code>).</p>
+<p><code>color</code> é uma string que representa um CSS {{cssxref("&lt;color&gt;")}}, um objeto gradiente, ou um objeto padrão. Examinaremos sobre objetos de gradiente e padrão mais tarde. Por padrão, a cor do contorno (stroke color) e a cor de preenchimento (fill color) estão definidos como preto (valor de cor no CSS é <code>#000000</code>).</p>
 
 <div class="note">
-<p><strong>Nota:</strong> Quando você definir as propriedades <code>strokeStyle</code> e/ou <code>fillStyle</code> , o novo valor será o padrão para todas as formas desenhadas a partir de então.  Para toda forma que você quiser uma cor diferente, você vai precisar alterar o valor da propriedade <code>fillStyle</code> ou <code>strokeStyle</code>.</p>
+<p><strong>Nota:</strong> Quando você definir as propriedades <code>strokeStyle</code> e/ou <code>fillStyle</code> , o novo valor será o padrão para todas as formas desenhadas a partir de então.  Para toda forma que você quiser uma cor diferente, você vai precisar alterar o valor da propriedade <code>fillStyle</code> ou <code>strokeStyle</code>.</p>
 </div>
 
-<p>As strings validas que você pode inserir devem, de acordo com a especificação ser valores CSS {{cssxref("&lt;color&gt;")}}. Cada um dos exemplos a seguir, descrevem a mesma cor.</p>
+<p>As strings validas que você pode inserir devem, de acordo com a especificação ser valores CSS {{cssxref("&lt;color&gt;")}}. Cada um dos exemplos a seguir, descrevem a mesma cor.</p>
 
 <pre class="brush: js notranslate">// these all set the fillStyle to 'orange'
 
@@ -37,11 +37,11 @@ ctx.fillStyle = 'rgb(255, 165, 0)';
 ctx.fillStyle = 'rgba(255, 165, 0, 1)';
 </pre>
 
-<h3 id="A_fillStyle_example" name="A_fillStyle_example">Um <code>fillStyle</code> exemplo</h3>
+<h3 id="A_fillStyle_example" name="A_fillStyle_example">Um <code>fillStyle</code> exemplo</h3>
 
 <p>Neste exemplo, nós vamos mais uma vez utilizar dois <code>for</code> loops para desenhar uma grade de retângulos, cada um com uma cor diferente. A imagem do resultado, deve parecer como a captura de tela. Não existe nada de muito espetacular acontecendo aqui. Nós usamos as duas variéveis <code>i</code> and <code>j</code> para gerar uma única cor em RGB para cada quadrado, e apenas modificando os valores vermelho e verde. O canal azul possui um valor fixo. Modificando os canais, você pode gerar todos os tipos de paletas. Aumentando os passos, você pode alcançar algo que se parece com a paleta de cores dos usuários de Photoshop.</p>
 
-<pre class="brush: js;highlight[5,6] notranslate">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   for (var i = 0; i &lt; 6; i++) {
     for (var j = 0; j &lt; 6; j++) {
@@ -58,15 +58,15 @@ ctx.fillStyle = 'rgba(255, 165, 0, 1)';
 <pre class="brush: js notranslate">draw();</pre>
 </div>
 
-<p>O resultado se parece com isto:</p>
+<p>O resultado se parece com isto:</p>
 
 <p>{{EmbedLiveSample("A_fillStyle_example", 160, 160, "https://mdn.mozillademos.org/files/5417/Canvas_fillstyle.png")}}</p>
 
-<h3 id="A_strokeStyle_example" name="A_strokeStyle_example">Um <code>strokeStyle</code> exemplo</h3>
+<h3 id="A_strokeStyle_example" name="A_strokeStyle_example">Um <code>strokeStyle</code> exemplo</h3>
 
-<p>Este exemplo é similar com o anterior, porém utiliza a propriedade <code>strokeStyle</code> para alterar a cor de contorno das formas. Nós usamos o método <code>arc()</code>  para desenhar círculos ao invés de quadrados.</p>
+<p>Este exemplo é similar com o anterior, porém utiliza a propriedade <code>strokeStyle</code> para alterar a cor de contorno das formas. Nós usamos o método <code>arc()</code>  para desenhar círculos ao invés de quadrados.</p>
 
-<pre class="brush: js;highlight[5,6] notranslate">  function draw() {
+<pre class="brush: js">  function draw() {
     var ctx = document.getElementById('canvas').getContext('2d');
     for (var i = 0; i &lt; 6; i++) {
       for (var j = 0; j &lt; 6; j++) {
@@ -86,7 +86,7 @@ ctx.fillStyle = 'rgba(255, 165, 0, 1)';
 <pre class="brush: js notranslate">draw();</pre>
 </div>
 
-<p>O resultado se parece com isto:</p>
+<p>O resultado se parece com isto:</p>
 
 <p>{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "https://mdn.mozillademos.org/files/253/Canvas_strokestyle.png")}}</p>
 
@@ -117,7 +117,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>Neste exemplo, desenharemos um plano de fundo de quatro quadrados coloridos diferentes. Além disso, desenharemos um conjunto de círculos semi-transparentes. A propriedade globalAlpha é configurada em 0.2, que será usada para todas as formas a partir desse ponto. Cada passo no loop for desenha um conjunto de círculos com um raio crescente. O resultado final é um gradiente radial. Ao sobrepor cada vez mais círculos um sobre o outro, reduzimos efetivamente a transparência dos círculos que já foram desenhados. Ao aumentar a contagem de etapas e, com efeito, desenhar mais círculos, o plano de fundo desapareceria completamente do centro da imagem.</p>
 
-<pre class="brush: js;highlight[15] notranslate">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   // draw background
   ctx.fillStyle = '#FD0';
@@ -149,30 +149,30 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "https://mdn.mozillademos.org/files/232/Canvas_globalalpha.png")}}</p>
 
-<h3 id="An_example_using_rgba" name="An_example_using_rgba()">Um exemplo usando o <code>rgba()</code></h3>
+<h3 id="An_example_using_rgba" name="An_example_using_rgba()">Um exemplo usando o <code>rgba()</code></h3>
 
-<p>Neste segundo exemplo, fazemos algo semelhante ao anterior, mas em vez de desenhar círculos uns sobre os outros, desenhei pequenos retângulos com crescente opacidade. O uso de rgba () oferece um pouco mais de controle e flexibilidade, pois podemos definir o estilo de preenchimento e traçado/stroke individualmente.</p>
+<p>Neste segundo exemplo, fazemos algo semelhante ao anterior, mas em vez de desenhar círculos uns sobre os outros, desenhei pequenos retângulos com crescente opacidade. O uso de rgba () oferece um pouco mais de controle e flexibilidade, pois podemos definir o estilo de preenchimento e traçado/stroke individualmente.</p>
 
-<pre class="brush: js;highlight[16] notranslate">function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+<pre class="brush: js">function draw() {
+  var ctx = document.getElementById('canvas').getContext('2d');
 
-  // Draw background
-  ctx.fillStyle = 'rgb(255, 221, 0)';
-  ctx.fillRect(0, 0, 150, 37.5);
-  ctx.fillStyle = 'rgb(102, 204, 0)';
-  ctx.fillRect(0, 37.5, 150, 37.5);
-  ctx.fillStyle = 'rgb(0, 153, 255)';
-  ctx.fillRect(0, 75, 150, 37.5);
-  ctx.fillStyle = 'rgb(255, 51, 0)';
-  ctx.fillRect(0, 112.5, 150, 37.5);
+  // Draw background
+  ctx.fillStyle = 'rgb(255, 221, 0)';
+  ctx.fillRect(0, 0, 150, 37.5);
+  ctx.fillStyle = 'rgb(102, 204, 0)';
+  ctx.fillRect(0, 37.5, 150, 37.5);
+  ctx.fillStyle = 'rgb(0, 153, 255)';
+  ctx.fillRect(0, 75, 150, 37.5);
+  ctx.fillStyle = 'rgb(255, 51, 0)';
+  ctx.fillRect(0, 112.5, 150, 37.5);
 
-  // Draw semi transparent rectangles
-  for (var i = 0; i &lt; 10; i++) {
-    ctx.fillStyle = 'rgba(255, 255, 255, ' + (i + 1) / 10 + ')';
-    for (var j = 0; j &lt; 4; j++) {
-      ctx.fillRect(5 + i * 14, 5 + j * 37.5, 14, 27.5);
-    }
-  }
+  // Draw semi transparent rectangles
+  for (var i = 0; i &lt; 10; i++) {
+    ctx.fillStyle = 'rgba(255, 255, 255, ' + (i + 1) / 10 + ')';
+    for (var j = 0; j &lt; 4; j++) {
+      ctx.fillRect(5 + i * 14, 5 + j * 37.5, 14, 27.5);
+    }
+  }
 }</pre>
 
 <div class="hidden">
@@ -199,22 +199,22 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
  <dt>{{domxref("CanvasRenderingContext2D.getLineDash", "getLineDash()")}}</dt>
  <dd>Retorna a matriz de padrão de traço de linha atual que contém um número par de números não negativos</dd>
  <dt>{{domxref("CanvasRenderingContext2D.setLineDash", "setLineDash(segments)")}}</dt>
- <dd><span style="">Define o padrão de traço da linha atual.</span></dd>
- <dd><strong style="">{{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset = value")}}</strong></dd>
+ <dd>Define o padrão de traço da linha atual.</dd>
+ <dt>{{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset = value")}}</dt>
  <dd>Especifica onde iniciar uma matriz de traços em uma linha.</dd>
 </dl>
 
 <p>Você entenderá melhor o que eles fazem observando os exemplos abaixo.</p>
 
-<h3 id="A_lineWidth_example" name="A_lineWidth_example"><span style="">Um exemplo lineWidth</span></h3>
+<h3 id="A_lineWidth_example" name="A_lineWidth_example">Um exemplo lineWidth</h3>
 
 <p>A largura da linha é a espessura do traçado centralizado no caminho especificado. Em outras palavras, a área desenhada se estende até a metade da largura da linha em ambos os lados do caminho.</p>
 
-<p>  Como as coordenadas da tela não fazem referência direta aos pixels, deve-se tomar cuidado especial para obter linhas horizontais e verticais nítidas.</p>
+<p>  Como as coordenadas da tela não fazem referência direta aos pixels, deve-se tomar cuidado especial para obter linhas horizontais e verticais nítidas.</p>
 
 <p>No exemplo abaixo, 10 linhas retas são desenhadas com larguras de linhas crescentes. A linha na extrema esquerda tem 1,0 unidades de largura. No entanto, as linhas de espessura à esquerda e todas as outras linhas com número inteiro ímpar não aparecem nítidas, devido ao posicionamento do caminho.</p>
 
-<pre class="brush: js;highlight[4] notranslate">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   for (var i = 0; i &lt; 10; i++) {
     ctx.lineWidth = 1 + i;
@@ -240,7 +240,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 <p>Se você considerar um caminho de (3,1) a (3,5) com uma espessura de linha de 1,0, você terminará com a situação na segunda imagem. A área real a ser preenchida (azul escuro) se estende apenas até a metade dos pixels dos dois lados do caminho. Uma aproximação disso deve ser renderizada, o que significa que esses pixels são sombreados apenas parcialmente e resultam em toda a área (azul claro e azul escuro) sendo preenchida com uma cor apenas metade da escuridão da cor real do traço. É o que acontece com a linha de largura 1.0 no código de exemplo anterior.</p>
 
 <p>Para corrigir isso, você precisa ser muito preciso na criação do seu caminho. Sabendo que uma linha de largura 1,0 estenderá meia unidade para ambos os lados do caminho, criar o caminho de (3,5,1) a (3,5,5) resulta na situação da terceira imagem - a largura da linha 1,0 termina completamente e preenchendo com precisão uma única linha vertical de pixel.<br>
-  </p>
+  </p>
 
 <div class="note">
 <p><strong>Nota: Esteja ciente de que, no nosso exemplo de linha vertical, a posição Y ainda faz referência a uma posição de linha de grade inteira - se não tivesse, veríamos pixels com meia cobertura nos pontos de extremidade (mas observe também que esse comportamento depende do estilo lineCap atual cujo valor padrão é butt; você pode calcular traçados consistentes com coordenadas de meio pixel para linhas de largura ímpar, configurando o estilo lineCap como quadrado, para que a borda externa do traçado ao redor do ponto de extremidade seja estendida automaticamente para cobrir o pixel inteiro exatamente).</strong></p>
@@ -270,7 +270,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>A linha à esquerda usa a opção de topo padrão. Você notará que está desenhado completamente alinhado com as guias. O segundo está definido para usar a opção redonda. Isso adiciona um semicírculo ao final que tem um raio com metade da largura da linha. A linha à direita usa a opção quadrada. Isso adiciona uma caixa com largura igual e metade da altura da espessura da linha.</p>
 
-<pre class="brush: js;highlight[18] notranslate">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   var lineCap = ['butt', 'round', 'square'];
 
@@ -321,7 +321,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>O exemplo abaixo desenha três caminhos diferentes, demonstrando cada uma dessas três configurações de propriedade lineJoin; a saída é mostrada acima.</p>
 
-<pre class="brush: js;highlight[6] notranslate">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   var lineJoin = ['round', 'bevel', 'miter'];
   ctx.lineWidth = 10;
@@ -366,7 +366,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>Se você especificar um valor de miterLimite abaixo de 4.2 nesta demonstração, nenhum dos cantos visíveis poderá ser uma extensão de mitra, mas apenas com um pequeno canal próximo às linhas azuis; com um limite máximo acima de 10, a maioria dos cantos nesta demonstração deve ser levada a uma meia-esquadria das linhas azuis e a altura está diminuindo entre os cantos da esquerda para a direita porque eles estão conectados com ângulos crescentes; com valores intermediários, os cantos do lado esquerdo ou apenas um canto próximo às linhas azuis e os cantos do lado direito com uma extensão de esquadria (também com uma altura decrescente).</p>
 
-<pre class="brush: js;highlight[18] notranslate">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // Clear canvas
@@ -422,31 +422,31 @@ draw();</pre>
 
 <h3 id="Usando_linhas_tracejadas">Usando linhas tracejadas</h3>
 
-<p><code><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">O método </span></font>setLineDash</code> e a propriedade <code>lineDashOffset</code> especificam o padrão de traço para as linhas. O método <code>setLineDash</code> aceita uma lista de números que especificam distâncias para desenhar alternadamente entre uma linha e uma lacuna. Já a propriedade <code>lineDashOffset</code> define a distância até onde se deve iniciar a linha.</p>
+<p><code><font face="Arial, x-locale-body, sans-serif">O método </font>setLineDash</code> e a propriedade <code>lineDashOffset</code> especificam o padrão de traço para as linhas. O método <code>setLineDash</code> aceita uma lista de números que especificam distâncias para desenhar alternadamente entre uma linha e uma lacuna. Já a propriedade <code>lineDashOffset</code> define a distância até onde se deve iniciar a linha.</p>
 
-<p>Neste exemplo, criaremos um efeito de formigas caminhando. É uma técnica de animação frequentemente usada em computação gráfica, pois ajuda o usuário a fazer uma distinção entre a borda e o plano de fundo animando a borda. Mais tarde neste tutorial, você aprenderá como fazer <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">animações básicas</a>.</p>
+<p>Neste exemplo, criaremos um efeito de formigas caminhando. É uma técnica de animação frequentemente usada em computação gráfica, pois ajuda o usuário a fazer uma distinção entre a borda e o plano de fundo animando a borda. Mais tarde neste tutorial, você aprenderá como fazer <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">animações básicas</a>.</p>
 
 <div class="hidden">
 <pre class="brush: html notranslate">&lt;canvas id="canvas" width="110" height="110"&gt;&lt;/canvas&gt;</pre>
 </div>
 
-<pre class="brush: js;highlight[6] notranslate">var ctx = document.getElementById('canvas').getContext('2d');
+<pre class="brush: js">var ctx = document.getElementById('canvas').getContext('2d');
 var offset = 0;
 
 function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.setLineDash([4, 2]);
-  ctx.lineDashOffset = -offset;
-  ctx.strokeRect(10, 10, 100, 100);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.setLineDash([4, 2]);
+  ctx.lineDashOffset = -offset;
+  ctx.strokeRect(10, 10, 100, 100);
 }
 
 function march() {
-  offset++;
-  if (offset &gt; 16) {
-    offset = 0;
-  }
-  draw();
-  setTimeout(march, 20);
+  offset++;
+  if (offset &gt; 16) {
+    offset = 0;
+  }
+  draw();
+  setTimeout(march, 20);
 }
 
 march();</pre>
@@ -488,7 +488,7 @@ lineargradient.addColorStop(1, 'black');
 
 <p>In this example, we'll create two different gradients. As you can see here, both the <code>strokeStyle</code> and <code>fillStyle</code> properties can accept a <code>canvasGradient</code> object as valid input.</p>
 
-<pre class="brush: js;highlight[5,11] notranslate">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // Create gradients
@@ -529,7 +529,7 @@ lineargradient.addColorStop(1, 'black');
 
 <p>In this example, we'll define four different radial gradients. Because we have control over the start and closing points of the gradient, we can achieve more complex effects than we would normally have in the "classic" radial gradients we see in, for instance, Photoshop (that is, a gradient with a single center point where the gradient expands outward in a circular shape).</p>
 
-<pre class="brush: js;highlight[5,10,15,20] notranslate">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // Create gradients
@@ -614,7 +614,7 @@ var ptrn = ctx.createPattern(img, 'repeat');
 
 <p>In this last example, we'll create a pattern to assign to the <code>fillStyle</code> property. The only thing worth noting is the use of the image's <code>onload</code> handler. This is to make sure the image is loaded before it is assigned to the pattern.</p>
 
-<pre class="brush: js;highlight[10] notranslate">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // create new image object to use as pattern
@@ -636,7 +636,6 @@ var ptrn = ctx.createPattern(img, 'repeat');
 
 <pre class="brush: js notranslate">draw();</pre>
 
-<p>The result looks like this:</p>
 </div>
 
 <p>{{EmbedLiveSample("A_createPattern_example", "180", "180", "https://mdn.mozillademos.org/files/222/Canvas_createpattern.png")}}</p>
@@ -670,7 +669,7 @@ var ptrn = ctx.createPattern(img, 'repeat');
 
 <p>This example draws a text string with a shadowing effect.</p>
 
-<pre class="brush: js;highlight[4,5,6,7] notranslate">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   ctx.shadowOffsetX = 2;
@@ -707,11 +706,11 @@ var ptrn = ctx.createPattern(img, 'repeat');
 
 <p>In this example we are using the <code>evenodd</code> rule.</p>
 
-<pre class="brush: js;highlight[6] notranslate">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   ctx.beginPath();
-  ctx.arc(50, 50, 30, 0, Math.PI * 2, true);
-  ctx.arc(50, 50, 15, 0, Math.PI * 2, true);
+  ctx.arc(50, 50, 30, 0, Math.PI * 2, true);
+  ctx.arc(50, 50, 15, 0, Math.PI * 2, true);
   ctx.fill('evenodd');
 }</pre>
 

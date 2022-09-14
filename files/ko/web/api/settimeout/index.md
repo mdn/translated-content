@@ -27,6 +27,7 @@ var timeoutID = setTimeout(function[, delay, arg1, arg2, ...]);
 var timeoutID = setTimeout(function[, delay]);
 var timeoutID = setTimeout(code[, delay]);
 ```
+
 ### 매개변수
 
 - `function`
@@ -40,7 +41,7 @@ var timeoutID = setTimeout(code[, delay]);
 
 ### 반환 값
 
-반환하는 `timeoutID`는 양의 정수로서 `setTimeout()`이 생성한 타이머를 식별할 때 사용합니다. 이 값을 {{domxref("clearTimeout()")}}에 전달하면 타이머를 취소할 수 있습니다.
+반환하는 `timeoutID`는 양의 정수로서 `setTimeout()`이 생성한 타이머를 식별할 때 사용합니다. 이 값을 {{domxref("clearTimeout()")}}에 전달하면 타이머를 취소할 수 있습니다.
 
 같은 객체({{domxref("window")}}, 워커 등)에서 반복해 호출하는 `setTimeout()` 또는 {{domxref("setInterval()")}} 메서드는 절대 같은 `timeoutID`를 사용하지 않습니다. 그러나 다른 객체끼리는 다른 ID 풀을 사용합니다.
 
@@ -143,7 +144,7 @@ setTimeout(myBoundMethod, 1.5*1000, "1"); // 1.5초 후 "one" 기록
 
 ### 문자열 리터럴 지정하기
 
-`setTimeout()`에 함수 대신 문자열을 지정하는 것은 [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)을 사용하는 것과 같은 문제를 가집니다.
+`setTimeout()`에 함수 대신 문자열을 지정하는 것은 [`eval()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/eval)을 사용하는 것과 같은 문제를 가집니다.
 
 ```js example-bad
 // 하지 마세요
@@ -260,7 +261,7 @@ foo 호출
 
 #### 페이지 로드 중 타임아웃 지연
 
-Firefox는 현재 탭이 로딩 중일 땐 `setTimeout()` 타이머 실행을 지연시킵니다. 실제 실행은 메인 스레드가 대기 상태에 들어가기 전까지({{domxref("window.requestIdleCallback()")}}과 비슷), 또는 `load` 이벤트가 발생하기 전까지 미뤄집니다. 
+Firefox는 현재 탭이 로딩 중일 땐 `setTimeout()` 타이머 실행을 지연시킵니다. 실제 실행은 메인 스레드가 대기 상태에 들어가기 전까지({{domxref("window.requestIdleCallback()")}}과 비슷), 또는 `load` 이벤트가 발생하기 전까지 미뤄집니다.
 
 ### WebExtension 백그라운드 페이지와 타이머
 

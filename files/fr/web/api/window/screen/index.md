@@ -15,7 +15,9 @@ translation_of: Web/API/Window/screen
 
 ## Syntaxe
 
-    objetEcran = window.screen;
+```js
+objetEcran = window.screen;
+```
 
 ## Examples
 
@@ -29,10 +31,8 @@ if (screen.pixelDepth < 8) {
 
 ## Spécifications
 
-| Spécification                                                                            | État                             | Commentaires |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('CSSOM View', '#dom-window-screen', 'window.screen')}} | {{Spec2('CSSOM View')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.screen")}}
+{{Compat}}

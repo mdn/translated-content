@@ -13,9 +13,9 @@ La [RFC 7235](https://tools.ietf.org/html/rfc7235) définit la structure d'authe
 
 Le fonctionnement du défi/réponse se déroule ainsi :
 
-1.  Le serveur répond à un client avec un statut [`401`](/fr/docs/Web/HTTP/Status/401) (« Unauthorized ») et fournit l'information permettant l'autorisation via un en-tête de réponse [`WWW-Authenticate`](/fr/docs/Web/HTTP/Headers/WWW-Authenticate) contenant au moins un défi.
-2.  Le client désirant s'authentifier peut ensuite le faire en incluant un en-tête de requête [`Authorization`](/fr/docs/Web/HTTP/Headers/Authorization) contenant ses identifiants.
-3.  Très souvent, le client va demander à l'utilisateur un mot de passe et ensuite envoyer la requête au serveur en incluant cette information dans l'en-tête `Authorization`.
+1. Le serveur répond à un client avec un statut [`401`](/fr/docs/Web/HTTP/Status/401) (« Unauthorized ») et fournit l'information permettant l'autorisation via un en-tête de réponse [`WWW-Authenticate`](/fr/docs/Web/HTTP/Headers/WWW-Authenticate) contenant au moins un défi.
+2. Le client désirant s'authentifier peut ensuite le faire en incluant un en-tête de requête [`Authorization`](/fr/docs/Web/HTTP/Headers/Authorization) contenant ses identifiants.
+3. Très souvent, le client va demander à l'utilisateur un mot de passe et ensuite envoyer la requête au serveur en incluant cette information dans l'en-tête `Authorization`.
 
 ![Un diagramme de séquence illustrant les messages HTTP entre un client et la ligne de vie du serveur](HTTPAuth.png)
 
@@ -92,24 +92,30 @@ Pour protéger avec un mot de passe un répertoire sur un serveur Apache, vous a
 
 Le fichier `.htaccess` ressemble à ceci :
 
-    AuthType Basic
-    AuthName "Accès au site de pré-production"
-    AuthUserFile /chemin/vers/.htpasswd
-    Require valid-user
+```
+AuthType Basic
+AuthName "Accès au site de pré-production"
+AuthUserFile /chemin/vers/.htpasswd
+Require valid-user
+```
 
 Le fichier `.htaccess` fait référence à un fichier `.htpasswd` dans lequel chaque ligne contient un nom d'utilisateur et un mot de passe séparés par deux-points (« : »). Vous ne pouvez pas déchiffrer les mots de passe à l'intérieur, car ils sont [chiffrées](https://httpd.apache.org/docs/2.4/misc/password_encryptions.html) (en md5 en l'occurrence). Vous pouvez tout à fait nommer votre fichier `.htpasswd` différemment si vous le désirez, mais gardez en tête que ce fichier ne doit pas être accessible à quiconque (Apache est normalement configuré pour empêcher l'accès aux fichiers `.ht*`).
 
-    aladdin:$apr1$ZjTqBB3f$IF9gdYAGlMrs2fuINjHsz.
-    user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
+```
+aladdin:$apr1$ZjTqBB3f$IF9gdYAGlMrs2fuINjHsz.
+user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
+```
 
 ### Restreindre l'accès avec nginx et l'authentification basique
 
 Pour nginx, vous aurez besoin de spécifier une zone ou emplacement (_location_ en anglais) à protéger, ainsi que la directive `auth_basic` définissant le nom de cette zone. La directive `auth_basic_user_file` fait référence à un fichier .htpasswd contenant les identifiants utilisateurs encryptés, exactement comme dans l'exemple avec Apache ci-dessus.
 
-    location /status {
-      auth_basic           "Access to the staging site";
-      auth_basic_user_file /etc/apache2/.htpasswd;
-    }
+```
+location /status {
+  auth_basic           "Access to the staging site";
+  auth_basic_user_file /etc/apache2/.htpasswd;
+}
+```
 
 ### Accès avec identifiants dans l'URL
 

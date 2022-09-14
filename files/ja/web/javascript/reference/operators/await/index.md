@@ -1,14 +1,6 @@
 ---
 title: await
 slug: Web/JavaScript/Reference/Operators/await
-tags:
-  - 関数
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Primary Expression
-browser-compat: javascript.operators.await
-translation_of: Web/JavaScript/Reference/Operators/await
 ---
 {{jsSidebar("Operators")}}
 
@@ -64,11 +56,11 @@ f1();
 
 ```js
 async function f2() {
-  const thenable = {
-    then: function(resolve, _reject) {
-      resolve('resolved!')
+  const thenable = {
+    then: function(resolve, _reject) {
+      resolve('resolved!')
     }
-  };
+  };
   console.log(await thenable); // resolved!
 }
 

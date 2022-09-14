@@ -3,13 +3,13 @@ title: resize
 slug: Web/API/Window/resize_event
 translation_of: Web/API/Window/resize_event
 ---
-<p><span class="seoSummary">O evento <strong><code>resize</code></strong> é disparado quando o document view é redimensionado.</span></p>
+<p><span class="seoSummary">O evento <strong><code>resize</code></strong> é disparado quando o document view é redimensionado.</span></p>
 
-<p>O evento manipulador pode ser registrado para o evento <code>resize</code> usando o atributo <code>window.onresize</code> ou usando <code>window.addEventListener('resize', ...)</code> </p>
+<p>O evento manipulador pode ser registrado para o evento <code>resize</code> usando o atributo <code>window.onresize</code> ou usando <code>window.addEventListener('resize', ...)</code> </p>
 
-<p>Em alguns browsers mais recentes é possível registrar o evento manipulador <code>resize</code> em qualquer elemento HTML.  E ainda é possível adicionar atributos <code>onresize</code> ou usar {{domxref("EventTarget.addEventListener", "addEventListener()")}} para implementar o manipulador em qualquer elemento.  Entretanto, eventos <code>resize</code>  apenas são disparados sobre (enviados para) o objeto {{domxref("Window", "window")}} ({{domxref("document.defaultView")}}). Apenas manipuladores registrados no objeto <code>window</code> recebem os eventos.</p>
+<p>Em alguns browsers mais recentes é possível registrar o evento manipulador <code>resize</code> em qualquer elemento HTML.  E ainda é possível adicionar atributos <code>onresize</code> ou usar {{domxref("EventTarget.addEventListener", "addEventListener()")}} para implementar o manipulador em qualquer elemento.  Entretanto, eventos <code>resize</code>  apenas são disparados sobre (enviados para) o objeto {{domxref("Window", "window")}} ({{domxref("document.defaultView")}}). Apenas manipuladores registrados no objeto <code>window</code> recebem os eventos.</p>
 
-<p>Existe uma nova proposta (2017) para permitir que todos os elementos sejam notificados de alterações de tamanho.  Veja <a href="https://wicg.github.io/ResizeObserver/">Resize Observer</a> para ler o documento rascunho, e <a href="https://github.com/WICG/ResizeObserver/issues">Github issues</a> para ler as discussões do que está ativo.</p>
+<p>Existe uma nova proposta (2017) para permitir que todos os elementos sejam notificados de alterações de tamanho.  Veja <a href="https://wicg.github.io/ResizeObserver/">Resize Observer</a> para ler o documento rascunho, e <a href="https://github.com/WICG/ResizeObserver/issues">Github issues</a> para ler as discussões do que está ativo.</p>
 
 <h2 id="Informações_gerais">Informações gerais</h2>
 
@@ -52,7 +52,7 @@ translation_of: Web/API/Window/resize_event
   <tr>
    <td><code>bubbles</code> {{readonlyInline}}</td>
    <td><a href="/en-US/docs/Web/API/Boolean" title="The Boolean object is an object wrapper for a boolean value."><code>Boolean</code></a></td>
-   <td>Se o evento normalmente bubbles ou não.</td>
+   <td>Se o evento normalmente bubbles ou não.</td>
   </tr>
   <tr>
    <td><code>cancelable</code> {{readonlyInline}}</td>
@@ -74,9 +74,9 @@ translation_of: Web/API/Window/resize_event
 
 <h2 id="Examples">Examples</h2>
 
-<p>Como os eventos <code>resize</code> podem ser altamente executados, o evento manipulador não deve executar operações computacionais caras como modificações DOM. Em vez disso, recomenda-se diminuir o impacto do evento usando <a href="/en-US/docs/DOM/window.requestAnimationFrame" title="/en-US/docs/DOM/window.requestAnimationFrame">requestAnimationFrame</a>, <a href="/en-US/docs/Web/API/WindowTimers/setTimeout">setTimeout</a> ou <a href="/en-US/docs/Web/API/CustomEvent">customEvent</a>*, como a seguir:<br>
+<p>Como os eventos <code>resize</code> podem ser altamente executados, o evento manipulador não deve executar operações computacionais caras como modificações DOM. Em vez disso, recomenda-se diminuir o impacto do evento usando <a href="/en-US/docs/DOM/window.requestAnimationFrame" title="/en-US/docs/DOM/window.requestAnimationFrame">requestAnimationFrame</a>, <a href="/en-US/docs/Web/API/WindowTimers/setTimeout">setTimeout</a> ou <a href="/en-US/docs/Web/API/CustomEvent">customEvent</a>*, como a seguir:<br>
  <br>
- <strong>* IMPORTANT: </strong>Por favor note que IE11 precisa do <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent#Polyfill">customEvent</a> polyfill para funcionar corretamente.</p>
+ <strong>* IMPORTANT: </strong>Por favor note que IE11 precisa do <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent#Polyfill">customEvent</a> polyfill para funcionar corretamente.</p>
 
 <h3 id="requestAnimationFrame_customEvent">requestAnimationFrame + customEvent</h3>
 

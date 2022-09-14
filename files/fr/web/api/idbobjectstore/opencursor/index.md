@@ -19,7 +19,9 @@ Afin de déterminer si l'opération s'est déroulée correctement, on pourra sur
 
 ## Syntaxe
 
-    var requete = ObjectStore.openCursor(optionalKeyRange, optionalDirection);
+```js
+var requete = ObjectStore.openCursor(optionalKeyRange, optionalDirection);
+```
 
 ### Paramètres
 
@@ -64,13 +66,11 @@ request.onsuccess = function(event) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                                | État                         | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-openCursor-IDBRequest-any-range-IDBCursorDirection-direction', 'openCursor')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.openCursor")}}
+{{Compat}}
 
 ## Voir aussi
 

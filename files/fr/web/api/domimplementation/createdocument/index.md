@@ -15,7 +15,9 @@ La méthode **`DOMImplementation.createDocument()`** crée et retourne un {{domx
 
 ## Syntaxe
 
-    doc = document.implementation.createDocument(namespaceURI, qualifiedNameStr, documentType);
+```js
+doc = document.implementation.createDocument(namespaceURI, qualifiedNameStr, documentType);
+```
 
 ### Paramètres
 
@@ -46,15 +48,11 @@ alert(doc.getElementById('abc')); // [objet HTMLBodyElement]
 
 ## Spécifications
 
-| Spécification                                                                                                                                | Statut                           | Commentaire                                                                                                                                                                                                                                 |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-domimplementation-createdocument', 'DOMImplementation.createDocument')}}     | {{Spec2('DOM WHATWG')}} | Modification du type retourné par `createDocument()` de {{domxref("Document")}} à{{domxref("XMLDocument")}}. Le troisième argument de `createDocument()`, _doctype_, est maintenant optionnel et vaut `null` par defaut. |
-| {{SpecName('DOM3 Core', 'core.html#Level-2-Core-DOM-createDocument', 'DOMImplementation.createDocument')}} | {{Spec2('DOM3 Core')}}     | Pas de changement depuis {{SpecName("DOM2 Core")}}.                                                                                                                                                                                  |
-| {{SpecName('DOM2 Core', 'core.html#Level-2-Core-DOM-createDocument', 'DOMImplementation.createDocument')}} | {{Spec2('DOM2 Core')}}     | Définition initiale.                                                                                                                                                                                                                        |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMImplementation.createDocument")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -37,21 +37,32 @@ color-scheme: initial;
 color-scheme: revert;
 color-scheme: unset;
 ```
+
 O valor da propriedade `color-scheme` precisa ser uma das palavras-chaves abaixo.
+
 ### Valores
+
 - `normal`
   - : Indica que o elemento não possui nenhum esquema de cores, e deve ser renderizado utilizando o esquema de cores padrão do navegador.
 - `light`
   - : Indica que o elemento pode ser renderizado utilizando o esquema de cores claro do sistema operacional.
 - `dark`
   - : Indica que o elemento pode ser renderizado utilizando o esquema de cores escuro do sistema operacional.
+
 ## Definição formal
+
 {{cssinfo}}
+
 ## Sintaxe formal
+
 {{csssyntax}}
+
 ## Exemplos
+
 ### Adaptando a esquemas de cores
+
 Para fazer com que toda a página tenha o esquema de cores de preferência do usuário declare `color-scheme` no elemento {{cssxref(":root")}}.
+
 ```css
 :root {
   color-scheme: light dark;

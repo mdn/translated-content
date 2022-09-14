@@ -14,7 +14,9 @@ Pour libérer une URL d’objet, il faut appeler {{domxref("URL.revokeObjectURL"
 
 ## Syntaxe
 
-    objectURL = URL.createObjectURL(object);
+```js
+objectURL = URL.createObjectURL(object);
+```
 
 ### Paramètres
 
@@ -39,45 +41,17 @@ Les navigateurs libèrent automatiquement les URL d’objet lorsque le document 
 
 ### Utiliser les URL d’objet pour les flux de média
 
-Dans d’anciennes versions de la spécification de Media Source, attacher un flux à un élément {{HTMLElement("video")}} requiérait de créer une URL d’objet pour le {{domxref("MediaStream")}}. Cela n’est plus nécessaire, et les navigateurs cessent progressivement de supporter cette pratique.
+Dans d’anciennes versions de la spécification de Media Source, attacher un flux à un élément {{HTMLElement("video")}} requérait de créer une URL d’objet pour le {{domxref("MediaStream")}}. Cela n’est plus nécessaire, et les navigateurs cessent progressivement de supporter cette pratique.
 
 > **Attention :** si vous avez toujours du code qui repose sur {{domxref("URL.createObjectURL")}} pour attacher des flux à des éléments média, vous devez mettre à jour votre code pour attacher simplement {{domxref("HTMLMediaElement.srcObject", "srcObject")}} directement au `MediaStream`.
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("File API", "#dfn-createObjectURL", "createObjectURL()")}}
-      </td>
-      <td>{{Spec2("File API")}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("Media Source Extensions", "#dom-url-createobjecturl", "URL")}}
-      </td>
-      <td>{{Spec2("Media Source Extensions")}}</td>
-      <td>
-        <p>
-          Extension MediaSource.<br />Les anciennes versions de cette
-          spécification utilisaient <code>createObjectURL()</code> pour les
-          objets {{domxref("MediaStream")}}&nbsp;; ce n’est plus supporté.
-        </p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.URL.createObjectURL")}}
+{{Compat}}
 
 ## Voir aussi
 

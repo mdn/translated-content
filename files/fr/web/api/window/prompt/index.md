@@ -15,7 +15,9 @@ La méthode `Window.prompt()` affiche une boîte de dialogue, éventuellement av
 
 ## Syntaxe
 
-    résultat = window.prompt(message, défaut);
+```js
+résultat = window.prompt(message, défaut);
+```
 
 ### Paramètres
 
@@ -65,13 +67,11 @@ const aNumber = Number(window.prompt("Veuillez saisir un nombre.", ""));
 
 ## Spécifications
 
-| Spécification                                                                                                | État                             | Commentaires |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'timers-and-user-prompts.html#dom-prompt', 'prompt()')}} | {{Spec2('HTML WHATWG')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.prompt")}}
+{{Compat}}
 
 ## Voir aussi
 

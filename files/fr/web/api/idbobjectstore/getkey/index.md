@@ -21,7 +21,9 @@ Si la clé a bien été retrouvée, alors un clone structuré (une copie conform
 
 ## Syntaxe
 
-    let request = objectStore.getKey(key);
+```js
+let request = objectStore.getKey(key);
+```
 
 ### Paramètres
 
@@ -63,13 +65,11 @@ openRequest.onsuccess = (event) => {
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                           | Commentaire          |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('IndexedDB 2', '#dom-idbobjectstore-getkey', 'getKey()')}} | {{Spec2('IndexedDB 2')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.getKey")}}
+{{Compat}}
 
 ## Voir aussi
 

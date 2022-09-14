@@ -10,13 +10,13 @@ translation_of: Web/HTTP/Headers/X-Content-Type-Options
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>O header de resposta HTTP <strong>X-Content-Type-Options</strong> é um marcador usado pelo servidor para indicar que os <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME types</a> enviados pelos headers {{HTTPHeader("Content-Type")}} não devem ser alterados e seguidos. Isto permite que o usuário opte por não participar do chamado <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#MIME_sniffing">MIME Type Sniffing</a> ou, em outras palavras, é uma forma de dizer que os webmasters estão vendo o que você está fazendo.</p>
+<p>O header de resposta HTTP <strong>X-Content-Type-Options</strong> é um marcador usado pelo servidor para indicar que os <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME types</a> enviados pelos headers {{HTTPHeader("Content-Type")}} não devem ser alterados e seguidos. Isto permite que o usuário opte por não participar do chamado <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#MIME_sniffing">MIME Type Sniffing</a> ou, em outras palavras, é uma forma de dizer que os webmasters estão vendo o que você está fazendo.</p>
 
-<p>Este header foi incluído pela Microsoft no IE 8 como uma maneira de webmasters serem capazes de bloquear o <em>sniffing</em> de conteúdo que acontecia na época, e podia transformar tipos MIME não executáveis em tipos executáveis. Desde então, outros browsers acataram a ideia mesmo que seus algoritmos de definição de MIME fossem menos agressivos.</p>
+<p>Este header foi incluído pela Microsoft no IE 8 como uma maneira de webmasters serem capazes de bloquear o <em>sniffing</em> de conteúdo que acontecia na época, e podia transformar tipos MIME não executáveis em tipos executáveis. Desde então, outros browsers acataram a ideia mesmo que seus algoritmos de definição de MIME fossem menos agressivos.</p>
 
 <p>Experts em segurança da informação geralmente esperam que este header esteja presente.</p>
 
-<p class="note">Nota: <code>nosniff</code> só se aplica para tipos "script" e "style". Também, aplicar <code>nosniff</code> em tipos de imagem provou-se ser <a href="https://github.com/whatwg/fetch/issues/395">incompatível com sites existentes</a>.</p>
+<p class="note">Nota: <code>nosniff</code> só se aplica para tipos "script" e "style". Também, aplicar <code>nosniff</code> em tipos de imagem provou-se ser <a href="https://github.com/whatwg/fetch/issues/395">incompatível com sites existentes</a>.</p>
 
 <table class="properties">
  <tbody>
@@ -43,7 +43,7 @@ translation_of: Web/HTTP/Headers/X-Content-Type-Options
  <dd>Bloqueia uma requisição se o tipo for:
  <ul>
   <li>"<code>style</code>" e o tipo MIME não é "<code>text/css</code>", ou</li>
-  <li>"<code>script</code>" e o tipo MIME não é um tipo <a href="https://html.spec.whatwg.org/multipage/scripting.html#javascript-mime-type">JavaScript</a>.</li>
+  <li>"<code>script</code>" e o tipo MIME não é um tipo <a href="https://html.spec.whatwg.org/multipage/scripting.html#javascript-mime-type">JavaScript</a>.</li>
  </ul>
  </dd>
 </dl>

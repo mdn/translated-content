@@ -10,11 +10,11 @@ translation_of: Web/API/Canvas_API
 ---
 <div>{{CanvasSidebar}}</div>
 
-<p class="summary">Элемент {{HTMLElement("canvas")}}, добавленный в <a href="https://developer.mozilla.org/en-US/docs/HTML/HTML5">HTML5</a>, предназначен для создания графики с помощью <a href="/en-US/docs/JavaScript" title="JavaScript">JavaScript</a>. Например, его используют для рисования графиков, создания фотокомпозиций, анимаций и даже обработки и рендеринга видео в реальном времени.</p>
+<p class="summary">Элемент {{HTMLElement("canvas")}}, добавленный в <a href="https://developer.mozilla.org/en-US/docs/HTML/HTML5">HTML5</a>, предназначен для создания графики с помощью <a href="/en-US/docs/JavaScript" title="JavaScript">JavaScript</a>. Например, его используют для рисования графиков, создания фотокомпозиций, анимаций и даже обработки и рендеринга видео в реальном времени.</p>
 
-<p><em>«</em>Canvas<em>»</em>  в переводе с английского означает <em>«</em>холст<em>»</em>.</p>
+<p><em>«</em>Canvas<em>»</em>  в переводе с английского означает <em>«</em>холст<em>»</em>.</p>
 
-<p>Приложения от Mozilla поддерживают <code>&lt;canvas&gt;</code> начиная с Gecko 1.8 (т.е. <a href="/en-US/docs/Firefox_1.5_for_developers" title="Firefox_1.5_for_developers">с Firefox 1.5</a>). Этот элемент первоначально был представлен Apple для OS X <a class="external" href="http://www.apple.com/macosx/features/dashboard/">Dashboard</a> и Safari. Internet Explorer поддерживает<code> &lt;canvas&gt;</code> начиная с 9 версии; для более ранних версий IE поддержку для &lt;canvas&gt; можно добавить с помощью скрипта из проекта Google's <a class="external" href="http://excanvas.sourceforge.net/">Explorer Canvas</a>. Google Chrome и Opera 9 также поддерживают <code>&lt;canvas&gt;</code>.</p>
+<p>Приложения от Mozilla поддерживают <code>&lt;canvas&gt;</code> начиная с Gecko 1.8 (т.е. <a href="/en-US/docs/Firefox_1.5_for_developers" title="Firefox_1.5_for_developers">с Firefox 1.5</a>). Этот элемент первоначально был представлен Apple для OS X <a class="external" href="http://www.apple.com/macosx/features/dashboard/">Dashboard</a> и Safari. Internet Explorer поддерживает<code> &lt;canvas&gt;</code> начиная с 9 версии; для более ранних версий IE поддержку для &lt;canvas&gt; можно добавить с помощью скрипта из проекта Google's <a class="external" href="http://excanvas.sourceforge.net/">Explorer Canvas</a>. Google Chrome и Opera 9 также поддерживают <code>&lt;canvas&gt;</code>.</p>
 
 <p>Элемент <code>&lt;canvas&gt;</code> также используется технологией <a href="/en-US/docs/WebGL" title="WebGL">WebGL</a> для отрисовки аппаратно-ускоренной 3D-графики на веб-страницах.</p>
 
@@ -43,8 +43,8 @@ ctx.fillRect(10, 10, 100, 100);
 
 <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code"&gt;
 ctx.fillStyle = "green";
@@ -103,11 +103,11 @@ window.addEventListener("load", drawCanvas);
  <dt><a href="/en-US/Add-ons/Code_snippets/Canvas">Фрагменты кода: Canvas</a></dt>
  <dd><span id="result_box" lang="ru"><span>Некоторые фрагменты кода, ориентированные на разработчиков, с использованием <code>&lt;canvas&gt;</code>.</span></span></dd>
  <dt><a href="/en-US/docs/Web/API/Canvas_API/A_basic_ray-caster">Demo: A basic ray-caster</a></dt>
- <dd>Демо анимации трассировки-лучей используя canvas.</dd>
+ <dd>Демо анимации трассировки-лучей используя canvas.</dd>
  <dt><a href="/en-US/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas">Drawing DOM objects into a canvas</a></dt>
- <dd>Как рисовать DOM контент, таких как HTML-элементы, в canvas.</dd>
+ <dd>Как рисовать DOM контент, таких как HTML-элементы, в canvas.</dd>
  <dt><a href="/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas">Manipulating video using canvas</a></dt>
- <dd>Объединяет {{HTMLElement("video")}} и {{HTMLElement("canvas")}} для манипулирования видео данных в реальном времени.</dd>
+ <dd>Объединяет {{HTMLElement("video")}} и {{HTMLElement("canvas")}} для манипулирования видео данных в реальном времени.</dd>
 </dl>
 
 <h2 class="Resources" id="Resources">Ресурсы</h2>
@@ -122,17 +122,17 @@ window.addEventListener("load", drawCanvas);
 <h3 class="Libraries" id="Libraries">Библиотеки</h3>
 
 <ul>
- <li><a href="http://fabricjs.com">Fabric.js</a> это canvas библиотека с открытым исходным кодом с возможностями SVG парсинга.</li>
- <li><a href="https://github.com/ericdrowell/KineticJS">Kinetic.js</a> это canvas библиотека с открытым исходным кодом ориентированная на интерактивность для настольных и мобильных приложений.</li>
- <li><a href="http://paperjs.org/">Paper.js</a> это программируемый фреймворк векторной графики с открытым исходным кодом который запускается на HTML5 Canvas.</li>
- <li><a href="http://libcanvas.github.com/">libCanvas</a> это мощный и лёгкий canvas фреймворк.</li>
- <li><a href="http://processingjs.org">Processing.js</a> является портом языка обработки визуализации.</li>
- <li><a href="https://playcanvas.com/">PlayCanvas</a> игровой движок с открытым исходным кодом.</li>
- <li><a href="http://www.pixijs.com/">Pixi.js</a> игровой движок с открытым исходным кодом.</li>
- <li><a href="http://www.liquidx.net/plotkit/">PlotKit</a> библиотека создание графиков и графики.</li>
- <li><a class="link-https" href="https://github.com/jeremyckahn/rekapi">Rekapi</a> API анимации для canvas.</li>
- <li><a href="http://senchalabs.github.com/philogl/">PhiloGL</a> WebGL фреймворк для визуализации данных, для креативного написания кода и разработки игр.</li>
- <li><a href="http://thejit.org/">JavaScript InfoVis Toolkit</a> создаёт интерактивные 2D Canvas визуализации данных для интернета.</li>
+ <li><a href="http://fabricjs.com">Fabric.js</a> это canvas библиотека с открытым исходным кодом с возможностями SVG парсинга.</li>
+ <li><a href="https://github.com/ericdrowell/KineticJS">Kinetic.js</a> это canvas библиотека с открытым исходным кодом ориентированная на интерактивность для настольных и мобильных приложений.</li>
+ <li><a href="http://paperjs.org/">Paper.js</a> это программируемый фреймворк векторной графики с открытым исходным кодом который запускается на HTML5 Canvas.</li>
+ <li><a href="http://libcanvas.github.com/">libCanvas</a> это мощный и лёгкий canvas фреймворк.</li>
+ <li><a href="http://processingjs.org">Processing.js</a> является портом языка обработки визуализации.</li>
+ <li><a href="https://playcanvas.com/">PlayCanvas</a> игровой движок с открытым исходным кодом.</li>
+ <li><a href="http://www.pixijs.com/">Pixi.js</a> игровой движок с открытым исходным кодом.</li>
+ <li><a href="http://www.liquidx.net/plotkit/">PlotKit</a> библиотека создание графиков и графики.</li>
+ <li><a class="link-https" href="https://github.com/jeremyckahn/rekapi">Rekapi</a> API анимации для canvas.</li>
+ <li><a href="http://senchalabs.github.com/philogl/">PhiloGL</a> WebGL фреймворк для визуализации данных, для креативного написания кода и разработки игр.</li>
+ <li><a href="http://thejit.org/">JavaScript InfoVis Toolkit</a> создаёт интерактивные 2D Canvas визуализации данных для интернета.</li>
 </ul>
 
 <h2 id="Specifications">Спецификации</h2>

@@ -18,7 +18,9 @@ La propriété **`length`** est un accesseur qui permet de représenter la longu
 
 ## Syntaxe
 
-    typedarray.length
+```js
+typedarray.length
+```
 
 ## Description
 

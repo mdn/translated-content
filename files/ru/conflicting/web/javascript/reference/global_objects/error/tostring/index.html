@@ -1,0 +1,43 @@
+---
+title: Error.prototype.toSource()
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
+tags:
+  - Error
+  - JavaScript
+  - Method
+  - Non-standard
+  - Prototype
+translation_of: Web/JavaScript/Reference/Global_Objects/Error/toSource
+original_slug: Web/JavaScript/Reference/Global_Objects/Error/toSource
+---
+<div>{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}} {{non-standard_header}}</div>
+
+<h2 id="Summary">Сводка</h2>
+<p>Метод <code><strong>toSource()</strong></code> возвращает код, вычисление которого приведёт к этой же ошибке.</p>
+
+<h2 id="Syntax">Синтаксис</h2>
+<pre class="syntaxbox"><code><var>e</var>.toSource()</code></pre>
+
+<h2 id="Description">Описание</h2>
+<p>Вызов метода <code>toSource</code> на экземпляре класса {{jsxref("Error")}} (включая <i><a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Error#Error_types">родные ошибки</a></i>) вернёт строку, содержащую исходный код ошибки. Эта строка может быть выполнена для создания (приблизительно) эквивалентного объекта. Естественно, строка, содержащая исходный код, следует структуре конструктора объекта {{jsxref("Error")}}. Например:</p>
+<pre class="brush: js">(new <i>name</i>(<i>message</i>, <i>fileName</i>, <i>lineNumber</i>))
+</pre>
+<p>здесь атрибуты относятся к соответствующим свойствам экземпляра ошибки.</p>
+<div class="note">
+ <p><strong>Обратите внимание:</strong> имейте в виду, что свойства, используемые методом <code>toSource</code> при создании строки, изменяемы и могут неточно отражать функцию, с помощью которой создан экземпляр ошибки, или имя файла, или номер строки, где возникла ошибка.</p>
+</div>
+
+<h2 id="Specifications">Спецификации</h2>
+<p>Не является частью какого-либо стандарта. Реализована в JavaScript 1.3.</p>
+
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+<p>{{Compat}}</p>
+
+<h2 id="See_also">Смотрите также</h2>
+<ul>
+ <li>{{jsxref("Error.prototype.fileName")}}</li>
+ <li>{{jsxref("Error.prototype.lineNumber")}}</li>
+ <li>{{jsxref("Error.prototype.message")}}</li>
+ <li>{{jsxref("Error.prototype.name")}}</li>
+ <li>{{jsxref("Object.prototype.toSource()")}}</li>
+</ul>

@@ -6,30 +6,30 @@ original_slug: Web/HTML/Elemento/label
 ---
 <h2 id="Resumen">Resumen</h2>
 
-<p>El<em> </em><strong>Elemento </strong><strong style="line-height: 1.5;">HTML </strong><strong style="line-height: 1.5;"><code style="font-size: 14px;">&lt;label&gt; </code></strong><span style="line-height: 1.5;">representa una etiqueta para un elemento en una interfaz de usuario. Este puede estar asociado con un control ya sea mediante la utilizacion del atributo </span><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;">for</span><span style="line-height: 1.5;">, o ubicando el control dentro del elemento </span><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;">label</span><span style="line-height: 1.5;">. Tal control es llamado "el control etiquetado" del elemento </span><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;">label</span><span style="line-height: 1.5;">.</span></p>
+<p>El<em> </em><strong>Elemento </strong><strong style="line-height: 1.5;">HTML </strong><strong style="line-height: 1.5;"><code style="font-size: 14px;">&lt;label&gt; </code></strong><span style="line-height: 1.5;">representa una etiqueta para un elemento en una interfaz de usuario. Este puede estar asociado con un control ya sea mediante la utilizacion del atributo </span><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;">for</span><span style="line-height: 1.5;">, o ubicando el control dentro del elemento </span><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;">label</span><span style="line-height: 1.5;">. Tal control es llamado "el control etiquetado" del elemento </span><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;">label</span><span style="line-height: 1.5;">.</span></p>
 
 <ul class="htmlelt">
  <li><dfn><a href="/en-US/docs/Web/HTML/Content_categories">Categorias</a></dfn> <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Contenido de flujo</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">contenido de fraseo</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Interactive_content">contenido interactivo</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Form-associated_content">elemento de formulario asociado</a>, contenido palpable.</li>
- <li><dfn>Contenido permitido</dfn> <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">Contenido de fraseo</a>, pero no otros componentes <code>label</code> ni otros elementos etiquetables a parte del de control ya etiquetado.</li>
+ <li><dfn>Contenido permitido</dfn> <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">Contenido de fraseo</a>, pero no otros componentes <code>label</code> ni otros elementos etiquetables a parte del de control ya etiquetado.</li>
  <li><dfn>Omision del Tag</dfn> {{no_tag_omission}}</li>
- <li><dfn>Elementos padre permitidos</dfn> Cualquier elemento que acepte el <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">contenido de fraseo</a>.</li>
+ <li><dfn>Elementos padre permitidos</dfn> Cualquier elemento que acepte el <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">contenido de fraseo</a>.</li>
  <li><dfn>DOM interface</dfn> {{domxref("HTMLLabelElement")}}</li>
 </ul>
 
 <h2 id="Atributos">Atributos</h2>
 
-<p>Este elemento incluye los <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes">atributos globales</a>.</p>
+<p>Este elemento incluye los <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes">atributos globales</a>.</p>
 
 <dl>
  <dt>{{htmlattrdef("accesskey")}} {{HTMLVersionInline("4")}} {{HTMLVersionInline("5")}}</dt>
  <dd>Una tecla de atajo para acceder a este elemento desde el teclado.</dd>
  <dt>{{htmlattrdef("for")}}</dt>
- <dd>El ID del elemento de formulario etiquetable relacionado en el mismo documento que el elemento <span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;">label</span><span style="line-height: 1.5;">. El primer elemento en el documento con tal ID que coincida con el dispuesto en el atributo </span><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;">for</span><span style="line-height: 1.5;"> será el control etiquetado para este elemento.</span></dd>
+ <dd>El ID del elemento de formulario etiquetable relacionado en el mismo documento que el elemento <span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;">label</span><span style="line-height: 1.5;">. El primer elemento en el documento con tal ID que coincida con el dispuesto en el atributo </span><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;">for</span><span style="line-height: 1.5;"> será el control etiquetado para este elemento.</span></dd>
  <dd>
- <div class="note"><strong>Nota:</strong> Un elemento label puede contener ambos; El atributo for y el elemento de control anidado, siempre y cuando el atributo for <span style="line-height: 1.5em;">apunte al mismo elemento. </span></div>
+ <div class="note"><strong>Nota:</strong> Un elemento label puede contener ambos; El atributo for y el elemento de control anidado, siempre y cuando el atributo for <span style="line-height: 1.5em;">apunte al mismo elemento. </span></div>
  </dd>
  <dt>{{htmlattrdef("form")}} {{HTMLVersionInline("5")}}</dt>
- <dd>El formulario con el cual el label está asociado (su formulario dueño). El valor de este atributo debe ser un ID del elemento {{HTMLElement("form")}} en el mismo documento. Si este atributo no es especificado, este elemento <code>&lt;label&gt;</code> deberia ser descendiente de un elemento {{HTMLElement("form")}}. Este atributo permite ubicar el elemento label en cualquier lugar dentro del documento y no solo como descendiente de su respectivo formulario.</dd>
+ <dd>El formulario con el cual el label está asociado (su formulario dueño). El valor de este atributo debe ser un ID del elemento {{HTMLElement("form")}} en el mismo documento. Si este atributo no es especificado, este elemento <code>&lt;label&gt;</code> deberia ser descendiente de un elemento {{HTMLElement("form")}}. Este atributo permite ubicar el elemento label en cualquier lugar dentro del documento y no solo como descendiente de su respectivo formulario.</dd>
 </dl>
 
 <h2 id="Ejemplos">Ejemplos</h2>
@@ -59,17 +59,17 @@ original_slug: Web/HTML/Elemento/label
   <tr>
    <td>{{SpecName('HTML WHATWG', 'forms.html#the-label-element', '&lt;label&gt;')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('HTML5 W3C', 'forms.html#the-label-element', '&lt;label&gt;')}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('HTML4.01', 'interact/forms.html#h-17.9.1', '&lt;label&gt;')}}</td>
    <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

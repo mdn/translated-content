@@ -52,14 +52,12 @@ window.onoffline = (event) => {
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', "indices.html#event-offline", "offline event")}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
-## Compatibilité des Navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.Window.offline_event")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
-- [`online`](/en-US/docs/Web/API/Window/online_event)
+- [`online`](/fr/docs/Web/API/Window/online_event)

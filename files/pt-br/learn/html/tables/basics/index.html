@@ -189,7 +189,7 @@ original_slug: Aprender/HTML/Tables/Basics
 
 <p>HTML tables should be used for tabular data — this is what they are designed for. Unfortunately, a lot of people used to use HTML tables to lay out web pages, e.g. one row to contain the header, one row to contain the content columns, one row to contain the footer, etc. You can find more details and an example at <a href="/en-US/docs/Learn/Accessibility/HTML#Page_layouts">Page Layouts</a> in our <a href="/en-US/docs/Learn/Accessibility">Accessibility Learning Module</a>. This was commonly used because CSS support across browsers used to be terrible; table layouts are much less common nowadays, but you might still see them in some corners of the web.</p>
 
-<p>In short, using tables for layout rather than <a href="/en-US/docs/Learn/CSS/CSS_layout">CSS layout techniques</a> is a bad idea. The main reasons are as follows:</p>
+<p>In short, using tables for layout rather than <a href="/en-US/docs/Learn/CSS/CSS_layout">CSS layout techniques</a> is a bad idea. The main reasons are as follows:</p>
 
 <ol>
  <li><strong>Layout tables reduce accessibility for visually impaired users</strong>: <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders">Screenreaders</a>, used by blind people, interpret the tags that exist in an HTML page and read out the contents to the user. Because tables are not the right tool for layout, and the markup is more complex than with CSS layout techniques, the screenreaders' output will be confusing to their users.</li>
@@ -489,7 +489,7 @@ original_slug: Aprender/HTML/Tables/Basics
  </tbody>
 </table>
 
-<p>This isn't ideal, as we have to repeat the styling information across all three cells in the column (we'd probably have a <code>class</code> set on all three in a real project and specify the styling in a separate stylesheet). Instead of doing this, we can specify the information once, on a <code>&lt;col&gt;</code> element. <code>&lt;col&gt;</code> elements are  specified inside a <code>&lt;colgroup&gt;</code> container just below the opening <code>&lt;table&gt;</code> tag. We could create the same effect as we see above by specifying our table as follows:</p>
+<p>This isn't ideal, as we have to repeat the styling information across all three cells in the column (we'd probably have a <code>class</code> set on all three in a real project and specify the styling in a separate stylesheet). Instead of doing this, we can specify the information once, on a <code>&lt;col&gt;</code> element. <code>&lt;col&gt;</code> elements are  specified inside a <code>&lt;colgroup&gt;</code> container just below the opening <code>&lt;table&gt;</code> tag. We could create the same effect as we see above by specifying our table as follows:</p>
 
 <pre class="brush: html notranslate">&lt;table&gt;
   &lt;colgroup&gt;

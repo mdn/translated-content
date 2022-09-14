@@ -1,14 +1,6 @@
 ---
 title: Number.isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
-tags:
-  - JavaScript
-  - メソッド
-  - Number
-  - リファレンス
-  - ポリフィル
-browser-compat: javascript.builtins.Number.isFinite
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 ---
 {{JSRef}}
 
@@ -57,7 +49,7 @@ Number.isFinite(null);      // false だが、グローバルの
 
 ```js
 if (Number.isFinite === undefined) Number.isFinite = function(value) {
-    return typeof value === 'number' && isFinite(value);
+    return typeof value === 'number' && isFinite(value);
 }
 ```
 

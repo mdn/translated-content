@@ -19,7 +19,9 @@ La méthode **`setFloat32()`** permet d'enregistrer un nombre flottant signé su
 
 ## Syntaxe
 
-    dataview.setFloat32(positionOctet, valeur [, littleEndian])
+```js
+dataview.setFloat32(positionOctet, valeur [, littleEndian])
+```
 
 ### Paramètres
 

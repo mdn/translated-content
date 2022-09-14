@@ -9,25 +9,25 @@ translation_of: Web/API/Window/clearImmediate
 ---
 <p>{{ Apiref() }}</p>
 
-<p>Данный метод очищает действие, определённое {{ domxref("window.setImmediate") }}.</p>
+<p>Данный метод очищает действие, определённое {{ domxref("window.setImmediate") }}.</p>
 
-<div class="note"><strong>Note:</strong> На текущий момент данный метод находится на стадии предложения на внедрение, не является стандартом и имплементирован только в последних сборках Internet Explorer.</div>
+<div class="note"><strong>Note:</strong> На текущий момент данный метод находится на стадии предложения на внедрение, не является стандартом и имплементирован только в последних сборках Internet Explorer.</div>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
 <pre>window.clearImmediate(immediateID)
 </pre>
 
-<p>где immediateID это идентификатор, возвращаемый из {{ domxref("window.setImmediate") }}.</p>
+<p>где immediateID это идентификатор, возвращаемый из {{ domxref("window.setImmediate") }}.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
 <pre>var immediateID = setImmediate(function () {
-  // Выполнение некоего кода
+  // Выполнение некоего кода
 }
 
 document.getElementById("button").addEventListener(function () {
-  clearImmediate(immediateID);
+  clearImmediate(immediateID);
 }, false);
 </pre>
 

@@ -1,14 +1,6 @@
 ---
 title: DataView
 slug: Web/JavaScript/Reference/Global_Objects/DataView
-tags:
-  - Class
-  - DataView
-  - JavaScript
-  - TypedArrays
-  - Polyfill
-browser-compat: javascript.builtins.DataView
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView
 ---
 {{JSRef}}
 

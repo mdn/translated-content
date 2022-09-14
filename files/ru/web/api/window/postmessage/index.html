@@ -5,9 +5,9 @@ translation_of: Web/API/Window/postMessage
 ---
 <div>{{ApiRef("HTML DOM")}}</div>
 
-<p><strong><code>Window.postMessage()</code></strong> - этот метод позволяет безопасно отправлять кроссдоменные запросы. Обычно сценариям на разных страницах разрешён доступ друг к другу только если страницы, которые их выполняли, передаются по одному  протоколу (обычно это https), номер порта (443 — по умолчанию для https) и хост (modulo {{domxref("Document.domain")}} установленный страницами на одно и тоже значение). <code>window.postMessage()</code> предоставляет контролируемый механизм, чтобы обойти это ограничение способом, который безопасен при правильном использовании.</p>
+<p><strong><code>Window.postMessage()</code></strong> - этот метод позволяет безопасно отправлять кроссдоменные запросы. Обычно сценариям на разных страницах разрешён доступ друг к другу только если страницы, которые их выполняли, передаются по одному  протоколу (обычно это https), номер порта (443 — по умолчанию для https) и хост (modulo {{domxref("Document.domain")}} установленный страницами на одно и тоже значение). <code>window.postMessage()</code> предоставляет контролируемый механизм, чтобы обойти это ограничение способом, который безопасен при правильном использовании.</p>
 
-<p><font face="Open Sans, arial, x-locale-body, sans-serif">При вызове метода </font><code>window.postMessage()</code> он вызывает {{domxref("MessageEvent")}} для отправки в целевом окне, когда завершается любой ожидающий сценарий, который должен быть выполнен (например, оставшиеся обработчики событий, если <code>window.postMessage()</code> вызывается из обработчика событий ранее заданных ожидающих таймаутов). {{domxref("MessageEvent")}} имеет тип  <code>message</code>, <code>data-свойство</code> которого устанавливает значение первого аргумента в методе <code>window.postMessage()</code>, свойство <code>origin</code>  соответствует адресу основного документа в вызове <code>window.postMessage</code> во время  вызова <code>window.postMessage()</code>, свойство <code>source</code> указывает на окно, из которого <code>window.postMessage()</code> вызвали. (Другие стандартные свойства событий имеют ожидаемые значения)</p>
+<p><font face="Open Sans, arial, x-locale-body, sans-serif">При вызове метода </font><code>window.postMessage()</code> он вызывает {{domxref("MessageEvent")}} для отправки в целевом окне, когда завершается любой ожидающий сценарий, который должен быть выполнен (например, оставшиеся обработчики событий, если <code>window.postMessage()</code> вызывается из обработчика событий ранее заданных ожидающих таймаутов). {{domxref("MessageEvent")}} имеет тип  <code>message</code>, <code>data-свойство</code> которого устанавливает значение первого аргумента в методе <code>window.postMessage()</code>, свойство <code>origin</code>  соответствует адресу основного документа в вызове <code>window.postMessage</code> во время  вызова <code>window.postMessage()</code>, свойство <code>source</code> указывает на окно, из которого <code>window.postMessage()</code> вызвали. (Другие стандартные свойства событий имеют ожидаемые значения)</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -15,9 +15,9 @@ translation_of: Web/API/Window/postMessage
 
 <dl>
  <dt><code><em>otherWindow</em></code></dt>
- <dd>Ссылка на другое окно; такая ссылка может быть получена, к примеру, при использовании свойства <code>contentWindow</code> элемента <code>iframe</code> , объекта, возвращаемого <a href="/en-US/docs/DOM/window.open">window.open</a>, или по именованному и числовому индексу {{domxref("Window.frames")}}, если вы пытаетесь запустить сообщение из iframe в родительском окне, то родитель также является действительной ссылкой.</dd>
+ <dd>Ссылка на другое окно; такая ссылка может быть получена, к примеру, при использовании свойства <code>contentWindow</code> элемента <code>iframe</code> , объекта, возвращаемого <a href="/en-US/docs/DOM/window.open">window.open</a>, или по именованному и числовому индексу {{domxref("Window.frames")}}, если вы пытаетесь запустить сообщение из iframe в родительском окне, то родитель также является действительной ссылкой.</dd>
  <dt><code><em>message</em></code></dt>
- <dd>Данные, которые нужно отправить в другое окно. Данные сериализуются с использованием алгоритма структурированного клона. Это означает, что вы можете безопасно передавать большое количество объектов данных в окно назначения без необходимости их сериализации. [<a href="/en-US/docs/">1</a>]</dd>
+ <dd>Данные, которые нужно отправить в другое окно. Данные сериализуются с использованием алгоритма структурированного клона. Это означает, что вы можете безопасно передавать большое количество объектов данных в окно назначения без необходимости их сериализации. [<a href="/en-US/docs/">1</a>]</dd>
  <dt><code><em>targetOrigin</em></code></dt>
  <dd>Specifies what the origin of <code>otherWindow</code> must be for the event to be dispatched, either as the literal string <code>"*"</code> (indicating no preference) or as a URI. If at the time the event is scheduled to be dispatched the scheme, hostname, or port of <code>otherWindow</code>'s document does not match that provided in <code>targetOrigin</code>, the event will not be dispatched; only if all three match will the event be dispatched. This mechanism provides control over where messages are sent; for example, if <code>postMessage()</code> was used to transmit a password, it would be absolutely critical that this argument be a URI whose origin is the same as the intended receiver of the message containing the password, to prevent interception of the password by a malicious third party. <strong>Always provide a specific <code>targetOrigin</code>, not <code>*</code>, if you know where the other window's document should be located. Failing to provide a specific target discloses the data you send to any interested malicious site.</strong></dd>
  <dt><code><em><strong>transfer</strong></em></code> {{optional_Inline}}</dt>
@@ -26,7 +26,7 @@ translation_of: Web/API/Window/postMessage
 
 <h2 id="The_dispatched_event">The dispatched event</h2>
 
-<p>В <code>otherWindow</code> отправляемые сообщения могут быть обработаны следующим способом:</p>
+<p>В <code>otherWindow</code> отправляемые сообщения могут быть обработаны следующим способом:</p>
 
 <pre class="brush: js">window.addEventListener("message", receiveMessage, false);
 
@@ -39,7 +39,7 @@ function receiveMessage(event)
 }
 </pre>
 
-<p>Свойства отправляемых сообщений:</p>
+<p>Свойства отправляемых сообщений:</p>
 
 <dl>
  <dt><code>data</code></dt>
@@ -47,16 +47,16 @@ function receiveMessage(event)
  <dt><code>origin</code></dt>
  <dd>The <a href="/en-US/docs/Origin">origin</a> of the window that sent the message at the time <code>postMessage</code> was called. This string is the concatenation of the protocol and "://", the host name if one exists, and ":" followed by a port number if a port is present and differs from the default port for the given protocol. Examples of typical origins are <code class="nowiki">https://example.org</code> (implying port <code>443</code>), <code class="nowiki">http://example.net</code> (implying port <code>80</code>), and <code class="nowiki">http://example.com:8080</code>. Note that this origin is <em>not</em> guaranteed to be the current or future origin of that window, which might have been navigated to a different location since <code>postMessage</code> was called.</dd>
  <dt><code>source</code></dt>
- <dd>Ссылка на объект <code><a href="/en-US/docs/DOM/window">window</a></code> , который отправил сообщение; может быть использована для установки двустороннего соединения между окнами с разными <code>origins</code>.</dd>
+ <dd>Ссылка на объект <code><a href="/en-US/docs/DOM/window">window</a></code> , который отправил сообщение; может быть использована для установки двустороннего соединения между окнами с разными <code>origins</code>.</dd>
 </dl>
 
 <h2 id="Вопросы_безопасности">Вопросы безопасности</h2>
 
-<p><strong>Если вы не ожидаете получения сообщения от других сайтов, не добавляйте обработчики событий <code>message</code>.</strong> Это гарантированный способ избежать проблем с безопасностью.</p>
+<p><strong>Если вы не ожидаете получения сообщения от других сайтов, не добавляйте обработчики событий <code>message</code>.</strong> Это гарантированный способ избежать проблем с безопасностью.</p>
 
-<p>Если же вы хотите получать сообщения от других сайтов, то всегда необходимо идентифицировать отправителя, используя <code>origin</code> и возможно <code>source</code> свойства. Любой сайт (включая, например, <code class="nowiki">http://evil.example.com</code>) может отправлять сообщения любым другим, и у вас нет гарантии, что неизвестный отправитель не пошлёт вредоносные сообщения. Однако даже если отправитель известен, вам всё равно необходимо всегда подтверждать синтаксис получаемого сообщения. Иначе, дыра в безопасности сайта, которому вы доверяете, может открыть дыру для межсайтового скриптинга на вашем сайте.</p>
+<p>Если же вы хотите получать сообщения от других сайтов, то всегда необходимо идентифицировать отправителя, используя <code>origin</code> и возможно <code>source</code> свойства. Любой сайт (включая, например, <code class="nowiki">http://evil.example.com</code>) может отправлять сообщения любым другим, и у вас нет гарантии, что неизвестный отправитель не пошлёт вредоносные сообщения. Однако даже если отправитель известен, вам всё равно необходимо всегда подтверждать синтаксис получаемого сообщения. Иначе, дыра в безопасности сайта, которому вы доверяете, может открыть дыру для межсайтового скриптинга на вашем сайте.</p>
 
-<p><strong>Всегда конкретизируйте целевой первоисточник, а не просто <code>*</code>, когда вы используете <code>postMessage</code> для отправки данных другим окнам. Вредоносный сайт может изменить локацию окна без вашего ведома и затем перехватить данные, посылаемые с использованием </strong><code>postMessage</code>.</p>
+<p><strong>Всегда конкретизируйте целевой первоисточник, а не просто <code>*</code>, когда вы используете <code>postMessage</code> для отправки данных другим окнам. Вредоносный сайт может изменить локацию окна без вашего ведома и затем перехватить данные, посылаемые с использованием </strong><code>postMessage</code>.</p>
 
 <h2 id="Example">Example</h2>
 

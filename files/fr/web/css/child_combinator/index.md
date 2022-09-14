@@ -25,7 +25,9 @@ En comparaison, lorsque deux sélecteurs sont combinés à l'aide du sélecteur 
 
 ## Syntaxe
 
-    selecteur1 > selecteur2 { déclarations CSS }
+```
+selecteur1 > selecteur2 { déclarations CSS }
+```
 
 ## Exemples
 

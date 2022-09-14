@@ -86,7 +86,7 @@ Les événements ont trois fonctions :
 
 ## Objets supplémentaires
 
-### détails
+### Détails
 
 - `documentUrl`
   - : `string`. URL du document dans lequel la ressource sera chargée. Par exemple, si la page web "https\://example.com" contient une image ou un iframe, alors le `documentUrl` pour l'image ou l'iframe sera "https\://example.com". Pour un document de niveau supérieur, `documentUrl` n'est pas défini.

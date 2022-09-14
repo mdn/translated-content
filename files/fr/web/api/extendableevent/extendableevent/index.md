@@ -29,18 +29,16 @@ var myExtendableEvent = new ExtendableEvent(type, init);
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#extendable-event', 'ExtendableEvent')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilités des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.ExtendableEvent.ExtendableEvent")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Utilisation des Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Utilisation des Service Workers](/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Exemple simple de service workers](https://github.com/mdn/sw-test)
 - [Les ServiceWorker sont-ils prêts?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Utilisation performante des web workers](/en-US/docs/Web/Guide/Performance/Using_web_workers)
+- [Utilisation performante des web workers](/fr/docs/Web/Guide/Performance/Using_web_workers)

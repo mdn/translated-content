@@ -13,13 +13,15 @@ original_slug: Web/JavaScript/Reference/Erreurs/Getter_only
 
 ## Message
 
-    TypeError: Assignment to read-only properties is not allowed in strict mode (Edge)
-    TypeError: setting getter-only property "x" (Firefox)
-    TypeError: Cannot set property "prop" of #<Object> which has only a getter (Chrome)
+```
+TypeError: Assignment to read-only properties is not allowed in strict mode (Edge)
+TypeError: setting getter-only property "x" (Firefox)
+TypeError: Cannot set property "prop" of #<Object> which has only a getter (Chrome)
+```
 
 ## Type d'erreur
 
-{{jsxref("TypeError")}}, uniquement en [mode strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
+{{jsxref("TypeError")}}, uniquement en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
 
 ## Quel est le problème ?
 

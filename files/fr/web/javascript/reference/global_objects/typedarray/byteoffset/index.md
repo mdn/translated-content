@@ -16,7 +16,9 @@ La propriété **`byteOffset`** est un accesseur qui représente le décalage, e
 
 ## Syntaxe
 
-    typedarray.byteOffset
+```js
+typedarray.byteOffset
+```
 
 ## Description
 

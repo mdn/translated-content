@@ -1,14 +1,6 @@
 ---
 title: ビット論理積 (&)
 slug: Web/JavaScript/Reference/Operators/Bitwise_AND
-tags:
-  - ビット演算子
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.bitwise_and
-translation_of: Web/JavaScript/Reference/Operators/Bitwise_AND
 ---
 {{jsSidebar("Operators")}}
 
@@ -73,5 +65,5 @@ AND 演算の真理値表は次のようになります。
 
 ## 関連情報
 
-- [ビット演算子 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise)
+- [ビット演算子 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#ビット演算子)
 - [ビット論理積代入演算子](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)

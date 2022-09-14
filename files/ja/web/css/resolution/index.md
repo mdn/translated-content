@@ -1,15 +1,6 @@
 ---
 title: <resolution>
 slug: Web/CSS/resolution
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - リファレンス
-  - ウェブ
-  - レイアウト
-browser-compat: css.types.resolution
-translation_of: Web/CSS/resolution
 ---
 {{CSSRef}}
 
@@ -44,9 +35,11 @@ translation_of: Web/CSS/resolution
 
 ### 有効な解像度
 
-    96dpi
-    50.82dpcm
-    3dppx
+```
+96dpi
+50.82dpcm
+3dppx
+```
 
 ### 無効な解像度
 

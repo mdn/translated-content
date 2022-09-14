@@ -33,20 +33,20 @@ original_slug: Aprender/Getting_started_with_the_web/HTML_basico
 
 <p>Vamos explorar esse parágrafo mais profundamente.</p>
 
-<p><img alt="Imagem mostrando como funciona a tag P" src="https://i.imgur.com/rgZBXCd.png" style="height: 255px; width: 821px;"></p>
+<p><img alt="Imagem mostrando como funciona a tag P" src="./gato-rabujento-pequeno.png" style="height: 255px; width: 821px;"></p>
 
 <p>As principais partes de um elemento são:</p>
 
 <ol>
  <li>A<strong> tag de abertura</strong>: Consiste no nome do elemento (no caso, p), envolvido em <strong>parênteses angulares</strong> de abertura e fechamento. Isso demonstra onde o elemento começa, ou onde seu efeito se inicia — nesse caso, onde é o começo do parágrafo.</li>
- <li>A <strong>tag de fechamento</strong>: Isso é a mesma coisa que a tag de abertura, exceto que inclui uma barra antes do nome do elemento. Isso demonstra onde o elemento acaba — nesse caso, onde é o fim do parágrafo. Esquecer de incluir uma tag de fechamento é um dos erros mais comuns de iniciantes e pode levar a resultados estranhos.</li>
+ <li>A <strong>tag de fechamento</strong>: Isso é a mesma coisa que a tag de abertura, exceto que inclui uma barra antes do nome do elemento. Isso demonstra onde o elemento acaba — nesse caso, onde é o fim do parágrafo. Esquecer de incluir uma tag de fechamento é um dos erros mais comuns de iniciantes e pode levar a resultados estranhos.</li>
  <li>O <strong>conteúdo</strong>: Esse é o conteúdo do elemento, que nesse caso é apenas texto.</li>
  <li>O <strong>elemento</strong>: A tag de abertura, a de fechamento, e o conteúdo formam o elemento.</li>
 </ol>
 
 <p>Elementos também podem ter atributos, que parecem assim:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/9345/grumpy-cat-attribute-small.png" style="display: block; height: 156px; margin: 0px auto; width: 1287px;"></p>
+<p><img alt="Imagem mostrando elemento na tag P" src="./gato-rabujento-atributo-pequeno.png" style="display: block; height: 156px; margin: 0px auto; width: 1287px;"></p>
 
 <p>Atributos contém informação extra sobre o elemento que você não quer que apareça no conteúdo real. Aqui, <code>class</code> é o nome do atributo e <code>editor-note</code> é o valor do atributo. O atributo <code>class</code> permite que você forneça ao elemento um identificador que possa ser usado posteriormente para aplicar ao elemento informações de estilo e outras coisas.</p>
 
@@ -104,7 +104,7 @@ original_slug: Aprender/Getting_started_with_the_web/HTML_basico
  <li><code>&lt;html&gt;&lt;/html&gt;</code> — o elemento {{htmlelement("html")}}. Esse elemento envolve todo o conteúdo da página e às vezes é conhecido como o elemento raiz.</li>
  <li><code>&lt;head&gt;&lt;/head&gt;</code> — o elemento {{htmlelement("head")}}. Esse elemento age como um recipiente de tudo o que você deseja incluir em uma página HTML que <em>não é</em> o conteúdo que você quer mostrar para quem vê sua página. Isso inclui coisas como {{Glossary("keyword", "palavras-chave")}} e uma descrição que você quer que apareça nos resultados de busca, CSS para dar estilo ao conteúdo, declarações de conjuntos de caracteres e etc.</li>
  <li><code>&lt;meta charset="utf-8"&gt;</code> — esse elemento define o conjunto de caracteres que seu documento deve usar para o UTF-8, que inclui praticamente todos os caracteres da grande maioria dos idiomas escritos. Essencialmente, agora ele pode manipular qualquer conteúdo textual que você possa colocar. Não há razão para não definir isso e assim pode ajudar a evitar alguns problemas no futuro.</li>
- <li><code>&lt;title&gt;&lt;/title&gt;</code> — o elemento {{htmlelement ("title")}}. Ele define o título da sua página, que é o título que aparece na guia do navegador onde sua página é carregada. Ele também é usado para descrever a página quando você a adiciona aos favoritos.</li>
+ <li><code>&lt;title&gt;&lt;/title&gt;</code> — o elemento {{htmlelement ("title")}}. Ele define o título da sua página, que é o título que aparece na guia do navegador onde sua página é carregada. Ele também é usado para descrever a página quando você a adiciona aos favoritos.</li>
  <li><code>&lt;body&gt;&lt;/body&gt;</code> — o elemento {{htmlelement("body")}}. Contém <em>todo</em> o conteúdo que você quer mostrar ao público que visita sua página, seja texto, imagens, vídeos, jogos, faixas de áudio reproduzíveis ou qualquer outra coisa.</li>
 </ul>
 
@@ -146,7 +146,7 @@ original_slug: Aprender/Getting_started_with_the_web/HTML_basico
 &lt;h3&gt;Meu subtítulo&lt;/h3&gt;
 &lt;h4&gt;Meu segundo subtítulo&lt;/h4&gt;</pre>
 
-<p>Agora, tente adicionar um título adequado à sua página HTML logo acima do elemento {{htmlelement("img")}}.</p>
+<p>Agora, tente adicionar um título adequado à sua página HTML logo acima do elemento {{htmlelement("img")}}.</p>
 
 <div class="blockIndicator note">
 <p><strong>Nota</strong>: Você verá que seu nível de cabeçalho 1 tem um estilo implícito. Não use elementos de cabeçalho para aumentar ou negritar o texto, pois eles são usados ​​para <a href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML#Por_que_precisamos_de_estrutura">acessibilidade</a> e <a href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML#Por_que_precisamos_de_estrutura">outros motivos, como SEO</a>. Tente criar uma sequência significativa de títulos em suas páginas, sem pular os níveis.</p>
@@ -165,13 +165,13 @@ original_slug: Aprender/Getting_started_with_the_web/HTML_basico
 <p>Muito do conteúdo da web é de listas e o HTML tem elementos especiais para elas. Listas de marcação sempre consistem em pelo menos 2 elementos. Os tipos mais comuns de lista são ordenadas e não ordenadas:</p>
 
 <ol>
- <li><strong>Listas não ordenadas</strong> são para listas onde a ordem dos itens não importa, como uma lista de compras, por exemplo. Essas são envolvidas em um elemento {{htmlelement("ul")}}.</li>
- <li><strong>Listas Ordenadas</strong> são para listas onde a ordem dos itens importa, como uma receita. Essas são envolvidas em um elemento {{htmlelement("ol")}}.</li>
+ <li><strong>Listas não ordenadas</strong> são para listas onde a ordem dos itens não importa, como uma lista de compras, por exemplo. Essas são envolvidas em um elemento {{htmlelement("ul")}}.</li>
+ <li><strong>Listas Ordenadas</strong> são para listas onde a ordem dos itens importa, como uma receita. Essas são envolvidas em um elemento {{htmlelement("ol")}}.</li>
 </ol>
 
-<p>Cada item dentro das listas é posto dentro de um elemento {{htmlelement("li")}} (item de lista).</p>
+<p>Cada item dentro das listas é posto dentro de um elemento {{htmlelement("li")}} (item de lista).</p>
 
-<p>Por exemplo, se nós quisermos tornar uma parte de um parágrafo numa lista: </p>
+<p>Por exemplo, se nós quisermos tornar uma parte de um parágrafo numa lista: </p>
 
 <pre class="brush: html notranslate">&lt;p&gt;Na Mozilla, somos uma comunidade global de tecnólogos, pensadores e construtores trabalhando juntos ... &lt;/p&gt;</pre>
 
@@ -198,7 +198,7 @@ original_slug: Aprender/Getting_started_with_the_web/HTML_basico
  <li>Envolva o texto em um elemento {{htmlelement("a")}} , assim:
   <pre class="brush: html notranslate">&lt;a&gt;Mozilla Manifesto&lt;/a&gt;</pre>
  </li>
- <li>Dê ao elemento &lt;a&gt; um atributo href, assim:
+ <li>Dê ao elemento &lt;a&gt; um atributo href, assim:
   <pre class="brush: html notranslate">&lt;a href=""&gt;Mozilla Manifesto&lt;/a&gt;</pre>
  </li>
  <li>Preencha o valor desse atributo com o endereço da Web que você deseja vincular o link:
@@ -206,23 +206,23 @@ original_slug: Aprender/Getting_started_with_the_web/HTML_basico
  </li>
 </ol>
 
-<p>Você pode obter resultados inesperados se omitir a parte <code>https://</code> ou o <code>http://</code>, o chamado <em>protocolo</em>, no começo do endereço web. Então depois de criar um link, clique nele para ter certeza de que ele está indo para onde você deseja.</p>
+<p>Você pode obter resultados inesperados se omitir a parte <code>https://</code> ou o <code>http://</code>, o chamado <em>protocolo</em>, no começo do endereço web. Então depois de criar um link, clique nele para ter certeza de que ele está indo para onde você deseja.</p>
 
 <div class="note">
-<p><code>href</code> pode parecer, numa primeira impressão, uma escolha obscura para um nome de atributo. Se você está tendo problemas para lembrar do nome, lembre que significa <em><strong>h</strong>ypertext <strong>ref</strong>erence</em>. (referência em hipertexto)</p>
+<p><code>href</code> pode parecer, numa primeira impressão, uma escolha obscura para um nome de atributo. Se você está tendo problemas para lembrar do nome, lembre que significa <em><strong>h</strong>ypertext <strong>ref</strong>erence</em>. (referência em hipertexto)</p>
 </div>
 
 <p>Adicione um link em sua página agora, se ainda não tiver feito isso.</p>
 
 <h2 id="Conclusão">Conclusão</h2>
 
-<p>Se você seguiu todas as instruções neste artigo, você deve terminar com uma página que pareça algo do tipo (você também pode <a href="http://mdn.github.io/beginner-html-site/">vê-la aqui</a>):<br>
+<p>Se você seguiu todas as instruções neste artigo, você deve terminar com uma página que pareça algo do tipo (você também pode <a href="http://mdn.github.io/beginner-html-site/">vê-la aqui</a>):<br>
  <br>
  <img alt="A web page screenshot showing a firefox logo, a heading saying mozilla is cool, and two paragraphs of filler text" src="https://mdn.mozillademos.org/files/9351/finished-test-page-small.png" style="display: block; height: 838px; margin: 0px auto; width: 716px;"></p>
 
-<p>Se você ficar emperrado, pode sempre comparar seu trabalho com nosso <a href="https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html">código de exemplo finalizado</a> no Github.</p>
+<p>Se você ficar emperrado, pode sempre comparar seu trabalho com nosso <a href="https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html">código de exemplo finalizado</a> no Github.</p>
 
-<p>Aqui, nós só arranhamos na superfície do HTML. Para descobrir mais, vá a nossa <a href="https://developer.mozilla.org/pt-BR/docs/Aprender/HTML">Estruturando a web com HTML</a>.</p>
+<p>Aqui, nós só arranhamos na superfície do HTML. Para descobrir mais, vá a nossa <a href="https://developer.mozilla.org/pt-BR/docs/Aprender/HTML">Estruturando a web com HTML</a>.</p>
 
 <p>{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}</p>
 

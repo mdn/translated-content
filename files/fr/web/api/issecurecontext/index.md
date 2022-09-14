@@ -1,31 +1,27 @@
 ---
-title: WindowOrWorkerGlobalScope.isSecureContext
+title: isSecureContext
 slug: Web/API/isSecureContext
-translation_of: Web/API/WindowOrWorkerGlobalScope/isSecureContext
+page-type: web-api-global-property
+translation_of: Web/API/isSecureContext
 original_slug: Web/API/WindowOrWorkerGlobalScope/isSecureContext
+browser-compat: api.isSecureContext
 ---
-{{APIRef()}}{{SeeCompatTable}}
+{{APIRef}}{{SeeCompatTable}}
 
-La propriété **`isSecureContext`** de l'interface {{domxref("WindowOrWorkerGlobalScope")}} retourne un booleen indiquant si le contexte actuel est sécurisé (`true`) ou pas (`false`).
+La propriété globale en lecture seule **`isSecureContext`** renvoie un booléen qui indique si [le contexte est sécurisé](/fr/docs/Web/Security/Secure_Contexts).
 
-## Syntaxe
+## Valeur
 
-    var isItSecure = self.isSecureContext; // ou simplement isSecureContext
-
-### Valeur
-
-Un {{domxref("Boolean")}}.
+Une valeur booléenne (`true` ou `false`).
 
 ## Spécifications
 
-| Spécifications                                                                                                                                                           | Statut                               | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Secure Contexts', '#dom-windoworworkerglobalscope-issecurecontext', 'WindowOrWorkerGlobalScope.isSecureContext')}} | {{Spec2('Secure Contexts')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WindowOrWorkerGlobalScope.isSecureContext")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Secure contexts](/en-US/docs/Web/Security/Secure_Contexts)
+- [Les contextes sécurisés](/fr/docs/Web/Security/Secure_Contexts)

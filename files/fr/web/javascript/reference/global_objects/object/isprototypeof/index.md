@@ -21,7 +21,9 @@ La méthode **`isPrototypeOf()`** permet de tester si un objet existe dans la ch
 
 ## Syntaxe
 
-    prototypeObj.isPrototypeOf(objet)
+```js
+prototypeObj.isPrototypeOf(objet)
+```
 
 ### Paramètres
 

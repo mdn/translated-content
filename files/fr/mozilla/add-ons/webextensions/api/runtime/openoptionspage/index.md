@@ -17,7 +17,7 @@ var openingPage = browser.runtime.openOptionsPage()
 
 None.
 
-### valeur retournée
+### Valeur retournée
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans argument lorsque la page d'options a été créée avec succés, ou rejetée avec un message d'erreur si l'opération a échoué.
 

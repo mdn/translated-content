@@ -3,9 +3,9 @@ title: Element.attachShadow()
 slug: Web/API/Element/attachShadow
 translation_of: Web/API/Element/attachShadow
 ---
-<p>{{APIRef('Shadow DOM')}} {{SeeCompatTable}}</p>
+<p>{{APIRef('Shadow DOM')}} {{SeeCompatTable}}</p>
 
-<p>Метод <strong><code>Element.attachShadow()</code></strong> добавляет<span id="result_box" lang="ru"><span> теневое DOM дерево к указанному элементу и возвращает ссылку на его </span></span><a href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot" title="Use Element.attachShadow to create an instance of shadow DOM. When shadow DOM is created, it is always attached to an existing element. After the shadow DOM is created, the element that it is attached to is called the shadow root."><code>ShadowRoot</code></a>( корневой элемент созданного дерева).</p>
+<p>Метод <strong><code>Element.attachShadow()</code></strong> добавляет<span id="result_box" lang="ru"><span> теневое DOM дерево к указанному элементу и возвращает ссылку на его </span></span><a href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot" title="Use Element.attachShadow to create an instance of shadow DOM. When shadow DOM is created, it is always attached to an existing element. After the shadow DOM is created, the element that it is attached to is called the shadow root."><code>ShadowRoot</code></a>( корневой элемент созданного дерева).</p>
 
 <h4 id="Элементы_которые_можно_добавить_в_теневой_DOM">Элементы которые можно добавить в теневой DOM</h4>
 
@@ -46,13 +46,13 @@ translation_of: Web/API/Element/attachShadow
  <p><code>mode</code>: Строка указывающая на режим инкапсуляции для shadowDOM:</p>
 
  <ul>
-  <li><code>open.  </code>Указывает на открытие режима инкапсуляции.<br>
+  <li><code>open.  </code>Указывает на открытие режима инкапсуляции.<br>
    Это означает что элементы shadowRoot доступны для внешнего мира <em>element.shadowRoot</em><br>
 
    <pre>element.shadowRoot === shadowroot; // returns true</pre>
   </li>
   <li><code>closed.</code> Указывает на закрытие режима инкапсуляции.<br>
-   Этот режим запрещает доступ к узлам node(s) и закрывать теневой корень для внешнего мира<br>
+   Этот режим запрещает доступ к узлам node(s) и закрывать теневой корень для внешнего мира<br>
 
    <pre>element.shadowRoot === shadowroot; // returns false
 element.shadowRoot === null; // returns true
@@ -87,7 +87,7 @@ element.shadowRoot === null; // returns true
 
 <h2 id="Примеры">Примеры</h2>
 
-<p>Пример взят из демо компонента <a href="https://github.com/mdn/web-components-examples/tree/master/word-count-web-component">word-count-web-component</a>, так-же доступно <a href="https://mdn.github.io/web-components-examples/word-count-web-component/">live demo</a>. Вы можете найти метод attachShadow()  примерно в середине кода. Метод создаёт корневой элемент теневого DOM  к которому потом добавляется содержимое шаблона элемента.</p>
+<p>Пример взят из демо компонента <a href="https://github.com/mdn/web-components-examples/tree/master/word-count-web-component">word-count-web-component</a>, так-же доступно <a href="https://mdn.github.io/web-components-examples/word-count-web-component/">live demo</a>. Вы можете найти метод attachShadow()  примерно в середине кода. Метод создаёт корневой элемент теневого DOM  к которому потом добавляется содержимое шаблона элемента.</p>
 
 <pre class="brush: js"><code>//Create a class for the element
 class WordCount extends HTMLParagraphElement {
@@ -135,4 +135,4 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 <p>{{Compat}}</p>
 
-<div id="compat-mobile"> </div>
+<div id="compat-mobile"> </div>

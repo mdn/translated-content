@@ -112,17 +112,15 @@ self.addEventListener('fetch', function(event) {
 
 ### Storing cookies in Caches
 
-L'[API Fetch](/fr/docs/Web/API/Fetch_API) exige que les en-têtes {{httpheader("Set-Cookie")}} soient supprimés avant de renvoyer un objet {{domxref("Response")}} à partir de {{domxref("WindowOrWorkerGlobalScope", "fetch()")}}. Ainsi, une réponse stockée dans un cache ne contiendra pas d'en-têtes.
+L'[API Fetch](/fr/docs/Web/API/Fetch_API) exige que les en-têtes {{httpheader("Set-Cookie")}} soient supprimés avant de renvoyer un objet {{domxref("Response")}} à partir de [`fetch()`](/fr/docs/Web/API/fetch). Ainsi, une réponse stockée dans un cache ne contiendra pas d'en-têtes.
 
 ## Spécifications
 
-| Spécification                                                        | Statut                               | Commentaire          |
-| -------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#cache', 'Cache')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Cache")}}
+{{Compat}}
 
 ## Voir aussi
 

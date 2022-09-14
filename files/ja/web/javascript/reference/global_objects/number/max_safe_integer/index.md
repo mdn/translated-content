@@ -1,14 +1,6 @@
 ---
 title: Number.MAX_SAFE_INTEGER
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Number
-  - プロパティ
-  - ポリフィル
-browser-compat: javascript.builtins.Number.MAX_SAFE_INTEGER
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
 ---
 {{JSRef}}
 
@@ -27,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
 
 このフィールドは古いブラウザーには存在しません。 `Math.max(Number.MAX_SAFE_INTEGER, 2)` のように存在を確認せずに使用すると、 NaN のような望ましくない結果が得られます。
 
-`MAX_SAFE_INTEGER` は {{jsxref("Number")}} の静的なプロパティなので、自ら生成した {{jsxref("Number")}} オブジェクトのプロパティとしてではなく、常に `Number.MAX_SAFE_INTEGER` として使うようにしてください。
+`MAX_SAFE_INTEGER` は {{jsxref("Number")}} の静的なプロパティなので、自ら生成した {{jsxref("Number")}} オブジェクトのプロパティとしてではなく、常に `Number.MAX_SAFE_INTEGER` として使うようにしてください。
 
 ## ポリフィル
 

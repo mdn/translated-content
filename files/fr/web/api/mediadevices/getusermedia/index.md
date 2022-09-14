@@ -23,7 +23,9 @@ navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
 
 ## Syntaxe
 
-    var promise = navigator.mediaDevices.getUserMedia(constraints);
+```js
+var promise = navigator.mediaDevices.getUserMedia(constraints);
+```
 
 ### Paramètres
 
@@ -141,18 +143,20 @@ Les rejets du {{jsxref("Promise")}} retourné sont effectués en passant un obje
 
 Cet exemple donne une préférence pour la résolution de la caméra et attribue l'objet [`MediaStream`](https://translate.googleusercontent.com/translate_c?depth=1&hl=fr&prev=search&rurl=translate.google.fr&sl=en&sp=nmt4&u=https://developer.mozilla.org/en-US/docs/Web/API/MediaStream&usg=ALkJrhipdR5n2jQ-BGrPTomESH_A7nof4g) résultant à un élément vidéo.
 
-    // Prefer camera resolution nearest to 1280x720.
-    var constraints = { audio: true, video: { width: 1280, height: 720 } };
+```js
+// Prefer camera resolution nearest to 1280x720.
+var constraints = { audio: true, video: { width: 1280, height: 720 } };
 
-    navigator.mediaDevices.getUserMedia(constraints)
-    .then(function(mediaStream) {
-      var video = document.querySelector('video');
-      video.srcObject = mediaStream;
-      video.onloadedmetadata = function(e) {
-        video.play();
-      };
-    })
-    .catch(function(err) { console.log(err.name + ": " + err.message); }); // always check for errors at the end.
+navigator.mediaDevices.getUserMedia(constraints)
+.then(function(mediaStream) {
+  var video = document.querySelector('video');
+  video.srcObject = mediaStream;
+  video.onloadedmetadata = function(e) {
+    video.play();
+  };
+})
+.catch(function(err) { console.log(err.name + ": " + err.message); }); // always check for errors at the end.
+```
 
 ### Utilisation de la nouvelle API dans les navigateurs plus anciens
 
@@ -239,17 +243,15 @@ Pour utiliser `getUserMedia()` dans une application installable (par exemple, un
 }
 ```
 
-Voir [permission: audio-capture](/en-US/Apps/Developing/App_permissions#audio-capture) et [permission: video-capture](/en-US/Apps/Developing/App_permissions#video-capture) pour plus d'informations.
+Voir [permission: audio-capture](/fr/Apps/Developing/App_permissions#audio-capture) et [permission: video-capture](/fr/Apps/Developing/App_permissions#video-capture) pour plus d'informations.
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                                                | Status                               | Comment            |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('Media Capture', '#dom-mediadevices-getusermedia', 'MediaDevices.getUserMedia()')}} | {{Spec2('Media Capture')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.MediaDevices.getUserMedia")}}
+{{Compat}}
 
 ## Voir aussi
 

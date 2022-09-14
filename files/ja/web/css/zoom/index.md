@@ -1,14 +1,6 @@
 ---
 title: zoom
 slug: Web/CSS/zoom
-tags:
-  - CSS
-  - CSS プロパティ
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.zoom
-translation_of: Web/CSS/zoom
 ---
 {{CSSRef}}{{Non-standard_header}}
 
@@ -142,5 +134,5 @@ div#c {
 ## 関連情報
 
 - CSS-Tricks' CSS Almanac の [`zoom` の記事](https://css-tricks.com/almanac/properties/z/zoom/)
--  `zoom` 記述子（[`@viewport`](/ja/docs/Web/CSS/@viewport) で使用）
+- `zoom` 記述子（[`@viewport`](/ja/docs/Web/CSS/@viewport) で使用）
 - [Bug 390936: Implement Internet Explorer `zoom` property for CSS](https://bugzilla.mozilla.org/show_bug.cgi?id=390936) on the Firefox issue tracker Bugzilla

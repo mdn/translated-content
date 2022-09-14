@@ -11,9 +11,9 @@ original_slug: Web/JavaScript/Herencia_y_la_cadena_de_protipos
 ---
 <div>{{jsSidebar("Advanced")}}</div>
 
-<p>JavaScript provoca cierta confusión en desarrolladores con experiencia en lenguajes basados en clases (como Java o C++), por ser dinámico y no proporcionar una implementación de clases en sí mismo (la palabra clave <code>class</code> se introdujo en ES2015, pero sólo para endulzar la sintaxis, ya que JavaScript sigue estando basado en prototipos).</p>
+<p>JavaScript provoca cierta confusión en desarrolladores con experiencia en lenguajes basados en clases (como Java o C++), por ser dinámico y no proporcionar una implementación de clases en sí mismo (la palabra clave <code>class</code> se introdujo en ES2015, pero sólo para endulzar la sintaxis, ya que JavaScript sigue estando basado en prototipos).</p>
 
-<p>En lo que a herencia se refiere, JavaScript sólo tiene una estructura: objetos. Cada objeto tiene una propiedad privada (referida como su [[Prototype]]) que mantiene un enlace a otro objeto llamado su <strong>prototipo</strong>. Ese objeto prototipo tiene su propio prototipo, y así sucesivamente hasta que se alcanza un objeto cuyo prototipo es <code>null</code>. Por definición, <code>null</code> no tiene prototipo, y actúa como el enlace final de esta <strong>cadena de prototipos</strong>.</p>
+<p>En lo que a herencia se refiere, JavaScript sólo tiene una estructura: objetos. Cada objeto tiene una propiedad privada (referida como su [[Prototype]]) que mantiene un enlace a otro objeto llamado su <strong>prototipo</strong>. Ese objeto prototipo tiene su propio prototipo, y así sucesivamente hasta que se alcanza un objeto cuyo prototipo es <code>null</code>. Por definición, <code>null</code> no tiene prototipo, y actúa como el enlace final de esta <strong>cadena de prototipos</strong>.</p>
 
 <p>Casi todos los objetos en JavaScript son instancias de {{jsxref("Object")}} que se sitúa a la cabeza de la cadena de prototipos.</p>
 
@@ -23,12 +23,12 @@ original_slug: Web/JavaScript/Herencia_y_la_cadena_de_protipos
 
 <h3 id="Heredando_propiedades">Heredando propiedades</h3>
 
-<p>Los objetos en JavaScript son "contenedores" dinámicos de propiedades (referidas como sus <strong>propiedades particulares</strong>).  Los objetos en JavaScript poseen un enlace a un objeto prototipo. Cuando intentamos acceder a una propiedad de un objeto, la propiedad no sólo se busca en el propio objeto sino también en el prototipo del objeto, en el prototipo del prototipo, y así sucesivamente hasta que se encuentre una propiedad que coincida con el nombre o se alcance el final de la cadena de prototipos.</p>
+<p>Los objetos en JavaScript son "contenedores" dinámicos de propiedades (referidas como sus <strong>propiedades particulares</strong>).  Los objetos en JavaScript poseen un enlace a un objeto prototipo. Cuando intentamos acceder a una propiedad de un objeto, la propiedad no sólo se busca en el propio objeto sino también en el prototipo del objeto, en el prototipo del prototipo, y así sucesivamente hasta que se encuentre una propiedad que coincida con el nombre o se alcance el final de la cadena de prototipos.</p>
 
 <div class="note">
-<p>Siguiendo el estándar ECMAScript, la notación <code>algunObjeto.[[Prototype]]</code> se usa para designar el prototipo de <code>algunObjeto.</code> A partir de ECMAScript 2015, se accede al <code>[[Prototype]]</code> utilizando los accesores  {{jsxref("Object.getPrototypeOf()")}} y {{jsxref("Object.setPrototypeOf()")}}. Esto es equivalente a la propiedad JavaScript <code>__proto__</code> que no es estándar pero es el de-facto implementado por los navegadores.</p>
+<p>Siguiendo el estándar ECMAScript, la notación <code>algunObjeto.[[Prototype]]</code> se usa para designar el prototipo de <code>algunObjeto.</code> A partir de ECMAScript 2015, se accede al <code>[[Prototype]]</code> utilizando los accesores  {{jsxref("Object.getPrototypeOf()")}} y {{jsxref("Object.setPrototypeOf()")}}. Esto es equivalente a la propiedad JavaScript <code>__proto__</code> que no es estándar pero es el de-facto implementado por los navegadores.</p>
 
-<p>No debe confundirse con la propiedad de las funciones <code><em>func.</em>prototype</code>, que en cambio especifican el <code>[[Prototype]]</code> a asignar a todas las instancias de los objetos creados por la función dada cuando se utiliza como un constructor. La propiedad <code><strong>Object.prototype</strong></code> representa el prototipo del objeto {{jsxref("Object")}}.</p>
+<p>No debe confundirse con la propiedad de las funciones <code><em>func.</em>prototype</code>, que en cambio especifican el <code>[[Prototype]]</code> a asignar a todas las instancias de los objetos creados por la función dada cuando se utiliza como un constructor. La propiedad <code><strong>Object.prototype</strong></code> representa el prototipo del objeto {{jsxref("Object")}}.</p>
 </div>
 
 <p>Esto es lo que ocurre cuando intentamos acceder a una propiedad:</p>
@@ -57,7 +57,7 @@ console.log(o.c); // 4
 
 console.log(o.d); // undefined
 // ¿Hay una propiedad 'd' en o? No, comprobamos su prototipo.
-//  ¿Hay una propiedad 'd' en o.[[Prototype]]? No, comprobamos su prototipo.
+//  ¿Hay una propiedad 'd' en o.[[Prototype]]? No, comprobamos su prototipo.
 // o.[[Prototype]].[[Prototype]] es null, paramos de buscar.
 // No se encontró la propiedad, se devuelve undefined
 </pre>
@@ -174,7 +174,7 @@ console.log( hacerUnaInstancia );</pre>
 
 <p>Si <code>hacerUnaInstancia</code> no tiene la propiedad, entonces el navegador busca por la propiedad en el <code>__proto__</code> de <code>hacerUnaInstancia</code> (también conocido como <code>hacerAlgo.prototype</code>). Si el <code>__proto__</code> de <code>hacerUnaInstancia</code> tiene la propiedad buscada, entonces la propiedad en el <code>__proto__</code> de <code>hacerUnaInstancia</code> es usada.</p>
 
-<p>De otra manera, si el <code>__proto__</code> de <code>hacerUnaInstancia</code> no tiene la propiedad, entonces el <code>__proto__</code> de <code>__proto__</code> de <code>hacerUnaInstancia</code> es revisado para la propiedad. Por defecto, el <code>__proto__</code> de la propieda <code>prototype</code> de cualquier función es  <code>window.Object.prototype</code>. Entonces, el <code>__proto__</code> de el <code>__proto__</code> de <code>hacerUnaInstancia</code> (conocido como el <code>__proto__</code> de <code>hacerAlgo.prototype</code> (conocido como <code>Object.prototype</code>)) es entonces revisado por la propiedad que se está buscando.</p>
+<p>De otra manera, si el <code>__proto__</code> de <code>hacerUnaInstancia</code> no tiene la propiedad, entonces el <code>__proto__</code> de <code>__proto__</code> de <code>hacerUnaInstancia</code> es revisado para la propiedad. Por defecto, el <code>__proto__</code> de la propieda <code>prototype</code> de cualquier función es  <code>window.Object.prototype</code>. Entonces, el <code>__proto__</code> de el <code>__proto__</code> de <code>hacerUnaInstancia</code> (conocido como el <code>__proto__</code> de <code>hacerAlgo.prototype</code> (conocido como <code>Object.prototype</code>)) es entonces revisado por la propiedad que se está buscando.</p>
 
 <p>Si la propiedad no es encontrada en el <code>__proto__</code> de el <code>__proto__</code> de <code>hacerUnaInstancia</code>, entonces el <code>__proto__</code> de el <code>__proto__</code> de el <code>__proto__</code> de <code>hacerUnaInstancia</code> es revisado. Sin embargo, hay un problema: el <code>__proto__</code> de el <code>__proto__</code> de el <code>__proto__</code> de el <code>__proto__</code> de <code>hacerUnaInstancia</code> no existe. Entonces y sólo entonces, despues de que toda la cadena de prototipos de <code>__proto__</code>'s es revisada, y no haya mas <code>__proto__</code>s el navegador afirma que la propiedad no existe y concluye que el valor de la propiedad es <code>undefined</code>.</p>
 
@@ -272,28 +272,28 @@ console.log(d.hasOwnProperty);
 <div>
 <h3 id="Con_la_palabra_reservada_class">Con la palabra reservada <code>class</code></h3>
 
-<p>ECMAScript 2015 introduce un nuevo set de palabras reservadas que implementan <a href="/en-US/docs/Web/JavaScript/Reference/Classes">clases</a>. Aunque estos constructores lucen más familiares para los desarrolladores de lenguajes basados en clases, aun así no son clases. JavaScript sigue estando basado en prototipos. Los nuevos keywords incluyen {{jsxref("Statements/class", "class")}}, {{jsxref("Classes/constructor", "constructor")}}, {{jsxref("Classes/static", "static")}}, {{jsxref("Classes/extends", "extends")}}, and {{jsxref("Operators/super", "super")}}.</p>
+<p>ECMAScript 2015 introduce un nuevo set de palabras reservadas que implementan <a href="/en-US/docs/Web/JavaScript/Reference/Classes">clases</a>. Aunque estos constructores lucen más familiares para los desarrolladores de lenguajes basados en clases, aun así no son clases. JavaScript sigue estando basado en prototipos. Los nuevos keywords incluyen {{jsxref("Statements/class", "class")}}, {{jsxref("Classes/constructor", "constructor")}}, {{jsxref("Classes/static", "static")}}, {{jsxref("Classes/extends", "extends")}}, and {{jsxref("Operators/super", "super")}}.</p>
 
 <pre class="brush: js">"use strict";
 
 class Polygon {
-  constructor(height, width) {
-    this.height = height;
-    this.width = width;
-  }
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
 }
 
 class Square extends Polygon {
-  constructor(sideLength) {
-    super(sideLength, sideLength);
-  }
+  constructor(sideLength) {
+    super(sideLength, sideLength);
+  }
   get area() {
-    return this.height * this.width;
-  }
-  set sideLength(newLength) {
-    this.height = newLength;
-    this.width = newLength;
-  }
+    return this.height * this.width;
+  }
+  set sideLength(newLength) {
+    this.height = newLength;
+    this.width = newLength;
+  }
 }
 
 var square = new Square(2);
@@ -305,7 +305,7 @@ var square = new Square(2);
 
 <p>También, cuando iteramos sobre las propiedades de un objeto, cada propiedad enumerable que se encuentra en la cadena de prototipo será enumerada.</p>
 
-<p>Para comprobar si un objeto tiene una propiedad definida en sí mismo y no en alguna parte de su cadena de prototipo, Es necesario usar para esto el método  <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty" title="/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"><code>hasOwnProperty</code></a> que todos los objetos heredan de<code> Object.prototype</code>.</p>
+<p>Para comprobar si un objeto tiene una propiedad definida en sí mismo y no en alguna parte de su cadena de prototipo, Es necesario usar para esto el método  <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty" title="/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"><code>hasOwnProperty</code></a> que todos los objetos heredan de<code> Object.prototype</code>.</p>
 
 <p><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty" title="/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"><code>hasOwnProperty</code></a> es la única cosa en JavaScript que se ocupa de las propiedades y no atraviesa la cadena de prototipos.</p>
 

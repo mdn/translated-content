@@ -86,7 +86,7 @@ L'autre attribut qu'il est possible d'ajouter à un lien est `title` ; il est de
 
 Voici le résultat (le contenu de `title` apparaît dans une info-bulle quand le pointeur de souris passe sur le lien) :
 
-Je suis en train de créer un lien vers [la page d'accueil de Mozilla](https://www.mozilla.org/fr/ "Le meilleur endroit pour trouver plus d'informations sur la mission de Mozilla et la manière de contribuer")
+Je suis en train de créer un lien vers [la page d'accueil de Mozilla](https://www.mozilla.org/fr/)
 
 > **Note :** le `title` d'un lien n'est révélé que lors du survol de la souris, ce qui signifie que les personnes utilisant les commandes clavier pour naviguer dans les pages web auront des difficultés à accéder aux informations de `title`. Si une information de `title` est vraiment importante pour l'utilisation d'une page, alors vous devez la présenter de manière accessible à tout utilisateur, par exemple, en la mettant dans le texte normal.
 
@@ -271,10 +271,10 @@ Vous aurez besoin de faire des copies locales des quatre pages suivantes, toutes
 
 Vous devez :
 
-1.  Ajouter une liste non-ordonnée à l'endroit indiqué sur une page, qui contiendra les noms des pages à relier. Un menu de navigation n'est habituellement qu'une liste de liens, donc c'est ok sur le plan sémantique.
-2.  Changer chaque nom de page en un lien vers cette page.
-3.  Copier le menu de navigation dans chaque page.
-4.  Sur chaque page, enlever seulement le lien vers cette page, c'est source de confusion et sans objet pour une page que d'inclure un lien vers elle-même, et l'absence d'un lien constitue un bon rappel visuel pour se souvenir sur quelle page vous êtes actuellement.
+1. Ajouter une liste non-ordonnée à l'endroit indiqué sur une page, qui contiendra les noms des pages à relier. Un menu de navigation n'est habituellement qu'une liste de liens, donc c'est ok sur le plan sémantique.
+2. Changer chaque nom de page en un lien vers cette page.
+3. Copier le menu de navigation dans chaque page.
+4. Sur chaque page, enlever seulement le lien vers cette page, c'est source de confusion et sans objet pour une page que d'inclure un lien vers elle-même, et l'absence d'un lien constitue un bon rappel visuel pour se souvenir sur quelle page vous êtes actuellement.
 
 L'exemple terminé devrait finir par ressembler à quelque chose comme ce qui suit :
 

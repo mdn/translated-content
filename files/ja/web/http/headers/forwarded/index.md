@@ -1,14 +1,6 @@
 ---
 title: Forwarded
 slug: Web/HTTP/Headers/Forwarded
-tags:
-  - HTTP
-  - HTTP ヘッダー
-  - Reference
-  - リクエストヘッダー
-  - ヘッダー
-browser-compat: http.headers.Forwarded
-translation_of: Web/HTTP/Headers/Forwarded
 ---
 {{HTTPSidebar}}
 

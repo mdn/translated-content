@@ -18,7 +18,9 @@ La méthode **`toUpperCase()`** retourne la valeur de la chaîne courante, conve
 
 ## Syntaxe
 
-    str.toUpperCase()
+```js
+str.toUpperCase()
+```
 
 ### Valeur de retour
 
@@ -43,7 +45,7 @@ console.log( "alphabet".toUpperCase() ); // "ALPHABET"
 
 ### Convertir une valeur `this` en chaîne de caractères
 
-Cette peut être utilisée pour convertir une valeur qui n'est pas une chaîne de caractères lorsque celle-ci est fournie comme valeur `this` : 
+Cette peut être utilisée pour convertir une valeur qui n'est pas une chaîne de caractères lorsque celle-ci est fournie comme valeur `this` :
 
 ```js
 var obj = {

@@ -12,7 +12,9 @@ translation_of: Web/EXSLT/set/distinct
 
 ### Syntaxe
 
-    set:distinct(ensembleNœuds)
+```
+set:distinct(ensembleNœuds)
+```
 
 ### Arguments
 

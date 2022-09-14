@@ -39,9 +39,9 @@ translation_of: Web/CSS/@media/overflow-block
 
 ```css
 @media (overflow-block: scroll) {
-  p {
-    color: red;
-  }
+  p {
+    color: red;
+  }
 }
 ```
 

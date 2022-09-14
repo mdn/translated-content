@@ -22,12 +22,16 @@ La méthode **`requestPermission()`** de l'interface {{domxref ("Notification")}
 
 La dernière spécification a mis à jour cette méthode avec une syntaxe basée sur une promesse qui fonctionne comme ceci:
 
-    Notification.requestPermission()
-      .then((permission) => { ... })
+```js
+Notification.requestPermission()
+  .then((permission) => { ... })
+```
 
 Auparavant, la syntaxe était basée sur un simple rappel; cette version est désormais obsolète:
 
-    Notification.requestPermission(callback);
+```js
+Notification.requestPermission(callback);
+```
 
 ### Paramètres
 
@@ -86,14 +90,12 @@ Nous ne montrons plus d'exemple en direct sur cette page, car Chrome et Firefox 
 
 ## Spécifications
 
-| Spécification                                | Status                                   | Comment         |
-| -------------------------------------------- | ---------------------------------------- | --------------- |
-| {{SpecName('Web Notifications')}} | {{Spec2('Web Notifications')}} | Living standard |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Notification.requestPermission")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)

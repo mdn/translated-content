@@ -15,7 +15,7 @@ translation_of: Web/API/Response/Response
 
 <dl>
  <dt><em>cuerpo</em> {{optional_inline}}</dt>
- <dd>Un objeto que define el cuerpo de la respuesta. Puede ser <code>null</code>, o uno de los siguientes elementos:
+ <dd>Un objeto que define el cuerpo de la respuesta. Puede ser <code>null</code>, o uno de los siguientes elementos:
  <ul>
   <li>{{domxref("Blob")}}</li>
   <li>{{domxref("BufferSource")}}</li>
@@ -28,16 +28,16 @@ translation_of: Web/API/Response/Response
  <dt><em>opciones</em> {{optional_inline}}</dt>
  <dd>Un objeto que contiene las opciones de personalización para la respuesta HTTP. Las opciones posibles son:
  <ul>
-  <li><code>status</code>: El código de estado HTTP, p.e.: <code>200</code>.</li>
-  <li><code>statusText</code>: El mensaje de estado asociado con el código de estado HTTP, p.e.: <code>OK</code>.</li>
-  <li><code>headers</code>: Cualquier cabecera que quieras añadir a la respuesta. Puede ser un objeto {{domxref("Headers")}} o un objeto literal de {{domxref("ByteString")}} pares claves/valor (ver <a href="/en-US/docs/Web/HTTP/Headers">Cabeceras HTTP</a> para más información).</li>
+  <li><code>status</code>: El código de estado HTTP, p.e.: <code>200</code>.</li>
+  <li><code>statusText</code>: El mensaje de estado asociado con el código de estado HTTP, p.e.: <code>OK</code>.</li>
+  <li><code>headers</code>: Cualquier cabecera que quieras añadir a la respuesta. Puede ser un objeto {{domxref("Headers")}} o un objeto literal de {{domxref("ByteString")}} pares claves/valor (ver <a href="/en-US/docs/Web/HTTP/Headers">Cabeceras HTTP</a> para más información).</li>
  </ul>
  </dd>
 </dl>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
-<p>En nuestro <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-response">ejemplo Fetch Response</a> (ver <a href="http://mdn.github.io/fetch-examples/fetch-response/">Fetch Response live</a>) creamos un nuevo objeto <code>Response</code> usando el constructor, pasándole un nuevo objeto {{domxref("Blob")}} como cuerpo, y un objeto con <code>status</code> y<code>statusText</code> como opciones:</p>
+<p>En nuestro <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-response">ejemplo Fetch Response</a> (ver <a href="http://mdn.github.io/fetch-examples/fetch-response/">Fetch Response live</a>) creamos un nuevo objeto <code>Response</code> usando el constructor, pasándole un nuevo objeto {{domxref("Blob")}} como cuerpo, y un objeto con <code>status</code> y<code>statusText</code> como opciones:</p>
 
 <pre class="brush: js">var miBlob = new Blob();
 var opciones = { "status" : 200 , "statusText" : "Flipante!" };

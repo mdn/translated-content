@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 ---
 <div>{{JSRef}}</div>
 
-<p>O método <strong><code>charCodeAt()</code></strong> retorna um número inteiro entre <code>0</code> e <code>65535</code> que representa a unidade de código UTF-16 no índice fornecido. A unidade de código UTF-16 corresponde ao ponto de código Unicode para pontos de códigos representáveis em uma única unidade de código UTF-16, mas também pode ser a primeira unidade de código de um par substituto não representável em uma única unidade de código UTF-16. Po exemplo: pontos de código Unicode  &gt; (0x10000). Se você quer o valor do ponto de código inteiro, use <strong><code>codePointAt</code></strong>().</p>
+<p>O método <strong><code>charCodeAt()</code></strong> retorna um número inteiro entre <code>0</code> e <code>65535</code> que representa a unidade de código UTF-16 no índice fornecido. A unidade de código UTF-16 corresponde ao ponto de código Unicode para pontos de códigos representáveis em uma única unidade de código UTF-16, mas também pode ser a primeira unidade de código de um par substituto não representável em uma única unidade de código UTF-16. Po exemplo: pontos de código Unicode  &gt; (0x10000). Se você quer o valor do ponto de código inteiro, use <strong><code>codePointAt</code></strong>().</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -30,26 +30,26 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Os pontos de código Unicode variam de <code>0</code> a <code>1114111</code> (<code>0x10FFFF</code>). Os primeiros 128 pontos de código Unicode são uma correspondência direta da codificação de caracteres ASCII. (Para informações sobre Unicode, veja o <a href="/pt-BR/docs/Web/JavaScript/Guide/Values,_variables,_and_literals">JavaScript Guide</a>.)</p>
+<p>Os pontos de código Unicode variam de <code>0</code> a <code>1114111</code> (<code>0x10FFFF</code>). Os primeiros 128 pontos de código Unicode são uma correspondência direta da codificação de caracteres ASCII. (Para informações sobre Unicode, veja o <a href="/pt-BR/docs/Web/JavaScript/Guide/Values,_variables,_and_literals">JavaScript Guide</a>.)</p>
 
 <div class="blockIndicator note">
-<p><strong>Nota</strong>: o <code>charCodeAt()</code> sempre retornará um valor menor do que <code>65536</code>. Isso ocorre pois os pontos de código mais altos são representados por um par de pseudo-caracteres "substitutos" (de menor valor) que são usados para compreender o caracter real.<br>
+<p><strong>Nota</strong>: o <code>charCodeAt()</code> sempre retornará um valor menor do que <code>65536</code>. Isso ocorre pois os pontos de código mais altos são representados por um par de pseudo-caracteres "substitutos" (de menor valor) que são usados para compreender o caracter real.<br>
  <br>
- Por isso, para examinar (ou reproduzir) o caractere completo para valores de caracteres individuais de valor <code>65536</code> e acima, é necessário recuperar não apenas o <code>charCodeAt(<em>i</em>)</code>, mas também o <code>charCodeAt(<em>i</em>+1)</code> (como se examinando/reproduzindo a string com duas letras), ou usar o <code>codePointAt(<em>i</em>)</code>. Veja o exemplo 2 e 3 (abaixo).</p>
+ Por isso, para examinar (ou reproduzir) o caractere completo para valores de caracteres individuais de valor <code>65536</code> e acima, é necessário recuperar não apenas o <code>charCodeAt(<em>i</em>)</code>, mas também o <code>charCodeAt(<em>i</em>+1)</code> (como se examinando/reproduzindo a string com duas letras), ou usar o <code>codePointAt(<em>i</em>)</code>. Veja o exemplo 2 e 3 (abaixo).</p>
 </div>
 
-<p>Compatibilidade com versões anteriores: Em versões históricas (como JavaScript 1.2) o método <code>charCodeAt()</code> retorna um número indicando o valor de conjunto de códigos ISO-Latin-1 do caractere no dado índice. O conjunto de códigos ISO-Latin-1 varia de <code>0</code> a <code>255</code>. Os primeiros <code>128</code> (do <code>0</code> ao <code>127</code>) são uma correspondência direta ao conjunto de caracteres ASCII.</p>
+<p>Compatibilidade com versões anteriores: Em versões históricas (como JavaScript 1.2) o método <code>charCodeAt()</code> retorna um número indicando o valor de conjunto de códigos ISO-Latin-1 do caractere no dado índice. O conjunto de códigos ISO-Latin-1 varia de <code>0</code> a <code>255</code>. Os primeiros <code>128</code> (do <code>0</code> ao <code>127</code>) são uma correspondência direta ao conjunto de caracteres ASCII.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Usando_charCodeAt">Usando <code>charCodeAt()</code></h3>
+<h3 id="Usando_charCodeAt">Usando <code>charCodeAt()</code></h3>
 
 <p>O exemplo a seguir retorna <code>65</code>, o valor Unicode para A.</p>
 
 <pre class="brush: js notranslate">'ABC'.charCodeAt(0); // retorna 65
 </pre>
 
-<h3 id="Corrigindo_o_charCodeAt_para_manipular_caracteres_de_Plano_Multilingual_não_Básico_se_sua_presença_na_string_é_desconhecida">Corrigindo o <code>charCodeAt()</code> para manipular caracteres de Plano Multilingual não Básico se sua presença na string é desconhecida</h3>
+<h3 id="Corrigindo_o_charCodeAt_para_manipular_caracteres_de_Plano_Multilingual_não_Básico_se_sua_presença_na_string_é_desconhecida">Corrigindo o <code>charCodeAt()</code> para manipular caracteres de Plano Multilingual não Básico se sua presença na string é desconhecida</h3>
 
 <p>Essa versão pode ser usada em loops <strong>for </strong>e afins quando não sabemos se caracteres de Plano Multilingual não Básico existem antes da posição do índice especificado.</p>
 
@@ -82,7 +82,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 }
 </pre>
 
-<h3 id="Corrigindo_o_charCodeAt_para_manipular_caracteres_de_Plano_Multilingual_não_Básico_se_sua_presença_na_string_é_desconhecida_2">Corrigindo o <code>charCodeAt()</code> para manipular caracteres de Plano Multilingual não Básico se sua presença na string é desconhecida</h3>
+<h3 id="Corrigindo_o_charCodeAt_para_manipular_caracteres_de_Plano_Multilingual_não_Básico_se_sua_presença_na_string_é_desconhecida_2">Corrigindo o <code>charCodeAt()</code> para manipular caracteres de Plano Multilingual não Básico se sua presença na string é desconhecida</h3>
 
 <pre class="brush: js notranslate">function knownCharCodeAt(str, idx) {
   str += '';
@@ -151,55 +151,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 
 <h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte Básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte Básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.String.charCodeAt")}}
 
 <h2 id="sect1"></h2>
 

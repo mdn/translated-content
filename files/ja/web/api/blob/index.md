@@ -1,14 +1,6 @@
 ---
 title: Blob
 slug: Web/API/Blob
-tags:
-  - API
-  - Blob
-  - ファイル API
-  - インターフェイス
-  - リファレンス
-browser-compat: api.Blob
-translation_of: Web/API/Blob
 ---
 {{APIRef("File API")}}
 

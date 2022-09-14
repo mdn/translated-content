@@ -49,7 +49,7 @@ Ordem das operações:
 3. Quando `foo` retorna, o _frame_ do topo é removido da pilha (deixando apenas o _frame_ da chamada de `bar`).
 4. Quando `bar` retorna, a pilha fica vazia.
 
-Note que os argumentos e variáveis locais podem continuar existindo, pois são armazenados fora da pilha — de forma que podem ser acessados por quaisquer [funções aninhadas](/en-US/docs/Web/JavaScript/Guide/Functions#nested_functions_and_closures) muito depois de sua função externa ter retornado.
+Note que os argumentos e variáveis locais podem continuar existindo, pois são armazenados fora da pilha — de forma que podem ser acessados por quaisquer [funções aninhadas](/en-US/docs/Web/JavaScript/Guide/Functions#nested_functions_and_closures) muito depois de sua função externa ter retornado.
 
 ### Acervo (Heap)
 

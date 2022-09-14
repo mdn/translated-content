@@ -18,7 +18,9 @@ La méthode **`getSeconds()`** renvoie les secondes pour la date renseignée d'a
 
 ## Syntaxe
 
-    dateObj.getSeconds()
+```js
+dateObj.getSeconds()
+```
 
 ### Valeur de retour
 

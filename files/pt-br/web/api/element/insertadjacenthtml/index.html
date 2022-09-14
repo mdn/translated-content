@@ -7,7 +7,7 @@ translation_of: Web/API/Element/insertAdjacentHTML
 
 <h2 id="Summary" name="Summary">Resumo</h2>
 
-<p><code>insertAdjacentHTML </code>analisa o texto especificado como HTML ou XML e insere os nós que resultam na árvore DOM em uma posição especificada. Não reanalisa o elemento que está a ser utilizado e, portanto, não corrompe os elementos existentes dentro do elemento. Esta, e evitando a etapa extra de serialização, torna-o muito mais rápido do que a manipulação direta innerHTML.</p>
+<p><code>insertAdjacentHTML </code>analisa o texto especificado como HTML ou XML e insere os nós que resultam na árvore DOM em uma posição especificada. Não reanalisa o elemento que está a ser utilizado e, portanto, não corrompe os elementos existentes dentro do elemento. Esta, e evitando a etapa extra de serialização, torna-o muito mais rápido do que a manipulação direta innerHTML.</p>
 
 <h2 id="Syntax" name="Syntax">Sintaxe</h2>
 
@@ -38,7 +38,7 @@ foo
 &lt;/p&gt;
 &lt;!-- afterend --&gt;</pre>
 
-<div class="note"><strong>Nota:</strong>  As posições beforeBegin e afterEnd funcionam apenas se o nó está em uma árvore DOM e tem um elemento pai.</div>
+<div class="note"><strong>Nota:</strong>  As posições beforeBegin e afterEnd funcionam apenas se o nó está em uma árvore DOM e tem um elemento pai.</div>
 
 <h2 id="Example" name="Example">Exemplo</h2>
 
@@ -66,73 +66,19 @@ d1.insertAdjacentHTML('afterend', '&lt;div id="two"&gt;two&lt;/div&gt;');
   <tr>
    <td>{{SpecName('DOM Parsing', '#insertadjacenthtml()', 'Element.insertAdjacentHTML()')}}</td>
    <td>{{ Spec2('DOM Parsing') }}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidade de Navegadores</h2>
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility"><span style="font-size: 14px; font-weight: normal; line-height: 1.5;">{{ CompatibilityTable() }}</span></h2>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>1.0</td>
-   <td>{{ CompatGeckoDesktop("8.0") }}</td>
-   <td>4.0*</td>
-   <td>7.0</td>
-   <td>4.0 (527)</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th> Característica</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("8.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-
-<p> </p>
-
-<h3 id="Questão_no_IE">Questão no IE:</h3>
-
-<ul>
- <li>No IE8, as mudanças no dom são feitas somente depois do JS ter terminado de carregar, então se você precisa acessar os nós gerados,  terá que fazê-lo de uma forma assíncrona.</li>
-</ul>
-</div>
+{{Compat("api.Element.insertAdjacentHTML")}}
 
 <h2 id="Veja_também">Veja também</h2>
 
 <ul>
  <li>{{domxref("Node.insertBefore()")}}</li>
- <li>{{domxref("Node.appendChild()")}} (mesmo efeito de <code>beforeend</code>)</li>
- <li><a class="external" href="http://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/">hacks.mozilla.org guest post</a><span class="external"> por Henri Sivonen incluem benchmarks que demonstram que insertAdjacentHTML pode ser bem rápido em alguns casos.</span></li>
+ <li>{{domxref("Node.appendChild()")}} (mesmo efeito de <code>beforeend</code>)</li>
+ <li><a class="external" href="http://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/">hacks.mozilla.org guest post</a><span class="external"> por Henri Sivonen incluem benchmarks que demonstram que insertAdjacentHTML pode ser bem rápido em alguns casos.</span></li>
 </ul>

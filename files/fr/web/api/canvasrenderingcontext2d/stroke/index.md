@@ -9,8 +9,10 @@ La méthode **`CanvasRenderingContext2D.stroke()`** de l'API Canvas 2D dessine l
 
 ## Syntaxe
 
-    void ctx.stroke();
-    void ctx.stroke(path);
+```js
+void ctx.stroke();
+void ctx.stroke(path);
+```
 
 ### Paramètres
 
@@ -83,13 +85,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Spécification                                                                                                                            | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-stroke", "CanvasRenderingContext2D.stroke")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
-## Compatibilité avec les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.stroke")}}
+{{Compat}}
 
 ## Voir aussi
 

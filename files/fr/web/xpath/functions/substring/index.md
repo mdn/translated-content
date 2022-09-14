@@ -12,7 +12,9 @@ La fonction `substring` retourne une partie d'une chaîne donnée.
 
 ### Syntaxe
 
-    substring( chaîne , début [, longueur] )
+```
+substring( chaîne , début [, longueur] )
+```
 
 ### Arguments
 

@@ -1,14 +1,6 @@
 ---
 title: 論理和 (||)
 slug: Web/JavaScript/Reference/Operators/Logical_OR
-tags:
-  - JavaScript
-  - 言語機能
-  - 論理演算子
-  - 演算子
-  - リファレンス
-browser-compat: javascript.operators.logical_or
-translation_of: Web/JavaScript/Reference/Operators/Logical_OR
 ---
 {{jsSidebar("Operators")}}
 
@@ -24,7 +16,7 @@ expr1 || expr2
 
 ## 解説
 
-`expr1` が `true` に変換できる場合は `expr1` を返し、それ以外の場合は `expr2` を返します。
+`expr1` が `true` に変換できる場合は `expr1` を返し、それ以外の場合は `expr2` を返します。
 
 ある値が `true` に変換できる場合、その値は真値 ({{Glossary("truthy")}}) と呼ばれます。ある値が `false` に変換できる場合、その値は偽値 ({{Glossary("falsy")}}) と呼ばれます。
 

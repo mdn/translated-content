@@ -12,7 +12,7 @@ translation_of: Web/HTTP/Headers/Access-Control-Allow-Headers
 
 <p><strong><code>Access-Control-Allow-Headers</code></strong> 는 {{HTTPHeader("Access-Control-Request-Headers")}}를 포함하는 {{glossary("preflight request")}}의 응답에 사용되는 헤더로, 실제 요청때 사용할 수 있는 HTTP 헤더의 목록을 나열합니다.</p>
 
-<p>요청에 {{HTTPHeader("Access-Control-Request-Headers")}} 헤더가 포함되어 있을 경우, 이 헤더를 포함하여야 합니다.</p>
+<p>요청에 {{HTTPHeader("Access-Control-Request-Headers")}} 헤더가 포함되어 있을 경우, 이 헤더를 포함하여야 합니다.</p>
 
 <table class="properties">
  <tbody>
@@ -58,11 +58,11 @@ Access-Control-Allow-Headers: *
 
 <h3 id="Preflight_요청_예시">Preflight 요청 예시</h3>
 
-<p>사전 요청에서  <code>Access-Control-Allow-Headers</code> 이 사용된 경우의 예제를 보도록 합시다.</p>
+<p>사전 요청에서  <code>Access-Control-Allow-Headers</code> 이 사용된 경우의 예제를 보도록 합시다.</p>
 
 <h4 id="요청">요청</h4>
 
-<p><span class="tlid-translation translation" lang="ko">이 </span>Preflight <span class="tlid-translation translation" lang="ko"><span title="">요청은 </span></span>Preflight 요<span class="tlid-translation translation" lang="ko"><span title="">청 헤더인 </span></span>{{HTTPHeader("Access-Control-Request-Method")}}, {{HTTPHeader("Access-Control-Request-Headers")}} <span class="tlid-translation translation" lang="ko"><span title=""> 및 </span></span> {{HTTPHeader("Origin")}}, 이 세가지 Preflight 요청 헤더를<span class="tlid-translation translation" lang="ko"><span title=""> 포함하는 </span></span>{{HTTPMethod("OPTIONS")}} <span class="tlid-translation translation" lang="ko"><span title="">요청입니다.</span></span></p>
+<p><span class="tlid-translation translation" lang="ko">이 </span>Preflight <span class="tlid-translation translation" lang="ko"><span title="">요청은 </span></span>Preflight 요<span class="tlid-translation translation" lang="ko"><span title="">청 헤더인 </span></span>{{HTTPHeader("Access-Control-Request-Method")}}, {{HTTPHeader("Access-Control-Request-Headers")}} <span class="tlid-translation translation" lang="ko"><span title=""> 및 </span></span> {{HTTPHeader("Origin")}}, 이 세가지 Preflight 요청 헤더를<span class="tlid-translation translation" lang="ko"><span title=""> 포함하는 </span></span>{{HTTPMethod("OPTIONS")}} <span class="tlid-translation translation" lang="ko"><span title="">요청입니다.</span></span></p>
 
 <pre>OPTIONS /resource/foo
 Access-Control-Request-Method: DELETE
@@ -82,24 +82,9 @@ Access-Control-Max-Age: 86400</pre>
 
 <p><span class="tlid-translation translation" lang="ko"><span title="">요청된 메소드가 지원되지 않으면 서버는 오류로 응답합니다.</span></span></p>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Fetch','#http-access-control-allow-headers', 'Access-Control-Allow-Headers')}}</td>
-   <td>{{Spec2("Fetch")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 

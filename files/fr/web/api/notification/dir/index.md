@@ -17,7 +17,9 @@ La propriété en lecture seule **`dir`** de l'interface {{domxref ("Notificatio
 
 ## Syntaxe
 
-    Notification.dir
+```js
+Notification.dir
+```
 
 ### Valeur
 
@@ -31,14 +33,12 @@ Une {{domxref ("DOMString")}} spécifiant la direction du texte. Les valeurs pos
 
 ## Spécifications
 
-| Spécification                                                                        | État                                     | Commentaire     |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | --------------- |
-| {{SpecName('Web Notifications','#dom-notification-dir','dir')}} | {{Spec2('Web Notifications')}} | Living standard |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Notification.dir")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)

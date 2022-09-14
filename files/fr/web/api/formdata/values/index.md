@@ -20,7 +20,9 @@ La méthode **`FormData.values()`** renvoie une {{jsxref("Les_protocoles_iterati
 
 ## Syntaxe
 
-    formData.values();
+```js
+formData.values();
+```
 
 ### Valeur de retour
 
@@ -42,18 +44,18 @@ for (var value of formData.values()) {
 
 Le résultat est :
 
-    valeur1
-    valeur2
+```
+valeur1
+valeur2
+```
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                               | Commentaire          |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('XMLHttpRequest','#dom-formdata','values() (as iterator&lt;&gt;)')}} | {{Spec2('XMLHttpRequest')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FormData.values")}}
+{{Compat}}
 
 ## Voir aussi
 

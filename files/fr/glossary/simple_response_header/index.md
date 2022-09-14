@@ -23,9 +23,11 @@ Un _en-tête de réponse simple_ (ou un en-tête de réponse sécurisé _CORS_) 
 
 Vous pouvez étendre la liste des en-têtes de réponse sécurisés CORS en utilisant l'en-tête {{HTTPHeader("Access-Control-Expose-Headers")}} :
 
-    Access-Control-Expose-Headers: X-Custom-Header, Content-Length
+```
+Access-Control-Expose-Headers: X-Custom-Header, Content-Length
+```
 
-## En apprendre plus
+## Voir aussi
 
 - [HTTP](/fr/docs/HTTP)
 - [En-têtes HTTP](/fr/docs/HTTP/Headers)

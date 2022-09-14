@@ -6,11 +6,11 @@ original_slug: Web/HTML/Atributos_Globales/itemref
 ---
 <h2 id="Resumen">Resumen</h2>
 
-<p>Las propiedades que no son descendientes de un elemento con el atributo <code>itemscope</code> pueden ser asociadas con el elemento usando un <strong>itemref</strong> . <strong>Itemref</strong> provee una lista de ids de los elementos (no <code>itemids</code>) con propiedades adicionales en otras partes dentro del documento .</p>
+<p>Las propiedades que no son descendientes de un elemento con el atributo <code>itemscope</code> pueden ser asociadas con el elemento usando un <strong>itemref</strong> . <strong>Itemref</strong> provee una lista de ids de los elementos (no <code>itemids</code>) con propiedades adicionales en otras partes dentro del documento .</p>
 
 <p>El atributo itemref puede ser solo especificado en elementos que tienen un atributo itemscope especificado .</p>
 
-<p class="note"><strong>Nota: </strong>el atributo itemref no es parte del modelo de micro datos . Es solamente un constructor sintáctico que ayuda a los autores en el ingreso de anotaciones a las páginas donde los datos que se van a anotar no siguen una estructura de arbol conveniente . Por ejemplo , permite a los autores marcar los datos en una tabla para que cada columna defina un item separado mientras se mantienen las propiedades en las celdas .</p>
+<p class="note"><strong>Nota: </strong>el atributo itemref no es parte del modelo de micro datos . Es solamente un constructor sintáctico que ayuda a los autores en el ingreso de anotaciones a las páginas donde los datos que se van a anotar no siguen una estructura de arbol conveniente . Por ejemplo , permite a los autores marcar los datos en una tabla para que cada columna defina un item separado mientras se mantienen las propiedades en las celdas .</p>
 
 <div class="syntaxbox">
 <h2 class="syntaxbox" id="Ejemplo">Ejemplo</h2>
@@ -22,14 +22,14 @@ original_slug: Web/HTML/Atributos_Globales/itemref
 &lt;p id="a"&gt;Name: &lt;span itemprop="name"&gt;Amanda&lt;/span&gt; &lt;/p&gt;
 &lt;div id="b" itemprop="band" itemscope itemref="c"&gt;&lt;/div&gt;
 &lt;div id="c"&gt;
-    &lt;p&gt;Band: &lt;span itemprop="name"&gt;Jazz Band&lt;/span&gt; &lt;/p&gt;
-    &lt;p&gt;Size: &lt;span itemprop="size"&gt;12&lt;/span&gt; players&lt;/p&gt;
+    &lt;p&gt;Band: &lt;span itemprop="name"&gt;Jazz Band&lt;/span&gt; &lt;/p&gt;
+    &lt;p&gt;Size: &lt;span itemprop="size"&gt;12&lt;/span&gt; players&lt;/p&gt;
 &lt;/div&gt;
 </pre>
 </div>
 
 <article id="wikiArticle">
-<h3 id="Datos_estructurados">Datos estructurados </h3>
+<h3 id="Datos_estructurados">Datos estructurados </h3>
 
 <table class="standard-table">
  <tbody>
@@ -37,22 +37,22 @@ original_slug: Web/HTML/Atributos_Globales/itemref
    <th>id's</th>
    <th>itemscope</th>
    <th>itemref</th>
-   <th> </th>
-   <th>(nombre de itemprop )</th>
-   <th>(valor de itemprop)</th>
+   <th> </th>
+   <th>(nombre de itemprop )</th>
+   <th>(valor de itemprop)</th>
   </tr>
   <tr>
    <td>id=amanda</td>
    <td>itemscope</td>
    <td>itemref=a,b</td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
+   <td> </td>
+   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>id=a</td>
-   <td> </td>
-   <td> </td>
+   <td> </td>
+   <td> </td>
    <td>itemprop</td>
    <td>name</td>
    <td><span>Amanda</span></td>
@@ -61,21 +61,21 @@ original_slug: Web/HTML/Atributos_Globales/itemref
    <td>id=b</td>
    <td>itemscope</td>
    <td>itemref=c</td>
-   <td> </td>
+   <td> </td>
    <td>band</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td colspan="1" rowspan="2">id=c</td>
-   <td> </td>
-   <td> </td>
+   <td> </td>
+   <td> </td>
    <td>itemprop</td>
    <td>Band</td>
    <td><span>Jazz Band</span></td>
   </tr>
   <tr>
-   <td> </td>
-   <td> </td>
+   <td> </td>
+   <td> </td>
    <td>itemprop</td>
    <td>Size</td>
    <td><span>12</span></td>
@@ -99,7 +99,7 @@ original_slug: Web/HTML/Atributos_Globales/itemref
  <tbody>
   <tr>
    <td style="text-align: left; vertical-align: middle;"><a class="external-icon external" href="https://html.spec.whatwg.org/multipage/microdata.html#items">itemref</a></td>
-   <td style="text-align: left; vertical-align: middle; white-space: nowrap;">Nota WG  - No se encuentra activamente en desarrollo</td>
+   <td style="text-align: left; vertical-align: middle; white-space: nowrap;">Nota WG  - No se encuentra activamente en desarrollo</td>
   </tr>
  </tbody>
 </table>

@@ -13,13 +13,15 @@ translation_of: Web/API/Console/group
 ---
 {{APIRef("Console API")}}
 
-Création d'un nouveau groupe en ligne dans la [console Web](/en-US/docs/Tools/Web_Console). Cela indente les messages de console suivants par un niveau supplémentaire, jusqu'à ce que {{domxref("console.groupEnd()")}} soit appelé.
+Création d'un nouveau groupe en ligne dans la [console Web](/fr/docs/Tools/Web_Console). Cela indente les messages de console suivants par un niveau supplémentaire, jusqu'à ce que {{domxref("console.groupEnd()")}} soit appelé.
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Syntaxe
 
-    console.group();
+```js
+console.group();
+```
 
 ## Paramètres
 
@@ -53,13 +55,11 @@ Pour plus de détail, se reporter à l'article [Using groups in the console](/fr
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire        |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#consolegroupobject-object-", "console.group()")}} | {{Spec2("Console API")}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.group")}}
+{{Compat}}
 
 ## Voir aussi
 

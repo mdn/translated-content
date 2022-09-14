@@ -1,14 +1,6 @@
 ---
 title: Element.scrollHeight
 slug: Web/API/Element/scrollHeight
-tags:
-  - API
-  - CSSOM View
-  - NeedsDHTMLRemovalInExample
-  - Property
-  - Reference
-browser-compat: api.Element.scrollHeight
-translation_of: Web/API/Element/scrollHeight
 ---
 {{APIRef("DOM")}}
 
@@ -16,7 +8,7 @@ translation_of: Web/API/Element/scrollHeight
 
 ![](scrollheight.png)
 
-`scrollHeight` 的值等于该元素在不使用滚动条的情况下为了适应视口中所用内容所需的最小高度。没有垂直滚动条的情况下，scrollHeight值与元素视图填充所有内容所需要的最小值{{domxref("Element.clientHeight", "clientHeight")}}相同。包括元素的padding，但不包括元素的border和margin。`scrollHeight` 也包括 {{cssxref("::before")}} 和 {{cssxref("::after")}}这样的伪元素。
+`scrollHeight` 的值等于该元素在不使用滚动条的情况下为了适应视口中所用内容所需的最小高度。没有垂直滚动条的情况下，scrollHeight 值与元素视图填充所有内容所需要的最小值{{domxref("Element.clientHeight", "clientHeight")}}相同。包括元素的 padding，但不包括元素的 border 和 margin。`scrollHeight` 也包括 {{cssxref("::before")}} 和 {{cssxref("::after")}}这样的伪元素。
 如果元素的内容不需要垂直滚动条就可以容纳，则其 `scrollHeight` 等于{{domref("Element.clientHeight", "clientHeight")}}
 
 > **备注：** 属性将会对值取整。如果需要小数值，使用
@@ -30,7 +22,7 @@ translation_of: Web/API/Element/scrollHeight
 
 ### 判断元素是否滚动到底
 
-`scrollTop`是一个非整数，而`scrollHeight`和`clientHeight`是四舍五入的，因此确定滚动区域是否滚动到底的唯一方法是查看滚动量是否足够接近某个阈值(在本例中为`1`)：
+`scrollTop`是一个非整数，而`scrollHeight`和`clientHeight`是四舍五入的，因此确定滚动区域是否滚动到底的唯一方法是查看滚动量是否足够接近某个阈值 (在本例中为`1`)：
 
 ```js
 Math.abs(element.scrollHeight - element.clientHeight - element.scrollTop) < 1
@@ -41,6 +33,7 @@ Math.abs(element.scrollHeight - element.clientHeight - element.scrollTop) < 1
 ```js
 element.scrollHeight - Math.abs(element.scrollTop) === element.clientHeight
 ```
+
 ### 判断元素是否能滚动
 
 当容器不滚动但有溢出的子容器时，这些检查可以确定容器能否滚动：
@@ -54,9 +47,10 @@ window.getComputedStyle(element).overflowY !== 'hidden'
 
 ### 判定用户是否阅读过文本
 
-监听 {{domxref("GlobalEventHandlers/onscroll", "onscroll")}} 事件, 这个等价事件可以用来判定用户是否阅读过文本。 (参见 {{domxref("element.scrollTop")}} and {{domxref("element.clientHeight")}} 属性)。
+监听 {{domxref("GlobalEventHandlers/onscroll", "onscroll")}} 事件，这个等价事件可以用来判定用户是否阅读过文本。 (参见 {{domxref("element.scrollTop")}} and {{domxref("element.clientHeight")}} 属性)。
 
 下面演示中的复选框已禁用，文本区域的内容滚动倒底部时，复选框才能被选中表示同意。
+
 #### HTML
 
 ```html

@@ -415,8 +415,8 @@ Il est possible d'imbriquer une ou plusieurs instructions `try...catch`.
 
 Si un bloc `try` interne n'a _pas_ de bloc `catch` correspondant :
 
-1.  il _doit_ contenir un bloc `finally`, et
-2.  le bloc `try...catch` de l'instruction `catch` englobante est vérifié pour une correspondance.
+1. il _doit_ contenir un bloc `finally`, et
+2. le bloc `try...catch` de l'instruction `catch` englobante est vérifié pour une correspondance.
 
 Pour plus d'informations, voir [nested try-blocks](/fr/docs/Web/JavaScript/Référence/Statements/try...catch#nested_try-blocks) sur la page de référence [`try...catch`](/fr/docs/Web/JavaScript/Référence/Statements/try...catch).
 

@@ -559,7 +559,7 @@ div {
 
 #### Longueur pour le dimensionnement des cercles
 
-Les cercles sont dimensionnés via une longueur (une valeur de type [<length>](/fr/docs/Web/CSS/length)) qui indique le rayon du cercle.
+Les cercles sont dimensionnés via une longueur (une valeur de type [`<length>`](/fr/docs/Web/CSS/length)) qui indique le rayon du cercle.
 
 ```html hidden
 <div class="radial-circle-size"></div>

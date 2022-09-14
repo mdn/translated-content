@@ -29,9 +29,9 @@ _Aucun_
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`SVGAltGlyphDefElement`](/fr/docs/Web/API/SVGAltGlyphDefElement "en/DOM/SVGAltGlyphElement").
+Cet élément implémente l'interface [`SVGAltGlyphDefElement`](/fr/docs/Web/API/SVGAltGlyphDefElement).
 
-## Voir également
+## Voir aussi
 
 - {{ SVGElement("glyph") }}
 - {{ SVGElement("glyphRef") }}

@@ -46,8 +46,8 @@ Quant aux propriétés et aux méthodes, sont généralement utilisés :
 - `o` (anciennes versions d'Opera)
 - `ms` (Internet Explorer et Edge)
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 
-{{Interwiki("wikipedia", "Métadonnée#Services_Web", "Services web")}} sur Wikipédia
+- [Section en anglais sur les préfixes des navigateurs en CSS](https://en.wikipedia.org/wiki/CSS_hack#Browser_prefixes) sur Wikipédia

@@ -1,35 +1,29 @@
 ---
-title: highest
+title: math:highest()
 slug: Web/EXSLT/math/highest
-tags:
-  - EXSLT
-  - XSLT
 translation_of: Web/EXSLT/math/highest
 ---
-{{ XsltRef() }}
-`math:highest()` retourne le nœud de l'ensemble de nœuds spécifié possédant la plus grande valeur (où la plus grande valeur est calculée avec [`math:max()`](fr/EXSLT/math/max)).
+{{XSLTRef}}{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
 
-Un nœud a sa valeur maximale si sa valeur de chaîne convertie en nombre est égale à la valeur maximale.
+`math:highest()` renvoie le nœud qui a la valeur maximale, parmi l'ensemble de nœuds passé en argument (la valeur maximale est calculée à l'aide de [`math:max()`](/fr/docs/Web/EXSLT/math/max)).
 
-{{ Note() }}
+Un nœud possède cette valeur maximale si la conversion de sa valeur qui est une chaîne de caractères en nombre est égale à la valeur maximale.
 
-### Syntaxe
+## Syntaxe
 
-    math:highest(ensembleNœud)
+```js
+math:highest(nodeSet)
+```
 
-### Arguments
+### Paramètres
 
-- `ensembleNœud`
-  - : L'ensemble de nœuds pour lequel il faut retourner la plus grande valeur.
+- `nodeSet`
+  - : L'ensemble de nœuds dont on souhaite connaître la valeur maximale.
 
-### Retourne
+### Valeur de retour
 
-Un fragment d'arbre résultat consistant en copies des nœuds retournés par la fonction [`math:max()`](fr/EXSLT/math/max).
+Un fragment d'arbre de résultat contenant les copies des nœuds renvoyés par [`math:max()`](/fr/docs/Web/EXSLT/math/max).
 
-### Définition
+## Spécifications
 
-- [EXSLT - MATH:HIGHEST (en)](http://www.exslt.org/regexp/functions/highest/index.html)
-
-### Support par Gecko
-
-Supporté par Gecko 1.9 et ultérieur.
+[EXSLT - MATH:HIGHEST](http://exslt.org/math/functions/highest/index.html)

@@ -1,19 +1,6 @@
 ---
 title: フレックスコンテナー内のアイテムの配置
 slug: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
-tags:
-  - 配置
-  - CSS
-  - Flex
-  - ガイド
-  - align-content
-  - align-items
-  - align-self
-  - alignment
-  - フレックスボックス
-  - justify
-  - justify-content
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
 ---
 {{CSSRef}}
 
@@ -195,7 +182,6 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Contain
 フレックスのアイテム間に間隔を作るには、{{cssxref("gap")}}、{{cssxref("column-gap")}}、{{cssxref("row-gap")}}の各プロパティを使用します。{{cssxref("column-gap")}} プロパティは、主軸のアイテム間に間隔を作成します。{{cssxref("row-gap")}} プロパティは、{{cssxref("flex-wrap")}} が `wrap` に設定されている場合、フレックス行間に間隔を作成します。{{cssxref("gap")}} プロパティは、両方を一緒に設定する一括指定です。
 
 {{EmbedGHLiveSample("css-examples/box-alignment/flexbox/gap.html", '100%', 700)}}
-
 
 ## 関連情報
 

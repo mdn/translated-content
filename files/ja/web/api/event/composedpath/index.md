@@ -1,11 +1,6 @@
 ---
 title: Event.composedPath()
 slug: Web/API/Event/composedPath
-tags:
-  - メソッド
-  - リファレンス
-  - ウェブコンポーネント
-browser-compat: api.Event.composedPath
 ---
 {{APIRef("Shadow DOM")}}
 
@@ -27,9 +22,7 @@ var composed = Event.composedPath();
 
 ## 例
 
-この[例](https://mdn.github.io/web-components-examples/composed-composed-path/)では、`<open-shadow>` と `<closed-shadow>` という 2 つの些細なカスタム要素を定義しています。どちらも text 属性の内容を `<p>` 要素のテキストコンテンツとして、要素のシャドウ DOM に挿入します。両者の唯一の違いは、シャドウルートがそれぞれ `open` と `closed` に設定された状態で取り付けられることです。
-
-最初の定義は次のようになります。
+次の例は、 [https://mdn.github.io/web-components-examples/composed-composed-path/](https://mdn.github.io/web-components-examples/composed-composed-path/) を試すもので、 `<open-shadow>` と `<closed-shadow>` という 2 つの些細なカスタム要素を定義しています。どちらも text 属性の内容を `<p>` 要素のテキストコンテンツとして、要素のシャドウ DOM に挿入します。両者の唯一の違いは、シャドウルートがそれぞれ `open` と `closed` に設定された状態で取り付けられることです。
 
 ```js
 customElements.define('open-shadow',
@@ -37,14 +30,28 @@ customElements.define('open-shadow',
     constructor() {
       super();
 
-      let pElem = document.createElement('p');
+      const pElem = document.createElement('p');
       pElem.textContent = this.getAttribute('text');
 
-      let shadowRoot = this.attachShadow({mode: 'open'})
-        .appendChild(pElem);
-
+      const shadowRoot = this.attachShadow({mode: 'open'});
+      shadowRoot.appendChild(pElem);
+    }
   }
-});
+);
+
+customElements.define('closed-shadow',
+  class extends HTMLElement {
+    constructor() {
+      super();
+
+      const pElem = document.createElement('p');
+      pElem.textContent = this.getAttribute('text');
+
+      const shadowRoot = this.attachShadow({mode: 'closed'});
+      shadowRoot.appendChild(pElem);
+    }
+  }
+);
 ```
 
 それからそれぞれの要素を 1 つずつをページに挿入します。

@@ -13,7 +13,7 @@ Esto no sugiere que haya algo mal con usar la notación de corchetes. Por ejempl
 
 {{EmbedInteractiveExample("pages/js/array-at.html")}}
 
-## Sintaxis 
+## Sintaxis
 
 ```js
 at(índice)
@@ -24,7 +24,7 @@ at(índice)
 - `índice`
   - : El índice (posición) del elemento del array que se devolverá. Soporta el índice relativo desde el final del array cuando se pasa un índice negativo; ej. si se usa un número negativo, el elemento devuelto se encontrará contando hacia atrás desde el final del array.
 
-### Valor de retorno 
+### Valor de retorno
 
 El elemento en el array que coincide con el índice dado. Devuelve {{jsxref('undefined')}} si el índice dado no se puede encontrar.
 

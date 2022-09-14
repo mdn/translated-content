@@ -13,7 +13,9 @@ La méthode **`supports()`** de l'interface {{domxref("DOMTokenList")}} renvoie 
 
 ## Syntaxe
 
-    var boolean = element.supports(token)
+```js
+var boolean = element.supports(token)
+```
 
 ### Paramètres
 
@@ -42,10 +44,8 @@ if (iframe.sandbox.supports('allow-scripts')) {
 
 ## Spécifications
 
-| Spécification                                    | Statut                                       | Commentaire          |
-| ------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('Credential Management')}} | {{Spec2('Credential Management')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMTokenList.supports")}}
+{{Compat}}

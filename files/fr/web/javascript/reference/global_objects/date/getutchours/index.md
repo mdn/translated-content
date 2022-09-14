@@ -18,7 +18,9 @@ La méthode **`getUTCHours()`** renvoie les heures de la date renseignée, d'apr
 
 ## Syntaxe
 
-    dateObj.getUTCHours()
+```js
+dateObj.getUTCHours()
+```
 
 ### Valeur de retour
 

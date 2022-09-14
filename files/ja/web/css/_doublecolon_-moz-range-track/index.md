@@ -1,14 +1,6 @@
 ---
 title: '::-moz-range-track'
 slug: Web/CSS/::-moz-range-track
-tags:
-  - CSS
-  - CSS:Mozilla 拡張
-  - 標準外
-  - 擬似要素
-  - リファレンス
-  - セレクター
-translation_of: Web/CSS/::-moz-range-track
 ---
 {{CSSRef}}{{Non-standard_header}}
 

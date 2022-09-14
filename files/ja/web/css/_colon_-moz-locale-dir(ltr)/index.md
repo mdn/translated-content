@@ -1,16 +1,6 @@
 ---
 title: ':-moz-locale-dir(ltr)'
-slug: 'Web/CSS/:-moz-locale-dir(ltr)'
-tags:
-  - CSS
-  - CSS:Mozilla 拡張
-  - ローカライズ
-  - NeedsCompatTable
-  - 標準外
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-translation_of: Web/CSS/:-moz-locale-dir(ltr)
+slug: Web/CSS/:-moz-locale-dir(ltr)
 ---
 {{CSSRef}}{{Non-standard_header}}
 
@@ -29,7 +19,6 @@ translation_of: Web/CSS/:-moz-locale-dir(ltr)
 ## 例
 
 この例は、Firefoxを使用していない場合は動作しません。また、セレクタがHTMLコンテンツで正しく動作しない問題があるため、Firefoxでも動作しない場合があります。XUL](/ja/docs/Archive/Mozilla/XUL)で使用するために設計されています。
-
 
 ### HTML
 

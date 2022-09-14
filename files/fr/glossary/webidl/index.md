@@ -12,11 +12,11 @@ original_slug: Glossaire/WebIDL
 
 WebIDL est utilisé dans presque toutes les {{Glossary ("Specification","spécifications")}} des API pour le Web, et grâce à son format et à sa syntaxe standard, les programmeurs qui créent des navigateurs Web peuvent plus facilement s'assurer que leurs navigateurs sont compatibles entre eux indépendamment de la façon dont ils choisissent d'écrire le code pour implémenter l'API.
 
-## Pour approfondir
+## Voir aussi
 
 ### Référence technique
 
 - [Spécification](http://www.w3.org/TR/WebIDL/)
 - [Informations contenues dans un fichier WebIDL](/fr/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file)
 - [Bindings WebIDL](/fr/docs/Mozilla/WebIDL_bindings)
-- {{interwiki("wikipedia", "WebIDL")}}
+- [Article en anglais sur Web IDL](https://en.wikipedia.org/wiki/Web_IDL) sur Wikipédia

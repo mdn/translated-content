@@ -31,7 +31,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 <h2 id="В_чем_проблема">В чем проблема?</h2>
 
-<p>Первоначальная загрузка страницы в Интернете была простой - вы отправляли запрос на сервер  web-сайта, и если всё работает, как и должно, то вся необходимая информация о странице будет загружена и отображена на вашем компьютере.</p>
+<p>Первоначальная загрузка страницы в Интернете была простой - вы отправляли запрос на сервер  web-сайта, и если всё работает, как и должно, то вся необходимая информация о странице будет загружена и отображена на вашем компьютере.</p>
 
 <p><img alt="A basic representation of a web site architecture" src="https://mdn.mozillademos.org/files/6475/web-site-architechture@2x.png" style="display: block; height: 134px; margin: 0px auto; width: 484px;"></p>
 
@@ -39,7 +39,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 <h3 id="Появление_Ajax">Появление Ajax</h3>
 
-<p>Это привело к созданию технологий, позволяющих веб-страницам запрашивать небольшие фрагменты данных (например, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>, {{glossary("XML")}}, <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON">JSON</a> или обычный текст) и отображать их только при необходимости, помогая решать проблему, описанную выше.</p>
+<p>Это привело к созданию технологий, позволяющих веб-страницам запрашивать небольшие фрагменты данных (например, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>, {{glossary("XML")}}, <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON">JSON</a> или обычный текст) и отображать их только при необходимости, помогая решать проблему, описанную выше.</p>
 
 <p>Это достигается с помощью таких API, как {{domxref("XMLHttpRequest")}} или - более новой - <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</a>. Эти технологии позволяют веб-страницам напрямую обрабатывать запросы <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a> для определённых ресурсов, доступных на сервере, и форматировать результирующие данные по мере необходимости перед их отображением.</p>
 
@@ -60,10 +60,10 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 <ul>
  <li>Обновления страницы намного быстрее, и вам не нужно ждать перезагрузки страницы, а это означает, что сайт работает быстрее и воспринимается более отзывчивым.</li>
- <li>Меньше данных загружается при каждом обновлении, что означает меньшее потребление пропускной способности. Это не может быть такой большой проблемой на рабочем столе в широкополосном подключении, но это серьёзная проблема на мобильных устройствах и в развивающихся странах, которые не имеют повсеместного быстрого интернет-сервиса.</li>
+ <li>Меньше данных загружается при каждом обновлении, что означает меньшее потребление пропускной способности. Это не может быть такой большой проблемой на рабочем столе в широкополосном подключении, но это серьёзная проблема на мобильных устройствах и в развивающихся странах, которые не имеют повсеместного быстрого интернет-сервиса.</li>
 </ul>
 
-<p>Чтобы ускорить работу, некоторые сайты также сохраняют необходимые файлы и данные на компьютере пользователя при первом обращении к сайту, а это означает, что при последующих посещениях они используют локальные версии вместо загрузки свежих копий,  как при первой загрузке страницы. Содержимое загружается с сервера только при его обновлении.</p>
+<p>Чтобы ускорить работу, некоторые сайты также сохраняют необходимые файлы и данные на компьютере пользователя при первом обращении к сайту, а это означает, что при последующих посещениях они используют локальные версии вместо загрузки свежих копий,  как при первой загрузке страницы. Содержимое загружается с сервера только при его обновлении.</p>
 
 <p><img alt="A basic web app data flow architecture" src="https://mdn.mozillademos.org/files/6479/web-app-architecture@2x.png" style="display: block; height: 383px; margin: 0px auto; width: 562px;"></p>
 
@@ -71,7 +71,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 <p>Давайте посмотрим, как обрабатывается такой запрос, используя как {{domxref ("XMLHttpRequest")}}, так и <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch</a>. В этих примерах мы будем запрашивать данные из нескольких текстовых файлов и использовать их для заполнения области содержимого.</p>
 
-<p>Этот набор файлов будет действовать как наша поддельная база данных; в реальном приложении мы с большей вероятностью будем использовать серверный язык, такой как PHP, Python или Node, чтобы запрашивать наши данные из базы данных. Здесь, однако, мы хотим сохранить его простым и сосредоточиться на стороне клиента.</p>
+<p>Этот набор файлов будет действовать как наша поддельная база данных; в реальном приложении мы с большей вероятностью будем использовать серверный язык, такой как PHP, Python или Node, чтобы запрашивать наши данные из базы данных. Здесь, однако, мы хотим сохранить его простым и сосредоточиться на стороне клиента.</p>
 
 <h3 id="XMLHttpRequest">XMLHttpRequest</h3>
 
@@ -79,7 +79,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 <ol>
  <li>
-  <p>Чтобы начать этот пример, создайте локальную копию <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/ajax-start.html">ajax-start.html</a> и четырёх текстовых файлов - <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt">verse1.txt</a>, <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt">verse2.txt</a>, <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt">verse3.txt</a> и <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt">verse4.txt</a> - в новом каталоге на вашем компьютере. В этом примере мы загрузим другое стихотворение (который вы вполне можете распознать) через XHR, когда он будет выбран в выпадающем меню.</p>
+  <p>Чтобы начать этот пример, создайте локальную копию <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/ajax-start.html">ajax-start.html</a> и четырёх текстовых файлов - <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt">verse1.txt</a>, <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt">verse2.txt</a>, <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt">verse3.txt</a> и <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt">verse4.txt</a> - в новом каталоге на вашем компьютере. В этом примере мы загрузим другое стихотворение (который вы вполне можете распознать) через XHR, когда он будет выбран в выпадающем меню.</p>
  </li>
  <li>
   <p>Внутри элемента {{htmlelement("script")}} добавьте следующий код. В нем хранится ссылка на элементы {{htmlelement("select")}} и {{htmlelement("pre")}} в переменных и определяется {{domxref ("GlobalEventHandlers.onchange", "onchange")}} обработчика событий, так что, когда значение select изменяется, его значение передаётся вызываемой функции <code>updateDisplay()</code> в качестве параметра.</p>
@@ -100,7 +100,7 @@ verseChoose.onchange = function() {
 };</pre>
  </li>
  <li>
-  <p>Мы начнём нашу функцию с создания относительного URL-адреса, указывающего на текстовый файл, который мы хотим загрузить и который понадобится нам позже. Значение элемента {{htmlelement("select")}} в любой момент совпадает с текстом внутри выбранного {{htmlelement("option")}} (если вы не укажете другое значение в атрибуте value) - например, «Verse 1». Соответствующий текстовый файл стиха является «verse1.txt» и находится в том же каталоге, что и файл HTML, поэтому будет использоваться только имя файла.</p>
+  <p>Мы начнём нашу функцию с создания относительного URL-адреса, указывающего на текстовый файл, который мы хотим загрузить и который понадобится нам позже. Значение элемента {{htmlelement("select")}} в любой момент совпадает с текстом внутри выбранного {{htmlelement("option")}} (если вы не укажете другое значение в атрибуте value) - например, «Verse 1». Соответствующий текстовый файл стиха является «verse1.txt» и находится в том же каталоге, что и файл HTML, поэтому будет использоваться только имя файла.</p>
 
   <p>Тем не менее, веб-серверы, как правило, чувствительны к регистру, и имя файла не имеет символа "пробела". Чтобы преобразовать «Verse 1» в «verse1.txt», нам нужно преобразовать V в нижний регистр, удалить пробел и добавить .txt в конец. Это можно сделать с помощью {{jsxref("String.replace", "replace ()")}}, {{jsxref("String.toLowerCase", "toLowerCase ()")}} и простой <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Strings#Concatenating_strings">конкатенации строк</a>. Добавьте следующие строки внутри функции <code>updateDisplay()</code>:</p>
 
@@ -109,7 +109,7 @@ verse = verse.toLowerCase();
 var url = verse + '.txt';</pre>
  </li>
  <li>
-  <p>Чтобы начать создание запроса XHR, вам нужно создать новый объект запроса, используя конструктор {{domxref("XMLHttpRequest()")}}. Вы можете назвать этот объект так, как вам нравится, но мы будем называть его <code>request</code> (запросом), чтобы все было просто. Добавьте следующие ниже строки:</p>
+  <p>Чтобы начать создание запроса XHR, вам нужно создать новый объект запроса, используя конструктор {{domxref("XMLHttpRequest()")}}. Вы можете назвать этот объект так, как вам нравится, но мы будем называть его <code>request</code> (запросом), чтобы все было просто. Добавьте следующие ниже строки:</p>
 
   <pre class="brush: js">var request = new XMLHttpRequest();</pre>
  </li>
@@ -133,7 +133,7 @@ var url = verse + '.txt';</pre>
 };</pre>
  </li>
  <li>
-  <p>Вышеприведённая конфигурация запроса XHR  фактически не будет выполняться до тех пор, пока мы не вызовем метод {{domxref("XMLHttpRequest.send", "send()")}}. Добавьте следующее ниже вашего предыдущего дополнения для вызова функции:</p>
+  <p>Вышеприведённая конфигурация запроса XHR  фактически не будет выполняться до тех пор, пока мы не вызовем метод {{domxref("XMLHttpRequest.send", "send()")}}. Добавьте следующее ниже вашего предыдущего дополнения для вызова функции:</p>
 
   <pre class="brush: js">request.send();</pre>
  </li>
@@ -299,7 +299,7 @@ myFetch.then(function(response) {
 
 <ol>
  <li>Создание локальной копии файлов примеров (загрузка и распаковка <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-store.zip?raw=true">the can-store ZIP file</a>)</li>
- <li>Запустите код через веб-сервер (как описано выше, в {{anch("Serving your example from a server")}})</li>
+ <li>Запустите код через веб-сервер (как описано выше, в <a href="#serving_your_example_from_a_server">Serving your example from a server</a>)</li>
  <li>Измените путь к извлечённому файлу, например, «product.json» (т.е. убедитесь, что он написан неправильно)</li>
  <li>Теперь загрузите индексный файл в свой браузер (например, через <code>localhost:8000</code>) и посмотрите в консоли разработчика браузера. Вы увидите сообщение в строке «Запрос сети для продуктов.json не удалось с ответом 404: Файл не найден»</li>
 </ol>

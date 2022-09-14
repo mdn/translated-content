@@ -15,7 +15,9 @@ La méthode **`allowedFeatures()`** de l'interface {{DOMxRef("FeaturePolicy")}} 
 
 ## Syntaxe
 
-    const permissions = FeaturePolicy.allowedFeatures()
+```js
+const permissions = FeaturePolicy.allowedFeatures()
+```
 
 ### Paramètres
 
@@ -42,10 +44,8 @@ for (const directive of permissions)
 
 ## Spécifications
 
-| Spécification                                                    | Statut                               | Commentaire         |
-| ---------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName("Feature Policy","","allowsFeature")}} | {{Spec2("Feature Policy")}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FeaturePolicy.allowedFeatures")}}
+{{Compat}}

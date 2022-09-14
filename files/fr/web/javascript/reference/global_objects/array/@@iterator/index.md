@@ -18,7 +18,9 @@ La valeur initiale de la propriété **`@@iterator`** correspond à la valeur in
 
 ## Syntaxe
 
-    arr[Symbol.iterator]()
+```js
+arr[Symbol.iterator]()
+```
 
 ### Valeur de retour
 

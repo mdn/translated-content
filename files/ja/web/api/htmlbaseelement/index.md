@@ -1,13 +1,6 @@
 ---
 title: HTMLBaseElement
 slug: Web/API/HTMLBaseElement
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - リファレンス
-browser-compat: api.HTMLBaseElement
-translation_of: Web/API/HTMLBaseElement
 ---
 {{APIRef("HTML DOM")}}
 

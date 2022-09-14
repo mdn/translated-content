@@ -20,7 +20,9 @@ La méthode **`bind()`** crée une nouvelle fonction qui, lorsqu'elle est appel�
 
 ## Syntaxe
 
-    let boundFunc = func.bind(thisArg[, arg1[, arg2[, ...]]])
+```js
+let boundFunc = func.bind(thisArg[, arg1[, arg2[, ...]]])
+```
 
 ### Paramètres
 

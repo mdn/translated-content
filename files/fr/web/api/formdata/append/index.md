@@ -17,7 +17,7 @@ La méthode **`append()`** de l'interface {{domxref("FormData")}} ajoute une nou
 
 La différence entre {{domxref("FormData.set")}} et `append()` est que, quand la clé existe, {{domxref("FormData.set")}} va remplacer les valeurs existantes avec la nouvelle alors qu' `append()` va rajouter celle-ci à la fin de l'ensemble des valeurs existantes.
 
-> **Note :** Cette méthode est disponible dans les [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
+> **Note :** Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
 
 ## Syntaxe
 
@@ -69,13 +69,11 @@ Cette technique permet de simplement gérer l'envoi de plusieurs fichiers avec l
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                               | Commentaire         |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('XMLHttpRequest','#dom-formdata-append','append()')}} | {{Spec2('XMLHttpRequest')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FormData.append")}}
+{{Compat}}
 
 ## Voir aussi
 

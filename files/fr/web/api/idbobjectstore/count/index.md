@@ -17,7 +17,9 @@ La méthode **`count()`**, rattachée à l'interface {{domxref("IDBObjectStore")
 
 ## Syntaxe
 
-    var requete = ObjectStore.count(optionalKeyRange);
+```js
+var requete = ObjectStore.count(optionalKeyRange);
+```
 
 ### Paramètres
 
@@ -54,13 +56,11 @@ countRequest.onsuccess = function() {
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-count-IDBRequest-any-key', 'count()')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.count")}}
+{{Compat}}
 
 ## Voir aussi
 

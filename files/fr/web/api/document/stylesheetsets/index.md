@@ -15,7 +15,9 @@ Renvoie une liste active de tous les jeux de feuilles de styles actuellement dis
 
 ## Syntaxe
 
-    sets = document.styleSheetSets
+```js
+sets = document.styleSheetSets
+```
 
 En retour, `sets` est une liste de jeux de feuilles de styles disponibles.
 

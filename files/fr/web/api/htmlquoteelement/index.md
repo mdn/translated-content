@@ -1,23 +1,35 @@
 ---
 title: HTMLQuoteElement
 slug: Web/API/HTMLQuoteElement
-tags:
-  - DOM
-  - Référence_du_DOM_Gecko
+page-type: web-api-interface
 translation_of: Web/API/HTMLQuoteElement
+browser-compat: api.HTMLQuoteElement
 ---
-{{ ApiRef() }}
+{{APIRef("HTML DOM")}}
 
-## Interface des éléments HTML de citation
+L'interface **`HTMLQuoteElement`** fournit des propriétés et méthodes (en complément de celles fournies par l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) dont elle hérite) pour manipuler les éléments de citation comme [`<blockquote>`](/fr/docs/Web/HTML/Element/blockquote) et [`<q>`](/fr/docs/Web/HTML/Element/q), mais pas [`<cite>`](/fr/docs/Web/HTML/Element/cite).
 
-Les objets DOM quote expose l'interface [`HTMLQuoteElement`](http://www.w3.org/TR/html5/grouping-content.html#htmlquoteelement) (ou {{ HTMLVersionInline(4) }} [`HTMLQuoteElement`](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-70319763)), qui fournissent plusieurs propriétés pour manipuler les éléments de citation (et viennent s'ajouter aux propriétés habituelles pour un objet de l'interface {{domxref("element")}}, disponibles par héritage).
+{{InheritanceDiagram}}
 
 ## Propriétés
 
-| Nom    | Type                             | Description                                                                                                               |
-| ------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `cite` | {{domxref("DOMString")}} | Reflète l'attribut HTML {{ htmlattrxref("cite", "blockquote") }} contenant l'URL de la source de la citation. |
+_Hérite des propriétés de son parent, [`HTMLElement`](/fr/docs/Web/API/HTMLElement)._
 
-## Voir également
+- [`HTMLQuoteElement.cite`](/fr/docs/Web/API/HTMLQuoteElement/cite)
+  - : Une chaîne de caractères qui reflète la valeur de l'attribut HTML [`cite`](/fr/docs/Web/HTML/Element/blockquote#attr-cite), qui contient une URL pour la source de la citation.
 
-Cette interface est supportée par les deux éléments HTML {{ HTMLElement("blockquote") }} et {{ HTMLElement("q") }}.
+## Méthodes
+
+_Cette interface n'a pas de méthode spécifique, elle hérite des méthodes de son parent, [`HTMLElement`](/fr/docs/Web/API/HTMLElement)._
+
+## Spécifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Voir aussi
+
+- Les éléments HTML qui portent cette interface&nbsp;: [`<blockquote>`](/fr/docs/Web/HTML/Element/blockquote) et [`<q>`](/fr/docs/Web/HTML/Element/q), mais pas [`<cite>`](/fr/docs/Web/HTML/Element/cite).

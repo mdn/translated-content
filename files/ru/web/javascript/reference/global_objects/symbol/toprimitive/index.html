@@ -9,23 +9,23 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>Symbol.toPrimitive</code> </strong>является символом (symbol), который описывает свойство объекта как функцию, которая вызывается при преобразовании объекта в соответствующее примитивное значение.</p>
+<p><strong><code>Symbol.toPrimitive</code> </strong>является символом (symbol), который описывает свойство объекта как функцию, которая вызывается при преобразовании объекта в соответствующее примитивное значение.</p>
 
 <p>{{EmbedInteractiveExample("pages/js/symbol-toprimitive.html")}}</p>
 
 <div class="hidden">
-<p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
+<p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
 </div>
 
-<p> </p>
+<p> </p>
 
 <h2 id="Описание">Описание</h2>
 
-<p>С помощью свойства <strong><code>Symbol.toPrimitive</code></strong><code> </code>(которое описывается как функция), объект может быть приведён к примитивному типу. Функция вызывается со строковым аргументом <code><strong>hint</strong></code>, который передаёт желаемый тип примитива. Значением аргумента <code><strong>hint</strong></code> может быть одно из следующих значений <code>"<em>number</em>"</code>, <code>"<em>string</em>"</code>, и <code>"<em>default</em>"</code>.</p>
+<p>С помощью свойства <strong><code>Symbol.toPrimitive</code></strong><code> </code>(которое описывается как функция), объект может быть приведён к примитивному типу. Функция вызывается со строковым аргументом <code><strong>hint</strong></code>, который передаёт желаемый тип примитива. Значением аргумента <code><strong>hint</strong></code> может быть одно из следующих значений <code>"<em>number</em>"</code>, <code>"<em>string</em>"</code>, и <code>"<em>default</em>"</code>.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
-<p>Описанные ниже примеры показывают как с помощью свойства <strong><code>Symbol.toPrimitive</code></strong> можно привести объект к примитивному типу.</p>
+<p>Описанные ниже примеры показывают как с помощью свойства <strong><code>Symbol.toPrimitive</code></strong> можно привести объект к примитивному типу.</p>
 
 <pre class="brush: js">// Объект без свойства Symbol.toPrimitive
 var obj1 = {};
@@ -56,7 +56,7 @@ console.log(obj2 + ''); // "true"    -- желаемый тип (<strong>hint</s
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
-<p> </p>
+<p> </p>
 
 <p>{{Compat}}</p>
 

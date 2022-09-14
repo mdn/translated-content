@@ -124,7 +124,7 @@ Pour l'élément [`<meter>`](/fr/docs/Web/HTML/Element/Meter), l'attribut `min` 
 
 | Élément                                      | Syntaxe                             | Exemple                                                                                            |
 | -------------------------------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------- |
-| [`<meter>`](/fr/docs/Web/HTML/Element/Meter) | [<number>](/fr/docs/Web/CSS/number) | `<meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="40"> at 40/100</meter>` |
+| [`<meter>`](/fr/docs/Web/HTML/Element/Meter) | [`<number>`](/fr/docs/Web/CSS/number) | `<meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="40"> at 40/100</meter>` |
 
 ### Impact sur `step`
 
@@ -156,14 +156,11 @@ Fournissez des instructions pour aider les utilisateurs à comprendre comment re
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'input.html#the-min-and-max-attributes', 'min attribute')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5 W3C', 'input.html#the-min-and-max-attributes', 'min attribute')}} | {{Spec2('HTML5 W3C')}}     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.attributes.min")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -13,8 +13,10 @@ original_slug: Web/JavaScript/Reference/Erreurs/Missing_semicolon_before_stateme
 
 ## Message
 
-    SyntaxError: Expected ';' (Edge)
-    SyntaxError: missing ; before statement (Firefox)
+```
+SyntaxError: Expected ';' (Edge)
+SyntaxError: missing ; before statement (Firefox)
+```
 
 ## Type d'erreur
 

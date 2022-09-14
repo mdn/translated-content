@@ -12,9 +12,9 @@ translation_of: Web/API/Window
 
 <p><span class="seoSummary">El objeto <code>window</code> representa la ventana que contiene un documento DOM; la propiedad <code>document</code> apunta al <a href="/es/docs/DOM/document">DOM document</a> cargado en esa ventana.</span> El objeto window al que pertenece un documento puede ser obtenido usando la propiedad {{Domxref("document.defaultView")}}.</p>
 
-<p>Esta sección proporciona una pequeña referencia a todos los métodos, propiedades y eventos disponibles a través del objeto DOM <code>window</code>. El objeto <code>window</code> implementa la interfaz <code>Window</code> , que a su vez hereda de la interfaz <code><a href="http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView">AbstractView</a></code>. Algunas funciones como globales adicionales, espacios de nombres, interfaces, y constructores no típicamente asociados con el objeto window pero disponibles en éste, están listados en las <a href="/es/docs/Web/JavaScript/Referencia">Referencia de JavaScript</a> y en el <a href="/es/docs/Referencia_DOM_de_Gecko" title="/en-US/docs/DOM/DOM_Reference">Referencia DOM de Gecko</a>.</p>
+<p>Esta sección proporciona una pequeña referencia a todos los métodos, propiedades y eventos disponibles a través del objeto DOM <code>window</code>. El objeto <code>window</code> implementa la interfaz <code>Window</code> , que a su vez hereda de la interfaz <code><a href="http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView">AbstractView</a></code>. Algunas funciones como globales adicionales, espacios de nombres, interfaces, y constructores no típicamente asociados con el objeto window pero disponibles en éste, están listados en las <a href="/es/docs/Web/JavaScript/Referencia">Referencia de JavaScript</a> y en el <a href="/es/docs/Referencia_DOM_de_Gecko" title="/en-US/docs/DOM/DOM_Reference">Referencia DOM de Gecko</a>.</p>
 
-<p>En un navegador con pestañas, como Firefox, cada pestaña contine su propio <code>window</code> object (y si está escribiendo una extensión, la ventana del navegador es una ventana separada también - para más información vea <a href="/es/docs/Trabajar_con_ventanas_desde_código_chrome#Content_windows">Trabajar con ventanas desde el código chrome</a>). Esto significa que el objeto <code>window</code> no se comparte entre diferentes pestañas de la misma ventana del navegador. Algunos métodos, como {{Domxref("window.resizeTo")}} y {{Domxref("window.resizeBy")}} se aplican sobre toda la ventana del navegador y no sobre una pestaña específica a la que pertenece el objeto <code>window</code>. Generalmente, cualquier cosa que razonablemente no pueda pertenecer a una pestaña, pertenece a la ventana.</p>
+<p>En un navegador con pestañas, como Firefox, cada pestaña contine su propio <code>window</code> object (y si está escribiendo una extensión, la ventana del navegador es una ventana separada también - para más información vea <a href="/es/docs/Trabajar_con_ventanas_desde_código_chrome#Content_windows">Trabajar con ventanas desde el código chrome</a>). Esto significa que el objeto <code>window</code> no se comparte entre diferentes pestañas de la misma ventana del navegador. Algunos métodos, como {{Domxref("window.resizeTo")}} y {{Domxref("window.resizeBy")}} se aplican sobre toda la ventana del navegador y no sobre una pestaña específica a la que pertenece el objeto <code>window</code>. Generalmente, cualquier cosa que razonablemente no pueda pertenecer a una pestaña, pertenece a la ventana.</p>
 
 <h2 id="Constructores">Constructores</h2>
 
@@ -22,7 +22,7 @@ translation_of: Web/API/Window
 
 <dl>
  <dt>{{domxref("Window.DOMParser")}}</dt>
- <dd><code>DOMParser</code> puede traducir una fuente XML o  HTML almacenada en una cadena en un <a href="/es/docs/Archive/Mozilla/XUL/Tutorial_de_XUL/Modelo_de_objeto_de_documento">Documento</a> DOM. <code>DOMParser</code> se especifica en <a href="https://w3c.github.io/DOM-Parsing/">DOM Parsing and Serialization.</a></dd>
+ <dd><code>DOMParser</code> puede traducir una fuente XML o  HTML almacenada en una cadena en un <a href="/es/docs/Archive/Mozilla/XUL/Tutorial_de_XUL/Modelo_de_objeto_de_documento">Documento</a> DOM. <code>DOMParser</code> se especifica en <a href="https://w3c.github.io/DOM-Parsing/">DOM Parsing and Serialization.</a></dd>
  <dt>{{domxref("Image")}}</dt>
  <dd>Se usa para crear un {{domxref("HTMLImageElement")}}.</dd>
  <dt>{{domxref("Option")}}</dt>
@@ -43,7 +43,7 @@ translation_of: Web/API/Window
 
 <h2 id="Propiedades">Propiedades</h2>
 
-<p><em>Esta interface hereda propiedades de {{domxref("EventTarget")}} interface e implementa propiedades de {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, y {{domxref("WindowEventHandlers")}}.</em></p>
+<p><em>Esta interface hereda propiedades de {{domxref("EventTarget")}} interface e implementa propiedades de {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, y {{domxref("WindowEventHandlers")}}.</em></p>
 
 <p>Nota que la propiedades que son objetos (por ejemplo para sobreescribir los prototipos de los elementos built-in) son descritos en una sección separada más abajo.</p>
 
@@ -53,7 +53,7 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.closed")}} {{Non-standard_inline}}{{readOnlyInline}}</dt>
  <dd>Esta propiedad indica si la actual ventana esta cerrada o abierta.</dd>
  <dt><code><a href="/en-US/docs/Components_object">Window.Components</a></code> {{Non-standard_inline}}</dt>
- <dd>El punto de acceso a muchas propiedades  <a href="/en-US/docs/XPCOM">XPCOM</a>.  Algunas propiedades, ej. <a href="/en-US/docs/Components.classes">classes</a>, son disponibles solamente a codigo suficientemente privilegiado. <strong>El codigo Web no deberia usar esta propiedad.</strong></dd>
+ <dd>El punto de acceso a muchas propiedades  <a href="/en-US/docs/XPCOM">XPCOM</a>.  Algunas propiedades, ej. <a href="/en-US/docs/Components.classes">classes</a>, son disponibles solamente a codigo suficientemente privilegiado. <strong>El codigo Web no deberia usar esta propiedad.</strong></dd>
  <dt>{{domxref("console","Window.console")}} {{Non-standard_inline}} {{ReadOnlyInline}}</dt>
  <dd>Retorna una referencia al objeto de la consola proveyendo acceso a la consola debugger del navegador.</dd>
  <dt>{{domxref("Window.content")}} and Window._content {{Non-standard_inline}} {{obsolete_inline}}{{ReadOnlyInline}}</dt>
@@ -67,7 +67,7 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.devicePixelRatio")}} {{non-standard_inline}}{{ReadOnlyInline}}</dt>
  <dd>Returns the ratio between physical pixels and device independent pixels in the current display.</dd>
  <dt>{{domxref("Window.dialogArguments")}} {{ReadOnlyInline}}</dt>
- <dd>Gets the arguments passed to the window (if it's a dialog box) at the time {{domxref("window.showModalDialog()")}} was called. This is an {{Interface("nsIArray")}}.</dd>
+ <dd>Gets the arguments passed to the window (if it's a dialog box) at the time {{domxref("window.showModalDialog()")}} was called. This is an <code>nsIArray</code>.</dd>
  <dt>{{domxref("Window.directories")}} {{obsolete_inline}}</dt>
  <dd>Sinonimo de {{domxref("window.personalbar")}}</dd>
  <dt>{{domxref("Window.document")}} {{ReadOnlyInline}}</dt>
@@ -98,11 +98,11 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.menubar")}} {{ReadOnlyInline}}</dt>
  <dd>Retorna el objeto barra de menu, cuya visibilidad puede ser fijada en la ventana.</dd>
  <dt>{{domxref("Window.messageManager")}} {{gecko_minversion_inline("2.0")}}</dt>
- <dd>Retorna el objeto <a href="/en-US/docs/The_message_manager">message manager</a>  para esta ventana.</dd>
+ <dd>Retorna el objeto <a href="/en-US/docs/The_message_manager">message manager</a>  para esta ventana.</dd>
  <dt>{{domxref("Window.mozAnimationStartTime")}} {{ReadOnlyInline}}{{gecko_minversion_inline("2.0")}}</dt>
  <dd>The time in milliseconds since epoch at which the current animation cycle began.</dd>
  <dt>{{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}}{{non-standard_inline}}{{gecko_minversion_inline("1.9.2")}}</dt>
- <dd>Returns the horizontal (X) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See <code>mozScreenPixelsPerCSSPixel</code> in {{interface("nsIDOMWindowUtils")}} for a conversion factor to adapt to screen pixels if needed.</dd>
+ <dd>Returns the horizontal (X) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See <code>mozScreenPixelsPerCSSPixel</code> in <code>nsIDOMWindowUtils</code> for a conversion factor to adapt to screen pixels if needed.</dd>
  <dt>{{domxref("Window.mozInnerScreenY")}} {{ReadOnlyInline}} {{non-standard_inline}}{{gecko_minversion_inline("1.9.2")}}</dt>
  <dd>Returns the vertical (Y) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See <code>mozScreenPixelsPerCSSPixel</code> for a conversion factor to adapt to screen pixels if needed.</dd>
  <dt>{{domxref("Window.mozPaintCount")}} {{non-standard_inline}}{{ReadOnlyInline}} {{gecko_minversion_inline("2.0")}}</dt>
@@ -173,7 +173,7 @@ translation_of: Web/API/Window
 
 <h2 id="Methods">Methods</h2>
 
-<p><em> Esta interfaz hereda metodos de la interfaz {{domxref("EventTarget")}}  e implementa metodos {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, y {{domxref("WindowEventHandlers")}}.</em></p>
+<p><em> Esta interfaz hereda metodos de la interfaz {{domxref("EventTarget")}}  e implementa metodos {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, y {{domxref("WindowEventHandlers")}}.</em></p>
 
 <dl>
  <dt>{{domxref("EventTarget.addEventListener()")}}</dt>
@@ -200,7 +200,7 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.close()")}}</dt>
  <dd>Cierra la ventana actual.</dd>
  <dt>{{domxref("Window.confirm()")}}</dt>
- <dd>Muestra una ventana de comfirmación con dos únicas y posibles respuestas. <strong>Confirmar </strong>y<strong> Cancelar</strong>.</dd>
+ <dd>Muestra una ventana de comfirmación con dos únicas y posibles respuestas. <strong>Confirmar </strong>y<strong> Cancelar</strong>.</dd>
  <dt>{{domxref("Window.disableExternalCapture()")}} {{obsolete_inline(24)}}</dt>
  <dd>{{todo("NeedsContents")}}</dd>
  <dt>{{domxref("Window.dispatchEvent()")}}</dt>

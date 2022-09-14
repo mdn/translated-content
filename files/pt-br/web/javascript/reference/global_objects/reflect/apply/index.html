@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/apply
 ---
 <div>{{JSRef}}</div>
 
-<p>O método estático <code><strong>Reflect</strong></code><strong><code>.apply()</code></strong> chama uma função alvo com os argumentos especificados.</p>
+<p>O método estático <code><strong>Reflect</strong></code><strong><code>.apply()</code></strong> chama uma função alvo com os argumentos especificados.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -23,30 +23,30 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/apply
  <dt>target</dt>
  <dd>Função que será chamada.</dd>
  <dt>thisArgument</dt>
- <dd>O valor de "<code>this"</code> que será usado pela function do target.</dd>
+ <dd>O valor de "<code>this"</code> que será usado pela function do target.</dd>
  <dt>argumentsList</dt>
- <dd>Um objeto do tipo array que especifica os argumentos com que o <em><code>target</code></em> deve ser chamado.</dd>
+ <dd>Um objeto do tipo array que especifica os argumentos com que o <em><code>target</code></em> deve ser chamado.</dd>
 </dl>
 
 <h3 id="Valor_de_retorno">Valor de retorno</h3>
 
-<p>O resultado da função alvo chamada com o <code><strong>this</strong></code>  e argumentos especificados.</p>
+<p>O resultado da função alvo chamada com o <code><strong>this</strong></code>  e argumentos especificados.</p>
 
 <h3 id="Exceções">Exceções</h3>
 
-<p>Um {{jsxref("TypeError")}}, se a função especificada no <em>target</em> não for invocável.</p>
+<p>Um {{jsxref("TypeError")}}, se a função especificada no <em>target</em> não for invocável.</p>
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>No ES5, tipicamente é usado o método {{jsxref("Function.prototype.apply()")}} para chamar uma função com o valor de <code>this e argumentos</code> <font face="Consolas, Liberation Mono, Courier, monospace">fornecidos como um array</font> (ou um <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects">array-like object</a>).</p>
+<p>No ES5, tipicamente é usado o método {{jsxref("Function.prototype.apply()")}} para chamar uma função com o valor de <code>this e argumentos</code> <font face="Consolas, Liberation Mono, Courier, monospace">fornecidos como um array</font> (ou um <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects">array-like object</a>).</p>
 
 <pre class="brush: js">Function.prototype.apply.call(Math.floor, undefined, [1.75]);</pre>
 
-<p>Com o <code>Reflect.apply</code> isso se torna menos verboso e mais fácil de entender.</p>
+<p>Com o <code>Reflect.apply</code> isso se torna menos verboso e mais fácil de entender.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Usando_Reflect.apply()">Usando <code>Reflect.apply()</code></h3>
+<h3 id="Usando_Reflect.apply()">Usando <code>Reflect.apply()</code></h3>
 
 <pre class="brush: js">Reflect.apply(Math.floor, undefined, [1.75]);
 // 1;
@@ -78,62 +78,14 @@ Reflect.apply("".charAt, "ponies", [3]);
   <tr>
    <td>{{SpecName('ESDraft', '#sec-reflect.apply', 'Reflect.apply')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>49</td>
-   <td>{{CompatGeckoDesktop(42)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile(42)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.Reflect.apply")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

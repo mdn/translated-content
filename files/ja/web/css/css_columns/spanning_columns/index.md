@@ -1,12 +1,6 @@
 ---
 title: 段抜きと段の均衡
 slug: Web/CSS/CSS_Columns/Spanning_Columns
-tags:
-  - CSS
-  - CSS 段組みレイアウト
-  - ガイド
-  - レイアウト
-translation_of: Web/CSS/CSS_Columns/Spanning_Columns
 ---
 {{CSSRef}}
 

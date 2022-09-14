@@ -1,19 +1,6 @@
 ---
 title: line-height
 slug: Web/CSS/line-height
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - レイアウト
-  - リファレンス
-  - テキスト
-  - Vertical
-  - height
-  - recipe:css-property
-  - size
-browser-compat: css.properties.line-height
-translation_of: Web/CSS/line-height
 ---
 {{CSSRef}}
 
@@ -31,10 +18,10 @@ line-height: normal;
 掛けたものを使用する */
 line-height: 3.5;
 
-/* &lt;length&gt; 値 */
+/* <length> 値 */
 line-height: 3em;
 
-/* &lt;percentage&gt; 値 */
+/* <percentage> 値 */
 line-height: 34%;
 
 /* グローバル値 */

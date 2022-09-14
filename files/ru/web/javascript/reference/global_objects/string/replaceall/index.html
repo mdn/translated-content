@@ -5,13 +5,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary">Метод <strong><code>replaceAll()</code></strong> возвращает новую строку со всеми совпадениями <code>pattern</code> , который меняется на <code>replacement</code>. </span><code>pattern</code> может быть строкой или регулярным выражением, и <code>replacement</code> может быть строкой или функция возвращающая каждое совпадение.</p>
+<p><span class="seoSummary">Метод <strong><code>replaceAll()</code></strong> возвращает новую строку со всеми совпадениями <code>pattern</code> , который меняется на <code>replacement</code>. </span><code>pattern</code> может быть строкой или регулярным выражением, и <code>replacement</code> может быть строкой или функция возвращающая каждое совпадение.</p>
 
 <p>Исходная строка остаётся без изменений.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/string-replaceall.html")}}</div>
 
-<p class="hidden">Исходник этого интерактивного примера находится в GitHub репозитории. Если бы вы хотели внести свой вклад в создание интерактивных примеров для проекта, пожалуйста клонируйте ссылку <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> и отправьте нам pull request.</p>
+<p class="hidden">Исходник этого интерактивного примера находится в GitHub репозитории. Если бы вы хотели внести свой вклад в создание интерактивных примеров для проекта, пожалуйста клонируйте ссылку <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> и отправьте нам pull request.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -19,20 +19,20 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 </pre>
 
 <div class="blockIndicator note">
-<p>Когда вы используете `<var>regexp</var>` вы должны установить флаг глобального поиска ("g"), иначе вернётся ошибка <code>TypeError</code>: "replaceAll must be called with a global RegExp".</p>
+<p>Когда вы используете `<var>regexp</var>` вы должны установить флаг глобального поиска ("g"), иначе вернётся ошибка <code>TypeError</code>: "replaceAll must be called with a global RegExp".</p>
 </div>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
  <dt><code><var>regexp</var></code> (pattern)</dt>
- <dd>Регулярное выражение или буква с глобальным флагом поиска ("g"). Совпадения меняются на <code><var>newSubstr</var></code> или значении возвращённое указанной функцией <code><var>function</var></code>. A RegExp без глобального флага поиска ("g") вернёт ошибку <code>TypeError</code>: "replaceAll must be called with a global RegExp".</dd>
+ <dd>Регулярное выражение или буква с глобальным флагом поиска ("g"). Совпадения меняются на <code><var>newSubstr</var></code> или значении возвращённое указанной функцией <code><var>function</var></code>. A RegExp без глобального флага поиска ("g") вернёт ошибку <code>TypeError</code>: "replaceAll must be called with a global RegExp".</dd>
  <dt><code><var>substr</var></code></dt>
- <dd>Подстрока, которая заменится <code><var>newSubstr</var></code>. Обрабатывается как буквенная строка, не интерпретируется как регулярное выражение.</dd>
+ <dd>Подстрока, которая заменится <code><var>newSubstr</var></code>. Обрабатывается как буквенная строка, не интерпретируется как регулярное выражение.</dd>
  <dt><code><var>newSubstr</var></code> (replacement)</dt>
- <dd>Новая строка, которая заменяет найденные подстроки указанные в <code><var>regexp</var></code> или <code><var>substr</var></code> параметрах. Поддерживается ряд специальных шаблонов замены; смотрите "<a href="#Specifying_a_string_as_a_parameter">Specifying a string as a parameter</a>" блок ниже.</dd>
+ <dd>Новая строка, которая заменяет найденные подстроки указанные в <code><var>regexp</var></code> или <code><var>substr</var></code> параметрах. Поддерживается ряд специальных шаблонов замены; смотрите "<a href="#Specifying_a_string_as_a_parameter">Specifying a string as a parameter</a>" блок ниже.</dd>
  <dt><code><var>function</var></code> (replacement)</dt>
- <dd>Функция вызванная при создании новой строки которая используется для замены совпадений указанных в <code><var>regexp</var></code> or <code><var>substr</var></code>. Аргументы применяемы в этой функции описываются в "<a href="#Specifying_a_function_as_a_parameter">Specifying a function as a parameter</a>" блок ниже.</dd>
+ <dd>Функция вызванная при создании новой строки которая используется для замены совпадений указанных в <code><var>regexp</var></code> or <code><var>substr</var></code>. Аргументы применяемы в этой функции описываются в "<a href="#Specifying_a_function_as_a_parameter">Specifying a function as a parameter</a>" блок ниже.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -57,7 +57,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
  <tbody>
   <tr>
    <td><code>$$</code></td>
-   <td>Вставляет <code>"$"</code>.</td>
+   <td>Вставляет <code>"$"</code>.</td>
   </tr>
   <tr>
    <td><code>$&amp;</code></td>
@@ -73,16 +73,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
   </tr>
   <tr>
    <td><code>$<var>n</var></code></td>
-   <td>Где <code><var>n</var></code> положительное цело число меньше чем 100, вставляет  <code><var>n</var></code>th строки указанные в скобках, частичные совпадения, при условии, что первый аргумент был {{jsxref("RegExp")}} object. Обратите внимание, что это 1-индексированный.</td>
+   <td>Где <code><var>n</var></code> положительное цело число меньше чем 100, вставляет  <code><var>n</var></code>th строки указанные в скобках, частичные совпадения, при условии, что первый аргумент был {{jsxref("RegExp")}} object. Обратите внимание, что это 1-индексированный.</td>
   </tr>
  </tbody>
 </table>
 
 <h3 id="Указание_функции_в_качестве_параметра">Указание функции в качестве параметра</h3>
 
-<p>Вы можете передать функцию вторым параметром. Этом случае, функция вызывается после нахождения совпадений. Результат функции может быть использована как замещающая строка. (<strong>Внимание:</strong> Выше упомянутые специальные шаблоны замены в данном случае неприменимы.)</p>
+<p>Вы можете передать функцию вторым параметром. Этом случае, функция вызывается после нахождения совпадений. Результат функции может быть использована как замещающая строка. (<strong>Внимание:</strong> Выше упомянутые специальные шаблоны замены в данном случае неприменимы.)</p>
 
-<p>Функция может быть вызвана многократно для каждого заменённого совпадения, если регулярное выражение указано с глобальным флагом("g").</p>
+<p>Функция может быть вызвана многократно для каждого заменённого совпадения, если регулярное выражение указано с глобальным флагом("g").</p>
 
 <p>Функция имеет следующие аргументы:</p>
 
@@ -96,11 +96,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
  <tbody>
   <tr>
    <td><code>match</code></td>
-   <td>Найденная постройка. (Соответствует <code>$&amp;</code> указанному выше)</td>
+   <td>Найденная постройка. (Соответствует <code>$&amp;</code> указанному выше)</td>
   </tr>
   <tr>
    <td><code>p1, p2, ...</code></td>
-   <td><var>n</var>th количество строк найденных групповыми скобками указанные первым параметром в регулярном выражении. (Соответствует  <code>$1</code>, <code>$2</code>, см. выше) Для примера, если <code>/(\a+)(\b+)/</code>, то <code>p1</code> это <code>\a+</code>, а <code>p2</code> это<code>\b+</code>.</td>
+   <td><var>n</var>th количество строк найденных групповыми скобками указанные первым параметром в регулярном выражении. (Соответствует  <code>$1</code>, <code>$2</code>, см. выше) Для примера, если <code>/(\a+)(\b+)/</code>, то <code>p1</code> это <code>\a+</code>, а <code>p2</code> это<code>\b+</code>.</td>
   </tr>
   <tr>
    <td><code>offset</code></td>

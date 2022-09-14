@@ -13,12 +13,16 @@ La classe de l'objet retourné par [`window.getSelection()`](Window/getSelection
 
 Un objet `selection` représente les [plages](range) sélectionnées par l'utilisateur. Habituellement, il ne contient qu'une seule plage accessible comme ceci&nbsp;:
 
-    range = sel.getRangeAt(0);
+```js
+range = sel.getRangeAt(0);
+```
 
 L'appel de la méthode [`toString()`](Selection/toString) renvoie le texte contenu dans la sélection. Cet appel peut être automatique, par exemple lorsque l'objet est passé à la fonction alert() :
 
-    selObj = window.getSelection();
-    window.alert(selObj);
+```js
+selObj = window.getSelection();
+window.alert(selObj);
+```
 
 ### Glossaire
 

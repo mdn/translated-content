@@ -17,7 +17,9 @@ La méthode **`Date.UTC()`** accepte des paramètres similaires à ceux du const
 
 ## Syntaxe
 
-    Date.UTC(année[,mois[,jour[,heures[,minutes[,secondes[,ms]]]]]])
+```js
+Date.UTC(année[,mois[,jour[,heures[,minutes[,secondes[,ms]]]]]])
+```
 
 ## Paramètres
 

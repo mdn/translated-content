@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Functions/set
 ---
 <div>{{jsSidebar("Functions")}}</div>
 
-<p>A sintaxe <em><strong><code>set</code></strong></em> liga a propriedade da função para ser chamada quando existe uma tentativa de definir valor para essa propriedade.</p>
+<p>A sintaxe <em><strong><code>set</code></strong></em> liga a propriedade da função para ser chamada quando existe uma tentativa de definir valor para essa propriedade.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -23,31 +23,31 @@ translation_of: Web/JavaScript/Reference/Functions/set
  <dt><code>val</code></dt>
  <dd><code><font face="Open Sans, Arial, sans-serif">Um apelido para variável que será atribuidada a prop</font>.</code></dd>
  <dt>expression</dt>
- <dd>Iniciando com ECMAScript 6, você pode usar também expressões para computar o nome da propriedade a ser definida na função.</dd>
+ <dd>Iniciando com ECMAScript 6, você pode usar também expressões para computar o nome da propriedade a ser definida na função.</dd>
 </dl>
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Em JavaScript, um <em>setter </em>pode ser usado para executar uma função sempre que se tenta mudar uma propriedade específica. <em>Setters </em>são geralmente usados em conjunto com <em>getters</em>, para criar um tipo de pseudo-propriedade. No entanto é impossível ter-se um setter para uma propriedade que contenha um valor real.</p>
+<p>Em JavaScript, um <em>setter </em>pode ser usado para executar uma função sempre que se tenta mudar uma propriedade específica. <em>Setters </em>são geralmente usados em conjunto com <em>getters</em>, para criar um tipo de pseudo-propriedade. No entanto é impossível ter-se um setter para uma propriedade que contenha um valor real.</p>
 
-<p>Observe os seguintes itens ao trabalhar com a sintaxe <em>set</em>:</p>
+<p>Observe os seguintes itens ao trabalhar com a sintaxe <em>set</em>:</p>
 
 <div>
 <ul>
  <li>Ele pode ter um identificador que é um número ou uma string;</li>
- <li>Deve ter exatamente um parâmetro (para mais informações, acesse: <a class="external" href="http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/" rel="external nofollow">Mudança do <abbr title="ECMAScript 5th edition">ES5 incompatível</abbr>: funções getter e setter literais tem exatamemente zero ou um parâmetros</a>);</li>
- <li>Não deve ter a mesma nomenclatura seja ela para propriedades ou função.<br>
+ <li>Deve ter exatamente um parâmetro (para mais informações, acesse: <a class="external" href="http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/" rel="external nofollow">Mudança do <abbr title="ECMAScript 5th edition">ES5 incompatível</abbr>: funções getter e setter literais tem exatamemente zero ou um parâmetros</a>);</li>
+ <li>Não deve ter a mesma nomenclatura seja ela para propriedades ou função.<br>
   (<code>{ set x(v) { }, set x(v) { } }</code> e <code>{ x: ..., set x(v) { } }</code> é proibido.)</li>
 </ul>
 </div>
 
-<p>Um <em>setter </em>pode ser deletado usando o operator <a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete" title="en-US/docs/JavaScript/Reference/Operators/Special/delete"><code>delete</code></a>.</p>
+<p>Um <em>setter </em>pode ser deletado usando o operator <a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete" title="en-US/docs/JavaScript/Reference/Operators/Special/delete"><code>delete</code></a>.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
 <h3 id="Definindo_um_setter_em_new_Objects_no_inicializador">Definindo um setter em new Objects no inicializador</h3>
 
-<p>Vai definir um pseudo-property <em>current </em>para este objeto,  quando atribuido um valor, vai mudar <code>log</code> com o valor passado:</p>
+<p>Vai definir um pseudo-property <em>current </em>para este objeto,  quando atribuido um valor, vai mudar <code>log</code> com o valor passado:</p>
 
 <pre class="brush: js">var o = {
   set current (str) {
@@ -57,18 +57,18 @@ translation_of: Web/JavaScript/Reference/Functions/set
 }
 </pre>
 
-<p>Observe que <em>current</em> não está definido e qualquer tentativa de acesso irá resultar em <em>undefined</em>.</p>
+<p>Observe que <em>current</em> não está definido e qualquer tentativa de acesso irá resultar em <em>undefined</em>.</p>
 
-<h3 id="Removendo_um_setter_com_o_operador_delete">Removendo um setter com o operador <code>delete</code></h3>
+<h3 id="Removendo_um_setter_com_o_operador_delete">Removendo um setter com o operador <code>delete</code></h3>
 
-<p>Se você deseja remover o <em>setter</em>, poderá usar somente o <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code>:</p>
+<p>Se você deseja remover o <em>setter</em>, poderá usar somente o <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code>:</p>
 
 <pre class="brush: js">delete o.current;
 </pre>
 
-<h3 id="Definindo_um_setter_para_um_Object_existente_usando_o_defineProperty">Definindo um setter para um Object existente usando o <code>defineProperty</code></h3>
+<h3 id="Definindo_um_setter_para_um_Object_existente_usando_o_defineProperty">Definindo um setter para um Object existente usando o <code>defineProperty</code></h3>
 
-<p>Para adicionar um <em>setter </em>para um Object existentem mais tarde, use {{jsxref("Object.defineProperty()")}}.</p>
+<p>Para adicionar um <em>setter </em>para um Object existentem mais tarde, use {{jsxref("Object.defineProperty()")}}.</p>
 
 <pre class="brush: js">var o = { a:0 };
 
@@ -80,7 +80,7 @@ console.log(o.a) // 5</pre>
 <h3 id="Usando_um_nome_de_propriedade_computada">Usando um nome de propriedade computada</h3>
 
 <div class="note">
-<p><strong>Atenção:</strong> Propriedades computadas são uma tecnologia experimental, parte da proposta ECMAScript 6, e não é amplamente suportada por todos os browsers ainda. Ele vai retornar um syntax error en ambientes que não tem suporte.</p>
+<p><strong>Atenção:</strong> Propriedades computadas são uma tecnologia experimental, parte da proposta ECMAScript 6, e não é amplamente suportada por todos os browsers ainda. Ele vai retornar um syntax error en ambientes que não tem suporte.</p>
 </div>
 
 <pre class="brush: js">var expr = "foo";
@@ -124,72 +124,7 @@ console.log(obj.baz); // "baz"
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(1)}}</td>
-   <td>{{ CompatGeckoDesktop("1.8.1") }}</td>
-   <td>{{ CompatIE(9) }}</td>
-   <td>9.5</td>
-   <td>3</td>
-  </tr>
-  <tr>
-   <td>Computed property names</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("34") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile("1.8.1") }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Computed property names</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("34.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.functions.set")}}
 
 <h2 id="SpiderMonkey-specific_notes">SpiderMonkey-specific notes</h2>
 

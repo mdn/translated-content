@@ -11,15 +11,15 @@ translation_of: Web/API/KeyboardEvent
 ---
 <p>{{APIRef("DOM Events")}}</p>
 
-<p><code>Objetos do tipo <strong>KeyboardEvent</strong></code> descrevem a interação do usuário com o teclado. Cada evento descreve uma tecla; o tipo de evento (<code>keydown</code>, <code>keypress</code>, ou <code>keyup</code>) identifica qual tipo de ação foi executada.</p>
+<p><code>Objetos do tipo <strong>KeyboardEvent</strong></code> descrevem a interação do usuário com o teclado. Cada evento descreve uma tecla; o tipo de evento (<code>keydown</code>, <code>keypress</code>, ou <code>keyup</code>) identifica qual tipo de ação foi executada.</p>
 
-<div class="note"><strong>Note:</strong> O <code>KeyboardEvent</code> indica o que está havendo com a tecla. Quando você precisar lidar com entrada de texto, use o evento <code><a href="/en-US/docs/DOM/DOM_event_reference/input" rel="custom">input</a> do </code>HTML5  . Por exemplo, se o usuário envia texto por meio de um sistema manuscrito como um tablet PC, eventos das teclas podem não ser disparados.</div>
+<div class="note"><strong>Note:</strong> O <code>KeyboardEvent</code> indica o que está havendo com a tecla. Quando você precisar lidar com entrada de texto, use o evento <code><a href="/en-US/docs/DOM/DOM_event_reference/input" rel="custom">input</a> do </code>HTML5  . Por exemplo, se o usuário envia texto por meio de um sistema manuscrito como um tablet PC, eventos das teclas podem não ser disparados.</div>
 
 <h2 id="Construtor">Construtor</h2>
 
 <dl>
  <dt>{{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}</dt>
- <dd>Cria um objeto do tipo <code>KeyboardEvent</code>.</dd>
+ <dd>Cria um objeto do tipo <code>KeyboardEvent</code>.</dd>
 </dl>
 
 <h2 id="Métodos">Métodos</h2>
@@ -28,11 +28,11 @@ translation_of: Web/API/KeyboardEvent
 
 <dl>
  <dt>{{domxref("KeyboardEvent.getModifierState()")}}</dt>
- <dd>Retorna um {{jsxref("Boolean")}} indicando se uma tecla, como <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, ou <kbd>Meta</kbd>, foi pressionada quando o evento foi criado.</dd>
+ <dd>Retorna um {{jsxref("Boolean")}} indicando se uma tecla, como <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, ou <kbd>Meta</kbd>, foi pressionada quando o evento foi criado.</dd>
  <dt>{{domxref("KeyboardEvent.initKeyEvent()")}}{{deprecated_inline}}</dt>
- <dd>Inicializa um objeto do tipo <code>KeyboardEvent</code> . isso foi apenas implementado por Gecko (outros usaram {{domxref("KeyboardEvent.initKeyboardEvent()")}}) e não deve mais ser usado. A forma moderna padrão é usar o construtor {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}.</dd>
+ <dd>Inicializa um objeto do tipo <code>KeyboardEvent</code> . isso foi apenas implementado por Gecko (outros usaram {{domxref("KeyboardEvent.initKeyboardEvent()")}}) e não deve mais ser usado. A forma moderna padrão é usar o construtor {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}.</dd>
  <dt>{{domxref("KeyboardEvent.initKeyboardEvent()")}}{{deprecated_inline}}</dt>
- <dd>Inicializa um objeto do tipo <code>KeyboardEvent</code> . Isso nunca foi implementado por Gecko (que usou {{domxref("KeyboardEvent.initKeyEvent()")}}) e não deve mais ser usado. A forma moderna padrão é usar o construtor  {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}.</dd>
+ <dd>Inicializa um objeto do tipo <code>KeyboardEvent</code> . Isso nunca foi implementado por Gecko (que usou {{domxref("KeyboardEvent.initKeyEvent()")}}) e não deve mais ser usado. A forma moderna padrão é usar o construtor  {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}.</dd>
 </dl>
 
 <h2 id="Propriedades">Propriedades</h2>
@@ -41,16 +41,16 @@ translation_of: Web/API/KeyboardEvent
 
 <dl>
  <dt>{{domxref("KeyboardEvent.altKey")}} {{Readonlyinline}}</dt>
- <dd>Retorna um {{jsxref("Boolean")}} que é <code>true</code> se a tecla <kbd>Alt</kbd> ( <kbd>Option</kbd> ou <kbd>⌥</kbd> no OS X) estava ativa quando o evento foi acionado.</dd>
+ <dd>Retorna um {{jsxref("Boolean")}} que é <code>true</code> se a tecla <kbd>Alt</kbd> ( <kbd>Option</kbd> ou <kbd>⌥</kbd> no OS X) estava ativa quando o evento foi acionado.</dd>
  <dt>{{domxref("KeyboardEvent.char")}} {{Non-standard_inline}}{{Deprecated_inline}}{{Readonlyinline}}</dt>
- <dd>Retorna um {{domxref("DOMString")}} representando o valor da tecla em caractere. Se a tecla corresponde a um caractere exibível, esse valor é uma string Unicode não-vazia contendo aquele caractere. Se a tecla não possui uma representação exibível, ela é uma string vazia.
+ <dd>Retorna um {{domxref("DOMString")}} representando o valor da tecla em caractere. Se a tecla corresponde a um caractere exibível, esse valor é uma string Unicode não-vazia contendo aquele caractere. Se a tecla não possui uma representação exibível, ela é uma string vazia.
  <div class="note"><strong>Nota:</strong> Se a tecla é usada como um macro que insere caracteres múltiplos, o valor desse atributo é a string inteira, não apenas o primeiro caractere.</div>
 
- <div class="warning"><strong>Aviso:</strong> Isso foi removido dos Eventos DOM de nível 3. Isso é apenas suportado no IE.</div>
+ <div class="warning"><strong>Aviso:</strong> Isso foi removido dos Eventos DOM de nível 3. Isso é apenas suportado no IE.</div>
  </dd>
  <dt>{{domxref("KeyboardEvent.charCode")}} {{Deprecated_inline}}{{Readonlyinline}}</dt>
- <dd>Returns a {{jsxref("Number")}} representing the Unicode reference number of the key; this attribute is used only by the <code>keypress</code> event. For keys whose <code>char</code> attribute contains multiple characters, this is the Unicode value of the first character in that attribute. In Firefox 26 this returns codes for printable characters.
- <div class="warning"><strong>Aviso:</strong> Este atributo esta depreciado; você deve usar <code>key</code> no lugar, se disponivel.</div>
+ <dd>Returns a {{jsxref("Number")}} representing the Unicode reference number of the key; this attribute is used only by the <code>keypress</code> event. For keys whose <code>char</code> attribute contains multiple characters, this is the Unicode value of the first character in that attribute. In Firefox 26 this returns codes for printable characters.
+ <div class="warning"><strong>Aviso:</strong> Este atributo esta depreciado; você deve usar <code>key</code> no lugar, se disponivel.</div>
  </dd>
  <dt>{{domxref("KeyboardEvent.code")}} {{Readonlyinline}}</dt>
  <dd>Returns a {{domxref("DOMString")}} with the code value of the key represented by the event.</dd>
@@ -60,16 +60,16 @@ translation_of: Web/API/KeyboardEvent
  <dd>Returns a {{jsxref("Boolean")}} that is <code>true</code> if the event is fired between after <code>compositionstart</code> and before <code>compositionend</code>.</dd>
  <dt>{{domxref("KeyboardEvent.key")}} {{Readonlyinline}}</dt>
  <dd>Returns a {{domxref("DOMString")}} representing the key value of the key represented by the event.</dd>
- <dt>{{domxref("KeyboardEvent.keyCode")}} {{deprecated_inline}}{{Readonlyinline}}</dt>
- <dd>Returns a {{jsxref("Number")}} representing a system and implementation dependent numerical code identifying the unmodified value of the pressed key.
- <div class="warning"><strong>Aviso:</strong> Este atributo esta depreciado; você deve usar <code>key</code> no lugar, se disponivel.</div>
+ <dt>{{domxref("KeyboardEvent.keyCode")}} {{deprecated_inline}}{{Readonlyinline}}</dt>
+ <dd>Returns a {{jsxref("Number")}} representing a system and implementation dependent numerical code identifying the unmodified value of the pressed key.
+ <div class="warning"><strong>Aviso:</strong> Este atributo esta depreciado; você deve usar <code>key</code> no lugar, se disponivel.</div>
  </dd>
  <dt>{{domxref("KeyboardEvent.locale")}} {{Readonlyinline}}</dt>
  <dd>Returns a {{domxref("DOMString")}} representing a locale string indicating the locale the keyboard is configured for. This may be the empty string if the browser or device doesn't know the keyboard's locale.
  <div class="note"><strong>Note:</strong> This does not describe the locale of the data being entered. A user may be using one keyboard layout while typing text in a different language.</div>
  </dd>
  <dt>{{domxref("KeyboardEvent.location")}}<a> {{Readonlyinline}}</a></dt>
- <dd>Returns a {{jsxref("Number")}} representing the location of the key on the keyboard or other input device.</dd>
+ <dd>Returns a {{jsxref("Number")}} representing the location of the key on the keyboard or other input device.</dd>
  <dt>{{domxref("KeyboardEvent.metaKey")}} {{Readonlyinline}}</dt>
  <dd>Returns a {{jsxref("Boolean")}} that is <code>true</code> if the <kbd>Meta</kbd> (or <kbd>Command</kbd> on OS X) key was active when the key event was generated.</dd>
  <dt>{{domxref("KeyboardEvent.repeat")}} {{Readonlyinline}}</dt>
@@ -77,8 +77,8 @@ translation_of: Web/API/KeyboardEvent
  <dt>{{domxref("KeyboardEvent.shiftKey")}} {{Readonlyinline}}</dt>
  <dd>Returns a {{jsxref("Boolean")}} that is <code>true</code> if the <kbd>Shift</kbd> key was active when the key event was generated.</dd>
  <dt>{{domxref("KeyboardEvent.which")}} {{deprecated_inline}}{{Readonlyinline}}</dt>
- <dd>Returns a {{jsxref("Number")}} representing a system and implementation dependent numeric code identifying the unmodified value of the pressed key; this is usually the same as <code>keyCode</code>.
- <div class="warning"><strong>Aviso:</strong> Este atributo esta depreciado; você deve usar <code>key</code> no lugar, se disponivel.</div>
+ <dd>Returns a {{jsxref("Number")}} representing a system and implementation dependent numeric code identifying the unmodified value of the pressed key; this is usually the same as <code>keyCode</code>.
+ <div class="warning"><strong>Aviso:</strong> Este atributo esta depreciado; você deve usar <code>key</code> no lugar, se disponivel.</div>
  </dd>
 </dl>
 
@@ -198,242 +198,4 @@ function metaKeyUp (event) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>constructor</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("31.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>.char</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>.charCode</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>.code</code></td>
-   <td colspan="5" rowspan="1">See Browser compatibility of {{domxref("KeyboardEvent.code")}}.</td>
-  </tr>
-  <tr>
-   <td><code>.isComposing</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("31.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>.key</code></td>
-   <td colspan="5" rowspan="1">See Browser compatibility of {{domxref("KeyboardEvent.key")}}.</td>
-  </tr>
-  <tr>
-   <td><code>.keyCode</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>.locale</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>.location</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("15.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>.repeat</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("28.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>.which</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>.getModifierState()</code></td>
-   <td colspan="5" rowspan="1">See Browser compatibility of {{domxref("KeyboardEvent.getModifierState")}}</td>
-  </tr>
-  <tr>
-   <td><code>.initKeyboardEvent()</code></td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}<sup>[2]</sup></td>
-   <td>{{CompatIE("9.0")}}<sup>[3]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>constructor</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("31.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>.char</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>.charCode</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>.code</code></td>
-   <td colspan="5" rowspan="1">See Browser compatibility of {{domxref("KeyboardEvent.code")}}.</td>
-  </tr>
-  <tr>
-   <td><code>.isComposing</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("31.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>.key</code></td>
-   <td colspan="6">See Browser compatibility table of {{domxref("KeyboardEvent.key")}}.</td>
-  </tr>
-  <tr>
-   <td><code>.keyCode</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>.locale</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>.location</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("15.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>.repeat</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("28.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>.which</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>.getModifierState()</code></td>
-   <td colspan="5" rowspan="1">See Browser compatibility of {{domxref("KeyboardEvent.getModifierState")}}</td>
-  </tr>
-  <tr>
-   <td><code>.initKeyboardEvent()</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] The arguments of <code>initKeyboardEvent()</code> of WebKit and Blink's are different from the definition in DOM Level 3 Events. The method is: <code>initKeyboardEvent(in DOMString typeArg, in boolean canBubbleArg, in boolean cancelableArg, in views::AbstractView viewArg, in DOMString keyIndentifierArg, in number locationArg, in boolean ctrlKeyArg, in boolean altKeyArg, in boolean shiftKeyArg, in boolean metaKeyArg, in boolean altGraphKeyArg)</code></p>
-
-<p>[2] Gecko won't support <code>initKeyboardEvent()</code> because supporting it completely breaks feature detection of web applications. See {{Bug(999645)}}.</p>
-
-<p>[3] The argument of <code>initKeyboardEvent()</code> of IE is different from the definition in DOM Level 3 Events. The method is: <code>initKeyboardEvent(in DOMString typeArg, in boolean canBubbleArg, in boolean cancelableArg, in views::AbstractView viewArg, in DOMString keyArg, in number locationArg, in DOMString modifierListArg, in boolean repeatArt, in DOMString locationArg)</code>. See <a href="http://msdn.microsoft.com/en-us/library/ie/ff975297%28v=vs.85%29.aspx">document of <code>initKeyboardEvent()</code> in MSDN</a>.</p>
-
-<p><a href="http://www.howtocreate.co.uk/tutorials/javascript/domevents#domevld1">[4]</a> Note that manually firing an event does <em>not</em> generate the default action associated with that event. For example, manually firing a key event does not cause that letter to appear in a focused text input. In the case of UI events, this is important for security reasons, as it prevents scripts from simulating user actions that interact with the browser itself.</p>
+{{Compat("api.KeyboardEvent")}}

@@ -11,9 +11,9 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/atob
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p>A função <strong><code>WindowBase64.atob()</code></strong> decodifica uma string de dados que foi codificada através da codificação base-64. Você pode usar o método {{domxref("WindowBase64.btoa","window.btoa()")}} para codificar e transmitir dados que, se não codificados, podem causar problemas de comunicação. Após transmití-los pode-se usar o método <code>window.atob()</code> para decodificar os dados novamente. Por exemplo, você pode codificar, transmitir,  e decodificar caracteres de controle como valores ASCII de 0 a 31.</p>
+<p>A função <strong><code>WindowBase64.atob()</code></strong> decodifica uma string de dados que foi codificada através da codificação base-64. Você pode usar o método {{domxref("WindowBase64.btoa","window.btoa()")}} para codificar e transmitir dados que, se não codificados, podem causar problemas de comunicação. Após transmití-los pode-se usar o método <code>window.atob()</code> para decodificar os dados novamente. Por exemplo, você pode codificar, transmitir,  e decodificar caracteres de controle como valores ASCII de 0 a 31.</p>
 
-<p>Para utilizar com strings Unicode ou UTF-8, veja <a href="/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding#The_.22Unicode_Problem.22">esta nota em <em>Base64 encoding and decoding</em></a> e <a href="/en-US/docs/Web/API/window.btoa#Unicode_Strings">essa nota em <code>window.btoa()</code></a>.</p>
+<p>Para utilizar com strings Unicode ou UTF-8, veja <a href="/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding#The_.22Unicode_Problem.22">esta nota em <em>Base64 encoding and decoding</em></a> e <a href="/en-US/docs/Web/API/window.btoa#Unicode_Strings">essa nota em <code>window.btoa()</code></a>.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -48,7 +48,7 @@ var dadoDecodificado = window.atob(<em>dadoCodificado</em>); // decodifica a str
   <tr>
    <td>{{SpecName("HTML5 W3C", "#dom-windowbase64-atob", "WindowBase64.atob()")}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Versão de {{SpecName("HTML WHATWG")}}. Criação do <code>WindowBase64</code> (antes as propriedades ficavam no target).</td>
+   <td>Versão de {{SpecName("HTML WHATWG")}}. Criação do <code>WindowBase64</code> (antes as propriedades ficavam no target).</td>
   </tr>
  </tbody>
 </table>
@@ -59,9 +59,9 @@ var dadoDecodificado = window.atob(<em>dadoCodificado</em>); // decodifica a str
 
 <div id="compat-mobile"></div>
 
-<p>[1] <code>atob()</code> também está disponível para os componentes do XPCOM implementado em JavaScript, porém o objeto <code><a href="/en-US/docs/Web/API/Window">window</a></code> não é global nos componentes.</p>
+<p>[1] <code>atob()</code> também está disponível para os componentes do XPCOM implementado em JavaScript, porém o objeto <code><a href="/en-US/docs/Web/API/Window">window</a></code> não é global nos componentes.</p>
 
-<p>[2] A partir do <a href="/en-US/Firefox/Releases/27/Site_Compatibility">Firefox 27</a>, <code>atob()</code> ignora todos os caracteres de espaço no argumento para seguir as últimas especificações do HTML5. ({{bug(711180)}})</p>
+<p>[2] A partir do <a href="/en-US/Firefox/Releases/27/Site_Compatibility">Firefox 27</a>, <code>atob()</code> ignora todos os caracteres de espaço no argumento para seguir as últimas especificações do HTML5. ({{bug(711180)}})</p>
 
 <h2 id="Veja_também">Veja também</h2>
 

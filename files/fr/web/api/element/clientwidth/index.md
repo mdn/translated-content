@@ -18,7 +18,9 @@ Lorsque `clientWidth` est utilisée sur l'élément racine (l'élément `<html>`
 
 ## Syntaxe
 
-    var intElemClientWidth = element.clientWidth;
+```js
+var intElemClientWidth = element.clientWidth;
+```
 
 `intElemClientWidth` est un entier correspondant à la largeur d'`element`, en pixels. La propriété `clientWidth` est uniquement accessible en lecture-seule.
 
@@ -28,17 +30,11 @@ Lorsque `clientWidth` est utilisée sur l'élément racine (l'élément `<html>`
 
 ## Spécifications
 
-| Spécification                                                                                | État                             | Commentaires |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('CSSOM View', '#dom-element-clientwidth', 'clientWidth')}} | {{Spec2("CSSOM View")}} |              |
-
-### Notes
-
-`clientWidth` fut d'abord introduit avec le modèle objet DHTML de Microsoft Internet Explorer.
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.clientWidth")}}
+{{Compat}}
 
 ## Voir aussi
 

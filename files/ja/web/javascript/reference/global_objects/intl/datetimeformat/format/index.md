@@ -1,24 +1,12 @@
 ---
 title: Intl.DateTimeFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
-tags:
-  - DateTimeFormat
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Intl.DateTimeFormat.format
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
 ---
 {{JSRef}}
 
 The **`Intl.DateTimeFormat.prototype.format()`** メソッドは、この {{jsxref("Intl.DateTimeFormat")}} オブジェクトのロケールと整形オプションに従って日付や時刻を整形します。
 
 {{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-format.html", "taller")}}
-
 
 ## 構文
 

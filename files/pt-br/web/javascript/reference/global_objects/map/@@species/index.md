@@ -17,7 +17,6 @@ O Acessor de propriedade **`Map[@@species]`** retorna o construtor do `Map`.
 O acessor `species` retorna o valor padrão do construtor dos objetos `Map`
 Subclasses de construtores podem sobrescrever isso para mudar o construtor atribuído.
 
-
 ## Exemplos
 
 ### Species em objetos ordinários
@@ -31,7 +30,7 @@ Map[Symbol.species]; // function Map()
 ### Species em objetos derivados
 
 Em uma objeto derivado (e.g. seu custom map `MyMap`), a `specie` do `MyMap` é o construtor do `MyMap`.
-Porém, você deve querer sobrescrever isso, para retornar o objeto `Map` pai nos métodos derivados de sua classe. 
+Porém, você deve querer sobrescrever isso, para retornar o objeto `Map` pai nos métodos derivados de sua classe.
 
 ```js
 class MyMap extends Map {

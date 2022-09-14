@@ -11,8 +11,8 @@ Dans le contexte des **{{glossary("object","objets")}}**, une **{{glossary("Obje
 
 En informatique, une référence est une valeur permettant d'accéder indirectement à une donnée dans le but de récupérer une variable ou un enregistrement, soit dans la mémoire de l'ordinateur, soit sur un périphérique de stockage quelconque.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Référence (programmation)")}} sur Wikipédia
+- [Référence](https://fr.wikipedia.org/wiki/R%C3%A9f%C3%A9rence_(programmation)) sur Wikipédia

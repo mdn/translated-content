@@ -12,9 +12,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
 ---
 {{JSRef}}
 
-**`WebAssembly.Module`** 객체는 브라우저에서 이미 컴파일 된 stateless WebAssembly 코드를 포함하며 효율적으로 [Workers와 공유](https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage)하고 여러 번 인스턴스화 할 수 있습니다. 모듈을 인스턴스화하려면 [WebAssembly.instantiate() 2차 오버로드를 호출](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#Secondary_overload_%E2%80%94_taking_a_module_object_instance)하세요.
+**`WebAssembly.Module`** 객체는 브라우저에서 이미 컴파일 된 stateless WebAssembly 코드를 포함하며 효율적으로 [Workers와 공유](/ko/docs/Web/API/Worker/postMessage)하고 여러 번 인스턴스화 할 수 있습니다. 모듈을 인스턴스화하려면 [WebAssembly.instantiate() 2차 오버로드를 호출](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#Secondary_overload_%E2%80%94_taking_a_module_object_instance)하세요.
 
-`WebAssembly.Module()` 생성자 함수를 호출하여 지정된 WebAssembly 바이너리 코드를 동기식으로 컴파일 할 수 있습니다. 그러나 `Module`을 쓰는 주된 방법은 {{jsxref ( "WebAssembly.compile ()")}}과 같은 비동기 컴파일 함수를 사용하는 것입니다.
+`WebAssembly.Module()` 생성자 함수를 호출하여 지정된 WebAssembly 바이너리 코드를 동기식으로 컴파일 할 수 있습니다. 그러나 `Module`을 쓰는 주된 방법은 {{jsxref ( "WebAssembly.compile ()")}}과 같은 비동기 컴파일 함수를 사용하는 것입니다.
 
 ## 생성자
 
@@ -40,6 +40,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
 
 ## See also
 
-- [WebAssembly](/en-US/docs/WebAssembly) overview page
-- [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly](/ko/docs/WebAssembly) overview page
+- [WebAssembly concepts](/ko/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/ko/docs/WebAssembly/Using_the_JavaScript_API)

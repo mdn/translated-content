@@ -11,7 +11,9 @@ Voir aussi la méthode {{domxref("CanvasRenderingContext2D.fillText()")}} pour d
 
 ## Syntaxe
 
-    void ctx.strokeText(texte, x, y [, largeurMax]);
+```js
+void ctx.strokeText(texte, x, y [, largeurMax]);
+```
 
 ### Paramètres
 
@@ -94,13 +96,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-stroketext", "CanvasRenderingContext2D.strokeText")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.strokeText")}}
+{{Compat}}
 
 ## Voir aussi
 

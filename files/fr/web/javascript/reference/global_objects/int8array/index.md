@@ -17,11 +17,13 @@ Le tableau typé **`Int8Array`** permet de représenter un tableau d'entiers sig
 
 ## Syntaxe
 
-    new Int8Array(); // apparu avec ES2017
-    new Int8Array(length);
-    new Int8Array(typedArray);
-    new Int8Array(object);
-    new Int8Array(buffer [, byteOffset [, length]]);
+```js
+new Int8Array(); // apparu avec ES2017
+new Int8Array(length);
+new Int8Array(typedArray);
+new Int8Array(object);
+new Int8Array(buffer [, byteOffset [, length]]);
+```
 
 Pour plus d'informations sur la syntaxe du constructeur, voir la page sur les [tableaux typés](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Syntaxe) _(TypedArray)_.
 
@@ -176,6 +178,6 @@ var dv = new Int8Array([1, 2, 3]);
 
 ## Voir aussi
 
-- [Les tableaux typés (_typed arrays_) en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés "en/JavaScript typed arrays")
+- [Les tableaux typés (_typed arrays_) en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

@@ -19,19 +19,19 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
 <p>где</p>
 
 <ul>
- <li><code>timeoutID -</code> это <em>числовой</em> ID, который может быть использован позже с {{domxref("window.clearTimeout()")}}.</li>
- <li><code>func -</code> это <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function" title="en-US/docs/Core_JavaScript_1.5_Reference/Global_Objects/Function">функция</a>, которую требуется вызвать после <code>delay</code> миллисекунд.</li>
- <li><code>code</code> - в альтернативном варианте применения это строка, содержащая код, который вы хотите выполнить после <code>delay</code> миллисекунд (использовать этот метод <strong>не рекомендуется</strong> по тем же причинам, что и <a href="/en-US/docs/JavaScript/Reference/Global_Objects/eval#Don%27t_use_eval!" title="en-US/docs/Core JavaScript 1.5 Reference/Global Functions/Eval#Don't use eval!">eval()</a>)</li>
- <li><code>delay</code>  {{optional_inline}} -  задержка в миллисекундах (тысячных долях секунды), после которой будет выполнен вызов функции. Реальная задержка может быть больше; см. {{anch("Notes")}} ниже.</li>
+ <li><code>timeoutID -</code> это <em>числовой</em> ID, который может быть использован позже с {{domxref("window.clearTimeout()")}}.</li>
+ <li><code>func -</code> это <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function" title="en-US/docs/Core_JavaScript_1.5_Reference/Global_Objects/Function">функция</a>, которую требуется вызвать после <code>delay</code> миллисекунд.</li>
+ <li><code>code</code> - в альтернативном варианте применения это строка, содержащая код, который вы хотите выполнить после <code>delay</code> миллисекунд (использовать этот метод <strong>не рекомендуется</strong> по тем же причинам, что и <a href="/en-US/docs/JavaScript/Reference/Global_Objects/eval#Don%27t_use_eval!" title="en-US/docs/Core JavaScript 1.5 Reference/Global Functions/Eval#Don't use eval!">eval()</a>)</li>
+ <li><code>delay</code>  {{optional_inline}} -  задержка в миллисекундах (тысячных долях секунды), после которой будет выполнен вызов функции. Реальная задержка может быть больше; см. <a href="#notes">Notes</a> ниже.</li>
 </ul>
 
-<p>Необходимо принять во внимание, что передача дополнительных параметров функции в первом варианте не работает в Internet Explorer 9 и ниже. Для использования этой функциональности в таких браузерах, необходимо использовать код для совместимости (см. раздел <a href="#Аргументы_колбэк-функции">Аргументы колбэк-функции</a>).</p>
+<p>Необходимо принять во внимание, что передача дополнительных параметров функции в первом варианте не работает в Internet Explorer 9 и ниже. Для использования этой функциональности в таких браузерах, необходимо использовать код для совместимости (см. раздел <a href="#Аргументы_колбэк-функции">Аргументы колбэк-функции</a>).</p>
 
 <div class="warning"><strong>Important:</strong> Prior to Gecko 13 {{ geckoRelease("13.0") }}, Gecko passed an extra parameter to the callback routine, indicating the "actual lateness" of the timeout in milliseconds. This non-standard parameter is no longer passed.</div>
 
 <h2 id="Example">Пример</h2>
 
-<p>В следующем примере на веб странице создаются две простые кнопки, к которым привязываются действия setTimeout и clearTimeout. Нажатие на первую кнопку установит таймаут, который вызовет диалоговое окно через две секунды. Также будет сохранён id для clearTimeout. Таймаут также может быть отменён по нажатию на вторую кнопку.</p>
+<p>В следующем примере на веб странице создаются две простые кнопки, к которым привязываются действия setTimeout и clearTimeout. Нажатие на первую кнопку установит таймаут, который вызовет диалоговое окно через две секунды. Также будет сохранён id для clearTimeout. Таймаут также может быть отменён по нажатию на вторую кнопку.</p>
 
 <h3 id="HTML_Content">HTML Content</h3>
 
@@ -46,15 +46,15 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
 <pre class="brush: js">var timeoutID;
 
 function delayedAlert() {
-  timeoutID = window.setTimeout(slowAlert, 2000);
+  timeoutID = window.setTimeout(slowAlert, 2000);
 }
 
 function slowAlert() {
-  alert("That was really slow!");
+  alert("That was really slow!");
 }
 
 function clearAlert() {
-  window.clearTimeout(timeoutID);
+  window.clearTimeout(timeoutID);
 }
 </pre>
 
@@ -68,39 +68,39 @@ function clearAlert() {
 
 <pre class="brush: js">/*\
 |*|
-|*|  IE-specific polyfill which enables the passage of arbitrary arguments to the
+|*|  IE-specific polyfill which enables the passage of arbitrary arguments to the
 |*|  callback functions of JavaScript timers (HTML5 standard syntax).
 |*|
 |*|  https://developer.mozilla.org/en-US/docs/DOM/window.setInterval
 |*|
-|*|  Syntax:
-|*|  var timeoutID = window.setTimeout(func, delay, [param1, param2, ...]);
-|*|  var timeoutID = window.setTimeout(code, delay);
-|*|  var intervalID = window.setInterval(func, delay[, param1, param2, ...]);
-|*|  var intervalID = window.setInterval(code, delay);
+|*|  Syntax:
+|*|  var timeoutID = window.setTimeout(func, delay, [param1, param2, ...]);
+|*|  var timeoutID = window.setTimeout(code, delay);
+|*|  var intervalID = window.setInterval(func, delay[, param1, param2, ...]);
+|*|  var intervalID = window.setInterval(code, delay);
 |*|
 \*/
 
 if (document.all &amp;&amp; !window.setTimeout.isPolyfill) {
-  var __nativeST__ = window.setTimeout;
-  window.setTimeout = function (vCallback, nDelay /*, argumentToPass1, argumentToPass2, etc. */) {
-    var aArgs = Array.prototype.slice.call(arguments, 2);
-    return __nativeST__(vCallback instanceof Function ? function () {
-      vCallback.apply(null, aArgs);
-    } : vCallback, nDelay);
-  };
-  window.setTimeout.isPolyfill = true;
+  var __nativeST__ = window.setTimeout;
+  window.setTimeout = function (vCallback, nDelay /*, argumentToPass1, argumentToPass2, etc. */) {
+    var aArgs = Array.prototype.slice.call(arguments, 2);
+    return __nativeST__(vCallback instanceof Function ? function () {
+      vCallback.apply(null, aArgs);
+    } : vCallback, nDelay);
+  };
+  window.setTimeout.isPolyfill = true;
 }
 
 if (document.all &amp;&amp; !window.setInterval.isPolyfill) {
-  var __nativeSI__ = window.setInterval;
-  window.setInterval = function (vCallback, nDelay /*, argumentToPass1, argumentToPass2, etc. */) {
-    var aArgs = Array.prototype.slice.call(arguments, 2);
-    return __nativeSI__(vCallback instanceof Function ? function () {
-      vCallback.apply(null, aArgs);
-    } : vCallback, nDelay);
-  };
-  window.setInterval.isPolyfill = true;
+  var __nativeSI__ = window.setInterval;
+  window.setInterval = function (vCallback, nDelay /*, argumentToPass1, argumentToPass2, etc. */) {
+    var aArgs = Array.prototype.slice.call(arguments, 2);
+    return __nativeSI__(vCallback instanceof Function ? function () {
+      vCallback.apply(null, aArgs);
+    } : vCallback, nDelay);
+  };
+  window.setInterval.isPolyfill = true;
 }
 </pre>
 
@@ -173,17 +173,17 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // same error</pre>
 var __nativeST__ = window.setTimeout, __nativeSI__ = window.setInterval;
 
 window.setTimeout = function (vCallback, nDelay /*, argumentToPass1, argumentToPass2, etc. */) {
-  var oThis = this, aArgs = Array.prototype.slice.call(arguments, 2);
-  return __nativeST__(vCallback instanceof Function ? function () {
-    vCallback.apply(oThis, aArgs);
-  } : vCallback, nDelay);
+  var oThis = this, aArgs = Array.prototype.slice.call(arguments, 2);
+  return __nativeST__(vCallback instanceof Function ? function () {
+    vCallback.apply(oThis, aArgs);
+  } : vCallback, nDelay);
 };
 
 window.setInterval = function (vCallback, nDelay /*, argumentToPass1, argumentToPass2, etc. */) {
-  var oThis = this, aArgs = Array.prototype.slice.call(arguments, 2);
-  return __nativeSI__(vCallback instanceof Function ? function () {
-    vCallback.apply(oThis, aArgs);
-  } : vCallback, nDelay);
+  var oThis = this, aArgs = Array.prototype.slice.call(arguments, 2);
+  return __nativeSI__(vCallback instanceof Function ? function () {
+    vCallback.apply(oThis, aArgs);
+  } : vCallback, nDelay);
 };</pre>
 
 <div class="note"><strong>Note:</strong> These two replacements will also enable the HTML5 standard passage of arbitrary arguments to the callback functions of timers in IE. So they can be used as polyfills also. See the <a href="#Аргументы_колбэк-функции">Callback arguments</a> paragraph.</div>
@@ -206,9 +206,9 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2.5 s
 
 <h2 id="Замечания">Замечания</h2>
 
-<p>Отложенное выполнение кода можно отменить, используя <code><a href="/en-US/docs/DOM/window.clearTimeout" title="en-US/docs/DOM/window.clearTimeout">window.clearTimeout()</a></code>. Если функция должна вызываться неоднократно (например, каждые N миллисекунд), необходимо использовать <code><a href="/en-US/docs/DOM/window.setInterval" title="en-US/docs/DOM/window.setInterval">window.setInterval()</a></code>.</p>
+<p>Отложенное выполнение кода можно отменить, используя <code><a href="/en-US/docs/DOM/window.clearTimeout" title="en-US/docs/DOM/window.clearTimeout">window.clearTimeout()</a></code>. Если функция должна вызываться неоднократно (например, каждые N миллисекунд), необходимо использовать <code><a href="/en-US/docs/DOM/window.setInterval" title="en-US/docs/DOM/window.setInterval">window.setInterval()</a></code>.</p>
 
-<p>Важно заметить, что функция или код не могут быть выполнены, пока не завершится поток, вызвавший <code>setTimeout()</code>.</p>
+<p>Важно заметить, что функция или код не могут быть выполнены, пока не завершится поток, вызвавший <code>setTimeout()</code>.</p>
 
 <h3 id="Passing_string_literals">Passing string literals</h3>
 

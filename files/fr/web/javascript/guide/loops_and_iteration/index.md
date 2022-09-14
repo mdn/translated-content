@@ -40,16 +40,18 @@ Voici les différentes boucles fournies par JavaScript :
 
 Une boucle {{jsxref("statements/for", "for")}} répète des instructions jusqu'à ce qu'une condition donnée ne soit plus vérifiée. La boucle `for` JavaScript ressemble beaucoup à celle utilisée en C ou en Java. Une boucle `for` s'utilise de la façon suivante :
 
-    for ([expressionInitiale]; [condition]; [expressionIncrément])
-      instruction
+```
+for ([expressionInitiale]; [condition]; [expressionIncrément])
+  instruction
+```
 
 Voici ce qui se passe quand une boucle `for` s'exécute :
 
-1.  L'expression initiale `expressionInitiale` est exécutée si elle est présente. Généralement, on utilise cette expression pour initialiser un ou plusieurs compteurs dont on se servira dans la boucle. Il est possible d'utiliser des expressions plus complexes si besoin. Elle peut servir à déclarer des variables.
-2.  L'expression `condition` est évaluée, si elle vaut `true`, les instructions contenues dans la boucle sont exécutées. Si la valeur de `condition` est `false`, la boucle `for` se termine. Si la condition est absente, elle est considérée comme `true`.
-3.  L'instruction `instruction` est exécutée. Si l'on souhaite exécuter plusieurs instructions, on utilisera un bloc d'instructions (`{ ... }`) afin de les grouper.
-4.  Si elle est présente, l'expression de mise à jour `expressionIncrément` est exécutée.
-5.  On retourne ensuite à l'étape 2.
+1. L'expression initiale `expressionInitiale` est exécutée si elle est présente. Généralement, on utilise cette expression pour initialiser un ou plusieurs compteurs dont on se servira dans la boucle. Il est possible d'utiliser des expressions plus complexes si besoin. Elle peut servir à déclarer des variables.
+2. L'expression `condition` est évaluée, si elle vaut `true`, les instructions contenues dans la boucle sont exécutées. Si la valeur de `condition` est `false`, la boucle `for` se termine. Si la condition est absente, elle est considérée comme `true`.
+3. L'instruction `instruction` est exécutée. Si l'on souhaite exécuter plusieurs instructions, on utilisera un bloc d'instructions (`{ ... }`) afin de les grouper.
+4. Si elle est présente, l'expression de mise à jour `expressionIncrément` est exécutée.
+5. On retourne ensuite à l'étape 2.
 
 ### **Exemple**
 
@@ -93,9 +95,11 @@ btn.addEventListener("click", function(){
 
 L'instruction {{jsxref("statements/do...while", "do...while")}} permet de répéter un ensemble d'instructions jusqu'à ce qu'une condition donnée ne soit plus vérifiée. (_NdT_ : littéralement « do...while » signifie « faire... tant que »). Une instruction `do...while` s'utilise de la façon suivante :
 
-    do
-      instruction
-    while (condition);
+```
+do
+  instruction
+while (condition);
+```
 
 `instruction` est exécutée au moins une fois avant que la condition soit vérifiée. Pour utiliser plusieurs instructions à cet endroit, on utilisera une instruction de bloc (`{ ... }`) pour regrouper différentes instructions. Si la `condition` est vérifiée, l'instruction est à nouveau exécutée. À la fin de chaque exécution, la condition est vérifiée. Quand la condition n'est plus vérifiée (vaut `false` ou une valeur équivalente), l'exécution de l'instruction `do…while` est stoppée et le contrôle passe à l'instruction suivante.
 
@@ -115,8 +119,10 @@ do {
 
 Une instruction {{jsxref("statements/while", "while")}} permet d'exécuter une instruction tant qu'une condition donnée est vérifiée. Cette instruction `while` s'utilise de la façon suivante :
 
-    while (condition)
-      instruction
+```
+while (condition)
+  instruction
+```
 
 Si la condition n'est pas vérifiée, l'instruction `instruction` n'est pas exécutée et le contrôle passe directement à l'instruction suivant la boucle.
 
@@ -161,8 +167,10 @@ Un {{jsxref("statements/label","label")}} (ou étiquette) permet de fournir un i
 
 On utilise un label de la façon suivante :
 
-    label:
-      instruction
+```
+label:
+  instruction
+```
 
 La valeur de `label` peut être n'importe quel identifiant JavaScript valide (et ne doit pas être un mot réservé pour le langage). L'`instruction` peut être n'importe quelle instruction JavaScript valide (y compris un bloc).
 
@@ -188,8 +196,8 @@ L'instruction {{jsxref("statements/break","break")}} est utilisée pour finir l'
 
 La syntaxe de cette instruction possède donc deux formes :
 
-1.  `break;`
-2.  `break label;`
+1. `break;`
+2. `break label;`
 
 La première forme permet d'interrompre la boucle la plus imbriquée (ou le `switch`) dans laquelle on se trouve. La seconde forme interrompt l'exécution d'une instruction identifiée par un label.
 
@@ -237,8 +245,8 @@ L'instruction {{jsxref("statements/continue","continue")}} permet de reprendre u
 
 L'instruction `continue` s'utilise donc de la façon suivante :
 
-1.  `continue;`
-2.  `continue` _`label;`_
+1. `continue;`
+2. `continue` _`label;`_
 
 ### Exemple 1
 
@@ -289,9 +297,11 @@ vérifIetJ: while (i < 4) {
 
 L'instruction {{jsxref("statements/for...in","for...in")}} permet d'itérer sur l'ensemble des propriétés énumérables d'un objet. Pour chaque propriété, JavaScript exécutera l'instruction indiquée. Cette instruction s'utilise de la façon suivante :
 
-    for (variable in objet) {
-      instruction
-    }
+```
+for (variable in objet) {
+  instruction
+}
+```
 
 ### Exemple
 
@@ -323,9 +333,11 @@ Bien qu'il soit tentant d'utiliser cette instruction pour parcourir les élémen
 
 L'instruction {{jsxref("statements/for...of","for...of")}} crée une boucle qui fonctionne avec [les objets itérables](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration) (qui incluent {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, l'objet [`arguments`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments), etc.). La boucle appelle un mécanisme d'itération propre à l'objet utilisé et elle parcourt l'objet et les valeurs de ses différentes propriétés.
 
-    for (variable of objet) {
-      instruction
-    }
+```
+for (variable of objet) {
+  instruction
+}
+```
 
 Dans l'exemple suivant, on illustre la différence entre une boucle `for...of` et une boucle [`for...in`](/fr/docs/Web/JavaScript/Reference/Instructions/for...in).  `for...in` parcourt les noms des propriétés d'un objet alors que `for...of` parcourt les **valeurs** des propriétés :
 

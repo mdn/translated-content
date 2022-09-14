@@ -5,11 +5,11 @@ translation_of: Web/API/Document/designMode
 ---
 <div>{{ ApiRef() }}</div>
 
-<div> </div>
+<div> </div>
 
 <h2 id="Summary" name="Summary">Sumário</h2>
 
-<p><code>document.designMode</code> controla se o documento todo é editável. Valores validos são <code>"on"</code> e <code>"off"</code>. De acordo com a especificação, esta propriedade é por padrão <code>"off"</code>. Firefox segue este padrão. Nas versões anteriores do Chrome e IE o padrão é <code>"inherit"</code>. No IE6-10, o valor é capitalizado.</p>
+<p><code>document.designMode</code> controla se o documento todo é editável. Valores validos são <code>"on"</code> e <code>"off"</code>. De acordo com a especificação, esta propriedade é por padrão <code>"off"</code>. Firefox segue este padrão. Nas versões anteriores do Chrome e IE o padrão é <code>"inherit"</code>. No IE6-10, o valor é capitalizado.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -19,7 +19,7 @@ document.designMode = "off";</pre>
 
 <h2 id="Example" name="Example">Exemplo</h2>
 
-<p>Cria um documento {{HTMLElement("iframe")}} editável:</p>
+<p>Cria um documento {{HTMLElement("iframe")}} editável:</p>
 
 <pre>iframe_node.contentDocument.designMode = "on";
 </pre>
@@ -43,57 +43,9 @@ document.designMode = "off";</pre>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat("api.Document.designMode")}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th style="line-height: 16px;">Feature</th>
-   <th style="line-height: 16px;">Chrome</th>
-   <th style="line-height: 16px;">Firefox (Gecko)</th>
-   <th style="line-height: 16px;">Internet Explorer</th>
-   <th style="line-height: 16px;">Opera</th>
-   <th style="line-height: 16px;">Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th style="line-height: 16px;">Feature</th>
-   <th style="line-height: 16px;">Android</th>
-   <th style="line-height: 16px;">Chrome for Android</th>
-   <th style="line-height: 16px;">Firefox Mobile (Gecko)</th>
-   <th style="line-height: 16px;">IE Mobile</th>
-   <th style="line-height: 16px;">Opera Mobile</th>
-   <th style="line-height: 16px;">Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="See_also" name="See_also"> </h2>
+<h2 id="See_also" name="See_also"> </h2>
 
 <h2 id="See_also" name="See_also">Veja também:</h2>
 

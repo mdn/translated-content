@@ -52,7 +52,9 @@ Comme les sites web, les extensions peuvent charger du contenu provenant de diff
 
 La politique de sécurité du contenu par défaut pour les extensions est la suivante :
 
-    "script-src 'self'; object-src 'self';"
+```
+"script-src 'self'; object-src 'self';"
+```
 
 Celle-ci sera appliquée à toute extension qui n'a pas explicitement défini sa propre politique via la clé [`content_security_policy`](/fr/Add-ons/WebExtensions/manifest.json/content_security_policy) du manifeste. Cela a les conséquences suivantes :
 

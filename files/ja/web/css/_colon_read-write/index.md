@@ -1,16 +1,6 @@
 ---
 title: ':read-write'
 slug: Web/CSS/:read-write
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-  - read-write
-browser-compat: css.selectors.read-write
-translation_of: Web/CSS/:read-write
 ---
 {{CSSRef}}
 

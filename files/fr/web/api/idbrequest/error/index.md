@@ -18,7 +18,9 @@ La propriété **`error`** de l'interface {{domxref("IDBRequest")}} renvoie l'er
 
 ## Syntaxe
 
-    var myError = request.error;
+```js
+var myError = request.error;
+```
 
 ### Valeur
 
@@ -78,13 +80,11 @@ objectStoreTitleRequest.onerror = function() {
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBRequest-error', 'error')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBRequest.error")}}
+{{Compat}}
 
 ## Voir aussi
 

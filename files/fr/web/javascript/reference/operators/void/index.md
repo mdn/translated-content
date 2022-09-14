@@ -16,7 +16,9 @@ L'**opérateur `void`** permet d'évaluer une _expression_ donnée et de renvoye
 
 ## Syntaxe
 
-    void expression
+```js
+void expression
+```
 
 ## Description
 
@@ -54,13 +56,15 @@ void function iife() {
 
 Lorsqu'un navigateur utilise une URI avec `javascript:`, le code de l'URI est évalué et le résultat remplace le contenu de la page, sauf si la valeur renvoyée vaut {{jsxref("Objets_globaux/undefined","undefined")}}. L'utilisateur `void` peut alors être utilisé pour renvoyer cette valeur. Par exemple :
 
-    <a href="javascript:void(0);">
-      Cliquer ici (sans effet)
-    </a>
+```html
+<a href="javascript:void(0);">
+  Cliquer ici (sans effet)
+</a>
 
-    <a href="javascript:void(document.body.style.backgroundColor='green');">
-      Cliquer ici pour rendre le fond vert
-    </a>
+<a href="javascript:void(document.body.style.backgroundColor='green');">
+  Cliquer ici pour rendre le fond vert
+</a>
+```
 
 Malgré cela, il n'est pas recommandé d'utiliser le pseudo-protocole `javascript:`, on lui préférera des méthodes moins risquées et moins intrusives comme les gestionnaires d'événements.
 

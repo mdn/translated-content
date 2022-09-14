@@ -21,9 +21,11 @@ La méthode **`toLocaleString()`** renvoie une chaîne de caractères qui repré
 
 ## Syntaxe
 
-    arr.toLocaleString();
-    arr.toLocaleString(locales);
-    arr.toLocaleString(locales, options);
+```js
+arr.toLocaleString();
+arr.toLocaleString(locales);
+arr.toLocaleString(locales, options);
+```
 
 ### Paramètres
 

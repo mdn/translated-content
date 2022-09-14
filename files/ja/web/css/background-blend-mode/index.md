@@ -1,13 +1,6 @@
 ---
 title: background-blend-mode
 slug: Web/CSS/background-blend-mode
-tags:
-  - CSS
-  - CSS プロパティ
-  - 合成と混合
-  - recipe:css-property
-browser-compat: css.properties.background-blend-mode
-translation_of: Web/CSS/background-blend-mode
 ---
 {{CSSRef}}
 
@@ -52,10 +45,10 @@ background-blend-mode: unset;
 
 ```css
 .item {
-    width: 300px;
-    height: 300px;
-    background: url('image1.png'),url('image2.png');
-    background-blend-mode: screen;
+    width: 300px;
+    height: 300px;
+    background: url('image1.png'),url('image2.png');
+    background-blend-mode: screen;
 }
 ```
 

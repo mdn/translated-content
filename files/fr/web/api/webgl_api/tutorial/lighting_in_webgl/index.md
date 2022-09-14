@@ -14,16 +14,16 @@ Rentrer dans les détails de la théorie derrière la simulation de l'éclairage
 
 Il y a trois types basiques d'éclairage :
 
-1.  **Ambient light (Lumière Ambiante)** est la lumière qui imprègne, qui se répand sur la scène. Elle n'a pas de direction et s'applique sur toutes les faces de la scène de la même façon.
-2.  **Directional light (Lumière Directionnelle)** est une lumière émise depuis une direction spécifique. Par exemple le soleil, est une lumière directionnelle.
-3.  **Point light** **(Point de lumière)** est une lumière émise depuis un point, éméttant une lumière dans toutes les directions, contrairement à la Lumière Directionnelle. C'est comme ceci que les lumières fonctionnent principalement dans notre monde, comme par exemple une ampoule.
+1. **Ambient light (Lumière Ambiante)** est la lumière qui imprègne, qui se répand sur la scène. Elle n'a pas de direction et s'applique sur toutes les faces de la scène de la même façon.
+2. **Directional light (Lumière Directionnelle)** est une lumière émise depuis une direction spécifique. Par exemple le soleil, est une lumière directionnelle.
+3. **Point light** **(Point de lumière)** est une lumière émise depuis un point, éméttant une lumière dans toutes les directions, contrairement à la Lumière Directionnelle. C'est comme ceci que les lumières fonctionnent principalement dans notre monde, comme par exemple une ampoule.
 
-Pour notre tutorial, nous allons simplifier le model d'éclairage, en considérant seulement une unique lumière directionnelle et une lumière ambiante. Nous allons réutiliser notre [précédent exemple avec le cube en rotation](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
+Pour notre tutorial, nous allons simplifier le model d'éclairage, en considérant seulement une unique lumière directionnelle et une lumière ambiante. Nous allons réutiliser notre [précédent exemple avec le cube en rotation](/fr/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
 
 Une fois que nous avons appréhendé le concept de source et de réfléction de la lumière, il y a deux choses que nous avons besoin d'implémenter pour nos lumières directionnelles.
 
-1.  Nous avons besoin d'associer la **surface normale** avec chaque sommet. C'est un vecteur qui est perpendiculaire à la face associé à ce sommet.
-2.  Nous avons besoin de connaître la direction dans laquelle la lumière arrive. Ceci est défini par la direction du vecteur.
+1. Nous avons besoin d'associer la **surface normale** avec chaque sommet. C'est un vecteur qui est perpendiculaire à la face associé à ce sommet.
+2. Nous avons besoin de connaître la direction dans laquelle la lumière arrive. Ceci est défini par la direction du vecteur.
 
 Puis nous mettons à jour le vertex shader pour ajuster la couleur de chaque sommet. en prenant en compte la lumière ambiante ainsi que l'effet de la lumière directionnelle donné par l'angle qui rencontre la face du cube. Nous allons voir comment faire avec les shaders.
 
@@ -161,8 +161,6 @@ Le fragment shader a maintenant besoin d'être mis à jour en prenant en compte 
 Ici nous récupérons la couleur de chaque texel (tas de pixel pour une texture) , comme nous avons fait pour l'exemple précédent, mais avant d'ajuster la couleur du fragment, nous multiplions la couleur des pixels par la quantité de lumière, pour appliquer l'effet d'éclairage.
 
 Et c'est tout !
-
-
 
 {{EmbedGHLiveSample('webgl-examples/tutorial/sample7/index.html', 670, 510) }}
 

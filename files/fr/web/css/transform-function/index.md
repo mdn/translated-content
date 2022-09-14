@@ -19,7 +19,7 @@ Il existe plusieurs modèles de repères géométriques permettant de décrire d
 
 ![](coord_in_r2.png)
 
-Pour [le système cartésien](https://fr.wikipedia.org/wiki/Coordonn%C3%A9es_cart%C3%A9siennes), chaque point de l'espace est décrit avec deux valeurs, l'abscisse et l'ordonnée. L'origine du repère `(0, 0)` correspond au coin supérieur gauche de l'élément. À la différence des conventions usuelles, l'axe verticale (_y_) se dirige vers le bas. Chaque point est décrit avec la notation `(x,y)`.
+Pour [le système cartésien](https://fr.wikipedia.org/wiki/Coordonn%C3%A9es_cart%C3%A9siennes), chaque point de l'espace est décrit avec deux valeurs, l'abscisse et l'ordonnée. L'origine du repère `(0, 0)` correspond au coin supérieur gauche de l'élément. À la différence des conventions usuelles, l'axe vertical (_y_) se dirige vers le bas. Chaque point est décrit avec la notation `(x,y)`.
 
 Chaque fonction linéaire est décrite avec une matrice 2 x 2 :
 

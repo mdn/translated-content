@@ -47,7 +47,7 @@ console.log(gen.next().value); // 2
 
 <h2 id="Objeto_legacy_generator">Objeto legacy generator</h2>
 
-<p>Firefox (SpiderMonkey) também implementa a versão anterior do generator em <a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/1.7">JavaScript 1.7</a>, onde o asterisco (*) na declaração da função não era necessário (somente era necessário usar a palavra reservada <code>yield</code> no corpo da função). Contudo, legacy generators estão obsoletos. Não os use, eles serão removidos ({{bug(1083482)}}).</p>
+<p>Firefox (SpiderMonkey) também implementa a versão anterior do generator em <a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/1.7">JavaScript 1.7</a>, onde o asterisco (*) na declaração da função não era necessário (somente era necessário usar a palavra reservada <code>yield</code> no corpo da função). Contudo, legacy generators estão obsoletos. Não os use, eles serão removidos ({{bug(1083482)}}).</p>
 
 <h3 id="Métodos_legacy_generator">Métodos legacy generator</h3>
 
@@ -55,7 +55,7 @@ console.log(gen.next().value); // 2
  <dt><code>Generator.prototype.next() </code>{{non-standard_inline}}</dt>
  <dd>Retorna o valor fornecido pela expressão {{jsxref("Operators/yield", "yield")}}. Isto corresponde ao <code>next() </code>do ES6.</dd>
  <dt><code>Generator.prototype.close()</code> {{non-standard_inline}}</dt>
- <dd>Fecha o generator, então quando chamar <code>next()</code> um erro {{jsxref("StopIteration")}}  será lançado. Isto corresponde ao  método <code>return()</code> do ES6.</dd>
+ <dd>Fecha o generator, então quando chamar <code>next()</code> um erro {{jsxref("StopIteration")}}  será lançado. Isto corresponde ao  método <code>return()</code> do ES6.</dd>
  <dt><code>Generator.prototype.send()</code> {{non-standard_inline}}</dt>
  <dd>Usado para enviar um valor para o generator. Este valor é retordo pela expressão {{jsxref("Operators/yield", "yield")}}, e retorna o valor fornecido pelo pelo next {{jsxref("Operators/yield", "yield")}}. <code>send(x)</code> corresponde ao <code>next(x)</code> do ES6.</dd>
  <dt><strong><code>Generator.</code></strong><code>prototype.</code><strong><code>throw()</code> </strong> {{non-standard_inline}}</dt>
@@ -94,64 +94,14 @@ console.log(it.next());   // throws StopIteration (Como o generator está fechad
   <tr>
    <td>{{SpecName('ESDraft', '#sec-generator-objects', 'Generator objects')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(39.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(39.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(39.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.Generator")}}
 
 <h2 id="Veja_Também">Veja Também</h2>
 

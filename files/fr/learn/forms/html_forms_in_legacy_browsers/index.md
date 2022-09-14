@@ -33,8 +33,6 @@ En fait, lire la documentation sur ces navigateurs est la chose la plus importan
 
 ## Rendre les choses simples
 
-
-
 Comme les [formulaires HTML](/fr/docs/Learn/Forms) impliquent des interactions complexes, une règle empirique&nbsp;: [restez aussi simple que possible](https://fr.wikipedia.org/wiki/Principe_KISS). Il y a tant de cas où nous voudrions que des formulaires soient  «&nbsp;plus beaux » ou «&nbsp;avec des fonctionnalités avancées&nbsp;»&nbsp;! Mais construire des formulaires HTML efficaces n'est pas une question de design ou de technique. Pour rappel, prenez le temps de lire cet article sur l'[ergonomie des formulaires sur UX For The Masses](http://www.uxforthemasses.com/forms-usability/) (en anglais).
 
 ### La simplification élégante est la meilleure amie du développeur Web
@@ -81,7 +79,7 @@ Les nouveaux types d'entrées amenés par HTML5 sont très sympas car la façon 
 
 #### Sélecteurs d'attributs CSS
 
-Les [sélecteurs d'attributs CSS](/fr/docs/Web/CSS/Sélecteurs_d_attribut "/en-US/docs/CSS/Attribute_selectors") sont très utiles avec les [formulaires HTML](/fr/docs/Learn/Forms), mais certains navigateurs historiques ne les prennent pas en charge. Dans ce cas, il est courant de doubler le type avec une classe équivalente&nbsp;:
+Les [sélecteurs d'attributs CSS](/fr/docs/Web/CSS/Sélecteurs_d_attribut) sont très utiles avec les [formulaires HTML](/fr/docs/Learn/Forms), mais certains navigateurs historiques ne les prennent pas en charge. Dans ce cas, il est courant de doubler le type avec une classe équivalente&nbsp;:
 
 ```html
 <input type="number" class="number">

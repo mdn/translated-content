@@ -18,8 +18,10 @@ La méthode **`set()`** permet d'enregistrer plusieurs valeurs dans le tableau t
 
 ## Syntaxe
 
-    typedArr.set(tableau [, décalage])
-    typedArr.set(tableauTypé [, décalage])
+```js
+typedArr.set(tableau [, décalage])
+typedArr.set(tableauTypé [, décalage])
+```
 
 ### Paramètres
 

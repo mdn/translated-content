@@ -169,30 +169,30 @@ Imaginons que votre patron vous ait donné le résumé suivant pour créer ce je
 
 La première chose à faire en regardant ce résumé, c'est de le décomposer en tâches simples et codables comme le ferait un programmeur :
 
-1.  Générer un nombre aléatoire entre 1 et 100.
-2.  Stocker le nombre de tours déjà joués. Commencer par 1.
-3.  Fournir au joueur le moyen de saisir un nombre.
-4.  Stocker l'ensemble des propositions de nombres pour que le joueur puisse les consulter.
-5.  Vérifier si le nombre saisi par le joueur est correct.
-6.  S'il est correct :
+1. Générer un nombre aléatoire entre 1 et 100.
+2. Stocker le nombre de tours déjà joués. Commencer par 1.
+3. Fournir au joueur le moyen de saisir un nombre.
+4. Stocker l'ensemble des propositions de nombres pour que le joueur puisse les consulter.
+5. Vérifier si le nombre saisi par le joueur est correct.
+6. S'il est correct :
 
-    1.  Afficher un message de félicitations.
-    2.  Empêcher que le joueur saisisse de nouveau un nombre.
-    3.  Afficher un contrôle pour que le joueur puisse rejouer.
+    1. Afficher un message de félicitations.
+    2. Empêcher que le joueur saisisse de nouveau un nombre.
+    3. Afficher un contrôle pour que le joueur puisse rejouer.
 
-7.  S'il est faux et que le joueur a encore des tours à jouer :
+7. S'il est faux et que le joueur a encore des tours à jouer :
 
-    1.  Informer le joueur que sa proposition de nombre est fausse.
-    2.  Lui permettre d'entrer une nouvelle proposition de nombre.
-    3.  Incrémenter le nombre de tours de 1.
+    1. Informer le joueur que sa proposition de nombre est fausse.
+    2. Lui permettre d'entrer une nouvelle proposition de nombre.
+    3. Incrémenter le nombre de tours de 1.
 
-8.  S'il est faux et que le joueur n'a plus de tours à jouer :
+8. S'il est faux et que le joueur n'a plus de tours à jouer :
 
-    1.  Informer le joueur qu'il a perdu et que la partie est finie.
-    2.  Empêcher que le joueur saisisse de nouveau un nombre.
-    3.  Afficher un contrôle pour que le joueur puisse rejouer.
+    1. Informer le joueur qu'il a perdu et que la partie est finie.
+    2. Empêcher que le joueur saisisse de nouveau un nombre.
+    3. Afficher un contrôle pour que le joueur puisse rejouer.
 
-9.  Une fois le jeu redémarré, s'assurer que la logique du jeu et l'interface utilisateur sont complètement réinitialisées, puis revenir à l'étape 1.
+9. Une fois le jeu redémarré, s'assurer que la logique du jeu et l'interface utilisateur sont complètement réinitialisées, puis revenir à l'étape 1.
 
 Voyons maintenant comment nous pouvons transformer ces étapes en code. Nous allons développer cet exemple et explorer les fonctionnalités JavaScript au fur et à mesure.
 
@@ -579,9 +579,9 @@ for (let i = 1 ; i < 21 ; i++) { console.log(i) }
 
 Que s'est-il passé&nbsp;? Les nombres de 1 à 20 s'affichent dans la console. C'est à cause de la boucle. Une boucle : `for`  prend trois valeurs d'entrée (arguments)
 
-1.  **Une valeur de départ** : Dans ce cas, nous commençons un compte à 1, mais cela pourrait être n'importe quel nombre. Vous pouvez remplacer `i` par n'importe quel nom (ou presque...), mais `i` est utilisé par convention car il est court et facile à retenir.
-2.  **Une condition de fin** : Ici, nous avons spécifié  `i < 21` la boucle continuera jusqu'à ce que  `i`  ne soit plus inférieur à 21. Quand `i` atteindra ou dépassera 21, la boucle s'arrêtera.
-3.  **Un incrémenteur** :  Nous avons spécifié `i++`, ce qui signifie "ajouter 1 à i". La boucle sera exécutée une fois pour chaque valeur de `i`, jusqu'a ce que `i` atteigne une valeur de 21 (comme indiqué ci-dessus). Dans ce cas, nous imprimons simplement la valeur de `i`  sur la console à chaque itération en utilisant {{domxref("Console.log", "console.log()")}}.
+1. **Une valeur de départ** : Dans ce cas, nous commençons un compte à 1, mais cela pourrait être n'importe quel nombre. Vous pouvez remplacer `i` par n'importe quel nom (ou presque...), mais `i` est utilisé par convention car il est court et facile à retenir.
+2. **Une condition de fin** : Ici, nous avons spécifié  `i < 21` la boucle continuera jusqu'à ce que  `i`  ne soit plus inférieur à 21. Quand `i` atteindra ou dépassera 21, la boucle s'arrêtera.
+3. **Un incrémenteur** :  Nous avons spécifié `i++`, ce qui signifie "ajouter 1 à i". La boucle sera exécutée une fois pour chaque valeur de `i`, jusqu'a ce que `i` atteigne une valeur de 21 (comme indiqué ci-dessus). Dans ce cas, nous imprimons simplement la valeur de `i`  sur la console à chaque itération en utilisant {{domxref("Console.log", "console.log()")}}.
 
 Maintenant, regardons la boucle dans notre jeu de devinettes de nombres **—** ce qui suit peut être trouvé dans la fonction `resetGame()` :
 
@@ -626,10 +626,10 @@ Les variables qui ne contiennent pas de références aux éléments de formulair
 
 Jouons un peu avec certains objets du navigateur.
 
-1.  Tout d'abord, ouvrez votre programme dans un navigateur.
-2.  Ensuite, ouvrez les [outils de développement](/fr/docs/Apprendre/Découvrir_outils_développement_navigateurs) de votre navigateur et assurez-vous que l'onglet de la console JavaScript est ouvert.
-3.  Tapez `guessField` et la console vous montrera que la variable contient un élément {{htmlelement ("input")}}. Vous remarquerez également que la console complète automatiquement les noms d'objets existant dans l'environnement d'exécution, y compris vos variables!
-4.  Maintenant, tapez ce qui suit :
+1. Tout d'abord, ouvrez votre programme dans un navigateur.
+2. Ensuite, ouvrez les [outils de développement](/fr/docs/Apprendre/Découvrir_outils_développement_navigateurs) de votre navigateur et assurez-vous que l'onglet de la console JavaScript est ouvert.
+3. Tapez `guessField` et la console vous montrera que la variable contient un élément {{htmlelement ("input")}}. Vous remarquerez également que la console complète automatiquement les noms d'objets existant dans l'environnement d'exécution, y compris vos variables!
+4. Maintenant, tapez ce qui suit :
 
     ```js
     guessField.value = 'Hello';
@@ -637,8 +637,8 @@ Jouons un peu avec certains objets du navigateur.
 
     La propriété `value` représente la valeur courante entrée dans un champs de texte. Vous verrez qu'en entrant cette commande nous avons changé ce que c'est.
 
-5.  Tapez maintenant `guesses` and appuyez sur entrée. La console vous montrera que la variable contient un élément {{htmlelement ("p")}}.
-6.  Maintenant, essayez d'entrer la ligne suivante :
+5. Tapez maintenant `guesses` and appuyez sur entrée. La console vous montrera que la variable contient un élément {{htmlelement ("p")}}.
+6. Maintenant, essayez d'entrer la ligne suivante :
 
     ```js
     guesses.value
@@ -646,14 +646,14 @@ Jouons un peu avec certains objets du navigateur.
 
     Le navigateur va retourner `undefined`, parce que `value` n'existe pas dans le paragraphe.
 
-7.  Pour changer le texte dans le paragraphe vous aurez besoin de la propriété {{domxref("Node.textContent", "textContent")}} à la place.
+7. Pour changer le texte dans le paragraphe vous aurez besoin de la propriété {{domxref("Node.textContent", "textContent")}} à la place.
     Essayez ceci :
 
     ```js
     guesses.textContent = 'Where is my paragraph?';
     ```
 
-8.  Maintenant, pour des trucs amusants. Essayez d'entrer les lignes ci-dessous, une par une :
+8. Maintenant, pour des trucs amusants. Essayez d'entrer les lignes ci-dessous, une par une :
 
 ```js
 guesses.style.backgroundColor = 'yellow';

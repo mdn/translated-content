@@ -9,7 +9,7 @@ translation_of: Web/CSS/translation-value
 ---
 {{CSSRef}}
 
-Le type de donnée **`<translation-value>`** est utilisé dans les arguments pour certaines fonctions de [transformation](/fr/docs/Web/CSS/transform "CSS/transform") dont [`translate()`](/fr/docs/Web/CSS/transform-function/translate), [`translateX()`](/fr/docs/Web/CSS/transform-function/translateX), [`translateY()`](/fr/docs/Web/CSS/transform-function/translateY), et [`translate3d()`](/fr/docs/Web/CSS/transform-function/translate3d).
+Le type de donnée **`<translation-value>`** est utilisé dans les arguments pour certaines fonctions de [transformation](/fr/docs/Web/CSS/transform) dont [`translate()`](/fr/docs/Web/CSS/transform-function/translate), [`translateX()`](/fr/docs/Web/CSS/transform-function/translateX), [`translateY()`](/fr/docs/Web/CSS/transform-function/translateY), et [`translate3d()`](/fr/docs/Web/CSS/transform-function/translate3d).
 
 ## Syntaxe
 

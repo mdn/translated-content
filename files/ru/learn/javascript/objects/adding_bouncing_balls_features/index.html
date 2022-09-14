@@ -8,7 +8,7 @@ original_slug: Learn/JavaScript/Объекты/Adding_bouncing_balls_features
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}</div>
 
-<p class="summary">В этом упражнении мы будем использовать проект прыгающих шаров из предыдущей статьи и добавим в него новые интересные возможности.</p>
+<p class="summary">В этом упражнении мы будем использовать проект прыгающих шаров из предыдущей статьи и добавим в него новые интересные возможности.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -18,19 +18,19 @@ original_slug: Learn/JavaScript/Объекты/Adding_bouncing_balls_features
   </tr>
   <tr>
    <th scope="row">Цель:</th>
-   <td>Проверить насколько хорошо вы понимаете объекты и связанные с ними конструкции в языке Javascript. </td>
+   <td>Проверить насколько хорошо вы понимаете объекты и связанные с ними конструкции в языке Javascript. </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Начало">Начало</h2>
 
-<p>Для начала скопируйте файлы <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index-finished.html">index-finished.html</a>, <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css">style.css</a> и <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js">main-finished.js</a> из предыдущей статьи в новую директорию на вашем компьютере.</p>
+<p>Для начала скопируйте файлы <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index-finished.html">index-finished.html</a>, <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css">style.css</a> и <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js">main-finished.js</a> из предыдущей статьи в новую директорию на вашем компьютере.</p>
 
-<p>Для выполнения упражнения вы можете использовать сайт <a class="external external-icon" href="http://jsbin.com/">JSBin</a> или <a class="external external-icon" href="https://thimble.mozilla.org/">Thimble</a>. Вы можете вставлять HTML, CSS и JavaScript-код в один из этих онлайн-редакторов. Если ваш онлайн-редактор не поддерживает раздельные панели для редактирования JavaScript/CSS кода, то вы можете встроить код в HTML с помощью тегов <code>&lt;script&gt;</code>/<code>&lt;style&gt;</code>.</p>
+<p>Для выполнения упражнения вы можете использовать сайт <a class="external external-icon" href="http://jsbin.com/">JSBin</a> или <a class="external external-icon" href="https://thimble.mozilla.org/">Thimble</a>. Вы можете вставлять HTML, CSS и JavaScript-код в один из этих онлайн-редакторов. Если ваш онлайн-редактор не поддерживает раздельные панели для редактирования JavaScript/CSS кода, то вы можете встроить код в HTML с помощью тегов <code>&lt;script&gt;</code>/<code>&lt;style&gt;</code>.</p>
 
 <div class="note">
-<p><strong>Примечание</strong>. Если у вас что-то не получается — попросите о помощи. Более подробная информация находится в секции {{anch("Assessment or further help")}} в конце этой страницы.</p>
+<p><strong>Примечание</strong>. Если у вас что-то не получается — попросите о помощи. Более подробная информация находится в секции <a href="#assessment_or_further_help">Assessment or further help</a> в конце этой страницы.</p>
 </div>
 
 <h2 id="Краткое_описание_проекта">Краткое описание проекта</h2>
@@ -55,7 +55,7 @@ original_slug: Learn/JavaScript/Объекты/Adding_bouncing_balls_features
 <p>Прежде всего, измените существующий конструктор <code>Ball()</code> так, чтобы он стал конструктором <code>Shape()</code> и добавил новый конструктор <code>Ball()</code>:</p>
 
 <ol>
- <li>Конструктор <code>Shape()</code> должен определять свойства <code>x</code>, <code>y</code>, <code>velX</code> и <code>velY</code>,  так же, как и конструктор <code>Ball()</code>, но не свойства <code>color</code> и <code>size</code>.</li>
+ <li>Конструктор <code>Shape()</code> должен определять свойства <code>x</code>, <code>y</code>, <code>velX</code> и <code>velY</code>,  так же, как и конструктор <code>Ball()</code>, но не свойства <code>color</code> и <code>size</code>.</li>
  <li>Он также должен определить новое свойство<code>exists</code>, которое используется для отслеживания наличия шаров в программе (не было съедено злым кругом). Это должно быть логическое (<code>true</code> / <code>false</code>).</li>
  <li>Конструктор <code>Ball()</code> должен наследовать свойства <code>x</code>, <code>y</code>, <code>velX</code>, <code>velY</code> и <code>exists</code> из конструктора <code>Shape()</code>.</li>
  <li>Он также должен определить свойство <code>color</code> и <code>size</code>, как это сделал оригинальный конструктор <code>Ball()</code>.</li>
@@ -100,7 +100,7 @@ original_slug: Learn/JavaScript/Объекты/Adding_bouncing_balls_features
 
 <h4 id="checkBounds"><code>checkBounds()</code></h4>
 
-<p>Этот метод будет делать то же самое, что и первая часть функции  <code>Ball()</code>'s <code>update()</code>, чтобы посмотреть, не исчезнет ли злой круг от края экрана и не прекратит это делать. Опять же, вы можете просто скопировать определение <code>Ball.prototype.update</code>, но есть несколько изменений, которые вы должны сделать:</p>
+<p>Этот метод будет делать то же самое, что и первая часть функции  <code>Ball()</code>'s <code>update()</code>, чтобы посмотреть, не исчезнет ли злой круг от края экрана и не прекратит это делать. Опять же, вы можете просто скопировать определение <code>Ball.prototype.update</code>, но есть несколько изменений, которые вы должны сделать:</p>
 
 <ul>
  <li>Избавьтесь от последних двух строк - мы не хотим автоматически обновлять позицию злого круга на каждом кадре, потому что мы будем перемещать его каким-то другим способом, как вы увидите ниже.</li>

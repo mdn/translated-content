@@ -21,20 +21,18 @@ Vous pouvez utiliser la propriété {{domxref("HTMLElement.isContentEditable")}}
 
 ## Syntaxe
 
-    editable = element.contentEditable
-    element.contentEditable = "true"
+```js
+editable = element.contentEditable
+element.contentEditable = "true"
+```
 
 ## Spécifications
 
-| Specification                                                                                                | Statut                           | Commentaire         |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('HTML WHATWG', 'interaction.html#contenteditable', 'contenteditable')}} | {{Spec2('HTML WHATWG')}} | Definition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLElement.contentEditable")}}
-
-Dans Internet Explorer, le `contentable` ne peut pas être appliqué aux {{htmlelement("table")}}, {{htmlelement("col")}}, {{htmlelement("colgroup")}}, {{htmlelement("tbody")}}, {{htmlelement("td")}}, {{htmlelement("tfoot")}}, {{htmlelement("th")}}, {{htmlelement("thead")}} et {{htmlelement("tr")}} directement. Un élément {{htmlelement("span")}} ou {{htmlelement("div")}} modifiable au niveau du contenu peut être placé à l'intérieur de chaque cellule du tableau.
+{{Compat}}
 
 ## Voir aussi
 

@@ -19,7 +19,9 @@ Quand elle est appelée sur un élément HTML dans un document HTML, `getElement
 
 ## Syntaxe
 
-    elements = element.getElementsByTagName(tagName)
+```js
+elements = element.getElementsByTagName(tagName)
+```
 
 - `elements` est une {{domxref("HTMLCollection")}} contenant les éléments trouvés, dans l'ordre dans lequel ils apparaissent dans le sous-arbre. Si aucun élément n'a été trouvé, la `HTMLCollection` est vide.
 - `element` est l'élément depuis lequel la recherche doit commencer. Notez que seuls les descendants de cet élément feront partie des résultats, mais pas l'élément lui-même.
@@ -41,13 +43,8 @@ for (var i = 0; i < cells.length; i++) {
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                           | Commentaire                                                                                              |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-element-getelementsbytagname', 'Element.getElementsByTagName()')}} | {{Spec2('DOM WHATWG')}} | Change la valeur de retour de {{domxref("NodeList")}} à{{domxref("HTMLCollection")}} |
-| {{SpecName('DOM3 Core', 'core.html#ID-1938918D', 'Element.getElementsByTagName()')}}                 | {{Spec2('DOM3 Core')}}     | Pas de changement par rapport à {{SpecName('DOM2 Core')}}                                         |
-| {{SpecName('DOM2 Core', 'core.html#ID-1938918D', 'Element.getElementsByTagName()')}}                 | {{Spec2('DOM2 Core')}}     | Pas de changement par rapport à {{SpecName('DOM1')}}                                             |
-| {{SpecName('DOM1', 'level-one-core.html#ID-1938918D', 'Element.getElementsByTagName()')}}         | {{Spec2('DOM1')}}         | Définition initiale                                                                                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.getElementsByTagName")}}
+{{Compat}}

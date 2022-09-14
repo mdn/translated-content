@@ -17,7 +17,9 @@ La méthode **`toLocaleString()`** renvoie une chaine de caractères représenta
 
 ## Syntaxe
 
-    obj.toLocaleString()
+```js
+obj.toLocaleString()
+```
 
 ### Valeur de retour
 

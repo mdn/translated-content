@@ -43,11 +43,11 @@ original_slug: Learn/Server-side/First_steps/Introdução
 
 <h2 id="O_que_é_programação_de_site_do_lado_do_servidor">O que é programação de site do lado do servidor ?</h2>
 
-<p>Navegadores comunicam-se com  <a href="/en-US/docs/Learn/Common_questions/What_is_a_web_server">web servers</a>  utilizando o <strong>H</strong>yper<strong>T</strong>ext <strong>T</strong>ransfer <strong>P</strong>rotocol ({{glossary("HTTP")}}). Quando você clica em um link em uma página da web, envia um formulário ou faz uma pesquisa, uma <strong>HTTP request(solicitação HTTP)</strong> é enviada do seu navegador para o servidor de destino.</p>
+<p>Navegadores comunicam-se com  <a href="/en-US/docs/Learn/Common_questions/What_is_a_web_server">web servers</a>  utilizando o <strong>H</strong>yper<strong>T</strong>ext <strong>T</strong>ransfer <strong>P</strong>rotocol ({{glossary("HTTP")}}). Quando você clica em um link em uma página da web, envia um formulário ou faz uma pesquisa, uma <strong>HTTP request(solicitação HTTP)</strong> é enviada do seu navegador para o servidor de destino.</p>
 
-<p dir="ltr" id="tw-target-text">A solicitação inclui uma URL que identifica o recurso afetado, um método que define a ação necessária (por exemplo, para obter, excluir ou postar o recurso) e pode incluir informações adicionais codificadas em parâmetros de URL(Os pares field-value(campo-valor) são enviados por meio de uma <a href="https://en.wikipedia.org/wiki/Query_string">query string</a>), como dados POST (dados enviados pelo método <a href="/en-US/docs/Web/HTTP/Methods/POST">HTTP POST </a>), ou em associado {{glossary("Cookie", "cookies")}} .</p>
+<p dir="ltr" id="tw-target-text">A solicitação inclui uma URL que identifica o recurso afetado, um método que define a ação necessária (por exemplo, para obter, excluir ou postar o recurso) e pode incluir informações adicionais codificadas em parâmetros de URL(Os pares field-value(campo-valor) são enviados por meio de uma <a href="https://en.wikipedia.org/wiki/Query_string">query string</a>), como dados POST (dados enviados pelo método <a href="/en-US/docs/Web/HTTP/Methods/POST">HTTP POST </a>), ou em associado {{glossary("Cookie", "cookies")}} .</p>
 
-<p>Os servidores da web esperam por mensagens de solicitação do cliente, processam-nas quando chegam e respondem ao navegador da web com uma mensagem <strong>HTTP response</strong> . A resposta contém uma linha de status indicando se a solicitação foi bem-sucedida ou não (e.g. "HTTP/1.1 200 OK" for success). </p>
+<p>Os servidores da web esperam por mensagens de solicitação do cliente, processam-nas quando chegam e respondem ao navegador da web com uma mensagem <strong>HTTP response</strong> . A resposta contém uma linha de status indicando se a solicitação foi bem-sucedida ou não (e.g. "HTTP/1.1 200 OK" for success). </p>
 
 <p dir="ltr" id="tw-target-text">O corpo de uma resposta bem-sucedida a uma solicitação conteria o recurso solicitado (por exemplo, uma nova página HTML ou uma imagem, etc ...), que poderia então ser exibido pelo navegador.</p>
 
@@ -55,17 +55,17 @@ original_slug: Learn/Server-side/First_steps/Introdução
 
 <p>O diagrama abaixo mostra uma arquitetura básica de servidor da web para um site estático (um site estático é aquele que retorna o mesmo conteúdo embutido em código do servidor sempre que um determinado recurso é solicitado). Quando um usuário deseja navegar para uma página, o navegador envia uma solicitação HTTP "GET" especificando seu URL.</p>
 
-<p>O servidor recupera o documento solicitado de seu sistema de arquivos e retorna uma resposta HTTP contendo o documento e um <a href="/en-US/docs/Web/HTTP/Status#Successful_responses">success status</a> (geralmente, 200 OK). Se o arquivo não puder ser recuperado por algum motivo, um status de erro será retornado(Veja <a href="/en-US/docs/Web/HTTP/Status#Client_error_responses">client error responses</a> e <a href="/en-US/docs/Web/HTTP/Status#Server_error_responses">server error responses</a>).</p>
+<p>O servidor recupera o documento solicitado de seu sistema de arquivos e retorna uma resposta HTTP contendo o documento e um <a href="/en-US/docs/Web/HTTP/Status#Successful_responses">success status</a> (geralmente, 200 OK). Se o arquivo não puder ser recuperado por algum motivo, um status de erro será retornado(Veja <a href="/en-US/docs/Web/HTTP/Status#Client_error_responses">client error responses</a> e <a href="/en-US/docs/Web/HTTP/Status#Server_error_responses">server error responses</a>).</p>
 
 <p><img alt="A simplified diagram of a static web server." src="https://mdn.mozillademos.org/files/13841/Basic%20Static%20App%20Server.png" style="height: 223px; width: 800px;"></p>
 
 <h3 id="Sites_dinâmicos">Sites dinâmicos</h3>
 
-<p>Um site dinâmico é aquele em que parte do conteúdo da resposta é gerado dinamicamente, apenas quando necessário. Em um site dinâmico, as páginas HTML são normalmente criadas inserindo dados de um banco de dados em espaços reservados em modelos HTML (essa é uma maneira muito mais eficiente de armazenar grandes quantidades de conteúdo do que usar sites estáticos). </p>
+<p>Um site dinâmico é aquele em que parte do conteúdo da resposta é gerado dinamicamente, apenas quando necessário. Em um site dinâmico, as páginas HTML são normalmente criadas inserindo dados de um banco de dados em espaços reservados em modelos HTML (essa é uma maneira muito mais eficiente de armazenar grandes quantidades de conteúdo do que usar sites estáticos). </p>
 
 <p>Um site dinâmico pode retornar dados diferentes para um URL com base nas informações fornecidas pelo usuário ou preferências armazenadas e pode realizar outras operações como parte do retorno de uma resposta (e.g. enviando notificações).</p>
 
-<p>A maior parte do código para oferecer suporte a um site dinâmico deve ser executado no servidor. A criação desse código é denominado "<strong>server-side programming</strong>" (ou às vezes "<strong>back-end scripting</strong>").</p>
+<p>A maior parte do código para oferecer suporte a um site dinâmico deve ser executado no servidor. A criação desse código é denominado "<strong>server-side programming</strong>" (ou às vezes "<strong>back-end scripting</strong>").</p>
 
 <p>O diagrama abaixo mostra uma arquitetura simples para um site dinâmico. Como no diagrama anterior, os navegadores enviam solicitações HTTP para o servidor, então o servidor processa as solicitações e retorna as respostas HTTP apropriadas.</p>
 
@@ -83,26 +83,26 @@ original_slug: Learn/Server-side/First_steps/Introdução
 
 <ul>
  <li>Eles têm objetivos e propósitos diferentes.</li>
- <li>Eles geralmente não usam as mesmas linguagens de programação (exceto JavaScript, que pode ser utilizado tanto no lado do servidor quanto no lado do cliente).</li>
+ <li>Eles geralmente não usam as mesmas linguagens de programação (exceto JavaScript, que pode ser utilizado tanto no lado do servidor quanto no lado do cliente).</li>
  <li>Eles são executados em diferentes ambientes do sistema operacional.</li>
 </ul>
 
-<p>O código em execução no navegador  é conhecido como <strong>client-side code </strong>e se preocupa principalmente em melhorar a aparência e o comportamento de uma página da web renderizada. Isso inclui selecionar e definir o estilo dos componentes da IU, criação de layouts, navegação, validação de formulário etc. Por outro lado, a programação do site do lado do servidor envolve principalmente a escolha de qual conteúdo é retornado ao navegador em resposta às solicitações. O código do lado do servidor lida com tarefas como validação de dados e solicitações enviadas, usando bancos de dados para armazenar e recuperar dados e enviar os dados corretos para o cliente conforme necessário.</p>
+<p>O código em execução no navegador  é conhecido como <strong>client-side code </strong>e se preocupa principalmente em melhorar a aparência e o comportamento de uma página da web renderizada. Isso inclui selecionar e definir o estilo dos componentes da IU, criação de layouts, navegação, validação de formulário etc. Por outro lado, a programação do site do lado do servidor envolve principalmente a escolha de qual conteúdo é retornado ao navegador em resposta às solicitações. O código do lado do servidor lida com tarefas como validação de dados e solicitações enviadas, usando bancos de dados para armazenar e recuperar dados e enviar os dados corretos para o cliente conforme necessário.</p>
 
-<p>O código do lado do cliente é geralmente escrito em <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, e <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> — ele é executado dentro de um navegador da web e tem pouco ou nenhum acesso ao sistema operacional subjacente (incluindo acesso limitado ao sistema de arquivos)</p>
+<p>O código do lado do cliente é geralmente escrito em <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, e <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> — ele é executado dentro de um navegador da web e tem pouco ou nenhum acesso ao sistema operacional subjacente (incluindo acesso limitado ao sistema de arquivos)</p>
 
 <p>Os desenvolvedores da Web não podem controlar qual navegador cada usuário pode estar usando para visualizar um site - os navegadores fornecem níveis inconsistentes de compatibilidade com recursos de código do lado do cliente, e parte do desafio da programação do lado do cliente é lidar com as diferenças no suporte do navegador de maneira elegante.</p>
 
-<p>O código do lado do servidor pode ser escrito algumas linguagens de programação - exemplos de linguagens da web do lado do servidor populares incluem PHP, Python, Ruby, C # e NodeJS (JavaScript). O código do lado do servidor tem acesso total ao sistema operacional do servidor e o desenvolvedor pode escolher qual linguagem de programação (e versão específica) deseja usar.</p>
+<p>O código do lado do servidor pode ser escrito algumas linguagens de programação - exemplos de linguagens da web do lado do servidor populares incluem PHP, Python, Ruby, C # e NodeJS (JavaScript). O código do lado do servidor tem acesso total ao sistema operacional do servidor e o desenvolvedor pode escolher qual linguagem de programação (e versão específica) deseja usar.</p>
 
-<p>Desenvolvedores geralmente escrevem seus códigos utilizando <strong>web frameworks</strong>. Frameworks Web são coleções de funções, objetos, regras e outras construções de código projetadas para resolver problemas comuns, acelerar o desenvolvimento e simplificar os diferentes tipos de tarefas enfrentadas em um domínio específico.</p>
+<p>Desenvolvedores geralmente escrevem seus códigos utilizando <strong>web frameworks</strong>. Frameworks Web são coleções de funções, objetos, regras e outras construções de código projetadas para resolver problemas comuns, acelerar o desenvolvimento e simplificar os diferentes tipos de tarefas enfrentadas em um domínio específico.</p>
 
-<p>Novamente, embora o código do lado do cliente e do servidor usem frameworks, os domínios são muito diferentes e, portanto, os frameworks também são. Os frameworks web do lado do cliente simplificam as tarefas de layout e apresentação, enquanto os frameworks web do lado do servidor fornecem muitas funcionalidades de servidor da web "comuns" que você mesmo poderia ter que implementar (por exemplo, suporte para sessões, suporte para usuários e autenticação, fácil acesso ao banco de dados, bibliotecas de modelos, etc.).</p>
+<p>Novamente, embora o código do lado do cliente e do servidor usem frameworks, os domínios são muito diferentes e, portanto, os frameworks também são. Os frameworks web do lado do cliente simplificam as tarefas de layout e apresentação, enquanto os frameworks web do lado do servidor fornecem muitas funcionalidades de servidor da web "comuns" que você mesmo poderia ter que implementar (por exemplo, suporte para sessões, suporte para usuários e autenticação, fácil acesso ao banco de dados, bibliotecas de modelos, etc.).</p>
 
 <div class="note">
-<p><strong>Nota </strong>: Os frameworks do lado do cliente costumam ser usados para ajudar a acelerar o desenvolvimento do código do lado do cliente, mas você também pode escolher escrever todo o código manualmente; na verdade, escrever seu código manualmente pode ser mais rápido e eficiente se você precisar apenas de uma IU de site da Web pequena e simples.</p>
+<p><strong>Nota </strong>: Os frameworks do lado do cliente costumam ser usados para ajudar a acelerar o desenvolvimento do código do lado do cliente, mas você também pode escolher escrever todo o código manualmente; na verdade, escrever seu código manualmente pode ser mais rápido e eficiente se você precisar apenas de uma IU de site da Web pequena e simples.</p>
 
-<p>Em contraste, você quase nunca pensaria em escrever o componente do lado do servidor de um web application sem um framework - implementar um recurso vital como um servidor HTTP é realmente difícil de fazer do zero em, digamos, Python, mas frameworks web em Python como Django fornecem essa ferramenta , junto com outras ferramentas muito úteis.</p>
+<p>Em contraste, você quase nunca pensaria em escrever o componente do lado do servidor de um web application sem um framework - implementar um recurso vital como um servidor HTTP é realmente difícil de fazer do zero em, digamos, Python, mas frameworks web em Python como Django fornecem essa ferramenta , junto com outras ferramentas muito úteis.</p>
 </div>
 
 <div>
@@ -121,17 +121,17 @@ original_slug: Learn/Server-side/First_steps/Introdução
 
 <p>Imagine quantos produtos estão disponíveis na Amazon e quantas postagens foram escritas no Facebook? Criar uma página estática separada para cada produto ou postagem seria completamente impraticável.</p>
 
-<p>A programação do lado do servidor nos permite, em vez disso, armazenar as informações em um banco de dados e construir e retornar dinamicamente HTML e outros tipos de arquivos (por exemplo, PDFs, imagens, etc.). Também é possível simplesmente retornar dados ({{glossary("JSON")}}, {{glossary("XML")}}, etc.) para renderização por frameworks web do lado do cliente apropriados (isso reduz a carga de processamento em um servidor e a quantidade de dados que precisa ser enviada).</p>
+<p>A programação do lado do servidor nos permite, em vez disso, armazenar as informações em um banco de dados e construir e retornar dinamicamente HTML e outros tipos de arquivos (por exemplo, PDFs, imagens, etc.). Também é possível simplesmente retornar dados ({{glossary("JSON")}}, {{glossary("XML")}}, etc.) para renderização por frameworks web do lado do cliente apropriados (isso reduz a carga de processamento em um servidor e a quantidade de dados que precisa ser enviada).</p>
 
-<p>O servidor não se limita a enviar informações de bancos de dados e pode, alternativamente, retornar o resultado de ferramentas de software ou dados de serviços de comunicação. O conteúdo pode até ser direcionado para o tipo de dispositivo que o cliente está recebendo.</p>
+<p>O servidor não se limita a enviar informações de bancos de dados e pode, alternativamente, retornar o resultado de ferramentas de software ou dados de serviços de comunicação. O conteúdo pode até ser direcionado para o tipo de dispositivo que o cliente está recebendo.</p>
 
 <p>Como as informações estão em um banco de dados, elas também podem ser mais facilmente compartilhadas e atualizadas com outros sistemas de negócios (por exemplo, quando os produtos são vendidos online ou em uma loja, a loja pode atualizar seu banco de dados de estoque).</p>
 
 <div class="note">
-<p><strong>Nota </strong>: Sua imaginação não precisa trabalhar muito para ver os benefícios do código do lado do servidor para armazenamento e entrega eficientes de informações:</p>
+<p><strong>Nota </strong>: Sua imaginação não precisa trabalhar muito para ver os benefícios do código do lado do servidor para armazenamento e entrega eficientes de informações:</p>
 
 <ol>
- <li>Vá em <a href="https://www.amazon.com">Amazon</a> ou em outro site comercial.</li>
+ <li>Vá em <a href="https://www.amazon.com">Amazon</a> ou em outro site comercial.</li>
  <li>Pesquise várias palavras-chave e observe como a estrutura da página não muda, embora os resultados mudem.</li>
  <li>Abra dois ou três produtos diferentes. Observe novamente como eles têm uma estrutura e layout comuns, mas o conteúdo de diferentes produtos foi retirado do banco de dados.</li>
 </ol>
@@ -141,7 +141,7 @@ original_slug: Learn/Server-side/First_steps/Introdução
 
 <h3 id="Experiência_de_usuário_personalizada">Experiência de usuário personalizada</h3>
 
-<p>Os servidores podem armazenar e usar informações sobre clientes para fornecer uma experiência de usuário conveniente e personalizada. Por exemplo, muitos sites armazenam cartões de crédito para que os detalhes não tenham que ser inseridos novamente. Sites como o Google Maps podem usar locais salvos ou atuais para fornecer informações de rota e pesquisar o histórico de viagens para destacar empresas locais nos resultados de pesquisa.</p>
+<p>Os servidores podem armazenar e usar informações sobre clientes para fornecer uma experiência de usuário conveniente e personalizada. Por exemplo, muitos sites armazenam cartões de crédito para que os detalhes não tenham que ser inseridos novamente. Sites como o Google Maps podem usar locais salvos ou atuais para fornecer informações de rota e pesquisar o histórico de viagens para destacar empresas locais nos resultados de pesquisa.</p>
 
 <p>Uma análise mais profunda dos hábitos do usuário pode ser usada para antecipar seus interesses e personalizar ainda mais as respostas e notificações, por exemplo, fornecendo uma lista de locais visitados anteriormente ou que você pode querer ver em um mapa.</p>
 
@@ -151,8 +151,8 @@ original_slug: Learn/Server-side/First_steps/Introdução
 <p>Os resultados de pesquisa do Google são otimizados com base em pesquisas anteriores.</p>
 
 <ol>
- <li> Vá em <a href="https:\\google.com">Google search</a>.</li>
- <li> Pesquise por "futeboll".</li>
+ <li> Vá em <a href="https:\\google.com">Google search</a>.</li>
+ <li> Pesquise por "futeboll".</li>
  <li>Agora tente digitar "favorito" na caixa de pesquisa e observe as previsões de pesquisa do preenchimento automático.</li>
 </ol>
 
@@ -173,7 +173,7 @@ original_slug: Learn/Server-side/First_steps/Introdução
 </ul>
 
 <div class="note">
-<p><strong>Nota </strong>: Considere outros exemplos reais em que o acesso ao conteúdo é controlado. Por exemplo, o que você pode ver se acessar o site online do seu banco? Faça login em sua conta - quais informações adicionais você pode ver e modificar? Quais informações você pode ver que somente o banco pode alterar?</p>
+<p><strong>Nota </strong>: Considere outros exemplos reais em que o acesso ao conteúdo é controlado. Por exemplo, o que você pode ver se acessar o site online do seu banco? Faça login em sua conta - quais informações adicionais você pode ver e modificar? Quais informações você pode ver que somente o banco pode alterar?</p>
 </div>
 
 <h3 id="Sessão_de_armazenamento_informações_de_estado">Sessão de armazenamento / informações de estado</h3>
@@ -222,9 +222,9 @@ original_slug: Learn/Server-side/First_steps/Introdução
 
 <p>Você também deve entender que é útil porque nos permite criar sites que fornecem informações sob medida para usuários individuais de forma eficiente e têm uma boa ideia de algumas das coisas que você pode fazer quando for um programador do lado do servidor.</p>
 
-<p>Por último, você deve entender que o código do lado do servidor pode ser escrito em várias linguagens de programação e que você deve usar um framewoek web para tornar todo o processo mais fácil.</p>
+<p>Por último, você deve entender que o código do lado do servidor pode ser escrito em várias linguagens de programação e que você deve usar um framewoek web para tornar todo o processo mais fácil.</p>
 
-<p>Em um artigo futuro, ajudaremos você a escolher o melhor framework web para seu primeiro site. Aqui, vamos levá-lo pelas principais interações cliente-servidor com um pouco mais de detalhes.</p>
+<p>Em um artigo futuro, ajudaremos você a escolher o melhor framework web para seu primeiro site. Aqui, vamos levá-lo pelas principais interações cliente-servidor com um pouco mais de detalhes.</p>
 
 <p>{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}</p>
 

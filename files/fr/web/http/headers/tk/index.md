@@ -22,15 +22,17 @@ L'entête de réponse `Tk` indique le statut de suivi (tracking) qui s'applique 
 
 ## Syntaxe
 
-    Tk: !  (en construction)
-    Tk: ?  (dynamique)
-    Tk: G  (passerelle ou multiples parties)
-    Tk: N  (pas de suivi)
-    Tk: T  (suivi)
-    Tk: C  (suivi avec consentement)
-    Tk: P  (consentement potentiel)
-    Tk: D  (ne tient pas compte de DNT)
-    Tk: U  (mis à jour)
+```
+Tk: !  (en construction)
+Tk: ?  (dynamique)
+Tk: G  (passerelle ou multiples parties)
+Tk: N  (pas de suivi)
+Tk: T  (suivi)
+Tk: C  (suivi avec consentement)
+Tk: P  (consentement potentiel)
+Tk: D  (ne tient pas compte de DNT)
+Tk: U  (mis à jour)
+```
 
 ### Directives
 
@@ -57,7 +59,9 @@ L'entête de réponse `Tk` indique le statut de suivi (tracking) qui s'applique 
 
 Un entête `Tk` pour une ressource qui prétend ne pas être suivie :
 
-    Tk: N
+```
+Tk: N
+```
 
 ## Specifications
 

@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStrea
 
 <dl>
  <dt><em>source</em></dt>
- <dd>Промис, или {{domxref("Response")}}, который будет выполнен с одним, представляющим основной источник модулем <code>.wasm</code>, который вы хотите передать и скомпилировать.</dd>
+ <dd>Промис, или {{domxref("Response")}}, который будет выполнен с одним, представляющим основной источник модулем <code>.wasm</code>, который вы хотите передать и скомпилировать.</dd>
 </dl>
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
@@ -25,14 +25,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStrea
 <h3 id="Исключения">Исключения</h3>
 
 <ul>
- <li>Если <code>bufferSource</code> не является <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a>, генерируется {{jsxref("TypeError")}}.</li>
+ <li>Если <code>bufferSource</code> не является <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a>, генерируется {{jsxref("TypeError")}}.</li>
  <li>Если компиляция не удалась, промис отклоняется с помощью {{jsxref("WebAssembly.CompileError")}}.</li>
 </ul>
 
 <h2 id="Примеры">Примеры</h2>
 
 <p>Следующий пример (см. Нашу демонстрацию <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/compile-streaming.html">compile-streaming.html</a> на GitHub и <a href="https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html">view it live</a>) напрямую передаёт модуль .wasm из исходника, затем компилирует его в объект {{jsxref("WebAssembly.Module")}}.<br>
- Поскольку функция <code>compileStreaming()</code> принимает промис для объекта {{domxref("Response")}}, вы можете напрямую передать ему вызов {{domxref("WindowOrWorkerGlobalScope.fetch()")}}, и он передаст ответ в выполняемую функцию.</p>
+ Поскольку функция <code>compileStreaming()</code> принимает промис для объекта {{domxref("Response")}}, вы можете напрямую передать ему вызов {{domxref("WindowOrWorkerGlobalScope.fetch()")}}, и он передаст ответ в выполняемую функцию.</p>
 
 <pre class="brush: js">var importObject = { imports: { imported_func: arg =&gt; console.log(arg) } };
 
@@ -56,7 +56,7 @@ WebAssembly.compileStreaming(fetch('simple.wasm'))
   <tr>
    <td>{{SpecName('WebAssembly Embedding', '#webassemblycompilestreaming', 'compileStreaming()')}}</td>
    <td>{{Spec2('WebAssembly Embedding')}}</td>
-   <td>Первоначальное определение <br>
+   <td>Первоначальное определение <br>
     проекта.</td>
   </tr>
  </tbody>

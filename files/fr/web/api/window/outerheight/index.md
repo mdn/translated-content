@@ -11,7 +11,9 @@ Cette propriété n'a pas de valeur par défaut.
 
 Syntaxe
 
-    outWindowHeight = window.outerHeight;
+```js
+outWindowHeight = window.outerHeight;
+```
 
 La valeur retournée correspond à la hauteur extérieure de la fenêtre.
 
@@ -29,13 +31,11 @@ La figure suivante montre la différence entre `outerHeight` et `innerHeight`.
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{ SpecName('CSSOM View', '#dom-window-outerheight', 'Window.outerHeight') }} | {{ Spec2('CSSOM View') }} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.outerHeight")}}
+{{Compat}}
 
 ## Voir aussi
 

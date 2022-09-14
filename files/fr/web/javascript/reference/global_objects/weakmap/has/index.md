@@ -19,7 +19,9 @@ La méthode **`has()`** renvoie un booléen qui indique s'il existe (ou non) un 
 
 ## Syntaxe
 
-    wm.has(clé);
+```js
+wm.has(clé);
+```
 
 ### Paramètre
 

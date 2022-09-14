@@ -1,15 +1,6 @@
 ---
 title: display
 slug: Web/CSS/display
-tags:
-  - CSS
-  - CSS 表示方法
-  - CSS プロパティ
-  - リファレンス
-  - display
-  - recipe:css-property
-browser-compat: css.properties.display
-translation_of: Web/CSS/display
 ---
 {{CSSRef}}
 
@@ -100,7 +91,6 @@ display: unset;
       - : 要素は、インライン要素のように動作しつつ、そのコンテンツをルビ (ruby) モデルに従ってレイアウトします。HTML の {{HTMLElement("ruby")}} 要素のように動作します。
 
 > **Note:** 2 値の構文に対応しているブラウザーは、 `display: flex` や `display: grid` などの内側の表示種別のみが指定されていると、外側の表示種別を `block` に設定します。これで期待通りに動作します。例えば、ある要素を `display: grid` に指定した場合、そのボックスはブロックレベルボックスのグリッドコンテナーとして生成されることが期待されるでしょう。
-
 
 ### リスト項目
 
@@ -219,7 +209,7 @@ display: unset;
 
 ## 解説
 
-`display` に設定できる様々な種類の値の個々のページでは、それらの値が動作する機能の複数の例をを設定しています。 — {{anch("構文")}}の節を参照してください。なお、 display の様々な値については、以下の資料で詳しく解説していますので、ご覧ください。
+`display` に設定できる様々な種類の値の個々のページでは、それらの値が動作する機能の複数の例をを設定しています。 — [構文](#構文)の節を参照してください。なお、 display の様々な値については、以下の資料で詳しく解説していますので、ご覧ください。
 
 - [display の 2 値構文への対応](/ja/docs/Web/CSS/display/two-value_syntax_of_display)
 

@@ -17,7 +17,9 @@ Cette propriété est en lecture seule ; elle n'a pas de valeur par défaut.
 
 ## Syntaxe
 
-    largeurExterieureFenetre = window.outerWidth;
+```js
+largeurExterieureFenetre = window.outerWidth;
+```
 
 Lors du retour, `largeurExterieureFenetre` vaut la largeur de l'extérieur de la fenêtre.
 
@@ -29,13 +31,11 @@ Pour récupérer la largeur interne d'une fenêtre, c'est-à-dire la largeur de 
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{ SpecName('CSSOM View', '#dom-window-outerwidth', 'Window.outerWidth') }} | {{ Spec2('CSSOM View') }} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.outerWidth")}}
+{{Compat}}
 
 ## Voir aussi
 

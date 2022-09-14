@@ -1,15 +1,6 @@
 ---
 title: box-pack
 slug: Web/CSS/box-pack
-tags:
-  - CSS
-  - CSS プロパティ
-  - 標準外
-  - リファレンス
-  - box-pack
-  - recipe:css-property
-browser-compat: css.properties.box-pack
-translation_of: Web/CSS/box-pack
 ---
 {{CSSRef}}{{Non-standard_header}}
 
@@ -113,8 +104,8 @@ div.example {
   -webkit-box-align: center; /* WebKit */
 
   /* 子をこのボックスの下にまとめる */
-  -moz-box-pack: end;             /* Mozilla */
-  -webkit-box-pack: end;          /* WebKit */
+  -moz-box-pack: end;             /* Mozilla */
+  -webkit-box-pack: end;          /* WebKit */
 }
 
 div.example p {

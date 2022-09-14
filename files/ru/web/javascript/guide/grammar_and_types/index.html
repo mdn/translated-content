@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Guide/Grammar_and_types
 <p>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}</p>
 
 <div class="summary">
-<p>В данной главе рассматриваются базовая грамматика, объявление переменных, типы данных и литералы.</p>
+<p>В данной главе рассматриваются базовая грамматика, объявление переменных, типы данных и литералы.</p>
 </div>
 
 <h2 id="Основы">Основы</h2>
@@ -22,7 +22,7 @@ translation_of: Web/JavaScript/Guide/Grammar_and_types
 
 <p>Но, переменная <code>früh</code> не то же самое что <code>Früh</code> потому что JavaScript чувствителен к регистру.</p>
 
-<p>В JavaScript инструкции называются {{Glossary("Statement", "statements")}} и разделяются точкой с запятой (;). Пробел (space), табуляция (tab) и перевод строки (newline) называются пробельными символами (whitespace). Исходный текст скриптов на JavaScript сканируется слева направо и конвертируется в последовательность входных элементов, являющихся токенами (tokens), управляющими символами, символами конца строки, комментариями или пробельными символами. ECMAScript также определяет некоторые ключевые слова и литералы и устанавливает правила для автоматической вставки точек с запятой (<a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion">ASI</a>), чтобы обозначить конец инструкций (statements). Однако, рекомендуется всегда ставить точку с запятой в конце каждой инструкции вручную, чтобы избежать побочных эффектов. Чтобы получить более подробную информацию, прочитайте <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Lexical_grammar">Lexical Grammar</a>.</p>
+<p>В JavaScript инструкции называются {{Glossary("Statement", "statements")}} и разделяются точкой с запятой (;). Пробел (space), табуляция (tab) и перевод строки (newline) называются пробельными символами (whitespace). Исходный текст скриптов на JavaScript сканируется слева направо и конвертируется в последовательность входных элементов, являющихся токенами (tokens), управляющими символами, символами конца строки, комментариями или пробельными символами. ECMAScript также определяет некоторые ключевые слова и литералы и устанавливает правила для автоматической вставки точек с запятой (<a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion">ASI</a>), чтобы обозначить конец инструкций (statements). Однако, рекомендуется всегда ставить точку с запятой в конце каждой инструкции вручную, чтобы избежать побочных эффектов. Чтобы получить более подробную информацию, прочитайте <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Lexical_grammar">Lexical Grammar</a>.</p>
 
 <h2 id="Комментарии">Комментарии</h2>
 
@@ -51,29 +51,29 @@ translation_of: Web/JavaScript/Guide/Grammar_and_types
 
 <h3 id="Переменные">Переменные</h3>
 
-<p>Вы можете использовать переменные как символические имена для значений в вашем приложении. Имена переменных называются {{Glossary("Identifier", "identifiers")}} и должны соответствовать определённым правилам.</p>
+<p>Вы можете использовать переменные как символические имена для значений в вашем приложении. Имена переменных называются {{Glossary("Identifier", "identifiers")}} и должны соответствовать определённым правилам.</p>
 
 <p>Идентификатор в JavaScript должен начинаться с буквы, нижнего подчёркивания (_) или знака доллара ($); последующие символы могут также быть цифрами (0-9). Поскольку JavaScript чувствителен к регистру, буквы включают символы от "A" до "Z" (верхний регистр) и символы от "a" до "z" (нижний регистр).</p>
 
-<p>Вы можете использовать в идентификаторах буквы ISO 8859-1 или Unicode, например, å или ü. Вы также можете использовать<a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals"> управляющие последовательности Unicode</a> как символы в идентификаторах.</p>
+<p>Вы можете использовать в идентификаторах буквы ISO 8859-1 или Unicode, например, å или ü. Вы также можете использовать<a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals"> управляющие последовательности Unicode</a> как символы в идентификаторах.</p>
 
-<p>Некоторые примеры корректных имён: <code style="font-style: normal;">Number_hits</code>, <code style="font-style: normal;">temp99</code>,  <code style="font-style: normal;">_name</code>.</p>
+<p>Некоторые примеры корректных имён: <code style="font-style: normal;">Number_hits</code>, <code style="font-style: normal;">temp99</code>,  <code style="font-style: normal;">_name</code>.</p>
 
 <h3 id="Объявление_переменных">Объявление переменных</h3>
 
 <p>Вы можете объявить переменную тремя способами:</p>
 
 <ul>
- <li>Используя ключевое слово {{jsxref("Statements/var", "var")}}. Например, <code>var x = 42</code>. Данный синтаксис может быть использован для объявления как локальных, так и глобальных переменных.</li>
- <li>Просто присвоить переменной значение. Например, <code>x = 42</code>. Переменные, объявленные данным способом, являются глобальными. Такое объявление генерирует <a href="/ru/docs/Web/JavaScript/Reference/Strict_mode">строгое предупреждение</a>  (<a href="/ru/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>). Не рекомендуется использовать данный способ.</li>
- <li>Используя ключевое слово {{jsxref("Statements/let", "let")}}. Например, <code>let y = 13</code>. Данный синтаксис может быть использован для объявления локальной переменной в области видимости блока.</li>
+ <li>Используя ключевое слово {{jsxref("Statements/var", "var")}}. Например, <code>var x = 42</code>. Данный синтаксис может быть использован для объявления как локальных, так и глобальных переменных.</li>
+ <li>Просто присвоить переменной значение. Например, <code>x = 42</code>. Переменные, объявленные данным способом, являются глобальными. Такое объявление генерирует <a href="/ru/docs/Web/JavaScript/Reference/Strict_mode">строгое предупреждение</a>  (<a href="/ru/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>). Не рекомендуется использовать данный способ.</li>
+ <li>Используя ключевое слово {{jsxref("Statements/let", "let")}}. Например, <code>let y = 13</code>. Данный синтаксис может быть использован для объявления локальной переменной в области видимости блока.</li>
 </ul>
 
-<h3 id="Присваивание_значений">Присваивание значений</h3>
+<h3 id="Присваивание_значений">Присваивание значений</h3>
 
-<p>Переменная, объявленная через <code>var</code> или <code>let</code> без присвоения начального значения, имеет значение {{jsxref("undefined")}}.</p>
+<p>Переменная, объявленная через <code>var</code> или <code>let</code> без присвоения начального значения, имеет значение {{jsxref("undefined")}}.</p>
 
-<p>При попытке доступа к необъявленной переменной или переменной до её объявления будет выброшено исключение {{jsxref("ReferenceError")}}:​</p>
+<p>При попытке доступа к необъявленной переменной или переменной до её объявления будет выброшено исключение {{jsxref("ReferenceError")}}:​</p>
 
 <pre class="brush: js">var a;
 console.log("The value of a is " + a); //Значение переменной a undefined
@@ -86,7 +86,7 @@ var c;
 console.log("The value of x is " + x); //Uncaught ReferenceError: x не определена
 let x; </pre>
 
-<p>Вы можете использовать <code>undefined</code>, чтобы определить, имеет ли переменная значение. В следующем примере переменной <code>input</code> не присвоено значение, и оператор <code>if</code> будет вычислен как <code>true</code>:</p>
+<p>Вы можете использовать <code>undefined</code>, чтобы определить, имеет ли переменная значение. В следующем примере переменной <code>input</code> не присвоено значение, и оператор <code>if</code> будет вычислен как <code>true</code>:</p>
 
 <pre class="brush: js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">var</span> input<span class="punctuation token" style="color: #999999;">;</span>
 <span class="keyword token" style="color: #0077aa;">if </span><span class="punctuation token" style="color: #999999;">(</span>input <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">===</span> undefined<span class="punctuation token" style="color: #999999;">) </span><span class="punctuation token" style="color: #999999;">{</span>
@@ -95,7 +95,7 @@ let x; </pre>
   <span class="function token" style="color: #dd4a68;">doThat<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
 <span class="punctuation token" style="color: #999999;">}</span></code></pre>
 
-<p>Значение <code>undefined</code> ведёт себя как <code>false</code>, когда используется в логическом контексте. Например, следующий код выполняет функцию <code>myFunction</code>, т.к. элемент <code>myArray</code> не определён:</p>
+<p>Значение <code>undefined</code> ведёт себя как <code>false</code>, когда используется в логическом контексте. Например, следующий код выполняет функцию <code>myFunction</code>, т.к. элемент <code>myArray</code> не определён:</p>
 
 <pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">var</span> myArray <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="punctuation token" style="color: #999999;">[</span><span class="punctuation token" style="color: #999999;">]</span><span class="punctuation token" style="color: #999999;">;</span>
 <span class="keyword token" style="color: #0077aa;">if</span> <span class="punctuation token" style="color: #999999;">(</span><span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">!</span>myArray<span class="punctuation token" style="color: #999999;">[</span><span class="number token" style="color: #990055;">0</span><span class="punctuation token" style="color: #999999;">]</span><span class="punctuation token" style="color: #999999;">)</span> {
@@ -117,7 +117,7 @@ console<span class="punctuation token" style="color: #999999;">.</span><span cla
 
 <p>Когда вы объявляете переменную вне функции, то такая переменная называется <em>глобальной</em> переменной, т.к. доступна любому коду в текущем документе. Когда вы объявляете переменную внутри функции, то такая переменная называется <em>локальной</em> переменной, т.к. доступна только внутри данной функции.</p>
 
-<p>До ECMAScript 6 в JavaScript отсутствовала область видимости <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Statements">блока</a>; переменная, объявленная внутри блока, является локальной для <em><strong>функции </strong></em>(или <em>глобальной</em> области видимости), внутри которой находится данный блок. Например, следующий код выведет значение 5, т.к. областью видимости переменной <code>x</code> является функция (или глобальный контекст), внутри которой объявлена переменная <code>x</code>, а <em><strong>не блок</strong>,</em> которым в данном случае является оператор <code>if</code>:</p>
+<p>До ECMAScript 6 в JavaScript отсутствовала область видимости <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Statements">блока</a>; переменная, объявленная внутри блока, является локальной для <em><strong>функции </strong></em>(или <em>глобальной</em> области видимости), внутри которой находится данный блок. Например, следующий код выведет значение 5, т.к. областью видимости переменной <code>x</code> является функция (или глобальный контекст), внутри которой объявлена переменная <code>x</code>, а <em><strong>не блок</strong>,</em> которым в данном случае является оператор <code>if</code>:</p>
 
 <pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">if</span> <span class="punctuation token" style="color: #999999;">(</span><span class="keyword token" style="color: #0077aa;">true</span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
   <span class="keyword token" style="color: #0077aa;">var</span> x <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="number token" style="color: #990055;">5</span><span class="punctuation token" style="color: #999999;">;</span>
@@ -171,9 +171,9 @@ console<span class="punctuation token" style="color: #999999;">.</span><span cla
 </span>  myvar <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="string token" style="color: #669900;">"local value"</span><span class="punctuation token" style="color: #999999;">;</span>
 <span class="punctuation token" style="color: #999999;">}</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">(</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span></code></pre>
 
-<p>Из-за поднятия переменных, все операторы <code>var</code> в функции следует размещать настолько близко к началу функции, насколько это возможно. Следование этому правилу улучшает ясность кода.</p>
+<p>Из-за поднятия переменных, все операторы <code>var</code> в функции следует размещать настолько близко к началу функции, насколько это возможно. Следование этому правилу улучшает ясность кода.</p>
 
-<p>В ECMAScript 2015, <code>let (const)</code> <strong>не будет подниматься </strong>вверх блока. Однако, ссылки на переменную в блоке до объявления переменной вызовут  {{jsxref("ReferenceError")}}<code>.</code> Переменная во "временной мёртвой зоне" в начале блока, до объявления.</p>
+<p>В ECMAScript 2015, <code>let (const)</code> <strong>не будет подниматься </strong>вверх блока. Однако, ссылки на переменную в блоке до объявления переменной вызовут  {{jsxref("ReferenceError")}}<code>.</code> Переменная во "временной мёртвой зоне" в начале блока, до объявления.</p>
 
 <pre class="brush: js">function do_something() {
   console.log(foo); // ReferenceError
@@ -201,15 +201,15 @@ var baz = function() {
 
 <h3 id="Глобальные_переменные">Глобальные переменные</h3>
 
-<p>Глобальные переменные на самом деле являются свойствами <em>глобального объекта</em>. На веб-страницах глобальным объектом является {{domxref("window")}}, поэтому вы можете устанавливать глобальные переменные и обращаться к ним, используя синтаксис <code>window.<em>variable</em></code>:</p>
+<p>Глобальные переменные на самом деле являются свойствами <em>глобального объекта</em>. На веб-страницах глобальным объектом является {{domxref("window")}}, поэтому вы можете устанавливать глобальные переменные и обращаться к ним, используя синтаксис <code>window.<em>variable</em></code>:</p>
 
 <pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">window</span></code><span style="color: #999999; font-style: inherit; font-weight: inherit; white-space: pre;">.</span><code class="language-js" style="direction: ltr; white-space: pre;">foo <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="string token" style="color: #669900;">'bar'</span><span class="punctuation token" style="color: #999999;">;</span></code></pre>
 
-<p>Следовательно, вы можете обращаться к глобальным переменным, объявленным в одном объекте window или frame из другого объекта window или frame, указав имя window или frame. Например, если переменная <code>phoneNumber</code> объявлена в документе, то вы можете сослаться на эту переменную из iframe как <code>parent.phoneNumber</code>.</p>
+<p>Следовательно, вы можете обращаться к глобальным переменным, объявленным в одном объекте window или frame из другого объекта window или frame, указав имя window или frame. Например, если переменная <code>phoneNumber</code> объявлена в документе, то вы можете сослаться на эту переменную из iframe как <code>parent.phoneNumber</code>.</p>
 
 <h3 id="Константы"><a id="Constants">Константы</a></h3>
 
-<p>Вы можете создать именованную константу, доступную только для чтения, используя ключевое слово {{jsxref("Statements/const", "const")}}. Синтаксис идентификатора константы является таким же, как и у идентификатора переменной: он должен начинаться с буквы, нижнего подчёркивания или знака $ и может содержать буквы, цифры или нижнее подчёркивание.</p>
+<p>Вы можете создать именованную константу, доступную только для чтения, используя ключевое слово {{jsxref("Statements/const", "const")}}. Синтаксис идентификатора константы является таким же, как и у идентификатора переменной: он должен начинаться с буквы, нижнего подчёркивания или знака $ и может содержать буквы, цифры или нижнее подчёркивание.</p>
 
 <pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">const</span> PREFIX <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="string token" style="color: #669900;">'212'</span><span class="punctuation token" style="color: #999999;">;</span></code></pre>
 
@@ -243,12 +243,12 @@ MY_OBJECT.key = "otherValue";</pre>
 <p>Последний стандарт ECMAScript определяет семь типов данных:</p>
 
 <ul>
- <li>Шесть типов данных,  которые являются {{Glossary("Primitive", "примитивами")}}:
+ <li>Шесть типов данных,  которые являются {{Glossary("Primitive", "примитивами")}}:
   <ul>
-   <li>{{Glossary("Boolean")}}. <code>true</code> и <code>false</code>.</li>
-   <li>{{Glossary("null")}}. Специальное ключевое слово, обозначающее нулевое или «пустое» значение. Поскольку JavaScript чувствителен к регистру, <code>null</code> не то же самое, что <code>Null</code>, <code>NULL</code> или любой другой вариант.</li>
-   <li>{{Glossary("undefined")}}. Свойство глобального объекта; переменная, не имеющая присвоенного значения, обладает типом <code style="font-style: normal;">undefined</code>.</li>
-   <li>{{Glossary("Number")}}. <code>42</code> или <code>3.14159</code>.</li>
+   <li>{{Glossary("Boolean")}}. <code>true</code> и <code>false</code>.</li>
+   <li>{{Glossary("null")}}. Специальное ключевое слово, обозначающее нулевое или «пустое» значение. Поскольку JavaScript чувствителен к регистру, <code>null</code> не то же самое, что <code>Null</code>, <code>NULL</code> или любой другой вариант.</li>
+   <li>{{Glossary("undefined")}}. Свойство глобального объекта; переменная, не имеющая присвоенного значения, обладает типом <code style="font-style: normal;">undefined</code>.</li>
+   <li>{{Glossary("Number")}}. <code>42</code> или <code>3.14159</code>.</li>
    <li>{{Glossary("String")}}. "Howdy".</li>
    <li>{{Glossary("Symbol")}} (ECMAScript 6)</li>
   </ul>
@@ -256,33 +256,33 @@ MY_OBJECT.key = "otherValue";</pre>
  <li>и {{Glossary("Object")}}</li>
 </ul>
 
-<p>Хотя типов данных относительно немного, но они позволяют вам выполнять полезные функции в ваших приложениях. {{jsxref("Object", "Объекты")}} и {{jsxref("Function", "функции")}} являются другими фундаментальными элементами языка. Вы можете думать об объектах как об именованных контейнерах для значений и о функциях как о процедурах, которые ваше приложение может исполнять.</p>
+<p>Хотя типов данных относительно немного, но они позволяют вам выполнять полезные функции в ваших приложениях. {{jsxref("Object", "Объекты")}} и {{jsxref("Function", "функции")}} являются другими фундаментальными элементами языка. Вы можете думать об объектах как об именованных контейнерах для значений и о функциях как о процедурах, которые ваше приложение может исполнять.</p>
 
 <h3 id="Преобразование_типов_данных">Преобразование типов данных</h3>
 
-<p>JavaScript — это динамически типизированный язык. Это означает, что вам не нужно указывать тип данных переменной, когда вы её объявляете, типы данных преобразуются автоматически по мере необходимости во время выполнения скрипта. Так, например, вы можете определить переменную следующим образом:</p>
+<p>JavaScript — это динамически типизированный язык. Это означает, что вам не нужно указывать тип данных переменной, когда вы её объявляете, типы данных преобразуются автоматически по мере необходимости во время выполнения скрипта. Так, например, вы можете определить переменную следующим образом:</p>
 
 <pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">var</span> answer <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="number token" style="color: #990055;">42</span><span class="punctuation token" style="color: #999999;">;</span></code></pre>
 
-<p>А позже вы можете присвоить этой переменной строковое значение, например:</p>
+<p>А позже вы можете присвоить этой переменной строковое значение, например:</p>
 
 <pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;">answer <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="string token" style="color: #669900;">"Thanks for all the fish..."</span><span class="punctuation token" style="color: #999999;">;</span></code></pre>
 
-<p>Поскольку JavaScript является динамически типизированным, это присваивание не вызовет сообщения об ошибке.</p>
+<p>Поскольку JavaScript является динамически типизированным, это присваивание не вызовет сообщения об ошибке.</p>
 
 <p>В выражениях, включающих числовые и строковые значения с оператором <code>+</code>, JavaScript преобразует числовые значения в строковые. Например:</p>
 
 <pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;">x <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="string token" style="color: #669900;">"The answer is "</span> <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">+</span> <span class="number token" style="color: #990055;">42</span><span class="comment token" style="color: #708090;"> // "The answer is 42"
 </span>y <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="number token" style="color: #990055;">42</span> <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">+</span> <span class="string token" style="color: #669900;">" is the answer"</span><span class="comment token" style="color: #708090;"> // "42 is the answer"</span></code></pre>
 
-<p>В выражениях с другими операторами JavaScript не преобразует числовые значения в строковые. Например:</p>
+<p>В выражениях с другими операторами JavaScript не преобразует числовые значения в строковые. Например:</p>
 
 <pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="string token" style="color: #669900;">"37"</span> <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">-</span> <span class="number token" style="color: #990055;">7</span><span class="comment token" style="color: #708090;"> // 30
 </span><span class="string token" style="color: #669900;">"37"</span> <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">+</span> <span class="number token" style="color: #990055;">7</span><span class="comment token" style="color: #708090;"> // "377"</span></code></pre>
 
-<h3 id="Преобразование_строк_в_числа">Преобразование строк в числа</h3>
+<h3 id="Преобразование_строк_в_числа">Преобразование строк в числа</h3>
 
-<p>В том случае, если значение, представляющее число, хранится в памяти как строка, можно использовать методы для преобразования строк в числа:</p>
+<p>В том случае, если значение, представляющее число, хранится в памяти как строка, можно использовать методы для преобразования строк в числа:</p>
 
 <ul>
  <li id="parseInt()_and_parseFloat()">{{jsxref("parseInt", "parseInt(numString, [radix])")}}</li>
@@ -291,7 +291,7 @@ MY_OBJECT.key = "otherValue";</pre>
 
 <p><code>parseInt</code> преобразует строку в целочисленное значение. Хорошей практикой является всегда указывать основание системы счисления (параметр <code>radix</code>).</p>
 
-<p>Альтернативным способом для получения числа из строки является использование оператора "унарный плюс":</p>
+<p>Альтернативным способом для получения числа из строки является использование оператора "унарный плюс":</p>
 
 <pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="string token" style="color: #669900;">"1.1"</span> <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">+</span> <span class="string token" style="color: #669900;">"1.1"</span>       <span class="comment token" style="color: #708090;">// "1.11.1"</span>
 <span class="punctuation token" style="color: #999999;">(</span><span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">+</span><span class="string token" style="color: #669900;">"1.1"</span><span class="punctuation token" style="color: #999999;">)</span> <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">+</span> <span class="punctuation token" style="color: #999999;">(</span><span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">+</span><span class="string token" style="color: #669900;">"1.1"</span><span class="punctuation token" style="color: #999999;">)</span> </code><code class="language-js" style="direction: ltr; white-space: pre;"><span class="comment token" style="color: #708090;">// 2.2</span></code><code class="language-js" style="direction: ltr; white-space: pre;"><span class="comment token" style="color: #708090;">
@@ -302,13 +302,13 @@ MY_OBJECT.key = "otherValue";</pre>
 <p>Литералы используются для представления значений в JavaScript. Они являются фиксированными значениями, а не переменными. В данной секции рассматриваются следующие типы литералов:</p>
 
 <ul>
- <li>{{anch("Литерал массива")}}</li>
- <li>{{anch("Логический литерал")}}</li>
- <li>{{anch("Литерал целого числа")}}</li>
- <li>{{anch("Литерал числа с плавающей точкой")}}</li>
- <li>{{anch("Литерал объекта")}}</li>
- <li>{{anch("RegExp литерал")}}</li>
- <li>{{anch("Литерал строки")}}</li>
+ <li><a href="#литерал_массива">Литерал массива</a></li>
+ <li><a href="#логический_литерал">Логический литерал</a></li>
+ <li><a href="#литерал_целого_числа">Литерал целого числа</a></li>
+ <li><a href="#литерал_числа_с_плавающей_точкой">Литерал числа с плавающей точкой</a></li>
+ <li><a href="#литерал_объекта">Литерал объекта</a></li>
+ <li><a href="#regexp_литерал">RegExp литерал</a></li>
+ <li><a href="#литерал_строки">Литерал строки</a></li>
 </ul>
 
 <h3 id="Литерал_массива">Литерал массива</h3>
@@ -321,22 +321,22 @@ MY_OBJECT.key = "otherValue";</pre>
 </pre>
 
 <div class="note">
-<p><strong>Замечание :</strong> Обратите внимание на то, что литерал массива является инициализатором объекта. Чтобы получить более подробную информацию, прочитайте <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Working_with_Objects#.D0.98.D1.81.D0.BF.D0.BE.D0.BB.D1.8C.D0.B7.D0.BE.D0.B2.D0.B0.D0.BD.D0.B8.D0.B5_.D0.B8.D0.BD.D0.B8.D1.86.D0.B8.D0.B0.D0.BB.D0.B8.D0.B7.D0.B0.D1.82.D0.BE.D1.80.D0.BE.D0.B2_.D0.BE.D0.B1.D1.8A.D0.B5.D0.BA.D1.82.D0.B0">Использование инициализаторов объекта</a>.</p>
+<p><strong>Замечание :</strong> Обратите внимание на то, что литерал массива является инициализатором объекта. Чтобы получить более подробную информацию, прочитайте <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Working_with_Objects#.D0.98.D1.81.D0.BF.D0.BE.D0.BB.D1.8C.D0.B7.D0.BE.D0.B2.D0.B0.D0.BD.D0.B8.D0.B5_.D0.B8.D0.BD.D0.B8.D1.86.D0.B8.D0.B0.D0.BB.D0.B8.D0.B7.D0.B0.D1.82.D0.BE.D1.80.D0.BE.D0.B2_.D0.BE.D0.B1.D1.8A.D0.B5.D0.BA.D1.82.D0.B0">Использование инициализаторов объекта</a>.</p>
 </div>
 
-<p>Если массив создаётся с помощью литерала в скрипте верхнего уровня, то JavaScript интерпретирует массив каждый раз, когда вычисляет выражение, содержащее литерал. Кроме того, литерал, используемый в функции, создаётся каждый раз, когда вызывается функция.</p>
+<p>Если массив создаётся с помощью литерала в скрипте верхнего уровня, то JavaScript интерпретирует массив каждый раз, когда вычисляет выражение, содержащее литерал. Кроме того, литерал, используемый в функции, создаётся каждый раз, когда вызывается функция.</p>
 
-<p>Литералы массива также являются объектами <code>Array</code>. Чтобы получить более подробную информацию, прочитайте {{jsxref("Array")}} и <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Indexed_collections">упорядоченные наборы данных</a>.</p>
+<p>Литералы массива также являются объектами <code>Array</code>. Чтобы получить более подробную информацию, прочитайте {{jsxref("Array")}} и <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Indexed_collections">упорядоченные наборы данных</a>.</p>
 
-<h4 id="Лишние_запятые_в_литералах_array">Лишние запятые в литералах array</h4>
+<h4 id="Лишние_запятые_в_литералах_array">Лишние запятые в литералах array</h4>
 
 <p>Не обязательно указывать все элементы в литерале array. Если вы поставите две запятые подряд, то пропущенные элементы будут иметь значение <code>undefined</code>. Например:</p>
 
 <pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">var</span> fish <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="punctuation token" style="color: #999999;">[</span><span class="string token" style="color: #669900;">"Lion"</span><span class="punctuation token" style="color: #999999;">,</span> <span class="punctuation token" style="color: #999999;">,</span> <span class="string token" style="color: #669900;">"Angel"</span><span class="punctuation token" style="color: #999999;">]</span><span class="punctuation token" style="color: #999999;">; </span></code><code class="language-js" style="direction: ltr; white-space: pre;"><span class="comment token" style="color: #708090;">// ["Lion", undefined, "Angel"]</span></code></pre>
 
-<p>У этого массива есть 2 элемента со значениям и один пустой (<code>fish[0]</code> - "Lion", <code>fish[1]</code> - <code>undefined</code>, а <code>fish[2]</code> - "Angel").</p>
+<p>У этого массива есть 2 элемента со значениям и один пустой (<code>fish[0]</code> - "Lion", <code>fish[1]</code> - <code>undefined</code>, а <code>fish[2]</code> - "Angel").</p>
 
-<p>Если вы поставите запятую в конце списка элементов, то она будет проигнорирована. В следующем примере, длина массива равна 3. Нет <code>myList[3]</code>. Все другие запятые в списке говорят о новом элементе.</p>
+<p>Если вы поставите запятую в конце списка элементов, то она будет проигнорирована. В следующем примере, длина массива равна 3. Нет <code>myList[3]</code>. Все другие запятые в списке говорят о новом элементе.</p>
 
 <div class="note">
 <p><strong>Замечание :</strong> Лишние запятые могут вызывать ошибки в старых версиях браузеров, поэтому лучше избегать их использования.</p>
@@ -353,23 +353,23 @@ MY_OBJECT.key = "otherValue";</pre>
 
 <pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">var</span> myList <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="punctuation token" style="color: #999999;">[</span><span class="string token" style="color: #669900;">'home'</span><span class="punctuation token" style="color: #999999;">,</span> <span class="punctuation token" style="color: #999999;">,</span> <span class="string token" style="color: #669900;">'school'</span><span class="punctuation token" style="color: #999999;">,</span> <span class="punctuation token" style="color: #999999;">,</span> <span class="punctuation token" style="color: #999999;">]</span><span class="punctuation token" style="color: #999999;">; </span></code><code class="language-js" style="direction: ltr; white-space: pre;"><span class="comment token" style="color: #708090;">// ["home", undefined, "school", undefined]</span></code></pre>
 
-<p>Понимание поведения лишних запятых важно для понимания JavaScript как языка. Однако, когда будете писать свой собственный код, то имейте в виду, что явное объявление отсутствующих элементов как <code>undefined</code> улучшает ясность кода и лёгкость его поддержки.</p>
+<p>Понимание поведения лишних запятых важно для понимания JavaScript как языка. Однако, когда будете писать свой собственный код, то имейте в виду, что явное объявление отсутствующих элементов как <code>undefined</code> улучшает ясность кода и лёгкость его поддержки.</p>
 
 <h3 id="Логические_литералы">Логические литералы</h3>
 
 <p>Логический (Boolean) тип имеет два литеральных значения: <code>true</code> и <code>false</code>.</p>
 
-<p>Не путайте примитивные логические значения <code>true</code> и <code>false</code> со значениями true и false объекта Boolean. Объект Boolean является объектом-обёрткой над примитивом логического типа. Чтобы получить более подробную информацию, прочитайте {{jsxref("Boolean")}}.</p>
+<p>Не путайте примитивные логические значения <code>true</code> и <code>false</code> со значениями true и false объекта Boolean. Объект Boolean является объектом-обёрткой над примитивом логического типа. Чтобы получить более подробную информацию, прочитайте {{jsxref("Boolean")}}.</p>
 
 <h3 id="Литерал_целого_числа">Литерал целого числа</h3>
 
-<p>Целые числа могут быть записаны в десятичной, шестнадцатеричной, восьмеричной и двоичной системах счисления.</p>
+<p>Целые числа могут быть записаны в десятичной, шестнадцатеричной, восьмеричной и двоичной системах счисления.</p>
 
 <ul>
  <li>Десятичный целочисленный литерал состоит из последовательности цифр без ведущего нуля.</li>
  <li>Ведущий ноль в целочисленном литерале указывает на то, что он записан в восьмеричной системе счисления. Восьмеричные целые числа состоят только из цифр 0-7.</li>
- <li>Ведущие символы 0x (или 0X) указывают на то, что число шестнадцатеричное. Шестнадцатеричные целые числа могут состоять из цифр 0-9 и букв a-f и A-F. </li>
- <li>Ведущие символы 0b (или 0B) указывают на то, что число двоичное. Двоичные числа могут включать в себя только цифры 0 и 1.</li>
+ <li>Ведущие символы 0x (или 0X) указывают на то, что число шестнадцатеричное. Шестнадцатеричные целые числа могут состоять из цифр 0-9 и букв a-f и A-F. </li>
+ <li>Ведущие символы 0b (или 0B) указывают на то, что число двоичное. Двоичные числа могут включать в себя только цифры 0 и 1.</li>
 </ul>
 
 <p>Несколько примеров целочисленных литералов:</p>
@@ -380,7 +380,7 @@ MY_OBJECT.key = "otherValue";</pre>
 0b11, 0b0011 и -0b11 (двоичная система счисления)</code>
 </pre>
 
-<p>Для дополнительной информации смотрите <a href="/ru/docs/Web/JavaScript/Reference/Lexical_grammar">числовые литералы в лексической грамматике</a>.</p>
+<p>Для дополнительной информации смотрите <a href="/ru/docs/Web/JavaScript/Reference/Lexical_grammar">числовые литералы в лексической грамматике</a>.</p>
 
 <h3 id="Литерал_числа_с_плавающей_точкой">Литерал числа с плавающей точкой</h3>
 
@@ -393,7 +393,7 @@ MY_OBJECT.key = "otherValue";</pre>
  <li>Экспонента.</li>
 </ul>
 
-<p>Экспонента состоит из символа "e" или "E", за которым следует целое число, которое может иметь знак. Число с плавающей точкой должно состоять по крайней мере из одной цифры и либо десятичной точки, либо символа "e" (или "E").</p>
+<p>Экспонента состоит из символа "e" или "E", за которым следует целое число, которое может иметь знак. Число с плавающей точкой должно состоять по крайней мере из одной цифры и либо десятичной точки, либо символа "e" (или "E").</p>
 
 <p>В более сжатой форме синтаксис выглядит следующим образом:</p>
 
@@ -409,9 +409,9 @@ MY_OBJECT.key = "otherValue";</pre>
 
 <h3 id="Литерал_объекта">Литерал объекта</h3>
 
-<p>Литерал объекта — это список из нуля или более пар, состоящих из имён свойств и связанных с ними значений, заключённый в фигурные скобки ( <code>{}</code> ). Вам не следует использовать литерал объекта в начале выражения, т.к. это приведёт к ошибке или к поведению, которого вы не ожидаете, потому что символ "{" будет интерпретироваться как начало блока.</p>
+<p>Литерал объекта — это список из нуля или более пар, состоящих из имён свойств и связанных с ними значений, заключённый в фигурные скобки ( <code>{}</code> ). Вам не следует использовать литерал объекта в начале выражения, т.к. это приведёт к ошибке или к поведению, которого вы не ожидаете, потому что символ "{" будет интерпретироваться как начало блока.</p>
 
-<p>В следующем примере свойству <code>myCar</code> объекта <code>car</code> присваивается строка <code>"Saturn"</code>, свойству <code>getCar</code> — результат вызова функции <code>CarTypes("Honda")</code>, свойству <code>special</code> — значение переменной <code>Sales</code>:</p>
+<p>В следующем примере свойству <code>myCar</code> объекта <code>car</code> присваивается строка <code>"Saturn"</code>, свойству <code>getCar</code> — результат вызова функции <code>CarTypes("Honda")</code>, свойству <code>special</code> — значение переменной <code>Sales</code>:</p>
 
 <pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">var</span> Sales <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="string token" style="color: #669900;">"Toyota"</span><span class="punctuation token" style="color: #999999;">;</span>
 
@@ -436,7 +436,7 @@ console<span class="punctuation token" style="color: #999999;">.</span><span cla
 console<span class="punctuation token" style="color: #999999;">.</span><span class="function token" style="color: #dd4a68;">log<span class="punctuation token" style="color: #999999;">(</span></span>car<span class="punctuation token" style="color: #999999;">.</span>manyCars<span class="punctuation token" style="color: #999999;">.</span>b<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">; </span><span class="comment token" style="color: #708090;">// Jeep
 </span>console<span class="punctuation token" style="color: #999999;">.</span><span class="function token" style="color: #dd4a68;">log<span class="punctuation token" style="color: #999999;">(</span></span>car<span class="punctuation token" style="color: #999999;">[</span><span class="number token" style="color: #990055;">7</span><span class="punctuation token" style="color: #999999;">]</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span><span class="comment token" style="color: #708090;">         // Mazda</span></code></pre>
 
-<p>Именем свойства объекта может быть любая строка, в том числе пустая строка. Если имя свойства не является корректным JavaScript идентификатором, то оно должно быть заключено в кавычки. Для обращения к таким именам следует использовать квадратные скобки ( <code>[]</code> ), а не точку ( <code>.</code> ):</p>
+<p>Именем свойства объекта может быть любая строка, в том числе пустая строка. Если имя свойства не является корректным JavaScript идентификатором, то оно должно быть заключено в кавычки. Для обращения к таким именам следует использовать квадратные скобки ( <code>[]</code> ), а не точку ( <code>.</code> ):</p>
 
 <pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">var</span> unusualPropertyNames <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="punctuation token" style="color: #999999;">{</span>
   <span class="string token" style="color: #669900;">""</span><span class="punctuation token" style="color: #999999;">:</span> <span class="string token" style="color: #669900;">"An empty string"</span><span class="punctuation token" style="color: #999999;">,</span>
@@ -448,7 +448,7 @@ console<span class="punctuation token" style="color: #999999;">.</span><span cla
 </span>console<span class="punctuation token" style="color: #999999;">.</span><span class="function token" style="color: #dd4a68;">log<span class="punctuation token" style="color: #999999;">(</span></span>unusualPropertyNames<span class="punctuation token" style="color: #999999;">[</span><span class="string token" style="color: #669900;">"!"</span><span class="punctuation token" style="color: #999999;">]</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span><span class="comment token" style="color: #708090;"> // "Bang!"</span></code>
 </pre>
 
-<p>В ES2015 литералы объектов расширены до поддержки установки прототипа в конструкции короткой записи для <code>foo: </code>задание <code>foo</code>,  определение методов, создание супер вызовов и вычисление имён свойств в выражениях. Вместе, они делают похожими объектные литералы и объявления классов, а также позволяют объектному дизайну получать выгоду одинаковых возможностей.</p>
+<p>В ES2015 литералы объектов расширены до поддержки установки прототипа в конструкции короткой записи для <code>foo: </code>задание <code>foo</code>,  определение методов, создание супер вызовов и вычисление имён свойств в выражениях. Вместе, они делают похожими объектные литералы и объявления классов, а также позволяют объектному дизайну получать выгоду одинаковых возможностей.</p>
 
 <pre class="brush: js">var obj = {
     // __proto__
@@ -490,13 +490,13 @@ console<span class="punctuation token" style="color: #999999;">.</span><span cla
 <code>"one line \n another line"</code>
 <code>"John's cat"</code></pre>
 
-<p><code>​</code>Вы можете вызвать любой из методов объекта <code>String</code> для строкового литерала: JavaScript автоматически преобразует строковой литерал во временный объект <code>String</code>, вызовет метод, а затем уничтожит временный объект <code>String</code>. Вы также можете использовать свойство <code>String.length</code> со строковым литералом:</p>
+<p><code>​</code>Вы можете вызвать любой из методов объекта <code>String</code> для строкового литерала: JavaScript автоматически преобразует строковой литерал во временный объект <code>String</code>, вызовет метод, а затем уничтожит временный объект <code>String</code>. Вы также можете использовать свойство <code>String.length</code> со строковым литералом:</p>
 
 <pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;">console<span class="punctuation token" style="color: #999999;">.</span><span class="function token" style="color: #dd4a68;">log<span class="punctuation token" style="color: #999999;">(</span></span><span class="string token" style="color: #669900;">"John's cat"</span><span class="punctuation token" style="color: #999999;">.</span>length<span class="punctuation token" style="color: #999999;">);</span><span class="comment token" style="color: #708090;">
 // Число символов в строке, включая пробел.
 </span><span class="comment token" style="color: #708090;">// В данном случае длина строки равна 10.</span></code></pre>
 
-<p>В ES2015 также доступны шаблоны строк. Шаблоны строк представляют собой синтаксический сахар для конструирования строк. Это похоже на возможности интерполяции строк в Perl, Python и других. Дополнительно, может быть добавлен тег, позволяющий настраивать конструирование строк, избегая атак внедрения и построения структур данных высокого уровня из содержимого строки.</p>
+<p>В ES2015 также доступны шаблоны строк. Шаблоны строк представляют собой синтаксический сахар для конструирования строк. Это похоже на возможности интерполяции строк в Perl, Python и других. Дополнительно, может быть добавлен тег, позволяющий настраивать конструирование строк, избегая атак внедрения и построения структур данных высокого уровня из содержимого строки.</p>
 
 <pre class="brush: js">// Простое создание строки через литерал string
 `In JavaScript '\n' is a line-feed.`
@@ -517,9 +517,9 @@ POST`http://foo.org/bar?a=${a}&amp;b=${b}
        "bar": ${bar}}`(myOnReadyStateChangeHandler);
 </pre>
 
-<p>Вам следует использовать строковые литералы до тех пор, пока вам специально не понадобится объект <code>String</code>. Чтобы получить более подробную информацию об объекте <code>String</code>, прочитайте {{jsxref("String")}}.</p>
+<p>Вам следует использовать строковые литералы до тех пор, пока вам специально не понадобится объект <code>String</code>. Чтобы получить более подробную информацию об объекте <code>String</code>, прочитайте {{jsxref("String")}}.</p>
 
-<h4 id="Использование_специальных_символов_в_строках">Использование специальных символов в строках</h4>
+<h4 id="Использование_специальных_символов_в_строках">Использование специальных символов в строках</h4>
 
 <p>Кроме обычных символов вы также можете включать специальные символы в строки.</p>
 
@@ -575,19 +575,19 @@ POST`http://foo.org/bar?a=${a}&amp;b=${b}
   <tr>
    <td><code>\<em>XXX</em></code></td>
    <td>
-    <p>Символ в кодировке Latin-1, представленный тремя восьмеричными числами <em>XXX</em> от 0 до 377. Например, \251 (символ ©).</p>
+    <p>Символ в кодировке Latin-1, представленный тремя восьмеричными числами <em>XXX</em> от 0 до 377. Например, \251 (символ ©).</p>
    </td>
   </tr>
   <tr>
    <td><code>\x<em>XX</em></code></td>
    <td>
-    <p>Символ в кодировке Latin-1, представленный двумя шестнадцатеричными числами <em>XX</em> от 00 до FF. Например, \xA9 (символ ©).</p>
+    <p>Символ в кодировке Latin-1, представленный двумя шестнадцатеричными числами <em>XX</em> от 00 до FF. Например, \xA9 (символ ©).</p>
    </td>
   </tr>
   <tr>
    <td><code>\u<em>XXXX</em></code></td>
    <td>
-    <p>Символ в Unicode, представленный четырьмя шестнадцатеричными числами <em>XXXX</em>. Например, \u00A9 (<span style="background-color: rgba(212, 221, 228, 0.14902);">символ ©).</span></p>
+    <p>Символ в Unicode, представленный четырьмя шестнадцатеричными числами <em>XXXX</em>. Например, \u00A9 (<span style="background-color: rgba(212, 221, 228, 0.14902);">символ ©).</span></p>
    </td>
   </tr>
   <tr>
@@ -599,9 +599,9 @@ POST`http://foo.org/bar?a=${a}&amp;b=${b}
 
 <h4 id="Экранирующие_символы">Экранирующие символы</h4>
 
-<p>Для символов, не перечисленных в вышеприведённой таблице, предваряющая обратная косая черта игнорируется. Такое использование не является рекомендованным (deprecated) и вам следует избегать его.</p>
+<p>Для символов, не перечисленных в вышеприведённой таблице, предваряющая обратная косая черта игнорируется. Такое использование не является рекомендованным (deprecated) и вам следует избегать его.</p>
 
-<p>Вы можете вставить кавычку в строку, если поставите перед ней обратную косую черту. Это называется экранированием кавычек. Например:</p>
+<p>Вы можете вставить кавычку в строку, если поставите перед ней обратную косую черту. Это называется экранированием кавычек. Например:</p>
 
 <pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">var</span> quote <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="string token" style="color: #669900;">"He read \"The Cremation of Sam McGee\" by R.W. Service."</span><span class="punctuation token" style="color: #999999;">;</span>
 console<span class="punctuation token" style="color: #999999;">.</span><span class="function token" style="color: #dd4a68;">log<span class="punctuation token" style="color: #999999;">(</span></span>quote<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">; </span></code><code class="language-js" style="direction: ltr; white-space: pre;"><span class="comment token" style="color: #708090;">// He read "The Cremation of Sam McGee" by R.W. Service.</span></code></pre>
@@ -618,7 +618,7 @@ across multiple\
 lines<span class="punctuation token" style="color: #999999;">.</span>"
 console<span class="punctuation token" style="color: #999999;">.</span><span class="function token" style="color: #dd4a68;">log<span class="punctuation token" style="color: #999999;">(</span></span>str<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span><span class="punctuation token"> </span><span class="comment token" style="color: #708090;">// this string is broken across multiplelines.</span></code></pre>
 
-<p>Хотя JavaScript не поддерживает синтаксис "heredoc" (форматированный текст в одной строковой переменной), но вы можете эмулировать его, добавив перевод строки и обратную косую черту в конец каждой строки:</p>
+<p>Хотя JavaScript не поддерживает синтаксис "heredoc" (форматированный текст в одной строковой переменной), но вы можете эмулировать его, добавив перевод строки и обратную косую черту в конец каждой строки:</p>
 
 <pre class="brush: js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">var</span> poem <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span>
 "Roses are red<span class="punctuation token" style="color: #999999;">,</span>\n\

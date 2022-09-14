@@ -16,7 +16,9 @@ La propriété en lecture seule **`NodeIterator.pointerBeforeReferenceNode`** re
 
 ## Syntaxe
 
-    flag = nodeIterator.pointerBeforeReferenceNode;
+```js
+flag = nodeIterator.pointerBeforeReferenceNode;
+```
 
 ## Exemple
 
@@ -32,13 +34,11 @@ flag = nodeIterator.pointerBeforeReferenceNode;
 
 ## Spécifications
 
-| Spécification                                                                                                                                                | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG', '#dom-nodeiterator-pointerbeforereferencenode', 'NodeIterator.pointerBeforeReferenceNode')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.NodeIterator.pointerBeforeReferenceNode")}}
+{{Compat}}
 
 ## Voir aussi
 

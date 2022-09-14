@@ -32,7 +32,7 @@ Vous pouvez laisser l'utilisateur télécharger à un endroit de son choix en pr
 
 L'API de téléchargement fournit également des fonctionnalités pour annuler, mettre en pause, reprendre, effacer et supprimer les téléchargements, rechercher les fichiers téléchargés dans le gestionnaire de téléchargement, afficher les fichiers téléchargés dans le gestionnaire de fichiers de l'ordinateur, et ouvrir un fichier dans une application associée.
 
-Pour utiliser cette API, vous devez avoir les [permissions API](/fr/docs/Web/API/Permissions#API_permissions) "downloads" spécifiées dans votre fichier[ manifest.json](/fr/Add-ons/WebExtensions/manifest.json).
+Pour utiliser cette API, vous devez avoir les [permissions API](/fr/docs/Web/API/Permissions#API_permissions) "downloads" spécifiées dans votre fichier [manifest.json](/fr/Add-ons/WebExtensions/manifest.json).
 
 Exemple : [Latest download](https://github.com/mdn/webextensions-examples/tree/master/latest-download)
 API référence : [downloads API](/fr/Add-ons/WebExtensions/API/downloads)
@@ -49,7 +49,7 @@ API références : [HTML input element](/fr/docs/Web/HTML/Element/input/file) | 
 
 ## Ouverture de fichiers dans une extension avec glisser-déposer
 
-L'API Web Drag and Drop offre une alternative à l'utilisation d'un sélecteur de fichiers. Pour utiliser cette méthode, établissez une zone de stockage qui correspond à votre interface utilisateur, puis ajoutez les récepteurs pour les évènements[ dragenter](/fr/docs/Web/Events/dragenter) _(entrer)_,[ dragover](/fr/docs/Web/Events/dragover) _(glisser)_, et[ drop](/fr/docs/Web/Events/drop)  _(déposer)_. Dans le gestionnaire de l'événement "déposer", votre code peut accéder à tout fichier déposé par l'utilisateur à partir de l'objet offert par la propriété dataTransfer en utilisant [DataTransfer.files](/fr/docs/Web/API/DataTransfer/files). Votre code peut alors accéder aux fichiers et les traiter en utilisant le [DOM File API](/fr/docs/Web/API/File).
+L'API Web Drag and Drop offre une alternative à l'utilisation d'un sélecteur de fichiers. Pour utiliser cette méthode, établissez une zone de stockage qui correspond à votre interface utilisateur, puis ajoutez les récepteurs pour les évènements [dragenter](/fr/docs/Web/Events/dragenter) _(entrer)_, [dragover](/fr/docs/Web/Events/dragover) _(glisser)_, et [drop](/fr/docs/Web/Events/drop)  _(déposer)_. Dans le gestionnaire de l'événement "déposer", votre code peut accéder à tout fichier déposé par l'utilisateur à partir de l'objet offert par la propriété dataTransfer en utilisant [DataTransfer.files](/fr/docs/Web/API/DataTransfer/files). Votre code peut alors accéder aux fichiers et les traiter en utilisant le [DOM File API](/fr/docs/Web/API/File).
 
 Exemple : [Imagify](https://github.com/mdn/webextensions-examples/tree/master/imagify)
 Guides : [Using files from web applications](/fr/docs/Using_files_from_web_applications) | [File drag and drop](/fr/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop)

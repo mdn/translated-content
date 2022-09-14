@@ -114,10 +114,10 @@ Créer une réponse est plus facile que de comprendre pourquoi vous devez le fai
 
 Vous devez,
 
-1.  obtenir la valeur de la requête d’entête _Sec-WebSocket-Key_ sans aucun espacement;
-2.  la lier avec « 258EAFA5-E914-47DA-95CA-C5AB0DC85B11 »;
-3.  en calculer les codes SHA-1 et Base64;
-4.  renvoyer le résultat comme valeur de l'entête de réponse _Sec-WebSocket-Accept_ qui sera une partie d’une réponse HTTP.
+1. obtenir la valeur de la requête d’entête _Sec-WebSocket-Key_ sans aucun espacement;
+2. la lier avec « 258EAFA5-E914-47DA-95CA-C5AB0DC85B11 »;
+3. en calculer les codes SHA-1 et Base64;
+4. renvoyer le résultat comme valeur de l'entête de réponse _Sec-WebSocket-Accept_ qui sera une partie d’une réponse HTTP.
 
 ```java
 if (get.find()) {

@@ -1,16 +1,6 @@
 ---
 title: scroll-margin-inline
 slug: Web/CSS/scroll-margin-inline
-tags:
-  - CSS
-  - CSS プロパティ
-  - Reference
-  - Web
-  - recipe:css-shorthand-property
-  - scroll-margin
-  - scroll-margin-inline
-browser-compat: css.properties.scroll-margin-inline
-translation_of: Web/CSS/scroll-margin-inline
 ---
 {{CSSRef}}
 
@@ -116,7 +106,6 @@ scroll-margin 系のプロパティは、このボックスをスナップポー
 ```
 
 ここで最も重要なのは `scroll-snap-align: end` で、これは右側の端 (ここでは x 軸に沿った「末尾」) をスナップ点として指定するものです。
-
 
 最後に、スクロールのマージン値を指定しますが、これは 2 番目と 3 番目の子要素に対して異なる値を指定します。
 

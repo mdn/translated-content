@@ -1,13 +1,6 @@
 ---
 title: Promise.all()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/all
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - メソッド
-  - Promise
-browser-compat: javascript.builtins.Promise.all
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/all
 ---
 {{JSRef}}
 
@@ -204,8 +197,8 @@ Promise.all([
   p1.catch(error => { return error }),
   p2.catch(error => { return error }),
 ]).then(values => {
-  console.log(values[0]) // "p1_delayed_resolution"
-  console.error(values[1]) // "Error: p2_immediate_rejection"
+  console.log(values[0]) // "p1_delayed_resolution"
+  console.error(values[1]) // "Error: p2_immediate_rejection"
 })
 ```
 

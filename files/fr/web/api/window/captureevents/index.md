@@ -15,7 +15,9 @@ La méthode **`Window.captureEvents()`** enregistre la fenêtre pour capturer to
 
 ## Syntaxe
 
-    window.captureEvents(eventType)
+```js
+window.captureEvents(eventType)
+```
 
 `eventType` est une combinaison des valeurs suivantes: `Event.ABORT`, `Event.BLUR`, `Event.CLICK`, `Event.CHANGE`, `Event.DBLCLICK`, `Event.DRAGDDROP`, `Event.ERROR`, `Event.FOCUS`, `Event.KEYDOWN`, `Event.KEYPRESS`, `Event.KEYUP`, `Event.LOAD`, `Event.MOUSEDOWN`, `Event.MOUSEMOVE`, `Event.MOUSEOUT`, `Event.MOUSEOVER`, `Event.MOUSEUP`, `Event.MOVE`, `Event.RESET`, `Event.RESIZE`, `Event.SELECT`, `Event.SUBMIT`, `Event.UNLOAD`.
 

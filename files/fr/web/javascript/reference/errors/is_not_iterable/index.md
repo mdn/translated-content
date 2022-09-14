@@ -13,8 +13,10 @@ original_slug: Web/JavaScript/Reference/Erreurs/is_not_iterable
 
 ## Message
 
-    TypeError: 'x' is not iterable (Firefox, Chrome)
-    TypeError: 'x' is not a function or its return value is not iterable (Chrome)
+```
+TypeError: 'x' is not iterable (Firefox, Chrome)
+TypeError: 'x' is not a function or its return value is not iterable (Chrome)
+```
 
 ## Type d'erreur
 

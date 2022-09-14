@@ -19,7 +19,7 @@ Vous voulez aider à documenter Firefox 22 ? Parcourez la [liste des bugs qui on
 
 - Les optimizations [Asm.js](http://asmjs.org/spec/latest/) sont activées, rendant possible la compilation d'applications C / C++ vers un sous-ensemble Javascript pour de meilleures performances.
 - La syntaxe ES6 [Arrow Function](/fr/docs/JavaScript/Reference/arrow_functions) a été implémentée ({{bug(846406)}}).
-- La nouvelle fonction [Object.is ](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/is)a été ajoutée ({{bug(839979)}}).
+- La nouvelle fonction [Object.is](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/is) a été ajoutée ({{bug(839979)}}).
 
 ### DOM
 
@@ -38,8 +38,8 @@ Vous voulez aider à documenter Firefox 22 ? Parcourez la [liste des bugs qui on
 
 ## Changements pour les développeurs Mozilla et développeurs d'add-on
 
-- Le paramètre `properties` a été supprimé des méthodes {{ifmethod('nsITreeView','getCellProperties')}}, {{ifmethod('nsITreeView','getColumnProperties')}} et {{ifmethod('nsITreeView','getRowProperties')}} de l'interface `nsITreeView`. Ces méthodes retourneront maintenant un string de noms de propriétés séparées par des espaces. ({{bug('407956')}})
-- La méthode {{ifmethod('inIDOMUtils', 'getCSSPropertyNames')}} a été implémentée et retourne le nom de toutes les [propriétés CSS](/fr/docs/CSS/CSS_Reference) supportées.
+- Le paramètre `properties` a été supprimé des méthodes `nsITreeView.getCellProperties()` `nsITreeView.getColumnProperties()` et `nsITreeView.getRowProperties()` de l'interface `nsITreeView`. Ces méthodes retourneront maintenant un string de noms de propriétés séparées par des espaces. ({{bug('407956')}})
+- La méthode `inIDOMUtils.getCSSPropertyNames()` a été implémentée et retourne le nom de toutes les [propriétés CSS](/fr/docs/CSS/CSS_Reference) supportées.
 - Voir [tous les changements](https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/).
 
 ### Outils pour développeurs de Firefox
@@ -50,7 +50,7 @@ Vous voulez aider à documenter Firefox 22 ? Parcourez la [liste des bugs qui on
 - Certains onglets des outils pour développeurs sont passés de [XUL à HTML](https://bugzilla.mozilla.org/show_bug.cgi?id=875727). Par exemple, l'onglet présentant les règles css fait maintenant partie de chrome://browser/content/devtools/cssruleview\.xhtml, et pas de  `cssruleview.xul`. Au lieu d'ajouter une couche pour ajouter des fonctionnalités directement sur ces onglets, vous pouvez ajouter une couche et la lier par script au document xul externe afin d'ajouter des écouteurs d'événements et de changer ces documents html.
 - L'affichage en pile est maintenant affiché en fil d'Ariane en haut de l'onglet et la liste des scripts est maintenant sur la gauche du débuggeur.
 
-## A voir aussi
+## Voir aussi
 
 - [Notes de version de Firefox 22 Beta](http://www.mozilla.org/en-US/firefox/22.0beta/releasenotes/)
 - [Compatibilité des sites avec Firefox 22](/fr/docs/Site_Compatibility_for_Firefox_22)

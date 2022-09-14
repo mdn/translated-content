@@ -18,8 +18,10 @@ La syntaxe **`get`** permet de lier une propriété d'un objet à une fonction q
 
 ## Syntaxe
 
-    {get prop() { ... } }
-    {get [expression]() { ... } }
+```js
+{get prop() { ... } }
+{get [expression]() { ... } }
+```
 
 ### Paramètres
 

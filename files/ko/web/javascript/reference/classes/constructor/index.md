@@ -138,7 +138,7 @@ class Square extends Polygon {
 
   set area(value) {
     this.height = value ** 0.5;
-    this.width = value ** 0.5;
+    this.width = value ** 0.5;
   }
 }
 ```

@@ -11,11 +11,11 @@ Un **type MIME** (désormais correctement appelé "media type", mais aussi parfo
 
 Il répond au même objectif que les extensions de fichiers traditionnellement utilisées sous Windows. Le nom vient de la norme MIME initialement utilisée dans E-Mail.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 
-- {{interwiki("wikipedia", "Type MIME", "Internet media type")}} sur Wikipédia
+- [Type de médias](https://fr.wikipedia.org/wiki/Type_de_m%C3%A9dias) sur Wikipédia
 
 ### Référence technique
 

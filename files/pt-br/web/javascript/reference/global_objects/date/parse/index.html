@@ -3,11 +3,11 @@ title: Date.parse()
 slug: Web/JavaScript/Reference/Global_Objects/Date/parse
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
 ---
-<div> {{JSRef("Global_Objects", "Date")}}</div>
+<div> {{JSRef("Global_Objects", "Date")}}</div>
 
 <h2 id="Summary" name="Summary">Resumo</h2>
 
-<p>O método <strong><code>Date.parse()</code></strong> analisa uma representação de data em <em>string</em>, e retorna o número de milisegundos desde 01 de Janeiro de 1970, 00:00:00 UTC ou NaN se a string não for reconhecida ou, em alguns casos, contiver valores inválidos de data (ex. 2015-02-31).</p>
+<p>O método <strong><code>Date.parse()</code></strong> analisa uma representação de data em <em>string</em>, e retorna o número de milisegundos desde 01 de Janeiro de 1970, 00:00:00 UTC ou NaN se a string não for reconhecida ou, em alguns casos, contiver valores inválidos de data (ex. 2015-02-31).</p>
 
 <p>O uso de <code>Date.parse</code> não é recomendado, uma vez que até ES5 a análise de strings era inteiramente dependente de implementação. Ainda existem muitas diferenças de como diferentes plataformas analisam strings de data, então strings de data devem ser manualmente analisadas (uma biblioteca pode ajudar caso seja necessário atender a vários formatos)</p>
 
@@ -25,18 +25,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
 
 <dl>
  <dt><code>dateString</code></dt>
- <dd>Uma <em>string</em> de representação de datas no format <a href="http://tools.ietf.org/html/rfc2822#page-14">RFC2822</a> ou ISO 8601 (outros formatos podem ser utilizados, mas os resultados podem não ser os esperados).</dd>
+ <dd>Uma <em>string</em> de representação de datas no format <a href="http://tools.ietf.org/html/rfc2822#page-14">RFC2822</a> ou ISO 8601 (outros formatos podem ser utilizados, mas os resultados podem não ser os esperados).</dd>
 </dl>
 
 <h2 id="Description" name="Description">Descrição</h2>
 
-<p>O método <code>parse()</code> analisa uma <em>string</em> de data (como <code>"Dec 25, 1995"</code>) e retorna o número de milisegundos desde 01 de Janeiro de 1970, 00:00:00 UTC. Esta função é útil para definir valores de data baseados em valores de <em>string</em>, por exemplo em conjunto com o método {{jsxref("Date.prototype.setTime()", "setTime()")}} e o objeto {{jsxref("Global_Objects/Date", "Date")}}.</p>
+<p>O método <code>parse()</code> analisa uma <em>string</em> de data (como <code>"Dec 25, 1995"</code>) e retorna o número de milisegundos desde 01 de Janeiro de 1970, 00:00:00 UTC. Esta função é útil para definir valores de data baseados em valores de <em>string</em>, por exemplo em conjunto com o método {{jsxref("Date.prototype.setTime()", "setTime()")}} e o objeto {{jsxref("Global_Objects/Date", "Date")}}.</p>
 
 <p>Dada uma string representando um tempo, <code>parse()</code> retorna o valor temporal. É aceito o RFC2822 / IETF sintaxe de data (<a href="http://tools.ietf.org/html/rfc2822#page-14">RFC2822 Section 3.3</a>), ex.: <code>"Mon, 25 Dec 1995 13:30:00 GMT"</code>. A função entende as abreviações dos fusos horários continentais dos EUA, mas para uso geral, use um deslocamento de fuso horário, por exemplo, <code>"Seg, 25 Dez 1995 13:30:00 +0430"</code> (4 horas, 30 minutos à leste do Meridiano de Greenwich). Se o fuso horário não é especificado e a string está em um formato ISO reconhecido pela ES5, então é adotado o formato UTC (Tempo Universal Coordenado). GMT e UTC são considerados equivalentes. O fuso horário do seu horário local é usado para interpreatar argumentos na <a href="http://tools.ietf.org/html/rfc2822#page-14">RFC2822 Formato 3.3</a> (ou qualquer formato não reconhecido como ISO 8601 na ES5) que não contenha informação de fuso horário.
 
 </p><h3 id="Suporte_ao_formato_ECMAScript_5_ISO-8601">Suporte ao formato ECMAScript 5 ISO-8601</h3>
 
-<p><em>Astring </em>Data e hora pode ser no formato <a href="http://www.w3.org/TR/NOTE-datetime">ISO 8601</a>. Por exemplo, <code>"2011-10-10"</code> (apenas data) ou <code>"2011-10-10T14:48:00"</code> (data e hora) podem ser passados ou convertidos. O fuso horario UTC é usado para interpretar  argumentos no formato <a href="http://www.w3.org/TR/NOTE-datetime">ISO 8601</a> que não contenham informação de fuso horário (note que <a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-date-time-string-format">ECMAScript ed 6 draft</a> especifica que  a <em>string </em>do tipo data e hora sem um fuso horário são tratados como data local, não UTC).</p>
+<p><em>Astring </em>Data e hora pode ser no formato <a href="http://www.w3.org/TR/NOTE-datetime">ISO 8601</a>. Por exemplo, <code>"2011-10-10"</code> (apenas data) ou <code>"2011-10-10T14:48:00"</code> (data e hora) podem ser passados ou convertidos. O fuso horario UTC é usado para interpretar  argumentos no formato <a href="http://www.w3.org/TR/NOTE-datetime">ISO 8601</a> que não contenham informação de fuso horário (note que <a href="http://people.mozilla.org/~jorendorff/es6-draft.html#sec-date-time-string-format">ECMAScript ed 6 draft</a> especifica que  a <em>string </em>do tipo data e hora sem um fuso horário são tratados como data local, não UTC).</p>
 
 <p>While time zone specifiers are used during date string parsing to interpret the argument, the value returned is always the number of milliseconds between January 1, 1970 00:00:00 UTC and the point in time represented by the argument.</p>
 
@@ -140,72 +140,7 @@ Date.parse('foo-bar 2014');
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>ISO 8601 format</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckodesktop("2.0")}}</td>
-   <td>{{CompatIE("9")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>ISO 8601 format</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.Date.parse")}}
 
 <h2 id="See_also" name="See_also">See also</h2>
 

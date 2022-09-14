@@ -219,17 +219,19 @@ L'élément `<audio>` ne prend pas directement en charge le WebVTT. Vous devrez 
 
 En plus des dialogues parlés, les sous-titres et les transcriptions doivent également identifier la musique et les effets sonores qui communiquent des informations importantes. Cela inclut l'émotion et le ton. Par exemple, dans le WebVTT ci-dessous, notez l'utilisation de crochets pour donner un ton et un aperçu émotionnel au spectateur ; cela peut aider à établir l'ambiance autrement fournie par la musique, les sons non verbaux et les effets sonores cruciaux, et ainsi de suite.
 
-    1
-    00:00:00 --> 00:00:45
-    [Musique avec des trompettes sonnantes]
+```
+1
+00:00:00 --> 00:00:45
+[Musique avec des trompettes sonnantes]
 
-    2
-    00:00:46 --> 00:00:51
-    Elle est où la poulette ?
+2
+00:00:46 --> 00:00:51
+Elle est où la poulette ?
 
-    16
-    00:00:52 --> 00:01:02
-    [sur un ton énervé] Vous rendez la poulette ou c'est plus vous qui donnez à manger aux lapins ?
+16
+00:00:52 --> 00:01:02
+[sur un ton énervé] Vous rendez la poulette ou c'est plus vous qui donnez à manger aux lapins ?
+```
 
 Une autre bonne pratique consiste à fournir du contenu comme un lien de téléchargement comme méthode alternative pour les personnes qui utilisent un navigateur qui ne prend pas en charge `<audio>`&nbsp;:
 

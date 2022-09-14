@@ -19,7 +19,9 @@ La méthode **`set()`** permet d'ajouter un nouvel élément avec une `clé` et 
 
 ## Syntaxe
 
-    wm.set(clé, valeur);
+```js
+wm.set(clé, valeur);
+```
 
 ### Paramètres
 

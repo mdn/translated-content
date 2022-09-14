@@ -17,7 +17,9 @@ La propriété **`db`** de l'interface {{domxref("IDBTransaction")}} renvoie la 
 
 ## Syntaxe
 
-    var myDatabase = transaction.db;
+```js
+var myDatabase = transaction.db;
+```
 
 ### Valeur
 
@@ -80,13 +82,11 @@ function addData() {
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBTransaction-db', 'db')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBTransaction.db")}}
+{{Compat}}
 
 ## Voir aussi
 

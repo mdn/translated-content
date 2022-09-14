@@ -83,13 +83,11 @@ Voir l'exemple dans [Utilisation de Resource Timing API](/fr/docs/Web/API/Resour
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Resource Timing', '#performanceresourcetiming', 'PerformanceResourceTiming')}} | {{Spec2('Resource Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceResourceTiming")}}
+{{Compat}}
 
 ## Voir aussi
 

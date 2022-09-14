@@ -18,11 +18,11 @@ Vous pouvez faire appel à WebGL à partir de l'élément {{Glossary("HTML")}} {
 
 Tous les principaux {{Glossary("Navigateur","navigateurs")}} prennent maintenant en charge WebGL, mais sa disponibilité dépend également de facteurs externes (e.g. support par le GPU).
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "WebGL")}} sur Wikipédia
+- [WebGL](https://fr.wikipedia.org/wiki/WebGL) sur Wikipédia
 - [Vérification du support WebGL](http://get.webgl.org/)
 
 ### Article technique

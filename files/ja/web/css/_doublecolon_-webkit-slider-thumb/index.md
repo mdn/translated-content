@@ -1,18 +1,6 @@
 ---
 title: '::-webkit-slider-thumb'
 slug: Web/CSS/::-webkit-slider-thumb
-tags:
-  - CSS
-  - NeedsBrowserCompatibility
-  - NeedsCompatTable
-  - NeedsExample
-  - NeedsMobileBrowserCompatibility
-  - 標準外
-  - 擬似要素
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.-webkit-slider-thumb
-translation_of: 'Web/CSS/::-webkit-slider-thumb'
 ---
 {{CSSRef}}{{Non-standard_header}}
 

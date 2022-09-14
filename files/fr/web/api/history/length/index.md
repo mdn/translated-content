@@ -9,18 +9,17 @@ La propriété en lecture seule **`History.length`** retourne un entier indiquan
 
 ## Syntaxe
 
-    const length = history.length
+```js
+const length = history.length
+```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                | Statuts                          | Commentaire                                                |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "history.html#dom-history-length", "History.length")}} | {{Spec2('HTML WHATWG')}} | Pas de changement depuis {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', "browsers.html#dom-history-length", "History.length")}}     | {{Spec2('HTML5 W3C')}}     | Définition initiale.                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.History.length")}}
+{{Compat}}
 
 ## Voir aussi
 

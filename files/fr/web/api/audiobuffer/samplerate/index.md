@@ -46,15 +46,13 @@ bouton.onclick = function() {
 }
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                        | Statut                               | Commentaire |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioBuffer-sampleRate', 'sampleRate')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité des Navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AudioBuffer.sampleRate")}}
+{{Compat}}
 
 ## Voir aussi
 

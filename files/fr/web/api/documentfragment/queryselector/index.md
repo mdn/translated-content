@@ -19,7 +19,9 @@ Si les sélecteurs spécifiés dans paramètre sont invalides une {{domxref("DOM
 
 ## Syntaxe
 
-    element = documentfragment.querySelector(selectors);
+```js
+element = documentfragment.querySelector(selectors);
+```
 
 ### Paramètres
 
@@ -54,14 +56,11 @@ document.querySelector('#foo\\:bar')   // Correspond au second div
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                                       | Commentaire                                                           |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | --------------------------------------------------------------------- |
-| {{SpecName('Selectors API Level 2', '#queryselector', 'DocumentFragment.querySelector')}} | {{Spec2('Selectors API Level 2')}} | Pas de changement de {{SpecName('Selectors API Level 1')}} |
-| {{SpecName('Selectors API Level 1', '#queryselector', 'DocumentFragment.querySelector')}} | {{Spec2('Selectors API Level 1')}} | Définition initiale.                                                  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DocumentFragment.querySelector")}}
+{{Compat}}
 
 ## Voir aussi
 

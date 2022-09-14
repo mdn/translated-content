@@ -1,14 +1,6 @@
 ---
 title: ページ付け
 slug: Web/CSS/Layout_cookbook/Pagination
-tags:
-  - CSS
-  - CSS 料理帳
-  - ガイド
-  - CSS レイアウト
-  - フレックスボックス
-  - pagination
-translation_of: Web/CSS/Layout_cookbook/Pagination
 ---
 {{CSSRef}}
 
@@ -42,11 +34,11 @@ translation_of: Web/CSS/Layout_cookbook/Pagination
 
 ```css
 .pagination {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  column-gap: 2px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  column-gap: 2px;
 }
 ```
 

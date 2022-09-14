@@ -19,7 +19,9 @@ Dans les navigateurs anciens, comme spécifié dans les anciennes version des sp
 
 ## Syntaxe
 
-    node = nodeIterator.previousNode();
+```js
+node = nodeIterator.previousNode();
+```
 
 ## Exemple
 
@@ -36,14 +38,11 @@ previousNode = nodeIterator.previousNode(); // même résultat, puisque nous som
 
 ## Spécifications
 
-| Spécification                                                                                                                                                    | Statut                                       | Commentaire                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-nodeiterator-previousnode', 'NodeIterator.previousNode')}}                                         | {{Spec2('DOM WHATWG')}}             | Comme `detach()` est maintenant une méthode non opérante, cette méthode ne peut plus rien lancer. |
-| {{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-NodeIterator-previousNode', 'NodeIterator.previousNode')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale.                                                                              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.NodeIterator.previousNode")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -17,7 +17,9 @@ translation_of: Web/API/ShadowRoot/delegatesFocus
 
 ## Syntaxe
 
-    var df = shadowRoot.delegatesFocus
+```js
+var df = shadowRoot.delegatesFocus
+```
 
 ### Valeur
 

@@ -14,7 +14,9 @@ La méthode **`Node.isDefaultNamespace()`** accepte un URI d'espace de nom comme
 
 ## Syntaxe
 
-    result = node.isDefaultNamespace(namespaceURI)
+```js
+result = node.isDefaultNamespace(namespaceURI)
+```
 
 - `result` détient la valeur de retour `true` (_vrai_) ou `false` (_faux_).
 - `namespaceURI` est une `string` (_chaîne de caractères_) représentant l'espace de nom par rapport auquel l'élément sera vérifié.
@@ -31,4 +33,4 @@ alert(el.isDefaultNamespace(XULNS)); // true
 ## Spécification
 
 - [DOM Level 3 Core: isDefaultNamespace](http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-isDefaultNamespace)
-- [Code snippets: isDefaultNamespace](/en-US/docs/Code_snippets/IsDefaultNamespace)
+- [Code snippets: isDefaultNamespace](/fr/docs/Code_snippets/IsDefaultNamespace)

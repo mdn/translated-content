@@ -30,7 +30,9 @@ La propriété en lecture seule **`TreeWalker.whatToShow`** renvoie un `unsigned
 
 ## Syntaxe
 
-    nodeTypes = treeWalker.whatToShow;
+```js
+nodeTypes = treeWalker.whatToShow;
+```
 
 ## Exemples
 
@@ -49,14 +51,11 @@ if( (treeWalker.whatToShow == NodeFilter.SHOW_ALL) ||
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | État                                         | Commentaires                                                          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-treewalker-whattoshow', 'TreeWalker.whatToShow')}}                                         | {{Spec2('DOM WHATWG')}}             | Pas de changement de {{SpecName('DOM2 Traversal_Range')}} |
-| {{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-TreeWalker-whatToShow', 'TreeWalker.whatToShow')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale.                                                  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.TreeWalker.whatToShow")}}
+{{Compat}}
 
 ## Voir aussi
 

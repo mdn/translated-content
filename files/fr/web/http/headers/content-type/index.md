@@ -34,8 +34,10 @@ Dans les requêtes, (telles que {{HTTPMethod("POST")}} ou {{HTTPMethod("PUT")}})
 
 ## Syntaxe
 
-    Content-Type: text/html; charset=utf-8
-    Content-Type: multipart/form-data; boundary=something
+```
+Content-Type: text/html; charset=utf-8
+Content-Type: multipart/form-data; boundary=something
+```
 
 ## Directives
 
@@ -62,22 +64,24 @@ Dans une requête {{HTTPMethod("POST")}}, qui vient d'une soumission d'un formul
 
 La requête ressemble à peu près à ceci (les en-têtes moins intéressants ont été ici volontairement omis)&nbsp;:
 
-    POST /toto HTTP/1.1
-    Content-Length: 68137
-    Content-Type: multipart/form-data; boundary=---------------------------974767299852498929531610575
-    Content-Disposition: form-data; name="description"
+```
+POST /toto HTTP/1.1
+Content-Length: 68137
+Content-Type: multipart/form-data; boundary=---------------------------974767299852498929531610575
+Content-Disposition: form-data; name="description"
 
-    ---------------------------974767299852498929531610575
+---------------------------974767299852498929531610575
 
-    du texte par ici
+du texte par ici
 
-    ---------------------------974767299852498929531610575
-    Content-Disposition: form-data; name="monFichier"; filename="toto.txt"
-    Content-Type: text/plain
+---------------------------974767299852498929531610575
+Content-Disposition: form-data; name="monFichier"; filename="toto.txt"
+Content-Type: text/plain
 
-    (contenu du fichier envoyé en ligne toto.txt)
+(contenu du fichier envoyé en ligne toto.txt)
 
-    ---------------------------974767299852498929531610575
+---------------------------974767299852498929531610575
+```
 
 ## Spécifications
 

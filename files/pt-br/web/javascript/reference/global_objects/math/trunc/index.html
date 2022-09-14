@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/trunc
 ---
 <div>{{JSRef}}</div>
 
-<p>O método <strong><code>Math.trunc()</code></strong> retorna a parte inteira de um número, descartando suas casas decimais.</p>
+<p>O método <strong><code>Math.trunc()</code></strong> retorna a parte inteira de um número, descartando suas casas decimais.</p>
 
 <p>{{EmbedInteractiveExample("pages/js/math-trunc.html")}}</p>
 
@@ -23,27 +23,27 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/trunc
  <dd>Um número.</dd>
 </dl>
 
-<p> </p>
+<p> </p>
 
 <h3 id="Valor_de_retorno">Valor de retorno</h3>
 
 <p>A parte inteira de um dado número.</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Diferente dos demais métodos em Math: {{jsxref("Math.floor()")}}, {{jsxref("Math.ceil()")}} e {{jsxref("Math.round()")}}, o retorno esperado da função <code>Math.trunc()</code> é simples e direto, ela apenas trunca o número passado a ela como parâmetro, removendo todas as casas decimais dele, não importando se o número é positivo ou negativo.</p>
+<p>Diferente dos demais métodos em Math: {{jsxref("Math.floor()")}}, {{jsxref("Math.ceil()")}} e {{jsxref("Math.round()")}}, o retorno esperado da função <code>Math.trunc()</code> é simples e direto, ela apenas trunca o número passado a ela como parâmetro, removendo todas as casas decimais dele, não importando se o número é positivo ou negativo.</p>
 
-<p>Portanto, se o argumento passado for um número positivo, <code>Math.trunc()</code> será equivalente a <code>Math.floor(), <font face="Open Sans, Arial, sans-serif">caso contrário </font></code><code>Math.trunc()</code> será equivalente a <code>Math.ceil()</code>.</p>
+<p>Portanto, se o argumento passado for um número positivo, <code>Math.trunc()</code> será equivalente a <code>Math.floor(), <font face="Open Sans, Arial, sans-serif">caso contrário </font></code><code>Math.trunc()</code> será equivalente a <code>Math.ceil()</code>.</p>
 
 <p>O argumento passado a esse método será convertido a um tipo numérico implicitamente.</p>
 
-<p>Já que <code>trunc()</code> é um método estático em <code>Math</code>, sempre utilize <code>Math.trunc()</code>, ao invés de um método existente no objeto que você criou (<code>Math</code> não é um construtor).</p>
+<p>Já que <code>trunc()</code> é um método estático em <code>Math</code>, sempre utilize <code>Math.trunc()</code>, ao invés de um método existente no objeto que você criou (<code>Math</code> não é um construtor).</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Usando_Math.trunc()">Usando <code>Math.trunc()</code></h3>
+<h3 id="Usando_Math.trunc()">Usando <code>Math.trunc()</code></h3>
 
 <pre class="brush: js">Math.trunc(13.37);    // 13
 Math.trunc(42.84);    // 42
@@ -57,7 +57,7 @@ Math.trunc();         // NaN
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>(um<em>Polyfill</em> é um pedaço de código que o desenvolvedor pode colocar na sua página para garantir compatilibilidade do método. No exemplo abaixo, caso o navegador não tiver o método <code>trunc </code>na classe <code>Math</code>, ele será criado);</p>
+<p>(um<em>Polyfill</em> é um pedaço de código que o desenvolvedor pode colocar na sua página para garantir compatilibilidade do método. No exemplo abaixo, caso o navegador não tiver o método <code>trunc </code>na classe <code>Math</code>, ele será criado);</p>
 
 <pre class="brush: js">Math.trunc = Math.trunc || function(x) {
   return x &lt; 0 ? Math.ceil(x) : Math.floor(x);
@@ -83,55 +83,7 @@ Math.trunc();         // NaN
 
 <h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome("38")}}</td>
-   <td>{{CompatGeckoDesktop("25")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOpera("25")}}</td>
-   <td>{{CompatSafari("7.1")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("25")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>8</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.Math.trunc")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

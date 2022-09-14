@@ -24,7 +24,9 @@ Une extension nécessite la permission "menus" pour utiliser cette API
 
 ## Syntaxe
 
-    let elem = browser.menus.getTargetElement(targetElementId);
+```js
+let elem = browser.menus.getTargetElement(targetElementId);
+```
 
 ### Paramètres
 
@@ -59,7 +61,7 @@ browser.menus.create({
 
 {{Compat("webextensions.api.menus.getTargetElement")}}
 
-## voir aussi
+## Voir aussi
 
 - {{WebExtAPIRef("menus.create")}}
 - {{WebExtAPIRef("menus.OnClickData")}}

@@ -9,7 +9,9 @@ Voir aussi le chapitre [Ajout de styles et de couleurs](/fr-FR/docs/Web/API/Canv
 
 ## Syntaxe
 
-    ctx.globalAlpha = valeur;
+```js
+ctx.globalAlpha = valeur;
+```
 
 ### Options
 
@@ -128,21 +130,11 @@ for (i = 0; i < 7; i++){
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-globalalpha", "CanvasRenderingContext2D.globalAlpha")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.globalAlpha")}}
-
-## Notes spécifiques à Gecko
-
-- À partir de Gecko 5.0, la spécification de valeurs invalides pour globalAlpha ne génère plus une exception SYNTAX_ERR ; celles-ci sont silencieusement et correctement ignorées.
-
-## Notes spécifiques à WebKit/Blink
-
-- Dans les navigateurs WebKit et Blink, une méthode non standard et désapprouvée `ctx.setAlpha()` est implémentée en plus de cette propriété.
+{{Compat}}
 
 ## Voir aussi
 

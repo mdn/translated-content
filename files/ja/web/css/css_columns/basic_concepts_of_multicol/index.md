@@ -1,12 +1,6 @@
 ---
 title: 段組みの基本概念
 slug: Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol
-tags:
-  - CSS
-  - CSS 段組みレイアウト
-  - ガイド
-  - レイアウト
-translation_of: Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol
 ---
 {{CSSRef}}
 
@@ -71,21 +65,27 @@ translation_of: Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol
 
 この CSS は例 1 と同じ結果で、 `column-count` を 3 に設定します。
 
-    .container {
-      columns: 3;
-    }
+```css
+.container {
+  columns: 3;
+}
+```
 
 この CSS は例 2 と同じ結果で、 `column-width` を 200px に設定します。
 
-    .container {
-      columns: 200px;
-    }
+```css
+.container {
+  columns: 200px;
+}
+```
 
 この CSS は例 3 と同じ結果で、 `column-count` と `column-width` の両方に設定します。
 
-    .container {
-      columns: 2 200px;
-    }
+```css
+.container {
+  columns: 2 200px;
+}
+```
 
 ## 次のステップ
 

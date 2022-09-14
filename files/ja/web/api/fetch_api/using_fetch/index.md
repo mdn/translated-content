@@ -1,18 +1,6 @@
 ---
 title: Fetch の使用
 slug: Web/API/Fetch_API/Using_Fetch
-tags:
-  - API
-  - BODY
-  - 実験的
-  - Fetch
-  - ガイド
-  - HTTP
-  - Promise
-  - Response
-  - fetch POST & string body
-  - request
-translation_of: Web/API/Fetch_API/Using_Fetch
 ---
 {{DefaultAPISidebar("Fetch API")}}
 
@@ -37,7 +25,7 @@ fetch('http://example.com/movies.json')
 
 {{domxref("Response")}} は、実際の JSON レスポンス本体を直接持っているのではなく、 HTTP レスポンス全体を表現するものです。 {{domxref("Response")}} オブジェクトから JSON の本文の内容を抽出するには、 {{domxref("Response.json()", "json()")}} メソッドを使用します。これはレスポンス本文のテキストを JSON として解釈した結果で解決する第 2 のプロミスを返します。
 
-> **Note:** 本文の内容が他の形式である場合に展開する同様の方法は、 {{anch("Body")}} の節を参照してください。
+> **Note:** 本文の内容が他の形式である場合に展開する同様の方法は、 [Body](#body) の節を参照してください。
 
 Fetch リクエストは、受け取るリソースからの指示ではなく、[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Headers/Content-Security-Policy)の `connect-src` ディレクティブによって制御されます。
 

@@ -1,11 +1,6 @@
 ---
 title: vertical-align
 slug: Web/CSS/vertical-align
-tags:
-  - CSS
-  - CSS プロパティ
-  - リファレンス
-translation_of: Web/CSS/vertical-align
 ---
 {{CSSRef}}
 
@@ -70,7 +65,7 @@ vertical-align: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : 要素のベースラインを、親要素のベースラインの指定値分上に揃えます。負の値を使えます。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : &lt;length&gt; 値と似ていますが、{{Cssxref("line-height")}} プロパティに対するパーセント値で指定します。負の値を使えます。
+  - : `<length>` 値と似ていますが、{{Cssxref("line-height")}} プロパティに対するパーセント値で指定します。負の値を使えます。
 
 #### 行との相対値
 

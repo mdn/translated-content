@@ -7,7 +7,7 @@ Une application monopage ou SPA (« _Single-page application_ » en anglais) est
 
 Cela permet donc aux utilisateurs d'utiliser des sites web sans charger de nouvelles pages entières à partir du serveur, ce qui peut entraîner des gains de performances et une expérience plus dynamique, avec certains inconvénients tels que le référencement (SEO), plus d'efforts nécessaires pour maintenir l'état, mettre en œuvre la navigation et mesurer les performances.
 
-## En apprendre plus
+## Voir aussi
 
 ### Connaissance générale
 
@@ -19,14 +19,8 @@ Certains des frameworks SPA les plus populaires incluent:
 
 ## Voir aussi
 
-1.  Articles wikipedia
-
-    1.  {{Interwiki("wikipedia", "Application web monopage")}}
-
-2.  [Glossaire](/fr/docs/Glossary)
-
-    1.  [API](/fr/docs/Glossary/API)
-    2.  [AJAX](/fr/docs/Glossary/AJAX)
-    3.  [JavaScript](/fr/docs/Glossary/JavaScript)
-
-3.  [Comprendre les frameworks JavaScript côté client](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
+- [Application web monopage](https://fr.wikipedia.org/wiki/Application_web_monopage) sur Wikipédia
+- [API](/fr/docs/Glossary/API)
+- [AJAX](/fr/docs/Glossary/AJAX)
+- [JavaScript](/fr/docs/Glossary/JavaScript)
+- [Comprendre les frameworks JavaScript côté client](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)

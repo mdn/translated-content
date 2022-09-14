@@ -17,8 +17,10 @@ La propriété **`protocol`** de l'interface {{domxref("URL")}} est une {{domxre
 
 ## Syntaxe
 
-    string = object.protocol;
-    object.protocol = string;
+```js
+string = object.protocol;
+object.protocol = string;
+```
 
 ### Valeur
 
@@ -33,14 +35,12 @@ var result = url.protocol; // Retourne:"https:"
 
 ## Spécifications
 
-| Spécification                                                        | Statut               | Commentaire          |
-| -------------------------------------------------------------------- | -------------------- | -------------------- |
-| {{SpecName('URL', '#dom-url-protocol', 'protocol')}} | {{Spec2('URL')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.URL.protocol")}}
+{{Compat}}
 
-## A voir également
+## Voir aussi
 
 - L'interface {{domxref("URL")}} dont il est contenu.

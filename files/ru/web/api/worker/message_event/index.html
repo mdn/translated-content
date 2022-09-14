@@ -6,10 +6,10 @@ original_slug: Web/API/Worker/onmessage
 ---
 <p>{{APIRef("Web Workers API")}}</p>
 
-<p>Свойство <strong><code>onmessage</code></strong>  интерфейса {{domxref("Worker")}} представляет собой обработчик {{event("Event_handlers", "event handler")}}, который будет вызван когда произойдёт событие {{event("message")}}. Тип этого события {{domxref("MessageEvent")}} и оно будет вызвано когда worker-объект получит сообщение из выполняемого им кода (т.е из метода {{domxref("DedicatedWorkerGlobalScope.postMessage")}} .</p>
+<p>Свойство <strong><code>onmessage</code></strong>  интерфейса {{domxref("Worker")}} представляет собой обработчик {{event("Event_handlers", "event handler")}}, который будет вызван когда произойдёт событие {{event("message")}}. Тип этого события {{domxref("MessageEvent")}} и оно будет вызвано когда worker-объект получит сообщение из выполняемого им кода (т.е из метода {{domxref("DedicatedWorkerGlobalScope.postMessage")}} .</p>
 
 <div class="note">
-<p><span style="font-size: 14px; line-height: 21px;"><strong>Примечание</strong></span>: Данные события доступны в свойстве data события {{event("message")}}.</p>
+<p><span style="font-size: 14px; line-height: 21px;"><strong>Примечание</strong></span>: Данные события доступны в свойстве data события {{event("message")}}.</p>
 </div>
 
 <h2 id="Синтаксис">Синтаксис</h2>
@@ -18,7 +18,7 @@ original_slug: Web/API/Worker/onmessage
 
 <h2 id="Пример">Пример</h2>
 
-<p>Следующий пример кода показывает создание объекта {{domxref("Worker")}} используя конструктор {{domxref("Worker.Worker", "Worker()")}}. События попадают в объект, когда значение внутри поля ввода формы <code>first</code> изменяется. Обработчик onmessage указан для обработки сообщений, которые приходят назад из кода объекта в текущий контекст выполнения.</p>
+<p>Следующий пример кода показывает создание объекта {{domxref("Worker")}} используя конструктор {{domxref("Worker.Worker", "Worker()")}}. События попадают в объект, когда значение внутри поля ввода формы <code>first</code> изменяется. Обработчик onmessage указан для обработки сообщений, которые приходят назад из кода объекта в текущий контекст выполнения.</p>
 
 <pre class="brush: js">var myWorker = new Worker("worker.js");
 
@@ -28,12 +28,12 @@ first.onchange = function() {
 }
 
 myWorker.onmessage = function(e) {
-  result.textContent = e.data;
-  console.log('Сообщение полученное из worker-объекта');
+  result.textContent = e.data;
+  console.log('Сообщение полученное из worker-объекта');
 }
 </pre>
 
-<p>В скрипте <code>worker.js</code>, обработчик <code>onmessage</code> используется для обработки событий, полученных из главного скрипта:</p>
+<p>В скрипте <code>worker.js</code>, обработчик <code>onmessage</code> используется для обработки событий, полученных из главного скрипта:</p>
 
 <pre class="brush: js">onmessage = function(e) {
   console.log('Сообщение полученное из главного скрипта');
@@ -42,9 +42,9 @@ myWorker.onmessage = function(e) {
   postMessage(workerResult);
 }</pre>
 
-<p>Посмотрите как в скрипте <code>worker.js</code> вызывается обработчик <code>onmessage</code><code>.</code> В нем присутствует только глобальное свойство <code>onmessage,</code> потому что worker-объект фактически является областью видимости ({{domxref("DedicatedWorkerGlobalScope")}}).</p>
+<p>Посмотрите как в скрипте <code>worker.js</code> вызывается обработчик <code>onmessage</code><code>.</code> В нем присутствует только глобальное свойство <code>onmessage,</code> потому что worker-объект фактически является областью видимости ({{domxref("DedicatedWorkerGlobalScope")}}).</p>
 
-<p>Для полного примера смотрите наш <a class="external external-icon" href="https://github.com/mdn/simple-web-worker">Basic dedicated worker example</a> (<a class="external external-icon" href="http://mdn.github.io/simple-web-worker/">run dedicated worker</a>).</p>
+<p>Для полного примера смотрите наш <a class="external external-icon" href="https://github.com/mdn/simple-web-worker">Basic dedicated worker example</a> (<a class="external external-icon" href="http://mdn.github.io/simple-web-worker/">run dedicated worker</a>).</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 

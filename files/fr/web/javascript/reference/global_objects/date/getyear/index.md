@@ -17,7 +17,9 @@ La méthode **`getYear()`** renvoie l'année de la date renseignée, d'après l'
 
 ## Syntaxe
 
-    dateObj.getYear()
+```js
+dateObj.getYear()
+```
 
 ### Valeur de retour
 

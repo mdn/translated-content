@@ -1,14 +1,6 @@
 ---
 title: ValidityState.badInput
 slug: Web/API/ValidityState/badInput
-tags:
-  - API
-  - 制約検証 API
-  - HTML DOM
-  - プロパティ
-  - 読み取り専用
-  - ValidityState
-translation_of: Web/API/ValidityState/badInput
 ---
 {{APIRef("HTML DOM")}}
 
@@ -23,9 +15,9 @@ translation_of: Web/API/ValidityState/badInput
 ```js
 var input = document.getElementById("age");
 if (input.validity.badInput) {
-  console.log("Bad input detected…");
+  console.log("Bad input detected…");
 } else {
-  console.log("Content of input OK.");
+  console.log("Content of input OK.");
 }
 ```
 

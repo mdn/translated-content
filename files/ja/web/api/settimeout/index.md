@@ -1,20 +1,6 @@
 ---
 title: setTimeout()
 slug: Web/API/setTimeout
-tags:
-  - API
-  - HTML DOM
-  - Intervals
-  - JavaScript タイマー
-  - MakeBrowserAgnostic
-  - メソッド
-  - NeedsMarkupWork
-  - リファレンス
-  - Timers
-  - setTimeout
-  - ポリフィル
-browser-compat: api.setTimeout
-translation_of: Web/API/WindowOrWorkerGlobalScope/setTimeout
 original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
 ---
 {{APIRef("HTML DOM")}}
@@ -36,7 +22,7 @@ var timeoutID = setTimeout(code[, delay]);
 - `code`
   - : 関数の代わりに文字列を含める代替構文も許容されており、タイマーが満了したときに文字列をコンパイルして実行します。 {{jsxref("Global_Objects/eval", "eval()")}} の使用にリスクがあるのと同じ理由で、この構文は**推奨しません**。
 - `delay` {{optional_inline}}
-  - : 指定した関数やコードを実行する前に待つタイマーの時間をミリ秒 (1/1000 秒) 単位で指定します。この引数を省略すると値 0 を使用しますので "直ちに" 実行する、より正確に言えばできるだけ早く実行することを意味します。どちらの場合も、実際の遅延が想定より長くなることがあります。後述する{{anch("遅延が指定値より長い理由")}}をご覧ください。
+  - : 指定した関数やコードを実行する前に待つタイマーの時間をミリ秒 (1/1000 秒) 単位で指定します。この引数を省略すると値 0 を使用しますので "直ちに" 実行する、より正確に言えばできるだけ早く実行することを意味します。どちらの場合も、実際の遅延が想定より長くなることがあります。後述する[遅延が指定値より長い理由](#遅延が指定値より長い理由)をご覧ください。
 - `arg1, ..., argN` {{optional_inline}}
   - : タイマーが満了したときに、 `function` で指定された関数に渡す追加の引数です。
 

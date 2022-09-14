@@ -9,7 +9,9 @@ Crée un nouvel objet vide de type {{domxref("DocumentFragment")}}.
 
 ## Syntaxe
 
-    var fragment = document.createDocumentFragment();
+```js
+var fragment = document.createDocumentFragment();
+```
 
 `fragment` est une référence vers un objet vide de type {{domxref("DocumentFragment")}} .
 
@@ -51,15 +53,13 @@ element.appendChild(fragment);
 
 {{EmbedLiveSample("Exemple", 600, 140)}}
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                                            | Statut                           | Commentaire                                      |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------ |
-| {{SpecName('DOM WHATWG', '#dom-document-createdocumentfragment', 'Document.createDocumentFragment()')}} | {{Spec2('DOM WHATWG')}} | Définition initiale dans la spécification DOM 1. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.createDocumentFragment")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -23,7 +23,9 @@ Les formes qui suivent sont prises en charge. Toutes les valeurs `<basic-shape>`
 
   - : Cette fonction permet de définir un rectangle incrusté (_inset_).
 
-        inset( <shape-arg>{1,4} [round <border-radius>]? )
+    ```
+    inset( <shape-arg>{1,4} [round <border-radius>]? )
+    ```
 
     Lorsque les quatre premiers arguments sont fournis, ils représentent respectivement les décalages, vers l'intérieur, depuis les côtés haut, droit, bas et gauche par rapport à la boîte de référence. Ces arguments peuvent être utilisés de la même façon que pour {{cssxref("margin")}} afin d'utiliser seulement une, deux ou quatre valeurs.
 
@@ -35,7 +37,9 @@ Les formes qui suivent sont prises en charge. Toutes les valeurs `<basic-shape>`
 
   - : Définit un polygone.
 
-        polygon( [<fill-rule>,]? [<shape-arg> <shape-arg>]# )
+    ```
+    polygon( [<fill-rule>,]? [<shape-arg> <shape-arg>]# )
+    ```
 
     `<fill-rule>` représente [la règle de remplissage](/fr/docs/Web/SVG/Attribute/fill-rule) utilisée pour déterminer l'intérieur du polygone. Les valeurs possibles sont `nonzero` et `evenodd`. La valeur par défaut pour cet argument est `nonzero`.
 
@@ -45,7 +49,9 @@ Les formes qui suivent sont prises en charge. Toutes les valeurs `<basic-shape>`
 
   - : Définit un cercle.
 
-        circle( [<shape-radius>]? [at <position>]? )
+    ```
+    circle( [<shape-radius>]? [at <position>]? )
+    ```
 
     L'argument `<shape-radius>` représente le rayon du cercle. Les valeurs négatives ne sont pas autorisées et les valeurs exprimées en pourcentages seront calculées de la façon suivante en fonction de la hauteur et de la largeur de la boîte de référence `sqrt(largeur^2+hauteur^2)/sqrt(2)`.
 
@@ -55,7 +61,9 @@ Les formes qui suivent sont prises en charge. Toutes les valeurs `<basic-shape>`
 
   - : Définit une ellipse.
 
-        ellipse( [<shape-radius>{2}]? [at <position>]? )
+    ```
+    ellipse( [<shape-radius>{2}]? [at <position>]? )
+    ```
 
     Les arguments `<shape-radius>` représentent les demi-axes horizontaux (r<sub>x</sub>) et verticaux (r<sub>y</sub>) de l'ellipse. Les valeurs négatives ne sont pas autorisées. Les valeurs exprimées en pourcentages sont calculées : en fonction de la hauteur de la boîte de référence pour le demi-axe vertical, en fonction de la largeur de la boîte de référence pour le demi-axe horizontal.
 
@@ -65,7 +73,9 @@ Les formes qui suivent sont prises en charge. Toutes les valeurs `<basic-shape>`
 
   - : Définit un chemin.
 
-        path( [<fill-rule>,]? <string>)
+    ```
+    path( [<fill-rule>,]? <string>)
+    ```
 
     L'argument optionnel `<fill-rule>` représente [la règle de remplissage](/fr/docs/Web/SVG/Attribute/fill-rule) utilisée pour déterminer l'intérieur du chemin. Les valeurs possibles sont `nonzero` et `evenodd`. La valeur par défaut est `nonzero`.
 
@@ -73,8 +83,10 @@ Les formes qui suivent sont prises en charge. Toutes les valeurs `<basic-shape>`
 
 Les arguments qui ne sont pas définis ci-avant suivent cette syntaxe :
 
-    <shape-arg> = <length> | <percentage>
-    <shape-radius> = <length> | <percentage> | closest-side | farthest-side
+```
+<shape-arg> = <length> | <percentage>
+<shape-radius> = <length> | <percentage> | closest-side | farthest-side
+```
 
 `closest-side` utilise la distance entre le centre de la forme et le côté le plus proche de la boîte de la référence. Pour les cercles, cela au côté le plus proche dans les deux axes. Pour les ellipses, cela correspond au côté le plus proche dans l'axe du rayon de l'ellipse.
 

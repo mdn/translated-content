@@ -3,11 +3,11 @@ title: additive-symbols
 slug: Web/CSS/@counter-style/additive-symbols
 tags:
   - '@counter-style'
-  - アットルール記述子
+  - At-rule descriptor
   - CSS
-  - CSS カウンタースタイル
-  - CSS 記述子
-  - リファレンス
+  - CSS Counter Styles
+  - CSS Descriptor
+  - Reference
 browser-compat: css.at-rules.counter-style.additive-symbols
 translation_of: Web/CSS/@counter-style/additive-symbols
 ---
@@ -31,7 +31,11 @@ additive-symbols: 3 "0", 2 url(symbol.png);
 
 ## 形式文法
 
-{{csssyntax}}
+```
+[ <integer [0,∞]> && <symbol> ]#
+
+<symbol> = <string> | <image> | <custom-ident>
+```
 
 ## 例
 
@@ -54,7 +58,7 @@ additive-symbols: 3 "0", 2 url(symbol.png);
 ```css
 @counter-style additive-symbols-example {
   system: additive;
-  additive-symbols: V 5, IV 4, I 1;
+  additive-symbols: V 5, IV 4, I 1;
 }
 .list {
   list-style: additive-symbols-example;
@@ -76,4 +80,4 @@ additive-symbols: 3 "0", 2 url(symbol.png);
 ## 関連情報
 
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols()", "symbols()")}}、無名のカウンタースタイルを作成する関数記法
+- {{cssxref("symbols", "symbols()")}}、無名のカウンタースタイルを作成する関数記法

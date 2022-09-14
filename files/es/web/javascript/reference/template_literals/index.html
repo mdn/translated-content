@@ -11,7 +11,7 @@ original_slug: Web/JavaScript/Referencia/template_strings
 ---
 <div>{{JsSidebar("More")}}</div>
 
-<p>Las plantillas literales son cadenas literales que habilitan el uso de expresiones incrustadas. Con ellas, es posible utilizar cadenas de caracteres de más de una línea, y funcionalidades de interpolación de cadenas de caracteres.</p>
+<p>Las plantillas literales son cadenas literales que habilitan el uso de expresiones incrustadas. Con ellas, es posible utilizar cadenas de caracteres de más de una línea, y funcionalidades de interpolación de cadenas de caracteres.</p>
 
 <p>En ediciones anteriores de la especificación ES2015, solían llamarse "plantillas de cadenas de caracteres".</p>
 
@@ -29,19 +29,19 @@ original_slug: Web/JavaScript/Referencia/template_strings
 
 <h2 id="Description" name="Description">Descripción</h2>
 
-<p>Las plantillas literales se delimitan con el caracter de comillas o tildes invertidas (` `) (<a href="http://en.wikipedia.org/wiki/Grave_accent">grave accent</a>), en lugar de las comillas sencillas o dobles.</p>
+<p>Las plantillas literales se delimitan con el caracter de comillas o tildes invertidas (` `) (<a href="http://en.wikipedia.org/wiki/Grave_accent">grave accent</a>), en lugar de las comillas sencillas o dobles.</p>
 
-<p>Las plantillas de cadena de caracteres pueden contener marcadores, identificados por el signo de dólar y envueltos en llaves (<code>${expresión}</code>). Las expresiones contenidas en los marcadores, junto con el texto entre ellas, son enviados como argumentos a una función.</p>
+<p>Las plantillas de cadena de caracteres pueden contener marcadores, identificados por el signo de dólar y envueltos en llaves (<code>${expresión}</code>). Las expresiones contenidas en los marcadores, junto con el texto entre ellas, son enviados como argumentos a una función.</p>
 
-<p>La función por defecto sencillamente concatena las partes para formar una única cadena de caracteres. Si hay una expresión antes de la plantilla literal (aquí indicada mediante <em><code>etiqueta</code></em>), se le conoce como "plantilla etiquetada". En este caso, la expresión de etiqueta (típicamente una función) es llamada con la plantilla literal como parámetro, que luego puede ser manipulada antes de ser devuelta.</p>
+<p>La función por defecto sencillamente concatena las partes para formar una única cadena de caracteres. Si hay una expresión antes de la plantilla literal (aquí indicada mediante <em><code>etiqueta</code></em>), se le conoce como "plantilla etiquetada". En este caso, la expresión de etiqueta (típicamente una función) es llamada con la plantilla literal como parámetro, que luego puede ser manipulada antes de ser devuelta.</p>
 
-<p>En caso de querer escapar una comilla o tilde invertida en una plantilla literal, se debe poner una barra invertida (<code>\</code>) antes de la comilla o tilde invertida.</p>
+<p>En caso de querer escapar una comilla o tilde invertida en una plantilla literal, se debe poner una barra invertida (<code>\</code>) antes de la comilla o tilde invertida.</p>
 
 <pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="template-string token"><span class="string token">`\``</span></span> <span class="operator token">===</span> <span class="string token">'`'</span> <span class="comment token">// --&gt; true (cierto)</span></code></pre>
 
 <h3 id="Cadenas_de_más_de_una_línea">Cadenas de más de una línea</h3>
 
-<p>Los caracteres de fin de línea encontrados forman parte de la plantilla literal.</p>
+<p>Los caracteres de fin de línea encontrados forman parte de la plantilla literal.</p>
 
 <p>Utilizando cadenas de caracteres normales, sería necesario utilizar la siguiente sintaxes para producir cadenas de más de una línea:</p>
 
@@ -60,7 +60,7 @@ línea 2 de la cadena de texto`);
 
 <h3 id="Interpolación_de_expresiones">Interpolación de expresiones</h3>
 
-<p>Para insertar expresiones dentro de cadenas de caracteres normales, se utilizaría la siguiente sintaxis:</p>
+<p>Para insertar expresiones dentro de cadenas de caracteres normales, se utilizaría la siguiente sintaxis:</p>
 
 <pre class="brush: js notranslate">let a = 5;
 let b = 10;
@@ -68,7 +68,7 @@ console.log('Quince es ' + (a + b) + ' y\nno ' + (2 * a + b) + '.');
 // "Quince es 15 y
 // no 20."</pre>
 
-<p>Ahora, con las plantillas literales, se pueden utilizar sus nuevas capacidades (es decir, insertar expresiones con <code>${ }</code> e incluir caracteres de fin de linea literales dentro de la cadena) para simplificar la sintaxis:</p>
+<p>Ahora, con las plantillas literales, se pueden utilizar sus nuevas capacidades (es decir, insertar expresiones con <code>${ }</code> e incluir caracteres de fin de linea literales dentro de la cadena) para simplificar la sintaxis:</p>
 
 <pre class="brush: js notranslate">let a = 5;
 let b = 10;
@@ -79,9 +79,9 @@ no ${2 * a + b}.`);
 
 <h3 id="Anidamiento_de_plantillas">Anidamiento de plantillas</h3>
 
-<p>En ciertos casos, anidar una plantilla es la forma más fácil, e incluso más legible, de tener cadenas configurables. Dentro de una plantilla con tildes invertidas, es sencillo permitir tildes invertidas interiores simplemente usándolas dentro de un marcador de posición <code>${ }</code> dentro de la plantilla.</p>
+<p>En ciertos casos, anidar una plantilla es la forma más fácil, e incluso más legible, de tener cadenas configurables. Dentro de una plantilla con tildes invertidas, es sencillo permitir tildes invertidas interiores simplemente usándolas dentro de un marcador de posición <code>${ }</code> dentro de la plantilla.</p>
 
-<p>Por ejemplo, si la condición a es <code>true</code> (cierta): entonces <code>return</code> (devuelva) este literal con plantilla.</p>
+<p>Por ejemplo, si la condición a es <code>true</code> (cierta): entonces <code>return</code> (devuelva) este literal con plantilla.</p>
 
 <p>En ES5:</p>
 
@@ -95,20 +95,20 @@ classes <span class="operator token">+</span><span class="operator token">=</spa
 <pre class="brush: js notranslate"><code>const classes = `header ${ isLargeScreen() ? '' :
     (item.isCollapsed ? 'icon-expander' : 'icon-collapser') }`;</code></pre>
 
-<p>En ES5 con plantillas literales anidadas:</p>
+<p>En ES5 con plantillas literales anidadas:</p>
 
 <pre class="brush: js notranslate"><code>const classes = `header ${ isLargeScreen() ? '' :
  `icon-${item.isCollapsed ? 'expander' : 'collapser'}` }`;</code></pre>
 
 <h3 id="Plantillas_etiquetadas">Plantillas etiquetadas</h3>
 
-<p>Una forma más avanzada de plantillas literales son las plantillas <em>etiquetadas</em>.</p>
+<p>Una forma más avanzada de plantillas literales son las plantillas <em>etiquetadas</em>.</p>
 
-<p>Con ellas es posible modificar la salida de las plantillas utilizando una función. El primer argumento contiene un array con una o más cadenas de caracteres. El segundo y subsiguientes argumentos se asocian con las expresiones de la plantilla.</p>
+<p>Con ellas es posible modificar la salida de las plantillas utilizando una función. El primer argumento contiene un array con una o más cadenas de caracteres. El segundo y subsiguientes argumentos se asocian con las expresiones de la plantilla.</p>
 
 <p>La función de etiqueta puede ejecutar cualesquiera operaciones deseadas con estos argumentos, y luego devolver la cadena manipulada. (También puede devolver algo totalmente distinto, como se muestra en uno de los siguientes ejemplos.)</p>
 
-<p>El nombre de la función utilizada con la etiqueta no es nada especial, se puede utilizar cualquier nombre de función en su lugar.</p>
+<p>El nombre de la función utilizada con la etiqueta no es nada especial, se puede utilizar cualquier nombre de función en su lugar.</p>
 
 <pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">let persona <span class="operator token">=</span> <span class="string token">'Mike'</span><span class="punctuation token">;</span>
 let edad <span class="operator token">=</span> <span class="number token">28</span><span class="punctuation token">;</span>
@@ -120,7 +120,7 @@ let edad <span class="operator token">=</span> <span class="number token">28</sp
 
   <span class="comment token">// Tecnicamente, hay una cadena de
   // caracteres después de la expresión
-  // final (en nuestro ejemplo) pero
+  // final (en nuestro ejemplo) pero
   // está vacia (""), asi que se ignora.</span>
   <span class="comment token">// let str2 = strings[2];</span>
 
@@ -135,7 +135,7 @@ let edad <span class="operator token">=</span> <span class="number token">28</sp
   <span class="punctuation token">}</span>
 
   <span class="comment token">// Podemos incluso retornar una cadena de
-  // caracteres utilizando una plantilla literal.</span>
+  // caracteres utilizando una plantilla literal.</span>
   <span class="keyword token">return</span> <span class="template-string token"><span class="string token">`</span><span class="interpolation token"><span class="interpolation-punctuation punctuation token">${</span>str0<span class="interpolation-punctuation punctuation token">}</span></span><span class="interpolation token"><span class="interpolation-punctuation punctuation token">${expPersona</span><span class="interpolation-punctuation punctuation token">}</span></span><span class="interpolation token"><span class="interpolation-punctuation punctuation token">${</span>str1<span class="interpolation-punctuation punctuation token">}</span></span><span class="interpolation token"><span class="interpolation-punctuation punctuation token">${</span>strEdad<span class="interpolation-punctuation punctuation token">}</span></span><span class="string token">`</span></span><span class="punctuation token">;</span>
 <span class="punctuation token">}</span>
 
@@ -174,7 +174,7 @@ t3Closure({nombre: 'MDN', edad: 30}); //"Me llamo MDN. Tengo casi 30 años."</pr
 
 <h3 id="Cadenas_en_crudo_raw">Cadenas en crudo (<em>raw</em>)</h3>
 
-<p>La propiedad especial <code>raw</code>, disponible en el primer argumento de la función de etiqueta, permite acceso a las cadenas de caracteres tal como fueron ingresadas, sin procesar <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Grammar_and_types#Literales_String">secuencias de escape</a>.</p>
+<p>La propiedad especial <code>raw</code>, disponible en el primer argumento de la función de etiqueta, permite acceso a las cadenas de caracteres tal como fueron ingresadas, sin procesar <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Grammar_and_types#Literales_String">secuencias de escape</a>.</p>
 
 <pre class="brush: js notranslate">function etiqueta(cadenas) {
   console.log(cadenas.raw[0]);
@@ -184,7 +184,7 @@ etiqueta`texto de cadena de caracteres 1 \n texto de cadena de caracteres 2`;
 // muestra "texto de cadena de caracteres 1 \n texto de cadena de caracteres 2" ,
 // incluyendo los caracteres '\' y 'n'</pre>
 
-<p>Adicionalmente, el método {{jsxref("String.raw()")}} permite crear cadenas de caracteres en crudo tal como serían generadas por la función por defecto de plantilla, concatenando sus partes.</p>
+<p>Adicionalmente, el método {{jsxref("String.raw()")}} permite crear cadenas de caracteres en crudo tal como serían generadas por la función por defecto de plantilla, concatenando sus partes.</p>
 
 <pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">let cadena <span class="operator token">=</span> String<span class="punctuation token">.</span>raw<span class="template-string token"><span class="string token">`¡Hola\n</span><span class="interpolation token"><span class="interpolation-punctuation punctuation token">${</span><span class="number token">2</span><span class="operator token">+</span><span class="number token">3</span><span class="interpolation-punctuation punctuation token">}</span></span><span class="string token">!`</span></span><span class="punctuation token">;</span>
 <span class="comment token">// "¡Hola\n5!"</span>
@@ -203,13 +203,13 @@ cadena<span class="punctuation token">.</span>length<span class="punctuation tok
 <p>Comenzando con ECMAScript 2016, las plantillas etiquetadas se comportan de acuerdo con las normas de las siguientes secuencias de escape:</p>
 
 <ul>
- <li>Secuencias de escape de formato Unicode comenzando con "<code>\u</code>", como <code>\u00A9</code></li>
- <li>Secuencias de escape de formato Unicode de punto de código, indicadas con "<code>\u{}</code>", como <code>\u{2F804}</code></li>
- <li>Secuencias de escape de numeros hexadecimales comenzando con "<code>\x</code>", como <code>\xA9</code></li>
- <li>Secuencias de escape de octales literales comenzando con "<code>\0o</code>" seguidas de uno o más dígitos, como <code>\0o251</code></li>
+ <li>Secuencias de escape de formato Unicode comenzando con "<code>\u</code>", como <code>\u00A9</code></li>
+ <li>Secuencias de escape de formato Unicode de punto de código, indicadas con "<code>\u{}</code>", como <code>\u{2F804}</code></li>
+ <li>Secuencias de escape de numeros hexadecimales comenzando con "<code>\x</code>", como <code>\xA9</code></li>
+ <li>Secuencias de escape de octales literales comenzando con "<code>\0o</code>" seguidas de uno o más dígitos, como <code>\0o251</code></li>
 </ul>
 
-<p>Esto significa que una plantilla etiquetada como la siguiente podría causar problemas, dado que, de acuerdo con la gramática de ECMAScript, un analizador buscará secuencias de escape de formato Unicode válidas pero encontrará sintaxis equivocado:</p>
+<p>Esto significa que una plantilla etiquetada como la siguiente podría causar problemas, dado que, de acuerdo con la gramática de ECMAScript, un analizador buscará secuencias de escape de formato Unicode válidas pero encontrará sintaxis equivocado:</p>
 
 <pre class="brush: js notranslate">latex`\unicode`
 // En ECMAScript 2016 y versiones anteriores, lanza
@@ -217,9 +217,9 @@ cadena<span class="punctuation token">.</span>length<span class="punctuation tok
 
 <h3 id="Revision_de_secuencias_de_escape_no_permitidas_en_ES2018">Revision de secuencias de escape no permitidas en ES2018</h3>
 
-<p>Las plantillas etiquetadas deberías permitir la inserción de lenguages (como los <a href="https://en.wikipedia.org/wiki/Domain-specific_language">DSL</a>, o <a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a>), en donde otras secuencias de escape se ven comúnmente. La propuesta para ECMAScript <a href="https://tc39.es/proposal-template-literal-revision/">Template Literal Revision</a> (Revisión de Plantilla Literal) (Cuarta Etapa, en camino a ser integrada al estándar de ECMAScript 2018) elimina la restricción de las secuencias de escape en ECMAScript para las plantillas etiquetadas.</p>
+<p>Las plantillas etiquetadas deberías permitir la inserción de lenguages (como los <a href="https://en.wikipedia.org/wiki/Domain-specific_language">DSL</a>, o <a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a>), en donde otras secuencias de escape se ven comúnmente. La propuesta para ECMAScript <a href="https://tc39.es/proposal-template-literal-revision/">Template Literal Revision</a> (Revisión de Plantilla Literal) (Cuarta Etapa, en camino a ser integrada al estándar de ECMAScript 2018) elimina la restricción de las secuencias de escape en ECMAScript para las plantillas etiquetadas.</p>
 
-<p>Aún así, las secuencias de escape no permitidas deben ser representadas en la representación "cocinada" de la cadena. Aparecerán como elementos <a href="https://developer.mozilla.org/es/docs/Glossary/undefined">no definidos</a> en el array llamado "cocinado" en el siguiente ejemplo.</p>
+<p>Aún así, las secuencias de escape no permitidas deben ser representadas en la representación "cocinada" de la cadena. Aparecerán como elementos <a href="https://developer.mozilla.org/es/docs/Glossary/undefined">no definidos</a> en el array llamado "cocinado" en el siguiente ejemplo.</p>
 
 <pre class="brush: js notranslate">function latex(str) {
   return { "cocinado": str[0], "en crudo": str.raw[0] }
@@ -229,7 +229,7 @@ latex`\unicode`
 
 // { cocinado: undefined, en crudo: "\\unicode" }</pre>
 
-<p>Cabe destacar que la restricción para secuencias de escape solo ha sido eliminada para plantillas <em>etiquetadas</em>. Aún permanece para plantillas literales sin etiqueta:</p>
+<p>Cabe destacar que la restricción para secuencias de escape solo ha sido eliminada para plantillas <em>etiquetadas</em>. Aún permanece para plantillas literales sin etiqueta:</p>
 
 <pre class="brush: js example-bad notranslate">let bad = `bad escape sequence: \unicode`;</pre>
 

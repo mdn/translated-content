@@ -117,7 +117,7 @@ La propriété `list-style-type` peut être définie grâce à&nbsp;:
 - `hiragana` {{experimental_inline}}
   - : Le lettrage lexicographique hiragana.
 - `hiragana-iroha` {{experimental_inline}}
-  - : Le lettrage {{interwiki('wikipedia', 'Iroha', 'Iroha-order')}} hiragana.
+  - : Le lettrage [iroha](https://fr.wikipedia.org/wiki/Iroha) hiragana.
 - `japanese-formal` {{experimental_inline}}
   - : La numérotation japonaise formelle utilisée pour les documents financiers ou légaux. Les kanjis sont conçus afin de ne pas pouvoir être modifié pour ressembler à un autre.
 - `japanese-informal` {{experimental_inline}}
@@ -127,7 +127,7 @@ La propriété `list-style-type` peut être définie grâce à&nbsp;:
 - `katakana` {{experimental_inline}}
   - : Le lettrage lexicographique katakana.
 - `katakana-iroha` {{experimental_inline}}
-  - : Le lettrage {{interwiki('wikipedia', 'Iroha', 'Iroha-order')}} katakana.
+  - : Le lettrage [iroha](https://fr.wikipedia.org/wiki/Iroha) katakana.
 - `korean-hangul-formal` {{experimental_inline}}
   - : La numérotation coréenne hangul.
 - `korean-hanja-formal` {{experimental_inline}}

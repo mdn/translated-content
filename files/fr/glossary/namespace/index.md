@@ -10,8 +10,6 @@ Un espace de nom (en anglais : Namespace) est un contexte qui permet d'identifie
 
 Dans un système d'exploitation, un dossier est un namespace. Chaque fichier ou sous-dossier a un nom unique mais pouvant être réutilisé à un autre niveau d'arborescence.
 
-## En savoir plus
+## Voir aussi
 
-### **Connaissance générale**
-
-- {{Interwiki("wikipedia", "Namespace")}} sur Wikipedia
+- [Espace de noms](https://fr.wikipedia.org/wiki/Espace_de_noms) sur Wikipédia

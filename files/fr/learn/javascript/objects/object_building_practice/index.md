@@ -57,9 +57,9 @@ Cet exemple utilise l'[API Canvas](/fr/docs/Learn/JavaScript/Client-side_web_API
 
 Pour commencer, faites des copies locales de nos fichiers [`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css), et [`main.js`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main.js). Ces fichiers contiennent respectivement :
 
-1.  Un document HTML très simple contenant un élément {{HTMLElement("h1")}} , un élément {{HTMLElement("canvas")}} pour dessiner nos balles dessus et des élements pour appliquer notre CSS et notre JavaScript à notre HTML ;
-2.  Quelques styles très simples qui servent principalement à mettre en forme et placer le `<h1>`, et se débarasser de toutes barres de défilement ou de marges autour du pourtour de notre page (afin que cela paraisse plus sympathique et élégant) ;
-3.  Un peu de JavaScript qui sert à paramétrer l'élément  `<canvas>` et fournir les fonctions globales que nous utiliserons.
+1. Un document HTML très simple contenant un élément {{HTMLElement("h1")}} , un élément {{HTMLElement("canvas")}} pour dessiner nos balles dessus et des élements pour appliquer notre CSS et notre JavaScript à notre HTML ;
+2. Quelques styles très simples qui servent principalement à mettre en forme et placer le `<h1>`, et se débarasser de toutes barres de défilement ou de marges autour du pourtour de notre page (afin que cela paraisse plus sympathique et élégant) ;
+3. Un peu de JavaScript qui sert à paramétrer l'élément  `<canvas>` et fournir les fonctions globales que nous utiliserons.
 
 La première partie du script ressemble à ceci :
 
@@ -140,15 +140,15 @@ En utilisant cette fonction, nous pouvons dire à notre balle de se dessiner sur
 
 Vous pouvez déjà commencer à tester votre objet&nbsp;:
 
-1.  Sauvegardez le code et chargez le fichier html dans un navigateur.
-2.  Ouvrez la console JavaScript du navigateur et actualisez la page afin que la taille du canvas change et prenne la petite taille restante de la fenêtre lorsque la console est ouverte.
-3.  Tapez dans la console ce qui suit afin de créer une nouvelle instance de balle :
+1. Sauvegardez le code et chargez le fichier html dans un navigateur.
+2. Ouvrez la console JavaScript du navigateur et actualisez la page afin que la taille du canvas change et prenne la petite taille restante de la fenêtre lorsque la console est ouverte.
+3. Tapez dans la console ce qui suit afin de créer une nouvelle instance de balle :
 
     ```js
     let testBall = new Ball(50, 100, 4, 4, 'blue', 10);
     ```
 
-4.  Essayez d'appeler ses membres :
+4. Essayez d'appeler ses membres :
 
     ```js
     testBall.x
@@ -157,7 +157,7 @@ Vous pouvez déjà commencer à tester votre objet&nbsp;:
     testBall.draw()
     ```
 
-5.  Lorsque vous entrerez la dernière ligne, vous devriez voir la balle se dessiner quelque part sur votre canvas.
+5. Lorsque vous entrerez la dernière ligne, vous devriez voir la balle se dessiner quelque part sur votre canvas.
 
 ### Mettre à jour les données de la balle
 
@@ -186,16 +186,16 @@ Ball.prototype.update = function() {
 }
 ```
 
-Les quatre premières parties de la fonction vérifient si la balle a atteint le rebord du `canvas`. Si c'est le cas, nous inversons la polarité de la vitesse appropriée pour faire bouger la balle dans le sens opposé. Donc, par exemple, si la balle se déplaçait vers le haut (`velY` positif) alors la vitesse verticale est changée afin qu'elle commence à bouger plutôt vers le bas (`velY` négatif).
+Les quatre premières parties de la fonction vérifient si la balle a atteint le rebord du `canvas`. Si c'est le cas, nous inversons la polarité de la vitesse appropriée pour faire bouger la balle dans le sens opposé. Donc, par exemple, si la balle se déplaçait vers le haut (`velY` positif) alors la vitesse verticale est changée afin qu'elle commence à bouger plutôt vers le bas (`velY` négatif).
 
 Dans les quatre cas, nous vérifions&nbsp;:
 
 - Si la coordonnée `x` est plus grande que la largeur du `canvas` (la balle est en train de sortir du côté droit).
 - Si la coordonnée `x` est plus petite que `0` (la balle est en train de sortir du côté gauche).
 - Si la coordonnée `y` est plus grande que la hauteur du `canvas` (la balle est en train de sortir par le bas).
-- Si la coordonnée `y` est plus petite que `0` (la balle est en train de sortir par le haut).
+- Si la coordonnée `y` est plus petite que `0` (la balle est en train de sortir par le haut).
 
-Dans chaque cas, nous incluons la taille (`size`) de la balle dans les calculs parce que les coordonnées `x`/`y` sont situées au centre de la balle, mais nous voulons que le pourtour de la balle rebondisse sur le rebord — nous ne voulons pas que la balle sorte à moitié hors de l'écran avant de commencer à rebondir vers l'arrière.
+Dans chaque cas, nous incluons la taille (`size`) de la balle dans les calculs parce que les coordonnées `x`/`y` sont situées au centre de la balle, mais nous voulons que le pourtour de la balle rebondisse sur le rebord — nous ne voulons pas que la balle sorte à moitié hors de l'écran avant de commencer à rebondir vers l'arrière.
 
 Les deux dernières lignes ajoutent la valeur `velX` à la coordonnée `x` et la valeur `velY` à la coordonnée `y` — la balle est en effet mise en mouvement chaque fois que cette méthode est invoquée.
 
@@ -205,31 +205,31 @@ Cela suffira pour l'instant, passons à l'animation !
 
 Maintenant, rendons cela amusant. Nous allons commencer à ajouter des balles au canvas et à les animer.
 
-1.  Tout d'abord, nous avons besoin d'un endroit où stocker toutes nos balles. Le tableau suivant fera ce travail — ajoutez-le au bas de votre code maintenant :
+1. Tout d'abord, nous avons besoin d'un endroit où stocker toutes nos balles. Le tableau suivant fera ce travail — ajoutez-le au bas de votre code maintenant :
 
     ```js
     let balls = [];
+
+    while (balls.length < 25) {
+      let size = random(10,20);
+      let ball = new Ball(
+        // ball position always drawn at least one ball width
+        // away from the edge of the canvas, to avoid drawing errors
+        random(0 + size,width - size),
+        random(0 + size,height - size),
+        random(-7,7),
+        random(-7,7),
+        'rgb(' + random(0,255) + ',' + random(0,255) + ',' + random(0,255) +')',
+        size
+      );
+
+      balls.push(ball);
+    }
     ```
-
-        while (balls.length < 25) {
-          let size = random(10,20);
-          let ball = new Ball(
-            // ball position always drawn at least one ball width
-            // away from the edge of the canvas, to avoid drawing errors
-            random(0 + size,width - size),
-            random(0 + size,height - size),
-            random(-7,7),
-            random(-7,7),
-            'rgb(' + random(0,255) + ',' + random(0,255) + ',' + random(0,255) +')',
-            size
-          );
-
-          balls.push(ball);
-        }
 
     Tous les programmes qui animent les choses impliquent généralement une boucle d'animation, qui sert à mettre à jour les informations dans le programme et à restituer ensuite la vue résultante sur chaque image de l'animation. C'est la base de la plupart des jeux et autres programmes similaires.
 
-2.  Ajoutez ce qui suit au bas de votre code maintenant :
+2. Ajoutez ce qui suit au bas de votre code maintenant :
 
     ```js
     function loop() {
@@ -252,7 +252,7 @@ Maintenant, rendons cela amusant. Nous allons commencer à ajouter des balles au
     - Le programme boucle à travers tous les objets du tableau sur chacun desquels il exécute la fonction `draw()` et `update()` pour dessiner à l'écran chaque balle et faire les mises à jour de chaque attribut avant le prochain rafraîchissement.
     - Exécute à nouveau la fonction à l'aide de la méthode `requestAnimationFrame()` — lorsque cette méthode est exécutée en permanence et a reçu le même nom de fonction, elle exécute cette fonction un nombre défini de fois par seconde pour créer une animation fluide. Cela se fait généralement de manière récursive — ce qui signifie que la fonction s'appelle elle-même à chaque fois qu'elle s'exécute, de sorte qu'elle sera répétée encore et encore.
 
-3.  Finallement mais non moins important, ajoutez la ligne suivante au bas de votre code — nous devons appeler la fonction une fois pour démarrer l'animation.
+3. Finallement mais non moins important, ajoutez la ligne suivante au bas de votre code — nous devons appeler la fonction une fois pour démarrer l'animation.
 
     ```js
     loop();
@@ -264,7 +264,7 @@ Voilà pour les bases — essayez d'enregistrer et de rafraîchir pour tester vo
 
 Maintenant, pour un peu de plaisir, ajoutons une détection de collision à notre programme, afin que nos balles sachent quand elles ont frappé une autre balle.
 
-1.  Tout d'abord, ajoutez la définition de la méthode suivante sous la définition de la méthode `update()` (c'est-à-dire le bloc `Ball.prototype.update`)&nbsp;:
+1. Tout d'abord, ajoutez la définition de la méthode suivante sous la définition de la méthode `update()` (c'est-à-dire le bloc `Ball.prototype.update`)&nbsp;:
 
     ```js
     Ball.prototype.collisionDetect = function() {
@@ -289,13 +289,13 @@ Maintenant, pour un peu de plaisir, ajoutons une détection de collision à notr
     - Un algorithme classique permet ensuite de vérifier la superposition de deux disques. Ceci est expliqué plus loin dans [2D collision detection](/fr/docs/Games/Techniques/2D_collision_detection).
     - Si une collision est détectée, le code à l'intérieur de l'instruction interne `if` est exécuté. Dans ce cas, nous définissons simplement la propriété `color` des deux cercles à une nouvelle couleur aléatoire. Nous aurions pu faire quelque chose de bien plus complexe, comme faire rebondir les balles de façon réaliste, mais cela aurait été beaucoup plus complexe à mettre en œuvre. Pour de telles simulations de physique, les développeurs ont tendance à utiliser des bibliothèques de jeux ou de physiques telles que [PhysicsJS](http://wellcaffeinated.net/PhysicsJS/), [matter.js](http://brm.io/matter-js/), [Phaser](http://phaser.io/), etc.
 
-2.  Vous devez également appeler cette méthode dans chaque image de l'animation. Ajouter le code ci-dessous juste après la ligne `balls[i].update();`:
+2. Vous devez également appeler cette méthode dans chaque image de l'animation. Ajouter le code ci-dessous juste après la ligne `balls[i].update();` :
 
     ```js
     balls[i].collisionDetect();
     ```
 
-3.  Enregistrez et rafraîchissez la démo à nouveau, et vous verrez vos balles changer de couleur quand elles entrent en collision !
+3. Enregistrez et rafraîchissez la démo à nouveau, et vous verrez vos balles changer de couleur quand elles entrent en collision !
 
 > **Note :** Si vous avez des difficultés à faire fonctionner cet exemple, essayez de comparer votre code JavaScript avec notre [version finale](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) (voir également la [démo en ligne](http://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)).
 

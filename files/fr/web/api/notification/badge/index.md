@@ -16,7 +16,9 @@ La propriété **`badge`** de l'interface {{domxref ("Notification")}} renvoie l
 
 ## Syntaxe
 
-    const url = Notification.badge
+```js
+const url = Notification.badge
+```
 
 ### Valeur
 
@@ -24,10 +26,8 @@ Une {{domxref('USVString')}} contenant une URL.
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaire          |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Web Notifications','#dom-notification-badge','badge')}} | {{Spec2('Web Notifications')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Notification.badge")}}
+{{Compat}}

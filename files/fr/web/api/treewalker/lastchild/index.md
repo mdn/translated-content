@@ -15,7 +15,9 @@ La méthode **`TreeWalker.lastChild()`** déplace le {{domxref("Node")}} courant
 
 ## Syntaxe
 
-    node = treeWalker.lastChild();
+```js
+node = treeWalker.lastChild();
+```
 
 ## Exemple
 
@@ -31,14 +33,11 @@ var node = treeWalker.lastChild(); // renvoie le dernier enfant visible de l'él
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | Statut                                       | Commentaire                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | --------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-treewalker-lastchild', 'TreeWalker.lastChild')}}                                         | {{Spec2('DOM WHATWG')}}             | Pas de changement de {{SpecName('DOM2 Traversal_Range')}} |
-| {{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-TreeWalker-lastChild', 'TreeWalker.lastChild')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale.                                                  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.TreeWalker.firstChild")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -56,7 +56,9 @@ Les spécifications définissent également des mots-clés utilisables comme val
 
 Lorsque vous consultez une spécification ou un article de MDN à propos d'une propriété, vous pourrez voir les mots-clés autorisés sous la forme suivante. Voici un exemple avec les valeurs autorisées pour la propriété {{cssxref("break-inside")}}.
 
-    auto | avoid | avoid-page | avoid-column | avoid-region
+```
+auto | avoid | avoid-page | avoid-column | avoid-region
+```
 
 Dans une déclaration, on pourra donc écrire (sans quote) :
 
@@ -342,4 +344,4 @@ Certaines notations fonctionnelles historiques telles que `rgba()` utilisent des
 ## Voir aussi
 
 - [Les types de donnée de base en CSS](/fr/docs/Web/CSS/CSS_Types)
-- [Introduction à CSS : les valeurs et les unités](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Introduction à CSS : les valeurs et les unités](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)

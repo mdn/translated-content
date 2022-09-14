@@ -1,11 +1,6 @@
 ---
 title: ProcessingInstruction
 slug: Web/API/ProcessingInstruction
-tags:
-  - インターフェイス
-  - リファレンス
-browser-compat: api.ProcessingInstruction
-translation_of: Web/API/ProcessingInstruction
 ---
 {{APIRef("DOM")}}
 

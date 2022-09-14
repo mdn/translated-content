@@ -14,7 +14,9 @@ Le constructeur **`Option()`** permet de créer un nouvel objet {{domxref("HTMLO
 
 ## Syntaxe
 
-    var optionElementReference = new Option(text, value, defaultSelected, selected);
+```js
+var optionElementReference = new Option(text, value, defaultSelected, selected);
+```
 
 ### Parameters
 

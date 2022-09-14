@@ -332,14 +332,14 @@ Dans le cas présent nous avons juste décidé d'afficher toutes les information
 
 Beaucoup de sujets ont été abordés dans ce chapitre, c'est l'occasion de les mettre en application :
 
-1.  Améliorer l'affichage des objets `BookInstance`, ajoutez les éléments nécessaire pour disposer du livre, du statut de la date de fin de prêt et de l'identifiant au lieu du code unique et du titre donné par la méthode `__str__()` de l'objet.
-2.  Ajouter une information associée pour disposer du détail des informations sur l'auteur. Appuyez vous sur l'exemple avec les objets `Book`/`BookInstance` pour y parvenir.
+1. Améliorer l'affichage des objets `BookInstance`, ajoutez les éléments nécessaire pour disposer du livre, du statut de la date de fin de prêt et de l'identifiant au lieu du code unique et du titre donné par la méthode `__str__()` de l'objet.
+2. Ajouter une information associée pour disposer du détail des informations sur l'auteur. Appuyez vous sur l'exemple avec les objets `Book`/`BookInstance` pour y parvenir.
 
 ## Résumé
 
 Beaucoup de sujets ont été abordés dans ce chapitre... Vous avez acquis les base du site d'administration et à créer un suoper-utilisateur, voius avez aussi navigué dans le site d'admlinistration et vous avez appris à modifier les formulaires de saisie et comment ajouter, modifier ou supprimer des données.
 
-## A voir aussi
+## Voir aussi
 
 - [Ecrire sa première application Dajngo, 2ème partie](https://docs.djangoproject.com/fr/2.2/intro/tutorial02/#introducing-the-django-admin)  (Django docs)
 - [Le site d'administration de Django](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/) (Django Docs)

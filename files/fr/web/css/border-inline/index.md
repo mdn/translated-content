@@ -42,8 +42,6 @@ La propriété `border-inline` peut être utilisée avec une ou plusieurs de ces
 
 ## Exemples
 
-
-
 ### CSS
 
 ```css
@@ -58,8 +56,6 @@ div {
   border-inline: 5px dashed blue;
 }
 ```
-
-
 
 ### HTML
 

@@ -97,6 +97,7 @@ Se uma camada não tiver seu nome declarado, como por exemplo:
   }
 }
 ```
+
 Então uma camada anônima é criada. Ela funciona da mesma maneira das camadas nomeadas, porém novas regras não podem ser adicionadas à essa camada.
 
 ## Sintaxe formal

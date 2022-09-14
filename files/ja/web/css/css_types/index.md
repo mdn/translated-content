@@ -1,18 +1,6 @@
 ---
 title: CSS データ型
 slug: Web/CSS/CSS_Types
-tags:
-  - CSS
-  - CSS データ型
-  - ガイド
-  - Index
-  - 概要
-  - リファレンス
-  - 構文
-  - 型
-  - データ型
-  - list
-translation_of: Web/CSS/CSS_Types
 ---
 {{CSSRef}}
 

@@ -1,17 +1,6 @@
 ---
 title: mask
 slug: Web/CSS/mask
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - Layout
-  - リファレンス
-  - SVG
-  - Web
-  - recipe:css-shorthand-property
-browser-compat: css.properties.mask
-translation_of: Web/CSS/mask
 ---
 {{CSSRef}}
 
@@ -58,7 +47,7 @@ mask: unset;
 
 /* 複数のマスク */
 mask: url(masks.svg#star) left / 16px repeat-y,    /* SVG グラフィック内の要素が、幅 16px の左端のマスクとして使用されている */
-      url(masks.svg#circle) right / 16px repeat-y; /* SVG グラフィック内の要素が、幅 16px の右端のマスクとして使用されている */
+      url(masks.svg#circle) right / 16px repeat-y; /* SVG グラフィック内の要素が、幅 16px の右端のマスクとして使用されている */
 ```
 
 ### 値

@@ -34,7 +34,7 @@ translation_of: Web/API/HTMLMediaElement
  <dt>{{domxref("HTMLMediaElement.buffered")}} {{readonlyinline}}</dt>
  <dd>Возвращает объект {{domxref ("TimeRanges")}}, который указывает диапазоны медиаисточника, который браузер буферизировал (если есть) в момент обращения к свойству <code>buffered</code>.</dd>
  <dt>{{domxref("HTMLMediaElement.controller")}}</dt>
- <dd>Объект {{domxref ("MediaController")}}, представляющий медиа-контроллер, назначенный элементу, либо <code>null</code>, если ни один не назначен.</dd>
+ <dd>Объект {{domxref ("MediaController")}}, представляющий медиа-контроллер, назначенный элементу, либо <code>null</code>, если ни один не назначен.</dd>
  <dt>{{domxref("HTMLMediaElement.controls")}}</dt>
  <dd>Является {{jsxref ('Boolean')}}, который отражает атрибут HTML {{htmlattrxref ("controls", "video")}}, указывающий, должны ли отображаться элементы пользовательского интерфейса для управления ресурсом.</dd>
  <dt>{{domxref("HTMLMediaElement.controlsList")}} {{readonlyinline}}</dt>
@@ -184,7 +184,7 @@ translation_of: Web/API/HTMLMediaElement
  <dd>Этот метод, доступный только в реализации Mozilla, загружает данные из другого медиа-элемента. Это работает аналогично load () за исключением того, что вместо обычного алгоритма выбора ресурса для источника просто устанавливается значение currentSrc другого элемента. Это оптимизировано, так что этот элемент получает доступ ко всем кешированным и буферизованным данным другого элемента; фактически эти два элемента совместно используют загруженные данные, поэтому данные, загруженные любым из этих элементов, доступны обоим.</dd>
 </dl>
 
-<h2 id="События">События </h2>
+<h2 id="События">События </h2>
 
 <p><em>Наследует методы от своего родителя {{domxref ("HTMLElement")}}, определённого в миксине {{domxref ('GlobalEventHandlers')}}. Обработайте эти события, используя addEventListener () или назначив обработчик событий свойству oneventname этого интерфейса.</em></p>
 
@@ -249,7 +249,7 @@ translation_of: Web/API/HTMLMediaElement
   <tr>
    <td>{{SpecName('Media Capture','#htmlmediaelement-extensions','HTMLMediaElement')}}</td>
    <td>{{Spec2('Media Capture')}}</td>
-   <td>Добавляет <code>sinkId</code> и <code>setSinkId()</code>, и <code>captureStream()</code>.</td>
+   <td>Добавляет <code>sinkId</code> и <code>setSinkId()</code>, и <code>captureStream()</code>.</td>
   </tr>
   <tr>
    <td>{{SpecName('EME', '#introduction', 'Encrypted Media Extensions')}}</td>

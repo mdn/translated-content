@@ -16,11 +16,13 @@ La propriété globale **`globalThis`** renvoie l'objet global de plus haut nive
 
 ## Syntaxe
 
-    globalThis
+```js
+globalThis
+```
 
 ## Description
 
-Par le passé, il était nécessaire d'utiliser différentes syntaxes pour différents environnements afin d'accéder à la portée globale. Sur le Web, on peut utiliser {{domxref("Window.window", "window")}}, {{domxref("Window.self", "self")}} ou {{domxref("Window.frames", "frames")}} ; pour les [web workers](/en-US/docs/Web/API/Worker), seul `self` peut être employé ; pour Node.js aucun de ces mots-clés ne fonctionne et il faut utiliser `global`.
+Par le passé, il était nécessaire d'utiliser différentes syntaxes pour différents environnements afin d'accéder à la portée globale. Sur le Web, on peut utiliser {{domxref("Window.window", "window")}}, {{domxref("Window.self", "self")}} ou {{domxref("Window.frames", "frames")}} ; pour les [web workers](/fr/docs/Web/API/Worker), seul `self` peut être employé ; pour Node.js aucun de ces mots-clés ne fonctionne et il faut utiliser `global`.
 Le mot-clé `this` pouvait être utilisé à l'intérieur des fonctions en [mode non-strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) mais vaudra sinon `undefined` dans les modules et dans les fonctions utilisant le [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
 
 La propriété `globalThis` fournit une méthode standard d'accès à l'objet `this` global, quel que soit l'environnement. Contrairement aux propriétés `window` et `self`, ce mot-clé fonctionnera quel que soit le contexte (que celui-ci soit doté de fenêtres ou non). Ainsi, on peut accéder à l'objet global de façon homogène, quel que soit l'environnement dans lequel le code est utilisé.

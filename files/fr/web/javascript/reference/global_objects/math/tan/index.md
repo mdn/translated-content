@@ -17,7 +17,9 @@ La fonction **`Math.tan()`** renvoie la tangente d'un nombre exprimant un angle 
 
 ## Syntaxe
 
-    Math.tan(x)
+```js
+Math.tan(x)
+```
 
 ### Paramètres
 

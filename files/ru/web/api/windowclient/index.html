@@ -14,7 +14,7 @@ translation_of: Web/API/WindowClient
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
-<p>Интерфейс <code>WindowClient</code> <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a> представляет область действия клиента сервис-воркера, который представляет собой документ в контексте просмотра, управляемый активным исполнителем. Клиент сервис-воркера самостоятельно выбирает и использует сервис-воркера для собственной загрузки и загрузки подресурсов.</p>
+<p>Интерфейс <code>WindowClient</code> <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a> представляет область действия клиента сервис-воркера, который представляет собой документ в контексте просмотра, управляемый активным исполнителем. Клиент сервис-воркера самостоятельно выбирает и использует сервис-воркера для собственной загрузки и загрузки подресурсов.</p>
 
 <h2 id="Методы">Методы</h2>
 
@@ -22,7 +22,7 @@ translation_of: Web/API/WindowClient
 
 <dl>
  <dt>{{domxref("WindowClient.focus()")}}</dt>
- <dd>Фокусирует пользователя на текущем окне.</dd>
+ <dd>Фокусирует пользователя на текущем окне.</dd>
  <dt>{{domxref("WindowClient.navigate()")}}</dt>
  <dd>Загружает указанный URL-адрес на управляемую клиентскую страницу.</dd>
 </dl>
@@ -33,9 +33,9 @@ translation_of: Web/API/WindowClient
 
 <dl>
  <dt>{{domxref("WindowClient.focused")}} {{readonlyInline}}</dt>
- <dd>Логическое значение, указывающее, находится ли текущая страница в фокусе.</dd>
+ <dd>Логическое значение, указывающее, находится ли текущая страница в фокусе.</dd>
  <dt>{{domxref("WindowClient.visibilityState")}} {{readonlyInline}}</dt>
- <dd>Указывает, отображается ли текущая страница. Это значение может быть одним из <code>"hidden" (скрыта)</code>, <code>"visible" (отображена)</code> или <code>"prerender" (предварительно отрисована)</code>.</dd>
+ <dd>Указывает, отображается ли текущая страница. Это значение может быть одним из <code>"hidden" (скрыта)</code>, <code>"visible" (отображена)</code> или <code>"prerender" (предварительно отрисована)</code>.</dd>
 </dl>
 
 <h2 id="Пример">Пример</h2>
@@ -54,7 +54,7 @@ translation_of: Web/API/WindowClient
       if (client.url == '/' &amp;&amp; 'focus' in client) {
         client.focus();
         break;
-      }
+      }
     }
     if (clients.openWindow)
       return clients.openWindow('/');

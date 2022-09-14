@@ -18,7 +18,9 @@ La méthode **`matchAll()`** renvoie un itérateur contenant l'ensemble des corr
 
 ## Syntaxe
 
-    str.matchAll(regexp)
+```js
+str.matchAll(regexp)
+```
 
 ### Paramètres
 
@@ -27,7 +29,7 @@ La méthode **`matchAll()`** renvoie un itérateur contenant l'ensemble des corr
 
 ### Valeur de retour
 
-Un [itérateur](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs).
+Un [itérateur](/fr/docs/Web/JavaScript/Guide/Iterators_and_Generators).
 
 ## Exemples
 

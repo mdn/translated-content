@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
 ---
 {{JsSidebar("More")}}
 
-'Enumerable properties'(열거 가능한 속성)는 내부 열거 형 플래그가 true로 설정된 property로, 이는 간단한 할당 또는 property initializer ([Object.defineProperty](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)를 통해 정의 된 특성 및 이러한 기본 열거 형을 false로 정의한 특성)를 통해 작성된 property의 기본값입니다. 
+'Enumerable properties'(열거 가능한 속성)는 내부 열거 형 플래그가 true로 설정된 property로, 이는 간단한 할당 또는 property initializer ([Object.defineProperty](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)를 통해 정의 된 특성 및 이러한 기본 열거 형을 false로 정의한 특성)를 통해 작성된 property의 기본값입니다.
 
 등록 정보의 키가 [Symbol](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol)이 아니면 열거 가능한 등록 정보가 [for...in](/ko/docs/Web/JavaScript/Reference/Statements/for...in) 루프에 표시됩니다. 'Ownership of properties' (속성의 소유권)은 속성이 프로토 타입 체인이 아닌 개체에 직접 속하는지 여부에 따라 결정됩니다. 객체의 속성도 전체적으로 검색 할 수 있습니다. 개체 속성을 감지, 반복 / 열거 및 검색하는 여러 가지 기본 제공 방법이 있으며 아래 표와 같이 사용할 수 있습니다. 누락 된 범주를 얻는 방법을 보여주는 샘플 코드는 다음과 같습니다.
 
@@ -126,7 +126,7 @@ translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
               href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
               >getOwnPropertyNames</a
             ></code
-          > 
+          >
         </p>
         <p>
           <code
@@ -155,7 +155,7 @@ translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
             >getOwnPropertySymbols</a
           ></code
         >
-        – filtered to exclude enumerables using <code
+        – filtered to exclude enumerables using <code
           ><a
             href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
             >propertyIsEnumerable</a
@@ -220,7 +220,7 @@ translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
               href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
               >getOwnPropertyNames</a
             ></code
-          > 
+          >
         </p>
         <p>
           <code
@@ -258,7 +258,7 @@ translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
             >getOwnPropertySymbols</a
           ></code
         >
-        – filtered to exclude enumerables using <code
+        – filtered to exclude enumerables using <code
           ><a
             href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
             >propertyIsEnumerable</a
@@ -296,10 +296,10 @@ translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
 
 ## Obtaining properties by enumerability/ownership
 
-아래는 모든 경우에 가장 효율적인 알고리즘은 아니지만 빠르게 코드를 작성하여 확인하기 좋습니다.
+아래는 모든 경우에 가장 효율적인 알고리즘은 아니지만 빠르게 코드를 작성하여 확인하기 좋습니다.
 
 - Detection can occur by `SimplePropertyRetriever.theGetMethodYouWant(obj).indexOf(prop) > -1`
-- Iteration can occur by `SimplePropertyRetriever.theGetMethodYouWant(obj).forEach(function (value, prop) {});` (or use` filter()`, `map()`, etc.)
+- Iteration can occur by `SimplePropertyRetriever.theGetMethodYouWant(obj).forEach(function (value, prop) {});` (or use `filter()`, `map()`, etc.)
 
 ```js
 var SimplePropertyRetriever = {
@@ -375,7 +375,7 @@ var SimplePropertyRetriever = {
       <th>Enumerable</th>
       <th>Nonenumerable</th>
       <th>Symbols keys</th>
-      <th>Inherited Enumerable</th>
+      <th>Inherited Enumerable</th>
       <th>Inherited Nonenumerable</th>
       <th>Inherited Symbols keys</th>
     </tr>

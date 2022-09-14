@@ -1,20 +1,6 @@
 ---
 title: setInterval()
 slug: Web/API/setInterval
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - Intervals
-  - JavaScript timers
-  - MakeBrowserAgnostic
-  - Method
-  - NeedsMarkupWork
-  - Timers
-  - setInterval
-  - Polyfill
-translation_of: Web/API/WindowOrWorkerGlobalScope/setInterval
-original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 ---
 {{ApiRef("HTML DOM")}}
 
@@ -34,7 +20,7 @@ var intervalID = setInterval(code, [delay]);
 ### 参数
 
 - `func`
-  - : 要重复调用的{{jsxref("function", "函数")}}，每经过指定 `delay` 毫秒后执行一次。第一次调用发生在 `delay` 毫秒之后。
+  - : 要重复调用的{{jsxref("function", "函数")}}，每经过指定 `delay` 毫秒后执行一次。第一次调用发生在 `delay` 毫秒之后。
 - `code`
   - : 这个语法是可选的，你可以传递一个字符串来代替一个函数对象，你传递的字符串会被编译然后每经过 `delay` 毫秒执行一次。这个语法因为与 {{jsxref("Global_Objects/eval", "eval()")}} 存在相同的安全风险所以*不推荐*使用。
 - `delay`
@@ -133,7 +119,7 @@ document.getElementById("stop").addEventListener("click", stopTextColor);
 
 ## “this”的问题
 
-当你给 `setInterval()` 传递一个方法或者函数的时候，方法/函数 在被调用时会绑定错误的 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 值。这个问题在 [JavaScript 参考](/zh-CN/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method) 进行了详细解释。
+当你给 `setInterval()` 传递一个方法或者函数的时候，方法/函数 在被调用时会绑定错误的 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 值。这个问题在 [JavaScript 参考](/zh-CN/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method) 进行了详细解释。
 
 ### 解释
 

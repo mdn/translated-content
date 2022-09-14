@@ -26,7 +26,6 @@ Par défaut, une réponse 204 peut être mise en cache. Un en-tête [`ETag`](/fr
 
 {{Compat}}
 
-
 ### Notes de compatibilités
 
 Bien que ce code de statut est censé décrire une réponse sans corps, les serveurs pourraient inclure des données dans le corps selon les en-têtes utilisés. Le protocole permet aux agents utilisateur d'avoir différentes façons de traiter de telles réponses ([voir cette discussion](https://github.com/httpwg/http11bis/issues/26)).

@@ -45,7 +45,9 @@ Le destinataire final de la demande doit renvoyer au client le message reçu, à
 
 ## Syntaxe
 
-    TRACE /index.html
+```
+TRACE /index.html
+```
 
 ## Specifications
 
@@ -57,6 +59,6 @@ Le destinataire final de la demande doit renvoyer au client le message reçu, à
 
 {{Compat("http.methods.TRACE")}}
 
-## Voir également
+## Voir aussi
 
 - [Méthodes HTTP](/fr/docs/Web/HTTP/Méthode)

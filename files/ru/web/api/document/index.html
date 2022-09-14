@@ -9,22 +9,22 @@ translation_of: Web/API/Document
 
 
 
-<p>Каждая веб-страница, которая загружается в браузер, имеет свой собственный объект <strong>document</strong>. Интерфейс документа служит точкой входа для получения содержимого веб-страницы (всего <a href="/en-US/docs/Using_the_W3C_DOM_Level_1_Core" title="Using_the_W3C_DOM_Level_1_Core">DOM</a> - дерева, включая такие элементы как {{HTMLElement("body")}} и {{HTMLElement("table")}}), <span id="result_box" lang="ru"><span>а также обеспечивает функциональность</span><span>, которая является</span> <span>глобальной для</span> <span>документа</span>, <span>например, для получения</span> <span>URL-адреса </span><span>страницы</span> <span>и</span>ли <span>создания новых элементов</span> <span>в документе</span></span>).</p>
+<p>Каждая веб-страница, которая загружается в браузер, имеет свой собственный объект <strong>document</strong>. Интерфейс документа служит точкой входа для получения содержимого веб-страницы (всего <a href="/en-US/docs/Using_the_W3C_DOM_Level_1_Core" title="Using_the_W3C_DOM_Level_1_Core">DOM</a> - дерева, включая такие элементы как {{HTMLElement("body")}} и {{HTMLElement("table")}}), <span id="result_box" lang="ru"><span>а также обеспечивает функциональность</span><span>, которая является</span> <span>глобальной для</span> <span>документа</span>, <span>например, для получения</span> <span>URL-адреса </span><span>страницы</span> <span>и</span>ли <span>создания новых элементов</span> <span>в документе</span></span>).</p>
 
 <p>Объект <strong>document</strong> может быть получен из разных API:</p>
 
 <ul>
- <li>Чаще всего используется прямой доступ к объекту <strong>document</strong> из сценариев <a href="/en-US/docs/HTML/Element/Script" title="HTML/Element/Script">scripts</a> которые подгружаются документом. (Этот же объект доступен как {{domxref("window.document")}}.)</li>
+ <li>Чаще всего используется прямой доступ к объекту <strong>document</strong> из сценариев <a href="/en-US/docs/HTML/Element/Script" title="HTML/Element/Script">scripts</a> которые подгружаются документом. (Этот же объект доступен как {{domxref("window.document")}}.)</li>
  <li>Через свойство <code><a href="/en-US/docs/Web/API/HTMLIFrameElement#Properties" title="DOM/HTMLIFrameElement#Properties">contentDocument</a></code> объекта iframe.</li>
- <li>Как ответ <a href="/en-US/docs/Web/API/XMLHttpRequest#responseXML" title="XMLHttpRequest#responseXML"><code>responseXML</code></a> объекта  <a href="/en-US/docs/Web/API/XMLHttpRequest" title="XMLHttpRequest"><code>XMLHttpRequest.</code></a></li>
- <li>Доступ к документу может быть получен из элемента или узла через свойство  {{domxref("Node.ownerDocument","ownerDocument")}}.</li>
+ <li>Как ответ <a href="/en-US/docs/Web/API/XMLHttpRequest#responseXML" title="XMLHttpRequest#responseXML"><code>responseXML</code></a> объекта  <a href="/en-US/docs/Web/API/XMLHttpRequest" title="XMLHttpRequest"><code>XMLHttpRequest.</code></a></li>
+ <li>Доступ к документу может быть получен из элемента или узла через свойство  {{domxref("Node.ownerDocument","ownerDocument")}}.</li>
 </ul>
 
-<p>В зависимости от вида документа (т.е. <a href="/en-US/docs/HTML" title="HTML">HTML</a> или <a href="/en-US/docs/XML" title="XML">XML</a>) у объекта <strong>document</strong> могут быть доступны разные API.</p>
+<p>В зависимости от вида документа (т.е. <a href="/en-US/docs/HTML" title="HTML">HTML</a> или <a href="/en-US/docs/XML" title="XML">XML</a>) у объекта <strong>document</strong> могут быть доступны разные API.</p>
 
 <ul>
  <li>Все объекты документов реализуют интерфейс <a href="http://dom.spec.whatwg.org/#interface-document"><code>Document</code></a> (и следовательно {{domxref("Node")}} и {{domxref("EventTarget")}} интерфейсы). Таким образом основные свойства и методы, описанные на этой странице, доступны для всех видов документов.</li>
- <li>В современных браузерах некоторые документы (т.е. те, которые содержат контент <code>text/html</code>) также реализуют  {{domxref("HTMLDocument")}} интерфейс.</li>
+ <li>В современных браузерах некоторые документы (т.е. те, которые содержат контент <code>text/html</code>) также реализуют  {{domxref("HTMLDocument")}} интерфейс.</li>
  <li>В современных браузерах SVG документы реализуют {{domxref("SVGDocument")}} интерфейс.</li>
 </ul>
 
@@ -54,7 +54,7 @@ translation_of: Web/API/Document
  <dt>{{domxref("Document.documentURI")}}</dt>
  <dd>Возвращает URL документа.</dd>
  <dt>{{domxref("Document.domConfig")}} {{Deprecated_inline}}</dt>
- <dd>Должен вернуть  {{domxref("DOMConfiguration")}} объект.</dd>
+ <dd>Должен вернуть  {{domxref("DOMConfiguration")}} объект.</dd>
  <dt>{{domxref("Document.implementation")}}</dt>
  <dd>Возвращает DOM implementation связанную с текущим документом.</dd>
  <dt>{{domxref("Document.inputEncoding")}} {{Deprecated_inline}}</dt>
@@ -62,9 +62,9 @@ translation_of: Web/API/Document
  <dt>{{domxref("Document.lastStyleSheetSet")}}</dt>
  <dd>Возвращает имя последнего включённого набора таблиц стилей. Имеет значение <code>null</code> , пока таблица стилей не будет изменена путём установки значения {{domxref("Document.selectedStyleSheetSet","selectedStyleSheetSet")}}.</dd>
  <dt>{{domxref("Document.mozSyntheticDocument")}} {{non-standard_inline}} {{gecko_minversion_inline("8.0")}}</dt>
- <dd><code>true</code> если этот документ является синтетическим, например, отдельные изображения, видео, аудио файлы, или тому подобные.</dd>
+ <dd><code>true</code> если этот документ является синтетическим, например, отдельные изображения, видео, аудио файлы, или тому подобные.</dd>
  <dt>{{domxref("Document.mozFullScreen")}} {{non-standard_inline}} {{gecko_minversion_inline("9.0")}}</dt>
- <dd><code>true</code> когда документ находится в  {{domxref("Using_full-screen_mode","full-screen mode")}}.</dd>
+ <dd><code>true</code> когда документ находится в  {{domxref("Using_full-screen_mode","full-screen mode")}}.</dd>
  <dt>{{domxref("Document.mozFullScreenElement")}} {{non-standard_inline}} {{gecko_minversion_inline("9.0")}}</dt>
  <dd>Элемент, который в данный момент находится в полноэкранном режиме для этого документа.</dd>
  <dt>{{domxref("Document.mozFullScreenEnabled")}} {{non-standard_inline}} {{gecko_minversion_inline("9.0")}}</dt>
@@ -93,7 +93,7 @@ translation_of: Web/API/Document
 
 <h3 id="Extension_for_HTML_documents">Extension for HTML documents</h3>
 
-<p>The <code>Document</code> interface for HTML documents inherit from the {{domxref("HTMLDocument")}} interface or, since HTML5,  is extended for such documents:</p>
+<p>The <code>Document</code> interface for HTML documents inherit from the {{domxref("HTMLDocument")}} interface or, since HTML5,  is extended for such documents:</p>
 
 <dl>
  <dt>{{domxref("Document.activeElement")}}</dt>
@@ -258,7 +258,7 @@ translation_of: Web/API/Document
 
 <h3 id="Extension_for_HTML_documents_2">Extension for HTML documents</h3>
 
-<p>The <code>Document</code> interface for HTML documents inherit from the {{domxref("HTMLDocument")}} interface or, since HTML5,  is extended for such documents:</p>
+<p>The <code>Document</code> interface for HTML documents inherit from the {{domxref("HTMLDocument")}} interface or, since HTML5,  is extended for such documents:</p>
 
 <dl>
  <dt>{{domxref("Document.clear()")}} {{non-standard_inline}} {{Deprecated_inline}}</dt>
@@ -365,7 +365,7 @@ translation_of: Web/API/Document
  <dt>{{domxref("document.currentScript")}} {{gecko_minversion_inline("2.0")}}</dt>
  <dd>Returns the {{HTMLElement("script")}} element that is currently executing.</dd>
  <dt>{{domxref("document.documentURIObject")}} {{gecko_minversion_inline("1.9")}}</dt>
- <dd>(<strong>Mozilla add-ons only!</strong>) Returns the {{Interface("nsIURI")}} object representing the URI of the document. This property only has special meaning in privileged JavaScript code (with UniversalXPConnect privileges).</dd>
+ <dd>(<strong>Mozilla add-ons only!</strong>) Returns the <code>nsIURI</code> object representing the URI of the document. This property only has special meaning in privileged JavaScript code (with UniversalXPConnect privileges).</dd>
  <dt>{{domxref("document.popupNode")}}</dt>
  <dd>Returns the node upon which a popup was invoked.</dd>
  <dt>{{domxref("document.tooltipNode")}}</dt>

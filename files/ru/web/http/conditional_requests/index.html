@@ -27,7 +27,7 @@ translation_of: Web/HTTP/Conditional_requests
  <li>an opaque string, uniquely identifying each version, called the <em>entity tag</em>, or the <em>etag</em>.</li>
 </ul>
 
-<p>Comparing versions of the same resource is a bit tricky: depending on the context, there are two kinds of <em>equality checks</em>:</p>
+<p>Comparing versions of the same resource is a bit tricky: depending on the context, there are two kinds of <em>equality checks</em>:</p>
 
 <ul>
  <li><em>Strong validation</em> is used when byte to byte identity is expected, for example when resuming a download.</li>
@@ -38,13 +38,13 @@ translation_of: Web/HTTP/Conditional_requests
 
 <h3 id="Strong_validation">Strong validation</h3>
 
-<p id="sect1">Strong validation consists of guaranteeing that the resource is, byte to byte, identical to the one it is compared too. This is mandatory for some conditional headers, and the default for the others. Strong validation is very strict and may be difficult to guarantee at the server level, but it does guarantee no data loss at any time, sometimes at the expense of performance.</p>
+<p id="sect1">Strong validation consists of guaranteeing that the resource is, byte to byte, identical to the one it is compared too. This is mandatory for some conditional headers, and the default for the others. Strong validation is very strict and may be difficult to guarantee at the server level, but it does guarantee no data loss at any time, sometimes at the expense of performance.</p>
 
 <p>It is quite difficult to have a unique identifier for strong validation with {{HTTPHeader("Last-Modified")}}. Often this is done using an {{HTTPHeader("ETag")}} with the MD5 hash of the resource (or a derivative).</p>
 
 <h3 id="Weak_validation">Weak validation</h3>
 
-<p>Weak validation differs from strong validation, as it considers two versions of the document as identical if the content is equivalent. For example, a page that would differ from another only by a different date in its footer, or different advertising, would be considered <em>identical</em> to the other with weak validation. These same two versions are considered <em>different</em> when using strong validation. Building a system of etags that creates weak validation may be complex, as it involves knowing the importance of the different elements of a page, but is very useful towards optimizing cache performance.</p>
+<p>Weak validation differs from strong validation, as it considers two versions of the document as identical if the content is equivalent. For example, a page that would differ from another only by a different date in its footer, or different advertising, would be considered <em>identical</em> to the other with weak validation. These same two versions are considered <em>different</em> when using strong validation. Building a system of etags that creates weak validation may be complex, as it involves knowing the importance of the different elements of a page, but is very useful towards optimizing cache performance.</p>
 
 <h2 id="Conditional_headers">Conditional headers</h2>
 
@@ -73,7 +73,7 @@ translation_of: Web/HTTP/Conditional_requests
 
 <p>Together with the resource, the validators are sent in the headers. In this example, both {{HTTPHeader("Last-Modified")}} and {{HTTPHeader("ETag")}} are sent, but it could equally have been only one of them. These validators are cached with the resource (like all headers) and will be used to craft conditional requests, once the cache becomes stale.</p>
 
-<p>As long as the cache is not stale, no requests are issued at all. But once it has become stale, this is mostly controlled by the {{HTTPHeader("Cache-Control")}} header, the client doesn't use the cached value directly but issues a <em>conditional request</em>. The value of the validator is used as a parameter of the {{HTTPHeader("If-Modified-Since")}} and {{HTTPHeader("If-Match")}} headers.</p>
+<p>As long as the cache is not stale, no requests are issued at all. But once it has become stale, this is mostly controlled by the {{HTTPHeader("Cache-Control")}} header, the client doesn't use the cached value directly but issues a <em>conditional request</em>. The value of the validator is used as a parameter of the {{HTTPHeader("If-Modified-Since")}} and {{HTTPHeader("If-Match")}} headers.</p>
 
 <p>If the resource has not changed, the server sends back a {{HTTPStatus("304")}} <code>Not Modified</code> response. This makes the cache fresh again, and the client uses the cached resource. Although there is a response/request round-trip that consumes some resources, this is more efficient than to transmit the whole resource over the wire again.</p>
 
@@ -95,9 +95,9 @@ translation_of: Web/HTTP/Conditional_requests
 
 <p><img alt="The client resumes the requests by indicating the range he needs and preconditions checking the validators of the partially obtained request." src="https://mdn.mozillademos.org/files/13737/HTTPResume2.png"></p>
 
-<p>The principle is simple, but there is one potential problem: if the downloaded resource has been modified between both downloads, the obtained ranges will correspond to two different versions of the resource, and the final document will be corrupted.</p>
+<p>The principle is simple, but there is one potential problem: if the downloaded resource has been modified between both downloads, the obtained ranges will correspond to two different versions of the resource, and the final document will be corrupted.</p>
 
-<p>To prevent this, conditional requests are used. For ranges, there are two ways of doing this. The more flexible one makes use of {{HTTPHeader("If-Modified-Since")}} and {{HTTPHeader("If-Match")}} and the server returns an error if the precondition fails; the client then restarts the download from the beginning:</p>
+<p>To prevent this, conditional requests are used. For ranges, there are two ways of doing this. The more flexible one makes use of {{HTTPHeader("If-Modified-Since")}} and {{HTTPHeader("If-Match")}} and the server returns an error if the precondition fails; the client then restarts the download from the beginning:</p>
 
 <p><img alt="When the partially downloaded resource has been modified, the preconditions will fail and the resource will have to be downloaded again completely." src="https://mdn.mozillademos.org/files/13739/HTTPResume3.png"></p>
 
@@ -119,7 +119,7 @@ translation_of: Web/HTTP/Conditional_requests
 
 <p><img alt="When several clients update the same resource in parallel, we are facing a race condition: the slowest win, and the others don't even know they lost. Problematic!" src="https://mdn.mozillademos.org/files/13749/HTTPLock2.png" style="height: 504px; width: 904px;"></p>
 
-<p>There is no way to deal with this problem without annoying one of the two clients. However, lost updates and race conditions are to be avoided. We want predictable results, and expect that the clients are notified when their changes are rejected.</p>
+<p>There is no way to deal with this problem without annoying one of the two clients. However, lost updates and race conditions are to be avoided. We want predictable results, and expect that the clients are notified when their changes are rejected.</p>
 
 <p>Conditional requests allow implementing the <em>optimistic locking algorithm</em> (used by most wikis or source control systems). The concept is to allow all clients to get copies of the resource, then let them modify it locally, controlling concurrency by successfully allowing the first client submitting an update. All subsequent updates, based on the now obsolete version of the resource, are rejected:</p>
 

@@ -11,8 +11,10 @@ L'action d'un formulaire est le programme exécuté sur le serveur lorsque le fo
 
 ## Syntaxe
 
-    string = form.action
-    form.action = string
+```js
+string = form.action
+form.action = string
+```
 
 ## Exemple
 

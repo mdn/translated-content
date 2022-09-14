@@ -11,10 +11,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/call
 
 <h2 id="Introdução">Introdução</h2>
 
-<p>O método <code><strong>call()</strong></code> invoca uma função com um dado valor <code>this</code>  e argumentos passados individualmente.</p>
+<p>O método <code><strong>call()</strong></code> invoca uma função com um dado valor <code>this</code>  e argumentos passados individualmente.</p>
 
 <div class="note">
-<p><strong>Nota:</strong> Apesar de a sintaxe desta função ser quase idêntica à de {{jsxref("Function.prototype.apply", "apply()")}}, a principal diferença é que <code>call()</code> aceita uma <strong>lista de argumentos</strong>, enquanto <code>apply()</code> aceita <strong>um único array de argumentos.</strong></p>
+<p><strong>Nota:</strong> Apesar de a sintaxe desta função ser quase idêntica à de {{jsxref("Function.prototype.apply", "apply()")}}, a principal diferença é que <code>call()</code> aceita uma <strong>lista de argumentos</strong>, enquanto <code>apply()</code> aceita <strong>um único array de argumentos.</strong></p>
 </div>
 
 <h2 id="Sintaxe">Sintaxe</h2>
@@ -25,20 +25,20 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/call
 
 <dl>
  <dt><code>thisArg</code></dt>
- <dd>O valor de  <code>this</code>  proveu a chamada para <em><code>fun</code></em>. Note que <code>this</code> pode não ser o valor atual visto pelo método: se esse método é uma função em {{jsxref("Functions_and_function_scope/Strict_mode", "non-strict mode", "", 1)}} code, {{jsxref("Global_Objects/null", "null")}} e {{jsxref("Global_Objects/undefined", "undefined")}} serão reescritos com o objeto global, e valores primitivos serão encaixados.</dd>
+ <dd>O valor de  <code>this</code>  proveu a chamada para <em><code>fun</code></em>. Note que <code>this</code> pode não ser o valor atual visto pelo método: se esse método é uma função em {{jsxref("Functions_and_function_scope/Strict_mode", "non-strict mode", "", 1)}} code, {{jsxref("Global_Objects/null", "null")}} e {{jsxref("Global_Objects/undefined", "undefined")}} serão reescritos com o objeto global, e valores primitivos serão encaixados.</dd>
  <dt><code>arg1, arg2, ...</code></dt>
- <dd>Argumentos para  o objeto.</dd>
+ <dd>Argumentos para  o objeto.</dd>
 </dl>
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Você pode atribuir um objeto <code>this</code> diferente quando executar uma função existente. <code>this</code> refere-se ao objeto atual, o objeto em execução. Com <code>call</code>, você pode escrever um método uma vez e então herdá-lo em outro objeto, sem ter que reescrever o método para o novo objeto.</p>
+<p>Você pode atribuir um objeto <code>this</code> diferente quando executar uma função existente. <code>this</code> refere-se ao objeto atual, o objeto em execução. Com <code>call</code>, você pode escrever um método uma vez e então herdá-lo em outro objeto, sem ter que reescrever o método para o novo objeto.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Exemplo_Usando_call_para_encadear_construtores_para_um_objeto">Exemplo: Usando <code>call</code> para encadear construtores para um objeto</h3>
+<h3 id="Exemplo_Usando_call_para_encadear_construtores_para_um_objeto">Exemplo: Usando <code>call</code> para encadear construtores para um objeto</h3>
 
-<p>Você pode usar <code>call</code> para encadear construtores para um objeto, similar ao  Java. No seguinte exemplo, o construtor do  objeto <code>Product</code> é definido com dois parâmetros, <code>name</code> e <code>price</code>. Outras duas funções <code>Food</code> e <code>Toy</code> executam <code>Product</code> passando <code>this,</code> <code>name</code> e <code>price</code>. O Produto inicializa as propriedades <code>name</code> e <code>price</code>,  ambos definem o <code>category</code>.</p>
+<p>Você pode usar <code>call</code> para encadear construtores para um objeto, similar ao  Java. No seguinte exemplo, o construtor do  objeto <code>Product</code> é definido com dois parâmetros, <code>name</code> e <code>price</code>. Outras duas funções <code>Food</code> e <code>Toy</code> executam <code>Product</code> passando <code>this,</code> <code>name</code> e <code>price</code>. O Produto inicializa as propriedades <code>name</code> e <code>price</code>,  ambos definem o <code>category</code>.</p>
 
 <pre class="brush: js">function Product(name, price) {
   this.name = name;
@@ -70,9 +70,9 @@ var cheese = new Food('feta', 5);
 var fun = new Toy('robot', 40);
 </pre>
 
-<h3 id="Exemplo_Usando_o_call_para_chamar_funções_anônimas">Exemplo: Usando o <code>call</code> para chamar funções anônimas</h3>
+<h3 id="Exemplo_Usando_o_call_para_chamar_funções_anônimas">Exemplo: Usando o <code>call</code> para chamar funções anônimas</h3>
 
-<p>Neste exemplo, criamos uma função anônima que usa o <code>call</code> para executá-lo em todos os objetos em um array(vetor). O principal propósito da função anônima aqui é adicionar uma função print para todo o objeto, que está disponível para imprimir o índice correto do objeto no array. Não foi necessário passar o valor do objeto como <code>this</code> , mas isso foi feito apenas para explicação.</p>
+<p>Neste exemplo, criamos uma função anônima que usa o <code>call</code> para executá-lo em todos os objetos em um array(vetor). O principal propósito da função anônima aqui é adicionar uma função print para todo o objeto, que está disponível para imprimir o índice correto do objeto no array. Não foi necessário passar o valor do objeto como <code>this</code> , mas isso foi feito apenas para explicação.</p>
 
 <pre class="brush: js">var animais = [
   { especie: 'Lion', nome: 'King' },
@@ -90,18 +90,18 @@ for (var i = 0; i &lt; animais.length; i++) {
 }
 </pre>
 
-<h3 id="Usando_call_para_chamar_a_função_e_especificar_o_contexto_de_'this'">Usando <code>call</code> para chamar a função e especificar o contexto de 'this'</h3>
+<h3 id="Usando_call_para_chamar_a_função_e_especificar_o_contexto_de_'this'">Usando <code>call</code> para chamar a função e especificar o contexto de 'this'</h3>
 
 <p>No exemplo abaixo, quando vamos chamar a apresentação, o valor de this será associado ao objeto i.<br>
-  </p>
+  </p>
 
 <pre><code>function apresentacao() {
-  var resposta = [this.pessoa, 'é um excelente', this.funcao].join(' ');
-  console.log(resposta);
+  var resposta = [this.pessoa, 'é um excelente', this.funcao].join(' ');
+  console.log(resposta);
 }
 
 var i = {
-  pessoa: 'Douglas Crockford', funcao: 'Desenvolvedor Javascript'
+  pessoa: 'Douglas Crockford', funcao: 'Desenvolvedor Javascript'
 };
 
 apresentacao.call(i); // Douglas Crockford é um excelente Desenvolvedor Javascript</code></pre>
@@ -123,67 +123,19 @@ apresentacao.call(i); // Douglas Crockford é um excelente Desenvolvedor Javascr
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.3.4.4', 'Function.prototype.call')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-function.prototype.call', 'Function.prototype.call')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funcionalidade</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funcionalidade</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.Function.call")}}
 
 <h2 id="See_also" name="See_also">Veja também</h2>
 

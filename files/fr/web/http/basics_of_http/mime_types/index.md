@@ -18,7 +18,9 @@ Les navigateurs utilisent le plus souvent le type MIME et non l'extension d'un f
 
 ### Structure générale
 
-    type/sous-type
+```
+type/sous-type
+```
 
 La structure d'un type MIME est simple, elle est composée d'un type et d'un sous-type. Les deux chaînes de caractères sont séparées par un `'/'`. Les caractères d'espacement ne sont pas autorisés. Le _type_ représente la catégorie et peut être _particulier_ ou _composé_ lorsqu'il regroupe plusieurs formats. Le _sous-type_ est spécifique à chaque type.
 
@@ -26,16 +28,18 @@ Un type MIME est insensible à la casse mais il s'écrit usuellement en minuscul
 
 ### Types particuliers
 
-    text/plain
-    text/html
-    image/jpeg
-    image/png
-    audio/mpeg
-    audio/ogg
-    audio/*
-    video/mp4
-    application/octet-stream
-    …
+```
+text/plain
+text/html
+image/jpeg
+image/png
+audio/mpeg
+audio/ogg
+audio/*
+video/mp4
+application/octet-stream
+…
+```
 
 Les types _particuliers_ indiquent la catégorie d'un document. Les valeurs possibles sont :
 
@@ -51,8 +55,10 @@ Les types _particuliers_ indiquent la catégorie d'un document. Les valeurs poss
 
 ### Types composés ou _multipart_
 
-    multipart/form-data
-    multipart/byteranges
+```
+multipart/form-data
+multipart/byteranges
+```
 
 Les types composés, aussi appelés types _multipart_ indiquent une catégorie de document qui sont constitués de différents éléments. A l'exception de `multipart/form-data`, utilisé en association avec des [formulaires HTML](/fr/docs/Web/Guide/HTML/Forms) et la méthode {{HTTPMethod("POST")}} et de `multipart/byteranges`, utilisé avec le statut HTTP {{HTTPStatus("206")}} `Partial Content` renvoyant uniquement une sous-partie du document ce qui entraînera vraisemblablement l'apparition d'une fenêtre "Enregistrer sous" étant donné que HTTP ne gère pas ces documents de manière différente et que le navigateur ne saura pas commment afficher ce document incomplet.
 
@@ -165,21 +171,23 @@ Le format MIME de ces fichiers représente généralement le format du conteneur
 
 Le type `multipart/form-data` peut être utilisé lors de l'envoi du contenu d'un [formulaire HTML](/fr/docs/Web/Guide/HTML/Forms) du navigateur vers le serveur. En tant que document composé ou _multipart_ il est constitué de différentes parties délimitées par une frontière (une chaîne de caractères débutant par un tiret double `'--'`). Chaque partie est une entité propre qui possède ses propres en-têtes {{HTTPHeader("Content-Disposition")}} et {{HTTPHeader("Content-Type")}} lorsqu'il s'agit d'un champ permettant de téléverser un fichier. L'en-tête ({{HTTPHeader("Content-Length")}} est ignorée puisque la limite est assurée par la frontière.
 
-    Content-Type: multipart/form-data; boundary=aChaineDeDélimitation
-    (en-têtes divers associés à l'ensemble du document)
+```
+Content-Type: multipart/form-data; boundary=aChaineDeDélimitation
+(en-têtes divers associés à l'ensemble du document)
 
-    --aChaineDeDélimitation
-    Content-Disposition: form-data; name="monFichier"; filename="img.jpg"
-    Content-Type: image/jpeg
+--aChaineDeDélimitation
+Content-Disposition: form-data; name="monFichier"; filename="img.jpg"
+Content-Type: image/jpeg
 
-    (données)
-    --aChaineDeDélimitation
-    Content-Disposition: form-data; name="monChamp"
+(données)
+--aChaineDeDélimitation
+Content-Disposition: form-data; name="monChamp"
 
-    (données)
-    --aChaineDeDélimitation
-    (éléments additionnels)
-    --aChaineDeDélimitation--
+(données)
+--aChaineDeDélimitation
+(éléments additionnels)
+--aChaineDeDélimitation--
+```
 
 Le formulaire suivant :
 
@@ -194,56 +202,60 @@ Le formulaire suivant :
 
 enverra le message suivant :
 
-    POST / HTTP/1.1
-    Host: localhost:8000
-    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
-    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-    Accept-Language: en-US,en;q=0.5
-    Accept-Encoding: gzip, deflate
-    Connection: keep-alive
-    Upgrade-Insecure-Requests: 1
-    Content-Type: multipart/form-data; boundary=---------------------------8721656041911415653955004498
-    Content-Length: 465
+```
+POST / HTTP/1.1
+Host: localhost:8000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: multipart/form-data; boundary=---------------------------8721656041911415653955004498
+Content-Length: 465
 
-    -----------------------------8721656041911415653955004498
-    Content-Disposition: form-data; name="monChampTexte"
+-----------------------------8721656041911415653955004498
+Content-Disposition: form-data; name="monChampTexte"
 
-    Test
-    -----------------------------8721656041911415653955004498
-    Content-Disposition: form-data; name="maCheckBox"
+Test
+-----------------------------8721656041911415653955004498
+Content-Disposition: form-data; name="maCheckBox"
 
-    sur
-    -----------------------------8721656041911415653955004498
-    Content-Disposition: form-data; name="monFichier"; filename="test.txt"
-    Content-Type: text/plain
+sur
+-----------------------------8721656041911415653955004498
+Content-Disposition: form-data; name="monFichier"; filename="test.txt"
+Content-Type: text/plain
 
-    un fichier simple.
-    -----------------------------8721656041911415653955004498--
+un fichier simple.
+-----------------------------8721656041911415653955004498--
+```
 
 ### `multipart/byteranges`
 
 Le type MIME `multipart/byteranges` est utilisé lors qu'il s'agit d'envoyer une réponse partielle au navigateur. Lorsque le statut {{HTTPStatus("206")}} `Partial Content` est envoyé, ce type MIME sert pour indiquer que le document est constitué de plusieurs parties. Comme les types composés, l'en-tête {{HTTPHeader("Content-Type")}} utilise la directive `boundary` pour définir une chaîne de délimitation. Chaque partie possède son en-tête {{HTTPHeader("Content-Type")}} ainsi que {{HTTPHeader("Content-Range")}} qui spécifie le morceau que cette partie représente.
 
-    HTTP/1.1 206 Partial Content
-    Accept-Ranges: bytes
-    Content-Type: multipart/byteranges; boundary=3d6b6a416f9b5
-    Content-Length: 385
+```
+HTTP/1.1 206 Partial Content
+Accept-Ranges: bytes
+Content-Type: multipart/byteranges; boundary=3d6b6a416f9b5
+Content-Length: 385
 
-    --3d6b6a416f9b5
-    Content-Type: text/html
-    Content-Range: bytes 100-200/1270
+--3d6b6a416f9b5
+Content-Type: text/html
+Content-Range: bytes 100-200/1270
 
-    eta http-equiv="Content-type" content="text/html; charset=utf-8" />
-        <meta name="vieport" content
-    --3d6b6a416f9b5
-    Content-Type: text/html
-    Content-Range: bytes 300-400/1270
+eta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="vieport" content
+--3d6b6a416f9b5
+Content-Type: text/html
+Content-Range: bytes 300-400/1270
 
-    -color: #f0f0f2;
-            margin: 0;
-            padding: 0;
-            font-family: "Open Sans", "Helvetica
-    --3d6b6a416f9b5--
+-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: "Open Sans", "Helvetica
+--3d6b6a416f9b5--
+```
 
 ## De l'importance de définir correctement un type MIME
 

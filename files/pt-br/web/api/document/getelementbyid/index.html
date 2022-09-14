@@ -28,7 +28,7 @@ translation_of: Web/API/Document/getElementById
 
 <ul>
  <li><code>elemento</code> é uma referência a um objeto {{domxref("Element")}}, ou null se um elemento com o ID especificado não estiver contido neste documento.</li>
- <li><code>id</code> é uma string que diferência maiúsculas e minúsculas representando o ID único do elemento sendo procurado.</li>
+ <li><code>id</code> é uma string que diferência maiúsculas e minúsculas representando o ID único do elemento sendo procurado.</li>
 </ul>
 
 <h2 id="Example" name="Example">Exemplo</h2>
@@ -54,72 +54,26 @@ translation_of: Web/API/Document/getElementById
 
 <h2 id="Notes" name="Notes">Notas</h2>
 
-<p>Os novatos devem notar que a caixa de 'Id' no nome deste método <em>deve</em> estar correta para o código da função - 'getElementByID <em>não funciona</em>, por mais natural que possa parecer.</p>
+<p>Os novatos devem notar que a caixa de 'Id' no nome deste método <em>deve</em> estar correta para o código da função - 'getElementByID <em>não funciona</em>, por mais natural que possa parecer.</p>
 
-<p>Se não existe um elemento com o id fornecido, esta função retorna <code>null</code>. Note que o parâmetro ID diferência maiúsculas e minúsculas. Assim document.getElementById("Main") retornará <code>null</code> ao invés do elemento <code>&lt;div id="<strong>m</strong>ain"&gt;,</code> devido a "M" e "m" serem diferentes para o objetivo deste método.</p>
+<p>Se não existe um elemento com o id fornecido, esta função retorna <code>null</code>. Note que o parâmetro ID diferência maiúsculas e minúsculas. Assim document.getElementById("Main") retornará <code>null</code> ao invés do elemento <code>&lt;div id="<strong>m</strong>ain"&gt;,</code> devido a "M" e "m" serem diferentes para o objetivo deste método.</p>
 
-<p><strong>Elementos que não estão no documento</strong> não são procurados por <code>getElementById</code>. Quando criar um elemento e atribuir um ID ao mesmo, você deve inserir o elemento na árvore do documento com <code><a href="/en-US/docs/DOM/Node.insertBefore" title="en-US/docs/DOM/Node.insertBefore">insertBefore</a></code> ou método similar antes que você possa acessá-lo com <code>getElementById</code>:</p>
+<p><strong>Elementos que não estão no documento</strong> não são procurados por <code>getElementById</code>. Quando criar um elemento e atribuir um ID ao mesmo, você deve inserir o elemento na árvore do documento com <code><a href="/en-US/docs/DOM/Node.insertBefore" title="en-US/docs/DOM/Node.insertBefore">insertBefore</a></code> ou método similar antes que você possa acessá-lo com <code>getElementById</code>:</p>
 
 <pre class="brush: js">var elemento = document.createElement("div");
 elemento.id = 'testqq';
 var el = document.getElementById('testqq'); // el será null!
 </pre>
 
-<p><strong>Documentos não-HTML.</strong> A implementação do DOM deve ter informações que diz quais atributos são do tipo ID.  Atributos com o nome "id" não são do tipo ID a menos que assim sejam definidos nos documentos DTD. O atributo <code>id</code> é definido para ser um tipo ID em casos comuns de  <a href="/en-US/docs/XHTML" title="en-US/docs/XHTML">XHTML</a>, <a href="/en-US/docs/XUL" title="en-US/docs/XUL">XUL</a>, e outros. Implementações que não reconhecem se os atributos são do tipo ID, ou não são esperados retornam <code>null</code>.</p>
+<p><strong>Documentos não-HTML.</strong> A implementação do DOM deve ter informações que diz quais atributos são do tipo ID.  Atributos com o nome "id" não são do tipo ID a menos que assim sejam definidos nos documentos DTD. O atributo <code>id</code> é definido para ser um tipo ID em casos comuns de  <a href="/en-US/docs/XHTML" title="en-US/docs/XHTML">XHTML</a>, <a href="/en-US/docs/XUL" title="en-US/docs/XUL">XUL</a>, e outros. Implementações que não reconhecem se os atributos são do tipo ID, ou não são esperados retornam <code>null</code>.</p>
 
 <h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidade do Navegador</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Recurso</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>1.0</td>
-   <td>{{ CompatGeckoDesktop(1.0) }}</td>
-   <td>5.5</td>
-   <td>7.0</td>
-   <td>1.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Recurso</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>1.0</td>
-   <td>{{ CompatGeckoMobile(1.0) }}</td>
-   <td>6.0</td>
-   <td>6.0</td>
-   <td>1.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Document.getElementById")}}
 
 <h2 id="Specification" name="Specification">Especificações</h2>
 
-<p><code>getElementById</code> foi introduzido no DOM Level 1 para documentos HTML e movidos para todos documentos no DOM Level 2</p>
+<p><code>getElementById</code> foi introduzido no DOM Level 1 para documentos HTML e movidos para todos documentos no DOM Level 2</p>
 
 <ul>
  <li>Especificação núcleo DOM Level 2: <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getElBId">getElementById</a></li>
@@ -128,6 +82,6 @@ var el = document.getElementById('testqq'); // el será null!
 <h2 id="See_also" name="See_also">Veja também</h2>
 
 <ul>
- <li>referências de <a href="/en-US/docs/DOM/document" title="en-US/docs/DOM/document">document</a> para outros métodos e propriedades podem ser usados para obter referências para elementos no documento.</li>
- <li><a href="/en-US/docs/xml/xml:id" title="en-US/docs/xml/id">xml:id</a> -  tem um método utilitário que permite que obtenha 'xml:id' em documentos XML</li>
+ <li>referências de <a href="/en-US/docs/DOM/document" title="en-US/docs/DOM/document">document</a> para outros métodos e propriedades podem ser usados para obter referências para elementos no documento.</li>
+ <li><a href="/en-US/docs/xml/xml:id" title="en-US/docs/xml/id">xml:id</a> -  tem um método utilitário que permite que obtenha 'xml:id' em documentos XML</li>
 </ul>

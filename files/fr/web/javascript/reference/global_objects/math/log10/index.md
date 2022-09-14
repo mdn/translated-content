@@ -21,7 +21,9 @@ La fonction **`Math.log10()`** renvoie le logarithme en base 10 d'un nombre, don
 
 ## Syntaxe
 
-    Math.log10(x)
+```js
+Math.log10(x)
+```
 
 ### Paramètres
 

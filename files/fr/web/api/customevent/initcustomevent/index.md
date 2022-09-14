@@ -19,7 +19,9 @@ Les évènements initialisés par ce moyen doivent être créés avec la méthod
 
 ## Syntaxe
 
-    event.initCustomEvent(type, canBubble, cancelable, detail);
+```js
+event.initCustomEvent(type, canBubble, cancelable, detail);
+```
 
 ### Paramètres
 
@@ -34,13 +36,11 @@ Les évènements initialisés par ce moyen doivent être créés avec la méthod
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire                                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG','#dom-customevent-initcustomevent','CustomEvent')}} | {{Spec2('DOM WHATWG')}} | Définition initiale, mais déjà dépréciée au profit de l'utilisation d'un constructeur,{{domxref("CustomEvent.CustomEvent", "CustomEvent()")}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CustomEvent.initCustomEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

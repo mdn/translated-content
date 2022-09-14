@@ -15,7 +15,9 @@ La méthode **`WebGLRenderingContext.viewport()`** de l'[API WebGL](/fr-FR/docs/
 
 ## Syntaxe
 
-    void gl.viewport(x, y, largeur, hauteur);
+```js
+void gl.viewport(x, y, largeur, hauteur);
+```
 
 ### Paramètres
 
@@ -60,14 +62,11 @@ gl.getParameter(gl.VIEWPORT);
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                               | Commentaire               |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------------- |
-| {{SpecName('WebGL', "#5.14.4", "viewport")}}                     | {{Spec2('WebGL')}}             | Définition initiale.      |
-| {{SpecName('OpenGL ES 2.0', "glViewport.xml", "glViewport")}} | {{Spec2('OpenGL ES 2.0')}} | Page man de l'API OpenGL. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.viewport")}}
+{{Compat}}
 
 ## Voir aussi
 

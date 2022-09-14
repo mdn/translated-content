@@ -1,14 +1,6 @@
 ---
 title: Promise.any()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/any
-tags:
-  - JavaScript
-  - メソッド
-  - プロミス
-  - リファレンス
-  - ポリフィル
-browser-compat: javascript.builtins.Promise.any
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/any
 ---
 {{JSRef}}
 
@@ -18,7 +10,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/any
 
 ## 構文
 
-    Promise.any(iterable);
+```
+Promise.any(iterable);
+```
 
 ### 引数
 

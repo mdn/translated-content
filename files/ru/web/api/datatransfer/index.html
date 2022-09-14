@@ -7,9 +7,9 @@ translation_of: Web/API/DataTransfer
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p>{{ gecko_minversion_header("1.9") }} Объект <strong>DataTransfer</strong> используется для хранения данных, перетаскиваемых мышью во время операции <strong>drag and drop</strong>. Он может хранить от одного до нескольких элементов данных, вне зависимости от их типа. Для получения доп. информации об операции drag and drop, см. <a href="/En/DragDrop/Drag_and_Drop">Drag and Drop</a></p>
+<p>{{ gecko_minversion_header("1.9") }} Объект <strong>DataTransfer</strong> используется для хранения данных, перетаскиваемых мышью во время операции <strong>drag and drop</strong>. Он может хранить от одного до нескольких элементов данных, вне зависимости от их типа. Для получения доп. информации об операции drag and drop, см. <a href="/En/DragDrop/Drag_and_Drop">Drag and Drop</a></p>
 
-<p>Объект может быть получен из свойства <strong>dataTransfer</strong> всех событий перетаскивания. Он не может быть отдельно создан.</p>
+<p>Объект может быть получен из свойства <strong>dataTransfer</strong> всех событий перетаскивания. Он не может быть отдельно создан.</p>
 
 <h2 id="Properties">Список свойств</h2>
 
@@ -94,11 +94,11 @@ translation_of: Web/API/DataTransfer
 
 <p>Реальное действие, которое будет выполнено, и единственное возможное значение свойства <strong>effectAllowed.</strong></p>
 
-<p>Для событий <strong>dragenter</strong> и <strong>dragover</strong>, <strong>dropEffect</strong> будет инициализировано значением, зависящим от того, какое действие запрашивает пользователь. То, как это определяется, зависит от платформы, но, как правило, пользователи могут зажать клавиши-модификаторы для выбора желаемого действия. В обработчике событий для <strong>dragenter</strong> и <strong>dragover</strong>, <strong>dropEffect</strong> следует модифицировать, если запрашиваемое пользователем действие не то, которое требовалось.</p>
+<p>Для событий <strong>dragenter</strong> и <strong>dragover</strong>, <strong>dropEffect</strong> будет инициализировано значением, зависящим от того, какое действие запрашивает пользователь. То, как это определяется, зависит от платформы, но, как правило, пользователи могут зажать клавиши-модификаторы для выбора желаемого действия. В обработчике событий для <strong>dragenter</strong> и <strong>dragover</strong>, <strong>dropEffect</strong> следует модифицировать, если запрашиваемое пользователем действие не то, которое требовалось.</p>
 
-<p>Для событий <strong>dragstart</strong>, <strong>drag</strong>, и <strong>dragleave</strong>,<strong> dropEffect</strong> будет инициализировано значением "none". Свойства <strong>dropEffect</strong> можно присвоить любое значение, но оно не будет ни для чего использоваться.</p>
+<p>Для событий <strong>dragstart</strong>, <strong>drag</strong>, и <strong>dragleave</strong>,<strong> dropEffect</strong> будет инициализировано значением "none". Свойства <strong>dropEffect</strong> можно присвоить любое значение, но оно не будет ни для чего использоваться.</p>
 
-<p>Для событий <strong>drop</strong> и <strong>dragend</strong>, <strong>dropEffect</strong> будет инициализировано значением, которое было назначено свойству <strong>dropEffect</strong> после последнего события <strong>dragenter</strong> или <strong>dragover</strong>.</p>
+<p>Для событий <strong>drop</strong> и <strong>dragend</strong>, <strong>dropEffect</strong> будет инициализировано значением, которое было назначено свойству <strong>dropEffect</strong> после последнего события <strong>dragenter</strong> или <strong>dragover</strong>.</p>
 
 <p>Возможные значения:</p>
 
@@ -109,17 +109,17 @@ translation_of: Web/API/DataTransfer
  <li><strong>none</strong>: элемент не может быть брошен.</li>
 </ul>
 
-<p>Присвоение каких-либо других значений не возымеет эффекта и оставит старое значение.</p>
+<p>Присвоение каких-либо других значений не возымеет эффекта и оставит старое значение.</p>
 
 <h3 id="effectAllowed.28.29">effectAllowed</h3>
 
-<p>Определяет эффекты, которые разрешены для этого перетаскивания. Вы можете указать их в событии <code>dragstart </code>чтобы желаемый эффект сработал на перетаскиваемом элементе (что перетаскиваем),  или в событии  <code>dragenter </code>и<code> dragenter </code>чтобы желаемый эффект сработал для цели перетаскивания (куда перетаскиваем). В других событиях значение не используется.</p>
+<p>Определяет эффекты, которые разрешены для этого перетаскивания. Вы можете указать их в событии <code>dragstart </code>чтобы желаемый эффект сработал на перетаскиваемом элементе (что перетаскиваем),  или в событии  <code>dragenter </code>и<code> dragenter </code>чтобы желаемый эффект сработал для цели перетаскивания (куда перетаскиваем). В других событиях значение не используется.</p>
 
 <p>Возможные значения:</p>
 
 <ul>
  <li><strong>copy</strong>: Копия ресурса может быть сделана в новом месте.</li>
- <li><strong>move</strong>: Элемент может быть перемещён в новое место. </li>
+ <li><strong>move</strong>: Элемент может быть перемещён в новое место. </li>
  <li><strong>link</strong>: A link may be established to the source at the new location.</li>
  <li><strong>copyLink</strong>: A copy or link operation is permitted.</li>
  <li><strong>copyMove</strong>: A copy or move operation is permitted.</li>
@@ -147,7 +147,7 @@ translation_of: Web/API/DataTransfer
 
 <p>Содержит список типов форматов данных в порядке добавления данных. Если ничего не было добавлено, то будет вернут пустой список.</p>
 
-<p>{{ h3_gecko_minversion("mozCursor", "1.9.1", "mozCursor") }}</p>
+<h3>mozCursor</h3>
 
 <p>The drag cursor's state. This is primarily used to control the cursor during tab drags.</p>
 
@@ -188,7 +188,7 @@ translation_of: Web/API/DataTransfer
 
 <h3 id="addElement.28.29">addElement()</h3>
 
-<p>Данный метод устанавливает источник перетаскивания. Обычно вы его не изменяете, но он влияет на то,  на каком узле запускаются события drag и dragend. По умолчанию целью является узел который перетаскивали.</p>
+<p>Данный метод устанавливает источник перетаскивания. Обычно вы его не изменяете, но он влияет на то,  на каком узле запускаются события drag и dragend. По умолчанию целью является узел который перетаскивали.</p>
 
 <pre class="eval"> void addElement(
    in Element element
@@ -334,7 +334,7 @@ translation_of: Web/API/DataTransfer
 
 <p>Data should be added in order of preference, with the most specific format added first and the least specific format added last. If data of the given format already exists, it is replaced in the same position as the old data.</p>
 
-<p>The data should be either a string, a primitive boolean or number type (which will be converted into a string) or an {{ interface("nsISupports") }}.</p>
+<p>The data should be either a string, a primitive boolean or number type (which will be converted into a string) or an <code>nsISupports</code>.</p>
 
 <div class="note"><strong>Note:</strong> This method is Gecko-specific.</div>
 

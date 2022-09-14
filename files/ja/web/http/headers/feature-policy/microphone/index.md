@@ -1,15 +1,6 @@
 ---
 title: 'Feature-Policy: microphone'
 slug: Web/HTTP/Headers/Feature-Policy/microphone
-tags:
-  - 機能ポリシー
-  - Feature-Policy
-  - HTTP
-  - ヘッダー
-  - microphone
-  - 実験的
-browser-compat: http.headers.Feature-Policy.microphone
-translation_of: Web/HTTP/Headers/Feature-Policy/microphone
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}
 
@@ -21,7 +12,7 @@ HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `microphone` 
 Feature-Policy: microphone <allowlist>;
 ```
 
- - \<allowlist>
+- \<allowlist>
   - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Headers/Feature-Policy#syntax) を参照してください。
 
 ## 既定のポリシー

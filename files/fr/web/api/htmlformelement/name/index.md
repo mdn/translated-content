@@ -11,8 +11,10 @@ Si votre {{HTMLElement("Form")}} contient un élément appelé *name*, alors ce 
 
 ## Syntaxe
 
-    string = form.name
-    form.name = string
+```js
+string = form.name
+form.name = string
+```
 
 ## Exemple
 

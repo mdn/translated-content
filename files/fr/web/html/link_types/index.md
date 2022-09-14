@@ -100,7 +100,7 @@ En HTML, les types de lien indiquent la relation entre deux documents, reliés e
       </td>
     </tr>
     <tr>
-      <td><code>archives</code> {{obsolete_inline}}</td>
+      <td><code>archives</code> {{deprecated_inline}}</td>
       <td>
         <p>
           Ce type définit un hyperlien vers un document qui contient un lien
@@ -252,7 +252,7 @@ En HTML, les types de lien indiquent la relation entre deux documents, reliés e
       </td>
     </tr>
     <tr>
-      <td><code>first</code> {{obsolete_inline}}</td>
+      <td><code>first</code> {{deprecated_inline}}</td>
       <td>
         <p>
           Ce type indique que l'hyperlien mène à la première ressource dans la
@@ -387,7 +387,7 @@ En HTML, les types de lien indiquent la relation entre deux documents, reliés e
       </td>
     </tr>
     <tr>
-      <td><code>index</code> {{Obsolete_Inline("HTML5")}}</td>
+      <td><code>index</code> {{deprecated_inline}}</td>
       <td>
         <p>
           Ce type indique que la page fait partie d'une structure hiérarchique
@@ -409,7 +409,7 @@ En HTML, les types de lien indiquent la relation entre deux documents, reliés e
       </td>
     </tr>
     <tr>
-      <td><code>last</code> {{obsolete_inline}}</td>
+      <td><code>last</code> {{deprecated_inline}}</td>
       <td>
         <p>
           Ce type indique que l'hyperlien mène à la dernière ressource dans la
@@ -852,7 +852,7 @@ En HTML, les types de lien indiquent la relation entre deux documents, reliés e
     <tr>
       <td>
         <code>sidebar</code>
-        {{non-standard_inline}}{{Obsolete_Inline("Gecko63")}}
+        {{non-standard_inline}}{{deprecated_inline}}
       </td>
       <td>
         <p>
@@ -929,7 +929,7 @@ En HTML, les types de lien indiquent la relation entre deux documents, reliés e
       </td>
     </tr>
     <tr>
-      <td><code>up</code> {{obsolete_inline}}</td>
+      <td><code>up</code> {{deprecated_inline}}</td>
       <td>
         <p>
           Ce type de lien indique que la page fait partie d'une structure
@@ -955,94 +955,8 @@ En HTML, les types de lien indiquent la relation entre deux documents, reliés e
 
 ## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('Preload','#x2.link-type-preload','preload')}}
-      </td>
-      <td>{{Spec2('Preload')}}</td>
-      <td>Ajout du type <code>preload</code>.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('Resource Hints', '#dfn-preconnect', 'preconnect')}}
-      </td>
-      <td>{{Spec2('Resource Hints')}}</td>
-      <td>
-        Ajout des types <code>dns-prefetch</code>, <code>preconnect</code> et
-        <code>prerender</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("HTML WHATWG", "links.html#linkTypes", "link types")}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>
-        Ajout de <code>opener</code>. <code>noopener</code> devient le
-        comportement par défaut pour les liens avec
-        <code>target="_blank"</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("HTML5 W3C", "links.html#linkTypes", "link types")}}
-      </td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td>
-        <p>
-          Ajout de <code>tag</code>, <code>search</code>, <code>prefetch</code>,
-          <code>noreferrer</code>, <code>nofollow</code>, <code>icon</code> et
-          <code>author</code>.
-        </p>
-        <p>Renommage de <code>copyright</code> en <code>license</code>.</p>
-        <p>
-          Suppression de <code>start</code>, <code>chapter</code>,
-          <code>section</code>, <code>subsection</code> et <code>appendix</code>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("HTML4.01", "types.html#type-links", "link types")}}
-      </td>
-      <td>{{Spec2('HTML4.01')}}</td>
-      <td>
-        <p>
-          Ajout de <code>alternate</code>, <code>stylesheet</code>,
-          <code>start</code>, <code>chapter</code>, <code>section</code>,
-          <code>subsection</code>, <code>appendix</code> et
-          <code>bookmark</code>.
-        </p>
-        <p>Renommage de <code>previous</code> en <code>prev</code>.</p>
-        <p>Suppression de <code>top</code> et <code>search</code>.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName("HTML3.2", "#link", "&lt;link&gt;")}}</td>
-      <td>Obsolete</td>
-      <td>
-        Ajout de <code>top</code>, <code>contents</code>, <code>index</code>,
-        <code>glossary</code>, <code>copyright</code>, <code>next</code>,
-        <code>previous</code>, <code>help</code> et <code>search</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>{{RFC(1866, "HTML 2.0")}}</td>
-      <td>Obsolete</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.link.rel")}}
+{{Compat}}

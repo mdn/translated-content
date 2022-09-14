@@ -12,9 +12,11 @@ L'élément `<xsl:attribute-set>` crée un ensemble nommé d'attributs, qui peut
 
 ### Syntaxe
 
-    <xsl:attribute-set name=NOM use-attribute-sets=LISTE-DE-NOMS>
-    	<xsl:attribute>
-    </xsl:attribute-set>
+```xml
+<xsl:attribute-set name=NOM use-attribute-sets=LISTE-DE-NOMS>
+  <xsl:attribute>
+</xsl:attribute-set>
+```
 
 ### Attributs obligatoires
 

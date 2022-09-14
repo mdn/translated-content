@@ -12,7 +12,7 @@ translation_of: Web/API/BeforeInstallPromptEvent
 ---
 <div><span style="line-height: 19.0909080505371px;">Событие </span><code><strong>BeforeInstallPromptEvent</strong></code><span style="line-height: 19.0909080505371px;"> запускается в обработчике </span>{{domxref("Window.onbeforeinstallprompt")}} <span style="line-height: 19.0909080505371px;">перед тем, как пользователю будет предложено "установить" веб-сайт на главный экран мобильного устройства.</span></div>
 
-<div><span style="line-height: 19.0909080505371px;">Этот интерфейс наследуется от интерфейса </span>{{domxref("Event")}}<span style="line-height: 19.0909080505371px;">.</span> </div>
+<div><span style="line-height: 19.0909080505371px;">Этот интерфейс наследуется от интерфейса </span>{{domxref("Event")}}<span style="line-height: 19.0909080505371px;">.</span> </div>
 
 
 
@@ -22,7 +22,7 @@ translation_of: Web/API/BeforeInstallPromptEvent
 
 <dl>
  <dt>{{domxref("BeforeInstallPromptEvent.BeforeInstallPromptEvent","BeforeInstallPromptEvent()")}}</dt>
- <dd>Создаёт новый <code><strong>BeforeInstallPromptEvent</strong></code>.</dd>
+ <dd>Создаёт новый <code><strong>BeforeInstallPromptEvent</strong></code>.</dd>
 </dl>
 
 <h2 id="Свойства">Свойства</h2>
@@ -39,18 +39,18 @@ translation_of: Web/API/BeforeInstallPromptEvent
 <h2 id="Методы">Методы</h2>
 
 <dl>
- <dt>{{domxref("BeforeInstallPromptEvent.prompt()")}} </dt>
+ <dt>{{domxref("BeforeInstallPromptEvent.prompt()")}} </dt>
  <dd>Позволяет разработчику показывать запрос на установку в любое время по своему выбору. Этот метод возвращает {{jsxref("Promise")}}.</dd>
 </dl>
 
 <h2 id="Пример">Пример</h2>
 
 <pre class="brush: js">window.addEventListener("beforeinstallprompt", function(e) {
-  // Зарегистрируйте платформы, указанные в качестве параметров, в запросе на установку
-  console.log(e.platforms); // e.g., ["web", "android", "windows"]
-  e.userChoice.then(function(choiceResult) {
-    console.log(choiceResult.outcome); // either "accepted" or "dismissed"
-  }, handleError);
+  // Зарегистрируйте платформы, указанные в качестве параметров, в запросе на установку
+  console.log(e.platforms); // e.g., ["web", "android", "windows"]
+  e.userChoice.then(function(choiceResult) {
+    console.log(choiceResult.outcome); // either "accepted" or "dismissed"
+  }, handleError);
 });
 </pre>
 

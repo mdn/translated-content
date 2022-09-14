@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/form
 ---
 <div>{{JSRef}}</div>
 
-<div>Метод <strong><code>Intl.DateTimeFormat.prototype.formatToParts()</code></strong> позволяет выполнять форматирование строк с учётом форматирования <code>DateTimeFormat</code>.</div>
+<div>Метод <strong><code>Intl.DateTimeFormat.prototype.formatToParts()</code></strong> позволяет выполнять форматирование строк с учётом форматирования <code>DateTimeFormat</code>.</div>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -27,11 +27,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/form
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
 
-<p>Массив объектов {{jsxref("Array")}}, содержащий отформатированную дату по частям.</p>
+<p>Массив объектов {{jsxref("Array")}}, содержащий отформатированную дату по частям.</p>
 
 <h2 id="Описание">Описание</h2>
 
-<p>Метод <code>formatToParts()</code> полезен для пользовательского форматирования строки даты. Он возвращает массив объектов {{jsxref("Array")}}, содержащий специфичные для данного места токены, из которых можно выстроить пользовательскую строку, которая сохранит специфичные для данного места части. Структура возвращаемого значения методом <code>formatToParts()</code> выглядит так:</p>
+<p>Метод <code>formatToParts()</code> полезен для пользовательского форматирования строки даты. Он возвращает массив объектов {{jsxref("Array")}}, содержащий специфичные для данного места токены, из которых можно выстроить пользовательскую строку, которая сохранит специфичные для данного места части. Структура возвращаемого значения методом <code>formatToParts()</code> выглядит так:</p>
 
 <pre class="brush: js">[
   { type: 'day', value: '17' },
@@ -42,15 +42,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/form
 
 <dl>
  <dt>day</dt>
- <dd>Строка, используемая для дня, например, <code>"17"</code>.</dd>
+ <dd>Строка, используемая для дня, например, <code>"17"</code>.</dd>
  <dt>dayPeriod</dt>
- <dd>Строка, используемая для времени суток, например, <code>"AM"</code> или <code>"PM"</code>.</dd>
+ <dd>Строка, используемая для времени суток, например, <code>"AM"</code> или <code>"PM"</code>.</dd>
  <dt>era</dt>
- <dd>Строка, используемая для эры, например, <code>"BC"</code> или <code>"AD"</code>.</dd>
+ <dd>Строка, используемая для эры, например, <code>"BC"</code> или <code>"AD"</code>.</dd>
  <dt>hour</dt>
- <dd>Строка, используемая для часа, например, <code>"3"</code> или <code>"03"</code>.</dd>
+ <dd>Строка, используемая для часа, например, <code>"3"</code> или <code>"03"</code>.</dd>
  <dt>literal</dt>
- <dd>Строка, используемая для разделения значений даты и времени, например, <code>"/"</code>, <code>","</code>, <code>"o'clock"</code>, <code>"de"</code> и другие.</dd>
+ <dd>Строка, используемая для разделения значений даты и времени, например, <code>"/"</code>, <code>","</code>, <code>"o'clock"</code>, <code>"de"</code> и другие.</dd>
  <dt>minute</dt>
  <dd>Строка, используемая для минут, например, <code>"00"</code>.</dd>
  <dt>month</dt>
@@ -60,14 +60,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/form
  <dt>timeZoneName</dt>
  <dd>Строка, используемая для названия временной зоны, например, <code>"UTC"</code>.</dd>
  <dt>weekday</dt>
- <dd>Строка, используемая для дня недели, например, <code>"M"</code>, <code>"Monday"</code> или <code>"Montag"</code>.</dd>
+ <dd>Строка, используемая для дня недели, например, <code>"M"</code>, <code>"Monday"</code> или <code>"Montag"</code>.</dd>
  <dt>year</dt>
  <dd>Строка, используемая для года, например, <code>"2012"</code> или <code>"96"</code>.</dd>
 </dl>
 
 <h2 id="Примеры">Примеры</h2>
 
-<p><code>DateTimeFormat</code> выводит локализированные строки, которые нельзя изменять напрямую:</p>
+<p><code>DateTimeFormat</code> выводит локализированные строки, которые нельзя изменять напрямую:</p>
 
 <pre class="brush: js">var date = Date.UTC(2012, 11, 17, 3, 0, 42);
 
@@ -87,15 +87,15 @@ formatter.format(date);
 // "понедельник, 17.12.2012 г., 3:00:42 AM"
 </pre>
 
-<p>Однако, во многих пользовательских интерфейсах есть желание настроить форматирование этой строки. Метод <code>formatToParts</code> включает форматирование строки с учётом местности, созданной форматером <code>DateTimeFormat</code>, предоставляя вам строку по частям:</p>
+<p>Однако, во многих пользовательских интерфейсах есть желание настроить форматирование этой строки. Метод <code>formatToParts</code> включает форматирование строки с учётом местности, созданной форматером <code>DateTimeFormat</code>, предоставляя вам строку по частям:</p>
 
 <pre class="brush: js">formatter.formatToParts(date);
 
 // возвращаемое значение:
 [
-  { type: 'weekday',   value: 'понедельник'},
+  { type: 'weekday',   value: 'понедельник'},
   { type: 'literal',   value: ', '         },
-  { type: 'day',       value: '17'         },
+  { type: 'day',       value: '17'         },
   { type: 'literal',   value: '.'          },
   { type: 'month',     value: '12'         },
   { type: 'literal',   value: '.'          },
@@ -111,7 +111,7 @@ formatter.format(date);
 ]
 </pre>
 
-<p>Теперь информация доступна по отдельности и может быть отформатирована и объединена снова в пользовательском порядке. Например, используя {{jsxref("Array.prototype.map()")}}, <a href="/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions">стрелочные функции</a>, <a href="/ru/docs/Web/JavaScript/Reference/Statements/switch">инструкцию switch</a>, <a href="/ru/docs/Web/JavaScript/Reference/template_strings">шаблонные строки</a> и {{jsxref("Array.prototype.reduce()")}}.</p>
+<p>Теперь информация доступна по отдельности и может быть отформатирована и объединена снова в пользовательском порядке. Например, используя {{jsxref("Array.prototype.map()")}}, <a href="/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions">стрелочные функции</a>, <a href="/ru/docs/Web/JavaScript/Reference/Statements/switch">инструкцию switch</a>, <a href="/ru/docs/Web/JavaScript/Reference/template_strings">шаблонные строки</a> и {{jsxref("Array.prototype.reduce()")}}.</p>
 
 <pre class="brush: js">var dateString = formatter.formatToParts(date).map(({type, value}) =&gt; {
   switch (type) {
@@ -121,7 +121,7 @@ formatter.format(date);
 }).reduce((string, part) =&gt; string + part);
 </pre>
 
-<p>Здесь время суток будет выделено жирным с использованием метода <code>formatToParts()</code>.</p>
+<p>Здесь время суток будет выделено жирным с использованием метода <code>formatToParts()</code>.</p>
 
 <pre class="brush: js">console.log(formatter.format(date));
 // "понедельник, 17.12.2012 г., 3:00:42 AM"
@@ -131,7 +131,7 @@ console.log(dateString);
 
 <h2 id="Полифил">Полифил</h2>
 
-<p>Полифил для данного метода доступен <a href="https://github.com/zbraniecki/proposal-intl-formatToParts">здесь</a>.</p>
+<p>Полифил для данного метода доступен <a href="https://github.com/zbraniecki/proposal-intl-formatToParts">здесь</a>.</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 

@@ -13,9 +13,11 @@ original_slug: Web/JavaScript/Reference/Erreurs/Cant_delete
 
 ## Message
 
-    TypeError: Calling delete on 'x' is not allowed in strict mode (Edge)
-    TypeError: property "x" is non-configurable and can't be deleted. (Firefox)
-    TypeError: Cannot delete property 'x' of #<Object> (Chrome)
+```
+TypeError: Calling delete on 'x' is not allowed in strict mode (Edge)
+TypeError: property "x" is non-configurable and can't be deleted. (Firefox)
+TypeError: Cannot delete property 'x' of #<Object> (Chrome)
+```
 
 ## Type d'erreur
 

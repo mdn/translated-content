@@ -47,7 +47,7 @@ Les derniers sélecteurs que nous allons étudier sont appelés combinateurs, ca
 
 ## Combinateur descendant
 
-Le **combinateur descendant**— en général représenté par un seul espace (` `) — combine deux sélecteurs de sorte que les éléments choisis par le second sélecteur sont sélectionnés s'ils ont un élément ancêtre (parent, parent de parent, parent de parent de parent, etc...) qui correspond au premier sélecteur. Les sélecteurs qui utilisent un combinateur descendant sont appelés sélecteurs descendants.
+Le **combinateur descendant**— en général représenté par un seul espace (" ") — combine deux sélecteurs de sorte que les éléments choisis par le second sélecteur sont sélectionnés s'ils ont un élément ancêtre (parent, parent de parent, parent de parent de parent, etc...) qui correspond au premier sélecteur. Les sélecteurs qui utilisent un combinateur descendant sont appelés sélecteurs descendants.
 
 ```css
 body article p
@@ -121,21 +121,21 @@ Ceci est la dernière section de nos leçons sur les sélecteurs. Ensuite, nous 
 
 ## Dans ce module
 
-1.  [Cascade et héritage](/fr/docs/Apprendre/CSS/Building_blocks/Cascade_et_heritage)
-2.  [Sélecteurs CSS](/fr/docs/Apprendre/CSS/Building_blocks/Selectors)
+1. [Cascade et héritage](/fr/docs/Apprendre/CSS/Building_blocks/Cascade_et_heritage)
+2. [Sélecteurs CSS](/fr/docs/Apprendre/CSS/Building_blocks/Selectors)
 
     - [Sélecteurs de type, de classe, d'ID](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [Sélecteurs d'attribut](/fr/docs/Web/CSS/S%C3%A9lecteurs_d_attribut)
     - [Pseudo-classes and pseudo-élements](/fr/docs/Apprendre/CSS/Building_blocks/Selectors/Pseudo-classes_et_pseudo-%C3%A9l%C3%A9ments)
     - [Combinateurs](/fr/docs/Apprendre/CSS/Building_blocks/Selectors/Combinateurs)
 
-3.  [Le modèle de Boîte](/fr/docs/Apprendre/CSS/Building_blocks/Le_modele_de_boite)
-4.  [Arrières-plans et bordures](/fr/docs/Apprendre/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [Gestion de différentes directions de texte](/fr/docs/Apprendre/CSS/Building_blocks/Handling_different_text_directions)
-6.  [Débordement de contenu](/fr/docs/Apprendre/CSS/Building_blocks/Overflowing_content)
-7.  [Valeurs et unités](/fr/docs/Web/CSS/Valeurs_et_unit%C3%A9s_CSS)
-8.  [Taille des élements](/fr/docs/Apprendre/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [Images, média, et élements de formulaire](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [Le modèle de Boîte](/fr/docs/Apprendre/CSS/Building_blocks/Le_modele_de_boite)
+4. [Arrières-plans et bordures](/fr/docs/Apprendre/CSS/Building_blocks/Backgrounds_and_borders)
+5. [Gestion de différentes directions de texte](/fr/docs/Apprendre/CSS/Building_blocks/Handling_different_text_directions)
+6. [Débordement de contenu](/fr/docs/Apprendre/CSS/Building_blocks/Overflowing_content)
+7. [Valeurs et unités](/fr/docs/Web/CSS/Valeurs_et_unit%C3%A9s_CSS)
+8. [Taille des élements](/fr/docs/Apprendre/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [Images, média, et élements de formulaire](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [Mise en page de tableaux](/fr/docs/Apprendre/CSS/Building_blocks/Styling_tables)
 11. [Débogage CSS](/fr/docs/Apprendre/CSS/Building_blocks/Debugging_CSS)
 12. [Organiser votre CSS](/fr/docs/https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing)

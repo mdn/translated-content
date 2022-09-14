@@ -30,8 +30,6 @@ Pour détecter la collision, nous vérifierons si la balle touche (entre en coll
 
 Pour faciliter les calculs, nous allons définir une variable appelée `ballRadius` qui contiendra le rayon du cercle dessiné et sera utilisée pour les calculs. Ajoutez cette variable à votre code, quelque part en dessous des déclarations de variables existantes :
 
-
-
 ```js
 var ballRadius = 10;
 ```

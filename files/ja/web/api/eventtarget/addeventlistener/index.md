@@ -1,11 +1,6 @@
 ---
 title: EventTarget.addEventListener()
 slug: Web/API/EventTarget/addEventListener
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.EventTarget.addEventListener
-translation_of: Web/API/EventTarget/addEventListener
 ---
 {{APIRef("DOM")}}
 
@@ -45,7 +40,7 @@ addEventListener(type, listener, useCapture);
 - `type`
   - : 対象とする[イベントの種類](/ja/docs/Web/Events)を表す文字列です。
 - `listener`
-  - : 指定された種類のイベントが発生するときに通知 ({{domxref("Event")}} インターフェースを実装しているオブジェクト) を受け取るオブジェクト。これは、 {{domxref("EventListener")}} インタフェースを実装するオブジェクト、あるいは、単純に、JavaScript の[関数](/ja/docs/Web/JavaScript/Guide/Functions)でなければなりません。コールバックについて詳しくは、{{anch("イベントリスナーのコールバック")}}を参照してください。
+  - : 指定された種類のイベントが発生するときに通知 ({{domxref("Event")}} インターフェースを実装しているオブジェクト) を受け取るオブジェクト。これは、 {{domxref("EventListener")}} インタフェースを実装するオブジェクト、あるいは、単純に、JavaScript の[関数](/ja/docs/Web/JavaScript/Guide/Functions)でなければなりません。コールバックについて詳しくは、[イベントリスナーのコールバック](#イベントリスナーのコールバック)を参照してください。
 - `options` {{optional_inline}}
 
   - : 対象のイベントリスナーの特性を指定する、オプションのオブジェクトです。次のオプションが使用できます。
@@ -55,7 +50,7 @@ addEventListener(type, listener, useCapture);
     - `once`
       - : 論理値で、 `listener` の呼び出しを一回のみのとしたいかどうかを値で指定します。 `true` を指定すると、 `listener` は一度実行された時に自動的に削除されます。
     - `passive`
-      - : 論理値で、 `true` ならば、 `listener` で指定された関数が {{domxref("Event.preventDefault", "preventDefault()")}} を呼び出さないことを示します。呼び出されたリスナーが `preventDefault()` を呼び出すと、ユーザーエージェントは何もせず、コンソールに警告を出力します。詳細は{{anch("パッシブリスナーによるスクロールの性能改善")}}をご覧ください。
+      - : 論理値で、 `true` ならば、 `listener` で指定された関数が {{domxref("Event.preventDefault", "preventDefault()")}} を呼び出さないことを示します。呼び出されたリスナーが `preventDefault()` を呼び出すと、ユーザーエージェントは何もせず、コンソールに警告を出力します。詳細は[パッシブリスナーによるスクロールの性能改善](#パッシブリスナーによるスクロールの性能改善)をご覧ください。
     - `signal`
       - : {{domxref("AbortSignal")}} です。指定された `AbortSignal` オブジェクトの {{domxref("AbortController/abort()", "abort()")}} メソッドが呼び出された時に、リスナーが削除されます。
 
@@ -395,7 +390,7 @@ function nonePassiveHandler(event) {
 {{ EmbedLiveSample('Example_of_options_usage', 600, 310, '',
   'Web/API/EventTarget/addEventListener') }}
 
-`options` オブジェクトで特定の値を使用する前に、ユーザーのブラウザーがその値に対応していることを確認するのが良いでしょう。これらは歴史的にすべてのブラウザがサポートしてきたわけではない追加要素であるからです。詳細は{{anch("オプションの対応の安全な検出")}}を参照してください。
+`options` オブジェクトで特定の値を使用する前に、ユーザーのブラウザーがその値に対応していることを確認するのが良いでしょう。これらは歴史的にすべてのブラウザがサポートしてきたわけではない追加要素であるからです。詳細は[オプションの対応の安全な検出](#オプションの対応の安全な検出)を参照してください。
 
 ## その他の注意事項
 

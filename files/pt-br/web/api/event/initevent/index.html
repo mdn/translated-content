@@ -12,14 +12,14 @@ translation_of: Web/API/Event/initEvent
 ---
 <div>{{ ApiRef("DOM") }}{{deprecated_header}}</div>
 
-<p>O método <strong><code>Event.initEvent()</code></strong> é usado para inicializar o valor de um {{ domxref("event") }} criado usando {{ domxref("Document.createEvent()") }}.</p>
+<p>O método <strong><code>Event.initEvent()</code></strong> é usado para inicializar o valor de um {{ domxref("event") }} criado usando {{ domxref("Document.createEvent()") }}.</p>
 
-<p>Eventos inicializados desta maneira precisam ter sido criados com o método {{ domxref("Document.createEvent()") }}. Este método precisar ser chamado para definir o evento antes de ser despachado, usando {{ domxref("EventTarget.dispatchEvent()") }}. Uma vez despachado, não faz mais nada.</p>
+<p>Eventos inicializados desta maneira precisam ter sido criados com o método {{ domxref("Document.createEvent()") }}. Este método precisar ser chamado para definir o evento antes de ser despachado, usando {{ domxref("EventTarget.dispatchEvent()") }}. Uma vez despachado, não faz mais nada.</p>
 
 <div class="note">
 <p><strong>Não use esse método mais, pois está depreciado.</strong></p>
 
-<p>Ao invés, use construtores de eventos específicos, como {{domxref("Event.Event", "Event()")}}. A página sobre <a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Criando e disparando eventos</a> detalha mais informações sobre o uso desses eventos.</p>
+<p>Ao invés, use construtores de eventos específicos, como {{domxref("Event.Event", "Event()")}}. A página sobre <a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Criando e disparando eventos</a> detalha mais informações sobre o uso desses eventos.</p>
 </div>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
@@ -30,9 +30,9 @@ translation_of: Web/API/Event/initEvent
  <dt><em><code>tipo</code></em></dt>
  <dd>É um {{domxref("DOMString")}} definido o tipo do evento.</dd>
  <dt><em><code>bolhas</code></em></dt>
- <dd>É um {{jsxref("Boolean")}} decidindo se o evento precisa ser enviado para cima, na cadeia de eventos ou não. Uma vez definido, a propriedade read-only {{ domxref("Event.bubbles") }} irá informar o seu valor.</dd>
+ <dd>É um {{jsxref("Boolean")}} decidindo se o evento precisa ser enviado para cima, na cadeia de eventos ou não. Uma vez definido, a propriedade read-only {{ domxref("Event.bubbles") }} irá informar o seu valor.</dd>
  <dt><em><code>cancelable</code></em></dt>
- <dd>É um {{jsxref("Boolean")}} definindo se o evento pode ser cancelado. Uma vez definido, a propriedade read-only {{ domxref("Event.cancelable") }} will irá informar o seu valor.</dd>
+ <dd>É um {{jsxref("Boolean")}} definindo se o evento pode ser cancelado. Uma vez definido, a propriedade read-only {{ domxref("Event.cancelable") }} will irá informar o seu valor.</dd>
 </dl>
 
 <h2 id="Example" name="Example">Exemplo</h2>
@@ -76,59 +76,7 @@ elem.dispatchEvent(event);</code>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown()}} [1]</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }} [1]</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Antes do Firefox 17, uma chamada a este método depois de despachar o evento gerava uma exceção ao invés de não fazer nada.</p>
+{{Compat("api.Event.initEvent")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

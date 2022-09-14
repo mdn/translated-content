@@ -5,11 +5,11 @@ translation_of: Web/API/window/requestAnimationFrame
 ---
 <div>{{APIRef}}</div>
 
-<div>El método <strong><code>window.requestAnimationFrame</code></strong> informa al navegador que quieres realizar una animación y solicita que el navegador programe el repintado de la ventana para el próximo ciclo de animación. El método acepta como argumento una función a la que llamar antes de efectuar el repintado.</div>
+<div>El método <strong><code>window.requestAnimationFrame</code></strong> informa al navegador que quieres realizar una animación y solicita que el navegador programe el repintado de la ventana para el próximo ciclo de animación. El método acepta como argumento una función a la que llamar antes de efectuar el repintado.</div>
 
 
 
-<div class="note"><strong>Nota:</strong> Si no quieres que tu animación se detenga, debes asegurarte de  llamar a su vez a <code>requestAnimationFrame() </code>desde tu callback.</div>
+<div class="note"><strong>Nota:</strong> Si no quieres que tu animación se detenga, debes asegurarte de  llamar a su vez a <code>requestAnimationFrame() </code>desde tu callback.</div>
 
 <p>Debes llamar a este método cuando estés preparado para actualizar tu animación en la pantalla para pedir que se programe el repintado. Ésto puede suceder hasta 60 veces por segundo en pestañas en primer plano, pero se puede ver reducido a velocidades inferiores en pestañas en segundo plano.</p>
 
@@ -31,7 +31,7 @@ window.webkitRequestAnimationFrame(callback<em>[, element]</em>); // Chrome/Webk
 
 <h3 id="Valor_devuelto">Valor devuelto</h3>
 
-<p>Un valor entero <code>long</code>, es un entero de tipo long que identifica de manera exclusiva la entrada en la lista de callbacks. Es siempre un distinto de cero, pero no debes realizar ninguna otra suposición acerca de su valor. Puedes pasar este valor a {{ domxref("window.cancelAnimationFrame()") }} para cancelar la petición de actualización del callback.</p>
+<p>Un valor entero <code>long</code>, es un entero de tipo long que identifica de manera exclusiva la entrada en la lista de callbacks. Es siempre un distinto de cero, pero no debes realizar ninguna otra suposición acerca de su valor. Puedes pasar este valor a {{ domxref("window.cancelAnimationFrame()") }} para cancelar la petición de actualización del callback.</p>
 
 <h2 id="Notes" name="Notes">Ejemplo</h2>
 

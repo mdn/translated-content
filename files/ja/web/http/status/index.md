@@ -1,14 +1,6 @@
 ---
 title: HTTP レスポンスステータスコード
 slug: Web/HTTP/Status
-tags:
-  - HTTP
-  - ランディング
-  - 概要
-  - リファレンス
-  - ステータスコード
-  - ウェブ
-translation_of: Web/HTTP/Status
 ---
 {{HTTPSidebar}}
 

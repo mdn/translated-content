@@ -26,7 +26,7 @@ Cela ne fonctionne que pour du CSS placé à l'intérieur d'un élément {{htmle
 }
 ```
 
-## Syntax
+## Syntaxe
 
 {{csssyntax}}
 

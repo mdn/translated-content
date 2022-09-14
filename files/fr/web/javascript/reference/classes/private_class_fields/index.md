@@ -11,19 +11,21 @@ translation_of: Web/JavaScript/Reference/Classes/Private_class_fields
 
 ## Syntaxe
 
-    class ClassWithPrivateField {
-      #privateField
-    }
+```js
+class ClassWithPrivateField {
+  #privateField
+}
 
-    class ClassWithPrivateMethod {
-      #privateMethod() {
-        return 'hello world'
-     }
-    }
+class ClassWithPrivateMethod {
+  #privateMethod() {
+    return 'hello world'
+  }
+}
 
-    class ClassWithPrivateStaticField {
-      static #PRIVATE_STATIC_FIELD
-    }
+class ClassWithPrivateStaticField {
+  static #PRIVATE_STATIC_FIELD
+}
+```
 
 ## Exemples
 

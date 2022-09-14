@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
 ---
 <div>{{JSRef}} {{deprecated_header}}</div>
 
-<p>O método <code><strong>__lookupGetter__</strong></code> retorna a função limite como uma getter para a específica propriedade.</p>
+<p>O método <code><strong>__lookupGetter__</strong></code> retorna a função limite como uma getter para a específica propriedade.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -24,11 +24,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Se uma getter foi definida por uma propriedade de um objeto, não é possível referir-se a função getter através da propriedade, porque essa propriedade se refere ao retorno do valor daquela função. <code>__lookupGetter__</code> pode ser usado para obter referência à função getter.</p>
+<p>Se uma getter foi definida por uma propriedade de um objeto, não é possível referir-se a função getter através da propriedade, porque essa propriedade se refere ao retorno do valor daquela função. <code>__lookupGetter__</code> pode ser usado para obter referência à função getter.</p>
 
-<p>Agora é possível fazer isso de um jeito uniforme usando:. {{jsxref("Object.getOwnPropertyDescriptor()")}} e  {{jsxref("Object.getPrototypeOf()")}}.</p>
+<p>Agora é possível fazer isso de um jeito uniforme usando:. {{jsxref("Object.getOwnPropertyDescriptor()")}} e  {{jsxref("Object.getPrototypeOf()")}}.</p>
 
-<h2 id="Examplos">Examplos</h2>
+<h2 id="Exemplos">Exemplos</h2>
 
 <pre class="brush: js">var obj = {
   get foo() {
@@ -49,26 +49,11 @@ Object.getOwnPropertyDescriptor(obj, "foo").get;
 
 <h2 id="Specificações">Specificações</h2>
 
-<table class="spectable standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentários</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.prototype.__lookupGetter__', 'Object.prototype.__lookupGetter__()')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Incluído no (normativo) anexo para ECMAScript adicional recurso para Web (note que a especificação codificada está tendo implementações).</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>
-  <p>{{Compat("javascript.builtins.Object.lookupGetter")}}</p>
-</div>
+{{Compat}}
 
 <h2 id="Ver_também">Ver também</h2>
 

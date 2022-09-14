@@ -28,7 +28,7 @@ Firefox では、 `reduce` の要求は以下の場合に尊重されます。
 
 - GTK/GNOME では、 GNOME Tweaks > General タブ (バージョンによっては Appearance タブ) > Animations がオフになっている場合。
 
-    - 他にも、 `gtk-enable-animations = false` を [GTK 3 configuration file](https://wiki.archlinux.org/index.php/GTK#Configuration) の `[Settings]` に追加する方法もあります。
+  - 他にも、 `gtk-enable-animations = false` を [GTK 3 configuration file](https://wiki.archlinux.org/index.php/GTK#Configuration) の `[Settings]` に追加する方法もあります。
 
 - Windows 10: 設定 > 簡単操作 > ディスプレイ > アニメーションを表示する
 - Windows 7: コントロールパネル > コンピューターの簡単操作センター > コンピューターでの作業に集中しやすくします > 必要のないアニメーションは無効にします (可能な場合)

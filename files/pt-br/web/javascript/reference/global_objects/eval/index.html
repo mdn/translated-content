@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/eval
 
 <h2 id="Summary" name="Summary">Resumo</h2>
 
-<p>A função <code><strong>eval()</strong></code> computa um código JavaScript representado como uma string.</p>
+<p>A função <code><strong>eval()</strong></code> computa um código JavaScript representado como uma string.</p>
 
 <h2 id="Syntax" name="Syntax">Sintaxe</h2>
 
@@ -28,15 +28,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/eval
 
 <h3 id="Retorno">Retorno</h3>
 
-<p>É o valor computado do código passado para a função. Se o valor estiver vazio, retornará {{jsxref("undefined")}}.</p>
+<p>É o valor computado do código passado para a função. Se o valor estiver vazio, retornará {{jsxref("undefined")}}.</p>
 
 
 
 <h2 id="Description" name="Description">Descrição</h2>
 
-<p><code>eval() é uma função de propriedade do objeto global (window)</code>.</p>
+<p><code>eval() é uma função de propriedade do objeto global (window)</code>.</p>
 
-<p>O argumento da função <code>eval()</code> é uma string. Se a string representa uma expressão, <code>eval()</code> avalia a expressão. Se o argumento representa uma ou mais declarações em JavaScript, <code>eval()</code> avalia as declarações. Não chame o <code>eval()</code> para avaliar uma expressão aritmética; JavaScript avalia expressões aritméticas automaticamente.</p>
+<p>O argumento da função <code>eval()</code> é uma string. Se a string representa uma expressão, <code>eval()</code> avalia a expressão. Se o argumento representa uma ou mais declarações em JavaScript, <code>eval()</code> avalia as declarações. Não chame o <code>eval()</code> para avaliar uma expressão aritmética; JavaScript avalia expressões aritméticas automaticamente.</p>
 
 <p>Se você construir uma expressão aritmética como uma string, você pode usar <code>eval()</code> para calcular o resultado depois. Por exemplo, suponha que você tenha uma variável x. Você pode adiar a avaliação de uma expressão envolvendo x atribuindo o valor de string da expressão, dizer <code>"3 * x + 2"</code>, a uma variável, e, em seguida, chamando <code>eval()</code> em um ponto posterior no seu script.</p>
 
@@ -46,7 +46,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/eval
 eval("2 + 2");             // retorna 4
 </pre>
 
-<p>Você pode contornar esta limitação de forma genérica usando <code>toString()</code>.</p>
+<p>Você pode contornar esta limitação de forma genérica usando <code>toString()</code>.</p>
 
 <pre class="brush:js">var expression = new String("2 + 2");
 eval(expression.toString()); // retorna 4
@@ -64,15 +64,15 @@ eval(expression.toString()); // retorna 4
 
 <h2 id="Don.27t_use_eval.21" name="Don.27t_use_eval.21"><a name="dont-use-it">Nunca use <code>eval</code>!</a></h2>
 
-<p><code>eval()</code> é uma função perigosa, que executa o código passado com os privilégios do caller. Se você executar o <code>eval() </code>com uma sequência de caracteres que podem ser afetados por uma parte maliciosa, você pode acabar executando código malicioso na máquina do usuário com as permissões da sua página/extensão. Mais importante ainda, o código de terceiros pode ver o escopo em que <code>eval()</code> foi chamado, o que pode levar a possíveis ataques como  {{jsxref("Global_Objects/Function", "Function")}} não é suscetível.</p>
+<p><code>eval()</code> é uma função perigosa, que executa o código passado com os privilégios do caller. Se você executar o <code>eval() </code>com uma sequência de caracteres que podem ser afetados por uma parte maliciosa, você pode acabar executando código malicioso na máquina do usuário com as permissões da sua página/extensão. Mais importante ainda, o código de terceiros pode ver o escopo em que <code>eval()</code> foi chamado, o que pode levar a possíveis ataques como  {{jsxref("Global_Objects/Function", "Function")}} não é suscetível.</p>
 
-<p><code>eval()</code> é geralmente mais lento do que as alternativas, uma vez que tem de invocar o interpretador JS, enquanto muitos outros construtores são otimizados por <em>engines</em> de JS modernos.</p>
+<p><code>eval()</code> é geralmente mais lento do que as alternativas, uma vez que tem de invocar o interpretador JS, enquanto muitos outros construtores são otimizados por <em>engines</em> de JS modernos.</p>
 
-<p>Os interpretadores modernos convertem javascript em código de máquina. Resumindo, o nome das variáveis será desmanchado. Portanto, o uso de <code>eval</code> forçará o navegador a fazer buscas caras para descobrir o endereço e seu valor no código de máquina. Além disso, novos valores podem ser introduzidos em <code>eval</code> como mudanças no tipo da variável, fazendo o navegador recalcular todo o código de máquina gerado anteriormente. Felizmente, existem alternativas mais seguras (e rápidas) ao <code>eval()</code> para usos comuns.</p>
+<p>Os interpretadores modernos convertem javascript em código de máquina. Resumindo, o nome das variáveis será desmanchado. Portanto, o uso de <code>eval</code> forçará o navegador a fazer buscas caras para descobrir o endereço e seu valor no código de máquina. Além disso, novos valores podem ser introduzidos em <code>eval</code> como mudanças no tipo da variável, fazendo o navegador recalcular todo o código de máquina gerado anteriormente. Felizmente, existem alternativas mais seguras (e rápidas) ao <code>eval()</code> para usos comuns.</p>
 
-<h3 id="Accessing_member_properties" name="Accessing_member_properties">Acessando propriedades dos membros</h3>
+<h3 id="Accessing_member_properties" name="Accessing_member_properties">Acessando propriedades dos membros</h3>
 
-<p>Você não deve utilizar <code>eval()</code> para converter nomes de propriedades em propriedades. Considere o seguinte exemplo onde as propriedades do objeto a ser acessado não são conhecidas até o código ser executado. Isso pode ser feito com eval:</p>
+<p>Você não deve utilizar <code>eval()</code> para converter nomes de propriedades em propriedades. Considere o seguinte exemplo onde as propriedades do objeto a ser acessado não são conhecidas até o código ser executado. Isso pode ser feito com eval:</p>
 
 <pre class="brush:js">var obj = { a: 20, b: 30 };
 var propname = getPropName();  //retorna "a" ou "b"
@@ -80,7 +80,7 @@ var propname = getPropName();  //retorna "a" ou "b"
 eval( "var result = obj." + propname );
 </pre>
 
-<p>No entanto, <code>eval()</code> não é necessário aqui. De fato, sua utilização não é recomendada. Ao invés disso, utilize os <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Member_Operators" title="JavaScript/Reference/Operators/Member_Operators">operadores de acesso</a>, que são mais rápidos e seguros:</p>
+<p>No entanto, <code>eval()</code> não é necessário aqui. De fato, sua utilização não é recomendada. Ao invés disso, utilize os <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Member_Operators" title="JavaScript/Reference/Operators/Member_Operators">operadores de acesso</a>, que são mais rápidos e seguros:</p>
 
 <pre class="brush:js">var obj = { a: 20, b: 30 };
 var propname = getPropName();  //retorna "a" ou "b"
@@ -89,7 +89,7 @@ var result = obj[ propname ];  //  obj[ "a" ] é o mesmo como obj.a
 
 <h3 id="Use_functions_instead_of_evaluating_snippets_of_code" name="Use_functions_instead_of_evaluating_snippets_of_code">Utilize funções ao invés de avaliar snippets de código</h3>
 
-<p>JavaScript possui <a class="external" href="http://en.wikipedia.org/wiki/First-class_function">first-class functions</a>, o que significa que você pode passar os argumentos para outras APIs, armazená-los em variáveis e propriedades de objeto, e assim por diante. Muitas APIs de DOM foram desenvolvidas com isso em mente, então você pode (e deve) escrever:</p>
+<p>JavaScript possui <a class="external" href="http://en.wikipedia.org/wiki/First-class_function">first-class functions</a>, o que significa que você pode passar os argumentos para outras APIs, armazená-los em variáveis e propriedades de objeto, e assim por diante. Muitas APIs de DOM foram desenvolvidas com isso em mente, então você pode (e deve) escrever:</p>
 
 <pre class="brush: js">// ao invés de setTimeout(" ... ", 1000) use:
 setTimeout(function() { ... }, 1000);
@@ -99,27 +99,27 @@ elt.addEventListener("click", function() { ... } , false); </pre>
 
 <p><a href="/en-US/docs/Web/JavaScript/Guide/Closures" title="JavaScript/Guide/Closures">Closures</a> são úteis como forma de criar funcções parametrizáveis sem concatenar strings.</p>
 
-<h3 id="Parsing_JSON_converting_strings_to_JavaScript_objects" name="Parsing_JSON_(converting_strings_to_JavaScript_objects)">Analisando JSON (convertendo string para objetos JavaScript)</h3>
+<h3 id="Parsing_JSON_converting_strings_to_JavaScript_objects" name="Parsing_JSON_(converting_strings_to_JavaScript_objects)">Analisando JSON (convertendo string para objetos JavaScript)</h3>
 
-<p>Se a string para a qual você está chamando o <code>eval() contém dados </code>(por exemplo, um array: <code>"[1, 2, 3]"</code>),  ao invés de código, você deve considerar mudar para <a href="/en-US/docs/JSON" title="JSON">JSON</a>, que permite a string usar um subconjunto de sintaxe Javascript para representar dados. Veja também <a href="/en-US/docs/Downloading_JSON_and_JavaScript_in_extensions" title="Downloading_JSON_and_JavaScript_in_extensions">Downloading JSON and JavaScript in extensions</a>.</p>
+<p>Se a string para a qual você está chamando o <code>eval() contém dados </code>(por exemplo, um array: <code>"[1, 2, 3]"</code>),  ao invés de código, você deve considerar mudar para <a href="/en-US/docs/JSON" title="JSON">JSON</a>, que permite a string usar um subconjunto de sintaxe Javascript para representar dados. Veja também <a href="/en-US/docs/Downloading_JSON_and_JavaScript_in_extensions" title="Downloading_JSON_and_JavaScript_in_extensions">Downloading JSON and JavaScript in extensions</a>.</p>
 
 <p>Perceba que como a sintaxe JSON é limitada comparada com a sintaxe JavaScript, muitos literais JavaScript válidos não serão analisados como JSON. Por exemplo, trailing commas não são permitidas em JSON, e nomes de propriedades (keys) em literais de objetos devem ser colocados entre aspas. Certifique-se de usar um serializados JSON para gerar strings que serão analisadas como JSON mais tarde.</p>
 
 <h3 id="Pass_data_instead_of_code" name="Pass_data_instead_of_code">Passar dados em vez de códigos</h3>
 
-<p>Por exemplo, uma extensão concebida para raspar conteúdos de páginas web pode ter as regras de raspagem definidas no <a href="/en-US/docs/XPath" title="XPath">XPath</a> em vez de código JavaScript.</p>
+<p>Por exemplo, uma extensão concebida para raspar conteúdos de páginas web pode ter as regras de raspagem definidas no <a href="/en-US/docs/XPath" title="XPath">XPath</a> em vez de código JavaScript.</p>
 
 <h3 id="Run_code_with_limited_privileges" name="Run_code_with_limited_privileges">Rodando o código com privilégios limitados</h3>
 
-<p>Se você precisa executar o código, considere executá-lo com privilégios limitados. Esse conselho se aplica principalmente para extensões e aplicações XUL, que podem usar <a href="/en-US/docs/Components.utils.evalInSandbox" title="Components.utils.evalInSandbox">Components.utils.evalInSandbox</a> para obter o resultado.</p>
+<p>Se você precisa executar o código, considere executá-lo com privilégios limitados. Esse conselho se aplica principalmente para extensões e aplicações XUL, que podem usar <a href="/en-US/docs/Components.utils.evalInSandbox" title="Components.utils.evalInSandbox">Components.utils.evalInSandbox</a> para obter o resultado.</p>
 
 <h2 id="Examples" name="Examples">Exemplos</h2>
 
-<p>Os exemplos a seguir mostram o retorno do <a href="/en-US/docs/Web/API/document.write"><code>document.write</code></a>. No JavaScript rodando no server-side, você pode obter o mesmo resultado chamando o método <code>write()ao invés</code> de usar o <code>document.write()</code>.</p>
+<p>Os exemplos a seguir mostram o retorno do <a href="/en-US/docs/Web/API/document.write"><code>document.write</code></a>. No JavaScript rodando no server-side, você pode obter o mesmo resultado chamando o método <code>write()ao invés</code> de usar o <code>document.write()</code>.</p>
 
-<h3 id="Example_Using_eval" name="Example:_Using_eval">Exemplo: Usando <code>eval</code></h3>
+<h3 id="Example_Using_eval" name="Example:_Using_eval">Exemplo: Usando <code>eval</code></h3>
 
-<p>No código a seguir, ambas as declarações contendo <code>eval()</code> retornam 42. A primeira avalia a string "<code>x + y + 1</code>"; a segunda avalia a string "<code>42</code>".</p>
+<p>No código a seguir, ambas as declarações contendo <code>eval()</code> retornam 42. A primeira avalia a string "<code>x + y + 1</code>"; a segunda avalia a string "<code>42</code>".</p>
 
 <pre class="brush:js">var x = 2;
 var y = 39;
@@ -128,9 +128,9 @@ eval("x + y + 1"); // returns 42
 eval(z);           // returns 42
 </pre>
 
-<h3 id="Example_Using_eval_to_evaluate_a_string_of_JavaScript_statements" name="Example:_Using_eval_to_evaluate_a_string_of_JavaScript_statements">Examplo: Using <code>eval</code> to evaluate a string of JavaScript statements</h3>
+<h3 id="Example_Using_eval_to_evaluate_a_string_of_JavaScript_statements" name="Example:_Using_eval_to_evaluate_a_string_of_JavaScript_statements">Exemplo: Using <code>eval</code> to evaluate a string of JavaScript statements</h3>
 
-<p>O exemplo a seguir usa <code>eval()</code> para avaliar a string <code>str</code>. Essa string consiste de instruções JavaScript que abrem uma caixa de diálogo de alerta e atribuem ao <code>z</code> o valor de 42 se <code>x</code> for cinco, e do contrário, atribui 0 a <code>z</code>. Quando a segunda instrução é executada, <code>eval()</code> fará com que essas instruções sejam executadas e também irá avaliar o conjunto de instruções e retornará o valor atribuído a z.</p>
+<p>O exemplo a seguir usa <code>eval()</code> para avaliar a string <code>str</code>. Essa string consiste de instruções JavaScript que abrem uma caixa de diálogo de alerta e atribuem ao <code>z</code> o valor de 42 se <code>x</code> for cinco, e do contrário, atribui 0 a <code>z</code>. Quando a segunda instrução é executada, <code>eval()</code> fará com que essas instruções sejam executadas e também irá avaliar o conjunto de instruções e retornará o valor atribuído a z.</p>
 
 <pre class="brush:js">var x = 5;
 var str = "if (x == 5) {alert('z is 42'); z = 42;} else z = 0; ";
@@ -139,7 +139,7 @@ document.write("&lt;P&gt;z is ", eval(str));</pre>
 
 <h3 id="Return_value" name="Return_value">Exemplo: A última expressão é avaliada</h3>
 
-<p><code>eval()</code> retorna o valor da última expressão avaliada.</p>
+<p><code>eval()</code> retorna o valor da última expressão avaliada.</p>
 
 <pre class="brush:js">var str = "if ( a ) { 1+1; } else { 1+2; }";
 var a = true;
@@ -191,61 +191,7 @@ var fct2 = eval(fctStr2)  // return a function
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte Básico</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte Básico</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="See_Also" name="See_Also">Gecko-specific notes</h3>
-
-<ul>
- <li>Historicamente <code>eval()</code> tinha um segundo argumento opcional , especificando um objeto em cujo o contexto a validação seria realizada. Esse argumento não era padronizado e foi removido do SpiderMonkey no Gecko 1.9.1 (Firefox 3.5). See {{ bug(442333) }}.</li>
-</ul>
+{{Compat("javascript.builtins.eval")}}
 
 <h2 id="See_Also" name="See_Also">Veja também</h2>
 

@@ -20,7 +20,9 @@ La méthode **`setBigUint64()`** permet d'enregister un entier non-signé sur 64
 
 ## Syntaxe
 
-    dataview.setBigUint64(positionOctet, value [, littleEndian])
+```js
+dataview.setBigUint64(positionOctet, value [, littleEndian])
+```
 
 ### Paramètres
 

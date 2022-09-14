@@ -18,7 +18,9 @@ La méthode **`getDay()`** renvoie le jour de la semaine pour la date spécifié
 
 ## Syntaxe
 
-    dateObj.getDay()
+```js
+dateObj.getDay()
+```
 
 ### Valeur de retour
 

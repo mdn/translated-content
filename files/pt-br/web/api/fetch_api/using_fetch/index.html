@@ -4,24 +4,24 @@ slug: Web/API/Fetch_API/Using_Fetch
 translation_of: Web/API/Fetch_API/Using_Fetch
 ---
 <div class="summary">
-<p>A <a href="/pt-BR/docs/Web/API/Fetch_API">API Fetch</a> fornece uma interface JavaScript para acessar e manipular partes do pipeline HTTP, tais como os pedidos e respostas. Ela também fornece o método global {{domxref("GlobalFetch.fetch","fetch()")}} que fornece uma maneira fácil e lógica para buscar recursos de forma assíncrona através da rede.</p>
+<p>A <a href="/pt-BR/docs/Web/API/Fetch_API">API Fetch</a> fornece uma interface JavaScript para acessar e manipular partes do pipeline HTTP, tais como os pedidos e respostas. Ela também fornece o método global {{domxref("GlobalFetch.fetch","fetch()")}} que fornece uma maneira fácil e lógica para buscar recursos de forma assíncrona através da rede.</p>
 </div>
 
-<p>Este tipo de funcionalidade era obtida anteriormente utilizando {{domxref("XMLHttpRequest")}}. Fetch fornece uma alternativa melhor que pode ser facilmente utilizada por outras tecnologias como {{domxref("ServiceWorker_API", "Service Workers")}}. Fetch também provê um lugar lógico único para definir outros conceitos relacionados ao protocolo HTTP como CORS e extensões ao HTTP.</p>
+<p>Este tipo de funcionalidade era obtida anteriormente utilizando {{domxref("XMLHttpRequest")}}. Fetch fornece uma alternativa melhor que pode ser facilmente utilizada por outras tecnologias como {{domxref("ServiceWorker_API", "Service Workers")}}. Fetch também provê um lugar lógico único para definir outros conceitos relacionados ao protocolo HTTP como CORS e extensões ao HTTP.</p>
 
-<p>Note que a especificação <code>fetch()</code> difere de <code>jQuery.ajax()</code>, principalmente, de três formas:</p>
+<p>Note que a especificação <code>fetch()</code> difere de <code>jQuery.ajax()</code>, principalmente, de três formas:</p>
 
 <ul>
- <li><font><font>A Promise retornada do </font></font><code>fetch()</code> <strong><font><font>não rejeitará o status do erro HTTP,</font></font></strong><font><font> mesmo que a resposta seja um HTTP 404 ou 500. Em vez disso, ela irá resolver normalmente (com o status </font></font><code>ok</code><font><font> definido como falso), e só irá rejeitar se houver falha na rede ou se algo impedir a requisição de ser completada.</font></font></li>
+ <li><font><font>A Promise retornada do </font></font><code>fetch()</code> <strong><font><font>não rejeitará o status do erro HTTP,</font></font></strong><font><font> mesmo que a resposta seja um HTTP 404 ou 500. Em vez disso, ela irá resolver normalmente (com o status </font></font><code>ok</code><font><font> definido como falso), e só irá rejeitar se houver falha na rede ou se algo impedir a requisição de ser completada.</font></font></li>
  <li><code>fetch()</code> <strong><font><font>não receberá cookies cross-site;</font></font></strong><font><font> você não pode estabelecer uma conexão cross-site usando fetch. Cabeçalhos <code><a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie">Set-Cookie</a></code> de outros sites são ignorados silenciosamente</font><font>.</font></font></li>
- <li><code>fetch()</code> <strong><font><font>não enviará cookies</font></font></strong><font><font>, a não ser que seja definida a opção <em>credentials</em> do </font><a href="https://developer.mozilla.org/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parâmetros"><font>parâmetro init</font></a><font>. (Desde </font></font><a href="https://github.com/whatwg/fetch/pull/585" rel="nofollow noopener">25 de agosto de 2017</a>.<font><font> A especificação alterou as políticas padrão de credenciais para </font></font> <code>same-origin</code>. O Firefox mudou desde 61.0b13.)</li>
+ <li><code>fetch()</code> <strong><font><font>não enviará cookies</font></font></strong><font><font>, a não ser que seja definida a opção <em>credentials</em> do </font><a href="https://developer.mozilla.org/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parâmetros"><font>parâmetro init</font></a><font>. (Desde </font></font><a href="https://github.com/whatwg/fetch/pull/585" rel="nofollow noopener">25 de agosto de 2017</a>.<font><font> A especificação alterou as políticas padrão de credenciais para </font></font> <code>same-origin</code>. O Firefox mudou desde 61.0b13.)</li>
 </ul>
 
 <h2 id="Situação_do_suporte_por_navegadores">Situação do suporte por navegadores</h2>
 
-<p>Os suportes para Fetch ainda estão em uma fase bastante precoce, mas começa a ter progresso. Se tornou um padrão no Firefox 39 e Chrome 42 até as versões mais atuais.</p>
+<p>Os suportes para Fetch ainda estão em uma fase bastante precoce, mas começa a ter progresso. Se tornou um padrão no Firefox 39 e Chrome 42 até as versões mais atuais.</p>
 
-<p>Caso tenha interesse no uso da ferramenta, há também uma <a href="https://github.com/github/fetch">Fetch Polyfill</a> disponivel que recria as funcionalidade para outros navegadores que ainda não o suporta. Fique ciente que está em estado experimental e ainda não há uma versão completa.</p>
+<p>Caso tenha interesse no uso da ferramenta, há também uma <a href="https://github.com/github/fetch">Fetch Polyfill</a> disponivel que recria as funcionalidade para outros navegadores que ainda não o suporta. Fique ciente que está em estado experimental e ainda não há uma versão completa.</p>
 
 <div class="note">
 <p><strong>Nota</strong>: There have been some concerns raised that the <a href="https://fetch.spec.whatwg.org/">Fetch spec</a> is at odds with the <a href="https://streams.spec.whatwg.org/">Streams spec</a>; however, future plans show an intention to integrate Streams with Fetch: read <a href="https://github.com/yutakahirano/fetch-with-streams/">Fetch API integrated with Streams</a> for more information.</p>
@@ -29,7 +29,7 @@ translation_of: Web/API/Fetch_API/Using_Fetch
 
 <h2 id="Detecção_de_Recursos">Detecção de Recursos</h2>
 
-<p>Fetch API support pode ser detectada na existência do escopo {{domxref("Headers")}}, {{domxref("Request")}}, {{domxref("Response")}} ou {{domxref("GlobalFetch.fetch","fetch()")}} no {{domxref("Window")}} ou {{domxref("Worker")}} . Por exemplo, faça o seguinte teste no seu código:</p>
+<p>Fetch API support pode ser detectada na existência do escopo {{domxref("Headers")}}, {{domxref("Request")}}, {{domxref("Response")}} ou {{domxref("GlobalFetch.fetch","fetch()")}} no {{domxref("Window")}} ou {{domxref("Worker")}} . Por exemplo, faça o seguinte teste no seu código:</p>
 
 <pre class="brush: js notranslate">if(self.fetch) {
     // execute minha solicitação do fetch aqui
@@ -39,13 +39,13 @@ translation_of: Web/API/Fetch_API/Using_Fetch
 
 <h2 id="Fazendo_as_requisições_Fetch">Fazendo as requisições Fetch</h2>
 
-<p>Uma requisição fetch é realizada para configuração. Temos um exemplo no seguinte código:</p>
+<p>Uma requisição fetch é realizada para configuração. Temos um exemplo no seguinte código:</p>
 
 <pre class="brush: js notranslate">var myImage = document.querySelector('img');
 
 fetch('flowers.jpg')
 .then(function(response) {
-  return response.blob();
+  return response.blob();
 })
 .then(function(myBlob) {
   var objectURL = URL.createObjectURL(myBlob);
@@ -54,9 +54,9 @@ fetch('flowers.jpg')
 
 </pre>
 
-<p>Aqui estamos procurando uma imagem e inserindo em um elemento {{htmlelement("img")}}. O uso mais básico do<code>fetch()</code> acarreta em um argumento — a pasta do recurso que você deseja buscar — e retorna uma promessa contendo a resposta (a {{domxref("Response")}} object).</p>
+<p>Aqui estamos procurando uma imagem e inserindo em um elemento {{htmlelement("img")}}. O uso mais básico do<code>fetch()</code> acarreta em um argumento — a pasta do recurso que você deseja buscar — e retorna uma promessa contendo a resposta (a {{domxref("Response")}} object).</p>
 
-<p>Esta é apenas uma resposta HTTP, não a imagem em sí. Para extrairmos a imagem da resposta, nós usamos o método {{domxref("Body.blob","blob()")}} (definido no mixin do {{domxref("Body")}}, que são implementados por ambos os objetos {{domxref("Request")}} e {{domxref("Response")}}.)</p>
+<p>Esta é apenas uma resposta HTTP, não a imagem em sí. Para extrairmos a imagem da resposta, nós usamos o método {{domxref("Body.blob","blob()")}} (definido no mixin do {{domxref("Body")}}, que são implementados por ambos os objetos {{domxref("Request")}} e {{domxref("Response")}}.)</p>
 
 <div class="note">
 <p><strong>Nota</strong>: O Body mixin além disso possui métodos similares para extrair outros tipos de conteúdo do body; Veja a sessão <a href="#body">Body</a> para mais detalhes.</p>
@@ -64,7 +64,7 @@ fetch('flowers.jpg')
 
 <p>Um <code>objectURL</code> é criado na extração de {{domxref("Blob")}}, que então é inserido no {{domxref("img")}}.</p>
 
-<p>Requisições Fetch são controladas pela directiva <code>connect-src</code> do <a href="/en-US/docs/Security/CSP/CSP_policy_directives">Content Security Policy</a> ao invés da directiva do recurso retornado.</p>
+<p>Requisições Fetch são controladas pela directiva <code>connect-src</code> do <a href="/en-US/docs/Security/CSP/CSP_policy_directives">Content Security Policy</a> ao invés da directiva do recurso retornado.</p>
 
 <h3 id="Fornecendo_opções_de_request">Fornecendo opções de request</h3>
 
@@ -92,7 +92,7 @@ fetch('flowers.jpg',myInit)
 
 <h3 id="Verificando_se_o_fetch_foi_bem_sucedido">Verificando se o fetch foi bem sucedido</h3>
 
-<p>Uma promise {{domxref("GlobalFetch.fetch","fetch()")}} será rejeitada com um {{jsxref("TypeError")}} quando um erro de rede é encontrado, embora isso geralmente signifique problemas de permissão ou similar — um 404 não constitui um erro de rede, por exemplo. Uma verificação precisa de um <code>fetch()</code>  bem-sucedido incluiria a verificação de que a promessa foi resolvida e, em seguida, a verificação de que a propriedade <span class="tlid-translation translation"><span title="">{{domxref("Response.ok")}} tem o valor de <code>true</code>. O código seria parecido com o abaixo:</span></span></p>
+<p>Uma promise {{domxref("GlobalFetch.fetch","fetch()")}} será rejeitada com um {{jsxref("TypeError")}} quando um erro de rede é encontrado, embora isso geralmente signifique problemas de permissão ou similar — um 404 não constitui um erro de rede, por exemplo. Uma verificação precisa de um <code>fetch()</code>  bem-sucedido incluiria a verificação de que a promessa foi resolvida e, em seguida, a verificação de que a propriedade <span class="tlid-translation translation"><span title="">{{domxref("Response.ok")}} tem o valor de <code>true</code>. O código seria parecido com o abaixo:</span></span></p>
 
 <pre class="brush: js notranslate">fetch('flowers.jpg').then(function(response) {
   if(response.ok) {
@@ -110,7 +110,7 @@ fetch('flowers.jpg',myInit)
 
 <h3 id="Fornecendo_seu_próprio_objeto_de_solicitação">Fornecendo seu próprio objeto de solicitação</h3>
 
-<p>Em vez de passar um caminho, para o recurso que você deseja solicitar, dentro da rquisição <code>fetch()</code>, você pode criar um objeto de solicitação usando o construtor {{domxref("Request.Request","Request()")}}, e então passar a solicitação como um argumento do método <code>fetch()</code> :</p>
+<p>Em vez de passar um caminho, para o recurso que você deseja solicitar, dentro da rquisição <code>fetch()</code>, você pode criar um objeto de solicitação usando o construtor {{domxref("Request.Request","Request()")}}, e então passar a solicitação como um argumento do método <code>fetch()</code> :</p>
 
 <pre class="brush: js notranslate">var myHeaders = new Headers();
 
@@ -134,15 +134,15 @@ fetch(myRequest)
 
 <pre class="brush: js notranslate">var anotherRequest = new Request(myRequest,myInit);</pre>
 
-<p>Isso é muito útil, pois os conteúdos de cada solicitação e resposta tem apenas um uso. Fazer uma cópia como essa permite que você use a solicitação / resposta novamente, variando as opções de inicialização, se desejar.</p>
+<p>Isso é muito útil, pois os conteúdos de cada solicitação e resposta tem apenas um uso. Fazer uma cópia como essa permite que você use a solicitação / resposta novamente, variando as opções de inicialização, se desejar.</p>
 
 <div class="note">
-<p><strong>Nota</strong>: Também existe um método que cria uma cópia: {{domxref ("Request.clone", "clone ()")}}. Isso tem uma semântica ligeiramente diferente do outro método de cópia: o primeiro dirá se o conteúdo, da solicitação anterior, já tiver sido lido (ou copiado), enquanto o segundo, <code>clone()</code> não.</p>
+<p><strong>Nota</strong>: Também existe um método que cria uma cópia: {{domxref ("Request.clone", "clone ()")}}. Isso tem uma semântica ligeiramente diferente do outro método de cópia: o primeiro dirá se o conteúdo, da solicitação anterior, já tiver sido lido (ou copiado), enquanto o segundo, <code>clone()</code> não.</p>
 </div>
 
 <h2 id="Headers">Headers</h2>
 
-<p>A interface {{domxref("Headers")}} permite que você crie seus proprios objetos headers por meio do construtor {{domxref("Headers.Headers","Headers()")}}. Um objeto headers é um  mapa multidimensional simples de nomes para o valor? </p>
+<p>A interface {{domxref("Headers")}} permite que você crie seus proprios objetos headers por meio do construtor {{domxref("Headers.Headers","Headers()")}}. Um objeto headers é um  mapa multidimensional simples de nomes para o valor? </p>
 
 <pre class="brush: js notranslate">var content = "Hello World";
 var myHeaders = new Headers();
@@ -150,7 +150,7 @@ myHeaders.append("Content-Type", "text/plain");
 myHeaders.append("Content-Length", content.length.toString());
 myHeaders.append("X-Custom-Header", "ProcessThisImmediately");</pre>
 
-<p>O mesmo pode ser feito passando um array de arrays ou um objeto literal para o construtor:</p>
+<p>O mesmo pode ser feito passando um array de arrays ou um objeto literal para o construtor:</p>
 
 <pre class="brush: js notranslate">myHeaders = new Headers({
   "Content-Type": "text/plain",
@@ -185,7 +185,7 @@ try {
 <p>A good use case for headers is checking whether the content type is correct before you process it further. For example:</p>
 
 <pre class="brush: js notranslate">fetch(myRequest).then(function(response) {
-  var contentType = response.headers.get("content-type");
+  var contentType = response.headers.get("content-type");
   if(contentType &amp;&amp; contentType.indexOf("application/json") !== -1) {
     return response.json().then(function(json) {
       // process your JSON further
@@ -226,7 +226,7 @@ addEventListener('fetch', function(event) {
     new Response(myBody, {
       headers: { "Content-Type" : "text/plain" }
     })
-  );
+  );
 });</pre>
 
 <p>The {{domxref("Response.Response","Response()")}} constructor takes two optional arguments — a body for the response, and an init object (similar to the one that {{domxref("Request.Request","Request()")}} accepts.)</p>

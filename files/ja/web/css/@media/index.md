@@ -65,7 +65,7 @@ translation_of: Web/CSS/@media
 メディア特性式は、その存在や値を調べるもので、完全に任意です。それぞれのメディア特性式は、括弧で囲む必要があります。
 
 - {{cssxref("@media/any-hover", "any-hover")}}
-  - :  	入力メカニズムで、ユーザーが要素上でのホバーを使用することができるものあるか。
+  - : 入力メカニズムで、ユーザーが要素上でのホバーを使用することができるものがあるか。
     Media Queries Level 4 で追加。
 - {{cssxref("@media/any-pointer", "any-pointer")}}
   - : 入力メカニズムにポインティングデバイスがあるか、もしそうであればどれだけ正確なものであるか。
@@ -78,17 +78,17 @@ translation_of: Web/CSS/@media
   - : ユーザーエージェントおよび出力機器が対応しているおよその色の範囲。
     Media Queries Level 4 で追加。
 - {{cssxref("@media/color-index", "color-index")}}
-  - :  	出力機器の色参照表の項目数、または端末がそのような表を使用していないのであればゼロ。
+  - : 出力機器の色参照表の項目数、または端末がそのような表を使用していないのであればゼロ。
 - {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}}  {{deprecated_inline}}
   - : 出力機器の幅対高さのアスペクト比。
     Media Queries Level 4 で非推奨。
-- {{cssxref("@media/device-height", "device-height")}} {{deprecated_inline}}  
+- {{cssxref("@media/device-height", "device-height")}} {{deprecated_inline}}
   - : 出力機器のレンダリング面の高さ。
     Media Queries Level 4 で非推奨。
 - {{cssxref("@media/device-width", "device-width")}} {{deprecated_inline}}
   - : 出力機器のレンダリング面の幅。 Media Queries Level 4 で非推奨。
 - {{cssxref("@media/display-mode", "display-mode")}}
-  - :  	ウェブアプリのマニフェストの [`display`](/ja/docs/Web/Manifest#display) メンバーで指定されているアプリケーションの表示モード。
+  - : ウェブアプリのマニフェストの [`display`](/ja/docs/Web/Manifest#display) メンバーで指定されているアプリケーションの表示モード。
     [Web App Manifest 仕様書](https://w3c.github.io/manifest/#the-display-mode-media-feature)で定義。
 - {{cssxref("@media/forced-colors", "forced-colors")}}
   - : ユーザーエージェントがカラーパレットを制限しているかどうかを検出。
@@ -136,7 +136,6 @@ translation_of: Web/CSS/@media
 - {{cssxref("@media/width", "width")}}
   - : スクロールバーの幅を含むビューポートの幅。
 
-
 ### 論理演算子
 
 *論理演算子* `not`, `and`, `only` を使うと、複雑なメディアクエリーを構成することができます。
@@ -161,7 +160,6 @@ translation_of: Web/CSS/@media
     カンマで区切られたリストの各クエリーは、他のクエリーとは別に扱われます。
      したがって、リスト内のクエリーのいずれかが `true` であれば、メディア文全体が `true` を返すことになります。
      言い換えれば、リストは論理的な `or` 演算子のように動作します．
-
 
 ## アクセシビリティの考慮
 

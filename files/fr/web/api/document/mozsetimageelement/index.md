@@ -16,7 +16,9 @@ Change l'élément utilisé comme arrière-plan CSS par un arrière-plan avec un
 
 ## Syntaxe
 
-    document.mozSetImageElement(imageElementId, imageElement);
+```js
+document.mozSetImageElement(imageElementId, imageElement);
+```
 
 ### Paramètres
 

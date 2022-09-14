@@ -18,7 +18,9 @@ La propriété **`byteLength`** est un accesseur qui représente la longueur, ex
 
 ## Syntaxe
 
-    typedarray.byteLength
+```js
+typedarray.byteLength
+```
 
 ## Description
 

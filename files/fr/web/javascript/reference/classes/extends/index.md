@@ -15,7 +15,9 @@ Le mot-clé **`extends`** est utilisé dans les [déclarations](/fr/docs/Web/Jav
 
 ## Syntaxe
 
-    class ClasseFille extends ClasseParente { ... }
+```js
+class ClasseFille extends ClasseParente { ... }
+```
 
 ## Description
 

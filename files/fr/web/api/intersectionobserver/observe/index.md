@@ -19,7 +19,9 @@ Lorsque la visibilité d'un élément cible franchit l'un des seuils d'intersect
 
 ## Syntaxe
 
-    IntersectionObserver.observe(targetElement);
+```js
+IntersectionObserver.observe(targetElement);
+```
 
 ### Paramètres
 
@@ -32,13 +34,11 @@ Lorsque la visibilité d'un élément cible franchit l'un des seuils d'intersect
 
 ## Spécifications
 
-| Spécification                                                                                                                                | Statut                                       | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('IntersectionObserver','#dom-intersectionobserver-observe','IntersectionObserver.observe()')}} | {{Spec2('IntersectionObserver')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IntersectionObserver.observe")}}
+{{Compat}}
 
 ## Voir aussi
 

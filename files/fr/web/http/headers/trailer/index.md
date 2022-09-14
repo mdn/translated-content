@@ -24,7 +24,9 @@ L'en-tête **Trailer** permet à l'expéditeur d'inclure des champs supplémenta
 
 ## Syntaxe
 
-    Trailer: header-names
+```
+Trailer: header-names
+```
 
 ## Directives
 
@@ -44,20 +46,22 @@ L'en-tête **Trailer** permet à l'expéditeur d'inclure des champs supplémenta
 
 Dans cet exemple, l'en-tête {{HTTPHeader("Expires")}} est utilisée à la fin du bloc du message et sert en tant qu'un "trailing header".
 
-    HTTP/1.1 200 OK
-    Content-Type: text/plain
-    Transfer-Encoding: chunked
-    Trailer: Expires
+```
+HTTP/1.1 200 OK
+Content-Type: text/plain
+Transfer-Encoding: chunked
+Trailer: Expires
 
-    7\r\n
-    Mozilla\r\n
-    9\r\n
-    Developer\r\n
-    7\r\n
-    Network\r\n
-    0\r\n
-    \r\n
-    Expires: Wed, 21 Oct 2015 07:28:00 GMT
+7\r\n
+Mozilla\r\n
+9\r\n
+Developer\r\n
+7\r\n
+Network\r\n
+0\r\n
+\r\n
+Expires: Wed, 21 Oct 2015 07:28:00 GMT
+```
 
 ## Spécifications
 

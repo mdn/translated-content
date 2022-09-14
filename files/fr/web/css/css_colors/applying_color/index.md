@@ -147,9 +147,9 @@ Ensuite, la saturation (**S**) indique la force de la teinte dans la couleur. En
 
 On peut faire une analogie avec la conception d'une couleur pour une peinture :
 
-1.  On commence avec une peinture de base qui possède l'intensité la plus forte pour une couleur donnée (par exemple, le bleu le plus intense qui puisse être affiché) : c'est la teinte (_hue_) (**H**). En CSS, c'est un angle qui détermine la couleur parmi une roue de couleurs.
-2.  Ensuite, on choisit une peinture avec un niveau de gris qui la force de la couleur. Est-ce qu'on veut qu'elle soit claire ou sombre, voire complètement noire ? C'est la luminosité (**L**). En CSS, c'est un pourcentage, 0% indiquant une couleur noire et 100% une couleur blanche.
-3.  Enfin, avec ces deux peintures, on décide de la proportion de chacune pour le mélange final : c'est la saturation (**S**). Plus cette valeur est élevée, plus on utilise la couleur de base, plus cette valeur est faible et plus on utilise la peinture grise.
+1. On commence avec une peinture de base qui possède l'intensité la plus forte pour une couleur donnée (par exemple, le bleu le plus intense qui puisse être affiché) : c'est la teinte (_hue_) (**H**). En CSS, c'est un angle qui détermine la couleur parmi une roue de couleurs.
+2. Ensuite, on choisit une peinture avec un niveau de gris qui la force de la couleur. Est-ce qu'on veut qu'elle soit claire ou sombre, voire complètement noire ? C'est la luminosité (**L**). En CSS, c'est un pourcentage, 0% indiquant une couleur noire et 100% une couleur blanche.
+3. Enfin, avec ces deux peintures, on décide de la proportion de chacune pour le mélange final : c'est la saturation (**S**). Plus cette valeur est élevée, plus on utilise la couleur de base, plus cette valeur est faible et plus on utilise la peinture grise.
 
 Il est également possible d'ajouter un canal alpha afin d'avoir une couleur partiellement (ou totalement) transparente.
 

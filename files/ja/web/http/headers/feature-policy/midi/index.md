@@ -1,16 +1,6 @@
 ---
 title: 'Feature-Policy: midi'
 slug: Web/HTTP/Headers/Feature-Policy/midi
-tags:
-  - ディレクティブ
-  - 機能ポリシー
-  - Feature-Policy
-  - HTTP
-  - MIDI
-  - リファレンス
-  - 実験的
-browser-compat: http.headers.Feature-Policy.midi
-translation_of: Web/HTTP/Headers/Feature-Policy/midi
 ---
 {{HTTPSidebar}}{{SeeCompatTable}}
 
@@ -22,7 +12,7 @@ HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `midi` ディ
 Feature-Policy: midi <allowlist>;
 ```
 
- - \<allowlist>
+- \<allowlist>
   - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Headers/Feature-Policy#syntax) を参照してください。
 
 ## 既定のポリシー

@@ -1,14 +1,6 @@
 ---
 title: Number.parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - メソッド
-  - Number
-  - ポリフィル
-browser-compat: javascript.builtins.Number.parseFloat
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
 ---
 {{JSRef}}
 
@@ -58,7 +50,5 @@ Number.parseFloat === parseFloat; // true
 ## 関連情報
 
 - `Number.isSafeInteger` のポリフィルは [`core-js`](https://github.com/zloirock/core-js#ecmascript-number) で利用できます
-- - {{jsxref("Number")}}
-    - : このメソッドが所属するオブジェクト
-   </li>
+- {{jsxref("Number")}}: このメソッドが所属するオブジェクト
 - グローバルの {{jsxref("parseFloat", "parseFloat()")}} メソッド

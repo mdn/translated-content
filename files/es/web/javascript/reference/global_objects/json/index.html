@@ -105,20 +105,20 @@ eval(code); // fails</pre>
 <var>ArrayElements</var> = <var>JSON</var>
              <em>or</em> <var>ArrayElements</var> <strong>,</strong> <var>JSON</var></pre>
 
-<p>Espacios en blanco insignificantes pueden estar presentes en cualquier lugar excepto en un <var>JSONNumber</var> (los números no deben contener ningún espacio) o en una <var>JSONString</var> (donde es interpretado como el caracter correspondiente en la cadena, o podría causar un error). Los caracteres de Tabulación (U+0009), de retorno de carro (U+000D), de nueva línea (U+000A), y de espacio (U+0020) son los únicos caracteres de espacios en blanco válidos.</p>
+<p>Espacios en blanco insignificantes pueden estar presentes en cualquier lugar excepto en un <var>JSONNumber</var> (los números no deben contener ningún espacio) o en una <var>JSONString</var> (donde es interpretado como el caracter correspondiente en la cadena, o podría causar un error). Los caracteres de Tabulación (U+0009), de retorno de carro (U+000D), de nueva línea (U+000A), y de espacio (U+0020) son los únicos caracteres de espacios en blanco válidos.</p>
 
 <h2 id="Methods" name="Methods">Métodos</h2>
 
 <dl>
  <dt>{{jsxref("JSON.parse()")}}</dt>
- <dd>Analiza una cadena de texto JSON, opcionalmente transformando el valor producido y sus propiedades, retornando el valor.</dd>
+ <dd>Analiza una cadena de texto JSON, opcionalmente transformando el valor producido y sus propiedades, retornando el valor.</dd>
  <dt>{{jsxref("JSON.stringify()")}}</dt>
  <dd>Devuelve un string JSON correspondiente al valor especificado, incluyendo opcionalmente ciertas propiedades o reemplazando valores de propiedades de la manera definida por el usuario.</dd>
 </dl>
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>El objeto JSON no es soportado por navegadores antiguos. Se puede solucionar esto insertando el siguiente código al inicio del script, permitiendo usar el objeto JSON en navegadores que no soportan su implementación de forma nativa (por ejemplo en Internet Explorer 6).</p>
+<p>El objeto JSON no es soportado por navegadores antiguos. Se puede solucionar esto insertando el siguiente código al inicio del script, permitiendo usar el objeto JSON en navegadores que no soportan su implementación de forma nativa (por ejemplo en Internet Explorer 6).</p>
 
 <p>El siguiente algoritmo es una imitación del objeto JSON nativo:</p>
 
@@ -146,7 +146,7 @@ eval(code); // fails</pre>
 }
 </pre>
 
-<p>Los objectos <a class="link-https" href="https://github.com/douglascrockford/JSON-js" title="https://github.com/douglascrockford/JSON-js">JSON2</a> y <a class="external" href="http://bestiejs.github.com/json3" title="http://bestiejs.github.com/json3">JSON3</a> son mas complejos que el objeto JSON ya que manejan <a class="external" href="http://remysharp.com/2010/10/08/what-is-a-polyfill/">polyfills</a>.</p>
+<p>Los objectos <a class="link-https" href="https://github.com/douglascrockford/JSON-js" title="https://github.com/douglascrockford/JSON-js">JSON2</a> y <a class="external" href="http://bestiejs.github.com/json3" title="http://bestiejs.github.com/json3">JSON3</a> son mas complejos que el objeto JSON ya que manejan <a class="external" href="http://remysharp.com/2010/10/08/what-is-a-polyfill/">polyfills</a>.</p>
 
 <h2 id="Especificaciones">Especificaciones</h2>
 

@@ -6,22 +6,22 @@ original_slug: Learn/HTML/Forms/Styling_HTML_forms
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 
-En los artículos anteriores vimos todo el HTML que necesitas para crear y estructurar tus formularios HTML. En este artículo veremos como usar [CSS](/es/docs/Web/CSS) para estilizar nuestros formularios. Esto historicamente ha sido díficil — cada control tiene un nivel de dificultad distinta — pero se esta volviendo más fácil a medida de que los navegadores antiguos son retirados, y los modernos nos abren más posibilidades. 
+En los artículos anteriores vimos todo el HTML que necesitas para crear y estructurar tus formularios HTML. En este artículo veremos como usar [CSS](/es/docs/Web/CSS) para estilizar nuestros formularios. Esto historicamente ha sido díficil — cada control tiene un nivel de dificultad distinta — pero se esta volviendo más fácil a medida de que los navegadores antiguos son retirados, y los modernos nos abren más posibilidades.
 
 <table>
   <tbody>
     <tr>
       <th scope="row">Requisitos previos:</th>
       <td>
-        Conocimientos básicos de informática y una comprensión básica de 
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML">HTML</a> y 
+        Conocimientos básicos de informática y una comprensión básica de
+        <a href="/es/docs/Learn/HTML/Introduction_to_HTML">HTML</a> y
         <a href="/es/docs/Learn/CSS/First_steps">CSS</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Objetivo:</th>
       <td>
-        Comprender los problemas detrás del diseño de formularios y 
+        Comprender los problemas detrás del diseño de formularios y
         aprender algunas de las técnicas básicas de diseño que le serán útiles.
       </td>
     </tr>
@@ -29,6 +29,7 @@ En los artículos anteriores vimos todo el HTML que necesitas para crear y estru
 </table>
 
 ## ¿Porqué es tan difícil aplicar estilos a formularios con CSS?
+
 Se añadieron los controles de formulario en la [2ª especificación HTML](https://www.ietf.org/rfc/rfc1866.txt) en 1995; CSS fue lanzado a finales de 1996, y ningún navegador lo implementó correctamente por años. Los navegadores le dejaban el trabajo de manejar y renderizar los formularios a los sistemas operativos.
 
 Aun con CSS permitiendo estilizar HTML, los fabricantes de navegadores han sido — y son, hasta el día de hoy — reacios a permitir el estilizado de estos porque los usuarios estaban acostumbrados al estilo de sus plataformas. Esto ha cambiado. Los dueños de los sitios web quieren estilos que encajen con el diseño de sus páginas más que nunca, y la plataforma web ha cambiado para hacer esto posible.
@@ -36,9 +37,11 @@ Aun con CSS permitiendo estilizar HTML, los fabricantes de navegadores han sido 
 Para algunos controles, todavía es díficil reconstruirlos para permitir que se puedan estilizar, pero ya podemos usar CSS para estilizar muchas partes de los formularios, pero hay que estar atentos; tienes que tener cuidado para no romper la funcionalidad de este.
 
 ### No todos los controles se crean igual con CSS
+
 Actualmente aun se encuentran dificultades cuando se utiliza CSS con formularios; estos problemas se pueden dividir en tres categorías.
 
 #### Lo bueno
+
 A algunos elementos se les puede dar estilo con pocos o ningún problema independientemente de la plataforma. Entre estos se incluyen los siguientes elementos estructurales:
 
 1. {{HTMLElement("form")}}
@@ -50,14 +53,18 @@ A algunos elementos se les puede dar estilo con pocos o ningún problema indepen
 7. {{HTMLElement("output")}}
 
 #### Lo malo
+
 Algunos elementos son más díficiles de estilizar, llegando a necesitar CSS complejo o trucos muy específicos:
+
 - Casillas de verificación ([checkbox](/es/docs/Web/HTML/Element/input/checkbox)) y botones de opción ([radio](/es/docs/Web/HTML/Element/Input/radio)).
 - [`<input type="search">`](/es/docs/Web/HTML/Element/input/search)
 
 Veremos como trabajar con estos casos específicos en el artículo [Estilizado avanzado para formularios HTML](/es/docs/Learn/Forms/Advanced_styling_for_HTML_forms).
 
 #### Lo feo
+
 En algunos elementos, simplemente no se puede utilizar CSS. Incluyendo a:
+
 - [`<input type="color">`](/es/docs/Web/HTML/Element/input/color)
 - Controles relacionados al tiempo como [`<input type="datetime-local">`](/es/docs/Web/HTML/Element/input/datetime-local)
 - [`<input type="range">`](/es/docs/Web/HTML/Element/input/range)
@@ -192,7 +199,7 @@ Agregue el código anterior en el cuerpo de su HTML.
 
 ¡Aquí es donde la diversión comienza! Antes de iniciar a codificar, necesitamos tres recursos adicionales:
 
-1. [El fondo de la postal](/en-US/docs/Learn/Forms/Styling_web_forms/background.jpg): Descargue esta imagen y guárdela en el mismo directorio que su archivo HTML de trabajo.
+1. [El fondo de la postal](/es/docs/Learn/Forms/Styling_web_forms/background.jpg): Descargue esta imagen y guárdela en el mismo directorio que su archivo HTML de trabajo.
 2. Una fuente de máquina de escribir: [La fuente "Secret Typewriter" de fontsquirrel.com](https://www.fontsquirrel.com/fonts/Secret-Typewriter): descargue el archivo TTF en el mismo directorio que el anterior.
 3. Una fuente dibujada a mano: [La fuente "Journal" de fontsquirrel.com](https://www.fontsquirrel.com/fonts/Journal): Descargue el archivo TTF en el mismo directorio que el anterior.
 
@@ -386,4 +393,3 @@ Como puede ver, siempre que queramos crear formularios con solo campos de texto 
 - [Cómo crear controles de formulario personalizados](/es/docs/Learn/Forms/How_to_build_custom_form_controls)
 - [Envío de formularios a través de JavaScript](/es/docs/Learn/Forms/Sending_forms_through_JavaScript)
 - [Tabla de compatibilidad de propiedades para controles de formulario](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
-

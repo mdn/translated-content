@@ -18,7 +18,9 @@ La méthode statique **`Reflect.get()`** est une fonction qui permet d'obtenir u
 
 ## Syntaxe
 
-    Reflect.get(cible, cléPropriété[, récepteur])
+```js
+Reflect.get(cible, cléPropriété[, récepteur])
+```
 
 ### Paramètres
 

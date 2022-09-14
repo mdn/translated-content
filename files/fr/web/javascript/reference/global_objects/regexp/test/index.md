@@ -18,7 +18,9 @@ La méthode **`test()`** vérifie s'il y a une correspondance entre un texte et 
 
 ## Syntaxe
 
-    regexObj.test(chaîne)
+```js
+regexObj.test(chaîne)
+```
 
 ### Paramètres
 

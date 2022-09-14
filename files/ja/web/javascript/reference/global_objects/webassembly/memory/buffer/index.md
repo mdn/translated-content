@@ -1,16 +1,6 @@
 ---
 title: WebAssembly.Memory.prototype.buffer
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer
-tags:
-  - API
-  - Buffer
-  - JavaScript
-  - プロパティ
-  - Reference
-  - WebAssembly
-  - memory
-browser-compat: javascript.builtins.WebAssembly.Memory.buffer
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer
 ---
 {{JSRef}}
 
@@ -25,12 +15,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffe
 ```js
 WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
 .then(obj => {
-  var i32 = new Uint32Array(memory.buffer);
-  for (var i = 0; i < 10; i++) {
-    i32[i] = i;
-  }
-  var sum = obj.instance.exports.accumulate(0, 10);
-  console.log(sum);
+  var i32 = new Uint32Array(memory.buffer);
+  for (var i = 0; i < 10; i++) {
+    i32[i] = i;
+  }
+  var sum = obj.instance.exports.accumulate(0, 10);
+  console.log(sum);
 });
 ```
 

@@ -28,7 +28,7 @@ De plus, l'arbre d'accessibilité contient souvent des informations concernant c
 
 ## Voir aussi
 
-1.  [Glossaire](/fr/docs/Glossaire)
+1. [Glossaire](/fr/docs/Glossaire)
 
-    1.  {{Glossary("Accessibility")}}
-    2.  {{Glossary("ARIA")}}
+    1. {{Glossary("Accessibility")}}
+    2. {{Glossary("ARIA")}}

@@ -29,7 +29,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A new instance of <code>target</code> (or <code>newTarget</code>, if present), initialized by <code>target</code> as a constructor with the given arguments.</p>
+<p>A new instance of <code>target</code> (or <code>newTarget</code>, if present), initialized by <code>target</code> as a constructor with the given arguments.</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
@@ -43,7 +43,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 var obj = Reflect.construct(Foo, args);
 </pre>
 
-<p> </p>
+<p> </p>
 
 <h3 id="Reflect.construct()_vs_Object.create()"><code>Reflect.construct()</code> vs <code>Object.create()</code></h3>
 
@@ -74,16 +74,16 @@ console.log(obj1 instanceof OtherClass); // true
 console.log(obj2 instanceof OtherClass); // true
 </pre>
 
-<p>However, while the end result is the same, there is one important difference in the process. When using <code>Object.create()</code> and <code>Function.prototype.apply()</code>, the <code>new.target</code> operator will point to <code>undefined</code> within the function used as the constructor, since the <code>new</code> keyword is not being used to create the object.</p>
+<p>However, while the end result is the same, there is one important difference in the process. When using <code>Object.create()</code> and <code>Function.prototype.apply()</code>, the <code>new.target</code> operator will point to <code>undefined</code> within the function used as the constructor, since the <code>new</code> keyword is not being used to create the object.</p>
 
 <p>When invoking <code>Reflect.construct()</code>, on the other hand, the <code>new.target</code> operator will point to the <code>newTarget</code> parameter if supplied, or <code>target</code> if not.</p>
 
 <pre class="brush: js">function OneClass() {
-    console.log('OneClass');
+    console.log('OneClass');
     console.log(new.target);
 }
 function OtherClass() {
-    console.log('OtherClass');
+    console.log('OtherClass');
     console.log(new.target);
 }
 
@@ -103,7 +103,7 @@ OneClass.apply(obj3, args);
 //     OneClass
 //     undefined</pre>
 
-<p> </p>
+<p> </p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -131,7 +131,7 @@ d.getFullYear(); // 1776
   <tr>
    <td>{{SpecName('ESDraft', '#sec-reflect.construct', 'Reflect.construct')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

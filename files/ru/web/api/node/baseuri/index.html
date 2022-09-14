@@ -7,9 +7,9 @@ translation_of: Web/API/Node/baseURI
 <div>{{APIRef("DOM")}}</div>
 </div>
 
-<p> Свойство <code><strong>Node.baseURI</strong></code> только для чтения, возвращающее абсолютный базовый URL узла.</p>
+<p> Свойство <code><strong>Node.baseURI</strong></code> только для чтения, возвращающее абсолютный базовый URL узла.</p>
 
-<p>Базовый URL используется для <a href="http://developers.whatwg.org/urls.html#resolving-urls">разрешения</a> относительных URLs, когда браузеру  нужно получить абсолютный URL, например, когда обрабатывает элемент HTML {{HTMLElement("img")}}, <code>src</code> атрибут или XML <code><a href="/en-US/docs/XLink">xlink</a>:href</code> атрибут.</p>
+<p>Базовый URL используется для <a href="http://developers.whatwg.org/urls.html#resolving-urls">разрешения</a> относительных URLs, когда браузеру  нужно получить абсолютный URL, например, когда обрабатывает элемент HTML {{HTMLElement("img")}}, <code>src</code> атрибут или XML <code><a href="/en-US/docs/XLink">xlink</a>:href</code> атрибут.</p>
 
 <p>В самом простом случае, базовый URL это просто местонахождение документа, но это может зависеть от многих факторов, включая элемент {{HTMLElement("base")}} в HTML и атрибут <code><a href="/en-US/docs/XML/xml:base">xml:base</a></code> в XML.</p>
 
@@ -58,5 +58,5 @@ translation_of: Web/API/Node/baseURI
 <ul>
  <li>{{HTMLElement("base")}} element (HTML)</li>
  <li><code><a href="/en-US/docs/XML/xml:base">xml:base</a></code> атрибуты (XML документы).</li>
- <li>{{domxref("Node.baseURIObject")}} - вариант этого  API для Mozilla дополнений и внутреннего кода. Возвращает базовый URL как {{interface("nsIURI")}}.</li>
+ <li>{{domxref("Node.baseURIObject")}} - вариант этого  API для Mozilla дополнений и внутреннего кода. Возвращает базовый URL как <code>nsIURI</code>.</li>
 </ul>

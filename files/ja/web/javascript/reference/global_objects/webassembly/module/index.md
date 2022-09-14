@@ -1,14 +1,6 @@
 ---
 title: WebAssembly.Module
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
-tags:
-  - Class
-  - JavaScript
-  - Module
-  - Reference
-  - WebAssembly
-browser-compat: javascript.builtins.WebAssembly.Module
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
 ---
 {{JSRef}}
 
@@ -39,7 +31,7 @@ var worker = new Worker("wasm_worker.js");
 
 WebAssembly.compileStreaming(fetch('simple.wasm'))
 .then(mod =>
-  worker.postMessage(mod)
+  worker.postMessage(mod)
 );
 ```
 

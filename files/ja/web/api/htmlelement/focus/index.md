@@ -1,18 +1,6 @@
 ---
 title: HTMLElement.focus()
 slug: Web/API/HTMLElement/focus
-tags:
-  - API
-  - Focus
-  - HTML DOM
-  - HTMLElement
-  - メソッド
-  - リファレンス
-  - スクロール
-  - ビュー
-  - activate
-browser-compat: api.HTMLElement.focus
-translation_of: Web/API/HTMLElement/focus
 original_slug: Web/API/HTMLElement/focus
 ---
 {{ APIRef("HTML DOM") }}
@@ -33,8 +21,8 @@ focus(options)
   - : フォーカスプロセスの側面を制御するオプションを提供するオプションのオブジェクト。
     このオブジェクトには、次のプロパティが含まれる場合があります。
 
- - `preventScroll` {{optional_inline}}
-   - : 論理値で、ブラウザーが文書をスクロールして、新しくフォーカスされた要素を表示するかどうかを示します。 `preventScroll` の値が `false`（既定値）の場合、ブラウザーは要素をフォーカスした後、その要素をスクロールして表示します。 `preventScroll` が `true` に設定されている場合、スクロールしません。
+- `preventScroll` {{optional_inline}}
+  - : 論理値で、ブラウザーが文書をスクロールして、新しくフォーカスされた要素を表示するかどうかを示します。 `preventScroll` の値が `false`（既定値）の場合、ブラウザーは要素をフォーカスした後、その要素をスクロールして表示します。 `preventScroll` が `true` に設定されている場合、スクロールしません。
 
 ## 例
 
@@ -116,7 +104,7 @@ focusNoScrollMethod = function getFocusWithoutScrolling() {
 
 ## メモ
 
--  `HTMLElement.focus()` をmousedown イベントハンドラーから呼び出した場合、 `HTMLElement` からフォーカスが外れないように `event.preventDefault()` を呼び出す必要があります。
+- `HTMLElement.focus()` をmousedown イベントハンドラーから呼び出した場合、 `HTMLElement` からフォーカスが外れないように `event.preventDefault()` を呼び出す必要があります。
 - {{HTMLAttrxRef("tabindex")}} や{{Glossary("shadow tree", "シャドウ DOM", 1)}} など、これまで仕様が定まらないままだった様々な HTML 機能に関するフォーカスの挙動が、最近（2019 年 10 月に）更新されました。詳しくは [WHATWG blog](https://blog.whatwg.org/focusing-on-focus) をチェックしてみてください。
 
 ## ブラウザーの互換性

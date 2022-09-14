@@ -19,7 +19,7 @@ translation_of: Web/HTTP/CORS/Errors/CORSNotSupportingCredentials
 
 <ul>
  <li>Se a requisição foi realizada usando {{domxref("XMLHttpRequest")}}, assegure-se que você não setou {{domxref("XMLHttpRequest.withCredentials", "withCredentials")}} para <code>true</code>.</li>
- <li>Usando <a href="/en-US/docs/Web/API/Server-sent_events">Server-sent events</a>, verifique se  {{domxref("EventSource.withCredentials")}} está <code>false</code> (é o valor padrão).</li>
+ <li>Usando <a href="/en-US/docs/Web/API/Server-sent_events">Server-sent events</a>, verifique se  {{domxref("EventSource.withCredentials")}} está <code>false</code> (é o valor padrão).</li>
  <li>Se usar a <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>, assegure-se que {{domxref("Request.credentials")}} está como <code>"omit"</code>.</li>
 </ul>
 

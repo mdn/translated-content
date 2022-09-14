@@ -15,7 +15,7 @@ original_slug: Web/JavaScript/Referencia/Sentencias/import
 <p>La sentencia <code><strong>import</strong></code> se usa para importar funciones que han sido exportadas desde un módulo externo.</p>
 
 <div class="note">
-<p>Por el momento, esta característica sólo está <a href="https://jakearchibald.com/2017/es-modules-in-browsers/">comenzando a ser implementada</a> de forma nativa en los navegadores. Está implementada en muchos transpiladores, tales como Typescript y <a href="http://babeljs.io/">Babel</a>, y en empaquetadores como <a href="https://github.com/rollup/rollup">Rollup</a> y <a href="https://webpack.js.org/">Webpack</a>.</p>
+<p>Por el momento, esta característica sólo está <a href="https://jakearchibald.com/2017/es-modules-in-browsers/">comenzando a ser implementada</a> de forma nativa en los navegadores. Está implementada en muchos transpiladores, tales como Typescript y <a href="http://babeljs.io/">Babel</a>, y en empaquetadores como <a href="https://github.com/rollup/rollup">Rollup</a> y <a href="https://webpack.js.org/">Webpack</a>.</p>
 </div>
 
 <h2 id="Sintaxis">Sintaxis</h2>
@@ -34,47 +34,47 @@ import "<em>module-name</em>";</pre>
  <dt><code>defaultExport</code></dt>
  <dd>Nombre que se referirá al export por defecto del módulo.</dd>
  <dt><code>module-name</code></dt>
- <dd>El módulo desde el que importar. Normalmente es una ruta relativa o absoluta al archivo <code><strong>.js</strong></code> que contiene el módulo, excluyendo la extensión <code><strong>.js</strong></code>. Algunos empaquetadores pueden permitir o requerir el uso de la extensión; comprueba tu entorno. Sólo se permiten Strings con comillas simples o dobles.</dd>
+ <dd>El módulo desde el que importar. Normalmente es una ruta relativa o absoluta al archivo <code><strong>.js</strong></code> que contiene el módulo, excluyendo la extensión <code><strong>.js</strong></code>. Algunos empaquetadores pueden permitir o requerir el uso de la extensión; comprueba tu entorno. Sólo se permiten Strings con comillas simples o dobles.</dd>
  <dt><code>name</code></dt>
  <dd>Nombre del objeto del módulo que se utilizará como nombre de dominio al hacer referencia a los imports.</dd>
  <dt><span style='background-color: rgba(220, 220, 220, 0.5); font-family: consolas,"Liberation Mono",courier,monospace; font-style: inherit; font-weight: inherit;'>export, exportN</span></dt>
 </dl>
 
 <dl>
- <dd>Nombre de los exports a ser importados.</dd>
+ <dd>Nombre de los exports a ser importados.</dd>
  <dt><code>alias, aliasN</code></dt>
  <dd>Nombre del objeto que recibirá la propiedad importada.</dd>
 </dl>
 
 <h2 id="Descripción">Descripción</h2>
 
-<p>El parámetro <code>name</code> es el nombre del objeto que recibirá los miembros exportados. El parámetro <code>member</code> especifica miembros individuales, mientras el parámetro <code>name</code> importa todos ellos. <font face="Courier New, Andale Mono, monospace">name</font> puede también ser una función si el módulo exporta un sólo parámetro por defecto en lugar de una serie de miembros. Abajo hay ejemplos que explican la sintaxis.</p>
+<p>El parámetro <code>name</code> es el nombre del objeto que recibirá los miembros exportados. El parámetro <code>member</code> especifica miembros individuales, mientras el parámetro <code>name</code> importa todos ellos. <font face="Courier New, Andale Mono, monospace">name</font> puede también ser una función si el módulo exporta un sólo parámetro por defecto en lugar de una serie de miembros. Abajo hay ejemplos que explican la sintaxis.</p>
 
 <h3 id="Importa_el_contenido_de_todo_un_módulo.">Importa el contenido de todo un módulo.</h3>
 
-<p>Esto inserta <code>myModule</code> en el ámbito actual, que contiene todos los elementos exportados en el archivo ubicado en  <code>/modules/my-module.js</code>.</p>
+<p>Esto inserta <code>myModule</code> en el ámbito actual, que contiene todos los elementos exportados en el archivo ubicado en  <code>/modules/my-module.js</code>.</p>
 
 <pre class="brush: js">import * as myModule from '/modules/my-module.js';</pre>
 
-<p>Aquí, para acceder a los miembros exportados habrá que usar el alias del módulo ("myModule" en este caso) como namespace. Por ejemplo, si el módulo importado arriba incluye un miembre exportado llamado <code>doAllTheAmazingThings()</code>, habría que invocarlo de la siguiente manera:</p>
+<p>Aquí, para acceder a los miembros exportados habrá que usar el alias del módulo ("myModule" en este caso) como namespace. Por ejemplo, si el módulo importado arriba incluye un miembre exportado llamado <code>doAllTheAmazingThings()</code>, habría que invocarlo de la siguiente manera:</p>
 
 <pre class="brush: js">myModule.doAllTheAmazingThings();</pre>
 
 <h3 id="Importa_un_solo_miembro_de_un_módulo.">Importa un solo miembro de un módulo.</h3>
 
-<p>Dado un objeto o valor llamado <code>myExport</code> que ha sido exportado del módulo <code>my-module</code> ya sea implícitamente (porque todo el módulo ha sido exportado) o explícitamente (usando la sentencia {{jsxref("Sentencias/export", "export")}} ), esto inserta <code>myExport</code> en el ámbito actual.</p>
+<p>Dado un objeto o valor llamado <code>myExport</code> que ha sido exportado del módulo <code>my-module</code> ya sea implícitamente (porque todo el módulo ha sido exportado) o explícitamente (usando la sentencia {{jsxref("Sentencias/export", "export")}} ), esto inserta <code>myExport</code> en el ámbito actual.</p>
 
 <pre class="brush: js">import {myExport} from '/modules/my-module.js';</pre>
 
 <h3 id="Importa_multiples_miembros_de_un_módulo.">Importa multiples miembros de un módulo.</h3>
 
-<p>Esto inserta <code>foo</code> y <code>bar</code> en el ámbito actual.</p>
+<p>Esto inserta <code>foo</code> y <code>bar</code> en el ámbito actual.</p>
 
 <pre class="brush: js">import {foo, bar} from "my-module.js";</pre>
 
 <h3 id="Importa_un_miembre_con_un_alias_mas_conveniente">Importa un miembre con un alias mas conveniente</h3>
 
-<p>Se puede renombrar un miembro exportado cuando se importa. Por ejemplo, esto inserta <code>shortName</code> en el ámbito actual.</p>
+<p>Se puede renombrar un miembro exportado cuando se importa. Por ejemplo, esto inserta <code>shortName</code> en el ámbito actual.</p>
 
 <pre class="brush: js">import {reallyReallyLongModuleExportName as shortName}
   from '/modules/my-module.js';</pre>
@@ -96,7 +96,7 @@ import "<em>module-name</em>";</pre>
 
 <h3 id="Importación_de_elementos_por_defecto">Importación de elementos por defecto</h3>
 
-<p>Es posible tener una exportación por defecto (tanto si se trata de un objeto, función, clase, etc.). Recíprocamente, es posible usa la instrucción <code>import</code> para importar esos elementos establecidos como por defecto.</p>
+<p>Es posible tener una exportación por defecto (tanto si se trata de un objeto, función, clase, etc.). Recíprocamente, es posible usa la instrucción <code>import</code> para importar esos elementos establecidos como por defecto.</p>
 
 <p>La versión más sencilla de importar un elemento por defecto es:</p>
 
@@ -155,7 +155,7 @@ getUsefulContents('http://www.example.com',
   <tr>
    <td>{{SpecName('ESDraft', '#sec-imports', 'Imports')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -163,7 +163,7 @@ getUsefulContents('http://www.example.com',
 <h2 id="Compatibilidad_entre_navegadores">Compatibilidad entre navegadores</h2>
 
 <div class="hidden">
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 </div>
 
 <p>{{Compat("javascript.statements.import")}}</p>

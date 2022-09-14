@@ -15,13 +15,15 @@ La méthode **`WebGLRenderingContext.bufferData()`** de l'[API WebGL](/fr-FR/doc
 
 ## Syntaxe
 
-    // WebGL1:
-    void gl.bufferData(cible, taille, utilisation);
-    void gl.bufferData(cible, ArrayBuffer? donneesSrc, utilisation);
-    void gl.bufferData(cible, ArrayBufferView donneesSrc, utilisation);
+```js
+// WebGL1:
+void gl.bufferData(cible, taille, utilisation);
+void gl.bufferData(cible, ArrayBuffer? donneesSrc, utilisation);
+void gl.bufferData(cible, ArrayBufferView donneesSrc, utilisation);
 
-    // WebGL2:
-    void gl.bufferData(cible, ArrayBufferView donneesSrc, utilisation, decalageSrc, longueur);
+// WebGL2:
+void gl.bufferData(cible, ArrayBufferView donneesSrc, utilisation, decalageSrc, longueur);
+```
 
 ### Paramètres
 
@@ -51,7 +53,7 @@ La méthode **`WebGLRenderingContext.bufferData()`** de l'[API WebGL](/fr-FR/doc
     - `gl.STATIC_DRAW`&nbsp;: le contenu du tampon est susceptible d'être utilisé souvent mais de ne pas changer souvent ; du contenu est écrit dans le tampon, mais non lu ;
     - `gl.DYNAMIC_DRAW`&nbsp;: le contenu du tampon est susceptible d'être souvent utilisé et de changer souvent ; du contenu est écrit dans le tampon, mais non lu ;
     - `gl.STREAM_DRAW` : le contenu du tampon est susceptible de ne pas être utilisé souvent&nbsp;; du contenu est écrit dans le tampon, mais non lu ;
-    - lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, les valeurs suivantes the following values sont en outre disponibles :
+    - lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, les valeurs suivantes sont en outre disponibles :
 
       - `gl.STATIC_READ`&nbsp;: le contenu du tampon est susceptible d'être utilisé souvent et de ne pas changer souvent ; du contenu est lu depuis le tampon, mais non écrit ;
       - `gl.DYNAMIC_READ`&nbsp;: le contenu du tampon est susceptible d'être utilisé souvent et de changer souvent ; du contenu est lu depuis le tampon, mais non écrit ;
@@ -98,52 +100,11 @@ gl.getBufferParameter(gl.ARRAY_BUFFER, gl.BUFFER_USAGE);
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebGL', "#5.14.5", "bufferData")}}</td>
-      <td>{{Spec2('WebGL')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('OpenGL ES 2.0', "glBufferData.xml", "glBufferData")}}
-      </td>
-      <td>{{Spec2('OpenGL ES 2.0')}}</td>
-      <td><p>Page man de l’API OpenGL.</p></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('OpenGL ES 3.0', "glBufferData.xhtml", "glBufferData")}}
-      </td>
-      <td>{{Spec2('OpenGL ES 3.0')}}</td>
-      <td>
-        <p>Page man de l’API OpenGL ES 3 (similaire).</p>
-        Ajoute les noouveaux tampons <code>cible</code> :<br /><code
-          >gl.COPY_READ_BUFFER</code
-        >,<br /><code>gl.COPY_WRITE_BUFFER</code>,<br /><code
-          >gl.TRANSFORM_FEEDBACK_BUFFER</code
-        >,<br /><code>gl.UNIFORM_BUFFER</code>,<br /><code
-          >gl.PIXEL_PACK_BUFFER</code
-        >,<br /><code>gl.PIXEL_UNPACK_BUFFER</code><br /><br />Ajoute les
-        nouvelles indications d'<code>utilisation</code> :<br /><code
-          >gl.STATIC_READ</code
-        >,<br /><code>gl.DYNAMIC_READ</code>,<br /><code>gl.STREAM_READ</code
-        >,<br /><code>gl.STATIC_COPY</code>,<br /><code>gl.DYNAMIC_COPY</code
-        >,<br /><code>gl.STREAM_COPY</code>.
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.bufferData")}}
+{{Compat}}
 
 ## Voir aussi
 

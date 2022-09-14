@@ -34,13 +34,13 @@ original_slug: Learn/JavaScript/Building_blocks/Construyendo_tu_propia_funcion
 
 <h2 id="Aprendizaje_activo_construyamos_una_función.">Aprendizaje activo: construyamos una función.</h2>
 
-<p>La función personalizada que vamos a construir se llamará <code>displayMessage()</code>. Mostrará un cuadro de mensaje personalizado en una página web y actuará como un reemplazo personalizado para la función de <a href="/en-US/docs/Web/API/Window/alert">alert()</a> incorporada de un navegador. Hemos visto esto antes, pero solo refresquemos nuestros recuerdos. Escriba lo siguiente en la consola de JavaScript de su navegador, en la página que desee:</p>
+<p>La función personalizada que vamos a construir se llamará <code>displayMessage()</code>. Mostrará un cuadro de mensaje personalizado en una página web y actuará como un reemplazo personalizado para la función de <a href="/en-US/docs/Web/API/Window/alert">alert()</a> incorporada de un navegador. Hemos visto esto antes, pero solo refresquemos nuestros recuerdos. Escriba lo siguiente en la consola de JavaScript de su navegador, en la página que desee:</p>
 
 <pre class="brush: js">alert('This is a message');</pre>
 
-<p>La función <code>alert</code> tiene un argumento — el string que se muestra en la alerta. Prueba a variar el string para cambiar el mensaje.</p>
+<p>La función <code>alert</code> tiene un argumento — el string que se muestra en la alerta. Prueba a variar el string para cambiar el mensaje.</p>
 
-<p>La función <code>alert</code> es limitada: pueder cambiar el mensaje, pero no puedes cambiar de manera sencilla nada más, como el color, icono o cualquier otra cosa. Construiremos uno que resultará ser más divertido.</p>
+<p>La función <code>alert</code> es limitada: pueder cambiar el mensaje, pero no puedes cambiar de manera sencilla nada más, como el color, icono o cualquier otra cosa. Construiremos uno que resultará ser más divertido.</p>
 
 <div class="note">
 <p><strong>Nota</strong>: Este ejemplo debería funcionar bien en todos los navegadores modernos, pero el estilo puede parecer un poco divertido en los navegadores un poco más antiguos. Te recomendamos que hagas este ejercicio en un navegador moderno como Firefox, Opera o Chrome.</p>
@@ -55,7 +55,7 @@ original_slug: Learn/JavaScript/Building_blocks/Construyendo_tu_propia_funcion
 </div>
 
 <ol>
- <li>Comience accediendo al archivo <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-start.html">function-start.html</a> y haciendo una copia local. Verás que el HTML es simple  — el body unicamente tiene un botón. También hemos propocionado algunos estilos básicos de CSS para customizar el mensaje y un elemento  {{htmlelement("script")}} vacío para poner nuestro JavaScript dentro.</li>
+ <li>Comience accediendo al archivo <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-start.html">function-start.html</a> y haciendo una copia local. Verás que el HTML es simple  — el body unicamente tiene un botón. También hemos propocionado algunos estilos básicos de CSS para customizar el mensaje y un elemento  {{htmlelement("script")}} vacío para poner nuestro JavaScript dentro.</li>
  <li>Luego añade lo siguiente dentro del elemento <code>&lt;script&gt;</code>:
   <pre class="brush: js">function displayMessage() {
 
@@ -84,21 +84,21 @@ closeBtn.onclick = function() {
 
 <p>Esto es un montón de código por el que pasar, así que lo guiaremos paso a paso.</p>
 
-<p>La primera línea usa un función DOM API llamada {{domxref("document.querySelector()")}} para seleccionar el elemento {{htmlelement("html")}} y guardar una referencia a él en una variable llamada <code>html</code>, por lo que podemos hacer cosas para más adelante:</p>
+<p>La primera línea usa un función DOM API llamada {{domxref("document.querySelector()")}} para seleccionar el elemento {{htmlelement("html")}} y guardar una referencia a él en una variable llamada <code>html</code>, por lo que podemos hacer cosas para más adelante:</p>
 
 <pre class="brush: js">let html = document.querySelector('html');</pre>
 
-<p>La siguiente sección usa otra función del DOM API llamada {{domxref("Document.createElement()")}} para crear un elemento {{htmlelement("div")}} y guardar una referencia a él en una variable llamada <code>panel</code>. Este elemento será el contenedor exterior de nuestro cuadro de mensaje.</p>
+<p>La siguiente sección usa otra función del DOM API llamada {{domxref("Document.createElement()")}} para crear un elemento {{htmlelement("div")}} y guardar una referencia a él en una variable llamada <code>panel</code>. Este elemento será el contenedor exterior de nuestro cuadro de mensaje.</p>
 
-<p>Entonces usamos otra función del API DOM llamada {{domxref("Element.setAttribute()")}} para configurar un atributo a <code>class</code> en nuestro panel con un valor de <code>msgBox</code>. Esto es para facilitar el estilo del elemento. — Si echas un vistazo al CSS en la página, verás que estamos utilizando un selector de clases<code>.msgBox</code> para dar estilo al al contenedor del mensaje.</p>
+<p>Entonces usamos otra función del API DOM llamada {{domxref("Element.setAttribute()")}} para configurar un atributo a <code>class</code> en nuestro panel con un valor de <code>msgBox</code>. Esto es para facilitar el estilo del elemento. — Si echas un vistazo al CSS en la página, verás que estamos utilizando un selector de clases<code>.msgBox</code> para dar estilo al al contenedor del mensaje.</p>
 
-<p>Finalmente, llamamos a una función del DOM llamada {{domxref("Node.appendChild()")}} en la variable <code>html</code> que hemos guardado anteriormente, que anida un elemento dentro del otro como hijo de él. Hemos especificado el panel <code>&lt;div&gt;</code> como el hijo que queremos añadir dentro del elemento <code>&lt;html&gt;</code>. Debemos hacer esto ya que el elemento que creamos no aparecerá en la página por sí solo — tenemos que especificar donde ponerlo.</p>
+<p>Finalmente, llamamos a una función del DOM llamada {{domxref("Node.appendChild()")}} en la variable <code>html</code> que hemos guardado anteriormente, que anida un elemento dentro del otro como hijo de él. Hemos especificado el panel <code>&lt;div&gt;</code> como el hijo que queremos añadir dentro del elemento <code>&lt;html&gt;</code>. Debemos hacer esto ya que el elemento que creamos no aparecerá en la página por sí solo — tenemos que especificar donde ponerlo.</p>
 
 <pre class="brush: js">let panel = document.createElement('div');
 panel.setAttribute('class', 'msgBox');
 html.appendChild(panel);</pre>
 
-<p>Las siguientes dos secciones hacen uso de las mismas funciones <code>createElement()</code> y <code>appendChild()</code> que ya vimos para crear dos nuevos elementos — un {{htmlelement("p")}} y un {{htmlelement("button")}} — e insertarlo en la página como un hijo del panel <code>&lt;div&gt;</code>. Usamos su propiedad  {{domxref("Node.textContent")}} — que representa el contenido de texto de un elemento: para insertar un mensaje dentro del párrafo y una 'x' dentro del botón. Este botón será lo que necesita hacer clic / activar cuando el usuario quiera cerrar el cuadro de mensaje.</p>
+<p>Las siguientes dos secciones hacen uso de las mismas funciones <code>createElement()</code> y <code>appendChild()</code> que ya vimos para crear dos nuevos elementos — un {{htmlelement("p")}} y un {{htmlelement("button")}} — e insertarlo en la página como un hijo del panel <code>&lt;div&gt;</code>. Usamos su propiedad  {{domxref("Node.textContent")}} — que representa el contenido de texto de un elemento: para insertar un mensaje dentro del párrafo y una 'x' dentro del botón. Este botón será lo que necesita hacer clic / activar cuando el usuario quiera cerrar el cuadro de mensaje.</p>
 
 <pre class="brush: js">let msg = document.createElement('p');
 msg.textContent = 'This is a message box';
@@ -108,9 +108,9 @@ let closeBtn = document.createElement('button');
 closeBtn.textContent = 'x';
 panel.appendChild(closeBtn);</pre>
 
-<p>Finalmente, usamos el manejador de evento {{domxref("GlobalEventHandlers.onclick")}} para hacerlo de modo que cuando se haga clic en el botón, se ejecute algún código para eliminar todo el panel de la página, para cerrar el cuadro de mensaje.</p>
+<p>Finalmente, usamos el manejador de evento {{domxref("GlobalEventHandlers.onclick")}} para hacerlo de modo que cuando se haga clic en el botón, se ejecute algún código para eliminar todo el panel de la página, para cerrar el cuadro de mensaje.</p>
 
-<p>Brevemente, el handler <code>onclick</code> es una propiedad disponible en el botón (o, de hecho, en cualquier elemento de la página) que se puede configurar en una función para especificar qué código ejecutar cuando se hace clic en el botón. Aprenderás mucho más sobre esto en nuestro artículo de eventos posteriores. Estamos haciendo el handler <code>onclick</code> igual que una función anónima, que contiene el código para ejecutar cuando se ha hecho click en el botón. La línea dentro de la función usa la función del DOM API {{domxref("Node.removeChild()")}}  para especificar que queremos eliminar un elemento secundario específico del elemento HTML— en este caso el panel <code>&lt;div&gt;</code>.</p>
+<p>Brevemente, el handler <code>onclick</code> es una propiedad disponible en el botón (o, de hecho, en cualquier elemento de la página) que se puede configurar en una función para especificar qué código ejecutar cuando se hace clic en el botón. Aprenderás mucho más sobre esto en nuestro artículo de eventos posteriores. Estamos haciendo el handler <code>onclick</code> igual que una función anónima, que contiene el código para ejecutar cuando se ha hecho click en el botón. La línea dentro de la función usa la función del DOM API {{domxref("Node.removeChild()")}}  para especificar que queremos eliminar un elemento secundario específico del elemento HTML— en este caso el panel <code>&lt;div&gt;</code>.</p>
 
 <pre class="brush: js">closeBtn.onclick = function() {
   panel.parentNode.removeChild(panel);
@@ -146,7 +146,7 @@ panel.appendChild(closeBtn);</pre>
  </li>
  <li>Finalmente, agregue la siguiente línea debajo de la anterior:
   <pre class="brush: js">btn.onclick = displayMessage;</pre>
-  De una forma similar que nuestra línea dentro de la función <code>closeBtn.onclick...</code>, aquí estamos llamando a algún código en respuesta a un botón al hacer clic. Pero en este caso, en lugar de llamar a una función anónima que contiene algún código, estamos llamando directamente a nuestro nombre de función.</li>
+  De una forma similar que nuestra línea dentro de la función <code>closeBtn.onclick...</code>, aquí estamos llamando a algún código en respuesta a un botón al hacer clic. Pero en este caso, en lugar de llamar a una función anónima que contiene algún código, estamos llamando directamente a nuestro nombre de función.</li>
  <li>Intente guardar y actualizar la página: ahora debería ver aparecer el cuadro de mensaje cuando hace clic en el botón.</li>
 </ol>
 
@@ -156,7 +156,7 @@ panel.appendChild(closeBtn);</pre>
 
 <p>y al guardar y volver a cargar, verás que aparece el cuadro de mensaje sin hacer clic en el botón. Los paréntesis en este contexto a veces se denominan "operador de invocación de función". Solo los utiliza cuando desea ejecutar la función inmediatamente en el ámbito actual. Del mismo modo, el código dentro de la función anónima no se ejecuta inmediatamente, ya que está dentro del alcance de la función.</p>
 
-<p>Si has intentado el último experimento, asegúrate de deshacer el último cambio antes de continuar.</p>
+<p>Si has intentado el último experimento, asegúrate de deshacer el último cambio antes de continuar.</p>
 
 <h2 id="Mejora_de_la_función_con_parámetros.">Mejora de la función con parámetros.</h2>
 
@@ -183,7 +183,7 @@ panel.appendChild(closeBtn);</pre>
   displayMessage('Woo, this is a different message!');
 };</pre>
   Si queremos especificar parámetros dentro de paréntesis para la función a la que estamos llamando, no podemos llamarla directamente, necesitamos colocarla dentro de una función anónima para que no esté en el ámbito inmediato y, por lo tanto, no se llame de inmediato. Ahora no se llamará hasta que se haga clic en el botón.</li>
- <li>Vuelva a cargar e intenta el código nuevamente y verás que aún funciona bien, ¡excepto que ahora también puede variar el mensaje dentro del parámetro para obtener diferentes mensajes mostrados en el cuadro!</li>
+ <li>Vuelva a cargar e intenta el código nuevamente y verás que aún funciona bien, ¡excepto que ahora también puede variar el mensaje dentro del parámetro para obtener diferentes mensajes mostrados en el cuadro!</li>
 </ol>
 
 <h3 id="Un_parámetro_más_complejo.">Un parámetro más complejo.</h3>
@@ -191,9 +191,9 @@ panel.appendChild(closeBtn);</pre>
 <p>En el siguiente parámetro. Este va a implicar un poco más de trabajo: lo configuraremos de modo que, dependiendo de la configuración del parámetro msgType, la función mostrará un icono diferente y un color de fondo diferente.</p>
 
 <ol>
- <li>En primer lugar, descargue los iconos necesarios para este ejercicio (<a href="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/warning.png">warning</a> y <a href="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/chat.png">chat</a>) de GitHub. Guárdalos en una nueva carpeta llamada <code>icons</code> en la misma localización que tu HTML.
+ <li>En primer lugar, descargue los iconos necesarios para este ejercicio (<a href="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/warning.png">warning</a> y <a href="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/chat.png">chat</a>) de GitHub. Guárdalos en una nueva carpeta llamada <code>icons</code> en la misma localización que tu HTML.
 
-  <div class="note"><strong>Nota</strong>: los iconos <a href="https://www.iconfinder.com/icons/1031466/alarm_alert_error_warning_icon">warning</a> y <a href="https://www.iconfinder.com/icons/1031441/chat_message_text_icon">chat</a> que se encuentran en iconfinder.com, han sido diseñados por <a href="https://www.iconfinder.com/nazarr">Nazarrudin Ansyari</a>. Gracias!</div>
+  <div class="note"><strong>Nota</strong>: los iconos <a href="https://www.iconfinder.com/icons/1031466/alarm_alert_error_warning_icon">warning</a> y <a href="https://www.iconfinder.com/icons/1031441/chat_message_text_icon">chat</a> que se encuentran en iconfinder.com, han sido diseñados por <a href="https://www.iconfinder.com/nazarr">Nazarrudin Ansyari</a>. Gracias!</div>
  </li>
  <li>A continuación, encuentra el CSS dentro de tu archivo HTML. Haremos algunos cambios para dar paso a los iconos. Primero, actualiza el ancho de .msgBox desde:
   <pre class="brush: css">width: 200px;</pre>
@@ -206,7 +206,7 @@ panel.appendChild(closeBtn);</pre>
 background-position: 25px center;
 background-repeat: no-repeat;</pre>
  </li>
- <li>Ahora necesitamos añadir código a la función <code>displayMessage()</code> para manejar la visualización de los iconos. Agrega el siguiente bloque justo encima de la llave de cierre (<code>}</code>) de tu función :
+ <li>Ahora necesitamos añadir código a la función <code>displayMessage()</code> para manejar la visualización de los iconos. Agrega el siguiente bloque justo encima de la llave de cierre (<code>}</code>) de tu función :
   <pre class="brush: js">if (msgType === 'warning') {
   msg.style.backgroundImage = 'url(icons/warning.png)';
   panel.style.backgroundColor = 'red';
@@ -217,7 +217,7 @@ background-repeat: no-repeat;</pre>
   msg.style.paddingLeft = '20px';
 }</pre>
  </li>
- <li>Aquí, si el parámetro <code>msgType</code> se establece como <code>'warning'</code>, se muestra el icono de advertencia y el color de fondo del panel se establece en rojo. Si se establece en <code>'chat'</code>, se muestra el icono de chat y el color de fondo del panel se establece en azul aguamarina. Si el parámetro <code>msgType</code> no está configurado en absoluto (o en algo diferente), entonces la parte <code>else { ... }</code> del código entra en juego, y al párrafo simplemente se le da un relleno predeterminado y ningún icono, sin el conjunto de colores del panel de fondo ya sea. Esto proporciona un estado predeterminado si no se proporciona ningún parámetro <code>msgType</code> , lo que significa que es un parámetro opcional.</li>
+ <li>Aquí, si el parámetro <code>msgType</code> se establece como <code>'warning'</code>, se muestra el icono de advertencia y el color de fondo del panel se establece en rojo. Si se establece en <code>'chat'</code>, se muestra el icono de chat y el color de fondo del panel se establece en azul aguamarina. Si el parámetro <code>msgType</code> no está configurado en absoluto (o en algo diferente), entonces la parte <code>else { ... }</code> del código entra en juego, y al párrafo simplemente se le da un relleno predeterminado y ningún icono, sin el conjunto de colores del panel de fondo ya sea. Esto proporciona un estado predeterminado si no se proporciona ningún parámetro <code>msgType</code> , lo que significa que es un parámetro opcional.</li>
  <li>Vamos a probar nuestra función actualizada , prueba a actualizar la llamada a <code>displayMessage()</code> con esto:
   <pre class="brush: js">displayMessage('Woo, this is a different message!');</pre>
   to one of these:
@@ -228,7 +228,7 @@ displayMessage('Brian: Hi there, how are you today?','chat');</pre>
 </ol>
 
 <div class="note">
-<p><strong>Nota</strong>: Si estas teniendo problemas con el ejemplo, sientente libre para coger el ejemplo para trabajar con él, <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html">finished version on GitHub</a> (<a href="http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html">see it running live</a> también), o pídenos ayuda.</p>
+<p><strong>Nota</strong>: Si estas teniendo problemas con el ejemplo, sientente libre para coger el ejemplo para trabajar con él, <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html">finished version on GitHub</a> (<a href="http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html">see it running live</a> también), o pídenos ayuda.</p>
 </div>
 
 <h2 id="Conclusión">Conclusión</h2>

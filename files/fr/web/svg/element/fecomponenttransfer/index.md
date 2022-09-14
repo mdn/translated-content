@@ -110,14 +110,11 @@ rect {
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                           | Commentaire                                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('Filters 1.0', '#feComponentTransferElement', '&lt;feComponentTransfer&gt;')}}         | {{Spec2('Filters 1.0')}} | Spécifie que les fonctions de transfert non définies sont traitées comme si elles avaient été définies avec pour  {{SVGAttr("type")}} `identity`. |
-| {{SpecName('SVG1.1', 'filters.html#feComponentTransferElement', '&lt;feComponentTransfer&gt;')}} | {{Spec2('SVG1.1')}}         | Définition initiale                                                                                                                                    |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.feComponentTransfer")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -141,4 +138,4 @@ rect {
 - {{SVGElement("feSpecularLighting")}}
 - {{SVGElement("feTile")}}
 - {{SVGElement("feTurbulence")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutoriel/filtres "en/SVG/Tutorial/Filter_effects")
+- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutoriel/filtres)

@@ -16,7 +16,9 @@ Le **`detail`** de la propriété en lecture seule de l'interface {{domxref("Cus
 
 ## Syntaxe
 
-     let myDetail = customEventInstance.detail;
+```js
+let myDetail = customEventInstance.detail;
+```
 
 ### Valeur retournée
 
@@ -42,13 +44,11 @@ let myDetail = event.detail;
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG','#dom-customeventinit-detail','detail')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CustomEvent.detail")}}
+{{Compat}}
 
 ## Voir aussi
 

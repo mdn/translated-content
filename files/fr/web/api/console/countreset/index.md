@@ -9,9 +9,11 @@ Remet le compteur à zero. Cette fonction prend un argument optionnel `label`
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Syntaxe
 
-    console.countReset([label]);
+```
+console.countReset([label]);
+```
 
 ### Parameters
 
@@ -22,21 +24,29 @@ Remet le compteur à zero. Cette fonction prend un argument optionnel `label`
 
 Si le paramètre label à été spécifié :
 
-     counter-name: 0
+```
+counter-name: 0
+```
 
 Si aucun label n'as été specifié
 
-    default: 0
+```
+default: 0
+```
 
 ### Warnings
 
 Si `label` est specifié mais n'existe pas `countReset()` renvoie cet avertissement :
 
-    Counter "counter-name" doesn’t exist.
+```
+Counter "counter-name" doesn’t exist.
+```
 
 Si `label` n'est pas specifé et que `count()` n'as pas encore été appellé `countReset()` renvoie cette avertissement :
 
-    Counter "default" doesn’t exist.
+```
+Counter "default" doesn’t exist.
+```
 
 ## Examples
 
@@ -61,11 +71,13 @@ console.countReset();
 
 Le retour de la console ressemblera à ceci :
 
-    "default: 1"
-    "default: 2"
-    "default: 3"
-    "default: 1"
-    "default: 0"
+```
+"default: 1"
+"default: 2"
+"default: 3"
+"default: 1"
+"default: 0"
+```
 
 Pour information l'appel à `console.counterReset()` remet à zero la valeur du compteur par défaut.
 
@@ -90,20 +102,20 @@ console.count("alice");
 
 On obtiendra ce retour dans la console
 
-    "bob: 1"
-    "alice: 1"
-    "alice: 2"
-    "bob: 0"
-    "alice: 3"
+```
+"bob: 1"
+"alice: 1"
+"alice: 2"
+"bob: 0"
+"alice: 3"
+```
 
 Remettre à zero le compteur "bob" change uniquement la valeur de celui-ci. La valeur du compteur "alice" reste inchangée.
 
-## Specifications
+## Spécifications
 
-| Specification                                                                    | Status                           | Comment            |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#count", "console.countReset()")}} | {{Spec2("Console API")}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.Console.countReset")}}
+{{Compat}}

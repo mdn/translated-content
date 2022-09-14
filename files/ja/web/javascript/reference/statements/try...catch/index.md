@@ -1,13 +1,6 @@
 ---
 title: try...catch
 slug: Web/JavaScript/Reference/Statements/try...catch
-tags:
-  - 例外
-  - JavaScript
-  - 言語機能
-  - 文
-browser-compat: javascript.statements.try_catch
-translation_of: Web/JavaScript/Reference/Statements/try...catch
 ---
 {{jsSidebar("Statements")}}
 

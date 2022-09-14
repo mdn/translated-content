@@ -61,7 +61,7 @@ Lors de la définition de pistes de grille avec {{cssxref("grid-template-columns
 
 Les pistes créées dans la grille implicite ont une taille définie automatiquement par défaut, cependant, vous pouvez définir la taille de ces pistes en utilisant les propriétés {{cssxref("grid-auto-rows")}} et {{cssxref("grid-auto-columns")}}.
 
-## En apprendre plus
+## Voir aussi
 
 ### Références de propriété
 

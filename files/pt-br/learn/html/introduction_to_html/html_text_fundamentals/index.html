@@ -24,7 +24,7 @@ original_slug: Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML
  <tbody>
   <tr>
    <th scope="row">Pré-requisitos:</th>
-   <td>Familiaridade básica em HTML, tal como coberto  <a href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started">Iniciando com o HTML.</a></td>
+   <td>Familiaridade básica em HTML, tal como coberto  <a href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started">Iniciando com o HTML.</a></td>
   </tr>
   <tr>
    <th scope="row">Objetivo:</th>
@@ -49,11 +49,11 @@ original_slug: Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML
 
 <pre class="brush: html notranslate">&lt;h1&gt;Eu sou o título da história.&lt;/h1&gt;</pre>
 
-<p>Existem seis elementos de título — {{htmlelement("h1")}}, {{htmlelement("h2")}}, {{htmlelement("h3")}}, {{htmlelement("h4")}}, {{htmlelement("h5")}} e {{htmlelement("h6")}} . Cada elemento representa um nível diferente de conteúdo no documento; <code>&lt;h1&gt;</code> representa o título principal, <code>&lt;h2&gt;</code> representa subtítulos, <code>&lt;h3&gt;</code> representa sub-subtítulos, e assim por diante.</p>
+<p>Existem seis elementos de título — {{htmlelement("h1")}}, {{htmlelement("h2")}}, {{htmlelement("h3")}}, {{htmlelement("h4")}}, {{htmlelement("h5")}} e {{htmlelement("h6")}} . Cada elemento representa um nível diferente de conteúdo no documento; <code>&lt;h1&gt;</code> representa o título principal, <code>&lt;h2&gt;</code> representa subtítulos, <code>&lt;h3&gt;</code> representa sub-subtítulos, e assim por diante.</p>
 
 <h3 id="Implementando_hierarquia_estrutural">Implementando hierarquia estrutural</h3>
 
-<p>Como exemplo, em uma história, <code>&lt;h1&gt;</code> representaria o título da história, <code>&lt;h2&gt;</code> representaria o título de cada capítulo e <code>&lt;h3&gt;</code> representaria sub-seções de cada capítulo, e assim por diante.</p>
+<p>Como exemplo, em uma história, <code>&lt;h1&gt;</code> representaria o título da história, <code>&lt;h2&gt;</code> representaria o título de cada capítulo e <code>&lt;h3&gt;</code> representaria sub-seções de cada capítulo, e assim por diante.</p>
 
 <pre class="brush: html notranslate">&lt;h1&gt;O furo esmagador&lt;/h1&gt;
 
@@ -74,14 +74,14 @@ original_slug: Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML
 <p>Depende realmente de você, o quê, exatamente, representam os elementos envolvidos, desde que a hierarquia faça sentido. Você só precisa ter em mente algumas das melhores práticas ao criar tais estruturas:</p>
 
 <ul>
- <li>Preferencialmente, você deve usar apenas um <code>&lt;h1&gt;</code> por página — esse é o título do nível superior e todos os outros ficam abaixo dele, na hierarquia.</li>
- <li>Certifique-se de usar os títulos na ordem correta na hierarquia. Não use <code>&lt;h3&gt;</code> para representar subtítulos, seguido de <code>&lt;h2&gt;</code>para representar sub-subtítulos - isso não faz sentido e levará a resultados estranhos.</li>
+ <li>Preferencialmente, você deve usar apenas um <code>&lt;h1&gt;</code> por página — esse é o título do nível superior e todos os outros ficam abaixo dele, na hierarquia.</li>
+ <li>Certifique-se de usar os títulos na ordem correta na hierarquia. Não use <code>&lt;h3&gt;</code> para representar subtítulos, seguido de <code>&lt;h2&gt;</code>para representar sub-subtítulos - isso não faz sentido e levará a resultados estranhos.</li>
  <li>Dos seis níveis de cabeçalho disponíveis, você deve usar no máximo três por página, a menos que considere necessário usar mais. Documentos com vários níveis (ou seja, uma hierarquia profunda de cabeçalho) tornam-se difíceis de navegar. Nessas ocasiões, é aconselhável espalhar o conteúdo por várias páginas, se possível.</li>
 </ul>
 
 <h3 id="Por_que_precisamos_de_estrutura">Por que precisamos de estrutura?</h3>
 
-<p>Para responder a esta pergunta, dê uma olhada em <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/html-text-formatting/text-start.html">text-start.html</a> — o ponto de partida do nosso exemplo em execução para este artigo (uma boa receita de hummus.) Você deve salvar uma cópia desse arquivo em sua máquina local, pois será necessário para os exercícios posteriores. No momento, o corpo deste documento contém várias partes do conteúdo — elas não são marcadas de forma alguma, mas são separadas por quebras de linha (Enter/Return pressionado para ir para a próxima linha).</p>
+<p>Para responder a esta pergunta, dê uma olhada em <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/html-text-formatting/text-start.html">text-start.html</a> — o ponto de partida do nosso exemplo em execução para este artigo (uma boa receita de hummus.) Você deve salvar uma cópia desse arquivo em sua máquina local, pois será necessário para os exercícios posteriores. No momento, o corpo deste documento contém várias partes do conteúdo — elas não são marcadas de forma alguma, mas são separadas por quebras de linha (Enter/Return pressionado para ir para a próxima linha).</p>
 
 <p>No entanto, quando você abre o documento em seu navegador, você verá que o texto aparece como uma só parte!</p>
 
@@ -229,7 +229,7 @@ textarea.onkeyup = function(){
 
 <p>A semântica estã em todos os lugares — contamos com experiência anterior para nos dizer qual é a função dos objetos do dia a dia. Quando vemos algo, sabemos qual será a sua função. Então, por exemplo, esperamos que um semáforo vermelho signifique "pare" e um semáforo verde signifique "ir". As coisas podem ficar complicadas muito rapidamente se a semântica errada for aplicada (os países usam vermelho para significar "ir"? Espero que não).</p>
 
-<p>Na mesma linha, precisamos ter certeza de que estamos usando os elementos corretos, dando ao nosso conteúdo o significado, função ou aparência corretos. Nesse contexto, o elemento  {{htmlelement("h1")}} também é um elemento semântico, que dá o texto que envolve a representação (ou significado) de "um título de nível superior em sua página".</p>
+<p>Na mesma linha, precisamos ter certeza de que estamos usando os elementos corretos, dando ao nosso conteúdo o significado, função ou aparência corretos. Nesse contexto, o elemento  {{htmlelement("h1")}} também é um elemento semântico, que dá o texto que envolve a representação (ou significado) de "um título de nível superior em sua página".</p>
 
 <pre class="brush: html notranslate">&lt;h1&gt;Este é um título de nível superior&lt;/h1&gt;</pre>
 
@@ -247,14 +247,14 @@ textarea.onkeyup = function(){
 
 <h3 id="Não_ordenada">Não ordenada</h3>
 
-<p>As listas não ordenadas são usadas para marcar listas de itens para os quais a ordem dos itens não importa — vamos pegar uma lista de compras como um exemplo.</p>
+<p>As listas não ordenadas são usadas para marcar listas de itens para os quais a ordem dos itens não importa — vamos pegar uma lista de compras como um exemplo.</p>
 
 <pre class="notranslate">leite
 ovos
 pão
 homus</pre>
 
-<p>Toda lista desordenada começa com um {{htmlelement("ul")}} — isso envolve todos os itens da lista:</p>
+<p>Toda lista desordenada começa com um {{htmlelement("ul")}} — isso envolve todos os itens da lista:</p>
 
 <pre class="brush: html notranslate">&lt;ul&gt;
 leite
@@ -709,9 +709,9 @@ textarea.onkeyup = function(){
   &lt;li&gt;Retire a pele do alho e pique&lt;/li&gt;
   &lt;li&gt;Retire todas as sementes e caule da pimenta e pique&lt;/li&gt;
   &lt;li&gt;Adicione todos os ingredientes em um processador de alimentos&lt;/li&gt;
-  &lt;li&gt;Processar todos os ingredientes em uma pasta&lt;/li&gt;
-  &lt;li&gt;Se você quiser um hummus grosso "pesado", processe-o por um curto período de tempo&lt;/li&gt;
-  &lt;li&gt;Se você deseja um hummus suave, processe-o por mais tempo&lt;/li&gt;
+  &lt;li&gt;Processar todos os ingredientes em uma pasta&lt;/li&gt;
+  &lt;li&gt;Se você quiser um hummus grosso "pesado", processe-o por um curto período de tempo&lt;/li&gt;
+  &lt;li&gt;Se você deseja um hummus suave, processe-o por mais tempo&lt;/li&gt;
 &lt;/ol&gt; </pre>
 
 <p>Uma vez que as duas últimas listas estão intimamente relacionadas com a anterior (elas leem como sub-instruções ou escolhas que se encaixam abaixo dessa lista), pode fazer sentido aninhá-las dentro de sua própria lista desordenada e colocar essa lista dentro da quarta lista. Isso pareceria assim:</p>
@@ -720,12 +720,12 @@ textarea.onkeyup = function(){
 
 <pre class="brush: html notranslate">&lt;ol&gt;
   &lt;li&gt;Retire a pele do alho e pique&lt;/li&gt;
-   &lt;li&gt;Retire todas as sementes e caule da pimenta e pique&lt;/li&gt;
-   &lt;li&gt;Adicione todos os ingredientes em um processador de alimentos&lt;/li&gt;
-   &lt;li&gt;Processar todos os ingredientes em uma pasta
-     &lt;ul&gt;
-       &lt;li&gt;Se você quiser um hummus grosso "pesado", processe-o por um curto período de tempo&lt;/li&gt;
-       &lt;li&gt;Se você deseja um hummus suave, processe-o por mais tempo&lt;/li&gt;
+   &lt;li&gt;Retire todas as sementes e caule da pimenta e pique&lt;/li&gt;
+   &lt;li&gt;Adicione todos os ingredientes em um processador de alimentos&lt;/li&gt;
+   &lt;li&gt;Processar todos os ingredientes em uma pasta
+     &lt;ul&gt;
+       &lt;li&gt;Se você quiser um hummus grosso "pesado", processe-o por um curto período de tempo&lt;/li&gt;
+       &lt;li&gt;Se você deseja um hummus suave, processe-o por mais tempo&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ol&gt;</pre>
@@ -903,9 +903,9 @@ textarea.onkeyup = function(){
 
 <p>Os elementos que discutimos até agora têm clara semântica associada. A situação com {{htmlelement("b")}}, {{htmlelement("i")}}, e com {{htmlelement("u")}} é um pouco mais complicada. Eles surgiram para que as pessoas pudessem escrever negrito, itálico ou texto sublinhado em uma época em que o CSS ainda era pouco suportado. Elementos como este, que apenas afetam a apresentação e não a semântica, são conhecidos como <strong>elementos de apresentação</strong> e não devem mais ser usados, porque, como já vimos, a semântica é importante para a acessibilidade, SEO, etc.</p>
 
-<p>O HTML5 redefiniu <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code> e <code>&lt;u&gt;</code>  com novas funções semânticas um pouco confusas.</p>
+<p>O HTML5 redefiniu <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code> e <code>&lt;u&gt;</code>  com novas funções semânticas um pouco confusas.</p>
 
-<p>Aqui está a melhor regra geral: provavelmente é apropriado usar  <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code> ou <code>&lt;u&gt;</code>  para transmitir um significado tradicionalmente transmitido com negrito, itálico ou sublinhado, desde que não exista um elemento mais adequado. No entanto, sempre é essencial manter uma mentalidade de acessibilidade. O conceito de itálico não é muito útil para pessoas que usam leitores de tela ou para pessoas que usam um sistema de escrita diferente do alfabeto Latino.</p>
+<p>Aqui está a melhor regra geral: provavelmente é apropriado usar  <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code> ou <code>&lt;u&gt;</code>  para transmitir um significado tradicionalmente transmitido com negrito, itálico ou sublinhado, desde que não exista um elemento mais adequado. No entanto, sempre é essencial manter uma mentalidade de acessibilidade. O conceito de itálico não é muito útil para pessoas que usam leitores de tela ou para pessoas que usam um sistema de escrita diferente do alfabeto Latino.</p>
 
 <ul>
  <li>{{htmlelement("i")}} é usado para transmitir um significado tradicionalmente transmitido por itálico: palavras estrangeiras, designação taxonômica, termos técnicos, um pensamento...</li>
@@ -941,7 +941,7 @@ textarea.onkeyup = function(){
   &lt;/li&gt;
   &lt;li&gt;
     &lt;b&gt;Colocar&lt;/b&gt; uma fatia de tomate e uma folha de
-     alface entre as fatias de pão.
+     alface entre as fatias de pão.
   &lt;/li&gt;
 &lt;/ol&gt;</pre>
 

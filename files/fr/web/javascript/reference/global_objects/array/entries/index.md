@@ -19,7 +19,9 @@ La méthode **`entries()`** renvoie un nouvel objet de type  **`Array Iterator`*
 
 ## Syntaxe
 
-    arr.entries()
+```js
+arr.entries()
+```
 
 ### Valeur de retour
 

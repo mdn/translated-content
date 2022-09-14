@@ -9,7 +9,9 @@ La méthode **`remove()`** de l'interface {{domxref("DOMTokenList")}} supprime s
 
 ## Syntaxe
 
-    tokenList.remove(token1[, token2[, ...]]);
+```js
+tokenList.remove(token1[, token2[, ...]]);
+```
 
 ### Paramètres
 
@@ -55,10 +57,8 @@ span.textContent = classes;
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                           | Commentaire         |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG','#dom-domtokenlist-remove','remove()')}} | {{Spec2('DOM WHATWG')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMTokenList.remove")}}
+{{Compat}}

@@ -163,32 +163,34 @@ Comme précédemment, initions‑nous aux bases pratiques des tableaux en entran
 
 On définit les valeurs d'un tableau par une liste d'éléments entre crochets droits, séparés par des virgules.
 
-1.  Disons que nous voulons mettre une liste d'achats dans un tableau — nous devons opérer comme suit. Entrez les lignes ci‑après dans la console&nbsp;:
+1. Disons que nous voulons mettre une liste d'achats dans un tableau — nous devons opérer comme suit. Entrez les lignes ci‑après dans la console&nbsp;:
 
     ```js
     let shopping = ['pain', 'lait', 'fromage', 'houmous', 'nouilles'];
     shopping;
     ```
 
-2.  Dans ce cas, chaque élément du tableau est une chaîne, mais gardez en tête que vous pouvez stocker n'importe quel élément dans un tableau — chaîne, nombre, objet, autre variable et même d'autres tableaux. Vous pouvez également mélanger et assortir les types d'articles — il n'est pas obligatoire que ce soient tous des nombres, des chaînes, etc. Essayez ceci&nbsp;:
-3.  ```js
+2. Dans ce cas, chaque élément du tableau est une chaîne, mais gardez en tête que vous pouvez stocker n'importe quel élément dans un tableau — chaîne, nombre, objet, autre variable et même d'autres tableaux. Vous pouvez également mélanger et assortir les types d'articles — il n'est pas obligatoire que ce soient tous des nombres, des chaînes, etc. Essayez ceci&nbsp;:
+
+   ```js
     let sequence = [1, 1, 2, 3, 5, 8, 13];
     let random = ['arbre', 795, [0, 1, 2]];
     ```
-4.  Créez donc quelques tableaux de votre cru avant de continuer.
+
+3. Créez donc quelques tableaux de votre cru avant de continuer.
 
 ### Accès aux éléments de tableau et modification de ceux‑ci
 
 Vous pouvez avoir accès isolément aux éléments dans un tableau en utilisant la notation crochet, de la même façon que nous avons eu [accès aux lettres dans une chaîne](/fr/docs/Learn/JavaScript/First_steps/Useful_string_methods#retrieving_a_specific_string_character).
 
-1.  Entrez ceci dans la console&nbsp;:
+1. Entrez ceci dans la console&nbsp;:
 
     ```js
     shopping[0];
     // renvoie "pain"
     ```
 
-2.  Vous pouvez aussi modifier un élément dans un tableau en donnant simplement une nouvelle valeur à l'élément. Essayez ceci&nbsp;:
+2. Vous pouvez aussi modifier un élément dans un tableau en donnant simplement une nouvelle valeur à l'élément. Essayez ceci&nbsp;:
 
     ```js
     shopping[0] = 'crème de sésame';
@@ -198,11 +200,13 @@ Vous pouvez avoir accès isolément aux éléments dans un tableau en utilisant 
 
     > **Note :** Nous l'avons déjà dit, mais enseigner c'est répéter — les ordinateurs commencent les décomptes à partir de 0&nbsp;!
 
-3.  Notez qu'un tableau à l'intérieur d'un tableau est appelé un tableau multidimensionnel. Vous accédez à un des éléments de ce tableau interne en chaînant deux paires de crochets. Par exemple, pour avoir accès à l'un des éléments (le troisième) du tableau élément du tableau `random` (voir la section précédente), vous pouvez écrire quelque chose comme&nbsp;:
-4.  ```js
+3. Notez qu'un tableau à l'intérieur d'un tableau est appelé un tableau multidimensionnel. Vous accédez à un des éléments de ce tableau interne en chaînant deux paires de crochets. Par exemple, pour avoir accès à l'un des éléments (le troisième) du tableau élément du tableau `random` (voir la section précédente), vous pouvez écrire quelque chose comme&nbsp;:
+
+   ```js
     random[2][2];
     ```
-5.  Poursuivez et faites quelques autres modifications dans les exemples de tableaux avant de poursuivre.
+
+4. Poursuivez et faites quelques autres modifications dans les exemples de tableaux avant de poursuivre.
 
 ### Trouver la taille d'un tableau
 
@@ -224,9 +228,9 @@ for (var i = 0; i < sequence.length; i++) {
 
 Vous en apprendrez plus sur les boucles dans un prochain article, mais, en résumé, ce code dit&nbsp;:
 
-1.  Commencer la boucle à l'élément 0 du tableau.
-2.  Arrêter de tourner quand le dernier élément du tableau sera atteint. Cela fonctionne pour n'importe quelle dimension de tableau&nbsp;; dans notre cas, on sortira de la boucle à l'élément 7 (c'est bon, car le dernier élément — que nous souhaitons que la boucle traite — est le 6).
-3.  Afficher chaque élément sur la console de l'explorateur avec `console.log()`.
+1. Commencer la boucle à l'élément 0 du tableau.
+2. Arrêter de tourner quand le dernier élément du tableau sera atteint. Cela fonctionne pour n'importe quelle dimension de tableau&nbsp;; dans notre cas, on sortira de la boucle à l'élément 7 (c'est bon, car le dernier élément — que nous souhaitons que la boucle traite — est le 6).
+3. Afficher chaque élément sur la console de l'explorateur avec `console.log()`.
 
 ## Quelques méthodes utiles pour les tableaux
 
@@ -238,20 +242,20 @@ Souvent, vous serez confronté à des données brutes contenues dans une longue 
 
 > **Note :** D'accord, techniquement parlant c'est une méthode de chaîne, et non une méthode de tableau, mais nous la mettons dans le chapitre des tableaux car elle est bien à sa place ici.
 
-1.  Servons‑nous en et voyons comment elle fonctionne. D'abord créons une chaîne dans la console&nbsp;:
+1. Servons‑nous en et voyons comment elle fonctionne. D'abord créons une chaîne dans la console&nbsp;:
 
     ```js
     let myData = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
     ```
 
-2.  Scindons‑la à chaque virgule&nbsp;:
+2. Scindons‑la à chaque virgule&nbsp;:
 
     ```js
     let myArray = myData.split(',');
     myArray;
     ```
 
-3.  Pour terminer, trouvons la taille du nouveau tableau et retrouvons quelques‑uns de ses éléments&nbsp;:
+3. Pour terminer, trouvons la taille du nouveau tableau et retrouvons quelques‑uns de ses éléments&nbsp;:
 
     ```js
     myArray.length;
@@ -260,14 +264,14 @@ Souvent, vous serez confronté à des données brutes contenues dans une longue 
     myArray[myArray.length-1]; // le dernier élément du tableau
     ```
 
-4.  Vous pouvez également faire le contraire avec la méthode {{jsxref("Array.prototype.join()","join()")}}. Essayons&nbsp;:
+4. Vous pouvez également faire le contraire avec la méthode {{jsxref("Array.prototype.join()","join()")}}. Essayons&nbsp;:
 
     ```js
     let myNewString = myArray.join(',');
     myNewString;
     ```
 
-5.  Une autre façon de convertir un tableau en chaîne consiste à se servir de la méthode {{jsxref("Array.prototype.toString()","toString()")}}. `toString()` est plus simple au plan des arguments que `join()`, car elle ne prend pas de paramètre, mais elle est plus limitée. Avec `join()` vous pouvez diversifier les séparateurs (essayez de lancer la commande du point 4 avec un caractère autre que la virgule).
+5. Une autre façon de convertir un tableau en chaîne consiste à se servir de la méthode {{jsxref("Array.prototype.toString()","toString()")}}. `toString()` est plus simple au plan des arguments que `join()`, car elle ne prend pas de paramètre, mais elle est plus limitée. Avec `join()` vous pouvez diversifier les séparateurs (essayez de lancer la commande du point 4 avec un caractère autre que la virgule).
 
     ```js
     let dogNames = ["Rocket","Flash","Bella","Slugger"];
@@ -284,7 +288,7 @@ let myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carl
 
 Premièrement, pour ajouter ou supprimer un élément à la fin du tableau, vous pouvez respectivement utiliser {{jsxref("Array.prototype.push()","push()")}} et {{jsxref("Array.prototype.pop()","pop()")}}.
 
-1.  Voyons `push()` d'abord — notez que vous devez mettre en paramètre les éléments que vous souhaitez ajouter à la fin du tableau. Essayez ceci&nbsp;:
+1. Voyons `push()` d'abord — notez que vous devez mettre en paramètre les éléments que vous souhaitez ajouter à la fin du tableau. Essayez ceci&nbsp;:
 
     ```js
     myArray.push('Cardiff');
@@ -293,7 +297,7 @@ Premièrement, pour ajouter ou supprimer un élément à la fin du tableau, vous
     myArray;
     ```
 
-2.  La taille du tableau modifié est renvoyée quand l'appel de la méthode est terminé. Si vous voulez enregistrer la taille du nouveau tableau dans une variable, vous pouvez écrire quelque chose comme ceci&nbsp;:
+2. La taille du tableau modifié est renvoyée quand l'appel de la méthode est terminé. Si vous voulez enregistrer la taille du nouveau tableau dans une variable, vous pouvez écrire quelque chose comme ceci&nbsp;:
 
     ```js
     let newLength = myArray.push('Bristol');
@@ -301,13 +305,13 @@ Premièrement, pour ajouter ou supprimer un élément à la fin du tableau, vous
     newLength;
     ```
 
-3.  Supprimer le dernier élément de la liste est très simple&nbsp;: il suffit de lancer `pop()` sur celle‑ci. Essayez&nbsp;:
+3. Supprimer le dernier élément de la liste est très simple&nbsp;: il suffit de lancer `pop()` sur celle‑ci. Essayez&nbsp;:
 
     ```js
     myArray.pop();
     ```
 
-4.  L'élément supprimé est renvoyé à la fin de l'appel de la méthode. Également :
+4. L'élément supprimé est renvoyé à la fin de l'appel de la méthode. Également :
 
     ```js
     let removedItem = myArray.pop();
@@ -317,14 +321,14 @@ Premièrement, pour ajouter ou supprimer un élément à la fin du tableau, vous
 
 {{jsxref("Array.prototype.unshift()","unshift()")}} et {{jsxref("Array.prototype.shift()","shift()")}} fonctionnent exactement de la même manière, excepté qu'il travaillent sur la tête du tableau au lieu de la queue.
 
-1.  D'abord `unshift()` — essayez&nbsp;:
+1. D'abord `unshift()` — essayez&nbsp;:
 
     ```js
     myArray.unshift('Edinburgh');
     myArray;
     ```
 
-2.  Maintenant `shift()` — essayez&nbsp;!
+2. Maintenant `shift()` — essayez&nbsp;!
 
     ```js
     let removedItem = myArray.shift();
@@ -336,13 +340,13 @@ Premièrement, pour ajouter ou supprimer un élément à la fin du tableau, vous
 
 Revenons à l'exemple que nous avons décrit plus haut — afficher les noms des produits et leurs prix pour un envoi, puis faire le total des prix et l'afficher à la fin de la liste. Dans l'exemple modifiable ci‑dessous, il y a des commentaires numérotés — chacun d'entre eux marque l'emplacement où vous devez ajouter quelque chose au code. Voici&nbsp;:
 
-1.  Sous le commentaire `// number 1` il y a un certain nombre de chaînes de caractères, chacune précise le nom d'un produit et son prix séparé par deux‑points. Placez‑les dans un tableau ; enregistrez‑le sous le nom `products`.
-2.  Sur la même ligne que le commentaire `// number 2` se trouve le début d'une boucle. Dans cette ligne nous avons actuellement `i <= 0`, test conditionnel qui fait que la [boucle](/fr/docs/Learn/JavaScript/First_steps/A_first_splash#loops) stoppe immédiatement, car ce test dit «&nbsp;stopper dès que `i` est inférieur ou égal à 0&nbsp;» et `i` part de 0. Remplacez ce test par un qui n'arrêtera pas la boucle tant que `i` sera inférieur à la taille du tableau `products`.
+1. Sous le commentaire `// number 1` il y a un certain nombre de chaînes de caractères, chacune précise le nom d'un produit et son prix séparé par deux‑points. Placez‑les dans un tableau ; enregistrez‑le sous le nom `products`.
+2. Sur la même ligne que le commentaire `// number 2` se trouve le début d'une boucle. Dans cette ligne nous avons actuellement `i <= 0`, test conditionnel qui fait que la [boucle](/fr/docs/Learn/JavaScript/First_steps/A_first_splash#loops) stoppe immédiatement, car ce test dit «&nbsp;stopper dès que `i` est inférieur ou égal à 0&nbsp;» et `i` part de 0. Remplacez ce test par un qui n'arrêtera pas la boucle tant que `i` sera inférieur à la taille du tableau `products`.
 3. Au dessous du commentaire `// number 3` nous voudrions que vous écriviez une ligne de code qui scinde l'élément courant du tableau (`nom:prix`) en deux éléments distincts, un contenant uniquement le nom, l'autre uniquement le prix. Si vous nous ne savez pas trop comment faire, revoyez l'article relatif aux [Méthodes utiles pour les chaînes de caractères](/fr/docs/Learn/JavaScript/First_steps/Useful_string_methods) pour vous aider, ou même mieux, regardez la section [Conversions entre chaînes et tableaux](#conversions_entre_chaînes_et_tableaux) de cet article.
 
-4.  En plus des lignes de code ci‑dessus, vous aurez aussi à convertir les prix de chaîne de caractères en chiffres. Si vous ne vous souvenez pas comment faire, revoyez le [premier article à propos des chaînes](/fr/docs/Learn/JavaScript/First_steps/Strings#numbers_versus_strings).
-5.  Il y a une variable nommée `total` créée et initialisée à la valeur de 0 en tête du code. Dans la boucle (sous `// number 4`) ajoutez une ligne qui ajoute à ce total le prix de l'article courant à chaque itération de la boucle, de sorte que à la fin du code le prix total soit correctement inscrit sur l'envoi. Vous pourriez avoir besoin d'un [opérateur d'assignation](/fr/docs/Learn/JavaScript/First_steps/Math#assignment_operators) pour faire cela ;-).
-6.  Nous souhaitons que vous modifiez la ligne au‑dessous de  `// number 5` de sorte que la variable `itemText` soit égale à «&nbsp;nom actuel de l'élément — $prix actuel de l'élément&nbsp;», par exemple «&nbsp;Shoes — $23.99&nbsp;» dans chaque cas, de façon à ce qu'une information correcte soit affichée sur l'envoi. Il s'agit d'une simple concaténation de chaînes de caractères, chose qui doit vous être familière.
+4. En plus des lignes de code ci‑dessus, vous aurez aussi à convertir les prix de chaîne de caractères en chiffres. Si vous ne vous souvenez pas comment faire, revoyez le [premier article à propos des chaînes](/fr/docs/Learn/JavaScript/First_steps/Strings#numbers_versus_strings).
+5. Il y a une variable nommée `total` créée et initialisée à la valeur de 0 en tête du code. Dans la boucle (sous `// number 4`) ajoutez une ligne qui ajoute à ce total le prix de l'article courant à chaque itération de la boucle, de sorte que à la fin du code le prix total soit correctement inscrit sur l'envoi. Vous pourriez avoir besoin d'un [opérateur d'assignation](/fr/docs/Learn/JavaScript/First_steps/Math#assignment_operators) pour faire cela ;-).
+6. Nous souhaitons que vous modifiez la ligne au‑dessous de  `// number 5` de sorte que la variable `itemText` soit égale à «&nbsp;nom actuel de l'élément — $prix actuel de l'élément&nbsp;», par exemple «&nbsp;Shoes — $23.99&nbsp;» dans chaque cas, de façon à ce qu'une information correcte soit affichée sur l'envoi. Il s'agit d'une simple concaténation de chaînes de caractères, chose qui doit vous être familière.
 
 ```html hidden
 <div class="output" style="min-height: 150px;">
@@ -428,8 +432,8 @@ Dans cet exemple nous allons montrer une utilisation beaucoup plus simple — ic
 
 Pour terminer l'application, il vous faut&nbsp;:
 
-1.  Ajouter une ligne sous le commentaire `// number 1` pour ajouter la valeur qui vient d'être saisie dans la boîte au début du tableau. Cette valeur est récupérée avec `searchInput.value`.
-2.  Ajouter une ligne sous le commentaire `// number 2`  pour supprimer la valeur en fin de liste du tableau.
+1. Ajouter une ligne sous le commentaire `// number 1` pour ajouter la valeur qui vient d'être saisie dans la boîte au début du tableau. Cette valeur est récupérée avec `searchInput.value`.
+2. Ajouter une ligne sous le commentaire `// number 2`  pour supprimer la valeur en fin de liste du tableau.
 
 ```html hidden
 <div class="output" style="min-height: 150px;">

@@ -1,14 +1,6 @@
 ---
 title: scale
 slug: Web/CSS/scale
-tags:
-  - CSS
-  - CSS プロパティ
-  - Reference
-  - 座標変換
-  - recipe:css-property
-browser-compat: css.properties.scale
-translation_of: Web/CSS/scale
 ---
 {{CSSRef}}
 
@@ -66,7 +58,7 @@ scale: unset;
 
 ```html
 <div>
-  <p class="scale">Scaling</p>
+  <p class="scale">Scaling</p>
 </div>
 ```
 

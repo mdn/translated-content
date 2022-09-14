@@ -17,7 +17,9 @@ La méthode **`DOMImplementation.createHTMLDocument()`**  crée un nouveau {{dom
 
 ## Syntaxe
 
-    newDoc = document.implementation.createHTMLDocument(titre);
+```js
+newDoc = document.implementation.createHTMLDocument(titre);
+```
 
 ### Paramètres
 
@@ -84,13 +86,11 @@ Le document retourné est préconstruit avec le code HTML suivant :
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG', '#dom-domimplementation-createhtmldocument', 'DOMImplementation.createHTMLDocument')}} | {{Spec2('DOM WHATWG')}} | Première définition. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMImplementation.createHTMLDocument")}}
+{{Compat}}
 
 ## Voir aussi
 

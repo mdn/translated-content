@@ -1,15 +1,6 @@
 ---
 title: Element.namespaceURI
 slug: Web/API/Element/namespaceURI
-tags:
-  - API
-  - DOM
-  - NeedsBrowserCompatibility
-  - NeedsMobileBrowserCompatibility
-  - プロパティ
-  - リファレンス
-browser-compat: api.Element.namespaceURI
-translation_of: Web/API/Element/namespaceURI
 original_slug: Web/API/Node/namespaceURI
 ---
 {{APIRef("DOM")}}

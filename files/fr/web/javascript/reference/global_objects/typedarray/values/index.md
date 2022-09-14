@@ -21,7 +21,9 @@ La méthode **`values()`** renvoie un nouvel objet `Array Iterator` qui contient
 
 ## Syntaxe
 
-    typedArr.values()
+```js
+typedArr.values()
+```
 
 ### Valeur de retour
 

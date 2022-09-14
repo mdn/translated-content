@@ -1,10 +1,6 @@
 ---
 title: WebGL 入門
 slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
-tags:
-  - Tutorial
-  - WebGL
-translation_of: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 ---
 {{WebGLSidebar("Tutorial")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
 
@@ -30,7 +26,7 @@ WebGL のプログラムは JavaScript で記述する制御コードと、コ�
 
 ### WebGL コンテキストの準備
 
-JavaScript コードの `main()` 関数は、スクリプトが読み込まれたときに呼び出されます。その目的は、WebGL コンテキストをセットアップし、コンテンツのレンダリングを開始することです。
+JavaScript コードの `main()` 関数は、スクリプトが読み込まれたときに呼び出されます。その目的は、WebGL コンテキストをセットアップし、コンテンツのレンダリングを開始することです。
 
 ```js
 //

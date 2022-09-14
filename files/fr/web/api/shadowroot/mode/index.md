@@ -18,7 +18,9 @@ Lorsque le mode d'une racine _shadow_ vaut `closed`, les détails d'implémentat
 
 ## Syntaxe
 
-    var mode = shadowRoot.mode
+```js
+var mode = shadowRoot.mode
+```
 
 ### Valeur
 
@@ -41,10 +43,8 @@ if(shadow) {
 
 ## Spécifications
 
-| Spécification                                                                            | État                             | Commentaires |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('DOM WHATWG','#dom-shadowroot-mode','ShadowRoot.mode')}} | {{Spec2('DOM WHATWG')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.ShadowRoot.mode")}}
+{{Compat}}

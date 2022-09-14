@@ -12,9 +12,11 @@ L'élément `<xsl:variable>` déclare une variable globale ou locale dans une fe
 
 ### Syntaxe
 
-    <xsl:variable name=NOM select=EXPRESSION >
-    	MODÈLE
-    </xsl:variable>
+```xml
+<xsl:variable name=NOM select=EXPRESSION >
+  MODÈLE
+</xsl:variable>
+```
 
 ### Attribut obligatoire
 

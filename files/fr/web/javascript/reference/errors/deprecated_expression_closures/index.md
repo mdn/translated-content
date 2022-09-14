@@ -12,7 +12,9 @@ original_slug: Web/JavaScript/Reference/Erreurs/Deprecated_expression_closures
 
 ## Message
 
-    Warning: expression closures are deprecated
+```
+Warning: expression closures are deprecated
+```
 
 ## Type d'erreur
 

@@ -12,7 +12,7 @@ translation_of: Web/API/Node/firstChild
 <div>{{APIRef("DOM")}}</div>
 </div>
 
-<p><code><strong>Node.firstChild</strong></code> é uma propriedade do tipo somente leitura que retorna o node (nó) do primeiro elemento filho de uma árvore DOM ou null no caso do elemento não ter filhos (children). </p>
+<p><code><strong>Node.firstChild</strong></code> é uma propriedade do tipo somente leitura que retorna o node (nó) do primeiro elemento filho de uma árvore DOM ou null no caso do elemento não ter filhos (children). </p>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
 
@@ -25,11 +25,11 @@ translation_of: Web/API/Node/firstChild
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>childNode é uma referência para o primeiro filho (node) de uma estrutura DOM, um node (nó) que não tem filhos retornará null.</p>
+<p>childNode é uma referência para o primeiro filho (node) de uma estrutura DOM, um node (nó) que não tem filhos retornará null.</p>
 
 <h2 id="Example" name="Example">Exemplo</h2>
 
-<p>Este exemplo demonstra o uso do firstChild e como os espaços em branco "whitespace" de um node (nó) podem interferir. </p>
+<p>Este exemplo demonstra o uso do firstChild e como os espaços em branco "whitespace" de um node (nó) podem interferir. </p>
 
 <pre class="brush:html">&lt;p id="para-01"&gt;
   &lt;span&gt;First span&lt;/span&gt;
@@ -40,7 +40,7 @@ translation_of: Web/API/Node/firstChild
   console.log(p01.firstChild.nodeName);
 &lt;/script&gt;</pre>
 
-<p>No exemplo acima, o console.log() deverá exibir '#text' porque o nó de texto inserido mantém espaços em branco 'whitespace' entre a tag &lt;p id="para-01"&gt; e a tag &lt;span&gt;. Qualquer espaço em branco poderá causar '#text'.</p>
+<p>No exemplo acima, o console.log() deverá exibir '#text' porque o nó de texto inserido mantém espaços em branco 'whitespace' entre a tag &lt;p id="para-01"&gt; e a tag &lt;span&gt;. Qualquer espaço em branco poderá causar '#text'.</p>
 
 <div class="note">
 <p>"Tabs" também podem causar esse comportamento.</p>
@@ -56,7 +56,7 @@ translation_of: Web/API/Node/firstChild
 &lt;/script&gt;
 </pre>
 
-<p>Agora o console.log() irá exibir 'SPAN'.</p>
+<p>Agora o console.log() irá exibir 'SPAN'.</p>
 
 <h2 id="Specification" name="Specification">Especificação</h2>
 

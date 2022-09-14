@@ -5,11 +5,11 @@ translation_of: Web/API/EventSource
 ---
 <p>{{APIRef("Websockets API")}}</p>
 
-<p><code><font face="Open Sans, Arial, sans-serif">Интерфейс </font>EventSource</code> используется для получения серверных событий (Server-sent events). Он устанавливает соединение с сервером по HTTP и получает события в формате text/event-stream без закрытия соединения.</p>
+<p><code><font face="Open Sans, Arial, sans-serif">Интерфейс </font>EventSource</code> используется для получения серверных событий (Server-sent events). Он устанавливает соединение с сервером по HTTP и получает события в формате text/event-stream без закрытия соединения.</p>
 
-<p><span style="line-height: 1.5;">Вы можете присвоить атрибуту <code>onmessage</code> JavaScript-функцию для получения нетипизированных сообщений (то есть сообщений без поля </span><code style="font-size: 14px;">event</code><span style="line-height: 1.5;">). Вы так же можете вызвать функцию </span><code style="font-size: 14px;">addEventListener()</code><span style="line-height: 1.5;"> для обработки событий так же, как для любого другого источника событий.</span></p>
+<p><span style="line-height: 1.5;">Вы можете присвоить атрибуту <code>onmessage</code> JavaScript-функцию для получения нетипизированных сообщений (то есть сообщений без поля </span><code style="font-size: 14px;">event</code><span style="line-height: 1.5;">). Вы так же можете вызвать функцию </span><code style="font-size: 14px;">addEventListener()</code><span style="line-height: 1.5;"> для обработки событий так же, как для любого другого источника событий.</span></p>
 
-<p>См. <a href="/en/Server-sent_events/Using_server-sent_events" title="en/Server-sent events/Using server-sent events">Using server-sent events</a> для более детальной информации </p>
+<p>См. <a href="/en/Server-sent_events/Using_server-sent_events" title="en/Server-sent events/Using server-sent events">Using server-sent events</a> для более детальной информации </p>
 
 <h2 id="Method_overview">Методы</h2>
 
@@ -32,23 +32,23 @@ translation_of: Web/API/EventSource
   </tr>
   <tr>
    <td><code>onerror</code></td>
-   <td><code>{{ Interface("nsIDOMEventListener") }}</code></td>
+   <td><code>nsIDOMEventListener</code></td>
    <td>JavaScript-функция, вызываемая при появлении ошибки</td>
   </tr>
   <tr>
    <td><code>onmessage</code></td>
-   <td><code>{{ Interface("nsIDOMEventListener") }}</code></td>
+   <td><code>nsIDOMEventListener</code></td>
    <td>JavaScript-функция, вызываемая при приходе сообщения без поля <code>event</code></td>
   </tr>
   <tr>
    <td><code>onopen</code></td>
-   <td><code>{{ Interface("nsIDOMEventListener") }}</code></td>
+   <td><code>nsIDOMEventListener</code></td>
    <td>JavaScript-функция, вызываемая после открытия соединения</td>
   </tr>
   <tr>
    <td><code>readyState</code></td>
    <td><code><a href="/en/long" title="en/long">long</a></code></td>
-   <td>Состояние соединения, должно иметь одно из значений <code>CONNECTING</code>, <code>OPEN</code>, или <code>CLOSED</code>. <strong>Только для чтения</strong></td>
+   <td>Состояние соединения, должно иметь одно из значений <code>CONNECTING</code>, <code>OPEN</code>, или <code>CLOSED</code>. <strong>Только для чтения</strong></td>
   </tr>
   <tr>
    <td><code>url</code></td>
@@ -62,8 +62,8 @@ translation_of: Web/API/EventSource
 
 <dl>
  <dt>reconnection time</dt>
- <dd>Это время в миллисекундах, используемое для определения продолжительности ожидания после неудачной попытки соединения до повторного соединения</dd>
- <dt>last event ID string</dt>
+ <dd>Это время в миллисекундах, используемое для определения продолжительности ожидания после неудачной попытки соединения до повторного соединения</dd>
+ <dt>last event ID string</dt>
  <dd>По умолчанию пустая строка. Сервер может отправлять сообщение с полем <code>id </code>для установки этого значения.</dd>
 </dl>
 
@@ -98,7 +98,7 @@ translation_of: Web/API/EventSource
 
 <h3 id="close">close()</h3>
 
-<p>Закрывает соединение, если оно существует и устанавливает атрибут <code>readyState </code>в значение<font face="Consolas, Liberation Mono, Courier, monospace"> <code>CLOSED</code>.</font> Если соединение уже закрыто, этот метод ничего не делает.<font face="Consolas, Liberation Mono, Courier, monospace"> </font></p>
+<p>Закрывает соединение, если оно существует и устанавливает атрибут <code>readyState </code>в значение<font face="Consolas, Liberation Mono, Courier, monospace"> <code>CLOSED</code>.</font> Если соединение уже закрыто, этот метод ничего не делает.<font face="Consolas, Liberation Mono, Courier, monospace"> </font></p>
 
 <pre class="eval">void close();
 </pre>

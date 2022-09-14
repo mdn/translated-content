@@ -1,15 +1,6 @@
 ---
 title: outline
 slug: Web/CSS/outline
-tags:
-  - CSS
-  - CSS 輪郭線
-  - CSS プロパティ
-  - レイアウト
-  - Reference
-  - recipe:css-shorthand-property
-browser-compat: css.properties.outline
-translation_of: Web/CSS/outline
 ---
 {{CSSRef}}
 
@@ -74,7 +65,7 @@ outline: unset;
 `outline` の値を `0` または `none` にすると、ブラウザーの既定のフォーカス表示を削除します。要素が操作できるものであれば、視覚的なフォーカス表示が必要です。既定のフォーカス表示を削除するのであれば、目に見える分かりやすいフォーカスのスタイル付けを提供してください。
 
 - [How to Design Useful and Usable Focus Indicators](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/) <li>
-  <abbr>WCAG</abbr> 2.1: [成功基準 2.4.7 の理解: フォーカスの可視性](https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html)
+  <abbr>WCAG</abbr> 2.1: [成功基準 2.4.7 の理解: フォーカスの可視性](https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html)
 
 ## 公式定義
 

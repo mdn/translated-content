@@ -12,30 +12,34 @@ translation_of: Web/API/Document/createEvent
 
 {{ ApiRef("DOM") }}
 
-Crée un [event](/en-US/docs/DOM/event) du type spécifié. L'objet retourné doit être intialisé et peut être passé ensuite à [element.dispatchEvent](/en-US/docs/DOM/element.dispatchEvent).
+Crée un [event](/fr/docs/DOM/event) du type spécifié. L'objet retourné doit être intialisé et peut être passé ensuite à [element.dispatchEvent](/fr/docs/DOM/element.dispatchEvent).
 
 ## Syntaxe
 
-    var event = document.createEvent(type);
+```js
+var event = document.createEvent(type);
+```
 
-- `event` est l'objet [Event](/en-US/docs/DOM/event) créé.
+- `event` est l'objet [Event](/fr/docs/DOM/event) créé.
 - `type` est une chaîne de caractères qui représente le type d'événement à créer. Les types possibles d'événement incluent `"UIEvents"`, `"MouseEvents"`, `"MutationEvents"` et `"HTMLEvents"`. Voir la section [Notes](#notes) pour plus de détails.
 
 ## Exemple
 
-    // Crée l'événement.
-    var event = document.createEvent('Event');
+```js
+// Crée l'événement.
+var event = document.createEvent('Event');
 
-    // Nomme l'événement 'build'.
-    event.initEvent('build', true, true);
+// Nomme l'événement 'build'.
+event.initEvent('build', true, true);
 
-    //  Écoute l'événement.
-    elem.addEventListener('build', function (e) {
-      // e.target correspond à elem
-    }, false);
+//  Écoute l'événement.
+elem.addEventListener('build', function (e) {
+  // e.target correspond à elem
+}, false);
 
-    // target peut être tout Element ou autre EventTarget.
-    elem.dispatchEvent(event);
+// target peut être tout Element ou autre EventTarget.
+elem.dispatchEvent(event);
+```
 
 ### Notes
 

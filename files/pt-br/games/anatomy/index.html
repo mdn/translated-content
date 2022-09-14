@@ -13,23 +13,23 @@ translation_of: Games/Anatomy
 
 <h2 id="Apresentar_aceitar_interpretar_calcular_repetir">Apresentar, aceitar, interpretar, calcular, repetir</h2>
 
-<p>O objetivo de todo vídeo game é <strong>apresentar</strong> ao usuário uma situação, <strong>aceitar</strong> sua entrada, <strong>interpretar</strong> estes sinais em ações, e <strong>calcular</strong> uma nova situação resultante dessas ações. Jogos estão constantemente repetindo estes estágios, de novo e de novo, até alguma condição final ocorrer (como vencer, perder, ou sair para ir dormir). Não surpreendentemente, este padrão corresponde a como um mecanismo de jogo está programado.</p>
+<p>O objetivo de todo vídeo game é <strong>apresentar</strong> ao usuário uma situação, <strong>aceitar</strong> sua entrada, <strong>interpretar</strong> estes sinais em ações, e <strong>calcular</strong> uma nova situação resultante dessas ações. Jogos estão constantemente repetindo estes estágios, de novo e de novo, até alguma condição final ocorrer (como vencer, perder, ou sair para ir dormir). Não surpreendentemente, este padrão corresponde a como um mecanismo de jogo está programado.</p>
 
 <p>As especificidades dependem do jogo.</p>
 
-<p>Alguns jogos guiam este ciclo pela entrada do usuário. Imagine que você está desenvolvendo um <em>"encontre as diferenças entre estas duas imagens similares"</em>. Esses jogos <strong>apresentam</strong> duas imagens ao usuário, eles <strong>aceitam</strong> seus cliques (ou toques), eles <strong>interpretam</strong> as entradas como um sucesso, falha, pausa, interação com o menu, etc., finalmente, eles <strong>calculam</strong> uma cena atualizada resultante dessas entradas. O ciclo do jogo é avançado pelas entradas do usuário e pela esperas até que ele as forneça. Isso é mais aproximado de um <em>jogo </em><em>baseado em turnos</em> onde não há demanda de uma constante atualização a cada frame, somente quando o jogador reaje.</p>
+<p>Alguns jogos guiam este ciclo pela entrada do usuário. Imagine que você está desenvolvendo um <em>"encontre as diferenças entre estas duas imagens similares"</em>. Esses jogos <strong>apresentam</strong> duas imagens ao usuário, eles <strong>aceitam</strong> seus cliques (ou toques), eles <strong>interpretam</strong> as entradas como um sucesso, falha, pausa, interação com o menu, etc., finalmente, eles <strong>calculam</strong> uma cena atualizada resultante dessas entradas. O ciclo do jogo é avançado pelas entradas do usuário e pela esperas até que ele as forneça. Isso é mais aproximado de um <em>jogo </em><em>baseado em turnos</em> onde não há demanda de uma constante atualização a cada frame, somente quando o jogador reaje.</p>
 
-<p>Outros jogos demandam controle sobre cada um dos menores intervalos de tempo possíveis. Os mesmos princípios acima aplicam-se com uma pequena diferença: cada frame de animação avança o ciclo e cada mudança na entrada do usuário é capturada no primeiro turno disponível. Este modelo <em>uma vez por frame</em> é implementado em algo chamado <strong>loop principal.</strong> Se o seu jogo é baseado em tempo, então essa será a autoridade a qual as suas simulações irão obedecer.</p>
+<p>Outros jogos demandam controle sobre cada um dos menores intervalos de tempo possíveis. Os mesmos princípios acima aplicam-se com uma pequena diferença: cada frame de animação avança o ciclo e cada mudança na entrada do usuário é capturada no primeiro turno disponível. Este modelo <em>uma vez por frame</em> é implementado em algo chamado <strong>loop principal.</strong> Se o seu jogo é baseado em tempo, então essa será a autoridade a qual as suas simulações irão obedecer.</p>
 
-<p>Mas o jogo pode não precisar de controle por frame. Seu game loop pode ser similar ao exemplo <em>encontre as diferenças</em> e basear-se em eventos de entrada. Ele pode requerer ambos, entrada e tempo simulado. Ele pode até mesmo ter um ciclo baseado em algo totalmente diferente.</p>
+<p>Mas o jogo pode não precisar de controle por frame. Seu game loop pode ser similar ao exemplo <em>encontre as diferenças</em> e basear-se em eventos de entrada. Ele pode requerer ambos, entrada e tempo simulado. Ele pode até mesmo ter um ciclo baseado em algo totalmente diferente.</p>
 
-<p>JavaScript Moderno — como descrito nas próximas seções — felizmente, facilita o desenvolvimento de um loop principal "execute uma vez por frame". É claro, seu jogo será somente tão otimizado quando o fizer. Se parece que algo deveria estar ligado a um evento menos frequente, seria uma boa ideia implementá-lo fora do loop principal (mas não sempre).</p>
+<p>JavaScript Moderno — como descrito nas próximas seções — felizmente, facilita o desenvolvimento de um loop principal "execute uma vez por frame". É claro, seu jogo será somente tão otimizado quando o fizer. Se parece que algo deveria estar ligado a um evento menos frequente, seria uma boa ideia implementá-lo fora do loop principal (mas não sempre).</p>
 
-<h2 id="Contruindo_um_loop_principal_em_JavaScript">Contruindo um loop principal em JavaScript</h2>
+<h2 id="Contruindo_um_loop_principal_em_JavaScript">Contruindo um loop principal em JavaScript</h2>
 
-<p>JavaScript trabalaha melhor com eventos e chamadas de funções. Navegadores modernos esforçam-se para chamar métodos à medida que são necessários e ociosos (ou fazem suas outras tarefas) nos intervalos. É uma excelente ideia ligar seu código aos momentos apropriados a eles. Pense se a sua função realmente precisa ser chamada em um estrito intervalo de tempo, a cada frame, ou somente após algo acontecer. Ser mais específico com o navegador sobre quando a sua função precisa ser chamada permite que o navegador otimize essa chamada. Também, isso facilitará o seu trabalho.</p>
+<p>JavaScript trabalaha melhor com eventos e chamadas de funções. Navegadores modernos esforçam-se para chamar métodos à medida que são necessários e ociosos (ou fazem suas outras tarefas) nos intervalos. É uma excelente ideia ligar seu código aos momentos apropriados a eles. Pense se a sua função realmente precisa ser chamada em um estrito intervalo de tempo, a cada frame, ou somente após algo acontecer. Ser mais específico com o navegador sobre quando a sua função precisa ser chamada permite que o navegador otimize essa chamada. Também, isso facilitará o seu trabalho.</p>
 
-<p>Alguns códigos precisam ser rodados frame por frame, então por quê ligar essas funções a qualquer coisa que não seja a atualização de tela do navegador? Na web, <code>{{ domxref("window.requestAnimationFrame()") }} será a base da maioria dos mais bem programados loops principais do tipo frame por frame.</code> Uma chamada de função deve ser passada dentro da função anterior quando a mesma for chamada. Esta chamdada de função será executada em um tempo adequado antes da próxima atualização de tela. Eis um exemplo de um loop principal simples:</p>
+<p>Alguns códigos precisam ser rodados frame por frame, então por quê ligar essas funções a qualquer coisa que não seja a atualização de tela do navegador? Na web, <code>{{ domxref("window.requestAnimationFrame()") }} será a base da maioria dos mais bem programados loops principais do tipo frame por frame.</code> Uma chamada de função deve ser passada dentro da função anterior quando a mesma for chamada. Esta chamdada de função será executada em um tempo adequado antes da próxima atualização de tela. Eis um exemplo de um loop principal simples:</p>
 
 <pre>window.main = function () {
   window.requestAnimationFrame( main );
@@ -39,19 +39,19 @@ translation_of: Games/Anatomy
 
 main(); //Start the cycle.</pre>
 
-<p><strong>Nota</strong>: Em cada método do <code>main()</code> discutido aqui,  nós agendamos uma nova requisição <code>requestAnimationFrame</code> antes de executar o conteúdo de nosso loop. Isso não é por acidente, e é considerado boa prática. Chamando o próximo <code>requestAnimationFrame</code> anteriormente garante que o navegador receba a chamada a tempo de planejar adequadamente,  mesmo que seu frame atual falhe em sua (?VSync window?).</p>
+<p><strong>Nota</strong>: Em cada método do <code>main()</code> discutido aqui,  nós agendamos uma nova requisição <code>requestAnimationFrame</code> antes de executar o conteúdo de nosso loop. Isso não é por acidente, e é considerado boa prática. Chamando o próximo <code>requestAnimationFrame</code> anteriormente garante que o navegador receba a chamada a tempo de planejar adequadamente,  mesmo que seu frame atual falhe em sua (?VSync window?).</p>
 
-<p>O trecho de código acima possui duas declarações. A primeira cria uma função como uma variável global chamada <code>main()</code>. Esta função faz algum trabalho e também diz ao navegador para camá-la na próxima frame com <code>window.requestAnimationFrame()</code>. A segunda declaração chama a função <code>main()</code>, definida na primeira declaração. Pelo fato do <code>main()</code> ser chamado uma vez na segunda declaração e cada chamada dele colocá-lo na lista de coisas a fazer na próxima frame, <code>main()</code> é sincronizado com a sua taxa de frame.</p>
+<p>O trecho de código acima possui duas declarações. A primeira cria uma função como uma variável global chamada <code>main()</code>. Esta função faz algum trabalho e também diz ao navegador para camá-la na próxima frame com <code>window.requestAnimationFrame()</code>. A segunda declaração chama a função <code>main()</code>, definida na primeira declaração. Pelo fato do <code>main()</code> ser chamado uma vez na segunda declaração e cada chamada dele colocá-lo na lista de coisas a fazer na próxima frame, <code>main()</code> é sincronizado com a sua taxa de frame.</p>
 
-<p>É claro que esse loop não é perfeito. Antes de discutirmos maneiras de mudá-lo, deixe-nos discutir o que já está bem.</p>
+<p>É claro que esse loop não é perfeito. Antes de discutirmos maneiras de mudá-lo, deixe-nos discutir o que já está bem.</p>
 
-<p>Cronometrando o loop principal para quando o navegador atualiza a tela o permite rodar o seu loop tão frequentemente quanto o navegador queira atualizar. Você tem controle sobre cada frame de animação. Isso é muito simples por que <code>main()</code> é a única função em loop. Um jogo de primeira pessoa (ou um jogo similar) apresenta uma nova cena a cada frame. Você realmente não pode ser mais suave e receptivo do que isso.</p>
+<p>Cronometrando o loop principal para quando o navegador atualiza a tela o permite rodar o seu loop tão frequentemente quanto o navegador queira atualizar. Você tem controle sobre cada frame de animação. Isso é muito simples por que <code>main()</code> é a única função em loop. Um jogo de primeira pessoa (ou um jogo similar) apresenta uma nova cena a cada frame. Você realmente não pode ser mais suave e receptivo do que isso.</p>
 
-<p>Mas não assuma imediatamente que animações requerem controle frame por frame. Animações simples podem ser facilmente desenvolvidas até mesmo com aceleração-GPU, com animações CSS e com outras ferramentas inclusas no navegador. Existem muitas delas que farão sua vida mais fácil.</p>
+<p>Mas não assuma imediatamente que animações requerem controle frame por frame. Animações simples podem ser facilmente desenvolvidas até mesmo com aceleração-GPU, com animações CSS e com outras ferramentas inclusas no navegador. Existem muitas delas que farão sua vida mais fácil.</p>
 
 <h2 id="Construindo_um_loop_principal_melhor_em_Javascript">Construindo um loop principal <em>melhor</em> em Javascript</h2>
 
-<p>Existem dois problemas óbvios com nosso loop principal anterior: <code>main()</code> polui o objeto <code>{{ domxref("window") }}</code> (onde todas as variáveis globais são armazenadas) e o código de exemplo não nos permite <em>parar</em> o loop a menos que toda a aba seja fechada ou atualizada. Para o primeiro problema, se você quer que o loop principal apenas rode sem precisar de fácil acesso (direto) a ele, você pode criá-lo como uma Função Diretamente Invocada (Immediately-Invoked Function Expression - IIFE).</p>
+<p>Existem dois problemas óbvios com nosso loop principal anterior: <code>main()</code> polui o objeto <code>{{ domxref("window") }}</code> (onde todas as variáveis globais são armazenadas) e o código de exemplo não nos permite <em>parar</em> o loop a menos que toda a aba seja fechada ou atualizada. Para o primeiro problema, se você quer que o loop principal apenas rode sem precisar de fácil acesso (direto) a ele, você pode criá-lo como uma Função Diretamente Invocada (Immediately-Invoked Function Expression - IIFE).</p>
 
 <pre>/*
 * Starting with the semicolon is in case whatever line of code above this example
@@ -70,11 +70,11 @@ main(); //Start the cycle.</pre>
   main(); // Start the cycle
 })();</pre>
 
-<p>Quando o browser alcançar este IIFE, ele irá definir o seu próprio loop principal e imediatamente agenda-o para para o próximo frame. Ele não será anexado a nenhum objeto e <code>main</code> (ou <code>main()</code> para métodos) será um nome válido sem uso no resto da aplicação, livre para ser definido como outra coisa.</p>
+<p>Quando o browser alcançar este IIFE, ele irá definir o seu próprio loop principal e imediatamente agenda-o para para o próximo frame. Ele não será anexado a nenhum objeto e <code>main</code> (ou <code>main()</code> para métodos) será um nome válido sem uso no resto da aplicação, livre para ser definido como outra coisa.</p>
 
-<p>Nota: Na prática, é mais comum previnir o próximo <code>requestAnimationFrame()</code> com uma declaração <code>if</code>, no lugar de chamar <code>cancelAnimationFrame()</code>.</p>
+<p>Nota: Na prática, é mais comum previnir o próximo <code>requestAnimationFrame()</code> com uma declaração <code>if</code>, no lugar de chamar <code>cancelAnimationFrame()</code>.</p>
 
-<p>Para o próximo problema, parando o loop principal, você precisará cancelar a chamada a <code>main()</code> com <code>window.cancelAnimationFrame()</code>. Você precisará passar para <code>cancelAnimationFrame()</code> o token do ID dado pelo <code>requestAnimationFrame()</code> quando ele foi chamado. Vamos assumir que as funções do seu jogo e variáveis estão construídas em um namespace que você chamou de <code>MyGame</code>. Expandindo o nosso último exemplo, o loop principal ficaria parecido com isto:</p>
+<p>Para o próximo problema, parando o loop principal, você precisará cancelar a chamada a <code>main()</code> com <code>window.cancelAnimationFrame()</code>. Você precisará passar para <code>cancelAnimationFrame()</code> o token do ID dado pelo <code>requestAnimationFrame()</code> quando ele foi chamado. Vamos assumir que as funções do seu jogo e variáveis estão construídas em um namespace que você chamou de <code>MyGame</code>. Expandindo o nosso último exemplo, o loop principal ficaria parecido com isto:</p>
 
 <pre>/*
 * Starting with the semicolon is in case whatever line of code above this example
@@ -95,21 +95,21 @@ main(); //Start the cycle.</pre>
   main(); // Start the cycle
 })();</pre>
 
-<p>Nós temos agora uma variável declarada no namespace do nosso <code>MyGame</code>, que nos chamamos de <code>stopMain</code>, e que contém o ID retornado pela execução mais recente do <code>requestAnimationFrame()</code> do nosso loop principal. Em algum ponto, nós podemos parar o loop principal pedindo ao browser para cancelar a requisição que corresponde ao nosso token.</p>
+<p>Nós temos agora uma variável declarada no namespace do nosso <code>MyGame</code>, que nos chamamos de <code>stopMain</code>, e que contém o ID retornado pela execução mais recente do <code>requestAnimationFrame()</code> do nosso loop principal. Em algum ponto, nós podemos parar o loop principal pedindo ao browser para cancelar a requisição que corresponde ao nosso token.</p>
 
 <pre>window.cancelAnimationFrame( MyGame.stopMain );</pre>
 
-<p>A chave para programar loop principal, no JavaScript, é anexá-lo a qualquer evento que deve estar dirigindo sua ação e prestar atenção a como os diferentes sistemas envolvidos interagem entre si. Você poderá ter multiplos componentes dirigidos por multiplos diferentes tipos de eventos. Isto parece complexidade desnecessária mas pode ser só uma boa otimização (não necessária, é claro). O problema é que você não está programando um loop principal típico. No JavaScript, você está usando o loop principal do browser e está tentando fazê-lo efetivamente.</p>
+<p>A chave para programar loop principal, no JavaScript, é anexá-lo a qualquer evento que deve estar dirigindo sua ação e prestar atenção a como os diferentes sistemas envolvidos interagem entre si. Você poderá ter multiplos componentes dirigidos por multiplos diferentes tipos de eventos. Isto parece complexidade desnecessária mas pode ser só uma boa otimização (não necessária, é claro). O problema é que você não está programando um loop principal típico. No JavaScript, você está usando o loop principal do browser e está tentando fazê-lo efetivamente.</p>
 
 <h2 id="Construindo_um_loop_principal_mais_otimizado_no_JavaScript">Construindo um loop principal mais <em>otimizado</em> no JavaScript</h2>
 
-<p> </p>
+<p> </p>
 
-<p>Finalmente, no JavaScript, o browser está rodando o seu loop principal e o seu código existe em algum de seus estágios. As seções acima descrevem loops principais que tentam não eliminar o controle do navegador. Esses métodos principais anexam eles mesmos ao <code>window.requestAnimationFrame()</code>, que pergunta ao browser por controle sobre o próximo frame. É responsabilidade do browser saber como relacionar esses requests ao loop principal. A <a href="http://www.w3.org/TR/animation-timing/">especificação da W3C para o requestAnimationFrame</a> não define realmente quando os browsers tem que executar os callbacks do requestAnimationFrame. Isto pode ser uma vantagem por que os fornecedores de browsers podem ter a liberdade de experimentar com as soluções que sintam que seja melhor e podem modifica-la com o passar do tempo.</p>
+<p>Finalmente, no JavaScript, o browser está rodando o seu loop principal e o seu código existe em algum de seus estágios. As seções acima descrevem loops principais que tentam não eliminar o controle do navegador. Esses métodos principais anexam eles mesmos ao <code>window.requestAnimationFrame()</code>, que pergunta ao browser por controle sobre o próximo frame. É responsabilidade do browser saber como relacionar esses requests ao loop principal. A <a href="http://www.w3.org/TR/animation-timing/">especificação da W3C para o requestAnimationFrame</a> não define realmente quando os browsers tem que executar os callbacks do requestAnimationFrame. Isto pode ser uma vantagem por que os fornecedores de browsers podem ter a liberdade de experimentar com as soluções que sintam que seja melhor e podem modifica-la com o passar do tempo.</p>
 
-<p>Versões modernas do Firefox e Google Chrome (e provavelmente outros) tentam conectar os callbacks do <code>requestAnimationFramea</code> a sua thread principal no primeiro intervalo de tempo de um frame. A thread principal portanto tenta fazer o seguinte:</p>
+<p>Versões modernas do Firefox e Google Chrome (e provavelmente outros) tentam conectar os callbacks do <code>requestAnimationFramea</code> a sua thread principal no primeiro intervalo de tempo de um frame. A thread principal portanto tenta fazer o seguinte:</p>
 
-<p> </p>
+<p> </p>
 
 <ol>
  <li>Começar uma nova frame (enquanto a anterior é tratada pela exibição).</li>
@@ -118,7 +118,7 @@ main(); //Start the cycle.</pre>
  <li>Sleep (unless an event interrupts the browser's nap) until the monitor is ready for your image (<a href="http://www.techopedia.com/definition/92/vertical-sync-vsync">VSync</a>) and repeat.</li>
 </ol>
 
-<p> </p>
+<p> </p>
 
 <p>Modern versions of Firefox and Google Chrome (and probably others) <em>attempt</em> to connect <code>requestAnimationFrame</code> callbacks to their main thread at the very beginning of a frame's timeslice. The browser's main thread thus <em>tries</em> to look like the following:</p>
 

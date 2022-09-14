@@ -1,0 +1,32 @@
+---
+title: Cadenas binarias
+slug: Web/API/btoa
+tags:
+  - Arreglos tipados JavaScript
+  - Cadena
+  - Cadena de caracteres
+  - DOM
+  - JavaScript
+  - Referencia
+  - String
+translation_of: Web/API/DOMString/Binary
+original_slug: Web/API/DOMString/Binary
+---
+<p>{{jsxref("String", "Cadenas JavaScript")}} son cadenas codificadas en UTF-16. Esto significa que cada unidad de código requiere dos bytes de memoria y puede representar <code>65535</code> puntos de código diferentes. Un subconjunto de estas cadenas está representado por cadenas UTF-16 que contienen solo caracteres ASCII (es decir, caracteres cuyo punto de código no excede <code>127</code>). Por ejemplo, la cadena <code>"¡Hola mundo!"</code> pertenece al subconjunto ASCII, mientras que la cadena <code>"ÀÈÌÒÙ"</code> no. Una <strong>cadena binaria</strong> es un concepto similar al subconjunto ASCII, pero en lugar de limitar el rango a <code>127</code>, permite hasta <code>255</code> puntos de código. Sin embargo, su propósito no es representar caracteres, sino datos binarios. El tamaño de los datos así representados es el doble de lo que sería en formato binario normal, sin embargo, esto no será visible para el usuario final, ya que la longitud de las cadenas de JavaScript se calcula usando dos bytes como unidad.</p>
+
+<p>Las cadenas binarias no forman parte del diseño del lenguaje JavaScript. Sin embargo, al menos una función nativa requiere cadenas binarias como entrada, {{domxref("WindowBase64.btoa", "btoa()")}}: invocarla en una cadena que contiene puntos de código mayores de <code>255</code> causará un error <code>Caracter fuera de rango</code>.</p>
+
+<p>La razón que llevó al uso de unidades de código UTF-16 como marcadores de posición para los números <code>uint8</code> es que a medida que las aplicaciones web se vuelven cada vez más poderosas (agregando funciones como manipulación de audio y video, acceso a datos sin procesar usando WebSockets, y así sucesivamente) ha quedado claro que hay ocasiones en las que sería útil que el código JavaScript pudiera manipular rápida y fácilmente datos binarios sin procesar.</p>
+
+<p>En el pasado, esto se tenía que simular tratando los datos sin procesar como <a href="https://developer.mozilla.org/es/docs/JavaScript/Reference/Global_Objects/String" title="JavaScript/Reference/Global_Objects/String">string</a> y utilizar el método <a href="https://developer.mozilla.org/es/docs/JavaScript/Reference/Global_Objects/String/charCodeAt" title="JavaScript/Reference/Global_Objects/String/charCodeAt"><code>charCodeAt()</code></a> para leer los bytes del búfer de datos (es decir, usando cadenas binarias). Sin embargo, esto es lento y propenso a errores, debido a la necesidad de múltiples conversiones (especialmente si los datos binarios en realidad no son datos en formato de bytes, sino, por ejemplo, enteros de 32 bits o flotantes).</p>
+
+<p>Los <a href="/es/docs/Web/JavaScript/Typed_arrays" title="/es/docs/Web/JavaScript/Typed_arrays">arreglos tipados en JavaScript</a> proporcionan un mecanismo para acceder a datos binarios sin procesar mucho más eficientemente. La API de <a href="/es/docs/Web/JavaScript/Typed_arrays/StringView" title="/es/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code></a> <span class="inlineIndicator" title="Esta API no es nativa"> cuyo constructor no es nativo</span> está un nivel por encima de los arreglos tipados y proporciona una interfaz para cadenas similar a la de <a class="external" href="http://en.wikipedia.org/wiki/C_(lenguaje_de_programación)">C</a>.</p>
+
+<h2 id="Ve_también">Ve también</h2>
+
+<ul>
+ <li><a href="/es/docs/Web/JavaScript/Typed_arrays" title="/es/docs/Web/JavaScript/Typed_arrays">Arreglos tipados</a></li>
+ <li><a href="/es/docs/Web/API/DOMString" title="/es/docs/Web/API/DOMString/Binary"><code>DOMString</code></a></li>
+ <li><a href="/es/docs/Web/JavaScript/Reference/Global_Objects/String" title="/es/docs/Web/API/DOMString">String</a></li>
+ <li><a href="/es/docs/Web/JavaScript/Typed_arrays/StringView" title="/es/docs/Web/JavaScript/Typed_arrays/String_view"><code>StringView</code></a></li>
+</ul>

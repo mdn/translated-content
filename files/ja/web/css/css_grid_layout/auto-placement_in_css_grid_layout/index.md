@@ -1,11 +1,6 @@
 ---
 title: CSS グリッドレイアウトでの自動配置
 slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
-tags:
-  - CSS
-  - CSS グリッド
-  - ガイド
-translation_of: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 ---
 {{CSSRef}}
 
@@ -130,12 +125,12 @@ CSS グリッドレイアウト仕様書には、作成したグリッド上に�
      <div>Two</div>
      <div>Three</div>
      <div>Four
-     <br>This cell
-     <br>Has extra
-     <br>content.
-     <br>Max is auto
-     <br>so the row expands.
-     </div>
+     <br>This cell
+     <br>Has extra
+     <br>content.
+     <br>Max is auto
+     <br>so the row expands.
+     </div>
      <div>Five</div>
 </div>
 ```

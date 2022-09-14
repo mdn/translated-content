@@ -160,10 +160,11 @@ a:focus, input:focus, button:focus, select:focus {
 
 Parfois ça n'est pas possible d'éviter la perte de l'accessibilité clavier. Vous pouvez avoir hérité d'un site où la sémantique n'est pas parfaite (peut-être que vous vous êtes retrouvé avec un CMS horrible qui génère des boutons créés avec des `<div>`s), ou que vous utilisez un contrôle complexe qui n'a pas d'accessibilité clavier intégré, comme l'élément {{htmlelement("video")}} (étonnamment, Opera est le seul navigateur qui vous permet de tabuler dans l'élément `<video>` avec les contrôles par défaut du navigateur). Vous avez quelques options ici :
 
-1.  Créer des contrôles personnalisés en utilisant les éléments `<button>` (sur lequel nous pouvons tabuler par défaut !) et JavaScript pour les relier à leur fonction. Pour des bons exemples voir [Creating a cross-browser video player](/fr/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player).
-2.  Créer des raccourcis clavier en utilisant JavaScript, les fonctions sont activés quand vous appuyez sur une certaine touche du clavier. Voir [Desktop mouse and keyboard controls](/fr/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard) pour des exemples en rapport avec le jeu qui peuvent être adaptés à d'autres fins.
-3.  Utilisez des approches intéressantes pour simuler le comportement d'un bouton. Prenez par exemple notre exemple [fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)). Nous donnons à nos faux boutons `<div>` la capacité d'être focalisé (y compris avec la tabulation) en donnant à chacun d'entre eux l'attribut `tabindex="0"` (voir l'[article tabindex](https://webaim.org/techniques/keyboard/tabindex) de WebAIM pour plus de détails utiles). Cela nous permet de tabuler sur les boutons, mais pas de les activer avec la toucher Entrée/Retour. Pour faire cela, nous devons ajouter ce petit bout de tromperie en JavaScript :
-4.  ```js
+1. Créer des contrôles personnalisés en utilisant les éléments `<button>` (sur lequel nous pouvons tabuler par défaut !) et JavaScript pour les relier à leur fonction. Pour des bons exemples voir [Creating a cross-browser video player](/fr/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player).
+2. Créer des raccourcis clavier en utilisant JavaScript, les fonctions sont activés quand vous appuyez sur une certaine touche du clavier. Voir [Desktop mouse and keyboard controls](/fr/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard) pour des exemples en rapport avec le jeu qui peuvent être adaptés à d'autres fins.
+3. Utilisez des approches intéressantes pour simuler le comportement d'un bouton. Prenez par exemple notre exemple [fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)). Nous donnons à nos faux boutons `<div>` la capacité d'être focalisé (y compris avec la tabulation) en donnant à chacun d'entre eux l'attribut `tabindex="0"` (voir l'[article tabindex](https://webaim.org/techniques/keyboard/tabindex) de WebAIM pour plus de détails utiles). Cela nous permet de tabuler sur les boutons, mais pas de les activer avec la toucher Entrée/Retour. Pour faire cela, nous devons ajouter ce petit bout de tromperie en JavaScript :
+
+    ```js
     document.onkeydown = function(e) {
       if(e.keyCode === 13) { // The Enter/Return key
         document.activeElement.onclick(e);
@@ -291,9 +292,9 @@ Il y a plusieurs outils d'audit disponibles que vous pouvez placer sur vos pages
 
 Observons un exemple, en utilisant Tenon.
 
-1.  Aller sur la [page d'accueil de Tenon](https://tenon.io).
-2.  Entrez l'URL de notre exemple de [bad-semantics.html](http://mdn.github.io/learning-area/accessibility/html/bad-semantics.html) dans l'entrée texte en haut de la page (ou l'URL d'une autre page que vous aimeriez analyser) et appuyez sur _Analyse your Webpage_.
-3.  Défilez vers le bas jusqu'à que vous trouviez la section d'erreur/signalement, comme montré ci-dessous.
+1. Aller sur la [page d'accueil de Tenon](https://tenon.io).
+2. Entrez l'URL de notre exemple de [bad-semantics.html](http://mdn.github.io/learning-area/accessibility/html/bad-semantics.html) dans l'entrée texte en haut de la page (ou l'URL d'une autre page que vous aimeriez analyser) et appuyez sur _Analyse your Webpage_.
+3. Défilez vers le bas jusqu'à que vous trouviez la section d'erreur/signalement, comme montré ci-dessous.
 
 ![](tenon-screenshot.png)
 
@@ -482,9 +483,9 @@ Cela peut paraître comme beaucoup de commandes, mais pas tant que ça que vous 
 
 NVDA est exclusif à Windows, et vous allez devoir l'installer.
 
-1.  Téléchargez-le depuis [nvaccess.org](http://www.nvaccess.org/). Vous pouvez choisir si vous voulez faire une donation ou le télécharger gratuitement ; vous devrez également leur donner votre adresse e-mail avant de pouvoir le télécharger.
-2.  Une fois téléchargé, installez-le — double cliquez sur l'installeur, acceptez la licence et suivez les instructions.
-3.  Pour lancer NVDA, double cliquez sur fichier/raccourci du programme, ou utilisez le raccourci clavier Ctrl + Alt + N. Vous verrez la boîte de dialogue de bienvenue de NVDA lorsque vous le démarrez. Vous pouvez choisir ici différentes options, puis appuyez sur _OK_ pour continuer.
+1. Téléchargez-le depuis [nvaccess.org](http://www.nvaccess.org/). Vous pouvez choisir si vous voulez faire une donation ou le télécharger gratuitement ; vous devrez également leur donner votre adresse e-mail avant de pouvoir le télécharger.
+2. Une fois téléchargé, installez-le — double cliquez sur l'installeur, acceptez la licence et suivez les instructions.
+3. Pour lancer NVDA, double cliquez sur fichier/raccourci du programme, ou utilisez le raccourci clavier Ctrl + Alt + N. Vous verrez la boîte de dialogue de bienvenue de NVDA lorsque vous le démarrez. Vous pouvez choisir ici différentes options, puis appuyez sur _OK_ pour continuer.
 
 NVDA sera maintenant actif sur votre ordinateur.
 
@@ -662,15 +663,15 @@ Comme mentionné plus haut, vous ne pouvez pas uniquement compter sur les outils
 
 La liste suivante vous fournit une checklist à suivre pour vous assurer de mener à bien les tests d'accessibilité recommandés pour votre projet :
 
-1.  Assurez-vous que votre HTML est sémantiquement correct au possible. [Le valider](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS#La_validation) est un bon début, comme utiliser un [outil d'Audit](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Auditing_tools).
-2.  Vérifiez que votre contenu a du sens lorsque le CSS est désactivé.
-3.  Assurez-vous que votre fonctionnalité est [accessible au clavier](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Using_native_keyboard_accessibility). Testez en utilisant Tab, Retour/Entrée, etc.
-4.  Assurez-vous que votre contenu non-textuel a un [texte alternatif](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Text_alternatives). Un [Outil d'audit](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Auditing_tools) est bien pour repérer ce type de problèmes.
-5.  Assurez-vous que votre [contraste de couleurs](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Color_and_color_contrast) est acceptable, en utilisant un outil de vérification approprié.
-6.  Assurez-vous que le [contenu caché](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Hiding_content) est visible par les lecteurs d'écran.
-7.  Assurez-vous qu'une fonctionnalité est utilisable sans JavaScript autant que possible.
-8.  Utilisez ARIA pour améliorer l'accessibilité quand c'est approprié.
-9.  Exécutez votre site dans un [Outil d'audit](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Auditing_tools).
+1. Assurez-vous que votre HTML est sémantiquement correct au possible. [Le valider](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS#La_validation) est un bon début, comme utiliser un [outil d'Audit](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Auditing_tools).
+2. Vérifiez que votre contenu a du sens lorsque le CSS est désactivé.
+3. Assurez-vous que votre fonctionnalité est [accessible au clavier](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Using_native_keyboard_accessibility). Testez en utilisant Tab, Retour/Entrée, etc.
+4. Assurez-vous que votre contenu non-textuel a un [texte alternatif](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Text_alternatives). Un [Outil d'audit](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Auditing_tools) est bien pour repérer ce type de problèmes.
+5. Assurez-vous que votre [contraste de couleurs](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Color_and_color_contrast) est acceptable, en utilisant un outil de vérification approprié.
+6. Assurez-vous que le [contenu caché](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Hiding_content) est visible par les lecteurs d'écran.
+7. Assurez-vous qu'une fonctionnalité est utilisable sans JavaScript autant que possible.
+8. Utilisez ARIA pour améliorer l'accessibilité quand c'est approprié.
+9. Exécutez votre site dans un [Outil d'audit](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Auditing_tools).
 10. Testez avec un lecteur d'écran.
 11. Incluez une politique/déclaration d'accessibilité à un endroit que l'on peut trouver sur votre site pour dire ce que vous avez fait.
 
@@ -685,8 +686,6 @@ Espérons que cet article vous aura donné des bonnes connaissances concernant l
 Dans le prochain article nous nous tournerons vers la fonctionnalité de détection dans plus de détail.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/JavaScript","Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-
 
 ## Dans ce module
 

@@ -1,14 +1,6 @@
 ---
 title: スプレッド構文
 slug: Web/JavaScript/Reference/Operators/Spread_syntax
-tags:
-  - ECMAScript 2015
-  - イテレーター
-  - JavaScript
-  - 言語機能
-  - Reference
-browser-compat: javascript.operators.spread
-translation_of: Web/JavaScript/Reference/Operators/Spread_syntax
 ---
 {{jsSidebar("Operators")}}
 
@@ -282,5 +274,5 @@ JavaScript エンジンには、引数の個数に上限があります。関数
 
 ## 関連情報
 
-- {{jsxref("Functions/rest_parameters", "残余引数", "", 1)}} (こちらも ‘`...`’)
-- {{jsxref("Function.prototype.apply()")}} (こちらも ‘`...`’)
+- {{jsxref("Functions/rest_parameters", "残余引数", "", 1)}} (こちらも ‘`...`’)
+- {{jsxref("Function.prototype.apply()")}} (こちらも ‘`...`’)

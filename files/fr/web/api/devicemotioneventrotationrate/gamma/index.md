@@ -20,7 +20,9 @@ Cette propriété indique la vitesse de rotation autour de l'axe Y -- en degrés
 
 ## Syntaxe
 
-    var gamma = deviceRotationRate.gamma;
+```js
+var gamma = deviceRotationRate.gamma;
+```
 
 Cette propriété est en lecture seule.
 
@@ -31,10 +33,8 @@ Cette propriété est en lecture seule.
 
 ## Spécifications
 
-| Spécification                                | Statut                                   | Commentaire          |
-| -------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Device Orientation')}} | {{Spec2('Device Orientation')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DeviceMotionEventRotationRate.gamma")}}
+{{Compat}}

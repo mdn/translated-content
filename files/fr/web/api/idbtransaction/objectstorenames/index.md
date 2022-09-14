@@ -14,7 +14,9 @@ La propriété **`objectStoreNames`** de l'interface {{domxref("IDBTransaction")
 
 ## Syntaxe
 
-    var maBaseDeDonnees = transactionObj.objectStoreNames;
+```js
+var maBaseDeDonnees = transactionObj.objectStoreNames;
+```
 
 ### Valeur de retour
 
@@ -22,13 +24,11 @@ Une liste {{domxref("DOMStringList")}} contenant les noms des magasins d'objets 
 
 ## Spécifications
 
-| Spécification                                                                                    | État                         | Commentaires |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB2', '#dom-idbtransaction-objectstorenames', 'db')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBTransaction.objectStoreNames")}}
+{{Compat}}
 
 ## Voir aussi
 

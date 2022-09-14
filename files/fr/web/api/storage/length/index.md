@@ -15,7 +15,9 @@ La propriété en lecture seule de l'interface {{domxref("Storage")}} retourne u
 
 ## Syntaxe
 
-    var aLength = storage.length;
+```js
+var aLength = storage.length;
+```
 
 ### Retour
 
@@ -39,13 +41,11 @@ function populateStorage() {
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-length', 'Storage.length')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Storage.length")}}
+{{Compat}}
 
 ## Voir aussi
 

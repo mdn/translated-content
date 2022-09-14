@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Referencia/Funciones/set
 ---
 <div>{{jsSidebar("Funciones")}}</div>
 
-<p>La sintaxis  <strong><code>set</code></strong>  asocia la propiedad de un objeto a una función que será llamada cuando haya un intento de asignar valor a esa propiedad.</p>
+<p>La sintaxis  <strong><code>set</code></strong>  asocia la propiedad de un objeto a una función que será llamada cuando haya un intento de asignar valor a esa propiedad.</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -29,24 +29,24 @@ original_slug: Web/JavaScript/Referencia/Funciones/set
 
 <h2 id="Descripción">Descripción</h2>
 
-<p>En JavaScript, un setter puede ser usado para ejecutar una función donde sea que una propiedad se intente cambiar. Los setters son regularmente usados en conjunto con getters para crear un tipo de pseudo-propiedad. No es posible tener simultáneamente un setter en una propiedad que ya tiene un valor.</p>
+<p>En JavaScript, un setter puede ser usado para ejecutar una función donde sea que una propiedad se intente cambiar. Los setters son regularmente usados en conjunto con getters para crear un tipo de pseudo-propiedad. No es posible tener simultáneamente un setter en una propiedad que ya tiene un valor.</p>
 
 <p>Tenga en cuenta lo siguiente al trabajar con setters:</p>
 
 <div>
 <ul>
  <li>Puede tener un identificador ya sea number o string;</li>
- <li>Debe tener exactamente un parámentro (ver <a class="external" href="http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/" rel="external nofollow">Incompatible <abbr title="ECMAScript 5th edition">ES5</abbr> change: literal getter and setter functions must now have exactly zero or one arguments</a> para más información);</li>
- <li>No debe aparecer en un objeto de notación literal con otro <code>set</code> o con otra entrada de datos con la misma propiedad.<br>
-  ( <code>{ set x(v) { }, set x(v) { } }</code> y <code>{ x: ..., set x(v) { } }</code> están prohibidos )</li>
+ <li>Debe tener exactamente un parámentro (ver <a class="external" href="http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/" rel="external nofollow">Incompatible <abbr title="ECMAScript 5th edition">ES5</abbr> change: literal getter and setter functions must now have exactly zero or one arguments</a> para más información);</li>
+ <li>No debe aparecer en un objeto de notación literal con otro <code>set</code> o con otra entrada de datos con la misma propiedad.<br>
+  ( <code>{ set x(v) { }, set x(v) { } }</code> y <code>{ x: ..., set x(v) { } }</code> están prohibidos )</li>
 </ul>
 </div>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
-<h3 id="Definiendo_un_setter_en_el_inicializador_de_nuevos_objetos">Definiendo un setter en el inicializador de nuevos objetos</h3>
+<h3 id="Definiendo_un_setter_en_el_inicializador_de_nuevos_objetos">Definiendo un setter en el inicializador de nuevos objetos</h3>
 
-<p>En el siguiente ejemplo definimos una pseudo-propiedad  <code>actual</code>  al objeto <code>lenguaje</code>. Cuando se le asigne un valor a <code>actual</code>, actualiza <code>log</code> con ese valor:</p>
+<p>En el siguiente ejemplo definimos una pseudo-propiedad  <code>actual</code>  al objeto <code>lenguaje</code>. Cuando se le asigne un valor a <code>actual</code>, actualiza <code>log</code> con ese valor:</p>
 
 <pre class="brush: js notranslate">var lenguaje = {
   set actual(mensaje) {
@@ -63,23 +63,23 @@ console.log(lenguaje.log); // ['ES', 'FR']
 
 
 
-<p>Note que <code>actual</code> no está definido y cualquier intento de accederlo devolverá <code>undefined</code>.</p>
+<p>Note que <code>actual</code> no está definido y cualquier intento de accederlo devolverá <code>undefined</code>.</p>
 
-<h3 id="Eliminando_un_setter_con_el_operador_delete">Eliminando un setter con el operador <code>delete</code> </h3>
+<h3 id="Eliminando_un_setter_con_el_operador_delete">Eliminando un setter con el operador <code>delete</code> </h3>
 
-<p>Si desea eliminar el setter, puede simplemente aplicar <a href="/es/docs/Web/JavaScript/Referencia/Operadores/delete" title="en-US/docs/JavaScript/Reference/Operators/Special/delete"><code>delete</code></a> en él:</p>
+<p>Si desea eliminar el setter, puede simplemente aplicar <a href="/es/docs/Web/JavaScript/Referencia/Operadores/delete" title="en-US/docs/JavaScript/Reference/Operators/Special/delete"><code>delete</code></a> en él:</p>
 
 <pre class="brush: js notranslate">delete lenguaje.actual;
 </pre>
 
-<h3 id="Definiendo_un_setter_en_un_objecto_existente_usando_defineProperty">Definiendo un setter en un objecto existente usando <code>defineProperty</code></h3>
+<h3 id="Definiendo_un_setter_en_un_objecto_existente_usando_defineProperty">Definiendo un setter en un objecto existente usando <code>defineProperty</code></h3>
 
-<p>Para añadir un setter a un objeto <em>existente</em>,<em> </em>use {{jsxref("Object.defineProperty()")}}</p>
+<p>Para añadir un setter a un objeto <em>existente</em>,<em> </em>use {{jsxref("Object.defineProperty()")}}</p>
 
 <pre class="brush: js notranslate">consr o = {a: 0};
 
 Object.defineProperty(o, 'b', {
-  set: function (x) { this.a = x / 2; }
+  set: function (x) { this.a = x / 2; }
 });
 
 o.b = 10; // Ejecuta el setter, el cual asigna 10 / 2 (5) a la propiedad 'a'
@@ -88,7 +88,7 @@ console.log(o.a) // 5</pre>
 <h3 id="Usando_un_nombre_de_propiedad_computado">Usando un nombre de propiedad computado</h3>
 
 <div class="note">
-<p><strong>Nota:</strong> Propiedades computadas son 'experimental technology'<em>,</em> parte de la propuesta para ECMAScript 6, y no está soportado en todos los navegadores. Dará error de sintaxis en entornos no soportados.</p>
+<p><strong>Nota:</strong> Propiedades computadas son 'experimental technology'<em>,</em> parte de la propuesta para ECMAScript 6, y no está soportado en todos los navegadores. Dará error de sintaxis en entornos no soportados.</p>
 </div>
 
 <pre class="brush: js notranslate">const expr = 'foo';
@@ -137,8 +137,8 @@ console.log(obj.baz); // "baz"
 <h2 id="Notas_específicas_para_SpiderMonkey-specific">Notas específicas para SpiderMonkey-specific</h2>
 
 <ul>
- <li>Comenzando con<a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/1.8.1"> JavaScript 1.8.1</a>, los setters ya no son llamados cuando se definen las propiedades en los inicializadores de objetos y arrays.</li>
- <li>De SpiderMonkey 38 en adelante, un setter con un {{jsxref("Functions/rest_parameters", "rest parameter", "", 1)}} es un {{jsxref("SyntaxError")}} conforme a la especificación ES6.</li>
+ <li>Comenzando con<a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/1.8.1"> JavaScript 1.8.1</a>, los setters ya no son llamados cuando se definen las propiedades en los inicializadores de objetos y arrays.</li>
+ <li>De SpiderMonkey 38 en adelante, un setter con un {{jsxref("Functions/rest_parameters", "rest parameter", "", 1)}} es un {{jsxref("SyntaxError")}} conforme a la especificación ES6.</li>
 </ul>
 
 <h2 id="Ver_también">Ver también</h2>
@@ -149,5 +149,5 @@ console.log(obj.baz); // "baz"
  <li>{{jsxref("Object.defineProperty()")}}</li>
  <li>{{jsxref("Object.defineGetter", "__defineGetter__")}}</li>
  <li>{{jsxref("Object.defineSetter", "__defineSetter__")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">Definiendo Getters y Setters</a> en la Guía JavaScript</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">Definiendo Getters y Setters</a> en la Guía JavaScript</li>
 </ul>

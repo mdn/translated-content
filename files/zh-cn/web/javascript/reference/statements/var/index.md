@@ -1,12 +1,6 @@
 ---
 title: var
 slug: Web/JavaScript/Reference/Statements/var
-tags:
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/var
 ---
 {{jsSidebar("Statements")}}
 
@@ -36,7 +30,7 @@ var { bar } = foo; // foo = { bar:10, baz:12 };
 
 无论在何处声明变量，都会在执行任何代码之前进行处理。这被称为{{Glossary("Hoisting", "变量提升")}}，我们将在下面进一步讨论。
 
-用 `var` 声明的变量的作用域是它当前的执行上下文及其闭包（嵌套函数），或者对于声明在任何函数外的变量来说是全局。使用 `var` 重复声明 JavaScript 变量并不会抛出错误（即使在严格模式(strict mode)下），同时，变量也不会丢失其值，直到调用其它的赋值操作。
+用 `var` 声明的变量的作用域是它当前的执行上下文及其闭包（嵌套函数），或者对于声明在任何函数外的变量来说是全局。使用 `var` 重复声明 JavaScript 变量并不会抛出错误（即使在严格模式 (strict mode) 下），同时，变量也不会丢失其值，直到调用其它的赋值操作。
 
 ```js
 'use strict';
@@ -66,7 +60,7 @@ console.log(x);                // 1
 console.log('still going...'); // still going...
 ```
 
-在全局上下文中，使用 `var` 声明的变量将作为全局对象的**不可配置**属性被添加。这意味着它的属性描述符无法被修改，也无法使用 {{JSxRef("Operators/delete", "delete")}} 删除。其对应的名字也将被添加到[全局环境记录（global environment record）](https://www.ecma-international.org/ecma-262/10.0/index.html#sec-global-environment-records)（它构成了全局词法环境(global lexical environment)的一部分）的 `[[VarNames]]` 插槽内的列表中。`[[VarNames]]` 中的命名列表使运行时能够区分“全局变量”和“全局对象的直接属性”。
+在全局上下文中，使用 `var` 声明的变量将作为全局对象的**不可配置**属性被添加。这意味着它的属性描述符无法被修改，也无法使用 {{JSxRef("Operators/delete", "delete")}} 删除。其对应的名字也将被添加到 [全局环境记录（global environment record）](https://www.ecma-international.org/ecma-262/10.0/index.html#sec-global-environment-records)（它构成了全局词法环境 (global lexical environment) 的一部分）的 `[[VarNames]]` 插槽内的列表中。`[[VarNames]]` 中的命名列表使运行时能够区分“全局变量”和“全局对象的直接属性”。
 
 全局变量（以全局对象的属性的形式被创建）不可配置的原因是：该标识符被视为一个变量，而不是全局对象的**直接属性**。JavaScript 具有自动化的内存管理机制，因此“能够使用 `delete` 删除全局变量”是没有意义的。
 
@@ -105,7 +99,7 @@ foo = 'f' // 在非严格模式下，假设你想在全局对象下创建名为 
 globalThis.hasOwnProperty('foo') // true
 ```
 
-在 ECMAScript 5 的[严格模式]((/zh-CN/docs/Web/JavaScript/Reference/Strict_mode))下，此行为具有不同的表现。在严格模式下，对未限定的标识符赋值将抛出 `ReferenceError`，以避免意外创建全局对象属性。
+在 ECMAScript 5 的[严格模式]((/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)) 下，此行为具有不同的表现。在严格模式下，对未限定的标识符赋值将抛出 `ReferenceError`，以避免意外创建全局对象属性。
 
 注意，上面的说明意味着：与流行的错误信息相反，JavaScript 并没有隐式变量声明，它只是有一个类似的语法。
 
@@ -185,7 +179,7 @@ console.log(x, y); // 0 1
 
 // 在非严格模式下：
 // x 是全局变量。
-// y 是隐式声明的全局变量。 
+// y 是隐式声明的全局变量。 
 ```
 
 在严格模式下运行相同的示例：

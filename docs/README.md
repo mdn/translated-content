@@ -7,11 +7,13 @@ For guidelines relating to specific locales, we have locale-specific docs in
 subdirectories:
 
 - [Russian translation guide / Участие в переводе](ru/translation-guide.md)
+- [Simplified Chinese Guide / 简体中文翻译指南](zh-cn/translation-guide.md)
 - [Traditional Chinese Guide / 正體中文翻譯指南](zh-tw/translation-guide.md)
+- [Spanish guide / Guía en español](es/README.md)
 
 If you want to add a guide to document some specific guidelines for your locale
 and it does not already appear here, you are welcome to add one, or
-[talk to the locale teams](https://github.com/mdn/translated-content/blob/docs-readme/README.md)
+[talk to the locale teams](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#review-teams)
 about it. Similarly, if you can think of a good general guideline that you'd
 like to add here, feel free to create an issue to talk about it.
 
@@ -60,7 +62,7 @@ elements that aren't strictly necessary, for example:
 
 ```html
 <p>The
-  <code><strong>HTMLCanvasElement</strong></code><strong><code>.transferControlToOffscreen()</code></strong>
+  <strong><code>HTMLCanvasElement.transferControlToOffscreen()</code></strong>
   method transfers control to an {{domxref("OffscreenCanvas")}} object, either on the main
   thread or on a worker.</p>
 

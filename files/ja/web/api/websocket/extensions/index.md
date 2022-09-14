@@ -1,14 +1,6 @@
 ---
 title: WebSocket.extensions
 slug: Web/API/WebSocket/extensions
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - Web API
-  - WebSocket
-browser-compat: api.WebSocket.extensions
-translation_of: Web/API/WebSocket/extensions
 ---
 {{APIRef("Web Sockets API")}}
 

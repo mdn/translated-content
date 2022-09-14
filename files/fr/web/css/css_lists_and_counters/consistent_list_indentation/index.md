@@ -53,9 +53,9 @@ Si nous plaçons cette liste en l'état dans un document, elle n'aura aucune ind
 
 Afin d'éviter ça et d'imposer une indentation, le navigateur pourra implémenter l'une des trois approches suivantes :
 
-1.  Doter chaque élément `li` d'une marge gauche&nbsp;;
-2.  Doter chaque élément `ul` d'une marge gauche&nbsp;;
-3.  Doter chaque élément `ul` d'un padding gauche quelconque.
+1. Doter chaque élément `li` d'une marge gauche&nbsp;;
+2. Doter chaque élément `ul` d'une marge gauche&nbsp;;
+3. Doter chaque élément `ul` d'un padding gauche quelconque.
 
 Telles que les choses se sont faites, aucun navigateur ne semble avoir choisi la première solution. Internet Explorer pour Windows et Macintosh, ainsi qu'Opera, ont adopté la seconde solution. La troisième a été choisie par Gecko et donc par tous les navigateurs embarquant celui-ci.
 

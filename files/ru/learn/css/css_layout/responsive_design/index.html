@@ -6,7 +6,7 @@ original_slug: Learn/CSS/CSS_layout/Отзывчивый_дизайн
 ---
 <div>{{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}</div>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">На заре веб-дизайна страницы создавались для экрана определённого размера.</span></span> Если у пользователя был экран большего или меньшего размера чем ожидал дизайнер, то результат мог быть от нежелательных полос прокрутки, до<span class="tlid-translation translation" lang="ru"><span title=""> слишком длинной строки и плохого использования пространства. Поскольку становились доступны много различных размеров экранов, появилась концепция <em>отзывчивого (адаптивного) веб-дизайна</em> </span></span><em>(responsive web design</em> (RWD)) — набор методов, которые позволяют веб-страницам менять свой макет и внешний вид в соответствии с разной шириной экрана, разрешением и т.д. Это та самая, идея которая изменила подход к дизайну веба для множества устройств, и в этой статье мы поможем вам понять основные методы, которые вам необходимо знать, чтобы освоить его.</p>
+<p><span class="tlid-translation translation" lang="ru"><span title="">На заре веб-дизайна страницы создавались для экрана определённого размера.</span></span> Если у пользователя был экран большего или меньшего размера чем ожидал дизайнер, то результат мог быть от нежелательных полос прокрутки, до<span class="tlid-translation translation" lang="ru"><span title=""> слишком длинной строки и плохого использования пространства. Поскольку становились доступны много различных размеров экранов, появилась концепция <em>отзывчивого (адаптивного) веб-дизайна</em> </span></span><em>(responsive web design</em> (RWD)) — набор методов, которые позволяют веб-страницам менять свой макет и внешний вид в соответствии с разной шириной экрана, разрешением и т.д. Это та самая, идея которая изменила подход к дизайну веба для множества устройств, и в этой статье мы поможем вам понять основные методы, которые вам необходимо знать, чтобы освоить его.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -58,7 +58,7 @@ original_slug: Learn/CSS/CSS_layout/Отзывчивый_дизайн
 <p><strong>Примечание</strong>: Скриншоты выше сделаны используя <a href="/en-US/docs/Tools/Responsive_Design_Mode">Responsive Design Mode</a> в Firefox DevTools.</p>
 </div>
 
-<p>Когда мобильный веб стал становиться реальностью с первыми функциональными телефонами, компании желающие охватить мобильники начали создавать в основном специальные мобильные версии своих сайтов, с различными URL (часто что-то наподобие <em>m.example.com</em> или <em>example.mobi</em>). Это означало, что необходимо было разрабатывать и поддерживать в актуальном состоянии две отдельные версии сайта.</p>
+<p>Когда мобильный веб стал становиться реальностью с первыми функциональными телефонами, компании желающие охватить мобильники начали создавать в основном специальные мобильные версии своих сайтов, с различными URL (часто что-то наподобие <em>m.example.com</em> или <em>example.mobi</em>). Это означало, что необходимо было разрабатывать и поддерживать в актуальном состоянии две отдельные версии сайта.</p>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Кроме того, эти мобильные сайты часто предлагали очень урезанный вариант.</span></span> Поскольку мобильные гаджеты стали мощнее и способными отображать целые веб-сайты, пользователей мобильных устройств раздражало, что они обнаруживали себя запертыми в мобильной версии сайта, неспособные получить доступ к информации, которая, как они знали, есть в полнофункциональной версии сайта.</p>
 
@@ -84,9 +84,9 @@ original_slug: Learn/CSS/CSS_layout/Отзывчивый_дизайн
 
 <h2 id="Медиавыражения">Медиавыражения</h2>
 
-<p>Отзывчивый дизайн появился благодаря медиавыражениям (media queries). Спецификация Media Queries Level 3 стала Рекомендованным Кандидатом в 2009 году, что означает, <span class="tlid-translation translation" lang="ru"><span title="">что она была признана готовой к реализации в браузерах. Медиавыражения позволяют нам проводить серию тестов (например, является ли экран пользователя больше, чем определённая ширина или разрешение) и выборочно применять CSS к стилю страницы соответственно с нуждами пользователя.</span></span></p>
+<p>Отзывчивый дизайн появился благодаря медиавыражениям (media queries). Спецификация Media Queries Level 3 стала Рекомендованным Кандидатом в 2009 году, что означает, <span class="tlid-translation translation" lang="ru"><span title="">что она была признана готовой к реализации в браузерах. Медиавыражения позволяют нам проводить серию тестов (например, является ли экран пользователя больше, чем определённая ширина или разрешение) и выборочно применять CSS к стилю страницы соответственно с нуждами пользователя.</span></span></p>
 
-<p>Например, следующее медиавыражение проверяет отображается ли текущая страница как экранная медиа (а не как печатный документ) и имеет ли область просмотра ширину как минимум 800 px. CSS будет применяться к селектору <code>.container</code> только если эти две вещи истины.</p>
+<p>Например, следующее медиавыражение проверяет отображается ли текущая страница как экранная медиа (а не как печатный документ) и имеет ли область просмотра ширину как минимум 800 px. CSS будет применяться к селектору <code>.container</code> только если эти две вещи истины.</p>
 
 <pre class="brush: css"><code>@media screen and (min-width: 800px) {
   .container {
@@ -112,7 +112,7 @@ original_slug: Learn/CSS/CSS_layout/Отзывчивый_дизайн
 <pre><code>target / context = result </code>
 </pre>
 
-<p>Например, если размер нашего целевого столбца — 60 пикселей, а контекст (или контейнер) в котором он находится — 960 пикселей, то мы делим 60 на 960 чтобы получить значение которое мы можем использовать в нашем CSS, после переноса десятичной точки вправо на 2 цифры.</p>
+<p>Например, если размер нашего целевого столбца — 60 пикселей, а контекст (или контейнер) в котором он находится — 960 пикселей, то мы делим 60 на 960 чтобы получить значение которое мы можем использовать в нашем CSS, после переноса десятичной точки вправо на 2 цифры.</p>
 
 <pre class="brush: css"><code>.col {
   width: 6.25%; /* 60 / 960 = 0.0625 */
@@ -143,7 +143,7 @@ original_slug: Learn/CSS/CSS_layout/Отзывчивый_дизайн
 
 <h3 id="Multicol">Multicol</h3>
 
-<p>Самый старый из этих методов — это multicol, когда вы задаёте <code>column-count</code>, это отражает то на сколько столбцов вы хотите разбить ваш контент. Далее браузер рассчитывает их размер, размер, который изменится согласно размеру экрана.</p>
+<p>Самый старый из этих методов — это multicol, когда вы задаёте <code>column-count</code>, это отражает то на сколько столбцов вы хотите разбить ваш контент. Далее браузер рассчитывает их размер, размер, который изменится согласно размеру экрана.</p>
 
 <pre class="brush: css"><code>.container {
   column-count: 3;
@@ -159,7 +159,7 @@ original_slug: Learn/CSS/CSS_layout/Отзывчивый_дизайн
 
 <h3 id="Flexbox">Flexbox</h3>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">В Flexbox, в качестве исходного поведения, flex элементы будут сжиматься и распределять пространство между элементами в соответствии с пространством в их контейнере. Изменяя значения </span></span><code>flex-grow</code> и <code>flex-shrink</code> <span class="tlid-translation translation" lang="ru"><span title="">вы можете указать, как вы хотите, чтобы предметы вели себя когда они сталкиваются с большим или меньшим пространством вокруг себя.</span></span></p>
+<p><span class="tlid-translation translation" lang="ru"><span title="">В Flexbox, в качестве исходного поведения, flex элементы будут сжиматься и распределять пространство между элементами в соответствии с пространством в их контейнере. Изменяя значения </span></span><code>flex-grow</code> и <code>flex-shrink</code> <span class="tlid-translation translation" lang="ru"><span title="">вы можете указать, как вы хотите, чтобы предметы вели себя когда они сталкиваются с большим или меньшим пространством вокруг себя.</span></span></p>
 
 <p>В примере ниже каждый flex элемент будет принимать равное количество пространства во flex контейнере используя запись <code>flex: 1</code> как описано в главе <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox#Flexible_sizing_of_flex_items">Flexbox: Гибкое изменение размеров flex элементов</a>.</p>
 
@@ -178,7 +178,7 @@ original_slug: Learn/CSS/CSS_layout/Отзывчивый_дизайн
 
 <h3 id="CSS_grid">CSS grid</h3>
 
-<p>В макете CSS Grid единицы измерения <code>fr</code> позволяют распределять доступное пространство между дорожками сетки. Следующий пример создаёт grid контейнер с тремя дорожками размером <code>1fr</code>. Это создаст три вертикальные дорожки, каждая занимающая одну часть свободного пространства в контейнере. <span class="tlid-translation translation" lang="ru"><span title="">Вы можете узнать больше об этом подходе к созданию сетки в теме Изучение Макета Grid в разделе </span></span><a href="/en-US/docs/Learn/CSS/CSS_layout/Grids#Flexible_grids_with_the_fr_unit">Гибкие grids с единицами fr</a>.</p>
+<p>В макете CSS Grid единицы измерения <code>fr</code> позволяют распределять доступное пространство между дорожками сетки. Следующий пример создаёт grid контейнер с тремя дорожками размером <code>1fr</code>. Это создаст три вертикальные дорожки, каждая занимающая одну часть свободного пространства в контейнере. <span class="tlid-translation translation" lang="ru"><span title="">Вы можете узнать больше об этом подходе к созданию сетки в теме Изучение Макета Grid в разделе </span></span><a href="/en-US/docs/Learn/CSS/CSS_layout/Grids#Flexible_grids_with_the_fr_unit">Гибкие grids с единицами fr</a>.</p>
 
 <pre class="brush: css"><code>.container {
   display: grid;
@@ -199,7 +199,7 @@ original_slug: Learn/CSS/CSS_layout/Отзывчивый_дизайн
 } </code>
 </pre>
 
-<p>Существуют очевидные недостатки к этому подходу. Изображение может быть изображено намного меньше своего исходного размера, что является пустой тратой пропускной способности — <span class="tlid-translation translation" lang="ru"><span title="">пользователь мобильных может загружать изображение, в несколько раз превышающее размер того, что он фактически видит в окне браузера. </span></span> <span class="tlid-translation translation" lang="ru"><span title="">Кроме того, вам может не понадобиться такое же соотношение сторон изображения на мобильном устройстве, как на компьютере.</span></span> Либо<span class="tlid-translation translation" lang="ru"><span title="">, учитывая меньший размер изображения на мобильном телефоне, вы можете захотеть показать совсем другое изображение, которое легче понять на маленьком экране. Такие вещи можно достичь, просто уменьшая изображение.</span></span></p>
+<p>Существуют очевидные недостатки к этому подходу. Изображение может быть изображено намного меньше своего исходного размера, что является пустой тратой пропускной способности — <span class="tlid-translation translation" lang="ru"><span title="">пользователь мобильных может загружать изображение, в несколько раз превышающее размер того, что он фактически видит в окне браузера. </span></span> <span class="tlid-translation translation" lang="ru"><span title="">Кроме того, вам может не понадобиться такое же соотношение сторон изображения на мобильном устройстве, как на компьютере.</span></span> Либо<span class="tlid-translation translation" lang="ru"><span title="">, учитывая меньший размер изображения на мобильном телефоне, вы можете захотеть показать совсем другое изображение, которое легче понять на маленьком экране. Такие вещи можно достичь, просто уменьшая изображение.</span></span></p>
 
 <p>Отзывчивые изображения, используя элемент {{htmlelement("picture")}} и атрибуты <code>srcset</code> и <code>sizes</code> элемента {{htmlelement("img")}} оба решают эти проблемы. <span class="tlid-translation translation" lang="ru"><span title="">Вы можете указать несколько размеров вместе с «подсказками» (метаданные, описывающие размер экрана и разрешение, для которых изображение лучше всего подходит), и браузер выберет наиболее подходящее изображение для каждого устройства, гарантируя, что пользователь загрузит изображение подходящего размера</span> <span title="">для устройства, которое они используют.</span></span></p>
 
@@ -292,12 +292,12 @@ h1 {
 <ul>
  <li><code>initial-scale</code>: Sets the initial zoom of the page, which we set to 1.</li>
  <li><code>height</code>: Sets a specific height for the viewport.</li>
- <li><code>minimum-scale</code>: Sets the minimum zoom level.</li>
- <li><code>maximum-scale</code>: Sets the maximum zoom level.</li>
+ <li><code>minimum-scale</code>: Sets the minimum zoom level.</li>
+ <li><code>maximum-scale</code>: Sets the maximum zoom level.</li>
  <li><code>user-scalable</code>: Prevents zooming if set to <code>no</code>.</li>
 </ul>
 
-<p>You should avoid using <code>minimum-scale</code>, <code>maximum-scale</code>, and in particular setting <code>user-scalable</code> to <code>no</code>. Users should be allowed to zoom as much or as little as they need to; preventing this causes accessibility problems.</p>
+<p>You should avoid using <code>minimum-scale</code>, <code>maximum-scale</code>, and in particular setting <code>user-scalable</code> to <code>no</code>. Users should be allowed to zoom as much or as little as they need to; preventing this causes accessibility problems.</p>
 
 <div class="blockIndicator note">
 <p><strong>Note</strong>: There is a CSS @ rule designed to replace the viewport meta tag — <a href="/en-US/docs/Web/CSS/@viewport">@viewport</a> — however, it has poor browser support. When both are used the meta tag overrides @viewport.</p>

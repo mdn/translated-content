@@ -111,4 +111,3 @@ La taille de l'image affichée pour le masque est calculée de la façon suivant
 ## Voir aussi
 
 - [Rognage et masquage avec CSS (en anglais)](https://css-tricks.com/clipping-masking-css/)
-

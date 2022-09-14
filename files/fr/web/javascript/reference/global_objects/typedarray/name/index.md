@@ -18,7 +18,9 @@ La propriété **`TypedArray.name`** est une chaîne de caractères représentan
 
 ## Syntaxe
 
-    TypedArray.name;
+```js
+TypedArray.name;
+```
 
 ## Description
 

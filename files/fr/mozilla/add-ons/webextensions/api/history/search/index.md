@@ -43,11 +43,13 @@ var searching = browser.history.search(
 
         Title: `"Example Domain"`
 
-            "http"              -> matches
-            "domain"            -> matches
-            "MAIN ample"        -> matches
-            "main tt"           -> matches
-            "main https"        -> does not match
+        ```
+        "http"              -> matches
+        "domain"            -> matches
+        "MAIN ample"        -> matches
+        "main tt"           -> matches
+        "main https"        -> does not match
+        ```
 
         Spécifiez une chaîne vide (`""`) pour récupérer tous les objets {{WebExtAPIRef("history.HistoryItem")}} qui répondent à tous les autres critères.
 

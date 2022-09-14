@@ -49,7 +49,7 @@ Avec une fonction, on utilisera la forme suivante&nbsp;:
 filter: <filter-function> [<filter-function>]* | none
 ```
 
-En utilisant un élément SVG [<filter>](/fr/docs/Web/SVG/Element/filter), on utilisera la forme suivante&nbsp;:
+En utilisant un élément SVG [`<filter>`](/fr/docs/Web/SVG/Element/filter), on utilisera la forme suivante&nbsp;:
 
 ```css
 filter: url(file.svg#filter-element-id)
@@ -65,10 +65,9 @@ Pour utiliser la propriété CSS `filter`, on utilisera `none` ou une ou plusieu
 
 Lorsqu'une seule propriété `filter` possède deux fonctions (ou plus), le résultat obtenu sera différent de l'application de deux propriétés `filter` (ou plus) séparées avec chacune une fonction.
 
-
 ### `url()`
 
-La fonction `url()` prend comme argument l'emplacement d'un [élément SVG &lt;filter&gt; à appliquer](/en-US/docs/Web/SVG/Element/filter). L'URL peut faire référence à une ancre d'un élément spécifique. Cet élément peut être embarqué dans un fichier XML externe.
+La fonction `url()` prend comme argument l'emplacement d'un [élément SVG &lt;filter&gt; à appliquer](/fr/docs/Web/SVG/Element/filter). L'URL peut faire référence à une ancre d'un élément spécifique. Cet élément peut être embarqué dans un fichier XML externe.
 
 ```css
 filter: url(resources.svg#c1)
@@ -286,6 +285,7 @@ filter: contrast(200%)
   </filter>
 </svg>
 ```
+
 ```html hidden
 <table class="standard-table">
   <thead>
@@ -378,7 +378,6 @@ La fonction [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow()) pe
   - : Une quatrième valeur de type [`<length>`](/fr/docs/Web/CSS/length). Des valeurs positives agrandiront l'ombre et les valeurs négatives réduiront l'ombre. La valeur par défaut est `0` (l'ombre aura la même taille que l'élément). Note: Webkit, and maybe other browsers, do not support this 4th length; it will not render if added.
 - `<color>` (optionnel)
   - : Voir [`<color>`](/fr/docs/Web/CSS/color_value) pour les mots-clés et notations possibles. Si ce paramètre n'est pas défini, la couleur choisie dépendra du navigateur. Pour Gecko (Firefox), Presto (Opera) et Trident (Internet Explorer), la valeur de la propriété [`color`](/fr/docs/Web/CSS/color) est utilisée. Pour WebKit, si la couleur est absente, l'ombre sera transparente (donc inutile).
-
 
 ```css
 filter: drop-shadow(16px 16px 10px black)
@@ -871,7 +870,6 @@ table.standard-table td {
 ```
 
 {{EmbedLiveSample('','100%','210px','','', 'no-codepen')}}
-
 
 > **Note :** Voir [`opacity()`](/fr/docs/Web/CSS/filter-function/opacity()) pour plus d'informations.
 

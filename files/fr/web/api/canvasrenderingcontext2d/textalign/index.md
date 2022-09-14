@@ -9,7 +9,9 @@ La propriété **`CanvasRenderingContext2D.textAlign`** de l'API Canvas 2D indiq
 
 ## Syntaxe
 
-    ctx.textAlign = "left" || "right" || "center" || "start" || "end";
+```js
+ctx.textAlign = "left" || "right" || "center" || "start" || "end";
+```
 
 ### Options
 
@@ -97,13 +99,11 @@ window.addEventListener('load', drawCanvas);
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | Statut                           | Commentaire |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-textalign", "CanvasRenderingContext2D.textAlign")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.textAlign")}}
+{{Compat}}
 
 ## Voir aussi
 

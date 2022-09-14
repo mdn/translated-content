@@ -20,7 +20,9 @@ Cette propriété indique la vitesse de rotation autour de l'axe X -- en degrés
 
 ## Syntaxe
 
-    var beta = deviceRotationRate.beta;
+```js
+var beta = deviceRotationRate.beta;
+```
 
 Cette propriété est en lecture seule.
 
@@ -31,10 +33,8 @@ Cette propriété est en lecture seule.
 
 ## Spécifications
 
-| Spécification                                | Statut                                   | Commentaire          |
-| -------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Device Orientation')}} | {{Spec2('Device Orientation')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DeviceMotionEventRotationRate.beta")}}
+{{Compat}}

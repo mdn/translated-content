@@ -12,7 +12,7 @@ original_slug: Web_Audio_API
 
 <p>La API de Audio Web involucra manejar operaciones de audio dentro de un <strong>contexto de audio</strong>, y ha sido diseñada para permitir <strong>enrutamiento modular</strong>. Las operaciones de audio básicas son realizadas con <strong>nodos de audio</strong>, que están enlazados juntos para formar un <strong>gráfico de enrutamiento de audio</strong>. Muchas fuentes — con diferentes tipos de diseño de canales — están soportadas incluso dentro de un único contexto. Este diseño modular provee flexibilidad para crear funciones de audio complejas con efectos dinámicos.</p>
 
-<p>Los nodos de audio están enlazados en cadenas y redes simples por sus entradas y salidas. Éstos típicamente empiezan con una o más fuentes. Las fuentes provee matrices de intensidades de sonidos (muestras) en segmentos de tiempo muy pequeños, a menudo decenas de miles de éstos por segundo.  Éstos podrían ser calculados matemáticamente (como  {{domxref("OscillatorNode")}}), o pueden ser grabaciones de archivos de audio o video (como {{domxref("AudioBufferSourceNode")}} y {{domxref("MediaElementAudioSourceNode")}}) y transmisiones de audio ({{domxref("MediaStreamAudioSourceNode")}}). De hecho, los archivos de sonido son sólo grabaciones de intensidades de sonido, que vienen desde micrófonos o instrumentos eléctricos, y mezclados en una onda única y complicada.</p>
+<p>Los nodos de audio están enlazados en cadenas y redes simples por sus entradas y salidas. Éstos típicamente empiezan con una o más fuentes. Las fuentes provee matrices de intensidades de sonidos (muestras) en segmentos de tiempo muy pequeños, a menudo decenas de miles de éstos por segundo.  Éstos podrían ser calculados matemáticamente (como  {{domxref("OscillatorNode")}}), o pueden ser grabaciones de archivos de audio o video (como {{domxref("AudioBufferSourceNode")}} y {{domxref("MediaElementAudioSourceNode")}}) y transmisiones de audio ({{domxref("MediaStreamAudioSourceNode")}}). De hecho, los archivos de sonido son sólo grabaciones de intensidades de sonido, que vienen desde micrófonos o instrumentos eléctricos, y mezclados en una onda única y complicada.</p>
 
 <p>Los resultados de éstos nodos podrían ser enlazados a las entradas de otros, que mezclan o modifican estas transmisiones de muestras de audio en diferentes transmisiones. Una modificación común es multiplicar las muestras por un valor para hacerlas más fuertes o silenciosas (como es el caso con {{domxref("GainNode")}}). Una vez que el sonido ha sido lo suficientemente procesado por el efecto necesario, puede ser enlazados a la entrada de un destino({{domxref("AudioContext.destination")}}), que enviá el sonido a los altavoces o auriculares. Esta última conexión sólo es necesaria si el usuario debe escuchar el audio.</p>
 
@@ -46,7 +46,7 @@ original_slug: Web_Audio_API
 
 <dl>
  <dt>{{domxref("AudioContext")}}</dt>
- <dd>La interfaz <strong><code>AudioContext</code></strong> representa un gráfico de procesamiento de audio construido de módulos de audio enlazados juntos, cada uno representado por un {{domxref("AudioNode")}}. Un contexto de audio controla la creación de los nodos que contiene y la ejecución del procesamiento del audio, or decoding. Necesitas crear un <code>AudioContext</code> antes de hacer cualquier cosa,  ya que todo pasa dentro de un contexto de audio.</dd>
+ <dd>La interfaz <strong><code>AudioContext</code></strong> representa un gráfico de procesamiento de audio construido de módulos de audio enlazados juntos, cada uno representado por un {{domxref("AudioNode")}}. Un contexto de audio controla la creación de los nodos que contiene y la ejecución del procesamiento del audio, or decoding. Necesitas crear un <code>AudioContext</code> antes de hacer cualquier cosa,  ya que todo pasa dentro de un contexto de audio.</dd>
  <dt>{{domxref("AudioNode")}}</dt>
  <dd>La interfaz <strong><code>AudioNode</code></strong><strong> </strong>representa un módulo de procesamiento de audio como una <em>fuente de audio</em> (por ejemplo un ejemplo HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}}), <em>destino de audio</em>, <em>módulo de procesamiento intermedio</em> (por ejemplo un filtro como {{domxref("BiquadFilterNode")}}, o <em>control de volumen</em> como {{domxref("GainNode")}}).</dd>
  <dt>{{domxref("AudioParam")}}</dt>
@@ -78,7 +78,7 @@ original_slug: Web_Audio_API
  <dt>{{domxref("MediaElementAudioSourceNode")}}</dt>
  <dd>La interfaz <code><strong>MediaElementAudio</strong></code><strong><code>SourceNode</code></strong> representa una fuente de audio que consiste en un elemento {{ htmlelement("audio") }} o {{ htmlelement("video") }} de HTML5. Es un {{domxref("AudioNode")}} que actúa como una fuente de audio.</dd>
  <dt>{{domxref("MediaStreamAudioSourceNode")}}</dt>
- <dd>La interfaz <code><strong>MediaStreamAudio</strong></code><strong><code>SourceNode</code></strong> representa una fuente de audio que consiste en un {{domxref("MediaStream")}} de <a href="/en-US/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a> (como una cámara web, micrófono, o una transmisión siendo enviada a una computadora remota). Es un {{domxref("AudioNode")}} que actúa como una fuente de audio.</dd>
+ <dd>La interfaz <code><strong>MediaStreamAudio</strong></code><strong><code>SourceNode</code></strong> representa una fuente de audio que consiste en un {{domxref("MediaStream")}} de <a href="/en-US/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a> (como una cámara web, micrófono, o una transmisión siendo enviada a una computadora remota). Es un {{domxref("AudioNode")}} que actúa como una fuente de audio.</dd>
 </dl>
 
 <h3 id="Definiendo_filtros_de_efectos_de_audio">Definiendo filtros de efectos de audio</h3>
@@ -97,7 +97,7 @@ original_slug: Web_Audio_API
  <dt>{{domxref("GainNode")}}</dt>
  <dd>La intefaz <strong><code>GainNode</code></strong><strong> </strong>representa un cambio de volumen. Es un módulo de procesamiento de audio de {{domxref("AudioNode")}} que causa que una <em>ganancia</em> determinada para ser aplicada a la entrada de datos antes de su propacación a la salida.</dd>
  <dt>{{domxref("WaveShaperNode")}}</dt>
- <dd>La interfaz <strong><code>WaveShaperNode</code></strong><strong> </strong>representa un la interfaz representa un distorsionador no lineal. Es un {{domxref("AudioNode")}} que usa una curva para aplicar una distorsión en forma de onda a la señal. Además de los obvios efectos de distorsión, a menudo se usa para agregar una sensación cálida a la señal.</dd>
+ <dd>La interfaz <strong><code>WaveShaperNode</code></strong><strong> </strong>representa un la interfaz representa un distorsionador no lineal. Es un {{domxref("AudioNode")}} que usa una curva para aplicar una distorsión en forma de onda a la señal. Además de los obvios efectos de distorsión, a menudo se usa para agregar una sensación cálida a la señal.</dd>
  <dt>{{domxref("PeriodicWave")}}</dt>
  <dd>Describe una forma de onda periódica que puede ser usada para dar forma a la salida de un {{ domxref("OscillatorNode") }}.</dd>
  <dt>{{domxref("IIRFilterNode")}}</dt>
@@ -112,7 +112,7 @@ original_slug: Web_Audio_API
  <dt>{{domxref("AudioDestinationNode")}}</dt>
  <dd>La interfaz <strong><code>AudioDestinationNode</code></strong> representa el destino final de una fuente de audio en contexto determinado — usualmente los altavoces de tu dispositivo.</dd>
  <dt>{{domxref("MediaStreamAudioDestinationNode")}}</dt>
- <dd>La interfaz <code><strong>MediaStreamAudio</strong></code><strong><code>DestinationNode</code></strong> representa un destino de audio que consiste en un {{domxref("MediaStream")}} de <a href="/en-US/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a> con un <code>AudioMediaStreamTrack</code> sencillo, que puede ser usado de una manera similiar a un {{domxref("MediaStream")}} obtenido desde {{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }}. Es un {{domxref("AudioNode")}} que actúa como un destino de audio.</dd>
+ <dd>La interfaz <code><strong>MediaStreamAudio</strong></code><strong><code>DestinationNode</code></strong> representa un destino de audio que consiste en un {{domxref("MediaStream")}} de <a href="/en-US/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a> con un <code>AudioMediaStreamTrack</code> sencillo, que puede ser usado de una manera similiar a un {{domxref("MediaStream")}} obtenido desde {{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }}. Es un {{domxref("AudioNode")}} que actúa como un destino de audio.</dd>
 </dl>
 
 <h3 id="Análisis_y_visualización_de_datos">Análisis y visualización de datos</h3>
@@ -163,7 +163,7 @@ original_slug: Web_Audio_API
  <dd>La interfaz <code>AudioWorkletGlobalScope</code> es un objeto derivado de <code>WorkletGlobalScope</code> que representa un contexto del worker en el que se ejecuta un script de procesamiento de audio; está diseñado para permitir la generación, procesamiento, y análisis de datos de audio directamente usando JavaScript en un hilo worklet.</dd>
 </dl>
 
-<p>Antes de que se definieran los worklets de audio, la API de Web Audio usó  <code>ScriptProcessorNode</code> {{deprecated_inline}} para procesamiento de audio basado en JavaScript. Como el código se ejecuta en el hilo principal, tuvo un mal rendimiento. <code>ScriptProcessorNode</code> se mantiene por razones históricas pero está marcada como obsoleta y será removida en una versión futura de la especificación.</p>
+<p>Antes de que se definieran los worklets de audio, la API de Web Audio usó  <code>ScriptProcessorNode</code> {{deprecated_inline}} para procesamiento de audio basado en JavaScript. Como el código se ejecuta en el hilo principal, tuvo un mal rendimiento. <code>ScriptProcessorNode</code> se mantiene por razones históricas pero está marcada como obsoleta y será removida en una versión futura de la especificación.</p>
 
 <dl>
  <dt>{{domxref("ScriptProcessorNode")}} {{deprecated_inline}}</dt>
@@ -171,7 +171,7 @@ original_slug: Web_Audio_API
  <dt>{{event("audioprocess")}} (event) {{deprecated_inline}}</dt>
  <dd>El evento <code>audioprocess</code> es lanzado cuando un buffer de entrada de un {{domxref("ScriptProcessorNode")}} del API del Audio Web está listo para ser procesado.</dd>
  <dt>{{domxref("AudioProcessingEvent")}} {{deprecated_inline}}</dt>
- <dd>El evento <code>AudioProcessingEvent</code> del <a href="/en-US/docs/Web_Audio_API" title="/en-US/docs/Web_Audio_API">API de Audio Web</a> representa los eventos que ocurren cuando un buffer de entrada {{domxref("ScriptProcessorNode")}} está listo para ser procesado.</dd>
+ <dd>El evento <code>AudioProcessingEvent</code> del <a href="/en-US/docs/Web_Audio_API" title="/en-US/docs/Web_Audio_API">API de Audio Web</a> representa los eventos que ocurren cuando un buffer de entrada {{domxref("ScriptProcessorNode")}} está listo para ser procesado.</dd>
 </dl>
 
 <h3 id="Procesamiento_de_audio_offlineen_segundo_plano">Procesamiento de audio offline/en segundo plano</h3>
@@ -200,7 +200,7 @@ original_slug: Web_Audio_API
 
 <h2 id="Example" name="Example">Ejemplo</h2>
 
-<p>Este ejemplo muestra una amplia variedad de funciones del API de Audio Web siendo usadas. Puedes ver este código en acción en la demostración de <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-o-matic</a> (también revisa el <a href="https://github.com/mdn/voice-change-o-matic">código completo en Github</a>) — este es un demo experimental de juguete cambiador de voz; manten tus parlantes en bajo volumen cuando lo uses ¡Al menos al comenzar!</p>
+<p>Este ejemplo muestra una amplia variedad de funciones del API de Audio Web siendo usadas. Puedes ver este código en acción en la demostración de <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-o-matic</a> (también revisa el <a href="https://github.com/mdn/voice-change-o-matic">código completo en Github</a>) — este es un demo experimental de juguete cambiador de voz; manten tus parlantes en bajo volumen cuando lo uses ¡Al menos al comenzar!</p>
 
 <p>Las líneas del API de Audio Web están resaltadas; si quieres saber más sobre lo que hacen los diferentes métodos, etc., busca en las páginas de referencia.</p>
 
@@ -373,7 +373,7 @@ function voiceMute() { // alternar para silenciar y activar el sonido
   <tr>
    <td>{{SpecName('Web Audio API')}}</td>
    <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

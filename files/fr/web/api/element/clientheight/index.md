@@ -42,4 +42,4 @@ var intElemClientHeight = element.clientHeight;
 
 - [`HTMLElement.offsetHeight`](/fr/docs/Web/API/HTMLElement/offsetHeight)
 - [`Element.scrollHeight`](/fr/docs/Web/API/Element/scrollHeight)
-- [Déterminer les dimensions des éléments](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- [Déterminer les dimensions des éléments](/fr/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)

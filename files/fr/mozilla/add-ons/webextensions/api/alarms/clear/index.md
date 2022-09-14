@@ -19,9 +19,11 @@ Cette méthode supprime une alarme à partir du nom passé en argument. Il s'agi
 
 ## Syntaxe
 
-    var clearAlarm = browser.alarms.clear(
-      name // string
-    );
+```js
+var clearAlarm = browser.alarms.clear(
+  name // string
+);
+```
 
 ### Paramètres
 

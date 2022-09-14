@@ -302,17 +302,19 @@ Les pistes de texte à afficher avec une vidéo HTML5 doivent être écrites au 
 
 Un fichier WebVTT typique ressemblera à ceci:
 
-    WEBVTT
+```
+WEBVTT
 
-    1
-    00:00:22.230 --> 00:00:24.606
-     Ceci est le premier sous-titre.
+1
+00:00:22.230 --> 00:00:24.606
+  Ceci est le premier sous-titre.
 
-    2
-    00:00:30.739 --> 00:00:34.074
-     C'est le deuxième .
+2
+00:00:30.739 --> 00:00:34.074
+  C'est le deuxième .
 
-      ...
+  ...
+```
 
 Pour que ceci soit affiché avec la lecture du média HTML, vous devez:
 

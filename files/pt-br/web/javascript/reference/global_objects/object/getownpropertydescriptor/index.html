@@ -32,21 +32,21 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDes
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Este método permite uma análise da descrição precisa de uma propriedade. Uma propriedade em Javascript consiste de um nome com formato <em>texto-valor </em>e um descritor de propriedades. Mais informações sobre os tipos de descritores de propriedades e seus atributos podem ser encontrados em {{jsxref("Object.defineProperty()")}}.</p>
+<p>Este método permite uma análise da descrição precisa de uma propriedade. Uma propriedade em Javascript consiste de um nome com formato <em>texto-valor </em>e um descritor de propriedades. Mais informações sobre os tipos de descritores de propriedades e seus atributos podem ser encontrados em {{jsxref("Object.defineProperty()")}}.</p>
 
-<p>Um descritor de propriedade é um registro com alguns dos seguintes atributos:</p>
+<p>Um descritor de propriedade é um registro com alguns dos seguintes atributos:</p>
 
 <dl>
  <dt><code>value</code></dt>
- <dd>o valor associado com a propriedade (somente para descritores de dados).</dd>
+ <dd>o valor associado com a propriedade (somente para descritores de dados).</dd>
  <dt><code><strong>writable</strong></code></dt>
- <dd><code>true</code> se, e somente se, o valor associado com a propriedade pode ser alterado (somente para descritores de dados).</dd>
+ <dd><code>true</code> se, e somente se, o valor associado com a propriedade pode ser alterado (somente para descritores de dados).</dd>
  <dt><code>get</code></dt>
- <dd>Uma função que serve como um <em>getter</em>, para obter o valor da propriedade, ou {{jsxref("undefined")}} se não houver (somente para descritores de acesso).</dd>
+ <dd>Uma função que serve como um <em>getter</em>, para obter o valor da propriedade, ou {{jsxref("undefined")}} se não houver (somente para descritores de acesso).</dd>
  <dt><code>set</code></dt>
- <dd>Uma função que serve como um s<em>etter</em>, para atribuir um valor à propriedade, ou {{jsxref("undefined")}} se não houver (somente para descritores de acesso).</dd>
+ <dd>Uma função que serve como um s<em>etter</em>, para atribuir um valor à propriedade, ou {{jsxref("undefined")}} se não houver (somente para descritores de acesso).</dd>
  <dt><code>configurable</code></dt>
- <dd><code>true</code> se, e somente se, o tipo deste descritor de propriedade pode ser alterado e se a propriedade pode ser excluída do objeto correspondente.</dd>
+ <dd><code>true</code> se, e somente se, o tipo deste descritor de propriedade pode ser alterado e se a propriedade pode ser excluída do objeto correspondente.</dd>
  <dt><code>enumerable</code></dt>
  <dd><code>true</code> se, e somente se, esta propriedade aparece durante a enumeração das propriedades do objeto correspondente.</dd>
 </dl>
@@ -71,7 +71,7 @@ d = Object.getOwnPropertyDescriptor(o, 'baz');
 
 <h2 id="Notas">Notas</h2>
 
-<p>No ES5, o primeiro parâmetro deste método não é um objeto (tipo primitivo), então ele irá gerar um {{jsxref("TypeError")}}. No ES6, um primeiro argumento não-objeto será primeiramente convertido para objeto.</p>
+<p>No ES5, o primeiro parâmetro deste método não é um objeto (tipo primitivo), então ele irá gerar um {{jsxref("TypeError")}}. No ES6, um primeiro argumento não-objeto será primeiramente convertido para objeto.</p>
 
 <pre class="brush: js">Object.getOwnPropertyDescriptor("foo", 0);
 // TypeError: "foo" is not an object  // Código ES5
@@ -97,12 +97,12 @@ Object.getOwnPropertyDescriptor("foo", 0);
   <tr>
    <td>{{SpecName('ES6', '#sec-object.getownpropertydescriptor', 'Object.getOwnPropertyDescriptor')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-object.getownpropertydescriptor', 'Object.getOwnPropertyDescriptor')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -117,9 +117,9 @@ Object.getOwnPropertyDescriptor("foo", 0);
 </div>
 </div>
 
-<p> </p>
+<p> </p>
 
-<h2 id="Veja_Também">Veja Também</h2>
+<h2 id="Veja_Também">Veja Também</h2>
 
 <ul>
  <li>{{jsxref("Object.defineProperty()")}}</li>

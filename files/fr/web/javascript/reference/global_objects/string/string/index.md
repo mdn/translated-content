@@ -20,7 +20,7 @@ String(truc)
 - `truc`
   - : N'importe quelle valeur qui peut être convertie en une chaîne de caractères.
 
-## Exemples 
+## Exemples
 
 ### Distinction entre le constructeur `String()` et la fonction `String()`
 

@@ -27,7 +27,7 @@ original_slug: Web/HTML/Elemento/input/text
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
+   <td><strong><a href="#value">Value</a></strong></td>
    <td>Un {{DOMxRef("DOMString")}} que representa el texto contenido en el campo de texto.</td>
   </tr>
   <tr>
@@ -56,7 +56,7 @@ original_slug: Web/HTML/Elemento/input/text
 <pre class="brush: js notranslate">let theText = myTextInput.value;
 </pre>
 
-<p>Si no existen restricciones de validación para la entrada (consulta {{anch("Validación")}} para obtener más detalles), el valor puede ser una cadena vacía ("").</p>
+<p>Si no existen restricciones de validación para la entrada (consulta <a href="#validación">Validación</a> para obtener más detalles), el valor puede ser una cadena vacía ("").</p>
 
 <h2 id="Atributos_adicionales">Atributos adicionales</h2>
 
@@ -71,35 +71,35 @@ original_slug: Web/HTML/Elemento/input/text
  </thead>
  <tbody>
   <tr>
-   <td><code>{{anch("list")}}</code></td>
+   <td><code><a href="#list">list</a></code></td>
    <td>El id del elemento {{HTMLElement("datalist")}} que contiene las opciones de autocompletar predefinidas</td>
   </tr>
   <tr>
-   <td><code>{{anch("maxlength")}}</code></td>
+   <td><code><a href="#maxlength">maxlength</a></code></td>
    <td>El número máximo de caracteres que debe aceptar la entrada</td>
   </tr>
   <tr>
-   <td><code>{{anch("minlength")}}</code></td>
+   <td><code><a href="#minlength">minlength</a></code></td>
    <td>El número mínimo de caracteres que la entrada puede tener y aún se considera válida</td>
   </tr>
   <tr>
-   <td><code>{{anch("pattern")}}</code></td>
+   <td><code><a href="#pattern">pattern</a></code></td>
    <td>Una expresión regular que el contenido de la entrada debe coincidir para que sea válida</td>
   </tr>
   <tr>
-   <td><code>{{anch("placeholder")}}</code></td>
+   <td><code><a href="#placeholder">placeholder</a></code></td>
    <td>Un valor de ejemplo para mostrar en el campo de entrada siempre y cuando esté vacío</td>
   </tr>
   <tr>
-   <td><code>{{anch("readonly")}}</code></td>
+   <td><code><a href="#readonly">readonly</a></code></td>
    <td>Un atributo booleano que indica si el contenido de la entrada debe ser de solo lectura.</td>
   </tr>
   <tr>
-   <td><code>{{anch("size")}}</code></td>
+   <td><code><a href="#size">size</a></code></td>
    <td>Un número que indica cuántos caracteres de ancho debe tener el campo de entrada.</td>
   </tr>
   <tr>
-   <td><code>{{anch("spellcheck")}}</code></td>
+   <td><code><a href="#spellcheck">spellcheck</a></code></td>
    <td>Controla si se habilita o no la revisión ortográfica para el campo de entrada, o si se debe usar la configuración de revisión ortográfica predeterminada</td>
   </tr>
  </tbody>
@@ -133,7 +133,7 @@ original_slug: Web/HTML/Elemento/input/text
 </div>
 </div>
 
-<p>Consulta {{anch("Especificación de un patrón")}} para obtener más detalles y un ejemplo.</p>
+<p>Consulta <a href="#especificación_de_un_patrón">Especificación de un patrón</a> para obtener más detalles y un ejemplo.</p>
 
 <h3 id="HTMLAttrDefplaceholder">{{HTMLAttrDef("placeholder")}}</h3>
 
@@ -157,7 +157,7 @@ original_slug: Web/HTML/Elemento/input/text
 
 <p>El atributo {{HTMLAttrDef("size")}} es un valor numérico que indica cuántos caracteres de ancho debe tener el campo de entrada. El valor debe ser un número mayor que cero, y el valor predeterminado es 20. Dado que el ancho de los caracteres varía, esto puede ser exacto o no y no se debe confiar en que lo sea; la entrada resultante puede ser más estrecha o más ancha que el número especificado de caracteres, dependiendo de los caracteres y la fuente (configuración de {{CSSxRef("fuente")}} en uso).</p>
 
-<p>Esto <em>no</em> establece un límite en la cantidad de caracteres que el usuario puede ingresar en el campo. Solo especifica aproximadamente cuántos se pueden ver a la vez. Para establecer un límite superior en la longitud de los datos de entrada, utiliza el atributo {{anch("maxlength")}}.</p>
+<p>Esto <em>no</em> establece un límite en la cantidad de caracteres que el usuario puede ingresar en el campo. Solo especifica aproximadamente cuántos se pueden ver a la vez. Para establecer un límite superior en la longitud de los datos de entrada, utiliza el atributo <a href="#maxlength">maxlength</a>.</p>
 
 <h3 id="HTMLAttrDefspellcheck">{{HTMLAttrDef("spellcheck")}}</h3>
 
@@ -172,7 +172,7 @@ original_slug: Web/HTML/Elemento/input/text
  <dd>Sigue el comportamiento predeterminado del elemento para la revisión ortográfica. Esto se puede basar en la configuración de la corrección ortográfica de los padres u otros factores.</dd>
 </dl>
 
-<p>Un campo de entrada puede tener habilitado el corrector ortográfico si no tiene el atributo {{anch("readonly")}} configurado y no está deshabilitado.</p>
+<p>Un campo de entrada puede tener habilitado el corrector ortográfico si no tiene el atributo <a href="#readonly">readonly</a> configurado y no está deshabilitado.</p>
 
 <p>Es posible que el valor devuelto al leer el corrector ortográfico puede no reflejar el estado real del corrector ortográfico dentro de un control, si las preferencias de {{Glossary("agente de usuario", "agentes de usuario")}} anulan la configuración.</p>
 
@@ -189,11 +189,11 @@ original_slug: Web/HTML/Elemento/input/text
  </thead>
  <tbody>
   <tr>
-   <td><code>{{anch("autocorrect")}}</code></td>
+   <td><code><a href="#autocorrect">autocorrect</a></code></td>
    <td>Una cadena que indica si la autocorrección está activa (<code>on</code>) o (<code>off</code>). <strong>Solo Safari.</strong></td>
   </tr>
   <tr>
-   <td><code>{{anch("mozactionhint")}}</code></td>
+   <td><code><a href="#mozactionhint">mozactionhint</a></code></td>
    <td>Una cadena que indica el tipo de acción que se realizará cuando el usuario presione la tecla <kbd>Intro</kbd> o <kbd>Retorno</kbd> mientras editas el campo; esto se usa para determinar una etiqueta apropiada para esa tecla en un teclado virtual. <strong>Solo Firefox para Android.</strong></td>
   </tr>
  </tbody>

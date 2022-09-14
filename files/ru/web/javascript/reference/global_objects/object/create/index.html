@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 ---
 <div>{{JSRef}}</div>
 
-<p>Метод <code><strong>Object.create()</strong></code> создаёт новый объект с указанным прототипом и свойствами.</p>
+<p>Метод <code><strong>Object.create()</strong></code> создаёт новый объект с указанным прототипом и свойствами.</p>
 
 <h2 id="Syntax">Синтаксис</h2>
 
@@ -25,7 +25,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
  <dt><code>proto</code></dt>
  <dd>Объект, который станет прототипом вновь созданного объекта.</dd>
  <dt><code>propertiesObject</code></dt>
- <dd>Необязательный параметр. Если указан и не равен {{jsxref("Global_Objects/undefined", "undefined")}}, должен быть объектом, чьи собственные перечисляемые свойства (то есть такие, которые определены на самом объекте, а не унаследованы по цепочке прототипов) указывают дескрипторы свойств, добавляемых в новый объект. Имена добавляемых свойств совпадают с именами свойств в этом объекте. Эти свойства соответствуют второму аргументу метода {{jsxref("Object.defineProperties()")}}.</dd>
+ <dd>Необязательный параметр. Если указан и не равен {{jsxref("Global_Objects/undefined", "undefined")}}, должен быть объектом, чьи собственные перечисляемые свойства (то есть такие, которые определены на самом объекте, а не унаследованы по цепочке прототипов) указывают дескрипторы свойств, добавляемых в новый объект. Имена добавляемых свойств совпадают с именами свойств в этом объекте. Эти свойства соответствуют второму аргументу метода {{jsxref("Object.defineProperties()")}}.</dd>
 </dl>
 
 <h3 id="Возвращаемые_значения">Возвращаемые значения</h3>
@@ -163,41 +163,41 @@ o2 = Object.create({}, {
   // Этапы производства ECMA-262, издание 5, 15.2.3.5
   // Ссылка: http://es5.github.io/#x15.2.3.5
   Object.create = (function() {
-    // Чтобы сэкономить память, используйте общий конструктор
+    // Чтобы сэкономить память, используйте общий конструктор
     function Temp() {}
 
-    // делает безопасную ссылку на Object.prototype.hasOwnProperty
-    var hasOwn = Object.prototype.hasOwnProperty;
+    // делает безопасную ссылку на Object.prototype.hasOwnProperty
+    var hasOwn = Object.prototype.hasOwnProperty;
 
     return function (O) {
-      // 1. Если Type(O) не является Object or Null выдаётся исключение TypeError.
+      // 1. Если Type(O) не является Object or Null выдаётся исключение TypeError.
       if (typeof O != 'object') {
         throw TypeError('Object prototype may only be an Object or null');
       }
 
-      // 2. Пусть obj будет результатом создания нового объекта, как если бы
-      //    выражение new Object(), где Object является стандартным встроенным
-      //    конструктором  с таким именем
-      // 3. Установите для внутреннего свойства [[Prototype]] объекта obj значение O.
+      // 2. Пусть obj будет результатом создания нового объекта, как если бы
+      //    выражение new Object(), где Object является стандартным встроенным
+      //    конструктором  с таким именем
+      // 3. Установите для внутреннего свойства [[Prototype]] объекта obj значение O.
       Temp.prototype = O;
       var obj = new Temp();
       Temp.prototype = null; // Давайте не будем держать случайные ссылки на О...
 
-      // 4.  Если аргумент Properties присутствует и не определён, добавляем
-      //    собственные свойства к obj, как будто вызывая стандартную встроенную
-      //    функцию Object.defineProperties с аргументами obj и
-      //    Properties.
-      if (arguments.length &gt; 1) {
-        // Object.defineProperties делает ToObject своим первым аргументом.
-        var Properties = Object(arguments[1]);
-        for (var prop in Properties) {
-          if (hasOwn.call(Properties, prop)) {
-            obj[prop] = Properties[prop];
-          }
-        }
-      }
+      // 4.  Если аргумент Properties присутствует и не определён, добавляем
+      //    собственные свойства к obj, как будто вызывая стандартную встроенную
+      //    функцию Object.defineProperties с аргументами obj и
+      //    Properties.
+      if (arguments.length &gt; 1) {
+        // Object.defineProperties делает ToObject своим первым аргументом.
+        var Properties = Object(arguments[1]);
+        for (var prop in Properties) {
+          if (hasOwn.call(Properties, prop)) {
+            obj[prop] = Properties[prop];
+          }
+        }
+      }
 
-      // 5. Возвращает obj
+      // 5. Возвращает obj
       return obj;
     };
   })();

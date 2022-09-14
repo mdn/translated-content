@@ -26,23 +26,23 @@ translation_of: Web/HTML/Global_attributes/itemref
 &lt;p id="a"&gt;Name: &lt;span itemprop="name"&gt;Amanda&lt;/span&gt; &lt;/p&gt;
 &lt;div id="b" itemprop="band" itemscope itemref="c"&gt;&lt;/div&gt;
 &lt;div id="c"&gt;
-    &lt;p&gt;Band: &lt;span itemprop="name"&gt;Jazz Band&lt;/span&gt; &lt;/p&gt;
-    &lt;p&gt;Size: &lt;span itemprop="size"&gt;12&lt;/span&gt; players&lt;/p&gt;
+    &lt;p&gt;Band: &lt;span itemprop="name"&gt;Jazz Band&lt;/span&gt; &lt;/p&gt;
+    &lt;p&gt;Size: &lt;span itemprop="size"&gt;12&lt;/span&gt; players&lt;/p&gt;
 &lt;/div&gt;
 </pre>
 
 <h3 id="구조화_데이터">구조화 데이터</h3>
 
-<p><small>(<a href="https://json-ld.org/" rel="external">JSON-LD</a> 형식)</small></p>
+<p><small>(<a href="https://json-ld.org/" rel="external">JSON-LD</a> 형식)</small></p>
 
 <pre class="brush: json">{
   "@id": "amanda",
-  "name": "Amanda",
-  "band": {
-    "@id": "b",
-    "name": "Jazz Band",
-    "size": 12
-  }
+  "name": "Amanda",
+  "band": {
+    "@id": "b",
+    "name": "Jazz Band",
+    "size": 12
+  }
 }
 </pre>
 
@@ -50,33 +50,11 @@ translation_of: Web/HTML/Global_attributes/itemref
 
 <p>{{EmbedLiveSample('예제')}}</p>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML Microdata', "#dfn-itemref", "itemref")}}</td>
-   <td>{{Spec2('HTML Microdata')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "microdata.html#attr-itemref", "itemref")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
-
-
 
 <p>{{Compat("html.global_attributes.itemref")}}</p>
 

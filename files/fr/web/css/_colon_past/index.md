@@ -40,19 +40,21 @@ Le sélecteur de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs
 
 ### WebVTT
 
-    FICHIER WEBVTT
+```
+FICHIER WEBVTT
 
-    1
-    00:00:03.500 --> 00:00:05.000
-    Voici le premier sous-titre
+1
+00:00:03.500 --> 00:00:05.000
+Voici le premier sous-titre
 
-    2
-    00:00:06.000 --> 00:00:09.000
-    Voici le second sous-titre
+2
+00:00:06.000 --> 00:00:09.000
+Voici le second sous-titre
 
-    3
-    00:00:11.000 --> 00:00:19.000
-    Voici le troisième sous-titre
+3
+00:00:11.000 --> 00:00:19.000
+Voici le troisième sous-titre
+```
 
 ## Spécifications
 

@@ -13,16 +13,16 @@ original_slug: Web/API/XMLHttpRequest/onreadystatechange
 ---
 <div>{{APIRef}}</div>
 
-<p>Um <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventHandler" title="A possible way to get notified of Events of a particular type (such as click) for a given object is to specify an event handler using:"><code>EventHandler</code></a> é chamado sempre que o atributo <code>readyState</code> é modificado. O callback é chamado a partir da interface do usuário. A propriedade <strong><code>XMLHttpRequest.onreadystatechange</code></strong> contém o manipulador de eventos que é chamado quando o evento <a href="/pt-BR/docs/Web/Events/readystatechange">readystatechange</a> é disparado, ou seja, toda vez que a propriedade {{domxref("XMLHttpRequest.readyState", "readyState")}} do {{domxref("XMLHttpRequest")}} é modificada.</p>
+<p>Um <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventHandler" title="A possible way to get notified of Events of a particular type (such as click) for a given object is to specify an event handler using:"><code>EventHandler</code></a> é chamado sempre que o atributo <code>readyState</code> é modificado. O callback é chamado a partir da interface do usuário. A propriedade <strong><code>XMLHttpRequest.onreadystatechange</code></strong> contém o manipulador de eventos que é chamado quando o evento <a href="/pt-BR/docs/Web/Events/readystatechange">readystatechange</a> é disparado, ou seja, toda vez que a propriedade {{domxref("XMLHttpRequest.readyState", "readyState")}} do {{domxref("XMLHttpRequest")}} é modificada.</p>
 
 <div class="warning">
-<p><strong>Atenção:</strong> Isso não deve ser usado com solicitações síncronas e não deve ser usado como código nativo.</p>
+<p><strong>Atenção:</strong> Isso não deve ser usado com solicitações síncronas e não deve ser usado como código nativo.</p>
 </div>
 
-<p>O evento <code>readystatechange</code> não será chamado quando a <code>XMLHttpRequest</code> request for cancelada pelo método <a href="/pt-BR/docs/Web/API/XMLHttpRequest/abort">abort()</a>.</p>
+<p>O evento <code>readystatechange</code> não será chamado quando a <code>XMLHttpRequest</code> request for cancelada pelo método <a href="/pt-BR/docs/Web/API/XMLHttpRequest/abort">abort()</a>.</p>
 
 <div class="note">
-<p><strong>Atualização</strong>: Está disparando na última versão de navegadores (Firefox 51.0.1, Opera 43.0.2442.991, Safari 10.0.3 (12602.4.8), Chrome 54.0.2840.71, Edge, IE11). Exemplo <a href="https://jsfiddle.net/merksam/ve5oc0gn/">aqui</a> - <em>basta recarregar a página algumas vezes</em>.</p>
+<p><strong>Atualização</strong>: Está disparando na última versão de navegadores (Firefox 51.0.1, Opera 43.0.2442.991, Safari 10.0.3 (12602.4.8), Chrome 54.0.2840.71, Edge, IE11). Exemplo <a href="https://jsfiddle.net/merksam/ve5oc0gn/">aqui</a> - <em>basta recarregar a página algumas vezes</em>.</p>
 </div>
 
 <h2 id="Syntax" name="Syntax">Sitaxe</h2>
@@ -32,7 +32,7 @@ original_slug: Web/API/XMLHttpRequest/onreadystatechange
 <h3 id="Valores">Valores</h3>
 
 <ul>
- <li><code><em>callback</em></code> é a função que será executada quando o readyState mudar.</li>
+ <li><code><em>callback</em></code> é a função que será executada quando o readyState mudar.</li>
 </ul>
 
 <h2 id="Example" name="Example">Exemplo</h2>
@@ -44,8 +44,8 @@ original_slug: Web/API/XMLHttpRequest/onreadystatechange
 xhr.open(<em>method</em>, <em>url</em>, true);
 xhr.onreadystatechange = function () {
         if(xhr.readyState === XMLHttpRequest.DONE &amp;&amp; xhr.status === 200) {
-            console.log(xhr.responseText);
-        }
+            console.log(xhr.responseText);
+        }
     };
 xhr.send();</pre>
 
@@ -68,54 +68,4 @@ xhr.send();</pre>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(1)}}</td>
-   <td>{{CompatGeckoDesktop(1.0)}}</td>
-   <td>{{CompatIe(7)}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatSafari(1.2)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>1.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Internet Explorer versão 5 e 6 suportam chamadas ajax usando <code>ActiveXObject()</code>.</p>
+{{Compat("api.XMLHttpRequest.readystatechange_event")}}

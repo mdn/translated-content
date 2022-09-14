@@ -1,14 +1,6 @@
 ---
 title: 左シフト (<<)
 slug: Web/JavaScript/Reference/Operators/Left_shift
-tags:
-  - ビット演算子
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.left_shift
-translation_of: Web/JavaScript/Reference/Operators/Left_shift
 ---
 {{jsSidebar("Operators")}}
 
@@ -57,5 +49,5 @@ a << b
 
 ## 関連情報
 
-- [ビット演算子 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise)
+- [ビット演算子 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#ビット演算子)
 - [左シフト代入演算子](/ja/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)

@@ -1,20 +1,6 @@
 ---
 title: MediaStream.getVideoTracks()
 slug: Web/API/MediaStream/getVideoTracks
-tags:
-  - API
-  - Media
-  - メディアキャプチャとストリーム API
-  - メディアストリーム API
-  - MediaStream
-  - メソッド
-  - リファレンス
-  - 動画
-  - getVideoTracks
-  - ストリーム
-  - トラック
-browser-compat: api.MediaStream.getVideoTracks
-translation_of: Web/API/MediaStream/getVideoTracks
 ---
 {{APIRef("Media Capture and Streams")}}
 
@@ -41,7 +27,7 @@ var mediaStreamTracks[] = mediaStream.getVideoTracks();
 ## 例
 
 次の例は、 [Chrome's
-Image Capture / Photo Resolution Sample](https://googlechrome.github.io/samples/image-capture/photo-resolution.html) (英語)から抜粋したものであり、 `getVideoTracks()` を用いて取得したトラックを {{domxref("ImageCapture.ImageCapture", "ImageCapture()")}} コンストラクターへ渡しています。
+Image Capture / Photo Resolution Sample](https://googlechrome.github.io/samples/image-capture/photo-resolution.html) (英語)から抜粋したものであり、 `getVideoTracks()` を用いて取得したトラックを {{domxref("ImageCapture.ImageCapture", "ImageCapture()")}} コンストラクターへ渡しています。
 
 ```js
 var imageCapture;

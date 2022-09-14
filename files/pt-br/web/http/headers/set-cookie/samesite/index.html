@@ -5,11 +5,11 @@ tags:
   - Referências
 translation_of: Web/HTTP/Headers/Set-Cookie/SameSite
 ---
-<p>O atributo <span class="seoSummary"> <strong><code>SameSite</code></strong> </span> do <span class="seoSummary">{{HTTPHeader("Set-Cookie")}} </span>. O cabeçalho de resposta HTTP permite que você declare se o seu cookie deve ser restrito a um contexto de primeira ou mesma parte.</p>
+<p>O atributo <span class="seoSummary"> <strong><code>SameSite</code></strong> </span> do <span class="seoSummary">{{HTTPHeader("Set-Cookie")}} </span>. O cabeçalho de resposta HTTP permite que você declare se o seu cookie deve ser restrito a um contexto de primeira ou mesma parte.</p>
 
 <h2 id="Valores">Valores</h2>
 
-<p>The <code>SameSite</code> aceita três valores:</p>
+<p>O atributo <code>SameSite</code> aceita três valores:</p>
 
 <h3 id="Lax"><code>Lax</code></h3>
 
@@ -25,7 +25,7 @@ translation_of: Web/HTTP/Headers/Set-Cookie/SameSite
 
 <p><code>None</code> costumava ser o valor padrão, mas as versões recentes do navegador fizeram <code>Lax</code> o valor padrão para ter uma defesa razoavelmente robusta contra algumas classes de falsificação de solicitações entre sites ({{Glossary("CSRF")}}).</p>
 
-<p><code>None</code> requer o atributo <a href="#Secure"><code>Secure</code></a> nas versões mais recentes do navegador. Veja abaixo para mais informações.</p>
+<p><code>None</code> requer o atributo <a href="#Secure"><code>Secure</code></a> nas versões mais recentes do navegador. Veja abaixo para mais informações.</p>
 
 <h2 id="Fixação_de_avisos_comuns">Fixação de avisos comuns</h2>
 
@@ -65,12 +65,12 @@ translation_of: Web/HTTP/Headers/Set-Cookie/SameSite
 
 <pre class="example-good notranslate">Set-Cookie: flavor=choco; <strong>SameSite=Lax</strong></pre>
 
-<h2 id="Examplo"><strong>Examplo:</strong></h2>
+<h2 id="Exemplo"><strong>Exemplo:</strong></h2>
 
 <pre class="notranslate">RewriteEngine on
 RewriteBase "/"
-RewriteCond "%{HTTP_HOST}"       "^example\.org$" [NC]
-RewriteRule "^(.*)"              "https://www.example.org/index.html" [R=301,L,QSA]
+RewriteCond "%{HTTP_HOST}"       "^example\.org$" [NC]
+RewriteRule "^(.*)"              "https://www.example.org/index.html" [R=301,L,QSA]
 RewriteRule "^(.*)\.ht$"         "index.php?nav=$1 [NC,L,QSA,CO=RewriteRule:01:https://www.example.org:30/:SameSite=None:Secure]
 RewriteRule "^(.*)\.htm$"        "index.php?nav=$1 [NC,L,QSA,CO=RewriteRule:02:https://www.example.org:30/:SameSite=None:Secure]
 RewriteRule "^(.*)\.html$"       "index.php?nav=$1 [NC,L,QSA,CO=RewriteRule:03:https://www.example.org:30/:SameSite=None:Secure]

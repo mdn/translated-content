@@ -3,11 +3,11 @@ title: How to turn off form autocompletion
 slug: Web/Security/Securing_your_site/Turning_off_form_autocompletion
 translation_of: Web/Security/Securing_your_site/Turning_off_form_autocompletion
 ---
-<p><span class="seoSummary">В этой статье объясняется как можно отключить автозаполнение полей на сайте.</span></p>
+<p><span class="seoSummary">В этой статье объясняется как можно отключить автозаполнение полей на сайте.</span></p>
 
-<p>По умолчанию браузеры запоминают информацию, которую пользователи отправляют через {{HTMLElement("input")}} поля на сайтах. Это позволяет браузеру предлагать варианты для автодополнения (то есть предлагать возможные дополнения для полей, в которые пользователь начал вводить данные) или автозаполнение (то есть предварительно заполнять определённые поля при загрузке).</p>
+<p>По умолчанию браузеры запоминают информацию, которую пользователи отправляют через {{HTMLElement("input")}} поля на сайтах. Это позволяет браузеру предлагать варианты для автодополнения (то есть предлагать возможные дополнения для полей, в которые пользователь начал вводить данные) или автозаполнение (то есть предварительно заполнять определённые поля при загрузке).</p>
 
-<p>Эти функции обычно включены по умолчанию, но они могут вызвать проблемы конфиденциальности пользователей, поэтому браузеры могут позволить отключать их. Однако некоторые данные, представленные в формах, либо не будут полезны в будущем (например, одноразовый пин-код), либо содержат конфиденциальную информацию (например, уникальный правительственный идентификатор или код безопасности кредитной карты). Как автор сайта, вы можете предпочесть, чтобы браузер не запоминал значения для таких полей, даже если в браузере включена функция автозаполнения.</p>
+<p>Эти функции обычно включены по умолчанию, но они могут вызвать проблемы конфиденциальности пользователей, поэтому браузеры могут позволить отключать их. Однако некоторые данные, представленные в формах, либо не будут полезны в будущем (например, одноразовый пин-код), либо содержат конфиденциальную информацию (например, уникальный правительственный идентификатор или код безопасности кредитной карты). Как автор сайта, вы можете предпочесть, чтобы браузер не запоминал значения для таких полей, даже если в браузере включена функция автозаполнения.</p>
 
 <p>It is important to know that if you turn off autocomplete, you are <strong>breaking</strong> the rule <a href="https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html">1.3.5: Identify Input Purpose in WCAG 2.1</a>. If you are making a website that should follow WCAG, you should use autocomplete with autofill.</p>
 
@@ -65,6 +65,6 @@ translation_of: Web/Security/Securing_your_site/Turning_off_form_autocompletion
 
 <h2 id="Tools_for_disabling_autocompletion">Tools for disabling autocompletion</h2>
 
-<p>The <a href="https://terrylinooo.github.io/jquery.disableAutoFill/">jquery.disableAutoFill</a> plugin randomizes an input's <code>name</code> attribute by default. When the form is submitted, the plugin restores the original name. This prevents auto-completion for all browsers (includes third-party auto-completion extensions) but doesn't necessarily help with login fields.</p>
+<p>The <a href="https://terrylinooo.github.io/jquery.disableAutoFill/">jquery.disableAutoFill</a> plugin randomizes an input's <code>name</code> attribute by default. When the form is submitted, the plugin restores the original name. This prevents auto-completion for all browsers (includes third-party auto-completion extensions) but doesn't necessarily help with login fields.</p>
 
 <p>{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}</p>

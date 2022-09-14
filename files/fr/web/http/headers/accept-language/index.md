@@ -38,12 +38,14 @@ Si le serveur ne peut servir aucune langue qui corresponde, il peut théoriqueme
 
 ## Syntaxe
 
-    Accept-Language: <langue>
-    Accept-Language: <locale>
-    Accept-Language: *
+```
+Accept-Language: <langue>
+Accept-Language: <locale>
+Accept-Language: *
 
-    // Type multiples, pondérés par la syntaxe {{glossary("quality values", "valeur de qualité")}} :
-    Accept-Language: fr-CH, fr;q=0.9, en;q=0.8, de;q=0.7, *;q=0.5
+// Type multiples, pondérés par la syntaxe {{glossary("quality values", "valeur de qualité")}} :
+Accept-Language: fr-CH, fr;q=0.9, en;q=0.8, de;q=0.7, *;q=0.5
+```
 
 ## Directives
 
@@ -54,15 +56,17 @@ Si le serveur ne peut servir aucune langue qui corresponde, il peut théoriqueme
 - `*`
   - : Toute langue ; `'*'` est utilisé comme un joker.
 - `;q=` (pondération q-factor)
-  - : Une quantité numérique donnant un ordre de préférence et qui utilise une [valeur de qualité](/en-US/docs/Glossary/Quality_values) relative, appelée _poids_.
+  - : Une quantité numérique donnant un ordre de préférence et qui utilise une [valeur de qualité](/fr/docs/Glossary/Quality_values) relative, appelée _poids_.
 
 ## Exemples
 
-    Accept-Language: de
+```
+Accept-Language: de
 
-    Accept-Language: de-CH
+Accept-Language: de-CH
 
-    Accept-Language: en-US,en;q=0.5
+Accept-Language: en-US,en;q=0.5
+```
 
 ## Spécifications
 
@@ -74,7 +78,7 @@ Si le serveur ne peut servir aucune langue qui corresponde, il peut théoriqueme
 
 {{Compat("http.headers.Accept-Language")}}
 
-## Voir également
+## Voir aussi
 
 - HTTP [négociation de contenu](/fr-FR/docs/Web/HTTP/Content_negotiation)
 - En-tête avec le résultat de la négociation de contenu : {{HTTPHeader("Content-Language")}}

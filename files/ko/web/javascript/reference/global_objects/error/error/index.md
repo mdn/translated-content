@@ -25,10 +25,10 @@ new Error(message, fileName, lineNumber)
 
 - `message` {{Optional_Inline}}
   - : 사람이 읽을 수 있는 오류 메시지입니다.
-- `fileName` {{Optional_Inline}}{{Non-standard_inline}}
+- `fileName` {{Optional_Inline}}{{Non-standard_inline}}
   - : 생성할 `Error` 객체의 `fileName` 속성으로 설정할 값입니다. 기본 값은
     `Error()` 생성자를 호출한 파일의 이름입니다.
-- `lineNumber` {{Optional_Inline}}{{Non-standard_inline}}
+- `lineNumber` {{Optional_Inline}}{{Non-standard_inline}}
   - : 생성할 `Error` 객체의 `lineNumber` 속성으로 설정할 값입니다. 기본 값은
     `Error()` 생성자를 호출한 줄의 번호입니다.
 

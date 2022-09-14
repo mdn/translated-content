@@ -311,28 +311,30 @@ Si quelque chose se passe mal, vérifier dans la [console du navigateur](https:/
 
 Si vous n'avez pas réussi à démarrer l'application, vous devriez voir un message d'erreur vous donnant un indice sur le problème.
 
-    "No such native application <name>"
+```
+"No such native application <name>"
+```
 
 - Vérifiez que le nom passé comme argument à la fonction `runtime.connectNative()` correspond au nom dans le manifest de l'application
 - OS X / Linux : vérifiez que le nom du fichier de manifest de l'application est \<name>.json.
 - Windows : vérifiez que la clé de registre est dans l'endroit correcte, et que son nom correspond au «&nbsp;name&nbsp;» dans le manifest de l'application.
 - Windows : vérifiez que le chemin donné dans la clé de registre pointe vers le manifest de l'application.
 
-<!---->
-
-    "Error: Invalid application <name>"
+  ```
+  "Error: Invalid application <name>"
+  ```
 
 - Vérifier que le nom de l'application ne contient pas de caractères invalides.
 
-<!---->
-
-    "'python' is not recognized as an internal or external command, ..."
+  ```
+  "'python' is not recognized as an internal or external command, ..."
+  ```
 
 - Windows : Si votre application est un script écrit en Python, vérifiez que Python est installé et que vous avez un chemin définit pour lui.
 
-<!---->
-
-    "File at path <path> does not exist, or is not executable"
+  ```
+  "File at path <path> does not exist, or is not executable"
+  ```
 
 - Si vous voyez ce message, alors le fichier de manifest de l'application a été trouvé.
 - Vérifier que le «&nbsp;chemin&nbsp;» dans le manifest de l'application est correct.
@@ -340,21 +342,21 @@ Si vous n'avez pas réussi à démarrer l'application, vous devriez voir un mess
 - Vérifiez que l'application se trouve bien à l'endroit indiqué par la propriété «&nbsp;path&nbsp;» dans le manifest de l'application.
 - Vérifiez que l'application est exécutable.
 
-<!---->
-
-    "This extension does not have permission to use native application <name>"
+  ```
+  "This extension does not have permission to use native application <name>"
+  ```
 
 - Vérifier que le tableau «&nbsp;allowed_extensions&nbsp;» dans le manifest de l'application contient l'ID de l'add‐on.
 
-<!---->
-
-    "TypeError: browser.runtime.connectNative is not a function"
+  ```
+  "TypeError: browser.runtime.connectNative is not a function"
+  ```
 
 - Vérifiez que l'extension à la permission « nativeMessaging »
 
-<!---->
-
-    "[object Object] NativeMessaging.jsm:218"
+  ```
+  "[object Object] NativeMessaging.jsm:218"
+  ```
 
 - Il y a eu un problème lors du démarrage de l'application.
 

@@ -22,7 +22,9 @@ La méthode **`every()`** permet de tester si tous les éléments d'un tableau v
 
 ## Syntaxe
 
-    arr.every(callback[, thisArg])
+```js
+arr.every(callback[, thisArg])
+```
 
 ### Paramètres
 

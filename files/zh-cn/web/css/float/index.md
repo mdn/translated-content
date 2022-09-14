@@ -1,13 +1,6 @@
 ---
 title: float
 slug: Web/CSS/float
-tags:
-  - CSS
-  - CSS 定位
-  - CSS 属性
-  - 参考
-  - recipe:css-property
-translation_of: Web/CSS/float
 original_slug: CSS/float
 ---
 {{CSSRef}}
@@ -18,7 +11,7 @@ original_slug: CSS/float
 
 **浮动元素**是 `float` 的计算值非 `none` 的元素。
 
-由于 `float` 意味着使用块布局，它在某些情况下会修改 {{cssxref("display")}} 值的计算值：
+由于 `float` 意味着使用块布局，它在某些情况下会修改 {{cssxref("display")}} 值的计算值：
 
 | 指定值                | 计算值          |
 | -------------------- | -------------- |
@@ -56,7 +49,7 @@ float: revert;
 float: unset;
 ```
 
-`float` 属性的值被指定为单一的关键字，值从下面的值列表中选择。
+`float` 属性的值被指定为单一的关键字，值从下面的值列表中选择。
 
 ### 值
 

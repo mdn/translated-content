@@ -13,8 +13,8 @@ Un **pare-feu** est un système qui filtre les connexions réseaux. Il peut auss
 
 Les pare-feu peuvent être un simple composant logiciel ou se présenter sous la forme d'une machine dédiée dont la seule fonction est d'agir en tant que pare-feu.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Pare-feu (informatique)")}} sur Wikipédia
+- [Pare-feu (informatique)](https://fr.wikipedia.org/wiki/Pare-feu_(informatique)) sur Wikipédia

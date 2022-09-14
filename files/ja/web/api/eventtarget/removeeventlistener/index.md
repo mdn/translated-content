@@ -1,17 +1,12 @@
 ---
 title: EventTarget.removeEventListener()
 slug: Web/API/EventTarget/removeEventListener
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.EventTarget.removeEventListener
-translation_of: Web/API/EventTarget/removeEventListener
 ---
 {{APIRef("DOM")}}
 
 **`removeEventListener()`** は {{domxref("EventTarget")}} インターフェイスのメソッドで、以前に {{domxref("EventTarget.addEventListener()")}} で登録されたイベントリスナーを取り外します。
 取り外されるイベントリスナーはイベントの型、イベントリスナー関数そのもの、照合プロセスに影響を与えるさまざまな任意のオプションを使用して識別します。
-{{anch("取り外すイベントリスナーの照合")}}を参照してください。
+[取り外すイベントリスナーの照合](#取り外すイベントリスナーの照合)を参照してください。
 
 `removeEventListener()` を呼び出したときの引数で `EventTarget` に登録されている {{domxref("EventListener")}} が特定できなかった場合は、何も起こりません。
 

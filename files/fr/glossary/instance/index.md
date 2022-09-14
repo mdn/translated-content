@@ -12,8 +12,8 @@ original_slug: Glossaire/Instance
 ---
 Un {{glossary("objet")}} créé par un {{glossary("constructeur")}} est une instance de ce constructeur.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 
-- {{interwiki("wikipedia", "Instance (programmation)", "Instance")}} sur Wikipédia
+- [Instance](https://fr.wikipedia.org/wiki/Instance_(programmation)) sur Wikipédia

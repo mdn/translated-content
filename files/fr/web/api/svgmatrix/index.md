@@ -10,14 +10,18 @@ translation_of: Web/API/SVGMatrix
 
 Beaucoup d'opération graphiques de SVG utilisent des matrices 2x3 de la forme :
 
-    [a c e]
-    [b d f]
+```
+[a c e]
+[b d f]
+```
 
 laquelle, quand étendue en une matrice 3x3 à des fins d'arithmétique matricielle, devient :
 
-    [a c e]
-    [b d f]
-    [0 0 1]
+```
+[a c e]
+[b d f]
+[0 0 1]
+```
 
 Un objet `SVGMatrix` peut être marqué en lecture-seule, ce qui signifie que les tentatives de modification sur cet objet entraîneront un lancement d'exception.
 
@@ -295,10 +299,8 @@ Une {{domxref("DOMException")}} avec le code `NO_MODIFICATION_ALLOWED_ERR` est l
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                   | Commentaire         |
-| -------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName("SVG1.1", "coords.html#InterfaceSVGMatrix", "SVGMatrix")}} | {{Spec2("SVG1.1")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.SVGMatrix")}}
+{{Compat}}

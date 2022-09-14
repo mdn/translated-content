@@ -21,8 +21,10 @@ La méthode `put()` permet d'ajouter ou de mettre à jour. Si on souhaite unique
 
 ## Syntaxe
 
-    var request = objectStore.put(monElement);
-    var request = objectStore.put(monElement, cleOptionnelle);
+```js
+var request = objectStore.put(monElement);
+var request = objectStore.put(monElement, cleOptionnelle);
+```
 
 ### Paramètres
 
@@ -146,13 +148,11 @@ objectStoreTitleRequest.onsuccess = function() {
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                         | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-put-IDBRequest-any-value-any-key', 'put()')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.put")}}
+{{Compat}}
 
 ## Voir aussi
 

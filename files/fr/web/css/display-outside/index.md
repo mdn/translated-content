@@ -39,8 +39,6 @@ Une valeur `<display-outside>` peut être l'un des mots-clés suivants.
 
 Dans l'exemple suivant, les éléments {{HTMLElement("span")}}, normalement affichés comme des éléments en ligne, sont paramétrés avec `display: block` et passent à la ligne en étendant leur conteneur selon l'axe en ligne.
 
-
-
 ### CSS
 
 ```css
@@ -49,8 +47,6 @@ span {
   border: 1px solid rebeccapurple;
 }
 ```
-
-
 
 ### HTML
 
@@ -79,5 +75,5 @@ span {
   - {{CSSxRef("&lt;display-box&gt;")}}
   - {{CSSxRef("&lt;display-legacy&gt;")}}
 
-- [Block and Inline layout in Normal Flow](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-- [Formatting Contexts explained](/en-US/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts)
+- [Block and Inline layout in Normal Flow](/fr/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
+- [Formatting Contexts explained](/fr/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts)

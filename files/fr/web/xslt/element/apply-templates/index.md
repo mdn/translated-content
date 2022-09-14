@@ -12,10 +12,12 @@ L'élément `<xsl:apply-templates>` sélectionne un ensemble de nœuds dans l'ar
 
 ### Syntaxe
 
-    <xsl:apply-templates select=EXPRESSION mode=NOM>
-    	<xsl:with-param> [optionnel]
-    	<xsl:sort> [optionnel]
-    </xsl:apply-templates>
+```xml
+<xsl:apply-templates select=EXPRESSION mode=NOM>
+  <xsl:with-param> [optionnel]
+  <xsl:sort> [optionnel]
+</xsl:apply-templates>
+```
 
 ### Attributs obligatoires
 

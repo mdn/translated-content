@@ -38,8 +38,8 @@ Dans cet article, nous verrons ce que sont les serveurs web, comment ils fonctio
 
 Un « serveur web » peut faire référence à des composants logiciels (_software_) ou à des composants matériels (_hardware_) ou à des composants logiciels et matériels qui fonctionnent ensemble.
 
-1.  Au niveau des composants matériels, un serveur web est un ordinateur qui stocke les fichiers qui composent un site web (par exemple les documents HTML, les images, les feuilles de style CSS, les fichiers JavaScript) et qui les envoie à l'appareil de l'utilisateur qui visite le site. Cet ordinateur est connecté à Internet et est généralement accessible via un nom de domaine tel que `mozilla.org`.
-2.  Au niveau des composants logiciels, un serveur web contient différents fragments qui contrôlent la façon dont les utilisateurs peuvent accéder aux fichiers hébergés. On trouvera au minimum un serveur _HTTP_. Un serveur HTTP est un logiciel qui comprend les {{Glossary("URL")}} et le protocole {{Glossary("HTTP")}} (le protocole utilisé par le navigateur pour afficher les pages web).
+1. Au niveau des composants matériels, un serveur web est un ordinateur qui stocke les fichiers qui composent un site web (par exemple les documents HTML, les images, les feuilles de style CSS, les fichiers JavaScript) et qui les envoie à l'appareil de l'utilisateur qui visite le site. Cet ordinateur est connecté à Internet et est généralement accessible via un nom de domaine tel que `mozilla.org`.
+2. Au niveau des composants logiciels, un serveur web contient différents fragments qui contrôlent la façon dont les utilisateurs peuvent accéder aux fichiers hébergés. On trouvera au minimum un serveur _HTTP_. Un serveur HTTP est un logiciel qui comprend les {{Glossary("URL")}} et le protocole {{Glossary("HTTP")}} (le protocole utilisé par le navigateur pour afficher les pages web).
 
 Au niveau le plus simple, à chaque fois qu'un navigateur a besoin d'un fichier hébergé sur un serveur web, le navigateur demande (on dit qu'il envoie une requête) le fichier via HTTP. Quand la requête atteint le bon serveur web (_matériel_), le serveur HTTP (_logiciel_) renvoie le document demandé, également grâce à HTTP.
 
@@ -95,9 +95,9 @@ HTTP fournit des règles claires qui indiquent comment un client et un serveur c
 
 Sur un serveur web, le serveur HTTP est responsable du traitement des requêtes reçues et de leurs réponses.
 
-1.  Une fois qu'il a reçu une requête, le serveur HTTP vérifie que l'URL demandée correspond à un fichier existant.
-2.  Si c'est le cas, le serveur envoie le fichier vers le navigateur du client. Sinon, le serveur d'applications génère le fichier nécessaire.
-3.  Si le fichier n'existe pas ou que le traitement est impossible, le serveur web renvoie un message d'erreur au navigateur. Le message d'erreur le plus fréquemment rencontré est {{HTTPStatus("404", "404 Page non trouvée")}} (cette erreur étant plutôt fréquente, certains ont même personnalisé et adapté [les pages d'erreurs 404](http://www.404notfound.fr/) de leurs sites).
+1. Une fois qu'il a reçu une requête, le serveur HTTP vérifie que l'URL demandée correspond à un fichier existant.
+2. Si c'est le cas, le serveur envoie le fichier vers le navigateur du client. Sinon, le serveur d'applications génère le fichier nécessaire.
+3. Si le fichier n'existe pas ou que le traitement est impossible, le serveur web renvoie un message d'erreur au navigateur. Le message d'erreur le plus fréquemment rencontré est {{HTTPStatus("404", "404 Page non trouvée")}} (cette erreur étant plutôt fréquente, certains ont même personnalisé et adapté [les pages d'erreurs 404](http://www.404notfound.fr/) de leurs sites).
 
 ![Une page d'erreur HTTP, en l'occurrence la page 404 de MDN](Capture.PNG)
 

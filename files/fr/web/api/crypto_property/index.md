@@ -10,17 +10,17 @@ La propriété, en lecture seule, {{domxref("Window.crypto")}} retourne l'objet 
 
 ## Syntaxe
 
-    var cryptoObj = window.crypto || window.msCrypto; // pour IE 11
+```js
+var cryptoObj = window.crypto || window.msCrypto; // pour IE 11
+```
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                               | Commentaire         |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName("Web Crypto API", "#dfn-GlobalCrypto", "Window.crypto")}} | {{Spec2("Web Crypto API")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.crypto")}}
+{{Compat}}
 
 ## Voir aussi
 

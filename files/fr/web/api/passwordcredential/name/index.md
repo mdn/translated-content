@@ -15,7 +15,9 @@ La propriété **`name`** est accessible en lecture seule et est rattachée à l
 
 ## Syntaxe
 
-    name = passwordCredential.name
+```js
+name = passwordCredential.name
+```
 
 ### Valeur
 
@@ -23,10 +25,8 @@ A {{domxref("USVString")}} containing a name.
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                         | Commentaires          |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------- |
-| {{SpecName('Credential Management','#dom-credentialuserdata-name','name')}} | {{Spec2('Credential Management')}} | Définition initiale.. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PasswordCredential.name")}}
+{{Compat}}

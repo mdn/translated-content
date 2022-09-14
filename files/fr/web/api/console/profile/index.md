@@ -21,7 +21,9 @@ Pour arrêter l'enregistrement, appeler {{domxref("Console.profileEnd()")}}.
 
 ## Syntaxe
 
-    console.profile(profileName);
+```js
+console.profile(profileName);
+```
 
 ## Paramètres
 
