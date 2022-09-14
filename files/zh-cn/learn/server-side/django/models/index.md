@@ -9,7 +9,7 @@ slug: Learn/Server-side/Django/Models
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website"
+        <a href="/zh-CN/docs/Learn/Server-side/Django/skeleton_website"
           >Django Tutorial Part 2: Creating a skeleton website</a
         >.
       </td>

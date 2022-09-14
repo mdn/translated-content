@@ -13,12 +13,12 @@ original_slug: Learn/CSS/为文本添加样式/Web_字体
       <th scope="row">预备知识：</th>
       <td>
         基本计算机素养，HTML 基础 (学习
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
-        >), CSS 基础 (学习<a href="/en-US/docs/Learn/CSS/Introduction_to_CSS"
+        >), CSS 基础 (学习<a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"
           >Introduction to CSS</a
         >),
-        <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals"
+        <a href="/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals"
           >CSS 文本和字体基础 </a
         >。
       </td>

@@ -22,7 +22,7 @@ slug: Web/API/Worker/message_event
       <th scope="row">对应事件处理属性</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/API/Worker/onmessage">onmessage</a></code
+          ><a href="/zh-CN/docs/Web/API/Worker/onmessage">onmessage</a></code
         >
       </td>
     </tr>

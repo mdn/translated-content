@@ -11,11 +11,11 @@ slug: Learn/Server-side/Django/skeleton_website
     <tr>
       <th scope="row">前提：</th>
       <td>
-        <a href="/en-US/docs/Learn/Server-side/Django/development_environment"
+        <a href="/zh-CN/docs/Learn/Server-side/Django/development_environment"
           >创建 Django 的开发环境</a
         >。复习
         <a
-          href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website"
+          href="/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website"
           >Django 教程</a
         >。
       </td>

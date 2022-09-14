@@ -11,16 +11,16 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environm
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, and
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages; an idea
+        Familiarity with the core <a href="/zh-CN/docs/Learn/HTML">HTML</a>,
+        <a href="/zh-CN/docs/Learn/CSS">CSS</a>, and
+        <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> languages; an idea
         of the high level
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
+          href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
           >principles of cross browser testing</a
         >, and
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing"
+          href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing"
           >automated testing</a
         >.
       </td>

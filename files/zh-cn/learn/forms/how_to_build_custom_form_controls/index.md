@@ -396,7 +396,7 @@ window.addEventListener("load", function () {
     <tr>
       <td colspan="2" style="text-align: center">
         <a
-          href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2"
+          href="/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2"
           >Check out the source code</a
         >
       </td>
@@ -569,7 +569,7 @@ window.addEventListener('load', function () {
     <tr>
       <td style="text-align: center">
         <a
-          href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3"
+          href="/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3"
           >Check out the source code</a
         >
       </td>
@@ -687,7 +687,7 @@ window.addEventListener('load', function () {
     <tr>
       <td style="text-align: center">
         <a
-          href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_4"
+          href="/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_4"
           >Check out the source code</a
         >
       </td>
@@ -772,7 +772,7 @@ function updateValue(select, index) {
     <tr>
       <td style="text-align: center">
         <a
-          href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_5"
+          href="/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_5"
           >Check out the final source code</a
         >
       </td>

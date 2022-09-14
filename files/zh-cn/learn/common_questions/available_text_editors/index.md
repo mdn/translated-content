@@ -10,7 +10,7 @@ original_slug: Learn/Common_questions/实用文本编辑器
     <tr>
       <th scope="row">前提条件：</th>
       <td>
-        你应该已经知晓了<a href="/en-US/Learn/What_software_do_I_need">
+        你应该已经知晓了<a href="/zh-CN/Learn/What_software_do_I_need">
           为了建立一个网站所需的各种软件</a
         >。
       </td>

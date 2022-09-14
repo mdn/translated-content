@@ -70,7 +70,7 @@ request.onupgradeneeded= function(event) {
         <code><a name="attr_errorCode">error</a></code>
       </td>
       <td>
-        <code>readonly <a href="/en-US/docs/DOM/DOMError">DOMError</a></code>
+        <code>readonly <a href="/zh-CN/docs/DOM/DOMError">DOMError</a></code>
       </td>
       <td>
         <p>The following error codes are returned under certain conditions:</p>
