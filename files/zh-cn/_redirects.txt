@@ -1586,6 +1586,7 @@
 /zh-CN/docs/Web/API/HTMLHyperlinkElementUtils/search	/zh-CN/docs/Web/API/HTMLAnchorElement/search
 /zh-CN/docs/Web/API/HTMLHyperlinkElementUtils/toString	/zh-CN/docs/Web/API/HTMLAnchorElement/toString
 /zh-CN/docs/Web/API/HTMLHyperlinkElementUtils/username	/zh-CN/docs/Web/API/HTMLAnchorElement/username
+/zh-CN/docs/Web/API/HTMLMediaElement/onerror	/zh-CN/docs/conflicting/Web/API/HTMLMediaElement/error_event
 /zh-CN/docs/Web/API/HTMLTableElement.deleteTHead	/zh-CN/docs/Web/API/HTMLTableElement/deleteTHead
 /zh-CN/docs/Web/API/Headers/getAll	/zh-CN/docs/Web/API/Headers/get
 /zh-CN/docs/Web/API/IDBCursor.direction	/zh-CN/docs/Web/API/IDBCursor/direction

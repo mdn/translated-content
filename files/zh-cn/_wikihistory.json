@@ -11019,10 +11019,6 @@
     "modified": "2019-03-23T22:03:28.345Z",
     "contributors": ["EmiliaMiyuki"]
   },
-  "Web/API/HTMLMediaElement/onerror": {
-    "modified": "2020-10-15T22:20:09.423Z",
-    "contributors": ["HaukWong"]
-  },
   "Web/API/HTMLMediaElement/pause": {
     "modified": "2020-10-15T22:29:04.236Z",
     "contributors": ["xialeistudio", "crazymxm"]
@@ -33876,6 +33872,10 @@
   "conflicting/Web/API/Element/touchmove_event": {
     "modified": "2019-04-30T14:14:32.752Z",
     "contributors": ["wbamberg", "irenesmith", "fscholz", "zhaosource"]
+  },
+  "conflicting/Web/API/HTMLMediaElement/error_event": {
+    "modified": "2020-10-15T22:20:09.423Z",
+    "contributors": ["HaukWong"]
   },
   "orphaned/Glossary/jQuery": {
     "modified": "2020-05-09T23:15:26.173Z",
