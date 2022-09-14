@@ -25,52 +25,52 @@ console.log(frutas.length);
 
 <p><strong>Acessar um item (<em>index</em>) do Array</strong></p>
 
-<pre class="brush: js"><code>var primeiro = frutas[0];
+<pre class="brush: js">var primeiro = frutas[0];
 // Maçã
 
 var ultimo = frutas[frutas.length - 1];
-// Banana</code></pre>
+// Banana</pre>
 
 <p><strong>Iterar um Array</strong></p>
 
-<pre class="brush: js"><code>frutas.forEach(function (item, indice, array) {
+<pre class="brush: js">frutas.forEach(function (item, indice, array) {
   console.log(item, indice);
 });
 // Maçã 0
-// Banana 1</code></pre>
+// Banana 1</pre>
 
 <p><strong>Adicionar um item ao final do Array</strong></p>
 
-<pre class="brush: js"><code>var adicionar = frutas.push('Laranja');
-// ['Maçã', 'Banana', 'Laranja']</code></pre>
+<pre class="brush: js">var adicionar = frutas.push('Laranja');
+// ['Maçã', 'Banana', 'Laranja']</pre>
 
 <p><strong>Remover um item do final do Array</strong></p>
 
-<pre class="brush: js"><code>var ultimo = frutas.pop(); // remove Laranja (do final)
-// ['Maçã', 'Banana'];</code></pre>
+<pre class="brush: js">var ultimo = frutas.pop(); // remove Laranja (do final)
+// ['Maçã', 'Banana'];</pre>
 
 <p><strong>Remover do início do Array</strong></p>
 
-<pre class="brush: js"><code>var primeiro = frutas.shift(); // remove Maçã do início
-// ['Banana'];</code></pre>
+<pre class="brush: js">var primeiro = frutas.shift(); // remove Maçã do início
+// ['Banana'];</pre>
 
 <p><strong>Adicionar ao início do Array</strong></p>
 
-<pre class="brush: js"><code>var adicionar = frutas.unshift('Morango') // adiciona ao início
-// ['Morango', 'Banana'];</code></pre>
+<pre class="brush: js">var adicionar = frutas.unshift('Morango') // adiciona ao início
+// ['Morango', 'Banana'];</pre>
 
 <p><strong>Procurar o índice de um item na Array</strong></p>
 
-<pre class="brush: js"><code>frutas.push('Manga');
+<pre class="brush: js">frutas.push('Manga');
 // ['Morango', 'Banana', 'Manga']
 
 var pos = frutas.indexOf('Banana');
-// 1</code></pre>
+// 1</pre>
 
 <p><strong>Remover um item pela posição do índice</strong></p>
 
-<pre class="brush: js"><code>var removedItem = frutas.splice(pos, 1); // é assim que se remove um item
-// ['Morango', 'Manga']</code></pre>
+<pre class="brush: js">var removedItem = frutas.splice(pos, 1); // é assim que se remove um item
+// ['Morango', 'Manga']</pre>
 
 <p><strong>Remover itens de uma posição de índice</strong></p>
 
@@ -92,14 +92,12 @@ console.log(itensRemovidos);
 
 <p><strong>Copiar um Array</strong></p>
 
-<pre class="brush: js"><code>var copiar = frutas.slice(); // é assim que se copia
-// ['Morango', 'Manga']</code></pre>
-
-<p> </p>
+<pre class="brush: js">var copiar = frutas.slice(); // é assim que se copia
+// ['Morango', 'Manga']</pre>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
-<pre class="syntaxbox"><var><span style="font-style: normal;">[</span>element0</var>, <var>element1</var>, ..., <var>elementN</var>]
+<pre class="syntaxbox"><var>[element0</var>, <var>element1</var>, ..., <var>elementN</var>]
 new Array(<em>element0</em>, <em>element1</em>, ..., <em>elementN</em>)
 new Array(<em>arrayLength</em>)
 </pre>
@@ -122,7 +120,7 @@ new Array(<em>arrayLength</em>)
 <p>Arrays JavaScript começam com índice zero: o primeiro elemento de um array está na posição <code>0</code> e o último elemento está na  posição equivalente ao valor da propriedade <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array/length" title="JavaScript/Reference/Global_Objects/Array/length">length</a></code> (tamanho) menos 1.</p>
 
 <pre class="brush: js">var arr = ['este é o primeiro elemento', 'este é o segundo elemento'];
-console.log(arr[0]);              // exibe '<span style="font-size: 1rem;">este é o primeiro elemento'</span>
+console.log(arr[0]);              // exibe 'este é o primeiro elemento'
 console.log(arr[1]);              // exibe 'este é o segundo elemento'
 console.log(arr[arr.length - 1]); // exibe 'este é o segundo elemento'
 </pre>
@@ -265,7 +263,7 @@ var meuArray = minhaRegex.exec('cdbBdbsbz');
 
 <h2 id="Instâncias_de_Array">Instâncias de <code>Array</code></h2>
 
-<p>Todas as instâncias de <code>Array</code> herdam de <span style="font-family: monospace;"><code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array/prototype" title="Core_JavaScript_1.5_Reference/Global_Objects/Array/prototype">Array.prototype</a></code></span>.  O protótipo do construtor <code>Array</code> pode ser modificado de forma a afetar todas as instâncias de <code>Array</code>.</p>
+<p>Todas as instâncias de <code>Array</code> herdam de <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array/prototype" title="Core_JavaScript_1.5_Reference/Global_Objects/Array/prototype">Array.prototype</a></code>.  O protótipo do construtor <code>Array</code> pode ser modificado de forma a afetar todas as instâncias de <code>Array</code>.</p>
 
 <h3 id="Properties_of_Array_instances" name="Properties_of_Array_instances">Propriedades</h3>
 
@@ -277,11 +275,11 @@ var meuArray = minhaRegex.exec('cdbBdbsbz');
 
 <div>{{ page('/pt-BR/docs/JavaScript/Reference/Global_Objects/Array/prototype', 'Mutator_methods') }}</div>
 
-<h4 id="Métodos_de_acesso"><span>Métodos de acesso</span></h4>
+<h4 id="Métodos_de_acesso">Métodos de acesso</h4>
 
 <div>{{ page('/pt-BR/docs/JavaScript/Reference/Global_Objects/Array/prototype', 'Accessor_methods') }}</div>
 
-<h4 id="Métodos_de_iteração"><span>Métodos de iteração</span></h4>
+<h4 id="Métodos_de_iteração">Métodos de iteração</h4>
 
 <div>{{ page('/pt-BR/docs/JavaScript/Reference/Global_Objects/Array/prototype', 'Iteration_methods') }}</div>
 
@@ -397,18 +395,18 @@ r,n,b,q,k,b,n,r
 
 <h3 id="Browser_compatibility" name="Browser_compatibility">Utilizando um array para tabular um conjunto de valores</h3>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">values <span class="operator token">=</span> <span class="punctuation token">[</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
-<span class="keyword token">for</span> <span class="punctuation token">(</span><span class="keyword token">var</span> x <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span> x <span class="operator token">&lt;</span> <span class="number token">10</span><span class="punctuation token">;</span> x<span class="operator token">++</span><span class="punctuation token">)</span><span class="punctuation token">{</span>
- values<span class="punctuation token">.</span><span class="function token">push</span><span class="punctuation token">(</span><span class="punctuation token">[</span>
-  <span class="number token">2</span> <span class="operator token">*</span><span class="operator token">*</span> x<span class="punctuation token">,</span>
-  <span class="number token">2</span> <span class="operator token">*</span> x <span class="operator token">*</span><span class="operator token">*</span> <span class="number token">2</span>
- <span class="punctuation token">]</span><span class="punctuation token">)</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span>
-console<span class="punctuation token">.</span><span class="function token">table</span><span class="punctuation token">(</span>values<span class="punctuation token">)</span></code></pre>
+<pre class="brush: js">values = [];
+for (var x = 0; x &lt; 10; x++){
+ values.push([
+  2 ** x,
+  2 * x ** 2
+ ])
+};
+console.table(values)</pre>
 
 <p>Saída:</p>
 
-<pre class="eval line-numbers  language-html"><code class="language-html">0	1	0
+<pre>0	1	0
 1	2	2
 2	4	8
 3	8	18
@@ -417,7 +415,7 @@ console<span class="punctuation token">.</span><span class="function token">tabl
 6	64	72
 7	128	98
 8	256	128
-9	512	162</code></pre>
+9	512	162</pre>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Especificações</h2>
 

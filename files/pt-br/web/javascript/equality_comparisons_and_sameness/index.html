@@ -179,7 +179,7 @@ function attemptMutation(v)
 
 <h2 id="Igualdade_abstrata_igualdade_estrita_e_de_mesmo_valor_na_especificação">Igualdade abstrata, igualdade estrita, e de mesmo valor na especificação</h2>
 
-<p>No ES5, a comparação efetuada por<code> <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators" title="/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators"><code>==</code></a> </code>é descrita em <a href="http://ecma-international.org/ecma-262/5.1/#sec-11.9.3">Seção 11.9.3, O Algoritmo da Igualdade Abstrata</a>. A comparação <code><a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators" title="/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators"><code>===</code></a> </code>está em <a href="http://ecma-international.org/ecma-262/5.1/#sec-11.9.6">11.9.6, O Algoritmo de Igualdade Estrita</a>. (Veja estes. Eles são breve e legível. Dica: leia o algoritmo de igualdade estrita primeiro.) ES5 também descreve, em <a href="http://ecma-international.org/ecma-262/5.1/#sec-9.12">Seção 9.12, o Algoritmo de Mesmo Valor</a> para uso internamente pelo motor de JS. É em grande parte o mesmo que o Algoritmo de Igualdade Estrita, exceto que 11.9.6.4 e 9.12.4 diferem em manipulação do <code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a></code>. ES6 simplesmente se propõe a expor este algoritmo através de <code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a></code>.</p>
+<p>No ES5, a comparação efetuada por<code> <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators" title="/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators"><code>==</code></a> </code>é descrita em <a href="http://ecma-international.org/ecma-262/5.1/#sec-11.9.3">Seção 11.9.3, O Algoritmo da Igualdade Abstrata</a>. A comparação <code><a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators" title="/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators"><code>===</code></a> </code>está em <a href="http://ecma-international.org/ecma-262/5.1/#sec-11.9.6">11.9.6, O Algoritmo de Igualdade Estrita</a>. (Veja estes. Eles são breve e legível. Dica: leia o algoritmo de igualdade estrita primeiro.) ES5 também descreve, em <a href="http://ecma-international.org/ecma-262/5.1/#sec-9.12">Seção 9.12, o Algoritmo de Mesmo Valor</a> para uso internamente pelo motor de JS. É em grande parte o mesmo que o Algoritmo de Igualdade Estrita, exceto que 11.9.6.4 e 9.12.4 diferem em manipulação do <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a>. ES6 simplesmente se propõe a expor este algoritmo através de <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a>.</p>
 
 <p>Podemos ver que com iguais duplos e triplos, com exceção de fazer uma verificação de tipo inicial 11.9.6.1, o Algoritmo de Igualdade Estrita é um subconjunto do Algoritmo Igualdade Abstrata, porque 11.9.6.2-7 correspondem a 11.9.3.1.a -f.</p>
 
@@ -380,9 +380,6 @@ function attemptMutation(v)
 
 <dl>
  <dt><code><a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#-_.28Unary_Negation.29" title="/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators">- (negação unário)</a></code></dt>
-</dl>
-
-<dl>
  <dd>
  <p>É óbvio que negando 0 produz -0. Mas a abstração de uma expressão pode causar -0 a fluência em quanto você não percebe isso. Por exemplo, considere:</p>
 
@@ -390,33 +387,18 @@ function attemptMutation(v)
 
  <p>If obj.velocity is 0 (ou calcula para 0), um -0 é introduzido naquele lugar e propaga-se em stoppingForce.</p>
  </dd>
-</dl>
-
-<dl>
  <dt><code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2">Math.atan2</a></code></dt>
  <dt><code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil">Math.ceil</a></code></dt>
  <dt><code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/pow" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/pow">Math.pow</a></code></dt>
  <dt><code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round">Math.round</a></code></dt>
-</dl>
-
-<dl>
  <dd>É possível que um -0 para ser introduzido em uma expressão como um valor de retorno desses métodos, em alguns casos, mesmo quando nenhum -0 exista como um dos parâmetros. Por exemplo, usando <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/pow" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/pow">Math.pow</a> para levantar -<a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Infinity" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a> a potência de qualquer número, expoente ímpar negativo avaliada como -0. Consulte a documentação para os métodos individuais.</dd>
-</dl>
-
-<dl>
  <dt><code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/floor" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/floor">Math.floor</a></code></dt>
  <dt><code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max">Math.max</a></code></dt>
  <dt><code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/min" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/min">Math.min</a></code></dt>
  <dt><code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/sin" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/sin">Math.sin</a></code></dt>
  <dt><code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt">Math.sqrt</a></code></dt>
  <dt><code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/tan" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/tan">Math.tan</a></code></dt>
-</dl>
-
-<dl>
  <dd>É possível obter um -0 valor de retorno para fora destes métodos em alguns casos em que um -0 existe como um dos parâmetros. Por exemplo, <code>Math.min(-0, +0)</code> resulte em -0. Consulte a documentação para os métodos individuais.</dd>
-</dl>
-
-<dl>
  <dt><a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">~</a></dt>
  <dt><a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">&lt;&lt;</a></dt>
  <dt><a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">&gt;&gt;</a></dt>
