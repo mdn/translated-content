@@ -1,13 +1,6 @@
 ---
 title: yield
 slug: Web/JavaScript/Reference/Operators/yield
-tags:
-  - ECMAScript 2015
-  - Generators
-  - Iterator
-  - JavaScript
-  - Operator
-translation_of: Web/JavaScript/Reference/Operators/yield
 ---
 {{jsSidebar("Operators")}}
 
@@ -74,7 +67,7 @@ console.log(appleStore.next()); // { value: undefined, done: true }
 
 ## 相关链接
 
-- [The Iterator protocol](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [The Iterator protocol](/zh-CN/docs/Web/JavaScript/Guide/The_Iterator_protocol)
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Operators/function*", "function* expression")}}
 - {{jsxref("Operators/yield*", "yield*")}}

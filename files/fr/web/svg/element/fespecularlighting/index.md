@@ -63,14 +63,11 @@ Cet élément implémente l'interface {{domxref("SVGFESpecularLightingElement")}
 
 ## Spécifications
 
-| Spécification                                                                                                                | Statut                           | Commentaire                                                     |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------- |
-| {{SpecName('Filters 1.0', '#feSpecularLightingElement', '&lt;feSpecularLighting&gt;')}}         | {{Spec2('Filters 1.0')}} | Suppression de la limitation sur l'attribut `specularExponent`. |
-| {{SpecName('SVG1.1', 'filters.html#feSpecularLightingElement', '&lt;feSpecularLighting&gt;')}} | {{Spec2('SVG1.1')}}         | Définition initiale                                             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.feSpecularLighting")}}
+{{Compat}}
 
 ## Voir aussi
 

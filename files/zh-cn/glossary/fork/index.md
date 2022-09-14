@@ -1,12 +1,6 @@
 ---
 title: Fork
 slug: Glossary/Fork
-tags:
-  - Fork
-  - Glossary
-  - Touls
-  - git
-translation_of: Glossary/Fork
 ---
 “派生”（Fork）是在某一时刻对现有的软件项目进行复制，并在项目加上某人的修改。基本上，如果原软件的许可证允许，你就可以复制软件的代码，开发自己的版本，附加上自己的补充，这就是一个 Fork。
 

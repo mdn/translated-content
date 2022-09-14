@@ -70,59 +70,7 @@ document.body.addEventListener('click', hide, false);
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Supote básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>10.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Supote básico</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>10.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Do Internet Explorer 6 até o 8, o modelo do event é diferente. Event listeners estão acoplados com o {{domxref("EventTarget.attachEvent")}} método não padronizado. Neste modelo não há um equivalente para <code>event.currentTarget</code> e <code>this</code> é um objeto global. Uma solução para simular o <code>event.currentTarget</code> é envolver seu handler em uma função e chamando-a usando o <code>Function.prototype.call</code> com o elemento sendo o primeiro argumento. Desta forma, <code>this</code> será o valor esperado.</p>
+{{Compat("api.Event.currentTarget")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

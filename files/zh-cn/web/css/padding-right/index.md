@@ -1,11 +1,6 @@
 ---
 title: padding-right
 slug: Web/CSS/padding-right
-tags:
-  - CSS
-  - CSS 内边距
-  - CSS 属性
-translation_of: Web/CSS/padding-right
 ---
 {{CSSRef}}
 
@@ -58,5 +53,5 @@ padding-right: unset;
 
 ## See also
 
-- [CSS Box Model](/en/CSS/box_model)
+- [CSS Box Model](/zh-CN/CSS/box_model)
 - The {{cssxref("padding")}} shorthand property can be used to set paddings on all four sides of an element with a single declaration: {{cssxref("padding-top")}}, `padding-right`, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}}.

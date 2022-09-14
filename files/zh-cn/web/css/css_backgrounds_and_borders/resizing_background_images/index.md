@@ -1,7 +1,6 @@
 ---
 title: Scaling background images
 slug: Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
-translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 original_slug: Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images
 ---
 {{cssref}}
@@ -138,4 +137,4 @@ The `cover` value specifies that the background image should be sized so that it
 
 - {{ cssxref("background-size") }}
 - {{ cssxref("background") }}
-- [Scaling of SVG backgrounds](/en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds)
+- [Scaling of SVG backgrounds](/zh-CN/docs/Web/CSS/Scaling_of_SVG_backgrounds)

@@ -1,13 +1,6 @@
 ---
 title: ':nth-of-type'
 slug: Web/CSS/:nth-of-type
-tags:
-  - ':nth-of-type'
-  - CSS
-  - CSS 伪类
-  - no :nth-of-type(0)
-  - 布局
-translation_of: Web/CSS/:nth-of-type
 ---
 {{CSSRef}}
 

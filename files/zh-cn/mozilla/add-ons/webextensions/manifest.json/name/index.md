@@ -1,10 +1,6 @@
 ---
 title: 名称 - name
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/name
-tags:
-  - 名称
-  - 附加组件
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/name
 ---
 {{AddonSidebar}}
 
@@ -27,7 +23,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/name
 
 附加组件的名称。用于在用户界面和 addons.mozilla.org 网站上显示标识名称。
 
-关于本地化，可查看 [localizable property](/en-US/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
+关于本地化，可查看 [localizable property](/zh-CN/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
 
 ## 示例
 

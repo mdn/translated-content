@@ -1,7 +1,6 @@
 ---
 title: Geolocation.getCurrentPosition()
 slug: Web/API/Geolocation/getCurrentPosition
-translation_of: Web/API/Geolocation/getCurrentPosition
 ---
 {{ APIRef("Geolocation API") }}
 
@@ -57,5 +56,5 @@ navigator.geolocation.getCurrentPosition(success, error, options);
 
 ## 請參考
 
-- [Using geolocation](/en-US/docs/WebAPI/Using_geolocation)
+- [Using geolocation](/zh-TW/docs/WebAPI/Using_geolocation)
 - {{domxref("Navigator.geolocation")}}

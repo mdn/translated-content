@@ -1,15 +1,6 @@
 ---
 title: HTMLBodyElement
 slug: Web/API/HTMLBodyElement
-page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - NeedsNewLayout
-  - リファレンス
-browser-compat: api.HTMLBodyElement
-translation_of: Web/API/HTMLBodyElement
 ---
 {{APIRef("HTML DOM")}}
 

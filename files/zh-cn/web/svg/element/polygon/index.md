@@ -1,12 +1,6 @@
 ---
 title: polygon
 slug: Web/SVG/Element/polygon
-tags:
-  - SVG
-  - SVG 图形
-  - 元素
-  - 参考
-translation_of: Web/SVG/Element/polygon
 ---
 {{SVGRef}}
 
@@ -18,16 +12,16 @@ translation_of: Web/SVG/Element/polygon
 
 ## 示例
 
-» [polygon.svg](https://developer.mozilla.org/files/3259/polygon.svg)
+» [polygon.svg](/files/3259/polygon.svg)
 
 ## 属性
 
 ### 全局属性
 
-- [条件处理属性](/en/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/en/SVG/Attribute#Core) »
-- [图形事件属性](/en/SVG/Attribute#GraphicalEvent) »
-- [外观属性](/en/SVG/Attribute#Presentation) »
+- [条件处理属性](/zh-CN/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [图形事件属性](/zh-CN/SVG/Attribute#GraphicalEvent) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}

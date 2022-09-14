@@ -1,10 +1,6 @@
 ---
 title: WebAssembly
 slug: WebAssembly
-tags:
-  - WebAssembly
-  - wasm
-translation_of: WebAssembly
 ---
 {{WebAssemblySidebar}}
 

@@ -1,14 +1,6 @@
 ---
 title: Array.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/slice
-tags:
-  - Array
-  - JavaScript
-  - Prototype
-  - 原型
-  - 数组
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 ---
 {{JSRef}}
 
@@ -18,8 +10,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 
 ## 语法
 
-```plain
-arr.slice([begin[, end]])
+```js
+slice()
+slice(start)
+slice(start, end)
 ```
 
 ## 参数
@@ -109,7 +103,7 @@ function list() {
 var list1 = list(1, 2, 3); // [1, 2, 3]
 ```
 
-除了使用 ` Array.prototype.slice.call(``arguments``) `，你也可以简单的使用 `[].slice.call(arguments)` 来代替。另外，你可以使用 `bind` 来简化该过程。
+除了使用 `Array.prototype.slice.call(arguments)`，你也可以简单的使用 `[].slice.call(arguments)` 来代替。另外，你可以使用 `bind` 来简化该过程。
 
 ```js
 var unboundSlice = Array.prototype.slice;
@@ -201,7 +195,7 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Array.prototype.splice()")}}
 - {{jsxref("Function.prototype.call()")}}

@@ -1,14 +1,6 @@
 ---
 title: CSS 論理的プロパティと値
 slug: Web/CSS/CSS_Logical_Properties
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - ガイド
-  - Landing
-  - 概要
-  - Reference
-translation_of: Web/CSS/CSS_Logical_Properties
 ---
 {{CSSRef}}
 

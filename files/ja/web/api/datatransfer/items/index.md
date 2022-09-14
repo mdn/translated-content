@@ -1,15 +1,6 @@
 ---
 title: DataTransfer.items
 slug: Web/API/DataTransfer/items
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - drag and drop
-browser-compat: api.DataTransfer.items
-translation_of: Web/API/DataTransfer/items
 ---
 {{APIRef("HTML Drag and Drop API")}}
 

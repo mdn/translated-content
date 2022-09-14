@@ -1,9 +1,6 @@
 ---
 title: 加法赋值 (+=)
 slug: Web/JavaScript/Reference/Operators/Addition_assignment
-tags:
-  - +=
-translation_of: Web/JavaScript/Reference/Operators/Addition_assignment
 ---
 {{jsSidebar("Operators")}}
 
@@ -57,5 +54,5 @@ foo += 'bar' // "foobar"
 
 ## See also
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
-- [Addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Assignment operators in the JS guide](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
+- [Addition operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)

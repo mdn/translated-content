@@ -15,9 +15,9 @@ translation_of: Web/JavaScript/Reference/Strict_mode
 
 엄격 모드는 평범한 JavaScript 시멘틱스에 몇가지 변경이 일어나게 합니다.
 
-1.  기존에는 조용히 무시되던 에러들을 throwing합니다.
-2.  JavaScript 엔진의 최적화 작업을 어렵게 만드는 실수들을 바로잡습니다. 가끔씩 엄격 모드의 코드는 비-엄격 모드의 동일한 코드보다 더 빨리 작동하도록 만들어집니다.
-3.  엄격 모드는 ECMAScript의 차기 버전들에서 정의 될 문법을 금지합니다.
+1. 기존에는 조용히 무시되던 에러들을 throwing합니다.
+2. JavaScript 엔진의 최적화 작업을 어렵게 만드는 실수들을 바로잡습니다. 가끔씩 엄격 모드의 코드는 비-엄격 모드의 동일한 코드보다 더 빨리 작동하도록 만들어집니다.
+3. 엄격 모드는 ECMAScript의 차기 버전들에서 정의 될 문법을 금지합니다.
 
 코드를 JavaScript의 변형이 제한된 환경에서 동작하도록 하고 싶다면, 엄격 모드로의 변환([transitioning to strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode))을 참고하세요.
 
@@ -81,7 +81,7 @@ ECMAScript 2015 는 [JavaScript 모듈](https://developer.mozilla.org/en-US/docs
 mistypedVaraible = 17; // 변수의 오타때문에 이 라인에서 ReferenceError 를 발생시킴
 ```
 
-둘째로, 엄격모드는 예외를 발생시키는 실패를 조용히 넘어가는 대신 작업을 만듭니다. 예를 들어, `NaN` 은 쓸 수 없는 전역 변수입니다. `NaN` 에 할당하는 일반적인 코드는 아무 것도 하지 않습니다. 개발자도 아무런 실패 피드백을 받지 않습니다. 엄격 모드에서 `NaN` 에 할당하는 것은 예외를 발생시킵니다. 일반 코드에서 조용히 넘어가는 모든 실패에 대해 (쓸 수 없는 전역 또는 프로퍼티에 할당, getter-only 프로퍼티에 할당, [확장 불가](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions "en-US/JavaScript/Reference/Global Objects/Object/preventExtensions") 객체에 새 프로퍼티 할당) 엄격 모드에서는 예외를 발생시킵니다.
+둘째로, 엄격모드는 예외를 발생시키는 실패를 조용히 넘어가는 대신 작업을 만듭니다. 예를 들어, `NaN` 은 쓸 수 없는 전역 변수입니다. `NaN` 에 할당하는 일반적인 코드는 아무 것도 하지 않습니다. 개발자도 아무런 실패 피드백을 받지 않습니다. 엄격 모드에서 `NaN` 에 할당하는 것은 예외를 발생시킵니다. 일반 코드에서 조용히 넘어가는 모든 실패에 대해 (쓸 수 없는 전역 또는 프로퍼티에 할당, getter-only 프로퍼티에 할당, [확장 불가](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions) 객체에 새 프로퍼티 할당) 엄격 모드에서는 예외를 발생시킵니다.
 
 ```js
 "use strict";
@@ -270,7 +270,7 @@ f(); // TypeError
 
 엄격모드는 "보안된" 자바스크립트를 작성하기 쉽게 해줍니다. 일부 웹사이트들은 사용자가 다른 사용자들을 대신하여 웹사이트에서 실행시키는자바스크립트를 작성하는 방법을 제공합니다. 브라우저에서 자바스크립트는 사용자의 개인정보에 접근할수 있기 때문에, 자바스크립트는 금지된 기능에 대한 검열을 하기위해 반드시 실행전에 부분적으로 변경되어야 합니다. 자바스크립트의 유연성으로 인해 많은 런타임 체크없이 이것을 수행하는것은 사실상 불가능합니다. 특정 언어의 기능들이 너무 광범위하여 런타임 검사 수행은 상당한 성능비용이 생깁니다. 엄격모드의 작은 수정과 사용자가 제출한 자바스크립트가 엄격모드가 되면 특정 방식으로 호출되므로 런타임 검사의 필요성이 크게 줄어 듭니다.
 
-첫째, 엄격모드에서는 `this` 로 함수에 전달된 값은 강제로 객체가 되지 않습니다 (a.k.a. "boxed"). 보통 함수의 경우, `this` 는 언제나 객체입니다: 객체값 `this` 와 함께 호출된 경우 제공된 객체이거나 ; 부울값, 문자 또는 숫자 `this` 로 호출된 경우 그 값은 Boxed 입니다; 또는 `undefined` 또는 `null` `this` 로 호출되면 전역객체입니다. (특정된 `this` 명세를 위해서는 [`call`](/en-US/Web/JavaScript/Reference/Global_Objects/Function/call "en-US/JavaScript/Reference/Global_Objects/Function/call"), [`apply`](/en-US/Web/JavaScript/Reference/Global_Objects/Function/apply "en-US/JavaScript/Reference/Global_Objects/Function/apply"), 또는 [`bind`](/en-US/Web/JavaScript/Reference/Global_Objects/Function/bind "en-US/JavaScript/Reference/Global_Objects/Function/bind") 를 사용하십시요) 자동 박싱은 성능 비용뿐 아니라 전역 객체가 브라우저에 노출되는것은 보안상 위험합니다. 전역객체들은 자바스크립트 환경의 "보안" 기능에 접근하는것을 제공하기때문에 제한되어야 합니다. 따라서 엄격모드의 함수는, 정의된 `this` 는 박스드 객체가 되지 않으며, 정의되지 않은경우 `this` 는 `undefined` 가 됩니다:
+첫째, 엄격모드에서는 `this` 로 함수에 전달된 값은 강제로 객체가 되지 않습니다 (a.k.a. "boxed"). 보통 함수의 경우, `this` 는 언제나 객체입니다: 객체값 `this` 와 함께 호출된 경우 제공된 객체이거나 ; 부울값, 문자 또는 숫자 `this` 로 호출된 경우 그 값은 Boxed 입니다; 또는 `undefined` 또는 `null` `this` 로 호출되면 전역객체입니다. (특정된 `this` 명세를 위해서는 [`call`](/en-US/Web/JavaScript/Reference/Global_Objects/Function/call), [`apply`](/en-US/Web/JavaScript/Reference/Global_Objects/Function/apply), 또는 [`bind`](/en-US/Web/JavaScript/Reference/Global_Objects/Function/bind) 를 사용하십시요) 자동 박싱은 성능 비용뿐 아니라 전역 객체가 브라우저에 노출되는것은 보안상 위험합니다. 전역객체들은 자바스크립트 환경의 "보안" 기능에 접근하는것을 제공하기때문에 제한되어야 합니다. 따라서 엄격모드의 함수는, 정의된 `this` 는 박스드 객체가 되지 않으며, 정의되지 않은경우 `this` 는 `undefined` 가 됩니다:
 
 ```js
 "use strict";

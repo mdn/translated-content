@@ -1,13 +1,6 @@
 ---
 title: 赋值运算符 (=)
 slug: Web/JavaScript/Reference/Operators/Assignment
-tags:
-  - JavaScript
-  - 参考
-  - 操作者
-  - 语言特性
-  - 赋值运算符
-translation_of: Web/JavaScript/Reference/Operators/Assignment
 ---
 {{jsSidebar("Operators")}}
 
@@ -45,4 +38,4 @@ x = y = z // x, y 都为 25
 
 ## 相关链接
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
+- [Assignment operators in the JS guide](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)

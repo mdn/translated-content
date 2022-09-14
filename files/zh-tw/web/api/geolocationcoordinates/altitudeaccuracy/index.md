@@ -1,7 +1,6 @@
 ---
 title: Coordinates.altitudeAccuracy
 slug: Web/API/GeolocationCoordinates/altitudeAccuracy
-translation_of: Web/API/GeolocationCoordinates/altitudeAccuracy
 ---
 {{APIRef("Geolocation API")}}
 
@@ -23,5 +22,5 @@ altAcc = coordinates.altitudeAccuracy
 
 ## 請參考
 
-- [Using geolocation](/en-US/docs/WebAPI/Using_geolocation)
+- [Using geolocation](/zh-TW/docs/WebAPI/Using_geolocation)
 - 屬於 {{domxref("Coordinates")}} 介面。

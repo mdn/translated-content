@@ -1,9 +1,8 @@
 ---
 title: in
 slug: Web/SVG/Attribute/in
-translation_of: Web/SVG/Attribute/in
 ---
-« [SVG Attribute reference home](/en/SVG/Attribute)
+« [SVG Attribute reference home](/zh-CN/SVG/Attribute)
 
 in 属性标识输入的原语。
 

@@ -1,12 +1,6 @@
 ---
 title: Date.parse()
 slug: Web/JavaScript/Reference/Global_Objects/Date/parse
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
 ---
 {{JSRef("Global_Objects", "Date")}}
 
@@ -142,7 +136,7 @@ Date.parse("Thu, 01 Jan 1970 00:00:00");
 Date.parse("Thu, 01 Jan 1970 00:00:00 GMT-0400");
 ```
 
-因为指定了时区 GMT (UTC)，所以不管本地时区如何，总是返回` ``14400000` 。
+因为指定了时区 GMT (UTC)，所以不管本地时区如何，总是返回 `14400000` 。
 
 ## 规范
 

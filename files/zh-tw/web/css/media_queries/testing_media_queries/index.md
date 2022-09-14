@@ -1,7 +1,6 @@
 ---
 title: 測試 media queries
 slug: Web/CSS/Media_Queries/Testing_media_queries
-translation_of: Web/CSS/Media_Queries/Testing_media_queries
 ---
 {{SeeCompatTable}}
 
@@ -67,7 +66,7 @@ mql.removeListener(handleOrientationChange);
 
 ## 延伸閱讀
 
-- [Media queries](/en-US/docs/CSS/Media_queries)
+- [Media queries](/zh-TW/docs/CSS/Media_queries)
 - {{domxref("window.matchMedia()") }}
 - {{domxref("MediaQueryList") }}
 - {{domxref("MediaQueryListListener") }}

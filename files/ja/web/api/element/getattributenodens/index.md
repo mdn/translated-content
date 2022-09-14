@@ -1,13 +1,6 @@
 ---
 title: Element.getAttributeNodeNS()
 slug: Web/API/Element/getAttributeNodeNS
-tags:
-  - API
-  - DOM
-  - メソッド
-  - リファレンス
-browser-compat: api.Element.getAttributeNodeNS
-translation_of: Web/API/Element/getAttributeNodeNS
 ---
 {{ APIRef("DOM") }}
 

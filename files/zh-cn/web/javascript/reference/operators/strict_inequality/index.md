@@ -1,7 +1,6 @@
 ---
 title: 严格不相等 (!==)
 slug: Web/JavaScript/Reference/Operators/Strict_inequality
-translation_of: Web/JavaScript/Reference/Operators/Strict_inequality
 ---
 {{jsSidebar("Operators")}}
 
@@ -85,6 +84,6 @@ console.log(object1 !== object1);  // false
 
 ## See also
 
-- [Equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Equality)
-- [Inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
-- [Strict equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+- [Equality operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)
+- [Inequality operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Inequality)
+- [Strict equality operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)

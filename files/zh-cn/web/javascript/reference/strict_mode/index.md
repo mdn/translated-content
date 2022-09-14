@@ -1,15 +1,10 @@
 ---
 title: 严格模式
 slug: Web/JavaScript/Reference/Strict_mode
-tags:
-  - JavaS
-  - Strict Mode
-  - 严格模式
-translation_of: Web/JavaScript/Reference/Strict_mode
 ---
 {{JsSidebar("More")}}
 
-> **备注：** 有时你会看到非严格模式，被称为“**[sloppy mode](https://developer.mozilla.org/docs/Glossary/Sloppy_mode)**”。这不是一个官方术语，但以防万一，你应该意识到这一点。
+> **备注：** 有时你会看到非严格模式，被称为“**[sloppy mode](/docs/Glossary/Sloppy_mode)**”。这不是一个官方术语，但以防万一，你应该意识到这一点。
 
 [ECMAScript 5](http://www.ecma-international.org/publications/standards/Ecma-262.htm)的**严格模式**是采用具有限制性 JavaScript 变体的一种方式，从而使代码隐式地脱离“马虎模式/稀松模式/懒散模式“（sloppy）模式。严格模式不仅仅是一个子集：它的产生是为了形成与正常代码不同的语义。不支持严格模式与支持严格模式的浏览器在执行严格模式代码时会采用不同行为。所以在没有对运行环境展开**特性测试**来验证对于严格模式相关方面支持的情况下，就算采用了严格模式也不一定会取得预期效果。严格模式代码和非严格模式代码可以共存，因此项目脚本可以渐进式地采用严格模式。严格模式对正常的 JavaScript 语义做了一些更改。
 
@@ -17,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Strict_mode
 2. 严格模式修复了一些导致 JavaScript 引擎难以执行优化的缺陷：有时候，相同的代码，严格模式可以比非严格模式下**运行得更快**。
 3. 严格模式**禁用了**在 ECMAScript 的未来版本中可能会定义的一些语法。
 
-如果你想改变你的代码，让其工作在具有限制性 JavaScript 环境中，请参阅[转换成严格模式](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode)。
+如果你想改变你的代码，让其工作在具有限制性 JavaScript 环境中，请参阅[转换成严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode)。
 
 ## 调用严格模式
 
@@ -254,7 +249,7 @@ f(); // 抛出类型错误
 
 严格模式下更容易写出“安全”的 JavaScript。现在有些网站提供了方式给用户编写能够被网站其他用户执行的 JavaScript 代码。在浏览器环境下，JavaScript 能够获取用户的隐私信息，因此这类 Javascript 必须在运行前部分被转换成需要申请访问禁用功能的权限。没有很多的执行时检查的情况，Javascript 的灵活性让它无法有效率地做这件事。一些语言中的函数普遍出现，以至于执行时检查他们会引起严重的性能损耗。做一些在严格模式下发生的小改动，要求用户提交的 JavaScript 开启严格模式并且用特定的方式调用，就会大大减少在执行时进行检查的必要。
 
-第一，在严格模式下通过`this`传递给一个函数的值不会被强制转换为一个对象。对一个普通的函数来说，`this`总会是一个对象：不管调用时`this`它本来就是一个对象；还是用布尔值，字符串或者数字调用函数时函数里面被封装成对象的`this`；还是使用`undefined`或者`null`调用函数式`this`代表的全局对象（使用[`call`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call), [`apply`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)或者[`bind`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)方法来指定一个确定的`this`）。这种自动转化为对象的过程不仅是一种性能上的损耗，同时在浏览器中暴露出全局对象也会成为安全隐患，因为全局对象提供了访问那些所谓安全的 JavaScript 环境必须限制的功能的途径。所以对于一个开启严格模式的函数，指定的`this`不再被封装为对象，而且如果没有指定`this`的话它值是`undefined`：
+第一，在严格模式下通过`this`传递给一个函数的值不会被强制转换为一个对象。对一个普通的函数来说，`this`总会是一个对象：不管调用时`this`它本来就是一个对象；还是用布尔值，字符串或者数字调用函数时函数里面被封装成对象的`this`；还是使用`undefined`或者`null`调用函数式`this`代表的全局对象（使用[`call`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call), [`apply`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)或者[`bind`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)方法来指定一个确定的`this`）。这种自动转化为对象的过程不仅是一种性能上的损耗，同时在浏览器中暴露出全局对象也会成为安全隐患，因为全局对象提供了访问那些所谓安全的 JavaScript 环境必须限制的功能的途径。所以对于一个开启严格模式的函数，指定的`this`不再被封装为对象，而且如果没有指定`this`的话它值是`undefined`：
 
 ```js
 "use strict";
@@ -351,4 +346,4 @@ function baz() { // 合法
 - [John Resig - ECMAScript 5 Strict Mode, JSON, and More](http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/)
 - [ECMA-262-5 in detail. Chapter 2. Strict Mode.](http://dmitrysoshnikov.com/ecmascript/es5-chapter-2-strict-mode/)
 - [Strict mode compatibility table](http://kangax.github.com/es5-compat-table/strict-mode/)
-- [Transitioning to strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode)
+- [Transitioning to strict mode](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode)

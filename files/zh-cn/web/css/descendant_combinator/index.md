@@ -1,10 +1,6 @@
 ---
 title: 后代选择器
 slug: Web/CSS/Descendant_combinator
-tags:
-  - CSS
-  - Selectors
-translation_of: Web/CSS/Descendant_combinator
 ---
 {{CSSRef("Selectors")}}
 
@@ -76,4 +72,4 @@ li li {
 
 ## 相关
 
-- [Child combinator](/en-US/docs/Web/CSS/Child_combinator)
+- [Child combinator](/zh-CN/docs/Web/CSS/Child_combinator)

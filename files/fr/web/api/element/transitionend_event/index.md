@@ -61,13 +61,11 @@ document.ontransitionend = () => {
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                                   | Commentaire          |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName("CSS3 Transitions", "#transitionend", "transitionend")}} | {{Spec2('CSS3 Transitions')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.transitionend_event")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,15 +1,6 @@
 ---
 title: Array.prototype.findLast()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - findLast
-  - Polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/findLast
 ---
 {{JSRef}}
 
@@ -28,20 +19,20 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/findLast
 ## 语法
 
 ```js
-// Arrow function
-findLast((element) => { /* ... */ } )
-findLast((element, index) => { /* ... */ } )
-findLast((element, index, array) => { /* ... */ } )
+// 箭头函数
+findLast((element) => { /* … */ } )
+findLast((element, index) => { /* … */ } )
+findLast((element, index, array) => { /* … */ } )
 
-// Callback function
+// 回调函数
 findLast(callbackFn)
 findLast(callbackFn, thisArg)
 
-// Inline callback function
-findLast(function(element) { /* ... */ })
-findLast(function(element, index) { /* ... */ })
-findLast(function(element, index, array){ /* ... */ })
-findLast(function(element, index, array) { /* ... */ }, thisArg)
+// 内联回调函数
+findLast(function(element) { /* … */ })
+findLast(function(element, index) { /* … */ })
+findLast(function(element, index, array){ /* … */ })
+findLast(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### 参数
@@ -111,7 +102,7 @@ console.log(inventory.findLast(isNotEnough));
 
 #### 使用箭头函数和解构
 
-前面的示例可以使用箭头函数和[对象解构](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring)来编写：
+前面的示例可以使用箭头函数和[对象解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring)来编写：
 
 ```js
 const inventory = [

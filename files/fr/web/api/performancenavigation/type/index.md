@@ -35,13 +35,11 @@ let type = performanceNavigation.type;
 
 ## Spécifications
 
-| Spécifications                                                                                                                               | Statut                                   | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#dom-performancenavigation-type', 'PerformanceNavigation.type')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceNavigation.type")}}
+{{Compat}}
 
 ## Voir aussi
 

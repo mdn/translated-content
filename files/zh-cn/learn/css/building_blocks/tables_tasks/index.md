@@ -1,11 +1,6 @@
 ---
 title: 测试技能：表格
 slug: Learn/CSS/Building_blocks/Tables_tasks
-tags:
-  - Beginner
-  - CSS
-  - Example
-translation_of: Learn/CSS/Building_blocks/Tables_tasks
 ---
 {{LearnSidebar}}
 

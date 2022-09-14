@@ -1,21 +1,6 @@
 ---
 title: <input type="datetime-local">
 slug: Web/HTML/Element/input/datetime-local
-tags:
-  - 日付
-  - 日付と時刻
-  - 要素
-  - フォーム入力
-  - HTML
-  - HTML フォーム
-  - Input
-  - 入力要素
-  - 入力型
-  - リファレンス
-  - 時刻
-  - datetime-local
-browser-compat: html.elements.input.type_datetime-local
-translation_of: Web/HTML/Element/input/datetime-local
 ---
 {{HTMLRef("Input_types")}}
 
@@ -248,7 +233,7 @@ input:valid+span:after {
 
 > **Warning:** HTML のフォーム検証は、入力されたデータが正しい形式であることを保証するスクリプトの代用にはなりません。 HTML を調整して検証をくぐり抜けたり、完全に削除したりすることはとても簡単にできます。 HTML を完全にバイパスし、サーバーに直接データを送信することも可能です。サーバー側のコードが受信したデータの検証に失敗した場合、不適切な形式のデータ (または大きすぎるデータ、誤った種類のデータなど) が送信された場合に障害が発生するおそれがあります。
 
-## ブラウザーの対応の扱い
+## ブラウザーの互換性の扱い
 
 前述のように、対応していないブラウザーでは、文字列入力欄に安全に格下げされますが、これはユーザーインターフェイスの一貫性 (表示されるコントロールが異なること) とデータの扱いの両方で問題を生みます。
 
@@ -479,7 +464,7 @@ if(test.type === 'text') {
 }
 
 function populateDays(month) {
-  // 日の <select> から現在の一連の &lt;option&gt; 要素を削除し、
+  // 日の <select> から現在の一連の <option> 要素を削除し、
   // 挿入のための準備をする
   while(daySelect.firstChild){
     daySelect.removeChild(daySelect.firstChild);
@@ -545,18 +530,18 @@ function populateYears() {
 
 function populateHours() {
   // populate the hours <select> with the 24 hours of the day
-  for(var i = 0; i &lt;= 23; i++) {
+  for(var i = 0; i <= 23; i++) {
     var option = document.createElement('option');
-    option.textContent = (i &lt; 10) ? ("0" + i) : i;
+    option.textContent = (i < 10) ? ("0" + i) : i;
     hourSelect.appendChild(option);
   }
 }
 
 function populateMinutes() {
   // populate the minutes <select> with the 60 hours of each minute
-  for(var i = 0; i &lt;= 59; i++) {
+  for(var i = 0; i <= 59; i++) {
     var option = document.createElement('option');
-    option.textContent = (i &lt; 10) ? ("0" + i) : i;
+    option.textContent = (i < 10) ? ("0" + i) : i;
     minuteSelect.appendChild(option);
   }
 }

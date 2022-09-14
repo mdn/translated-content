@@ -1,14 +1,6 @@
 ---
 title: HTMLHeadingElement
 slug: Web/API/HTMLHeadingElement
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - NeedsNewLayout
-  - リファレンス
-browser-compat: api.HTMLHeadingElement
-translation_of: Web/API/HTMLHeadingElement
 ---
 {{ APIRef("HTML DOM") }}
 

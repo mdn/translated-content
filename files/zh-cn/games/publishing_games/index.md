@@ -1,12 +1,6 @@
 ---
 title: 发布游戏
 slug: Games/Publishing_games
-tags:
-  - 发布
-  - 推广
-  - 游戏
-  - 获利
-translation_of: Games/Publishing_games
 ---
 {{GamesSidebar}}
 

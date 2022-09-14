@@ -1,10 +1,6 @@
 ---
 title: 閉包
 slug: Glossary/Closure
-tags:
-  - 術語表
-  - 閉包
-translation_of: Glossary/Closure
 ---
 定義可執行範圍(**{{glossary("scope")}})**的綁定：在 {{glossary("JavaScript")}}, **{{glossary("function","functions")}}**會創建一個閉包上下文。
 
@@ -16,4 +12,4 @@ translation_of: Glossary/Closure
 
 ### 技術參考
 
-- MDN 上的[閉包](/en-US/docs/Web/JavaScript/Closures)
+- MDN 上的[閉包](/zh-TW/docs/Web/JavaScript/Closures)

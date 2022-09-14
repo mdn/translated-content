@@ -1,14 +1,6 @@
 ---
 title: 407 Proxy Authentication Required
 slug: Web/HTTP/Status/407
-tags:
-  - 代理服务器
-  - 响应状态码
-  - 客户端错误
-  - 状态码
-  - 身份验证
-  - 验证凭证
-translation_of: Web/HTTP/Status/407
 ---
 {{HTTPSidebar}}
 
@@ -40,7 +32,7 @@ Proxy-Authenticate: Basic realm="Access to internal site"
 
 ## 相关内容
 
-- [HTTP authentication](/en-US/docs/Web/HTTP/Authentication)
+- [HTTP authentication](/zh-CN/docs/Web/HTTP/Authentication)
 - {{HTTPHeader("WWW-Authenticate")}}
 - {{HTTPHeader("Authorization")}}
 - {{HTTPHeader("Proxy-Authorization")}}

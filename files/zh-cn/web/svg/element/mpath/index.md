@@ -1,14 +1,6 @@
 ---
 title: mpath
 slug: Web/SVG/Element/mpath
-tags:
-  - SVG
-  - SVG 动画
-  - 元素
-  - 参考
-  - 需要兼容性表
-  - 需要示例
-translation_of: Web/SVG/Element/mpath
 ---
 {{SVGRef}}
 
@@ -57,8 +49,8 @@ translation_of: Web/SVG/Element/mpath
 
 ### 全局属性
 
-- [核心属性](/en/SVG/Attribute#Core) »
-- [Xlink 属性](/en/SVG/Attribute#XLink) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [Xlink 属性](/zh-CN/SVG/Attribute#XLink) »
 - {{ SVGAttr("externalResourcesRequired") }}
 
 ### 专有属性
@@ -67,7 +59,7 @@ translation_of: Web/SVG/Element/mpath
 
 ## DOM 接口
 
-该元素实现了[`SVGMPathElement`](/en/DOM/SVGMPathElement)接口。
+该元素实现了[`SVGMPathElement`](/zh-CN/DOM/SVGMPathElement)接口。
 
 ## 相关的内容
 

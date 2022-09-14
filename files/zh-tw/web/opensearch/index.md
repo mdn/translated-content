@@ -1,10 +1,6 @@
 ---
 title: 製作 OpenSearch 搜尋模組
 slug: Web/OpenSearch
-tags:
-  - 待翻譯
-  - 搜尋模組
-translation_of: Web/OpenSearch
 ---
 {{AddonSidebar}}
 

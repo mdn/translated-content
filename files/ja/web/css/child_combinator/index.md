@@ -1,12 +1,6 @@
 ---
 title: 子結合子
 slug: Web/CSS/Child_combinator
-tags:
-  - CSS
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.child
-translation_of: Web/CSS/Child_combinator
 ---
 {{CSSRef("Selectors")}}
 

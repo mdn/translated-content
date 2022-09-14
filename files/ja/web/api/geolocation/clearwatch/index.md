@@ -1,17 +1,6 @@
 ---
 title: Geolocation.clearWatch()
 slug: Web/API/Geolocation/clearWatch
-tags:
-  - API
-  - Geolocation
-  - 位置情報 API
-  - メソッド
-  - NeedsExample
-  - リファレンス
-  - 安全なコンテキスト
-  - clearWatch
-browser-compat: api.Geolocation.clearWatch
-translation_of: Web/API/Geolocation/clearWatch
 ---
 {{securecontext_header}}{{ APIref("Geolocation API") }}
 

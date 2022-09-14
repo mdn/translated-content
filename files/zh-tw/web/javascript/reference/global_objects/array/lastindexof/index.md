@@ -1,14 +1,6 @@
 ---
 title: Array.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 ---
 {{JSRef}}
 
@@ -36,7 +28,7 @@ arr.lastIndexOf(searchElement, fromIndex)
 
 ## 描述
 
-`lastIndexOf` compares `searchElement` to elements of the Array using [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators) (the same method used by the ===, or triple-equals, operator).
+`lastIndexOf` compares `searchElement` to elements of the Array using [strict equality](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators) (the same method used by the ===, or triple-equals, operator).
 
 ## 範例
 

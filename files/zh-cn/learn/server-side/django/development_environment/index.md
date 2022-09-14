@@ -1,10 +1,6 @@
 ---
 title: 设置 Django 开发环境
 slug: Learn/Server-side/Django/development_environment
-tags:
-  - Python
-  - django
-translation_of: Learn/Server-side/Django/development_environment
 original_slug: Learn/Server-side/Django/开发环境
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
@@ -37,7 +33,7 @@ Django 使你可以轻松配置自己的电脑，以便开始开发网络应用�
 
 Django 本身提供的主要工具是一组用于创建和使用 Django 项目的 Python 脚本，以及可在你电脑的 web 浏览器中测试本地 Django web 应用（在你的计算机，而不是在外部的 web 服务器）。
 
-还有其他外部工具，它们构成了开发环境的一部分，我们将不再赘述。这些包括 [文本编辑器](/en-US/docs/Learn/Common_questions/Available_text_editors) 或编辑代码的 IDE，以及像 [Git](https://git-scm.com/) 这样的源代码控制管理工具，用于安全地管理不同版本的代码。我们假设你已经安装了一个文本编辑器。
+还有其他外部工具，它们构成了开发环境的一部分，我们将不再赘述。这些包括 [文本编辑器](/zh-CN/docs/Learn/Common_questions/Available_text_editors) 或编辑代码的 IDE，以及像 [Git](https://git-scm.com/) 这样的源代码控制管理工具，用于安全地管理不同版本的代码。我们假设你已经安装了一个文本编辑器。
 
 ### 什么是 Django 设置选项？
 
@@ -181,7 +177,7 @@ pip3 list
 
 ## 在 Python 虚拟环境中使用 Django
 
-我们使用[virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html)（Linux 及 macOS）和 [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win)（WIndows）来创建 Python 虚拟环境，而它们又使用了[virtualenv](/en-US/docs/Python/Virtualenv)。封装工具创建了一个一致的接口来管理各个平台上的接口。
+我们使用[virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html)（Linux 及 macOS）和 [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win)（WIndows）来创建 Python 虚拟环境，而它们又使用了[virtualenv](/zh-CN/docs/Python/Virtualenv)。封装工具创建了一个一致的接口来管理各个平台上的接口。
 
 ### 安装虚拟环境软件
 

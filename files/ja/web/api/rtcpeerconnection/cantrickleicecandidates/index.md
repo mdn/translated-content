@@ -1,21 +1,6 @@
 ---
 title: RTCPeerConnection.canTrickleIceCandidates
 slug: Web/API/RTCPeerConnection/canTrickleIceCandidates
-page-type: web-api-instance-property
-tags:
-  - API
-  - ICE
-  - Media
-  - Property
-  - RTCPeerConnection
-  - Reference
-  - Trickle
-  - Trickling
-  - WebRTC
-  - WebRTC API
-  - canTrickleIceCandidates
-browser-compat: api.RTCPeerConnection.canTrickleIceCandidates
-translation_of: Web/API/RTCPeerConnection/canTrickleIceCandidates
 ---
 
 {{APIRef("WebRTC")}}

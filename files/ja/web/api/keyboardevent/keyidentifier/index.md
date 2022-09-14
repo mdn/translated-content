@@ -1,17 +1,6 @@
 ---
 title: KeyboardEvent.keyIdentifier
 slug: Web/API/KeyboardEvent/keyIdentifier
-page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Deprecated
-  - Non-standard
-  - Property
-  - Reference
-  - events
-browser-compat: api.KeyboardEvent.keyIdentifier
-translation_of: Web/API/KeyboardEvent/keyIdentifier
 ---
 {{APIRef("UI Events")}}{{non-standard_header}}{{deprecated_header}}
 

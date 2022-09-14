@@ -1,18 +1,6 @@
 ---
 title: WebAssembly.compileStreaming()
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming
-tags:
-  - API
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-  - WebAssembly
-  - compile
-  - compileStreaming
-  - streaming
-browser-compat: javascript.builtins.WebAssembly.compileStreaming
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming
 ---
 {{JSRef}}
 
@@ -27,7 +15,7 @@ WebAssembly.compileStreaming(source)
 ### 引数
 
 - _source_
-  - : ストリーム、コンパイルする .wasm モジュールのソースコードを表す [`Response`](/ja/docs/Web/API/Response "Response は Fetch API のインターフェイスで、リクエストのレスポンスを表します。") オブジェクトか、それを満足するプロミスです。
+  - : ストリーム、コンパイルする .wasm モジュールのソースコードを表す [`Response`](/ja/docs/Web/API/Response) オブジェクトか、それを満足するプロミスです。
 
 ### 返値
 
@@ -42,7 +30,7 @@ WebAssembly.compileStreaming(source)
 
 ### ストリーミングのコンパイル
 
-次の例 (Github上のデモ [compile-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/compile-streaming.html) と、[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html)を参照してください) では、ソースから直接 .wasm モジュールをストリームして、 {{jsxref("WebAssembly.Module")}} オブジェクトにコンパイルしています。`compileStreaming()`  関数は [`Response`](/ja/docs/Web/API/Response "Response は Fetch API のインターフェイスで、リクエストのレスポンスを表します。") オブジェクトを渡すプロミスを受け取るので、直接 {{domxref("WindowOrWorkerGlobalScope.fetch()")}} の呼び出し結果を渡すことができます。
+次の例 (Github上のデモ [compile-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/compile-streaming.html) と、[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html)を参照してください) では、ソースから直接 .wasm モジュールをストリームして、 {{jsxref("WebAssembly.Module")}} オブジェクトにコンパイルしています。`compileStreaming()`  関数は [`Response`](/ja/docs/Web/API/Response) オブジェクトを渡すプロミスを受け取るので、直接 {{domxref("WindowOrWorkerGlobalScope.fetch()")}} の呼び出し結果を渡すことができます。
 
 ```js
 var importObject = { imports: { imported_func: arg => console.log(arg) } };

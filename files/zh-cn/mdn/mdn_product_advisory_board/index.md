@@ -1,11 +1,6 @@
 ---
 title: MDN 产品咨询委员会
 slug: MDN/MDN_Product_Advisory_Board
-tags:
-  - MDN
-  - PAB
-  - 产品咨询委员会
-translation_of: MDN/MDN_Product_Advisory_Board
 ---
 {{MDNSidebar}}
 
@@ -18,5 +13,5 @@ Mozilla 对 MDN 产品咨询委员会的愿景是建立协作，帮助 MDN 社�
 ## 参见
 
 - [Product Advisory Board Charter & Membership](/zh-CN/docs/MDN/MDN_Product_Advisory_Board/Membership)
-- [Product Advisory Board members](/en-US/docs/MDN/MDN_Product_Advisory_Board/Members)
+- [Product Advisory Board members](/zh-CN/docs/MDN/MDN_Product_Advisory_Board/Members)
 - [Membership application](https://www.dropbox.com/s/noj6vddhumhe9o0/MDN%20Product%20Advisory%20Board%20Interest%20Form.pdf?dl=0)

@@ -32,11 +32,8 @@ Cet élément implémente l'interface {{domxref("SVGMetadataElement")}}.
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                   | Commentaire                                                |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------------- |
-| {{SpecName('SVG2', 'struct.html#MetadataElement', '&lt;metadata&gt;')}}     | {{Spec2('SVG2')}} | Autorise les attributs d'événements globaux sur l'élément. |
-| {{SpecName('SVG1.1', 'metadata.html#MetadataElement', '&lt;metadata&gt;')}} | {{Spec2('SVG1.1')}} | Définition initiale                                        |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.metadata")}}
+{{Compat}}

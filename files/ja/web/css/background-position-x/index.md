@@ -1,15 +1,6 @@
 ---
 title: background-position-x
 slug: Web/CSS/background-position-x
-tags:
-  - CSS
-  - CSS 背景
-  - CSS プロパティ
-  - Experimental
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.background-position-x
-translation_of: Web/CSS/background-position-x
 ---
 {{CSSRef}}
 

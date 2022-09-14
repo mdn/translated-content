@@ -1,12 +1,6 @@
 ---
 title: 'SyntaxError: missing formal parameter'
 slug: Web/JavaScript/Reference/Errors/Missing_formal_parameter
-tags:
-  - JavaScript
-  - 类型错误
-  - 错误
-  - 错误提示
-translation_of: Web/JavaScript/Reference/Errors/Missing_formal_parameter
 ---
 {{jsSidebar("Errors")}}
 
@@ -77,5 +71,5 @@ log({obj: "value"}); // Object { obj: "value" }
 
 - Other errors regarding formal parameters:
 
-  - [SyntaxError: Malformed formal parameter](/en-US/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter)
-  - [SyntaxError: redeclaration of formal parameter "x"](/en-US/docs/Web/JavaScript/Reference/Errors/Redeclared_parameter)
+  - [SyntaxError: Malformed formal parameter](/zh-CN/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter)
+  - [SyntaxError: redeclaration of formal parameter "x"](/zh-CN/docs/Web/JavaScript/Reference/Errors/Redeclared_parameter)

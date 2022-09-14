@@ -1,11 +1,6 @@
 ---
 title: 一貫性のあるリストのインデント
 slug: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
-tags:
-  - CSS
-  - ガイド
-  - NeedsUpdate
-translation_of: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
 ---
 {{CSSRef}}
 
@@ -63,7 +58,7 @@ ul, li {margin-left: 0; padding-left: 0;}
 
 ![図 6](consistent-list-indentation-figure6.gif)
 
-見ての通り、マーカーはどの場合でも `<li>` 要素に付けられたままになっています。違いはひとえに `<ul>` の整形方法です。。`<ul>` 要素に背景や境界を設定してみて初めて、その違いが分かります。
+見ての通り、マーカーはどの場合でも `<li>` 要素に付けられたままになっています。違いはひとえに `<ul>` の整形方法です。`<ul>` 要素に背景や境界を設定してみて初めて、その違いが分かります。
 
 ## 一貫性を探る
 

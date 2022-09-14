@@ -1,13 +1,6 @@
 ---
 title: ICE
 slug: Glossary/ICE
-tags:
-  - WebRTC
-  - 代码脚本
-  - 协议
-  - 术语
-  - 网络
-translation_of: Glossary/ICE
 ---
 **ICE** (_交互式连接建立_) 是一个被{{glossary("WebRTC")}}使用的框架（跟其他技术在一起使用），它被用在两端之间的连接，不管是何种网络类型 (通常用在视频或语音聊天)。这个协议让两端能够互相找到对方并建立一个连接，即便它们都使用了网络地址转译 ({{glossary("NAT")}}) 去跟内网的其他设备共享了一个公网 IP 地址。
 

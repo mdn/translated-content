@@ -1,14 +1,6 @@
 ---
 title: 进行测试的策略
 slug: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
-tags:
-  - 测试
-  - 测试策略
-  - 用户测试
-  - 自动化测试
-  - 虚拟机 仿真器
-  - 跨浏览器测试
-translation_of: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -20,10 +12,10 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
     <tr>
       <th scope="row">准备：</th>
       <td>
-        熟练掌握 <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, 和
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 语言; 了解<a
-          href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
+        熟练掌握 <a href="/zh-CN/docs/Learn/HTML">HTML</a>,
+        <a href="/zh-CN/docs/Learn/CSS">CSS</a>, 和
+        <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言; 了解<a
+          href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
           >跨浏览器测试的核心概念</a
         >。
       </td>
@@ -129,7 +121,7 @@ IE8 被列为重要，但它较老且不再更新。Opera Mini 也很重要，�
 
 因此，我们的最终支持图表最终将如下所示：
 
-1. A 级：适用于 Windows/Mac 的 Chrome 和 Firefox、适用于 Mac 的 Safari、Windows 的"边缘"和"IE"(每个版本的最后两个版本)、iPhone/iPad 的 iOS Safari、手机/平板电脑上的 Android 股票浏览器 (最后两个版本)、适用于 Android 的 Chrome 和 Firefox(最后两个版本) 在手机平板电脑上。通过常见测试的可访问性。
+1. A 级：适用于 Windows/Mac 的 Chrome 和 Firefox、适用于 Mac 的 Safari、Windows 的"边缘"和"IE"(每个版本的最后两个版本)、iPhone/iPad 的 iOS Safari、手机/平板电脑上的 Android 股票浏览器 (最后两个版本)、适用于 Android 的 Chrome 和 Firefox(最后两个版本) 在手机平板电脑上。通过常见测试的无障碍。
 2. B 级：IE 8 和 9 用于 Windows，Opera Mini。
 3. C 级：Opera，其他合适的现代浏览器。
 
@@ -197,7 +189,7 @@ You may notice from the text in the example that it won't work in IE8 — this i
 
 仿真器基本上是在计算机内运行并模拟某种设备或特定设备条件的程序，允许您比查找要测试的特定硬件/软件组合更方便地执行某些测试。
 
-仿真器可能与测试设备条件一样简单。例如，如果要对宽度/高度媒体查询进行一些快速而粗劣的测试以进行响应式设计，则可以使用 Firefox 的[Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode)。Safari 也有类似的模式，可以通过访问“*Safari > 首选项”*和"显示开发"菜单，然后选择"开发"\&gt;"输入响应式设计模式"来启用。 Chrome 也有类似的功能：设备模式 (请参阅[Simulate Mobile Devices with Device Mode](https://developers.google.com/web/tools/chrome-devtools/device-mode/))。
+仿真器可能与测试设备条件一样简单。例如，如果要对宽度/高度媒体查询进行一些快速而粗劣的测试以进行响应式设计，则可以使用 Firefox 的[Responsive Design Mode](/zh-CN/docs/Tools/Responsive_Design_Mode)。Safari 也有类似的模式，可以通过访问“*Safari > 首选项”*和"显示开发"菜单，然后选择"开发"\&gt;"输入响应式设计模式"来启用。 Chrome 也有类似的功能：设备模式 (请参阅[Simulate Mobile Devices with Device Mode](https://developers.google.com/web/tools/chrome-devtools/device-mode/))。
 
 不过，您经常必须安装某种仿真器。要测试的最常见设备/浏览器如下所示：
 

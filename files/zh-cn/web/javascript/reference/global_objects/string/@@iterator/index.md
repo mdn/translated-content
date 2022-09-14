@@ -1,7 +1,6 @@
 ---
 title: String.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/String/@@iterator
-translation_of: Web/JavaScript/Reference/Global_Objects/String/@@iterator
 ---
 {{JSRef}}
 
@@ -60,4 +59,4 @@ for (var v of string) {
 
 ## 相关链接
 
-- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [Iteration protocols](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)

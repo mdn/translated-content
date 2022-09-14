@@ -1,7 +1,6 @@
 ---
 title: Window.requestAnimationFrame()
 slug: Web/API/window/requestAnimationFrame
-translation_of: Web/API/window/requestAnimationFrame
 original_slug: Web/API/Window.requestAnimationFrame
 ---
 {{APIRef}}

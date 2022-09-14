@@ -46,10 +46,8 @@ observer2.observe({entryTypes: ["measure"]});
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | Statut                                                   | Commentaire                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | ------------------------------------------------- |
-| {{SpecName('Performance Timeline Level 2', '#dom-performanceobserver-disconnect', 'disconnect()')}} | {{Spec2('Performance Timeline Level 2')}} | Définition initiale de la méthode `disconnect()`. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceObserver.disconnect")}}
+{{Compat}}

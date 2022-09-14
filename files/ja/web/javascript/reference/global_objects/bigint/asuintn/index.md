@@ -1,14 +1,6 @@
 ---
 title: BigInt.asUintN()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
-tags:
-  - BigInt
-  - JavaScript
-  - メソッド
-  - リファレンス
-  - asUintN
-browser-compat: javascript.builtins.BigInt.asUintN
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
 ---
 {{JSRef}}
 

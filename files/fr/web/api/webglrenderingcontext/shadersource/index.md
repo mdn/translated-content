@@ -41,14 +41,11 @@ var source = gl.getShaderSource(shader);
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                               | Commentaire                           |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------- |
-| {{SpecName('WebGL', "#5.14.9", "shaderSource")}}                             | {{Spec2('WebGL')}}             | Définition initiale.                  |
-| {{SpecName('OpenGL ES 2.0', "glShaderSource.xml", "glShaderSource")}} | {{Spec2('OpenGL ES 2.0')}} | Page man de l'API OpenGL (similaire). |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.shaderSource")}}
+{{Compat}}
 
 ## Voir aussi
 

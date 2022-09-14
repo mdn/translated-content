@@ -1,7 +1,6 @@
 ---
 title: CSS Transitions
 slug: Web/CSS/CSS_Transitions
-translation_of: Web/CSS/CSS_Transitions
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

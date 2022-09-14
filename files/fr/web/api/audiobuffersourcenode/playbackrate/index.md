@@ -87,15 +87,13 @@ playbackControl.oninput = function() {
 }
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                            | Statut                               | Commentaire |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-playbackRate', 'playbackRate')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AudioBufferSourceNode.playbackRate")}}
+{{Compat}}
 
 ## Voir aussi
 

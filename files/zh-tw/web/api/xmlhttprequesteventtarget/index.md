@@ -1,7 +1,6 @@
 ---
 title: XMLHttpRequestEventTarget
 slug: Web/API/XMLHttpRequestEventTarget
-translation_of: Web/API/XMLHttpRequestEventTarget
 ---
 {{APIRef("XMLHttpRequest")}}
 

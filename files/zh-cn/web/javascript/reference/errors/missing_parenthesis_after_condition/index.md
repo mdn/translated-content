@@ -1,11 +1,6 @@
 ---
 title: 'SyntaxError: missing ) after condition'
 slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_condition
-tags:
-  - JavaScript
-  - 语法错误
-  - 错误
-translation_of: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_condition
 ---
 {{jsSidebar("Errors")}}
 
@@ -59,7 +54,7 @@ if (done is true) {
 // SyntaxError: missing ) after condition
 ```
 
-相反你需要使用正确的[比较操作符](/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)， 如下：
+相反你需要使用正确的[比较操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)， 如下：
 
 ```js example-good
 if (done === true) {
@@ -69,6 +64,6 @@ if (done === true) {
 
 ## 相关内容
 
-- [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
-- [比较操作符](/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)
-- [在代码中做判断 — 条件表达式](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [`if...else`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else)
+- [比较操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)
+- [在代码中做判断 — 条件表达式](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals)

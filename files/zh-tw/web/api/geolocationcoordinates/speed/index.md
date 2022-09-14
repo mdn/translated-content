@@ -1,7 +1,6 @@
 ---
 title: Coordinates.speed
 slug: Web/API/GeolocationCoordinates/speed
-translation_of: Web/API/GeolocationCoordinates/speed
 ---
 {{APIRef("Geolocation API")}}
 
@@ -23,5 +22,5 @@ speed = coordinates.speed
 
 ## 請參考
 
-- [Using geolocation](/en-US/docs/WebAPI/Using_geolocation)
+- [Using geolocation](/zh-TW/docs/WebAPI/Using_geolocation)
 - 屬於 {{domxref("Coordinates")}} 介面。

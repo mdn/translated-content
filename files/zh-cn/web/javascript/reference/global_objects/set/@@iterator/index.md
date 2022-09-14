@@ -1,13 +1,6 @@
 ---
 title: Set.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
-tags:
-  - ECMAScript2015
-  - Iterator
-  - JavaScript
-  - Method
-  - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
 ---
 {{JSRef}}
 

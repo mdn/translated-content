@@ -1,7 +1,6 @@
 ---
 title: Range
 slug: Web/API/Range
-translation_of: Web/API/Range
 ---
 {{ APIRef("DOM") }}
 
@@ -98,4 +97,4 @@ _There are no inherited methods._
 
 ## 參見
 
-- [The DOM interfaces index](/en-US/docs/DOM/DOM_Reference)
+- [The DOM interfaces index](/zh-TW/docs/DOM/DOM_Reference)

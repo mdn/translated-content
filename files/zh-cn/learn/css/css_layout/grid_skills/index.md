@@ -1,7 +1,6 @@
 ---
 title: 测试你的技能：网格布局
 slug: Learn/CSS/CSS_layout/Grid_skills
-translation_of: Learn/CSS/CSS_layout/Grid_skills
 ---
 {{LearnSidebar}}
 

@@ -2,8 +2,6 @@
 title: 書本實例詳情頁面與自我挑戰
 slug: >-
   Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge
-translation_of: >-
-  Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge
 ---
 ## 書本實例詳情頁面
 
@@ -84,4 +82,4 @@ block content
 
 ## 下一步
 
-- 回到 [Express 教學 5: 呈現圖書館資料](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
+- 回到 [Express 教學 5: 呈現圖書館資料](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data)

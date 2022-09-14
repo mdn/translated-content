@@ -1,13 +1,6 @@
 ---
 title: 多个背景的应用
 slug: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
-tags:
-  - CSS
-  - CSS 背景
-  - 参考
-  - 实例
-  - 指导
-translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 ---
 {{CSSRef}}
 
@@ -61,4 +54,4 @@ translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 
 ## 另见
 
-- [Using CSS gradients](/en-US/docs/CSS/Using_CSS_gradients)
+- [Using CSS gradients](/zh-CN/docs/CSS/Using_CSS_gradients)

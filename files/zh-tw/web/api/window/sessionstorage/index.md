@@ -1,13 +1,6 @@
 ---
 title: Window.sessionStorage
 slug: Web/API/Window/sessionStorage
-tags:
-  - API
-  - Property
-  - Storage
-  - WindowSessionStorage
-  - localStorage
-translation_of: Web/API/Window/sessionStorage
 ---
 {{APIRef()}}
 

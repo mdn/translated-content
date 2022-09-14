@@ -1,7 +1,6 @@
 ---
 title: undefined
 slug: Glossary/undefined
-translation_of: Glossary/undefined
 ---
 一个声明未定义的变量的初始值，或没有实际参数的形式参数。
 

@@ -1,16 +1,6 @@
 ---
 title: XMLHttpRequest.responseURL
 slug: Web/API/XMLHttpRequest/responseURL
-tags:
-  - AJAX
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - URL
-  - XMLHttpRequest
-  - responseURL
-browser-compat: api.XMLHttpRequest.responseURL
-translation_of: Web/API/XMLHttpRequest/responseURL
 ---
 {{APIRef('XMLHttpRequest')}}
 

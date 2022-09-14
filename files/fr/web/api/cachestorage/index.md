@@ -17,7 +17,7 @@ L'interface `CacheStorage` représente le stockage des objets {{domxref("Cache")
 
 L'interface :
 
-- Fournit un répertoire principal de tous les caches nommés qui peut être accessible par un {{domxref("ServiceWorker")}} ou un autre type de travailleur ou portée de {{domxref("window")}} (vous n'êtes pas limité à l'utiliser uniquement avec des Service Workers, même si la spécification {{SpecName("Service Workers")}} le définit).
+- Fournit un répertoire principal de tous les caches nommés qui peut être accessible par un {{domxref("ServiceWorker")}} ou un autre type de travailleur ou portée de {{domxref("window")}} (vous n'êtes pas limité à l'utiliser uniquement avec des Service Workers, même si la spécification des <i lang="en">service workers</i> le définit).
 
   > **Note :** [Chrome et Safari n'exposent que "CacheStorage" au contexte fenêtré sur HTTPS](https://bugs.chromium.org/p/chromium/issues/detail?id=1026063). {{domxref("window.caches")}} sera indéfinie, à moins qu'un certificat SSL ne soit configuré.
 
@@ -165,13 +165,11 @@ try {
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                               | Commentaire          |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#cache-storage', 'CacheStorage')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilités des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.CacheStorage")}}
+{{Compat}}
 
 ## Voir aussi
 

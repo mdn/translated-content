@@ -1,16 +1,6 @@
 ---
 title: 类
 slug: Web/JavaScript/Reference/Classes
-tags:
-  - ECMAScript 2015
-  - Học
-  - JavaScript
-  - 中级
-  - 构造函数
-  - 类
-  - 继承
-  - 高阶类
-translation_of: Web/JavaScript/Reference/Classes
 ---
 {{JsSidebar("Classes")}}
 
@@ -69,7 +59,7 @@ console.log(Rectangle.name);
 // 输出: "Rectangle2"
 ```
 
-> **备注：** 类**表达式**也同样受到[类声明](/zh-CN/docs/Web/JavaScript/Reference/Classes$edit#Class_declarations)部分中提到的类型提升的限制。
+> **备注：** 类**表达式**也同样受到[类声明](/zh-CN/docs/Web/JavaScript/Reference/Classes#Class_declarations)部分中提到的类型提升的限制。
 
 ## 类体和方法定义
 
@@ -77,11 +67,11 @@ console.log(Rectangle.name);
 
 ### 严格模式
 
-类声明和类表达式的主体都执行在[严格模式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下。比如，构造函数，静态方法，原型方法，getter 和 setter 都在严格模式下执行。
+类声明和类表达式的主体都执行在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下。比如，构造函数，静态方法，原型方法，getter 和 setter 都在严格模式下执行。
 
 ### 构造函数
 
-[constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor)方法是一个特殊的方法，这种方法用于创建和初始化一个由`class`创建的对象。一个类只能拥有一个名为 “constructor”的特殊方法。如果类包含多个`constructor`的方法，则将抛出 一个{{jsxref("SyntaxError")}} 。
+[constructor](/zh-CN/docs/Web/JavaScript/Reference/Classes/constructor)方法是一个特殊的方法，这种方法用于创建和初始化一个由`class`创建的对象。一个类只能拥有一个名为 “constructor”的特殊方法。如果类包含多个`constructor`的方法，则将抛出 一个{{jsxref("SyntaxError")}} 。
 
 一个构造函数可以使用 `super` 关键字来调用一个父类的构造函数。
 
@@ -257,7 +247,7 @@ class Rectangle {
 
 私有字段不能通过在之后赋值来创建它们，这种方式只适用普通属性。
 
-更多信息，请看[class fields](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Class_fields).
+更多信息，请看[class fields](/zh-CN/docs/Web/JavaScript/Reference/Classes/Class_fields).
 
 ## 使用 `extends` 扩展子类
 

@@ -1,7 +1,6 @@
 ---
 title: '::grammar-error'
 slug: Web/CSS/::grammar-error
-translation_of: Web/CSS/::grammar-error
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

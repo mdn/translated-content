@@ -45,12 +45,10 @@ observer.observe({ entryTypes: ["element"] });
 
 > **Note :** Cet exemple utilise l'interface [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) pour créer une liste d'événements de mesure des performances. Dans notre cas, nous observons l'élément [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) afin d'utiliser l'interface `PerformanceElementTiming`.
 
-## Specifications
+## Spécifications
 
-| Spécification                                                                                                                                                    | Statut                                   | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Element Timing API','#dom-performanceelementtiming-naturalwidth','PerformanceElementTiming.naturalWidth')}} | {{Spec2('Element Timing API')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceElementTiming.naturalWidth")}}
+{{Compat}}

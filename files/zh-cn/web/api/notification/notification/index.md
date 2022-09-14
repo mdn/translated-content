@@ -30,7 +30,7 @@ let myNotification = new Notification(title, options);
     - `icon`: 一个 {{domxref("USVString")}} 包含要在通知中显示的图标的 URL。
     - `image`: 一个 {{domxref("USVSTring")}}包含要在通知中显示的图像的 URL。
     - `data`: 您想要与通知相关联的任意数据。这可以是任何数据类型。
-    - `vibrate`: 一个振动模式 [vibration pattern](/en-US/docs/Web/Guide/API/Vibration#Vibration_patterns) 设备的振动硬件在通知触发时发出。
+    - `vibrate`: 一个振动模式 [vibration pattern](/zh-CN/docs/Web/Guide/API/Vibration#Vibration_patterns) 设备的振动硬件在通知触发时发出。
     - `renotify`: 一个 {{domxref("Boolean")}} 指定在新通知替换旧通知后是否应通知用户。默认值为 false，这意味着它们不会被通知。
     - `requireInteraction`: 表示通知应保持有效，直到用户点击或关闭它，而不是自动关闭。默认值为 false。
 
@@ -41,7 +41,7 @@ let myNotification = new Notification(title, options);
     - `noscreen`: 一个 {{domxref("Boolean")}} 指定通知触发是否应启用设备的屏幕。 默认值为 false，这意味着它将启用屏幕。
     - `sticky`: 一个 {{domxref("Boolean")}} 指明通知是否应该是“粘”, 即不易被用户清理。默认值为 false，这意味着它不会粘。
 
-## Example
+## 示例
 
 In our [Emogotchi demo](http://mdn.github.io/emogotchi/) ([see source code](https://github.com/mdn/emogotchi)), we run a simple `spawnNotification()` function when we want to fire a notification — this is passed arguments to specify the body, icon and title we want, then it creates the necessary `options` object and fires the notification using the `Notification()` constructor.
 
@@ -56,14 +56,14 @@ function spawnNotification(theBody,theIcon,theTitle) {
 }
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat("api.Notification.Notification")}}
 
-## See also
+## 参见
 
-- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)

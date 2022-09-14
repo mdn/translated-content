@@ -1,15 +1,6 @@
 ---
 title: Fetch の基本概念
 slug: Web/API/Fetch_API/Basic_concepts
-tags:
-  - API
-  - Fetch
-  - Fetch API
-  - XMLHttpRequest
-  - 概念
-  - guard
-  - request
-translation_of: Web/API/Fetch_API/Basic_concepts
 ---
 {{DefaultAPISidebar("Fetch API")}}
 

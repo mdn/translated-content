@@ -12,7 +12,7 @@ Le processus par lequel un format de niveau inférieur (par exemple, qui a été
 
 En {{Glossary("JavaScript")}}, par exemple, vous pouvez désérialiser une  {{Glossary("string","chaîne de caractères")}} {{Glossary("JSON")}} vers un objet en appelant la {{Glossary("function","fonction")}} {{jsxref("JSON.parse()")}}.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

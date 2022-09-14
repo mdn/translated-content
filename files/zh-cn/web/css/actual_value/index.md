@@ -1,7 +1,6 @@
 ---
 title: 实际值
 slug: Web/CSS/actual_value
-translation_of: Web/CSS/actual_value
 ---
 {{CSSRef}}
 
@@ -15,7 +14,7 @@ translation_of: Web/CSS/actual_value
 
 ## 参见
 
-- [CSS Reference](/en-US/docs/Web/CSS/Reference)
+- [CSS Reference](/zh-CN/docs/Web/CSS/Reference)
 - CSS 重要概念：
 
   - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)

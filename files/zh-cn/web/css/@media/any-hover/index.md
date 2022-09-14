@@ -1,17 +1,10 @@
 ---
 title: any-hover
 slug: Web/CSS/@media/any-hover
-tags:
-  - '@media'
-  - CSS
-  - Reference
-  - 媒体查询
-  - 媒体特性
-translation_of: Web/CSS/@media/any-hover
 ---
 {{cssref}}
 
-**`any-hover`** [CSS](/en-US/docs/CSS) [媒体特性](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) 可以用来测试是否有*任意*可用的输入机制可以在元素上 hover。
+**`any-hover`** [CSS](/zh-CN/docs/CSS) [媒体特性](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) 可以用来测试是否有*任意*可用的输入机制可以在元素上 hover。
 
 ## 语法
 
@@ -56,4 +49,4 @@ translation_of: Web/CSS/@media/any-hover
 
 ## 更多资料
 
-- [the `hover` media feature](/en-US/docs/Web/CSS/@media/hover)
+- [the `hover` media feature](/zh-CN/docs/Web/CSS/@media/hover)

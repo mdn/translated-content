@@ -1,7 +1,6 @@
 ---
 title: Math.log()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/log
 ---
 {{JSRef("Global_Objects", "Math")}}
 
@@ -51,7 +50,7 @@ function getBaseLog(x, y) {
 }
 ```
 
-如果你运行 ` getBaseLog(10, 1000)，则会返回``2.9999999999999996，非常接近实际答案：3，原因是浮点数精度问题。 `
+如果你运行 `getBaseLog(10, 1000)`，则会返回 `2.9999999999999996`，非常接近实际答案：3，原因是浮点数精度问题。
 
 ## 规范
 

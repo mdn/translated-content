@@ -1,19 +1,6 @@
 ---
 title: ResizeObserver
 slug: Web/API/ResizeObserver
-page-type: web-api-interface
-tags:
-  - API
-  - バウンディングボックス
-  - Experimental
-  - インターフェイス
-  - リファレンス
-  - リサイズオブザーバー API
-  - ResizeObserver
-  - コンテンツボックス
-  - observers
-browser-compat: api.ResizeObserver
-translation_of: Web/API/ResizeObserver
 ---
 {{APIRef("Resize Observer API")}}
 

@@ -1,7 +1,6 @@
 ---
 title: RangeError
 slug: Web/JavaScript/Reference/Global_Objects/RangeError
-translation_of: Web/JavaScript/Reference/Global_Objects/RangeError
 ---
 {{JSRef}}
 

@@ -1,14 +1,6 @@
 ---
 title: Range.setStart()
 slug: Web/API/Range/setStart
-page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
-browser-compat: api.Range.setStart
-translation_of: Web/API/Range/setStart
 ---
 {{ApiRef("DOM")}}
 

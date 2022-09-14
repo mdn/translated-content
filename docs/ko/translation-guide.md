@@ -202,19 +202,33 @@ A value of 0.01 was used for the value to ramp down to in the last function rath
 
 - 브랜드 이름은 번역하지 않습니다.
 
-```diff
-- 자바스크립트
-- 씨에스에스
-- 모질라
-+ JavaScript
-+ CSS
-+ Mozilla
-```
+  ```diff
+  - 자바스크립트
+  - 씨에스에스
+  - 모질라
+  + JavaScript
+  + CSS
+  + Mozilla
+  ```
 
 - "무슨무슨 값" (numeric value, integer value, ...) 같은 경우, 항상 띄어서 표기합니다.
   - 통일성을 위해 "반환 값" 같은 경우 띄어서 표기합니다.
   - 예: 정수 값, 소수 값, 반환 값, 기본 값
   - 틀린 예: 정숫값, 소숫값, 반환값, 기본값
+
+- callout
+
+  ```html
+  <div class="callout">
+    <h4 id="looking_to_become_a_front-end_web_developer">프론트엔드 웹 개발자가 되고자 하시나요?</h4>
+
+    <p>목표를 달성하기 위한 모든 필수 정보가 들어있는 교육 과정을 준비했습니다.</p>
+
+    <p>
+      <a href="/ko/docs/Learn/Front-end_web_developer"><strong>시작하기</strong></a>
+    </p>
+  </div>
+  ```
 
 ### 용어 지침 `참고 링크` 우선 순위
 
@@ -242,7 +256,7 @@ A value of 0.01 was used for the value to ramp down to in the last function rath
 | Demo | 데모 | [링크](https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders#demo)
 | Description | 설명 | [링크](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#description)  
 | Example | 예제 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
-| Examples | 예제들 | [링크](https://developer.mozilla.org/en-US/docs/Glossary/loop#examples) |
+| Examples | 예제 | [링크](https://github.com/mdn/translated-content/blob/main/files/ko/web/javascript/reference/global_objects/proxy/proxy/apply/index.md) |
 | Guides | 가이드 | |
 | In this module | 이번 과정에서는 | [링크](https://developer.mozilla.org/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started#in_this_module) |
 | Learn More | 더 알아보기 | [링크](https://developer.mozilla.org/en-US/docs/Glossary/Mutable) |

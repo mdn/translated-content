@@ -1,16 +1,6 @@
 ---
 title: 'HTMLElement: copy イベント'
 slug: Web/API/HTMLElement/copy_event
-tags:
-  - API
-  - クリップボード API
-  - HTMLElement
-  - イベント
-  - リファレンス
-  - ウェブ
-  - copy
-browser-compat: api.HTMLElement.copy_event
-translation_of: Web/API/HTMLElement/oncopy
 ---
 {{ APIRef("HTML DOM") }}
 

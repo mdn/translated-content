@@ -1,7 +1,6 @@
 ---
 title: Web開發入門
 slug: Web/Guide/Introduction_to_Web_development
-translation_of: Web/Guide/Introduction_to_Web_development
 ---
 不論你是否是剛入門的 Web 開發者，或者只是為了拓寬視野而進入全新的 Web 領域，這裡的連結應該幫得上你。至少，我們在此有很多的連結。
 

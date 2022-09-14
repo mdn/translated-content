@@ -1,7 +1,6 @@
 ---
 title: Coordinates.accuracy
 slug: Web/API/GeolocationCoordinates/accuracy
-translation_of: Web/API/GeolocationCoordinates/accuracy
 ---
 {{APIRef("Geolocation API")}}
 
@@ -23,5 +22,5 @@ acc = coordinates.accuracy
 
 ## 請參考
 
-- [Using geolocation](/en-US/docs/WebAPI/Using_geolocation)
+- [Using geolocation](/zh-TW/docs/WebAPI/Using_geolocation)
 - 屬於 {{domxref("Coordinates")}} 介面。

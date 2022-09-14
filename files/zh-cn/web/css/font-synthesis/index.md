@@ -1,11 +1,6 @@
 ---
 title: font-synthesis
 slug: Web/CSS/font-synthesis
-tags:
-  - CSS
-  - 参考
-  - 字体
-translation_of: Web/CSS/font-synthesis
 ---
 {{CSSRef}}
 
@@ -38,7 +33,7 @@ translation_of: Web/CSS/font-synthesis
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ### HTML
 
@@ -64,7 +59,7 @@ em {
 
 ### 结果
 
-{{ EmbedLiveSample('Examples', '', '50', '', 'Web/CSS/font-synthesis') }}
+{{ EmbedLiveSample('示例', '', '50') }}
 
 ## 规范
 

@@ -1,7 +1,6 @@
 ---
 title: XMLHttpRequest.setRequestHeader()
 slug: Web/API/XMLHttpRequest/setRequestHeader
-translation_of: Web/API/XMLHttpRequest/setRequestHeader
 ---
 {{APIRef('XMLHttpRequest')}}
 
@@ -42,5 +41,5 @@ XMLHttpRequest.setRequestHeader(header, value)
 
 ## 參見
 
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [Using XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [HTML in XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)

@@ -1,7 +1,6 @@
 ---
 title: 使用影像
 slug: Web/API/Canvas_API/Tutorial/Using_images
-translation_of: Web/API/Canvas_API/Tutorial/Using_images
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations" )}}
 
@@ -9,8 +8,8 @@ translation_of: Web/API/Canvas_API/Tutorial/Using_images
 
 載入影像到畫布中基本上需要兩個步驟：
 
-1.  取得{{domxref("HTMLImageElement")}}物件或其他畫布元素的參照(reference)作為來源，透過單純提供 URL 或圖片位置的方式是行不通的.
-2.  用 drawImage()函數在畫布上畫影像.
+1. 取得{{domxref("HTMLImageElement")}}物件或其他畫布元素的參照(reference)作為來源，透過單純提供 URL 或圖片位置的方式是行不通的.
+2. 用 drawImage()函數在畫布上畫影像.
 
 接下來便來看看要怎麼做.
 

@@ -1,11 +1,6 @@
 ---
 title: MIME 類別 (IANA 媒體類別)
 slug: Web/HTTP/Basics_of_HTTP/MIME_types
-tags:
-  - HTTP
-  - MIME類別
-  - 內容類別
-translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 ---
 {{HTTPSidebar}}
 
@@ -97,7 +92,7 @@ There are two multipart types:
 
 All HTML content should be served with this type. Alternative MIME types for XHTML (like `application/xhtml+xml`) are mostly useless nowadays.
 
-> **備註：** Use `application/xml` or `application/xhtml+xml` if you want XML’s strict parsing rules, [`<![CDATA[…]]>`](/en-US/docs/Web/API/CDATASection) sections, or elements that aren't from HTML/SVG/MathML namespaces.
+> **備註：** Use `application/xml` or `application/xhtml+xml` if you want XML’s strict parsing rules, [`<![CDATA[…]]>`](/zh-TW/docs/Web/API/CDATASection) sections, or elements that aren't from HTML/SVG/MathML namespaces.
 
 ### text/javascript
 

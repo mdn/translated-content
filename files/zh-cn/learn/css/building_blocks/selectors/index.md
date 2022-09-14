@@ -1,12 +1,6 @@
 ---
 title: CSS 选择器
 slug: Learn/CSS/Building_blocks/Selectors
-tags:
-  - CSS
-  - CSS 选择器
-  - 初学者
-  - 类
-translation_of: Learn/CSS/Building_blocks/Selectors
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
 
@@ -81,7 +75,7 @@ h1,
 }
 ```
 
-在下面的实时示例中，试着把两个有 ID 声明的选择器组合起来。外观在组合起来以后应该还是一样的。
+在下面的实时示例中，试着把两个有相同声明的选择器组合起来。外观在组合起来以后应该还是一样的。
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/selector-list.html", '100%', 1000)}}
 

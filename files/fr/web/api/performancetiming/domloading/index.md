@@ -28,13 +28,11 @@ let time = performanceTiming.domLoading;
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                                   | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#dom-performancetiming-domloading', 'PerformanceTiming.domLoading')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceTiming.domLoading")}}
+{{Compat}}
 
 ## Voir aussi
 

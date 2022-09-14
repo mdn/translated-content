@@ -1,17 +1,6 @@
 ---
 title: rotate
 slug: Web/CSS/rotate
-tags:
-  - CSS
-  - CSS プロパティ
-  - Reference
-  - 回転
-  - 座標変換
-  - angle
-  - recipe:css-property
-  - rotation
-browser-compat: css.properties.rotate
-translation_of: Web/CSS/rotate
 ---
 {{CSSRef}}
 

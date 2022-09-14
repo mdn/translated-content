@@ -25,9 +25,7 @@ _Cette interface implémente les méthodes définies dans {{domxref("RandomSourc
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                               | Commentaire         |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName("Web Crypto API", "#crypto-interface", "Crypto")}} | {{Spec2("Web Crypto API")}} | Definition initiale |
+{{Specifications}}
 
 ## Voir aussi
 

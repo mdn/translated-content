@@ -1,7 +1,6 @@
 ---
 title: Object() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/Object/Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/Object
 ---
 {{JSRef}}
 
@@ -63,4 +62,4 @@ let o = new Object(null)
 
 ## See also
 
-- [Object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- [Object initializer](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)

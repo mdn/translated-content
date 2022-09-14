@@ -1,12 +1,6 @@
 ---
 title: 401 Unauthorized
 slug: Web/HTTP/Status/401
-tags:
-  - 客户端错误
-  - 状态码
-  - 身份验证
-  - 身份验证凭证
-translation_of: Web/HTTP/Status/401
 ---
 {{HTTPSidebar}}
 
@@ -40,7 +34,7 @@ WWW-Authenticate: Basic realm="Access to staging site"
 
 ## 相关内容
 
-- [HTTP authentication](/en-US/docs/Web/HTTP/Authentication)
+- [HTTP authentication](/zh-CN/docs/Web/HTTP/Authentication)
 - {{HTTPHeader("WWW-Authenticate")}}
 - {{HTTPHeader("Authorization")}}
 - {{HTTPHeader("Proxy-Authorization")}}

@@ -1,10 +1,6 @@
 ---
 title: Symbol.replace
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/replace
-tags:
-  - JavaScript
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/replace
 ---
 {{JSRef}}
 

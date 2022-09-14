@@ -1,16 +1,6 @@
 ---
 title: WebAssembly 概念
 slug: WebAssembly/Concepts
-tags:
-  - C
-  - C++
-  - Emscripten
-  - JavaScript
-  - WebAssembly
-  - 文本格式
-  - 概念
-  - 网络平台
-translation_of: WebAssembly/Concepts
 ---
 {{WebAssemblySidebar}}
 

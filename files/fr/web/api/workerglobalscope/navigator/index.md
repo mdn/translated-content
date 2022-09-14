@@ -46,13 +46,11 @@ Vous pouvez utiliser l'objet navigator pour récupérer des informations supplé
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', '#dom-worker-navigator', 'navigator')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WorkerGlobalScope.navigator")}}
+{{Compat}}
 
 ## Voir aussi
 

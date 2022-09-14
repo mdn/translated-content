@@ -1,15 +1,6 @@
 ---
 title: place-items
 slug: Web/CSS/place-items
-tags:
-  - CSS
-  - CSS フレックスボックス
-  - CSS グリッドレイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.place-items
-translation_of: Web/CSS/place-items
 ---
 {{CSSRef}}
 

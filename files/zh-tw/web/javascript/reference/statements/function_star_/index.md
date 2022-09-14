@@ -1,13 +1,6 @@
 ---
 title: function*
 slug: Web/JavaScript/Reference/Statements/function*
-tags:
-  - ECMAScript 2015
-  - Function
-  - Iterator
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/function*
 ---
 {{jsSidebar("Statements")}}
 
@@ -145,7 +138,7 @@ const bar = foo();console.log(bar.next()); // {value: 10, done: false}
 
 #### Generators and iterators in Firefox versions before 26
 
-Older Firefox versions implement an older version of the generators proposal. In the older version, generators were defined using a regular `function` keyword (without an asterisk) among other differences. See [Legacy generator function](/en-US/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function) for further information.
+Older Firefox versions implement an older version of the generators proposal. In the older version, generators were defined using a regular `function` keyword (without an asterisk) among other differences. See [Legacy generator function](/zh-TW/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function) for further information.
 
 #### `IteratorResult` object returned instead of throwing
 

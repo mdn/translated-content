@@ -1,11 +1,6 @@
 ---
 title: Document directive
 slug: Glossary/Document_directive
-tags:
-  - CSP
-  - HTTP
-  - 安全
-translation_of: Glossary/Document_directive
 ---
 **{{Glossary("CSP")}} 文档指令（document directives）** 出现于 {{HTTPHeader("Content-Security-Policy")}} 首部，支配着应用安全策略的文档的属性或者 [worker](/zh-CN/docs/Web/API/Web_Workers_API) 运行环境的特征。
 

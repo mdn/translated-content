@@ -1,14 +1,6 @@
 ---
 title: サーバー送信イベント
 slug: Web/API/Server-sent_events
-page-type: web-api-overview
-tags:
-  - API
-  - Overview
-  - SSE
-  - Server-sent events
-spec-urls: https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events
-translation_of: Web/API/Server-sent_events
 ---
 {{DefaultAPISidebar("Server Sent Events")}}
 

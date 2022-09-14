@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/find
 ---
 {{JSRef}}
 
@@ -164,7 +163,7 @@ if (!Array.prototype.find) {
 }
 ```
 
-If you need to support truly obsolete JavaScript engines that don't support [`Object.defineProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty), it's best not to polyfill `Array.prototype` methods at all, as you can't make them non-enumerable.
+If you need to support truly obsolete JavaScript engines that don't support [`Object.defineProperty`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty), it's best not to polyfill `Array.prototype` methods at all, as you can't make them non-enumerable.
 
 ## 規範
 

@@ -1,13 +1,6 @@
 ---
 title: 204 No Content
 slug: Web/HTTP/Status/204
-tags:
-  - '204'
-  - HTTP
-  - HTTP Status Code
-  - 响应状态码
-  - 成功响应
-translation_of: Web/HTTP/Status/204
 ---
 {{HTTPSidebar}}
 
@@ -31,4 +24,4 @@ HTTP **`204 No Content`** 成功状态响应码，表示该请求已经成功了
 
 ## 参见
 
-- [HTTP request methods](/en-US/docs/Web/HTTP/Methods)
+- [HTTP request methods](/zh-CN/docs/Web/HTTP/Methods)

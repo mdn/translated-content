@@ -1,7 +1,6 @@
 ---
 title: Bitwise XOR (^)
 slug: Web/JavaScript/Reference/Operators/Bitwise_XOR
-translation_of: Web/JavaScript/Reference/Operators/Bitwise_XOR
 ---
 {{jsSidebar("Operators")}}
 
@@ -68,5 +67,5 @@ Bitwise XORing any number `x` with `0` yields `x`.
 
 ## 参见
 
-- [Bitwise operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise)
-- [Bitwise XOR assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)
+- [Bitwise operators in the JS guide](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise)
+- [Bitwise XOR assignment operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)

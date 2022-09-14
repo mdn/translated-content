@@ -1,7 +1,6 @@
 ---
 title: Coordinates.altitude
 slug: Web/API/GeolocationCoordinates/altitude
-translation_of: Web/API/GeolocationCoordinates/altitude
 ---
 {{APIRef("Geolocation API")}}
 
@@ -23,5 +22,5 @@ alt = coordinates.altitude
 
 ## 請參考
 
-- [Using geolocation](/en-US/docs/WebAPI/Using_geolocation)
+- [Using geolocation](/zh-TW/docs/WebAPI/Using_geolocation)
 - 屬於 {{domxref("Coordinates")}} 介面。

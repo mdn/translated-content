@@ -1,11 +1,6 @@
 ---
 title: HTTP ヘッダーの記事を作成するには
 slug: MDN/Writing_guidelines/Howto/Document_an_HTTP_header
-tags:
-  - Howto
-  - MDN
-  - Meta
-translation_of: MDN/Contribute/Howto/Document_an_HTTP_header
 original_slug: MDN/Contribute/Howto/Document_an_HTTP_header
 ---
 {{MDNSidebar}}

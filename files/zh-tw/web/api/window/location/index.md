@@ -1,7 +1,6 @@
 ---
 title: window.location
 slug: Web/API/Window/location
-translation_of: Web/API/Window/location
 ---
 {{ ApiRef() }}
 
@@ -39,22 +38,22 @@ All of the following properties are strings. You can read them to get informatio
 
 The "Example" column contains the values of the properties of the following URL:
 
-- http\://\[www\.example.com]:80/search?q=devmo#test
+- `http://[www.example.com]:80/search?q=devmo#test`
 
 | Property   | Description                                                                                                                                                                                                                     | Example                                         |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
 | `hash`     | the part of the URL that follows the # symbol, including the # symbol. You can listen for the [hashchange event](/zh-TW/docs/Mozilla_event_reference/hashchange) to get notified of changes to the hash in supporting browsers. | #test                                           |
 | `host`     | the host name and port number.                                                                                                                                                                                                  | [www.example.com]:80                            |
 | `hostname` | the host name (without the port number or square brackets).                                                                                                                                                                     | www.example.com                                 |
-| `href`     | the entire URL.                                                                                                                                                                                                                 | http://[www.example.com]:80/search?q=devmo#test |
+| `href`     | the entire URL.                                                                                                                                                                                                                 | <http://[www.example.com>]:80/search?q=devmo#test |
 | `pathname` | the path (relative to the host).                                                                                                                                                                                                | /search                                         |
 | `port`     | the port number of the URL.                                                                                                                                                                                                     | 80                                              |
 | `protocol` | the protocol of the URL.                                                                                                                                                                                                        | http:                                           |
 | `search`   | the part of the URL that follows the ? symbol, including the ? symbol.                                                                                                                                                          | ?q=devmo                                        |
 
-If the hash part of the URL contains encoded characters (see [Core_JavaScript_1.5_Reference:Global_Functions:encodeURIComponent](/en/JavaScript/Reference/Global_Objects/encodeURIComponent)), `hash` returns the decoded URL part. This is a [bug](https://bugzilla.mozilla.org/show_bug.cgi?id=483304) in Firefox. `href`, `search` and `pathname` return the correct, encoded URL parts. For example:
+If the hash part of the URL contains encoded characters (see [Core_JavaScript_1.5_Reference:Global_Functions:encodeURIComponent](/zh-TW/JavaScript/Reference/Global_Objects/encodeURIComponent)), `hash` returns the decoded URL part. This is a [bug](https://bugzilla.mozilla.org/show_bug.cgi?id=483304) in Firefox. `href`, `search` and `pathname` return the correct, encoded URL parts. For example:
 
-- http\://www\.example.com/search?q=Fire%20fox#Fire%20fox
+- `http://www.example.com/search?q=Fire%20fox#Fire%20fox`
 
 results in:
 
@@ -68,7 +67,7 @@ results in:
 | `assign(url)`      | Load the document at the provided URL.                                                                                                                                                                                                                                   |
 | `reload(forceget)` | Reload the document from the current URL. `forceget` is a boolean, which, when it is `true`, causes the page to always be reloaded from the server. If it is `false` or not specified, the browser may reload the page from its cache.                                   |
 | `replace(url)`     | Replace the current document with the one at the provided URL. The difference from the `assign()` method is that after using `replace()` the current page will not be saved in session history, meaning the user won't be able to use the Back button to navigate to it. |
-| `toString()`       | Returns the string representation of the `Location` object's URL. See the [JavaScript reference](/en/JavaScript/Reference/Global_Objects/Object/toString) for details.                                                                                                   |
+| `toString()`       | Returns the string representation of the `Location` object's URL. See the [JavaScript reference](/zh-TW/JavaScript/Reference/Global_Objects/Object/toString) for details.                                                                                                   |
 
 ### Examples
 
@@ -161,7 +160,7 @@ var oGetVars = new (function (sSearch) {
 // alert(oGetVars.yourVar);
 ```
 
-##### Nestle the variables obtained through the `window.location.search` string in an object named `oGetVars`, also attempting to recognize their [`typeof`](/en/JavaScript/Reference/Operators/typeof):
+##### Nestle the variables obtained through the `window.location.search` string in an object named `oGetVars`, also attempting to recognize their [`typeof`](/zh-TW/JavaScript/Reference/Operators/typeof):
 
 ```js
 var oGetVars = {};
@@ -266,7 +265,7 @@ span.intLink {
 </html>
 ```
 
-> **備註：** The function `showNode` is also an example of the use of the [`for`](/en/JavaScript/Reference/Statements/for) cycle without a `statement` section. In this case **a semicolon is always put immediately after the declaration of the cycle**.
+> **備註：** The function `showNode` is also an example of the use of the [`for`](/zh-TW/JavaScript/Reference/Statements/for) cycle without a `statement` section. In this case **a semicolon is always put immediately after the declaration of the cycle**.
 
 …the same thing but with a dynamic page scroll:
 
@@ -314,7 +313,7 @@ var showBookmark = (function () {
 
 ### See also
 
-[Manipulating the browser history](/en/DOM/Manipulating_the_browser_history)
+[Manipulating the browser history](/zh-TW/DOM/Manipulating_the_browser_history)
 
 ### Browser compatibility
 

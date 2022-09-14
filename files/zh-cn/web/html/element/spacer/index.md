@@ -1,7 +1,6 @@
 ---
 title: <spacer>
 slug: Web/HTML/Element/spacer
-translation_of: Web/HTML/Element/spacer
 ---
 {{non-standard_header}}{{deprecated_header}}
 
@@ -11,7 +10,7 @@ Firefox 是 Netscape 浏览器的后继，在版本 4 中移除了 `<spacer>` �
 
 ## 属性
 
-就像其他 HTML 元素一样，这个元素支持 [全局属性](/en-US/docs/HTML/Global_attributes)。
+就像其他 HTML 元素一样，这个元素支持 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
 - {{ htmlattrdef("type") }}
   - : 这个属性指定间隔的类型，可用的值为 `horizontal`, `vertical` 和 `block`。

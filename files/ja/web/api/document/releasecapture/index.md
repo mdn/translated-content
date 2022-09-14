@@ -1,14 +1,6 @@
 ---
 title: Document.releaseCapture()
 slug: Web/API/Document/releaseCapture
-page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-browser-compat: api.Document.releaseCapture
-translation_of: Web/API/Document/releaseCapture
 ---
 {{ApiRef("DOM")}}
 
@@ -39,7 +31,7 @@ releaseCapture()
 
 Internet Explorer の実装に基づく。
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat}}
 

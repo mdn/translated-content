@@ -1,7 +1,6 @@
 ---
 title: Division assignment (/=)
 slug: Web/JavaScript/Reference/Operators/Division_assignment
-translation_of: Web/JavaScript/Reference/Operators/Division_assignment
 ---
 {{jsSidebar("Operators")}}
 
@@ -39,5 +38,5 @@ bar /= 0     // Infinity
 
 ## See also
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
-- [Division operator](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
+- [Assignment operators in the JS guide](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
+- [Division operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Division)

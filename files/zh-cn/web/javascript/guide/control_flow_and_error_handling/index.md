@@ -1,17 +1,14 @@
 ---
 title: 流程控制与错误处理
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
-tags:
-  - JavaScript
-translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 ---
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Grammar_and_Types", "Web/JavaScript/Guide/Loops_and_iteration")}}
 
 JavaScript 提供一套灵活的语句集，特别是控制流语句，你可以用它在你的应用程序中实现大量的交互性功能。本章节我们将带来关于 JavaScript 语句的一些概览。
 
-这一章中的语句，在 [JavaScript 参考](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements) 中包含更为详尽的细节。在 JavaScript 代码中，分号（;）字符被用来分割语句。
+这一章中的语句，在 [JavaScript 参考](/zh-CN/docs/Web/JavaScript/Reference/Statements) 中包含更为详尽的细节。在 JavaScript 代码中，分号（;）字符被用来分割语句。
 
-在 JavaScript 中，任何表达式 (expression) 都可以看作一条语句 (statement),如果你想了解表达式的详细信息，可以阅读[表达式与运算符（Expressions and operators）](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)这一章节。
+在 JavaScript 中，任何表达式 (expression) 都可以看作一条语句 (statement),如果你想了解表达式的详细信息，可以阅读[表达式与运算符（Expressions and operators）](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators)这一章节。
 
 ## 语句块
 
@@ -208,14 +205,14 @@ document.write("Is there anything else you'd like?<br>");
 
 你可以用 `throw` 语句抛出一个异常并且用 `try...catch` 语句捕获处理它。
 
-- [`throw`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling$edit#throw_statement)语句
-- [`try...catch`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling$edit#try...catch_statement)语句
+- [`throw`](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#throw_statement)语句
+- [`try...catch`](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#try...catch_statement)语句
 
 ### 异常类型
 
 JavaScript 可以抛出任意对象。然而，不是所有对象能产生相同的结果。尽管抛出数值或者字母串作为错误信息十分常见，但是通常用下列其中一种异常类型来创建目标更为高效：
 
-- [ECMAScript exceptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#Error_types)
+- [ECMAScript exceptions](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error#Error_types)
 - {{domxref("DOMException")}} and {{domxref("DOMError")}}
 
 ### `throw` 语句
@@ -378,7 +375,7 @@ try {
 
 #### 嵌套 try...catch 语句
 
-你可以嵌套一个或多个`try ... catch`语句。如果一个内部`try ... catch`语句没有`catch`块，它需要有一个`finally`块，并且封闭的`try ... catch`语句的`catch`块被检查匹配。有关更多信息，请参阅[try... catch](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch)参考页上的[嵌套 try-blocks](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks)。
+你可以嵌套一个或多个`try ... catch`语句。如果一个内部`try ... catch`语句没有`catch`块，它需要有一个`finally`块，并且封闭的`try ... catch`语句的`catch`块被检查匹配。有关更多信息，请参阅[try... catch](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch)参考页上的[嵌套 try-blocks](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks)。
 
 ### 使用`Error`对象
 

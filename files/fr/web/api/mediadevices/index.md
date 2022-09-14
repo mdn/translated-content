@@ -87,13 +87,11 @@ function errorMsg(msg, error) {
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                               | Commentaire         |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Media Capture', '#mediadevices', 'MediaDevices')}} | {{Spec2('Media Capture')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.MediaDevices")}}
+{{Compat}}
 
 ## Voir aussi
 

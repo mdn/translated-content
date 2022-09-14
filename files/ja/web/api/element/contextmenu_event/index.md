@@ -1,23 +1,6 @@
 ---
 title: 'Element: contextmenu イベント'
 slug: Web/API/Element/contextmenu_event
-tags:
-  - API
-  - コンテキスト
-  - DOM
-  - Element
-  - イベント
-  - インターフェイス
-  - MouseEvent
-  - リファレンス
-  - Right Click
-  - 右クリック
-  - ボタン
-  - contextmenu
-  - メニュー
-  - マウス
-browser-compat: api.Element.contextmenu_event
-translation_of: Web/API/Element/contextmenu_event
 ---
 {{APIRef}}
 

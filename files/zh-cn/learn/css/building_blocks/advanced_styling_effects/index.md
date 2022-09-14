@@ -1,7 +1,6 @@
 ---
 title: 高级区块效果
 slug: Learn/CSS/Building_blocks/Advanced_styling_effects
-translation_of: Learn/CSS/Building_blocks/Advanced_styling_effects
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_boxes/Styling tables", "Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
 

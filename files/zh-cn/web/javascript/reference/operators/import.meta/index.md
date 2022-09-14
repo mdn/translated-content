@@ -1,14 +1,6 @@
 ---
 title: import.meta
 slug: Web/JavaScript/Reference/Operators/import.meta
-tags:
-  - JavaScript
-  - Language feature
-  - Modules
-  - Reference
-  - Statement
-  - import
-translation_of: Web/JavaScript/Reference/Statements/import.meta
 original_slug: Web/JavaScript/Reference/Statements/import.meta
 ---
 {{JSSidebar("Statements")}}
@@ -84,5 +76,5 @@ new URL(import.meta.url).searchParams.get('someURLInfo'); // 5
 
 ## See also
 
-- [import](/en-US/docs/Web/JavaScript/Reference/Statements/import)
-- [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export)
+- [import](/zh-CN/docs/Web/JavaScript/Reference/Statements/import)
+- [`export`](/zh-CN/docs/Web/JavaScript/Reference/Statements/export)

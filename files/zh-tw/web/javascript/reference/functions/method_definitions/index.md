@@ -1,7 +1,6 @@
 ---
 title: 方法定義
 slug: Web/JavaScript/Reference/Functions/Method_definitions
-translation_of: Web/JavaScript/Reference/Functions/Method_definitions
 ---
 {{JsSidebar("Functions")}}
 
@@ -31,7 +30,7 @@ var obj = {
 
 ## 說明
 
-這個簡短的語法和在 ECMAScript 2015 引入 [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) 以及 [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) 類似。
+這個簡短的語法和在 ECMAScript 2015 引入 [getter](/zh-TW/docs/Web/JavaScript/Reference/Functions/get) 以及 [setter](/zh-TW/docs/Web/JavaScript/Reference/Functions/set) 類似。
 
 請看以下程式碼：
 
@@ -112,7 +111,7 @@ var obj3 = {
 
 ### Async generator methods
 
-[Generator methods](/en-US/docs/Web/JavaScript/Reference/Statements/function*) can also be {{jsxref("Statements/async_function", "async", "", 1)}}.
+[Generator methods](/zh-TW/docs/Web/JavaScript/Reference/Statements/function*) can also be {{jsxref("Statements/async_function", "async", "", 1)}}.
 
 ```js
 var obj4 = {

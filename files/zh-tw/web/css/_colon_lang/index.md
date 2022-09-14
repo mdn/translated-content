@@ -1,7 +1,6 @@
 ---
 title: ':lang()'
 slug: Web/CSS/:lang
-translation_of: Web/CSS/:lang
 ---
 {{CSSRef}}
 

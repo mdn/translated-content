@@ -1,11 +1,6 @@
 ---
 title: radialGradient
 slug: Web/SVG/Element/radialGradient
-tags:
-  - SVG
-  - SVG 渐变
-  - 元素
-translation_of: Web/SVG/Element/radialGradient
 ---
 {{SVGRef}}
 
@@ -19,9 +14,9 @@ translation_of: Web/SVG/Element/radialGradient
 
 ### 全局属性
 
-- [核心属性](/en-US/docs/Web/SVG/Attribute#Core) »
-- [外观属性](/en-US/docs/Web/SVG/Attribute#Presentation) »
-- [Xlink 属性](/en-US/docs/Web/SVG/Attribute#XLink) »
+- [核心属性](/zh-CN/docs/Web/SVG/Attribute#Core) »
+- [外观属性](/zh-CN/docs/Web/SVG/Attribute#Presentation) »
+- [Xlink 属性](/zh-CN/docs/Web/SVG/Attribute#XLink) »
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}

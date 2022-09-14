@@ -1,12 +1,6 @@
 ---
 title: 503 Service Unavailable
 slug: Web/HTTP/Status/503
-tags:
-  - 503 error
-  - HTTP
-  - Service Unavailable Error
-  - Status code
-translation_of: Web/HTTP/Status/503
 ---
 {{HTTPSidebar}}
 

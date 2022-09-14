@@ -1,18 +1,6 @@
 ---
 title: <alpha-value>
 slug: Web/CSS/alpha-value
-tags:
-  - Alpha
-  - Alpha-value
-  - CSS
-  - CSS データ型
-  - CSS リファレンス
-  - データ型
-  - Example
-  - リファレンス
-  - 色
-spec-urls: https://drafts.csswg.org/css-color/#type-def-alpha-value
-translation_of: Web/CSS/alpha-value
 ---
 {{CSSRef}}
 

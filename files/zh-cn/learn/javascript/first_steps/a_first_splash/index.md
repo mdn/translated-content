@@ -1,17 +1,6 @@
 ---
 title: JavaScript 初体验
 slug: Learn/JavaScript/First_steps/A_first_splash
-tags:
-  - JavaScript
-  - 事件
-  - 函数
-  - 初学者
-  - 变量
-  - 学习
-  - 操作符
-  - 教程
-  - 添加
-translation_of: Learn/JavaScript/First_steps/A_first_splash
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
 
@@ -251,7 +240,7 @@ let resetButton;
 
 - 倒数第二个变量存储一个计数器并初始化为 1（用于跟踪玩家猜测的次数），最后一个变量存储对重置按钮的引用，这个按钮尚不存在（但稍后就有了）。
 
-> **备注：** 稍后将讲解更多关于变量/常量的信息。[参见下节](/en-US/docs/user:chrisdavidmills/variables)。
+> **备注：** 稍后将讲解更多关于变量/常量的信息。[参见下节](/zh-CN/docs/user:chrisdavidmills/variables)。
 
 ### 函数（Function）
 

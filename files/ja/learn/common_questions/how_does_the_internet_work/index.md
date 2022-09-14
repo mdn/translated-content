@@ -1,11 +1,6 @@
 ---
 title: インターネットはどのように動くのか？
 slug: Learn/Common_questions/How_does_the_Internet_work
-tags:
-  - Beginner
-  - Tutorial
-  - WebMechanics
-translation_of: Learn/Common_questions/How_does_the_Internet_work
 ---
 {{LearnSidebar}}
 

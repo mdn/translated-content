@@ -233,15 +233,11 @@ Le HTML ci-dessus affichera :
 
 ## Spécifications
 
-| Spécification                                                                                                    | Status                           | Commentaire                                                                             |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-ol-element', '&lt;ol&gt;')}}             | {{Spec2('HTML WHATWG')}} | Aucune modification depuis la dernière dérivation W3C {{SpecName('HTML5 W3C')}}. |
-| {{SpecName('HTML5 W3C', "grouping-content.html#the-ol-element", "HTMLOListElement")}} | {{Spec2('HTML5 W3C')}}     | Ajout des attributs `reversed` et `start`. L'attribut `type` n'est plus déprécié.       |
-| {{SpecName('HTML4.01', 'struct/lists.html#h-10.2', '&lt;ol&gt;')}}                         | {{Spec2('HTML4.01')}}     | Dépréciation des attributs `compact` et `type`.                                         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.ol")}}
+{{Compat}}
 
 ## Voir aussi
 

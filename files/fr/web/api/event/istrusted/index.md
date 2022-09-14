@@ -31,42 +31,8 @@ if (e.isTrusted) {
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaires</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('DOM WHATWG', '#dom-event-istrusted', 'Event.isTrusted')}}
-      </td>
-      <td>{{ Spec2('DOM WHATWG') }}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('DOM3 Events', '#trusted-events', 'Trusted events')}}
-      </td>
-      <td>{{Spec2('DOM3 Events')}}</td>
-      <td>
-        <p>
-          Ajoute des conditions à propos des événement trusted et untrusted.
-          Cependant, cela ne défini pas la propriété isTrusted.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('DOM4', '#dom-event-istrusted', 'Event.isTrusted')}}
-      </td>
-      <td>{{Spec2('DOM4')}}</td>
-      <td>Première définition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Event.isTrusted")}}
+{{Compat}}

@@ -1,11 +1,6 @@
 ---
 title: Promise.resolve()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/resolve
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Promise
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 ---
 {{JSRef}}**`Promise.resolve(value)`**方法返回一个以给定值解析后的 {{jsxref("Promise")}} 对象。如果这个值是一个 promise ，那么将返回这个 promise ；如果这个值是 thenable（即带有 {{jsxref("Promise.then", "\"then\" ")}} 方法），返回的 promise 会“跟随”这个 thenable 的对象，采用它的最终状态；否则返回的 promise 将以此值完成。此函数将类 promise 对象的多层嵌套展平。
 
@@ -83,7 +78,7 @@ console.log('original === cast ? ' + (original === cast));
 */
 ```
 
-日志顺序颠倒其实是由于异步地调用 `then` 方法。在[这里](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#Return_value)查看 `then` 是如何工作的。
+日志顺序颠倒其实是由于异步地调用 `then` 方法。在[这里](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#Return_value)查看 `then` 是如何工作的。
 
 ### resolve thenable 并抛出错误
 

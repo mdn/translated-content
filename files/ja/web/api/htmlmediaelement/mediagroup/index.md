@@ -1,16 +1,6 @@
 ---
 title: HTMLMediaElement.mediaGroup
 slug: Web/API/HTMLMediaElement/mediaGroup
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Web
-  - Deprecated
-browser-compat: api.HTMLMediaElement.mediaGroup
-translation_of: Web/API/HTMLMediaElement/mediaGroup
 ---
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 

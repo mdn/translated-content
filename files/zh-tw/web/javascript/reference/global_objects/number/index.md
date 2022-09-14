@@ -1,13 +1,6 @@
 ---
 title: Number
 slug: Web/JavaScript/Reference/Global_Objects/Number
-tags:
-  - JavaScript
-  - NeedsTranslation
-  - Number
-  - Reference
-  - TopicStub
-translation_of: Web/JavaScript/Reference/Global_Objects/Number
 ---
 {{JSRef}}
 

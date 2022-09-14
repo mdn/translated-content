@@ -1,14 +1,6 @@
 ---
 title: Element.clientHeight
 slug: Web/API/Element/clientHeight
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - プロパティ
-  - リファレンス
-browser-compat: api.Element.clientHeight
-translation_of: Web/API/Element/clientHeight
 ---
 {{APIRef("DOM")}}
 

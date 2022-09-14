@@ -1,15 +1,6 @@
 ---
 title: DataTransfer.addElement()
 slug: Web/API/DataTransfer/addElement
-page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Non-standard
-  - Reference
-  - drag and drop
-browser-compat: api.DataTransfer.addElement
-translation_of: Web/API/DataTransfer/addElement
 ---
 {{APIRef("HTML Drag and Drop API")}}
 

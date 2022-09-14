@@ -65,7 +65,7 @@ Si la liste des valeurs est trop courte pour les différentes propriétés, les 
 
 ## Exemples
 
-Plusieurs exemples de transitions CSS sont présentés [sur l'article sur les transitions CSS](/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions "en/CSS/CSS transitions").
+Plusieurs exemples de transitions CSS sont présentés [sur l'article sur les transitions CSS](/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions).
 
 ## Spécifications
 
@@ -81,5 +81,5 @@ Plusieurs exemples de transitions CSS sont présentés [sur l'article sur les tr
 
 ## Voir aussi
 
-- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions "en/CSS/CSS transitions")
+- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
 - {{domxref("TransitionEvent")}}

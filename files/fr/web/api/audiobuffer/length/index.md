@@ -46,15 +46,13 @@ bouton.onclick = function() {
 }
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                            | Statut                               | Commentaire |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioBuffer-length', 'length')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AudioBuffer.length")}}
+{{Compat}}
 
 ## Voir aussi
 

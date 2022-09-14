@@ -1,12 +1,6 @@
 ---
 title: feDiffuseLighting
 slug: Web/SVG/Element/feDiffuseLighting
-tags:
-  - SVG
-  - SVG 滤镜
-  - 元素
-  - 需要兼容性表
-translation_of: Web/SVG/Element/feDiffuseLighting
 ---
 {{SVGRef}}
 
@@ -83,9 +77,9 @@ translation_of: Web/SVG/Element/feDiffuseLighting
 
 ### 全局属性
 
-- [核心属性](/en/SVG/Attribute#Core) »
-- [外观属性](/en/SVG/Attribute#Presentation) »
-- [滤镜属性](/en/SVG/Attribute#Filter) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
+- [滤镜属性](/zh-CN/SVG/Attribute#Filter) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -98,7 +92,7 @@ translation_of: Web/SVG/Element/feDiffuseLighting
 
 ## DOM 接口
 
-该元素实现了[`SVGFEDiffuseLightingElement`](/en/DOM/SVGFEDiffuseLightingElement)接口。
+该元素实现了[`SVGFEDiffuseLightingElement`](/zh-CN/DOM/SVGFEDiffuseLightingElement)接口。
 
 ## 参见
 
@@ -121,4 +115,4 @@ translation_of: Web/SVG/Element/feDiffuseLighting
 - {{ SVGElement("feSpotLight") }}
 - {{ SVGElement("feTile") }}
 - {{ SVGElement("feTurbulence") }}
-- [SVG 教程：滤镜效果](/en/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/SVG/Tutorial/Filter_effects)

@@ -1,14 +1,6 @@
 ---
 title: Web 性能
 slug: Web/Performance
-tags:
-  - API
-  - HTML
-  - JavaScript
-  - Web
-  - 性能
-  - 性能优化
-translation_of: Web/Performance
 ---
 Web 性能是客观的衡量标准，是用户对加载时间和运行时的直观体验。Web 性能指页面加载到可交互和可响应所消耗的时间，以及页面在交互时的流畅度——滚动是否顺滑？按钮能否点击？弹窗能否快速打开，动画是否平滑？Web 性能既包括客观的度量如加载时间，每秒帧数和到页面可交互的时间；也包括用户的对页面内容加载时间的主观感觉。
 
@@ -53,8 +45,6 @@ MDN [Web 性能学习专区](/zh-CN/docs/Learn/Performance) 有着涵盖性能�
   - : [Performance Timeline](/zh-CN/docs/Web/API/Performance_Timeline) 标准定义了对 [`Performance`](/zh-CN/docs/Web/API/Performance) 接口的扩展，以支持应用程序中的客户端延迟测量。这些接口一起可以用来帮助识别应用程序的性能瓶颈。
 - [User Timing API](/zh-CN/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)
   - : 使用创建特定于应用程序的时间戳 [user timing API](/zh-CN/docs/Web/API/User_Timing_API)'s “标记”和“度量”条目类型 - 它们是浏览器性能时间轴的一部分。
-- [Frame Timing API](/zh-CN/docs/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API)
-  - : [`PerformanceFrameTiming`](/zh-CN/docs/Web/API/PerformanceFrameTiming) 接口提供有关浏览器事件循环的*帧*计时数据。
 - [Beacon API](/zh-CN/docs/Web/API/Beacon_API/Using_the_Beacon_API)
   - : 使用 [Beacon](/zh-CN/docs/Web/API/Beacon_API) 接口调度发送给服务器的异步非阻塞请求。
 - [Intersection Observer API](/zh-CN/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)
@@ -152,7 +142,7 @@ MDN [Web 性能学习专区](/zh-CN/docs/Learn/Performance) 有着涵盖性能�
   - : 营销、设计和销售需求，以及开发人员的经验，通常是广告膨胀、第三方脚本和其他会降低 web 性能的功能。为了帮助设置优先级，设置一个性能预算是很有帮助的：一组在开发阶段不能超过的限制。在本文中，我们将讨论创建和坚持绩效预算。
 - [Web 性能检查清单](/zh-CN/docs/Web/Performance/Checklist)
   - : 一个在开发应用程序时要考虑性能清单，其中包含如何实现每个特性的教程链接，包括 Service Worker、性能问题诊断、字体加载最佳实践、客户端提示、创建高效的动画等。
-- [Mobile ](/zh-CN/docs/Web/Performance/Mobile_performance_checklist)[性能检查清单](/zh-CN/docs/Web/Performance/Checklist)
+- [Mobile](/zh-CN/docs/Web/Performance/Mobile_performance_checklist) [性能检查清单](/zh-CN/docs/Web/Performance/Checklist)
   - : A concise checklist of performance considerations impacting mobile network users on hand-held, battery operated devices.
 
 ## 也可以看看
@@ -166,7 +156,7 @@ HTML
 
   - 响应式图片
 
-- [使用 `rel="preload"` 预加载内容 —— ](/zh-CN/docs/Web/HTML/Preloading_content)[(https://w3c.github.io/preload/ ](https://w3c.github.io/preload/))
+- [使用 `rel="preload"` 预加载内容 ——](/zh-CN/docs/Web/HTML/Preloading_content) [(https://w3c.github.io/preload/](https://w3c.github.io/preload/)
 
 CSS
 

@@ -1,7 +1,6 @@
 ---
 title: Object.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 ---
 {{JSRef}}
 

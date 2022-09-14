@@ -1,7 +1,6 @@
 ---
 title: 201 Created
 slug: Web/HTTP/Status/201
-translation_of: Web/HTTP/Status/201
 ---
 {{HTTPSidebar}}
 
@@ -25,4 +24,4 @@ translation_of: Web/HTTP/Status/201
 
 ## 参见
 
-- [HTTP request methods](/en-US/docs/Web/HTTP/Methods)
+- [HTTP request methods](/zh-CN/docs/Web/HTTP/Methods)

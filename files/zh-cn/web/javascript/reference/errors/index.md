@@ -1,13 +1,6 @@
 ---
 title: JavaScript 错误参考
 slug: Web/JavaScript/Reference/Errors
-tags:
-  - Debugging
-  - Errors
-  - JavaScript
-  - 调试
-  - 错误
-translation_of: Web/JavaScript/Reference/Errors
 ---
 {{jsSidebar("Errors")}}
 
@@ -23,4 +16,4 @@ Web 控制台中显示的错误可能包含指向下面相应页面的链接，�
 
 ## 相关链接
 
-- [What went wrong? Troubleshooting JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong): Beginner's introductory tutorial on fixing JavaScript errors.
+- [What went wrong? Troubleshooting JavaScript](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong): Beginner's introductory tutorial on fixing JavaScript errors.

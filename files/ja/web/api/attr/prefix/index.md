@@ -1,13 +1,6 @@
 ---
 title: Attr.prefix
 slug: Web/API/Attr/prefix
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Attr.prefix
-translation_of: Web/API/Attr/prefix
 ---
 {{APIRef("DOM")}}
 

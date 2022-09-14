@@ -1,15 +1,6 @@
 ---
 title: DOM ツリーの作成方法
 slug: Web/API/Document_object_model/How_to_create_a_DOM_tree
-tags:
-  - AJAX
-  - アドオン
-  - DOM
-  - 拡張機能
-  - JXON
-  - NeedsUpdate
-  - XML
-translation_of: Web/API/Document_object_model/How_to_create_a_DOM_tree
 ---
 {{DefaultAPISidebar("DOM")}}
 

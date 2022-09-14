@@ -72,14 +72,11 @@ itemtype = URL
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                 | Commentaires |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------ |
-| {{SpecName('HTML Microdata', "#dfn-itemtype", "itemtype")}}                 | {{Spec2('HTML Microdata')}} |              |
-| {{SpecName('HTML WHATWG', "microdata.html#attr-itemtype", "itemprop")}} | {{Spec2('HTML WHATWG')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.itemtype")}}
+{{Compat}}
 
 ## Voir aussi
 

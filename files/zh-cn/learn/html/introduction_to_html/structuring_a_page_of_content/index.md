@@ -1,14 +1,6 @@
 ---
 title: 构建内容丰富的网页
 slug: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
-tags:
-  - HTML
-  - 初学者
-  - 布局
-  - 结构
-  - 设计
-  - 评估
-translation_of: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
 

@@ -1,10 +1,6 @@
 ---
 title: 标识互联网上的内容
 slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
-tags:
-  - HTTP
-  - URI
-translation_of: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 ---
 {{HTTPSidebar}}
 
@@ -57,8 +53,8 @@ urn:ietf:rfc:7230
 | ----------- | --------------------------------------------------------------------- |
 | data        | [Data URIs](/zh-CN/docs/Web/HTTP/data_URIs)                           |
 | file        | 指定主机上文件的名称                                                  |
-| ftp         | [文件传输协议](/en-US/docs/Glossary/FTP)                              |
-| http/https  | [超文本传输 ​​ 协议／安全的超文本传输协议](/en-US/docs/Glossary/HTTP) |
+| ftp         | [文件传输协议](/zh-CN/docs/Glossary/FTP)                              |
+| http/https  | [超文本传输 ​​ 协议／安全的超文本传输协议](/zh-CN/docs/Glossary/HTTP) |
 | mailto      | 电子邮件地址                                                          |
 | ssh         | 安全 shell                                                            |
 | tel         | 电话                                                                  |

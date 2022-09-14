@@ -1,7 +1,6 @@
 ---
 title: 公有类字段
 slug: Web/JavaScript/Reference/Classes/Public_class_fields
-translation_of: Web/JavaScript/Reference/Classes/Public_class_fields
 ---
 {{JsSidebar("Classes")}}
 

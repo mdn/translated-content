@@ -1,14 +1,6 @@
 ---
 title: ServiceWorkerRegistration.navigationPreload
 slug: Web/API/ServiceWorkerRegistration/navigationPreload
-tags:
-  - API
-  - NavigationPreloadManager
-  - プロパティ
-  - サービスワーカー
-  - ワーカー
-browser-compat: api.ServiceWorkerRegistration.navigationPreload
-translation_of: Web/API/ServiceWorkerRegistration/navigationPreload
 ---
 {{APIRef("Service Workers API")}}
 

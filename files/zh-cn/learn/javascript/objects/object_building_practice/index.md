@@ -1,14 +1,6 @@
 ---
 title: 实践对象构造
 slug: Learn/JavaScript/Objects/Object_building_practice
-tags:
-  - JavaScript
-  - 初学者
-  - 学习
-  - 对象
-  - 指南
-  - 画布
-translation_of: Learn/JavaScript/Objects/Object_building_practice
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
 
@@ -196,7 +188,7 @@ const width = canvas.width = window.innerWidth;
 const height = canvas.height = window.innerHeight;
 ```
 
-这个脚本使用变量代指了 `<canvas>` 元素，然后对其调用 [`getContext()`](/en-US/docs/Web/API/HTMLCanvasElement/getContext) 从而我们获得一个开始画画的环境。存储以上操作结果的变量（`ctx`）是一个对象，直接代指画布上的一块允许我们绘制 2D 图形的区域。
+这个脚本使用变量代指了 `<canvas>` 元素，然后对其调用 [`getContext()`](/zh-CN/docs/Web/API/HTMLCanvasElement/getContext) 从而我们获得一个开始画画的环境。存储以上操作结果的变量（`ctx`）是一个对象，直接代指画布上的一块允许我们绘制 2D 图形的区域。
 
 接下来，我们设置 `width` 和 `height` 变量，并且让画布元素的宽和高（分别使用 `canvas.width` 和 `canvas.height` 表示）等于浏览器的宽和高（也就是网页显示的区域 — 可以从 {{domxref("Window.innerWidth")}} 和 {{domxref("Window.innerHeight")}}参数获得）。
 

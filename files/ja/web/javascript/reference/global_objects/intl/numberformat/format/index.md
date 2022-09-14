@@ -1,17 +1,6 @@
 ---
 title: Intl.NumberFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
-tags:
-  - 国際化
-  - Intl
-  - JavaScript
-  - ローカライゼーション
-  - メソッド
-  - NumberFormat
-  - プロトタイプ
-  - リファレンス
-browser-compat: javascript.builtins.Intl.NumberFormat.format
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 ---
 {{JSRef}}
 

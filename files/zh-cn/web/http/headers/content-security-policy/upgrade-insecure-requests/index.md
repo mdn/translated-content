@@ -1,7 +1,6 @@
 ---
 title: 'CSP: upgrade-insecure-requests'
 slug: Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests
-translation_of: Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests
 ---
 {{HTTPSidebar}}
 
@@ -73,4 +72,4 @@ That way, you still upgrade insecure requests on your secure site, but the only 
 - {{HTTPHeader("Upgrade-Insecure-Requests")}} header
 - {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}}) header
 - {{CSP("block-all-mixed-content")}}
-- [Mixed content](/en-US/docs/Web/Security/Mixed_content)
+- [Mixed content](/zh-CN/docs/Web/Security/Mixed_content)

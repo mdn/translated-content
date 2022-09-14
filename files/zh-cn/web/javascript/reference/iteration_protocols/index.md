@@ -1,14 +1,6 @@
 ---
 title: 迭代协议
 slug: Web/JavaScript/Reference/Iteration_protocols
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - 可迭代协议
-  - 迭代
-  - 迭代器
-  - 迭代器协议
-translation_of: Web/JavaScript/Reference/Iteration_protocols
 ---
 {{jsSidebar("More")}}
 
@@ -149,7 +141,7 @@ someString + "";                              // "hi"
 
 ### 内置可迭代对象
 
-目前所有的内置可迭代对象如下：{{jsxref("String")}}、{{jsxref("Array")}}、{{jsxref("TypedArray")}}、{{jsxref("Map")}} 和 {{jsxref("Set")}}，它们的原型对象都实现了 ` @@``iterator ` 方法。
+目前所有的内置可迭代对象如下：{{jsxref("String")}}、{{jsxref("Array")}}、{{jsxref("TypedArray")}}、{{jsxref("Map")}} 和 {{jsxref("Set")}}，它们的原型对象都实现了 `@@iterator` 方法。
 
 ### 自定义可迭代对象
 

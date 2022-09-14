@@ -1,11 +1,6 @@
 ---
 title: RegExp.prototype[@@match]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@match
-tags:
-  - JavaScript
-  - RegExp
-  - 正则
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@match
 ---
 {{JSRef}}
 

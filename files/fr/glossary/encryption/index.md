@@ -17,6 +17,6 @@ Le chiffrement est une primitive cryptographique : il transforme un message de t
 
 Sans connaître le code secret, l'opération inverse, le {{glossary("decryption","déchiffrement")}}, se révèle mathématiquement difficile à réaliser. Le degré de difficulté dépend de la sécurité de l'algorithme cryptographique choisi et évolue au fur et à mesure des progrès de la {{glossary("cryptanalysis","cryptanalyse")}}.
 
-## Pour approfondir
+## Voir aussi
 
 - En savoir plus sur les [Chiffrement et déchiffrement](/fr/docs/Archive/Security/Encryption_and_Decryption)

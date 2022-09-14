@@ -1,10 +1,6 @@
 ---
 title: break
 slug: Web/JavaScript/Reference/Statements/break
-tags:
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/break
 ---
 {{jsSidebar("Statements")}}
 
@@ -23,7 +19,7 @@ break [label];
 
 ## 說明
 
-中斷陳述 `break` 可加上標籤 (label) 參數，使其跳出被標籤的陳述語句。此中斷陳述 `break` 必須被包含在被標籤的陳述語句中。被標籤的陳述語句可被添加於任一個區塊 ([block](/en-US/docs/JavaScript/Reference/Statements/block)) 前，而非限定在迴圈陳述。
+中斷陳述 `break` 可加上標籤 (label) 參數，使其跳出被標籤的陳述語句。此中斷陳述 `break` 必須被包含在被標籤的陳述語句中。被標籤的陳述語句可被添加於任一個區塊 ([block](/zh-TW/docs/JavaScript/Reference/Statements/block)) 前，而非限定在迴圈陳述。
 
 ## 範例
 

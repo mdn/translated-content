@@ -12,6 +12,6 @@ Dans les protocoles de sécurité, un défi (_challenge_), c'est quelques donné
 
 Le [protocole d'authentification HTTP](/fr/docs/Web/HTTP/Authentication) est basé sur défi-réponse, bien que le protocole "basique" n'utilise pas un vrai défi (le domaine est toujours le même).
 
-## En apprendre plus
+## Voir aussi
 
 - [Authentification défi-réponse](https://fr.wikipedia.org/wiki/Authentification_d%C3%A9fi-r%C3%A9ponse) sur Wikipédia.

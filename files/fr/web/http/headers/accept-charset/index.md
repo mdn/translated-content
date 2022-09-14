@@ -62,7 +62,7 @@ Accept-Charset: utf-8, iso-8859-1;q=0.5, *;q=0.1
 
 {{Compat("http.headers.Accept-Charset")}}
 
-## Voir également
+## Voir aussi
 
 - HTTP [content negotiation](/fr/docs/Web/HTTP/Content_negotiation)
 - Header avec le résultat de la négociation de contenu : {{HTTPHeader("Content-Type")}}

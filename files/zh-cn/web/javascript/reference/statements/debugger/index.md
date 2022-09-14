@@ -1,10 +1,6 @@
 ---
 title: debugger
 slug: Web/JavaScript/Reference/Statements/debugger
-tags:
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/debugger
 ---
 {{jsSidebar("Statements")}}
 
@@ -12,7 +8,7 @@ translation_of: Web/JavaScript/Reference/Statements/debugger
 
 ## 语法
 
-```plain
+```js
 debugger;
 ```
 
@@ -29,7 +25,7 @@ function potentiallyBuggyCode() {
 
 当 debugger 被调用时，执行暂停在 debugger 语句的位置。就像在脚本源代码中的断点一样。
 
-[![Paused at a debugger statement.](screen_shot_2014-02-07_at_9.14.35_am.png)](https://mdn.mozillademos.org/files/6963/Screen%20Shot%202014-02-07%20at%209.14.35%20AM.png)
+[![暂停在 debugger 语句的位置](screen_shot_2014-02-07_at_9.14.35_am.png)](screen_shot_2014-02-07_at_9.14.35_am.png)
 
 ## 规范
 
@@ -41,5 +37,5 @@ function potentiallyBuggyCode() {
 
 ## 相关链接
 
-- [JavaScript 调试](https://developer.mozilla.org/en-US/docs/Debugging_JavaScript)
-- [在火狐开发者工具中调试](https://developer.mozilla.org/en-US/docs/Tools/Debugger)
+- [JavaScript 调试](/zh-CN/docs/Debugging_JavaScript)
+- [在火狐开发者工具中调试](/zh-CN/docs/Tools/Debugger)

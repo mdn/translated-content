@@ -1,21 +1,6 @@
 ---
 title: shape-outside
 slug: Web/CSS/shape-outside
-tags:
-  - 境界
-  - CSS
-  - CSS プロパティ
-  - CSS シェイプ
-  - 浮動領域
-  - プロパティ
-  - Reference
-  - シェイプ
-  - マージン
-  - recipe:css-property
-  - shape-outside
-  - wrapping
-browser-compat: css.properties.shape-outside
-translation_of: Web/CSS/shape-outside
 ---
 {{CSSRef}}
 

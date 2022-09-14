@@ -94,13 +94,11 @@ var myResponse = new Response();
 
 ## Spécifications
 
-| Spécification                                                        | Statut                   | Commentaire         |
-| -------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('Fetch','#response-class','Response')}} | {{Spec2('Fetch')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Response")}}
+{{Compat}}
 
 ## Voir aussi
 

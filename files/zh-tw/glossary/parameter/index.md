@@ -1,7 +1,6 @@
 ---
 title: 參數
 slug: Glossary/Parameter
-translation_of: Glossary/Parameter
 ---
 參數 (parameter) 是個會傳進函式 ({{Glossary("function")}}) 的已命名變量，用來把引數 (({{Glossary("argument","arguments")}})) 導入到函式中。
 
@@ -26,5 +25,5 @@ translation_of: Glossary/Parameter
 
 ### 技術參考
 
-- [Function declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function)
-- [Function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
+- [Function declaration](/zh-TW/docs/Web/JavaScript/Reference/Statements/function)
+- [Function expression](/zh-TW/docs/Web/JavaScript/Reference/Operators/function)

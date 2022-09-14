@@ -1,7 +1,6 @@
 ---
 title: accent-height
 slug: Web/SVG/Attribute/accent-height
-translation_of: Web/SVG/Attribute/accent-height
 ---
 « 回到 SVG 属性指南首页
 
@@ -13,7 +12,7 @@ translation_of: Web/SVG/Attribute/accent-height
 
 | Categories         | None                                                                                              |
 | ------------------ | ------------------------------------------------------------------------------------------------- |
-| Value              | [\<number>](/en/SVG/Content_type#Length)                                                           |
+| Value              | [\<number>](/zh-CN/SVG/Content_type#Length)                                                           |
 | Animatable         | No                                                                                                |
 | Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/fonts.html#FontFaceElementAccentHeightAttribute) |
 

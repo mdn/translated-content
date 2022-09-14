@@ -1,11 +1,10 @@
 ---
 title: '::spelling-error'
 slug: Web/CSS/::spelling-error
-translation_of: Web/CSS/::spelling-error
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-**`::spelling-error`** [CSS](/en-US/docs/Web/CSS) [伪元素](/en/CSS/Pseudo-elements) 表示浏览器标记为不正确拼写的文本段。
+**`::spelling-error`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/CSS/Pseudo-elements) 表示浏览器标记为不正确拼写的文本段。
 
 ```css
 ::spelling-error {

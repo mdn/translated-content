@@ -1,15 +1,6 @@
 ---
 title: GeolocationPosition.timestamp
 slug: Web/API/GeolocationPosition/timestamp
-tags:
-  - API
-  - 位置情報 API
-  - GeolocationPosition
-  - プロパティ
-  - 安全なコンテキスト
-  - timeStamp
-browser-compat: api.GeolocationPosition.timestamp
-translation_of: Web/API/GeolocationPosition/timestamp
 ---
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 

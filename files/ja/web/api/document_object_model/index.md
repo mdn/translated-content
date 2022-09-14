@@ -1,16 +1,6 @@
 ---
 title: ドキュメントオブジェクトモデル (DOM)
 slug: Web/API/Document_Object_Model
-tags:
-  - API
-  - DOM
-  - 文書
-  - ドキュメントオブジェクトモデル
-  - ガイド
-  - 概要
-  - リファレンス
-  - ウェブ
-translation_of: Web/API/Document_Object_Model
 ---
 {{DefaultAPISidebar("DOM")}}
 

@@ -1,7 +1,6 @@
 ---
 title: 使用 Promise
 slug: Web/JavaScript/Guide/Using_promises
-translation_of: Web/JavaScript/Guide/Using_promises
 ---
 {{jsSidebar("JavaScript Guide")}}
 

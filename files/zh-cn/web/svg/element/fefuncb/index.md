@@ -1,15 +1,6 @@
 ---
 title: feFuncB
 slug: Web/SVG/Element/feFuncB
-tags:
-  - SVG
-  - SVG 滤镜
-  - 元素
-  - 参考
-  - 需要兼容性表
-  - 需要内容
-  - 需要示例
-translation_of: Web/SVG/Element/feFuncB
 ---
 {{SVGRef}}
 
@@ -25,15 +16,15 @@ translation_of: Web/SVG/Element/feFuncB
 
 ### 全局属性
 
-- [核心属性](/en/SVG/Attribute#Core) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
 
 ### 专有属性
 
-- [变换函数属性](/en/SVG/Attribute#Transfer_function_attributes) »
+- [变换函数属性](/zh-CN/SVG/Attribute#Transfer_function_attributes) »
 
 ## DOM 接口
 
-该元素实现了[`SVGFEFuncBElement`](/en/DOM/SVGFEFuncBElement)接口。
+该元素实现了[`SVGFEFuncBElement`](/zh-CN/DOM/SVGFEFuncBElement)接口。
 
 ## 参见
 
@@ -44,4 +35,4 @@ translation_of: Web/SVG/Element/feFuncB
 - {{ SVGElement("feFuncA") }}
 - {{ SVGElement("feFuncR") }}
 - {{ SVGElement("feFuncG") }}
-- [SVG 教程：滤镜效果](/en/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/SVG/Tutorial/Filter_effects)

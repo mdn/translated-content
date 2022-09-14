@@ -1,11 +1,6 @@
 ---
 title: 密碼套件
 slug: Glossary/Cipher_suite
-tags:
-  - 安全性
-  - 密碼學
-  - 術語表
-translation_of: Glossary/Cipher_suite
 ---
 密碼套件是包括了密鑰交換算法，身份認證方法，批量加密密碼({{Glossary("cipher")}})和消息認證碼的組合.
 

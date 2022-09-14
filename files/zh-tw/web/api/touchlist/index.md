@@ -1,7 +1,6 @@
 ---
 title: TouchList
 slug: Web/API/TouchList
-translation_of: Web/API/TouchList
 ---
 {{ APIRef("Touch Events") }}
 
@@ -21,7 +20,7 @@ translation_of: Web/API/TouchList
 
 ## 範例
 
-See the [example on the main Touch events article](/en-US/docs/DOM/Touch_events#Example).
+See the [example on the main Touch events article](/zh-TW/docs/DOM/Touch_events#Example).
 
 ## 規範
 
@@ -33,5 +32,5 @@ See the [example on the main Touch events article](/en-US/docs/DOM/Touch_events#
 
 ## 參見
 
-- [Touch events](/en-US/docs/DOM/Touch_events)
+- [Touch events](/zh-TW/docs/DOM/Touch_events)
 - {{domxref("Document.createTouchList()")}}

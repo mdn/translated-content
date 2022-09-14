@@ -1,15 +1,6 @@
 ---
 title: 通知 API
 slug: Web/API/Notifications_API
-page-type: web-api-overview
-tags:
-  - Landing
-  - Notifications
-  - Notifications API
-  - permission
-  - system
-browser-compat: api.Notification
-translation_of: Web/API/Notifications_API
 ---
 {{DefaultAPISidebar("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 

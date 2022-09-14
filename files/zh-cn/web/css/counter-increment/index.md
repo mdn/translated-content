@@ -1,13 +1,12 @@
 ---
 title: counter-increment
 slug: Web/CSS/counter-increment
-translation_of: Web/CSS/counter-increment
 ---
 {{CSSRef}}
 
 ## 概要
 
-`counter-increment`属性用于将[CSS Counters](/en-US/docs/CSS_Counters)的值增加给定值。可以使用 {{cssxref("counter-reset")}} 属性重置计数器的值。
+`counter-increment`属性用于将[CSS Counters](/zh-CN/docs/CSS_Counters)的值增加给定值。可以使用 {{cssxref("counter-reset")}} 属性重置计数器的值。
 
 {{cssinfo}}
 
@@ -67,4 +66,4 @@ h1 {
 
 ## 参考
 
-- [CSS Counters](/en-US/docs/CSS/Counters), {{Cssxref("counter-reset")}}
+- [CSS Counters](/zh-CN/docs/CSS/Counters), {{Cssxref("counter-reset")}}

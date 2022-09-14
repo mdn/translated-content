@@ -1,13 +1,6 @@
 ---
 title: background-clip
 slug: Web/CSS/background-clip
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Clip
-  - Reference
-translation_of: Web/CSS/background-clip
 ---
 {{CSSRef}}
 
@@ -100,4 +93,4 @@ p {
 
 - The {{cssxref("clip-path")}} property creates a clipping region that defines what part of an _entire element_ should be displayed.
 - Background properties: {{cssxref("background")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}
-- [Introduction to the CSS box model](/en-US/docs/Web/CSS/box_model)
+- [Introduction to the CSS box model](/zh-CN/docs/Web/CSS/box_model)

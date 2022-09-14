@@ -1,9 +1,6 @@
 ---
 title: Promise.race()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/race
-tags:
-  - Promise
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/race
 ---
 {{JSRef}}
 
@@ -20,7 +17,7 @@ Promise.race(iterable);
 ### **参数**
 
 - iterable
-  - : 可迭代对象，类似{{jsxref("Array")}}。详见 [iterable](/en-US/docs/Web/JavaScript/Guide/iterable)。
+  - : 可迭代对象，类似{{jsxref("Array")}}。详见 [iterable](/zh-CN/docs/Web/JavaScript/Guide/iterable)。
 
 ### 返回值
 

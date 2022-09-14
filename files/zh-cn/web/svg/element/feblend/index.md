@@ -1,12 +1,6 @@
 ---
 title: feBlend
 slug: Web/SVG/Element/feBlend
-tags:
-  - SVG
-  - SVG 滤镜
-  - 元素
-  - 需要兼容性表
-translation_of: Web/SVG/Element/feBlend
 ---
 {{SVGRef}}
 
@@ -22,9 +16,9 @@ translation_of: Web/SVG/Element/feBlend
 
 ### 全局属性
 
-- [核心属性](/en/SVG/Attribute#Core) »
-- [外观属性](/en/SVG/Attribute#Presentation) »
-- [滤镜属性属性](/en/SVG/Attribute#Filter) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
+- [滤镜属性属性](/zh-CN/SVG/Attribute#Filter) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -36,7 +30,7 @@ translation_of: Web/SVG/Element/feBlend
 
 ## DOM 接口
 
-该元素实现了[`SVGFEBlendElement`](/en/DOM/SVGFEBlendElement)接口。
+该元素实现了[`SVGFEBlendElement`](/zh-CN/DOM/SVGFEBlendElement)接口。
 
 ## 示例
 
@@ -83,4 +77,4 @@ translation_of: Web/SVG/Element/feBlend
 - {{ SVGElement("feSpecularLighting") }}
 - {{ SVGElement("feTile") }}
 - {{ SVGElement("feTurbulence") }}
-- [SVG tutorial: Filter effects](/en/SVG/Tutorial/Filter_effects)
+- [SVG tutorial: Filter effects](/zh-CN/SVG/Tutorial/Filter_effects)

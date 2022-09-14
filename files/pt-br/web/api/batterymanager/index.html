@@ -72,65 +72,7 @@ translation_of: Web/API/BatteryManager
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funcionalidade</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{ CompatNo() }}<br>
-    Chrome para Android: <a href="http://crbug.com/135863">crbug.com/135863</a><br>
-    Chrome OS: <a href="http://crbug.com/122593">crbug.com/122593</a></td>
-   <td>{{CompatGeckoDesktop("10")}} {{ property_prefix("moz") }} [1]<br>
-    {{CompatGeckoDesktop("16")}} (sem prefixo) [2]</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funcionalidade</th>
-   <th>Android</th>
-   <th>Chrome para Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{CompatGeckoMobile("10")}} {{ property_prefix("moz") }} [1]<br>
-    {{CompatGeckoMobile("16")}} (sem prefixo) [2]</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Notas_para_o_Gecko">Notas para o Gecko</h3>
-
-<p>[1] Desabilitado por padrão no Firefox 10.0, mas pode ser habilitado alterando a preferência <code>dom.battery.enabled</code> para <code>true</code>. A partir do Firefox 11.0, <code>mozBattery</code> é habilitado por padrão.</p>
-
-<p>[2] A Battery API é atualmente suportada no Android, Windows e Linux com UPower instalado. O suporte para MacOS está disponível a partir do Gecko 18.0 {{geckoRelease("18.0")}};</p>
+{{Compat("api.BatteryManager")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

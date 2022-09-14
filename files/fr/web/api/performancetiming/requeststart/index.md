@@ -28,13 +28,11 @@ let time = performanceTiming.requestStart;
 
 ## Spécifications
 
-| Spécification                                                                                                                                            | Statut                                   | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#dom-performancetiming-requeststart', 'PerformanceTiming.requestStart')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceTiming.requestStart")}}
+{{Compat}}
 
 ## Voir aussi
 

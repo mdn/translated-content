@@ -1,20 +1,6 @@
 ---
 title: <input>
 slug: Web/HTML/Element/input
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - HTML input tag
-  - MakeBrowserAgnostic
-  - NeedsBrowserCompatibility
-  - NeedsMobileBrowserCompatibility
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - Web
-translation_of: Web/HTML/Element/input
 ---
 {{HTMLRef}}
 
@@ -30,13 +16,13 @@ To get an idea of how different the various `<input>` types look, try editing th
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/HTML/Content_categories">Content categories</a>
+        <a href="/zh-TW/docs/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/HTML/Content_categories#Flow_content"
+        <a href="/zh-TW/docs/HTML/Content_categories#Flow_content"
           >Flow content</a
         >, listed, submittable, resettable, form-associated element,
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/zh-TW/docs/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >. If the {{htmlattrxref("type", "input")}} is not
         <code>hidden</code>, then labellable element, palpable content.
@@ -54,7 +40,7 @@ To get an idea of how different the various `<input>` types look, try editing th
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/zh-TW/docs/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -110,35 +96,35 @@ How an `<input>` works varies considerably depending on the value of its `type` 
 
 The available types are as follows:
 
-- [`button`](/en-US/docs/Web/HTML/Element/input/button): A push button with no default behavior.
-- [`checkbox`](/en-US/docs/Web/HTML/Element/input/checkbox): A check box allowing single values to be selected/deselected.
-- [`color`](/en-US/docs/Web/HTML/Element/input/color): A control for specifying a color. A color picker's UI has no required features other than accepting simple colors as text ([more info](<https://www.w3.org/TR/html5/forms.html#color-state-(type=color)>)).
-- [`date`](/en-US/docs/Web/HTML/Element/input/date): A control for entering a date (year, month, and day, with no time).
-- [`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local): A control for entering a date and time, with no time zone.
-- [`email`](/en-US/docs/Web/HTML/Element/input/email): A field for editing an e-mail address.
-- [`file`](/en-US/docs/Web/HTML/Element/input/file): A control that lets the user select a file. Use the **accept** attribute to define the types of files that the control can select.
-- [`hidden`](/en-US/docs/Web/HTML/Element/input/hidden): A control that is not displayed but whose value is submitted to the server.
-- [`image`](/en-US/docs/Web/HTML/Element/input/image): A graphical submit button. You must use the **src** attribute to define the source of the image and the **alt** attribute to define alternative text. You can use the **height** and **width** attributes to define the size of the image in pixels.
-- [`month`](/en-US/docs/Web/HTML/Element/input/month): A control for entering a month and year, with no time zone.
-- [`number`](/en-US/docs/Web/HTML/Element/input/number): A control for entering a number.
-- [`password`](/en-US/docs/Web/HTML/Element/input/password): A single-line text field whose value is obscured. Use the **maxlength** attribute to specify the maximum length of the value that can be entered.
+- [`button`](/zh-TW/docs/Web/HTML/Element/input/button): A push button with no default behavior.
+- [`checkbox`](/zh-TW/docs/Web/HTML/Element/input/checkbox): A check box allowing single values to be selected/deselected.
+- [`color`](/zh-TW/docs/Web/HTML/Element/input/color): A control for specifying a color. A color picker's UI has no required features other than accepting simple colors as text ([more info](<https://www.w3.org/TR/html5/forms.html#color-state-(type=color)>)).
+- [`date`](/zh-TW/docs/Web/HTML/Element/input/date): A control for entering a date (year, month, and day, with no time).
+- [`datetime-local`](/zh-TW/docs/Web/HTML/Element/input/datetime-local): A control for entering a date and time, with no time zone.
+- [`email`](/zh-TW/docs/Web/HTML/Element/input/email): A field for editing an e-mail address.
+- [`file`](/zh-TW/docs/Web/HTML/Element/input/file): A control that lets the user select a file. Use the **accept** attribute to define the types of files that the control can select.
+- [`hidden`](/zh-TW/docs/Web/HTML/Element/input/hidden): A control that is not displayed but whose value is submitted to the server.
+- [`image`](/zh-TW/docs/Web/HTML/Element/input/image): A graphical submit button. You must use the **src** attribute to define the source of the image and the **alt** attribute to define alternative text. You can use the **height** and **width** attributes to define the size of the image in pixels.
+- [`month`](/zh-TW/docs/Web/HTML/Element/input/month): A control for entering a month and year, with no time zone.
+- [`number`](/zh-TW/docs/Web/HTML/Element/input/number): A control for entering a number.
+- [`password`](/zh-TW/docs/Web/HTML/Element/input/password): A single-line text field whose value is obscured. Use the **maxlength** attribute to specify the maximum length of the value that can be entered.
 
   > **備註：** Any forms involving sensitive information like passwords (e.g. login forms) should be served over HTTPS; Firefox now implements multiple mechanisms to warn against insecure login forms — see [Insecure passwords](/zh-TW/docs/Web/Security/Insecure_passwords). Other browsers are also implementing similar mechanisms.
 
-- [`radio`](/en-US/docs/Web/HTML/Element/input/radio): A radio button, allowing a single value to be selected out of multiple choices.
-- [`range`](/en-US/docs/Web/HTML/Element/input/range): A control for entering a number whose exact value is not important.
-- [`reset`](/en-US/docs/Web/HTML/Element/input/reset): A button that resets the contents of the form to default values.
-- [`search`](/en-US/docs/Web/HTML/Element/input/search): A single-line text field for entering search strings. Line-breaks are automatically removed from the input value.
-- [`submit`](/en-US/docs/Web/HTML/Element/input/submit): A button that submits the form.
-- [`tel`](/en-US/docs/Web/HTML/Element/input/tel): A control for entering a telephone number. Line-breaks are automatically removed from the input value, but no other syntax is enforced. You can use attributes such as **pattern** and **maxlength** to restrict values entered in the control. The {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS pseudo-classes are applied as appropriate.
-- [`text`](/en-US/docs/Web/HTML/Element/input/text): A single-line text field. Line-breaks are automatically removed from the input value.
-- [`time`](/en-US/docs/Web/HTML/Element/input/time): A control for entering a time value with no time zone.
-- [`url`](/en-US/docs/Web/HTML/Element/input/url): A field for editing a URL. The input value is validated to contain either the empty string or a valid absolute URL before submitting. You can use attributes such as **pattern** and **maxlength** to restrict values entered in the control. The {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS pseudo-classes are applied as appropriate.
-- [`week`](/en-US/docs/Web/HTML/Element/input/week): A control for entering a date consisting of a week-year number and a week number with no time zone.
+- [`radio`](/zh-TW/docs/Web/HTML/Element/input/radio): A radio button, allowing a single value to be selected out of multiple choices.
+- [`range`](/zh-TW/docs/Web/HTML/Element/input/range): A control for entering a number whose exact value is not important.
+- [`reset`](/zh-TW/docs/Web/HTML/Element/input/reset): A button that resets the contents of the form to default values.
+- [`search`](/zh-TW/docs/Web/HTML/Element/input/search): A single-line text field for entering search strings. Line-breaks are automatically removed from the input value.
+- [`submit`](/zh-TW/docs/Web/HTML/Element/input/submit): A button that submits the form.
+- [`tel`](/zh-TW/docs/Web/HTML/Element/input/tel): A control for entering a telephone number. Line-breaks are automatically removed from the input value, but no other syntax is enforced. You can use attributes such as **pattern** and **maxlength** to restrict values entered in the control. The {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS pseudo-classes are applied as appropriate.
+- [`text`](/zh-TW/docs/Web/HTML/Element/input/text): A single-line text field. Line-breaks are automatically removed from the input value.
+- [`time`](/zh-TW/docs/Web/HTML/Element/input/time): A control for entering a time value with no time zone.
+- [`url`](/zh-TW/docs/Web/HTML/Element/input/url): A field for editing a URL. The input value is validated to contain either the empty string or a valid absolute URL before submitting. You can use attributes such as **pattern** and **maxlength** to restrict values entered in the control. The {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS pseudo-classes are applied as appropriate.
+- [`week`](/zh-TW/docs/Web/HTML/Element/input/week): A control for entering a date consisting of a week-year number and a week number with no time zone.
 
 Some input types are now obsolete:
 
-- [`datetime`](/en-US/docs/Web/HTML/Element/input/datetime): {{deprecated_inline}} A control for entering a date and time (hour, minute, second, and fraction of a second) based on UTC time zone. **This feature has been [removed from WHATWG HTML.](https://github.com/whatwg/html/issues/336)**
+- [`datetime`](/zh-TW/docs/Web/HTML/Element/input/datetime): {{deprecated_inline}} A control for entering a date and time (hour, minute, second, and fraction of a second) based on UTC time zone. **This feature has been [removed from WHATWG HTML.](https://github.com/whatwg/html/issues/336)**
 
 ## Attributes
 
@@ -149,7 +135,7 @@ This section lists the attributes available to all form `<input>` types. Non-glo
 > **備註：** This includes the [global HTML attributes](/zh-TW/docs/Web/HTML/Global_attributes).
 
 - {{htmlattrdef("type")}}
-  - : The type of control to render. See [Form \<input> types](#form_<input>_types) for the individual types, with links to more information about each.
+  - : The type of control to render. See [Form \<input> types](#form_input_types) for the individual types, with links to more information about each.
 - {{htmlattrdef("accept")}}
   - : If the value of the **type** attribute is `file`, then this attribute will indicate the types of files that the server accepts, otherwise it will be ignored. The value must be a comma-separated list of unique content type specifiers: A file extension starting with the STOP character (U+002E). (e.g. .jpg, .png, .doc).
     - A valid MIME type with no extensions.
@@ -164,7 +150,7 @@ This section lists the attributes available to all form `<input>` types. Non-glo
 
     - `on`: The browser is allowed to automatically complete the value based on values that the user has entered during previous uses, however `on` does not provide any further information about what kind of data the user might be expected to enter.
     - `name`: Full name.
-    - `honorific-prefix: `Prefix or title (e.g. "Mr.", "Ms.", "Dr.", "Mlle").
+    - `honorific-prefix`: Prefix or title (e.g. "Mr.", "Ms.", "Dr.", "Mlle").
     - `given-name`: First name.
     - `additional-name`: Middle name.
     - `family-name`: Last name.
@@ -251,11 +237,11 @@ This section lists the attributes available to all form `<input>` types. Non-glo
 - {{htmlattrdef("max")}}
   - : The maximum (numeric or date-time) value for this item, which must not be less than its minimum (**min** attribute) value.
 - {{htmlattrdef("maxlength")}}
-  - : If the value of the **type** attribute is `text`, `email`,` search`, `password`, `tel`, or `url`, this attribute specifies the maximum number of characters (in UTF-16 code units) that the user can enter. For other control types, it is ignored. It can exceed the value of the **size** attribute. If it is not specified, the user can enter an unlimited number of characters. Specifying a negative number results in the default behavior (i.e. the user can enter an unlimited number of characters). The constraint is evaluated only when the value of the attribute has been changed.
+  - : If the value of the **type** attribute is `text`, `email`, `search`, `password`, `tel`, or `url`, this attribute specifies the maximum number of characters (in UTF-16 code units) that the user can enter. For other control types, it is ignored. It can exceed the value of the **size** attribute. If it is not specified, the user can enter an unlimited number of characters. Specifying a negative number results in the default behavior (i.e. the user can enter an unlimited number of characters). The constraint is evaluated only when the value of the attribute has been changed.
 - {{htmlattrdef("min")}}
   - : The minimum (numeric or date-time) value for this item, which must not be greater than its maximum (**max** attribute) value.
 - {{htmlattrdef("minlength")}}
-  - : If the value of the **type** attribute is `text`, `email`,` search`, `password`, `tel`, or `url`, this attribute specifies the minimum number of characters (in Unicode code points) that the user can enter. For other control types, it is ignored.
+  - : If the value of the **type** attribute is `text`, `email`, `search`, `password`, `tel`, or `url`, this attribute specifies the minimum number of characters (in Unicode code points) that the user can enter. For other control types, it is ignored.
 - {{htmlattrdef("multiple")}}
   - : This Boolean attribute indicates whether the user can enter more than one value. This attribute applies when the **type** attribute is set to `email` or `file`, otherwise it is ignored.
 - {{htmlattrdef("name")}}
@@ -319,7 +305,7 @@ This section lists the attributes available to all form `<input>` types. Non-glo
 
 ## Examples
 
-You can find multiple examples of `<input>` element usage on the pages covering each individual type — see [Form \<input> types](#form_<input>_types), and also see the [Live example](#live_example) at the top of the article.
+You can find multiple examples of `<input>` element usage on the pages covering each individual type — see [Form \<input> types](#form_input_types), and also see the [Live example](#live_example) at the top of the article.
 
 ## Specifications
 
@@ -333,15 +319,15 @@ You can find multiple examples of `<input>` element usage on the pages covering 
 
 ### File inputs
 
-1.  Starting in {{Gecko("2.0")}}, calling the `click()` method on an `<input>` element of type `file` opens the file picker and lets the user select files. See [Using files from web applications](/zh-TW/docs/Using_files_from_web_applications) for an example and more details.
-2.  You cannot set the value of a file picker from a script — doing something like the following has no effect:
+1. Starting in {{Gecko("2.0")}}, calling the `click()` method on an `<input>` element of type `file` opens the file picker and lets the user select files. See [Using files from web applications](/zh-TW/docs/Using_files_from_web_applications) for an example and more details.
+2. You cannot set the value of a file picker from a script — doing something like the following has no effect:
 
     ```js
     var e = getElementById("someFileInputElement");
     e.value = "foo";
     ```
 
-3.  When a file is chosen using an `<input type="file">`, the real path to the source file is not shown in the input's `value` attribute for obvious security reasons. Instead, the filename is shown, with `C:\fakepath\` appended to the beginning of it. There are some historical reasons for this quirk, but it is supported across all modern browsers, and in fact is [defined in the spec](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly).
+3. When a file is chosen using an `<input type="file">`, the real path to the source file is not shown in the input's `value` attribute for obvious security reasons. Instead, the filename is shown, with `C:\fakepath\` appended to the beginning of it. There are some historical reasons for this quirk, but it is supported across all modern browsers, and in fact is [defined in the spec](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly).
 
 ### Error messages
 

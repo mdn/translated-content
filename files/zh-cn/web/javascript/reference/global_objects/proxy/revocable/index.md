@@ -1,12 +1,6 @@
 ---
 title: Proxy.revocable()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/revocable
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Proxy
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/revocable
 ---
 {{JSRef("Global_Objects", "Proxy")}}
 

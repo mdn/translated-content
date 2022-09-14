@@ -29,10 +29,8 @@ Retourne un {{domxref("ShadowRoot")}}.
 
 ## Spécifications
 
-| Specification                                                                                                                                                    | Status                           | Comment              |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('Shadow DOM', '#widl-Element-attachShadow-ShadowRoot-ShadowRootInit-shadowRootInitDict', 'attachShadow()')}} | {{Spec2('Shadow DOM')}} | Définition initiale. |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.Element.attachShadow")}}
+{{Compat}}

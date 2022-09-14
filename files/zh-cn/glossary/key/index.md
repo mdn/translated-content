@@ -1,7 +1,6 @@
 ---
 title: 密钥
 slug: Glossary/Key
-translation_of: Glossary/Key
 ---
 密钥是一段用于 {{Glossary("cipher", "密码算法")}}{{Glossary("encryption","加密")}}和/或{{Glossary("decryption","解密")}}的信息。
 

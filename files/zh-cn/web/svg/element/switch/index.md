@@ -1,12 +1,6 @@
 ---
 title: switch
 slug: Web/SVG/Element/switch
-tags:
-  - SVG
-  - SVG 容器
-  - 元素
-  - 需要示例
-translation_of: Web/SVG/Element/switch
 ---
 {{SVGRef}}
 
@@ -39,7 +33,7 @@ translation_of: Web/SVG/Element/switch
 
 ## DOM 接口
 
-该元素实现了[`SVGSwitchElement`](/en-US/docs/DOM/SVGSwitchElement) 接口。
+该元素实现了[`SVGSwitchElement`](/zh-CN/docs/DOM/SVGSwitchElement) 接口。
 
 ## 浏览器支持
 

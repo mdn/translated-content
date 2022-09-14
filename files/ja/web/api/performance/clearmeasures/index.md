@@ -1,13 +1,6 @@
 ---
 title: performance.clearMeasures()
 slug: Web/API/Performance/clearMeasures
-tags:
-  - API
-  - メソッド
-  - リファレンス
-  - ウェブパフォーマンス
-browser-compat: api.Performance.clearMeasures
-translation_of: Web/API/Performance/clearMeasures
 ---
 {{APIRef("User Timing API")}}
 

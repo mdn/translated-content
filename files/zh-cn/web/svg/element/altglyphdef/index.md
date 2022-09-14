@@ -1,14 +1,6 @@
 ---
 title: altGlyphDef
 slug: Web/SVG/Element/altGlyphDef
-tags:
-  - SVG
-  - SVG 文本内容
-  - 元素
-  - 参考
-  - 需要兼容性表
-  - 需要示例
-translation_of: Web/SVG/Element/altGlyphDef
 ---
 {{SVGRef}}
 
@@ -24,7 +16,7 @@ translation_of: Web/SVG/Element/altGlyphDef
 
 ### 全局属性
 
-- [核心属性](/en/SVG/Attribute#Core) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
 
 ### 专有属性
 
@@ -32,7 +24,7 @@ _无_
 
 ## DOM 接口
 
-该元素实现了[`SVGAltGlyphDefElement`](/en/DOM/SVGAltGlyphDefElement)接口。
+该元素实现了[`SVGAltGlyphDefElement`](/zh-CN/DOM/SVGAltGlyphDefElement)接口。
 
 ## 参见
 

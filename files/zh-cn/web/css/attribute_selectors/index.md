@@ -1,12 +1,6 @@
 ---
 title: 属性选择器
 slug: Web/CSS/Attribute_selectors
-tags:
-  - Atttribute
-  - CSS
-  - Reference
-  - Selectors
-translation_of: Web/CSS/Attribute_selectors
 ---
 {{CSSRef}}
 

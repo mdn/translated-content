@@ -1,11 +1,6 @@
 ---
 title: <hr>
 slug: Web/HTML/Element/hr
-tags:
-  - HTML
-  - 元素
-  - 參考
-translation_of: Web/HTML/Element/hr
 ---
 {{HTMLRef}}
 

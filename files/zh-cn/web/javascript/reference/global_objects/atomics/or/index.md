@@ -1,12 +1,6 @@
 ---
 title: Atomics.or()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/or
-tags:
-  - Atomics
-  - JavaScript
-  - Method
-  - Shared Memory
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/or
 ---
 {{JSRef}}
 

@@ -1,15 +1,6 @@
 ---
 title: Element.shadowRoot
 slug: Web/API/Element/shadowRoot
-tags:
-  - API
-  - Element
-  - プロパティ
-  - リファレンス
-  - ShadowRoot
-  - シャドウ DOM
-browser-compat: api.Element.shadowRoot
-translation_of: Web/API/Element/shadowRoot
 ---
 {{APIRef("Shadow DOM")}}
 

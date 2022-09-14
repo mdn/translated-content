@@ -55,13 +55,11 @@ formData.getAll('username'); // Returns ["Chris", "Bob"]
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                               | Commentaire |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| {{SpecName('XMLHttpRequest','#dom-formdata-getall','getAll()')}} | {{Spec2('XMLHttpRequest')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FormData.getAll")}}
+{{Compat}}
 
 ## Voir aussi
 

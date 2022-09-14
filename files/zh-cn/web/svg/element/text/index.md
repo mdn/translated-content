@@ -1,12 +1,6 @@
 ---
 title: text
 slug: Web/SVG/Element/text
-tags:
-  - SVG
-  - SVG 文本内容
-  - 元素
-  - 参考
-translation_of: Web/SVG/Element/text
 ---
 {{SVGRef}}
 
@@ -72,10 +66,10 @@ SVG 文本还可以应用样式。
 
 ### 全局属性
 
-- [条件处理属性](/en/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/en/SVG/Attribute#Core) »
-- [图形事件属性](/en/SVG/Attribute#GraphicalEvent) »
-- [外观属性](/en/SVG/Attribute#Presentation) »
+- [条件处理属性](/zh-CN/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [图形事件属性](/zh-CN/SVG/Attribute#GraphicalEvent) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -94,7 +88,7 @@ SVG 文本还可以应用样式。
 
 ## DOM 接口
 
-该元素实现了[`SVGTextElement`](/en/DOM/SVGTextElement)接口。
+该元素实现了[`SVGTextElement`](/zh-CN/DOM/SVGTextElement)接口。
 
 ## 浏览器兼容性
 

@@ -1,12 +1,6 @@
 ---
 title: script
 slug: Web/SVG/Element/script
-tags:
-  - SVG
-  - 元素
-  - 参考
-  - 脚本
-translation_of: Web/SVG/Element/script
 ---
 一个 SVG 脚本元素等同于 HTML 中的`script元素，因此这个位置是面向脚本的（例如，ECMAScript）。`
 
@@ -53,8 +47,8 @@ translation_of: Web/SVG/Element/script
 
 ### 全局属性
 
-- [核心属性](/en-US/SVG/Attribute#Core) »
-- [Xlink 属性](/en-US/SVG/Attribute#XLink) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [Xlink 属性](/zh-CN/SVG/Attribute#XLink) »
 - {{SVGAttr("externalResourcesRequired")}}
 
 ### 专有属性
@@ -64,7 +58,7 @@ translation_of: Web/SVG/Element/script
 
 ## DOM 接口
 
-该元素实现了[`SVGScriptElement`](/en-US/DOM/SVGScriptElement)接口。
+该元素实现了[`SVGScriptElement`](/zh-CN/DOM/SVGScriptElement)接口。
 
 ## 浏览器兼容性
 
@@ -72,6 +66,6 @@ translation_of: Web/SVG/Element/script
 
 ## 参见
 
-- [HTML 中的`script`元素](/en-US/HTML/Element/Script)
+- [HTML 中的`script`元素](/zh-CN/HTML/Element/Script)
 
 {{SVGRef}}

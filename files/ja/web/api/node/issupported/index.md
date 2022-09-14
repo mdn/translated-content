@@ -1,12 +1,6 @@
 ---
 title: Node.isSupported()
 slug: Web/API/Node/isSupported
-tags:
-  - メソッド
-  - 非推奨
-  - リファレンス
-browser-compat: api.Node.isSupported
-translation_of: Web/API/Node/isSupported
 ---
 {{APIRef("DOM")}}{{deprecated_header}}
 

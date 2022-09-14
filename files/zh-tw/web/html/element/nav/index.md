@@ -1,16 +1,6 @@
 ---
 title: <nav>
 slug: Web/HTML/Element/nav
-tags:
-  - 元素
-  - 區域
-  - 導航欄
-  - 網站
-  - 網站區域
-  - 網頁
-  - 網頁區域
-  - 連結
-translation_of: Web/HTML/Element/nav
 ---
 {{HTMLRef}}
 

@@ -1,13 +1,6 @@
 ---
 title: Array.prototype.pop()
 slug: Web/JavaScript/Reference/Global_Objects/Array/pop
-tags:
-  - Array
-  - Array.prototype.pop()
-  - ES5
-  - ES6
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/pop
 ---
 {{JSRef}}
 
@@ -17,8 +10,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/pop
 
 ## 语法
 
-```plain
-arr.pop()
+```js
+pop()
 ```
 
 ### 返回值
@@ -57,7 +50,7 @@ console.log(popped); // 'sturgeon'
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Array.prototype.push()")}}
 - {{jsxref("Array.prototype.shift()")}}

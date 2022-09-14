@@ -39,7 +39,7 @@ console.log(fr24hour.hourCycle); // Affichera "h23" dans la console
 
 ### Définir le format horaire grâce à un objet de configuration
 
-Le constructeur [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale "The Intl.Locale constructor is a standard built-in property of the Intl object.") permet d'utiliser un objet de configuration comme deuxième argument. Les propriétés de cet objet permettent de définir différentes extensions, y compris celle pour le format horaire. Pour cela, on indiquera la propriété `hourCycle` sur l'objet de configuration avec la valeur souhaitée et on passera cet objet au constructeur.
+Le constructeur [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale) permet d'utiliser un objet de configuration comme deuxième argument. Les propriétés de cet objet permettent de définir différentes extensions, y compris celle pour le format horaire. Pour cela, on indiquera la propriété `hourCycle` sur l'objet de configuration avec la valeur souhaitée et on passera cet objet au constructeur.
 
 ```js
 let us12hour = new Intl.Locale("en-US-u-hc-h12");

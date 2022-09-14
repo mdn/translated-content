@@ -1,16 +1,6 @@
 ---
 title: HTML 属性リファレンス
 slug: Web/HTML/Attributes
-tags:
-  - 属性
-  - 初心者
-  - 要素の属性
-  - 要素
-  - HTML
-  - リファレンス
-  - 設定
-  - ウェブ
-translation_of: Web/HTML/Attributes
 ---
 
 {{HTMLSidebar}}
@@ -1403,7 +1393,7 @@ HTML では、ほとんどの属性に **コンテンツ属性** と **IDL (Inte
 
 IDL 属性は JavaScript プロパティとしても知られています。これらは JavaScript プロパティを使用して、 `element.foo` のように読み書きします。IDL 属性は読み取り時に値を返すため基になるコンテンツ属性を使用したり（ただし、）、書き込み時に コンテンツ属性へ何らかの値を保存したりします。言い換えると、IDL 属性は コンテンツ属性を映し出します。
 
-ほとんどの場合、IDL 属性は実際に使用する値として自身の値を返します。例えば {{HTMLElement("input")}} 要素の `type` 属性のデフォルト値は "text" であるので、`input.type="foobar"` を設定すると `&lt;input&gt;` 要素は (外見と動作が) text タイプになりますが、"type" コンテンツ属性の値は "foobar" になります。しかし、`type` IDL 属性は文字列 "text" を返します。
+ほとんどの場合、IDL 属性は実際に使用する値として自身の値を返します。例えば {{HTMLElement("input")}} 要素の `type` 属性のデフォルト値は "text" であるので、`input.type="foobar"` を設定すると `<input>` 要素は (外見と動作が) text タイプになりますが、"type" コンテンツ属性の値は "foobar" になります。しかし、`type` IDL 属性は文字列 "text" を返します。
 
 IDL 属性は常に文字列とは限りません。例えば `input.maxlength` は数値 (符号付き long) です。IDL 属性を使用するときは望ましい型の値を読み書きするので、`input.maxlength` は常に数値を返し、また `input.maxlength` を設定するときは数値を要求します。他の型で渡すと、標準的な JavaScript の型変換規則に従って自動的に数値へ変換されます。
 

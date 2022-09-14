@@ -1,14 +1,6 @@
 ---
 title: Set.prototype.add()
 slug: Web/JavaScript/Reference/Global_Objects/Set/add
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - 原型
-  - 參考
-  - 方法
-  - 集合
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/add
 ---
 {{JSRef}}
 

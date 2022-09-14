@@ -1,14 +1,6 @@
 ---
 title: 让我们开始 CSS 的学习之旅
 slug: Learn/CSS/First_steps/Getting_started
-tags:
-  - CSS
-  - 元素
-  - 初学者
-  - 学习
-  - 类
-  - 选择器
-translation_of: Learn/CSS/First_steps/Getting_started
 original_slug: Learn/CSS/First_steps/开始
 ---
 {{LearnSidebar}}
@@ -238,7 +230,7 @@ a:hover {
 >
 > 你的访客可能在一台使用鼠标和键盘操作的计算机前，也可能正在使用带有触摸屏的手机，或者正在使用屏幕阅读软件读出文档内容，或者他们需要使用更大的字体，或者仅仅使用键盘浏览站点。
 >
-> 一个朴素的 HTML 文档一般来说对任何人都是可以无障碍访问的，当你开始为它添加样式，记得不要破坏这种可访问性。
+> 一个朴素的 HTML 文档一般来说对任何人都是可以无障碍访问的，当你开始为它添加样式，记得不要破坏这种无障碍。
 
 ## 同时使用选择器和选择符
 

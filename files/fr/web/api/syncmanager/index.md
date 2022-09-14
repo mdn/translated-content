@@ -18,12 +18,10 @@ None.
 - {{domxref("SyncManager.getTags")}}
   - : Renvoie une liste d'identifiants définis par le développeur pour l'enregistrement du SyncManager.
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                    | Status                               | Comment             |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Background Sync','#sync-manager-interface','SyncManager')}} | {{Spec2('Background Sync')}} | Initial definition. |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.SyncManager")}}
+{{Compat}}

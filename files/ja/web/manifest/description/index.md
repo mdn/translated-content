@@ -1,12 +1,6 @@
 ---
 title: description
 slug: Web/Manifest/description
-tags:
-  - マニフェスト
-  - ウェブ
-  - description
-browser-compat: html.manifest.description
-translation_of: Web/Manifest/description
 ---
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 

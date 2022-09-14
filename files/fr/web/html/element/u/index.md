@@ -177,15 +177,11 @@ Les titres de livres doivent être indiqués avec un élément {{HTMLElement("ci
 
 ## Spécifications
 
-| Spécification                                                                                                | État                             | Commentaires |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-u-element', '&lt;u&gt;')}}             | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-u-element', '&lt;u&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
-| {{SpecName('HTML4.01', 'present/graphics.html#h-15.2.1', '&lt;b&gt;')}}             | {{Spec2('HTML4.01')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.u")}}
+{{Compat}}
 
 ## Voir aussi
 

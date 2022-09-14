@@ -1,7 +1,6 @@
 ---
 title: max
 slug: Web/SVG/Attribute/max
-translation_of: Web/SVG/Attribute/max
 ---
 {{SVGRef}}
 
@@ -32,7 +31,7 @@ html, body, svg {
 
 ## Usage notes
 
-| Value         | [`<clock-value>`](/en-US/docs/Web/SVG/Content_type#Clock-value) |
+| Value         | [`<clock-value>`](/zh-CN/docs/Web/SVG/Content_type#Clock-value) |
 | ------------- | --------------------------------------------------------------- |
 | Default value | _None_                                                          |
 | Animatable    | No                                                              |

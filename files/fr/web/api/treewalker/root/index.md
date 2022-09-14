@@ -33,14 +33,11 @@ root = treeWalker.root; // document.body dans ce cas
 
 ## Spécifications
 
-| Spécification                                                                                                                        | Statut                                       | Commentaire                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | --------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-treewalker-root', 'TreeWalker.root')}}                                         | {{Spec2('DOM WHATWG')}}             | Pas de changement de {{SpecName('DOM2 Traversal_Range')}} |
-| {{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-TreeWalker-root', 'TreeWalker.root')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale.                                                  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.TreeWalker.root")}}
+{{Compat}}
 
 ## Voir aussi
 

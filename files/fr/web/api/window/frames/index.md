@@ -40,4 +40,4 @@ for (var i = 0; i < frames.length; i++) {
 
 ## Spécifications
 
-{{SpecName('HTML WHATWG','browsers.html#dom-frames','Window.frames')}}
+{{Specifications}}

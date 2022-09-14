@@ -1,16 +1,6 @@
 ---
 title: class
 slug: Web/JavaScript/Reference/Statements/class
-tags:
-  - Class
-  - Classes
-  - Declaration
-  - ECMAScript 2015
-  - ES6
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/class
 ---
 {{jsSidebar("Statements")}}
 
@@ -30,9 +20,9 @@ class name [extends] {
 
 ## 描述
 
-和类表达式一样，类声明体在[严格模式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下运行。构造函数是可选的。
+和类表达式一样，类声明体在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下运行。构造函数是可选的。
 
-类声明不可以提升（这与[函数声明](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/function)不同）。
+类声明不可以提升（这与[函数声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)不同）。
 
 ## 示例
 
@@ -87,6 +77,6 @@ class Square extends Polygon {
 
 ## See also
 
-- [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function)
-- [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
-- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
+- [`function` declaration](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)
+- [`class` expression](/zh-CN/docs/Web/JavaScript/Reference/Operators/class)
+- [Classes](/zh-CN/docs/Web/JavaScript/Reference/Classes)

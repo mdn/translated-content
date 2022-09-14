@@ -1,13 +1,6 @@
 ---
 title: CSS 書字方向
 slug: Web/CSS/CSS_Writing_Modes
-tags:
-  - CSS
-  - CSS 書字方向
-  - リファレンス
-  - 日本語処理
-  - 概要
-translation_of: Web/CSS/CSS_Writing_Modes
 ---
 {{CSSRef}}
 

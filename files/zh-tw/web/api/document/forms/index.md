@@ -1,7 +1,6 @@
 ---
 title: Document.forms
 slug: Web/API/Document/forms
-translation_of: Web/API/Document/forms
 ---
 {{APIRef("DOM")}}
 

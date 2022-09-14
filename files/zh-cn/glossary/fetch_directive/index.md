@@ -1,11 +1,6 @@
 ---
 title: Fetch 指令
 slug: Glossary/Fetch_directive
-tags:
-  - CSP
-  - HTTP
-  - 安全
-translation_of: Glossary/Fetch_directive
 ---
 **{{Glossary("CSP")}} fetch 指令**用在{{HTTPHeader("Content-Security-Policy")}} 头部中，可以用来控制某些具体类型的资源可以从哪些来源被加载。比如说， {{CSP("script-src")}} 使得开发者可以允许可信任来源的脚本在页面上执行， {{CSP("font-src")}} 可以控制字体的来源。
 

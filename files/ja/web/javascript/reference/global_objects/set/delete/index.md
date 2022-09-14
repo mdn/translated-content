@@ -1,15 +1,6 @@
 ---
 title: Set.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Set/delete
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - メソッド
-  - プロトタイプ
-  - リファレンス
-  - set
-browser-compat: javascript.builtins.Set.delete
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/delete
 ---
 {{JSRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: AnalyserNode.getByteFrequencyData()
 slug: Web/API/AnalyserNode/getByteFrequencyData
-translation_of: Web/API/AnalyserNode/getByteFrequencyData
 ---
 {{ APIRef("Web Audio API") }}
 
@@ -79,4 +78,4 @@ draw();
 
 ## 參看
 
-- [使用 Web Audio API](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)
+- [使用 Web Audio API](/zh-TW/docs/Web_Audio_API/Using_Web_Audio_API)

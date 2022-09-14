@@ -1,7 +1,6 @@
 ---
 title: String.prototype.link()
 slug: Web/JavaScript/Reference/Global_Objects/String/link
-translation_of: Web/JavaScript/Reference/Global_Objects/String/link
 ---
 {{JSRef}} {{deprecated_header}}
 

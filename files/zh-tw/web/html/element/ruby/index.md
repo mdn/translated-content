@@ -1,7 +1,6 @@
 ---
 title: <ruby>
 slug: Web/HTML/Element/ruby
-translation_of: Web/HTML/Element/ruby
 ---
 {{HTMLRef}}
 

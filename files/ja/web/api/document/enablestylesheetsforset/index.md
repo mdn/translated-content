@@ -1,18 +1,6 @@
 ---
 title: Document.enableStyleSheetsForSet()
 slug: Web/API/Document/enableStyleSheetsForSet
-page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM
-  - DOM
-  - メソッド
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - リファレンス
-  - 非推奨
-browser-compat: api.Document.enableStyleSheetsForSet
-translation_of: Web/API/Document/enableStyleSheetsForSet
 ---
 {{APIRef("DOM")}}{{deprecated_header}}
 

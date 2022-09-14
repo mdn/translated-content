@@ -54,13 +54,11 @@ Le résultat est :
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG','#interface-nodelist','values() (as iterable&lt;Node&gt;)')}} | {{Spec2('DOM WHATWG')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.NodeList.values")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,16 +1,6 @@
 ---
 title: フレックスアイテムの並べ替え
 slug: Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
-tags:
-  - アクセシビリティ
-  - CSS
-  - Flex
-  - ガイド
-  - 方向
-  - フレックスボックス
-  - order
-  - reverse
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
 ---
 {{CSSRef}}
 

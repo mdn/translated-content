@@ -1,18 +1,6 @@
 ---
 title: MIME タイプ (IANA メディアタイプ)
 slug: Web/HTTP/Basics_of_HTTP/MIME_types
-tags:
-  - Content-Type
-  - Guide
-  - HTTP
-  - MIME Types
-  - Meta
-  - Request header
-  - Response Header
-  - application/javascript
-  - application/json
-  - application/xml
-translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 ---
 {{HTTPSidebar}}
 
@@ -174,7 +162,7 @@ MIME タイプが `image` であるファイルは、画像データを含んで
 
 ### 音声と動画のタイプ
 
-画像の場合と同様に、 HTML はウェブブラウザが {{HTMLElement("audio")}} と {{HTMLElement("video")}} 要素が特定のファイルタイプやコーデックに対応することを義務づけていないので、メディアに使用するファイルタイプやコーデックを選択する際には、ターゲット層と彼らが使用しているであろうブラウザーの範囲（およびそれらのバージョン）を考慮しておくことが重要です。
+画像の場合と同様に、 HTML はウェブブラウザーが {{HTMLElement("audio")}} と {{HTMLElement("video")}} 要素が特定のファイルタイプやコーデックに対応することを義務づけていないので、メディアに使用するファイルタイプやコーデックを選択する際には、ターゲット層と彼らが使用しているであろうブラウザーの範囲（およびそれらのバージョン）を考慮しておくことが重要です。
 
 [メディアコンテナー形式のガイド](/ja/docs/Web/Media/Formats/Containers)では、ウェブブラウザーが一般的に対応しているファイルタイプの一覧を、その特殊な使用例や持っている欠点、互換性情報などの詳細とともに紹介しています。
 

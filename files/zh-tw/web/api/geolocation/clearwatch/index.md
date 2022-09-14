@@ -1,7 +1,6 @@
 ---
 title: Geolocation.clearWatch()
 slug: Web/API/Geolocation/clearWatch
-translation_of: Web/API/Geolocation/clearWatch
 ---
 {{ APIref("Geolocation API") }}
 
@@ -60,7 +59,7 @@ id = navigator.geolocation.watchPosition(success, error, options);
 
 ## 請參考
 
-- [Using geolocation](/en-US/docs/WebAPI/Using_geolocation)
+- [Using geolocation](/zh-TW/docs/WebAPI/Using_geolocation)
 - {{domxref("Geolocation")}}
 - {{domxref("Geolocation.watchPosition()")}}
 - {{domxref("Geolocation.getCurrentPosition()")}}

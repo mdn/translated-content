@@ -1,14 +1,6 @@
 ---
 title: 高阶文字排版
 slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
-tags:
-  - 上下标
-  - 代码
-  - 引文
-  - 引用
-  - 描述列表
-  - 缩略语
-translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/文件和网站结构", "Learn/HTML/Introduction_to_HTML")}}
 
@@ -272,8 +264,8 @@ for short quotations that don't require paragraph breaks.</q> -- <a href="https:
 
 你需要的引用源：
 
-- http\://www\.brainyquote.com/quotes/authors/c/confucius.html 对应 "孔子曰"。
-- http\://www\.affirmationsforpositivethinking.com/ 对应 "不要说泄气的话"。
+- `http://www.brainyquote.com/quotes/authors/c/confucius.html` 对应 "孔子曰"。
+- `http://www.affirmationsforpositivethinking.com/` 对应 "不要说泄气的话"。
 
 如果你做错了，你可以随时点击【重置】按钮。如果实在进行不下去，可以点击【显示答案】。
 

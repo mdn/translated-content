@@ -1,15 +1,6 @@
 ---
 title: ShadowRoot.innerHTML
 slug: Web/API/ShadowRoot/innerHTML
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - ShadowRoot
-  - innerHTML
-  - シャドウ DOM
-browser-compat: api.ShadowRoot.innerHTML
-translation_of: Web/API/ShadowRoot/innerHTML
 ---
 {{APIRef("Shadow DOM")}}
 

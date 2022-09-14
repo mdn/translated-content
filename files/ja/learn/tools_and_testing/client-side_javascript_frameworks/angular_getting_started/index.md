@@ -1,15 +1,6 @@
 ---
 title: Angular をはじめる
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started
-tags:
-  - Beginner
-  - Frameworks
-  - Installation
-  - JavaScript
-  - Learn
-  - client-side
-  - Angular
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -61,7 +52,7 @@ Angular プラットフォームの探索を開始する前に、 Angular CLI �
       <td>
         <code><a href="https://angular.io/cli/build">ng build</a></code>
       </td>
-      <td>Angular アプリを出力ディレクトリにコンパイルします。 </td>
+      <td>Angular アプリを出力ディレクトリーにコンパイルします。 </td>
     </tr>
     <tr>
       <td>
@@ -125,7 +116,7 @@ npm install -g @angular/cli
 ```
 
 Angular CLI コマンドはすべて `ng` で始まり、その後に CLI で実行する操作が続きます。
-デスクトップディレクトリで、次の `ng new` コマンドを使用して、`todo`と いう名前の新しいアプリケーションを作成します。
+デスクトップディレクトリーで、次の `ng new` コマンドを使用して、`todo`と いう名前の新しいアプリケーションを作成します。
 
 ```js
 ng new todo --routing=false --style=css
@@ -151,7 +142,7 @@ ng serve
 
 CLI が analytics についてプロンプトを表示したら、`no` と答えます。
 
-ブラウザで、 ``http://localhost:4200/` に移動して、新しいスターターアプリケーションを表示します。
+ブラウザーで、 `http://localhost:4200/` に移動して、新しいスターターアプリケーションを表示します。
 ソースファイルのいずれかを変更すると、アプリケーションは自動的にリロードされます。
 
 `ng serve` の実行中に、コマンドを実行するために 2 番目のターミナルタブまたはウィンドウを開くことができます。
@@ -166,7 +157,7 @@ CLI が自動的に生成するキーファイルには、次のものが含ま�
    このファイルは、アプリケーション内の他のファイルの中央ハブとして機能します。
 2. `app.component.ts`: クラスとも呼ばれ、アプリケーションのメインページのロジックが含まれています。
 3. `app.component.html`: `AppComponent` の HTML が含まれています。 このファイルの内容は、テンプレートとも呼ばれます。
-   テンプレートは、ブラウザに表示されるビューまたは内容を決定します。
+   テンプレートは、ブラウザーに表示されるビューまたは内容を決定します。
 4. `app.component.css`: `AppComponent` のスタイルが含まれています。 このファイルは、アプリケーション全体ではなく、特定のコンポーネントにのみ適用されるスタイルを定義する場合に使用します。
 
 Angular のコンポーネントは、テンプレート、スタイル、クラスの 3 つの主要部分で構成されています。
@@ -177,7 +168,7 @@ Angular のコンポーネントは、テンプレート、スタイル、クラ
 
 Angular CLI は `app.component.spec.ts` と呼ばれるコンポーネントテスト用のファイルも生成しますが、このチュートリアルではテストに入らないため、そのファイルは無視してかまいません。
 
-コンポーネントを生成するたびに、CLI は指定した名前のディレクトリにこれらの 4 つのファイルを作成します。
+コンポーネントを生成するたびに、CLI は指定した名前のディレクトリーにこれらの 4 つのファイルを作成します。
 
 ## Angular アプリケーションの構造
 
@@ -268,7 +259,7 @@ export class AppComponent {
 }
 ```
 
-アプリケーションがコンポーネントとそのテンプレートをロードすると、ブラウザには次のように表示されます。
+アプリケーションがコンポーネントとそのテンプレートをロードすると、ブラウザーには次のように表示されます。
 
 ```html
 <h1>To do application</h1>
@@ -359,5 +350,5 @@ Angular の最初の紹介は以上です。 この時点で、Angular アプリ
   - [Angular todo リストアプリの事始め](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
   - [Angular アプリのスタイリング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
   - [item コンポーネントの作成](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Filtering our to-do items](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+  - [To Do アイテムのフィルタリング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
   - [Building Angular applications and further resources](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

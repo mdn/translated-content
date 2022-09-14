@@ -1,7 +1,6 @@
 ---
 title: PositionError.code
 slug: Web/API/GeolocationPositionError/code
-translation_of: Web/API/GeolocationPositionError/code
 ---
 {{APIRef("Geolocation API")}}
 
@@ -29,5 +28,5 @@ typeErr = poserr.code
 
 ## 請參考
 
-- [Using geolocation](/en-US/docs/WebAPI/Using_geolocation)
+- [Using geolocation](/zh-TW/docs/WebAPI/Using_geolocation)
 - 屬於 {{domxref("PositionError")}} 。

@@ -1,7 +1,6 @@
 ---
 title: 'CSP: require-sri-for'
 slug: Web/HTTP/Headers/Content-Security-Policy/require-sri-for
-translation_of: Web/HTTP/Headers/Content-Security-Policy/require-sri-for
 ---
 {{HTTPSidebar}}
 
@@ -51,4 +50,4 @@ Content-Security-Policy: require-sri-for script style
 ## See also
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity)
+- [Subresource Integrity](/zh-CN/docs/Web/Security/Subresource_Integrity)

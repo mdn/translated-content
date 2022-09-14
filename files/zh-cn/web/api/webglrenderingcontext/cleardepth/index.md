@@ -4,7 +4,7 @@ slug: Web/API/WebGLRenderingContext/clearDepth
 ---
 {{APIRef("WebGL")}}
 
-[WebGL API](/en-US/docs/Web/API/WebGL_API)的**`WebGLRenderingContext.clearDepth()`** 方法用于设置深度缓冲区的深度清除值。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API)的**`WebGLRenderingContext.clearDepth()`** 方法用于设置深度缓冲区的深度清除值。
 
 这个深度清除值的设定，是为了调用{{domxref("WebGLRenderingContext.clear", "clear()")}} 的时候使用，这个值的范围是 0 到 1。
 

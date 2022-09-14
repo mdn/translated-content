@@ -1,16 +1,10 @@
 ---
 title: 循环与迭代
 slug: Web/JavaScript/Guide/Loops_and_iteration
-tags:
-  - JavaScript
-  - 循环
-  - 指南
-  - 语法
-translation_of: Web/JavaScript/Guide/Loops_and_iteration
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
 
-循环提供了一种快速和简单的方式去做一些重复的事。[JavaScript 入门](/en-US/docs/Web/JavaScript/Guide)的这个章节会介绍在 JavaScript 中存在哪些不同的迭代语句。
+循环提供了一种快速和简单的方式去做一些重复的事。[JavaScript 入门](/zh-CN/docs/Web/JavaScript/Guide)的这个章节会介绍在 JavaScript 中存在哪些不同的迭代语句。
 
 你可以把循环想成一种计算机化的游戏，告诉某人在一个方向上走 X 步，然后在另一个方向上走 Y 步；例如，“向东走 5 步”可以用一个循环来这样表达：
 
@@ -419,15 +413,14 @@ let arr = [3, 5, 7];
 arr.foo = "hello";
 
 for (let i in arr) {
-   console.log(i); // 输出 "0", "1", "2", "foo"
+  console.log(i); // 输出 "0", "1", "2", "foo"
 }
 
 for (let i of arr) {
-   console.log(i); // 输出 "3", "5", "7"
+  console.log(i); // 输出 "3", "5", "7"
 }
 
 // 注意 for...of 的输出没有出现 "hello"
-// 译者：官方文档不知为何在此使用三个空格来缩进…
 ```
 
 {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}

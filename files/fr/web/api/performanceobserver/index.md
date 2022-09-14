@@ -43,13 +43,11 @@ observer2.observe({entryTypes: ["measure"]});
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                                                   | Commentaire                                               |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | --------------------------------------------------------- |
-| {{SpecName('Performance Timeline Level 2', '#dom-performanceobserver', 'PerformanceObserver')}} | {{Spec2('Performance Timeline Level 2')}} | Définition initiale de l'interface `PerformanceObserver`. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceObserver")}}
+{{Compat}}
 
 ## Voir aussi
 

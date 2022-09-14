@@ -26,15 +26,13 @@ L'ancienne propriété en lecture seule **`loadEventEnd`** retourne un `unsigned
 let time = performanceTiming.loadEventEnd;
 ```
 
-## Specifications
+## Spécifications
 
-| Spécification                                                                                                                                                | Statut                                   | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#dom-performancetiming-loadedeventend', 'PerformanceTiming.loadEventEnd')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceTiming.loadEventEnd")}}
+{{Compat}}
 
 ## Voir aussi
 

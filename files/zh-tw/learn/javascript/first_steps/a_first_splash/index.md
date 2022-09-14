@@ -1,7 +1,6 @@
 ---
 title: 初次接觸Javascript
 slug: Learn/JavaScript/First_steps/A_first_splash
-translation_of: Learn/JavaScript/First_steps/A_first_splash
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
 
@@ -253,7 +252,7 @@ let resetButton;
 
 - 最後兩個變數，一個儲存回合數 1，另一個儲存指向重新開始按鈕的參照 (按鈕現在還不存在，之後會加上的)。
 
-> **備註：** 從[下一篇文章](/en-US/docs/user:chrisdavidmills/variables)開始，你會學到更多有關變數的事。
+> **備註：** 從[下一篇文章](/zh-TW/docs/user:chrisdavidmills/variables)開始，你會學到更多有關變數的事。
 
 ### 函式
 

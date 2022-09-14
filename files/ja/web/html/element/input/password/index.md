@@ -1,21 +1,6 @@
 ---
 title: <input type="password">
 slug: Web/HTML/Element/input/password
-tags:
-  - 要素
-  - フォーム
-  - HTML
-  - HTML 入力型
-  - HTML Inputs
-  - HTML パスワード入力
-  - HTML フォーム
-  - HTML input tag
-  - 入力型
-  - リファレンス
-  - ウェブ
-  - password
-browser-compat: html.elements.input.input-password
-translation_of: Web/HTML/Element/input/password
 ---
 
 {{HTMLRef("Input_types")}}

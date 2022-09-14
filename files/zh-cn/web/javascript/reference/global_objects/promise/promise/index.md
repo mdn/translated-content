@@ -1,7 +1,6 @@
 ---
 title: Promise() 构造器
 slug: Web/JavaScript/Reference/Global_Objects/Promise/Promise
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/Promise
 ---
 {{JSRef}}
 
@@ -101,4 +100,4 @@ function myAsyncFunction(url) {
 
 ## See also
 
-- [Using Promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
+- [Using Promises](/zh-CN/docs/Web/JavaScript/Guide/Using_promises)

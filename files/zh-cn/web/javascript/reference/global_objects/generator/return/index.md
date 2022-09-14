@@ -1,14 +1,6 @@
 ---
 title: Generator.prototype.return()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/return
-tags:
-  - ECMAScript6
-  - JavaScript
-  - 原型
-  - 参考
-  - 方法
-  - 生成器
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator/return
 ---
 {{JSRef}}
 
@@ -77,4 +69,4 @@ g.return(1); // { value: 1, done: true }
 
 ## 相关链接
 
-- [`function*`](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
+- [`function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)

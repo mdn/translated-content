@@ -1,14 +1,6 @@
 ---
 title: Array.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 ---
 {{JSRef}}
 
@@ -48,7 +40,7 @@ The `every` method executes the provided `callback` function once for each eleme
 
 `callback` is invoked with three arguments: the value of the element, the index of the element, and the Array object being traversed.
 
-If a `thisArg` parameter is provided to `every`, it will be used as callback's `this` value. Otherwise, the value `undefined` will be used as its `this` value. The `this` value ultimately observable by `callback` is determined according to [the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
+If a `thisArg` parameter is provided to `every`, it will be used as callback's `this` value. Otherwise, the value `undefined` will be used as its `this` value. The `this` value ultimately observable by `callback` is determined according to [the usual rules for determining the `this` seen by a function](/zh-TW/docs/Web/JavaScript/Reference/Operators/this).
 
 `every` does not mutate the array on which it is called.
 
@@ -72,7 +64,7 @@ function isBigEnough(element, index, array) {
 
 ### Using arrow functions
 
-[Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter syntax for the same test.
+[Arrow functions](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter syntax for the same test.
 
 ```js
 [12, 5, 8, 130, 44].every(x => x >= 10); // false

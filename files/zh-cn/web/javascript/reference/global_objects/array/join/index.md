@@ -1,12 +1,6 @@
 ---
 title: Array.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/Array/join
-tags:
-  - Array
-  - Array.prototype.join()
-  - join()
-  - separator
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/join
 ---
 {{JSRef}}
 
@@ -16,8 +10,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/join
 
 ## 语法
 
-```plain
-arr.join([separator])
+```js
+join()
+join(separator)
 ```
 
 ### 参数
@@ -69,7 +64,7 @@ f(1, 'a', true);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("String.prototype.split()")}}
 - {{jsxref("Array.prototype.toString()")}}

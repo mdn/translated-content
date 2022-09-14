@@ -1,11 +1,6 @@
 ---
 title: 优化启动性能
 slug: Web/Performance/Optimizing_startup_performance
-tags:
-  - 应用
-  - 性能
-  - 游戏
-translation_of: Web/Performance/Optimizing_startup_performance
 ---
 一个在软件应用开发中经常被忽视的方面—即便在那些专注于性能优化的软件中—就是启动时的表现。你的应用需要花费多长时间启动？当应用加载时是否会卡住用户的设备或浏览器？这会让用户担心你的应用崩溃了，或者哪儿出错了。花时间确保你的应用能够更好地启动总是一个好主意。这篇文章提供了一些技巧和建议来帮助你达成这个目标，不管是在写一个新的应用还是从其他平台向 Web 移植一个应用。
 
@@ -29,7 +24,7 @@ translation_of: Web/Performance/Optimizing_startup_performance
 
 ## 异步化
 
-关于如何构建你的启动过程，使得其尽可能异步执行，这里有些建议。(不过是新应用还是移植的）：
+关于如何构建你的启动过程，使得其尽可能异步执行，这里有些建议。（不论是新应用还是移植的）：
 
 - 启动时，在需要异步执行的脚本标签上使用 {{ htmlattrxref("defer") }} 或 {{ htmlattrxref("async") }} 属性 。这会允许 HTML 解析器更高效地处理文档。 [Async scripts for asm.js](/zh-CN/docs/Games/Techniques/Async_scripts) 中有更多关于这方面的信息。
 - 如果你需要解码资源文件（比如，解码 JPEG 文件并将其转换为原始纹理数据，以便随后在 WebGL 中使用），最好在 workers 里做这件事。
@@ -38,7 +33,8 @@ translation_of: Web/Performance/Optimizing_startup_performance
 - 在你启动的 HTML 文件中，不要包含不会在关键路径下出现的脚本或样式表。只在需要时加载他们。
 - 不要强迫 Web 引擎构建不需要的 DOM，一种简单的“hack”的方式是把你的 HTML 留在文档里，但是在外层包裹注释。
 
-  ```plain
+  <!-- markdownlint-disable MD031 MD032 -->
+  ```html
   <div id="foo"><!--
     <div> ...
   --></div>

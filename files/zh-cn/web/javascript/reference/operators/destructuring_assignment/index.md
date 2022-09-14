@@ -1,15 +1,6 @@
 ---
 title: 解构赋值
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - 对象
-  - 操作符
-  - 数组
-  - 结构
-  - 赋值
-translation_of: Web/JavaScript/Reference/Operators/Destructuring_assignment
 ---
 {{jsSidebar("Operators")}}
 
@@ -373,11 +364,11 @@ console.log("userId: " + userId(user)); // "userId: 42"
 whois(user); // "jdoe is John"
 ```
 
-这段代码从 user 对象中提取并输出` id、``displayName ` 和 `firstName`。
+这段代码从 user 对象中提取并输出 `id`、`displayName` 和 `firstName`。
 
 ### 对象属性计算名和解构
 
-计算属性名，如 [object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names)，可以被解构。
+计算属性名，如 [object literals](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names)，可以被解构。
 
 ```js
 let key = "z";
@@ -431,7 +422,7 @@ const {self, prot} = obj;
 
 ## 相关链接
 
-- [赋值操作符](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)
+- [赋值操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)
 - ["ES6 in Depth: Destructuring" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/)
 
 ### 译者注：关于 42

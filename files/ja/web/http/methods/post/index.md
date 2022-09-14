@@ -1,12 +1,6 @@
 ---
 title: POST
 slug: Web/HTTP/Methods/POST
-tags:
-  - HTTP
-  - リファレンス
-  - リクエストメソッド
-browser-compat: http.methods.POST
-translation_of: Web/HTTP/Methods/POST
 ---
 {{HTTPSidebar}}
 

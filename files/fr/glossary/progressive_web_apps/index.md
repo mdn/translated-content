@@ -11,7 +11,7 @@ _Applications web progressistes_ (Progressive web apps) est une locution utilis�
 
 Ces fonctionnalités incluent : la possibilité d'installer l'application, de fonctionner hors-ligne, d'être facile à synchroniser ou encore d'interagir avec l'utilisateur à l'initiative du serveur.
 
-## Pour approfondir
+## Voir aussi
 
 - Les [Applications](/fr/Apps) sur MDN
 - [Progressive web apps](https://developers.google.com/web/progressive-web-apps) sur Google Developers.

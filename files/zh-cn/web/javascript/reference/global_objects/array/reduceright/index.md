@@ -1,12 +1,6 @@
 ---
 title: Array.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
-tags:
-  - JavaScript
-  - 原型
-  - 数组
-  - 方法
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 ---
 {{JSRef}}
 
@@ -18,15 +12,30 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 
 ## 语法
 
-```plain
-arr.reduceRight(callback(accumulator, currentValue[, index[, array]])[, initialValue])
+```js
+// 箭头函数
+reduceRight((accumulator, currentValue) => { /* … */ } )
+reduceRight((accumulator, currentValue, index) => { /* … */ } )
+reduceRight((accumulator, currentValue, index, array) => { /* … */ } )
+reduceRight((accumulator, currentValue, index, array) => { /* … */ }, initialValue)
+
+// 回调函数
+reduceRight(callbackFn)
+reduceRight(callbackFn, initialValue)
+
+// 内联回调函数
+reduceRight(function(accumulator, currentValue) { /* … */ })
+reduceRight(function(accumulator, currentValue, index) { /* … */ })
+reduceRight(function(accumulator, currentValue, index, array){ /* … */ })
+reduceRight(function(accumulator, currentValue, index, array) { /* … */ }, initialValue)
 ```
 
 ### 参数
 
 - `callback`
-  - : 一个回调函数，用于操作数组中的每个元素，它可接受四个参数：_ `accumulator`
-    _ : 累加器：上一次调用回调函数时，回调函数返回的值。首次调用回调函数时，如果 `initialValue` 存在，累加器即为 `initialValue`，否则须为数组中的最后一个元素（详见下方 `initialValue` 处相关说明）。
+  - : 一个回调函数，用于操作数组中的每个元素，它可接受四个参数：
+    - `accumulator`
+      - : 累加器：上一次调用回调函数时，回调函数返回的值。首次调用回调函数时，如果 `initialValue` 存在，累加器即为 `initialValue`，否则须为数组中的最后一个元素（详见下方 `initialValue` 处相关说明）。
     - `currentValue`
       - : 当前元素：当前被处理的元素。
     - `index`{{optional_inline}}
@@ -77,7 +86,7 @@ array.reduceRight(function(accumulator, currentValue, index, array) {
       <td rowspan="2">> 1</td>
       <td>未提供</td>
       <td>
-        <code>accumulator</code> 为<u>数组中</u>（下略）最后一个元素<br /><code
+        <code>accumulator</code> 为<em>数组中</em>（下略）最后一个元素<br /><code
           >currentValue</code
         >
         为倒数第二个元素
@@ -299,6 +308,7 @@ if ('function' !== typeof Array.prototype.reduceRight) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
+- [Polyfill of `Array.prototype.reduceRight` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.reduce()")}}

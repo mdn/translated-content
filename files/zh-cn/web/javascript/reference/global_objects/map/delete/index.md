@@ -1,16 +1,7 @@
 ---
 title: Map.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Map/delete
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/delete
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/delete
-browser-compat: javascript.builtins.Map.delete
 ---
 {{JSRef}}
 
@@ -21,7 +12,7 @@ browser-compat: javascript.builtins.Map.delete
 ## 语法
 
 ```js
-myMap.delete(key);
+delete(key)
 ```
 
 ### 参数
@@ -32,18 +23,18 @@ myMap.delete(key);
 ### 返回值
 
 - Boolean
-  - : 如果 `Map` 对象中存在该元素，则移除它并返回* `true`*；否则如果该元素不存在则返回 `false`。
+  - : 如果 `Map` 对象中存在该元素，则移除它并返回 `true`；否则直接返回 `false`。
 
 ## 示例
 
-### 使用 `delete` 方法
+### 使用 delete()
 
 ```js
-var myMap = new Map();
+const myMap = new Map();
 myMap.set("bar", "foo");
 
-myMap.delete("bar"); // 返回 true。成功地移除元素
-myMap.has("bar");    // 返回 false。"bar" 元素将不再存在于 Map 实例中
+console.log(myMap.delete("bar")); // 返回 true。成功地移除元素
+console.log(myMap.has("bar"));    // 返回 false。"bar" 元素将不再存在于 Map 实例中
 ```
 
 ## 规范

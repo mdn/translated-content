@@ -117,13 +117,11 @@ var objectStore = db.transaction('toDoList').objectStore('toDoList');
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#idl-def-IDBDatabase', 'IDBDatabase')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBDatabase")}}
+{{Compat}}
 
 ## Voir aussi
 

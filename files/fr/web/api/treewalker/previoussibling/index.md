@@ -33,14 +33,11 @@ var node = treeWalker.previousSibling(); // renvoie null car il n'y a pas de fr�
 
 ## Spécifications
 
-| Spécification                                                                                                                                                    | Statut                                       | Commentaire                                                           |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-treewalker-previoussibling', 'TreeWalker.previousSibling')}}                                         | {{Spec2('DOM WHATWG')}}             | Pas de changement de {{SpecName('DOM2 Traversal_Range')}} |
-| {{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-TreeWalker-previousSibling', 'TreeWalker.previousSibling')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale.                                                  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.TreeWalker.previousSibling")}}
+{{Compat}}
 
 ## Voir aussi
 

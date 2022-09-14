@@ -23,13 +23,11 @@ serverTiming.description;
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                               | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Server Timing','#dom-performanceservertiming-description', 'description')}} | {{Spec2('Server Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceServerTiming.description")}}
+{{Compat}}
 
 ## Voir aussi
 

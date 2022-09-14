@@ -1,7 +1,6 @@
 ---
 title: 運算式與運算子
 slug: Web/JavaScript/Guide/Expressions_and_Operators
-translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
 
@@ -163,8 +162,8 @@ var var2 = 4;
 | `15 & 9`  | `9`   | `1111 & 1001 = 1001`                                              |
 | `15 \| 9` | `15`  | `1111 \| 1001 = 1111`                                             |
 | `15 ^ 9`  | `6`   | `1111 ^ 1001 = 0110`                                              |
-| `~15`     | `-16` | ` ~``00000000...`` 00001111 = ``1111``1111``...``11110000 `       |
-| `~9`      | `-10` | ` ~``00000000``...``0000`` 1001 = ``1111``1111``...``1111``0110 ` |
+| `~15`     | `-16` | `~ 0000 0000 … 0000 1111 = 1111 1111 … 1111 0000` |
+| `~9`      | `-10` | `~ 0000 0000 … 0000 1001 = 1111 1111 … 1111 0110` |
 
 注意，在使用 位元 NOT 運算子時， 所有的 32 個 bit 都被進行 NOT 了，包含最左邊用來描述正負數的位元(two's-complement representation)。
 
@@ -289,7 +288,7 @@ for (var i = 0, j = 9; i <= j; i++, j--)
 
 #### `delete`
 
-[`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) 運算子會刪除物件，物件的性質，或是陣列中指定 index 的物件。 語法是:
+[`delete`](/zh-TW/docs/Web/JavaScript/Reference/Operators/delete) 運算子會刪除物件，物件的性質，或是陣列中指定 index 的物件。 語法是:
 
 ```js
 delete 物件名稱;
@@ -300,7 +299,7 @@ delete 性質; // 只有在 with 陳述句中可以使用
 
 `物件名稱` 是物件的名稱， 性質 是物件中的一個特性， 索引 是用來表示物件在陣列中位置的一個整數。
 
-第四種形式只有在 [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) 陳述句中可用， 用來刪除物件中的一個特性。
+第四種形式只有在 [`with`](/zh-TW/docs/Web/JavaScript/Reference/Statements/with) 陳述句中可用， 用來刪除物件中的一個特性。
 
 你可以用 `delete` 運算子來刪除隱式宣告的變數， 但不適用於使用 var 宣告的變數。
 

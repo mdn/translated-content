@@ -1,13 +1,6 @@
 ---
 title: ArrayBufferView
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray
-tags:
-  - API
-  - Interface
-  - JavaScript
-  - Reference
-  - Typed Arrays
-translation_of: Web/API/ArrayBufferView
 original_slug: Web/API/ArrayBufferView
 ---
 {{APIRef}}

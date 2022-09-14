@@ -1,18 +1,6 @@
 ---
 title: HTMLImageElement.naturalHeight
 slug: Web/API/HTMLImageElement/naturalHeight
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLImageElement
-  - Intrinsic Height
-  - リファレンス
-  - プロパティ
-  - Vertical
-  - naturalHeight
-  - size
-browser-compat: api.HTMLImageElement.naturalHeight
-translation_of: Web/API/HTMLImageElement/naturalHeight
 ---
 {{APIRef("HTML DOM")}}
 

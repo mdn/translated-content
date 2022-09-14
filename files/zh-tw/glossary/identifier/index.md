@@ -1,10 +1,6 @@
 ---
 title: 識別字
 slug: Glossary/Identifier
-tags:
-  - 術語表
-  - 識別字
-translation_of: Glossary/Identifier
 ---
 字符中的代碼序列定義了變數(**{{glossary("variable")}})、函式({{glossary("function")}}) 或屬性({{glossary("property")}})。**
 

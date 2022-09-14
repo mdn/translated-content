@@ -1,15 +1,6 @@
 ---
 title: Promise.all()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/all
-tags:
-  - AJAX
-  - Async-Await
-  - Fetch
-  - Promise
-  - Promise.all()
-  - Promise.race()
-  - promise.all
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/all
 ---
 {{JSRef}}
 
@@ -26,13 +17,13 @@ Promise.all(iterable);
 ### 参数
 
 - iterable
-  - : 一个[可迭代](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol)对象，如 {{jsxref("Array")}} 或 {{jsxref("String")}}。
+  - : 一个[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol)对象，如 {{jsxref("Array")}} 或 {{jsxref("String")}}。
 
 ### 返回值
 
-- 如果传入的参数是一个空的可迭代对象，则返回一个**已完成（already resolved）**状态的 {{jsxref("Promise")}}。
-- 如果传入的参数不包含任何 `promise`，则返回一个**异步完成（asynchronously resolved）** {{jsxref("Promise")}}。注意：Google Chrome 58 在这种情况下返回一个**已完成（already resolved）**状态的 {{jsxref("Promise")}}。
-- 其它情况下返回一个**处理中（pending）**的{{jsxref("Promise")}}。这个返回的 `promise` 之后会在所有的 `promise` 都完成或有一个 `promise` 失败时**异步**地变为完成或失败。 见下方关于“Promise.all 的异步或同步”示例。返回值将会按照参数内的 `promise` 顺序排列，而不是由调用 `promise` 的完成顺序决定。
+- 如果传入的参数是一个空的可迭代对象，则返回一个**已完成**（already resolved）状态的 {{jsxref("Promise")}}。
+- 如果传入的参数不包含任何 `promise`，则返回一个**异步完成**（asynchronously resolved）{{jsxref("Promise")}}。注意：Google Chrome 58 在这种情况下返回一个**已完成**（already resolved）状态的 {{jsxref("Promise")}}。
+- 其它情况下返回一个**处理中**（pending）的{{jsxref("Promise")}}。这个返回的 `promise` 之后会在所有的 `promise` 都完成或有一个 `promise` 失败时**异步**地变为完成或失败。 见下方关于“Promise.all 的异步或同步”示例。返回值将会按照参数内的 `promise` 顺序排列，而不是由调用 `promise` 的完成顺序决定。
 
 ## 说明
 

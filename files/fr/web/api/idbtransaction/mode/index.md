@@ -87,15 +87,13 @@ function addData() {
 };
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBTransaction-mode', 'mode')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBTransaction.mode")}}
+{{Compat}}
 
 ## Voir aussi
 

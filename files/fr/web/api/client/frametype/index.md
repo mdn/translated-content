@@ -29,10 +29,8 @@ TBD
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                               | Commentaire          |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#client-frametype', 'frameType')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Client.frameType")}}
+{{Compat}}

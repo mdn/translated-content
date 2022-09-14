@@ -1,14 +1,10 @@
 ---
 title: TypedArray.from()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/from
-tags:
-  - from
-  - 类型数组
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/from
 ---
 {{JSRef}}
 
-`TypedArray.from()` 方法 从一个类数组或者可迭代对象中创建一个新[类型数组](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)。 这个方法和 {{jsxref("Array.from()")}} 类似。
+`TypedArray.from()` 方法 从一个类数组或者可迭代对象中创建一个新[类型数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)。 这个方法和 {{jsxref("Array.from()")}} 类似。
 
 ## 语法
 

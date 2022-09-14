@@ -1,12 +1,6 @@
 ---
 title: JSON
 slug: Glossary/JSON
-tags:
-  - CodingScripting
-  - Glossary
-  - Intro
-  - JSON
-translation_of: Glossary/JSON
 ---
 _JavaScript Object Notation_（**JSON**）是一種資料交換格式。JSON 的語法非常接近 {{Glossary("JavaScript")}}，但嚴格上來說 JSON 並不是 JavaScript 的一個子集。許多程式語言都支援 JSON，不過 JSON 在基於 JavaScript 的應用程式（包含網站和瀏覽器擴充功能）中特別有用。
 

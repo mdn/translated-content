@@ -37,6 +37,34 @@ original_slug: Web/JavaScript/Guide/Closures
 위 코드를 [실행](http://jsfiddle.net/xAFs9/3/)하면 `displayName()` 함수 내의
 `alert()`문이 부모 함수에서 정의한 변수 `name`의 값을 성공적으로 출력한다. 이 예시를 통해 함수가 중첩된 상황에서 파서가 어떻게 변수를 처리하는지 알 수 있다. 이는 어휘적 범위 지정(lexical scoping)의 한 예이다. 여기서 "lexical"이란, 어휘적 범위 지정(lexical scoping) 과정에서 변수가 어디에서 사용 가능한지 알기 위해 그 변수가 소스코드 내 어디에서 선언되었는지 고려한다는 것을 의미한다. 단어 "lexical"은 이런 사실을 나타낸다. 중첩된 함수는 외부 범위(scope)에서 선언한 변수에도 접근할 수 있다.
 
+### `let`과 `const`를 사용한 범위 지정
+
+ES6 이전 전통적인 JavaScript에는 함수 스코프와 전역 스코프 두 가지만 존재했다. `var`로 선언한 변수는 함수 내부 또는 외부에서 선언되었는지에 따라 함수 스코프 또는 전역 스코프를 가진다. 이때, 중괄호로 표시된 블록이 스코프를 생성하지 않는다는 점에서 혼란을 일으킬 수 있다.
+
+```js
+    if (Math.random() > 0.5) {
+      var x = 1;
+    } else {
+      var x = 2;
+    }
+    console.log(x);
+```
+
+C나 Java와 같이 블록이 스코프를 생성하는 언어의 경우, 위 코드의 `console.log` 라인에서 `x`가 어떤 블록 스코프에도 포함되지 않기 때문에 에러가 발생해야 할 것이다. 그러나 블록은 `var`로 선언한 변수에 대해 스코프를 생성하지 않기 때문에 여기서 `var` 명령문은 전역 변수를 생성한다. 이것을 클로저와 함께 사용했을 때 어떤 버그가 발생할 수 있는지 [실제 예제](#루프에서_클로저_생성하기_일반적인_실수)가 아래 소개되어 있다.
+
+ES6에서 JavaScript는 블록 스코프 변수를 생성할 수 있도록 `let`과 `const` 선언과 함께 [시간상 사각지대](/ko/docs/Web/JavaScript/Reference/Statements/let#시간상_사각지대) 등을 도입했다.
+
+```js
+    if (Math.random() > 0.5) {
+      const x = 1;
+    } else {
+      const x = 2;
+    }
+    console.log(x); // ReferenceError: x is not defined
+```
+
+요약하자면, ES6부터 블록은 스코프로 취급되기 시작했지만, 이는 `let`과 `const`로 변수를 선언했을 때만 유효하다. 또한, ES6에서 [모듈](/ko/docs/Web/JavaScript/Guide/Modules)을 도입하면서 또 다른 스코프를 제공하게 되었다. 추후 소개하겠지만, 클로저는 이 모든 스코프의 변수를 캡처할 수 있다.
+
 ## 클로저(Closure)
 
 이제 다음 예제를 보자:
@@ -280,7 +308,7 @@ original_slug: Web/JavaScript/Guide/Closures
 
 ## 루프에서 클로저 생성하기: 일반적인 실수
 
-ECMAScript 2015의 [`let`](/ko/docs/Web/JavaScript/Reference/Statements/let "방해") 키워드 소개 전에는 클로저와 관련된 일반적인 문제는 루프 안에서 클로저가 생성되었을 때 발생한다.다음 예제를 보자.
+ECMAScript 2015의 [`let`](/ko/docs/Web/JavaScript/Reference/Statements/let) 키워드 소개 전에는 클로저와 관련된 일반적인 문제는 루프 안에서 클로저가 생성되었을 때 발생한다.다음 예제를 보자.
 
 ```html
     <p id="help">Helpful notes will appear here</p>

@@ -1,19 +1,14 @@
 ---
 title: Promise.allSettled()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
-tags:
-  - Promise
-  - Promise.allSettled
-  - promise.all
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 ---
 {{JSRef}}
 
-该**`Promise.allSettled()`**方法返回一个在所有给定的 promise 都已经`fulfilled`或`rejected`后的 promise，并带有一个对象数组，每个对象表示对应的 promise 结果。
+该 **`Promise.allSettled()`** 方法返回一个在所有给定的 promise 都已经`fulfilled`或`rejected`后的 promise，并带有一个对象数组，每个对象表示对应的 promise 结果。
 
 当您有多个彼此不依赖的异步任务成功完成时，或者您总是想知道每个`promise`的结果时，通常使用它。
 
-相比之下，[`Promise.all()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) 更适合彼此相互依赖或者在其中任何一个`reject`时立即结束。
+相比之下，[`Promise.all()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) 更适合彼此相互依赖或者在其中任何一个`reject`时立即结束。
 
 {{EmbedInteractiveExample("pages/js/promise-allsettled.html")}}
 

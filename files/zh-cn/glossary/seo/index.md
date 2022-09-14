@@ -1,7 +1,6 @@
 ---
 title: SEO
 slug: Glossary/SEO
-translation_of: Glossary/SEO
 ---
 **SEO**（搜索引擎优化）是一种让网站在搜索引擎结果中更加清晰，也帮助我们将搜索结果更靠前
 

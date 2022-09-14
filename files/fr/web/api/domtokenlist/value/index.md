@@ -41,10 +41,8 @@ La sortie ressemble à ceci :
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG','#dom-domtokenlist-value','value')}} | {{Spec2('DOM WHATWG')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMTokenList.value")}}
+{{Compat}}

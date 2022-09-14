@@ -1,11 +1,6 @@
 ---
 title: 'SyntaxError: missing } after property list'
 slug: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
-tags:
-  - Errors
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
 ---
 {{jsSidebar("Errors")}}
 
@@ -49,4 +44,4 @@ var obj = {
 
 ## 相关
 
-- [Object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- [Object initializer](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)

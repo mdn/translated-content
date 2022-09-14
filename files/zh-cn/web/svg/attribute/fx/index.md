@@ -1,13 +1,6 @@
 ---
 title: fx
 slug: Web/SVG/Attribute/fx
-tags:
-  - SVG
-  - SVG 属性
-  - SVG 径向渐变
-  - SVG 渐变
-  - SVG 渐变焦点
-translation_of: Web/SVG/Attribute/fx
 ---
 « [SVG 属性参考主页](/zh-CN/docs/web/SVG/Attribute)
 
@@ -17,7 +10,7 @@ translation_of: Web/SVG/Attribute/fx
 
 | 类别     | 无                                                                                                                           |
 | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| 值       | [\<coordinate>](https://developer.mozilla.org/en/SVG/Content_type#Coordinate)                                                 |
+| 值       | [\<coordinate>](/zh-CN/SVG/Content_type#Coordinate)                                                 |
 | 可变性   | 非                                                                                                                           |
 | 规范文档 | [SVG 1.1 (2nd Edition): The radialGradient element](http://www.w3.org/TR/SVG/pservers.html#RadialGradientElementCXAttribute) |
 

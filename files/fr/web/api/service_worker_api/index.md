@@ -127,9 +127,7 @@ Les service workers sont aussi destinés à être utilisés pour des choses tell
 
 ## Spécifications
 
-| Spécification                                    | Statut                               | Commentaire          |
-| ------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

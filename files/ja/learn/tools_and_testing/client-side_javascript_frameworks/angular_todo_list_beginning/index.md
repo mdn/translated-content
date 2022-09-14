@@ -1,16 +1,6 @@
 ---
 title: Angular todo リストアプリの事始め
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - client-side
-  - Angular
-  - Components
-  - Structure
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -81,7 +71,7 @@ to do リストに新しいアイテムを追加するには、メインコン�
 
 ## Item の定義
 
-`app` ディレクトリに、次の内容の `item.ts` という名前の新しいファイルを作成します。
+`app` ディレクトリーに、次の内容の `item.ts` という名前の新しいファイルを作成します。
 
 ```js
 export interface Item {
@@ -152,7 +142,7 @@ getter の `get items()` は、 `filter` が `all` と等しい場合、 `allIte
 
 ## AppComponent テンプレートに HTML を追加
 
-ブラウザで items のリストを表示するには、 `app.component.html` の内容を次の HTML に置き換えます。
+ブラウザーで items のリストを表示するには、 `app.component.html` の内容を次の HTML に置き換えます。
 
 ```html
 <div class="main">
@@ -169,7 +159,7 @@ getter の `get items()` は、 `filter` が `all` と等しい場合、 `allIte
 アイテムごとに、 `*ngFor` は新しい `<li>` を作成します。
 `item.description` を含む二重中括弧は、各 `<li>` に各アイテムの説明のテキストを入力するように Angular に指示します。
 
-ブラウザに、次のようなアイテムのリストが表示されます。
+ブラウザーに、次のようなアイテムのリストが表示されます。
 
 ```
 My To Do List
@@ -224,7 +214,7 @@ addItem(description: string) {
 
 ## まとめ
 
-これで、ブラウザに to-do の基本的なリストが表示されるはずです。 それは大きな進歩です！ もちろん、やるべきことはまだたくさんあります。 次の記事では、アプリケーションにスタイルを追加する方法について説明します。
+これで、ブラウザーに to-do の基本的なリストが表示されるはずです。 それは大きな進歩です！ もちろん、やるべきことはまだたくさんあります。 次の記事では、アプリケーションにスタイルを追加する方法について説明します。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
@@ -280,5 +270,5 @@ addItem(description: string) {
   - [Angular todo リストアプリの事始め](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
   - [Angular アプリのスタイリング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
   - [item コンポーネントの作成](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Filtering our to-do items](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+  - [To Do アイテムのフィルタリング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
   - [Building Angular applications and further resources](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

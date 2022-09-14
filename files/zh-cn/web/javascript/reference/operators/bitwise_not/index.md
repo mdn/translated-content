@@ -1,11 +1,6 @@
 ---
 title: 按位非 (~)
 slug: Web/JavaScript/Reference/Operators/Bitwise_NOT
-tags:
-  - JavaScript
-  - 位操作符
-  - 操作符
-translation_of: Web/JavaScript/Reference/Operators/Bitwise_NOT
 ---
 {{jsSidebar("Operators")}}
 
@@ -71,4 +66,4 @@ Note that due to using 32-bit representation for numbers both `~-1` and `~429496
 
 ## 参见
 
-- [Bitwise operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise)
+- [Bitwise operators in the JS guide](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise)

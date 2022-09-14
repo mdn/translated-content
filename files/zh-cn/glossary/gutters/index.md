@@ -1,9 +1,6 @@
 ---
 title: Gutters
 slug: Glossary/Gutters
-tags:
-  - CSS Grids
-translation_of: Glossary/Gutters
 ---
 **网格间距**是网格轨道之间的间距，可以通过 {{cssxref("grid-column-gap")}}，{{cssxref("grid-row-gap")}} 或者 {{cssxref("grid-gap")}} 在[Grid 布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)中创建。
 
