@@ -8,32 +8,31 @@ tags:
   - Web
 translation_of: Web/Manifest
 ---
-<p>O manifesto do aplicativo web fornece informações sobre uma aplicação (como nome, autor, icone, e descrição) em um arquivo de texto. O propósito do manifesto é instalar aplicações web na tela inicial de um aparelho, propiciando aos usuários um acesso mais rápido e uma experiência enriquecida.</p>
+O manifesto do aplicativo web fornece informações sobre uma aplicação (como nome, autor, icone, e descrição) em um arquivo de texto. O propósito do manifesto é instalar aplicações web na tela inicial de um aparelho, propiciando aos usuários um acesso mais rápido e uma experiência enriquecida.
 
-<p>Os manifestos dos aplicativos web fazem parte de um acervo de tecnologias de rede chamadas <a href="/pt-BR/docs/Web/Progressive_web_apps">aplicativos web progressivos</a>, sendo estes aplicativos web que podem ser instalados na tela inicial de um aparelho sem obrigar um usuário a passar por uma loja de aplicativos, dispondo também de outros superpoderes como estar disponíveis offline e apresentando aos usuários notificações push quando houverem mudanças de conteúdo do aplicativo.</p>
+Os manifestos dos aplicativos web fazem parte de um acervo de tecnologias de rede chamadas [aplicativos web progressivos](/pt-BR/docs/Web/Progressive_web_apps), sendo estes aplicativos web que podem ser instalados na tela inicial de um aparelho sem obrigar um usuário a passar por uma loja de aplicativos, dispondo também de outros superpoderes como estar disponíveis offline e apresentando aos usuários notificações push quando houverem mudanças de conteúdo do aplicativo.
 
-<h2 id="Deploying_a_manifest_with_the_link_tag" name="Deploying_a_manifest_with_the_link_tag">Implementando um manifesto</h2>
+## Implementando um manifesto
 
-<p>Manifesto de aplicativos web são implementados em suas páginas HTML usando uma etiqueta de link no cabeçalho do documento:</p>
+Manifesto de aplicativos web são implementados em suas páginas HTML usando uma etiqueta de link no cabeçalho do documento:
 
-<pre class="brush: html">&lt;link rel="manifest" href="/manifest.webmanifest"&gt;</pre>
+```html
+<link rel="manifest" href="/manifest.webmanifest">
+```
 
-<div class="note">
-<p><strong>Note</strong>: A extensão <code>.webmanifest</code> está especificada na sessão de <a href="https://w3c.github.io/manifest/#media-type-registration">Media type registration</a> da especificação, mas no geral os navegadores suportam manifestos em outras extensões apropriadas como <code>.json</code></p>
-</div>
+> **Nota:** A extensão `.webmanifest` está especificada na sessão de [Media type registration](https://w3c.github.io/manifest/#media-type-registration) da especificação, mas no geral os navegadores suportam manifestos em outras extensões apropriadas como `.json`
 
-<div class="note">
-<p><strong>Note</strong>: Se o manifesto precisa de credenciais para ser buscado, você <a href="https://github.com/w3c/manifest/issues/186#issuecomment-43939505">deve</a> adicionar o atributo <a href="/en-US/docs/Web/HTML/CORS_settings_attributes"><code>crossorigin</code></a> mesmo que o arquivo de manifesto esteja na mesma origem da página atual.</p>
-</div>
+> **Nota:** Se o manifesto precisa de credenciais para ser buscado, você [deve](https://github.com/w3c/manifest/issues/186#issuecomment-43939505) adicionar o atributo [`crossorigin`](/pt-BR/docs/Web/HTML/CORS_settings_attributes) mesmo que o arquivo de manifesto esteja na mesma origem da página atual.
 
-<h2 id="Exemplo_de_manifesto">Exemplo de manifesto</h2>
+## Exemplo de manifesto
 
-<pre class="brush: json">{
+```json
+{
   "name": "HackerWeb",
   "short_name": "HackerWeb",
   "start_url": ".",
   "display": "standalone",
-<span class="pl-s"><span class="pl-pds">  "</span>background_color<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>#fff<span class="pl-pds">"</span></span>,
+  "background_color": "#fff",
   "description": "A simply readable Hacker News app.",
   "icons": [{
     "src": "images/touch/homescreen48.png",
@@ -66,104 +65,135 @@ translation_of: Web/Manifest
     "platform": "play",
     "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
   }]
-}</pre>
+}
+```
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<p>Manifest can contain the following keys:</p>
+Manifest can contain the following keys:
 
-<p>{{ListSubpages("/en-US/docs/Web/Manifest")}}</p>
+{{ListSubpages("/en-US/docs/Web/Manifest")}}
 
-<h3 id="background_color">background_color</h3>
+### background_color
 
-<p>Define a "cor de fundo" esperada para o website. Este valor repete o que já é disponível no CSS do site, mas pode ser usada por navegadores para desenhar cor de um atalho quando o manifesto estiver disponível antes que a folha de estilo (stylesheet) ter carregado. Isso cria uma transição suave entre a execução do aplicativo e o conteúdo do site.</p>
+Define a "cor de fundo" esperada para o website. Este valor repete o que já é disponível no CSS do site, mas pode ser usada por navegadores para desenhar cor de um atalho quando o manifesto estiver disponível antes que a folha de estilo (stylesheet) ter carregado. Isso cria uma transição suave entre a execução do aplicativo e o conteúdo do site.
 
-<pre class="brush: json">"background_color": "red"</pre>
+```json
+"background_color": "red"
+```
 
-<div class="note">
-<p><strong>Note</strong>: O membro <code>background_color</code> tem o único intuito de melhorar a experiência de usuário enquanto o site apontado está carregando, e não deve ser usado pelo agente de usuário como o {{cssxref("background-color", "background color")}}  quando a folha de estilo do aplicativo web progressivo (PWA) estiver disponível.</p>
-</div>
+> **Nota:** O membro `background_color` tem o único intuito de melhorar a experiência de usuário enquanto o site apontado está carregando, e não deve ser usado pelo agente de usuário como o {{cssxref("background-color", "background color")}} quando a folha de estilo do aplicativo web progressivo (PWA) estiver disponível.
 
-<h3 id="description">description</h3>
+### description
 
-<p>Fornece uma descrição geral do que a aplicação faz.</p>
+Fornece uma descrição geral do que a aplicação faz.
 
-<pre class="brush: json">"description": "O aplicativo que ajuda você a encontrar a melhor comida na cidade!"</pre>
+```json
+"description": "O aplicativo que ajuda você a encontrar a melhor comida na cidade!"
+```
 
-<h3 id="dir">dir</h3>
+### dir
 
-<p>Especifica a direção primário do texto para os membros <code>name</code>, <code>short_name</code>, e <code>description</code>. Junto com o membro <code>lang</code> , ajuda a mostrar corretamente idiomas escritos da direita para esquerda.</p>
+Especifica a direção primário do texto para os membros `name`, `short_name`, e `description`. Junto com o membro `lang` , ajuda a mostrar corretamente idiomas escritos da direita para esquerda.
 
-<pre class="brush: json" dir="rtl">"dir": "rtl",
+```json
+"dir": "rtl",
 "lang": "ar",
-"short_name": "أنا من التطبيق!"</pre>
+"short_name": "أنا من التطبيق!"
+```
 
-<p>Pode ter um dos valores a seguir:</p>
+Pode ter um dos valores a seguir:
 
-<ul>
- <li><code>ltr</code> (left-to-right)</li>
- <li><code>rtl</code> (right-to-left)</li>
- <li><code>auto</code> (hints to the browser to use the Unicode bidirectional algorithm to make a best guess about the text's direction.)</li>
-</ul>
+- `ltr` (left-to-right)
+- `rtl` (right-to-left)
+- `auto` (hints to the browser to use the Unicode bidirectional algorithm to make a best guess about the text's direction.)
 
-<div class="note">
-<p><strong>Note</strong>: When the value is omitted, it defaults to <code>auto</code>.</p>
-</div>
+> **Nota:** When the value is omitted, it defaults to `auto`.
 
-<h3 id="display">display</h3>
+### display
 
-<p>Define o modo de exibição preferido do desenvolvedor para a aplicação.</p>
+Define o modo de exibição preferido do desenvolvedor para a aplicação.
 
-<pre class="brush: json">"display": "standalone"</pre>
+```json
+"display": "standalone"
+```
 
-<p>Valid values are:</p>
+Valid values are:
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Member</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>sizes</code></td>
-   <td>A string containing space-separated image dimensions. </td>
-  </tr>
-  <tr>
-   <td><code>src</code></td>
-   <td>The path to the image file. If <code>src</code> is a relative URL, the base URL will be the URL of the manifest.</td>
-  </tr>
-  <tr>
-   <td><code>type</code></td>
-   <td>A hint as to the media type of the image. The purpose of this member is to allow a user agent to quickly ignore images of media types it does not support.</td>
-  </tr>
-  <tr>
-   <td><code>purpose</code></td>
-   <td>
-    <p>Defines the purpose of the image, for example that the image is intended to serve some special purpose in the context of the host OS (i.e., for better integration).</p>
-
-    <p>The <a href="https://w3c.github.io/manifest/#purpose-member">purpose member</a> can have the following values:</p>
-
-    <ul>
-     <li>"<strong>badge</strong>": A user agent can present this icon where space constraints and/or color requirements differ from those of the application icon.</li>
-     <li>"<strong>maskable</strong>": The image is designed with <a href="https://w3c.github.io/manifest/#icon-masks">icon masks and safe zone</a> in mind, such that any part of the image that is outside the safe zone can safely be ignored and masked away by the user agent.</li>
-     <li>"<strong>any</strong>": The user agent is free to display the icon in any context (this is the default value).</li>
-    </ul>
-   </td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Member</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>sizes</code></td>
+      <td>A string containing space-separated image dimensions.</td>
+    </tr>
+    <tr>
+      <td><code>src</code></td>
+      <td>
+        The path to the image file. If <code>src</code> is a relative URL, the
+        base URL will be the URL of the manifest.
+      </td>
+    </tr>
+    <tr>
+      <td><code>type</code></td>
+      <td>
+        A hint as to the media type of the image. The purpose of this member is
+        to allow a user agent to quickly ignore images of media types it does
+        not support.
+      </td>
+    </tr>
+    <tr>
+      <td><code>purpose</code></td>
+      <td>
+        <p>
+          Defines the purpose of the image, for example that the image is
+          intended to serve some special purpose in the context of the host OS
+          (i.e., for better integration).
+        </p>
+        <p>
+          The
+          <a href="https://w3c.github.io/manifest/#purpose-member"
+            >purpose member</a
+          >
+          can have the following values:
+        </p>
+        <ul>
+          <li>
+            "<strong>badge</strong>": A user agent can present this icon where
+            space constraints and/or color requirements differ from those of the
+            application icon.
+          </li>
+          <li>
+            "<strong>maskable</strong>": The image is designed with
+            <a href="https://w3c.github.io/manifest/#icon-masks"
+              >icon masks and safe zone</a
+            >
+            in mind, such that any part of the image that is outside the safe
+            zone can safely be ignored and masked away by the user agent.
+          </li>
+          <li>
+            "<strong>any</strong>": The user agent is free to display the icon
+            in any context (this is the default value).
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-<p><strong>Note</strong>: You can selectively apply CSS to your app based on the display mode, using the <a href="/docs/Web/CSS/@media/display-mode">display-mode</a> media feature. This can be used to provide a consistent user experience between launching a site from an URL and launching it from a desktop icon.</p>
-</div>
+> **Nota:** You can selectively apply CSS to your app based on the display mode, using the [display-mode](/docs/Web/CSS/@media/display-mode) media feature. This can be used to provide a consistent user experience between launching a site from an URL and launching it from a desktop icon.
 
-<h3 id="icons">icons</h3>
+### icons
 
-<p>Specifies an array of image objects that can serve as application icons in various contexts. For example, they can be used to represent the web application amongst a list of other applications, or to integrate the web application with an <abbr title="operating system">OS</abbr>'s task switcher and/or system preferences.</p>
+Specifies an array of image objects that can serve as application icons in various contexts. For example, they can be used to represent the web application amongst a list of other applications, or to integrate the web application with an OS's task switcher and/or system preferences.
 
-<pre class="brush: json">"icons": [
+```json
+"icons": [
   {
     "src": "icon/lowres.webp",
     "sizes": "48x48",
@@ -181,79 +211,68 @@ translation_of: Web/Manifest
     "src": "icon/hd_hi.svg",
     "sizes": "72x72"
   }
-]</pre>
+]
+```
 
-<p>Objetos de imagens podem conter os seguintes valores:</p>
+Objetos de imagens podem conter os seguintes valores:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Member</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>sizes</code></td>
-   <td>A string containing space-separated image dimensions. </td>
-  </tr>
-  <tr>
-   <td><code>src</code></td>
-   <td>The path to the image file.</td>
-  </tr>
-  <tr>
-   <td><code>type</code></td>
-   <td>A hint as to the media type of the image.The purpose of this member is to allow a user agent to quickly ignore images of media types it does not support.</td>
-  </tr>
- </tbody>
-</table>
+| Member  | Description                                                                                                                                               |
+| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `sizes` | A string containing space-separated image dimensions.                                                                                                     |
+| `src`   | The path to the image file.                                                                                                                               |
+| `type`  | A hint as to the media type of the image.The purpose of this member is to allow a user agent to quickly ignore images of media types it does not support. |
 
-<h3 id="lang">lang</h3>
+### lang
 
-<p>Specifies the primary language for the values in the <code>name</code> and <code>short_name</code> members. This value is a string containing a single language tag.</p>
+Specifies the primary language for the values in the `name` and `short_name` members. This value is a string containing a single language tag.
 
-<pre class="brush: json">"lang": "en-US"</pre>
+```json
+"lang": "en-US"
+```
 
-<h3 id="name">name</h3>
+### name
 
-<p>Provides a human-readable name for the application as it is intended to be displayed to the user, for example among a list of other applications or as a label for an icon.</p>
+Provides a human-readable name for the application as it is intended to be displayed to the user, for example among a list of other applications or as a label for an icon.
 
-<pre class="brush: json">"name": "Google I/O 2015" </pre>
+```json
+"name": "Google I/O 2015"
+```
 
-<h3 id="orientation">orientation</h3>
+### orientation
 
-<p>Defines the default orientation for all the web application's top level {{Glossary("Browsing context", "browsing contexts")}}.</p>
+Defines the default orientation for all the web application's top level {{Glossary("Browsing context", "browsing contexts")}}.
 
-<pre class="brush: json"><code>​​"orientation": "portrait-primary"</code></pre>
+```json
+​​"orientation": "portrait-primary"
+```
 
-<p>Orientation pode ser um dos seguintes valores:</p>
+Orientation pode ser um dos seguintes valores:
 
-<ul>
- <li><code>any</code></li>
- <li><code>natural</code></li>
- <li><code>landscape</code></li>
- <li><code>landscape-primary</code></li>
- <li><code>landscape-secondary</code></li>
- <li><code>portrait</code></li>
- <li><code>portrait-primary</code></li>
- <li><code>portrait-secondary</code></li>
-</ul>
+- `any`
+- `natural`
+- `landscape`
+- `landscape-primary`
+- `landscape-secondary`
+- `portrait`
+- `portrait-primary`
+- `portrait-secondary`
 
-<h3 id="prefer_related_applications">prefer_related_applications</h3>
+### prefer_related_applications
 
-<p>Specifies a boolean value that hints for the user agent to indicate to the user that the specified related applications (see below) are available, and recommended over the web application. This should only be used if the related native apps really do offer something that the web application can't do.</p>
+Specifies a boolean value that hints for the user agent to indicate to the user that the specified related applications (see below) are available, and recommended over the web application. This should only be used if the related native apps really do offer something that the web application can't do.
 
-<pre class="brush: json">"prefer_related_applications": false</pre>
+```json
+"prefer_related_applications": false
+```
 
-<div class="note">
-<p><strong>Note</strong>: If omitted, the value defaults to <code>false</code>.</p>
-</div>
+> **Nota:** If omitted, the value defaults to `false`.
 
-<h3 id="related_applications">related_applications</h3>
+### related_applications
 
-<p>Specifies an array of "application objects" representing native applications that are installable by, or accessible to, the underlying platform — for example a native Android application obtainable through the Google Play Store. Such applications are intended to be alternatives to the web application that provide similar or equivalent functionality — like the native app version of the web app.</p>
+Specifies an array of "application objects" representing native applications that are installable by, or accessible to, the underlying platform — for example a native Android application obtainable through the Google Play Store. Such applications are intended to be alternatives to the web application that provide similar or equivalent functionality — like the native app version of the web app.
 
-<pre class="brush: json">"related_applications": [
+```json
+"related_applications": [
   {
     "platform": "play",
     "url": "https://play.google.com/store/apps/details?id=com.example.app1",
@@ -261,83 +280,63 @@ translation_of: Web/Manifest
   }, {
     "platform": "itunes",
     "url": "https://itunes.apple.com/app/example-app1/id123456789"
-  }]</pre>
+  }]
+```
 
-<p>Application objects may contain the following values:</p>
+Application objects may contain the following values:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Member</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>platform</code></td>
-   <td>The platform on which the application can be found.</td>
-  </tr>
-  <tr>
-   <td><code>url</code></td>
-   <td>The URL at which the application can be found.</td>
-  </tr>
-  <tr>
-   <td><code>id</code></td>
-   <td>The ID used to represent the application on the specified platform.</td>
-  </tr>
- </tbody>
-</table>
+| Member     | Description                                                         |
+| ---------- | ------------------------------------------------------------------- |
+| `platform` | The platform on which the application can be found.                 |
+| `url`      | The URL at which the application can be found.                      |
+| `id`       | The ID used to represent the application on the specified platform. |
 
-<h3 id="scope">scope</h3>
+### scope
 
-<p>Defines the navigation scope of this web application's application context. This basically restricts what web pages can be viewed while the manifest is applied. If the user navigates the application outside the scope, it returns to being a normal web page. </p>
+Defines the navigation scope of this web application's application context. This basically restricts what web pages can be viewed while the manifest is applied. If the user navigates the application outside the scope, it returns to being a normal web page.
 
-<pre class="brush: json">"scope": "/myapp/"</pre>
+```json
+"scope": "/myapp/"
+```
 
-<h3 id="short_name">short_name</h3>
+### short_name
 
-<p>Provides a short human-readable name for the application. This is intended for use where there is insufficient space to display the full name of the web application.</p>
+Provides a short human-readable name for the application. This is intended for use where there is insufficient space to display the full name of the web application.
 
-<pre class="brush: json">"short_name": "I/O 2015"
-</pre>
+```json
+"short_name": "I/O 2015"
+```
 
-<h3 id="start_url">start_url</h3>
+### start_url
 
-<p>Specifies the URL that loads when a user launches the application from a device. </p>
+Specifies the URL that loads when a user launches the application from a device.
 
-<pre class="brush: json">"start_url": "./?utm_source=web_app_manifest"</pre>
+```json
+"start_url": "./?utm_source=web_app_manifest"
+```
 
-<h3 id="theme_color">theme_color</h3>
+### theme_color
 
-<p>Defines the default theme color for an application. This sometimes affects how the application is displayed by the OS (e.g., on Android's task switcher, the theme color surrounds the application).  </p>
+Defines the default theme color for an application. This sometimes affects how the application is displayed by the OS (e.g., on Android's task switcher, the theme color surrounds the application).
 
-<pre class="brush: json">"theme_color": "aliceblue"</pre>
+```json
+"theme_color": "aliceblue"
+```
 
-<h2 id="Splash_screens">Splash screens</h2>
+## Splash screens
 
-<p>In Chrome 47 and later, a splash screen is displayed for a web application launched from a home screen. This splashscreen is auto-generated using properties in the web app manifest, specifically: <code>name</code>, <code>background_color</code>, and the icon in the <code>icons</code> array that is closest to 128dpi for the device.</p>
+In Chrome 47 and later, a splash screen is displayed for a web application launched from a home screen. This splashscreen is auto-generated using properties in the web app manifest, specifically: `name`, `background_color`, and the icon in the `icons` array that is closest to 128dpi for the device.
 
-<h2 id="Mime_type">Mime type</h2>
+## Mime type
 
-<p>Manifests should be served using the <code>application/manifest+json</code> MIME type. However, it is optional to do so.  </p>
+Manifests should be served using the `application/manifest+json` MIME type. However, it is optional to do so.
 
-<h2 id="Especificação">Especificação</h2>
+## Especificação
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Manifest')}}</td>
-   <td>{{Spec2('Manifest')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                    | Status                       | Comentário         |
+| -------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('Manifest')}} | {{Spec2('Manifest')}} | Definição inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("html.manifest")}}
