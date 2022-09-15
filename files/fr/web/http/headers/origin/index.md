@@ -57,7 +57,7 @@ L'en-tête `Origin` peut valoir `null` dans certains cas (la liste qui suit n'es
 
 - Le schéma de l'origine n'est pas `http`, `https`, `ftp`, `ws`, `wss`, ou `gopher` (y compris `blob`, `file` et `data`).
 - La requête porte sur des médias d'origines multiples, par exemple via les éléments [`<img>`](/fr/docs/Web/HTML/Element/Img), [`<video>`](/fr/docs/Web/HTML/Element/video) et [`<audio>`](/fr/docs/Web/HTML/Element/audio).
-- Pour les documents créés via un programme à l'aide de [`createDocument()`](/fr/docs/Web/API/DOMImplementation/createDocument), ou générés à partir d'une URL `data:` URL, ou qui n'ont pas de contexte de navigation créateur.
+- Pour les documents créés via un programme à l'aide de [`createDocument()`](/fr/docs/Web/API/DOMImplementation/createDocument), ou générés à partir d'une URL `data:`, ou qui n'ont pas de contexte de navigation créateur.
 - Pour les redirections entre les origines.
 - Pour les éléments [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) dont l'attribut `sandox` ne contient pas la valeur `allow-same-origin`.
 - Pour les réponses qui sont des erreurs réseau.
