@@ -4,55 +4,55 @@ slug: Web/Guide/HTML/Editable_content
 translation_of: Web/Guide/HTML/Editable_content
 original_slug: Web/Guide/HTML/Content_Editable
 ---
-<p><span class="seoSummary">No HTML5 qualquer elemento pode ser editado. Usando alguns eventos de JavaScript podemos transformar sua web page em um editor de texto completo e rápido. Este artigo fornece algumas informações sobre esta funcionalidade.</span></p>
+No HTML5 qualquer elemento pode ser editado. Usando alguns eventos de JavaScript podemos transformar sua web page em um editor de texto completo e rápido. Este artigo fornece algumas informações sobre esta funcionalidade.
 
-<h2 id="Compatibilidade">Compatibilidade</h2>
+## Compatibilidade
 
-<p>Conteúdo editável é totalmente compatível com os seguintes browsers.</p>
+Conteúdo editável é totalmente compatível com os seguintes browsers.
 
-<ul>
- <li>Firefox 3.5+</li>
- <li>Firefox for Android 19+</li>
- <li>Chrome 4.0+</li>
- <li>Internet Explorer 5.5+ *</li>
- <li>Safari 3.1+</li>
- <li>Opera 9+</li>
- <li>iOS Safari 5.0+</li>
- <li>Android Browser 3.0+</li>
- <li>Opera Mobile 12.1+</li>
- <li>Chrome for Android 25+</li>
-</ul>
+- Firefox 3.5+
+- Firefox for Android 19+
+- Chrome 4.0+
+- Internet Explorer 5.5+ \*
+- Safari 3.1+
+- Opera 9+
+- iOS Safari 5.0+
+- Android Browser 3.0+
+- Opera Mobile 12.1+
+- Chrome for Android 25+
 
-<p>Ainda não é suportato pelo Opera Mini.</p>
+Ainda não é suportato pelo Opera Mini.
 
-<div class="note">
-<p>*A maioria dos elementos HTML não suporta esta funcionalidade</p>
-</div>
+> **Nota:** \*A maioria dos elementos HTML não suporta esta funcionalidade
 
-<h2 id="Como_isso_funciona">Como isso funciona?</h2>
+## Como isso funciona?
 
-<p>Defina o atributo {{DOMXRef("HTMLElement.contentEditable", "contentEditable")}} para <code>true</code> no seu elemento HTML. Isto pode ser usado na maioria dos elementos HTML.</p>
+Defina o atributo {{DOMXRef("HTMLElement.contentEditable", "contentEditable")}} para `true` no seu elemento HTML. Isto pode ser usado na maioria dos elementos HTML.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>Um exemplo simples:</p>
+Um exemplo simples:
 
-<pre>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;body&gt;
-    &lt;div contentEditable="true"&gt;
+```
+<!DOCTYPE html>
+<html>
+  <body>
+    <div contentEditable="true">
       Este conteúdo pode ser editado.
-    &lt;/div&gt;
-  &lt;/body&gt;
-&lt;/html&gt; </pre>
+    </div>
+  </body>
+</html>
+```
 
-<p>Você pode ver o exemplo funcionando com com uma integração de JavaScript utilizando LocalStorage <a class="external" href="http://html5demos.com/contenteditable">aqui</a>. Com a fonte <a href="http://html5demos.com/contenteditable#view-source">aqui</a>.</p>
+Você pode ver o exemplo funcionando com com uma integração de JavaScript utilizando LocalStorage [aqui](http://html5demos.com/contenteditable). Com a fonte [aqui](http://html5demos.com/contenteditable#view-source).
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<pre>user_pref("capability.policy.policynames", "allowclipboard");
+```
+user_pref("capability.policy.policynames", "allowclipboard");
 user_pref("capability.policy.allowclipboard.sites", "https://www.mozilla.org");
 user_pref("capability.policy.allowclipboard.Clipboard.cutcopy", "allAccess");
-user_pref("capability.policy.allowclipboard.Clipboard.paste", "allAccess");</pre>
+user_pref("capability.policy.allowclipboard.Clipboard.paste", "allAccess");
+```
 
-<p><a href="/en/Midas" title="en/Midas">Como interagir com o conteúdo </a> (Antiga API do  IE)  <a href="/en/Rich-Text_Editing_in_Mozilla" title="en/rich-text editing in mozilla">aqui</a></p>
+[Como interagir com o conteúdo ](/en/Midas "en/Midas")(Antiga API do IE) [aqui](/en/Rich-Text_Editing_in_Mozilla "en/rich-text editing in mozilla")
