@@ -8,56 +8,54 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 original_slug: Mozilla/Add-ons/WebExtensions/Passo-a-Passo
 ---
-<p>Neste artigo iremos criar uma Extensão para Firefox do início ao fim.</p>
+Neste artigo iremos criar uma Extensão para Firefox do início ao fim.
 
-<p>A extensão adicionará um novo botão na barra de ferramentas do Firefox. Quando clicar no botão se exibirá um popup habilitando a escolha de um animal. Uma vez que o usuário escolher um animal, a página atual do navegador será substituida por uma imagem do animal escolhido.</p>
+A extensão adicionará um novo botão na barra de ferramentas do Firefox. Quando clicar no botão se exibirá um popup habilitando a escolha de um animal. Uma vez que o usuário escolher um animal, a página atual do navegador será substituida por uma imagem do animal escolhido.
 
-<p>Para implementar esse extensão, será necessário:</p>
+Para implementar esse extensão, será necessário:
 
-<ul>
- <li><strong>definir a ação do navegador, que é um botão ligado a barra de ferramentas</strong>.<br>
+- **definir a ação do navegador, que é um botão ligado a barra de ferramentas**.
   Para o botão nós iremos fornecer:
-  <ul>
-   <li>um icone chamado "beasts.png"</li>
-   <li>um popup para abrir quando o botão for pressionado. O popup irá ter incluso HTML, CSS e JavaScript.</li>
-  </ul>
- </li>
- <li><strong>escrever um content script, "beastify.js" que irá ser injetado na página web</strong>.<br>
-  Este é o código que irá modificar a página.</li>
- <li><strong>empacotar alguma imagens de animais para substituir na página</strong>.<br>
-  Nós iremos criar as imagens "web accessible resources" então a página poderá referenciar eles.</li>
-</ul>
 
-<p>Você pode visualizar toda a estrutura da extensão da seguinte forma:</p>
+  - um icone chamado "beasts.png"
+  - um popup para abrir quando o botão for pressionado. O popup irá ter incluso HTML, CSS e JavaScript.
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11467/beastify-anatomy.svg" style="display: block; height: 664px; margin-left: auto; margin-right: auto; width: 500px;"></p>
+- **escrever um content script, "beastify.js" que irá ser injetado na página web**.
+  Este é o código que irá modificar a página.
+- **empacotar alguma imagens de animais para substituir na página**.
+  Nós iremos criar as imagens "web accessible resources" então a página poderá referenciar eles.
 
-<p>É uma extensão extremamente simples, mas mostra muitos conceitos básicos da API de Extensões:</p>
+Você pode visualizar toda a estrutura da extensão da seguinte forma:
 
-<ul>
- <li>adicionando um botão na barra de ferramentas</li>
- <li>Definindo um panel de popup usando HTML, CSS e JavaScript</li>
- <li>Injetando content scripts nas páginas</li>
- <li>comunicação entre content scripts e o resto das extensões</li>
- <li>empacotando recursos com sua extensão que serão usadas nas páginas</li>
-</ul>
+![](https://mdn.mozillademos.org/files/11467/beastify-anatomy.svg)
 
-<p>Você pode encontrar o código completo da extensão no <a href="https://github.com/mdn/webextensions-examples/tree/master/beastify">GitHub</a>.</p>
+É uma extensão extremamente simples, mas mostra muitos conceitos básicos da API de Extensões:
 
-<p>Para criar essa extensão você precisará do Firefox 45 ou mais recente.</p>
+- adicionando um botão na barra de ferramentas
+- Definindo um panel de popup usando HTML, CSS e JavaScript
+- Injetando content scripts nas páginas
+- comunicação entre content scripts e o resto das extensões
+- empacotando recursos com sua extensão que serão usadas nas páginas
 
-<h2 id="Escrevendo_a_WebExtension">Escrevendo a WebExtension</h2>
+Você pode encontrar o código completo da extensão no [GitHub](https://github.com/mdn/webextensions-examples/tree/master/beastify).
 
-<p>Crie um novo diretório e navegue até ele:</p>
+Para criar essa extensão você precisará do Firefox 45 ou mais recente.
 
-<pre class="brush: bash">mkdir beastify
-cd beastify</pre>
+## Escrevendo a WebExtension
 
-<h3 id="manifest.json">manifest.json</h3>
+Crie um novo diretório e navegue até ele:
 
-<p>Agora crie um novo arquivo chamado "manifest.json", e insira o seguinte conteúdo:</p>
+```bash
+mkdir beastify
+cd beastify
+```
 
-<pre class="brush: json">{
+### manifest.json
+
+Agora crie um novo arquivo chamado "manifest.json", e insira o seguinte conteúdo:
+
+```json
+{
 
   "manifest_version": 2,
   "name": "Beastify",
@@ -87,72 +85,70 @@ cd beastify</pre>
   ]
 
 }
-</pre>
+```
 
-<ul>
- <li>As primeiras três chaves : <strong><code>manifest_version</code></strong>, <strong><code>name</code></strong>, e <strong><code>version</code></strong>, são obrigatórias e contém metadados básicos para a extensão.</li>
- <li><strong><code>permissions</code></strong> lista as permisões que a extensão precisa. Nós iremos apenas perguntar se pediremos permissão para modificar todas as páginas HTTP e HTTPS : veja a documentação para as chaves de  <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code>. Nós prefirimos por usar a permissão <code>activeTab</code> aqui , mas atualmente não é suportada pela Firefox.</li>
- <li><strong><code>browser_action</code></strong> especifica o botão da barra de ferramentas. Iremos fornecer três informações aqui:
-  <ul>
-   <li><strong><code>default_icon</code></strong> é obrigatório, e aponta para o icone do botão</li>
-   <li><strong><code>default_title</code></strong> é opicional, e mostra a mensagem em um tooltip</li>
-   <li><strong><code>default_popup</code></strong> é usado se você quer que um popup seja mostrado quando o usuário clicar no botão. Nós fazemos isto, então incluímos esta chave e apontamos para um arquivo HTML incluído na extensão.</li>
-  </ul>
- </li>
- <li><strong><code>web_accessible_resources</code></strong> lista arquivos que queremos criar tornar acessível para as páginas. Uma vez que a extensão substitui as imagens da página com imagens que já empacotamos com a extensão , nós precisamos fazer estas imagens acessíveis à página.</li>
-</ul>
+- As primeiras três chaves : **`manifest_version`**, **`name`**, e **`version`**, são obrigatórias e contém metadados básicos para a extensão.
+- **`permissions`** lista as permisões que a extensão precisa. Nós iremos apenas perguntar se pediremos permissão para modificar todas as páginas HTTP e HTTPS : veja a documentação para as chaves de [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). Nós prefirimos por usar a permissão `activeTab` aqui , mas atualmente não é suportada pela Firefox.
+- **`browser_action`** especifica o botão da barra de ferramentas. Iremos fornecer três informações aqui:
 
-<p>Perceba que todos os caminhos são relativos ao manifest.json.</p>
+  - **`default_icon`** é obrigatório, e aponta para o icone do botão
+  - **`default_title`** é opicional, e mostra a mensagem em um tooltip
+  - **`default_popup`** é usado se você quer que um popup seja mostrado quando o usuário clicar no botão. Nós fazemos isto, então incluímos esta chave e apontamos para um arquivo HTML incluído na extensão.
 
-<h3 id="O_Botão_na_barra_de_ferramentas">O Botão na barra de ferramentas</h3>
+- **`web_accessible_resources`** lista arquivos que queremos criar tornar acessível para as páginas. Uma vez que a extensão substitui as imagens da página com imagens que já empacotamos com a extensão , nós precisamos fazer estas imagens acessíveis à página.
 
-<p>O botão na barra de ferramentas precisa de um icone,  e nosso manifest.json informa que nós teriamos um icone em "button/beasts.png".</p>
+Perceba que todos os caminhos são relativos ao manifest.json.
 
-<p>Crie o diretório "button" e copie o icone com o nome "beasts.png". Você poderá usar um dos nossos <a href="https://github.com/mdn/webextensions-examples/blob/master/beastify/button/beasts.png">exemplo,</a> que é retirado do  <a href="https://www.iconfinder.com/iconsets/free-retina-icon-set">Aha-Soft’s Free Retina iconset</a> e usado sob os termos de sua <a href="http://www.iconbeast.com/faq/">licença</a>.</p>
+### O Botão na barra de ferramentas
 
-<p>Se você não fornecer um popup, então um evento de click é lançado para sua extensão quando o usuário clicar no botão. Se você fornecer um popup, o evento de click não envia, mas ao invés disso, o popup é aberto. Nós queremos abrir um popup, então vamos criá-lo na próxima etapa.</p>
+O botão na barra de ferramentas precisa de um icone, e nosso manifest.json informa que nós teriamos um icone em "button/beasts.png".
 
-<h3 id="O_popup">O popup</h3>
+Crie o diretório "button" e copie o icone com o nome "beasts.png". Você poderá usar um dos nossos [exemplo,](https://github.com/mdn/webextensions-examples/blob/master/beastify/button/beasts.png) que é retirado do [Aha-Soft’s Free Retina iconset](https://www.iconfinder.com/iconsets/free-retina-icon-set) e usado sob os termos de sua [licença](http://www.iconbeast.com/faq/).
 
-<p>A função do popup é ativar a escolha do usuário para um dos três animais.</p>
+Se você não fornecer um popup, então um evento de click é lançado para sua extensão quando o usuário clicar no botão. Se você fornecer um popup, o evento de click não envia, mas ao invés disso, o popup é aberto. Nós queremos abrir um popup, então vamos criá-lo na próxima etapa.
 
-<p>Crie um novo diretório chamado "popup" na raiz do projeto. Aqui é onde nós criar os códigos para o popup. O popup irá ser constituido em três arquivos :</p>
+### O popup
 
-<ul>
- <li><strong><code>choose_beast.html</code></strong> Define o conteúdo do panel</li>
- <li><strong><code>choose_beast.css</code></strong> Estilo do conteúdo</li>
- <li><strong><code>choose_beast.js</code></strong> Captura a escolha do usuário executando um content script a aba ativa</li>
-</ul>
+A função do popup é ativar a escolha do usuário para um dos três animais.
 
-<h4 id="choose_beast.html">choose_beast.html</h4>
+Crie um novo diretório chamado "popup" na raiz do projeto. Aqui é onde nós criar os códigos para o popup. O popup irá ser constituido em três arquivos :
 
-<p>O arquivo HTML criado é este:</p>
+- **`choose_beast.html`** Define o conteúdo do panel
+- **`choose_beast.css`** Estilo do conteúdo
+- **`choose_beast.js`** Captura a escolha do usuário executando um content script a aba ativa
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+#### choose_beast.html
 
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;link rel="stylesheet" href="choose_beast.css"/&gt;
-  &lt;/head&gt;
+O arquivo HTML criado é este:
 
-  &lt;body&gt;
-    &lt;div class="beast"&gt;Frog&lt;/div&gt;
-    &lt;div class="beast"&gt;Turtle&lt;/div&gt;
-    &lt;div class="beast"&gt;Snake&lt;/div&gt;
+```html
+<!DOCTYPE html>
 
-    &lt;script src="choose_beast.js"&gt;&lt;/script&gt;
-  &lt;/body&gt;
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="choose_beast.css"/>
+  </head>
 
-&lt;/html&gt;</pre>
+  <body>
+    <div class="beast">Frog</div>
+    <div class="beast">Turtle</div>
+    <div class="beast">Snake</div>
 
-<p>Nós temos um elemento para cada escolha de animal. Perceba que nós incluimos os arquivo CSS e JS nesse arquivo, igual a uma página web.</p>
+    <script src="choose_beast.js"></script>
+  </body>
 
-<h4 id="choose_beast.css">choose_beast.css</h4>
+</html>
+```
 
-<p>O CSS ajusta o tamanho do popup, garantindo que as três escolhas irão preencher o espaço, e daremos a eles algum estilo básico:</p>
+Nós temos um elemento para cada escolha de animal. Perceba que nós incluimos os arquivo CSS e JS nesse arquivo, igual a uma página web.
 
-<pre class="brush: css">html, body {
+#### choose_beast.css
+
+O CSS ajusta o tamanho do popup, garantindo que as três escolhas irão preencher o espaço, e daremos a eles algum estilo básico:
+
+```css
+html, body {
   height: 100px;
   width: 100px;
   margin: 0;
@@ -171,13 +167,15 @@ cd beastify</pre>
 
 .beast:hover {
   background-color: #CFF2F2;
-}</pre>
+}
+```
 
-<h4 id="choose_beast.js">choose_beast.js</h4>
+#### choose_beast.js
 
-<p>No JavaScript para o popup, nós iremos "escutar" o evento de click . Se o clique foi em uma das três escolhas de animais, nós iremos injetar um content script na aba ativa. Um vez que o content script é carregado , nós enviaremos uma mensagem com o animal escolhido:</p>
+No JavaScript para o popup, nós iremos "escutar" o evento de click . Se o clique foi em uma das três escolhas de animais, nós iremos injetar um content script na aba ativa. Um vez que o content script é carregado , nós enviaremos uma mensagem com o animal escolhido:
 
-<pre class="brush: js">document.addEventListener("click", function(e) {
+```js
+document.addEventListener("click", function(e) {
   if (!e.target.classList.contains("beast")) {
     return;
   }
@@ -193,21 +191,20 @@ cd beastify</pre>
   });
 
 });
-</pre>
+```
 
-<p>É usado três funções da API WebExtension:</p>
+É usado três funções da API WebExtension:
 
-<ul>
- <li><strong><code>chrome.tabs.executeScript</code></strong> Para injetar um content script que se encontra em "content_scripts/beastify.js" na aba ativa</li>
- <li><strong><code>chrome.tabs.query</code></strong> Obter a aba ativa</li>
- <li><strong><code>chrome.tabs.sendMessage</code></strong> para enviar uma mensagem para o content scripts executando na aba ativa. A mensagem irá conter as propriedades do animal escolhido.</li>
-</ul>
+- **`chrome.tabs.executeScript`** Para injetar um content script que se encontra em "content_scripts/beastify.js" na aba ativa
+- **`chrome.tabs.query`** Obter a aba ativa
+- **`chrome.tabs.sendMessage`** para enviar uma mensagem para o content scripts executando na aba ativa. A mensagem irá conter as propriedades do animal escolhido.
 
-<h3 id="O_content_script">O content script</h3>
+### O content script
 
-<p>Crie a novo diretório na pasta root do projeto chamado "content_scripts" e crie um novo arquivo com o nome "beastify.js", com o seguinte conteúdo:</p>
+Crie a novo diretório na pasta root do projeto chamado "content_scripts" e crie um novo arquivo com o nome "beastify.js", com o seguinte conteúdo:
 
-<pre class="brush: js">// Assign beastify() as a listener for messages from the extension.
+```js
+// Assign beastify() as a listener for messages from the extension.
 chrome.runtime.onMessage.addListener(beastify);
 
 function beastify(request, sender, sendResponse) {
@@ -240,31 +237,29 @@ function beastNameToURL(beastName) {
       return chrome.extension.getURL("beasts/turtle.jpg");
   }
 }
+```
 
-</pre>
+O content script adiciona um listener da mensagem para a extensão (especificamente , para "choose_beast.js"). No listener:
 
-<p>O content script  adiciona um listener da mensagem para a extensão (especificamente , para "choose_beast.js"). No listener:</p>
+- remover todos os elementos em `document.body`
+- transforma os nomes dos animais em uma URL para ser usada na imagem
+- Cria uma tag `<img>`, e insere no DOM
+- Remove a mensagem da listener
 
-<ul>
- <li>remover todos os elementos em <code>document.body</code></li>
- <li>transforma os nomes dos animais em uma URL para ser usada na imagem</li>
- <li>Cria uma tag <code>&lt;img&gt;</code>, e insere no DOM</li>
- <li>Remove a mensagem da listener</li>
-</ul>
+### Os animais
 
-<h3 id="Os_animais">Os animais</h3>
+Finalmente, nós precisamos incluir as imagens dos animais.
 
-<p>Finalmente, nós precisamos incluir as imagens dos animais.</p>
+Crie um novo diretório chamado "beasts", e adicione as três imagens nos diretório, com os nomes apropriados. Você pode obter as imagens aqui no [GitHub](https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts), ou aqui:
 
-<p>Crie um novo diretório chamado "beasts", e adicione as três imagens nos diretório, com os nomes apropriados. Você pode obter as imagens aqui no <a href="https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts">GitHub</a>, ou aqui:</p>
+![](https://mdn.mozillademos.org/files/11459/frog.jpg)![](https://mdn.mozillademos.org/files/11461/snake.jpg)![](https://mdn.mozillademos.org/files/11463/turtle.jpg)
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11459/frog.jpg" style="display: inline-block; height: 200px; margin: 20px; width: 200px;"><img alt="" src="https://mdn.mozillademos.org/files/11461/snake.jpg" style="display: inline-block; height: 200px; margin: 20px; width: 200px;"><img alt="" src="https://mdn.mozillademos.org/files/11463/turtle.jpg" style="display: inline-block; height: 200px; margin: 20px; width: 200px;"></p>
+## Empacotando e instalando
 
-<h2 id="Empacotando_e_instalando">Empacotando e instalando</h2>
+Verifique se os seus arquivos estão estruturados de acordo com as informações abaixo:
 
-<p>Verifique se os seus arquivos estão estruturados de acordo com as informações abaixo:</p>
-
-<pre>beastify/
+```
+beastify/
 
     beasts/
         frog.jpg
@@ -282,26 +277,25 @@ function beastNameToURL(beastName) {
         choose_beast.html
         choose_beast.js
 
-    manifest.json</pre>
+    manifest.json
+```
 
-<p>Extensões Firefox são empacotados como arquivos XPI, que são apenas arquivos ZIP com a extensão "XPI".</p>
+Extensões Firefox são empacotados como arquivos XPI, que são apenas arquivos ZIP com a extensão "XPI".
 
-<p>Um truque é que o arquivo ZIP  deve ser um dos arquivos de extensão . Portanto, para criar um XPI a partir dos arquivos beastify , navegue até o diretório " beastify " em um shell de comando e digite:</p>
+Um truque é que o arquivo ZIP deve ser um dos arquivos de extensão . Portanto, para criar um XPI a partir dos arquivos beastify , navegue até o diretório " beastify " em um shell de comando e digite:
 
-<pre class="brush: bash">   # in beastify/
-   zip -r ../beastify.xpi *</pre>
+```bash
+   # in beastify/
+   zip -r ../beastify.xpi *
+```
 
+Ou você pode compactar com alguma ferramenta do tipo WinRar escolhe a forma de empacotação ZIP e subistituir .zip para XPI
 
+Para instalar o XPI, você apenas irá abrir o Firefox:
 
-<p>Ou você pode compactar com alguma ferramenta do tipo WinRar escolhe a forma de empacotação ZIP e subistituir .zip para XPI</p>
+- Vá até o Arquivos, seleciona Abrir arquivo, ou pressione Ctrl/Cmd+O
+- selecione "beastify.xpi" na caixa de dialógo que abriu
 
-<p>Para instalar o XPI, você apenas irá abrir o Firefox:</p>
+Você deverá receber um aviso de que você está instalando uma extensão não assinada. Aceite o aviso de advertência.
 
-<ul>
- <li>Vá até o Arquivos, seleciona Abrir arquivo, ou pressione Ctrl/Cmd+O</li>
- <li>selecione "beastify.xpi" na caixa de dialógo que abriu</li>
-</ul>
-
-<p>Você deverá receber um aviso de que você está instalando uma extensão não assinada. Aceite o aviso de advertência.</p>
-
-<p>Você poderá ver o icone aparecer na barra de ferramentas. Abra uma nova página web, então click no icone, selecione um animal e veja a imagem que você escolheu na página.</p>
+Você poderá ver o icone aparecer na barra de ferramentas. Abra uma nova página web, então click no icone, selecione um animal e veja a imagem que você escolheu na página.

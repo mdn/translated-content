@@ -5,30 +5,25 @@ tags:
   - Área de transferência
 translation_of: Mozilla/Add-ons/WebExtensions/API/clipboard
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>A API de área de transferência habilita uma extensão para copiar itens para a área de transferência do sistema. Atualmente a API suporta apenas a cópia de imagens, mas é pretendido suportar a cópia de texto e HTML no futuro.</p>
+A API de área de transferência habilita uma extensão para copiar itens para a área de transferência do sistema. Atualmente a API suporta apenas a cópia de imagens, mas é pretendido suportar a cópia de texto e HTML no futuro.
 
-<p>Esta API WebExtension existe primariamente por causa que o padrão da API web para área de transferência <a href="https://w3c.github.io/clipboard-apis/#writing-to-clipboard">não suporta escrita de imagens</a>. Se e quando esta funcionalidade for adicionada na API wb padrão, esta API pode ser depreciada.</p>
+Esta API WebExtension existe primariamente por causa que o padrão da API web para área de transferência [não suporta escrita de imagens](https://w3c.github.io/clipboard-apis/#writing-to-clipboard). Se e quando esta funcionalidade for adicionada na API wb padrão, esta API pode ser depreciada.
 
-<p>Leitura da área de transfência não é suportada por esta API, devido esta já poder ser lida usando as APIs padrão da plataforma web. Veja <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Interact_with_the_clipboard#Reading_from_the_clipboard">interagindo com a área de transferência</a>.</p>
+Leitura da área de transfência não é suportada por esta API, devido esta já poder ser lida usando as APIs padrão da plataforma web. Veja [interagindo com a área de transferência](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Interact_with_the_clipboard#Reading_from_the_clipboard).
 
-<p>Esta API é baseada na API <code><a class="external external-icon" href="https://developer.chrome.com/apps/clipboard">clipboard</a></code> do Chrome's API, mas esta API está disponível somente para o Chrome.</p>
+Esta API é baseada na API [`clipboard`](https://developer.chrome.com/apps/clipboard) do Chrome's API, mas esta API está disponível somente para o Chrome.
 
-<p>Para utilizar esta API voce precisa ter a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissão</a> "clipboardWrite".</p>
+Para utilizar esta API voce precisa ter a [permissão](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "clipboardWrite".
 
-<h2 id="Funções">Funções</h2>
+## Funções
 
-<dl>
- <dt>{{WebExtAPIRef("clipboard.setImageData()")}}</dt>
- <dd>Copia uma imagem para a área de transferência.</dd>
-</dl>
+- {{WebExtAPIRef("clipboard.setImageData()")}}
+  - : Copia uma imagem para a área de transferência.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("webextensions.api.clipboard", 1, 1)}} {{WebExtExamples("h2")}}</p>
+{{Compat("webextensions.api.clipboard", 1, 1)}} {{WebExtExamples("h2")}}
 
-<div class="note"><strong>Agradecimentos</strong>
-
-<p>Esta API é baseada na API Chromium <a href="https://developer.chrome.com/apps/clipboard"><code>chrome.clipboard</code></a>.</p>
-</div>
+> **Nota:** **Agradecimentos**Esta API é baseada na API Chromium [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard).

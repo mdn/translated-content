@@ -9,29 +9,28 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>The manifest.json file is a <a href="/en-US/docs/Glossary/JSON">JSON</a>-formatted file, and is the only file that every WebExtension must contain.</p>
+The manifest.json file is a [JSON](/pt-BR/docs/Glossary/JSON)-formatted file, and is the only file that every WebExtension must contain.
 
-<p>Using manifest.json, you specify basic metadata about your extension such as the name and version, and can also specify aspects of your extension's functionality, such as background scripts, content scripts, and browser actions.</p>
+Using manifest.json, you specify basic metadata about your extension such as the name and version, and can also specify aspects of your extension's functionality, such as background scripts, content scripts, and browser actions.
 
-<p>manifest.json keys are listed below:</p>
+manifest.json keys are listed below:
 
-<div class="twocolumns">{{ ListSubpages ("/en-US/Add-ons/WebExtensions/manifest.json") }}</div>
+{{ ListSubpages ("/en-US/Add-ons/WebExtensions/manifest.json") }}
 
-<div class="twocolumns"> </div>
+`"manifest_version"`, `"version"`, and `"name"` are the only mandatory keys. `"default_locale"` must be present if the "\_locales" directory is present and must be absent otherwise. `"applications"` is not supported in Google Chrome, and is mandatory in Firefox before Firefox 48 and Firefox for Android.
 
-<p><code>"manifest_version"</code>, <code>"version"</code>, and <code>"name"</code> are the only mandatory keys. <code>"default_locale"</code> must be present if the "_locales" directory is present and must be absent otherwise. <code>"applications"</code> is not supported in Google Chrome, and is mandatory in Firefox before Firefox 48 and Firefox for Android.</p>
+## Compatibilidade com navegadores
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+{{Compat("webextensions.manifest")}}
 
-<p>{{Compat("webextensions.manifest")}}</p>
+## Example
 
-<h2 id="Example">Example</h2>
+Quick syntax example for manifest.json:
 
-<p>Quick syntax example for manifest.json:</p>
-
-<pre class="brush: json">{
+```json
+{
   "applications": {
     "gecko": {
       "id": "addon@example.com",
@@ -100,6 +99,5 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
   "version": "0.1",
 
   "web_accessible_resources": ["images/my-image.png"]
-}</pre>
-
-<p> </p>
+}
+```

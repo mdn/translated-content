@@ -3,68 +3,48 @@ title: commands
 slug: Mozilla/Add-ons/WebExtensions/API/commands
 translation_of: Mozilla/Add-ons/WebExtensions/API/commands
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Escuta por usuário executando comandos que você registrou usando o <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/commands"><code>commands</code> manifest.json key</a>.</p>
+Escuta por usuário executando comandos que você registrou usando o [`commands` manifest.json key](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/commands).
 
-<h2 id="Tipos">Tipos</h2>
+## Tipos
 
-<dl>
- <dt>{{WebExtAPIRef("commands.Command")}}</dt>
- <dd>Objeto representando um comando. Contém a informação especificada no comando <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/commands"><code>commands</code> manifest.json key</a>.</dd>
-</dl>
+- {{WebExtAPIRef("commands.Command")}}
+  - : Objeto representando um comando. Contém a informação especificada no comando [`commands` manifest.json key](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/commands).
 
-<h2 id="Funções">Funções</h2>
+## Funções
 
-<dl>
- <dt>{{WebExtAPIRef("commands.getAll")}}</dt>
- <dd>
- <p>Obtém todos os comandos registrados para esta extensão.</p>
- </dd>
- <dt>{{WebExtAPIRef("commands.reset")}}</dt>
- <dd>
- <p>Reseta a descrição do comando dado e atalho para os valores dados na chave do manifesto.</p>
- </dd>
- <dt>{{WebExtAPIRef("commands.update")}}</dt>
- <dd>
- <p>Modifica a descrição ou atalho dado um comando.</p>
- </dd>
-</dl>
+- {{WebExtAPIRef("commands.getAll")}}
+  - : Obtém todos os comandos registrados para esta extensão.
+- {{WebExtAPIRef("commands.reset")}}
+  - : Reseta a descrição do comando dado e atalho para os valores dados na chave do manifesto.
+- {{WebExtAPIRef("commands.update")}}
+  - : Modifica a descrição ou atalho dado um comando.
 
-<h2 id="Eventos">Eventos</h2>
+## Eventos
 
-<dl>
- <dt>{{WebExtAPIRef("commands.onCommand")}}</dt>
- <dd>
- <div>Disparado quando um comando é executado usando seu atalho associado ao teclado.</div>
- </dd>
-</dl>
+- {{WebExtAPIRef("commands.onCommand")}}
+  - : Disparado quando um comando é executado usando seu atalho associado ao teclado.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("webextensions.api.commands")}}{{WebExtExamples("h2")}}</p>
+{{Compat("webextensions.api.commands")}}{{WebExtExamples("h2")}}
 
-<div class="note"><strong>Agradecimentos</strong>
+> **Nota:** **Agradecimentos**Esta API é baseada na API [`chrome.commands`](https://developer.chrome.com/extensions/commands) do Chromium.Os dados de compatibilidade do Microsoft Edge são fornecidos pela Microsoft Corporation e estão aqui inclusos sob a Creative Commons Attribution 3.0 United States License.
 
-<p>Esta API é baseada na API <a href="https://developer.chrome.com/extensions/commands"><code>chrome.commands</code></a> do Chromium.</p>
-
-<p>Os dados de compatibilidade do Microsoft Edge são fornecidos pela Microsoft Corporation e estão aqui inclusos sob a Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
+// * Redistributions of source code must retain the above copyright
 // notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
+// * Redistributions in binary form must reproduce the above
 // copyright notice, this list of conditions and the following disclaimer
 // in the documentation and/or other materials provided with the
 // distribution.
-//    * Neither the name of Google Inc. nor the names of its
+// * Neither the name of Google Inc. nor the names of its
 // contributors may be used to endorse or promote products derived from
 // this software without specific prior written permission.
 //
@@ -78,5 +58,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/commands
 // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</div>
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</div>

@@ -11,99 +11,85 @@ tags:
   - browserAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Adiciona um botão a barra de ferramentas do navegador.</p>
+Adiciona um botão a barra de ferramentas do navegador.
 
-<p>Uma <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_action">browser action</a> é um botão na barra de ferramentas do navegador.</p>
+Uma [browser action](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Browser_action) é um botão na barra de ferramentas do navegador.
 
-<p>Você pode associar um popup junto ao botão. O popup é especificado usando HTML, CSS e JavaScript, apenas como uma página web normal. O JavaScript rodando no popup tem o mesmo acesso a API WebExtension completa, assim como seus scripts em backend, mas seu contexto global é o popup, não a página exibida no navegador atualmente. Para afetar páginas web você precisa comunicá-las via <a href="/en-US/Add-ons/WebExtensions/Modify_a_web_page#Messaging">messages</a>.</p>
+Você pode associar um popup junto ao botão. O popup é especificado usando HTML, CSS e JavaScript, apenas como uma página web normal. O JavaScript rodando no popup tem o mesmo acesso a API WebExtension completa, assim como seus scripts em backend, mas seu contexto global é o popup, não a página exibida no navegador atualmente. Para afetar páginas web você precisa comunicá-las via [messages](/en-US/Add-ons/WebExtensions/Modify_a_web_page#Messaging).
 
-<p>Se você especificar um popup ele está exibido — e o conteúdo será carregado — quando o usuário clicar no ícone. Você não especificar um popup, quando o usuário clicar no ícone um evento será disparado para sua extensão.</p>
+Se você especificar um popup ele está exibido — e o conteúdo será carregado — quando o usuário clicar no ícone. Você não especificar um popup, quando o usuário clicar no ícone um evento será disparado para sua extensão.
 
-<p>Você pode definir muitas ações de propriedades do navegador de modo declarativo usando a chave <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a> </code>no arquivo manifest.json.</p>
+Você pode definir muitas ações de propriedades do navegador de modo declarativo usando a chave `browser_action `no arquivo manifest.json.
 
-<p>Com a API <code>browserAction você pode</code>:</p>
+Com a API `browserAction você pode`:
 
-<ul>
- <li>Usar {{WebExtAPIRef("browserAction.onClicked")}} para escutar por cliques no ícone.</li>
- <li>Atribuir e obter as propriedades do ícone — icone, titulo, popup, e assim por diante. Você pode obter e atribui-los globalmente para todas as abas, ou para uma aba específica informando o ID como um argumento adicional.</li>
-</ul>
+- Usar {{WebExtAPIRef("browserAction.onClicked")}} para escutar por cliques no ícone.
+- Atribuir e obter as propriedades do ícone — icone, titulo, popup, e assim por diante. Você pode obter e atribui-los globalmente para todas as abas, ou para uma aba específica informando o ID como um argumento adicional.
 
-<h2 id="Tipos">Tipos</h2>
+## Tipos
 
-<dl>
- <dt>{{WebExtAPIRef("browserAction.ColorArray")}}</dt>
- <dd>Um array de quatro números inteiros entre 0-55 definido uma cor RGB.</dd>
- <dt>{{WebExtAPIRef("browserAction.ImageDataType")}}</dt>
- <dd>Dados do pixel de uma imagem. Deve ser um objeto <code><a href="/en-US/docs/Web/API/ImageData">ImageData</a></code> (por exemplo, de um elemento {{htmlelement("canvas")}}).</dd>
-</dl>
+- {{WebExtAPIRef("browserAction.ColorArray")}}
+  - : Um array de quatro números inteiros entre 0-55 definido uma cor RGB.
+- {{WebExtAPIRef("browserAction.ImageDataType")}}
+  - : Dados do pixel de uma imagem. Deve ser um objeto [`ImageData`](/en-US/docs/Web/API/ImageData) (por exemplo, de um elemento {{htmlelement("canvas")}}).
 
-<h2 id="Funções">Funções</h2>
+## Funções
 
-<dl>
- <dt>{{WebExtAPIRef("browserAction.setTitle()")}}</dt>
- <dd>Atribui ação de título do navegador. Ele será exibido em um tooltip.</dd>
- <dt>{{WebExtAPIRef("browserAction.getTitle()")}}</dt>
- <dd>Obtém a ação de título do navegador.</dd>
- <dt>{{WebExtAPIRef("browserAction.setIcon()")}}</dt>
- <dd>Atribui a ação de ícone ao navegador.</dd>
- <dt>{{WebExtAPIRef("browserAction.setPopup()")}}</dt>
- <dd>Atribui o documento HTML que será aberto como um popup quando o usuário clicar na ação de ícone do navegador.</dd>
- <dt>{{WebExtAPIRef("browserAction.getPopup()")}}</dt>
- <dd>Obtém o documento HTML atribuido como uma ação de popup do navegador.</dd>
- <dt>{{WebExtAPIRef("browserAction.openPopup()")}}</dt>
- <dd>Abre a ação popup do navegador.</dd>
- <dt>{{WebExtAPIRef("browserAction.setBadgeText()")}}</dt>
- <dd>Atribui a ação do texto distintivo do navegador. O emblema é exibido acima do ícone.</dd>
- <dt>{{WebExtAPIRef("browserAction.getBadgeText()")}}</dt>
- <dd>Obtém o texto do emblema do navegador.</dd>
- <dt>{{WebExtAPIRef("browserAction.setBadgeBackgroundColor()")}}</dt>
- <dd>Atribui a cor de fundo do emblema.</dd>
- <dt>{{WebExtAPIRef("browserAction.getBadgeBackgroundColor()")}}</dt>
- <dd>Obtém a cor de fundo do emblema.</dd>
- <dt>{{WebExtAPIRef("browserAction.enable()")}}</dt>
- <dd>Habilita a ação do navegador para uma aba. Por padrão, ações são habilitadas para todas as abas.</dd>
- <dt>{{WebExtAPIRef("browserAction.disable()")}}</dt>
- <dd>Desabilita a ação para uma aba do navegador, significando que ela não pode ser clicada quando aquela aba estiver ativa.</dd>
- <dt>{{WebExtAPIRef("browserAction.isEnabled()")}}</dt>
- <dd>Verifica se a ação do navegador está ou não habilitada.</dd>
-</dl>
+- {{WebExtAPIRef("browserAction.setTitle()")}}
+  - : Atribui ação de título do navegador. Ele será exibido em um tooltip.
+- {{WebExtAPIRef("browserAction.getTitle()")}}
+  - : Obtém a ação de título do navegador.
+- {{WebExtAPIRef("browserAction.setIcon()")}}
+  - : Atribui a ação de ícone ao navegador.
+- {{WebExtAPIRef("browserAction.setPopup()")}}
+  - : Atribui o documento HTML que será aberto como um popup quando o usuário clicar na ação de ícone do navegador.
+- {{WebExtAPIRef("browserAction.getPopup()")}}
+  - : Obtém o documento HTML atribuido como uma ação de popup do navegador.
+- {{WebExtAPIRef("browserAction.openPopup()")}}
+  - : Abre a ação popup do navegador.
+- {{WebExtAPIRef("browserAction.setBadgeText()")}}
+  - : Atribui a ação do texto distintivo do navegador. O emblema é exibido acima do ícone.
+- {{WebExtAPIRef("browserAction.getBadgeText()")}}
+  - : Obtém o texto do emblema do navegador.
+- {{WebExtAPIRef("browserAction.setBadgeBackgroundColor()")}}
+  - : Atribui a cor de fundo do emblema.
+- {{WebExtAPIRef("browserAction.getBadgeBackgroundColor()")}}
+  - : Obtém a cor de fundo do emblema.
+- {{WebExtAPIRef("browserAction.enable()")}}
+  - : Habilita a ação do navegador para uma aba. Por padrão, ações são habilitadas para todas as abas.
+- {{WebExtAPIRef("browserAction.disable()")}}
+  - : Desabilita a ação para uma aba do navegador, significando que ela não pode ser clicada quando aquela aba estiver ativa.
+- {{WebExtAPIRef("browserAction.isEnabled()")}}
+  - : Verifica se a ação do navegador está ou não habilitada.
 
-<h2 id="Eventos">Eventos</h2>
+## Eventos
 
-<dl>
- <dt>{{WebExtAPIRef("browserAction.onClicked")}}</dt>
- <dd>Disparado quando uma ação do ícone do navegador é clicada. Este evento não será disparado quando a ação do navegador tiver um popup.</dd>
-</dl>
+- {{WebExtAPIRef("browserAction.onClicked")}}
+  - : Disparado quando uma ação do ícone do navegador é clicada. Este evento não será disparado quando a ação do navegador tiver um popup.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("webextensions.api.browserAction")}}</p>
+{{Compat("webextensions.api.browserAction")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><strong>Agradecimentos</strong>
+> **Nota:** **Agradecimentos**Esta API é baseada na API [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction) do Chromium. Este documento é derivado do [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) no código do Chromium.Os dados de compatibilidade do Microsoft Edge são fornecidos Microsoft Corporation e estão aqui inclusos sob a Creative Commons Attribution 3.0 United States License.
 
-<p>Esta API é baseada na API <a href="https://developer.chrome.com/extensions/browserAction"><code>chrome.browserAction</code></a> do Chromium. Este documento é derivado do <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> no código do Chromium.</p>
-
-<p>Os dados de compatibilidade do Microsoft Edge são fornecidos Microsoft Corporation e estão aqui inclusos sob a Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
+// * Redistributions of source code must retain the above copyright
 // notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
+// * Redistributions in binary form must reproduce the above
 // copyright notice, this list of conditions and the following disclaimer
 // in the documentation and/or other materials provided with the
 // distribution.
-//    * Neither the name of Google Inc. nor the names of its
+// * Neither the name of Google Inc. nor the names of its
 // contributors may be used to endorse or promote products derived from
 // this software without specific prior written permission.
 //
@@ -117,5 +103,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction
 // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</div>
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</div>

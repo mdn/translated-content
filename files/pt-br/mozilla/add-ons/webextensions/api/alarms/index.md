@@ -5,48 +5,37 @@ tags:
   - alarm
 translation_of: Mozilla/Add-ons/WebExtensions/API/alarms
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Executar um código agendado para um horário específico no futuro. Isto é como o <code><a href="/en-US/docs/Web/API/WindowTimers/setTimeout">setTimeout()</a></code> e <code><a href="/en-US/docs/Web/API/WindowTimers/setInterval">setInterval()</a></code>, exceto essas funções não funcionam no segundo plano com páginas carregadas sob demanda.</p>
+Executar um código agendado para um horário específico no futuro. Isto é como o [`setTimeout()`](/en-US/docs/Web/API/WindowTimers/setTimeout) e [`setInterval()`](/en-US/docs/Web/API/WindowTimers/setInterval), exceto essas funções não funcionam no segundo plano com páginas carregadas sob demanda.
 
-<p>Para usar estas API você precisa ter a "alarms" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</p>
+Para usar estas API você precisa ter a "alarms" [permission](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-<h2 id="Tipos">Tipos</h2>
+## Tipos
 
-<dl>
- <dt>{{WebExtAPIRef("alarms.Alarm")}}</dt>
- <dd>Informações sobre um alarme em particular.</dd>
-</dl>
+- {{WebExtAPIRef("alarms.Alarm")}}
+  - : Informações sobre um alarme em particular.
 
-<h2 id="Funções">Funções</h2>
+## Funções
 
-<dl>
- <dt>{{WebExtAPIRef("alarms.create()")}}</dt>
- <dd>Cria um alarme.</dd>
- <dt>{{WebExtAPIRef("alarms.get()")}}</dt>
- <dd>Obtém um alarme específico dado seu nome.</dd>
- <dt>{{WebExtAPIRef("alarms.getAll()")}}</dt>
- <dd>Obtém todos os alarmes agendados.</dd>
- <dt>{{WebExtAPIRef("alarms.clear()")}}</dt>
- <dd>Limpa um alarme específico dado seu nome.</dd>
- <dt>{{WebExtAPIRef("alarms.clearAll()")}}</dt>
- <dd>Limpa todos os alarmes agendados.</dd>
-</dl>
+- {{WebExtAPIRef("alarms.create()")}}
+  - : Cria um alarme.
+- {{WebExtAPIRef("alarms.get()")}}
+  - : Obtém um alarme específico dado seu nome.
+- {{WebExtAPIRef("alarms.getAll()")}}
+  - : Obtém todos os alarmes agendados.
+- {{WebExtAPIRef("alarms.clear()")}}
+  - : Limpa um alarme específico dado seu nome.
+- {{WebExtAPIRef("alarms.clearAll()")}}
+  - : Limpa todos os alarmes agendados.
 
-<h2 id="Eventos">Eventos</h2>
+## Eventos
 
-<dl>
- <dt>{{WebExtAPIRef("alarms.onAlarm")}}</dt>
- <dd>Disparado quando o alarme acaba.</dd>
-</dl>
+- {{WebExtAPIRef("alarms.onAlarm")}}
+  - : Disparado quando o alarme acaba.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("webextensions.api.alarms")}} {{WebExtExamples("h2")}}</p>
+{{Compat("webextensions.api.alarms")}} {{WebExtExamples("h2")}}
 
-<div class="note"><strong>Agradecimentos</strong>
-
-<p>Esta API é baseada na API Chromium's <a href="https://developer.chrome.com/extensions/alarms"><code>chrome.alarms</code></a> .</p>
-
-<p>Dados de compatibilidade do Microsoft Edge fornecidos pela Microsoft Corporation aqui inclusos sob a Creative Commons Attribution 3.0 United States License.</p>
-</div>
+> **Nota:** **Agradecimentos**Esta API é baseada na API Chromium's [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) .Dados de compatibilidade do Microsoft Edge fornecidos pela Microsoft Corporation aqui inclusos sob a Creative Commons Attribution 3.0 United States License.
