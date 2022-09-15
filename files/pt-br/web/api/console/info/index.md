@@ -3,57 +3,41 @@ title: Console.info()
 slug: Web/API/Console/info
 translation_of: Web/API/Console/info
 ---
-<div>{{APIRef("Console API")}}{{Non-standard_header}}</div>
+{{APIRef("Console API")}}{{Non-standard_header}}
 
-<p>Apresenta uma mensagem de saída no console do navegador . No Firefox e Chrome , um pequeno ícone "i" e apresentado próximo aos items do log do console .  </p>
+Apresenta uma mensagem de saída no console do navegador . No Firefox e Chrome , um pequeno ícone "i" e apresentado próximo aos items do log do console .
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">console.info(<em>obj1</em> [, <em>obj2</em>, ..., <em>objN</em>]);
-console.info(<em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]);
-</pre>
+```
+console.info(obj1 [, obj2, ..., objN]);
+console.info(msg [, subst1, ..., substN]);
+```
 
-<h2 id="Parâmetros">Parâmetros</h2>
+## Parâmetros
 
-<dl>
- <dt><code>obj1</code> ... <code>objN</code></dt>
- <dd><code>A lista de objetos javascript para saída . As representações de strings de cada um desses objetos são anexados juntos em ordem de listagem e saida . </code></dd>
- <dt><code>msg</code></dt>
- <dd><code>Uma string javascript que contém zero ou mais strings para substituição.</code></dd>
- <dt><code>subst1</code> ... <code>substN</code></dt>
- <dd><code>Objeto javascript o qual substitui strings com msg. Isso permite controle adicional sobre o formato da saída.</code></dd>
-</dl>
+- `obj1` ... `objN`
+  - : `A lista de objetos javascript para saída . As representações de strings de cada um desses objetos são anexados juntos em ordem de listagem e saida .`
+- `msg`
+  - : `Uma string javascript que contém zero ou mais strings para substituição.`
+- `subst1` ... `substN`
+  - : `Objeto javascript o qual substitui strings com msg. Isso permite controle adicional sobre o formato da saída.`
 
-<p>Veja <a href="/en-US/docs/Web/API/console#Outputting_text_to_the_console">Outputting text to the console</a> na documentação {{domxref("console")}} para mais  detalhes.</p>
+Veja [Outputting text to the console](/pt-BR/docs/Web/API/console#Outputting_text_to_the_console) na documentação {{domxref("console")}} para mais detalhes.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentários</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#consoleinfoobject--object-", "console.info()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificações                                                                                       | Status                           | Comentários       |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
+| {{SpecName("Console API", "#consoleinfoobject--object-", "console.info()")}} | {{Spec2("Console API")}} | Definição inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.console.info")}}
 
-<h2 id="Veja_também">Veja  também</h2>
+## Veja também
 
-<ul>
- <li><a class="external" href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
- <li><a class="external" href="http://msdn.microsoft.com/library/gg589530">MSDN: Using the F12 Tools Console to View Errors and Status</a></li>
-</ul>
+- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)

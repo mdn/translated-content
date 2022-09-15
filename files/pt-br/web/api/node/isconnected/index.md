@@ -3,35 +3,39 @@ title: Node.isConnected
 slug: Web/API/Node/isConnected
 translation_of: Web/API/Node/isConnected
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>A propriedade somente-leitura <strong><code>isConnected</code></strong> da interface {{domxref("Node")}} retorna um boleano indicando se um nó está conectado (direta ou indiretamente) ao contexto do objeto, por exemplo o objeto {{domxref("Document")}} no caso da DOM normal, ou o {{domxref("ShadowRoot")}} no caso de uma shadow DOM.</p>
+A propriedade somente-leitura **`isConnected`** da interface {{domxref("Node")}} retorna um boleano indicando se um nó está conectado (direta ou indiretamente) ao contexto do objeto, por exemplo o objeto {{domxref("Document")}} no caso da DOM normal, ou o {{domxref("ShadowRoot")}} no caso de uma shadow DOM.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate">var <em>isItConnected</em> = <em>nodeObjectInstance</em>.isConnected</pre>
+```
+var isItConnected = nodeObjectInstance.isConnected
+```
 
-<h3 id="Retorno">Retorno</h3>
+### Retorno
 
-<p>Um {{domxref("Boolean")}} que é <code>true</code> se o nó está conectado ao contexto relevante do objeto, e <code>false</code> se não está.</p>
+Um {{domxref("Boolean")}} que é `true` se o nó está conectado ao contexto relevante do objeto, e `false` se não está.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Standard_DOM">Standard DOM</h3>
+### Standard DOM
 
-<p>Um exemplo em um DOM padrão:</p>
+Um exemplo em um DOM padrão:
 
-<pre class="brush: js notranslate">let test = document.createElement('p');
+```js
+let test = document.createElement('p');
 console.log(test.isConnected); // Returns false
 document.body.appendChild(test);
 console.log(test.isConnected); // Returns true
-</pre>
+```
 
-<h3 id="Shadow_DOM">Shadow DOM</h3>
+### Shadow DOM
 
-<p>Um exemplo em um Shadow DOM:</p>
+Um exemplo em um Shadow DOM:
 
-<pre class="brush: js notranslate">// Cria um raíz Shadow
+```js
+// Cria um raíz Shadow
 var shadow = this.attachShadow({mode: 'open'});
 
 // Cria um CSS para aplicar a Shadow DOm
@@ -63,13 +67,15 @@ style.textContent = `
 // Anexa a estilização criada a Shadow DOM.
 
 shadow.appendChild(style);
-console.log(style.isConnected); // retorna true</pre>
+console.log(style.isConnected); // retorna true
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Node.isConnected pode ser polyfilled com o seguinte código para IE10 e EdgeHTML:</p>
+Node.isConnected pode ser polyfilled com o seguinte código para IE10 e EdgeHTML:
 
-<pre class="notranslate">/*
+```
+/*
  * Node.isConnected polyfill para IE and EdgeHTML
  * 2020-02-04
  *
@@ -84,35 +90,21 @@ if (!('isConnected' in Node.prototype)) {
       return (
         !this.ownerDocument ||
         !(
-          this.ownerDocument.compareDocumentPosition(this) &amp;
+          this.ownerDocument.compareDocumentPosition(this) &
           this.DOCUMENT_POSITION_DISCONNECTED
         )
       );
     },
   });
-}</pre>
+}
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentários</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-node-isconnected','isConnected')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Definição Inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                        | Status                           | Comentários        |
+| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
+| {{SpecName('DOM WHATWG','#dom-node-isconnected','isConnected')}} | {{Spec2('DOM WHATWG')}} | Definição Inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
-
-
-<p>{{Compat("api.Node.isConnected")}}</p>
-</div>
+{{Compat("api.Node.isConnected")}}

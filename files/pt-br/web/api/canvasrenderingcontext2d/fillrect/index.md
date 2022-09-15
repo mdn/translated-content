@@ -9,66 +9,66 @@ tags:
   - metodo
 translation_of: Web/API/CanvasRenderingContext2D/fillRect
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>O método <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.fillRect()</code></strong> da API Canvas 2D desenha um retângulo preenchido na posição <em>(x, y)</em>, no qual o tamanho é determinado pela <em>width</em> (largura) e pela <em>height</em> (altura), e cujo o estilo é determinado pelo atributo <code>fillStyle</code>.</p>
+O método **`CanvasRenderingContext2D`\*\***`.fillRect()`\*\* da API Canvas 2D desenha um retângulo preenchido na posição _(x, y)_, no qual o tamanho é determinado pela _width_ (largura) e pela _height_ (altura), e cujo o estilo é determinado pelo atributo `fillStyle`.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">void <var><em>ctx</em>.fillRect(x, y, width, height);</var>
-</pre>
+```
+void ctx.fillRect(x, y, width, height);
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>x</code></dt>
- <dd>O valor da coordenada x para o ponto inicial do retângulo.</dd>
- <dt><code>y</code></dt>
- <dd>O valor da coordenada y para o ponto inicial do retângulo.</dd>
- <dt><code>width</code></dt>
- <dd>A largura do retângulo.</dd>
- <dt><code>height</code></dt>
- <dd>A altura do retângulo.</dd>
-</dl>
+- `x`
+  - : O valor da coordenada x para o ponto inicial do retângulo.
+- `y`
+  - : O valor da coordenada y para o ponto inicial do retângulo.
+- `width`
+  - : A largura do retângulo.
+- `height`
+  - : A altura do retângulo.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_o_método_fillRect">Usando o método <code>fillRect</code></h3>
+### Usando o método `fillRect`
 
-<p>Isto é só um simples trecho de código que usa o método <code>fillRect</code>.</p>
+Isto é só um simples trecho de código que usa o método `fillRect`.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 ctx.fillStyle = 'green';
 ctx.fillRect(10, 10, 100, 100);
 
 // preenche todo o canvas
 // ctx.fillRect(0, 0, canvas.width, canvas.height);
-</pre>
+```
 
-<p>Edite o código abaixo e veja as alterações instantâneas no canvas:</p>
+Edite o código abaixo e veja as alterações instantâneas no canvas:
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.fillStyle = "green";
-ctx.fillRect(10, 10, 100, 100);&lt;/textarea&gt;
-</pre>
+ctx.fillRect(10, 10, 100, 100);</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -91,37 +91,23 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-fillrect", "CanvasRenderingContext2D.fillRect")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                                | Estado                           | Comentário |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-fillrect", "CanvasRenderingContext2D.fillRect")}} | {{Spec2('HTML WHATWG')}} |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.CanvasRenderingContext2D.fillRect")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>A definição da interface {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.fillStyle")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.clearRect()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.strokeRect()")}}</li>
-</ul>
+- A definição da interface {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.fillStyle")}}
+- {{domxref("CanvasRenderingContext2D.clearRect()")}}
+- {{domxref("CanvasRenderingContext2D.strokeRect()")}}

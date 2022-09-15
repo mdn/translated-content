@@ -10,43 +10,33 @@ tags:
   - getDistributedNodes()
 translation_of: Web/API/HTMLContentElement/getDistributedNodes
 ---
-<p>{{ APIRef("Web Components") }}</p>
+{{ APIRef("Web Components") }}
 
-<p>O método <code><strong>HTMLContentElement.getDistributedNodes()</strong></code> retorna um static {{domxref("NodeList")}} do {{glossary("distributed nodes")}} associado com este elemento <code>&lt;content&gt;</code>.</p>
+O método **`HTMLContentElement.getDistributedNodes()`** retorna um static {{domxref("NodeList")}} do {{glossary("distributed nodes")}} associado com este elemento `<content>`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <em>nodeList</em> = <em>object</em>.getDistributedNodes()
-</pre>
+```
+var nodeList = object.getDistributedNodes()
+```
 
-<h2 id="Specifications" name="Specifications">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: js">//Pegue os nós distribuídos
-var nodes = myContentObject.getDistributedNodes();</pre>
+```js
+//Pegue os nós distribuídos
+var nodes = myContentObject.getDistributedNodes();
+```
 
-<h2 id="Specifications" name="Specifications">Specificações</h2>
+## Specificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Shadow DOM', '#the-content-element', 'content')}}</td>
-   <td>{{Spec2('Shadow DOM')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specificações                                                                    | Status                           | Comentário |
+| -------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('Shadow DOM', '#the-content-element', 'content')}} | {{Spec2('Shadow DOM')}} |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.HTMLContentElement.getDistributedNodes")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/API/HTMLContentElement">HTMLContentElement</a></li>
-</ul>
+- [HTMLContentElement](/pt-BR/docs/Web/API/HTMLContentElement)

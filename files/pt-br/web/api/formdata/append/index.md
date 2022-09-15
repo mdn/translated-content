@@ -3,79 +3,66 @@ title: FormData.append()
 slug: Web/API/FormData/append
 translation_of: Web/API/FormData/append
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p>O método <code><strong>append()</strong></code>  da Interface {{domxref("FormData")}}  adiciona um novo valor dentro de uma chave existente dentro do objeto <code>FormData </code>ou  adiciona a  chave caso ainda não exista.</p>
+O método **`append()`** da Interface {{domxref("FormData")}} adiciona um novo valor dentro de uma chave existente dentro do objeto `FormData `ou adiciona a chave caso ainda não exista.
 
-<p>A diferença entre  {{domxref("FormData.set")}} e <code>append()</code> é que se uma  chave específica já exista, {{domxref("FormData.set")}} irá substituir o valor existente com um novo valor, já o <code>append()</code> irá adicionar um novo valor no fim do conjunto de valores.</p>
+A diferença entre {{domxref("FormData.set")}} e `append()` é que se uma chave específica já exista, {{domxref("FormData.set")}} irá substituir o valor existente com um novo valor, já o `append()` irá adicionar um novo valor no fim do conjunto de valores.
 
-<div class="note">
-<p><strong>Nota</strong>: Este  metodo esta desponivel no <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Nota:** Este metodo esta desponivel no [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<p>Existe duas versoes deste metodo: um de dois e um outro de tres:</p>
+Existe duas versoes deste metodo: um de dois e um outro de tres:
 
-<pre class="brush: js">formData.append(name, value);
-formData.append(name, value, filename);</pre>
+```js
+formData.append(name, value);
+formData.append(name, value, filename);
+```
 
-<h3 id="append()_Parameters" name="append()_Parameters">Parametros</h3>
+### Parametros
 
-<dl>
- <dt><code>name</code></dt>
- <dd>O nome do campo cujos dados estão contidas em value.</dd>
- <dt><code>value</code></dt>
- <dd>O valor deste campo . Nas duas versões este é a {{domxref("USVString")}}, ou  caso não seja , este é convertido em string. Na versão de tres parametros este pode ser {{domxref("Blob")}}, {{domxref("File")}}, ou  {{domxref("USVString")}}, de novo, caso nenhum deses forem especificados  este valor é convertido em uma string.</dd>
- <dt><code>filename </code>{{optional_inline}}</dt>
- <dd>O filename reporta para o servidor (a {{domxref("USVString")}}), quando a {{domxref("Blob")}} ou {{domxref("File")}} é passado como o segundo parametro. O default filename para  {{domxref("Blob")}} o objecto é "blob".</dd>
-</dl>
+- `name`
+  - : O nome do campo cujos dados estão contidas em value.
+- `value`
+  - : O valor deste campo . Nas duas versões este é a {{domxref("USVString")}}, ou caso não seja , este é convertido em string. Na versão de tres parametros este pode ser {{domxref("Blob")}}, {{domxref("File")}}, ou {{domxref("USVString")}}, de novo, caso nenhum deses forem especificados este valor é convertido em uma string.
+- `filename `{{optional_inline}}
+  - : O filename reporta para o servidor (a {{domxref("USVString")}}), quando a {{domxref("Blob")}} ou {{domxref("File")}} é passado como o segundo parametro. O default filename para {{domxref("Blob")}} o objecto é "blob".
 
-<div class="note">
-<p><strong>Nota:</strong> Se espisificares  {{domxref("Blob")}} como a data append  para o objecto <code>FormData</code> , o filename a ser reportado para o servidor  no "Content-Disposition" header usado para mudar de browser em browser.</p>
-</div>
+> **Nota:** Se espisificares {{domxref("Blob")}} como a data append para o objecto `FormData` , o filename a ser reportado para o servidor no "Content-Disposition" header usado para mudar de browser em browser.
 
-<h3 id="Retorna">Retorna</h3>
+### Retorna
 
-<p>Void.</p>
+Void.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>As seguintes linhas criam um Objecto <code>FormData</code> vazio:</p>
+As seguintes linhas criam um Objecto `FormData` vazio:
 
-<pre class="brush: js">var formData = new FormData(); // Corrente vazio</pre>
+```js
+var formData = new FormData(); // Corrente vazio
+```
 
-<p>Podes adicionar chaves/valores pares para usar (domxref("FormData.append")}}:</p>
+Podes adicionar chaves/valores pares para usar (domxref("FormData.append")}}:
 
-<pre class="brush: js">formData.append('username', 'Chris');
-formData.append('userpic', myFileInput.files[0], 'chris.jpg');</pre>
+```js
+formData.append('username', 'Chris');
+formData.append('userpic', myFileInput.files[0], 'chris.jpg');
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Estato</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest','#dom-formdata-append','append()')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificações                                                                       | Estato                   | Comentario |
+| ------------------------------------------------------------------------------------ | ------------------------ | ---------- |
+| {{SpecName('XMLHttpRequest','#dom-formdata-append','append()')}} | {{Spec2('Fetch')}} |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.FormData.append")}}
 
-<h2 id="Veja_Tambem">Veja Tambem</h2>
+## Veja Tambem
 
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="Using XMLHttpRequest">Usando XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects" title="DOM/XMLHttpRequest/FormData/Using_FormData_objects">UsandoFormData objects</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Usando XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [UsandoFormData objects](/pt-BR/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
+- {{HTMLElement("Form")}}

@@ -3,148 +3,109 @@ title: DOMException
 slug: Web/API/DOMException
 translation_of: Web/API/DOMException
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p>A interface <strong>DOMException </strong>representa um evento anormal (denominado de<strong> exceção</strong>) durante a chamada ou a espera de um resultado do metodo ou uma solicitação a uma web API. Basicamente, falando, é o tratamento dos erros e condições, dos mesmos, nos processos web.</p>
+A interface **DOMException** representa um evento anormal (denominado de **exceção**) durante a chamada ou a espera de um resultado do metodo ou uma solicitação a uma web API. Basicamente, falando, é o tratamento dos erros e condições, dos mesmos, nos processos web.
 
-<p>Cada exceção tem um <strong>nome</strong>, que é uma pequena string de estilo "CamelCase" que identifica o erro ou condição anormal.</p>
+Cada exceção tem um **nome**, que é uma pequena string de estilo "CamelCase" que identifica o erro ou condição anormal.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("DOMException.DOMException()", "DOMException()")}} {{experimental_inline}}</dt>
- <dd>Returns a <code>DOMException</code> object with a specified message and name.</dd>
-</dl>
+- {{domxref("DOMException.DOMException()", "DOMException()")}} {{experimental_inline}}
+  - : Returns a `DOMException` object with a specified message and name.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("DOMException.code")}} {{deprecated_inline}} {{readOnlyInline}}</dt>
- <dd>Returns a <code>short</code> that contains one of the <a href="#error_codes">error code constants</a>, or <code>0</code> if none match. This field is used for historical reasons. New DOM exceptions don't use this anymore: they put this info in the {{domxref("DOMException.name")}} attribute.</dd>
- <dt>{{domxref("DOMException.message")}} {{readOnlyInline}}</dt>
- <dd>Returns a {{ domxref("DOMString") }} representing a message or description associated with the given <a href="/en-US/docs/Web/API/DOMException#Error_names">error name</a>.</dd>
- <dt>{{domxref("DOMException.name")}} {{readOnlyInline}}</dt>
- <dd>Returns a {{domxref("DOMString")}} that contains one of the strings associated with an <a href="#Error_names">error name</a>.</dd>
-</dl>
+- {{domxref("DOMException.code")}} {{deprecated_inline}} {{readOnlyInline}}
+  - : Returns a `short` that contains one of the [error code constants](#error_codes), or `0` if none match. This field is used for historical reasons. New DOM exceptions don't use this anymore: they put this info in the {{domxref("DOMException.name")}} attribute.
+- {{domxref("DOMException.message")}} {{readOnlyInline}}
+  - : Returns a {{ domxref("DOMString") }} representing a message or description associated with the given [error name](/pt-BR/docs/Web/API/DOMException#Error_names).
+- {{domxref("DOMException.name")}} {{readOnlyInline}}
+  - : Returns a {{domxref("DOMString")}} that contains one of the strings associated with an [error name](#Error_names).
 
-<h2 id="Error_names">Error names</h2>
+## Error names
 
-<p>Common error names are listed here. Some APIs define their own sets of names, so this is not necessarily a complete list.</p>
+Common error names are listed here. Some APIs define their own sets of names, so this is not necessarily a complete list.
 
-<div class="note">
-<p><strong>Note</strong>: Because historically the errors were identified by a numeric value which corresponded with a named variable defined to have that value, some of the entries below indicate the legacy code value and constant name that were used in the past.</p>
-</div>
+> **Nota:** Because historically the errors were identified by a numeric value which corresponded with a named variable defined to have that value, some of the entries below indicate the legacy code value and constant name that were used in the past.
 
-<dl>
- <dt><a id="exception-IndexSizeError"><code>IndexSizeError</code></a></dt>
- <dd>The index is not in the allowed range. For example, this can be thrown by the {{ domxref("Range") }} object. (Legacy code value: <code>1</code> and legacy constant name: <code>INDEX_SIZE_ERR</code>)</dd>
- <dt><code><a id="exception-HierarchyRequestError">HierarchyRequestError</a></code></dt>
- <dd>The node tree hierarchy is not correct. (Legacy code value: <code>3</code> and legacy constant name: <code>HIERARCHY_REQUEST_ERR</code>)</dd>
- <dt><a id="exception-WrongDocumentError"><code>WrongDocumentError</code></a></dt>
- <dd>The object is in the wrong {{ domxref("Document") }}. (Legacy code value: <code>4</code> and legacy constant name: <code>WRONG_DOCUMENT_ERR</code>)</dd>
- <dt><a id="exception-InvalidCharacterError"><code>InvalidCharacterError</code></a></dt>
- <dd>The string contains invalid characters. (Legacy code value: <code>5</code> and legacy constant name: <code>INVALID_CHARACTER_ERR</code>)</dd>
- <dt><a id="exception-NoModificationAllowedError"><code>NoModificationAllowedError</code></a></dt>
- <dd>The object cannot be modified. (Legacy code value: <code>7</code> and legacy constant name: <code>NO_MODIFICATION_ALLOWED_ERR</code>)</dd>
- <dt><a id="exception-NotFoundError"><code>NotFoundError</code></a></dt>
- <dd>The object cannot be found here. (Legacy code value: <code>8</code> and legacy constant name: <code>NOT_FOUND_ERR</code>)</dd>
- <dt><a id="exception-NotFoundError"><code>NotSupportedError</code></a></dt>
- <dd>The operation is not supported. (Legacy code value: <code>9</code> and legacy constant name: <code>NOT_SUPPORTED_ERR</code>)</dd>
- <dt><a id="exception-InvalidStateError"><code>InvalidStateError</code></a></dt>
- <dd>The object is in an invalid state. (Legacy code value: <code>11</code> and legacy constant name: <code>INVALID_STATE_ERR</code>)</dd>
- <dt><a id="exception-SyntaxError"><code>SyntaxError</code></a></dt>
- <dd>The string did not match the expected pattern. (Legacy code value: <code>12</code> and legacy constant name: <code>SYNTAX_ERR</code>)</dd>
- <dt><a id="exception-InvalidModificationError"><code>InvalidModificationError</code></a></dt>
- <dd>The object cannot be modified in this way. (Legacy code value: <code>13</code> and legacy constant name: <code>INVALID_MODIFICATION_ERR</code>)</dd>
- <dt><a id="exception-NamespaceError"><code>NamespaceError</code></a></dt>
- <dd>The operation is not allowed by Namespaces in XML. (Legacy code value: <code>14</code> and legacy constant name: <code>NAMESPACE_ERR</code>)</dd>
- <dt><a id="exception-InvalidAccessError"><code>InvalidAccessError</code></a></dt>
- <dd>The object does not support the operation or argument. (Legacy code value: <code>15</code> and legacy constant name: <code>INVALID_ACCESS_ERR</code>)</dd>
- <dt><a id="exception-TypeMismatchError"><code>TypeMismatchError</code></a> {{deprecated_inline}}</dt>
- <dd>The type of the object does not match the expected type. (Legacy code value: <code>17</code> and legacy constant name: <code>TYPE_MISMATCH_ERR</code>) This value is deprecated; the JavaScript {{jsxref("TypeError")}} exception is now raised instead of a <code>DOMException</code> with this value.</dd>
- <dt><a id="exception-SecurityError"><code>SecurityError</code></a></dt>
- <dd>The operation is insecure. (Legacy code value: <code>18</code> and legacy constant name: <code>SECURITY_ERR</code>)</dd>
- <dt><a id="exception-NetworkError"><code>NetworkError</code></a> {{experimental_inline}}</dt>
- <dd>A network error occurred. (Legacy code value: <code>19</code> and legacy constant name: <code>NETWORK_ERR</code>)</dd>
- <dt><a id="exception-AbortError"><code>AbortError</code></a> {{experimental_inline}}</dt>
- <dd>The operation was aborted. (Legacy code value: <code>20</code> and legacy constant name: <code>ABORT_ERR</code>)</dd>
- <dt><a id="exception-URLMismatchError"><code>URLMismatchError</code></a> {{experimental_inline}}</dt>
- <dd>The given URL does not match another URL. (Legacy code value: <code>21</code> and legacy constant name: <code>URL_MISMATCH_ERR</code>)</dd>
- <dt><a id="exception-QuotaExceededError"><code>QuotaExceededError</code></a> {{experimental_inline}}</dt>
- <dd>The quota has been exceeded. (Legacy code value: <code>22</code> and legacy constant name: <code>QUOTA_EXCEEDED_ERR</code>)</dd>
- <dt><a id="exception-TimeoutError"><code>TimeoutError</code></a></dt>
- <dd>The operation timed out. (Legacy code value: <code>23</code> and legacy constant name: <code>TIMEOUT_ERR</code>)</dd>
- <dt><a id="exception-InvalidNodeTypeError"><code>InvalidNodeTypeError</code></a> {{experimental_inline}}</dt>
- <dd>The node is incorrect or has an incorrect ancestor for this operation. (Legacy code value: <code>24</code> and legacy constant name: <code>INVALID_NODE_TYPE_ERR</code>)</dd>
- <dt><a id="exception-DataCloneError"><code>DataCloneError</code></a> {{experimental_inline}}</dt>
- <dd>The object can not be cloned. (Legacy code value: <code>25</code> and legacy constant name: <code>DATA_CLONE_ERR</code>)</dd>
- <dt><a id="exception-EncodingError"><code>EncodingError</code></a> {{experimental_inline}}</dt>
- <dd>The encoding or decoding operation failed (No legacy code value and constant name).</dd>
- <dt><a id="exception-NotReadableError"><code>NotReadableError</code></a> {{experimental_inline}}</dt>
- <dd>The input/output read operation failed (No legacy code value and constant name).</dd>
- <dt><a id="exception-UnknownError"><code>UnknownError</code></a> {{experimental_inline}}</dt>
- <dd>The operation failed for an unknown transient reason (e.g. out of memory) (No legacy code value and constant name).</dd>
- <dt><a id="exception-ConstraintError"><code>ConstraintError</code></a> {{experimental_inline}}</dt>
- <dd>A mutation operation in a transaction failed because a constraint was not satisfied (No legacy code value and constant name).</dd>
- <dt><a id="exception-DataError"><code>DataError</code></a> {{experimental_inline}}</dt>
- <dd>Provided data is inadequate (No legacy code value and constant name).</dd>
- <dt><a id="exception-TransactionInactiveError"><code>TransactionInactiveError</code></a> {{experimental_inline}}</dt>
- <dd>A request was placed against a transaction which is currently not active, or which is finished (No legacy code value and constant name).</dd>
- <dt><a id="exception-ReadOnlyError"><code>ReadOnlyError</code></a> {{experimental_inline}}</dt>
- <dd>The mutating operation was attempted in a "readonly" transaction (No legacy code value and constant name).</dd>
- <dt><a id="exception-VersionError"><code>VersionError</code></a> {{experimental_inline}}</dt>
- <dd>An attempt was made to open a database using a lower version than the existing version (No legacy code value and constant name).</dd>
- <dt><a id="exception-OperationError"><code>OperationError</code></a> {{experimental_inline}}</dt>
- <dd>The operation failed for an operation-specific reason (No legacy code value and constant name).</dd>
- <dt><a id="exception-NotAllowedError"><code>NotAllowedError</code></a></dt>
- <dd>The request is not allowed by the user agent or the platform in the current context, possibly because the user denied permission (No legacy code value and constant name).</dd>
-</dl>
+- `IndexSizeError`
+  - : The index is not in the allowed range. For example, this can be thrown by the {{ domxref("Range") }} object. (Legacy code value: `1` and legacy constant name: `INDEX_SIZE_ERR`)
+- [`HierarchyRequestError`]()
+  - : The node tree hierarchy is not correct. (Legacy code value: `3` and legacy constant name: `HIERARCHY_REQUEST_ERR`)
+- `WrongDocumentError`
+  - : The object is in the wrong {{ domxref("Document") }}. (Legacy code value: `4` and legacy constant name: `WRONG_DOCUMENT_ERR`)
+- `InvalidCharacterError`
+  - : The string contains invalid characters. (Legacy code value: `5` and legacy constant name: `INVALID_CHARACTER_ERR`)
+- `NoModificationAllowedError`
+  - : The object cannot be modified. (Legacy code value: `7` and legacy constant name: `NO_MODIFICATION_ALLOWED_ERR`)
+- `NotFoundError`
+  - : The object cannot be found here. (Legacy code value: `8` and legacy constant name: `NOT_FOUND_ERR`)
+- `NotSupportedError`
+  - : The operation is not supported. (Legacy code value: `9` and legacy constant name: `NOT_SUPPORTED_ERR`)
+- `InvalidStateError`
+  - : The object is in an invalid state. (Legacy code value: `11` and legacy constant name: `INVALID_STATE_ERR`)
+- `SyntaxError`
+  - : The string did not match the expected pattern. (Legacy code value: `12` and legacy constant name: `SYNTAX_ERR`)
+- `InvalidModificationError`
+  - : The object cannot be modified in this way. (Legacy code value: `13` and legacy constant name: `INVALID_MODIFICATION_ERR`)
+- `NamespaceError`
+  - : The operation is not allowed by Namespaces in XML. (Legacy code value: `14` and legacy constant name: `NAMESPACE_ERR`)
+- `InvalidAccessError`
+  - : The object does not support the operation or argument. (Legacy code value: `15` and legacy constant name: `INVALID_ACCESS_ERR`)
+- `TypeMismatchError` {{deprecated_inline}}
+  - : The type of the object does not match the expected type. (Legacy code value: `17` and legacy constant name: `TYPE_MISMATCH_ERR`) This value is deprecated; the JavaScript {{jsxref("TypeError")}} exception is now raised instead of a `DOMException` with this value.
+- `SecurityError`
+  - : The operation is insecure. (Legacy code value: `18` and legacy constant name: `SECURITY_ERR`)
+- `NetworkError` {{experimental_inline}}
+  - : A network error occurred. (Legacy code value: `19` and legacy constant name: `NETWORK_ERR`)
+- `AbortError` {{experimental_inline}}
+  - : The operation was aborted. (Legacy code value: `20` and legacy constant name: `ABORT_ERR`)
+- `URLMismatchError` {{experimental_inline}}
+  - : The given URL does not match another URL. (Legacy code value: `21` and legacy constant name: `URL_MISMATCH_ERR`)
+- `QuotaExceededError` {{experimental_inline}}
+  - : The quota has been exceeded. (Legacy code value: `22` and legacy constant name: `QUOTA_EXCEEDED_ERR`)
+- `TimeoutError`
+  - : The operation timed out. (Legacy code value: `23` and legacy constant name: `TIMEOUT_ERR`)
+- `InvalidNodeTypeError` {{experimental_inline}}
+  - : The node is incorrect or has an incorrect ancestor for this operation. (Legacy code value: `24` and legacy constant name: `INVALID_NODE_TYPE_ERR`)
+- `DataCloneError` {{experimental_inline}}
+  - : The object can not be cloned. (Legacy code value: `25` and legacy constant name: `DATA_CLONE_ERR`)
+- `EncodingError` {{experimental_inline}}
+  - : The encoding or decoding operation failed (No legacy code value and constant name).
+- `NotReadableError` {{experimental_inline}}
+  - : The input/output read operation failed (No legacy code value and constant name).
+- `UnknownError` {{experimental_inline}}
+  - : The operation failed for an unknown transient reason (e.g. out of memory) (No legacy code value and constant name).
+- `ConstraintError` {{experimental_inline}}
+  - : A mutation operation in a transaction failed because a constraint was not satisfied (No legacy code value and constant name).
+- `DataError` {{experimental_inline}}
+  - : Provided data is inadequate (No legacy code value and constant name).
+- `TransactionInactiveError` {{experimental_inline}}
+  - : A request was placed against a transaction which is currently not active, or which is finished (No legacy code value and constant name).
+- `ReadOnlyError` {{experimental_inline}}
+  - : The mutating operation was attempted in a "readonly" transaction (No legacy code value and constant name).
+- `VersionError` {{experimental_inline}}
+  - : An attempt was made to open a database using a lower version than the existing version (No legacy code value and constant name).
+- `OperationError` {{experimental_inline}}
+  - : The operation failed for an operation-specific reason (No legacy code value and constant name).
+- `NotAllowedError`
+  - : The request is not allowed by the user agent or the platform in the current context, possibly because the user denied permission (No legacy code value and constant name).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebIDL', '#idl-DOMException', 'constructor')}}</td>
-   <td>{{Spec2('WebIDL')}}</td>
-   <td>Adds the constructor for the <code>DOMException</code> class. Adds the <code>NotReadableError</code>, <code>UnknownError</code>, <code>ConstraintError</code>, <code>DataError</code>, <code>TransactionInactiveError</code>, <code>ReadOnlyError</code>, <code>VersionError</code>, <code>OperationError</code>, and <code>NotAllowedError</code> values.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM4', '#exception-domexception', 'DOMException')}}</td>
-   <td>{{Spec2('DOM4')}}</td>
-   <td>Added <code>SECURITY_ERR</code>, <code>NETWORK_ERR</code>, <code>ABORT_ERR</code>, <code>URL_MISMATCH_ERR</code>, <code>QUOTA_EXCEEDED_ERR</code>, <code>TIMEOUT_ERR</code>, <code>INVALID_NODE_TYPE_ERR</code>, and <code>DATA_CLONE_ERR</code>. The property <code>code</code> has been deprecated for exception values. The <code>EncodingError</code> value added.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-17189187', 'DOMException')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Added of <code>VALIDATION_ERR</code> and <code>TYPE_MISMATCH_ERR</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-17189187', 'DOMException')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>Added of <code>INVALID_STATE_ERR</code>, <code>SYNTAX_ERR</code>, <code>INVALID_MODIFICATION_ERR</code>, <code>NAMESPACE_ERR</code>, and <code>INVALID_ACCESS_ERR</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-17189187', 'DOMException')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                       | Comment                                                                                                                                                                                                                                                  |
+| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('WebIDL', '#idl-DOMException', 'constructor')}}                     | {{Spec2('WebIDL')}}     | Adds the constructor for the `DOMException` class. Adds the `NotReadableError`, `UnknownError`, `ConstraintError`, `DataError`, `TransactionInactiveError`, `ReadOnlyError`, `VersionError`, `OperationError`, and `NotAllowedError` values.             |
+| {{SpecName('DOM4', '#exception-domexception', 'DOMException')}}             | {{Spec2('DOM4')}}     | Added `SECURITY_ERR`, `NETWORK_ERR`, `ABORT_ERR`, `URL_MISMATCH_ERR`, `QUOTA_EXCEEDED_ERR`, `TIMEOUT_ERR`, `INVALID_NODE_TYPE_ERR`, and `DATA_CLONE_ERR`. The property `code` has been deprecated for exception values. The `EncodingError` value added. |
+| {{SpecName('DOM3 Core', 'core.html#ID-17189187', 'DOMException')}}         | {{Spec2('DOM3 Core')}} | Added of `VALIDATION_ERR` and `TYPE_MISMATCH_ERR`.                                                                                                                                                                                                       |
+| {{SpecName('DOM2 Core', 'core.html#ID-17189187', 'DOMException')}}         | {{Spec2('DOM2 Core')}} | Added of `INVALID_STATE_ERR`, `SYNTAX_ERR`, `INVALID_MODIFICATION_ERR`, `NAMESPACE_ERR`, and `INVALID_ACCESS_ERR`.                                                                                                                                       |
+| {{SpecName('DOM1', 'level-one-core.html#ID-17189187', 'DOMException')}} | {{Spec2('DOM1')}}     | Initial definition.                                                                                                                                                                                                                                      |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("api.DOMException")}}
 
+## See also
 
-<p>{{Compat("api.DOMException")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{ domxref("DOMError") }}</li>
-</ul>
+- {{ domxref("DOMError") }}

@@ -3,42 +3,37 @@ title: Console.timeStamp()
 slug: Web/API/Console/timeStamp
 translation_of: Web/API/Console/timeStamp
 ---
-<p>{{ APIRef("Console API") }}{{Non-standard_header}}</p>
+{{ APIRef("Console API") }}{{Non-standard_header}}
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+## Sumário
 
-<p>Adiciona um marcador simples para as ferramentas <a class="external external-icon" href="https://developer.chrome.com/devtools/docs/timeline">Timeline</a> ou <a href="https://developer.mozilla.org/en-US/docs/Tools/Performance/Waterfall">Waterfall</a> do navegador. Ele deixa você relacionar um ponto no seu código com os outros eventos gravados na linha do tempo, como um evento de layout ou de pintura.</p>
+Adiciona um marcador simples para as ferramentas [Timeline](https://developer.chrome.com/devtools/docs/timeline) ou [Waterfall](/pt-BR/docs/Tools/Performance/Waterfall) do navegador. Ele deixa você relacionar um ponto no seu código com os outros eventos gravados na linha do tempo, como um evento de layout ou de pintura.
 
-<p>Opcionalmente, você pode fornecer um argumento como rótulo do carimbo de hora, e esse rótulo será então mostrado juntamente com a marcação.</p>
+Opcionalmente, você pode fornecer um argumento como rótulo do carimbo de hora, e esse rótulo será então mostrado juntamente com a marcação.
 
-<div class="note">
-<p><strong>Nota:</strong> essa funcionalidade está disponível em <a href="/pt-BR/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Nota:** essa funcionalidade está disponível em [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="eval">console.timeStamp(rotulo);
-</pre>
+```
+console.timeStamp(rotulo);
+```
 
-<h2 id="Parâmetros">Parâmetros</h2>
+## Parâmetros
 
-<dl>
- <dt><code>rotulo</code></dt>
- <dd>Rótulo para o carimbo de hora. Opcional.</dd>
-</dl>
+- `rotulo`
+  - : Rótulo para o carimbo de hora. Opcional.
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<p><a href="https://github.com/DeveloperToolsWG/console-object/blob/master/api.md#consoletimestamplabel">API do objeto Console</a></p>
+[API do objeto Console](https://github.com/DeveloperToolsWG/console-object/blob/master/api.md#consoletimestamplabel)
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.console.timeStamp")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{ domxref("Console.time()") }}</li>
- <li>{{ domxref("Console.timeEnd()") }}</li>
- <li><a href="/en-US/docs/Tools/Performance/Waterfall#Timestamp_markers">Adding timestamps to the Waterfall</a></li>
-</ul>
+- {{ domxref("Console.time()") }}
+- {{ domxref("Console.timeEnd()") }}
+- [Adding timestamps to the Waterfall](/pt-BR/docs/Tools/Performance/Waterfall#Timestamp_markers)

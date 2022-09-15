@@ -6,34 +6,28 @@ tags:
   - DOM
 translation_of: Web/API/ProcessingInstruction
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><span class="seoSummary">Uma <strong>ProcessingInstruction (Instrução de Processamento)</strong> incorpora instruções específicas de aplicações em <a href="/pt-BR/docs/XML_introduction">XML</a> que pode ser ignorada por outras aplicações que não as reconhece. Mesmo se um processador XML ignora as instruções de processamento, irá dá-los um lugar no DOM. </span></p>
+Uma **ProcessingInstruction (Instrução de Processamento)** incorpora instruções específicas de aplicações em [XML](/pt-BR/docs/XML_introduction) que pode ser ignorada por outras aplicações que não as reconhece. Mesmo se um processador XML ignora as instruções de processamento, irá dá-los um lugar no DOM.
 
-<p>Uma instrução de processamento é diferente de uma <a href="/pt-BR/docs/XML/XML_Declaration">declaração XML</a>, que fornece informação sobre o documento como por exemplo codificação de caracteres, e pode somente aparecer como o primeiro item em um documento.</p>
+Uma instrução de processamento é diferente de uma [declaração XML](/pt-BR/docs/XML/XML_Declaration), que fornece informação sobre o documento como por exemplo codificação de caracteres, e pode somente aparecer como o primeiro item em um documento.
 
-<p>Instruções de processamento definidas por usuário não podem começar com <code>'xml'</code>, pois estes são reservados (como <code><a href="/pt-BR/docs/XML/xml-stylesheet">&lt;?xml-stylesheet ?&gt;</a>)</code>.</p>
+Instruções de processamento definidas por usuário não podem começar com `'xml'`, pois estes são reservados (como `<?xml-stylesheet ?>)`.
 
-<p>Instruções de processamento herdam métodos e propriedades do <code><a href="/pt-BR/docs/Web/API/Node">Node</a></code>. </p>
+Instruções de processamento herdam métodos e propriedades do [`Node`](/pt-BR/docs/Web/API/Node).
 
-<p>{{InheritanceDiagram(700,70)}}</p>
+{{InheritanceDiagram(700,70)}}
 
-<h3 id="Attributes" name="Attributes">Atributos</h3>
+### Atributos
 
-<ul>
- <li>alvo (DOMString) - depois do <code>&lt;?</code> e antes do <em><a href="/pt-BR/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM">whitespace</a></em> separando-o de <code>data</code>. </li>
- <li>dado (DOMString) - primeiro caractere <em>whitespace</em> brancodepois de <code>target</code> e antes de <code>?&gt;</code> </li>
-</ul>
+- alvo (DOMString) - depois do `<?` e antes do _[whitespace](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM)_ separando-o de `data`.
+- dado (DOMString) - primeiro caractere _whitespace_ brancodepois de `target` e antes de `?>`
 
-<h3 id="Specification" name="Specification">Especificações</h3>
+### Especificações
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-1004215813">DOM Level 1 Core: ProcessingInstruction interface</a></li>
-</ul>
+- [DOM Level 1 Core: ProcessingInstruction interface](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-1004215813)
 
-<h3 id="See_also" name="See_also">Veja também</h3>
+### Veja também
 
-<ul>
- <li><a href="/en/DOM/document.createProcessingInstruction">document.createProcessingInstruction</a></li>
- <li><a href="/pt-BR/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM">whitespace no DOM</a></li>
-</ul>
+- [document.createProcessingInstruction](/en/DOM/document.createProcessingInstruction)
+- [whitespace no DOM](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM)

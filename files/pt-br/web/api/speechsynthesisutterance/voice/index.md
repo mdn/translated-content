@@ -10,31 +10,33 @@ tags:
   - Web Speech API
 translation_of: Web/API/SpeechSynthesisUtterance/voice
 ---
-<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>A propriedade <strong><code>voice</code></strong>  da interface {{domxref("SpeechSynthesisUtterance")}} retorna e configura a voz que será usada para a fala.</p>
+A propriedade **`voice`** da interface {{domxref("SpeechSynthesisUtterance")}} retorna e configura a voz que será usada para a fala.
 
-<p>Essa propriedade deve ser configurada para um dos objetos {{domxref("SpeechSynthesisVoice")}} retornado por {{domxref("SpeechSynthesis.getVoices()")}}. Se não for configurada no momento da fala, a voz usada será a determinada como default na propriedade {{domxref("SpeechSynthesisUtterance.lang","lang")}}.</p>
+Essa propriedade deve ser configurada para um dos objetos {{domxref("SpeechSynthesisVoice")}} retornado por {{domxref("SpeechSynthesis.getVoices()")}}. Se não for configurada no momento da fala, a voz usada será a determinada como default na propriedade {{domxref("SpeechSynthesisUtterance.lang","lang")}}.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var myVoice = speechSynthesisUtteranceInstance.voice;
+```
+var myVoice = speechSynthesisUtteranceInstance.voice;
 speechSynthesisUtteranceInstance.voice = speechSynthesisVoiceInstance;
-</pre>
+```
 
-<h3 id="Valor">Valor</h3>
+### Valor
 
-<p>Um objeto {{domxref("SpeechSynthesisVoice")}}.</p>
+Um objeto {{domxref("SpeechSynthesisVoice")}}.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: js"><code class="language-js"><span class="keyword token">var</span> synth <span class="operator token">=</span> window<span class="punctuation token">.</span>speechSynthesis<span class="punctuation token">;</span>
+```js
+var synth = window.speechSynthesis;
 
-<span class="keyword token">var</span> inputForm <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'form'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> inputTxt <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'input'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> voiceSelect <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'select'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+var inputForm = document.querySelector('form');
+var inputTxt = document.querySelector('input');
+var voiceSelect = document.querySelector('select');
 
-<span class="keyword token">var</span> voices <span class="operator token">=</span> synth<span class="punctuation token">.</span><span class="function token">getVoices</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code>
+var voices = synth.getVoices();
 
   ...
 
@@ -43,38 +45,26 @@ inputForm.onsubmit = function(event) {
 
   var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i &lt; voices.length ; i++) {
+  for(i = 0; i < voices.length ; i++) {
     if(voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
   }
   synth.speak(utterThis);
   inputTxt.blur();
-}</pre>
+}
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Speech API', '#dfn-utterancevoice', 'voice')}}</td>
-   <td>{{Spec2('Web Speech API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                        | Status                               | Comentário |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | ---------- |
+| {{SpecName('Web Speech API', '#dfn-utterancevoice', 'voice')}} | {{Spec2('Web Speech API')}} |            |
 
-<h2 id="Compatiblidade_dos_navegadores">Compatiblidade dos navegadores</h2>
+## Compatiblidade dos navegadores
 
 {{Compat("api.SpeechSynthesisUtterance.voice")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/pt-BR/docs/Web/API/Web_Speech_API)

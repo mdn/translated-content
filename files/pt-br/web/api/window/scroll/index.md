@@ -8,50 +8,37 @@ tags:
   - metodo
 translation_of: Web/API/Window/scroll
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<h2 id="Summary" name="Summary">Resumo</h2>
+## Resumo
 
-<p>Rola a janela para uma posição específica no documento.</p>
+Rola a janela para uma posição específica no documento.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">window.scroll(<em>x-coord</em>, <em>y-coord</em>)
-</pre>
+```
+window.scroll(x-coord, y-coord)
+```
 
-<h3 id="Parameters" name="Parameters">Parâmetros</h3>
+### Parâmetros
 
-<ul>
- <li><code>x-coord</code> é o pixel que você deseja exibir ao longo do eixo horizontal do documento em relação à sua extremidade superior esquerda. </li>
- <li><code>y-coord </code>é o pixel que você deseja exibir ao longo do eixo vertical do documento em relação à sua extremidade superior esquerda. </li>
-</ul>
+- `x-coord` é o pixel que você deseja exibir ao longo do eixo horizontal do documento em relação à sua extremidade superior esquerda.
+- `y-coord `é o pixel que você deseja exibir ao longo do eixo vertical do documento em relação à sua extremidade superior esquerda.
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<pre class="brush:html">&lt;!-- disponha o centésimo pixel vertical no topo da janela --&gt;
+```html
+<!-- disponha o centésimo pixel vertical no topo da janela -->
 
-&lt;button onClick="scroll(0, 100);"&gt;clique para rolar 100 pixels para baixo&lt;/button&gt;
-</pre>
+<button onClick="scroll(0, 100);">clique para rolar 100 pixels para baixo</button>
+```
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p><a href="/en-US/docs/DOM/window.scrollTo">window.scrollTo</a> é essencialmente equivalente a este método. Para rolar uma distância específica repetidamente, utilize o método <a href="/en-US/docs/Window.scrollBy">window.scrollBy</a>. Veja também <a href="/en-US/docs/Window.scrollByLines">window.scrollByLines</a>, <a href="/en-US/docs/Window.scrollByPages">window.scrollByPages</a>.</p>
+[window.scrollTo](/pt-BR/docs/DOM/window.scrollTo) é essencialmente equivalente a este método. Para rolar uma distância específica repetidamente, utilize o método [window.scrollBy](/pt-BR/docs/Window.scrollBy). Veja também [window.scrollByLines](/pt-BR/docs/Window.scrollByLines), [window.scrollByPages](/pt-BR/docs/Window.scrollByPages).
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSSOM View', '#dom-window-scroll', 'window.scroll()') }}</td>
-   <td>{{ Spec2('CSSOM View') }}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                | Status                           | Comentário         |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{ SpecName('CSSOM View', '#dom-window-scroll', 'window.scroll()') }} | {{ Spec2('CSSOM View') }} | Definição inicial. |

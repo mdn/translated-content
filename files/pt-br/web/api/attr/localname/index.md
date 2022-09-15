@@ -8,78 +8,63 @@ tags:
   - Referencia
 translation_of: Web/API/Attr/localName
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>A propriedade read-only <code><strong>Attr.localName</strong></code> retorna a parte do local de um nome qualificado de elemento.</p>
+A propriedade read-only **`Attr.localName`** retorna a parte do local de um nome qualificado de elemento.
 
-<div class="note">
-<p>Antes do DOM4 essa API foi definida dentro da interface {{domxref("Node")}}.</p>
-</div>
+> **Nota:** Antes do DOM4 essa API foi definida dentro da interface {{domxref("Node")}}.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><var>name</var> = <var>attribute</var>.localName
-</pre>
+```
+name = attribute.localName
+```
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>Uma {{domxref("DOMString")}} representando a parte local do nome qualificado do atributo.</p>
+Uma {{domxref("DOMString")}} representando a parte local do nome qualificado do atributo.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>O seguinte exemplo mostra "id" em um diálogo de alerta.</p>
+O seguinte exemplo mostra "id" em um diálogo de alerta.
 
-<h3 id="Conteúdo_HTML">Conteúdo HTML</h3>
+### Conteúdo HTML
 
-<pre class="brush: html">&lt;button id="example"&gt;Click me&lt;/button&gt;</pre>
+```html
+<button id="example">Click me</button>
+```
 
-<h3 id="Conteúdo_JavaScript">Conteúdo JavaScript</h3>
+### Conteúdo JavaScript
 
-<pre class="brush: js">const element = document.querySelector("#example");
+```js
+const element = document.querySelector("#example");
 element.addEventListener("click", function() {
   const attribute = element.attributes[0];
   alert(attribute.localName);
 });
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Example','100%',30) }}</p>
+{{ EmbedLiveSample('Example','100%',30) }}
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>O nome local de um atributo é a parte do nome qualificado do atributo the vem depois da vírgula. Nome qualificados são tipicamente utilizados em XML como parte do namespace(s) de um documento XML em particular.</p>
+O nome local de um atributo é a parte do nome qualificado do atributo the vem depois da vírgula. Nome qualificados são tipicamente utilizados em XML como parte do namespace(s) de um documento XML em particular.
 
-<div class="note">
-<p><strong>Nota:</strong> No {{Gecko("1.9.2")}} e anteriores, a propriedade retorna uma versão em letras maiúsculas do nome local para o atributo DOM do HTML (oposto a atributos XHTML no DOM do XML). Em versões posteriores, em conformidade com o HTML5, a propriedade retorna no caso de armazenamento interno do DOM, que é em letras minúsculas para ambos os atributos HTML no DOM do HTML  e XHTML no DOM do XML.</p>
-</div>
+> **Nota:** No {{Gecko("1.9.2")}} e anteriores, a propriedade retorna uma versão em letras maiúsculas do nome local para o atributo DOM do HTML (oposto a atributos XHTML no DOM do XML). Em versões posteriores, em conformidade com o HTML5, a propriedade retorna no caso de armazenamento interno do DOM, que é em letras minúsculas para ambos os atributos HTML no DOM do HTML e XHTML no DOM do XML.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM4', '#interface-attr', 'Attr.localName')}}</td>
-   <td>{{Spec2('DOM4')}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                | Status                   | Comment           |
+| ---------------------------------------------------------------------------- | ------------------------ | ----------------- |
+| {{SpecName('DOM4', '#interface-attr', 'Attr.localName')}} | {{Spec2('DOM4')}} | Definição inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Attr.localName")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("Attr.namespaceURI")}}</li>
- <li>{{domxref("Attr.prefix")}}</li>
- <li>{{domxref("Element.localName")}}</li>
- <li>{{domxref("Node.localName")}}</li>
-</ul>
+- {{domxref("Attr.namespaceURI")}}
+- {{domxref("Attr.prefix")}}
+- {{domxref("Element.localName")}}
+- {{domxref("Node.localName")}}

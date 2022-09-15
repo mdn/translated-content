@@ -3,67 +3,54 @@ title: Request()
 slug: Web/API/Request/Request
 translation_of: Web/API/Request/Request
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>O construtor <code><strong>Request()</strong></code> cria um novo objeto {{domxref("Request")}}.</p>
+O construtor **`Request()`** cria um novo objeto {{domxref("Request")}}.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var myRequest = new Request(input[, init]);</pre>
+```
+var myRequest = new Request(input[, init]);
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><em>input</em></dt>
- <dd>Define o recurso que você deseja buscar. Isso pode ser:
- <ul>
-  <li>Um {{domxref("USVString")}} contendo o URL direto do recurso que você deseja buscar.</li>
-  <li>Um objeto {{domxref("Request")}}, criando efetivamente uma cópia. Observe as seguintes atualizações comportamentais para reter a segurança e, ao mesmo tempo, tornar o construtor menos propenso a gerar exceções:
-   <ul>
-    <li>Se esse objeto existir em outra origem para a chamada do construtor, o {{domxref("Request.referrer")}} será removido.</li>
-    <li>Se esse objeto tiver um {{domxref("Request.mode")}} de navegação, o valor do modo será convertido para a mesma origem.</li>
-   </ul>
-  </li>
- </ul>
- </dd>
- <dt><em>init</em> {{optional_inline}}</dt>
- <dd>Um objeto de opções contendo quaisquer configurações personalizadas que você deseja aplicar à solicitação. As opções possíveis são:
- <ul>
-  <li><code>method</code>: O método de request, ex: <code>GET</code>, <code>POST</code>.</li>
-  <li><code>headers</code>: Quaisquer cabeçalhos que você deseja adicionar à sua solicitação, contidos em um objeto {{domxref("Headers")}} ou em um objeto literal com valores de {{domxref("ByteString")}}.</li>
-  <li><code>body</code>: Qualquer corpo que você deseja adicionar à sua solicitação: isso pode ser um {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}}, ou objeto {{domxref("ReadableStream")}}. Observe que uma solicitação usando o método GET ou HEAD não pode ter um corpo.</li>
-  <li><code>mode</code>: <span class="tlid-translation translation"><span title="">O modo que você deseja usar para a solicitação, por exemplo:</span></span> <code>cors</code>, <code>no-cors</code>, <code>same-origin</code>, or <code>navigate</code>. O padrão é <code>cors</code>. No Chrome o padrão é <code>no-cors</code> antes do Chrome 47 e <code>same-origin</code> do Chrome 47 em diante.</li>
-  <li><code>credentials</code>: As credenciais de solicitação que você deseja usar para a solicitação: <code>omit</code>, <code>same-origin</code>, ou <code>include</code>. O padrão é <code>omit</code>. No Chrome o padrão é <code>same-origin</code> antes do Chrome 47 e <code>include</code> do Chrome 47 em diante.</li>
-  <li><code>cache</code>: O <a href="/en-US/docs/Web/API/Request/cache">cache mode</a>  <span class="tlid-translation translation"><span title="">que você deseja usar para a solicitação.</span></span></li>
-  <li><code>redirect</code>: O modo de redirecionamento para usar: <code>follow</code>, <code>error</code>, or <code>manual</code>. No Chrome o padrão é <code>follow</code> (antes do Chrome 47 foi padronizado <code>manual</code>).</li>
-  <li><code>referrer</code>: Um {{domxref("USVString")}} especificando <code>no-referrer</code>, <code>client</code>, ou uma URL. O padrão é <code>client</code>.</li>
-  <li><code>integrity</code>: Contém o <a href="/en-US/docs/Web/Security/Subresource_Integrity">valor de integridade do sub-recurso</a> da solicitação (exemplo: <code>sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=</code>).</li>
- </ul>
- </dd>
-</dl>
+- _input_
 
-<h2 id="Erros">Erros</h2>
+  - : Define o recurso que você deseja buscar. Isso pode ser:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Tipo</th>
-   <th scope="col">Descrição</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>TypeError</code></td>
-   <td>Desde <a href="/en-US/docs/Mozilla/Firefox/Releases/43">Firefox 43</a>, <code>Request()</code> lançará um TypeError se o URL tiver credenciais, tal como http://user:password@example.com.</td>
-  </tr>
- </tbody>
-</table>
+    - Um {{domxref("USVString")}} contendo o URL direto do recurso que você deseja buscar.
+    - Um objeto {{domxref("Request")}}, criando efetivamente uma cópia. Observe as seguintes atualizações comportamentais para reter a segurança e, ao mesmo tempo, tornar o construtor menos propenso a gerar exceções:
 
-<h2 id="Exemplo">Exemplo</h2>
+      - Se esse objeto existir em outra origem para a chamada do construtor, o {{domxref("Request.referrer")}} será removido.
+      - Se esse objeto tiver um {{domxref("Request.mode")}} de navegação, o valor do modo será convertido para a mesma origem.
 
-<p>Em nosso <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-request-with-init">exemplo Fetch Request </a>(veja <a href="http://mdn.github.io/fetch-examples/fetch-request/">Fetch Request live</a>) nós criamos um novo objeto <code>Request</code> usando o construtor, <span class="tlid-translation translation"><span title="">em seguida, busque-o usando uma chamada </span></span>{{domxref("GlobalFetch.fetch")}}. Como estamos buscando uma imagem, executamos o {{domxref("Body.blob")}} na resposta para fornecer o tipo MIME adequado para que ela seja manipulada corretamente. Em seguida, criamos uma URL do objeto e a exibimos em um Elemento {{htmlelement("img")}}.</p>
+- _init_ {{optional_inline}}
 
-<pre class="brush: js">var myImage = document.querySelector('img');
+  - : Um objeto de opções contendo quaisquer configurações personalizadas que você deseja aplicar à solicitação. As opções possíveis são:
+
+    - `method`: O método de request, ex: `GET`, `POST`.
+    - `headers`: Quaisquer cabeçalhos que você deseja adicionar à sua solicitação, contidos em um objeto {{domxref("Headers")}} ou em um objeto literal com valores de {{domxref("ByteString")}}.
+    - `body`: Qualquer corpo que você deseja adicionar à sua solicitação: isso pode ser um {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}}, ou objeto {{domxref("ReadableStream")}}. Observe que uma solicitação usando o método GET ou HEAD não pode ter um corpo.
+    - `mode`: O modo que você deseja usar para a solicitação, por exemplo: `cors`, `no-cors`, `same-origin`, or `navigate`. O padrão é `cors`. No Chrome o padrão é `no-cors` antes do Chrome 47 e `same-origin` do Chrome 47 em diante.
+    - `credentials`: As credenciais de solicitação que você deseja usar para a solicitação: `omit`, `same-origin`, ou `include`. O padrão é `omit`. No Chrome o padrão é `same-origin` antes do Chrome 47 e `include` do Chrome 47 em diante.
+    - `cache`: O [cache mode](/pt-BR/docs/Web/API/Request/cache) que você deseja usar para a solicitação.
+    - `redirect`: O modo de redirecionamento para usar: `follow`, `error`, or `manual`. No Chrome o padrão é `follow` (antes do Chrome 47 foi padronizado `manual`).
+    - `referrer`: Um {{domxref("USVString")}} especificando `no-referrer`, `client`, ou uma URL. O padrão é `client`.
+    - `integrity`: Contém o [valor de integridade do sub-recurso](/pt-BR/docs/Web/Security/Subresource_Integrity) da solicitação (exemplo: `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
+
+## Erros
+
+| Tipo        | Descrição                                                                                                                                                              |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `TypeError` | Desde [Firefox 43](/pt-BR/docs/Mozilla/Firefox/Releases/43), `Request()` lançará um TypeError se o URL tiver credenciais, tal como http\://user:password\@example.com. |
+
+## Exemplo
+
+Em nosso [exemplo Fetch Request ](https://github.com/mdn/fetch-examples/tree/master/fetch-request-with-init)(veja [Fetch Request live](http://mdn.github.io/fetch-examples/fetch-request/)) nós criamos um novo objeto `Request` usando o construtor, em seguida, busque-o usando uma chamada {{domxref("GlobalFetch.fetch")}}. Como estamos buscando uma imagem, executamos o {{domxref("Body.blob")}} na resposta para fornecer o tipo MIME adequado para que ela seja manipulada corretamente. Em seguida, criamos uma URL do objeto e a exibimos em um Elemento {{htmlelement("img")}}.
+
+```js
+var myImage = document.querySelector('img');
 
 var myRequest = new Request('flowers.jpg');
 
@@ -72,11 +59,13 @@ fetch(myRequest).then(function(response) {
 }).then(function(response) {
   var objectURL = URL.createObjectURL(response);
   myImage.src = objectURL;
-});</pre>
+});
+```
 
-<p>Em nosso <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-request-with-init">Fetch Request with init example</a> (veja <a href="http://mdn.github.io/fetch-examples/fetch-request-with-init/">Fetch Request init live</a>) nós fazemos a mesma coisa, exceto que passamos em um objeto init quando invocamos <code>fetch()</code>:</p>
+Em nosso [Fetch Request with init example](https://github.com/mdn/fetch-examples/tree/master/fetch-request-with-init) (veja [Fetch Request init live](http://mdn.github.io/fetch-examples/fetch-request-with-init/)) nós fazemos a mesma coisa, exceto que passamos em um objeto init quando invocamos `fetch()`:
 
-<pre class="brush: js">var myImage = document.querySelector('img');
+```js
+var myImage = document.querySelector('img');
 
 var myHeaders = new Headers();
 myHeaders.append('Content-Type', 'image/jpeg');
@@ -90,17 +79,21 @@ var myRequest = new Request('flowers.jpg',myInit);
 
 fetch(myRequest).then(function(response) {
   ...
-});</pre>
+});
+```
 
-<p><span class="tlid-translation translation"><span title="">Observe que você também pode passar o objeto init para a chamada </span></span><code>fetch</code><span class="tlid-translation translation"><span title=""> para obter o mesmo efeito, por exemplo:</span></span></p>
+Observe que você também pode passar o objeto init para a chamada `fetch` para obter o mesmo efeito, por exemplo:
 
-<pre class="brush: js">fetch(myRequest,myInit).then(function(response) {
+```js
+fetch(myRequest,myInit).then(function(response) {
   ...
-});</pre>
+});
+```
 
-<p>Você também pode usar um literal de objeto como <code>headers</code> em <code>init</code>.</p>
+Você também pode usar um literal de objeto como `headers` em `init`.
 
-<pre class="brush: js">var myInit = { method: 'GET',
+```js
+var myInit = { method: 'GET',
                headers: {
                    'Content-Type': 'image/jpeg'
                },
@@ -108,44 +101,28 @@ fetch(myRequest).then(function(response) {
                cache: 'default' };
 
 var myRequest = new Request('flowers.jpg', myInit);
-</pre>
+```
 
-<p><span class="tlid-translation translation"><span title="">Você também pode passar um objeto {{domxref ("Request")}} para o construtor</span></span> <code>Request() </code><span class="tlid-translation translation"><span title="">para criar uma cópia do Request (isso é semelhante a chamar o método {{domxref("Request.clone", "clone()")}}</span> <span title="">.)</span></span></p>
+Você também pode passar um objeto {{domxref ("Request")}} para o construtor `Request() `para criar uma cópia do Request (isso é semelhante a chamar o método {{domxref("Request.clone", "clone()")}} .)
 
-<pre class="brush: js">var copy = new Request(myRequest);
-</pre>
+```js
+var copy = new Request(myRequest);
+```
 
-<div class="note">
-<p><strong>Nota</strong>: Este último uso é provavelmente útil apenas em <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorkers</a>.</p>
-</div>
+> **Nota:** Este último uso é provavelmente útil apenas em [ServiceWorkers](/pt-BR/docs/Web/API/ServiceWorker_API).
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Fetch','#dom-request','Request()')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                    | Status                   | Comentário |
+| ---------------------------------------------------------------- | ------------------------ | ---------- |
+| {{SpecName('Fetch','#dom-request','Request()')}} | {{Spec2('Fetch')}} |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("api.Request.Request")}}</p>
+{{Compat("api.Request.Request")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/pt-BR/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/pt-BR/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/pt-BR/docs/Web/HTTP)

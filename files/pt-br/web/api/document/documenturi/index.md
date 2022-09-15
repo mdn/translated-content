@@ -3,51 +3,27 @@ title: Document.documentURI
 slug: Web/API/Document/documentURI
 translation_of: Web/API/Document/documentURI
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}A propiedade **`documentURI`** da interface {{domxref("Document")}} retorna uma string com a localização de um documento.Na definição original DOM3 **`documentURI `**é um atributo de leitura/escrita.No padrão mais recente DOM4 é somente de leitura.
 
-<div>A propiedade <code><strong>documentURI</strong></code> da interface {{domxref("Document")}} retorna uma string com a localização de um documento.</div>
+## Sintaxe
 
+```
+var string = document.documentURI;
+```
 
+## Notas
 
-<div>Na definição original DOM3 <code><strong>documentURI </strong></code>é um atributo de leitura/escrita.No padrão mais recente DOM4 é somente de leitura.</div>
+Os Documentos HTML tem uma propriedade {{domxref("document.URL")}} que retorna o mesmo valor (localização do documento).
 
-<h2 id="Sintaxe">Sintaxe</h2>
+A diferençã é que **`document.URL `**só pode ser usado em documentos HTML, enquanto **`documentURI `**está disponivel para todos os documentos web.
 
-<pre class="syntaxbox">var <var>string</var> = document.documentURI;
-</pre>
+## Specificações
 
-<h2 id="Notas">Notas</h2>
+| Specificação                                                                                 | Status                           | Comentário         |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('DOM WHATWG', '#dom-document-documenturi','documentURI')}} | {{Spec2('DOM WHATWG')}} |                    |
+| {{SpecName('DOM3 Core', '#Document3-documentURI', 'documentURI')}}     | {{Spec2('DOM3 Core')}}     | Initial definition |
 
-<p>Os Documentos HTML tem uma propriedade {{domxref("document.URL")}} que retorna o mesmo valor (localização do documento).</p>
+## Compatibilidade com navegadores
 
-<p>A diferençã é que <strong><code>document.URL </code></strong>só pode ser usado em documentos HTML, enquanto <code><strong>documentURI </strong></code>está disponivel para todos os documentos web.</p>
-
-<h2 id="Specificações">Specificações</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-document-documenturi','documentURI')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', '#Document3-documentURI', 'documentURI')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
-
-
-
-<p>{{Compat("api.Document.documentURI")}}</p>
+{{Compat("api.Document.documentURI")}}

@@ -4,83 +4,50 @@ slug: Web/API/Element/focus_event
 translation_of: Web/API/Element/focus_event
 original_slug: Web/Events/focus
 ---
-<p>O evento <code>focus</code> é acionado assim que um elemento recebe um foco. O grande diferencial entre este evento e o evento <a href="/en-US/docs/Mozilla_event_reference/focusin"><code>focusin</code></a>, é que esse segundo "borbulha".</p>
+O evento `focus` é acionado assim que um elemento recebe um foco. O grande diferencial entre este evento e o evento [`focusin`](/pt-BR/docs/Mozilla_event_reference/focusin), é que esse segundo "borbulha".
 
-<h2 id="Informações_Gerais">Informações Gerais</h2>
+## Informações Gerais
 
-<dl>
- <dt style="float: left; text-align: right; width: 120px;">Especificação</dt>
- <dd style="margin: 0 0 0 120px;"><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focus">DOM L3</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">Interface</dt>
- <dd style="margin: 0 0 0 120px;">{{ domxref("FocusEvent") }}</dd>
- <dt style="float: left; text-align: right; width: 120px;">Borbulha</dt>
- <dd style="margin: 0 0 0 120px;">Não</dd>
- <dt style="float: left; text-align: right; width: 120px;">Cancelável</dt>
- <dd style="margin: 0 0 0 120px;">Não</dd>
- <dt style="float: left; text-align: right; width: 120px;">Alvo</dt>
- <dd style="margin: 0 0 0 120px;">Element</dd>
- <dt style="float: left; text-align: right; width: 120px;">Ação Padrão</dt>
- <dd style="margin: 0 0 0 120px;">Nenhuma.</dd>
-</dl>
+- Especificação
+  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focus)
+- Interface
+  - : {{ domxref("FocusEvent") }}
+- Borbulha
+  - : Não
+- Cancelável
+  - : Não
+- Alvo
+  - : Element
+- Ação Padrão
+  - : Nenhuma.
 
-<div class="note">Note: The interface was {{ domxref("Event") }} prior to Gecko 24 {{ geckoRelease(24) }}. ({{ bug(855741) }})</div>
+> **Nota:** Note: The interface was {{ domxref("Event") }} prior to Gecko 24 {{ geckoRelease(24) }}. ({{ bug(855741) }})
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>Event target (DOM element)</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>The type of event.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event normally bubbles or not.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event is cancellable or not.</td>
-  </tr>
-  <tr>
-   <td><code>relatedTarget</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}} (DOM element)</td>
-   <td>null</td>
-  </tr>
- </tbody>
-</table>
+| Property                                 | Type                                               | Description                                |
+| ---------------------------------------- | -------------------------------------------------- | ------------------------------------------ |
+| `target` {{readonlyInline}}        | {{domxref("EventTarget")}}               | Event target (DOM element)                 |
+| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                   | The type of event.                         |
+| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                       | Whether the event normally bubbles or not. |
+| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                       | Whether the event is cancellable or not.   |
+| `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM element) | null                                       |
 
-<h2 id="Eventos_Delegados">Eventos Delegados</h2>
+## Eventos Delegados
 
-<p>Existem 2 maneiras diferentes de implementações delegados a partir de um evento: por meio da utilização do evento  <code>focusin</code> que todos os browsers atuais suportam tão tecnologia (todos exceto o Firefox), ou por setando o parâmetro "useCapture" do elemento  <a href="/en-US/docs/DOM/element.addEventListener"><code>addEventListener</code></a>  como <code>true</code>:</p>
+Existem 2 maneiras diferentes de implementações delegados a partir de um evento: por meio da utilização do evento `focusin` que todos os browsers atuais suportam tão tecnologia (todos exceto o Firefox), ou por setando o parâmetro "useCapture" do elemento [`addEventListener`](/pt-BR/docs/DOM/element.addEventListener) como `true`:
 
-<p>{{ EmbedLiveSample('Event_delegation', '', '', '', 'Web/Events/blur') }}</p>
+{{ EmbedLiveSample('Event_delegation', '', '', '', 'Web/Events/blur') }}
 
-<p>(Exemplo de codigo do evento <a href="/en-US/docs/Web/Events/blur">blur (event)</a>)</p>
+(Exemplo de codigo do evento [blur (event)](/pt-BR/docs/Web/Events/blur))
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Element.focus_event")}}
 
-<h2 id="Eventos_Relacionais">Eventos Relacionais</h2>
+## Eventos Relacionais
 
-<ul>
- <li>{{event("focus")}}</li>
- <li>{{event("blur")}}</li>
- <li>{{event("focusin")}}</li>
- <li>{{event("focusout")}}</li>
-</ul>
+- {{event("focus")}}
+- {{event("blur")}}
+- {{event("focusin")}}
+- {{event("focusout")}}

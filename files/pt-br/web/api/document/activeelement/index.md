@@ -11,44 +11,44 @@ translation_of: Web/API/DocumentOrShadowRoot/activeElement
 translation_of_original: Web/API/Document/activeElement
 original_slug: Web/API/DocumentOrShadowRoot/activeElement
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>Retorna o {{ domxref("Element", "elemento") }} atualmente em foco, ou seja, o elemento que receberá os eventos do teclado caso o usuário digite algo. Esse atributo é somente-leitura.</p>
+Retorna o {{ domxref("Element", "elemento") }} atualmente em foco, ou seja, o elemento que receberá os eventos do teclado caso o usuário digite algo. Esse atributo é somente-leitura.
 
-<p>Geralmente retorna um {{ HTMLElement("input") }} ou {{ HTMLElement("textarea") }}, caso esteja com uma seleção de texto ativa. Caso esteja, pode obter mais informações sobre a seleção utilizando as propriedades <code>selectionStart</code> e <code>selectionEnd</code>. Caso o elemento em foco seja um {{ HTMLElement("select") }}(menu) ou {{ HTMLElement("input") }} do tipo <code>button</code>, <code>checkbox</code> ou <code>radio</code>.</p>
+Geralmente retorna um {{ HTMLElement("input") }} ou {{ HTMLElement("textarea") }}, caso esteja com uma seleção de texto ativa. Caso esteja, pode obter mais informações sobre a seleção utilizando as propriedades `selectionStart` e `selectionEnd`. Caso o elemento em foco seja um {{ HTMLElement("select") }}(menu) ou {{ HTMLElement("input") }} do tipo `button`, `checkbox` ou `radio`.
 
-<div class="note"><strong>Note:</strong> No Mac, elementos que nao sejam campos de texto geralmente não recebem foco.</div>
+> **Nota:** No Mac, elementos que nao sejam campos de texto geralmente não recebem foco.
 
-<p>Normalmente o usuário pode navegar entre os elementos que pode receber foco na página com o uso da tecla <code>tab</code> e ativar estes elementos com a tecla <code>espaço</code> (apertar um botão ou selecionar uma opção).</p>
+Normalmente o usuário pode navegar entre os elementos que pode receber foco na página com o uso da tecla `tab` e ativar estes elementos com a tecla `espaço` (apertar um botão ou selecionar uma opção).
 
-<p>Não confunda foco com uma seleção de texto no documento, que consiste em sua maioria de nódos de texto estáticos. Veja {{ domxref("window.getSelection()") }}.</p>
+Não confunda foco com uma seleção de texto no documento, que consiste em sua maioria de nódos de texto estáticos. Veja {{ domxref("window.getSelection()") }}.
 
-<p>Quando não há nada selecionado, o <code>activeElement</code> da página é o {{ HTMLElement("body") }} ou <code>null</code>. </p>
+Quando não há nada selecionado, o `activeElement` da página é o {{ HTMLElement("body") }} ou `null`.
 
-<div class="note">
-<p>Este atributo é parte da seção "Em desenvolvimento" da especificação do HTML 5.</p>
-</div>
+> **Nota:** Este atributo é parte da seção "Em desenvolvimento" da especificação do HTML 5.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="eval">var curElement = document.activeElement;
-</pre>
+```
+var curElement = document.activeElement;
+```
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: html">&lt;!DOCTYPE HTML&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
+```html
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script type="text/javascript" charset="utf-8">
     function init() {
 
         function onMouseUp(e) {
             console.log(e);
             var outputElement = document.getElementById('output-element');
             var outputText = document.getElementById('output-text');
-            var selectedTextArea = document.<strong>activeElement</strong>;
+            var selectedTextArea = document.activeElement;
             var selection = selectedTextArea.value.substring(
-            selectedTextArea.<strong>selectionStart</strong>, selectedTextArea.<strong>selectionEnd</strong>);
+            selectedTextArea.selectionStart, selectedTextArea.selectionEnd);
             outputElement.innerHTML = selectedTextArea.id;
             outputText.innerHTML = selection;
         }
@@ -56,63 +56,48 @@ original_slug: Web/API/DocumentOrShadowRoot/activeElement
         document.getElementById("ta-example-one").addEventListener("mouseup", onMouseUp, false);
         document.getElementById("ta-example-two").addEventListener("mouseup", onMouseUp, false);
     }
-    &lt;/script&gt;
-&lt;/head&gt;
-&lt;body onload="init()"&gt;
-&lt;div&gt;
+    </script>
+</head>
+<body onload="init()">
+<div>
     Select some text from one of the Textareas below:
-&lt;/div&gt;
-&lt;form id="frm-example" action="#" accept-charset="utf-8"&gt;
-&lt;textarea name="ta-example-one" id="ta-example-one" rows="8" cols="40"&gt;
+</div>
+<form id="frm-example" action="#" accept-charset="utf-8">
+<textarea name="ta-example-one" id="ta-example-one" rows="8" cols="40">
 This is Textarea Example One:
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, lorem a porttitor molestie, odio nibh iaculis libero, et accumsan nunc orci eu dui.
-&lt;/textarea&gt;
-&lt;textarea name="ta-example-two" id="ta-example-two" rows="8" cols="40"&gt;
+</textarea>
+<textarea name="ta-example-two" id="ta-example-two" rows="8" cols="40">
 This is Textarea Example Two:
 Fusce ullamcorper, nisl ac porttitor adipiscing, urna orci egestas libero, ut accumsan orci lacus laoreet diam. Morbi sed euismod diam.
-&lt;/textarea&gt;
-&lt;/form&gt;
-Active Element Id: &lt;span id="output-element"&gt;&lt;/span&gt;&lt;br/&gt;
-Selected Text: &lt;span id="output-text"&gt;&lt;/span&gt;
+</textarea>
+</form>
+Active Element Id: <span id="output-element"></span><br/>
+Selected Text: <span id="output-text"></span>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<p><a href="https://jsfiddle.net/w9gFj">View on JSFiddle</a></p>
+[View on JSFiddle](https://jsfiddle.net/w9gFj)
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>Originalmente apresentada como extensão DOM proprietária no Internet Explorer 4, esta propriedade também é suportada no Opera e Safari (versão 4 ou maior)</p>
+Originalmente apresentada como extensão DOM proprietária no Internet Explorer 4, esta propriedade também é suportada no Opera e Safari (versão 4 ou maior)
 
-<h2 id="Specification" name="Specification">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'interaction.html#dom-document-activeelement', 'activeElement')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                            | Status                           | Comment |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', 'interaction.html#dom-document-activeelement', 'activeElement')}} | {{Spec2('HTML WHATWG')}} |         |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Document.activeElement")}}
 
-<h2 id="Eventos_relacionados">Eventos relacionados</h2>
+## Eventos relacionados
 
-<ul>
- <li>{{event("focus")}}</li>
- <li>{{event("blur")}}</li>
- <li>{{event("focusin")}}</li>
- <li>{{event("focusout")}}</li>
-</ul>
+- {{event("focus")}}
+- {{event("blur")}}
+- {{event("focusin")}}
+- {{event("focusout")}}

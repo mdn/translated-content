@@ -3,48 +3,49 @@ title: Window.closed
 slug: Web/API/Window/closed
 translation_of: Web/API/Window/closed
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>Essa propriedade (read-only) indica se a janela referenciada está ou não fechada.</p>
+Essa propriedade (read-only) indica se a janela referenciada está ou não fechada.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><var>isClosed</var> = <var>windowRef</var>.closed;
-</pre>
+```
+isClosed = windowRef.closed;
+```
 
-<dl>
- <dt><code>isClosed</code></dt>
- <dd>Um booleano. Valores possíveis:
- <ul>
-  <li><code>true</code>: A janela foi fechada.</li>
-  <li><code>false</code>: A janela está aberta.</li>
- </ul>
- </dd>
-</dl>
+- `isClosed`
 
-<h2 id="Exemplos">Exemplos</h2>
+  - : Um booleano. Valores possíveis:
 
-<h3 id="Mudar_a_URL_de_uma_janela_a_partir_de_um_popup">Mudar a URL de uma janela a partir de um popup</h3>
+    - `true`: A janela foi fechada.
+    - `false`: A janela está aberta.
 
-<p>O seguinte exemplo demonstra com uma janela de popup pode alterar a URL da janela que abriu ela. Antes de tentarmos mudar a URL da janela que a abriu, verificamos se a janela atual tem uma janela pai que a abriu usando a propriedade <a href="/en-US/docs/DOM/window.opener">window.opener</a> e que esta não está fechada:</p>
+## Exemplos
 
-<pre class="brush:js">// Verifique se o opener existe e não está fechado
-if (window.opener &amp;&amp; !window.opener.closed) {
+### Mudar a URL de uma janela a partir de um popup
+
+O seguinte exemplo demonstra com uma janela de popup pode alterar a URL da janela que abriu ela. Antes de tentarmos mudar a URL da janela que a abriu, verificamos se a janela atual tem uma janela pai que a abriu usando a propriedade [window.opener](/pt-BR/docs/DOM/window.opener) e que esta não está fechada:
+
+```js
+// Verifique se o opener existe e não está fechado
+if (window.opener && !window.opener.closed) {
   window.opener.location.href = "http://www.mozilla.org";
-}</pre>
+}
+```
 
-<p>Note que popups podem somente acessar a janela que os abriu.</p>
+Note que popups podem somente acessar a janela que os abriu.
 
-<h3 id="Atualizando_um_popup_anteriormente_aberto">Atualizando um popup anteriormente aberto</h3>
+### Atualizando um popup anteriormente aberto
 
-<p>Neste exemplo, a função <code>refreshPopupWindow()</code> chama o método <code>reload</code> do objeto <code>location</code> do popup para atualizar seus dados. Se o popup não foi aberto ainda ou o usuário o fechou,  uma nova janela é aberta.</p>
+Neste exemplo, a função `refreshPopupWindow()` chama o método `reload` do objeto `location` do popup para atualizar seus dados. Se o popup não foi aberto ainda ou o usuário o fechou, uma nova janela é aberta.
 
-<pre class="brush:js">var popupWindow = null;
+```js
+var popupWindow = null;
 
 function refreshPopupWindow() {
-  if (popupWindow &amp;&amp; !popupWindow.closed) {
+  if (popupWindow && !popupWindow.closed) {
     // popupWindow está aberto, atualize-o
     popupWindow.location.reload(true);
   } else {
@@ -52,8 +53,8 @@ function refreshPopupWindow() {
     popupWindow = window.open("popup.html","dataWindow");
   }
 }
-</pre>
+```
 
-<h2 id="Especificação">Especificação</h2>
+## Especificação
 
-<p>HTML5</p>
+HTML5

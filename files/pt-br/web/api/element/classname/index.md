@@ -9,67 +9,48 @@ tags:
   - Reference
 translation_of: Web/API/Element/className
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p><strong>className</strong> retorna e define o valor do atributo <code>class</code> do elemento especificado.</p>
+**className** retorna e define o valor do atributo `class` do elemento especificado.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><var>var cName</var> = <var>elementNodeReference</var>.className;
-<var>elementNodeReference</var>.className = <var>cName</var>;</pre>
+```
+var cName = elementNodeReference.className;
+elementNodeReference.className = cName;
+```
 
-<ul>
- <li><var>cName</var> sendo uma variável de texto (string) que represente uma única classe, ou múltiplas classes (separadas por um espaço) do elemento selecionado.</li>
-</ul>
+- _cName_ sendo uma variável de texto (string) que represente uma única classe, ou múltiplas classes (separadas por um espaço) do elemento selecionado.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: js">var element = document.getElementById("div1");
+```js
+var element = document.getElementById("div1");
 
 if (element.className === "fixed") {
   // verifica a partir de uma classe específica do elemento
   goNextElement();
-}</pre>
+}
+```
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p><code>O nome className</code> é utilizado para esta propriedade ao invés de <code>class</code> por conta de conflitos com a palavra-chave "class" em variáveis linguagens que são utilizadas para manipulação do <a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a>.</p>
+`O nome className` é utilizado para esta propriedade ao invés de `class` por conta de conflitos com a palavra-chave "class" em variáveis linguagens que são utilizadas para manipulação do [DOM](/pt-BR/docs/Web/API/Document_Object_Model).
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#dom-element-classname", "element.className")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#dom-element-classname", "element.className")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 HTML", "html.html#ID-95362176", "element.className")}}</td>
-   <td>{{Spec2("DOM2 HTML")}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                           | Comment           |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------- |
+| {{SpecName("DOM WHATWG", "#dom-element-classname", "element.className")}} | {{Spec2("DOM WHATWG")}} |                   |
+| {{SpecName("DOM4", "#dom-element-classname", "element.className")}}         | {{Spec2("DOM4")}}         |                   |
+| {{SpecName("DOM2 HTML", "html.html#ID-95362176", "element.className")}} | {{Spec2("DOM2 HTML")}}     | Definição inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Element.className")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("element.classList")}}</li>
-</ul>
+- {{domxref("element.classList")}}

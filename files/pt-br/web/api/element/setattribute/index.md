@@ -9,50 +9,50 @@ tags:
   - metodo
 translation_of: Web/API/Element/setAttribute
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>Adiciona um novo atributo ou modifica o valor de um atributo existente num elemento específico.</p>
+Adiciona um novo atributo ou modifica o valor de um atributo existente num elemento específico.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><em>element</em>.setAttribute(<em>name</em>, <em>value</em>);
-</pre>
+```
+element.setAttribute(name, value);
+```
 
-<ul>
- <li><font face="Consolas, Liberation Mono, Courier, monospace"><code>name</code> é o nome do atributo como string.</font></li>
- <li><code>value</code> é o novo valor desejado do atributo</li>
-</ul>
+- `name` é o nome do atributo como string.
+- `value` é o novo valor desejado do atributo
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<p>No seguinte exemplo, <code>setAttribute()</code> é usado para definir o atributo {{htmlattrxref("disabled")}} em {{htmlelement("button")}}, desabilitado-o.</p>
+No seguinte exemplo, `setAttribute()` é usado para definir o atributo {{htmlattrxref("disabled")}} em {{htmlelement("button")}}, desabilitado-o.
 
-<pre class="brush: html">&lt;button&gt;Hello World&lt;/button&gt;</pre>
+```html
+<button>Hello World</button>
+```
 
-<pre class="brush:js">var b = document.querySelector("button");
+```js
+var b = document.querySelector("button");
 
 b.setAttribute("disabled", "disabled");
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Example', '300', '50', '', 'Web/API/Element/setAttribute') }}</p>
+{{ EmbedLiveSample('Example', '300', '50', '', 'Web/API/Element/setAttribute') }}
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p>Quando chamado em um documento HTML, <code>setAttribute</code> lower-cases its attribute name argument.</p>
+Quando chamado em um documento HTML, `setAttribute` lower-cases its attribute name argument.
 
-<p>Se um atributo especificado já existe, então o valor do atributo é mudado para o valor passado para a função. Se não existe, então o atributo é criado.</p>
+Se um atributo especificado já existe, então o valor do atributo é mudado para o valor passado para a função. Se não existe, então o atributo é criado.
 
-<p>Apesar de <code><a href="/en-US/docs/DOM/element.getAttribute" title="DOM/element.getAttribute">getAttribute()</a></code> retornar <code>null</code> para atributos ausentes, você precisa usar <code><a href="/en-US/docs/DOM/element.removeAttribute" title="DOM/element.removeAttribute">removeAttribute()</a></code> ao invés de <code><em>elt</em>.setAttribute(<em>attr</em>, null)</code> para remover o atributo. Este último forçará o valor <code>null</code> para a string <code>"null"</code>, o que não é provavelmente o que você quer.</p>
+Apesar de [`getAttribute()`](/en-US/docs/DOM/element.getAttribute "DOM/element.getAttribute") retornar `null` para atributos ausentes, você precisa usar [`removeAttribute()`](/en-US/docs/DOM/element.removeAttribute "DOM/element.removeAttribute") ao invés de `elt.setAttribute(attr, null)` para remover o atributo. Este último forçará o valor `null` para a string `"null"`, o que não é provavelmente o que você quer.
 
-<p>Usar <code>setAttribute()</code> para modificar certos atributos, mais notavelmente valor em XUL, funciona inconsistentemente, como atributos específicos de valor padrão. Para acessar ou modificar os valores atuais, você deve usar as propriedades. Por exemplo, use <code><em>elt</em>.value</code> ao invés de <code><em>elt</em>.setAttribute('value', <em>val</em>)</code>.</p>
+Usar `setAttribute()` para modificar certos atributos, mais notavelmente valor em XUL, funciona inconsistentemente, como atributos específicos de valor padrão. Para acessar ou modificar os valores atuais, você deve usar as propriedades. Por exemplo, use `elt.value` ao invés de `elt.setAttribute('value', val)`.
 
-<p>Para definir um atributo que não leva valor, assim como o atributo <code>autoplay</code> de um elemento {{HTMLElement("audio")}}, use <code>null</code> ou um valor vazio. Por exemplo: <code><em>elt</em>.setAttribute('autoplay', '')</code></p>
+Para definir um atributo que não leva valor, assim como o atributo `autoplay` de um elemento {{HTMLElement("audio")}}, use `null` ou um valor vazio. Por exemplo: `elt.setAttribute('autoplay', '')`
 
-<div>{{DOMAttributeMethods}}</div>
+{{DOMAttributeMethods}}
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68F082">DOM Level 2 Core: setAttribute</a> (introduzido em <a class="external" href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttribute">DOM Level 1 Core</a>)</li>
- <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#apis-in-html-documents">HTML5: APIs in HTML documents</a></li>
-</ul>
+- [DOM Level 2 Core: setAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68F082) (introduzido em [DOM Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttribute))
+- [HTML5: APIs in HTML documents](http://www.whatwg.org/specs/web-apps/current-work/#apis-in-html-documents)

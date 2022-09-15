@@ -11,45 +11,32 @@ tags:
   - Referencia
 translation_of: Web/API/AnimationEvent/elapsedTime
 ---
-<p>{{SeeCompatTable}}{{ apiref("Web Animations API") }}</p>
+{{SeeCompatTable}}{{ apiref("Web Animations API") }}
 
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>O <code><strong>AnimationEvent.elapsedTime</strong></code> é uma propriedade só de leitura com um ponto flutuante dando a quantidade de tempo que animação esteve rodando, em segundos, quando o evento termina, excluirá o tempo em que ela esteve em pausa. Para um evento <code>"animationstart" </code>, <code>elapsedTime</code> é <code>0.0</code> a não ser que tenha um valor negativo para {{cssxref("animation-delay")}}, nesse caso o evento irá terminar com <code>elapsedTime</code> contendo <code>(-1 * </code><em>delay</em><code>)</code>.</p>
+O **`AnimationEvent.elapsedTime`** é uma propriedade só de leitura com um ponto flutuante dando a quantidade de tempo que animação esteve rodando, em segundos, quando o evento termina, excluirá o tempo em que ela esteve em pausa. Para um evento `"animationstart" `, `elapsedTime` é `0.0` a não ser que tenha um valor negativo para {{cssxref("animation-delay")}}, nesse caso o evento irá terminar com `elapsedTime` contendo `(-1 * `_delay_`)`.
 
-<h2 id="Síntaxe">Síntaxe</h2>
+## Síntaxe
 
-<pre class="syntaxbox">time = <em>AnimationEvent</em>.elapsedTime</pre>
+```
+time = AnimationEvent.elapsedTime
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Animations', '#AnimationEvent-elapsedTime', 'AnimationEvent.elapsedTime') }}</td>
-   <td>{{ Spec2('CSS3 Animations')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                | Status                                   | Comment             |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
+| {{ SpecName('CSS3 Animations', '#AnimationEvent-elapsedTime', 'AnimationEvent.elapsedTime') }} | {{ Spec2('CSS3 Animations')}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.AnimationEvent.elapsedTime")}}
 
-<h2 id="sect1"> </h2>
+##
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_animations">Usando animações CSS.</a></li>
- <li>Animation-related CSS properties and at-rules: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.</li>
- <li>The {{domxref("AnimationEvent")}} interface it belongs to.</li>
-</ul>
+- [Usando animações CSS.](/pt-BR/docs/CSS/Using_CSS_animations)
+- Animation-related CSS properties and at-rules: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.
+- The {{domxref("AnimationEvent")}} interface it belongs to.

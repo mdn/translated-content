@@ -13,44 +13,43 @@ tags:
   - Window
 translation_of: Web/API/Window/document
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<h2 id="Summary" name="Summary">Resumo</h2>
+## Resumo
 
-<p>Retorna a referência para o documento contido na janela.</p>
+Retorna a referência para o documento contido na janela.
 
-<div class="note"><strong>Nota:</strong>Firefox 3 altera a segurança para documentos de uma janela de modo que apenas o domínio a partir do qual foi localizado possa acessar o documento. Enquanto isso pode quebrar alguns sites existentes, é um movimento feito por ambos Firefox 3 e Internet Explorer 7, e resulta na melhoria de segurança.</div>
+> **Nota:**Firefox 3 altera a segurança para documentos de uma janela de modo que apenas o domínio a partir do qual foi localizado possa acessar o documento. Enquanto isso pode quebrar alguns sites existentes, é um movimento feito por ambos Firefox 3 e Internet Explorer 7, e resulta na melhoria de segurança.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><var>doc</var> = window.document
-</pre>
+```
+doc = window.document
+```
 
-<h3 id="Parameters" name="Parameters">Parâmetros</h3>
+### Parâmetros
 
-<ul>
- <li><code>doc</code> é um objeto referência de um objeto para um <a href="/en-US/docs/DOM/document" title="DOM/document">document</a>.</li>
-</ul>
+- `doc` é um objeto referência de um objeto para um [document](/pt-BR/docs/DOM/document "DOM/document").
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<pre class="brush:js">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-   &lt;title&gt;Hello, World!&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
+```js
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Hello, World!</title>
+</head>
+<body>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
    var doc = window.document;
    alert( doc.title);    // alerts: Hello, World!
-&lt;/script&gt;
+</script>
 
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</body>
+</html>
+```
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<ul>
- <li><a href="http://www.whatwg.org/html/#the-window-object">HTML</a></li>
-</ul>
+- [HTML](http://www.whatwg.org/html/#the-window-object)

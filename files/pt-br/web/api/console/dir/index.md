@@ -6,41 +6,38 @@ tags:
   - console
 translation_of: Web/API/Console/dir
 ---
-<p>{{ APIRef("Console API") }}{{Non-standard_header}}</p>
+{{ APIRef("Console API") }}{{Non-standard_header}}
 
-<h2 id="Summary" name="Summary">Resumo</h2>
+## Resumo
 
-<p>Exibe uma lista interativa das propriedades do objeto JavaScript especificado. A saída é apresentada como uma lista hierárquica com triângulos que permitem ver o conteúdo de objetos-filho.</p>
+Exibe uma lista interativa das propriedades do objeto JavaScript especificado. A saída é apresentada como uma lista hierárquica com triângulos que permitem ver o conteúdo de objetos-filho.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p><img alt="console-dir.png" class="default internal" src="/@api/deki/files/6081/=console-dir.png"></p>
+![console-dir.png](/@api/deki/files/6081/=console-dir.png)
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">console.dir(<em>object</em>);
-</pre>
+```
+console.dir(object);
+```
 
-<h2 id="Parâmetros">Parâmetros</h2>
+## Parâmetros
 
-<dl>
- <dt><code>object</code></dt>
- <dd>Um objeto JavaScript cujas propriedades devem ser emitidas.</dd>
-</dl>
+- `object`
+  - : Um objeto JavaScript cujas propriedades devem ser emitidas.
 
-<h3 id="Specification" name="Specification">Especificação</h3>
+### Especificação
 
-<p><a href="https://github.com/DeveloperToolsWG/console-object/blob/master/api.md#consoledirobject">Console Object API</a></p>
+[Console Object API](https://github.com/DeveloperToolsWG/console-object/blob/master/api.md#consoledirobject)
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.console.dir")}}
 
-<h2 id="sect1"> </h2>
+##
 
-<h2 id="Ver_também">Ver também</h2>
+## Ver também
 
-<ul>
- <li><a class="external" href="http://www.opera.com/dragonfly/documentation/console/">Documentação Opera Dragonfly: Console</a></li>
- <li><a class="external" href="http://msdn.microsoft.com/library/gg589530">MSDN: usando o F12 Ferramentas de Console para exibir erros e status</a></li>
-</ul>
+- [Documentação Opera Dragonfly: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [MSDN: usando o F12 Ferramentas de Console para exibir erros e status](http://msdn.microsoft.com/library/gg589530)

@@ -10,60 +10,46 @@ tags:
   - Referência DOM
 translation_of: Web/API/Element/tagName
 ---
-<p>{{ApiRef("DOM")}}</p>
+{{ApiRef("DOM")}}
 
-<p>Retorna o nome do elemento.</p>
+Retorna o nome do elemento.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><em>nomeDoElemento</em> = element.tagName;
-</pre>
+```
+nomeDoElemento = element.tagName;
+```
 
-<ul>
- <li><code>nomeDoElemento</code> é a string contendo o nome do elemento atual.</li>
-</ul>
+- `nomeDoElemento` é a string contendo o nome do elemento atual.
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>Em XML (e linguagens baseadas, como XHTML), <code>tagName </code>conserva o <em>case</em>  (caixa alta/baixa) da tag. Nos elementos HTML da árvore do DOM marcados como documentos HTML, <code>tagName </code>retorna o nome do elemento em <em>uppercase</em> (caixa alta). O valor de <code>tagName </code>é o mesmo que o <a href="/en-US/docs/Web/API/Node/nodeName">nodeName</a></p>
+Em XML (e linguagens baseadas, como XHTML), `tagName `conserva o _case_ (caixa alta/baixa) da tag. Nos elementos HTML da árvore do DOM marcados como documentos HTML, `tagName `retorna o nome do elemento em _uppercase_ (caixa alta). O valor de `tagName `é o mesmo que o [nodeName](/pt-BR/docs/Web/API/Node/nodeName)
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<h3 id="conteúdo_HTML">conteúdo HTML</h3>
+### conteúdo HTML
 
-<pre class="brush: html">&lt;span id="exemplo"&gt;Descrição do exemplo...&lt;/span&gt;
-</pre>
+```html
+<span id="exemplo">Descrição do exemplo...</span>
+```
 
-<h3 id="conteúdo_JavaScript">conteúdo JavaScript</h3>
+### conteúdo JavaScript
 
-<pre class="brush: js">var span = document.getElementById("exemplo");
+```js
+var span = document.getElementById("exemplo");
 console.log(span.tagName);
-</pre>
+```
 
-<p>Em XHTML (ou qualquer outro formato XML), "<code>span</code>" será a saída. Em HTML, "<code>SPAN</code>" será a saída.</p>
+Em XHTML (ou qualquer outro formato XML), "`span`" será a saída. Em HTML, "`SPAN`" será a saída.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Especificação</th>
-   <th>Status</th>
-   <th>Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM3 Core", "core.html#ID-104682815", "Element.tagName")}}</td>
-   <td>{{Spec2("DOM3 Core")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Core", "core.html#ID-104682815", "Element.tagName")}}</td>
-   <td>{{Spec2("DOM2 Core")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                | Status                       | Comentário         |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName("DOM3 Core", "core.html#ID-104682815", "Element.tagName")}} | {{Spec2("DOM3 Core")}} | No change          |
+| {{SpecName("DOM2 Core", "core.html#ID-104682815", "Element.tagName")}} | {{Spec2("DOM2 Core")}} | Initial definition |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Element.tagName")}}

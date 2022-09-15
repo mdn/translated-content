@@ -4,98 +4,69 @@ slug: Web/API/Element/blur_event
 translation_of: Web/API/Element/blur_event
 original_slug: Web/Events/blur
 ---
-<p>O evento <code>blur</code> é acionado quando um elemento perde foco. A diferença principal entre este evento e <a href="/en-US/docs/Mozilla_event_reference/focusout"><code>focusout</code></a> é que apenas o segundo 'borbulha'.</p>
+O evento `blur` é acionado quando um elemento perde foco. A diferença principal entre este evento e [`focusout`](/pt-BR/docs/Mozilla_event_reference/focusout) é que apenas o segundo 'borbulha'.
 
-<h2 id="Informação_geral">Informação geral</h2>
+## Informação geral
 
-<dl>
- <dt style="float: left; text-align: right; width: 120px;">Especificação</dt>
- <dd style="margin: 0 0 0 120px;"><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-type-blur">DOM L3</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">Interface</dt>
- <dd style="margin: 0 0 0 120px;">{{domxref("FocusEvent")}}</dd>
- <dt style="float: left; text-align: right; width: 120px;">Borbulha</dt>
- <dd style="margin: 0 0 0 120px;">Não</dd>
- <dt style="float: left; text-align: right; width: 120px;">Cancelável</dt>
- <dd style="margin: 0 0 0 120px;">Não</dd>
- <dt style="float: left; text-align: right; width: 120px;">Alvo</dt>
- <dd style="margin: 0 0 0 120px;">Elemento</dd>
- <dt style="float: left; text-align: right; width: 120px;">Ação padrão</dt>
- <dd style="margin: 0 0 0 120px;">Nenhuma</dd>
-</dl>
+- Especificação
+  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-blur)
+- Interface
+  - : {{domxref("FocusEvent")}}
+- Borbulha
+  - : Não
+- Cancelável
+  - : Não
+- Alvo
+  - : Elemento
+- Ação padrão
+  - : Nenhuma
 
-<p>{{NoteStart}}O valor de {{domxref("Document.activeElement")}} varia entre navegadores enquanto este evento é processado ({{bug(452307)}}): O IE10 define-o para o elemento para onde o foco moverá, enquanto Firefox e Chrome muitas vezes definem-o para o <code>body</code> do documento.{{NoteEnd}}</p>
+{{NoteStart}}O valor de {{domxref("Document.activeElement")}} varia entre navegadores enquanto este evento é processado ({{bug(452307)}}): O IE10 define-o para o elemento para onde o foco moverá, enquanto Firefox e Chrome muitas vezes definem-o para o `body` do documento.{{NoteEnd}}
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>Event target (DOM element)</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>The type of event.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event normally bubbles or not.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event is cancellable or not.</td>
-  </tr>
-  <tr>
-   <td><code>relatedTarget</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}} (DOM element)</td>
-   <td>null</td>
-  </tr>
- </tbody>
-</table>
+| Property                                 | Type                                               | Description                                |
+| ---------------------------------------- | -------------------------------------------------- | ------------------------------------------ |
+| `target` {{readonlyInline}}        | {{domxref("EventTarget")}}               | Event target (DOM element)                 |
+| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                   | The type of event.                         |
+| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                       | Whether the event normally bubbles or not. |
+| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                       | Whether the event is cancellable or not.   |
+| `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM element) | null                                       |
 
-<h2 id="Delegação_do_evento">Delegação do evento</h2>
+## Delegação do evento
 
-<p>Existem duas maneiras de implementar a delegação de eventos para este evento: usando o evento <code>focusout</code> nos navegadores que suportam-o, ou definindo o parâmetro "useCapture" do <a href="/en-US/docs/DOM/element.addEventListener"><code>addEventListener</code></a> para <code>true</code>:</p>
+Existem duas maneiras de implementar a delegação de eventos para este evento: usando o evento `focusout` nos navegadores que suportam-o, ou definindo o parâmetro "useCapture" do [`addEventListener`](/pt-BR/docs/DOM/element.addEventListener) para `true`:
 
-<h3 id="Conteúdo_HTML">Conteúdo HTML </h3>
+### Conteúdo HTML
 
-<pre class="brush:html;">&lt;form id="form"&gt;
-  &lt;input type="text" placeholder="text input"&gt;
-  &lt;input type="password" placeholder="password"&gt;
-&lt;/form&gt;</pre>
+```html
+<form id="form">
+  <input type="text" placeholder="text input">
+  <input type="password" placeholder="password">
+</form>
+```
 
-<h3 id="Conteúdo_JavaScript">Conteúdo JavaScript</h3>
+### Conteúdo JavaScript
 
-<pre class="brush: js">var form = document.getElementById("form");
+```js
+var form = document.getElementById("form");
 form.addEventListener("focus", function( event ) {
   event.target.style.background = "pink";
 }, true);
 form.addEventListener("blur", function( event ) {
   event.target.style.background = "";
-}, true);</pre>
+}, true);
+```
 
-<p>{{EmbedLiveSample('Event_delegation')}}</p>
+{{EmbedLiveSample('Event_delegation')}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Element.blur_event")}}
 
-<h2 id="Eventos_relacionados">Eventos relacionados</h2>
+## Eventos relacionados
 
-<ul>
- <li>{{event("focus")}}</li>
- <li>{{event("blur")}}</li>
- <li>{{event("focusin")}}</li>
- <li>{{event("focusout")}}</li>
-</ul>
+- {{event("focus")}}
+- {{event("blur")}}
+- {{event("focusin")}}
+- {{event("focusout")}}

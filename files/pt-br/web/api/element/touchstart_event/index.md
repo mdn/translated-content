@@ -8,115 +8,49 @@ tags:
   - TouchEvent
 translation_of: Web/API/Element/touchstart_event
 ---
-<p><code>O evento touchstart</code> é acionado quando o ponteiro de toque<em>(dedo ou caneta)</em> é aplicado sobre à superfície de toque da tela<em>(toque sobre a tela no elemento alvo)</em>.</p>
+`O evento touchstart` é acionado quando o ponteiro de toque*(dedo ou caneta)* é aplicado sobre à superfície de toque da tela*(toque sobre a tela no elemento alvo)*.
 
-<h2 id="Info_Geral">Info Geral</h2>
+## Info Geral
 
-<dl>
- <dt style="float: left; text-align: right; width: 120px;">Especificações</dt>
- <dd style="margin: 0 0 0 120px;"><a class="external" href="http://w3c.github.io/touch-events/#event-touchstart">Touch Events</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">Interface</dt>
- <dd style="margin: 0 0 0 120px;">{{domxref("TouchEvent")}}</dd>
- <dt style="float: left; text-align: right; width: 120px;">Bubbles</dt>
- <dd style="margin: 0 0 0 120px;">Sim</dd>
- <dt style="float: left; text-align: right; width: 120px;">Cancelável</dt>
- <dd style="margin: 0 0 0 120px;">Sim</dd>
- <dt style="float: left; text-align: right; width: 120px;">Alvo</dt>
- <dd style="margin: 0 0 0 120px;">Documento, Elemento</dd>
- <dt style="float: left; text-align: right; width: 120px;">Ação Padrão</dt>
- <dd style="margin: 0 0 0 120px;">undefined (indefinido)</dd>
-</dl>
+- Especificações
+  - : [Touch Events](http://w3c.github.io/touch-events/#event-touchstart)
+- Interface
+  - : {{domxref("TouchEvent")}}
+- Bubbles
+  - : Sim
+- Cancelável
+  - : Sim
+- Alvo
+  - : Documento, Elemento
+- Ação Padrão
+  - : undefined (indefinido)
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>EventTarget</td>
-   <td>The event target (the topmost target in the DOM tree).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>DOMString</td>
-   <td>The type of event.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>Boolean</td>
-   <td>Whether the event normally bubbles or not.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>Boolean</td>
-   <td>Whether the event is cancellable or not.</td>
-  </tr>
-  <tr>
-   <td><code>view</code> {{readonlyInline}}</td>
-   <td>WindowProxy</td>
-   <td><a href="/en-US/docs/Web/API/Document/defaultView" title="In browsers, document.defaultView returns the window object associated with a document, or null if none is available."><code>document.defaultView</code></a> (<code>window</code> of the document)</td>
-  </tr>
-  <tr>
-   <td><code>detail</code> {{readonlyInline}}</td>
-   <td>long (float)</td>
-   <td>0.</td>
-  </tr>
-  <tr>
-   <td><code>touches</code> {{readonlyInline}}</td>
-   <td>TouchList</td>
-   <td>A list of <a href="/en/DOM/Touch"><code>Touch</code></a>es for every point of contact currently touching the surface.</td>
-  </tr>
-  <tr>
-   <td><code>targetTouches</code> {{readonlyInline}}</td>
-   <td>TouchList</td>
-   <td>A list of <a href="/en/DOM/Touch"><code>Touch</code></a>es for every point of contact that is touching the surface and started on the element that is the target of the current event.</td>
-  </tr>
-  <tr>
-   <td><code>changedTouches</code> {{readonlyInline}}</td>
-   <td>TouchList</td>
-   <td>A list of <a href="/en-US/docs/DOM/Touch"><code>Touch</code></a>es for every point of contact which contributed to the event.<br>
-    For the touchstart event this must be a list of the touch points that just became active with the current event. For the touchmove event this must be a list of the touch points that have moved since the last event. For the touchend and touchcancel events this must be a list of the touch points that have just been removed from the surface.</td>
-  </tr>
-  <tr>
-   <td><code>ctrlKey</code> {{readonlyInline}}</td>
-   <td>boolean</td>
-   <td><code>true</code> if the control key was down when the event was fired. <code>false</code> otherwise.</td>
-  </tr>
-  <tr>
-   <td><code>shiftKey</code> {{readonlyInline}}</td>
-   <td>boolean</td>
-   <td><code>true</code> if the shift key was down when the event was fired. <code>false</code> otherwise.</td>
-  </tr>
-  <tr>
-   <td><code>altKey</code> {{readonlyInline}}</td>
-   <td>boolean</td>
-   <td><code>true</code> if the alt key was down when the event was fired. <code>false</code> otherwise.</td>
-  </tr>
-  <tr>
-   <td><code>metaKey</code> {{readonlyInline}}</td>
-   <td>boolean</td>
-   <td><code>true</code> if the meta key was down when the event was fired. <code>false</code> otherwise.</td>
-  </tr>
- </tbody>
-</table>
+| Property                                  | Type         | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ----------------------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `target` {{readonlyInline}}         | EventTarget  | The event target (the topmost target in the DOM tree).                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `type` {{readonlyInline}}           | DOMString    | The type of event.                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `bubbles` {{readonlyInline}}        | Boolean      | Whether the event normally bubbles or not.                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `cancelable` {{readonlyInline}}     | Boolean      | Whether the event is cancellable or not.                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `view` {{readonlyInline}}           | WindowProxy  | [`document.defaultView`](/pt-BR/docs/Web/API/Document/defaultView "In browsers, document.defaultView returns the window object associated with a document, or null if none is available.") (`window` of the document)                                                                                                                                                                                                                                        |
+| `detail` {{readonlyInline}}         | long (float) | 0.                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `touches` {{readonlyInline}}        | TouchList    | A list of [`Touch`](/en/DOM/Touch)es for every point of contact currently touching the surface.                                                                                                                                                                                                                                                                                                                                                              |
+| `targetTouches` {{readonlyInline}}  | TouchList    | A list of [`Touch`](/en/DOM/Touch)es for every point of contact that is touching the surface and started on the element that is the target of the current event.                                                                                                                                                                                                                                                                                             |
+| `changedTouches` {{readonlyInline}} | TouchList    | A list of [`Touch`](/pt-BR/docs/DOM/Touch)es for every point of contact which contributed to the event. For the touchstart event this must be a list of the touch points that just became active with the current event. For the touchmove event this must be a list of the touch points that have moved since the last event. For the touchend and touchcancel events this must be a list of the touch points that have just been removed from the surface. |
+| `ctrlKey` {{readonlyInline}}        | boolean      | `true` if the control key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                                                              |
+| `shiftKey` {{readonlyInline}}       | boolean      | `true` if the shift key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                                                                |
+| `altKey` {{readonlyInline}}         | boolean      | `true` if the alt key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                                                                  |
+| `metaKey` {{readonlyInline}}        | boolean      | `true` if the meta key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                                                                 |
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>Os códigos de exemplos para este evento estão disponíveis nesta página dedicada: <a href="/en-US/DOM/Touch_events">Touch events</a>.</p>
+Os códigos de exemplos para este evento estão disponíveis nesta página dedicada: [Touch events](/en-US/DOM/Touch_events).
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Element.touchstart_event")}}
 
-<h2 id="Eventos_Relacionados">Eventos Relacionados</h2>
+## Eventos Relacionados
 
-<ul>
- <li>{{ domxref("GlobalEventHandlers.ontouchstart","ontouchstart")}}</li>
-</ul>
+- {{ domxref("GlobalEventHandlers.ontouchstart","ontouchstart")}}

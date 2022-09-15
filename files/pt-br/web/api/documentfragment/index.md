@@ -3,106 +3,67 @@ title: DocumentFragment
 slug: Web/API/DocumentFragment
 translation_of: Web/API/DocumentFragment
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<p>A interface do <strong>DocumentFragment </strong>representa um objeto de documento mínimo que não possui pai. Ela é utilizada como uma versão leve de {{domxref("Document")}} para armazenar fragmentos bem formados ou fragments potencialmente mal formados de XML.</p>
+A interface do **DocumentFragment** representa um objeto de documento mínimo que não possui pai. Ela é utilizada como uma versão leve de {{domxref("Document")}} para armazenar fragmentos bem formados ou fragments potencialmente mal formados de XML.
 
-<p>Vários outros métodos podem usar um document fragment como argumento (ex. qualquer interface de {{domxref("Node")}} como {{domxref("Node.appendChild")}} e {{domxref("Node.insertBefore")}}) em casos em que os filhos do fragment são acrescentados ou inseridos, e não o próprio fragment.</p>
+Vários outros métodos podem usar um document fragment como argumento (ex. qualquer interface de {{domxref("Node")}} como {{domxref("Node.appendChild")}} e {{domxref("Node.insertBefore")}}) em casos em que os filhos do fragment são acrescentados ou inseridos, e não o próprio fragment.
 
-<p>Essa interface também é excelente para ser usada com Web components: elementos {{HTMLElement("template")}}  contém um <code>DocumentFragment</code> na propriedade {{domxref("HTMLTemplateElement.content")}} deles.</p>
+Essa interface também é excelente para ser usada com Web components: elementos {{HTMLElement("template")}} contém um `DocumentFragment` na propriedade {{domxref("HTMLTemplateElement.content")}} deles.
 
-<p>Um DocumentFragment pode ser criado usando o método {{domxref("document.createDocumentFragment")}} ou o construtor.</p>
+Um DocumentFragment pode ser criado usando o método {{domxref("document.createDocumentFragment")}} ou o construtor.
 
-<h2 id="Specification" name="Specification">Propriedades</h2>
+## Propriedades
 
-<p><em>Essa interface não tem uma propriedade específica, mas herda de seu pai, </em><em>{{domxref("Node")}}, e implementa aquelas da interface {{domxref("ParentNode")}}.</em></p>
+_Essa interface não tem uma propriedade específica, mas herda de seu pai,_ _{{domxref("Node")}}, e implementa aquelas da interface {{domxref("ParentNode")}}._
 
-<dl>
- <dt>{{ domxref("ParentNode.children") }} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Returns a live {{domxref("HTMLCollection")}} containing all objects of type {{domxref("Node")}} that are children of the <code>DocumentFragment</code> object.</dd>
- <dt>{{ domxref("ParentNode.firstElementChild") }} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Returns the {{domxref("Element")}} that is the first child of the <code>DocumentFragment</code> object, or <code>null</code> if there is none.</dd>
- <dt>{{ domxref("ParentNode.lastElementChild") }} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Returns the {{domxref("Element")}} that is the last child of the <code>DocumentFragment</code> object, or <code>null</code> if there is none.</dd>
- <dt>{{ domxref("ParentNode.childElementCount") }} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Returns an <code>unsigned long</code> giving the amount of children that the <code>DocumentFragment</code> has.</dd>
-</dl>
+- {{ domxref("ParentNode.children") }} {{readonlyInline}}{{experimental_inline}}
+  - : Returns a live {{domxref("HTMLCollection")}} containing all objects of type {{domxref("Node")}} that are children of the `DocumentFragment` object.
+- {{ domxref("ParentNode.firstElementChild") }} {{readonlyInline}}{{experimental_inline}}
+  - : Returns the {{domxref("Element")}} that is the first child of the `DocumentFragment` object, or `null` if there is none.
+- {{ domxref("ParentNode.lastElementChild") }} {{readonlyInline}}{{experimental_inline}}
+  - : Returns the {{domxref("Element")}} that is the last child of the `DocumentFragment` object, or `null` if there is none.
+- {{ domxref("ParentNode.childElementCount") }} {{readonlyInline}}{{experimental_inline}}
+  - : Returns an `unsigned long` giving the amount of children that the `DocumentFragment` has.
 
-<h2 id="Construtor">Construtor</h2>
+## Construtor
 
-<dl>
- <dt>{{ domxref("DocumentFragment.DocumentFragment()", "DocumentFragment()") }} {{experimental_inline}}</dt>
- <dd>Retorna um objeto <span style="font-family: courier new,andale mono,monospace; line-height: 1.5;">DocumentFragment </span><span style="line-height: 1.5;">vazio.</span></dd>
-</dl>
+- {{ domxref("DocumentFragment.DocumentFragment()", "DocumentFragment()") }} {{experimental_inline}}
+  - : Retorna um objeto DocumentFragment vazio.
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<p><em>This interface inherits the methods of its parent, {{domxref("Node")}}<em>, and implements those of the {{domxref("ParentNode")}} interface</em></em><em>.</em></p>
+_This interface inherits the methods of its parent, {{domxref("Node")}}_, and implements those of the {{domxref("ParentNode")}} interface*\_\_.*
 
-<dl>
- <dt>{{domxref("DocumentFragment.find()")}} {{experimental_inline}}</dt>
- <dd>Returns the first matching {{domxref("Element")}} in the tree of the <code>DocumentFragment</code>.</dd>
- <dt>{{domxref("DocumentFragment.findAll()")}} {{experimental_inline}}</dt>
- <dd>Returns a {{domxref("NodeList")}} of matching {{domxref("Element")}} in the tree of the <code>DocumentFragment</code>.</dd>
- <dt>{{domxref("DocumentFragment.querySelector()")}}</dt>
- <dd>Returns the first {{domxref("Element")}} node within the <code>DocumentFragment</code>, in document order, that matches the specified selectors.</dd>
- <dt>{{domxref("DocumentFragment.querySelectorAll()")}}</dt>
- <dd>Returns a {{domxref("NodeList")}} of all the {{domxref("Element")}} nodes within the <code>DocumentFragment</code> that match the specified selectors.</dd>
-</dl>
+- {{domxref("DocumentFragment.find()")}} {{experimental_inline}}
+  - : Returns the first matching {{domxref("Element")}} in the tree of the `DocumentFragment`.
+- {{domxref("DocumentFragment.findAll()")}} {{experimental_inline}}
+  - : Returns a {{domxref("NodeList")}} of matching {{domxref("Element")}} in the tree of the `DocumentFragment`.
+- {{domxref("DocumentFragment.querySelector()")}}
+  - : Returns the first {{domxref("Element")}} node within the `DocumentFragment`, in document order, that matches the specified selectors.
+- {{domxref("DocumentFragment.querySelectorAll()")}}
+  - : Returns a {{domxref("NodeList")}} of all the {{domxref("Element")}} nodes within the `DocumentFragment` that match the specified selectors.
 
-<dl>
- <dt>{{domxref("DocumentFragment.getElementById()")}}</dt>
- <dd>Returns the first {{domxref("Element")}} node within the <code style="font-size: 14px;">DocumentFragment</code>, in document order, that matches the specified ID.</dd>
-</dl>
+<!---->
 
-<h2 id="Specification" name="Specification">Especificações</h2>
+- {{domxref("DocumentFragment.getElementById()")}}
+  - : Returns the first {{domxref("Element")}} node within the `DocumentFragment`, in document order, that matches the specified ID.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#documentfragment', 'DocumentFragment')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Added the constructor and the implementation of {{domxref("ParentNode")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Selectors API Level 2', '#the-apis', 'DocumentFragment')}}</td>
-   <td>{{Spec2('Selectors API Level 2')}}</td>
-   <td>Added the <code>find()</code> and <code>findAll()</code> methods.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Selectors API Level 1', '#the-apis', 'DocumentFragment')}}</td>
-   <td>{{Spec2('Selectors API Level 1')}}</td>
-   <td>Added the <code>querySelector()</code> and <code>querySelectorAll()</code> methods.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-B63ED1A3', 'DocumentFragment')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>No change from {{SpecName('DOM2 Core')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-B63ED1A3', 'DocumentFragment')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>No change from {{SpecName('DOM1')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-B63ED1A3', 'DocumentFragment')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+## Especificações
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+| Specification                                                                                        | Status                                       | Comment                                                                           |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------------------- |
+| {{SpecName('DOM WHATWG', '#documentfragment', 'DocumentFragment')}}             | {{Spec2('DOM WHATWG')}}             | Added the constructor and the implementation of {{domxref("ParentNode")}}. |
+| {{SpecName('Selectors API Level 2', '#the-apis', 'DocumentFragment')}}         | {{Spec2('Selectors API Level 2')}} | Added the `find()` and `findAll()` methods.                                       |
+| {{SpecName('Selectors API Level 1', '#the-apis', 'DocumentFragment')}}         | {{Spec2('Selectors API Level 1')}} | Added the `querySelector()` and `querySelectorAll()` methods.                     |
+| {{SpecName('DOM3 Core', 'core.html#ID-B63ED1A3', 'DocumentFragment')}}         | {{Spec2('DOM3 Core')}}                 | No change from {{SpecName('DOM2 Core')}}                                   |
+| {{SpecName('DOM2 Core', 'core.html#ID-B63ED1A3', 'DocumentFragment')}}         | {{Spec2('DOM2 Core')}}                 | No change from {{SpecName('DOM1')}}                                       |
+| {{SpecName('DOM1', 'level-one-core.html#ID-B63ED1A3', 'DocumentFragment')}} | {{Spec2('DOM1')}}                     | Initial definition                                                                |
+
+## Compatibilidade com navegadores
 
 {{Compat("api.DocumentFragment")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index.</a></li>
-</ul>
+- [The DOM interfaces index.](/pt-BR/docs/DOM/DOM_Reference)

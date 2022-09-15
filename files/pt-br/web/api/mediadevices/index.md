@@ -3,41 +3,38 @@ title: MediaDevices
 slug: Web/API/MediaDevices
 translation_of: Web/API/MediaDevices
 ---
-<div>{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}</div>
+{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 
-<p><span class="seoSummary">As interfaces <strong><code>MediaDevices</code></strong> proporcionam accesso aos dispositivos de entrada de midia conectados, como câmeras e microfones, bem como compartilhamento de tela. Essencialmente, isso te permite obter acesso a qualquer mídia gerada pelo hardware.</span></p>
+As interfaces **`MediaDevices`** proporcionam accesso aos dispositivos de entrada de midia conectados, como câmeras e microfones, bem como compartilhamento de tela. Essencialmente, isso te permite obter acesso a qualquer mídia gerada pelo hardware.
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<p><em>As mesmas propriedades de {{domxref("EventTarget")}}.</em></p>
+_As mesmas propriedades de {{domxref("EventTarget")}}._
 
-<h3 id="Handlers" name="Handlers">Manipuladores de Evento</h3>
+### Manipuladores de Evento
 
-<dl>
- <dt>{{ domxref("MediaDevices.ondevicechange") }}</dt>
- <dd>O manipulador de evento para o evento {{event("devicechange")}}. Esse evento é entregue ao objeto <code>MediaDevices</code> quando uma entrada de mídia ou dispositivo de saída é conectado ou removido do computador do usuário.</dd>
-</dl>
+- {{ domxref("MediaDevices.ondevicechange") }}
+  - : O manipulador de evento para o evento {{event("devicechange")}}. Esse evento é entregue ao objeto `MediaDevices` quando uma entrada de mídia ou dispositivo de saída é conectado ou removido do computador do usuário.
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<p><em>Mesmos métodos de {{domxref("EventTarget")}}.</em></p>
+_Mesmos métodos de {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{ domxref("EventTarget.addEventListener()") }}</dt>
- <dd>Registra um manipulador de eventos para um tipo específico de evento.</dd>
- <dt>{{ domxref("MediaDevices.enumerateDevices()") }}</dt>
- <dd>Obtém um array de informações sobre a entrada de midia e dispositivos de saída disponíveis no sistema.</dd>
- <dt>{{domxref("MediaDevices.getSupportedConstraints()")}}</dt>
- <dd>Retorna um objeto consoante com {{domxref("MediaTrackSupportedConstraints")}} indicando quais propriedades restritivas são suportadas na interface {{domxref("MediaStreamTrack")}}. Veja {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API", "Capabilities and constraints")}} para aprender mais sobre restrições e como usá-las.</dd>
- <dt>{{ domxref("MediaDevices.getUserMedia()") }}</dt>
- <dd>Após a permissão do usuário (pedida através de um prompt), liga a câmera, microfone e/ou a tramissão de tela no sistema e fornece uma {{domxref("MediaStream")}} contendo uma faixa de vídeo e/ou áudio com a entrada.</dd>
- <dt>{{ domxref("EventTarget.removeEventListener()") }}</dt>
- <dd>Remove um escutador de evento.</dd>
-</dl>
+- {{ domxref("EventTarget.addEventListener()") }}
+  - : Registra um manipulador de eventos para um tipo específico de evento.
+- {{ domxref("MediaDevices.enumerateDevices()") }}
+  - : Obtém um array de informações sobre a entrada de midia e dispositivos de saída disponíveis no sistema.
+- {{domxref("MediaDevices.getSupportedConstraints()")}}
+  - : Retorna um objeto consoante com {{domxref("MediaTrackSupportedConstraints")}} indicando quais propriedades restritivas são suportadas na interface {{domxref("MediaStreamTrack")}}. Veja {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API", "Capabilities and constraints")}} para aprender mais sobre restrições e como usá-las.
+- {{ domxref("MediaDevices.getUserMedia()") }}
+  - : Após a permissão do usuário (pedida através de um prompt), liga a câmera, microfone e/ou a tramissão de tela no sistema e fornece uma {{domxref("MediaStream")}} contendo uma faixa de vídeo e/ou áudio com a entrada.
+- {{ domxref("EventTarget.removeEventListener()") }}
+  - : Remove um escutador de evento.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush:js">'use strict';
+```js
+'use strict';
 
 // Coloca as variáveis no escopo global para torná-las disponível para o Console do navegador.
 var video = document.querySelector('video');
@@ -71,39 +68,27 @@ navigator.mediaDevices.getUserMedia(constraints)
 });
 
 function errorMsg(msg, error) {
-  errorElement.innerHTML += '&lt;p&gt;' + msg + '&lt;/p&gt;';
+  errorElement.innerHTML += '<p>' + msg + '</p>';
   if (typeof error !== 'undefined') {
     console.error(error);
   }
-}</pre>
+}
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Capture', '#mediadevices', 'MediaDevices')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                        | Status                               | Comentário        |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | ----------------- |
+| {{SpecName('Media Capture', '#mediadevices', 'MediaDevices')}} | {{Spec2('Media Capture')}} | Definição inicial |
 
-<h2 id="Compatibilidade">Compatibilidade</h2>
+## Compatibilidade
 
 {{Compat("api.MediaDevices")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>: A API desta interface faz parte..</li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li>{{domxref("Navigator.mediaDevices")}}: Retorna uma referência para um objeto <code>MediaDevices</code> que pode ser usado para acessar dispositivos.</li>
- <li><a href="https://github.com/chrisjohndigital/CameraCaptureJS">CameraCaptureJS:</a> Captura de vídeo e playback em HTML5 usando <em>MediaDevices</em> e a <em>MediaStream Recording API</em> (<a href="https://github.com/chrisjohndigital/CameraCaptureJS">código no GitHub</a>)</li>
- <li><a href="https://github.com/chrisjohndigital/OpenLang">OpenLang</a>: Aplicação web de laboratório de linguagem de vídeo HTML5 usando <em>MediaDevices </em>e <em>MediaStream Recording API</em> para gravação de video (<a href="https://github.com/chrisjohndigital/OpenLang">código no GitHub</a>)</li>
-</ul>
+- [Media Capture and Streams API](/pt-BR/docs/Web/API/Media_Streams_API): A API desta interface faz parte..
+- [WebRTC API](/pt-BR/docs/Web/API/WebRTC_API)
+- {{domxref("Navigator.mediaDevices")}}: Retorna uma referência para um objeto `MediaDevices` que pode ser usado para acessar dispositivos.
+- [CameraCaptureJS:](https://github.com/chrisjohndigital/CameraCaptureJS) Captura de vídeo e playback em HTML5 usando _MediaDevices_ e a _MediaStream Recording API_ ([código no GitHub](https://github.com/chrisjohndigital/CameraCaptureJS))
+- [OpenLang](https://github.com/chrisjohndigital/OpenLang): Aplicação web de laboratório de linguagem de vídeo HTML5 usando _MediaDevices_ e _MediaStream Recording API_ para gravação de video ([código no GitHub](https://github.com/chrisjohndigital/OpenLang))

@@ -3,60 +3,51 @@ title: URLSearchParams.values()
 slug: Web/API/URLSearchParams/values
 translation_of: Web/API/URLSearchParams/values
 ---
-<p>{{APIRef("URL API")}}</p>
+{{APIRef("URL API")}}
 
-<p>O m<em>étodo</em> <code><strong>URLSearchParams.values()</strong></code>retorna um {{jsxref("Iteration_protocols",'iterator')}} que permite passar por todos os valores do objeto. Os valores são objetos {{domxref("USVString")}}.</p>
+O m*étodo* **`URLSearchParams.values()`**retorna um {{jsxref("Iteration_protocols",'iterator')}} que permite passar por todos os valores do objeto. Os valores são objetos {{domxref("USVString")}}.
 
-<div class="note">
-<p><strong>Nota</strong>: Esse método está disponível no <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Nota:** Esse método está disponível no [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">searchParams.values();</pre>
+```
+searchParams.values();
+```
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>Retorna um  {{jsxref("Iteration_protocols","iterator")}}.</p>
+Retorna um {{jsxref("Iteration_protocols","iterator")}}.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: js">// Cria um objeto URLSearchParams
-var searchParams = new URLSearchParams("key1=value1&amp;key2=value2");
+```js
+// Cria um objeto URLSearchParams
+var searchParams = new URLSearchParams("key1=value1&key2=value2");
 
 // Mostra os pares de chave/valor
 for(var value of searchParams.values()) {
   console.log(value);
-}</pre>
+}
+```
 
-<p>O resultado é:</p>
+O resultado é:
 
-<pre>value1
-value2</pre>
+```
+value1
+value2
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('URL', '#urlsearchparams','values() (as iterator&lt;&gt;)')}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status               | Comment            |
+| ------------------------------------------------------------------------------------------------ | -------------------- | ------------------ |
+| {{SpecName('URL', '#urlsearchparams','values() (as iterator&lt;&gt;)')}} | {{Spec2('URL')}} | Definição inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.URLSearchParams.values")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>Outras interfaces relacionadas à URL: {{domxref("URL")}}, {{domxref("URLUtils")}}.</li>
-</ul>
+- Outras interfaces relacionadas à URL: {{domxref("URL")}}, {{domxref("URLUtils")}}.

@@ -3,76 +3,42 @@ title: PositionError
 slug: Web/API/GeolocationPositionError
 translation_of: Web/API/GeolocationPositionError
 ---
-<div>{{APIRef("Geolocation API")}}</div>
+{{APIRef("Geolocation API")}}
 
-<p>A interface <strong><code>PositionError</code></strong> representa a rasão de um erro ocorrer quando usando o dispositivo de geolocalização.</p>
+A interface **`PositionError`** representa a rasão de um erro ocorrer quando usando o dispositivo de geolocalização.
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<p><em>A interface <code>PositionError</code> não herda nenhuma propriedade</em>.</p>
+_A interface `PositionError` não herda nenhuma propriedade_.
 
-<dl>
- <dt>{{domxref("PositionError.code")}} {{readonlyInline}}</dt>
- <dd>Retorna um tipo <code>unsigned short</code> representando o código de erro. Os valores possíveis são os seguintes:
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <th scope="col">Valor</th>
-    <th scope="col">Constante associada</th>
-    <th scope="col">Descrição</th>
-   </tr>
-   <tr>
-    <td><code>1</code></td>
-    <td><code>PERMISSION_DENIED</code></td>
-    <td>Não foi possível obter a informação sobre geolocalização por que a página não possuía permissão para fazê-lo.</td>
-   </tr>
-   <tr>
-    <td><code>2</code></td>
-    <td><code>POSITION_UNAVAILABLE</code></td>
-    <td>A obtenção da geolocalização falhou por que pelo menos uma fonte interna de posicionamento retornou um erro interno.</td>
-   </tr>
-   <tr>
-    <td><code>3</code></td>
-    <td><code>TIMEOUT</code></td>
-    <td>O tempo máximo permitido para obter a geolocalização, definido por {{domxref("PositionOptions.timeout")}} foi atingido antes de se obter a informação.</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt>{{domxref("PositionError.message")}} {{readonlyInline}}</dt>
- <dd>Retorna um {{domxref("DOMString")}} humanamente legível descrevendo os detalhes do erro. A especificação observa que esta informação é primariamente projetada para propósitos de debug e não deve ser exibida diretamente na interface com o usuário.</dd>
-</dl>
+- {{domxref("PositionError.code")}} {{readonlyInline}}
 
-<h2 id="Métodos">Métodos</h2>
+  - : Retorna um tipo `unsigned short` representando o código de erro. Os valores possíveis são os seguintes:
 
-<p><em><em>A interface <code>PositionError</code> não implementa nem herda qualquer método<em>.</em></em></em></p>
+    | Valor | Constante associada    | Descrição                                                                                                                                                            |
+    | ----- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `1`   | `PERMISSION_DENIED`    | Não foi possível obter a informação sobre geolocalização por que a página não possuía permissão para fazê-lo.                                                        |
+    | `2`   | `POSITION_UNAVAILABLE` | A obtenção da geolocalização falhou por que pelo menos uma fonte interna de posicionamento retornou um erro interno.                                                 |
+    | `3`   | `TIMEOUT`              | O tempo máximo permitido para obter a geolocalização, definido por {{domxref("PositionOptions.timeout")}} foi atingido antes de se obter a informação. |
 
-<h2 id="Especificações">Especificações</h2>
+- {{domxref("PositionError.message")}} {{readonlyInline}}
+  - : Retorna um {{domxref("DOMString")}} humanamente legível descrevendo os detalhes do erro. A especificação observa que esta informação é primariamente projetada para propósitos de debug e não deve ser exibida diretamente na interface com o usuário.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Geolocation', '#positionerror', 'PositionError')}}</td>
-   <td>{{Spec2('Geolocation')}}</td>
-   <td>Especificação inicial.</td>
-  </tr>
- </tbody>
-</table>
+## Métodos
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+**A interface `PositionError` não implementa nem herda qualquer método*.***
+
+## Especificações
+
+| Especificação                                                                        | Status                           | Comentário             |
+| ------------------------------------------------------------------------------------ | -------------------------------- | ---------------------- |
+| {{SpecName('Geolocation', '#positionerror', 'PositionError')}} | {{Spec2('Geolocation')}} | Especificação inicial. |
+
+## Compatibilidade com navegadores
 
 {{Compat("api.GeolocationPositionError")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/WebAPI/Using_geolocation">Usando geolocation</a></li>
- <li>A interface {{domxref("Geolocation")}} que o utiliza.</li>
-</ul>
+- [Usando geolocation](/pt-BR/docs/WebAPI/Using_geolocation)
+- A interface {{domxref("Geolocation")}} que o utiliza.

@@ -7,62 +7,41 @@ tags:
   - Referencia
 translation_of: Web/API/CSS
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<p><code><font face="Open Sans, Arial, sans-serif">A interface </font><strong>CSS</strong></code> carrega métodos CSS-relacionados úteis. Nenhum objeto com essa interface foi implementado: Aqui só contém métodos estáticos e futuramente uma interface útil.</p>
+`A interface CSS` carrega métodos CSS-relacionados úteis. Nenhum objeto com essa interface foi implementado: Aqui só contém métodos estáticos e futuramente uma interface útil.
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<p><em>A interface CSS é a interface utilizada e nenhum objeto desse tipo pode ser criado: só métodos estáticos são definidos aqui.</em></p>
+_A interface CSS é a interface utilizada e nenhum objeto desse tipo pode ser criado: só métodos estáticos são definidos aqui._
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<p><em>A interface CSS é a interface utilizada e nenhum objeto desse tipo pode ser criado: só métodos estáticos são definidos aqui.</em></p>
+_A interface CSS é a interface utilizada e nenhum objeto desse tipo pode ser criado: só métodos estáticos são definidos aqui._
 
-<h2 id="Métodos_státicos">Métodos státicos</h2>
+## Métodos státicos
 
-<p><em>Nenhuma método estático herdado</em>.</p>
+_Nenhuma método estático herdado_.
 
-<dl>
- <dt>{{domxref("CSS.supports()")}}</dt>
- <dd>Retorna um {{domxref("Boolean")}} indicando se o par <em>property-value</em>, ou a condição dada do parâmetro é suportada.</dd>
-</dl>
+- {{domxref("CSS.supports()")}}
+  - : Retorna um {{domxref("Boolean")}} indicando se o par _property-value_, ou a condição dada do parâmetro é suportada.
 
-<dl>
- <dt>{{domxref("CSS.escape()")}} {{experimental_inline}}</dt>
- <dd>Pode ser usado para escapar um string mais usado como parte de um seletor CSS.</dd>
-</dl>
+<!---->
 
-<h2 id="Especificações">Especificações</h2>
+- {{domxref("CSS.escape()")}} {{experimental_inline}}
+  - : Pode ser usado para escapar um string mais usado como parte de um seletor CSS.
 
-<table class="standard-table" style="font-size: 14px; font-weight: normal; line-height: 1.5;">
- <thead>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM', '#the-css.escape%28%29-method', 'CSS')}}</td>
-   <td>{{Spec2('CSSOM')}}</td>
-   <td>Adicionado o   <code>escape()</code> método estático.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Conditional', '#the-css-interface', 'CSS')}}</td>
-   <td>{{Spec2('CSS3 Conditional')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+## Especificações
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+| Especificações                                                                   | Estado                                   | Comentário                               |
+| -------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------- |
+| {{SpecName('CSSOM', '#the-css.escape%28%29-method', 'CSS')}} | {{Spec2('CSSOM')}}                 | Adicionado o `escape()` método estático. |
+| {{SpecName('CSS3 Conditional', '#the-css-interface', 'CSS')}} | {{Spec2('CSS3 Conditional')}} | Definição inicial.                       |
+
+## Compatibilidade com navegadores
 
 {{Compat("api.CSS")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Components.utils.importGlobalProperties">Components.utils.importGlobalProperties</a></li>
-</ul>
+- [Components.utils.importGlobalProperties](/pt-BR/docs/Components.utils.importGlobalProperties)

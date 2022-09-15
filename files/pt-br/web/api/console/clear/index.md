@@ -3,34 +3,22 @@ title: console.clear()
 slug: Web/API/Console/clear
 translation_of: Web/API/Console/clear
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>O método <strong><code>console.clear()</code></strong> limpa o console, se o ambiente permitir.</p>
+O método **`console.clear()`** limpa o console, se o ambiente permitir.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">console.clear();
-</pre>
+```
+console.clear();
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#clear", "console.clear()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                | Status                           | Comment            |
+| ---------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName("Console API", "#clear", "console.clear()")}} | {{Spec2("Console API")}} | Initial definition |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("api.Console.clear")}}</p>
+{{Compat("api.Console.clear")}}

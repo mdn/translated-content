@@ -12,64 +12,46 @@ tags:
   - setRequestHeader
 translation_of: Web/API/XMLHttpRequest/setRequestHeader
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<div> </div>
+O método **`setRequestHeader()`** de {{domxref("XMLHttpRequest")}} define o valor do cabeçalho de uma requisição HTTP. Ao usar `setRequestHeader()`, você deve chamá-lo depois de chamar o método {{domxref("XMLHttpRequest.open", "open()")}}, mas antes de chamar o método {{domxref("XMLHttpRequest.send", "send()")}}. Se esse método é chamado muitas vezes com o mesmo cabeçalho, os valores são somados em um único cabeçalho de requisição HTTP.
 
-<p>O método <code><strong>setRequestHeader()</strong></code> de {{domxref("XMLHttpRequest")}} define o valor do cabeçalho de uma requisição HTTP. Ao usar <code>setRequestHeader()</code>, você deve chamá-lo depois de chamar o método {{domxref("XMLHttpRequest.open", "open()")}}, mas antes de chamar o método {{domxref("XMLHttpRequest.send", "send()")}}. Se esse método é chamado muitas vezes com o mesmo cabeçalho, os valores são somados em um único cabeçalho de requisição HTTP.</p>
+A cada vez que você chama `setRequestHeader()` depois de ter chamado-o pelo menos uma vez, o texto especificado é somado ao final do conteúdo do cabeçalho existente.
 
-<p>A cada vez que você chama <code>setRequestHeader()</code> depois de ter chamado-o pelo menos uma vez, o texto especificado é somado ao final do conteúdo do cabeçalho existente.</p>
+Se nenhum cabeçalho {{HTTPHeader("Accept")}} foi definido usando este método, um cabeçalho `Accept` com o tipo `"*/*"` é enviado com a requisição quando {{domxref("XMLHttpRequest.send", "send()")}} é chamado.
 
-<p>Se nenhum cabeçalho {{HTTPHeader("Accept")}} foi definido usando este método, um cabeçalho <code>Accept</code> com o tipo <code>"*/*"</code> é enviado com a requisição quando {{domxref("XMLHttpRequest.send", "send()")}} é chamado.</p>
+Por razões de segurança, alguns cabeçalhos só podem ser controlados pelo agente do usuário. Esses cabeçalhos incluem o cabeçalho {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} e o cabeçalho {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.
 
-<p>Por razões de segurança, alguns cabeçalhos só podem ser controlados pelo agente do usuário. Esses cabeçalhos incluem o cabeçalho {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} e o cabeçalho {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.</p>
+> **Nota:** **Observação:** Para seu campos personalizados, você pode encontrar uma exceção "**not allowed by Access-Control-Allow-Headers in preflight response**" quando você envia requisições através de domínios. Neste caso, você precisa definir o cabeçalho {{HTTPHeader("Access-Control-Allow-Headers")}} no seu cabeçalho de resposta no lado do servidor.
 
-<div class="note">
-<p><strong>Observação:</strong> Para seu campos personalizados, você pode encontrar uma exceção "<strong>not allowed by Access-Control-Allow-Headers in preflight response</strong>" quando você envia requisições através de domínios. Neste caso, você precisa definir o cabeçalho {{HTTPHeader("Access-Control-Allow-Headers")}} no seu cabeçalho de resposta no lado do servidor.</p>
-</div>
+## Sintaxe
 
-<h2 id="Sintaxe">Sintaxe</h2>
+```
+XMLHttpRequest.setRequestHeader(header, value)
+```
 
-<pre class="syntaxbox"><em>XMLHttpRequest</em>.setRequestHeader(<var>header</var>, <var>value</var>)
-</pre>
+### Parâmetros
 
-<h3 id="Parâmetros">Parâmetros</h3>
+- `header`
+  - : O nome do cabeçalho cujo valor está para ser definido.
+- `value`
+  - : O valor a ser definido como o corpo do cabeçalho.
 
-<dl>
- <dt><code>header</code></dt>
- <dd>O nome do cabeçalho cujo valor está para ser definido.</dd>
- <dt><code>value</code></dt>
- <dd>O valor a ser definido como o corpo do cabeçalho.</dd>
-</dl>
+### Valor de retorno
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+`undefined`.
 
-<p><code>undefined</code>.</p>
+## Especificações
 
-<h2 id="Especificações">Especificações</h2>
+| Especificação                                                                                                        | Status                               | Comentário             |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------- |
+| {{SpecName('XMLHttpRequest', '#the-setRequestHeader()-method', 'setRequestHeader()')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#the-setRequestHeader()-method', 'setRequestHeader()')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>WHATWG living standard</td>
-  </tr>
- </tbody>
-</table>
+## Compatibilidade com navegadores
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+{{Compat("api.XMLHttpRequest.setRequestHeader")}}
 
-<p>{{Compat("api.XMLHttpRequest.setRequestHeader")}}</p>
+## Veja também
 
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Usando XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML em XMLHttpRequest</a></li>
-</ul>
+- [Usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [HTML em XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)

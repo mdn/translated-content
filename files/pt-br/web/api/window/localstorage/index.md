@@ -11,54 +11,43 @@ tags:
 translation_of: Web/API/Window/localStorage
 original_slug: Web/API/Window/Window.localStorage
 ---
-<p>{{APIRef()}}</p>
+{{APIRef()}}
 
-<p>A propriedade <code>localStorage</code> permite acessar um objeto {{domxref("Storage")}} local. A <code>localStorage</code> é similar ao <code><a href="/en-US/docs/Web/API/Window.sessionStorage">sessionStorage</a></code>. A única diferença é que enquanto os dados armazenados no localStorage não expiram, os dados no sessionStorage tem os seus dados limpos ao expirar a sessão da página — ou seja, quando a página (aba ou janela) é fechada.</p>
+A propriedade `localStorage` permite acessar um objeto {{domxref("Storage")}} local. A `localStorage` é similar ao [`sessionStorage`](/en-US/docs/Web/API/Window.sessionStorage). A única diferença é que enquanto os dados armazenados no localStorage não expiram, os dados no sessionStorage tem os seus dados limpos ao expirar a sessão da página — ou seja, quando a página (aba ou janela) é fechada.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush: js">meuStorage = localStorage;</pre>
+```js
+meuStorage = localStorage;
+```
 
-<h3 id="Valor">Valor</h3>
+### Valor
 
-<p>Objeto {{domxref("Storage")}}.</p>
+Objeto {{domxref("Storage")}}.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>O seguinte trecho acessa o objeto {{domxref("Storage")}} local do domínio atual e adiciona um item usando o {{domxref("Storage.setItem()")}}.</p>
+O seguinte trecho acessa o objeto {{domxref("Storage")}} local do domínio atual e adiciona um item usando o {{domxref("Storage.setItem()")}}.
 
-<pre class="brush: js">localStorage.setItem('meuGato', 'Tom');</pre>
+```js
+localStorage.setItem('meuGato', 'Tom');
+```
 
-<div class="note">
-<p><strong>Nota: Por favor veja o artigo</strong> <a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a> <strong>para um exemplo completo.</strong></p>
-</div>
+> **Nota:** **Nota: Por favor veja o artigo** [Using the Web Storage API](/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) **para um exemplo completo.**
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Storage', '#dom-localstorage', 'localStorage')}}</td>
-   <td>{{Spec2('Web Storage')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                        | Status                           | Comentário |
+| ------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| {{SpecName('Web Storage', '#dom-localstorage', 'localStorage')}} | {{Spec2('Web Storage')}} |            |
 
-<h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
+## Navegadores compatíveis
 
 {{Compat("api.Window.localStorage")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a></li>
- <li>{{domxref("LocalStorage")}}</li>
- <li>{{domxref("SessionStorage")}}</li>
- <li>{{domxref("Window.sessionStorage")}}</li>
-</ul>
+- [Using the Web Storage API](/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- {{domxref("LocalStorage")}}
+- {{domxref("SessionStorage")}}
+- {{domxref("Window.sessionStorage")}}

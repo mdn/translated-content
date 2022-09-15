@@ -8,27 +8,27 @@ tags:
   - ParentNode
 translation_of: Web/API/Node/parentNode
 ---
-<div>
-<div>{{APIRef("DOM")}}</div>
-</div>
+{{APIRef("DOM")}}
 
-<p><code><strong>Node.parentNode</strong></code> é uma propriedade DOM somente leitura que retorna o nó (node) parente de um Node referenciado na árvore DOM. É extremamente aconselhável que você conheça a estrutura DOM para um melhor estudo e aprendizado.</p>
+**`Node.parentNode`** é uma propriedade DOM somente leitura que retorna o nó (node) parente de um Node referenciado na árvore DOM. É extremamente aconselhável que você conheça a estrutura DOM para um melhor estudo e aprendizado.
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>parentNode</em> = <em>node</em>.parentNode
-</pre>
+```
+parentNode = node.parentNode
+```
 
-<p><code>parentNode</code> é o node parente do node referenciado. O parente de um elemento é um Element node, um Document node, ou um DocumentFragment node. Será muito complicado entender tudo isso sem conhecer a estrutura DOM e seus Elements.</p>
+`parentNode` é o node parente do node referenciado. O parente de um elemento é um Element node, um Document node, ou um DocumentFragment node. Será muito complicado entender tudo isso sem conhecer a estrutura DOM e seus Elements.
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<pre class="brush:js">// Exemplo de como obter um elemento pai
+```js
+// Exemplo de como obter um elemento pai
 parente = node.parentNode; // Retorna o elemento pai
 
-// Obtém o primeiro &lt;li&gt; de uma lista
+// Obtém o primeiro <li> de uma lista
 var li = document.getElementsById('li-first');
-// A partir do &lt;li&gt; obtido, obtém o element &lt;ul&gt;
+// A partir do <li> obtido, obtém o element <ul>
 var ul = li.parentNode;
 
 // Estrutura com parágrafos dentro de uma div
@@ -39,32 +39,29 @@ if (node.parentNode) {
   // remove um node da árvore (estrutura) DOM, a menos que
   // ele já não exista não estrutura
   node.parentNode.removeChild(node);
-}</pre>
+}
+```
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p><code>Document</code> e<code> DocumentFragment</code> <a href="/en-US/docs/DOM/Node.nodeType" title="DOM/Node.nodeType">nodes</a> nunca podem ter um node parent, sendo assim <code>parentNode</code> sempre retornará <code>null</code>. Também retornará null se o node já tiver sido criado e não ainda não estiver anexado à estrutura DOM.</p>
+`Document` e` DocumentFragment` [nodes](/pt-BR/docs/DOM/Node.nodeType "DOM/Node.nodeType") nunca podem ter um node parent, sendo assim `parentNode` sempre retornará `null`. Também retornará null se o node já tiver sido criado e não ainda não estiver anexado à estrutura DOM.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Node.parentNode")}}
 
-<h2 id="Specification" name="Specification"> </h2>
+##
 
-<h2 id="Specification" name="Specification">Specificações</h2>
+## Specificações
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1060184317">DOM nível 2 Core: Node.parentNode</a></li>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1060184317">DOM nível 3 Core: Node.parentNode</a></li>
-</ul>
+- [DOM nível 2 Core: Node.parentNode](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1060184317)
+- [DOM nível 3 Core: Node.parentNode](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1060184317)
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{Domxref("Node.firstChild")}}</li>
- <li>{{Domxref("Node.lastChild")}}</li>
- <li>{{Domxref("Node.childNodes")}}</li>
- <li>{{Domxref("Node.nextSibling")}}</li>
- <li>{{Domxref("Node.previousSibling")}}</li>
- <li>{{Domxref("Node.removeChild")}}</li>
-</ul>
+- {{Domxref("Node.firstChild")}}
+- {{Domxref("Node.lastChild")}}
+- {{Domxref("Node.childNodes")}}
+- {{Domxref("Node.nextSibling")}}
+- {{Domxref("Node.previousSibling")}}
+- {{Domxref("Node.removeChild")}}

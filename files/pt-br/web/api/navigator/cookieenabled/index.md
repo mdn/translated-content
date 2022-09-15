@@ -3,45 +3,32 @@ title: Navigator.cookieEnabled
 slug: Web/API/Navigator/cookieEnabled
 translation_of: Web/API/Navigator/cookieEnabled
 ---
-<p>{{ ApiRef("HTML DOM") }}</p>
+{{ ApiRef("HTML DOM") }}
 
-<p><span class="seoSummary"><code>navigator.cookieEnabled</code> retorna um valor <dfn>Booleano</dfn> que indica quando<em lang="en"> cookies</em> estão habilitados ou não.</span> A propriedade é de apenas leitura.</p>
+`navigator.cookieEnabled` retorna um valor _Booleano_ que indica quando _cookies_ estão habilitados ou não. A propriedade é de apenas leitura.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush: js">var cookieEnabled = navigator.cookieEnabled;
-</pre>
+```js
+var cookieEnabled = navigator.cookieEnabled;
+```
 
-<ul>
- <li><code>cookieEnabled</code> é um <a href="/pt-BR/docs/Glossario/Booleano">Booleano</a>: <code>true</code> ou <code>false</code>.</li>
-</ul>
+- `cookieEnabled` é um [Booleano](/pt-BR/docs/Glossario/Booleano): `true` ou `false`.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: js">if (!navigator.cookieEnabled) {
+```js
+if (!navigator.cookieEnabled) {
   // The browser does not support or is blocking cookies from being set.
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "webappapis.html#dom-navigator-cookieenabled", "Navigator.cookieEnabled")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                            | Status                           | Comentário         |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName("HTML WHATWG", "webappapis.html#dom-navigator-cookieenabled", "Navigator.cookieEnabled")}} | {{Spec2("HTML WHATWG")}} | Initial definition |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("api.Navigator.cookieEnabled")}}</p>
+{{Compat("api.Navigator.cookieEnabled")}}

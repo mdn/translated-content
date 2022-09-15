@@ -3,44 +3,41 @@ title: Console.log()
 slug: Web/API/Console/log
 translation_of: Web/API/Console/log
 ---
-<div>{{APIRef("Console API")}}{{Non-standard_header}}</div>
+{{APIRef("Console API")}}{{Non-standard_header}}
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+## Sumário
 
-<p>Exibe uma mensagem na console do navegador.</p>
+Exibe uma mensagem na console do navegador.
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">console.log(<em>obj1</em>[, <em>obj2</em>, ..., <em>objN]</em>);
-console.log(<em>msg</em>[, <em>subst1</em>, ..., <em>substN]</em>);
-</pre>
+```
+console.log(obj1[, obj2, ..., objN]);
+console.log(msg[, subst1, ..., substN]);
+```
 
-<h2 id="Parameters">Parameters</h2>
+## Parameters
 
-<dl>
- <dt><code>obj1</code> ... <code>objN</code></dt>
- <dd>Uma lista de objetos JavaScript para exibir. A representação por escrito de cada um desses objetos é exibida na ordem com a qual foram inseridos na função.</dd>
- <dt><code>msg</code></dt>
- <dd>Uma string JavaScript com zero ou mais substituições.</dd>
- <dt><code>subst1</code> ... <code>substN</code></dt>
- <dd>Strings ou objetos JavaScript para substituirem as marcações de substituição em <code>msg</code>. Estas substituições ocorrem de um para um e na ordem em que são passadas para a console.log.</dd>
-</dl>
+- `obj1` ... `objN`
+  - : Uma lista de objetos JavaScript para exibir. A representação por escrito de cada um desses objetos é exibida na ordem com a qual foram inseridos na função.
+- `msg`
+  - : Uma string JavaScript com zero ou mais substituições.
+- `subst1` ... `substN`
+  - : Strings ou objetos JavaScript para substituirem as marcações de substituição em `msg`. Estas substituições ocorrem de um para um e na ordem em que são passadas para a console.log.
 
-<p>Veja <a href="/en-US/docs/DOM/console#Outputting_text_to_the_console" title="DOM/console#Outputting_text_to_the_console">Exibindo texto na console</a> na documentação do objeto {{domxref("console")}} para mais detalhes.</p>
+Veja [Exibindo texto na console](/pt-BR/docs/DOM/console#Outputting_text_to_the_console "DOM/console#Outputting_text_to_the_console") na documentação do objeto {{domxref("console")}} para mais detalhes.
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<p>Não faz parte de nenhuma especificação.</p>
+Não faz parte de nenhuma especificação.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.console.log")}}
 
-<h2 id="Ver_também">Ver também</h2>
+## Ver também
 
-<ul>
- <li><a class="external" href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
- <li><a class="external" href="http://msdn.microsoft.com/library/gg589530">MSDN: Using the F12 Tools Console to View Errors and Status</a></li>
- <li><a href="http://getfirebug.com/wiki/index.php/Console_API">Firebug wiki: Console API</a> - Firebug supports additional features in its console.log() implementation, such as <a href="http://www.softwareishard.com/blog/firebug/firebug-tip-styled-logging/">styled logging</a>.</li>
- <li><a href="http://nodejs.org/docs/latest/api/console.html#console_console_log_data">NodeJS: Console API</a></li>
-</ul>
+- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
+- [Firebug wiki: Console API](http://getfirebug.com/wiki/index.php/Console_API) - Firebug supports additional features in its console.log() implementation, such as [styled logging](http://www.softwareishard.com/blog/firebug/firebug-tip-styled-logging/).
+- [NodeJS: Console API](http://nodejs.org/docs/latest/api/console.html#console_console_log_data)

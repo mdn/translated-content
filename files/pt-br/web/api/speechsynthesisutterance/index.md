@@ -14,62 +14,57 @@ tags:
   - synthesis
 translation_of: Web/API/SpeechSynthesisUtterance
 ---
-<p>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>SpeechSynthesisUtterance</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a> represents a speech request. It contains the content the speech service should read and information about how to read it (e.g. language, pitch and volume.)</p>
+The **`SpeechSynthesisUtterance`** interface of the [Web Speech API](/pt-BR/docs/Web/API/Web_Speech_API) represents a speech request. It contains the content the speech service should read and information about how to read it (e.g. language, pitch and volume.)
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance()")}}</dt>
- <dd>Returns a new <code>SpeechSynthesisUtterance</code> object instance.</dd>
-</dl>
+- {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance()")}}
+  - : Returns a new `SpeechSynthesisUtterance` object instance.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em><code>SpeechSynthesisUtterance</code> also inherits properties from its parent interface, {{domxref("EventTarget")}}.</em></p>
+_`SpeechSynthesisUtterance` also inherits properties from its parent interface, {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("SpeechSynthesisUtterance.lang")}}</dt>
- <dd>Gets and sets the language of the utterance.</dd>
- <dt>{{domxref("SpeechSynthesisUtterance.pitch")}}</dt>
- <dd>Gets and sets the pitch at which the utterance will be spoken at.</dd>
- <dt>{{domxref("SpeechSynthesisUtterance.rate")}}</dt>
- <dd>Gets and sets the speed at which the utterance will be spoken at.</dd>
- <dt>{{domxref("SpeechSynthesisUtterance.text")}}</dt>
- <dd>Gets and sets the text that will be synthesised when the utterance is spoken.</dd>
- <dt>{{domxref("SpeechSynthesisUtterance.voice")}}</dt>
- <dd>Gets and sets the voice that will be used to speak the utterance.</dd>
- <dt>{{domxref("SpeechSynthesisUtterance.volume")}}</dt>
- <dd>Gets and sets the volume that the utterance will be spoken at.</dd>
-</dl>
+- {{domxref("SpeechSynthesisUtterance.lang")}}
+  - : Gets and sets the language of the utterance.
+- {{domxref("SpeechSynthesisUtterance.pitch")}}
+  - : Gets and sets the pitch at which the utterance will be spoken at.
+- {{domxref("SpeechSynthesisUtterance.rate")}}
+  - : Gets and sets the speed at which the utterance will be spoken at.
+- {{domxref("SpeechSynthesisUtterance.text")}}
+  - : Gets and sets the text that will be synthesised when the utterance is spoken.
+- {{domxref("SpeechSynthesisUtterance.voice")}}
+  - : Gets and sets the voice that will be used to speak the utterance.
+- {{domxref("SpeechSynthesisUtterance.volume")}}
+  - : Gets and sets the volume that the utterance will be spoken at.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<dl>
- <dt>{{domxref("SpeechSynthesisUtterance.onboundary")}}</dt>
- <dd>Fired when the spoken utterance reaches a word or sentence boundary.</dd>
- <dt>{{domxref("SpeechSynthesisUtterance.onend")}}</dt>
- <dd>Fired when the utterance has finished being spoken.</dd>
- <dt>{{domxref("SpeechSynthesisUtterance.onerror")}}</dt>
- <dd>Fired when an error occurs that prevents the utterance from being succesfully spoken.</dd>
- <dt>{{domxref("SpeechSynthesisUtterance.onmark")}}</dt>
- <dd>Fired when the spoken utterance reaches a named SSML "mark" tag.</dd>
- <dt>{{domxref("SpeechSynthesisUtterance.onpause")}}</dt>
- <dd>Fired when the utterance is paused part way through.</dd>
- <dt>{{domxref("SpeechSynthesisUtterance.onresume")}}</dt>
- <dd>Fired when a paused utterance is resumed.</dd>
- <dt>{{domxref("SpeechSynthesisUtterance.onstart")}}</dt>
- <dd>Fired when the utterance has begun to be spoken.</dd>
-</dl>
+- {{domxref("SpeechSynthesisUtterance.onboundary")}}
+  - : Fired when the spoken utterance reaches a word or sentence boundary.
+- {{domxref("SpeechSynthesisUtterance.onend")}}
+  - : Fired when the utterance has finished being spoken.
+- {{domxref("SpeechSynthesisUtterance.onerror")}}
+  - : Fired when an error occurs that prevents the utterance from being succesfully spoken.
+- {{domxref("SpeechSynthesisUtterance.onmark")}}
+  - : Fired when the spoken utterance reaches a named SSML "mark" tag.
+- {{domxref("SpeechSynthesisUtterance.onpause")}}
+  - : Fired when the utterance is paused part way through.
+- {{domxref("SpeechSynthesisUtterance.onresume")}}
+  - : Fired when a paused utterance is resumed.
+- {{domxref("SpeechSynthesisUtterance.onstart")}}
+  - : Fired when the utterance has begun to be spoken.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In our basic <a href="https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis">Speech synthesiser demo</a>, we first grab a reference to the SpeechSynthesis controller using <code>window.speechSynthesis</code>. After defining some necessary variables, we retrieve a list of the voices available using {{domxref("SpeechSynthesis.getVoices()")}} and populate a select menu with them so the user can choose what voice they want.</p>
+In our basic [Speech synthesiser demo](https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis), we first grab a reference to the SpeechSynthesis controller using `window.speechSynthesis`. After defining some necessary variables, we retrieve a list of the voices available using {{domxref("SpeechSynthesis.getVoices()")}} and populate a select menu with them so the user can choose what voice they want.
 
-<p>Inside the <code>inputForm.onsubmit</code> handler, we stop the form submitting with <a href="/en-US/docs/Web/API/Event/preventDefault">preventDefault()</a>,  use the {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance()", "constructor")}} to create a new utterance instance containing the text from the text {{htmlelement("input")}}, set the utterance's {{domxref("SpeechSynthesisUtterance.voice","voice")}} to the voice selected in the {{htmlelement("select")}} element, and start the utterance speaking via the {{domxref("SpeechSynthesis.speak()")}} method.</p>
+Inside the `inputForm.onsubmit` handler, we stop the form submitting with [preventDefault()](/pt-BR/docs/Web/API/Event/preventDefault), use the {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance()", "constructor")}} to create a new utterance instance containing the text from the text {{htmlelement("input")}}, set the utterance's {{domxref("SpeechSynthesisUtterance.voice","voice")}} to the voice selected in the {{htmlelement("select")}} element, and start the utterance speaking via the {{domxref("SpeechSynthesis.speak()")}} method.
 
-<pre class="brush: js">var synth = window.speechSynthesis;
+```js
+var synth = window.speechSynthesis;
 
 var inputForm = document.querySelector('form');
 var inputTxt = document.querySelector('input');
@@ -77,7 +72,7 @@ var voiceSelect = document.querySelector('select');
 
 var voices = synth.getVoices();
 
-for(i = 0; i &lt; voices.length ; i++) {
+for(i = 0; i < voices.length ; i++) {
   var option = document.createElement('option');
   option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
   option.setAttribute('data-lang', voices[i].lang);
@@ -90,38 +85,26 @@ inputForm.onsubmit = function(event) {
 
   var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i &lt; voices.length ; i++) {
+  for(i = 0; i < voices.length ; i++) {
     if(voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
   }
   synth.speak(utterThis);
   inputTxt.blur();
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Speech API', '#utterance-attributes', 'SpeechSynthesisUtterance')}}</td>
-   <td>{{Spec2('Web Speech API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                    | Status                               | Comment |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
+| {{SpecName('Web Speech API', '#utterance-attributes', 'SpeechSynthesisUtterance')}} | {{Spec2('Web Speech API')}} |         |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.SpeechSynthesisUtterance")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/pt-BR/docs/Web/API/Web_Speech_API)

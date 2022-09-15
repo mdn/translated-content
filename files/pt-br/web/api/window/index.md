@@ -3,379 +3,367 @@ title: Window
 slug: Web/API/Window
 translation_of: Web/API/Window
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p><span class="seoSummary">O objeto <code>window</code> representa uma janela que contém um elemento DOM; a propriedade <code>document</code> aponta para o <a href="/en-US/docs/DOM/document">documento DOM document</a> carregado naquela janela.</span> Uma janela para um dado documento pode ser obtido usando a propriedade {{Domxref("document.defaultView")}}.</p>
+O objeto `window` representa uma janela que contém um elemento DOM; a propriedade `document` aponta para o [documento DOM document](/pt-BR/docs/DOM/document) carregado naquela janela. Uma janela para um dado documento pode ser obtido usando a propriedade {{Domxref("document.defaultView")}}.
 
-<p>Esta seção provê uma breve referência a todos os métodos, propriedades e eventos disponíveis através do objeto DOM <code>window</code>. O objeto <code>window</code> implementa a interface <code>Window</code>, o qual herda da interface <code><a href="http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView">AbstractView</a></code>. Algumas funções globais, objeto de namespace, interfaces e construtores, apesar de não tipicamente associados ao objeto em questão, estão disponíveis e estão listados nas referências <a href="/en-US/docs/JavaScript/Reference">JavaScript Reference</a> e <a href="/en-US/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">DOM Reference</a>.</p>
+Esta seção provê uma breve referência a todos os métodos, propriedades e eventos disponíveis através do objeto DOM `window`. O objeto `window` implementa a interface `Window`, o qual herda da interface [`AbstractView`](http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView). Algumas funções globais, objeto de namespace, interfaces e construtores, apesar de não tipicamente associados ao objeto em questão, estão disponíveis e estão listados nas referências [JavaScript Reference](/pt-BR/docs/JavaScript/Reference) e [DOM Reference](/pt-BR/docs/DOM/DOM_Reference).
 
-<p>Em um navegador com suporte a abas, como o Firefox, cada aba contém seu próprio objeto <code>window</code> (e, se você estiver escrevendo uma extensão, a janela do navegador é uma janela distinta também - veja <a href="/en-US/docs/Working_with_windows_in_chrome_code#Content_windows">Working with windows in chrome code</a> para mais informação). Isto é, o objeto <code>window não é compartilhado entre as abas na mesma janela. Alguns métodos, nomeadamente </code>{{Domxref("window.resizeTo")}} e {{Domxref("window.resizeBy")}} aplicam-se à janela toda e não à aba em questão ao que o objeto <code>window</code> pertence. Geralmente, qualquer coisa que não pode racionalmente pertencer a uma aba, pertence a uma janela..</p>
+Em um navegador com suporte a abas, como o Firefox, cada aba contém seu próprio objeto `window` (e, se você estiver escrevendo uma extensão, a janela do navegador é uma janela distinta também - veja [Working with windows in chrome code](/pt-BR/docs/Working_with_windows_in_chrome_code#Content_windows) para mais informação). Isto é, o objeto `window não é compartilhado entre as abas na mesma janela. Alguns métodos, nomeadamente `{{Domxref("window.resizeTo")}} e {{Domxref("window.resizeBy")}} aplicam-se à janela toda e não à aba em questão ao que o objeto `window` pertence. Geralmente, qualquer coisa que não pode racionalmente pertencer a uma aba, pertence a uma janela..
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<p><em>Esta interface herda propriedades da interface {{domxref("EventTarget")}} e implementa propriedades de {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, e {{domxref("WindowEventHandlers")}}.</em></p>
+_Esta interface herda propriedades da interface {{domxref("EventTarget")}} e implementa propriedades de {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, e {{domxref("WindowEventHandlers")}}._
 
-<p>Perceba que propriedades que são objetos (ex.: sobrecarregar o protótipo de elementos built-in) são listados em uma sessão separada abaixo.</p>
+Perceba que propriedades que são objetos (ex.: sobrecarregar o protótipo de elementos built-in) são listados em uma sessão separada abaixo.
 
-<dl>
- <dt>{{domxref("Window.applicationCache")}}  {{readOnlyInline}} {{gecko_minversion_inline("1.9")}}</dt>
- <dd>Um objeto {{domxref("OfflineResourceList")}} fornece acesso aos recursos offline para o window.</dd>
- <dt>{{domxref("Window.closed")}} {{Non-standard_inline}}{{readOnlyInline}}</dt>
- <dd>Esta propriedade indica quando a window atual está fechada ou não.</dd>
- <dt><code><a href="/en-US/docs/Components_object">Window.Components</a></code> {{Non-standard_inline}}</dt>
- <dd>O ponto de entrada para muitas características XPCOM. Algumas propriedades, por exemplo, classes, estão apenas disponíveis para código suficientemente privilegiado. Código de Web não deve usar essa propriedade.</dd>
- <dt>{{domxref("console","Window.console")}} {{Non-standard_inline}} {{ReadOnlyInline}}</dt>
- <dd>Retorna uma referência para o objeto console fornecendo acesso ao console debugging do navegador.</dd>
- <dt>{{domxref("Window.content")}} and Window._content {{Non-standard_inline}} {{obsolete_inline}}{{ReadOnlyInline}}</dt>
- <dd>Retorna uma referência para o elemento de conteúdo na janela atual. A variante obsoleta com sublinhado não está disponível a partir do conteúdo da Web.</dd>
- <dt>{{domxref("Window.controllers")}}{{non-standard_inline}}{{ReadOnlyInline}}</dt>
- <dd>Retorna os objetos de controlador XUL para a janela atual do crome.</dd>
- <dt>{{domxref("Window.crypto")}} {{readOnlyInline}}</dt>
- <dd>Retorna o objeto de criptografia do navegador.</dd>
- <dt>{{domxref("Window.defaultStatus")}} {{Obsolete_inline("gecko23")}}</dt>
- <dd>Obtém/define o texto da barra de status para determinada janela.</dd>
- <dt>{{domxref("Window.devicePixelRatio")}} {{non-standard_inline}}{{ReadOnlyInline}}</dt>
- <dd>Returns the ratio between physical pixels and device independent pixels in the current display.</dd>
- <dt>{{domxref("Window.dialogArguments")}} {{ReadOnlyInline}}</dt>
- <dd>Gets the arguments passed to the window (if it's a dialog box) at the time {{domxref("window.showModalDialog()")}} was called. This is an <code>nsIArray</code>.</dd>
- <dt>{{domxref("Window.directories")}} {{obsolete_inline}}</dt>
- <dd>Synonym of {{domxref("window.personalbar")}}</dd>
- <dt>{{domxref("Window.document")}} {{ReadOnlyInline}}</dt>
- <dd>Retorna a referência à propriedade <code>document</code> que a janela contém.</dd>
- <dt>{{domxref("Window.frameElement")}} {{readOnlyInline}}</dt>
- <dd>Returns the element in which the window is embedded, or null if the window is not embedded.</dd>
- <dt>{{domxref("Window.frames")}} {{readOnlyInline}}</dt>
- <dd>Returns an array of the subframes in the current window.</dd>
- <dt>{{domxref("Window.fullScreen")}} {{gecko_minversion_inline("1.9")}}</dt>
- <dd>This property indicates whether the window is displayed in full screen or not.</dd>
- <dt>{{domxref("Window.globalStorage")}}<code> </code>{{gecko_minversion_inline("1.8.1")}} {{Non-standard_inline}} {{Obsolete_inline("gecko13")}}</dt>
- <dd>Unsupported since Gecko 13 (Firefox 13). Use {{domxref("Window.localStorage")}} instead.<br>
- Was: Multiple storage objects that are used for storing data across multiple pages.</dd>
- <dt>{{domxref("Window.history")}} {{ReadOnlyInline}}</dt>
- <dd>Retorna a referência ao objeto <code>history</code>.</dd>
- <dt>{{domxref("Window.innerHeight")}}</dt>
- <dd>Gets the height of the content area of the browser window including, if rendered, the horizontal scrollbar.</dd>
- <dt>{{domxref("window.innerWidth")}}</dt>
- <dd>Gets the width of the content area of the browser window including, if rendered, the vertical scrollbar.</dd>
- <dt>{{domxref("Window.length")}} {{readOnlyInline}}</dt>
- <dd>Returns the number of frames in the window. See also {{domxref("window.frames")}}.</dd>
- <dt>{{domxref("Window.location")}} {{ReadOnlyInline}}</dt>
- <dd>Gets/sets the location, or current URL, of the window object.</dd>
- <dt>{{domxref("Window.locationbar")}} {{ReadOnlyInline}}</dt>
- <dd>Returns the locationbar object, whose visibility can be toggled in the window.</dd>
- <dt>{{domxref("WindowStorage.localStorage")}}  {{readOnlyInline}}{{gecko_minversion_inline("1.9.1")}}</dt>
- <dd>Returns a reference to the local storage object used to store data that may only be accessed by the origin that created it.</dd>
- <dt>{{domxref("Window.menubar")}} {{ReadOnlyInline}}</dt>
- <dd>Returns the menubar object, whose visibility can be toggled in the window.</dd>
- <dt>{{domxref("Window.messageManager")}} {{gecko_minversion_inline("2.0")}}</dt>
- <dd>Returns the <a href="/en-US/docs/The_message_manager">message manager</a> object for this window.</dd>
- <dt>{{domxref("Window.mozAnimationStartTime")}} {{ReadOnlyInline}}{{gecko_minversion_inline("2.0")}}</dt>
- <dd>The time in milliseconds since epoch at which the current animation cycle began.</dd>
- <dt>{{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}}{{non-standard_inline}}{{gecko_minversion_inline("1.9.2")}}</dt>
- <dd>Returns the horizontal (X) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See <code>mozScreenPixelsPerCSSPixel</code> in <code>nsIDOMWindowUtils</code> for a conversion factor to adapt to screen pixels if needed.</dd>
- <dt>{{domxref("Window.mozInnerScreenY")}} {{ReadOnlyInline}} {{non-standard_inline}}{{gecko_minversion_inline("1.9.2")}}</dt>
- <dd>Returns the vertical (Y) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See <code>mozScreenPixelsPerCSSPixel</code> for a conversion factor to adapt to screen pixels if needed.</dd>
- <dt>{{domxref("Window.mozPaintCount")}} {{non-standard_inline}}{{ReadOnlyInline}} {{gecko_minversion_inline("2.0")}}</dt>
- <dd>Returns the number of times the current document has been rendered to the screen in this window. This can be used to compute rendering performance.</dd>
- <dt>{{domxref("Window.name")}}</dt>
- <dd>Pega/attribui o nome ao objeto <code>window</code>.</dd>
- <dt>{{domxref("Window.navigator")}} {{readOnlyInline}}</dt>
- <dd>Returns a reference to the navigator object.</dd>
- <dt>{{domxref("Window.opener")}}</dt>
- <dd>Returns a reference to the window that opened this current window.</dd>
- <dt>{{domxref("Window.outerHeight")}} {{readOnlyInline}}</dt>
- <dd>Gets the height of the outside of the browser window.</dd>
- <dt>{{domxref("Window.outerWidth")}} {{readOnlyInline}}</dt>
- <dd>Gets the width of the outside of the browser window.</dd>
- <dt>{{domxref("Window.scrollX","Window.pageXOffset")}} {{readOnlyInline}}</dt>
- <dd>An alias for {{domxref("window.scrollX")}}.</dd>
- <dt>{{domxref("Window.scrollY","Window.pageYOffset")}}{{readOnlyInline}}</dt>
- <dd>An alias for {{domxref("window.scrollY")}}</dd>
- <dt>{{domxref("WindowSession.sessionStorage")}} {{readOnlyInline}}</dt>
- <dd>…</dd>
- <dt>{{domxref("SpeechSynthesisGetter.speechSynthesis")}} {{readOnlyInline}}</dt>
- <dd>…</dd>
- <dt>{{domxref("Window.parent")}} {{readOnlyInline}}</dt>
- <dd>Returns a reference to the parent of the current window or subframe.</dd>
- <dt>{{domxref("Window.performance")}} {{readOnlyInline}}</dt>
- <dd>Provides a hosting area for <a href="/en-US/docs/Navigation_timing">performance related</a> attributes.</dd>
- <dt>{{domxref("Window.personalbar")}} {{readOnlyInline}}</dt>
- <dd>Returns the personalbar object, whose visibility can be toggled in the window.</dd>
- <dt>{{domxref("Window.pkcs11")}} {{obsolete_inline(29)}}</dt>
- <dd>Formerly provided access to install and remove PKCS11 modules.</dd>
- <dt>{{domxref("Window.returnValue")}}</dt>
- <dd>The return value to be returned to the function that called {{domxref("window.showModalDialog()")}} to display the window as a modal dialog.</dd>
- <dt>{{domxref("Window.screen")}} {{readOnlyInline}}</dt>
- <dd>Returns a reference to the screen object associated with the window.</dd>
- <dt>{{domxref("Window.screenX")}} {{readOnlyInline}}</dt>
- <dd>Returns the horizontal distance of the left border of the user's browser from the left side of the screen.</dd>
- <dt>{{domxref("Window.screenY")}} {{readOnlyInline}}</dt>
- <dd>Returns the vertical distance of the top border of the user's browser from the top side of the screen.</dd>
- <dt>{{domxref("Window.scrollbars")}} {{readOnlyInline}}</dt>
- <dd>Returns the scrollbars object, whose visibility can be toggled in the window.</dd>
- <dt>{{domxref("Window.scrollMaxX")}}{{non-standard_inline}}{{ReadOnlyInline}}</dt>
- <dd>The maximum offset that the window can be scrolled to horizontally, that is the document width minus the viewport width.</dd>
- <dt>{{domxref("Window.scrollMaxY")}}{{non-standard_inline}}{{ReadOnlyInline}}</dt>
- <dd>The maximum offset that the window can be scrolled to vertically (i.e., the document height minus the viewport height).</dd>
- <dt>{{domxref("Window.scrollX")}} {{readOnlyInline}}</dt>
- <dd>Returns the number of pixels that the document has already been scrolled horizontally.</dd>
- <dt>{{domxref("Window.scrollY")}} {{readOnlyInline}}</dt>
- <dd>Returns the number of pixels that the document has already been scrolled vertically.</dd>
- <dt>{{domxref("Window.self")}} {{ReadOnlyInline}}</dt>
- <dd>Returns an object reference to the window object itself.</dd>
- <dt>{{domxref("Window.sessionStorage")}}</dt>
- <dd>A storage object for storing data within a single page session.</dd>
- <dt>{{domxref("Window.sidebar")}} {{non-standard_inline}}{{ReadOnlyInline}}</dt>
- <dd>Returns a reference to the window object of the sidebar.</dd>
- <dt>{{domxref("Window.status")}}</dt>
- <dd>Gets/sets the text in the statusbar at the bottom of the browser.</dd>
- <dt>{{domxref("Window.statusbar")}} {{readOnlyInline}}</dt>
- <dd>Returns the statusbar object, whose visibility can be toggled in the window.</dd>
- <dt>{{domxref("Window.toolbar")}} {{readOnlyInline}}</dt>
- <dd>Returns the toolbar object, whose visibility can be toggled in the window.</dd>
- <dt>{{domxref("Window.top")}} {{readOnlyInline}}</dt>
- <dd>Returns a reference to the topmost window in the window hierarchy. This property is read only.</dd>
- <dt>{{domxref("Window.window")}} {{ReadOnlyInline}}</dt>
- <dd>Returns a reference to the current window.</dd>
- <dt><code>window[0]</code>,<code> window[1]</code>, etc.</dt>
- <dd>Returns a reference to the <code>window</code> object in the frames. See {{domxref("Window.frames")}} for more details.</dd>
-</dl>
+- {{domxref("Window.applicationCache")}} {{readOnlyInline}} {{gecko_minversion_inline("1.9")}}
+  - : Um objeto {{domxref("OfflineResourceList")}} fornece acesso aos recursos offline para o window.
+- {{domxref("Window.closed")}} {{Non-standard_inline}}{{readOnlyInline}}
+  - : Esta propriedade indica quando a window atual está fechada ou não.
+- [`Window.Components`](/en-US/docs/Components_object) {{Non-standard_inline}}
+  - : O ponto de entrada para muitas características XPCOM. Algumas propriedades, por exemplo, classes, estão apenas disponíveis para código suficientemente privilegiado. Código de Web não deve usar essa propriedade.
+- {{domxref("console","Window.console")}} {{Non-standard_inline}} {{ReadOnlyInline}}
+  - : Retorna uma referência para o objeto console fornecendo acesso ao console debugging do navegador.
+- {{domxref("Window.content")}} and Window.\_content {{Non-standard_inline}} {{obsolete_inline}}{{ReadOnlyInline}}
+  - : Retorna uma referência para o elemento de conteúdo na janela atual. A variante obsoleta com sublinhado não está disponível a partir do conteúdo da Web.
+- {{domxref("Window.controllers")}}{{non-standard_inline}}{{ReadOnlyInline}}
+  - : Retorna os objetos de controlador XUL para a janela atual do crome.
+- {{domxref("Window.crypto")}} {{readOnlyInline}}
+  - : Retorna o objeto de criptografia do navegador.
+- {{domxref("Window.defaultStatus")}} {{Obsolete_inline("gecko23")}}
+  - : Obtém/define o texto da barra de status para determinada janela.
+- {{domxref("Window.devicePixelRatio")}} {{non-standard_inline}}{{ReadOnlyInline}}
+  - : Returns the ratio between physical pixels and device independent pixels in the current display.
+- {{domxref("Window.dialogArguments")}} {{ReadOnlyInline}}
+  - : Gets the arguments passed to the window (if it's a dialog box) at the time {{domxref("window.showModalDialog()")}} was called. This is an `nsIArray`.
+- {{domxref("Window.directories")}} {{obsolete_inline}}
+  - : Synonym of {{domxref("window.personalbar")}}
+- {{domxref("Window.document")}} {{ReadOnlyInline}}
+  - : Retorna a referência à propriedade `document` que a janela contém.
+- {{domxref("Window.frameElement")}} {{readOnlyInline}}
+  - : Returns the element in which the window is embedded, or null if the window is not embedded.
+- {{domxref("Window.frames")}} {{readOnlyInline}}
+  - : Returns an array of the subframes in the current window.
+- {{domxref("Window.fullScreen")}} {{gecko_minversion_inline("1.9")}}
+  - : This property indicates whether the window is displayed in full screen or not.
+- {{domxref("Window.globalStorage")}}` `{{gecko_minversion_inline("1.8.1")}} {{Non-standard_inline}} {{Obsolete_inline("gecko13")}}
+  - : Unsupported since Gecko 13 (Firefox 13). Use {{domxref("Window.localStorage")}} instead.
+    Was: Multiple storage objects that are used for storing data across multiple pages.
+- {{domxref("Window.history")}} {{ReadOnlyInline}}
+  - : Retorna a referência ao objeto `history`.
+- {{domxref("Window.innerHeight")}}
+  - : Gets the height of the content area of the browser window including, if rendered, the horizontal scrollbar.
+- {{domxref("window.innerWidth")}}
+  - : Gets the width of the content area of the browser window including, if rendered, the vertical scrollbar.
+- {{domxref("Window.length")}} {{readOnlyInline}}
+  - : Returns the number of frames in the window. See also {{domxref("window.frames")}}.
+- {{domxref("Window.location")}} {{ReadOnlyInline}}
+  - : Gets/sets the location, or current URL, of the window object.
+- {{domxref("Window.locationbar")}} {{ReadOnlyInline}}
+  - : Returns the locationbar object, whose visibility can be toggled in the window.
+- {{domxref("WindowStorage.localStorage")}} {{readOnlyInline}}{{gecko_minversion_inline("1.9.1")}}
+  - : Returns a reference to the local storage object used to store data that may only be accessed by the origin that created it.
+- {{domxref("Window.menubar")}} {{ReadOnlyInline}}
+  - : Returns the menubar object, whose visibility can be toggled in the window.
+- {{domxref("Window.messageManager")}} {{gecko_minversion_inline("2.0")}}
+  - : Returns the [message manager](/pt-BR/docs/The_message_manager) object for this window.
+- {{domxref("Window.mozAnimationStartTime")}} {{ReadOnlyInline}}{{gecko_minversion_inline("2.0")}}
+  - : The time in milliseconds since epoch at which the current animation cycle began.
+- {{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}}{{non-standard_inline}}{{gecko_minversion_inline("1.9.2")}}
+  - : Returns the horizontal (X) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See `mozScreenPixelsPerCSSPixel` in `nsIDOMWindowUtils` for a conversion factor to adapt to screen pixels if needed.
+- {{domxref("Window.mozInnerScreenY")}} {{ReadOnlyInline}} {{non-standard_inline}}{{gecko_minversion_inline("1.9.2")}}
+  - : Returns the vertical (Y) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See `mozScreenPixelsPerCSSPixel` for a conversion factor to adapt to screen pixels if needed.
+- {{domxref("Window.mozPaintCount")}} {{non-standard_inline}}{{ReadOnlyInline}} {{gecko_minversion_inline("2.0")}}
+  - : Returns the number of times the current document has been rendered to the screen in this window. This can be used to compute rendering performance.
+- {{domxref("Window.name")}}
+  - : Pega/attribui o nome ao objeto `window`.
+- {{domxref("Window.navigator")}} {{readOnlyInline}}
+  - : Returns a reference to the navigator object.
+- {{domxref("Window.opener")}}
+  - : Returns a reference to the window that opened this current window.
+- {{domxref("Window.outerHeight")}} {{readOnlyInline}}
+  - : Gets the height of the outside of the browser window.
+- {{domxref("Window.outerWidth")}} {{readOnlyInline}}
+  - : Gets the width of the outside of the browser window.
+- {{domxref("Window.scrollX","Window.pageXOffset")}} {{readOnlyInline}}
+  - : An alias for {{domxref("window.scrollX")}}.
+- {{domxref("Window.scrollY","Window.pageYOffset")}}{{readOnlyInline}}
+  - : An alias for {{domxref("window.scrollY")}}
+- {{domxref("WindowSession.sessionStorage")}} {{readOnlyInline}}
+  - : …
+- {{domxref("SpeechSynthesisGetter.speechSynthesis")}} {{readOnlyInline}}
+  - : …
+- {{domxref("Window.parent")}} {{readOnlyInline}}
+  - : Returns a reference to the parent of the current window or subframe.
+- {{domxref("Window.performance")}} {{readOnlyInline}}
+  - : Provides a hosting area for [performance related](/pt-BR/docs/Navigation_timing) attributes.
+- {{domxref("Window.personalbar")}} {{readOnlyInline}}
+  - : Returns the personalbar object, whose visibility can be toggled in the window.
+- {{domxref("Window.pkcs11")}} {{obsolete_inline(29)}}
+  - : Formerly provided access to install and remove PKCS11 modules.
+- {{domxref("Window.returnValue")}}
+  - : The return value to be returned to the function that called {{domxref("window.showModalDialog()")}} to display the window as a modal dialog.
+- {{domxref("Window.screen")}} {{readOnlyInline}}
+  - : Returns a reference to the screen object associated with the window.
+- {{domxref("Window.screenX")}} {{readOnlyInline}}
+  - : Returns the horizontal distance of the left border of the user's browser from the left side of the screen.
+- {{domxref("Window.screenY")}} {{readOnlyInline}}
+  - : Returns the vertical distance of the top border of the user's browser from the top side of the screen.
+- {{domxref("Window.scrollbars")}} {{readOnlyInline}}
+  - : Returns the scrollbars object, whose visibility can be toggled in the window.
+- {{domxref("Window.scrollMaxX")}}{{non-standard_inline}}{{ReadOnlyInline}}
+  - : The maximum offset that the window can be scrolled to horizontally, that is the document width minus the viewport width.
+- {{domxref("Window.scrollMaxY")}}{{non-standard_inline}}{{ReadOnlyInline}}
+  - : The maximum offset that the window can be scrolled to vertically (i.e., the document height minus the viewport height).
+- {{domxref("Window.scrollX")}} {{readOnlyInline}}
+  - : Returns the number of pixels that the document has already been scrolled horizontally.
+- {{domxref("Window.scrollY")}} {{readOnlyInline}}
+  - : Returns the number of pixels that the document has already been scrolled vertically.
+- {{domxref("Window.self")}} {{ReadOnlyInline}}
+  - : Returns an object reference to the window object itself.
+- {{domxref("Window.sessionStorage")}}
+  - : A storage object for storing data within a single page session.
+- {{domxref("Window.sidebar")}} {{non-standard_inline}}{{ReadOnlyInline}}
+  - : Returns a reference to the window object of the sidebar.
+- {{domxref("Window.status")}}
+  - : Gets/sets the text in the statusbar at the bottom of the browser.
+- {{domxref("Window.statusbar")}} {{readOnlyInline}}
+  - : Returns the statusbar object, whose visibility can be toggled in the window.
+- {{domxref("Window.toolbar")}} {{readOnlyInline}}
+  - : Returns the toolbar object, whose visibility can be toggled in the window.
+- {{domxref("Window.top")}} {{readOnlyInline}}
+  - : Returns a reference to the topmost window in the window hierarchy. This property is read only.
+- {{domxref("Window.window")}} {{ReadOnlyInline}}
+  - : Returns a reference to the current window.
+- `window[0]`,` window[1]`, etc.
+  - : Returns a reference to the `window` object in the frames. See {{domxref("Window.frames")}} for more details.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface inherits methods from the {{domxref("EventTarget")}} interface and implements methods from {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, and {{domxref("WindowEventHandlers")}}.</em></p>
+_This interface inherits methods from the {{domxref("EventTarget")}} interface and implements methods from {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, and {{domxref("WindowEventHandlers")}}._
 
-<dl>
- <dt>{{domxref("EventTarget.addEventListener()")}}</dt>
- <dd>Register an event handler to a specific event type on the window.</dd>
- <dt>{{domxref("Window.alert()")}}</dt>
- <dd>Displays an alert dialog.</dd>
- <dt>{{domxref("WindowBase64.atob()")}}</dt>
- <dd>Decodes a string of data which has been encoded using base-64 encoding.</dd>
- <dt>{{domxref("Window.back()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
- <dd>Moves back one in the window history.</dd>
- <dt>{{domxref("Window.blur()")}}</dt>
- <dd>Sets focus away from the window.</dd>
- <dt>{{domxref("WindowBase64.btoa()")}}</dt>
- <dd>Creates a base-64 encoded ASCII string from a string of binary data.</dd>
- <dt>{{domxref("Window.captureEvents()")}} {{Deprecated_inline}}</dt>
- <dd>Registers the window to capture all events of the specified type.</dd>
- <dt>{{domxref("Window.clearImmediate()")}}</dt>
- <dd>Cancels the repeated execution set using <code>setImmediate</code>.</dd>
- <dt>{{domxref("WindowTimers.clearInterval()")}}</dt>
- <dd>Cancels the repeated execution set using {{domxref("WindowTimers.setInterval()")}}.</dd>
- <dt>{{domxref("WindowTimers.clearTimeout()")}}</dt>
- <dd>Cancels the repeated execution set using {{domxref("WindowTimers.setTimeout()")}}.</dd>
- <dt>{{domxref("Window.close()")}}</dt>
- <dd>Closes the current window.</dd>
- <dt>{{domxref("Window.confirm()")}}</dt>
- <dd>Displays a dialog with a message that the user needs to respond to.</dd>
- <dt>{{domxref("Window.disableExternalCapture()")}} {{obsolete_inline(24)}}</dt>
- <dd>{{todo("NeedsContents")}}</dd>
- <dt>{{domxref("Window.dispatchEvent()")}}</dt>
- <dd>Used to trigger an event.</dd>
- <dt>{{domxref("Window.dump()")}}</dt>
- <dd>Writes a message to the console.</dd>
- <dt>{{domxref("Window.enableExternalCapture()")}} {{obsolete_inline(24)}}</dt>
- <dd>{{todo("NeedsContents")}}</dd>
- <dt>{{domxref("Window.find()")}}</dt>
- <dd>Searches for a given string in a window.</dd>
- <dt>{{domxref("Window.focus()")}}</dt>
- <dd>Sets focus on the current window.</dd>
- <dt>{{domxref("Window.forward()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
- <dd>Moves the window one document forward in the history.</dd>
- <dt>{{domxref("Window.getAttention()")}}</dt>
- <dd>Flashes the application icon.</dd>
- <dt>{{domxref("Window.getAttentionWithCycleCount()")}}</dt>
- <dd>{{todo("NeedsContents")}}</dd>
- <dt>{{domxref("Window.getComputedStyle()")}}</dt>
- <dd>Gets computed style for the specified element. Computed style indicates the computed values of all CSS properties of the element.</dd>
- <dt>{{domxref("Window.getDefaulComputedStyle()")}}</dt>
- <dd>Gets default computed style for the specified element, ignoring author stylesheets.</dd>
- <dt>{{domxref("Window.getSelection()")}}</dt>
- <dd>Returns the selection object representing the selected item(s).</dd>
- <dt>{{domxref("Window.home()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
- <dd>Returns the browser to the home page.</dd>
- <dt>{{domxref("Window.matchMedia()")}} {{gecko_minversion_inline("6.0")}}</dt>
- <dd>Returns a {{domxref("MediaQueryList")}} object representing the specified media query string.</dd>
- <dt>{{domxref("Window.maximize()")}}</dt>
- <dd>{{todo("NeedsContents")}}</dd>
- <dt>{{domxref("Window.minimize()")}} (top-level XUL windows only)</dt>
- <dd>Minimizes the window.</dd>
- <dt>{{domxref("Window.moveBy()")}}</dt>
- <dd>Moves the current window by a specified amount.</dd>
- <dt>{{domxref("Window.moveTo()")}}</dt>
- <dd>Moves the window to the specified coordinates.</dd>
- <dt>{{domxref("Window.mozRequestAnimationFrame()")}} {{gecko_minversion_inline("2.0")}}</dt>
- <dd>Tells the browser that an animation is in progress, requesting that the browser schedule a repaint of the window for the next animation frame. This will cause a <code>MozBeforePaint</code> event to fire before that repaint occurs.</dd>
- <dt>{{domxref("Window.open()")}}</dt>
- <dd>Opens a new window.</dd>
- <dt>{{domxref("Window.openDialog()")}}</dt>
- <dd>Opens a new dialog window.</dd>
- <dt>{{domxref("Window.postMessage()")}}</dt>
- <dd>Provides a secure means for one window to send a string of data to another window, which need not be within the same domain as the first, in a secure manner.</dd>
- <dt>{{domxref("Window.print()")}}</dt>
- <dd>Opens the Print Dialog to print the current document.</dd>
- <dt>{{domxref("Window.prompt()")}}</dt>
- <dd>Returns the text entered by the user in a prompt dialog.</dd>
- <dt>{{domxref("Window.releaseEvents()")}} {{Deprecated_inline}}</dt>
- <dd>Releases the window from trapping events of a specific type.</dd>
- <dt>{{domxref("element.removeEventListener","Window.removeEventListener()")}}</dt>
- <dd>Removes an event listener from the window.</dd>
- <dt>{{domxref("Window.resizeBy()")}}</dt>
- <dd>Resizes the current window by a certain amount.</dd>
- <dt>{{domxref("Window.resizeTo()")}}</dt>
- <dd>Dynamically resizes window.</dd>
- <dt>{{domxref("Window.restore()")}}</dt>
- <dd>{{todo("NeedsContents")}}</dd>
- <dt>{{domxref("Window.routeEvent()")}} {{obsolete_inline(24)}}</dt>
- <dd>{{todo("NeedsContents")}}</dd>
- <dt>{{domxref("Window.scroll()")}}</dt>
- <dd>Scrolls the window to a particular place in the document.</dd>
- <dt>{{domxref("Window.scrollBy()")}}</dt>
- <dd>Scrolls the document in the window by the given amount.</dd>
- <dt>{{domxref("Window.scrollByLines()")}}</dt>
- <dd>Scrolls the document by the given number of lines.</dd>
- <dt>{{domxref("Window.scrollByPages()")}}</dt>
- <dd>Scrolls the current document by the specified number of pages.</dd>
- <dt>{{domxref("Window.scrollTo()")}}</dt>
- <dd>Scrolls to a particular set of coordinates in the document.</dd>
- <dt>{{domxref("Window.setCursor()")}}</dt>
- <dd>Changes the cursor for the current window</dd>
- <dt>{{domxref("Window.setImmediate()")}}</dt>
- <dd>Executes a function after the browser has finished other heavy tasks</dd>
- <dt>{{domxref("WindowTimers.setInterval()")}}</dt>
- <dd>Schedules the execution of a function each X milliseconds.</dd>
- <dt>{{domxref("Window.setResizable")}}</dt>
- <dd>{{todo("NeedsContents")}}</dd>
- <dt>{{domxref("WindowTimers.setTimeout()")}}</dt>
- <dd>Sets a delay for executing a function.</dd>
- <dt>{{domxref("Window.showModalDialog()")}}</dt>
- <dd>Displays a modal dialog.</dd>
- <dt>{{domxref("Window.sizeToContent()")}}</dt>
- <dd>Sizes the window according to its content.</dd>
- <dt>{{domxref("Window.stop()")}}</dt>
- <dd>This method stops window loading.</dd>
- <dt>{{domxref("Window.updateCommands()")}}</dt>
- <dd>Updates the state of commands of the current chrome window (UI).</dd>
-</dl>
+- {{domxref("EventTarget.addEventListener()")}}
+  - : Register an event handler to a specific event type on the window.
+- {{domxref("Window.alert()")}}
+  - : Displays an alert dialog.
+- {{domxref("WindowBase64.atob()")}}
+  - : Decodes a string of data which has been encoded using base-64 encoding.
+- {{domxref("Window.back()")}} {{Non-standard_inline}} {{obsolete_inline}}
+  - : Moves back one in the window history.
+- {{domxref("Window.blur()")}}
+  - : Sets focus away from the window.
+- {{domxref("WindowBase64.btoa()")}}
+  - : Creates a base-64 encoded ASCII string from a string of binary data.
+- {{domxref("Window.captureEvents()")}} {{Deprecated_inline}}
+  - : Registers the window to capture all events of the specified type.
+- {{domxref("Window.clearImmediate()")}}
+  - : Cancels the repeated execution set using `setImmediate`.
+- {{domxref("WindowTimers.clearInterval()")}}
+  - : Cancels the repeated execution set using {{domxref("WindowTimers.setInterval()")}}.
+- {{domxref("WindowTimers.clearTimeout()")}}
+  - : Cancels the repeated execution set using {{domxref("WindowTimers.setTimeout()")}}.
+- {{domxref("Window.close()")}}
+  - : Closes the current window.
+- {{domxref("Window.confirm()")}}
+  - : Displays a dialog with a message that the user needs to respond to.
+- {{domxref("Window.disableExternalCapture()")}} {{obsolete_inline(24)}}
+  - : {{todo("NeedsContents")}}
+- {{domxref("Window.dispatchEvent()")}}
+  - : Used to trigger an event.
+- {{domxref("Window.dump()")}}
+  - : Writes a message to the console.
+- {{domxref("Window.enableExternalCapture()")}} {{obsolete_inline(24)}}
+  - : {{todo("NeedsContents")}}
+- {{domxref("Window.find()")}}
+  - : Searches for a given string in a window.
+- {{domxref("Window.focus()")}}
+  - : Sets focus on the current window.
+- {{domxref("Window.forward()")}} {{Non-standard_inline}} {{obsolete_inline}}
+  - : Moves the window one document forward in the history.
+- {{domxref("Window.getAttention()")}}
+  - : Flashes the application icon.
+- {{domxref("Window.getAttentionWithCycleCount()")}}
+  - : {{todo("NeedsContents")}}
+- {{domxref("Window.getComputedStyle()")}}
+  - : Gets computed style for the specified element. Computed style indicates the computed values of all CSS properties of the element.
+- {{domxref("Window.getDefaulComputedStyle()")}}
+  - : Gets default computed style for the specified element, ignoring author stylesheets.
+- {{domxref("Window.getSelection()")}}
+  - : Returns the selection object representing the selected item(s).
+- {{domxref("Window.home()")}} {{Non-standard_inline}} {{obsolete_inline}}
+  - : Returns the browser to the home page.
+- {{domxref("Window.matchMedia()")}} {{gecko_minversion_inline("6.0")}}
+  - : Returns a {{domxref("MediaQueryList")}} object representing the specified media query string.
+- {{domxref("Window.maximize()")}}
+  - : {{todo("NeedsContents")}}
+- {{domxref("Window.minimize()")}} (top-level XUL windows only)
+  - : Minimizes the window.
+- {{domxref("Window.moveBy()")}}
+  - : Moves the current window by a specified amount.
+- {{domxref("Window.moveTo()")}}
+  - : Moves the window to the specified coordinates.
+- {{domxref("Window.mozRequestAnimationFrame()")}} {{gecko_minversion_inline("2.0")}}
+  - : Tells the browser that an animation is in progress, requesting that the browser schedule a repaint of the window for the next animation frame. This will cause a `MozBeforePaint` event to fire before that repaint occurs.
+- {{domxref("Window.open()")}}
+  - : Opens a new window.
+- {{domxref("Window.openDialog()")}}
+  - : Opens a new dialog window.
+- {{domxref("Window.postMessage()")}}
+  - : Provides a secure means for one window to send a string of data to another window, which need not be within the same domain as the first, in a secure manner.
+- {{domxref("Window.print()")}}
+  - : Opens the Print Dialog to print the current document.
+- {{domxref("Window.prompt()")}}
+  - : Returns the text entered by the user in a prompt dialog.
+- {{domxref("Window.releaseEvents()")}} {{Deprecated_inline}}
+  - : Releases the window from trapping events of a specific type.
+- {{domxref("element.removeEventListener","Window.removeEventListener()")}}
+  - : Removes an event listener from the window.
+- {{domxref("Window.resizeBy()")}}
+  - : Resizes the current window by a certain amount.
+- {{domxref("Window.resizeTo()")}}
+  - : Dynamically resizes window.
+- {{domxref("Window.restore()")}}
+  - : {{todo("NeedsContents")}}
+- {{domxref("Window.routeEvent()")}} {{obsolete_inline(24)}}
+  - : {{todo("NeedsContents")}}
+- {{domxref("Window.scroll()")}}
+  - : Scrolls the window to a particular place in the document.
+- {{domxref("Window.scrollBy()")}}
+  - : Scrolls the document in the window by the given amount.
+- {{domxref("Window.scrollByLines()")}}
+  - : Scrolls the document by the given number of lines.
+- {{domxref("Window.scrollByPages()")}}
+  - : Scrolls the current document by the specified number of pages.
+- {{domxref("Window.scrollTo()")}}
+  - : Scrolls to a particular set of coordinates in the document.
+- {{domxref("Window.setCursor()")}}
+  - : Changes the cursor for the current window
+- {{domxref("Window.setImmediate()")}}
+  - : Executes a function after the browser has finished other heavy tasks
+- {{domxref("WindowTimers.setInterval()")}}
+  - : Schedules the execution of a function each X milliseconds.
+- {{domxref("Window.setResizable")}}
+  - : {{todo("NeedsContents")}}
+- {{domxref("WindowTimers.setTimeout()")}}
+  - : Sets a delay for executing a function.
+- {{domxref("Window.showModalDialog()")}}
+  - : Displays a modal dialog.
+- {{domxref("Window.sizeToContent()")}}
+  - : Sizes the window according to its content.
+- {{domxref("Window.stop()")}}
+  - : This method stops window loading.
+- {{domxref("Window.updateCommands()")}}
+  - : Updates the state of commands of the current chrome window (UI).
 
-<h2 id="Event_handlers">Event handlers</h2>
+## Event handlers
 
-<p>These are properties of the window object that can be set to establish event handlers for the various things that can happen in the window that might be of interest.</p>
+These are properties of the window object that can be set to establish event handlers for the various things that can happen in the window that might be of interest.
 
-<p><em>This interface inherits event handlers from the {{domxref("EventTarget")}} interface and implements event handlers from {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, and {{domxref("WindowEventHandlers")}}.</em></p>
+_This interface inherits event handlers from the {{domxref("EventTarget")}} interface and implements event handlers from {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, and {{domxref("WindowEventHandlers")}}._
 
-<div class="note">
-<p><strong>Note:</strong> Starting in {{Gecko("9.0")}}, you can now use the syntax <code>if ("onabort" in window)</code> to determine whether or not a given event handler property exists. This is because event handler interfaces have been updated to be proper web IDL interfaces. See <a href="/en-US/docs/DOM/DOM_event_handlers">DOM event handlers</a> for details.</p>
-</div>
+> **Nota:** Starting in {{Gecko("9.0")}}, you can now use the syntax `if ("onabort" in window)` to determine whether or not a given event handler property exists. This is because event handler interfaces have been updated to be proper web IDL interfaces. See [DOM event handlers](/pt-BR/docs/DOM/DOM_event_handlers) for details.
 
-<dl>
- <dt>{{domxref("GlobalEventHandlers.onabort")}}</dt>
- <dd>An event handler property for abort events on the window.</dd>
- <dt>{{domxref("WindowEventHandlers.onbeforeunload")}}</dt>
- <dd>An event handler property for before-unload events on the window.</dd>
- <dt>{{domxref("GlobalEventHandlers.onblur")}}</dt>
- <dd>An event handler property for blur events on the window.</dd>
- <dt>{{domxref("GlobalEventHandlers.onchange")}}</dt>
- <dd>An event handler property for change events on the window.</dd>
- <dt>{{domxref("GlobalEventHandlers.onclick")}}</dt>
- <dd>An event handler property for click events on the window.</dd>
- <dt>{{domxref("GlobalEventHandlers.onclose")}}</dt>
- <dd>An event handler property for handling the window close event.</dd>
- <dt>{{domxref("GlobalEventHandlers.oncontextmenu")}}</dt>
- <dd>An event handler property for right-click events on the window.</dd>
- <dt>{{domxref("Window.ondevicelight")}}</dt>
- <dd>An event handler property for any ambient light levels changes</dd>
- <dt>{{domxref("Window.ondevicemotion")}} {{gecko_minversion_inline("6.0")}}</dt>
- <dd>{{todo("NeedsContents")}}</dd>
- <dt>{{domxref("Window.ondeviceorientation")}} {{gecko_minversion_inline("6.0")}}</dt>
- <dd>An event handler property for any device orientation changes</dd>
- <dt>{{domxref("Window.ondeviceproximity")}}</dt>
- <dd>An event handler property for device proximity event</dd>
- <dt>{{domxref("GlobalEventHandlers.onerror")}}</dt>
- <dd>An event handler property for {{event("error")}} events raised on the window.</dd>
- <dt>{{domxref("GlobalEventHandlers.onfocus")}}</dt>
- <dd>An event handler property for {{event("focus")}} events on the window.</dd>
- <dt>{{domxref("WindowEventHandlers.onhashchange")}} {{gecko_minversion_inline("1.9.2")}}</dt>
- <dd>An event handler property for hash change events on the window; called when the part of the URL after the hash mark ("#") changes.</dd>
- <dt>{{domxref("GlobalEventHandlers.onkeydown")}}</dt>
- <dd>An event handler property for {{event("keydown")}} events on the window.</dd>
- <dt>{{domxref("GlobalEventHandlers.onkeypress")}}</dt>
- <dd>An event handler property for {{event("keypress")}} events on the window.</dd>
- <dt>{{domxref("GlobalEventHandlers.onkeyup")}}</dt>
- <dd>An event handler property for {{event("keyup")}} events on the window.</dd>
- <dt>{{domxref("WindowEventHandlers.onlanguagechange")}}</dt>
- <dd>An event handler property for {{event("languagechange")}} events on the window.</dd>
- <dt>{{domxref("GlobalEventHandlers.onload")}}</dt>
- <dd>An event handler property for window loading.</dd>
- <dt>{{domxref("GlobalEventHandlers.onmousedown")}}</dt>
- <dd>An event handler property for mousedown events on the window.</dd>
- <dt>{{domxref("GlobalEventHandlers.onmousemove")}}</dt>
- <dd>An event handler property for mousemove events on the window.</dd>
- <dt>{{domxref("GlobalEventHandlers.onmouseout")}}</dt>
- <dd>An event handler property for mouseout events on the window.</dd>
- <dt>{{domxref("GlobalEventHandlers.onmouseover")}}</dt>
- <dd>An event handler property for mouseover events on the window.</dd>
- <dt>{{domxref("GlobalEventHandlers.onmouseup")}}</dt>
- <dd>An event handler property for mouseup events on the window.</dd>
- <dt>{{domxref("Window.onmozbeforepaint")}} {{gecko_minversion_inline("2.0")}}</dt>
- <dd>An event handler property for the <code>MozBeforePaint</code> event, which is sent before repainting the window if the event has been requested by a call to the {{domxref("Window.mozRequestAnimationFrame()")}} method.</dd>
- <dt>{{domxref("WindowEventHandlers.onpageshow")}}</dt>
- <dd>An event handler property for pageshow events on the window.</dd>
- <dt>{{domxref("WindowEventHandlers.onpagehide")}}</dt>
- <dd>An event handler property for pagehide events on the window.</dd>
- <dt>{{domxref("Window.onpaint")}}</dt>
- <dd>An event handler property for paint events on the window.</dd>
- <dt>{{domxref("WindowEventHandlers.onpopstate")}} {{gecko_minversion_inline("2.0")}}</dt>
- <dd>An event handler property for popstate events, which are fired when navigating to a session history entry representing a state object.</dd>
- <dt>{{domxref("GlobalEventHandlers.onreset")}}</dt>
- <dd>An event handler property for reset events on the window.</dd>
- <dt>{{domxref("GlobalEventHandlers.onresize")}}</dt>
- <dd>An event handler property for window resizing.</dd>
- <dt>{{domxref("GlobalEventHandlers.onscroll")}}</dt>
- <dd>An event handler property for window scrolling.</dd>
- <dt>{{domxref("GlobalEventHandlers.onselect")}}</dt>
- <dd>An event handler property for window selection.</dd>
- <dt>{{domxref("GlobalEventHandlers.onsubmit")}}</dt>
- <dd>An event handler property for submits on window forms.</dd>
- <dt>{{domxref("Window.onunload")}}</dt>
- <dd>An event handler property for unload events on the window.</dd>
- <dt>{{domxref("Window.onuserproximity")}}</dt>
- <dd>An event handler property for user proximity events</dd>
-</dl>
+- {{domxref("GlobalEventHandlers.onabort")}}
+  - : An event handler property for abort events on the window.
+- {{domxref("WindowEventHandlers.onbeforeunload")}}
+  - : An event handler property for before-unload events on the window.
+- {{domxref("GlobalEventHandlers.onblur")}}
+  - : An event handler property for blur events on the window.
+- {{domxref("GlobalEventHandlers.onchange")}}
+  - : An event handler property for change events on the window.
+- {{domxref("GlobalEventHandlers.onclick")}}
+  - : An event handler property for click events on the window.
+- {{domxref("GlobalEventHandlers.onclose")}}
+  - : An event handler property for handling the window close event.
+- {{domxref("GlobalEventHandlers.oncontextmenu")}}
+  - : An event handler property for right-click events on the window.
+- {{domxref("Window.ondevicelight")}}
+  - : An event handler property for any ambient light levels changes
+- {{domxref("Window.ondevicemotion")}} {{gecko_minversion_inline("6.0")}}
+  - : {{todo("NeedsContents")}}
+- {{domxref("Window.ondeviceorientation")}} {{gecko_minversion_inline("6.0")}}
+  - : An event handler property for any device orientation changes
+- {{domxref("Window.ondeviceproximity")}}
+  - : An event handler property for device proximity event
+- {{domxref("GlobalEventHandlers.onerror")}}
+  - : An event handler property for {{event("error")}} events raised on the window.
+- {{domxref("GlobalEventHandlers.onfocus")}}
+  - : An event handler property for {{event("focus")}} events on the window.
+- {{domxref("WindowEventHandlers.onhashchange")}} {{gecko_minversion_inline("1.9.2")}}
+  - : An event handler property for hash change events on the window; called when the part of the URL after the hash mark ("#") changes.
+- {{domxref("GlobalEventHandlers.onkeydown")}}
+  - : An event handler property for {{event("keydown")}} events on the window.
+- {{domxref("GlobalEventHandlers.onkeypress")}}
+  - : An event handler property for {{event("keypress")}} events on the window.
+- {{domxref("GlobalEventHandlers.onkeyup")}}
+  - : An event handler property for {{event("keyup")}} events on the window.
+- {{domxref("WindowEventHandlers.onlanguagechange")}}
+  - : An event handler property for {{event("languagechange")}} events on the window.
+- {{domxref("GlobalEventHandlers.onload")}}
+  - : An event handler property for window loading.
+- {{domxref("GlobalEventHandlers.onmousedown")}}
+  - : An event handler property for mousedown events on the window.
+- {{domxref("GlobalEventHandlers.onmousemove")}}
+  - : An event handler property for mousemove events on the window.
+- {{domxref("GlobalEventHandlers.onmouseout")}}
+  - : An event handler property for mouseout events on the window.
+- {{domxref("GlobalEventHandlers.onmouseover")}}
+  - : An event handler property for mouseover events on the window.
+- {{domxref("GlobalEventHandlers.onmouseup")}}
+  - : An event handler property for mouseup events on the window.
+- {{domxref("Window.onmozbeforepaint")}} {{gecko_minversion_inline("2.0")}}
+  - : An event handler property for the `MozBeforePaint` event, which is sent before repainting the window if the event has been requested by a call to the {{domxref("Window.mozRequestAnimationFrame()")}} method.
+- {{domxref("WindowEventHandlers.onpageshow")}}
+  - : An event handler property for pageshow events on the window.
+- {{domxref("WindowEventHandlers.onpagehide")}}
+  - : An event handler property for pagehide events on the window.
+- {{domxref("Window.onpaint")}}
+  - : An event handler property for paint events on the window.
+- {{domxref("WindowEventHandlers.onpopstate")}} {{gecko_minversion_inline("2.0")}}
+  - : An event handler property for popstate events, which are fired when navigating to a session history entry representing a state object.
+- {{domxref("GlobalEventHandlers.onreset")}}
+  - : An event handler property for reset events on the window.
+- {{domxref("GlobalEventHandlers.onresize")}}
+  - : An event handler property for window resizing.
+- {{domxref("GlobalEventHandlers.onscroll")}}
+  - : An event handler property for window scrolling.
+- {{domxref("GlobalEventHandlers.onselect")}}
+  - : An event handler property for window selection.
+- {{domxref("GlobalEventHandlers.onsubmit")}}
+  - : An event handler property for submits on window forms.
+- {{domxref("Window.onunload")}}
+  - : An event handler property for unload events on the window.
+- {{domxref("Window.onuserproximity")}}
+  - : An event handler property for user proximity events
 
-<h2 id="Constructors">Constructors</h2>
+## Constructors
 
-<p>See also the <a href="/en-US/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">DOM Interfaces</a>.</p>
+See also the [DOM Interfaces](/pt-BR/docs/DOM/DOM_Reference).
 
-<dl>
- <dt>{{domxref("Window.DOMParser")}}</dt>
- <dd>{{todo("NeedsContents")}}</dd>
- <dt>{{domxref("Window.GeckoActiveXObject")}}</dt>
- <dd>{{todo("NeedsContents")}}</dd>
- <dt>{{domxref("Image")}}</dt>
- <dd>Used for creating an {{domxref("HTMLImageElement")}}.</dd>
- <dt>{{domxref("Option")}}</dt>
- <dd>Used for creating an {{domxref("HTMLOptionElement")}}</dd>
- <dt>{{domxref("Window.QueryInterface")}}</dt>
- <dd>{{todo("NeedsContents")}}</dd>
- <dt>{{domxref("Window.XMLSerializer")}}</dt>
- <dd>{{todo("NeedsContents")}}</dd>
- <dt>{{domxref("Worker")}}</dt>
- <dd>Used for creating a <a href="/en-US/docs/DOM/Using_web_workers">Web worker</a></dd>
- <dt>{{domxref("Window.XPCNativeWrapper")}}</dt>
- <dd>{{todo("NeedsContents")}}</dd>
- <dt>{{domxref("Window.XPCSafeJSObjectWrapper")}}</dt>
- <dd>{{todo("NeedsContents")}}</dd>
-</dl>
+- {{domxref("Window.DOMParser")}}
+  - : {{todo("NeedsContents")}}
+- {{domxref("Window.GeckoActiveXObject")}}
+  - : {{todo("NeedsContents")}}
+- {{domxref("Image")}}
+  - : Used for creating an {{domxref("HTMLImageElement")}}.
+- {{domxref("Option")}}
+  - : Used for creating an {{domxref("HTMLOptionElement")}}
+- {{domxref("Window.QueryInterface")}}
+  - : {{todo("NeedsContents")}}
+- {{domxref("Window.XMLSerializer")}}
+  - : {{todo("NeedsContents")}}
+- {{domxref("Worker")}}
+  - : Used for creating a [Web worker](/pt-BR/docs/DOM/Using_web_workers)
+- {{domxref("Window.XPCNativeWrapper")}}
+  - : {{todo("NeedsContents")}}
+- {{domxref("Window.XPCSafeJSObjectWrapper")}}
+  - : {{todo("NeedsContents")}}
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<p>See <a href="/en-US/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">DOM Reference</a></p>
+See [DOM Reference](/pt-BR/docs/DOM/DOM_Reference)
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Working_with_windows_in_chrome_code">Working with windows in chrome code</a></li>
-</ul>
+- [Working with windows in chrome code](/pt-BR/docs/Working_with_windows_in_chrome_code)

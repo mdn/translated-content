@@ -4,52 +4,36 @@ slug: Web/API/EventSource/error_event
 translation_of: Web/API/EventSource/onerror
 original_slug: Web/API/EventSource/onerror
 ---
-<div>{{APIRef('WebSockets API')}}</div>
+{{APIRef('WebSockets API')}}
 
-<div> </div>
+A propriedade **`onerror`** da interface {{domxref("EventSource")}} é um {{event("Event_handlers", "event handler")}} chamado quando um erro ocorre e um evento {{event("error")}} é despachado para o objeto `EventSource`.
 
-<p>A propriedade <code><strong>onerror</strong></code> da interface {{domxref("EventSource")}} é um {{event("Event_handlers", "event handler")}} chamado quando um erro ocorre e um evento {{event("error")}} é despachado para o objeto <code>EventSource</code>.</p>
+## Sintaxe
 
-<h2 id="Sintaxe">Sintaxe</h2>
+```
+eventSource.onerror = function
+```
 
-<pre class="syntaxbox">eventSource.onerror = function</pre>
+## Exemplos
 
-<h2 id="Exemplos">Exemplos</h2>
-
-<pre class="brush: js">evtSource.onerror = function() {
+```js
+evtSource.onerror = function() {
   console.log("EventSource failed.");
-};</pre>
+};
+```
 
-<div class="note">
-<p><strong>Nota</strong>: Você pode encontrar um exemplo completo no GitHub — veja <a href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">Simple SSE demo using PHP.</a></p>
-</div>
+> **Nota:** Você pode encontrar um exemplo completo no GitHub — veja [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "comms.html#handler-eventsource-onerror", "onerror")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                | Status                           | Comentário        |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------- |
+| {{SpecName('HTML WHATWG', "comms.html#handler-eventsource-onerror", "onerror")}} | {{Spec2('HTML WHATWG')}} | Definição inicial |
 
-<ul>
-</ul>
-
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.EventSource.error_event")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("EventSource")}}</li>
-</ul>
+- {{domxref("EventSource")}}

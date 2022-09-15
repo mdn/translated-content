@@ -12,44 +12,31 @@ tags:
   - readAsArrayBuffer
 translation_of: Web/API/FileReader/readAsArrayBuffer
 ---
-<p>{{APIRef("File API")}}</p>
+{{APIRef("File API")}}
 
-<p>O método <strong><code>readAsArrayBuffer() </code></strong>do objeto {{domxref("FileReader")}} é utilizado para ler o conteúdo de um {{domxref("Blob")}} ou {{domxref("File")}} específico. Quando a operação de leitura é finalizada, o {{domxref("FileReader.readyState","readyState")}} torna-se <code>DONE </code>(finalizado), e o evento {{event("loadend")}} é acionado. Então, o atributo {{domxref("FileReader.result","result")}} retorna um {{domxref("ArrayBuffer")}} representando os dados do arquivo.</p>
+O método **`readAsArrayBuffer() `**do objeto {{domxref("FileReader")}} é utilizado para ler o conteúdo de um {{domxref("Blob")}} ou {{domxref("File")}} específico. Quando a operação de leitura é finalizada, o {{domxref("FileReader.readyState","readyState")}} torna-se `DONE `(finalizado), e o evento {{event("loadend")}} é acionado. Então, o atributo {{domxref("FileReader.result","result")}} retorna um {{domxref("ArrayBuffer")}} representando os dados do arquivo.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><em>instanceOfFileReader</em>.readAsArrayBuffer(<em>blob</em>);</pre>
+```
+instanceOfFileReader.readAsArrayBuffer(blob);
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>blob</code></dt>
- <dd>O {{domxref("Blob")}} ou {{domxref("File")}} que será lido.</dd>
-</dl>
+- `blob`
+  - : O {{domxref("Blob")}} ou {{domxref("File")}} que será lido.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("File API", "#readAsArrayBuffer", "FileReader.readAsArrayBuffer")}}</td>
-   <td>{{Spec2("File API")}}</td>
-   <td>Definição Inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                            | Status                       | Comentário        |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------- |
+| {{SpecName("File API", "#readAsArrayBuffer", "FileReader.readAsArrayBuffer")}} | {{Spec2("File API")}} | Definição Inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.FileReader.readAsArrayBuffer")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("FileReader")}}</li>
-</ul>
+- {{domxref("FileReader")}}

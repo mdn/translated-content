@@ -3,145 +3,59 @@ title: mouseover
 slug: Web/API/Element/mouseover_event
 translation_of: Web/API/Element/mouseover_event
 ---
-<p>O evento <code>mouseover</code> é acionado quando um dispositivo ponteiro é movido para o elemento que esteja escutando ou para um de seus filhos.</p>
+O evento `mouseover` é acionado quando um dispositivo ponteiro é movido para o elemento que esteja escutando ou para um de seus filhos.
 
-<h2 id="Informações_Gerais">Informações Gerais</h2>
+## Informações Gerais
 
-<dl>
- <dt style="float: left; text-align: right; width: 120px;">Especificação</dt>
- <dd style="margin: 0 0 0 120px;"><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-type-mouseover">DOM L3</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">Interface</dt>
- <dd style="margin: 0 0 0 120px;">{{domxref("MouseEvent")}}</dd>
- <dt style="float: left; text-align: right; width: 120px;">Bubbles</dt>
- <dd style="margin: 0 0 0 120px;">Sim</dd>
- <dt style="float: left; text-align: right; width: 120px;">Cancelable</dt>
- <dd style="margin: 0 0 0 120px;">Sim</dd>
- <dt style="float: left; text-align: right; width: 120px;">Alvo</dt>
- <dd style="margin: 0 0 0 120px;">Element</dd>
- <dt style="float: left; text-align: right; width: 120px;">Ação Padrão</dt>
- <dd style="margin: 0 0 0 120px;">None</dd>
-</dl>
+- Especificação
+  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-mouseover)
+- Interface
+  - : {{domxref("MouseEvent")}}
+- Bubbles
+  - : Sim
+- Cancelable
+  - : Sim
+- Alvo
+  - : Element
+- Ação Padrão
+  - : None
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>O evento alvo(o mais alto alvo na arvore do DOM).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>The type of event.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>Boolean</td>
-   <td>Whether the event normally bubbles or not</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td><code>Boolean</code></td>
-   <td>Whether the event is cancellable or not</td>
-  </tr>
-  <tr>
-   <td><code>view</code> {{readonlyInline}}</td>
-   <td>{{domxref("WindowProxy")}}</td>
-   <td>{{domxref("document.defaultView")}} (<code>window</code> of the document)</td>
-  </tr>
-  <tr>
-   <td><code>detail</code> {{readonlyInline}}</td>
-   <td><code>long</code> (<code>float</code>)</td>
-   <td>0.</td>
-  </tr>
-  <tr>
-   <td><code>currentTarget</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>The node that had the event listener attached.</td>
-  </tr>
-  <tr>
-   <td><code>relatedTarget</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>For <code>mouseover</code>, <code>mouseout</code>, <code>mouseenter</code> and <code>mouseleave</code> events: the target of the complementary event (the <code>mouseleave</code> target in the case of a <code>mouseenter</code> event). <code>null</code> otherwise.</td>
-  </tr>
-  <tr>
-   <td><code>screenX</code> {{readonlyInline}}</td>
-   <td>long</td>
-   <td>The X coordinate of the mouse pointer in global (screen) coordinates.</td>
-  </tr>
-  <tr>
-   <td><code>screenY</code> {{readonlyInline}}</td>
-   <td>long</td>
-   <td>The Y coordinate of the mouse pointer in global (screen) coordinates.</td>
-  </tr>
-  <tr>
-   <td><code>clientX</code> {{readonlyInline}}</td>
-   <td>long</td>
-   <td>The X coordinate of the mouse pointer in local (DOM content) coordinates.</td>
-  </tr>
-  <tr>
-   <td><code>clientY</code> {{readonlyInline}}</td>
-   <td>long</td>
-   <td>The Y coordinate of the mouse pointer in local (DOM content) coordinates.</td>
-  </tr>
-  <tr>
-   <td><code>button</code> {{readonlyInline}}</td>
-   <td>unsigned short</td>
-   <td>This is always 0 as no button presses trigger this event (mouse movement does).</td>
-  </tr>
-  <tr>
-   <td><code>buttons</code> {{readonlyInline}}</td>
-   <td>unsigned short</td>
-   <td>The buttons depressed when the mouse event was fired: Left button=1, Right button=2, Middle (wheel) button=4, 4th button (typically, "Browser Back" button)=8, 5th button (typically, "Browser Forward" button)=16. If two or more buttons are depressed, returns the logical sum of the values. E.g., if Left button and Right button are depressed, returns 3 (=1 | 2). <a href="/en-US/docs/Web/API/MouseEvent">More info</a>.</td>
-  </tr>
-  <tr>
-   <td><code>mozPressure</code> {{readonlyInline}}</td>
-   <td>float</td>
-   <td>The amount of pressure applied to a touch or tabdevice when generating the event; this value ranges between 0.0 (minimum pressure) and 1.0 (maximum pressure).</td>
-  </tr>
-  <tr>
-   <td><code>ctrlKey</code> {{readonlyInline}}</td>
-   <td>boolean</td>
-   <td><code>true</code> if the control key was down when the event was fired. <code>false</code> otherwise.</td>
-  </tr>
-  <tr>
-   <td><code>shiftKey</code> {{readonlyInline}}</td>
-   <td>boolean</td>
-   <td><code>true</code> if the shift key was down when the event was fired. <code>false</code> otherwise.</td>
-  </tr>
-  <tr>
-   <td><code>altKey</code> {{readonlyInline}}</td>
-   <td>boolean</td>
-   <td><code>true</code> if the alt key was down when the event was fired. <code>false</code> otherwise.</td>
-  </tr>
-  <tr>
-   <td><code>metaKey</code> {{readonlyInline}}</td>
-   <td>boolean</td>
-   <td><code>true</code> if the meta key was down when the event was fired. <code>false</code> otherwise.</td>
-  </tr>
- </tbody>
-</table>
+| Property                                 | Type                                 | Description                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ---------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `target` {{readonlyInline}}        | {{domxref("EventTarget")}} | O evento alvo(o mais alto alvo na arvore do DOM).                                                                                                                                                                                                                                                                                                                                                                       |
+| `type` {{readonlyInline}}          | {{domxref("DOMString")}}     | The type of event.                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `bubbles` {{readonlyInline}}       | Boolean                              | Whether the event normally bubbles or not                                                                                                                                                                                                                                                                                                                                                                               |
+| `cancelable` {{readonlyInline}}    | `Boolean`                            | Whether the event is cancellable or not                                                                                                                                                                                                                                                                                                                                                                                 |
+| `view` {{readonlyInline}}          | {{domxref("WindowProxy")}} | {{domxref("document.defaultView")}} (`window` of the document)                                                                                                                                                                                                                                                                                                                                             |
+| `detail` {{readonlyInline}}        | `long` (`float`)                     | 0.                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `currentTarget` {{readonlyInline}} | {{domxref("EventTarget")}} | The node that had the event listener attached.                                                                                                                                                                                                                                                                                                                                                                          |
+| `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} | For `mouseover`, `mouseout`, `mouseenter` and `mouseleave` events: the target of the complementary event (the `mouseleave` target in the case of a `mouseenter` event). `null` otherwise.                                                                                                                                                                                                                               |
+| `screenX` {{readonlyInline}}       | long                                 | The X coordinate of the mouse pointer in global (screen) coordinates.                                                                                                                                                                                                                                                                                                                                                   |
+| `screenY` {{readonlyInline}}       | long                                 | The Y coordinate of the mouse pointer in global (screen) coordinates.                                                                                                                                                                                                                                                                                                                                                   |
+| `clientX` {{readonlyInline}}       | long                                 | The X coordinate of the mouse pointer in local (DOM content) coordinates.                                                                                                                                                                                                                                                                                                                                               |
+| `clientY` {{readonlyInline}}       | long                                 | The Y coordinate of the mouse pointer in local (DOM content) coordinates.                                                                                                                                                                                                                                                                                                                                               |
+| `button` {{readonlyInline}}        | unsigned short                       | This is always 0 as no button presses trigger this event (mouse movement does).                                                                                                                                                                                                                                                                                                                                         |
+| `buttons` {{readonlyInline}}       | unsigned short                       | The buttons depressed when the mouse event was fired: Left button=1, Right button=2, Middle (wheel) button=4, 4th button (typically, "Browser Back" button)=8, 5th button (typically, "Browser Forward" button)=16. If two or more buttons are depressed, returns the logical sum of the values. E.g., if Left button and Right button are depressed, returns 3 (=1 \| 2). [More info](/pt-BR/docs/Web/API/MouseEvent). |
+| `mozPressure` {{readonlyInline}}   | float                                | The amount of pressure applied to a touch or tabdevice when generating the event; this value ranges between 0.0 (minimum pressure) and 1.0 (maximum pressure).                                                                                                                                                                                                                                                          |
+| `ctrlKey` {{readonlyInline}}       | boolean                              | `true` if the control key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                         |
+| `shiftKey` {{readonlyInline}}      | boolean                              | `true` if the shift key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                           |
+| `altKey` {{readonlyInline}}        | boolean                              | `true` if the alt key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                             |
+| `metaKey` {{readonlyInline}}       | boolean                              | `true` if the meta key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                            |
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example illustrates the difference between <code>mouseover</code> and <a href="/en-US/docs/Web/Events/mouseenter" title="/en/Mozilla_event_reference/mouseenter"><code>mouseenter</code></a> events.</p>
+The following example illustrates the difference between `mouseover` and [`mouseenter`](/pt-BR/docs/Web/Events/mouseenter "/en/Mozilla_event_reference/mouseenter") events.
 
-<pre class="brush: html">&lt;ul id="test"&gt;
-  &lt;li&gt;item 1&lt;/li&gt;
-  &lt;li&gt;item 2&lt;/li&gt;
-  &lt;li&gt;item 3&lt;/li&gt;
-&lt;/ul&gt;
+```html
+<ul id="test">
+  <li>item 1</li>
+  <li>item 2</li>
+  <li>item 3</li>
+</ul>
 
-&lt;script&gt;
+<script>
   var test = document.getElementById("test");
 
 
@@ -167,24 +81,22 @@ translation_of: Web/API/Element/mouseover_event
       event.target.style.color = "";
     }, 500);
   }, false);
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Element.mouseover_event")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Event("mousedown")}}</li>
- <li>{{Event("mouseup")}}</li>
- <li>{{Event("mousemove")}}</li>
- <li>{{Event("click")}}</li>
- <li>{{Event("dblclick")}}</li>
- <li>{{Event("mouseover")}}</li>
- <li>{{Event("mouseout")}}</li>
- <li>{{Event("mouseenter")}}</li>
- <li>{{Event("mouseleave")}}</li>
- <li>{{Event("contextmenu")}}</li>
-</ul>
+- {{Event("mousedown")}}
+- {{Event("mouseup")}}
+- {{Event("mousemove")}}
+- {{Event("click")}}
+- {{Event("dblclick")}}
+- {{Event("mouseover")}}
+- {{Event("mouseout")}}
+- {{Event("mouseenter")}}
+- {{Event("mouseleave")}}
+- {{Event("contextmenu")}}

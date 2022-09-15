@@ -3,47 +3,44 @@ title: Document.currentScript
 slug: Web/API/Document/currentScript
 translation_of: Web/API/Document/currentScript
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<div> </div>
+Retorna o elemento que está sendo processado atualmente.
 
-<p>Retorna o elemento que está sendo processado atualmente.</p>
+## Sintaxe
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+```
+var curScriptElement = document.currentScript;
+```
 
-<pre class="syntaxbox">var curScriptElement = document.currentScript;
-</pre>
+## Exemplo
 
-<h2 id="Example" name="Example">Exemplo</h2>
+O exemplo abaixo verifica se o script está sendo executado de forma assíncrona:
 
-<p>O exemplo abaixo verifica se o script está sendo executado de forma assíncrona:</p>
-
-<pre class="brush:js">if (document.currentScript.async) {
+```js
+if (document.currentScript.async) {
   console.log("Execução assíncrona");
 } else {
   console.log("Execução síncrona");
-}</pre>
+}
+```
 
-<p><a href="/samples/html/currentScript.html">View Live Examples</a></p>
+[View Live Examples](/samples/html/currentScript.html)
 
-<h2 id="Nota">Nota</h2>
+## Nota
 
-<p>Se o código estiver sendo chamado como um callback ou manipulador de eventos, ele não irá referenciar o  elemento; a referência ao elemento só acontece quando ele está sendo processado inicialmente.</p>
+Se o código estiver sendo chamado como um callback ou manipulador de eventos, ele não irá referenciar o elemento; a referência ao elemento só acontece quando ele está sendo processado inicialmente.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Document.currentScript")}}
 
-<h2 id="Specification" name="Specification">Especificações</h2>
+## Especificações
 
-<ul>
- <li><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#dom-document-currentscript">HTML5</a></li>
-</ul>
+- [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#dom-document-currentscript)
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{HTMLElement("script")}}</li>
- <li>{{domxref("element.onafterscriptexecute")}}</li>
- <li>{{domxref("element.onbeforescriptexecute")}}</li>
-</ul>
+- {{HTMLElement("script")}}
+- {{domxref("element.onafterscriptexecute")}}
+- {{domxref("element.onbeforescriptexecute")}}

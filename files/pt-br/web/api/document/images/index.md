@@ -3,36 +3,36 @@ title: Document.images
 slug: Web/API/Document/images
 translation_of: Web/API/Document/images
 ---
-<div>
-<div>{{ ApiRef("DOM") }}</div>
-</div>
+{{ ApiRef("DOM") }}
 
-<h2 id="Summary" name="Summary">Summary</h2>
+## Summary
 
-<p><code>document.images</code> retorna uma coleção de <a href="/en-US/docs/DOM/Image" title="DOM/Image">imagens</a> do documento HTML.</p>
+`document.images` retorna uma coleção de [imagens](/pt-BR/docs/DOM/Image "DOM/Image") do documento HTML.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><em>var htmlCollection</em> = document.images;</pre>
+```
+var htmlCollection = document.images;
+```
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<pre class="brush:js">var ilist = document.images;
+```js
+var ilist = document.images;
 
-for(var i = 0; i &lt; ilist.length; i++) {
+for(var i = 0; i < ilist.length; i++) {
     if(ilist[i].src == "banner.gif") {
         // found the banner
     }
-}</pre>
+}
+```
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p><code>document.images.length</code> – propriedade, retorna o número de imagens na página.</p>
+`document.images.length` – propriedade, retorna o número de imagens na página.
 
-<p><code>document.images</code> é parte do DOM HTML, e só trabalho com documentos HTML.</p>
+`document.images` é parte do DOM HTML, e só trabalho com documentos HTML.
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-90379117">DOM Level 2 HTML: HTMLDocument.images</a></li>
-</ul>
+- [DOM Level 2 HTML: HTMLDocument.images](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-90379117)

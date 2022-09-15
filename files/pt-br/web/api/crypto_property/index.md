@@ -12,64 +12,56 @@ tags:
 translation_of: Web/API/Window/crypto
 original_slug: Web/API/Window/crypto
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>{{domxref("Window.crypto")}} propriedade somente de leitura, devolve um objeto do tipo {{domxref("Crypto")}} associado ao objeto global. Este objeto permite que páginas da web utilizem recursos de criptografia.</p>
+{{domxref("Window.crypto")}} propriedade somente de leitura, devolve um objeto do tipo {{domxref("Crypto")}} associado ao objeto global. Este objeto permite que páginas da web utilizem recursos de criptografia.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var <em>cryptoObj</em> = window.crypto || window.msCrypto; // for IE 11
-</pre>
+```
+var cryptoObj = window.crypto || window.msCrypto; // for IE 11
+```
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<h4 id="Usando_a_propriedade_domxref(Window.crypto)_para_acessar_o_método_getRandomValues().">Usando a propriedade {{domxref("Window.crypto")}}  para acessar o método getRandomValues().</h4>
+#### Usando a propriedade {{domxref("Window.crypto")}} para acessar o método getRandomValues().
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">genRandomNumbers = function getRandomNumbers() {
+```js
+genRandomNumbers = function getRandomNumbers() {
   var array = new Uint32Array(10);
   window.crypto.getRandomValues(array);
 
   var randText = document.getElementById("myRandText");
   randText.innerHTML = "The random numbers are: "
-  for (var i = 0; i &lt; array.length; i++) {
+  for (var i = 0; i < array.length; i++) {
     randText.innerHTML += array[i] + " ";
   }
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p id="myRandText"&gt;The random numbers are: &lt;/p&gt;
-&lt;button type="button" onClick='genRandomNumbers()'&gt;Generate 10 random numbers&lt;/button&gt;</pre>
+```html
+<p id="myRandText">The random numbers are: </p>
+<button type="button" onClick='genRandomNumbers()'>Generate 10 random numbers</button>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{ EmbedLiveSample('Example') }}</p>
+{{ EmbedLiveSample('Example') }}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Web Crypto API", "#dfn-GlobalCrypto", "Window.crypto")}}</td>
-   <td>{{Spec2("Web Crypto API")}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                | Status                               | Comentário         |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
+| {{SpecName("Web Crypto API", "#dfn-GlobalCrypto", "Window.crypto")}} | {{Spec2("Web Crypto API")}} | Definição inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.crypto")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>O objeto global {{domxref("Window")}} </li>
-</ul>
+- O objeto global {{domxref("Window")}}

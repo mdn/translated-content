@@ -10,13 +10,14 @@ tags:
 translation_of: Web/API/FileReader/onload
 original_slug: Web/API/FileReader/onload
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>A propriedade <strong>FileReader.onload</strong> contém um manipulador de eventos (event handler) executado quando o evento de carregamento ({{event('load')}})  é ativado, quando o conteúdo lido com  <a href="/en-US/docs/Web/API/FileReader/readAsArrayBuffer">readAsArrayBuffer</a>, <a href="/en-US/docs/Web/API/FileReader/readAsBinaryString">readAsBinaryString</a>, <a href="/en-US/docs/Web/API/FileReader/readAsDataURL">readAsDataURL</a> ou <a href="/en-US/docs/Web/API/FileReader/readAsText">readAsText</a> fica disponível.</p>
+A propriedade **FileReader.onload** contém um manipulador de eventos (event handler) executado quando o evento de carregamento ({{event('load')}}) é ativado, quando o conteúdo lido com [readAsArrayBuffer](/pt-BR/docs/Web/API/FileReader/readAsArrayBuffer), [readAsBinaryString](/pt-BR/docs/Web/API/FileReader/readAsBinaryString), [readAsDataURL](/pt-BR/docs/Web/API/FileReader/readAsDataURL) ou [readAsText](/pt-BR/docs/Web/API/FileReader/readAsText) fica disponível.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush:js; line-numbers  language-js"><code class="language-js">// Callback de um &lt;input type="file" onchange="onChange(event)"&gt;
+```js
+// Callback de um <input type="file" onchange="onChange(event)">
 function onChange(event) {
   var file = event.target.files[0];
   var reader = new FileReader();
@@ -27,4 +28,4 @@ function onChange(event) {
 
   reader.readAsText(file);
 }
-</code></pre>
+```

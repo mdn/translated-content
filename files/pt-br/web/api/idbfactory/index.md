@@ -3,37 +3,32 @@ title: IDBFactory
 slug: Web/API/IDBFactory
 translation_of: Web/API/IDBFactory
 ---
-<p>{{APIRef("IndexedDB")}}</p>
+{{APIRef("IndexedDB")}}
 
-<div>
-<p>A interface IDBFactory, pertencente a <a href="/en-US/docs/IndexedDB">IndexedDB API</a> , permite que aplicativos acessem de forma assíncrona os bancos de dados indexados. O objeto que implementa a interface é o window.indexedDB, com este objeto é possível criar, acessar, modificar e excluir informações de um banco de dados. </p>
+A interface IDBFactory, pertencente a [IndexedDB API](/pt-BR/docs/IndexedDB) , permite que aplicativos acessem de forma assíncrona os bancos de dados indexados. O objeto que implementa a interface é o window\.indexedDB, com este objeto é possível criar, acessar, modificar e excluir informações de um banco de dados.
 
-<p>{{AvailableInWorkers}}</p>
-</div>
+{{AvailableInWorkers}}
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<dl>
- <dt>{{domxref("IDBFactory.open")}}</dt>
- <dd>Realizar a abertura de uma <a href="https://developer.mozilla.org/en-US/docs/IndexedDB#gloss_database_connection">conexão com uma base de dados</a>.</dd>
- <dt>{{domxref("IDBFactory.deleteDatabase")}}</dt>
- <dd>Remove uma base de dados.</dd>
- <dt>{{domxref("IDBFactory.cmp")}}</dt>
- <dd>Compara dois valores chaves e determina se elas são iguais e se não, quem é a maior.</dd>
-</dl>
+- {{domxref("IDBFactory.open")}}
+  - : Realizar a abertura de uma [conexão com uma base de dados](/pt-BR/docs/IndexedDB#gloss_database_connection).
+- {{domxref("IDBFactory.deleteDatabase")}}
+  - : Remove uma base de dados.
+- {{domxref("IDBFactory.cmp")}}
+  - : Compara dois valores chaves e determina se elas são iguais e se não, quem é a maior.
 
-<h3 id="Métodos_Obsoletos">Métodos Obsoletos</h3>
+### Métodos Obsoletos
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/API/IDBFactory.open-obsolete">IDBFactory.open</a></code>, a versão original {{ obsolete_inline }}</dt>
- <dd>Este método realizava <a href="https://developer.mozilla.org/en-US/docs/IndexedDB#gloss_database_connection">conexão com uma base de dados</a>, ele ainda é usado em alguns navegadores.</dd>
-</dl>
+- [`IDBFactory.open`](/en-US/docs/Web/API/IDBFactory.open-obsolete), a versão original {{ obsolete_inline }}
+  - : Este método realizava [conexão com uma base de dados](/pt-BR/docs/IndexedDB#gloss_database_connection), ele ainda é usado em alguns navegadores.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>No código abaixo, realizamos uma conexão com um banco de dados e incluímos manipuladores para os casos de sucesso e erro. Você pode obter o <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> app como exemplo (<a class="external" href="http://mdn.github.io/to-do-notifications/">Visualizar exemplo</a>.)</p>
+No código abaixo, realizamos uma conexão com um banco de dados e incluímos manipuladores para os casos de sucesso e erro. Você pode obter o [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) app como exemplo ([Visualizar exemplo](http://mdn.github.io/to-do-notifications/).)
 
-<pre class="brush:js">var note = document.querySelector("ul");
+```js
+var note = document.querySelector("ul");
 
 // In the following line, you should include the prefixes of implementations you want to test.
 window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
@@ -48,51 +43,34 @@ var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the database being opened successfully, or not
 DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '&lt;li&gt;Error loading database.&lt;/li&gt;';
+  note.innerHTML += '<li>Error loading database.</li>';
 };
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
+  note.innerHTML += '<li>Database initialised.</li>';
 
   // store the result of opening the database in the db variable. This is used a lot later on, for opening transactions and suchlike.
   db = DBOpenRequest.result;
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#idl-def-IDBFactory', 'IDBFactory')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("IndexedDB 2", "#factory-interface", "IDBFactory")}}</td>
-   <td>{{Spec2("IndexedDB 2")}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                        | Status                           | Comment |
+| ------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| {{SpecName('IndexedDB', '#idl-def-IDBFactory', 'IDBFactory')}} | {{Spec2('IndexedDB')}}     |         |
+| {{SpecName("IndexedDB 2", "#factory-interface", "IDBFactory")}} | {{Spec2("IndexedDB 2")}} |         |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.IDBFactory")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Usando IndexedDB</a></li>
- <li>Inicializando uma Transaction: {{domxref("IDBDatabase")}}</li>
- <li>Usando uma Transaction: {{domxref("IDBTransaction")}}</li>
- <li>Configurando um Intervalo de chaves: {{domxref("IDBKeyRange")}}</li>
- <li>Recuperando e modificando dados: {{domxref("IDBObjectStore")}}</li>
- <li>Usando cursors: {{domxref("IDBCursor")}}</li>
- <li>Exemplo de referência: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">Visualizar exemplo</a>.)</li>
-</ul>
+- [Usando IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Inicializando uma Transaction: {{domxref("IDBDatabase")}}
+- Usando uma Transaction: {{domxref("IDBTransaction")}}
+- Configurando um Intervalo de chaves: {{domxref("IDBKeyRange")}}
+- Recuperando e modificando dados: {{domxref("IDBObjectStore")}}
+- Usando cursors: {{domxref("IDBCursor")}}
+- Exemplo de referência: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([Visualizar exemplo](http://mdn.github.io/to-do-notifications/).)

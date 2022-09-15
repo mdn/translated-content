@@ -7,84 +7,63 @@ tags:
   - Location
 translation_of: Web/API/Location
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p>A interface <code>Location</code> representa a localização do objeto a qual ele está associado. Mudanças feitas na interface serão refletidas nos objetos relacionados a ela. Tanto a interface {{domxref("Document")}}, como a interface {{domxref("Window")}} , têm este vínculo com a inteface Location, acessível via {{domxref("Document.location")}} e {{domxref("Window.location")}} respectivamente.</p>
+A interface `Location` representa a localização do objeto a qual ele está associado. Mudanças feitas na interface serão refletidas nos objetos relacionados a ela. Tanto a interface {{domxref("Document")}}, como a interface {{domxref("Window")}} , têm este vínculo com a inteface Location, acessível via {{domxref("Document.location")}} e {{domxref("Window.location")}} respectivamente.
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<p><em>A inteface <code>Location</code> não herda nenhuma propriedade, mas implementa as propriedades de </em><em>{{domxref("URLUtils")}}.</em></p>
+_A inteface `Location` não herda nenhuma propriedade, mas implementa as propriedades de_ _{{domxref("URLUtils")}}._
 
-<dl>
- <dt>{{domxref("URLUtils.href")}}</dt>
- <dd>É uma {{domxref("DOMString")}} que contém toda URL.</dd>
- <dt>{{domxref("URLUtils.protocol")}}</dt>
- <dd>É uma {{domxref("DOMString")}} que contém o esquema de protocolo da URL, incluindo o final ':'.</dd>
- <dt>{{domxref("URLUtils.host")}}</dt>
- <dd>É uma {{domxref("DOMString")}} que contém o <em>host</em>, que é o <em>hostname</em> seguido de ':' e a <em>port</em> da URL.</dd>
- <dt>{{domxref("URLUtils.hostname")}}</dt>
- <dd>É uma {{domxref("DOMString")}} que contém o domínio da URL.</dd>
- <dt>{{domxref("URLUtils.port")}}</dt>
- <dd>É uma {{domxref("DOMString")}} que contém o número da porta da URL.</dd>
- <dt>{{domxref("URLUtils.pathname")}}</dt>
- <dd>É uma {{domxref("DOMString")}} que contém <code>'/', como </code>caractere inicial<code>,</code> seguido do caminho da URL.</dd>
- <dt>{{domxref("URLUtils.search")}}</dt>
- <dd>É uma {{domxref("DOMString")}} que contém um <code>'?'</code> seguido dos parâmetros da URL.</dd>
- <dt>{{domxref("URLUtils.hash")}}</dt>
- <dd>É uma {{domxref("DOMString")}} que contém um <code>'#'</code> seguido do identificador de fragmento da URL.</dd>
- <dt>{{domxref("URLUtils.username")}}</dt>
- <dd>É uma {{domxref("DOMString")}} que contém o nome de usuário especificado antes do nome de domínio.</dd>
- <dt>{{domxref("URLUtils.password")}}</dt>
- <dd>É uma {{domxref("DOMString")}} que contém a senha especificada antes do nome de domínio.</dd>
- <dt>{{domxref("URLUtils.origin")}} {{readOnlyInline}}</dt>
- <dd>Retorna uma {{domxref("DOMString")}} que contém a forma canônica da origem do local especificado.</dd>
-</dl>
+- {{domxref("URLUtils.href")}}
+  - : É uma {{domxref("DOMString")}} que contém toda URL.
+- {{domxref("URLUtils.protocol")}}
+  - : É uma {{domxref("DOMString")}} que contém o esquema de protocolo da URL, incluindo o final ':'.
+- {{domxref("URLUtils.host")}}
+  - : É uma {{domxref("DOMString")}} que contém o _host_, que é o _hostname_ seguido de ':' e a _port_ da URL.
+- {{domxref("URLUtils.hostname")}}
+  - : É uma {{domxref("DOMString")}} que contém o domínio da URL.
+- {{domxref("URLUtils.port")}}
+  - : É uma {{domxref("DOMString")}} que contém o número da porta da URL.
+- {{domxref("URLUtils.pathname")}}
+  - : É uma {{domxref("DOMString")}} que contém `'/', como `caractere inicial`,` seguido do caminho da URL.
+- {{domxref("URLUtils.search")}}
+  - : É uma {{domxref("DOMString")}} que contém um `'?'` seguido dos parâmetros da URL.
+- {{domxref("URLUtils.hash")}}
+  - : É uma {{domxref("DOMString")}} que contém um `'#'` seguido do identificador de fragmento da URL.
+- {{domxref("URLUtils.username")}}
+  - : É uma {{domxref("DOMString")}} que contém o nome de usuário especificado antes do nome de domínio.
+- {{domxref("URLUtils.password")}}
+  - : É uma {{domxref("DOMString")}} que contém a senha especificada antes do nome de domínio.
+- {{domxref("URLUtils.origin")}} {{readOnlyInline}}
+  - : Retorna uma {{domxref("DOMString")}} que contém a forma canônica da origem do local especificado.
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<p><em>A inteface <code>Location</code></em><em> não herda nenhum método, mas implementa os métodos de<em> {{domxref("URLUtils")}}</em>.</em></p>
+_A inteface `Location`_ _não herda nenhum método, mas implementa os métodos de _{{domxref("URLUtils")}}\_\_
 
-<dl>
- <dt>{{domxref("Location.assign()")}}</dt>
- <dd>Carrega o recurso na URL fornecida como parâmetro.</dd>
- <dt>{{domxref("Location.reload()")}}</dt>
- <dd>Recarrega o recurso a partir da URL atual. Seu único parâmetro opcional é um {{domxref("Boolean")}}, que, quando verdadeiro (<code>true)</code>, faz com que a página sempre seja recarregada a partir do servidor. Se for falso (<code>false)</code> ou não especificado,  o navegador pode recarregar a página a partir de seu cache.</dd>
- <dt>{{domxref("Location.replace()")}}</dt>
- <dd>Substitui o recurso atual pelo recurso presente na URL fornecida. A diferença entre o método <code>assign()</code> é que após usar <code>replace()</code> a página atual não será salva na sessão  {{domxref("History")}}, ou seja, o usuário não será capaz de usar o botão <em>voltar </em>para navegar até a página.</dd>
- <dt>{{domxref("URLUtils.toString()")}}</dt>
- <dd>Retorna uma {{domxref("DOMString")}} que contém toda URL. O método é um sinônimo para {{domxref("URLUtils.href")}}, embora não possa ser usado para modificar o valor.</dd>
-</dl>
+- {{domxref("Location.assign()")}}
+  - : Carrega o recurso na URL fornecida como parâmetro.
+- {{domxref("Location.reload()")}}
+  - : Recarrega o recurso a partir da URL atual. Seu único parâmetro opcional é um {{domxref("Boolean")}}, que, quando verdadeiro (`true)`, faz com que a página sempre seja recarregada a partir do servidor. Se for falso (`false)` ou não especificado, o navegador pode recarregar a página a partir de seu cache.
+- {{domxref("Location.replace()")}}
+  - : Substitui o recurso atual pelo recurso presente na URL fornecida. A diferença entre o método `assign()` é que após usar `replace()` a página atual não será salva na sessão {{domxref("History")}}, ou seja, o usuário não será capaz de usar o botão _voltar_ para navegar até a página.
+- {{domxref("URLUtils.toString()")}}
+  - : Retorna uma {{domxref("DOMString")}} que contém toda URL. O método é um sinônimo para {{domxref("URLUtils.href")}}, embora não possa ser usado para modificar o valor.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "history.html#the-location-interface", "Location")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Nenhuma mudança a partir {{SpecName("HTML5 W3C")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "browsers.html#the-location-interface", "Location")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                            | Status                           | Comentário                                                 |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "history.html#the-location-interface", "Location")}} | {{Spec2('HTML WHATWG')}} | Nenhuma mudança a partir {{SpecName("HTML5 W3C")}}. |
+| {{SpecName('HTML5 W3C', "browsers.html#the-location-interface", "Location")}} | {{Spec2('HTML5 W3C')}}     | Definição inicial.                                         |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Location")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>Dois métodos que criam um objeto Location: {{domxref("Window.location")}} e {{domxref("Document.location")}}.</li>
-</ul>
+- Dois métodos que criam um objeto Location: {{domxref("Window.location")}} e {{domxref("Document.location")}}.

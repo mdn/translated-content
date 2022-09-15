@@ -9,65 +9,44 @@ tags:
 translation_of: Web/API/WindowOrWorkerGlobalScope/atob
 original_slug: Web/API/WindowOrWorkerGlobalScope/atob
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>A função <strong><code>WindowBase64.atob()</code></strong> decodifica uma string de dados que foi codificada através da codificação base-64. Você pode usar o método {{domxref("WindowBase64.btoa","window.btoa()")}} para codificar e transmitir dados que, se não codificados, podem causar problemas de comunicação. Após transmití-los pode-se usar o método <code>window.atob()</code> para decodificar os dados novamente. Por exemplo, você pode codificar, transmitir,  e decodificar caracteres de controle como valores ASCII de 0 a 31.</p>
+A função **`WindowBase64.atob()`** decodifica uma string de dados que foi codificada através da codificação base-64. Você pode usar o método {{domxref("WindowBase64.btoa","window.btoa()")}} para codificar e transmitir dados que, se não codificados, podem causar problemas de comunicação. Após transmití-los pode-se usar o método `window.atob()` para decodificar os dados novamente. Por exemplo, você pode codificar, transmitir, e decodificar caracteres de controle como valores ASCII de 0 a 31.
 
-<p>Para utilizar com strings Unicode ou UTF-8, veja <a href="/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding#The_.22Unicode_Problem.22">esta nota em <em>Base64 encoding and decoding</em></a> e <a href="/en-US/docs/Web/API/window.btoa#Unicode_Strings">essa nota em <code>window.btoa()</code></a>.</p>
+Para utilizar com strings Unicode ou UTF-8, veja [esta nota em _Base64 encoding and decoding_](/pt-BR/docs/Web/JavaScript/Base64_encoding_and_decoding#The_.22Unicode_Problem.22) e [essa nota em `window.btoa()`](/pt-BR/docs/Web/API/window.btoa#Unicode_Strings).
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var dadoDecodificado = window.atob(<em>dadoCodificado</em>);</pre>
+```
+var dadoDecodificado = window.atob(dadoCodificado);
+```
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush:js">var <em>dadoCodificado </em>= window.btoa("Olá, mundo"); // codifica a string
-var dadoDecodificado = window.atob(<em>dadoCodificado</em>); // decodifica a string</pre>
+```js
+var dadoCodificado = window.btoa("Olá, mundo"); // codifica a string
+var dadoDecodificado = window.atob(dadoCodificado); // decodifica a string
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-windowbase64-atob', 'WindowBase64.atob()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Nenhuma mudança desde a última versão, {{SpecName("HTML5.1")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', '#dom-windowbase64-atob', 'WindowBase64.atob()')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Versão de {{SpecName("HTML WHATWG")}}. Nenhuma mudança.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "#dom-windowbase64-atob", "WindowBase64.atob()")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Versão de {{SpecName("HTML WHATWG")}}. Criação do <code>WindowBase64</code> (antes as propriedades ficavam no target).</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                        | Status                           | Comentário                                                                                                           |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', '#dom-windowbase64-atob', 'WindowBase64.atob()')}} | {{Spec2('HTML WHATWG')}} | Nenhuma mudança desde a última versão, {{SpecName("HTML5.1")}}.                                             |
+| {{SpecName('HTML5.1', '#dom-windowbase64-atob', 'WindowBase64.atob()')}}     | {{Spec2('HTML5.1')}}     | Versão de {{SpecName("HTML WHATWG")}}. Nenhuma mudança.                                                     |
+| {{SpecName("HTML5 W3C", "#dom-windowbase64-atob", "WindowBase64.atob()")}} | {{Spec2('HTML5 W3C')}}     | Versão de {{SpecName("HTML WHATWG")}}. Criação do `WindowBase64` (antes as propriedades ficavam no target). |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>{{Compat("api.WindowOrWorkerGlobalScope.atob")}}</div>
+{{Compat("api.WindowOrWorkerGlobalScope.atob")}}
 
-<div id="compat-mobile"></div>
+\[1] `atob()` também está disponível para os componentes do XPCOM implementado em JavaScript, porém o objeto [`window`](/en-US/docs/Web/API/Window) não é global nos componentes.
 
-<p>[1] <code>atob()</code> também está disponível para os componentes do XPCOM implementado em JavaScript, porém o objeto <code><a href="/en-US/docs/Web/API/Window">window</a></code> não é global nos componentes.</p>
+\[2] A partir do [Firefox 27](/en-US/Firefox/Releases/27/Site_Compatibility), `atob()` ignora todos os caracteres de espaço no argumento para seguir as últimas especificações do HTML5. ({{bug(711180)}})
 
-<p>[2] A partir do <a href="/en-US/Firefox/Releases/27/Site_Compatibility">Firefox 27</a>, <code>atob()</code> ignora todos os caracteres de espaço no argumento para seguir as últimas especificações do HTML5. ({{bug(711180)}})</p>
+## Veja também
 
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li><a href="/Web/API/WindowBase64/Base64_encoding_and_decoding">Base64 encoding and decoding</a></li>
- <li><a href="/en-US/docs/data_URIs"><code>data</code> URIs</a></li>
- <li>{{domxref("WindowBase64.btoa","window.btoa()")}}</li>
- <li><a href="/en-US/docs/Components.utils.importGlobalProperties">Components.utils.importGlobalProperties</a></li>
-</ul>
+- [Base64 encoding and decoding](/Web/API/WindowBase64/Base64_encoding_and_decoding)
+- [`data` URIs](/pt-BR/docs/data_URIs)
+- {{domxref("WindowBase64.btoa","window.btoa()")}}
+- [Components.utils.importGlobalProperties](/pt-BR/docs/Components.utils.importGlobalProperties)

@@ -8,44 +8,36 @@ tags:
 translation_of: Web/API/WebSockets_API
 original_slug: WebSockets
 ---
-<p>WebSockets é uma tecnologia avançada que torna possível abrir uma sessão de comunicação interativa entre o navegador do usuário e um servidor. Com esta API, você pode enviar mensagens para um servidor e receber respostas orientadas a eventos sem ter que consultar o servidor para obter uma resposta.</p>
+WebSockets é uma tecnologia avançada que torna possível abrir uma sessão de comunicação interativa entre o navegador do usuário e um servidor. Com esta API, você pode enviar mensagens para um servidor e receber respostas orientadas a eventos sem ter que consultar o servidor para obter uma resposta.
 
-<h2 id="Documentation" name="Documentation">Documentação</h2>
+## Documentação
 
-<dl>
- <dt><a href="/pt-BR/docs/WebSockets/Escrevendo_aplicacoes_cliente_WebSocket" title="WebSockets/Writing WebSocket client applications">Escrevendo aplicações cliente WebSocket</a></dt>
- <dd>Um tutorial para escrever clientes WebSocket para ser executado no browser.</dd>
- <dt><a href="/en-US/docs/WebSockets/WebSockets_reference" title="WebSockets/WebSockets reference">Referencias WebSockets</a></dt>
- <dd>Uma referência para a API WebSocket do lado do cliente.</dd>
- <dt><a href="/en-US/docs/WebSockets/Writing_WebSocket_servers" title="WebSockets/Writing WebSocket servers">(TBD)Escrevendo servidores WebSocket</a></dt>
- <dd><a href="/en-US/docs/WebSockets/Writing_WebSocket_servers" title="WebSockets/Writing WebSocket servers">Um guia para escrever código do lado do servidor para lidar com o protocolo WebSocket.</a></dd>
-</dl>
+- [Escrevendo aplicações cliente WebSocket](/pt-BR/docs/WebSockets/Escrevendo_aplicacoes_cliente_WebSocket "WebSockets/Writing WebSocket client applications")
+  - : Um tutorial para escrever clientes WebSocket para ser executado no browser.
+- [Referencias WebSockets](/pt-BR/docs/WebSockets/WebSockets_reference "WebSockets/WebSockets reference")
+  - : Uma referência para a API WebSocket do lado do cliente.
+- [(TBD)Escrevendo servidores WebSocket](/pt-BR/docs/WebSockets/Writing_WebSocket_servers "WebSockets/Writing WebSocket servers")
+  - : [Um guia para escrever código do lado do servidor para lidar com o protocolo WebSocket.](/pt-BR/docs/WebSockets/Writing_WebSocket_servers "WebSockets/Writing WebSocket servers")
 
-<p><a href="/en-US/docs/tag/WebSockets" title="tag/WebSockets">Saiba mais...</a></p>
+[Saiba mais...](/pt-BR/docs/tag/WebSockets "tag/WebSockets")
 
-<h2 id="Tools" name="Tools">Ferramentas</h2>
+## Ferramentas
 
-<ul>
- <li><a class="external" href="http://socket.io">Socket.IO</a>: Uma poderosa plataforma cruzada para API WebSocket <a class="external" href="http://nodejs.org">Node.js</a>.</li>
- <li><a class="link-https" href="https://github.com/Worlize/WebSocket-Node">WebSocket-Node</a>: Uma implementação para servidor da API WebSocket<a class="external" href="http://nodejs.org">Node.js</a>.</li>
- <li><a href="http://ajf.me/websocket/#libs">Uma lista mais ampla de frameworks e bibliotecas aqui</a></li>
-</ul>
+- [Socket.IO](http://socket.io): Uma poderosa plataforma cruzada para API WebSocket [Node.js](http://nodejs.org).
+- [WebSocket-Node](https://github.com/Worlize/WebSocket-Node): Uma implementação para servidor da API WebSocket[Node.js](http://nodejs.org).
+- [Uma lista mais ampla de frameworks e bibliotecas aqui](http://ajf.me/websocket/#libs)
 
-<h2 id="Related_Topics" name="Related_Topics">Tópicos Relacionados</h2>
+## Tópicos Relacionados
 
-<ul>
- <li><a href="/en-US/docs/AJAX" title="AJAX">AJAX</a>, <a href="/en-US/docs/JavaScript" title="JavaScript">JavaScript</a></li>
-</ul>
+- [AJAX](/pt-BR/docs/AJAX "AJAX"), [JavaScript](/pt-BR/docs/JavaScript "JavaScript")
 
-<h2 id="Veja_Também">Veja Também</h2>
+## Veja Também
 
-<ul>
- <li><a class="external" href="http://tools.ietf.org/html/rfc6455">RFC 6455 - O Protocolo WebSocket</a></li>
- <li><a class="external" href="http://www.w3.org/TR/websockets/">Especificação da API WebSocket</a></li>
- <li><a href="/en-US/docs/Server-sent_events" title="Server-sent_events">Eventos enviados para servidor</a></li>
- <li><a class="external" href="http://websocket.us/">WebSocket.us</a> - Uma comunidade sem fins lucrativos baseada no site WebSocket</li>
-</ul>
+- [RFC 6455 - O Protocolo WebSocket](http://tools.ietf.org/html/rfc6455)
+- [Especificação da API WebSocket](http://www.w3.org/TR/websockets/)
+- [Eventos enviados para servidor](/pt-BR/docs/Server-sent_events "Server-sent_events")
+- [WebSocket.us](http://websocket.us/) - Uma comunidade sem fins lucrativos baseada no site WebSocket
 
-<h2 id="Navegadores_Compatíveis">Navegadores Compatíveis</h2>
+## Navegadores Compatíveis
 
 {{Compat("api.WebSocket")}}

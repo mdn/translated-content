@@ -3,28 +3,30 @@ title: Começando com WebGL
 slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 translation_of: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 ---
-<p>{{WebGLSidebar("Tutorial")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}</p>
+{{WebGLSidebar("Tutorial")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
 
-<p><a class="external" href="http://www.khronos.org/webgl/">WebGL</a> permite que o contéudo web use uma API baseada em <a class="external" href="http://www.khronos.org/opengles/">OpenGL ES</a> 2.0 para realizar renderização 3D em um <a class="internal" href="/en-US/docs/Web/API/Canvas_API"><code>canvas</code></a> HTML em browsers que o suportam sem o uso de plugins. Programas WebGL consistem em um código de controle escrito em JavaScript e códigos de efeitos especiais (shader code) que é executado na Unidade Gráfica de Processamento (GPU) de um computador. Elementos WebGL podem ser utilizados junto com outros elementos HTML e com outras partes da página ou do fundo.</p>
+[WebGL](http://www.khronos.org/webgl/) permite que o contéudo web use uma API baseada em [OpenGL ES](http://www.khronos.org/opengles/) 2.0 para realizar renderização 3D em um [`canvas`](/pt-BR/docs/Web/API/Canvas_API) HTML em browsers que o suportam sem o uso de plugins. Programas WebGL consistem em um código de controle escrito em JavaScript e códigos de efeitos especiais (shader code) que é executado na Unidade Gráfica de Processamento (GPU) de um computador. Elementos WebGL podem ser utilizados junto com outros elementos HTML e com outras partes da página ou do fundo.
 
-<p>Esse artigo vai introduzir o básico sobre o uso do WebGL. Acredita-se que você já possui entendimento da matemática que envolve os gráficos 3D, e que este artigo não tem a pretensão de tentar ensinar-lhe OpenGL em si.</p>
+Esse artigo vai introduzir o básico sobre o uso do WebGL. Acredita-se que você já possui entendimento da matemática que envolve os gráficos 3D, e que este artigo não tem a pretensão de tentar ensinar-lhe OpenGL em si.
 
-<p>Os exemplos de código deste tutorial também podem ser encontrados no <a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial">Exemplos de WebGL no repositório do GitHub</a>.</p>
+Os exemplos de código deste tutorial também podem ser encontrados no [Exemplos de WebGL no repositório do GitHub](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial).
 
-<h2 id="Preparando-se_para_renderizar_em_3D">Preparando-se para renderizar em 3D</h2>
+## Preparando-se para renderizar em 3D
 
-<p>A primeira coisa que você precisa para para renderização do WebGL, é a inicialização do canvas. O fragmento HTML abaixo declara um canvas em que nosso exemplo será desenhado.</p>
+A primeira coisa que você precisa para para renderização do WebGL, é a inicialização do canvas. O fragmento HTML abaixo declara um canvas em que nosso exemplo será desenhado.
 
-<pre class="brush: html">&lt;body&gt;
-  &lt;canvas id="glCanvas" width="640" height="480"&gt;&lt;/canvas&gt;
-&lt;/body&gt;
-</pre>
+```html
+<body>
+  <canvas id="glCanvas" width="640" height="480"></canvas>
+</body>
+```
 
-<h3 id="Preparando_o_contexto_WebGL">Preparando o contexto WebGL</h3>
+### Preparando o contexto WebGL
 
-<p>A função <code>main()</code>  em nosso código JavaScript é chamada quando nosso script é carregado. O objetivo é configurar o contexto do WebGL e começar a renderizar o conteúdo.</p>
+A função `main()` em nosso código JavaScript é chamada quando nosso script é carregado. O objetivo é configurar o contexto do WebGL e começar a renderizar o conteúdo.
 
-<pre class="brush: js">main();
+```js
+main();
 
 //
 // começa aqui
@@ -45,27 +47,24 @@ function main() {
   // Limpa o buffer de cores com uma cor específica
   gl.clear(gl.COLOR_BUFFER_BIT);
 }
+```
 
-</pre>
+A primeira coisa que nós fazemos aqui é obter a referência para o canvas, atribuindo-a para a variável chamada `canvas`.
 
-<p>A primeira coisa que nós fazemos aqui é obter a referência para o canvas, atribuindo-a para a variável chamada <code>canvas</code>.</p>
+Uma vez que nós temos o canvas, nós tentamos obter um [WebGLRenderingContext](/pt-BR/docs/Web/API/WebGLRenderingContext) para ele chamando o [getContext](/pt-BR/docs/Web/API/HTMLCanvasElement/getContext) e passando a string `"webgl"`. Se o browser não suportar o webgl `getContext` vai retornar `null` nesse caso nós mostraremos uma mensagem para o usuário e sair.
 
-<p>Uma vez que nós temos o canvas, nós tentamos obter um <a href="/en-US/docs/Web/API/WebGLRenderingContext">WebGLRenderingContext</a> para ele chamando o <a href="/en-US/docs/Web/API/HTMLCanvasElement/getContext">getContext</a> e passando a string <code>"webgl"</code>. Se o browser não suportar o webgl <code>getContext</code> vai retornar <code>null</code> nesse caso nós mostraremos uma mensagem para o usuário e sair.</p>
+Se o contexto for inicializado com sucesso, a variável `gl` é nossa referência para ele. Nesse caso, nós altermos a cor para preto, e o contexto para aquela cor (redesenhando o canvas com a cor de fundo).
 
-<p>Se o contexto for inicializado com sucesso, a variável <code>gl</code> é nossa referência para ele. Nesse caso, nós altermos a cor para preto, e o contexto para aquela cor (redesenhando o canvas com a cor de fundo).</p>
+Nesse ponto, você tem código suficiente para o contexto WebGL ser inicializado com sucesso, e você deve visualizar uma grande caixa preta vazia, pronta e esperando para receber conteúdo.
 
-<p>Nesse ponto, você tem código suficiente para o contexto WebGL ser inicializado com sucesso, e você deve visualizar uma grande caixa preta vazia, pronta e esperando para receber conteúdo.</p>
+{{EmbedGHLiveSample('webgl-examples/tutorial/sample1/index.html', 670, 510) }}
 
-<p>{{EmbedGHLiveSample('webgl-examples/tutorial/sample1/index.html', 670, 510) }}</p>
+[Veja o código completo](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample1) | [Abra a demo em uma nova página](http://mdn.github.io/webgl-examples/tutorial/sample1/)
 
-<p><a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample1">Veja o código completo</a> | <a href="http://mdn.github.io/webgl-examples/tutorial/sample1/">Abra a demo em uma nova página</a></p>
+## Veja também
 
-<h2 id="Veja_também">Veja também</h2>
+- [Uma introdução ao WebGL](https://dev.opera.com/articles/introduction-to-webgl-part-1/): Escrito por Luz Caballero, publicado por dev.opera.com. Esse artigo direciona sobre o que o WebGL é, explicando como o WebGL funciona (incluindo o conceito de pipeline de renderização), e introduz algumas bibliotecas do WebGL.
+- [Fundamentos do WebGL](http://webglfundamentals.org/)
+- [Uma introdução para o OpenGL moderno:](http://duriansoftware.com/joe/An-intro-to-modern-OpenGL.-Table-of-Contents.html) Uma séroe de bons artigos sobre OpenGL escrita por Joe Groff, provendo uma introdução clara para o OpenGL a partir de sua história até os importantes conceitos de pipeline de gráficos, e também inclui alguns exemplos demonstrativos sobre como o OpenGL funciona. Se você não tem ideia do que seja OpenGL, esse é um bom lugar para começar.
 
-<ul>
- <li><a href="https://dev.opera.com/articles/introduction-to-webgl-part-1/">Uma introdução ao WebGL</a>: Escrito por Luz Caballero, publicado por dev.opera.com. Esse artigo direciona sobre o que o WebGL é, explicando como o WebGL funciona (incluindo o conceito de pipeline de renderização), e introduz algumas bibliotecas do WebGL.</li>
- <li><a href="http://webglfundamentals.org/">Fundamentos do WebGL</a></li>
- <li><a href="http://duriansoftware.com/joe/An-intro-to-modern-OpenGL.-Table-of-Contents.html">Uma introdução para o OpenGL moderno:</a> Uma séroe de bons artigos sobre OpenGL escrita por Joe Groff, provendo uma introdução clara para o OpenGL a partir de sua história até os importantes conceitos de pipeline de gráficos, e também inclui alguns exemplos demonstrativos sobre como o OpenGL funciona. Se você não tem ideia do que seja OpenGL, esse é um bom lugar para começar.</li>
-</ul>
-
-<p>{{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}</p>
+{{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}

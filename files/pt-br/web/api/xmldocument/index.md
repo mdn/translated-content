@@ -9,51 +9,32 @@ tags:
   - Interface
 translation_of: Web/API/XMLDocument
 ---
-<div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
-<p>A interface <strong>XMLDocument</strong> representa um document XML. Ele herda de {{DOMxRef("Document")}} e não adiciona nenhum método específico ou propriedades para este: no entanto, alguns algoritmos tem comportamento diferente com os dois tipos de documentos.</p>
+A interface **XMLDocument** representa um document XML. Ele herda de {{DOMxRef("Document")}} e não adiciona nenhum método específico ou propriedades para este: no entanto, alguns algoritmos tem comportamento diferente com os dois tipos de documentos.
 
-<h2 id="Propridades">Propridades</h2>
+## Propridades
 
-<p><em>Esta interface não tem e nem herda nenhuma propriedade específica.</em></p>
+_Esta interface não tem e nem herda nenhuma propriedade específica._
 
-<h2 id="Metodos">Metodos</h2>
+## Metodos
 
-<p><em>Esta interface não adiciona nenhum método novo.</em></p>
+_Esta interface não adiciona nenhum método novo._
 
-<dl>
- <dt>{{DOMxRef("XMLDocument.load()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}</dt>
- <dd>Carrega um documento XML</dd>
-</dl>
+- {{DOMxRef("XMLDocument.load()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Carrega um documento XML
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#xmldocument", "XMLDocument")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>Sem alterações.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#xmldocument", "XMLDocument")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td>Definição Inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                | Status                           | Comentário         |
+| ---------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName("DOM WHATWG", "#xmldocument", "XMLDocument")}} | {{Spec2("DOM WHATWG")}} | Sem alterações.    |
+| {{SpecName("DOM4", "#xmldocument", "XMLDocument")}}         | {{Spec2("DOM4")}}         | Definição Inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("api.XMLDocument")}}</p>
+{{Compat("api.XMLDocument")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">Indice de interfaces DOM</a></li>
-</ul>
+- [Indice de interfaces DOM](/pt-BR/docs/DOM/DOM_Reference)

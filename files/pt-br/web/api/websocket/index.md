@@ -7,13 +7,14 @@ tags:
   - WebSockets
 translation_of: Web/API/WebSocket
 ---
-<div>{{APIRef("Web Sockets API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Sockets API")}}{{SeeCompatTable}}
 
-<p>O objeto <code>WebSocket</code> provê uma API para criação e gerenciamento de uma conexão <a href="/en-US/docs/Web/API/WebSockets_API">WebSocket</a> com um servidor, bem como o envio e recebimento de dados através dessa conexão.</p>
+O objeto `WebSocket` provê uma API para criação e gerenciamento de uma conexão [WebSocket](/pt-BR/docs/Web/API/WebSockets_API) com um servidor, bem como o envio e recebimento de dados através dessa conexão.
 
-<p>O construtor do WebSocket aceita um parâmetro obrigatório e um opcional:</p>
+O construtor do WebSocket aceita um parâmetro obrigatório e um opcional:
 
-<pre class="syntaxbox">WebSocket WebSocket(
+```
+WebSocket WebSocket(
   in DOMString url,
   in optional DOMString protocols
 );
@@ -22,176 +23,87 @@ WebSocket WebSocket(
   in DOMString url,
   in optional DOMString[] protocols
 );
-</pre>
+```
 
-<dl>
- <dt><code>url</code></dt>
- <dd>A URL da devida conexão; esta deve ser a URL da qual o servidor WebSocket irá responder.</dd>
- <dt><code>protocols</code> {{optional_inline}}</dt>
- <dd>Um único protocolo em formato texto ou uma lista de textos de protocolo. Estes textos são usados para indicar sub-protocolos, assim então um único servidor pode implementar múltiplos sub-protocolos WebSocket (por exemplo, você pode querer um servidor capaz de manipular diferentes tipos de interações dependendo do protocolo especificado). se você não especificar um protocolo em texto, será assumido um texto vazio.</dd>
-</dl>
+- `url`
+  - : A URL da devida conexão; esta deve ser a URL da qual o servidor WebSocket irá responder.
+- `protocols` {{optional_inline}}
+  - : Um único protocolo em formato texto ou uma lista de textos de protocolo. Estes textos são usados para indicar sub-protocolos, assim então um único servidor pode implementar múltiplos sub-protocolos WebSocket (por exemplo, você pode querer um servidor capaz de manipular diferentes tipos de interações dependendo do protocolo especificado). se você não especificar um protocolo em texto, será assumido um texto vazio.
 
-<p>O construtor pode lançar exceções:</p>
+O construtor pode lançar exceções:
 
-<dl>
- <dt><code>SECURITY_ERR</code></dt>
- <dd>A porta a qual a conexão está sendo executada está bloqueada.</dd>
-</dl>
+- `SECURITY_ERR`
+  - : A porta a qual a conexão está sendo executada está bloqueada.
 
-<h2 id="Visão_Geral_do_método">Visão Geral do método</h2>
+## Visão Geral do método
 
-<table class="standard-table" style="color: #3b3c40; font-size: 14px; font-weight: normal;">
- <tbody>
-  <tr>
-   <td><code>void <a href="#close()">close</a>(É opcional: unsigned long code, É opcional: DOMString reason);</code></td>
-  </tr>
-  <tr>
-   <td><code>void <a href="#send()">send</a>(in DOMString data);</code></td>
-  </tr>
- </tbody>
-</table>
+| `void close(É opcional: unsigned long code, É opcional: DOMString reason);` |
+| --------------------------------------------------------------------------- |
+| `void send(in DOMString data);`                                             |
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Attributo</td>
-   <td class="header">Tipo</td>
-   <td class="header">Descrição</td>
-  </tr>
-  <tr>
-   <td><code>binaryType</code></td>
-   <td>{{DOMXref("DOMString")}}</td>
-   <td>
-    <p>Uma string indica o tipo de dado binário que está sendo transmitido pela conexão. Este deve ser tanto "blob" se o objeto DOM {{domxref("Blob")}} estiver sendo usado ou "arraybuffer" se os objetos {{jsxref("ArrayBuffer")}} estiver sendo usada</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>bufferedAmount</code></td>
-   <td><code>unsigned long</code></td>
-   <td>
-    <p>O número de bites de dados que tem sid consultado usando chamadas para <a href="#send">send</a> mas não ainda para a rede.Estes valor reseta para zero uma vez que todos os dados tem sido mandados.Este valor não reseta para zero quando a conexão está fechada, se você continuar chamando <a href="#send">send</a>, isto continuará escalando. <strong>Leitura online</strong></p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>extensions</code></td>
-   <td>{{DOMXref("DOMString")}}</td>
-   <td>As extensões selecionadas pelo servidor. Este é atualmente apenas a string vazia ou uma lista de extensões negociadas pela conexão.</td>
-  </tr>
-  <tr>
-   <td><code>onclose</code></td>
-   <td>{{domxref("EventListener")}}</td>
-   <td>Um event listener para ser chamado quando o <code> readyState </code> da conexão do WebSocket mudar para <code> CLOSED </code>. O listener recebe um <a href="/en-US/docs/Web/API/CloseEvent"><code>CloseEvent </code></a>"close".</td>
-  </tr>
-  <tr>
-   <td><code>onerror</code></td>
-   <td>{{domxref("EventListener")}}</td>
-   <td>Um event listener para ser chamado quando ocorrer um erro. Este é um evento simples chamado "erro".</td>
-  </tr>
-  <tr>
-   <td><code>onmessage</code></td>
-   <td>{{domxref("EventListener")}}</td>
-   <td>Um event listener para ser chamado quando uma mensagem é recebida do servidor. O listener recebe um <a href="/en-US/docs/Web/API/MessageEvent"><code>MessageEvent</code></a> "message".</td>
-  </tr>
-  <tr>
-   <td><code>onopen</code></td>
-   <td>{{domxref("EventListener")}}</td>
-   <td>Um event listener para ser chamado quando o <code> readyState </code> da conexão do WebSocket mudar para <code> OPEN </code>, isso indica que a conexão está pronta para enviar e receber dados. O evento é simples, com o nome "open".</td>
-  </tr>
-  <tr>
-   <td><code>protocol</code></td>
-   <td>{{DOMXref("DOMString")}}</td>
-   <td>Uma sequência de caracteres que indica o nome do sub-protocolo selecionado pelo servidor, este será um dos parâmetros especificados no <code>protocolo</code> ao criar o objeto WebSocket.</td>
-  </tr>
-  <tr>
-   <td><code>readyState</code></td>
-   <td><code>unsigned short</code></td>
-   <td>O estado atual da conexão, este é um dos <a href="#ready_state_constants">Ready state constants</a>. <strong>Apenas leitura.</strong></td>
-  </tr>
-  <tr>
-   <td><code>url</code></td>
-   <td>{{DOMXref("DOMString")}}</td>
-   <td>O URL resolvido pelo construtor. Este é sempre um URL absoluto. <strong>Apenas leitura.</strong></td>
-  </tr>
- </tbody>
-</table>
+| Attributo        | Tipo                                 | Descrição                                                                                                                                                                                                                                                                                                                                       |
+| ---------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `binaryType`     | {{DOMXref("DOMString")}}     | Uma string indica o tipo de dado binário que está sendo transmitido pela conexão. Este deve ser tanto "blob" se o objeto DOM {{domxref("Blob")}} estiver sendo usado ou "arraybuffer" se os objetos {{jsxref("ArrayBuffer")}} estiver sendo usada                                                                                   |
+| `bufferedAmount` | `unsigned long`                      | O número de bites de dados que tem sid consultado usando chamadas para [send](#send) mas não ainda para a rede.Estes valor reseta para zero uma vez que todos os dados tem sido mandados.Este valor não reseta para zero quando a conexão está fechada, se você continuar chamando [send](#send), isto continuará escalando. **Leitura online** |
+| `extensions`     | {{DOMXref("DOMString")}}     | As extensões selecionadas pelo servidor. Este é atualmente apenas a string vazia ou uma lista de extensões negociadas pela conexão.                                                                                                                                                                                                             |
+| `onclose`        | {{domxref("EventListener")}} | Um event listener para ser chamado quando o `readyState `da conexão do WebSocket mudar para `CLOSED `. O listener recebe um [`CloseEvent `](/pt-BR/docs/Web/API/CloseEvent)"close".                                                                                                                                                             |
+| `onerror`        | {{domxref("EventListener")}} | Um event listener para ser chamado quando ocorrer um erro. Este é um evento simples chamado "erro".                                                                                                                                                                                                                                             |
+| `onmessage`      | {{domxref("EventListener")}} | Um event listener para ser chamado quando uma mensagem é recebida do servidor. O listener recebe um [`MessageEvent`](/pt-BR/docs/Web/API/MessageEvent) "message".                                                                                                                                                                               |
+| `onopen`         | {{domxref("EventListener")}} | Um event listener para ser chamado quando o `readyState `da conexão do WebSocket mudar para `OPEN `, isso indica que a conexão está pronta para enviar e receber dados. O evento é simples, com o nome "open".                                                                                                                                  |
+| `protocol`       | {{DOMXref("DOMString")}}     | Uma sequência de caracteres que indica o nome do sub-protocolo selecionado pelo servidor, este será um dos parâmetros especificados no `protocolo` ao criar o objeto WebSocket.                                                                                                                                                                 |
+| `readyState`     | `unsigned short`                     | O estado atual da conexão, este é um dos [Ready state constants](#ready_state_constants). **Apenas leitura.**                                                                                                                                                                                                                                   |
+| `url`            | {{DOMXref("DOMString")}}     | O URL resolvido pelo construtor. Este é sempre um URL absoluto. **Apenas leitura.**                                                                                                                                                                                                                                                             |
 
-<h2 id="Constantes">Constantes</h2>
+## Constantes
 
-<h3 id="Estados_de_constantes_prontas">Estados de constantes prontas</h3>
+### Estados de constantes prontas
 
-<p>Essas constantes são usadas pelo atributo <code> readyState </code> para descrever o estado da conexão do WebSocket.</p>
+Essas constantes são usadas pelo atributo `readyState `para descrever o estado da conexão do WebSocket.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Constante</td>
-   <td class="header">Valor</td>
-   <td class="header">Descrição</td>
-  </tr>
-  <tr>
-   <td><code>CONNECTING</code></td>
-   <td><code>0</code></td>
-   <td>A conexão ainda não está aberta.</td>
-  </tr>
-  <tr>
-   <td><code>OPEN</code></td>
-   <td><code>1</code></td>
-   <td>A conexão está aberta e pronta para se comunicar.</td>
-  </tr>
-  <tr>
-   <td><code>CLOSING</code></td>
-   <td><code>2</code></td>
-   <td>A conexão está em processo de fechamento.</td>
-  </tr>
-  <tr>
-   <td><code>CLOSED</code></td>
-   <td><code>3</code></td>
-   <td>A conexão está fechada ou não foi possível abrir.</td>
-  </tr>
- </tbody>
-</table>
+| Constante    | Valor | Descrição                                         |
+| ------------ | ----- | ------------------------------------------------- |
+| `CONNECTING` | `0`   | A conexão ainda não está aberta.                  |
+| `OPEN`       | `1`   | A conexão está aberta e pronta para se comunicar. |
+| `CLOSING`    | `2`   | A conexão está em processo de fechamento.         |
+| `CLOSED`     | `3`   | A conexão está fechada ou não foi possível abrir. |
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<h3 id="close()">close()</h3>
+### close()
 
-<p>Fecha a conexão do WebSocket ou a tentativa de conexão, se houver. Se a conexão já for <code> CLOSED </code>, este método não faz nada.</p>
+Fecha a conexão do WebSocket ou a tentativa de conexão, se houver. Se a conexão já for `CLOSED `, este método não faz nada.
 
-<pre class="syntaxbox">void close(
+```
+void close(
   É opcional: unsigned short code,
   É opcional: DOMString reason
 );
-</pre>
+```
 
-<h4 id="Parametros">Parametros</h4>
+#### Parametros
 
-<dl>
- <dt><code>code</code> {{optional_inline}}</dt>
- <dd>Um valor numérico que indica o código de status explicando por que a conexão está sendo fechada. Se esse parâmetro não for especificado, é assumido um valor padrão de 1000 (indicando um fechamento "completo da transação"). Veja a <a href="/en-US/docs/Web/API/CloseEvent#Status_codes">lista de status de códigos</a> na <a href="/en-US/docs/Web/API/CloseEvent"><code>CloseEvent</code></a> página de valores permitidos.</dd>
- <dt><code>reason</code> {{optional_inline}}</dt>
- <dd>Uma string legível para humanos que explica por que a conexão está se fechando. Esta seqüência de caracteres não deve ter mais de 123 bytes de texto UTF-8 (<strong>não</strong> caracteres).</dd>
-</dl>
+- `code` {{optional_inline}}
+  - : Um valor numérico que indica o código de status explicando por que a conexão está sendo fechada. Se esse parâmetro não for especificado, é assumido um valor padrão de 1000 (indicando um fechamento "completo da transação"). Veja a [lista de status de códigos](/pt-BR/docs/Web/API/CloseEvent#Status_codes) na [`CloseEvent`](/pt-BR/docs/Web/API/CloseEvent) página de valores permitidos.
+- `reason` {{optional_inline}}
+  - : Uma string legível para humanos que explica por que a conexão está se fechando. Esta seqüência de caracteres não deve ter mais de 123 bytes de texto UTF-8 (**não** caracteres).
 
-<h4 id="Exceções_lançadas">Exceções lançadas</h4>
+#### Exceções lançadas
 
-<dl>
- <dt><code>INVALID_ACCESS_ERR</code></dt>
- <dd>Foi especificado um <code>código</code>inválido.</dd>
- <dt><code>SYNTAX_ERR</code></dt>
- <dd>A string <code> reason  é muito longa ou contém substitutos não comparados.</code></dd>
-</dl>
+- `INVALID_ACCESS_ERR`
+  - : Foi especificado um `código`inválido.
+- `SYNTAX_ERR`
+  - : A string `reason é muito longa ou contém substitutos não comparados.`
 
-<div class="note">
-<p><code><strong>Note:</strong> No Gecko, este método não suporta nenhum parâmetro antes do Gecko 8.0 {{geckoRelease("8.0")}}.</code></p>
-</div>
+> **Nota:** `Note: No Gecko, este método não suporta nenhum parâmetro antes do Gecko 8.0 {{geckoRelease("8.0")}}.`
 
-<h3 id="send()"><code>send()</code></h3>
+### `send()`
 
-<p><code>Transmite dados para o servidor através da conexão WebSocket.</code></p>
+`Transmite dados para o servidor através da conexão WebSocket.`
 
-<pre class="syntaxbox"><code>
+```
+
 void send(
   in DOMString data
 );
@@ -203,53 +115,34 @@ void send(
 void send(
   in Blob data
 );
-</code></pre>
+```
 
-<h4 id="Parametros_2"><code>Parametros</code></h4>
+#### `Parametros`
 
-<dl>
- <dt><code><code>data</code></code></dt>
- <dd><code>Uma sequência de texto para enviar para o servidor.</code></dd>
-</dl>
+- `data`
+  - : `Uma sequência de texto para enviar para o servidor.`
 
-<h4 id="Exceções_lançadas_2"><code>Exceções lançadas</code></h4>
+#### `Exceções lançadas`
 
-<dl>
- <dt><code><code>INVALID_STATE_ERR</code></code></dt>
- <dd><code>A conexão não está atualmente <code> OPEN </code>.</code></dd>
- <dt><code><code>SYNTAX_ERR</code></code></dt>
- <dd><code>Os dados são uma string que tem substituto não comparado.</code></dd>
-</dl>
+- `INVALID_STATE_ERR`
+  - : `A conexão não está atualmente OPEN .`
+- `SYNTAX_ERR`
+  - : `Os dados são uma string que tem substituto não comparado.`
 
-<div class="note">
-<p><code><strong>Nota:</strong> A implementação do método <code> send () </code> de Gecko difere um pouco da especificação em {{Gecko("6.0")}}. Gecko retorna um <code> boolean </code> indicando se a conexão ainda está aberta (por extensão, ou os dados estão em fila ou transmitidos com sucesso). Isso é corrigido em {{Gecko("8.0")}}.</code></p>
+> **Nota:** `Nota: A implementação do método send () de Gecko difere um pouco da especificação em {{Gecko("6.0")}}. Gecko retorna um boolean indicando se a conexão ainda está aberta (por extensão, ou os dados estão em fila ou transmitidos com sucesso). Isso é corrigido em {{Gecko("8.0")}}.`
+>
+> `A partir de {{Gecko("11.0")}}, o suporte para {{jsxref ("ArrayBuffer")}} está implementado, mas não {{domxref("Blob")}} tipos de dados.`
 
-<p><code>A partir de {{Gecko("11.0")}}, o suporte para {{jsxref ("ArrayBuffer")}} está implementado, mas não {{domxref("Blob")}} tipos de dados.</code></p>
-</div>
+## `Especificações`
 
-<h2 id="Especificações"><code>Especificações</code></h2>
+| `Especificações`                                                                           | `Status`                           | `Comentário`        |
+| ------------------------------------------------------------------------------------------ | ---------------------------------- | ------------------- |
+| `{{SpecName("Websockets", "#the-websocket-interface", "WebSocket")}}` | `{{Spec2("Websockets")}}` | `Definição inicial` |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th><code>Especificações</code></th>
-   <th><code>Status</code></th>
-   <th><code>Comentário</code></th>
-  </tr>
-  <tr>
-   <td><code>{{SpecName("Websockets", "#the-websocket-interface", "WebSocket")}}</code></td>
-   <td><code>{{Spec2("Websockets")}}</code></td>
-   <td><code>Definição inicial</code></td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Navegador_Compatível"><code>Navegador Compatível</code></h2>
+## `Navegador Compatível`
 
 {{Compat("api.WebSocket")}}
 
-<h2 id="Veja_também"><code>Veja também</code></h2>
+## `Veja também`
 
-<ul>
- <li><code><a href="/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications">Escrevendo aplicativos clientes do WebSocket</a></code></li>
-</ul>
+- [`Escrevendo aplicativos clientes do WebSocket`](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)

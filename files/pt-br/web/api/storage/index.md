@@ -12,42 +12,39 @@ tags:
   - data
 translation_of: Web/API/Storage
 ---
-<p>{{APIRef("Web Storage API")}}</p>
+{{APIRef("Web Storage API")}}
 
-<p>A interface de Armazenamento da Web Storage API fornece acesso ao armazenamento de sessão ou armazenamento local para um domínio específico, permitindo que você, por exemplo, adicione, modifique ou exclua itens de dados armazenados.</p>
+A interface de Armazenamento da Web Storage API fornece acesso ao armazenamento de sessão ou armazenamento local para um domínio específico, permitindo que você, por exemplo, adicione, modifique ou exclua itens de dados armazenados.
 
-<p>Se você quiser manipular o armazenamento de sessão para um domínio, você chama o método {{domxref ("Window.sessionStorage")}}; Se você quiser manipular o armazenamento local para um domínio, você chama {{domxref ("Window.localStorage")}}.</p>
+Se você quiser manipular o armazenamento de sessão para um domínio, você chama o método {{domxref ("Window.sessionStorage")}}; Se você quiser manipular o armazenamento local para um domínio, você chama {{domxref ("Window.localStorage")}}.
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<dl>
- <dt>{{domxref("Storage.length")}} {{readonlyInline}}</dt>
- <dd>Retorna um número inteiro que representa o número de itens de dados armazenados no objeto Storage.</dd>
-</dl>
+- {{domxref("Storage.length")}} {{readonlyInline}}
+  - : Retorna um número inteiro que representa o número de itens de dados armazenados no objeto Storage.
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<dl>
- <dt>{{domxref("Storage.key()")}}</dt>
- <dd>Quando passado um número n, este método retornará o nome da n-ésima chave no armazenamento..</dd>
-</dl>
+- {{domxref("Storage.key()")}}
+  - : Quando passado um número n, este método retornará o nome da n-ésima chave no armazenamento..
 
-<dl>
- <dt>{{domxref("Storage.getItem()")}}</dt>
- <dd>Quando passado um nome de chave, retornará o valor dessa chave.</dd>
- <dt>{{domxref("Storage.setItem()")}}</dt>
- <dd>Quando passado um nome de chave e valor, irá adicionar essa chave para o armazenamento, ou atualizar o valor dessa chave, se já existir.</dd>
- <dt>{{domxref("Storage.removeItem()")}}</dt>
- <dd>Quando passado um nome de chave, irá remover essa chave do armazenamento.</dd>
- <dt>{{domxref("Storage.clear()")}}</dt>
- <dd>Quando chamado, irá esvaziar todas as chaves fora do armazenamento.</dd>
-</dl>
+<!---->
 
-<h2 id="Exemplos">Exemplos</h2>
+- {{domxref("Storage.getItem()")}}
+  - : Quando passado um nome de chave, retornará o valor dessa chave.
+- {{domxref("Storage.setItem()")}}
+  - : Quando passado um nome de chave e valor, irá adicionar essa chave para o armazenamento, ou atualizar o valor dessa chave, se já existir.
+- {{domxref("Storage.removeItem()")}}
+  - : Quando passado um nome de chave, irá remover essa chave do armazenamento.
+- {{domxref("Storage.clear()")}}
+  - : Quando chamado, irá esvaziar todas as chaves fora do armazenamento.
 
-<p>Aqui acessamos um objeto Storage chamando localStorage. Primeiro testamos se o armazenamento local contém itens de dados usando! localStorage.getItem ('bgcolor'). Se isso acontecer, executaremos uma função chamada setStyles () que agarra os itens de dados usando {{domxref("localStorage.getItem()")}} E usa esses valores para atualizar estilos de página. Se não, executamos outra função, populateStorage (), que usa {{domxref("localStorage.setItem()")}} Para definir os valores do item, em seguida, executa setStyles ().</p>
+## Exemplos
 
-<pre class="brush: js">if(!localStorage.getItem('bgcolor')) {
+Aqui acessamos um objeto Storage chamando localStorage. Primeiro testamos se o armazenamento local contém itens de dados usando! localStorage.getItem ('bgcolor'). Se isso acontecer, executaremos uma função chamada setStyles () que agarra os itens de dados usando {{domxref("localStorage.getItem()")}} E usa esses valores para atualizar estilos de página. Se não, executamos outra função, populateStorage (), que usa {{domxref("localStorage.setItem()")}} Para definir os valores do item, em seguida, executa setStyles ().
+
+```js
+if(!localStorage.getItem('bgcolor')) {
   populateStorage();
 } else {
   setStyles();
@@ -73,43 +70,25 @@ function setStyles() {
   htmlElem.style.backgroundColor = '#' + currentColor;
   pElem.style.fontFamily = currentFont;
   imgElem.setAttribute('src', currentImage);
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Nota</strong>: Para ver isso funcionando como um exemplo completo de trabalho, consulte nossa <a href="https://github.com/mdn/web-storage-demo">Demonstração de armazenamento na Web</a>.</p>
-</div>
+> **Nota:** Para ver isso funcionando como um exemplo completo de trabalho, consulte nossa [Demonstração de armazenamento na Web](https://github.com/mdn/web-storage-demo).
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Storage', '#the-storage-interface', 'Storage')}}</td>
-   <td>{{Spec2('Web Storage')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                        | Estado                           | Comentário |
+| ------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| {{SpecName('Web Storage', '#the-storage-interface', 'Storage')}} | {{Spec2('Web Storage')}} |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p> </p>
+{{Compat("api.Storage")}}
 
-<p>{{Compat("api.Storage")}}</p>
+\[1] Desde o iOS 5.1, o Safari Mobile armazena os dados localStorage na pasta de cache, que está sujeita a limpeza ocasional a pedido do sistema operacional, normalmente se o espaço for curto.
 
-<p> </p>
+Todos os navegadores têm diferentes níveis de capacidade para o localStorage e sessionStorage. [Aqui está um resumo detalhado de todas as capacidades de armazenamento para vários navegadores](http://dev-test.nemikor.com/web-storage/support-test/).
 
-<div id="compat-desktop"> </div>
+## Veja também
 
-<p>[1] Desde o iOS 5.1, o Safari Mobile armazena os dados localStorage na pasta de cache, que está sujeita a limpeza ocasional a pedido do sistema operacional, normalmente se o espaço for curto.</p>
-
-<p>Todos os navegadores têm diferentes níveis de capacidade para o localStorage e sessionStorage. <a href="http://dev-test.nemikor.com/web-storage/support-test/">Aqui está um resumo detalhado de todas as capacidades de armazenamento para vários navegadores</a>.</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<p><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a></p>
+[Using the Web Storage API](/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

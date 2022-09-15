@@ -10,39 +10,36 @@ tags:
   - Referencia
 translation_of: Web/API/AbortSignal
 ---
-<div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
-<p>A interface <strong><code>AbortSignal</code></strong>  representa o sinal de um objeto que permite a você se comunicar com uma Requisição de DOM (como Fetch) e aborta-la se necessário via um objeto {{domxref("AbortController")}}</p>
+A interface **`AbortSignal`** representa o sinal de um objeto que permite a você se comunicar com uma Requisição de DOM (como Fetch) e aborta-la se necessário via um objeto {{domxref("AbortController")}}
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<p><em>A interface AbortSignal também herda propriedades de sua interface pai, {{domxref("EventTarget")}}.</em></p>
+_A interface AbortSignal também herda propriedades de sua interface pai, {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("AbortSignal.aborted")}} {{readonlyInline}}</dt>
- <dd>Um {{domxref("Boolean")}} que indica quando a(s) Request(s) com a qual o sinal está se comunicando está/estão abortadas(<code>true</code>) ou não(<code>false</code>).</dd>
-</dl>
+- {{domxref("AbortSignal.aborted")}} {{readonlyInline}}
+  - : Um {{domxref("Boolean")}} que indica quando a(s) Request(s) com a qual o sinal está se comunicando está/estão abortadas(`true`) ou não(`false`).
 
-<h3 id="Handlers_de_Eventos">Handlers de Eventos</h3>
+### Handlers de Eventos
 
-<dl>
- <dt>{{domxref("AbortSignal.onabort")}}</dt>
- <dd>Invocado quando um {{event("abort_(dom_abort_api)", "abort")}} evento dispara, ex: quando as requests do DOM que o sinal estão se comunicando são/estão abortadas.</dd>
-</dl>
+- {{domxref("AbortSignal.onabort")}}
+  - : Invocado quando um {{event("abort_(dom_abort_api)", "abort")}} evento dispara, ex: quando as requests do DOM que o sinal estão se comunicando são/estão abortadas.
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<p><em>A interface AbortSignal também herda métodos de sua interface pai, {{domxref("EventTarget")}}.</em></p>
+_A interface AbortSignal também herda métodos de sua interface pai, {{domxref("EventTarget")}}._
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>No exemplo de código a seguir, nós vamos focar em fazer download de um vídeo usando a <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>.</p>
+No exemplo de código a seguir, nós vamos focar em fazer download de um vídeo usando a [Fetch API](/pt-BR/docs/Web/API/Fetch_API).
 
-<p>Nós primeiro criaremos um controller usando o construtor do {{domxref("AbortController.AbortController","AbortController()")}}, e então pegar a referência de seu objeto {{domxref("AbortSignal")}} associado usando a propriedade {{domxref("AbortController.signal")}}.</p>
+Nós primeiro criaremos um controller usando o construtor do {{domxref("AbortController.AbortController","AbortController()")}}, e então pegar a referência de seu objeto {{domxref("AbortSignal")}} associado usando a propriedade {{domxref("AbortController.signal")}}.
 
-<p>Quando a <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">requisição Fetch</a> é iniciada, nós passamos o <code>AbortSignal</code>  como uma opção dentro do objeto de opções da request (veja <code>{signal}</code>, abaixo). Isso associa o sinal e o controller com a requisição fetch e nos permite aborta-la chamando {{domxref("AbortController.abort()")}}, como visto abaixo no segundo <code>event listener</code>.</p>
+Quando a [requisição Fetch](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/fetch) é iniciada, nós passamos o `AbortSignal` como uma opção dentro do objeto de opções da request (veja `{signal}`, abaixo). Isso associa o sinal e o controller com a requisição fetch e nos permite aborta-la chamando {{domxref("AbortController.abort()")}}, como visto abaixo no segundo `event listener`.
 
-<pre class="brush: js">var controller = new AbortController();
+```js
+var controller = new AbortController();
 var signal = controller.signal;
 
 var downloadBtn = document.querySelector('.download');
@@ -62,40 +59,24 @@ function fetchVideo() {
   }).catch(function(e) {
     reports.textContent = 'Download error: ' + e.message;
   })
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Nota</strong>: Quando <code>abort()</code> é chamado, a promessa do <code>fetch()</code> é rejeitada com um <code>AbortError</code>.</p>
-</div>
+> **Nota:** Quando `abort()` é chamado, a promessa do `fetch()` é rejeitada com um `AbortError`.
 
-<p>Você pode encontrar um exemplo completo no GitHub — veja <a href="https://github.com/mdn/dom-examples/tree/master/abort-api">abort-api</a> (<a href="https://mdn.github.io/dom-examples/abort-api/">see it running live also</a>).</p>
+Você pode encontrar um exemplo completo no GitHub — veja [abort-api](https://github.com/mdn/dom-examples/tree/master/abort-api) ([see it running live also](https://mdn.github.io/dom-examples/abort-api/)).
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#interface-AbortSignal', 'AbortSignal')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                            | Status                           | Comentário         |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('DOM WHATWG', '#interface-AbortSignal', 'AbortSignal')}} | {{Spec2('DOM WHATWG')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("api.AbortSignal")}}
 
+## Veja Também
 
-<p>{{Compat("api.AbortSignal")}}</p>
-
-<h2 id="Veja_Também">Veja Também</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
- <li><a href="https://developers.google.com/web/updates/2017/09/abortable-fetch">Abortable Fetch</a> by Jake Archibald</li>
-</ul>
+- [Fetch API](/pt-BR/docs/Web/API/Fetch_API)
+- [Abortable Fetch](https://developers.google.com/web/updates/2017/09/abortable-fetch) by Jake Archibald

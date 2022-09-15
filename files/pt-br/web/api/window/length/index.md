@@ -13,40 +13,30 @@ tags:
   - Window
 translation_of: Web/API/Window/length
 ---
-<div>{{ ApiRef() }}</div>
+{{ ApiRef() }}
 
-<h2 id="Summary" name="Summary">Resumo</h2>
+## Resumo
 
-<p>Retorna o número de frames (tanto elementos <code>frame</code> ou <code>iframe</code>) dentro da janela.</p>
+Retorna o número de frames (tanto elementos `frame` ou `iframe`) dentro da janela.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><em>quantidadeFrames</em> = window.length;
-</pre>
+```
+quantidadeFrames = window.length;
+```
 
-<ul>
- <li><em>quantidadeFrames</em> é o número de frames.</li>
-</ul>
+- _quantidadeFrames_ é o número de frames.
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<pre class="brush:js">if (window.length) {
+```js
+if (window.length) {
   // este é um documento com subframes
-}</pre>
+}
+```
 
-<h2 id="Specification" name="Specification">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','browsers.html#dom-length','Window.length')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                | Status                           | Comentário |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG','browsers.html#dom-length','Window.length')}} | {{Spec2('HTML WHATWG')}} |            |

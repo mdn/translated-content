@@ -9,58 +9,43 @@ tags:
   - Web Crypto API
 translation_of: Web/API/CryptoKey
 ---
-<p>{{APIRef("Web Crypto API")}}</p>
+{{APIRef("Web Crypto API")}}
 
-<p>A interface <strong><code>CryptoKey</code></strong> representa uma {{glossary("key")}} criptografada derivada de uma key de algoritmo definido.</p>
+A interface **`CryptoKey`** representa uma {{glossary("key")}} criptografada derivada de uma key de algoritmo definido.
 
-<p>Um objeto <strong><code>CryptoKey</code></strong> pode ser obtido utilizando {{domxref("SubtleCrypto.generateKey()")}}, {{domxref("SubtleCrypto.deriveKey()")}} ou {{domxref("SubtleCrypto.importKey()")}}</p>
+Um objeto **`CryptoKey`** pode ser obtido utilizando {{domxref("SubtleCrypto.generateKey()")}}, {{domxref("SubtleCrypto.deriveKey()")}} ou {{domxref("SubtleCrypto.importKey()")}}
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<p><em>Esta interface não herda nehunha propriedade.</em></p>
+_Esta interface não herda nehunha propriedade._
 
-<dl>
- <dt>{{domxref("CryptoKey.type")}}</dt>
- <dd>Retorna um valor enumerado representando o tipo da key, uma key secreta (para algoritmos simétricos), uma key pública ou privada (para algoritmos assimétricos).</dd>
- <dt>{{domxref("CryptoKey.extractable")}}</dt>
- <dd>Retorna um {{jsxref("Boolean")}} indicando se a informação bruta pode ser exportada para a aplicação ou não.</dd>
- <dt>{{domxref("CryptoKey.algorithm")}}</dt>
- <dd>Retorna um objeto opaco representando uma cifra em particular que deve ser utilizada com a key.</dd>
- <dt>{{domxref("CryptoKey.usages")}}</dt>
- <dd>Retorna uma matriz de valores enumerados indicando onde a key pode ser utilizada.</dd>
-</dl>
+- {{domxref("CryptoKey.type")}}
+  - : Retorna um valor enumerado representando o tipo da key, uma key secreta (para algoritmos simétricos), uma key pública ou privada (para algoritmos assimétricos).
+- {{domxref("CryptoKey.extractable")}}
+  - : Retorna um {{jsxref("Boolean")}} indicando se a informação bruta pode ser exportada para a aplicação ou não.
+- {{domxref("CryptoKey.algorithm")}}
+  - : Retorna um objeto opaco representando uma cifra em particular que deve ser utilizada com a key.
+- {{domxref("CryptoKey.usages")}}
+  - : Retorna uma matriz de valores enumerados indicando onde a key pode ser utilizada.
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<p><em>Esta interface não herda, nem implementa nenhum método.</em></p>
+_Esta interface não herda, nem implementa nenhum método._
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('Web Crypto API', '#dfn-CryptoKey', 'CryptoKey') }}</td>
-   <td>{{ Spec2('Web Crypto API') }}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                        | Status                                   | Comentário         |
+| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
+| {{ SpecName('Web Crypto API', '#dfn-CryptoKey', 'CryptoKey') }} | {{ Spec2('Web Crypto API') }} | Definição inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.CryptoKey")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("Crypto")}} e {{domxref("Crypto.subtle")}}.</li>
-</ul>
+- {{domxref("Crypto")}} e {{domxref("Crypto.subtle")}}.
 
-<h3 id="Dicionário">Dicionário:</h3>
+### Dicionário:
 
-<p>"Key" = "Chave"</p>
+"Key" = "Chave"

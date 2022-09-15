@@ -14,86 +14,63 @@ browser-compat:
   - api.PushEvent
   - api.PushMessageData
 ---
-<div>{{DefaultAPISidebar("Push API")}}{{SeeCompatTable}}</div>
+{{DefaultAPISidebar("Push API")}}{{SeeCompatTable}}
 
-<p>A <strong>API Push </strong>torna possível que aplicações web recebam mensagens enviadas a elas de um servidor, indepententemente de aplicação estar ou não em primeiro plano, ou até mesmo carregada, em um agente de usuário. Isso permite que desenvolvedores entreguem notificações e atualizações assíncronas a usuários que optarem por elas, resultando num melhor engajamento com conteúdo novo oportuno.</p>
+A **API Push** torna possível que aplicações web recebam mensagens enviadas a elas de um servidor, indepententemente de aplicação estar ou não em primeiro plano, ou até mesmo carregada, em um agente de usuário. Isso permite que desenvolvedores entreguem notificações e atualizações assíncronas a usuários que optarem por elas, resultando num melhor engajamento com conteúdo novo oportuno.
 
-<div class="note">
-<p><strong>Nota</strong>: Esta documentação cobre a especificação W3C da API Push; se você procura pela documentação do sistema de notificação proprietária do mecanismo push, veja<a href="/en-US/docs/Web/API/Simple_Push_API"> Simple Push</a>.</p>
-</div>
+> **Nota:** Esta documentação cobre a especificação W3C da API Push; se você procura pela documentação do sistema de notificação proprietária do mecanismo push, veja[ Simple Push](/pt-BR/docs/Web/API/Simple_Push_API).
 
-<h2 id="Conceitos_e_uso_de_Push">Conceitos e uso de Push</h2>
+## Conceitos e uso de Push
 
-<p>Para uma aplicação receber mensagens push, ela precisa ter um <a href="/en-US/docs/Web/API/ServiceWorker_API">service worker</a> ativo. Quando o service worker está ativo, ele pode se inscrever para utilizar notificações push {{domxref("PushManager.subscribe()")}}.</p>
+Para uma aplicação receber mensagens push, ela precisa ter um [service worker](/pt-BR/docs/Web/API/ServiceWorker_API) ativo. Quando o service worker está ativo, ele pode se inscrever para utilizar notificações push {{domxref("PushManager.subscribe()")}}.
 
-<p>O resultado de {{domxref("PushSubscription")}} inclui toda informação que a aplicação precisa para receber uma mensagem push: um endpoint e a chave encriptada necessária para o envio de dados.</p>
+O resultado de {{domxref("PushSubscription")}} inclui toda informação que a aplicação precisa para receber uma mensagem push: um endpoint e a chave encriptada necessária para o envio de dados.
 
-<p>O service worker será iniciado conforme o necessário para lidar com as mensagens recebidas, que são entregues ao manipulador de evento {{domxref("ServiceWorkerGlobalScope.onpush")}} . Isto permite que a aplicação reaja a cada mensagem recebida, por exemplo para exibir a notificação ao usuário (usando {{domxref("ServiceWorkerRegistration.showNotification()")}}.)</p>
+O service worker será iniciado conforme o necessário para lidar com as mensagens recebidas, que são entregues ao manipulador de evento {{domxref("ServiceWorkerGlobalScope.onpush")}} . Isto permite que a aplicação reaja a cada mensagem recebida, por exemplo para exibir a notificação ao usuário (usando {{domxref("ServiceWorkerRegistration.showNotification()")}}.)
 
-<p>Cada assinatura é única para um service worker.  O endpoint para a assinatura é uma <a href="http://www.w3.org/TR/capability-urls/">capability URL</a> única: o conhecimento do endpoint é tudo que é necessário para enviar uma mensagem para sua aplicação. A URL do endpoint precisa ser mantida em segredo, ou outras aplicações estranhas poderão enviar mensagens push para a sua aplicação.</p>
+Cada assinatura é única para um service worker. O endpoint para a assinatura é uma [capability URL](http://www.w3.org/TR/capability-urls/) única: o conhecimento do endpoint é tudo que é necessário para enviar uma mensagem para sua aplicação. A URL do endpoint precisa ser mantida em segredo, ou outras aplicações estranhas poderão enviar mensagens push para a sua aplicação.
 
-<p>A ativação de um service worker para entregar mensagens push pode resultar em um aumento de uso de recursos, particularmente de bateria. Diferentes navegadores tem diferentes formas para lidar com isso — atualmente não existe uma forma padrão. Firefox permite um número limitado (cota) de mensagens push para serem enviadas para uma aplicação, embora as mensagens Push que gerem notificações são isentas deste limite.  O limite é atualizado a cada site visitado. Numa comparação, Chrome não aplica nenhum limite, mas requer que cada mensagem push exiba uma notificação.</p>
+A ativação de um service worker para entregar mensagens push pode resultar em um aumento de uso de recursos, particularmente de bateria. Diferentes navegadores tem diferentes formas para lidar com isso — atualmente não existe uma forma padrão. Firefox permite um número limitado (cota) de mensagens push para serem enviadas para uma aplicação, embora as mensagens Push que gerem notificações são isentas deste limite. O limite é atualizado a cada site visitado. Numa comparação, Chrome não aplica nenhum limite, mas requer que cada mensagem push exiba uma notificação.
 
-<div class="note">
-<p><strong>Nota</strong>: A partir do Gecko 44, a cota permitida de mensagens push por aplicação não é incrementada quando uma nova notificação é disparada quando outra está visível, por um período de três segundos. Isso lida com casos em que várias notificações são recebidas ao mesmo tempo, mas nem todas estão visíveis.</p>
-</div>
+> **Nota:** A partir do Gecko 44, a cota permitida de mensagens push por aplicação não é incrementada quando uma nova notificação é disparada quando outra está visível, por um período de três segundos. Isso lida com casos em que várias notificações são recebidas ao mesmo tempo, mas nem todas estão visíveis.
 
-<div class="note">
-<p><strong>Nota</strong>: Chrome atualmente requer que você crie um projeto no <a href="https://developers.google.com/cloud-messaging/">Google Cloud Messaging</a> para enviar mensagens push e use um número do projeto e chave da API para o envio de notificações push. Isto também requer um <em>app manifest</em> com alguns parâmetros especiais para usar o serviço. Essa restrição deverá ser removida no futuro.</p>
-</div>
+> **Nota:** Chrome atualmente requer que você crie um projeto no [Google Cloud Messaging](https://developers.google.com/cloud-messaging/) para enviar mensagens push e use um número do projeto e chave da API para o envio de notificações push. Isto também requer um _app manifest_ com alguns parâmetros especiais para usar o serviço. Essa restrição deverá ser removida no futuro.
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
- <dt>{{domxref("PushEvent")}}</dt>
- <dd>Representa uma ação push enviada para o <a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope">global scope</a> de um {{domxref("ServiceWorker")}}. Ele contém informações enviadas de uma aplicação para um {{domxref("PushSubscription")}}.</dd>
- <dt>{{domxref("PushManager")}}</dt>
- <dd>Fornece uma forma de receber notificações de servidor third-party bem como solicitar URL para notificações push. Essa interface substitui a funcionalidade oferecida que está obsoleta {{domxref("PushRegistrationManager")}} interface.</dd>
- <dt>{{domxref("PushMessageData")}}</dt>
- <dd>Fornece acesso aos dados push enviados por um servidor, e inclui métodos para manipular os dados recebidos.</dd>
- <dt>{{domxref("PushSubscription")}}</dt>
- <dd>Fornece a URL de assinatura do endpoint e permite o cancelamento da assinatura de um serviço push.</dd>
-</dl>
+- {{domxref("PushEvent")}}
+  - : Representa uma ação push enviada para o [global scope](/pt-BR/docs/Web/API/ServiceWorkerGlobalScope) de um {{domxref("ServiceWorker")}}. Ele contém informações enviadas de uma aplicação para um {{domxref("PushSubscription")}}.
+- {{domxref("PushManager")}}
+  - : Fornece uma forma de receber notificações de servidor third-party bem como solicitar URL para notificações push. Essa interface substitui a funcionalidade oferecida que está obsoleta {{domxref("PushRegistrationManager")}} interface.
+- {{domxref("PushMessageData")}}
+  - : Fornece acesso aos dados push enviados por um servidor, e inclui métodos para manipular os dados recebidos.
+- {{domxref("PushSubscription")}}
+  - : Fornece a URL de assinatura do endpoint e permite o cancelamento da assinatura de um serviço push.
 
-<h2 id="Service_worker_additions">Service worker additions</h2>
+## Service worker additions
 
-<p>As seguintes informações adicionais para a <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a> foram especificadas na Push API spec, para fornecer um ponto de entrada para usar mensagens Push, e para monitorar e responder os eventos de envio e assinatura.</p>
+As seguintes informações adicionais para a [Service Worker API](/pt-BR/docs/Web/API/Service_Worker_API) foram especificadas na Push API spec, para fornecer um ponto de entrada para usar mensagens Push, e para monitorar e responder os eventos de envio e assinatura.
 
-<dl>
- <dt>{{domxref("ServiceWorkerRegistration.pushManager")}} {{readonlyinline}}</dt>
- <dd>Retorna uma referência para a interface {{domxref("PushManager")}} para administrar assinaturas push incluindo subscrever, obter uma assinatura ativa e acessar o status de permissão de envio. Este é o ponto de entrada para usar mensagens Push.</dd>
- <dt>{{domxref("ServiceWorkerGlobalScope.onpush")}}</dt>
- <dd>Um manipulador de eventos disparado sempre que um evento  {{Event("push")}} ocorre; isto é, sempre que uma mensagem do servidor de envio for recebida.</dd>
- <dt>{{domxref("ServiceWorkerGlobalScope.onpushsubscriptionchange")}}</dt>
- <dd>Um manipulador de eventos disparado sempre que um evento  {{Event("pushsubscriptionchange")}} ocorre; por exemplo, quando uma assinatura push está inválida, ou está prestes a ser invalidada (ex. quando um serviço push service define um tempo de expiração.)</dd>
-</dl>
+- {{domxref("ServiceWorkerRegistration.pushManager")}} {{readonlyinline}}
+  - : Retorna uma referência para a interface {{domxref("PushManager")}} para administrar assinaturas push incluindo subscrever, obter uma assinatura ativa e acessar o status de permissão de envio. Este é o ponto de entrada para usar mensagens Push.
+- {{domxref("ServiceWorkerGlobalScope.onpush")}}
+  - : Um manipulador de eventos disparado sempre que um evento {{Event("push")}} ocorre; isto é, sempre que uma mensagem do servidor de envio for recebida.
+- {{domxref("ServiceWorkerGlobalScope.onpushsubscriptionchange")}}
+  - : Um manipulador de eventos disparado sempre que um evento {{Event("pushsubscriptionchange")}} ocorre; por exemplo, quando uma assinatura push está inválida, ou está prestes a ser invalidada (ex. quando um serviço push service define um tempo de expiração.)
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Push API")}}</td>
-   <td>{{Spec2("Push API")}}</td>
-   <td>Definição Inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                    | Status                       | Comentário        |
+| -------------------------------- | ---------------------------- | ----------------- |
+| {{SpecName("Push API")}} | {{Spec2("Push API")}} | Definição Inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Push_API/Using_the_Push_API">Usando Push API</a></li>
- <li><a href="https://github.com/chrisdavidmills/push-api-demo">Push API Demo</a>, no Github</li>
- <li><a href="http://updates.html5rocks.com/2015/03/push-notificatons-on-the-open-web">Push Notifications on the Open Web</a>, Matt Gaunt</li>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a></li>
-</ul>
+- [Usando Push API](/pt-BR/docs/Web/API/Push_API/Using_the_Push_API)
+- [Push API Demo](https://github.com/chrisdavidmills/push-api-demo), no Github
+- [Push Notifications on the Open Web](http://updates.html5rocks.com/2015/03/push-notificatons-on-the-open-web), Matt Gaunt
+- [Service Worker API](/pt-BR/docs/Web/API/Service_Worker_API)

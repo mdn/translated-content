@@ -3,80 +3,64 @@ title: FileList
 slug: Web/API/FileList
 translation_of: Web/API/FileList
 ---
-<div>{{APIRef("File API")}}{{gecko_minversion_header("1.9")}}</div>
+{{APIRef("File API")}}{{gecko_minversion_header("1.9")}}
 
-<p>Um objeto desse tipo é retornado pela propriedade <code>files</code> do elemento HTML {{HTMLElement("input")}}; isso permite acessar a lista de arquivos selecionados com o elemento <code>&lt;input type="file"&gt;</code>. Também é usado para uma lista de arquivos soltos no conteúdo web usando a API drag and drop; consulte o objeto <a href="/en-US/docs/DragDrop/DataTransfer" title="DragDrop/DataTransfer"><code>DataTransfer</code></a> para detalhes de seu uso.</p>
+Um objeto desse tipo é retornado pela propriedade `files` do elemento HTML {{HTMLElement("input")}}; isso permite acessar a lista de arquivos selecionados com o elemento `<input type="file">`. Também é usado para uma lista de arquivos soltos no conteúdo web usando a API drag and drop; consulte o objeto [`DataTransfer`](/pt-BR/docs/DragDrop/DataTransfer "DragDrop/DataTransfer") para detalhes de seu uso.
 
-<div class="note">
-<p><strong>Nota:</strong> Antes do {{Gecko("1.9.2")}}, o elemento input suportava apenas um arquivo selecionado por vez, ou seja, o array FileList conteria apenas um arquivo. A partir do {{Gecko("1.9.2")}}, se o atributo multiple do elemento for definido, FileList pode conter múltiplos arquivos.</p>
-</div>
+> **Nota:** Antes do {{Gecko("1.9.2")}}, o elemento input suportava apenas um arquivo selecionado por vez, ou seja, o array FileList conteria apenas um arquivo. A partir do {{Gecko("1.9.2")}}, se o atributo multiple do elemento for definido, FileList pode conter múltiplos arquivos.
 
-<h2 id="Using_the_file_list" name="Using_the_file_list">Utilizando a lista de arquivos</h2>
+## Utilizando a lista de arquivos
 
-<p>Todo elemento <code>&lt;input&gt;</code> possui um array <code>files</code> que permite o acesso aos seus arquivos. Por exemplo, se o HTML inclui o seguinte elemento:</p>
+Todo elemento `<input>` possui um array `files` que permite o acesso aos seus arquivos. Por exemplo, se o HTML inclui o seguinte elemento:
 
-<pre>&lt;input id="fileItem" type="file"&gt;
-</pre>
+```
+<input id="fileItem" type="file">
+```
 
-<p>O código a seguir acessa o primeiro elemento da lista de arquivos como um objeto <a href="/en-US/docs/DOM/File" title="DOM/File"><code>File</code></a>:</p>
+O código a seguir acessa o primeiro elemento da lista de arquivos como um objeto [`File`](/pt-BR/docs/DOM/File "DOM/File"):
 
-<pre class="brush: js">var file = document.getElementById('fileItem').files[0];
-</pre>
+```js
+var file = document.getElementById('fileItem').files[0];
+```
 
-<h2 id="Method_overview" name="Method_overview">Visão geral dos métodos</h2>
+## Visão geral dos métodos
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td><code>File <a href="#item ()">item</a>(index);</code></td>
-  </tr>
- </tbody>
-</table>
+| `File item(index);` |
+| ------------------- |
 
-<h2 id="Attributes" name="Attributes">Propriedades</h2>
+## Propriedades
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Atributo</td>
-   <td class="header">Tipo</td>
-   <td class="header">Descrição</td>
-  </tr>
-  <tr>
-   <td><code>length</code></td>
-   <td><code>integer</code></td>
-   <td>Valor somente-leitura que indica o número de arquivos na lista.</td>
-  </tr>
- </tbody>
-</table>
+| Atributo | Tipo      | Descrição                                                       |
+| -------- | --------- | --------------------------------------------------------------- |
+| `length` | `integer` | Valor somente-leitura que indica o número de arquivos na lista. |
 
-<h2 id="Methods" name="Methods">Métodos</h2>
+## Métodos
 
-<h3 id="item()" name="item()">item()</h3>
+### item()
 
-<p>Retorna um objeto <a href="/en-US/docs/DOM/File" title="DOM/File"><code>File</code></a> representando o arquivo no índice especificado na lista.</p>
+Retorna um objeto [`File`](/pt-BR/docs/DOM/File "DOM/File") representando o arquivo no índice especificado na lista.
 
-<pre> File item(
+```
+ File item(
    index
  );
-</pre>
+```
 
-<h6 id="Parameters" name="Parameters">Parâmetros</h6>
+###### Parâmetros
 
-<dl>
- <dt><code>index</code></dt>
- <dd>O índice (baseado em zero) do arquivo a ser recuperado da lista.</dd>
-</dl>
+- `index`
+  - : O índice (baseado em zero) do arquivo a ser recuperado da lista.
 
-<h6 id="Return_value" name="Return_value">Valor de retorno</h6>
+###### Valor de retorno
 
-<p>O objeto <a href="/en-US/docs/DOM/File" title="DOM/File"><code>File</code></a> representando o arquivo requisitado.</p>
+O objeto [`File`](/pt-BR/docs/DOM/File "DOM/File") representando o arquivo requisitado.
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<p>Este exemplo itera por todos os arquivos selecionados pelo usuário em um elemento <code>input</code>:</p>
+Este exemplo itera por todos os arquivos selecionados pelo usuário em um elemento `input`:
 
-<pre class="brush:js">// fileInput é um elemento HTML input: &lt;input type="file" id="myfileinput" multiple&gt;
+```js
+// fileInput é um elemento HTML input: <input type="file" id="myfileinput" multiple>
 var fileInput = document.getElementById("myfileinput");
 
 // files é um objeto FileList (similar ao NodeList)
@@ -84,7 +68,7 @@ var files = fileInput.files;
 var file;
 
 // percorre os arquivos
-for (var i = 0; i &lt; files.length; i++) {
+for (var i = 0; i < files.length; i++) {
 
     // obtém o item
     file = files.item(i);
@@ -93,29 +77,30 @@ for (var i = 0; i &lt; files.length; i++) {
 
     alert(file.name);
 }
-</pre>
+```
 
-<p>A seguir, um exemplo completo.</p>
+A seguir, um exemplo completo.
 
-<pre class="brush:html">&lt;!DOCTYPE HTML&gt;
-&lt;html&gt;
+```html
+<!DOCTYPE HTML>
+<html>
 
-&lt;head&gt;
-&lt;/head&gt;
+<head>
+</head>
 
-&lt;body&gt;
-&lt;!--multiple é definido para que múltiplos arquivos possam ser selecionados--&gt;
+<body>
+<!--multiple é definido para que múltiplos arquivos possam ser selecionados-->
 
-&lt;input id="myfiles" multiple type="file"&gt;
+<input id="myfiles" multiple type="file">
 
-&lt;/body&gt;
+</body>
 
-&lt;script&gt;
+<script>
 var puxarArquivos = function() {
     var fileInput = document.querySelector("#myfiles");
     var files = fileInput.files;
 
-    for (var i = 0; i &lt; files.length; i++) {
+    for (var i = 0; i < files.length; i++) {
         var file = files[i];
         alert(file.name);
     }
@@ -123,12 +108,11 @@ var puxarArquivos = function() {
 
 // seta o 'onchange' do elemento input para chamar a função puxarArquivos
 document.querySelector("#myfiles").onchange = puxarArquivos;
-&lt;/script&gt;
+</script>
 
-&lt;/html&gt;</pre>
+</html>
+```
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<ul>
- <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/number-state.html#concept-input-type-file-selected">File upload state</a> (inglês)</li>
-</ul>
+- [File upload state](http://www.whatwg.org/specs/web-apps/current-work/multipage/number-state.html#concept-input-type-file-selected) (inglês)

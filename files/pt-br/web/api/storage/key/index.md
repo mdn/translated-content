@@ -3,68 +3,57 @@ title: Storage.key()
 slug: Web/API/Storage/key
 translation_of: Web/API/Storage/key
 ---
-<div>{{APIRef("Web Storage API")}}</div>
+{{APIRef("Web Storage API")}}
 
-<p>O método <strong><code>key()</code></strong> da interface {{domxref("Storage")}}, quando passado um número n, retorna o nome da n-ésima chave no dado objeto <code>Storage</code>. A ordem das chaves é definida pelo user-agent, então não deve-se confiar nela.</p>
+O método **`key()`** da interface {{domxref("Storage")}}, quando passado um número n, retorna o nome da n-ésima chave no dado objeto `Storage`. A ordem das chaves é definida pelo user-agent, então não deve-se confiar nela.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <em>aKeyName</em> = <em>storage</em>.key(<em>index</em>);</pre>
+```
+var aKeyName = storage.key(index);
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>index</code></dt>
- <dd>Um inteiro representando o número da chave que deseja obter. Esse é um índice que começa em zero.</dd>
-</dl>
+- `index`
+  - : Um inteiro representando o número da chave que deseja obter. Esse é um índice que começa em zero.
 
-<h3 id="Retorno">Retorno</h3>
+### Retorno
 
-<p>Uma {{domxref("DOMString")}} contendo o nome da chave. Se o index não existir, retornará <code>null</code>.</p>
+Uma {{domxref("DOMString")}} contendo o nome da chave. Se o index não existir, retornará `null`.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>A função a seguir itera sobre as chaves do armazenamento local:</p>
+A função a seguir itera sobre as chaves do armazenamento local:
 
-<pre class="brush: js">function forEachKey(callback) {
-  for (var i = 0; i &lt; localStorage.length; i++) {
+```js
+function forEachKey(callback) {
+  for (var i = 0; i < localStorage.length; i++) {
     callback(localStorage.key(i));
   }
-}</pre>
+}
+```
 
-<p>A função a seguir itera sobre as chaves do armazenamento local e obtém o valor de cada chave:</p>
+A função a seguir itera sobre as chaves do armazenamento local e obtém o valor de cada chave:
 
-<pre class="brush: js">for(var i =0; i &lt; localStorage.length; i++){
+```js
+for(var i =0; i < localStorage.length; i++){
   console.log(localStorage.getItem(localStorage.key(i)));
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Nota</strong>: Pra ver um exemplo real, consulte nossa <a href="https://mdn.github.io/dom-examples/web-storage/">Demonstração de armazenamento na Web</a>.</p>
-</div>
+> **Nota:** Pra ver um exemplo real, consulte nossa [Demonstração de armazenamento na Web](https://mdn.github.io/dom-examples/web-storage/).
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-key', 'Storage.key')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                            | Estado                           | Comentário |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-key', 'Storage.key')}} | {{Spec2('HTML WHATWG')}} |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("api.Storage.key")}}</p>
+{{Compat("api.Storage.key")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a></li>
-</ul>
+- [Using the Web Storage API](/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

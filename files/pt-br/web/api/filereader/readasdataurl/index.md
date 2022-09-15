@@ -9,33 +9,36 @@ tags:
   - Method
 translation_of: Web/API/FileReader/readAsDataURL
 ---
-<p>{{APIRef("File API")}}</p>
+{{APIRef("File API")}}
 
-<p>O método <code>readAsDataURL é usado para ler o conteúdo do tipo </code>{{domxref("Blob")}} ou {{domxref("File")}}.<br>
- Quando a operação de leitura acaba, a flag {{domxref("FileReader.readyState","readyState")}} muda para <strong>DONE</strong> e o evento {{event("loadend")}} é disparado.<br>
- Então o atributo {{domxref("FileReader.result","result")}} irá conter a URL codificada em base64 do arquivo.</p>
+O método `readAsDataURL é usado para ler o conteúdo do tipo `{{domxref("Blob")}} ou {{domxref("File")}}.
+Quando a operação de leitura acaba, a flag {{domxref("FileReader.readyState","readyState")}} muda para **DONE** e o evento {{event("loadend")}} é disparado.
+Então o atributo {{domxref("FileReader.result","result")}} irá conter a URL codificada em base64 do arquivo.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre><em>instanceOfFileReader</em>.readAsDataURL(blob);</pre>
+```
+instanceOfFileReader.readAsDataURL(blob);
+```
 
-<h3 id="Parametros">Parametros</h3>
+### Parametros
 
-<dl>
- <dt><code>blob</code></dt>
- <dd>O conteúdo do tipo {{domxref("Blob")}} ou {{domxref("File")}} que queremos ler.</dd>
-</dl>
+- `blob`
+  - : O conteúdo do tipo {{domxref("Blob")}} ou {{domxref("File")}} que queremos ler.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="syntaxbox">&lt;input type="file" onchange="previewFile()"&gt;&lt;br&gt;
-&lt;img src="" height="200" alt="Prévia da imagem..."&gt;</pre>
+```
+<input type="file" onchange="previewFile()"><br>
+<img src="" height="200" alt="Prévia da imagem...">
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="syntaxbox">function previewFile() {
+```
+function previewFile() {
   var preview = document.querySelector('img');
   var file    = document.querySelector('input[type=file]').files[0];
   var reader  = new FileReader();
@@ -49,22 +52,26 @@ translation_of: Web/API/FileReader/readAsDataURL
   } else {
     preview.src = "";
   }
-}</pre>
+}
+```
 
-<h3 id="Demo">Demo</h3>
+### Demo
 
-<p>{{EmbedLiveSample("Example", "100%", 240)}}</p>
+{{EmbedLiveSample("Example", "100%", 240)}}
 
-<h2 id="Exemplo_de_leitura_com_múltiplos_arquivos">Exemplo de leitura com múltiplos arquivos</h2>
+## Exemplo de leitura com múltiplos arquivos
 
-<h4 id="HTML_2"><strong>HTML</strong></h4>
+#### HTML
 
-<pre class="syntaxbox"><code>&lt;input id="browse" type="file" onchange="previewFiles()" multiple&gt;
-&lt;div id="preview"&gt;&lt;/div&gt;</code></pre>
+```
+<input id="browse" type="file" onchange="previewFiles()" multiple>
+<div id="preview"></div>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="syntaxbox"><code>function previewFiles() {
+```
+function previewFiles() {
 
   var preview = document.querySelector('#preview');
   var files   = document.querySelector('input[type=file]').files;
@@ -92,20 +99,19 @@ translation_of: Web/API/FileReader/readAsDataURL
     [].forEach.call(files, readAndPreview);
   }
 
-}</code></pre>
+}
+```
 
-<div class="note"><strong>Nota:</strong> O construtor do <a href="/en-US/docs/Web/API/FileReader"><code>FileReader()</code></a> não é suportado  por versões anteriores à 10 do Internet Explorer. Para uma maior compatibilidade você pode ver os exemplos <a class="internal" href="https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html" title="crossbrowser_image_preview.html">prévia de imagem básica</a> ou <a href="https://mdn.mozillademos.org/files/3698/image_upload_preview.html">prévia de imagem avançada</a>.</div>
+> **Nota:** O construtor do [`FileReader()`](/pt-BR/docs/Web/API/FileReader) não é suportado por versões anteriores à 10 do Internet Explorer. Para uma maior compatibilidade você pode ver os exemplos [prévia de imagem básica](https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html "crossbrowser_image_preview.html") ou [prévia de imagem avançada](https://mdn.mozillademos.org/files/3698/image_upload_preview.html).
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Especificações</h2>
+## Especificações
 
-<p>{{page("/pt-BR/docs/Web/API/FileReader","Specifications")}}</p>
+{{page("/pt-BR/docs/Web/API/FileReader","Specifications")}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade</h2>
+## Compatibilidade
 
-<p>{{page("/pt-BR/docs/Web/API/FileReader","Browser compatibility")}}</p>
+{{page("/pt-BR/docs/Web/API/FileReader","Browser compatibility")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("FileReader")}}</li>
-</ul>
+- {{domxref("FileReader")}}

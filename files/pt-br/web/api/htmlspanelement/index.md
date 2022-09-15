@@ -8,65 +8,34 @@ tags:
   - span
 translation_of: Web/API/HTMLSpanElement
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>A interface <strong><code><span class="external">HTMLSpanElement</span></code></strong> representa um elemento {{HTMLElement("span")}} e deriva de uma interface {{DOMxRef("HTMLElement")}}, mas sem implementar propriedades ou métodos adicionais.</p>
+A interface **`HTMLSpanElement`** representa um elemento {{HTMLElement("span")}} e deriva de uma interface {{DOMxRef("HTMLElement")}}, mas sem implementar propriedades ou métodos adicionais.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<p><em>Essa interface não possui propriedades, mas herda propriedades de: {{DOMxRef("HTMLElement")}}.</em></p>
+_Essa interface não possui propriedades, mas herda propriedades de: {{DOMxRef("HTMLElement")}}._
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<p><em>Essa interface não possui métodos, mas herda métodos de: {{DOMxRef("HTMLElement")}}.</em></p>
+_Essa interface não possui métodos, mas herda métodos de: {{DOMxRef("HTMLElement")}}._
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "text-level-semantics.html#htmlspanelement", "HTMLSpanElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.3', "textlevel-semantics.html#htmlspanelement", "HTMLSpanElement")}}</td>
-   <td>{{Spec2('HTML5.3')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.2', "textlevel-semantics.html#htmlspanelement", "HTMLSpanElement")}}</td>
-   <td>{{Spec2('HTML5.2')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "textlevel-semantics.html#htmlspanelement", "HTMLSpanElement")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "text-level-semantics.html#htmlspanelement", "HTMLSpanElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>A definição inicial, como {{HTMLElement("span")}} foi associada a um {{DOMxRef("HTMLElement")}}} antes disso.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                            | Status                           | Comentário                                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "text-level-semantics.html#htmlspanelement", "HTMLSpanElement")}} | {{Spec2('HTML WHATWG')}} |                                                                                                                                  |
+| {{SpecName('HTML5.3', "textlevel-semantics.html#htmlspanelement", "HTMLSpanElement")}}     | {{Spec2('HTML5.3')}}     |                                                                                                                                  |
+| {{SpecName('HTML5.2', "textlevel-semantics.html#htmlspanelement", "HTMLSpanElement")}}     | {{Spec2('HTML5.2')}}     |                                                                                                                                  |
+| {{SpecName('HTML5.1', "textlevel-semantics.html#htmlspanelement", "HTMLSpanElement")}}     | {{Spec2('HTML5.1')}}     |                                                                                                                                  |
+| {{SpecName('HTML5 W3C', "text-level-semantics.html#htmlspanelement", "HTMLSpanElement")}} | {{Spec2('HTML5 W3C')}}     | A definição inicial, como {{HTMLElement("span")}} foi associada a um {{DOMxRef("HTMLElement")}}} antes disso. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("api.HTMLSpanElement")}}
 
+## Veja também
 
-<p>{{Compat("api.HTMLSpanElement")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>O elemento HTML que implementa essa interface: {{HTMLElement("span")}}.</li>
-</ul>
+- O elemento HTML que implementa essa interface: {{HTMLElement("span")}}.

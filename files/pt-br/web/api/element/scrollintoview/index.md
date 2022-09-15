@@ -14,74 +14,68 @@ tags:
   - scrollIntoView
 translation_of: Web/API/Element/scrollIntoView
 ---
-<div>{{ APIRef("DOM")}}{{SeeCompatTable}}</div>
+{{ APIRef("DOM")}}{{SeeCompatTable}}
 
-<p>O método <code><strong>Element.scrollIntoView()</strong></code> move o elemento ao qual é aplicado para a área visível da janela do navegador.</p>
+O método **`Element.scrollIntoView()`** move o elemento ao qual é aplicado para a área visível da janela do navegador.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate">element.scrollIntoView(); // Equivalente a element.scrollIntoView(true)
-element.scrollIntoView(<var>alignToTop</var>); // Argumentos booleanos
-element.scrollIntoView(<var>scrollIntoViewOptions</var>); // argumento Objeto
-</pre>
+```
+element.scrollIntoView(); // Equivalente a element.scrollIntoView(true)
+element.scrollIntoView(alignToTop); // Argumentos booleanos
+element.scrollIntoView(scrollIntoViewOptions); // argumento Objeto
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>alignToTop</code> {{optional_inline}}</dt>
- <dd>É um valor {{jsxref("Boolean")}}:
- <ul>
-  <li>Se <code>true</code>, a parte superior do elemento ficará alinhada com o topo da área visível do elemento-pai. Correponde a <code>scrollIntoViewOptions: {block: "start", inline: "nearest"}</code>. Este é o valor default.</li>
-  <li><code><font face="Open Sans, Arial, sans-serif">Se </font>false</code>, a parte inferior do elemento ficará alinhada com o fundo da área visível do elemento-pai. Corresponde a <code>scrollIntoViewOptions: {block: "end", inline: "nearest"}</code></li>
- </ul>
- </dd>
- <dt><code>scrollIntoViewOptions</code> {{optional_inline}}</dt>
- <dd><p>Um booleano ou um objeto com as seguintes opções:</p>
- <pre class="idl notranslate">{
-  behavior: <strong>"auto"</strong>  | "instant" | "smooth",
-  block:    <strong>"start"</strong> | "center" | "end" | "nearest",
-  inline:   "start" | "center" | "end" | "<strong>nearest</strong>"
-}</pre>
- <p>Caso seja um valor booleano, true corresponde a <code>{block: "start"}</code> e false<font face="Consolas, Liberation Mono, Courier, monospace"> a</font> <code>{block: "end"}</code></p>.</dd>
-</dl>
+- `alignToTop` {{optional_inline}}
 
-<h2 id="Exemplo">Exemplo</h2>
+  - : É um valor {{jsxref("Boolean")}}:
 
-<pre class="brush: js notranslate">var element = document.getElementById("box");
+    - Se `true`, a parte superior do elemento ficará alinhada com o topo da área visível do elemento-pai. Correponde a `scrollIntoViewOptions: {block: "start", inline: "nearest"}`. Este é o valor default.
+    - `Se false`, a parte inferior do elemento ficará alinhada com o fundo da área visível do elemento-pai. Corresponde a `scrollIntoViewOptions: {block: "end", inline: "nearest"}`
+
+- `scrollIntoViewOptions` {{optional_inline}}
+
+  - : Um booleano ou um objeto com as seguintes opções:
+
+    ```idl
+    {
+      behavior: "auto"  | "instant" | "smooth",
+      block:    "start" | "center" | "end" | "nearest",
+      inline:   "start" | "center" | "end" | "nearest"
+    }
+    ```
+
+    Caso seja um valor booleano, true corresponde a `{block: "start"}` e false a `{block: "end"}`
+
+    .
+
+## Exemplo
+
+```js
+var element = document.getElementById("box");
 
 element.scrollIntoView();
 element.scrollIntoView(false);
 element.scrollIntoView({block: "end"});
 element.scrollIntoView({block: "end", behavior: "smooth"});
-</pre>
+```
 
-<h2 id="Observações">Observações</h2>
+## Observações
 
-<p>O elemento poderá não ser movido completamento ao topo ou ao fundo dependendo de sua composição com outros elementos.</p>
+O elemento poderá não ser movido completamento ao topo ou ao fundo dependendo de sua composição com outros elementos.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Especificação</th>
-   <th>Status</th>
-   <th>Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSSOM View", "#dom-element-scrollintoview", "Element.scrollIntoView()")}}</td>
-   <td>{{Spec2("CSSOM View")}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                    | Status                           | Comentário        |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
+| {{SpecName("CSSOM View", "#dom-element-scrollintoview", "Element.scrollIntoView()")}} | {{Spec2("CSSOM View")}} | Definição inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("api.Element.scrollIntoView")}}</p>
+{{Compat("api.Element.scrollIntoView")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("Element.scrollIntoViewIfNeeded()")}}<a href="/en-US/docs/Web/API/Element/scrollIntoViewIfNeeded"> </a>{{non-standard_inline}}</li>
-</ul>
+- {{domxref("Element.scrollIntoViewIfNeeded()")}}[ ](/pt-BR/docs/Web/API/Element/scrollIntoViewIfNeeded){{non-standard_inline}}

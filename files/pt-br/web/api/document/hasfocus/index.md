@@ -10,33 +10,32 @@ tags:
   - metodo
 translation_of: Web/API/Document/hasFocus
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}O método **`Document.hasFocus()`** retorna um valor {{jsxref("Boolean")}} que indica se o documento ou qualquer elemento dentro do documento está com o foco ativo. Este método pode ser usado para determinar se o elemento ativo em um documento tem foco.
 
-<div>O método <code><strong>Document.hasFocus()</strong></code> retorna um valor {{jsxref("Boolean")}} que indica se o documento ou qualquer elemento dentro do documento está com o foco ativo. Este método pode ser usado para determinar se o elemento ativo em um documento tem foco.</div>
+> **Nota:** Quando se está visualizando um documento, um elemento com focus é sempre o ativo no mesmo, mas um elemento ativo não necessariamente tem o foco. Por exemplo, um elemento ativo com uma janela (popup) que não é a principal não tem foco.
 
-<div class="note">
-<p>Quando se está visualizando um documento, um elemento com focus é sempre o ativo no mesmo, mas um elemento ativo não necessariamente tem o foco. Por exemplo, um elemento ativo com uma janela (popup) que não é a principal não tem foco.</p>
-</div>
+## Sintaxe
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+```
+focused = document.hasFocus();
+```
 
-<pre class="syntaxbox">focused = document.hasFocus();</pre>
+### Valor retornado
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+`false` se o elemento ativo no documento não tem foco; `true` se o elemento ativo no documento tem foco.
 
-<p><code>false</code> se o elemento ativo no documento não tem foco; <code>true</code> se o elemento ativo no documento tem foco.</p>
+## Exemplo
 
-<h2 id="Example" name="Example">Exemplo</h2>
-
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8" /&gt;
-&lt;title&gt;TEST&lt;/title&gt;
-&lt;style&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>TEST</title>
+<style>
 #message { font-weight: bold; }
-&lt;/style&gt;
-&lt;script&gt;
+</style>
+<script>
 setInterval( checkPageFocus, 200 );
 
 function checkPageFocus() {
@@ -59,42 +58,28 @@ function openWindow() {
     top=260"
   );
 }
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;Exemplo do JavaScript hasFocus&lt;/h1&gt;
-  &lt;div id="message"&gt;Esperando por ação do usuário&lt;/div&gt;
-  &lt;div&gt;&lt;button onclick="openWindow()"&gt;Abre uma nova janela&lt;/button&gt;&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</script>
+</head>
+<body>
+  <h1>Exemplo do JavaScript hasFocus</h1>
+  <div id="message">Esperando por ação do usuário</div>
+  <div><button onclick="openWindow()">Abre uma nova janela</button></div>
+</body>
+</html>
+```
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'interaction.html#dom-document-hasfocus', 'Document.hasFocus()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                | Estado                           | Comentário        |
+| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
+| {{SpecName('HTML WHATWG', 'interaction.html#dom-document-hasfocus', 'Document.hasFocus()')}} | {{Spec2('HTML WHATWG')}} | Definição inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Document.hasFocus")}}
 
-<h2 id="sect1"> </h2>
+##
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API">Usando a API de Page Visibility</a></li>
-</ul>
+- [Usando a API de Page Visibility](/pt-BR/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API)

@@ -7,100 +7,78 @@ tags:
   - eventos
 translation_of: Web/API/EventSource
 ---
-<p>{{APIRef("Websockets API")}}</p>
+{{APIRef("Websockets API")}}
 
-<p>A interface <code>EventSource</code> é usada para receber eventos enviados pelo servidor (<span class="seoSummary"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events">server-sent events</a></span>). Ele se conecta via HTTP em um servidor e recebe eventos com o formato <code>text/event-stream</code>. A conexão permanece aberta até ser fechada chamando {{domxref("EventSource.close()")}}.</p>
+A interface `EventSource` é usada para receber eventos enviados pelo servidor ([server-sent events](/pt-BR/docs/Web/API/Server-sent_events)). Ele se conecta via HTTP em um servidor e recebe eventos com o formato `text/event-stream`. A conexão permanece aberta até ser fechada chamando {{domxref("EventSource.close()")}}.
 
-<p>Assim que a conexão estiver aberta, mensagens recebidas do servidor são entregues para o seu código na forma de eventos {{event("message")}}.</p>
+Assim que a conexão estiver aberta, mensagens recebidas do servidor são entregues para o seu código na forma de eventos {{event("message")}}.
 
-<p>Ao contrário dos <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">WebSockets</a>, server-sent events são unidirecionais; ou seja, mensagens são entregues em uma direção, do servidor para o cliente (por exemplo, um navegador web). Isso torna-os uma excelente escolha quando não há necessidade de enviar mensagens do cliente para o servidor. Por exemplo, <code>EventSource</code> é uma abordagem útil para lidar com atualizações de status de mídias sociais, feeds de notícias, or entregar dados para um mecanismo de <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage">armazenamento do lado cliente </a>como o <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> ou o <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">web storage</a>.</p>
+Ao contrário dos [WebSockets](/pt-BR/docs/Web/API/WebSockets_API), server-sent events são unidirecionais; ou seja, mensagens são entregues em uma direção, do servidor para o cliente (por exemplo, um navegador web). Isso torna-os uma excelente escolha quando não há necessidade de enviar mensagens do cliente para o servidor. Por exemplo, `EventSource` é uma abordagem útil para lidar com atualizações de status de mídias sociais, feeds de notícias, or entregar dados para um mecanismo de [armazenamento do lado cliente ](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)como o [IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API) ou o [web storage](/pt-BR/docs/Web/API/Web_Storage_API).
 
-<h2 id="Method_overview" name="Method_overview">Construtor</h2>
+## Construtor
 
-<dl>
- <dt>{{domxref("EventSource.EventSource", "EventSource()")}}</dt>
- <dd>Cria um novo <code>EventSource</code> para receber enventos enviados pelo servidor de uma URL específica, opcionalmente no modo de credenciais.</dd>
-</dl>
+- {{domxref("EventSource.EventSource", "EventSource()")}}
+  - : Cria um novo `EventSource` para receber enventos enviados pelo servidor de uma URL específica, opcionalmente no modo de credenciais.
 
-<h2 id="Attributes" name="Attributes">Propriedades</h2>
+## Propriedades
 
-<p> </p>
+_Essa interface também herda propriedades do seu pai, {{domxref("EventTarget")}}._
 
-<p><em>Essa interface também herda propriedades do seu pai, {{domxref("EventTarget")}}.</em></p>
+- {{domxref("EventSource.readyState")}} {{readonlyinline}}
+  - : Um número representando o estado da conexão. Valores possíveis são `CONNECTING` (`0`), `OPEN` (`1`), ou `CLOSED` (`2`).
+- {{domxref("EventSource.url")}} {{readonlyinline}}
+  - : Uma {{domxref("DOMString")}} representando a URL da origem.
+- {{domxref("EventSource.withCredentials")}} {{readonlyinline}}
+  - : Um {{domxref("Boolean")}} indicando se a `EventSource` foi instanciada com credenciais cross-origin ([CORS](/pt-BR/docs/Web/HTTP/CORS)) definidas (`true`) ou não (`false`, o padrão).
+- ### Eventos
 
-<dl>
- <dt>{{domxref("EventSource.readyState")}} {{readonlyinline}}</dt>
- <dd>Um número representando o estado da conexão. Valores possíveis são <code>CONNECTING</code> (<code>0</code>), <code>OPEN</code> (<code>1</code>), ou <code>CLOSED</code> (<code>2</code>).</dd>
- <dt>{{domxref("EventSource.url")}} {{readonlyinline}}</dt>
- <dd>Uma {{domxref("DOMString")}} representando a URL da origem.</dd>
- <dt>{{domxref("EventSource.withCredentials")}} {{readonlyinline}}</dt>
- <dd>Um {{domxref("Boolean")}} indicando se a <code>EventSource</code> foi instanciada com credenciais cross-origin (<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">CORS</a>) definidas (<code>true</code>) ou não (<code>false</code>, o padrão).</dd>
- <dt>
- <h3 id="Eventos">Eventos</h3>
- </dt>
- <dt>{{domxref("EventSource.onerror")}}</dt>
- <dd>É um {{event("Event_handlers", "event handler")}} chamado quando um erro ocorre e o evento {{event("error")}} é despachado para o objeto <code>EventSource</code>.</dd>
- <dt>{{domxref("EventSource.onmessage")}}</dt>
- <dd>É um {{event("Event_handlers", "event handler")}} chamado quando um evento {{event("message")}} é recebido, ou seja, quando uma mensagem está sendo recebida da origem.</dd>
- <dt>{{domxref("EventSource.onopen")}}</dt>
- <dd>É um {{event("Event_handlers", "event handler")}} chamado quando um evento {{event("open")}} é recebido, ou seja, logo após a abertura da conexão.</dd>
-</dl>
+  {{domxref("EventSource.onerror")}}
 
-<h2 id="Methods" name="Methods">Métodos</h2>
+  - : É um {{event("Event_handlers", "event handler")}} chamado quando um erro ocorre e o evento {{event("error")}} é despachado para o objeto `EventSource`.
 
-<p><em>Essa interface herda métodos de seu pai, {{domxref("EventTarget")}}.</em></p>
+- {{domxref("EventSource.onmessage")}}
+  - : É um {{event("Event_handlers", "event handler")}} chamado quando um evento {{event("message")}} é recebido, ou seja, quando uma mensagem está sendo recebida da origem.
+- {{domxref("EventSource.onopen")}}
+  - : É um {{event("Event_handlers", "event handler")}} chamado quando um evento {{event("open")}} é recebido, ou seja, logo após a abertura da conexão.
 
-<dl>
- <dt>{{domxref("EventSource.close()")}}</dt>
- <dd>Fecha a conexão, se houver, e define o atributo <code>readyState</code> como <code>CLOSED</code>. Se a conexão já estiver fechada, esse método não faz nada.</dd>
-</dl>
+## Métodos
 
-<h2 id="Exemplos">Exemplos</h2>
+_Essa interface herda métodos de seu pai, {{domxref("EventTarget")}}._
 
-<p>Nesse exemplo básico, um <code>EventSource</code> é criado para receber eventos do servidor; a página com o nome <code>"sse.php"</code> é responsável por gerar os eventos.</p>
+- {{domxref("EventSource.close()")}}
+  - : Fecha a conexão, se houver, e define o atributo `readyState` como `CLOSED`. Se a conexão já estiver fechada, esse método não faz nada.
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> evtSource <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">EventSource</span><span class="punctuation token">(</span><span class="string token">'sse.php'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> eventList <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'ul'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+## Exemplos
 
-evtSource<span class="punctuation token">.</span>onmessage <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">var</span> newElement <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElement</span><span class="punctuation token">(</span><span class="string token">"li"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+Nesse exemplo básico, um `EventSource` é criado para receber eventos do servidor; a página com o nome `"sse.php"` é responsável por gerar os eventos.
 
-  newElement<span class="punctuation token">.</span>textContent <span class="operator token">=</span> <span class="string token">"message: "</span> <span class="operator token">+</span> e<span class="punctuation token">.</span>data<span class="punctuation token">;</span>
-  eventList<span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span>newElement<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+```js
+var evtSource = new EventSource('sse.php');
+var eventList = document.querySelector('ul');
 
-<p>Cada evento recebido faz com que o handler do evento <code>onmessage</code> no objeto <code>EventSource</code> seja executado. Ele, em contrapartida, cria um novo elemento {{HTMLElement("li")}} e escreve os dados da mensagem nele, e em seguida concatena o novo elemento na lista já presente no documento.</p>
+evtSource.onmessage = function(e) {
+  var newElement = document.createElement("li");
 
-<div class="note">
-<p><strong>Nota</strong>: Você pode encontrar um exemplo completo no GitHub — veja <a href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">Simple SSE demo using PHP.</a></p>
-</div>
+  newElement.textContent = "message: " + e.data;
+  eventList.appendChild(newElement);
+}
+```
 
-<h2 id="Especificações">Especificações</h2>
+Cada evento recebido faz com que o handler do evento `onmessage` no objeto `EventSource` seja executado. Ele, em contrapartida, cria um novo elemento {{HTMLElement("li")}} e escreve os dados da mensagem nele, e em seguida concatena o novo elemento na lista já presente no documento.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "comms.html#the-eventsource-interface", "EventSource")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+> **Nota:** Você pode encontrar um exemplo completo no GitHub — veja [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Especificações
+
+| Especificação                                                                                                | Status                           | Comentário |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', "comms.html#the-eventsource-interface", "EventSource")}} | {{Spec2('HTML WHATWG')}} |            |
+
+## Compatibilidade com navegadores
 
 {{Compat("api.EventSource")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events">Server-sent events</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events" title="en/Server-sent events/Using server-sent events">Usando server-sent events</a></li>
-</ul>
-
-<p> </p>
+- [Server-sent events](/pt-BR/docs/Web/API/Server-sent_events)
+- [Usando server-sent events](/pt-BR/docs/Web/API/Server-sent_events/Using_server-sent_events "en/Server-sent events/Using server-sent events")

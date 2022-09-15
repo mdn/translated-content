@@ -11,43 +11,27 @@ tags:
   - stopImmediatePropagation
 translation_of: Web/API/Event/stopImmediatePropagation
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Evita que outros <em>listeners</em> escutem o evento.</p>
+Evita que outros _listeners_ escutem o evento.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="eval"><em>event</em>.stopImmediatePropagation();
-</pre>
+```
+event.stopImmediatePropagation();
+```
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>No caso de um evento onde vários <em>listeners </em>o estão escutando, os mesmos são disparados na ordem em que foram adicionados. Porém, se durante uma chamada (ou disparo), <code>event.stopImmediatePropagation()</code> for chamado, os demais <em>listeners</em> não serão disparados.</p>
+No caso de um evento onde vários _listeners_ o estão escutando, os mesmos são disparados na ordem em que foram adicionados. Porém, se durante uma chamada (ou disparo), `event.stopImmediatePropagation()` for chamado, os demais _listeners_ não serão disparados.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentários</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-event-stopimmediatepropagation', 'Event.stopImmediatePropagation()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM4', '#dom-event-stopimmediatepropagation', 'Event.stopImmediatePropagation()')}}</td>
-   <td>{{Spec2('DOM4')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                            | Status                           | Comentários        |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('DOM WHATWG', '#dom-event-stopimmediatepropagation', 'Event.stopImmediatePropagation()')}} | {{Spec2('DOM WHATWG')}} |                    |
+| {{SpecName('DOM4', '#dom-event-stopimmediatepropagation', 'Event.stopImmediatePropagation()')}}         | {{Spec2('DOM4')}}         | Initial definition |
 
-<h2 id="Compatibilidade">Compatibilidade</h2>
+## Compatibilidade
 
 {{Compat("api.Event.stopImmediatePropagation")}}

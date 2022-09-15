@@ -13,75 +13,72 @@ tags:
   - id
 translation_of: Web/API/Document/getElementById
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+## Sumário
 
-<p>Retorna a referência do elemento através do seu ID.</p>
+Retorna a referência do elemento através do seu ID.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="eval">var elemento = document.getElementById(id);
-</pre>
+```
+var elemento = document.getElementById(id);
+```
 
-<p>onde</p>
+onde
 
-<ul>
- <li><code>elemento</code> é uma referência a um objeto {{domxref("Element")}}, ou null se um elemento com o ID especificado não estiver contido neste documento.</li>
- <li><code>id</code> é uma string que diferência maiúsculas e minúsculas representando o ID único do elemento sendo procurado.</li>
-</ul>
+- `elemento` é uma referência a um objeto {{domxref("Element")}}, ou null se um elemento com o ID especificado não estiver contido neste documento.
+- `id` é uma string que diferência maiúsculas e minúsculas representando o ID único do elemento sendo procurado.
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Exemplo getElementById&lt;/title&gt;
-  &lt;script&gt;
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exemplo getElementById</title>
+  <script>
   function mudarCor(novaCor) {
     var elemento = document.getElementById("para1");
     elemento.style.color = novaCor;
   }
-  &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p id="para1"&gt;Algum texto de exemplo&lt;/p&gt;
-  &lt;button onclick="mudarCor('blue');"&gt;Azul&lt;/button&gt;
-  &lt;button onclick="mudarCor('red');"&gt;Vermelho&lt;/button&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </script>
+</head>
+<body>
+  <p id="para1">Algum texto de exemplo</p>
+  <button onclick="mudarCor('blue');">Azul</button>
+  <button onclick="mudarCor('red');">Vermelho</button>
+</body>
+</html>
+```
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p>Os novatos devem notar que a caixa de 'Id' no nome deste método <em>deve</em> estar correta para o código da função - 'getElementByID <em>não funciona</em>, por mais natural que possa parecer.</p>
+Os novatos devem notar que a caixa de 'Id' no nome deste método _deve_ estar correta para o código da função - 'getElementByID _não funciona_, por mais natural que possa parecer.
 
-<p>Se não existe um elemento com o id fornecido, esta função retorna <code>null</code>. Note que o parâmetro ID diferência maiúsculas e minúsculas. Assim document.getElementById("Main") retornará <code>null</code> ao invés do elemento <code>&lt;div id="<strong>m</strong>ain"&gt;,</code> devido a "M" e "m" serem diferentes para o objetivo deste método.</p>
+Se não existe um elemento com o id fornecido, esta função retorna `null`. Note que o parâmetro ID diferência maiúsculas e minúsculas. Assim document.getElementById("Main") retornará `null` ao invés do elemento `<div id="main">,` devido a "M" e "m" serem diferentes para o objetivo deste método.
 
-<p><strong>Elementos que não estão no documento</strong> não são procurados por <code>getElementById</code>. Quando criar um elemento e atribuir um ID ao mesmo, você deve inserir o elemento na árvore do documento com <code><a href="/en-US/docs/DOM/Node.insertBefore" title="en-US/docs/DOM/Node.insertBefore">insertBefore</a></code> ou método similar antes que você possa acessá-lo com <code>getElementById</code>:</p>
+**Elementos que não estão no documento** não são procurados por `getElementById`. Quando criar um elemento e atribuir um ID ao mesmo, você deve inserir o elemento na árvore do documento com [`insertBefore`](/en-US/docs/DOM/Node.insertBefore "en-US/docs/DOM/Node.insertBefore") ou método similar antes que você possa acessá-lo com `getElementById`:
 
-<pre class="brush: js">var elemento = document.createElement("div");
+```js
+var elemento = document.createElement("div");
 elemento.id = 'testqq';
 var el = document.getElementById('testqq'); // el será null!
-</pre>
+```
 
-<p><strong>Documentos não-HTML.</strong> A implementação do DOM deve ter informações que diz quais atributos são do tipo ID.  Atributos com o nome "id" não são do tipo ID a menos que assim sejam definidos nos documentos DTD. O atributo <code>id</code> é definido para ser um tipo ID em casos comuns de  <a href="/en-US/docs/XHTML" title="en-US/docs/XHTML">XHTML</a>, <a href="/en-US/docs/XUL" title="en-US/docs/XUL">XUL</a>, e outros. Implementações que não reconhecem se os atributos são do tipo ID, ou não são esperados retornam <code>null</code>.</p>
+**Documentos não-HTML.** A implementação do DOM deve ter informações que diz quais atributos são do tipo ID. Atributos com o nome "id" não são do tipo ID a menos que assim sejam definidos nos documentos DTD. O atributo `id` é definido para ser um tipo ID em casos comuns de [XHTML](/pt-BR/docs/XHTML "en-US/docs/XHTML"), [XUL](/pt-BR/docs/XUL "en-US/docs/XUL"), e outros. Implementações que não reconhecem se os atributos são do tipo ID, ou não são esperados retornam `null`.
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidade do Navegador</h2>
+## Compatibilidade do Navegador
 
 {{Compat("api.Document.getElementById")}}
 
-<h2 id="Specification" name="Specification">Especificações</h2>
+## Especificações
 
-<p><code>getElementById</code> foi introduzido no DOM Level 1 para documentos HTML e movidos para todos documentos no DOM Level 2</p>
+`getElementById` foi introduzido no DOM Level 1 para documentos HTML e movidos para todos documentos no DOM Level 2
 
-<ul>
- <li>Especificação núcleo DOM Level 2: <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getElBId">getElementById</a></li>
-</ul>
+- Especificação núcleo DOM Level 2: [getElementById](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getElBId)
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>referências de <a href="/en-US/docs/DOM/document" title="en-US/docs/DOM/document">document</a> para outros métodos e propriedades podem ser usados para obter referências para elementos no documento.</li>
- <li><a href="/en-US/docs/xml/xml:id" title="en-US/docs/xml/id">xml:id</a> -  tem um método utilitário que permite que obtenha 'xml:id' em documentos XML</li>
-</ul>
+- referências de [document](/pt-BR/docs/DOM/document "en-US/docs/DOM/document") para outros métodos e propriedades podem ser usados para obter referências para elementos no documento.
+- [xml:id](/pt-BR/docs/xml/xml:id "en-US/docs/xml/id") - tem um método utilitário que permite que obtenha 'xml:id' em documentos XML

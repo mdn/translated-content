@@ -8,54 +8,45 @@ translation_of: Web/API/SVGAElement/target
 translation_of_original: Web/API/SVGAElement/SVGAlement.target
 original_slug: Web/API/SVGAElement/SVGAlement.target
 ---
-<p>{{APIRef("SVGAElement")}}</p>
+{{APIRef("SVGAElement")}}
 
-<p>O <code><strong>SVGAElement.target</strong></code> propriedade somente ler de {{domxref("SVGAElement")}} retorna um objeto {{domxref("SVGAnimatedString")}} que especifica a porção de um alvo sendo ele "window", "frame" ou "pane" no qual um documento será aberto quando o link for acionado.</p>
+O **`SVGAElement.target`** propriedade somente ler de {{domxref("SVGAElement")}} retorna um objeto {{domxref("SVGAnimatedString")}} que especifica a porção de um alvo sendo ele "window", "frame" ou "pane" no qual um documento será aberto quando o link for acionado.
 
-<p>Esta propriedade é usada quando existem dois ou mais possiveis alvos(destinos) para o documento, por exemplo, quando o documento pai é um arquivo .html ou .xhtml com varias telas (multi-frame).</p>
+Esta propriedade é usada quando existem dois ou mais possiveis alvos(destinos) para o documento, por exemplo, quando o documento pai é um arquivo .html ou .xhtml com varias telas (multi-frame).
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre><code><em>myLink</em>.target = '<em>value</em>';</code></pre>
+```
+myLink.target = 'value';
+```
 
-<h3 id="Valor">Valor</h3>
+### Valor
 
-<p>Um {{domxref("SVGAnimatedString")}} indica o destino final do recurso que abre o documento assim que o link é acionado.</p>
+Um {{domxref("SVGAnimatedString")}} indica o destino final do recurso que abre o documento assim que o link é acionado.
 
-<p>Valores para {{domxref("target")}} você pode ver <a href="https://www.w3.org/TR/2011/REC-SVG11-20110816/linking.html#AElementTargetAttribute">aqui</a>.</p>
+Valores para {{domxref("target")}} você pode ver [aqui](https://www.w3.org/TR/2011/REC-SVG11-20110816/linking.html#AElementTargetAttribute).
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>O código é foi retirado de <a href="/en-US/docs/Web/API/SVGAElement#Example">"SVGAElement example code"</a></p>
+O código é foi retirado de ["SVGAElement example code"](/pt-BR/docs/Web/API/SVGAElement#Example)
 
-<pre class="brush: js">...
+```js
+...
 var linkRef = document.querySelector('a');
 linkRef.target ='_blank';
-...</pre>
+...
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td>Specification</td>
-   <td>Status</td>
-   <td>Comment</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'text.html#InterfaceSVGAElement', 'target')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                   | Comment |
+| ---------------------------------------------------------------------------------------- | ------------------------ | ------- |
+| {{SpecName('SVG1.1', 'text.html#InterfaceSVGAElement', 'target')}} | {{Spec2('SVG1.1')}} |         |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade com o navegador</h2>
+## Compatibilidade com o navegador
 
 {{Compat("api.SVGAElement.target")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{ SVGAttr("target") }}</li>
-</ul>
+- {{ SVGAttr("target") }}

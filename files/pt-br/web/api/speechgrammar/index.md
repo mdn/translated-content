@@ -12,31 +12,28 @@ tags:
   - reconhecimento
 translation_of: Web/API/SpeechGrammar
 ---
-<p>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>A interface <strong><code>SpeechGrammar</code></strong> da <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a> representa um conjunto de palavras ou padrões de palavras, os quais, nós queremos que o serviço de reconhecimento reconheça.</p>
+A interface **`SpeechGrammar`** da [Web Speech API](/pt-BR/docs/Web/API/Web_Speech_API) representa um conjunto de palavras ou padrões de palavras, os quais, nós queremos que o serviço de reconhecimento reconheça.
 
-<p>A gramática é definida usando <a class="external external-icon" href="http://www.w3.org/TR/jsgf/">JSpeech Grammar Format</a> (<strong>JSGF</strong>.) Outros formatos podem ser suportados no futuro.</p>
+A gramática é definida usando [JSpeech Grammar Format](http://www.w3.org/TR/jsgf/) (**JSGF**.) Outros formatos podem ser suportados no futuro.
 
-<h2 id="Construtor">Construtor</h2>
+## Construtor
 
-<dl>
- <dt>{{domxref("SpeechGrammar.SpeechGrammar()")}}</dt>
- <dd>Cria um novo objeto <code>SpeechGrammar</code>.</dd>
-</dl>
+- {{domxref("SpeechGrammar.SpeechGrammar()")}}
+  - : Cria um novo objeto `SpeechGrammar`.
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<dl>
- <dt>{{domxref("SpeechGrammar.src")}}</dt>
- <dd>Define e retorna a string contendo a gramática contida na instância do objeto <code>SpeechGrammar</code>.</dd>
- <dt>{{domxref("SpeechGrammar.weight")}} {{optional_inline}}</dt>
- <dd>Define e retorna o peso do objeto <code>SpeechGrammar</code>.</dd>
-</dl>
+- {{domxref("SpeechGrammar.src")}}
+  - : Define e retorna a string contendo a gramática contida na instância do objeto `SpeechGrammar`.
+- {{domxref("SpeechGrammar.weight")}} {{optional_inline}}
+  - : Define e retorna o peso do objeto `SpeechGrammar`.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: js">var grammar = '#JSGF V1.0; grammar colors; public &lt;color&gt; = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
+```js
+var grammar = '#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
 var recognition = new SpeechRecognition();
 var speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);
@@ -45,35 +42,18 @@ recognition.grammars = speechRecognitionList;
 
 console.log(speechRecognitionList[0].src); // deveria retornar o mesmo conteúdo da variável grammar
 console.log(speechRecognitionList[0].weight); // deveria retornar 1 - o mesmo peso definido na linha 4.
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Speech API', '#speechreco-speechgrammar', 'SpeechGrammar')}}</td>
-   <td>{{Spec2('Web Speech API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                               | Comment |
+| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
+| {{SpecName('Web Speech API', '#speechreco-speechgrammar', 'SpeechGrammar')}} | {{Spec2('Web Speech API')}} |         |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
+{{Compat("api.SpeechGrammar")}}
 
+## Veja também
 
-<p>{{Compat("api.SpeechGrammar")}}</p>
-</div>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/pt-BR/docs/Web/API/Web_Speech_API)

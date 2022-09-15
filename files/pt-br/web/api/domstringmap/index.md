@@ -3,89 +3,71 @@ title: DOMStringMap
 slug: Web/API/DOMStringMap
 translation_of: Web/API/DOMStringMap
 ---
-<p>{{ APIRef("HTML DOM") }}</p>
+{{ APIRef("HTML DOM") }}
 
-<p>Usado pelo atributo HTML {{ htmlattrxref("dataset") }} para representar atributos próprios adicionados ao elemento.</p>
+Usado pelo atributo HTML {{ htmlattrxref("dataset") }} para representar atributos próprios adicionados ao elemento.
 
-<h2 id="Method_overview" name="Method_overview">Visão Geral do Método</h2>
+## Visão Geral do Método
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td><code>DOMString <a href="#getDataAttr()">getDataAttr</a>(in DOMString prop);</code></td>
-  </tr>
-  <tr>
-   <td><code>boolean <a href="#hasDataAttr()">hasDataAttr</a>(in DOMString prop);</code></td>
-  </tr>
-  <tr>
-   <td><code>void <a href="#removeDataAttr()">removeDataAttr</a>(in DOMString prop);</code></td>
-  </tr>
-  <tr>
-   <td><code>void <a href="#removeProp()">removeProp</a>(in nsIAtom attr);</code></td>
-  </tr>
-  <tr>
-   <td><code>void <a href="#setDataAttr()">setDataAttr</a>(in DOMString prop, in DOMString value);</code></td>
-  </tr>
- </tbody>
-</table>
+| `DOMString getDataAttr(in DOMString prop);`                |
+| ---------------------------------------------------------- |
+| `boolean hasDataAttr(in DOMString prop);`                  |
+| `void removeDataAttr(in DOMString prop);`                  |
+| `void removeProp(in nsIAtom attr);`                        |
+| `void setDataAttr(in DOMString prop, in DOMString value);` |
 
-<h2 id="Methods" name="Methods">Métodos</h2>
+## Métodos
 
-<h3 id="hasDataAttr()">hasDataAttr()</h3>
+### hasDataAttr()
 
-<pre class="eval">boolean hasDataAttr(
+```
+boolean hasDataAttr(
   in DOMString prop
 );
-</pre>
+```
 
-<h6 id="Parameters" name="Parameters">Parâmetros</h6>
+###### Parâmetros
 
-<dl>
- <dt><code>prop</code></dt>
- <dd>Nome da propriedade a qual a existência deve ser verificada.</dd>
-</dl>
+- `prop`
+  - : Nome da propriedade a qual a existência deve ser verificada.
 
-<h6 id="Return_value" name="Return_value">Retorno</h6>
+###### Retorno
 
-<p><code>true</code> se a propriedade existir ou <code>false</code> se não existir.</p>
+`true` se a propriedade existir ou `false` se não existir.
 
-<h3 id="removeDataAttr()">removeDataAttr()</h3>
+### removeDataAttr()
 
-<pre class="eval">void removeDataAttr(
+```
+void removeDataAttr(
   in DOMString prop
 );
-</pre>
+```
 
-<h6 id="Parameters" name="Parameters">Parâmetros</h6>
+###### Parâmetros
 
-<dl>
- <dt><code>prop</code></dt>
- <dd>Propriedade a ser removida do data set.</dd>
-</dl>
+- `prop`
+  - : Propriedade a ser removida do data set.
 
-<h3 id="removeProp()">removeProp()</h3>
+### removeProp()
 
-<p>Remove a propriedade do dataset do objeto. Usada para atualizar o objeto de dataset do objeto quando o atributo data-* houver sido removido do elemento.</p>
+Remove a propriedade do dataset do objeto. Usada para atualizar o objeto de dataset do objeto quando o atributo data-\* houver sido removido do elemento.
 
-<pre class="eval">void removeProp(
+```
+void removeProp(
   in nsIAtom attr
 );
-</pre>
+```
 
-<h6 id="Parameters" name="Parameters">Parâmetros</h6>
+###### Parâmetros
 
-<dl>
- <dt><code>attr</code></dt>
- <dd>A propriedade a ser removida do dataset.</dd>
-</dl>
+- `attr`
+  - : A propriedade a ser removida do dataset.
 
-<h2 id="Compatibilidade">Compatibilidade</h2>
+## Compatibilidade
 
 {{Compat("api.DOMStringMap")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{ domxref("HTMLElement.dataset") }}</li>
- <li>{{ htmlattrxref("dataset") }}</li>
-</ul>
+- {{ domxref("HTMLElement.dataset") }}
+- {{ htmlattrxref("dataset") }}

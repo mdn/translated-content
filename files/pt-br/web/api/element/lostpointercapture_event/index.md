@@ -14,22 +14,25 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onlostpointercapture
 original_slug: Web/API/GlobalEventHandlers/onlostpointercapture
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>A propriedade <strong><code>onlostpointercapture</code></strong> do mixin {{domxref("GlobalEventHandlers")}} é uma {{event("Event_handlers", "event handler")}} que processa eventos {{event("lostpointercapture")}}.</p>
+A propriedade **`onlostpointercapture`** do mixin {{domxref("GlobalEventHandlers")}} é uma {{event("Event_handlers", "event handler")}} que processa eventos {{event("lostpointercapture")}}.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><em>target</em>.onlostpointercapture = <em>functionRef</em>;</pre>
+```
+target.onlostpointercapture = functionRef;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>functionRef</code> é o nome de uma função ou uma <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/function">expressão de função</a>. A função recebe um objeto {{domxref("PointerEvent")}} como seu único argumento.</p>
+`functionRef` é o nome de uma função ou uma [expressão de função](/pt-BR/docs/Web/JavaScript/Reference/Operators/function). A função recebe um objeto {{domxref("PointerEvent")}} como seu único argumento.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: js">function overHandler(event) {
-  // Determinar o manipulador lostpointercapture para o evento alvo (<em>target event</em>).
+```js
+function overHandler(event) {
+  // Determinar o manipulador lostpointercapture para o evento alvo (target event).
   let lostCaptureHandler = event.target.onlostpointercapture;
 }
 
@@ -37,35 +40,20 @@ function init() {
   let el = document.getElementById('target');
   el.onlostpointercapture = overHandler;
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events 2', '#the-lostpointercapture-event', 'onlostpointercapture')}}</td>
-   <td>{{Spec2('Pointer Events 2')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                            | Status                                   | Comment |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------- |
+| {{SpecName('Pointer Events 2', '#the-lostpointercapture-event', 'onlostpointercapture')}} | {{Spec2('Pointer Events 2')}} |         |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("api.GlobalEventHandlers.onlostpointercapture")}}
 
+## See also
 
-<p>{{Compat("api.GlobalEventHandlers.onlostpointercapture")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>Evento <code><a href="/pt-BR/docs/Web/API/Document/lostpointercapture_event">Document: lostpointercapture</a></code></li>
- <li>Evento <code><a href="/pt-BR/docs/Web/API/HTMLElement/lostpointercapture_event">HTMLElement: lostpointercapture</a></code></li>
- <li>{{domxref("Element.releasePointerCapture()")}}</li>
-</ul>
+- Evento [`Document: lostpointercapture`](/pt-BR/docs/Web/API/Document/lostpointercapture_event)
+- Evento [`HTMLElement: lostpointercapture`](/pt-BR/docs/Web/API/HTMLElement/lostpointercapture_event)
+- {{domxref("Element.releasePointerCapture()")}}

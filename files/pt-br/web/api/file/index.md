@@ -9,75 +9,56 @@ tags:
   - Referencia
 translation_of: Web/API/File
 ---
-<div>{{gecko_minversion_header("1.9")}}</div>
+{{gecko_minversion_header("1.9")}}{{APIRef("File API")}}
 
-<div>{{APIRef("File API")}}</div>
+## Sumário
 
-<h2 id="Sumário">Sumário</h2>
+A interface `File` provê informações sobre arquivos e permite ao JavaScript a acessar seu conteúdo.
 
-<p>A interface <code>File</code> provê informações sobre arquivos e permite ao JavaScript  a acessar seu conteúdo.</p>
+São geralmente recuperados a partir de um objeto {{domxref("FileList")}} que é retornado como resultado da seleção, pelo usuário, de arquivos através do elemento {{ HTMLElement("input") }}, a partir do objeto {{domxref("DataTransfer")}} utilizado em operações de arrastar e soltar, ou a partir da API `mozGetAsFile()` em um {{ domxref("HTMLCanvasElement") }}. Em Gecko, códigos com privilégiios podem criar objetos File representando qualquer arquivo local sem a intereção do usuário (veja [Implementation notes](#implementation_notes) para mais informações.)
 
-<p>São geralmente recuperados a partir de um objeto {{domxref("FileList")}} que é retornado como resultado da seleção, pelo usuário, de arquivos através do elemento <span style="font-family: 'Courier New','Andale Mono',monospace; line-height: 1.5;">{{ HTMLElement("input") }}</span><span style="line-height: 1.5;">, a partir do objeto {{domxref("DataTransfer")}} </span><span style="line-height: 1.5;">utilizado em operações de arrastar e soltar</span><span style="line-height: 1.5;">,</span><span style="line-height: 1.5;"> ou a partir da API </span><code style="font-style: normal; line-height: 1.5;">mozGetAsFile()</code><span style="line-height: 1.5;"> em um {{ domxref("HTMLCanvasElement") }}. Em Gecko, códigos com privilégiios podem criar objetos File representando qualquer arquivo local sem a intereção do usuário </span>(veja <a href="#implementation_notes">Implementation notes</a> para mais informações.)</p>
+Um objeto File é um tipo específico de {{domxref("Blob")}}, e podem ser utilizados em qualquer contexto que um Blob pode. Em particular, {{domxref("FileReader")}}, {{domxref("URL.createObjectURL()")}}, {{domxref("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}}, e {{domxref("XMLHttpRequest", "", "send()")}} aceitam ambos, Blobs e Files.
 
-<p>Um objeto File é um tipo específico de  {{domxref("Blob")}}, e podem ser utilizados em qualquer contexto que um Blob pode. Em particular, {{domxref("FileReader")}}, {{domxref("URL.createObjectURL()")}}, {{domxref("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}}, e {{domxref("XMLHttpRequest", "", "send()")}} aceitam ambos, Blobs e Files.</p>
+Veja [Using files from web applications](/pt-BR/docs/Using_files_from_web_applications) (usando arquivos através de uma aplicação web) para mais informações e exemplos.
 
-<p>Veja <a href="https://developer.mozilla.org/en-US/docs/Using_files_from_web_applications">Using files from web applications</a> (usando arquivos através de uma aplicação web) para mais informações e exemplos.</p>
+A referência ao arquivo pode ser salva quando o formulário é submetido enquanto o usuário está offline, de forma que os dados possam ser recuperados e enviados quando a conexão com a internet for reestabelecida,
 
-<p>A referência ao arquivo pode ser salva quando o formulário é submetido enquanto o usuário está offline, de forma que os dados possam ser recuperados e enviados quando a conexão com a internet for reestabelecida,</p>
+**Propriedades**
 
-<p><strong style="font-size: 2.142857142857143rem; font-weight: 700; letter-spacing: -1px; line-height: 30px;">Propriedades</strong></p>
+- {{domxref("File.lastModifiedDate")}} {{readonlyinline}} {{gecko_minversion_inline("15.0")}}
+  - : A Data da última modificação do arquivo referenciado pelo objeto `File`.
+- {{domxref("File.name")}} {{readonlyinline}} {{gecko_minversion_inline("1.9.2")}}
+  - : O nome do arquivo referenciado pelo objeto `File`.
+- {{domxref("File.fileName")}} {{non-standard_inline}} {{readonlyinline}} {{obsolete_inline("7.0")}}
+  - : O nome do arquivo referenciado pelo objeto `File`.
+- {{domxref("File.fileSize")}} {{non-standard_inline}} {{readonlyinline}} {{obsolete_inline("7.0")}}
+  - : O tamanho do arquivo referenciado, em bytes.
 
-<dl>
- <dt>{{domxref("File.lastModifiedDate")}} {{readonlyinline}} {{gecko_minversion_inline("15.0")}}</dt>
- <dd>A <font face="Consolas, Liberation Mono, Courier, monospace">Data</font> da última modificação do arquivo referenciado pelo objeto <code>File</code>.</dd>
- <dt>{{domxref("File.name")}} {{readonlyinline}} {{gecko_minversion_inline("1.9.2")}}</dt>
- <dd>O nome do arquivo referenciado pelo objeto <code>File</code>.</dd>
- <dt>{{domxref("File.fileName")}} {{non-standard_inline}} {{readonlyinline}} {{obsolete_inline("7.0")}}</dt>
- <dd>O nome do arquivo referenciado pelo objeto <code style="font-style: normal;">File</code>.</dd>
- <dt>{{domxref("File.fileSize")}} {{non-standard_inline}} {{readonlyinline}} {{obsolete_inline("7.0")}}</dt>
- <dd>O tamanho do arquivo referenciado, em bytes.</dd>
-</dl>
+A interface `File` herda as propriedades da interface {{domxref("Blob")}}.
 
-<p>A interface <code>File</code> herda as propriedades da interface {{domxref("Blob")}}.</p>
+{{page("/en-US/docs/Web/API/Blob","Properties")}}
 
-<p>{{page("/en-US/docs/Web/API/Blob","Properties")}}</p>
+## Métodos
 
-<h2 id="Method_overview" name="Method_overview">Métodos</h2>
+- {{domxref("File.getAsBinary()")}} {{non-standard_inline}} {{obsolete_inline("7.0")}}
+  - : Retorna uma string contendo os dados do arquivo em formato binário.
+- {{domxref("File.getAsDataURL()")}} {{non-standard_inline}} {{obsolete_inline("7.0")}}
+  - : Uma string contendo os dados do arquivo codificados como `data:` URL.
+- {{domxref("File.getAsText()","File.getAsText(string encoding)")}} {{non-standard_inline}} {{obsolete_inline("7.0")}}
+  - : Retorna o conteúdo do arquivo como uma string em que os dados do arquivo são interpretados como texto, usando a codificação passada por parâmetro.
 
-<dl>
- <dt>{{domxref("File.getAsBinary()")}} {{non-standard_inline}} {{obsolete_inline("7.0")}}</dt>
- <dd>Retorna uma string contendo os dados do arquivo em formato binário.</dd>
- <dt>{{domxref("File.getAsDataURL()")}} {{non-standard_inline}} {{obsolete_inline("7.0")}}</dt>
- <dd>Uma string contendo os dados do arquivo codificados como <code>data:</code> URL.</dd>
- <dt>{{domxref("File.getAsText()","File.getAsText(string encoding)")}} {{non-standard_inline}} {{obsolete_inline("7.0")}}</dt>
- <dd>Retorna o conteúdo do arquivo como uma string em que os dados do arquivo são interpretados como texto, usando a codificação passada por parâmetro.</dd>
-</dl>
+## Especificações
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Especificações</h2>
+| Especificação                    | Status                       | Comentários        |
+| -------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('File API')}} | {{Spec2('File API')}} | Definição Inicial. |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentários</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('File API')}}</td>
-   <td>{{Spec2('File API')}}</td>
-   <td>Definição Inicial.</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade com os Navegadores</h2>
+## Compatibilidade com os Navegadores
 
 {{Compat("api.File")}}
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Using_files_from_web_applications" title="Using files from web applications">Using files from web applications</a></li>
- <li><a href="/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code" title="Extensions/Using the DOM File API in chrome code">Using the DOM File API in chrome code</a></li>
- <li>{{domxref("FileReader")}}</li>
-</ul>
+- [Using files from web applications](/pt-BR/docs/Using_files_from_web_applications "Using files from web applications")
+- [Using the DOM File API in chrome code](/pt-BR/docs/Extensions/Using_the_DOM_File_API_in_chrome_code "Extensions/Using the DOM File API in chrome code")
+- {{domxref("FileReader")}}

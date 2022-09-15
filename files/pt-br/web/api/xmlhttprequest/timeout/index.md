@@ -3,19 +3,20 @@ title: XMLHttpRequest.timeout
 slug: Web/API/XMLHttpRequest/timeout
 translation_of: Web/API/XMLHttpRequest/timeout
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p>A propriedade <code><strong>XMLHttpRequest.timeout</strong></code> é um <code>unsigned long</code> que representa o número de milisegundos que uma requisição deve esperar até ser automaticamente terminada. O valor padrão para essa propriedade é 0, o que significa que o navegador deverá esperar uma resposta indefinidamente. A propriedade Timeout não deveria ser usada para requisições XMLHttpRequests síncronas em um {{Glossary('document environment')}} ou uma exceção do tipo <code>InvalidAccessError</code> será lançada. Quando um timeout ocorre, o evento <a href="/en-US/docs/Web/Events/timeout">timeout</a> é disparado. {{gecko_minversion_inline("12.0")}}</p>
+A propriedade **`XMLHttpRequest.timeout`** é um `unsigned long` que representa o número de milisegundos que uma requisição deve esperar até ser automaticamente terminada. O valor padrão para essa propriedade é 0, o que significa que o navegador deverá esperar uma resposta indefinidamente. A propriedade Timeout não deveria ser usada para requisições XMLHttpRequests síncronas em um {{Glossary('document environment')}} ou uma exceção do tipo `InvalidAccessError` será lançada. Quando um timeout ocorre, o evento [timeout](/pt-BR/docs/Web/Events/timeout) é disparado. {{gecko_minversion_inline("12.0")}}
 
-<div class="note"><strong>Nota:</strong> Você não pode usar um timeout para requisições síncronas dentro de uma janela.</div>
+> **Nota:** Você não pode usar um timeout para requisições síncronas dentro de uma janela.
 
-<p><a href="/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests#Example_using_a_timeout">Utilizando um timeout com uma requisição assíncrona</a> </p>
+[Utilizando um timeout com uma requisição assíncrona](/pt-BR/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests#Example_using_a_timeout)
 
-<p>No Internet Explorer, a propriedade timeout pode ser usada apenas depois de o método <a href="/en-US/docs/Web/API/XMLHttpRequest/open">open()</a> ter sido invocado e antes de se chamar o método <a href="/en-US/docs/Web/API/XMLHttpRequest/send">send()</a>.</p>
+No Internet Explorer, a propriedade timeout pode ser usada apenas depois de o método [open()](/pt-BR/docs/Web/API/XMLHttpRequest/open) ter sido invocado e antes de se chamar o método [send()](/pt-BR/docs/Web/API/XMLHttpRequest/send).
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: js">var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 xhr.open('GET', '/server', true);
 
 xhr.timeout = 2000; // tempo em milisegundos
@@ -28,21 +29,11 @@ xhr.ontimeout = function (e) {
   // Timeout na chamada XMLHttpRequest. Ação de timeout aqui.
 };
 
-xhr.send(null);</pre>
+xhr.send(null);
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentários</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#the-timeout-attribute')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>WHATWG living standard</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                | Status                               | Comentários            |
+| ---------------------------------------------------------------------------- | ------------------------------------ | ---------------------- |
+| {{SpecName('XMLHttpRequest', '#the-timeout-attribute')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |

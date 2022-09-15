@@ -9,63 +9,50 @@ tags:
   - metodo
 translation_of: Web/API/Storage/clear
 ---
-<p>{{APIRef("Web Storage API")}}</p>
+{{APIRef("Web Storage API")}}
 
-<p>O método <code>clear()</code> da interface {{domxref("Storage")}}, quando realizado uma chamada, todas as chaves do armazenamento são esvaziadas.</p>
+O método `clear()` da interface {{domxref("Storage")}}, quando realizado uma chamada, todas as chaves do armazenamento são esvaziadas.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js"><em>storage</em>.clear();</pre>
+```js
+storage.clear();
+```
 
-<h3 id="Parametros">Parametros</h3>
+### Parametros
 
-<p><em>Nenhum parametro..</em></p>
+_Nenhum parametro.._
 
-<h3 id="Retorno">Retorno</h3>
+### Retorno
 
-<p><em>Nenhum retorno.</em></p>
+_Nenhum retorno._
 
-<p> </p>
+## Exemplo
 
-<h2 id="Exemplo">Exemplo</h2>
+A função abaixo cria três itens e armazenam localmente, depois remove todos utilizando a função clear().
 
-<p> </p>
-
-<p>A função abaixo cria três itens e armazenam localmente, depois remove todos utilizando a função clear().</p>
-
-<pre class="brush: js">function populateStorage() {
+```js
+function populateStorage() {
   localStorage.setItem('bgcolor', 'red');
   localStorage.setItem('font', 'Helvetica');
   localStorage.setItem('image', 'myCat.png');
 
   localStorage.clear();
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Nota</strong>: Para visualizar um exemplo real, veja nossa seção <a href="https://github.com/mdn/web-storage-demo">Demonstração de Web Storage</a>.</p>
-</div>
+> **Nota:** Para visualizar um exemplo real, veja nossa seção [Demonstração de Web Storage](https://github.com/mdn/web-storage-demo).
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Storage', '#dom-storage-clear', 'clear()')}}</td>
-   <td>{{Spec2('Web Storage')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                    | Status                           | Comentário |
+| -------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('Web Storage', '#dom-storage-clear', 'clear()')}} | {{Spec2('Web Storage')}} |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Storage.clear")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<p><a href="/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Utilizando a API Web Storage</a></p>
+[Utilizando a API Web Storage](/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

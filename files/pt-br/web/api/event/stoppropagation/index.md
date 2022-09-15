@@ -10,38 +10,40 @@ tags:
   - stopPropagation
 translation_of: Web/API/Event/stopPropagation
 ---
-<p id="Summary">{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<h2 id="Summary" name="Summary">Resumo</h2>
+## Resumo
 
-<p>Impede a propagação do evento por seus respectivos listeners.</p>
+Impede a propagação do evento por seus respectivos listeners.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><em>event</em>.stopPropagation();</pre>
+```
+event.stopPropagation();
+```
 
-<h3 id="Parametros">Parametros</h3>
+### Parametros
 
-<p>Nenhum</p>
+Nenhum
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<p>Veja o exemplo 5: <a href="https://developer.mozilla.org/en-US/docs/DOM/DOM_Reference/Examples#Example_5:_Event_Propagation" title="Gecko_DOM_Reference/Examples#Example_5:_Event_Propagation">Event Propagation</a> no capítulo Eventos para um exemplo mais detalhado desse método e propagação de evento no DOM.</p>
+Veja o exemplo 5: [Event Propagation](/pt-BR/docs/DOM/DOM_Reference/Examples#Example_5:_Event_Propagation "Gecko_DOM_Reference/Examples#Example_5:_Event_Propagation") no capítulo Eventos para um exemplo mais detalhado desse método e propagação de evento no DOM.
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p>Veja <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture">DOM specification</a> para a explicação do fluxo de eventos. (O <a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-flow">DOM Level 3 Events draft</a> possui uma ilustração.)</p>
+Veja [DOM specification](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture) para a explicação do fluxo de eventos. (O [DOM Level 3 Events draft](http://www.w3.org/TR/DOM-Level-3-Events/#event-flow) possui uma ilustração.)
 
-<p><a href="/en-US/docs/Web/API/event.preventDefault" title="/docs/Web/API/event.stopPropagation">preventDefault</a> é um método de complemento que pode ser usado para previnir a ação padrão do evento que estiver acontecendo.</p>
+[preventDefault](/pt-BR/docs/Web/API/event.preventDefault "/docs/Web/API/event.stopPropagation") é um método de complemento que pode ser usado para previnir a ação padrão do evento que estiver acontecendo.
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<p><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#events-event-type-stopPropagation">DOM Level 3 Events: stopPropagation</a></p>
+[DOM Level 3 Events: stopPropagation](http://www.w3.org/TR/DOM-Level-3-Events/#events-event-type-stopPropagation)
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Event.stopPropagation")}}

@@ -3,69 +3,50 @@ title: OfflineAudioContext
 slug: Web/API/OfflineAudioContext
 translation_of: Web/API/OfflineAudioContext
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}A interface `OfflineAudioContext` é uma interface {{domxref("AudioContext")}} que representa um gráfico de processament de áudio construido a partir de conexões entre {{domxref("AudioNode")}}s. Em contraste com o padrão {{domxref("AudioContext")}}, um `OfflineAudioContext` não processa o áudio para o hardware do dispositivo; Em vez disso, ele gera, o mais rápido possível, e exibe o resultado para um {{domxref("AudioBuffer")}}.
 
-<div>A interface <code>OfflineAudioContext</code> é uma interface {{domxref("AudioContext")}} que representa um gráfico de processament de áudio construido a partir de conexões entre {{domxref("AudioNode")}}s. Em contraste com o padrão {{domxref("AudioContext")}}, um <code>OfflineAudioContext</code> não processa o áudio para o hardware do dispositivo; Em vez disso, ele gera, o mais rápido possível, e exibe o resultado para um {{domxref("AudioBuffer")}}.</div>
+{{InheritanceDiagram}}
 
-<p>{{InheritanceDiagram}}</p>
+## Construtor
 
-<h2 id="Construtor">Construtor</h2>
+- {{domxref("OfflineAudioContext.OfflineAudioContext()")}}
+  - : Cria uma nova instância `OfflineAudioContext`.
 
-<dl>
- <dt>{{domxref("OfflineAudioContext.OfflineAudioContext()")}}</dt>
- <dd>Cria uma nova instância <code>OfflineAudioContext</code>.</dd>
-</dl>
+## Propriedades
 
-<h2 id="Propriedades">Propriedades</h2>
+_Também herda propriedades da sua entidade paterna, {{domxref("BaseAudioContext")}}._
 
-<p><em>Também herda propriedades da sua entidade paterna, {{domxref("BaseAudioContext")}}.</em></p>
+- {{domxref('OfflineAudioContext.length')}} {{readonlyinline}}
+  - : Um número inteiro que representa o tamanho do buffer em quadros de amostra.
 
-<dl>
- <dt>{{domxref('OfflineAudioContext.length')}} {{readonlyinline}}</dt>
- <dd>
- <p>Um número inteiro que representa o tamanho do buffer em quadros de amostra.</p>
- </dd>
-</dl>
+### Manipuladores de Eventos
 
-<h3 id="Manipuladores_de_Eventos">Manipuladores de Eventos</h3>
+- {{domxref("OfflineAudioContext.oncomplete")}}
+  - : É uma chamada {{event("Event_handlers", "event handler")}} quando o processamento é encerrado, é quando o evento {{event("complete")}} - do tipo {{domxref("OfflineAudioCompletionEvent")}} - é gerado, após a versão baseada em eventos do {{domxref("OfflineAudioContext.startRendering()")}} é usada.
 
-<dl>
- <dt>{{domxref("OfflineAudioContext.oncomplete")}}</dt>
- <dd>É uma chamada {{event("Event_handlers", "event handler")}} quando o processamento é encerrado, é quando o evento {{event("complete")}}  - do tipo {{domxref("OfflineAudioCompletionEvent")}} - é gerado, após a versão baseada em eventos do {{domxref("OfflineAudioContext.startRendering()")}} é usada.</dd>
-</dl>
+## Métodos
 
-<h2 id="Métodos">Métodos</h2>
+_Também herda métodos da interface paterna, {{domxref("BaseAudioContext")}}._
 
-<p><em>Também herda métodos da interface paterna, {{domxref("BaseAudioContext")}}.</em></p>
+- {{domxref("OfflineAudioContext.resume()")}}
+  - : Programa uma suspensão da progressão do tempo no contexto de áudio no horário especificado e retorna uma promessa.
+- {{domxref("OfflineAudioContext.suspend()")}}
+  - : Agende uma suspensão da progressão do tempo no contexto de áudio no horário especificado e retorna uma promessa.
+- {{domxref("OfflineAudioContext.startRendering()")}}
+  - : Inicia a renderização do áudio, levando em consideração as conexões atuais e as mudanças programadas atuais. Esta página abrange a versão baseada em eventos e a versão baseada em promessas.
 
-<dl>
- <dt>{{domxref("OfflineAudioContext.resume()")}}</dt>
- <dd>
- <p>Programa uma suspensão da progressão do tempo no contexto de áudio no horário especificado e retorna uma promessa.</p>
- </dd>
- <dt>{{domxref("OfflineAudioContext.suspend()")}}</dt>
- <dd>
- <p>Agende uma suspensão da progressão do tempo no contexto de áudio no horário especificado e retorna uma promessa.</p>
- </dd>
- <dt>{{domxref("OfflineAudioContext.startRendering()")}}</dt>
- <dd>
- <p>Inicia a renderização do áudio, levando em consideração as conexões atuais e as mudanças programadas atuais. Esta página abrange a versão baseada em eventos e a versão baseada em promessas.</p>
- </dd>
-</dl>
+## Exemplo
 
-<h2 id="Exemplo">Exemplo</h2>
+Nesse exemplo, declaramos um ambos {{domxref("AudioContext")}} e um `OfflineAudioContext` objeto. Nós usamos o `AudioContext` para carregar uma faixa de áudio via XHR ({{domxref("AudioContext.decodeAudioData")}}), então o `OfflineAudioContext` para renderizar o áudio em um {{domxref("AudioBufferSourceNode")}} e reproduzir a trilha. Depois que o gráfico de áudio off-line estiver configurado, você deve renderizá-lo para {{domxref("AudioBuffer")}} usando {{domxref("OfflineAudioContext.startRendering")}}.
 
-<p>Nesse exemplo, declaramos um ambos {{domxref("AudioContext")}} e um <code>OfflineAudioContext</code> objeto. Nós usamos o <code>AudioContext</code> para carregar uma faixa de áudio via XHR ({{domxref("AudioContext.decodeAudioData")}}), então o <code>OfflineAudioContext</code> para renderizar o áudio em um {{domxref("AudioBufferSourceNode")}} e reproduzir a trilha. Depois que o gráfico de áudio off-line estiver configurado, você deve renderizá-lo para {{domxref("AudioBuffer")}} usando {{domxref("OfflineAudioContext.startRendering")}}.</p>
+Quando a 'promise' `startRendering()` é resolvida, a renderização foi concluída e a saída `AudioBuffer` é retornada fora da 'promise.
 
-<p>Quando a 'promise' <code>startRendering()</code> é resolvida, a renderização foi concluída e a saída <code>AudioBuffer</code> é retornada fora da 'promise.</p>
+Neste ponto, criamos outro contexto de áudio, criamos um {{domxref("AudioBufferSourceNode")}} dentro dele e configuramos o buffer para ser igual à promessa `AudioBuffer`. Isso é jogado como parte de um gráfico de áudio padrão simples.
 
-<p>Neste ponto, criamos outro contexto de áudio, criamos um {{domxref("AudioBufferSourceNode")}} dentro dele e configuramos o buffer para ser igual à promessa <code>AudioBuffer</code>. Isso é jogado como parte de um gráfico de áudio padrão simples.</p>
+> **Nota:** Para um exemplo de trabalho, veja nosso [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/) Github repo (veja o [código fonte](https://github.com/mdn/webaudio-examples/tree/master/offline-audio-context-promise) também.)
 
-<div class="note">
-<p><strong>Nota</strong>: Para um exemplo de trabalho, veja nosso <a href="https://mdn.github.io/webaudio-examples/offline-audio-context-promise/">offline-audio-context-promise</a> Github repo (veja o <a href="https://github.com/mdn/webaudio-examples/tree/master/offline-audio-context-promise">código fonte</a> também.)</p>
-</div>
-
-<pre class="brush: js">// define o contexto de áudio online e offline
+```js
+// define o contexto de áudio online e offline
 
 var audioCtx = new AudioContext();
 var offlineCtx = new OfflineAudioContext(2,44100*40,44100);
@@ -114,33 +95,19 @@ function getData() {
 
 // Run getData to start the process off
 
-getData();</pre>
+getData();
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#OfflineAudioContext', 'OfflineAudioContext')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                               | Comment            |
+| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
+| {{SpecName('Web Audio API', '#OfflineAudioContext', 'OfflineAudioContext')}} | {{Spec2('Web Audio API')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
-  <p>{{Compat("api.OfflineAudioContext")}}</p>
-</div>
+{{Compat("api.OfflineAudioContext")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Usando a API de áudio da Web</a></li>
-</ul>
+- [Usando a API de áudio da Web](/pt-BR/docs/Web_Audio_API/Using_Web_Audio_API)

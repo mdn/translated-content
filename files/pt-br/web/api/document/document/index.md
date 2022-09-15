@@ -3,35 +3,26 @@ title: Document()
 slug: Web/API/Document/Document
 translation_of: Web/API/Document/Document
 ---
-<p>{{APIRef}}{{Non-standard_header}}</p>
+{{APIRef}}{{Non-standard_header}}
 
-<p>O construtor <strong><code>Document</code></strong> cria um novo objeto {{domxref("Document")}},  o qual trata de uma página carregada no navegador servindo como porta de entrada para o conteúdo da página.</p>
+O construtor **`Document`** cria um novo objeto {{domxref("Document")}}, o qual trata de uma página carregada no navegador servindo como porta de entrada para o conteúdo da página.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var <em>document</em> = new Document()</pre>
+```
+var document = new Document()
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<p>Nenhum.</p>
+Nenhum.
 
-<p><span style='background-color: #333333; color: #ffffff; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 1.5rem;'>Especificações</span></p>
+Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#interface-document','Document')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                    | Status                           | Comentário        |
+| -------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
+| {{SpecName('DOM WHATWG','#interface-document','Document')}} | {{Spec2('DOM WHATWG')}} | Definição inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Document.Document")}}

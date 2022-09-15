@@ -11,80 +11,77 @@ tags:
   - Reference
 translation_of: Web/API/CanvasRenderingContext2D/arc
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><span class="seoSummary">O método <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.arc()</code></strong> da API Canvas 2D adiciona um arco circular para o atual sub-caminhoa (<em>sub-path</em>).</span></p>
+O método **`CanvasRenderingContext2D`\*\***`.arc()`\*\* da API Canvas 2D adiciona um arco circular para o atual sub-caminhoa (_sub-path_).
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate">void <em>ctx</em>.arc(<em>x</em>, <em>y</em>, <em>raio</em>, <em>anguloInicial</em>, <em>anguloFinal</em> [, <em>antiHorario</em>]);
-</pre>
+```
+void ctx.arc(x, y, raio, anguloInicial, anguloFinal [, antiHorario]);
+```
 
-<p>O método <code>arc()</code> cria um arco circular centralizado em <code>(x, y)</code> com um <code>raio</code>. O caminho inicia-se no <code>anguloInicial</code>, e finaliza no <code>anguloFinal</code>, e é desenhado no sentido <code>antiHoario</code> (o padrão é no sentido horario).</p>
+O método `arc()` cria um arco circular centralizado em `(x, y)` com um `raio`. O caminho inicia-se no `anguloInicial`, e finaliza no `anguloFinal`, e é desenhado no sentido `antiHoario` (o padrão é no sentido horario).
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>x</code></dt>
- <dd>A coordenada horizontal do centro do arco.</dd>
- <dt><code>y</code></dt>
- <dd>A coordenada vertical do centro do arco.</dd>
- <dt><code>raio</code></dt>
- <dd>O raio do arco. Deve ser um valor positivo.</dd>
- <dt><code>anguloInicial</code></dt>
- <dd>O ângulo em radianos em que o arco começa medido a partir do eixo x positivo.</dd>
- <dt><code>anguloFinal</code></dt>
- <dd>O ângulo em que o arco finaliza medido a partir do eixo x positivo.</dd>
- <dt><code>antiHorario</code> {{optional_inline}}</dt>
- <dd>Um {{jsxref("Boolean")}} opcional. Se <code>verdadeiro</code>, desenha o arco no sentido anti-horário entre os ângulos inicial e final. O padrão é <code>falso</code> (sentido horário).</dd>
-</dl>
+- `x`
+  - : A coordenada horizontal do centro do arco.
+- `y`
+  - : A coordenada vertical do centro do arco.
+- `raio`
+  - : O raio do arco. Deve ser um valor positivo.
+- `anguloInicial`
+  - : O ângulo em radianos em que o arco começa medido a partir do eixo x positivo.
+- `anguloFinal`
+  - : O ângulo em que o arco finaliza medido a partir do eixo x positivo.
+- `antiHorario` {{optional_inline}}
+  - : Um {{jsxref("Boolean")}} opcional. Se `verdadeiro`, desenha o arco no sentido anti-horário entre os ângulos inicial e final. O padrão é `falso` (sentido horário).
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Desenhando_um_círculo_completo">Desenhando um círculo completo</h3>
+### Desenhando um círculo completo
 
-<p>O exemplo desenha um círculo completo com o método <code>arc()</code>.</p>
+O exemplo desenha um círculo completo com o método `arc()`.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;canvas&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<p>O arco recebe 100 como uma coordenada x, e 75 como uma coordenada y e um raio de 50. para fazer um círculo completo, o arco inicia no ângulo 0 (0º) em radianos e finaliza em um ângulo de 2π radianos (360<strong>°</strong>).</p>
+O arco recebe 100 como uma coordenada x, e 75 como uma coordenada y e um raio de 50. para fazer um círculo completo, o arco inicia no ângulo 0 (0º) em radianos e finaliza em um ângulo de 2π radianos (360**°**).
 
-<pre class="brush: js">const canvas = document.querySelector('canvas');
+```js
+const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.beginPath();
 ctx.arc(100, 75, 50, 0, 2 * Math.PI);
 ctx.stroke();
-</pre>
+```
 
-<h4 id="Resultado">Resultado</h4>
+#### Resultado
 
-<p>{{ EmbedLiveSample('Drawing_a_full_circle', 700, 180) }}</p>
+{{ EmbedLiveSample('Drawing_a_full_circle', 700, 180) }}
 
-<h3 id="Diferentes_formas_demonstradas">Diferentes formas demonstradas</h3>
+### Diferentes formas demonstradas
 
-<p>Este exemplo desenha diversas formas para mostrar o que é possível fazer com o método <code>arc()</code>.</p>
+Este exemplo desenha diversas formas para mostrar o que é possível fazer com o método `arc()`.
 
-<div class="hidden">
-<h4 id="HTML_2">HTML</h4>
+```html hidden
+<canvas width="150" height="200"></canvas>
+```
 
-<pre class="brush: html notranslate">&lt;canvas width="150" height="200"&gt;&lt;/canvas&gt;
-</pre>
-
-<h4 id="JavaScript_2">JavaScript</h4>
-</div>
-
-<pre class="brush: js notranslate">const canvas = document.querySelector('canvas');
+```js
+const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
 // Draw shapes
-for (let i = 0; i &lt;= 3; i++) {
-  for (let j = 0; j &lt;= 2; j++) {
+for (let i = 0; i <= 3; i++) {
+  for (let j = 0; j <= 2; j++) {
     ctx.beginPath();
     let x             = 25 + j * 50;                 // coordenada x
     let y             = 25 + i * 50;                 // coordenada y
@@ -95,42 +92,30 @@ for (let i = 0; i &lt;= 3; i++) {
 
     ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
 
-    if (i &gt; 1) {
+    if (i > 1) {
       ctx.fill();
     } else {
       ctx.stroke();
     }
   }
-}</pre>
+}
+```
 
-<h4 id="Resultado_2">Resultado</h4>
+#### Resultado
 
-<p>{{ EmbedLiveSample('Different_shapes_demonstrated', 160, 210, "https://mdn.mozillademos.org/files/204/Canvas_arc.png") }}</p>
+{{ EmbedLiveSample('Different_shapes_demonstrated', 160, 210, "https://mdn.mozillademos.org/files/204/Canvas_arc.png") }}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-arc", "CanvasRenderingContext2D.arc")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                    | Status                           | Comentário |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-arc", "CanvasRenderingContext2D.arc")}} | {{Spec2('HTML WHATWG')}} |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("api.CanvasRenderingContext2D.arc")}}</p>
+{{Compat("api.CanvasRenderingContext2D.arc")}}
 
-<h2 id="Veja_mais">Veja mais</h2>
+## Veja mais
 
-<ul>
- <li>A interface definindo este método: {{domxref("CanvasRenderingContext2D")}}</li>
- <li>Utilize {{domxref("CanvasRenderingContext2D.ellipse()")}} para desenhar um arco elíptico.</li>
-</ul>
+- A interface definindo este método: {{domxref("CanvasRenderingContext2D")}}
+- Utilize {{domxref("CanvasRenderingContext2D.ellipse()")}} para desenhar um arco elíptico.

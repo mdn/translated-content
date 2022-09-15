@@ -10,80 +10,66 @@ tags:
   - Somente Leitura
 translation_of: Web/API/MouseEvent/clientY
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p>A propriedade <strong><code>clientY</code></strong>  da interface {{domxref("MouseEvent")}} fornece a coordenada vertical do cliente dentro da aplicacão em que o evento ocorreu (ao contrário da coordenada que pertence a página).</p>
+A propriedade **`clientY`** da interface {{domxref("MouseEvent")}} fornece a coordenada vertical do cliente dentro da aplicacão em que o evento ocorreu (ao contrário da coordenada que pertence a página).
 
-<p>Por exemplo, clicando no topo da área do cliente sempre resultará num evento de mouse com um valor <code>0</code> de <code>clientY</code>, independente se a página está "escrollada" verticalmente.</p>
+Por exemplo, clicando no topo da área do cliente sempre resultará num evento de mouse com um valor `0` de `clientY`, independente se a página está "escrollada" verticalmente.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var <em>y</em> = <em>instanciaDeEventoDoMouse</em>.clientY
-</pre>
+```
+var y = instanciaDeEventoDoMouse.clientY
+```
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p><span style="background-color: #ffffff;">O valor retornado por essa propriedade é um valor flutuante </span><span style='background-color: rgba(220, 220, 220, 0.5); font-family: consolas,"Liberation Mono",courier,monospace;'>double</span> como foi redefinida pelo "CSSOM View Module". Originalmente esta propriedade era definida como um inteiro <code>long</code>. Veja a seção de compatibilidade de browsers para mais detalhes.</p>
+O valor retornado por essa propriedade é um valor flutuante double como foi redefinida pelo "CSSOM View Module". Originalmente esta propriedade era definida como um inteiro `long`. Veja a seção de compatibilidade de browsers para mais detalhes.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>Este exemplo mostra as coordenadas do mouse quando você ativar o evento {{Event("mousemove")}}.</p>
+Este exemplo mostra as coordenadas do mouse quando você ativar o evento {{Event("mousemove")}}.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Mova seu mouse para ver sua posicão.&lt;/p&gt;
-&lt;p id="screen-log"&gt;&lt;/p&gt;</pre>
+```html
+<p>Mova seu mouse para ver sua posicão.</p>
+<p id="screen-log"></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">let screenLog = document.querySelector('#screen-log');
+```js
+let screenLog = document.querySelector('#screen-log');
 document.addEventListener('mousemove', logKey);
 
 function logKey(e) {
   screenLog.innerText = `
     Screen X/Y: ${e.screenX}, ${e.screenY}
     Client X/Y: ${e.clientX}, ${e.clientY}`;
-}</pre>
+}
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM View','#dom-mouseevent-clienty', 'clientY')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td>Redefine {{domxref("MouseEvent")}} de <code>long</code> para <code>double</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events','#widl-MouseEvent-clientY','MouseEvent.clientY')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>Sem mudanças vindas de {{SpecName('DOM2 Events')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Events','#Events-MouseEvent','MouseEvent.clientY')}}</td>
-   <td>{{Spec2('DOM2 Events')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                        | Status                           | Comentário                                                         |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------ |
+| {{SpecName('CSSOM View','#dom-mouseevent-clienty', 'clientY')}}                 | {{Spec2('CSSOM View')}} | Redefine {{domxref("MouseEvent")}} de `long` para `double`. |
+| {{SpecName('DOM3 Events','#widl-MouseEvent-clientY','MouseEvent.clientY')}} | {{Spec2('DOM3 Events')}} | Sem mudanças vindas de {{SpecName('DOM2 Events')}}.       |
+| {{SpecName('DOM2 Events','#Events-MouseEvent','MouseEvent.clientY')}}         | {{Spec2('DOM2 Events')}} | Definição inicial.                                                 |
 
-<<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+<
 
-<p>{{Compat("api.MouseEvent.clientY")}}</p>
+## Compatibilidade com navegadores
 
-<h2 id="Veja_também">Veja também</h2>
+{{Compat("api.MouseEvent.clientY")}}
 
-<ul>
- <li>{{ domxref("MouseEvent") }}</li>
- <li>{{domxref("MouseEvent.clientX","clientX")}}</li>
- <li>{{domxref("MouseEvent.screenX","screenX")}} / {{domxref("MouseEvent.screenY","screenY")}}</li>
-</ul>
+## Veja também
+
+- {{ domxref("MouseEvent") }}
+- {{domxref("MouseEvent.clientX","clientX")}}
+- {{domxref("MouseEvent.screenX","screenX")}} / {{domxref("MouseEvent.screenY","screenY")}}

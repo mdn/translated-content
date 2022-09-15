@@ -10,89 +10,83 @@ tags:
   - events
 translation_of: Web/API/EventTarget/removeEventListener
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>Remove o event listener anteriormente registrado com {{domxref("EventTarget.addEventListener()")}}.</p>
+Remove o event listener anteriormente registrado com {{domxref("EventTarget.addEventListener()")}}.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><em>target</em>.removeEventListener(<em>type</em>, <em>listener</em>[, <em>useCapture</em>])</pre>
+```
+target.removeEventListener(type, listener[, useCapture])
+```
 
-<dl>
- <dt><code>type</code></dt>
- <dd>Uma string indicando o tipo de evento a ser removido.</dd>
- <dt><code>listener</code></dt>
- <dd>A função {{ domxref("EventListener") }}  a ser removida do event target.</dd>
- <dt><code>useCapture</code> {{ optional_inline() }}</dt>
- <dd><p>Indica quando o {{ domxref("EventListener") }} a ser removido foi registrado ou não como <em>capturing listener</em>. Caso este parâmetro seja omitido, o valor <em>false</em> será assumido por padrão.</p>
- <p>Se um listener foi registrado duas vezes, uma com o parâmetro <em>capture</em> especificado e outra sem, cada um deve ser removido separadamente. A remoção de um <em>capturing listener</em> não afeta a versão <em>non-capturing</em> do mesmo listener, e vice versa.</p></dd>
-</dl>
+- `type`
+  - : Uma string indicando o tipo de evento a ser removido.
+- `listener`
+  - : A função {{ domxref("EventListener") }} a ser removida do event target.
+- `useCapture` {{ optional_inline() }}
 
-<div class="note"><strong>Nota:</strong> <code>useCapture</code> era obrigatório em versões mais antigas dos navegadores. Para ampla compatibilidade, sempre informe o parâmetro <code>useCapture.</code></div>
+  - : Indica quando o {{ domxref("EventListener") }} a ser removido foi registrado ou não como _capturing listener_. Caso este parâmetro seja omitido, o valor _false_ será assumido por padrão.
 
-<h2 id="Compatibility" name="Compatibility">Notas</h2>
+    Se um listener foi registrado duas vezes, uma com o parâmetro _capture_ especificado e outra sem, cada um deve ser removido separadamente. A remoção de um _capturing listener_ não afeta a versão _non-capturing_ do mesmo listener, e vice versa.
 
-<p>Se um {{ domxref("EventListener") }} é removido de um {{ domxref("EventTarget") }} enquanto <u><em>este</em></u> está processando um evento, esse não será disparado pelas <em>current actions</em>. Um {{ domxref("EventListener") }} não será invocado para o evento o qual foi registrado depois de ter sido removido, porém pode ser registrado novamente.</p>
+> **Nota:** `useCapture` era obrigatório em versões mais antigas dos navegadores. Para ampla compatibilidade, sempre informe o parâmetro `useCapture.`
 
-<p>Chamar <code>removeEventListener()</code> com argumentos que não identifiquem nenhum {{ domxref("EventListener") }} registrado no <code>EventTarget</code> não tem qualquer efeito.</p>
+## Notas
 
-<h2 id="Exemplo">Exemplo</h2>
+Se um {{ domxref("EventListener") }} é removido de um {{ domxref("EventTarget") }} enquanto **_este_** está processando um evento, esse não será disparado pelas _current actions_. Um {{ domxref("EventListener") }} não será invocado para o evento o qual foi registrado depois de ter sido removido, porém pode ser registrado novamente.
 
-<p>Este é um exemplo de como associar e remover um event listener.</p>
+Chamar `removeEventListener()` com argumentos que não identifiquem nenhum {{ domxref("EventListener") }} registrado no `EventTarget` não tem qualquer efeito.
 
-<pre class="brush: js">var div = document.getElementById('div');
+## Exemplo
+
+Este é um exemplo de como associar e remover um event listener.
+
+```js
+var div = document.getElementById('div');
 var listener = function (event) {
   /* faça alguma coisa... */
 };
 div.addEventListener('click', listener, false);
 div.removeEventListener('click', listener, false);
-</pre>
+```
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("api.EventTarget.removeEventListener", 3)}}</p>
+{{Compat("api.EventTarget.removeEventListener", 3)}}
 
+### Notas para Gecko
 
+- Antes do Firefox 6, o navegador poderia retornar um erro se o parâmetro `useCapture não estive explicitamente cofigurado como` false. Antes do Gecko 9.0 {{ geckoRelease("9.0") }}, `addEventListener()` retornaria uma exception se o parâmetro do listener fosse `null`; agora o método retorna sem erros, mas sem fazer nada.
 
-<h3 id="Notas_para_Gecko">Notas para Gecko</h3>
+### Notas para Opera
 
-<ul>
- <li>Antes do Firefox 6, o navegador poderia retornar um erro se o parâmetro  <code>useCapture não estive explicitamente cofigurado como</code> <font face="'Courier New', 'Andale Mono', monospace"><span style="line-height: normal;">false</span></font>. Antes do Gecko 9.0 {{ geckoRelease("9.0") }}, <code>addEventListener()</code> retornaria uma exception se o parâmetro do listener fosse <code>null</code>; agora o método retorna sem erros, mas sem fazer nada.</li>
-</ul>
+- Opera 12.00 fez com que o uso de `useCapture` seja opcional ([source](http://my.opera.com/ODIN/blog/2011/09/29/what-s-new-in-opera-development-snapshots-28-september-2011-edition)).
 
-<h3 id="Notas_para_Opera">Notas para Opera</h3>
+### Notas para WebKit
 
-<ul>
- <li>Opera 12.00 fez com que o uso de <code>useCapture</code> seja opcional (<a class="external" href="http://my.opera.com/ODIN/blog/2011/09/29/what-s-new-in-opera-development-snapshots-28-september-2011-edition">source</a>).</li>
-</ul>
+- Embora o WebKit tenha adicionado explicitamente "`[optional]`" ao parâmetro `useCapture` para Safari 5.1 e Chrome 13, isto já funcionava antes da mudança.
 
-<h3 id="Notas_para_WebKit">Notas para WebKit</h3>
+## Veja também
 
-<ul>
- <li>Embora o WebKit tenha adicionado explicitamente "<code>[optional]</code>" ao parâmetro <code>useCapture</code> para Safari 5.1 e Chrome 13, isto já funcionava antes da mudança.</li>
-</ul>
+{{ domxref("EventTarget.addEventListener()") }}.
 
-<h2 id="Veja_também">Veja também</h2>
+### Especificação
 
-<p>{{ domxref("EventTarget.addEventListener()") }}.</p>
+- [removeEventListener](http://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-EventTarget-removeEventListener)
 
-<h3 id="Specification" name="Specification">Especificação</h3>
+## Polyfill para oferecer suporte aos navegadores antigos
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-EventTarget-removeEventListener">removeEventListener </a></li>
-</ul>
+`addEventListener()` e `removeEventListener()` não estão presentes em navegadores antigos. Isto pode ser contornado se você inserir o código abaixo no início dos seus scripts, permitindo o uso de `addEventListener()` e `removeEventListener()` em implementações as quais não oferecem suporte nativo. Entretanto, este método não funciona para o Internet Explorer 7 ou versões anteriores, uma vez que não era possível extender o Element.prototype até o Internet Explorer 8.
 
-<h2 id="Polyfill_para_oferecer_suporte_aos_navegadores_antigos">Polyfill para oferecer suporte aos navegadores antigos</h2>
-
-<p><code>addEventListener()</code> e <code>removeEventListener()</code> não estão presentes em navegadores antigos. Isto pode ser contornado se você inserir o código abaixo no início dos seus scripts, permitindo o uso de <code>addEventListener()</code> e <code>removeEventListener()</code>  em implementações as quais não oferecem suporte nativo. Entretanto, este método não funciona para o Internet Explorer 7 ou versões anteriores, uma vez que não era possível extender o Element.prototype até o Internet Explorer 8.</p>
-
-<pre class="brush: js">if (!Element.prototype.addEventListener) {
+```js
+if (!Element.prototype.addEventListener) {
   var oListeners = {};
   function runListeners(oEvent) {
     if (!oEvent) { oEvent = window.event; }
-    for (var iLstId = 0, iElId = 0, oEvtListeners = oListeners[oEvent.type]; iElId &lt; oEvtListeners.aEls.length; iElId++) {
+    for (var iLstId = 0, iElId = 0, oEvtListeners = oListeners[oEvent.type]; iElId < oEvtListeners.aEls.length; iElId++) {
       if (oEvtListeners.aEls[iElId] === this) {
-        for (iLstId; iLstId &lt; oEvtListeners.aEvts[iElId].length; iLstId++) { oEvtListeners.aEvts[iElId][iLstId].call(this, oEvent); }
+        for (iLstId; iLstId < oEvtListeners.aEvts[iElId].length; iLstId++) { oEvtListeners.aEvts[iElId][iLstId].call(this, oEvent); }
         break;
       }
     }
@@ -100,7 +94,7 @@ div.removeEventListener('click', listener, false);
   Element.prototype.addEventListener = function (sEventType, fListener /*, useCapture (will be ignored!) */) {
     if (oListeners.hasOwnProperty(sEventType)) {
       var oEvtListeners = oListeners[sEventType];
-      for (var nElIdx = -1, iElId = 0; iElId &lt; oEvtListeners.aEls.length; iElId++) {
+      for (var nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
         if (oEvtListeners.aEls[iElId] === this) { nElIdx = iElId; break; }
       }
       if (nElIdx === -1) {
@@ -113,7 +107,7 @@ div.removeEventListener('click', listener, false);
           aElListeners.splice(0);
           this["on" + sEventType] = runListeners;
         }
-        for (var iLstId = 0; iLstId &lt; aElListeners.length; iLstId++) {
+        for (var iLstId = 0; iLstId < aElListeners.length; iLstId++) {
           if (aElListeners[iLstId] === fListener) { return; }
         }
         aElListeners.push(fListener);
@@ -126,13 +120,13 @@ div.removeEventListener('click', listener, false);
   Element.prototype.removeEventListener = function (sEventType, fListener /*, useCapture (will be ignored!) */) {
     if (!oListeners.hasOwnProperty(sEventType)) { return; }
     var oEvtListeners = oListeners[sEventType];
-    for (var nElIdx = -1, iElId = 0; iElId &lt; oEvtListeners.aEls.length; iElId++) {
+    for (var nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
       if (oEvtListeners.aEls[iElId] === this) { nElIdx = iElId; break; }
     }
     if (nElIdx === -1) { return; }
-    for (var iLstId = 0, aElListeners = oEvtListeners.aEvts[nElIdx]; iLstId &lt; aElListeners.length; iLstId++) {
+    for (var iLstId = 0, aElListeners = oEvtListeners.aEvts[nElIdx]; iLstId < aElListeners.length; iLstId++) {
       if (aElListeners[iLstId] === fListener) { aElListeners.splice(iLstId, 1); }
     }
   };
 }
-</pre>
+```

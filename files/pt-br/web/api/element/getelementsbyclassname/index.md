@@ -3,106 +3,102 @@ title: Element.getElementsByClassName()
 slug: Web/API/Element/getElementsByClassName
 translation_of: Web/API/Element/getElementsByClassName
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><span class="seoSummary">O método <code><strong>getElementsByClassName()</strong></code> da interface {{domxref("Element")}} retorna um {{domxref("HTMLCollection")}} atualizado simultaneamente que contém todos os elementos descendentes da classe ou das classes especificadas.</span></p>
+O método **`getElementsByClassName()`** da interface {{domxref("Element")}} retorna um {{domxref("HTMLCollection")}} atualizado simultaneamente que contém todos os elementos descendentes da classe ou das classes especificadas.
 
-<p>O método {{domxref("Document.getElementsByClassName", "getElementsByClassName()")}} da interface {{domxref("Document")}} funciona da mesma forma, exceto que atua em todo o documento, começando da raíz.</p>
+O método {{domxref("Document.getElementsByClassName", "getElementsByClassName()")}} da interface {{domxref("Document")}} funciona da mesma forma, exceto que atua em todo o documento, começando da raíz.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><var>var <em>elements</em></var> = <em>element</em>.getElementsByClassName(<em>names</em>);</pre>
+```
+var elements = element.getElementsByClassName(names);
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>names</code></dt>
- <dd>Uma {{domxref("DOMString")}} contendo um ou mais nomes de classes separados por espaço em branco.</dd>
-</dl>
+- `names`
+  - : Uma {{domxref("DOMString")}} contendo um ou mais nomes de classes separados por espaço em branco.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>Um {{domxref("HTMLCollection")}} que contém uma lista de elementos atualizada em tempo real com todos os elementos que são membros das classes especificadas em <code>names</code>.</p>
+Um {{domxref("HTMLCollection")}} que contém uma lista de elementos atualizada em tempo real com todos os elementos que são membros das classes especificadas em `names`.
 
-<h2 id="Notas_de_uso">Notas de uso</h2>
+## Notas de uso
 
-<p>Habitualmente, o conjunto de elementos retornado será atualizado simultaneamente com as mudanças feitas, refletindo no estado atual da árvore DOM, no elemento em que a função foi chamada. Assim que novos elementos que satisfazem as classes contidas em <code>names</code> são adicionados na subárvore, eles imediatamente aparecem no conjunto de elementos. Em um exemplo similar, se um elemento existente que não satisfaz nenhuma classe contida em <code>names</code> tem as suas classes ajustadas para que satisfaça, ele irá instantaneamente ser adicionado ao conjunto de elementos.</p>
+Habitualmente, o conjunto de elementos retornado será atualizado simultaneamente com as mudanças feitas, refletindo no estado atual da árvore DOM, no elemento em que a função foi chamada. Assim que novos elementos que satisfazem as classes contidas em `names` são adicionados na subárvore, eles imediatamente aparecem no conjunto de elementos. Em um exemplo similar, se um elemento existente que não satisfaz nenhuma classe contida em `names` tem as suas classes ajustadas para que satisfaça, ele irá instantaneamente ser adicionado ao conjunto de elementos.
 
-<p>O oposto disso também acontece; os elementos que não satisfazerem mais as classes contidas em <code>name</code> serão removidos instantaneamente do conjunto.</p>
+O oposto disso também acontece; os elementos que não satisfazerem mais as classes contidas em `name` serão removidos instantaneamente do conjunto.
 
-<div class="note">
-<p>No modo <a href="/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode">quirks</a>, o nome das classes são comparadas da forma case-insensitive. Caso contrário, considere case sensitive.</p>
-</div>
+> **Nota:** No modo [quirks](/pt-BR/docs/Web/HTML/Quirks_Mode_and_Standards_Mode), o nome das classes são comparadas da forma case-insensitive. Caso contrário, considere case sensitive.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_uma_única_classe">Usando uma única classe</h3>
+### Usando uma única classe
 
-<p>Para procurarmos elementos que incluem uma classe específica, nós apenas informamos o nome da classe ao chamar <code>getElementsByClassName()</code>:</p>
+Para procurarmos elementos que incluem uma classe específica, nós apenas informamos o nome da classe ao chamar `getElementsByClassName()`:
 
-<pre class="brush: js">element.getElementsByClassName('test');</pre>
+```js
+element.getElementsByClassName('test');
+```
 
-<p>Esse exemplo retorna todos os elementos que possuem a classe <code>test</code>, e que também são filhos do elemento que possui o <code>id</code> com valor <code>main</code>:</p>
+Esse exemplo retorna todos os elementos que possuem a classe `test`, e que também são filhos do elemento que possui o `id` com valor `main`:
 
-<pre class="brush: js">document.getElementById('main').getElementsByClassName('test');</pre>
+```js
+document.getElementById('main').getElementsByClassName('test');
+```
 
-<h3 id="Usando_várias_classes">Usando várias classes</h3>
+### Usando várias classes
 
-<p>Para retornar elementos que incluem as classes <code>red</code> and <code>test</code>:</p>
+Para retornar elementos que incluem as classes `red` and `test`:
 
-<pre class="brush: js">element.getElementsByClassName('red test');</pre>
+```js
+element.getElementsByClassName('red test');
+```
 
-<h3 id="Examinando_os_resultados">Examinando os resultados</h3>
+### Examinando os resultados
 
-<p>You can use either the {{domxref("HTMLCollection.item", "item()")}} method on the returned <code>HTMLCollection</code> or standard array syntax to examine individual elements in the collection. However<u><strong> the following code will not work</strong></u> as one might expect because <code>"matches" </code>will change as soon as any <code>"colorbox"</code> class is removed.</p>
+You can use either the {{domxref("HTMLCollection.item", "item()")}} method on the returned `HTMLCollection` or standard array syntax to examine individual elements in the collection. However\*\* **the following code will not work\*\*** as one might expect because `"matches" `will change as soon as any `"colorbox"` class is removed.
 
-<pre class="brush: js">var matches = element.getElementsByClassName('colorbox');
+```js
+var matches = element.getElementsByClassName('colorbox');
 
-for (var i=0; i&lt;matches.length; i++) {
+for (var i=0; i<matches.length; i++) {
   matches[i].classList.remove('colorbox');
   matches.item(i).classList.add('hueframe');
 }
-</pre>
+```
 
-<p>Instead, use another method, such as:</p>
+Instead, use another method, such as:
 
-<pre class="brush: js">var matches = element.getElementsByClassName('colorbox');
+```js
+var matches = element.getElementsByClassName('colorbox');
 
-while (matches.length &gt; 0) {
+while (matches.length > 0) {
   matches.item(0).classList.add('hueframe');
   matches[0].classList.remove('colorbox');
-}</pre>
+}
+```
 
-<p>This code finds descendant elements with the <code>"colorbox"</code> class, adds the class <code>"hueframe"</code>, by calling <code>item(0), </code>then removes <code>"colorbox" </code>(using array notation). Another element (if any are left) will then become <code>item(0)</code>.</p>
+This code finds descendant elements with the `"colorbox"` class, adds the class `"hueframe"`, by calling `item(0), `then removes `"colorbox" `(using array notation). Another element (if any are left) will then become `item(0)`.
 
-<h3 id="Filtering_the_results_using_array_methods">Filtering the results using array methods</h3>
+### Filtering the results using array methods
 
-<p>We can also use methods of {{jsxref("Array.prototype")}} on any {{ domxref("HTMLCollection") }} by passing the {{domxref("HTMLCollection")}} as the method's <code>this</code> value. Here we'll find all {{HTMLElement("div")}} elements that have a class of <code>test</code>:</p>
+We can also use methods of {{jsxref("Array.prototype")}} on any {{ domxref("HTMLCollection") }} by passing the {{domxref("HTMLCollection")}} as the method's `this` value. Here we'll find all {{HTMLElement("div")}} elements that have a class of `test`:
 
-<pre class="brush: js">var testElements = document.getElementsByClassName('test');
+```js
+var testElements = document.getElementsByClassName('test');
 var testDivs = Array.prototype.filter.call(testElements, function(testElement) {
   return testElement.nodeName === 'DIV';
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-element-getelementsbyclassname', 'Element.getElementsByClassName()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                            | Status                           | Comment            |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('DOM WHATWG', '#dom-element-getelementsbyclassname', 'Element.getElementsByClassName()')}} | {{Spec2('DOM WHATWG')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-
-
-<p>{{Compat("api.Element.getElementsByClassName")}}</p>
+{{Compat("api.Element.getElementsByClassName")}}

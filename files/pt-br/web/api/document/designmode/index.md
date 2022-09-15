@@ -3,54 +3,42 @@ title: Document.designMode
 slug: Web/API/Document/designMode
 translation_of: Web/API/Document/designMode
 ---
-<div>{{ ApiRef() }}</div>
+{{ ApiRef() }}
 
-<div> </div>
+## Sumário
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+`document.designMode` controla se o documento todo é editável. Valores validos são `"on"` e `"off"`. De acordo com a especificação, esta propriedade é por padrão `"off"`. Firefox segue este padrão. Nas versões anteriores do Chrome e IE o padrão é `"inherit"`. No IE6-10, o valor é capitalizado.
 
-<p><code>document.designMode</code> controla se o documento todo é editável. Valores validos são <code>"on"</code> e <code>"off"</code>. De acordo com a especificação, esta propriedade é por padrão <code>"off"</code>. Firefox segue este padrão. Nas versões anteriores do Chrome e IE o padrão é <code>"inherit"</code>. No IE6-10, o valor é capitalizado.</p>
+## Sintaxe
 
-<h2 id="Sintaxe">Sintaxe</h2>
-
-<pre class="brush: js">var mode = document.designMode;
+```js
+var mode = document.designMode;
 document.designMode = "on";
-document.designMode = "off";</pre>
+document.designMode = "off";
+```
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<p>Cria um documento {{HTMLElement("iframe")}} editável:</p>
+Cria um documento {{HTMLElement("iframe")}} editável:
 
-<pre>iframe_node.contentDocument.designMode = "on";
-</pre>
+```
+iframe_node.contentDocument.designMode = "on";
+```
 
-<h2 id="Especificação">Especificação</h2>
+## Especificação
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#making-entire-documents-editable:-the-designmode-idl-attribute', 'designMode')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                                    | Status                           | Comment             |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
+| {{SpecName('HTML WHATWG', '#making-entire-documents-editable:-the-designmode-idl-attribute', 'designMode')}} | {{Spec2('HTML WHATWG')}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Document.designMode")}}
 
-<h2 id="See_also" name="See_also"> </h2>
+##
 
-<h2 id="See_also" name="See_also">Veja também:</h2>
+## Veja também:
 
-<ul>
- <li><a href="/en-US/docs/Rich-Text_Editing_in_Mozilla">Rich-Text Editing in Mozilla</a></li>
- <li>{{domxref("HTMLElement.contentEditable")}}</li>
- <li><a href="https://msdn.microsoft.com/en-us/library/ms533720(v=vs.85).aspx">designMode property</a> on MSDN</li>
-</ul>
+- [Rich-Text Editing in Mozilla](/pt-BR/docs/Rich-Text_Editing_in_Mozilla)
+- {{domxref("HTMLElement.contentEditable")}}
+- [designMode property](<https://msdn.microsoft.com/en-us/library/ms533720(v=vs.85).aspx>) on MSDN

@@ -9,15 +9,16 @@ tags:
   - Propriedade
 translation_of: Web/API/Event/currentTarget
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>Identifica o alvo atual para o evento quando o event percorre o DOM. O currentTarget sempre se refere ao elemento associado ao event handler, ao invés do event.target que identifica o elemento ao qual o evento ocorreu.</p>
+Identifica o alvo atual para o evento quando o event percorre o DOM. O currentTarget sempre se refere ao elemento associado ao event handler, ao invés do event.target que identifica o elemento ao qual o evento ocorreu.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p><code>event.currentTarget</code> é bom para ser usado quando nós queremos associar o mesmo event handler para vários elementos.</p>
+`event.currentTarget` é bom para ser usado quando nós queremos associar o mesmo event handler para vários elementos.
 
-<pre class="brush: js">function hide(e){
+```js
+function hide(e){
   e.currentTarget.style.visibility = "hidden";
   console.log(e.currentTarget);
   // Quando essa função é usada como um event
@@ -26,52 +27,29 @@ translation_of: Web/API/Event/currentTarget
 
 var ps = document.getElementsByTagName('p');
 
-for(var i = 0; i &lt; ps.length; i++){
-  // console: print the clicked &lt;p&gt; element
+for(var i = 0; i < ps.length; i++){
+  // console: print the clicked <p> element
   ps[i].addEventListener('click', hide, false);
 }
-// console: print &lt;body&gt;
+// console: print <body>
 document.body.addEventListener('click', hide, false);
 
 // Clique e faça os parágrafos desaparecerem
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Especificação</th>
-   <th>Status</th>
-   <th>Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#dom-event-currenttarget", "Event.currentTarget")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#dom-event-currenttarget", "Event.currentTarget")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM3 Events", "#dfn-current-event-target", "current event target")}}</td>
-   <td>{{Spec2("DOM3 Events")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Events", "#Events-Event-currentTarget", "Event.currentTarget")}}</td>
-   <td>{{Spec2("DOM2 Events")}}</td>
-   <td>Definição incial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                | Status                           | Comentário       |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------- |
+| {{SpecName("DOM WHATWG", "#dom-event-currenttarget", "Event.currentTarget")}}     | {{Spec2("DOM WHATWG")}} |                  |
+| {{SpecName("DOM4", "#dom-event-currenttarget", "Event.currentTarget")}}             | {{Spec2("DOM4")}}         |                  |
+| {{SpecName("DOM3 Events", "#dfn-current-event-target", "current event target")}} | {{Spec2("DOM3 Events")}} |                  |
+| {{SpecName("DOM2 Events", "#Events-Event-currentTarget", "Event.currentTarget")}} | {{Spec2("DOM2 Events")}} | Definição incial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Event.currentTarget")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<p><a href="/en-US/docs/Web/API/Event/Comparison_of_Event_Targets">Comparativo dos Event Targets</a></p>
+[Comparativo dos Event Targets](/pt-BR/docs/Web/API/Event/Comparison_of_Event_Targets)

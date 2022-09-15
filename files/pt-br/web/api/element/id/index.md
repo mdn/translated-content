@@ -9,63 +9,35 @@ tags:
   - Reference
 translation_of: Web/API/Element/id
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<div> </div>
+A propriedade **`Element.id`** representa o identificador do elemento, refletindo no atributo global **[id](/pt-BR/docs/Web/HTML/Global_attributes/id)**.
 
-<p>A propriedade <strong><code>Element.id</code></strong> representa o identificador do elemento, refletindo no atributo global <strong><a href="/pt-BR/docs/Web/HTML/Global_attributes/id">id</a></strong>.</p>
+O ID precisa ser único no documento, e geralmente é utilizado para obter o elemento usando {{domxref("document.getElementById", "getElementById")}}.. Outro uso comum de `id` é utilizar o [ID como um seletor](/pt-BR/docs/Web/CSS/ID_selectors "Web/CSS/ID_selectors") ao estilizar o documento com CSS.
 
-<p>O ID precisa ser único no documento, e geralmente é utilizado para obter o elemento usando {{domxref("document.getElementById", "getElementById")}}.. Outro uso comum de <code>id</code> é utilizar o <a href="/en-US/docs/Web/CSS/ID_selectors" title="Web/CSS/ID_selectors">ID como um seletor</a> ao estilizar o documento com CSS.</p>
+> **Nota:** IDs são case-sensitive, mas você não deve criar IDs cuja única diferença nos nomes sejam letras maiúsculas/minúsculas (veja [Case sensitivity in class and id names](/pt-BR/docs/Case_Sensitivity_in_class_and_id_Names "Case_Sensitivity_in_class_and_id_Names")).
 
-<div class="note">
-<p><strong>Nota</strong>: IDs são case-sensitive, mas você não deve criar IDs cuja única diferença nos nomes sejam letras maiúsculas/minúsculas (veja <a href="/en-US/docs/Case_Sensitivity_in_class_and_id_Names" title="Case_Sensitivity_in_class_and_id_Names">Case sensitivity in class and id names</a>).</p>
-</div>
+## Sintaxe
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+```
+var idStr = element.id; // Retorna o id.
+element.id = idStr; // Insere o id
+```
 
-<pre class="syntaxbox"><em>var idStr</em> = <em>element</em>.id; // Retorna o id.
-<em>element</em>.id = <em>idStr; // Insere o id</em>
-</pre>
+- `idStr` é o identificador do elemento.
 
-<ul>
- <li><code>idStr</code> é o identificador do elemento.</li>
-</ul>
+## Especificações
 
-<h2 id="Specification" name="Specification">Especificações</h2>
+| Especificação                                                                    | Status                           | Comentário                                            |
+| -------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------- |
+| {{SpecName('DOM WHATWG', '#dom-element-id', 'id')}}             | {{Spec2('DOM WHATWG')}} | Sem alteração desde {{SpecName('DOM2 HTML')}}. |
+| {{SpecName('DOM2 HTML', 'html.html#ID-63534901', 'id')}}     | {{Spec2('DOM2 HTML')}}     | Sem alteração desde {{SpecName('DOM1')}}.     |
+| {{SpecName('DOM1', 'level-one-html.html#ID-63534901', 'id')}} | {{Spec2('DOM1')}}         | Definição inicial.                                    |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-element-id', 'id')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Sem alteração desde {{SpecName('DOM2 HTML')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-63534901', 'id')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>Sem alteração desde {{SpecName('DOM1')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-63534901', 'id')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Element.id")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>O atributo global <a href="/pt-BR/docs/Web/HTML/Global_attributes/id"><strong>id</strong></a>.</li>
-</ul>
+- O atributo global [**id**](/pt-BR/docs/Web/HTML/Global_attributes/id).

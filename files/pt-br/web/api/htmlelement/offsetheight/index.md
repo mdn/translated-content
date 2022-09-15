@@ -3,68 +3,48 @@ title: HTMLElement.offsetHeight
 slug: Web/API/HTMLElement/offsetHeight
 translation_of: Web/API/HTMLElement/offsetHeight
 ---
-<p>{{ APIRef("HTML DOM") }}</p>
+{{ APIRef("HTML DOM") }}
 
-<p>A propriedade <strong><code>HTMLElement.offsetHeight</code></strong> é somente leitura e retorna um valor do tipo inteiro a altura de um elemento incluindo  padding-top+padding-bottom+border-top+border-bottom.</p>
+A propriedade **`HTMLElement.offsetHeight`** é somente leitura e retorna um valor do tipo inteiro a altura de um elemento incluindo padding-top+padding-bottom+border-top+border-bottom.
 
-<p>Typically, an element's <code>offsetHeight</code> is a measurement in pixels of the element's CSS height, including border, padding and the element's horizontal scrollbar (if present, if rendered).</p>
+Typically, an element's `offsetHeight` is a measurement in pixels of the element's CSS height, including border, padding and the element's horizontal scrollbar (if present, if rendered).
 
-<p>For the document body object, the measurement includes total linear content height instead of the element's CSS height. Floated elements extending below other linear content are ignored.</p>
+For the document body object, the measurement includes total linear content height instead of the element's CSS height. Floated elements extending below other linear content are ignored.
 
-<div class="note">
-<p>This property will round the value to an integer. If you need a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.</p>
-</div>
+> **Nota:** This property will round the value to an integer. If you need a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.
 
-<h2 id="Syntax_and_values" name="Syntax_and_values">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <em>intElemOffsetHeight</em> = <em>element</em>.offsetHeight;</pre>
+```
+var intElemOffsetHeight = element.offsetHeight;
+```
 
-<p><em>intElemOffsetHeight</em> is a variable storing an integer corresponding to the offsetHeight pixel value of the element. The offsetHeight property is read-only.</p>
+_intElemOffsetHeight_ is a variable storing an integer corresponding to the offsetHeight pixel value of the element. The offsetHeight property is read-only.
 
-<h2 id="Example" name="Example">Example</h2>
+## Example
 
-<p> </p>
+![Image:Dimensions-offset.png](/@api/deki/files/186/=Dimensions-offset.png)
 
-<p>              <img alt="Image:Dimensions-offset.png" class="internal" src="/@api/deki/files/186/=Dimensions-offset.png"></p>
+The example image above shows a scrollbar and an offsetHeight which fits on the window. However, non-scrollable elements may have large offsetHeight values, much larger than the visible content. These elements are typically contained within scrollable elements; consequently these non-scrollable elements may be completely or partly invisible, depending on the scrollTop setting of the scrollable container.
 
+## Specification
 
-<p>The example image above shows a scrollbar and an offsetHeight which fits on the window. However, non-scrollable elements may have large offsetHeight values, much larger than the visible content. These elements are typically contained within scrollable elements; consequently these non-scrollable elements may be completely or partly invisible, depending on the scrollTop setting of the scrollable container.</p>
+| Specification                                                                                    | Status                           | Comment |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| {{SpecName('CSSOM View', '#dom-htmlelement-offsetHeight', 'offsetLeft')}} | {{Spec2('CSSOM View')}} |         |
 
-<p> </p>
+### Notes
 
-<h2 id="Specification" name="Specification">Specification</h2>
+`offsetHeight` is a property of the DHTML object model which was first introduced by MSIE. It is sometimes referred to as an element's physical/graphical dimensions, or an element's border-box height.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#dom-htmlelement-offsetHeight', 'offsetLeft')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id="Notes" name="Notes">Notes</h3>
-
-<p><code>offsetHeight</code> is a property of the DHTML object model which was first introduced by MSIE. It is sometimes referred to as an element's physical/graphical dimensions, or an element's border-box height.</p>
-
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.HTMLElement.offsetHeight")}}
 
-<h2 id="See_Also" name="See_Also">See Also</h2>
+## See Also
 
-<ul>
- <li>{{domxref("Element.clientHeight")}}</li>
- <li>{{domxref("Element.scrollHeight")}}</li>
- <li>{{domxref("HTMLElement.offsetWidth")}}</li>
- <li><a href="/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements" title="en/Determining_the_dimensions_of_elements">Determining the dimensions of elements</a></li>
- <li><a href="https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)">MSDN: Measuring Element Dimension and Location</a></li>
-</ul>
+- {{domxref("Element.clientHeight")}}
+- {{domxref("Element.scrollHeight")}}
+- {{domxref("HTMLElement.offsetWidth")}}
+- [Determining the dimensions of elements](/pt-BR/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements "en/Determining_the_dimensions_of_elements")
+- [MSDN: Measuring Element Dimension and Location](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)

@@ -9,41 +9,33 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/oncontextmenu
 original_slug: Web/API/GlobalEventHandlers/oncontextmenu
 ---
-<div>{{ ApiRef("HTML DOM") }}</div>
+{{ ApiRef("HTML DOM") }}
 
-<p>Um uma propriedade do manipulador de eventos da janela para eventos com o botão direito do mouse. A menos que o comportamento padrão do navegador seja bloqueado (veja exemplos abaixo sobre como fazer isso), o menu de contexto do navegador irá ser ativado (apesar do IE8 ter um bug com ele e não irá ativar o menu de contexto se o manipulador de eventos contextmenu for definido). Note que este evento irá acontecer com qualquer evento não-desabilitado do botão direito do mouse e não depende de um elemento que contenha o <a href="http://hacks.mozilla.org/2011/11/html5-context-menus-in-firefox-screencast-and-code/">atributo "contextmenu"</a>.</p>
+Um uma propriedade do manipulador de eventos da janela para eventos com o botão direito do mouse. A menos que o comportamento padrão do navegador seja bloqueado (veja exemplos abaixo sobre como fazer isso), o menu de contexto do navegador irá ser ativado (apesar do IE8 ter um bug com ele e não irá ativar o menu de contexto se o manipulador de eventos contextmenu for definido). Note que este evento irá acontecer com qualquer evento não-desabilitado do botão direito do mouse e não depende de um elemento que contenha o [atributo "contextmenu"](http://hacks.mozilla.org/2011/11/html5-context-menus-in-firefox-screencast-and-code/).
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">window.oncontextmenu = funcRef;
-//funcRef se refere à função a ser chamada</pre>
+```
+window.oncontextmenu = funcRef;
+//funcRef se refere à função a ser chamada
+```
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<p>Os exemplos abaixo irão desabilitar o clique com botão direito na página:</p>
+Os exemplos abaixo irão desabilitar o clique com botão direito na página:
 
-<pre class="brush:js;">document.oncontextmenu = function () { // Usa o document ao invés de window para compatibilidade com o IE8
+```js
+document.oncontextmenu = function () { // Usa o document ao invés de window para compatibilidade com o IE8
    return false;
 };
 
-window.addEventListener('contextmenu', function (e) { // Não compatível com IE &lt; 9
+window.addEventListener('contextmenu', function (e) { // Não compatível com IE < 9
     e.preventDefault();
 }, false);
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-oncontextmenu','oncontextmenu')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                    | Status                           | Comentário |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG','webappapis.html#handler-oncontextmenu','oncontextmenu')}} | {{Spec2('HTML WHATWG')}} |            |

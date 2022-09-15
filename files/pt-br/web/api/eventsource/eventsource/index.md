@@ -9,30 +9,30 @@ tags:
   - Referencia
 translation_of: Web/API/EventSource/EventSource
 ---
-<div>{{APIRef('WebSockets API')}}</div>
+{{APIRef('WebSockets API')}}
 
-<p>O construtor <code><strong>EventSource</strong></code><strong><code>()</code></strong> retorna uma nova {{domxref("EventSource")}}, que representa um recurso remoto.</p>
+O construtor **`EventSource`\*\***`()`\*\* retorna uma nova {{domxref("EventSource")}}, que representa um recurso remoto.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">eventSource = new EventSource(<em>url</em>, <em>configuration</em>);</pre>
+```
+eventSource = new EventSource(url, configuration);
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>url</code></dt>
- <dd>Uma {{domxref("USVString")}} que representa a localização de um recurso remoto servindo os eventos/mensagens.</dd>
- <dt><code>configuration</code> {{optional_inline}}</dt>
- <dd>Fornece opções para configurar a nova conexão. Os atributos possíveis são:
- <ul>
-  <li><code>withCredentials</code>, valor padrão <code>false</code>, indicando se o CORS deve ser instruído a <code>incluir</code> credenciais.</li>
- </ul>
- </dd>
-</dl>
+- `url`
+  - : Uma {{domxref("USVString")}} que representa a localização de um recurso remoto servindo os eventos/mensagens.
+- `configuration` {{optional_inline}}
 
-<h2 id="Exemplos">Exemplos</h2>
+  - : Fornece opções para configurar a nova conexão. Os atributos possíveis são:
 
-<pre class="brush: js">var evtSource = new EventSource('sse.php');
+    - `withCredentials`, valor padrão `false`, indicando se o CORS deve ser instruído a `incluir` credenciais.
+
+## Exemplos
+
+```js
+var evtSource = new EventSource('sse.php');
 var eventList = document.querySelector('ul');
 
 evtSource.onmessage = function(e) {
@@ -40,38 +40,21 @@ evtSource.onmessage = function(e) {
 
   newElement.textContent = "message: " + e.data;
   eventList.appendChild(newElement);
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Nota</strong>: Você pode encontrar um exemplo completo no GitHub — veja <a href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">Simple SSE demo using PHP.</a></p>
-</div>
+> **Nota:** Você pode encontrar um exemplo completo no GitHub — veja [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "comms.html#dom-eventsource", "EventSource()")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                           | Comment           |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
+| {{SpecName('HTML WHATWG', "comms.html#dom-eventsource", "EventSource()")}} | {{Spec2('HTML WHATWG')}} | Definição inicial |
 
-<ul>
-</ul>
-
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.EventSource.EventSource")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("EventSource")}}</li>
-</ul>
+- {{domxref("EventSource")}}

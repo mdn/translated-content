@@ -3,80 +3,56 @@ title: Node.baseURI
 slug: Web/API/Node/baseURI
 translation_of: Web/API/Node/baseURI
 ---
-<div>
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<h2 id="Resumo">Resumo</h2>
-</div>
+## Resumo
 
-<p>A propriedade somente leitura <code><strong>Node.baseURI</strong></code> retorna a URL base absoluta de um nó.</p>
+A propriedade somente leitura **`Node.baseURI`** retorna a URL base absoluta de um nó.
 
-<p>A URL base é usada para <a href="http://developers.whatwg.org/urls.html#resolving-urls">resolver </a>URLs relativas quando o navegador precisa obter uma URL absoluta, por exemplo, quando processa o atributo <code>src</code> do elemento HTML  {{HTMLElement("img")}} ou o atributo <code><a href="/pt-BR/docs/XLink">xlink</a>:href</code> do XML.</p>
+A URL base é usada para [resolver ](http://developers.whatwg.org/urls.html#resolving-urls)URLs relativas quando o navegador precisa obter uma URL absoluta, por exemplo, quando processa o atributo `src` do elemento HTML {{HTMLElement("img")}} ou o atributo `xlink:href` do XML.
 
-<p>No caso comum, a URL base é simplesmente a localização do documento, mas ela pode ser afetada por vários fatores, incluindo o elemento {{HTMLElement("base")}} em HTML e o atributo <a href="/pt-BR/docs/XML/xml:base">xml:base</a> em XML.</p>
+No caso comum, a URL base é simplesmente a localização do documento, mas ela pode ser afetada por vários fatores, incluindo o elemento {{HTMLElement("base")}} em HTML e o atributo [xml:base](/pt-BR/docs/XML/xml:base) em XML.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var <em>baseURI</em> = <em>node</em>.baseURI;
-</pre>
+```
+var baseURI = node.baseURI;
+```
 
-<ul>
- <li><code>baseURI</code> é uma {{ domxref("DOMString") }} que representa a URL base do {{domxref("Node")}} especificado. Pode ser <code>null</code> caso não consiga obter uma URL absoluta.</li>
- <li><code><em>node</em>.baseURI</code> é somente leitura.</li>
- <li><code><em>node</em>.baseURI</code> pode mudar com o tempo (ver abaixo).</li>
-</ul>
+- `baseURI` é uma {{ domxref("DOMString") }} que representa a URL base do {{domxref("Node")}} especificado. Pode ser `null` caso não consiga obter uma URL absoluta.
+- `node.baseURI` é somente leitura.
+- `node.baseURI` pode mudar com o tempo (ver abaixo).
 
-<h2 id="Details" name="Details">Detalhes</h2>
+## Detalhes
 
-<h3 id="A_URL_base_de_um_documento">A URL base de um documento</h3>
+### A URL base de um documento
 
-<p>É a URL base de um <em>documento</em> padrão ao endereço do documento ( como exibido pelo navegador e disponível em {{domxref("window.location")}} ), mas pode mudar o padrão:</p>
+É a URL base de um _documento_ padrão ao endereço do documento ( como exibido pelo navegador e disponível em {{domxref("window.location")}} ), mas pode mudar o padrão:
 
-<ul>
- <li>Quando uma tag HTML {{HTMLElement("base")}} é encontrada no documento;</li>
- <li>Quando esse é um novo documento creado dinamicamente.</li>
-</ul>
+- Quando uma tag HTML {{HTMLElement("base")}} é encontrada no documento;
+- Quando esse é um novo documento creado dinamicamente.
 
-<p>Veja a <a href="http://developers.whatwg.org/urls.html#base-urls">seção URLs base do padrão HTML</a> para mais detalhes.</p>
+Veja a [seção URLs base do padrão HTML](http://developers.whatwg.org/urls.html#base-urls) para mais detalhes.
 
-<p>Você pode usar <code><em>{{domxref("document")}}</em>.baseURI</code>  para obter a URL base de um documento. Note que a obtenção da URL base para um documento pode retornar diferentes URLs ao longo do tempo se as tags {{HTMLElement("base")}} ou a localização do documento mudarem.</p>
+Você pode usar `{{domxref("document")}}.baseURI` para obter a URL base de um documento. Note que a obtenção da URL base para um documento pode retornar diferentes URLs ao longo do tempo se as tags {{HTMLElement("base")}} ou a localização do documento mudarem.
 
-<h3 id="A_URL_base_de_um_elemento">A URL base de um elemento</h3>
+### A URL base de um elemento
 
-<p>A URL base de um elemento em HTML é, normalmente,  igual  a URL base do documento onde o nó está.</p>
+A URL base de um elemento em HTML é, normalmente, igual a URL base do documento onde o nó está.
 
-<p>Se o documento contém atributos <code><a href="/en-US/docs/XML/xml:base">xml:base</a></code> ( que você não deve fazer em documento HTML), o <code><em>element</em>.baseURI</code> recebe os atributos <code>xml:base dos elementos pai </code>into account when computing the base URL. Veja <a href="/en-US/docs/XML/xml:base">xml:base</a> para mais detalhes.</p>
+Se o documento contém atributos [`xml:base`](/en-US/docs/XML/xml:base) ( que você não deve fazer em documento HTML), o `element.baseURI` recebe os atributos `xml:base dos elementos pai `into account when computing the base URL. Veja [xml:base](/pt-BR/docs/XML/xml:base) para mais detalhes.
 
-<p>Você pode usar <code><em>{{domxref("element")}}</em>.baseURI</code> para obter a URL base de um elemento.</p>
+Você pode usar `{{domxref("element")}}.baseURI` para obter a URL base de um elemento.
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName( "DOM WHATWG", "#dom-node-baseuri", "baseURI" ) }}</td>
-   <td>{{ Spec2( "DOM WHATWG" ) }}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{ SpecName( "DOM3 Core", "core.html#Node3-baseURI", "baseURI" ) }}</td>
-   <td>{{ Spec2( "DOM3 Core" ) }}</td>
-   <td>Introduzida</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                            | Status                               | Comentário  |
+| ---------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
+| {{ SpecName( "DOM WHATWG", "#dom-node-baseuri", "baseURI" ) }}     | {{ Spec2( "DOM WHATWG" ) }} |             |
+| {{ SpecName( "DOM3 Core", "core.html#Node3-baseURI", "baseURI" ) }} | {{ Spec2( "DOM3 Core" ) }} | Introduzida |
 
-<h2 id="Ver_também">Ver também</h2>
+## Ver também
 
-<ul>
- <li>Elemento {{HTMLElement("base")}} (HTML)</li>
- <li>Atributo <code><a href="/pt-BR/docs/XML/xml:base">xml:base</a></code> (Documentos XML)</li>
- <li>{{domxref("Node.baseURIObject")}} – uma variante desta API para complementos da Mozilla e código interno. Retorna a URL base como uma <code>nsIURI</code></li>
-</ul>
+- Elemento {{HTMLElement("base")}} (HTML)
+- Atributo [`xml:base`](/pt-BR/docs/XML/xml:base) (Documentos XML)
+- {{domxref("Node.baseURIObject")}} – uma variante desta API para complementos da Mozilla e código interno. Retorna a URL base como uma `nsIURI`

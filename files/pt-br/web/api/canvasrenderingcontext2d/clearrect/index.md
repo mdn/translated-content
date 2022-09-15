@@ -9,46 +9,47 @@ tags:
   - metodo
 translation_of: Web/API/CanvasRenderingContext2D/clearRect
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>O método <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.clearRect()</code></strong> da API Canvas 2D limpa todos os pixels de um retângulo definido na posição <em>(x, y)</em> e tamanho (<em>width</em> (largura)<em>, height </em>(altura)) para uma cor preta transparente, apagando algum conteúdo anterior.</p>
+O método **`CanvasRenderingContext2D`\*\***`.clearRect()`\*\* da API Canvas 2D limpa todos os pixels de um retângulo definido na posição _(x, y)_ e tamanho (_width_ (largura)_, height_ (altura)) para uma cor preta transparente, apagando algum conteúdo anterior.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">void <var><em>ctx</em>.clearRect(x, y, width, height);</var>
-</pre>
+```
+void ctx.clearRect(x, y, width, height);
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>x</code></dt>
- <dd>O valor da coordenada x para o ponto inicial do retângulo.</dd>
- <dt><code>y</code></dt>
- <dd>O valor da coordenada y para o ponto inicial do retângulo.</dd>
- <dt><code>width</code></dt>
- <dd>A largura do retângulo.</dd>
- <dt><code>height</code></dt>
- <dd>A altura do retângulo.</dd>
-</dl>
+- `x`
+  - : O valor da coordenada x para o ponto inicial do retângulo.
+- `y`
+  - : O valor da coordenada y para o ponto inicial do retângulo.
+- `width`
+  - : A largura do retângulo.
+- `height`
+  - : A altura do retângulo.
 
-<h2 id="Notas_de_uso">Notas de uso</h2>
+## Notas de uso
 
-<p>Um problema comum com <code>clearRect</code> que pode acontecer, é que pode não funcionar corretamente, caso não seja usada alguma <a href="https://developer.mozilla.org/pt_BR/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#Drawing_paths">propriedade de <em>path</em></a>. Não esqueça de usar {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} antes de começar um novo frame depois de chamar <code>clearRect</code>.</p>
+Um problema comum com `clearRect` que pode acontecer, é que pode não funcionar corretamente, caso não seja usada alguma [propriedade de _path_](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#Drawing_paths). Não esqueça de usar {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} antes de começar um novo frame depois de chamar `clearRect`.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_o_método_clearRect">Usando o método <code>clearRect</code></h3>
+### Usando o método `clearRect`
 
-<p>Isto é só um simples trecho de código que usa o método <code>clearRect</code>.</p>
+Isto é só um simples trecho de código que usa o método `clearRect`.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 ctx.beginPath();
@@ -62,19 +63,17 @@ ctx.clearRect(10, 10, 100, 100);
 
 // clear the whole canvas
 // ctx.clearRect(0, 0, canvas.width, canvas.height);
-</pre>
+```
 
-<p>Edite o código abaixo e veja as alterações instantâneas no canvas:</p>
+Edite o código abaixo e veja as alterações instantâneas no canvas:
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code" style="height:140px;"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code" style="height:140px;">
 ctx.beginPath();
 ctx.moveTo(20,20);
 ctx.lineTo(200,20);
@@ -82,10 +81,11 @@ ctx.lineTo(120,120);
 ctx.closePath(); // draws last line of the triangle
 ctx.stroke();
 
-ctx.clearRect(10, 10, 100, 100);&lt;/textarea&gt;
-</pre>
+ctx.clearRect(10, 10, 100, 100);</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -108,36 +108,22 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 400) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 400) }}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-clearrect", "CanvasRenderingContext2D.clearRect")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                                    | Estado                           | Comentário |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-clearrect", "CanvasRenderingContext2D.clearRect")}} | {{Spec2('HTML WHATWG')}} |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.CanvasRenderingContext2D.clearRect")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>A definição da interface {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.fillRect()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.strokeRect()")}}</li>
-</ul>
+- A definição da interface {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.fillRect()")}}
+- {{domxref("CanvasRenderingContext2D.strokeRect()")}}

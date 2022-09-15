@@ -6,65 +6,49 @@ tags:
   - metodo
 translation_of: Web/API/XMLHttpRequest/open
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p>O {{domxref("XMLHttpRequest")}} método<code><strong>open()</strong></code> inicializa uma nova requisição, ou reinicializa uma requisição já existente.</p>
+O {{domxref("XMLHttpRequest")}} método**`open()`** inicializa uma nova requisição, ou reinicializa uma requisição já existente.
 
-<div class="note"><strong>Note:</strong> Chamar este método para uma requisição já ativada  (uma que <code>open()</code> já tenha sido chamada) é equivalente a chamar {{domxref("XMLHttpRequest.abort", "abort()")}}.</div>
+> **Nota:** Chamar este método para uma requisição já ativada (uma que `open()` já tenha sido chamada) é equivalente a chamar {{domxref("XMLHttpRequest.abort", "abort()")}}.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><em>XMLHttpRequest</em>.open(<var>method</var>,<var> url</var>)
-<em>XMLHttpRequest</em>.open(<var>method</var>,<var> url</var>,<var> async)</var>
-<em>XMLHttpRequest</em>.open(<var>method</var>,<var> url</var>,<var> async</var>,<var> user</var>)
-<em>XMLHttpRequest</em>.open(<var>method</var>,<var> url</var>,<var> async</var>,<var> user</var>,<var> password</var>)
-</pre>
+```
+XMLHttpRequest.open(method, url)
+XMLHttpRequest.open(method, url, async)
+XMLHttpRequest.open(method, url, async, user)
+XMLHttpRequest.open(method, url, async, user, password)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>method</code></dt>
- <dd>O <a href="/en-US/docs/Web/HTTP/Methods">método de requisição HTTP</a> para ser usado, como <code>"GET"</code>, <code>"POST"</code>, <code>"PUT"</code>, <code>"DELETE"</code>, etc. Ignorado para URLs não-HTTP(S).</dd>
- <dt><code>url</code></dt>
- <dd>Um {{domxref("DOMString")}} representando a URL para enviar a requisição.</dd>
- <dt><code>async</code> {{optional_inline}}</dt>
- <dd>Parâmetro booleano opcional, valor padrão <code>true</code>, indica quando realizar a operação de forma assíncrona. Se este valor for <code>false</code>, o método <code>send()</code> não retorna nada até que a resposta da requisição seja recebida. Se o valor for <code>true</code>, notificação de uma transação concluída é provida usando event listeners. Isso <em>deve</em> ser verdadeiro se o atributo <code>multipart</code> é <code>true</code>, ou uma exceção será lançada.
- <div class="note"><strong>Nota:</strong> Requisições Síncronas no thread principal podem ser facilmente disruptivas para a experiência de usuário e devem ser evitadas; de fato, muitos navegadores descontinuaram inteiramente o suporte para XHR síncrono no thread principal. Requisições síncronas são permitidas nos {{domxref("Worker")}}s.</div>
- </dd>
- <dt><code>user</code> {{optional_inline}}</dt>
- <dd>O nome de usuário opcional para ser usado em autenticação; por padrão, isso é o valor <code>null</code>.</dd>
- <dt><code>password</code> {{optional_inline}}</dt>
- <dd>A senha de usuário opcional para ser usado em autenticação; por padrão, isso é o valor <code>null</code>.</dd>
-</dl>
+- `method`
+  - : O [método de requisição HTTP](/pt-BR/docs/Web/HTTP/Methods) para ser usado, como `"GET"`, `"POST"`, `"PUT"`, `"DELETE"`, etc. Ignorado para URLs não-HTTP(S).
+- `url`
+  - : Um {{domxref("DOMString")}} representando a URL para enviar a requisição.
+- `async` {{optional_inline}}
 
-<h2 id="Especificações">Especificações</h2>
+  - : Parâmetro booleano opcional, valor padrão `true`, indica quando realizar a operação de forma assíncrona. Se este valor for `false`, o método `send()` não retorna nada até que a resposta da requisição seja recebida. Se o valor for `true`, notificação de uma transação concluída é provida usando event listeners. Isso _deve_ ser verdadeiro se o atributo `multipart` é `true`, ou uma exceção será lançada.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#the-open()-method', 'open()')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>
-    <p>Padrão WHATWG</p>
-   </td>
-  </tr>
- </tbody>
-</table>
+    > **Nota:** Requisições Síncronas no thread principal podem ser facilmente disruptivas para a experiência de usuário e devem ser evitadas; de fato, muitos navegadores descontinuaram inteiramente o suporte para XHR síncrono no thread principal. Requisições síncronas são permitidas nos {{domxref("Worker")}}s.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+- `user` {{optional_inline}}
+  - : O nome de usuário opcional para ser usado em autenticação; por padrão, isso é o valor `null`.
+- `password` {{optional_inline}}
+  - : A senha de usuário opcional para ser usado em autenticação; por padrão, isso é o valor `null`.
 
-<p>{{Compat("api.XMLHttpRequest.open")}}</p>
+## Especificações
 
-<h2 id="Veja_também">Veja também</h2>
+| Especificação                                                                        | Status                               | Comentário    |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- |
+| {{SpecName('XMLHttpRequest', '#the-open()-method', 'open()')}} | {{Spec2('XMLHttpRequest')}} | Padrão WHATWG |
 
-<ul>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Usando XMLHttpRequest</a></li>
- <li>Métodos Relacionados ao {{domxref("XMLHttpRequest")}}: {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}},{{domxref("XMLHttpRequest.send", "send()")}}, e {{domxref("XMLHttpRequest.abort", "abort()")}}</li>
-</ul>
+## Compatibilidade com navegadores
+
+{{Compat("api.XMLHttpRequest.open")}}
+
+## Veja também
+
+- [Usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- Métodos Relacionados ao {{domxref("XMLHttpRequest")}}: {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}},{{domxref("XMLHttpRequest.send", "send()")}}, e {{domxref("XMLHttpRequest.abort", "abort()")}}

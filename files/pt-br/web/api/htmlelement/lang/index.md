@@ -3,49 +3,37 @@ title: HTMLElement.lang
 slug: Web/API/HTMLElement/lang
 translation_of: Web/API/HTMLElement/lang
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <code><strong>HTMLElement.lang</strong></code> property gets or sets the base language of an element's attribute values and text content.</p>
+The **`HTMLElement.lang`** property gets or sets the base language of an element's attribute values and text content.
 
-<p>The language code returned by this property is defined in <a class="external" href="http://tools.ietf.org/html/rfc1766">RFC 1766</a>. Common examples include "en" for English, "ja" for Japanese, "es" for Spanish and so on. The default value of this attribute is <code>unknown</code>. Note that this attribute, though valid at the individual element level described here, is most often specified for the root element of the document.</p>
+The language code returned by this property is defined in [RFC 1766](http://tools.ietf.org/html/rfc1766). Common examples include "en" for English, "ja" for Japanese, "es" for Spanish and so on. The default value of this attribute is `unknown`. Note that this attribute, though valid at the individual element level described here, is most often specified for the root element of the document.
 
-<p>This also only works with the <code>lang</code> attribute and not with <code>xml:lang</code>.</p>
+This also only works with the `lang` attribute and not with `xml:lang`.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var <var>languageUsed</var> = elementNodeReference.lang; // Get the value of lang
-elementNodeReference.lang = <var>NewLanguage</var>; // Set new value for lang
-</pre>
+```
+var languageUsed = elementNodeReference.lang; // Get the value of lang
+elementNodeReference.lang = NewLanguage; // Set new value for lang
+```
 
-<p><var>languageUsed é uma variável string que obtém o idioma no qual o texto do elemento atual é gravado. NewLanguage é uma variável  string cujo valor define o idioma no qual o texto do elemento atual é gravado.</var></p>
+_languageUsed é uma variável string que obtém o idioma no qual o texto do elemento atual é gravado. NewLanguage é uma variável string cujo valor define o idioma no qual o texto do elemento atual é gravado._
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: js">// this snippet compares the base language and
+```js
+// this snippet compares the base language and
 // redirects to another url based on language
 if (document.documentElement.lang === "en") {
   window.location.href = "Some_document.html.en";
 } else if (document.documentElement.lang === "ru") {
   window.location.href = "Some_document.html.ru";
-}</pre>
+}
+```
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-59132807', 'lang')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-
-<p> </p>
+| Especificação                                                                | Status                       | Comentário |
+| ---------------------------------------------------------------------------- | ---------------------------- | ---------- |
+| {{SpecName('DOM2 HTML', 'html.html#ID-59132807', 'lang')}} | {{Spec2('DOM2 HTML')}} |            |

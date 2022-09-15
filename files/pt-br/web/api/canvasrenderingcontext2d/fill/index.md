@@ -9,67 +9,67 @@ tags:
   - metodo
 translation_of: Web/API/CanvasRenderingContext2D/fill
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>O método <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.fill()</code></strong> da API Canvas 2D preenche um dado <em>path</em> ou o <em>path</em> atual com o estilo atual de preenchimento usando uma regra de controle diferente de zero, ou uma regra par-ímpar.</p>
+O método **`CanvasRenderingContext2D`\*\***`.fill()`\*\* da API Canvas 2D preenche um dado _path_ ou o _path_ atual com o estilo atual de preenchimento usando uma regra de controle diferente de zero, ou uma regra par-ímpar.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">void <var><em>ctx</em>.fill();</var>
-void <var><em>ctx</em>.fill(fillRule);</var>
-void <var><em>ctx</em>.fill(path, fillRule);</var>
-</pre>
+```
+void ctx.fill();
+void ctx.fill(fillRule);
+void ctx.fill(path, fillRule);
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>fillRule</code></dt>
- <dd>O algoritmo que determina se um ponto está do lado de dentro do path ou do lado fora do path.<br>
- Possíveis valores:
- <ul>
-  <li><code><strong>"nonzero</strong></code>": A <a href="http://en.wikipedia.org/wiki/Nonzero-rule">regra de controle não-zero</a>, que é a regra padrão.</li>
-  <li><code><strong>"evenodd"</strong></code>: A <a href="http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule">regra de controle par-ímpar</a>.</li>
- </ul>
- </dd>
- <dt><code>path</code></dt>
- <dd>Um <em>path</em> de <a class="new" href="https://developer.mozilla.org/pt-BR/docs/Web/API/Path2D" title="The documentation about this has not yet been written; please consider contributing!"><code>Path2D</code></a> para preenchimento.</dd>
-</dl>
+- `fillRule`
 
-<h2 id="Exemplos">Exemplos</h2>
+  - : O algoritmo que determina se um ponto está do lado de dentro do path ou do lado fora do path.
+    Possíveis valores:
 
-<h3 id="Usando_o_método_fill">Usando o método <code>fill</code></h3>
+    - **`"nonzero`**": A [regra de controle não-zero](http://en.wikipedia.org/wiki/Nonzero-rule), que é a regra padrão.
+    - **`"evenodd"`**: A [regra de controle par-ímpar](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
-<p>Isto é só um simples trecho de código que usa o métod <code>fill</code> para contornar um <em>path</em>.</p>
+- `path`
+  - : Um _path_ de [`Path2D`](/pt-BR/docs/Web/API/Path2D "The documentation about this has not yet been written; please consider contributing!") para preenchimento.
 
-<h4 id="HTML">HTML</h4>
+## Exemplos
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+### Usando o método `fill`
 
-<h4 id="JavaScript">JavaScript</h4>
+Isto é só um simples trecho de código que usa o métod `fill` para contornar um _path_.
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+#### HTML
+
+```html
+<canvas id="canvas"></canvas>
+```
+
+#### JavaScript
+
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 ctx.rect(10, 10, 100, 100);
 ctx.fill();
-</pre>
+```
 
-<p>Edite o código abaixo e veja as alterações instantâneas no canvas:</p>
+Edite o código abaixo e veja as alterações instantâneas no canvas:
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.rect(10, 10, 100, 100);
-ctx.fill();&lt;/textarea&gt;
-</pre>
+ctx.fill();</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -92,34 +92,20 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-fill", "CanvasRenderingContext2D.fill")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                        | Estado                           | Comentário |
+| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-fill", "CanvasRenderingContext2D.fill")}} | {{Spec2('HTML WHATWG')}} |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.CanvasRenderingContext2D.fill")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>A definição da interface {{domxref("CanvasRenderingContext2D")}}.</li>
-</ul>
+- A definição da interface {{domxref("CanvasRenderingContext2D")}}.

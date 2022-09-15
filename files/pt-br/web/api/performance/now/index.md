@@ -3,61 +3,45 @@ title: performance.now()
 slug: Web/API/Performance/now
 translation_of: Web/API/Performance/now
 ---
-<div>{{APIRef("High Resolution Timing")}}</div>
+{{APIRef("High Resolution Timing")}}
 
-<p>O método <code><strong>performance.now()</strong></code> retorna {{domxref("DOMHighResTimeStamp")}}, medido em milisegundos, com precisão de cinco milésimos de milissegundo (5 microsegundos).</p>
+O método **`performance.now()`** retorna {{domxref("DOMHighResTimeStamp")}}, medido em milisegundos, com precisão de cinco milésimos de milissegundo (5 microsegundos).
 
-<p>O valor retornado representa o tempo decorrido desde o <strong>time origin </strong>(the {{domxref("PerformanceTiming.navigationStart")}} property). Em um web worker, o tempo inicial é o momento em que o contexto da execução(e.g. thread ou processo) é criado. Em uma janela, é o tempo em que o usuário iniciou a navegação neste documento. Tenha em mente que:</p>
+O valor retornado representa o tempo decorrido desde o **time origin** (the {{domxref("PerformanceTiming.navigationStart")}} property). Em um web worker, o tempo inicial é o momento em que o contexto da execução(e.g. thread ou processo) é criado. Em uma janela, é o tempo em que o usuário iniciou a navegação neste documento. Tenha em mente que:
 
-<ul>
- <li>Em workers dedicados criados do {{domxref("Window")}}, o valor neste worker será inferior a <code>performance.now()</code> na window que gerou este worker. Normalmente é o mesmo que <code>t0</code> no contexto principal, mas esse valor foi alterado.</li>
- <li>Em shared workers ou service workers, o valor do worker pode ser maior em relação ao contexto principal poir estas janelas podem ser criadas depois destes workers.</li>
-</ul>
+- Em workers dedicados criados do {{domxref("Window")}}, o valor neste worker será inferior a `performance.now()` na window que gerou este worker. Normalmente é o mesmo que `t0` no contexto principal, mas esse valor foi alterado.
+- Em shared workers ou service workers, o valor do worker pode ser maior em relação ao contexto principal poir estas janelas podem ser criadas depois destes workers.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><em>t</em> = performance.now();</pre>
+```
+t = performance.now();
+```
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: js">var t0 = performance.now();
+```js
+var t0 = performance.now();
 doSomething();
 var t1 = performance.now();
 console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.");
-</pre>
+```
 
-<p>Unlike other timing data available to JavaScript (for example <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Date/now"><code>Date.now</code></a>), the timestamps returned by <code>Performance.now()</code> are not limited to one-millisecond resolution. Instead, they represent times as floating-point numbers with up to microsecond precision.</p>
+Unlike other timing data available to JavaScript (for example [`Date.now`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Date/now)), the timestamps returned by `Performance.now()` are not limited to one-millisecond resolution. Instead, they represent times as floating-point numbers with up to microsecond precision.
 
-<p>Also unlike <code>Date.now()</code>, the values returned by <code>Performance.now() </code>always increase at a constant rate, independent of the system clock (which might be adjusted manually or skewed by software like NTP). Otherwise, <code>performance.timing.navigationStart + performance.now() </code>will be approximately equal to<code> Date.now()</code>.</p>
+Also unlike `Date.now()`, the values returned by `Performance.now() `always increase at a constant rate, independent of the system clock (which might be adjusted manually or skewed by software like NTP). Otherwise, `performance.timing.navigationStart + performance.now() `will be approximately equal to` Date.now()`.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Highres Time Level 2', '#dom-performance-now', 'performance.now()')}}</td>
-   <td>{{Spec2('Highres Time Level 2')}}</td>
-   <td>Stricter definitions of interfaces and types.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Highres Time', '#dom-performance-now', 'performance.now()')}}</td>
-   <td>{{Spec2('Highres Time')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                | Status                                       | Comment                                       |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | --------------------------------------------- |
+| {{SpecName('Highres Time Level 2', '#dom-performance-now', 'performance.now()')}} | {{Spec2('Highres Time Level 2')}} | Stricter definitions of interfaces and types. |
+| {{SpecName('Highres Time', '#dom-performance-now', 'performance.now()')}}             | {{Spec2('Highres Time')}}             | Initial definition                            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Performance.now")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now">When milliseconds are not enough: performance.now() </a>from HTML5 Rocks.</li>
-</ul>
+- [When milliseconds are not enough: performance.now() ](http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now)from HTML5 Rocks.

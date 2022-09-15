@@ -9,35 +9,32 @@ tags:
   - events
 translation_of: Web/API/EventTarget/dispatchEvent
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>Dispara um {{domxref("Event")}} para o {{domxref("EventTarget")}} especificado, invocando os {{domxref("EventListener")}}s especificados, em uma ordem apropriada. O processamento normal das regras (including the capturing and optional bubbling phase) aplica-se a eventos disparados manualmente com <code>dispatchEvent()</code>.</p>
+Dispara um {{domxref("Event")}} para o {{domxref("EventTarget")}} especificado, invocando os {{domxref("EventListener")}}s especificados, em uma ordem apropriada. O processamento normal das regras (including the capturing and optional bubbling phase) aplica-se a eventos disparados manualmente com `dispatchEvent()`.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><em>cancelled</em> = !<em>target</em>.dispatchEvent(<em>event</em>)
-</pre>
+```
+cancelled = !target.dispatchEvent(event)
+```
 
-<ul>
- <li><code>event</code> é o objeto {{domxref("Event")}} a ser disparado.</li>
- <li><code>target</code> é utilizado para inicializar o {{domxref("Event", "", "target")}} e determinar quais event listeners serão invocados.</li>
- <li>O valor retornado é <code>false</code> se ao menos um dos event handlers o qual manipulou o evento chamou {{domxref("Event.preventDefault()")}}. De outro modo, isto retorna <code>true</code>.</li>
-</ul>
+- `event` é o objeto {{domxref("Event")}} a ser disparado.
+- `target` é utilizado para inicializar o {{domxref("Event", "", "target")}} e determinar quais event listeners serão invocados.
+- O valor retornado é `false` se ao menos um dos event handlers o qual manipulou o evento chamou {{domxref("Event.preventDefault()")}}. De outro modo, isto retorna `true`.
 
-<p>O método <code>dispatchEvent joga</code> <code>UNSPECIFIED_EVENT_TYPE_ERR</code> se o tipo do evento não foi especificado pela inicialização do evento antes do método ser chamado, ou se o tipo do evento for is <code>null</code> ou uma string vazia. Exceções jogadas por event handlers são reportadas  como exceções não-capturáveis; os event handlers são executados em uma callstack aninhada; eles bloqueiam o chamador até que a rotina tenha sido totalmente executada, mas as execeções não se propagam para o chamador.</p>
+O método `dispatchEvent joga` `UNSPECIFIED_EVENT_TYPE_ERR` se o tipo do evento não foi especificado pela inicialização do evento antes do método ser chamado, ou se o tipo do evento for is `null` ou uma string vazia. Exceções jogadas por event handlers são reportadas como exceções não-capturáveis; os event handlers são executados em uma callstack aninhada; eles bloqueiam o chamador até que a rotina tenha sido totalmente executada, mas as execeções não se propagam para o chamador.
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p><code>dispatchEvent</code> é a última fase do processo create-init-dispatch, a qual é usada para disparar eventos na implementação do event model. O evento pode ser criado utilizando o método <a href="/en-US/docs/DOM/document.createEvent" title="DOM/document.createEvent">document.createEvent</a> e pode ser inicializado com <a href="/en-US/docs/DOM/event.initEvent" title="DOM/event.initEvent">initEvent</a> ou outro método de inicialização mais específico, como <a href="/en-US/docs/DOM/event.initMouseEvent" title="DOM/event.initMouseEvent">initMouseEvent</a> ou <a href="/en-US/docs/DOM/event.initUIEvent" title="DOM/event.initUIEvent">initUIEvent</a>.</p>
+`dispatchEvent` é a última fase do processo create-init-dispatch, a qual é usada para disparar eventos na implementação do event model. O evento pode ser criado utilizando o método [document.createEvent](/pt-BR/docs/DOM/document.createEvent "DOM/document.createEvent") e pode ser inicializado com [initEvent](/pt-BR/docs/DOM/event.initEvent "DOM/event.initEvent") ou outro método de inicialização mais específico, como [initMouseEvent](/pt-BR/docs/DOM/event.initMouseEvent "DOM/event.initMouseEvent") ou [initUIEvent](/pt-BR/docs/DOM/event.initUIEvent "DOM/event.initUIEvent").
 
-<p>Veja também a <a href="/en-US/docs/DOM/event" title="DOM/event">referência Event object</a>.</p>
+Veja também a [referência Event object](/pt-BR/docs/DOM/event "DOM/event").
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<p>Veja <a href="/en-US/docs/Web/Guide/DOM/Events/Creating_and_triggering_events" title="/en-US/docs/Web/Guide/DOM/Events/Creating_and_triggering_events">Creating and triggering events</a>.</p>
+Veja [Creating and triggering events](/pt-BR/docs/Web/Guide/DOM/Events/Creating_and_triggering_events).
 
-<h2 id="Specification" name="Specification">Especificações</h2>
+## Especificações
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-dispatchEvent">DOM Level 2 Events: dispatchEvent</a></li>
-</ul>
+- [DOM Level 2 Events: dispatchEvent](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-dispatchEvent)

@@ -3,55 +3,52 @@ title: Window.setImmediate()
 slug: Web/API/Window/setImmediate
 translation_of: Web/API/Window/setImmediate
 ---
-<div>{{APIRef("HTML DOM")}}{{Non-standard_header}}</div>
+{{APIRef("HTML DOM")}}{{Non-standard_header}}
 
-<p>Esse método é usado para interromper operações de longa duração e executar uma função de retorno de chamada imediatamente após o navegador ter concluído outras operações, como eventos e atualizações de exibição.</p>
+Esse método é usado para interromper operações de longa duração e executar uma função de retorno de chamada imediatamente após o navegador ter concluído outras operações, como eventos e atualizações de exibição.
 
-<div class="note">Não se espera que este método se torne padrão, e é implementado somente por compilações recentes do Internet Explorer e Node.js 0.10+. Existem resistencias de ambos <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=686201">Gecko</a> (Firefox) e <a href="http://code.google.com/p/chromium/issues/detail?id=146172">Webkit</a> (Google/Apple).</div>
+> **Nota:** Não se espera que este método se torne padrão, e é implementado somente por compilações recentes do Internet Explorer e Node.js 0.10+. Existem resistencias de ambos [Gecko](https://bugzilla.mozilla.org/show_bug.cgi?id=686201) (Firefox) e [Webkit](http://code.google.com/p/chromium/issues/detail?id=146172) (Google/Apple).
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var <em>immediateID</em> = setImmediate(<em>func</em>, [<em>param1</em>, <em>param2</em>, ...]);
-var <em>immediateID</em> = setImmediate(<em>func</em>);
-</pre>
+```
+var immediateID = setImmediate(func, [param1, param2, ...]);
+var immediateID = setImmediate(func);
+```
 
-<ul>
- <li>onde <code>immediateID</code> é o ID da immediate que poderá ser usado depois com {{ domxref("window.clearImmediate") }}.</li>
- <li><code>func</code> é a função que será executada.</li>
-</ul>
+- onde `immediateID` é o ID da immediate que poderá ser usado depois com {{ domxref("window.clearImmediate") }}.
+- `func` é a função que será executada.
 
-<p>Todos parametros serão passados diretamente para sua função .</p>
+Todos parametros serão passados diretamente para sua função .
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>O método {{ domxref("window.clearImmediate") }} pode ser usado para limpar as ações immediate, como por exemplo {{ domxref("window.clearTimeout") }} para {{ domxref("window.setTimeout") }}.</p>
+O método {{ domxref("window.clearImmediate") }} pode ser usado para limpar as ações immediate, como por exemplo {{ domxref("window.clearTimeout") }} para {{ domxref("window.setTimeout") }}.
 
-<p>Esse método pode ser usado ao invés de <code>setTimeout(fn, 0)</code>, para executar <a href="http://www.nczonline.net/blog/2009/08/11/timed-array-processing-in-javascript/">operações pesadas</a>. </p>
+Esse método pode ser usado ao invés de `setTimeout(fn, 0)`, para executar [operações pesadas](http://www.nczonline.net/blog/2009/08/11/timed-array-processing-in-javascript/).
 
-<p>Essa função pode ser emulada de algumas maneiras:</p>
+Essa função pode ser emulada de algumas maneiras:
 
-<ul>
- <li><span style="line-height: 22px;">{{ domxref("window.postMessage") }} pode ser usada para disparar um </span>immediate mas produzindo um callback. Tenha em mente que o Internet Explorer 8 inclui uma versão síncrona do postMessage, que não deverá ser usado como alternativa.</li>
- <li><a href="/en-US/docs/Web/API/MessageChannel" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/web-messaging.html#channel-messaging">MessageChannel</a> pode ser usado com confiança dentro de Web Workers onde a semantica do postMessage significa que não pode ser usado lá.</li>
- <li><code>setTimeout(fn, 0)</code><em>pode</em> ser usado potencialmente, no entanto, como é apertado em 4ms para temporizadores aninhados com mais de 5 profundidades <a href="https://html.spec.whatwg.org/multipage/webappapis.html#timers">por especificação HTML</a>, não faz para um polifil adequado para o imediatismo natural de setImmediate.</li>
-</ul>
+- {{ domxref("window.postMessage") }} pode ser usada para disparar um immediate mas produzindo um callback. Tenha em mente que o Internet Explorer 8 inclui uma versão síncrona do postMessage, que não deverá ser usado como alternativa.
+- [MessageChannel](/pt-BR/docs/Web/API/MessageChannel "http://www.whatwg.org/specs/web-apps/current-work/multipage/web-messaging.html#channel-messaging") pode ser usado com confiança dentro de Web Workers onde a semantica do postMessage significa que não pode ser usado lá.
+- `setTimeout(fn, 0)`_pode_ ser usado potencialmente, no entanto, como é apertado em 4ms para temporizadores aninhados com mais de 5 profundidades [por especificação HTML](https://html.spec.whatwg.org/multipage/webappapis.html#timers), não faz para um polifil adequado para o imediatismo natural de setImmediate.
 
-<p>Todas essas técnicas são incorporadas em um <a href="https://github.com/NobleJS/setImmediate">setImmediate polyfill</a>.</p>
+Todas essas técnicas são incorporadas em um [setImmediate polyfill](https://github.com/NobleJS/setImmediate).
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<p>Não faz parte de nenhuma especificação e não em uma faixa de padrões.</p>
+Não faz parte de nenhuma especificação e não em uma faixa de padrões.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Window.setImmediate")}}
 
-<h2 id="Ver_também">Ver também</h2>
+## Ver também
 
-<p>{{ domxref("window.clearImmediate") }}</p>
+{{ domxref("window.clearImmediate") }}
 
-<p>{{ spec("https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/setImmediate/Overview.html", "Specification: Efficient Script Yielding") }}</p>
+{{ spec("https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/setImmediate/Overview.html", "Specification: Efficient Script Yielding") }}
 
-<p><a class="external" href="http://ie.microsoft.com/testdrive/Performance/setImmediateSorting/Default.html">Microsoft setImmediate API Demo</a></p>
+[Microsoft setImmediate API Demo](http://ie.microsoft.com/testdrive/Performance/setImmediateSorting/Default.html)
 
-<p>{{ languages( { "zh-cn": "zh-cn/DOM/window.setImmediate" } ) }}</p>
+{{ languages( { "zh-cn": "zh-cn/DOM/window\.setImmediate" } ) }}

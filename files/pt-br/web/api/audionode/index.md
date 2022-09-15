@@ -3,68 +3,63 @@ title: AudioNode
 slug: Web/API/AudioNode
 translation_of: Web/API/AudioNode
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>A interface AudioNode é uma interface genérica para representar um módulo de processamento como uma fonte de áudio (ex. um elemento HTML {{HTMLElement("audio")}} ou {{HTMLElement("video")}} , um {{domxref("OscillatorNode")}}, etc.), um destino do áudio, um módulo intermediário de processamento (ex. um filtro como {{domxref("BiquadFilterNode")}} ou {{domxref("ConvolverNode")}}), ou um controle de volume (como o {{domxref("GainNode")}}).</p>
+A interface AudioNode é uma interface genérica para representar um módulo de processamento como uma fonte de áudio (ex. um elemento HTML {{HTMLElement("audio")}} ou {{HTMLElement("video")}} , um {{domxref("OscillatorNode")}}, etc.), um destino do áudio, um módulo intermediário de processamento (ex. um filtro como {{domxref("BiquadFilterNode")}} ou {{domxref("ConvolverNode")}}), ou um controle de volume (como o {{domxref("GainNode")}}).
 
-<p><img alt="AudioNodes participating in an AudioContext create a audio routing graph." src="https://mdn.mozillademos.org/files/12535/WebAudioBasicspt-br.png" style="display: block; height: 461px; margin: 0px auto; width: 677px;"></p>
+![AudioNodes participating in an AudioContext create a audio routing graph.](https://mdn.mozillademos.org/files/12535/WebAudioBasicspt-br.png)
 
-<p>Um <code>AudioNode</code> tem entradas (inputs) e saídas (outputs), cada uma delas com uma determinada quantidade de canais. Um <code>AudioNode</code> sem nenhuma entrada e uma ou múltiplas saídas é chamado de <em>source node</em>. The exact processing done varies from one <code>AudioNode</code> to another but, in general, a node reads its inputs, does some audio-related processing, and generates new values for its outputs, or simply lets the audio pass through (for example in the {{domxref("AnalyserNode")}}, where the result of the processing is accessed separately).</p>
+Um `AudioNode` tem entradas (inputs) e saídas (outputs), cada uma delas com uma determinada quantidade de canais. Um `AudioNode` sem nenhuma entrada e uma ou múltiplas saídas é chamado de _source node_. The exact processing done varies from one `AudioNode` to another but, in general, a node reads its inputs, does some audio-related processing, and generates new values for its outputs, or simply lets the audio pass through (for example in the {{domxref("AnalyserNode")}}, where the result of the processing is accessed separately).
 
-<p>Different nodes can be linked together to build a <em>processing graph</em>. Such a graph is contained in an {{domxref("AudioContext")}}. Each <code>AudioNode</code> participates in exactly one such context. In general, processing nodes inherit the properties and methods of <code>AudioNode</code>, but also define their own functionality on top. See the individual node pages for more details, as listed on the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> homepage.</p>
+Different nodes can be linked together to build a _processing graph_. Such a graph is contained in an {{domxref("AudioContext")}}. Each `AudioNode` participates in exactly one such context. In general, processing nodes inherit the properties and methods of `AudioNode`, but also define their own functionality on top. See the individual node pages for more details, as listed on the [Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API) homepage.
 
-<div class="note">
-<p><strong>Note</strong>: An <code>AudioNode</code> can be target of events, therefore it implements the {{domxref("EventTarget")}} interface.</p>
-</div>
+> **Nota:** An `AudioNode` can be target of events, therefore it implements the {{domxref("EventTarget")}} interface.
 
-<h2 id="Properties" style="">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("AudioNode.context")}} {{readonlyInline}}</dt>
- <dd>Returns the associated {{domxref("AudioContext")}}, that is the object representing the processing graph the node is participating in.</dd>
-</dl>
+- {{domxref("AudioNode.context")}} {{readonlyInline}}
+  - : Returns the associated {{domxref("AudioContext")}}, that is the object representing the processing graph the node is participating in.
 
-<dl>
- <dt>{{domxref("AudioNode.numberOfInputs")}} {{readonlyInline}}</dt>
- <dd>Returns the number of inputs feeding the node. Source nodes are defined as nodes having a <code>numberOfInputs</code> property with a value of <code>0</code>.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt>{{domxref("AudioNode.numberOfOutputs")}} {{readonlyInline}}</dt>
- <dd>Returns the number of outputs coming out of the node. Destination nodes — like {{ domxref("AudioDestinationNode") }} — have a value of <code>0</code> for this attribute.</dd>
-</dl>
+- {{domxref("AudioNode.numberOfInputs")}} {{readonlyInline}}
+  - : Returns the number of inputs feeding the node. Source nodes are defined as nodes having a `numberOfInputs` property with a value of `0`.
 
-<dl>
- <dt>{{domxref("AudioNode.channelCount")}}</dt>
- <dd>Represents an integer used to determine how many channels are used when <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing">up-mixing and down-mixing</a> connections to any inputs to the node. Its usage and precise definition depend on the value of {{domxref("AudioNode.channelCountMode")}}.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt>{{domxref("AudioNode.channelCountMode")}}</dt>
- <dd>Represents an enumerated value describing the way channels must be matched between the node's inputs and outputs.</dd>
- <dt>{{domxref("AudioNode.channelInterpretation")}}</dt>
- <dd>Represents an enumerated value describing the meaning of the channels. This interpretation will define how audio <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing">up-mixing and down-mixing</a> will happen.<br>
- The possible values are <code>"speakers"</code> or <code>"discrete"</code>.</dd>
-</dl>
+- {{domxref("AudioNode.numberOfOutputs")}} {{readonlyInline}}
+  - : Returns the number of outputs coming out of the node. Destination nodes — like {{ domxref("AudioDestinationNode") }} — have a value of `0` for this attribute.
 
-<h2 id="Methods">Methods</h2>
+<!---->
 
-<p><em>Also implements methods from the interface </em>{{domxref("EventTarget")}}.</p>
+- {{domxref("AudioNode.channelCount")}}
+  - : Represents an integer used to determine how many channels are used when [up-mixing and down-mixing](/pt-BR/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing) connections to any inputs to the node. Its usage and precise definition depend on the value of {{domxref("AudioNode.channelCountMode")}}.
 
-<dl>
- <dt>{{domxref("AudioNode.connect(AudioNode)")}}</dt>
- <dd>Allows us to connect one output of this node to one input of another node.</dd>
- <dt>{{domxref("AudioNode.connect(AudioParam)")}}</dt>
- <dd>Allows us to connect one output of this node to one input of an audio parameter.</dd>
- <dt>{{domxref("AudioNode.disconnect()")}}</dt>
- <dd>Allows us to disconnect the current node from another one it is already connected to.</dd>
-</dl>
+<!---->
 
-<h2 id="Example">Example</h2>
+- {{domxref("AudioNode.channelCountMode")}}
+  - : Represents an enumerated value describing the way channels must be matched between the node's inputs and outputs.
+- {{domxref("AudioNode.channelInterpretation")}}
+  - : Represents an enumerated value describing the meaning of the channels. This interpretation will define how audio [up-mixing and down-mixing](/pt-BR/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing) will happen.
+    The possible values are `"speakers"` or `"discrete"`.
 
-<p>This simple snippet of code shows the creation of some audio nodes, and how the <code>AudioNode</code> properties and methods can be used. You can find examples of such usage on any of the examples linked to on the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> landing page (for example <a href="https://github.com/mdn/violent-theremin">Violent Theremin</a>.)</p>
+## Methods
 
-<pre class="brush: js">var AudioContext = window.AudioContext || window.webkitAudioContext;
+_Also implements methods from the interface_ {{domxref("EventTarget")}}.
+
+- {{domxref("AudioNode.connect(AudioNode)")}}
+  - : Allows us to connect one output of this node to one input of another node.
+- {{domxref("AudioNode.connect(AudioParam)")}}
+  - : Allows us to connect one output of this node to one input of an audio parameter.
+- {{domxref("AudioNode.disconnect()")}}
+  - : Allows us to disconnect the current node from another one it is already connected to.
+
+## Example
+
+This simple snippet of code shows the creation of some audio nodes, and how the `AudioNode` properties and methods can be used. You can find examples of such usage on any of the examples linked to on the [Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API) landing page (for example [Violent Theremin](https://github.com/mdn/violent-theremin).)
+
+```js
+var AudioContext = window.AudioContext || window.webkitAudioContext;
 
 var audioCtx = new AudioContext();
 
@@ -77,31 +72,19 @@ gainNode.connect(audioCtx.destination);
 oscillator.context;
 oscillator.numberOfInputs;
 oscillator.numberOfOutputs;
-oscillator.channelCount;</pre>
+oscillator.channelCount;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#the-audionode-interface', 'AudioNode')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                               | Comment |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
+| {{SpecName('Web Audio API', '#the-audionode-interface', 'AudioNode')}} | {{Spec2('Web Audio API')}} |         |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.AudioNode")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

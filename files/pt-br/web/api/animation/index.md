@@ -14,106 +14,89 @@ tags:
   - web animation api
 translation_of: Web/API/Animation
 ---
-<p>{{ APIRef("Web Animations API") }}{{SeeCompatTable}}</p>
+{{ APIRef("Web Animations API") }}{{SeeCompatTable}}
 
-<p>A interface <strong><code>Animation</code></strong> da <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> representa um único player de animação e fornece controles e uma linha do tempo (timeline) para um nó de animação ou recurso.</p>
+A interface **`Animation`** da [Web Animations API](/pt-BR/docs/Web/API/Web_Animations_API) representa um único player de animação e fornece controles e uma linha do tempo (timeline) para um nó de animação ou recurso.
 
-<h2 id="Construtor">Construtor</h2>
+## Construtor
 
-<dl>
- <dt>{{domxref("Animation.Animation()", "Animation()")}}</dt>
- <dd>Cria uma nova instância do objeto <code>Animation</code>.</dd>
-</dl>
+- {{domxref("Animation.Animation()", "Animation()")}}
+  - : Cria uma nova instância do objeto `Animation`.
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<dl>
- <dt>{{domxref("Animation.currentTime")}}</dt>
- <dd>O valor do tempo atual da animação, em milissegundos, esteja ela executando ou pausada. Se a animação não tem uma {{domxref("AnimationTimeline", "timeline")}}, está inativa ou ainda não foi executada, este valor é <code>null</code>.</dd>
-</dl>
+- {{domxref("Animation.currentTime")}}
+  - : O valor do tempo atual da animação, em milissegundos, esteja ela executando ou pausada. Se a animação não tem uma {{domxref("AnimationTimeline", "timeline")}}, está inativa ou ainda não foi executada, este valor é `null`.
 
-<dl>
- <dt>{{domxref("Animation.effect")}}</dt>
- <dd>Obtém e define o {{domxref("KeyframeEffect")}} associado a essa animação.</dd>
- <dt>{{domxref("Animation.finished")}} {{readOnlyInline}}</dt>
- <dd>Retorna a <code>Primise</code> de finalização atual para essa animação.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt>{{domxref("Animation.id")}}</dt>
- <dd>Obtém e define a <code>String</code> usada para identificar a animação.</dd>
- <dt>{{domxref("Animation.oncancel")}}</dt>
- <dd>Obtém e define o manipulador para o evento <code>cancel</code>.</dd>
- <dt>{{domxref("Animation.onfinish")}}</dt>
- <dd>Obtém e define o manipulador para o evento <code>finish</code>.</dd>
- <dt>{{domxref("Animation.playState")}} {{readOnlyInline}}</dt>
- <dd>Retorna um valor enumerado descrevendo o estado de execução de uma animação.</dd>
-</dl>
+- {{domxref("Animation.effect")}}
+  - : Obtém e define o {{domxref("KeyframeEffect")}} associado a essa animação.
+- {{domxref("Animation.finished")}} {{readOnlyInline}}
+  - : Retorna a `Primise` de finalização atual para essa animação.
 
-<dl>
- <dt>{{domxref("Animation.playbackRate")}}</dt>
- <dd>Obtém ou define a taxa de execução da animação.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt>{{domxref("Animation.ready")}} {{readOnlyInline}}</dt>
- <dd>Retorna a promessa atual para quando essa animação estiver pronta.</dd>
-</dl>
+- {{domxref("Animation.id")}}
+  - : Obtém e define a `String` usada para identificar a animação.
+- {{domxref("Animation.oncancel")}}
+  - : Obtém e define o manipulador para o evento `cancel`.
+- {{domxref("Animation.onfinish")}}
+  - : Obtém e define o manipulador para o evento `finish`.
+- {{domxref("Animation.playState")}} {{readOnlyInline}}
+  - : Retorna um valor enumerado descrevendo o estado de execução de uma animação.
 
-<dl>
- <dt>{{domxref("Animation.startTime")}}</dt>
- <dd>Obtém ou define o tempo agendado quando a execução de uma animação deve começar.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt>{{domxref("Animation.timeline")}}</dt>
- <dd>Obtém ou define a {{domxref("AnimationTimeline", "timeline")}} associada a essa animação.</dd>
-</dl>
+- {{domxref("Animation.playbackRate")}}
+  - : Obtém ou define a taxa de execução da animação.
 
-<h2 id="Métodos">Métodos</h2>
+<!---->
 
-<dl>
- <dt>{{domxref("Animation.cancel()")}}</dt>
- <dd>Limpa todos os {{domxref("KeyframeEffect", "keyframeEffects")}} causados por essa animação e aborta sua execução.</dd>
-</dl>
+- {{domxref("Animation.ready")}} {{readOnlyInline}}
+  - : Retorna a promessa atual para quando essa animação estiver pronta.
 
-<dl>
- <dt>{{domxref("Animation.finish()")}}</dt>
- <dd>Vai até um dos extremos dessa animação, dependendo se ela está executando ou retornando.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt>{{domxref("Animation.pause()")}}</dt>
- <dd>Suspende a execução de uma animação.</dd>
-</dl>
+- {{domxref("Animation.startTime")}}
+  - : Obtém ou define o tempo agendado quando a execução de uma animação deve começar.
 
-<dl>
- <dt>{{domxref("Animation.play()")}}</dt>
- <dd>Inicia ou continua a execução de uma animação ou a recomeça se ela tiver terminado anteriormente.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt>{{domxref("Animation.reverse()")}}</dt>
- <dd>Move a animação ao contrário, parando no início da animação.</dd>
-</dl>
+- {{domxref("Animation.timeline")}}
+  - : Obtém ou define a {{domxref("AnimationTimeline", "timeline")}} associada a essa animação.
 
-<h2 id="Especificações">Especificações</h2>
+## Métodos
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Web Animations", "#the-animation-interface", "Animation")}}</td>
-   <td>{{Spec2("Web Animations")}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+- {{domxref("Animation.cancel()")}}
+  - : Limpa todos os {{domxref("KeyframeEffect", "keyframeEffects")}} causados por essa animação e aborta sua execução.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+<!---->
+
+- {{domxref("Animation.finish()")}}
+  - : Vai até um dos extremos dessa animação, dependendo se ela está executando ou retornando.
+
+<!---->
+
+- {{domxref("Animation.pause()")}}
+  - : Suspende a execução de uma animação.
+
+<!---->
+
+- {{domxref("Animation.play()")}}
+  - : Inicia ou continua a execução de uma animação ou a recomeça se ela tiver terminado anteriormente.
+
+<!---->
+
+- {{domxref("Animation.reverse()")}}
+  - : Move a animação ao contrário, parando no início da animação.
+
+## Especificações
+
+| Especificação                                                                                    | Estado                               | Comentário        |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------------- |
+| {{SpecName("Web Animations", "#the-animation-interface", "Animation")}} | {{Spec2("Web Animations")}} | Definição inicial |
+
+## Compatibilidade com navegadores
 
 {{Compat("api.Animation")}}

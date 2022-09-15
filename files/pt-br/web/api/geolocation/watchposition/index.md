@@ -3,35 +3,36 @@ title: Geolocation.watchPosition()
 slug: Web/API/Geolocation/watchPosition
 translation_of: Web/API/Geolocation/watchPosition
 ---
-<p>{{ APIref("Geolocation API") }}</p>
+{{ APIref("Geolocation API") }}
 
-<p>O método <strong><code>Geolocation.watchPosition()</code></strong> é usado para registrar uma função manipuladora (handler function) que irá ser chamada automáticamente  cada vez que a posição no dispositivo mudar. Você pode, opcionalemnte, especificar uma função de retorno que manipulará qualquer erro.</p>
+O método **`Geolocation.watchPosition()`** é usado para registrar uma função manipuladora (handler function) que irá ser chamada automáticamente cada vez que a posição no dispositivo mudar. Você pode, opcionalemnte, especificar uma função de retorno que manipulará qualquer erro.
 
-<p>Este método retorna um valor para o <em>watch ID</em> que pode ser usado para desregistrar o manipulador passando isto para o método {{domxref("Geolocation.clearWatch()")}}.</p>
+Este método retorna um valor para o _watch ID_ que pode ser usado para desregistrar o manipulador passando isto para o método {{domxref("Geolocation.clearWatch()")}}.
 
-<h2 id="Síntaxe">Síntaxe</h2>
+## Síntaxe
 
-<pre class="syntaxbox"><em>id</em> = navigator.geolocation.watchPosition(<em>success</em>, <em>error</em>, <em>options</em>)</pre>
+```
+id = navigator.geolocation.watchPosition(success, error, options)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><em>success</em></dt>
- <dd>AUma função de retorno (callback) que pega um objeto {{domxref("Position")}} como parametro de entrada.  </dd>
- <dt><em>error</em> {{optional_inline}}</dt>
- <dd>Uma função de retorno opcional que pega um objeto {{domxref("PositionError")}} como parametro de entrada.  </dd>
- <dt><em>options</em> {{optional_inline}}</dt>
- <dd>Um objeto opcional {{domxref("PositionOptions")}}.</dd>
-</dl>
+- _success_
+  - : AUma função de retorno (callback) que pega um objeto {{domxref("Position")}} como parametro de entrada.
+- _error_ {{optional_inline}}
+  - : Uma função de retorno opcional que pega um objeto {{domxref("PositionError")}} como parametro de entrada.
+- _options_ {{optional_inline}}
+  - : Um objeto opcional {{domxref("PositionOptions")}}.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: js">var id, target, options;
+```js
+var id, target, options;
 
 function success(pos) {
   var crd = pos.coords;
 
-  if (target.latitude === crd.latitude &amp;&amp; target.longitude === crd.longitude) {
+  if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
     console.log('Parabéns, você alcançou o destino');
     navigator.geolocation.clearWatch(id);
   }
@@ -53,38 +54,23 @@ options = {
 };
 
 id = navigator.geolocation.watchPosition(success, error, options);
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Geolocation', '#watch-position', 'Geolocation.watchPosition()')}}</td>
-   <td>{{Spec2('Geolocation')}}</td>
-   <td>Especificação Inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                            | Estado                           | Comentário             |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------- |
+| {{SpecName('Geolocation', '#watch-position', 'Geolocation.watchPosition()')}} | {{Spec2('Geolocation')}} | Especificação Inicial. |
 
-<h2 id="Compatibillidade_de_Navegadores">Compatibillidade de Navegadores</h2>
+## Compatibillidade de Navegadores
 
 {{Compat("api.Geolocation.watchPosition")}}
 
-<h2 id="sect1"> </h2>
+##
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/WebAPI/Using_geolocation" title="/en-US/docs/WebAPI/Using_geolocation">Usando geolocalização</a></li>
- <li>A interface que ele pertence, {{domxref("Geolocation")}}, e como acessar {{domxref("NavigatorGeolocation.geolocation")}}.</li>
- <li>A operação oposta: {{domxref("Geolocation.clearWatch()")}}</li>
- <li>Um método similar: {{domxref("Geolocation.getCurrentPosition()")}}</li>
-</ul>
+- [Usando geolocalização](/pt-BR/docs/WebAPI/Using_geolocation)
+- A interface que ele pertence, {{domxref("Geolocation")}}, e como acessar {{domxref("NavigatorGeolocation.geolocation")}}.
+- A operação oposta: {{domxref("Geolocation.clearWatch()")}}
+- Um método similar: {{domxref("Geolocation.getCurrentPosition()")}}

@@ -8,33 +8,32 @@ tags:
   - Visibilidade
 translation_of: Web/API/Page_Visibility_API
 ---
-<p id="Summary">{{DefaultAPISidebar("Page Visibility API")}}</p>
+{{DefaultAPISidebar("Page Visibility API")}}
 
-<p><span class="seoSummary">A <strong>API de visibilidade de página</strong> deixa você saber quando uma página da web está visível ou em foco.</span> Com a navegação em abas, existem razões para que quaisquer páginas da web que estejam sendo executadas em segundo plano e não visíveis para o usuário. Quando o usuário minimiza a página ou muda para outra aba, a API envia um evento {{event("visibilitychange")}} informando o estado de visibilidade da página. Você pode detectar o evento e realizar algumas ações ou modificar o seu comportamento. Por exemplo, se a sua aplicação web estiver reproduzindo um video, ela pode pausar durante o momento que o usuário estiver olhando para outra aba, e reproduz novamente quando o usuário retorna para a aba. O usuário não perde nenhuma parte do video e pode continuar assistindo.</p>
+A **API de visibilidade de página** deixa você saber quando uma página da web está visível ou em foco. Com a navegação em abas, existem razões para que quaisquer páginas da web que estejam sendo executadas em segundo plano e não visíveis para o usuário. Quando o usuário minimiza a página ou muda para outra aba, a API envia um evento {{event("visibilitychange")}} informando o estado de visibilidade da página. Você pode detectar o evento e realizar algumas ações ou modificar o seu comportamento. Por exemplo, se a sua aplicação web estiver reproduzindo um video, ela pode pausar durante o momento que o usuário estiver olhando para outra aba, e reproduz novamente quando o usuário retorna para a aba. O usuário não perde nenhuma parte do video e pode continuar assistindo.
 
-<h3 id="Benefícios">Benefícios</h3>
+### Benefícios
 
-<p>A API é particularmente util para economizar recursos dando aos desenvolvedores a oportunidade de não realizar tarefas desnecessárias quando a página não está visível.</p>
+A API é particularmente util para economizar recursos dando aos desenvolvedores a oportunidade de não realizar tarefas desnecessárias quando a página não está visível.
 
-<h3 id="Casos_de_uso">Casos de uso</h3>
+### Casos de uso
 
-<p>Alguns exemplos:</p>
+Alguns exemplos:
 
-<ul>
- <li>Um site tem um carrossel de imagens que não devem avançar para  o próximo slide a não ser que o usuário esteja visualizando a página.</li>
- <li>Uma aplicação mostrando um painel de informações não quer fazer requizições de atualizações ao servidor quando a página não estiver visível.</li>
- <li>Uma página quer detectar quando está sendo prerenderizada para poder contar o número de visualizações de forma mais precisa.</li>
-</ul>
+- Um site tem um carrossel de imagens que não devem avançar para o próximo slide a não ser que o usuário esteja visualizando a página.
+- Uma aplicação mostrando um painel de informações não quer fazer requizições de atualizações ao servidor quando a página não estiver visível.
+- Uma página quer detectar quando está sendo prerenderizada para poder contar o número de visualizações de forma mais precisa.
 
-<p>Desenvolvedores têm historicamente usado alternativas de se detectar isto. Por exemplo, registrando um handler onblur/onfocus na janela te ajuda a saber quando a sua página não é a ativa, mas isto não te diz se a sua página não está visível para o usuário. Já a API de Visibilidade de Página faz isto. (Quando comparada com a técnica de registrar handlers de onblur/onfocus na janela, uma diferencia chave é que a página <em>não</em> fica escondida quando outra janela é ativada e a janela do navegador perde o foco. A página só fica escondida quando o usuário troca para uma aba diferente ou minimiza a janela do navegador.)</p>
+Desenvolvedores têm historicamente usado alternativas de se detectar isto. Por exemplo, registrando um handler onblur/onfocus na janela te ajuda a saber quando a sua página não é a ativa, mas isto não te diz se a sua página não está visível para o usuário. Já a API de Visibilidade de Página faz isto. (Quando comparada com a técnica de registrar handlers de onblur/onfocus na janela, uma diferencia chave é que a página _não_ fica escondida quando outra janela é ativada e a janela do navegador perde o foco. A página só fica escondida quando o usuário troca para uma aba diferente ou minimiza a janela do navegador.)
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<p>Veja <a href="http://daniemon.com/tech/webapps/page-visibility/">exemplo em caso real</a> (video com som).</p>
+Veja [exemplo em caso real](http://daniemon.com/tech/webapps/page-visibility/) (video com som).
 
-<p>O exemplo, que pausa o video quando você troca para outra aba e volta a reproduzir quando você retorna, foi criado com o seguinte código:</p>
+O exemplo, que pausa o video quando você troca para outra aba e volta a reproduzir quando você retorna, foi criado com o seguinte código:
 
-<pre class="brush: js">// Configura o nome da propriedade hidden e o evento de mudança para visibilidade
+```js
+// Configura o nome da propriedade hidden e o evento de mudança para visibilidade
 var hidden, visibilityChange;
 if (typeof document.hidden !== "undefined") { // Suporte para Opera 12.10 e Firefox 18 em diante
   hidden = "hidden";
@@ -64,7 +63,7 @@ function handleVisibilityChange() {
 
 // Alerta se o navegador não suporta addEventListener ou a API de visibilidade da página
 if (typeof document.addEventListener === "undefined" ||
-  typeof <code class="language-js">document<span class="punctuation token">[</span>hidden<span class="punctuation token">]</span></code> === "undefined") {
+  typeof document[hidden] === "undefined") {
   alert("This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.");
 } else {
   // Manipula o evento de mudança da visibilidade da página
@@ -92,26 +91,25 @@ if (typeof document.addEventListener === "undefined" ||
     document.title = Math.floor(videoElement.currentTime) + " segundo(s)";
   }, false);
 }
-</pre>
+```
 
-<h2 id="Visão_geral_das_propriedades">Visão geral das propriedades</h2>
+## Visão geral das propriedades
 
-<h3 id="document.hidden_Somented_leitura"><code>document.hidden</code> Somented leitura</h3>
+### `document.hidden` Somented leitura
 
-<p>Retorna <code>true</code> se a página está escondida para o usuário, caso contrário, retorna <code>false</code>.</p>
+Retorna `true` se a página está escondida para o usuário, caso contrário, retorna `false`.
 
-<h3 id="document.visibilityState_Somente_leitura"><code>document.visibilityState</code> Somente leitura</h3>
+### `document.visibilityState` Somente leitura
 
-<p>É a <code>cadeia de caracteres que denota a visibilidade do documento</code>. Possíveis valores:</p>
+É a `cadeia de caracteres que denota a visibilidade do documento`. Possíveis valores:
 
-<ul>
- <li><code>visible</code> : o conteúdo da página pode estar parcialmente visível. Na prática, isso significa que a página é a aba ativa de uma janela não minimizada.</li>
- <li><code>hidden</code> : o conteúdo da página não está visível para o usuário. Na prática, isso significa que o documento está em uma aba inativa, em uma janela minimizada, ou o sistema operacional está com a tela travada.</li>
- <li><code>prerender</code> : o conteúdo da página está sendo prerenderizado e não está visível para o usuário(considerado como escondida para motivos de <code>document.hidden</code>). O documento pode começar neste estado, mas nunca mudar dele para algum outro. Nota: a compatibilidade com navegadores é opcional.</li>
- <li><code>unloaded</code> : a página está sendo removida da memória(a aba ou janela está sendo fechada). Nota: a compatibilidade com navegadores é opcional</li>
-</ul>
+- `visible` : o conteúdo da página pode estar parcialmente visível. Na prática, isso significa que a página é a aba ativa de uma janela não minimizada.
+- `hidden` : o conteúdo da página não está visível para o usuário. Na prática, isso significa que o documento está em uma aba inativa, em uma janela minimizada, ou o sistema operacional está com a tela travada.
+- `prerender` : o conteúdo da página está sendo prerenderizado e não está visível para o usuário(considerado como escondida para motivos de `document.hidden`). O documento pode começar neste estado, mas nunca mudar dele para algum outro. Nota: a compatibilidade com navegadores é opcional.
+- `unloaded` : a página está sendo removida da memória(a aba ou janela está sendo fechada). Nota: a compatibilidade com navegadores é opcional
 
-<pre class="brush: js">//startSimulation e pauseSimulation definidas em outro lugar
+```js
+//startSimulation e pauseSimulation definidas em outro lugar
 function handleVisibilityChange() {
   if (document.hidden) {
     pauseSimulation();
@@ -121,38 +119,23 @@ function handleVisibilityChange() {
 }
 
 document.addEventListener("visibilitychange", handleVisibilityChange, false);
-</pre>
+```
 
-<h2 id="Example" name="Example">Nota</h2>
+## Nota
 
-<p>Os estados de visibilidade de {{HTMLElement("iframe")}} são os mesmos do documento pai. Esconder o iframe com propriedades CSS não ativa os eventos de visibilidade nem muda o estado do documento do conteúdo.</p>
+Os estados de visibilidade de {{HTMLElement("iframe")}} são os mesmos do documento pai. Esconder o iframe com propriedades CSS não ativa os eventos de visibilidade nem muda o estado do documento do conteúdo.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Page Visibility API')}}</td>
-   <td>{{Spec2('Page Visibility API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                    | Estado                                       | Comentário |
+| ------------------------------------------------ | -------------------------------------------- | ---------- |
+| {{SpecName('Page Visibility API')}} | {{Spec2('Page Visibility API')}} |            |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Document.visibilityState")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>Descrição da <a href="http://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx">API de Visibilidade de Página</a> do IEBlog.</li>
- <li>Descrição da <a href="http://code.google.com/chrome/whitepapers/pagevisibility.html">API de visibilidade de Página</a> do Google</li>
-</ul>
+- Descrição da [API de Visibilidade de Página](http://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx) do IEBlog.
+- Descrição da [API de visibilidade de Página](http://code.google.com/chrome/whitepapers/pagevisibility.html) do Google

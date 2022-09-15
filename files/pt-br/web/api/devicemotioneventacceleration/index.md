@@ -9,36 +9,21 @@ translation_of: Web/API/DeviceMotionEventAcceleration
 translation_of_original: Web/API/DeviceAcceleration
 original_slug: Web/API/DeviceAcceleration
 ---
-<div>{{ ApiRef("Device Orientation Events") }}{{SeeCompatTable}}</div>
+{{ ApiRef("Device Orientation Events") }}{{SeeCompatTable}}
 
-<p>Um objeto <code>DeviceAcceleration</code> fornece informações sobre a quantidade de aceleração que o dispositivo desempenha ao longo dos três eixos.</p>
+Um objeto `DeviceAcceleration` fornece informações sobre a quantidade de aceleração que o dispositivo desempenha ao longo dos três eixos.
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<dl>
- <dt>{{domxref("DeviceAcceleration.x")}} {{readonlyInline}}</dt>
- <dd>A quantidade de aceleração ao longo do eixo X. <strong>Somente leitura</strong>.</dd>
- <dt>{{domxref("DeviceAcceleration.y")}} {{readonlyInline}}</dt>
- <dd>A quantidade de aceleração ao longo do eixo Y. <strong>Somente leitura</strong>.</dd>
- <dt>{{domxref("DeviceAcceleration.z")}} {{readonlyInline}}</dt>
- <dd>A quantidade de aceleração ao longo do eixo Z.<strong>Somente leitura</strong>.</dd>
-</dl>
+- {{domxref("DeviceAcceleration.x")}} {{readonlyInline}}
+  - : A quantidade de aceleração ao longo do eixo X. **Somente leitura**.
+- {{domxref("DeviceAcceleration.y")}} {{readonlyInline}}
+  - : A quantidade de aceleração ao longo do eixo Y. **Somente leitura**.
+- {{domxref("DeviceAcceleration.z")}} {{readonlyInline}}
+  - : A quantidade de aceleração ao longo do eixo Z.**Somente leitura**.
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Device Orientation", "#device_acceleration", "DeviceAcceleration")}}</td>
-   <td>{{Spec2("Device Orientation")}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificações                                                                                               | Status                                   | Comentario        |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------- |
+| {{SpecName("Device Orientation", "#device_acceleration", "DeviceAcceleration")}} | {{Spec2("Device Orientation")}} | Definição inicial |
