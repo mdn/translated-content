@@ -141,5 +141,3 @@ Você pode usar árvores DOM para modelar dados que não são adequados para RDF
 - [E4X (ECMAScript for XML)](/en/E4X "en/E4X")
 - [Parsing and serializing XML](/en/Parsing_and_serializing_XML "en/Parsing_and_serializing_XML")
 - [XMLHttpRequest](/en/DOM/XMLHttpRequest "en/XMLHttpRequest")
-
-{{ languages( { "fr": "fr/Comment\_cr\u00e9er\_un\_arbre\_DOM", "ja": "ja/How\_to\_create\_a\_DOM\_tree", "zh-cn": "zh-cn/How\_to\_create\_a\_DOM\_tree" } ) }}
