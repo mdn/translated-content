@@ -8,12 +8,9 @@ slug: Web/Media/Formats/Video_codecs
 
 由于未压缩的视频数据的使用巨大的空间，有必要对其进行压缩以便进行存储，更不用说通过网络传输了。想象一下存储未压缩视频所需的数据量：
 
-- 单帧全彩色高清（1920x1080）视频（每像素 4 字节）为 8,294,400 字节。 
-
+- 单帧全彩色高清（1920x1080）视频（每像素 4 字节）为 8,294,400 字节。
 - 在典型的每秒 30 帧的情况下，每秒高清视频将占用 248,832,000 字节（\~249 MB）。
-
-- 一分钟的高清视频需要 14.93 GB 的存储空间。 
-
+- 一分钟的高清视频需要 14.93 GB 的存储空间。
 - 一个相当典型的 30 分钟视频会议需要大约 447.9 GB 的存储空间，而一部 2 小时的电影需要几乎 _1.79 **TB**_（即 1790 GB）的空间。
 
 不仅所需的存储空间巨大，而且传输这样的未压缩视频所需的网络带宽也将是巨大的，达到 249 MB/秒——不包括音频和开销。视频编解码器在此时就派上用场了。就像音频编解码器对声音数据所做的那样，视频编解码器压缩视频数据并将其编码为以后可以解码和播放或编辑的格式。
@@ -37,16 +34,14 @@ slug: Web/Media/Formats/Video_codecs
       <th scope="row"><a href="#av1">AV1</a></th>
       <td>AOMedia Video 1</td>
       <td>
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#webm">WebM</a>
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>、<a href="/zh-CN/docs/Web/Media/Formats/Containers#webm">WebM</a>
       </td>
     </tr>
     <tr>
       <th scope="row"><a href="#avc_h.264">AVC (H.264)</a></th>
       <td>Advanced Video Coding（高级视频编码器）</td>
       <td>
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#3gp">3GP</a>、<a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
       </td>
     </tr>
     <tr>
@@ -63,16 +58,14 @@ slug: Web/Media/Formats/Video_codecs
       <th scope="row"><a href="#mp4v-es">MP4V-ES</a></th>
       <td>MPEG-4 Video Elemental Stream（MPEG-4 视频元素流）</td>
       <td>
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#3gp">3GP</a>、<a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
       </td>
     </tr>
     <tr>
       <th scope="row"><a href="#mpeg-1_part_2_video">MPEG-1</a></th>
       <td>MPEG-1 Part 2 Visual</td>
       <td>
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpegmpeg-2">MPEG</a>,
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#quicktime"
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpegmpeg-2">MPEG</a>、<a href="/zh-CN/docs/Web/Media/Formats/Containers#quicktime"
           >QuickTime</a
         >
       </td>
@@ -81,9 +74,7 @@ slug: Web/Media/Formats/Video_codecs
       <th scope="row"><a href="#mpeg-2_part_2_video">MPEG-2</a></th>
       <td>MPEG-2 Part 2 Visual</td>
       <td>
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpegmpeg-2">MPEG</a>,
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#quicktime"
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>、<a href="/zh-CN/docs/Web/Media/Formats/Containers#mpegmpeg-2">MPEG</a>、<a href="/zh-CN/docs/Web/Media/Formats/Containers#quicktime"
           >QuickTime</a
         >
       </td>
@@ -97,18 +88,14 @@ slug: Web/Media/Formats/Video_codecs
       <th scope="row"><a href="#vp8">VP8</a></th>
       <td>Video Processor 8</td>
       <td>
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#ogg">Ogg</a>,
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#webm">WebM</a>
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#3gp">3GP</a>、<a href="/zh-CN/docs/Web/Media/Formats/Containers#ogg">Ogg</a>、<a href="/zh-CN/docs/Web/Media/Formats/Containers#webm">WebM</a>
       </td>
     </tr>
     <tr>
       <th scope="row"><a href="#vp9">VP9</a></th>
       <td>Video Processor 9</td>
       <td>
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#ogg">Ogg</a>,
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#webm">WebM</a>
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>、<a href="/zh-CN/docs/Web/Media/Formats/Containers#ogg">Ogg</a>、<a href="/zh-CN/docs/Web/Media/Formats/Containers#webm">WebM</a>
       </td>
     </tr>
   </tbody>
@@ -148,7 +135,7 @@ slug: Web/Media/Formats/Video_codecs
     <tr>
       <th scope="row">帧率</th>
       <td>
-        主要影响图像中运动的平滑度。在某种程度上，帧速率越高，运动就会显得越流畅和逼真。随着帧率的提高这种收益最终会达到递减点。有关详细信息，请参阅下面的<a href="#reduced_frame_rate">帧速率</a>。
+        主要影响图像中运动的平滑度。在某种程度上，帧速率越高，运动就会显得越流畅和逼真。随着帧率的提高这种收益最终会达到递减点。有关详细信息，请参阅下面的<a href="#降低帧率">帧速率</a>。
       </td>
       <td>
         假设在编码过程中帧速率没有降低，更高的帧速率会导致压缩后的视频占据更多的空间。
@@ -304,11 +291,11 @@ slug: Web/Media/Formats/Video_codecs
 
 ### 振铃效应
 
-有损压缩算法会引入**[振铃效应](https://zh.wikipedia.org/wiki/振鈴效應)**，即对象外部区域被压缩算法生成的彩色像素污染的效果。当算法使用跨越对象与其背景之间的清晰边界的块时，就会发生这种情况。这在较高的压缩级别下尤其常见。
+有损压缩算法会引入[**振铃效应**](https://zh.wikipedia.org/wiki/振鈴效應)，即对象外部区域被压缩算法生成的彩色像素污染的效果。当算法使用跨越对象与其背景之间的清晰边界的块时，就会发生这种情况。这在较高的压缩级别下尤其常见。
 
 [![振铃效应示例](ringing-effects.png)](ringing-effects.png)
 
-请注意上方星星边缘周围的蓝色和粉红色条纹（以及步进和其他重要的压缩伪影）。那些边缘是振铃效应。振铃效应在某些方面类似于[飞蚊噪声](#mosquito_noise)，除了振铃效果或多或少稳定不变，而蚊子噪音闪烁和移动。
+请注意上方星星边缘周围的蓝色和粉红色条纹（以及步进和其他重要的压缩伪影）。那些边缘是振铃效应。振铃效应在某些方面类似于[飞蚊噪声](#飞蚊噪声)，除了振铃效果或多或少稳定不变，而蚊子噪音闪烁和移动。
 
 振铃是另一种类型的鬼影，它会使阅读图像中包含的文本变得特别困难。
 
@@ -330,7 +317,7 @@ slug: Web/Media/Formats/Video_codecs
 
 ### 飞蚊噪声
 
-**飞蚊噪声**是一种时间鬼影，表现为噪声或**边缘繁忙**，表现为闪烁的朦胧或闪烁，大致跟随在具有硬边缘或前景对象和背景之间的尖锐过渡的对象的边缘之外。效果在外观上可能类似于[振铃效应](#ringing)。
+**飞蚊噪声**是一种时间鬼影，表现为噪声或**边缘繁忙**，表现为闪烁的朦胧或闪烁，大致跟随在具有硬边缘或前景对象和背景之间的尖锐过渡的对象的边缘之外。效果在外观上可能类似于[振铃效应](#振铃效应)。
 
 ![](mosquito-effect-sm.png)
 
@@ -381,10 +368,9 @@ slug: Web/Media/Formats/Video_codecs
           vertical-align: middle;
         "
       >
-        图片来自
-        <a
+        图片来自<a
           href="https://en.wikipedia.org/wiki/Motion_compensation#Illustrated_example"
-          >Wikipedia</a
+          >维基百科</a
         >
       </th>
     </tr>
@@ -411,7 +397,7 @@ slug: Web/Media/Formats/Video_codecs
 
 ### AV1
 
-**AOMedia Video 1** (**AV1**) 编解码器是由 [Alliance for Open Media](https://aomedia.org/) 专门为互联网视频设计的开放格式。它实现了比 [VP9](#vp9) 和 [H.265/HEVC](#hevc_h.265) 更高的数据压缩率，比 [AVC](#avc_h.264) 高出多达 50%。 AV1 完全免版税，专为 {{HTMLElement("video")}} 元素和 [WebRTC](/en-US/docs/Web/API/WebRTC_API) 使用而设计。
+**AOMedia Video 1**（**AV1**）编解码器是由 [Alliance for Open Media](https://aomedia.org/) 专门为互联网视频设计的开放格式。它实现了比 [VP9](#vp9) 和 [H.265/HEVC](#hevc_h.265) 更高的数据压缩率，比 [AVC](#avc_h.264) 高出多达 50%。AV1 完全免版税，专为 {{HTMLElement("video")}} 元素和 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API) 使用而设计。
 
 AV1 目前提供三种配置文件：**main**、**high** 和 **professional**，并增加了对颜色深度和色度子采样的支持。此外，还指定了一系列**级别**，每个级别都定义了视频属性范围的限制。这些属性包括帧尺寸、以像素为单位的图像区域、显示和解码率、平均和最大比特率，以及编码/解码过程中使用的瓦片和瓦片列的数量限制。
 
@@ -443,7 +429,7 @@ AV1 目前提供三种配置文件：**main**、**high** 和 **professional**，
     <tr>
       <th scope="row">压缩</th>
       <td>
-        基于有损<a href="https://zh.wikipedia.org/wiki/%E7%A6%BB%E6%95%A3%E4%BD%99%E5%BC%A6%E5%8F%98%E6%8D%A2">DCT 的算法</a>
+        基于有损 <a href="https://zh.wikipedia.org/wiki/离散余弦变换">DCT 的算法</a>
       </td>
     </tr>
     <tr>
@@ -522,11 +508,11 @@ AV1 目前提供三种配置文件：**main**、**high** 和 **professional**，
     <tr>
       <th scope="row">容器支持</th>
       <td>
-        <a href="https://en.wikipedia.org/wiki/ISO/IEC_base_media_file_format">ISOBMFF</a>, MPEG-TS, <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>, <a href="/zh-CN/docs/Web/Media/Formats/Containers#webm">WebM</a>
+        <a href="https://en.wikipedia.org/wiki/ISO/IEC_base_media_file_format">ISOBMFF</a>、 MPEG-TS、<a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>、<a href="/zh-CN/docs/Web/Media/Formats/Containers#webm">WebM</a>
       </td>
     </tr>
     <tr>
-      <th scope="row"> {{Glossary("RTP")}} / <a href="/zh-CN/docs/Web/API/WebRTC_API">WebRTC</a> compatible </th>
+      <th scope="row">{{Glossary("RTP")}} / <a href="/zh-CN/docs/Web/API/WebRTC_API">WebRTC</a> 兼容</th>
       <td>支持</td>
     </tr>
     <tr>
@@ -548,13 +534,13 @@ AV1 目前提供三种配置文件：**main**、**high** 和 **professional**，
 
 ### AVC (H.264)
 
-MPEG-4 规范套件的**高级视频编码** (**AVC**) 标准由相同的 ITU H.264 规范和 MPEG-4 Part 10 规范指定。它是一种基于运动补偿的编解码器，如今广泛用于各种媒体，包括广播电视、{{Glossary("RTP")}} 视频会议以及蓝光光盘的视频编解码器。
+MPEG-4 规范套件的**高级视频编码**（**AVC**）标准由相同的 ITU H.264 规范和 MPEG-4 Part 10 规范指定。它是一种基于运动补偿的编解码器，如今广泛用于各种媒体，包括广播电视、{{Glossary("RTP")}} 视频会议以及蓝光光盘的视频编解码器。
 
 AVC 高度灵活，具有许多不同功能的配置文件；例如，Constrained Baseline Profile 设计用于视频会议和移动场景，使用的带宽少于 Main Profile（在某些地区用于标清数字电视）或 High Profile（用于蓝光光盘视频） .大多数配置文件使用 8 位颜色分量和 4:2:0 色度二次采样； High 10 Profile 增加了对 10 位颜色的支持，High 10 的高级形式增加了 4:2:2 和 4:4:4 色度二次采样。
 
 AVC 还具有特殊功能，例如支持同一场景的多个视图（多视图视频编码），它允许制作立体视频等。
 
-然而，AVC 是一种专有格式，其技术的众多专利由多方拥有。 AVC 媒体的商业使用需要许可证，但 MPEG LA 专利池不需要为以 AVC 格式流式传输的互联网视频收取许可证费用，只要视频对最终用户免费即可。
+然而，AVC 是一种专有格式，其技术的众多专利由多方拥有。AVC 媒体的商业使用需要许可证，但 MPEG LA 专利池不需要为以 AVC 格式流式传输的互联网视频收取许可证费用，只要视频对最终用户免费即可。
 
 WebRTC 的非 Web 浏览器实现（任何不包括 JavaScript API 的实现）都_需要_支持 AVC 作为 WebRTC 调用中的编解码器。虽然 Web 浏览器不需要这样做，但有些需要这样做。
 
@@ -572,7 +558,7 @@ WebRTC 的非 Web 浏览器实现（任何不包括 JavaScript API 的实现）�
     </tr>
     <tr>
       <th scope="row">压缩</th>
-      <td> Lossy <a href="https://zh.wikipedia.org/wiki/离散余弦变换">基于 DCT 的算法</a>, 虽然可以在图像中创建无损宏块</td>
+      <td> Lossy <a href="https://zh.wikipedia.org/wiki/离散余弦变换">基于 DCT 的算法</a>，虽然可以在图像中创建无损宏块</td>
     </tr>
     <tr>
       <th scope="row">支持的帧大小</th>
@@ -681,8 +667,7 @@ WebRTC 的非 Web 浏览器实现（任何不包括 JavaScript API 的实现）�
     <tr>
       <th scope="row">容器支持</th>
       <td>
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#3gp">3GP</a>、<a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
       </td>
     </tr>
     <tr>
@@ -718,7 +703,7 @@ WebRTC 的非 Web 浏览器实现（任何不包括 JavaScript API 的实现）�
 
 ITU 的 **H.263** 编解码器主要设计用于低带宽情况。特别是，它的重点是 PSTN（公共交换电话网络）、{{Glossary("RTSP")}} 和 SIP（基于 IP 的视频会议）系统上的视频会议。尽管针对低带宽网络进行了优化，但它相当占用 CPU，并且可能无法在低端计算机上充分执行。数据格式类似于 MPEG-4 Part 2。
 
-H.263 从未在网络上广泛使用。 H.263 的变体已被用作其他专有格式的基础，例如 Flash 视频或 Sorenson 编解码器。但是，没有任何主流浏览器默认包含 H.263 支持。某些媒体插件已启用对 H.263 媒体的支持。
+H.263 从未在网络上广泛使用。H.263 的变体已被用作其他专有格式的基础，例如 Flash 视频或 Sorenson 编解码器。但是，没有任何主流浏览器默认包含 H.263 支持。某些媒体插件已启用对 H.263 媒体的支持。
 
 与大多数编解码器不同，H.263 以每帧（图片）的最大比特率或 **BPPmaxKb** 来定义编码视频的基本原理。编码时为BPPmaxKb选择一个值，然后视频每帧不能超过这个值。最终比特率将取决于此、帧速率、压缩以及选择的分辨率和块格式。
 
@@ -738,7 +723,7 @@ H.263 是一种专有格式，[专利](https://www.itu.int/ITU-T/recommendations
     </tr>
     <tr>
       <th scope="row">压缩</th>
-      <td>基于有损<a href="https://zh.wikipedia.org/wiki/%E7%A6%BB%E6%95%A3%E4%BD%99%E5%BC%A6%E5%8F%98%E6%8D%A2">基于 DCT 的算法</a></td>
+      <td>基于有损 <a href="https://zh.wikipedia.org/wiki/离散余弦变换">DCT 的算法</a></td>
     </tr>
     <tr>
       <th scope="row">支持的帧大小</th>
@@ -793,9 +778,7 @@ H.263 是一种专有格式，[专利](https://www.itu.int/ITU-T/recommendations
     <tr>
       <th scope="row">容器支持</th>
       <td>
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#quicktime">QuickTime</a>
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#3gp">3GP</a>、<a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>、<a href="/zh-CN/docs/Web/Media/Formats/Containers#quicktime">QuickTime</a>
       </td>
     </tr>
     <tr>
@@ -825,9 +808,9 @@ H.263 是一种专有格式，[专利](https://www.itu.int/ITU-T/recommendations
 
 ### HEVC (H.265)
 
-**[高效视频编码](http://hevc.info/)** (**HEVC**) 编解码器由 ITU 的 **H.265** 以及 MPEG-H 第 2 部分 ( MPEG-4 仍在开发中的后续版本）。 HEVC 旨在支持对包括超高分辨率（包括 8K 视频）在内的视频进行高效编码和解码，其结构专为让软件利用现代处理器而设计。从理论上讲，HEVC 可以达到 [AVC](#avc_h.264) 一半的压缩文件大小，但图像质量相当。
+**[高效视频编码](http://hevc.info/)**（**HEVC**）编解码器由 ITU 的 **H.265** 以及 MPEG-H 第 2 部分（MPEG-4 仍在开发中的后续版本）。HEVC 旨在支持对包括超高分辨率（包括 8K 视频）在内的视频进行高效编码和解码，其结构专为让软件利用现代处理器而设计。从理论上讲，HEVC 可以达到 [AVC](#avc_h.264) 一半的压缩文件大小，但图像质量相当。
 
-例如，每个编码树单元 (CTU)——类似于以前编解码器中使用的宏块——由每个样本的亮度值树以及在同一编码树单元中使用的每个色度样本的色度值树组成，以及任何必需的语法元素。这种结构支持多核轻松处理。
+例如，每个编码树单元（CTU）——类似于以前编解码器中使用的宏块——由每个样本的亮度值树以及在同一编码树单元中使用的每个色度样本的色度值树组成，以及任何必需的语法元素。这种结构支持多核轻松处理。
 
 HEVC 的一个有趣特性是主配置文件仅支持每个分量颜色 8 位和 4:2:0 色度子采样。同样有趣的是 4:4:4 视频经过特殊处理。这三个通道没有使用亮度样本（以灰度表示图像的像素）以及 Cb 和 Cr 样本（指示如何更改灰度以创建彩色像素），而是将三个通道视为三个单色图像，每种颜色一个，然后在渲染过程中组合以产生全彩图像。
 
@@ -845,7 +828,7 @@ HEVC 是一种专有格式，受多项专利保护。许可[由 MPEG LA 管理](
     </tr>
     <tr>
       <th scope="row">压缩</th>
-      <td> Lossy <a href="https://zh.wikipedia.org/wiki/%E7%A6%BB%E6%95%A3%E4%BD%99%E5%BC%A6%E5%8F%98%E6%8D%A2">基于 DCT 的算法</a></td>
+      <td>Lossy <a href="https://zh.wikipedia.org/wiki/离散余弦变换">基于 DCT 的算法</a></td>
     </tr>
     <tr>
       <th scope="row">支持的帧大小</th>
@@ -920,7 +903,7 @@ HEVC 是一种专有格式，受多项专利保护。许可[由 MPEG LA 管理](
       <td>支持</td>
     </tr>
     <tr>
-      <th scope="row">可变帧速率 (VFR) 支持</th>
+      <th scope="row">可变帧速率（VFR）支持</th>
       <td>支持</td>
     </tr>
     <tr>
@@ -991,7 +974,7 @@ HEVC 是一种专有格式，受多项专利保护。许可[由 MPEG LA 管理](
 
 ### MP4V-ES
 
-**MPEG-4 Video Elemental Stream** (**MP4V-ES**) 格式是 MPEG-4 Part 2 视觉标准的一部分。虽然一般来说，MPEG-4 第 2 部分视频没有被任何人使用，因为它缺乏与其他编解码器相关的引人注目的价值，但 MP4V-ES 在移动设备上确实有一些用途。 MP4V 本质上是 MPEG-4 容器中的 H.263 编码。
+**MPEG-4 Video Elemental Stream**（**MP4V-ES**）格式是 MPEG-4 Part 2 视觉标准的一部分。虽然一般来说，MPEG-4 第 2 部分视频没有被任何人使用，因为它缺乏与其他编解码器相关的引人注目的价值，但 MP4V-ES 在移动设备上确实有一些用途。MP4V 本质上是 MPEG-4 容器中的 H.263 编码。
 
 它的主要目的是用于通过 {{Glossary("RTP")}} 会话流式传输 MPEG-4 音频和视频。但是，MP4V-ES 也用于使用 [3GP](/zh-CN/docs/Web/Media/Formats/Containers#3gp) 通过移动连接传输 MPEG-4 音频和视频。
 
@@ -1009,7 +992,7 @@ HEVC 是一种专有格式，受多项专利保护。许可[由 MPEG LA 管理](
     </tr>
     <tr>
       <th scope="row">压缩</th>
-      <td> Lossy <a href="https://zh.wikipedia.org/wiki/%E7%A6%BB%E6%95%A3%E4%BD%99%E5%BC%A6%E5%8F%98%E6%8D%A2">基于 DCT 的算法</a></td>
+      <td>Lossy <a href="https://zh.wikipedia.org/wiki/离散余弦变换">基于 DCT 的算法</a></td>
     </tr>
     <tr>
       <th scope="row">支持的帧大小</th>
@@ -1063,8 +1046,7 @@ HEVC 是一种专有格式，受多项专利保护。许可[由 MPEG LA 管理](
     <tr>
       <th scope="row">容器支持</th>
       <td>
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#3gp">3GP</a>、<a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
       </td>
     </tr>
     <tr>
@@ -1108,7 +1090,7 @@ HEVC 是一种专有格式，受多项专利保护。许可[由 MPEG LA 管理](
     <tr>
       <th scope="row">压缩</th>
       <td>
-        基于有损<a href="https://zh.wikipedia.org/wiki/%E7%A6%BB%E6%95%A3%E4%BD%99%E5%BC%A6%E5%8F%98%E6%8D%A2">DCT 的算法</a>
+        基于有损 <a href="https://zh.wikipedia.org/wiki/离散余弦变换">DCT 的算法</a>
       </td>
     </tr>
     <tr>
@@ -1187,7 +1169,7 @@ HEVC 是一种专有格式，受多项专利保护。许可[由 MPEG LA 管理](
 
 ### MPEG-2 Part 2 Video
 
-**[MPEG-2 Part 2](https://zh.wikipedia.org/wiki/H.262)**是MPEG-2规范定义的视频格式，也偶尔会被提及通过其 {{Glossary("ITU")}} 名称，H.262。它与 MPEG-1 视频非常相似——事实上，任何 MPEG-2 播放器都可以自动处理 MPEG-1，而无需任何特殊工作——除了它已扩展为支持更高的比特率和增强的编码技术。
+[**MPEG-2 Part 2**](https://zh.wikipedia.org/wiki/H.262) 是 MPEG-2 规范定义的视频格式，也偶尔会被提及通过其 {{Glossary("ITU")}} 名称，H.262。它与 MPEG-1 视频非常相似——事实上，任何 MPEG-2 播放器都可以自动处理 MPEG-1，而无需任何特殊工作——除了它已扩展为支持更高的比特率和增强的编码技术。
 
 目标是允许 MPEG-2 压缩标清电视，因此也支持隔行扫描视频。标准清晰度压缩率和生成的视频质量需要足够好，MPEG-2 是用于 DVD 视频媒体的主要视频编解码器。
 
@@ -1240,7 +1222,7 @@ MPEG-2 有几个具有不同功能的配置文件。然后每个配置文件有�
     <tr>
       <th scope="row">压缩</th>
       <td>
-        基于有损<a href="https://zh.wikipedia.org/wiki/%E7%A6%BB%E6%95%A3%E4%BD%99%E5%BC%A6%E5%8F%98%E6%8D%A2">DCT 的算法</a>
+        基于有损 <a href="https://zh.wikipedia.org/wiki/离散余弦变换">DCT 的算法</a>
       </td>
     </tr>
     <tr>
@@ -1321,10 +1303,7 @@ MPEG-2 有几个具有不同功能的配置文件。然后每个配置文件有�
     <tr>
       <th scope="row">容器支持</th>
       <td>
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpegmpeg-2">MPEG</a>,
-        MPEG-TS（MPEG传输流），
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#quicktime">QuickTime</a>
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpegmpeg-2">MPEG</a>、MPEG-TS（MPEG传输流）、<a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>、<a href="/zh-CN/docs/Web/Media/Formats/Containers#quicktime">QuickTime</a>
       </td>
     </tr>
     <tr>
@@ -1359,7 +1338,7 @@ MPEG-2 有几个具有不同功能的配置文件。然后每个配置文件有�
 
 ### Theora
 
-**[Theora](https://zh.wikipedia.org/wiki/Theora)**，由 [Xiph.org](https://xiph.org/) 开发，是一个开放且免费的视频编解码器，可以无需版税或许可即可使用。 Theora 在质量和压缩率上可与 MPEG-4 Part 2 Visual 和 AVC 相媲美，即使不是顶级的视频编码选择，它也是一个非常好的选择。但它不受任何许可问题的影响以及相对较低的 CPU 资源要求使其成为许多软件和 Web 项目的热门选择。低 CPU 占用影响特别有用，因为没有可用于 Theora 的硬件解码器。
+**[Theora](https://zh.wikipedia.org/wiki/Theora)**，由 [Xiph.org](https://xiph.org/) 开发，是一个开放且免费的视频编解码器，可以无需版税或许可即可使用。Theora 在质量和压缩率上可与 MPEG-4 Part 2 Visual 和 AVC 相媲美，即使不是顶级的视频编码选择，它也是一个非常好的选择。但它不受任何许可问题的影响以及相对较低的 CPU 资源要求使其成为许多软件和 Web 项目的热门选择。低 CPU 占用影响特别有用，因为没有可用于 Theora 的硬件解码器。
 
 Theora 最初基于 On2 Technologies 的 VC3 编解码器。该编解码器及其规范是在 LGPL 许可下发布的，并委托给 Xiph.org，后者随后将其开发为 Theora 标准。
 
@@ -1382,7 +1361,7 @@ Theora 的一个缺点是它仅支持每个颜色分量 8 位，无法选择使�
     <tr>
       <th scope="row">压缩</th>
       <td>
-        基于有损<a href="https://zh.wikipedia.org/wiki/%E7%A6%BB%E6%95%A3%E4%BD%99%E5%BC%A6%E5%8F%98%E6%8D%A2">DCT 的算法</a>
+        基于有损 <a href="https://zh.wikipedia.org/wiki/离散余弦变换">DCT 的算法</a>
       </td>
     </tr>
     <tr>
@@ -1436,7 +1415,7 @@ Theora 的一个缺点是它仅支持每个颜色分量 8 位，无法选择使�
           </tbody>
         </table>
         <p>
-          Edge 通过可选的<a href="https://www.microsoft.com/en-us/p/web-media-extensions/9n5tdp8vcmhs?activetab=pivot:overviewtab">Web 媒体扩展</a>插件支持 Theora。
+          Edge 通过可选的 <a href="ttps://apps.microsoft.com/store/detail/web-媒体扩展/9N5TDP8VCMHS">Web 媒体扩展</a>插件支持 Theora。
         </p>
       </td>
     </tr>
@@ -1469,7 +1448,7 @@ Theora 的一个缺点是它仅支持每个颜色分量 8 位，无法选择使�
 
 ### VP8
 
-**Video Processor 8** (**VP8**) 编解码器最初由 On2 Technologies 创建。在收购 On2 之后，Google 发布了 VP8 作为一种开放且免版税的视频格式，并承诺不强制执行相关专利。在质量和压缩率方面，VP8 可与 [AVC](#avc_h.264) 媲美。
+**Video Processor 8**（**VP8**）编解码器最初由 On2 Technologies 创建。在收购 On2 之后，Google 发布了 VP8 作为一种开放且免版税的视频格式，并承诺不强制执行相关专利。在质量和压缩率方面，VP8 可与 [AVC](#avc_h.264) 媲美。
 
 如果浏览器支持，VP8 允许带有 Alpha 通道的视频，允许视频播放的背景可以通过视频看到，达到每个像素的 Alpha 分量指定的程度。
 
@@ -1488,7 +1467,7 @@ HTML 内容中的 VP8 有很好的浏览器支持，尤其是在 [WebM](/zh-CN/d
     <tr>
       <th scope="row">压缩</th>
       <td>
-        基于有损<a href="https://zh.wikipedia.org/wiki/%E7%A6%BB%E6%95%A3%E4%BD%99%E5%BC%A6%E5%8F%98%E6%8D%A2">DCT 的算法</a>
+        基于有损 <a href="https://zh.wikipedia.org/wiki/离散余弦变换">DCT 的算法</a>
       </td>
     </tr>
     <tr>
@@ -1541,8 +1520,8 @@ HTML 内容中的 VP8 有很好的浏览器支持，尤其是在 [WebM](/zh-CN/d
             </tr>
           </tbody>
         </table>
-        <p>对 VP8 的边缘支持需要使用<a href="/en-US/docs/Web/API/Media_Source_Extensions_API">媒体源扩展</a>。</p>
-        <p>macOS：Safari 14.1 在 WebRTC、MSE 和视频元素中支持 VP8。 Safari 12.2 仅支持 WebRTC 连接中的 VP8。</p>
+        <p>对 VP8 的边缘支持需要使用<a href="/zh-CN/docs/Web/API/Media_Source_Extensions_API">媒体源扩展</a>。</p>
+        <p>macOS：Safari 14.1 在 WebRTC、MSE 和视频元素中支持 VP8。Safari 12.2 仅支持 WebRTC 连接中的 VP8。</p>
         <p>iOS：Safari 12.1 及更高版本仅在 WebRTC 连接中支持 VP8。</p>
         <p>当没有 H.264 硬件解码器可用时，Firefox 仅在 MSE 中支持 VP8。使用 {{domxref("MediaSource.isTypeSupported()")}} 检查可用性。</p>
       </td>
@@ -1550,14 +1529,12 @@ HTML 内容中的 VP8 有很好的浏览器支持，尤其是在 [WebM](/zh-CN/d
     <tr>
       <th scope="row">容器支持</th>
       <td>
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#ogg">Ogg</a>,
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#webm">WebM</a>
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#3gp">3GP</a>、<a href="/zh-CN/docs/Web/Media/Formats/Containers#ogg">Ogg</a>、<a href="/zh-CN/docs/Web/Media/Formats/Containers#webm">WebM</a>
       </td>
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("RTP")}} / <a href="/zh-CN/docs/Web/API/WebRTC_API">WebRTC</a>兼容</th>
+        {{Glossary("RTP")}} / <a href="/zh-CN/docs/Web/API/WebRTC_API">WebRTC</a> 兼容</th>
       <td>支持; VP8 是 WebRTC 规范要求的编解码器之一</td>
     </tr>
     <tr>
@@ -1577,11 +1554,11 @@ HTML 内容中的 VP8 有很好的浏览器支持，尤其是在 [WebM](/zh-CN/d
 
 ### VP9
 
-**Video Processor 9**（**VP9**）是 Google 开发的旧 VP8 标准的继承者。与 VP8 一样，VP9 是完全开放且免版税的。其编解码性能与 AVC 相当或略快，但质量更好。 VP9 的编码视频质量在相似比特率下可与 HEVC 相媲美。
+**Video Processor 9**（**VP9**）是 Google 开发的旧 VP8 标准的继承者。与 VP8 一样，VP9 是完全开放且免版税的。其编解码性能与 AVC 相当或略快，但质量更好。VP9 的编码视频质量在相似比特率下可与 HEVC 相媲美。
 
 VP9 的主要配置文件仅支持 4:2:0 色度子采样级别的 8 位色深，但其配置文件包括对更深颜色的支持和全范围的色度子采样模式。它支持多种 HDR 实现，并在选择帧速率、纵横比和帧大小方面提供了很大的自由度。
 
-VP9 被浏览器广泛支持，并且编解码器的硬件实现相当普遍。 VP9 是 [WebM](/zh-CN/docs/Web/Media/Formats/Containers#webm) 规定的两个视频编解码器之一（另一个是 [VP8](#vp8)）。但请注意，Safari 对 WebM 和 VP9 的支持仅在 14.1 版中引入，因此如果你选择使用 VP9，请考虑为 iPhone、iPad 和 Mac 用户提供备用格式，例如 AVC 或 HEVC。
+VP9 被浏览器广泛支持，并且编解码器的硬件实现相当普遍。VP9 是 [WebM](/zh-CN/docs/Web/Media/Formats/Containers#webm) 规定的两个视频编解码器之一（另一个是 [VP8](#vp8)）。但请注意，Safari 对 WebM 和 VP9 的支持仅在 14.1 版中引入，因此如果你选择使用 VP9，请考虑为 iPhone、iPad 和 Mac 用户提供备用格式，例如 AVC 或 HEVC。
 
 如果你能够使用 WebM 容器（并且可以在需要时提供后备视频），VP9 是一个不错的选择。如果你希望使用开放编解码器而不是专有编解码器，则尤其如此。
 
@@ -1589,7 +1566,7 @@ VP9 被浏览器广泛支持，并且编解码器的硬件实现相当普遍。 
   <tbody>
     <tr>
       <th scope="row">支持的比特率</th>
-      <td>无限制;除非强制执行基于级别的限制，否则没有最大值</td>
+      <td>无限制；除非强制执行基于级别的限制，否则没有最大值</td>
     </tr>
     <tr>
       <th scope="row">支持的帧率</th>
@@ -1640,24 +1617,20 @@ VP9 被浏览器广泛支持，并且编解码器的硬件实现相当普遍。 
           </tbody>
         </table>
         <p>
-          Color spaces supported:
-          <a href="https://zh.wikipedia.org/wiki/BT.601">Rec. 601</a>,
-          <a href="https://zh.wikipedia.org/wiki/Rec._709">Rec. 709</a>,
-          <a href="https://en.wikipedia.org/wiki/Rec._2020">Rec. 2020</a>,
-          <a href="https://zh.wikipedia.org/wiki/NTSC%E5%88%B6%E5%BC%8F">SMPTE C</a> 、SMPTE-240M（已过时；由 Rec. 709 取代），以及
-          <a href="https://zh.wikipedia.org/wiki/SRGB%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4">sRGB</a>.
+          色彩空间支持：<a href="https://zh.wikipedia.org/wiki/BT.601">Rec. 601</a>、<a href="https://zh.wikipedia.org/wiki/Rec._709">Rec. 709</a>、<a href="https://en.wikipedia.org/wiki/Rec._2020">Rec. 2020</a>、<a href="https://zh.wikipedia.org/wiki/NTSC制式">SMPTE C</a>、MPTE-240M（已过时；由 Rec. 709 取代），以及
+          <a href="https://zh.wikipedia.org/wiki/SRGB色彩空间">sRGB</a>。
         </p>
       </td>
     </tr>
     <tr>
       <th scope="row">HDR 支持</th>
       <td>
-        支持; HDR10+、 <a href="https://en.wikipedia.org/wiki/Hybrid_Log-Gamma">HLG</a>和
+        支持；HDR10+、<a href="https://en.wikipedia.org/wiki/Hybrid_Log-Gamma">HLG</a> 和
         <a href="https://en.wikipedia.org/wiki/Perceptual_Quantizer">PQ</a>
       </td>
     </tr>
     <tr>
-      <th scope="row">可变帧速率 (VFR) 支持</th>
+      <th scope="row">可变帧速率（VFR）支持</th>
       <td>支持</td>
     </tr>
     <tr>
@@ -1675,7 +1648,7 @@ VP9 被浏览器广泛支持，并且编解码器的硬件实现相当普遍。 
               <th scope="col">Safari</th>
             </tr>
             <tr>
-              <th scope="row">VP9 support</th>
+              <th scope="row">VP9 支持</th>
               <td>29</td>
               <td>14</td>
               <td>28</td>
@@ -1701,21 +1674,19 @@ VP9 被浏览器广泛支持，并且编解码器的硬件实现相当普遍。 
           <li>Safari 14：（macOS、iOS）在 WebM 中支持 VP9 for WebRTC。</li>
           <li>Safari 14：(macOS) 从 MacOS 11.3 开始支持<a href="/zh-CN/docs/Web/API/Media_Source_Extensions_API">MSE</a>中的 VP9。</li>
           <li>Safari 14.1：（macOS）支持“无处不在”包含 VP9 视频轨道的 WebM 文件。</li>
-          <li>Safari 15：（macOS）在<a href="/zh-CN/docs/Web/API/Media_Source_Extensions_API">MSE</a>的 WebM 中支持 VP9。</li>
+          <li>Safari 15：（macOS）在 <a href="/zh-CN/docs/Web/API/Media_Source_Extensions_API">MSE</a> 的 WebM 中支持 VP9。</li>
         </ul>
       </td>
     </tr>
     <tr>
       <th scope="row">容器支持</th>
       <td>
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#ogg">Ogg</a>,
-        <a href="/zh-CN/docs/Web/Media/Formats/Containers#webm">WebM</a>
+        <a href="/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>、<a href="/zh-CN/docs/Web/Media/Formats/Containers#ogg">Ogg</a>、<a href="/zh-CN/docs/Web/Media/Formats/Containers#webm">WebM</a>
       </td>
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("RTP")}} / <a href="/zh-CN/docs/Web/API/WebRTC_API">WebRTC</a>兼容
+        {{Glossary("RTP")}} / <a href="/zh-CN/docs/Web/API/WebRTC_API">WebRTC</a> 兼容
       </th>
       <td>支持</td>
     </tr>
@@ -1741,7 +1712,7 @@ VP9 被浏览器广泛支持，并且编解码器的硬件实现相当普遍。 
 在决定使用那种编码器之前请先确定以下问题的答案：
 
 - 你希望使用开放格式，还是要考虑专有格式？
-- 你是否有资源为你的每个视频制作不止一种格式？提供后备选项的能力极大地简化了决策过程。 - 有没有你愿意牺牲兼容性的浏览器？
+- 你是否有资源为你的每个视频制作不止一种格式？提供后备选项的能力极大地简化了决策过程。有没有你愿意牺牲兼容性的浏览器？
 - 你需要支持的最旧的网络浏览器版本是多少？例如，你是否需要在过去五年内发布的每个浏览器上工作，还是仅在过去一年内工作？
 
 在以下部分中，我们为特定用例提供推荐的编解码器选择。对于每个用例，你最多可以找到两个建议。如果被认为最适合用例的编解码器是专有的或可能需要支付版税，则提供两个选项：第一个是开放且免版税的选项，然后是专有选项。
@@ -1750,15 +1721,15 @@ VP9 被浏览器广泛支持，并且编解码器的硬件实现相当普遍。 
 
 ### 日常视频推荐
 
-首先，让我们看看在典型网站上展示的视频的最佳选择，例如博客、信息网站、使用视频来展示产品的小型企业网站（但不是视频本身就是产品的地方）等等.
+首先，让我们看看在典型网站上展示的视频的最佳选择，例如博客、信息网站、使用视频来展示产品的小型企业网站（但不是视频本身就是产品的地方）等等。
 
-1. 一个 **[WebM](/zh-CN/docs/Web/Media/Formats/Containers#webm)** 容器，使用 **[VP9](#vp9)** 视频编解码器和 **[ Opus](/zh-CN/docs/Web/Media/Formats/Audio_codecs#opus)** 音频编解码器。这些都是开放的、免版税的格式，通常都得到很好的支持，尽管只是在最近的浏览器中，这就是为什么需要准备一个备用视频。
+1. **[WebM](/zh-CN/docs/Web/Media/Formats/Containers#webm)** 容器，使用 **[VP9](#vp9)** 视频编解码器和 **[Opus](/zh-CN/docs/Web/Media/Formats/Audio_codecs#opus)** 音频编解码器。这些都是开放的、免版税的格式，通常都得到很好的支持，尽管只是在最近的浏览器中，这就是为什么需要准备一个备用视频。
 
     ```html
     <video controls src="filename.webm"></video>
     ```
 
-2. 一个 **[MP4](/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4)** 容器和 **[AVC](#avc_h.264)** (**H.264**) 视频编解码器，最好使用 **[AAC](/zh-CN/docs/Web/Media/Formats/Audio_codecs#aac)** 作为你的音频编解码器。这是因为带有 AVC 和 AAC 编解码器的 MP4 容器是一种广泛支持的组合——事实上，每个主流浏览器都支持它——而且质量通常对大多数用例都很好。但是，请确保验证你是否符合许可证要求。
+2. **[MP4](/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4)** 容器和 **[AVC](#avc_h.264)**（**H.264**）视频编解码器，最好使用 **[AAC](/zh-CN/docs/Web/Media/Formats/Audio_codecs#aac)** 作为你的音频编解码器。这是因为带有 AVC 和 AAC 编解码器的 MP4 容器是一种广泛支持的组合——事实上，每个主流浏览器都支持它——而且质量通常对大多数用例都很好。但是，请确保验证你是否符合许可证要求。
 
     ```html
     <video controls>
@@ -1822,7 +1793,7 @@ const options = {
 let recorder = new MediaRecorder(sourceStream, options);
 ```
 
-此示例创建一个 12 位色彩及使用 4:4:4 色度二次采样的 BT.2100 HDR 配置，并且通过 [FLAC](/zh-CN/docs/Web/Media/Formats/Audio_codecs#FLAC) 录制无损音频的 `MediaRecorder`。生成的文件的视频和音频轨道之间共享的比特率不超过 800Mbps。你可能需要根据硬件性能、需求和你选择使用的特定编解码器来调整这些值。这种比特率对于网络传输显然不现实，可能只在本地使用。
+此示例创建一个 12 位色彩及使用 4:4:4 色度二次采样的 BT.2100 HDR 配置，并且通过 [FLAC](/zh-CN/docs/Web/Media/Formats/Audio_codecs#flac) 录制无损音频的 `MediaRecorder`。生成的文件的视频和音频轨道之间共享的比特率不超过 800Mbps。你可能需要根据硬件性能、需求和你选择使用的特定编解码器来调整这些值。这种比特率对于网络传输显然不现实，可能只在本地使用。
 
 将 `codecs` 参数的值分解为其点描述的属性，我们看到以下内容：
 
@@ -1847,11 +1818,11 @@ let recorder = new MediaRecorder(sourceStream, options);
 - [媒体容器格式（文件类型）](/zh-CN/docs/Web/Media/Formats/Containers)
 - [处理 web 内容中的媒体支持问题](/zh-CN/docs/Web/Media/Formats/Support_issues)
 - [WebRTC 使用的编解码器](/zh-CN/docs/Web/Media/Formats/WebRTC_codecs)
-- {{RFC(6381)}}: “Bucket”媒体类型的“编解码器”和“配置文件”参数
-- {{RFC(5334)}}: Ogg 媒体类型
-- {{RFC(3839)}}: 3GPP 多媒体文件的 MIME 类型注册
-- {{RFC(4381)}}: 3GPP2 多媒体文件的 MIME 类型注册
-- {{RFC(4337)}}: MPEG-4 多媒体文件的 MIME 类型注册
+- {{RFC(6381)}}：“Bucket”媒体类型的“编解码器”和“配置文件”参数
+- {{RFC(5334)}}：Ogg 媒体类型
+- {{RFC(3839)}}：3GPP 多媒体文件的 MIME 类型注册
+- {{RFC(4381)}}：3GPP2 多媒体文件的 MIME 类型注册
+- {{RFC(4337)}}：MPEG-4 多媒体文件的 MIME 类型注册
 - [Opera 浏览器中的视频编解码器](https://dev.opera.com/articles/introduction-html5-video/#codecs--the-fly-in-the-ointment)
-- IE 浏览器中的[视频（video）](/zh-CN/docs/Web/API/HTMLVideoElement) and [音频（audio）](/zh-CN/docs/Web/HTML/Element/audio) 编解码器
+- IE 浏览器中的[视频（video）](/zh-CN/docs/Web/API/HTMLVideoElement)和[音频（audio）](/zh-CN/docs/Web/HTML/Element/audio)编解码器
 - [Chrome 浏览器中的视频和音频解码器](https://www.chromium.org/audio-video/)
