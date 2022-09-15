@@ -37,5 +37,3 @@ Veja também [window.scrollBy](/en/DOM/window.scrollBy "en/DOM/window.scrollBy")
 ### Specification
 
 DOM Level 0. Not part of specification.
-
-{{ languages( { "ja": "ja/DOM/window\.scrollByPages", "pl": "pl/DOM/window\.scrollByPages", "zh-cn": "zh-cn/DOM/window\.scrollByPages" } ) }}
