@@ -5,7 +5,7 @@ translation_of: Web/API/Window/requestIdleCallback
 ---
 <div>{{APIRef("HTML DOM")}}{{SeeCompatTable}}</div>
 
-<p>El método <code><strong>w</strong></code><strong><code>indow.requestIdleCallback()</code></strong> encola la función que será ejecutada en periodos de inactividad del navegador permitiendo a los desarrolladores ejecutar en segundo plano tareas de baja prioridad del bucle de eventos, sin perjudicar la latencia de eventos principales como animaciones o respuestas a entradas. La funciones son ejecutadas normalmente en orden FIFO (primero en entrar primero en salir) salvo que se alcance el timeout definido de la función antes de que el navegador la ejecute.</p>
+<p>El método <code><strong>w</strong></code><strong><code>indow.requestIdleCallback()</code></strong> encola la función que será ejecutada en periodos de inactividad del navegador permitiendo a los desarrolladores ejecutar en segundo plano tareas de baja prioridad del bucle de eventos, sin perjudicar la latencia de eventos principales como animaciones o respuestas a entradas. La funciones son ejecutadas normalmente en orden FIFO (primero en entrar primero en salir) salvo que se alcance el timeout definido de la función antes de que el navegador la ejecute.</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -13,7 +13,7 @@ translation_of: Web/API/Window/requestIdleCallback
 
 <h3 id="Valor_devuelto">Valor devuelto</h3>
 
-<p>Un entero largo sin signo (unsigned long integer) que puede utilizarse para cancelar el callback a través del método {{domxref("Window.cancelIdleCallback()")}}.</p>
+<p>Un entero largo sin signo (unsigned long integer) que puede utilizarse para cancelar el callback a través del método {{domxref("Window.cancelIdleCallback()")}}.</p>
 
 <h3 id="Parámetros">Parámetros</h3>
 
@@ -21,14 +21,14 @@ translation_of: Web/API/Window/requestIdleCallback
  <dt><code>callback</code></dt>
  <dd>La referencia a la función que debe ser ejecutada en un futuro inmediato. La función callback toma un argumento con las siguientes propiedades:
  <ul>
-  <li><code>timeRemaining</code>: Referencia a un metodo que devuelve un {{domxref("DOMHighResTimeStamp")}}.</li>
+  <li><code>timeRemaining</code>: Referencia a un metodo que devuelve un {{domxref("DOMHighResTimeStamp")}}.</li>
   <li><code>didTimeout</code>: Booleano que se devuelve a false si el callback fue invocado por el navegador durante su inactividad, y true en otro caso (por ejemplo, si se definió timeout y expiró antes de que hubiera suficiente tiempo de inactividad).</li>
  </ul>
  </dd>
- <dt><code>options</code> {{optional_inline}}</dt>
+ <dt><code>options</code> {{optional_inline}}</dt>
 </dl>
 
-<p>Contiene parametros opcionales de configuración. Contiene la siguiente propiedad:</p>
+<p>Contiene parametros opcionales de configuración. Contiene la siguiente propiedad:</p>
 
 <ul>
  <li><code>timeout</code>: Plazo para que el navegador ejecute la función callback. Valor en milisegundos.</li>
@@ -38,7 +38,7 @@ translation_of: Web/API/Window/requestIdleCallback
 
 <h2 id="Example" name="Example">Ejemplos</h2>
 
-<p>Ver <a href="/en-US/docs/Web/API/Background_Tasks_API#Example">ejemplo</a> en el artículo <a href="/en-US/docs/Web/API/Background_Tasks_API">Planificación Cooperativa de la API de Tareas en segundo plano</a>.</p>
+<p>Ver <a href="/en-US/docs/Web/API/Background_Tasks_API#Example">ejemplo</a> en el artículo <a href="/en-US/docs/Web/API/Background_Tasks_API">Planificación Cooperativa de la API de Tareas en segundo plano</a>.</p>
 
 <h2 id="Especificaciones">Especificaciones</h2>
 
@@ -65,7 +65,7 @@ translation_of: Web/API/Window/requestIdleCallback
 
 {{Compat("api.Window.requestIdleCallback")}}
 
-<h2 id="Vease_también">Vease también</h2>
+<h2 id="Vease_también">Vease también</h2>
 
 <ul>
  <li>{{domxref("window.cancelIdleCallback()")}}</li>

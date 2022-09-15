@@ -18,7 +18,9 @@ Si l'URL donnée n'est pas valide, une {{domxref("DOMException")}} de type `SYNT
 
 ## Syntaxe
 
-    object.replace(url);
+```js
+object.replace(url);
+```
 
 ### Paramètres
 
@@ -34,14 +36,11 @@ document.location.replace('https://developer.mozilla.org/en-US/docs/Web/API/Loca
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           | Commentaires                                             |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "history.html#dom-location-replace", "Location.replace()")}} | {{Spec2('HTML WHATWG')}} | Pas de différence avec {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', "browsers.html#dom-location-replace", "Location.replace()")}}     | {{Spec2('HTML5 W3C')}}     | Définition initiale.                                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBIndex")}}
+{{Compat}}
 
 ## Voir aussi
 

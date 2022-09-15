@@ -1,12 +1,6 @@
 ---
 title: 摘要
 slug: Glossary/Digest
-tags:
-  - Cryptography
-  - Glossary
-  - Privacy
-  - Security
-translation_of: Glossary/Digest
 ---
 **摘要**是一个由 {{glossary("cryptographic hash function", "散列函数")}} 从完整的消息生成的小的值。理想情况下，摘要是可快速计算、不可逆且不可预测的，因此可用于表明是否有人篡改了给定的消息。
 
@@ -22,4 +16,4 @@ translation_of: Glossary/Digest
 ## 参见
 
 - {{glossary("Cryptographic hash function", "密码散列函数")}}
-- 维基百科上的{{interwiki("wikipedia", "Cryptographic_hash_function", "密码散列函数")}}
+- 维基百科上的[密码散列函数](https://zh.wikipedia.org/wiki/Cryptographic_hash_function)

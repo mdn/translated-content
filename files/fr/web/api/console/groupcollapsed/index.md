@@ -24,7 +24,9 @@ Voir [Using groups in the console](/fr/docs/Web/API/console#Using_groups_in_the_
 
 ## Syntaxe
 
-    console.groupCollapsed([label]);
+```js
+console.groupCollapsed([label]);
+```
 
 ## Paramètres
 
@@ -33,13 +35,11 @@ Voir [Using groups in the console](/fr/docs/Web/API/console#Using_groups_in_the_
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("Console API", "#groupcollapsed", "console.groupCollapsed()")}} | {{Spec2("Console API")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.groupCollapsed")}}
+{{Compat}}
 
 ## Voir aussi
 

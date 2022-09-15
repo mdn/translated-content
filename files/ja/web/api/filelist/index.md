@@ -1,12 +1,6 @@
 ---
 title: FileList
 slug: Web/API/FileList
-tags:
-  - API
-  - File API
-  - ファイル
-browser-compat: api.FileList
-translation_of: Web/API/FileList
 ---
 {{APIRef("File API")}}
 
@@ -18,7 +12,9 @@ translation_of: Web/API/FileList
 
 すべての `<input>` 要素のノードには `files` 属性があり、これが `FileList` 型なので、リスト中の項目にアクセスすることができます。例えば、HTML に以下のファイル入力があるとします。
 
-    <input id="fileItem" type="file">
+```html
+<input id="fileItem" type="file">
+```
 
 次のコードの行は、ノードのファイルリスト内の最初のファイルを [`File`](/ja/docs/Web/API/File) オブジェクトとして取得します。
 
@@ -61,9 +57,11 @@ var file = document.getElementById('fileItem').files[0];
 
 ファイルリスト内の指定された位置にあるファイルを表す [`File`](/ja/docs/Web/API/File) オブジェクトを返します。
 
-     File item(
-       index
-     );
+```
+File item(
+  index
+);
+```
 
 #### 引数
 

@@ -11,7 +11,9 @@ Par défaut, une unité sur le canevas est exactement un pixel. Si on applique, 
 
 ## Syntaxe
 
-    void ctx.scale(x, y);
+```js
+void ctx.scale(x, y);
+```
 
 ### Paramètres
 
@@ -138,13 +140,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Spécification                                                                                                                        | Statut                           | Commentaire |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-scale", "CanvasRenderingContext2D.scale")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.scale")}}
+{{Compat}}
 
 ## Voir aussi
 

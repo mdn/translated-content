@@ -11,7 +11,7 @@ original_slug: Web/HTTP/Заголовки/Authorization
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>Заголовок HTTP запроса <strong><code>Authorization</code></strong> включает в себя данные пользователя для проверки подлинности пользовательского агента с сервером обычно после того, как сервер ответил со статусом {{HTTPStatus("401")}} <code>Unauthorized</code> и заголовком {{HTTPHeader("WWW-Authenticate")}}.</p>
+<p>Заголовок HTTP запроса <strong><code>Authorization</code></strong> включает в себя данные пользователя для проверки подлинности пользовательского агента с сервером обычно после того, как сервер ответил со статусом {{HTTPStatus("401")}} <code>Unauthorized</code> и заголовком {{HTTPHeader("WWW-Authenticate")}}.</p>
 
 <table class="properties">
  <tbody>
@@ -34,7 +34,7 @@ original_slug: Web/HTTP/Заголовки/Authorization
 
 <dl>
  <dt>&lt;тип&gt;</dt>
- <dd><a href="/ru/docs/Web/HTTP/Авторизация#Authentication_schemes">Тип авторизации</a>. Общий тип <a href="/ru/docs/Web/HTTP/Авторизация#Basic_authentication_scheme">«Базовая»</a>. Остальные типы:
+ <dd><a href="/ru/docs/Web/HTTP/Авторизация#Authentication_schemes">Тип авторизации</a>. Общий тип <a href="/ru/docs/Web/HTTP/Авторизация#Basic_authentication_scheme">«Базовая»</a>. Остальные типы:
  <ul>
   <li><a href="http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">IANA registry of Authentication schemes</a></li>
   <li><a href="http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html">Authentification for AWS servers (<code>AWS4-HMAC-SHA256</code>)</a></li>
@@ -43,8 +43,8 @@ original_slug: Web/HTTP/Заголовки/Authorization
  <dt>&lt;данные пользователя&gt;</dt>
  <dd>Если используется схема авторизации «Базовая», данные пользователя формируются следующим образом:
  <ul>
-  <li>Логин и пароль, разделённые двоеточием (<code>aladdin:opensesame</code>).</li>
-  <li>Результирующая строка, закодированная в <a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64</a> (<code>YWxhZGRpbjpvcGVuc2VzYW1l</code>).</li>
+  <li>Логин и пароль, разделённые двоеточием (<code>aladdin:opensesame</code>).</li>
+  <li>Результирующая строка, закодированная в <a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64</a> (<code>YWxhZGRpbjpvcGVuc2VzYW1l</code>).</li>
  </ul>
 
  <div class="note">

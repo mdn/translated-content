@@ -149,8 +149,10 @@ Le format de la chaîne de caractères doit correspondre à l'une des micro-synt
 
 ## Syntaxe
 
-    dateTimeString = timeElt.dateTime;
-    timeElt.dateTime = dateTimeString
+```js
+dateTimeString = timeElt.dateTime;
+timeElt.dateTime = dateTimeString
+```
 
 ## Exemple
 
@@ -163,15 +165,11 @@ t.dateTime = "6w 5h 34m 5s";
 
 ## Spécifications
 
-| Spécification                                                                                                                | Status                           | Commentaire                                                |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "text-level-semantics.html#dom-time-datetime", "HTMLTimeElement")}} | {{Spec2('HTML WHATWG')}} | Pas de changement depuis {{SpecName("HTML5.1")}}. |
-| {{SpecName('HTML5.1', "text-level-semantics.html#dom-time-datetime", "HTMLTimeElement")}}     | {{Spec2('HTML5.1')}}     | Pas de changement depuis {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', "text-level-semantics.html#dom-time-datetime", "HTMLTimeElement")}}     | {{Spec2('HTML5 W3C')}}     | Définition initiale                                        |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLTimeElement.dateTime")}}
+{{Compat}}
 
 ## Voir aussi
 

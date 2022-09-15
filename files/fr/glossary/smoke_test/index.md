@@ -17,8 +17,8 @@ Un test de fumée répond aux questions comme :
 
 Si cette fonctionnalité de base échoue, il est inutile d'investir du temps dans un travail plus détaillé à ce stade.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Smoke testing (software)")}} sur Wikipedia (en)
+- [Article en anglais sur le <i lang="en">smoke testing</i>](https://en.wikipedia.org/wiki/Smoke_testing_(software)) sur Wikipédia

@@ -9,7 +9,9 @@ La méthode **`replace()`** de l'interface {{domxref("DOMTokenList")}} remplace 
 
 ## Syntaxe
 
-    tokenList.replace(oldToken,newToken);
+```js
+tokenList.replace(oldToken,newToken);
+```
 
 ### Paramètres
 
@@ -51,10 +53,8 @@ La sortie ressemble à ceci :
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG','#dom-domtokenlist-replace','replace()')}} | {{Spec2('DOM WHATWG')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMTokenList.replace")}}
+{{Compat}}

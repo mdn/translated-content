@@ -1,16 +1,6 @@
 ---
 title: 'Element: focusin イベント'
 slug: Web/API/Element/focusin_event
-tags:
-  - API
-  - DOM
-  - Element
-  - イベント
-  - FocusEvent
-  - リファレンス
-  - focusin
-browser-compat: api.Element.focusin_event
-translation_of: Web/API/Element/focusin_event
 ---
 {{APIRef}}
 
@@ -92,4 +82,3 @@ form.addEventListener('focusout', (event) => {
 
 - 関連イベント: {{domxref("Element/blur_event", "blur")}}, {{domxref("Element/focus_event", "focus")}}, {{domxref("Element/focusout_event", "focusout")}}
 - [Focusing: focus/blur](https://javascript.info/focus-blur)
-

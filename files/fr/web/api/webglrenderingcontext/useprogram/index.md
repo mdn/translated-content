@@ -15,7 +15,9 @@ La méthode **`WebGLRenderingContext.useProgram()`** de l'[API WebGL](/fr-FR/doc
 
 ## Syntaxe
 
-    void gl.useProgram(programme);
+```js
+void gl.useProgram(programme);
+```
 
 ### Paramètres
 
@@ -41,14 +43,11 @@ gl.useProgram(programme);
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                               | Commentaire               |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------- |
-| {{SpecName('WebGL', "#5.14.9", "useProgram")}}                             | {{Spec2('WebGL')}}             | Définition initiale.      |
-| {{SpecName('OpenGL ES 2.0', "glUseProgram.xml", "glUseProgram")}} | {{Spec2('OpenGL ES 2.0')}} | Page man de l'API OpenGL. |
+{{Specifications}}
 
-## Browser compatibilité des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.useProgram")}}
+{{Compat}}
 
 ## Voir aussi
 

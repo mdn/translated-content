@@ -71,15 +71,17 @@ La navigation rapide (aussi appelée _skip navigation_ ou _skipnav_ en anglais) 
 
 Ajouter un attribut {{htmlattrxref("id")}} à l'élément `<main>` lui permet d'être une cible pour la navigation rapide.
 
-    <body>
-      <a href="#main-content">Aller au contenu principal</a>
+```html
+<body>
+  <a href="#main-content">Aller au contenu principal</a>
 
-      <!-- Contenu relatif à la navigation et en-tête du document -->
+  <!-- Contenu relatif à la navigation et en-tête du document -->
 
-      <main id="main-content">
-        <!-- Contenu principal de la page -->
-      </main>
-    </body>
+  <main id="main-content">
+    <!-- Contenu principal de la page -->
+  </main>
+</body>
+```
 
 - [WebAIM : Liens et navigation rapide (en anglais)](https://webaim.org/techniques/skipnav/)
 
@@ -160,15 +162,11 @@ Les fonctionnalités « mode lecture » d'un navigateur vérifient la présence 
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires                                                                                                                                                                                                                                                                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML5.1', 'grouping-content.html#the-main-element', '&lt;main&gt;')}}     | {{Spec2('HTML5.1')}}     | Pas de changement de {{SpecName('HTML5 W3C')}}                                                                                                                                                                                                                                                                                                                                     |
-| {{SpecName('HTML WHATWG', '#semantics.html#the-main-element', '&lt;main&gt;')}}         | {{Spec2('HTML WHATWG')}} | Retrait de la restriction sur l'interdiction de l'utilisation de l'élément `<main>` comme descendant d'un élément {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, ou {{HTMLElement("nav")}}. Retrait de la restriction interdisant d'utiliser plusieurs fois `<main>` dans un document. |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-main-element', '&lt;main&gt;')}} | {{Spec2('HTML5 W3C')}}     | Définition intiale.                                                                                                                                                                                                                                                                                                                                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.main")}}
+{{Compat}}
 
 ## Voir aussi
 

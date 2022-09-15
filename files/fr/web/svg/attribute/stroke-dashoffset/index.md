@@ -74,7 +74,6 @@ html,body,svg { height:100% }
         <strong
           ><a
             href="/fr/SVG/Content_type#Percentage"
-            title="en/SVG/Content_type#Percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -82,7 +81,6 @@ html,body,svg { height:100% }
         <strong
           ><a
             href="/fr/SVG/Content_type#Length"
-            title="en/SVG/Content_type#Length"
             >&#x3C;length></a
           ></strong
         >
@@ -99,15 +97,12 @@ html,body,svg { height:100% }
   </tbody>
 </table>
 
-Le décalage est généralement exprimé en unités résolues par {{SVGAttr('pathLength')}} mais si un [\<percentage>](/fr/SVG/Content_type#Percentage "en/SVG/Content_type#Percentage") est utilisé, alors la valeur est résolue en pourcentage du viewport.
+Le décalage est généralement exprimé en unités résolues par {{SVGAttr('pathLength')}} mais si un [\<percentage>](/fr/SVG/Content_type#Percentage) est utilisé, alors la valeur est résolue en pourcentage du viewport.
+
+## Spécifications
+
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.attributes.presentation.stroke-dashoffset")}}
-
-## Spécification
-
-| Spécification                                                                                                    | Statut                   | Commentaire                                     |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------------- |
-| {{SpecName("SVG2", "painting.html#StrokeDashoffsetProperty", "stroke-dashoffset")}} | {{Spec2("SVG2")}} | Définition pour les formes et le texte          |
-| {{SpecName("SVG1.1", "painting.html#StrokeDashoffsetProperty", "stroke-dashoffset")}} | {{Spec2("SVG1.1")}} | Définition initiale pour les formes et le texte |
+{{Compat}}

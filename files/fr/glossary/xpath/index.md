@@ -11,7 +11,7 @@ original_slug: Glossaire/XPath
 ---
 **XPath** est un langage de requêtes permettant d'accéder aux sections et contenus d'un document {{glossary("XML")}}.
 
-## Pour approfondir
+## Voir aussi
 
 ### Référence technique
 
@@ -21,4 +21,4 @@ original_slug: Glossaire/XPath
 ### Culture générale
 
 - [Site web officiel](http://www.w3.org/standards/techs/xpath#w3c_all)
-- {{Interwiki("wikipedia", "XPath")}} sur Wikipédia
+- [XPath](https://fr.wikipedia.org/wiki/XPath) sur Wikipédia

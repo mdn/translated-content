@@ -17,7 +17,9 @@ La propriété en lecture seule **`ok`** de l'interface {{domxref("Response")}} 
 
 ## Syntaxe
 
-    var myOK = response.ok;
+```js
+var myOK = response.ok;
+```
 
 ### Valeur
 
@@ -45,13 +47,11 @@ fetch(myRequest).then(function(response) {
 
 ## Spécifications
 
-| Spécification                                                | Statut                   | Commentaire         |
-| ------------------------------------------------------------ | ------------------------ | ------------------- |
-| {{SpecName('Fetch','#dom-response-ok','ok')}} | {{Spec2('Fetch')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Response.ok")}}
+{{Compat}}
 
 ## Voir aussi
 

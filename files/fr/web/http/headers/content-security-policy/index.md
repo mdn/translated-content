@@ -30,7 +30,9 @@ Pour plus d'informations, voir cet article sur [_Content Security Policy_ (CSP)]
 
 ## Syntaxe
 
-    Content-Security-Policy: <policy-directive>; <policy-directive>
+```
+Content-Security-Policy: <policy-directive>; <policy-directive>
+```
 
 ## Directives
 
@@ -108,11 +110,13 @@ Les directives de rapport permettent de contrôler ce qui se passe lorsqu'une r�
 - {{CSP("report-uri")}}{{deprecated_inline}}
   - : Indique à l'agent utilisateur de rapporter les tentatives d'enfreintes du CSP. Un rapport d'enfreinte est un ensemble de documents JSON envoyés via une requête HTTP `POST` à l'URI indiquée.
 
-> **Attention :** Bien que la directive [`report-to`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/report-to "La directive HTTP Content-Security-Policy (CSP) report-to demande à l'agent utilisateur de rapporter les violations de règles CSP à l'adresse fournie dans un groupe de l'en-tête HTTP Report-To.") est prévue remplacer la directive **`report-uri`** maintenant dépréciée, [`report-to`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/report-to "La directive HTTP Content-Security-Policy (CSP) report-to demande à l'agent utilisateur de rapporter les violations de règles CSP à l'adresse fournie dans un groupe de l'en-tête HTTP Report-To.") n'est pas encore supportée par la plupart des navigateurs modernes. Par rétrocompatibilité avec les navigateurs courants et tout en prévoyant une compatibilité future quand les navigateurs supporteront [`report-to`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/report-to "La directive HTTP Content-Security-Policy (CSP) report-to demande à l'agent utilisateur de rapporter les violations de règles CSP à l'adresse fournie dans un groupe de l'en-tête HTTP Report-To."), vous pouvez spécifier les deux directives **`report-uri`** et [`report-to`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/report-to "La directive HTTP Content-Security-Policy (CSP) report-to demande à l'agent utilisateur de rapporter les violations de règles CSP à l'adresse fournie dans un groupe de l'en-tête HTTP Report-To."):
+> **Attention :** Bien que la directive [`report-to`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/report-to) est prévue remplacer la directive **`report-uri`** maintenant dépréciée, [`report-to`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/report-to) n'est pas encore supportée par la plupart des navigateurs modernes. Par rétrocompatibilité avec les navigateurs courants et tout en prévoyant une compatibilité future quand les navigateurs supporteront [`report-to`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/report-to), vous pouvez spécifier les deux directives **`report-uri`** et [`report-to`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/report-to):
 >
->     Content-Security-Policy: ...; report-uri https://endpoint.com; report-to groupname
+> ```
+> Content-Security-Policy: ...; report-uri https://endpoint.com; report-to groupname
+> ```
 >
-> Dans les navigateurs qui supportent [`report-to`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/report-to "La directive HTTP Content-Security-Policy (CSP) report-to demande à l'agent utilisateur de rapporter les violations de règles CSP à l'adresse fournie dans un groupe de l'en-tête HTTP Report-To."), la directive **`report-uri`** sera ignorée.
+> Dans les navigateurs qui supportent [`report-to`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/report-to), la directive **`report-uri`** sera ignorée.
 
 - {{CSP("report-to")}}{{experimental_inline}}
   - : Déclenche un évènement `SecurityPolicyViolationEvent`.
@@ -142,10 +146,12 @@ Le CSP permet d'indiquer plusieurs règles pour une même ressource avec l'en-t�
 
 L'en-tête `Content-Security-Policy` peut être utilisé plus d'une fois comme illustré ci-après. On notera la directive {{CSP("connect-src")}} utilisée ici. Bien que la deuxième règle autorise la connexion, la première contient `connect-src 'none'`. L'ajout de règles supplémentaires permet uniquement d'augmenter les protections. Les niveaux les plus stricts pour chaque règle sont alors utilisés. Dans l'exemple qui suit, cela signifie que la directive `connect-src 'none'` sera respectée.
 
-    Content-Security-Policy: default-src 'self' http://example.com;
-                             connect-src 'none';
-    Content-Security-Policy: connect-src http://example.com/;
-                             script-src http://example.com/
+```
+Content-Security-Policy: default-src 'self' http://example.com;
+                          connect-src 'none';
+Content-Security-Policy: connect-src http://example.com/;
+                          script-src http://example.com/
+```
 
 ## Exemples
 
@@ -153,23 +159,29 @@ L'en-tête `Content-Security-Policy` peut être utilisé plus d'une fois comme i
 
 Dans cet exemple, on désactive les scripts écrits à même le document (_inline_), les opérations `eval()` et les ressources (images, polices, scripts, etc.) peuvent uniquement être chargées via HTTPS :
 
-    // en-tête HTTP
-    Content-Security-Policy: default-src https:
+```
+// en-tête HTTP
+Content-Security-Policy: default-src https:
 
-    // version avec la balise HTML meta
-    <meta http-equiv="Content-Security-Policy" content="default-src https:">
+// version avec la balise HTML meta
+<meta http-equiv="Content-Security-Policy" content="default-src https:">
+```
 
 ### Exemple 2
 
 Cet exemple est plutôt adapté pour un site historique qui utilise de nombreux scripts écrits dans les documents mais pour lequel on veut s'assurer que les ressources sont chargées via HTTPS et pour lequel on veut désactiver les plugins :
 
-    Content-Security-Policy: default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'
+```
+Content-Security-Policy: default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'
+```
 
 ### Exemple 3
 
 On ne met pas en place la règle de sécurité mais on récolte les enfreintes qui se seraient produites pour cette règle :
 
-    Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/
+```
+Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/
+```
 
 Pour plus d'exemples, consulter [les recommandations de Mozilla pour la sécurité web](https://wiki.mozilla.org/Security/Guidelines/Web_Security#Examples_5).
 

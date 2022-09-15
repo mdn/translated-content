@@ -1,14 +1,6 @@
 ---
 title: list-style-type
 slug: Web/CSS/list-style-type
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS リスト
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.list-style-type
-translation_of: Web/CSS/list-style-type
 ---
 {{CSSRef}}
 
@@ -71,7 +63,7 @@ list-style-type: unset;
 - `none`
   - : マーカーは表示されません。
 - `disc`
-  - : 塗りつぶされた円形です (既定値)。 
+  - : 塗りつぶされた円形です (既定値)。
 - `circle`
   - : 中空円です。
 - `square`

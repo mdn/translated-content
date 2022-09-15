@@ -11,7 +11,7 @@ translation_of: Web/API/SubtleCrypto/generateKey
 ---
 <p>{{APIRef("Web Crypto API")}}</p>
 
-<p>O método <code><strong>SubtleCrypto.generateKey()</strong></code> retorna como {{jsxref("Promise")}} de uma recentemente gerada {{domxref("CryptoKey")}}, para algoritmos simétricos, ou uma {{domxref("CryptoKeyPair")}}, contendo duas keys recentemente geradas, para algoritmos assimétricos, que combina com o algoritmo, o uso e a extractividade são dados como parâmetro.</p>
+<p>O método <code><strong>SubtleCrypto.generateKey()</strong></code> retorna como {{jsxref("Promise")}} de uma recentemente gerada {{domxref("CryptoKey")}}, para algoritmos simétricos, ou uma {{domxref("CryptoKeyPair")}}, contendo duas keys recentemente geradas, para algoritmos assimétricos, que combina com o algoritmo, o uso e a extractividade são dados como parâmetro.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -25,7 +25,7 @@ translation_of: Web/API/SubtleCrypto/generateKey
 
   <ul>
    <li>
-    <p><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: #eeeeee;"><code>"name"</code>, </span></font>o qual corresponde com um dos algo's suportados listados acima,</p>
+    <p><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: #eeeeee;"><code>"name"</code>, </span></font>o qual corresponde com um dos algo's suportados listados acima,</p>
    </li>
    <li>
     <p><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: #eeeeee;">"modulusLength"<code>, </code></span></font>o qual corresponde com o número de dígitos usado nos módulos</p>
@@ -45,16 +45,16 @@ translation_of: Web/API/SubtleCrypto/generateKey
   </ul>
  </li>
  <li><code><em>extractable</em></code> é um {{jsxref("Boolean")}} indicando se a key pode ser extraída do objeto {{domxref("CryptoKey")}} em um estágio mais tardio.</li>
- <li><code><em>keyUsages</em></code>  é uma {{jsxref("Array")}} indicando o que pode ser feito com uma key recentemente gerada. Os possíveis valores da array são:
+ <li><code><em>keyUsages</em></code>  é uma {{jsxref("Array")}} indicando o que pode ser feito com uma key recentemente gerada. Os possíveis valores da array são:
   <ul>
-   <li><code>"encrypt"</code>, permitindo que a key seja utilizada para {{glossary("encryption", "encrypting")}} mensagens.</li>
-   <li><code>"decrypt"</code>, permitindo que a key seja utilizada para {{glossary("decryption", "decrypting")}} mensagens.</li>
-   <li><code>"sign"</code>, permitindo que a key seja utilizada para {{glossary("signature", "signing")}} mensagens.</li>
+   <li><code>"encrypt"</code>, permitindo que a key seja utilizada para {{glossary("encryption", "encrypting")}} mensagens.</li>
+   <li><code>"decrypt"</code>, permitindo que a key seja utilizada para {{glossary("decryption", "decrypting")}} mensagens.</li>
+   <li><code>"sign"</code>, permitindo que a key seja utilizada para {{glossary("signature", "signing")}} mensagens.</li>
    <li><code>"verify"</code>, permitindo que a key seja utilizada para {{glossary("verification", "verifying the signature")}} de mensagens.</li>
-   <li><code>"deriveKey"</code>, permitindo que a key seja utilizada como uma key base para quando se derivando uma nova key.</li>
-   <li><code>"deriveBits"</code>, permitindo que a key seja utilizada como uma key base quando se derivando {{glossary("bits")}} de dados para uso em criptografias primitivas.</li>
+   <li><code>"deriveKey"</code>, permitindo que a key seja utilizada como uma key base para quando se derivando uma nova key.</li>
+   <li><code>"deriveBits"</code>, permitindo que a key seja utilizada como uma key base quando se derivando {{glossary("bits")}} de dados para uso em criptografias primitivas.</li>
    <li><code>"wrapKey"</code>, permitindo que a key envolva uma chave simétrica para uso (transferência, armazenamento) em ambientes não seguros.</li>
-   <li><code>"unwrapKey"</code>, permitindo que a key se desvincule de uma chave simétrica para uso (transferência, armazenamento) em ambientes não seguros.</li>
+   <li><code>"unwrapKey"</code>, permitindo que a key se desvincule de uma chave simétrica para uso (transferência, armazenamento) em ambientes não seguros.</li>
   </ul>
  </li>
 </ul>
@@ -62,7 +62,7 @@ translation_of: Web/API/SubtleCrypto/generateKey
 <h3 id="Valor_de_retorno">Valor de retorno</h3>
 
 <ul>
- <li><code><em>result</em></code> é uma {{jsxref("Promise")}} que retorna uma key gerada como uma {{domxref("CryptoKey")}} ou uma {{domxref("CryptoKeyPair")}}.</li>
+ <li><code><em>result</em></code> é uma {{jsxref("Promise")}} que retorna uma key gerada como uma {{domxref("CryptoKey")}} ou uma {{domxref("CryptoKeyPair")}}.</li>
 </ul>
 
 <h3 id="Exceções">Exceções</h3>
@@ -70,7 +70,7 @@ translation_of: Web/API/SubtleCrypto/generateKey
 <p>A {{jsxref("Promise")}} é rejeitada quando a seguinte exceção é encontrada:</p>
 
 <ul>
- <li>{{exception("SyntaxError")}} quando <em><code>keyUsages</code></em> está vazia mas a key gerada simetricamente é do tipo <code>"secret"</code> ou <code>"private"</code> ou o componente privado gerado do par de key assimétrica está vazio.</li>
+ <li><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError"><code>SyntaxError</code></a> quando <em><code>keyUsages</code></em> está vazia mas a key gerada simetricamente é do tipo <code>"secret"</code> ou <code>"private"</code> ou o componente privado gerado do par de key assimétrica está vazio.</li>
 </ul>
 
 <h2 id="Especificações">Especificações</h2>
@@ -92,98 +92,7 @@ translation_of: Web/API/SubtleCrypto/generateKey
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Características</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Edge</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{ CompatChrome(37) }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoDesktop(34) }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>13</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
-  <tr>
-   <td><code>ECDSA</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoDesktop(36) }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
-  <tr>
-   <td><code>DH</code></td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoDesktop(35) }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Características</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>37</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile(34) }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
-  <tr>
-   <td><code>ECDSA</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile(36) }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
-  <tr>
-   <td><code>DH</code></td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile(35) }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.SubtleCrypto.generateKey")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

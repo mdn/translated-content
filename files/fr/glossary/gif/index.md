@@ -13,10 +13,4 @@ GIF (Graphics Interchange Format) est un format d'image qui utilise une compress
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Graphics Interchange Format","GIF")}} sur Wikipédia
-
-
-
-
-
-##
+- [GIF](https://fr.wikipedia.org/wiki/Graphics_Interchange_Format) sur Wikipédia

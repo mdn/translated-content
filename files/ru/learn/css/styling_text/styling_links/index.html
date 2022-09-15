@@ -7,13 +7,13 @@ translation_of: Learn/CSS/Styling_text/Styling_links
 
 <div>{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}</div>
 
-<p class="summary">При стилизации ссылок, важно понимать как использовать псевдоклассы, чтобы стилизировать состояния ссылок эффективно, и как стилизировать ссылки для использования в общих разнообразных функциях интерфейса: таких как например навигационное меню и вкладки. Мы рассмотрим все эти темы в этой статье.</p>
+<p class="summary">При стилизации ссылок, важно понимать как использовать псевдоклассы, чтобы стилизировать состояния ссылок эффективно, и как стилизировать ссылки для использования в общих разнообразных функциях интерфейса: таких как например навигационное меню и вкладки. Мы рассмотрим все эти темы в этой статье.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">Для изучения вам потребуется:</th>
-   <td>Основы компьютерной грамотности, базовые знания HTML (изучите <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Введение в HTML</a>), основы CSS (изучите <a href="/en-US/docs/Learn/CSS/First_steps">Введение в CSS</a>), <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">базовые знания о текстах и шрифтах CSS</a>.</td>
+   <td>Основы компьютерной грамотности, базовые знания HTML (изучите <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Введение в HTML</a>), основы CSS (изучите <a href="/en-US/docs/Learn/CSS/First_steps">Введение в CSS</a>), <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">базовые знания о текстах и шрифтах CSS</a>.</td>
   </tr>
   <tr>
    <th scope="row">Вы узнаете:</th>
@@ -75,11 +75,11 @@ translation_of: Learn/CSS/Styling_text/Styling_links
 <ul>
  <li>{{cssxref("color")}} для цвета текста.</li>
  <li>{{cssxref("cursor")}} для стиля курсора мыши — вы не должны отключать эту опцию только если у вас нет на это веской причины.</li>
- <li>{{cssxref("outline")}} для контура текста (контур схож с границей, единственное отличие — это то, что границы занимают место в блоке, а контур — нет; он просто располагается поверх фона). Контур <span class="tlid-translation translation" lang="ru"><span title="">является полезным вспомогательным средством</span></span>, так что подумайте хорошо, прежде чем отключать его; по крайней мере вы должны удвоить стили, заданные для состояния hover, а также состояния фокусировки.</li>
+ <li>{{cssxref("outline")}} для контура текста (контур схож с границей, единственное отличие — это то, что границы занимают место в блоке, а контур — нет; он просто располагается поверх фона). Контур <span class="tlid-translation translation" lang="ru"><span title="">является полезным вспомогательным средством</span></span>, так что подумайте хорошо, прежде чем отключать его; по крайней мере вы должны удвоить стили, заданные для состояния hover, а также состояния фокусировки.</li>
 </ul>
 
 <div class="note">
-<p><strong>Обратите внимание</strong>: вы не ограничены только перечисленными выше свойствами чтобы стилизовать ссылки — <span class="tlid-translation translation" lang="ru"><span title="">вы можете использовать любые свойства, которые вам нравятся. </span></span> <span class="tlid-translation translation" lang="ru"><span title="">Просто постарайтесь не сходить с ума слишком сильно!</span></span></p>
+<p><strong>Обратите внимание</strong>: вы не ограничены только перечисленными выше свойствами чтобы стилизовать ссылки — <span class="tlid-translation translation" lang="ru"><span title="">вы можете использовать любые свойства, которые вам нравятся. </span></span> <span class="tlid-translation translation" lang="ru"><span title="">Просто постарайтесь не сходить с ума слишком сильно!</span></span></p>
 </div>
 
 <h3 id="Styling_some_links">Стилизация некоторых ссылок</h3>
@@ -225,7 +225,7 @@ a:active {
   &lt;h2&gt;Output&lt;/h2&gt;
   &lt;div class="output" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"&gt;&lt;/div&gt;
   &lt;div class="controls"&gt;
-    &lt;input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;"&gt;
+    &lt;input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;"&gt;
     &lt;input id="solution" type="button" value="Show solution" style="margin: 10px 0 0 10px;"&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -249,9 +249,9 @@ function drawOutput() {
 }
 
 reset.addEventListener("click", function() {
-  htmlInput.value = htmlCode;
-  cssInput.value = cssCode;
-  drawOutput();
+  htmlInput.value = htmlCode;
+  cssInput.value = cssCode;
+  drawOutput();
 });
 
 solution.addEventListener("click", function() {
@@ -363,18 +363,18 @@ li {
 }
 
 a {
-  outline: none;
+  outline: none;
   text-decoration: none;
-  display: inline-block;
-  width: 19.5%;
-  margin-right: 0.625%;
-  text-align: center;
-  line-height: 3;
-  color: black;
+  display: inline-block;
+  width: 19.5%;
+  margin-right: 0.625%;
+  text-align: center;
+  line-height: 3;
+  color: black;
 }
 
 li:last-child a {
-  margin-right: 0;
+  margin-right: 0;
 }
 
 a:link, a:visited, a:focus {
@@ -397,13 +397,13 @@ a:active {
 <p>Давайте объясним, что тут происходит, фокусируясь на самых интересных частях:</p>
 
 <ul>
- <li>Наше второе правило удаляет заданный по умолчанию {{cssxref("padding")}} у элемента {{htmlelement("ul")}} и устанавливает его ширину так, чтобы охватить 100% внешнего контейнера (в этом случае {{htmlelement("body")}}).</li>
- <li>Элементы {{htmlelement("li")}} по умолчанию в норме являются блочными (см. <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model#types_of_css_boxes">типы блоков CSS</a> чтобы вспомнить), что значит что они будут располагаться на своих собственных строках. В этом случае мы создаём горизонтальный список ссылок, поэтому в третьем правиле задаём свойству {{cssxref("display")}} значение inline, <span class="tlid-translation translation" lang="ru"><span title="">что приводит к тому, что элементы списка располагаются в одной строке друг с другом </span></span>— теперь они ведут себя как строчные элементы.</li>
+ <li>Наше второе правило удаляет заданный по умолчанию {{cssxref("padding")}} у элемента {{htmlelement("ul")}} и устанавливает его ширину так, чтобы охватить 100% внешнего контейнера (в этом случае {{htmlelement("body")}}).</li>
+ <li>Элементы {{htmlelement("li")}} по умолчанию в норме являются блочными (см. <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model#types_of_css_boxes">типы блоков CSS</a> чтобы вспомнить), что значит что они будут располагаться на своих собственных строках. В этом случае мы создаём горизонтальный список ссылок, поэтому в третьем правиле задаём свойству {{cssxref("display")}} значение inline, <span class="tlid-translation translation" lang="ru"><span title="">что приводит к тому, что элементы списка располагаются в одной строке друг с другом </span></span>— теперь они ведут себя как строчные элементы.</li>
  <li>четвёртое правило — которое стилизует элемент {{htmlelement("a")}} — самое сложное; давайте пройдёмся по нему шаг за шагом:
   <ul>
    <li>как в предыдущем примере, мы начинаем отключать настройки по умолчанию для {{cssxref("text-decoration")}} и {{cssxref("outline")}} — мы не хотим, чтоб они портили нам вид.</li>
    <li>Далее мы устанавливаем {{cssxref("display")}} на <code>inline-block</code> — элементы {{htmlelement("a")}} являются строчными по умолчанию и, поскольку мы не хотим чтобы они вываливались на свои собственные строки как если бы это получалось со значением <code>block</code>, мы хотим иметь возможность менять их размер. <code>inline-block</code> позволяет нам делать это.</li>
-   <li>Теперь только изменение размера! Мы хотим заполнить всю ширину элемента {{htmlelement("ul")}}, оставить немного margin между каждой кнопкой (не без зазора с правого края) и мы имеем 5 кнопок, которые надо разместить и которые должны иметь одинаковый размер. Для того чтобы это сделать мы задаём {{cssxref("width")}} на 19.5%, а {{cssxref("margin-right")}} на 0.625%. Вы заметите что вся эта эта ширина составляет 100.625%, что может сделать так что последняя кнопка перекроет <code>&lt;ul&gt;</code> и выпадет вниз на следующую строку. <span class="tlid-translation translation" lang="ru"><span title="">Тем не менее, мы возвращаемся к 100%, используя следующее правило</span></span>, которое выбирает только последний <code>&lt;a&gt;</code> в списке и удаляет его margin. Сделано!</li>
+   <li>Теперь только изменение размера! Мы хотим заполнить всю ширину элемента {{htmlelement("ul")}}, оставить немного margin между каждой кнопкой (не без зазора с правого края) и мы имеем 5 кнопок, которые надо разместить и которые должны иметь одинаковый размер. Для того чтобы это сделать мы задаём {{cssxref("width")}} на 19.5%, а {{cssxref("margin-right")}} на 0.625%. Вы заметите что вся эта эта ширина составляет 100.625%, что может сделать так что последняя кнопка перекроет <code>&lt;ul&gt;</code> и выпадет вниз на следующую строку. <span class="tlid-translation translation" lang="ru"><span title="">Тем не менее, мы возвращаемся к 100%, используя следующее правило</span></span>, которое выбирает только последний <code>&lt;a&gt;</code> в списке и удаляет его margin. Сделано!</li>
    <li>Последние три объявления довольно просты и в основном просто для косметических целей. Мы центрируем текст внутри каждой ссылки, задаём {{cssxref("line-height")}} на 3 чтобы кнопки имели некую высоту (что также имеет преимущество в центрировании текста по вертикали) и задаём для текста чёрный цвет.</li>
   </ul>
  </li>

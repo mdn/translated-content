@@ -7,7 +7,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/isArray
 
 <h2 id="Summary" name="Summary">Sumário</h2>
 
-<p><font face="Open Sans, Arial, sans-serif">O método </font><code><strong>Array.isArray()</strong></code> retorna <code>true</code> se um objeto é uma array, e <code>false</code> se não é.</p>
+<p><font face="Open Sans, Arial, sans-serif">O método </font><code><strong>Array.isArray()</strong></code> retorna <code>true</code> se um objeto é uma array, e <code>false</code> se não é.</p>
 
 <h2 id="Syntax" name="Syntax">Sintaxe</h2>
 
@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/isArray
 
 <p>Se o objeto é um {{jsxref("Array")}}, retorna <code>true</code>(verdadeiro), caso contrário é retornado <code>false</code>(falso).</p>
 
-<p>Veja o artigo <a href="http://web.mit.edu/jwalden/www/isArray.html">“Determinando com absoluta precisão se um objeto em Javascript é ou não uma array”</a> para mais detalhes.</p>
+<p>Veja o artigo <a href="http://web.mit.edu/jwalden/www/isArray.html">“Determinando com absoluta precisão se um objeto em Javascript é ou não uma array”</a> para mais detalhes.</p>
 
 <h2 id="Examples" name="Examples">Exemplos</h2>
 
@@ -49,7 +49,7 @@ Array.isArray({ __proto__: Array.prototype });
 
 <h2 id="Polyfill" name="Polyfill">Polyfill</h2>
 
-<p>Executando o seguinte código antes de qualquer outro, o método <code>Array.isArray()</code> será criado, caso o browser não o disponibilize nativamente.</p>
+<p>Executando o seguinte código antes de qualquer outro, o método <code>Array.isArray()</code> será criado, caso o browser não o disponibilize nativamente.</p>
 
 <pre class="brush: js">if (!Array.isArray) {
   Array.isArray = function(arg) {
@@ -75,64 +75,14 @@ Array.isArray({ __proto__: Array.prototype });
   <tr>
    <td>{{SpecName('ES6', '#sec-array.isarray', 'Array.isArray')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade com o Browser</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte Básico</td>
-   <td>{{CompatChrome("5")}}</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>{{CompatIE("9")}}</td>
-   <td>{{CompatOpera("10.5")}}</td>
-   <td>{{CompatSafari("5")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte Básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("2.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>Baseado na <a href="http://kangax.github.com/es5-compat-table/">Tabela de Compatibilidade de Kangax</a>.</p>
+{{Compat("javascript.builtins.Array.isArray")}}
 
 <h2 id="See_also" name="See_also">Veja Também</h2>
 

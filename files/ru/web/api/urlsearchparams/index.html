@@ -5,9 +5,9 @@ translation_of: Web/API/URLSearchParams
 ---
 <p>{{ApiRef("URL API")}}</p>
 
-<p><strong><code>URLSearchParams</code></strong> интерфейс определяет служебные методы для работы со строкой запроса URL.</p>
+<p><strong><code>URLSearchParams</code></strong> интерфейс определяет служебные методы для работы со строкой запроса URL.</p>
 
-<p>Объект, реализующий <code>URLSearchParams</code>, может непосредственно использоваться в структуре {{jsxref('Statements/for...of', 'for...of')}}, например, следующие две строки идентичны:</p>
+<p>Объект, реализующий <code>URLSearchParams</code>, может непосредственно использоваться в структуре {{jsxref('Statements/for...of', 'for...of')}}, например, следующие две строки идентичны:</p>
 
 <pre><code>for (var p of mySearchParams);
 for (var p of mySearchParams.entries());</code>
@@ -60,7 +60,7 @@ var searchParams = new URLSearchParams(paramsString);
 
 // Итерируем параметры поиска.
 for (let p of searchParams) {
-  console.log(p);
+  console.log(p);
 }
 
 searchParams.has("topic") === true; // true

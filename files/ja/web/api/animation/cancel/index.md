@@ -1,17 +1,6 @@
 ---
 title: Animation.cancel()
 slug: Web/API/Animation/cancel
-tags:
-  - API
-  - Animation
-  - メソッド
-  - リファレンス
-  - ウェブアニメーション
-  - cancel
-  - waapi
-  - ウェブアニメーション API
-browser-compat: api.Animation.cancel
-translation_of: Web/API/Animation/cancel
 ---
 {{ APIRef("Web Animations") }}
 
@@ -35,7 +24,7 @@ Animation.cancel();
 
 ### 例外
 
-このメソッドは、直接は例外を発生しません。しかし、キャンセル時にアニメーションの {{domxref("Animation.playState", "playState")}} が `"idle"` 以外の場合、 {{domxref("Animation.finished", "current finished promise", "", 1)}} は  {{domxref("DOMException")}} の `AbortError` で拒否されます。
+このメソッドは、直接は例外を発生しません。しかし、キャンセル時にアニメーションの {{domxref("Animation.playState", "playState")}} が `"idle"` 以外の場合、 {{domxref("Animation.finished", "current finished promise", "", 1)}} は  {{domxref("DOMException")}} の `AbortError` で拒否されます。
 
 ## 仕様書
 

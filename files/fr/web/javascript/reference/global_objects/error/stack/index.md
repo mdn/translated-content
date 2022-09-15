@@ -66,18 +66,22 @@ a@file:///C:/exemple.html:19:13
 
 De Firefox 14 à Firefox 29 :
 
-    trace@file:///C:/exemple.html:9
-    b@file:///C:/exemple.html:16
-    a@file:///C:/exemple.html:19
-    @file:///C:/exemple.html:21
+```
+trace@file:///C:/exemple.html:9
+b@file:///C:/exemple.html:16
+a@file:///C:/exemple.html:19
+@file:///C:/exemple.html:21
+```
 
 Firefox 13 et antérieur aurait produit à la place le texte suivant :
 
-    Error("monError")@:0
-    trace()@file:///C:/exemple.html:9
-    b(3,4,"\n\n",(void 0),[object Object])@file:///C:/exemple.html:16
-    a("premier appel, premierarg")@file:///C:/exemple.html:19
-    @file:///C:/exemple.html:21
+```
+Error("monError")@:0
+trace()@file:///C:/exemple.html:9
+b(3,4,"\n\n",(void 0),[object Object])@file:///C:/exemple.html:16
+a("premier appel, premierarg")@file:///C:/exemple.html:19
+@file:///C:/exemple.html:21
+```
 
 ### Pile d'un code evalué
 
@@ -104,7 +108,7 @@ try {
 // @file:///C:/exemple.html:7:6
 ```
 
-Vous pouvez aussi utiliser la directive `//# sourceURL` pour nommer une source eval. Voir aussi [Déboguer des sources évaluées](https://developer.mozilla.org/fr-FR/docs/Tools/Debugger/How_to/Debug_eval_sources) dans les docs [Débogueur](https://developer.mozilla.org/fr-FR/docs/Tools/Debugger), ainsi que ce [blog post](http://fitzgeraldnick.com/weblog/59/).
+Vous pouvez aussi utiliser la directive `//# sourceURL` pour nommer une source eval. Voir aussi [Déboguer des sources évaluées](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/debug_eval_sources/index.html) dans les docs [Débogueur](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html), ainsi que ce [blog post](http://fitzgeraldnick.com/weblog/59/).
 
 ## Spécifications
 

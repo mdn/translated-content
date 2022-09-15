@@ -19,7 +19,9 @@ La propriété en lecture seule **`vibrate`** de l'interface {{domxref ("Notific
 
 ## Syntaxe
 
-    Notification.vibrate
+```js
+Notification.vibrate
+```
 
 ### Valeur
 
@@ -27,14 +29,12 @@ Un [modèle de vibration](/fr/docs/Web/Guide/API/Vibration#Vibration_patterns), 
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                     | Commentaire     |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | --------------- |
-| {{SpecName('Web Notifications','#dom-notification-vibrate','vibrate')}} | {{Spec2('Web Notifications')}} | Living standard |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Notification.vibrate")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)

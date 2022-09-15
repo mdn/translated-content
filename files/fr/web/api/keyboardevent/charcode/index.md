@@ -21,7 +21,9 @@ Pour des constantes équivalant ces codes numériques, voir {{ domxref("Keyboard
 
 ## Syntaxe
 
-    var value = event.charCode;
+```js
+var value = event.charCode;
+```
 
 - _`value`_ est la valeur Unicode du caractère associé à la touche pressée.
 
@@ -68,10 +70,8 @@ Pour une liste de valeurs de `charCode` associées à leurs touches, lancez l'ex
 
 ## Spécifications
 
-| Spécification (en anglais)                                                                                       | Statut                           | Commentaire                   |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------- |
-| {{SpecName('DOM3 Events','#widl-KeyboardEvent-charCode','KeyboardEvent.charCode')}} | {{Spec2('DOM3 Events')}} | Définition initiale; Déprécié |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.KeyboardEvent.charCode")}}
+{{Compat}}

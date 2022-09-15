@@ -12,7 +12,9 @@ La fonction `name` retourne une chaîne représentant le QName du premier nœud 
 
 ### Syntaxe
 
-    name( [ensemble-de-nœuds] )
+```
+name( [ensemble-de-nœuds] )
+```
 
 ### Arguments
 

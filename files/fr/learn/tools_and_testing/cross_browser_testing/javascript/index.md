@@ -92,11 +92,11 @@ Ce n'est pas très pratique de devoir copier et coller votre code sur une page w
 
 Pour l'installer :
 
-1.  Installez Atom (si vous n'avez pas encore une version à jour déjà installée) — téléchargez-le depuis la page Atom linkée plus haut.
-2.  Aller dans la boîte de dialogue _Préférences..._ d'Atom (par ex. en choisissant _Atom_ > _Préférences..._ sur Windows/Linux) et choisissez l'option _Installer_ dans le menu gauche.
-3.  Dans le champs text _Rechercher packages_, taper "jslint" et presser Entrée/Envoyer pour rechercher des packages en liaisons avec le linting.
-4.  Vous devriez voir un package appellé **lint** en haut de la liste. Installez-le en premier (en utilisant le bouton _Installer_), comme les autres sont dépendants de celui-ci pour fonctionner. Ensuite, installez le plugin **linter-jshint**.
-5.  Une fois que les packages ont terminé de s'installer, essayez de charger un fichier JavaScript : vous verrez tous les problèmes surlignés en vert (pour les avertissements) et des cercles rouges (pour les erreurs) à côté des numéros de lignes, et un panneau séparé en bas qui vous fournit les numéros de lignes, les messages d'erreur, et parfois des valeur suggérées ou d'autres solutions.
+1. Installez Atom (si vous n'avez pas encore une version à jour déjà installée) — téléchargez-le depuis la page Atom linkée plus haut.
+2. Aller dans la boîte de dialogue _Préférences..._ d'Atom (par ex. en choisissant _Atom_ > _Préférences..._ sur Windows/Linux) et choisissez l'option _Installer_ dans le menu gauche.
+3. Dans le champs text _Rechercher packages_, taper "jslint" et presser Entrée/Envoyer pour rechercher des packages en liaisons avec le linting.
+4. Vous devriez voir un package appellé **lint** en haut de la liste. Installez-le en premier (en utilisant le bouton _Installer_), comme les autres sont dépendants de celui-ci pour fonctionner. Ensuite, installez le plugin **linter-jshint**.
+5. Une fois que les packages ont terminé de s'installer, essayez de charger un fichier JavaScript : vous verrez tous les problèmes surlignés en vert (pour les avertissements) et des cercles rouges (pour les erreurs) à côté des numéros de lignes, et un panneau séparé en bas qui vous fournit les numéros de lignes, les messages d'erreur, et parfois des valeur suggérées ou d'autres solutions.
 
 ![](jshint-linter.png)D'autres éditeurs répandus ont des packages similaires de linting disponibles. Par exemple, voir la section "Plugins for text editors and IDEs" de la [page d'installation de JSHint](http://jshint.com/install/).
 
@@ -210,10 +210,10 @@ Mettons-nous au travail. Pour commencer, nous savons que l'erreur est renvoyée 
 
 Ici, nous pouvons obtenir des informations très utiles.
 
-1.  Développez la portée `showHeroes` — vous pouvez voir depuis celle-ci que la variable heroes n'est pas définie, indiquant qu'accèder à la propriété `members` de `jsonObj` (première ligne de la fonction) ne marche pas.
-2.  Vous pouvez également voir que la variable `jsonObj` stock une chaîne de caractères, pas un objet JSON.
-3.  En examinant plus loin la pile d'exécutuion, cliquez sur `request.onload` dans la section _Pile d'exécution_. La vue va se mettre à jour pour afficher la fonction `request.onload` dans le panneau central, et sa portée dans la section _Portées_.
-4.  Maintenant si vous développez la portée de `request.onload`, vous verrez que la variable `superHeroes` est également une chaîne de caractères, pas un objet. C'est la solution — notre appel [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) retourne le JSON comme du texte, pas comme du JSON.
+1. Développez la portée `showHeroes` — vous pouvez voir depuis celle-ci que la variable heroes n'est pas définie, indiquant qu'accèder à la propriété `members` de `jsonObj` (première ligne de la fonction) ne marche pas.
+2. Vous pouvez également voir que la variable `jsonObj` stock une chaîne de caractères, pas un objet JSON.
+3. En examinant plus loin la pile d'exécutuion, cliquez sur `request.onload` dans la section _Pile d'exécution_. La vue va se mettre à jour pour afficher la fonction `request.onload` dans le panneau central, et sa portée dans la section _Portées_.
+4. Maintenant si vous développez la portée de `request.onload`, vous verrez que la variable `superHeroes` est également une chaîne de caractères, pas un objet. C'est la solution — notre appel [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) retourne le JSON comme du texte, pas comme du JSON.
 
 > **Note :** Nous aimerions que vous essayez de résoudre ce problème par vous-même. Pour vous donner un indice, vous avez le choix entre [tell the XMLHttpRequest object explicitly to return JSON format](/fr/docs/Web/API/XMLHttpRequest/responseType), ou [conversion entre objet et texte](/fr/docs/Learn/JavaScript/Objects/JSON#Convertion_entre_objets_et_textes) après l'arrivée de la réponse. Si vous restez bloqué, consultez notre exemple [fixed-ajax.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fixed-ajax.html).
 
@@ -228,7 +228,7 @@ Dès que vos applis vont devenir plus complexes vous allez commencer à utiliser
 - Lorsque que vous utilisez des APIs, assurez-vous de désactiver les fonctionnalités de l'API quand elles ne sont pas utilisées ; certains appels d'API peuvent être très coûteux en puissance de traitement. Par exemple, lorsque vous montrez un stream video, assurez-vous que s'est désactivé quand vous ne pouvez pas le voir. Quand vous tracer la localisation d'un appareil en utilisant des appels répétés de Géolocalisation, assurez-vous de le désactiver quand l'utilisateur arrête de l'utiliser.
 - Les animations peuvent être très coûteuses pour la performance. Beaucoup de librairies JavaScript fournissent des possibilités d'animation programmée avec JavaScript, mais c'est beaucoup plus rentable de faire les animations via les fonctionnalités natives des navigateurs comme [les Animations CSS](/fr/docs/Web/CSS/Animations_CSS) (ou la naissante [Web Animations API](/fr/docs/Web/API/Web_Animations_API)) qu'en JavaScript. Lisez  [Animating like you just don’t care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) pour des théories très utiles sur l'animation coûteuse, des conseils sur comment améliorer la performance des animations, et des informations à propos de l'API Web Animations.
 
-> **Note :** Le [Writing Fast, Memory-Efficient JavaScript](https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/ "Read 'Writing Fast, Memory-Efficient JavaScript'") de Addy Osmani contient beaucoup de détails et de astuces impeccables pour améliorer les performances en JavaScript.
+> **Note :** Le [Writing Fast, Memory-Efficient JavaScript](https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/) de Addy Osmani contient beaucoup de détails et de astuces impeccables pour améliorer les performances en JavaScript.
 
 ## Les problèmes JavaScript en navigateur croisé
 
@@ -315,17 +315,18 @@ La liste des modernizr [HTML5 Cross Browser Polyfills](https://github.com/Modern
 
 Observons cet exercice — dans cet exemple nous allons utiliser un polyfill Fetch pour fournir du support pour une API Fetch dans de vieux navigateurs ; nous avons toutefois également besoin d'utiliser le polyfill es6-promise, comme Fetch utilise largement les promises, et les navigateurs qui ne les supportent pas seront toujours bloqués.
 
-1.  Pour commencer, faîtes une copie locale de notre exemple [fetch-polyfill.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fetch-polyfill.html) et de [notre belle image de fleurs](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/flowers.jpg) dans un nouveau répertoire. Nous allons écrire du code pour récupérer l'image de fleurs et l'afficher sur la page.
-2.  Ensuite, sauvegarder les copies de [Fetch polyfill](https://raw.githubusercontent.com/github/fetch/master/fetch.js) et de [es6-promises polyfill](https://raw.githubusercontent.com/stefanpenner/es6-promise/master/dist/es6-promise.js) dans le même répertoire que le HTML.
-3.  Appliquer les scripts de polyfill à la page en utilisant le code suivant — placez-les au-dessus de l'élément {{htmlelement("script")}} existant ainsi ils seront déjà disponibles sur la page quand on essaiera d'utiliser Fetch :
+1. Pour commencer, faîtes une copie locale de notre exemple [fetch-polyfill.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fetch-polyfill.html) et de [notre belle image de fleurs](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/flowers.jpg) dans un nouveau répertoire. Nous allons écrire du code pour récupérer l'image de fleurs et l'afficher sur la page.
+2. Ensuite, sauvegarder les copies de [Fetch polyfill](https://raw.githubusercontent.com/github/fetch/master/fetch.js) et de [es6-promises polyfill](https://raw.githubusercontent.com/stefanpenner/es6-promise/master/dist/es6-promise.js) dans le même répertoire que le HTML.
+3. Appliquer les scripts de polyfill à la page en utilisant le code suivant — placez-les au-dessus de l'élément {{htmlelement("script")}} existant ainsi ils seront déjà disponibles sur la page quand on essaiera d'utiliser Fetch :
 
     ```js
     <script src="es6-promise.js"></script>
     <script src="fetch.js"></script>
     ```
 
-4.  Dans le {{htmlelement("script")}} original, ajoutez le code suivant :
-5.  ```js
+4. Dans le {{htmlelement("script")}} original, ajoutez le code suivant :
+
+    ```js
     var myImage = document.querySelector('.my-image');
 
     fetch('flowers.jpg').then(function(response) {
@@ -336,7 +337,7 @@ Observons cet exercice — dans cet exemple nous allons utiliser un polyfill Fet
     });
     ```
 
-6.  Maintenant si vous le chargez dans un navigateur qui ne supporte pas Fetch (Safari et IE sont des candidats de choix), vous devriez quand même voir l'image de la fleur apparaitre — cool !
+5. Maintenant si vous le chargez dans un navigateur qui ne supporte pas Fetch (Safari et IE sont des candidats de choix), vous devriez quand même voir l'image de la fleur apparaitre — cool !
     ![](fetch-image.jpg)
 
 > **Note :** Vous pouvez consulter notre version terminée sur [fetch-polyfill-finished.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html)).

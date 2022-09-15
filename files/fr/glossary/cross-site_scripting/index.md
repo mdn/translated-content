@@ -27,10 +27,10 @@ Les attaques XSS peuvent être classées en 3 catégories : stockée (aussi appe
 - **Les attaques XSS basées sur DOM**
   - : La charge utile est exécutée à la suite de la modification de l'environnement DOM (dans le navigateur de la victime) utilisé par le script côté client d'origine. En d'autres termes, la page elle-même ne change pas, mais le code côté client contenu dans la page s'exécute de manière inattendue en raison des modifications malveillantes apportées à l'environnement DOM.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 
-- {{Interwiki("wikipedia","Cross-site_scripting")}} sur Wikipedia
+- [<i lang="en">Cross-site_scripting</i>](https://fr.wikipedia.org/wiki/Cross-site_scripting) sur Wikipédia
 - [Cross-site scripting sur OWASP](https://www.owasp.org/index.php/XSS) (en)
 - [Un autre article à propos de Cross-site scripting](http://www.acunetix.com/blog/web-security-zone/articles/dom-xss-explained/) (en)

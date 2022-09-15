@@ -1,15 +1,6 @@
 ---
 title: mix-blend-mode
 slug: Web/CSS/mix-blend-mode
-tags:
-  - 混合
-  - CSS
-  - CSS プロパティ
-  - 合成
-  - 合成と混合
-  - recipe:css-property
-browser-compat: css.properties.mix-blend-mode
-translation_of: Web/CSS/mix-blend-mode
 ---
 {{CSSRef}}
 

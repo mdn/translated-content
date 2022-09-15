@@ -61,7 +61,7 @@ translation_of: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
 <p>No exemplo abaixo você pode ver esses seletores sendo usados.</p>
 
 <ul>
- <li>usando <code>li[class]</code> podemos combinar qualquer seletor com um atributo de classe. Isso corresponde a todos os itens da lista, <u>exceto o primeiro.</u></li>
+ <li>usando <code>li[class]</code> podemos combinar qualquer seletor com um atributo de classe. Isso corresponde a todos os itens da lista, <u>exceto o primeiro.</u></li>
  <li><code>li[class="a"]</code> corresponde a um seletor com uma classe de a, mas não a um seletor com uma classe de a com outra classe separada por espaço como parte do valor. Ele seleciona o segundo item da lista.</li>
  <li><code>li[class~="a"]</code> corresponderá a uma classe de a, mas também a um valor que contém a classe de a como parte de uma lista separada por espaços em branco. Ele seleciona o segundo e o terceiro itens da lista.</li>
 </ul>
@@ -73,7 +73,7 @@ translation_of: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
 
 <h2 id="Seletores_de_SubString">Seletores de SubString</h2>
 
-<p>Esses seletores permitem uma correspondência mais avançada de substrings dentro do valor do seu atributo. Por exemplo, se você tivesse classes de <code>box-warning</code> e <code>box-error</code> e quisesse combinar tudo que começou com a string "box-", você poderia usar <code>[class^="box-"]</code> para selecionar os dois (ou <code>[class|="box"]</code> como descrito abaixo).</p>
+<p>Esses seletores permitem uma correspondência mais avançada de substrings dentro do valor do seu atributo. Por exemplo, se você tivesse classes de <code>box-warning</code> e <code>box-error</code> e quisesse combinar tudo que começou com a string "box-", você poderia usar <code>[class^="box-"]</code> para selecionar os dois (ou <code>[class|="box"]</code> como descrito abaixo).</p>
 
 <table class="standard-table">
  <thead>
@@ -102,7 +102,7 @@ translation_of: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
  </tbody>
 </table>
 
-<p>(À parte/lado: pode ser útil notar que <code>^</code> e <code>$</code> há muito são usados como âncoras nas chamadas expressões regulares para significar que começa com e termina com.)</p>
+<p>(À parte/lado: pode ser útil notar que <code>^</code> e <code>$</code> há muito são usados como âncoras nas chamadas expressões regulares para significar que começa com e termina com.)</p>
 
 <p>O próximo exemplo mostra o uso desses seletores:</p>
 
@@ -123,7 +123,7 @@ translation_of: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
 <p>{{EmbedGHLiveSample("css-examples/learn/selectors/attribute-case.html", '100%', 800)}}</p>
 
 <div class="blockIndicator note">
-<p><strong>Nota</strong>: Há tambem um valor mais novo <code>s</code>, que forçará a correspondência com distinção entre maiúsculas e minúsculas em contextos em que a correspondência normalmente não diferencia maiúsculas de minúsculas; no entanto, isso não é bem suportado em navegadores e não é muito útil em um contexto HTML.</p>
+<p><strong>Nota</strong>: Há tambem um valor mais novo <code>s</code>, que forçará a correspondência com distinção entre maiúsculas e minúsculas em contextos em que a correspondência normalmente não diferencia maiúsculas de minúsculas; no entanto, isso não é bem suportado em navegadores e não é muito útil em um contexto HTML.</p>
 </div>
 
 <h2 id="Próximos_passos">Próximos passos</h2>

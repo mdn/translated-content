@@ -1,15 +1,6 @@
 ---
 title: ':target'
 slug: Web/CSS/:target
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.target
-translation_of: Web/CSS/:target
 ---
 {{CSSRef}}
 
@@ -24,7 +15,9 @@ translation_of: Web/CSS/:target
 
 例えば、以下の URL には `section2` と呼ばれる要素を指すフラグメント (_#_ 記号で記述) があります。
 
-    http://www.example.com/index.html#section2
+```
+http://www.example.com/index.html#section2
+```
 
 現在の URL が上記の通りの場合、以下の要素が `:target` セレクターで選択されます。
 

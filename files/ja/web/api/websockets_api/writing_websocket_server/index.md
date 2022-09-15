@@ -1,12 +1,6 @@
 ---
 title: C# で WebSocket サーバーを記述する
 slug: Web/API/WebSockets_API/Writing_WebSocket_server
-tags:
-  - HTML5
-  - NeedsMarkupWork
-  - チュートリアル
-  - WebSockets
-translation_of: Web/API/WebSockets_API/Writing_WebSocket_server
 ---
 ## はじめに
 
@@ -30,7 +24,7 @@ TcpListener(System.Net.IPAddress localaddr, int port)
 
 `localaddr` はリスナーの IP を指定し、`port` はポートを指定します。
 
-> **Note:** `string` から `IPAddress` オブジェクトを作成するには、 `IPAddress` の静的メソッド `Parse` を使用してください。
+> **Note:** `string` から `IPAddress` オブジェクトを作成するには、 `IPAddress` の静的メソッド `Parse` を使用してください。
 
 メソッド:
 

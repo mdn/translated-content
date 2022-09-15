@@ -20,7 +20,9 @@ Obtient la coordonnée X du coin supérieur gauche de la fenêtre de la fenêtre
 
 ## Syntaxe
 
-    screenX = window.mozInnerScreenX;
+```js
+screenX = window.mozInnerScreenX;
+```
 
 ### Valeur
 
@@ -35,7 +37,7 @@ Ne fait partie d'aucune spécification ou recommandation technique du W3C.
 
 {{Compat("api.Window.mozInnerScreenX")}}
 
-## Voir également
+## Voir aussi
 
 - {{domxref("window.mozInnerScreenY")}}
-- [`nsIDOMWindowUtils.screenPixelsPerCSSPixel`](/en-US/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils)
+- [`nsIDOMWindowUtils.screenPixelsPerCSSPixel`](/fr/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils)

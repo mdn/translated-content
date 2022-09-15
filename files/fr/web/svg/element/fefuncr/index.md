@@ -32,14 +32,11 @@ Cet élément implémente l'interface {{domxref("SVGFEFuncRElement")}}.
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire         |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('Filters 1.0', '#feFuncRElement', '&lt;feFuncR&gt;')}}         | {{Spec2('Filters 1.0')}} | Aucun changement    |
-| {{SpecName('SVG1.1', 'filters.html#feFuncRElement', '&lt;feFuncR&gt;')}} | {{Spec2('SVG1.1')}}         | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.feFuncR")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -50,4 +47,4 @@ Cet élément implémente l'interface {{domxref("SVGFEFuncRElement")}}.
 - {{SVGElement("feFuncA")}}
 - {{SVGElement("feFuncB")}}
 - {{SVGElement("feFuncG")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutoriel/filtres "en/SVG/Tutorial/Filter_effects")
+- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutoriel/filtres)

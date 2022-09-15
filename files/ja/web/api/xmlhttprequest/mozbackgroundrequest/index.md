@@ -1,19 +1,8 @@
 ---
 title: XMLHttpRequest.mozBackgroundRequest
 slug: Web/API/XMLHttpRequest/mozBackgroundRequest
-tags:
-  - API
-  - バックグラウンドサービス
-  - Mozilla
-  - 標準外
-  - プロパティ
-  - リファレンス
-  - XHR
-  - XMLHttpRequest
-  - mozBackgroundRequest
-translation_of: Web/API/XMLHttpRequest/mozBackgroundRequest
 ---
-{{draft}}{{APIRef('XMLHttpRequest')}}
+{{APIRef('XMLHttpRequest')}}
 
 > **Note:** このメソッドは、ウェブコンテンツからは使用できません。アクセスするには管理者特権が必要です。
 

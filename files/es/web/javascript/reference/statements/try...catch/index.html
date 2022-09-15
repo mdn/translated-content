@@ -39,12 +39,12 @@ original_slug: Web/JavaScript/Referencia/Sentencias/try...catch
 
 <dl>
  <dt><code>catch_statements_1</code>, <code>catch_statements_2</code></dt>
- <dd>Sentencias que se ejecutan si una excepción es lanzada en el bloque <code>try</code>.</dd>
+ <dd>Sentencias que se ejecutan si una excepción es lanzada en el bloque <code>try</code>.</dd>
 </dl>
 
 <dl>
  <dt><code>exception_var_1</code>, <code>exception_var_2</code></dt>
- <dd>Identificador que contiene un objeto de excepcion asociado a la cláusula <code>catch</code>.</dd>
+ <dd>Identificador que contiene un objeto de excepcion asociado a la cláusula <code>catch</code>.</dd>
 </dl>
 
 <dl>
@@ -59,7 +59,7 @@ original_slug: Web/JavaScript/Referencia/Sentencias/try...catch
 
 <h2 id="Descripción">Descripción</h2>
 
-<p>La sentencia <code>try</code> consiste en un bloque <code>try</code> que contiene una o más sentencias. Las llaves <code>{}</code> se deben utilizar siempre<code>,</code> incluso para una bloques de una sola sentencia. Al menos un bloque <code>catch</code> o un bloque <code>finally</code> debe estar presente. Esto nos da tres formas posibles para la sentencia <code>try</code>:</p>
+<p>La sentencia <code>try</code> consiste en un bloque <code>try</code> que contiene una o más sentencias. Las llaves <code>{}</code> se deben utilizar siempre<code>,</code> incluso para una bloques de una sola sentencia. Al menos un bloque <code>catch</code> o un bloque <code>finally</code> debe estar presente. Esto nos da tres formas posibles para la sentencia <code>try</code>:</p>
 
 <ol>
  <li><code>try...catch</code></li>
@@ -67,14 +67,14 @@ original_slug: Web/JavaScript/Referencia/Sentencias/try...catch
  <li><code>try...catch...finally</code></li>
 </ol>
 
-<p>Un bloque <code>catch</code> contiene sentencias que especifican que hacer si una excepción es lanzada en el bloque <code>try</code>. Si cualquier sentencia dentro del bloque <code>try</code> (o en una funcion llamada desde dentro del bloque <code>try</code>) lanza una excepción, el control cambia inmediatamente al bloque <code>catch</code> . Si no se lanza ninguna excepcion en el bloque <code>try</code>, el bloque <code>catch</code> se omite.</p>
+<p>Un bloque <code>catch</code> contiene sentencias que especifican que hacer si una excepción es lanzada en el bloque <code>try</code>. Si cualquier sentencia dentro del bloque <code>try</code> (o en una funcion llamada desde dentro del bloque <code>try</code>) lanza una excepción, el control cambia inmediatamente al bloque <code>catch</code> . Si no se lanza ninguna excepcion en el bloque <code>try</code>, el bloque <code>catch</code> se omite.</p>
 
 <p>La bloque <code>finally</code> se ejecuta despues del bloque <code>try</code> y el/los bloque(s) <code>catch</code> hayan finalizado su ejecución. Éste bloque siempre se ejecuta, independientemente de si una excepción fue lanzada o capturada.</p>
 
 <p>Puede anidar una o más sentencias <code>try</code>. Si una sentencia <code>try</code> interna no tiene una bloque <code>catch</code>, se ejecuta el bloque <code>catch</code> de la sentencia <code>try</code> que la encierra.</p>
 
 <p>Usted también puede usar la declaración <code>try</code> para manejar excepciones de JavaScript. Consulte la <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide">Guía de JavaScript</a> para obtener mayor información sobre excepciones de JavaScript.<br>
-  </p>
+  </p>
 
 <h3 id="Bloque_catch_incondicional">Bloque catch incondicional</h3>
 
@@ -89,11 +89,11 @@ catch (e) {
 }
 </pre>
 
-<p>El bloque <code>catch</code> especifíca un identificador ( <code>e</code> en el ejemplo anterior) que contiene el valor de la excepción. Este valor está solo disponible en el {{Glossary("Scope", "scope")}} de el bloque<code> catch</code></p>
+<p>El bloque <code>catch</code> especifíca un identificador ( <code>e</code> en el ejemplo anterior) que contiene el valor de la excepción. Este valor está solo disponible en el {{Glossary("Scope", "scope")}} de el bloque<code> catch</code></p>
 
 <h3 id="Bloques_catch_condicionales">Bloques catch condicionales</h3>
 
-<p>Tambien se pueden crear "bloques <code>catch</code> condicionales", combinando bloques <code>try...catch</code> con estructuras  <code>if...else if...else</code> como estas:</p>
+<p>Tambien se pueden crear "bloques <code>catch</code> condicionales", combinando bloques <code>try...catch</code> con estructuras  <code>if...else if...else</code> como estas:</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">try</span> <span class="punctuation token">{</span>
     <span class="function token">myroutine</span><span class="punctuation token">();<code class="language-js"><span class="comment token">  </span></code></span><span class="comment token">// puede lanzar tres tipos de excepciones</span><span class="punctuation token"><code class="language-js">
@@ -122,7 +122,7 @@ catch (e) {
   }
 }</pre>
 
-<h3 id="The_finally_clause" name="The_finally_clause">La cláusula <code>finally</code></h3>
+<h3 id="The_finally_clause" name="The_finally_clause">La cláusula <code>finally</code></h3>
 
 <p>La cláusula <code>finally</code> contiene sentencias a ejecutarse después de que las cláusulas <code>try</code> y <code>catch</code> se ejecuten, pero antes de las sentencias que le siguen al bloque <code>try..catch..finally</code>. Note que la cláusula <code>finally</code> se ejecuta sin importar si una excepción es o no lanzada. Si una excepción es lanzada, las instrucciones en la cláusula <code>finally</code> se ejecutan incluso si ninguna cláusula <code>catch</code> maneja la excepción.</p>
 
@@ -130,9 +130,9 @@ catch (e) {
 
 <p>Puede parecer extraño tener una cláusula relacionada a una excepción que se ejecuta sin importar si hay una excepción o no, pero esta concepción en realidad sirve a un propósito. El punto importante no es que la cláusula <code>finally</code> siempre se ejecuta, si no más bien que el codigo ordinario que le sigue a <code>try..catch</code> no.</p>
 
-<p>Por ejemplo, si otra excepción ocurre dentro de un bloque <code>catch</code> de una declaración <code>try</code>, cualquier codigo restante en el mismo bloque exterior <code>try</code> que encierra ese <code>try..catch</code> (o en el flujo principal, si no es un bloque <code>try</code> exterior) , no será ejecutado, dado que el control es inmediatamente transferido al bloque <code>catch</code> del <code>try</code> exterior (o el generador de error interno, si no es en un bloque <code>try</code>).</p>
+<p>Por ejemplo, si otra excepción ocurre dentro de un bloque <code>catch</code> de una declaración <code>try</code>, cualquier codigo restante en el mismo bloque exterior <code>try</code> que encierra ese <code>try..catch</code> (o en el flujo principal, si no es un bloque <code>try</code> exterior) , no será ejecutado, dado que el control es inmediatamente transferido al bloque <code>catch</code> del <code>try</code> exterior (o el generador de error interno, si no es en un bloque <code>try</code>).</p>
 
-<p>Por lo tanto, cualquier rutina de limpieza hecha en esa sección encerrada (o la principal) antes de que exista, será saltada. Sin embargo, si la declaración <code>try</code> tiene un bloque <code>finally</code>, entonces el código de ese bloque <code>finally</code> será ejecutado primero para permitir tal limpieza, y ENTONCES el bloque <code>catch</code> de la otra declaración <code>try</code> (o el generador de error) tomará el control para manejar la segunda excepción.</p>
+<p>Por lo tanto, cualquier rutina de limpieza hecha en esa sección encerrada (o la principal) antes de que exista, será saltada. Sin embargo, si la declaración <code>try</code> tiene un bloque <code>finally</code>, entonces el código de ese bloque <code>finally</code> será ejecutado primero para permitir tal limpieza, y ENTONCES el bloque <code>catch</code> de la otra declaración <code>try</code> (o el generador de error) tomará el control para manejar la segunda excepción.</p>
 
 <p>Ahora, si esa rutina de limpieza debiera ser hecha ya sea que el código del <code>try..catch</code> tenga éxito o no, entonces si el bloque <code>finally</code> se ejecutase solo después de una excepción, el mismo código de limpieza tendría que estar presente dentro y fuera del bloque <code>finally</code>, y por lo tanto no hay razón para no tener el bloque <code>finally</code> solo, y dejarlo ejecutarse sin importar si hay excepciones o no.</p>
 
@@ -218,7 +218,7 @@ finally {
 
 <h3 id="Retornando_de_un_bloque_finally">Retornando de un bloque finally</h3>
 
-<p>Si el bloque <code>finally</code> retorna un valor, este valor se convierte en el valor de retorno de toda la producción <code>try-catch-finally</code>, a pesar de cualquier sentencia <code>return</code> en los bloques <code>try</code> y <code>catch</code>. Esto incluye excepciones lanzadas dentro del bloque catch.</p>
+<p>Si el bloque <code>finally</code> retorna un valor, este valor se convierte en el valor de retorno de toda la producción <code>try-catch-finally</code>, a pesar de cualquier sentencia <code>return</code> en los bloques <code>try</code> y <code>catch</code>. Esto incluye excepciones lanzadas dentro del bloque catch.</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
   <span class="keyword token">try</span> <span class="punctuation token">{</span>

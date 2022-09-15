@@ -1,14 +1,6 @@
 ---
 title: '::-webkit-progress-value'
 slug: Web/CSS/::-webkit-progress-value
-tags:
-  - CSS
-  - 標準外
-  - 擬似要素
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.-webkit-progress-value
-translation_of: Web/CSS/::-webkit-progress-value
 ---
 {{CSSRef}}{{Non-standard_header}}
 
@@ -36,11 +28,11 @@ translation_of: Web/CSS/::-webkit-progress-value
 
 ```css
 progress {
-  -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 ::-webkit-progress-value {
-  background-color: orange;
+  background-color: orange;
 }
 ```
 

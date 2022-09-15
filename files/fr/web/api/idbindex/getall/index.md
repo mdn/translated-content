@@ -17,9 +17,11 @@ On peut comparer cette méthode avec une recherche par curseur. Effectivement, i
 
 ## Syntaxe
 
-    var getAllKeysRequest = IDBIndex.getAll();
-    var getAllKeysRequest = IDBIndex.getAll(query);
-    var getAllKeysRequest = IDBIndex.getAll(query, count);
+```js
+var getAllKeysRequest = IDBIndex.getAll();
+var getAllKeysRequest = IDBIndex.getAll(query);
+var getAllKeysRequest = IDBIndex.getAll(query, count);
+```
 
 ### Paramètres
 
@@ -61,13 +63,11 @@ getAllKeysRequest.onsuccess = function() {
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('IndexedDB2', '#dom-idbindex-getall', 'getAll()')}} | {{Spec2('IndexedDB')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBIndex.getAll")}}
+{{Compat}}
 
 ## Voir aussi
 

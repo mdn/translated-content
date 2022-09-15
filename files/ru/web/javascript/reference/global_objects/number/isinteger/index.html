@@ -61,8 +61,8 @@ Number.isInteger(5.0000000000000001); // true</pre>
 
 <pre class="brush: js">Number.isInteger = Number.isInteger || function(value) {
   return typeof value === 'number' &amp;&amp;
-    isFinite(value) &amp;&amp;
-    Math.floor(value) === value;
+    isFinite(value) &amp;&amp;
+    Math.floor(value) === value;
 };</pre>
 
 <h2 id="Specifications">Спецификации</h2>

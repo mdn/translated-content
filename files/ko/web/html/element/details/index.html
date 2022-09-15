@@ -40,7 +40,7 @@ translation_of: Web/HTML/Element/details
 <p><strong>Note:</strong> Unfortunately, at this time there's no built-in way to animate the transition between open and closed.</p>
 </div>
 
-<p>Fully standards-compliant implementations automatically apply the CSS <code>{{cssxref("display")}}: list-item</code> to the {{HTMLElement("summary")}} element. You can use this to customize its appearance further. See {{anch("Customizing the disclosure widget")}} for further details.</p>
+<p>Fully standards-compliant implementations automatically apply the CSS <code>{{cssxref("display")}}: list-item</code> to the {{HTMLElement("summary")}} element. You can use this to customize its appearance further. See <a href="#customizing_the_disclosure_widget">Customizing the disclosure widget</a> for further details.</p>
 </div>
 
 <table class="properties">
@@ -197,7 +197,7 @@ details &gt; p {
 
 <p>넓게 지원되지는 않지만, 열림/닫힘을 나타내는 삼각형의 외형도 바꿀 수 있습니다. 요소의 표준화 과정 중 추가된 실험적 구현이기 때문에 브라우저의 지원에 차이가 있으므로, 당분간 여러 방식을 함께 사용해야 합니다.</p>
 
-<p>{{HTMLElement("summary")}} 요소는 {{cssxref("list-style")}} 단축 속성과, 그 본디 속성인 {{cssxref("list-style-type")}} 등을 지원하므로, {{cssxref("list-style-image")}} 속성 등을 사용해 삼각형을 원하는대로 바꿀 수 있습니다. 삼각형을 아예 제거하려면 <code>list-style: none</code>을 지정하면 됩니다.</p>
+<p>{{HTMLElement("summary")}} 요소는 {{cssxref("list-style")}} 단축 속성과, 그 본디 속성인 {{cssxref("list-style-type")}} 등을 지원하므로, {{cssxref("list-style-image")}} 속성 등을 사용해 삼각형을 원하는대로 바꿀 수 있습니다. 삼각형을 아예 제거하려면 <code>list-style: none</code>을 지정하면 됩니다.</p>
 
 <p>그러나 Chrome은 위의 방법을 아직 지원하지 않습니다. 따라서 비표준 <code>::-webkit-details-marker</code> <a href="/ko/docs/Web/CSS/Pseudo-elements">의사 요소</a>를 사용해야 합니다.</p>
 
@@ -247,33 +247,11 @@ details &gt; p {
 
 <p>{{EmbedLiveSample("위젯_바꾸기", 650, 150)}}</p>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">명세</th>
-   <th scope="col">상태</th>
-   <th scope="col">주석</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'interactive-elements.html#the-details-element', '&lt;details&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'semantics.html#the-details-element', '&lt;details&gt;')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
-
-
 
 <p>{{Compat("html.elements.details")}}</p>
 

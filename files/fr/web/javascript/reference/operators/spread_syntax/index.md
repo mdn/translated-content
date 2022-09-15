@@ -20,15 +20,21 @@ La **syntaxe de décomposition** permet d'étendre un itérable (par exemple une
 
 Pour l'utilisation de la décomposition dans les appels de fonction :
 
-    f(...objetIterable);
+```js
+f(...objetIterable);
+```
 
 Pour les littéraux de tableaux :
 
-    [...objetIterable, 4, 5, 6]
+```js
+[...objetIterable, 4, 5, 6]
+```
 
 Pour les littéraux objets (nouvelle fonctionnalité pour ECMAScript, actuellement en proposition de niveau 4, finalisée) :
 
-    let objClone = { ...obj };
+```js
+let objClone = { ...obj };
+```
 
 ## Exemples
 

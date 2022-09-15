@@ -22,10 +22,8 @@ L'interface **`PerformanceLongTaskTiming`** de [l'API _Long Tasks_](/fr/docs/Web
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('Long Tasks','#sec-PerformanceLongTaskTiming','PerformanceLongTaskTiming')}} | {{Spec2('Long Tasks')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceLongTaskTiming")}}
+{{Compat}}

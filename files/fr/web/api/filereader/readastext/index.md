@@ -15,7 +15,9 @@ La méthode `readAsText` est utilisée pour lire le contenu du {{domxref("Blob")
 
 ## Syntaxe
 
-    instanceOfFileReader.readAsText(blob[, encoding]);
+```js
+instanceOfFileReader.readAsText(blob[, encoding]);
+```
 
 ### Parameters
 
@@ -36,13 +38,11 @@ reader.readAsText(selectedFile);
 
 ## Spécifications
 
-| Specification                                                                        | État                         | Commentaires       |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName("File API", "#FileReader-interface", "FileReader")}} | {{Spec2("File API")}} | Définition initale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FileReader.readAsText")}}
+{{Compat}}
 
 ## Voir aussi
 

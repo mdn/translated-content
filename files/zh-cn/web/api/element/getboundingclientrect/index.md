@@ -1,46 +1,40 @@
 ---
 title: Element.getBoundingClientRect()
 slug: Web/API/Element/getBoundingClientRect
-tags:
-  - API
-  - CSSOM View
-  - Method
-  - Refrence
-  - 方法
-translation_of: Web/API/Element/getBoundingClientRect
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><code><strong>Element.getBoundingClientRect()</strong></code> 方法返回元素的大小及其相对于视口的位置。</p>
-
-<p>如果是标准盒子模型，元素的尺寸等于<code>width/height</code> + <code>padding</code> + <code>border-width</code>的总和。如果<code>box-sizing: border-box</code>，元素的的尺寸等于 <code>width/height</code>。</p>
+**`Element.getBoundingClientRect()`** 方法返回一个 {{domxref("DOMRect")}} 对象，其提供了元素的大小及其相对于[视口](/zh-CN/docs/Glossary/Viewport)的位置。
 
 ## 语法
 
 ```js
-domRect = element.getBoundingClientRect();
+getBoundingClientRect()
 ```
 
-### 值
+### 参数
 
-<p>返回值是一个 {{domxref("DOMRect")}} 对象，这个对象是由该元素的 {{domxref("Element.getClientRects", "getClientRects()")}} 方法返回的一组矩形的集合，就是该元素的 CSS 边框大小。返回的结果是包含完整元素的最小矩形，并且拥有<code>left</code>, <code>top</code>, <code>right</code>, <code>bottom</code>, <code>x</code>, <code>y</code>, <code>width</code>, 和 <code>height</code>这几个以像素为单位的只读属性用于描述整个边框。除了<code>width</code> 和 <code>height</code> 以外的属性是相对于视图窗口的左上角来计算的。</p>
+无。
 
-<p><img alt="DOMRect 示例图" src="https://mdn.mozillademos.org/files/15087/rect.png" style="float: right; height: 300px; width: 300px;"><span>空边框盒（译者注：没有内容的边框）会被忽略。如果所有的元素边框都是空边框，那么这个矩形给该元素返回的 </span><code>width</code><span>、</span><code>height</code><span> 值为 0，</span><code>left</code><span>、</span><code>top</code><span> 值为第一个 CSS 盒子（按内容顺序）的 top-left 值。</span></p>
+### 返回值
 
-<p>当计算边界矩形时，会考虑视口区域（或其他可滚动元素）内的滚动操作，也就是说，当滚动位置发生了改变，top和left属性值就会随之立即发生变化（因此，它们的值是相对于视口的，而不是绝对的）。如果你需要获得相对于整个网页左上角定位的属性值，那么只要给top、left属性值加上当前的滚动位置（通过 window.scrollX 和 window.scrollY），这样就可以获取与当前的滚动位置无关的值。</p>
+返回值是一个 {{domxref("DOMRect")}} 对象，是包含整个元素的最小矩形（包括 `padding` 和 `border-width`）。该对象使用 `left`、`top`、`right`、`bottom`、`x`、`y`、`width` 和 `height` 这几个以像素为单位的只读属性描述整个矩形的位置和大小。除了 `width` 和 `height` 以外的属性是相对于视图窗口的左上角来计算的。
 
-<h3 id="跨浏览器兼容">跨浏览器兼容</h3>
+![](element-box-diagram.png)
 
-<p>如果需要更好的跨浏览器兼容性，请使用 {{domxref("window.pageXOffset")}} 和 {{domxref("window.pageYOffset")}} 代替 <code>window.scrollX</code> 和 <code>window.scrollY</code>。不能访问这些属性的脚本可以使用下面的代码：</p>
+该方法返回的 {{domxref("DOMRect")}} 对象中的 `width` 和 `height` 属性是包含了 `padding` 和 `border-width` 的，而不仅仅是内容部分的宽度和高度。在标准盒子模型中，这两个属性值分别与元素的 `width`/`height` + `padding` + `border-width` 相等。而如果是 [`box-sizing: border-box`](/zh-CN/docs/Web/CSS/box-sizing)，两个属性则直接与元素的 `width` 或 `height` 相等。
 
-<pre class="brush: js notranslate">// For scrollX
-(((t = document.documentElement) || (t = document.body.parentNode))
-  &amp;&amp; typeof t.scrollLeft == 'number' ? t : document.body).scrollLeft
-// For scrollY
-(((t = document.documentElement) || (t = document.body.parentNode))
-  &amp;&amp; typeof t.scrollTop == 'number' ? t : document.body).scrollTop</pre>
+这个对象是由该元素的 {{domxref("Element.getClientRects", "getClientRects()")}} 方法返回的一组矩形的集合，就是该元素的 CSS 边框大小。
+
+空边框盒（译者注：没有内容的边框）会被忽略。如果所有的元素边框都是空边框，那么这个矩形给该元素返回的 `width`、`height` 值为 0，`left`、`top` 值为第一个 CSS 盒子（按内容顺序）的 top-left 值。
+
+如果你需要获得边界矩形相对于整个网页左上角的位置，则可以将当前的滚动位置（可通过 {{domxref("window.scrollX")}} 和 {{domxref("window.scrollY")}} 获得）添加到 `top` 和 `left` 属性上。获得的边界矩形与当前的滚动位置无关。
 
 ## 示例
+
+### 基础示例
+
+在这个简单的示例中，获得的 `DOMRect` 对象表示的是一个简单的 `<div>` 元素的边界客户端矩形，并将其属性值显示出来。
 
 ```html
 <div></div>
@@ -68,54 +62,66 @@ for (var key in rect) {
 }
 ```
 
-{{EmbedLiveSample('Basic', '100%', 640)}}
+{{EmbedLiveSample('基础示例', '100%', 640)}}
 
-<h2 id="规范">规范</h2>
+注意：`width`/`height` 是与元素的 `width`/`height` + `padding` 相等的。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSSOM View", "#dom-element-getboundingclientrect", "Element.getBoundingClientRect()")}}</td>
-   <td>{{Spec2("CSSOM View")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+也同样注意 `x`/`left`、`y`/`top`、`right` 和 `bottom` 与视口边缘到元素对应的一侧的绝对距离相等。
 
-<h3 id="备注">备注</h3>
+### 滚动
 
-<p>该API返回的 <code>DOMRect</code> 对象在现代浏览器中可以被修改。而对于返回值为 <code>DOMRectReadOnly</code> 的旧版本，返回值并不能被修改。在IE和Edge浏览器中，无法向他们返回的 <a href="https://msdn.microsoft.com/en-us/library/hh826029(VS.85).aspx"><code>ClientRect</code></a> 对象添加缺失的属性，对象可以防止 <code>x</code> 和 <code>y</code> 的回填。</p>
+这个示例演示了当网页滚动时，边界客户端矩形是如何变化的。
 
-<p>由于兼容性问题（见下文），尽量仅使用 <code>left</code>, <code>top</code>, <code>right</code>, 和 <code>bottom</code>.属性是最安全的。</p>
+```html
+<div id="example"></div>
+<div id="controls"></div>
+```
 
-<p>返回的 <code>DOMRect</code>对象中的属性不是自己的属性。 当使用<code>in</code> 和 <code>for...in</code> 运算符时能成功查找到返回的属性，但使用其他API（例如Object.keys（））查找时将失败。 而且，ES2015和更高版本的功能（如Object.assign（）和对象rest/spread）将无法复制返回的属性。</p>
+```css
+div#example {
+  width: 400px;
+  height: 200px;
+  padding: 20px;
+  margin: 50px auto;
+  background: purple;
+}
 
-<pre class="brush: js notranslate">rect = elt.getBoundingClientRect()
-// The result in emptyObj is {}
-emptyObj = Object.assign({}, rect)
-emptyObj = { ...rect }
-{width, ...emptyObj} = rect
-</pre>
+body { padding-bottom: 1000px; }
+p { margin: 0; }
+```
 
-<p><code>DOMRect</code> 中的 <code>top</code>, <code>left</code>, <code>right</code>, <code>bottom</code> 属性是使用对象的其他属性的值来计算获得的。</p>
+```js
+function update() {
+  const container = document.getElementById("controls");
+  const elem = document.getElementById("example");
+  const rect = elem.getBoundingClientRect();
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+  container.innerHTML = '';
+  for (let key in rect) {
+    if(typeof rect[key] !== 'function') {
+      let para = document.createElement('p');
+      para.textContent  = `${ key } : ${ rect[key] }`;
+      container.appendChild(para);
+    }
+  }
+}
 
+document.addEventListener('scroll', update);
+update();
+```
 
+{{EmbedLiveSample('滚动', '100%', 640)}}
 
-<div>{{Compat("api.Element.getBoundingClientRect")}}</div>
+## 规范
 
-<h2 id="参考资料">参考资料</h2>
+{{Specifications}}
 
-<ul>
- <li>{{domxref("Element.getClientRects", "getClientRects()")}}</li>
- <li><a href="https://msdn.microsoft.com/en-us/library/ms536433(VS.85).aspx">MSDN: <code>getBoundingClientRect</code></a></li>
- <li><a href="https://msdn.microsoft.com/en-us/library/hh826029(VS.85).aspx">MSDN: <code>ClientRect</code></a>, 更早版本的 <code>DOMRect</code></li>
-</ul>
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参考资料
+
+- {{domxref("Element.getClientRects", "getClientRects()")}}
+- [MSDN: `getBoundingClientRect`](https://msdn.microsoft.com/library/ms536433(VS.85).aspx)
+- [MSDN: `ClientRect`](https://msdn.microsoft.com/library/hh826029(VS.85).aspx)，更早版本的 `DOMRect`

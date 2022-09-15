@@ -16,7 +16,9 @@ Le constructeur **`DeviceMotionEvent`** crée un nouveau {{domxref("DeviceMotion
 
 ## Syntaxe
 
-    var deviceMotionEvent = new DeviceMotionEvent(type[, options])
+```js
+var deviceMotionEvent = new DeviceMotionEvent(type[, options])
+```
 
 ### Paramètres
 
@@ -43,10 +45,8 @@ Le constructeur **`DeviceMotionEvent`** crée un nouveau {{domxref("DeviceMotion
 
 ## Spécifications
 
-| Spécification                                | Statut                                   | Commentaire          |
-| -------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Device Orientation')}} | {{Spec2('Device Orientation')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DeviceMotionEvent.DeviceMotionEvent")}}
+{{Compat}}

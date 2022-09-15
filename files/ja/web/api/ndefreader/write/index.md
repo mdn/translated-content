@@ -1,13 +1,6 @@
 ---
 title: NDEFReader.write()
 slug: Web/API/NDEFReader/write
-tags:
-  - NDEF
-  - リファレンス
-  - ウェブ NFC
-  - メソッド
-browser-compat: api.NDEFReader.write
-translation_of: Web/API/NDEFReader/write
 ---
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 

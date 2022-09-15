@@ -18,7 +18,9 @@ La propriété en lecture seule **`Element.namespaceURI`** renvoie l'URI d'espac
 
 ## Syntaxe
 
-    namespace = element.namespaceURI
+```js
+namespace = element.namespaceURI
+```
 
 ## Exemple
 
@@ -41,15 +43,13 @@ Vous pouvez créer un élément avec l'`namespaceURI` spécifié en utilisant la
 
 Le DOM ne gère pas ou n'applique pas la validation de l'espace de noms en soi. Il appartient à l'application DOM de faire toute validation nécessaire. Notez également que le préfixe d'espace de noms, une fois associé à un élément particulier, ne peut pas être modifié.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                    | Statut                   | Commentaire         |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| {{SpecName("DOM4", "#dom-element-namespaceuri", "Element.namespaceuri")}} | {{Spec2("DOM4")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.namespaceURI")}}
+{{Compat}}
 
 ## Voir aussi
 

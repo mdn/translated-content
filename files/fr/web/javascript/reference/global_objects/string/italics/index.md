@@ -17,7 +17,9 @@ La méthode **`italics()`** permet de créer un élément HTML {{HTMLElement("i"
 
 ## Syntaxe
 
-    str.italics()
+```js
+str.italics()
+```
 
 ### Valeur de retour
 

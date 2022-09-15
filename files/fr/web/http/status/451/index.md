@@ -16,7 +16,7 @@ Le code de réponse d'erreur HTTP **`451 Unavailable For Legal Reasons`** indiqu
 
 ## Exemple
 
-Cet exemple de réponse est tiré de la RFC IETF (cf. ci-après), et contient une référence à [<cite>Monty Python&nbsp;: La Vie de Brian</cite>](https://fr.wikipedia.org/wiki/Monty_Python_:_La_Vie_de_Brian).
+Cet exemple de réponse est tiré de la RFC IETF (cf. ci-après), et contient une référence à [Monty Python&nbsp;: La Vie de Brian](https://fr.wikipedia.org/wiki/Monty_Python_:_La_Vie_de_Brian).
 
 > **Note :** L'en-tête [`Link`](/fr/docs/Web/HTTP/Headers/Link) peut aussi contenir une relation `rel="blocked-by"` identifiant l'entité ayant mis en place le blocage de la ressource et pas nécessairement l'entité ayant demandé le blocage.
 
@@ -52,4 +52,4 @@ Content-Type: text/html
 ## Voir aussi
 
 - [La page Wikipédia sur le code d'erreur HTTP 451](https://fr.wikipedia.org/wiki/Erreur_HTTP_451)
-- [La page Wikipédia de l'œuvre <cite>Fahrenheit 451</cite>](https://fr.wikipedia.org/wiki/Fahrenheit_451) (qui a donné son numéro à ce code de statut)
+- [La page Wikipédia de l'œuvre Fahrenheit 451](https://fr.wikipedia.org/wiki/Fahrenheit_451) (qui a donné son numéro à ce code de statut)

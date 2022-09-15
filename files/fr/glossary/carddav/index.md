@@ -14,7 +14,7 @@ original_slug: Glossaire/CardDAV
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "CardDAV")}} sur Wikipedia
+- [CardDAV](https://fr.wikipedia.org/wiki/CardDAV) sur Wikipédia
 
 ### Référence technique
 

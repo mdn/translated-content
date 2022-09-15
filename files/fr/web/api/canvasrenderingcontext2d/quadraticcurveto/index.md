@@ -9,7 +9,9 @@ La méthode **`CanvasRenderingContext2D.quadraticCurveTo()`** de l'API Canvas 2D
 
 ## Syntaxe
 
-    void contexte2D.quadraticCurveTo(pointContrôleX, pointContrôleY, pointArrivéeX, pointArrivéeY);
+```js
+void contexte2D.quadraticCurveTo(pointContrôleX, pointContrôleY, pointArrivéeX, pointArrivéeY);
+```
 
 ### Paramètress
 
@@ -96,13 +98,11 @@ contexte2D.stroke();
 
 ## Spécifications
 
-| Spécification                                                                                                                                                        | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-quadraticcurveto", "CanvasRenderingContext2D.quadraticCurveTo")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.quadraticCurveTo")}}
+{{Compat}}
 
 ## Voir aussi
 

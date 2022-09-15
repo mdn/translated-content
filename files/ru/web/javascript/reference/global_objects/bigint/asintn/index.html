@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/asIntN
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>BigInt.asIntN</code></strong> — это статический метод, который позволяет перенести BigInt-значение в целое число со знаком между  -2<sup>ширина-1</sup> and 2<sup>ширина-1</sup>-1.</p>
+<p><strong><code>BigInt.asIntN</code></strong> — это статический метод, который позволяет перенести BigInt-значение в целое число со знаком между  -2<sup>ширина-1</sup> and 2<sup>ширина-1</sup>-1.</p>
 
 <div>\{{EmbedInteractiveExample("pages/js/bigint-asintn.html")}}</div>
 
@@ -32,13 +32,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/asIntN
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
 
-<p>Значение <code>bigint</code><span style="font-size: 13.3333px;"> </span>по модулю 2<code><sup>width</sup></code> как целое число со знаком.</p>
+<p>Значение <code>bigint</code><span style="font-size: 13.3333px;"> </span>по модулю 2<code><sup>width</sup></code> как целое число со знаком.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
 <h3 id="Пребывание_в_64-битных_диапазонах">Пребывание в 64-битных диапазонах</h3>
 
-<p>Метод  <code>BigInt.asIntN()</code> может быть полезен, чтобы оставаться в диапазоне 64-битной арифметики.</p>
+<p>Метод  <code>BigInt.asIntN()</code> может быть полезен, чтобы оставаться в диапазоне 64-битной арифметики.</p>
 
 <pre class="brush: js">const max = 2n ** (64n - 1n) - 1n;
 

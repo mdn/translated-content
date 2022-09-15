@@ -1,14 +1,6 @@
 ---
 title: Int16Array
 slug: Web/JavaScript/Reference/Global_Objects/Int16Array
-tags:
-  - クラス
-  - JavaScript
-  - TypedArray
-  - 型付き配列
-  - ポリフィル
-browser-compat: javascript.builtins.Int16Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Int16Array
 ---
 {{JSRef}}
 

@@ -13,16 +13,18 @@ pour formater rapidement un nombre.
 
 ### Syntaxe
 
-    <xsl:number
-      count=EXPRESSION
-      level="single" | "multiple" | "any"
-      from=EXPRESSION
-      value=EXPRESSION
-      format=FORMAT-CHAÎNE
-      lang=XML:CODE-LANG
-      letter-value="alphabetic" | "traditional"
-      grouping-separator=CARACTÈRE
-      grouping-size=NOMBRE  />
+```xml
+<xsl:number
+  count=EXPRESSION
+  level="single" | "multiple" | "any"
+  from=EXPRESSION
+  value=EXPRESSION
+  format=FORMAT-CHAÎNE
+  lang=XML:CODE-LANG
+  letter-value="alphabetic" | "traditional"
+  grouping-separator=CARACTÈRE
+  grouping-size=NOMBRE />
+```
 
 ### Attributs obligatoires
 

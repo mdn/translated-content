@@ -1,15 +1,6 @@
 ---
 title: ServiceWorkerRegistration.pushManager
 slug: Web/API/ServiceWorkerRegistration/pushManager
-tags:
-  - API
-  - プロパティ
-  - プッシュ
-  - PushManager
-  - リファレンス
-  - サービスワーカー
-  - ServiceWorkerRegistration
-translation_of: Web/API/ServiceWorkerRegistration/pushManager
 ---
 {{APIRef("Service Workers API")}}
 

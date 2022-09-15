@@ -1,11 +1,6 @@
 ---
 title: OpenType フォント特性の手引き
 slug: Web/CSS/CSS_Fonts/OpenType_fonts_guide
-tags:
-  - CSS
-  - Fonts
-  - Text
-translation_of: Web/CSS/CSS_Fonts/OpenType_fonts_guide
 ---
 {{CSSRef}}
 
@@ -200,5 +195,5 @@ OpenType 特性の一般的な使用例の 1 つに、適切なスモールキ�
 
 ## その他の文献
 
--[OpenType機能の使用](https://helpx.adobe.com/jp/fonts/using/use-open-type-features.html) - アドビ
--[CSSでのOpenType機能の構文](https://helpx.adobe.com/jp/fonts/using/open-type-syntax.html) - アドビ
+- [OpenType機能の使用](https://helpx.adobe.com/jp/fonts/using/use-open-type-features.html) - アドビ
+- [CSSでのOpenType機能の構文](https://helpx.adobe.com/jp/fonts/using/open-type-syntax.html) - アドビ

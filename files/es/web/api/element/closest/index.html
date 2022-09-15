@@ -11,7 +11,7 @@ translation_of: Web/API/Element/closest
 ---
 <div>{{APIRef('Shadow DOM')}}</div>
 
-<p>El método <code><strong>closest()</strong></code> de la interfaz {{domxref("Element")}} devuelve el ascendiente más cercano al elemento actual (o el propio elemento actual) que coincida con el selector proporcionado por parámetro. Si no existe dicho ascendiente, devuelve <code>null</code>.</p>
+<p>El método <code><strong>closest()</strong></code> de la interfaz {{domxref("Element")}} devuelve el ascendiente más cercano al elemento actual (o el propio elemento actual) que coincida con el selector proporcionado por parámetro. Si no existe dicho ascendiente, devuelve <code>null</code>.</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -21,8 +21,8 @@ translation_of: Web/API/Element/closest
 <h3 id="Parámetros">Parámetros</h3>
 
 <ul>
- <li><em><code>selectors</code></em> es un {{domxref("DOMString")}} que contiene una lista de selectores como <code>"p:hover, .toto + q"</code></li>
- <li><em><code>element</code></em> es el {{domxref("Element")}} en la parte superior del árbol de elementos a tratar.</li>
+ <li><em><code>selectors</code></em> es un {{domxref("DOMString")}} que contiene una lista de selectores como <code>"p:hover, .toto + q"</code></li>
+ <li><em><code>element</code></em> es el {{domxref("Element")}} en la parte superior del árbol de elementos a tratar.</li>
 </ul>
 
 <h3 id="Valor_del_resultado">Valor del resultado</h3>
@@ -34,7 +34,7 @@ translation_of: Web/API/Element/closest
 <h3 id="Excepciones">Excepciones</h3>
 
 <ul>
- <li>Se lanza una excepción {{exception("SyntaxError")}} si <em><code>selectors</code></em> no es una lista de selectores válida.</li>
+  <li>Se lanza una excepción <a href="/es/docs/Web/API/DOMException#syntaxerror"><code>SyntaxError</code></a> si <em><code>selectors</code></em> no es una lista de selectores válida.</li>
 </ul>
 
 <h2 id="Ejemplo" name="Ejemplo">Ejemplo</h2>
@@ -67,7 +67,7 @@ var r4 = el.closest(":not(div)");
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>Para los navegadores que no tengan soporte para <code>Element.closest()</code>, pero sí lo tengan para <code>document.querySelectorAll()</code> (o un equivalente prefijado, es decir IE9+), existe un polyfill:</p>
+<p>Para los navegadores que no tengan soporte para <code>Element.closest()</code>, pero sí lo tengan para <code>document.querySelectorAll()</code> (o un equivalente prefijado, es decir IE9+), existe un polyfill:</p>
 
 <pre class="brush: js">if (!Element.prototype.matches) {
   Element.prototype.matches = Element.prototype.msMatchesSelector ||
@@ -86,19 +86,19 @@ if (!Element.prototype.closest) {
   };
 }</pre>
 
-<p>Sin embargo, si realmente se necesita soporte para IE 8, entonces el siguiente polyfill servirá para conseguirlo de forma muy lenta, pero lo hará. Sin embargo, sólo admitirá selectores CSS 2.1 en IE 8, puede causar picos severos de retraso en sitios web en producción.</p>
+<p>Sin embargo, si realmente se necesita soporte para IE 8, entonces el siguiente polyfill servirá para conseguirlo de forma muy lenta, pero lo hará. Sin embargo, sólo admitirá selectores CSS 2.1 en IE 8, puede causar picos severos de retraso en sitios web en producción.</p>
 
 <pre class="brush: js">if (window.Element &amp;&amp; !Element.prototype.closest) {
-  Element.prototype.closest =
-  function(s) {
-    var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-        i,
-        el = this;
-    do {
-      i = matches.length;
-      while (--i &gt;= 0 &amp;&amp; matches.item(i) !== el) {};
-    } while ((i &lt; 0) &amp;&amp; (el = el.parentElement));
-    return el;
+  Element.prototype.closest =
+  function(s) {
+    var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+        i,
+        el = this;
+    do {
+      i = matches.length;
+      while (--i &gt;= 0 &amp;&amp; matches.item(i) !== el) {};
+    } while ((i &lt; 0) &amp;&amp; (el = el.parentElement));
+    return el;
   };
 }
 </pre>
@@ -128,7 +128,7 @@ if (!Element.prototype.closest) {
 <h3 id="Notas_de_compatibilidad">Notas de compatibilidad</h3>
 
 <ul>
- <li>En Edge <code>document.createElement(element).closest(element)</code> devolverá <code>null</code> si el elemento no es el primero del DOM</li>
+ <li>En Edge <code>document.createElement(element).closest(element)</code> devolverá <code>null</code> si el elemento no es el primero del DOM</li>
 </ul>
 </div>
 

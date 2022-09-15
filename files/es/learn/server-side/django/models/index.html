@@ -35,7 +35,7 @@ translation_of: Learn/Server-side/Django/Models
 
 <h2 id="Visión_general">Visión general</h2>
 
-<p>Las aplicaciones web de Django acceden y administran los datos a través de objetos de Python a los que se hace referencia como modelos. Los modelos definen la<em> estructura</em> de los datos almacenados, incluidos los <em>tipos</em> de campo y los atributos de cada campo, como su tamaño máximo, valores predeterminados, lista de selección de opciones, texto de ayuda para la documentación, texto de etiqueta para formularios, etc. La definición del modelo es independiente de la base de datos subyacente. puede elegir una de entre varias como parte de la configuración de su proyecto. Una vez que haya elegido la base de datos que desea usar, no necesita hablar directamente con ella. Simplemente escriba la estructura de su modelo y algo de código, y Django se encargará de todo el trabajo sucio, al comunicarse con la base de datos por usted.</p>
+<p>Las aplicaciones web de Django acceden y administran los datos a través de objetos de Python a los que se hace referencia como modelos. Los modelos definen la<em> estructura</em> de los datos almacenados, incluidos los <em>tipos</em> de campo y los atributos de cada campo, como su tamaño máximo, valores predeterminados, lista de selección de opciones, texto de ayuda para la documentación, texto de etiqueta para formularios, etc. La definición del modelo es independiente de la base de datos subyacente. puede elegir una de entre varias como parte de la configuración de su proyecto. Una vez que haya elegido la base de datos que desea usar, no necesita hablar directamente con ella. Simplemente escriba la estructura de su modelo y algo de código, y Django se encargará de todo el trabajo sucio, al comunicarse con la base de datos por usted.</p>
 
 <p>Este tutorial muestra cómo definir y acceder a los modelos para el ejemplo del <a href="https://developer.mozilla.org/es/docs/Learn/Server-side/Django/Tutorial_local_library_website">sitio web LocalLibrary</a>.</p>
 
@@ -53,7 +53,7 @@ translation_of: Learn/Server-side/Django/Models
 
 <p>Con esto en mente, el diagrama de asociación UML a continuación muestra los modelos que definiremos en este caso (como recuadros). Como se mencionó anteriormente, hemos creado modelos para el libro (los detalles genéricos del libro), instancia del libro (estado de copias físicas específicas del libro disponible en el sistema) y autor. También hemos decidido tener un modelo para el género, para que los valores se puedan crear/seleccionar a través de la interfaz admin. Hemos decidido no tener un modelo para el <span style='font-family: "Courier New";'>BookInstance:status</span>, en su lugar, hemos especificado directamente, en el código, los valores (<span style='font-family: "Courier New";'>LOAN_STATUS</span>) porque no esperamos que cambien. Dentro de cada uno de los cuadros, puede ver el nombre del modelo, los nombres y tipos de campo, y también los métodos y sus tipos de devolución.</p>
 
-<p>El diagrama también muestra las relaciones entre los modelos, incluida su <em>cardinalidad</em>. La cardinalidad expresa la cantidad de instancias (máximo y mínimo) de cada modelo que pueden estar presentes en la relación. Por ejemplo, la línea de conexión entre los cuadros muestra que <em>Book</em> y <em>Genre</em> están relacionados. Los números cercanos al modelo <em>Book</em> muestran que un libro debe tener uno o más <em>Genres</em> (tantos como desee), mientras que los números al otro lado de la línea al lado de <em>Genre</em> muestran que puede tener cero o más libros asociados.</p>
+<p>El diagrama también muestra las relaciones entre los modelos, incluida su <em>cardinalidad</em>. La cardinalidad expresa la cantidad de instancias (máximo y mínimo) de cada modelo que pueden estar presentes en la relación. Por ejemplo, la línea de conexión entre los cuadros muestra que <em>Book</em> y <em>Genre</em> están relacionados. Los números cercanos al modelo <em>Book</em> muestran que un libro debe tener uno o más <em>Genres</em> (tantos como desee), mientras que los números al otro lado de la línea al lado de <em>Genre</em> muestran que puede tener cero o más libros asociados.</p>
 
 <p><img alt="LocalLibrary Model UML" src="https://mdn.mozillademos.org/files/15646/local_library_model_uml.png" style="height: 660px; width: 977px;"></p>
 
@@ -63,56 +63,56 @@ translation_of: Learn/Server-side/Django/Models
 
 <h2 id="Cartilla_del_Modelo">Cartilla del Modelo</h2>
 
-<p>Esta sección provee una vista resumida de cómo se define un modelo y algunos de los campos más importantes y argumentos de campo. </p>
+<p>Esta sección provee una vista resumida de cómo se define un modelo y algunos de los campos más importantes y argumentos de campo. </p>
 
 <h3 id="Definición_de_modelo">Definición de modelo</h3>
 
-<p>Los modelos están definidos, normalmente, en el archivo <strong>models.py</strong> de la aplicación. Son implementados como subclases de <code>django.db.models.Model</code>, y pueden incluir campos, métodos y metadata. El fragmento de código más abajo muestra un modelo "típico", llamado <code>MyModelName</code>:</p>
+<p>Los modelos están definidos, normalmente, en el archivo <strong>models.py</strong> de la aplicación. Son implementados como subclases de <code>django.db.models.Model</code>, y pueden incluir campos, métodos y metadata. El fragmento de código más abajo muestra un modelo "típico", llamado <code>MyModelName</code>:</p>
 
 <pre class="notranslate">from django.db import models
 
 class MyModelName(models.Model):
-    """
-    Una clase típica definiendo un modelo, derivado desde la clase Model.
-    """
+    """
+    Una clase típica definiendo un modelo, derivado desde la clase Model.
+    """
 
-    # Campos
-    my_field_name = models.CharField(max_length=20, help_text="Enter field documentation")
-    ...
+    # Campos
+    my_field_name = models.CharField(max_length=20, help_text="Enter field documentation")
+    ...
 
-    # Metadata
+    # Metadata
     class Meta:
-        ordering = ["-my_field_name"]
+        ordering = ["-my_field_name"]
 
-    # Métodos
-    def get_absolute_url(self):
-         """
-         Devuelve la url para acceder a una instancia particular de MyModelName.
-         """
-         return reverse('model-detail-view', args=[str(self.id)])
+    # Métodos
+    def get_absolute_url(self):
+         """
+         Devuelve la url para acceder a una instancia particular de MyModelName.
+         """
+         return reverse('model-detail-view', args=[str(self.id)])
 
-    def __str__(self):
-        """
-        Cadena para representar el objeto MyModelName (en el sitio de Admin, etc.)
-        """
-        return self.field_name</pre>
+    def __str__(self):
+        """
+        Cadena para representar el objeto MyModelName (en el sitio de Admin, etc.)
+        """
+        return self.field_name</pre>
 
-<p>En las secciones de abajo exploraremos cada una de las características interiores de un modelo en detalle:</p>
+<p>En las secciones de abajo exploraremos cada una de las características interiores de un modelo en detalle:</p>
 
 <h4 id="Campos">Campos</h4>
 
-<p>Un modelo puede tener un número arbitrario de campos, de cualquier tipo. Cada uno representa una columna de datos que queremos guardar en nuestras tablas de la base de datos. Cada registro de la base de datos (fila) consistirá en uno de cada posible valor del campo. Echemos un vistazo al ejemplo visto arriba:</p>
+<p>Un modelo puede tener un número arbitrario de campos, de cualquier tipo. Cada uno representa una columna de datos que queremos guardar en nuestras tablas de la base de datos. Cada registro de la base de datos (fila) consistirá en uno de cada posible valor del campo. Echemos un vistazo al ejemplo visto arriba:</p>
 
 <pre class="brush: js notranslate">my_field_name = models.CharField(max_length=20, help_text="Enter field documentation")</pre>
 
-<p>Nuestro ejemplo de arriba tiene un único campo llamado <code>my_field_name</code>, de tipo <code>models.CharField</code> — lo que significa que este campo contendrá una cadena de caracteres alfanuméricos. Los tipos de campo son asignados usando clases específicas, que determinan el tipo de registro que se usa para guardar el dato en la base, junto con un criterio de evaluación que se usará cuando se reciban los valores de un formulario HTML (es decir, qué constituye un valor válido). Los tipos de campo pueden también tomar argumentos que especifican además cómo se guarda o cómo se puede usar. En este caso le damos a nuestro campo dos argumentos:</p>
+<p>Nuestro ejemplo de arriba tiene un único campo llamado <code>my_field_name</code>, de tipo <code>models.CharField</code> — lo que significa que este campo contendrá una cadena de caracteres alfanuméricos. Los tipos de campo son asignados usando clases específicas, que determinan el tipo de registro que se usa para guardar el dato en la base, junto con un criterio de evaluación que se usará cuando se reciban los valores de un formulario HTML (es decir, qué constituye un valor válido). Los tipos de campo pueden también tomar argumentos que especifican además cómo se guarda o cómo se puede usar. En este caso le damos a nuestro campo dos argumentos:</p>
 
 <ul>
  <li><code>max_length=20</code> — Establece que la longitud máxima del valor de este campo es 20 caracteres.</li>
- <li><code>help_text="Enter field documentation"</code> — proporciona una etiqueta de texto para mostrar que ayuda a los usuarios a saber qué valor proporcionar cuando un usuario ha de introducirlo via un formulario HTML.</li>
+ <li><code>help_text="Enter field documentation"</code> — proporciona una etiqueta de texto para mostrar que ayuda a los usuarios a saber qué valor proporcionar cuando un usuario ha de introducirlo via un formulario HTML.</li>
 </ul>
 
-<p>El nombre del campo se usa para referirnos a él en consultas (<em>queries</em>) y plantillas (<em>templates</em>). Los campos también tienen una etiqueta, que puede ser especificada como argumento (<code>verbose_name</code>) o inferida automáticamente, a partir del nombre de variable que identifica al campo, capitalizando la primera letra y reemplazando los guiones bajos por espacios (por ejemplo <code>my_field_name</code> tendría la etiqueta por defecto de <em>My field name</em>). El orden en que los campos son declarados afectará su orden por defecto si un modelo es renderizado en un formulario (ej. en el sitio de Administración), aunque este comportamiento se puede anular.</p>
+<p>El nombre del campo se usa para referirnos a él en consultas (<em>queries</em>) y plantillas (<em>templates</em>). Los campos también tienen una etiqueta, que puede ser especificada como argumento (<code>verbose_name</code>) o inferida automáticamente, a partir del nombre de variable que identifica al campo, capitalizando la primera letra y reemplazando los guiones bajos por espacios (por ejemplo <code>my_field_name</code> tendría la etiqueta por defecto de <em>My field name</em>). El orden en que los campos son declarados afectará su orden por defecto si un modelo es renderizado en un formulario (ej. en el sitio de Administración), aunque este comportamiento se puede anular.</p>
 
 <h5 id="Argumentos_comunes_de_los_campos">Argumentos comunes de los campos</h5>
 
@@ -120,28 +120,28 @@ class MyModelName(models.Model):
 
 <ul>
  <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#help-text">help_text</a>: Proporciona una etiqueta de texto para formularios HTML (ej. en el sitio de Administración), tal como se describe arriba.</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#verbose-name">verbose_name</a>: Nombre de fácil lectura que se usa en etiquetas para el campo. Si no se especifica, Django inferirá el valor por defecto del verbose name a partir del nombre del campo.</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#verbose-name">verbose_name</a>: Nombre de fácil lectura que se usa en etiquetas para el campo. Si no se especifica, Django inferirá el valor por defecto del verbose name a partir del nombre del campo.</li>
  <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#default">default</a>: Valor por defecto para el campo. Puede ser un valor o un <em>callable object</em> (objeto que puede ser llamado como una función), en cuyo caso el objeto será llamado cada vez que se cree un nuevo registro.</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#null">null</a>: Si es <code>True</code>, Django guardará valores en blanco o vacíos como <code>NULL</code> en la base de datos para campos donde sea apropiado (un <code>CharField</code> guardará una cadena vacía en su lugar). Por defecto es <code>False</code>.</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#blank">blank</a>: Si es <code>True</code>, se permite que el campo quede en blanco en tus formularios. El valor por defecto es <code>False</code>, lo que significa que la validación de formularios de Django te forzará a introducir un valor. Con frecuencia se usa con <code>null=True</code>, porque si vas a permitir valores en blanco, también querrás que la base de datos sea capaz de representarlos de forma apropiada.</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#choices">choices</a>: Un grupo de valores de selección para este campo. Si se proporciona, el widget correspondiente por defecto del formulario será una caja de selección con estos valores de selección en vez del campo de texto estándar.</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#primary-key">primary_key</a>: Si es <code>True</code>, establece el campo actual como clave primaria para el modelo (Una clave primaria es una columna especial de la base de datos, diseñada para identificar de forma única todos los diferentes registros de una tabla). Si no se especifica ningún campo como clave primaria, Django añadirá automáticamente un campo para este propósito.</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#null">null</a>: Si es <code>True</code>, Django guardará valores en blanco o vacíos como <code>NULL</code> en la base de datos para campos donde sea apropiado (un <code>CharField</code> guardará una cadena vacía en su lugar). Por defecto es <code>False</code>.</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#blank">blank</a>: Si es <code>True</code>, se permite que el campo quede en blanco en tus formularios. El valor por defecto es <code>False</code>, lo que significa que la validación de formularios de Django te forzará a introducir un valor. Con frecuencia se usa con <code>null=True</code>, porque si vas a permitir valores en blanco, también querrás que la base de datos sea capaz de representarlos de forma apropiada.</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#choices">choices</a>: Un grupo de valores de selección para este campo. Si se proporciona, el widget correspondiente por defecto del formulario será una caja de selección con estos valores de selección en vez del campo de texto estándar.</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#primary-key">primary_key</a>: Si es <code>True</code>, establece el campo actual como clave primaria para el modelo (Una clave primaria es una columna especial de la base de datos, diseñada para identificar de forma única todos los diferentes registros de una tabla). Si no se especifica ningún campo como clave primaria, Django añadirá automáticamente un campo para este propósito.</li>
 </ul>
 
-<p>Hay muchas otras opciones — puedes ver la <a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#field-options">lista completa de opciones aquí</a>.</p>
+<p>Hay muchas otras opciones — puedes ver la <a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#field-options">lista completa de opciones aquí</a>.</p>
 
 <h5 id="Tipos_comunes_de_campos">Tipos comunes de campos</h5>
 
-<p>La lista siguiente describe algunos de los tipos de campo más comunmente usados. </p>
+<p>La lista siguiente describe algunos de los tipos de campo más comunmente usados. </p>
 
 <ul>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField">CharField</a> se usa para definir cadenas de longitud corta a media. Debes especificar la <code>max_length</code> (longitud máxima) de los datos que se guardarán.</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.TextField">TextField</a> se usa para cadenas de longitud grande o arbitraria. Puedes especificar una <code>max_length</code> para el campo, pero sólo se usa cuando el campo se muestra en formularios (no se fuerza al nivel de la base de datos).</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.IntegerField" title="django.db.models.IntegerField">IntegerField</a> es un campo para almacenar valores de números enteros y para validar los valores introducidos como enteros en los formularios.</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#datefield">DateField</a> y <a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#datetimefield">DateTimeField</a> se usan para guardar/representar fechas e información fecha/hora (como en los objetos Python <code>datetime.date</code>  y <code>datetime.datetime</code>, respectivamente). Estos campos pueden adicionalmente declarar los parámetros (mutuamente excluyentes) <code>auto_now=True</code> (para establecer el campo a la fecha actual cada vez que se guarda el modelo), <code>auto_now_add</code> (para establecer sólo la fecha cuando se crea el modelo por primera vez), y <code>default</code> (para establecer una fecha por defecto que puede ser sobreescrita por el usuario).</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#emailfield">EmailField</a> se usa para validar direcciones de correo electrónico.</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#filefield">FileField</a> e <a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#imagefield">ImageField</a> se usan para subir ficheros e imágenes respectivamente (el <code>ImageField</code> añade simplemente una validación adicional de que el fichero subido es una imagen). Éstos tienen parámetros para definir cómo y donde se guardan los ficheros subidos.</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#autofield">AutoField</a> es un tipo especial de <code>IntegerField</code> que se incrementa automáticamente. Cuando no especificas una clave primaria para tu modelo, se añade -automáticamente- una de éste tipo.</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField">CharField</a> se usa para definir cadenas de longitud corta a media. Debes especificar la <code>max_length</code> (longitud máxima) de los datos que se guardarán.</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.TextField">TextField</a> se usa para cadenas de longitud grande o arbitraria. Puedes especificar una <code>max_length</code> para el campo, pero sólo se usa cuando el campo se muestra en formularios (no se fuerza al nivel de la base de datos).</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.IntegerField" title="django.db.models.IntegerField">IntegerField</a> es un campo para almacenar valores de números enteros y para validar los valores introducidos como enteros en los formularios.</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#datefield">DateField</a> y <a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#datetimefield">DateTimeField</a> se usan para guardar/representar fechas e información fecha/hora (como en los objetos Python <code>datetime.date</code>  y <code>datetime.datetime</code>, respectivamente). Estos campos pueden adicionalmente declarar los parámetros (mutuamente excluyentes) <code>auto_now=True</code> (para establecer el campo a la fecha actual cada vez que se guarda el modelo), <code>auto_now_add</code> (para establecer sólo la fecha cuando se crea el modelo por primera vez), y <code>default</code> (para establecer una fecha por defecto que puede ser sobreescrita por el usuario).</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#emailfield">EmailField</a> se usa para validar direcciones de correo electrónico.</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#filefield">FileField</a> e <a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#imagefield">ImageField</a> se usan para subir ficheros e imágenes respectivamente (el <code>ImageField</code> añade simplemente una validación adicional de que el fichero subido es una imagen). Éstos tienen parámetros para definir cómo y donde se guardan los ficheros subidos.</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#autofield">AutoField</a> es un tipo especial de <code>IntegerField</code> que se incrementa automáticamente. Cuando no especificas una clave primaria para tu modelo, se añade -automáticamente- una de éste tipo.</li>
  <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#foreignkey">ForeignKey</a> se usa para especificar una relación uno a muchos con otro modelo de la base de datos (ej. un coche tiene un fabricante, pero un fabricante puede hacer muchos coches). El lado "uno" de la relación es el modelo que contiene la clave.</li>
  <li><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#manytomanyfield">ManyToManyField</a> se usa para especificar una relación muchos a muchos (ej. un libro puede tener varios géneros, y cada género puede contener varios libros). En nuestra aplicación de la biblioteca usaremos ésta de forma muy similar a <code>ForeignKeys</code>, pero pueden usarse de formas más complicadas para describir las relaciones entre grupos. Éstas tienen el parámetro <code>on_delete</code> para definir que ocurre cuando un registro asociado se borra (ej. un valor de <code>models.SET_NULL</code> establecería simplemente el valor a <code>NULL</code>).</li>
 </ul>
@@ -154,7 +154,7 @@ class MyModelName(models.Model):
 
 <pre class="brush: python notranslate">class Meta:
     ordering = ["-my_field_name"]
-    ...</pre>
+    ...</pre>
 
 <p>Una de las características más útiles de estos metadatos es controlar el <em>orden por defecto</em> de los registros que se devuelven cuando se consulta el tipo de modelo. Se hace especificando el orden de comprobación en una lista de nombres de campo en el atributo <code>ordering</code>, como se muestra arriba. La ordenación dependerá del tipo de campo (los campos de caracteres de ordenan alfabéticamente, mientras que los campos de fechas están clasificados por orden cronológico). Como se muestra arriba, se puede invertir el orden de clasificación añadiendo el símbolo (-) como prefijo del nombre del campo.</p>
 
@@ -181,14 +181,14 @@ class MyModelName(models.Model):
 <p>Minimamente, en cada modelo deberías definir el método estándar de las clases de Python <code>__str__()</code> para devolver una cadena de texto legible por humanos para cada objeto. Esta cadena se usa para representar registros individuales en el sitio de administración (y en cualquier otro lugar donde necesites referirte a una instancia del modelo). Con frecuencia éste devolverá un título o nombre de campo del modelo.</p>
 
 <pre class="brush: python notranslate">def __str__(self):
-    return self.field_name</pre>
+    return self.field_name</pre>
 
 <p>Otro método común a incluir en los modelos de Django es <code>get_absolute_url()</code>, que devuelve un URL para presentar registros individuales del modelo en el sitio web (si defines este método, Django añadirá automáticamente un botón "Ver en el sitio" en la ventana de edición del registro del modelo en el sitio de Administración). Un patrón típico para <code>get_absolute_url()</code> se muestra abajo.</p>
 
 <pre class="brush: python notranslate">def get_absolute_url(self):
     """
      Devuelve la url para acceder a una instancia particular del modelo.
-    """
+    """
     return reverse('model-detail-view', args=[str(self.id)])
 </pre>
 
@@ -248,18 +248,18 @@ a_record.save()</pre>
 number_wild_books = Book.objects.filter(title__contains='wild').count()
 </pre>
 
-<p>Los campos a buscar y el tipo de coincidencia son definidos en el nombre del parámetro de filtro, usando el formato: <code>field_name__match_type</code> (ten en cuenta el <em>doble guión bajo</em> entre <code>title</code> y <code>contains</code> anterior). En el ejemplo anterior estamos filtrando <code>title</code> por un valor sensible a mayúsculas y minúsculas. Puedes hacer otros muchos tipos de coincidencias: <code>icontains</code> (no sensible a mayúsculas ni minúsculas), <code>iexact</code> (coincidencia exacta no sensible a mayúsculas ni minúsculas), <code>exact</code> (coincidencia exacta sensible a mayúsculas y minúsculas) e <code>in</code>, <code>gt</code> (mayor que), <code>startswith</code>, etc. Puede ver la <a href="https://docs.djangoproject.com/en/1.10/ref/models/querysets/#field-lookups">lista completa aquí</a>.</p>
+<p>Los campos a buscar y el tipo de coincidencia son definidos en el nombre del parámetro de filtro, usando el formato: <code>field_name__match_type</code> (ten en cuenta el <em>doble guión bajo</em> entre <code>title</code> y <code>contains</code> anterior). En el ejemplo anterior estamos filtrando <code>title</code> por un valor sensible a mayúsculas y minúsculas. Puedes hacer otros muchos tipos de coincidencias: <code>icontains</code> (no sensible a mayúsculas ni minúsculas), <code>iexact</code> (coincidencia exacta no sensible a mayúsculas ni minúsculas), <code>exact</code> (coincidencia exacta sensible a mayúsculas y minúsculas) e <code>in</code>, <code>gt</code> (mayor que), <code>startswith</code>, etc. Puede ver la <a href="https://docs.djangoproject.com/en/1.10/ref/models/querysets/#field-lookups">lista completa aquí</a>.</p>
 
-<p>En algunos casos, necesitarás filtrar por un campo que define una relación uno-a-muchos con otro modelo (por ejemplo, una <code>ForeignKey</code>). En estos casos puedes "referenciar" a campos dentro del modelo relacionado con un doble guión bajo adicional. Así, por ejemplo, para filtrar los libros de un género específico tienes que referenciar el <code>name</code> a través del campo <code>genre</code> como se muestra más abajo:</p>
+<p>En algunos casos, necesitarás filtrar por un campo que define una relación uno-a-muchos con otro modelo (por ejemplo, una <code>ForeignKey</code>). En estos casos puedes "referenciar" a campos dentro del modelo relacionado con un doble guión bajo adicional. Así, por ejemplo, para filtrar los libros de un género específico tienes que referenciar el <code>name</code> a través del campo <code>genre</code> como se muestra más abajo:</p>
 
 <pre class="brush: python notranslate">books_containing_genre = Book.objects.filter(genre<strong>__</strong>name<strong>__</strong>icontains='fiction')  # Will match on: Fiction, Science fiction, non-fiction etc.
 </pre>
 
 <div class="note">
-<p><strong>Nota</strong>: Puedes usar guiones bajos (__)  para navegar por tantos niveles de relaciones (<code>ForeignKey</code>/<code>ManyToManyField</code>) como quieras. Por ejemplo, un Book que tuviera diferentes "types", definidos usando una relación adicional "cover", podría tener un nombre de parámetro: <code>type__cover__name__exact='hard'.</code></p>
+<p><strong>Nota</strong>: Puedes usar guiones bajos (__)  para navegar por tantos niveles de relaciones (<code>ForeignKey</code>/<code>ManyToManyField</code>) como quieras. Por ejemplo, un Book que tuviera diferentes "types", definidos usando una relación adicional "cover", podría tener un nombre de parámetro: <code>type__cover__name__exact='hard'.</code></p>
 </div>
 
-<p>Puedes hacer muchas más cosas con las consultas, incluyendo búsquedas hacia atrás de modelos relacionados, filtros encadenados, devolver un conjunto de valores más pequeño, etc. Para más información, puedes consultar <a href="https://docs.djangoproject.com/en/1.10/topics/db/queries/">Elaborar consultas</a> (Django Docs).</p>
+<p>Puedes hacer muchas más cosas con las consultas, incluyendo búsquedas hacia atrás de modelos relacionados, filtros encadenados, devolver un conjunto de valores más pequeño, etc. Para más información, puedes consultar <a href="https://docs.djangoproject.com/en/1.10/topics/db/queries/">Elaborar consultas</a> (Django Docs).</p>
 
 <h2 id="Definiendo_los_Modelos_de_LocalLybrary">Definiendo los Modelos de LocalLybrary</h2>
 
@@ -274,16 +274,16 @@ number_wild_books = Book.objects.filter(title__contains='wild').count()
 <p>Copia el código del modelo <code>Genre</code> que se muestra abajo y pégalo al final de tu archivo <code>models.py</code>. Este modelo nos servirá para almacenar información relativa a la categoría del libro (por ejemplo, si es ficción o no, si es un romancero o es un libro de historia, etc.) Como se dijo más arriba, preferimos modelar el género (Genre) como una entidad, en vez de utilizar un campo de texto o una lista de opciones, porque de esta manera es posible manejar los valores a través de nuestra base de datos, en vez de fijarlo en el código (<em>hard-coding</em>)</p>
 
 <pre class="brush: python notranslate">class Genre(models.Model):
-    """
-    Modelo que representa un género literario (p. ej. ciencia ficción, poesía, etc.).
-    """
-    name = models.CharField(max_length=200, help_text="Ingrese el nombre del género (p. ej. Ciencia Ficción, Poesía Francesa etc.)")
+    """
+    Modelo que representa un género literario (p. ej. ciencia ficción, poesía, etc.).
+    """
+    name = models.CharField(max_length=200, help_text="Ingrese el nombre del género (p. ej. Ciencia Ficción, Poesía Francesa etc.)")
 
-    def __str__(self):
-        """
-        Cadena que representa a la instancia particular del modelo (p. ej. en el sitio de Administración)
-        """
-        return self.name</pre>
+    def __str__(self):
+        """
+        Cadena que representa a la instancia particular del modelo (p. ej. en el sitio de Administración)
+        """
+        return self.name</pre>
 
 <p>El modelo tiene un único campo (<code>name</code>), de tipo <code>CharField</code>, que usaremos para describir el género literario. Este campo tiene un tamaño máximo (<code>max_length</code>) de 200 caracteres y, además, posee un <code>help_text</code>. Al final de la clase, hemos declarado el método <code>__str__()</code>, que simplemente devuelve el nombre de un género definido por un registro en particular. Como no hemos definido un nombre explicativo (<code>verbose_name</code>) para nuestro campo, éste se establecerá en <code>Name</code> y se mostrará de esa manera en los formularios.</p>
 
@@ -294,36 +294,36 @@ number_wild_books = Book.objects.filter(title__contains='wild').count()
 <pre class="brush: python notranslate">from django.urls import reverse #Used to generate URLs by reversing the URL patterns
 
 class Book(models.Model):
-    """
-    Modelo que representa un libro (pero no un Ejemplar específico).
-    """
+    """
+    Modelo que representa un libro (pero no un Ejemplar específico).
+    """
 
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=200)
 
-    author = models.ForeignKey('Author', on_delete=models.SET_NULL, null=True)
-    # ForeignKey, ya que un libro tiene un solo autor, pero el mismo autor puede haber escrito muchos libros.
-    # 'Author' es un string, en vez de un objeto, porque la clase Author aún no ha sido declarada.
+    author = models.ForeignKey('Author', on_delete=models.SET_NULL, null=True)
+    # ForeignKey, ya que un libro tiene un solo autor, pero el mismo autor puede haber escrito muchos libros.
+    # 'Author' es un string, en vez de un objeto, porque la clase Author aún no ha sido declarada.
 
-    summary = models.TextField(max_length=1000, help_text="Ingrese una breve descripción del libro")
+    summary = models.TextField(max_length=1000, help_text="Ingrese una breve descripción del libro")
 
     isbn = models.CharField('ISBN',max_length=13, help_text='13 Caracteres &lt;a href="https://www.isbn-international.org/content/what-isbn"&gt;ISBN number&lt;/a&gt;')
 
-    genre = models.ManyToManyField(Genre, help_text="Seleccione un genero para este libro")
-    # ManyToManyField, porque un género puede contener muchos libros y un libro puede cubrir varios géneros.
-    # La clase Genre ya ha sido definida, entonces podemos especificar el objeto arriba.
+    genre = models.ManyToManyField(Genre, help_text="Seleccione un genero para este libro")
+    # ManyToManyField, porque un género puede contener muchos libros y un libro puede cubrir varios géneros.
+    # La clase Genre ya ha sido definida, entonces podemos especificar el objeto arriba.
 
     def __str__(self):
         """
-        String que representa al objeto Book
-        """
-        return self.title
+        String que representa al objeto Book
+        """
+        return self.title
 
 
-    def get_absolute_url(self):
-        """
-        Devuelve el URL a una instancia particular de Book
-        """
-        return reverse('book-detail', args=[str(self.id)])
+    def get_absolute_url(self):
+        """
+        Devuelve el URL a una instancia particular de Book
+        """
+        return reverse('book-detail', args=[str(self.id)])
 </pre>
 
 <p>El género es un campo de tipo <code>ManyToManyField</code>, de manera tal que un mismo libro podrá abarcar varios géneros y un mismo género podrá abarcar muchos libros. El autor es declarado como <code>ForeignKey</code>, de modo que cada libro podrá tener un sólo autor, pero un autor podrá tener muchos libros (en la vida real, un mismo libro puede tener varios autores, pero en nuestra implementación no).</p>
@@ -334,12 +334,12 @@ class Book(models.Model):
 
 <h3 id="Modelo_BookInstance">Modelo 'BookInstance'</h3>
 
-<p>A continuación, copie el model <code>BookInstance</code>  (mostrado a continuación) debajo de los otros modelos. <code>BookInstance</code> representa una copia específica de un libro que alguien pueda pedir prestado, en incluye información sobre si la copia esta disponible o sobre cual es la fecha que se espera sea devuelto, "imprenta" o detalles de versión, y un id único para el libro en la biblioteca.</p>
+<p>A continuación, copie el model <code>BookInstance</code>  (mostrado a continuación) debajo de los otros modelos. <code>BookInstance</code> representa una copia específica de un libro que alguien pueda pedir prestado, en incluye información sobre si la copia esta disponible o sobre cual es la fecha que se espera sea devuelto, "imprenta" o detalles de versión, y un id único para el libro en la biblioteca.</p>
 
 <p>Algunos de los campos y métodos ahora serán familiares. El modelo usa</p>
 
 <ul>
- <li><code>ForeignKey</code>  para identificar el Libro asociado (cada libro puede tener muchas copias, pero una copia solo puede tener un  <code>Book</code>).</li>
+ <li><code>ForeignKey</code>  para identificar el Libro asociado (cada libro puede tener muchas copias, pero una copia solo puede tener un  <code>Book</code>).</li>
  <li><code>CharField</code> para representar la imprenta (publicación específica) del libro.</li>
 </ul>
 
@@ -377,49 +377,49 @@ class BookInstance(models.Model):
 
 <ul>
  <li><code>UUIDField</code> es usado para establecer el campo <code>id</code> como una <code>primary_key</code> para este modelo. Este tipo de campo asigna un único valor global para cada instancia ( uno para cada libro que puedes encontrar en la biblioteca).</li>
- <li><code>DateField</code> es usado para la fecha <code>due_back</code>  (en la que se espera que el libro este diponible despues de ser prestado o estar en mantenimiento). Este valor puede ser  <code>blank</code> o <code>null</code> (necesario cuando el libro esta disponible). El patrón metadata (<code>Class Meta</code>) usa este campo para ordenar registros cuando se retornan en una consulta.</li>
- <li><code>status</code> es un <code>CharField</code>  que define una lista de elección/selección. Como puedes ver,  hemos definido una tupla que contiene tuplas de pares clave-valor y los pasamos a los argumentos de choice. El valor en un par clave/valor es  un valor desplegable que el usuario puede seleccionar, mientras las claves son valores que en realidad son guardados en la opción seleccionada. Tambien establecemos un valor por defecto de 'm' (maintenance) ya que los libros inicialmente se crearán como no disponibles antes de que esten almacenados en los estantes.</li>
+ <li><code>DateField</code> es usado para la fecha <code>due_back</code>  (en la que se espera que el libro este diponible despues de ser prestado o estar en mantenimiento). Este valor puede ser  <code>blank</code> o <code>null</code> (necesario cuando el libro esta disponible). El patrón metadata (<code>Class Meta</code>) usa este campo para ordenar registros cuando se retornan en una consulta.</li>
+ <li><code>status</code> es un <code>CharField</code>  que define una lista de elección/selección. Como puedes ver,  hemos definido una tupla que contiene tuplas de pares clave-valor y los pasamos a los argumentos de choice. El valor en un par clave/valor es  un valor desplegable que el usuario puede seleccionar, mientras las claves son valores que en realidad son guardados en la opción seleccionada. Tambien establecemos un valor por defecto de 'm' (maintenance) ya que los libros inicialmente se crearán como no disponibles antes de que esten almacenados en los estantes.</li>
 </ul>
 
-<p>El patrón <code>__str__()</code> representa el objeto <code>BookInstance</code> usando una combinación de  su id único y el título del  <code>Book</code> asociado.</p>
+<p>El patrón <code>__str__()</code> representa el objeto <code>BookInstance</code> usando una combinación de  su id único y el título del  <code>Book</code> asociado.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Un poco de Python:</p>
 
 <ul>
- <li>El valor retornado por <code>__str__()</code> es una <em>cadena formateada</em>. Dentro de la cadena usamos <code>%s</code> para declarar "marcadores de posición". Después de la cadena ponemos <code>%</code>  y después una tupla que contiene los valores que serán puestos en los marcadores de posición.  Si solo tienes un marcador de posición entonces puedes omitir la tupla — e.j. <code>'Mi valor: %s' % variable.</code><br>
+ <li>El valor retornado por <code>__str__()</code> es una <em>cadena formateada</em>. Dentro de la cadena usamos <code>%s</code> para declarar "marcadores de posición". Después de la cadena ponemos <code>%</code>  y después una tupla que contiene los valores que serán puestos en los marcadores de posición.  Si solo tienes un marcador de posición entonces puedes omitir la tupla — e.j. <code>'Mi valor: %s' % variable.</code><br>
   <br>
-  Note que aunque este enfoque es perfectamente válido,  sea conciente que ya no es preferido. Desde  Python 3 debes usar en su lugar el método <strong>format</strong>, ej. <code>'{0} ({1})'.format(self.id,self.book.title)</code>. Puedes leer más sobre esto <a href="https://www.python.org/dev/peps/pep-3101/">aquí</a>. A partir de  Python 3.6 también puedes usar la sintaxis de interpolación de cadena, e.j. <code>f'{self.id} ({self.book.title})'</code>.</li>
+  Note que aunque este enfoque es perfectamente válido,  sea conciente que ya no es preferido. Desde  Python 3 debes usar en su lugar el método <strong>format</strong>, ej. <code>'{0} ({1})'.format(self.id,self.book.title)</code>. Puedes leer más sobre esto <a href="https://www.python.org/dev/peps/pep-3101/">aquí</a>. A partir de  Python 3.6 también puedes usar la sintaxis de interpolación de cadena, e.j. <code>f'{self.id} ({self.book.title})'</code>.</li>
 </ul>
 </div>
 
 <h3 id="Modelo_Author">Modelo 'Author'</h3>
 
-<p>Copia el modelo <code>Author</code>  (mostrado abajo) bajo el código existente en <strong>models.py</strong>.</p>
+<p>Copia el modelo <code>Author</code>  (mostrado abajo) bajo el código existente en <strong>models.py</strong>.</p>
 
-<p>Todos los campos/métodos ahora deben ser familiares. El modelo define a un autor que tiene un primer nombre, apellido, fecha de nacimiento, y (opcional) fecha de fallecimiento. Especifica que de forma predeterminada el  <code>__str__()</code> retorna el nombre   en  el <em>orden apellido</em>, <em>primer nombre</em>. El método <code>get_absolute_url()</code> invierte el mapeo URL <code>author-detail</code> para obtener el URL para mostrar un autor individual.</p>
+<p>Todos los campos/métodos ahora deben ser familiares. El modelo define a un autor que tiene un primer nombre, apellido, fecha de nacimiento, y (opcional) fecha de fallecimiento. Especifica que de forma predeterminada el  <code>__str__()</code> retorna el nombre   en  el <em>orden apellido</em>, <em>primer nombre</em>. El método <code>get_absolute_url()</code> invierte el mapeo URL <code>author-detail</code> para obtener el URL para mostrar un autor individual.</p>
 
 <pre class="brush: python notranslate">class Author(models.Model):
-    """
-    Modelo que representa un autor
-    """
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    date_of_birth = models.DateField(null=True, blank=True)
-    date_of_death = models.DateField('Died', null=True, blank=True)
+    """
+    Modelo que representa un autor
+    """
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    date_of_birth = models.DateField(null=True, blank=True)
+    date_of_death = models.DateField('Died', null=True, blank=True)
 
-    def get_absolute_url(self):
-        """
-        Retorna la url para acceder a una instancia particular de un autor.
-        """
-        return reverse('author-detail', args=[str(self.id)])
+    def get_absolute_url(self):
+        """
+        Retorna la url para acceder a una instancia particular de un autor.
+        """
+        return reverse('author-detail', args=[str(self.id)])
 
 
-    def __str__(self):
-        """
-        String para representar el Objeto Modelo
-        """
-        return '%s, %s' % (self.last_name, self.first_name)
+    def __str__(self):
+        """
+        String para representar el Objeto Modelo
+        """
+        return '%s, %s' % (self.last_name, self.first_name)
 </pre>
 
 <h2 id="Reiniciar_las_migraciones_a_la_base_de_datos">Reiniciar las migraciones a la base de datos</h2>
@@ -437,7 +437,7 @@ python3 manage.py migrate</code></pre>
 
 <ul>
  <li>¿Debe asociarse un "lenguaje" a un <code>Book</code>, <code>BookInstance</code>, o algún otro objeto?</li>
- <li>¿Deberian representarse  los diferentes idiomas usando un modelo, un campo de texto libre o una lista de seleccion codificada?</li>
+ <li>¿Deberian representarse  los diferentes idiomas usando un modelo, un campo de texto libre o una lista de seleccion codificada?</li>
 </ul>
 
 <p>Después que hayas decidido, agrega el campo. Puedes ver que decidimos nostros en Github <a href="https://github.com/mdn/django-locallibrary-tutorial/blob/master/catalog/models.py">aquí</a>.</p>
@@ -455,7 +455,7 @@ python3 manage.py migrate</code></pre>
 
 <h2 id="Resumen">Resumen</h2>
 
-<p>En este artículo hemos aprendido como son definidos los modelos, y luego usar esta información para diseñar e implementar modelos apropiados para el sitio Web  <em>LocalLibrary</em>.</p>
+<p>En este artículo hemos aprendido como son definidos los modelos, y luego usar esta información para diseñar e implementar modelos apropiados para el sitio Web  <em>LocalLibrary</em>.</p>
 
 <p>En este punto nos desviaremos brevemente de la creación del sitio, y miraremos el <em>sitio de Administración de </em><em>Django</em>. Este sitio nos permitirá añadir algunos datos a la biblioteca, los cuales podemos mostrar usando nuestras (aún por crear) vistas y plantillas.</p>
 

@@ -16,7 +16,9 @@ translation_of: Web/API/Element/getAttribute
 
 ## Syntaxe
 
-    let attribut = element.getAttribute(nom_attribut)
+```js
+let attribut = element.getAttribute(nom_attribut)
+```
 
 où
 
@@ -27,18 +29,22 @@ où
 
 Soit l'HTML :
 
-    const div1 = document.getElementById("div1");
+```js
+const div1 = document.getElementById("div1");
+```
 
 Exemple de JavaScript :
 
-    const div1 = document.getElementById("div1");
-    //=> <div id="div1">Hi Champ!</div>
+```js
+const div1 = document.getElementById("div1");
+//=> <div id="div1">Hi Champ!</div>
 
-    const attributID = div1.getAttribute("id");
-    //=> "div1"
+const attributID = div1.getAttribute("id");
+//=> "div1"
 
-    const alignement = div1.getAttribute("align");
-    //=> null
+const alignement = div1.getAttribute("align");
+//=> null
+```
 
 ## Description
 
@@ -67,21 +73,8 @@ let nonce = script.nonce;
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td><strong>Spécification</strong></td>
-      <td><strong>État</strong></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('DOM WHATWG','#dom-element-getattribute','getAttribute()')}}
-      </td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.getAttribute")}}
+{{Compat}}

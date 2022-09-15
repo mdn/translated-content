@@ -1,13 +1,6 @@
 ---
 title: HTMLCanvasElement.toBlob()
 slug: Web/API/HTMLCanvasElement/toBlob
-tags:
-  - API
-  - Canvas
-  - HTMLCanvasElement
-  - Method
-  - Reference
-translation_of: Web/API/HTMLCanvasElement/toBlob
 ---
 {{APIRef("Canvas API")}}
 
@@ -28,9 +21,9 @@ toBlob(callback, type, quality)
 - `callback`
   - : 回调函数，可获得一个单独的 {{domxref("Blob")}} 对象参数。如果图像未被成功创建，可能会获得 `null` 值。
 - `type` {{optional_inline}}
-   - : {{domxref("DOMString")}} 类型，指定图片格式，默认格式（未指定或不支持）为 `image/png`。
+  - : {{domxref("DOMString")}} 类型，指定图片格式，默认格式（未指定或不支持）为 `image/png`。
 - `quality` {{optional_inline}}
-   - : {{jsxref("Number")}} 类型，值在 0 与 1 之间，当请求图片格式为 `image/jpeg` 或者 `image/webp` 时用来指定图片展示质量。如果这个参数的值不在指定类型与范围之内，则使用默认值，其余参数将被忽略。
+  - : {{jsxref("Number")}} 类型，值在 0 与 1 之间，当请求图片格式为 `image/jpeg` 或者 `image/webp` 时用来指定图片展示质量。如果这个参数的值不在指定类型与范围之内，则使用默认值，其余参数将被忽略。
 
 ### 返回值
 
@@ -39,11 +32,11 @@ toBlob(callback, type, quality)
 ### 异常
 
 - `SecurityError`
-   - : canvas“[被污染](/zh-CN/docs/Web/HTML/CORS_enabled_image)”的情况下不能使用此方法。
+  - : canvas“[被污染](/zh-CN/docs/Web/HTML/CORS_enabled_image)”的情况下不能使用此方法。
 
 ## 示例
 
-### 将canvas图像转换为文件
+### 将 canvas 图像转换为文件
 
 当一个内容画到 canvas 上时，我们可以将它生成任何一个格式支持的图片文件。比如，下面的代码段获得了 id 为“canvas”的 {{HTMLElement("canvas")}} 元素中的图像，复制成一个 PNG 图，在文档中加入一个新的 {{HTMLElement("img")}} 元素，这个 {{HTMLElement("img")}} 元素的源图就是使用 canvas 创建的那个图像。
 
@@ -64,13 +57,13 @@ canvas.toBlob(function(blob) {
 });
 ```
 
-注意，我们这里创建的是PNG图片；如果在 `toBlob()` 传入第二个参数，就可以指定图片格式。例如，生成JPEG格式的图片：
+注意，我们这里创建的是 PNG 图片；如果在 `toBlob()` 传入第二个参数，就可以指定图片格式。例如，生成 JPEG 格式的图片：
 
 ```js
 canvas.toBlob(function(blob){...}, "image/jpeg", 0.95); // JPEG at 95% quality
 ```
 
-### 将canvas转换为ico（仅限Mozilla）
+### 将 canvas 转换为 ico（仅限 Mozilla）
 
 使用 `-moz-parse` 来将 canvas 转换为 ico。Windows XP 不支持将 PNG 转为 ico，因此转为 bmp 作为代替。设置下载属性，生成下载链接。下载属性的值将被用来作为文件名。
 

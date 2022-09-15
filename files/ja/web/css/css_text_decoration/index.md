@@ -1,13 +1,6 @@
 ---
 title: CSS テキスト装飾
 slug: Web/CSS/CSS_Text_Decoration
-tags:
-  - CSS
-  - CSS Text Decoration
-  - Guide
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Text_Decoration
 ---
 {{CSSRef}}
 
@@ -39,23 +32,23 @@ _なし。_
 
 ```css
 .under {
-  text-decoration: underline red;
+  text-decoration: underline red;
 }
 
 .over {
-  text-decoration: wavy overline lime;
+  text-decoration: wavy overline lime;
 }
 
 .line {
-  text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 .plain {
-  text-decoration: none;
+  text-decoration: none;
 }
 
 .underover {
-  text-decoration: dashed underline overline;
+  text-decoration: dashed underline overline;
 }
 
 .thick {

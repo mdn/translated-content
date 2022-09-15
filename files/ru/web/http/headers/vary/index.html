@@ -6,9 +6,9 @@ original_slug: Web/HTTP/Заголовки/Vary
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>Заголовок ответа <strong><code>Vary</code></strong> определяет, как сопоставить будущие заголовки запроса, чтобы решить, можно ли использовать кешированный ответ, а не запрашивать новый с исходного сервера. Он используется сервером для указания того, какие заголовки он использовал при выборе представления ресурса в <a href="/en-US/docs/Web/HTTP/Content_negotiation">алгоритме согласования</a> контента.</p>
+<p>Заголовок ответа <strong><code>Vary</code></strong> определяет, как сопоставить будущие заголовки запроса, чтобы решить, можно ли использовать кешированный ответ, а не запрашивать новый с исходного сервера. Он используется сервером для указания того, какие заголовки он использовал при выборе представления ресурса в <a href="/en-US/docs/Web/HTTP/Content_negotiation">алгоритме согласования</a> контента.</p>
 
-<p>Заголовок <code>Vary</code> должен быть установлен для ответа {{HTTPStatus("304")}} <code>Not Modified</code> точно так же, как он был бы установлен для эквивалентного ответа {{HTTPStatus("200")}} <code>OK</code>.</p>
+<p>Заголовок <code>Vary</code> должен быть установлен для ответа {{HTTPStatus("304")}} <code>Not Modified</code> точно так же, как он был бы установлен для эквивалентного ответа {{HTTPStatus("200")}} <code>OK</code>.</p>
 
 <table class="properties">
  <tbody>
@@ -33,7 +33,7 @@ Vary: &lt;header-name&gt;, &lt;header-name&gt;, ...
 
 <dl>
  <dt>*</dt>
- <dd>Каждый запрос должен рассматриваться как уникальный и не кешируемый. Лучший способ указать это - использовать {{HTTPHeader ("Cache-Control")}}: <code>no-store</code>, который удобнее для чтения и также сигнализирует о том, что объект не должен храниться никогда.</dd>
+ <dd>Каждый запрос должен рассматриваться как уникальный и не кешируемый. Лучший способ указать это - использовать {{HTTPHeader ("Cache-Control")}}: <code>no-store</code>, который удобнее для чтения и также сигнализирует о том, что объект не должен храниться никогда.</dd>
  <dt>&lt;header-name&gt;</dt>
  <dd>Разделённый запятыми список имён заголовков, которые необходимо учитывать при принятии решения о том, можно ли использовать кешированный ответ.</dd>
 </dl>
@@ -42,7 +42,7 @@ Vary: &lt;header-name&gt;, &lt;header-name&gt;, ...
 
 <h3 id="Dynamic_serving">Dynamic serving</h3>
 
-<p>When using the <code>Vary: User-Agent</code> header, caching servers should consider the user agent when deciding whether to serve the page from cache. For example, if you are serving different content to mobile users, it can help you to avoid that a cache may mistakenly serve a desktop version of your site to your mobile users. It can help Google and other search engines to discover the mobile version of a page, and might also tell them that no <a href="https://en.wikipedia.org/wiki/Cloaking">Cloaking</a> is intended.</p>
+<p>When using the <code>Vary: User-Agent</code> header, caching servers should consider the user agent when deciding whether to serve the page from cache. For example, if you are serving different content to mobile users, it can help you to avoid that a cache may mistakenly serve a desktop version of your site to your mobile users. It can help Google and other search engines to discover the mobile version of a page, and might also tell them that no <a href="https://en.wikipedia.org/wiki/Cloaking">Cloaking</a> is intended.</p>
 
 <pre>Vary: User-Agent</pre>
 

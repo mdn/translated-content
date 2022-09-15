@@ -26,7 +26,9 @@ La propriété `__proto__` peut également être utilisée avec un littéral obj
 
 ## Syntaxe
 
-    var proto = obj.__proto__;
+```js
+var proto = obj.__proto__;
+```
 
 > **Note :** le nom de la propriété est composé de deux tirets bas, suivis de « proto », suivis par deux tirets bas (_underscores_)
 

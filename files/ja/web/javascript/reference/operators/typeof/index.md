@@ -1,14 +1,6 @@
 ---
 title: typeof
 slug: Web/JavaScript/Reference/Operators/typeof
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - リファレンス
-  - 単項
-browser-compat: javascript.operators.typeof
-translation_of: Web/JavaScript/Reference/Operators/typeof
 ---
 {{JSSidebar("Operators")}}
 
@@ -163,7 +155,7 @@ typeof /s/ === 'object';   // Firefox 5+ ECMAScript 5.1 に準拠
 
 ECMAScript 2015 より前では、`typeof` は常にそれが供給されたオペランドの文字列を返すことが保証されていました。宣言されていない識別子があっても、`typeof` は `'undefined'` を返します。`typeof` を使用すると、エラーは発生しません。
 
-しかしながら、ブロックスコープの {{JSxRef("Statements/let", "let")}} と 
+しかしながら、ブロックスコープの {{JSxRef("Statements/let", "let")}} と
 {{JSxRef("Statements/const", "const")}} が追加されたことで、変数が宣言される前のブロック内で `let` と `const` に `typeof` を使用すると（またはクラスに `typeof` を使用すると）、 {{JSxRef("ReferenceError")}} が発生します。ブロックスコープ内の変数は、ブロックの開始から初期化が処理されるまで「[一時的なデッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)」にあり、その間にアクセスされるとエラーが発生します。
 
 ```js

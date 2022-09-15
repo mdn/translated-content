@@ -1,14 +1,6 @@
 ---
 title: <custom-ident>
 slug: Web/CSS/custom-ident
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - レイアウト
-  - リファレンス
-  - ウェブ
-translation_of: Web/CSS/custom-ident
 ---
 {{CSSRef}}
 
@@ -47,7 +39,6 @@ translation_of: Web/CSS/custom-ident
 ## 例
 
 ### 有効な識別子
-
 
 ```plain example-good
 nono79            アルファベットと数字の組み合わせ

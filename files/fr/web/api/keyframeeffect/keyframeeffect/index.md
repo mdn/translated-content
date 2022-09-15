@@ -19,11 +19,13 @@ La propriété **`delay`** est un dictionnaire pour {{domxref("AnimationEffectTi
 
 ## Syntaxe
 
-    var timingProperties = {
-      delay: delayInMilliseconds
-    };
+```js
+var timingProperties = {
+  delay: delayInMilliseconds
+};
 
-    timingProperties.delay = delayInMilliseconds;
+timingProperties.delay = delayInMilliseconds;
+```
 
 ### Valeur
 
@@ -57,13 +59,11 @@ tears.forEach(function(el) {
 
 ## Spécifications
 
-| Spécification                                                            | État                                 | Commentaires         |
-| ------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Web Animations', '#start-delay', 'delay')}} | {{Spec2('Web Animations')}} | Brouillon d'édiiton. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.EffectTiming.delay")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -23,7 +23,9 @@ La fonction **`WebAssembly.instantiate()`** permet de compiler et d'instancier d
 
 ### Première forme : utiliser le _bytecode_ WebAssembly
 
-    Promise<ResultObject> WebAssembly.instantiate(bufferSource, importObject);
+```js
+Promise<ResultObject> WebAssembly.instantiate(bufferSource, importObject);
+```
 
 #### Paramètres
 
@@ -46,7 +48,9 @@ Une promesse qui est résoluee en un objet qui contient deux champs :
 
 ### Seconde forme : utiliser une instance d'un module
 
-    Promise<WebAssembly.Instance> WebAssembly.instantiate(module, importObject);
+```js
+Promise<WebAssembly.Instance> WebAssembly.instantiate(module, importObject);
+```
 
 #### Paramètres
 

@@ -3,12 +3,13 @@ title: suffix
 slug: Web/CSS/@counter-style/suffix
 tags:
   - '@counter-style'
-  - アットルール記述子
+  - At-rule descriptor
   - CSS
-  - CSS カウンタースタイル
-  - CSS 記述子
-  - リファレンス
+  - CSS Counter Styles
+  - CSS Descriptor
+  - Reference
 browser-compat: css.at-rules.counter-style.suffix
+translation_of: Web/CSS/@counter-style/suffix
 ---
 {{CSSRef}}
 
@@ -34,7 +35,14 @@ suffix: url(bullet.png);
 
 ## 形式文法
 
-{{csssyntax}}
+```
+<symbol>
+
+<symbol> =
+  <string>       |
+  <image>        |
+  <custom-ident>
+```
 
 ## 例
 
@@ -80,4 +88,4 @@ suffix: url(bullet.png);
 ## 関連情報
 
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols()")}}, 無名のカウンタースタイルを生成する関数記法
+- {{cssxref("symbols", "symbols()")}}, 無名のカウンタースタイルを生成する関数記法

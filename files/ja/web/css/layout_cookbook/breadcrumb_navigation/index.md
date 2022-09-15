@@ -1,14 +1,6 @@
 ---
 title: パンくずナビゲーション
 slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
-tags:
-  - CSS
-  - ガイド
-  - レイアウト
-  - ナビゲーション
-  - 料理帳
-  - フレックスボックス
-translation_of: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 ---
 {{CSSRef}}
 
@@ -30,9 +22,11 @@ translation_of: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 
 > **Note:** 上記の例では 2 つのセレクターを使用して、最初の物を除いてそれぞれの `li` の前にコンテンツを挿入しています。これは次のようにすると、 1 つのセレクターのみで実現することもできます。
 >
->     .breadcrumb li:not(:first-child)::before {
->       content: "→";
->     }
+> ```css
+> .breadcrumb li:not(:first-child)::before {
+>   content: "→";
+> }
+> ```
 >
 > この解決策ではより複雑なセレクターを使用しますが、必要とするルールは少なくなります。好きな方の解決策を使用してください。
 

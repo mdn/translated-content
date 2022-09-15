@@ -9,7 +9,9 @@ La propriété en lecture seule **`HTMLFormElement.length`** retourne le nombre 
 
 ## Syntaxe
 
-    integer = form.length
+```js
+integer = form.length
+```
 
 ## Exemple
 

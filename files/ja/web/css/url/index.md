@@ -1,17 +1,7 @@
 ---
 title: url()
 slug: Web/CSS/url
-tags:
-  - CSS
-  - CSS 関数
-  - 関数
-  - レイアウト
-  - リファレンス
-  - ウェブ
-  - url()
-translation_of: Web/CSS/url()
 original_slug: Web/CSS/url()
-browser-compat: css.types.url
 ---
 {{CSSRef}}
 
@@ -99,15 +89,19 @@ url( <string> <url-modifier>* )
 
 <h3 id="A_url_used_in_the_background_property">background プロパティで使用される URL</h3>
 
-    .topbanner {
-      background: url("topbanner.png") #00D no-repeat fixed;
-    }
+```css
+.topbanner {
+  background: url("topbanner.png") #00D no-repeat fixed;
+}
+```
 
 <h3 id="A_url_loading_an_image_as_a_list_bullet">リストの先頭記号として使用される画像を読み込む URL</h3>
 
-    ul {
-      list-style: square url(http://www.example.com/redball.png);
-    }
+```css
+ul {
+  list-style: square url(http://www.example.com/redball.png);
+}
+```
 
 <h3 id="Usage_in_the_content_property">content プロパティの使用</h3>
 
@@ -162,18 +156,18 @@ li::after {
 
 URL がフィルターへのパスとして使用される場合、 URL は以下のどちらかでなければなりません。
 
-1.  SVG ファイルへのパスに、追加されるフィルターの ID が付いたもの。
-2.  SVG がページ内にある場合は、フィルターの ID。
+1. SVG ファイルへのパスに、追加されるフィルターの ID が付いたもの。
+2. SVG がページ内にある場合は、フィルターの ID。
 
-<!---->
-
+    ```css
     .blur {
-      filter: url(my-file.svg#svg-blur); /* フィルターとして使用する SVG ファイルの URL */
+      filter: url(my-file.svg#svg-blur); /* フィルターとして使用する SVG ファイルの URL */
     }
 
     .inline-blur {
       filter: url(#svg-blur); /* HTML ページに埋め込まれた SVG の ID */
     }
+    ```
 
 ## 仕様書
 

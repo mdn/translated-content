@@ -30,7 +30,7 @@ Errodesintaxe: Token inesperado ( [Chrome]
 
 <h3 id="Statements_vs_expressions">Statements vs expressions</h3>
 
-<p>Uma  <em>declaração de função</em> (ou <em>declaração de função</em>) requer um nome, isso não vai funcionar:</p>
+<p>Uma  <em>declaração de função</em> (ou <em>declaração de função</em>) requer um nome, isso não vai funcionar:</p>
 
 <pre class="brush: js example-bad">function () {
   return 'Olha mundo';
@@ -44,7 +44,7 @@ Errodesintaxe: Token inesperado ( [Chrome]
   return 'Ola mundo';
 };</pre>
 
-<p>Ou, sua função pode ser pretendida a ser uma <a href="https://en.wikipedia.org/wiki/Immediately-invoked_function_expression">IIFE</a> (Immediately Invoked Function Expression), qual é uma função que será em breve definida. Você vai precisar de um pouco mais de colchetes neste caso:</p>
+<p>Ou, sua função pode ser pretendida a ser uma <a href="https://en.wikipedia.org/wiki/Immediately-invoked_function_expression">IIFE</a> (Immediately Invoked Function Expression), qual é uma função que será em breve definida. Você vai precisar de um pouco mais de colchetes neste caso:</p>
 
 <pre class="brush: js example-good">(function () {
 
@@ -52,7 +52,7 @@ Errodesintaxe: Token inesperado ( [Chrome]
 
 <h3 id="Funçoes_etiquetadas">Funçoes etiquetadas</h3>
 
-<p>Se usar <a href="/en-US/docs/Web/JavaScript/Reference/Statements/label">labels</a>, precisará providenciar um nome de função depois da  palavra <code>function</code> . Isto não funciona:</p>
+<p>Se usar <a href="/en-US/docs/Web/JavaScript/Reference/Statements/label">labels</a>, precisará providenciar um nome de função depois da  palavra <code>function</code> . Isto não funciona:</p>
 
 <pre class="brush: js example-bad">function Saudacao() {
   alemao: function () {

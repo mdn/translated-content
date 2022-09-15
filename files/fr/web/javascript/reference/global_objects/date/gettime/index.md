@@ -20,7 +20,9 @@ Vous pouvez utiliser cette méthode pour vous affecter une date et un temps à u
 
 ## Syntaxe
 
-    dateObj.getTime()
+```js
+dateObj.getTime()
+```
 
 ### Valeur de retour
 

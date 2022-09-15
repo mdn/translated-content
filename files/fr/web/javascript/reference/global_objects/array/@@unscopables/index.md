@@ -16,7 +16,9 @@ La propriété symbol **`@@unscopable`** contient les noms des propriétés qui 
 
 ## Syntaxe
 
-    arr[Symbol.unscopables]
+```js
+arr[Symbol.unscopables]
+```
 
 ## Description
 

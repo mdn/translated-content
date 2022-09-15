@@ -14,7 +14,7 @@ translation_of: Web/API/HTMLSelectElement
 
 <p>The <code><strong>HTMLSelectElement</strong></code> interface represents a {{HTMLElement("select")}} HTML Element. These elements also share all of the properties and methods of other HTML elements via the {{domxref("HTMLElement")}} interface.</p>
 
-<h2 id="Properties"> Properties</h2>
+<h2 id="Properties"> Properties</h2>
 
 <p><em>This interface inherits the properties of {{domxref("HTMLElement")}}, and of {{domxref("Element")}} and {{domxref("Node")}}.</em></p>
 
@@ -45,7 +45,7 @@ translation_of: Web/API/HTMLSelectElement
   <tr>
    <td>{{domxref("HTMLSelectElement.labels", "labels")}} {{readonlyInline}}</td>
    <td>{{domxref("NodeList")}}</td>
-   <td>Returns a list of label elements associated with this select element.</td>
+   <td>Returns a list of label elements associated with this select element.</td>
   </tr>
   <tr>
    <td>{{domxref("HTMLSelectElement.length", "length")}}</td>
@@ -172,16 +172,16 @@ translation_of: Web/API/HTMLSelectElement
 
 <pre class="brush: js">/* assuming we have the following HTML
 &lt;select id='s'&gt;
-    &lt;option&gt;First&lt;/option&gt;
-    &lt;option selected&gt;Second&lt;/option&gt;
-    &lt;option&gt;Third&lt;/option&gt;
+    &lt;option&gt;First&lt;/option&gt;
+    &lt;option selected&gt;Second&lt;/option&gt;
+    &lt;option&gt;Third&lt;/option&gt;
 &lt;/select&gt;
 */
 
 var select = document.getElementById('s');
 
 // return the index of the selected option
-console.log(select.selectedIndex); // 1
+console.log(select.selectedIndex); // 1
 
 // return the value of the selected option
 console.log(select.options[select.selectedIndex].value) // Second

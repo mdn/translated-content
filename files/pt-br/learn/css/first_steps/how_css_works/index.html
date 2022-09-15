@@ -111,7 +111,7 @@ translation_of: Learn/CSS/First_steps/How_CSS_works
 
 <h2 id="O_que_acontece_se_um_navegador_não_entende_o_CSS_encontrado">O que acontece se um navegador não entende o CSS encontrado?</h2>
 
-<p><a href="/en-US/docs/Learn/CSS/First_steps/What_is_CSS#Browser_support">Em uma lição anterior</a>, eu mencionei que navegadores não implementam todo o novo CSS ao mesmo tempo. Em adição, muitas pessoas não usam a versão mais recente de um navegador. Dado que o CSS é processado o tempo todo, e que portanto está adiantado em relação ao que os browsers podem reconhecer, você pode imaginar o que acontece se um browser encontra um seletor ou uma declaração CSS que ele não reconhece.</p>
+<p><a href="/en-US/docs/Learn/CSS/First_steps/What_is_CSS#Browser_support">Em uma lição anterior</a>, eu mencionei que navegadores não implementam todo o novo CSS ao mesmo tempo. Em adição, muitas pessoas não usam a versão mais recente de um navegador. Dado que o CSS é processado o tempo todo, e que portanto está adiantado em relação ao que os browsers podem reconhecer, você pode imaginar o que acontece se um browser encontra um seletor ou uma declaração CSS que ele não reconhece.</p>
 
 <p>A resposta é que ele não faz nada e vai para o próximo conteúdo em CSS!</p>
 
@@ -133,9 +133,9 @@ translation_of: Learn/CSS/First_steps/How_CSS_works
 
 <p>{{EmbedLiveSample('Skipping_example', '100%', 200)}}</p>
 
-<p>Este comportamento é bastante útil. Ele significa qeu você pode usar o novo CSS como uma melhoria, sabendo que não ocorrerá um erro se ele não for completamente compreendido - o browser  ou vai entender esta característica ou não. Em conjunto com a maneira que  a cascata funciona, e o fato que browsers usarão o último CSS que eles encontrarem numa folha de estilos quando você possui duas regras com a mesma especificidade, Você pode oferecer alternativas para browsers  que não processa CSS mais novos.</p>
+<p>Este comportamento é bastante útil. Ele significa qeu você pode usar o novo CSS como uma melhoria, sabendo que não ocorrerá um erro se ele não for completamente compreendido - o browser  ou vai entender esta característica ou não. Em conjunto com a maneira que  a cascata funciona, e o fato que browsers usarão o último CSS que eles encontrarem numa folha de estilos quando você possui duas regras com a mesma especificidade, Você pode oferecer alternativas para browsers  que não processa CSS mais novos.</p>
 
-<p>Isto funciona particularmente bem quando você usa um valor que é relativamente recente e que não é processado em todo lugar. Por exemplo, alguns browsers antigos não processam <code>calc()</code> como um valor. Eu posso dar um recuo com uma largura em pixels para um box, e então seguir e dar uma largura com o valor de <code>100% - 50px</code> com <code>calc()</code>. Browsers antigos irão utilizar a versão em pixels, ignorando a linha que trata de <code>calc()</code>, já que eles não a compreendem. Browsers mais novos irão interpretar inicialmente a linha que utiliza pixels, para em seguida a sobrepor com a linha utilizando <code>calc()</code> conforme ela aparece na cascata.</p>
+<p>Isto funciona particularmente bem quando você usa um valor que é relativamente recente e que não é processado em todo lugar. Por exemplo, alguns browsers antigos não processam <code>calc()</code> como um valor. Eu posso dar um recuo com uma largura em pixels para um box, e então seguir e dar uma largura com o valor de <code>100% - 50px</code> com <code>calc()</code>. Browsers antigos irão utilizar a versão em pixels, ignorando a linha que trata de <code>calc()</code>, já que eles não a compreendem. Browsers mais novos irão interpretar inicialmente a linha que utiliza pixels, para em seguida a sobrepor com a linha utilizando <code>calc()</code> conforme ela aparece na cascata.</p>
 
 <pre class="brush: css notranslate">.box {
   width: 500px;

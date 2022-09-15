@@ -19,7 +19,9 @@ La méthode **`HTMLMediaElement.play()`** essaie de commencer la lecture du méd
 
 ## Syntaxe
 
-    var Promise = HTMLMediaElement.play();
+```js
+var Promise = HTMLMediaElement.play();
+```
 
 ### Paramètres
 
@@ -56,13 +58,8 @@ myVideo.play().then(() => {
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           | Commentaire                                |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------ |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#dom-media-play', 'play()')}}             | {{Spec2('HTML WHATWG')}} | Définition initiale; living specification. |
-| {{SpecName('HTML5 W3C','embedded-content-0.html#playing-the-media-resource','play()')}} | {{Spec2('HTML5 W3C')}}     | Définition initiale.                       |
-
-> **Note :** Les versions WHATWG et W3C de la spécification diffèrent (depuis le 20 Avril 2016) par le fait que cette méthode renvoie respectivement une {{jsxref("Promise")}} ou rien du tout.
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLMediaElement.play")}}
+{{Compat}}

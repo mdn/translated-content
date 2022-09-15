@@ -20,7 +20,9 @@ La _Pointer capture_ (_capture de pointeur_) permet de re-cibler des événement
 
 ## Syntaxe
 
-    .setPointerCapture(pointerId);
+```js
+.setPointerCapture(pointerId);
+```
 
 targetElement
 
@@ -56,14 +58,11 @@ function init() {
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | Statut                                   | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('Pointer Events 2','#widl-Element-setPointerCapture-void-long-pointerId', 'setPointerCapture')}} | {{Spec2('Pointer Events 2')}} | Version non stable.  |
-| {{SpecName('Pointer Events', '#widl-Element-setPointerCapture-void-long-pointerId', 'setPointerCapture')}}     | {{Spec2('Pointer Events')}}     | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.setPointerCapture")}}
+{{Compat}}
 
 ## Voir aussi
 

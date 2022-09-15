@@ -1,15 +1,6 @@
 ---
 title: DOMTokenList.remove()
 slug: Web/API/DOMTokenList/remove
-tags:
-  - API
-  - DOM
-  - DOMTokenList
-  - メソッド
-  - リファレンス
-  - remove
-browser-compat: api.DOMTokenList.remove
-translation_of: Web/API/DOMTokenList/remove
 ---
 {{APIRef("DOM")}}
 

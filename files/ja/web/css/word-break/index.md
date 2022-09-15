@@ -1,16 +1,6 @@
 ---
 title: word-break
 slug: Web/CSS/word-break
-tags:
-  - CSS
-  - CSS プロパティ
-  - Reference
-  - break-word
-  - recipe:css-property
-  - word-break
-  - 日本語処理
-browser-compat: css.properties.word-break
-translation_of: Web/CSS/word-break
 ---
 {{CSSRef}}
 
@@ -31,6 +21,7 @@ word-break: break-word; /* 非推奨 */
 word-break: inherit;
 word-break: initial;
 word-break: revert;
+word-break: revert-layer;
 word-break: unset;
 ```
 
@@ -48,6 +39,8 @@ word-break: unset;
   - : {{cssxref("overflow-wrap")}} プロパティの値とは関係なく、 `word-break: normal` や `overflow-wrap: anywhere` と同じ効果になります。
 
 > **Note:** `word-break: break-word` および `overflow-wrap: break-word` ({{cssxref("overflow-wrap")}} を参照) とは対照的に、 `word-break: break-all` はテキストがコンテナーからちょうどあふれたところで (単語全体を次の行に送れば途中で改行を防ぐことができる場合であっても) 位置で改行を生成します。
+
+> **Note:** `word-break: break-word` は非推奨ですが、指定した場合は {{cssxref("overflow-wrap")}} プロパティの値とは関係なく、 `word-break: normal` や `overflow-wrap: anywhere` と同じ効果になります。
 
 ## 公式定義
 
@@ -127,4 +120,5 @@ word-break: unset;
 
 - {{cssxref("overflow-wrap")}}
 - {{cssxref("hyphens")}}
+- {{cssxref("line-break")}}
 - [テキストの分割と折り返しのガイド](/ja/docs/Web/CSS/CSS_Text/Wrapping_Text)

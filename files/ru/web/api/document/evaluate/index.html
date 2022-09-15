@@ -5,7 +5,7 @@ translation_of: Web/API/Document/evaluate
 ---
 <div>{{ ApiRef("DOM") }}</div>
 
-<p>Возвращает экземпляр объекта типа <code><a href="/en-US/docs/XPathResult" title="XPathResult">XPathResult</a></code> исходя из данного <a href="/en-US/docs/XPath" title="XPath">XPath</a> и других входных параметров.</p>
+<p>Возвращает экземпляр объекта типа <code><a href="/en-US/docs/XPathResult" title="XPathResult">XPathResult</a></code> исходя из данного <a href="/en-US/docs/XPath" title="XPath">XPath</a> и других входных параметров.</p>
 
 <h2 id="Syntax">Синтаксис</h2>
 
@@ -18,11 +18,11 @@ translation_of: Web/API/Document/evaluate
 );</pre>
 
 <ul>
- <li><code>xpathExpression</code> - строка, описывающая XPath, который должен быть исполнен.</li>
- <li><code>contextNode</code> указывает<em>контекстный узел</em> для запроса (см. [<a class="external" href="http://www.w3.org/TR/xpath" rel="freelink">http://www.w3.org/TR/xpath</a> спецификация XPath). В качестве данного аргумента может быть задан объект <em>document</em>.</li>
- <li><code>namespaceResolver</code> - функция, которой будут переданы все префиксы пространств имён. Она должна возвращать строку, описывающую URI, ассоциированный с данным префиксом. It will be used to resolve prefixes within the XPath itself, so that they can be matched with the document. <code>null</code> is common for HTML documents or when no namespace prefixes are used.</li>
- <li><code>resultType</code> - число, описывающее тип возвращаемого <code>XPathResult</code> (см. ниже). Используйте <a href="#Result_types">именные свойства-константы</a> конструктора класса <code>XPathResult</code> (эквивалентно численным значениям от 0 до 9), как например <code>XPathResult.ANY_TYPE</code>.</li>
- <li><code>result</code> - экземпляр объекта типа <code>XPathResult</code>, используемого для хранения результатов поиска по данному <code>xpathExpression</code>. Может принимать значение <code>null</code></li>
+ <li><code>xpathExpression</code> - строка, описывающая XPath, который должен быть исполнен.</li>
+ <li><code>contextNode</code> указывает<em>контекстный узел</em> для запроса (см. [<a class="external" href="http://www.w3.org/TR/xpath" rel="freelink">http://www.w3.org/TR/xpath</a> спецификация XPath). В качестве данного аргумента может быть задан объект <em>document</em>.</li>
+ <li><code>namespaceResolver</code> - функция, которой будут переданы все префиксы пространств имён. Она должна возвращать строку, описывающую URI, ассоциированный с данным префиксом. It will be used to resolve prefixes within the XPath itself, so that they can be matched with the document. <code>null</code> is common for HTML documents or when no namespace prefixes are used.</li>
+ <li><code>resultType</code> - число, описывающее тип возвращаемого <code>XPathResult</code> (см. ниже). Используйте <a href="#Result_types">именные свойства-константы</a> конструктора класса <code>XPathResult</code> (эквивалентно численным значениям от 0 до 9), как например <code>XPathResult.ANY_TYPE</code>.</li>
+ <li><code>result</code> - экземпляр объекта типа <code>XPathResult</code>, используемого для хранения результатов поиска по данному <code>xpathExpression</code>. Может принимать значение <code>null</code></li>
 </ul>
 
 <h2 id="Example">Пример</h2>
@@ -48,12 +48,12 @@ alert(alertText); // Показывает alert со всеми найденны
 
 <p>Notice in the above <code>document.body</code> has been used as the context instead of <code>document</code> so the XPath starts from the body element. (In this example, the <code>"."</code> is important to indicate that the querying should start from the context node, document.body. If the "." was left out (leaving <code>//h2</code>) the query would start from the root node (<code>html</code>) which would be more wasteful.)</p>
 
-<p>Более детально данный материал описан в статье <a href="/en-US/docs/Introduction_to_using_XPath_in_JavaScript" title="Introduction to using XPath in JavaScript">Introduction to using XPath in JavaScript</a>.</p>
+<p>Более детально данный материал описан в статье <a href="/en-US/docs/Introduction_to_using_XPath_in_JavaScript" title="Introduction to using XPath in JavaScript">Introduction to using XPath in JavaScript</a>.</p>
 
 <h2 id="Notes">Примечания</h2>
 
 <ul>
- <li>Выражения XPath могут быть интерпретированы в HTML- и XML-документах.</li>
+ <li>Выражения XPath могут быть интерпретированы в HTML- и XML-документах.</li>
  <li>While using document.evaluate() works in FF2, in FF3 one must use someXMLDoc.evaluate() if evaluating against something other than the current document.</li>
 </ul>
 

@@ -5,9 +5,9 @@ translation_of: Web/API/CSSRule
 ---
 <div>{{APIRef("CSSOM")}}</div>
 
-<p>Интерфейс <strong>CSSRule </strong>представляет собой одно правило CSS. Есть несколько типов правил, перечисленных в разделе {{anch("Type constants")}} ниже.</p>
+<p>Интерфейс <strong>CSSRule </strong>представляет собой одно правило CSS. Есть несколько типов правил, перечисленных в разделе <a href="#type_constants">Type constants</a> ниже.</p>
 
-<p>Интерфейс CSSRule определяет общие свойства для всех правил, в то время как свойства характерные только для определённых типов правил указаны в более специализированных интерфейсах для соответствующих типов этих правил.</p>
+<p>Интерфейс CSSRule определяет общие свойства для всех правил, в то время как свойства характерные только для определённых типов правил указаны в более специализированных интерфейсах для соответствующих типов этих правил.</p>
 
 <p>Ссылки на CSSRule вы можете получить на странице {{domxref ("CSSStyleSheet")}} список cssRules.</p>
 
@@ -15,13 +15,13 @@ translation_of: Web/API/CSSRule
 
 <dl>
  <dt id="cssText">{{domxref("CSSRule.cssText")}}</dt>
- <dd>Represents the textual representation of the rule, e.g. "<code>h1,h2 { font-size: 16pt }</code>" or "<code>@import 'url'</code>". To access or modify parts of the rule (e.g. the value of "font-size" in the example) use the properties on the {{anch("Type constants", "specialized interface for the rule's type")}}.</dd>
+ <dd>Represents the textual representation of the rule, e.g. "<code>h1,h2 { font-size: 16pt }</code>" or "<code>@import 'url'</code>". To access or modify parts of the rule (e.g. the value of "font-size" in the example) use the properties on the <a href="#type_constants">specialized interface for the rule's type</a>.</dd>
  <dt id="parentRule">{{domxref("CSSRule.parentRule")}} {{readonlyinline}}</dt>
  <dd>Returns the containing rule, otherwise <code>null</code>. E.g. if this rule is a style rule inside an {{cssxref("@media")}} block, the parent rule would be that {{domxref("CSSMediaRule")}}.</dd>
  <dt id="parentStyleSheet">{{domxref("CSSRule.parentStyleSheet")}} {{readonlyinline}}</dt>
  <dd>Returns the {{domxref("CSSStyleSheet")}} object for the style sheet that contains this rule</dd>
  <dt id="type">{{domxref("CSSRule.type")}} {{readonlyinline}}</dt>
- <dd>One of the {{anch("Type constants")}} indicating the type of CSS rule.</dd>
+ <dd>One of the <a href="#type_constants">Type constants</a> indicating the type of CSS rule.</dd>
 </dl>
 
 <h2 id="CSSRule">Константы</h2>
@@ -55,85 +55,85 @@ translation_of: Web/API/CSSRule
    <td><code>CSSRule.MEDIA_RULE</code></td>
    <td style="text-align: center;"><code>4</code></td>
    <td>{{domxref("CSSMediaRule")}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td><code>CSSRule.FONT_FACE_RULE</code></td>
    <td style="text-align: center;"><code>5</code></td>
    <td>{{domxref("CSSFontFaceRule")}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td><code>CSSRule.PAGE_RULE</code></td>
    <td style="text-align: center;"><code>6</code></td>
    <td>{{domxref("CSSPageRule")}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td><code>CSSRule.KEYFRAMES_RULE</code></td>
    <td style="text-align: center;"><code>7</code></td>
    <td>{{domxref("CSSKeyframesRule")}} {{experimental_inline}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td><code>CSSRule.KEYFRAME_RULE</code></td>
    <td style="text-align: center;"><code>8</code></td>
    <td>{{domxref("CSSKeyframeRule")}} {{experimental_inline}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td><em>Reserved for future use</em></td>
    <td style="text-align: center;"><code>9</code></td>
-   <td> </td>
+   <td> </td>
    <td>Should be used to define color profiles in the future</td>
   </tr>
   <tr>
    <td><code>CSSRule.NAMESPACE_RULE</code></td>
    <td style="text-align: center;"><code>10</code></td>
    <td>{{domxref("CSSNamespaceRule")}} {{experimental_inline}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td><code>CSSRule.COUNTER_STYLE_RULE</code></td>
    <td style="text-align: center;"><code>11</code></td>
    <td>{{domxref("CSSCounterStyleRule")}} {{experimental_inline}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td><code>CSSRule.SUPPORTS_RULE</code></td>
    <td style="text-align: center;"><code>12</code></td>
    <td>{{domxref("CSSSupportsRule")}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td><code>CSSRule.DOCUMENT_RULE</code></td>
    <td style="text-align: center;"><code>13</code></td>
    <td>{{domxref("CSSDocumentRule")}} {{experimental_inline}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td><code>CSSRule.FONT_FEATURE_VALUES_RULE</code></td>
    <td style="text-align: center;"><code>14</code></td>
    <td>{{domxref("CSSFontFeatureValuesRule")}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td><code>CSSRule.VIEWPORT_RULE</code></td>
    <td style="text-align: center;"><code>15</code></td>
    <td>{{domxref("CSSViewportRule")}} {{experimental_inline}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td><code>CSSRule.REGION_STYLE_RULE</code></td>
    <td style="text-align: center;"><code>16</code></td>
    <td>{{domxref("CSSRegionStyleRule")}} {{experimental_inline}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td><code>CSSRule.UNKNOWN_RULE</code></td>
    <td style="text-align: center;"><code>0</code></td>
    <td>{{domxref("CSSUnknownRule")}} {{obsolete_inline}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td><code>CSSRule.CHARSET_RULE</code></td>

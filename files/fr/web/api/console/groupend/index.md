@@ -18,7 +18,9 @@ Quitte le groupe en ligne actuel dans la [console Web](/fr/docs/Outils/Console_W
 
 ## Syntaxe
 
-    console.groupEnd();
+```js
+console.groupEnd();
+```
 
 ## Paramètres
 
@@ -26,13 +28,11 @@ Aucun.
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                           | Commentaire         |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName("Console API", "#groupend", "console.groupEnd()")}} | {{Spec2("Console API")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.groupEnd")}}
+{{Compat}}
 
 ## Voir aussi
 

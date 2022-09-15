@@ -17,7 +17,9 @@ La méthode **`disconnect()`**, rattachée à l'interface [`IntersectionObserver
 
 ## Syntaxe
 
-    intersectionObserver.disconnect();
+```js
+intersectionObserver.disconnect();
+```
 
 ### Paramètres
 
@@ -29,13 +31,11 @@ Aucun.
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                                       | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('IntersectionObserver','#dom-intersectionobserver-disconnect','IntersectionObserver.disconnect()')}} | {{Spec2('IntersectionObserver')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IntersectionObserver.disconnect")}}
+{{Compat}}
 
 ## Voir aussi
 

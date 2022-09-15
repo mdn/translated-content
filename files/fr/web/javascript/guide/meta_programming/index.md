@@ -226,6 +226,7 @@ Le tableau suivant résume les différentes trappes disponibles pour les objets 
         </p>
         <p>
           Accès à une propriété héritée :
+          <!-- markdownlint-disable MD011 -->
           <code>Object.create(proxy)[toto]</code>
         </p>
         <p>{{jsxref("Reflect.get()")}}</p>

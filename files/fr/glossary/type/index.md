@@ -13,9 +13,9 @@ Le **type** (ou _type de donnée_) est une caractéristique d'une {{glossary("Va
 
 Le type de données d'une valeur affecte également les opérations valides sur cette valeur. Par exemple, un entier peut être multiplié par un entier, mais pas par une chaîne de caractères.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Type (informatique)", "Type de données")}} sur Wikipédia
+- [Type](https://fr.wikipedia.org/wiki/Type_(informatique)) sur Wikipédia
 - [Types de données en JavaScript](/fr/docs/Web/JavaScript/Structures_de_données)

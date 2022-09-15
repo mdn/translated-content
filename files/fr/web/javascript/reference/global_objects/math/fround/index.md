@@ -12,13 +12,15 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Math/fround
 ---
 {{JSRef}}
 
-La fonction **`Math.fround()`** renvoie le nombre flottant à [précision simple](https://en.wikipedia.org/wiki/Single_precision "link to the wikipedia page on single precision") sur 32 bits qui est le plus proche du nombre fourni.
+La fonction **`Math.fround()`** renvoie le nombre flottant à [précision simple](https://en.wikipedia.org/wiki/Single_precision) sur 32 bits qui est le plus proche du nombre fourni.
 
 {{EmbedInteractiveExample("pages/js/math-fround.html")}}
 
 ## Syntaxe
 
-    Math.fround(x)
+```js
+Math.fround(x)
+```
 
 ### Paramètres
 

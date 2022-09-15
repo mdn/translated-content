@@ -17,7 +17,9 @@ La propriété **`indexNames`**, rattachée à l'interface {{domxref("IDBObjectS
 
 ## Syntaxe
 
-    var myindexNames = objectStore.indexNames;
+```js
+var myindexNames = objectStore.indexNames;
+```
 
 ### Valeur
 
@@ -82,13 +84,11 @@ function addData() {
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-indexNames', 'indexNames')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.indexNames")}}
+{{Compat}}
 
 ## Voir aussi
 

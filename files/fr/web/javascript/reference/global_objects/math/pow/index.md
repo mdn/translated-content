@@ -17,7 +17,9 @@ La fonction **`Math.pow()`** renvoie un nombre à une certaine puissance, c'est-
 
 ## Syntaxe
 
-    Math.pow(base, exposant);
+```js
+Math.pow(base, exposant);
+```
 
 ### Paramètres
 

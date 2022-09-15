@@ -19,8 +19,10 @@ Les navigateurs récents fournissent la propriété {{domxref("URL.searchParams"
 
 ## Syntaxe
 
-    chaineDeCaractere = objet.search;
-    object.search = chaineDeCaractere;
+```js
+chaineDeCaractere = objet.search;
+object.search = chaineDeCaractere;
+```
 
 ### Valeur
 
@@ -35,13 +37,11 @@ var queryString = url.search; // Retourne:"?q=123"
 
 ## Spécifications
 
-| Spécification                                                        | État                 | Commentaire          |
-| -------------------------------------------------------------------- | -------------------- | -------------------- |
-| {{SpecName('URL', '#dom-url-search', 'URL.search')}} | {{Spec2('URL')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.URL.search")}}
+{{Compat}}
 
 ## Voir aussi
 

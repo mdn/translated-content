@@ -19,7 +19,9 @@ La méthode **`valueOf()`** renvoie la valeur primitive encapsulée dans un obje
 
 ## Syntaxe
 
-    bigIntObj.valueOf()
+```js
+bigIntObj.valueOf()
+```
 
 ### Valeur de retour
 

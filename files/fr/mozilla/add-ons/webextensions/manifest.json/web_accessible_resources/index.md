@@ -48,11 +48,13 @@ Si une extension veut utiliser {{WebExtAPIRef("webRequest")}}} pour rediriger un
 
 Par exemple, supposons que votre extension inclut un fichier image sur images images/my-image.png, comme ceci :
 
-    my-extension-files/
-        manifest.json
-        my-background-script.js
-        images/
-            my-image.png
+```
+my-extension-files/
+    manifest.json
+    my-background-script.js
+    images/
+        my-image.png
+```
 
 Pour permettre à une page Web d'utiliser un élément [`<img>`](/fr/docs/Web/HTML/Element/img) dont l'attribut `src` pointe sur cette image, vous pouvez spécifier "web_accessible_resources" comme suit :
 
@@ -62,7 +64,9 @@ Pour permettre à une page Web d'utiliser un élément [`<img>`](/fr/docs/Web/HT
 
 Le fichier sera alors disponible en utilisant une URL comme :
 
-    moz-extension://<extension-UUID>/images/my-image.png"
+```
+moz-extension://<extension-UUID>/images/my-image.png"
+```
 
 `<extension-UUID>` n'est **pas** l'identifiant de votre extension. Il est généré de manière aléatoire pour chaque instance de navigateur. Ceci empêche les sites Web de prendre les empreintes digitales d'un navigateur en examinant les extensions qu'il a installées.
 

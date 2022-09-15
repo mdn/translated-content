@@ -1,16 +1,6 @@
 ---
 title: サーバー送信イベントの使用
 slug: Web/API/Server-sent_events/Using_server-sent_events
-tags:
-  - 上級者
-  - 通信
-  - DOM
-  - ガイド
-  - SSE
-  - Server Sent Events
-  - サーバー送信イベント
-  - messaging
-translation_of: Web/API/Server-sent_events/Using_server-sent_events
 ---
 {{DefaultAPISidebar("Server Sent Events")}}
 
@@ -58,7 +48,7 @@ evtSource.addEventListener("ping", function(event) {
 
 前のコードと似ていますが、`event` フィールドに "ping" が設定されたメッセージがサーバーから送られたときに、自動的に呼び出されることが異なります。こちらは `data` フィールドの JSON を解釈して、情報を出力します。
 
-> **Warning:** **HTTP/2 上で使用されていない**場合、 SSE は開くことができる接続の最大数に制限を受けます。この制限は*ブラウザー単位*で設定されており、非常に小さい数 (6) に設定されているため、複数のタブを開くと特に痛みを伴う場合があります。この問題は、 [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=275955) と [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=906896) で「修正予定なし」と示されています。この制限はブラウザー + ドメインごとに設定されており、`www.example1.com` への SSE 接続をすべてのタブで 6 つ、 `www.example2.com` への SSE 接続をさらに 6 つ開くことができることを意味します（[Stackoverflow](https://stackoverflow.com/a/5326159/1905229) によれば）。 HTTP/2 を使用する場合、同時に使用することができる *HTTP ストリーム*の最大数は、サーバーとクライアントの間で交渉が行われます（既定値は 100 です）。
+> **Warning:** **HTTP/2 上で使用されていない**場合、 SSE は開くことができる接続の最大数に制限を受けます。この制限は*ブラウザー単位*で設定されており、非常に小さい数 (6) に設定されているため、複数のタブを開くと特に痛みを伴う場合があります。この問題は、 [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=275955) と [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=906896) で「修正予定なし」と示されています。この制限はブラウザー + ドメインごとに設定されており、`www.example1.com` への SSE 接続をすべてのタブで 6 つ、 `www.example2.com` への SSE 接続をさらに 6 つ開くことができることを意味します（[Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159) によれば）。 HTTP/2 を使用する場合、同時に使用することができる *HTTP ストリーム*の最大数は、サーバーとクライアントの間で交渉が行われます（既定値は 100 です）。
 
 ## サーバからのイベントの送信
 
@@ -138,7 +128,7 @@ evtSource.close();
 - `event`
   - : 記述されるイベントの種別を識別する文字列です。指定された場合、イベントはブラウザー内で、指定されたイベント名のイベントリスナーへ送られます。ウェブサイトのソースコードで名前付きイベントを待ち受けするには `addEventListener()` を使用してください。メッセージにイベント名が指定されなかった場合は、 `onmessage` ハンドラーが呼び出されます。
 - `data`
-  - : メッセージのデータフィールドです。 `EventSource` が `data:` で始まる、複数の連続した行を受け取ったときは、[それらを連結して](http://www.w3.org/TR/eventsource/#dispatchMessage)各項目の間に改行文字を挿入します。末尾の改行は取り除かれます。
+  - : メッセージのデータフィールドです。 `EventSource` が `data:` で始まる、複数の連続した行を受け取ったときは、[それらを連結して](https://html.spec.whatwg.org/multipage/#dispatchMessage)各項目の間に改行文字を挿入します。末尾の改行は取り除かれます。
 - `id`
   - : [`EventSource`](/ja/docs/Server-sent_events/EventSource) オブジェクトの最後のイベント ID の値に設定するイベント ID です。
 - `retry`
@@ -200,6 +190,4 @@ data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
 
 ## ブラウザーの互換性
 
-### `EventSource`
-
-{{Compat("api.EventSource")}}
+{{Compat}}

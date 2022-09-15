@@ -18,7 +18,9 @@ La méthode `createPeriodicWave()` de l'interface {{ domxref("BaseAudioContext")
 
 ## Syntaxe
 
-    var onde = AudioContext.createPeriodicWave(réel, imag[, constraints]);
+```js
+var onde = AudioContext.createPeriodicWave(réel, imag[, constraints]);
+```
 
 ### Retour
 
@@ -73,14 +75,12 @@ Les coefficients de la transformation de Fourier doivent être données dans un 
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#dom-baseaudiocontext-createperiodicwave', 'createPeriodicWave')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.BaseAudioContext.createPeriodicWave")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Utiliser l'API Web Audio](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Utiliser l'API Web Audio](/fr/docs/Web_Audio_API/Using_Web_Audio_API)

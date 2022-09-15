@@ -1,5 +1,5 @@
 ---
-title: 'Tableaux HTML&nbsp;:  dispositions avancées et accessibilité'
+title: 'Tableaux HTML : dispositions avancées et accessibilité'
 slug: Learn/HTML/Tables/Advanced
 tags:
   - Accessibilité
@@ -68,9 +68,9 @@ Le titre est placé directement sous la balise `<table>`.
 
 Essayons en revisitant un exemple rencontré dans l'article précédent.
 
-1.  Ouvrez le planning du professeur de langue de la fin de [Tableaux HTML&nbsp;: notions de base](/fr/docs/Learn/HTML/Tables/Basics#Active_learning_colgroup_and_col) ou faites une copie locale du fichier [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html).
-2.  Ajoutez un titre approprié pour le tableau.
-3.  Enregistrez votre code et ouvrez-le dans un navigateur pour voir à quoi il ressemble.
+1. Ouvrez le planning du professeur de langue de la fin de [Tableaux HTML&nbsp;: notions de base](/fr/docs/Learn/HTML/Tables/Basics#Active_learning_colgroup_and_col) ou faites une copie locale du fichier [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html).
+2. Ajoutez un titre approprié pour le tableau.
+3. Enregistrez votre code et ouvrez-le dans un navigateur pour voir à quoi il ressemble.
 
 > **Note :** Vous pouvez trouver notre version sur GitHub — voir [timetable-caption.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html) ([voir aussi directement](http://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)).
 
@@ -92,12 +92,12 @@ Pour les utiliser :
 
 Mettons en œuvre ces nouveaux éléments.
 
-1.  D'abord, faites une copie locale des fichiers [spending-record.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record.html) et [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) dans un nouveau dossier.
-2.  Essayez de les ouvrir dans un navigateur — vous verrez que cela paraît correct, mais gagnerait à être amélioré. La ligne "SUM" qui contient les totaux des montants dépensés semble être au mauvais endroit et il manque certains détails du code.
-3.  Mettez la ligne d'en-têtes en évidence avec l'élément `<thead>` , la ligne des totaux ("SUM") dans un `<tfoot>`, et le reste du contenu dans un `<tbody>`.
-4.  Enregistrez et actualisez, et vous verrez que l'ajout de l'élément `<tfoot>` a renvoyé la ligne "SUM" en bas du tableau.
-5.  Ensuite, ajoutez un attribut {{htmlattrxref("colspan","td")}}  pour générer une cellule Total ("SUM") couvrant les quatre premières colonnes, ainsi le nombre réel apparaît au pied de la colonne «&nbsp;Coût&nbsp;».
-6.  Ajoutons un style supplémentaire au tableau, pour vous donner une idée de l'utilité de ces éléments pour l'application des CSS. Dans le \<head> du document HTML, vous pouvez voir un élément {{htmlelement("style")}} vide, ajoutez les lignes suivantes de code CSS :
+1. D'abord, faites une copie locale des fichiers [spending-record.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record.html) et [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) dans un nouveau dossier.
+2. Essayez de les ouvrir dans un navigateur — vous verrez que cela paraît correct, mais gagnerait à être amélioré. La ligne "SUM" qui contient les totaux des montants dépensés semble être au mauvais endroit et il manque certains détails du code.
+3. Mettez la ligne d'en-têtes en évidence avec l'élément `<thead>` , la ligne des totaux ("SUM") dans un `<tfoot>`, et le reste du contenu dans un `<tbody>`.
+4. Enregistrez et actualisez, et vous verrez que l'ajout de l'élément `<tfoot>` a renvoyé la ligne "SUM" en bas du tableau.
+5. Ensuite, ajoutez un attribut {{htmlattrxref("colspan","td")}}  pour générer une cellule Total ("SUM") couvrant les quatre premières colonnes, ainsi le nombre réel apparaît au pied de la colonne «&nbsp;Coût&nbsp;».
+6. Ajoutons un style supplémentaire au tableau, pour vous donner une idée de l'utilité de ces éléments pour l'application des CSS. Dans le \<head> du document HTML, vous pouvez voir un élément {{htmlelement("style")}} vide, ajoutez les lignes suivantes de code CSS :
 
     ```css
     tbody {
@@ -110,7 +110,7 @@ Mettons en œuvre ces nouveaux éléments.
     }
     ```
 
-7.  Enregistrez, actualisez et regardez le résultat. Si `<tbody>` et `<tfoot>` n'étaient pas en place, vous devriez écrire plus de commandes plus complexes (sélection/règles) pour l'application des mêmes styles.
+7. Enregistrez, actualisez et regardez le résultat. Si `<tbody>` et `<tfoot>` n'étaient pas en place, vous devriez écrire plus de commandes plus complexes (sélection/règles) pour l'application des mêmes styles.
 
 > **Note :** Nous ne nous attendons pas à ce que vous compreniez les CSS maintenant. Vous en apprendrez plus avec les modules à propos des CSS ([Introduction aux CSS](/fr/docs/Learn/CSS/Introduction_to_CSS) est un bon moyen de commencer ; il y a aussi un article spécifique sur [l'esthétique des tables](/fr/docs/Learn/CSS/Styling_boxes/Styling_tables)).
 
@@ -350,7 +350,7 @@ Rappelons brièvement comment nous utilisons les tableaux de données. Un tablea
 
 Mais que faire si vous ne pouvez pas créer ces associations visuelles ? Comment pouvez-vous lire un tableau comme celui ci-dessus ? Les personnes malvoyantes utilisent souvent un lecteur d'écran qui leur lit les informations des pages web. Ce n'est pas un problème quand vous lisez du texte brut, mais l'interprêtation d'un tableau peut constituer un défi pour une personne aveugle. Néanmoins, avec le balisage approprié, nous pouvons remplacer des associations visuelles par des associations programmées.
 
-> **Note :** Il y a environ 253 millions de personnes vivant avec des déficiences visuelles selon les  [données de l'OMS en 2017](http://www.who.int/mediacentre/factsheets/fs282/fr/ "Vision Impairment Data").
+> **Note :** Il y a environ 253 millions de personnes vivant avec des déficiences visuelles selon les  [données de l'OMS en 2017](http://www.who.int/mediacentre/factsheets/fs282/fr/).
 
 Cette partie de l'article indique des techniques avancées pour rendre les tableaux les plus accessibles possible.
 
@@ -376,7 +376,7 @@ Aux balises `<th>`, sujet de l'article précédent, ajoutons l'attribut {{htmlat
 </thead>
 ```
 
-Et chaque ligne pourrait également avoir une définition de son en-tête comme ceci (à condition d'avoir ajouté des en-têtes de lignes comme des en-têtes de colonnes):
+Et chaque ligne pourrait également avoir une définition de son en-tête comme ceci (à condition d'avoir ajouté des en-têtes de lignes comme des en-têtes de colonnes) :
 
 ```html
 <tr>
@@ -396,8 +396,8 @@ Les lecteurs d'écran reconnaîtront un balisage structuré comme celui-ci et pe
 
 Une alternative à l'usage de l'attribut `scope` est l'utilisation des attributs {{htmlattrxref("id")}} et {{htmlattrxref("headers", "td")}} pour créer une association entre en-têtes et cellules. Ils sont utilisés de la manière suivante :
 
-1.  Vous ajoutez un identifiant unique `id` à chaque élément `<th>`.
-2.  Vous ajoutez un attribut `headers` à chaque élément  `<td>` . Chaque attribut `headers` doit contenir une liste des `id` de tous les éléments \<th> qu'il contient, séparés par des espaces.
+1. Vous ajoutez un identifiant unique `id` à chaque élément `<th>`.
+2. Vous ajoutez un attribut `headers` à chaque élément  `<td>` . Chaque attribut `headers` doit contenir une liste des `id` de tous les éléments \<th> qu'il contient, séparés par des espaces.
 
 Votre tableau HTML possède donc la position explicite de chaque cellule dans le tableau, définie par les en-têtes de chaque colonne et chaque ligne qui en font partie, un peu comme dans une feuille de calcul. Pour un bon fonctionnement, le tableau a réellement besoin d'en-têtes de colonnes et de lignes.
 
@@ -431,9 +431,9 @@ En revenant à notre exemple de tableau des dépenses et des coûts, les deux ex
 
 ### Apprentissage actif&nbsp;: jouer avec `scope` et `headers`
 
-1.  Pour cet exercice final, nous aimerions que vous fassiez une copie locale de [items‑sold.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold.html) et [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css), dans un nouveau répertoire.
-2.  Maintenant essayez d'ajouter un attribut `scope` approprié pour améliorer ce tableau.
-3.  Enfin, essayez avec une autre copie du fichier initial, de faire un tableau plus accessible en utilisant les attributs `id` et `headers`.
+1. Pour cet exercice final, nous aimerions que vous fassiez une copie locale de [items‑sold.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold.html) et [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css), dans un nouveau répertoire.
+2. Maintenant essayez d'ajouter un attribut `scope` approprié pour améliorer ce tableau.
+3. Enfin, essayez avec une autre copie du fichier initial, de faire un tableau plus accessible en utilisant les attributs `id` et `headers`.
 
 > **Note :** Vous pouvez contrôler votre travail en le comparant à nos exemples finis  — voir [items-sold-scope.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html) ([voir aussi directement](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html))
 > et [items-sold-headers.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html) ([voir aussi directement](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).

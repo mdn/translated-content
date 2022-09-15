@@ -20,7 +20,9 @@ La méthode **`showNotification()`** de l'interface {{domxref("ServiceWorkerRegi
 
 ## Syntaxe
 
-    serviceWorkerRegistration.showNotification(title, [options])
+```js
+serviceWorkerRegistration.showNotification(title, [options])
+```
 
 ### Paramètres
 
@@ -83,10 +85,8 @@ Vous pouvez également récupérer les détails des {{domxref ("Notification", "
 
 ## Spécifications
 
-| Spécification                                                                                                                                | État                                     | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Web Notifications','#dom-serviceworkerregistration-shownotification','showNotification()')}} | {{Spec2('Web Notifications')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.ServiceWorkerRegistration.showNotification")}}
+{{Compat}}

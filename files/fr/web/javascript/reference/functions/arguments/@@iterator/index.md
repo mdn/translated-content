@@ -17,7 +17,9 @@ La valeur initiale de la propriété **`@@iterator`** est le même objet que la 
 
 ## Syntaxe
 
-    arguments[Symbol.iterator]()
+```js
+arguments[Symbol.iterator]()
+```
 
 ## Exemples
 

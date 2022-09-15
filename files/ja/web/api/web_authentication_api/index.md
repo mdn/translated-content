@@ -1,15 +1,6 @@
 ---
 title: ウェブ認証 API
 slug: Web/API/Web_Authentication_API
-tags:
-  - 2FA
-  - API
-  - 認証
-  - Landing
-  - Reference
-  - ウェブ認証 API
-  - WebAuthn
-translation_of: Web/API/Web_Authentication_API
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}
 

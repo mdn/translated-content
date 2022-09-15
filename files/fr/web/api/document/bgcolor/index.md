@@ -9,8 +9,10 @@ La propriété obsolète `bgColor` renvoie ou déinit la couleur de fond (backgr
 
 ## Syntaxe
 
-    color = document.bgColor
-    document.bgColor =color
+```js
+color = document.bgColor
+document.bgColor =color
+```
 
 ### Parametres
 
@@ -18,7 +20,9 @@ La propriété obsolète `bgColor` renvoie ou déinit la couleur de fond (backgr
 
 ## Exemple
 
-    document.bgColor = "darkblue";
+```js
+document.bgColor = "darkblue";
+```
 
 ## Notes
 

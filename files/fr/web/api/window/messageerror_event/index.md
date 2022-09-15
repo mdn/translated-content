@@ -56,15 +56,13 @@ window.onmessageerror = (event) => {
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                           |
-| ------------------------------------------------------------------------------------ | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'indices.html#event-messageerror')}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.messageerror_event")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - {{domxref("Window.postMessage()")}}
 - Événements liés: {{domxref("Window/message_event", "message")}}.

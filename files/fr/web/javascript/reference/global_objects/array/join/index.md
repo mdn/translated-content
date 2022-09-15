@@ -18,8 +18,10 @@ La méthode **`join()`** crée et renvoie une nouvelle chaîne de caractères en
 
 ## Syntaxe
 
-    arr.join()
-    arr.join(séparateur)
+```js
+arr.join()
+arr.join(séparateur)
+```
 
 ### Paramètres
 

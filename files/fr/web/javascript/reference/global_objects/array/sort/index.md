@@ -20,8 +20,10 @@ La complexité en espace mémoire et en temps utilisée pour le tri ne peut pas 
 
 ## Syntaxe
 
-    arr.sort()
-    arr.sort(fonctionComparaison)
+```js
+arr.sort()
+arr.sort(fonctionComparaison)
+```
 
 ### Paramètres
 
@@ -134,13 +136,17 @@ writeArray(a);
 
 En JavaScript 1.1, cette fonction affichait&nbsp;:
 
-    araignée, null, null, null, null, zèbre
-    araignée, null, null, null, null, zèbre
+```
+araignée, null, null, null, null, zèbre
+araignée, null, null, null, null, zèbre
+```
 
 En JavaScript 1.2, elle affichera&nbsp;:
 
-    araignée, undefined, undefined, undefined, undefined, zèbre
-    araignée, zèbre, undefined, undefined, undefined, undefined
+```
+araignée, undefined, undefined, undefined, undefined, zèbre
+araignée, zèbre, undefined, undefined, undefined, undefined
+```
 
 ## Exemples
 
@@ -176,20 +182,22 @@ console.log("Triés avec compareNombres&nbsp;: " + mixedNumericArray.sort(compar
 
 Cet exemple produit la sortie suivante. Comme on peut le voir, lorsqu'on utilise la fonction de comparaison, les nombres sont triés correctement qu'ils soient des nombres ou des chaînes numériques.
 
-    Chaînes&nbsp;: Bosse,Bleue,Béluga
-    Triées&nbsp;: Bleue,Bosse,Béluga
+```
+Chaînes&nbsp;: Bosse,Bleue,Béluga
+Triées&nbsp;: Bleue,Bosse,Béluga
 
-    Nombres&nbsp;: 40,1,5,200
-    Triés sans fonction de comparaison&nbsp;: 1,200,40,5
-    Triés avec compareNombres&nbsp;: 1,5,40,200
+Nombres&nbsp;: 40,1,5,200
+Triés sans fonction de comparaison&nbsp;: 1,200,40,5
+Triés avec compareNombres&nbsp;: 1,5,40,200
 
-    Chaînes numériques&nbsp;: 80,9,700
-    Triées sans fonction de comparaison&nbsp;: 700,80,9
-    Triées avec compareNombres&nbsp;: 9,80,700
+Chaînes numériques&nbsp;: 80,9,700
+Triées sans fonction de comparaison&nbsp;: 700,80,9
+Triées avec compareNombres&nbsp;: 9,80,700
 
-    Nombres et chaînes numériques&nbsp;: 80,9,700,40,1,5,200
-    Triés sans fonction de comparaison&nbsp;: 1,200,40,5,700,80,9
-    Triés avec compareNombres&nbsp;: 1,5,9,40,80,200,700
+Nombres et chaînes numériques&nbsp;: 80,9,700,40,1,5,200
+Triés sans fonction de comparaison&nbsp;: 1,200,40,5,700,80,9
+Triés avec compareNombres&nbsp;: 1,5,9,40,80,200,700
+```
 
 ### Trier des caractères non-ASCII
 

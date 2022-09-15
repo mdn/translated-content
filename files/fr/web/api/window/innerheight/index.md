@@ -18,7 +18,9 @@ Récupère la hauteur (en pixels) de la partie visible de la fenêtre de navigat
 
 ## Syntaxe
 
-    var hauteur = window.innerHeight;
+```js
+var hauteur = window.innerHeight;
+```
 
 ### Valeur
 
@@ -57,15 +59,13 @@ L'illustration suivante montre la différence entre `outerHeight` et `innerHeigh
 
 ![Illustration de la différence entre innerHeight et outerHeight](firefoxinnervsouterheight2.png)
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('CSSOM View', '#dom-window-innerheight', 'window.innerHeight')}} | {{Spec2('CSSOM View')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.innerHeight")}}
+{{Compat}}
 
 ## Voir aussi
 

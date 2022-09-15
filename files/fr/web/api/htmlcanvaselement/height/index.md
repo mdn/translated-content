@@ -16,8 +16,10 @@ C'est l'une des deux propriétés, l'autre étant {{domxref("HTMLCanvasElement.w
 
 ## Syntaxe
 
-    var pxl = canvas.height;
-    canvas.height = pxl;
+```js
+var pxl = canvas.height;
+canvas.height = pxl;
+```
 
 ## Exemples
 
@@ -36,15 +38,11 @@ console.log(canvas.height); // 300
 
 ## Spécifications
 
-| Spécification                                                                                                                | Statut                           | Commentaire                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "scripting.html#attr-canvas-height", "HTMLCanvasElement.height")}} | {{Spec2('HTML WHATWG')}} | Pas de changement depuis l'instantané le plus récent, {{SpecName('HTML5 W3C')}} |
-| {{SpecName('HTML5.1', "scripting-1.html#attr-canvas-height", "HTMLCanvasElement.height")}}     | {{Spec2('HTML5.1')}}     |                                                                                        |
-| {{SpecName('HTML5 W3C', "scripting-1.html#attr-canvas-height", "HTMLCanvasElement.height")}} | {{Spec2('HTML5 W3C')}}     | Instantané du {{SpecName('HTML WHATWG')}} contenant la définition initiale.   |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLCanvasElement.height")}}
+{{Compat}}
 
 ## Voir aussi
 

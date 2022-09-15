@@ -25,9 +25,11 @@ p::first-line {
 
 ## Syntaxe
 
-    sélecteur::pseudo-élément {
-      propriété: valeur;
-    }
+```
+sélecteur::pseudo-élément {
+  propriété: valeur;
+}
+```
 
 On ne peut utiliser qu'un seul pseudo-élément dans un sélecteur. Le pseudo-élément doit apparaître après les sélecteurs simple de la déclaration
 

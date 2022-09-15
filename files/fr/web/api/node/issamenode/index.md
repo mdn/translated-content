@@ -9,7 +9,9 @@ La méthode **`Node.isSameNode()`** teste si deux noeuds sont identiques, c'est-
 
 ## Syntaxe
 
-    var isSameNode = node.isSameNode(other);
+```js
+var isSameNode = node.isSameNode(other);
+```
 
 ### Paramètres
 
@@ -57,14 +59,11 @@ output.innerHTML += "div 0 same as div 2: " + divList[0].isSameNode(divList[2]) 
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire                                 |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#interface-node', 'Node')}}                             | {{Spec2('DOM WHATWG')}} | Pas de changement (a été longtemps retiré). |
-| {{SpecName('DOM3 Core', 'core.html#Node3-isSameNode', 'Node.isSameNode()')}} | {{Spec2('DOM3 Core')}}     | Définition initiale                         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.isSameNode")}}
+{{Compat}}
 
 ## Voir aussi
 

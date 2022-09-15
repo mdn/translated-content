@@ -17,7 +17,9 @@ La propriété **`lastIndex`** est un entier en lecture/écriture qui permet de 
 
 ## Syntaxe
 
-    regExpObj.lastIndex
+```js
+regExpObj.lastIndex
+```
 
 ## Description
 

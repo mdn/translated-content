@@ -90,7 +90,9 @@ console.log(someObject);
 
 L'affichage ressemblera à ceci :
 
-    [09:27:13.475] ({str:"Some text", id:5})
+```
+[09:27:13.475] ({str:"Some text", id:5})
+```
 
 #### Afficher plusieurs objets
 
@@ -104,7 +106,9 @@ console.info("My first car was a", car, ". The object is: ", someObject);
 
 L'affichage ressemblera à ceci :
 
-    [09:28:22.711] My first car was a Dodge Charger . The object is:  ({str:"Some text", id:5})
+```
+[09:28:22.711] My first car was a Dodge Charger . The object is:  ({str:"Some text", id:5})
+```
 
 #### Utiliser les caractères de substitution
 
@@ -148,17 +152,21 @@ Gecko 9.0 {{geckoRelease("9.0")}} a amené le support des caractères de substit
 
 Chacun de ceux-ci ira chercher l'argument qui suit la chaîne à formater. Par exemple :
 
-    for (var i=0; i<5; i++) {
-      console.log("Hello, %s. You've called me %d times.", "Bob", i+1);
-    }
+```js
+for (var i=0; i<5; i++) {
+  console.log("Hello, %s. You've called me %d times.", "Bob", i+1);
+}
+```
 
 L'affichage ressemblera à ceci :
 
-    [13:14:13.481] Hello, Bob. You've called me 1 times.
-    [13:14:13.483] Hello, Bob. You've called me 2 times.
-    [13:14:13.485] Hello, Bob. You've called me 3 times.
-    [13:14:13.487] Hello, Bob. You've called me 4 times.
-    [13:14:13.488] Hello, Bob. You've called me 5 times.
+```
+[13:14:13.481] Hello, Bob. You've called me 1 times.
+[13:14:13.483] Hello, Bob. You've called me 2 times.
+[13:14:13.485] Hello, Bob. You've called me 3 times.
+[13:14:13.487] Hello, Bob. You've called me 4 times.
+[13:14:13.488] Hello, Bob. You've called me 5 times.
+```
 
 #### Donner un style à l'affichage de la console
 
@@ -219,30 +227,28 @@ Notez que le nom du chronomètre est affiché deux fois, à son départ et quand
 
 L'objet console supporte aussi l'affichage d'une trace d'appels ; cela montre le chemin pris pour atteindre l'endroit auquel vous avez fait appel à la fonction {{domxref("console.trace()")}}. Ce qui donne avec ce code :
 
-    foo();
+```js
+foo();
 
-    function foo() {
-      function bar() {
-        console.trace();
-      }
-      bar();
-    }
+function foo() {
+  function bar() {
+    console.trace();
+  }
+  bar();
+}
+```
 
 L'affichage dans la console ressemblera à ceci :
 
 ![](api-trace2.png)
 
-## Spécification
+## Spécifications
 
-| Specification                        | Status                           | Comment              |
-| ------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('Console API')}} | {{Spec2('Console API')}} | Définition initiale. |
+{{Specifications}}
 
-## Notes
+## Compatibilité des navigateurs
 
-- Au moins dans Firefox, si une page définit un objet console, cet objet remplace celui créé dans Firefox.
-- Antérieur à {{Gecko ("12.0")}}, les méthodes de l'objet console ne fonctionnent que lorsque la console Web est ouverte. À partir de {{Gecko ("12.0")}}, la sortie est mise en cache jusqu'à ce que la console Web soit ouverte, puis affichée à ce moment-là.
-- Il est à noter que l'objet de console intégré de Firefox est compatible avec celui fourni par [Firebug](http://getfirebug.com/).
+{{Compat}}
 
 ## Voir aussi
 

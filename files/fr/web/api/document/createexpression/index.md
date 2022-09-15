@@ -14,7 +14,9 @@ Cette méthode compile une [`XPathExpression`](/fr/docs/Web/API/XPathExpression)
 
 ## Syntaxe
 
-    xpathExpr = document.createExpression(xpathText, namespaceURLMapper);
+```js
+xpathExpr = document.createExpression(xpathText, namespaceURLMapper);
+```
 
 ### Paramètres
 

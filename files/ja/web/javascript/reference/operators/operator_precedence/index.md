@@ -1,11 +1,6 @@
 ---
 title: 演算子の優先順位
 slug: Web/JavaScript/Reference/Operators/Operator_Precedence
-tags:
-  - ガイド
-  - JavaScript
-  - 優先順位
-translation_of: Web/JavaScript/Reference/Operators/Operator_Precedence
 ---
 {{jsSidebar("Operators")}}
 
@@ -189,7 +184,6 @@ a?.b.c;        // 最初に `a` を評価し、 `a` が `null` または `undefi
 以下の表は優先順位の最も高いもの (19) から最も低いもの (1) の順に並べられています。
 
 なお、[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)はこの表から除外しています。 — 理由は [Stack Overflow の回答](https://stackoverflow.com/a/48656377)を引用します。「[スプレッド構文は演算子ではなく](https://stackoverflow.com/q/44934828/1048572)、優先度はありません。これは配列リテラルと関数呼び出し（およびオブジェクトリテラル）の構文の一部です。」
-
 
 <table class="fullwidth-table">
   <tbody>

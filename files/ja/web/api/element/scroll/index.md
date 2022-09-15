@@ -1,14 +1,6 @@
 ---
 title: Element.scroll()
 slug: Web/API/Element/scroll
-tags:
-  - API
-  - Element
-  - メソッド
-  - Reference
-  - Scroll
-browser-compat: api.Element.scroll
-translation_of: Web/API/Element/scroll
 ---
 {{APIRef}}
 

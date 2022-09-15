@@ -1,105 +1,102 @@
 ---
-title: window.openDialog
+title: Window.openDialog()
 slug: Web/API/Window/openDialog
-tags:
-  - DOM
-  - Gecko
-  - Window
-  - boîte de dialogue
 translation_of: Web/API/Window/openDialog
+browser-compat: api.Window.openDialog
 ---
-{{ ApiRef() }}
+{{APIRef("HTML DOM")}}{{Non-standard_header}}
 
-`window.openDialog` est une extension à [window.open()](/fr/DOM/window.open). Elle s'utilise de la même manière, excepté qu'elle peut prendre plusieurs paramètres optionnels après`windowFeatures`, et que`windowFeatures` est traîté différemment.
+La méthode `window.openDialog()` est une extension de [`window.open()`](/fr/docs/Web/API/Window/open). Elle se comporte de la même façon mais possède plus de paramètres et traite le paramètre `windowFeatures` différemment.
 
-Les paramètres optionnels, si présents, seront regroupés dans un objet JavaScript Array et seront accessibles depuis la nouvelle fenêtre par la propriété `window.arguments`. Ils sont accessibles depuis les scripts de la fenêtre à tout moment, notamment lors du traitement d'un évênement`load` . Ces paramètres peuvent donc être utilisés pour passer des arguments à une boîte de dialogue, et pour les récupérer ensuite.
+Les paramètres optionnels, s'ils sont présents, sont empaquetés dans un tableau JavaScript ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)) et ajouté à la nouvelle fenêtre ainsi créée via une propriété intitulée [`window.arguments`](/fr/docs/Web/API/window/arguments). Ils pourront être utilisés par le code JavaScript de la fenêtre à tout moment, y compris lors de l'exécution d'un gestionnaire d'évènement pour [`load`](/fr/docs/Web/API/Window/load_event). Ces paramètres pourront alors être utilisés afin de passer des arguments entre la fenêtre et la boîte de dialogue.
 
-Notez que l'appel à la méthode`openDialog()` se termine immédiatement. Si vous souhaitez le bloquer jusqu'à ce que l'utilisateur ferme la boîte de dialogue, utilisez la valeur`modal` pour le paramètre f`eatures`. En conséquence, l'utilisateur ne pourra pas interagir avec la fenêtre parente jusqu'à ce qu'il ferme la boîte de dialogue modale.
+L'appel à `openDialog()` renvoie immédiatement. Si on souhaite que l'appel soit bloquant jusqu'à ce que la personne ait fermé la boîte de dialogue, on pourra fournir `modal` comme paramètre pour `windowFeatures`. Cela signifie également que l'utilisateur ne pourra pas interagir avec la fenêtre ouvrante tant que la boîte modale n'est pas fermée.
 
-### Syntaxe
-
-    newWindow = openDialog(url, name, features, arg1, arg2, ...)
-
-- newWindow
-  - : La nouvelle fenêtre ouverte.
-- url
-  - : L'URL du document à charger dans la nouvelle fenêtre.
-- name
-  - : Le nom de la fenêtre (optionnel). Voir la description de[window.open()](/fr/DOM/window.open) pour plus de détails.
-- features
-  - : Voir la description de[window.open()](/fr/DOM/window.open) pour la description.
-- arg1, arg2, ...
-  - : Les arguments à passer à la nouvelle fenêtre (optionnel).
-
-### Exemple
+## Syntaxe
 
 ```js
-var win = openDialog("http://example.tld/zzz.xul", "dlg", "", "pizza", 6.98);
+openDialog(url)
+openDialog(url, nom)
+openDialog(url, nom, fonctionnalites)
+openDialog(url, nom, fonctionnalites, arg0, arg1, /* ... ,*/ argN)
 ```
 
-### Notes
+### Paramètres
+
+- `url`
+  - : L'URL à charger dans la nouvelle fenêtre ouverte.
+- `nom` {{optional_inline}}
+  - : Le nom de la fenêtre. Voir la description de [`window.open()`](/fr/docs/Web/API/Window/open) pour plus de détails.
+- `fonctionnalites` {{optional_inline}}
+  - : Voir [`window.open()`](/fr/docs/Web/API/Window/open) pour plus de détails.
+- `arg1`, `arg2`… {{optional_inline}}
+  - : Les arguments à passer à la nouvelle fenêtre.
+
+### Valeur de retour
+
+La nouvelle fenêtre ouverte.
+
+## Exemples
+
+```js
+let win = openDialog("http://example.tld/zzz.xul", "dlg", "", "pizza", 6.98);
+```
+
+## Notes
 
 #### Nouvelles fonctionnalités
 
-- `all`
-  - : Active ou désactive (`"all=no"`) toutes les fonctionnalités (excepté `chrome`, `dialog` et`modal`). Peut être utilisé conjointement avec les autres drapeaux (par exemple, `"menubar=no, all"` active toutes les fonctionnalités excepté `menubar`). Ce drapeau est ignorée par la méthode[window.open()](/fr/DOM/window.open) mais pas par `window.openDialog()`.
+`all` active (ou désactive avec `("all=no")`) initialement tout le chrome (excepté pour le comportement des marqueurs `chrome`, `dialog` et `modal`). Ce comportement peut être surchargé (par exemple afin que `"menubar=no,all"` affiche tout le chrome sauf la barre de menu). Cette fonctionnalité est explicitement ignorée par [`window.open()`](/fr/docs/Web/API/Window/open). `window.openDialog()` l'utilise en raison de ses hypothèses différentes.
 
-#### Comportement
+#### Comportement par défaut
 
-La méthode`window.openDialog()` traite l'absence du paramètre`features` de la même manière que[window.open()](/fr/DOM/window.open) (une chaîne vide désactive toutes les fonctionnalités) excepté pour`chrome` et`dialog` qui sont activés par défaut et peuvent être explicitement désactivées par "`chrome=no`".
+Les fonctionnalités `chrome` et `dialog` sont prises par défaut comme actives, à moins d'être explicitement désactivées ("`chrome=no`"). `openDialog()` considère l'absence de paramètres de la même façon que [`window.open()`](/fr/docs/Web/API/Window/open). Autrement dit, une chaîne de caractères vide désactive toutes les fonctionnalités sauf `chrome` et `dialog`. Si le paramètre `features` est une chaîne de caractères de longueur nulle ou contient uniquement une ou plusieurs fonctionnalités (`chrome`, `dependent`, `dialog` et `modal`), les fonctionnalités du chrome sont déterminées afin de correspondre le mieux possible au système d'exploitation.
 
-#### Passage de paramètres supplémentaires
+#### Passer des paramètres supplémentaires à la boîte de dialogue
 
-Pour passer des paramètres supplémentaires à la boîte de dialogue, vous pouvez simplement les ajouter après le paramètre f`eatures` :
+Afin de passer des paramètres supplémentaires à la boîte de dialogue, on pourra les fournir après le paramètre `windowFeatures`&nbsp;:
 
 ```js
 openDialog("http://example.tld/zzz.xul", "dlg", "", "pizza", 6.98);
 ```
 
-Ces paramètres seront ensuite regroupés dans une propriété `arguments` de type[Array](/en/Core_JavaScript_1.5_Reference/Global_Objects/Array), et cette propriété sera ajoutée à la nouvelle boîte de dialogue.
+Les paramètres supplémentaires sont alors empaquetés dans une propriété intitulée `arguments` et qui est un tableau ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)). Cette propriété est ajoutée à la fenêtre de dialogue ainsi créée.
 
-Pour accéder à ces paramètres depuis un script de la boîte de dialogue, utilisez le procédé suivant :
+Pour accéder à ces paramètres depuis le code de la boîte de dialogue, on pourra utiliser la structure suivante&nbsp;:
 
 ```js
-var food = window.arguments[0];
-var price = window.arguments[1];
+let food  = window.arguments[0];
+let price = window.arguments[1];
 ```
 
-Notez que vous pouvez accéder à cette propriété depuis n'importe où dans le script. ([Autre exemple](/en/Code_snippets/Dialogs_and_Prompts#Passing_arguments_and_displaying_a_dialog)).
+Il est possible d'accéder à cette propriété depuis n'importe quel endroit dans le code de la boîte de dialogue.
 
-#### Retourner des arguments depuis la boîte de dialogue
+#### Renvoyer des valeurs depuis la boîte de dialogue
 
-Depuis que[`window.close()`](/fr/DOM/window.close) efface toutes les propriétés associées à la boîte de dialogue (c'est-à-dire les variables spécifiées depuis le code JavaScript chargé depuis la boîte de dialogue), il n'est pas possible de retourner des valeur après la fermeture de la boîte de dialogue en utilisant des variables globales (ou toute autre méthode).
+Comme [`window.close()`](/fr/docs/Web/API/Window/close) efface toutes les propriétés associées à la fenêtre de dialogue (comme les paramètres supplémentaires vus avant), il n'est pas possible de fournir des valeurs en retour après la fermeture de la fenêtre en utilisant des variables globales (ou d'autres structures).
 
-Pour pouvoir retourner des valeurs à la fenêtre parente, vous devez passer un objet via les paramètres supplémentaires. Vous pouvez ensuite accéder à cet objet depuis la boîte de dialogue et modifier ces propriétés, dont les données que vous souhaiter conserver après l'appel à la méthode`window.close()`.
+Afin de pouvoir renvoyer des valeurs à la fenêtre appelante, il faudra fournir des objets via les paramètres supplémentaires. Le code de la fenêtre de dialogue pourra alors modifier des propriétés de cet objet, qui contiendront les valeurs qu'on veut renvoyer ou conserver après l'opération `window.close()`.
 
 ```js
-var retVals = { address: null, delivery: null };
-openDialog("http://example.tld/zzz.xul", "dlg", "modal", "pizza", 6.98, retVals);
+let retVals = { address: null, delivery: null };
+openDialog("http://example.tld/zzz.xul", "dlg", "modal", "pizza", 6.98,
+    retVals);
 ```
 
-Si vous modifiez les propriétés de l'objet`retVals` depuis la boîte de dialogue comme décrit précédemment, vous pouvez y accéder via le tableau`retVals` après l'appel à `openDialog()`.
+Si on modifie les propriétés de l'objet `retVals` dans le code de la boîte de dialogue, comme ci-après, on pourra consulter leurs valeurs depuis la fenêtre d'origine après le retour de l'appel à `openDialog()`.
 
-Depuis la boîte de dialogue, vous pouvez modifier les propriétés comme suit :
+Au sein de la fenêtre de dialogue, on pourra modifier les propriétés comme suit&nbsp;:
 
 ```js
-var retVals = window.arguments[2];
-retVals.address = enteredAddress;
+let retVals = window.arguments[2];
+retVals.address  = enteredAddress;
 retVals.delivery = "immediate";
 ```
 
-Voir aussi[ce message](http://groups.google.com/group/netscape.public.dev.xul/msg/02075a1736406b40). ([Autre exemple](/en/Code_snippets/Dialogs_and_Prompts#Passing_arguments_and_displaying_a_dialog)).
-Voir aussi[window.importDialog()](/fr/DOM/window.importDialog).
+## Spécifications
 
-### Spécification
+Cette méthode ne fait partie d'aucune spécification.
 
-{{ DOM0() }}
+## Compatibilité des navigateurs
 
-### Compatibilité des navigateurs
-
-{{Compat("api.Window.openDialog")}}
-
-### Voir également
-
-- [Another example](/en-US/Add-ons/Code_snippets/Dialogs_and_Prompts#Passing_arguments_and_displaying_a_dialog)
-- [`window.importDialog`](/en-US/docs/Archive/Web/Window.importDialog) (mobile) {{obsolete_inline}}
+{{Compat}}

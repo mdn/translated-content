@@ -1,14 +1,6 @@
 ---
 title: DOMTokenList.replace()
 slug: Web/API/DOMTokenList/replace
-tags:
-- API
-- DOM
-- Document
-- メソッド
-- リファレンス
-browser-compat: api.DOMTokenList.replace
-translation_of: Web/API/DOMTokenList/replace
 ---
 {{APIRef("DOM")}}
 

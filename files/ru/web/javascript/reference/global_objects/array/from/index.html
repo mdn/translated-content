@@ -25,9 +25,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/from
 <dl>
  <dt><code>arrayLike</code></dt>
  <dd>Массивоподобный или итерируемый объект, преобразуемый в массив.</dd>
- <dt><code>mapFn</code> {{Optional_inline}}</dt>
+ <dt><code>mapFn</code> {{Optional_inline}}</dt>
  <dd>Отображающая функция, вызываемая для каждого элемента массива.</dd>
- <dt><code>thisArg</code> {{Optional_inline}}</dt>
+ <dt><code>thisArg</code> {{Optional_inline}}</dt>
  <dd>Значение, используемое в качестве <code>this</code> при выполнении функции <code>mapFn</code>.</dd>
 </dl>
 
@@ -48,7 +48,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/from
 
 <p>Свойство <code>length</code> метода <code>from()</code> равно 1.</p>
 
-<p>В ES2015 классовый синтаксис позволяет создавать подклассы как встроенных классов, так и классов, определённых пользователем; в результате статические методы класса, вроде <code>Array.from</code> «наследуются» подклассами {{jsxref("Global_Objects/Array", "Array")}} и создают новые экземпляры подкласса, а не класса {{jsxref("Global_Objects/Array", "Array")}}.</p>
+<p>В ES2015 классовый синтаксис позволяет создавать подклассы как встроенных классов, так и классов, определённых пользователем; в результате статические методы класса, вроде <code>Array.from</code> «наследуются» подклассами {{jsxref("Global_Objects/Array", "Array")}} и создают новые экземпляры подкласса, а не класса {{jsxref("Global_Objects/Array", "Array")}}.</p>
 
 <h2 id="Examples">Примеры</h2>
 
@@ -72,7 +72,7 @@ Array.from(m);
 // [[1, 2], [2, 4], [4, 8]]
 </pre>
 
-<h3 id="Массив_из_массивоподобного_объекта_(arguments)">Массив из массивоподобного объекта (arguments)</h3>
+<h3 id="Массив_из_массивоподобного_объекта_(arguments)">Массив из массивоподобного объекта (arguments)</h3>
 
 <pre class="brush: js">function f() {
   return Array.from(arguments);
@@ -116,7 +116,7 @@ if (!Array.from) {
     var toLength = function (value) {
       var len = toInteger(value);
       return Math.min(Math.max(len, 0), maxSafeInteger);
-    };
+    };
 
     // Свойство length метода from равно 1.
     return function from(arrayLike/*, mapFn, thisArg */) {
@@ -142,7 +142,7 @@ if (!Array.from) {
         }
 
         // 5. b. Если thisArg присутствует, положим T равным thisArg; иначе положим T равным undefined.
-        if (arguments.length &gt; 2) {
+        if (arguments.length &gt; 2) {
           T = arguments[2];
         }
       }

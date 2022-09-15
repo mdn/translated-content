@@ -10,7 +10,7 @@ translation_of: Web/API/EventTarget/removeEventListener
 ---
 <p>{{APIRef("DOM Events")}}</p>
 
-<p>Удаляет обработчик события, который был зарегистрирован при помощи {{domxref("EventTarget.addEventListener()")}}. Обработчик определяется типом события, самой функцией обработки события, и дополнительными параметрами, переданными при регистрации обработчика.</p>
+<p>Удаляет обработчик события, который был зарегистрирован при помощи {{domxref("EventTarget.addEventListener()")}}. Обработчик определяется типом события, самой функцией обработки события, и дополнительными параметрами, переданными при регистрации обработчика.</p>
 
 <h2 id="Syntax">Синтаксис</h2>
 
@@ -37,7 +37,7 @@ translation_of: Web/API/EventTarget/removeEventListener
  <dd>Если обработчик был зарегистрирован дважды, один раз с перехватом (с <code>capture</code>) и один - без, каждый из них должен быть удалён по отдельности. Удаление перехватывающего обработчика никак не затрагивает неперехватывающую версию этого же обработчика, и наоборот.</dd>
 </dl>
 
-<div class="note"><strong>Примечание:</strong> <code>useCapture</code> требуется в большинстве основных браузеров старых версий. Если вы хотите поддерживать большую совместимость, вы всегда должны использовать параметр <code>useCapture</code>.</div>
+<div class="note"><strong>Примечание:</strong> <code>useCapture</code> требуется в большинстве основных браузеров старых версий. Если вы хотите поддерживать большую совместимость, вы всегда должны использовать параметр <code>useCapture</code>.</div>
 
 <h3 id="Return_value">Возвращаемое значение</h3>
 
@@ -51,11 +51,11 @@ translation_of: Web/API/EventTarget/removeEventListener
 
 <p>Если {{domxref("EventListener")}} был удалён из {{domxref("EventTarget")}} процессе обработки события (например предшествующим {{domxref("EventListener")}} того же типа), он не будет вызван. После удаления, {{domxref("EventListener")}} не будет вызываться, однако его можно назначить заново.</p>
 
-<p>Вызов <code>removeEventListener()</code> с параметрами, не соответствующими ни одному зарегистрированному {{domxref("EventListener")}} в <code>EventTarget</code>, не имеет никакого эффекта.</p>
+<p>Вызов <code>removeEventListener()</code> с параметрами, не соответствующими ни одному зарегистрированному {{domxref("EventListener")}} в <code>EventTarget</code>, не имеет никакого эффекта.</p>
 
 <h2 id="Пример">Пример</h2>
 
-<p>Это пример добавления и последующего удаления обработчика событий.</p>
+<p>Это пример добавления и последующего удаления обработчика событий.</p>
 
 <pre class="brush: js">var div = document.getElementById('div');
 var listener = function (event) {
@@ -72,19 +72,19 @@ div.removeEventListener('click', listener, false);
 <h3 id="Gecko_примечания">Gecko примечания</h3>
 
 <ul>
- <li>В версиях Firefox младше версии 6 браузер бросает исключение, если параметр <code>useCapture</code> не был явно указан как <font face="'Courier New', 'Andale Mono', monospace"><span style="line-height: normal;">false</span></font>. В Gecko младше 9.0 {{ geckoRelease("9.0") }}, <code>addEventListener()</code> бросает исключение, если параметр <code>listener</code> равен <code>null</code>; в настоящее время метод отрабатывает без ошибки, но при этом не производит никаких действий.</li>
+ <li>В версиях Firefox младше версии 6 браузер бросает исключение, если параметр <code>useCapture</code> не был явно указан как <font face="'Courier New', 'Andale Mono', monospace"><span style="line-height: normal;">false</span></font>. В Gecko младше 9.0 {{ geckoRelease("9.0") }}, <code>addEventListener()</code> бросает исключение, если параметр <code>listener</code> равен <code>null</code>; в настоящее время метод отрабатывает без ошибки, но при этом не производит никаких действий.</li>
 </ul>
 
 <h3 id="Opera_примечания">Opera примечания</h3>
 
 <ul>
- <li>В Opera 12.00 параметр <code>useCapture</code> - опциональный (<a class="external" href="http://my.opera.com/ODIN/blog/2011/09/29/what-s-new-in-opera-development-snapshots-28-september-2011-edition">source</a>).</li>
+ <li>В Opera 12.00 параметр <code>useCapture</code> - опциональный (<a class="external" href="http://my.opera.com/ODIN/blog/2011/09/29/what-s-new-in-opera-development-snapshots-28-september-2011-edition">source</a>).</li>
 </ul>
 
 <h3 id="WebKit_примечания">WebKit примечания</h3>
 
 <ul>
- <li>Несмотря на то, что WebKit явно добавил "<code>[optional]</code>" к параметру <code>useCapture</code> в Safari 5.1 и Chrome 13, это работало и до изменений.</li>
+ <li>Несмотря на то, что WebKit явно добавил "<code>[optional]</code>" к параметру <code>useCapture</code> в Safari 5.1 и Chrome 13, это работало и до изменений.</li>
 </ul>
 
 <h3 id="Specification">Спецификация</h3>
@@ -95,7 +95,7 @@ div.removeEventListener('click', listener, false);
 
 <h2 id="Полифилы_для_поддержки_старых_браузеров">Полифилы для поддержки старых браузеров</h2>
 
-<p><code>addEventListener()</code> и <code>removeEventListener()</code> отсутствуют в старых браузерах. Это ограничение можно обойти, вставив следующий код в начале ваших скриптов, что позволяет использовать <code>addEventListener()</code> и <code>removeEventListener()</code> в версиях, не поддерживающих эти методы нативно. Тем не менее, этот метод не работает в Internet Explorer версии 7 и ниже, так как расширение Element.prototype не поддерживалось в более ранних версиях Internet Explorer ранее 8.</p>
+<p><code>addEventListener()</code> и <code>removeEventListener()</code> отсутствуют в старых браузерах. Это ограничение можно обойти, вставив следующий код в начале ваших скриптов, что позволяет использовать <code>addEventListener()</code> и <code>removeEventListener()</code> в версиях, не поддерживающих эти методы нативно. Тем не менее, этот метод не работает в Internet Explorer версии 7 и ниже, так как расширение Element.prototype не поддерживалось в более ранних версиях Internet Explorer ранее 8.</p>
 
 <pre class="brush: js">if (!Element.prototype.addEventListener) {
   var oListeners = {};

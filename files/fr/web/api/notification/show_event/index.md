@@ -18,14 +18,16 @@ La propriété **`onshow`** de l'interface {{domxref ("Notification")}} définit
 
 ## Syntaxe
 
-    Notification.onshow = function() { ... }
-    Notification.onshow = () => { ... }
+```js
+Notification.onshow = function() { ... }
+Notification.onshow = () => { ... }
+```
 
 ## Compatibilité des navigateurs
 
 {{Compat("api.Notification.onshow")}}
 
-## Voir également
+## Voir aussi
 
 - {{domxref("Notification")}}
 - [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)

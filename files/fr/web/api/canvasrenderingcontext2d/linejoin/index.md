@@ -13,7 +13,9 @@ Cette propriété n'a aucun effet quand deux segments connectés ont la même di
 
 ## Syntaxe
 
-    ctx.lineJoin = "bevel" || "round" || "miter";
+```js
+ctx.lineJoin = "bevel" || "round" || "miter";
+```
 
 ### Options
 
@@ -89,17 +91,11 @@ for (let i = 0; i < lineJoin.length; i++) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-linejoin", "CanvasRenderingContext2D.lineJoin")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
-## Compatibilité des naviagateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.lineJoin")}}
-
-### WebKit/Blink-notes particulières
-
-- Dans les navigateurs basés sur WebKit et Blink, une méthode `ctx.setLineJoin()` non-standard et obsolète est implémentée en plus de cette propriété.
+{{Compat}}
 
 ## Voir aussi
 

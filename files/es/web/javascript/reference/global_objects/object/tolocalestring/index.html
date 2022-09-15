@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/toLocaleString
 ---
 <div>{{JSRef}}</div>
 
-<p>El método <code><strong>toLocaleString()</strong></code> devuelve un string que representa a un objeto. Este método está pensado para ser redefinido en los objetos derivados, para los propósitos específicos de cada configuración regional.</p>
+<p>El método <code><strong>toLocaleString()</strong></code> devuelve un string que representa a un objeto. Este método está pensado para ser redefinido en los objetos derivados, para los propósitos específicos de cada configuración regional.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/object-prototype-tolocalestring.html")}}</div>
 
@@ -22,11 +22,11 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/toLocaleString
 
 <h2 id="Descripción">Descripción</h2>
 
-<p>{{jsxref("Object")}}'s <code>toLocaleString</code> devuelve el resultado de llamar a {{jsxref("Object.toString", "toString()")}}.</p>
+<p>{{jsxref("Object")}}'s <code>toLocaleString</code> devuelve el resultado de llamar a {{jsxref("Object.toString", "toString()")}}.</p>
 
 <p>Se proporciona esta función para que los objetos dispongan de un método <code>toLocaleString</code> genérico, aunque puede que no todos la utilicen. Véase la lista siguiente.</p>
 
-<h3 id="Objetos_que_redefinen_toLocaleString">Objetos que redefinen <code>toLocaleString</code></h3>
+<h3 id="Objetos_que_redefinen_toLocaleString">Objetos que redefinen <code>toLocaleString</code></h3>
 
 <ul>
  <li>{{jsxref("Array")}}: {{jsxref("Array.prototype.toLocaleString()")}}</li>
@@ -38,9 +38,9 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/toLocaleString
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
-<h3 id="Redefinición_de_toLocaleString_en_Array">Redefinición de toLocaleString() en Array</h3>
+<h3 id="Redefinición_de_toLocaleString_en_Array">Redefinición de toLocaleString() en Array</h3>
 
-<p>En los objetos <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code> se puede utilizar <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString">toLocaleString()</a></code> para imprimir los valores del <em>array</em> como un string, con indicadores opcionales de configuración regional (como símbolos de moneda) aplicados.</p>
+<p>En los objetos <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code> se puede utilizar <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString">toLocaleString()</a></code> para imprimir los valores del <em>array</em> como un string, con indicadores opcionales de configuración regional (como símbolos de moneda) aplicados.</p>
 
 <p>Por ejemplo:</p>
 
@@ -49,9 +49,9 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/toLocaleString
 let preciosEnEuros = unArray.toLocaleString('fr', { style: 'currency', currency: 'EUR'});
 // "4,00 €,7,00 €,10,00 €"</pre>
 
-<h3 id="Redefinición_de_toLocaleString_para_Date">Redefinición de toLocaleString() para Date</h3>
+<h3 id="Redefinición_de_toLocaleString_para_Date">Redefinición de toLocaleString() para Date</h3>
 
-<p>En los objetos <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code> se usa <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString">toLocaleString()</a></code> para imprimir fechas en un formato adecuado a la configuración regional.</p>
+<p>En los objetos <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code> se usa <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString">toLocaleString()</a></code> para imprimir fechas en un formato adecuado a la configuración regional.</p>
 
 <p>Por ejemplo:</p>
 
@@ -66,7 +66,7 @@ var fechaFrances= unaFecha.toLocaleString('fr');
 
 <h3 id="Redefinición_de_toLocaleString_para_Number">Redefinición de toLocaleString() para Number</h3>
 
-<p>En los objetos <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> se usa <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString">toLocaleString()</a></code> para imprimir números de forma adecuada a la configuración regional, p. ej. para usar los separadores de miles correctos.</p>
+<p>En los objetos <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> se usa <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString">toLocaleString()</a></code> para imprimir números de forma adecuada a la configuración regional, p. ej. para usar los separadores de miles correctos.</p>
 
 <p>Por ejemplo:</p>
 

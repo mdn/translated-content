@@ -5,8 +5,6 @@ translation_of: Web/API/Window/gamepadconnected_event
 ---
 L'événement gamepadconnected est déclenché lorsque le navigateur détecte quand une manette a été connecté ou qu'un button/axe de la manette a été utilisé pour la première fois.
 
-
-
 ## Informations générales
 
 - Spécification
@@ -46,7 +44,7 @@ window.addEventListener("gamepadconnected", function( event ) {
 
 ## Evénements liés
 
-- [gamepaddisconnected](/en-US/docs/Web/Reference/Events/gamepaddisconnected)
+- [gamepaddisconnected](/fr/docs/Web/Reference/Events/gamepaddisconnected)
 
 ## Voir aussi
 

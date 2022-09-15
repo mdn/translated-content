@@ -1,15 +1,6 @@
 ---
 title: yield
 slug: Web/JavaScript/Reference/Operators/yield
-tags:
-  - ECMAScript 2015
-  - ジェネレーター
-  - 反復子
-  - JavaScript
-  - 言語機能
-  - 演算子
-browser-compat: javascript.operators.yield
-translation_of: Web/JavaScript/Reference/Operators/yield
 ---
 {{jsSidebar("Operators")}}
 
@@ -74,7 +65,7 @@ console.log(appleStore.next())      // { value: 5, done: false }
 console.log(appleStore.next())      // { value: undefined, done: true }
 ```
 
-next(value) でジェネレーターに値を送ることができます。 'step' はこの \[_rv_] = **yield** \[_expression_] の構文では返値として評価されます。
+next(value) でジェネレーターに値を送ることができます。 'step' はこの \[_rv_] = **yield** \[_expression_] の構文では返値として評価されます。
 
 ```js
 function* counter(value) {

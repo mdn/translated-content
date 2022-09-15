@@ -7,9 +7,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 ---
 <p><span style="background-color: #ffffff; color: #333333; display: inline !important; float: none; font-family: arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;">WebExtensions está diseñado para ser compatible con las extensiones de Chrome y Opera: en la medida de lo posible, las extensiones escritas para esos navegadores deberían ejecutarse en Firefox con cambios mínimos.</span></p>
 
-<p style="margin: 0px 0px 24px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: arial, x-locale-body, sans-serif; font-size: medium; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;"><font><font>Sin embargo, Firefox cuenta actualmente con soporte para sólo un conjunto limitado de funciones y API compatibles con Chrome y Opera.<span> </span></font><font>Estamos trabajando en agregar más soporte, pero muchas características aún no son compatibles, y es posible que nunca admitamos algunas.</font></font></p>
+<p style="margin: 0px 0px 24px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: arial, x-locale-body, sans-serif; font-size: medium; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;"><font><font>Sin embargo, Firefox cuenta actualmente con soporte para sólo un conjunto limitado de funciones y API compatibles con Chrome y Opera.<span> </span></font><font>Estamos trabajando en agregar más soporte, pero muchas características aún no son compatibles, y es posible que nunca admitamos algunas.</font></font></p>
 
-<p style="margin: 0px 0px 24px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: arial, x-locale-body, sans-serif; font-size: medium; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;"><font><font>En este artículo se enumeran todas las características y API que se admiten total o parcialmente en Firefox.<span> </span></font><font>Cuando una característica está parcialmente soportada, hemos indicado cuáles son las lagunas.</font></font></p>
+<p style="margin: 0px 0px 24px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: arial, x-locale-body, sans-serif; font-size: medium; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;"><font><font>En este artículo se enumeran todas las características y API que se admiten total o parcialmente en Firefox.<span> </span></font><font>Cuando una característica está parcialmente soportada, hemos indicado cuáles son las lagunas.</font></font></p>
 
 <p style="margin: 0px 0px 24px; padding: 0px; border: 0px; color: rgb(51, 51, 51); font-family: arial, x-locale-body, sans-serif; font-size: medium; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;"><font><font>Es seguro asumir que las funciones y las API que no se enumeran aquí en absoluto aún no son compatibles.</font></font></p>
 
@@ -70,7 +70,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
  <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus">Menú contextual</a></li>
  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction">pageAction</a>
   <ul>
-   <li><font><font>Las URL relativas pasadas a<span> </span></font></font><code style='background-color: rgb(238, 238, 238); color: rgb(51, 51, 51); margin: 0px; padding: 2px 5px; border: 0px; font-style: normal; font-weight: normal; border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: medium; letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>setPopup()</code><font><font>se resuelven en relación con el documento de la persona que llama, en lugar de con la raíz de la extensión</font></font> .</li>
+   <li><font><font>Las URL relativas pasadas a<span> </span></font></font><code style='background-color: rgb(238, 238, 238); color: rgb(51, 51, 51); margin: 0px; padding: 2px 5px; border: 0px; font-style: normal; font-weight: normal; border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: medium; letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>setPopup()</code><font><font>se resuelven en relación con el documento de la persona que llama, en lugar de con la raíz de la extensión</font></font> .</li>
   </ul>
  </li>
 </ul>
@@ -106,14 +106,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
    <li><code>enable()</code> o <code>disable()</code>.</li>
   </ul>
  </li>
- <li><font><font>Las URL relativas pasadas a<span> </span></font></font><code style='background-color: rgb(238, 238, 238); color: rgb(51, 51, 51); margin: 0px; padding: 2px 5px; border: 0px; font-style: normal; font-weight: normal; border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: medium; letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>setPopup()</code><font><font>se resuelven en relación con el documento de la persona que llama, en lugar de con la raíz de la extensión</font></font> .</li>
+ <li><font><font>Las URL relativas pasadas a<span> </span></font></font><code style='background-color: rgb(238, 238, 238); color: rgb(51, 51, 51); margin: 0px; padding: 2px 5px; border: 0px; font-style: normal; font-weight: normal; border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: medium; letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>setPopup()</code><font><font>se resuelven en relación con el documento de la persona que llama, en lugar de con la raíz de la extensión</font></font> .</li>
 </ul>
 
 <h4 id="cookies">cookies</h4>
 
 <ul>
  <li style="margin: 0px 0px 6px; padding: 0px; border: 0px;"><font><font>eventos onChanged pueden ser subtely diferentes</font></font></li>
- <li style="margin: 0px 0px 6px; padding: 0px; border: 0px;"><font><font>Creación de cookies de sesión<span> </span></font></font><code style='background-color: rgb(238, 238, 238); color: rgb(51, 51, 51); margin: 0px; padding: 2px 5px; border: 0px; font-style: inherit; font-weight: inherit; border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>set</code><font><font>podría fallar</font></font></li>
+ <li style="margin: 0px 0px 6px; padding: 0px; border: 0px;"><font><font>Creación de cookies de sesión<span> </span></font></font><code style='background-color: rgb(238, 238, 238); color: rgb(51, 51, 51); margin: 0px; padding: 2px 5px; border: 0px; font-style: inherit; font-weight: inherit; border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>set</code><font><font>podría fallar</font></font></li>
  <li><code class="prettyprint">getAllCookieStores</code> siempre<font><font> devuelve un almacén predeterminado y sin pestañas</font></font></li>
  <li style="margin: 0px 0px 6px; padding: 0px; border: 0px;"><font><font>el acceso a las cookies desde pestañas privadas es imposible</font></font></li>
 </ul>
@@ -121,7 +121,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 <h4 id="extension">extension</h4>
 
 <ul>
- <li>Firefox  sólo soporta :
+ <li>Firefox  sólo soporta :
   <ul>
    <li><code>getBackgroundPage()</code></li>
    <li><code>getURL()</code></li>
@@ -136,7 +136,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
  <li><span style="background-color: #ffffff; color: #333333; display: inline !important; float: none; font-family: arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: left; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;">En la API JavaScript API, Firefox solo soporta</span> <code>getMessage()</code>.</li>
  <li>Firefox solo soporta los mensajes predefinidos <code>@@extension_id</code> y <code>@@ui_locale</code>.</li>
  <li>Firefox no localiza archivos CSS.</li>
- <li>Las cadenas para ser localizadas deben consistir enteramente de  <code>__MSG_foo__</code> con el fin de realizar una sustitución al crearlas.</li>
+ <li>Las cadenas para ser localizadas deben consistir enteramente de  <code>__MSG_foo__</code> con el fin de realizar una sustitución al crearlas.</li>
 </ul>
 
 <h4 id="notifications">notifications</h4>
@@ -157,8 +157,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
    <li><code>getAll()</code>.</li>
   </ul>
  </li>
- <li style="margin: 0px 0px 6px; padding: 0px; border: 0px;"><font><font>El único evento soportado es<span> </span></font></font><code style='background-color: rgb(238, 238, 238); color: rgb(51, 51, 51); margin: 0px; padding: 2px 5px; border: 0px; font-style: inherit; font-weight: inherit; border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>onClosed</code><font><font>.</font></font></li>
- <li style="margin: 0px 0px 6px; padding: 0px; border: 0px;"><font><font>Firefox no proporciona<span> </span></font></font><code style='background-color: rgb(238, 238, 238); color: rgb(51, 51, 51); margin: 0px; padding: 2px 5px; border: 0px; font-style: inherit; font-weight: inherit; border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>byUser</code><font><font>datos.</font></font></li>
+ <li style="margin: 0px 0px 6px; padding: 0px; border: 0px;"><font><font>El único evento soportado es<span> </span></font></font><code style='background-color: rgb(238, 238, 238); color: rgb(51, 51, 51); margin: 0px; padding: 2px 5px; border: 0px; font-style: inherit; font-weight: inherit; border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>onClosed</code><font><font>.</font></font></li>
+ <li style="margin: 0px 0px 6px; padding: 0px; border: 0px;"><font><font>Firefox no proporciona<span> </span></font></font><code style='background-color: rgb(238, 238, 238); color: rgb(51, 51, 51); margin: 0px; padding: 2px 5px; border: 0px; font-style: inherit; font-weight: inherit; border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>byUser</code><font><font>datos.</font></font></li>
 </ul>
 
 <h4 id="Tiempo_de_ejecución">Tiempo de ejecución</h4>
@@ -180,8 +180,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 <h4 id="Almacenamiento">Almacenamiento</h4>
 
 <ul>
- <li style="margin: 0px 0px 6px; padding: 0px; border: 0px;"><font><font>El único área de almacenamiento que soporta Firefox es<span> </span></font></font><code style='background-color: rgb(238, 238, 238); color: rgb(51, 51, 51); margin: 0px; padding: 2px 5px; border: 0px; font-style: inherit; font-weight: inherit; border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>local</code><font><font>.</font></font></li>
- <li style="margin: 0px 0px 6px; padding: 0px; border: 0px;"><font><font>Firefox no soporta<span> </span></font></font><code style='background-color: rgb(238, 238, 238); color: rgb(51, 51, 51); margin: 0px; padding: 2px 5px; border: 0px; font-style: inherit; font-weight: inherit; border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>getBytesInUse()</code><font><font>o<span> </span></font></font><code style='background-color: rgb(238, 238, 238); color: rgb(51, 51, 51); margin: 0px; padding: 2px 5px; border: 0px; font-style: inherit; font-weight: inherit; border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>clear))</code><font><font>.</font></font></li>
+ <li style="margin: 0px 0px 6px; padding: 0px; border: 0px;"><font><font>El único área de almacenamiento que soporta Firefox es<span> </span></font></font><code style='background-color: rgb(238, 238, 238); color: rgb(51, 51, 51); margin: 0px; padding: 2px 5px; border: 0px; font-style: inherit; font-weight: inherit; border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>local</code><font><font>.</font></font></li>
+ <li style="margin: 0px 0px 6px; padding: 0px; border: 0px;"><font><font>Firefox no soporta<span> </span></font></font><code style='background-color: rgb(238, 238, 238); color: rgb(51, 51, 51); margin: 0px; padding: 2px 5px; border: 0px; font-style: inherit; font-weight: inherit; border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>getBytesInUse()</code><font><font>o<span> </span></font></font><code style='background-color: rgb(238, 238, 238); color: rgb(51, 51, 51); margin: 0px; padding: 2px 5px; border: 0px; font-style: inherit; font-weight: inherit; border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>clear))</code><font><font>.</font></font></li>
 </ul>
 
 <h4 id="tabs">tabs</h4>

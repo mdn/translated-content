@@ -17,7 +17,9 @@ La propriété en lecture seule **`root`** de l'interface [`IntersectionObserver
 
 ## Syntaxe
 
-    root = IntersectionObserver.root;
+```js
+root = IntersectionObserver.root;
+```
 
 ### Valeur
 
@@ -35,13 +37,11 @@ observer.root.style.border = "2px solid #44aa44";
 
 ## Spécifications
 
-| Spécification                                                                                                                | Statut                                       | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('IntersectionObserver', '#dom-intersectionobserver-root', 'IntersectionObserver')}} | {{Spec2('IntersectionObserver')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IntersectionObserver.root")}}
+{{Compat}}
 
 ## Voir aussi
 

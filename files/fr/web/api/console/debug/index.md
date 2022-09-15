@@ -19,8 +19,10 @@ Affiche un message dans la console web, avec le niveau de log "debug". Le messag
 
 ## Syntaxe
 
-    console.debug(obj1 [, obj2, ..., objN]);
-    console.debug(msg [, subst1, ..., substN]);
+```js
+console.debug(obj1 [, obj2, ..., objN]);
+console.debug(msg [, subst1, ..., substN]);
+```
 
 ### Paramètres
 
@@ -33,15 +35,13 @@ Affiche un message dans la console web, avec le niveau de log "debug". Le messag
 
 Voir [Afficher du texte dans la console](/fr/docs/Web/API/console#Outputting_text_to_the_console) dans la documentation de {{domxref("console")}} pour plus de détails.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("Console API", "#debug", "console.debug()")}} | {{Spec2("Console API")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.debug")}}
+{{Compat}}
 
 ## Voir aussi
 

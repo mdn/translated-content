@@ -18,7 +18,9 @@ La méthode **`Number.parseInt()`** analyse et convertit une chaine de caractèr
 
 ## Syntaxe
 
-    Number.parseInt(chaîne [, base])
+```js
+Number.parseInt(chaîne [, base])
+```
 
 ### Paramètres
 

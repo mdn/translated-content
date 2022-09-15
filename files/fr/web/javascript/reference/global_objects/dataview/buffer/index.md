@@ -19,7 +19,9 @@ L'accesseur **`buffer`** est une propriété représentant l'objet {{jsxref("Arr
 
 ## Syntaxe
 
-    dataview.buffer
+```js
+dataview.buffer
+```
 
 ## Description
 

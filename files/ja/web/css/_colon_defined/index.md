@@ -1,15 +1,6 @@
 ---
 title: ':defined'
 slug: Web/CSS/:defined
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.defined
-translation_of: Web/CSS/:defined
 ---
 {{ CSSRef }}
 
@@ -18,12 +9,12 @@ translation_of: Web/CSS/:defined
 ```css
 /* 定義されたすべての要素を選択 */
 :defined {
-  font-style: italic;
+  font-style: italic;
 }
 
 /* 特定の custom 要素のすべてのインスタンスを選択 */
 simple-custom:defined {
-  display: block;
+  display: block;
 }
 ```
 

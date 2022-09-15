@@ -1,18 +1,6 @@
 ---
 title: '::part()'
 slug: Web/CSS/::part
-tags:
-  - '::part'
-  - CSS
-  - Draft
-  - 実験的
-  - NeedsBrowserCompatibility
-  - NeedsExample
-  - 擬似要素
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.part
-translation_of: Web/CSS/::part
 ---
 {{CSSRef}}
 
@@ -108,6 +96,6 @@ globalThis.customElements.define(template.id, class extends HTMLElement {
 
 ## 関連情報
 
-- {{HTMLAttrxRef("part")}} 属性 - `::part()` セレクタで選択できるパーツを定義するために使用されます
+- {{HTMLAttrxRef("part")}} 属性 - `::part()` セレクタで選択できるパーツを定義するために使用されます
 - {{HTMLAttrxRef("exportparts")}} 属性 - ネストされたシャドウツリーにシャドウパーツを推移的にエクスポートするために使用されます。
 - [Explainer: CSS Shadow ::part and ::theme](https://github.com/fergald/docs/blob/master/explainers/css-shadow-parts-1.md)

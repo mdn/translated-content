@@ -22,9 +22,11 @@ Il est également possible de définir un générateur en utilisant le construct
 
 ## Syntaxe
 
-    function* nom([param1[, param2[, ... paramN]]]) {
-       instructions
-    }
+```js
+function* nom([param1[, param2[, … paramN]]]) {
+  instructions
+}
+```
 
 - `nom`
   - : Le nom de la fonction.

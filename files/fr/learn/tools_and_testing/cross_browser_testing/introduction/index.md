@@ -112,9 +112,9 @@ Normalement votre développement devra inclure une combinaison des trois approch
 
 Après chaque phase d'implémentation, vous allez avoir besoin de tester les nouvelles fonctionnalités. Pour commencer, vous devez vous assurer qu'il n'y a pas des problème généraux avec votre code qui empêcheraient votre fonctionnalité de fonctionner :
 
-1.  Tester sur quelque navigateurs stables sur votre ordinateur, comme Firefox, Safari, Chrome, ou IE/Edge.
-2.  Faites quelque test brut, comme essayer de tester votre site exclusivement avec le clavier, ou utiliser votre site avec un lecteur d'écran afin de voir s'il est navigable.
-3.  Tester sur une plateforme mobile, comme Android ou iOS.
+1. Tester sur quelque navigateurs stables sur votre ordinateur, comme Firefox, Safari, Chrome, ou IE/Edge.
+2. Faites quelque test brut, comme essayer de tester votre site exclusivement avec le clavier, ou utiliser votre site avec un lecteur d'écran afin de voir s'il est navigable.
+3. Tester sur une plateforme mobile, comme Android ou iOS.
 
 A cet instant, résolvez tous les problèmes que vous avez trouvé sur votre nouveau code.
 

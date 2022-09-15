@@ -1,16 +1,6 @@
 ---
 title: clip-path
 slug: Web/CSS/clip-path
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - Experimental
-  - リファレンス
-  - ウェブ
-  - recipe:css-property
-browser-compat: css.properties.clip-path
-translation_of: Web/CSS/clip-path
 ---
 {{CSSRef}}
 
@@ -594,7 +584,8 @@ clipPathSelect.addEventListener("change", function (evt) {
 - [Shapes in clipping and masking – and how to use them](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
 - CSS プロパティ: {{cssxref("mask")}}, {{cssxref("filter")}}
 - [SVG 効果の HTML コンテンツへの適用](/ja/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
- <li>SVG 属性:
+
+- SVG 属性:
 
   - {{SVGAttr("clip-path")}}
   - {{SVGAttr("clip-rule")}}

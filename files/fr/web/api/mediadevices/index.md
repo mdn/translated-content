@@ -87,19 +87,17 @@ function errorMsg(msg, error) {
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                               | Commentaire         |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Media Capture', '#mediadevices', 'MediaDevices')}} | {{Spec2('Media Capture')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.MediaDevices")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Media Capture et Streams API](/en-US/docs/Web/API/Media_Streams_API): l'API dont cette interface fait partie.
-- [API de capture d'écran](/en-US/docs/Web/API/Screen_Capture_API): L'API définissant la méthode {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}.
-- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [Media Capture et Streams API](/fr/docs/Web/API/Media_Streams_API): l'API dont cette interface fait partie.
+- [API de capture d'écran](/fr/docs/Web/API/Screen_Capture_API): L'API définissant la méthode {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}.
+- [WebRTC API](/fr/docs/Web/API/WebRTC_API)
 - {{domxref("Navigator.mediaDevices")}}: Renvoie une référence à un objet `MediaDevices` qui peut être utilisé pour accéder aux périphériques.
 - [CameraCaptureJS:](https://github.com/chrisjohndigital/CameraCaptureJS) Capture et lecture vidéo HTML5 à l'aide de `MediaDevices` et de l'API d'enregistrement MediaStream ([source sur GitHub](https://github.com/chrisjohndigital/CameraCaptureJS))
 - [OpenLang](https://github.com/chrisjohndigital/OpenLang): Application Web de laboratoire de langage vidéo HTML5 video utilisant `MediaDevices` et l'API d'enregistrement MediaStream pour l'enregistrement vidéo ([source sur GitHub](https://github.com/chrisjohndigital/OpenLang))

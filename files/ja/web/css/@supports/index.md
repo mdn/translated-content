@@ -49,7 +49,7 @@ JavaScript では `@supports` は CSS オブジェクトモデルインターフ
 
 第二の基本的な対応状況は関数の対応であり、これらの構文はすべてのブラウザーで対応されていますが、関数自体はまだ標準化の過程にあります。
 
-#### `selector()` {{Experimental_Inline}}
+#### `selector()` {{Experimental_Inline}}
 
 ブラウザーがテストされたセレクターの構文に対応しているかどうかを検査します。以下の例は、ブラウザーが[子結合子](/ja/docs/Web/CSS/Child_combinator)に対応していれば true を返します。
 
@@ -147,9 +147,9 @@ JavaScript では `@supports` は CSS オブジェクトモデルインターフ
 
 ```css
 @supports (--foo: green) {
-  body {
-    color: var(--varName);
-  }
+  body {
+    color: var(--varName);
+  }
 }
 ```
 
@@ -177,9 +177,9 @@ CSS Conditional Rules Level 4 仕様では、セレクターの対応を検査�
      nth-child(...)の `of` 引数に対応していないブラウザーでは、
      部分的に適用されます。 */
   :is(
-      :nth-child(1n of ul, ol) a,
+      :nth-child(1n of ul, ol) a,
       details > summary
-  ) {
+  ) {
     … /* :is(…) セレクターと :nth-child(…) の
           両方に対応している場合にのみ適用される CSS */
   }

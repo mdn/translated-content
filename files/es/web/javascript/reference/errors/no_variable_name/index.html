@@ -14,13 +14,13 @@ translation_of: Web/JavaScript/Reference/Errors/No_variable_name
 <pre class="syntaxbox">SyntaxError: missing variable name (Firefox)
 SyntaxError: Unexpected token = (Chrome)</pre>
 
-<h2 id="Error">Error </h2>
+<h2 id="Error">Error </h2>
 
 <p>{{jsxref("SyntaxError")}}</p>
 
 <h2 id="¿Qué_anda_mal">¿Qué anda mal?</h2>
 
-<p>Una variable no tiene nombre. Esto es un error recurrente en el código. Probablemente una coma está mal colocada en algún lugar o nombraste mal una variable. Completamente entendible. Nombrar cosas es difícil.</p>
+<p>Una variable no tiene nombre. Esto es un error recurrente en el código. Probablemente una coma está mal colocada en algún lugar o nombraste mal una variable. Completamente entendible. Nombrar cosas es difícil.</p>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
@@ -29,13 +29,13 @@ SyntaxError: Unexpected token = (Chrome)</pre>
 <pre class="brush: js example-bad">var = "foo";
 </pre>
 
-<p>Es bueno nombrar buenas variables. Todos hemos estado así.</p>
+<p>Es bueno nombrar buenas variables. Todos hemos estado así.</p>
 
 <pre class="brush: js example-good">var ohGodWhy = "foo";</pre>
 
 <h3 id="Palabras_reservadas_no_pueden_ser_nombre_de_variables">Palabras reservadas no pueden ser nombre de variables</h3>
 
-<p>Hay algunas palabras que son reservadas. No puedes usarlas para nombrar variables, lo siento :(</p>
+<p>Hay algunas palabras que son reservadas. No puedes usarlas para nombrar variables, lo siento :(</p>
 
 <pre class="brush: js example-bad">var debugger = "whoop";
 // SyntaxError: missing variable name
@@ -43,7 +43,7 @@ SyntaxError: Unexpected token = (Chrome)</pre>
 
 <h3 id="Declarar_multiples_variables">Declarar multiples variables</h3>
 
-<p>Toma especial atención a las comas cuando declaras multiples variables. ¿Hay un exceso de comas? ¿Accidentalmente añadiste comas en vez de punto y coma? </p>
+<p>Toma especial atención a las comas cuando declaras multiples variables. ¿Hay un exceso de comas? ¿Accidentalmente añadiste comas en vez de punto y coma? </p>
 
 <pre class="brush: js example-bad">var x, y = "foo",
 var x, = "foo"

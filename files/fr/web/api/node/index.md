@@ -76,21 +76,21 @@ _Hérite les propriétés de son parent {{domxref("EventTarget")}}_.
 
 ### Propriétés obsolètes
 
-- {{DOMxRef("Node.localName")}} {{obsolete_inline}}{{readonlyInline}}
+- {{DOMxRef("Node.localName")}} {{deprecated_inline}}{{readonlyInline}}
   - : Retourne un {{domxref("DOMString")}}  représentant la partie locale du nom d'un élément.
 
 > **Note :** Dans Firefox 3.5 et versions antérieures, la propriété saisit le nom local pour les éléments HTML (mais pas les éléments XHTML). Dans les versions ultérieures, cela ne se produit pas, donc la propriété est en minuscule pour HTML et XHTML.
 
-- {{DOMxRef("Node.namespaceURI")}} {{obsolete_inline}}{{readonlyInline}}
+- {{DOMxRef("Node.namespaceURI")}} {{deprecated_inline}}{{readonlyInline}}
   - : L'URI du "Namespace" de ce nom, ou  `null` s'il n'y en a pas.
 
 > **Note :** Dans Firefox 3.5 et versions antérieures, les éléments HTML ne contiennent aucun "namespace". Dans les versions ultérieures, les éléments HTML sont dans le "namespace" [`https://www.w3.org/1999/xhtml/`](https://www.w3.org/1999/xhtml/) pour HTML et XML.
 
-- {{DOMxRef("Node.prefix")}} {{obsolete_inline}}{{readonlyInline}}
+- {{DOMxRef("Node.prefix")}} {{deprecated_inline}}{{readonlyInline}}
   - : Est une {{domxref("DOMString")}} représentant le préfixe de l'espace de nom du nœud ou `null`  si aucun préfixe n'est spécifié.
-- {{DOMxRef("Node.nodePrincipal")}} {{Non-standard_inline}}{{Obsolete_Inline("gecko46")}}
+- {{DOMxRef("Node.nodePrincipal")}} {{Non-standard_inline}}{{deprecated_inline}}
   - : Un `nsIPrincipal` représentant le nœud principal.
-- {{DOMxRef("Node.rootNode")}} {{Obsolete_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("Node.rootNode")}} {{deprecated_inline}}{{ReadOnlyInline}}
   - : Retourne un objet {{DOMxRef("Node")}} représentant le noeud le plus haut dans l'arbre ou le noeud en cours s'il est le noeud le plus haut de l'arbre. Cette propriété a été remplacée par {{DOMxRef("Node.getRootNode()")}}.
 
 ## Méthodes
@@ -133,15 +133,15 @@ _Hérite des méthodes de son parent {{domxref("EventTarget")}}_.
 
 ### Méthodes obsolètes
 
-- {{domxref("Node.getFeature()")}} {{obsolete_inline}}
+- {{domxref("Node.getFeature()")}} {{deprecated_inline}}
   - : Permet à un utilisateur d'obtenir un objet {{DOMxRef("DOMUserData")}} à partir du nœud fourni.
-- {{domxref("Node.getUserData()")}} {{obsolete_inline}}
+- {{domxref("Node.getUserData()")}} {{deprecated_inline}}
   - : Permet à un utilisateur d'obtenir une {{domxref ("DOMUserData")}} (_donnée utilisateur_) à partir du nœud.
-- {{domxref("Node.hasAttributes()")}} {{obsolete_inline}}
+- {{domxref("Node.hasAttributes()")}} {{deprecated_inline}}
   - : Retourne un {{jsxref("Boolean")}} indiquant si l'élément possède des attributs ou non.
-- {{domxref("Node.isSupported()")}} {{obsolete_inline}}
+- {{domxref("Node.isSupported()")}} {{deprecated_inline}}
   - : Retourne une marque {{jsxref("Boolean")}} qui contient le résultat d'un test si l'implémentation DOM prend en compte une caractéristique spécifique et si cette fonctionnalité est prise en charge par le nœud spécifique.
-- {{domxref("Node.setUserData()")}} {{obsolete_inline}}
+- {{domxref("Node.setUserData()")}} {{deprecated_inline}}
   - : Permet à un utilisateur d'attacher ou d'enlever  {{domxref("DOMUserData")}} du nœud.
 
 ## Exemples
@@ -163,7 +163,9 @@ function DOMComb (oParent, oCallback) {
 
 #### Syntaxe
 
-    DOMComb(parentNode, callbackFunction);
+```js
+DOMComb(parentNode, callbackFunction);
+```
 
 #### Description
 
@@ -174,7 +176,7 @@ Suit le cycle récursif de tous les nœuds enfants d'un `parentNode` et le `pare
 - `parentNode`
   - : Le nœud parent (`Node Object`)
 - `callbackFunction`
-  - : La fonction de rappel ([`Function`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)).
+  - : La fonction de rappel ([`Function`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function)).
 
 #### Exemples d'utilisation
 
@@ -208,13 +210,8 @@ document.body.removeAll();
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#interface-node', 'Node')}}                 | {{Spec2('DOM WHATWG')}} | Supprime les propriétés suivantes : `attributes`, `namespaceURI`, `prefix`, et `localName`. Supprime les méthodes suivantes : `isSupported()`, `hasAttributes()`, `getFeature()`, `setUserData()`, et `getUserData()`.                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| {{SpecName('DOM3 Core', 'core.html#ID-1950641247', 'Node')}}         | {{Spec2('DOM3 Core')}}     | Les méthodes `insertBefore()`, `replaceChild()`, `removeChild()`, et`appendChild()` renvoient un autre type d'erreur (`NOT_SUPPORTED_ERR`) si elles sont appelées par {{domxref("Document")}}. La méthode `normalize()`  a été modifiée, ainsi ce mode {{domxref("Text")}} peut aussi être normalisé si la marque {{domxref("DOMConfiguration")}} est définie. Ajout des méthodes suivantes : `compareDocumentPosition()`, `isSameNode()`, `lookupPrefix()`, `isDefaultNamespace()`, `lookupNamespaceURI()`, `isEqualNode()`, `getFeature()`, `setUserData()`, et `getUserData().` Ajout des propriétés suivantes : `baseURI` et `textContent`. |
-| {{SpecName('DOM2 Core', 'core.html#ID-1950641247', 'Node')}}         | {{Spec2('DOM2 Core')}}     | La propriété `ownerDocument`a été légèrement modifiée pour que  {{domxref("DocumentFragment")}} renvoie également `null`. Ajout des propriétés suivantes : `namespaceURI`, `prefix`, et `localName`. Ajout des méthodes suivantes : `normalize()`, `isSupported()` et `hasAttributes()`.                                                                                                                                                                                                                                                                                                                                                                      |
-| {{SpecName('DOM1', 'level-one-core.html#ID-1950641247', 'Node')}} | {{Spec2('DOM1')}}         | Définition initiale                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node")}}
+{{Compat}}

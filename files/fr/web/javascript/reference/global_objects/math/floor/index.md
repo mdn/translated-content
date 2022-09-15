@@ -17,7 +17,9 @@ La fonction **`Math.floor(x)`** renvoie le plus grand entier qui est inférieur 
 
 ## Syntaxe
 
-    Math.floor(x)
+```js
+Math.floor(x)
+```
 
 ### Paramètres
 

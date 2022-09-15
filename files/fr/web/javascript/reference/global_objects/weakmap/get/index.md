@@ -19,7 +19,9 @@ La méthode **`get()`** permet de renvoyer un élément donné d'un objet `WeakM
 
 ## Syntaxe
 
-    wm.get(clé);
+```js
+wm.get(clé);
+```
 
 ### Paramètre
 

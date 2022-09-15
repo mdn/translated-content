@@ -17,7 +17,9 @@ Le constructeur **`IntersectionObserver()`** crée et retourne un nouvel objet [
 
 ## Syntaxe
 
-    let observer = new IntersectionObserver(callback[, options]);
+```js
+let observer = new IntersectionObserver(callback[, options]);
+```
 
 ### Paramètres
 
@@ -64,10 +66,8 @@ let observer = new IntersectionObserver(myObserverCallback, {
 
 ## Spécifications
 
-| Spécification                                                                                                                                                    | Statut                                       | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('IntersectionObserver','#dom-intersectionobserver-intersectionobserver','IntersectionObserver constructor')}} | {{Spec2('IntersectionObserver')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IntersectionObserver.IntersectionObserver")}}
+{{Compat}}

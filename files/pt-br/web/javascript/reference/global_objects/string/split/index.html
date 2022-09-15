@@ -41,7 +41,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/split
 <dl>
  <dt><code>limite</code></dt>
  <dd>
- <p>Opcional. Um número inteiro não negativo especificando um limite no número de divisões a serem encontradas. O método <code>split()</code> ainda dividirá em cada ocorrência do separador, até que o número de itens divididos corresponda ao limite ou que a string fique aquém do separador.</p>
+ <p>Opcional. Um número inteiro não negativo especificando um limite no número de divisões a serem encontradas. O método <code>split()</code> ainda dividirá em cada ocorrência do separador, até que o número de itens divididos corresponda ao limite ou que a string fique aquém do separador.</p>
 
  <ul>
   <li>O array pode conter menos entradas do que o <code>limit</code> se o final da string for alcançado antes que o limite seja atingido.</li>
@@ -56,15 +56,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/split
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Quando encontrado, o caractere designado como o <code>separator</code> é removido da string e as substrings são retornadas em um array. Se o <code>separator</code> não for encontrado ou for omitido, o array irá conter um elemento consistindo da string inteira. Se o <code>separator</code> for uma string vazia, <code>str</code> será convertida em um array de caracteres.</p>
+<p>Quando encontrado, o caractere designado como o <code>separator</code> é removido da string e as substrings são retornadas em um array. Se o <code>separator</code> não for encontrado ou for omitido, o array irá conter um elemento consistindo da string inteira. Se o <code>separator</code> for uma string vazia, <code>str</code> será convertida em um array de caracteres.</p>
 
 <p>Se o separador for uma expressão regular que contenha parênteses de captura, cada vez que o <code>separator</code> for encontrado, os resultados (incluindo qualquer resultado <code>undefined</code>) dos parênteses de captura serão emendados ao array de saída. Entretanto, nem todos os navegadores possuem suporte a isso.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Usando_split">Usando <code>split()</code></h3>
+<h3 id="Usando_split">Usando <code>split()</code></h3>
 
-<p>Quando a string está vazia, o <code>split()</code> irá retornar um array contendo uma string vazia ao invés de um array vazio. Se a string e o separador forem ambos strings vazias, um array vazio será retornado.</p>
+<p>Quando a string está vazia, o <code>split()</code> irá retornar um array contendo uma string vazia ao invés de um array vazio. Se a string e o separador forem ambos strings vazias, um array vazio será retornado.</p>
 
 <pre class="brush: js notranslate">const myString = ''
 const splits = myString.split()
@@ -73,7 +73,7 @@ console.log(splits);
 
 // retorna [""]</pre>
 
-<p>O exemplo a seguir define uma função que divide uma string em um array de strings usando o separador especificado. Depois de dividir a string, a função exibe mensagens indicando a string original (antes da divisão), o separador usado, o número de elementos no array e os elementos individuais do array.</p>
+<p>O exemplo a seguir define uma função que divide uma string em um array de strings usando o separador especificado. Depois de dividir a string, a função exibe mensagens indicando a string original (antes da divisão), o separador usado, o número de elementos no array e os elementos individuais do array.</p>
 
 <pre class="brush: js notranslate">function splitString(stringToSplit, separator) {
   var arrayOfStrings = stringToSplit.split(separator);
@@ -111,7 +111,7 @@ O array possui 12 elementos: Jan / Feb / Mar / Apr / May / Jun / Jul / Aug / Sep
 
 <h3 id="Removendo_espaços_de_uma_string">Removendo espaços de uma string</h3>
 
-<p>No exemplo a seguir, <code>split()</code> procura por 0 ou mais espaços seguidos por um ponto e vírgula seguido por 0 ou mais espaços e, quando encontrar, remove os espaços e os pontos e vírgulas da string.  <code>nameList</code> é o array retornado como resultado do <code>split()</code>.</p>
+<p>No exemplo a seguir, <code>split()</code> procura por 0 ou mais espaços seguidos por um ponto e vírgula seguido por 0 ou mais espaços e, quando encontrar, remove os espaços e os pontos e vírgulas da string.  <code>nameList</code> é o array retornado como resultado do <code>split()</code>.</p>
 
 <pre class="brush: js notranslate">var names = 'Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand ';
 
@@ -123,7 +123,7 @@ var nameList = names.split(re);
 console.log(nameList);
 </pre>
 
-<p>O retorno do código acima são duas linhas. A primeira linha registra a string original e a segunda linha registra o array resultante.</p>
+<p>O retorno do código acima são duas linhas. A primeira linha registra a string original e a segunda linha registra o array resultante.</p>
 
 <pre class="notranslate">Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand
 [ "Harry Trump", "Fred Barney", "Helen Rigby", "Bill Abel", "Chris Hand " ]
@@ -131,7 +131,7 @@ console.log(nameList);
 
 <h3 id="Retornando_um_número_limitado_de_divisões">Retornando um número limitado de divisões</h3>
 
-<p>No exemplo a seguir, o <code>split()</code> procura por 0 ou mais espaços em uma string e retorna as 3 primeiras divisões que encontrar.</p>
+<p>No exemplo a seguir, o <code>split()</code> procura por 0 ou mais espaços em uma string e retorna as 3 primeiras divisões que encontrar.</p>
 
 <pre class="brush: js notranslate">var myString = 'Hello World. How are you doing?';
 var splits = myString.split(' ', 3);
@@ -163,7 +163,7 @@ console.log(splits);
 <p><strong>Nota: </strong><code>\d</code> corresponde à classe de caracteres para dígitos entre 0 e 9.</p>
 </div>
 
-<h3 id="Revertendo_uma_String_usando_split">Revertendo uma String usando <code>split()</code></h3>
+<h3 id="Revertendo_uma_String_usando_split">Revertendo uma String usando <code>split()</code></h3>
 
 <div class="blockIndicator warning">
 <p>Esta não é a melhor maneira de reverter uma string:</p>
@@ -220,55 +220,7 @@ const strReverse = str.split(/(?:)/u).reverse().join('')
 
 <h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte Básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte Básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.String.split")}}
 
 <h2 id="sect1"></h2>
 

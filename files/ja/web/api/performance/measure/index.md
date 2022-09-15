@@ -1,14 +1,6 @@
 ---
 title: performance.measure()
 slug: Web/API/Performance/measure
-tags:
-  - API
-  - メソッド
-  - リファレンス
-  - ウェブパフォーマンス
-  - ウェブワーカー
-browser-compat: api.Performance.measure
-translation_of: Web/API/Performance/measure
 ---
 {{APIRef("User Timing API")}}
 

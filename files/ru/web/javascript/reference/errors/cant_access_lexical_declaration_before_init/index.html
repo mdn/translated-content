@@ -21,13 +21,13 @@ ReferenceError: 'x' is not defined (Chrome)
 
 <h2 id="Что_случилось">Что случилось?</h2>
 
-<p>Попытка доступа к лексической переменной до её инициализации. Это может произойти в любом блоке, если попытаться обратиться к переменной, объявленной с помощью ключевых слов <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code> или <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code> до того, как им было присвоено значение.</p>
+<p>Попытка доступа к лексической переменной до её инициализации. Это может произойти в любом блоке, если попытаться обратиться к переменной, объявленной с помощью ключевых слов <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code> или <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code> до того, как им было присвоено значение.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
 <h3 id="Неправильно">Неправильно</h3>
 
-<p>Здесь переменная "foo" заново объявляется внутри блока с помощью ключевого слова <code>let</code>.</p>
+<p>Здесь переменная "foo" заново объявляется внутри блока с помощью ключевого слова <code>let</code>.</p>
 
 <pre class="brush: js example-bad">function test() {
   let foo = 33;
@@ -42,7 +42,7 @@ test();
 
 <h3 id="Правильно">Правильно</h3>
 
-<p>Чтобы изменить "foo" в теле выражения if, надо убрать ключевое слово <code>let</code> и таким образом избавиться от повторного объявления.</p>
+<p>Чтобы изменить "foo" в теле выражения if, надо убрать ключевое слово <code>let</code> и таким образом избавиться от повторного объявления.</p>
 
 <pre class="brush: js example-good">function test(){
    let foo = 33;

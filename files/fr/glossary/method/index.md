@@ -12,11 +12,11 @@ Une **méthode** est une {{glossary("fonction", "fonction")}} (`function`) qui e
 
 > **Note :** En JavaScript, les fonctions sont elles-mêmes des objets. Dans ce contexte, une méthode est plus précisément une {{glossary("object reference","référence vers un objet")}} de type `function`.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 
-- [Méthode (informatique)](<https://fr.wikipedia.org/wiki/M%C3%A9thode_(informatique)>) sur Wikipedia
+- [Méthode (informatique)](https://fr.wikipedia.org/wiki/M%C3%A9thode_(informatique)) sur Wikipédia
 - [Définir une méthode en JavaScript](/fr/docs/Web/JavaScript/Reference/Fonctions/D%C3%A9finition_de_m%C3%A9thode) (comparaison entre la syntaxe traditionnelle et la version proposée pour ECMAScript 6)
 
 ### Référence technique

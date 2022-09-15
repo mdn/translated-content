@@ -85,14 +85,14 @@ urlpatterns = [
 
 Les données peuvent être encodées dans une requête HTTP de différentes manières. Une demande HTTP GET pour obtenir des fichiers ou des données du serveur peut coder les données requises dans les paramètres d'URL ou dans la structure d'URL. Une demande HTTP POST de mise à jour une ressource sur le serveur inclura plutôt les informations de mise à jour en tant que "données POST" dans le corps de la demande. La requête HTTP peut également inclure des informations sur la session ou l'utilisateur en cours dans un cookie côté client. Les frameworks web fournissent des mécanismes appropriés au langage de programmation pour accéder à ces informations. Par exemple, l'objet HttpRequest que Django transmet à chaque fonction d'affichage contient des méthodes et des propriétés permettant d'accéder à l'URL cible, le type de demande (par exemple, un HTTP GET), les paramètres GET ou POST, les données de cookie et de session, etc. Django peut également transmettre informations codées dans la structure de l'URL en définissant des "modèles de capture" dans le mappeur d'URL (voir le dernier fragment de code dans la section ci-dessus).
 
-### extraction et simplification de l’accès à la base de données
+### Extraction et simplification de l’accès à la base de données
 
 Les sites web utilisent des bases de données pour stocker des informations à partager avec les utilisateurs et sur les utilisateurs. Les infrastructures web fournissent souvent une couche de base de données qui extrait les opérations de lecture, d'écriture, de requête et de suppression de base de données. Cette couche d'extraction est appelée ORM (Object-Relational Mapper).
 
 L'utilisation d'un ORM présente deux avantages :
 
-1.  Vous pouvez remplacer la base de données sous-jacente sans avoir nécessairement besoin de changer le code qui l'utilise. Cela permet aux développeurs d’optimiser les caractéristiques des différentes bases de données en fonction de leur utilisation.
-2.  La validation de base des données peut être mise en œuvre avec le framework. Il est ainsi plus facile et plus sûr de vérifier que les données sont stockées dans le type de champ de base de données approprié, qu’elles ont le format correct (par exemple une adresse électronique) et qu’elles ne sont en aucun cas malveillantes (les pirates peuvent utiliser certains modèles de code pour agir mal, telles que la suppression des enregistrements de la base de données).
+1. Vous pouvez remplacer la base de données sous-jacente sans avoir nécessairement besoin de changer le code qui l'utilise. Cela permet aux développeurs d’optimiser les caractéristiques des différentes bases de données en fonction de leur utilisation.
+2. La validation de base des données peut être mise en œuvre avec le framework. Il est ainsi plus facile et plus sûr de vérifier que les données sont stockées dans le type de champ de base de données approprié, qu’elles ont le format correct (par exemple une adresse électronique) et qu’elles ne sont en aucun cas malveillantes (les pirates peuvent utiliser certains modèles de code pour agir mal, telles que la suppression des enregistrements de la base de données).
 
 Par exemple, le framework web Django fournit un ORM et fait référence à l'objet utilisé pour définir la structure d'un enregistrement en tant que modèle. Le modèle spécifie les types de champs à stocker, ce qui peut fournir une validation au niveau du champ sur les informations pouvant être stockées (par exemple, un champ de courrier électronique autoriserait uniquement les adresses de courrier électronique valides). Les définitions de champ peuvent également spécifier leur taille maximale, leurs valeurs par défaut, leurs options de liste de sélection, leur aide pour la documentation, leur libellé pour les formulaires, etc. Le modèle ne spécifie aucune information sur la base de données sous-jacente, il s'agit d'un paramètre de configuration susceptible d'être modifié séparément de notre code.
 
@@ -189,13 +189,13 @@ Si vous débutez en programmation, vous choisirez probablement un framework faci
 
 > **Note :** Let's go to the main websites for [Django](https://www.djangoproject.com/) (Python) and [Express](http://expressjs.com/) (Node/JavaScript) and check out their documentation and community.
 >
-> 1.  Navigate to the main sites (linked above)
+> 1. Navigate to the main sites (linked above)
 >
 >     - Click on the Documentation menu links (named things like "Documentation, Guide, API Reference, Getting Started".
 >     - Can you see topics showing how to set up URL routing, templates, and databases/models?
 >     - Are the documents clear?
 >
-> 2.  Navigate to mailing lists for each site (accessible from Community links).
+> 2. Navigate to mailing lists for each site (accessible from Community links).
 >
 >     - How many questions have been posted in the last few days
 >     - How many have responses?

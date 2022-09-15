@@ -17,7 +17,9 @@ La propriété **`nodeType`** peut être utilisée pour distinguer les uns des a
 
 ## Syntaxe
 
-    Type = node .nodeType
+```js
+Type = node .nodeType
+```
 
 Renvoie un entier (_integer_) qui spécifie le type du noeud ; les valeurs possibles sont listées dans [Constantes](#constantes).
 
@@ -53,7 +55,7 @@ Les constantes suivantes ont été dépréciées et ne doivent plus être utilis
         Un {{domxref("Attr", "Attribut")}} d'un
         {{domxref("Element")}}. Les attributs d'élément n'implémentent
         plus l'interface {{domxref("Node")}} dans la spécification
-        {{SpecName("DOM4")}}.
+        DOM4.
       </td>
     </tr>
     <tr>
@@ -61,7 +63,7 @@ Les constantes suivantes ont été dépréciées et ne doivent plus être utilis
       <td><code>4</code></td>
       <td>
         Une {{domxref("CDATASection")}}. Supprimée dans la
-        spécification {{SpecName("DOM4")}}.
+        spécification DOM4.
       </td>
     </tr>
     <tr>
@@ -69,7 +71,7 @@ Les constantes suivantes ont été dépréciées et ne doivent plus être utilis
       <td>5</td>
       <td>
         Un noeud référence d'entité XML. Supprimé dans la spécification
-        {{SpecName("DOM4")}}.
+        DOM4.
       </td>
     </tr>
     <tr>
@@ -77,7 +79,7 @@ Les constantes suivantes ont été dépréciées et ne doivent plus être utilis
       <td>6</td>
       <td>
         Un noeud <code>&#x3C;!ENTITY ...></code> XML. Supprimé dans la
-        spécificatioin {{SpecName("DOM4")}}.
+        spécificatioin DOM4.
       </td>
     </tr>
     <tr>
@@ -85,7 +87,7 @@ Les constantes suivantes ont été dépréciées et ne doivent plus être utilis
       <td>12</td>
       <td>
         Un noeud <code>&#x3C;!NOTATION ...></code> XML. Supprimé dans la
-        spécification {{SpecName("DOM4")}}.
+        spécification DOM4.
       </td>
     </tr>
   </tbody>
@@ -121,13 +123,8 @@ if (node.nodeType != Node.COMMENT_NODE)
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire                                                                                            |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| {{SpecName('DOM WHATWG', '#dom-node-nodetype', 'Node.nodeType')}}         | {{Spec2('DOM WHATWG')}} | Sont dépréciés les types `ATTRIBUTE_NODE, CDATA_SECTION_NODE, ENTITY_REFERENCE_NODE et NOTATION_NODE`. |
-| {{SpecName('DOM3 Core', 'core.html#ID-1950641247', 'Node.nodeType')}}     | {{Spec2('DOM3 Core')}}     | Pas de changement.                                                                                     |
-| {{SpecName('DOM2 Core', 'core.html#ID-111237558', 'Node.nodeType')}}     | {{Spec2('DOM2 Core')}}     | Pas de changement.                                                                                     |
-| {{SpecName('DOM1', 'level-one-core.html#ID-111237558', 'Node.nodeType')}} | {{Spec2('DOM1')}}         | Définition initiale.                                                                                   |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.nodeType")}}
+{{Compat}}

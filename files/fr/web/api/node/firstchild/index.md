@@ -15,7 +15,9 @@ La propriété en lecture seule **`Node.firstChild` r**envoie le premier nœud e
 
 ## Syntaxe
 
-    var childNode = node.firstChild;
+```js
+var childNode = node.firstChild;
+```
 
 ## Exemple
 
@@ -51,15 +53,10 @@ Si ces espaces sont retirés du code source, les nœuds `#text` n'apparaîtront 
 
 Pour éviter le problème avec `node.firstChild`  renvoyant des noeuds `#text` ou `#comment`,  {{domxref("ParentNode.firstElementChild")}}  peut être utilisé pour renvoyer seulement le premier noeud élément. Toutefois,  `node.firstElementChild` nécessite un "shim" pour Internet Explorer 9 et antérieurs.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG', '#dom-node-firstchild', 'Node.firstChild')}}         | {{Spec2('DOM WHATWG')}} | Pas de changement   |
-| {{SpecName('DOM3 Core', 'core.html#ID-169727388', 'Node.firstChild')}}         | {{Spec2('DOM3 Core')}}     | Pas de changement   |
-| {{SpecName('DOM2 Core', 'core.html#ID-169727388', 'Node.firstChild')}}         | {{Spec2('DOM2 Core')}}     | Pas de changement   |
-| {{SpecName('DOM1', 'level-one-core.html#ID-169727388', 'Node.firstChild')}} | {{Spec2('DOM1')}}         | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.firstChild")}}
+{{Compat}}

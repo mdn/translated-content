@@ -1,14 +1,6 @@
 ---
 title: background-origin
 slug: Web/CSS/background-origin
-tags:
-  - CSS
-  - CSS 背景
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.background-origin
-translation_of: Web/CSS/background-origin
 ---
 {{CSSRef}}
 

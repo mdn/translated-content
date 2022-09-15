@@ -37,8 +37,10 @@ La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`sandbox`** 
 
 ## Syntaxe
 
-    Content-Security-Policy: sandbox;
-    Content-Security-Policy: sandbox <valeur>;
+```
+Content-Security-Policy: sandbox;
+Content-Security-Policy: sandbox <valeur>;
+```
 
 Où `<valeur>` peut optionnellement être une valeur parmi :
 
@@ -54,7 +56,7 @@ Où `<valeur>` peut optionnellement être une valeur parmi :
 - `allow-orientation-lock`
   - : Autorise la page à désactiver la possibilité de verrouiller l'orientation de l'écran.
 - `allow-pointer-lock`
-  - : Autorise la page à utiliser l'[API Pointer Lock](/en-US/docs/WebAPI/Pointer_Lock).
+  - : Autorise la page à utiliser l'[API Pointer Lock](/fr/docs/WebAPI/Pointer_Lock).
 - `allow-popups`
   - : Autorise les fenêtres intruses (comme avec `window.open`, `target="_blank"`, `showModalDialog`). Si ce mot-clé n'est pas utilisée, cette fonctionnalité échouera en silence.
 - `allow-popups-to-escape-sandbox`
@@ -66,7 +68,7 @@ Où `<valeur>` peut optionnellement être une valeur parmi :
 - `allow-scripts`
   - : Autorise la page à exécuter des scripts (mais non créer des fenêtres intruses). Si ce mot-clé n'est pas utilisée, cette opération n'est pas permise.
 - `allow-storage-access-by-user-activation` {{experimental_inline}}
-  - : Laisse les requêtes de ressources accéder à l'espace de stockage du parent avec l'[API Storage Access](/en-US/docs/Web/API/Storage_Access_API).
+  - : Laisse les requêtes de ressources accéder à l'espace de stockage du parent avec l'[API Storage Access](/fr/docs/Web/API/Storage_Access_API).
 - `allow-top-navigation`
   - : Autorise la page à charger du contenu au niveau supérieur de contexte navigationnel. Si ce mot-clé n'est pas utilisé, cette opération n'est pas permise.
 - `allow-top-navigation-by-user-activation`

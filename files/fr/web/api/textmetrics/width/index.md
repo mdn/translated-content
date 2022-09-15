@@ -15,7 +15,9 @@ La propriété en lecture seule **TextMetrics.width** contient en pixels CSS la 
 
 ## Syntaxe
 
-    readonly metrics.width;
+```js
+readonly metrics.width;
+```
 
 ## Exemples
 
@@ -37,13 +39,11 @@ texte.width; // 16;
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-textmetrics-width", "TextMetrics.width")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.TextMetrics.width")}}
+{{Compat}}
 
 ## Voir aussi
 

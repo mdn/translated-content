@@ -15,7 +15,7 @@ La propriété en lecture seule **`applicationCache`** de l'interface {{domxref(
 var nameObj = self.applicationCache;
 ```
 
-### valeur
+### Valeur
 
 Un {{domxref("ApplicationCache")}}.
 

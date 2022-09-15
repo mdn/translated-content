@@ -1,17 +1,6 @@
 ---
 title: Intl.NumberFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
-tags:
-  - 国際化
-  - Intl
-  - JavaScript
-  - ローカライゼーション
-  - メソッド
-  - NumberFormat
-  - プロトタイプ
-  - リファレンス
-browser-compat: javascript.builtins.Intl.NumberFormat.format
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 ---
 {{JSRef}}
 
@@ -46,7 +35,7 @@ format(number)
 var options = { style: 'currency', currency: 'RUB' };
 var numberFormat = new Intl.NumberFormat('ru-RU', options);
 console.log(numberFormat.format(654321.987));
-// → "654 321,99 руб."
+// → "654 321,99 руб."
 ```
 
 ### `format` と `map` の使用

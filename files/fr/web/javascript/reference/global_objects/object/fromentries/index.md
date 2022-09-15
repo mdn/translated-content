@@ -17,7 +17,9 @@ La méthode **`Object.fromEntries()`** permet de transformer une liste de paires
 
 ## Syntaxe
 
-    Object.fromEntries(iterable);
+```js
+Object.fromEntries(iterable);
+```
 
 ### Paramètres
 

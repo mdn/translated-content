@@ -14,7 +14,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/map
 ---
 <div>{{JSRef}}</div>
 
-<p>El método <code><strong>map()</strong></code> crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.</p>
+<p>El método <code><strong>map()</strong></code> crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.</p>
 
 <pre class="brush: js">var numbers = [1, 5, 10, 15];
 var doubles = numbers.map(function(x) {
@@ -58,21 +58,21 @@ var roots = numbers.map(function(num) {
 
 <h2 id="Description" name="Description">Descripción</h2>
 
-<p><code>map</code> llama a la función <code>callback</code> provista <strong>una vez por elemento</strong> de un array, en orden, y construye un nuevo array con los resultados. <code>callback</code> se invoca sólo para los índices del array que tienen valores asignados; no se invoca en los índices que han sido borrados o a los que no se ha asignado valor.</p>
+<p><code>map</code> llama a la función <code>callback</code> provista <strong>una vez por elemento</strong> de un array, en orden, y construye un nuevo array con los resultados. <code>callback</code> se invoca sólo para los índices del array que tienen valores asignados; no se invoca en los índices que han sido borrados o a los que no se ha asignado valor.</p>
 
-<p><code>callback</code> es llamada con tres argumentos: el valor del elemento, el índice del elemento, y el objeto array que se está recorriendo.</p>
+<p><code>callback</code> es llamada con tres argumentos: el valor del elemento, el índice del elemento, y el objeto array que se está recorriendo.</p>
 
-<p>Si se indica un parámetro <code>thisArg</code> a un <code>map</code>, se usará como valor de <code>this</code> en la función <code>callback</code>. En otro caso, se pasará {{jsxref("Global_Objects/undefined", "undefined")}} como su valor <code>this</code>. El valor de <code>this</code> observable por el <code>callback</code> se determina de acuerdo a las <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">reglas habituales para determinar el valor this visto por una función.</a></p>
+<p>Si se indica un parámetro <code>thisArg</code> a un <code>map</code>, se usará como valor de <code>this</code> en la función <code>callback</code>. En otro caso, se pasará {{jsxref("Global_Objects/undefined", "undefined")}} como su valor <code>this</code>. El valor de <code>this</code> observable por el <code>callback</code> se determina de acuerdo a las <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">reglas habituales para determinar el valor this visto por una función.</a></p>
 
-<p><code>map</code> no modifica el array original en el que es llamado (aunque <code>callback</code>, si es llamada, puede modificarlo).</p>
+<p><code>map</code> no modifica el array original en el que es llamado (aunque <code>callback</code>, si es llamada, puede modificarlo).</p>
 
-<p>El rango de elementos procesado por <code>map</code> es establecido antes de la primera invocación del <code>callback</code>. Los elementos que sean agregados al array después de que la llamada a <code>map </code>comience no serán visitados por el <code>callback</code>. Si los elementos existentes del array son modificados o eliminados, su valor pasado al <code>callback</code> será el valor en el momento que el <code>map</code> lo visita; los elementos que son eliminados no son visitados.</p>
+<p>El rango de elementos procesado por <code>map</code> es establecido antes de la primera invocación del <code>callback</code>. Los elementos que sean agregados al array después de que la llamada a <code>map </code>comience no serán visitados por el <code>callback</code>. Si los elementos existentes del array son modificados o eliminados, su valor pasado al <code>callback</code> será el valor en el momento que el <code>map</code> lo visita; los elementos que son eliminados no son visitados.</p>
 
 <h2 id="Examples" name="Examples">Ejemplos</h2>
 
-<h3 id="Example_Mapping_an_array_of_numbers_to_an_array_of_square_roots" name="Example:_Mapping_an_array_of_numbers_to_an_array_of_square_roots">Procesar un array de números aplicándoles la raíz cuadrada</h3>
+<h3 id="Example_Mapping_an_array_of_numbers_to_an_array_of_square_roots" name="Example:_Mapping_an_array_of_numbers_to_an_array_of_square_roots">Procesar un array de números aplicándoles la raíz cuadrada</h3>
 
-<p>El siguiente código itera sobre un array de números, aplicándoles la raíz cuadrada a cada uno de sus elementos, produciendo un nuevo array a partir del inicial.</p>
+<p>El siguiente código itera sobre un array de números, aplicándoles la raíz cuadrada a cada uno de sus elementos, produciendo un nuevo array a partir del inicial.</p>
 
 <pre class="brush: js">var numeros= [1, 4, 9];
 var raices = numeros.map(Math.sqrt);
@@ -80,7 +80,7 @@ var raices = numeros.map(Math.sqrt);
 // numeros aún mantiene [1, 4, 9]
 </pre>
 
-<h3 id="Example_Mapping_an_array_of_numbers_to_an_array_of_square_roots" name="Example:_Mapping_an_array_of_numbers_to_an_array_of_square_roots">Usando map para dar un nuevo formato a los objetos de un array</h3>
+<h3 id="Example_Mapping_an_array_of_numbers_to_an_array_of_square_roots" name="Example:_Mapping_an_array_of_numbers_to_an_array_of_square_roots">Usando map para dar un nuevo formato a los objetos de un array</h3>
 
 <p>El siguiente código toma un array de objetos y crea un nuevo array que contiene los nuevos objetos formateados.</p>
 
@@ -104,7 +104,7 @@ var reformattedArray = kvArray.map(function(obj){
 
 <h3 id="Example_Mapping_an_array_of_numbers_using_a_function_containing_an_argument" name="Example:_Mapping_an_array_of_numbers_using_a_function_containing_an_argument">Mapear un array de números usando una función con un argumento</h3>
 
-<p>El siguiente código muestra cómo trabaja <code>map </code>cuando se utiliza una función que requiere de un argumento. El argumento será asignado automáticamente a cada elemento del arreglo conforme <code>map </code>itera el arreglo original.</p>
+<p>El siguiente código muestra cómo trabaja <code>map </code>cuando se utiliza una función que requiere de un argumento. El argumento será asignado automáticamente a cada elemento del arreglo conforme <code>map </code>itera el arreglo original.</p>
 
 <pre class="brush: js">var numeros = [1, 4, 9];
 var dobles  = numeros.map(function(num) {
@@ -115,18 +115,18 @@ var dobles  = numeros.map(function(num) {
 // numeros sigue siendo [1, 4, 9]
 </pre>
 
-<h3 id="Example_using_map_generically" name="Example:_using_map_generically">Usando <code>map</code> de forma genérica</h3>
+<h3 id="Example_using_map_generically" name="Example:_using_map_generically">Usando <code>map</code> de forma genérica</h3>
 
-<p>Este ejemplo muestra como usar <code>map </code>en {{jsxref("Global_Objects/String", "String")}} para obtener un arreglo de bytes en codifcación ASCII representando el valor de los caracteres:</p>
+<p>Este ejemplo muestra como usar <code>map </code>en {{jsxref("Global_Objects/String", "String")}} para obtener un arreglo de bytes en codifcación ASCII representando el valor de los caracteres:</p>
 
 <pre class="brush: js">var map = Array.prototype.map;
 var valores = map.call('Hello World', function(char) { return char.charCodeAt(0); });
 // valores ahora tiene [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
 </pre>
 
-<h3 id="Example_using_map_generically_querySelectorAll" name="Example:_using_map_generically_querySelectorAll">Usando <code>map</code> genérico con <code>querySelectorAll</code></h3>
+<h3 id="Example_using_map_generically_querySelectorAll" name="Example:_using_map_generically_querySelectorAll">Usando <code>map</code> genérico con <code>querySelectorAll</code></h3>
 
-<p>Este ejemplo muestra como iterar sobre una colección de objetos obtenidos por <code>querySelectorAll</code>. En este caso obtenemos todas las opciones seleccionadas en pantalla y se imprimen en la consola:</p>
+<p>Este ejemplo muestra como iterar sobre una colección de objetos obtenidos por <code>querySelectorAll</code>. En este caso obtenemos todas las opciones seleccionadas en pantalla y se imprimen en la consola:</p>
 
 <pre class="brush: js">var elems = document.querySelectorAll('select option:checked');
 var values = [].map.call(elems, function(obj) {
@@ -134,7 +134,7 @@ var values = [].map.call(elems, function(obj) {
 });
 </pre>
 
-<h3 id="Usando_map_para_invertir_una_cadena">Usando <code>map</code> para invertir una cadena</h3>
+<h3 id="Usando_map_para_invertir_una_cadena">Usando <code>map</code> para invertir una cadena</h3>
 
 <pre class="brush: js">var str = '12345';
 [].map.call(str, function(x) {
@@ -147,9 +147,9 @@ var values = [].map.call(elems, function(obj) {
 
 <h3 id="Example_Tricky_use_case" name="Example:_Tricky_use_case">Caso de uso engañoso</h3>
 
-<p><a href="http://www.wirfs-brock.com/allen/posts/166">(inspirado por este artículo)</a></p>
+<p><a href="http://www.wirfs-brock.com/allen/posts/166">(inspirado por este artículo)</a></p>
 
-<p>Es común utilizar el callback con un argumento (el elemento siendo pasado). Ciertas funciones son también usadas comunmente con un argumento, aún cuando toman argumentos adicionales opcionales.  Estos hábitos pueden llevar a comportamientos confusos.</p>
+<p>Es común utilizar el callback con un argumento (el elemento siendo pasado). Ciertas funciones son también usadas comunmente con un argumento, aún cuando toman argumentos adicionales opcionales.  Estos hábitos pueden llevar a comportamientos confusos.</p>
 
 <pre class="brush: js">// Considera:
 ['1', '2', '3'].map(parseInt);
@@ -176,7 +176,7 @@ function returnInt(element) {
 
 <h2 id="Polyfill" name="Polyfill">Polyfill</h2>
 
-<p><code>map</code> fue agregado al estandar ECMA-262 en la 5th edición; por lo tanto podría no estar presente en todas la implementaciones del estándar. Puedes sobrepasar esto insertando el siguiente código al comienzo de tus scripts, permitiendo el uso de <code>map</code> en implementaciones que no lo soportan de forma nativa. Este algoritmo es exactamente el mismo especificado en ECMA-262, 5th edición, asumiendo {{jsxref("Global_Objects/Object", "Object")}}, {{jsxref("Global_Objects/TypeError", "TypeError")}}, y {{jsxref("Global_Objects/Array", "Array")}} tienen sus valores originales y que el <code>callback.call</code> evalua el valor original de <code>{{jsxref("Function.prototype.call")}}</code>.</p>
+<p><code>map</code> fue agregado al estandar ECMA-262 en la 5th edición; por lo tanto podría no estar presente en todas la implementaciones del estándar. Puedes sobrepasar esto insertando el siguiente código al comienzo de tus scripts, permitiendo el uso de <code>map</code> en implementaciones que no lo soportan de forma nativa. Este algoritmo es exactamente el mismo especificado en ECMA-262, 5th edición, asumiendo {{jsxref("Global_Objects/Object", "Object")}}, {{jsxref("Global_Objects/TypeError", "TypeError")}}, y {{jsxref("Global_Objects/Array", "Array")}} tienen sus valores originales y que el <code>callback.call</code> evalua el valor original de <code>{{jsxref("Function.prototype.call")}}</code>.</p>
 
 <pre class="brush: js">// Production steps of ECMA-262, Edition 5, 15.4.4.19
 // Reference: http://es5.github.io/#x15.4.4.19

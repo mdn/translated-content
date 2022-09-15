@@ -1,15 +1,6 @@
 ---
 title: 'Feature-Policy: fullscreen'
 slug: Web/HTTP/Headers/Feature-Policy/fullscreen
-tags:
-  - 機能ポリシー
-  - Feature-Policy
-  - HTTP
-  - fullscreen
-  - ヘッダー
-  - 実験的
-browser-compat: http.headers.Feature-Policy.fullscreen
-translation_of: Web/HTTP/Headers/Feature-Policy/fullscreen
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}
 
@@ -25,7 +16,7 @@ HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `fullscreen` 
 Feature-Policy: fullscreen <allowlist>;
 ```
 
- - \<allowlist>
+- \<allowlist>
   - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Headers/Feature-Policy#syntax) を参照してください。
 
 ## 既定のポリシー
@@ -44,7 +35,7 @@ Feature-Policy: fullscreen 'self' https://example.com
 
 ### \<iframe> 要素と
 
-FastCorp Inc. は、特定の <iframe> を除いたすべての別オリジンの子フレームの `fullscreen` を無効にしようとしているとします。以下の機能ポリシーを設定する HTTP レスポンスヘッダーを配信することで実現できます。
+FastCorp Inc. は、特定の \<iframe> を除いたすべての別オリジンの子フレームの `fullscreen` を無効にしようとしているとします。以下の機能ポリシーを設定する HTTP レスポンスヘッダーを配信することで実現できます。
 
 ```
 Feature-Policy: fullscreen 'self'

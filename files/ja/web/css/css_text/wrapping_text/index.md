@@ -1,14 +1,6 @@
 ---
 title: テキストの分割と折り返し
 slug: Web/CSS/CSS_Text/Wrapping_Text
-tags:
-  - CSS
-  - CSS テキスト
-  - Guide
-  - overflow
-  - overflow-wrap
-  - word-break
-translation_of: Web/CSS/CSS_Text/Wrapping_Text
 ---
 {{CSSRef}}
 
@@ -69,6 +61,7 @@ CSS はこのようにあふれて表示させますが、これは他の方法�
 {{EmbedGHLiveSample("css-examples/css-text/wbr.html", '100%', 460)}}
 
 ## 関連情報
+
 - HTML の {{HTMLElement("wbr")}} 要素
 - CSS の {{cssxref("word-break")}} プロパティ
 - CSS の {{cssxref("overflow-wrap")}} プロパティ

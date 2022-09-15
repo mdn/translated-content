@@ -16,7 +16,9 @@ La propriété en lecture seule **`offsetY`** de l'interface {{domxref("MouseEve
 
 ## Syntaxe
 
-    var yOffset = instanceOfMouseEvent.offsetY;
+```js
+var yOffset = instanceOfMouseEvent.offsetY;
+```
 
 ### Valeur retournée
 
@@ -24,13 +26,11 @@ Un nombre à virgule flottante double précision `double`. Les premières versio
 
 ## Spécifications
 
-| Spécification                                                                            | État                             | Commentaires        |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('CSSOM View', '#dom-mouseevent-offsety', 'MouseEvent')}} | {{Spec2('CSSOM View')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.MouseEvent.offsetY")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -8,11 +8,13 @@ translation_of: Web/API/HTMLFormElement/reportValidity
 ---
 {{APIRef("HTML DOM")}}
 
-La méthode  **`HTMLFormElement.reportValidity()`** renvoie true si les contrôles enfants de l'élément répondent à leurs contraintes de validation. Lorsque la valeur `false` est renvoyée, ,  les événements [`invalid`](/en-US/docs/Web/Events/invalid) annulables sont déclenchés pour chaque enfant non valide et les problèmes de validation sont signalés à l'utilisateur. .
+La méthode  **`HTMLFormElement.reportValidity()`** renvoie true si les contrôles enfants de l'élément répondent à leurs contraintes de validation. Lorsque la valeur `false` est renvoyée, ,  les événements [`invalid`](/fr/docs/Web/Events/invalid) annulables sont déclenchés pour chaque enfant non valide et les problèmes de validation sont signalés à l'utilisateur. .
 
-## Syntax
+## Syntaxe
 
-    HTMLFormElement.reportValidity()
+```js
+HTMLFormElement.reportValidity()
+```
 
 ### Valeur de retour
 
@@ -30,13 +32,10 @@ document.forms['myform'].addEventListener('submit', function() {
 }, false);
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                                                                    | Status                           | Commentaire         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName("HTML WHATWG", "forms.html#dom-cva-reportvalidity", "HTMLFormElement.reportValidity()")}}             | {{Spec2("HTML WHATWG")}} |                     |
-| {{SpecName("HTML5.1", "semantics.html#the-constraint-validation-api", "HTMLFormElement.reportValidity()")}} | {{Spec2("HTML5.1")}}     | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLFormElement.reportValidity")}}
+{{Compat}}

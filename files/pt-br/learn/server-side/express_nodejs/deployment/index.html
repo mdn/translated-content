@@ -20,7 +20,7 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
  <tbody>
   <tr>
    <th scope="row">Pré-requisitos:</th>
-   <td>Complete todos os tópicos anteriores do turotrial, inclusive o <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a>.</td>
+   <td>Complete todos os tópicos anteriores do turotrial, inclusive o <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objetivo:</th>
@@ -65,12 +65,12 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
 <p><strong>Note:</strong> Pre-built environments can make setting up your website very easy because they reduce the configuration, but the available options may limit you to an unfamiliar server (or other components) and may be based on an older version of the OS. Often it is better to install components yourself, so that you get the ones that you want, and when you need to upgrade parts of the system, you have some idea of where to start!</p>
 </div>
 
-<p>Other hosting providers support Express as part of a <em>Platform as a Service</em> (<em>PaaS</em>) offering. When using this sort of hosting you don't need to worry about most of your production environment (servers, load balancers, etc.) as the host platform takes care of those for you. That makes deployment quite easy, because you just need to concentrate on your web application and not any other server infrastructure.</p>
+<p>Other hosting providers support Express as part of a <em>Platform as a Service</em> (<em>PaaS</em>) offering. When using this sort of hosting you don't need to worry about most of your production environment (servers, load balancers, etc.) as the host platform takes care of those for you. That makes deployment quite easy, because you just need to concentrate on your web application and not any other server infrastructure.</p>
 
 <p>Some developers will choose the increased flexibility provided by IaaS over PaaS, while others will appreciate the reduced maintenance overhead and easier scaling of PaaS. When you're getting started, setting up your website on a PaaS system is much easier, so that is what we'll do in this tutorial.</p>
 
 <div class="note">
-<p><strong>Tip:</strong> If you choose a Node/Express-friendly hosting provider they should provide instructions on how to set up an Express website using different configurations of webserver, application server, reverse proxy, etc. For example, there are many step-by-step guides for various configurations in the <a href="https://www.digitalocean.com/community/tutorials?q=node">Digital Ocean Node community docs</a>.</p>
+<p><strong>Tip:</strong> If you choose a Node/Express-friendly hosting provider they should provide instructions on how to set up an Express website using different configurations of webserver, application server, reverse proxy, etc. For example, there are many step-by-step guides for various configurations in the <a href="https://www.digitalocean.com/community/tutorials?q=node">Digital Ocean Node community docs</a>.</p>
 </div>
 
 <h2 id="Choosing_a_hosting_provider">Choosing a hosting provider</h2>
@@ -78,7 +78,7 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
 <p>There are numerous hosting providers that are known to either actively support or work well with <em>Node</em> (and <em>Express</em>). These vendors provide different types of environments (IaaS, PaaS), and different levels of computing and network resources at different prices.</p>
 
 <div class="note">
-<p><strong>Tip:</strong> There are a lot of hosting solutions, and their services and pricing can change over time. While we introduce a few options below, it is worth performing your own Internet search before selecting a hosting provider.</p>
+<p><strong>Tip:</strong> There are a lot of hosting solutions, and their services and pricing can change over time. While we introduce a few options below, it is worth performing your own Internet search before selecting a hosting provider.</p>
 </div>
 
 <p>Some of the things to consider when choosing a host:</p>
@@ -95,9 +95,9 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
  <li>Whether the "free" tier you're relying on expires over time, and whether the cost of migrating to a more expensive tier means you would have been better off using some other service in the first place!</li>
 </ul>
 
-<p>The good news when you're starting out is that there are quite a few sites that provide computing environments for "free", albeit with some conditions. For example, <a href="https://www.heroku.com/">Heroku</a> provides a free but resource-limited <em>PaaS</em> environment "forever", while <a href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html">Amazon Web Services</a>, <a href="https://azure.microsoft.com/en-us/pricing/details/app-service/">Microsoft Azure</a>, and the open source option <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry">PWS/Cloud Foundry</a> provide free credit when you first join.</p>
+<p>The good news when you're starting out is that there are quite a few sites that provide computing environments for "free", albeit with some conditions. For example, <a href="https://www.heroku.com/">Heroku</a> provides a free but resource-limited <em>PaaS</em> environment "forever", while <a href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html">Amazon Web Services</a>, <a href="https://azure.microsoft.com/en-us/pricing/details/app-service/">Microsoft Azure</a>, and the open source option <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry">PWS/Cloud Foundry</a> provide free credit when you first join.</p>
 
-<p>Many providers also have a "basic" tier that provides more useful levels of computing power and fewer limitations. <a href="https://www.digitalocean.com/">Digital Ocean</a> is an example of a popular hosting provider that offers a relatively inexpensive basic computing tier (in the $5 per month lower range at time of writing).</p>
+<p>Many providers also have a "basic" tier that provides more useful levels of computing power and fewer limitations. <a href="https://www.digitalocean.com/">Digital Ocean</a> is an example of a popular hosting provider that offers a relatively inexpensive basic computing tier (in the $5 per month lower range at time of writing).</p>
 
 <div class="note">
 <p><strong>Note:</strong> Remember that price is not the only selection criterion. If your website is successful, it may turn out that scalability is the most important consideration.</p>
@@ -105,29 +105,29 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
 
 <h2 id="Getting_your_website_ready_to_publish">Getting your website ready to publish</h2>
 
-<p>The main things to think about when publishing your website are web security and performance. At the bare minimum, you will want to remove the stack traces that are included on error pages during development, tidy up your logging, and set the appropriate headers to avoid many common security threats.</p>
+<p>The main things to think about when publishing your website are web security and performance. At the bare minimum, you will want to remove the stack traces that are included on error pages during development, tidy up your logging, and set the appropriate headers to avoid many common security threats.</p>
 
 <p>In the following subsections we outline the most important changes that you should make to your app.</p>
 
 <div class="note">
-<p><strong>Tip:</strong> There are other useful tips in the Express docs — see <a href="https://expressjs.com/en/advanced/best-practice-performance.html">Production best practices: performance and reliability</a> and <a href="https://expressjs.com/en/advanced/best-practice-security.html">Production Best Practices: Security</a>.</p>
+<p><strong>Tip:</strong> There are other useful tips in the Express docs — see <a href="https://expressjs.com/en/advanced/best-practice-performance.html">Production best practices: performance and reliability</a> and <a href="https://expressjs.com/en/advanced/best-practice-security.html">Production Best Practices: Security</a>.</p>
 </div>
 
 <h3 id="Set_NODE_ENV_to_'production'">Set NODE_ENV to 'production'</h3>
 
-<p>We can remove stack traces in error pages by setting the <code>NODE_ENV</code> environment variable to <em>production</em> (it is set to '<em>development</em>' by default). In addition to generating less-verbose error messages, setting the variable to <em>production</em> caches view templates and CSS files generated from CSS extensions. Tests indicate that setting <code>NODE_ENV</code> to <em>production</em> can improve app performance by a factor of three!</p>
+<p>We can remove stack traces in error pages by setting the <code>NODE_ENV</code> environment variable to <em>production</em> (it is set to '<em>development</em>' by default). In addition to generating less-verbose error messages, setting the variable to <em>production</em> caches view templates and CSS files generated from CSS extensions. Tests indicate that setting <code>NODE_ENV</code> to <em>production</em> can improve app performance by a factor of three!</p>
 
-<p>This change can be made either by using export or an environment file, or using the OS initialisation system.  </p>
+<p>This change can be made either by using export or an environment file, or using the OS initialisation system.  </p>
 
 <div class="note">
-<p><strong>Note:</strong> This is actually a change you make in your environment setup rather than your app, but important enough to note here! We'll show how this is set for our hosting example below. </p>
+<p><strong>Note:</strong> This is actually a change you make in your environment setup rather than your app, but important enough to note here! We'll show how this is set for our hosting example below. </p>
 </div>
 
 <h3 id="Log_appropriately">Log appropriately</h3>
 
 <p>Logging calls can have an impact on a high-traffic website. In a production environment you may need to log website activity (e.g. tracking traffic or logging API calls) but you should attempt to minimise the amount of logging added for debugging purposes.</p>
 
-<p>One way to minimise "debug" logging in production is to use a module like <a href="https://www.npmjs.com/package/debug">debug </a>that allows you to control what logging is performed by setting an environment variable. For example, the code fragment below shows how you might  set up "author" logging. The debug variable is declared with the name 'author', and the prefix "author" will be automatically displayed for all logs from this object.</p>
+<p>One way to minimise "debug" logging in production is to use a module like <a href="https://www.npmjs.com/package/debug">debug </a>that allows you to control what logging is performed by setting an environment variable. For example, the code fragment below shows how you might  set up "author" logging. The debug variable is declared with the name 'author', and the prefix "author" will be automatically displayed for all logs from this object.</p>
 
 <pre class="brush: js"><strong>var debug = require('debug')('author');</strong>
 
@@ -139,7 +139,7 @@ exports.author_update_get = function(req, res, next) {
         if (err) {
 <strong>            debug('update error:' + err);</strong>
             return next(err);
-        }
+        }
         //On success
         res.render('author_form', { title: 'Update Author', author: author });
     });
@@ -156,10 +156,10 @@ export DEBUG="author,book"
 </pre>
 
 <div class="note">
-<p><strong>Challenge:</strong> Calls to <code>debug</code> can replace logging you might previously have done using <code>console.log()</code> or <code>console.error()</code>. Replace any <code>console.log()</code> calls in your code with logging via the <a href="https://www.npmjs.com/package/debug">debug </a>module. Turn the logging on and off in your development environment by setting the DEBUG variable and observe the impact this has on logging.</p>
+<p><strong>Challenge:</strong> Calls to <code>debug</code> can replace logging you might previously have done using <code>console.log()</code> or <code>console.error()</code>. Replace any <code>console.log()</code> calls in your code with logging via the <a href="https://www.npmjs.com/package/debug">debug </a>module. Turn the logging on and off in your development environment by setting the DEBUG variable and observe the impact this has on logging.</p>
 </div>
 
-<p>If you need to log website activity you can use a logging library like <em>Winston</em> or <em>Bunyan</em>. For more information on this topic see: <a href="https://expressjs.com/en/advanced/best-practice-performance.html">Production best practices: performance and reliability</a>.</p>
+<p>If you need to log website activity you can use a logging library like <em>Winston</em> or <em>Bunyan</em>. For more information on this topic see: <a href="https://expressjs.com/en/advanced/best-practice-performance.html">Production best practices: performance and reliability</a>.</p>
 
 <h3 id="Use_gzipdeflate_compression_for_responses">Use gzip/deflate compression for responses</h3>
 
@@ -169,7 +169,7 @@ export DEBUG="author,book"
 
 <pre class="brush: bash">npm install compression</pre>
 
-<p>Open <strong>./app.js</strong> and require the compression library as shown. Add the compression library to the middleware chain with the <code>use()</code> method (this should appear before any routes that you want compressed — in this case all of them!)</p>
+<p>Open <strong>./app.js</strong> and require the compression library as shown. Add the compression library to the middleware chain with the <code>use()</code> method (this should appear before any routes that you want compressed — in this case all of them!)</p>
 
 <pre class="brush: js">var catalog = require('./routes/catalog'); //Import routes for "catalog" area of site
 <strong>var compression = require('compression');</strong>
@@ -185,7 +185,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
-app.use('/catalog', catalog);  // Add catalog routes to middleware chain.
+app.use('/catalog', catalog);  // Add catalog routes to middleware chain.
 
 ...
 </pre>
@@ -196,14 +196,14 @@ app.use('/catalog', catalog);  // Add catalog routes to middleware chain.
 
 <h3 id="Use_Helmet_to_protect_against_well_known_vulnerabilities">Use Helmet to protect against well known vulnerabilities</h3>
 
-<p><a href="https://www.npmjs.com/package/helmet">Helmet</a> is a middleware package that can help protect your app from some well-known web vulnerabilities by setting appropriate HTTP headers (see the <a href="https://helmetjs.github.io/docs/">docs</a> for more information on what headers it sets/vulnerabilities it protects against). </p>
+<p><a href="https://www.npmjs.com/package/helmet">Helmet</a> is a middleware package that can help protect your app from some well-known web vulnerabilities by setting appropriate HTTP headers (see the <a href="https://helmetjs.github.io/docs/">docs</a> for more information on what headers it sets/vulnerabilities it protects against). </p>
 
 <p>Install this to your project by running the following command at the root of the project.</p>
 
 <pre class="brush: bash">npm install helmet
 </pre>
 
-<p>Open <strong>./app.js</strong> and require the <em>helmet</em> library as shown. Then add the module to the middleware chain with the <code>use()</code> method.</p>
+<p>Open <strong>./app.js</strong> and require the <em>helmet</em> library as shown. Then add the module to the middleware chain with the <code>use()</code> method.</p>
 
 <pre class="brush: js">var compression = require('compression');
 <strong>var helmet = require('helmet');
@@ -250,13 +250,13 @@ var app = express();
 
 <p>Because the file system is ephemeral you can't install services required by your application directly (e.g. databases, queues, caching systems, storage, email services, etc). Instead Heroku web applications use backing services provided as independent "add-ons" by Heroku or 3rd parties. Once attached to your web application, the add-on services are accessed in your web application via environment variables.</p>
 
-<p>In order to execute your application Heroku needs to be able to set up the appropriate environment and dependencies, and also understand how it is launched. For Node apps all the information it needs is obtained from your <strong>package.json</strong> file.</p>
+<p>In order to execute your application Heroku needs to be able to set up the appropriate environment and dependencies, and also understand how it is launched. For Node apps all the information it needs is obtained from your <strong>package.json</strong> file.</p>
 
 <p>Developers interact with Heroku using a special client app/terminal, which is much like a Unix bash script. This allows you to upload code that is stored in a git repository, inspect the running processes, see logs, set configuration variables, and much more!</p>
 
-<p>In order to get our application to work on Heroku we'll need to put our Express web application into a git repository and make some minor changes to the package.json. Once we've done that we can set up a Heroku account, get the Heroku client, and use it to install our website.</p>
+<p>In order to get our application to work on Heroku we'll need to put our Express web application into a git repository and make some minor changes to the package.json. Once we've done that we can set up a Heroku account, get the Heroku client, and use it to install our website.</p>
 
-<p>That's all the overview you need in order to get started (see <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started on Heroku with Node.js</a> for a more comprehensive guide).</p>
+<p>That's all the overview you need in order to get started (see <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started on Heroku with Node.js</a> for a more comprehensive guide).</p>
 
 <h3 id="Creating_an_application_repository_in_Github">Creating an application repository in Github</h3>
 
@@ -311,9 +311,9 @@ var app = express();
 On branch master
 Your branch is up-to-date with 'origin/master'.
 Changes to be committed:
-  (use "git reset HEAD &lt;file&gt;..." to unstage)
+  (use "git reset HEAD &lt;file&gt;..." to unstage)
 
-        new file:   ...</pre>
+        new file:   ...</pre>
  </li>
  <li>When you're satisfied commit the files to your local repository:
   <pre class="brush: bash">git commit -m "First version of application moved into github"</pre>
@@ -337,11 +337,11 @@ Changes to be committed:
 
 <p>This section explains the changes you'll need to make to our <em>LocalLibrary</em> application to get it to work on Heroku.</p>
 
-<h4 id="Set_node_version">Set node version </h4>
+<h4 id="Set_node_version">Set node version </h4>
 
-<p>The <strong>package.json</strong> contains everything needed to work out your application dependencies and what file should be launched to start your site. Heroku detects the presence of this file, and will use it to provision your app environment.</p>
+<p>The <strong>package.json</strong> contains everything needed to work out your application dependencies and what file should be launched to start your site. Heroku detects the presence of this file, and will use it to provision your app environment.</p>
 
-<p>The only useful information missing in our current <strong>package.json</strong> is the version of node. We can find the version of node we're using for development by entering the command:</p>
+<p>The only useful information missing in our current <strong>package.json</strong> is the version of node. We can find the version of node we're using for development by entering the command:</p>
 
 <pre class="brush: bash">&gt;node --version
 v8.9.1</pre>
@@ -355,32 +355,32 @@ v8.9.1</pre>
     "node": "8.9.1"
   },</strong>
   "private": true,
-  ...
+  ...
 </pre>
 
 <h4 id="Database_configuration">Database configuration</h4>
 
 <p>So far in this tutorial we've used a single database that is hard coded into <strong>app.js</strong>. Normally we'd like to be able to have a different database for production and development, so next we'll modify the LocalLibrary website to get the database URI from the OS environment (if it has been defined), and otherwise use our development database.</p>
 
-<p>Open <strong>app.js</strong> and find the line that sets the mongoDB connection variable. It will look something like this:</p>
+<p>Open <strong>app.js</strong> and find the line that sets the mongoDB connection variable. It will look something like this:</p>
 
 <pre class="brush: js">var mongoDB = 'mongodb://your_user_id:your_password@ds119748.mlab.com:19748/local_library';</pre>
 
-<p>Replace the line with the following code that uses <code>process.env.MONGODB_URI</code> to get the connection string from an environment variable named <code>MONGODB_URI</code> if has been set (use your own database URL instead of the placeholder below.)</p>
+<p>Replace the line with the following code that uses <code>process.env.MONGODB_URI</code> to get the connection string from an environment variable named <code>MONGODB_URI</code> if has been set (use your own database URL instead of the placeholder below.)</p>
 
 <pre class="brush: js">var mongoDB = <strong>process.env.MONGODB_URI</strong> || 'mongodb://your_user_id:your_password@ds119748.mlab.com:19748/local_library';
 </pre>
 
 <h4 id="Get_dependencies_and_re-test">Get dependencies and re-test</h4>
 
-<p>Before we proceed, let's test the site again and make sure it wasn't affected by any of our changes. </p>
+<p>Before we proceed, let's test the site again and make sure it wasn't affected by any of our changes. </p>
 
 <p>First we will need to fetch our dependencies (you will recall we didn't copy the <strong>node_modules</strong> folder into our git tree). You can do this by running the following command in your terminal at the root of the project:</p>
 
 <pre class="brush: bash">npm install
 </pre>
 
-<p>Now run the site (see <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes#Testing_the_routes">Testing the routes</a> for the relevant commands) and check that the site still behaves as you expect.</p>
+<p>Now run the site (see <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes#Testing_the_routes">Testing the routes</a> for the relevant commands) and check that the site still behaves as you expect.</p>
 
 <h4 id="Save_changes_to_Github">Save changes to Github</h4>
 
@@ -437,14 +437,14 @@ git push origin master</pre>
 
 <h3 id="Setting_configuration_variables">Setting configuration variables</h3>
 
-<p>You will recall from a preceding section that we need to <a href="#NODE_ENV">set NODE_ENV to 'production'</a> in order to improve our performance and generate less-verbose error messages. We do this by entering the following command:</p>
+<p>You will recall from a preceding section that we need to <a href="#NODE_ENV">set NODE_ENV to 'production'</a> in order to improve our performance and generate less-verbose error messages. We do this by entering the following command:</p>
 
 <pre class="brush: bash">&gt;heroku config:set NODE_ENV='production'
 Setting NODE_ENV and restarting limitless-tor-18923... done, v13
 NODE_ENV: production
 </pre>
 
-<p>We should also use a separate database for production, setting its URI in the <strong>MONGODB_URI</strong>  environment variable. You can set up a new database and database-user exactly <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose#Setting_up_the_MongoDB_database">as we did originally</a>, and get its URI. You can set the URI as shown (obviously, using your own URI!)</p>
+<p>We should also use a separate database for production, setting its URI in the <strong>MONGODB_URI</strong>  environment variable. You can set up a new database and database-user exactly <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose#Setting_up_the_MongoDB_database">as we did originally</a>, and get its URI. You can set the URI as shown (obviously, using your own URI!)</p>
 
 <pre class="brush: bash">&gt;heroku config:set <strong>MONGODB_URI</strong>='mongodb://your_user:your_password@ds139278.mlab.com:39278/local_library_production'
 Setting MONGODB_URI and restarting limitless-tor-18923... done, v13
@@ -456,7 +456,7 @@ MONGODB_URI: mongodb://your_user:your_password@ds139278.mlab.com:39278/local_lib
 <pre class="brush: bash">&gt;heroku config
 === limitless-tor-18923 Config Vars
 MONGODB_URI: mongodb://your_user:your_password@ds139278.mlab.com:39278/local_library_production
-NODE_ENV:    production
+NODE_ENV:    production
 </pre>
 
 <p>Heroku will restart your app when it updates the variables. If you check the home page now it should show zero values for your object counts, as the changes above mean that we're now using a new (empty) database.</p>
@@ -488,10 +488,10 @@ heroku ps   #Display dyno status
  <li><a href="https://expressjs.com/en/advanced/best-practice-security.html">Production Best Practices: Security</a> (Express docs)</li>
  <li>Heroku
   <ul>
-   <li><a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started on Heroku with Node.js</a> (Heroku docs)</li>
+   <li><a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started on Heroku with Node.js</a> (Heroku docs)</li>
    <li><a href="https://devcenter.heroku.com/articles/deploying-nodejs">Deploying Node.js Applications on Heroku</a> (Heroku docs)</li>
    <li><a href="https://devcenter.heroku.com/articles/nodejs-support">Heroku Node.js Support</a> (Heroku docs)</li>
-   <li><a href="https://devcenter.heroku.com/articles/node-concurrency">Optimizing Node.js Application Concurrency</a> (Heroku docs)</li>
+   <li><a href="https://devcenter.heroku.com/articles/node-concurrency">Optimizing Node.js Application Concurrency</a> (Heroku docs)</li>
    <li><a href="https://devcenter.heroku.com/articles/how-heroku-works">How Heroku works</a> (Heroku docs)</li>
    <li><a href="https://devcenter.heroku.com/articles/dynos">Dynos and the Dyno Manager</a> (Heroku docs)</li>
    <li><a href="https://devcenter.heroku.com/articles/config-vars">Configuration and Config Vars</a> (Heroku docs)</li>
@@ -501,14 +501,14 @@ heroku ps   #Display dyno status
  <li>Digital Ocean
   <ul>
    <li><a href="https://www.digitalocean.com/community/tutorials?q=express">Express</a> tutorials</li>
-   <li><a href="https://www.digitalocean.com/community/tutorials?q=node.js">Node.js</a> tutorials </li>
+   <li><a href="https://www.digitalocean.com/community/tutorials?q=node.js">Node.js</a> tutorials </li>
   </ul>
  </li>
 </ul>
 
 <p>{{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="In_this_module">In this module</h2>
 
@@ -524,4 +524,4 @@ heroku ps   #Display dyno status
  <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment">Express Tutorial Part 7: Deploying to production</a></li>
 </ul>
 
-<p> </p>
+<p> </p>

@@ -14,7 +14,7 @@ translation_of: Web/CSS/@media/orientation
 
 **`orientation`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("viewport", "ビューポート")}} (または[ページ付きメディア](/ja/docs/Web/CSS/Paged_media)ではページボックス) の向きを調べるために使用することができます。
 
-> **Note:** この特性は*端末*の向きには関係がありません。多くの端末では縦長の向きでソフトキーボードを開くと、ビューポートの幅が高さよりも大きくなり、ブラウザーは portrait ではなく landscape のスタイルを使用することになります。
+> **Note:** この特性は*端末*の向きには関係がありません。多くの端末では縦長の向きでソフトキーボードを開くと、ビューポートの幅が高さよりも大きくなり、ブラウザーは portrait ではなく landscape のスタイルを使用することになります。
 
 ## 構文
 
@@ -45,7 +45,7 @@ body {
 }
 
 div {
-  background: yellow;
+  background: yellow;
 }
 
 @media (orientation: landscape) {

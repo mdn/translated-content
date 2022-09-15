@@ -9,7 +9,7 @@ Le [type de données](/fr/docs/Web/CSS/CSS_Types) CSS **`<easing-function>`** in
 
 Cette transition entre deux valeurs peut être appliquées dans différentes situations. Elle peut être utilisée pour décrire la rapidité selon laquelle les valeurs évoluent durant les animations. Elle permet ainsi de faire varier la vitesse de l'animation au fur et à mesure de sa progression. Elle peut aussi être utilisée pour interpoler deux couleurs au sein d'un dégradé.
 
-Les fonctions d'évolution qui appartiennent au sous ensemble des courbes de Bézier cubiques sont souvent appelées des fonctions « douces » car elles permettent d'avoir des évolutions légères en début et en fin d'interpolation. Les fonctions d'évolution relient un ratio d'entrée à un ratio de sortie, tous les deux exprimés comme des nombres ([`<number>`](/fr/docs/Web/CSS/<number>)). Pour ces valeurs, `0.0` représente l'état initial et `1.0` représente l'état final.
+Les fonctions d'évolution qui appartiennent au sous ensemble des courbes de Bézier cubiques sont souvent appelées des fonctions « douces » car elles permettent d'avoir des évolutions légères en début et en fin d'interpolation. Les fonctions d'évolution relient un ratio d'entrée à un ratio de sortie, tous les deux exprimés comme des nombres ([`<number>`](/fr/docs/Web/CSS/number)). Pour ces valeurs, `0.0` représente l'état initial et `1.0` représente l'état final.
 
 Selon la fonction utilisée, la sortie calculée peut parfois être supérieure à `1.0` ou être inférieure à `0.0` pendant le cours de l'animation. Cela placera la valeur plus loin que son état final puis la fera revenir. Pour les animations de certaines propriétés (comme [`left`](/fr/docs/Web/CSS/left) ou [`right`](/fr/docs/Web/CSS/right)), cela crée un effet de rebond.
 
@@ -59,7 +59,7 @@ avec :
 
 - **_x<sub>1</sub>_, _y<sub>1</sub>_, _x<sub>2</sub>_, _y<sub>2</sub>_**
 
-  - : Des valeurs numériques ([`<number>`](/fr/docs/Web/CSS/<number>)) qui représentent les abscisses et ordonnées des points P
+  - : Des valeurs numériques ([`<number>`](/fr/docs/Web/CSS/number)) qui représentent les abscisses et ordonnées des points P
 
     <sub>1</sub>
 
@@ -116,7 +116,7 @@ steps(nombre_de_marches, direction)
 avec :
 
 - _nombre_de_marches_
-  - : Un entier ([`<integer>`](/fr/docs/Web/CSS/<integer>)) strictement positif qui représente le nombre de segments équidistants qui composent la fonction en escalier.
+  - : Un entier ([`<integer>`](/fr/docs/Web/CSS/integer)) strictement positif qui représente le nombre de segments équidistants qui composent la fonction en escalier.
 - _direction_
 
   - : Un mot-clé qui indique si la fonction est continue à gauche ou continue à droite :

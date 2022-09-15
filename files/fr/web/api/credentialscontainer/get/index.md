@@ -23,7 +23,9 @@ Cette méthode récupère les informations d'authentification en appelant la mé
 
 ## Syntaxe
 
-    var promise = CredentialsContainer.get([options])
+```js
+var promise = CredentialsContainer.get([options])
+```
 
 ### Paramètres
 
@@ -47,11 +49,8 @@ Une promesse ({{jsxref("Promise")}}) qui est résolue avec une instance {{domxre
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('Credential Management','#dom-credentialscontainer-get','get()')}} | {{Spec2('Credential Management')}} | Définition initiale. |
-| {{SpecName('WebAuthn')}}                                                                         | {{Spec2('WebAuthn')}}                 | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CredentialsContainer.get")}}
+{{Compat}}

@@ -1,15 +1,6 @@
 ---
 title: 处理文件
 slug: Learn/Getting_started_with_the_web/Dealing_with_files
-tags:
-  - 初学者
-  - CodingScripting
-  - 文件
-  - 指南
-  - HTML
-  - 理论
-  - 网站
-translation_of: Learn/Getting_started_with_the_web/Dealing_with_files
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
 
@@ -24,7 +15,7 @@ translation_of: Learn/Getting_started_with_the_web/Dealing_with_files
 
 ## 关于大小写和空格的提示
 
-你会注意到，在这篇文章中，我们要求你完全用小写字母命名文件夹和文件，没有空格. 这是因为：
+你会注意到，在这篇文章中，我们要求你完全用小写字母命名文件夹和文件，没有空格。这是因为：
 
 1. 许多计算机，特别是网络服务器，是区分大小写的。因此，假如你把一张图片放在你的网站上 `test-site/MyImage.jpg`，然后在一个不同的文件中，你试图以 `test-site/myimage.jpg` 来调用该图片，它可能无法工作。
 2. 浏览器、网络服务器和编程语言对空格的处理并不一致。例如，如果你在文件名中使用空格，一些系统可能将其视为两个文件名。一些服务器会用“%20”（URL 中空格的字符代码）替换文件名中的区域，导致所有链接被破坏。最好用连字符而不是下划线来分隔单词。对比 `my-file.html` 与 `my_file.html`。
@@ -35,10 +26,10 @@ translation_of: Learn/Getting_started_with_the_web/Dealing_with_files
 
 接下来，让我们看看我们的测试网站应该是什么结构。在我们创建的任何网站项目中，最常见的是一个主页 HTML 文件和包含图像、样式文件和脚本文件的文件夹。现在让我们来创建这些：
 
-1. **`index.html`**： 这个文件一般会包含主页内容，也就是人们第一次进入网站时看到的文字和图片。使用文本编辑器，创建一个名为`index.html`的新文件，并将其保存在`test-site`文件夹内。
-2. **`images` 文件夹**： 这个文件夹包含网站上使用的所有图片。在 `test-site` 文件夹内创建一个名为 `images` 的文件夹。
-3. **`styles` 文件夹**： 这个文件夹包含用于设置内容样式的 CSS 代码（例如，设置文本和背景颜色）。在你的 `test-site` 文件夹内创建一个名为 `styles` 的文件夹。
-4. **`scripts` 文件夹**： 这个文件夹包含所有用于向网站添加交互功能的 JavaScript 代码（例如，点击时加载数据的按钮）。在 `test-site` 文件夹内创建一个名为 `scripts` 的文件夹。
+1. **`index.html`**：这个文件一般会包含主页内容，也就是人们第一次进入网站时看到的文字和图片。使用文本编辑器，创建一个名为`index.html`的新文件，并将其保存在`test-site`文件夹内。
+2. **`images` 文件夹**：这个文件夹包含网站上使用的所有图片。在 `test-site` 文件夹内创建一个名为 `images` 的文件夹。
+3. **`styles` 文件夹**：这个文件夹包含用于设置内容样式的 CSS 代码（例如，设置文本和背景颜色）。在你的 `test-site` 文件夹内创建一个名为 `styles` 的文件夹。
+4. **`scripts` 文件夹**：这个文件夹包含所有用于向网站添加交互功能的 JavaScript 代码（例如，点击时加载数据的按钮）。在 `test-site` 文件夹内创建一个名为 `scripts` 的文件夹。
 
 > **备注：** 在 Windows 上你可能看不到文件扩展名，因为 Windows 有一个默认开启的**隐藏已知文件类型的扩展名**的选项。一般来说，你可以通过 Windows 资源管理器，选择**文件夹选项**选项，取消勾选**隐藏已知文件类型的扩展名**复选框，然后点击**确认**将其关闭。对于涉及你的 Windows 版本的更多具体信息，你可以在网上搜索。
 
@@ -62,7 +53,7 @@ translation_of: Learn/Getting_started_with_the_web/Dealing_with_files
     </html>
     ```
 
-3. 该行代码 `<img src="" alt="My test image">` 用于向页面中插入图片。我们需要告知 HTML 图片的位置。这张图片位于 *images* 目录下，与 `index.html` 处于同一目录。 为了从 `index.html` 访问到我们的图像，我们需要的文件路径是 `images/your-image-filename`。 例如，这里的图像叫做 `firefox-icon.png`， 那么文件路径就是 `images/firefox-icon.png`。
+3. 该行代码 `<img src="" alt="My test image">` 用于向页面中插入图片。我们需要告知 HTML 图片的位置。这张图片位于 *images* 目录下，与 `index.html` 处于同一目录。为了从 `index.html` 访问到我们的图像，我们需要的文件路径是 `images/your-image-filename`。例如，这里的图像叫做 `firefox-icon.png`，那么文件路径就是 `images/firefox-icon.png`。
 4. 在 HTML 代码 `src=""` 的双引号之间插入文件路径。
 5. 保存 HTML 文件，然后使用浏览器打开（双击该文件）。你应该看到新网页显示了新的图像！
 
@@ -72,7 +63,7 @@ translation_of: Learn/Getting_started_with_the_web/Dealing_with_files
 
 - 若引用的目标文件与 HTML 文件同级，只需直接使用文件名，例如：`my-image.jpg`。
 - 要引用子目录中的文件，请在路径前面写上目录名，再加上一个正斜杠。例如：`subdirectory/my-image.jpg`。
-- 若引用的目标文件位于 HTML 文件的**上级**，需要加上两个点。 举个例子，如果 `index.html` 在 `test-site` 的一个子文件夹内，而 `my-image.jpg` 在 `test-site` 内，你可以使用`../my-image.jpg` 从 `index.html` 引用 `my-image.jpg`。
+- 若引用的目标文件位于 HTML 文件的**上级**，需要加上两个点。举个例子，如果 `index.html` 在 `test-site` 的一个子文件夹内，而 `my-image.jpg` 在 `test-site` 内，你可以使用`../my-image.jpg` 从 `index.html` 引用 `my-image.jpg`。
 - 以上方法可以随意组合，比如：`../subdirectory/another-subdirectory/my-image.jpg`。
 
 这是你目前需要知道的全部内容。

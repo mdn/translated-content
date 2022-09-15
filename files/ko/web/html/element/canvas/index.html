@@ -12,7 +12,7 @@ translation_of: Web/HTML/Element/canvas
 ---
 <div>{{HTMLRef}}</div>
 
-<p><strong>HTML <code>&lt;canvas&gt;</code> 요소</strong>는 <a href="/ko/docs/Web/HTML/Canvas">캔버스 스크립팅 API</a> 또는 <a href="/ko/docs/Web/API/WebGL_API">WebGL API</a>와 함께 사용해 그래픽과 애니메이션을 그릴 수 있습니다.</p>
+<p><strong>HTML <code>&lt;canvas&gt;</code> 요소</strong>는 <a href="/ko/docs/Web/HTML/Canvas">캔버스 스크립팅 API</a> 또는 <a href="/ko/docs/Web/API/WebGL_API">WebGL API</a>와 함께 사용해 그래픽과 애니메이션을 그릴 수 있습니다.</p>
 
 <table class="properties">
  <tbody>
@@ -60,7 +60,7 @@ translation_of: Web/HTML/Element/canvas
 
 <h3 id="대체_콘텐츠">대체 콘텐츠</h3>
 
-<p><code>&lt;canvas&gt;</code> 블록 안에 콘텐츠를 추가해 대체 콘텐츠로서 사용할 수 있습니다. 대체 콘텐츠는 캔버스를 지원하지 않는 구형 브라우저와, JavaScript를 비활성화한 브라우저에서 표시됩니다. 유용한 대체 텍스트, 혹은 하위 DOM을 제공하면 캔버스의 접근성을 향상할 수 있습니다.</p>
+<p><code>&lt;canvas&gt;</code> 블록 안에 콘텐츠를 추가해 대체 콘텐츠로서 사용할 수 있습니다. 대체 콘텐츠는 캔버스를 지원하지 않는 구형 브라우저와, JavaScript를 비활성화한 브라우저에서 표시됩니다. 유용한 대체 텍스트, 혹은 하위 DOM을 제공하면 캔버스의 접근성을 향상할 수 있습니다.</p>
 
 <h3 id="닫는_태그_필수">닫는 태그 필수</h3>
 
@@ -129,7 +129,7 @@ translation_of: Web/HTML/Element/canvas
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<p>그 다음, JavaScript 코드 내에서 {{domxref("HTMLCanvasElement.getContext()")}}를 호출해 그리기 맥락을 얻어서 캔버스 위에 그립니다.</p>
+<p>그 다음, JavaScript 코드 내에서 {{domxref("HTMLCanvasElement.getContext()")}}를 호출해 그리기 맥락을 얻어서 캔버스 위에 그립니다.</p>
 
 <pre class="brush: js">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
@@ -150,37 +150,15 @@ ctx.fillRect(10, 10, 100, 100);</pre>
  <li><a href="https://developer.mozilla.org/ko/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility">MDN Hit regions and accessability</a></li>
  <li><a href="https://www.w3.org/WAI/PF/HTML/wiki/Canvas_Accessibility_Use_Cases">Canvas 접근성 유즈 케이스</a></li>
  <li><a href="https://www.w3.org/html/wg/wiki/AddedElementCanvas">Canvas 엘리먼트 접근성 문제</a></li>
- <li><a href="http://www.paciellogroup.com/blog/2012/06/html5-canvas-accessibility-in-firefox-13/">Firefox 13 의 HTML5 Canvas 접근성 – by Steve Faulkner</a></li>
+ <li><a href="http://www.paciellogroup.com/blog/2012/06/html5-canvas-accessibility-in-firefox-13/">Firefox 13 의 HTML5 Canvas 접근성 – by Steve Faulkner</a></li>
  <li><a href="https://html.spec.whatwg.org/multipage/scripting.html#best-practices">대화형 캔버스 엘리먼트의 모범 사례</a></li>
 </ul>
 
-<h2 id="Specifications" name="Specifications">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'scripting.html#the-canvas-element', '&lt;canvas&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'semantics-scripting.html#the-canvas-element', '&lt;canvas&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
-
-
 
 <p>{{Compat("html.elements.canvas")}}</p>
 

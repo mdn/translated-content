@@ -11,10 +11,12 @@ La méthode **`open()`** de {{domxref("XMLHttpRequest")}} instancie une nouvelle
 
 ## Syntaxe
 
-    XMLHttpRequest.open(method, url)
-    XMLHttpRequest.open(method, url, async)
-    XMLHttpRequest.open(method, url, async, user)
-    XMLHttpRequest.open(method, url, async, user, password)
+```js
+XMLHttpRequest.open(method, url)
+XMLHttpRequest.open(method, url, async)
+XMLHttpRequest.open(method, url, async, user)
+XMLHttpRequest.open(method, url, async, user, password)
+```
 
 ### Paramètres
 
@@ -33,15 +35,13 @@ La méthode **`open()`** de {{domxref("XMLHttpRequest")}} instancie une nouvelle
 - `password` {{optional_inline}}
   - : Le mot de passe, optionnel, à utiliser dans un but d'authentification. Sa valeur par défaut est `null`.
 
-## Spécificités
+## Spécifications
 
-| Specification                                                                        | Status                               | Comment                |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest', '#the-open()-method', 'open()')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.XMLHttpRequest.open")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,17 +1,6 @@
 ---
-title: <head>标签里有什么? Metadata-HTML中的元数据
+title: <head>标签里有什么？Metadata-HTML 中的元数据
 slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - HTML
-  - Meta
-  - favicon
-  - head
-  - lang
-  - metadata
-translation_of: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
 
@@ -21,7 +10,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
   <tbody>
     <tr>
       <th scope="row">预备知识：</th>
-      <td>初步了解 HTML（参见 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started">开始学习 HTML</a>）。</td>
+      <td>初步了解 HTML（参见 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started">开始学习 HTML</a>）。</td>
     </tr>
     <tr>
       <th scope="row">学习目标：</th>
@@ -47,7 +36,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 </html>
 ```
 
-HTML {{htmlelement("head")}} 元素与 {{htmlelement("body")}} 元素不同，它的内容不会在浏览器中显示，它的作用是保存页面的一些{{glossary("Metadata", "元数据")}}。上述示例的 head 元素非常简短：
+HTML {{htmlelement("head")}} 元素与 {{htmlelement("body")}} 元素不同，它的内容不会在浏览器中显示，它的作用是保存页面的一些{{glossary("Metadata", "元数据")}}。上述示例的 head 元素非常简短：
 
 ```html
 <head>
@@ -56,13 +45,13 @@ HTML {{htmlelement("head")}} 元素与 {{htmlelement("body")}} 元素不同，
 </head>
 ```
 
-然而，大型页面的 head 会包含很多元数据。可以用[开发者工具](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)查看网页的 head 信息。本节并不打算面面俱到地讲述 head，只是初步介绍几项 head 中重要的常用元素，让我们开始吧。
+然而，大型页面的 head 会包含很多元数据。可以用[开发者工具](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)查看网页的 head 信息。本节并不打算面面俱到地讲述 head，只是初步介绍几项 head 中重要的常用元素，让我们开始吧。
 
 ## 添加标题
 
-之前已经讲过 {{htmlelement("title")}} 元素，它可以为文档添加标题。但别和 {{htmlelement("h1")}} 元素搞混了，{{htmlelement("h1")}} 是为 body 添加标题的。有时候 {{htmlelement("h1")}} 也叫作网页标题。但是二者并不相同。
+之前已经讲过 {{htmlelement("title")}} 元素，它可以为文档添加标题。但别和 {{htmlelement("h1")}} 元素搞混了，{{htmlelement("h1")}} 是为 body 添加标题的。有时候 {{htmlelement("h1")}} 也叫作网页标题。但是二者并不相同。
 
-- {{htmlelement("h1")}} 元素在页面加载完毕时显示在页面中，通常只出现一次，用来标记页面内容的标题（故事名称、新闻摘要，等等）。
+- {{htmlelement("h1")}} 元素在页面加载完毕时显示在页面中，通常只出现一次，用来标记页面内容的标题（故事名称、新闻摘要，等等）。
 - {{htmlelement("title")}} 元素是一项元数据，用于表示整个 HTML 文档的标题（而不是文档内容）。
 
 ### 实践操作：一个简单的示例
@@ -71,11 +60,11 @@ HTML {{htmlelement("head")}} 元素与 {{htmlelement("body")}} 元素不同，
 
     1. 使用你的代码编辑器，从页面中拷贝粘贴代码到一个新的文本文件中，然后将其保存到一个适当的地方。
     2. 按下页面中的 "Raw" 按钮，从浏览器的菜单中选择 *另存为...*，然后选择一个地方来保存这个文件。
- 
+
 2. 在浏览器中打开文件，你会看到类似这样效果：
   ![A simple web page with the title set to \<title> element, and the \<h1> set to \<h1> element.](title-example.png)
-  现在很明显的可以看到 `<h1>` 出现的地方，和 `<title>` 出现的地方！
- 
+  现在很明显的可以看到 `<h1>` 出现的地方，和 `<title>` 出现的地方！
+
 3. 你应该尝试着在你的代码编辑器中打开这些代码，编辑这些元素的内容，然后在你的浏览器中刷新页面。祝你玩得开心。
 
 `<title>` 元素也被以其他的方式使用着。比如说，如果你尝试为某个页面添加书签，（在火狐浏览器中：点击*书签 > 将当前标签页添加到书签*，或点击地址栏末尾的星标），你会看到 `<title>` 的内容被作为建议的书签名。
@@ -104,7 +93,7 @@ HTML {{htmlelement("head")}} 元素与 {{htmlelement("body")}} 元素不同，
 
 ![a web page containing English and Japanese characters, with the character encoding set to latin. The Japanese characters don't display correctly](bad-encoding.png)
 
-> **备注：** 一些浏览器（比如Chrome）会自动修正错误的编码，所以取决于你所使用的浏览器，你或许不会看到这个问题。无论如何，你仍然应该为你的页面手动设置编码为 `utf-8`，来避免在其他浏览器中可能出现的潜在问题。
+> **备注：** 一些浏览器（比如 Chrome）会自动修正错误的编码，所以取决于你所使用的浏览器，你或许不会看到这个问题。无论如何，你仍然应该为你的页面手动设置编码为 `utf-8`，来避免在其他浏览器中可能出现的潜在问题。
 
 ### 实践操作：体验字符编码
 
@@ -118,7 +107,7 @@ HTML {{htmlelement("head")}} 元素与 {{htmlelement("body")}} 元素不同，
 
 许多 `<meta>` 元素包含了 `name` 和 `content` 属性：
 
-- `name` 指定了meta 元素的类型；说明该元素包含了什么类型的信息。
+- `name` 指定了 meta 元素的类型；说明该元素包含了什么类型的信息。
 - `content` 指定了实际的元数据内容。
 
 这两个 meta 元素对于定义你的页面的作者和提供页面的简要描述是很有用的。让我们看一个例子：
@@ -138,7 +127,7 @@ started with developing web sites and applications.">
 
 description 也被使用在搜索引擎显示的结果页中。下面通过一个例子来说明：
 
-1. 访问 [MDN Web 文档](/zh-CN/)。
+1. 访问 [MDN Web 文档](/zh-CN/)。
 2. 查看网页源代码（通过鼠标右键点击网页在弹出的菜单中选择*查看网页源代码*）
 3. 找到 description 的 meta 标签。就和如下展示的这样：
 
@@ -153,15 +142,15 @@ description 也被使用在搜索引擎显示的结果页中。下面通过一�
 
     ![A Yahoo search result for "Mozilla Developer Network"](mdn-search-result.png)
 
-> **备注：** 在谷歌搜索里，在主页面链接下面，你将看到一些相关子页面——这些是站点链接，可以在 [Google's webmaster tools](https://search.google.com/search-console/about) 配置——一种可以使你的站点对搜索引擎更友好的方式。
+> **备注：** 在谷歌搜索里，在主页面链接下面，你将看到一些相关子页面——这些是站点链接，可以在 [Google's webmaster tools](https://search.google.com/search-console/about) 配置——一种可以使你的站点对搜索引擎更友好的方式。
 
-> **备注：** 许多 `<meta>` 特性已经不再使用。例如，keyword `<meta>` 元素（`<meta name="keywords" content="fill, in, your, keywords, here">`）——提供关键词给搜索引擎，根据不同的搜索词，查找到相关的网站——已经被搜索引擎忽略了，因为作弊者填充了大量关键词到 keyword，错误地引导搜索结果。
+> **备注：** 许多 `<meta>` 特性已经不再使用。例如，keyword `<meta>` 元素（`<meta name="keywords" content="fill, in, your, keywords, here">`）——提供关键词给搜索引擎，根据不同的搜索词，查找到相关的网站——已经被搜索引擎忽略了，因为作弊者填充了大量关键词到 keyword，错误地引导搜索结果。
 
 ### 其他类型的元数据
 
 当你在网站上查看源码时，你也会发现其它类型的元数据。你在网站上看到的许多功能都是专有创作，旨在向某些网站（如社交网站）提供可使用的特定信息。
 
-例如，Facebook 编写的元数据协议 [Open Graph Data](https://ogp.me/) 为网站提供了更丰富的元数据。在 MDN Web 文档源代码中，你会发现：
+例如，Facebook 编写的元数据协议 [Open Graph Data](https://ogp.me/) 为网站提供了更丰富的元数据。在 MDN Web 文档源代码中，你会发现：
 
 ```html
 <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.png">
@@ -219,11 +208,11 @@ Twitter 还拥有自己的类型的专有元数据协议（称为：[Twitter Car
 
 不用担心现在实现所有这些类型的图标——这是一个相当先进的功能，你将不会被要求在这个课堂上学习这个知识点。这里的主要目的是让你提前了解有这一样东西以防当你浏览其他网站的源代码时不理解源代码的含义。
 
-> **备注：** 如果你的网站使用了内容安全策略（Content Security Policy，CSP）来增加安全性，这个策略会应用在图标上。如果你遇到了图标没有被加载的问题，你需要确认 {{HTTPHeader("Content-Security-Policy")}} 响应头的 [`img-src` 指令 ](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) 没有禁止访问图标。
+> **备注：** 如果你的网站使用了内容安全策略（Content Security Policy，CSP）来增加安全性，这个策略会应用在图标上。如果你遇到了图标没有被加载的问题，你需要确认 {{HTTPHeader("Content-Security-Policy")}} 响应头的 [`img-src` 指令](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) 没有禁止访问图标。
 
 ## 在 HTML 中应用 CSS 和 JavaScript
 
-如今，几乎你使用的所有网站都会使用 {{glossary("CSS")}} 来让网页更加炫酷，并使用 {{glossary("JavaScript")}} 来让网页有交互功能，比如视频播放器、地图、游戏以及更多功能。这些应用在网页中很常见，它们分别使用 {{htmlelement("link")}} 元素以及 {{htmlelement("script")}} 元素。
+如今，几乎你使用的所有网站都会使用 {{glossary("CSS")}} 来让网页更加炫酷，并使用 {{glossary("JavaScript")}} 来让网页有交互功能，比如视频播放器、地图、游戏以及更多功能。这些应用在网页中很常见，它们分别使用 {{htmlelement("link")}} 元素以及 {{htmlelement("script")}} 元素。
 
 - {{htmlelement("link")}} 元素经常位于文档的头部。这个 link 元素有 2 个属性，`rel="stylesheet"` 表明这是文档的样式表，而 `href` 包含了样式表文件的路径：
 
@@ -241,22 +230,22 @@ Twitter 还拥有自己的类型的专有元数据协议（称为：[Twitter Car
 
 ### 实践操作：在网页中应用 CSS 和 JavaScript
 
-1. 开始操作之前，先拷贝我们的 [meta-example.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/meta-example.html)、[script.js](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/script.js) 和 [style.css](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/style.css) 文件，并把它们保存到本地电脑的同一目录下，确保使用了正确的文件名和文件格式。
+1. 开始操作之前，先拷贝我们的 [meta-example.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/meta-example.html)、[script.js](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/script.js) 和 [style.css](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/style.css) 文件，并把它们保存到本地电脑的同一目录下，确保使用了正确的文件名和文件格式。
 2. 使用浏览器和文字编辑器同时打开你的 HTML 文件。
 3. 根据上面的信息，添加 {{htmlelement("link")}} 和 {{htmlelement("script")}} 元素到你的 HTML 文件中，这样你的 HTML 就可以应用 CSS 和 JavaScript 了。
 
-如果按照上述步骤正确地执行, 当你保存 HTML 文件并重新刷新浏览器的话，你会发现页面已经变样了：
+如果按照上述步骤正确地执行，当你保存 HTML 文件并重新刷新浏览器的话，你会发现页面已经变样了：
 
 ![Example showing a page with CSS and JavaScript applied to it. The CSS has made the page go green, whereas the JavaScript has added a dynamic list to the page.](js-and-css.png)
 
 - JavaScript 在页面中添加了一个空列表。现在当你点击列表中的任何地方，浏览器会弹出一个对话框要求你为新列表项输入一些文本内容。当你点击 OK 按钮，刚刚那个新的列表项会添加到页面上，当你点击那些已有的列表项，会弹出一个对话框允许你修改列表项的文本。
 - CSS 使页面背景变成了绿色，文本变得大了一点。它还将 JavaScript 添加到页面中的一些内容进行了样式化，（带有黑色边框的红色条是 CSS 添加到 js 生成的列表中的样式。）
 
-> **备注：** 如果你卡在这个练习当中，无法正常应用 CSS 和 JavaScript，试着查看一下我们的 [css-and-js.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/css-and-js.html) 页面实例。
+> **备注：** 如果你卡在这个练习当中，无法正常应用 CSS 和 JavaScript，试着查看一下我们的 [css-and-js.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/css-and-js.html) 页面实例。
 
 ## 为文档设定主语言
 
-最后，值得一提的是可以（而且有必要）为站点设定语言，这个可以通过添加 [`lang` 属性](/zh-CN/docs/Web/HTML/Global_attributes/lang)到 HTML 开始的标签中来实现（参考 [meta-example.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/meta-example.html)），如下所示：
+最后，值得一提的是可以（而且有必要）为站点设定语言，这个可以通过添加 [`lang` 属性](/zh-CN/docs/Web/HTML/Global_attributes/lang)到 HTML 开始的标签中来实现（参考 [meta-example.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/meta-example.html)），如下所示：
 
 ```html
 <html lang="zh-CN">
@@ -281,7 +270,7 @@ Twitter 还拥有自己的类型的专有元数据协议（称为：[Twitter Car
 ## 本章目录
 
 - [开始学习 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [<head>标签里有什么? Metadata-HTML中的元数据](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [\<head>标签里有什么？Metadata-HTML 中的元数据](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
 - [HTML 文字处理基础](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
 - [创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
 - [高阶文字排版](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)

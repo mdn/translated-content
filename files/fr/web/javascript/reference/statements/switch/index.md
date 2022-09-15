@@ -16,29 +16,31 @@ L'instruction **`switch`** évalue une expression et, selon le résultat obtenu 
 
 ## Syntaxe
 
-    switch (expression) {
-      case valeur1:
-        // Instructions à exécuter lorsque le résultat
-        // de l'expression correspond à valeur1
-        instructions1;
-        [break;]
-      case valeur2:
-        // Instructions à exécuter lorsque le résultat
-        // de l'expression correspond à valeur2
-        instructions 2;
-        [break;]
-      ...
-      case valeurN:
-        // Instructions à exécuter lorsque le résultat
-        // de l'expression à valeurN
-        instructionsN;
-        [break;]
-      [default:
-        // Instructions à exécuter lorsqu'aucune des valeurs
-        // ne correspond
-        instructions_def;
-        [break;]]
-    }
+```js
+switch (expression) {
+  case valeur1:
+    // Instructions à exécuter lorsque le résultat
+    // de l'expression correspond à valeur1
+    instructions1;
+    [break;]
+  case valeur2:
+    // Instructions à exécuter lorsque le résultat
+    // de l'expression correspond à valeur2
+    instructions 2;
+    [break;]
+  …
+  case valeurN:
+    // Instructions à exécuter lorsque le résultat
+    // de l'expression à valeurN
+    instructionsN;
+    [break;]
+  [default:
+    // Instructions à exécuter lorsqu'aucune des valeurs
+    // ne correspond
+    instructions_def;
+    [break;]]
+}
+```
 
 - `expression`
   - : Une expression à comparer avec chacune des clause `case`.
@@ -204,7 +206,7 @@ Selon les valeurs fournies à la variable `toto`, on aura les résultats suivant
 
 ### `switch` et les variables avec une portée de bloc
 
-Avec ECMAScript 2015 (ES6), on peut utiliser les instructions [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) et [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) pour déclarer des variables dont la portée sera celle du bloc englobant.
+Avec ECMAScript 2015 (ES6), on peut utiliser les instructions [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) et [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const) pour déclarer des variables dont la portée sera celle du bloc englobant.
 
 Prenons cet exemple :
 

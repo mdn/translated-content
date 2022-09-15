@@ -16,7 +16,7 @@ Ce tutoriel décrit comment utiliser l'élément `<canvas>` pour dessiner des gr
 
 ## Avant que vous ne commenciez
 
-L'utilisation de l'élément `<canvas>` n'est pas très difficile, mais vous avez besoin d'une compréhension de base de l'[HTML](/en-US/docs/Web/HTML) et du [JavaScript](/en-US/docs/Web/JavaScript). L'élément `<canvas>` et WebGL ne sont pas supportés par certains anciens navigateurs, mais ils sont supportés dans les versions récentes de tous les principaux navigateurs. Pour dessiner des graphiques sur le canevas, on utilise un objet de contexte Javascript, qui crée des graphiques à la volée.
+L'utilisation de l'élément `<canvas>` n'est pas très difficile, mais vous avez besoin d'une compréhension de base de l'[HTML](/fr/docs/Web/HTML) et du [JavaScript](/fr/docs/Web/JavaScript). L'élément `<canvas>` et WebGL ne sont pas supportés par certains anciens navigateurs, mais ils sont supportés dans les versions récentes de tous les principaux navigateurs. Pour dessiner des graphiques sur le canevas, on utilise un objet de contexte Javascript, qui crée des graphiques à la volée.
 
 ## Dans ce tutoriel
 

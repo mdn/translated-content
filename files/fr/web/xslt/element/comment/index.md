@@ -12,9 +12,11 @@ L'élément `<xsl:comment>` écrit un commentaire dans le document de sortie. Il
 
 ### Syntaxe
 
-    <xsl:comment>
-    	MODÈLE
-    </xsl:comment>
+```xml
+<xsl:comment>
+  MODÈLE
+</xsl:comment>
+```
 
 ### Attributs obligatoires
 

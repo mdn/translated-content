@@ -16,13 +16,17 @@ XSLT fournit l'élément `xsl:param`, qui est un descendant de l'élément `xsl:
 
 _XSLT&nbsp;:_
 
-    <xsl:param name="myOrder" />
+```xml
+<xsl:param name="myOrder" />
+```
 
 _JavaScript&nbsp;:_
 
-    var sortVal = xsltProcessor.getParameter(null, "monOrdre");
+```js
+var sortVal = xsltProcessor.getParameter(null, "monOrdre");
 
-    if (sortVal == "" || sortVal == "descendant")
-      xsltProcessor.setParameter(null, "monOrdre", "ascendant");
-    else
-      xsltProcessor.setParameter(null, "monOrdre", "descendant");
+if (sortVal == "" || sortVal == "descendant")
+  xsltProcessor.setParameter(null, "monOrdre", "ascendant");
+else
+  xsltProcessor.setParameter(null, "monOrdre", "descendant");
+```

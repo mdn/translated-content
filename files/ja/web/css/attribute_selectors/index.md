@@ -1,13 +1,6 @@
 ---
 title: 属性セレクター
 slug: Web/CSS/Attribute_selectors
-tags:
-  - 属性セレクター
-  - CSS
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.attribute
-translation_of: Web/CSS/Attribute_selectors
 ---
 {{CSSRef}}
 
@@ -83,7 +76,7 @@ a[href*="example"] {
 }
 
 /* URL のどこかに "insensitive" が含まれるリンクで、
-			大文字小文字は区別しない */
+   大文字小文字は区別しない */
 a[href*="insensitive" i] {
   color: cyan;
 }
@@ -91,7 +84,7 @@ a[href*="insensitive" i] {
 /* URL のどこかに "cAsE" があるリンクに一致
 大文字小文字の区別つき */
 a[href*="cAsE" s] {
-  color: pink;
+  color: pink;
 }
 
 /* ".org" で終わるリンク */
@@ -101,7 +94,7 @@ a[href$=".org"] {
 
 /* "https" で始まり ".org" で終わるリンク */
 a[href^="https"][href$=".org"] {
-  color: green;
+  color: green;
 }
 ```
 
@@ -201,7 +194,7 @@ ol[type="A" s] {
 
 ```html
 <ol type="A">
-  <li>Example list</li>
+  <li>Example list</li>
 </ol>
 ```
 

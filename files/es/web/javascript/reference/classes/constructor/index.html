@@ -10,9 +10,9 @@ original_slug: Web/JavaScript/Referencia/Classes/constructor
 ---
 <div>{{jsSidebar("Classes")}}</div>
 
-<p>El método constructor es un metodo especial para crear e inicializar un objeto creado a partir de una clase.</p>
+<p>El método constructor es un metodo especial para crear e inicializar un objeto creado a partir de una clase.</p>
 
-<p>El código fuente para este ejemplo interactivo se encuentra almacenado en un repositorio de Github. Si quieres contribuir al proyecto de ejemplos interactivos, por favor clona <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envíanos una solicitud para extraer el código (pull request).</p>
+<p>El código fuente para este ejemplo interactivo se encuentra almacenado en un repositorio de Github. Si quieres contribuir al proyecto de ejemplos interactivos, por favor clona <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envíanos una solicitud para extraer el código (pull request).</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -20,7 +20,7 @@ original_slug: Web/JavaScript/Referencia/Classes/constructor
 
 <h2 id="Descripción">Descripción</h2>
 
-<p>Sólo puede haber un método especial con el nombre de "constructor" en una clase. Un error de sintaxis será lanzado, si la clase contiene más de una ocurrencia de un método constructor.</p>
+<p>Sólo puede haber un método especial con el nombre de "constructor" en una clase. Un error de sintaxis será lanzado, si la clase contiene más de una ocurrencia de un método constructor.</p>
 
 <p>Un constructor puede utilizar la palabra clave super para llamar al constructor de una clase padre.</p>
 
@@ -35,11 +35,11 @@ original_slug: Web/JavaScript/Referencia/Classes/constructor
 <pre class="brush: js notranslate">class Square extends Polygon {
   constructor(length) {
     // Aquí, llama al constructor de la clase padre con sus longitudes
-    // contemplando la anchura y la altura del Polígono
+    // contemplando la anchura y la altura del Polígono
     super(length, length);
     // Nota: En las clases derivadas, super() se debe llamar primero
-    // Se puede utilizar "this". Dejando esto causará un error de
-    //referencia.
+    // Se puede utilizar "this". Dejando esto causará un error de
+    //referencia.
     this.name = 'Square';
   }
 
@@ -91,7 +91,7 @@ original_slug: Web/JavaScript/Referencia/Classes/constructor
 
 <p>{{Compat("javascript.classes.constructor")}}</p>
 
-<p>La tabla de compatibilidad de esta pagina está generada a partir de data estructurada. Si quieres contribuir a la data, por favor dirígete a <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> y envíanos una solicitud de extracción</p>
+<p>La tabla de compatibilidad de esta pagina está generada a partir de data estructurada. Si quieres contribuir a la data, por favor dirígete a <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> y envíanos una solicitud de extracción</p>
 
 <h2 id="Ver_también">Ver también</h2>
 

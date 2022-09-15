@@ -19,7 +19,9 @@ La méthode **`big()`** crée un élément HTML {{HTMLElement("big")}} qui affic
 
 ## Syntaxe
 
-    str.big()
+```js
+str.big()
+```
 
 ### Valeur de retour
 

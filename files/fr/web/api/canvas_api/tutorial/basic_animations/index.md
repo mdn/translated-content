@@ -21,13 +21,13 @@ La plus grosse limitation est sans doute qu'une fois qu'une forme est dessinée,
 
 Voici les étapes à suivre à chaque image dessinée (frame) :
 
-1.  **Effacer le canevas**
+1. **Effacer le canevas**
     À moins que les formes que vous voulez dessiner remplissent complètement le canevas (par exemple une image en arrière-plan), vous devrez effacer toutes les formes qui ont été dessinées précédemment. La manière la plus simple de le faire est d'utiliser la méthode {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}}.
-2.  **Enregistrer l'état du canevas**
+2. **Enregistrer l'état du canevas**
     Si vous changez des configurations qui affectent l'état du canevas (comme le style, les transformations, etc.), et vous voulez vous assurer que c'est l'état original qui est utilisé chaque fois que le canevas est redessiné, alors vous devez enregistrer l'état original.
-3.  **Dessiner les formes animées**
+3. **Dessiner les formes animées**
     Vous effectuez toutes les opérations pour afficher l'image.
-4.  **Restaurer l'état du canevas**
+4. **Restaurer l'état du canevas**
     Si l'état du canevas a été sauvegardé, vous restaurez cet état avant le prochain rendu.
 
 ## Contrôle d'une animation

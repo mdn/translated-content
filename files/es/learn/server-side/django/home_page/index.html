@@ -7,7 +7,7 @@ translation_of: Learn/Server-side/Django/Home_page
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">Estamos listos ahora para añadir el código para mostrar nuestra primera página entera — una página de inicio del sitio web de la <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">BibliotecaLocal</a> que muestra cuántos registros tenemos de cada tipo de modelo y proporciona una barra lateral con enlaces de navegación a nuestras otras páginas. Por el camino ganaremos experiencia práctica en escritura básica de mapeos de URL y vistas, obtención de resgistros de la base de datos y uso de plantillas.</p>
+<p class="summary">Estamos listos ahora para añadir el código para mostrar nuestra primera página entera — una página de inicio del sitio web de la <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">BibliotecaLocal</a> que muestra cuántos registros tenemos de cada tipo de modelo y proporciona una barra lateral con enlaces de navegación a nuestras otras páginas. Por el camino ganaremos experiencia práctica en escritura básica de mapeos de URL y vistas, obtención de resgistros de la base de datos y uso de plantillas.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -32,7 +32,7 @@ translation_of: Learn/Server-side/Django/Home_page
  Los principales elementos que necesitamos crear son:</p>
 
 <ul>
- <li>Mapeadores URL para reenviar las URLs admitidas (y cualquier información codificada en las URLs)  a las funciones de vista apropiadas.</li>
+ <li>Mapeadores URL para reenviar las URLs admitidas (y cualquier información codificada en las URLs)  a las funciones de vista apropiadas.</li>
  <li>Funciones de vista para obtener los datos solicitados desde los modelos, crear una página HTML que muestre los datos, y devolverlo al usuario para que lo vea en el navegador.</li>
  <li>Plantillas usadas por las vistas para renderizar los datos.</li>
 </ul>
@@ -43,24 +43,24 @@ translation_of: Learn/Server-side/Django/Home_page
 
 <h2 id="Definiendo_el_recurso_URL">Definiendo el recurso URL</h2>
 
-<p>Como esta versión de <em>LocalLibrary</em>  es escencialmente solo de lectura para usuarios finales, debemos proveer una página de llegada para el sitio (una página de inicio), y páginas que <em>desplieguen</em> listas y vistas detalladas para libros y autores. </p>
+<p>Como esta versión de <em>LocalLibrary</em>  es escencialmente solo de lectura para usuarios finales, debemos proveer una página de llegada para el sitio (una página de inicio), y páginas que <em>desplieguen</em> listas y vistas detalladas para libros y autores. </p>
 
 <p>Las URL que vamos a necesitar para nuestras páginas son:</p>
 
 <ul>
  <li><code>catalog/</code> — La página home/index.</li>
  <li><code>catalog/books/</code> — La lista de todos los libros.</li>
- <li><code>catalog/authors/</code> — La lista de todos los autores.</li>
- <li><code>catalog/book/<em>&lt;id&gt;</em></code> — La vista detallada para el libro específico con un campo de clave primaria de <code><em>&lt;id&gt;</em></code> (el valor por defecto). Así por ejemplo, <code>/catalog/book/3</code>, para el tercer libro añadido.</li>
- <li><code>catalog/author/<em>&lt;id&gt;</em></code><em> </em>— La vista detallada para el autor específico con un campo de clave primaria llamada <em><code>&lt;id&gt;. </code></em>Así por ejemplo, <code>/catalog/author/11</code>, para el 11vo autor añadido.</li>
+ <li><code>catalog/authors/</code> — La lista de todos los autores.</li>
+ <li><code>catalog/book/<em>&lt;id&gt;</em></code> — La vista detallada para el libro específico con un campo de clave primaria de <code><em>&lt;id&gt;</em></code> (el valor por defecto). Así por ejemplo, <code>/catalog/book/3</code>, para el tercer libro añadido.</li>
+ <li><code>catalog/author/<em>&lt;id&gt;</em></code><em> </em>— La vista detallada para el autor específico con un campo de clave primaria llamada <em><code>&lt;id&gt;. </code></em>Así por ejemplo, <code>/catalog/author/11</code>, para el 11vo autor añadido.</li>
 </ul>
 
 <p>La tres primeras URLs son usadas para listar el índice, los libros y autores. Esto no codifica ninguna información adicional, y mientras los resultados retornados dependerán del contenido en la base de datos, las consultas que se ejecutan para obtener la información siempre serán las mismas.</p>
 
-<p>En contraste las 2 URLs finales son usadas para mostrar información detallada sobre un libro o autor específico — estas codifican la identidad de los ítemes a mostrar en la URL (mostrado arriba como <code><em>&lt;id&gt;</em></code> ). El mapeador URL puede extraer la información codificada y pasársela a la vista, donde se detarminará que información extraer de la base de datos. Al codificar la información en nuestra URL solo necesitamos un mapeador de URL, una vista, y un plantilla para manejar cada libro (o autor). </p>
+<p>En contraste las 2 URLs finales son usadas para mostrar información detallada sobre un libro o autor específico — estas codifican la identidad de los ítemes a mostrar en la URL (mostrado arriba como <code><em>&lt;id&gt;</em></code> ). El mapeador URL puede extraer la información codificada y pasársela a la vista, donde se detarminará que información extraer de la base de datos. Al codificar la información en nuestra URL solo necesitamos un mapeador de URL, una vista, y un plantilla para manejar cada libro (o autor). </p>
 
 <div class="note">
-<p><strong>Nota</strong>: Django te permite construir tus URLs  de cualquier forma que quieras — puedes codificar información en el cuerpo de la URL como se muestra arriba o usando la obtención de  parámetros <code>GET</code>  de la URL(e.j. <code>/book/?id=6</code>). Culquier enfoque que uses, las URLs deben mantenerse limpias, lógicas y legibles (<a href="https://www.w3.org/Provider/Style/URI">observa el consejo del W3C aquí</a>).<br>
+<p><strong>Nota</strong>: Django te permite construir tus URLs  de cualquier forma que quieras — puedes codificar información en el cuerpo de la URL como se muestra arriba o usando la obtención de  parámetros <code>GET</code>  de la URL(e.j. <code>/book/?id=6</code>). Culquier enfoque que uses, las URLs deben mantenerse limpias, lógicas y legibles (<a href="https://www.w3.org/Provider/Style/URI">observa el consejo del W3C aquí</a>).<br>
  <br>
  La documentación Django tiende a recomendar la codificación de información en el cuerpo de la URL, una práctica que ellos creen que promueve mejores diseños de URL.</p>
 </div>
@@ -69,7 +69,7 @@ translation_of: Learn/Server-side/Django/Home_page
 
 <h2 id="Creando_la_página_index">Creando la página index</h2>
 
-<p>La primera página que crearemos será la página index (<code>catalog/</code>). Esto desplegará un pequeño HTML estático, junto con algunos "contadores" calculados de diferentes registros en la base de datos. Para hacer este trabajo tendremos que crear un mapeador URL, una vista y una plantilla. </p>
+<p>La primera página que crearemos será la página index (<code>catalog/</code>). Esto desplegará un pequeño HTML estático, junto con algunos "contadores" calculados de diferentes registros en la base de datos. Para hacer este trabajo tendremos que crear un mapeador URL, una vista y una plantilla. </p>
 
 <div class="note">
 <p><strong>Nota</strong>: Vale la pena prestar un poco de atención extra en esta sección. La mayoría del contenido es común para todas las páginas.</p>
@@ -77,29 +77,29 @@ translation_of: Learn/Server-side/Django/Home_page
 
 <h3 id="Mapeador_URL">Mapeador URL</h3>
 
-<p>Hemos creado un archivo básico <strong>/catalog/urls.py</strong> para nuestra aplicación catálogo cuando creamos el <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">esqueleto del sitio Web</a>. Las URLs de la aplicación catálogo fueron incluidas dentro del proyecto con un mapeador a <code>catalog/</code>, entonces las URLs  que llegan a este mapeador deben empezar con<code> catalog/</code> (el mapeador funciona sobre todos los string en la URL después de la barra diagonal).</p>
+<p>Hemos creado un archivo básico <strong>/catalog/urls.py</strong> para nuestra aplicación catálogo cuando creamos el <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">esqueleto del sitio Web</a>. Las URLs de la aplicación catálogo fueron incluidas dentro del proyecto con un mapeador a <code>catalog/</code>, entonces las URLs  que llegan a este mapeador deben empezar con<code> catalog/</code> (el mapeador funciona sobre todos los string en la URL después de la barra diagonal).</p>
 
-<p>Abra <strong>urls.py</strong> y pegue la línea en negrita que aparece a continuación. </p>
+<p>Abra <strong>urls.py</strong> y pegue la línea en negrita que aparece a continuación. </p>
 
 <pre class="brush: python">urlpatterns = [
 <strong>    url(r'^$', views.index, name='index'),</strong>
 ]</pre>
 
-<p>Esta función <code>url()</code> define un patrón URL (<code>r'^$'</code>),  y una función vista que será llamada si el patrón es detectado (<code>views.index</code> — una función llamada <code>index()</code> en <strong>views.py</strong>). El patrón URL es una <a href="https://docs.python.org/3/library/re.html">expresión regular de Python</a> (ER). Hablaremos un poco más sobre ERs más adelante en este tutorial, pero para este caso todo lo que necesitas saber es que en una ER de ^$  el patrón coincidirá con una cadena vacía  (^ es un marcador de inicio de cadena y  $ es un marcador de fin de cadena). </p>
+<p>Esta función <code>url()</code> define un patrón URL (<code>r'^$'</code>),  y una función vista que será llamada si el patrón es detectado (<code>views.index</code> — una función llamada <code>index()</code> en <strong>views.py</strong>). El patrón URL es una <a href="https://docs.python.org/3/library/re.html">expresión regular de Python</a> (ER). Hablaremos un poco más sobre ERs más adelante en este tutorial, pero para este caso todo lo que necesitas saber es que en una ER de ^$  el patrón coincidirá con una cadena vacía  (^ es un marcador de inicio de cadena y  $ es un marcador de fin de cadena). </p>
 
 <div class="note">
-<p><strong>Nota: </strong>Nota que en  <strong>/locallibrary/locallibrary/urls.py</strong> </p>
+<p><strong>Nota: </strong>Nota que en  <strong>/locallibrary/locallibrary/urls.py</strong> </p>
 
 <pre><code>urlpatterns += [
-    url(r'^catalog/', include('catalog.urls')),
+    url(r'^catalog/', include('catalog.urls')),
 ]</code></pre>
 
-<p>La expresión regular en este caso no tienen un <code>$</code> (caracter asignado a fin-de-cadena) pero incluye una barra diagonal. Siempre cuando Django se encuentra con <code>include()</code> (<a href="https://docs.djangoproject.com/en/1.11/ref/urls/#django.conf.urls.include" title="django.conf.urls.include"><code>django.conf.urls.include()</code></a>), corta cualquier parte de la URL que coincida hasta este punto y envía el resto de la cadena para incluir la configuración URL para el siguiente procesamiento.</p>
+<p>La expresión regular en este caso no tienen un <code>$</code> (caracter asignado a fin-de-cadena) pero incluye una barra diagonal. Siempre cuando Django se encuentra con <code>include()</code> (<a href="https://docs.djangoproject.com/en/1.11/ref/urls/#django.conf.urls.include" title="django.conf.urls.include"><code>django.conf.urls.include()</code></a>), corta cualquier parte de la URL que coincida hasta este punto y envía el resto de la cadena para incluir la configuración URL para el siguiente procesamiento.</p>
 
-<p>La URL coincidente es en realidad <code>catalog/</code> + &lt;cadena vacía&gt; ( <code>/catalog/</code> es asumida ya que include() fue el método usado). Nuestra primera función vista  será llamada si recibimos una consulta HTTP con una URL de <code>/catalog/</code>.</p>
+<p>La URL coincidente es en realidad <code>catalog/</code> + &lt;cadena vacía&gt; ( <code>/catalog/</code> es asumida ya que include() fue el método usado). Nuestra primera función vista  será llamada si recibimos una consulta HTTP con una URL de <code>/catalog/</code>.</p>
 </div>
 
-<p>La función  <code>url()</code> también especifica un parámetro <code>name</code>, que identifica de manera única  <em>este</em> mapeador de URL particular. Puedes usar este nombre para "revertir" el mapeador — para crear dinámicamente una URL que apunta al el recurso que el mapeador esta diseñado para manejar. Por ejemplo, con esto hecho ahora podemos enlazar nuestra página inicio creando el siguiente enlace en nuestra plantilla:</p>
+<p>La función  <code>url()</code> también especifica un parámetro <code>name</code>, que identifica de manera única  <em>este</em> mapeador de URL particular. Puedes usar este nombre para "revertir" el mapeador — para crear dinámicamente una URL que apunta al el recurso que el mapeador esta diseñado para manejar. Por ejemplo, con esto hecho ahora podemos enlazar nuestra página inicio creando el siguiente enlace en nuestra plantilla:</p>
 
 <pre class="brush: html">&lt;a href="<strong>{% url 'index' %}</strong>"&gt;Home&lt;/a&gt;.</pre>
 
@@ -109,9 +109,9 @@ translation_of: Learn/Server-side/Django/Home_page
 
 <h3 id="Vista_basada-en-funciones">Vista (basada-en-funciones)</h3>
 
-<p>Una vista es una función que procesa una consulta HTTP, trae datos desde la base de datos cuando los necesita, genera una página HTML renderizando estos datos unando una plantilla HTML, y luego retorna el HTML en una respuesta HTTP para ser mostrada al usuario. La vista del índice sigue este modelo — extrae información sobre cuantos <code>Book</code>, <code>BookInstance</code>,  <code>BookInstance</code> disponibles y registros <code>Author</code> tenemos en la base de datos, y los pasa a una plantilla para mostrarlos.</p>
+<p>Una vista es una función que procesa una consulta HTTP, trae datos desde la base de datos cuando los necesita, genera una página HTML renderizando estos datos unando una plantilla HTML, y luego retorna el HTML en una respuesta HTTP para ser mostrada al usuario. La vista del índice sigue este modelo — extrae información sobre cuantos <code>Book</code>, <code>BookInstance</code>,  <code>BookInstance</code> disponibles y registros <code>Author</code> tenemos en la base de datos, y los pasa a una plantilla para mostrarlos.</p>
 
-<p>Abre <strong>catalog/views.py</strong>, y nota que el archivo ya importa el atajo de la función <a href="https://docs.djangoproject.com/en/1.10/topics/http/shortcuts/#django.shortcuts.render">render()</a> que genera archivos HTML usando una plantilla y datos. </p>
+<p>Abre <strong>catalog/views.py</strong>, y nota que el archivo ya importa el atajo de la función <a href="https://docs.djangoproject.com/en/1.10/topics/http/shortcuts/#django.shortcuts.render">render()</a> que genera archivos HTML usando una plantilla y datos. </p>
 
 <pre class="brush: python">from django.shortcuts import render
 
@@ -140,28 +140,28 @@ def index(request):
         context={'num_books':num_books,'num_instances':num_instances,'num_instances_available':num_instances_available,'num_authors':num_authors},
     )</pre>
 
-<p>La primera parte de la función vista extrae contadores de registros usando el atributo <code>objects.all()</code> en las clases del modelo. Tambien obtiene una lista de los objetos <code>BookInstance</code>  que tienen un valor del campo status de  'a' (Disponible). Puedes encontrar un poco más sobre cómo acceder desde modelos en nuestro tutorial previo (<a href="/en-US/docs/Learn/Server-side/Django/Models#Searching_for_records">Django Tutorial Part 3: Usando modelos &gt; Buscando registros</a>).</p>
+<p>La primera parte de la función vista extrae contadores de registros usando el atributo <code>objects.all()</code> en las clases del modelo. Tambien obtiene una lista de los objetos <code>BookInstance</code>  que tienen un valor del campo status de  'a' (Disponible). Puedes encontrar un poco más sobre cómo acceder desde modelos en nuestro tutorial previo (<a href="/en-US/docs/Learn/Server-side/Django/Models#Searching_for_records">Django Tutorial Part 3: Usando modelos &gt; Buscando registros</a>).</p>
 
-<p>Al final de la función invocamos a la función <code>render()</code>  para crear y retornar una página  HTML como una respuesta (esta función atajo envuelve una serie, simplicando este caso de uso muy común). Esta recibe como parametros el objeto <code>request original</code> (una <code>ConsultaHttp</code>), una plantilla HTML con marcadores para los datos, y una variable de <code>contexto</code> (un diccionario Python que contiene los datos que serán insertados en esos marcadores). </p>
+<p>Al final de la función invocamos a la función <code>render()</code>  para crear y retornar una página  HTML como una respuesta (esta función atajo envuelve una serie, simplicando este caso de uso muy común). Esta recibe como parametros el objeto <code>request original</code> (una <code>ConsultaHttp</code>), una plantilla HTML con marcadores para los datos, y una variable de <code>contexto</code> (un diccionario Python que contiene los datos que serán insertados en esos marcadores). </p>
 
 <p>Hablaremos más sobre la plantilla y la variable de contexto en la siguiente sección; vamos a crear nuestra plantilla para así de hecho mostrarle algo al usuario!</p>
 
 <h3 id="Plantilla">Plantilla</h3>
 
-<p>Una plantilla es un archivo de texto  que determina la estructura o diseño de un archivo (como una página HTML), con marcadores usados para representar el contenido real. Django automaticamente buscará plantillas en un directorio llamado '<strong>templates</strong>' de su aplicación. Así por ejemplo, en la vista índice que acabamos de agregar, la función <code>render()</code> esperará poder encontrar el archivo <strong>/locallibrary/catalog/templates/<em>index.html</em></strong>, y entregará un error si el archivo no puede ser encontrado. Puede ver esto si guarda los cambios anteriores y vuelve a su navegador — accediendo a <code>127.0.0.1:8000</code> ahora le entregará un mensaje de error bastante intuitivo "TemplateDoesNotExist at /catalog/", más otros detalles.</p>
+<p>Una plantilla es un archivo de texto  que determina la estructura o diseño de un archivo (como una página HTML), con marcadores usados para representar el contenido real. Django automaticamente buscará plantillas en un directorio llamado '<strong>templates</strong>' de su aplicación. Así por ejemplo, en la vista índice que acabamos de agregar, la función <code>render()</code> esperará poder encontrar el archivo <strong>/locallibrary/catalog/templates/<em>index.html</em></strong>, y entregará un error si el archivo no puede ser encontrado. Puede ver esto si guarda los cambios anteriores y vuelve a su navegador — accediendo a <code>127.0.0.1:8000</code> ahora le entregará un mensaje de error bastante intuitivo "TemplateDoesNotExist at /catalog/", más otros detalles.</p>
 
 <div class="note">
-<p><strong>Nota</strong>: Django buscará en una serie de lugares por plantillas, basandose en su archivo de configuraciones de proyectos (buscar en su aplicación instalada es una configuración por defecto!). Puede encontrar más sobre como Django encuentra plantillas y qué formatos de plantillas soporta <a href="https://docs.djangoproject.com/en/1.10/topics/templates/">Templates</a> (Django docs).</p>
+<p><strong>Nota</strong>: Django buscará en una serie de lugares por plantillas, basandose en su archivo de configuraciones de proyectos (buscar en su aplicación instalada es una configuración por defecto!). Puede encontrar más sobre como Django encuentra plantillas y qué formatos de plantillas soporta <a href="https://docs.djangoproject.com/en/1.10/topics/templates/">Templates</a> (Django docs).</p>
 </div>
 
 <h4 id="Plantillas_extendidas">Plantillas extendidas</h4>
 
-<p>La plantilla índice va a necesitar marcado HTML estándar para la cabecera y el cuerpo, junto con secciones para navegar (a otras páginas en el sitio que todavía no hemos creado) y para mostrar algún texto introductorio y nuestros datos de libro. La mayoría de este texto (el HTML y la estructura de navegación) será el mismo para cada página en nuestro sitio. En lugar de obligar a los desarrolladores a duplicar este texto en cada página, el lenguaje de plantillas de Django le permite declarar una plantilla base y luego extenderla, reemplazando solo las porciones que son distintos para cada página específica. </p>
+<p>La plantilla índice va a necesitar marcado HTML estándar para la cabecera y el cuerpo, junto con secciones para navegar (a otras páginas en el sitio que todavía no hemos creado) y para mostrar algún texto introductorio y nuestros datos de libro. La mayoría de este texto (el HTML y la estructura de navegación) será el mismo para cada página en nuestro sitio. En lugar de obligar a los desarrolladores a duplicar este texto en cada página, el lenguaje de plantillas de Django le permite declarar una plantilla base y luego extenderla, reemplazando solo las porciones que son distintos para cada página específica. </p>
 
-<p>Por ejemplo, un plantilla base <strong>base_generic.html</strong> podría verse como el texto de abajo. Como puedes ver, este contiene algo de HTML "común"  y secciones para el título, barra lateral, y contendio marcados usando las etiquetas de plantillas llamadas <code>block</code> y <code>endblock</code>  (mostradas en negrita). Los bloques pueden estar vacíos, o tener contenido que será usado "por defecto" para páginas derivadas.</p>
+<p>Por ejemplo, un plantilla base <strong>base_generic.html</strong> podría verse como el texto de abajo. Como puedes ver, este contiene algo de HTML "común"  y secciones para el título, barra lateral, y contendio marcados usando las etiquetas de plantillas llamadas <code>block</code> y <code>endblock</code>  (mostradas en negrita). Los bloques pueden estar vacíos, o tener contenido que será usado "por defecto" para páginas derivadas.</p>
 
 <div class="note">
-<p><strong>Nota</strong>: Las etiquetas de plantilla son como funciones que puede usar en una plantilla para recorrer listas, realizar operaciones condicionales basadas en el valor de una variable, etc. Además de las etiquetas de plantilla, la sintaxis de plantilla te permite referenciar variables de plantilla (que son pasadas en la plantilla desde la vista)  y usar  <em>filtros de plantilla</em>, que reformatean las variables (por ejemplo, establecer una cadena en minúsculas).</p>
+<p><strong>Nota</strong>: Las etiquetas de plantilla son como funciones que puede usar en una plantilla para recorrer listas, realizar operaciones condicionales basadas en el valor de una variable, etc. Además de las etiquetas de plantilla, la sintaxis de plantilla te permite referenciar variables de plantilla (que son pasadas en la plantilla desde la vista)  y usar  <em>filtros de plantilla</em>, que reformatean las variables (por ejemplo, establecer una cadena en minúsculas).</p>
 </div>
 
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
@@ -177,7 +177,7 @@ def index(request):
 &lt;/html&gt;
 </pre>
 
-<p>Cuando queremos definir una plantilla para una vista en particular, primero especificamos la plantila base  (con la etiqueta de plantilla  <code>extends</code> — vea el código siguiente). Si ahí hay alguna seccón que queremos reemplazar en la plantilla declaramos esto, usando secciones <code>block</code>/<code>endblock</code>  idénticas a las usadas en la plantilla base.</p>
+<p>Cuando queremos definir una plantilla para una vista en particular, primero especificamos la plantila base  (con la etiqueta de plantilla  <code>extends</code> — vea el código siguiente). Si ahí hay alguna seccón que queremos reemplazar en la plantilla declaramos esto, usando secciones <code>block</code>/<code>endblock</code>  idénticas a las usadas en la plantilla base.</p>
 
 <p>Por ejemplo, el fragmento de código que sigue muestra como usar la etiqueta de plantilla <code>extends</code>, y sobrescribe el bloque <code>content</code>. El HTML final producido tendrá todo el HTML y la estructura defininda en la plantilla base (incluyendo el contenido por defecto que ha definido dentro del bloque <code>title</code>), pero con tu nuevo bloque <code>content</code> insertado en lugar del que venía por defecto.</p>
 
@@ -322,21 +322,21 @@ def index(request):
 <p>Para que Django encuentre los archivos de plantillas es necesario editar el archivo settings.py agregando el directorio donde creamos nuestras plantillas en el objeto TEMPLATES, como indica la linea en negrita a continuación:</p>
 
 <pre class="brush: python">TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-<strong>            os.path.join(BASE_DIR, 'templates'),
-</strong>        ],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-            ],
-        },
-    },
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [
+<strong>            os.path.join(BASE_DIR, 'templates'),
+</strong>        ],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
 ]</pre>
 
 <h2 id="¿Cómo_se_ve">¿Cómo se ve?</h2>
@@ -370,7 +370,7 @@ def index(request):
 <h2 id="Mira_también">Mira también</h2>
 
 <ul>
- <li><a href="https://docs.djangoproject.com/en/1.10/intro/tutorial03/">Escribiendo tu primera aplicación Django, parte 3: Vistas y Plantillas</a>  (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/intro/tutorial03/">Escribiendo tu primera aplicación Django, parte 3: Vistas y Plantillas</a>  (Django docs)</li>
  <li><a href="https://docs.djangoproject.com/en/1.10/topics/http/urls/">Despachador URL</a> (Django docs)</li>
  <li><a href="https://docs.djangoproject.com/en/1.10/topics/http/views/">Funciones de vista</a> (DJango docs)</li>
  <li><a href="https://docs.djangoproject.com/en/1.10/topics/templates/">Plantillas</a> (Django docs)</li>

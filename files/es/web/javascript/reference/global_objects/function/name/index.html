@@ -6,17 +6,17 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/name
 ---
 <div>{{JSRef}}</div>
 
-<p>La propiedad <code><strong><em>function</em>.name</strong></code> retorna el nombre de la función o retorna <code>"anonymous"</code> por funciones creadas anónimamente.</p>
+<p>La propiedad <code><strong><em>function</em>.name</strong></code> retorna el nombre de la función o retorna <code>"anonymous"</code> por funciones creadas anónimamente.</p>
 
 <div>{{js_property_attributes(0,0,1)}}</div>
 
-<div>Nótese que en implementaciones no estándar previas a ES2015 el atributo <code>configurable</code> también era <code>false</code>.</div>
+<div>Nótese que en implementaciones no estándar previas a ES2015 el atributo <code>configurable</code> también era <code>false</code>.</div>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
 <h3 id="Nombre_de_una_declaración_de_función">Nombre de una declaración de función</h3>
 
-<p>La propiedad <code>name</code> retorna el nombre de una declaración de función.</p>
+<p>La propiedad <code>name</code> retorna el nombre de una declaración de función.</p>
 
 <pre class="brush: js">function doSomething() {}
 
@@ -25,7 +25,7 @@ console.log(doSomething.name); // imprime en pantalla "doSomething"
 
 <h3 id="Nombre_de_constructor_de_función">Nombre de constructor de función</h3>
 
-<p>Las funciones creadas con la sintaxis <code>new Function(...)</code> o simplemente <code>Function(...)</code> tienen como propiedad <code>name</code> una cadena vacía. En los ejemplos a continuación se crean funciones anónimas, tales que su <code>name</code> retorna una cadena vacía:</p>
+<p>Las funciones creadas con la sintaxis <code>new Function(...)</code> o simplemente <code>Function(...)</code> tienen como propiedad <code>name</code> una cadena vacía. En los ejemplos a continuación se crean funciones anónimas, tales que su <code>name</code> retorna una cadena vacía:</p>
 
 <pre class="brush: js">var f = function() {};
 var object = {
@@ -38,7 +38,7 @@ console.log(object.someMethod.name == ''); // también true
 
 <h3 id="Nombres_de_función_inferidos">Nombres de función inferidos</h3>
 
-<p>Los navegadores que implementan funciones ES2015 pueden inferir el nombre de una función anónima de su posición sintáctica. Por ejemplo:</p>
+<p>Los navegadores que implementan funciones ES2015 pueden inferir el nombre de una función anónima de su posición sintáctica. Por ejemplo:</p>
 
 <pre class="brush: js">var f = function() {};
 console.log(f.name); // "f"</pre>
@@ -54,7 +54,7 @@ try { object_someMethod } catch(e) { console.log(e); }
 // ReferenceError: object_someMethod is not defined
 </pre>
 
-<p>No se puede cambiar el nombre de una función, esta propiedad es de solo lectura:</p>
+<p>No se puede cambiar el nombre de una función, esta propiedad es de solo lectura:</p>
 
 <pre class="brush: js">var object = {
   // anonymous
@@ -83,7 +83,7 @@ foo.bind({}).name; // "bound foo"</pre>
 
 <h3 id="Nombres_de_funciones_getters_y_setters">Nombres de funciones getters y setters</h3>
 
-<p>Cuando se usan <code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">get</a></code> y <code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">set</a>, </code>"get" y "set" aparecerán en el nombre de la función.</p>
+<p>Cuando se usan <code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">get</a></code> y <code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">set</a>, </code>"get" y "set" aparecerán en el nombre de la función.</p>
 
 <pre class="brush: js">var o = {
   get foo(){},
@@ -96,7 +96,7 @@ descriptor.set.name; // "set foo";</pre>
 
 <h2 id="Ejemplos_2">Ejemplos</h2>
 
-<p>Se puede usar <code>obj.constructor.name</code> para saber cuál es la "clase" de un objeto:</p>
+<p>Se puede usar <code>obj.constructor.name</code> para saber cuál es la "clase" de un objeto:</p>
 
 <pre class="brush: js">function a() {}
 
@@ -107,7 +107,7 @@ console.log(b.constructor.name); // imprime "a"
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>Para versiones de IE &lt; 9, se puede usar <code>fn._name()</code> en su lugar. Para IE9 o posteriores se puede usar el siguiente <a href="https://github.com/JamesMGreene/Function.name">polyfill</a>.</p>
+<p>Para versiones de IE &lt; 9, se puede usar <code>fn._name()</code> en su lugar. Para IE9 o posteriores se puede usar el siguiente <a href="https://github.com/JamesMGreene/Function.name">polyfill</a>.</p>
 
 <h2 id="Especificaciones">Especificaciones</h2>
 
@@ -126,7 +126,7 @@ console.log(b.constructor.name); // imprime "a"
   <tr>
    <td>{{SpecName('ESDraft', '#sec-name', 'name')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

@@ -20,14 +20,16 @@ Il existe généralement un nombre limité de niveaux de graisse pour une police
 
 ## Syntaxe
 
-    /* Valeurs simples */
-    font-weight: normal;
-    font-weight: bold;
-    font-weight: 400;
+```css
+/* Valeurs simples */
+font-weight: normal;
+font-weight: bold;
+font-weight: 400;
 
-    /* Valeurs multiples */
-    font-weight: normal bold;
-    font-weight: 300 500;
+/* Valeurs multiples */
+font-weight: normal bold;
+font-weight: 300 500;
+```
 
 ### Valeurs
 
@@ -72,12 +74,14 @@ Pour les polices variables TrueType ou OpenType, c'est l'axe de variation `"wght
 
 Dans l'exemple suivant, on récupère une police Open Sans et on l'importe en utilisant le niveau de graisse normal.
 
-    @font-face {
-      font-family: "Open Sans";
-      src: local("Open Sans") format("woff2"),
-           url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
-      font-weight: 400;
-    }
+```css
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans") format("woff2"),
+        url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  font-weight: 400;
+}
+```
 
 ## Accessibilité
 

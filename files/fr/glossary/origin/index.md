@@ -14,7 +14,7 @@ Quelques opérations sont limitées au contenu de même origine, et cette restri
 
 ## Exemples
 
-Les URL qui suivent partagent la même origine car elles ont le même schéma (`http`), nom d'hôte (`example.com`), et que les chemins de fichiers différents n'impportent pas&nbsp;:
+Les URL qui suivent partagent la même origine car elles ont le même schéma (`http`), nom d'hôte (`example.com`), et que les chemins de fichiers différents n'importent pas&nbsp;:
 
 - `http://example.com/app1/index.html`
 - `http://example.com/app2/index.html`

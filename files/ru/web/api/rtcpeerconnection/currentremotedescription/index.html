@@ -5,12 +5,12 @@ translation_of: Web/API/RTCPeerConnection/currentRemoteDescription
 ---
 <p>{{WebRTCSidebar}}</p>
 
-<p>Только для чтения свойство <code><strong>RTCPeerConnection.currentRemoteDescription</strong></code> возвращает объект  {{domxref("RTCSessionDescription")}} , представляющий удалённую сторону соединения, как последний, успешно согласованный объект данных, с момента завершения согласования и установки соединения объектом {{domxref("RTCPeerConnection")}} с удалённым пиром. </p>
+<p>Только для чтения свойство <code><strong>RTCPeerConnection.currentRemoteDescription</strong></code> возвращает объект  {{domxref("RTCSessionDescription")}} , представляющий удалённую сторону соединения, как последний, успешно согласованный объект данных, с момента завершения согласования и установки соединения объектом {{domxref("RTCPeerConnection")}} с удалённым пиром. </p>
 
-<p>Для изменения значения свойства <code>currentRemoteDescription</code>, вызовите метод {{domxref("RTCPeerConnection.setRemoteDescription()")}}, который запускает серию событий, приводящих к установке нового значения. Подробнее о том, что точно происходит и почему изменение значения не происходит немедленно, смотрите {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Ожидающие и текущие объекты описания")}}.</p>
+<p>Для изменения значения свойства <code>currentRemoteDescription</code>, вызовите метод {{domxref("RTCPeerConnection.setRemoteDescription()")}}, который запускает серию событий, приводящих к установке нового значения. Подробнее о том, что точно происходит и почему изменение значения не происходит немедленно, смотрите {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Ожидающие и текущие объекты описания")}}.</p>
 
 <div class="note">
-<p>В отличии от {{domxref("RTCPeerConnection.remoteDescription")}}, это значение действительный текущий статус соединения; <code>remoteDescription</code> может указывать на объект описания, на который соединение находиться в процессе перехода..</p>
+<p>В отличии от {{domxref("RTCPeerConnection.remoteDescription")}}, это значение действительный текущий статус соединения; <code>remoteDescription</code> может указывать на объект описания, на который соединение находиться в процессе перехода..</p>
 </div>
 
 <h2 id="Синтаксис">Синтаксис</h2>
@@ -19,11 +19,11 @@ translation_of: Web/API/RTCPeerConnection/currentRemoteDescription
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
 
-<p>Текущий объект описания, представляющий удалённую сторону соединения, если она присутствует. Если ни один объект описания не установлен, значением будет <code>null</code>.</p>
+<p>Текущий объект описания, представляющий удалённую сторону соединения, если она присутствует. Если ни один объект описания не установлен, значением будет <code>null</code>.</p>
 
 <h2 id="Пример">Пример</h2>
 
-<p>Пример рассматривает свойство  <code>currentRemoteDescription</code> и отображает предупреждение, содержащее значения свойств  <code>type</code> и <code>sdp</code> ,объекта {{domxref("RTCSessionDescription")}}.</p>
+<p>Пример рассматривает свойство  <code>currentRemoteDescription</code> и отображает предупреждение, содержащее значения свойств  <code>type</code> и <code>sdp</code> ,объекта {{domxref("RTCSessionDescription")}}.</p>
 
 <pre class="brush: js">var pc = new RTCPeerConnection();
 …

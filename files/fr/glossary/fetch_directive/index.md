@@ -27,7 +27,7 @@ Ces directives CSP sont :
 - {{CSP("style-src")}}
 - {{CSP("worker-src")}}
 
-## En apprendre plus
+## Voir aussi
 
 - {{HTTPHeader("Content-Security-Policy","Politique de sécurité de contenu")}}
 - Autres types de directives:

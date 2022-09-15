@@ -54,15 +54,15 @@ function showPaintTimings() {
 
 Le code ci-dessus produit une sortie de console semblable à ce qui suit :
 
-    Le temps pour first-paint est de 2785.915 millisecondes.
-    Le temps pour first-contentful-paint est de 2787.460 millisecondes.
+```
+Le temps pour first-paint est de 2785.915 millisecondes.
+Le temps pour first-contentful-paint est de 2787.460 millisecondes.
+```
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('Paint Timing','#sec-PerformancePaintTiming','PerformancePaintTiming')}} | {{Spec2('Paint Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformancePaintTiming")}}
+{{Compat}}

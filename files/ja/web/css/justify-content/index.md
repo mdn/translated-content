@@ -1,14 +1,6 @@
 ---
 title: justify-content
 slug: Web/CSS/justify-content
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS ボックス配置
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.justify-content
-translation_of: Web/CSS/justify-content
 ---
 {{CSSRef}}
 
@@ -63,7 +55,6 @@ justify-content: unset;
 ```
 
 ### 値
-
 
 - `start`
   - : 各アイテムは、主軸方向で配置コンテナーの先頭側の端に向けて互いに寄せて配置されます。

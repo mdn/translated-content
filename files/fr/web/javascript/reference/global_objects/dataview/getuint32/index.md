@@ -19,7 +19,9 @@ La méthode **`getUint32()`** permet de lire un entier non-signé sur 32 bits (t
 
 ## Syntaxe
 
-    dataview.getUint32(positionOctet [, littleEndian])
+```js
+dataview.getUint32(positionOctet [, littleEndian])
+```
 
 ### Paramètres
 

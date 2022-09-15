@@ -1,14 +1,6 @@
 ---
 title: '<h1>–<h6>: HTML の見出し要素'
 slug: Web/HTML/Element/Heading_Elements
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
-  - Web
-browser-compat: html.elements.h1
-translation_of: Web/HTML/Element/Heading_Elements
 ---
 
 {{HTMLRef}}
@@ -21,11 +13,11 @@ translation_of: Web/HTML/Element/Heading_Elements
   <tbody>
     <tr>
       <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a></th>
-      <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>, 見出しコンテンツ, 知覚可能コンテンツ</td>
+      <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, 見出しコンテンツ, 知覚可能コンテンツ</td>
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
-      <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content">記述コンテンツ</a></td>
+      <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a></td>
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
@@ -33,7 +25,7 @@ translation_of: Web/HTML/Element/Heading_Elements
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>
-      <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>を受け入れるすべての要素。{{HTMLElement("hgroup")}} は非推奨になったので、見出し要素をその子要素として使用しないでください。</td>
+      <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素。{{HTMLElement("hgroup")}} は非推奨になったので、見出し要素をその子要素として使用しないでください。</td>
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>

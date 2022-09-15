@@ -74,26 +74,28 @@ Dans cet exemple, nous utilisons la méthode [`getImageData()`](/fr/docs/Web/API
 <div id="color" style="width:200px;height:50px;float:left"></div>
 ```
 
-    var img = new Image();
-    img.src = './assets/rhino.jpg';
-    var canvas = document.getElementById('canvas');
-    var ctx = canvas.getContext('2d');
-    img.onload = function() {
-      ctx.drawImage(img, 0, 0);
-      img.style.display = 'none';
-    };
-    var color = document.getElementById('color');
-    function pick(event) {
-      var x = event.layerX;
-      var y = event.layerY;
-      var pixel = ctx.getImageData(x, y, 1, 1);
-      var data = pixel.data;
-      var rgba = 'rgba(' + data[0] + ', ' + data[1] +
-                 ', ' + data[2] + ', ' + (data[3] / 255) + ')';
-      color.style.background =  rgba;
-      color.textContent = rgba;
-    }
-    canvas.addEventListener('mousemove', pick);
+```js
+var img = new Image();
+img.src = './assets/rhino.jpg';
+var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
+img.onload = function() {
+  ctx.drawImage(img, 0, 0);
+  img.style.display = 'none';
+};
+var color = document.getElementById('color');
+function pick(event) {
+  var x = event.layerX;
+  var y = event.layerY;
+  var pixel = ctx.getImageData(x, y, 1, 1);
+  var data = pixel.data;
+  var rgba = 'rgba(' + data[0] + ', ' + data[1] +
+              ', ' + data[2] + ', ' + (data[3] / 255) + ')';
+  color.style.background =  rgba;
+  color.textContent = rgba;
+}
+canvas.addEventListener('mousemove', pick);
+```
 
 {{ EmbedLiveSample('Une_pipette_à_couleur', 610, 240) }}
 
@@ -115,7 +117,7 @@ ctx.putImageData(monImageData, 0, 0);
 
 ### Niveaux de gris et inversion de couleurs
 
-Dans cet exemple, nous itérons sur tous les pixels pour changer leurs valeurs, puis nous remettons le tableau de pixels modifié sur le canevas à l'aide de [putImageData()](/fr-FR/docs/Web/API/CanvasRenderingContext2D/putImageData). La fonction inversion soustrait simplement chaque couleur de la valeur maximale 255. La fonction grayscale _(niveaux de gris)_ fait simplement la moyenne du rouge, du vert et du bleu. Vous pouvez également utiliser une moyenne pondérée, donnée par la formule x = 0.299r + 0.587v + 0.114b, par exemple. Voir [Niveaux de gris](https://fr.wikipedia.org/wiki/Niveau_de_gris) sur Wikipedia pour plus d'informations.
+Dans cet exemple, nous itérons sur tous les pixels pour changer leurs valeurs, puis nous remettons le tableau de pixels modifié sur le canevas à l'aide de [putImageData()](/fr-FR/docs/Web/API/CanvasRenderingContext2D/putImageData). La fonction inversion soustrait simplement chaque couleur de la valeur maximale 255. La fonction grayscale _(niveaux de gris)_ fait simplement la moyenne du rouge, du vert et du bleu. Vous pouvez également utiliser une moyenne pondérée, donnée par la formule x = 0.299r + 0.587v + 0.114b, par exemple. Voir [Niveaux de gris](https://fr.wikipedia.org/wiki/Niveau_de_gris) sur Wikipédia pour plus d'informations.
 
 ```html hidden
 <canvas id="canevas" width="300" height="227"></canvas>

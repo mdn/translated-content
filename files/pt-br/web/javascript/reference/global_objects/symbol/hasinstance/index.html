@@ -8,13 +8,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
 ---
 <div>{{JSRef}}</div>
 
-<p>O symbol bem-conhecido <strong><code>Symbol.hasInstance</code></strong> é usado para determinar se um objeto construtor reconhece um objeto como de sua instância. O comportamento do operador {{jsxref("Operators/instanceof", "instanceof")}} pode ser customizado por este symbol.</p>
+<p>O symbol bem-conhecido <strong><code>Symbol.hasInstance</code></strong> é usado para determinar se um objeto construtor reconhece um objeto como de sua instância. O comportamento do operador {{jsxref("Operators/instanceof", "instanceof")}} pode ser customizado por este symbol.</p>
 
 <div>{{js_property_attributes(0,0,0)}}</div>
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<p>Você pode implementar o comportamento customizado do seu <code>instanceof</code> deste jeito; por exemplo:</p>
+<p>Você pode implementar o comportamento customizado do seu <code>instanceof</code> deste jeito; por exemplo:</p>
 
 <pre class="brush: js">class MyArray {
   static [Symbol.hasInstance](instance) {
@@ -49,62 +49,14 @@ console.log(new MyArray instanceof MySubArray); // false</pre>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-symbol.hasinstance', 'Symbol.hasInstance')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(51)}}</td>
-   <td>{{ CompatGeckoDesktop(50) }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile(50) }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.Symbol.hasInstance")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

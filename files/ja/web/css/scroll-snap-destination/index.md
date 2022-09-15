@@ -1,15 +1,6 @@
 ---
 title: scroll-snap-destination
 slug: Web/CSS/scroll-snap-destination
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS スクロールスナップ
-  - 非推奨
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.scroll-snap-destination
-translation_of: Web/CSS/scroll-snap-destination
 ---
 {{CSSRef}}{{deprecated_header}}
 
@@ -51,27 +42,27 @@ scroll-snap-destination: unset;
   <div>
     <p>At coordinate (0, 0)</p>
     <div class="scrollContainer destination0">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
     </div>
   </div>
 
   <div>
     <p>At coordinate (25, 0)</p>
     <div class="scrollContainer destination25">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
     </div>
   </div>
 
   <div>
     <p>At coordinate (50, 0)</p>
     <div class="scrollContainer destination50">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
     </div>
   </div>
 </div>

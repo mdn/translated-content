@@ -1,15 +1,6 @@
 ---
 title: 術語表
 slug: Glossary
-tags:
-  - Beginner
-  - Definitions
-  - Dictionary
-  - Glossary
-  - Index
-  - Landing
-  - Terminology
-translation_of: Glossary
 ---
 網路技術包含了一長串的術語以及縮寫，這些會被使用在文件跟程式碼中。此術語表提供你需要知道的辭彙與縮寫的定義，以便能成功理解和建構網路。
 

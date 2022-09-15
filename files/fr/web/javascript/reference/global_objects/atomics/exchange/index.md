@@ -18,7 +18,9 @@ La méthode statique **`Atomics.exchange()`** permet d'enregistrer une valeur à
 
 ## Syntaxe
 
-    Atomics.exchange(typedArray, index, valeur)
+```js
+Atomics.exchange(typedArray, index, valeur)
+```
 
 ### Paramètres
 

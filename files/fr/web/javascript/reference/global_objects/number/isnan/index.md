@@ -18,7 +18,9 @@ La méthode **`Number.isNaN()`** permet de déterminer si la valeur passée en a
 
 ## Syntaxe
 
-    Number.isNaN(valeurÀTester)
+```js
+Number.isNaN(valeurÀTester)
+```
 
 ### Paramètres
 

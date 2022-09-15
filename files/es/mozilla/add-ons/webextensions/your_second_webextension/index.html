@@ -19,7 +19,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/Tutorial
   Para el botón vamos a proporcionar:
   <ul>
    <li>un icono, llamado "beasts-32.png"</li>
-   <li>una ventana emergente para abrir cuando el botón sea presionado. La  ventana emergente incluye HTML, CSS y JavaScript.</li>
+   <li>una ventana emergente para abrir cuando el botón sea presionado. La  ventana emergente incluye HTML, CSS y JavaScript.</li>
   </ul>
  </li>
  <li><strong>Define un ícono para la extensión,</strong> llamado "beasts-48.png". Este será mostrado en el Administrador de Complementos.</li>
@@ -43,7 +43,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/Tutorial
  <li>Empaquetando recursos con tu extensión que pueden ser usados por las páginas web</li>
 </ul>
 
-<p>Tu puedes encontrar el <a href="https://github.com/mdn/webextensions-examples/tree/master/beastify">código fuente completo de la extensión en GitHub</a>.</p>
+<p>Tu puedes encontrar el <a href="https://github.com/mdn/webextensions-examples/tree/master/beastify">código fuente completo de la extensión en GitHub</a>.</p>
 
 <p>Para escribir una extensión, necesitará de Firefox 45 o más reciente.</p>
 
@@ -90,11 +90,11 @@ cd beastify</pre>
 </pre>
 
 <ul>
- <li>Las tres primeras llaves: <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></code> , <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name">name</a></code> , y <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version">version</a></code> , son obligatorias y contienen los metadatos básicos para la extensión.</li>
+ <li>Las tres primeras llaves: <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></code> , <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name">name</a></code> , y <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version">version</a></code> , son obligatorias y contienen los metadatos básicos para la extensión.</li>
  <li><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description">description</a></code> y <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url">homepage_url</a></code> son opcionales, pero recomendadas: proporcionan información útil acerca de la extensión.</li>
  <li><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons">icons</a></code> es opcional, pero recomedada: permite la especificación de un ícono para la extensión, que será mostrada en el Administrador de Complementos.</li>
- <li><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> lista los permisos que la extensión necesita. Aquí solo se pide el permiso de <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission"><code>activeTab</code> permission</a>.</li>
- <li><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> especifica el botón de la barra de herramientas.  Nosotros proveemos tres piezas de información aquí:
+ <li><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> lista los permisos que la extensión necesita. Aquí solo se pide el permiso de <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission"><code>activeTab</code> permission</a>.</li>
+ <li><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> especifica el botón de la barra de herramientas.  Nosotros proveemos tres piezas de información aquí:
   <ul>
    <li><code>default_icon</code> es obligatorio y enlaza al icono para el botón</li>
    <li><code>default_title</code> es opcional y será mostrado como descripción</li>
@@ -110,7 +110,7 @@ cd beastify</pre>
 
 <p>La extensión debería tener un íncono. Éste, será mostrado junto a la lista de complementos en el Administrador de Complementos (Pude abrirlo introduciendo en la URL "about:addons"). El manifest.json promete que se posee un ícono para la barra de herramientas en "icons/beasts-48.png".</p>
 
-<p>Cree el directorio "icons" y guarde un ícono ahí y nómbrelo como "beasts-48.png".  Puede utilizar <a href="https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-48.png">uno de nuestro ejemplo</a>, el cual ha sido tomado del  <a href="https://www.iconfinder.com/iconsets/free-retina-icon-set">conjuto de íconos Aha-Soft’s Free Retina</a>, que es utilizado bajo el término de su propia <a href="http://www.aha-soft.com/free-icons/free-retina-icon-set/">licencia</a>.</p>
+<p>Cree el directorio "icons" y guarde un ícono ahí y nómbrelo como "beasts-48.png".  Puede utilizar <a href="https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-48.png">uno de nuestro ejemplo</a>, el cual ha sido tomado del  <a href="https://www.iconfinder.com/iconsets/free-retina-icon-set">conjuto de íconos Aha-Soft’s Free Retina</a>, que es utilizado bajo el término de su propia <a href="http://www.aha-soft.com/free-icons/free-retina-icon-set/">licencia</a>.</p>
 
 <p>Si elige proporcionar su propio ícono, debería ser de 48x48 pixeles. También puede proporcionar un ícono de 96x96 pixeles, para pantallas de altas resoluciones y, si usted hace esto, deberá especificarlo como la propiedad <code>96</code> del objeto <code>icons</code> en el manifest.json:</p>
 
@@ -123,7 +123,7 @@ cd beastify</pre>
 
 <p>El botón de la barra de herramientas necesita un ícono, y nuestro manifest.json promete eso y nos gustaría tener un ícono para la barra de herramientas en "icons/beasts-32.png".</p>
 
-<p>Guarde un ícono llamado "beasts-32.png" en el directorio "icons". Tu podrías usar <a href="https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-32.png">uno de nuestros ejemplos</a>, los cuales son tomados desde el sitio <a href="http://www.iconbeast.com/free">IconBeast Lite icon set</a> y empleados bajo sus términos de <a href="http://www.iconbeast.com/faq/">licencia</a>.</p>
+<p>Guarde un ícono llamado "beasts-32.png" en el directorio "icons". Tu podrías usar <a href="https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-32.png">uno de nuestros ejemplos</a>, los cuales son tomados desde el sitio <a href="http://www.iconbeast.com/free">IconBeast Lite icon set</a> y empleados bajo sus términos de <a href="http://www.iconbeast.com/faq/">licencia</a>.</p>
 
 <p>Si tu no provees una ventana emergente, entonces el evento clic es disparado hacia tu extensión cuando el usuario de clic sobre el botón. Si provees una ventana emergente entonces el evento clic no se disparará, pero en cambio, se muestra la ventana emergente. Nosotros queremos una ventana emergente, así que vamos a crearla.</p>
 
@@ -321,7 +321,7 @@ browser<span class="punctuation token">.</span>tabs<span class="punctuation toke
 
 <ul>
  <li>Si el clic se produjo en el botón con <code>class="beast"</code>, se llama a <code>beastify()</code>.</li>
- <li>Si el clic se produjo en el botón con <code>class="reset"</code>, se llama a  <code>reset()</code>.</li>
+ <li>Si el clic se produjo en el botón con <code>class="reset"</code>, se llama a  <code>reset()</code>.</li>
 </ul>
 
 <p>La función <code>beastify()</code> hace tres cosas:</p>
@@ -397,7 +397,7 @@ browser<span class="punctuation token">.</span>tabs<span class="punctuation toke
 <p>Luego, en la linea 40, donde el script de contenido atiende mensajes provenientes de la ventana emergente (usando la API <code><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/runtime/onMessage">browser.runtime.onMessage</a></code>), vemos que ésta puede enviar dos mensajes diferentes: "beastify" y "reset".</p>
 
 <ul>
- <li>si el mensaje es "beastify", esperamos que contenga la URL de la imagen. Removemos el contenido que ha sido agregado por el anterior llamado a "beastify", y luego construimos y  añadimos un elemento <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">&lt;img&gt;</a></code> cuyo atributo <code>src</code> contiene la URL de la imagen.</li>
+ <li>si el mensaje es "beastify", esperamos que contenga la URL de la imagen. Removemos el contenido que ha sido agregado por el anterior llamado a "beastify", y luego construimos y  añadimos un elemento <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">&lt;img&gt;</a></code> cuyo atributo <code>src</code> contiene la URL de la imagen.</li>
  <li>si el mensaje es "reset", simplemente removemos cualquier imagen que haya sido agregada antes.</li>
 </ul>
 
@@ -405,7 +405,7 @@ browser<span class="punctuation token">.</span>tabs<span class="punctuation toke
 
 <p>Finalmente, necesitamos incluir las imágenes de los animales.</p>
 
-<p>Crea una carpeta nueva llamada "beasts", y adiciona tres imágenes en ella, con su nombre apropiado. Tu puedes obtener estas imágenes desde el <a href="https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts">repositorio en GitHub</a>, o desde aquí:</p>
+<p>Crea una carpeta nueva llamada "beasts", y adiciona tres imágenes en ella, con su nombre apropiado. Tu puedes obtener estas imágenes desde el <a href="https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts">repositorio en GitHub</a>, o desde aquí:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/11459/frog.jpg" style="display: inline-block; height: 200px; margin: 20px; width: 200px;"><img alt="" src="https://mdn.mozillademos.org/files/11461/snake.jpg" style="display: inline-block; height: 200px; margin: 20px; width: 200px;"><img alt="" src="https://mdn.mozillademos.org/files/11463/turtle.jpg" style="display: inline-block; height: 200px; margin: 20px; width: 200px;"></p>
 
@@ -448,7 +448,7 @@ browser<span class="punctuation token">.</span>tabs<span class="punctuation toke
 
 <div id="gt-res-content">
 <div class="trans-verified-button-small" dir="ltr" id="gt-res-dir-ctr">
-<div id="tts_button"> </div>
+<div id="tts_button"> </div>
 
 <p><span id="result_box" lang="es"><span>Puede automatizar el paso de instalación temporal mediante la herramienta <a href="https://developer.mozilla.org/es/Add-ons/WebExtensions/Getting_started_with_web-ext">web-ext</a>.</span> <span>Pruebe esto</span></span>:</p>
 </div>
@@ -457,4 +457,4 @@ browser<span class="punctuation token">.</span>tabs<span class="punctuation toke
 <pre class="brush: bash line-numbers  language-bash"><code class="language-bash">cd beastify
 web-ext run</code></pre>
 
-<p> </p>
+<p> </p>

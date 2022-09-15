@@ -14,7 +14,7 @@ Un **URI** _(Uniform Resource Identifier)_ _(Identifiant de ressource uniforme )
 
 ## Voir aussi
 
-- {{Interwiki("wikipedia","Uniform_Resource_Identifier","URI")}} sur Wikipedia
+- [URI](https://fr.wikipedia.org/wiki/Uniform_Resource_Identifier) sur Wikipédia
 - [RFC 3986 sur URI](http://tools.ietf.org/html/rfc3986)
 - [data URIs](/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)
 - [www vs non-www](/fr/docs/URI/www_vs_non-www_URLs)

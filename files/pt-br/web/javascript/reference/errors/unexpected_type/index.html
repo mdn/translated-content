@@ -53,7 +53,7 @@ Object.create(foo); // TypeError: "foo" is not an object or null
 
 <h3 id="Consertando_o_problema">Consertando o problema</h3>
 
-<p>Para consertar o pointeiro nulo para valores <code>undefined</code> ou <code>null</code>,  você pode utilizar o operador <a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a> , por exemplo.</p>
+<p>Para consertar o pointeiro nulo para valores <code>undefined</code> ou <code>null</code>,  você pode utilizar o operador <a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a> , por exemplo.</p>
 
 <pre class="brush: js">if (typeof foo !== 'undefined') {
   // Agora nós sabemos que foo está definido, então podemos prosseguir.

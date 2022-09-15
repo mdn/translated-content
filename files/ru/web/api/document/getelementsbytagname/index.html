@@ -10,7 +10,7 @@ translation_of: Web/API/Document/getElementsByTagName
 ---
 <div>{{ ApiRef("DOM") }}</div>
 
-<div> </div>
+<div> </div>
 
 <p><span class="seoSummary">Возвращает {{domxref("HTMLCollection")}} элементов с указанным именем тега.</span> Поиск осуществляется по всему документу, включая корневой узел. Возвращаемая HTMLCollection живая, это значит что она автоматически обновляет сама себя чтобы оставаться синхронизированной с DOM деревом без необходимости вызова document.getElementByTagName() снова.</p>
 
@@ -27,7 +27,7 @@ translation_of: Web/API/Document/getElementsByTagName
 
 <h2 id="Примеры">Примеры</h2>
 
-<p>В следующем примере, getElementByTagName() стартует из отдельного родительского элемента и ищет сверху-вниз рекурсивно по DOM начиная с родительского элемента просматривая  дочерние элементы на соответствие тегов параметру name.</p>
+<p>В следующем примере, getElementByTagName() стартует из отдельного родительского элемента и ищет сверху-вниз рекурсивно по DOM начиная с родительского элемента просматривая  дочерние элементы на соответствие тегов параметру name.</p>
 
 <p>Отметим что когда узел в котором <code>getElementsByTagName()</code> был вызван не является узлом <code>document</code>, по факту используется метод {{domxref("element.getElementsByTagName()")}}.</p>
 
@@ -56,7 +56,7 @@ translation_of: Web/API/Document/getElementsByTagName
       var num = div2Paras.length;
       alert("There are " + num + " paragraph in #div2");
     }
-  &lt;/script&gt;
+  &lt;/script&gt;
 &lt;/head&gt;
 &lt;body style="border: solid green 3px"&gt;
   &lt;p&gt;Some outer text&lt;/p&gt;
@@ -73,17 +73,17 @@ translation_of: Web/API/Document/getElementsByTagName
     &lt;/div&gt;
   &lt;/div&gt;
 
-  &lt;p&gt;Some outer text&lt;/p&gt;
-  &lt;p&gt;Some outer text&lt;/p&gt;
+  &lt;p&gt;Some outer text&lt;/p&gt;
+  &lt;p&gt;Some outer text&lt;/p&gt;
 
-  &lt;button onclick="getAllParaElems();"&gt;
-    show all p elements in document&lt;/button&gt;&lt;br /&gt;
+  &lt;button onclick="getAllParaElems();"&gt;
+    show all p elements in document&lt;/button&gt;&lt;br /&gt;
 
-  &lt;button onclick="div1ParaElems();"&gt;
-    show all p elements in div1 element&lt;/button&gt;&lt;br /&gt;
+  &lt;button onclick="div1ParaElems();"&gt;
+    show all p elements in div1 element&lt;/button&gt;&lt;br /&gt;
 
-  &lt;button onclick="div2ParaElems();"&gt;
-    show all p elements in div2 element&lt;/button&gt;
+  &lt;button onclick="div2ParaElems();"&gt;
+    show all p elements in div2 element&lt;/button&gt;
 
 &lt;/body&gt;
 &lt;/html&gt;
@@ -91,7 +91,7 @@ translation_of: Web/API/Document/getElementsByTagName
 
 <h2 id="Примечания">Примечания</h2>
 
-<p>Когда вызывается на HTML document, <code>getElementsByTagName()</code> переводит в нижний регистр свой аргумент перед работой. Это может быть неожиданным при попытке найти соответствие для camelCase SVG элементов в поддереве HTML документа. В таком случае может быть полезен {{Domxref("document.getElementsByTagNameNS()")}}. Смотрите также {{Bug(499656)}}.</p>
+<p>Когда вызывается на HTML document, <code>getElementsByTagName()</code> переводит в нижний регистр свой аргумент перед работой. Это может быть неожиданным при попытке найти соответствие для camelCase SVG элементов в поддереве HTML документа. В таком случае может быть полезен {{Domxref("document.getElementsByTagNameNS()")}}. Смотрите также {{Bug(499656)}}.</p>
 
 <p><code>document.getElementsByTagName()</code> подобен {{domxref("element.getElementsByTagName()")}}, за исключением того что поиск охватывает весь документ.</p>
 

@@ -18,10 +18,12 @@ Adopte un noeud. Le noeud (et son sous-arbre) est supprimé du document dans leq
 
 ## Syntaxe
 
-    node = document.adoptNode(externalNode);
+```js
+node = document.adoptNode(externalNode);
+```
 
 - `node`
-  - : est le noeud adopté qui a maintenant ce document en tant que son [`ownerDocument`](/en-US/docs/DOM/Node.ownerDocument) (_document propriétaire_). Le [`parentNode`](/en-US/docs/DOM/Node.parentNode) du noeud est `null`, car il n'a pas encore été inséré dans l'arborescence du document. Notez que `node` et `externalNode` sont le même objet après cet appel.
+  - : est le noeud adopté qui a maintenant ce document en tant que son [`ownerDocument`](/fr/docs/DOM/Node.ownerDocument) (_document propriétaire_). Le [`parentNode`](/fr/docs/DOM/Node.parentNode) du noeud est `null`, car il n'a pas encore été inséré dans l'arborescence du document. Notez que `node` et `externalNode` sont le même objet après cet appel.
 - `externalNode`
   - : est le noeud à adopter existant dans un autre document.
 
@@ -56,4 +58,4 @@ alphas, si un nœud n'est pas adopté ou importé avant d'être utilisé dans un
 
 ## Voir aussi
 
-- [document.importNode](/en-US/docs/DOM/document.importNode)
+- [document.importNode](/fr/docs/DOM/document.importNode)

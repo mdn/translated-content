@@ -20,7 +20,9 @@ La propriété **`elementsFromPoint()`** de l'interface {{domxref("DocumentOrSha
 
 ## Syntaxe
 
-    var elements = document.elementsFromPoint(x, y);
+```js
+var elements = document.elementsFromPoint(x, y);
+```
 
 ### Paramètres
 
@@ -70,14 +72,11 @@ if (document.elementsFromPoint) {
 
 ## Spécifications
 
-| Spécification                                                                                                                    | État                             | Commentaires                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------ |
-| {{SpecName('Shadow DOM','#extensions-to-the-documentorshadowroot-mixin','DocumentOrShadowRoot')}} | {{Spec2('Shadow DOM')}} | Définition initiale                                    |
-| {{SpecName('CSSOM View', '#dom-document-elementsfrompoint', 'Document')}}                                 | {{Spec2('CSSOM View')}} | Précise l'ordre selon lequel les éléments sont peints. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DocumentOrShadowRoot.elementsFromPoint")}}
+{{Compat}}
 
 ## Voir aussi
 

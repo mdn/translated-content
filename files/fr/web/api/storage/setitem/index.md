@@ -14,7 +14,9 @@ La méthode `setItem()` de l'interface {{domxref("Storage")}}, lorsque lui sont 
 
 ## Syntaxe
 
-    storage.setItem(nomClé, valeurClé);
+```js
+storage.setItem(nomClé, valeurClé);
+```
 
 ### Paramètres
 
@@ -48,13 +50,11 @@ function remplissageStockage() {
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-setitem', 'Storage.setItem')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Storage.setItem")}}
+{{Compat}}
 
 ## Voir aussi
 

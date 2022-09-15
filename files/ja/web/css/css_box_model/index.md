@@ -1,13 +1,6 @@
 ---
 title: CSS ボックスモデル
 slug: Web/CSS/CSS_Box_Model
-tags:
-  - CSS
-  - CSS ボックスモデル
-  - ガイド
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/CSS_Box_Model
 ---
 {{CSSRef}}
 
@@ -49,7 +42,7 @@ CSS のボックスは、テキスト、画像、その他の HTML 要素が表�
 - {{CSSxRef("margin-left")}}
 - {{CSSxRef("margin-right")}}
 - {{CSSxRef("margin-top")}}
-- {{CSSxRef("margin-trim")}} {{Experimental_Inline}}
+- {{CSSxRef("margin-trim")}} {{Experimental_Inline}}
 
 #### ボックスのパディングを制御するプロパティ
 

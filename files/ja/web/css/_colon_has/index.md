@@ -1,16 +1,6 @@
 ---
 title: ':has()'
 slug: Web/CSS/:has
-tags:
-  - ':has'
-  - CSS
-  - 実験的
-  - リファレンス
-  - セレクター
-  - リファレンス
-  - 擬似クラス
-browser-compat: css.selectors.has
-translation_of: Web/CSS/:has
 ---
 {{CSSRef}}
 
@@ -36,13 +26,17 @@ let test = document.querySelector('a:has(> img)');
 
 次のセレクターは、 {{HTMLElement("img")}} を直接子に持つ {{HTMLElement("a")}} 要素のみを選択します。
 
-    a:has(> img)
+```css
+a:has(> img)
+```
 
 ### \<h1> 要素のうち直後に \<p> があるものを選択
 
 次のセレクターは、直後に {{htmlelement("p")}} 要素を持つ {{HTMLElement("h1")}} 要素のみを選択します。
 
-    h1:has(+ p)
+```css
+h1:has(+ p)
+```
 
 ## 仕様書
 

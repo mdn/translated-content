@@ -15,9 +15,11 @@ La méthode **`getAllKeys()`**, rattachée à l'interface {{domxref("IDBIndex")}
 
 ## Syntaxe
 
-    var getAllKeysRequest = IDBIndex.getAllKeys();
-    var getAllKeysRequest = IDBIndex.getAllKeys(requete);
-    var getAllKeysRequest = IDBIndex.getAllKeys(requete, quantite);
+```js
+var getAllKeysRequest = IDBIndex.getAllKeys();
+var getAllKeysRequest = IDBIndex.getAllKeys(requete);
+var getAllKeysRequest = IDBIndex.getAllKeys(requete, quantite);
+```
 
 ### Paramètres
 
@@ -52,13 +54,11 @@ getAllKeysRequest.onsuccess = function() {
 
 ## Spécifications
 
-| Spécification                                                                            | État                             | Commentaires         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('IndexedDB 2', '#dom-idbindex-getallkeys', 'getAll()')}} | {{Spec2('IndexedDB 2')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBIndex.getAllKeys")}}
+{{Compat}}
 
 ## Voir aussi
 

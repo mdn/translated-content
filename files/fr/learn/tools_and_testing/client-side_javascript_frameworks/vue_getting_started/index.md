@@ -73,8 +73,8 @@ Pour utiliser Vue dans un site existant, vous pouvez déposer l’un des éléme
 
 However, this approach has some limitations. To build more complex apps, you’ll want to use the [Vue NPM package](https://www.npmjs.com/package/vue). This will let you use advanced features of Vue and take advantage of bundlers like WebPack. To make building apps with Vue easier, there is a CLI to streamline the development process. To use the npm package & the CLI you will need:
 
-1.  Node.js 8.11+ installed.
-2.  npm or yarn.
+1. Node.js 8.11+ installed.
+2. npm or yarn.
 
 > **Note :** If you don't have the above installed, find out [more about installing npm and Node.js](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Adding_powerups) here.
 
@@ -98,28 +98,28 @@ We’ll look at using this below.
 
 To explore various features of Vue, we will be building up a sample todo list app. We'll begin by using the Vue CLI to create a new app framework to build our app into. Follow the steps below:
 
-1.  In terminal, to where you'd like to create your sample app, then run .` cd``vue create moz-todo-vue `
-2.  Use the arrow keys and to select the "Manually select features" option.
+1. In terminal, to where you'd like to create your sample app, then run .` cd``vue create moz-todo-vue `
+2. Use the arrow keys and to select the "Manually select features" option.
 
     <kbd>Enter</kbd>
 
-3.  The first menu you’ll be presented with allows you to choose which features you want to include in your project. Make sure that "Babel" and "Linter / Formatter" are selected. If they are not, use the arrow keys and the space bar to toggle them on. Once they are selected, press to proceed.
+3. The first menu you’ll be presented with allows you to choose which features you want to include in your project. Make sure that "Babel" and "Linter / Formatter" are selected. If they are not, use the arrow keys and the space bar to toggle them on. Once they are selected, press to proceed.
 
     <kbd>Enter</kbd>
 
-4.  Next you’ll select a config for the linter / formatter. Navigate to "Eslint with error prevention only" and hit again. This will help us catch common errors, but not be overly opinionated.
+4. Next you’ll select a config for the linter / formatter. Navigate to "Eslint with error prevention only" and hit again. This will help us catch common errors, but not be overly opinionated.
 
     <kbd>Enter</kbd>
 
-5.  Next you are asked to configure what kind of automated linting we want. Select "Lint on save". This will check for errors when we save a file inside the project. Hit to continue.
+5. Next you are asked to configure what kind of automated linting we want. Select "Lint on save". This will check for errors when we save a file inside the project. Hit to continue.
 
     <kbd>Enter</kbd>
 
-6.  Now, you will select how we want your config files to be managed. "In dedicated config files" will put your config settings for things like ESLint into their own, dedicated files. The other option, "In package.json", will put all of your config settings into the app's file. Select "In dedicated config files" and push .`package.json`
+6. Now, you will select how we want your config files to be managed. "In dedicated config files" will put your config settings for things like ESLint into their own, dedicated files. The other option, "In package.json", will put all of your config settings into the app's file. Select "In dedicated config files" and push .`package.json`
 
     <kbd>Enter</kbd>
 
-7.  Finally, you are asked if you want to save this as a preset for future options. This is entirely up to you. If you like these settings over the existing presets and want to use them again, type , otherwise type .
+7. Finally, you are asked if you want to save this as a preset for future options. This is entirely up to you. If you like these settings over the existing presets and want to use them again, type , otherwise type .
 
     <kbd>y</kbd>
 
@@ -200,17 +200,19 @@ The Vue CLI comes with a built-in development server. This allows you to run you
 
 In your terminal, try running (or if you prefer yarn). Your terminal should output something like the following:` npm run serve``yarn serve `
 
-    INFO Starting development server...
-    98% after emitting CopyPlugin
+```
+INFO Starting development server...
+98% after emitting CopyPlugin
 
-     DONE Compiled successfully in 18121ms
+  DONE Compiled successfully in 18121ms
 
-      App running at:
-      - Local:   <http://localhost:8080/>
-      - Network: <http://192.168.1.9:8080/>
+  App running at:
+  - Local:   <http://localhost:8080/>
+  - Network: <http://192.168.1.9:8080/>
 
-      Note that the development build is not optimized.
-      To create a production build, run npm run build.
+  Note that the development build is not optimized.
+  To create a production build, run npm run build.
+```
 
 If you navigate to the “local” address in a new browser tab (this should be something like as stated above, but may vary based on your setup), you should see your app. Right now, it should contain a welcome message, a link to the Vue documentation, links to the plugins you added when you initialized the app with your CLI, and some other useful links to the Vue community and ecosystem.`http://localhost:8080`
 

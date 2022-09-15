@@ -1,15 +1,6 @@
 ---
 title: '::target-text'
 slug: Web/CSS/::target-text
-tags:
-  - '::target-text'
-  - CSS
-  - 擬似要素
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.target-text
-translation_of: Web/CSS/::target-text
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
@@ -17,7 +8,7 @@ translation_of: Web/CSS/::target-text
 
 ```css
 ::target-text {
-  background-color: pink;
+  background-color: pink;
 }
 ```
 

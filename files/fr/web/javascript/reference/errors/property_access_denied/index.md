@@ -13,7 +13,9 @@ original_slug: Web/JavaScript/Reference/Erreurs/Property_access_denied
 
 ## Message
 
-    Error: Permission denied to access property "x"
+```
+Error: Permission denied to access property "x"
+```
 
 ## Type d'erreur
 

@@ -1,14 +1,6 @@
 ---
 title: 右シフト代入 (>>=)
 slug: Web/JavaScript/Reference/Operators/Right_shift_assignment
-tags:
-  - 代入演算子
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.right_shift_assignment
-translation_of: Web/JavaScript/Reference/Operators/Right_shift_assignment
 ---
 {{jsSidebar("Operators")}}
 
@@ -44,5 +36,5 @@ b >>= 2;  // -2 (-00000000000000000000000000000010)
 
 ## 関連情報
 
-- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment)
+- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#代入演算子)
 - [右シフト演算子](/ja/docs/Web/JavaScript/Reference/Operators/Right_shift)

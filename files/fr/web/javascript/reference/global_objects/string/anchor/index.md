@@ -17,7 +17,9 @@ La méthode **`anchor()`** permet de créer une ancre HTML {{HTMLElement("a")}} 
 
 ## Syntaxe
 
-    str.anchor(name)
+```js
+str.anchor(name)
+```
 
 ### Paramètres
 

@@ -37,7 +37,7 @@ translation_of: Web/API/Console
 
 <dl>
  <dt>{{domxref("console.countReset()")}}</dt>
- <dd>Обнуляет значение счётчика с заданным значением.</dd>
+ <dd>Обнуляет значение счётчика с заданным значением.</dd>
 </dl>
 
 <dl>
@@ -54,7 +54,7 @@ translation_of: Web/API/Console
  <dt>{{domxref("console._exception()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>Синоним для <code>error();</code></dd>
  <dt>{{domxref("console.group()")}}</dt>
- <dd>Создаёт новую <a href="/ru/docs/Web/API/console#Using_groups_in_the_console">группировку</a> сообщений, сдвигая все следующие выводимые строки вправо на один уровень. Для завершения <a href="/ru/docs/Web/API/console#Using_groups_in_the_console">группы </a>вызовите <code>groupEnd()</code>.</dd>
+ <dd>Создаёт новую <a href="/ru/docs/Web/API/console#Using_groups_in_the_console">группировку</a> сообщений, сдвигая все следующие выводимые строки вправо на один уровень. Для завершения <a href="/ru/docs/Web/API/console#Using_groups_in_the_console">группы </a>вызовите <code>groupEnd()</code>.</dd>
  <dt>{{domxref("console.groupCollapsed()")}}</dt>
  <dd>Создаёт новую <a href="/ru/docs/Web/API/console#Using_groups_in_the_console">группировку </a>сообщений, сдвигая все следующие сообщения вправо на один уровень; в отличие от <code>group()</code> вывод происходи в свёрнутую <a href="/ru/docs/Web/API/console#Using_groups_in_the_console">группу</a>, требующую раскрыть её вручную по кнопке. Для завершения <a href="/ru/docs/Web/API/console#Using_groups_in_the_console">группы </a>вызовите <code>groupEnd()</code>.</dd>
  <dt>{{domxref("console.groupEnd()")}}</dt>
@@ -112,7 +112,7 @@ console.info("My first car was a", car, ". The object is: ", someObject);</pre>
 
 <p>Вывод будет таким:</p>
 
-<pre>[09:28:22.711] My first car was a Dodge Charger . The object is:  ({str:"Some text", id:5})
+<pre>[09:28:22.711] My first car was a Dodge Charger . The object is:  ({str:"Some text", id:5})
 </pre>
 
 <h4 id="Преобразование_строк_с_использованием_масок"><a id="Using_string_substitutions">Преобразование строк с использованием масок</a></h4>
@@ -147,7 +147,7 @@ console.info("My first car was a", car, ". The object is: ", someObject);</pre>
 <p>Каждая из масок выбирает следующий аргумент из списка параметров. Пример:</p>
 
 <pre>for (var i=0; i&lt;5; i++) {
-  console.log("Hello, %s. You've called me %d times.", "Bob", i+1);
+  console.log("Hello, %s. You've called me %d times.", "Bob", i+1);
 }
 </pre>
 
@@ -162,7 +162,7 @@ console.info("My first car was a", car, ". The object is: ", someObject);</pre>
 
 <h4 id="Стилизация_вывода_консоли">Стилизация вывода консоли</h4>
 
-<p>Можно  использовать директиву <code>"%c"</code> для применения стилей CSS при выводе в консоль. Часть текста до директивы не затрагивается стилем, а часть после - будет стилизована:</p>
+<p>Можно  использовать директиву <code>"%c"</code> для применения стилей CSS при выводе в консоль. Часть текста до директивы не затрагивается стилем, а часть после - будет стилизована:</p>
 
 <pre class="brush: js">console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue; padding: 2px;");</pre>
 
@@ -172,7 +172,7 @@ console.info("My first car was a", car, ". The object is: ", someObject);</pre>
 <p><strong>Note</strong>: Поддерживается довольно много свойств стилей CSS; но вам необходимо поэкспериментировать и посмотреть, что окажется более полезным.</p>
 </div>
 
-<div>{{h3_gecko_minversion("Using groups in the console", "9.0")}}</div>
+<h3>Группирование вывода в консоли</h3>
 
 <p>Вы можете использовать вложенные группы для организации вывода, визуально комбинируя связанный материал. Для создания вложенного блока вызовите <code>console.group()</code>. Метод <code>console.groupCollapsed()</code> похожий, но создаёт новый блок свёрнутым, что потребует нажать на кнопку, для своего раскрытия для чтения.</p>
 
@@ -196,7 +196,7 @@ console.debug("Back to the outer level");
 
 <p><img alt="nesting.png" class="default internal" src="/@api/deki/files/6082/=nesting.png"></p>
 
-<p>{{h3_gecko_minversion("Timers", "10.0")}}</p>
+<h3>Таймеры</h3>
 
 <p>Для расчёта длительности определённых операций в Gecko 10 введена поддержка таймеров в объекте <code>console</code>. Для запуска таймера вызовите функцию <code>console.time</code><code>(),</code> при этом в качестве параметра передайте название таймера. Для остановки таймера и для получения прошедшего времени в миллисекундах вызовите <code>console.timeEnd()</code>, передав в качестве параметра имя таймера. На странице можно запустить до 10000 таймеров одновременно.</p>
 
@@ -222,10 +222,10 @@ console.timeEnd("answer time");
 <pre>foo();
 
 function foo() {
-  function bar() {
-    console.trace();
-  }
-  bar();
+  function bar() {
+    console.trace();
+  }
+  bar();
 }
 </pre>
 

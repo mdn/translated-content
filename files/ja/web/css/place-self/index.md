@@ -1,14 +1,6 @@
 ---
 title: place-self
 slug: Web/CSS/place-self
-tags:
-  - CSS
-  - CSS ボックス配置
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.place-self
-translation_of: Web/CSS/place-self
 ---
 {{CSSRef}}
 
@@ -55,7 +47,6 @@ place-self: unset;
 ```
 
 ### 値
-
 
 - `auto`
   - : 親の {{cssxref("align-items")}} の値で計算します。
@@ -104,10 +95,10 @@ place-self: unset;
 
 ```html
 <article class="container">
-  <span>First</span>
-  <span>Second</span>
-  <span>Third</span>
-  <span>Fourth</span>
+  <span>First</span>
+  <span>Second</span>
+  <span>Third</span>
+  <span>Fourth</span>
 </article>
 ```
 

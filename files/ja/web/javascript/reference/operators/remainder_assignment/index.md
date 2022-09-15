@@ -1,14 +1,6 @@
 ---
 title: 剰余代入 (%=)
 slug: Web/JavaScript/Reference/Operators/Remainder_assignment
-tags:
-  - 代入演算子
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.remainder_assignment
-translation_of: Web/JavaScript/Reference/Operators/Remainder_assignment
 ---
 {{jsSidebar("Operators")}}
 
@@ -45,5 +37,5 @@ bar %= 0     // NaN
 
 ## 関連情報
 
-- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment)
+- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#代入演算子)
 - [剰余演算子](/ja/docs/Web/JavaScript/Reference/Operators/Remainder)

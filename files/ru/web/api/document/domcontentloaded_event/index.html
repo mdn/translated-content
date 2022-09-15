@@ -7,7 +7,7 @@ translation_of: Web/API/Document/DOMContentLoaded_event
 ---
 <div>{{APIRef}}</div>
 
-<p>Событие <strong><code>DOMContentLoaded</code></strong>  запускается когда первоначальный HTML документ будет полностью загружен и разобран, без ожидания полной загрузки таблиц стилей, изображений и фреймов.</p>
+<p>Событие <strong><code>DOMContentLoaded</code></strong>  запускается когда первоначальный HTML документ будет полностью загружен и разобран, без ожидания полной загрузки таблиц стилей, изображений и фреймов.</p>
 
 <table class="properties">
  <tbody>
@@ -32,7 +32,7 @@ translation_of: Web/API/Document/DOMContentLoaded_event
 
 <p>Разные события,<code><a href="/en-US/docs/Web/API/Window/load_event">load</a></code>, должны быть использованы только для обнаружения полностью загруженной страницы. Это распространённая ошибка в использовании <code>load</code>, там где <code>DOMContentLoaded</code> было бы более уместным.</p>
 
-<p>Синхронный JavaScript останавливает разбор DOM. Если вы хотите что бы DOM был разобран как можно быстрее после того как пользователь запросит страницу, вы должны сделать ваш <a href="/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests">JavaScript асинхронным </a>and <a href="https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery">оптимизировать загрузку таблиц стилей</a>. Если загружать как обычно, таблицы стилей  тормозят разбор DOM так как они загружаются параллельно, "крадя" трафик у основного HTML документа.</p>
+<p>Синхронный JavaScript останавливает разбор DOM. Если вы хотите что бы DOM был разобран как можно быстрее после того как пользователь запросит страницу, вы должны сделать ваш <a href="/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests">JavaScript асинхронным </a>and <a href="https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery">оптимизировать загрузку таблиц стилей</a>. Если загружать как обычно, таблицы стилей  тормозят разбор DOM так как они загружаются параллельно, "крадя" трафик у основного HTML документа.</p>
 
 <h2 id="Примеры">Примеры</h2>
 

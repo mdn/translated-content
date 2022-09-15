@@ -14,7 +14,7 @@ CORS (Partage de ressource cross-origin) est un mécanisme qui consiste à trans
 La [politique de sécurité de même origine](/fr/docs/Web/JavaScript/Same_origin_policy_for_JavaScript) interdit les requêtes d'origines différentes par défaut et ce pour des raisons de sécurité.
 CORS permet de contourner cette limitation en permettant au serveur d'avoir le contrôle sur les ressources partagés et offre un mécanisme sécurisé pour permettre l'échange de données qui ne partagent pas le même domaine d'origine (d'où le terme "_cross-origin_").
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 

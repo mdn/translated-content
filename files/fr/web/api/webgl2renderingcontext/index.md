@@ -218,13 +218,11 @@ Méthodes pour travailler avec les objets {{domxref("WebGLVertexArrayObject")}} 
 
 ## Spécifications
 
-| Spécification                                                                | Statut                   | Commentaire          |
-| ---------------------------------------------------------------------------- | ------------------------ | -------------------- |
-| {{SpecName('WebGL2', "#3.7", "WebGL2RenderingContext")}} | {{Spec2('WebGL2')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGL2RenderingContext")}}
+{{Compat}}
 
 ## Voir aussi
 

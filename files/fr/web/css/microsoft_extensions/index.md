@@ -26,7 +26,7 @@ Les applications Microsoft, telles que Edge ou Internet Explorer, prennent en ch
 - {{CSSxRef("-ms-content-zoom-snap")}}
 - {{CSSxRef("-ms-content-zoom-snap-points")}}
 - {{CSSxRef("-ms-content-zoom-snap-type")}}
-- {{CSSxRef("-ms-filter")}} {{Obsolete_Inline}}
+- {{CSSxRef("-ms-filter")}} {{deprecated_inline}}
 - {{CSSxRef("-ms-flow-from")}}
 - {{CSSxRef("-ms-flow-into")}}
 - {{CSSxRef("-ms-high-contrast-adjust")}}
@@ -35,14 +35,14 @@ Les applications Microsoft, telles que Edge ou Internet Explorer, prennent en ch
 - {{CSSxRef("-ms-hyphenate-limit-zone")}}
 - {{CSSxRef("-ms-ime-align")}}
 - {{CSSxRef("-ms-overflow-style")}}
-- {{CSSxRef("-ms-scrollbar-3dlight-color")}} {{Obsolete_Inline}}
-- {{CSSxRef("-ms-scrollbar-arrow-color")}} {{Obsolete_Inline}}
-- {{CSSxRef("-ms-scrollbar-base-color")}} {{Obsolete_Inline}}
-- {{CSSxRef("-ms-scrollbar-darkshadow-color")}} {{Obsolete_Inline}}
-- {{CSSxRef("-ms-scrollbar-face-color")}} {{Obsolete_Inline}}
-- {{CSSxRef("-ms-scrollbar-highlight-color")}} {{Obsolete_Inline}}
-- {{CSSxRef("-ms-scrollbar-shadow-color")}} {{Obsolete_Inline}}
-- {{CSSxRef("-ms-scrollbar-track-color")}} {{Obsolete_Inline}}
+- {{CSSxRef("-ms-scrollbar-3dlight-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scrollbar-arrow-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scrollbar-base-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scrollbar-darkshadow-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scrollbar-face-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scrollbar-highlight-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scrollbar-shadow-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scrollbar-track-color")}} {{deprecated_inline}}
 - {{CSSxRef("-ms-scroll-chaining")}}
 - {{CSSxRef("-ms-scroll-limit")}}
 - {{CSSxRef("-ms-scroll-limit-x-max")}}

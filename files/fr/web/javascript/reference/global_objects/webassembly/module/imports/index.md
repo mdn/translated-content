@@ -17,7 +17,9 @@ La méthode **`WebAssembly.imports()`** renvoie un tableau qui contient les réf
 
 ## Syntaxe
 
-    var arrImport = WebAssembly.Module.imports(module);
+```js
+var arrImport = WebAssembly.Module.imports(module);
+```
 
 ### Paramètres
 

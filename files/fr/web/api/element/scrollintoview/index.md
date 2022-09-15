@@ -14,9 +14,11 @@ La méthode **`Element.scrollIntoView()`** fait défiler la page de manière à 
 
 ## Syntaxe
 
-    element.scrollIntoView();
-    element.scrollIntoView(alignToTop); // Paramètre booléen
-    element.scrollIntoView(scrollIntoViewOptions); // Paramètre d'objet
+```js
+element.scrollIntoView();
+element.scrollIntoView(alignToTop); // Paramètre booléen
+element.scrollIntoView(scrollIntoViewOptions); // Paramètre d'objet
+```
 
 ### Paramètres
 
@@ -29,12 +31,12 @@ La méthode **`Element.scrollIntoView()`** fait défiler la page de manière à 
 
 - `scrollIntoViewOptions` {{optional_inline}} {{experimental_inline}}
   - : Est un objet qui a les propriétés suivantes :
-- `behavior` {{optional_inline}}
-  - : Définit l'animation de transition qui peut être `"auto"`, `"instant"` ou `"smooth"`. Par défaut : `"auto"`.
-- `block` {{optional_inline}}
-  - : L'une des options  `"start"`, `"center"`, `"end"` ou`"nearest"`. Par défaut : `"center"`.
-- `inline` {{optional_inline}}
-  - : L'une des options `"start"`, `"center"`, `"end"` ou `"nearest"`. Par défaut : `"nearest"`.
+    - `behavior` {{optional_inline}}
+      - : Définit l'animation de transition qui peut être `"auto"`, `"instant"` ou `"smooth"`. Par défaut : `"auto"`.
+    - `block` {{optional_inline}}
+      - : L'une des options  `"start"`, `"center"`, `"end"` ou`"nearest"`. Par défaut : `"center"`.
+    - `inline` {{optional_inline}}
+      - : L'une des options `"start"`, `"center"`, `"end"` ou `"nearest"`. Par défaut : `"nearest"`.
 
 ## Exemple
 
@@ -51,15 +53,13 @@ element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
 
 L'élément peut ne pas être aligné complètement avec le haut ou le bas, selon la disposition des autres éléments.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("CSSOM View", "#dom-element-scrollintoview", "Element.scrollIntoView()")}} | {{Spec2("CSSOM View")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.scrollIntoView")}}
+{{Compat}}
 
 ## Voir aussi
 

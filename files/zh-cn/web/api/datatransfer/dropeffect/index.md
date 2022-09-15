@@ -1,13 +1,6 @@
 ---
 title: DataTransfer.dropEffect
 slug: Web/API/DataTransfer/dropEffect
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - drag and drop
-translation_of: Web/API/DataTransfer/dropEffect
 ---
 {{APIRef("HTML Drag and Drop API")}}
 
@@ -36,7 +29,7 @@ dataTransfer.dropEffect;
 - `link`
   - : 在新位置建立源项目的链接
 - `none`
-  - : 项目可能禁止拖放（译者注：还与effectAllowed设置的值相关）
+  - : 项目可能禁止拖放（译者注：还与 effectAllowed 设置的值相关）
 
 将任何其他值赋给 `dropEffect` 都没有效果，这种情况下会保留旧值。
 

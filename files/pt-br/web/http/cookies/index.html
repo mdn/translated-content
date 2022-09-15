@@ -22,7 +22,7 @@ translation_of: Web/HTTP/Cookies
  <dd>Registro e análise do comportamento de um usuário.</dd>
 </dl>
 
-<p>Os cookies eram usados para armazenamento geral no lado do cliente. Embora isso fosse aceitável quando eram a única forma de armazenar dados no cliente, atualmente é recomendável utilizar APIs de armazenamento mais modernas. Os cookies são enviados em todas as requisições, por isso podem prejudicar a performance (especialmente em conexões móveis).  APIs modernas de armazenamento no cliente são <a href="/en-US/docs/Web/API/Web_Storage_API" title="DOM Storage">Web storage API</a> (<code>localStorage</code> e <code>sessionStorage</code>) e <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>.</p>
+<p>Os cookies eram usados para armazenamento geral no lado do cliente. Embora isso fosse aceitável quando eram a única forma de armazenar dados no cliente, atualmente é recomendável utilizar APIs de armazenamento mais modernas. Os cookies são enviados em todas as requisições, por isso podem prejudicar a performance (especialmente em conexões móveis).  APIs modernas de armazenamento no cliente são <a href="/en-US/docs/Web/API/Web_Storage_API" title="DOM Storage">Web storage API</a> (<code>localStorage</code> e <code>sessionStorage</code>) e <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>.</p>
 
 <div class="note">
 <p>Para visualizar os cookies armazenados (e outros armazenamentos que uma página web pode usar), pode-se habilitar o <a href="/en-US/docs/Tools/Storage_Inspector">Storage Inspector</a> nas Ferramentas de Desenvolvimento e selecionar o item <strong>Cookies</strong> na árvore de armazenamento.</p>
@@ -30,7 +30,7 @@ translation_of: Web/HTTP/Cookies
 
 <h2 id="Criando_cookies">Criando cookies</h2>
 
-<p>Ao receber uma requisição HTTP, um servidor pode enviar um cabeçalho {{HTTPHeader("Set-Cookie")}} com a resposta. O  cookie normalmente é armazenado pelo navegador, então o cookie é enviado  com as requisições feitas para o mesmo servidor dentro  do cabeçalho HTTP {{HTTPHeader("Cookie")}}. Uma data de expiração ou duração pode ser especificada, e após esta data o cookie não é mais enviado. Adicionalmente, restrições para um domínio específico e caminho podem ser configuradas, limitando para onde o cookie é enviado.</p>
+<p>Ao receber uma requisição HTTP, um servidor pode enviar um cabeçalho {{HTTPHeader("Set-Cookie")}} com a resposta. O  cookie normalmente é armazenado pelo navegador, então o cookie é enviado  com as requisições feitas para o mesmo servidor dentro  do cabeçalho HTTP {{HTTPHeader("Cookie")}}. Uma data de expiração ou duração pode ser especificada, e após esta data o cookie não é mais enviado. Adicionalmente, restrições para um domínio específico e caminho podem ser configuradas, limitando para onde o cookie é enviado.</p>
 
 <h3 id="Os_cabeçalhos_Set-Cookie_e_Cookie">Os cabeçalhos <code>Set-Cookie</code> e <code>Cookie</code></h3>
 
@@ -40,7 +40,7 @@ translation_of: Web/HTTP/Cookies
 
 <p>Este cabeçalho de servidor informa ao cliente para armazenar um cookie.</p>
 
-<div class="note"><strong>Nota:</strong> Eis as formas de utilização do cabeçalho <code> Set-Cookie</code> em várias aplicações de servidor:
+<div class="note"><strong>Nota:</strong> Eis as formas de utilização do cabeçalho <code> Set-Cookie</code> em várias aplicações de servidor:
 
 <ul>
  <li><a href="https://secure.php.net/manual/en/function.setcookie.php">PHP</a></li>
@@ -69,7 +69,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 
 <h3 id="Cookies_permanentes">Cookies permanentes</h3>
 
-<p>Ao invés de expirar quando o cliente fecha, <em>cookies permanentes </em>expiram em uma data específica (<code>Expires</code>) ou  depois de um período específico de tempo (<code>Max-Age</code>).</p>
+<p>Ao invés de expirar quando o cliente fecha, <em>cookies permanentes </em>expiram em uma data específica (<code>Expires</code>) ou  depois de um período específico de tempo (<code>Max-Age</code>).</p>
 
 <pre>Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;</pre>
 
@@ -124,7 +124,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
  <dt><code>Strict</code></dt>
  <dd>Se o cookie same-site possuir este atributo, o navegador enviará cookies apenas se a requisição for enviada do website que configurou este cookie, Se a requisição tem origem em outra URL, nenhum cookie com o atributo<code>Strict</code> será incluído.</dd>
  <dt><code>Lax</code></dt>
- <dd>Se o atributo receber o valor Lax, os cookies same-site ficarão retidos nas sub-requisições entre sites, como chamadas para carregar imagens ou frames, mas serão enviadas quando um usuário navegar para o URL de um site externo.</dd>
+ <dd>Se o atributo receber o valor Lax, os cookies same-site ficarão retidos nas sub-requisições entre sites, como chamadas para carregar imagens ou frames, mas serão enviadas quando um usuário navegar para o URL de um site externo.</dd>
 </dl>
 
 <p>O comportamento padrão se a flag não estiver setada ou não sem suporte donavegador é incluir os cookies em qualquer solicitação, incluindo solicitações cross-origin.</p>

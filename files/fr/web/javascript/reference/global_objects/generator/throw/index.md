@@ -17,7 +17,9 @@ La méthode **`throw()`** lève une erreur dans un générateur.
 
 ## Syntaxe
 
-    gen.throw(exception)
+```js
+gen.throw(exception)
+```
 
 ### Paramètres
 

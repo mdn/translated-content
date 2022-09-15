@@ -40,7 +40,7 @@ La méthode **`Object.hasOwn()`** renvoie `true` si la propriété indiquée est
 ### Utiliser Object.hasOwn() pour tester l'existence d'une propriété
 
 Le code suivant illustre comment déterminer si l'objet `exemple` contient une propriété intitulée `prop`.
- 
+
 ```js
 let exemple = {};
 Object.hasOwn(exemple, 'prop');   // false : 'prop' n'a pas été définie

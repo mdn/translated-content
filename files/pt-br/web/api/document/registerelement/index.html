@@ -13,13 +13,13 @@ original_slug: Web/API/Document/ElementoRegistrado
 <p>{{APIRef("DOM")}}</p>
 
 <div class="note">
-<p><strong>Note:</strong>document.registerElement() está depreciado em favor do customElements.define().</p>
+<p><strong>Note:</strong>document.registerElement() está depreciado em favor do customElements.define().</p>
 </div>
 
-<p>O método <code><strong>document.registerElement()</strong></code> registra um novo <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Custom_Elements">elemento personalizado</a> no browser e retorna um construtor para o novo elemento.</p>
+<p>O método <code><strong>document.registerElement()</strong></code> registra um novo <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Custom_Elements">elemento personalizado</a> no browser e retorna um construtor para o novo elemento.</p>
 
 <div class="note">
-<p><strong>Nota:</strong> Esta é uma tecnologia experimental. O browser você precisa usar suporte à componentes web. Veja <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox">Habilitando componentes web no Firefox.</a></p>
+<p><strong>Nota:</strong> Esta é uma tecnologia experimental. O browser você precisa usar suporte à componentes web. Veja <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox">Habilitando componentes web no Firefox.</a></p>
 </div>
 
 <h2 id="Sintaxe">Sintaxe</h2>
@@ -33,7 +33,7 @@ original_slug: Web/API/Document/ElementoRegistrado
  <dd>O nome do elemento personalizado. O nome precisa conter um dash (-), por exemplo minha-tag.</dd>
  <dt><em>Opções{{optional_inline}}</em></dt>
  <dd>
- <p>Um projeto com propriedades <strong>protótipo</strong> como base para o elememento personalizado, e <strong>extends</strong>, uma existente tag para estender. Ambos são opcionais.</p>
+ <p>Um projeto com propriedades <strong>protótipo</strong> como base para o elememento personalizado, e <strong>extends</strong>, uma existente tag para estender. Ambos são opcionais.</p>
  </dd>
 </dl>
 
@@ -44,9 +44,9 @@ original_slug: Web/API/Document/ElementoRegistrado
 <pre class="brush: js">var Mytag = document.registerElement('my-tag');
 </pre>
 
-<p>Agora as novas tags são registradas no browser.</p>
+<p>Agora as novas tags são registradas no browser.</p>
 
-<p>Uma variável Mytag tem um construtor que você pode usar para criar um elemento my-tag nos documentos como seguem:</p>
+<p>Uma variável Mytag tem um construtor que você pode usar para criar um elemento my-tag nos documentos como seguem:</p>
 
 <pre class="brush: js">document.body.appendChild(new Mytag());</pre>
 
@@ -76,55 +76,7 @@ mytag.textContent = "I am a my-tag element.";</pre>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>35</td>
-   <td>31<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>25</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>4.4.4</td>
-   <td>31<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>25</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Esta API é implementada uma preferência</p>
+{{Compat("api.Document.registerElement")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

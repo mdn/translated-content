@@ -111,7 +111,7 @@ Pour la plupart des cas, on utilisera une des valeurs suivantes : `auto`, `initi
 
 Par défaut, les éléments flexibles ne se rétrécissent pas en dessous de la taille minimale du contenu. Pour modifier ce comportement, il faudra paramétrer {{cssxref("min-width")}} ou {{cssxref("min-height")}}.
 
-Voir la page [Utiliser les boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox "CSS/Using_CSS_flexible_boxes") pour plus d'informations.
+Voir la page [Utiliser les boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) pour plus d'informations.
 
 ## Syntaxe
 
@@ -195,16 +195,16 @@ La propriété `flex` peut être définie avec une, deux ou trois valeurs.
 
 ```css
 #flex-container {
-	display: flex;
-	flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 #flex-container > .flex-item {
-	flex: auto;
+  flex: auto;
 }
 
 #flex-container > .raw-item {
-	width: 5rem;
+  width: 5rem;
 }
 ```
 
@@ -223,23 +223,23 @@ La propriété `flex` peut être définie avec une, deux ou trois valeurs.
 var flex = document.getElementById("flex");
 var raw = document.getElementById("raw");
 flex.addEventListener("click", function() {
-	raw.style.display = raw.style.display == "none" ? "block" : "none";
+  raw.style.display = raw.style.display == "none" ? "block" : "none";
 });
 ```
 
 ```css
 #flex-container {
-	width: 100%;
-	font-family: Consolas, Arial, sans-serif;
+  width: 100%;
+  font-family: Consolas, Arial, sans-serif;
 }
 
 #flex-container > div {
-	border: 1px solid #f00;
-	padding: 1rem;
+  border: 1px solid #f00;
+  padding: 1rem;
 }
 
 #flex-container > .raw-item {
-	border: 1px solid #000;
+  border: 1px solid #000;
 }
 ```
 

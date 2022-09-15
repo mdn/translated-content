@@ -66,7 +66,7 @@ _Cette interface hérite aussi des propriétés de ses ancêtres_ _{{domxref("HT
 
   - : est un `unsigned long` qui indique le nombre d'échantillons qui seront renvoyés dans le "framebuffer" de chaque évènement `MozAudioAvailable`. Ce nombre est un total pour tous les canaux, et par défaut est défini par le nombre de canaux \* 1024 (c'est-à-dire, 2 canaux \* 1024 échantillons = total 2048).
 
-    La propriété `mozFrameBufferLength` peut être définie à une nouvelle valeur pour une latence plus faible, de plus grandes quantités de données, etc. La taille donnée _doit_ être un nombre compris entre 512 et 16384. L'utilisation d'autres tailles entraîne la levée d'une exception. Le meilleur moment pour définir une nouvelle longueur est après le lancement de l'évènement [loadedmetadata](/en-US/docs/Web/Events/loadedmetadata), lorsque l'information audio est connue, mais avant que l'audio ait commencé ou que les événements `MozAudioAvailable` aient commencé à se déclencher.
+    La propriété `mozFrameBufferLength` peut être définie à une nouvelle valeur pour une latence plus faible, de plus grandes quantités de données, etc. La taille donnée _doit_ être un nombre compris entre 512 et 16384. L'utilisation d'autres tailles entraîne la levée d'une exception. Le meilleur moment pour définir une nouvelle longueur est après le lancement de l'évènement [loadedmetadata](/fr/docs/Web/Events/loadedmetadata), lorsque l'information audio est connue, mais avant que l'audio ait commencé ou que les événements `MozAudioAvailable` aient commencé à se déclencher.
 
 - {{domxref("HTMLMediaElement.mozSampleRate")}}{{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}
   - : renvoie un `double` représentant le nombre d'échantillons par seconde. Par exemple, 44100 échantillons par seconde correspondent à la fréquence d'échantillonnage utilisée par les CD audio.
@@ -118,16 +118,16 @@ _Cette interface hérite aussi des propriétés de ses ancêtres_ _{{domxref("HT
 
 Ces attributs sont obsolètes et ne doivent plus être utilisés, même si un navigateur les prend encore en charge.
 
-- {{domxref("HTMLMediaElement.initialTime")}} {{readonlyinline}} {{non-standard_inline}} {{obsolete_inline}}
+- {{domxref("HTMLMediaElement.initialTime")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}
   - : renvoie un `double` qui indique la position de lecture initiale en secondes.
 - {{domxref("HTMLMediaElement.mozChannels")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}
   - : renvoie un `double` représentant le nombre de canaux dans la ressource audio (c'est-à-dire 2 pour stéréo).
 
 ### Gestionnaires d'évènements obsolètes
 
-- {{domxref("HTMLMediaElement.onmozinterruptbegin")}} {{non-standard_inline}} {{obsolete_inline}}
+- {{domxref("HTMLMediaElement.onmozinterruptbegin")}} {{non-standard_inline}} {{deprecated_inline}}
   - : définit le {{event("Event_handlers", "event handler")}} (_gestionnaire d'évènements_) appelé lorsque l'élément média est interrompu du fait du gestionnaire de canaux audio. C'était une spécificité de Firefox, implémentée pour Firefox OS et supprimée à partir de Firefox 55.
-- {{domxref("HTMLMediaElement.onmozinterruptend")}} {{non-standard_inline}} {{obsolete_inline}}
+- {{domxref("HTMLMediaElement.onmozinterruptend")}} {{non-standard_inline}} {{deprecated_inline}}
   - : définit le {{event("Event_handlers", "event handler")}} (_gestionnaire d'évènements_) appelé lorsque l'interruption est terminée. C'était une spécificité de Firefox, implémentée pour Firefox OS et supprimée à partir de Firefox 55.
 
 ## Méthodes
@@ -149,7 +149,7 @@ _Cette interface hérite aussi des méthodes de ses ancêtres {{domxref("HTMLEle
 - {{domxref("HTMLMediaElement.mozCaptureStreamUntilEnded()")}} {{non-standard_inline}}
   - : \[enter description]
 - {{domxref("HTMLMediaElement.mozGetMetadata()")}} {{non-standard_inline}}
-  - : Renvoie un {{jsxref('Object')}}, qui contient des propriétés représentant les métadonnées de la ressource média en cours de lecture, comme paires `{key: value}`. Une copie distincte des données est renvoyée chaque fois que la méthode est appelée. Cette méthode doit être appelée après le déclenchement de l'évènement [loadedmetadata](/en-US/docs/Web/Events/loadedmetadata).
+  - : Renvoie un {{jsxref('Object')}}, qui contient des propriétés représentant les métadonnées de la ressource média en cours de lecture, comme paires `{key: value}`. Une copie distincte des données est renvoyée chaque fois que la méthode est appelée. Cette méthode doit être appelée après le déclenchement de l'évènement [loadedmetadata](/fr/docs/Web/Events/loadedmetadata).
 - {{domxref("HTMLMediaElement.pause()")}}
   - : met en pause la lecture du média.
 - {{domxref("HTMLMediaElement.play()")}}
@@ -170,16 +170,11 @@ Ces méthodes sont obsolètes et ne doivent plus être utilisées, même si un n
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                               | Commentaire                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | --------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "the-video-element.html#htmlmediaelement", "HTMLMediaElement")}} | {{Spec2('HTML WHATWG')}}     | Pas de changement de {{SpecName('HTML5 W3C')}}                                                     |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#htmlmediaelement", "HTMLMediaElement")}} | {{Spec2('HTML5 W3C')}}         | Définition initiale.                                                                                      |
-| {{SpecName('EME', '#introduction', 'Encrypted Media Extensions')}}                                 | {{Spec2('EME')}}                 | Ajout de {{domxref("MediaKeys")}}, {{domxref("MediaEncryptedEvent")}}, et setMediaKeys. |
-| {{SpecName('Media Capture','#htmlmediaelement-extensions','HTMLMediaElement')}}                 | {{Spec2('Media Capture')}} | Ajout de `sinkId`, `setSinkId()` et `captureStream()`.                                                    |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLMediaElement")}}
+{{Compat}}
 
 ## Voir aussi
 

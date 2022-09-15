@@ -24,9 +24,11 @@ Pour différencier ces deux situations, on peut appeler la méthode {{domxref("I
 
 ## Syntaxe
 
-    var request = objectStore.getAllKeys();
-    var request = objectStore.getAllKeys(query);
-    var request = objectStore.getAllKeys(query, count);
+```js
+var request = objectStore.getAllKeys();
+var request = objectStore.getAllKeys(query);
+var request = objectStore.getAllKeys(query, count);
+```
 
 ### Parameters
 
@@ -79,13 +81,11 @@ Cette méthode peut déclencher une exception {{domxref("DOMException")}} ayant 
 
 ## Spécifications
 
-| Spécification                                                                                    | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('IndexedDB 2', '#dom-idbobjectstore-getallkeys', 'getAll()')}} | {{Spec2('IndexedDB w')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.getAllKeys")}}
+{{Compat}}
 
 ## Voir aussi
 

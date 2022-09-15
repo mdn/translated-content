@@ -16,7 +16,7 @@ translation_of: Web/API/IDBCursor
 ---
 <p>{{APIRef("IndexedDB")}}</p>
 
-<p>La interfaz <strong><code>IDBCursor</code></strong> de la <a href="/en-US/docs/IndexedDB">IndexedDB API</a> representa un <a href="/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_cursor">cursor</a> para atravesar o iterar varios registros de una base de datos.</p>
+<p>La interfaz <strong><code>IDBCursor</code></strong> de la <a href="/en-US/docs/IndexedDB">IndexedDB API</a> representa un <a href="/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_cursor">cursor</a> para atravesar o iterar varios registros de una base de datos.</p>
 
 <p>El cursor tiene una fuente que indica el índice o el almacén de objetos sobre el que se está iterando. Tiene una posición dentro del rango y se mueve en una dirección que aumenta o disminuye en el orden de las Keys de registro. El cursor permite a una aplicación procesar asincrónicamente todos los registros del rango del cursor.</p>
 
@@ -71,7 +71,7 @@ translation_of: Web/API/IDBCursor
 
 <h2 id="Ejemplo">Ejemplo</h2>
 
-<p>En este simple fragmento creamos una transacción, recuperamos un almacén de objetos y usamos un cursor para iterar todos los registros del almacén de objetos. El cursor no nos obliga a seleccionar los datos en base a una <code>key</code>; podemos simplemente cogerlos todos. También tenga en cuenta que en cada iteración del bucle, puede tomar datos del registro actual bajo el objeto del cursor utilizando <code style="font-style: normal; line-height: 1.5;">cursor.value.foo</code>. Para un ejemplo completo de funcionamiento, vea nuestro <span style="line-height: 1.5;"><a href="https://github.com/mdn/IDBcursor-example/">IDBCursor example</a></span><span style="line-height: 1.5;"> (</span><a href="http://mdn.github.io/IDBcursor-example/" style="line-height: 1.5;">view example live</a><span style="line-height: 1.5;">.)</span></p>
+<p>En este simple fragmento creamos una transacción, recuperamos un almacén de objetos y usamos un cursor para iterar todos los registros del almacén de objetos. El cursor no nos obliga a seleccionar los datos en base a una <code>key</code>; podemos simplemente cogerlos todos. También tenga en cuenta que en cada iteración del bucle, puede tomar datos del registro actual bajo el objeto del cursor utilizando <code style="font-style: normal; line-height: 1.5;">cursor.value.foo</code>. Para un ejemplo completo de funcionamiento, vea nuestro <span style="line-height: 1.5;"><a href="https://github.com/mdn/IDBcursor-example/">IDBCursor example</a></span><span style="line-height: 1.5;"> (</span><a href="http://mdn.github.io/IDBcursor-example/" style="line-height: 1.5;">view example live</a><span style="line-height: 1.5;">.)</span></p>
 
 <pre class="brush: js"><span style="line-height: 1.5;">function displayData() {</span>
   var transaction = db.transaction(['rushAlbumList'], "readonly");

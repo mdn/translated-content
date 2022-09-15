@@ -25,9 +25,9 @@ Excepté dans les cas de `null` ou `undefined`, pour chaque valeur primitive il 
 
 La méthode [`valueOf()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/valueOf) de ces objets retourne la valeur primitive encapsulée correspondante.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 
 - [Introduction aux types de données en JavaScript](/fr/docs/Web/JavaScript/Structures_de_donn%C3%A9es)
-- {{Interwiki("wikipedia", "Type (informatique)")}} on Wikipedia
+- [Type](https://fr.wikipedia.org/wiki/Type_(informatique)) sur Wikipédia

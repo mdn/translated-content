@@ -19,7 +19,9 @@ La plupart des événements natifs du navigateur qui peuvent être annulés sont
 
 ## Syntaxe
 
-    bool = event.cancelable
+```js
+bool = event.cancelable
+```
 
 - Le résultat est un `booléen` qui est `true` (_vrai_) si l'événement peut être annulé.
 
@@ -43,8 +45,6 @@ function preventScrollWheel(event) {
 document.addEventListener('wheel', preventCancelableEvents);
 ```
 
-
-
 ## Notes
 
 Si l'événement peut être annulé, ou non, est déterminé au moment de l'initialisation de celui-ci.
@@ -53,12 +53,8 @@ Pour annuler un événement, utiliser la méthode {{domxref("event.preventDefaul
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                               | Commentaire          |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('DOM WHATWG', '#dom-event-cancelable', 'Event.cancelable')}}     | {{ Spec2('DOM WHATWG') }}     |                      |
-| {{SpecName('DOM4', '#dom-event-cancelable', 'Event.cancelable')}}             | {{ Spec2('DOM4') }}             |                      |
-| {{SpecName('DOM2 Events', '#Events-Event-canCancel', 'Event.cancelable')}} | {{ Spec2('DOM2 Events') }} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Event.cancelable")}}
+{{Compat}}

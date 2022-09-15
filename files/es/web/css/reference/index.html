@@ -18,24 +18,24 @@ original_slug: Web/CSS/Referencia_CSS
 
 <p><span class="seoSummary">Esta <em>Referencia CSS</em> muestra la sintáxis básica de una regla CSS; lista todas las propiedades estándares <a href="/es/docs/Web/CSS">CSS</a>, <a href="/es/docs/Web/CSS/Pseudo-classes">pseudo-classes</a> y <a href="/es/docs/Web/CSS/Pseudoelementos">pseudo-elementos</a>, <a href="/es/docs/Web/CSS/At-rule">reglas-at</a>, <a href="/es/docs/Web/CSS/length">unidades</a>, y <a href="/es/docs/Web/CSS/Introducci%C3%B3n/Selectors">selectores</a>, todos juntos en <a href="#Keyword_index">orden alfabético</a>, así como los <a href="#Selectors">selectores por tipo</a>; y le permitirá acceso rápido a la información detallada de cada uno de ellos. No solo lista las propiedades de CSS 1 y CSS 2.1, sino que también es una referencia de CSS3 que enlaza cualquier propiedad y concepto de <a href="/es/docs/Web/CSS/CSS3">CSS3</a> estandarizado, o ya establecido. También incluye una breve <a href="#DOM_CSS">referencia DOM-CSS / CSSOM</a>.</span></p>
 
-<p>Tenga en cuenta que las definiciones de reglas CSS son completamente <a href="https://www.w3.org/TR/css-syntax-3/#intro">basadas en texto</a> (ASCII), mientras que DOM-CSS / CSSOM, el sistema de gestión de reglas, está <a href="https://www.w3.org/TR/cssom/#introduction">basado en objetos</a>.</p>
+<p>Tenga en cuenta que las definiciones de reglas CSS son completamente <a href="https://www.w3.org/TR/css-syntax-3/#intro">basadas en texto</a> (ASCII), mientras que DOM-CSS / CSSOM, el sistema de gestión de reglas, está <a href="https://www.w3.org/TR/cssom/#introduction">basado en objetos</a>.</p>
 
 <p>Vea también las <a href="/es/docs/Web/CSS/Referencia_CSS/Extensiones_CSS_Mozilla">Extensiones CSS de Mozilla</a> para propiedades específicas de Gecko, que usan el prefijo <code>-moz</code>; y las <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Reference/Webkit_Extensions">Extensiones CSS de WebKit</a> para propiedades específicas de WebKit. Vea <a href="http://peter.sh/experiments/vendor-prefixed-css-property-overview/">Vendor-prefixed CSS Property Overview</a> de Peter Beverloo como referencia a todas las propiedades con prefijo.</p>
 
-<h2 id="Sintaxis_de_regla_básica">Sintaxis de regla básica</h2>
+<h2 id="Sintaxis_de_regla_básica">Sintaxis de regla básica</h2>
 
 <p>Se advierte que cualquier error de sintaxis en una definición de regla invalidará la regla por completo.</p>
 
 <h3 id="Sintaxis_de_regla_de_estilo">Sintaxis de regla de estilo</h3>
 
 <pre class="syntaxbox"><strong><var>selectorlist</var> {
-   <var>property</var>: <var>value</var>; </strong>
-   <var>[more property:value; pairs] </var>
+   <var>property</var>: <var>value</var>; </strong>
+   <var>[more property:value; pairs] </var>
 <strong>}</strong>
 
 ...where <var>selectorlist</var> is: <var>selector[:pseudo-class] [::pseudo-element] [, more selectorlists]</var>
 
-Ver <a href="#Selectors"><em>selector</em></a>, <em><a href="#pelm">pseudo-elemento</a></em>, <a href="#pcls"><em>pseudo-clase</em></a> más abajo.
+Ver <a href="#Selectors"><em>selector</em></a>, <em><a href="#pelm">pseudo-elemento</a></em>, <a href="#pcls"><em>pseudo-clase</em></a> más abajo.
 
 </pre>
 
@@ -50,7 +50,7 @@ div.menu-bar li:hover &gt; ul {
 }
 </pre>
 
-<p>Para una introducción de nivel principiante a la sintaxis de los selectores de CSS, consulte <a href="/es/docs/Learn/CSS/Introduction_to_CSS/Selectors">este tutorial</a>. Tenga en cuenta que cualquier error de <a href="/es/docs/Web/CSS/syntax">sintaxis CSS</a> en una definición de regla hace que la regla completa se invalide. El navegador ignora las reglas no válidas. Tenga en cuenta que las definiciones de reglas CSS son totalmente (ASCII) <a href="https://www.w3.org/TR/css-syntax-3/#intro">basadas en texto</a>, mientras que DOM-CSS / CSSOM (el sistema de gestión de reglas) está <a href="https://www.w3.org/TR/cssom/#introduction">basado en objetos</a>.</p>
+<p>Para una introducción de nivel principiante a la sintaxis de los selectores de CSS, consulte <a href="/es/docs/Learn/CSS/Introduction_to_CSS/Selectors">este tutorial</a>. Tenga en cuenta que cualquier error de <a href="/es/docs/Web/CSS/syntax">sintaxis CSS</a> en una definición de regla hace que la regla completa se invalide. El navegador ignora las reglas no válidas. Tenga en cuenta que las definiciones de reglas CSS son totalmente (ASCII) <a href="https://www.w3.org/TR/css-syntax-3/#intro">basadas en texto</a>, mientras que DOM-CSS / CSSOM (el sistema de gestión de reglas) está <a href="https://www.w3.org/TR/cssom/#introduction">basado en objetos</a>.</p>
 
 <h3 id="Sintaxis_de_las_reglas-at_(rules)">Sintaxis de las reglas-at (@rules)</h3>
 
@@ -69,20 +69,20 @@ div.menu-bar li:hover &gt; ul {
 <h3 id="Selectores_básicos"><a href="/es/docs/Web/CSS/CSS_Selectors#Basic_selectors">Selectores básicos</a></h3>
 
 <ul>
- <li><a href="/es/docs/Web/CSS/Type_selectors">Selectores de tipo</a> <code>elementname</code></li>
- <li><a href="/es/docs/Web/CSS/Class_selectors">Selectores de clase</a> <code>.classname</code></li>
- <li><a href="/es/docs/Web/CSS/ID_selectors">Selectores de ID</a> <code>#idname</code></li>
- <li><a href="/es/docs/Web/CSS/Universal_selectors">Selectores universales</a> <code>*</code>, <code>ns|*</code>, <code>*|*</code>, <code>|*</code></li>
- <li><a href="/es/docs/Web/CSS/Selectores_atributo">Selectores de atributo</a> <code>[attr=value]</code></li>
+ <li><a href="/es/docs/Web/CSS/Type_selectors">Selectores de tipo</a> <code>elementname</code></li>
+ <li><a href="/es/docs/Web/CSS/Class_selectors">Selectores de clase</a> <code>.classname</code></li>
+ <li><a href="/es/docs/Web/CSS/ID_selectors">Selectores de ID</a> <code>#idname</code></li>
+ <li><a href="/es/docs/Web/CSS/Universal_selectors">Selectores universales</a> <code>*</code>, <code>ns|*</code>, <code>*|*</code>, <code>|*</code></li>
+ <li><a href="/es/docs/Web/CSS/Selectores_atributo">Selectores de atributo</a> <code>[attr=value]</code></li>
 </ul>
 
 <h3 id="Combinadores"><a href="/es/docs/Web/CSS/CSS_Selectors#Combinators">Combinadores</a></h3>
 
 <ul>
- <li><a href="/es/docs/Web/CSS/Selectores_hermanos_adyacentes">Selectores de hermanos adyacentes</a> <code>A + B</code></li>
- <li><a href="/es/docs/Web/CSS/Selectores_hermanos_generales">Selectores de hermanos generales</a> <code>A ~ B</code></li>
- <li><a href="/es/docs/Web/CSS/Child_selectors">Selectores de hijo</a> <code>A &gt; B</code></li>
- <li><a href="/es/docs/Web/CSS/Descendant_selectors">Selectores de descendiente</a> <code>A B</code></li>
+ <li><a href="/es/docs/Web/CSS/Selectores_hermanos_adyacentes">Selectores de hermanos adyacentes</a> <code>A + B</code></li>
+ <li><a href="/es/docs/Web/CSS/Selectores_hermanos_generales">Selectores de hermanos generales</a> <code>A ~ B</code></li>
+ <li><a href="/es/docs/Web/CSS/Child_selectors">Selectores de hijo</a> <code>A &gt; B</code></li>
+ <li><a href="/es/docs/Web/CSS/Descendant_selectors">Selectores de descendiente</a> <code>A B</code></li>
 </ul>
 
 <h3 id="Pseudo-clases"><a href="/es/docs/Web/CSS/Pseudo-classes">Pseudo-clases</a></h3>
@@ -222,7 +222,7 @@ div.menu-bar li:hover &gt; ul {
  <li>{{domxref("CSSStyleSheet.deleteRule")}}</li>
 </ul>
 
-<h2 id="Tutoriales_CSS3">Tutoriales CSS3</h2>
+<h2 id="Tutoriales_CSS3">Tutoriales CSS3</h2>
 
 <p>Estas páginas describen las nuevas tecnologías que aparecieron en CSS3, o las de CSS2.1 que no tienen mucho soporte:</p>
 
@@ -241,7 +241,7 @@ div.menu-bar li:hover &gt; ul {
 <h2 id="Ver_también">Ver también</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/Mozilla_Extensions">Extensiones CSS de Mozilla</a> (con el prefijo <code>-moz</code>)</li>
- <li><a href="/en-US/docs/Web/CSS/Webkit_Extensions">Extensiones CSS de WebKit</a> (principalmente con el prefijo <code>-webkit</code>)</li>
- <li><a href="/en-US/docs/Web/CSS/Microsoft_CSS_extensions">Extensiones CSS de Microsoft</a> (con el prefijo <code>-ms</code>)</li>
+ <li><a href="/en-US/docs/Web/CSS/Mozilla_Extensions">Extensiones CSS de Mozilla</a> (con el prefijo <code>-moz</code>)</li>
+ <li><a href="/en-US/docs/Web/CSS/Webkit_Extensions">Extensiones CSS de WebKit</a> (principalmente con el prefijo <code>-webkit</code>)</li>
+ <li><a href="/en-US/docs/Web/CSS/Microsoft_CSS_extensions">Extensiones CSS de Microsoft</a> (con el prefijo <code>-ms</code>)</li>
 </ul>

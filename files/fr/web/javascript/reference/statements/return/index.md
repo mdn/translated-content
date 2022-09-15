@@ -16,7 +16,9 @@ L'instruction **`return`** met fin à l'exécution d'une fonction et définit un
 
 ## Syntaxe
 
-    return [[expression]];
+```js
+return [expression];
+```
 
 - `expression`
   - : L'expression dont on souhaite renvoyer la valeur. Si elle est absente, la valeur renvoyée par défaut sera {{jsxref("undefined")}}.

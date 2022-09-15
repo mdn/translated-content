@@ -140,10 +140,6 @@ Les {{Glossary("Client_hints", "astuces clients")}} HTTP sont enc cours de créa
   - : contient les [cookies HTTP](/fr/docs/HTTP/Cookies) stockés précédemment envoyés par le serveur à l'aide de l'en-tête {{HTTPHeader("Set-Cookie")}}.
 - {{HTTPHeader("Set-Cookie")}}
   - : envoie des cookies du serveur à l'agent utilisateur.
-- {{HTTPHeader("Cookie2")}} {{obsolete_inline}}
-  - : utilisé pour contenir un cookie HTTP, précédemment envoyé par le serveur avec l'en-tête {{HTTPHeader("Set-Cookie2")}}, mais qui a été rendu obsolète par la spécification. Utilisez {{HTTPHeader("Cookie")}} à la place.
-- {{HTTPHeader("Set-Cookie2")}} {{obsolete_inline}}
-  - : utilisé pour envoyer des cookies du serveur à l'agent utilisateur, mais a été rendu obsolète par la spécification. Utilisez {{HTTPHeader("Set-Cookie")}} à la place.
 
 ## [Cross-Origin Resource Sharing (CORS)](/fr/docs/Web/HTTP/CORS)
 

@@ -143,7 +143,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 ### Attributs dépréciés, obsolètes ou non-standard
 
-- {{htmlattrdef("charset")}}{{obsolete_inline}}
+- {{htmlattrdef("charset")}}{{deprecated_inline}}
 
   - : Cet attribut définit l'encodage de la ressource lié. La valeur de cet attribut est une liste de jeux de caractères (tels que définis dans la RFC {{rfc(2045)}}) séparés par des espaces ou des virgules. La valeur par défaut de cet attribut est `iso-8859-1`.
 
@@ -153,7 +153,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
   - : La valeur de cet attribut fournit des informations quant aux fonctions qui peuvent être utilisées sur l'objet lié. Les valeurs sont généralement des méthodes HTTP mais elles peuvent également inclure des informations en avance sur le lien (le navigateur pourrait par exemple choisir un affichage différent pour un lien selon la méthode utilisée). Cet attribut n'est pas pris en charge de façon correcte, y compris par le navigateur qui le définit, Internet Explorer 4. Voir [la page MSDN sur la propriété `methods`](https://msdn.microsoft.com/en-us/library/ms534168%28VS.85%29.aspx).
 - {{htmlattrdef("prefetch")}} {{Non-standard_inline}} {{secureContext_inline}}
   - : Cet attribut permet d'identifier une ressource qui sera nécessaire dans la suite de la navigation et que l'agent utilisateur devrait télécharger. Cela permet à l'agent utilisateur d'avoir un meilleur temps de réponse lorsque la ressource sera nécessaire.
-- {{htmlattrdef("rev")}}{{obsolete_inline}}
+- {{htmlattrdef("rev")}}{{deprecated_inline}}
 
   - : La valeur de cet attribut décrit le lien entre le document courant et la ressource liée (définie par l'attribut {{htmlattrxref("href", "link")}}). Cet attribut définit donc la relation réciproque à la relation décrite par l'attribut `rel`. [Les types de lien](/fr/docs/Web/HTML/Types_de_lien) utilisés pour cet attribut sont semblables aux valeurs autorisés par {{htmlattrxref("rel", "link")}}.
 
@@ -278,18 +278,11 @@ De nombreux exemples avec `<link rel="preload">` peuvent être lus sur [Préchar
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                                         | Commentaires                                                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("Subresource Integrity", "#HTMLLinkElement", "lt;link&gt;")}}                 | {{Spec2('Subresource Integrity')}} | Ajout de l'attribut `integrity`.                                                                                                                                    |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-link-element', '&lt;link&gt;')}}         | {{Spec2('HTML WHATWG')}}             | Aucune modification depuis la dernière dérivation.                                                                                                                  |
-| {{SpecName('HTML5 W3C', 'document-metadata.html#the-link-element', '&lt;link&gt;')}} | {{Spec2('HTML5 W3C')}}                 | Ajout des attributs `crossorigin` et `sizes`. Les valeurs de `media` sont étendues à l'ensemble des requêtes médias, ajout de nombreuses autres valeurs pour `rel`. |
-| {{SpecName('HTML4.01', 'struct/links.html#h-12.3', '&lt;link&gt;')}}                     | {{Spec2('HTML4.01')}}                 |                                                                                                                                                                     |
-| {{SpecName("Preload")}}                                                                                 | {{Spec2("Preload")}}                 | Définition de `<link rel="preload">` et de l'attribut `as`.                                                                                                         |
-| {{SpecName('Resource Hints','#prefetch','prefetch')}}                                         | {{Spec2('Resource Hints')}}         | Ajout des valeurs `dns-prefetch`, `preconnect`, `prefetch` et `prerender`.                                                                                          |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.link",3)}}
+{{Compat}}
 
 ## Voir aussi
 

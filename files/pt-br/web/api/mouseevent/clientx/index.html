@@ -5,7 +5,7 @@ translation_of: Web/API/MouseEvent/clientX
 ---
 <p>{{APIRef("DOM Events")}}</p>
 
-<p>O <strong><code>clientX</code></strong> é uma propriedade somente de leitura da interface {{domxref("MouseEvent")}} que fornece as coordenadas horizontais dentro da área do aplicativo do cliente em que o evento ocorreu (diferente das coordenadas dentro da página). Por exemplo, clicando no canto superior esquerdo da área do cliente sempre irá resultar em um evento de mouse com um valor <code>clientX</code> de 0, independentemente se a página foi rolada horizontalmente. Originalmente, essa propriedade era definida como o número inteiro <code>long</code>. O Módulo de Visualização CSSOM o redefiniu como a fração<code>double</code>. Veja a seção de compatibilidade do Navegador para detalhes.</p>
+<p>O <strong><code>clientX</code></strong> é uma propriedade somente de leitura da interface {{domxref("MouseEvent")}} que fornece as coordenadas horizontais dentro da área do aplicativo do cliente em que o evento ocorreu (diferente das coordenadas dentro da página). Por exemplo, clicando no canto superior esquerdo da área do cliente sempre irá resultar em um evento de mouse com um valor <code>clientX</code> de 0, independentemente se a página foi rolada horizontalmente. Originalmente, essa propriedade era definida como o número inteiro <code>long</code>. O Módulo de Visualização CSSOM o redefiniu como a fração<code>double</code>. Veja a seção de compatibilidade do Navegador para detalhes.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -50,7 +50,7 @@ translation_of: Web/API/MouseEvent/clientX
   <tr>
    <td>{{SpecName('CSSOM View','#dom-mouseevent-clientx', 'clientX')}}</td>
    <td>{{Spec2('CSSOM View')}}</td>
-   <td>Redefine {{domxref("MouseEvent")}} de<code>long</code> para <code>double</code>. </td>
+   <td>Redefine {{domxref("MouseEvent")}} de<code>long</code> para <code>double</code>. </td>
   </tr>
   <tr>
    <td>{{SpecName('DOM3 Events','#widl-MouseEvent-clientX','MouseEvent.clientX')}}</td>
@@ -67,78 +67,7 @@ translation_of: Web/API/MouseEvent/clientX
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade com Navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>6</td>
-   <td>{{CompatVersionUnknown()}}</td>
-   <td>{{CompatVersionUnknown()}}</td>
-  </tr>
-  <tr>
-   <td>Redefinido de <code>long</code> para <code>double</code></td>
-   <td>{{CompatChrome(56)}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Redefinido de <code>long</code> para <code>double</code></td>
-   <td>{{CompatChrome(56)}}</td>
-   <td>{{CompatChrome(56)}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.MouseEvent.clientX")}}
 
 <h2 id="See_also" name="See_also">Veja também</h2>
 

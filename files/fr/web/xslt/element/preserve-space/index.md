@@ -12,7 +12,9 @@ L'élément `<xsl:preserve-space>` définit les éléments du document source po
 
 ### Syntaxe
 
-    <xsl:preserve-space elements=LISTE-DE-NOMS-D-ÉLÉMENTS  />
+```xml
+<xsl:preserve-space elements=LISTE-DE-NOMS-D-ÉLÉMENTS />
+```
 
 ### Attribut obligatoire
 

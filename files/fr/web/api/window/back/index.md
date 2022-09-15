@@ -21,7 +21,9 @@ La méthode obsolète et non standard `back()` sur l'objet {{domxref("window")}}
 
 ## Syntaxe
 
-    window.back();
+```js
+window.back();
+```
 
 ### Paramètres
 
@@ -51,7 +53,7 @@ Cela ne fait partie d'aucune spécification.
 
 Cette méthode non standard n'a été implémentée que dans Firefox et a été supprimée dans Firefox 31.
 
-## Voir également
+## Voir aussi
 
 - {{domxref("History.back()")}}
 - {{domxref("History.forward()")}}

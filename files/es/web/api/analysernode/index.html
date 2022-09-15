@@ -5,9 +5,9 @@ translation_of: Web/API/AnalyserNode
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
-<p>La interfaz <strong><code>AnalyserNode</code></strong><strong> </strong>representa un nodo habilitado para proveer frecuencia en tiempo real y analisis de tiempo-dominio. Es un {{domxref("AudioNode")}} que pasa el flujo de audio sin modificación desde el origen de entrada a la salida, pero, te permite obtener los datos generados, procesarlos, y crear visualizaciones de audio.</p>
+<p>La interfaz <strong><code>AnalyserNode</code></strong><strong> </strong>representa un nodo habilitado para proveer frecuencia en tiempo real y analisis de tiempo-dominio. Es un {{domxref("AudioNode")}} que pasa el flujo de audio sin modificación desde el origen de entrada a la salida, pero, te permite obtener los datos generados, procesarlos, y crear visualizaciones de audio.</p>
 
-<p>Un <code>AnalyzerNode</code> tiene exactamente una entrada y una salida. El nodo trabaja incluso si la salida no se encuentra conectada.</p>
+<p>Un <code>AnalyzerNode</code> tiene exactamente una entrada y una salida. El nodo trabaja incluso si la salida no se encuentra conectada.</p>
 
 <p><img alt="Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT." src="https://mdn.mozillademos.org/files/9707/WebAudioFFT.png" style="height: 174px; width: 661px;"></p>
 
@@ -38,7 +38,7 @@ translation_of: Web/API/AnalyserNode
 
 <h2 id="Herencia">Herencia</h2>
 
-<p>Esta interfaz hereda de las siguientes interfaces padre:</p>
+<p>Esta interfaz hereda de las siguientes interfaces padre:</p>
 
 <p>{{InheritanceDiagram}}</p>
 
@@ -104,40 +104,40 @@ analyser.getByteTimeDomainData(dataArray);
 
 function draw() {
 
-      drawVisual = requestAnimationFrame(draw);
+      drawVisual = requestAnimationFrame(draw);
 
-      analyser.getByteTimeDomainData(dataArray);
+      analyser.getByteTimeDomainData(dataArray);
 
-      canvasCtx.fillStyle = 'rgb(200, 200, 200)';
-      canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+      canvasCtx.fillStyle = 'rgb(200, 200, 200)';
+      canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
-      canvasCtx.lineWidth = 2;
-      canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+      canvasCtx.lineWidth = 2;
+      canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
 
-      canvasCtx.beginPath();
+      canvasCtx.beginPath();
 
-      var sliceWidth = WIDTH * 1.0 / bufferLength;
-      var x = 0;
+      var sliceWidth = WIDTH * 1.0 / bufferLength;
+      var x = 0;
 
-      for(var i = 0; i &lt; bufferLength; i++) {
+      for(var i = 0; i &lt; bufferLength; i++) {
 
-        var v = dataArray[i] / 128.0;
-        var y = v * HEIGHT/2;
+        var v = dataArray[i] / 128.0;
+        var y = v * HEIGHT/2;
 
-        if(i === 0) {
-          canvasCtx.moveTo(x, y);
-        } else {
-          canvasCtx.lineTo(x, y);
-        }
+        if(i === 0) {
+          canvasCtx.moveTo(x, y);
+        } else {
+          canvasCtx.lineTo(x, y);
+        }
 
-        x += sliceWidth;
-      }
+        x += sliceWidth;
+      }
 
-      canvasCtx.lineTo(canvas.width, canvas.height/2);
-      canvasCtx.stroke();
-    };
+      canvasCtx.lineTo(canvas.width, canvas.height/2);
+      canvasCtx.stroke();
+    };
 
-    draw();</pre>
+    draw();</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -151,7 +151,7 @@ function draw() {
   <tr>
    <td>{{SpecName('Web Audio API', '#the-analysernode-interface', 'AnalyserNode')}}</td>
    <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

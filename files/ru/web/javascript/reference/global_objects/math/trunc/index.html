@@ -44,7 +44,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/trunc
 
 <h2 id="Description">Описание</h2>
 
-<p>В отличие от других трёх методов объекта <code>Math</code> — {{jsxref("Math.floor()")}}, {{jsxref("Math.ceil()")}} и {{jsxref("Math.round()")}} — метод <code>Math.trunc()</code> работает очень просто. Отбрасывается запятая и все цифры после неё, не обращая внимания на знак аргумента.</p>
+<p>В отличие от других трёх методов объекта <code>Math</code> — {{jsxref("Math.floor()")}}, {{jsxref("Math.ceil()")}} и {{jsxref("Math.round()")}} — метод <code>Math.trunc()</code> работает очень просто. Отбрасывается запятая и все цифры после неё, не обращая внимания на знак аргумента.</p>
 
 <p>Аргумент, переданный в этот метод, будет неявно преобразован в число.</p>
 
@@ -93,7 +93,7 @@ Math.trunc();         // NaN
 <pre class="brush: js">if (!Math.trunc) {
 	Math.trunc = function(v) {
 		v = +v;
-		return (v - v % 1)   ||   (!isFinite(v) || v === 0 ? v : v &lt; 0 ? -0 : 0);
+		return (v - v % 1)   ||   (!isFinite(v) || v === 0 ? v : v &lt; 0 ? -0 : 0);
 	};
 }
 </pre>

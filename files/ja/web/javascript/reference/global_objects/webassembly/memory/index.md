@@ -1,13 +1,6 @@
 ---
 title: WebAssembly.Memory()
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory
-tags:
-  - クラス
-  - JavaScript
-  - Reference
-  - WebAssembly
-browser-compat: javascript.builtins.WebAssembly.Memory
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory
 ---
 {{JSRef}}
 
@@ -45,12 +38,12 @@ var memory = new WebAssembly.Memory({initial:10, maximum:100});
 ```js
 WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
 .then(obj => {
-  var i32 = new Uint32Array(memory.buffer);
-  for (var i = 0; i < 10; i++) {
-    i32[i] = i;
-  }
-  var sum = obj.instance.exports.accumulate(0, 10);
-  console.log(sum);
+  var i32 = new Uint32Array(memory.buffer);
+  for (var i = 0; i < 10; i++) {
+    i32[i] = i;
+  }
+  var sum = obj.instance.exports.accumulate(0, 10);
+  console.log(sum);
 });
 ```
 
@@ -59,8 +52,8 @@ WebAssembly.Memory オブジェクトを取得する 2 つ目の方法は、 Web
 ```js
 WebAssembly.instantiateStreaming(fetch('memory.wasm'))
 .then(obj => {
-   var i32 = new Uint32Array(obj.instance.exports.memory.buffer);
-   console.log(i32[0]);
+   var i32 = new Uint32Array(obj.instance.exports.memory.buffer);
+   console.log(i32[0]);
  });
 ```
 

@@ -23,12 +23,14 @@ L'entête `WWW-Authenticate` est envoyée en même temps qu'une réponse {{HTTPS
 
 ## Syntaxe
 
-    WWW-Authenticate: <type> realm=<realm>
+```
+WWW-Authenticate: <type> realm=<realm>
+```
 
 ## Directives
 
 - \<type>
-  - : [Type d'authentification](/en-US/docs/Web/HTTP/Authentication#Authentication_schemes). Un type commun est ["Basic"](/en-US/docs/Web/HTTP/Authentication#Basic_authentication_scheme). IANA maintient une [liste des schémas d'authentification](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
+  - : [Type d'authentification](/fr/docs/Web/HTTP/Authentication#Authentication_schemes). Un type commun est ["Basic"](/fr/docs/Web/HTTP/Authentication#Basic_authentication_scheme). IANA maintient une [liste des schémas d'authentification](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
 - realm=\<realm>
   - : Une description de la zone protégée. Si aucun domaine n'est spécifié, les clients affichent souvent un nom de domaine formaté à la place.
 - charset=\<charset>
@@ -38,11 +40,13 @@ L'entête `WWW-Authenticate` est envoyée en même temps qu'une réponse {{HTTPS
 
 La réponse d'un serveur contient généralement l'entête `WWW-Authenticate` qui ressemble à ça :
 
-    WWW-Authenticate: Basic
+```
+WWW-Authenticate: Basic
 
-    WWW-Authenticate: Basic realm="Accès au site de staging", charset="UTF-8"
+WWW-Authenticate: Basic realm="Accès au site de staging", charset="UTF-8"
+```
 
-Voir aussi [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) pour des exemples sur la configuration des serveurs Apache ou nginx pour protéger protéger votre site par mot de passe en utilisant l'authentification HTTP basic.
+Voir aussi [HTTP authentication](/fr/docs/Web/HTTP/Authentication) pour des exemples sur la configuration des serveurs Apache ou nginx pour protéger protéger votre site par mot de passe en utilisant l'authentification HTTP basic.
 
 ## Spécifications
 
@@ -53,7 +57,7 @@ Voir aussi [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) pour des e
 
 ## Voir aussi
 
-- [HTTP authentication](/en-US/docs/Web/HTTP/Authentication)
+- [HTTP authentication](/fr/docs/Web/HTTP/Authentication)
 - {{HTTPHeader("Authorization")}}
 - {{HTTPHeader("Proxy-Authorization")}}
 - {{HTTPHeader("Proxy-Authenticate")}}

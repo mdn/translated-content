@@ -13,7 +13,9 @@ Les nœuds partiellement sélectionnés sont clonés pour inclure les balises pa
 
 ## Syntaxe
 
-    documentFragment = range.extractContents();
+```js
+documentFragment = range.extractContents();
+```
 
 ## Exemples
 
@@ -26,14 +28,11 @@ document.body.appendChild(documentFragment);
 
 ## Spécifications
 
-| Spécification                                                                                                                                            | Statut                                       | Commentaire             |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ----------------------- |
-| {{SpecName('DOM WHATWG', '#dom-range-extractcontents', 'Range.extractContents()')}}                                         | {{Spec2('DOM WHATWG')}}             | Pas de changement.      |
-| {{SpecName('DOM2 Traversal_Range', 'ranges.html#Level2-Range-method-extractContents', 'Range.extractContents()')}} | {{Spec2('DOM2 Traversal_Range')}} | Spécification initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Range.extractContents")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -19,7 +19,9 @@ La méthode **`toString()`** renvoie une chaîne de caractères qui représente 
 
 ## Syntaxe
 
-    typedarray.toString()
+```js
+typedarray.toString()
+```
 
 ### Valeur de retour
 

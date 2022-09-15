@@ -1,13 +1,6 @@
 ---
 title: 右移 (>>)
 slug: Web/JavaScript/Reference/Operators/Right_shift
-tags:
-  - Bitwise operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.right_shift
 ---
 {{jsSidebar("Operators")}}
 
@@ -25,7 +18,7 @@ a >> b
 
 **右移操作符 (`>>`)** 是将一个操作数按指定移动的位数向右移动。
 右边移出位将被丢弃，然后用最左边的这一位（符号位）填充左边的空位。
-由于新的数字最左边位与之前数字的最左边位是相同值，故符号位（最左边的位）不会改变，因此被称为“符号位传播” （sign-propagating）.
+由于新的数字最左边位与之前数字的最左边位是相同值，故符号位（最左边的位）不会改变，因此被称为“符号位传播”（sign-propagating）.
 
 例如 `9 >> 2` 得到 2:
 
@@ -35,7 +28,7 @@ a >> b
 9 >> 2 (十进制): 00000000000000000000000000000010 (二进制) = 2 (十进制)
 ```
 
-同理, `-9 >> 2` 得到 `-3`, 因为它的符号位得到保留：
+同理，`-9 >> 2` 得到 `-3`, 因为它的符号位得到保留：
 
 ```js
      -9 (base 10): 11111111111111111111111111110111 (base 2)

@@ -15,7 +15,7 @@ translation_of: Web/API/AnimationEvent/elapsedTime
 
 <h2 id="Sumário">Sumário</h2>
 
-<p>O <code><strong>AnimationEvent.elapsedTime</strong></code> é uma propriedade só de leitura com um ponto flutuante dando a quantidade de tempo que animação esteve rodando, em segundos, quando o evento termina, excluirá o tempo em que ela esteve em pausa. Para um evento <code>"animationstart" </code>, <code>elapsedTime</code> é <code>0.0</code> a não ser que tenha um valor negativo para {{cssxref("animation-delay")}}, nesse caso o evento irá terminar com <code>elapsedTime</code> contendo <code>(-1 * </code><em>delay</em><code>)</code>.</p>
+<p>O <code><strong>AnimationEvent.elapsedTime</strong></code> é uma propriedade só de leitura com um ponto flutuante dando a quantidade de tempo que animação esteve rodando, em segundos, quando o evento termina, excluirá o tempo em que ela esteve em pausa. Para um evento <code>"animationstart" </code>, <code>elapsedTime</code> é <code>0.0</code> a não ser que tenha um valor negativo para {{cssxref("animation-delay")}}, nesse caso o evento irá terminar com <code>elapsedTime</code> contendo <code>(-1 * </code><em>delay</em><code>)</code>.</p>
 
 <h2 id="Síntaxe">Síntaxe</h2>
 
@@ -42,57 +42,9 @@ translation_of: Web/API/AnimationEvent/elapsedTime
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{ CompatibilityTable }}</p>
+{{Compat("api.AnimationEvent.elapsedTime")}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoDesktop("6.0") }}</td>
-   <td>10.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile("6.0") }}</td>
-   <td>10.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatChrome(43.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="sect1"> </h2>
+<h2 id="sect1"> </h2>
 
 <h2 id="Veja_também">Veja também</h2>
 

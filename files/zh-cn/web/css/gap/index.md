@@ -1,20 +1,10 @@
 ---
 title: gap (grid-gap)
 slug: Web/CSS/gap
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Grid
-  - CSS Multi-column Layout
-  - CSS Property
-  - Reference
-  - gap
-  - recipe:css-property
-translation_of: Web/CSS/gap
 ---
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) **`gap`** 属性是用来设置网格行与列之间的间隙（{{glossary("gutters")}}），该属性是 {{cssxref("row-gap")}} 和 {{cssxref("column-gap")}} 的简写形式。
+[CSS](/zh-CN/docs/Web/CSS) **`gap`** 属性是用来设置网格行与列之间的间隙（{{glossary("gutters")}}），该属性是 {{cssxref("row-gap")}} 和 {{cssxref("column-gap")}} 的简写形式。
 
 {{EmbedInteractiveExample("pages/css/gap.html")}}
 
@@ -53,9 +43,9 @@ gap: revert-layer;
 gap: unset;
 ```
 
-该属性用来表示 `<'row-gap'>` 和 `<'column-gap'>` 的值（`<'column-gap'>` 是可选的）。假如 `<'column-gap'>` 缺失的话，则会被设置成跟 `<'row-gap'>` 一样的的值。
+该属性用来表示 `<'row-gap'>` 和 `<'column-gap'>` 的值（`<'column-gap'>` 是可选的）。假如 `<'column-gap'>` 缺失的话，则会被设置成跟 `<'row-gap'>` 一样的的值。
 
-`<'row-gap'>` 和 `<'column-gap'>` 都可以用 `<length>` 或者 `<percentage>` 来表示。
+`<'row-gap'>` 和 `<'column-gap'>` 都可以用 `<length>` 或者 `<percentage>` 来表示。
 
 ### 值
 
@@ -186,5 +176,5 @@ gap: unset;
 
 ## 参见
 
-- 相关 CSS 属性: {{cssxref("row-gap")}}、{{cssxref("column-gap")}}
+- 相关 CSS 属性：{{cssxref("row-gap")}}、{{cssxref("column-gap")}}
 - 网格布局指南：_[网格布局基本概念 - 网格间距](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#网格间距)_

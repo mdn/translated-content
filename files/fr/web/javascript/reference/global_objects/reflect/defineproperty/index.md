@@ -18,7 +18,9 @@ La méthode statique **`Reflect.defineProperty()`** est semblable à {{jsxref("O
 
 ## Syntaxe
 
-    Reflect.defineProperty(cible, cléPropriété, attributs)
+```js
+Reflect.defineProperty(cible, cléPropriété, attributs)
+```
 
 ### Paramètres
 

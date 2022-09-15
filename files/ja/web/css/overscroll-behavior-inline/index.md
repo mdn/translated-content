@@ -1,17 +1,6 @@
 ---
 title: overscroll-behavior-inline
 slug: Web/CSS/overscroll-behavior-inline
-tags:
-  - CSS
-  - CSS ボックスモデル
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - NeedsExample
-  - リファレンス
-  - overscroll-behavior-inline
-  - recipe:css-property
-browser-compat: css.properties.overscroll-behavior-inline
-translation_of: Web/CSS/overscroll-behavior-inline
 ---
 {{CSSRef}}
 
@@ -65,11 +54,11 @@ overscroll-behavior-inline: unset;
 
 ```html
 <main>
-  <div>
-    <div>
-      <p><code>overscroll-behavior-inline</code> has been used to make it so that when the scroll boundaries of the yellow inner box are reached, the whole page does not begin to scroll.</p>
-    </div>
-  </div>
+  <div>
+    <div>
+      <p><code>overscroll-behavior-inline</code> has been used to make it so that when the scroll boundaries of the yellow inner box are reached, the whole page does not begin to scroll.</p>
+    </div>
+  </div>
 </main>
 ```
 

@@ -36,7 +36,7 @@ translation_of: Learn/JavaScript/First_steps/Useful_string_methods
 
 <p>Tu variable se convierte en una instancia del objeto cadena y, como resultado, tiene una gran cantidad de propiedades y métodos disponibles. Puedes ver esto si vas a la página de objeto {{jsxref("String")}} y miras la lista al costado de la página.</p>
 
-<p><strong>Ahora, antes de que tu cerebro comience a derretirse, ¡no te preocupes!</strong> Realmente no necesitas saber acerca de la mayoría de estos principios en tu viaje de aprendizaje. Pero hay algunos que posiblemente utilizarás con bastante frecuencia así como veremos aquí. </p>
+<p><strong>Ahora, antes de que tu cerebro comience a derretirse, ¡no te preocupes!</strong> Realmente no necesitas saber acerca de la mayoría de estos principios en tu viaje de aprendizaje. Pero hay algunos que posiblemente utilizarás con bastante frecuencia así como veremos aquí. </p>
 
 <p>Ingresemos algunos ejemplos en una nueva consola. A continuación, proporcionamos uno (también puedes <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html">abrir esta consola</a> en una ventana o pestaña por separado, o si prefieres usar la <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">consola de desarrolladores del navegador</a>).</p>
 
@@ -155,7 +155,7 @@ translation_of: Learn/JavaScript/First_steps/Useful_string_methods
 <pre class="brush: js notranslate">let browserType = 'mozilla';
 browserType.length;</pre>
 
-<p>Esto debería devolver el número 7, porque "mozilla" tiene 7 caracteres. Esto es útil por muchas razones; por ejemplo, es posible que quieras buscar las longitudes de una serie de nombres para que puedas mostrarlos en orden de su longitud, o dejar que un usuario  sepa que un nombre ingresado en un campo de formulario es demasiado largo o si tiene una longitud determinada.</p>
+<p>Esto debería devolver el número 7, porque "mozilla" tiene 7 caracteres. Esto es útil por muchas razones; por ejemplo, es posible que quieras buscar las longitudes de una serie de nombres para que puedas mostrarlos en orden de su longitud, o dejar que un usuario  sepa que un nombre ingresado en un campo de formulario es demasiado largo o si tiene una longitud determinada.</p>
 
 <h3 id="Extrayendo_un_específico_caracter_de_la_cadena">Extrayendo un específico caracter de la cadena</h3>
 
@@ -172,10 +172,10 @@ browserType.length;</pre>
 <h3 id="Encontrar_una_subcadena_dentro_de_una_cadena_y_extraerla">Encontrar una subcadena dentro de una cadena y extraerla</h3>
 
 <ol>
- <li>Algunas veces querrás encontrar si hay una cadena más pequeña dentro de una más grande (generalmente decimos <em>si una subcadena está presente dentro de una cadena</em>). Esto se puede hacer utilizando el método {{jsxref("String.prototype.indexOf()", "indexOf()")}}, que toma un único <a href="https://developer.mozilla.org/en-US/docs/Glossary/Parameter">parámetro</a> — la subcadena que deseas buscar. Intenta esto:
+ <li>Algunas veces querrás encontrar si hay una cadena más pequeña dentro de una más grande (generalmente decimos <em>si una subcadena está presente dentro de una cadena</em>). Esto se puede hacer utilizando el método {{jsxref("String.prototype.indexOf()", "indexOf()")}}, que toma un único <a href="https://developer.mozilla.org/en-US/docs/Glossary/Parameter">parámetro</a> — la subcadena que deseas buscar. Intenta esto:
 
   <pre class="brush: js notranslate">browserType.indexOf('zilla');</pre>
-  Esto nos dá un resultado de 2, porque la subcadena "zilla" comienza en la posición 2 (0, 1, 2  — por tanto 3 caracteres en total) dentro de "mozilla". Tal código podría usarse para filtrar cadena. Por ejemplo, podemos tener una lista de direcciones web y solo queremos imprimir las que contienen "mozilla".</li>
+  Esto nos dá un resultado de 2, porque la subcadena "zilla" comienza en la posición 2 (0, 1, 2  — por tanto 3 caracteres en total) dentro de "mozilla". Tal código podría usarse para filtrar cadena. Por ejemplo, podemos tener una lista de direcciones web y solo queremos imprimir las que contienen "mozilla".</li>
 </ol>
 
 <ol start="2">
@@ -191,11 +191,11 @@ browserType.length;</pre>
  </li>
  <li>Cuando sabes donde comienza una subcadena dentro de una cadena, y sabes hasta cuál caracter deseas que termine, puede usarse {{jsxref("String.prototype.slice()", "slice()")}} para extraerla. Prueba lo siguiente:
   <pre class="brush: js notranslate">browserType.slice(0,3);</pre>
-  Esto devuelve "moz" — El primer parámetro es la posición del caracter en la que comenzar a extraer, y el segundo parámetro es la posición del caracter posterior al último a ser extraído. Por lo tanto, el corte ocurre desde la primera posición en adelante, pero excluyendo la última posición. En este ejemplo, dado que el índice inicial es 0, el segundo parámetro es igual a la longitud de la cadena que se devuelve.<br>
-   </li>
+  Esto devuelve "moz" — El primer parámetro es la posición del caracter en la que comenzar a extraer, y el segundo parámetro es la posición del caracter posterior al último a ser extraído. Por lo tanto, el corte ocurre desde la primera posición en adelante, pero excluyendo la última posición. En este ejemplo, dado que el índice inicial es 0, el segundo parámetro es igual a la longitud de la cadena que se devuelve.<br>
+   </li>
  <li>Además, si sabes que deseas extraer todos los caracteres restantes de una cadena después de cierto caracter, ¡no necesitas incluir el segundo parámetro! En cambio, solo necesitas incluir la posición del caracter desde donde deseas extraer los caracteres restante en la cadena. Prueba lo siguiente:
   <pre class="brush: js notranslate">browserType.slice(2);</pre>
-  Esto devuelve "zilla" — debido a que la posición del caracter de 2 es la letra z, y como no incluiste un segundo parámetro, la subcadena que que se devolvío fué el resto de los caracteres de la cadena. </li>
+  Esto devuelve "zilla" — debido a que la posición del caracter de 2 es la letra z, y como no incluiste un segundo parámetro, la subcadena que que se devolvío fué el resto de los caracteres de la cadena. </li>
 </ol>
 
 <div class="note">
@@ -254,7 +254,7 @@ radData.toUpperCase();</pre>
 &lt;h2&gt;Editable code&lt;/h2&gt;
 &lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
 
-&lt;textarea id="code" class="playable-code" style="height: 290px; width: 95%"&gt;
+&lt;textarea id="code" class="playable-code" style="height: 290px; width: 95%"&gt;
 var list = document.querySelector('.output ul');
 list.innerHTML = '';
 var greetings = ['Happy Birthday!',
@@ -413,7 +413,7 @@ textarea.onkeyup = function(){
 &lt;h2&gt;Editable code&lt;/h2&gt;
 &lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
 
-&lt;textarea id="code" class="playable-code" style="height: 250px; width: 95%"&gt;
+&lt;textarea id="code" class="playable-code" style="height: 250px; width: 95%"&gt;
 var list = document.querySelector('.output ul');
 list.innerHTML = '';
 var cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
@@ -551,7 +551,7 @@ textarea.onkeyup = function(){
  <li>Encuentra el número de índice de caracter del punto y coma.</li>
  <li>Extrae el nombre de la estación legible por humanos utilizando el número de índice de caracter del punto y coma a modo de referencia y guardalo en una nueva variable.</li>
  <li>Concatenar las dos nuevas variables y un literal de cadena para hacer la cadena final.</li>
- <li>Cambia el valor de la variable de <code>result</code> a igual a la cadena final, no a  <code>input</code>.</li>
+ <li>Cambia el valor de la variable de <code>result</code> a igual a la cadena final, no a  <code>input</code>.</li>
 </ol>
 
 <div class="hidden">
@@ -570,7 +570,7 @@ textarea.onkeyup = function(){
 &lt;h2&gt;Editable code&lt;/h2&gt;
 &lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
 
-&lt;textarea id="code" class="playable-code" style="height: 285px; width: 95%"&gt;
+&lt;textarea id="code" class="playable-code" style="height: 285px; width: 95%"&gt;
 var list = document.querySelector('.output ul');
 list.innerHTML = '';
 var stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
@@ -712,7 +712,7 @@ textarea.onkeyup = function(){
  <li><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Variables">Guardando la información que necesitas— Variables</a></li>
  <li><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Matem%C3%A1ticas">Matemáticas básicas en JavaScript — números y operadores</a></li>
  <li><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Strings">Manejo de texto — cadenas en JavaScript</a></li>
- <li><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Useful_string_methods">Métodos útiles para el manejo de cadenas</a></li>
+ <li><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Useful_string_methods">Métodos útiles para el manejo de cadenas</a></li>
  <li><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Arrays">Arreglos</a></li>
  <li><a href="/es/docs/Learn/JavaScript/First_steps/Silly_story_generator" rel="nofollow">Evaluaciones: Generador de historias absurdas</a></li>
 </ul>

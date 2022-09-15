@@ -14,7 +14,9 @@ La pseudo-classe **`:-moz-drag-over`** permet de mettre en forme un élément lo
 
 ## Syntaxe
 
-    element:-moz-drag-over { propriétés de mise en forme }
+```
+element:-moz-drag-over { propriétés de mise en forme }
+```
 
 ## Exemples
 

@@ -18,7 +18,9 @@ La méthode **`Object.setPrototypeOf()`** définit le prototype (autrement dit l
 
 ## Syntaxe
 
-    Object.setPrototypeOf(obj, prototype)
+```js
+Object.setPrototypeOf(obj, prototype)
+```
 
 ### Paramètres
 

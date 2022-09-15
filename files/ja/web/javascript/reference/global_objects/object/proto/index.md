@@ -1,16 +1,6 @@
 ---
 title: Object.prototype.__proto__
 slug: Web/JavaScript/Reference/Global_Objects/Object/proto
-tags:
-  - Deprecated
-  - ECMAScript 2015
-  - JavaScript
-  - Object
-  - Property
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Object.proto
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/proto
 ---
 {{JSRef}}{{Deprecated_header}}
 
@@ -53,9 +43,9 @@ console.log(shape.__proto__ === Circle);  // false
 
 const ShapeA = function () {};
 const ShapeB = {
-    a() {
-        console.log('aaa');
-    }
+    a() {
+        console.log('aaa');
+    }
 };
 console.log(ShapeA.prototype.__proto__ = ShapeB);
 

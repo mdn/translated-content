@@ -11,9 +11,9 @@ original_slug: Web/JavaScript/Referencia/Operadores/super
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p>La palabra clave <strong>super</strong> es usada para acceder y llamar funciones del padre de un objeto.</p>
+<p>La palabra clave <strong>super</strong> es usada para acceder y llamar funciones del padre de un objeto.</p>
 
-<p>Las expresiones <code>super.prop</code> y <code>super[expr]</code> son válidas en cualquier <a href="/es/docs/Web/JavaScript/Reference/Functions/Method_definitions">definición de método</a> tanto para <a href="/es/docs/Web/JavaScript/Reference/Classes">clases</a> como para <a href="/es/docs/Web/JavaScript/Reference/Operators/Object_initializer">objetos literales</a>.</p>
+<p>Las expresiones <code>super.prop</code> y <code>super[expr]</code> son válidas en cualquier <a href="/es/docs/Web/JavaScript/Reference/Functions/Method_definitions">definición de método</a> tanto para <a href="/es/docs/Web/JavaScript/Reference/Classes">clases</a> como para <a href="/es/docs/Web/JavaScript/Reference/Operators/Object_initializer">objetos literales</a>.</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -26,13 +26,13 @@ super.functionOnParent([arguments]);
 
 <h2 id="Descripción">Descripción</h2>
 
-<p>Cuando es usado en un constructor, la palabra clave <code>super</code> aparece  sola lo cual invoca el constructor del objeto padre. En este caso debe usarse antes de que la palabra clave <code>this</code> sea usada. La palabra clave <code>super</code> también puede utilizarse para llamar otras funciones del objeto padre.</p>
+<p>Cuando es usado en un constructor, la palabra clave <code>super</code> aparece  sola lo cual invoca el constructor del objeto padre. En este caso debe usarse antes de que la palabra clave <code>this</code> sea usada. La palabra clave <code>super</code> también puede utilizarse para llamar otras funciones del objeto padre.</p>
 
 <h2 id="Ejemplo">Ejemplo</h2>
 
-<h3 id="Usando_super_en_clases">Usando <code>super</code> en clases</h3>
+<h3 id="Usando_super_en_clases">Usando <code>super</code> en clases</h3>
 
-<p>Este fragmento de código se toma del <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">ejemplo de clases</a> (<a href="https://googlechrome.github.io/samples/classes-es6/index.html">demo en vivo</a>). Aquí se llama a <code>super()</code> para evitar la duplicación de las partes del constructor que son comunes entre <code>Rectangle</code> y <code>Square</code>.</p>
+<p>Este fragmento de código se toma del <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">ejemplo de clases</a> (<a href="https://googlechrome.github.io/samples/classes-es6/index.html">demo en vivo</a>). Aquí se llama a <code>super()</code> para evitar la duplicación de las partes del constructor que son comunes entre <code>Rectangle</code> y <code>Square</code>.</p>
 
 <pre class="brush: js">class Rectangle {
   constructor(height, width) {
@@ -85,7 +85,7 @@ class Square extends Rectangle {
 Square.logDescription(); // 'Tengo 4 lados que son todos iguales'
 </pre>
 
-<h3 id="Eliminar_propiedades_super_generará_un_error">Eliminar propiedades <code>super</code> generará un error</h3>
+<h3 id="Eliminar_propiedades_super_generará_un_error">Eliminar propiedades <code>super</code> generará un error</h3>
 
 <p>No puede usar el <a href="/es/docs/Web/JavaScript/Reference/Operators/delete">operador de eliminación</a> y <code>super.prop</code> o <code>super[expr]</code> para eliminar la propiedad de una clase principal, lanzará {{jsxref("ReferenceError")}}.</p>
 
@@ -100,7 +100,7 @@ class Derived extends Base {
   }
 }
 
-new Derived().delete(); // ReferenceError: eliminación no válida que implica 'super'. </pre>
+new Derived().delete(); // ReferenceError: eliminación no válida que implica 'super'. </pre>
 
 <h3 id="super.prop_no_puede_sobrescribir_las_propiedades_no_modificables"><code>super.prop</code> no puede sobrescribir las propiedades no modificables</h3>
 
@@ -161,7 +161,7 @@ obj2.method2(); // logs "method 1"
   <tr>
    <td>{{SpecName('ESDraft', '#sec-super-keyword', 'super')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

@@ -7,18 +7,18 @@ tags:
   - WebSockets
 translation_of: Web/API/WebSocket
 ---
-<p>Объект <strong>WebSocket </strong>предоставляет API для создания и управления <a href="/ru/WebSockets">веб-сокет</a>-подключения к серверу, а также для отправки и получения данных в этом подключении.</p>
+<p>Объект <strong>WebSocket </strong>предоставляет API для создания и управления <a href="/ru/WebSockets">веб-сокет</a>-подключения к серверу, а также для отправки и получения данных в этом подключении.</p>
 
 <p>Конструктор WebSocket принимает один обязательный и один опциональный параметр:</p>
 
 <pre>WebSocket WebSocket(
-  in DOMString url,
-  in optional DOMString protocols
+  in DOMString url,
+  in optional DOMString protocols
 );
 
 WebSocket WebSocket(
-  in DOMString url,
-  in optional DOMString[] protocols
+  in DOMString url,
+  in optional DOMString[] protocols
 );
 </pre>
 
@@ -26,7 +26,7 @@ WebSocket WebSocket(
  <dt><code>url</code></dt>
  <dd>URL-адрес к которому подключаться; сервер по этому адресу должен ответить на websocket-запрос.</dd>
  <dt><code>protocols</code> {{ optional_inline() }}</dt>
- <dd>Протокол в виде строки или массив строк протоколов. Эти строки используются для определения подпротоколов клиента, т.к. один сервер может поддерживать несколько WebSocket-подпротоколов (например, вы можете захотеть, чтобы один сервер мог обрабатывать разные типы взаимодействия в зависимости от указанного протокола).  Если вы не укажете значение протокола, по умолчанию будет использоваться пустая строка.</dd>
+ <dd>Протокол в виде строки или массив строк протоколов. Эти строки используются для определения подпротоколов клиента, т.к. один сервер может поддерживать несколько WebSocket-подпротоколов (например, вы можете захотеть, чтобы один сервер мог обрабатывать разные типы взаимодействия в зависимости от указанного протокола).  Если вы не укажете значение протокола, по умолчанию будет использоваться пустая строка.</dd>
 </dl>
 
 <p>Конструктор может выбросить исключение:</p>
@@ -64,12 +64,12 @@ WebSocket WebSocket(
   <tr>
    <td><code>binaryType</code></td>
    <td>{{ DOMXref("DOMString") }}</td>
-   <td>Строка, указывающая на тип двоичных данных, которые будут переданы по соединению. Это может быть "blob" если будут использованы {{ domxref("Blob") }} объекты или "arraybuffer" если будут использованы объекты <a href="/en/JavaScript_typed_arrays/ArrayBuffer" title="en/JavaScript typed arrays/ArrayBuffer"><code>ArrayBuffer</code></a> </td>
+   <td>Строка, указывающая на тип двоичных данных, которые будут переданы по соединению. Это может быть "blob" если будут использованы {{ domxref("Blob") }} объекты или "arraybuffer" если будут использованы объекты <a href="/en/JavaScript_typed_arrays/ArrayBuffer" title="en/JavaScript typed arrays/ArrayBuffer"><code>ArrayBuffer</code></a> </td>
   </tr>
   <tr>
    <td><code>bufferedAmount</code></td>
    <td><code><a href="/en/unsigned_long" title="en/unsigned long">unsigned long</a></code></td>
-   <td>Количество байтов данных, которые были поставлены в очередь, используя вызовы {{ manch("send") }}, но ещё не переданные в сеть. Это значение не сбрасывается в ноль, при закрытии соединения; если продолжить вызывать  {{ manch("send") }}, значение будет расти. <strong>Только чтение.</strong></td>
+   <td>Количество байтов данных, которые были поставлены в очередь, используя вызовы <a href="#send">send</a>, но ещё не переданные в сеть. Это значение не сбрасывается в ноль, при закрытии соединения; если продолжить вызывать  <a href="#send">send</a>, значение будет расти. <strong>Только чтение.</strong></td>
   </tr>
   <tr>
    <td><code>extensions</code></td>
@@ -79,7 +79,7 @@ WebSocket WebSocket(
   <tr>
    <td><code>onclose</code></td>
    <td>{{ domxref("EventListener") }}</td>
-   <td>Обработчик событий, вызываемый, когда <code>readyState </code>WebSocket соединения изменяется на <code>CLOSED</code>. Наблюдатель получает <a href="/en/WebSockets/WebSockets_reference/CloseEvent" title="en/WebSockets/WebSockets reference/CloseEvent"><code>CloseEvent</code></a> с именем "close".</td>
+   <td>Обработчик событий, вызываемый, когда <code>readyState </code>WebSocket соединения изменяется на <code>CLOSED</code>. Наблюдатель получает <a href="/en/WebSockets/WebSockets_reference/CloseEvent" title="en/WebSockets/WebSockets reference/CloseEvent"><code>CloseEvent</code></a> с именем "close".</td>
   </tr>
   <tr>
    <td><code>onerror</code></td>
@@ -92,28 +92,28 @@ WebSocket WebSocket(
    <td><code>onmessage</code></td>
    <td>{{ domxref("EventListener") }}</td>
    <td>
-    <p>Обработчик событий , вызываемый, когда получается сообщение с сервера. Наблюдатель получает <code><a href="en-US/docs/Web/API/MessageEvent" title="en-US/docs/Web/API/MessageEvent">MessageEvent</a></code>,  называемое "message".</p>
+    <p>Обработчик событий , вызываемый, когда получается сообщение с сервера. Наблюдатель получает <code><a href="en-US/docs/Web/API/MessageEvent" title="en-US/docs/Web/API/MessageEvent">MessageEvent</a></code>,  называемое "message".</p>
    </td>
   </tr>
   <tr>
    <td><code>onopen</code></td>
    <td>{{ domxref("EventListener") }}</td>
    <td>
-    <p>Наблюдатель событий, вызываемый, когда <code>readyState</code> WebSocket - соединения изменяется на <code>OPEN</code>; это показывает, что соединение готово отсылать и принимать данные. Это простое событие, называемое "open".</p>
+    <p>Наблюдатель событий, вызываемый, когда <code>readyState</code> WebSocket - соединения изменяется на <code>OPEN</code>; это показывает, что соединение готово отсылать и принимать данные. Это простое событие, называемое "open".</p>
    </td>
   </tr>
   <tr>
    <td><code>protocol</code></td>
    <td>{{ DOMXref("DOMString") }}</td>
    <td>
-    <p>Строка, обозначающая имя подпротокола выбранного сервера; это будет одной из строк, указываемой в параметре <code>protocols</code> при создании WebSocket - объекта.</p>
+    <p>Строка, обозначающая имя подпротокола выбранного сервера; это будет одной из строк, указываемой в параметре <code>protocols</code> при создании WebSocket - объекта.</p>
    </td>
   </tr>
   <tr>
    <td><code>readyState</code></td>
    <td><code><a href="/en/unsigned_short" title="en/unsigned short">unsigned short</a></code></td>
    <td>
-    <p>Текущее состояние подключения; это одно из {{ anch("Ready state constants") }}. <strong>Только для чтения</strong><strong>.</strong></p>
+    <p>Текущее состояние подключения; это одно из <a href="#ready_state_constants">Ready state constants</a>. <strong>Только для чтения</strong><strong>.</strong></p>
    </td>
   </tr>
   <tr>
@@ -130,7 +130,7 @@ WebSocket WebSocket(
 
 <h3 id="Константы_состояния_готовности">Константы состояния готовности</h3>
 
-<p>Эти константы используются атрибутом <code>readyState</code> для описания состояния WebSocket - подключения</p>
+<p>Эти константы используются атрибутом <code>readyState</code> для описания состояния WebSocket - подключения</p>
 
 <table class="standard-table">
  <tbody>
@@ -169,8 +169,8 @@ WebSocket WebSocket(
 <p>Закрывает WebSocket - подключение или заканчивает попытку подключения. Если подключение уже закрыто, этот метод не делает ничего.</p>
 
 <pre class="eval">void close(
-  in optional unsigned short code,
-  in optional DOMString reason
+  in optional unsigned short code,
+  in optional DOMString reason
 );
 </pre>
 
@@ -178,23 +178,23 @@ WebSocket WebSocket(
 
 <dl>
  <dt><code>code</code> {{ optional_inline() }}</dt>
- <dd>Числовое значение, обозначающее статус-код, описывающий почему подключение будет закрыто. Если параметр не указан, значение по умолчанию равно 1000(обозначает "обмен завершён"). Смотрите <a href="en-US/docs/Web/API/CloseEvent#properties" title="en-US/docs/Web/API/CloseEvent#properties">list of status codes</a> для <code><a href="en-US/docs/Web/API/CloseEvent" title="en-US/docs/Web/API/CloseEvent">CloseEvent</a></code>, чтобы узнать разрешённые значения.</dd>
+ <dd>Числовое значение, обозначающее статус-код, описывающий почему подключение будет закрыто. Если параметр не указан, значение по умолчанию равно 1000(обозначает "обмен завершён"). Смотрите <a href="en-US/docs/Web/API/CloseEvent#properties" title="en-US/docs/Web/API/CloseEvent#properties">list of status codes</a> для <code><a href="en-US/docs/Web/API/CloseEvent" title="en-US/docs/Web/API/CloseEvent">CloseEvent</a></code>, чтобы узнать разрешённые значения.</dd>
  <dt><code>reason</code> {{ optional_inline() }}</dt>
- <dd>Читаемая человеком строка, объясняющая, почему подключение закрывается. Строка должна быть не длиннее, чем 123 байта UTF-8 текста (<strong>не</strong> символов). </dd>
+ <dd>Читаемая человеком строка, объясняющая, почему подключение закрывается. Строка должна быть не длиннее, чем 123 байта UTF-8 текста (<strong>не</strong> символов). </dd>
 </dl>
 
 <h6 id="Возможные_исключения">Возможные исключения</h6>
 
 <dl>
  <dt><code>INVALID_ACCESS_ERR</code></dt>
- <dd>Указан неверный <code>code</code>.</dd>
+ <dd>Указан неверный <code>code</code>.</dd>
  <dt><code>SYNTAX_ERR</code></dt>
- <dd>Строка <code>reason</code> слишком длинные или содержит непарные суррогаты.</dd>
+ <dd>Строка <code>reason</code> слишком длинные или содержит непарные суррогаты.</dd>
 </dl>
 
 <h6 id="Примечания">Примечания</h6>
 
-<p>В Gecko этот метод не поддерживает никакие параметры включительно до Gecko 8.0 {{ geckoRelease("8.0") }}.</p>
+<p>В Gecko этот метод не поддерживает никакие параметры включительно до Gecko 8.0 {{ geckoRelease("8.0") }}.</p>
 
 <h3 id="send">send()</h3>
 
@@ -205,11 +205,11 @@ WebSocket WebSocket(
 );
 
 void send(
-  in ArrayBuffer data
+  in ArrayBuffer data
 );
 
 void send(
-  in Blob data
+  in Blob data
 );
 </pre>
 
@@ -226,13 +226,13 @@ void send(
  <dt><code>INVALID_STATE_ERR</code></dt>
  <dd>Соединение ещё не открыто.</dd>
  <dt><code>SYNTAX_ERR</code></dt>
- <dd>Строка <code>data</code> содержит непарные суррогаты</dd>
+ <dd>Строка <code>data</code> содержит непарные суррогаты</dd>
 </dl>
 
 <div class="note">
-<p><strong>Заметьте:</strong> Gecko - реализация метода <code>send()</code> несколько отличается от специфицированной в {{Gecko("6.0")}}; Gecko возвращает <code>boolean</code>, обозначающий, открыто ли соединение до сих пор (и, в дополнение, были ли доставлены данные); это было исправлено в {{Gecko("8.0")}}.</p>
+<p><strong>Заметьте:</strong> Gecko - реализация метода <code>send()</code> несколько отличается от специфицированной в {{Gecko("6.0")}}; Gecko возвращает <code>boolean</code>, обозначающий, открыто ли соединение до сих пор (и, в дополнение, были ли доставлены данные); это было исправлено в {{Gecko("8.0")}}.</p>
 
-<p>Начиная с {{Gecko("11.0")}}, поддержка <code><a href="/en/JavaScript_typed_arrays/ArrayBuffer" title="en/JavaScript typed arrays/ArrayBuffer">ArrayBuffer</a></code> была реализована, но не {{ domxref("Blob") }} типы данных.</p>
+<p>Начиная с {{Gecko("11.0")}}, поддержка <code><a href="/en/JavaScript_typed_arrays/ArrayBuffer" title="en/JavaScript typed arrays/ArrayBuffer">ArrayBuffer</a></code> была реализована, но не {{ domxref("Blob") }} типы данных.</p>
 </div>
 
 <h2 id="See_also">Спецификации</h2>
@@ -240,7 +240,7 @@ void send(
 <table class="standard-table">
  <tbody>
   <tr>
-   <td> <strong>Спецификация</strong></td>
+   <td> <strong>Спецификация</strong></td>
    <td><strong>Статус</strong></td>
   </tr>
   <tr>
@@ -277,5 +277,5 @@ socket.addEventListener('message', function (event) {
 
 <ul>
  <li><a href="/en/WebSockets/Writing_WebSocket_client_applications" title="en/WebSockets/Writing WebSocket client applications">Writing WebSocket client applications</a></li>
- <li><a class="external" href="http://dev.w3.org/html5/websockets/">HTML5: WebSockets</a></li>
+ <li><a class="external" href="http://dev.w3.org/html5/websockets/">HTML5: WebSockets</a></li>
 </ul>

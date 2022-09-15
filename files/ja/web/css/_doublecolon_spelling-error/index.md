@@ -1,15 +1,6 @@
 ---
 title: '::spelling-error'
 slug: Web/CSS/::spelling-error
-tags:
-  - CSS
-  - 実験的
-  - 擬似要素
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.spelling-error
-translation_of: Web/CSS/::spelling-error
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
@@ -49,8 +40,8 @@ translation_of: Web/CSS/::spelling-error
 #### CSS
 
 ```css
-::spelling-error  {
-  text-decoration: wavy red;
+::spelling-error  {
+  text-decoration: wavy red;
 }
 ```
 

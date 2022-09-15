@@ -19,7 +19,9 @@ La méthode **`get()`** renvoie un élément précisé d'un objet `Map`. Si la v
 
 ## Syntaxe
 
-    maMap.get(clé)
+```js
+maMap.get(clé)
+```
 
 ### Paramètres
 

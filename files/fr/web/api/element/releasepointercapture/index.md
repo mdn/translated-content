@@ -17,7 +17,9 @@ Voir la méthode **{{domxref("Element.setPointerCapture","Element.setPointerCapt
 
 ## Syntaxe
 
-    targetElement.releasePointerCapture(pointerId);
+```js
+targetElement.releasePointerCapture(pointerId);
+```
 
 ### Arguments
 
@@ -58,14 +60,11 @@ function init() {
 
 ## Spécifications
 
-| Spécification                                                                                                                                            | Statut                                   | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Pointer Events 2','#widl-Element-releasePointerCapture-void-long-pointerId', 'releasePointerCapture')}} | {{Spec2('Pointer Events 2')}} | Version non stable.  |
-| {{SpecName('Pointer Events', '#widl-Element-releasePointerCapture-void-long-pointerId', 'releasePointerCapture')}} | {{Spec2('Pointer Events')}}     | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.releasePointerCapture")}}
+{{Compat}}
 
 ## Voir aussi
 

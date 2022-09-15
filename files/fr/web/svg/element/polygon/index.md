@@ -71,6 +71,6 @@ Cet élément implémente l'interface {{domxref("SVGPolygonElement")}}.
 
 {{Compat}}
 
-## Voir également
+## Voir aussi
 
 - Autres formes élémentaires en SVG: {{ SVGElement('circle') }}, {{ SVGElement('ellipse') }}, {{ SVGElement('line') }}, **{{ SVGElement('polyline') }}** et **{{ SVGElement('rect') }}.**

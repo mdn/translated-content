@@ -15,8 +15,10 @@ La propriété **`lastParen`** est une propriété statique accessible en lectur
 
 ## Syntaxe
 
-    RegExp.lastParen
-    RegExp['$+']
+```js
+RegExp.lastParen
+RegExp['$+']
+```
 
 ## Description
 

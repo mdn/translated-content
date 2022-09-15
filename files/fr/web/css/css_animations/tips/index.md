@@ -16,7 +16,7 @@ Les animations CSS permettent de réaliser réaliser des effets incroyables en m
 
 ## Relancer une animation
 
-La spécifications des [animations CSS](/en-US/docs/Web/CSS/CSS_Animations) ne permet pas de relancer une animation. Il n'existe pas de méthode `resetAnimation()` qui puisse être appelée sur les éléments et on ne peut pas utiliser la propriété {{cssxref("animation-play-state")}} pour la redéfinir sur `"running"`. Pour obtenir cet effet qui permette de relancer une animation terminée, on utilisera cette astuce.
+La spécifications des [animations CSS](/fr/docs/Web/CSS/CSS_Animations) ne permet pas de relancer une animation. Il n'existe pas de méthode `resetAnimation()` qui puisse être appelée sur les éléments et on ne peut pas utiliser la propriété {{cssxref("animation-play-state")}} pour la redéfinir sur `"running"`. Pour obtenir cet effet qui permette de relancer une animation terminée, on utilisera cette astuce.
 
 ### CSS
 
@@ -89,9 +89,9 @@ Cela paraît un peu étrange. Mais afin que l'animation soit lancée à nouveau,
 
 Voici ce qui se produit lorsque la fonction `play()` est appelée :
 
-1.  On réinitialise la liste des classes CSS de la boîte avec uniquement `box`. Ce faisant, on retire toutes les autres classes qui s'appliquaient à la boîte, y compris la classe `changing` en charge de l'animation. Autrement dit, on retire l'effet d'animation. Toutefois, ces modifications de classes n'auront pas d'effet tant que les styles ne sont pas recalculés et qu'un rafraîchissement est réalisé pour appliquer ces modifications.
-2.  Afin de s'assurer que les styles sont recalculés, on utilise {{domxref("window.requestAnimationFrame()")}} en définissant une fonction de rappel (_callback_). La fonction de rappel est exécutée juste avant le prochain rafraîchissement du document. Seul problème : avant le rafraîchissement, le recalcul des styles n'a pas encore eu lieu. Aussi…
-3.  Notre fonction de rappel invoque à nouveau `requestAnimationFrame()` ! Cette fois, la fonction de rappel est lancée avant le prochain rafraîchissement qui aura lieu après le recalcul des styles. Dans cette nouvelle fonction de rappel, on ajoute la classe `changing` à la boîte afin que l'animation soit lancée lors du rafraîchissement.
+1. On réinitialise la liste des classes CSS de la boîte avec uniquement `box`. Ce faisant, on retire toutes les autres classes qui s'appliquaient à la boîte, y compris la classe `changing` en charge de l'animation. Autrement dit, on retire l'effet d'animation. Toutefois, ces modifications de classes n'auront pas d'effet tant que les styles ne sont pas recalculés et qu'un rafraîchissement est réalisé pour appliquer ces modifications.
+2. Afin de s'assurer que les styles sont recalculés, on utilise {{domxref("window.requestAnimationFrame()")}} en définissant une fonction de rappel (_callback_). La fonction de rappel est exécutée juste avant le prochain rafraîchissement du document. Seul problème : avant le rafraîchissement, le recalcul des styles n'a pas encore eu lieu. Aussi…
+3. Notre fonction de rappel invoque à nouveau `requestAnimationFrame()` ! Cette fois, la fonction de rappel est lancée avant le prochain rafraîchissement qui aura lieu après le recalcul des styles. Dans cette nouvelle fonction de rappel, on ajoute la classe `changing` à la boîte afin que l'animation soit lancée lors du rafraîchissement.
 
 Bien entendu, on ajoutera également un gestion d'événement au bouton pour que l'ensemble soit bien branché :
 
@@ -107,8 +107,8 @@ document.querySelector(".runButton").addEventListener("click", play, false);
 
 Si on retire la propriété {{cssxref("animation-name")}} appliquée à un élément, l'animation s'arrêtera au prochain état défini. Si on souhaite plutôt que l'animation se termine et parvienne à un point d'arrêt, il faudra utiliser une autre approche. Voici quelques pistes :
 
-1.  L'animation doit être la plus isolée possible et on ne doit pas reposer sur  `animation-direction: alternate`. Il faut une animation explicitement séquencée qui parcourt l'ensemble de l'animation en un cycle.
-2.  Utiliser JavaScript pour retirer l'animation lorsque l'évènement `animationiteration` se déclenche.
+1. L'animation doit être la plus isolée possible et on ne doit pas reposer sur  `animation-direction: alternate`. Il faut une animation explicitement séquencée qui parcourt l'ensemble de l'animation en un cycle.
+2. Utiliser JavaScript pour retirer l'animation lorsque l'évènement `animationiteration` se déclenche.
 
 Ces pistes sont utilisées dans la démonstration suivante :
 

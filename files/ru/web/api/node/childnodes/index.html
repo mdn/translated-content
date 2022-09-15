@@ -6,7 +6,7 @@ translation_of: Web/API/Node/childNodes
 <div>
 <div>{{APIRef("DOM")}}</div>
 
-<div><code><font face="Open Sans, sans-serif">Доступный для чтения аттрибут </font><strong>Node.childNodes</strong></code> возвращает <em>коллекцию</em> дочерних элементов данного элемента.</div>
+<div><code><font face="Open Sans, sans-serif">Доступный для чтения аттрибут </font><strong>Node.childNodes</strong></code> возвращает <em>коллекцию</em> дочерних элементов данного элемента.</div>
 </div>
 
 <h2 id="Syntax">Синтаксис</h2>
@@ -14,9 +14,9 @@ translation_of: Web/API/Node/childNodes
 <pre class="syntaxbox">var <var>ndList</var> = elementNodeReference.childNodes;
 </pre>
 
-<p><var>ndList</var> -- упорядоченная коллекция объектов элементов, которые являются детьми данного элемента. Если у элемента нет детей, <var>ndList </var>пуст.</p>
+<p><var>ndList</var> -- упорядоченная коллекция объектов элементов, которые являются детьми данного элемента. Если у элемента нет детей, <var>ndList </var>пуст.</p>
 
-<p><var>ndList</var> -- переменная, хранящая список дочерних элементов. Тип этого списка --  {{domxref("NodeList")}}.</p>
+<p><var>ndList</var> -- переменная, хранящая список дочерних элементов. Тип этого списка --  {{domxref("NodeList")}}.</p>
 
 <h2 id="Example">Пример</h2>
 
@@ -43,11 +43,11 @@ while (box.firstChild) {
 
 <h2 id="Notes">Примечания</h2>
 
-<p>Элементы в коллекции -- объекты, а не строки. Чтобы получить данные из этих объектов, вы должны использовать их свойства (например, <code>elementNodeReference.childNodes[1].nodeName</code> чтобы получить имя, и т. д.).</p>
+<p>Элементы в коллекции -- объекты, а не строки. Чтобы получить данные из этих объектов, вы должны использовать их свойства (например, <code>elementNodeReference.childNodes[1].nodeName</code> чтобы получить имя, и т. д.).</p>
 
-<p>Объект <code>document</code> обладает 2-мя детьми: декларацией Doctype и корневым элементов, к которому как правило обращаются как <code>documentElement</code>. (В (X)HTML документах это HTML-элемент.)</p>
+<p>Объект <code>document</code> обладает 2-мя детьми: декларацией Doctype и корневым элементов, к которому как правило обращаются как <code>documentElement</code>. (В (X)HTML документах это HTML-элемент.)</p>
 
-<p><code>childNodes</code> также включают, например, текстовые узлы и комментарии. Чтобы пропустить их, используйте {{ domxref("ParentNode.children") }} взамен.</p>
+<p><code>childNodes</code> также включают, например, текстовые узлы и комментарии. Чтобы пропустить их, используйте {{ domxref("ParentNode.children") }} взамен.</p>
 
 <h2 id="Specification">Спецификация</h2>
 

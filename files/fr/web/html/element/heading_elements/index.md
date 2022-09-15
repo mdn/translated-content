@@ -96,30 +96,30 @@ Les personnes utilisant des lecteurs d'écran utilisent fréquemment les niveaux
 
 Les niveaux de titres peuvent être imbriqués afin de créer des sous-sections qui reflètent l'organisation de la page. La plupart des lecteurs d'écran peuvent également générer une liste ordonnée des titres de la page afin d'aider les visiteurs à connaître la hiérarchie du contenu :
 
-1.  `h1` Les abeilles
+1. `h1` Les abeilles
 
-    1.  `h2` Étymologie
-    2.  `h2` Répartition
-    3.  `h2` Évolution
+    1. `h2` Étymologie
+    2. `h2` Répartition
+    3. `h2` Évolution
 
-        1.  `h3` Paléozoïque ancien
-        2.  `h3` Jurassique
-        3.  `h3` Crétacée
+        1. `h3` Paléozoïque ancien
+        2. `h3` Jurassique
+        3. `h3` Crétacée
 
-    4.  `h2` Morphologie externe
+    4. `h2` Morphologie externe
 
-        1.  `h3`Tête
+        1. `h3`Tête
 
-            1.  `h4` Mandibules
+            1. `h4` Mandibules
 
-        2.  `h3` Thorax
+        2. `h3` Thorax
 
-            1.  `h4` Prothorax
-            2.  `h4` Ptérothorax
+            1. `h4` Prothorax
+            2. `h4` Ptérothorax
 
-        3.  `h3` Pattes
-        4.  `h3` Ailes
-        5.  `h3` Abdomen
+        3. `h3` Pattes
+        4. `h3` Ailes
+        5. `h3` Abdomen
 
 Lorsque les niveaux sont imbriqués, il est possible de sauter un niveau lorsqu'on **ferme** une sous-section
 
@@ -133,7 +133,7 @@ Lorsque les niveaux sont imbriqués, il est possible de sauter un niveau lorsqu'
 
 ### Libeller une section
 
-Les outils comme les lecteurs d'écran peuvent également générer une liste du [contenu sectionnant](/en-US/docs/Web/HTML/Element#Content_sectioning) afin de déterminer le plan de la page.
+Les outils comme les lecteurs d'écran peuvent également générer une liste du [contenu sectionnant](/fr/docs/Web/HTML/Element#Content_sectioning) afin de déterminer le plan de la page.
 
 Le contenu sectionnant peut être libellé en combinant les attributs [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) et {{htmlattrxref("id")}}. Dans ce cas, le libellé décrit, de façon concise, le but de la section. Cette technique s'avère utile lorsqu'on a une page qui possède plusieurs éléments sectionnants.
 
@@ -219,15 +219,11 @@ Dans l'exemple qui précède, un lecteur d'écran annoncerait deux section {{HTM
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                                                            | État                             | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}     | {{Spec2('HTML5 W3C')}}     |              |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.5.5', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}                                         | {{Spec2('HTML4.01')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.h1")}}
+{{Compat}}
 
 ## Voir aussi
 

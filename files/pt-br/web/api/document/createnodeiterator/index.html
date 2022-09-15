@@ -6,12 +6,12 @@ original_slug: Web/API/NodeFilter
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<div>Uma interface <strong><code>NodeFilter</code></strong>  representa um objeto usado para filtrar os nós (elementos), em uma iteração {{ domxref("NodeIterator") }} ou  {{ domxref("TreeWalker") }}. Essas interfaces não conhecem nada sobre o DOM ou sobre como percorrer ou atravessar, elementos; elas apenas sabem como avaliar se um único nó atende aos requisitos do filtro fornecido ou não.</div>
+<div>Uma interface <strong><code>NodeFilter</code></strong>  representa um objeto usado para filtrar os nós (elementos), em uma iteração {{ domxref("NodeIterator") }} ou  {{ domxref("TreeWalker") }}. Essas interfaces não conhecem nada sobre o DOM ou sobre como percorrer ou atravessar, elementos; elas apenas sabem como avaliar se um único nó atende aos requisitos do filtro fornecido ou não.</div>
 
-<div> </div>
+<div> </div>
 
 <div class="note">
-<p>O navegador não fornece nenhum objeto que implemente essa interface. É esperado que o desenvolvedor escreva tal objeto, utilizando o método <code>acceptNode()</code> conforme as suas necessidades, podendo mesclar com objetos do tipo {{domxref("TreeWalker")}} ou {{domxref("NodeIterator")}}  em sua implementação.. </p>
+<p>O navegador não fornece nenhum objeto que implemente essa interface. É esperado que o desenvolvedor escreva tal objeto, utilizando o método <code>acceptNode()</code> conforme as suas necessidades, podendo mesclar com objetos do tipo {{domxref("TreeWalker")}} ou {{domxref("NodeIterator")}}  em sua implementação.. </p>
 </div>
 
 <h2 id="Properties">Properties</h2>
@@ -37,7 +37,7 @@ original_slug: Web/API/NodeFilter
    </tr>
    <tr>
     <td><code>FILTER_REJECT</code></td>
-    <td>Value to be returned by the {{ domxref("NodeFilter.acceptNode()") }} method when a node should be rejected. For {{ domxref("TreeWalker") }}, child nodes are also rejected. For {{ domxref("NodeIterator") }}, this flag is synonymous with FILTER_SKIP.</td>
+    <td>Value to be returned by the {{ domxref("NodeFilter.acceptNode()") }} method when a node should be rejected. For {{ domxref("TreeWalker") }}, child nodes are also rejected. For {{ domxref("NodeIterator") }}, this flag is synonymous with FILTER_SKIP.</td>
    </tr>
    <tr>
     <td><code>FILTER_SKIP</code></td>
@@ -91,7 +91,7 @@ while ((node = nodeIterator.nextNode())) {
   <tr>
    <td>{{SpecName('DOM WHATWG', '#interface-nodefilter', 'NodeFilter')}}</td>
    <td>{{Spec2('DOM WHATWG')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-NodeFilter', 'NodeFilter')}}</td>
@@ -103,59 +103,7 @@ while ((node = nodeIterator.nextNode())) {
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(1)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.8.1")}}</td>
-   <td>9.0</td>
-   <td>9.0</td>
-   <td>3.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.8.1")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>9.0</td>
-   <td>3.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Document.createNodeIterator")}}
 
 <h2 id="See_also">See also</h2>
 

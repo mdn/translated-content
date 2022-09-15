@@ -11,9 +11,11 @@ Voir également le chapitre [Ajout de styles et de couleurs](/fr/docs/Tutoriel_c
 
 ## Syntaxe
 
-    ctx.fillStyle = color;
-    ctx.fillStyle = gradient;
-    ctx.fillStyle = pattern;
+```js
+ctx.fillStyle = color;
+ctx.fillStyle = gradient;
+ctx.fillStyle = pattern;
+```
 
 ### Options
 
@@ -114,24 +116,11 @@ Le résultat devrait ressembler à ça:
 
 ## Spécifications
 
-| Specification                                                                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-fillstyle", "CanvasRenderingContext2D.fillStyle")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.fillStyle")}}
-
-## Notes spécifiques à WebKit/Blink
-
-- Outre `ctx.fillStyle`, il existe dans les navigateurs basés sur WebKit et Blink une méthode non-standard et dépréciée, `ctx.setFillColor()`.
-
-  ```js
-  setFillColor(color, optional alpha);
-  setFillColor(grayLevel, optional alpha);
-  setFillColor(r, g, b, a);
-  setFillColor(c, m, y, k, a);
-  ```
+{{Compat}}
 
 ## Voir aussi
 

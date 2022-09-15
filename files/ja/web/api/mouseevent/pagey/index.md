@@ -1,14 +1,6 @@
 ---
 title: MouseEvent.pageY
 slug: Web/API/MouseEvent/pageY
-tags:
-  - API
-  - DOM
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.MouseEvent.pageY
-translation_of: Web/API/MouseEvent/pageY
 ---
 {{APIRef("DOM Events")}}
 
@@ -18,7 +10,6 @@ translation_of: Web/API/MouseEvent/pageY
 ## 値
 
 `double` 型の浮動小数点値。
-
 
 ## 例
 

@@ -34,11 +34,11 @@ original_slug: Aprender/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_
 <p>Na web, você pode trabalhar com dois tipos de imagem — <strong>raster images</strong>, and <strong>vector images</strong>:</p>
 
 <ul>
- <li><strong>Imagens Raster</strong> são definidos usando uma grade de pixels — a raster image file contains information showing exactly where each pixel is to be placed, and exactly what color it should be. Popular web raster formats include Bitmap (<code>.bmp</code>), PNG (<code>.png</code>), JPEG (<code>.jpg</code>), and GIF (<code>.gif</code>.)</li>
- <li><strong>Imagens vetoriais</strong> são definidas usando algoritmos — um arquivo de imagem vetorial contains shape and path definitions that the computer can use to work out what the image should look like when rendered on the screen. The {{glossary("SVG")}} format allows us to create powerful vector graphics for use on the Web.</li>
+ <li><strong>Imagens Raster</strong> são definidos usando uma grade de pixels — a raster image file contains information showing exactly where each pixel is to be placed, and exactly what color it should be. Popular web raster formats include Bitmap (<code>.bmp</code>), PNG (<code>.png</code>), JPEG (<code>.jpg</code>), and GIF (<code>.gif</code>.)</li>
+ <li><strong>Imagens vetoriais</strong> são definidas usando algoritmos — um arquivo de imagem vetorial contains shape and path definitions that the computer can use to work out what the image should look like when rendered on the screen. The {{glossary("SVG")}} format allows us to create powerful vector graphics for use on the Web.</li>
 </ul>
 
-<p>To give you an idea of the difference between the two, let's look at an example. You can find this example live on our Github repo as <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html">vector-versus-raster.html</a> — it shows two seemingly identical images side by side, of a red star with a  black drop shadow. The difference is that the left one is a PNG, and the right one is an SVG image.</p>
+<p>To give you an idea of the difference between the two, let's look at an example. You can find this example live on our Github repo as <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html">vector-versus-raster.html</a> — it shows two seemingly identical images side by side, of a red star with a  black drop shadow. The difference is that the left one is a PNG, and the right one is an SVG image.</p>
 
 <p>The difference becomes apparent when you zoom in the page — the PNG image becomes pixellated as you zoom in because it contains information on where each pixel should be (and what color). When it is zoomed, each pixel is simply increased in size to fill multiple pixels on screen, so the image starts to look blocky. The vector image however continues to look nice and crisp, because no matter what size it is, the algorithms are used to work out the shapes in the image, with the values simply being scaled as it gets bigger.</p>
 
@@ -54,7 +54,7 @@ original_slug: Aprender/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_
 
 <h2 id="What_is_SVG">What is SVG?</h2>
 
-<p><a href="/en-US/docs/Web/SVG">SVG</a> is an {{glossary("XML")}}-based language for describing vector images. It's basically markup, like HTML, except that you've got many different elements for defining the shapes you want to appear in your image, and the effects you want to apply to those shapes. SVG is for marking up graphics, not content. At the simplest end of the spectrum, you've got elements for creating simple shapes, like {{svgelement("circle")}} and {{svgelement("rect")}}. More advanced SVG features include {{svgelement("feColorMatrix")}} (transform colors using a transformation matrix,) {{svgelement("animate")}} (animate parts of your vector graphic,) and {{svgelement("mask")}} (apply a mask over the top of your image.)</p>
+<p><a href="/en-US/docs/Web/SVG">SVG</a> is an {{glossary("XML")}}-based language for describing vector images. It's basically markup, like HTML, except that you've got many different elements for defining the shapes you want to appear in your image, and the effects you want to apply to those shapes. SVG is for marking up graphics, not content. At the simplest end of the spectrum, you've got elements for creating simple shapes, like {{svgelement("circle")}} and {{svgelement("rect")}}. More advanced SVG features include {{svgelement("feColorMatrix")}} (transform colors using a transformation matrix,) {{svgelement("animate")}} (animate parts of your vector graphic,) and {{svgelement("mask")}} (apply a mask over the top of your image.)</p>
 
 <p>As a simple example, the following code creates a circle and a rectangle:</p>
 
@@ -87,7 +87,7 @@ original_slug: Aprender/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_
  <li>SVG is not supported in older browsers, so may not be suitable if you need to support older versions of Internet Explorer with your web site (SVG started being supported as of IE9.)</li>
 </ul>
 
-<p>Raster graphics are arguably better for complex precision images such as photos, for the reasons described above.</p>
+<p>Raster graphics are arguably better for complex precision images such as photos, for the reasons described above.</p>
 
 <div class="note">
 <p><strong>Note</strong>: In Inkscape, save your files as Plain SVG to save space. Also, please refer to this <a href="http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html">article describing how to prepare SVGs for the Web</a>.</p>
@@ -135,7 +135,7 @@ original_slug: Aprender/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_
 <code>background-image: url("image.svg");
 background-size: contain;</code></pre>
 
-<p>Like the <code>&lt;img&gt;</code> method described above, inserting SVGs using CSS background images means that the SVG can't be manipulated with JavaScript, and is also subject to the same CSS limitations.</p>
+<p>Like the <code>&lt;img&gt;</code> method described above, inserting SVGs using CSS background images means that the SVG can't be manipulated with JavaScript, and is also subject to the same CSS limitations.</p>
 
 <p>If your SVGs aren't showing up at all, it might be because your server isn't set up properly. If that's the problem, this <a href="/en-US/docs/Web/SVG/Tutorial/Getting_Started#A_Word_on_Webservers">article will point you in the right direction</a>.</p>
 

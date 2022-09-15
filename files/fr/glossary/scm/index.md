@@ -12,8 +12,8 @@ SCM (Source Control Management) est un système de gestion de code source. Habit
 
 Parmi les systèmes de SCM figurent CVS, SVN, GIT.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Gestion de versions")}} sur Wikipédia
+- [Gestion de versions](https://fr.wikipedia.org/wiki/Gestion_de_versions) sur Wikipédia

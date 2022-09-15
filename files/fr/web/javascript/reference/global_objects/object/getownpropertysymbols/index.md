@@ -18,7 +18,9 @@ La méthode **`Object.getOwnPropertySymbols()`** renvoie un tableau contenant to
 
 ## Syntaxe
 
-    Object.getOwnPropertySymbols(obj)
+```js
+Object.getOwnPropertySymbols(obj)
+```
 
 ### Paramètres
 

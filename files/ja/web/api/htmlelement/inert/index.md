@@ -1,8 +1,6 @@
 ---
 title: HTMLElement.inert
 slug: Web/API/HTMLElement/inert
-browser-compat: api.HTMLElement.inert
-translation_of: Web/API/HTMLElement/inert
 ---
 {{ APIRef("HTML DOM") }}
 
@@ -10,13 +8,15 @@ translation_of: Web/API/HTMLElement/inert
 
 ## 構文
 
-    isInert = HTMLElement.inert;
+```
+isInert = HTMLElement.inert;
 
-    HTMLElement.inert = true | false;
+HTMLElement.inert = true | false;
+```
 
 ### 値
 
-論理値で、その要素が不活性である場合は `true`、それ以外の場合はこの値は `false` になります。
+論理値で、その要素が不活性である場合は `true`、それ以外の場合はこの値は `false` になります。
 
 <h2 id="Example">例</h3>
 

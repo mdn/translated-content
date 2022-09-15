@@ -22,7 +22,7 @@ Les cookies sont utilisés pour 3 raisons principales :
 - Suivi
   - : Enregistrement et analyse du comportement utilisateur.
 
-Les cookies étaient auparavant utilisés pour le stockage côté client. C'était légitime lorsque les cookies étaient la seule manière de stocker des données côté client, mais il est aujourd'hui recommandé de préférer les APIs modernes de stockage. Les cookies sont envoyés avec chaque requête, ils peuvent donc avoir un impact négatif sur les performances (particulièrement pour des connexions mobiles). Les APIs modernes de stockage côté client sont l'[API Web storage](/fr/docs/Web/API/Web_Storage_API "DOM Storage") (`localStorage` et `sessionStorage`) et [IndexedDB](/fr/docs/Web/API/API_IndexedDB).
+Les cookies étaient auparavant utilisés pour le stockage côté client. C'était légitime lorsque les cookies étaient la seule manière de stocker des données côté client, mais il est aujourd'hui recommandé de préférer les APIs modernes de stockage. Les cookies sont envoyés avec chaque requête, ils peuvent donc avoir un impact négatif sur les performances (particulièrement pour des connexions mobiles). Les APIs modernes de stockage côté client sont l'[API Web storage](/fr/docs/Web/API/Web_Storage_API) (`localStorage` et `sessionStorage`) et [IndexedDB](/fr/docs/Web/API/API_IndexedDB).
 
 > **Note :** Pour voir les cookies stockés (et d'autres stockages que le navigateur peut conserver), vous ouvrez l'[Inspecteur de stockage](/fr/docs/Outils/Inspecteur_de_stockage) des Outils Développeur et sélectionnez Cookies dans l'onglet stockage (pour Firefox).
 
@@ -34,7 +34,9 @@ Après avoir reçu une requête HTTP, un serveur peut renvoyer sa réponse avec 
 
 L'entête de réponse HTTP {{HTTPHeader("Set-Cookie")}} envoie un cookie depuis le serveur vers le navigateur. Un cookie simple est défini comme ceci:
 
-    Set-Cookie: <nom-du-cookie>=<valeur-du-cookie>
+```
+Set-Cookie: <nom-du-cookie>=<valeur-du-cookie>
+```
 
 > **Note :** Voici comment utiliser l'en-tête `Set-Cookie` dans divers langages de programmation côté serveur :
 >
@@ -45,18 +47,22 @@ L'entête de réponse HTTP {{HTTPHeader("Set-Cookie")}} envoie un cookie depuis 
 
 Exemple de réponse HTTP complète:
 
-    HTTP/1.0 200 OK
-    Content-type: text/html
-    Set-Cookie: yummy_cookie=choco
-    Set-Cookie: tasty_cookie=strawberry
+```
+HTTP/1.0 200 OK
+Content-type: text/html
+Set-Cookie: yummy_cookie=choco
+Set-Cookie: tasty_cookie=strawberry
 
-    [contenu de la page]
+[contenu de la page]
+```
 
 Maintenant, à chaque requête vers le serveur, le navigateur va renvoyer au serveur tous les cookies stockés, avec l'entête {{HTTPHeader("Cookie")}}:
 
-    GET /sample_page.html HTTP/1.1
-    Host: www.example.org
-    Cookie: yummy_cookie=choco; tasty_cookie=strawberry
+```
+GET /sample_page.html HTTP/1.1
+Host: www.example.org
+Cookie: yummy_cookie=choco; tasty_cookie=strawberry
+```
 
 ### Cookies de session
 
@@ -66,7 +72,9 @@ Le cookie créé ci-dessus est un *cookie de session*&nbsp;: il est effacé quan
 
 Plutôt que d'expirer quand le client ferme, _les cookies permanents_ expirent à une date spécifique (`Expires`) ou après un certain temps (`Max-Age`).
 
-    Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
+```
+Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
+```
 
 > **Note :** Quand une date d'expiration est définie, le temps et l'heure définis sont relatifs au client auquel le cookie est envoyé, et non au serveur.
 
@@ -76,7 +84,9 @@ Un cookie sécurisé est uniquement envoyé au serveur avec les requêtes chiffr
 
 Pour empêcher les attaques de cross-site scripting ({{Glossary("Cross-site_scripting","XSS")}}), on peut utiliser les cookies `HttpOnly`, qui sont inaccessibles à l'API JavaScript {{domxref("Document.cookie")}}; ils sont uniquement envoyés au serveur. Par exemple, les cookies qui persistent la session côté serveur n'ont pas besoin d'être accessibles via JavaScript, et l'option `HttpOnly` doit être définie.
 
-    Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
+```
+Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
+```
 
 ### Portée des cookies
 
@@ -144,7 +154,7 @@ Les cookies ont un domaine qui leur est associé. Si ce domaine est le même que
 
 Alors que les cookies internes sont uniquement envoyés au serveur qui les a définis, une page web peut également contenir des images ou tout autre composant stockés sur d'autres domaines (comme des bannières publicitaires). Les cookies qui sont envoyés via les composants tiers sont appelés cookies tiers et ils sont principalement utilisés pour la publicité et le suivi sur le web. Voir par exemple les [types de cookies utilisés par Google](https://www.google.com/policies/technologies/types/). La plupart des navigateurs autorisent les cookies tiers par défaut, mais il existe des addons disponibles pour les bloquer (par exemple, [Privacy Badger](https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/) par [EFF](https://www.eff.org/)).
 
-Si vous n'avertissez pas vos utilisateurs de l'utilisation de cookies tiers, vous pouvez perdre leur confiance s'ils la découvrent. Une divulgation claire (tel que dans une politique de confidentialité) tend à éliminer les effets négatifs d'une telle découverte. Quelques pays ont également une législation sur les cookies. Voir par exemple l'article [cookie statement](https://wikimediafoundation.org/wiki/Cookie_statement) de Wikipedia.
+Si vous n'avertissez pas vos utilisateurs de l'utilisation de cookies tiers, vous pouvez perdre leur confiance s'ils la découvrent. Une divulgation claire (tel que dans une politique de confidentialité) tend à éliminer les effets négatifs d'une telle découverte. Quelques pays ont également une législation sur les cookies. Voir par exemple l'article [cookie statement](https://wikimediafoundation.org/wiki/Cookie_statement) de Wikipédia.
 
 ### Do-Not-Track
 
@@ -156,14 +166,14 @@ Les exigences relatives aux cookies dans l'Union Européenne sont définies dans
 
 Pour faire court, la directive de l'UE stipule qu'avant de pouvoir stocker ou récupérer des informations sur un ordinateur, téléphone mobile ou tout autre appareil, l'utilisateur doit donner son consentement de le faire en connaissance de cause. Beaucoup de sites web ont ajoutés des bannières depuis lors pour informer l'utilisateur sur l'utilisation des cookies.
 
-Pour en savoir plus, voir [cette section Wikipedia](https://en.wikipedia.org/wiki/HTTP_cookie#EU_cookie_directive) et consultez les lois de l'état pour avoir des informations plus récentes et plus précises.
+Pour en savoir plus, voir [cette section Wikipédia](https://en.wikipedia.org/wiki/HTTP_cookie#EU_cookie_directive) et consultez les lois de l'état pour avoir des informations plus récentes et plus précises.
 
 ### Cookies Zombie et Evercookies
 
-Une approche plus radicale des cookies sont les Cookies Zombies ou "Evercookies", qui sont des cookies recrées après leur suppression et intentionnellement difficiles à supprimer définitivement. Ils utilisent l'[API Web storage](/en-US/docs/Web/API/Web_Storage_API "DOM Storage"), les Flash Local Shared Objects et d'autres techniques pour se recréer d'eux mêmes dès que l'absence du cookie est détéctée.
+Une approche plus radicale des cookies sont les Cookies Zombies ou "Evercookies", qui sont des cookies recrées après leur suppression et intentionnellement difficiles à supprimer définitivement. Ils utilisent l'[API Web storage](/fr/docs/Web/API/Web_Storage_API), les Flash Local Shared Objects et d'autres techniques pour se recréer d'eux mêmes dès que l'absence du cookie est détéctée.
 
 - [Evercookie by Samy Kamkar](https://github.com/samyk/evercookie)
-- [Zombie cookies sur Wikipedia](https://en.wikipedia.org/wiki/Zombie_cookie)
+- [Zombie cookies sur Wikipédia](https://en.wikipedia.org/wiki/Zombie_cookie)
 
 ## Voir aussi
 
@@ -171,8 +181,8 @@ Une approche plus radicale des cookies sont les Cookies Zombies ou "Evercookies"
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}
 - {{domxref("Navigator.cookieEnabled")}}
-- [Inspecting cookies using the Storage Inspector](/en-US/docs/Tools/Storage_Inspector)
+- [Inspecting cookies using the Storage Inspector](/fr/docs/Tools/Storage_Inspector)
 - [Cookie specification: RFC 6265](https://tools.ietf.org/html/rfc6265)
 - [Nicholas Zakas article on cookies](https://www.nczonline.net/blog/2009/05/05/http-cookies-explained/)
 - [Nicholas Zakas article on cookies and security](https://www.nczonline.net/blog/2009/05/12/cookies-and-security/)
-- [HTTP cookie on Wikipedia](https://en.wikipedia.org/wiki/HTTP_cookie)
+- [Cookies HTTP sur Wikipédia](https://en.wikipedia.org/wiki/HTTP_cookie)

@@ -237,7 +237,7 @@ this.ball.body.bounce.set(0.3, 0.3);</pre>
 
 <pre class="brush: js">this.keys = this.game.input.keyboard.createCursorKeys();</pre>
 
-<p>As you can see there’s a special Phaser function called <code>createCursorKeys()</code>, which will give us an object with event handlers for the four arrow keys to play with: up, down, left and right.</p>
+<p>As you can see there’s a special Phaser function called <code>createCursorKeys()</code>, which will give us an object with event handlers for the four arrow keys to play with: up, down, left and right.</p>
 
 <p>Next we will add the following code to the <code>update()</code> function, so it will be fired on every frame. The <code>this.keys</code> object will be checked against player input, so the ball can react accordingly with the predefined force:</p>
 

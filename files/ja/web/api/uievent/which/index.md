@@ -1,15 +1,6 @@
 ---
 title: UIEvent.which
 slug: Web/API/UIEvent/which
-tags:
-  - API
-  - DOM
-  - UIEvent
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.UIEvent.which
-translation_of: Web/API/UIEvent/which
 original_slug: Web/API/MouseEvent/which
 ---
 {{ APIRef("DOM Events") }} {{Non-standard_header}}
@@ -37,7 +28,6 @@ original_slug: Web/API/MouseEvent/which
 左利き用に設定されたマウスの場合、ボタンの動作は逆になります。この場合、値は右から左に読み取られます。
 
 > **Note:** 新しいコードでは {{domxref("MouseEvent.button")}} を検討してください。
-
 
 ## 例
 

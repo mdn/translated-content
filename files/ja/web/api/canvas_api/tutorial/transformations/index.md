@@ -1,15 +1,6 @@
 ---
 title: 座標変換
 slug: Web/API/Canvas_API/Tutorial/Transformations
-tags:
-  - キャンバス
-  - グラフィック
-  - ガイド
-  - HTML
-  - HTML5
-  - 中級者
-  - ウェブ
-translation_of: Web/API/Canvas_API/Tutorial/Transformations
 original_slug: Web/Guide/HTML/Canvas_tutorial/Transformations
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
@@ -251,7 +242,6 @@ draw();
   - : 現在の座標変換を単位行列にリセットして、同じ引数で `transform()` メソッドを呼び出します。これは基本的に、現在の座標変換をアンドゥしてから指定した座標変換を行う操作を一度に行うものです。
 - {{domxref("CanvasRenderingContext2D.resetTransform", "resetTransform()")}}
   - : 現在の座標変換を単位行列にリセットします。これは `ctx.setTransform(1, 0, 0, 1, 0, 0);` を呼び出すことと同じです。
-</dl>
 
 ### `transform` と `setTransform` の例
 

@@ -25,7 +25,7 @@ La mise en forme associée peut être surchargée par les autres pseudo-classes 
 
 > **Note :** Pour les systèmes qui utilisent une souris avec plusieurs boutons, CSS 3 spécifie que la pseudo-classe `:active` ne doit s'appliquer qu'au bouton principal. Pour les souris de droitiers, c'est généralement le bouton le plus à gauche.
 
-## Syntax
+## Syntaxe
 
 {{csssyntax}}
 

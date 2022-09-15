@@ -41,7 +41,7 @@ Intl.NumberFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</var>
 
  <dl>
   <dt><code>localeMatcher</code></dt>
-  <dd>O algoritmo de comparação de localização para utilizar. Os valores permitidos são <code>"lookup"</code> e <code>"best fit"</code>; o padrão é <code>"best fit"</code>. Para mais informações sobre esta opção, veja  {{jsxref("Global_Objects/Intl", "Intl page", "#Locale_negotiation", 1)}}.</dd>
+  <dd>O algoritmo de comparação de localização para utilizar. Os valores permitidos são <code>"lookup"</code> e <code>"best fit"</code>; o padrão é <code>"best fit"</code>. Para mais informações sobre esta opção, veja  {{jsxref("Global_Objects/Intl", "Intl page", "#Locale_negotiation", 1)}}.</dd>
   <dt><code>style</code></dt>
   <dd>O estilo do formato a ser utilizado. Os valores permitidos são <code>"decimal"</code> para formato de número simples, <code>"currency"</code> para formato monetário e <code>"percent"</code> para formato percentual; o padrão é <code>"decimal"</code>.</dd>
   <dt><code>currency</code></dt>
@@ -60,7 +60,7 @@ Intl.NumberFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</var>
   <dt><code>minimumFractionDigits</code></dt>
   <dd>A quantidade mínima de dígitos fracionados para utilizar. É possível usar valores de 0 a 20; o padrão para formatos de números simples e percentuais é 0; o padrão para formatos monetários é a menor unidade de dígitos fornecidos pela <a href="http://www.currency-iso.org/en/home/tables/table-a1.html">lista de códigos de moedas ISO 4217</a> (2 se a lista não fornecer a informação).</dd>
   <dt><code>maximumFractionDigits</code></dt>
-  <dd>O número máximo de dígitos fracionados para utilizar. É possível usar valores de 0 a 20; o padrão para a formatação de número simples é o maior entre <code>minimumFractionDigits</code> e 3; o padrão para formatos monetários é o maior número de dígitos entre  <code>minimumFractionDigits</code> e o fornecido pela <a href="http://www.currency-iso.org/en/home/tables/table-a1.html">lista de códigos de moedas ISO 4217</a> (2 se a lista não fornecer a informação); o padrão para a formatação percentual é o maior número entre <code>minimumFractionDigits</code> e 0.</dd>
+  <dd>O número máximo de dígitos fracionados para utilizar. É possível usar valores de 0 a 20; o padrão para a formatação de número simples é o maior entre <code>minimumFractionDigits</code> e 3; o padrão para formatos monetários é o maior número de dígitos entre  <code>minimumFractionDigits</code> e o fornecido pela <a href="http://www.currency-iso.org/en/home/tables/table-a1.html">lista de códigos de moedas ISO 4217</a> (2 se a lista não fornecer a informação); o padrão para a formatação percentual é o maior número entre <code>minimumFractionDigits</code> e 0.</dd>
   <dt><code>minimumSignificantDigits</code></dt>
   <dd>A quantidade mínima de dígitos significantes para usar. Os valores permitidos são de 1 a 21; o padrão é 1.</dd>
   <dt><code>maximumSignificantDigits</code></dt>
@@ -147,7 +147,7 @@ console.log(new Intl.NumberFormat(['ban', 'id']).format(numero));
 
 // informando um formato de moeda
 console.log(new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(numero));
-// → 123.456,79 €
+// → 123.456,79 €
 
 // o yen japonês não tem uma unidade menor
 console.log(new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' }).format(numero));
@@ -187,55 +187,7 @@ console.log(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).form
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatChrome("24")}}</td>
-   <td>{{CompatGeckoDesktop("29")}}</td>
-   <td>{{CompatIE("11")}}</td>
-   <td>{{CompatOpera("15")}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome("26")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.Intl.NumberFormat")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

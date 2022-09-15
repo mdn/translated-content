@@ -1,13 +1,6 @@
 ---
 title: Atomics
 slug: Web/JavaScript/Reference/Global_Objects/Atomics
-tags:
-  - JavaScript
-  - 名前空間
-  - 共有メモリー
-  - Specifications
-browser-compat: javascript.builtins.Atomics
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
 ---
 {{JSRef}}
 
@@ -81,7 +74,7 @@ Atomics.isLockFree(3); // false
 Atomics.isLockFree(4); // true
 
 Atomics.or(ta, 0, 1); // 12
-Atomics.load(ta, 0);  // 13
+Atomics.load(ta, 0);  // 13
 
 Atomics.store(ta, 0, 12); // 12
 

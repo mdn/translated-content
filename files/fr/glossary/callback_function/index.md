@@ -32,9 +32,7 @@ Notez cependant que les rappels sont souvent utilisés pour continuer l'exécuti
 
 Exécuté de cette façon, asynchrone via l'API Web [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest), le chargement de l'image ne bloque pas le reste du contenu.
 
-## **En apprendre plus**
+## Voir aussi
 
-### **Culture générale**
-
-- {{interwiki("wikipedia","Fonction_de_rappel","Fonction de rappel")}} sur Wikipedia
+- [Fonction de rappel](https://fr.wikipedia.org/wiki/Fonction_de_rappel) sur Wikipédia
 - [Comprendre les fonctions de rappel JavaScript et les utiliser](https://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/) (en anglais).

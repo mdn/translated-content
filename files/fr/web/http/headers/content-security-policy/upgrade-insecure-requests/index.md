@@ -25,13 +25,17 @@ The `upgrade-insecure-requests` directive will not ensure that users visiting yo
 
 ## Syntaxe
 
-    Content-Security-Policy: upgrade-insecure-requests;
+```
+Content-Security-Policy: upgrade-insecure-requests;
+```
 
 ## Exemples
 
 Soit cet en-tête CSP :
 
-    Content-Security-Policy: upgrade-insecure-requests;
+```
+Content-Security-Policy: upgrade-insecure-requests;
+```
 
 Et cette balise meta :
 
@@ -64,8 +68,10 @@ Les conversions navigationnelles vers des ressources externes amènent un risque
 
 À l'aide de l'en-tête {{HTTPHeader("Content-Security-Policy-Report-Only")}} et de la directive {{CSP("report-uri")}}, vous pouvez mettre en place une stratégie de rapportage de violations sans bloquage conjointement à une stratégie de conversion comme :
 
-    Content-Security-Policy: upgrade-insecure-requests; default-src https:
-    Content-Security-Policy-Report-Only: default-src https:; report-uri /endpoint
+```
+Content-Security-Policy: upgrade-insecure-requests; default-src https:
+Content-Security-Policy-Report-Only: default-src https:; report-uri /endpoint
+```
 
 De cette manière, vous convertirez toujours les requêtes non sécurisées sur votre site sécurisé mais la stratégie de rapportage identifiera les requêtes non sécurisées et les rapportera à l'adresse fournie.
 
@@ -85,4 +91,4 @@ De cette manière, vous convertirez toujours les requêtes non sécurisées sur 
 - {{HTTPHeader("Upgrade-Insecure-Requests")}} header
 - {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}}) header
 - {{CSP("block-all-mixed-content")}}
-- [Mixed content](/en-US/docs/Web/Security/Mixed_content)
+- [Mixed content](/fr/docs/Web/Security/Mixed_content)

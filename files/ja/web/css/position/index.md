@@ -1,14 +1,6 @@
 ---
 title: position
 slug: Web/CSS/position
-tags:
-  - CSS
-  - CSS 位置指定レイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.position
-translation_of: Web/CSS/position
 ---
 {{CSSRef}}
 
@@ -161,7 +153,7 @@ position: unset;
 }
 
 body {
-  width: 500px;
+  width: 500px;
   margin: 0 auto;
 }
 

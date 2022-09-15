@@ -1,14 +1,6 @@
 ---
 title: Element.id
 slug: Web/API/Element/id
-tags:
-  - API
-  - DOM
-  - Element
-  - プロパティ
-  - リファレンス
-browser-compat: api.Element.id
-translation_of: Web/API/Element/id
 ---
 {{ ApiRef("DOM") }}
 
@@ -19,7 +11,6 @@ translation_of: Web/API/Element/id
 `id` はよく {{domxref("Document.getElementById()", "getElementById()")}} で特定の要素を受け取るために使用します。他の一般的な用途としては、要素の [ID をセレクターとして](/ja/docs/Web/CSS/ID_selectors) [CSS](/ja/docs/Web/CSS) で文書をスタイル付けするために使用されます。
 
 > **Note:** 識別子は大文字小文字の区別がありますが、大文字小文字の区別だけで見分ける ID を作ることは避けてください。
-
 
 ## 構文
 

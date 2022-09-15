@@ -19,10 +19,10 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/ColorArray
 
 Un tableau de quatre nombres entiers entre 0-255 définie une couleur RGBA. Les quatres couleurs spécifient les canaux suivants :
 
-1.  Rouge
-2.  Vert
-3.  Bleu
-4.  Alpha (opacité).
+1. Rouge
+2. Vert
+3. Bleu
+4. Alpha (opacité).
 
 Par exemple , le rouge opaque est  `[255, 0, 0, 255]`.
 

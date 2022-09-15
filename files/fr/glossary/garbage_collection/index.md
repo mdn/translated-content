@@ -13,8 +13,8 @@ original_slug: Glossaire/Ramasse-miettes
 
 ### **Culture générale**
 
-- [Gestion de la mémoire](https://en.wikipedia.org/wiki/Memory_management) sur Wikipédia (anglais)
-- {{interwiki("wikipedia", "Ramasse-miettes (informatique)")}} sur Wikipédia
+- [Gestion de la mémoire](https://fr.wikipedia.org/wiki/Gestion_de_la_m%C3%A9moire) sur Wikipédia
+- [Ramasse-miettes](https://fr.wikipedia.org/wiki/Ramasse-miettes_(informatique)) sur Wikipédia
 
 ### Référence technique
 

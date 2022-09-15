@@ -1,14 +1,6 @@
 ---
 title: scroll-margin-inline-end
 slug: Web/CSS/scroll-margin-inline-end
-tags:
-  - 上級者
-  - CSS
-  - NeedsExample
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.scroll-margin-inline-end
-translation_of: Web/CSS/scroll-margin-inline-end
 ---
 {{CSSRef}}
 
@@ -105,7 +97,6 @@ scroll-margin-inline-end: unset;
 ```
 
 ここで最も重要なのは `scroll-snap-align: end` で、これは右側の端 (ここでは x 軸に沿った「末尾」) をスナップ点として指定するものです。
-
 
 最後に、スクロールのマージン値を指定しますが、これは 2 番目と 3 番目の子要素に対して異なる値を指定します。
 

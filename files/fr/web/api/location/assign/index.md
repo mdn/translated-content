@@ -20,7 +20,9 @@ Si l'URL spécifiée n'est pas valide, une {{domxref("DOMException")}} de type `
 
 ## Syntaxe
 
-    object.assign(url);
+```js
+object.assign(url);
+```
 
 ### Paramètres
 
@@ -36,14 +38,11 @@ document.location.assign('https://developer.mozilla.org/en-US/docs/Web/API/Locat
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaires                                             |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "history.html#dom-location-assign", "Location.assign()")}} | {{Spec2('HTML WHATWG')}} | Pas de différence avec {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', "browsers.html#dom-location-assign", "Location.assign()")}} | {{Spec2('HTML5 W3C')}}     | Définition initiale.                                     |
+{{Specifications}}
 
-## Compatibilité
+## Compatibilité des navigateurs
 
-{{Compat("api.Location.assign")}}
+{{Compat}}
 
 ## Voir aussi
 

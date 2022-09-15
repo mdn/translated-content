@@ -5,7 +5,7 @@ translation_of: Web/API/RTCPeerConnection
 ---
 <p>{{APIRef('WebRTC')}}</p>
 
-<p><span class="seoSummary">Интерфейс <strong><code>RTCPeerConnection</code></strong> представляет соединение WebRTC между локальным пиром (участником соединения) на локальном компьютере и удалённым пиром на удалённом компьютере. Он предоставляет методы для соединения с удалённым участником соединения, обслуживания, мониторинга и закрытия соединения.</span></p>
+<p><span class="seoSummary">Интерфейс <strong><code>RTCPeerConnection</code></strong> представляет соединение WebRTC между локальным пиром (участником соединения) на локальном компьютере и удалённым пиром на удалённом компьютере. Он предоставляет методы для соединения с удалённым участником соединения, обслуживания, мониторинга и закрытия соединения.</span></p>
 
 <p>{{InheritanceDiagram}}</p>
 
@@ -15,76 +15,76 @@ translation_of: Web/API/RTCPeerConnection
 
 <dl>
  <dt>{{domxref("RTCPeerConnection.createDTMFSender()")}} {{obsolete_inline}}</dt>
- <dd>Создаёт новый объект типа {{domxref("RTCDTMFSender")}}, связанный с определённым объектом {{domxref("MediaStreamTrack")}}, который сможет отправить объект сигнализации {{Glossary("DTMF")}} поверх соединения..</dd>
+ <dd>Создаёт новый объект типа {{domxref("RTCDTMFSender")}}, связанный с определённым объектом {{domxref("MediaStreamTrack")}}, который сможет отправить объект сигнализации {{Glossary("DTMF")}} поверх соединения..</dd>
 </dl>
 
-<h2 id="События">События </h2>
+<h2 id="События">События </h2>
 
-<p>Для обработки событий используется функция добавления обработчика события {{domxref("EventTarget.addEventListener", "addEventListener()")}} или используется стандартное свойство интерфейса по схеме  <code><em><strong>on</strong>имясобытия</em></code> (префикс <em><strong>on </strong></em>к которому добавляется имя события прописными буквами) для установки обработчика события.</p>
+<p>Для обработки событий используется функция добавления обработчика события {{domxref("EventTarget.addEventListener", "addEventListener()")}} или используется стандартное свойство интерфейса по схеме  <code><em><strong>on</strong>имясобытия</em></code> (префикс <em><strong>on </strong></em>к которому добавляется имя события прописными буквами) для установки обработчика события.</p>
 
 <dl>
  <dt>{{domxref("RTCPeerConnection.connectionstatechange_event", "connectionstatechange")}}</dt>
- <dd>Событие объекта <code>RTCPeerConnection</code> возникает, когда общий статус объекта соединения <code>RTCPeerConnection</code> изменился.<br>
- Так же, доступно через свойство установки обработчика события  {{domxref("RTCPeerConnection.onconnectionstatechange", "onconnectionstatechange")}}.</dd>
+ <dd>Событие объекта <code>RTCPeerConnection</code> возникает, когда общий статус объекта соединения <code>RTCPeerConnection</code> изменился.<br>
+ Так же, доступно через свойство установки обработчика события  {{domxref("RTCPeerConnection.onconnectionstatechange", "onconnectionstatechange")}}.</dd>
  <dt>{{domxref("RTCPeerConnection.datachannel_event", "datachannel")}}</dt>
- <dd>Событие объекта <code>RTCPeerConnection</code> возникает, когда удалённый пир (участник соединения) добавляет объект данных {{domxref("RTCDataChannel")}}  в текущее соединение.<br>
- Так же, доступно через свойство установки обработчика события {{domxref("RTCPeerConnection.ondatachannel", "ondatachannel")}}.</dd>
+ <dd>Событие объекта <code>RTCPeerConnection</code> возникает, когда удалённый пир (участник соединения) добавляет объект данных {{domxref("RTCDataChannel")}}  в текущее соединение.<br>
+ Так же, доступно через свойство установки обработчика события {{domxref("RTCPeerConnection.ondatachannel", "ondatachannel")}}.</dd>
  <dt>{{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}}</dt>
- <dd>Событие объекта <code>RTCPeerConnection</code> возникает, когда  специальный объект ICE кандидата (<a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate">RTCIceCandidate</a>) сгенерирован <code>RTCPeerConnection</code> и готов для передачи удалённому пиру по каналу сигнализации.Сам сгенерированный объект кандидата передаётся в параметр вызванного обработчика. <br>
- Так же, доступно через свойство установки обработчика события {{domxref("RTCPeerConnection.onicecandidate", "onicecandidate")}}.</dd>
+ <dd>Событие объекта <code>RTCPeerConnection</code> возникает, когда  специальный объект ICE кандидата (<a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate">RTCIceCandidate</a>) сгенерирован <code>RTCPeerConnection</code> и готов для передачи удалённому пиру по каналу сигнализации.Сам сгенерированный объект кандидата передаётся в параметр вызванного обработчика. <br>
+ Так же, доступно через свойство установки обработчика события {{domxref("RTCPeerConnection.onicecandidate", "onicecandidate")}}.</dd>
  <dt>{{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}}</dt>
- <dd>Событие типа ошибки  {{domxref("RTCPeerConnectionIceErrorEvent")}} , возникает на объекте соединения при генерации ICE кандидата (<a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate">RTCIceCandidate</a>), если при этом возникла ошибка. Свойства объекта ошибки, возвращаемого в обработчик,  описывают подробности ошибки.<br>
- Так же, доступно через свойство установки обработчика события {{domxref("RTCPeerConnection.onicecandidateerror", "onicecandidateerror")}}.</dd>
+ <dd>Событие типа ошибки  {{domxref("RTCPeerConnectionIceErrorEvent")}} , возникает на объекте соединения при генерации ICE кандидата (<a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate">RTCIceCandidate</a>), если при этом возникла ошибка. Свойства объекта ошибки, возвращаемого в обработчик,  описывают подробности ошибки.<br>
+ Так же, доступно через свойство установки обработчика события {{domxref("RTCPeerConnection.onicecandidateerror", "onicecandidateerror")}}.</dd>
  <dt>{{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}</dt>
- <dd>Событие объекта <code>RTCPeerConnection</code> возникает при изменении статуса ICE соединения. К примеру, <a href="https://developer.mozilla.org/en-US/docs/Glossary/ICE">ICE</a> соединение разорвано.<br>
- Так же, доступно через свойство установки обработчика события{{domxref("RTCPeerConnection.oniceconnectionstatechange", "oniceconnectionstatechange")}} .</dd>
+ <dd>Событие объекта <code>RTCPeerConnection</code> возникает при изменении статуса ICE соединения. К примеру, <a href="https://developer.mozilla.org/en-US/docs/Glossary/ICE">ICE</a> соединение разорвано.<br>
+ Так же, доступно через свойство установки обработчика события{{domxref("RTCPeerConnection.oniceconnectionstatechange", "oniceconnectionstatechange")}} .</dd>
  <dt>{{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}</dt>
- <dd>Событие объекта <code>RTCPeerConnection,</code> возникает, когда статус сборки, представленный классом {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}}, изменяется. Это указывает на то, что :  согласование соединения ICE ещё не началось (статус равен значению "<code>new</code>"); согласование соединения ICE началось (статус равен значению "<code>gathering</code>"); согласование ICE  соединения завершено (статус равен значению "<code>complete</code>").<br>
- Так же, доступно через свойство установки обработчика {{domxref("RTCPeerConnection.onicegatheringstatechange", "onicegatheringstatechange")}} .</dd>
+ <dd>Событие объекта <code>RTCPeerConnection,</code> возникает, когда статус сборки, представленный классом {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}}, изменяется. Это указывает на то, что :  согласование соединения ICE ещё не началось (статус равен значению "<code>new</code>"); согласование соединения ICE началось (статус равен значению "<code>gathering</code>"); согласование ICE  соединения завершено (статус равен значению "<code>complete</code>").<br>
+ Так же, доступно через свойство установки обработчика {{domxref("RTCPeerConnection.onicegatheringstatechange", "onicegatheringstatechange")}} .</dd>
  <dt>{{domxref("RTCPeerConnection.isolationchange_event", "isolationchange")}}</dt>
- <dd>Событие объекта <code>RTCPeerConnection</code> возникает, когда свойство {{domxref("MediaStreamTrack.isolated", "isolated")}} на одном из объектов  {{domxref("MediaStreamTrack")}} , связанного с соединением изменяет своё значение. Объект трека является изолированным {{domxref("MediaStreamTrack.isolated", "isolated")}}, если его содержимое не может быть доступно содержащему его документу, по причине невозможности аутентификации, или объект трека прибыл не из источника происхождения страницы.<br>
- Так же, доступно через свойство установки обработчика {{domxref("RTCPeerConnection.onisolationchange", "onisolationchange")}}.</dd>
+ <dd>Событие объекта <code>RTCPeerConnection</code> возникает, когда свойство {{domxref("MediaStreamTrack.isolated", "isolated")}} на одном из объектов  {{domxref("MediaStreamTrack")}} , связанного с соединением изменяет своё значение. Объект трека является изолированным {{domxref("MediaStreamTrack.isolated", "isolated")}}, если его содержимое не может быть доступно содержащему его документу, по причине невозможности аутентификации, или объект трека прибыл не из источника происхождения страницы.<br>
+ Так же, доступно через свойство установки обработчика {{domxref("RTCPeerConnection.onisolationchange", "onisolationchange")}}.</dd>
  <dt>{{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}</dt>
- <dd>Событие объекта <code>RTCPeerConnection</code> возникает, когда необходимо запустить согласование (пересогласование) ICE соединения; может произойти при первом открытии соединения , или при необходимости принятия изменений условий сети. Получатель должен ответить, создав предложение и отправив его другому партнёру. <br>
- Так же, доступно через свойство установки обработчика {{domxref("RTCPeerConnection.onnegotiationneeded", "onnegotiationneeded")}}.</dd>
+ <dd>Событие объекта <code>RTCPeerConnection</code> возникает, когда необходимо запустить согласование (пересогласование) ICE соединения; может произойти при первом открытии соединения , или при необходимости принятия изменений условий сети. Получатель должен ответить, создав предложение и отправив его другому партнёру. <br>
+ Так же, доступно через свойство установки обработчика {{domxref("RTCPeerConnection.onnegotiationneeded", "onnegotiationneeded")}}.</dd>
  <dt>{{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}</dt>
- <dd>Событие <code>signalingstatechange</code> возникает, когда статус сигнализации ICE соединения изменился..<br>
- Так же, доступно через свойство установки обработчика {{domxref("RTCPeerConnection.onsignalingstatechange", "onsignalingstatechange")}}.</dd>
+ <dd>Событие <code>signalingstatechange</code> возникает, когда статус сигнализации ICE соединения изменился..<br>
+ Так же, доступно через свойство установки обработчика {{domxref("RTCPeerConnection.onsignalingstatechange", "onsignalingstatechange")}}.</dd>
  <dt>{{domxref("RTCPeerConnection.track_event", "track")}}</dt>
- <dd>Событие <code>track</code> возникает после того, как новый объект трека был добавлен в один из объектов интерфейса {{domxref("RTCRtpReceiver")}} , которые входят в состав соединения.<br>
- Так же, доступно через свойство установки обработчика {{domxref("RTCPeerConnection.ontrack", "ontrack")}} .</dd>
+ <dd>Событие <code>track</code> возникает после того, как новый объект трека был добавлен в один из объектов интерфейса {{domxref("RTCRtpReceiver")}} , которые входят в состав соединения.<br>
+ Так же, доступно через свойство установки обработчика {{domxref("RTCPeerConnection.ontrack", "ontrack")}} .</dd>
 </dl>
 
 <h3 id="Устаревшие_события">Устаревшие события</h3>
 
 <dl>
  <dt>{{domxref("RTCPeerConnection.addstream_event", "addstream")}} {{obsolete_inline}}</dt>
- <dd>Возникает, когда новый объект {{domxref("MediaStream")}} был добавлен в соединение. Вместо наблюдения за этим устаревшим событием, разработчику следует наблюдать за каждым событием {{domxref("RTCPeerConnection.track_event", "track")}}, возникающим при добавлении в соединение объекта  {{domxref("MediaStreamTrack")}}..<br>
+ <dd>Возникает, когда новый объект {{domxref("MediaStream")}} был добавлен в соединение. Вместо наблюдения за этим устаревшим событием, разработчику следует наблюдать за каждым событием {{domxref("RTCPeerConnection.track_event", "track")}}, возникающим при добавлении в соединение объекта  {{domxref("MediaStreamTrack")}}..<br>
  Установка обработчика возможна через свойство {{domxref("RTCPeerConnection.onaddstream", "onaddstream")}} .</dd>
  <dt>{{domxref("RTCPeerConnection.identityresult_event", "identityresult")}} {{obsolete_inline}}</dt>
- <dd>В старой версии спецификации WebRTC это событие использовалось для указания доступности подтверждения идентичности. Теперь, следует ждать возвращение промиса от {{domxref("RTCPeerConnection.peerIdentity", "peerIdentity")}} для подтверждения личности. <br>
+ <dd>В старой версии спецификации WebRTC это событие использовалось для указания доступности подтверждения идентичности. Теперь, следует ждать возвращение промиса от {{domxref("RTCPeerConnection.peerIdentity", "peerIdentity")}} для подтверждения личности. <br>
  Установка обработчика возможна через свойство {{domxref("RTCPeerConnection.onidentityresult", "onidentityresult")}}.</dd>
  <dt>{{domxref("RTCPeerConnection.idpassertionerror_event", "idpassertionerror")}} {{obsolete_inline}}</dt>
- <dd>В старой версии спецификации WebRTC это событие использовалось для определения возникшей ошибки при попытке генерации подтверждения идентичности. Теперь, нужно ожидать результата работы промиса, возвращаемого методом доступа {{domxref("RTCPeerConnection.peerIdentity", "peerIdentity")}} , передающий в метод перехвата ошибок промиса, возникшую ошибку.<br>
+ <dd>В старой версии спецификации WebRTC это событие использовалось для определения возникшей ошибки при попытке генерации подтверждения идентичности. Теперь, нужно ожидать результата работы промиса, возвращаемого методом доступа {{domxref("RTCPeerConnection.peerIdentity", "peerIdentity")}} , передающий в метод перехвата ошибок промиса, возникшую ошибку.<br>
  Установка обработчика возможна через свойство {{domxref("RTCPeerConnection.onidpassertionerror", "onidpinsertionerror")}}..</dd>
  <dt>{{domxref("RTCPeerConnection.idpvalidationerror_event", "idpvalidationerror")}} {{obsolete_inline}}</dt>
- <dd>В старой версии спецификации WebRTC это событие использовалось для определения того, что ошибка возникла при попытке подтверждения идентичности. Теперь, следует ожидать результат работы промиса, возвращаемого методом доступа {{domxref("RTCPeerConnection.peerIdentity", "peerIdentity")}}, для перехвата ошибки в соответствующем методе.<br>
+ <dd>В старой версии спецификации WebRTC это событие использовалось для определения того, что ошибка возникла при попытке подтверждения идентичности. Теперь, следует ожидать результат работы промиса, возвращаемого методом доступа {{domxref("RTCPeerConnection.peerIdentity", "peerIdentity")}}, для перехвата ошибки в соответствующем методе.<br>
  Установка обработчика возможна через свойство {{domxref("RTCPeerConnection.onpeeridentity", "onpeerdentity")}} .</dd>
  <dt>{{domxref("RTCPeerConnection.peeridentity_event", "peeridentity")}} {{obsolete_inline}}</dt>
- <dd>В старой версии спецификации WebRTC это событие использовалось для доставки полученной идентичности. Теперь, нужно ожидать результата работы промиса, возвращаемого методом доступа {{domxref("RTCPeerConnection.peerIdentity", "peerIdentity")}}, для получения идентичности.</dd>
+ <dd>В старой версии спецификации WebRTC это событие использовалось для доставки полученной идентичности. Теперь, нужно ожидать результата работы промиса, возвращаемого методом доступа {{domxref("RTCPeerConnection.peerIdentity", "peerIdentity")}}, для получения идентичности.</dd>
  <dt>{{domxref("RTCPeerConnection.removestream_event", "removestream")}} {{obsolete_inline}}</dt>
- <dd>Возникает на объекте <code>RTCPeerConnection, </code>когда объект {{domxref("MediaStream")}} удаляется из соединения. Теперь, необходимо наблюдать за событиями {{domxref("MediaStream.removetrack_event", "removetrack")}} на каждом потоке, входящем в состав объекта соединения <code>RTCPeerConnection</code>.<br>
+ <dd>Возникает на объекте <code>RTCPeerConnection, </code>когда объект {{domxref("MediaStream")}} удаляется из соединения. Теперь, необходимо наблюдать за событиями {{domxref("MediaStream.removetrack_event", "removetrack")}} на каждом потоке, входящем в состав объекта соединения <code>RTCPeerConnection</code>.<br>
  Установка обработчика возможна через свойство {{domxref("RTCPeerConnection.onremovestream", "onaddstream")}} .</dd>
 </dl>
 
 <h2 id="Константы">Константы</h2>
 
-<h3 id="Перечисление_RTCBundlePolicy">Перечисление RTCBundlePolicy </h3>
+<h3 id="Перечисление_RTCBundlePolicy">Перечисление RTCBundlePolicy </h3>
 
-<p>Перечисление <code>RTCBundlePolicy</code> (политика сборки пакетов) определяет строковые константы, которые используются для запроса определённой политики при сборке  ICE кандидатов, в случае, если удалённый участник соединения (удалённая точка) не совместим со стандартом <a href="https://webrtcstandards.info/sdp-bundle/">SDP BUNDLE standard</a>  для объединения нескольких медиапотоков в один транспортный пакет.</p>
+<p>Перечисление <code>RTCBundlePolicy</code> (политика сборки пакетов) определяет строковые константы, которые используются для запроса определённой политики при сборке  ICE кандидатов, в случае, если удалённый участник соединения (удалённая точка) не совместим со стандартом <a href="https://webrtcstandards.info/sdp-bundle/">SDP BUNDLE standard</a>  для объединения нескольких медиапотоков в один транспортный пакет.</p>
 
 <div class="note">
-<p><strong> Примечание :</strong> В технических терминах BUNDLE (пакет) позволяет всем медиапотокам между двумя пирами проходить через один 5 - ти элементный кортеж (тип транспортного протокола передачи сообщений при установки  TCP, UDP, и ICMP соединений, состоящий из пяти элементов анализа данных). То есть, с одного IP-адреса и порта на одном узле на один IP-адрес и порт на другом узле с использованием одного и того же транспортного протокола.</p>
+<p><strong> Примечание :</strong> В технических терминах BUNDLE (пакет) позволяет всем медиапотокам между двумя пирами проходить через один 5 - ти элементный кортеж (тип транспортного протокола передачи сообщений при установки  TCP, UDP, и ICMP соединений, состоящий из пяти элементов анализа данных). То есть, с одного IP-адреса и порта на одном узле на один IP-адрес и порт на другом узле с использованием одного и того же транспортного протокола.</p>
 </div>
 
 <table class="standard-table">
@@ -98,23 +98,23 @@ translation_of: Web/API/RTCPeerConnection
   <tr>
    <td><code>"balanced"</code></td>
    <td>
-    <p>Сбалансированный. Агент ICE изначально создаёт по одному объекту  {{domxref ("RTCDtlsTransport")}} для каждого типа добавляемого контента: аудио, видео и каналов данных. Если  удалённая конечная точка не опознает пакеты, то каждый из этих DTLS транспортов обрабатывает все коммуникации для одного типа данных.</p>
+    <p>Сбалансированный. Агент ICE изначально создаёт по одному объекту  {{domxref ("RTCDtlsTransport")}} для каждого типа добавляемого контента: аудио, видео и каналов данных. Если  удалённая конечная точка не опознает пакеты, то каждый из этих DTLS транспортов обрабатывает все коммуникации для одного типа данных.</p>
    </td>
   </tr>
   <tr>
    <td><code>"max-compat"</code></td>
-   <td>Максимально совместимый. Агент ICE изначально создаёт один объект {{domxref ("RTCDtlsTransport")}} для каждой медиа-дорожки и отдельный для каналов данных. Если удалённая точка не поддерживает опознавание пакета, все согласовывается на этих отдельных DTLS транспортах</td>
+   <td>Максимально совместимый. Агент ICE изначально создаёт один объект {{domxref ("RTCDtlsTransport")}} для каждой медиа-дорожки и отдельный для каналов данных. Если удалённая точка не поддерживает опознавание пакета, все согласовывается на этих отдельных DTLS транспортах</td>
   </tr>
   <tr>
    <td><code>"max-bundle"</code></td>
-   <td>Максимальный пакет. Агент ICE изначально создаёт только один объект {{domxref ("RTCDtlsTransport")}} для переноса всех данных RTCPeerConnection. Если удалённая  точка не поддерживает опознавание пакета, то согласовывается только одна дорожка, а остальные игнорируются.</td>
+   <td>Максимальный пакет. Агент ICE изначально создаёт только один объект {{domxref ("RTCDtlsTransport")}} для переноса всех данных RTCPeerConnection. Если удалённая  точка не поддерживает опознавание пакета, то согласовывается только одна дорожка, а остальные игнорируются.</td>
   </tr>
  </tbody>
 </table>
 
 <h3 id="Перечисление_RTCIceConnectionState">Перечисление RTCIceConnectionState</h3>
 
-<p>Перечисление <code>RTCIceConnectionState</code> определяет строковые константы, использующиеся для описания текущего состояния  ICE агента и его соединения с ICE сервером  {{Glossary("STUN")}} или {{Glossary("TURN")}} .</p>
+<p>Перечисление <code>RTCIceConnectionState</code> определяет строковые константы, использующиеся для описания текущего состояния  ICE агента и его соединения с ICE сервером  {{Glossary("STUN")}} или {{Glossary("TURN")}} .</p>
 
 <table class="standard-table">
  <thead>
@@ -142,11 +142,11 @@ translation_of: Web/API/RTCPeerConnection
   </tr>
   <tr>
    <td><code>"failed"</code></td>
-   <td>Агент ICE проверил все пары кандидатов между собой и не нашёл совместимых сопоставлений для всех компонентов соединения. Или не нашёл совместимых соединений для некоторых компонентов. </td>
+   <td>Агент ICE проверил все пары кандидатов между собой и не нашёл совместимых сопоставлений для всех компонентов соединения. Или не нашёл совместимых соединений для некоторых компонентов. </td>
   </tr>
   <tr>
    <td><code>"disconnected"</code></td>
-   <td>Проверяет, что компоненты все ещё подключены, хотя бы для одного объекта {{domxref("RTCPeerConnection")}}.  Это менее строгий тест, чем <code>"failed"</code>, и он может периодически запускаться и разрешаться спонтанно в менее надёжных сетях, или во время временного отключения. Когда проблема исчезнет, ​​соединение может вернуться в состояние <code>"connected".</code> </td>
+   <td>Проверяет, что компоненты все ещё подключены, хотя бы для одного объекта {{domxref("RTCPeerConnection")}}.  Это менее строгий тест, чем <code>"failed"</code>, и он может периодически запускаться и разрешаться спонтанно в менее надёжных сетях, или во время временного отключения. Когда проблема исчезнет, ​​соединение может вернуться в состояние <code>"connected".</code> </td>
   </tr>
   <tr>
    <td><code>"closed"</code></td>
@@ -157,7 +157,7 @@ translation_of: Web/API/RTCPeerConnection
 
 <h3 id="Перечисление_RTCIceGatheringState">Перечисление RTCIceGatheringState</h3>
 
-<p>Перечисление <code>RTCIceGatheringState</code> определяет строковые константы, которые описывают текущий статус ICE сборки, возвращаемый свойством  {{domxref("RTCPeerConnection.iceGatheringState")}}. Для определения изменения этого свойства можно подписаться на событие  {{event("icegatheringstatechange")}}.</p>
+<p>Перечисление <code>RTCIceGatheringState</code> определяет строковые константы, которые описывают текущий статус ICE сборки, возвращаемый свойством  {{domxref("RTCPeerConnection.iceGatheringState")}}. Для определения изменения этого свойства можно подписаться на событие  {{event("icegatheringstatechange")}}.</p>
 
 <table class="standard-table">
  <thead>
@@ -177,14 +177,14 @@ translation_of: Web/API/RTCPeerConnection
   </tr>
   <tr>
    <td><code>"complete"</code></td>
-   <td>Агент ICE завершил сборку кандидатов. Если произойдёт, что-то (например, добавление нового ICE сервера), для чего потребуется новая сборка кандидатов, статус переключиться в значение  "<code>gathering</code>" и начнётся пересборка кандидатов.</td>
+   <td>Агент ICE завершил сборку кандидатов. Если произойдёт, что-то (например, добавление нового ICE сервера), для чего потребуется новая сборка кандидатов, статус переключиться в значение  "<code>gathering</code>" и начнётся пересборка кандидатов.</td>
   </tr>
  </tbody>
 </table>
 
 <h3 id="Перечисление_RTCIceTransportPolicy">Перечисление RTCIceTransportPolicy</h3>
 
-<p>Перечисление <code>RTCIceTransportPolicy</code> определяет строковые константы, использующиеся для ограничения политик передачи ICE кандидатов, учитывающихся во время процесса соединения..</p>
+<p>Перечисление <code>RTCIceTransportPolicy</code> определяет строковые константы, использующиеся для ограничения политик передачи ICE кандидатов, учитывающихся во время процесса соединения..</p>
 
 <table class="standard-table">
  <thead>
@@ -196,11 +196,11 @@ translation_of: Web/API/RTCPeerConnection
  <tbody>
   <tr>
    <td><code>"all"</code></td>
-   <td>Все  ICE кандидаты будут рассмотрены.</td>
+   <td>Все  ICE кандидаты будут рассмотрены.</td>
   </tr>
   <tr>
    <td><code>"public" </code>{{obsolete_inline}}</td>
-   <td>Будут рассматриваться  ICE кандидаты, только имеющие публичные IP адреса. <em>Удалён в спецификации от 13 мая 2016 (working draft).</em></td>
+   <td>Будут рассматриваться  ICE кандидаты, только имеющие публичные IP адреса. <em>Удалён в спецификации от 13 мая 2016 (working draft).</em></td>
   </tr>
   <tr>
    <td><code>"relay"</code></td>
@@ -211,7 +211,7 @@ translation_of: Web/API/RTCPeerConnection
 
 <h3 id="Перечисление_RTCPeerConnectionState">Перечисление RTCPeerConnectionState</h3>
 
-<p>Перечисление  <code>RTCPeerConnectionState</code> определяет строковые константы, описывающие статус <code>RTCPeerConnection</code>. Эти значения возвращаются свойством  (методом доступа) {{domxref("RTCPeerConnection.connectionState", "connectionState")}} . Этот статус представляет собирательный статус всех ICE передач (которые имеют тип {{domxref("RTCIceTransport")}} или {{domxref("RTCDtlsTransport")}}) , использующиеся соединением.</p>
+<p>Перечисление  <code>RTCPeerConnectionState</code> определяет строковые константы, описывающие статус <code>RTCPeerConnection</code>. Эти значения возвращаются свойством  (методом доступа) {{domxref("RTCPeerConnection.connectionState", "connectionState")}} . Этот статус представляет собирательный статус всех ICE передач (которые имеют тип {{domxref("RTCIceTransport")}} или {{domxref("RTCDtlsTransport")}}) , использующиеся соединением.</p>
 
 <table class="standard-table">
  <thead>
@@ -223,19 +223,19 @@ translation_of: Web/API/RTCPeerConnection
  <tbody>
   <tr>
    <td><code>"new"</code></td>
-   <td>Новый. По меньшей мере один из объектов ICE передачи ({{domxref("RTCIceTransport")}} или  {{domxref("RTCDtlsTransport")}} ) в соединении находиться в статусе <code>"new"</code> и ни один из них не находиться в одном из перечисленных статусов : <code>"connecting"</code>, <code>"checking"</code>, <code>"failed"</code>, или <code>"disconnected"</code>, или все объекты передач соединения находятся в статусе  <code>"closed"</code>.</td>
+   <td>Новый. По меньшей мере один из объектов ICE передачи ({{domxref("RTCIceTransport")}} или  {{domxref("RTCDtlsTransport")}} ) в соединении находиться в статусе <code>"new"</code> и ни один из них не находиться в одном из перечисленных статусов : <code>"connecting"</code>, <code>"checking"</code>, <code>"failed"</code>, или <code>"disconnected"</code>, или все объекты передач соединения находятся в статусе  <code>"closed"</code>.</td>
   </tr>
   <tr>
    <td><code>"connecting"</code></td>
-   <td>В процессе соединения. Один или несколько объектов ICE передачи находятся в процессе установки соединения. Т.е. их свойство <code>RTCIceConnectionState</code> либо имеет значение <code>"checking"</code> , либо  <code>"connected"</code>,  и ни один из объектов передачи не находиться в статусе <code>"failed"</code> . <strong>&lt;&lt;&lt; Make this a link once I know where that will be documented</strong></td>
+   <td>В процессе соединения. Один или несколько объектов ICE передачи находятся в процессе установки соединения. Т.е. их свойство <code>RTCIceConnectionState</code> либо имеет значение <code>"checking"</code> , либо  <code>"connected"</code>,  и ни один из объектов передачи не находиться в статусе <code>"failed"</code> . <strong>&lt;&lt;&lt; Make this a link once I know where that will be documented</strong></td>
   </tr>
   <tr>
    <td><code>"connected"</code></td>
-   <td>Соединён. Каждый объект ICE передачи, использующийся соединением либо используется  (имеет статус <code>"connected"</code> или <code>"completed"</code>) , либо закрыт  (имеет статус <code>"closed"</code>); кроме того, по крайней мере один объект передачи имеет статус либо  <code>"connected"</code> , либо <code>"completed"</code>.</td>
+   <td>Соединён. Каждый объект ICE передачи, использующийся соединением либо используется  (имеет статус <code>"connected"</code> или <code>"completed"</code>) , либо закрыт  (имеет статус <code>"closed"</code>); кроме того, по крайней мере один объект передачи имеет статус либо  <code>"connected"</code> , либо <code>"completed"</code>.</td>
   </tr>
   <tr>
    <td><code>"disconnected"</code></td>
-   <td>Разъединён. По меньшей мере один из объектов ICE передачи в соединении имеет статус <code>"disconnected"</code>  и ни один из объекто передачи не находиться в статусе : <code>"failed"</code>, <code>"connecting"</code>, или  <code>"checking"</code>.</td>
+   <td>Разъединён. По меньшей мере один из объектов ICE передачи в соединении имеет статус <code>"disconnected"</code>  и ни один из объекто передачи не находиться в статусе : <code>"failed"</code>, <code>"connecting"</code>, или  <code>"checking"</code>.</td>
   </tr>
   <tr>
    <td><code>"failed"</code></td>
@@ -244,9 +244,9 @@ translation_of: Web/API/RTCPeerConnection
   <tr>
    <td><code>"closed"</code></td>
    <td>
-    <p>Закрыто. Соединение <code>RTCPeerConnection</code> закрыто.</p>
+    <p>Закрыто. Соединение <code>RTCPeerConnection</code> закрыто.</p>
 
-    <p>Ранее входило в значения перечисления <a href="#RTCSignalingState_enum"><code>RTCSignalingState</code></a> (и поэтому может быть найдено в свойстве {{domxref("RTCPeerConnection.signalingState", "signalingState")}}) до 13 мая, 2016.</p>
+    <p>Ранее входило в значения перечисления <a href="#RTCSignalingState_enum"><code>RTCSignalingState</code></a> (и поэтому может быть найдено в свойстве {{domxref("RTCPeerConnection.signalingState", "signalingState")}}) до 13 мая, 2016.</p>
    </td>
   </tr>
  </tbody>
@@ -254,7 +254,7 @@ translation_of: Web/API/RTCPeerConnection
 
 <h3 id="Перечисление_RTCRtcpMuxPolicy">Перечисление RTCRtcpMuxPolicy</h3>
 
-<p>Перечисление <code>RTCRtcpMuxPolicy</code> содержит строковые константы, определяющие , что собираемые кандидаты должны иметь поддержку немультиплексированного RTCP . <strong>&lt;&lt;&lt;add a link to info about multiplexed RTCP.</strong></p>
+<p>Перечисление <code>RTCRtcpMuxPolicy</code> содержит строковые константы, определяющие , что собираемые кандидаты должны иметь поддержку немультиплексированного RTCP . <strong>&lt;&lt;&lt;add a link to info about multiplexed RTCP.</strong></p>
 
 <table class="standard-table">
  <thead>
@@ -277,7 +277,7 @@ translation_of: Web/API/RTCPeerConnection
 
 <h3 id="Перечисление_RTCSignalingState">Перечисление RTCSignalingState</h3>
 
-<p>Перечисление <code>RTCSignalingState</code> определяет возможные значения состояния сигнализирования  {{domxref("RTCPeerConnection.signalingState")}}, указывая в каком месте процесса сигнализации в настоящее время находиться обмен предложением или ответом.</p>
+<p>Перечисление <code>RTCSignalingState</code> определяет возможные значения состояния сигнализирования  {{domxref("RTCPeerConnection.signalingState")}}, указывая в каком месте процесса сигнализации в настоящее время находиться обмен предложением или ответом.</p>
 
 <table class="standard-table">
  <thead>
@@ -290,12 +290,12 @@ translation_of: Web/API/RTCPeerConnection
   <tr>
    <td><code>"stable"</code></td>
    <td>
-    <p>Стабильно. Текущего процесса обмена предложения/ответ не происходит. Это может означать, что объект соединения {{domxref("RTCPeerConnection")}} новый, и в этом случае объекты описания  {{domxref("RTCPeerConnection.localDescription", "localDescription")}} и {{domxref("RTCPeerConnection.remoteDescription", "remoteDescription")}} имеют значения <code>null</code>; Так же, может означать, что согласование завершено и соединение успешно установлено.</p>
+    <p>Стабильно. Текущего процесса обмена предложения/ответ не происходит. Это может означать, что объект соединения {{domxref("RTCPeerConnection")}} новый, и в этом случае объекты описания  {{domxref("RTCPeerConnection.localDescription", "localDescription")}} и {{domxref("RTCPeerConnection.remoteDescription", "remoteDescription")}} имеют значения <code>null</code>; Так же, может означать, что согласование завершено и соединение успешно установлено.</p>
    </td>
   </tr>
   <tr>
    <td><code>"have-local-offer"</code></td>
-   <td>Имеет локальное предложение. Локальный пир вызвал метод {{domxref("RTCPeerConnection.setLocalDescription()")}}, передав в него объект описания SDP , представляющий предложение  (обычно, созданного вызовом метода {{domxref("RTCPeerConnection.createOffer()")}}), и это предложение было успешно применено.</td>
+   <td>Имеет локальное предложение. Локальный пир вызвал метод {{domxref("RTCPeerConnection.setLocalDescription()")}}, передав в него объект описания SDP , представляющий предложение  (обычно, созданного вызовом метода {{domxref("RTCPeerConnection.createOffer()")}}), и это предложение было успешно применено.</td>
   </tr>
   <tr>
    <td><code>"have-remote-offer"</code></td>
@@ -303,11 +303,11 @@ translation_of: Web/API/RTCPeerConnection
   </tr>
   <tr>
    <td><code>"have-local-pranswer"</code></td>
-   <td>Имеет локальный предварительный ответ. Предложение удалённого пира было применено, и ответ был создан (обычно, через вызов метода {{domxref("RTCPeerConnection.createAnswer()")}}) и использовано в параметре метода установки локального дескриптора {{domxref("RTCPeerConnection.setLocalDescription()")}}. Этот предварительный ответ описывает поддерживаемые медиа форматы и тому подобное. Но он не имееет включённых в него  полного набора ICE кандидатов. Позже, дополнительные кандидаты будут доставлены отдельно.</td>
+   <td>Имеет локальный предварительный ответ. Предложение удалённого пира было применено, и ответ был создан (обычно, через вызов метода {{domxref("RTCPeerConnection.createAnswer()")}}) и использовано в параметре метода установки локального дескриптора {{domxref("RTCPeerConnection.setLocalDescription()")}}. Этот предварительный ответ описывает поддерживаемые медиа форматы и тому подобное. Но он не имееет включённых в него  полного набора ICE кандидатов. Позже, дополнительные кандидаты будут доставлены отдельно.</td>
   </tr>
   <tr>
    <td><code>"have-remote-pranswer"</code></td>
-   <td>Имеет предварительный удалённый ответ. Предварительный удалённый ответ был получен и успешно применён в ответ на предложение, отправленное ранее и установленное методом <code>setLocalDescription()</code>.</td>
+   <td>Имеет предварительный удалённый ответ. Предварительный удалённый ответ был получен и успешно применён в ответ на предложение, отправленное ранее и установленное методом <code>setLocalDescription()</code>.</td>
   </tr>
   <tr>
    <td><code>"closed"</code> {{obsolete_inline}}</td>
@@ -315,14 +315,14 @@ translation_of: Web/API/RTCPeerConnection
     <p>Закрыто. Соединение закрыто.</p>
 
     <div class="note">
-    <p><strong>Примечание :</strong> Это значение перенесено в перечисление <a href="#RTCPeerConnectionState_enum"><code>RTCPeerConnectionState</code></a>  в черновике от 13 мая 2016, поскольку оно отражает статус соединения   <code>RTCPeerConnection</code>,  а не статус сигнализации. Теперь, для проверки закрытия соединения нужно проверять статус {{domxref("RTCPeerConnection.connectionState", "connectionState")}} на значение <code>"closed"</code> .</p>
+    <p><strong>Примечание :</strong> Это значение перенесено в перечисление <a href="#RTCPeerConnectionState_enum"><code>RTCPeerConnectionState</code></a>  в черновике от 13 мая 2016, поскольку оно отражает статус соединения   <code>RTCPeerConnection</code>,  а не статус сигнализации. Теперь, для проверки закрытия соединения нужно проверять статус {{domxref("RTCPeerConnection.connectionState", "connectionState")}} на значение <code>"closed"</code> .</p>
     </div>
    </td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Спецификации">Спецификации </h2>
+<h2 id="Спецификации">Спецификации </h2>
 
 <table class="standard-table">
  <thead>

@@ -1,13 +1,6 @@
 ---
 title: grid-auto-columns
 slug: Web/CSS/grid-auto-columns
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-browser-compat: css.properties.grid-auto-columns
-translation_of: Web/CSS/grid-auto-columns
 ---
 {{CSSRef}}
 
@@ -105,9 +98,9 @@ grid-auto-columns: unset;
 
 ```html
 <div id="grid">
-  <div id="item1"></div>
-  <div id="item2"></div>
-  <div id="item3"></div>
+  <div id="item1"></div>
+  <div id="item2"></div>
+  <div id="item3"></div>
 </div>
 ```
 

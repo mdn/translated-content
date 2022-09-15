@@ -8,7 +8,7 @@ translation_of: Web/API/AbortSignal/aborted
 ---
 <div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
 
-<p>Свойство <strong><code>aborted</code></strong> только для чтения, оно возвращает {{domxref("Boolean")}}, который указывает прерван(<code>true</code>) DOM запрос(ы), с которым связан сигнал, или нет(<code>false</code>).</p>
+<p>Свойство <strong><code>aborted</code></strong> только для чтения, оно возвращает {{domxref("Boolean")}}, который указывает прерван(<code>true</code>) DOM запрос(ы), с которым связан сигнал, или нет(<code>false</code>).</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -20,7 +20,7 @@ translation_of: Web/API/AbortSignal/aborted
 
 <h2 id="Примеры">Примеры</h2>
 
-<p>В следующем фрагменте мы создаём новый объект {{domxref("AbortController")}}, и получаем его {{domxref("AbortSignal")}} (доступно в свойстве <code>signal</code>). Позже мы проверяем, был ли прерван сигнал, используя свойство <code>aborted</code>, и выводим соответствующее сообщение в консоль.</p>
+<p>В следующем фрагменте мы создаём новый объект {{domxref("AbortController")}}, и получаем его {{domxref("AbortSignal")}} (доступно в свойстве <code>signal</code>). Позже мы проверяем, был ли прерван сигнал, используя свойство <code>aborted</code>, и выводим соответствующее сообщение в консоль.</p>
 
 <pre class="brush: js">var controller = new AbortController();
 var signal = controller.signal;

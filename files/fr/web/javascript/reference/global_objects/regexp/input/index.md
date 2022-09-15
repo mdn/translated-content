@@ -16,8 +16,10 @@ La propriété non-standard **`input`** est une propriété statique de l'expres
 
 ## Syntaxe
 
-    RegExp.input
-    RegExp.$_
+```js
+RegExp.input
+RegExp.$_
+```
 
 ## Description
 

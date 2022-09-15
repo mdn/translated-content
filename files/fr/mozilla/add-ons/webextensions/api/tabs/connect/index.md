@@ -21,7 +21,7 @@ Lorsque cela est appelée, l'événement {{WebExtAPIRef('runtime.onConnect')}} e
 
 Pour plus de détails, voir [connection-based messaging](/fr/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging).
 
-## Syntax
+## Syntaxe
 
 ```js
 browser.tabs.connect(

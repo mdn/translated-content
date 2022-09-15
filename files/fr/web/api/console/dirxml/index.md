@@ -14,22 +14,22 @@ translation_of: Web/API/Console/dirxml
 
 ## Syntaxe
 
-    console.dirxml(object);
+```js
+console.dirxml(object);
+```
 
 ## Paramètres
 
 - `object`
   - : Un objet JavaScript dont les propriétés doivent être sorties.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("Console API", "#dirxml", "console.dirxml()")}} | {{Spec2("Console API")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.dirxml")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -11,7 +11,9 @@ Si la méthode ne peut pas vibrer en raison d'arguments invalides, elle retourne
 
 ## Syntaxe
 
-    var successBool = window.navigator.vibrate(motif);
+```js
+var successBool = window.navigator.vibrate(motif);
+```
 
 - `motif`
   - : Fournit un motif de vibration et d'intervalle de pause. Chaque valeur indique un nombre de milisecondes de vibration ou de pause, en alternance. Vous pouvez fournir une valeur (pour vibrer une fois) ou un tableau de valeur (vibration, pause, vibration ...). Voir l'[API Vibration](/fr/docs/Web/API/Vibration_API) pour plus de détails.
@@ -27,30 +29,11 @@ window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,3
 
 ## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Vibration API')}}</td>
-      <td>{{Spec2('Vibration API')}}</td>
-      <td>
-        <p>
-          Linked to spec is the latest editor's draft; W3C version is a REC.
-        </p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Navigator.vibrate")}}
+{{Compat}}
 
 ## Voir aussi
 

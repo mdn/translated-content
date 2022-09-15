@@ -15,7 +15,9 @@ NOTE : les coordonnées sont globales, aussi soyez conscient du fait que, lors d
 
 ## Syntaxe
 
-    CanvasGradient ctx.createLinearGradient(x0, y0, x1, y1);
+```js
+CanvasGradient ctx.createLinearGradient(x0, y0, x1, y1);
+```
 
 ### Paramètres
 
@@ -106,17 +108,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-createlineargradient", "CanvasRenderingContext2D.createLinearGradient")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.createLinearGradient")}}
-
-## Notes spécifiques à Gecko
-
-- A partir de Gecko 2.0 {{geckoRelease("2.0")}}, le fait de spécifier des valeurs non finies déclenche maintenant `NOT_SUPPORTED_ERR` au lieu de `SYNTAX_ERR`.
+{{Compat}}
 
 ## Voir aussi
 

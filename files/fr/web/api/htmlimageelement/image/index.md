@@ -15,7 +15,9 @@ C'est fonctionnellement équivalent à {{domxref("Document.createElement()", "do
 
 ## Syntaxe
 
-    Image(width, height)
+```js
+Image(width, height)
+```
 
 ### Paramètres
 
@@ -42,10 +44,8 @@ Cela équivaudrait à définir la balise HTML suivante dans le {{htmlelement("bo
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName("HTML WHATWG", "embedded-content.html#dom-image", "Image()")}} | {{spec2("HTML WHATWG")}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLImageElement.Image")}}
+{{Compat}}

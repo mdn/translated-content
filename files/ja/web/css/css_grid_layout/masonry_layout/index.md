@@ -1,12 +1,6 @@
 ---
 title: 組積レイアウト
 slug: Web/CSS/CSS_Grid_Layout/Masonry_Layout
-tags:
-  - CSS
-  - CSS グリッド
-  - 実験的
-  - 組積
-translation_of: Web/CSS/CSS_Grid_Layout/Masonry_Layout
 ---
 {{CSSRef}}
 
@@ -23,9 +17,9 @@ translation_of: Web/CSS/CSS_Grid_Layout/Masonry_Layout
 ```css
 .container {
   display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  grid-template-rows: masonry;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-rows: masonry;
 }
 ```
 

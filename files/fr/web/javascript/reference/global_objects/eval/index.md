@@ -20,7 +20,9 @@ La fonction **`eval()`** permet d'évaluer du code JavaScript représenté sous 
 
 ## Syntaxe
 
-    eval(str)
+```js
+eval(str)
+```
 
 ### Paramètres
 

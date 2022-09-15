@@ -9,8 +9,8 @@ original_slug: Glossaire/Cache
 ---
 Un **cache** (cache web ou cache HTTP) est un composant stockant temporairement les réponses HTTP dans le but de les réutiliser lors de requêtes HTTP ultérieures, tant qu'elles remplissent certaines conditions.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 
-- {{interwiki("wikipedia", "Cache web")}} sur Wikipedia
+- [Cache web](https://fr.wikipedia.org/wiki/Cache_web) sur Wikipédia

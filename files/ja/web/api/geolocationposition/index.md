@@ -1,14 +1,6 @@
 ---
 title: GeolocationPosition
 slug: Web/API/GeolocationPosition
-tags:
-  - API
-  - 位置情報 API
-  - GeolocationPosition
-  - インターフェイス
-  - 安全なコンテキスト
-browser-compat: api.GeolocationPosition
-translation_of: Web/API/GeolocationPosition
 ---
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 

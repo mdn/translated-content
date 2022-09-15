@@ -19,7 +19,9 @@ La fonction **`Math.abs()`** retourne la valeur absolue d'un nombre, c'est-à-di
 
 ## Syntaxe
 
-    Math.abs(x);
+```js
+Math.abs(x);
+```
 
 ### Paramètres
 

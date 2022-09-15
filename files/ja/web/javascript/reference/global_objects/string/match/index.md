@@ -1,15 +1,6 @@
 ---
 title: String.prototype.match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
-tags:
-  - JavaScript
-  - メソッド
-  - プロトタイプ
-  - リファレンス
-  - 正規表現
-  - String
-browser-compat: javascript.builtins.String.match
-translation_of: Web/JavaScript/Reference/Global_Objects/String/match
 ---
 {{JSRef}}
 
@@ -103,7 +94,6 @@ console.log(matches_array);
 ```
 
 > **Note:** {{jsxref("String.prototype.matchAll()")}} と[フラグを用いた高度な検索](/ja/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags)も参照してください。
-
 
 ### 名前付きキャプチャグループの使用
 

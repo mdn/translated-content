@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Operators/super
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p>A palavra-chave <strong>super</strong> é usada para acessar o objeto pai de um objeto, em outros casos, é usada para acessar a classe pai de uma classe.</p>
+<p>A palavra-chave <strong>super</strong> é usada para acessar o objeto pai de um objeto, em outros casos, é usada para acessar a classe pai de uma classe.</p>
 
 <h2 id="Síntaxe">Síntaxe</h2>
 
@@ -17,13 +17,13 @@ super.metodo([arguments]);
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Quando usada no construtor de uma classe, a palavra-chave <code>super</code> deve ser usada apenas uma vez, e precisa ser usada antes que a palavra-chave <code>this</code> possa ser usada. Essa palavra-chave também pode ser usada para chamar uma função ou objeto pai.</p>
+<p>Quando usada no construtor de uma classe, a palavra-chave <code>super</code> deve ser usada apenas uma vez, e precisa ser usada antes que a palavra-chave <code>this</code> possa ser usada. Essa palavra-chave também pode ser usada para chamar uma função ou objeto pai.</p>
 
 <h2 id="Exemplo">Exemplo</h2>
 
-<h3 id="Usando_super_em_classes">Usando <code>super</code> em classes</h3>
+<h3 id="Usando_super_em_classes">Usando <code>super</code> em classes</h3>
 
-<p>Esse trecho de código foi obtido através de <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">classes sample</a> (<a href="https://googlechrome.github.io/samples/classes-es6/index.html">demonstração</a>). Aqui <code>super()</code> é chamado para evitar duplicar a parte do construtor que é comum entre <code>Polygon</code> e <code>Square</code>.</p>
+<p>Esse trecho de código foi obtido através de <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">classes sample</a> (<a href="https://googlechrome.github.io/samples/classes-es6/index.html">demonstração</a>). Aqui <code>super()</code> é chamado para evitar duplicar a parte do construtor que é comum entre <code>Polygon</code> e <code>Square</code>.</p>
 
 <pre class="brush: js">class Polygon {
   constructor(height, width) {
@@ -80,7 +80,7 @@ Computer.pingpong(); // 'ping pong'
 
 <h3 id="Ao_deletar_propriedades_do_super_será_emitido_um_erro">Ao deletar propriedades do super, será emitido um erro</h3>
 
-<p>Você não pode utilizar o <a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete operator</a> e <code>super.prop</code> ou <code>super[expr]</code> para deletar uma propriedade da classe pai. Isto emitirá um {{jsxref("ReferenceError")}}.</p>
+<p>Você não pode utilizar o <a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete operator</a> e <code>super.prop</code> ou <code>super[expr]</code> para deletar uma propriedade da classe pai. Isto emitirá um {{jsxref("ReferenceError")}}.</p>
 
 <pre class="brush: js">class Base {
   constructor() {}
@@ -95,9 +95,9 @@ class Derived extends Base {
 
 new Derived().delete(); // ReferenceError: invalid delete involving 'super'. </pre>
 
-<h3 id="Super.prop_não_pode_sobrescrever_propriedades_não_editáveis"><code>Super.prop</code> não pode sobrescrever propriedades não editáveis</h3>
+<h3 id="Super.prop_não_pode_sobrescrever_propriedades_não_editáveis"><code>Super.prop</code> não pode sobrescrever propriedades não editáveis</h3>
 
-<p><code>super</code>não pode sobrescrever o valor de uma propriedade quando esta houver sido definida como não editável ('writable: false') com, e.g., {{jsxref("Object.defineProperty")}}.</p>
+<p><code>super</code>não pode sobrescrever o valor de uma propriedade quando esta houver sido definida como não editável ('writable: false') com, e.g., {{jsxref("Object.defineProperty")}}.</p>
 
 <pre class="brush: js">class X {
   constructor() {
@@ -117,9 +117,9 @@ x.f();
 console.log(x.prop); // 1
 </pre>
 
-<h3 id="Usando_super.prop_em_objetos_literais">Usando <code>super.prop</code> em objetos literais</h3>
+<h3 id="Usando_super.prop_em_objetos_literais">Usando <code>super.prop</code> em objetos literais</h3>
 
-<p><code>super</code> também pode ser usado na inicialização da notação literal de objetos. No exemplo abaixo, cada objeto define um método. No segundo objeto, <code>super</code> chama o método do primeiro objeto. Isso funciona graças ao {{jsxref("Object.setPrototypeOf()")}}, com o qual é possível configurar o prototype do <code>obj2</code> para o <code>obj1</code>, tornando o <code>super</code> capaz de encontrar o <code>method1()</code> por meio do <code>obj2</code>.</p>
+<p><code>super</code> também pode ser usado na inicialização da notação literal de objetos. No exemplo abaixo, cada objeto define um método. No segundo objeto, <code>super</code> chama o método do primeiro objeto. Isso funciona graças ao {{jsxref("Object.setPrototypeOf()")}}, com o qual é possível configurar o prototype do <code>obj2</code> para o <code>obj1</code>, tornando o <code>super</code> capaz de encontrar o <code>method1()</code> por meio do <code>obj2</code>.</p>
 
 <pre class="brush: js">var obj1 = {
   method1() {
@@ -161,62 +161,12 @@ obj2.method2(); // retorna "method 1"
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(42.0)}}</td>
-   <td>{{CompatGeckoDesktop(45)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(42.0)}}</td>
-   <td>{{CompatGeckoMobile(45)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(42.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.operators.super")}}
 
 <h2 id="Notas_Gecko_específicas">Notas Gecko específicas</h2>
 
 <ul>
- <li><code>super()</code> ainda não funciona como esperado para prototypes nativos.</li>
+ <li><code>super()</code> ainda não funciona como esperado para prototypes nativos.</li>
 </ul>
 
 <h2 id="Veja_mais">Veja mais</h2>

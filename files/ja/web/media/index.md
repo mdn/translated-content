@@ -1,13 +1,6 @@
 ---
 title: ウェブメディア技術
 slug: Web/Media
-tags:
-  - Audio
-  - Landing
-  - Media
-  - Video
-  - Web
-translation_of: Web/Media
 ---
 {{QuickLinksWithSubpages("/ja/docs/Web/Media")}}
 
@@ -41,7 +34,7 @@ translation_of: Web/Media
 - [Web Audio API](/ja/docs/Web/API/Web_Audio_API)
   - : Web Audio API を使用すると、サウンドデータをリアルタイムおよび、録音済み素材の両方で生成、フィルターリングおよび、操作してからそのオーディオを `<audio>` 要素、メディアストリームまたは、ディスクなどへ送信できます。
 - [WebRTC](/ja/docs/Web/API/WebRTC_API)
-  - : WebRTC (Web Real-Time Communication、ウェブリアルタイム通信) を使用すると、直接インターネット上の 2 つのピア間で、ライブオーディオとビデオをストリーミングしたり、任意のデータを転送したりできます。
+  - : WebRTC (Web Real-Time Communication、ウェブリアルタイム通信) を使用すると、直接インターネット上の 2 つのピア間で、ライブオーディオとビデオをストリーミングしたり、任意のデータを転送したりできます。
 
 ## ガイド
 

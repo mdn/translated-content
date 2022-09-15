@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/NaN
 
 <h2 id="Resumo">Resumo</h2>
 
-<p>A propriedade global <code><strong>NaN</strong></code> é um valor especial que significa <em>Not-A-Number</em> (não é um número).</p>
+<p>A propriedade global <code><strong>NaN</strong></code> é um valor especial que significa <em>Not-A-Number</em> (não é um número).</p>
 
 <p>{{js_property_attributes(0,0,0)}}</p>
 
@@ -23,13 +23,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/NaN
 
 <p><code>NaN</code> é uma propriedade do <em>objeto global</em>.</p>
 
-<p>O valor inicial de <code>NaN</code> é Not-A-Number - o mesmo valor de <code>Number.NaN</code>. Nos navegadores modernos, o <code>NaN</code> é uma propriedade somente leitura e não configurável. Mesmo quando não for este o caso, evite sobrescrevê-lo.</p>
+<p>O valor inicial de <code>NaN</code> é Not-A-Number - o mesmo valor de <code>Number.NaN</code>. Nos navegadores modernos, o <code>NaN</code> é uma propriedade somente leitura e não configurável. Mesmo quando não for este o caso, evite sobrescrevê-lo.</p>
 
-<p>Não é usual a utilização do <code>NaN</code>. Ele é retornado quando uma operação matemática falha (Math.sqrt(-1)) ou quando uma função tenta transformar uma string em inteiro (parseInt("blabla")).</p>
+<p>Não é usual a utilização do <code>NaN</code>. Ele é retornado quando uma operação matemática falha (Math.sqrt(-1)) ou quando uma função tenta transformar uma string em inteiro (parseInt("blabla")).</p>
 
-<h3 id="Testando_um_valor_NaN">Testando um valor <code>NaN</code></h3>
+<h3 id="Testando_um_valor_NaN">Testando um valor <code>NaN</code></h3>
 
-<p>Os operadores de igualdade (<code>==</code> e <code>===</code>) não podem ser usados para testar um valor NaN. Ao invés disso, utilize {{jsxref("Number.isNaN()")}} ou {{jsxref("Global_Objects/isNaN", "isNaN()")}}.</p>
+<p>Os operadores de igualdade (<code>==</code> e <code>===</code>) não podem ser usados para testar um valor NaN. Ao invés disso, utilize {{jsxref("Number.isNaN()")}} ou {{jsxref("Global_Objects/isNaN", "isNaN()")}}.</p>
 
 <pre class="brush: js">NaN === NaN;        // falso
 Number.NaN === NaN; // falso
@@ -54,67 +54,19 @@ isNaN(Number.NaN);  // verdadeiro
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.1.1.1', 'NaN')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-value-properties-of-the-global-object-nan', 'NaN')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.NaN")}}
 
 <h2 id="See_also" name="See_also">Veja também</h2>
 

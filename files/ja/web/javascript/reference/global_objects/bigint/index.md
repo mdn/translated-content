@@ -1,13 +1,6 @@
 ---
 title: BigInt
 slug: Web/JavaScript/Reference/Global_Objects/BigInt
-tags:
-  - BigInt
-  - クラス
-  - JavaScript
-  - リファレンス
-browser-compat: javascript.builtins.BigInt
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt
 ---
 {{JSRef}}
 
@@ -91,7 +84,7 @@ bigN * -1n
 // ↪ -18014398509481984n
 ```
 
-`/` 演算子もすべての数値に対して、期待される通りに動作します。ただし、実数との演算では BigInt 値と演算すhる際に小数が切り捨てられます。実数を返すことはありません。
+`/` 演算子もすべての数値に対して、期待される通りに動作します。ただし、実数との演算では BigInt 値と演算する際に小数が切り捨てられます。実数を返すことはありません。
 
 ```js
 const expected = 4n / 2n

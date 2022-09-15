@@ -29,22 +29,22 @@ new Intl.Collator(locales, options)
 
     - `co`
       - : Les variantes de collation pour certaines locales. Les valeurs possibles sont&nbsp;:
-          - `big5han`
-          - `compat`
-          - `dict`
-          - `direct`
-          - `ducet`
-          - `eor`
-          - `gb2312`
-          - `phonebk` (uniquement pris en charge pour l'allemand)
-          - `phonetic`
-          - `pinyin`
-          - `reformed`
-          - `searchjl`
-          - `stroke`
-          - `trad`
-          - `unihan`
-          - `zhuyin`
+        - `big5han`
+        - `compat`
+        - `dict`
+        - `direct`
+        - `ducet`
+        - `eor`
+        - `gb2312`
+        - `phonebk` (uniquement pris en charge pour l'allemand)
+        - `phonetic`
+        - `pinyin`
+        - `reformed`
+        - `searchjl`
+        - `stroke`
+        - `trad`
+        - `unihan`
+        - `zhuyin`
         > **Note :**  Cette option peut également être définie via la propriété "`collation`" du paramètre `options`.
     - `kn`
       - : Indique si une collation numérique devrait être utilisée (par exemple pour avoir "1" < "2" < "10"). Les valeurs possibles sont "`true`" et "`false`". Cette option peut également être indiquée via la propriété "`numeric`" du paramètre `options`.
@@ -86,22 +86,22 @@ new Intl.Collator(locales, options)
 
     - `collation`
       - : Les variantes de collations pour certaines locales. Les valeurs possibles sont&nbsp;:
-          - `big5han`
-          - `compat`
-          - `dict`
-          - `direct`
-          - `ducet`
-          - `eor`
-          - `gb2312`
-          - `phonebk` (uniquement pris en charge pour l'allemand)
-          - `phonetic`
-          - `pinyin`
-          - `reformed`
-          - `searchjl`
-          - `stroke`
-          - `trad`
-          - `unihan`
-          - `zhuyin`
+        - `big5han`
+        - `compat`
+        - `dict`
+        - `direct`
+        - `ducet`
+        - `eor`
+        - `gb2312`
+        - `phonebk` (uniquement pris en charge pour l'allemand)
+        - `phonetic`
+        - `pinyin`
+        - `reformed`
+        - `searchjl`
+        - `stroke`
+        - `trad`
+        - `unihan`
+        - `zhuyin`
         > **Note :** Cette option peut également être définie via la clé d'extension Unicode `co`&nbsp;; si des valeurs sont fournies aux deux endroits, c'est la propriété d'`options` qui a la priorité.
 
 ## Exemples

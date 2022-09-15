@@ -9,8 +9,10 @@ translation_of: Web/API/HTMLSelectElement/selectedIndex
 
 ## Syntaxe
 
-    var index = selectElem.selectedIndex;
-    selectElem.selectedIndex = index;
+```js
+var index = selectElem.selectedIndex;
+selectElem.selectedIndex = index;
+```
 
 ## Exemple
 
@@ -46,11 +48,8 @@ selectElem.addEventListener('change', function() {
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire                                                                       |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#dom-select-selectedindex', 'HTMLSelectElement')}}         | {{Spec2('HTML WHATWG')}} | Pas de changement depuis le snapshot précédent, {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', 'forms.html#dom-select-selectedindex', 'HTMLSelectElement')}} | {{Spec2('HTML5 W3C')}}     | Définition initiale, snapshot de {{SpecName("HTML WHATWG")}}.            |
+{{Specifications}}
 
-## Compatibilité entre les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.HTMLSelectElement.selectedIndex")}}
+{{Compat}}

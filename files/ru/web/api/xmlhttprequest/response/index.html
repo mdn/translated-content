@@ -9,7 +9,7 @@ translation_of: Web/API/XMLHttpRequest/response
 ---
 <div>{{APIRef('XMLHttpRequest')}}</div>
 
-<div><span class="seoSummary">Свойство <code>XMLHttpRequest </code></span><code><strong>response</strong></code> <span class="seoSummary"> возвращает содержимое тела ответа в виде <code>ArrayBuffer</code>, <code>Blob</code>, <code>Document</code>, <code>JavaScript Object</code> или <code>DOMString </code>в зависимости от значения свойства <code>responseType</code>.</span></div>
+<div><span class="seoSummary">Свойство <code>XMLHttpRequest </code></span><code><strong>response</strong></code> <span class="seoSummary"> возвращает содержимое тела ответа в виде <code>ArrayBuffer</code>, <code>Blob</code>, <code>Document</code>, <code>JavaScript Object</code> или <code>DOMString </code>в зависимости от значения свойства <code>responseType</code>.</span></div>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -18,17 +18,17 @@ translation_of: Web/API/XMLHttpRequest/response
 
 <h3 id="Value">Value</h3>
 
-<p> </p>
+<p> </p>
 
-<p>Соответствующий объект, основанный на значении <code>responseType</code>. Вы можете попытаться запросить данные в определённом формате, установив значение <code>responseType</code> после вызова <code>open()</code> для инициализации запроса, но перед вызовом <code>send()</code> для отправки запроса на сервер.</p>
+<p>Соответствующий объект, основанный на значении <code>responseType</code>. Вы можете попытаться запросить данные в определённом формате, установив значение <code>responseType</code> после вызова <code>open()</code> для инициализации запроса, но перед вызовом <code>send()</code> для отправки запроса на сервер.</p>
 
 <p>Значение равно <code>null</code>, если запрос ещё не завершён или был неудачным, за исключением того, что при чтении текстовых данных с использованием <code>responseType "text"</code> или пустой строки (<code>""</code>), ответ может содержать ответ до тех пор, пока запрос все ещё находится в состоянии <code>LOADING readyState (3)</code>.</p>
 
 <p>Типы ответов описаны ниже.</p>
 
-<p> </p>
+<p> </p>
 
-<p> </p>
+<p> </p>
 
 <table>
  <thead>
@@ -40,76 +40,76 @@ translation_of: Web/API/XMLHttpRequest/response
  <tbody>
   <tr>
    <td><code>""</code></td>
-   <td>Пустая строка <code>responseType</code> обрабатывается так же, как <code>"text"</code>, тип по умолчанию (следовательно, как <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMString" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String.">DOMString</a></code>.)</td>
+   <td>Пустая строка <code>responseType</code> обрабатывается так же, как <code>"text"</code>, тип по умолчанию (следовательно, как <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMString" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String.">DOMString</a></code>.)</td>
   </tr>
   <tr>
    <td><code>"arraybuffer"</code></td>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/response" title="The XMLHttpRequest response property returns the response's body content as an ArrayBuffer, Blob, Document, JavaScript Object, or DOMString, depending on the value of the request's responseType property."><code>response</code></a> в JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer" title="The ArrayBuffer object is used to represent a generic, fixed-length raw binary data buffer. You cannot directly manipulate the contents of an ArrayBuffer; instead, you create one of the typed array objects or a DataView object which represents the buffer in a specific format, and use that to read and write the contents of the buffer."><code>ArrayBuffer</code></a> содержит двоичные данные.</td>
+   <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/response" title="The XMLHttpRequest response property returns the response's body content as an ArrayBuffer, Blob, Document, JavaScript Object, or DOMString, depending on the value of the request's responseType property."><code>response</code></a> в JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer" title="The ArrayBuffer object is used to represent a generic, fixed-length raw binary data buffer. You cannot directly manipulate the contents of an ArrayBuffer; instead, you create one of the typed array objects or a DataView object which represents the buffer in a specific format, and use that to read and write the contents of the buffer."><code>ArrayBuffer</code></a> содержит двоичные данные.</td>
   </tr>
   <tr>
    <td><code>"blob"</code></td>
-   <td><code>response</code> в <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob" title="A Blob object represents a file-like object of immutable, raw data. Blobs represent data that isn't necessarily in a JavaScript-native format. The File interface is based on Blob, inheriting blob functionality and expanding it to support files on the user's system."><code>Blob</code></a> object содержит двоичные данные.</td>
+   <td><code>response</code> в <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob" title="A Blob object represents a file-like object of immutable, raw data. Blobs represent data that isn't necessarily in a JavaScript-native format. The File interface is based on Blob, inheriting blob functionality and expanding it to support files on the user's system."><code>Blob</code></a> object содержит двоичные данные.</td>
   </tr>
   <tr>
    <td><code>"document"</code></td>
    <td>
-    <p><code>response</code> является <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML" title="HTML: HTML (HyperText Markup Language) is a descriptive language that specifies webpage structure.">HTML</a> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document" title="The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree.HTMLElement"><code>Document</code></a> или <a href="https://developer.mozilla.org/en-US/docs/Glossary/XML" title="XML: eXtensible Markup Language (XML) is a generic markup language specified by the W3C. The information technology (IT) industry uses many languages based on XML as data-description languages.">XML</a> <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLDocument" title="The XMLDocument interface represent an XML document. It inherits from the generic Document and does not add any specific methods or properties to it: nevertheless, several algorithms behave differently with the two types of documents."><code>XMLDocument</code></a>, в зависимости от ситуации, основанный на MIME-типе полученных данных. См. <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in XMLHttpRequest</a> , чтобы узнать больше об использовании XHR для извлечения содержимого HTML.</p>
+    <p><code>response</code> является <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML" title="HTML: HTML (HyperText Markup Language) is a descriptive language that specifies webpage structure.">HTML</a> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document" title="The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree.HTMLElement"><code>Document</code></a> или <a href="https://developer.mozilla.org/en-US/docs/Glossary/XML" title="XML: eXtensible Markup Language (XML) is a generic markup language specified by the W3C. The information technology (IT) industry uses many languages based on XML as data-description languages.">XML</a> <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLDocument" title="The XMLDocument interface represent an XML document. It inherits from the generic Document and does not add any specific methods or properties to it: nevertheless, several algorithms behave differently with the two types of documents."><code>XMLDocument</code></a>, в зависимости от ситуации, основанный на MIME-типе полученных данных. См. <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in XMLHttpRequest</a> , чтобы узнать больше об использовании XHR для извлечения содержимого HTML.</p>
    </td>
   </tr>
   <tr>
    <td><code>"json"</code></td>
-   <td><code>response</code> является JavaScript object, созданный путём анализа содержимого полученных данных как <a href="https://developer.mozilla.org/en-US/docs/Glossary/JSON" title="JSON: JavaScript Object Notation (JSON) is a data-interchange format.  Although not a strict subset, JSON closely resembles a subset of JavaScript syntax. Though many programming languages support JSON, JSON is especially useful for JavaScript-based apps, including websites and browser extensions.">JSON</a>.</td>
+   <td><code>response</code> является JavaScript object, созданный путём анализа содержимого полученных данных как <a href="https://developer.mozilla.org/en-US/docs/Glossary/JSON" title="JSON: JavaScript Object Notation (JSON) is a data-interchange format.  Although not a strict subset, JSON closely resembles a subset of JavaScript syntax. Though many programming languages support JSON, JSON is especially useful for JavaScript-based apps, including websites and browser extensions.">JSON</a>.</td>
   </tr>
   <tr>
    <td><code>"text"</code></td>
-   <td><code>response</code> является текстом в <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMString" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a> object.</td>
+   <td><code>response</code> является текстом в <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMString" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a> object.</td>
   </tr>
   <tr>
-   <td><code>"moz-chunked-arraybuffer"</code> </td>
+   <td><code>"moz-chunked-arraybuffer"</code> </td>
    <td>
-    <p> </p>
+    <p> </p>
 
-    <p>Похож на <code>"arraybuffer"</code>, но данные принимаются в потоке. При использовании этого типа ответа значение в <code>response</code> доступно только в обработчике для события <code><a href="https://developer.mozilla.org/en-US/docs/Web/Events/progress" title="/en-US/docs/Web/Events/progress">progress</a></code> и содержит только данные, полученные с момента последнего события <code>progress</code>, а не совокупные данные, полученные с момента отправки запроса.</p>
+    <p>Похож на <code>"arraybuffer"</code>, но данные принимаются в потоке. При использовании этого типа ответа значение в <code>response</code> доступно только в обработчике для события <code><a href="https://developer.mozilla.org/en-US/docs/Web/Events/progress" title="/en-US/docs/Web/Events/progress">progress</a></code> и содержит только данные, полученные с момента последнего события <code>progress</code>, а не совокупные данные, полученные с момента отправки запроса.</p>
 
-    <p>Доступ к <code>response</code> во время события <code>progress</code> возвращает полученные данные. За пределами обработчика событий <code>progress</code> значение <code>response</code> всегда равно <code>null</code>.</p>
+    <p>Доступ к <code>response</code> во время события <code>progress</code> возвращает полученные данные. За пределами обработчика событий <code>progress</code> значение <code>response</code> всегда равно <code>null</code>.</p>
 
-    <p> </p>
+    <p> </p>
    </td>
   </tr>
   <tr>
-   <td><code>"ms-stream"</code> </td>
-   <td><code>response</code> является частью потоковой загрузки; этот тип ответа разрешён только для запросов на загрузку и поддерживается только Internet Explorer.</td>
+   <td><code>"ms-stream"</code> </td>
+   <td><code>response</code> является частью потоковой загрузки; этот тип ответа разрешён только для запросов на загрузку и поддерживается только Internet Explorer.</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Пример">Пример</h2>
 
-<p> </p>
+<p> </p>
 
-<p> </p>
+<p> </p>
 
-<p>В этом примере представлена функция <code>load()</code>, которая загружает и обрабатывает страницу с сервера. Он работает путём создания объекта <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest" title="Use XMLHttpRequest (XHR) objects to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing."><code>XMLHttpRequest</code></a> и создания обработчика события с событием <code>readystatechange</code>, чтобы при изменении <code>readyState </code>на <code>DONE (4)</code> <code>response</code> получался и передавался в колбэк-функцию, предоставляемую <code>load()</code>.</p>
+<p>В этом примере представлена функция <code>load()</code>, которая загружает и обрабатывает страницу с сервера. Он работает путём создания объекта <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest" title="Use XMLHttpRequest (XHR) objects to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing."><code>XMLHttpRequest</code></a> и создания обработчика события с событием <code>readystatechange</code>, чтобы при изменении <code>readyState </code>на <code>DONE (4)</code> <code>response</code> получался и передавался в колбэк-функцию, предоставляемую <code>load()</code>.</p>
 
 <p>Содержимое обрабатывается как необработанные текстовые данные (поскольку здесь ничто не переопределяет <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/responseType" title="The XMLHttpRequest property responseType is an enumerated string value specifying the type of data contained in the response."><code>responseType</code></a> по умолчанию).</p>
 
-<p> </p>
+<p> </p>
 
-<p> </p>
+<p> </p>
 
 <pre class="brush: js">var url = 'somePage.html'; //A local page
 
 function load(url, callback) {
-  var xhr = new XMLHttpRequest();
+  var xhr = new XMLHttpRequest();
 
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4) {
-      callback(xhr.response);
-    }
-  }
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4) {
+      callback(xhr.response);
+    }
+  }
 
   xhr.open('GET', url, true);
-  xhr.send('');
+  xhr.send('');
 }
 
 </pre>

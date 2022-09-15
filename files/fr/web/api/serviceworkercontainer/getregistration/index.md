@@ -9,7 +9,9 @@ La méthode **`getRegistration()`** de l'interface {{domxref("ServiceWorkerConta
 
 ## Syntaxe
 
-    serviceWorkerContainer.getRegistration(scope).then(function(serviceWorkerRegistration) { ... });
+```js
+serviceWorkerContainer.getRegistration(scope).then(function(serviceWorkerRegistration) { ... });
+```
 
 ### Paramètres
 
@@ -32,10 +34,8 @@ navigator.serviceWorker.getRegistration('/app').then(function(registration) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                                    | Statuts                              | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#dom-serviceworkercontainer-getregistration', 'ServiceWorkerContainer: getRegistration')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.ServiceWorkerContainer.getRegistration")}}
+{{Compat}}

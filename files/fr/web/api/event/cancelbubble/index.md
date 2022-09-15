@@ -16,22 +16,24 @@ La propriété **`Event.cancelBubble`** est un alias historique de {{domxref("Ev
 
 ## Syntaxe
 
-    event.cancelBubble = bool;
-    var bool = event.cancelBubble;
+```js
+event.cancelBubble = bool;
+var bool = event.cancelBubble;
+```
 
 ## Exemple
 
-    elem.onclick = function(e) {
-     // fais des choses sympas ici
-      e.cancelBubble = true;
-    }
+```js
+elem.onclick = function(e) {
+  // fais des choses sympas ici
+  e.cancelBubble = true;
+}
+```
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG', '#dom-event-cancelbubble', 'cancelBubble')}} | {{Spec2('DOM WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Event.cancelBubble")}}
+{{Compat}}

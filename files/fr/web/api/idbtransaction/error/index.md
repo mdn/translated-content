@@ -18,7 +18,9 @@ La propriété **`IDBTransaction.error`** de l'interface {{domxref("IDBTransacti
 
 ## Syntaxe
 
-    var myError = transaction.error;
+```js
+var myError = transaction.error;
+```
 
 ### Valeur
 
@@ -83,13 +85,11 @@ function addData() {
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#transaction', 'IDBTransaction')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBTransaction.error")}}
+{{Compat}}
 
 ## Voir aussi
 

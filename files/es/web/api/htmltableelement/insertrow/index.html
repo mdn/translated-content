@@ -20,7 +20,7 @@ translation_of: Web/API/HTMLTableElement/insertRow
  <li><code>index</code> es el índice de fila de la nueva fila.</li>
  <li><code>row</code> queda asignada a una referencia a la nueva fila. Una referencia a un <a href="/en-US/docs/Web/API/HTMLTableRowElement">HTMLTableRowElement</a>.<br>
   Si <code>index</code> es -1 o igual al número de filas, la nueva fila es añadida detrás de la última. Si <code>index</code> es mayor que el números defilas, es lanzada una excepción IndexSizeError. Si index se omite, se asume por defecto -1.</li>
- <li>Si  una tabla tiene múltiples elementos <code>tbody</code>, por defecto la nueva fila es insertada en el último <code>tbody</code>. Para insertar una fila dentro de un  <code>tbody</code> especifico pued hacer:<br>
+ <li>Si  una tabla tiene múltiples elementos <code>tbody</code>, por defecto la nueva fila es insertada en el último <code>tbody</code>. Para insertar una fila dentro de un  <code>tbody</code> especifico pued hacer:<br>
   <code>var <em>specific_tbody</em>=document.getElementById(<em>tbody_id</em>);<br>
   var <em>row</em>=specific_tbody.insertRow(<em>index</em>)</code></li>
 </ul>
@@ -70,7 +70,7 @@ addRow('TableA');
   <tr>
    <td>{{SpecName("HTML WHATWG", "tables.html#dom-table-insertrow", "HTMLTableElement.insertRow()")}}</td>
    <td>{{Spec2("HTML WHATWG")}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName("DOM2 HTML", "html.html#ID-93995626", "HTMLTableElement.insertRow()")}}</td>

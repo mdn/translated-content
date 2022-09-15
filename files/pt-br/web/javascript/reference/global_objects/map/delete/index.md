@@ -29,7 +29,7 @@ delete(key)
 
 ### Valor retornado
 
-`true` se o elemento do `Map` existia e foi removido, ou 
+`true` se o elemento do `Map` existia e foi removido, ou
 `false` se o elemento não existe.
 
 ## Exemplos

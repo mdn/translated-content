@@ -9,7 +9,9 @@ La propriété en lecture seule **`HTMLButtonElement.labels`** renvoie une {{dom
 
 ## Syntaxe
 
-    var labelElements = button.labels;
+```js
+var labelElements = button.labels;
+```
 
 ### Valeur de retour
 
@@ -40,10 +42,8 @@ window.addEventListener("DOMContentLoaded", function() {
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName("HTML WHATWG", "forms.html#dom-lfe-labels", "labels")}} | {{Spec2("HTML WHATWG")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLButtonElement.labels")}}
+{{Compat}}

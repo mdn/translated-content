@@ -1,17 +1,6 @@
 ---
 title: border-start-start-radius
 slug: Web/CSS/border-start-start-radius
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - border-start-start-radius
-  - recipe:css-property
-  - 書字方向
-browser-compat: css.properties.border-start-start-radius
-translation_of: Web/CSS/border-start-start-radius
 ---
 {{CSSRef}}
 
@@ -69,14 +58,14 @@ div {
   background-color: rebeccapurple;
   width: 120px;
   height: 120px;
-  border-start-start-radius: 10px;
+  border-start-start-radius: 10px;
 }
 
 .exampleText {
   writing-mode: vertical-rl;
   padding: 10px;
   background-color: #fff;
-  border-start-start-radius: 10px;
+  border-start-start-radius: 10px;
 }
 ```
 

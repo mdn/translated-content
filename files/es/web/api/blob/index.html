@@ -7,34 +7,34 @@ translation_of: Web/API/Blob
 
 <h2 id="Resumen">Resumen</h2>
 
-<p>Un objeto <code>Blob</code> representa un objeto tipo fichero de  datos planos inmutables. Los Blobs representan datos que no necesariamente se encuentran en un formato nativo de JavaScript. La interfaz {{ domxref("File") }} se encuentra basada en un <code>Blob</code>, heredando y expendiendo la funcionalidad de un <code>Blob</code> para soportar archivos en el sistema del usuario.</p>
+<p>Un objeto <code>Blob</code> representa un objeto tipo fichero de  datos planos inmutables. Los Blobs representan datos que no necesariamente se encuentran en un formato nativo de JavaScript. La interfaz {{ domxref("File") }} se encuentra basada en un <code>Blob</code>, heredando y expendiendo la funcionalidad de un <code>Blob</code> para soportar archivos en el sistema del usuario.</p>
 
-<p>Una forma fácil de construir un <code>Blob</code> es invocando el constructor {{domxref("Blob.Blob", "Blob()")}}. Otra manera es utilizando el método <code>slice()</code> para crear un blob que contiene un subconjunto de los datos de otro <code>Blob</code>.</p>
+<p>Una forma fácil de construir un <code>Blob</code> es invocando el constructor {{domxref("Blob.Blob", "Blob()")}}. Otra manera es utilizando el método <code>slice()</code> para crear un blob que contiene un subconjunto de los datos de otro <code>Blob</code>.</p>
 
 <h2 id="Constructor">Constructor</h2>
 
 <dl>
  <dt>{{domxref("Blob.Blob", "Blob()")}}</dt>
- <dd>Regresa un nuevo objeto <code>Blob</code> creado cuyo contenido consiste en la concatenación de un arreglo de valores establecidos en el parámetro de la función.</dd>
+ <dd>Regresa un nuevo objeto <code>Blob</code> creado cuyo contenido consiste en la concatenación de un arreglo de valores establecidos en el parámetro de la función.</dd>
 </dl>
 
 <h2 id="Propiedades">Propiedades</h2>
 
 <dl>
  <dt>{{domxref("Blob.size")}} {{readonlyinline}}</dt>
- <dd>El tamaño, en bytes,  de los datos contenidos en el objeto <code>Blob</code></dd>
+ <dd>El tamaño, en bytes,  de los datos contenidos en el objeto <code>Blob</code></dd>
  <dt>{{domxref("Blob.type")}} {{readonlyinline}}</dt>
- <dd>Una cadena (String) indicando el tipo MIME de los datos contenidos en el <code>Blob</code>. Si el tipo es desconocido, esta cadena será vacía.</dd>
+ <dd>Una cadena (String) indicando el tipo MIME de los datos contenidos en el <code>Blob</code>. Si el tipo es desconocido, esta cadena será vacía.</dd>
 </dl>
 
 <h2 id="Métodos">Métodos</h2>
 
 <dl>
  <dt>{{domxref("Blob.slice()")}}</dt>
- <dd><code><font face="Open Sans, sans-serif">Regresa un nuevo objeto </font>Blob</code> conteniendo los datos de un rango específico de bytes del origen del <code>Blob</code>.</dd>
+ <dd><code><font face="Open Sans, sans-serif">Regresa un nuevo objeto </font>Blob</code> conteniendo los datos de un rango específico de bytes del origen del <code>Blob</code>.</dd>
 </dl>
 
-<div class="note"><strong>Nota:</strong> Esté consciente que el método <code>slice()</code> posee prefijos propios del fabricante en algunos exploradores y versiones: <code>blob.mozSlice()</code> para Firefox 12 e inferior y <code>blob.webkitSlice()</code> en Safari. Una versión anterior del método <code>slice()</code>, sin prefijos del fabricante, tenía diferente semántica, y se encuentra obsoleto. El soporte para  <code>blob.mozSlice()</code> ha sido eliminado a partir de  Firefox 30.</div>
+<div class="note"><strong>Nota:</strong> Esté consciente que el método <code>slice()</code> posee prefijos propios del fabricante en algunos exploradores y versiones: <code>blob.mozSlice()</code> para Firefox 12 e inferior y <code>blob.webkitSlice()</code> en Safari. Una versión anterior del método <code>slice()</code>, sin prefijos del fabricante, tenía diferente semántica, y se encuentra obsoleto. El soporte para  <code>blob.mozSlice()</code> ha sido eliminado a partir de  Firefox 30.</div>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
@@ -55,7 +55,7 @@ var oMyBlob = oBuilder.getBlob('text/xml'); // the blob
 </pre>
 
 <div class="warning">
-<p>La interfaz {{ domxref("BlobBuilder") }} ofrece otra manera de crear <code>Blob</code>, pero se encuentra ahora obsoleta y no debería volverse a utilizar.</p>
+<p>La interfaz {{ domxref("BlobBuilder") }} ofrece otra manera de crear <code>Blob</code>, pero se encuentra ahora obsoleta y no debería volverse a utilizar.</p>
 </div>
 
 <h3 id="Ejemplo_para_crear_una_URL_en_un_arreglo_tipado_utilizando_un_blob">Ejemplo para crear una URL en un arreglo tipado utilizando un blob</h3>
@@ -104,7 +104,7 @@ reader.readAsArrayBuffer(blob);</pre>
 
 <h2 id="Disponilidad_del_alcance_del_código_en_Chrome">Disponilidad del alcance del código en Chrome</h2>
 
-<p>El alcance JSM del <code>Blob </code>se encuentra disponible sin la necesidad de hacer nada en especial.</p>
+<p>El alcance JSM del <code>Blob </code>se encuentra disponible sin la necesidad de hacer nada en especial.</p>
 
 <p>En el alcance de arranque, este debe importarse de igual modo:</p>
 

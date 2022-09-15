@@ -13,7 +13,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
  <tbody>
   <tr>
    <th scope="row">Prerequisitos:</th>
-   <td>Leer la <a href="/es/docs/Learn/Server-side/Express_Nodejs/Introduction">Introducción a Express</a>. <span id="result_box" lang="es"><span>Para los siguientes artículos, también deberá haber </span></span><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">configurado un entorno de desarrollo de Node</a>. </td>
+   <td>Leer la <a href="/es/docs/Learn/Server-side/Express_Nodejs/Introduction">Introducción a Express</a>. <span id="result_box" lang="es"><span>Para los siguientes artículos, también deberá haber </span></span><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">configurado un entorno de desarrollo de Node</a>. </td>
   </tr>
   <tr>
    <th scope="row">Objetivo:</th>
@@ -41,30 +41,30 @@ translation_of: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 
 <h2 id="The_LocalLibrary_website">The LocalLibrary website</h2>
 
-<p><em>LocalLibrary</em> es el nombre del website que vamos a desarrollar en esta serie de tutoriales. Tal como esperas, el objetivo del website es proveer un catalogo online para una pequeña libreria, donde los usuarios exploren los libros disponibles y administren sus cuentas.</p>
+<p><em>LocalLibrary</em> es el nombre del website que vamos a desarrollar en esta serie de tutoriales. Tal como esperas, el objetivo del website es proveer un catalogo online para una pequeña libreria, donde los usuarios exploren los libros disponibles y administren sus cuentas.</p>
 
-<p>Este ejemplo ha sido cuidadosamente elegido porque puede escalarse para mostrar tantos o pocos detalles como necesitemos, de igual forma puede usarse para presentar casi todas las caracteristicas de Express. Mas importante aún, nos permite proporcionar una ruta guiada a traves de la funcionalidad que necesita cualquier sitio web:</p>
+<p>Este ejemplo ha sido cuidadosamente elegido porque puede escalarse para mostrar tantos o pocos detalles como necesitemos, de igual forma puede usarse para presentar casi todas las caracteristicas de Express. Mas importante aún, nos permite proporcionar una ruta guiada a traves de la funcionalidad que necesita cualquier sitio web:</p>
 
 <ul>
- <li>En los primeros articulos definiremos una biblioteca simple, <em>unicamente de navegacion, </em>que los miembros de la biblioteca usaran para saber que libros estan disponibles. Esto permite explorar las operationes mas comunes de los sitios web: lectura y presentacion de contenido de una base de datos.</li>
- <li>A medida que avancemos, el ejemplo de la biblioteca se extenderá naturalmente para mostrar las caracteristicas mas avanzadas del sitio web. Por ejemplo, podemos extender la biblioteca para que se creen nuevos libros, de esta manera conoceremos como usar los formularios (forms) y la autenticacion de usuarios.</li>
+ <li>En los primeros articulos definiremos una biblioteca simple, <em>unicamente de navegacion, </em>que los miembros de la biblioteca usaran para saber que libros estan disponibles. Esto permite explorar las operationes mas comunes de los sitios web: lectura y presentacion de contenido de una base de datos.</li>
+ <li>A medida que avancemos, el ejemplo de la biblioteca se extenderá naturalmente para mostrar las caracteristicas mas avanzadas del sitio web. Por ejemplo, podemos extender la biblioteca para que se creen nuevos libros, de esta manera conoceremos como usar los formularios (forms) y la autenticacion de usuarios.</li>
 </ul>
 
-<p>Aunque este ejemplo se puede extender mucho mas, se llama LocalLibrary por una razón , esperamos mostrar informacion minima que le ayudara a comenzar a utilizar Express rapidamente. Como resultado, almacenaremos informacion acerca de libros, copias de libros, autores y otra informacion clave. Sin embargo, no almacenaremos informacion sobre otros elementos que una biblioteca pueda tener, o proveer la infraestructura necesaria para soportar multiples sitios u otras caracteristicas de grandes bibliotecas.  </p>
+<p>Aunque este ejemplo se puede extender mucho mas, se llama LocalLibrary por una razón , esperamos mostrar informacion minima que le ayudara a comenzar a utilizar Express rapidamente. Como resultado, almacenaremos informacion acerca de libros, copias de libros, autores y otra informacion clave. Sin embargo, no almacenaremos informacion sobre otros elementos que una biblioteca pueda tener, o proveer la infraestructura necesaria para soportar multiples sitios u otras caracteristicas de grandes bibliotecas.  </p>
 
 <h2 id="Estoy_atascado_donde_puedo_obtener_el_codigo_fuente">Estoy atascado, donde puedo obtener el codigo fuente?</h2>
 
-<p>A medida que avance, le proporcionaremos los fragmentos de codigo adecuado para que usted los copie y pegue en cada punto, ademas, habrá otro código con el proposito de que usted lo complete para afianzar su conocimiento (con alguna orientacion).</p>
+<p>A medida que avance, le proporcionaremos los fragmentos de codigo adecuado para que usted los copie y pegue en cada punto, ademas, habrá otro código con el proposito de que usted lo complete para afianzar su conocimiento (con alguna orientacion).</p>
 
-<p>Si aun asi sigues atasaco, puedes encontrar la version completamente desarrollada del sitio web <a href="https://github.com/mdn/express-locallibrary-tutorial">en Github aqui</a>.</p>
+<p>Si aun asi sigues atasaco, puedes encontrar la version completamente desarrollada del sitio web <a href="https://github.com/mdn/express-locallibrary-tutorial">en Github aqui</a>.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Las versiones especificas de node, Express, y los otros modulos con los que se probó esta documentación estan enumeradas en el projecto <a href="https://github.com/mdn/express-locallibrary-tutorial/blob/master/package.json">package.json</a>.</p>
+<p><strong>Note:</strong> Las versiones especificas de node, Express, y los otros modulos con los que se probó esta documentación estan enumeradas en el projecto <a href="https://github.com/mdn/express-locallibrary-tutorial/blob/master/package.json">package.json</a>.</p>
 </div>
 
 <h2 id="Summary">Summary</h2>
 
-<p>Ahora que sabes un poco mas del sitio web <em>LocalLIbrary</em> y lo que vas a aprender, es tiempo de comenzar a crear un <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">skeleton project</a>o para contener nuestro ejemplo.</p>
+<p>Ahora que sabes un poco mas del sitio web <em>LocalLIbrary</em> y lo que vas a aprender, es tiempo de comenzar a crear un <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">skeleton project</a>o para contener nuestro ejemplo.</p>
 
 <p>{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}</p>
 

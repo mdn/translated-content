@@ -1,15 +1,6 @@
 ---
 title: ':first-child'
 slug: Web/CSS/:first-child
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.first-child
-translation_of: Web/CSS/:first-child
 ---
 {{CSSRef}}
 
@@ -106,7 +97,7 @@ ul li:first-child {
 
 ## 関連情報
 
-- {{CSSxRef(":-moz-first-node")}} {{Non-standard_Inline}}
+- {{CSSxRef(":-moz-first-node")}} {{Non-standard_Inline}}
 - {{CSSxRef(":first-of-type")}}
 - {{CSSxRef(":last-child")}}
 - {{CSSxRef(":nth-child", ":nth-child()")}}

@@ -233,7 +233,6 @@ On peut également fournir une liste d'options parmi lesquelles la personne sais
 
 Avec cet élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) et les éléments [`<option>`](/fr/docs/Web/HTML/Element/Option) associés, le navigateur affichera les valeurs proposées sous la forme d'une liste déroulante (voire sous un autre format). Au fur et à mesure que la personne saisit dans le champ, la liste se réduit pour ne contenir que les valeurs correspondantes (et ce jusqu'à ce que la personne saisisse une autre valeur ou sélectionne une valeur parmi la liste).
 
-
 #### Utiliser des libellés pour les valeurs suggérées
 
 Il est aussi possible d'inclure des attributs [`label`](/fr/docs/Web/HTML/Element/Option#attr-label) sur un ou plusieurs des éléments `<option>` afin de fournir un libellé textuel. Certains navigateurs n'afficheront que les libellés tandis que d'autres afficheront le libellé et l'URL.

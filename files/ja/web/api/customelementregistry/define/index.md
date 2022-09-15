@@ -1,16 +1,6 @@
 ---
 title: CustomElementRegistry.define()
 slug: Web/API/CustomElementRegistry/define
-tags:
-  - API
-  - CustomElementRegistry
-  - メソッド
-  - リファレンス
-  - ウェブコンポーネント
-  - カスタム要素
-  - define
-browser-compat: api.CustomElementRegistry.define
-translation_of: Web/API/CustomElementRegistry/define
 ---
 {{APIRef("CustomElementRegistry")}}
 
@@ -37,7 +27,7 @@ customElements.define(name, constructor, options);
 
   - : 要素の定義の仕方を制御するオブジェクト。現在は、次の 1 つのオプションのみに対応しています。
 
- - `extends`: 拡張する組み込み要素の名前を示す文字列。*カスタム組み込み要素*を作成するのに使われる。
+- `extends`: 拡張する組み込み要素の名前を示す文字列。*カスタム組み込み要素*を作成するのに使われる。
 
 ### 返値
 

@@ -7,9 +7,11 @@ translation_of: Web/API/WindowClient/focused
 
 La propriété **`focused`** , en lecture seule de l'interface  {{domxref("WindowClient")}} , est un {{domxref("Boolean")}} qui indique si client actuel a le focus .
 
-## Syntax
+## Syntaxe
 
-    myFocused = WindowClient.focused;
+```js
+myFocused = WindowClient.focused;
+```
 
 ### Value
 
@@ -41,12 +43,10 @@ self.addEventListener('notificationclick', function(event) {
 });
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                        | Status                               | Comment            |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('Service Workers', '#window-client-interface', 'WindowClient')}} | {{Spec2('Service Workers')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WindowClient.focused")}}
+{{Compat}}

@@ -1,17 +1,6 @@
 ---
 title: HTMLTableCellElement
 slug: Web/API/HTMLTableCellElement
-tags:
-  - API
-  - セル
-  - HTML DOM
-  - HTMLTableCellElement
-  - インターフェイス
-  - リファレンス
-  - 表のセル
-  - 表
-browser-compat: api.HTMLTableCellElement
-translation_of: Web/API/HTMLTableCellElement
 ---
 {{ APIRef("HTML DOM") }}
 

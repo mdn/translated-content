@@ -34,11 +34,11 @@ En _Figure 2_, étant donné l'entrée 'X', l'état peut persister ou passer à 
 
 Notez que toute {{Glossary("regular expression","expression régulière")}} peut être représentée par une machine d'état.
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Automate_fini","Automate fini")}} sur Wikipedia
-- {{Interwiki("wikipedia", "Automate_fini#Automates_UML","Automates UML")}} sur Wikipedia
-- {{Interwiki("wikipedia", "Machine_de_Moore","Machine de Moore")}} sur Wikipedia
-- {{Interwiki("wikipedia", "Machine_de_Mealy","Machine de Mealy")}} sur Wikipedia
+- [Automate fini](https://fr.wikipedia.org/wiki/Automate_fini) sur Wikipédia
+- [Automates UML](https://fr.wikipedia.org/wiki/Automate_fini#Automates_UML) sur Wikipédia
+- [Machine de Moore](https://fr.wikipedia.org/wiki/Machine_de_Moore) sur Wikipédia
+- [Machine de Mealy](https://fr.wikipedia.org/wiki/Machine_de_Mealy) sur Wikipédia

@@ -19,10 +19,12 @@ Affiche un message d'erreur dans la console du navigateur.
 
 ## Syntaxe
 
-    console.error(obj1 [, obj2, ..., objN]);
-    console.error(msg [, subst1, ..., substN]);
-    console.exception(obj1 [, obj2, ..., objN]);
-    console.exception(msg [, subst1, ..., substN]);
+```js
+console.error(obj1 [, obj2, ..., objN]);
+console.error(msg [, subst1, ..., substN]);
+console.exception(obj1 [, obj2, ..., objN]);
+console.exception(msg [, subst1, ..., substN]);
+```
 
 > **Note :** `console.exception()` est un alias de `console.error()`; ils sont fonctionnellement identiques.
 
@@ -37,15 +39,13 @@ Affiche un message d'erreur dans la console du navigateur.
 
 Voir [Afficher du texte dans la console](/fr/docs/Web/API/console#Outputting_text_to_the_console) dans la documentation de  {{domxref("console")}} pour plus de détails.
 
-## Spécification
+## Spécifications
 
-| Specification                                                                | Status                           | Comment             |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("Console API", "#error", "console.error()")}} | {{Spec2("Console API")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.error")}}
+{{Compat}}
 
 ## Voir aussi
 

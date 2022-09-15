@@ -5,10 +5,10 @@ translation_of: Web/API/FormData/delete
 ---
 <p>{{APIRef("XMLHttpRequest")}}</p>
 
-<p>O metodo <code><strong>delete()</strong></code> da  interface {{domxref("FormData")}} deleta uma chave/valor pares do Objecto <code>FormData</code> .</p>
+<p>O metodo <code><strong>delete()</strong></code> da  interface {{domxref("FormData")}} deleta uma chave/valor pares do Objecto <code>FormData</code> .</p>
 
 <div class="note">
-<p><strong>Nota</strong>: Este metodo esta Disponivel em <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
+<p><strong>Nota</strong>: Este metodo esta Disponivel em <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
 </div>
 
 <h2 id="Sintaxe">Sintaxe</h2>
@@ -28,11 +28,11 @@ translation_of: Web/API/FormData/delete
 
 <h2 id="Exemplo">Exemplo</h2>
 
-<p>Esta linha cria um objecto <code>FormData</code> vazio e subistitui com a chave/valor pares de  form:</p>
+<p>Esta linha cria um objecto <code>FormData</code> vazio e subistitui com a chave/valor pares de  form:</p>
 
 <pre class="brush: js">var formData = new FormData(myForm);</pre>
 
-<p>Podes deletar chave/valor pares usando <code>delete()</code>:</p>
+<p>Podes deletar chave/valor pares usando <code>delete()</code>:</p>
 
 <pre class="brush: js">formData.delete('username');
 </pre>
@@ -49,84 +49,14 @@ translation_of: Web/API/FormData/delete
   <tr>
    <td>{{SpecName('XMLHttpRequest','#dom-formdata-delete','delete()')}}</td>
    <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Carracteristicas</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte Basico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("39.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Disponivel em Web Workes</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("39.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Caracteristicas</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte Basico</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>
-    <p>{{CompatVersionUnknown}}</p>
-   </td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Disponivel em web workers</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.FormData.delete")}}
 
 <h2 id="Veja_Tambem">Veja Tambem</h2>
 

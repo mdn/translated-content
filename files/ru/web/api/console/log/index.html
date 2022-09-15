@@ -12,7 +12,7 @@ translation_of: Web/API/Console/log
 ---
 <div>{{APIRef("Console API")}}</div>
 
-<p>Выводит сообщение в веб-консоль.</p>
+<p>Выводит сообщение в веб-консоль.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -26,14 +26,14 @@ console.log(<em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]);
 
 <dl>
  <dt><code>obj1</code> ... <code>objN</code></dt>
- <dd>Список объектов JavaScript для вывода. Строковые представления каждого из этих объектов соединяются вместе в указанном порядке и выводятся. Пожалуйста, обратите внимание, что если вы логируете объекты в последних версиях Chrome и Firefox, то что вы вывели в консоль, <em>является ссылкой на объект</em>, и не обязательно является его "значением" на момент вызова <code>console.log()</code>, это значение объекта в тот момент, когда вы кликаете по нему, чтобы открыть.</dd>
+ <dd>Список объектов JavaScript для вывода. Строковые представления каждого из этих объектов соединяются вместе в указанном порядке и выводятся. Пожалуйста, обратите внимание, что если вы логируете объекты в последних версиях Chrome и Firefox, то что вы вывели в консоль, <em>является ссылкой на объект</em>, и не обязательно является его "значением" на момент вызова <code>console.log()</code>, это значение объекта в тот момент, когда вы кликаете по нему, чтобы открыть.</dd>
  <dt><code>msg</code></dt>
  <dd>Строка JavaScript, содержащая 0 и более <a href="/ru/docs/Web/API/console#Using_string_substitutions">подстановочных символов</a> для замены (см. <code>subst1</code> ... <code>substN</code>).</dd>
  <dt><code>subst1</code> ... <code>substN</code></dt>
  <dd>JavaScript-объекты, с помощью которых произойдёт замена подстановочных символов в <code>msg</code>. Это даст вам дополнительный контроль над форматом вывода.</dd>
 </dl>
 
-<p>Больше подробностей смотрите в разделе <a href="/ru/docs/DOM/console#Outputting_text_to_the_console">Вывод текста в консоль </a>документации {{domxref("console")}}.</p>
+<p>Больше подробностей смотрите в разделе <a href="/ru/docs/DOM/console#Outputting_text_to_the_console">Вывод текста в консоль </a>документации {{domxref("console")}}.</p>
 
 <h2 id="Спецификация">Спецификация</h2>
 
@@ -52,26 +52,26 @@ console.log(<em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]);
 <p>Примечание:</p>
 
 <ul>
- <li><code>console.log</code> выводит элемент как HTML-дерево</li>
- <li><code>console.dir</code> выводит элемент как JSON-объект</li>
+ <li><code>console.log</code> выводит элемент как HTML-дерево</li>
+ <li><code>console.dir</code> выводит элемент как JSON-объект</li>
 </ul>
 
-<p>А именно, <code>console.log</code> даёт специальное обращение к DOM-элементам, тогда как <code>console.dir</code> - нет. Это особенно полезно, когда нужно видеть полное представление DOM JS-объектов.</p>
+<p>А именно, <code>console.log</code> даёт специальное обращение к DOM-элементам, тогда как <code>console.dir</code> - нет. Это особенно полезно, когда нужно видеть полное представление DOM JS-объектов.</p>
 
-<p>Больше информации об этой и других функциях в <a href="https://developers.google.com/chrome-developer-tools/docs/console-api#consoledirobject">Chrome Console API reference</a>.</p>
+<p>Больше информации об этой и других функциях в <a href="https://developers.google.com/chrome-developer-tools/docs/console-api#consoledirobject">Chrome Console API reference</a>.</p>
 
 <h2 id="Логирование_объектов">Логирование объектов</h2>
 
-<p>Не используйте <code>console.log(obj);</code>,<br>
- Используйте <code>console.log(JSON.parse(JSON.stringify(obj)));</code>.</p>
+<p>Не используйте <code>console.log(obj);</code>,<br>
+ Используйте <code>console.log(JSON.parse(JSON.stringify(obj)));</code>.</p>
 
-<p>Так вы можете быть уверены, что видите значение <code>obj</code> в момент, его логирования.</p>
+<p>Так вы можете быть уверены, что видите значение <code>obj</code> в момент, его логирования.</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
  <li><a class="external" href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
  <li><a class="external" href="http://msdn.microsoft.com/library/gg589530">MSDN: Using the F12 Tools Console to View Errors and Status</a></li>
- <li><a href="http://getfirebug.com/wiki/index.php/Console_API">Firebug wiki: Console API</a> - Firebug поддерживает дополнительные возможности реализации console.log(), такие как <a href="http://www.softwareishard.com/blog/firebug/firebug-tip-styled-logging/">styled logging</a>.</li>
+ <li><a href="http://getfirebug.com/wiki/index.php/Console_API">Firebug wiki: Console API</a> - Firebug поддерживает дополнительные возможности реализации console.log(), такие как <a href="http://www.softwareishard.com/blog/firebug/firebug-tip-styled-logging/">styled logging</a>.</li>
  <li><a href="http://nodejs.org/docs/latest/api/console.html#console_console_log_data">NodeJS: Console API</a></li>
 </ul>

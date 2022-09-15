@@ -11,7 +11,7 @@ tags:
 translation_of: Web/Guide/Audio_and_video_manipulation
 ---
 <div class="summary">
-<p>Веб-технологии примечательны тем, что они позволяют использовать различные инструменты в совокупности. Например, можно проводить манипуляции над имеющимися в браузере аудио и видео потоками с помощью {{htmlelement("canvas")}}, <a href="/en-US/docs/Web/WebGL">WebGL</a> или <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>: напрямую изменять аудио и видео, т.е. добавлять эффекты к аудио (реверберацию, компрессор), или к видео (фильтры ч/б, сепия и т.д.). В этой статье рассказывается о том, как это сделать.</p>
+<p>Веб-технологии примечательны тем, что они позволяют использовать различные инструменты в совокупности. Например, можно проводить манипуляции над имеющимися в браузере аудио и видео потоками с помощью {{htmlelement("canvas")}}, <a href="/en-US/docs/Web/WebGL">WebGL</a> или <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>: напрямую изменять аудио и видео, т.е. добавлять эффекты к аудио (реверберацию, компрессор), или к видео (фильтры ч/б, сепия и т.д.). В этой статье рассказывается о том, как это сделать.</p>
 </div>
 
 <div class="note">
@@ -24,7 +24,7 @@ translation_of: Web/Guide/Audio_and_video_manipulation
 
 <h3 id="Видео_и_холст_canvas">Видео и холст (canvas)</h3>
 
-<p>Элемент "холст" ({{htmlelement("canvas")}}) — представляет поверхность (область) для рисования графикой на веб-странице. Это очень мощный инструмент, поэтому он может использоваться совместно с видео.</p>
+<p>Элемент "холст" ({{htmlelement("canvas")}}) — представляет поверхность (область) для рисования графикой на веб-странице. Это очень мощный инструмент, поэтому он может использоваться совместно с видео.</p>
 
 <p>Обычно это происходит следующим образом:</p>
 
@@ -35,7 +35,7 @@ translation_of: Web/Guide/Audio_and_video_manipulation
  <li>Pause and repeat.</li>
 </ol>
 
-<p>For example, let's process a video to display it in greyscale. In this case, we'll show both the source video and the output greyscale frames. Ordinarily, if you were implementing a "play video in greyscale" feature, you'd probably add <code>display: none</code> to the style for the <code>&lt;video&gt;</code> element, to keep the source video from being drawn to the screen while showing only the canvas showing the altered frames.</p>
+<p>For example, let's process a video to display it in greyscale. In this case, we'll show both the source video and the output greyscale frames. Ordinarily, if you were implementing a "play video in greyscale" feature, you'd probably add <code>display: none</code> to the style for the <code>&lt;video&gt;</code> element, to keep the source video from being drawn to the screen while showing only the canvas showing the altered frames.</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -103,13 +103,13 @@ translation_of: Web/Guide/Audio_and_video_manipulation
 
 <p>{{EmbedLiveSample("Видео_и_холст_canvas", '100%', 580)}}</p>
 
-<p>This is a pretty simple example showing how to manipulate video frames using a canvas. For efficiency, you should consider using {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} instead of <code>setTimeout()</code> when running on browsers that support it.</p>
+<p>This is a pretty simple example showing how to manipulate video frames using a canvas. For efficiency, you should consider using {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} instead of <code>setTimeout()</code> when running on browsers that support it.</p>
 
 <div class="note">
 <p><strong>Примечание</strong>: Due to potential security issues if your video is on a different domain than your code, you'll need to enable <a href="/en-US/docs/Web/HTTP/Access_control_CORS">CORS (Cross Origin Resource Sharing)</a> on your video server.</p>
 </div>
 
-<h3 id="Видео_и_WebGL">Видео и WebGL</h3>
+<h3 id="Видео_и_WebGL">Видео и WebGL</h3>
 
 <p><a href="/en-US/docs/Web/WebGL">WebGL</a> is a powerful API that uses canvas to draw hardware-accelerated 3D or 2D scenes. You can combine WebGL and the {{htmlelement("video")}} element to create video textures, which means you can put video inside 3D scenes.</p>
 
@@ -123,12 +123,12 @@ translation_of: Web/Guide/Audio_and_video_manipulation
 
 <p>We can also adjust the rate that audio and video plays at using an attribute of the {{htmlelement("audio")}} and {{htmlelement("video")}} element called {{domxref("HTMLMediaElement.playbackRate", "playbackRate")}}. <code>playbackRate</code> is a number that represents a multiple to be applied to the rate of playback, for example 0.5 represents half speed while 2 represents double speed.</p>
 
-<p>Note that the <code>playbackRate</code> property works with both <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code>, but in both cases, it changes the playback speed but <em>not</em> the pitch. To<span style=""> manipulate the audio's pitch you need to use the Web Audio API. See the {{domxref("AudioBufferSourceNode.playbackRate")}} property.</span></p>
+<p>Note that the <code>playbackRate</code> property works with both <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code>, but in both cases, it changes the playback speed but <em>not</em> the pitch. To<span style=""> manipulate the audio's pitch you need to use the Web Audio API. See the {{domxref("AudioBufferSourceNode.playbackRate")}} property.</span></p>
 
 <h4 id="HTML_2">HTML</h4>
 
 <pre class="brush: html">&lt;video id="my-video" controls
-       src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"&gt;
+       src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"&gt;
 &lt;/video&gt;</pre>
 
 <h4 id="JavaScript_2">JavaScript</h4>
@@ -210,7 +210,7 @@ window.addEventListener('load', setPlaybackRate);
    <td>{{domxref("OscillatorNode")}}</td>
   </tr>
   <tr>
-   <td>An audio track from <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> (such as the microphone input you can get using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}.</td>
+   <td>An audio track from <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> (such as the microphone input you can get using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}.</td>
    <td>{{domxref("MediaStreamAudioSourceNode")}}</td>
   </tr>
  </tbody>
@@ -223,7 +223,7 @@ window.addEventListener('load', setPlaybackRate);
 <h4 id="HTML_3">HTML</h4>
 
 <pre class="brush: html">&lt;video id="my-video" controls
-       src="myvideo.mp4" type="video/mp4"&gt;
+       src="myvideo.mp4" type="video/mp4"&gt;
 &lt;/video&gt;</pre>
 
 <h4 id="JavaScript_3">JavaScript</h4>
@@ -290,7 +290,7 @@ window.addEventListener('load', setFilter);
 <p><strong>Примечание</strong>: unless you have <a href="/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a> enabled, to avoid security issues your video should be on the same domain as your code.</p>
 </div>
 
-<h4 id="Типичные_для_аудио_фильтры">Типичные для аудио фильтры</h4>
+<h4 id="Типичные_для_аудио_фильтры">Типичные для аудио фильтры</h4>
 
 <p>These are some of the common types of audio filter you can apply:</p>
 
@@ -322,7 +322,7 @@ source.connect(convolver);
 convolver.connect(context.destination);
 </pre>
 
-<p>See this <a href="https://codepen.io/a2sheppy/pen/JjPgVYL">Codepen</a> for an applied (but very, very silly; like, little kids will giggle kind of silly) example.</p>
+<p>See this <a href="https://codepen.io/a2sheppy/pen/JjPgVYL">Codepen</a> for an applied (but very, very silly; like, little kids will giggle kind of silly) example.</p>
 
 <h3 id="Spatial_audio">Spatial audio</h3>
 

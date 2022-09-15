@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Reference/Operators/new.target
 ---
 <div>{{JSSidebar("Operators")}}</div>
 
-<div>Свойство <strong><code>new.target</code></strong> позволяет определить была ли функция или конструктор вызваны с помощью оператора <a href="/ru/docs/Web/JavaScript/Reference/Operators/new">new</a>. В конструкторах и функциях инстанциированных с помощью оператора <a href="/ru/docs/Web/JavaScript/Reference/Operators/new">new</a>,  <code>new.target</code> возвращает ссылку на конструктор или функцию. При обычном вызове функции <code>new.target</code> имеет значение {{jsxref("undefined")}}.</div>
+<div>Свойство <strong><code>new.target</code></strong> позволяет определить была ли функция или конструктор вызваны с помощью оператора <a href="/ru/docs/Web/JavaScript/Reference/Operators/new">new</a>. В конструкторах и функциях инстанциированных с помощью оператора <a href="/ru/docs/Web/JavaScript/Reference/Operators/new">new</a>,  <code>new.target</code> возвращает ссылку на конструктор или функцию. При обычном вызове функции <code>new.target</code> имеет значение {{jsxref("undefined")}}.</div>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Operators/new.target
 
 <h3 id="new.target_в_вызове_функции">new.target в вызове функции</h3>
 
-<p>При обычном вызове функции (в противоположность вызову в качестве конструктора), <code>new.target</code> имеет значение {{jsxref("undefined")}}. Это позволяет определить была ли вызвана функция как конструктор через <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new</a> или нет.</p>
+<p>При обычном вызове функции (в противоположность вызову в качестве конструктора), <code>new.target</code> имеет значение {{jsxref("undefined")}}. Это позволяет определить была ли вызвана функция как конструктор через <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new</a> или нет.</p>
 
 <pre class="brush: js">function Foo() {
   if (!new.target) throw "Foo() must be called with new";
@@ -37,7 +37,7 @@ Foo(); // ошибка "Foo() must be called with new"
 
 <h3 id="new.target_в_конструкторе">new.target в конструкторе</h3>
 
-<p>В конструкторе класса, <code>new.target</code> ссылается на конструктор, который был непосредственно вызван <code>new</code>. Это верно и для случая, когда <code>new.target</code> находится в конструкторе родительского класса, а тот в свою очередь вызывается из конструктора дочернего класса.</p>
+<p>В конструкторе класса, <code>new.target</code> ссылается на конструктор, который был непосредственно вызван <code>new</code>. Это верно и для случая, когда <code>new.target</code> находится в конструкторе родительского класса, а тот в свою очередь вызывается из конструктора дочернего класса.</p>
 
 <pre class="brush: js">class A {
   constructor() {

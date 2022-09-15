@@ -9,7 +9,9 @@ La méthode **`CanvasRenderingContext2D.moveTo()`** de l'API Canvas 2D déplace 
 
 ## Syntaxe
 
-    void ctx.moveTo(x, y);
+```js
+void ctx.moveTo(x, y);
+```
 
 ### Paramètres
 
@@ -89,13 +91,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Specification                                                                                                                            | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-moveto", "CanvasRenderingContext2D.moveTo")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.moveTo")}}
+{{Compat}}
 
 ## Voir aussi
 

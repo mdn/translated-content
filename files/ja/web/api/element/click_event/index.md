@@ -1,20 +1,6 @@
 ---
 title: 'Element: click イベント'
 slug: Web/API/Element/click_event
-tags:
-  - API
-  - DOM
-  - Element
-  - イベント
-  - インターフェイス
-  - MouseEvent
-  - NeedsBrowserCompatibility
-  - NeedsMobileBrowserCompatibility
-  - リファレンス
-  - UI
-  - click
-  - マウス
-translation_of: Web/API/Element/click_event
 ---
 {{APIRef}}
 
@@ -62,7 +48,7 @@ Internet Explorer 8 と 9 は、 {{cssxref("background-color")}} の計算値が
   - {{cssxref("background-color")}}`: rgba(0,0,0,0)` に設定する
   - {{cssxref("opacity")}}`: 0` に設定し、{{cssxref("background-color")}} を明示的に [`transparent`](/ja/docs/Web/CSS/color_value#transparent_keyword) 以外に設定する
 
-- IE8 および IE9 の場合: filter: alpha(opacity=0);` に設定し、 {{cssxref("background-color")}} を明示的に [`transparent`](/ja/docs/Web/CSS/color_value#transparent_keyword) 以外に設定する
+- IE8 および IE9 の場合: `filter: alpha(opacity=0);` に設定し、 {{cssxref("background-color")}} を明示的に [`transparent`](/ja/docs/Web/CSS/color_value#transparent_keyword) 以外に設定する
 
 ## Safari Mobile
 

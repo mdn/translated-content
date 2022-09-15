@@ -341,9 +341,7 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a>
       </td>
       <td>
-        À partir de la spécification
-        {{SpecName('HTML Media Capture', '#the-capture-attribute', 'media capture')}},
-        spécifie qu'un nouveau fichier peut être capturé.
+        À partir de la spécification <i lang="en">HTML Media Capture</i>, spécifie qu'un nouveau fichier peut être capturé.
       </td>
     </tr>
     <tr>
@@ -1325,7 +1323,7 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Element/html#attr-manifest"
           ><code>manifest</code></a
         >
-        {{obsolete_inline}}
+        {{deprecated_inline}}
       </td>
       <td>
         <a href="/fr/docs/Web/HTML/Element/html"><code>&#x3C;html></code></a>

@@ -14,7 +14,9 @@ Le pseudo-élément **`::-webkit-search-results-button`** représente le bouton 
 
 ## **Syntaxe**
 
-     selecteur::-webkit-search-results-button
+```css
+selecteur::-webkit-search-results-button
+```
 
 ## Spécifications
 

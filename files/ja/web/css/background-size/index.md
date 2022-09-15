@@ -1,14 +1,6 @@
 ---
 title: background-size
 slug: Web/CSS/background-size
-tags:
-  - CSS
-  - CSS 背景
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.background-size
-translation_of: Web/CSS/background-size
 ---
 {{CSSRef}}
 
@@ -85,7 +77,7 @@ background-size: unset;
 
 固有の寸法と比率に基づき、背景画像の描画寸法は以下のようにして計算されます。
 
-- **`background-size` の幅と高さがともに定義されていて `auto` でない場合:** 背景画像は指定の寸法で描画されます。 
+- **`background-size` の幅と高さがともに定義されていて `auto` でない場合:** 背景画像は指定の寸法で描画されます。
 - **`background-size` が `contain` または `cover` の場合:** 固有の比率を維持するため、画像は背景配置領域の中に収まるか、背景配置領域を覆うように描画されます。画像が固有の比率を持たない場合は、背景配置領域の寸法で描画されます。
 - **`background-size` が `auto` または `auto auto` の場合:**
 

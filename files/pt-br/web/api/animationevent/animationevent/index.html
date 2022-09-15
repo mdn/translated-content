@@ -11,7 +11,7 @@ translation_of: Web/API/AnimationEvent/AnimationEvent
 ---
 <p>{{APIRef("Web Animations API")}}{{SeeCompatTable}}</p>
 
-<p><code><font face="Open Sans, Arial, sans-serif">O construtor </font><strong>AnimationEvent()</strong></code>retorna o recente criado {{domxref("AnimationEvent")}}, representando um evento em relação a animação.</p>
+<p><code><font face="Open Sans, Arial, sans-serif">O construtor </font><strong>AnimationEvent()</strong></code>retorna o recente criado {{domxref("AnimationEvent")}}, representando um evento em relação a animação.</p>
 
 <h2 id="Síntaxe">Síntaxe</h2>
 
@@ -22,17 +22,17 @@ translation_of: Web/API/AnimationEvent/AnimationEvent
 
 <h3 id="Argumentos">Argumentos</h3>
 
-<p><em>O construtor <code>AnimationEvent()</code></em><em> também herda argumentos do {{domxref("Event.Event", "Event()")}}.</em></p>
+<p><em>O construtor <code>AnimationEvent()</code></em><em> também herda argumentos do {{domxref("Event.Event", "Event()")}}.</em></p>
 
 <dl>
  <dt><code>type</code></dt>
- <dd>Um {{domxref("DOMString")}} representando o nome do tipo de <code>AnimationEvent</code>. É caso sensitivo e pode ser: <code>'animationstart'</code>, <code>'animationend'</code>, ou <code>'animationiteration'</code>.</dd>
+ <dd>Um {{domxref("DOMString")}} representando o nome do tipo de <code>AnimationEvent</code>. É caso sensitivo e pode ser: <code>'animationstart'</code>, <code>'animationend'</code>, ou <code>'animationiteration'</code>.</dd>
  <dt><code>animationName</code> {{optional_inline}}</dt>
- <dd>Um{{domxref("DOMString")}} contendo o valor do {{cssxref("animation-name")}} propriedade CSS associada com a transição. É por padrão <code>""</code>.</dd>
+ <dd>Um{{domxref("DOMString")}} contendo o valor do {{cssxref("animation-name")}} propriedade CSS associada com a transição. É por padrão <code>""</code>.</dd>
  <dt><code>elapsedTime</code> {{optional_inline}}</dt>
- <dd>Um ponto flutuante dando a quantidade de tempo que a animação esteve rodando, em segundos, quando o evento termina, excluindo qualquer tempo que ela passou pausada. Para um evento <code>"animationstart"</code>, <code>elapsedTime</code> é <code>0.0</code> a não ser que haja um valor negativo para <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-delay" title="The animation-delay CSS property specifies when the animation should start. This lets the animation sequence begin some time after it's applied to an element.">animation-delay</a></code>, nesse caso o evento terminará com <code>elapsedTime contendo</code>  <code>(-1 * </code><em>delay</em><code>)</code>. É por padrão <code>0.0</code>.</dd>
+ <dd>Um ponto flutuante dando a quantidade de tempo que a animação esteve rodando, em segundos, quando o evento termina, excluindo qualquer tempo que ela passou pausada. Para um evento <code>"animationstart"</code>, <code>elapsedTime</code> é <code>0.0</code> a não ser que haja um valor negativo para <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-delay" title="The animation-delay CSS property specifies when the animation should start. This lets the animation sequence begin some time after it's applied to an element.">animation-delay</a></code>, nesse caso o evento terminará com <code>elapsedTime contendo</code>  <code>(-1 * </code><em>delay</em><code>)</code>. É por padrão <code>0.0</code>.</dd>
  <dt><code>pseudoElement</code> {{optional_inline}}</dt>
- <dd>É um <code>{{domxref("DOMString")}}</code>, começando com<code>"::"</code>, contendo o nome do <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements" title="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> que a animação roda. Se a animação não roda em um pseudo-elementomas em um elemento, então temos um <em>string</em> vazio <code>"" .</code>É por padrão <code>""</code>. </dd>
+ <dd>É um <code>{{domxref("DOMString")}}</code>, começando com<code>"::"</code>, contendo o nome do <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements" title="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> que a animação roda. Se a animação não roda em um pseudo-elementomas em um elemento, então temos um <em>string</em> vazio <code>"" .</code>É por padrão <code>""</code>. </dd>
 </dl>
 
 <h2 id="Especificações">Especificações</h2>
@@ -56,76 +56,9 @@ translation_of: Web/API/AnimationEvent/AnimationEvent
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p><code>{{ CompatibilityTable() }}</code></p>
+{{Compat("api.AnimationEvent.AnimationEvent")}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(43.0)}}</td>
-   <td>{{ CompatGeckoDesktop("23.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>pseudoElement</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("23.0") }}</td>
-   <td>
-    <p>{{CompatNo}}</p>
-   </td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("23.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(43.0)}}</td>
-  </tr>
-  <tr>
-   <td><code>pseudoElement</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("23.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="Veja_também">Veja também </h2>
+<h2 id="Veja_também">Veja também </h2>
 
 <ul>
  <li><a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_animations">Usando animações CSS</a>.</li>

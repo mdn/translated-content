@@ -21,7 +21,9 @@ Voir également {{jsxref("Array.prototype.reduce()")}} pour une méthode qui ré
 
 ## Syntaxe
 
-    arr.reduceRight(callback[, valeurInitiale])
+```js
+arr.reduceRight(callback[, valeurInitiale])
+```
 
 ### Paramètres
 

@@ -1,11 +1,6 @@
 ---
 title: 名前付きグリッド線を使用したレイアウト
 slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
-tags:
-  - CSS
-  - CSS グリッド
-  - ガイド
-translation_of: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 ---
 {{CSSRef}}
 

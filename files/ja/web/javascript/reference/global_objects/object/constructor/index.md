@@ -1,13 +1,6 @@
 ---
 title: Object.prototype.constructor
 slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
-tags:
-  - JavaScript
-  - Object
-  - プロパティ
-  - Prototype
-browser-compat: javascript.builtins.Object.constructor
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/constructor
 ---
 {{JSRef}}
 
@@ -17,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/constructor
 
 ## 解説
 
-(`Object.create(null)` で生成されたオブジェクトを除いて) すべてのオブジェクトが `constructor` プロパティを持っています。明示的にコンストラクター関数を用いることなく生成されたオブジェクト (オブジェクトリテラルや配列リテラルなど) は、 `constructor` プロパティがそのオブジェクトの基礎オブジェクトのコンストラクター型を指します。
+(`Object.create(null)` で生成されたオブジェクトを除いて) すべてのオブジェクトが `constructor` プロパティを持っています。明示的にコンストラクター関数を用いることなく生成されたオブジェクト (オブジェクトリテラルや配列リテラルなど) は、 `constructor` プロパティがそのオブジェクトの基礎オブジェクトのコンストラクター型を指します。
 
 ```js
 let o = {}

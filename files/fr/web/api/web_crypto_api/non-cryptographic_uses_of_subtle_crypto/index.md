@@ -66,7 +66,7 @@ async function empreinteFichier(fichier) {
   // On utilise l'API SubtleCrypto pour calculer une empreinte SHA256
   // de l'ArrayBuffer avec le contenu du fichier.
   // L'empreinte résultante est stockée dans un ArrayBuffer
-	const empreinteArrayBuffer = await crypto.subtle.digest('SHA-256', arrayBuffer);
+  const empreinteArrayBuffer = await crypto.subtle.digest('SHA-256', arrayBuffer);
 
   // Pour l'afficher comme une chaîne de caractère, on récupère la valeur
   // de chaque octet afin d'en afficher la valeur hexadécimale
@@ -79,7 +79,7 @@ async function empreinteFichier(fichier) {
   // entre 0 et 16, dont chacun contient 4 bits d'information. Aussi, deux
   // chiffres hexadécimaux stockent 8 bits (soit 1 octet). 
   const empreinteTexte = Array.from(uint8VueEmpreinte).map(b => b.toString(16).padStart(2, '0')).join('');
-	return empreinteTexte;
+  return empreinteTexte;
 }
 
 async function calculerEmpreinteFichiers(e) {

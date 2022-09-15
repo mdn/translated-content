@@ -1,15 +1,6 @@
 ---
 title: ':nth-last-child()'
 slug: Web/CSS/:nth-last-child
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.nth-last-child
-translation_of: Web/CSS/:nth-last-child
 ---
 {{CSSRef}}
 
@@ -106,12 +97,12 @@ tr:nth-last-child(-n+3) {
 
 /* 後ろから 2 番目から最初までの要素を選択 */
 tr:nth-last-child(n+2) {
-  color: blue;
+  color: blue;
 }
 
 /* 後ろから 2 番目の要素のみを選択 */
 tr:nth-last-child(2) {
-  font-weight: 600;
+  font-weight: 600;
 }
 ```
 

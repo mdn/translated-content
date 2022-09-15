@@ -43,13 +43,9 @@ Vous pouvez également en lire plus sur le fonctionnement de cet exemple dans l'
 
 ## Spécifications
 
-| Spécification                            | État                                 | Commentaires         |
-| ---------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Permissions API')}} | {{Spec2('Permissions API')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
-
-### Interface `Permissions`
 
 {{Compat("api.Permissions")}}
 

@@ -15,15 +15,19 @@ La propriété **`Element.attributes`** renvoie une collection des noeuds d'attr
 
 ## Syntaxe
 
-    var attr = element.attributes;
+```js
+var attr = element.attributes;
+```
 
 ## Exemple
 
 ### Exemples basiques
 
-    // récupère le premier élément <p> du document
-    var para = document.getElementsByTagName("p")[0];
-    var attr = para.attributes;
+```js
+// récupère le premier élément <p> du document
+var para = document.getElementsByTagName("p")[0];
+var attr = para.attributes;
+```
 
 ### Énumération des attributs d'éléments
 
@@ -70,20 +74,13 @@ L'exemple suivant parcourt les nœuds d'attribut de l'élément du document avec
 </html>
 ```
 
-
-
 ## Spécifications
 
-| Spécification                                                                                        | Status                           | Comment                                                                                                 |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-element-attributes', 'Element.attributes')}} | {{Spec2('DOM WHATWG')}} | De {{SpecName('DOM3 Core')}}, déplacé de {{domxref("Node")}} à {{domxref("Element")}} |
-| {{SpecName('DOM3 Core', 'core.html#ID-84CF096', 'Element.attributes')}}     | {{Spec2('DOM3 Core')}}     | Pas de changement de {{SpecName('DOM2 Core')}}                                                   |
-| {{SpecName('DOM2 Core', 'core.html#ID-84CF096', 'Element.attributes')}}     | {{Spec2('DOM2 Core')}}     | Pas de changement de {{SpecName('DOM1')}}                                                       |
-| {{SpecName('DOM1', 'level-one-core.html#ID-84CF096', 'Element.attributes')}} | {{Spec2('DOM1')}}         | Définition initiale.                                                                                    |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.attributes")}}
+{{Compat}}
 
 ## Voir aussi
 

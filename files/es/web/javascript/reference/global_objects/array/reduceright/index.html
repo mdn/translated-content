@@ -15,7 +15,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/reduceRight
 
 <h2 id="Resumen" name="Resumen">Resumen</h2>
 
-<p>Aplica una función simultáneamente contra un acumulador y cada elemento de un array (de derecha a izquierda) para reducirlo a un único valor.</p>
+<p>Aplica una función simultáneamente contra un acumulador y cada elemento de un array (de derecha a izquierda) para reducirlo a un único valor.</p>
 
 <h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
 
@@ -104,7 +104,7 @@ valorPrevio = 20, valorActual = 0, indice = 0
   Array.prototype.reduceRight = function(fun /*, inicial*/)
   {
     var longitud = this.length;
-    if (typeof fun != "function")
+    if (typeof fun != "function")
       throw new TypeError();
 
     // no se devuelve ningún valor si no hay valor inicial y el array está vacío

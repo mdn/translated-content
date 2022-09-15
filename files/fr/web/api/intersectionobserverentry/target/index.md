@@ -15,7 +15,9 @@ La propriété en lecture seule **`target`** de l'interface {{domxref("Intersect
 
 ## Syntaxe
 
-    var target = IntersectionObserverEntry.target;
+```js
+var target = IntersectionObserverEntry.target;
+```
 
 ### Valeur
 
@@ -39,10 +41,8 @@ Pour voir un exemple plus concret, vous pouvez vous renseigner sur l'{{SectionOn
 
 ## Spécifications
 
-| Spécification                                                                                                                                            | Statut                                       | Commentaire         |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------- |
-| {{SpecName('IntersectionObserver', '#dom-intersectionobserverentry-target', 'IntersectionObserverEntry.target')}} | {{Spec2('IntersectionObserver')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IntersectionObserverEntry.target")}}
+{{Compat}}

@@ -1,14 +1,6 @@
 ---
 title: 代入 (=)
 slug: Web/JavaScript/Reference/Operators/Assignment
-tags:
-  - 代入演算子
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.assignment
-translation_of: Web/JavaScript/Reference/Operators/Assignment
 ---
 {{jsSidebar("Operators")}}
 
@@ -46,4 +38,4 @@ x = y = z // x, y そして z はすべて 25
 
 ## 関連情報
 
-- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment)
+- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#代入演算子)

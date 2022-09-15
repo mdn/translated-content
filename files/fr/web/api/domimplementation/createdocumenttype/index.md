@@ -15,7 +15,9 @@ La méthode **`DOMImplementation.createDocumentType()`** renvoie un objet {{domx
 
 ## Syntaxe
 
-    doctype = document.implementation.createDocumentType(qualifiedNameStr, publicId, systemId)
+```js
+doctype = document.implementation.createDocumentType(qualifiedNameStr, publicId, systemId)
+```
 
 ### Paramètres
 
@@ -40,17 +42,13 @@ var d = document.implementation.createDocument('http://www.w3.org/2000/svg', 'sv
 alert(d.doctype.publicId); // -//W3C//DTD SVG 1.1//EN
 ```
 
-##  Spécifications
+## Spécifications
 
-| Spécification                                                                                                                                        | Statut                           | Commentaire                                             |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-domimplementation-createdocumenttype', 'DOMImplementation.createDocumentType')}} | {{Spec2('DOM WHATWG')}} | Pas de modification de {{SpecName("DOM3 Core")}} |
-| {{SpecName('DOM3 Core', 'core.html#Level-2-Core-DOM-createDocType', 'DOMImplementation.createDocumentType')}}     | {{Spec2('DOM3 Core')}}     | Pas de modification de {{SpecName("DOM2 Core")}} |
-| {{SpecName('DOM2 Core', 'core.html##Level-2-Core-DOM-createDocType', 'DOMImplementation.createDocumentType')}} | {{Spec2('DOM2 Core')}}     | Définition initiale.                                    |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMImplementation.createDocumentType")}}
+{{Compat}}
 
 ## Voir aussi
 

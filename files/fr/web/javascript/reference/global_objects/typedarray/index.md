@@ -113,7 +113,7 @@ Où _TypedArray_ est un constructeur donné pour un type de tableau typé exista
 - [`TypedArray.prototype.forEach()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/forEach)
   - : Appelle une fonction pour chaque élément du tableau. Voir aussi [`Array.prototype.forEach()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach).
 - [`TypedArray.prototype.includes()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/includes)
-  - : Détermine si un tableau typé inclut un certain élément, renvoyant 
+  - : Détermine si un tableau typé inclut un certain élément, renvoyant
     `true` ou `false` selon le cas de figure. Voir aussi [`Array.prototype.includes()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/includes).
 - [`TypedArray.prototype.indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf)
   - : Renvoie le plus petit indice d'un élément du tableau qui est égal à la valeur fournie en argument, ou `-1` si aucun élément n'est trouvé. Voir aussi [`Array.prototype.indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf).

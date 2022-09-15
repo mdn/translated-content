@@ -19,7 +19,9 @@ Un espace mémoire créé depuis du code JavaScript ou depuis du code WebAssembl
 
 ## Syntaxe
 
-    var maMemoire = new WebAssembly.Memory(descripteurMemoire);
+```js
+var maMemoire = new WebAssembly.Memory(descripteurMemoire);
+```
 
 ### Paramètres
 

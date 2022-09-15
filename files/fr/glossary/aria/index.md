@@ -11,6 +11,6 @@ original_slug: Glossaire/ARIA
 
 Par exemple, vous pouvez ajouter l'attribut  `role="alert"` à un élément {{HTMLElement("p")}} pour notifier à un utilisateur malvoyant l'importance et l'urgence de l'information (pour un utilisateur sans problème de vue, cette information pourrait être mise en exergue par un texte coloré différemment).
 
-## Pour approfondir
+## Voir aussi
 
 - [ARIA](/fr/docs/Accessibilit%C3%A9/ARIA) sur MDN

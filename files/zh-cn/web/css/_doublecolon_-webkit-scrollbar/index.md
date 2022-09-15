@@ -1,16 +1,6 @@
 ---
 title: '::-webkit-scrollbar'
 slug: 'Web/CSS/::-webkit-scrollbar'
-tags:
-  - '::-webkit-scrollbar'
-  - CSS
-  - CSS Selectors
-  - CSS:WebKit Extensions
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
-translation_of: 'Web/CSS/::-webkit-scrollbar'
 ---
 {{CSSRef}}{{Non-standard_Header}}
 
@@ -18,7 +8,7 @@ translation_of: 'Web/CSS/::-webkit-scrollbar'
 
 > **备注：** 如果没有设置 `overflow:scroll;`，元素的滚动条将不会显示。
 
-> **备注：** `::-webkit-scrollbar` 仅在基于 [Blink](https://www.chromium.org/blink) 或 [WebKit](https://webkit.org) 的浏览器（例如, Chrome、Edge、Opera、Safari、iOS 上所有的浏览器，以及[其它基于 WebKit 的浏览器](https://zh.wikipedia.org/wiki/网页浏览器列表#基於WebKit排版引擎)）上可用。滚动条样式的标准方法可用于 {{cssxref("scrollbar-color")}} 和 {{cssxref("scrollbar-width")}}。
+> **备注：** `::-webkit-scrollbar` 仅在基于 [Blink](https://www.chromium.org/blink) 或 [WebKit](https://webkit.org) 的浏览器（例如，Chrome、Edge、Opera、Safari、iOS 上所有的浏览器，以及[其它基于 WebKit 的浏览器](https://zh.wikipedia.org/wiki/网页浏览器列表#基於WebKit排版引擎)）上可用。滚动条样式的标准方法可用于 {{cssxref("scrollbar-color")}} 和 {{cssxref("scrollbar-width")}}。
 
 ## CSS 滚动条选择器
 
@@ -101,33 +91,7 @@ Who thought scrollbars could be made weeeeird?
 
 ## 浏览器兼容性
 
-### `::-webkit-scrollbar`
-
-{{Compat("css.selectors.-webkit-scrollbar")}}
-
-### `::-webkit-scrollbar-button`
-
-{{Compat("css.selectors.-webkit-scrollbar-button")}}
-
-### `::-webkit-scrollbar-thumb`
-
-{{Compat("css.selectors.-webkit-scrollbar-thumb")}}
-
-### `::-webkit-scrollbar-track`
-
-{{Compat("css.selectors.-webkit-scrollbar-track")}}
-
-### `::-webkit-scrollbar-track-piece`
-
-{{Compat("css.selectors.-webkit-scrollbar-track-piece")}}
-
-### `::-webkit-scrollbar-corner`
-
-{{Compat("css.selectors.-webkit-scrollbar-corner")}}
-
-### `::-webkit-resizer`
-
-{{Compat("css.selectors.-webkit-resizer")}}
+{{Compat}}
 
 ## 参见
 

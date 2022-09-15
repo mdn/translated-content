@@ -12,9 +12,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 ---
 <div>{{JSRef}}</div>
 
-<p>O <strong>construtor</strong> <code><strong>Async</strong></code><strong><code>Function</code> </strong>cria um novo objeto {{jsxref("Statements/async_function", "async function")}}. Em JavaScript cada função assíncrona é atualmente um objeto do tipo <code>AsyncFunction</code>.</p>
+<p>O <strong>construtor</strong> <code><strong>Async</strong></code><strong><code>Function</code> </strong>cria um novo objeto {{jsxref("Statements/async_function", "async function")}}. Em JavaScript cada função assíncrona é atualmente um objeto do tipo <code>AsyncFunction</code>.</p>
 
-<p>Note que<code>AsyncFunction</code> não é um objeto global. Ele poderia ser obtido analisando o seguinte código:</p>
+<p>Note que<code>AsyncFunction</code> não é um objeto global. Ele poderia ser obtido analisando o seguinte código:</p>
 
 <pre class="brush: js">Object.getPrototypeOf(async function(){}).constructor
 </pre>
@@ -27,33 +27,33 @@ translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 
 <dl>
  <dt><code>arg1, arg2, ... arg<em>N</em></code></dt>
- <dd>Nomes que vão ser usados pela função como argumentos formais. Cada um deve ser uma string que corresponde a um indentificador JavaScript válido ou uma lista das strings separadas com uma vírgula; por exemplo "<code>x</code>", "<code>oValor</code>", or "<code>a,b</code>".</dd>
+ <dd>Nomes que vão ser usados pela função como argumentos formais. Cada um deve ser uma string que corresponde a um indentificador JavaScript válido ou uma lista das strings separadas com uma vírgula; por exemplo "<code>x</code>", "<code>oValor</code>", or "<code>a,b</code>".</dd>
  <dt><code>functionBody</code></dt>
  <dd>Uma string contendo as declarações JavaScript que compõem a definição da função.</dd>
 </dl>
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Objetos {{jsxref("Statements/async_function", "async function")}} criados com o construtor <code>AsyncFunction</code> são tratados quando a função é criada. Isso é menos eficiente que declarar uma função async com a {{jsxref("Statements/async_function", "expression async function")}} e chama-la com seu código, porque essas funções são tratadas com o resto do código.</p>
+<p>Objetos {{jsxref("Statements/async_function", "async function")}} criados com o construtor <code>AsyncFunction</code> são tratados quando a função é criada. Isso é menos eficiente que declarar uma função async com a {{jsxref("Statements/async_function", "expression async function")}} e chama-la com seu código, porque essas funções são tratadas com o resto do código.</p>
 
 <p>Todos os argumentos passado para a função são tratados como nomes dos identificadores dos parâmetros na função que vai ser criada, na ordem que eles são passados.</p>
 
 <div class="note">
-<p><strong>Nota:</strong> {{jsxref("Statements/async_function", "async functions")}} criadas com o construtor <code>AsyncFunction</code> não cria closures para seus contextos de criação; elas sempre criadas no escopo global. Quando rodar eles, eles só poderão acessar suas variáveis local e as globais, mas não as que estão no escopo que o construtor foi <code>AsyncFunction</code> chamado. Isso é diferente de usar {{jsxref("Global_Objects/eval", "eval")}} com código para uma expressão async function.</p>
+<p><strong>Nota:</strong> {{jsxref("Statements/async_function", "async functions")}} criadas com o construtor <code>AsyncFunction</code> não cria closures para seus contextos de criação; elas sempre criadas no escopo global. Quando rodar eles, eles só poderão acessar suas variáveis local e as globais, mas não as que estão no escopo que o construtor foi <code>AsyncFunction</code> chamado. Isso é diferente de usar {{jsxref("Global_Objects/eval", "eval")}} com código para uma expressão async function.</p>
 </div>
 
-<p>Invocar o construtor <code>AsyncFunction</code> como uma função (sem usar o operador <code>new</code>) tem o mesmo efeito de invocá-lo como um construtor.</p>
+<p>Invocar o construtor <code>AsyncFunction</code> como uma função (sem usar o operador <code>new</code>) tem o mesmo efeito de invocá-lo como um construtor.</p>
 
 <h2 id="Propriedas">Propriedas</h2>
 
 <dl>
  <dt><code><strong>AsyncFunction.length</strong></code></dt>
- <dd>A propriedade tamanho do construtor da <code>AsyncFunction</code> cujo valor é 1.</dd>
+ <dd>A propriedade tamanho do construtor da <code>AsyncFunction</code> cujo valor é 1.</dd>
  <dt>{{jsxref("AsyncFunction.prototype")}}</dt>
  <dd>Permite a adição de propriedades para todos os objetos async function.</dd>
 </dl>
 
-<h2 id="AsyncFunction_prototype_object"><code>AsyncFunction </code>prototype object</h2>
+<h2 id="AsyncFunction_prototype_object"><code>AsyncFunction </code>prototype object</h2>
 
 <h3 id="Propriedades">Propriedades</h3>
 
@@ -61,11 +61,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 
 <h2 id="AsyncFunction_instances"><code>AsyncFunction</code> instances</h2>
 
-<p>Instância <code>AsyncFunction</code> herdam métodos e propriedades do {{jsxref("AsyncFunction.prototype")}}. Com todos os contrutores, que podem mudar o prototype do objeto construtor para fazer mudanças em todas as instâncias do <code>AsyncFunction</code>.</p>
+<p>Instância <code>AsyncFunction</code> herdam métodos e propriedades do {{jsxref("AsyncFunction.prototype")}}. Com todos os contrutores, que podem mudar o prototype do objeto construtor para fazer mudanças em todas as instâncias do <code>AsyncFunction</code>.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Criando_uma_async_function_a_partir_do_construtor_de_uma_AsyncFunction">Criando uma async function a partir do construtor de uma <code>AsyncFunction</code></h3>
+<h3 id="Criando_uma_async_function_a_partir_do_construtor_de_uma_AsyncFunction">Criando uma async function a partir do construtor de uma <code>AsyncFunction</code></h3>
 
 <pre class="brush: js">function resolveAfter2Seconds(x) {
   return new Promise(resolve =&gt; {
@@ -107,59 +107,7 @@ a(10, 20).then(v =&gt; {
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th> Edge</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(55)}}</td>
-   <td>{{CompatGeckoDesktop("52.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOpera(42)}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("52.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOpera(42)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(55)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.AsyncFunction")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

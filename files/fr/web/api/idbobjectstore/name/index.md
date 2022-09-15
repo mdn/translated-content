@@ -17,8 +17,10 @@ La propriété **`name`**, rattachée à l'interface {{domxref("IDBObjectStore")
 
 ## Syntaxe
 
-    var nomDuMagasin = IDBObjectStore.name;
-    IDBObjectStore.name = nouveauNom;
+```js
+var nomDuMagasin = IDBObjectStore.name;
+IDBObjectStore.name = nouveauNom;
+```
 
 ### Valeur
 
@@ -88,13 +90,11 @@ function addData() {
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-name', 'name')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBObjectStore.name")}}
+{{Compat}}
 
 ## Voir aussi
 

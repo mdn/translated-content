@@ -19,7 +19,7 @@ Dans cet article, nous allons préciser le concept d'images adaptatives — imag
         >
         et
         <a
-          href="/fr/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
+          href="/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
           >comment ajouter des images statiques à une page web</a
         >.
       </td>
@@ -98,9 +98,9 @@ Les attributs `srcset` et `sizes` paraissent complexes, mais ils ne sont pas dif
 
 **`srcset`** définit l'ensemble des images offertes au choix du navigateur, et la taille de chaque image. Avant chaque virgule, nous avons écrit&nbsp;:
 
-1.  un nom de **fichier image** (`elva-fairy-480w.jpg`),
-2.  un espace,
-3.  la **largeur intrinsèque en pixels** (`480w`) — notez l'utilisation de l'unité `w`, et non `px` comme vous auriez pu penser. C'est la taille réelle de l'image; qui peut être trouvée en examinant les propriétés du fichier image sur l'ordinateur (par exemple sur un Mac, sélectionnez l'image dans le Finder, puis appuyez sur
+1. un nom de **fichier image** (`elva-fairy-480w.jpg`),
+2. un espace,
+3. la **largeur intrinsèque en pixels** (`480w`) — notez l'utilisation de l'unité `w`, et non `px` comme vous auriez pu penser. C'est la taille réelle de l'image; qui peut être trouvée en examinant les propriétés du fichier image sur l'ordinateur (par exemple sur un Mac, sélectionnez l'image dans le Finder, puis appuyez sur
 
     <kbd>Cmd</kbd>
 
@@ -112,20 +112,20 @@ Les attributs `srcset` et `sizes` paraissent complexes, mais ils ne sont pas dif
 
 **`sizes`** définit un ensemble de conditions pour le média (par ex. des largeurs d'écran) et indique quelle taille d'image serait la plus adaptée si certaines conditions sont satisfaites — ce sont les conditions dont nous avons parlé plus haut. Dans ce cas, nous écrivons avant chaque virgule&nbsp;:
 
-1.  une **condition pour le média** (`(max-width:480px)`) — vous pourrez en savoir plus à ce propos dans l'[article sur les CSS](/fr/docs/Learn/CSS), mais pour le moment disons simplement que cette condition pour le média décrit un état possible de l'écran. Dans notre cas, nous disons «&nbsp;si la largeur de fenêtre est de 480 pixels ou moins »,
-2.  une espace,
-3.  **la largeur de la place** occupée par l'image si la condition pour le média est vraie (`440px`).
+1. une **condition pour le média** (`(max-width:600px)`) — vous pourrez en savoir plus à ce propos dans l'[article sur les CSS](/fr/docs/Learn/CSS), mais pour le moment disons simplement que cette condition pour le média décrit un état possible de l'écran. Dans notre cas, nous disons «&nbsp;si la largeur de fenêtre est de 600 pixels ou moins »,
+2. une espace,
+3. **la largeur de la place** occupée par l'image si la condition pour le média est vraie (`480px`).
 
 > **Note :** pour définir une largeur d'emplacement, vous pouvez indiquer une taille absolue (`px`, `em`) ou relative au viewport (`vw`), mais pas en pourcentage. Vous avez peut‑être noté que la dernière largeur d'emplacement ne comporte pas d'indication pour le média — c'est la valeur par défaut retenue quand aucune des conditions n'est vraie). Le navigateur ignore tout ce qui suit dès la première condition concordante&nbsp;; donc soyez attentif à l'ordre de ces conditions pour le média.
 
 Ainsi, une fois ces attributs en place, le navigateur va&nbsp;:
 
-1.  noter la largeur du périphérique,
-2.  vérifier quelle est la première condition vraie pour le média dans la liste des tailles,
-3.  noter la largeur d'emplacement demandée par le média,
-4.  charger l'image référencée dans la liste `srcset` qui est la plus proche de la taille choisie.
+1. noter la largeur du périphérique,
+2. vérifier quelle est la première condition vraie pour le média dans la liste des tailles,
+3. noter la largeur d'emplacement demandée par le média,
+4. charger l'image référencée dans la liste `srcset` qui est la plus proche de la taille choisie.
 
-Et c'est tout&nbsp;! Donc à ce stade, si un navigateur prenant en charge une largeur de vue de 480 px charge la page, la condition pour le média `(max-width: 480px)` sera vraie, donc une largeur d'emplacement de 440px sera choisie, donc le fichier `elva-fairy-480w.jpg` sera chargé, car sa largeur intrinsèque (`480w`) est celle qui est la plus proche de `440px`. L'image 800 px a une taille de 128 Ko sur disque alors que la version 480 px n'occupe que 63 Ko — une économie de 65Ko. Imaginez maintenant qu'il s'agisse d'une page avec beaucoup d'images. L'utilisation de cette technique peut permettre aux personnes naviguant sur mobile d'économiser beaucoup de bande passante.
+Et c'est tout&nbsp;! Donc à ce stade, si un navigateur prenant en charge une largeur de vue de `480px` charge la page, la condition pour le média `(max-width: 600px)` sera vraie, donc une largeur d'emplacement de `480px` sera choisie, donc le fichier `elva-fairy-480w.jpg` sera chargé, car sa largeur intrinsèque (`480w`) est celle qui est la plus proche de `480px`. L'image `800px` a une taille de 128 Ko sur disque alors que la version 480 px n'occupe que 63 Ko — une économie de 65 Ko. Imaginez maintenant qu'il s'agisse d'une page avec beaucoup d'images. L'utilisation de cette technique peut permettre aux personnes naviguant sur mobile d'économiser beaucoup de bande passante.
 
 > **Note :** lorsque vous testez cela avec un navigateur de bureau, si ce dernier échoue à charger l'image la plus étroite alors que vous avez réduit la largeur de la fenêtre au maximum, regardez la taille du <i lang="en">viewport</i> (dont vous pouvez avoir une approximation via l'instruction `document.querySelector("html").clientWidth` dans la console JavaScript). Selon les navigateurs, il existe différentes tailles minimales au-delà desquelles on ne pourra pas plus réduire la fenêtre (tailles minimales qui pourraient être plus larges qu'on ne le pense). Lorsque vous testez avec un navigateur mobile, vous pouvez utiliser les outils comme la page `about:debugging` de Firefox pour inspecter la page chargée sur le mobile à l'aide des outils de développement pour navigateur de bureau.
 >

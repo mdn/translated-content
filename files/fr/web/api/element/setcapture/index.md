@@ -16,7 +16,9 @@ Appelez cette méthode pendant la gestion d'un évènement de la souris pour rec
 
 ## Syntaxe
 
-    element.setCapture(retargetToElement);
+```js
+element.setCapture(retargetToElement);
+```
 
 - `retargetToElement`
   - : Si la valeur est `true` (_vrai_), tous les évènements sont ciblés directement vers cet élément ; si elle est `false` (_faux_), les évènements peuvent aussi être déclenchés sur les descendants de cet élément.

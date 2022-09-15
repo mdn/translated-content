@@ -139,7 +139,7 @@ function updatePosition(offset) {
 }
 ```
 
-La fonction `refresh()` gère l'application de la rotation et de la position à l'aide d'un [SVG transform](/en-US/docs/Web/SVG/Attribute/transform).
+La fonction `refresh()` gère l'application de la rotation et de la position à l'aide d'un [SVG transform](/fr/docs/Web/SVG/Attribute/transform).
 
 ```js
 function refresh() {
@@ -199,10 +199,8 @@ Ce code peut être amélioré de plusieurs manières. La plupart des jeux réels
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires                                                                             |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------------------------------------------- |
-| {{SpecName('UI Events', '#dom-keyboardevent-code', 'KeyboardEvent.code')}} | {{Spec2('UI Events')}} | Définition initiale, inclut les [valeurs de code](https://w3c.github.io/uievents-code/). |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.KeyboardEvent.code")}}
+{{Compat}}

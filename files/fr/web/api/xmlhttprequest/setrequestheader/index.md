@@ -15,9 +15,11 @@ Pour des raisons de sécurité, certain header ne peuvent être manipulés que p
 
 > **Note :** Dans certain cas, vous pourrez rencontrer l'erreur / exception "**not allowed by Access-Control-Allow-Headers in preflight response**" quand vous enverez une requête cross domains. Dans ce cas, vous devrez configurer {{HTTPHeader("Access-Control-Allow-Headers")}} dans votre réponse HTTP coté serveur.
 
-## Syntax
+## Syntaxe
 
-    XMLHttpRequest.setRequestHeader(header, value)
+```js
+XMLHttpRequest.setRequestHeader(header, value)
+```
 
 ### Paramètre
 
@@ -30,17 +32,15 @@ Pour des raisons de sécurité, certain header ne peuvent être manipulés que p
 
 `undefined`.
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                                        | Status                               | Comment                |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest', '#the-setRequestHeader()-method', 'setRequestHeader()')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
-## Compatibilitée avec les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.XMLHttpRequest.setRequestHeader")}}
+{{Compat}}
 
-## A voir aussi
+## Voir aussi
 
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [Using XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [HTML in XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)

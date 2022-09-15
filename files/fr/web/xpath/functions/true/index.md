@@ -12,7 +12,9 @@ La fonction `true` retourne la valeur booléenne `true`.
 
 ### Syntaxe
 
-    true()
+```
+true()
+```
 
 ### Retour
 

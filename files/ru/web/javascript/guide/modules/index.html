@@ -9,15 +9,15 @@ translation_of: Web/JavaScript/Guide/Modules
 
 <h2 id="Модули_история_вопроса">Модули: история вопроса</h2>
 
-<p>Сначала программы на JavaScript были небольшими — в прежние времена они использовались для изолированных задач, добавляя при необходимости немного интерактивности веб-страницам, так что большие скрипты в основном не требовались. Прошло несколько лет, и вот мы уже видим полномасштабные приложения, работающие в браузерах и содержащие массу кода на JavaScript; кроме того, язык стал использоваться и в других контекстах (например, <a href="/en-US/docs/Glossary/Node.js">Node.js</a>).</p>
+<p>Сначала программы на JavaScript были небольшими — в прежние времена они использовались для изолированных задач, добавляя при необходимости немного интерактивности веб-страницам, так что большие скрипты в основном не требовались. Прошло несколько лет, и вот мы уже видим полномасштабные приложения, работающие в браузерах и содержащие массу кода на JavaScript; кроме того, язык стал использоваться и в других контекстах (например, <a href="/en-US/docs/Glossary/Node.js">Node.js</a>).</p>
 
-<p>Таким образом, в последние годы появились причины на то, чтобы подумать о механизмах деления программ на JavaScript на отдельные модули, которые можно импортировать по мере необходимости. Node.js включал такую возможность уже давно, кроме того, некоторые библиотеки и фреймворки JavaScript разрешали использование модулей (например, <a href="https://en.wikipedia.org/wiki/CommonJS">CommonJS</a> и основанные на <a href="https://github.com/amdjs/amdjs-api/blob/master/AMD.md">AMD</a> системы модулей типа <a href="https://requirejs.org/">RequireJS</a>, а позднее также <a href="https://webpack.github.io/">Webpack</a> и <a href="https://babeljs.io/">Babel</a>).</p>
+<p>Таким образом, в последние годы появились причины на то, чтобы подумать о механизмах деления программ на JavaScript на отдельные модули, которые можно импортировать по мере необходимости. Node.js включал такую возможность уже давно, кроме того, некоторые библиотеки и фреймворки JavaScript разрешали использование модулей (например, <a href="https://en.wikipedia.org/wiki/CommonJS">CommonJS</a> и основанные на <a href="https://github.com/amdjs/amdjs-api/blob/master/AMD.md">AMD</a> системы модулей типа <a href="https://requirejs.org/">RequireJS</a>, а позднее также <a href="https://webpack.github.io/">Webpack</a> и <a href="https://babeljs.io/">Babel</a>).</p>
 
-<p>К счастью, современные браузеры стали сами поддерживать функциональность модулей, о чем и рассказывает эта статья. Этому можно только порадоваться — браузеры могут оптимизировать загрузку модулей, что было бы гораздо эффективнее использования библиотеки, и взять на себя обработку на стороне клиента и прочие накладные расходы.</p>
+<p>К счастью, современные браузеры стали сами поддерживать функциональность модулей, о чем и рассказывает эта статья. Этому можно только порадоваться — браузеры могут оптимизировать загрузку модулей, что было бы гораздо эффективнее использования библиотеки, и взять на себя обработку на стороне клиента и прочие накладные расходы.</p>
 
 <h2 id="Поддержка_в_браузерах">Поддержка в браузерах</h2>
 
-<p>Встроенная обработка модулей JavaScript связана с функциями {{JSxRef("Statements/import", "import")}} и {{JSxRef("Statements/export", "export")}}, которые поддерживаются браузерами следующим образом:</p>
+<p>Встроенная обработка модулей JavaScript связана с функциями {{JSxRef("Statements/import", "import")}} и {{JSxRef("Statements/export", "export")}}, которые поддерживаются браузерами следующим образом:</p>
 
 <h3 id="import">import</h3>
 
@@ -29,7 +29,7 @@ translation_of: Web/JavaScript/Guide/Modules
 
 <h2 id="Пример_использования_модулей">Пример использования модулей</h2>
 
-<p>Для того, чтобы продемонстрировать использование модулей, мы создали <a href="https://github.com/mdn/js-examples/tree/master/modules">простой набор примеров</a>, который вы можете найти на GitHub.
+<p>Для того, чтобы продемонстрировать использование модулей, мы создали <a href="https://github.com/mdn/js-examples/tree/master/module-examples">простой набор примеров</a>, который вы можете найти на GitHub.
   В этих примерах мы создаём элемент <a href="/en-US/docs/Web/HTML/Element/canvas" title="Используйте HTML &lt;canvas> элемент вместе с Canvas API или с WebGL API для отрисовки графики и анимаций."><code>&lt;canvas&gt;</code></a>
   на веб-странице и затем рисуем различные фигуры на нём (и выводим информацию об этом).</p>
 
@@ -41,7 +41,7 @@ translation_of: Web/JavaScript/Guide/Modules
 
 <h2 id="Базовая_структура_примера">Базовая структура примера</h2>
 
-<p>В первом примере (см. директорию <a href="https://github.com/mdn/js-examples/tree/master/modules/basic-modules">basic-modules</a>) у нас следующая структура файлов:</p>
+<p>В первом примере (см. директорию <a href="https://github.com/mdn/js-examples/tree/master/module-examples/basic-modules">basic-modules</a>) у нас следующая структура файлов:</p>
 
 <pre>index.html
 main.js
@@ -82,7 +82,7 @@ modules/
  <li>Это гарантирует, что файлы вашего модуля будут проанализированы как модуль средами выполнения, такими как <a href="https://nodejs.org/api/esm.html#esm_enabling">Node.js</a>, и инструментами сборки, такими как <a href="https://babeljs.io/docs/en/options#sourcetype">Babel</a>.</li>
 </ul>
 
-<p>Тем не менее, мы решили продолжать использовать <code>.js</code>, по крайней мере на данным момент. Чтобы модули корректно работали в браузере, вам нужно убедиться, что ваш сервер отдаёт их с заголовком <code>Content-Type</code>, который содержит JavaScript MIME type такой как <code>text/javascript</code>. В противном случае вы получете ошибку проверки MIME type — "The server responded with a non-JavaScript MIME type", и браузер не сможет запустить ваш JavaScript. Большинство серверов уже имеют правильный тип для <code>.js</code>-файлов, но ещё не имеют нужного MIME type для <code>.mjs</code>-файлов. Серверы, которые уже отдают <code>.mjs</code> файлы корректно, включают в себя <a href="https://pages.github.com/">GitHub Pages</a>и <code><a href="https://github.com/http-party/http-server#readme">http-сервер</a></code> для Node.js.</p>
+<p>Тем не менее, мы решили продолжать использовать <code>.js</code>, по крайней мере на данным момент. Чтобы модули корректно работали в браузере, вам нужно убедиться, что ваш сервер отдаёт их с заголовком <code>Content-Type</code>, который содержит JavaScript MIME type такой как <code>text/javascript</code>. В противном случае вы получете ошибку проверки MIME type — "The server responded with a non-JavaScript MIME type", и браузер не сможет запустить ваш JavaScript. Большинство серверов уже имеют правильный тип для <code>.js</code>-файлов, но ещё не имеют нужного MIME type для <code>.mjs</code>-файлов. Серверы, которые уже отдают <code>.mjs</code> файлы корректно, включают в себя <a href="https://pages.github.com/">GitHub Pages</a>и <code><a href="https://github.com/http-party/http-server#readme">http-сервер</a></code> для Node.js.</p>
 
 <p>Это нормально, если вы уже используете такую среду или ещё нет, но знаете, что делать, и имеете нужные доступы (то есть вы можете настроить свой сервер, чтобы он устанавливал корректный <code><a href="/en-US/docs/Web/HTTP/Headers/Content-Type">Content-Type</a></code>-заголовок для <code>.mjs</code>-файлов).
   Однако это может вызвать путаницу, если вы не контролируете сервер, с которого отдаются файлы, или публикуете файлы для общего пользования, как мы здесь.</p>
@@ -146,7 +146,7 @@ export function draw(ctx, length, x, y, color) {
 
 <pre>./modules/square.js</pre>
 
-<p>Вы можете найти подобные строки кода в файле <code><a href="https://github.com/mdn/js-examples/blob/master/modules/basic-modules/main.js">main.js</a></code>.</p>
+<p>Вы можете найти подобные строки кода в файле <code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/basic-modules/main.js">main.js</a></code>.</p>
 
 <div class="blockIndicator note">
 <p><strong>Примечание</strong>: В некоторых модульных системах вы можете опустить расширение файла и начальные <code>/</code>, <code>./</code>, or <code>../</code> (например <code>'modules/square'</code>). Это не работает в нативных JavaScript-модулях.</p>
@@ -164,7 +164,7 @@ reportPerimeter(square1.length, reportList);
 </pre>
 
 <div class="blockIndicator note">
-<p><strong>Примечание: </strong>
+<p><strong>Примечание: </strong>
   Хотя импортированные функции доступны в файле, они доступны только для чтения.
   Вы не можете изменить импортированную переменную, но вы всё равно можете изменять свойства у <code>const</code>-переменных.
   Кроме того, переменные импортируется как "live bindings" -
@@ -179,10 +179,10 @@ reportPerimeter(square1.length, reportList);
 
 <pre class="brush: html; no-line-numbers">&lt;script type="module" src="main.js"&gt;&lt;/script&gt;</pre>
 
-<p>Вы также можете встроить скрипт модуля непосредственно в HTML-файл, поместив JavaScript-код внутрь <code>&lt;script&gt;</code>-элемента:</p>
+<p>Вы также можете встроить скрипт модуля непосредственно в HTML-файл, поместив JavaScript-код внутрь <code>&lt;script&gt;</code>-элемента:</p>
 
 <pre class="brush: js">&lt;script type="module"&gt;
-  /* код JavaScript модуля */
+  /* код JavaScript модуля */
 &lt;/script&gt;</pre>
 
 <p>Скрипт, в который вы импортируете функционал модуля, в основном действует как модуль верхнего уровня.
@@ -234,7 +234,7 @@ reportPerimeter(square1.length, reportList);
 <pre class="brush: js;">import {default as randomSquare} from './modules/square.js';</pre>
 
 <div class="blockIndicator note">
-<p><strong>Примечание</strong>: «as» синтаксис для переименования экспортируемых элементов поясняется ниже в разделе <a href="#Переименование_импорта_и_экмпорта">Переименование импорта и экмпорта</a>.</p>
+<p><strong>Примечание</strong>: «as» синтаксис для переименования экспортируемых элементов поясняется ниже в разделе <a href="#переименование_импорта_и_экспорта">Переименование импорта и экcпорта</a>.</p>
 </div>
 
 <h2 id="Как_избежать_конфликтов_имён">Как избежать конфликтов имён</h2>
@@ -246,7 +246,7 @@ reportPerimeter(square1.length, reportList);
 
 <p>К счастью, есть несколько способов обойти это. Мы рассмотрим их в следующих разделах.</p>
 
-<h2 id="Переименование_импорта_и_экспорта">Переименование импорта и экспорта</h2>
+<h2 id="переименование_импорта_и_экспорта">Переименование импорта и экспорта</h2>
 
 <p>Внутри фигурных скобок инструкций <code>import</code> и <code>export</code> вы можете использовать ключевое слово <code>as</code> вместе с новым именем функционала, чтобы задать ему новое имя, которое вы будете использовать для него внутри модуля верхнего уровня.</p>
 
@@ -268,7 +268,7 @@ export { function1, function2 };
 import { function1 as newFunctionName,
          function2 as anotherNewFunctionName } from './modules/module.js';</pre>
 
-<p>Давайте посмотрим на реальный пример. В нашей <a href="https://github.com/mdn/js-examples/tree/master/modules/renaming">renaming</a> директории
+<p>Давайте посмотрим на реальный пример. В нашей <a href="https://github.com/mdn/js-examples/tree/master/module-examples/renaming">renaming</a> директории
   вы увидите ту же модульную систему, что и в предыдущем примере,
   за исключением того, что мы добавили модули <code>circle.js</code> и <code>triangle.js</code> для рисования кругов и треугольников и создания отчетов по ним.</p>
 
@@ -331,7 +331,7 @@ Module.function2()
 </pre>
 и т.д.
 
-<p>Опять же, давайте посмотрим на реальный пример. Если вы посмотрите на нашу директорию <a href="https://github.com/mdn/js-examples/tree/master/modules/module-objects">module-objects</a>,
+<p>Опять же, давайте посмотрим на реальный пример. Если вы посмотрите на нашу директорию <a href="https://github.com/mdn/js-examples/tree/master/module-examples/module-objects">module-objects</a>,
   вы снова увидите тот же самый пример, но переписанный с учётом преимуществ этого нового синтаксиса.
   В модулях все экспорты представлены в следующей простой форме:</p>
 
@@ -357,8 +357,8 @@ Square.reportPerimeter(square1.length, reportList);</pre>
 
 <p>Как мы намекали ранее, вы также можете экспортировать и импортировать классы — это ещё один способ избежать конфликтов в вашем коде, и он особенно полезен, если у вас уже есть код модуля, написанный в объектно-ориентированном стиле.</p>
 
-<p>Вы можете увидеть пример нашего модуля для рисования фигур, переписанного с помощью классов ES в нашей <a href="https://github.com/mdn/js-examples/tree/master/modules/classes">classes</a> директории.
-  В качестве примера, файл <code><a href="https://github.com/mdn/js-examples/blob/master/modules/classes/modules/square.js">square.js</a></code> теперь содержит всю свою функциональность в одном классе:</p>
+<p>Вы можете увидеть пример нашего модуля для рисования фигур, переписанного с помощью классов ES в нашей <a href="https://github.com/mdn/js-examples/tree/master/module-examples/classes">classes</a> директории.
+  В качестве примера, файл <code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/classes/modules/square.js">square.js</a></code> теперь содержит всю свою функциональность в одном классе:</p>
 
 <pre class="brush: js;">class Square {
   constructor(ctx, listId, length, x, y, color) {
@@ -376,7 +376,7 @@ Square.reportPerimeter(square1.length, reportList);</pre>
 
 <pre class="brush: js;">export { Square };</pre>
 
-<p>Далее в <code><a href="https://github.com/mdn/js-examples/blob/master/modules/classes/main.js">main.js</a></code>, мы импортируем его так:</p>
+<p>Далее в <code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/classes/main.js">main.js</a></code>, мы импортируем его так:</p>
 
 <pre class="brush: js;">import { Square } from './modules/square.js';</pre>
 
@@ -396,7 +396,7 @@ square1.reportPerimeter();</pre>
 <pre class="brush: js;">export * from 'x.js'
 export { name } from 'x.js'</pre>
 
-<p>Для примера посмотрите на нашу директорию <a href="https://github.com/mdn/js-examples/tree/master/modules/module-aggregation">module-aggregation</a>.
+<p>Для примера посмотрите на нашу директорию <a href="https://github.com/mdn/js-examples/tree/master/module-examples/module-aggregation">module-aggregation</a>.
   В этом примере (на основе нашего предыдущего примера с классами) у нас есть дополнительный модуль с именем <code>shapes.js</code>,
   который собирает функциональность <code>circle.js</code>, <code>square.js</code> и <code>triangle.js</code> вместе.
   Мы также переместили наши подмодули в дочернюю директорию внутри директории <code>modules</code> под названием <code>shape</code>.
@@ -415,7 +415,7 @@ export { name } from 'x.js'</pre>
 <pre class="brush: js;">export { Square };</pre>
 
 <p>Далее идет агрегирование.
-  Внутри <code><a href="https://github.com/mdn/js-examples/blob/master/modules/module-aggregation/modules/shapes.js">shapes.js</a></code>, мы добавляем следующие строки:</p>
+  Внутри <code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/module-aggregation/modules/shapes.js">shapes.js</a></code>, мы добавляем следующие строки:</p>
 
 <pre class="brush: js;">export { Square } from './shapes/square.js';
 export { Triangle } from './shapes/triangle.js';
@@ -452,11 +452,11 @@ import { Triangle } from './modules/triangle.js';</pre>
   });</pre>
 
 <p>Давайте посмотрим на пример.
-  В директории <a href="https://github.com/mdn/js-examples/tree/master/modules/dynamic-module-imports">dynamic-module-imports</a> у нас есть ещё один пример, основанный на примере наших классов.
+  В директории <a href="https://github.com/mdn/js-examples/tree/master/module-examples/dynamic-module-imports">dynamic-module-imports</a> у нас есть ещё один пример, основанный на примере наших классов.
   Однако на этот раз мы ничего не рисуем на холсте при загрузке страницы.
   Вместо этого мы добавляем на страницу три кнопки — «Circle», «Square» и «Triangle», которые при нажатии динамически загружают требуемый модуль, а затем используют его для рисования указанной фигуры.</p>
 
-<p>В этом примере мы внесли изменения только в наши <code><a href="https://github.com/mdn/js-examples/blob/master/modules/dynamic-module-imports/index.html">index.html</a></code> и <code><a href="https://github.com/mdn/js-examples/blob/master/modules/dynamic-module-imports/main.mjs">main.js</a></code> — экспорт модуля остается таким же, как и раньше.</p>
+<p>В этом примере мы внесли изменения только в наши <code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/index.html">index.html</a></code> и <code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/main.mjs">main.js</a></code> — экспорт модуля остается таким же, как и раньше.</p>
 
 <p>Далее в <code>main.js</code> мы взяли ссылку на каждую кнопку, используя вызов <a href="/en-US/docs/Web/API/Document/querySelector"><code>document.querySelector()</code></a>:</p>
 

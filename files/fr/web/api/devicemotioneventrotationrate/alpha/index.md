@@ -20,7 +20,9 @@ Cette propriété indique la vitesse de rotation autour de l'axe Z -- en degrés
 
 ## Syntaxe
 
-    var alpha = deviceRotationRate.alpha;
+```js
+var alpha = deviceRotationRate.alpha;
+```
 
 Cette propriété est en lecture seule.
 
@@ -31,10 +33,8 @@ Cette propriété est en lecture seule.
 
 ## Spécifications
 
-| Spécification                                | Statut                                   | Commentaire          |
-| -------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Device Orientation')}} | {{Spec2('Device Orientation')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DeviceMotionEventRotationRate.alpha")}}
+{{Compat}}

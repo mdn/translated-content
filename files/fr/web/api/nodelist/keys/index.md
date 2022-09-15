@@ -15,7 +15,9 @@ La méthode **`NodeList.keys()`** renvoie un {{jsxref("Les_protocoles_iteration"
 
 ## Syntaxe
 
-    nodeList.keys();
+```js
+nodeList.keys();
+```
 
 ### Valeur retournée
 
@@ -43,19 +45,19 @@ for(var key of list.keys()) {
 
 Le résultat est :
 
-    0
-    1
-    2
+```
+0
+1
+2
+```
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG','#interface-nodelist','keys() (as iterable)')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.NodeList.keys")}}
+{{Compat}}
 
 ## Voir aussi
 

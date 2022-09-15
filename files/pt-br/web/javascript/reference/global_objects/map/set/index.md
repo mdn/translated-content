@@ -50,7 +50,7 @@ myMap.set('bar', 'baz')
 
 ### Usando o `set` de forma encadeada
 
-Já que o método `set()` retorna o mesmo objeto `Map`, você pode encadear a chamada do método como abaixo: 
+Já que o método `set()` retorna o mesmo objeto `Map`, você pode encadear a chamada do método como abaixo:
 
 ```js
 // Adiciona novos elementos ao map de forma encadeada.

@@ -40,7 +40,7 @@ console.log(child_nodes.length); // should output "3"
 
 <dl>
  <dt>{{domxref("NodeList.item()")}}</dt>
- <dd>Retorna um item da lista pelo índice, ou <code>null</code> se o índice for inválido; pode ser usado como uma alternativa a <code>nodeList[idx]</code> (que retorna  <code>undefined</code> quando <code>idx</code> é inválido).</dd>
+ <dd>Retorna um item da lista pelo índice, ou <code>null</code> se o índice for inválido; pode ser usado como uma alternativa a <code>nodeList[idx]</code> (que retorna  <code>undefined</code> quando <code>idx</code> é inválido).</dd>
  <dt>{{domxref("NodeList.entries()")}}</dt>
  <dd>Retorna um {{jsxref("Iteration_protocols","iterador")}} que permite passar por todos os pares chave/valor contidos no objeto.</dd>
  <dt>{{domxref("NodeList.forEach()")}}</dt>
@@ -85,19 +85,19 @@ Array.prototype.forEach.call(list, function (item) {
 <pre class="brush: js">var elements = document.querySelectorAll(".suggestions");
 
 NodeList.prototype.addEventListener = function(event, func) {
-    this.forEach(function(content, item) {
-       content.addEventListener(event, func);
-    });
+    this.forEach(function(content, item) {
+       content.addEventListener(event, func);
+    });
 }
 
 function log() {
-    console.log(this, " was clicked");
+    console.log(this, " was clicked");
 }
 
 elements.addEventListener("click", log);
 //or
 elements.addEventListener("click", function() {
-    console.log(this, "  awas clicked");
+    console.log(this, "  awas clicked");
 });
 // output from both will be <em>element </em>was clicked the element would be HTML Element</pre>
 
@@ -117,22 +117,22 @@ elements.addEventListener("click", function() {
   <tr>
    <td>{{SpecName('DOM WHATWG', '#interface-nodelist', 'NodeList')}}</td>
    <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('DOM4', '#interface-nodelist', 'NodeList')}}</td>
    <td>{{ Spec2('DOM4') }}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('DOM3 Core', 'core.html#ID-536297177', 'NodeList')}}</td>
    <td>{{ Spec2('DOM3 Core') }}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('DOM2 Core', 'core.html#ID-536297177', 'NodeList')}}</td>
    <td>{{ Spec2('DOM2 Core') }}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('DOM1', 'level-one-core.html#ID-536297177', 'NodeList')}}</td>
@@ -146,6 +146,6 @@ elements.addEventListener("click", function() {
 
 <p>{{Compat("api.NodeList")}}</p>
 
-<div id="compat-desktop"> </div>
+<div id="compat-desktop"> </div>
 
-<div id="compat-mobile"> </div>
+<div id="compat-mobile"> </div>

@@ -12,7 +12,9 @@ original_slug: Web/JavaScript/Reference/Erreurs/Missing_name_after_dot_operator
 
 ## Message
 
-    SyntaxError: missing name after . operator
+```
+SyntaxError: missing name after . operator
+```
 
 ## Type d'erreur
 

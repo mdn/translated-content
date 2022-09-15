@@ -20,9 +20,11 @@ La méthode **`Promise.resolve(valeur)`** renvoie un objet {{jsxref("Promise")}}
 
 ## Syntaxe
 
-    Promise.resolve(valeur);
-    Promise.resolve(promesse);
-    Promise.resolve(suivant);
+```js
+Promise.resolve(valeur);
+Promise.resolve(promesse);
+Promise.resolve(suivant);
+```
 
 ### Paramètres
 

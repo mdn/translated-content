@@ -5,7 +5,7 @@ translation_of: Web/API/Event/preventDefault
 ---
 <div>{{ ApiRef("DOM") }}</div>
 
-<div> </div>
+<div> </div>
 
 <h2 id="Summary" name="Summary">Resumo</h2>
 
@@ -47,9 +47,9 @@ document.getElementById('my-checkbox').addEventListener(
 &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p>Você pode ver o <code>preventDefault</code> em ação <a class="internal" href="/samples/domref/dispatchEvent.html" title="samples/domref/dispatchEvent.html">aqui</a>.</p>
+<p>Você pode ver o <code>preventDefault</code> em ação <a class="internal" href="/samples/domref/dispatchEvent.html" title="samples/domref/dispatchEvent.html">aqui</a>.</p>
 
-<p>O exemplo a seguir demonstra como um input com texto inválido pode ser parado ao chegar ao campo de entrada com o preventDefault().</p>
+<p>O exemplo a seguir demonstra como um input com texto inválido pode ser parado ao chegar ao campo de entrada com o preventDefault().</p>
 
 <div id="preventDefault_invalid_text">
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
@@ -99,12 +99,12 @@ function checkName(evt) {
 <p>Chamar preventDefault durante qualquer fase do fluxo de eventos cancela o evento, o que significa que qualquer ação padrão normalmente feita pela aplicação como um resultado do evento não ocorrerá.</p>
 
 <div class="note">
-<p><strong>Nota:</strong> A partir do {{Gecko("6.0")}}, chamar o <code>preventDefault()</code> faz com que o {{ domxref("event.defaultPrevented") }} se torne true.</p>
+<p><strong>Nota:</strong> A partir do {{Gecko("6.0")}}, chamar o <code>preventDefault()</code> faz com que o {{ domxref("event.defaultPrevented") }} se torne true.</p>
 </div>
 
-<p>Você pode usar o <a href="/en-US/docs/Web/API/event.cancelable" title="/en-US/docs/Web/API/event.cancelable">event.cancelable</a> para checar se o evento é cancelável. Chamar o <code>preventDefault</code> para um evento não cancelável não fará efeito.</p>
+<p>Você pode usar o <a href="/en-US/docs/Web/API/event.cancelable" title="/en-US/docs/Web/API/event.cancelable">event.cancelable</a> para checar se o evento é cancelável. Chamar o <code>preventDefault</code> para um evento não cancelável não fará efeito.</p>
 
-<p><code>Se o preventDefault não parar a propagação do evento através do DOM. event.stopPropagation deve ser usada para isso.</code></p>
+<p><code>Se o preventDefault não parar a propagação do evento através do DOM. event.stopPropagation deve ser usada para isso.</code></p>
 
 <h2 id="Specification" name="Specification">Especificação</h2>
 

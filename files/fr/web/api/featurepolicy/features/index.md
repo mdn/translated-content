@@ -14,7 +14,9 @@ La méthode **`features()`** de l'interface {{DOMxRef("FeaturePolicy")}} retourn
 
 ## Syntaxe
 
-    const fonctionnalitésSupportées = FeaturePolicy.features()
+```js
+const fonctionnalitésSupportées = FeaturePolicy.features()
+```
 
 ### Paramètres
 
@@ -40,12 +42,10 @@ for (const directive of fonctionnalitésSupportées)
   console.log(directive)
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                | Statut                               | Commentaire          |
-| ------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName("Feature Policy","","features")}} | {{Spec2("Feature Policy")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FeaturePolicy.features")}}
+{{Compat}}

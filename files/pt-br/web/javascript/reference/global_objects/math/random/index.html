@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
 
 <h2 id="Summary" name="Summary">Sumário</h2>
 
-<p>A função <code><strong>Math.random()</strong></code> retorna um número pseudo-aleatório no intervalo <code>[0, 1[</code>, ou seja, de 0 (inclusivo) até, mas não incluindo, 1 (exclusivo), que depois você pode dimensionar para um intervalo desejado.  A implementação seleciona uma semente para o algoritmo de geração de números aleatórios; esta semente não pode ser escolhida ou reatribuída.</p>
+<p>A função <code><strong>Math.random()</strong></code> retorna um número pseudo-aleatório no intervalo <code>[0, 1[</code>, ou seja, de 0 (inclusivo) até, mas não incluindo, 1 (exclusivo), que depois você pode dimensionar para um intervalo desejado.  A implementação seleciona uma semente para o algoritmo de geração de números aleatórios; esta semente não pode ser escolhida ou reatribuída.</p>
 
 <div class="note">
 <p><code><strong>Math.random()</strong></code> não gera números criptograficamente seguros. Não a use para nada relacionado a segurança. Use a API Web Crypto, mais precisamente o método {{domxref("RandomSource.getRandomValues()", "window.crypto.getRandomValues()")}}.</p>
@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
 
 <h2 id="Syntax" name="Syntax">Sintaxe</h2>
 
-<pre class="syntaxbox"><code>Math.random()</code></pre>
+<pre class="syntaxbox">Math.random()</pre>
 
 <h3 id="Parameters" name="Parameters">Valor retornado</h3>
 
@@ -51,10 +51,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
 <pre class="brush: js">function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min;
+  return Math.floor(Math.random() * (max - min) + min);
 }</pre>
-
-
 
 <div class="note">
 <p>Pode ser tentandor usar <code>Math.round()</code> para arredondar <code>min</code> e <code>max,</code> mas dessa maneira a aleatoriedade dos números seguiria uma distribuição não-uniforme, que talvez não seja o que você precisa.</p>
@@ -64,11 +62,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
 
 <p>A função <code>getRandomInt()</code> acima tem intervalo com o valor mínimo incluído e o máximo excluído. Mas se você precisar que a função inclua, tanto o mínimo quanto o máximo, em seus resultados? A função <code>getRandomIntInclusive()</code> abaixo faz isso.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">getRandomIntInclusive</span><span class="punctuation token">(</span>min<span class="punctuation token">,</span> max<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  min <span class="operator token">=</span> Math<span class="punctuation token">.</span><span class="function token">ceil</span><span class="punctuation token">(</span>min<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  max <span class="operator token">=</span> Math<span class="punctuation token">.</span><span class="function token">floor</span><span class="punctuation token">(</span>max<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="keyword token">return</span> Math<span class="punctuation token">.</span><span class="function token">floor</span><span class="punctuation token">(</span>Math<span class="punctuation token">.</span><span class="function token">random</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">*</span> <span class="punctuation token">(</span>max <span class="operator token">-</span> min <span class="operator token">+</span> <span class="number token">1</span><span class="punctuation token">)</span><span class="punctuation token">)</span> <span class="operator token">+</span> min<span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: js">function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}</pre>
 
 <h2 id="Especificações">Especificações</h2>
 
@@ -87,12 +85,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.8.2.14', 'Math.random')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-math.random', 'Math.random')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

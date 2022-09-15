@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Generator/throw
 ---
 <div>{{JSRef}}</div>
 
-<p>Метод <code><strong>throw()</strong></code> возобновляет выполнение тела генератора кидая внутри исключение  <code>и возвращает объект со свойствами done и value</code>.</p>
+<p>Метод <code><strong>throw()</strong></code> возобновляет выполнение тела генератора кидая внутри исключение  <code>и возвращает объект со свойствами done и value</code>.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -30,14 +30,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Generator/throw
    <li>Имеет значение <code>false</code> если iterator имеет возможность вернуть следующее значение последовательности. Это равносильно когда свойство done не указано.</li>
   </ul>
  </li>
- <li><code>value</code> - любое JavaScript значение,  возвращённое итератором. Может быть проигнорировано, когда <em><code>done</code> === <code>true</code></em>.</li>
+ <li><code>value</code> - любое JavaScript значение,  возвращённое итератором. Может быть проигнорировано, когда <em><code>done</code> === <code>true</code></em>.</li>
 </ul>
 
 <h2 id="Примеры">Примеры</h2>
 
 <h3 id="Использование_throw()">Использование <code>throw()</code></h3>
 
-<p>В этом примере показан простой генератор и исключение,  которое выбрасывается используя метод <code>throw</code>. Исключение может быть поймано, используя, как обычно, блок <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code>.</p>
+<p>В этом примере показан простой генератор и исключение,  которое выбрасывается используя метод <code>throw</code>. Исключение может быть поймано, используя, как обычно, блок <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code>.</p>
 
 <pre class="brush: js">function* gen() {
   while(true) {

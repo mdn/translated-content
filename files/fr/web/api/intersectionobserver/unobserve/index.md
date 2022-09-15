@@ -17,7 +17,9 @@ La méthode **`unobserve()`** de l'interface [`IntersectionObserver`](/fr/docs/W
 
 ## Syntaxe
 
-    IntersectionObserver.unobserve(target);
+```js
+IntersectionObserver.unobserve(target);
+```
 
 ### Paramètres
 
@@ -43,13 +45,11 @@ observer.unobserve(document.getElementById("elementAObserver"));
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | Statut                                       | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('IntersectionObserver','#dom-intersectionobserver-unobserve','IntersectionObserver.unobserve()')}} | {{Spec2('IntersectionObserver')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IntersectionObserver.unobserve")}}
+{{Compat}}
 
 ## Voir aussi
 

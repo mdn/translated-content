@@ -18,7 +18,9 @@ La méthode **`toString()`** renvoie une chaîne de caractères représentant l'
 
 ## Syntaxe
 
-    regexObj.toString();
+```js
+regexObj.toString();
+```
 
 ### Valeur de retour
 

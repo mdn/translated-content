@@ -12,7 +12,9 @@ translation_of: Web/XPath/Functions/normalize-space
 
 ## 構文
 
-    normalize-space( [string] )
+```
+normalize-space( [string] )
+```
 
 ## 引数
 

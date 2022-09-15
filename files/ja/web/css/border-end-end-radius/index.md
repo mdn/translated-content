@@ -1,17 +1,6 @@
 ---
 title: border-end-end-radius
 slug: Web/CSS/border-end-end-radius
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - border-end-end-radius
-  - recipe:css-property
-  - 書字方向
-browser-compat: css.properties.border-end-end-radius
-translation_of: Web/CSS/border-end-end-radius
 ---
 {{CSSRef}}
 
@@ -69,14 +58,14 @@ div {
   background-color: rebeccapurple;
   width: 120px;
   height: 120px;
-  border-end-end-radius: 10px;
+  border-end-end-radius: 10px;
 }
 
 .exampleText {
   writing-mode: vertical-rl;
   padding: 10px;
   background-color: #fff;
-  border-end-end-radius: 10px;
+  border-end-end-radius: 10px;
 }
 ```
 

@@ -16,7 +16,9 @@ Si aucun élement n'est donné en paramètre `nomCle`, cette méthode ne fait ri
 
 ## Syntaxe
 
-    storage.removeItem(nomCle);
+```js
+storage.removeItem(nomCle);
+```
 
 ### Paramètres
 
@@ -57,13 +59,11 @@ function populateStorage() {
 
 ## Spécifications
 
-| Spécification                                                                                                            | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-removeitem', 'Storage.removeItem')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Storage.removeItem")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -13,7 +13,9 @@ translation_of: Web/API/Node/contains
 
 ## Syntaxe
 
-    node.contains( otherNode )
+```js
+node.contains( otherNode )
+```
 
 ## Exemple
 
@@ -27,13 +29,11 @@ function isInPage(node) {
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("DOM WHATWG", "#dom-node-contains", "Node.contains()")}} | {{Spec2("DOM WHATWG")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.contains")}}
+{{Compat}}
 
 ## Voir aussi
 

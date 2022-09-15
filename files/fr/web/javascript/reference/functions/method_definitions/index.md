@@ -19,22 +19,24 @@ Avec ECMAScript 2015 (ES6), il est possible d'utiliser une notation plus courte 
 
 ## Syntaxe
 
-    var obj = {
-      property( parameters… ) {},
-      *generator( parameters… ) {},
-      async property( parameters… ) {},
-      async* generator( parameters… ) {},
+```js
+var obj = {
+  property( parameters… ) {},
+  *generator( parameters… ) {},
+  async property( parameters… ) {},
+  async* generator( parameters… ) {},
 
-      // avec les noms calculés :
-      [property]( parameters… ) {},
-      *[generator]( parameters… ) {},
-      async [property]( parameters… ) {},
+  // avec les noms calculés :
+  [property]( parameters… ) {},
+  *[generator]( parameters… ) {},
+  async [property]( parameters… ) {},
 
-      // avec la syntaxe pour les accesseurs
-      // mutateurs :
-      get property() {},
-      set property(value) {}
-    };
+  // avec la syntaxe pour les accesseurs
+  // mutateurs :
+  get property() {},
+  set property(value) {}
+};
+```
 
 ## Description
 

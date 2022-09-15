@@ -16,7 +16,9 @@ La propriété en lecture seule **`NodeIterator.whatToShow`** est un `unsigned i
 
 ## Syntaxe
 
-    var nodeTypes = nodeIterator.whatToShow;
+```js
+var nodeTypes = nodeIterator.whatToShow;
+```
 
 Les valeurs pouvant être combinées pour former le masque de bits sont :
 
@@ -150,14 +152,11 @@ if( (nodeIterator.whatToShow == NodeFilter.SHOW_ALL) ||
 
 ## Spécifications
 
-| Spécification                                                                                                                                            | Statut                                       | Commentaire                                                                |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-nodeiterator-whattoshow', 'NodeIterator.whatToShow')}}                                         | {{Spec2('DOM WHATWG')}}             | Pas de changement depuis {{SpecName('DOM2 Traversal_Range')}}. |
-| {{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-NodeIterator-whatToShow', 'NodeIterator.whatToShow')}} | {{Spec2('DOM2 Traversal_Range')}} | Définitioni initiale.                                                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.NodeIterator.whatToShow")}}
+{{Compat}}
 
 ## Voir aussi
 

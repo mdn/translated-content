@@ -17,8 +17,10 @@ Pour les navigateurs qui prennent en charge cette fonctionnalité, une instance 
 
 ## Syntaxe
 
-    var mesCredentials = new PasswordCredential(passwordCredentialData)
-    var mesCredentials = new PasswordCredential(HTMLFormElement)
+```js
+var mesCredentials = new PasswordCredential(passwordCredentialData)
+var mesCredentials = new PasswordCredential(HTMLFormElement)
+```
 
 ### Paramètres
 
@@ -66,10 +68,8 @@ navigator.credentials.store(creds)
 
 ## Spécifications
 
-| Spécification                                    | État                                         | Commentaires         |
-| ------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('Credential Management')}} | {{Spec2('Credential Management')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PasswordCredential.PasswordCredential")}}
+{{Compat}}

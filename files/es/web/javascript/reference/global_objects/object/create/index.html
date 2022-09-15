@@ -14,7 +14,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/create
 ---
 <div>{{JSRef}}</div>
 
-<p>El método <code><strong>Object.create()</strong></code> crea un objeto nuevo, utilizando un objeto existente como el prototipo del nuevo objeto creado.</p>
+<p>El método <code><strong>Object.create()</strong></code> crea un objeto nuevo, utilizando un objeto existente como el prototipo del nuevo objeto creado.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/object-create.html")}}</div>
 
@@ -32,20 +32,20 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/create
  <dt><em>proto</em></dt>
  <dd>Objeto el cual debe ser el prototipo del nuevo objeto creado.</dd>
  <dt><em>propertiesObject</em></dt>
- <dd>Opcional. Si se especifica y no es {{jsxref("undefined")}}, un objeto cuyas propiedades enumerables propias (es decir, aquellas propiedades definidas sobre si mismo y <em>no</em> son propiedades enumerable a lo largo de su cadena de prototipos) espefica descriptores de propiedad para ser agregadas al objeto recien creado, con los nombres de propiedad correspondiente. Estas propiedades corresponden al segundo argumento de {{jsxref("Object.defineProperties")}}.</dd>
+ <dd>Opcional. Si se especifica y no es {{jsxref("undefined")}}, un objeto cuyas propiedades enumerables propias (es decir, aquellas propiedades definidas sobre si mismo y <em>no</em> son propiedades enumerable a lo largo de su cadena de prototipos) espefica descriptores de propiedad para ser agregadas al objeto recien creado, con los nombres de propiedad correspondiente. Estas propiedades corresponden al segundo argumento de {{jsxref("Object.defineProperties")}}.</dd>
 </dl>
 
 <h3 id="Description" name="Description">Valor devuelto</h3>
 
-<p>Un nuevo objeto con el prototipo y propiedades del objeto especificado.</p>
+<p>Un nuevo objeto con el prototipo y propiedades del objeto especificado.</p>
 
 <h3 id="Excepciones">Excepciones</h3>
 
-<p>Una excepción {{jsxref("TypeError")}} si el parámetro <code>propertiesObject</code> es {{jsxref("null")}} o un objeto envolvente no primitivo.</p>
+<p>Una excepción {{jsxref("TypeError")}} si el parámetro <code>propertiesObject</code> es {{jsxref("null")}} o un objeto envolvente no primitivo.</p>
 
 <h2 id="Ejemplos" name="Ejemplos">Ejemplos</h2>
 
-<h3 id="Herencia_clásica_con_Object.create">Herencia clásica con <code>Object.create()</code></h3>
+<h3 id="Herencia_clásica_con_Object.create">Herencia clásica con <code>Object.create()</code></h3>
 
 <p>Debajo se encuentra un ejemplo de cómo usar <code>Object.create()</code> para lograr herencia clásica. Este es para herencia simple, la cual es todo lo que soporta JavaScript.</p>
 
@@ -99,9 +99,9 @@ MyClass.prototype.myMethod = function() {
 };
 </pre>
 
-<p>{{jsxref("Object.assign()")}} copia las propiedades del prototipo <em>OtherSuperClass</em> al prototipo de <em>MyClass</em>, haciéndolas disponibles en todas las instancias de <em>MyClass</em>. <code>Object.assign()</code> se introdujo con ES2015 y <a href="/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/assign#Polyfill">tiene polyfill</a>. Si el soporte para navegadores antiguos es necesario, se puede utilizar <code><a href="https://api.jquery.com/jQuery.extend/">jQuery.extend()</a></code> o <code><a href="https://lodash.com/docs/#assign">_.assign()</a></code>.</p>
+<p>{{jsxref("Object.assign()")}} copia las propiedades del prototipo <em>OtherSuperClass</em> al prototipo de <em>MyClass</em>, haciéndolas disponibles en todas las instancias de <em>MyClass</em>. <code>Object.assign()</code> se introdujo con ES2015 y <a href="/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/assign#Polyfill">tiene polyfill</a>. Si el soporte para navegadores antiguos es necesario, se puede utilizar <code><a href="https://api.jquery.com/jQuery.extend/">jQuery.extend()</a></code> o <code><a href="https://lodash.com/docs/#assign">_.assign()</a></code>.</p>
 
-<h3 id="Usando_el_argumento_propertiesObject_con_Object.create">Usando el argumento <code>propertiesObject</code> con <code>Object.create()</code></h3>
+<h3 id="Usando_el_argumento_propertiesObject_con_Object.create">Usando el argumento <code>propertiesObject</code> con <code>Object.create()</code></h3>
 
 <pre class="brush: js notranslate">var o;
 
@@ -165,7 +165,7 @@ o2 = Object.create({}, { p: {
 
 <h2 id="Objetos_personalizados_y_nulos">Objetos personalizados y nulos</h2>
 
-<p>Un objeto nuevo creado de un objeto completamente personalizado (especialmente uno creado de un objeto nulo, que es básicamente un objeto personalizado sin miembros) puede comportarse de manera inesperada. Esto es especialmente cierto cuando se depura, ya que las funciones comunes  de conversión/detección de propiedad de objeto pueden generar errores, o simplemente perder información (especialmente si se atrapan excepciones de manera silenciosa que ignoran los errores). Por ejemplo, aquí hay dos objetos:</p>
+<p>Un objeto nuevo creado de un objeto completamente personalizado (especialmente uno creado de un objeto nulo, que es básicamente un objeto personalizado sin miembros) puede comportarse de manera inesperada. Esto es especialmente cierto cuando se depura, ya que las funciones comunes  de conversión/detección de propiedad de objeto pueden generar errores, o simplemente perder información (especialmente si se atrapan excepciones de manera silenciosa que ignoran los errores). Por ejemplo, aquí hay dos objetos:</p>
 
 <pre class="brush: js notranslate">oco = Object.create( {} );   // Crea un objeto normal
 ocn = Object.create( null ); // Crea un objeto "null"
@@ -274,7 +274,7 @@ Object.setPrototypeOf(ocn, Object); // set new object's prototype to the standar
 &gt; ocn.toString() // error: Function.prototype.toString requires that 'this' be a Function
 </pre>
 
-<h4 id="Algunas_soluciones_aceptables">Algunas soluciones aceptables</h4>
+<h4 id="Algunas_soluciones_aceptables">Algunas soluciones aceptables</h4>
 
 <p>Again, adding the missing object-method directly from the <strong>standard-object </strong>does NOT work. However, adding the <strong>generic</strong> method directly, DOES:</p>
 
@@ -312,7 +312,7 @@ Object.setPrototypeOf(ocn, Object.prototype); // set new object's prototype to t
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>Este polyfill cubre el caso de uso principal  el cual es la creación de un nuevo objeto para el prototipo que ha sido escogido pero no toma el segundo argumento en cuenta.</p>
+<p>Este polyfill cubre el caso de uso principal  el cual es la creación de un nuevo objeto para el prototipo que ha sido escogido pero no toma el segundo argumento en cuenta.</p>
 
 <p>Note that while the setting of <code>null</code> as <code>[[Prototype]]</code> is supported in the real ES5 <code>Object.create</code>, this polyfill cannot support it due to a limitation inherent in versions of ECMAScript lower than 5.</p>
 
@@ -374,5 +374,5 @@ Object.setPrototypeOf(ocn, Object.prototype); // set new object's prototype to t
  <li>{{jsxref("Object.defineProperties")}}</li>
  <li>{{jsxref("Object.prototype.isPrototypeOf")}}</li>
  <li>{{jsxref("Reflect.construct()")}}</li>
- <li>Publicación de John Resig sobre <a class="external" href="http://ejohn.org/blog/objectgetprototypeof/">getPrototypeOf()</a></li>
+ <li>Publicación de John Resig sobre <a class="external" href="http://ejohn.org/blog/objectgetprototypeof/">getPrototypeOf()</a></li>
 </ul>

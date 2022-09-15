@@ -7,7 +7,7 @@ translation_of: Web/API/Storage/setItem
 ---
 <p>{{APIRef("Web Storage API")}}</p>
 
-<p>O método <code>setItem()</code> da interface {{domxref("Storage")}}, quando passado 'chave' e 'valor', irá adicionar esta chave ao storage, ou atualizar o valor caso a chave já exista.</p>
+<p>O método <code>setItem()</code> da interface {{domxref("Storage")}}, quando passado 'chave' e 'valor', irá adicionar esta chave ao storage, ou atualizar o valor caso a chave já exista.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -17,7 +17,7 @@ translation_of: Web/API/Storage/setItem
 
 <dl>
  <dt><em>keyName</em></dt>
- <dd>Um {{domxref("DOMString")}} contendo o nome da chave que você deseja criar ou alterar.</dd>
+ <dd>Um {{domxref("DOMString")}} contendo o nome da chave que você deseja criar ou alterar.</dd>
  <dt><em>keyValue</em></dt>
  <dd>Um {{domxref("DOMString")}} contendo o valor da chave que você está criando ou atualizando.</dd>
 </dl>
@@ -28,8 +28,8 @@ translation_of: Web/API/Storage/setItem
 
 <h3 id="Exceções">Exceções</h3>
 
-<p><code>setItem()</code> poderá lançar uma exceção caso o storage esteja cheio. Particularmente, no Safari Mobile (desde o iOS 5) sempre irá lançar quando o usuário entrar em modo privado (Safari define a quota para 0 bytes no modo privado ao contrário de outros navegadores que permitem o armazenamento em modo privado, usando recipientes de dados separados).<br>
- Assim os desenvolvedores devem certificar-se de <strong>sempre tratar as possíveis exceções do <code>setItem()</code></strong>.</p>
+<p><code>setItem()</code> poderá lançar uma exceção caso o storage esteja cheio. Particularmente, no Safari Mobile (desde o iOS 5) sempre irá lançar quando o usuário entrar em modo privado (Safari define a quota para 0 bytes no modo privado ao contrário de outros navegadores que permitem o armazenamento em modo privado, usando recipientes de dados separados).<br>
+ Assim os desenvolvedores devem certificar-se de <strong>sempre tratar as possíveis exceções do <code>setItem()</code></strong>.</p>
 
 <h2 id="Exemplo">Exemplo</h2>
 
@@ -57,74 +57,14 @@ translation_of: Web/API/Storage/setItem
   <tr>
    <td>{{SpecName('Web Storage', '#dom-storage-setitem', 'setItem()')}}</td>
    <td>{{Spec2('Web Storage')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>localStorage</td>
-   <td>4</td>
-   <td>3.5</td>
-   <td>8</td>
-   <td>10.50</td>
-   <td>4</td>
-  </tr>
-  <tr>
-   <td>sessionStorage</td>
-   <td>5</td>
-   <td>2</td>
-   <td>8</td>
-   <td>10.50</td>
-   <td>4</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>2.1</td>
-   <td>{{ CompatUnknown }}</td>
-   <td>8</td>
-   <td>11</td>
-   <td>iOS 3.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>Todos os navegadores têm diferentes níveis de capacidade para tanto localStorage e sessionStorage. Aqui você encontra uma detalhada <a class="external" href="http://dev-test.nemikor.com/web-storage/support-test/">a </a><a href="http://dev-test.nemikor.com/web-storage/support-test/">capacidade detalhada para vários browsers</a>.</p>
-
-<div class="note">
-<p><strong>Nota: </strong>desde a versão iOS 5.1, Mobile Safari os dados na pasta 'cache' estão sujeito a limpezas ocasionais devido ao pouco espaço disponível.</p>
-</div>
+{{Compat("api.Storage.setItem")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

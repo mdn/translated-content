@@ -3,7 +3,7 @@ title: Cross-global fetch usage
 slug: Web/API/Fetch_API/Cross-global_fetch_usage
 translation_of: Web/API/Fetch_API/Cross-global_fetch_usage
 ---
-<p class="summary">Эта статья объясняет крайний случай, который случается с fetch (и потенциально с другими API, предоставляющими такой же способ получения данных). Когда cross-origin fetch, включающий относительный URL, инициируется из {{htmlelement("iframe")}}, относительный URL может использовать текущий глобальный location вместо того что задаётся в iframe.</p>
+<p class="summary">Эта статья объясняет крайний случай, который случается с fetch (и потенциально с другими API, предоставляющими такой же способ получения данных). Когда cross-origin fetch, включающий относительный URL, инициируется из {{htmlelement("iframe")}}, относительный URL может использовать текущий глобальный location вместо того что задаётся в iframe.</p>
 
 <h2 id="Крайний_случай">Крайний случай</h2>
 
@@ -11,7 +11,7 @@ translation_of: Web/API/Fetch_API/Cross-global_fetch_usage
 
 <ul>
  <li>Вам понадобится same-origin iframe</li>
- <li>Этот same-origin iframe должен располагаться с другим base URL</li>
+ <li>Этот same-origin iframe должен располагаться с другим base URL</li>
  <li>Вы должны использовать функцию fetch cross-global, т. е. <code>frame.contentWindow.fetch()</code></li>
  <li>Переданный в fetch URL должен быть относительным</li>
 </ul>

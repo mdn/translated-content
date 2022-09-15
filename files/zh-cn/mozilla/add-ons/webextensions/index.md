@@ -1,11 +1,6 @@
 ---
 title: 浏览器扩展
 slug: Mozilla/Add-ons/WebExtensions
-tags:
-  - Add-ons
-  - Landing
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions
 ---
 {{AddonSidebar}}
 
@@ -18,11 +13,12 @@ translation_of: Mozilla/Add-ons/WebExtensions
 - 指南
   - : 无论你是刚开始学习还是在寻找更加高级的建议，你可以从我们大量的[教程和指南中](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions)学习扩展是如何工作的以及如何使用 WebExtensions API。
 - 参考资料
-  - : 获取全面的关于方法，属性，类型，事件等 [WebExtensions APIs](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)的细节部分以及关于 [manifest 键列表](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json)的全部细节。
+  - : 获取全面的关于方法，属性，类型，事件等 [WebExtensions APIs](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) 的细节部分以及关于 [manifest 键列表](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json)的全部细节。
 - Firefox 工作流
-  - : 了解如何为Firefox构建、发布扩展: 在[扩展工作坊](https://extensionworkshop.com/)了解开发者工具，发布和移植的基本原理。
+  - : 了解如何为 Firefox 构建、发布扩展：在[扩展工作坊](https://extensionworkshop.com/)了解开发者工具，发布和移植的基本原理。
 
 > **备注：** 如果你有任何的想法、问题或者是需要帮助，可以在[社区论坛](https://discourse.mozilla.org/c/add-ons)和在 [Matrix](https://wiki.mozilla.org/Matrix) 上的[附加组件](https://matrix.to/#/!CuzZVoCbeoDHsxMCVJ:mozilla.org?via=mozilla.org&via=matrix.org&via=humanoids.be)房间联系到我们。
+
 ## 开始
 
 在构建[你的第一个扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)之前，先去了解下[扩展都可以做些什么](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions)。学习[扩展剖析](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)章节，对[扩展开发、发布工作流和 Firefox 风格](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview)有一个大致的了解。在[扩展示例](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Examples)中
@@ -42,9 +38,9 @@ translation_of: Mozilla/Add-ons/WebExtensions
 
 ## Firefox 工作流
 
-当你已经准备好创建你的 Firefox 扩展或者是移植你的Chrome扩展时，前往[扩展工作坊](https://extensionworkshop.com/)。它包含了以下细节：
+当你已经准备好创建你的 Firefox 扩展或者是移植你的 Chrome 扩展时，前往[扩展工作坊](https://extensionworkshop.com/)。它包含了以下细节：
 
-- Firefox 工作流, 例如[在开发时临时安装扩展](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)，[调试](https://extensionworkshop.com/documentation/develop/debugging/)，[获取对的权限](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/)等等。
+- Firefox 工作流，例如[在开发时临时安装扩展](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)、[调试](https://extensionworkshop.com/documentation/develop/debugging/)、[获取对的权限](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/)，等等。
 - [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) 开发者工具。
 - [移植谷歌 Chrome 浏览器扩展](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)，[桌面程序与安卓的差异](https://extensionworkshop.com/documentation/develop/differences-between-desktop-and-android-extensions/)，等等。
 - [预览发布](https://extensionworkshop.com/documentation/publish/)，[推广你的扩展](https://extensionworkshop.com/documentation/publish/promoting-your-extension/)，[扩展生命周期的最佳实践](https://extensionworkshop.com/documentation/manage/)。
@@ -53,7 +49,7 @@ translation_of: Mozilla/Add-ons/WebExtensions
 
 ### JavaScript APIs
 
-获取全面的关于方法，属性，类型，事件等 [JavaScript APIs](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API) 的细节部分。在那儿你也可以获取到每个API与主流浏览器的兼容性的详尽细节。大多数的参考资料页面都包含使用这些 API 的代码示例和扩展示例的链接。
+获取全面的关于方法，属性，类型，事件等 [JavaScript APIs](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API) 的细节部分。在那儿你也可以获取到每个 API 与主流浏览器的兼容性的详尽细节。大多数的参考资料页面都包含使用这些 API 的代码示例和扩展示例的链接。
 
 ### Manifest 键列表
 

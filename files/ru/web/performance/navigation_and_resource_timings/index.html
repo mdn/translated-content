@@ -5,9 +5,9 @@ tags:
   - Производительность
 translation_of: Web/Performance/Navigation_and_resource_timings
 ---
-<p><span class="seoSummary"><strong>Тайминги навигации (Navigation timings) </strong>- это показатели, указывающие временные метки, в которые произошли события навигации. <strong>Тайминги ресурсов (Resource timings) </strong>- это детальные показатели по времени загрузки ресурсов. </span></p>
+<p><span class="seoSummary"><strong>Тайминги навигации (Navigation timings) </strong>- это показатели, указывающие временные метки, в которые произошли события навигации. <strong>Тайминги ресурсов (Resource timings) </strong>- это детальные показатели по времени загрузки ресурсов. </span></p>
 
-<p>В этой статье мы рассмотрим как <a href="/en-US/docs/Web/API/PerformanceTiming">Performance Timing API</a>, так и Performance Entry API. И хотя первый API считается устаревшим, он все ещё поддерживается всеми браузерами, он прост и о нем полезно знать. В свою очередь, Performance Entry API является более продвинутым инструментом, который позволяет не только получить более сложные данные, но и позволяет разработчику измерять другие показатели, в дополнение к данным о навигации и загрузке ресурсов.</p>
+<p>В этой статье мы рассмотрим как <a href="/en-US/docs/Web/API/PerformanceTiming">Performance Timing API</a>, так и Performance Entry API. И хотя первый API считается устаревшим, он все ещё поддерживается всеми браузерами, он прост и о нем полезно знать. В свою очередь, Performance Entry API является более продвинутым инструментом, который позволяет не только получить более сложные данные, но и позволяет разработчику измерять другие показатели, в дополнение к данным о навигации и загрузке ресурсов.</p>
 
 <h2 id="Performance_Timing_API"><strong>Performance Timing</strong> API</h2>
 
@@ -70,7 +70,7 @@ translation_of: Web/Performance/Navigation_and_resource_timings
   <tr>
    <td>{{domxref("PerformanceTiming.connectEnd","connectEnd")}}</td>
    <td>
-    <p>Момент, когда соединение открыто для передачи данных. Если транспортный уровень модели OSI сообщает об ошибке и установка соединения запускаются заново, то возвращается время  завершения последней попытки соединения. Если используется постоянное соединение, то значение показателя будет таким же, как и <code>PerformanceTiming.fetchStart</code>. Соединение считается открытым, когда завершены все этапы установление безопасного соединения, например TLS Handshake или SOCKS Authentication.</p>
+    <p>Момент, когда соединение открыто для передачи данных. Если транспортный уровень модели OSI сообщает об ошибке и установка соединения запускаются заново, то возвращается время  завершения последней попытки соединения. Если используется постоянное соединение, то значение показателя будет таким же, как и <code>PerformanceTiming.fetchStart</code>. Соединение считается открытым, когда завершены все этапы установление безопасного соединения, например TLS Handshake или SOCKS Authentication.</p>
    </td>
   </tr>
   <tr>
@@ -122,7 +122,7 @@ translation_of: Web/Performance/Navigation_and_resource_timings
   <tr>
    <td>{{domxref("PerformanceTiming.unloadEventEnd","unloadEventEnd")}}</td>
    <td>
-    <p>Обработчик события  <code><a href="/en-US/docs/Web/Events/unload">unload</a></code> завершил свою работу. Если предыдущего документа не было или переход к текущей странице подразумевал изменение origin (в т.ч. из-за редиректов), значение параметра равно <code>0</code>.</p>
+    <p>Обработчик события  <code><a href="/en-US/docs/Web/Events/unload">unload</a></code> завершил свою работу. Если предыдущего документа не было или переход к текущей странице подразумевал изменение origin (в т.ч. из-за редиректов), значение параметра равно <code>0</code>.</p>
    </td>
   </tr>
   <tr>
@@ -232,7 +232,7 @@ performance.getEntriesByType('frame').forEach((frame) =&gt; {
   console.dir(frame);
 });</pre>
 
-<p>В некоторых браузерах вы можете использовать<code> performance.getEntriesByType('paint')</code>, чтобы запросить измерения для  <code>first-paint</code> и <code>first-contentful-paint</code>. Мы используем  <code>performance.getEntriesByType('navigation')</code> и  <code>performance.getEntriesByType('resource')</code> для запроса данных по навигации и загрузки ресурсов, соответственно.</p>
+<p>В некоторых браузерах вы можете использовать<code> performance.getEntriesByType('paint')</code>, чтобы запросить измерения для  <code>first-paint</code> и <code>first-contentful-paint</code>. Мы используем  <code>performance.getEntriesByType('navigation')</code> и  <code>performance.getEntriesByType('resource')</code> для запроса данных по навигации и загрузки ресурсов, соответственно.</p>
 
 <h2 id="Navigation">Navigation</h2>
 
@@ -258,7 +258,7 @@ performance.getEntriesByType('frame').forEach((frame) =&gt; {
 
 <h3 id="Сжатие">Сжатие</h3>
 
-<p>Чтобы узнать, как эффективно сжимаются данные при передаче, мы можем разделить  <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><code><span class="cm-property">transferSize</span></code><span class="cm-property"> на <code>decodedBodySize</code></span>, а затем вычесть результат из 100%. Для текущей страницы сжатие составляет до 74%.</span></span></span></p>
+<p>Чтобы узнать, как эффективно сжимаются данные при передаче, мы можем разделить  <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><code><span class="cm-property">transferSize</span></code><span class="cm-property"> на <code>decodedBodySize</code></span>, а затем вычесть результат из 100%. Для текущей страницы сжатие составляет до 74%.</span></span></span></p>
 
 <pre><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-keyword">let</span> <span class="cm-def">compressionSavings</span> <span class="cm-operator">=</span> <span class="cm-number">1</span> <span class="cm-operator">-</span> (<span class="cm-variable">timing</span>.<span class="cm-property">transferSize</span> <span class="cm-operator">/</span> <span class="cm-variable">timing</span>.<span class="cm-property">decodedBodySize</span>)</span></span></span></pre>
 

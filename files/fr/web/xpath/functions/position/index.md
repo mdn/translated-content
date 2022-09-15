@@ -12,7 +12,9 @@ La fonction `position` retourne un nombre égal à la position du contexte dans 
 
 ### Syntaxe
 
-    position()
+```
+position()
+```
 
 ### Retour
 
@@ -22,24 +24,22 @@ Un nombre entier égal à la position du contenu dans le contexte d'évaluation 
 
 - Notez que la numérotation de la position d'un n\&oelig:ud dans un contexte commence à 1. Le premier nœud a donc la position 1.
 
-<!---->
-
 - Le contexte est déterminé par le reste du chemin&nbsp;:
 
-<!---->
-
+    ```xml
     <xsl:template match="//a[position() = 5]">
-     <!-- cet exemple 'attrape' le cinquième élément "a"
-             n'importe où dans le document. -->
+        <!-- cet exemple 'attrape' le cinquième élément "a"
+                n'importe où dans le document. -->
     </xsl:template>
+    ```
 
-<!---->
-
+    ```xml
     <xsl:template match="//div[@class='foo']/bar[position() = 1]">
-     <!-- cet exemple 'attrape' le premier
-             élément "bar" enfant d'un élément "div"
-             avec un attribut "class" valant "foo" -->
+        <!-- cet exemple 'attrape' le premier
+                élément "bar" enfant d'un élément "div"
+                avec un attribut "class" valant "foo" -->
     </xsl:template>
+    ```
 
 ### Définition
 

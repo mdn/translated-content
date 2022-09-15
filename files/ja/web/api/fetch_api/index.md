@@ -1,15 +1,6 @@
 ---
 title: Fetch API
 slug: Web/API/Fetch_API
-tags:
-  - API
-  - Fetch
-  - Landing
-  - Reference
-  - レスポンス
-  - XMLHttpRequest
-  - リクエスト
-translation_of: Web/API/Fetch_API
 ---
 <div>{{DefaultAPISidebar("Fetch API")}}</div>
 
@@ -70,9 +61,9 @@ Fetch API は (ネットワーク越しの通信を含む) リソース取得の
 
 ## 関連情報
 
-- [Using Fetch](/ja/docs/Web/API/Fetch_API/Using_Fetch)
-- [ServiceWorker API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/ja/docs/Web/HTTP/CORS)
+- [Fetch の使用](/ja/docs/Web/API/Fetch_API/Using_Fetch)
+- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
 - [HTTP](/ja/docs/Web/HTTP)
 - [Fetch のポリフィル](https://github.com/github/fetch)
 - [Fetch の基本概念](/ja/docs/Web/API/Fetch_API/Basic_concepts)

@@ -99,14 +99,11 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
 ## Spécifications
 
-| Spécification                                                                                                | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('HTML WHATWG', 'forms.html#the-progress-element', '&lt;progress&gt;')}} | {{Spec2('HTML WHATWG')}} |                      |
-| {{SpecName('HTML5 W3C', 'forms.html#the-progress-element', '&lt;progress&gt;')}} | {{Spec2('HTML5 W3C')}}     | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.progress")}}
+{{Compat}}
 
 ## Voir aussi
 

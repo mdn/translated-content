@@ -84,15 +84,11 @@ Pour un exemple complet, voir [Exemple basique de worker dédié](https://github
 
 ## Spécifications
 
-| Spécification                                                    | Statuts                          | Commentaire |
-| ---------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "#worker", "Worker")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
-## Compatibilité avec les navigateurs
+## Compatibilité des navigateurs
 
-Voici le support des différents type de worker. Voir les pages de chaque worker pour avoir les particularités.
-
-{{Compat("api.Worker")}}
+{{Compat}}
 
 ### Comportement des erreur Cross-origin sur les worker
 

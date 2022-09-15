@@ -18,7 +18,9 @@ La propriété en lecture seule **`WheelEvent.deltaZ`** est un `double` représe
 
 ## Syntaxe
 
-    var dZ = event.deltaZ;
+```js
+var dZ = event.deltaZ;
+```
 
 ## Exemple
 
@@ -30,15 +32,13 @@ console.log(syntheticEvent.deltaZ);
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('DOM3 Events','#widl-WheelEvent-deltaZ','WheelEvent.deltaZ')}} | {{Spec2('DOM3 Events')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WheelEvent.deltaZ")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{ event("wheel") }}
-- {{domxref("WheelEvent")}}
+- L'évènement [`wheel`](/fr/docs/Web/API/Element/wheel_event)
+- [`WheelEvent`](/fr/docs/Web/API/WheelEvent)

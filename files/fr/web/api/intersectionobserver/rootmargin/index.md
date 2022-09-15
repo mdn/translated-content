@@ -19,7 +19,9 @@ Voir [la section sur l'élément racine et sa marge externe](/fr/docs/Web/API/In
 
 ## Syntaxe
 
-    marginString = IntersectionObserver.rootMargin;
+```js
+marginString = IntersectionObserver.rootMargin;
+```
 
 ### Valeur
 
@@ -31,10 +33,8 @@ Si `rootMargin` n'est pas spécifiée à l'initialisation de l'objet, sa valeur 
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                                       | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('IntersectionObserver', '#dom-intersectionobserver-rootMargin', 'IntersectionObserver.rootMargin')}} | {{Spec2('IntersectionObserver')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IntersectionObserver.rootMargin")}}
+{{Compat}}

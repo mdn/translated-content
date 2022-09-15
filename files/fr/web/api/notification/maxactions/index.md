@@ -17,7 +17,9 @@ L'attribut **`maxActions`** de l'interface {{domxref ("Notification")}} renvoie 
 
 ## Syntaxe
 
-    Notification.maxActions
+```js
+Notification.maxActions
+```
 
 ### Valeur
 
@@ -34,15 +36,13 @@ console.log(`This device can display at most ${maxActions} actions on each notif
 
 ## Spécifications
 
-| Spécification                                | Status                                   | Comment         |
-| -------------------------------------------- | ---------------------------------------- | --------------- |
-| {{SpecName("Web Notifications")}} | {{Spec2("Web Notifications")}} | Living standard |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Notification.maxActions")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)
 - {{domxref("Notification.actions")}}

@@ -19,8 +19,10 @@ Ce comportement est paramétré au moment où l'index est créé avec la méthod
 
 ## Syntaxe
 
-    var monIndex = objectStore.index('index');
-    console.log(monIndex.multiEntry);
+```js
+var monIndex = objectStore.index('index');
+console.log(monIndex.multiEntry);
+```
 
 ### Valeur
 
@@ -67,13 +69,11 @@ function displayDataByIndex() {
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-multiEntry', 'multiEntry')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBIndex.multiEntry")}}
+{{Compat}}
 
 ## Voir aussi
 

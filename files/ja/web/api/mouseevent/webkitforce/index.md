@@ -1,13 +1,6 @@
 ---
 title: MouseEvent.webkitForce
 slug: Web/API/MouseEvent/webkitForce
-tags:
-  - API
-  - DOM
-  - DOM イベント
-  - MouseEvent
-  - プロパティ
-  - リファレンス
 ---
 {{Non-standard_header()}}
 

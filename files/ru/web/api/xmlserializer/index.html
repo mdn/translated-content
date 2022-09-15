@@ -3,9 +3,9 @@ title: XMLSerializer
 slug: Web/API/XMLSerializer
 translation_of: Web/API/XMLSerializer
 ---
-<div dir="ltr" id="result_box" style="text-align: left;"><code>XMLSerializer </code>может быть использован для конвертации веток DOM-дерева или дерева целиком в текст. <code>XMLSerializer </code>доступен непривилегированным скриптам.</div>
+<div dir="ltr" id="result_box" style="text-align: left;"><code>XMLSerializer </code>может быть использован для конвертации веток DOM-дерева или дерева целиком в текст. <code>XMLSerializer </code>доступен непривилегированным скриптам.</div>
 
-<p>Для получения более подробной информации об <code>XMLSerializer</code> в расширениях для браузера Firefox, пожалуйста обратитесь к документации <code><a href="/en-US/docs/nsIDOMSerializer" title="nsIDOMSerializer">nsIDOMSerializer</a></code>.</p>
+<p>Для получения более подробной информации об <code>XMLSerializer</code> в расширениях для браузера Firefox, пожалуйста обратитесь к документации <code><a href="/en-US/docs/nsIDOMSerializer" title="nsIDOMSerializer">nsIDOMSerializer</a></code>.</p>
 
 <h2 id="Methods">Методы</h2>
 
@@ -23,7 +23,7 @@ translation_of: Web/API/XMLSerializer
  var str = s.serializeToString(d);
  alert(str);</pre>
 
-<p>The next example uses XMLSerializer with <a href="/en-US/docs/DOM/element.insertAdjacentHTML" title="/en-US/docs/DOM/element.insertAdjacentHTML">insertAdjacentHTML()</a> to insert a newly created DOM Node into the Document's body. Because <a href="/en-US/docs/DOM/element.insertAdjacentHTML" title="/en-US/docs/DOM/element.insertAdjacentHTML">insertAdjacentHTML()</a> accepts a string and not a Node for its second parameter, XMLSerializer is used to first convert the node into a string.</p>
+<p>The next example uses XMLSerializer with <a href="/en-US/docs/DOM/element.insertAdjacentHTML" title="/en-US/docs/DOM/element.insertAdjacentHTML">insertAdjacentHTML()</a> to insert a newly created DOM Node into the Document's body. Because <a href="/en-US/docs/DOM/element.insertAdjacentHTML" title="/en-US/docs/DOM/element.insertAdjacentHTML">insertAdjacentHTML()</a> accepts a string and not a Node for its second parameter, XMLSerializer is used to first convert the node into a string.</p>
 
 <pre class="brush: js">var inp = document.createElement('input');
 var XMLS = new XMLSerializer();

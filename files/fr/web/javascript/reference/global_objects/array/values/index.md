@@ -31,7 +31,9 @@ console.log(iterateur.next().value); // u
 
 ## Syntaxe
 
-    array.values()
+```js
+array.values()
+```
 
 ### Valeur de retour
 

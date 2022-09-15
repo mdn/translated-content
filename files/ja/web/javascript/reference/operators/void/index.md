@@ -1,14 +1,6 @@
 ---
 title: void 演算子
 slug: Web/JavaScript/Reference/Operators/void
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - リファレンス
-  - 単項
-browser-compat: javascript.operators.void
-translation_of: Web/JavaScript/Reference/Operators/void
 ---
 {{jsSidebar("Operators")}}
 
@@ -44,7 +36,7 @@ void (2 == '2'); // void (2 == '2'), undefined を返す
 ```js
 void function iife() {
 
-  console.log("Executed!");
+  console.log("Executed!");
 
 }();
 

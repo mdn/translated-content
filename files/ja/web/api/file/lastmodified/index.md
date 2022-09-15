@@ -1,14 +1,6 @@
 ---
 title: File.lastModified
 slug: Web/API/File/lastModified
-tags:
-  - API
-  - File API
-  - ファイル
-  - プロパティ
-  - リファレンス
-browser-compat: api.File.lastModified
-translation_of: Web/API/File/lastModified
 ---
 {{APIRef("File")}}
 
@@ -36,12 +28,12 @@ UNIX 元気からのミリ秒数を表す数値です。
 const fileInput = document.querySelector('#fileInput');
 fileInput.addEventListener('change', (event) => {
   // filesはFileList型オブジェクト (NodeListと似ている)
-  const files = event.target.files;
+  const files = event.target.files;
 
   for (let file of files) {
-    const date = new Date(file.lastModified);
-    console.log(`${file.name} has a last modified date of ${date}`);
-  }
+    const date = new Date(file.lastModified);
+    console.log(`${file.name} has a last modified date of ${date}`);
+  }
 });
 ```
 
@@ -55,7 +47,7 @@ fileInput.addEventListener('change', (event) => {
 
 ```js
 const fileWithDate = new File([], 'file.bin', {
-  lastModified: new Date(2017, 1, 1),
+  lastModified: new Date(2017, 1, 1),
 });
 console.log(fileWithDate.lastModified); //returns 1485903600000
 

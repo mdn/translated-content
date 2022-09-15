@@ -1,17 +1,8 @@
 ---
 title: Fetch の基本概念
 slug: Web/API/Fetch_API/Basic_concepts
-tags:
-  - API
-  - Fetch
-  - Fetch API
-  - XMLHttpRequest
-  - 概念
-  - guard
-  - request
-translation_of: Web/API/Fetch_API/Basic_concepts
 ---
-{{DefaultAPISidebar("Fetch API")}}{{draft}}
+{{DefaultAPISidebar("Fetch API")}}
 
 [Fetch](/ja/docs/Web/API/Fetch_API) は、（ネットワーク越しの場合も含めて）リソースを取得するインターフェイスを提供します。 {{domxref("XMLHttpRequest")}} を使っていた人にはなじみ深いでしょうが、より強力で柔軟な機能を提供します。この記事では、 Fetch API の基本概念のいくつかを説明します。
 

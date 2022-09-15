@@ -19,8 +19,6 @@ Afin de centrer notre boîte, nous allons utiliser la propriété `align-items` 
 
 ![Un élément contenant une autre boîte centrée à l'intérieur](align1.png)
 
-
-
 Vous pouvez étudier le code de l'exemple suivant et modifier la taille du conteneur ou d'un élément imbriqué : l'élément imbriqué sera toujours centré.
 
 {{EmbedGHLiveSample("css-examples/flexbox/alignment/intro.html", '100%', 700)}}

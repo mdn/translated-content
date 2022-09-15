@@ -1,15 +1,6 @@
 ---
 title: ':-moz-focusring'
 slug: Web/CSS/:-moz-focusring
-tags:
-  - CSS
-  - CSS:Mozilla 拡張
-  - 標準外
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.-moz-focusring
-translation_of: Web/CSS/:-moz-focusring
 ---
 {{Non-standard_header}}{{CSSRef}}
 

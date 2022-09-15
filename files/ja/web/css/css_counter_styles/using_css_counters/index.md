@@ -1,15 +1,6 @@
 ---
 title: CSS カウンターの使用
 slug: Web/CSS/CSS_Counter_Styles/Using_CSS_counters
-tags:
-  - 上級者
-  - CSS
-  - CSS カウンタースタイル
-  - ガイド
-  - レイアウト
-  - リファレンス
-  - ウェブ
-translation_of: Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 original_slug: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 ---
 {{CSSRef}}
@@ -237,7 +228,7 @@ a[href]:empty::after {
 
 ## カウンターの入れ子
 
-CSS カウンターはアウトラインのリストを作成するのには特に便利で、子要素でカウンターの新しいインスタンスが自動的に生成されます。 
+CSS カウンターはアウトラインのリストを作成するのには特に便利で、子要素でカウンターの新しいインスタンスが自動的に生成されます。
 {{cssxref("counters()")}} 関数を使用して、入れ子になったカウンターの階層間に区切り文字列を挿入することができます。
 
 ### 入れ子になったカウンターの例

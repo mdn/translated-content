@@ -65,6 +65,7 @@ La propriété `scroll-behavior` est définie avec l'un des mots-clés suivants.
 ```
 
 #### CSS
+
 ```css
 a {
   display: inline-block;

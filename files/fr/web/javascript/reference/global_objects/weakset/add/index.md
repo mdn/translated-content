@@ -19,7 +19,9 @@ La méthode **`add()`** permet d'ajouter un nouvel objet à un objet `WeakSet`.
 
 ## Syntaxe
 
-    ws.add(valeur);
+```js
+ws.add(valeur);
+```
 
 ### Paramètres
 

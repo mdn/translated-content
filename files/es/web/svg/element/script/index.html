@@ -26,7 +26,7 @@ original_slug: Web/HTML/Elemento/script
   </tr>
   <tr>
    <th scope="row">Contenido permitido</th>
-   <td>Script dinámico tal como <code>text/javascript</code>.</td>
+   <td>Script dinámico tal como <code>text/javascript</code>.</td>
   </tr>
   <tr>
    <th scope="row">Omision de etiquetas</th>
@@ -34,7 +34,7 @@ original_slug: Web/HTML/Elemento/script
   </tr>
   <tr>
    <th scope="row">Elementos padre permitidos</th>
-   <td>Cualquier elemento que acepte <a href="/en-US/docs/Web/HTML/Content_categories#Metadata_content" title="HTML/Content_categories#Metadata_content">metadata content</a>, o cualquier elemento que acepte <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Cualquier elemento que acepte <a href="/en-US/docs/Web/HTML/Content_categories#Metadata_content" title="HTML/Content_categories#Metadata_content">metadata content</a>, o cualquier elemento que acepte <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Interfaz DOM</th>
@@ -50,26 +50,26 @@ original_slug: Web/HTML/Elemento/script
 <dl>
  <dt>{{htmlattrdef("async")}} {{HTMLVersionInline(5)}}</dt>
  <dd>Establece este atributo booleano para indicar al navegador, si es posible, ejecutar el código asincrónicamente. Esto no afecta a los scripts escritos dentro de la etiqueta (es decir a aquellos que no tienen el atributo <strong>src</strong>).</dd>
- <dd>Ver {{anch("Browser compatibility")}} para notas acerca de compatibilidad. Ver tambien <a href="/en-US/docs/Games/Techniques/Async_scripts">Scripts asincrónicos para asm.js</a>.</dd>
+ <dd>Ver <a href="#browser_compatibility">Browser compatibility</a> para notas acerca de compatibilidad. Ver tambien <a href="/en-US/docs/Games/Techniques/Async_scripts">Scripts asincrónicos para asm.js</a>.</dd>
  <dt>{{htmlattrdef("integrity")}}</dt>
- <dd>Contiene información de metadatos que es usada por el user agent del navegador para verificar el recurso captado fue entregado libre de manipulación inesperada. Ver <a href="/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity</a>.</dd>
+ <dd>Contiene información de metadatos que es usada por el user agent del navegador para verificar el recurso captado fue entregado libre de manipulación inesperada. Ver <a href="/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity</a>.</dd>
  <dt>{{htmlattrdef("src")}}</dt>
- <dd>Este atributo especifica la URI del script externo; este puede ser usado como alternativa a scripts embebidos directamente en el documento. Si el script tiene el atributo src, no debería tener código dentro de la etiqueta.</dd>
+ <dd>Este atributo especifica la URI del script externo; este puede ser usado como alternativa a scripts embebidos directamente en el documento. Si el script tiene el atributo src, no debería tener código dentro de la etiqueta.</dd>
  <dt>{{htmlattrdef("type")}}</dt>
- <dd>Este atributo identifica el lenguaje de scripting en que está escrito el código embebido dentro de la etiqueta script, o referenciada utilizando el atributo src. Los valores posibles están especificados como un MIME type (tipo MIME). <br>
- Algunos ejemplos de tipos MIME que pueden ser utilizados son: <code>text/javascript</code>, <code>text/ecmascript</code>, <code>application/javascript</code>, y <code>application/ecmascript. </code>Si el atributo se encuentra ausente, el valor por defecto será un script JavaScript.</dd>
+ <dd>Este atributo identifica el lenguaje de scripting en que está escrito el código embebido dentro de la etiqueta script, o referenciada utilizando el atributo src. Los valores posibles están especificados como un MIME type (tipo MIME). <br>
+ Algunos ejemplos de tipos MIME que pueden ser utilizados son: <code>text/javascript</code>, <code>text/ecmascript</code>, <code>application/javascript</code>, y <code>application/ecmascript. </code>Si el atributo se encuentra ausente, el valor por defecto será un script JavaScript.</dd>
  <dd>Si el tipo MIME especificado no es un tipo JavaScript, el contenido embebido dentro de la etiqueta script es tratado como un bloque de datos que no será procesado por el navegador.</dd>
  <dd>Si el tipo especificado es module, el código es tratado como un módulo JavaScript {{experimental_inline}}. Ver <a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES6 in Depth: Modules</a>.</dd>
- <dd>Nota: en Firefox puedes usar características avanzadas tales como let statements y otras características de la última versión de JS, usando type=application/javascript;version=1.8 {{Non-standard_inline}}. Ten cuidado!, esto no es una característica estándar, es decir, probablemente genere conflictos con otros navegadores, en particular aquellos basados en Chromium.</dd>
+ <dd>Nota: en Firefox puedes usar características avanzadas tales como let statements y otras características de la última versión de JS, usando type=application/javascript;version=1.8 {{Non-standard_inline}}. Ten cuidado!, esto no es una característica estándar, es decir, probablemente genere conflictos con otros navegadores, en particular aquellos basados en Chromium.</dd>
  <dd>Para incluir lenguajes de programación exóticos, lee acerca de <a href="/en-US/Add-ons/Code_snippets/Rosetta">Rosetta</a>.</dd>
  <dt>{{htmlattrdef("text")}}</dt>
- <dd>Este atributo actúa como el atributo <code>textContent</code>, establece el texto contenido del elemento. Pero a diferencia de <code>textContent</code>, este atributo se evalúa como ejecutable luego de ser insertado como nodo en el DOM.</dd>
+ <dd>Este atributo actúa como el atributo <code>textContent</code>, establece el texto contenido del elemento. Pero a diferencia de <code>textContent</code>, este atributo se evalúa como ejecutable luego de ser insertado como nodo en el DOM.</dd>
  <dt>{{htmlattrdef("language")}} {{Deprecated_inline}}</dt>
- <dd>Este atributo actúa como el atributo <code>type</code>, identifica el tipo de lenguaje que se utiliza. A diferencia del atributo <code>type</code>, los posibles valores de este atributo nunca fueron estandarizados. El atributo <code>type</code> debe ser utilizado en lugar de <code>language</code>.</dd>
+ <dd>Este atributo actúa como el atributo <code>type</code>, identifica el tipo de lenguaje que se utiliza. A diferencia del atributo <code>type</code>, los posibles valores de este atributo nunca fueron estandarizados. El atributo <code>type</code> debe ser utilizado en lugar de <code>language</code>.</dd>
  <dt>{{htmlattrdef("defer")}}</dt>
- <dd>Este atributo establece si el script debe ser ejecutado luego de que el documento entero sea analizado. Dado que esta función aún no fue implementada por todos los navegadores relevantes, los autores no deberían asumir que el script realmente será ejecutado luego de la carga y analisis del documento.  Desde Gecko 1.9.2 el atributo defer es ignorado en los scripts que no tienen el atributo src. Sin embargo, en Gecko 1.9.1 incluso se difieren los scripts escritos dentro de la etiqueta.</dd>
+ <dd>Este atributo establece si el script debe ser ejecutado luego de que el documento entero sea analizado. Dado que esta función aún no fue implementada por todos los navegadores relevantes, los autores no deberían asumir que el script realmente será ejecutado luego de la carga y analisis del documento.  Desde Gecko 1.9.2 el atributo defer es ignorado en los scripts que no tienen el atributo src. Sin embargo, en Gecko 1.9.1 incluso se difieren los scripts escritos dentro de la etiqueta.</dd>
  <dt>{{htmlattrdef("crossorigin")}} {{Non-standard_inline}}</dt>
- <dd>Elementos normales script pasan información mínima al {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} para scripts que no pasan las revisiones del estándar <a href="/es/docs/Web/HTTP/Access_control_CORS">CORS</a>. Para permitir registrar errores en los sitios que usan dominios separados para recursos estáticos, usar este atributo.</dd>
+ <dd>Elementos normales script pasan información mínima al {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} para scripts que no pasan las revisiones del estándar <a href="/es/docs/Web/HTTP/Access_control_CORS">CORS</a>. Para permitir registrar errores en los sitios que usan dominios separados para recursos estáticos, usar este atributo.</dd>
 </dl>
 
 <h2 id="Ejemplos">Ejemplos</h2>
@@ -100,12 +100,12 @@ original_slug: Web/HTML/Elemento/script
   <tr>
    <td>{{SpecName('HTML5 W3C', 'scripting-1.html#script', '&lt;script&gt;')}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('HTML4.01', 'interact/scripts.html#h-18.2.1', '&lt;script&gt;')}}</td>
    <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('Subresource Integrity', '#htmlscriptelement', '&lt;script&gt;')}}</td>

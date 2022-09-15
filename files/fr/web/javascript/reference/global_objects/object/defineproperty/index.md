@@ -21,7 +21,9 @@ La méthode statique **`Object.defineProperty()`** permet de définir une nouvel
 
 ## Syntaxe
 
-    Object.defineProperty(obj, prop, descripteur)
+```js
+Object.defineProperty(obj, prop, descripteur)
+```
 
 ### Paramètres
 
@@ -203,7 +205,7 @@ Comme on l'a vu dans l'exemple, essayer de modifier une propriété non accessib
 
 #### Attribut `enumerable`
 
-L'attribut de propriété `enumerable` permet de définir si la propriété est sélectionnée par {{jsxref("Object.assign()")}} ou via l'opérateur [de décomposition](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) (_spread_). Pour les propriétés qui ne sont pas nommées avec des symboles, les propriétés énumérables correspondent aux propriétés qui sont listées avec une boucle {{jsxref("Instructions/for...in","for...in")}} ou avec la méthode {{jsxref("Object.keys()")}}.
+L'attribut de propriété `enumerable` permet de définir si la propriété est sélectionnée par {{jsxref("Object.assign()")}} ou via l'opérateur [de décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax) (_spread_). Pour les propriétés qui ne sont pas nommées avec des symboles, les propriétés énumérables correspondent aux propriétés qui sont listées avec une boucle {{jsxref("Instructions/for...in","for...in")}} ou avec la méthode {{jsxref("Object.keys()")}}.
 
 ```js
 var o = {};

@@ -1,24 +1,14 @@
 ---
 title: column-gap
 slug: Web/CSS/column-gap
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Grid
-  - CSS Multi-column Layout
-  - CSS Property
-  - Reference
-  - column-gap
-  - recipe:css-property
-translation_of: Web/CSS/column-gap
 ---
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) **`column-gap`** 属性用来设置元素列之间的间隔（{{glossary("gutters","gutter")}}）大小。
+[CSS](/zh-CN/docs/Web/CSS) **`column-gap`** 属性用来设置元素列之间的间隔（{{glossary("gutters","gutter")}}）大小。
 
 {{EmbedInteractiveExample("pages/css/column-gap.html")}}
 
-`column-gap` 一开始是 [Multi-column 布局](/zh-CN/docs/Web/CSS/CSS_Columns) 下的特有属性，后来在其他布局中也使用这个属性。如 [CSS 盒子对齐](/zh-CN/docs/Web/CSS/CSS_Box_Alignment)中的表述，该属性已经可以在 Multi-column（多列布局）、Flexible Box（弹性盒子）以及 Grid layouts（网格布局）中使用。
+`column-gap` 一开始是 [Multi-column 布局](/zh-CN/docs/Web/CSS/CSS_Columns) 下的特有属性，后来在其他布局中也使用这个属性。如 [CSS 盒子对齐](/zh-CN/docs/Web/CSS/CSS_Box_Alignment)中的表述，该属性已经可以在 Multi-column（多列布局）、Flexible Box（弹性盒子）以及 Grid layouts（网格布局）中使用。
 
 ## 语法
 
@@ -41,14 +31,14 @@ column-gap: revert-layer;
 column-gap: unset;
 ```
 
-`column-gap` 属性可以用以下值来表示。
+`column-gap` 属性可以用以下值来表示。
 
 ### 取值
 
 - `normal`
-  - : 表示列之间的间隔宽度。在 `多列布局` 时默认间隔为 `1em`，其他类型布局默认间隔为 0。
+  - : 表示列之间的间隔宽度。在 `多列布局` 时默认间隔为 `1em`，其他类型布局默认间隔为 0。
 - {{cssxref("&lt;length&gt;")}}
-  - : 用 {{cssxref("&lt;length&gt;")}} 来定义列之间的间隔大小。而且 {{cssxref("&lt;length&gt;")}} 值必须是非负数的。
+  - : 用 {{cssxref("&lt;length&gt;")}} 来定义列之间的间隔大小。而且 {{cssxref("&lt;length&gt;")}} 值必须是非负数的。
 - {{cssxref("&lt;percentage&gt;")}}
   - : 用 {{cssxref("&lt;percentage&gt;")}}（百分比）来定义列之间的间隔大小。同样的，{{cssxref("&lt;percentage&gt;")}} 值也必须是非负数的。
 

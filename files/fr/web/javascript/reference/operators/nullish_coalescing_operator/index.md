@@ -21,7 +21,9 @@ Contrairement à [l'opérateur logique OU (`||`)](/fr/docs/Web/JavaScript/Refere
 
 ## Syntaxe
 
-    leftExpr ?? rightExpr
+```js
+leftExpr ?? rightExpr
+```
 
 ## Exemples
 

@@ -30,7 +30,7 @@ Tous les évènements (excepté `onErrorOccurred`) peuvent prendre trois argumen
 
 Une fonction d'écoute reçoit un objet `details` qui contient des informations à propos de la requête. Il inclut un ID de requête, fourni afin de permettre à une extension de relier des évènements associés à une même requête. Il est unique à chaque session de navigation et à l'extension. Il reste le même tout au long d'une requête, même durant les redirections et les échanges d'authentifications.
 
-Pour utiliser l'API webRequest pour un hôte donné, une extension doit avoir la [permission API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)  "webRequest" et la [permission hôte ](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)pour cet hôte. Pour utiliser la fonction "blocking", l'extension doit également avoir la permission API "webRequestBlocking".
+Pour utiliser l'API webRequest pour un hôte donné, une extension doit avoir la [permission API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)  "webRequest" et la [permission hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) pour cet hôte. Pour utiliser la fonction "blocking", l'extension doit également avoir la permission API "webRequestBlocking".
 
 Pour intercepter des ressources chargées par une page (comme des images, des scripts ou des feuilles de style), l'extension doit avoir la permission de l'hôte pour la ressource ainsi que pour la page principale demandant la ressource. Par exemple, si une page à  "https\://developer.mozilla.org" charge une image à partir de "https\://mdn.mozillademos.org", alors une extension doit avoir les deux permissions d'hôte si elle doit intercepter la demande d'image.
 
@@ -75,7 +75,7 @@ Vous pouvez lire les détails de la prise de contact TLS, mais vous ne pouvez pa
 
 Pour modifier les corps de réponse HTTP pour une requête, appelez {{WebExtAPIRef("webRequest.filterResponseData")}}, en lui transmettant l'ID de la requête. Cela renvoie un objet {{WebExtAPIRef("webRequest.StreamFilter")}} que vous pouvez utiliser pour examiner et modifier les données reçues par le navigateur.
 
-Pour ce faire, vous devez disposer de la permission de l'API "webRequestBlocking" ainsi que la [permission de l'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "webRequest" et la [permission de l'hôte ](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)pour l'hôte concerné.
+Pour ce faire, vous devez disposer de la permission de l'API "webRequestBlocking" ainsi que la [permission de l'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "webRequest" et la [permission de l'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) pour l'hôte concerné.
 
 ## Types
 

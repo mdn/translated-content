@@ -36,7 +36,7 @@ input[type=range]::-moz-range-thumb {
 
 Une barre de progression mise en forme avec ces règles devrait ressembler à&nbsp;:
 
-![Un élément <input type=range> avec un curseur vert](screen_shot_2015-12-04_at_13.30.08.png)
+![Un élément \<input type=range> avec un curseur vert](screen_shot_2015-12-04_at_13.30.08.png)
 
 ## Spécifications
 

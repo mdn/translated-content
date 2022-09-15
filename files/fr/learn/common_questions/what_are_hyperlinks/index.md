@@ -39,9 +39,9 @@ Dans cet article, nous verrons ce que sont les liens et en quoi ils sont importa
 
 Les hyperliens (fréquemment appelés « liens ») sont un concept fondamental du Web. Pour mieux expliquer ce que sont les liens, il nous faut remonter aux fondations de l'architecture du Web, en 1989, lorsque Tim Berners-Lee présenta les trois piliers du Web (qu'il a inventé en grande partie) :
 
-1.  Les {{Glossary("URL")}} : un système d'adresses pour repérer les documents web
-2.  {{Glossary("HTTP")}} : un protocole de transport permettant de trouver les documents en fonction de leur URL
-3.  {{Glossary("HTML")}} : un format de document qui permet d'intégrer des _hyperliens_ (_hyperlink_ est le terme anglais)
+1. Les {{Glossary("URL")}} : un système d'adresses pour repérer les documents web
+2. {{Glossary("HTTP")}} : un protocole de transport permettant de trouver les documents en fonction de leur URL
+3. {{Glossary("HTML")}} : un format de document qui permet d'intégrer des _hyperliens_ (_hyperlink_ est le terme anglais)
 
 Comme on peut le voir avec ces trois piliers, tout ce qui tourne autour du Web consiste en des documents et à la façon d'y accéder. Le but originel du Web était de fournir un moyen simple et efficace pour lire et naviguer entre différents documents textuels. Depuis, le Web a évolué et permet désormais d'accéder à des images, des vidéos, des données binaires. Toutefois, ces améliorations n'ont pas bouleversé ces trois piliers qui restent toujours d'actualité.
 

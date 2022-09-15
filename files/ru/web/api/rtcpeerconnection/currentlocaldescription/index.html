@@ -3,14 +3,14 @@ title: RTCPeerConnection.currentLocalDescription
 slug: Web/API/RTCPeerConnection/currentLocalDescription
 translation_of: Web/API/RTCPeerConnection/currentLocalDescription
 ---
-<p>{{WebRTCSidebar}} </p>
+<p>{{WebRTCSidebar}} </p>
 
-<p>Только для чтения свойство  <code><strong>RTCPeerConnection.currentLocalDescription</strong></code> возвращает объект  {{domxref("RTCSessionDescription")}} , описывающий локальную сторону соединения, как  самый последний, удачно согласованный объект описания, с момента последнего завершения согласования  {{domxref("RTCPeerConnection")}} и соединения с удалённым пиром (участником соединения) . </p>
+<p>Только для чтения свойство  <code><strong>RTCPeerConnection.currentLocalDescription</strong></code> возвращает объект  {{domxref("RTCSessionDescription")}} , описывающий локальную сторону соединения, как  самый последний, удачно согласованный объект описания, с момента последнего завершения согласования  {{domxref("RTCPeerConnection")}} и соединения с удалённым пиром (участником соединения) . </p>
 
-<p>Для изменения <code>currentLocalDescription</code>, вызовите метод {{domxref("RTCPeerConnection.setLocalDescription()")}}, который запускает серию событий, приводящих к присвоению значения. Более подробно о том, что точно происходит и почему изменения происходят не сразу, смотрите   {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Ожидающие и текущие объекты описания")}}.</p>
+<p>Для изменения <code>currentLocalDescription</code>, вызовите метод {{domxref("RTCPeerConnection.setLocalDescription()")}}, который запускает серию событий, приводящих к присвоению значения. Более подробно о том, что точно происходит и почему изменения происходят не сразу, смотрите   {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Ожидающие и текущие объекты описания")}}.</p>
 
 <div class="note">
-<p>В отличие от  {{domxref("RTCPeerConnection.localDescription")}}, это значение представляет актуальный, текущий статус локальной стороны соединения; <code>localDescription</code> может устанавливать описание, на которое соединение находится в процессе перехода.</p>
+<p>В отличие от  {{domxref("RTCPeerConnection.localDescription")}}, это значение представляет актуальный, текущий статус локальной стороны соединения; <code>localDescription</code> может устанавливать описание, на которое соединение находится в процессе перехода.</p>
 </div>
 
 <h2 id="Синтаксис">Синтаксис</h2>
@@ -19,11 +19,11 @@ translation_of: Web/API/RTCPeerConnection/currentLocalDescription
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
 
-<p>Текущий объект описания локальной стороны соединения. Если установка значения не удалась, значением станет <code>null</code>.</p>
+<p>Текущий объект описания локальной стороны соединения. Если установка значения не удалась, значением станет <code>null</code>.</p>
 
 <h2 id="Пример">Пример</h2>
 
-<p>В этом примере рассматривается свойство <code>currentLocalDescription</code>  и отображается предупреждение, содержащее свойства объекта {{domxref("RTCSessionDescription")}}  <code>type</code> и <code>sdp</code> .</p>
+<p>В этом примере рассматривается свойство <code>currentLocalDescription</code>  и отображается предупреждение, содержащее свойства объекта {{domxref("RTCSessionDescription")}}  <code>type</code> и <code>sdp</code> .</p>
 
 <pre class="brush: js">var pc = new RTCPeerConnection();
 …

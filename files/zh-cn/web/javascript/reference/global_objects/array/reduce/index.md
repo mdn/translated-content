@@ -1,15 +1,6 @@
 ---
 title: Array.prototype.reduce()
 slug: Web/JavaScript/Reference/Global_Objects/Array/Reduce
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - Reduce
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 ---
 {{JSRef}}
 
@@ -26,21 +17,27 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 ## 语法
 
 ```js
-// Arrow function
-reduce((previousValue, currentValue) => { /* ... */ } )
-reduce((previousValue, currentValue, currentIndex) => { /* ... */ } )
-reduce((previousValue, currentValue, currentIndex, array) => { /* ... */ } )
-reduce((previousValue, currentValue, currentIndex, array) => { /* ... */ }, initialValue)
+// 箭头函数
+reduce((previousValue, currentValue) => { /* … */ } )
+reduce((previousValue, currentValue, currentIndex) => { /* … */ } )
+reduce((previousValue, currentValue, currentIndex, array) => { /* … */ } )
 
-// Callback function
+reduce((previousValue, currentValue) => { /* … */ } , initialValue)
+reduce((previousValue, currentValue, currentIndex) => { /* … */ } , initialValue)
+reduce((previousValue, currentValue, currentIndex, array) => { /* … */ }, initialValue)
+
+// 回调函数
 reduce(callbackFn)
 reduce(callbackFn, initialValue)
 
-// Inline callback function
-reduce(function(previousValue, currentValue) { /* ... */ })
-reduce(function(previousValue, currentValue, currentIndex) { /* ... */ })
-reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ })
-reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ }, initialValue)
+// 内联回调函数
+reduce(function(previousValue, currentValue) { /* … */ })
+reduce(function(previousValue, currentValue, currentIndex) { /* … */ })
+reduce(function(previousValue, currentValue, currentIndex, array) { /* … */ })
+
+reduce(function(previousValue, currentValue) { /* … */ }, initialValue)
+reduce(function(previousValue, currentValue, currentIndex) { /* … */ }, initialValue)
+reduce(function(previousValue, currentValue, currentIndex, array) { /* … */ }, initialValue)
 ```
 
 ### 参数
@@ -77,6 +74,7 @@ ECMAScript 规范描述了 `reduce()` 的行为：
 > - 被遍历的对象
 >
 > 回调函数第一次执行时，*previousValue* 和 *currentValue* 的取值有两种情况：
+>
 > - 如果调用 `reduce()` 时提供了 *initialValue*，*previousValue* 取值则为 *initialValue*，*currentValue* 则取数组中的第一个值。
 > - 如果没有提供 *initialValue*，那么 *previousValue* 取数组中的第一个值，*currentValue* 取数组中的第二个值。
 >
@@ -375,7 +373,6 @@ let groupedPeople = groupBy(people, 'age')
 ```
 
 ### 使用扩展运算符和 initialValue 绑定包含在对象数组中的数组
-
 
 ```js
 // friends - an array of objects
