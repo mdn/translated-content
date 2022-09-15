@@ -3,75 +3,76 @@ title: Printing
 slug: Web/Guide/Printing
 translation_of: Web/Guide/Printing
 ---
-<p>Pode haver momentos em que seu site ou aplicação queira melhorar a experiência do usuário quando imprime um conteúdo. Existem diversos cenários possíveis:</p>
+Pode haver momentos em que seu site ou aplicação queira melhorar a experiência do usuário quando imprime um conteúdo. Existem diversos cenários possíveis:
 
-<ul>
- <li>Você deseja ajustar o layout para tirar vantagem do tamanho e forma do papel.</li>
- <li>Você deseja usar diferentes estilos para melhorar a aparência do seu conteúdo no papel.</li>
- <li>Você deseja aumentar a resolução das imagens para um melhor resultado.</li>
- <li>Você quer ajustar a experiência do usuário de impressão, como apresentar uma versão especialmente formatada de seu conteúdo antes da impressão começar.</li>
-</ul>
+- Você deseja ajustar o layout para tirar vantagem do tamanho e forma do papel.
+- Você deseja usar diferentes estilos para melhorar a aparência do seu conteúdo no papel.
+- Você deseja aumentar a resolução das imagens para um melhor resultado.
+- Você quer ajustar a experiência do usuário de impressão, como apresentar uma versão especialmente formatada de seu conteúdo antes da impressão começar.
 
-<p>Podem haver outros casos onde você precisa gerenciar o processo de impressão, mas estes são alguns dos cenários mais comuns. Este artigo ensina dicas e técnicas para te ajudar a imprimir conteudo web de uma melhor forma.</p>
+Podem haver outros casos onde você precisa gerenciar o processo de impressão, mas estes são alguns dos cenários mais comuns. Este artigo ensina dicas e técnicas para te ajudar a imprimir conteudo web de uma melhor forma.
 
-<h2 id="Usando_uma_folha_de_estilos_para_impressão">Usando uma folha de estilos para impressão</h2>
+## Usando uma folha de estilos para impressão
 
-<p>Adicione o seguinte código dentro da tag {{HTMLElement("head")}}.</p>
+Adicione o seguinte código dentro da tag {{HTMLElement("head")}}.
 
-<pre class="notranslate">&lt;link href="/path/to/print.css" media="print" rel="stylesheet" /&gt;
-</pre>
+```
+<link href="/path/to/print.css" media="print" rel="stylesheet" />
+```
 
-<h2 id="Usando_media_queries_para_melhorar_o_layout">Usando media queries para melhorar o layout</h2>
+## Usando media queries para melhorar o layout
 
-<h2 id="Detectando_requisições_de_impressão">Detectando requisições de impressão</h2>
+## Detectando requisições de impressão
 
-<p>Alguns navegadores (incluindo o Firefox 6 e versões mais antigas do Internet Explorer) enviam eventos <code>beforeprint</code> e <code>afterprint</code> para permitir que o conteúdo determine quando a impressão deve ocorrer. Você pode usar isto para ajustar a interface presente durante a impressão (como a exibição ou ocultação de elementos de interface do usuário durante o processo de impressão).</p>
+Alguns navegadores (incluindo o Firefox 6 e versões mais antigas do Internet Explorer) enviam eventos `beforeprint` e `afterprint` para permitir que o conteúdo determine quando a impressão deve ocorrer. Você pode usar isto para ajustar a interface presente durante a impressão (como a exibição ou ocultação de elementos de interface do usuário durante o processo de impressão).
 
-<div class="note"><strong>Nota:</strong> Você também pode usar <a href="/en-US/docs/DOM/window.onbeforeprint" title="DOM/window.onbeforeprint"><code>window.onbeforeprint</code></a> e <a href="/en-US/docs/DOM/window.onafterprint" title="DOM/window.onafterprint"><code>window.onafterprint</code></a> para atribuir manipuladores para esses eventos, mas usando {{domxref("EventTarget.addEventListener()")}} é preferível.</div>
+> **Nota:** Você também pode usar [`window.onbeforeprint`](/pt-BR/docs/DOM/window.onbeforeprint "DOM/window.onbeforeprint") e [`window.onafterprint`](/pt-BR/docs/DOM/window.onafterprint "DOM/window.onafterprint") para atribuir manipuladores para esses eventos, mas usando {{domxref("EventTarget.addEventListener()")}} é preferível.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>Aqui estão alguns exemplos comuns.</p>
+Aqui estão alguns exemplos comuns.
 
-<h4 id="Abrir_e_fechar_automaticamente_uma_janela_popup_quando_finalizado">Abrir e fechar automaticamente uma janela popup quando finalizado</h4>
+#### Abrir e fechar automaticamente uma janela popup quando finalizado
 
-<p>If you want to be able to automatically close a <a href="/en-US/docs/DOM/window.open" title="DOM/window.open">popup window</a> (for example, the printer-friendly version of a document) after the user prints its contents, you can use code like this:</p>
+If you want to be able to automatically close a [popup window](/pt-BR/docs/DOM/window.open "DOM/window.open") (for example, the printer-friendly version of a document) after the user prints its contents, you can use code like this:
 
-<pre class="brush: html notranslate">&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt; &lt;title&gt;JavaScript Window Close Example &lt;/title&gt;
-  &lt;script type="text/javascript"&gt;
+```html
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <title>JavaScript Window Close Example </title>
+  <script type="text/javascript">
     function popuponclick() {
       my_window = window.open('', 'mywindow', 'status=1,width=350,height=150');
-      my_window.document.write('&lt;html&gt;&lt;head&gt;&lt;title&gt;Print Me&lt;/title&gt;&lt;/head&gt;');
-      my_window.document.write('&lt;body onafterprint="self.close()"&gt;');
-      my_window.document.write('&lt;p&gt;When you print this window, it will close afterward.&lt;/p&gt;');
-      my_window.document.write('&lt;/body&gt;&lt;/html&gt;');
+      my_window.document.write('<html><head><title>Print Me</title></head>');
+      my_window.document.write('<body onafterprint="self.close()">');
+      my_window.document.write('<p>When you print this window, it will close afterward.</p>');
+      my_window.document.write('</body></html>');
   }
-  &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;To try out the &lt;code&gt;afterprint&lt;/code&gt; event, click the link below to open
-  the window to print. You can also try changing the code to use &lt;code&gt;beforeprint&lt;/code&gt;
-  to see the difference.&lt;/p&gt;
-  &lt;p&gt;&lt;a href="javascript: popuponclick()"&gt;Open Popup Window&lt;/a&gt;&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </script>
+</head>
+<body>
+  <p>To try out the <code>afterprint</code> event, click the link below to open
+  the window to print. You can also try changing the code to use <code>beforeprint</code>
+  to see the difference.</p>
+  <p><a href="javascript: popuponclick()">Open Popup Window</a></p>
+</body>
+</html>
+```
 
-<div><a href="/samples/domref/printevents.html">Ver Exemplo</a></div>
+[Ver Exemplo](/samples/domref/printevents.html)
 
-<h3 id="Imprimir_uma_página_externa_sem_abri-la">Imprimir uma página externa sem abri-la</h3>
+### Imprimir uma página externa sem abri-la
 
-<p>If you want to be able to print an external page without opening it, you can utilize a hidden {{HTMLElement("iframe")}} (see: <a href="/en-US/docs/DOM/HTMLIFrameElement" title="DOM/HTMLIFrameElement">HTMLIFrameElement</a>), automatically removing it after the user prints its contents. The following is a possible example which will print a file named <code>externalPage.html</code>:</p>
+If you want to be able to print an external page without opening it, you can utilize a hidden {{HTMLElement("iframe")}} (see: [HTMLIFrameElement](/pt-BR/docs/DOM/HTMLIFrameElement "DOM/HTMLIFrameElement")), automatically removing it after the user prints its contents. The following is a possible example which will print a file named `externalPage.html`:
 
-<pre class="brush: html notranslate">&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
-&lt;title&gt;MDN Example&lt;/title&gt;
-&lt;script type="text/javascript"&gt;
+```html
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>MDN Example</title>
+<script type="text/javascript">
 function closePrint () {
   document.body.removeChild(this.__container__);
 }
@@ -96,23 +97,21 @@ function printPage (sURL) {
   oHiddFrame.src = sURL;
   document.body.appendChild(oHiddFrame);
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body&gt;
-  &lt;p&gt;&lt;span onclick="printPage('externalPage.html');" style="cursor:pointer;text-decoration:underline;color:#0000ff;"&gt;Print external page!&lt;/span&gt;&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<body>
+  <p><span onclick="printPage('externalPage.html');" style="cursor:pointer;text-decoration:underline;color:#0000ff;">Print external page!</span></p>
+</body>
+</html>
+```
 
-<div class="note"><strong>Nota:</strong> Older versions of Internet Explorer cannot print the contents of a hidden {{HTMLElement("iframe")}}.</div>
+> **Nota:** Older versions of Internet Explorer cannot print the contents of a hidden {{HTMLElement("iframe")}}.
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/DOM/window.print" title="DOM/window.print"><code>window.print</code></a></li>
- <li><a href="/en-US/docs/DOM/window.onbeforeprint" title="DOM/window.onbeforeprint"><code>window.onbeforeprint</code></a></li>
- <li><a href="/en-US/docs/DOM/window.onafterprint" title="DOM/window.onafterprint"><code>window.onafterprint</code></a></li>
- <li><a href="/en-US/docs/CSS/Media_queries" title="CSS/Media queries">Media queries</a></li>
- <li>{{cssxref("@media")}}</li>
-</ul>
+- [`window.print`](/pt-BR/docs/DOM/window.print "DOM/window.print")
+- [`window.onbeforeprint`](/pt-BR/docs/DOM/window.onbeforeprint "DOM/window.onbeforeprint")
+- [`window.onafterprint`](/pt-BR/docs/DOM/window.onafterprint "DOM/window.onafterprint")
+- [Media queries](/pt-BR/docs/CSS/Media_queries "CSS/Media queries")
+- {{cssxref("@media")}}

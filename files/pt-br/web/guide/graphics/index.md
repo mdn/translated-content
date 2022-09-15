@@ -14,29 +14,23 @@ tags:
 translation_of: Web/Guide/Graphics
 original_slug: Web/Guide/Gráficos
 ---
-<p>Sites modernos da Web e aplicativos frequentemente precisam exibir gráficos. Imagens estáticas podem ser exibidas facilmente usando o elemento {{HTMLElement("img")}} ou configurando o background de elementos HTML usando a propriedade {{cssxref("background-image")}}. Você também pode construir gráficos em tempo real ou manipular imagens depois de criadas. Esses artigos fornecem conhecimento de como você pode realizar isto.</p>
+Sites modernos da Web e aplicativos frequentemente precisam exibir gráficos. Imagens estáticas podem ser exibidas facilmente usando o elemento {{HTMLElement("img")}} ou configurando o background de elementos HTML usando a propriedade {{cssxref("background-image")}}. Você também pode construir gráficos em tempo real ou manipular imagens depois de criadas. Esses artigos fornecem conhecimento de como você pode realizar isto.
 
-<h2>Gráficos 2D</h2>
+## Gráficos 2D
 
-<dl>
- <dt><a href="/pt-BR/docs/Web/HTML/Canvas">Canvas</a></dt>
- <dd>Um guia introdutório do uso do elemento {{HTMLElement("canvas")}} para desenhar gráficos 2D usando JavaScript.</dd>
- <dt><a href="/pt-BR/docs/SVG">SVG</a></dt>
- <dd><em>Scalable Vector Graphics</em> (SVG) ou Gráficos de Vetor Escalável permite que você use linhas, curvas e outras formas geométricas para renderizar gráficos. Com vetores, você pode criar imagens que se redimensionam perfeitamente para qualquer tamanho.</dd>
-</dl>
+- [Canvas](/pt-BR/docs/Web/HTML/Canvas)
+  - : Um guia introdutório do uso do elemento {{HTMLElement("canvas")}} para desenhar gráficos 2D usando JavaScript.
+- [SVG](/pt-BR/docs/SVG)
+  - : _Scalable Vector Graphics_ (SVG) ou Gráficos de Vetor Escalável permite que você use linhas, curvas e outras formas geométricas para renderizar gráficos. Com vetores, você pode criar imagens que se redimensionam perfeitamente para qualquer tamanho.
 
-<h2>Gráficos 3D</h2>
+## Gráficos 3D
 
-<dl>
- <dt><a href="/pt-BR/docs/Web/WebGL">WebGL</a></dt>
- <dd>Um guia para começar com WebGL, a API gráfica 3D para a Web. Esta tecnologia permite que você use o padrão OpenGL ES em conteúdo Web.</dd>
-</dl>
+- [WebGL](/pt-BR/docs/Web/WebGL)
+  - : Um guia para começar com WebGL, a API gráfica 3D para a Web. Esta tecnologia permite que você use o padrão OpenGL ES em conteúdo Web.
 
-<h2 id="Video">Video</h2>
+## Video
 
-<dl>
- <dt><a href="/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video">Usando áudio e vídeo em HTML5</a></dt>
- <dd>Embarcando vídeo ou áudio na página web e controlando a reprodução desses elementos.</dd>
- <dt><a href="/pt-BR/docs/WebRTC">WebRTC</a></dt>
- <dd>O RTC in WebRTC é um padrão para <em>Real-Time Communications </em>(comunicação em tempo real), tecnologia que permite a transmissão  de áudio ou vídeo e o compartilhamento de dados entre os clientes de navegadores (<em>peers</em>).</dd>
-</dl>
+- [Usando áudio e vídeo em HTML5](/pt-BR/docs/Web/Guide/HTML/Using_HTML5_audio_and_video)
+  - : Embarcando vídeo ou áudio na página web e controlando a reprodução desses elementos.
+- [WebRTC](/pt-BR/docs/WebRTC)
+  - : O RTC in WebRTC é um padrão para _Real-Time Communications_ (comunicação em tempo real), tecnologia que permite a transmissão de áudio ou vídeo e o compartilhamento de dados entre os clientes de navegadores (_peers_).
