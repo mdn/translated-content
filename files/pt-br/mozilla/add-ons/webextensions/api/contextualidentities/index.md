@@ -6,57 +6,54 @@ tags:
   - Identidade contextual
 translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Trabalhar com identidades contextuais: listar, criar, remover e atualizar identidades contextuais.</p>
+Trabalhar com identidades contextuais: listar, criar, remover e atualizar identidades contextuais.
 
-<p>"Identidades conceituais", também conhecido como "containers",  consiste em uma funcionalidade do navegador cuja premissa é que usuários assumem multiplas identidades quando navegam na internet, e desejam manter alguma separação entre tais identidades. Por exemplo, um usuário pode considerar sua "identidade de trabalho" separada de sua "identidade pessoal", e não desejar compartilhar cookies entre esses dois contextos.</p>
+"Identidades conceituais", também conhecido como "containers", consiste em uma funcionalidade do navegador cuja premissa é que usuários assumem multiplas identidades quando navegam na internet, e desejam manter alguma separação entre tais identidades. Por exemplo, um usuário pode considerar sua "identidade de trabalho" separada de sua "identidade pessoal", e não desejar compartilhar cookies entre esses dois contextos.
 
-<p>Com a funcionalidade de identidades contextuais, cada uma possui um nome, cor e um ícone. Novas abas são atribuidas a uma identidade, e o nome, ícone e cor aparecerão na barra de endereço. Internamente, cada identidade guarda seu próprio cookie e não os compartilha entre outras abas.</p>
+Com a funcionalidade de identidades contextuais, cada uma possui um nome, cor e um ícone. Novas abas são atribuidas a uma identidade, e o nome, ícone e cor aparecerão na barra de endereço. Internamente, cada identidade guarda seu próprio cookie e não os compartilha entre outras abas.
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14719/containers.png" style="display: block; height: 259px; margin-left: auto; margin-right: auto; width: 515px;">Identidade contextual é uma funcionalidade experimental no Firefox e está habilitado apenas no Firefox Nightly. Para habilitá-lo em outras versões do Firefox, atribua true as seguintes preferências: <code>privacy.userContext.enabled</code>. Observe que embora identidades contextuais estejam disponíveis no Firefox para Android, não há uma interface gráfica funcionando com ela para esta versão de navegador.</p>
+![](https://mdn.mozillademos.org/files/14719/containers.png)Identidade contextual é uma funcionalidade experimental no Firefox e está habilitado apenas no Firefox Nightly. Para habilitá-lo em outras versões do Firefox, atribua true as seguintes preferências: `privacy.userContext.enabled`. Observe que embora identidades contextuais estejam disponíveis no Firefox para Android, não há uma interface gráfica funcionando com ela para esta versão de navegador.
 
-<p>Antes do Firefox 57, a API <code>contextualIdentities</code> é disponível apenas se a funcionalidade de identidade contextual está habilitada por si mesma. Se uma extensão tentou usar a API <code>contextualIdentities</code> API sem a funcionalidade estar habilitada, então as chamadas do método deveria resolver suas promises com <code>false</code>.</p>
+Antes do Firefox 57, a API `contextualIdentities` é disponível apenas se a funcionalidade de identidade contextual está habilitada por si mesma. Se uma extensão tentou usar a API `contextualIdentities` API sem a funcionalidade estar habilitada, então as chamadas do método deveria resolver suas promises com `false`.
 
-<p>Para o Firefox 57 em diante, se uma extensão que usa a API <code>contextualIdentities</code> está instalada, então a funcionalidade de identidade contextual será habilitada automaticamente. Observe que embora ainda é possível para o usuário desabilitar a funcionalidade usando a preferência "privacy.userContext.enabled". Isse isso ocorrer, então a chamada do método <code>contextualIdentities</code> rejeitará suas promises com uma mensagem de erro.</p>
+Para o Firefox 57 em diante, se uma extensão que usa a API `contextualIdentities` está instalada, então a funcionalidade de identidade contextual será habilitada automaticamente. Observe que embora ainda é possível para o usuário desabilitar a funcionalidade usando a preferência "privacy.userContext.enabled". Isse isso ocorrer, então a chamada do método `contextualIdentities` rejeitará suas promises com uma mensagem de erro.
 
-<p>Para mais informações sobre identidade contextual no Firefox veja <a href="https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers">este guia</a>.</p>
+Para mais informações sobre identidade contextual no Firefox veja [este guia](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers).
 
-<p>Identidades contextuais atualmente não são suportadas em outros navegadores.</p>
+Identidades contextuais atualmente não são suportadas em outros navegadores.
 
-<p>Para usar esta API você precisará incluir a <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissão</a> "contextualIdentities" em seu arquivo <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a>.</p>
+Para usar esta API você precisará incluir a [permissão](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "contextualIdentities" em seu arquivo [manifest.json](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
 
-<h2 id="Tipos">Tipos</h2>
+## Tipos
 
-<dl>
- <dt>{{WebExtAPIRef("contextualIdentities.ContextualIdentity")}}</dt>
- <dd>Contém informações sobre uma identidade contextual.</dd>
-</dl>
+- {{WebExtAPIRef("contextualIdentities.ContextualIdentity")}}
+  - : Contém informações sobre uma identidade contextual.
 
-<h2 id="Funções">Funções</h2>
+## Funções
 
-<dl>
- <dt>{{WebExtAPIRef("contextualIdentities.create()")}}</dt>
- <dd>Cria uma nova identidade contextual.</dd>
- <dt>{{WebExtAPIRef("contextualIdentities.get()")}}</dt>
- <dd>Recupera uma única identidade contextual, dado o ID do cookie que armazena.</dd>
- <dt>{{WebExtAPIRef("contextualIdentities.query()")}}</dt>
- <dd>Recupera todas identidades contextuais, ou todas com um nome em particular.</dd>
- <dt>{{WebExtAPIRef("contextualIdentities.update()")}}</dt>
- <dd>Atualiza as propriedades existentes de uma identidade contextual.</dd>
- <dt>{{WebExtAPIRef("contextualIdentities.remove()")}}</dt>
- <dd>Exclui uma identidade contextual.</dd>
- <dt>
- <h2 id="Eventos">Eventos</h2>
- </dt>
- <dt>{{WebExtAPIRef("contextualIdentities.onCreated")}}</dt>
- <dd>Disparado quando uma identidade contextual é criada.</dd>
- <dt>{{WebExtAPIRef("contextualIdentities.onRemoved")}}</dt>
- <dd>Disparado quando uma identidade contextual é removida.</dd>
- <dt>{{WebExtAPIRef("contextualIdentities.onUpdated")}}</dt>
- <dd>Disparado quando uma ou mais propriedades de uma identidade contextual é atualizada.</dd>
-</dl>
+- {{WebExtAPIRef("contextualIdentities.create()")}}
+  - : Cria uma nova identidade contextual.
+- {{WebExtAPIRef("contextualIdentities.get()")}}
+  - : Recupera uma única identidade contextual, dado o ID do cookie que armazena.
+- {{WebExtAPIRef("contextualIdentities.query()")}}
+  - : Recupera todas identidades contextuais, ou todas com um nome em particular.
+- {{WebExtAPIRef("contextualIdentities.update()")}}
+  - : Atualiza as propriedades existentes de uma identidade contextual.
+- {{WebExtAPIRef("contextualIdentities.remove()")}}
+  - : Exclui uma identidade contextual.
+- ## Eventos
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+  {{WebExtAPIRef("contextualIdentities.onCreated")}}
 
-<p>{{Compat("webextensions.api.contextualIdentities")}} {{WebExtExamples("h2")}}</p>
+  - : Disparado quando uma identidade contextual é criada.
+
+- {{WebExtAPIRef("contextualIdentities.onRemoved")}}
+  - : Disparado quando uma identidade contextual é removida.
+- {{WebExtAPIRef("contextualIdentities.onUpdated")}}
+  - : Disparado quando uma ou mais propriedades de uma identidade contextual é atualizada.
+
+## Compatibilidade com navegadores
+
+{{Compat("webextensions.api.contextualIdentities")}} {{WebExtExamples("h2")}}

@@ -13,56 +13,55 @@ tags:
   - menus
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Adicione itens ao sistema de menu do navegador.</p>
+Adicione itens ao sistema de menu do navegador.
 
-<p>Esta API é modelada sobre a API <a href="https://developer.chrome.com/extensions/contextMenus">"contextMenus"</a> do Chrome, que permite que extensões do Chrome adicione itens para o contexto de menu do navegador. A API <code>browser.menus</code> adiciona alguns recursos à API do Chrome.</p>
+Esta API é modelada sobre a API ["contextMenus"](https://developer.chrome.com/extensions/contextMenus) do Chrome, que permite que extensões do Chrome adicione itens para o contexto de menu do navegador. A API `browser.menus` adiciona alguns recursos à API do Chrome.
 
-<p>Antes do Firefox 55, esta API foi também nomeada, originalmente, de <code>contextMenus</code>, e esse nome <span class="tlid-translation translation" lang="pt"><span title="">era mantido como um alias; portanto, você pode usar o </span></span><code>contextMenus</code> <span class="tlid-translation translation" lang="pt"><span title="">para escrever um código que funcione no Firefox e também em outros navegadores.</span></span></p>
+Antes do Firefox 55, esta API foi também nomeada, originalmente, de `contextMenus`, e esse nome era mantido como um alias; portanto, você pode usar o `contextMenus` para escrever um código que funcione no Firefox e também em outros navegadores.
 
-<p>Para usar essa API, você precisa da <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissão</a> de <code>menus</code>. Você também pode usar o alias <code>contextMenus</code> em vez de <code>menus</code>, mas se usar, a API deve ser acessada como <code>browser.contextMenus</code>.</p>
+Para usar essa API, você precisa da [permissão](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) de `menus`. Você também pode usar o alias `contextMenus` em vez de `menus`, mas se usar, a API deve ser acessada como `browser.contextMenus`.
 
-<p>Exceto para <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement">menus.getTargetElement()</a></code>, essa API não pode ser usada de scripts de conteúdo (content scripts).</p>
+Exceto para [`menus.getTargetElement()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement), essa API não pode ser usada de scripts de conteúdo (content scripts).
 
-<h2 id="Criando_itens_de_menu">Criando itens de menu</h2>
+## Criando itens de menu
 
-<p>Para criar um item de menu, chamme o método {{WebExtAPIRef("menus.create()")}}. Você passa esse método como um objeto contendo opções para o item, incluindo o ID do item, o tipo do item, e os contextos no qual ele deve ser mostrado.</p>
+Para criar um item de menu, chamme o método {{WebExtAPIRef("menus.create()")}}. Você passa esse método como um objeto contendo opções para o item, incluindo o ID do item, o tipo do item, e os contextos no qual ele deve ser mostrado.
 
-<p>Escute os cliques no seu item de menu adicionando um ouvinte para o evento {{WebExtAPIRef("menus.onClicked")}}. Este ouvinte será passado</p>
+Escute os cliques no seu item de menu adicionando um ouvinte para o evento {{WebExtAPIRef("menus.onClicked")}}. Este ouvinte será passado
 
-<p>Listen for clicks on your menu item by adding a listener to the {{WebExtAPIRef("menus.onClicked")}} event. Este ouvinte receberá um objeto {{WebExtAPIRef("menus.OnClickData")}} que contém os detalhes do evento.</p>
+Listen for clicks on your menu item by adding a listener to the {{WebExtAPIRef("menus.onClicked")}} event. Este ouvinte receberá um objeto {{WebExtAPIRef("menus.OnClickData")}} que contém os detalhes do evento.
 
-<p>Você pode criar quatro tipos diferentes de itens de menu, com base no valor da propriedade <code>type</code> que você fornece nas opções para <code>create()</code>:</p>
+Você pode criar quatro tipos diferentes de itens de menu, com base no valor da propriedade `type` que você fornece nas opções para `create()`:
 
-<ul>
- <li>"normal": um item de menu que apenas mostra um rótulo.</li>
- <li>"checkbox": um item de menu que representa um estado binário. Ele mostra uma marca de verificação próxima ao rótulo. Clicar no item ativa esta marca. O ouvinte de clique receberá duas propriedades extras: "checked", indicando que o item foi marcado agora, e "wasChecked", indicando que o item foi marcado antes do evento do clique.</li>
- <li>"radio": um item de menu que representa um de um grupo de escolhas. Como uma marca de verificação, isso também mostra uma marca de verificação próxima ao rótulo, e seu ouvinte de clique receberá "checked" e "wasChecked". No entanto, se você criar mais de um item de rádio, os itens funcionarão como um grupo de itens de rádio: apenas um item no grupo poderá ser verificado e clicar em um item o tornará o item marcado.</li>
- <li>"separator": uma linha separando um grupo de itens.</li>
-</ul>
+- "normal": um item de menu que apenas mostra um rótulo.
+- "checkbox": um item de menu que representa um estado binário. Ele mostra uma marca de verificação próxima ao rótulo. Clicar no item ativa esta marca. O ouvinte de clique receberá duas propriedades extras: "checked", indicando que o item foi marcado agora, e "wasChecked", indicando que o item foi marcado antes do evento do clique.
+- "radio": um item de menu que representa um de um grupo de escolhas. Como uma marca de verificação, isso também mostra uma marca de verificação próxima ao rótulo, e seu ouvinte de clique receberá "checked" e "wasChecked". No entanto, se você criar mais de um item de rádio, os itens funcionarão como um grupo de itens de rádio: apenas um item no grupo poderá ser verificado e clicar em um item o tornará o item marcado.
+- "separator": uma linha separando um grupo de itens.
 
-<p>Se você criou mais de um item de menu de contexto ou mais de um item de menu de ferramentas, os itens serão colocados em um submenu. O pai do submenu será identificado com o nome da extensão. Por exemplo, aqui está uma extensão chamada "Demonstração de menu" ("Menu demo"), que adicionou dois itens de menu de contexto:</p>
+Se você criou mais de um item de menu de contexto ou mais de um item de menu de ferramentas, os itens serão colocados em um submenu. O pai do submenu será identificado com o nome da extensão. Por exemplo, aqui está uma extensão chamada "Demonstração de menu" ("Menu demo"), que adicionou dois itens de menu de contexto:
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15431/menus-1.png" style="display: block; height: 406px; margin-left: auto; margin-right: auto; width: 500px;"></p>
+![](https://mdn.mozillademos.org/files/15431/menus-1.png)
 
-<h2 id="Ícones">Ícones</h2>
+## Ícones
 
-<p>Se você especificou ícones para sua extensão usando a <a href="/en-US/Add-ons/WebExtensions/manifest.json/icons">chave "icons" do manifest</a>, <span class="tlid-translation translation" lang="pt"><span title=""> o item de menu exibirá o ícone especificado ao lado do rótulo.</span> <span title="">O navegador tentará escolher um ícone de 16x16 pixels para uma exibição normal ou um ícone de 32x32 pixels para uma exibição de alta densidade:</span></span></p>
+Se você especificou ícones para sua extensão usando a [chave "icons" do manifest](/en-US/Add-ons/WebExtensions/manifest.json/icons), o item de menu exibirá o ícone especificado ao lado do rótulo. O navegador tentará escolher um ícone de 16x16 pixels para uma exibição normal ou um ícone de 32x32 pixels para uma exibição de alta densidade:
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15433/menus-2.png" style="display: block; height: 409px; margin-left: auto; margin-right: auto; width: 500px;"></p>
+![](https://mdn.mozillademos.org/files/15433/menus-2.png)
 
-<p>Apenas para itens dentro de um submenu, você pode especificar ícones customizados passando a opção <code>icons</code> para o {{WebExtAPIRef("menus.create()")}}:</p>
+Apenas para itens dentro de um submenu, você pode especificar ícones customizados passando a opção `icons` para o {{WebExtAPIRef("menus.create()")}}:
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15435/menus-3.png" style="display: block; height: 396px; margin-left: auto; margin-right: auto; width: 500px;"></p>
+![](https://mdn.mozillademos.org/files/15435/menus-3.png)
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>Aqui está um menu de contexto contendo quatro itens: um item normal, dois itens de rádio com separadores em cada lado, e uma marca de seleção. Os itens de rádio receberam ícones customizados.</p>
+Aqui está um menu de contexto contendo quatro itens: um item normal, dois itens de rádio com separadores em cada lado, e uma marca de seleção. Os itens de rádio receberam ícones customizados.
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15437/menus-4.png" style="display: block; height: 790px; margin-left: auto; margin-right: auto; width: 500px;">Você pode criar um submenu como este usando o código abaixo:</p>
+![](https://mdn.mozillademos.org/files/15437/menus-4.png)Você pode criar um submenu como este usando o código abaixo:
 
-<pre class="brush: js">browser.menus.create({
+```js
+browser.menus.create({
   id: "remove-me",
   title: browser.i18n.getMessage("menuItemRemoveMe"),
   contexts: ["all"]
@@ -112,81 +111,70 @@ browser.menus.create({
   title: browser.i18n.getMessage("menuItemUncheckMe"),
   contexts: ["all"],
   checked: checkedState
-}, onCreated);</pre>
+}, onCreated);
+```
 
-<h2 id="Tipos">Tipos</h2>
+## Tipos
 
-<dl>
- <dt>{{WebExtAPIRef("menus.ContextType")}}</dt>
- <dd>Os diferentes contextos em que um menu pode aparecer.</dd>
- <dt>{{WebExtAPIRef("menus.ItemType")}}</dt>
- <dd><span class="tlid-translation translation" lang="pt"><span title="">O tipo de item de menu</span></span>: "normal", "checkbox", "radio", "separator".</dd>
- <dt>{{WebExtAPIRef("menus.OnClickData")}}</dt>
- <dd>Informação enviada quando um item do menu é clicado.</dd>
-</dl>
+- {{WebExtAPIRef("menus.ContextType")}}
+  - : Os diferentes contextos em que um menu pode aparecer.
+- {{WebExtAPIRef("menus.ItemType")}}
+  - : O tipo de item de menu: "normal", "checkbox", "radio", "separator".
+- {{WebExtAPIRef("menus.OnClickData")}}
+  - : Informação enviada quando um item do menu é clicado.
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<dl>
- <dt>{{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}</dt>
- <dd>O número máximo de itens de extensão de nível superior que podem ser adicionados a um item de menu cujo ContextType seja "browser_action" ou "page_action".</dd>
-</dl>
+- {{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}
+  - : O número máximo de itens de extensão de nível superior que podem ser adicionados a um item de menu cujo ContextType seja "browser_action" ou "page_action".
 
-<h2 id="Funções">Funções</h2>
+## Funções
 
-<dl>
- <dt>{{WebExtAPIRef("menus.create()")}}</dt>
- <dd>Cria um novo item de menu.</dd>
- <dt>{{WebExtApiRef("menus.getTargetElement()")}}</dt>
- <dd>Retorna o elemento para um <code>info.targetElementId</code> determinado.</dd>
- <dt>{{WebExtApiRef("menus.overrideContext()")}}</dt>
- <dd>Oculta todos os itens de menu padrão do Firefox para fornecer uma interface de usuário personalizada do menu de contexto.</dd>
- <dt>{{WebExtAPIRef("menus.refresh()")}}</dt>
- <dd>Atualiza um menu que está sendo exibido no momento.</dd>
- <dt>{{WebExtAPIRef("menus.remove()")}}</dt>
- <dd>Remove um item do menu.</dd>
- <dt>{{WebExtAPIRef("menus.removeAll()")}}</dt>
- <dd>Remove todos os itens do menu adicionados por esta extensão.</dd>
- <dt>{{WebExtAPIRef("menus.update()")}}</dt>
- <dd>Atualiza um item do menu criado anteriormente.</dd>
-</dl>
+- {{WebExtAPIRef("menus.create()")}}
+  - : Cria um novo item de menu.
+- {{WebExtApiRef("menus.getTargetElement()")}}
+  - : Retorna o elemento para um `info.targetElementId` determinado.
+- {{WebExtApiRef("menus.overrideContext()")}}
+  - : Oculta todos os itens de menu padrão do Firefox para fornecer uma interface de usuário personalizada do menu de contexto.
+- {{WebExtAPIRef("menus.refresh()")}}
+  - : Atualiza um menu que está sendo exibido no momento.
+- {{WebExtAPIRef("menus.remove()")}}
+  - : Remove um item do menu.
+- {{WebExtAPIRef("menus.removeAll()")}}
+  - : Remove todos os itens do menu adicionados por esta extensão.
+- {{WebExtAPIRef("menus.update()")}}
+  - : Atualiza um item do menu criado anteriormente.
 
-<h2 id="Eventos">Eventos</h2>
+## Eventos
 
-<dl>
- <dt>{{WebExtAPIRef("menus.onClicked")}}</dt>
- <dd>Ativado quando um item de menu é clicado.</dd>
- <dt>{{WebExtAPIRef("menus.onHidden")}}</dt>
- <dd>Ativado quando o navegador esconde um menu.</dd>
- <dt>{{WebExtAPIRef("menus.onShown")}}</dt>
- <dd>Ativado quando o navegador mostra um menu.</dd>
-</dl>
+- {{WebExtAPIRef("menus.onClicked")}}
+  - : Ativado quando um item de menu é clicado.
+- {{WebExtAPIRef("menus.onHidden")}}
+  - : Ativado quando o navegador esconde um menu.
+- {{WebExtAPIRef("menus.onShown")}}
+  - : Ativado quando o navegador mostra um menu.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{ Compat("webextensions.api.menus", 1, "true") }}</p>
+{{ Compat("webextensions.api.menus", 1, "true") }}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><strong>Reconhecimentos</strong>
+> **Nota:** **Reconhecimentos**Esta API é baseada na API [`chrome.contextMenus` ](https://developer.chrome.com/extensions/contextMenus)do Chromium. Esta documentação é derivada do [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) do código do Chromium .
 
-<p>Esta API é baseada na API <a href="https://developer.chrome.com/extensions/contextMenus"><code>chrome.contextMenus</code> </a>do Chromium. Esta documentação é derivada do <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json"><code>context_menus.json</code></a> do código do Chromium .</p>
-</div>
-
-<div class="hidden">
-// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
+// * Redistributions of source code must retain the above copyright
 // notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
+// * Redistributions in binary form must reproduce the above
 // copyright notice, this list of conditions and the following disclaimer
 // in the documentation and/or other materials provided with the
 // distribution.
-//    * Neither the name of Google Inc. nor the names of its
+// * Neither the name of Google Inc. nor the names of its
 // contributors may be used to endorse or promote products derived from
 // this software without specific prior written permission.
 //
@@ -200,5 +188,4 @@ browser.menus.create({
 // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</div>
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</div>

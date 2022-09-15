@@ -6,90 +6,101 @@ tags:
   - Extensões
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources
 ---
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row" style="width: 30%;">Tipo</th>
-   <td><code>Array</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Obrigatório</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Exemplo</th>
-   <td>
-    <pre class="brush: json">
+  <tbody>
+    <tr>
+      <th scope="row" style="width: 30%">Tipo</th>
+      <td><code>Array</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Obrigatório</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Exemplo</th>
+      <td>
+        <pre class="brush: json">
 "web_accessible_resources": [
   "images/my-image.png"
-]</pre>
-   </td>
-  </tr>
- </tbody>
+]</pre
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>As vezes, você precisa empacotar recursos — por exemplo, imagens, HTML, CSS ou Javascript — com a sua extensão e fazê-la acessível para as páginas web.</p>
+As vezes, você precisa empacotar recursos — por exemplo, imagens, HTML, CSS ou Javascript — com a sua extensão e fazê-la acessível para as páginas web.
 
-<p>Por exemplo, a <a href="https://github.com/mdn/webextensions-examples/tree/master/beastify">extensão de exemplo Beastify</a> substitui uma página por uma imagem de um animal selecionado pelo usuário. As imagens foram empacotadas com a extensão. Para fazer visível a imagem selecionada, a extensão adiciona elementos <code><a href="/en-US/docs/Web/HTML/Element/img">&lt;img&gt;</a></code> cujo atributo <code>src</code> aponta para a imagem do animal. Para que a página da web possa carregar as imagens, elas devem estar disponíveis na extensão.</p>
+Por exemplo, a [extensão de exemplo Beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify) substitui uma página por uma imagem de um animal selecionado pelo usuário. As imagens foram empacotadas com a extensão. Para fazer visível a imagem selecionada, a extensão adiciona elementos [`<img>`](/en-US/docs/Web/HTML/Element/img) cujo atributo `src` aponta para a imagem do animal. Para que a página da web possa carregar as imagens, elas devem estar disponíveis na extensão.
 
-<p>With the <code>web_accessible_resources</code> key, you list all the packaged resources that you want to make available to web pages. You specify them as paths relative to the manifest.json file.</p>
+With the `web_accessible_resources` key, you list all the packaged resources that you want to make available to web pages. You specify them as paths relative to the manifest.json file.
 
-<p>Note that content scripts don't need to be listed as web accessible resources.</p>
+Note that content scripts don't need to be listed as web accessible resources.
 
-<p>If an extension wants to use {{WebExtAPIRef("webRequest")}} to redirect a public URL (e.g., HTTPS) to a page that's packaged in the extension, then the extension must list the page in the <code>web_accessible_resources</code> key.</p>
+If an extension wants to use {{WebExtAPIRef("webRequest")}} to redirect a public URL (e.g., HTTPS) to a page that's packaged in the extension, then the extension must list the page in the `web_accessible_resources` key.
 
-<h3 id="Using_web_accessible_resources">Using web_accessible_resources</h3>
+### Using web_accessible_resources
 
-<p>For example, suppose your extension includes an image file at images/my-image.png, like this:</p>
+For example, suppose your extension includes an image file at images/my-image.png, like this:
 
-<pre>my-extension-files/
+```
+my-extension-files/
     manifest.json
     my-background-script.js
     images/
-        my-image.png</pre>
+        my-image.png
+```
 
-<p>To enable a web page to use an <code><a href="/en-US/docs/Web/HTML/Element/img">&lt;img&gt;</a></code> element whose <code>src</code> attribute points to this image, you would specify <code>web_accessible_resources</code> like this:</p>
+To enable a web page to use an [`<img>`](/en-US/docs/Web/HTML/Element/img) element whose `src` attribute points to this image, you would specify `web_accessible_resources` like this:
 
-<pre class="brush: json">"web_accessible_resources": ["images/my-image.png"]</pre>
+```json
+"web_accessible_resources": ["images/my-image.png"]
+```
 
-<p>The file is then available using a URL like:</p>
+The file is then available using a URL like:
 
-<pre>moz-extension://&lt;extension-UUID&gt;/images/my-image.png"</pre>
+```
+moz-extension://<extension-UUID>/images/my-image.png"
+```
 
-<p><code>&lt;extension-UUID&gt;</code> is <strong>not</strong> your extension's ID. This ID is randomly generated for every browser instance. This prevents websites from fingerprinting a browser by examining the extensions it has installed.</p>
+`<extension-UUID>` is **not** your extension's ID. This ID is randomly generated for every browser instance. This prevents websites from fingerprinting a browser by examining the extensions it has installed.
 
-<div class="blockIndicator note">
-<p>In Chrome, an extension's ID is fixed. When a resource is listed in <code>web_accessible_resources</code>, it is accessible as <code>chrome-extension://&lt;your-extension-id&gt;/&lt;path/to/resource&gt;</code>.  </p>
-</div>
+> **Nota:** In Chrome, an extension's ID is fixed. When a resource is listed in `web_accessible_resources`, it is accessible as `chrome-extension://<your-extension-id>/<path/to/resource>`.
 
-<p>The recommended approach to obtaining the URL of the resource is to use <code><a href="/en-US/Add-ons/WebExtensions/API/runtime/getURL">runtime.getURL</a></code> passing the path relative to manifest.json, for example:</p>
+The recommended approach to obtaining the URL of the resource is to use [`runtime.getURL`](/en-US/Add-ons/WebExtensions/API/runtime/getURL) passing the path relative to manifest.json, for example:
 
-<pre class="brush: js">browser.runtime.getURL("images/my-image.png");
+```js
+browser.runtime.getURL("images/my-image.png");
 // something like:
-// moz-extension://944cfddf-7a95-3c47-bd9a-663b3ce8d699/images/my-image.png</pre>
+// moz-extension://944cfddf-7a95-3c47-bd9a-663b3ce8d699/images/my-image.png
+```
 
-<p>This approach gives you have the correct URL regardless of the browser your extension is running on.</p>
+This approach gives you have the correct URL regardless of the browser your extension is running on.
 
-<h3 id="Wildcards">Wildcards</h3>
+### Wildcards
 
-<p><code>web_accessible_resources</code> entries can contain wildcards. For example, the following entry would also work to include the resource at "images/my-image.png":</p>
+`web_accessible_resources` entries can contain wildcards. For example, the following entry would also work to include the resource at "images/my-image.png":
 
-<pre class="brush: json">  "web_accessible_resources": ["images/*.png"]</pre>
+```json
+  "web_accessible_resources": ["images/*.png"]
+```
 
-<h3 id="Security">Security</h3>
+### Security
 
-<p>Note that if you make a page web-accessible, any website may link or redirect to that page. The page should then treat any input (POST data, for examples) as if it came from an untrusted source, just as a normal web page should.</p>
+Note that if you make a page web-accessible, any website may link or redirect to that page. The page should then treat any input (POST data, for examples) as if it came from an untrusted source, just as a normal web page should.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: json">"web_accessible_resources": ["images/my-image.png"]</pre>
+```json
+"web_accessible_resources": ["images/my-image.png"]
+```
 
-<p>Make the file at "images/my-image.png" web accessible.</p>
+Make the file at "images/my-image.png" web accessible.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("webextensions.manifest.web_accessible_resources")}}</p>
+{{Compat("webextensions.manifest.web_accessible_resources")}}

@@ -3,98 +3,86 @@ title: bookmarks
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>A API <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a> {{WebExtAPIRef("bookmarks")}} permite uma extensão interagir e manipular o sistema de favoritos do navegador. Você pode pode usá-lo para favoritar páginas, obter favoritos existentes e, editar, remover ou organizar os favoritos.</p>
+A API [WebExtensions](/pt-BR/docs/Mozilla/Add-ons/WebExtensions) {{WebExtAPIRef("bookmarks")}} permite uma extensão interagir e manipular o sistema de favoritos do navegador. Você pode pode usá-lo para favoritar páginas, obter favoritos existentes e, editar, remover ou organizar os favoritos.
 
-<p>Para utilizar esta API, uma extensão deve ser requisitada para o "bookmarks" <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> em seu arquivo <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code> .</p>
+Para utilizar esta API, uma extensão deve ser requisitada para o "bookmarks" [permission](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) em seu arquivo [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) .
 
-<h2 id="Tipos">Tipos</h2>
+## Tipos
 
-<dl>
- <dt>{{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}</dt>
- <dd>Representa um favorito ou um diretório de favoritos como árvore.</dd>
- <dt>{{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}}</dt>
- <dd>O enum {{jsxref("String")}} o qual descreve se um nó na árvore é ou não um favorito, uma pasta ou um separador.</dd>
- <dt>{{WebExtAPIRef("bookmarks.BookmarkTreeNodeUnmodifiable")}}</dt>
- <dd>O enum {{jsxref("String")}} o qual especifica porque um favorito ou uma pasta não pode ser modificado.</dd>
- <dt>{{WebExtAPIRef("bookmarks.CreateDetails")}}</dt>
- <dd>Contém informações ao qual é passada para a função {{WebExtAPIRef("bookmarks.create()")}} quando um novo favorito é criado.</dd>
-</dl>
+- {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}
+  - : Representa um favorito ou um diretório de favoritos como árvore.
+- {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}}
+  - : O enum {{jsxref("String")}} o qual descreve se um nó na árvore é ou não um favorito, uma pasta ou um separador.
+- {{WebExtAPIRef("bookmarks.BookmarkTreeNodeUnmodifiable")}}
+  - : O enum {{jsxref("String")}} o qual especifica porque um favorito ou uma pasta não pode ser modificado.
+- {{WebExtAPIRef("bookmarks.CreateDetails")}}
+  - : Contém informações ao qual é passada para a função {{WebExtAPIRef("bookmarks.create()")}} quando um novo favorito é criado.
 
-<h2 id="Funções">Funções</h2>
+## Funções
 
-<dl>
- <dt>{{WebExtAPIRef("bookmarks.create()")}}</dt>
- <dd>Cria um favorito ou uma pasta.</dd>
- <dt>{{WebExtAPIRef("bookmarks.get()")}}</dt>
- <dd>Retrieves one or more {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}s, given a bookmark's ID or an array of bookmark IDs.</dd>
- <dt>{{WebExtAPIRef("bookmarks.getChildren()")}}</dt>
- <dd>Recupera os filhos especificados {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}.</dd>
- <dt>{{WebExtAPIRef("bookmarks.getRecent()")}}</dt>
- <dd>Recupera um número requisitado de favoritos adicionados recentemente.</dd>
- <dt>{{WebExtAPIRef("bookmarks.getSubTree()")}}</dt>
- <dd>Recupera uma parte da árvore de favoritos, iniciando por um nó previamente especificado.</dd>
- <dt>{{WebExtAPIRef("bookmarks.getTree()")}}</dt>
- <dd>Recupera a árvore de favoritos inteira em um array de objetos {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}.</dd>
- <dt>{{WebExtAPIRef("bookmarks.move()")}}</dt>
- <dd>Move o especificado {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} para um novo local dentro da árvore de favoritos.</dd>
- <dt>{{WebExtAPIRef("bookmarks.remove()")}}</dt>
- <dd>Remove um favorito ou uma pasta de favoritos vazia dado o ID do nó.</dd>
- <dt>{{WebExtAPIRef("bookmarks.removeTree()")}}</dt>
- <dd>Remove recursivamente uma pasta de favoritos; isto é; dado o ID do nó da pasta e todos seus descendentes.</dd>
- <dt>{{WebExtAPIRef("bookmarks.search()")}}</dt>
- <dd>Procura por {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}s que batam com o conjunto de critérios especificados.</dd>
- <dt>{{WebExtAPIRef("bookmarks.update()")}}</dt>
- <dd>Atualiza o título e/ou autor do favorito de uma URL, ou o nome de uma pasta de favoritos dado o ID do favorito.</dd>
-</dl>
+- {{WebExtAPIRef("bookmarks.create()")}}
+  - : Cria um favorito ou uma pasta.
+- {{WebExtAPIRef("bookmarks.get()")}}
+  - : Retrieves one or more {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}s, given a bookmark's ID or an array of bookmark IDs.
+- {{WebExtAPIRef("bookmarks.getChildren()")}}
+  - : Recupera os filhos especificados {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}.
+- {{WebExtAPIRef("bookmarks.getRecent()")}}
+  - : Recupera um número requisitado de favoritos adicionados recentemente.
+- {{WebExtAPIRef("bookmarks.getSubTree()")}}
+  - : Recupera uma parte da árvore de favoritos, iniciando por um nó previamente especificado.
+- {{WebExtAPIRef("bookmarks.getTree()")}}
+  - : Recupera a árvore de favoritos inteira em um array de objetos {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}.
+- {{WebExtAPIRef("bookmarks.move()")}}
+  - : Move o especificado {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} para um novo local dentro da árvore de favoritos.
+- {{WebExtAPIRef("bookmarks.remove()")}}
+  - : Remove um favorito ou uma pasta de favoritos vazia dado o ID do nó.
+- {{WebExtAPIRef("bookmarks.removeTree()")}}
+  - : Remove recursivamente uma pasta de favoritos; isto é; dado o ID do nó da pasta e todos seus descendentes.
+- {{WebExtAPIRef("bookmarks.search()")}}
+  - : Procura por {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}s que batam com o conjunto de critérios especificados.
+- {{WebExtAPIRef("bookmarks.update()")}}
+  - : Atualiza o título e/ou autor do favorito de uma URL, ou o nome de uma pasta de favoritos dado o ID do favorito.
 
-<h2 id="Eventos">Eventos</h2>
+## Eventos
 
-<dl>
- <dt>{{WebExtAPIRef("bookmarks.onCreated")}}</dt>
- <dd>Disparado quando um favorito ou uma pasta é criado.</dd>
- <dt>{{WebExtAPIRef("bookmarks.onRemoved")}}</dt>
- <dd>Disparado quando um favorito ou uma pasta é removido. Quando uma pasta é removida recursivamente, uma simples notificação é disparada para o diretório, e nenhum para seu conteúdo.</dd>
- <dt>{{WebExtAPIRef("bookmarks.onChanged")}}</dt>
- <dd>Disparado quando um favorito ou pasta é modificado. Atualmente, somente mudanças no <code>title</code> e <code>url</code> o disparam.</dd>
- <dt>{{WebExtAPIRef("bookmarks.onMoved")}}</dt>
- <dd>Disparado quando um favorito ou pasta é movido para uma pasta pai diferente ou para um novo local dentro deste pasta.</dd>
- <dt>{{WebExtAPIRef("bookmarks.onChildrenReordered")}}</dt>
- <dd>Fired when the user has sorted the children of a folder in the browser's UI. This is not called as a result of a {{WebExtAPIRef("bookmarks.move", "move()")}}.</dd>
- <dt>{{WebExtAPIRef("bookmarks.onImportBegan")}}</dt>
- <dd>Disparado quando uma sessão de importação de favoritos começa. Custosos observers {{WebExtAPIRef("bookmarks.onCreated")}} atualizam até o {{WebExtAPIRef("bookmarks.onImportEnded")}} ser disparado. Observers deveriam ainda manipular outras notificações imediatamente.</dd>
- <dt>{{WebExtAPIRef("bookmarks.onImportEnded")}}</dt>
- <dd>Disparado quando uma sessão de importação de favoritos é finalizada.</dd>
-</dl>
+- {{WebExtAPIRef("bookmarks.onCreated")}}
+  - : Disparado quando um favorito ou uma pasta é criado.
+- {{WebExtAPIRef("bookmarks.onRemoved")}}
+  - : Disparado quando um favorito ou uma pasta é removido. Quando uma pasta é removida recursivamente, uma simples notificação é disparada para o diretório, e nenhum para seu conteúdo.
+- {{WebExtAPIRef("bookmarks.onChanged")}}
+  - : Disparado quando um favorito ou pasta é modificado. Atualmente, somente mudanças no `title` e `url` o disparam.
+- {{WebExtAPIRef("bookmarks.onMoved")}}
+  - : Disparado quando um favorito ou pasta é movido para uma pasta pai diferente ou para um novo local dentro deste pasta.
+- {{WebExtAPIRef("bookmarks.onChildrenReordered")}}
+  - : Fired when the user has sorted the children of a folder in the browser's UI. This is not called as a result of a {{WebExtAPIRef("bookmarks.move", "move()")}}.
+- {{WebExtAPIRef("bookmarks.onImportBegan")}}
+  - : Disparado quando uma sessão de importação de favoritos começa. Custosos observers {{WebExtAPIRef("bookmarks.onCreated")}} atualizam até o {{WebExtAPIRef("bookmarks.onImportEnded")}} ser disparado. Observers deveriam ainda manipular outras notificações imediatamente.
+- {{WebExtAPIRef("bookmarks.onImportEnded")}}
+  - : Disparado quando uma sessão de importação de favoritos é finalizada.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("webextensions.api.bookmarks")}}</p>
+{{Compat("webextensions.api.bookmarks")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><strong>Agradecimentos</strong>
+> **Nota:** **Agradecimentos**Esta API é baseada na API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks) . Esta documentação é derivada do [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) no código do Chromium.Os dados de compatibilidade do Microsoft Edge são fornecidos pela Microsoft Corporation e aqui estão sob a Creative Commons Attribution 3.0 United States License.
 
-<p>Esta API é baseada na API Chromium <a href="https://developer.chrome.com/extensions/bookmarks"><code>chrome.bookmarks</code></a> . Esta documentação é derivada do <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> no código do Chromium.</p>
-
-<p>Os dados de compatibilidade do Microsoft Edge são fornecidos pela Microsoft Corporation e aqui estão sob a Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
+// * Redistributions of source code must retain the above copyright
 // notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
+// * Redistributions in binary form must reproduce the above
 // copyright notice, this list of conditions and the following disclaimer
 // in the documentation and/or other materials provided with the
 // distribution.
-//    * Neither the name of Google Inc. nor the names of its
+// * Neither the name of Google Inc. nor the names of its
 // contributors may be used to endorse or promote products derived from
 // this software without specific prior written permission.
 //
@@ -108,5 +96,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks
 // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</div>
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</div>

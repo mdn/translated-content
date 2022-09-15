@@ -6,63 +6,59 @@ tags:
   - Mozilla
 translation_of: Mozilla/Firefox
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>O <a class="external external-icon" href="https://www.mozilla.org/pt-br/docs/firefox/new/">Firefox</a>  é um popular navegador de internet da Mozilla, disponível para várias plataformas como Windows, Mac OS X e Linux no desktop, bem como Android e iOS nos dispositivos móveis. Sendo altamente compatível com as últimas tecnologias web e poderosas <a href="/pt-BR/docs/Tools">ferramentas de desenvolvimento</a>, o Firefox é um excelente navegador tanto para usuários comuns quanto desenvolvedores web.</p>
+O [Firefox](https://www.mozilla.org/pt-br/docs/firefox/new/) é um popular navegador de internet da Mozilla, disponível para várias plataformas como Windows, Mac OS X e Linux no desktop, bem como Android e iOS nos dispositivos móveis. Sendo altamente compatível com as últimas tecnologias web e poderosas [ferramentas de desenvolvimento](/pt-BR/docs/Tools), o Firefox é um excelente navegador tanto para usuários comuns quanto desenvolvedores web.
 
-<p>Firefox é um projeto de código aberto; muito do seu código vem de contribuições de uma gigantesca comunidade de voluntários. Aqui você irá aprender sobre como contribuir com o projeto Firefox, além de encontrar links para documentação sobre construção de add-ons do Firefox, uso de ferramentas do Firefox para desenvolvedores, entre outros.</p>
+Firefox é um projeto de código aberto; muito do seu código vem de contribuições de uma gigantesca comunidade de voluntários. Aqui você irá aprender sobre como contribuir com o projeto Firefox, além de encontrar links para documentação sobre construção de add-ons do Firefox, uso de ferramentas do Firefox para desenvolvedores, entre outros.
 
-<div class="summary">
-<p>Aprenda a criar complementos para <a href="https://www.mozilla.org/pt-br/docs/firefox/">Firefox</a>, como desenvolver e compilar o Firefox, como funciona internamente o Firefox  e subprojetos.</p>
-</div>
+Aprenda a criar complementos para [Firefox](https://www.mozilla.org/pt-br/docs/firefox/), como desenvolver e compilar o Firefox, como funciona internamente o Firefox e subprojetos.
 
-<dl>
- <dt>Notas de lançamento para o desenvolvedor</dt>
-  <dd><a href="/pt-BR/docs/Firefox/Releases">Notas de versão focada em desenvolvedores</a>; aprenda quais são os novos recursos para ambos Web sites e add-on que chegam a cada versão do Firefox.</dd>
- <dt>Documentação do projeto</dt>
-  <dd>Encontre informações detalhadas sobre <a href="/pt-BR/docs/Mozilla">o funcionamento do Firefox</a> e o seu sistema de versões, assim você poderá encontrar o seu caminho no código.</dd>
- <dt>Guia do desenvolvedor</dt>
-  <dd>Nosso <a href="/pt-BR/docs/Developer_Guide">guia para desenvolvedores</a> provê tutoriais detalhados de como obter e compilar o código fonte do Firefox, como se encontrar, e como contribuir para o projeto.</dd>
-</dl>
+- Notas de lançamento para o desenvolvedor
+  - : [Notas de versão focada em desenvolvedores](/pt-BR/docs/Firefox/Releases); aprenda quais são os novos recursos para ambos Web sites e add-on que chegam a cada versão do Firefox.
+- Documentação do projeto
+  - : Encontre informações detalhadas sobre [o funcionamento do Firefox](/pt-BR/docs/Mozilla) e o seu sistema de versões, assim você poderá encontrar o seu caminho no código.
+- Guia do desenvolvedor
+  - : Nosso [guia para desenvolvedores](/pt-BR/docs/Developer_Guide) provê tutoriais detalhados de como obter e compilar o código fonte do Firefox, como se encontrar, e como contribuir para o projeto.
 
-<h2 id="Canais_Firefox">Canais Firefox</h2>
+## Canais Firefox
 
-<p>O Firefox está disponível em cinco <strong>canais</strong>.</p>
+O Firefox está disponível em cinco **canais**.
 
-<h3 id="Firefox_Nightly">Firefox Nightly</h3>
+### Firefox Nightly
 
-<p>A cada noite nós geramos uma <em>build</em> do Firefox com o código mais recente no <a href="/en-US/docs/mozilla-central">mozilla-central</a>. Estas <em>builds</em> são destinadas aos desenvolvedores do Firefox ou aqueles que procuram testar as mais recentes funcionalidades que ainda estão com desenvolvimento ativo.</p>
+A cada noite nós geramos uma _build_ do Firefox com o código mais recente no [mozilla-central](/pt-BR/docs/mozilla-central). Estas _builds_ são destinadas aos desenvolvedores do Firefox ou aqueles que procuram testar as mais recentes funcionalidades que ainda estão com desenvolvimento ativo.
 
-<p><a class="external external-icon" href="https://nightly.mozilla.org/" style="width: 250px; display: block; margin-left: auto; margin-right: auto; padding: 10px; text-align: center; border-radius: 4px; background-color: #81BC2E; white-space: nowrap; color: white; text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25); box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2), 0px -1px 0px 0px rgba(0, 0, 0, 0.3) inset;">Baixar o Firefox Nightly</a></p>
+[Baixar o Firefox Nightly](https://nightly.mozilla.org/)
 
-<h3 id="Firefox_Developer_Edition">Firefox Developer Edition</h3>
+### Firefox Developer Edition
 
-<p>Esta é uma versão do Firefox feita para desenvolvedores. A cada seis semanas, nós pegamos as funcionalidades que estão no Firefox Nightly e são estáveis o suficiente e criamos uma nova versão do Firefox Developer Edition. Nós também adicionamos alguns recursos extras que estão disponíveis apenas neste canal.</p>
+Esta é uma versão do Firefox feita para desenvolvedores. A cada seis semanas, nós pegamos as funcionalidades que estão no Firefox Nightly e são estáveis o suficiente e criamos uma nova versão do Firefox Developer Edition. Nós também adicionamos alguns recursos extras que estão disponíveis apenas neste canal.
 
-<p><a href="/en-US/Firefox/Developer_Edition">Saiba mais sobre o Firefox Developer Edition</a>.</p>
+[Saiba mais sobre o Firefox Developer Edition](/en-US/Firefox/Developer_Edition).
 
-<p><a class="external external-icon" href="https://www.mozilla.org/firefox/developer/" style="width: 250px; display: block; margin-left: auto; margin-right: auto; padding: 10px; text-align: center; border-radius: 4px; background-color: #81BC2E; white-space: nowrap; color: white; text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25); box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2), 0px -1px 0px 0px rgba(0, 0, 0, 0.3) inset;">Baixar o Firefox Developer Edition</a></p>
+[Baixar o Firefox Developer Edition](https://www.mozilla.org/firefox/developer/)
 
-<h3 id="Firefox_Beta">Firefox Beta</h3>
+### Firefox Beta
 
-<p>Depois de seis semanas no Firefox Developer Edition, nós pegamos as funcionalidades que estão estáveis o bastante, e criamos uma nova versão do Firefox Beta. As versões do Firefox Beta são para testadores entusiastas e está destinada a se tornar a proxima versão do Firefox.</p>
+Depois de seis semanas no Firefox Developer Edition, nós pegamos as funcionalidades que estão estáveis o bastante, e criamos uma nova versão do Firefox Beta. As versões do Firefox Beta são para testadores entusiastas e está destinada a se tornar a proxima versão do Firefox.
 
-<p><a class="external external-icon" href="https://www.mozilla.org/firefox/channel/#beta" style="width: 250px; display: block; margin-left: auto; margin-right: auto; padding: 10px; text-align: center; border-radius: 4px; background-color: #81BC2E; white-space: nowrap; color: white; text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25); box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2), 0px -1px 0px 0px rgba(0, 0, 0, 0.3) inset;">Baixar o Firefox Beta</a></p>
+[Baixar o Firefox Beta](https://www.mozilla.org/firefox/channel/#beta)
 
-<h3 id="Firefox">Firefox</h3>
+### Firefox
 
-<p>Após estabilizar por outras seis semanas no Beta, nós estamos prontos para entregar as novas funcionalidades para centenas de milhões de usuários em uma nova versão do Firefox.</p>
+Após estabilizar por outras seis semanas no Beta, nós estamos prontos para entregar as novas funcionalidades para centenas de milhões de usuários em uma nova versão do Firefox.
 
-<p><a class="external external-icon" href="https://www.mozilla.org/firefox/channel/#firefox" style="width: 250px; display: block; margin-left: auto; margin-right: auto; padding: 10px; text-align: center; border-radius: 4px; background-color: #81BC2E; white-space: nowrap; color: white; text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25); box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2), 0px -1px 0px 0px rgba(0, 0, 0, 0.3) inset;">Baixar o Firefox</a></p>
+[Baixar o Firefox](https://www.mozilla.org/firefox/channel/#firefox)
 
-<h3 id="Firefox_Extended_Support_Release_ESR">Firefox Extended Support Release (ESR)</h3>
+### Firefox Extended Support Release (ESR)
 
-<p>Firefox ESR é uma edição de suporte de longo prazo do Firefox para desktop. Feito para ser usado em organizações como escolas, universidades, empresas e outras que necessitam de suporte extendido para distribuições em massa.</p>
+Firefox ESR é uma edição de suporte de longo prazo do Firefox para desktop. Feito para ser usado em organizações como escolas, universidades, empresas e outras que necessitam de suporte extendido para distribuições em massa.
 
-<p><a href="https://developer.mozilla.org/en-US/Firefox/Firefox_ESR">Saiba mais sobre o Firefox Extended Support Release.</a></p>
+[Saiba mais sobre o Firefox Extended Support Release.](https://developer.mozilla.org/en-US/Firefox/Firefox_ESR)
 
-<p><a class="external external-icon" href="https://www.mozilla.org/firefox/organizations/all/" style="width: 250px; display: block; margin-left: auto; margin-right: auto; padding: 10px; text-align: center; border-radius: 4px; background-color: #81BC2E; white-space: nowrap; color: white; text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25); box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2), 0px -1px 0px 0px rgba(0, 0, 0, 0.3) inset;">Baixar o Firefox ESR</a></p>
+[Baixar o Firefox ESR](https://www.mozilla.org/firefox/organizations/all/)
 
-<h2 id="Perfis_Firefox">Perfis Firefox</h2>
+## Perfis Firefox
 
-<p>Se você está usando múltiplos canais Firefox—ou apenas múltiplas configurações—em uma base regular, você deve ler sobre <a href="/pt-br/docs/Mozilla/Firefox/Multiple_profiles">como usar múltiplos perfis Firefox</a> com o Firefox Profile Manager e outras ferramentas para gerenciamento de perfis de sua preferência.</p>
+Se você está usando múltiplos canais Firefox—ou apenas múltiplas configurações—em uma base regular, você deve ler sobre [como usar múltiplos perfis Firefox](/pt-BR/docs/Mozilla/Firefox/Multiple_profiles) com o Firefox Profile Manager e outras ferramentas para gerenciamento de perfis de sua preferência.

@@ -3,97 +3,83 @@ title: browsingData
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Habilita extensões a limpar os dados que estão acumulados enquando o usuário navega.</p>
+Habilita extensões a limpar os dados que estão acumulados enquando o usuário navega.
 
-<p>Na API <code>browsingData</code>, os dados de navegação são divididos em tipos:</p>
+Na API `browsingData`, os dados de navegação são divididos em tipos:
 
-<ul>
- <li>cache do browser</li>
- <li>cookies</li>
- <li>downloads</li>
- <li>histórico</li>
- <li>armazenamento local</li>
- <li>dados de plugin</li>
- <li>dados de formulários salvos</li>
- <li>senhas salvas</li>
-</ul>
+- cache do browser
+- cookies
+- downloads
+- histórico
+- armazenamento local
+- dados de plugin
+- dados de formulários salvos
+- senhas salvas
 
-<p>Você pode usar a função {{WebExtAPIRef("browsingData.remove()")}} para remover qualquer combinação desses tipos. Há também funções específicas para remover cada tipo de data em particular, como por exemplo {{WebExtAPIRef("browsingData.removePasswords()", "removePasswords()")}}, {{WebExtAPIRef("browsingData.removeHistory()", "removeHistory()")}} e assim por diante.</p>
+Você pode usar a função {{WebExtAPIRef("browsingData.remove()")}} para remover qualquer combinação desses tipos. Há também funções específicas para remover cada tipo de data em particular, como por exemplo {{WebExtAPIRef("browsingData.removePasswords()", "removePasswords()")}}, {{WebExtAPIRef("browsingData.removeHistory()", "removeHistory()")}} e assim por diante.
 
-<p>Todas funções <code>browsingData.remove[X]()</code> pegam o objeto {{WebExtAPIRef("browsingData.RemovalOptions")}} que você usa para controlar outros dois aspectos da remoção de dados:</p>
+Todas funções `browsingData.remove[X]()` pegam o objeto {{WebExtAPIRef("browsingData.RemovalOptions")}} que você usa para controlar outros dois aspectos da remoção de dados:
 
-<ul>
- <li>quão antigos são os dados para a remoção</li>
- <li>se é para remover dados de páginas normais, ou também para hospedar aplicativos web ou add-ons. Observe que esta opção ainda não é suportada no Firefox.</li>
-</ul>
+- quão antigos são os dados para a remoção
+- se é para remover dados de páginas normais, ou também para hospedar aplicativos web ou add-ons. Observe que esta opção ainda não é suportada no Firefox.
 
-<p>Finalmente, a API {{WebExtAPIRef("browsingData.settings()")}} fornece uma função que retorna o atual valor das configurações da funcionalidade "Limpar Histórico".</p>
+Finalmente, a API {{WebExtAPIRef("browsingData.settings()")}} fornece uma função que retorna o atual valor das configurações da funcionalidade "Limpar Histórico".
 
-<p>Para usar esta API você deve ter a <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">permissão de API</a> "browsingData".</p>
+Para usar esta API você deve ter a [permissão de API](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "browsingData".
 
-<h2 id="Tipos">Tipos</h2>
+## Tipos
 
-<dl>
- <dt>{{WebExtAPIRef("browsingData.DataTypeSet")}}</dt>
- <dd>Objeto usado para especificar o tipo de dado para remoção: por exemplo, histórico, downloads, senhas e assim por diante.</dd>
- <dt>{{WebExtAPIRef("browsingData.RemovalOptions")}}</dt>
- <dd>Objeto usado para especificar o quanto tempo para remoção de dados, e se remover dados adicionados em uma navegação web normal, por aplicativos hospedados ou por add-ons.</dd>
-</dl>
+- {{WebExtAPIRef("browsingData.DataTypeSet")}}
+  - : Objeto usado para especificar o tipo de dado para remoção: por exemplo, histórico, downloads, senhas e assim por diante.
+- {{WebExtAPIRef("browsingData.RemovalOptions")}}
+  - : Objeto usado para especificar o quanto tempo para remoção de dados, e se remover dados adicionados em uma navegação web normal, por aplicativos hospedados ou por add-ons.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{WebExtAPIRef("browsingData.remove()")}}</dt>
- <dd>Remove os dados de navegação especificado pelo seu tipo.</dd>
- <dt>{{WebExtAPIRef("browsingData.removeCache()")}}</dt>
- <dd>Limpa o cache do navegador.</dd>
- <dt>{{WebExtAPIRef("browsingData.removeCookies()")}}</dt>
- <dd>Remove os cookies.</dd>
- <dt>{{WebExtAPIRef("browsingData.removeDownloads()")}}</dt>
- <dd>Remove a lista de arquivos baixados.</dd>
- <dt>{{WebExtAPIRef("browsingData.removeFormData()")}}</dt>
- <dd>Limpa os dados de um formulário salvo.</dd>
- <dt>{{WebExtAPIRef("browsingData.removeHistory()")}}</dt>
- <dd>Limpa o histórico do navegador.</dd>
- <dt>{{WebExtAPIRef("browsingData.removeLocalStorage()")}}</dt>
- <dd>Limpa qualquer <a href="/en-US/docs/Web/API/Window/localStorage">local storage</a> criado por websites.</dd>
- <dt>{{WebExtAPIRef("browsingData.removePasswords()")}}</dt>
- <dd>Limpa passwords salvos.</dd>
- <dt>{{WebExtAPIRef("browsingData.removePluginData()")}}</dt>
- <dd>Limpa os dados associados com plugins.</dd>
- <dt>{{WebExtAPIRef("browsingData.settings()")}}</dt>
- <dd>Obtém o valor atual de configuração da funcionalidade "Limpar Histórico" do navegador.</dd>
-</dl>
+- {{WebExtAPIRef("browsingData.remove()")}}
+  - : Remove os dados de navegação especificado pelo seu tipo.
+- {{WebExtAPIRef("browsingData.removeCache()")}}
+  - : Limpa o cache do navegador.
+- {{WebExtAPIRef("browsingData.removeCookies()")}}
+  - : Remove os cookies.
+- {{WebExtAPIRef("browsingData.removeDownloads()")}}
+  - : Remove a lista de arquivos baixados.
+- {{WebExtAPIRef("browsingData.removeFormData()")}}
+  - : Limpa os dados de um formulário salvo.
+- {{WebExtAPIRef("browsingData.removeHistory()")}}
+  - : Limpa o histórico do navegador.
+- {{WebExtAPIRef("browsingData.removeLocalStorage()")}}
+  - : Limpa qualquer [local storage](/pt-BR/docs/Web/API/Window/localStorage) criado por websites.
+- {{WebExtAPIRef("browsingData.removePasswords()")}}
+  - : Limpa passwords salvos.
+- {{WebExtAPIRef("browsingData.removePluginData()")}}
+  - : Limpa os dados associados com plugins.
+- {{WebExtAPIRef("browsingData.settings()")}}
+  - : Obtém o valor atual de configuração da funcionalidade "Limpar Histórico" do navegador.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("webextensions.api.browsingData", 2)}}</p>
+{{Compat("webextensions.api.browsingData", 2)}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><strong>Agradecimentos</strong>
+> **Nota:** **Agradecimentos**Esta API é baseada na API [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData) do Chromium.Os dados de compatibilidade do Microsoft Edge compatibility são fornecidos pela Microsoft Corporation e aqui estão inclusos sob a Creative Commons Attribution 3.0 United States License.
 
-<p>Esta API é baseada na API <a href="https://developer.chrome.com/extensions/browsingData"><code>chrome.browsingData</code></a> do Chromium.</p>
-
-<p>Os dados de compatibilidade do Microsoft Edge compatibility são fornecidos pela Microsoft Corporation e aqui estão inclusos sob a Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
+// * Redistributions of source code must retain the above copyright
 // notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
+// * Redistributions in binary form must reproduce the above
 // copyright notice, this list of conditions and the following disclaimer
 // in the documentation and/or other materials provided with the
 // distribution.
-//    * Neither the name of Google Inc. nor the names of its
+// * Neither the name of Google Inc. nor the names of its
 // contributors may be used to endorse or promote products derived from
 // this software without specific prior written permission.
 //
@@ -107,5 +93,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData
 // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</div>
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</div>

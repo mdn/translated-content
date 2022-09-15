@@ -3,140 +3,115 @@ title: cookies
 slug: Mozilla/Add-ons/WebExtensions/API/cookies
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Habilita extensões a obter e atribuir cookies, e ser notificado quando eles mudam.</p>
+Habilita extensões a obter e atribuir cookies, e ser notificado quando eles mudam.
 
-<p>Para usar esta API, você precisa incluir a <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permission</a> "cookies" em seu arquivo <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a>, bem como a <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permissions</a> para os sites cujos cookies você precisa acessar. Veja <a href="/en-US/Add-ons/WebExtensions/API/cookies#Permissions">cookie Permissions</a>.</p>
+Para usar esta API, você precisa incluir a [API permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "cookies" em seu arquivo [manifest.json](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json), bem como a [host permissions](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) para os sites cujos cookies você precisa acessar. Veja [cookie Permissions](/en-US/Add-ons/WebExtensions/API/cookies#Permissions).
 
-<h2 id="Permissões">Permissões</h2>
+## Permissões
 
-<p>Para usar esta API, uma extensão especificar a "cookies" <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permission</a> em seu arquivo manifest, junto com a <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permissions</a> para qualquer site que deseja acessar os cookies. O add-on pode ler ou escrever qualquer cookie no qual poderia ser lido ou escrito pela URL correspondente nas permissões de host, por exemplo:</p>
+Para usar esta API, uma extensão especificar a "cookies" [API permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) em seu arquivo manifest, junto com a [host permissions](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) para qualquer site que deseja acessar os cookies. O add-on pode ler ou escrever qualquer cookie no qual poderia ser lido ou escrito pela URL correspondente nas permissões de host, por exemplo:
 
-<dl>
- <dt><code>http://*.example.com/</code></dt>
- <dd>
- <p>Uma extensão com esta permissão de host pode:</p>
+- `http://*.example.com/`
 
- <ul>
-  <li>Ler um cookie inseguro para <code>www.example.com</code>, com qualquer caminho.</li>
-  <li>Escrever um cookie seguro ou inseguro para <code>www.example.com</code>, com qualquer caminho.</li>
- </ul>
+  - : Uma extensão com esta permissão de host pode:
 
- <p><em>não </em>pode:</p>
+    - Ler um cookie inseguro para `www.example.com`, com qualquer caminho.
+    - Escrever um cookie seguro ou inseguro para `www.example.com`, com qualquer caminho.
 
- <ul>
-  <li>Ler um cookie seguro de <code>www.example.com</code>.</li>
- </ul>
- </dd>
- <dt><code>http://www.example.com/</code></dt>
- <dd>
- <p>Uma extensão com esta permissão de host pode:</p>
+    _não_ pode:
 
- <ul>
-  <li>Ler um cookie não seguro para <code>www.example.com</code>, com qualquer caminho.</li>
-  <li>Ler um cookie não seguro para <code>.example.com</code>, com qualquer caminho.</li>
-  <li>Escrever um cookie seguro ou não seguro para <code>www.example.com</code> com qualquer caminho.</li>
-  <li>Escrever um cookie seguro ou não seguro para <code>.example.com</code> com qualquer caminho.</li>
- </ul>
+    - Ler um cookie seguro de `www.example.com`.
 
- <p><em>não </em>pode:</p>
+- `http://www.example.com/`
 
- <ul>
-  <li>Ler ou escrever um cookie para <code>foo.example.com</code>.</li>
-  <li>Ler ou escrever um cookie para <code>foo.www.example.com</code>.</li>
- </ul>
- </dd>
- <dt><code>*://*.example.com/</code></dt>
- <dd>
- <p>Uma extensão com esta permissão de host pode:</p>
+  - : Uma extensão com esta permissão de host pode:
 
- <ul>
-  <li>Ler ou escrever um cookie seguro ou inseguro para <code>www.example.com</code> com qualquer caminho.</li>
- </ul>
- </dd>
-</dl>
+    - Ler um cookie não seguro para `www.example.com`, com qualquer caminho.
+    - Ler um cookie não seguro para `.example.com`, com qualquer caminho.
+    - Escrever um cookie seguro ou não seguro para `www.example.com` com qualquer caminho.
+    - Escrever um cookie seguro ou não seguro para `.example.com` com qualquer caminho.
 
-<h2 id="Isolamento_de_primera_parte">Isolamento de primera parte</h2>
+    _não_ pode:
 
-<p>Cookies de terceiros são aquleles enviados por sites em que você está num dado momento, por exemplo:</p>
+    - Ler ou escrever um cookie para `foo.example.com`.
+    - Ler ou escrever um cookie para `foo.www.example.com`.
 
-<ol>
- <li>Você acessa <a href="http://bbc.com">bbc.com</a>. Ele contém uma publicidade do <a href="http://tracker.com">tracker.com</a> que atribui um cookie associado com o domínio "<a href="http://tracker.com">tracker.com</a>".</li>
- <li>Você acessa <a href="http://cnn.com">cnn.com</a>. Ele também contém uma publicidade do <a href="http://tracker.com">tracker.com</a> que atribui um cookie associado ao domínio "<a href="http://tracker.com">tracker.com</a>".</li>
- <li>Eventualmente ambos os cookies podem ser enviados para <a href="http://tracker.com">tracker.com</a>. Quem então pode descobrir que o mesmo usuário visitou ambos os sites.</li>
-</ol>
+- `*://*.example.com/`
 
-<p>Quando um isolamento de primeira parte está ativo, cookies são ainda qualificados pelo domínio da página original visitada pelo usuário (essencialmente, o domínio exibe o usuário na barra da URL, também conhecido como "domínio de primeira parte). Isto significa que não é possivel para um rastreador correlacionar o cookie da <a href="http://bbc.com">bbc.com</a> com o cookie da <a href="http://cnn.com">cnn.com</a>, então o rastreador não pode monitorar um simples usuários através de ambos os sites.</p>
+  - : Uma extensão com esta permissão de host pode:
 
-<p>Isolamento de primera parte pode ser habilitado diretamente pelo usuário ajustando a configuração do navegador , e pode ser atribuia do extensões usando a configuração <code><a href="/en-US/Add-ons/WebExtensions/API/privacy/websites#Properties">firstPartyIsolate</a></code> atribuida a API <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy">privacy</a></code>. Observe que este isolamento de primeira parte está habilitado por padrão no navegador <a href="https://www.torproject.org/">Tor</a>.</p>
+    - Ler ou escrever um cookie seguro ou inseguro para `www.example.com` com qualquer caminho.
 
-<p>Na API <code>cookies</code>, o domínio de primeira parte é representado usando o atributo <code>firstPartyDomain</code>. Todos os cookies atribuidos enquanto o isolamento de primeira parte está habilitado terá este atributo atribuito para o domínio da página original. No exemplo acima, deveria ser "<a href="http://bbc.com">bbc.com</a>" para um cookie e "<a href="http://cnn.com">cnn.com</a>" para outro. Todos os cookies atribuidos pelos websites enquanto o isolamento de primeira parte estiver desabilitado terão sua propriedade atribuida a uma string vazia.<br>
- <br>
- As APIs {{WebExtAPIRef("cookies.get()")}}, {{WebExtAPIRef("cookies.getAll()")}}, {{WebExtAPIRef("cookies.set()")}} and {{WebExtAPIRef("cookies.remove()")}} aceitam a opção <code>firstPartyDomain</code>.<br>
- <br>
- Quando o isolamento de primeira parte está habilitado, você deve informar esta opção ou a chamada da API irá falhar e retornar uma promise rejeitada. For <code>get()</code>, <code>set()</code>, and <code>remove()</code> you must pass a string value. Para um <code>getAll()</code>, você pode passar <code>null</code>, e irá obter todos os cookies que possuem ou não um valor não vazio para o <code>firstPartyDomain</code>.<br>
- <br>
- Quando o isolamento de primeira parte está desabilitado, o parâmetro <code>firstPartyDomain</code> é opcional por padrão é uma string vazia.  Uma string não vazia pode ser utilizada para recuperar ou podificar cookies de isolamento de primeira parte.  Da mesma forma, passando <code>null</code> como <code>firstPartyDomain</code> para o <code>getAll()</code> retornará todos os cookies.</p>
+## Isolamento de primera parte
 
-<h2 id="Tipos">Tipos</h2>
+Cookies de terceiros são aquleles enviados por sites em que você está num dado momento, por exemplo:
 
-<dl>
- <dt>{{WebExtAPIRef("cookies.Cookie")}}</dt>
- <dd>Representa a informação sobre um cookie HTTP.</dd>
- <dt>{{WebExtAPIRef("cookies.CookieStore")}}</dt>
- <dd>Representa um cookie armazenado no navegador.</dd>
- <dt>{{WebExtAPIRef("cookies.OnChangedCause")}}</dt>
- <dd>Representa o motivo da mudança de um cookie.</dd>
-</dl>
+1.  Você acessa [bbc.com](http://bbc.com). Ele contém uma publicidade do [tracker.com](http://tracker.com) que atribui um cookie associado com o domínio "[tracker.com](http://tracker.com)".
+2.  Você acessa [cnn.com](http://cnn.com). Ele também contém uma publicidade do [tracker.com](http://tracker.com) que atribui um cookie associado ao domínio "[tracker.com](http://tracker.com)".
+3.  Eventualmente ambos os cookies podem ser enviados para [tracker.com](http://tracker.com). Quem então pode descobrir que o mesmo usuário visitou ambos os sites.
 
-<h2 id="Métodos">Métodos</h2>
+Quando um isolamento de primeira parte está ativo, cookies são ainda qualificados pelo domínio da página original visitada pelo usuário (essencialmente, o domínio exibe o usuário na barra da URL, também conhecido como "domínio de primeira parte). Isto significa que não é possivel para um rastreador correlacionar o cookie da [bbc.com](http://bbc.com) com o cookie da [cnn.com](http://cnn.com), então o rastreador não pode monitorar um simples usuários através de ambos os sites.
 
-<dl>
- <dt>{{WebExtAPIRef("cookies.get()")}}</dt>
- <dd>Recupera informações sobre um único cookie.</dd>
- <dt>{{WebExtAPIRef("cookies.getAll()")}}</dt>
- <dd>Recupera todos os cookies com o padrão de um conjunto de filtros fornecido.</dd>
- <dt>{{WebExtAPIRef("cookies.set()")}}</dt>
- <dd>Atribui um cookie com um dado fornecido; pode sobrescrever cookies equivalentes caso existam.</dd>
- <dt>{{WebExtAPIRef("cookies.remove()")}}</dt>
- <dd>Remove um cookie pelo nome.</dd>
- <dt>{{WebExtAPIRef("cookies.getAllCookieStores()")}}</dt>
- <dd>Lista todos os cookies armazenados.</dd>
-</dl>
+Isolamento de primera parte pode ser habilitado diretamente pelo usuário ajustando a configuração do navegador , e pode ser atribuia do extensões usando a configuração [`firstPartyIsolate`](/en-US/Add-ons/WebExtensions/API/privacy/websites#Properties) atribuida a API [`privacy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy). Observe que este isolamento de primeira parte está habilitado por padrão no navegador [Tor](https://www.torproject.org/).
 
-<h2 id="Manipulador_de_eventos">Manipulador de eventos</h2>
+Na API `cookies`, o domínio de primeira parte é representado usando o atributo `firstPartyDomain`. Todos os cookies atribuidos enquanto o isolamento de primeira parte está habilitado terá este atributo atribuito para o domínio da página original. No exemplo acima, deveria ser "[bbc.com](http://bbc.com)" para um cookie e "[cnn.com](http://cnn.com)" para outro. Todos os cookies atribuidos pelos websites enquanto o isolamento de primeira parte estiver desabilitado terão sua propriedade atribuida a uma string vazia.
 
-<dl>
- <dt>{{WebExtAPIRef("cookies.onChanged")}}</dt>
- <dd>Disparado quando um cookie é criado ou removido.</dd>
-</dl>
+As APIs {{WebExtAPIRef("cookies.get()")}}, {{WebExtAPIRef("cookies.getAll()")}}, {{WebExtAPIRef("cookies.set()")}} and {{WebExtAPIRef("cookies.remove()")}} aceitam a opção `firstPartyDomain`.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+Quando o isolamento de primeira parte está habilitado, você deve informar esta opção ou a chamada da API irá falhar e retornar uma promise rejeitada. For `get()`, `set()`, and `remove()` you must pass a string value. Para um `getAll()`, você pode passar `null`, e irá obter todos os cookies que possuem ou não um valor não vazio para o `firstPartyDomain`.
 
-<p>{{Compat("webextensions.api.cookies")}}</p>
+Quando o isolamento de primeira parte está desabilitado, o parâmetro `firstPartyDomain` é opcional por padrão é uma string vazia. Uma string não vazia pode ser utilizada para recuperar ou podificar cookies de isolamento de primeira parte. Da mesma forma, passando `null` como `firstPartyDomain` para o `getAll()` retornará todos os cookies.
 
-<p>{{WebExtExamples("h2")}}</p>
+## Tipos
 
-<div class="note"><strong>Agradecimentos</strong>
+- {{WebExtAPIRef("cookies.Cookie")}}
+  - : Representa a informação sobre um cookie HTTP.
+- {{WebExtAPIRef("cookies.CookieStore")}}
+  - : Representa um cookie armazenado no navegador.
+- {{WebExtAPIRef("cookies.OnChangedCause")}}
+  - : Representa o motivo da mudança de um cookie.
 
-<p>Esta API é baseada na API <a href="https://developer.chrome.com/extensions/cookies"><code>chrome.cookies</code></a> do Chromium. Esta documentação é derivada do <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a> no código do Chromium.</p>
-</div>
+## Métodos
 
-<div class="hidden">
-// Copyright 2015 The Chromium Authors. All rights reserved.
+- {{WebExtAPIRef("cookies.get()")}}
+  - : Recupera informações sobre um único cookie.
+- {{WebExtAPIRef("cookies.getAll()")}}
+  - : Recupera todos os cookies com o padrão de um conjunto de filtros fornecido.
+- {{WebExtAPIRef("cookies.set()")}}
+  - : Atribui um cookie com um dado fornecido; pode sobrescrever cookies equivalentes caso existam.
+- {{WebExtAPIRef("cookies.remove()")}}
+  - : Remove um cookie pelo nome.
+- {{WebExtAPIRef("cookies.getAllCookieStores()")}}
+  - : Lista todos os cookies armazenados.
+
+## Manipulador de eventos
+
+- {{WebExtAPIRef("cookies.onChanged")}}
+  - : Disparado quando um cookie é criado ou removido.
+
+## Compatibilidade com navegadores
+
+{{Compat("webextensions.api.cookies")}}
+
+{{WebExtExamples("h2")}}
+
+> **Nota:** **Agradecimentos**Esta API é baseada na API [`chrome.cookies`](https://developer.chrome.com/extensions/cookies) do Chromium. Esta documentação é derivada do [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) no código do Chromium.
+
+<div class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
+// * Redistributions of source code must retain the above copyright
 // notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
+// * Redistributions in binary form must reproduce the above
 // copyright notice, this list of conditions and the following disclaimer
 // in the documentation and/or other materials provided with the
 // distribution.
-//    * Neither the name of Google Inc. nor the names of its
+// * Neither the name of Google Inc. nor the names of its
 // contributors may be used to endorse or promote products derived from
 // this software without specific prior written permission.
 //
@@ -150,5 +125,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies
 // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</div>
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</div>
