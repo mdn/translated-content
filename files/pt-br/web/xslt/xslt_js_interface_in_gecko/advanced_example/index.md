@@ -4,30 +4,31 @@ slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
 translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
 original_slug: The_XSLT_JavaScript_Interface_in_Gecko/Advanced_Example
 ---
-<h2 id="Advanced_Example" name="Advanced_Example">Exemplo Avançado</h2>
+## Exemplo Avançado
 
-<p>O exemplo avançado apresentará vários tipos de divs baseado em seu conteúdo. O exemplo permite tipificar o conteúdo muitas vezes, alternando entre tipos ascendente ou descendente. O JavaScript apenas carrega o arquivo .xsl a primeira vez, e prepara a variável <code>xslloaded</code> verdadeira (true) assim que o arquivo tiver terminado de carregar. Usando o método <code>getParameter</code> no obejto <code>XSLTProcessor</code>, o código pode decidir pelo tipo ascendente ou descendente. Se o parâmetro estiver vazio o padrão é ascendente (primeira vezes que o tipo aparece, como não há valor para isto no aarquivo XSLT). O valor do tipo é colocado usando <code>setParameter</code>.</p>
+O exemplo avançado apresentará vários tipos de divs baseado em seu conteúdo. O exemplo permite tipificar o conteúdo muitas vezes, alternando entre tipos ascendente ou descendente. O JavaScript apenas carrega o arquivo .xsl a primeira vez, e prepara a variável `xslloaded` verdadeira (true) assim que o arquivo tiver terminado de carregar. Usando o método `getParameter` no obejto `XSLTProcessor`, o código pode decidir pelo tipo ascendente ou descendente. Se o parâmetro estiver vazio o padrão é ascendente (primeira vezes que o tipo aparece, como não há valor para isto no aarquivo XSLT). O valor do tipo é colocado usando `setParameter`.
 
-<p>The XSLT file has a parameter called <code>myOrder</code> that JavaScript sets to change the sorting method. The <code>xsl:sort</code> element's order attribute can access the value of the parameter using <code>$myOrder</code>. However, the value needs to be an XPATH expression and not a string, so <code>{$myOrder}</code> is used. Using {} evaluates the content as an XPath expression.</p>
+The XSLT file has a parameter called `myOrder` that JavaScript sets to change the sorting method. The `xsl:sort` element's order attribute can access the value of the parameter using `$myOrder`. However, the value needs to be an XPATH expression and not a string, so `{$myOrder}` is used. Using {} evaluates the content as an XPath expression.
 
-<p>Once the transformation is complete, the result is appened to the document, as shown in this example.</p>
+Once the transformation is complete, the result is appened to the document, as shown in this example.
 
-<p><small><b>Figure 7 : Sorting based on div content<span class="comment">view example</span></b></small></p>
+**Figure 7 : Sorting based on div contentview example**
 
-<pre class="brush: js">// XHTML Fragment:
+```js
+// XHTML Fragment:
 
-&lt;div id="example"&gt;
-  &lt;div&gt;1&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-  &lt;div&gt;4&lt;/div&gt;
-  &lt;div&gt;5&lt;/div&gt;
-  &lt;div&gt;6&lt;/div&gt;
-  &lt;div&gt;7&lt;/div&gt;
-  &lt;div&gt;8&lt;/div&gt;
-  &lt;div&gt;9&lt;/div&gt;
-  &lt;div&gt;10&lt;/div&gt;
-&lt;/div&gt;
+<div id="example">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>10</div>
+</div>
 
 // JavaScript
 
@@ -81,21 +82,21 @@ function sort() {
 
 // XSL Stylesheet:
 
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xsl:stylesheet version="1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
-  &lt;xsl:output method="html" indent="yes" /&gt;
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:output method="html" indent="yes" />
 
-  &lt;xsl:param name="myOrder" /&gt;
+  <xsl:param name="myOrder" />
 
-  &lt;xsl:template match="/"&gt;
+  <xsl:template match="/">
 
-    &lt;xsl:apply-templates select="/div//div"&gt;
-      &lt;xsl:sort select="." data-type="number" order="{$myOrder}" /&gt;
-    &lt;/xsl:apply-templates&gt;
-  &lt;/xsl:template&gt;
+    <xsl:apply-templates select="/div//div">
+      <xsl:sort select="." data-type="number" order="{$myOrder}" />
+    </xsl:apply-templates>
+  </xsl:template>
 
-  &lt;xsl:template match="div"&gt;
-    &lt;xsl:copy-of select="." /&gt;
-  &lt;/xsl:template&gt;
-&lt;/xsl:stylesheet&gt;
-</pre>
+  <xsl:template match="div">
+    <xsl:copy-of select="." />
+  </xsl:template>
+</xsl:stylesheet>
+```
