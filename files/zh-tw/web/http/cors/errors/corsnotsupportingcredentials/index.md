@@ -17,13 +17,13 @@ The {{Glossary("CORS")}} request was attempted with the credentials flag set, bu
 To correct this problem on the client side, simply ensure that the credentials flag's value is `false` when issuing your CORS request.
 
 - If the request is being issued using {{domxref("XMLHttpRequest")}}, make sure you're not setting {{domxref("XMLHttpRequest.withCredentials", "withCredentials")}} to `true`.
-- If using [Server-sent events](/en-US/docs/Web/API/Server-sent_events), make sure {{domxref("EventSource.withCredentials")}} is `false` (it's the default value).
-- If using the [Fetch API](/en-US/docs/Web/API/Fetch_API), make sure {{domxref("Request.credentials")}} is `"omit"`.
+- If using [Server-sent events](/zh-TW/docs/Web/API/Server-sent_events), make sure {{domxref("EventSource.withCredentials")}} is `false` (it's the default value).
+- If using the [Fetch API](/zh-TW/docs/Web/API/Fetch_API), make sure {{domxref("Request.credentials")}} is `"omit"`.
 
 If, instead, you need to adjust the server's behavior, you'll need to change the value of `Access-Control-Allow-Origin` to grant access to the origin from which the client is loaded.
 
 ## 參見
 
-- [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors)
+- [CORS errors](/zh-TW/docs/Web/HTTP/CORS/Errors)
 - Glossary: {{Glossary("CORS")}}
-- [CORS introduction](/en-US/docs/Web/HTTP/CORS)
+- [CORS introduction](/zh-TW/docs/Web/HTTP/CORS)

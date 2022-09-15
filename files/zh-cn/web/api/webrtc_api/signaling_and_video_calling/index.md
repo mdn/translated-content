@@ -264,7 +264,7 @@ function invite(evt) {
 
 创建 `RTCPeerConnection` 后，我们通过调用 {{domxref("MediaDevices.getUserMedia()")}}，请求访问用户的相机和麦克风，该命令通过 {{domxref("Navigator.mediaDevices.getUserMedia")}} 属性向我们公开。当成功完成返回的 promise 时，将执行我们的 `then` 处理程序。它接收一个 {{domxref("MediaStream")}} 对象作为输入，该对象表示来自用户麦克风的音频和来自网络摄像机的视频流。
 
-> **备注：** 我们可以通过调用 {{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}} **获取设备列表，根据所需条件筛选结果列表，然后使用所选设备**{{domxref("MediaTrackConstraints.deviceId", "deviceId")}} **传入**`getUserMedia()`**的** `mediaConstraints` **对象的**`deviceId` **字段中的值。事实上，除非必须要不然很少这样用，因为大部分工作都是由** `getUserMedia()`**为你完成的。**
+> **备注：** 我们可以通过调用 **{{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}}** 获取设备列表，根据所需条件筛选结果列表，然后使用所选设备 **{{domxref("MediaTrackConstraints.deviceId", "deviceId")}}** 传入 **`getUserMedia()`** 的 **`mediaConstraints`** 对象的 **`deviceId`** 字段中的值。事实上，除非必须要不然很少这样用，因为大部分工作都是由 **`getUserMedia()`** 为你完成的。
 
 我们通过设置元素的 {{domxref("HTMLMediaElement.srcObject", "srcObject")}} 属性，将传入流附加到本地预览 {{HTMLElement("video")}} 元素。由于元素被配置为自动播放传入的视频，因此流开始在本地预览框中播放。
 

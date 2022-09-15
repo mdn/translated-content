@@ -9,7 +9,7 @@ original_slug: Web/HTML/Element/Input/月份
 
 {{EmbedInteractiveExample("pages/tabbed/input-month.html", "tabbed-shorter")}}
 
-这个控件在各个浏览器支持都不同，目前是支持部分浏览器。在桌面上支持情况为 Chrome/Opera 和 Edge 。在移动端支持大部分现代浏览器。在其他浏览器中，这个控件会被优雅的降级到[`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text).
+这个控件在各个浏览器支持都不同，目前是支持部分浏览器。在桌面上支持情况为 Chrome/Opera 和 Edge 。在移动端支持大部分现代浏览器。在其他浏览器中，这个控件会被优雅的降级到[`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text).
 
 对于那些使用不支持的浏览器的用户，Chrome / Opera 月份控制如下图所示。单击右侧的向下箭头会显示日期选择器，以便您选择日期;你必须手动输入时间。
 
@@ -413,4 +413,4 @@ function populateYears() {
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
 - [Date and time formats used in HTML](/zh-CN/docs/Web/HTML/Date_and_time_formats)
 - [Date and Time picker tutorial](/zh-CN/docs/Web/Guide/HTML/Forms/The_native_form_widgets#Date_and_time_picker)
-- [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/en-US/docs/Web/HTML/Element/input/date), [`<input type="time">`](/en-US/docs/Web/HTML/Element/input/time), and [`<input type="week">`](/en-US/docs/Web/HTML/Element/input/week)
+- [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/zh-CN/docs/Web/HTML/Element/input/date), [`<input type="time">`](/zh-CN/docs/Web/HTML/Element/input/time), and [`<input type="week">`](/zh-CN/docs/Web/HTML/Element/input/week)

@@ -1,19 +1,6 @@
 ---
 title: 条件 (三項) 演算子
 slug: Web/JavaScript/Reference/Operators/Conditional_Operator
-tags:
-  - 条件
-  - Decision
-  - JS
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - リファレンス
-  - else
-  - if
-  - 三項
-browser-compat: javascript.operators.conditional
-translation_of: Web/JavaScript/Reference/Operators/Conditional_Operator
 ---
 {{jsSidebar("Operators")}}
 

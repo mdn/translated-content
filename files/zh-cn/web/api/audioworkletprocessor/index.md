@@ -34,7 +34,7 @@ _`AudioWorkletProcessor` 接口不响应任何事件。_
 
 Optionally, if you want custom {{domxref("AudioParam")}}s on your node, you can supply a {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} property as a _static getter_ on the processor. The array of {{domxref("AudioParamDescriptor")}}-based objects returned is used internally to create the {{domxref("AudioParam")}}s during the instantiation of the `AudioWorkletNode`.
 
-The resulting `AudioParam`s reside in the {{domxref("AudioWorkletNode.parameters", "parameters")}} property of the node and can be automated using standard methods such as [`linearRampToValueAtTime`](/en-US/docs/Web/API/AudioParam/linearRampToValueAtTime). Their calculated values will be passed into the {{domxref("AudioWorkletProcessor.process", "process()")}} method of the processor for you to shape the node output accordingly.
+The resulting `AudioParam`s reside in the {{domxref("AudioWorkletNode.parameters", "parameters")}} property of the node and can be automated using standard methods such as [`linearRampToValueAtTime`](/zh-CN/docs/Web/API/AudioParam/linearRampToValueAtTime). Their calculated values will be passed into the {{domxref("AudioWorkletProcessor.process", "process()")}} method of the processor for you to shape the node output accordingly.
 
 ### 处理音频
 

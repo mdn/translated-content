@@ -11,7 +11,7 @@ translation_of: Web/API/CanvasRenderingContext2D/rect
 ---
 <div>{{APIRef}}</div>
 
-<p>O método <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.rect()</code></strong> da Canvas 2D API cria um <em>path </em>(trajeto) para um retângulo na posição <em>(x, y)</em>, cujo tamanho é determinado pelo <em>width </em>(largura) e <em>height</em> (altura). <span id="result_box" lang="pt"><span>Esses quatro pontos estão conectados por linhas retas e o </span></span> <em>sub-path</em> <span lang="pt"><span>(sub-</span></span>trajeto<span lang="pt"><span>) é marcado como fechado, para que você possa</span></span> <code>fill (preencher)</code> ou <code>stroke (contornar)</code> o retângulo.</p>
+<p>O método <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.rect()</code></strong> da Canvas 2D API cria um <em>path </em>(trajeto) para um retângulo na posição <em>(x, y)</em>, cujo tamanho é determinado pelo <em>width </em>(largura) e <em>height</em> (altura). Esses quatro pontos estão conectados por linhas retas e o  <em>sub-path</em> (sub-trajeto) é marcado como fechado, para que você possa <code>fill (preencher)</code> ou <code>stroke (contornar)</code> o retângulo.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -44,7 +44,7 @@ translation_of: Web/API/CanvasRenderingContext2D/rect
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js; highlight:[3]">var canvas = document.getElementById('canvas');
+<pre class="brush: js">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 ctx.rect(10, 10, 100, 100);
 ctx.fill();
@@ -117,7 +117,7 @@ window.addEventListener("load", drawCanvas);
 <h2 id="Veja_também">Veja também</h2>
 
 <ul>
- <li><span class="short_text" id="result_box" lang="pt"><span>A interface que a define</span></span>, {{domxref("CanvasRenderingContext2D")}}</li>
+ <li>A interface que a define, {{domxref("CanvasRenderingContext2D")}}</li>
  <li>{{domxref("CanvasRenderingContext2D.fillRect")}}</li>
  <li>{{domxref("CanvasRenderingContext2D.strokeRect()")}}</li>
  <li>{{domxref("CanvasRenderingContext2D.fill()")}}</li>

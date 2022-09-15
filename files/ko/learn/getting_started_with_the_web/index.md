@@ -1,17 +1,6 @@
 ---
 title: Web과 함께 시작하기
 slug: Learn/Getting_started_with_the_web
-tags:
-  - Beginner
-  - CSS
-  - Design
-  - Guide
-  - HTML
-  - Index
-  - 'l10n:priority'
-  - 가이드
-  - 초보자
-translation_of: Learn/Getting_started_with_the_web
 ---
 {{LearnSidebar}}
 

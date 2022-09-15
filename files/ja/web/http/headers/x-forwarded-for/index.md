@@ -1,14 +1,6 @@
 ---
 title: X-Forwarded-For
 slug: Web/HTTP/Headers/X-Forwarded-For
-tags:
-  - HTTP
-  - HTTP ヘッダー
-  - ヘッダー
-  - リクエストヘッダー
-  - リファレンス
-  - 標準外
-translation_of: Web/HTTP/Headers/X-Forwarded-For
 ---
 {{HTTPSidebar}}
 

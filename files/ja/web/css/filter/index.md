@@ -1,15 +1,6 @@
 ---
 title: filter
 slug: Web/CSS/filter
-tags:
-  - CSS
-  - CSS プロパティ
-  - Reference
-  - SVG
-  - SVG フィルター
-  - recipe:css-property
-browser-compat: css.properties.filter
-translation_of: Web/CSS/filter
 ---
 {{CSSRef}}
 

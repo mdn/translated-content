@@ -1,19 +1,6 @@
 ---
 title: VRDisplay.submitFrame()
 slug: Web/API/VRDisplay/submitFrame
-page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Method
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - submitFrame()
-browser-compat: api.VRDisplay.submitFrame
-translation_of: Web/API/VRDisplay/submitFrame
 original_slug: Web/API/VRDevice/submitFrame
 ---
 {{APIRef("WebVR API")}}{{Deprecated_Header}}

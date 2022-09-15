@@ -1,15 +1,6 @@
 ---
 title: 'Feature-Policy: fullscreen'
 slug: Web/HTTP/Headers/Feature-Policy/fullscreen
-tags:
-  - 機能ポリシー
-  - Feature-Policy
-  - HTTP
-  - fullscreen
-  - ヘッダー
-  - 実験的
-browser-compat: http.headers.Feature-Policy.fullscreen
-translation_of: Web/HTTP/Headers/Feature-Policy/fullscreen
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}
 

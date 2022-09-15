@@ -1,18 +1,6 @@
 ---
 title: WebAssembly.compileStreaming()
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming
-tags:
-  - API
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-  - WebAssembly
-  - compile
-  - compileStreaming
-  - streaming
-browser-compat: javascript.builtins.WebAssembly.compileStreaming
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming
 ---
 {{JSRef}}
 

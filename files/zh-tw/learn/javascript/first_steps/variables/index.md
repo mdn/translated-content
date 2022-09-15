@@ -21,7 +21,7 @@ slug: Learn/JavaScript/First_steps/Variables
 
 ## 您需要的工具
 
-在此篇文章中，您將被要求輸入程式碼行來測試您對內容的理解。如果您使用的是網頁瀏覽器，最適合輸入代碼的地方便是 JavaScript 主控台, (請參閱[什麼是瀏覽器開發工具](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)這篇文章以取得更多關於此工具的資訊).
+在此篇文章中，您將被要求輸入程式碼行來測試您對內容的理解。如果您使用的是網頁瀏覽器，最適合輸入代碼的地方便是 JavaScript 主控台, (請參閱[什麼是瀏覽器開發工具](/zh-TW/docs/Learn/Common_questions/What_are_browser_developer_tools)這篇文章以取得更多關於此工具的資訊).
 
 ## 什麼是變量／變數 (variable) ？
 
@@ -150,7 +150,7 @@ var myName;
 
 > **備註：** This won't work when typing individual lines into a JavaScript console, just when running multiple lines of JavaScript in a web document.
 
-This works because of **hoisting** — read [var hoisting](/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) for more detail on the subject.
+This works because of **hoisting** — read [var hoisting](/zh-TW/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) for more detail on the subject.
 
 Hoisting no longer works with `let`. If we changed `var` to `let` in the above example, it would fail with an error. This is a good thing — declaring a variable after you initialize it makes for confusing, harder to understand code.
 
@@ -202,7 +202,7 @@ You can call a variable pretty much anything you like, but there are limitations
 - Variables are case sensitive — so `myage` is a different variable to `myAge`.
 - One last point — you also need to avoid using JavaScript reserved words as your variable names — by this, we mean the words that make up the actual syntax of JavaScript! So, you can't use words like `var`, `function`, `let`, and `for` as variable names. Browsers will recognize them as different code items, and so you'll get errors.
 
-> **備註：** You can find a fairly complete list of reserved keywords to avoid at [Lexical grammar — keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords).
+> **備註：** You can find a fairly complete list of reserved keywords to avoid at [Lexical grammar — keywords](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords).
 
 良好的命名範例：
 
@@ -295,7 +295,7 @@ myNumberArray[2]; // should return 40
 
 The square brackets specify an index value corresponding to the position of the value you want returned. You might have noticed that arrays in JavaScript are zero-indexed: the first element is at index 0.
 
-You'll learn a lot more about arrays in [a future article](/en-US/docs/Learn/JavaScript/First_steps/Arrays).
+You'll learn a lot more about arrays in [a future article](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays).
 
 ### Objects 物件
 
@@ -313,7 +313,7 @@ let dog = { name : 'Spot', breed : 'Dalmatian' };
 dog.name
 ```
 
-We won't be looking at objects any more for now — you can learn more about those in [a future module](/en-US/docs/Learn/JavaScript/Objects).
+We won't be looking at objects any more for now — you can learn more about those in [a future module](/zh-TW/docs/Learn/JavaScript/Objects).
 
 ## 動態型別
 
@@ -334,7 +334,7 @@ myNumber = 500; // much better — now this is a number
 typeof myNumber;
 ```
 
-Try entering the four lines above into your console one by one, and see what the results are. You'll notice that we are using a special operator called [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) — this returns the data type of the variable you pass into it. The first time it is called, it should return `string`, as at that point the `myNumber` variable contains a string, `'500'`. Have a look and see what it returns the second time you call it.
+Try entering the four lines above into your console one by one, and see what the results are. You'll notice that we are using a special operator called [`typeof`](/zh-TW/docs/Web/JavaScript/Reference/Operators/typeof) — this returns the data type of the variable you pass into it. The first time it is called, it should return `string`, as at that point the `myNumber` variable contains a string, `'500'`. Have a look and see what it returns the second time you call it.
 
 ## JavaScript 中的常數
 

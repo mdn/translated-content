@@ -19,7 +19,7 @@ slug: Glossary/Accessibility_tree
 
 加えて、アクセシビリティツリーは要素によって何が行われるのかについての情報を持つことがよくあります。リンクは _followed_、テキスト入力は _typed into_、などです。
 
-1.  [用語集](/ja/docs/Glossary)
+1. [用語集](/ja/docs/Glossary)
 
-    1.  {{Glossary("Accessibility", "アクセシビリティ")}}
-    2.  {{Glossary("ARIA")}}
+    1. {{Glossary("Accessibility", "アクセシビリティ")}}
+    2. {{Glossary("ARIA")}}

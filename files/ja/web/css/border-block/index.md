@@ -1,16 +1,6 @@
 ---
 title: border-block
 slug: Web/CSS/border-block
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - Non-standard
-  - リファレンス
-  - 'recipe:css-shorthand-property'
-browser-compat: css.properties.border-block
-translation_of: Web/CSS/border-block
 ---
 {{CSSRef}}
 

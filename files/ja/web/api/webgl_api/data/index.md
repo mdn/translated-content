@@ -1,7 +1,6 @@
 ---
 title: WebGL でのデータ
 slug: Web/API/WebGL_API/Data
-translation_of: Web/API/WebGL_API/Data
 ---
 {{WebGLSidebar}}
 

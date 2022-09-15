@@ -132,15 +132,11 @@ Bien que cet élément n'ait pas été officiellement déprécié en HTML 4.01, 
 
 ## Spécifications
 
-| Spécification                                                                                    | État                             | Commentaires |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'obsolete.html#tt', '&lt;tt&gt;')}}                 | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'obsolete.html#elementdef-tt', '&lt;tt&gt;')}}     | {{Spec2('HTML5 W3C')}}     |              |
-| {{SpecName('HTML4.01', 'present/graphics.html#h-15.2.1', '&lt;tt&gt;')}} | {{Spec2('HTML4.01')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.tt")}}
+{{Compat}}
 
 ## Voir aussi
 

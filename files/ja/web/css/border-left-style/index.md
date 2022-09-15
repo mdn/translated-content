@@ -1,14 +1,6 @@
 ---
 title: border-left-style
 slug: Web/CSS/border-left-style
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.border-left-style
-translation_of: Web/CSS/border-left-style
 ---
 {{CSSRef}}
 

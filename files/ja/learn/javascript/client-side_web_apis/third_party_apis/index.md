@@ -78,9 +78,9 @@ L.mapquest.key = 'YOUR-API-KEY-HERE';
 
 API の他の機能の使用方法を示すために、Mapquest の例にさらに機能を追加しましょう。
 
-1.  この章を始めるにあたり、新しいディレクトリーに[mapquest starter file](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/mapquest/starter-file.html)をコピーしましょう。もしもすでに[examples repository](/ja/docs/Learn#Getting_our_code_examples) をクローンしているようなら、必要な _javascript/apis/third-party-apis/mapquest_ を見つけてコピーしてください。
-2.  次に [Mapquest developer site](https://developer.mapquest.com/)に行ってください。アカウントを作り、デベロッパーキーを使用してあなたのサンプルに利用してください。(アカウント作成時、デベロッパーキーは "consumer key" と呼ばれています。そして、"callback URL" を尋ねられると思いますが、その入力欄は空欄でかまいません)
-3.  starting file を開き、API キーのプレスホルダーにあなたのキーを入力してください。
+1. この章を始めるにあたり、新しいディレクトリーに[mapquest starter file](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/mapquest/starter-file.html)をコピーしましょう。もしもすでに[examples repository](/ja/docs/Learn#Getting_our_code_examples) をクローンしているようなら、必要な _javascript/apis/third-party-apis/mapquest_ を見つけてコピーしてください。
+2. 次に [Mapquest developer site](https://developer.mapquest.com/)に行ってください。アカウントを作り、デベロッパーキーを使用してあなたのサンプルに利用してください。(アカウント作成時、デベロッパーキーは "consumer key" と呼ばれています。そして、"callback URL" を尋ねられると思いますが、その入力欄は空欄でかまいません)
+3. starting file を開き、API キーのプレスホルダーにあなたのキーを入力してください。
 
 ### 地図の種類を変更する
 
@@ -161,9 +161,9 @@ Google Maps は間違いなく最も人気のある地図 API です。使用方
 
 ほとんどの API では、セキュリティと説明責任のために、何らかの開発者キー使用する必要があります。NYTimes API キーの登録には、<https://developer.nytimes.com/get-started> の指示に従ってください。
 
-1.  記事検索 API のキーを要求してみよう — 新規アプリを作成し、これを利用したい API として選択します (名前と説明を記入し、「記事検索 API 」の下のスイッチをオンに切り替えて「作成」をクリックします)。
-2.  結果のページから API キーを取得します。
-3.  さて、例題を始めるために、[nytimes_start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes_start.html) と [nytimes.css](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes.css) のコピーをコンピュータ上の新しいディレクトリーに作成してください。すでに [examples リポジトリをクローン](/ja/docs/Learn#Getting_our_code_examples)している場合は、_javascript/apis/third-party-apis/nytimes_ ディレクトリーにあるこれらのファイルのコピーをすでに持っているでしょう。最初に `<script>` 要素には、例のセットアップに必要な変数がいくつか含まれています。
+1. 記事検索 API のキーを要求してみよう — 新規アプリを作成し、これを利用したい API として選択します (名前と説明を記入し、「記事検索 API 」の下のスイッチをオンに切り替えて「作成」をクリックします)。
+2. 結果のページから API キーを取得します。
+3. さて、例題を始めるために、[nytimes_start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes_start.html) と [nytimes.css](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes.css) のコピーをコンピュータ上の新しいディレクトリーに作成してください。すでに [examples リポジトリをクローン](/ja/docs/Learn#Getting_our_code_examples)している場合は、_javascript/apis/third-party-apis/nytimes_ ディレクトリーにあるこれらのファイルのコピーをすでに持っているでしょう。最初に `<script>` 要素には、例のセットアップに必要な変数がいくつか含まれています。
 
 このアプリは、検索用語とオプションの開始日と終了日を入力することを可能にし、Article Search API をクエリして検索結果を表示するために使用します。
 
@@ -173,7 +173,7 @@ Google Maps は間違いなく最も人気のある地図 API です。使用方
 
 まず、API とアプリ間の接続を行う必要があります。この API の場合、サービスから正しい URL でデータを要求するたびに、API キーを[取得](/ja/docs/Web/HTTP/Methods/GET)パラメーターとして含める必要があります。
 
-1.  次の行を探します。
+1. 次の行を探します。
 
     ```js
     let key = ' ... ';
@@ -187,7 +187,7 @@ Google Maps は間違いなく最も人気のある地図 API です。使用方
     searchForm.addEventListener('submit', submitSearch);
     ```
 
-2.  前の行の下に submitSearch() と fetchResults() 関数の定義を追加します。
+2. 前の行の下に submitSearch() と fetchResults() 関数の定義を追加します。
 
     ```js
     function submitSearch(e) {
@@ -333,14 +333,14 @@ function displayResults(json) {
 
 これにより、単純なページネーション関数を簡単に書くことができるようになりました。
 
-1.  既存の [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) コールの下に、関連するボタンがクリックされたときに `nextPage()` および `previousPage()` 関数が呼び出されるように、これら 2 つの新しいものを追加します：
+1. 既存の [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) コールの下に、関連するボタンがクリックされたときに `nextPage()` および `previousPage()` 関数が呼び出されるように、これら 2 つの新しいものを追加します：
 
     ```js
     nextBtn.addEventListener('click', nextPage);
     previousBtn.addEventListener('click', previousPage);
     ```
 
-2.  前回の追加の下に、2 つの関数を定義してみましょう — 今すぐこのコードを追加します：
+2. 前回の追加の下に、2 つの関数を定義してみましょう — 今すぐこのコードを追加します：
 
     ```js
     function nextPage(e) {

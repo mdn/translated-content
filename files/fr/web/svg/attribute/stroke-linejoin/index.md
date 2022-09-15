@@ -297,11 +297,8 @@ html,body,svg { height:100% }
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                   | Commentaire                                     |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ----------------------------------------------- |
-| {{SpecName("SVG2", "painting.html#StrokeLinejoinProperty", "stroke-linejoin")}}     | {{Spec2("SVG2")}} | Définition pour les formes et le texte          |
-| {{SpecName("SVG1.1", "painting.html#StrokeLinejoinProperty", "stroke-linejoin")}} | {{Spec2("SVG1.1")}} | Définition initiale pour les formes et le texte |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.attributes.presentation.stroke-linejoin")}}
+{{Compat}}

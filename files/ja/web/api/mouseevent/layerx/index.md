@@ -1,16 +1,7 @@
 ---
 title: UIEvent.layerX
 slug: Web/API/MouseEvent/layerX
-tags:
-  - API
-  - DOM
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - UIEvent
-translation_of: Web/API/UIEvent/layerX
 original_slug: Web/API/UIEvent/layerX
-browser-compat: api.UIEvent.layerX
 ---
 {{APIRef("DOM Events")}} {{Non-standard_header}}
 

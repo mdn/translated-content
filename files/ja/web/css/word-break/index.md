@@ -1,16 +1,6 @@
 ---
 title: word-break
 slug: Web/CSS/word-break
-tags:
-  - CSS
-  - CSS プロパティ
-  - Reference
-  - break-word
-  - recipe:css-property
-  - word-break
-  - 日本語処理
-browser-compat: css.properties.word-break
-translation_of: Web/CSS/word-break
 ---
 {{CSSRef}}
 

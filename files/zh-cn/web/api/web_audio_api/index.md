@@ -146,7 +146,7 @@ Web Audio API 使用的音频源接口。
 - {{domxref("AudioWorkerNode")}}
   - : AudioWorkerNode 也是{{domxref("AudioNode")}}类型，但是它用于与工作者线程合作来直接完成音频的生成，处理或分析等操作。
 - {{domxref("AudioWorkerGlobalScope")}}
-  - : ` AudioWorkerGlobalScope 继承于``DedicatedWorkerGlobalScope `。代表一个工作者上下文。这个工作者上下文里运行着对音频进行处理的脚本。设计这个接口的目的，是为了直接通过编写 JavaScript 代码，来完成对音频数据的生成，处理，分析工作。
+  - : `AudioWorkerGlobalScope` 继承于 `DedicatedWorkerGlobalScope`。代表一个工作者上下文。这个工作者上下文里运行着对音频进行处理的脚本。设计这个接口的目的，是为了直接通过编写 JavaScript 代码，来完成对音频数据的生成，处理，分析工作。
 - {{domxref("AudioProcessEvent")}}
   - : 这是一个事件对象。这个对象会被分发给{{domxref("AudioWorkerGlobalScope")}}对象来进行处理。
 

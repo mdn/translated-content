@@ -1,15 +1,6 @@
 ---
 title: scroll-snap-destination
 slug: Web/CSS/scroll-snap-destination
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS スクロールスナップ
-  - 非推奨
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.scroll-snap-destination
-translation_of: Web/CSS/scroll-snap-destination
 ---
 {{CSSRef}}{{deprecated_header}}
 

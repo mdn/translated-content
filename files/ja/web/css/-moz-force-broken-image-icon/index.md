@@ -1,14 +1,6 @@
 ---
 title: '-moz-force-broken-image-icon'
 slug: Web/CSS/-moz-force-broken-image-icon
-tags:
-  - CSS
-  - NeedsCompatTable
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.-moz-force-broken-image-icon
-translation_of: Web/CSS/-moz-force-broken-image-icon
 ---
 {{Non-standard_header}}{{CSSRef}}
 

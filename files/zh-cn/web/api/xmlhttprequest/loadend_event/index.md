@@ -46,4 +46,4 @@ loadend 事件总是在一个资源的加载进度停止之后被触发 (例如�
 
 ## See also
 
-- [Monitoring progress](/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)
+- [Monitoring progress](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)

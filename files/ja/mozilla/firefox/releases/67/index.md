@@ -1,12 +1,6 @@
 ---
 title: Firefox 67 for developers
 slug: Mozilla/Firefox/Releases/67
-tags:
-  - '67'
-  - Firefox
-  - Mozilla
-  - Release
-translation_of: Mozilla/Firefox/Releases/67
 ---
 {{FirefoxSidebar}}
 

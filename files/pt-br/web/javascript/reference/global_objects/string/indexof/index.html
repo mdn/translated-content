@@ -22,7 +22,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/indexOf
 
 <h2 id="Syntax" name="Syntax">Sintaxe</h2>
 
-<pre class="syntaxbox notranslate"><code><em>str</em>.indexOf(<em>searchValue</em>[, <em>fromIndex</em>]</code>)</pre>
+<pre class="syntaxbox"><em>str</em>.indexOf(<em>searchValue</em>[, <em>fromIndex</em>])</pre>
 
 <h3 id="Parameters" name="Parameters">Parâmetros</h3>
 
@@ -39,22 +39,22 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/indexOf
 
 <p>Uma string vazia no <em>searchValue</em> produz resultados estranhos. Sem <code>fromIndex</code>, ou com qualquer <code>fromIndex</code> menor que o comprimento da string, o valor retornado é o próprio <code>fromIndex</code>:</p>
 
-<pre class="brush: js line-numbers language-js notranslate"><code class="language-js"><span class="string token">'Olá, mundo'</span><span class="punctuation token">.</span><span class="function token">indexOf</span><span class="punctuation token">(</span><span class="string token">''</span><span class="punctuation token">)</span> <span class="comment token">// retorna 0</span>
-<span class="string token">'Olá, mundo'</span><span class="punctuation token">.</span><span class="function token">indexOf</span><span class="punctuation token">(</span><span class="string token">''</span><span class="punctuation token">,</span> <span class="number token">0</span><span class="punctuation token">)</span> <span class="comment token">// retorna 0</span>
-<span class="string token">'Olá, mundo'</span><span class="punctuation token">.</span><span class="function token">indexOf</span><span class="punctuation token">(</span><span class="string token">''</span><span class="punctuation token">,</span> <span class="number token">3</span><span class="punctuation token">)</span> <span class="comment token">// retorna 3</span>
-<span class="string token">'Olá, mundo'</span><span class="punctuation token">.</span><span class="function token">indexOf</span><span class="punctuation token">(</span><span class="string token">''</span><span class="punctuation token">,</span> <span class="number token">8</span><span class="punctuation token">)</span> <span class="comment token">// retorna 8</span></code></pre>
+<pre class="brush: js">'Olá, mundo'.indexOf('') // retorna 0
+'Olá, mundo'.indexOf('', 0) // retorna 0
+'Olá, mundo'.indexOf('', 3) // retorna 3
+'Olá, mundo'.indexOf('', 8) // retorna 8</pre>
 
 <p>Entretanto, com qualquer <code>fromIndex</code> igual ou maior que o comprimento da string, o valor retornado é o comprimento da string:</p>
 
-<pre class="brush: js line-numbers language-js notranslate"><code class="language-js"><span class="string token">'Olá, mundo'</span><span class="punctuation token">.</span><span class="function token">indexOf</span><span class="punctuation token">(</span><span class="string token">''</span><span class="punctuation token">,</span> <span class="number token">11</span><span class="punctuation token">)</span> <span class="comment token">// retorna 10</span>
-<span class="string token">'Olá, mundo'</span><span class="punctuation token">.</span><span class="function token">indexOf</span><span class="punctuation token">(</span><span class="string token">''</span><span class="punctuation token">,</span> <span class="number token">13</span><span class="punctuation token">)</span> <span class="comment token">// retorna 10</span>
-<span class="string token">'Olá, mundo'</span><span class="punctuation token">.</span><span class="function token">indexOf</span><span class="punctuation token">(</span><span class="string token">''</span><span class="punctuation token">,</span> <span class="number token">22</span><span class="punctuation token">)</span> <span class="comment token">// retorna 10</span></code></pre>
+<pre class="brush: js">'Olá, mundo'.indexOf('', 11) // retorna 10
+'Olá, mundo'.indexOf('', 13) // retorna 10
+'Olá, mundo'.indexOf('', 22) // retorna 10</pre>
 
 <h2 id="Description" name="Description">Descrição</h2>
 
 <p>Caracteres em uma string são indexados da esquerda para a direita. O índice do primeiro caractere é <code>0</code>, e o índice do último caractere de uma string chamada <code>stringName</code> é <code>stringName.length - 1</code>.</p>
 
-<pre class="brush: js notranslate">"Blue Whale".indexOf("Blue");     // retorna  0
+<pre class="brush: js">"Blue Whale".indexOf("Blue");     // retorna  0
 "Blue Whale".indexOf("Whale");    // retorna  5
 "Blue Whale".indexOf("Blute");    // retorna -1
 "Blue Whale".indexOf("Whale", 0); // retorna  5
@@ -69,7 +69,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/indexOf
 
 <p>Note que um retorno <code>0</code> não implica em <code>true</code>, e <code>-1</code> não implica em <code>false</code>. Portanto, a maneira correta de se verificar se uma string específica está contida em outra string seria:</p>
 
-<pre class="brush: js notranslate">"Blue Whale".indexOf("Blue") !== -1; // true
+<pre class="brush: js">"Blue Whale".indexOf("Blue") !== -1; // true
 "Blue Whale".indexOf("Bloe") !== -1; // false</pre>
 
 <h2 id="Examples" name="Examples">Exemplos</h2>
@@ -78,7 +78,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/indexOf
 
 <p>O exemplo a seguir usa <code>indexOf()</code> para localizar valores dentro da string "<code>Brave new world</code>".</p>
 
-<pre class="brush: js notranslate">var anyString = "Brave new world";
+<pre class="brush: js">var anyString = "Brave new world";
 
 console.log("O índice do primeiro w partindo do começo é " + anyString.indexOf("w"));
 // Exibe 8
@@ -91,7 +91,7 @@ console.log("O índice de 'new' partindo do começo é " + anyString.indexOf("ne
 
 <p>O exemplo a seguir define duas variáveis string. Ambas contém a mesma string, exceto que a segunda string tem letras maiúsculas. O primeiro método {{domxref("console.log()")}} exibe <code>19</code>. Porém, como o método <code>indexOf</code> é sensível a letras maiúsculas e minúsculas, a string <code>"cheddar"</code> não é encontrada em <code>myCapString</code>, portanto, o segundo método {{domxref("console.log()")}} exibe <code>-1</code>.</p>
 
-<pre class="brush: js notranslate">var myString    = "brie, pepper jack, cheddar";
+<pre class="brush: js">var myString    = "brie, pepper jack, cheddar";
 var myCapString = "Brie, Pepper Jack, Cheddar";
 
 console.log('myString.indexOf("cheddar") é ' + myString.indexOf("cheddar"));
@@ -103,7 +103,7 @@ console.log('myCapString.indexOf("cheddar") é ' + myCapString.indexOf("cheddar"
 
 <p>O exemplo a seguir atribui à variável <code>count</code> o número de ocorrências da letra <code>x</code> na string <code>str</code>:</p>
 
-<pre class="brush: js notranslate">const str = 'Serx ou não ser, eisx a questão'
+<pre class="brush: js">const str = 'Serx ou não ser, eisx a questão'
 count = 0;
 pos = str.indexOf("x"); // retorna 3
 

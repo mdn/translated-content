@@ -1,15 +1,6 @@
 ---
 title: mask-size
 slug: Web/CSS/mask-size
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - Experimental
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.mask-size
-translation_of: Web/CSS/mask-size
 ---
 {{CSSRef}}
 

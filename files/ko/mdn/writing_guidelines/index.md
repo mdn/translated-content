@@ -1,15 +1,6 @@
 ---
 title: MDN Web Docs에 대해
 slug: MDN/Writing_guidelines
-tags:
-  - Collaborating
-  - Community
-  - Copyright
-  - Documentation
-  - Guide
-  - Licenses
-  - MDN Meta
-translation_of: MDN/About
 original_slug: MDN/About
 ---
 {{MDNSidebar}}

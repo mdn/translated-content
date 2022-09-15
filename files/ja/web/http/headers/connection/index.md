@@ -1,15 +1,6 @@
 ---
 title: Connection
 slug: Web/HTTP/Headers/Connection
-tags:
-  - HTTP
-  - HTTP ヘッダー
-  - リクエストヘッダー
-  - レスポンスヘッダー
-  - リファレンス
-  - ウェブ
-browser-compat: http.headers.Connection
-translation_of: Web/HTTP/Headers/Connection
 ---
 {{HTTPSidebar}}
 

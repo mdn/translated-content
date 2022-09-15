@@ -28,7 +28,9 @@ Las macros en MDN se implementan usando código {{web.link("/es/docs/Web/JavaScr
 
 Para usar realmente una macro, simplemente encierra la llamada a la macro entre un par de llaves dobles, con sus parámetros, si los hay, entre paréntesis; es decir:
 
-    \{{nombremacro(lista-de-parametros)}}
+```
+\{{nombremacro(lista-de-parametros)}}
+```
 
 Algunas notas sobre las llamadas de macro:
 

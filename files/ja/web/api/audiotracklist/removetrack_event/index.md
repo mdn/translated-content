@@ -1,12 +1,6 @@
 ---
 title: 'AudioTrackList: removetrack イベント'
 slug: Web/API/AudioTrackList/removetrack_event
-tags:
-  - AudioTrackList
-  - Event
-  - events
-  - removeTrack
-translation_of: Web/API/AudioTrackList/removetrack_event
 ---
 {{APIRef}}
 

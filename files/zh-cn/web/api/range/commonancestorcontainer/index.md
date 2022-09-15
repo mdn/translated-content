@@ -36,4 +36,4 @@ rangeAncestor = range.commonAncestorContainer;
 
 ## 更多
 
-- [DOM 接口相关内容](/en-US/docs/DOM/DOM_Reference)
+- [DOM 接口相关内容](/zh-CN/docs/DOM/DOM_Reference)

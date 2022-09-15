@@ -1,16 +1,6 @@
 ---
 title: HTMLTrackElement
 slug: Web/API/HTMLTrackElement
-page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - HTMLTrackElement
-  - Interface
-  - NeedsNewLayout
-  - Reference
-browser-compat: api.HTMLTrackElement
-translation_of: Web/API/HTMLTrackElement
 ---
 {{ APIRef("HTML DOM") }}
 

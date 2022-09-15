@@ -12,13 +12,13 @@ slug: Web/API/File_and_Directory_Entries_API/Introduction
 
 This introduction discusses essential concepts and terminology in the File and Directory Entries API. It gives you the big picture and orients you to [key concepts](#concepts). It also describes [restrictions](#restrictions) that raise security errors if you ignore them. To learn more about terminology used in this API, see the [Definitions](#definitions) section.
 
-For the reference documentation on the File and Directory Entries API, see the [reference](/ja/DOM/File_API/File_System_API/FileSystem "en/DOM/File_API/File_System_API/FileSystem") landing page and its subpages.
+For the reference documentation on the File and Directory Entries API, see the [reference](/ja/DOM/File_API/File_System_API/FileSystem) landing page and its subpages.
 
 The specification is still being defined and is subject to change.
 
 ## Overview
 
-The File and Directory Entries API includes both [asynchronous](/ja/DOM/File_API/File_System_API#Asynchronous_APIs "en/DOM/File_API/File_System_API#Asynchronous_APIs") and [synchronous](/ja/DOM/File_API/File_System_API#Synchronous_APIs "en/DOM/File_API/File_System_API#Synchronous_APIs") versions of the interfaces. The asynchronous API can be used in cases where you don't want an outstanding operation to block the UI. The synchronous API, on the other hand, allows for simpler programming model, but it must be used with [WebWorkers](/ja/Using_web_workers "https://developer.mozilla.org/ja/Using_web_workers").
+The File and Directory Entries API includes both [asynchronous](/ja/DOM/File_API/File_System_API#Asynchronous_APIs) and [synchronous](/ja/DOM/File_API/File_System_API#Synchronous_APIs) versions of the interfaces. The asynchronous API can be used in cases where you don't want an outstanding operation to block the UI. The synchronous API, on the other hand, allows for simpler programming model, but it must be used with [WebWorkers](/ja/Using_web_workers).
 
 ### Usefulness of the API
 
@@ -29,11 +29,11 @@ The File and Directory Entries API is an important API for the following reasons
 - It lets users of your web app directly edit a binary file that's in their local file directory.
 - It provides a storage API that is already familiar to your users, who are used to working with file systems.
 
-For examples of features you can create with this app, see the [Sample use cases](/#samples "#samples") section.
+For examples of features you can create with this app, see the [Sample use cases](/#samples) section.
 
 ### The File and Directory Entries API and other storage APIs
 
-The File and Directory Entries API is an alternative to other storage APIs like [IndexedDB](/ja/IndexedDB/Basic_Concepts_Behind_IndexedDB "en/IndexedDB/Basic_Concepts_Behind_IndexedDB"), WebSQL (which has been deprecated since November18, 2010), and AppCache. The API is a better choice for apps that deal with blobs for the following reasons:
+The File and Directory Entries API is an alternative to other storage APIs like [IndexedDB](/ja/IndexedDB/Basic_Concepts_Behind_IndexedDB), WebSQL (which has been deprecated since November18, 2010), and AppCache. The API is a better choice for apps that deal with blobs for the following reasons:
 
 - The File and Directory Entries API offers client-side storage for use cases that are not addressed by databases. If you want to have large mutable chunks of data, the File and Directory Entries API is a much more efficient storage solution than a database.
 - While Firefox supports blob storage for IndexedDB, Chrome currently does not (Chrome is still implementing support for blob storage in IndexedDB). If you are targeting Chrome for your app and you want to store blobs, the File and Directory Entries API and App Cache are your only choices. However, AppCache storage isn't locally mutable, and doesn't allow for fine-grained client-side management.
@@ -101,7 +101,7 @@ How storage space is granted or allocated and how you can manage storage are idi
 
 The File and Directory Entries API comes with asynchronous and synchronous versions. Both versions of the API offer the same capabilities and features. In fact, they are almost alike, except for a few differences.
 
-- **WebWorkers.** The asynchronous API can be used in either the document or [WebWorkers](/ja/Using_web_workers "https://developer.mozilla.org/ja/Using_web_workers") context, while the synchronous API is for use with WebWorkers only.
+- **WebWorkers.** The asynchronous API can be used in either the document or [WebWorkers](/ja/Using_web_workers) context, while the synchronous API is for use with WebWorkers only.
 - **Callbacks**. The asynchronous API doesn't give you data by returning values; instead, you have to pass a callback function. You send requests for operations to happen, and get notified by callbacks. In contrast, the synchronous API does not use callbacks because the API methods return values.
 - **Global methods of the asynchronous and synchronous APIs**. The asynchronous API has the following global methods: `requestFileSystem()` and `resolveLocalFileSystemURL()`. These methods are members of both the window object and the worker global scope. The synchronous API, on the other hand, uses the following methods: `requestFileSystemSync()` and `resolveLocalFileSystemSyncURL()`. These synchronous methods are members of the worker's global scope only, not the window object.
 

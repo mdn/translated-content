@@ -1,16 +1,6 @@
 ---
 title: CacheStorage.open()
 slug: Web/API/CacheStorage/open
-tags:
-  - API
-  - CacheStorage
-  - Method
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - open
-translation_of: Web/API/CacheStorage/open
 ---
 {{APIRef("Service Workers API")}}
 

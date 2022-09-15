@@ -1,17 +1,6 @@
 ---
 title: WebRTC 接続
 slug: Web/API/WebRTC_API/Connectivity
-page-type: guide
-tags:
-  - API
-  - Advanced
-  - Audio
-  - Draft
-  - Guide
-  - Media
-  - Video
-  - WebRTC
-translation_of: Web/API/WebRTC_API/Connectivity
 ---
 {{WebRTCSidebar}}
 

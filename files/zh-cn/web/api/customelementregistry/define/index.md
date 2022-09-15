@@ -4,7 +4,7 @@ slug: Web/API/CustomElementRegistry/define
 ---
 {{APIRef("CustomElementRegistry")}}
 
-{{domxref("CustomElementRegistry")}}接口的**`define()`**方法定义了一个自定义元素。
+{{domxref("CustomElementRegistry")}}接口的 **`define()`** 方法定义了一个自定义元素。
 
 你可以创建两种类型的自定义元素：
 

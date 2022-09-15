@@ -1,15 +1,6 @@
 ---
 title: offset
 slug: Web/CSS/offset
-tags:
-  - CSS
-  - CSS モーションパス
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.offset
-translation_of: Web/CSS/offset
 ---
 {{CSSRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: VRDisplayCapabilities.hasExternalDisplay
 slug: Web/API/VRDisplayCapabilities/hasExternalDisplay
-translation_of: Web/API/VRDisplayCapabilities/hasExternalDisplay
 ---
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 

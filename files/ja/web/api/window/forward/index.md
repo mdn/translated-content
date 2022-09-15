@@ -1,17 +1,6 @@
 ---
 title: window.forward
 slug: Web/API/Window/forward
-tags:
-  - API
-  - DOM
-  - Firefox
-  - Gecko
-  - Method
-  - Non-standard
-  - Obsolete
-  - Window
-  - forward
-translation_of: Web/API/Window/forward
 ---
 {{ApiRef}}{{Non-standard_header}} {{deprecated_header}}
 

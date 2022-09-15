@@ -1,7 +1,6 @@
 ---
 title: Web Speech APIを使う
 slug: Web/API/Web_Speech_API/Using_the_Web_Speech_API
-translation_of: Web/API/Web_Speech_API/Using_the_Web_Speech_API
 ---
 Web Speech API は、音声認識と音声合成（text to speech または tts としても知られています）という 2 つの異なる分野の機能を提供しており、アクセシビリティと制御メカニズムに興味深い新しい可能性をもたらします。この記事では、両方の分野の簡単な紹介とデモを提供します。
 

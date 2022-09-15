@@ -90,14 +90,11 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-wbr-element', '&lt;wbr&gt;')}}             | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-wbr-element', '&lt;wbr&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.wbr")}}
+{{Compat}}
 
 ## Voir aussi
 

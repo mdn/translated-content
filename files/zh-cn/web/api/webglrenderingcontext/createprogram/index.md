@@ -4,7 +4,7 @@ slug: Web/API/WebGLRenderingContext/createProgram
 ---
 {{APIRef("WebGL")}}
 
-[WebGL API](/en-US/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.createProgram()`** 方法用于创建和初始化一个 {{domxref("WebGLProgram")}} 对象。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.createProgram()`** 方法用于创建和初始化一个 {{domxref("WebGLProgram")}} 对象。
 
 ## 语法
 

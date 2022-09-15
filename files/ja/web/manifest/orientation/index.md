@@ -1,12 +1,6 @@
 ---
 title: orientation
 slug: Web/Manifest/orientation
-tags:
-  - マニフェスト
-  - Orientation
-  - ウェブ
-browser-compat: html.manifest.orientation
-translation_of: Web/Manifest/orientation
 ---
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 

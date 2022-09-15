@@ -1,19 +1,6 @@
 ---
 title: VRFrameData.pose
 slug: Web/API/VRFrameData/pose
-page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRFrameData
-  - Virtual Reality
-  - WebVR
-  - pose
-browser-compat: api.VRFrameData.pose
-translation_of: Web/API/VRFrameData/pose
 ---
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 

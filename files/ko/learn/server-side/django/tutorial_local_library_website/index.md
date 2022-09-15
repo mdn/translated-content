@@ -1,7 +1,6 @@
 ---
 title: 'Django 튜토리얼: 지역 도서관 웹사이트'
 slug: Learn/Server-side/Django/Tutorial_local_library_website
-translation_of: Learn/Server-side/Django/Tutorial_local_library_website
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}
 

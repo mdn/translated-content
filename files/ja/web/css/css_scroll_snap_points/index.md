@@ -1,13 +1,6 @@
 ---
 title: CSS スクロールスナップ点
 slug: Web/CSS/CSS_Scroll_Snap_Points
-tags:
-  - CSS
-  - CSS スクロールスナップ
-  - ガイド
-  - 概要
-  - Reference
-translation_of: Web/CSS/CSS_Scroll_Snap_Points
 ---
 {{CSSRef}} {{deprecated_header}}
 

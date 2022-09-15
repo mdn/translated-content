@@ -28,11 +28,11 @@ JavaScript를 사용해 오디오 프로세서를 생성하고, 오디오 workle
 
 단계별 기초를 밟아가며 AudioWorklet의 사용법을 알아보기 전에, 여기에 무엇이 관련되어 있는지 간략한 고수준의 개요를 살펴보며 시작합시다.
 
-1.  하나 이상의 들어오는 소스에서 오디오를 취하고, 데이터에 대해 작업을 수행하고, 결과로 오디오 데이터를 출력하는 {{domxref("AudioWorkletProcessor")}}를 상속받는 오디오 worklet 프로세서 클래스를 정의하는 모듈을 만듭니다.
-2.  오디오 컨텍스트의 {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} 속성을 통해 오디오 컨텍스트의 {{domxref("AudioWorklet")}}에 접근하고, 오디오 worklet의 {{domxref("Worklet.addModule", "addModule()")}} 메서드를 호출하여 오디오 worklet 프로세서 모듈을 설치합니다.
-3.  필요한 대로, (모듈에 의해 정의된) 프로세서의 이름을 {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}} 생성자에 전달함으로써 오디오 프로세싱 노드를 생성합니다.
-4.  {{domxref("AudioWorkletNode")}}가 필요로 하는, 또는 여러분이 설정하기를 원하는 오디오 파라미터들을 설정합니다. 이 파라미터들은 오디오 worklet 프로세서 모듈 내에 정의되어 있습니다.
-5.  다른 노드처럼, 생성된 `AudioWorkletNode`를 오디오 프로세싱 파이프라인에 연결하고, 오디오 파이프라인을 평상시처럼 사용합니다.
+1. 하나 이상의 들어오는 소스에서 오디오를 취하고, 데이터에 대해 작업을 수행하고, 결과로 오디오 데이터를 출력하는 {{domxref("AudioWorkletProcessor")}}를 상속받는 오디오 worklet 프로세서 클래스를 정의하는 모듈을 만듭니다.
+2. 오디오 컨텍스트의 {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} 속성을 통해 오디오 컨텍스트의 {{domxref("AudioWorklet")}}에 접근하고, 오디오 worklet의 {{domxref("Worklet.addModule", "addModule()")}} 메서드를 호출하여 오디오 worklet 프로세서 모듈을 설치합니다.
+3. 필요한 대로, (모듈에 의해 정의된) 프로세서의 이름을 {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}} 생성자에 전달함으로써 오디오 프로세싱 노드를 생성합니다.
+4. {{domxref("AudioWorkletNode")}}가 필요로 하는, 또는 여러분이 설정하기를 원하는 오디오 파라미터들을 설정합니다. 이 파라미터들은 오디오 worklet 프로세서 모듈 내에 정의되어 있습니다.
+5. 다른 노드처럼, 생성된 `AudioWorkletNode`를 오디오 프로세싱 파이프라인에 연결하고, 오디오 파이프라인을 평상시처럼 사용합니다.
 
 이 글의 마지막까지 우리는 이 과정들을 예제와 함께 더욱 자세하게 살펴볼 것입니다 (직접 시도해볼 수 있는 작동하는 예제를 포함합니다).
 
@@ -193,9 +193,9 @@ process(inputList, outputList, parameters) {
 
 {{domxref("AudioWorkletProcessor")}}를 통해 오디오 데이터 블럭을 채우는 오디오 노드를 생성하려면, 여러분은 다음의 간단한 단계를 따를 필요가 있습니다:
 
-1.  오디오 프로세서 모듈을 로드하고 설치하기
-2.  프로세서의 이름으로 사용할 오디오 프로세서 모듈을 명시하며, {{domxref("AudioWorkletNode")}} 생성하기
-3.  `AudioWorkletNode`에 입력을 연결하고 이 노드의 출력을 적절한 destination에 연결하기 (이는 다른 노드거나 {{domxref("AudioContext")}} 객체의 {{domxref("AudioContext.destination", "destination")}} 속성입니다).
+1. 오디오 프로세서 모듈을 로드하고 설치하기
+2. 프로세서의 이름으로 사용할 오디오 프로세서 모듈을 명시하며, {{domxref("AudioWorkletNode")}} 생성하기
+3. `AudioWorkletNode`에 입력을 연결하고 이 노드의 출력을 적절한 destination에 연결하기 (이는 다른 노드거나 {{domxref("AudioContext")}} 객체의 {{domxref("AudioContext.destination", "destination")}} 속성입니다).
 
 오디오 worklet 프로세서를 사용하기 위해서, 여러분은 다음과 유사한 코드를 사용할 수 있습니다:
 

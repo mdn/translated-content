@@ -26,7 +26,7 @@ tags:
   (詳しくは {{bug(1775026)}} をご覧ください)
 
 - [`window.postMessage()`](/ja/docs/Web/API/Window/postMessage) および [`structuredClone()`](/ja/docs/Web/API/structuredClone) で [ネイティブなエラーの型](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types) を使用したとき、シリアライズした結果に (`stack` を持つエラーの型で) [`stack`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/stack) プロパティも含まれるようになりました。
-  [`Worker.postMessage()`](/ja/docs/Web/API/Worker/postMessage) など、ほかの API を使用してエラーを送信する場合は、まだ `stack` をシリアライズしません 
+  [`Worker.postMessage()`](/ja/docs/Web/API/Worker/postMessage) など、ほかの API を使用してエラーを送信する場合は、まだ `stack` をシリアライズしません
   (詳しくは {{bug(1774866)}} をご覧ください)。
 
 ### HTTP
@@ -69,7 +69,7 @@ tags:
 #### WebDriver BiDi
 
 - `log.entryAdded` イベントで `source` をサポートしました ({{bug(1770792)}})。
--  新たに開いたブラウジングコンテキストについて、`browsingContext.contextCreated` イベントに送信する `url` を `about:blank` に更新しました ({{bug(1775141)}})。
+- 新たに開いたブラウジングコンテキストについて、`browsingContext.contextCreated` イベントに送信する `url` を `about:blank` に更新しました ({{bug(1775141)}})。
 
 #### Marionette
 

@@ -1,13 +1,6 @@
 ---
 title: BigInt() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
-tags:
-  - BigInt
-  - コンストラクター
-  - JavaScript
-  - リファレンス
-browser-compat: javascript.builtins.BigInt.BigInt
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
 ---
 {{JSRef}}
 

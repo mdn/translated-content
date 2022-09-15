@@ -1,13 +1,6 @@
 ---
 title: CSS 型付きオブジェクトモデルの使用
 slug: Web/API/CSS_Typed_OM_API/Guide
-page-type: guide
-tags:
-  - CSS
-  - CSS Typed OM
-  - Houdini
-  - Learn
-translation_of: Web/API/CSS_Typed_OM_API/Guide
 ---
 {{DefaultAPISidebar("CSS Typed Object Model API")}}
 

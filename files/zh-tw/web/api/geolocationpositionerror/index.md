@@ -37,5 +37,5 @@ _`PositionError` 介面沒有繼承任何屬性_。
 
 ## 請參考
 
-- [Using geolocation](/en-US/docs/WebAPI/Using_geolocation)
+- [Using geolocation](/zh-TW/docs/WebAPI/Using_geolocation)
 - {{domxref("Geolocation")}} 介面使用此物件。

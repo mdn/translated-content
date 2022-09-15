@@ -136,7 +136,7 @@ browser.tabs.onUpdated.addListener(handleUpdated);
 
 ### Filtering examples
 
-Le journal ne change que pour les onglets dont la propriété `url` est [matched](/fr/Add-ons/WebExtensions/Match_patterns) par "https\://developer.mozilla.org/\*" ou "https\://twitter.com/mozdevnet":
+Le journal ne change que pour les onglets dont la propriété `url` est [matched](/fr/Add-ons/WebExtensions/Match_patterns) par `https://developer.mozilla.org/*` ou `https://twitter.com/mozdevnet`:
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
@@ -174,7 +174,7 @@ browser.tabs.onUpdated.addListener(handleUpdated, filter);
 Combiner les deux filtres précédents : changements de journal seulement :
 
 - A la propriété `épinglée` des onglets
-- Dont la propriété `url` est [matched](/fr/Add-ons/WebExtensions/Match_patterns) par "https\://developer.mozilla.org/\*" ou "https\://twitter.com/mozdevnet":
+- Dont la propriété `url` est [matched](/fr/Add-ons/WebExtensions/Match_patterns) par `https://developer.mozilla.org/*` ou `https://twitter.com/mozdevnet`:
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
@@ -199,7 +199,7 @@ browser.tabs.onUpdated.addListener(
 Changements dans le journal seulement :
 
 - A la propriété `épinglée` des onglets
-- Dont la propriété `url` est [matched](/fr/Add-ons/WebExtensions/Match_patterns) par "https\://developer.mozilla.org/\*" ou "https\://twitter.com/mozdevnet"
+- Dont la propriété `url` est [matched](/fr/Add-ons/WebExtensions/Match_patterns) par `https://developer.mozilla.org/*` ou `https://twitter.com/mozdevnet`
 - et qui font partie de la fenêtre actuelle du navigateur au moment où l'événement de mise à jour est déclenché :
 
 ```js

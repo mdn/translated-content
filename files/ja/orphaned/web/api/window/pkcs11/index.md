@@ -1,17 +1,6 @@
 ---
 title: Window.pkcs11
 slug: orphaned/Web/API/Window/pkcs11
-tags:
-  - API
-  - HTML DOM
-  - NeedsExample
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Deprecated
-  - Property
-  - Reference
-  - Window
-translation_of: Web/API/Window/pkcs11
 original_slug: Web/API/Window/pkcs11
 ---
 {{APIRef()}}{{deprecated_header}}

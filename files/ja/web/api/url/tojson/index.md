@@ -1,14 +1,6 @@
 ---
 title: URL.toJSON()
 slug: Web/API/URL/toJSON
-tags:
-  - API
-  - Method
-  - Reference
-  - URL
-  - toJSON
-  - toJSON()
-translation_of: Web/API/URL/toJSON
 ---
 {{APIRef("URL API")}}
 

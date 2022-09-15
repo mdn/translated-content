@@ -35,4 +35,4 @@ _また、 {{DOMxRef("Document")}} からメソッドを継承します_
 
 ## 関連項目
 
-- [The DOM interfaces index.](/ja/docs/DOM/DOM_Reference "/en-US/docs/DOM/DOM_Reference")
+- [The DOM interfaces index.](/ja/docs/DOM/DOM_Reference)

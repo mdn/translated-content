@@ -103,15 +103,11 @@ Lorsque les contrôles de formulaire sont désactivés, de nombreux navigateurs 
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'forms.html#attr-input-disabled', 'disabled attribute')}}     | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5 W3C', 'forms.html#attr-input-disabled', 'disabled attribute')}}         | {{Spec2('HTML5 W3C')}}     |
-| {{SpecName('HTML5.1', 'sec-forms.html#the-disabled-attribute', 'disabled attribute')}} | {{Spec2('HTML5.1')}}     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.attributes.disabled")}}
+{{Compat}}
 
 ## Voir aussi
 

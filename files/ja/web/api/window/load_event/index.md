@@ -1,13 +1,6 @@
 ---
 title: 'Window: load イベント'
 slug: Web/API/Window/load_event
-tags:
-  - DOM
-  - Event
-  - Reference
-  - Window
-  - load
-translation_of: Web/API/Window/load_event
 ---
 {{APIRef}}
 

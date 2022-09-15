@@ -10,8 +10,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/splice
 
 ## 语法
 
-```plain
-array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
+```js
+splice(start)
+splice(start, deleteCount)
+splice(start, deleteCount, item1)
+splice(start, deleteCount, item1, item2, itemN)
 ```
 
 ### 参数

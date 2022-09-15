@@ -1,11 +1,6 @@
 ---
 title: ヒット領域とアクセシビリティ
 slug: orphaned/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility
-tags:
-  - Canvas
-  - Graphics
-  - Tutorial
-translation_of: Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility
 original_slug: Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility
 ---
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}</div>

@@ -1,16 +1,6 @@
 ---
 title: Transport Layer Security
 slug: Web/Security/Transport_Layer_Security
-tags:
-  - Cryptography
-  - Guide
-  - SSL
-  - Security
-  - TLS
-  - セキュリティ
-  - 暗号化
-  - 認証
-translation_of: Web/Security/Transport_Layer_Security
 ---
 Transport Layer Security (TLS) を使用した接続のセキュリティは、選択されている暗号スイートとセキュリティ引数に強く依存します。この記事の目的は、クライアントとサーバの間の機密性と完全性の通信を確実にするために、選択の参考になることです。 Mozilla Operations Security (OpSec) チームは、サーバの設定項目のリファレンスが付いた[ウィキ記事を管理しています](https://wiki.mozilla.org/Security/Server_Side_TLS)。
 

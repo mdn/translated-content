@@ -1,16 +1,6 @@
 ---
 title: 'HTMLMediaElement: seeking イベント'
 slug: Web/API/HTMLMediaElement/seeking_event
-page-type: web-api-event
-tags:
-  - API
-  - Audio
-  - Event
-  - HTMLMediaElement
-  - Reference
-  - Video
-browser-compat: api.HTMLMediaElement.seeking_event
-translation_of: Web/API/HTMLMediaElement/seeking_event
 ---
 {{APIRef("HTMLMediaElement")}}
 

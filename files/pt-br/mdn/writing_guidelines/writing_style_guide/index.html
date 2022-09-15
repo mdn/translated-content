@@ -6,7 +6,7 @@ original_slug: MDN/Guidelines/Writing_style_guide
 ---
 <div>{{MDNSidebar}}</div>
 
-<p><span class="seoSummary">Em um esforço para apresentar a documentação de maneira organizada, padronizada e fácil de ler a guia de estilo MDN Web Docs descreve como o texto deve ser organizado, escrito, formatado, e assim por diante.</span> Estas sao orientações mais do que regras estritas. Nos estamos mais interessados em conteúdo do que em formatação, então não se sinta obrigado a aprender a guia de estilo antes de contribuir. Não fique chateado/a ou surpreso/a caso algum/a voluntário/a trabalhador/a edite o seu trabalho de acordo com esta guia.</p>
+<p>Em um esforço para apresentar a documentação de maneira organizada, padronizada e fácil de ler a guia de estilo MDN Web Docs descreve como o texto deve ser organizado, escrito, formatado, e assim por diante. Estas sao orientações mais do que regras estritas. Nos estamos mais interessados em conteúdo do que em formatação, então não se sinta obrigado a aprender a guia de estilo antes de contribuir. Não fique chateado/a ou surpreso/a caso algum/a voluntário/a trabalhador/a edite o seu trabalho de acordo com esta guia.</p>
 
 <p>Se você esta procurando por coisas específicas sobre como determinado tipo de página deve ser estruturado, veja a <a href="/en-US/docs/MDN/Contribute/Content/Layout">página sobre guia de layout MDN</a>.</p>
 
@@ -27,8 +27,8 @@ original_slug: MDN/Guidelines/Writing_style_guide
 <p>Títulos de páginas e seções de cabeçalho devem usar letras maiúsculas no estilo da frase (Maiúsculas so na primeira palavra e nomes próprios) em vez de letras maiúsculas no estilo de título:</p>
 
 <ul>
- <li><span class="correct"><strong>Correto</strong></span>: "Um novo método para criar sobreposições Javascript"</li>
- <li><span class="incorrect"><strong>Incorreto</strong></span>: "Um Novo Método para Criar Sobreposições Javascript"</li>
+ <li><strong>Correto</strong>: "Um novo método para criar sobreposições Javascript"</li>
+ <li><strong>Incorreto</strong>: "Um Novo Método para Criar Sobreposições Javascript"</li>
 </ul>
 
 <p>Nós temos muitas páginas antigas que foram escritas antes que essa regra de estilo fosse estabelecida. Sinta-se livre para atualizá-las se achar necessário. Estamos atualizando-as gradualmente.</p>
@@ -57,10 +57,6 @@ original_slug: MDN/Guidelines/Writing_style_guide
 <h3 id="Orientações_gerais_do_conteúdo_do_artigo">Orientações gerais do conteúdo do artigo</h3>
 
 <p>Quando estiver escrevendo qualquer documento é importante conhecer o quanto falar. Se ficar divagando muito o artigo fica tedioso de ler e ninguém ira usa-lo. Escolher a quantidade certa a falar sobre o assunto é muito importante por diversas razões. Entre essas razões: assegurar que o leitor encontre a informação que eles precisam, prover suficiente material de qualidade para os engines de pesquisa poderem analizar e classificar o artigo de maneira adequada. Iremos discutir ao respeito disso aqui. Para aprender um pouco mais sobre como fazer as páginas são classificadas pelos engines de pesquisa, vejam o artigo <a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Write_for_SEO">Como escrever SEO para MDN</a>.</p>
-
-<div class="hidden">
-<pre class="notranslate">Daqui para baixo.</pre>
-</div>
 
 <h3 id="Sections.2C_Paragraphs.2C_Newlines" name="Sections.2C_Paragraphs.2C_Newlines">Seções, parágrafos e novas linhas</h3>
 
@@ -113,7 +109,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <h4 id="Inline_code_formatting">Inline code formatting</h4>
 
-<p>Use the "Code" button (labeled with two angle brackets "&lt;&gt;") to apply inline code-style formatting to function names, variable names, and method names (this uses the {{HTMLElement("code")}} element). For example, "the <code class="js plain">frenchText()</code> function".</p>
+<p>Use the "Code" button (labeled with two angle brackets "&lt;&gt;") to apply inline code-style formatting to function names, variable names, and method names (this uses the {{HTMLElement("code")}} element). For example, "the <code>frenchText()</code> function".</p>
 
 <p>Method names should be followed by a pair of parentheses: <code>doSomethingUseful()</code>. This helps to differentiate methods from other code terms.</p>
 
@@ -121,10 +117,8 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <p><img alt='Screenshot of the "syntax highlighting" menu.' src="https://mdn.mozillademos.org/files/7857/syntax-highlighting-menu.png" style="border-style: solid; border-width: 1px; float: right; height: 315px; margin: 2px 4px; width: 183px;">Entire lines (or multiple lines) of code should be formatted using syntax highlighting rather than the {{HTMLElement("code")}} element. Click the "pre" button in the toolbar to create the preformatted content box in which you'll then write your code. Then, with the text entry cursor inside the code box, select the appropriate language from the language list button to the right of the "pre" button, as seen in the screenshot to the right. The following example shows text with JavaScript formatting:</p>
 
-<div class="line number2 index1 alt1">
 <pre class="brush: js notranslate">for (var i = 0, j = 9; i &lt;= 9; i++, j--)
   document.writeln("a[" + i + "][" + j + "]= " + a[i][j]);</pre>
-</div>
 
 <p>If no appropriate transformation is available, use the <code>pre</code> tag without specifying a language ("No Highlight" in the language menu).</p>
 
@@ -140,7 +134,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
  <dt>Attribute names</dt>
  <dd>Use <strong>bold face</strong>.</dd>
  <dt>Attribute definitions</dt>
- <dd>Use the {{TemplateLink("htmlattrdef")}} macro (e.g., <span class="nowiki">\{{htmlattrdef("type")}}</span>) for the definition term, so that it can be linked to from other pages, then use the {{TemplateLink("htmlattrxref")}} macro (e.g., <span class="nowiki">\{{htmlattrxref("attr","element")}}</span>) to reference attribute definitions.</dd>
+ <dd>Use the {{TemplateLink("htmlattrdef")}} macro (e.g., \{{htmlattrdef("type")}}) for the definition term, so that it can be linked to from other pages, then use the {{TemplateLink("htmlattrxref")}} macro (e.g., \{{htmlattrxref("attr","element")}}) to reference attribute definitions.</dd>
  <dt>Attribute values</dt>
  <dd>Use "Code (inline)" style, and do not use quotation marks around strings, unless needed by the syntax of a code sample. E.g.: When the <strong>type</strong> attribute of an <code>&lt;input&gt;</code> element is set to <code>email</code> or <code>tel</code> ...</dd>
  <dt>Labeling attributes</dt>
@@ -154,10 +148,10 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <ul>
  <li>Common Latin abbreviations (etc., i.e., e.g.) may be used in parenthetical expressions and in notes. Use periods in these abbreviations.
   <ul>
-   <li><span class="correct"><strong>Correct</strong></span>: Web browsers (e.g. Firefox) can be used ...</li>
-   <li><span class="incorrect"><strong>Incorrect</strong></span>: Web browsers e.g. Firefox can be used ...</li>
-   <li><span class="incorrect"><strong>Incorrect</strong></span>: Web browsers, e.g. Firefox, can be used ...</li>
-   <li><span class="incorrect"><strong>Incorrect</strong></span>: Web browsers, (eg: Firefox) can be used ...</li>
+   <li><strong>Correct</strong>: Web browsers (e.g. Firefox) can be used ...</li>
+   <li><strong>Incorrect</strong>: Web browsers e.g. Firefox can be used ...</li>
+   <li><strong>Incorrect</strong>: Web browsers, e.g. Firefox, can be used ...</li>
+   <li><strong>Incorrect</strong>: Web browsers, (eg: Firefox) can be used ...</li>
   </ul>
  </li>
 </ul>
@@ -167,10 +161,10 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <ul>
  <li>In regular text (i.e. text outside of notes or parentheses), use the English equivalent of the abbreviation.
   <ul>
-   <li><span class="correct"><strong>Correct</strong></span>: ... web browsers, and so on.</li>
-   <li><span class="incorrect"><strong>Incorrect</strong></span>: ... web browsers, etc.</li>
-   <li><span class="correct"><strong>Correct</strong></span>: Web browsers such as Firefox can be used ...</li>
-   <li><span class="incorrect"><strong>Incorrect</strong></span>: Web browsers e.g. Firefox can be used ...</li>
+   <li><strong>Correct</strong>: ... web browsers, and so on.</li>
+   <li><strong>Incorrect</strong>: ... web browsers, etc.</li>
+   <li><strong>Correct</strong>: Web browsers such as Firefox can be used ...</li>
+   <li><strong>Incorrect</strong>: Web browsers e.g. Firefox can be used ...</li>
   </ul>
  </li>
 </ul>
@@ -233,8 +227,8 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>Use full capitals and delete periods in all acronyms and abbreviations, including organizations such as "US" and "UN".</p>
 
 <ul>
- <li><span class="correct"><strong>Correct</strong></span>: XUL</li>
- <li><span class="incorrect"><strong>Incorrect</strong></span>: X.U.L.; Xul</li>
+ <li><strong>Correct</strong>: XUL</li>
+ <li><strong>Incorrect</strong>: X.U.L.; Xul</li>
 </ul>
 
 <h4 id="Expansion" name="Expansion">Expansion</h4>
@@ -242,8 +236,8 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>On the first mention of a term on a page, expand acronyms likely to be unfamiliar to users. When in doubt, expand it, or, better, link it to the article or <a href="/en-US/docs/Glossary">glossary</a> entry describing the technology.</p>
 
 <ul>
- <li><span class="correct"><strong>Correct</strong></span>: "XUL (XML User Interface Language) is Mozilla's XML-based language..."</li>
- <li><span class="incorrect"><strong>Incorrect</strong></span>: "XUL is Mozilla's XML-based language..."</li>
+ <li><strong>Correct</strong>: "XUL (XML User Interface Language) is Mozilla's XML-based language..."</li>
+ <li><strong>Incorrect</strong>: "XUL is Mozilla's XML-based language..."</li>
 </ul>
 
 <h4 id="Plurals_of_acronyms_and_abbreviations" name="Plurals_of_acronyms_and_abbreviations">Plurals of acronyms and abbreviations</h4>
@@ -251,8 +245,8 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>For plurals of acronyms or abbreviations, add <em>s</em>. Don't use an apostrophe. Ever. Please.</p>
 
 <ul>
- <li><span class="correct"><strong>Correct</strong></span>: CD-ROMs</li>
- <li><span class="incorrect"><strong>Incorrect</strong></span>: CD-ROM's</li>
+ <li><strong>Correct</strong>: CD-ROMs</li>
+ <li><strong>Incorrect</strong>: CD-ROM's</li>
 </ul>
 
 <h3 id="Contractions" name="Contractions">Capitalization</h3>
@@ -270,8 +264,8 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>Use English-style plurals, not the Latin- or Greek-influenced forms.</p>
 
 <ul>
- <li><span class="correct"><strong>Correct</strong></span>: syllabuses, octopuses</li>
- <li><span class="incorrect"><strong>Incorrect</strong></span>: syllabi, octopi</li>
+ <li><strong>Correct</strong>: syllabuses, octopuses</li>
+ <li><strong>Incorrect</strong>: syllabi, octopi</li>
 </ul>
 
 <h3 id="Hyphenation" name="Hyphenation">Hyphenation</h3>
@@ -338,15 +332,15 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>For dates (not including dates in code samples) use the format "January 1, 1990".</p>
 
 <ul>
- <li><span class="correct"><strong>Correct</strong></span>: February 24, 2006</li>
- <li><span class="incorrect"><strong>Incorrect</strong></span>: February 24th, 2006; 24 February, 2006; 24/02/2006</li>
+ <li><strong>Correct</strong>: February 24, 2006</li>
+ <li><strong>Incorrect</strong>: February 24th, 2006; 24 February, 2006; 24/02/2006</li>
 </ul>
 
 <p>Alternately, you can use the YYYY/MM/DD format.</p>
 
 <ul>
- <li><span class="correct"><strong>Correct</strong></span>: 2006/02/24</li>
- <li><span class="incorrect"><strong>Incorrect</strong></span>: 02/24/2006; 24/02/2006; 02/24/06</li>
+ <li><strong>Correct</strong>: 2006/02/24</li>
+ <li><strong>Incorrect</strong>: 02/24/2006; 24/02/2006; 02/24/06</li>
 </ul>
 
 <h4 id="Decades" name="Decades">Decades</h4>
@@ -354,8 +348,8 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>For decades, use the format "1990s". Don't use an apostrophe.</p>
 
 <ul>
- <li><span class="correct"><strong>Correct</strong></span>: 1990s</li>
- <li><span class="incorrect"><strong>Incorrect</strong></span>: 1990's</li>
+ <li><strong>Correct</strong>: 1990s</li>
+ <li><strong>Incorrect</strong>: 1990's</li>
 </ul>
 
 <h4 id="Plurals_of_numerals" name="Plurals_of_numerals">Plurals of numerals</h4>
@@ -363,8 +357,8 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>For plurals of numerals add "s". Don't use an apostrophe.</p>
 
 <ul>
- <li><span class="correct"><strong>Correct</strong></span>: 486s</li>
- <li><span class="incorrect"><strong>Incorrect</strong></span>: 486's</li>
+ <li><strong>Correct</strong>: 486s</li>
+ <li><strong>Incorrect</strong>: 486's</li>
 </ul>
 
 <h4 id="Commas" name="Commas">Commas</h4>
@@ -372,8 +366,8 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>In running text, use commas only in five-digit and larger numbers.</p>
 
 <ul>
- <li><span class="correct"><strong>Correct</strong></span>: 4000; 54,000</li>
- <li><span class="incorrect"><strong>Incorrect</strong></span>: 4,000; 54000</li>
+ <li><strong>Correct</strong>: 4000; 54,000</li>
+ <li><strong>Incorrect</strong>: 4,000; 54000</li>
 </ul>
 
 <h3 id="Punctuation" name="Punctuation">Punctuation</h3>
@@ -383,8 +377,8 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p><strong>Use the serial comma</strong>. The serial (also known as "Oxford") comma is the comma that appears before the conjunction in a series of three or more items.</p>
 
 <ul>
- <li><span class="correct"><strong>Correct</strong></span>: I will travel on trains, planes, and automobiles.</li>
- <li><span class="incorrect"><strong>Incorrect</strong></span>: I will travel on trains, planes and automobiles.</li>
+ <li><strong>Correct</strong>: I will travel on trains, planes, and automobiles.</li>
+ <li><strong>Incorrect</strong>: I will travel on trains, planes and automobiles.</li>
 </ul>
 
 <div class="note">
@@ -396,8 +390,8 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>For words with variant spellings, always use the first entry at <a href="http://www.answers.com/library/Dictionary">Answers.com</a>. Do not use variant spellings.</p>
 
 <ul>
- <li><span class="correct"><strong>Correct</strong></span>: localize, honor</li>
- <li><span class="incorrect"><strong>Incorrect</strong></span>: localise, honour</li>
+ <li><strong>Correct</strong>: localize, honor</li>
+ <li><strong>Incorrect</strong>: localise, honour</li>
 </ul>
 
 <h3 id="Terminology">Terminology</h3>
@@ -418,8 +412,8 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>Use "elements" to refer to HTML and XML elements, rather than "tags". In addition, they should almost always be wrapped in "&lt;&gt;", and should be in the {{HTMLElement("code")}} style. Also, at least the first time you reference a given element in a section should use the {{TemplateLink("HTMLElement")}} macro, to create a link to the documentation for the element (unless you're writing within that element's reference document page).</p>
 
 <ul>
- <li><span class="correct"><strong>Correct</strong></span>: the {{HTMLElement("span")}} element</li>
- <li><span class="incorrect"><strong>Incorrect</strong></span>: the span tag</li>
+ <li><strong>Correct</strong>: the {{HTMLElement("span")}} element</li>
+ <li><strong>Incorrect</strong>: the span tag</li>
 </ul>
 
 <h4 id="User_interface_actions">User interface actions</h4>
@@ -427,8 +421,8 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>In task sequences, describe user interface actions using the imperative mood. Identify the user interface element by its label and type.</p>
 
 <ul>
- <li><span class="correct"><strong>Correct</strong></span>: Click the Edit button.</li>
- <li><span class="incorrect"><strong>Incorrect</strong></span>: Click Edit.</li>
+ <li><strong>Correct</strong>: Click the Edit button.</li>
+ <li><strong>Incorrect</strong>: Click Edit.</li>
 </ul>
 
 <h3 id="Voice">Voice</h3>
@@ -479,7 +473,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <ul>
  <li><em>Junk</em>: Use for spam, pages created by mistake, or content that is so bad that it should be deleted. Pages with this tag are deleted from time to time.</li>
- <li><em>Obsolete</em>: Use for content that is technically superceded, but still valid in context. For example an HTML element that is obsolete in HTML5 is still valid in HTML 4.01. You can also use the <span class="nowiki">{{TemplateLink("obsolete_header")}}</span> macro to put a prominent banner on the topic.</li>
+ <li><em>Obsolete</em>: Use for content that is technically superceded, but still valid in context. For example an HTML element that is obsolete in HTML5 is still valid in HTML 4.01. You can also use the {{TemplateLink("obsolete_header")}} macro to put a prominent banner on the topic.</li>
  <li><em>Archive</em>: Use for content that is technically superceded and no longer useful. If possible, add a note to the topic referring readers to a more current topic. For example, a page that describes how to use the Mozilla CVS repository should refer readers to a current topic on using Mercurial repos. (If no corresponding current topic exists, use the <em>NeedsUpdate</em> tag, and add an explanation on the Talk page.) Pages with the Archive tag are eventually moved from the main content of MDN to the <a href="/en-US/docs/Archive">Archive</a> section.</li>
 </ul>
 

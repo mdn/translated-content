@@ -1,20 +1,6 @@
 ---
 title: 필요한 정보를 저장하기-변수
 slug: Learn/JavaScript/First_steps/Variables
-tags:
-  - Arrays
-  - Booleans
-  - JavaScript
-  - Numbers
-  - Objects
-  - Updating
-  - Variables
-  - declaring
-  - initializing
-  - l10n:priority
-  - loose typing
-  - strings
-translation_of: Learn/JavaScript/First_steps/Variables
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
 

@@ -43,7 +43,7 @@ original_slug: Web/JavaScript/Guide/Declarações
 
 <p>Aqui, <code>{ x++; }</code> é a declaração de bloco.</p>
 
-<p><strong>Importante</strong>: <span class="short_text" id="result_box" lang="pt"><span class="hps">Antes de</span> <span class="hps">ECMAScript</span> <span class="hps">6 o </span></span><span style="line-height: 1.5;">JavaScript <strong>não</strong> possuía escopo de bloco. Variáveis introduzidas dentro de um bloco possuem como escopo a função ou o script em que o bloco está contido, e, definir tais variáveis tem efeito muito além do bloco em si. Em outras palavras, declarações de bloco não introduzem um escopo. Embora blocos "padrão" sejam uma sintaxe válida não utilize-os, em JavaScript, pensando que funcionam como em C ou Java porque eles não funcionam da maneira que você acredita. Por exemplo:</span></p>
+<p><strong>Importante</strong>: Antes de ECMAScript 6 o JavaScript <strong>não</strong> possuía escopo de bloco. Variáveis introduzidas dentro de um bloco possuem como escopo a função ou o script em que o bloco está contido, e, definir tais variáveis tem efeito muito além do bloco em si. Em outras palavras, declarações de bloco não introduzem um escopo. Embora blocos "padrão" sejam uma sintaxe válida não utilize-os, em JavaScript, pensando que funcionam como em C ou Java porque eles não funcionam da maneira que você acredita. Por exemplo:</p>
 
 <pre class="brush: js">var x = 1;
 {
@@ -68,7 +68,7 @@ console.log(x); // exibe 2
   declaracao_2;
 }</pre>
 
-<p>onde <code>condicao</code> pode ser qualquer expressão que seja avaliada como verdadeira ou falsa. Veja <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean#Description">Boolean</a> para uma explicação sobre o que é avaliado como <code>true</code> e <code>false</code>. <span style="line-height: 1.5;">Se <code>condicao</code> for avaliada como verdadeira, declaracao<code>_1</code> é executada; caso contrário, <code>declaracao_2</code> é executada. <code>declaracao_1</code> e <code>declaracao_2</code> podem ser qualquer declaração, incluindo declarações <code>if</code> aninhadas.</span></p>
+<p>onde <code>condicao</code> pode ser qualquer expressão que seja avaliada como verdadeira ou falsa. Veja <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean#Description">Boolean</a> para uma explicação sobre o que é avaliado como <code>true</code> e <code>false</code>. Se <code>condicao</code> for avaliada como verdadeira, declaracao<code>_1</code> é executada; caso contrário, <code>declaracao_2</code> é executada. <code>declaracao_1</code> e <code>declaracao_2</code> podem ser qualquer declaração, incluindo declarações <code>if</code> aninhadas.</p>
 
 <p>Você pode também combinar declarações utilizando <code>else if</code> para obter várias condições testadas em sequência, como o seguinte:</p>
 
@@ -89,7 +89,7 @@ console.log(x); // exibe 2
     declaracao_2_executada_se_condicao_for_verdadeira;
 } else {
     declaracao_3_executada_se_condicao_for_falsa;
-    <span style="font-size: 1rem;">declaracao_4_executada_se_condicao_for_falsa</span>;
+    declaracao_4_executada_se_condicao_for_falsa;
 }
 </pre>
 

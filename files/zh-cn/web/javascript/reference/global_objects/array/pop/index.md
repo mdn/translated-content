@@ -10,8 +10,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/pop
 
 ## 语法
 
-```plain
-arr.pop()
+```js
+pop()
 ```
 
 ### 返回值
@@ -50,7 +50,7 @@ console.log(popped); // 'sturgeon'
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Array.prototype.push()")}}
 - {{jsxref("Array.prototype.shift()")}}

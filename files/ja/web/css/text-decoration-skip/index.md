@@ -1,17 +1,6 @@
 ---
 title: text-decoration-skip
 slug: Web/CSS/text-decoration-skip
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS テキスト装飾
-  - Experimental
-  - レイアウト
-  - Reference
-  - Web
-  - recipe:css-property
-browser-compat: css.properties.text-decoration-skip
-translation_of: Web/CSS/text-decoration-skip
 ---
 {{CSSRef}}
 

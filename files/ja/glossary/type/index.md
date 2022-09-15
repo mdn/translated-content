@@ -10,16 +10,16 @@ slug: Glossary/Type
 
 値の型が分からない場合は、 [`typeof`](/ja/docs/Web/JavaScript/Reference/Operators/typeof) 演算子で知ることができます。
 
-1.  [用語集](/ja/docs/Glossary)
+1. [用語集](/ja/docs/Glossary)
 
-    1.  {{Glossary("JavaScript")}}
-    2.  {{Glossary("string", "文字列")}}
-    3.  {{Glossary("number")}}
-    4.  {{Glossary("bigint")}}
-    5.  {{Glossary("boolean")}}
-    6.  {{Glossary("null")}}
-    7.  {{Glossary("undefined")}}
-    8.  {{Glossary("symbol")}}
+    1. {{Glossary("JavaScript")}}
+    2. {{Glossary("string", "文字列")}}
+    3. {{Glossary("number")}}
+    4. {{Glossary("bigint")}}
+    5. {{Glossary("boolean")}}
+    6. {{Glossary("null")}}
+    7. {{Glossary("undefined")}}
+    8. {{Glossary("symbol")}}
 
-2.  Wikipedia の {{Interwiki("wikipedia", "Data type")}}
-3.  [JavaScript のデータ型](/ja/docs/Web/JavaScript/Data_structures)
+2. Wikipedia の {{Interwiki("wikipedia", "Data type")}}
+3. [JavaScript のデータ型](/ja/docs/Web/JavaScript/Data_structures)

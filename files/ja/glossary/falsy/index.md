@@ -16,7 +16,7 @@ slug: Glossary/Falsy
 | `""`                             | 空[文字列](/ja/docs/Web/JavaScript/Reference/Global_Objects/String)の値                                                                              |
 | {{Glossary("null")}}     | [null](/ja/docs/Web/JavaScript/Reference/Global_Objects/null) - 何も値が存在しないこと                                                               |
 | {{Glossary("undefined")}} | [undefined](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) - プリミティブ値                                                             |
-| {{Glossary("NaN")}}         | [NaN ](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN)- 非数                                                                                   |
+| {{Glossary("NaN")}}         | [NaN](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN) - 非数                                                                                   |
 
 > **Note:** オブジェクトは、 [\[\[IsHTMLDDA\]\] 内部スロット](https://tc39.es/ecma262/#sec-IsHTMLDDA-internal-slot)がある場合のみ偽値になります。このスロットは {{domxref("document.all")}} にのみ存在し、 JavaScript を使用して設定することはできません。
 

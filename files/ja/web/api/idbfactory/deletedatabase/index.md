@@ -1,13 +1,6 @@
 ---
 title: IDBFactory.deleteDatabase
 slug: Web/API/IDBFactory/deleteDatabase
-tags:
-  - API
-  - IDBFactory
-  - IndexedDB
-  - Storage
-  - deleteDatabase
-translation_of: Web/API/IDBFactory/deleteDatabase
 ---
 {{ APIRef("IDBFactory") }}
 

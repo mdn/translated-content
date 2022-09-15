@@ -121,7 +121,7 @@ application/x-ns-proxy-autoconfig
 
 - 日志记录功能函数
 
-  - [`alert()`](/en-US/docs/Web/API/Window/alert)
+  - [`alert()`](/zh-CN/docs/Web/API/Window/alert)
 
 - 同时，还定义了一个关联数组（associative array），因为 JavaScript 目前无法自行定义它们：
 

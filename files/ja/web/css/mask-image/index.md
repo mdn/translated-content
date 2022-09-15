@@ -1,15 +1,6 @@
 ---
 title: mask-image
 slug: Web/CSS/mask-image
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS マスク
-  - Experimental
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.mask-image
-translation_of: Web/CSS/mask-image
 ---
 {{CSSRef}}
 

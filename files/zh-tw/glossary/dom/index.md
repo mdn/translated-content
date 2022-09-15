@@ -16,5 +16,5 @@ DOM 最初並沒有被定義—它是來自於當瀏覽器開始啟用{{Glossary
 
 ### 技術參考
 
-- [The DOM documentation on MDN](/en-US/docs/DOM)
+- [The DOM documentation on MDN](/zh-TW/docs/DOM)
 - [The DOM Standard](https://dom.spec.whatwg.org/)

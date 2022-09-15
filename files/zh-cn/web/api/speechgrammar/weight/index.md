@@ -40,4 +40,4 @@ console.log(speechRecognitionList[0].weight); // 应该返回 1 - 与上面第�
 
 ## 相关链接
 
-- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)
+- [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API)

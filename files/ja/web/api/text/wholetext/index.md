@@ -1,12 +1,6 @@
 ---
 title: Text.wholeText
 slug: Web/API/Text/wholeText
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Text.wholeText
-translation_of: Web/API/Text/wholeText
 ---
 {{ apiref("DOM") }}
 

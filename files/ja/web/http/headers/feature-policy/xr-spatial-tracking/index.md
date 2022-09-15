@@ -1,16 +1,6 @@
 ---
 title: 'Feature-Policy: xr-spatial-tracking'
 slug: Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking
-tags:
-  - ディレクティブ
-  - 機能ポリシー
-  - Feature-Policy
-  - HTTP
-  - リファレンス
-  - xr-spatial-tracking
-  - 実験的
-browser-compat: http.headers.Feature-Policy.xr-spatial-tracking
-translation_of: Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking
 original_slug: Web/HTTP/Headers/Feature-Policy/vr
 ---
 {{HTTPSidebar}}{{SeeCompatTable}}

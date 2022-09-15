@@ -55,13 +55,13 @@ console.log(o.d); // undefined
 // プロパティが見つからなかったため undefined を返します。
 ```
 
-あるオブジェクトにプロパティをセットすると、自身のプロパティが作られます。この取得と設定の動作の規則の唯一の例外は、 [getter または setter](/ja/docs/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters "JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters") とのプロパティの継承が起こるときです。
+あるオブジェクトにプロパティをセットすると、自身のプロパティが作られます。この取得と設定の動作の規則の唯一の例外は、 [getter または setter](/ja/docs/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters) とのプロパティの継承が起こるときです。
 
 ### 「メソッド」の継承
 
 JavaScript には、クラスベースの言語が定義する形式の「メソッド」はありません。 JavaScript ではどの関数も、オブジェクトのプロパティという形で追加することができます。継承された関数は、上で見せたような property shadowing （このケースではメソッドのオーバーライドの形）を含めた、他のどのプロパティとも同じようにはたらきます。
 
-継承された関数が実行されるときの [this](/ja/docs/JavaScript/Reference/Operators/this "JavaScript/Reference/Operators/this") の値は、その関数を自身のプロパティとして持つプロトタイプオブジェクトではなく、継承したオブジェクトを指します。
+継承された関数が実行されるときの [this](/ja/docs/JavaScript/Reference/Operators/this) の値は、その関数を自身のプロパティとして持つプロトタイプオブジェクトではなく、継承したオブジェクトを指します。
 
 ```js
 var o = {
@@ -113,7 +113,7 @@ function f() {
 
 ### コンストラクタ関数を用いる方法
 
-JavaScript における「コンストラクタ」は、[new 演算子](/ja/docs/JavaScript/Reference/Operators/new "JavaScript/Reference/Operators/new")を使って呼び出される関数です。
+JavaScript における「コンストラクタ」は、[new 演算子](/ja/docs/JavaScript/Reference/Operators/new)を使って呼び出される関数です。
 
 ```js
 function Graph() {
@@ -136,7 +136,7 @@ var g = new Graph();
 
 ### Object.create メソッドを用いる方法
 
-ECMAScript 5 は [Object.create](/ja/docs/JavaScript/Reference/Global_Objects/Object/create "JavaScript/Reference/Global_Objects/Object/create") という新しいメソッドを導入しました。このメソッドを呼び出すと、新しいオブジェクトが生成されます。関数の最初の引数が、このオブジェクトのプロトタイプになります。
+ECMAScript 5 は [Object.create](/ja/docs/JavaScript/Reference/Global_Objects/Object/create) という新しいメソッドを導入しました。このメソッドを呼び出すと、新しいオブジェクトが生成されます。関数の最初の引数が、このオブジェクトのプロトタイプになります。
 
 ```js
 var a = {a: 1};
@@ -269,7 +269,7 @@ JavaScript はすべてが動的で、すべてが実行時であり、一切ク
 
 要するに、 `prototype` は型のためのもので、`Object.getPrototypeOf()` はインスタンスのためのものと同じです。
 
-`[[Prototype]]` は再帰的に見えます。つまり、`a1.doSomething`、`Object.getPrototypeOf(a1).doSomething`、`Object.getPrototypeOf(Object.getPrototypeOf(a1)).doSomething `…と、それが見つかるか `Object.getPrototypeOf` が null を返すまで続きます。
+`[[Prototype]]` は再帰的に見えます。つまり、`a1.doSomething`、`Object.getPrototypeOf(a1).doSomething`、`Object.getPrototypeOf(Object.getPrototypeOf(a1)).doSomething` …と、それが見つかるか `Object.getPrototypeOf` が null を返すまで続きます。
 
 そう、
 

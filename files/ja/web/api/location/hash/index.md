@@ -1,13 +1,6 @@
 ---
 title: location.hash
 slug: Web/API/Location/hash
-tags:
-  - API
-  - Location
-  - プロパティ
-  - リファレンス
-browser-compat: api.Location.hash
-translation_of: Web/API/Location/hash
 ---
 {{ APIRef("Location") }}
 

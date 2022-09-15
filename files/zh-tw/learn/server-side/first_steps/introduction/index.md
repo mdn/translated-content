@@ -187,7 +187,7 @@ original_slug: Learn/Server-side/First_steps/介紹
 
 ## In this module
 
-- [Introduction to the server side](/en-US/docs/Learn/Server-side/First_steps/Introduction)
-- [Client-Server overview](/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [Server-side web frameworks](/en-US/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security)
+- [Introduction to the server side](/zh-TW/docs/Learn/Server-side/First_steps/Introduction)
+- [Client-Server overview](/zh-TW/docs/Learn/Server-side/First_steps/Client-Server_overview)
+- [Server-side web frameworks](/zh-TW/docs/Learn/Server-side/First_steps/Web_frameworks)
+- [Website security](/zh-TW/docs/Learn/Server-side/First_steps/Website_security)

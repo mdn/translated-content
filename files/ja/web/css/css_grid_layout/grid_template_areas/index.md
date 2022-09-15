@@ -1,11 +1,6 @@
 ---
 title: グリッドテンプレート領域
 slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
-tags:
-  - CSS
-  - CSS グリッド
-  - ガイド
-translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 ---
 {{CSSRef}}
 

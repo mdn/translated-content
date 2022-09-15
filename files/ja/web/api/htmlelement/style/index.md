@@ -1,15 +1,6 @@
 ---
 title: HTMLElement.style
 slug: Web/API/HTMLElement/style
-tags:
-  - API
-  - CSSOM
-  - HTMLElement
-  - プロパティ
-  - リファレンス
-  - Style
-browser-compat: api.HTMLElement.style
-translation_of: Web/API/HTMLElement/style
 ---
 {{APIRef("CSSOM")}}
 

@@ -9,8 +9,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 
 <div>{{EmbedInteractiveExample("pages/js/array-flatmap.html","shorter")}}</div>
 
-<p class="hidden">A fonte deste exemplo interativo é armazenada em um repositório GitHub. Se você quiser contribuir com o projeto de exemplos interativos, clone https://github.com/mdn/interactive-examples e envie-nos um PR</p>
-
 <h2 id="Sintaxe">Sintaxe</h2>
 
 <pre class="syntaxbox"><var>var new_array = arr</var>.flatMap(function <var>callback(currentValue[, index[, array]]) {
@@ -23,16 +21,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/flatMap
  <dt><code>callback</code></dt>
  <dd>Função que produz um elemento de uma nova Array, pegando três argumentos:
  <dl>
-  <dt></dt>
   <dt><code>currentValue</code></dt>
   <dd>O valor atual sendo processo na array.</dd>
   <dt><code>index</code>{{optional_inline}}</dt>
   <dd>O index do valor atual sendo processo na array.</dd>
   <dt><code>array</code>{{optional_inline}}</dt>
+  <dd>O <code>map</code> da array que foi chamado.</dd>
  </dl>
-
- <p>O <code>map</code> da array que foi chamado.</p>
- </dd>
  <dt><code>thisArg</code>{{optional_inline}}</dt>
  <dd>Valor para ser usado como <code>this</code> quando <code>callback</code> estiver sendo executado.</dd>
 </dl>
@@ -49,13 +44,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 
 <h3 id="map_e_flatMap"><code>map</code> e <code>flatMap</code></h3>
 
-<pre class="brush: js">var arr1 = <span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>[</span></span><span class="constant decimal js numeric"><span>1</span></span><span class="comma delimiter js meta object"><span>,</span></span><span> </span><span class="brace js meta square"><span>2, 3, 4];
+<pre class="brush: js">var arr1 = [1, 2, 3, 4];
 
-arr1.map(</span></span></span></span></span>x =&gt; [x * 2]<span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>);</span></span></span></span></span>
+arr1.map(x =&gt; [x * 2]);
 // [[2], [4], [6], [8]]
 
-arr1.flatMap(x =&gt; [x * 2]<span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>);
-// [2, 4, 6, 8]</span></span></span></span></span>
+arr1.flatMap(x =&gt; [x * 2]);
+// [2, 4, 6, 8]
 
 //  Só o primeiro nível
 arr1.flatMap(x =&gt; [[x * 2]]);
@@ -71,21 +66,18 @@ arr1.flatMap(x =&gt; [[x * 2]]);
 arr1.map(x=&gt;x.split(" "));
 // [["it's","Sunny","in"],[""],["California"]]
 
-arr1.flatMap(x =&gt; x.split(" ")<span class="js source"><span class="function-call js meta"><span class="br brace js meta square"><span>);
-// ["it's","Sunny","in", "", "California"]</span></span></span></span>
+arr1.flatMap(x =&gt; x.split(" "));
+// ["it's","Sunny","in", "", "California"]
 </pre>
 
 <p>Perceba, o comprimento da lista de saída pode ser diferente do comprimento da lista de entrada.</p>
-
-<div class="line"><span class="js source"><span class="comment double-slash js line"><span class="comment definition js punctuation"></div>
 
 <h2 id="Alternativa">Alternativa</h2>
 
 <h3 id="reduce_e_concat"><code>reduce</code> e <code>concat</code></h3>
 
-<pre class="brush: js">var arr1 = <span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>[</span></span><span class="constant decimal js numeric"><span>1</span></span><span class="comma delimiter js meta object"><span>,</span></span><span> </span><span class="brace js meta square"><span>2, 3, 4];
-</span></span></span></span></span>
-arr1.flatMap(x =&gt; [x * 2]<span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>);</span></span></span></span></span>
+<pre class="brush: js">var arr1 = [1, 2, 3, 4];
+arr1.flatMap(x =&gt; [x * 2]);
 // é equivalente a
 arr1.reduce((acc, x) =&gt; acc.concat([x * 2]<span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>), []);</span></span></span></span></span>
 // [ 2, 4, 6, 8 ]

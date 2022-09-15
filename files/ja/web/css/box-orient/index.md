@@ -1,13 +1,6 @@
 ---
 title: box-orient
 slug: Web/CSS/box-orient
-tags:
-  - CSS
-  - Non-standard
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.box-orient
-translation_of: Web/CSS/box-orient
 ---
 {{CSSRef}}{{Non-standard_header}}
 

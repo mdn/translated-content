@@ -299,7 +299,7 @@ draw();
 
 #### `lineJoin` 属性的例子
 
-![](/@api/deki/files/89/=Canvas_linejoin.png)`lineJoin` 的属性值决定了图形中两线段连接处所显示的样子。它可以是这三种之一：`round`, `bevel` 和 `miter。`默认是 ` miter``。 `
+![](/@api/deki/files/89/=Canvas_linejoin.png)`lineJoin` 的属性值决定了图形中两线段连接处所显示的样子。它可以是这三种之一：`round`, `bevel` 和 `miter`。默认是 `miter`。
 
 这里我同样用三条折线来做例子，分别设置不同的 `lineJoin` 值。最上面一条是 `round` 的效果，边角处被磨圆了，圆的半径等于线宽。中间和最下面一条分别是 bevel 和 miter 的效果。当值是 `miter` 的时候，线段会在连接处外侧延伸直至交于一点，延伸效果受到下面将要介绍的 `miterLimit` 属性的制约。
 

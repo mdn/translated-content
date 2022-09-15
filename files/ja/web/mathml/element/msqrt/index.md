@@ -1,10 +1,6 @@
 ---
 title: <msqrt>
 slug: Web/MathML/Element/msqrt
-tags:
-  - MathML
-  - 平方根
-translation_of: Web/MathML/Element/msqrt
 ---
 {{MathMLRef()}}
 

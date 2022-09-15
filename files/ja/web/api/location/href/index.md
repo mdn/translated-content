@@ -1,13 +1,6 @@
 ---
 title: location.href
 slug: Web/API/Location/href
-tags:
-  - API
-  - Location
-  - プロパティ
-  - リファレンス
-browser-compat: api.Location.href
-translation_of: Web/API/Location/href
 ---
 {{ApiRef("Location")}}
 

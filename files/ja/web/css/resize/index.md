@@ -1,14 +1,6 @@
 ---
 title: resize
 slug: Web/CSS/resize
-tags:
-  - CSS 基本ユーザーインターフェイス
-  - CSS
-  - CSS プロパティ
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.resize
-translation_of: Web/CSS/resize
 ---
 {{CSSRef}}
 

@@ -1,17 +1,6 @@
 ---
 title: 'Window: focus イベント'
 slug: Web/API/Window/focus_event
-tags:
-  - API
-  - イベント
-  - Focus
-  - FocusEvent
-  - リファレンス
-  - ウェブ
-  - Window
-  - onfocus
-browser-compat: api.Window.focus_event
-translation_of: Web/API/Window/focus_event
 ---
 {{APIRef}}
 

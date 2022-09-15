@@ -1,14 +1,6 @@
 ---
 title: all
 slug: Web/CSS/all
-tags:
-  - CSS
-  - CSS カスケードと継承
-  - CSS プロパティ
-  - リファレンス
-  - all
-browser-compat: css.properties.all
-translation_of: Web/CSS/all
 ---
 {{CSSRef}}
 

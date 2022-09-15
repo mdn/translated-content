@@ -95,13 +95,13 @@ person1.valueOf()
 >
 > まあ、関数はオブジェクトの型でもあります。信じられないかもしれませんが、[`Function()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) のコンストラクタリファレンスを参照してください。
 
-1.  既存のプロトタイプのプロパティを自分でチェックすることができます。先ほどの例に戻って、JavaScript コンソールに次のように入力してみてください
+1. 既存のプロトタイプのプロパティを自分でチェックすることができます。先ほどの例に戻って、JavaScript コンソールに次のように入力してみてください
 
     ```js
     Person.prototype
     ```
 
-2.  カスタムコンストラクタのプロトタイプに何も定義していないので、出力はあまり表示されません。デフォルトでは、コンストラクタの `prototype` は常に空から始まります。では、次のようにしてみてください
+2. カスタムコンストラクタのプロトタイプに何も定義していないので、出力はあまり表示されません。デフォルトでは、コンストラクタの `prototype` は常に空から始まります。では、次のようにしてみてください
 
     ```js
     Object.prototype
@@ -125,13 +125,13 @@ let myString = 'This is my string.';
 
 先ほど、[`Object.create()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/create) メソッドを使用して新しいオブジェクトのインスタンスを作成する方法を紹介しました。
 
-1.  例えば、先ほどの例の JavaScript コンソールでこれを試してみてください
+1. 例えば、先ほどの例の JavaScript コンソールでこれを試してみてください
 
     ```js
     let person2 = Object.create(person1);
     ```
 
-2.  `create()` が実際に行うことは、指定したプロトタイプオブジェクトから新しいオブジェクトを作成することです。ここでは、`person1` をプロトタイプオブジェクトとして使用して `person2` を作成しています。これはコンソールで以下のように入力することで確認できます
+2. `create()` が実際に行うことは、指定したプロトタイプオブジェクトから新しいオブジェクトを作成することです。ここでは、`person1` をプロトタイプオブジェクトとして使用して `person2` を作成しています。これはコンソールで以下のように入力することで確認できます
 
     ```js
     person2.__proto__
@@ -145,7 +145,7 @@ let myString = 'This is my string.';
 
 次のセクションでお分かりのように、`Person.prototype` プロパティ (あるいは上のセクションで述べたように、一般的にはコンストラクタ関数の `prototype` プロパティに定義されているオブジェクト) は、`Person()` コンストラクタを使用して作成されたすべてのインスタンスオブジェクトで利用可能になります。したがって、コンストラクタプロパティは `person1` と `person2` の両方のオブジェクトでも利用可能です。
 
-1.  例えば、コンソールで次のコマンドを試してみてください
+1. 例えば、コンソールで次のコマンドを試してみてください
 
     ```js
     person1.constructor
@@ -156,13 +156,13 @@ let myString = 'This is my string.';
 
     巧妙なトリックとしては、`constructor` プロパティの最後に括弧を付けて (必要なパラメータを含む)、そのコンストラクタから別のオブジェクトのインスタンスを作成することができます。コンストラクタは結局のところ関数なので、括弧を使用して呼び出すことができます。関数をコンストラクタとして使用したい場合は、`new` キーワードを含めて指定する必要があります。
 
-2.  これをコンソールで試してみてください
+2. これをコンソールで試してみてください
 
     ```js
     let person3 = new person1.constructor('Karen', 'Stephenson', 26, 'female', ['playing drums', 'mountain climbing']);
     ```
 
-3.  では、新しいオブジェクトの機能にアクセスしてみましょう
+3. では、新しいオブジェクトの機能にアクセスしてみましょう
 
     ```js
     person3.name.first
@@ -190,7 +190,7 @@ person1.constructor.name
 
 コンストラクタ関数の `prototype` プロパティを変更する例を見てみましょう - メソッドは、コンストラクタから作成されたすべてのオブジェクトインスタンスで利用可能になります。この時点で、最後に `Person()` コンストラクタのプロトタイプに何かを追加します。
 
-1.  [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) の例に戻り、[ソースコード](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)のローカルコピーを作成します。既存の JavaScript の下に、コンストラクタの `prototype` プロパティに新しいメソッドを追加する次のコードを追加します
+1. [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) の例に戻り、[ソースコード](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)のローカルコピーを作成します。既存の JavaScript の下に、コンストラクタの `prototype` プロパティに新しいメソッドを追加する次のコードを追加します
 
     ```js
     Person.prototype.farewell = function() {
@@ -198,7 +198,7 @@ person1.constructor.name
     };
     ```
 
-2.  コードを保存してブラウザーでページを読み込み、テキスト入力に以下のように入力してみてください
+2. コードを保存してブラウザーでページを読み込み、テキスト入力に以下のように入力してみてください
 
     ```js
     person1.farewell();

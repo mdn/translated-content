@@ -31,7 +31,7 @@ Mozilla コミュニティで作業する際の品行に関する、一般的な
 
 > Hi, **MrBigglesworth**, I've been noticing your contributions to **the Wormhole API documentation**, and it's fantastic to have your help! I particularly like **the way you balanced your level of detail with readability**. That said, though, you could make these articles even better and more helpful if you **added the correct tags to the pages** as you go.
 >
-> **See the MDN tagging guide (https\://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag) for details.**
+> **See the MDN tagging guide (<https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag>) for details.**
 >
 > Thanks again, and I look forward to your future contributions!
 
@@ -86,7 +86,7 @@ MDN 文書作成コミュニティのメンバーとして、開発者と管理�
 
 文書作成やのコミュニティは大規模です。きわめて頻繁に、あるいは大規模に貢献する方は比較的少数ですが、ときどき貢献する人々は数十人から数百人います。幸い、この方々は全体的にウェブ、Mozilla、文書化が純粋に好きなすばらしい人たちであり、交流することはほぼ容易です。
 
-MDN コミュニティについて詳しくは、[MDN コミュニティに参加する](/ja/docs/MDN/Community "Project:MDN/Contributing/Join_the_community") の記事をご覧ください。
+MDN コミュニティについて詳しくは、[MDN コミュニティに参加する](/ja/docs/MDN/Community) の記事をご覧ください。
 
 他の執筆者と直接対話する機会が最も多い場所は [Discourse フォーラム](https://discourse.mozilla.org/c/mdn)です。
 
