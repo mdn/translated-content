@@ -622,7 +622,7 @@ para.onclick = function() {
 
 <p>HTML также содержит элемент {{htmlelement ("time")}} для отметки времени и дат в машиночитаемом формате. Например:</p>
 
-<pre class="brush: html">&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2020-01-20<span class="pl-pds">"</span></span>&gt;20 Января 2020&lt;/<span class="pl-ent">time</span>&gt;</pre>
+<pre class="brush: html">&lt;time datetime="2020-01-20"&gt;20 Января 2020&lt;/time&gt;</pre>
 
 <p>Почему это полезно? Ну, есть много разных способов, которыми люди записывают даты. Вышеуказанная дата может быть записана как:</p>
 
@@ -632,8 +632,8 @@ para.onclick = function() {
  <li>Янв 20 2020</li>
  <li>20/01/20</li>
  <li>01/20/20</li>
- <li><span lang="fr">20e Janvier 2020</span></li>
- <li><span lang="ja">2020年1月20日</span></li>
+ <li>20e Janvier 2020</li>
+ <li>2020年1月20日</li>
  <li>и другое...</li>
 </ul>
 
@@ -642,21 +642,21 @@ para.onclick = function() {
 <p>В приведённом выше базовом примере приведена простая машиносчитываемая дата, но есть много других возможных вариантов, например:</p>
 
 <pre class="brush: html">&lt;!-- Стандартная дата --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2020-01-20<span class="pl-pds">"</span></span>&gt;20 Января 2020&lt;/<span class="pl-ent">time</span>&gt;
+&lt;time datetime="2020-01-20"&gt;20 Января 2020&lt;/time&gt;
 &lt;!-- Только год и месяц --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2020-01<span class="pl-pds">"</span></span>&gt;Январь 2020&lt;/<span class="pl-ent">time</span>&gt;
+&lt;time datetime="2020-01"&gt;Январь 2020&lt;/time&gt;
 &lt;!-- Только месяц и день --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>01-20<span class="pl-pds">"</span></span>&gt;20 Января&lt;/<span class="pl-ent">time</span>&gt;
+&lt;time datetime="01-20"&gt;20 Января&lt;/time&gt;
 &lt;!-- Только время, часы и минуты --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>19:30<span class="pl-pds">"</span></span>&gt;19:30&lt;/<span class="pl-ent">time</span>&gt;
+&lt;time datetime="19:30"&gt;19:30&lt;/time&gt;
 &lt;!-- Также вы можете отобразить секунды и миллисекунды! --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span></span>19:30:01.856<span class="pl-s"><span class="pl-pds">"</span></span>&gt;19:30:01.856&lt;/<span class="pl-ent">time</span>&gt;
+&lt;time datetime="19:30:01.856"&gt;19:30:01.856&lt;/time&gt;
 &lt;!-- Дата и время --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2020-01-20T19:30<span class="pl-pds">"</span></span>&gt;7.30pm, 20 Января 2020&lt;/<span class="pl-ent">time</span>&gt;
+&lt;time datetime="2020-01-20T19:30"&gt;7.30pm, 20 Января 2020&lt;/time&gt;
 &lt;!-- Дата и время со смещением по часовому поясу --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2020-01-20T19:30<span class="pl-pds">+01:00"</span></span>&gt;7.30pm, 20 Января 2020, — это 8.30pm во Франции.&lt;/<span class="pl-ent">time</span>&gt;
+&lt;time datetime="2020-01-20T19:30+01:00"&gt;7.30pm, 20 Января 2020, — это 8.30pm во Франции.&lt;/time&gt;
 &lt;!-- Вызов номера недели --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2020-W04<span class="pl-pds">"</span></span>&gt;Четвёртая неделя 2020&lt;/<span class="pl-ent">time</span>&gt;</pre>
+&lt;time datetime="2020-W04"&gt;Четвёртая неделя 2020&lt;/time&gt;</pre>
 
 <h2 id="Заключение">Заключение</h2>
 
