@@ -1,14 +1,6 @@
 ---
 title: オーディオとビデオのストリーミングガイド
 slug: Web/Media/Streaming
-tags:
-  - Audio
-  - Guide
-  - Media
-  - Networking
-  - Video
-  - streaming
-translation_of: Web/Media/Streaming
 ---
 {{QuickLinksWithSubpages("/ja/docs/Web/Media")}}
 

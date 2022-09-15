@@ -1,14 +1,6 @@
 ---
 title: WebAssembly.Module() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/Module
-tags:
-  - Constructor
-  - JavaScript
-  - Module
-  - Reference
-  - WebAssembly
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/Module
-browser-compat: javascript.builtins.WebAssembly.Module.Module
 ---
 {{JSRef}}
 

@@ -1,18 +1,6 @@
 ---
 title: initial
 slug: Web/CSS/initial
-tags:
-  - CSS
-  - CSS カスケード
-  - CSS 値
-  - 既定の状態
-  - 初期状態
-  - キーワード
-  - レイアウト
-  - リファレンス
-  - initial
-browser-compat: css.types.global_keywords.initial
-translation_of: Web/CSS/initial
 ---
 {{CSSRef}}
 

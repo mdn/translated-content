@@ -1,16 +1,6 @@
 ---
 title: BlobEvent.data
 slug: Web/API/BlobEvent/data
-tags:
-  - API
-  - BlobEvent
-  - DOM
-  - DOM Reference
-  - Experimental
-  - Media Stream Recording
-  - Property
-  - Reference
-translation_of: Web/API/BlobEvent/data
 ---
 {{ apiref("Media Capture and Streams") }}
 

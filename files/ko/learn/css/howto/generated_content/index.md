@@ -1,7 +1,6 @@
 ---
 title: 내용물
 slug: Learn/CSS/Howto/Generated_content
-translation_of: Learn/CSS/Howto/Generated_content
 ---
 > **경고:** **중요**: 번역은 제가 필요한 부분 및 확인 가능한 부분만 진행 하였으며 변역된 날자는(2013/03/18)이며 문서 변경이 잦아 오늘 이후는 원문과 번역이 다를 수 있습니다. 참고하세요. 미 번역/변경된 부분은 추가로 다른 분이 해 주실 것으로 믿습니다.
 

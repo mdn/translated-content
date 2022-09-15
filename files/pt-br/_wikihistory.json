@@ -689,10 +689,6 @@
     "modified": "2019-03-18T21:44:09.623Z",
     "contributors": ["SaraJade"]
   },
-  "Glossary/jQuery": {
-    "modified": "2019-05-17T17:03:39.259Z",
-    "contributors": ["ElsonMendes"]
-  },
   "Glossary/jpeg": {
     "modified": "2019-03-18T21:44:01.853Z",
     "contributors": ["SaraJade"]
@@ -7537,31 +7533,6 @@
       "tauame"
     ]
   },
-  "Web/JavaScript/A_re-introduction_to_JavaScript": {
-    "modified": "2020-05-27T17:14:30.277Z",
-    "contributors": [
-      "ruanpetterson",
-      "nailtonvieira",
-      "michaelycus",
-      "mateus.mlo",
-      "jhbalestrin",
-      "Sheppy",
-      "TiagoWinehouse",
-      "victorwpbastos",
-      "ruda",
-      "ti.marcosdias",
-      "fredericksilva",
-      "Scr1pt3r",
-      "trestini",
-      "ThiagoMatos",
-      "angelorubin",
-      "jlcarvalho",
-      "TheBorba",
-      "teoli",
-      "gtcarlos",
-      "arthur.luiz"
-    ]
-  },
   "Web/JavaScript/About_JavaScript": {
     "modified": "2020-03-12T19:38:41.483Z",
     "contributors": ["fcard", "teoli", "kuni71"]
@@ -7903,6 +7874,31 @@
       "teoli",
       "cleitongalvao",
       "treax"
+    ]
+  },
+  "Web/JavaScript/Language_Overview": {
+    "modified": "2020-05-27T17:14:30.277Z",
+    "contributors": [
+      "ruanpetterson",
+      "nailtonvieira",
+      "michaelycus",
+      "mateus.mlo",
+      "jhbalestrin",
+      "Sheppy",
+      "TiagoWinehouse",
+      "victorwpbastos",
+      "ruda",
+      "ti.marcosdias",
+      "fredericksilva",
+      "Scr1pt3r",
+      "trestini",
+      "ThiagoMatos",
+      "angelorubin",
+      "jlcarvalho",
+      "TheBorba",
+      "teoli",
+      "gtcarlos",
+      "arthur.luiz"
     ]
   },
   "Web/JavaScript/Memory_Management": {
@@ -11414,6 +11410,10 @@
   "orphaned/Glossary/Tratando_Formulários_com_PHP": {
     "modified": "2019-05-30T02:54:29.717Z",
     "contributors": ["jorgeclesio"]
+  },
+  "orphaned/Glossary/jQuery": {
+    "modified": "2019-05-17T17:03:39.259Z",
+    "contributors": ["ElsonMendes"]
   },
   "orphaned/Hello_World_Rust": {
     "modified": "2019-03-23T22:54:34.208Z",

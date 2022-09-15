@@ -1,12 +1,6 @@
 ---
 title: <xsl:choose>
 slug: Web/XSLT/Element/choose
-tags:
-  - XSLT
-  - choose
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/choose
 ---
 {{ XsltRef() }}
 

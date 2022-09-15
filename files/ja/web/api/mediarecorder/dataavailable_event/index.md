@@ -1,18 +1,6 @@
 ---
 title: MediaRecorder.ondataavailable
 slug: Web/API/MediaRecorder/dataavailable_event
-tags:
-  - API
-  - Audio
-  - Media Capture
-  - Media Recorder API
-  - MediaRecorder
-  - MediaStream Recording API
-  - Property
-  - Reference
-  - Video
-  - ondataavailable
-translation_of: Web/API/MediaRecorder/ondataavailable
 original_slug: Web/API/MediaRecorder/ondataavailable
 ---
 {{APIRef("MediaStream Recording")}}

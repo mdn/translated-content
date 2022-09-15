@@ -71,9 +71,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
 
 {{Compat("webextensions.api.bookmarks")}}
 
-> **备注：** The "Chrome incompatibilities" section is included from [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/en-US/Add-ons/WebExtensions/Chrome_incompatibilities) using the [WebExtChromeCompat](/en-US/docs/Template:WebExtChromeCompat) macro.
+> **备注：** The "Chrome incompatibilities" section is included from [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities) using the [WebExtChromeCompat](/zh-CN/docs/Template:WebExtChromeCompat) macro.
 >
-> If you need to update this content, edit [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/en-US/Add-ons/WebExtensions/Chrome_incompatibilities), then shift-refresh this page to see your changes.
+> If you need to update this content, edit [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities), then shift-refresh this page to see your changes.
 
 {{WebExtExamples("h2")}}
 

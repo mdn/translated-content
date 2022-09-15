@@ -1,13 +1,6 @@
 ---
 title: 履歴 API の操作
 slug: Web/API/History_API/Working_with_the_History_API
-page-type: guide
-tags:
-  - Advanced
-  - DOM
-  - History API
-  - History API Tutorial
-translation_of: Web/API/History_API/Working_with_the_History_API
 ---
 {{DefaultAPISidebar("History API")}}
 HTML5 では、履歴項目を追加および変更するための {{DOMxRef("History.pushState", "pushState()")}} および {{DOMxRef("History.replaceState", "replaceState()")}} メソッドをそれぞれ導入しています。これらのメソッドは {{domxref("Window/popstate_event", "popstate")}} イベントと一緒に動作します。

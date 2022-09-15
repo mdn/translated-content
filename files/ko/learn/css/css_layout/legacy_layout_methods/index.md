@@ -1,16 +1,6 @@
 ---
 title: 레거시 조판 메서드
 slug: Learn/CSS/CSS_layout/Legacy_Layout_Methods
-tags:
-  - 격자 시스템
-  - 레거시
-  - 부동체
-  - 씨에스에스
-  - 안내서
-  - 조판
-  - 초보자
-  - 학습
-translation_of: Learn/CSS/CSS_layout/Legacy_Layout_Methods
 ---
 {{LearnSidebar}}
 

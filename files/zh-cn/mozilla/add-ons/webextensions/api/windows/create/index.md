@@ -14,7 +14,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/windows/create
 - 创建一个面板样式的窗口，它没有浏览器的默认样式（地址栏，工具栏等）
 - 设置窗口的多种属性，像是获得焦点或是为隐私窗口。
 
-这是一个异步的方法返回一个 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+这是一个异步的方法返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## 语法
 
@@ -51,7 +51,7 @@ var creating = browser.windows.create(
 
 ### 返回值
 
-一个 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) 其中传入一个包含新窗口细节的 {{WebExtAPIRef('windows.Window')}} 对象。这个{{WebExtAPIRef('windows.Window')}} 有自己的 tabs 属性集 ,而不像 {{WebExtAPIRef("windows.get()")}}返回的窗口对象和相似的 API, 如果传递了 populate 项其仅仅包含 tabs. 如果发生了错误 promise will be rejected with an error message.
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 其中传入一个包含新窗口细节的 {{WebExtAPIRef('windows.Window')}} 对象。这个{{WebExtAPIRef('windows.Window')}} 有自己的 tabs 属性集 ,而不像 {{WebExtAPIRef("windows.get()")}}返回的窗口对象和相似的 API, 如果传递了 populate 项其仅仅包含 tabs. 如果发生了错误 promise will be rejected with an error message.
 
 ## 示例
 

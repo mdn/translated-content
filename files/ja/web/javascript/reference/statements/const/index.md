@@ -1,15 +1,6 @@
 ---
 title: const
 slug: Web/JavaScript/Reference/Statements/const
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
-  - constants
-browser-compat: javascript.statements.const
-translation_of: Web/JavaScript/Reference/Statements/const
 ---
 {{jsSidebar("Statements")}}
 

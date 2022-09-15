@@ -1,13 +1,6 @@
 ---
 title: DNT
 slug: Web/HTTP/Headers/DNT
-tags:
-  - DNT
-  - HTTP
-  - ヘッダー
-  - リファレンス
-browser-compat: http.headers.DNT
-translation_of: Web/HTTP/Headers/DNT
 ---
 {{HTTPSidebar}}{{Deprecated_header}}
 

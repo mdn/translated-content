@@ -1,14 +1,6 @@
 ---
 title: column-width
 slug: Web/CSS/column-width
-tags:
-  - CSS
-  - CSS 段組みレイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.column-width
-translation_of: Web/CSS/column-width
 ---
 {{CSSRef}}
 

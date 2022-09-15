@@ -1,11 +1,6 @@
 ---
 title: HTMLFormElement.length
 slug: Web/API/HTMLFormElement/length
-tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
-translation_of: Web/API/HTMLFormElement/length
 ---
 {{ApiRef}}
 

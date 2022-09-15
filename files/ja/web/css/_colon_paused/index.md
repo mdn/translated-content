@@ -1,13 +1,6 @@
 ---
 title: ':paused'
 slug: Web/CSS/:paused
-tags:
-  - CSS
-  - 擬似クラス
-  - リファレンス
-  - paused
-browser-compat: css.selectors.paused
-translation_of: Web/CSS/:paused
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

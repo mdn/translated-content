@@ -27,4 +27,4 @@ var xShift = instanceOfMouseEvent.movementX
 ## 相关
 
 - {{ domxref("MouseEvent") }}
-- [Pointer Lock](/en-US/docs/WebAPI/Pointer_Lock)
+- [Pointer Lock](/zh-CN/docs/WebAPI/Pointer_Lock)

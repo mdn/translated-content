@@ -34,4 +34,4 @@ slug: Web/API/Window/offline_event
 
 ## 相关事件
 
-- [`online`](/en-US/docs/Mozilla_event_reference/online)
+- [`online`](/zh-CN/docs/Mozilla_event_reference/online)

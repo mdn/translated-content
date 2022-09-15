@@ -1,7 +1,6 @@
 ---
 title: 판단 내리기 — 조건문
 slug: Learn/JavaScript/Building_blocks/conditionals
-translation_of: Learn/JavaScript/Building_blocks/conditionals
 original_slug: Learn/JavaScript/Building_blocks/조건문
 ---
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}

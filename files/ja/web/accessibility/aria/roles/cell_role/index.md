@@ -1,11 +1,6 @@
 ---
 title: 'ARIA: cell ロール'
 slug: Web/Accessibility/ARIA/Roles/Cell_Role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/Cell_Role
 ---
 ARIA の _role_ 属性の `cell` 値は、要素を列ヘッダーや行ヘッダーの情報を含まない表形式コンテナー内のセルとして識別します。 サポートされるには、セルが行 (`row`) ロールを持つ要素内にネストされている必要があります。
 
@@ -167,4 +162,4 @@ ARIA の第一のルールは、要素を転用して、ARIA のロール、ス�
 - [HTML 表の高度な機能とアクセシビリティ](/ja/docs/Learn/HTML/Tables/Advanced)
 - [HTML の表の基本](/ja/docs/Learn/HTML/Tables/Basics)
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

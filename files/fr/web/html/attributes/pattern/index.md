@@ -124,15 +124,11 @@ L'attribut `title` est utilisé par certains navigateurs pour écrire les messag
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'forms.html#attr-input-pattern', 'l\'attribut pattern')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5.1', 'forms.html#attr-input-pattern', 'l\'attribut pattern')}}         | {{Spec2('HTML5.1')}}     |
-| {{SpecName('HTML5 W3C', 'forms.html#attr-input-pattern', 'l\'attribut pattern')}}     | {{Spec2('HTML5 W3C')}}     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.attributes.pattern")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -8,11 +8,11 @@ slug: Glossary/Graceful_degradation
 
 これは、ウェブサイトが複数の未知のユーザーエージェントからアクセスされるという状況下で、ウェブ開発者が最良の可能性を持ったウェブサイトを開発することに集中できるようにするために有用なテクニックです。{{Glossary("Progressive enhancement","プログレッシブエンハンスメント")}}は関連していますが、異なります。これはよくグレースフルデグラデーションとは反対の方向に向いているとよく見られます。実際には、両方のアプローチが有効であり、互いに補完することができます。
 
-1.  Wikipedia 上の {{Interwiki("wikipedia", "en:Graceful degradation")}} (英語)
-2.  [一般的な HTML と CSS の問題への対処](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-3.  [機能検出の実装](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-4.  [MDN Web Docs 用語集](/ja/docs/Glossary)
+1. Wikipedia 上の {{Interwiki("wikipedia", "en:Graceful degradation")}} (英語)
+2. [一般的な HTML と CSS の問題への対処](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
+3. [機能検出の実装](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
+4. [MDN Web Docs 用語集](/ja/docs/Glossary)
 
-    1.  {{Glossary("Graceful degradation", "グレースフルデグラデーション")}}
-    2.  {{Glossary("Polyfill", "ポリフィル")}}
-    3.  {{Glossary("Progressive enhancement", "プログレッシブエンハンスメント")}}
+    1. {{Glossary("Graceful degradation", "グレースフルデグラデーション")}}
+    2. {{Glossary("Polyfill", "ポリフィル")}}
+    3. {{Glossary("Progressive enhancement", "プログレッシブエンハンスメント")}}

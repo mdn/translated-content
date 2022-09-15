@@ -1,12 +1,6 @@
 ---
 title: theme_color
 slug: Web/Manifest/theme_color
-tags:
-  - マニフェスト
-  - ウェブ
-  - theme_color
-browser-compat: html.manifest.theme_color
-translation_of: Web/Manifest/theme_color
 ---
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 

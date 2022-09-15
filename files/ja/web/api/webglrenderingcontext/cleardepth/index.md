@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.clearDepth()
 slug: Web/API/WebGLRenderingContext/clearDepth
-translation_of: Web/API/WebGLRenderingContext/clearDepth
 ---
 {{APIRef("WebGL")}}
 

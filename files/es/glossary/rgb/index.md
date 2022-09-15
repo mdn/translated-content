@@ -20,4 +20,4 @@ Hay muchas formas de describir los componentes RGB de un color. En {{Glossary("C
 
 ### Véase también
 
-- [CSS data type: \<color>](https://developer.mozilla.org/es/docs/Web/CSS/color_value)
+- [CSS data type: \<color>](/es/docs/Web/CSS/color_value)

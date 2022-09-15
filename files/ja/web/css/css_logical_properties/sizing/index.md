@@ -1,13 +1,6 @@
 ---
 title: 寸法の論理的プロパティ
 slug: Web/CSS/CSS_Logical_Properties/Sizing
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - ガイド
-  - 寸法
-  - 書字方向
-translation_of: Web/CSS/CSS_Logical_Properties/Sizing
 ---
 {{CSSRef}}
 

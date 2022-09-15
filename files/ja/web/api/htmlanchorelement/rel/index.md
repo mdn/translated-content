@@ -1,15 +1,6 @@
 ---
 title: HTMLAnchorElement.rel
 slug: Web/API/HTMLAnchorElement/rel
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLAnchorElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAnchorElement.rel
-translation_of: Web/API/HTMLAnchorElement/rel
 ---
 {{APIRef("HTML DOM")}}
 

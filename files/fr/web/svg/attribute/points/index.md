@@ -113,11 +113,6 @@ html,body,svg { height:100% }
 
 {{EmbedLiveSample('polygon', '100%', 200)}}
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                            | Status                   | Commentaire                         |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ----------------------------------- |
-| {{SpecName("SVG2", "shapes.html#PolygonElementPointsAttribute", "points")}}     | {{Spec2("SVG2")}} | Définition de `<polygon>`           |
-| {{SpecName("SVG2", "shapes.html#PolylineElementPointsAttribute", "points")}}     | {{Spec2("SVG2")}} | Définition de `<polyline>`          |
-| {{SpecName("SVG1.1", "shapes.html#PolygonElementPointsAttribute", "points")}} | {{Spec2("SVG1.1")}} | Définition initiale de `<polygon>`  |
-| {{SpecName("SVG1.1", "shapes.html#PolylineElementPointsAttribute", "points")}} | {{Spec2("SVG1.1")}} | Définition initiale de `<polyline>` |
+{{Specifications}}

@@ -1,12 +1,6 @@
 ---
 title: 実効値
 slug: Web/CSS/actual_value
-tags:
-  - CSS
-  - Guide
-  - Reference
-spec-urls: https://www.w3.org/TR/CSS22/cascade.html#actual-value
-translation_of: Web/CSS/actual_value
 ---
 {{CSSRef}}
 

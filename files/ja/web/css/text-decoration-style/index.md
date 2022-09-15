@@ -1,15 +1,6 @@
 ---
 title: text-decoration-style
 slug: Web/CSS/text-decoration-style
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS テキスト装飾
-  - レイアウト
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.text-decoration-style
-translation_of: Web/CSS/text-decoration-style
 ---
 {{CSSRef}}
 

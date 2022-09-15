@@ -17,8 +17,10 @@ El método **`toSource()`** devuelve una cadena que representa el código fuente
 
 ## Sintaxis
 
-    String.toSource()
-    str.toSource()
+```js
+String.toSource()
+str.toSource()
+```
 
 ### Valor devuelto
 

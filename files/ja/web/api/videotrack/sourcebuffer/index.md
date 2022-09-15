@@ -1,20 +1,6 @@
 ---
 title: VideoTrack.sourceBuffer
 slug: Web/API/VideoTrack/sourceBuffer
-tags:
-  - API
-  - HTML DOM
-  - MSE
-  - Media
-  - Media Source Extensions
-  - Property
-  - Read-only
-  - Reference
-  - SourceBuffer
-  - Video
-  - VideoTrack
-  - track
-translation_of: Web/API/VideoTrack/sourceBuffer
 ---
 {{APIRef("HTML DOM")}}
 

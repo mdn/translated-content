@@ -1,20 +1,6 @@
 ---
 title: ':host'
 slug: Web/CSS/:host
-tags:
-  - ':host'
-  - CSS
-  - DOM
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-  - ウェブコンポーネント
-  - shadow
-  - シャドウ DOM
-browser-compat: css.selectors.host
-translation_of: Web/CSS/:host
 ---
 {{ CSSRef }}
 

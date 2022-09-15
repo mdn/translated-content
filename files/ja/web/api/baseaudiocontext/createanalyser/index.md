@@ -1,16 +1,6 @@
 ---
 title: BaseAudioContext.createAnalyser()
 slug: Web/API/BaseAudioContext/createAnalyser
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - メソッド
-  - リファレンス
-  - ウェブ音声 API
-  - createAnalyser
-browser-compat: api.BaseAudioContext.createAnalyser
-translation_of: Web/API/BaseAudioContext/createAnalyser
 original_slug: Web/API/AudioContext/createAnalyser
 ---
 {{APIRef("Web Audio API")}}

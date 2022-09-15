@@ -1,18 +1,6 @@
 ---
 title: タッチイベント
 slug: Web/API/Touch_events
-tags:
-  - Advanced
-  - DOM
-  - Event
-  - Guide
-  - Mobile
-  - Overview
-  - touch
-  - イベント
-  - タッチ
-  - 概要
-translation_of: Web/API/Touch_events
 ---
 {{DefaultAPISidebar("Touch Events")}}
 

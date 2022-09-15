@@ -1,19 +1,6 @@
 ---
 title: ':where()'
 slug: Web/CSS/:where
-tags:
-  - ':where'
-  - CSS
-  - 実験的
-  - NeedsBrowserCompatibility
-  - NeedsContent
-  - NeedsExample
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.where
-translation_of: Web/CSS/:where
 ---
 {{CSSRef}}
 

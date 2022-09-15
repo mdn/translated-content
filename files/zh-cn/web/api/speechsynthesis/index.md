@@ -4,7 +4,7 @@ slug: Web/API/SpeechSynthesis
 ---
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-[网页语音 API](/en-US/docs/Web/API/Web_Speech_API) 的**`SpeechSynthesis`** 接口是语音服务的控制接口；它可以用于获取设备上关于可用的合成声音的信息，开始、暂停语音，或除此之外的其他命令。
+[网页语音 API](/zh-CN/docs/Web/API/Web_Speech_API) 的**`SpeechSynthesis`** 接口是语音服务的控制接口；它可以用于获取设备上关于可用的合成声音的信息，开始、暂停语音，或除此之外的其他命令。
 
 ## 属性
 
@@ -41,7 +41,7 @@ _`SpeechSynthesis` 也从它的父接口继承方法， {{domxref("EventTarget")
 
 在我们基础的 [Speech synthesiser 演示中](https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis)，我们第一次用 `window.speechSynthesis`抓取了关于语音播放控制器的参考。在定义了一些必要的变量后，我们用 {{domxref("SpeechSynthesis.getVoices()")}}获取了一列可用的声音并且用它们生成一列可选表单，这样用户能够选择他们想要的声音。
 
-`inputForm.onsubmit` 的内部操作中，我们用[preventDefault()](/en-US/docs/Web/API/Event/preventDefault)阻止了表单的提交，创建了一个从{{htmlelement("input")}}文本框获取文本的新{{domxref("SpeechSynthesisUtterance")}}实例，在{{htmlelement("select")}}元素可选的声音设置成语音谈话的 voice 属性，然后通过{{domxref("SpeechSynthesis.speak()")}}方法开始语音播放。
+`inputForm.onsubmit` 的内部操作中，我们用[preventDefault()](/zh-CN/docs/Web/API/Event/preventDefault)阻止了表单的提交，创建了一个从{{htmlelement("input")}}文本框获取文本的新{{domxref("SpeechSynthesisUtterance")}}实例，在{{htmlelement("select")}}元素可选的声音设置成语音谈话的 voice 属性，然后通过{{domxref("SpeechSynthesis.speak()")}}方法开始语音播放。
 
 ```js
 var synth = window.speechSynthesis;
@@ -107,4 +107,4 @@ inputForm.onsubmit = function(event) {
 
 ## 参见
 
-- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)
+- [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API)

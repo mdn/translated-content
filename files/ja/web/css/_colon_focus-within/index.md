@@ -1,17 +1,6 @@
 ---
 title: ':focus-within'
-slug: 'Web/CSS/:focus-within'
-tags:
-  - ':focus'
-  - ':focus-within'
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.focus-within
-translation_of: 'Web/CSS/:focus-within'
+slug: Web/CSS/:focus-within
 ---
 {{CSSRef}}
 

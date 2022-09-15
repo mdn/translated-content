@@ -908,7 +908,7 @@ HTML5 用新的语义规则重新定义了`<b>`,`<i>`和`<u>`,使得它们的语
 
 ## 总结
 
-至此，本文应该给您做了一个很好的了解，如何开始在 HTML 中标记文本，并介绍了一些最重要的元素。在这一领域还有许多语义元素，我们将在后面的“更多语义元素”文章中看到更多的语义元素。在下一篇文章中，我们将详细介绍如何创建超链接（[create hyperlinks](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)），它可能是 Web 上最重要的元素。
+至此，本文应该给您做了一个很好的了解，如何开始在 HTML 中标记文本，并介绍了一些最重要的元素。在这一领域还有许多语义元素，我们将在后面的“更多语义元素”文章中看到更多的语义元素。在下一篇文章中，我们将详细介绍如何创建超链接（[create hyperlinks](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)），它可能是 Web 上最重要的元素。
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
 

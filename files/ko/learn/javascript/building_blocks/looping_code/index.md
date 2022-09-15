@@ -1,11 +1,6 @@
 ---
 title: 반복문
 slug: Learn/JavaScript/Building_blocks/Looping_code
-tags:
-  - for문
-  - 반복문
-  - 초보자
-translation_of: Learn/JavaScript/Building_blocks/Looping_code
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals", "Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
 

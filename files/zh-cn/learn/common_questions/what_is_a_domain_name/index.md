@@ -32,7 +32,7 @@ slug: Learn/Common_questions/What_is_a_domain_name
 
 ## 自主学习
 
-_还没有可用的资料。请考虑为此投稿 \[[Please, consider contributing](/en-US/docs/MDN/Getting_started)]。_
+_还没有可用的资料。请考虑为此投稿 \[[Please, consider contributing](/zh-CN/docs/MDN/Getting_started)]。_
 
 ## 深入探索
 

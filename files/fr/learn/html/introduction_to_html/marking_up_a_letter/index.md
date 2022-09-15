@@ -75,7 +75,7 @@ Sémantique en ligne&nbsp;:
 - Les six indices/exposants seront balisés de manière appropriée.
 - Les symboles «&nbsp;degré&nbsp;», «&nbsp;plus grand que » , «&nbsp;multiplier&nbsp;» seront marqués avec les références d'entités voulues.
 - Essayez de marquer au moins deux mots importants en gras/italique.
-- Deux emplacements nécessitent un hyperlien&nbsp;; ajoutez les liens appropriés avec des intitulés. Pour l'emplacement sur lequel le lien pointe, utilisez simplement http\://example.com.
+- Deux emplacements nécessitent un hyperlien&nbsp;; ajoutez les liens appropriés avec des intitulés. Pour l'emplacement sur lequel le lien pointe, utilisez simplement `http://example.com`.
 - La citation et la devise de l'université doivent être marquées avec les éléments appropriés.
 
 Dans l'en‑tête du document&nbsp;:

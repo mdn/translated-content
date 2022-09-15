@@ -1,7 +1,6 @@
 ---
 title: WebGL モデル ビュー 射影
 slug: Web/API/WebGL_API/WebGL_model_view_projection
-translation_of: Web/API/WebGL_API/WebGL_model_view_projection
 ---
 {{WebGLSidebar}}
 

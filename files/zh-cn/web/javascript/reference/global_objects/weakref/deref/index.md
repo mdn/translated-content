@@ -16,13 +16,13 @@ obj = ref.deref();
 
 ## 说明
 
-有关一些重要说明，请参阅{{jsxref("WeakRef")}}页面上的[Notes on WeakRefs](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#Notes_on_WeakRefs) 。
+有关一些重要说明，请参阅{{jsxref("WeakRef")}}页面上的[Notes on WeakRefs](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#Notes_on_WeakRefs) 。
 
 ## 例子
 
 ### 使用 deref
 
-有关[完整示例](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#Examples)，请参阅{{jsxref("WeakRef")}}页面的示例部分。
+有关[完整示例](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#Examples)，请参阅{{jsxref("WeakRef")}}页面的示例部分。
 
 ```js
 const tick = () => {

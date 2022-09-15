@@ -60,14 +60,11 @@ Cet élément implémente l'interface {{domxref("SVGFETileElement")}}.
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('Filters 1.0', '#feTileElement', '&lt;feTile&gt;')}}         | {{Spec2('Filters 1.0')}} | Aucun changement    |
-| {{SpecName('SVG1.1', 'filters.html#feTileElement', '&lt;feTile&gt;')}} | {{Spec2('SVG1.1')}}         | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.feTile")}}
+{{Compat}}
 
 ## Voir aussi
 

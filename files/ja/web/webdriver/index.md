@@ -1,16 +1,6 @@
 ---
 title: WebDriver
 slug: Web/WebDriver
-tags:
-  - Automation
-  - Index
-  - Landing
-  - Reference
-  - Testing
-  - Web
-  - WebDriver
-  - 自動化
-translation_of: Web/WebDriver
 ---
 WebDriver は、ユーザーエージェントの観察と制御を可能にする遠隔制御インターフェイスです。プロセスの外のプログラムがウェブブラウザーの動作を遠隔で指示する方法として、プラットフォームと言語に中立なワイヤープロトコルを提供します。
 

@@ -16,7 +16,7 @@ async function [name]([param1[, param2[, ..., paramN]]]) {
 }
 ```
 
-As of ES2015, you can also use [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+As of ES2015, you can also use [arrow functions](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ### Parameters
 
@@ -29,7 +29,7 @@ As of ES2015, you can also use [arrow functions](/en-US/docs/Web/JavaScript/Refe
 
 ## Description
 
-An `async function` expression is very similar to, and has almost the same syntax as, an {{jsxref('Statements/async_function', 'async function statement')}}. The main difference between an async `function` expression and an async `function` statement is the _function name,_ which can be omitted in `async function` expressions to create _anonymous_ functions. An `async function` expression can be used as an {{Glossary("IIFE")}} (Immediately Invoked Function Expression) which runs as soon as it is defined. See also the chapter about [functions](/en-US/docs/Web/JavaScript/Reference/Functions) for more information.
+An `async function` expression is very similar to, and has almost the same syntax as, an {{jsxref('Statements/async_function', 'async function statement')}}. The main difference between an async `function` expression and an async `function` statement is the _function name,_ which can be omitted in `async function` expressions to create _anonymous_ functions. An `async function` expression can be used as an {{Glossary("IIFE")}} (Immediately Invoked Function Expression) which runs as soon as it is defined. See also the chapter about [functions](/zh-TW/docs/Web/JavaScript/Reference/Functions) for more information.
 
 ## Examples
 

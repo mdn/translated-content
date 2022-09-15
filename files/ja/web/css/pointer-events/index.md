@@ -1,15 +1,6 @@
 ---
 title: pointer-events
 slug: Web/CSS/pointer-events
-tags:
-  - CSS
-  - CSS Property
-  - CSS プロパティ
-  - Reference
-  - SVG
-  - pointer-events
-  - recipe:css-property
-translation_of: Web/CSS/pointer-events
 ---
 {{CSSRef}}
 
@@ -100,7 +91,7 @@ img {
 
 ### リンクの無効化
 
-この例では、 http\://example.com へのリンクのポインターイベントを無効にします。
+この例では、 `http://example.com` へのリンクのポインターイベントを無効にします。
 
 #### HTML
 

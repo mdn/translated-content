@@ -2,7 +2,7 @@
 title: visibility
 slug: Web/SVG/Attribute/visibility
 ---
-« [SVG 属性参考主页](/en/SVG/Attribute)
+« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
 
 `visibility`属性让你能够控制一个图形元素的可见性。用了值`hidden`或者值`collapse`，当前的图形元素将不可见。
 
@@ -25,8 +25,8 @@ slug: Web/SVG/Attribute/visibility
 
 下列元素楞以使用`visibility`属性：
 
-- [图形元素](/en/SVG/Element#Graphics) »
-- [文本内容元素](/en/SVG/Element#Text_content_elements) »
+- [图形元素](/zh-CN/SVG/Element#Graphics) »
+- [文本内容元素](/zh-CN/SVG/Element#Text_content_elements) »
 
 ## 规范
 

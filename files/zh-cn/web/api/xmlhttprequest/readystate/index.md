@@ -21,7 +21,7 @@ slug: Web/API/XMLHttpRequest/readyState
 - HEADERS_RECEIVED
   - : send() 方法已经被调用，响应头也已经被接收。
 - LOADING
-  - : 响应体部分正在被接收。如果 [`responseType`](/en-US/docs/Web/API/XMLHttpRequest/responseType) 属性是“text”或空字符串，[`responseText`](/en-US/docs/Web/API/XMLHttpRequest/responseText) 将会在载入的过程中拥有部分响应数据。
+  - : 响应体部分正在被接收。如果 [`responseType`](/zh-CN/docs/Web/API/XMLHttpRequest/responseType) 属性是“text”或空字符串，[`responseText`](/zh-CN/docs/Web/API/XMLHttpRequest/responseText) 将会在载入的过程中拥有部分响应数据。
 - DONE
   - : 请求操作已经完成。这意味着数据传输已经彻底完成或失败。
 

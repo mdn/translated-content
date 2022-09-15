@@ -35,10 +35,10 @@ HTML Living Standard 仕様書で定義されている {{domxref("XMLHttpRequest
 
 リモートの XML 文書のコンテンツを得るために `XMLHttpRequest` を使う場合、 `responseXML` プロパティが解析済みの XML 文書を含む DOM オブジェクトとなります。これによって、操作や解析が難しくなる可能性があります。この XML 文書を解析するには主な 4 つの方法があります。
 
-1.  部品を指すために [XPath](/ja/docs/Web/XPath) を使う。
-2.  手動で [XML を解析及びシリアライズして](/ja/docs/Web/Guide/Parsing_and_serializing_XML)文字列やオブジェクトにする。
-3.  {{domxref("XMLSerializer")}} を使って **DOM ツリーを文字列やファイルに**シリアライズする。
-4.  事前に XML 文書の中身が常に分かっている場合は {{jsxref("RegExp")}} を使うこともできます。改行を `RegExp` でスキャンする場合に、改行を除去した方がよく見えることもありますが、 XML 文書が少しでも変更されると、メソッドは失敗しがちなため、このメソッドは「最後の手段」です。
+1. 部品を指すために [XPath](/ja/docs/Web/XPath) を使う。
+2. 手動で [XML を解析及びシリアライズして](/ja/docs/Web/Guide/Parsing_and_serializing_XML)文字列やオブジェクトにする。
+3. {{domxref("XMLSerializer")}} を使って **DOM ツリーを文字列やファイルに**シリアライズする。
+4. 事前に XML 文書の中身が常に分かっている場合は {{jsxref("RegExp")}} を使うこともできます。改行を `RegExp` でスキャンする場合に、改行を除去した方がよく見えることもありますが、 XML 文書が少しでも変更されると、メソッドは失敗しがちなため、このメソッドは「最後の手段」です。
 
 > **Note:** **注:** `XMLHttpRequest` は {{domxref("XMLHttpRequest.responseXML", "responseXML")}} プロパティを使用することによって、 HTML を解釈できるようになりました。この方法について学ぶには、 [XMLHttpRequest での HTML](/ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest) についての記事をお読みください。
 
@@ -46,9 +46,9 @@ HTML Living Standard 仕様書で定義されている {{domxref("XMLHttpRequest
 
 `XMLHttpRequest` を使ってリモート HTML ウェブページのコンテンツを取得する場合、 {{domxref("XMLHttpRequest.responseText", "responseText")}} プロパティは生の HTML が入った文字列です。これは操作や解析が難しいことを示しています。この生の HTML 文字列を分析し解析するには、主に 3 つの方法があります。
 
-1.  [XMLHttpRequest での HTML](/ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest) の記事で紹介されている `XMLHttpRequest.responseXML` プロパティを使用する。
-2.  `fragment.body.innerHTML` を通して[文書フラグメント](/ja/docs/Web/API/DocumentFragment)の本文をコンテンツに挿入し、そのフラグメントの DOM を巡る。
-3.  事前に HTML の `responseText` の中身が常に分かっている場合は {{jsxref("RegExp")}} を使うこともできます。改行を RegExp でスキャンする場合に、改行を除去した方がよく見えることもありますが、 HTML 文書が少しでも変更されると、メソッドは失敗しがちなため、このメソッドは「最後の手段」です。
+1. [XMLHttpRequest での HTML](/ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest) の記事で紹介されている `XMLHttpRequest.responseXML` プロパティを使用する。
+2. `fragment.body.innerHTML` を通して[文書フラグメント](/ja/docs/Web/API/DocumentFragment)の本文をコンテンツに挿入し、そのフラグメントの DOM を巡る。
+3. 事前に HTML の `responseText` の中身が常に分かっている場合は {{jsxref("RegExp")}} を使うこともできます。改行を RegExp でスキャンする場合に、改行を除去した方がよく見えることもありますが、 HTML 文書が少しでも変更されると、メソッドは失敗しがちなため、このメソッドは「最後の手段」です。
 
 ## バイナリデータの扱い
 
@@ -765,11 +765,11 @@ overrideMimeType を設定すると、 {{domxref("Worker")}} では動作しま�
 
 ## 関連情報
 
-1.  [MDN の AJAX 入門](/ja/docs/AJAX/Getting_Started)
-2.  [XMLHttpRequest での HTML](/ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
-3.  [HTTP アクセス制御](/ja/docs/Web/HTTP/Access_control_CORS)
-4.  [SSL 経由の XMLHTTPRequest のセキュリティ状態をチェックする方法](/ja/docs/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL)
-5.  [XMLHttpRequest - REST and the Rich User Experience](http://www.peej.co.uk/articles/rich-user-experience.html)
-6.  [Microsoft documentation](https://msdn.microsoft.com/library/ms535874)
-7.  ["Using the XMLHttpRequest Object" (jibbering.com)](http://jibbering.com/2002/4/httprequest.html)
-8.  [The `XMLHttpRequest` object: WHATWG specification](https://xhr.spec.whatwg.org/)
+1. [MDN の AJAX 入門](/ja/docs/AJAX/Getting_Started)
+2. [XMLHttpRequest での HTML](/ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+3. [HTTP アクセス制御](/ja/docs/Web/HTTP/Access_control_CORS)
+4. [SSL 経由の XMLHTTPRequest のセキュリティ状態をチェックする方法](/ja/docs/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL)
+5. [XMLHttpRequest - REST and the Rich User Experience](http://www.peej.co.uk/articles/rich-user-experience.html)
+6. [Microsoft documentation](https://msdn.microsoft.com/library/ms535874)
+7. ["Using the XMLHttpRequest Object" (jibbering.com)](http://jibbering.com/2002/4/httprequest.html)
+8. [The `XMLHttpRequest` object: WHATWG specification](https://xhr.spec.whatwg.org/)

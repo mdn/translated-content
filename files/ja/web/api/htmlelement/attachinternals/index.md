@@ -1,14 +1,6 @@
 ---
 title: HTMLElement.attachInternals()
 slug: Web/API/HTMLElement/attachInternals
-tags:
-  - API
-  - 要素
-  - メソッド
-  - リファレンス
-  - attachInternals
-browser-compat: api.HTMLElement.attachInternals
-translation_of: Web/API/HTMLElement/attachInternals
 ---
 {{APIRef('DOM')}}
 

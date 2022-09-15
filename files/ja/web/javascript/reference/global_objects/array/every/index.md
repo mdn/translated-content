@@ -1,14 +1,6 @@
 ---
 title: Array.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 ---
 {{JSRef}}
 

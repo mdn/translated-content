@@ -1,22 +1,15 @@
 ---
 title: Date.prototype.toDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toDateString
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toDateString
 ---
 {{JSRef}}
 
 **`toDateString()`** メソッドは、 {{jsxref("Date")}} オブジェクトの日付部分を英語の次の書式で空白区切りで返します。
 
-1.  曜日名の最初の 3 文字
-2.  月名の最初の 3 文字
-3.  2 桁の日、必要であれば左に 0 埋め
-4.  4 桁 (以上) の年、必要であれば左に 0 埋め
+1. 曜日名の最初の 3 文字
+2. 月名の最初の 3 文字
+3. 2 桁の日、必要であれば左に 0 埋め
+4. 4 桁 (以上) の年、必要であれば左に 0 埋め
 
 例 "Thu Jan 01 1970".
 

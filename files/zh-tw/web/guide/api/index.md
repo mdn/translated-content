@@ -10,7 +10,7 @@ Here you'll find links to each of the guides introducing and explaining each of 
 
 ## See also
 
-- [Web API interface reference](/en-US/docs/Web/API) (an index of all of the interfaces comprising all of these APIs)
-- [Document Object Model](/en-US/docs/Web/API/Document_Object_Model) (DOM)
-- [Web API event reference](/en-US/docs/Web/Events)
-- [Learning web development](/en-US/docs/Learn)
+- [Web API interface reference](/zh-TW/docs/Web/API) (an index of all of the interfaces comprising all of these APIs)
+- [Document Object Model](/zh-TW/docs/Web/API/Document_Object_Model) (DOM)
+- [Web API event reference](/zh-TW/docs/Web/Events)
+- [Learning web development](/zh-TW/docs/Learn)

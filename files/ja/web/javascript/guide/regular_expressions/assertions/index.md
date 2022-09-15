@@ -148,7 +148,7 @@ console.log(4, fixedMultiline); // 'greon' を修正しますが、'on' は対�
 
 ### ^ 制御文字を利用した入力の開始へのマッチ
 
-`^` は、通常、単語の開始にマッチさせるために利用します。この例では、`/^A/ `という正規表現で 'A' で始まるフルーツを取得します。ここでの `^` は、入力の開始を示すという、たった 1 つの役割を果たしています。適切なフルーツを選択するために[アロー](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 関数で [filter ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)メソッドを用います。
+`^` は、通常、単語の開始にマッチさせるために利用します。この例では、`/^A/` という正規表現で 'A' で始まるフルーツを取得します。ここでの `^` は、入力の開始を示すという、たった 1 つの役割を果たしています。適切なフルーツを選択するために[アロー](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 関数で [filter](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) メソッドを用います。
 
 ```js
 let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
@@ -210,7 +210,7 @@ console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]
 
 ### 言明と範囲における '?!' の組み合わせの異なる意味での利用
 
-`?!` の組み合わせを利用するとき、[言明](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions) `/x(?!y)/ `と[範囲](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) `[^?!]`では異なる意味を持ちます。
+`?!` の組み合わせを利用するとき、[言明](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions) `/x(?!y)/` と[範囲](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) `[^?!]`では異なる意味を持ちます。
 
 ```js
 let orangeNotLemon = "Do you want to have an orange? Yes, I do not want to have a lemon!";

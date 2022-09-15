@@ -1,12 +1,6 @@
 ---
 title: 計算値
 slug: Web/CSS/computed_value
-tags:
-  - CSS
-  - Guide
-  - Reference
-spec-urls: https://www.w3.org/TR/CSS22/cascade.html#computed-value
-translation_of: Web/CSS/computed_value
 ---
 {{CSSRef}}
 

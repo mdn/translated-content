@@ -1,20 +1,6 @@
 ---
 title: '<dt>: 説明用語要素'
 slug: Web/HTML/Element/dt
-tags:
-  - Definition
-  - 説明リスト
-  - Definition Term
-  - Description Term
-  - 要素
-  - HTML
-  - HTML グループ化コンテンツ
-  - リファレンス
-  - Term
-  - ウェブ
-  - dt
-browser-compat: html.elements.dt
-translation_of: Web/HTML/Element/dt
 ---
 
 {{HTMLRef}}

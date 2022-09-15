@@ -122,7 +122,7 @@ Si votre carte imagée mesure plus de 240px environ, vous devrez réfléchir à 
 
 Si vous devez nécessairement utiliser de telles cartes, vous pouvez regarder [ce plugin jQuery réalisé par Matt Stow.](https://github.com/stowball/jQuery-rwdImageMaps) Dudley Storey illustre une méthode qui consiste à [utiliser SVG pour réaliser un effet de carte imagée](http://thenewcode.com/696/Using-SVG-as-an-Alternative-To-Imagemaps) ainsi qu'une bidouille pour les images matricielles avec [une combinaison de SVG](http://thenewcode.com/760/Create-A-Responsive-Imagemap-With-SVG).
 
-## En savoir plus
+## Voir aussi
 
 - {{htmlelement("img")}}
 - {{htmlelement("map")}}

@@ -1,13 +1,6 @@
 ---
 title: box-ordinal-group
 slug: Web/CSS/box-ordinal-group
-tags:
-  - CSS
-  - CSS Property
-  - Non-standard
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/box-ordinal-group
 ---
 {{CSSRef}}{{Non-standard_Header}}
 

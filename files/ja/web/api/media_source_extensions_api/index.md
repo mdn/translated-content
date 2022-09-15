@@ -1,17 +1,6 @@
 ---
 title: Media Source Extensions API
 slug: Web/API/Media_Source_Extensions_API
-tags:
-  - API
-  - Audio
-  - Experimental
-  - Landing
-  - MSE
-  - Media Source Extensions
-  - Reference
-  - Video
-  - streaming
-translation_of: Web/API/Media_Source_Extensions_API
 ---
 {{DefaultAPISidebar("Media Source Extensions")}}
 

@@ -1,15 +1,6 @@
 ---
 title: Cache.add()
 slug: Web/API/Cache/add
-tags:
-  - API
-  - Cache
-  - Experimental
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorker
-translation_of: Web/API/Cache/add
 ---
 {{APIRef("Service Workers API")}}
 

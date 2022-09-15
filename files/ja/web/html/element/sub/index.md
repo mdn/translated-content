@@ -1,20 +1,6 @@
 ---
 title: '<sub>: 下付き文字要素'
 slug: Web/HTML/Element/sub
-tags:
-  - Baseline
-  - Element
-  - Footnotes
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Subscript
-  - Web
-  - sub
-translation_of: Web/HTML/Element/sub
 ---
 {{HTMLRef}}
 

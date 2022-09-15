@@ -26,4 +26,4 @@ var isItSecure = self.isSecureContext; // 或者直接使用 isSecureContext
 
 ## 参考
 
-- [Secure contexts](/en-US/docs/Web/Security/Secure_Contexts)
+- [Secure contexts](/zh-CN/docs/Web/Security/Secure_Contexts)

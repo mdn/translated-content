@@ -1,14 +1,6 @@
 ---
 title: Boolean.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
-tags:
-  - Boolean
-  - JavaScript
-  - メソッド
-  - Prototype
-  - リファレンス
-browser-compat: javascript.builtins.Boolean.valueOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
 ---
 {{JSRef}}
 

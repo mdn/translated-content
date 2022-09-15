@@ -8,5 +8,5 @@ slug: Glossary/First_contentful_paint
 
 ## 也可以看看:
 
-- [First Meaningful Paint](/en-US/docs/Glossary/first_meaningful_paint)
+- [First Meaningful Paint](/zh-TW/docs/Glossary/first_meaningful_paint)
 - [Paint Timing specification](https://w3c.github.io/paint-timing/#first-contentful-paint)

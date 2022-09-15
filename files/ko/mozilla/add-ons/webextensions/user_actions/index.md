@@ -1,7 +1,6 @@
 ---
 title: 사용자 행동
 slug: Mozilla/Add-ons/WebExtensions/User_actions
-translation_of: Mozilla/Add-ons/WebExtensions/User_actions
 ---
 {{AddonSidebar}}
 

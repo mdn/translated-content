@@ -1,15 +1,6 @@
 ---
 title: ホーム画面に追加
 slug: Web/Progressive_web_apps/Add_to_home_screen
-tags:
-  - Manifest
-  - PWA
-  - Progressive web apps
-  - Service Worker
-  - a2hs
-  - add to home screen
-  - icon
-translation_of: Web/Progressive_web_apps/Add_to_home_screen
 ---
 ホーム画面に追加 (または A2HS と略記) は最近のブラウザーで利用できる機能で、ユーザーがウェブアプリを「インストール」、すなわちお気に入りのウェブアプリケーション (またはウェブサイト) を表すショートカットを自分のホーム画面に追加することができるので、今後はこのショートカットを一回タップすればアクセスできるようになります。このガイドでは、 A2HS の使用方法と、ユーザーがこの機能を利用できるようにするために開発者として行う必要のあることについて説明します。
 

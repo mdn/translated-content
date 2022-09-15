@@ -257,12 +257,12 @@ function checkGuess( {
 
 ## 本章目录
 
-- [JavaScript 是什么？](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [JavaScript 初体验](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [查找并解决 JavaScript 代码的错误](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [变量：储存所需信息](/en-US/docs/Learn/JavaScript/First_steps/Variables)
-- [数字和运算符：JavaScript 的基本算数](/en-US/docs/Learn/JavaScript/First_steps/Math)
-- [字符串：JavaScript 文本的处理](/en-US/docs/Learn/JavaScript/First_steps/Strings)
-- [字符串的一些实用方法](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [数组](/en-US/docs/Learn/JavaScript/First_steps/Arrays)
-- [课程评估：笑话机](/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator)
+- [JavaScript 是什么？](/zh-CN/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+- [JavaScript 初体验](/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash)
+- [查找并解决 JavaScript 代码的错误](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong)
+- [变量：储存所需信息](/zh-CN/docs/Learn/JavaScript/First_steps/Variables)
+- [数字和运算符：JavaScript 的基本算数](/zh-CN/docs/Learn/JavaScript/First_steps/Math)
+- [字符串：JavaScript 文本的处理](/zh-CN/docs/Learn/JavaScript/First_steps/Strings)
+- [字符串的一些实用方法](/zh-CN/docs/Learn/JavaScript/First_steps/Useful_string_methods)
+- [数组](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)
+- [课程评估：笑话机](/zh-CN/docs/Learn/JavaScript/First_steps/Silly_story_generator)

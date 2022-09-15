@@ -65,7 +65,7 @@ canvas 的大小設置可透過樣式表（stylesheet）被改變。可經由樣
 - [MDN canvas portal](/zh-TW/docs/Web/API/Canvas_API)
 - [Canvas tutorial](/zh-TW/docs/Web/API/Canvas_API/Tutorial)
 - [Canvas cheat sheet](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html)
-- [Canvas-related demos](/en-US/demos/tag/tech:canvas)
+- [Canvas-related demos](/zh-TW/demos/tag/tech:canvas)
 - [Canvas introduction by Apple](https://developer.apple.com/library/safari/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html)
 
 {{HTMLRef}}

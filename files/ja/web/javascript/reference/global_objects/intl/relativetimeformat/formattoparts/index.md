@@ -1,14 +1,6 @@
 ---
 title: Intl.RelativeTimeFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Method
-  - Prototype
-  - RelativeTimeFormat
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts
 ---
 {{JSRef}}
 

@@ -1,13 +1,6 @@
 ---
 title: 'カスタムプロパティ (--*): CSS 変数'
 slug: Web/CSS/--*
-tags:
-  - CSS
-  - CSS カスタムプロパティ
-  - ガイド
-  - リファレンス
-browser-compat: css.properties.custom-property
-translation_of: Web/CSS/--*
 ---
 {{CSSRef}}
 

@@ -66,14 +66,11 @@ Cet élément implémente l'interface {{domxref("SVGFilterElement")}}.
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("Filters 1.0", "#FilterElement", "&lt;filter&gt;")}}         | {{Spec2("Filters 1.0")}} |                     |
-| {{SpecName("SVG1.1", "filters.html#FilterElement", "&lt;filter&gt;")}} | {{Spec2("SVG1.1")}}         | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.filter")}}
+{{Compat}}
 
 ## Voir aussi
 

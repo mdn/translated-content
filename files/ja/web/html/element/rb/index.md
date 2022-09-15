@@ -1,15 +1,6 @@
 ---
 title: '<rb>: ルビベース要素'
 slug: Web/HTML/Element/rb
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Ruby
-  - Text
-  - Web
-translation_of: Web/HTML/Element/rb
 ---
 {{HTMLRef}}{{Non-standard_Header}}
 

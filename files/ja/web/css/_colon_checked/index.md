@@ -1,20 +1,6 @@
 ---
 title: ':checked'
 slug: Web/CSS/:checked
-tags:
-  - ':checked'
-  - CSS
-  - Checked
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - Toggled
-  - ウェブ
-  - button
-  - checkbox
-  - radio
-translation_of: Web/CSS/:checked
 ---
 {{CSSRef}}
 

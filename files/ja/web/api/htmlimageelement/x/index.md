@@ -1,24 +1,6 @@
 ---
 title: HTMLImageElement.x
 slug: Web/API/HTMLImageElement/x
-page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - CSSOM View
-  - Coordinate
-  - Edge
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Position
-  - リファレンス
-  - border
-  - left
-  - x
-  - プロパティ
-browser-compat: api.HTMLImageElement.x
-translation_of: Web/API/HTMLImageElement/x
 ---
 {{APIRef("HTML DOM")}}
 
