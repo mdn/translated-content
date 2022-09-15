@@ -8,54 +8,51 @@ tags:
   - SVG Recipiente
 translation_of: Web/SVG/Element/g
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>O elemento <code>g</code> é um recipiente utilizado para agrupar objetos. Transformações aplicadas no elemento <code>g</code> são repassadas para todos os seus elementos filhos. Atributos também são herdados por elementos filhos. Além disso, pode ser utilizado para definir objetos complexos que poderão ser referenciados mais tarde pelo elemento {{SVGElement("use")}}.</p>
+O elemento `g` é um recipiente utilizado para agrupar objetos. Transformações aplicadas no elemento `g` são repassadas para todos os seus elementos filhos. Atributos também são herdados por elementos filhos. Além disso, pode ser utilizado para definir objetos complexos que poderão ser referenciados mais tarde pelo elemento {{SVGElement("use")}}.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: html" style="">&lt;svg width="100%" height="100%" viewBox="0 0 95 50"
-     xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;g stroke="green" fill="white" stroke-width="5"&gt;
-    &lt;circle cx="25" cy="25" r="15" /&gt;
-    &lt;circle cx="40" cy="25" r="15" /&gt;
-    &lt;circle cx="55" cy="25" r="15" /&gt;
-    &lt;circle cx="70" cy="25" r="15" /&gt;
-  &lt;/g&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<svg width="100%" height="100%" viewBox="0 0 95 50"
+     xmlns="http://www.w3.org/2000/svg">
+  <g stroke="green" fill="white" stroke-width="5">
+    <circle cx="25" cy="25" r="15" />
+    <circle cx="40" cy="25" r="15" />
+    <circle cx="55" cy="25" r="15" />
+    <circle cx="70" cy="25" r="15" />
+  </g>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Exemplo",220,130)}}</p>
+{{EmbedLiveSample("Exemplo",220,130)}}
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<h3 id="Atributos_globais">Atributos globais</h3>
+### Atributos globais
 
-<ul>
- <li><a href="/pt-BR/docs/SVG/Attribute#ConditionalProccessing" title="SVG/Attribute#ConditionalProccessing">Atributos de processamento condicional</a> »</li>
- <li><a href="/pt-BR/docs/SVG/Attribute#Core" title="SVG/Attribute#Core">Atributos principais</a> »</li>
- <li><a href="/pt-BR/docs/SVG/Attribute#GraphicalEvent" title="SVG/Attribute#GraphicalEvent">Atributos de eventos gráficos</a> »</li>
- <li><a href="/pt-BR/docs/SVG/Attribute#Presentation" title="SVG/Attribute#Presentation">Atributos de apresentação</a> »</li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
- <li>{{SVGAttr("transform")}}</li>
-</ul>
+- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#ConditionalProccessing "SVG/Attribute#ConditionalProccessing") »
+- [Atributos principais](/pt-BR/docs/SVG/Attribute#Core "SVG/Attribute#Core") »
+- [Atributos de eventos gráficos](/pt-BR/docs/SVG/Attribute#GraphicalEvent "SVG/Attribute#GraphicalEvent") »
+- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#Presentation "SVG/Attribute#Presentation") »
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("externalResourcesRequired")}}
+- {{SVGAttr("transform")}}
 
-<h3 id="Atributos_específicos">Atributos específicos</h3>
+### Atributos específicos
 
-<p><em>There is no specific attributes</em></p>
+_There is no specific attributes_
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Este elemento implementa a interface do <code><a href="/pt-BR/docs/DOM/SVGGElement" title="DOM/SVGGElement">SVGGElement</a></code>.</p>
+Este elemento implementa a interface do [`SVGGElement`](/pt-BR/docs/DOM/SVGGElement "DOM/SVGGElement").
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-
-
-<p>{{Compat("svg.elements.g")}}</p>
+{{Compat("svg.elements.g")}}

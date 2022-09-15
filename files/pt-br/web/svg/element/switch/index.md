@@ -7,43 +7,39 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/switch
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>O elemento <code>switch</code> avalia os atributos {{SVGAttr("requiredFeatures")}}, {{SVGAttr("requiredExtensions")}} e o {{SVGAttr("systemLanguage")}} diretamente nos seus elementos filhos em ordem e, em seguida, processa e renderiza o primeiro filho que possua este atributo definido como verdadeiro. Todos os outros serão ignorados e, portanto, não renderizados. Se o elemento filho é um elemento recipiente como o {{SVGElement("g")}}, então toda a subárvore será ou processada/renderizada ou ignorada/não renderizada.</p>
+O elemento `switch` avalia os atributos {{SVGAttr("requiredFeatures")}}, {{SVGAttr("requiredExtensions")}} e o {{SVGAttr("systemLanguage")}} diretamente nos seus elementos filhos em ordem e, em seguida, processa e renderiza o primeiro filho que possua este atributo definido como verdadeiro. Todos os outros serão ignorados e, portanto, não renderizados. Se o elemento filho é um elemento recipiente como o {{SVGElement("g")}}, então toda a subárvore será ou processada/renderizada ou ignorada/não renderizada.
 
-<p>Observe que os valores das propriedades <code>display</code> e <code>visibility</code> não possuem efeitos sob o processamento do elemento <code>switch</code>. Em particular, definindo <code>display</code> como <code>none</code> em um filho de um elemento <code>switch</code> não possuirá efeito sob o teste de verdadeiro/falso associado com o processamento de um elemento <code>switch</code>.</p>
+Observe que os valores das propriedades `display` e `visibility` não possuem efeitos sob o processamento do elemento `switch`. Em particular, definindo `display` como `none` em um filho de um elemento `switch` não possuirá efeito sob o teste de verdadeiro/falso associado com o processamento de um elemento `switch`.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<h3 id="Atributos_globais">Atributos globais</h3>
+### Atributos globais
 
-<ul>
- <li><a href="/pt-BR/docs/Web/SVG/Attribute#ConditionalProccessing">Atributos de processamento condicional</a> »</li>
- <li><a href="/pt-BR/docs/Web/SVG/Attribute#Core">Atributos principais</a> »</li>
- <li><a href="/pt-BR/docs/Web/SVG/Attribute#GraphicalEvent">Atributos de eventos gráficos</a> »</li>
- <li><a href="/pt-BR/docs/Web/SVG/Attribute#Presentation">Atributos de apresentação</a> »</li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
- <li>{{SVGAttr("transform")}}</li>
-</ul>
+- [Atributos de processamento condicional](/pt-BR/docs/Web/SVG/Attribute#ConditionalProccessing) »
+- [Atributos principais](/pt-BR/docs/Web/SVG/Attribute#Core) »
+- [Atributos de eventos gráficos](/pt-BR/docs/Web/SVG/Attribute#GraphicalEvent) »
+- [Atributos de apresentação](/pt-BR/docs/Web/SVG/Attribute#Presentation) »
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("externalResourcesRequired")}}
+- {{SVGAttr("transform")}}
 
-<h3 id="Atributos_específicos">Atributos específicos</h3>
+### Atributos específicos
 
-<ul>
- <li>{{SVGAttr("allowReorder")}}</li>
-</ul>
+- {{SVGAttr("allowReorder")}}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Este elemento implementa a interface do <code><a href="/pt-BR/docs/Web/DOM/SVGSwitchElement">SVGSwitchElement</a></code>.</p>
+Este elemento implementa a interface do [`SVGSwitchElement`](/pt-BR/docs/Web/DOM/SVGSwitchElement).
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("svg.elements.switch")}}

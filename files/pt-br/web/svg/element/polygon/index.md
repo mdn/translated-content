@@ -9,49 +9,43 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/polygon
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>O elemento <code>polygon</code> define uma forma fechada que consiste em um conjunto de segmentos de linha reta reta ligados.</p>
+O elemento `polygon` define uma forma fechada que consiste em um conjunto de segmentos de linha reta reta ligados.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>» <a href="https://developer.mozilla.org/files/3259/polygon.svg" title="https://developer.mozilla.org/files/3259/polygon.svg">polygon.svg</a></p>
+» [polygon.svg](https://developer.mozilla.org/files/3259/polygon.svg)
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<h3 id="Atributos_globais">Atributos globais</h3>
+### Atributos globais
 
-<ul>
- <li><a href="/pt-BR/SVG/Attribute#ConditionalProccessing" title="en/SVG/Attribute#ConditionalProccessing">Atributos de processamento condicional</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#Core" title="en/SVG/Attribute#Core">Atributos principais</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#GraphicalEvent" title="en/SVG/Attribute#GraphicalEvent">Atributos de eventos gráficos</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#Presentation" title="en/SVG/Attribute#Presentation">Atributos de apresentação</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
- <li>{{ SVGAttr("transform") }}</li>
-</ul>
+- [Atributos de processamento condicional](/pt-BR/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
+- [Atributos principais](/pt-BR/SVG/Attribute#Core "en/SVG/Attribute#Core") »
+- [Atributos de eventos gráficos](/pt-BR/SVG/Attribute#GraphicalEvent "en/SVG/Attribute#GraphicalEvent") »
+- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
+- {{ SVGAttr("transform") }}
 
-<h3 id="Atributos_específicos">Atributos específicos</h3>
+### Atributos específicos
 
-<ul>
- <li>{{ SVGAttr("points") }}</li>
-</ul>
+- {{ SVGAttr("points") }}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Este elemento implementa a interface do <code><a href="/pt-BR/DOM/SVGPolygonElement" title="en/DOM/SVGPolygonElement">SVGPolygonElement</a></code>.</p>
+Este elemento implementa a interface do [`SVGPolygonElement`](/pt-BR/DOM/SVGPolygonElement "en/DOM/SVGPolygonElement").
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("svg.elements.polygon")}}
 
-<h2 id="Relacionado">Relacionado</h2>
+## Relacionado
 
-<ul>
- <li>{{ SVGElement("polyline") }}</li>
-</ul>
+- {{ SVGElement("polyline") }}

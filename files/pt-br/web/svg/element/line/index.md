@@ -10,61 +10,55 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/line
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>O elemento <code>line</code> é uma forma básica do SVG, utilizada para criar uma linha conectando dois pontos.</p>
+O elemento `line` é uma forma básica do SVG, utilizada para criar uma linha conectando dois pontos.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>» <a href="https://developer.mozilla.org/files/3254/line.svg" title="https://developer.mozilla.org/files/3254/line.svg">line.svg</a></p>
+» [line.svg](https://developer.mozilla.org/files/3254/line.svg)
 
-<p>Você também pode aplicar transformações para obter o mesmo resultado. Começando com uma linha normal,</p>
+Você também pode aplicar transformações para obter o mesmo resultado. Começando com uma linha normal,
 
-<p>» <a href="https://developer.mozilla.org/files/3345/line1.svg" title="https://developer.mozilla.org/files/3345/line1.svg">line1.svg</a></p>
+» [line1.svg](https://developer.mozilla.org/files/3345/line1.svg)
 
-<p>adicionar as opções de transformação para mudar a direção da linha:</p>
+adicionar as opções de transformação para mudar a direção da linha:
 
-<p>» <a href="https://developer.mozilla.org/files/3346/line2.svg" title="https://developer.mozilla.org/files/3346/line2.svg">line2.svg</a></p>
+» [line2.svg](https://developer.mozilla.org/files/3346/line2.svg)
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<h3 id="Atributos_globais">Atributos globais</h3>
+### Atributos globais
 
-<ul>
- <li><a href="/pt-BR/SVG/Attribute#ConditionalProccessing" title="en/SVG/Attribute#ConditionalProccessing">Atributos de processamento condicional</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#Core" title="en/SVG/Attribute#Core">Atributos principais</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#GraphicalEvent" title="en/SVG/Attribute#GraphicalEvent">Atributos de eventos gráficos</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#Presentation" title="en/SVG/Attribute#Presentation">Atributos de apresentação</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
- <li>{{ SVGAttr("transform") }}</li>
-</ul>
+- [Atributos de processamento condicional](/pt-BR/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
+- [Atributos principais](/pt-BR/SVG/Attribute#Core "en/SVG/Attribute#Core") »
+- [Atributos de eventos gráficos](/pt-BR/SVG/Attribute#GraphicalEvent "en/SVG/Attribute#GraphicalEvent") »
+- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
+- {{ SVGAttr("transform") }}
 
-<h3 id="Atributos_específicos">Atributos específicos</h3>
+### Atributos específicos
 
-<ul>
- <li>{{ SVGAttr("x1") }}</li>
- <li>{{ SVGAttr("x2") }}</li>
- <li>{{ SVGAttr("y1") }}</li>
- <li>{{ SVGAttr("y2") }}</li>
-</ul>
+- {{ SVGAttr("x1") }}
+- {{ SVGAttr("x2") }}
+- {{ SVGAttr("y1") }}
+- {{ SVGAttr("y2") }}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Este elemento implementa a interface do <code><a href="/pt-BR/DOM/SVGLineElement" title="en/DOM/SVGLineElement">SVGLineElement</a></code>.</p>
+Este elemento implementa a interface do [`SVGLineElement`](/pt-BR/DOM/SVGLineElement "en/DOM/SVGLineElement").
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("svg.elements.line")}}
 
-<h2 id="Relacionado">Relacionado</h2>
+## Relacionado
 
-<ul>
- <li>{{ SVGElement("polygon") }}</li>
- <li>{{ SVGElement("path") }}</li>
-</ul>
+- {{ SVGElement("polygon") }}
+- {{ SVGElement("path") }}

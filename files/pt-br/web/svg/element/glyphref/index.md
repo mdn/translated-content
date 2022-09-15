@@ -8,48 +8,44 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/glyphRef
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>O elemento <code>glyphRef</code> fornece um único glifo possível referenciando a substituição do {{ SVGElement("altGlyph") }}.</p>
+O elemento `glyphRef` fornece um único glifo possível referenciando a substituição do {{ SVGElement("altGlyph") }}.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<h3 id="Atributos_globais">Atributos globais</h3>
+### Atributos globais
 
-<ul>
- <li><a href="/pt-BR/SVG/Attribute#Core">Atributos principais</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#Presentation">Atributos de apresentação</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#XLink">Atributos XLink</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
-</ul>
+- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
+- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation) »
+- [Atributos XLink](/pt-BR/SVG/Attribute#XLink) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
 
-<h3 id="Atributos_específicos">Atributos específicos</h3>
+### Atributos específicos
 
-<ul>
- <li>{{ SVGAttr("x") }}</li>
- <li>{{ SVGAttr("y") }}</li>
- <li>{{ SVGAttr("dx") }}</li>
- <li>{{ SVGAttr("dy") }}</li>
- <li>{{ SVGAttr("glyphRef") }}</li>
- <li>{{ SVGAttr("format") }}</li>
- <li>{{ SVGAttr("xlink:href") }}</li>
-</ul>
+- {{ SVGAttr("x") }}
+- {{ SVGAttr("y") }}
+- {{ SVGAttr("dx") }}
+- {{ SVGAttr("dy") }}
+- {{ SVGAttr("glyphRef") }}
+- {{ SVGAttr("format") }}
+- {{ SVGAttr("xlink:href") }}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Este elemento implementa a interface do <code><a href="/pt-BR/DOM/SVGGlyphRefElement">SVGGlyphRefElement</a></code>.</p>
+Este elemento implementa a interface do [`SVGGlyphRefElement`](/pt-BR/DOM/SVGGlyphRefElement).
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("svg.elements.glyphRef")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{ SVGElement("altGlyph") }}</li>
-</ul>sv
+- {{ SVGElement("altGlyph") }}
+
+sv

@@ -7,55 +7,49 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/linearGradient
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>O elemento <code>linearGradient</code> permite que os autores definam gradientes lineares para preenchimento (fill) ou contornos (stroke) de elementos gráficos.</p>
+O elemento `linearGradient` permite que os autores definam gradientes lineares para preenchimento (fill) ou contornos (stroke) de elementos gráficos.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>» <a href="https://developer.mozilla.org/files/3265/linearGradient.svg" title="https://developer.mozilla.org/files/3265/linearGradient.svg">linearGradient.svg</a></p>
+» [linearGradient.svg](https://developer.mozilla.org/files/3265/linearGradient.svg)
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<h3 id="Atributos_globais">Atributos globais</h3>
+### Atributos globais
 
-<ul>
- <li><a href="/en/SVG/Attribute#Core" title="en/SVG/Attribute#Core">Atributos centrais</a> »</li>
- <li><a href="/en/SVG/Attribute#Presentation" title="en/SVG/Attribute#Presentation">Atributos de apresentação</a> »</li>
- <li><a href="/en/SVG/Attribute#XLink" title="en/SVG/Attribute#XLink">Atributos Xlink</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
-</ul>
+- [Atributos centrais](/en/SVG/Attribute#Core "en/SVG/Attribute#Core") »
+- [Atributos de apresentação](/en/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
+- [Atributos Xlink](/en/SVG/Attribute#XLink "en/SVG/Attribute#XLink") »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
 
-<h3 id="Atributos_específicos">Atributos específicos</h3>
+### Atributos específicos
 
-<ul>
- <li>{{ SVGAttr("gradientUnits") }}</li>
- <li>{{ SVGAttr("gradientTransform") }}</li>
- <li>{{ SVGAttr("x1") }}</li>
- <li>{{ SVGAttr("y1") }}</li>
- <li>{{ SVGAttr("x2") }}</li>
- <li>{{ SVGAttr("y2") }}</li>
- <li>{{ SVGAttr("spreadMethod") }}</li>
- <li>{{ SVGAttr("xlink:href") }}</li>
-</ul>
+- {{ SVGAttr("gradientUnits") }}
+- {{ SVGAttr("gradientTransform") }}
+- {{ SVGAttr("x1") }}
+- {{ SVGAttr("y1") }}
+- {{ SVGAttr("x2") }}
+- {{ SVGAttr("y2") }}
+- {{ SVGAttr("spreadMethod") }}
+- {{ SVGAttr("xlink:href") }}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Este elemento implementa a interface <code><a href="/en/DOM/SVGLinearGradientElement" title="en/DOM/SVGLinearGradientElement">SVGLinearGradientElement</a></code>.</p>
+Este elemento implementa a interface [`SVGLinearGradientElement`](/en/DOM/SVGLinearGradientElement "en/DOM/SVGLinearGradientElement").
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("svg.elements.linearGradient")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{ SVGElement("radialGradient") }}</li>
- <li>{{ SVGElement("stop") }}</li>
-</ul>
+- {{ SVGElement("radialGradient") }}
+- {{ SVGElement("stop") }}

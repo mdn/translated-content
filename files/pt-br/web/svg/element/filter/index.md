@@ -7,68 +7,62 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/filter
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>O elemento <code>filter</code> fornece um recipiente para operações de um filtro atômico . Isso nunca será renderizado diretamente. Um filtro é referenciado pela utilização do atributo {{ SVGAttr("filter") }} com destino de um elemento SVG.</p>
+O elemento `filter` fornece um recipiente para operações de um filtro atômico . Isso nunca será renderizado diretamente. Um filtro é referenciado pela utilização do atributo {{ SVGAttr("filter") }} com destino de um elemento SVG.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<h3 id="Atributos_globais">Atributos globais</h3>
+### Atributos globais
 
-<ul>
- <li><a href="/pt-BR/SVG/Attribute#Core" title="en/SVG/Attribute#Core">Atributos principais</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#Presentation" title="en/SVG/Attribute#Presentation">Atributos de apresentação</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#XLink" title="en/SVG/Attribute#XLink">Atributos XLink</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
-</ul>
+- [Atributos principais](/pt-BR/SVG/Attribute#Core "en/SVG/Attribute#Core") »
+- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
+- [Atributos XLink](/pt-BR/SVG/Attribute#XLink "en/SVG/Attribute#XLink") »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
 
-<h3 id="Atributos_específicos">Atributos específicos</h3>
+### Atributos específicos
 
-<ul>
- <li>{{ SVGAttr("x") }}</li>
- <li>{{ SVGAttr("y") }}</li>
- <li>{{ SVGAttr("width") }}</li>
- <li>{{ SVGAttr("height") }}</li>
- <li>{{ SVGAttr("filterRes") }}</li>
- <li>{{ SVGAttr("filterUnits") }}</li>
- <li>{{ SVGAttr("primitiveUnits") }}</li>
- <li>{{ SVGAttr("xlink:href") }}</li>
-</ul>
+- {{ SVGAttr("x") }}
+- {{ SVGAttr("y") }}
+- {{ SVGAttr("width") }}
+- {{ SVGAttr("height") }}
+- {{ SVGAttr("filterRes") }}
+- {{ SVGAttr("filterUnits") }}
+- {{ SVGAttr("primitiveUnits") }}
+- {{ SVGAttr("xlink:href") }}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Este elemento implementa a interface do <code><a href="/pt-BR/DOM/SVGFilterElement" title="en/DOM/SVGFilterElement">SVGFilterElement</a></code>.</p>
+Este elemento implementa a interface do [`SVGFilterElement`](/pt-BR/DOM/SVGFilterElement "en/DOM/SVGFilterElement").
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("svg.elements.filter")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{ SVGElement("feBlend") }}</li>
- <li>{{ SVGElement("feColorMatrix") }}</li>
- <li>{{ SVGElement("feComponentTransfer") }}</li>
- <li>{{ SVGElement("feComposite") }}</li>
- <li>{{ SVGElement("feConvolveMatrix") }}</li>
- <li>{{ SVGElement("feDiffuseLighting") }}</li>
- <li>{{ SVGElement("feDisplacementMap") }}</li>
- <li>{{ SVGElement("feFlood") }}</li>
- <li>{{ SVGElement("feGaussianBlur") }}</li>
- <li>{{ SVGElement("feImage") }}</li>
- <li>{{ SVGElement("feMerge") }}</li>
- <li>{{ SVGElement("feMorphology") }}</li>
- <li>{{ SVGElement("feOffset") }}</li>
- <li>{{ SVGElement("feSpecularLighting") }}</li>
- <li>{{ SVGElement("feTile") }}</li>
- <li>{{ SVGElement("feTurbulence") }}</li>
- <li><a href="/pt-BR/SVG/Tutorial/Filter_effects" title="en/SVG/Tutorial/Filter_effects">Tutorial SVG: Efeitos de filtros</a></li>
-</ul>
+- {{ SVGElement("feBlend") }}
+- {{ SVGElement("feColorMatrix") }}
+- {{ SVGElement("feComponentTransfer") }}
+- {{ SVGElement("feComposite") }}
+- {{ SVGElement("feConvolveMatrix") }}
+- {{ SVGElement("feDiffuseLighting") }}
+- {{ SVGElement("feDisplacementMap") }}
+- {{ SVGElement("feFlood") }}
+- {{ SVGElement("feGaussianBlur") }}
+- {{ SVGElement("feImage") }}
+- {{ SVGElement("feMerge") }}
+- {{ SVGElement("feMorphology") }}
+- {{ SVGElement("feOffset") }}
+- {{ SVGElement("feSpecularLighting") }}
+- {{ SVGElement("feTile") }}
+- {{ SVGElement("feTurbulence") }}
+- [Tutorial SVG: Efeitos de filtros](/pt-BR/SVG/Tutorial/Filter_effects "en/SVG/Tutorial/Filter_effects")

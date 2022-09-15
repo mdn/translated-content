@@ -3,47 +3,45 @@ title: Tutorial SVG
 slug: Web/SVG/Tutorial
 translation_of: Web/SVG/Tutorial
 ---
-<p>Scalable Vector Graphics (Gráficos vetoriais escaláveis), <a href="/en-US/Web/SVG" title="en-US/Web/SVG">SVG</a>, é uma linguagem W3C XML  para marcação de gráficos. Ela é parcialmente implementada no Firefox, Opera, Navegadores com WebKit , Internet Explorer e outros navegadores.</p>
+Scalable Vector Graphics (Gráficos vetoriais escaláveis), [SVG](/en-US/Web/SVG "en-US/Web/SVG"), é uma linguagem W3C XML para marcação de gráficos. Ela é parcialmente implementada no Firefox, Opera, Navegadores com WebKit , Internet Explorer e outros navegadores.
 
-<p>Este tutorial tem como objetivo explicar as partes internas de SVG acompanhada de detalhes técnicos. Se você quiser usá-la apenas para desenhar belas imagens, você pode encontrar informações mais uteis na <a class="external" href="http://inkscape.org/doc/">Página de documentação do Inkscape</a>. Outra boa introdução ao SVG é fornecida pelo W3C' <a class="external" href="http://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html">SVG Primer</a>.</p>
+Este tutorial tem como objetivo explicar as partes internas de SVG acompanhada de detalhes técnicos. Se você quiser usá-la apenas para desenhar belas imagens, você pode encontrar informações mais uteis na [Página de documentação do Inkscape](http://inkscape.org/doc/). Outra boa introdução ao SVG é fornecida pelo W3C' [SVG Primer](http://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html).
 
-<div class="note">O tutorial está em um estágio inicial de desenvolvimento.Se puder, por favor ajude escrevendo um parágrafo ou dois. Pontos extras para quem escrever uma página inteira!</div>
+> **Nota:** O tutorial está em um estágio inicial de desenvolvimento.Se puder, por favor ajude escrevendo um parágrafo ou dois. Pontos extras para quem escrever uma página inteira!
 
-<h5 id="Apresentando_SVG_com_Scratch">Apresentando  SVG com Scratch</h5>
+##### Apresentando SVG com Scratch
 
-<ul>
- <li><a href="/en-US/Web/SVG/Tutorial/Introduction" title="en-US/Web/SVG/Tutorial/Introduction">Introdução</a></li>
- <li><a href="/en-US/Web/SVG/Tutorial/Getting_Started" title="en-US/Web/SVG/Tutorial/Getting_Started">Começando</a></li>
- <li><a href="/en-US/Web/SVG/Tutorial/Positions" title="en-US/Web/SVG/Tutorial/Positions">Posições</a></li>
- <li><a href="/en-US/Web/SVG/Tutorial/Basic_Shapes" title="en-US/Web/SVG/Tutorial/Basic_Shapes">Formas Básicas</a></li>
- <li><a href="/en-US/Web/SVG/Tutorial/Paths" title="en-US/Web/SVG/Tutorial/Paths">Caminhos</a></li>
- <li><a href="/en-US/Web/SVG/Tutorial/Fills_and_Strokes" title="en-US/Web/SVG/Tutorial/Fills_and_Strokes">Preenchimentos e traços</a></li>
- <li><a href="/en-US/Web/SVG/Tutorial/Gradients" title="en-US/Web/SVG/Tutorial/Gradients">Gradientes</a></li>
- <li><a href="/en-US/Web/SVG/Tutorial/Patterns" title="en-US/Web/SVG/Tutorial/Patterns">Padrões</a></li>
- <li><a href="/en-US/Web/SVG/Tutorial/Texts" title="en-US/Web/SVG/Tutorial/Texts">Textos</a></li>
- <li><a href="/en-US/Web/SVG/Tutorial/Basic_Transformations" title="en-US/Web/SVG/Tutorial/Basic_Transformations">Transformações básicas</a></li>
- <li><a href="/en-US/Web/SVG/Tutorial/Clipping_and_masking" title="en-US/Web/SVG/Tutorial/Clipping_and_masking">Recortes e mascaras</a></li>
- <li><a href="/en-US/Web/SVG/Tutorial/Other_content_in_SVG" title="en-US/Web/SVG/Tutorial/Other content in SVG">Outros conteúdos em SVG</a></li>
- <li><a href="/en-US/Web/SVG/Tutorial/Filter_effects" title="en-US/Web/SVG/Tutorial/Filter effects">Efeitos de filtro</a></li>
- <li><a href="/en-US/Web/SVG/Tutorial/SVG_fonts" title="en-US/Web/SVG/Tutorial/SVG fonts">Fontes SVG</a></li>
- <li><a href="/en-US/Web/SVG/Tutorial/SVG_Image_Tag" title="en-US/Web/SVG/Tutorial/SVG Image Tag">SVG e a tag Imagem</a></li>
- <li><a href="/en-US/Web/SVG/Tutorial/Tools_for_SVG" title="en-US/Web/SVG/Tutorial/Tools_for_SVG">Ferramentas para SVG</a></li>
-</ul>
+- [Introdução](/en-US/Web/SVG/Tutorial/Introduction "en-US/Web/SVG/Tutorial/Introduction")
+- [Começando](/en-US/Web/SVG/Tutorial/Getting_Started "en-US/Web/SVG/Tutorial/Getting_Started")
+- [Posições](/en-US/Web/SVG/Tutorial/Positions "en-US/Web/SVG/Tutorial/Positions")
+- [Formas Básicas](/en-US/Web/SVG/Tutorial/Basic_Shapes "en-US/Web/SVG/Tutorial/Basic_Shapes")
+- [Caminhos](/en-US/Web/SVG/Tutorial/Paths "en-US/Web/SVG/Tutorial/Paths")
+- [Preenchimentos e traços](/en-US/Web/SVG/Tutorial/Fills_and_Strokes "en-US/Web/SVG/Tutorial/Fills_and_Strokes")
+- [Gradientes](/en-US/Web/SVG/Tutorial/Gradients "en-US/Web/SVG/Tutorial/Gradients")
+- [Padrões](/en-US/Web/SVG/Tutorial/Patterns "en-US/Web/SVG/Tutorial/Patterns")
+- [Textos](/en-US/Web/SVG/Tutorial/Texts "en-US/Web/SVG/Tutorial/Texts")
+- [Transformações básicas](/en-US/Web/SVG/Tutorial/Basic_Transformations "en-US/Web/SVG/Tutorial/Basic_Transformations")
+- [Recortes e mascaras](/en-US/Web/SVG/Tutorial/Clipping_and_masking "en-US/Web/SVG/Tutorial/Clipping_and_masking")
+- [Outros conteúdos em SVG](/en-US/Web/SVG/Tutorial/Other_content_in_SVG "en-US/Web/SVG/Tutorial/Other content in SVG")
+- [Efeitos de filtro](/en-US/Web/SVG/Tutorial/Filter_effects "en-US/Web/SVG/Tutorial/Filter effects")
+- [Fontes SVG](/en-US/Web/SVG/Tutorial/SVG_fonts "en-US/Web/SVG/Tutorial/SVG fonts")
+- [SVG e a tag Imagem](/en-US/Web/SVG/Tutorial/SVG_Image_Tag "en-US/Web/SVG/Tutorial/SVG Image Tag")
+- [Ferramentas para SVG](/en-US/Web/SVG/Tutorial/Tools_for_SVG "en-US/Web/SVG/Tutorial/Tools_for_SVG")
 
-<p>Os seguintes tópicos são mais avançados e portanto precisam de tutoriais próprios.</p>
+Os seguintes tópicos são mais avançados e portanto precisam de tutoriais próprios.
 
-<h5 id="Scripting_SVG_with_JavaScript">Scripting SVG with JavaScript</h5>
+##### Scripting SVG with JavaScript
 
-<p>TBD</p>
+TBD
 
-<h5 id="SVG_filters_tutorial">SVG filters tutorial</h5>
+##### SVG filters tutorial
 
-<p>TBD</p>
+TBD
 
-<h5 id="Animations_with_SMIL_in_SVG">Animations with SMIL in SVG</h5>
+##### Animations with SMIL in SVG
 
-<p>TBD</p>
+TBD
 
-<h5 id="Creating_fonts_in_SVG">Creating fonts in SVG</h5>
+##### Creating fonts in SVG
 
-<p>TBD</p>
+TBD

@@ -3,40 +3,36 @@ title: desc
 slug: Web/SVG/Element/desc
 translation_of: Web/SVG/Element/desc
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>Cada elemento container ou elementos gráficos em um desenho SVG podem fornecer uma <code>desc,</code> string de descrição onde esta é somente textual. Quando o fragmento do documento SVG é renderizado como um SVG em uma mídia visual, elementos <code>desc</code> não são renderizados como parte da visualização gráfica. Alterne as exibições quando possível, tanto visual e auditiva, escolha a exibição do elemento <code>desc</code> mas não a exibição dos elementos <code>path</code> ou outros elementos gráficos. O elemento <code>desc</code> geralmente melhora a acessibilidade do documentos SVG.</p>
+Cada elemento container ou elementos gráficos em um desenho SVG podem fornecer uma `desc,` string de descrição onde esta é somente textual. Quando o fragmento do documento SVG é renderizado como um SVG em uma mídia visual, elementos `desc` não são renderizados como parte da visualização gráfica. Alterne as exibições quando possível, tanto visual e auditiva, escolha a exibição do elemento `desc` mas não a exibição dos elementos `path` ou outros elementos gráficos. O elemento `desc` geralmente melhora a acessibilidade do documentos SVG.
 
-<h2 id="Contexto_de_utilização">Contexto de utilização</h2>
+## Contexto de utilização
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<h3 id="Atributos_globais">Atributos globais</h3>
+### Atributos globais
 
-<ul>
- <li><a href="/en/SVG/Attribute#Core" title="en/SVG/Attribute#Core">Atributos centrais</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
-</ul>
+- [Atributos centrais](/en/SVG/Attribute#Core "en/SVG/Attribute#Core") »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
 
-<h3 id="Atributos_específicos">Atributos específicos</h3>
+### Atributos específicos
 
-<p><em>Não existe especificação de atributos</em></p>
+_Não existe especificação de atributos_
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Este elemento implementa a interface <code><a href="/en/DOM/SVGDescElement" title="en/DOM/SVGDescElement">SVGDescElement</a></code>.</p>
+Este elemento implementa a interface [`SVGDescElement`](/en/DOM/SVGDescElement "en/DOM/SVGDescElement").
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("svg.elements.desc")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{ SVGElement("title") }}</li>
-</ul>
+- {{ SVGElement("title") }}

@@ -8,70 +8,65 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/tref
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>O conteúdo textual para o {{ SVGElement("text") }} podem ser dados de caracteres diretamente embedados com o elemento {{ SVGElement("text") }} ou o conteúdo de dados de caracteres de um elemento referenciado, onde a referência é especificada com um elemento <code>tref</code>.</p>
+O conteúdo textual para o {{ SVGElement("text") }} podem ser dados de caracteres diretamente embedados com o elemento {{ SVGElement("text") }} ou o conteúdo de dados de caracteres de um elemento referenciado, onde a referência é especificada com um elemento `tref`.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: xml">&lt;svg width="100%" height="100%" viewBox="0 0 1000 300"
+```xml
+<svg width="100%" height="100%" viewBox="0 0 1000 300"
      xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
-  &lt;defs&gt;
-    &lt;text id="ReferencedText"&gt;
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <text id="ReferencedText">
       Referenced character data
-    &lt;/text&gt;
-  &lt;/defs&gt;
+    </text>
+  </defs>
 
-  &lt;text x="100" y="100" font-size="45" &gt;
+  <text x="100" y="100" font-size="45" >
     Inline character data
-  &lt;/text&gt;
+  </text>
 
-  &lt;text x="100" y="200" font-size="45" fill="red" &gt;
-    &lt;tref xlink:href="#ReferencedText"/&gt;
-  &lt;/text&gt;
+  <text x="100" y="200" font-size="45" fill="red" >
+    <tref xlink:href="#ReferencedText"/>
+  </text>
 
-  &lt;!-- Show outline of canvas using 'rect' element --&gt;
-  &lt;rect x="1" y="1" width="998" height="298"
-        fill="none" stroke-width="2" /&gt;
-&lt;/svg&gt;
-</pre>
+  <!-- Show outline of canvas using 'rect' element -->
+  <rect x="1" y="1" width="998" height="298"
+        fill="none" stroke-width="2" />
+</svg>
+```
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<h3 id="Atributos_globais">Atributos globais</h3>
+### Atributos globais
 
-<ul>
- <li><a href="/pt-BR/SVG/Attribute#ConditionalProccessing" title="en/SVG/Attribute#ConditionalProccessing">Atributos de processamento condicional</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#Core" title="en/SVG/Attribute#Core">Atributos principais</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#GraphicalEvent" title="en/SVG/Attribute#GraphicalEvent">Atributos de eventos gráficos</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#Presentation" title="en/SVG/Attribute#Presentation">Atributos de apresentação</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#XLink" title="en/SVG/Attribute#XLink">Atributos XLink</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
-</ul>
+- [Atributos de processamento condicional](/pt-BR/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
+- [Atributos principais](/pt-BR/SVG/Attribute#Core "en/SVG/Attribute#Core") »
+- [Atributos de eventos gráficos](/pt-BR/SVG/Attribute#GraphicalEvent "en/SVG/Attribute#GraphicalEvent") »
+- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
+- [Atributos XLink](/pt-BR/SVG/Attribute#XLink "en/SVG/Attribute#XLink") »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
 
-<h3 id="Atributos_específicos">Atributos específicos</h3>
+### Atributos específicos
 
-<ul>
- <li>{{ SVGAttr("xlink:href") }}</li>
-</ul>
+- {{ SVGAttr("xlink:href") }}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Este elemento implementa a interface do <code><a href="/pt-BR/DOM/SVGTRefElement" title="en/DOM/SVGTRefElement">SVGTRefElement</a></code>.</p>
+Este elemento implementa a interface do [`SVGTRefElement`](/pt-BR/DOM/SVGTRefElement "en/DOM/SVGTRefElement").
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("svg.elements.tref")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{ SVGElement("text") }}</li>
-</ul>
+- {{ SVGElement("text") }}

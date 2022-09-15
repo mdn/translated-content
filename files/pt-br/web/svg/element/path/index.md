@@ -11,71 +11,64 @@ tags:
   - graficos
 translation_of: Web/SVG/Element/path
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}**[Primeiros passos](/pt-BR/docs/SVG/Tutorial/Paths "SVG/Tutorial/Paths")**
+Este tutorial irá te ajudar a utilizar caminhos no SVG.
 
-<div class="callout-box"><strong><a href="/en-US/docs/SVG/Tutorial/Paths" title="SVG/Tutorial/Paths">Primeiros passos</a></strong><br>
-Este tutorial irá te ajudar a utilizar caminhos no SVG.</div>
+## Resumo
 
-<h2 id="Summary" name="Summary">Resumo</h2>
+O elemento `path` é um elemento genérico para definir uma forma. Todas as formas básicas poderão ser criadas com elemento de caminho.
 
-<p>O elemento <code>path</code> é um elemento genérico para definir uma forma. Todas as formas básicas poderão ser criadas com elemento de caminho.</p>
+## Contexto de uso
 
-<h2 id="Usage_context" name="Usage_context">Contexto de uso</h2>
+{{svginfo}}
 
-<p>{{svginfo}}</p>
+## Exemplo
 
-<h2 id="Exemplo" name="Exemplo">Exemplo</h2>
+```html
+<svg width="100%" height="100%" viewBox="0 0 400 400"
+     xmlns="http://www.w3.org/2000/svg">
 
-<pre class="brush: html">&lt;svg width="100%" height="100%" viewBox="0 0 400 400"
-     xmlns="http://www.w3.org/2000/svg"&gt;
+  <path d="M 100 100 L 300 100 L 200 300 z"
+        fill="orange" stroke="black" stroke-width="3" />
+</svg>
+```
 
-  &lt;path d="M 100 100 L 300 100 L 200 300 z"
-        fill="orange" stroke="black" stroke-width="3" /&gt;
-&lt;/svg&gt;
-</pre>
+Resultado:
 
-<p>Resultado:</p>
+{{EmbedLiveSample("Exemplo",200,215)}}
 
-<p>{{EmbedLiveSample("Exemplo",200,215)}}</p>
+## Atributos
 
-<h2 id="Attributes" name="Attributes">Atributos</h2>
+### Atributos globais
 
-<h3 id="Atributos_globais">Atributos globais</h3>
+- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#ConditionalProccessing "SVG/Attribute#ConditionalProccessing") »
+- [Atributos centraiss](/pt-BR/docs/SVG/Attribute#Core "SVG/Attribute#Core") »
+- [Atributos de evento gráfico](/pt-BR/docs/SVG/Attribute#GraphicalEvent "SVG/Attribute#GraphicalEvent") »
+- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#Presentation "SVG/Attribute#Presentation") »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
+- {{ SVGAttr("transform") }}
 
-<ul>
- <li><a href="/en-US/docs/SVG/Attribute#ConditionalProccessing" title="SVG/Attribute#ConditionalProccessing">Atributos de processamento condicional</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#Core" title="SVG/Attribute#Core">Atributos centraiss</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#GraphicalEvent" title="SVG/Attribute#GraphicalEvent">Atributos de evento gráfico</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#Presentation" title="SVG/Attribute#Presentation">Atributos de apresentação</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
- <li>{{ SVGAttr("transform") }}</li>
-</ul>
+### Atributos específicos
 
-<h3 id="Specific_attributes" name="Specific_attributes">Atributos específicos</h3>
+- {{ SVGAttr("d") }}
+- {{ SVGAttr("pathLength") }}
 
-<ul>
- <li>{{ SVGAttr("d") }}</li>
- <li>{{ SVGAttr("pathLength") }}</li>
-</ul>
+## Interface DOM
 
-<h2 id="DOM_Interface" name="DOM_Interface">Interface DOM</h2>
+Este elemento implementa a interace do [`SVGPathElement`](/en-US/docs/DOM/SVGPathElement "DOM/SVGPathElement").
 
-<p>Este elemento implementa a interace do <code><a href="/en-US/docs/DOM/SVGPathElement" title="DOM/SVGPathElement">SVGPathElement</a></code>.</p>
-
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade dos navegadores</h2>
+## Compatibilidade dos navegadores
 
 {{Compat("svg.elements.path")}}
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{ SVGElement("circle") }}</li>
- <li>{{ SVGElement("ellipse") }}</li>
- <li>{{ SVGElement("line") }}</li>
- <li>{{ SVGElement("polygon") }}</li>
- <li>{{ SVGElement("polyline") }}</li>
- <li>{{ SVGElement("rect") }}</li>
- <li><a href="/en-US/docs/SVG/Tutorial/Paths" title="SVG/Tutorial/Paths">O tutorial sobre SVG "Primeiros passos" na MDN: Path</a></li>
-</ul>
+- {{ SVGElement("circle") }}
+- {{ SVGElement("ellipse") }}
+- {{ SVGElement("line") }}
+- {{ SVGElement("polygon") }}
+- {{ SVGElement("polyline") }}
+- {{ SVGElement("rect") }}
+- [O tutorial sobre SVG "Primeiros passos" na MDN: Path](/pt-BR/docs/SVG/Tutorial/Paths "SVG/Tutorial/Paths")
