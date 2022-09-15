@@ -12,137 +12,121 @@ tags:
 translation_of: MDN/Contribute/Howto/Create_and_edit_pages
 original_slug: MDN/Contribute/Howto/Create_and_edit_pages
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p>As duas tarefas mais básicas sobre MDN que quase todo contribuinte MDN irá eventualmente executar são para editar uma página já existente ou criar uma nova. Este artigo aborda os conceitos básicos de como fazer cada uma delas.</p>
+As duas tarefas mais básicas sobre MDN que quase todo contribuinte MDN irá eventualmente executar são para editar uma página já existente ou criar uma nova. Este artigo aborda os conceitos básicos de como fazer cada uma delas.
 
-<h2 id="Editando_uma_página_existente"><a id="Editando uma págia existente" name="Editando uma págia existente">Editando uma página existente</a></h2>
+## Editando uma página existente
 
-<p>É fácil editar:</p>
+É fácil editar:
 
-<ul>
- <li>Clique no botão editar próximo ao topo na direita no canto da página.</li>
- <li>A página recarregará com opções de formatação, assim, você pode adicionar ou deletar informação diretamente na página.</li>
- <li>Você pode adicionar parágrafos, deletar texto, inserir cabeçalhos, e mais das tarefas básicas que envolvem edição de textos.</li>
-</ul>
+- Clique no botão editar próximo ao topo na direita no canto da página.
+- A página recarregará com opções de formatação, assim, você pode adicionar ou deletar informação diretamente na página.
+- Você pode adicionar parágrafos, deletar texto, inserir cabeçalhos, e mais das tarefas básicas que envolvem edição de textos.
 
-<h3 id="Ver_mudanças">Ver mudanças</h3>
+### Ver mudanças
 
-<p>Para ver como suas mudanças ficaram:</p>
+Para ver como suas mudanças ficaram:
 
-<ul>
- <li>Clique no botão "Visualizar mudanças" (dentro da função de editar) acima do título da página.</li>
- <li>Isso abre uma páǵina de pré-visualização que inclui sua revisão em uma nova janela ou aba.</li>
- <li>Cada vez que você clica nesse botão, ele recarrega sua página de pré-visualização com as últimas mudanças feitas.</li>
-</ul>
+- Clique no botão "Visualizar mudanças" (dentro da função de editar) acima do título da página.
+- Isso abre uma páǵina de pré-visualização que inclui sua revisão em uma nova janela ou aba.
+- Cada vez que você clica nesse botão, ele recarrega sua página de pré-visualização com as últimas mudanças feitas.
 
-<p>Tenha cuidado! Pré-visualizar uma página <em>não salva</em> as alterações, sendo assim, se lembre de não fechar a página que você está editando sem salvar o conteúdo.</p>
+Tenha cuidado! Pré-visualizar uma página _não salva_ as alterações, sendo assim, se lembre de não fechar a página que você está editando sem salvar o conteúdo.
 
-<h3 id="Revisão_de_comentário">Revisão de comentário</h3>
+### Revisão de comentário
 
-<p>Depois que você pré-visualizou suas mudanças, você deve querer salvar sua revisão. Antes de salvar, procure pela caixa de comentários de revisão abaixo da sessão de título da página e deixe um comentário para informar a outros voluntários o que você mudou e o motivo. Por exemplo, você pode ter adicionado uma nova sessão, mudado algumas palavras para fazer a terminologia mais consistente, reescrito um parágrafo para esclarecer o idioma, ou removido informação porque é redundante.</p>
+Depois que você pré-visualizou suas mudanças, você deve querer salvar sua revisão. Antes de salvar, procure pela caixa de comentários de revisão abaixo da sessão de título da página e deixe um comentário para informar a outros voluntários o que você mudou e o motivo. Por exemplo, você pode ter adicionado uma nova sessão, mudado algumas palavras para fazer a terminologia mais consistente, reescrito um parágrafo para esclarecer o idioma, ou removido informação porque é redundante.
 
-<h3 id="Tags">Tags</h3>
+### Tags
 
-<p>Você pode adicionar ou remover tags que descrevam o conteúdo da página. Veja <a href="/pt-BR/docs/MDN/Contribute/guia/Como-marcar-as-paginas-corretamente">como adicionar tags às páginas corretamente</a> para mais informações em que as tags se aplicam.</p>
+Você pode adicionar ou remover tags que descrevam o conteúdo da página. Veja [como adicionar tags às páginas corretamente](/pt-BR/docs/MDN/Contribute/guia/Como-marcar-as-paginas-corretamente) para mais informações em que as tags se aplicam.
 
-<h3 id="Precisa_de_revisão">Precisa de revisão?</h3>
+### Precisa de revisão?
 
-<p>Se você quiser que um contribuidor experiente revise suas edições, você pode requisitar uma revisão técnica (para códigos, APIs, ou tecnologias), uma revisão editorial (textual, de gramática ou conteúdo), ou uma revisão de template (para código KumaScript) se certificando que a caixa está marcada, antes que você salve.</p>
+Se você quiser que um contribuidor experiente revise suas edições, você pode requisitar uma revisão técnica (para códigos, APIs, ou tecnologias), uma revisão editorial (textual, de gramática ou conteúdo), ou uma revisão de template (para código KumaScript) se certificando que a caixa está marcada, antes que você salve.
 
-<h3 id="Anexar_arquivos">Anexar arquivos</h3>
+### Anexar arquivos
 
-<p>Se você quiser anexar um arquivo a uma página para adicionar uma ilustração ou tornar o conteúdo mais claro, o anexo pode ir no final da página.</p>
+Se você quiser anexar um arquivo a uma página para adicionar uma ilustração ou tornar o conteúdo mais claro, o anexo pode ir no final da página.
 
-<h3 id="Salve_descarte_ou_continue_editando">Salve, descarte ou continue editando</h3>
+### Salve, descarte ou continue editando
 
-<p>Quando você termina uma edição com seu preview, você pode salvar seu trabalho e comentários clicando no botão verde "Salvar alterações" à direita do título da página. Se você mudar de ideia, pode descartar suas edições clicando no botão vermelho "Descartar alterações", também à direita do título da página.</p>
+Quando você termina uma edição com seu preview, você pode salvar seu trabalho e comentários clicando no botão verde "Salvar alterações" à direita do título da página. Se você mudar de ideia, pode descartar suas edições clicando no botão vermelho "Descartar alterações", também à direita do título da página.
 
-<p>Pressionar <strong>Enter</strong> no comentário da revisão é equivalente a clicar em "Salvar e continuar editando".</p>
+Pressionar **Enter** no comentário da revisão é equivalente a clicar em "Salvar e continuar editando".
 
-<h2 id="Criando_uma_nova_página">Criando uma nova página</h2>
+## Criando uma nova página
 
-<p>Se você não sabe onde colocar seu artigo, <strong>não se preocupe sobre isso!</strong> Coloque-o em qualquer local e nós vamos encontrá-lo e movê-lo para onde ele pertence, ou mesclá-lo em conteúdo existente se for mais apropriado. Você também não precisa se preocupar sobre deixar tudo perfeito. Nós temos gnomos ajudantes felizes que vão ajudá-lo deixar seu conteúdo lindo.</p>
+Se você não sabe onde colocar seu artigo, **não se preocupe sobre isso!** Coloque-o em qualquer local e nós vamos encontrá-lo e movê-lo para onde ele pertence, ou mesclá-lo em conteúdo existente se for mais apropriado. Você também não precisa se preocupar sobre deixar tudo perfeito. Nós temos gnomos ajudantes felizes que vão ajudá-lo deixar seu conteúdo lindo.
 
-<p>Há algumas maneiras de criar uma nova página:</p>
+Há algumas maneiras de criar uma nova página:
 
-<ul>
- <li><a href="#link-para-pagina-inexistente">Link para "página inexistente"</a></li>
- <li><a href="#nova-pagina-sem-link">Nova página sem link</a></li>
- <li><a href="#subpagina-de-uma-pagina-existente">Subpágina de uma página existente</a></li>
- <li><a href="#clone-de-uma-pagina-existente">Clone de uma página existente</a></li>
- <li><a href="#link-para-uma-pagina-existente">Link para página existente</a></li>
-</ul>
+- [Link para "página inexistente"](#link-para-pagina-inexistente)
+- [Nova página sem link](#nova-pagina-sem-link)
+- [Subpágina de uma página existente](#subpagina-de-uma-pagina-existente)
+- [Clone de uma página existente](#clone-de-uma-pagina-existente)
+- [Link para página existente](#link-para-uma-pagina-existente)
 
-<h3 id="Link_para_uma_página_inexistente"><a id="link-para-pagina-inexistente" name="link-para-pagina-inexistente">Link para uma página inexistente</a></h3>
+### Link para uma página inexistente
 
-<p>Como na maioria das wikis, na MDN é possível criar links para uma página que ainda não existe. Por exemplo, um autor pode criar uma lista de todos os membros de uma API, antes de criar as páginas para esses membros. Na MDN, links para página inexistentes geralmente são exibidos em vermelho.</p>
+Como na maioria das wikis, na MDN é possível criar links para uma página que ainda não existe. Por exemplo, um autor pode criar uma lista de todos os membros de uma API, antes de criar as páginas para esses membros. Na MDN, links para página inexistentes geralmente são exibidos em vermelho.
 
-<p>Para criar um link para uma "página inexistente":</p>
+Para criar um link para uma "página inexistente":
 
-<ol>
- <li>Certifique-se que você está logado na MDN. (Se você não estiver, vai receber um erro 404).</li>
- <li>Clique no link "página inexistente". O <a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Editor">MDN Editor UI</a> abrirá, pronto para você criar a página inexistente.</li>
- <li>Escreva o conteúdo da página e salve-a.</li>
-</ol>
+1.  Certifique-se que você está logado na MDN. (Se você não estiver, vai receber um erro 404).
+2.  Clique no link "página inexistente". O [MDN Editor UI](/pt-BR/docs/MDN/Contribute/Editor) abrirá, pronto para você criar a página inexistente.
+3.  Escreva o conteúdo da página e salve-a.
 
-<h3 id="Nova_página_sem_link"><a name="nova-pagina-sem-link">Nova página sem link</a></h3>
+### Nova página sem link
 
-<p><em>Para criar uma nova página sem linkar de outra página</em>, informe o nome único de uma página na barra de endereços do seu navegador. Por exemplo, se você inserir:</p>
+_Para criar uma nova página sem linkar de outra página_, informe o nome único de uma página na barra de endereços do seu navegador. Por exemplo, se você inserir:
 
-<pre class="language-html">https://developer.mozilla.org/en-US/docs/FooBar</pre>
+```html
+https://developer.mozilla.org/en-US/docs/FooBar
+```
 
-<p>O MDN cria uma nova página com o título "FooBar" e abre o editor para você inserir o conteúdo nessa página. Veja a sessão "<a href="#Editando uma págia existente">Editando uma página existente</a>" nesse artigo para ver como usar o editor.</p>
+O MDN cria uma nova página com o título "FooBar" e abre o editor para você inserir o conteúdo nessa página. Veja a sessão "[Editando uma página existente](<#Editando uma págia existente>)" nesse artigo para ver como usar o editor.
 
-<h3 id="Subpágina_de_uma_página_existente"><a id="subpagina-de-uma-pagina-existente" name="subpagina-de-uma-pagina-existente">Subpágina de uma página existente</a></h3>
+### Subpágina de uma página existente
 
-<p>Para criar uma subpágina que você quer que seja filha de uma página existente:</p>
+Para criar uma subpágina que você quer que seja filha de uma página existente:
 
-<ol>
- <li>Na página "pai", clique no menu <strong>Avançado</strong> (o ícone de engrenagem na barra de ferramentas) e clique em <strong>Nova subpágina</strong>.</li>
- <li>Digite um título para o documento no campo <strong>Título</strong>.</li>
- <li>Mude o <strong>Slug</strong> se necessário (por exemplo, se o título for muito longo e você quiser um título menor). Esse campo é gerado automaticamente pelo editor, substituindo underlines por espaços no título. Nesse caso, você pode mudar apenas a última parte da URL do documento.</li>
-</ol>
+1.  Na página "pai", clique no menu **Avançado** (o ícone de engrenagem na barra de ferramentas) e clique em **Nova subpágina**.
+2.  Digite um título para o documento no campo **Título**.
+3.  Mude o **Slug** se necessário (por exemplo, se o título for muito longo e você quiser um título menor). Esse campo é gerado automaticamente pelo editor, substituindo underlines por espaços no título. Nesse caso, você pode mudar apenas a última parte da URL do documento.
 
-<h3 id="Clone_de_uma_página_existente"><a id="clone-de-uma-pagina-existente" name="clone-de-uma-pagina-existente">Clone de uma página existente</a></h3>
+### Clone de uma página existente
 
-<p>Se houver uma página existente cujo formato você quer usar numa página nova, você pode clonar essa página e mudar seu conteúdo</p>
+Se houver uma página existente cujo formato você quer usar numa página nova, você pode clonar essa página e mudar seu conteúdo
 
-<ol>
- <li>Na página original, clique no menu <strong>Avançado</strong> (o ícone de engrenagem na barra de ferramentas) e clique em <strong>Clonar essa página</strong>. O editor vai abrir para que você mude seu conteúdo.</li>
- <li>Mude o <strong>Título</strong> da página conforme apropriado. O campo <strong>Slug</strong> é atualizado automaticamente quando você muda o campo <strong>Título</strong>.</li>
- <li>Se necessário, mude o caminho do campo <strong>Slug</strong> para colocar o documento em uma parte diferente da hierarquia dele.</li>
- <li>No campo <strong>TOC</strong>, selecione os níveis de cabeçalho que você quer que sejam automaticamente exibidos na tabela de conteúdo da página, ou "Sem tabela de conteúdos" se a página não precisar de uma.</li>
- <li>Escreva o conteúdo da página e salve suas alterações. Veja a sessão "<a href="#Editando uma págia existente">Editando uma página existente</a>" nesse artigo para ver como usar o editor.</li>
-</ol>
+1.  Na página original, clique no menu **Avançado** (o ícone de engrenagem na barra de ferramentas) e clique em **Clonar essa página**. O editor vai abrir para que você mude seu conteúdo.
+2.  Mude o **Título** da página conforme apropriado. O campo **Slug** é atualizado automaticamente quando você muda o campo **Título**.
+3.  Se necessário, mude o caminho do campo **Slug** para colocar o documento em uma parte diferente da hierarquia dele.
+4.  No campo **TOC**, selecione os níveis de cabeçalho que você quer que sejam automaticamente exibidos na tabela de conteúdo da página, ou "Sem tabela de conteúdos" se a página não precisar de uma.
+5.  Escreva o conteúdo da página e salve suas alterações. Veja a sessão "[Editando uma página existente](<#Editando uma págia existente>)" nesse artigo para ver como usar o editor.
 
-<h3 id="Link_para_uma_página_existente"><a name="link-para-uma-pagina-existente">Link para uma página existente</a></h3>
+### Link para uma página existente
 
-<p>Esse método é um pouco híbrido. Você pode criar um link em outra página, e clicar no link que você inseriu, para criar a nova página.</p>
+Esse método é um pouco híbrido. Você pode criar um link em outra página, e clicar no link que você inseriu, para criar a nova página.
 
-<ol>
- <li>Digite o nome da página nova em qualquer lugar (que faça sentido) no texto de uma página existente.</li>
- <li>Selecione o nome e clique no <strong>ícone de link (<img alt="" src="https://developer.mozilla.org/files/3810/link-icon.png">)</strong> na barra de ferramentas do editor. A caixa de diálogo para "<strong>Atualizar Link"</strong> vai abrir com o texto selecionado no campo "<strong>Linkar para</strong>".</li>
- <li>"/pt-BR/docs/" é inserido por padrão no começo do campo URL. Insira o nome da página depois de "/pt-BR/docs/". (O nome da página não tem de ser o mesmo texto do link).</li>
- <li>Clique em OK para criar e inserir o link.</li>
-</ol>
+1.  Digite o nome da página nova em qualquer lugar (que faça sentido) no texto de uma página existente.
+2.  Selecione o nome e clique no **ícone de link (![](https://developer.mozilla.org/files/3810/link-icon.png))** na barra de ferramentas do editor. A caixa de diálogo para "**Atualizar Link"** vai abrir com o texto selecionado no campo "**Linkar para**".
+3.  "/pt-BR/docs/" é inserido por padrão no começo do campo URL. Insira o nome da página depois de "/pt-BR/docs/". (O nome da página não tem de ser o mesmo texto do link).
+4.  Clique em OK para criar e inserir o link.
 
-<p>Se a página já não existir, o link é mostrado em vermelho. Se a página já existir, o link é mostrado em azul. Se você quiser criar uma nova página mas o título da página que você quer já estiver sendo usado, verifique primeiro se não faz mais sentido ajudar a editar o conteúdo existente. Senão, pense num título diferente para sua nova página e crie um link para ela. Veja o <a href="/pt-BR/docs/MDN/Contribute/Content/Style_guide">guia para nomear páginas</a>.</p>
+Se a página já não existir, o link é mostrado em vermelho. Se a página já existir, o link é mostrado em azul. Se você quiser criar uma nova página mas o título da página que você quer já estiver sendo usado, verifique primeiro se não faz mais sentido ajudar a editar o conteúdo existente. Senão, pense num título diferente para sua nova página e crie um link para ela. Veja o [guia para nomear páginas](/pt-BR/docs/MDN/Contribute/Content/Style_guide).
 
-<p>Para adicionar conteúdo para sua nova página, clique no link vermelho que você acabou de criar (depois de salvar e fechar o editor). A nova página abre no modo de edição, assim você pode começar a editar o conteúdo. Veja a sessão "<a href="#Editando uma págia existente">Editando uma página existente</a>" nesse artigo para ver como usar o editor.</p>
+Para adicionar conteúdo para sua nova página, clique no link vermelho que você acabou de criar (depois de salvar e fechar o editor). A nova página abre no modo de edição, assim você pode começar a editar o conteúdo. Veja a sessão "[Editando uma página existente](<#Editando uma págia existente>)" nesse artigo para ver como usar o editor.
 
-<h2 id="Atualizando_o_conteúdo_da_página">Atualizando o conteúdo da página</h2>
+## Atualizando o conteúdo da página
 
-<p>O suporte do MDN para macros KumaScript e transclusão de conteúdo de uma página para outra pode algumas vezes ser dificultada pela necessidade de fazer um cache das páginas geradas para melhorar a performance. Páginas são feitas do seu código-fonte, e a saída é cacheada para requisições futuras. A partir de lá, quaisquer macros (templates) ou transclusões (utilizando a macro Page) na página não vão refletir mudanças feitar para o macro, a saída do macro, ou o conteúdo do material transcluso.</p>
+O suporte do MDN para macros KumaScript e transclusão de conteúdo de uma página para outra pode algumas vezes ser dificultada pela necessidade de fazer um cache das páginas geradas para melhorar a performance. Páginas são feitas do seu código-fonte, e a saída é cacheada para requisições futuras. A partir de lá, quaisquer macros (templates) ou transclusões (utilizando a macro Page) na página não vão refletir mudanças feitar para o macro, a saída do macro, ou o conteúdo do material transcluso.
 
-<ul>
- <li>Para atualizar a página manualmente, você pode forçar uma atualização no seu browser. MDN detecta esse gatilho e a página é refeita, inserindo a atualização feita pela saída do macro e o conteúdo da página.</li>
- <li>Você também pode configurar páginas para serem refeitas periodicamente. Isso não deve ser feito a não ser que você precise que  a página seja atualizada frequentemente. Veja <a href="/pt-BR/docs/MDN/Contribute/Tools/Page_regeneration">regeneração de página</a> para detalhes.</li>
-</ul>
+- Para atualizar a página manualmente, você pode forçar uma atualização no seu browser. MDN detecta esse gatilho e a página é refeita, inserindo a atualização feita pela saída do macro e o conteúdo da página.
+- Você também pode configurar páginas para serem refeitas periodicamente. Isso não deve ser feito a não ser que você precise que a página seja atualizada frequentemente. Veja [regeneração de página](/pt-BR/docs/MDN/Contribute/Tools/Page_regeneration) para detalhes.
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/pt-BR/docs/MDN/Contribute/Editor">Guia do editor do MDN</a></li>
- <li><a href="/pt-BR/docs/MDN/Contribute/Content/Style_guide">Guia de estilos do MDN</a></li>
-</ul>
+- [Guia do editor do MDN](/pt-BR/docs/MDN/Contribute/Editor)
+- [Guia de estilos do MDN](/pt-BR/docs/MDN/Contribute/Content/Style_guide)

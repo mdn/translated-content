@@ -10,50 +10,45 @@ tags:
   - Novos Contribuidores
 original_slug: MDN/Contribute/Getting_started
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p>Somos uma comunidade aberta de desenvolvedores construindo recursos para uma web melhor, independente de marca, navegador ou plataforma. Qualquer pessoa pode contribuir e cada contribuição nos torna mais fortes. Juntos podemos conduzir inovações na Web para servir ao bem maior. E começa aqui, com você.</p>
+Somos uma comunidade aberta de desenvolvedores construindo recursos para uma web melhor, independente de marca, navegador ou plataforma. Qualquer pessoa pode contribuir e cada contribuição nos torna mais fortes. Juntos podemos conduzir inovações na Web para servir ao bem maior. E começa aqui, com você.
 
-<p><span>Cada parte do MDN (documentações, demos e o próprio site) são criados por uma comunidade aberta de desenvolvedores. Por favor, junte-se a nós!</span></p>
+Cada parte do MDN (documentações, demos e o próprio site) são criados por uma comunidade aberta de desenvolvedores. Por favor, junte-se a nós!
 
-<h2 id="4_simple_steps_to_MDN">4 passos simples para o MDN</h2>
+## 4 passos simples para o MDN
 
-<p>MDN é uma fonte de código aberto na qual <strong>qualquer pessoa</strong> pode adicionar ou editar conteúdo. Você não precisa ser um programador ou saber muito sobre tecnologia. Existe uma variedade de tarefas que precisam ser feitas, das mais simples (Revisão e correção de erros de digitação) até as mais complexas (escrever documentação de API).</p>
+MDN é uma fonte de código aberto na qual **qualquer pessoa** pode adicionar ou editar conteúdo. Você não precisa ser um programador ou saber muito sobre tecnologia. Existe uma variedade de tarefas que precisam ser feitas, das mais simples (Revisão e correção de erros de digitação) até as mais complexas (escrever documentação de API).
 
-<p>Contribuir é fácil e seguro. Caso você cometa algum erro, este pode ser facilmente corrigido. Se você não sabe exatamente como as coisas deveriam parecer, ou se a sua gramática não é assim tão boa, não se preocupe! Temos uma equipe cujo trabalho é garantir que o conteúdo do MDN esteja o melhor possível. Alguém verificará seu trabalho para garantir que esteja correto e bem escrito. Compartilhe o que você sabe e siga seus pontos fortes.</p>
+Contribuir é fácil e seguro. Caso você cometa algum erro, este pode ser facilmente corrigido. Se você não sabe exatamente como as coisas deveriam parecer, ou se a sua gramática não é assim tão boa, não se preocupe! Temos uma equipe cujo trabalho é garantir que o conteúdo do MDN esteja o melhor possível. Alguém verificará seu trabalho para garantir que esteja correto e bem escrito. Compartilhe o que você sabe e siga seus pontos fortes.
 
-<h3>Passo 1: Crie uma conta no GitHub</h3>
+### Passo 1: Crie uma conta no GitHub
 
-<p>Para começar a contribuir no MDN, você precisa <a href="https://github.com/mdn/content/#setup">criar uma conta no GitHub</a>.</p>
+Para começar a contribuir no MDN, você precisa [criar uma conta no GitHub](https://github.com/mdn/content/#setup).
 
+### Passo 2: Escolha uma tarefa
 
-<h3 id="Step_2_Pick_a_task_to_complete">Passo 2: Escolha uma tarefa</h3>
+Agora que você está logado, leia as descrições dos diferentes tipos de tarefas disponíveis na [página principal de Contribuição](/pt-BR/docs/MDN/Contribute), e escolha a que te agradar mais. Você pode escolher qualquer tarefa que gostar para iniciar sua contribuição.
 
-<p>Agora que você está logado, leia as descrições dos diferentes tipos de tarefas disponíveis na <a href="/pt-BR/docs/MDN/Contribute">página principal de Contribuição</a>, e escolha a que te agradar mais. Você pode escolher qualquer tarefa que gostar para iniciar sua contribuição.</p>
+### Passo 3: Faça a tarefa
 
-<h3 id="Step_3_Do_the_task">Passo 3: Faça a tarefa</h3>
+Assim que decidir que tipo de tarefa você quer fazer, procure uma página específica, exemplo de código e quaisquer outros recursos disponíveis para trabalhar e faça!
 
-<p>Assim que decidir que tipo de tarefa você quer fazer, procure uma página específica, exemplo de código e quaisquer outros recursos disponíveis para trabalhar e faça!</p>
+### Passo 4: Peça ajuda
 
-<h3 id="Step_4_Ask_for_help">Passo 4: Peça ajuda</h3>
+Se você não tiver certeza do que fazer em qualquer momento, então você está mais que bem-vindo para pedir ajuda. Existem algumas opções diferentes de ajuda:
 
-<p>Se você não tiver certeza do que fazer em qualquer momento, então você está mais que bem-vindo para pedir ajuda. Existem algumas opções diferentes de ajuda:</p>
+- Se você quer falar conosco de forma síncrona e perguntar sobre o MDN em si, junte-se a discussão no [chat da Documentação Web do MDN](https://chat.mozilla.org/#/room/#mdn:mozilla.org) no [Matrix](https://wiki.mozilla.org/Matrix).
+- Você também pode enviar um email para <mdn-admins@mozilla.org>.
+- Se você está aprendendo desenvolvimento web e está emperrado em um problema de código, nós temos [fórums ativos](https://discourse.mozilla.org/c/mdn/learn/250) nos quais você pode fazer perguntas e obter ajuda.
 
-<ul>
- <li>Se você quer falar conosco de forma síncrona e perguntar sobre o MDN em si, junte-se a discussão no <a href="https://chat.mozilla.org/#/room/#mdn:mozilla.org">chat da Documentação Web do MDN</a> no <a href="https://wiki.mozilla.org/Matrix">Matrix</a>.</li>
- <li>Você também pode enviar um email para <a href="mailto:mdn-admins@mozilla.org">mdn-admins@mozilla.org</a>.</li>
- <li>Se você está aprendendo desenvolvimento web e está emperrado em um problema de código, nós temos <a href="https://discourse.mozilla.org/c/mdn/learn/250">fórums ativos</a> nos quais você pode fazer perguntas e obter ajuda.</li>
-</ul>
+Não se preocupe em fazer tudo perfeito; outros colaboradores do MDN estão aqui para ajudar a corrigir os erros que passaram despercebidos.
 
-<p>Não se preocupe em fazer tudo perfeito; outros colaboradores do MDN estão aqui para ajudar a corrigir os erros que passaram despercebidos.</p>
+## Guias completos úteis para iniciantes
 
-<h2 id="useful_complete_beginners_guides">Guias completos úteis para iniciantes</h2>
+Nós esperamos que os contribuidores do MDN tenham uma certa quantidade de conhecimento prévio antes de começar a trabalhar no conteúdo. Se você é novo nos tópicos a seguir, nós aconselhamos que você visite os links fornecidos para te ajudar a começar mais rapidamente:
 
-<p>Nós esperamos que os contribuidores do MDN tenham uma certa quantidade de conhecimento prévio antes de começar a trabalhar no conteúdo. Se você é novo nos tópicos a seguir, nós aconselhamos que você visite os links fornecidos para te ajudar a começar mais rapidamente:</p>
-
-<ul>
-  <li>Tecnologias Web: Se você é novo com HTML, CSS, JavaScript, etc., confira nossos tutoriais para <a href="/pt-BR/docs/Learn">Aprender desenvolvimento web</a>.</li>
-  <li>Código aberto: Se você nunca contribuiu com um projeto de código aberto antes, leia <a href="/pt-BR/docs/MDN/Contribute/Open_source_etiquette">Etiqueta básica para projetos de código aberto</a>.</li>
-  <li>Git e GitHub: Se você não está familiarizado com estas ferramentas, <a href="/pt-BR/docs/MDN/Contribute/GitHub_beginners">GitHub para iniciantes</a> vai te ajudar a começar.</li>
-  <li>Estrutura de repositórios do MDN: Se você não está certo sobre qual repositório editar para mudar diferentes partes do conteúdo do MDN, <a href="/pt-BR/docs/MDN/Contribute/Where_is_everything">Onde está tudo no MDN?</a> será seu ponto de entrada para os lugares certos.</li>
-</ul>
+- Tecnologias Web: Se você é novo com HTML, CSS, JavaScript, etc., confira nossos tutoriais para [Aprender desenvolvimento web](/pt-BR/docs/Learn).
+- Código aberto: Se você nunca contribuiu com um projeto de código aberto antes, leia [Etiqueta básica para projetos de código aberto](/pt-BR/docs/MDN/Contribute/Open_source_etiquette).
+- Git e GitHub: Se você não está familiarizado com estas ferramentas, [GitHub para iniciantes](/pt-BR/docs/MDN/Contribute/GitHub_beginners) vai te ajudar a começar.
+- Estrutura de repositórios do MDN: Se você não está certo sobre qual repositório editar para mudar diferentes partes do conteúdo do MDN, [Onde está tudo no MDN?](/pt-BR/docs/MDN/Contribute/Where_is_everything) será seu ponto de entrada para os lugares certos.

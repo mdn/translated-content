@@ -8,54 +8,46 @@ tags:
 translation_of: MDN/Contribute/Feedback
 original_slug: MDN/Contribute/Feedback
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}{{IncludeSubnav("/en-US/docs/MDN")}}
 
-<div>{{IncludeSubnav("/en-US/docs/MDN")}}</div>
+Bem-vindo ao Mozilla Developer Network! Se você tem sugestões, ou está tendo problemas usando MDN, este é o lugar certo para estar. O fato de que você está interessado em oferecer um feedback, faz de você mais uma parte da comunidade Mozilla e agradecemos antecipadamente por seu interesse.
 
-<p>Bem-vindo ao Mozilla Developer Network! Se você tem sugestões, ou está tendo problemas usando MDN, este é o lugar certo para estar. O fato de que você está interessado em oferecer um feedback, faz de você mais uma parte da comunidade Mozilla e agradecemos antecipadamente por seu interesse.</p>
+Você tem várias opções para oferecer suas idéias. Este artigo irá ajudá-lo a fazê-lo.
 
-<p><span class="seoSummary">Você tem várias opções para oferecer suas idéias. Este artigo irá ajudá-lo a fazê-lo.</span></p>
+## Atualizar a documentação
 
-<h2 id="Atualizar_a_documentação">Atualizar a documentação</h2>
+Primeiro de tudo, se você ver algum problema com a documentação, você deve sempre se sentir livre para corrigir por si mesmo.
 
-<p>Primeiro de tudo, se você ver algum problema com a documentação, você deve sempre se sentir livre para corrigir por si mesmo.</p>
+1.  Você pode efetuar o [login](/pt-BR/docs/MDN/Contribute/Howto/Create_an_MDN_account) com sua conta do [Github](https://github.com/) ou do [Persona](https://www.persona.org/).
+2.  Após efetuar o login, clique no botão **Editar** (em azul) em qualquer página para que o [editor](/pt-BR/docs/MDN/Contribute/Editor) seja aberto.
+3.  Clique no botão **Publicar** (em verde) quando você terminar suas correções.
 
-<ol>
- <li>Você pode efetuar o <a href="/en-US/docs/MDN/Contribute/Howto/Create_an_MDN_account">login</a> com sua conta do <a href="https://github.com/">Github</a> ou do <a href="https://www.persona.org/">Persona</a>.</li>
- <li>Após efetuar o login, clique no botão <strong>Editar</strong> (em azul) em qualquer página para que o <a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Editor">editor</a> seja aberto.</li>
- <li>Clique no botão <strong>Publicar</strong> (em verde) quando você terminar suas correções.</li>
-</ol>
+A Documentação aqui é uma wiki, e é curada por uma equipe de voluntários e funcionários remunerados, então não seja tímido — sua gramática não precisa ser perfeita. Nós vamos arrumar se você cometer um erro; sem nenhum problema!
 
-<p>A Documentação aqui é uma wiki, e é curada por uma equipe de voluntários e funcionários remunerados, então não seja tímido — sua gramática não precisa ser perfeita. Nós vamos arrumar se você cometer um erro; sem nenhum problema!</p>
+Para mais informações sobre contribuir com a documentação da MDN, veja:
 
-<p>Para mais informações sobre contribuir com a documentação da MDN, veja:</p>
+- [Começando](/pt-BR/docs/Project:en/Project:Getting_started)
+- [Contribuindo para o MDN](/pt-BR/docs/MDN/Contribute)
+- [Guia do Editor MDN](/pt-BR/docs/MDN/Contribute/Editor)
 
-<ul>
- <li><a href="/pt-BR/docs/Project:en/Project:Getting_started">Começando</a></li>
- <li><a href="/pt-BR/docs/MDN/Contribute">Contribuindo para o MDN</a></li>
- <li><a href="/pt-BR/docs/MDN/Contribute/Editor">Guia do Editor MDN</a></li>
-</ul>
+## Junte-se à conversação
 
-<h2 id="Junte-se_à_conversação">Junte-se à conversação</h2>
+Fale conosco! Existem algumas maneiras de entrar em contato com outras pessoas que trabalham no conteúdo do MDN.
 
-<p>Fale conosco! Existem algumas maneiras de entrar em contato com outras pessoas que trabalham no conteúdo do MDN.</p>
+### Chat
 
-<h3 id="Chat">Chat</h3>
+### Email
 
-<p>
- </p><h3 id="Email">Email</h3>
+Discussões de longo-prazo acontecem em nossa mailing list, [dev-mdc@lists.mozilla.org](https://lists.mozilla.org/listinfo/dev-mdc). você postar na lista sem se inscrever nela, mas neste caso, sua postagem deve ser aprovada por um moderador, o que significa que levará mais tempo para que outros possam vê-lo. Você pode visualizar e postar em dev-mdc através de sua escolha de formatos:
 
+{{ DiscussionList("dev-mdc", "mozilla.dev.mdc") }}
 
-<p>Discussões de longo-prazo acontecem em nossa mailing list, <a href="https://lists.mozilla.org/listinfo/dev-mdc">dev-mdc@lists.mozilla.org</a>. você postar na lista sem se inscrever nela, mas neste caso, sua postagem deve ser aprovada por um moderador, o que significa que levará mais tempo para que outros possam vê-lo. Você pode visualizar e postar em dev-mdc através de sua escolha de formatos:</p>
+## Relatar um problema
 
-<p>{{ DiscussionList("dev-mdc", "mozilla.dev.mdc") }}</p>
+### Problemas na documentação
 
-<h2 id="Relatar_um_problema">Relatar um problema</h2>
+se você encontrar um problema na documentação e não puder corrigí-lo por qualquer motivo, você pode [reportar um problema](https://github.com/mdn/sprints/issues/new?template=issue-template.md&projects=mdn/sprints/2&labels=user-report)! Você pode usar este formulário para qualquer problema de documentação, seja uma correção simples ou uma solicitação para um conteúdo completamente novo. Como mencionado antes, nós convidamos você para contribuir com alterações por si mesmo, mas esta opção também está disponível para você.
 
-<h3 id="Problemas_na_documentação">Problemas na documentação</h3>
+### Problemas no site
 
-<p>se você encontrar um problema na documentação e não puder corrigí-lo por qualquer motivo, você pode <a href="https://github.com/mdn/sprints/issues/new?template=issue-template.md&amp;projects=mdn/sprints/2&amp;labels=user-report">reportar um problema</a>! Você pode usar este formulário para qualquer problema de documentação, seja uma correção simples ou uma solicitação para um conteúdo completamente novo. Como mencionado antes, nós convidamos você para contribuir com alterações por si mesmo, mas esta opção também está disponível para você.</p>
-
-<h3 id="Problemas_no_site">Problemas no site</h3>
-
-<p>se você encontrar problemas com o web site do MDN, ou tem idéias para novos recursos para o site, você pode <a href="https://bugzilla.mozilla.org/form.mdn">enviar um ticket para a equipe de desenvolvimento MDN</a>.</p>
+se você encontrar problemas com o web site do MDN, ou tem idéias para novos recursos para o site, você pode [enviar um ticket para a equipe de desenvolvimento MDN](https://bugzilla.mozilla.org/form.mdn).

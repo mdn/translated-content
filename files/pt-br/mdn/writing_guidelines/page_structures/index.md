@@ -4,107 +4,111 @@ slug: MDN/Writing_guidelines/Page_structures
 translation_of: MDN/Structures/Compatibility_tables
 original_slug: MDN/Structures/Compatibility_tables
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p>A MDN possui um formato padrão para tabelas de compatibilidade para nossa documentação da Web aberta; isto é, documentação de tecnologias como DOM, HTML, CSS, JavaScript, SVG etc., compartilhadas em todos os navegadores. Este artigo é um guia de "introdução" sobre como adicionar, manter o banco de dados a partir do qual as tabelas de compatibilidade são geradas e como integrar as tabelas em artigos.</p>
+A MDN possui um formato padrão para tabelas de compatibilidade para nossa documentação da Web aberta; isto é, documentação de tecnologias como DOM, HTML, CSS, JavaScript, SVG etc., compartilhadas em todos os navegadores. Este artigo é um guia de "introdução" sobre como adicionar, manter o banco de dados a partir do qual as tabelas de compatibilidade são geradas e como integrar as tabelas em artigos.
 
-<p>Para obter uma documentação mais avançada, bem como as alterações mais recentes nos processos e esquemas JSON usados ​​para representar os dados, consulte o <a href="https://github.com/mdn/browser-compat-data/blob/master/docs/contributing.md">guia do colaborador</a> do repositório de dados e o <a href="https://github.com/mdn/browser-compat-data/blob/master/docs/data-guidelines.md">guia de diretrizes de dados</a>.</p>
+Para obter uma documentação mais avançada, bem como as alterações mais recentes nos processos e esquemas JSON usados ​​para representar os dados, consulte o [guia do colaborador](https://github.com/mdn/browser-compat-data/blob/master/docs/contributing.md) do repositório de dados e o [guia de diretrizes de dados](https://github.com/mdn/browser-compat-data/blob/master/docs/data-guidelines.md).
 
-<p>Se você tiver dúvidas ou descobrir problemas, compartilhe conosco no <a href="https://discourse.mozilla-community.org/c/mdn">fórum de discussão da MDN</a>.</p>
+Se você tiver dúvidas ou descobrir problemas, compartilhe conosco no [fórum de discussão da MDN](https://discourse.mozilla-community.org/c/mdn).
 
-<h2 id="Como_acessar_o_repositório_de_dados">Como acessar o repositório de dados</h2>
+## Como acessar o repositório de dados
 
-<p>Os dados são armazenados em um repositório do GitHub — consulte <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>. Para acessá-lo, você precisa obter uma conta do GitHub, bifurcar (fork) o repositório de dados compatível com o navegador em sua própria conta e, em seguida, clonar seu fork na sua máquina local.</p>
+Os dados são armazenados em um repositório do GitHub — consulte <https://github.com/mdn/browser-compat-data>. Para acessá-lo, você precisa obter uma conta do GitHub, bifurcar (fork) o repositório de dados compatível com o navegador em sua própria conta e, em seguida, clonar seu fork na sua máquina local.
 
-<h2 id="Preparando_para_adicionar_os_dados">Preparando para adicionar os dados</h2>
+## Preparando para adicionar os dados
 
-<p>Antes de adicionar dados novos, verifique que o <em>fork </em>criado tenha o mesmo conteúdo que o repositório principal. Após isso, crie uma nova <em>branch, </em>dentro do<em> fork </em>criado, para conter as mudanças e adições a serem realizadas, em seguida, faça um <em>pull</em> dessa branch no clone local, para então começar a contribuir com o projeto.</p>
+Antes de adicionar dados novos, verifique que o _fork_ criado tenha o mesmo conteúdo que o repositório principal. Após isso, crie uma nova _branch,_ dentro do _fork_ criado, para conter as mudanças e adições a serem realizadas, em seguida, faça um _pull_ dessa branch no clone local, para então começar a contribuir com o projeto.
 
-<p>Uma forma simples para ter certeza que o seu <em>fork </em>tem o mesmo conteúdo, e está tão atualizado quanto o repositório principal, é descrita abaixo:</p>
+Uma forma simples para ter certeza que o seu _fork_ tem o mesmo conteúdo, e está tão atualizado quanto o repositório principal, é descrita abaixo:
 
-<h3 id="Adicionando_o_repositório_principal_browser-compat-data_como_um_controle_remoto">Adicionando o repositório principal browser-compat-data como um controle remoto</h3>
+### Adicionando o repositório principal browser-compat-data como um controle remoto
 
-<p>Vá para o clone local do seu fork no seu terminal/linha de comando e adicione um controle remoto apontando para o repositório principal (upstream) assim (você só precisa fazer isso uma vez):</p>
+Vá para o clone local do seu fork no seu terminal/linha de comando e adicione um controle remoto apontando para o repositório principal (upstream) assim (você só precisa fazer isso uma vez):
 
-<pre class="brush: bash notranslate">git remote add upstream https://github.com/mdn/browser-compat-data.git</pre>
+```bash
+git remote add upstream https://github.com/mdn/browser-compat-data.git
+```
 
-<p>Se não tiver certeza se fez isso, verifique os controles remotos que seu repositório está usando</p>
+Se não tiver certeza se fez isso, verifique os controles remotos que seu repositório está usando
 
-<pre class="brush: bash notranslate">git remote -v</pre>
+```bash
+git remote -v
+```
 
-<h3 id="Atualizando_seu_fork_com_o_conteúdo_do_controle_remoto">Atualizando seu fork com o conteúdo do controle remoto</h3>
+### Atualizando seu fork com o conteúdo do controle remoto
 
-<p>Agora, sempre que você quiser atualizar seu fork, você pode fazer isso:</p>
+Agora, sempre que você quiser atualizar seu fork, você pode fazer isso:
 
-<ol>
- <li>
-  <p>Certificando-se de que você está no branch master:</p>
+1.  Certificando-se de que você está no branch master:
 
-  <pre class="brush: bash notranslate">git checkout master</pre>
- </li>
- <li>
-  <p>buscando o conteúdo atualizado do repositório usando:</p>
+    ```bash
+    git checkout master
+    ```
 
-  <pre class="brush: bash notranslate">git fetch upstream</pre>
- </li>
- <li>
-  <p>faça o rebase do seu conteúdo master com o conteúdo do repositório principal:</p>
+2.  buscando o conteúdo atualizado do repositório usando:
 
-  <pre class="brush: bash notranslate">git rebase upstream/master</pre>
- </li>
- <li>
-  <p>faça o push dessas atualizações de volta ao seu fork remoto usando:</p>
+    ```bash
+    git fetch upstream
+    ```
 
-  <pre class="brush: bash notranslate">git push -f</pre>
- </li>
-</ol>
+3.  faça o rebase do seu conteúdo master com o conteúdo do repositório principal:
 
-<h3 id="Criando_um_novo_branch_ramo_para_fazer_o_seu_trabalho">Criando um novo branch (ramo) para fazer o seu trabalho</h3>
+    ```bash
+    git rebase upstream/master
+    ```
 
-<p>Em seguida, vá à sua bifurcação remota (será em <code>https://github.com/<em>seu-nome-de-usuario</em>/browser-compat-data</code>) e crie um novo ramo para guardar suas mudanças de adição de conteúdo. Isso pode ser feito em:</p>
+4.  faça o push dessas atualizações de volta ao seu fork remoto usando:
 
-<ol>
- <li>Clicando no botão "Branch: Master".</li>
- <li>Colocando um novo nome de ramo dentro do campo de texto de "Encontre ou crie seu ramo...".</li>
- <li>Clicando no botão "Criar ramo <em>nome-do-ramo</em> a partir de Master".</li>
-</ol>
+    ```bash
+    git push -f
+    ```
 
-<p>Por exemplo, se você quisesse adicionar informações sobre WebVR API, você criaria um ramno chamado algo como "webvr".</p>
+### Criando um novo branch (ramo) para fazer o seu trabalho
 
-<h3 id="Mudando_para_o_novo_branch_ramo">Mudando para o novo branch (ramo)</h3>
+Em seguida, vá à sua bifurcação remota (será em `https://github.com/seu-nome-de-usuario/browser-compat-data`) e crie um novo ramo para guardar suas mudanças de adição de conteúdo. Isso pode ser feito em:
 
-<p>Agora,volte para o seu terminal/linha de comando, e atualize seu clone local da sua bifurcação para incluir o seu novo ramo usando o seguinte comando:</p>
+1.  Clicando no botão "Branch: Master".
+2.  Colocando um novo nome de ramo dentro do campo de texto de "Encontre ou crie seu ramo...".
+3.  Clicando no botão "Criar ramo _nome-do-ramo_ a partir de Master".
 
-<pre class="brush: bash notranslate">git pull</pre>
+Por exemplo, se você quisesse adicionar informações sobre WebVR API, você criaria um ramno chamado algo como "webvr".
 
-<p>Agora troque para o seu ramo usando:</p>
+### Mudando para o novo branch (ramo)
 
-<pre class="brush: bash notranslate">git checkout<em> name-of-branch</em></pre>
+Agora,volte para o seu terminal/linha de comando, e atualize seu clone local da sua bifurcação para incluir o seu novo ramo usando o seguinte comando:
 
-<p>Agora você deveria estar pronto para adicionar seu conteúdo!</p>
+```bash
+git pull
+```
 
-<h2 id="Adicionando_os_dados">Adicionando os dados</h2>
+Agora troque para o seu ramo usando:
 
-<p>To add the data, you need to create a new file or files to store your compat data in. The files you need to create differ, depending on what technology you are working on:</p>
+```bash
+git checkout name-of-branch
+```
 
-<ul>
- <li>HTML: One file per HTML element, contained in <a href="https://github.com/mdn/browser-compat-data/tree/master/html/elements">browser-compat-data/html/elements</a>. The file should be called the name of the element, all in lower case, e.g. <code>div.json</code>.</li>
- <li>CSS: One file per CSS property or selector, contained in the appropriate directory (see <a href="https://github.com/mdn/browser-compat-data/tree/master/css">browser-compat-data/css</a>). The file should be called the name of the feature, all in lower case, e.g. <code>background-color.json</code>, or <code>hover.json</code>.</li>
- <li>JS: One file per JS object, contained in <a href="https://github.com/mdn/browser-compat-data/tree/master/javascript/builtins">browser-compat-data/javascript/builtins</a>. The file should be called the exact name of the object, with the casing preserved, e.g. <code>Date.json</code> or <code>InternalError.json</code>.</li>
- <li>APIs: One file per interface contained in the API, put in <a href="https://github.com/mdn/browser-compat-data/tree/master/api">browser-compat-data/api</a>. Each file should be called the exact name of the interface, with the casing preserved, e.g. The WebVR API has <code>VRDisplay.json</code>, <code>VRDisplayCapabilities.json</code>, etc.</li>
-</ul>
+Agora você deveria estar pronto para adicionar seu conteúdo!
 
-<div class="note">
-<p><strong>Note</strong>: You'll notice that the repo also contains data for <a href="/en-US/Add-ons/WebExtensions">Browser Extensions</a> and <a href="/en-US/docs/Web/HTTP">HTTP</a>. These data sets are basically finished as they stand, but more features may need to be added in the future.</p>
-</div>
+## Adicionando os dados
 
-<p>Each file you create has to follow the pattern defined in the schema contained within our repo; you can see the <a href="https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md">detailed schema description here</a>.</p>
+To add the data, you need to create a new file or files to store your compat data in. The files you need to create differ, depending on what technology you are working on:
 
-<h3 id="Estrutura_de_dados_de_compatibilidade_básica">Estrutura de dados de compatibilidade básica</h3>
+- HTML: One file per HTML element, contained in [browser-compat-data/html/elements](https://github.com/mdn/browser-compat-data/tree/master/html/elements). The file should be called the name of the element, all in lower case, e.g. `div.json`.
+- CSS: One file per CSS property or selector, contained in the appropriate directory (see [browser-compat-data/css](https://github.com/mdn/browser-compat-data/tree/master/css)). The file should be called the name of the feature, all in lower case, e.g. `background-color.json`, or `hover.json`.
+- JS: One file per JS object, contained in [browser-compat-data/javascript/builtins](https://github.com/mdn/browser-compat-data/tree/master/javascript/builtins). The file should be called the exact name of the object, with the casing preserved, e.g. `Date.json` or `InternalError.json`.
+- APIs: One file per interface contained in the API, put in [browser-compat-data/api](https://github.com/mdn/browser-compat-data/tree/master/api). Each file should be called the exact name of the interface, with the casing preserved, e.g. The WebVR API has `VRDisplay.json`, `VRDisplayCapabilities.json`, etc.
 
-<p>Let's look at an example. CSS property JSON files for example need the following basic structure:</p>
+> **Nota:** You'll notice that the repo also contains data for [Browser Extensions](/en-US/Add-ons/WebExtensions) and [HTTP](/pt-BR/docs/Web/HTTP). These data sets are basically finished as they stand, but more features may need to be added in the future.
 
-<pre class="brush: json notranslate">{
+Each file you create has to follow the pattern defined in the schema contained within our repo; you can see the [detailed schema description here](https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md).
+
+### Estrutura de dados de compatibilidade básica
+
+Let's look at an example. CSS property JSON files for example need the following basic structure:
+
+```json
+{
   "css": {
     "properties": {
       "border-width": {
@@ -114,55 +118,48 @@ original_slug: MDN/Structures/Compatibility_tables
       }
     }
   }
-}</pre>
+}
+```
 
-<p>You have the <code>css</code> object, inside of which is a <code>properties</code> object. Inside the <code>properties</code> object, you need one member for each of the specific features you want to define the compat data for. Each of these members has a <code>__compat</code> member, inside of which the actual data goes.</p>
+You have the `css` object, inside of which is a `properties` object. Inside the `properties` object, you need one member for each of the specific features you want to define the compat data for. Each of these members has a `__compat` member, inside of which the actual data goes.
 
-<p>The above data is found in the <a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/border-width.json">border-width.json</a> file — compare this to the <a href="/en-US/docs/Web/CSS/border-width#Browser_compatibility">rendered border-width support table on MDN</a>.</p>
+The above data is found in the [border-width.json](https://github.com/mdn/browser-compat-data/blob/master/css/properties/border-width.json) file — compare this to the [rendered border-width support table on MDN](/pt-BR/docs/Web/CSS/border-width#Browser_compatibility).
 
-<p>Other types of features work in the same way, but with different object names:</p>
+Other types of features work in the same way, but with different object names:
 
-<ul>
- <li>CSS selectors work in basically the same way as CSS properties, except that the top-level object structure is <code>css.selectors</code> instead of <code>css.properties</code>. See <a href="https://github.com/mdn/browser-compat-data/blob/master/css/selectors/cue.json">cue.json</a> for an example.</li>
- <li>HTML data works in basically the same way, except that the top-level object structure is <code>html.elements</code>. See <code>article.json</code> for an example.</li>
- <li>The top level object structure for JS built-in objects is <code>javascript.builtins</code>; see <a href="https://github.com/mdn/browser-compat-data/blob/master/javascript/builtins/Array.json">Array.json</a> for an example.</li>
-</ul>
+- CSS selectors work in basically the same way as CSS properties, except that the top-level object structure is `css.selectors` instead of `css.properties`. See [cue.json](https://github.com/mdn/browser-compat-data/blob/master/css/selectors/cue.json) for an example.
+- HTML data works in basically the same way, except that the top-level object structure is `html.elements`. See `article.json` for an example.
+- The top level object structure for JS built-in objects is `javascript.builtins`; see [Array.json](https://github.com/mdn/browser-compat-data/blob/master/javascript/builtins/Array.json) for an example.
 
-<div>
-<p>In HTML, CSS, and JS pages, you'll normally only need one feature. API interfaces work slightly differently — they always have multiple sub-features (see <a href="#sub-features">Sub-features</a>, below).</p>
+In HTML, CSS, and JS pages, you'll normally only need one feature. API interfaces work slightly differently — they always have multiple sub-features (see [Sub-features](#sub-features), below).
 
-<h3 id="Estrutura_básica_dentro_de_um_recurso">Estrutura básica dentro de um recurso</h3>
+### Estrutura básica dentro de um recurso
 
-<p>Inside a feature <code>__compat</code> member, you need to include the following members:</p>
+Inside a feature `__compat` member, you need to include the following members:
 
-<ul>
- <li><code>mdn_url</code>: Contains the URL of the reference page for this feature on MDN. Note that this needs to be written without the locale directory inside, e.g. <code>/docs/...</code> not <code>/docs/en-US/...</code> (or whatever). This is added in by the macro when the data is put on the page, for localization purposes.</li>
- <li><code>support</code>: Contains members representing the browser support information for this feature in all the different browsers we want to report.</li>
- <li><code>status</code>: Contains members reporting the standards track status of this feature.</li>
-</ul>
+- `mdn_url`: Contains the URL of the reference page for this feature on MDN. Note that this needs to be written without the locale directory inside, e.g. `/docs/...` not `/docs/en-US/...` (or whatever). This is added in by the macro when the data is put on the page, for localization purposes.
+- `support`: Contains members representing the browser support information for this feature in all the different browsers we want to report.
+- `status`: Contains members reporting the standards track status of this feature.
 
-<p>The names of the browser members are defined in the schema (see <a href="https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md#browser-identifiers">Browser identifiers</a>). You should use the full list of currently defined identifiers. If you wish to add another browser, talk to us first, as this could have a wide-ranging impact and should not be done without careful thought.</p>
+The names of the browser members are defined in the schema (see [Browser identifiers](https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md#browser-identifiers)). You should use the full list of currently defined identifiers. If you wish to add another browser, talk to us first, as this could have a wide-ranging impact and should not be done without careful thought.
 
-<p>In a basic browser compat data file, you'll only need to include "version_added" inside the browser identifier members (we'll cover <a href="#advanced_cases">Advanced cases</a> later on). The different values you might want to include are as follows:</p>
+In a basic browser compat data file, you'll only need to include "version_added" inside the browser identifier members (we'll cover [Advanced cases](#advanced_cases) later on). The different values you might want to include are as follows:
 
-<ul>
- <li>A version number: If you know the exact version in which a browser started to support your feature, use a string representing the number, e.g. "47".</li>
- <li><code>true</code>: If a browser supports a feature but you don't know the exact version number, use the value <code>true</code>. This equivalent to the <code>\{{CompatVersionUnknown}}</code> macro call in the old manual tables.</li>
- <li><code>false</code>: If a browser does not support a feature, use the value <code>false</code>. This is equivalent to the the <code>\{{CompatNo}}</code> macro call in the old manual tables.</li>
- <li><code>null</code>: If you don't know whether a browser supports a feature or not, use the value <code>null</code>. This is equivalent to the <code>\{{CompatUnknown}}</code> macro call in the old manual tables.</li>
-</ul>
+- A version number: If you know the exact version in which a browser started to support your feature, use a string representing the number, e.g. "47".
+- `true`: If a browser supports a feature but you don't know the exact version number, use the value `true`. This equivalent to the `\{{CompatVersionUnknown}}` macro call in the old manual tables.
+- `false`: If a browser does not support a feature, use the value `false`. This is equivalent to the the `\{{CompatNo}}` macro call in the old manual tables.
+- `null`: If you don't know whether a browser supports a feature or not, use the value `null`. This is equivalent to the `\{{CompatUnknown}}` macro call in the old manual tables.
 
-<p>Inside the <code>status</code> member, you'll include three submembers:</p>
+Inside the `status` member, you'll include three submembers:
 
-<ul>
- <li> "experimental": This should be set to <code>true</code> if the feature is <a href="/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental">experimental</a>, or <code>false</code> otherwise.</li>
- <li>"standard_track": This should be set to <code>true</code> if a feature is on some kind of standards track (most commonly W3C/WHATWG, but there are also other standards efforts such as Khronos, TC39, etc.) or <code>false</code> otherwise.</li>
- <li>"deprecated": This should be set to <code>true</code> if the feature is <a href="/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Deprecated_and_obsolete">deprecated</a>, or <code>false</code> otherwise.</li>
-</ul>
+- "experimental": This should be set to `true` if the feature is [experimental](/pt-BR/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental), or `false` otherwise.
+- "standard_track": This should be set to `true` if a feature is on some kind of standards track (most commonly W3C/WHATWG, but there are also other standards efforts such as Khronos, TC39, etc.) or `false` otherwise.
+- "deprecated": This should be set to `true` if the feature is [deprecated](/pt-BR/docs/MDN/Contribute/Guidelines/Conventions_definitions#Deprecated_and_obsolete), or `false` otherwise.
 
-<p>The feature data for <a href="/en-US/docs/Web/CSS/border-width#Browser_compatibility">border-width</a> (also see <a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/border-width.json">border-width.json</a>) is shown below as an example:</p>
+The feature data for [border-width](/pt-BR/docs/Web/CSS/border-width#Browser_compatibility) (also see [border-width.json](https://github.com/mdn/browser-compat-data/blob/master/css/properties/border-width.json)) is shown below as an example:
 
-<pre class="brush: json notranslate">"__compat": {
+```json
+"__compat": {
   "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/border-width",
   "support": {
     "chrome": {
@@ -207,13 +204,15 @@ original_slug: MDN/Structures/Compatibility_tables
     "standard_track": true,
     "deprecated": false
   }
-}</pre>
+}
+```
 
-<h4 id="Adicionando_uma_descrição">Adicionando uma descrição</h4>
+#### Adicionando uma descrição
 
-<p>There is a fourth, optional, member that can go inside the __compat member — <code>description</code>. This can be used to include a human-readable description of the feature. You should only include this if it is hard to see what the feature is from glancing at the data. For example, it might not be that obvious what a constructor is from looking at the data structure, so you can include a description like so:</p>
+There is a fourth, optional, member that can go inside the \_\_compat member — `description`. This can be used to include a human-readable description of the feature. You should only include this if it is hard to see what the feature is from glancing at the data. For example, it might not be that obvious what a constructor is from looking at the data structure, so you can include a description like so:
 
-<pre class="brush: json notranslate">{
+```json
+{
   "api": {
     "AbortController": {
       "__compat": {
@@ -222,7 +221,7 @@ original_slug: MDN/Structures/Compatibility_tables
       "AbortController": {
         "__compat": {
           "mdn_url": "https://developer.mozilla.org/docs/Web/API/AbortController/AbortController",
-          "description": "&lt;code&gt;AbortController()&lt;/code&gt; constructor",
+          "description": "<code>AbortController()</code> constructor",
           "support": {
             ...
           }
@@ -232,15 +231,17 @@ original_slug: MDN/Structures/Compatibility_tables
       ... etc.
     }
   }
-}</pre>
+}
+```
 
-<h3 id="Sub-recursos">Sub-recursos</h3>
+### Sub-recursos
 
-<p>In a page where the compat table has more than one row, you'll need multiple subfeatures inside each feature to define the information for each row. This can happen, for example, when you've got the basic support for a feature stored in one row, but then the feature also has a new property or value type that was addded much later in the specification's life and is only supported in a couple of browsers.</p>
+In a page where the compat table has more than one row, you'll need multiple subfeatures inside each feature to define the information for each row. This can happen, for example, when you've got the basic support for a feature stored in one row, but then the feature also has a new property or value type that was addded much later in the specification's life and is only supported in a couple of browsers.
 
-<p>As an example, see the <a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/background-color.json">compat data</a> and <a href="/en-US/docs/Web/CSS/background-color">corresponding MDN page</a> for the <code>background-color</code> property. The basic support exists inside the <code>__compat</code> object as explained above, then you have an additional row for browsers' support for "alpha channel for hex values", which contains its own <code>__compat</code> object.</p>
+As an example, see the [compat data](https://github.com/mdn/browser-compat-data/blob/master/css/properties/background-color.json) and [corresponding MDN page](/pt-BR/docs/Web/CSS/background-color) for the `background-color` property. The basic support exists inside the `__compat` object as explained above, then you have an additional row for browsers' support for "alpha channel for hex values", which contains its own `__compat` object.
 
-<pre class="brush: json notranslate">{
+```json
+{
   "css": {
     "properties": {
       "background-color": {
@@ -255,11 +256,13 @@ original_slug: MDN/Structures/Compatibility_tables
       }
     }
   }
-}</pre>
+}
+```
 
-<p>For an API, you've got the top two levels defined as <code>api.<em>name-of-the-interface</em></code>, then a top-level <code>__compat</code> section to define the overall browser compatibility of the interface, then a sub-feature for each of the methods, properties, and constructors contained inside the interface. The basic structure looks like this:</p>
+For an API, you've got the top two levels defined as `api.name-of-the-interface`, then a top-level `__compat` section to define the overall browser compatibility of the interface, then a sub-feature for each of the methods, properties, and constructors contained inside the interface. The basic structure looks like this:
 
-<pre class="brush: json notranslate">{
+```json
+{
   "api": {
     "VRDisplay": {
       "__compat": {
@@ -280,48 +283,51 @@ original_slug: MDN/Structures/Compatibility_tables
 
     }
   }
-}</pre>
+}
+```
 
-<p>See <a href="https://github.com/mdn/browser-compat-data/blob/master/api/VRDisplay.json">VRDisplay.json</a> for a full example.</p>
-</div>
+See [VRDisplay.json](https://github.com/mdn/browser-compat-data/blob/master/api/VRDisplay.json) for a full example.
 
-<h2 id="Adicionando_dados_Casos_avançados">Adicionando dados: Casos avançados</h2>
+## Adicionando dados: Casos avançados
 
-<p>There are some advanced features that you'll want to include in browser compat data. The aim of this section is to list the most common ones, providing an example of each to show how you can implement them in your own compat data.</p>
+There are some advanced features that you'll want to include in browser compat data. The aim of this section is to list the most common ones, providing an example of each to show how you can implement them in your own compat data.
 
-<h3 id="Incluindo_uma_nota_de_rodapé">Incluindo uma nota de rodapé</h3>
+### Incluindo uma nota de rodapé
 
-<p>Often compat tables will include footnotes related to certain entries that explain useful details or strange behavior that developers will find useful. As an example, the Chrome Android entry for {{domxref("VRDisplay.capabilities")}} (see also <a href="https://github.com/mdn/browser-compat-data/blob/master/api/VRDisplay.json">VRDisplay.json</a>)  (at the time of writing) had a footnote "Currently supported only by Google Daydream." To include this in the capabilities data, we added a "notes" submember inside the relevant "chrome_android" submember; it would look like this:</p>
+Often compat tables will include footnotes related to certain entries that explain useful details or strange behavior that developers will find useful. As an example, the Chrome Android entry for {{domxref("VRDisplay.capabilities")}} (see also [VRDisplay.json](https://github.com/mdn/browser-compat-data/blob/master/api/VRDisplay.json)) (at the time of writing) had a footnote "Currently supported only by Google Daydream." To include this in the capabilities data, we added a "notes" submember inside the relevant "chrome_android" submember; it would look like this:
 
-<pre class="brush: json notranslate">"chrome_android": {
+```json
+"chrome_android": {
   "version_added": true,
   "notes": "Currently supported only by Google Daydream."
-}</pre>
+}
+```
 
-<h3 id="Incluindo_um_prefixo_de_fornecedor">Incluindo um prefixo de fornecedor</h3>
+### Incluindo um prefixo de fornecedor
 
-<p>If a feature is supported behind a vendor prefix in one or more browsers, you'll want to make that clear in the browser compat data. imagine you had a feature that was supported with a <code>-moz-</code> prefix in Firefox. To specify this in the compat data, you'd need to add a "prefix" submember inside the relevant "firefox" submember. It would look something like this:</p>
+If a feature is supported behind a vendor prefix in one or more browsers, you'll want to make that clear in the browser compat data. imagine you had a feature that was supported with a `-moz-` prefix in Firefox. To specify this in the compat data, you'd need to add a "prefix" submember inside the relevant "firefox" submember. It would look something like this:
 
-<pre class="brush: json notranslate">"firefox": {
+```json
+"firefox": {
   "version_added": true,
   "prefix": "-moz-"
-}</pre>
+}
+```
 
-<h3 id="Incluindo_preferências_ou_sinalizadores_do_navegador">Incluindo preferências ou sinalizadores do navegador</h3>
+### Incluindo preferências ou sinalizadores do navegador
 
-<p>Some features may be supported in a browser, but they are experimental and turned off by default. If a user wants to play with this feature they need to turn it on using a preference/flag.</p>
+Some features may be supported in a browser, but they are experimental and turned off by default. If a user wants to play with this feature they need to turn it on using a preference/flag.
 
-<p>To represent this in the compat data, you need to add the "flags" submember inside the relevant browser identifier submember. The value of "flags" is an array of objects each of which contains of three members:</p>
+To represent this in the compat data, you need to add the "flags" submember inside the relevant browser identifier submember. The value of "flags" is an array of objects each of which contains of three members:
 
-<ul>
- <li>"type": The type of flag or pref this is. The most common value is "preference", which is set inside the browser (for example, using <code>about:config</code> in Firefox, or <code>chrome://flags</code> in Chrome), but you might also sometimes use a value of "compile_flag", which is a preference set when the browser build is compiled.</li>
- <li>"name": This is a string representing the name of the preference that needs to have a value set on it. For example, "Enable Experimental Web Platform Features" is a preference that exists in Chrome, found in <code>chrome://flags</code>.</li>
- <li>"value_to_set": This is a string representing the value that needs to be set on the preference, for example "true".</li>
-</ul>
+- "type": The type of flag or pref this is. The most common value is "preference", which is set inside the browser (for example, using `about:config` in Firefox, or `chrome://flags` in Chrome), but you might also sometimes use a value of "compile_flag", which is a preference set when the browser build is compiled.
+- "name": This is a string representing the name of the preference that needs to have a value set on it. For example, "Enable Experimental Web Platform Features" is a preference that exists in Chrome, found in `chrome://flags`.
+- "value_to_set": This is a string representing the value that needs to be set on the preference, for example "true".
 
-<p>So to add a preference/flag to the Chrome support for a feature, you'd do something like this:</p>
+So to add a preference/flag to the Chrome support for a feature, you'd do something like this:
 
-<pre class="brush: json notranslate">"chrome": {
+```json
+"chrome": {
   "version_added": "50",
   "flags": [
     {
@@ -330,11 +336,13 @@ original_slug: MDN/Structures/Compatibility_tables
       "value_to_set": "true"
     }
   ]
-},</pre>
+},
+```
 
-<p>If a feature is behind two or more flags, you can add additional objects to the "flags" array, like in this case, for example:</p>
+If a feature is behind two or more flags, you can add additional objects to the "flags" array, like in this case, for example:
 
-<pre class="brush: json notranslate">"firefox": {
+```json
+"firefox": {
   "version_added": "57",
   "flags": [
     {
@@ -348,28 +356,32 @@ original_slug: MDN/Structures/Compatibility_tables
       "value_to_set": "true"
     }
   ]
-},</pre>
+},
+```
 
-<h3 id="Incluindo_uma_versão_em_que_o_suporte_foi_removido">Incluindo uma versão em que o suporte foi removido</h3>
+### Incluindo uma versão em que o suporte foi removido
 
-<p>Sometimes a feature will be added in a certain browser version, but then removed again as the feature is deprecated. This can be easily represented using the "version_removed" submember, which takes as its value a string representing the version number it was removed on. For example:</p>
+Sometimes a feature will be added in a certain browser version, but then removed again as the feature is deprecated. This can be easily represented using the "version_removed" submember, which takes as its value a string representing the version number it was removed on. For example:
 
-<pre class="brush: json notranslate">"firefox": {
+```json
+"firefox": {
   "version_added": "35",
   "version_removed": "47",
-},</pre>
+},
+```
 
-<h3 id="Incluindo_vários_pontos_de_suporte_para_a_mesma_entrada_do_navegador">Incluindo vários pontos de suporte para a mesma entrada do navegador</h3>
+### Incluindo vários pontos de suporte para a mesma entrada do navegador
 
-<p>Sometimes you'll want to add multiple support data points for the same browser inside the same feature.</p>
+Sometimes you'll want to add multiple support data points for the same browser inside the same feature.
 
-<p>As an example, the {{cssxref("text-align-last")}} property (see also <a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/text-align-last.json">text-align-last.json</a>) was added to Chrome in version 35, supported behind a pref.</p>
+As an example, the {{cssxref("text-align-last")}} property (see also [text-align-last.json](https://github.com/mdn/browser-compat-data/blob/master/css/properties/text-align-last.json)) was added to Chrome in version 35, supported behind a pref.
 
-<p>The support mentioned above was then removed in version 47; also in version 47, support was added for <code>text-align-last</code> enabled by default.</p>
+The support mentioned above was then removed in version 47; also in version 47, support was added for `text-align-last` enabled by default.
 
-<p>To include both of these data points, you can make the value of the "chrome" submember an array containing two support information objects, rather than just a single support information object:</p>
+To include both of these data points, you can make the value of the "chrome" submember an array containing two support information objects, rather than just a single support information object:
 
-<pre class="brush: json notranslate">"chrome": [
+```json
+"chrome": [
   {
     "version_added": "47"
   },
@@ -384,90 +396,87 @@ original_slug: MDN/Structures/Compatibility_tables
       }
     ]
   }
-],</pre>
+],
+```
 
-<div class="note">
-<p><strong>Note</strong>: You should put the most current or important support point first in the array — this makes the data easier to read for people who just want to scan it for the latest info.</p>
-</div>
+> **Nota:** You should put the most current or important support point first in the array — this makes the data easier to read for people who just want to scan it for the latest info.
 
-<h3 id="Incluindo_um_nome_alternativo">Incluindo um nome alternativo</h3>
+### Incluindo um nome alternativo
 
-<p>Occasionally browsers will support a feature under a different name to the name defined in its specification. This might be for example because a browser added experimental support for a feature early, and then the name changed before the spec stabilized.</p>
+Occasionally browsers will support a feature under a different name to the name defined in its specification. This might be for example because a browser added experimental support for a feature early, and then the name changed before the spec stabilized.
 
-<p>To include such a case in the browser compat data, you can include a support information point that specifies the alternative name inside an "alternative_name" member.</p>
+To include such a case in the browser compat data, you can include a support information point that specifies the alternative name inside an "alternative_name" member.
 
-<div class="note">
-<p><strong>Note</strong>: The alternative name might not be an exact alias — it might have differing behaviour to the standard version.</p>
-</div>
+> **Nota:** The alternative name might not be an exact alias — it might have differing behaviour to the standard version.
 
-<p>Let's look at an example. The {{cssxref("border-top-right-radius")}} property (see also <a href="https://github.com/mdn/browser-compat-data/blob/2a0cc3f6bb17aa4345441bed47a059dffd847793/css/properties/border-top-right-radius.json">border-top-right-radius.json</a>) was supported in Firefox:</p>
+Let's look at an example. The {{cssxref("border-top-right-radius")}} property (see also [border-top-right-radius.json](https://github.com/mdn/browser-compat-data/blob/2a0cc3f6bb17aa4345441bed47a059dffd847793/css/properties/border-top-right-radius.json)) was supported in Firefox:
 
-<ul>
- <li>From version 4 onwards with the standard name <code>border-top-right-radius</code>.</li>
- <li>From version 49 onwards with a <code>-webkit-</code> prefix, for browser compatibility purposes.</li>
- <li>From version 1 onwards with the alternative name <code>-moz-border-radius-topright</code>. Support for this alias was removed in version 12.</li>
-</ul>
+- From version 4 onwards with the standard name `border-top-right-radius`.
+- From version 49 onwards with a `-webkit-` prefix, for browser compatibility purposes.
+- From version 1 onwards with the alternative name `-moz-border-radius-topright`. Support for this alias was removed in version 12.
 
-<p>To represent this in the data, we used the following JSON:</p>
+To represent this in the data, we used the following JSON:
 
-<pre class="brush: json notranslate">"firefox": [
+```json
+"firefox": [
   {
     "version_added": "4",
-    "notes": "Prior to Firefox 50.0, border styles of rounded corners were always rendered as if &lt;code&gt;border-style&lt;/code&gt; was solid. This has been fixed in Firefox 50.0."
+    "notes": "Prior to Firefox 50.0, border styles of rounded corners were always rendered as if <code>border-style</code> was solid. This has been fixed in Firefox 50.0."
   },
   {
     "prefix": "-webkit-",
     "version_added": "49",
-    "notes": "From Firefox 44 to 48, the &lt;code&gt;-webkit-&lt;/code&gt; prefix was available with the &lt;code&gt;layout.css.prefixes.webkit&lt;/code&gt; preference. Starting with Firefox 49, the preference defaults to &lt;code&gt;true&lt;/code&gt;."
+    "notes": "From Firefox 44 to 48, the <code>-webkit-</code> prefix was available with the <code>layout.css.prefixes.webkit</code> preference. Starting with Firefox 49, the preference defaults to <code>true</code>."
   },
   {
     "alternative_name": "-moz-border-radius-topright",
     "version_added": "1",
     "version_removed": "12"
   }
-],</pre>
+],
+```
 
-<h2 id="Empurrando_uma_mudança_de_volta_para_o_repositório_principal">Empurrando uma mudança de volta para o repositório principal</h2>
+## Empurrando uma mudança de volta para o repositório principal
 
-<p>Once you are finished with adding your compat data, you should first test it using the following commands:</p>
+Once you are finished with adding your compat data, you should first test it using the following commands:
 
-<ul>
- <li><code>npm run lint</code> — tests all the compat data to make sure the JSON is valid, and is written in the correct style, for example correct indentation, no missing commas, etc. It will print out a long list of file names and test results; if an error is found, the linter will throw an error on the file it is found in, giving you useful debugging info like line number, error message, etc.</li>
- <li><code>npm run show-errors</code> — validates the JSON against the data schema, and highlights errors such as invalid browser version numbers being used.</li>
- <li><code>npm run render dotted.path.to.feature</code> — allows you to preview the markup for the compat table for a data file in the repo. As an example, <code>npm run render css.properties.background</code> shows the table markup for the {{cssxref("background")}} property.</li>
-</ul>
+- `npm run lint` — tests all the compat data to make sure the JSON is valid, and is written in the correct style, for example correct indentation, no missing commas, etc. It will print out a long list of file names and test results; if an error is found, the linter will throw an error on the file it is found in, giving you useful debugging info like line number, error message, etc.
+- `npm run show-errors` — validates the JSON against the data schema, and highlights errors such as invalid browser version numbers being used.
+- `npm run render dotted.path.to.feature` — allows you to preview the markup for the compat table for a data file in the repo. As an example, `npm run render css.properties.background` shows the table markup for the {{cssxref("background")}} property.
 
-<p>If it is looking OK, you then need to commit it and push it back up to your remote fork on GitHub. You can do this easily with terminal commands like this:</p>
+If it is looking OK, you then need to commit it and push it back up to your remote fork on GitHub. You can do this easily with terminal commands like this:
 
-<pre class="brush: bash notranslate">git add .
+```bash
+git add .
 git commit -m 'adding compat data for name-of-feature'
-git push</pre>
+git push
+```
 
-<p>Now go to your remote fork (i.e. <code>https://github.com/<em>your-username</em>/browser-compat-data</code>) and you should see information about your push at the top of the files list (under "Your recently pushed branches"). You can create a pull request (starting the process of pushing this to the main repo) by pressing the "Compare &amp; pull request" button, then following the simple prompts on the subsequent screen.</p>
+Now go to your remote fork (i.e. `https://github.com/your-username/browser-compat-data`) and you should see information about your push at the top of the files list (under "Your recently pushed branches"). You can create a pull request (starting the process of pushing this to the main repo) by pressing the "Compare & pull request" button, then following the simple prompts on the subsequent screen.
 
-<p>At this point, you just need to wait. A reviewer will review your pull request, and merge it with the main repo, OR request that you make changes. If changes are needed, make the changes and submit again until the PR is accepted.</p>
+At this point, you just need to wait. A reviewer will review your pull request, and merge it with the main repo, OR request that you make changes. If changes are needed, make the changes and submit again until the PR is accepted.
 
-<h2 id="Inserindo_os_dados_em_páginas_MDN">Inserindo os dados em páginas MDN</h2>
+## Inserindo os dados em páginas MDN
 
-<p>Once your new data has been included in the main repo, you can start dynamically generating browser compat tables based on that data on MDN pages using the \{{Compat}} macro. This takes a single parameter, the dot notation required to walk down the JSON data and find the object representing the feature you want to generate the compat table for.</p>
+Once your new data has been included in the main repo, you can start dynamically generating browser compat tables based on that data on MDN pages using the \\{{Compat}} macro. This takes a single parameter, the dot notation required to walk down the JSON data and find the object representing the feature you want to generate the compat table for.
 
-<p>Above the macro call, to help other contributors finding their way, you should add a hidden text that is only visible in MDN contributors in edit mode:</p>
+Above the macro call, to help other contributors finding their way, you should add a hidden text that is only visible in MDN contributors in edit mode:
 
-<pre class="brush: html notranslate">&lt;div class="hidden"&gt;
-&lt;p&gt;The compatibility table on this page is generated from structured data.
+```html
+<div class="hidden">
+<p>The compatibility table on this page is generated from structured data.
 If you'd like to contribute to the data, please check out
-&lt;a href="https://github.com/mdn/browser-compat-data"&gt;https://github.com/mdn/browser-compat-data&lt;/a&gt;
-and send us a pull request.&lt;/p&gt;
-&lt;/div&gt;</pre>
-
-<p>As an example, on the {{httpheader("Accept-Charset")}} HTTP header page, the macro call looks like this: \{{Compat("http.headers.Accept-Charset")}}. If you look at the <a href="https://github.com/mdn/browser-compat-data/blob/master/http/headers/accept-charset.json">accept-charset.json</a> file in the repo, you'll see how this is reflected in the JSON data.</p>
-
-<p>As another example, The compat table for the {{domxref("VRDisplay.capabilities")}} property is generated using \{{Compat("api.VRDisplay.capabilities")}}. The macro call generates the following table (and corresponding set of notes):</p>
-
-<hr>
-
-<p>{{Compat("api.VRDisplay.capabilities")}}</p>
-
-<div class="note">
-<p><strong>Note</strong>: The filenames often match the labels given to the interfaces inside the JSON structures, but it is not always the case. When the macro calls generate the tables, they walk through all the files until they find the relevant JSON to use, so the filenames are not critical. Saying that, you should always name them as intuitively as possible.</p>
+<a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
+and send us a pull request.</p>
 </div>
+```
+
+As an example, on the {{httpheader("Accept-Charset")}} HTTP header page, the macro call looks like this: \\{{Compat("http.headers.Accept-Charset")}}. If you look at the [accept-charset.json](https://github.com/mdn/browser-compat-data/blob/master/http/headers/accept-charset.json) file in the repo, you'll see how this is reflected in the JSON data.
+
+As another example, The compat table for the {{domxref("VRDisplay.capabilities")}} property is generated using \\{{Compat("api.VRDisplay.capabilities")}}. The macro call generates the following table (and corresponding set of notes):
+
+---
+
+{{Compat("api.VRDisplay.capabilities")}}
+
+> **Nota:** The filenames often match the labels given to the interfaces inside the JSON structures, but it is not always the case. When the macro calls generate the tables, they walk through all the files until they find the relevant JSON to use, so the filenames are not critical. Saying that, you should always name them as intuitively as possible.
