@@ -9,81 +9,79 @@ tags:
 translation_of: Web/API/Canvas_API/Tutorial/Drawing_text
 original_slug: Web/Guide/HTML/Canvas_tutorial/Drawing_text
 ---
-<div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}</div>
+{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
 
-<div class="summary">
-<p>Após entender como <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">aplicar estilos e cores</a> no capítulo anterior, nós veremos agora como desenhar texto dentro do contexto de uma canvas.</p>
-</div>
+Após entender como [aplicar estilos e cores](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) no capítulo anterior, nós veremos agora como desenhar texto dentro do contexto de uma canvas.
 
-<h2 id="Desenhando_texto">Desenhando texto</h2>
+## Desenhando texto
 
-<p>O context de renderização da canvas fornece dois métodos para renderização textual: </p>
+O context de renderização da canvas fornece dois métodos para renderização textual:
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.fillText", "fillText(text, x, y [, maxWidth])")}}</dt>
- <dd>Preenche com um determinado texto as cordenadas (x,y) recebidas. Opcionalmente com uma largura máxima para o desenho.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.strokeText", "strokeText(text, x, y [, maxWidth])")}}</dt>
- <dd>Traçeja um determinado texto nas cordenadas (x,y) recebidas. Opcionalmente com uma largura máxima para o desenho.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.fillText", "fillText(text, x, y [, maxWidth])")}}
+  - : Preenche com um determinado texto as cordenadas (x,y) recebidas. Opcionalmente com uma largura máxima para o desenho.
+- {{domxref("CanvasRenderingContext2D.strokeText", "strokeText(text, x, y [, maxWidth])")}}
+  - : Traçeja um determinado texto nas cordenadas (x,y) recebidas. Opcionalmente com uma largura máxima para o desenho.
 
-<h3 id="Um_exemplo_com_fillText">Um exemplo com <code>fillText</code></h3>
+### Um exemplo com `fillText`
 
-<p>O texto a seguir é rederizado utilizando <code>fillStyle</code>.</p>
+O texto a seguir é rederizado utilizando `fillStyle`.
 
-<pre class="brush: js">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   ctx.font = '48px serif';
   ctx.fillText('Hello world', 10, 50);
-}</pre>
+}
+```
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="300" height="100"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="300" height="100"></canvas>
+```
 
-<pre class="brush: js">draw();</pre>
-</div>
+```js hidden
+draw();
+```
 
-<p>{{EmbedLiveSample("A_fillText_example", 310, 110)}}</p>
+{{EmbedLiveSample("A_fillText_example", 310, 110)}}
 
-<h3 id="Um_exemplo_com_strokeText">Um exemplo com <code>strokeText</code></h3>
+### Um exemplo com `strokeText`
 
-<p> </p>
+O texto é preenchido usando o strokeStyle atual.
 
-<p dir="ltr" id="tw-target-text">O texto é preenchido usando o strokeStyle atual.</p>
-
-<p> </p>
-
-<pre class="brush: js">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   ctx.font = '48px serif';
   ctx.strokeText('Hello world', 10, 50);
-}</pre>
+}
+```
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="300" height="100"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="300" height="100"></canvas>
+```
 
-<pre class="brush: js">draw();</pre>
-</div>
+```js hidden
+draw();
+```
 
-<p>{{EmbedLiveSample("A_strokeText_example", 310, 110)}}</p>
+{{EmbedLiveSample("A_strokeText_example", 310, 110)}}
 
-<h2 id="Estilo_de_Texto"><strong>Estilo de Texto</strong></h2>
+## Estilo de Texto
 
-<p>Nos exemplos anteriores, já usamos a propriedade font para tornar o texto um pouco maior que o tamanho padrão. Existem mais algumas propriedades que permitem ajustar a maneira como o texto é exibido no canvas:</p>
+Nos exemplos anteriores, já usamos a propriedade font para tornar o texto um pouco maior que o tamanho padrão. Existem mais algumas propriedades que permitem ajustar a maneira como o texto é exibido no canvas:
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.font", "font = value")}}</dt>
- <dd>The current text style being used when drawing text. This string uses the same syntax as the <a href="/en-US/docs/Web/CSS">CSS</a> {{cssxref("font")}} property. The default font is 10px sans-serif.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.textAlign", "textAlign = value")}}</dt>
- <dd>Text alignment setting. Possible values: <code>start</code>, <code>end</code>, <code>left</code>, <code>right</code> or <code>center</code>. The default value is <code>start</code>.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline = value")}}</dt>
- <dd>Baseline alignment setting. Possible values: <code>top</code>, <code>hanging</code>, <code>middle</code>, <code>alphabetic</code>, <code>ideographic</code>, <code>bottom</code>. The default value is <code>alphabetic</code>.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.direction", "direction = value")}}</dt>
- <dd>Directionality. Possible values: <code>ltr</code>, <code>rtl</code>, <code>inherit</code>. The default value is <code>inherit</code>.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.font", "font = value")}}
+  - : The current text style being used when drawing text. This string uses the same syntax as the [CSS](/pt-BR/docs/Web/CSS) {{cssxref("font")}} property. The default font is 10px sans-serif.
+- {{domxref("CanvasRenderingContext2D.textAlign", "textAlign = value")}}
+  - : Text alignment setting. Possible values: `start`, `end`, `left`, `right` or `center`. The default value is `start`.
+- {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline = value")}}
+  - : Baseline alignment setting. Possible values: `top`, `hanging`, `middle`, `alphabetic`, `ideographic`, `bottom`. The default value is `alphabetic`.
+- {{domxref("CanvasRenderingContext2D.direction", "direction = value")}}
+  - : Directionality. Possible values: `ltr`, `rtl`, `inherit`. The default value is `inherit`.
 
-<p>Essas propriedades podem ser similares para você, se você trabalhou com CSS antes.</p>
+Essas propriedades podem ser similares para você, se você trabalhou com CSS antes.
 
-<p>O diagrama seguinte do <a class="external" href="http://www.whatwg.org/">WHATWG</a> demonstra as várias baselines suportadas pela propriedade do <code>textBaseline</code><img alt="The top of the em square is
+O diagrama seguinte do [WHATWG](http://www.whatwg.org/) demonstra as várias baselines suportadas pela propriedade do `textBaseline`![The top of the em square is
 roughly at the top of the glyphs in a font, the hanging baseline is
 where some glyphs like आ are anchored, the middle is half-way
 between the top of the em square and the bottom of the em square,
@@ -92,32 +90,32 @@ f, and Ω are anchored, the ideographic baseline is
 where glyphs like 私 and 達 are anchored, and the bottom
 of the em square is roughly at the bottom of the glyphs in a
 font. The top and bottom of the bounding box can be far from these
-baselines, due to glyphs extending far outside the em square." src="http://www.whatwg.org/specs/web-apps/current-work/images/baselines.png"></p>
+baselines, due to glyphs extending far outside the em square.](http://www.whatwg.org/specs/web-apps/current-work/images/baselines.png)
 
-<h3 id="O_exemplo_de_uma_textBaseline">O exemplo de uma textBaseline</h3>
+### O exemplo de uma textBaseline
 
-<p>Edite o código abaixo e veja as atualizações em tempo real no canvas.</p>
+Edite o código abaixo e veja as atualizações em tempo real no canvas.
 
-<pre class="brush: js">ctx.font = '48px serif';
+```js
+ctx.font = '48px serif';
 ctx.textBaseline = 'hanging';
 ctx.strokeText('Hello world', 0, 100);
-</pre>
+```
 
-<div class="hidden">
-<h6 id="Playable_code" name="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.font = "48px serif";
 ctx.textBaseline = "hanging";
-ctx.strokeText("Hello world", 0, 100);&lt;/textarea&gt;
-</pre>
+ctx.strokeText("Hello world", 0, 100);</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js hidden
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
@@ -140,31 +138,29 @@ edit.addEventListener('click', function() {
 
 textarea.addEventListener('input', drawCanvas);
 window.addEventListener('load', drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h2 id="Advanced_text_measurements">Advanced text measurements</h2>
+## Advanced text measurements
 
-<p>In the case you need to obtain more details about the text, the following method allows you to measure it.</p>
+In the case you need to obtain more details about the text, the following method allows you to measure it.
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.measureText", "measureText()")}}</dt>
- <dd>Returns a {{domxref("TextMetrics")}} object containing the width, in pixels, that the specified text will be when drawn in the current text style.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.measureText", "measureText()")}}
+  - : Returns a {{domxref("TextMetrics")}} object containing the width, in pixels, that the specified text will be when drawn in the current text style.
 
-<p>The following code snippet shows how you can measure a text and get its width.</p>
+The following code snippet shows how you can measure a text and get its width.
 
-<pre class="brush: js">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   var text = ctx.measureText('foo'); // TextMetrics object
   text.width; // 16;
 }
-</pre>
+```
 
-<h2 id="Notas_específicas_-_Gecko">Notas específicas - Gecko</h2>
+## Notas específicas - Gecko
 
-<p>No Gecko (a engine de renderização do Firefox, Firefox OS e outras aplicações Mozilla), algumas APIs prefixadas foram implementadas em versões anteriores para escrever texto em um canvas. Essas APIs agora estão depreciadas e removidas, e não são mais garantidas para uso.</p>
+No Gecko (a engine de renderização do Firefox, Firefox OS e outras aplicações Mozilla), algumas APIs prefixadas foram implementadas em versões anteriores para escrever texto em um canvas. Essas APIs agora estão depreciadas e removidas, e não são mais garantidas para uso.
 
-<p>{{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}</p>
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}

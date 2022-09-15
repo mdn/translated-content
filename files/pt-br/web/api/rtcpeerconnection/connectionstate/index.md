@@ -3,62 +3,47 @@ title: RTCPeerConnection.connectionState
 slug: Web/API/RTCPeerConnection/connectionState
 translation_of: Web/API/RTCPeerConnection/connectionState
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>A propriedade <strong><code>connectionState</code></strong> do tipo somente leitura da interface {{domxref("RTCPeerConnection")}} indica o estado atual da conexão em par, devolvendo um valor em string específicado por um enum {{domxref("RTCPeerConnection")}}.</p>
+A propriedade **`connectionState`** do tipo somente leitura da interface {{domxref("RTCPeerConnection")}} indica o estado atual da conexão em par, devolvendo um valor em string específicado por um enum {{domxref("RTCPeerConnection")}}.
 
-<p>Quando o valor da propriedade muda, o evento {{event("connectionstatechange")}} é enviado para a intância {{domxref("RTCPeerConnection")}}.</p>
+Quando o valor da propriedade muda, o evento {{event("connectionstatechange")}} é enviado para a intância {{domxref("RTCPeerConnection")}}.
 
+## Syntax
 
+```
+var connectionState = RTCPeerConnection.connectionState;
+```
 
-<h2 id="Syntax">Syntax</h2>
+### Value
 
-<pre class="syntaxbox">var <em>connectionState</em> = <em>RTCPeerConnection</em>.connectionState;</pre>
+O estado atual da conexão, como um valor do enum [`RTCPeerConnectionState`](#RTCPeerConnectionState_enum).
 
-<h3 id="Value">Value</h3>
+{{page("/en-US/docs/Web/API/RTCPeerConnection", "RTCPeerConnectionState enum", 0, 1)}}
 
-<p>O estado atual da conexão, como um valor do enum <code><a href="#RTCPeerConnectionState_enum">RTCPeerConnectionState</a></code>.</p>
+## Example
 
-<p>{{page("/en-US/docs/Web/API/RTCPeerConnection", "RTCPeerConnectionState enum", 0, 1)}}</p>
-
-<h2 id="Example">Example</h2>
-
-<pre class="brush: js">var pc = new RTCPeerConnection(configuration);
+```js
+var pc = new RTCPeerConnection(configuration);
 
 /* ... */
 
-var connectionState = pc.connectionState;</pre>
+var connectionState = pc.connectionState;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('WebRTC 1.0', '#widl-RTCPeerConnection-connectionState', 'RTCPeerConnection.connectionState') }}</td>
-   <td>{{ Spec2('WebRTC 1.0') }}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                                    | Status                           | Comment                |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------- |
+| {{ SpecName('WebRTC 1.0', '#widl-RTCPeerConnection-connectionState', 'RTCPeerConnection.connectionState') }} | {{ Spec2('WebRTC 1.0') }} | Initial specification. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("api.RTCPeerConnection.connectionState")}}
 
+## See also
 
-<p>{{Compat("api.RTCPeerConnection.connectionState")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</a></li>
- <li>{{domxref("RTCPeerConnection")}}</li>
- <li>{{event("connectionstatechange")}}</li>
- <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
-</ul>
+- [Lifetime of a WebRTC session](/pt-BR/docs/Web/API/WebRTC_API/Session_lifetime)
+- {{domxref("RTCPeerConnection")}}
+- {{event("connectionstatechange")}}
+- [WebRTC](/pt-BR/docs/Web/Guide/API/WebRTC)

@@ -9,59 +9,43 @@ tags:
   - Referencia
 translation_of: Web/API/AnimationEvent/AnimationEvent
 ---
-<p>{{APIRef("Web Animations API")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Animations API")}}{{SeeCompatTable}}
 
-<p><code><font face="Open Sans, Arial, sans-serif">O construtor </font><strong>AnimationEvent()</strong></code>retorna o recente criado {{domxref("AnimationEvent")}}, representando um evento em relação a animação.</p>
+`O construtor AnimationEvent()`retorna o recente criado {{domxref("AnimationEvent")}}, representando um evento em relação a animação.
 
-<h2 id="Síntaxe">Síntaxe</h2>
+## Síntaxe
 
-<pre class="syntaxbox"><em>animationEvent</em> = new AnimationEvent(<em>type</em>, {animationName: <em>aPropertyName</em>,
-                                           elapsedTime  : <em>aFloat</em>,
-                                           pseudoElement: <em>aPseudoElementName</em>});
-</pre>
+```
+animationEvent = new AnimationEvent(type, {animationName: aPropertyName,
+                                           elapsedTime  : aFloat,
+                                           pseudoElement: aPseudoElementName});
+```
 
-<h3 id="Argumentos">Argumentos</h3>
+### Argumentos
 
-<p><em>O construtor <code>AnimationEvent()</code></em><em> também herda argumentos do {{domxref("Event.Event", "Event()")}}.</em></p>
+_O construtor `AnimationEvent()`_ _também herda argumentos do {{domxref("Event.Event", "Event()")}}._
 
-<dl>
- <dt><code>type</code></dt>
- <dd>Um {{domxref("DOMString")}} representando o nome do tipo de <code>AnimationEvent</code>. É caso sensitivo e pode ser: <code>'animationstart'</code>, <code>'animationend'</code>, ou <code>'animationiteration'</code>.</dd>
- <dt><code>animationName</code> {{optional_inline}}</dt>
- <dd>Um{{domxref("DOMString")}} contendo o valor do {{cssxref("animation-name")}} propriedade CSS associada com a transição. É por padrão <code>""</code>.</dd>
- <dt><code>elapsedTime</code> {{optional_inline}}</dt>
- <dd>Um ponto flutuante dando a quantidade de tempo que a animação esteve rodando, em segundos, quando o evento termina, excluindo qualquer tempo que ela passou pausada. Para um evento <code>"animationstart"</code>, <code>elapsedTime</code> é <code>0.0</code> a não ser que haja um valor negativo para <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-delay" title="The animation-delay CSS property specifies when the animation should start. This lets the animation sequence begin some time after it's applied to an element.">animation-delay</a></code>, nesse caso o evento terminará com <code>elapsedTime contendo</code>  <code>(-1 * </code><em>delay</em><code>)</code>. É por padrão <code>0.0</code>.</dd>
- <dt><code>pseudoElement</code> {{optional_inline}}</dt>
- <dd>É um <code>{{domxref("DOMString")}}</code>, começando com<code>"::"</code>, contendo o nome do <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements" title="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> que a animação roda. Se a animação não roda em um pseudo-elementomas em um elemento, então temos um <em>string</em> vazio <code>"" .</code>É por padrão <code>""</code>. </dd>
-</dl>
+- `type`
+  - : Um {{domxref("DOMString")}} representando o nome do tipo de `AnimationEvent`. É caso sensitivo e pode ser: `'animationstart'`, `'animationend'`, ou `'animationiteration'`.
+- `animationName` {{optional_inline}}
+  - : Um{{domxref("DOMString")}} contendo o valor do {{cssxref("animation-name")}} propriedade CSS associada com a transição. É por padrão `""`.
+- `elapsedTime` {{optional_inline}}
+  - : Um ponto flutuante dando a quantidade de tempo que a animação esteve rodando, em segundos, quando o evento termina, excluindo qualquer tempo que ela passou pausada. Para um evento `"animationstart"`, `elapsedTime` é `0.0` a não ser que haja um valor negativo para [`animation-delay`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-delay "The animation-delay CSS property specifies when the animation should start. This lets the animation sequence begin some time after it's applied to an element."), nesse caso o evento terminará com `elapsedTime contendo` `(-1 * `_delay_`)`. É por padrão `0.0`.
+- `pseudoElement` {{optional_inline}}
+  - : É um `{{domxref("DOMString")}}`, começando com`"::"`, contendo o nome do [pseudo-element](/pt-BR/docs/Web/CSS/Pseudo-elements "/en-US/docs/Web/CSS/Pseudo-elements") que a animação roda. Se a animação não roda em um pseudo-elementomas em um elemento, então temos um _string_ vazio `"" .`É por padrão `""`.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Animations', '#AnimationEvent-interface', 'AnimationEvent()') }}</td>
-   <td>{{ Spec2('CSS3 Animations')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Especificações                                                                                               | Estado                                   | Comentário          |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
+| {{ SpecName('CSS3 Animations', '#AnimationEvent-interface', 'AnimationEvent()') }} | {{ Spec2('CSS3 Animations')}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.AnimationEvent.AnimationEvent")}}
 
-<h2 id="Veja_também">Veja também </h2>
+## Veja também
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_animations">Usando animações CSS</a>.</li>
- <li>Tópicos relacionados a animação CSS, propriedades e regras: <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation" title="The animation CSS property is a shorthand property for animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count and animation-direction.">animation</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-delay" title="The animation-delay CSS property specifies when the animation should start. This lets the animation sequence begin some time after it's applied to an element.">animation-delay</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction" title="The animation-direction CSS property indicates whether the animation should play in reverse on alternate cycles.">animation-direction</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-duration" title="The animation-duration CSS property specifies the length of time that an animation should take to complete one cycle.">animation-duration</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode" title="The animation-fill-mode CSS property specifies how a CSS animation should apply styles to its target before and after it is executing.">animation-fill-mode</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-iteration-count" title="The animation-iteration-count CSS property defines the number of times an animation cycle should be played before stopping.">animation-iteration-count</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-name" title="The animation-name CSS property specifies a list of animations that should be applied to the selected element. Each name indicates a @keyframes at-rule that defines the property values for the animation sequence.">animation-name</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-play-state" title="The animation-play-state CSS property determines whether an animation is running or paused. You can query this property's value to determine whether or not the animation is currently running; in addition, you can set its value to pause and resume playback of an animation.">animation-play-state</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function" title="The CSS animation-timing-function property specifies how a CSS animation should progress over the duration of each cycle. The possible values are one or several &lt;timing-function>.">animation-timing-function</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes" title="The @keyframes CSS at-rule lets authors control the intermediate steps in a CSS animation sequence by establishing keyframes (or waypoints) along the animation sequence that must be reached by certain points during the animation. This gives you more specific control over the intermediate steps of the animation sequence than you get when letting the browser handle everything automatically.">@keyframes</a></code></li>
- <li>The {{domxref("AnimationEvent")}} interface it belongs to.</li>
-</ul>
+- [Usando animações CSS](/pt-BR/docs/CSS/Using_CSS_animations).
+- Tópicos relacionados a animação CSS, propriedades e regras: [`animation`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation "The animation CSS property is a shorthand property for animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count and animation-direction."), [`animation-delay`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-delay "The animation-delay CSS property specifies when the animation should start. This lets the animation sequence begin some time after it's applied to an element."), [`animation-direction`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction "The animation-direction CSS property indicates whether the animation should play in reverse on alternate cycles."), [`animation-duration`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-duration "The animation-duration CSS property specifies the length of time that an animation should take to complete one cycle."), [`animation-fill-mode`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode "The animation-fill-mode CSS property specifies how a CSS animation should apply styles to its target before and after it is executing."), [`animation-iteration-count`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-iteration-count "The animation-iteration-count CSS property defines the number of times an animation cycle should be played before stopping."), [`animation-name`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-name "The animation-name CSS property specifies a list of animations that should be applied to the selected element. Each name indicates a @keyframes at-rule that defines the property values for the animation sequence."), [`animation-play-state`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-play-state "The animation-play-state CSS property determines whether an animation is running or paused. You can query this property's value to determine whether or not the animation is currently running; in addition, you can set its value to pause and resume playback of an animation."), [`animation-timing-function`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function "The CSS animation-timing-function property specifies how a CSS animation should progress over the duration of each cycle. The possible values are one or several <timing-function>."), [`@keyframes`](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes "The @keyframes CSS at-rule lets authors control the intermediate steps in a CSS animation sequence by establishing keyframes (or waypoints) along the animation sequence that must be reached by certain points during the animation. This gives you more specific control over the intermediate steps of the animation sequence than you get when letting the browser handle everything automatically.")
+- The {{domxref("AnimationEvent")}} interface it belongs to.

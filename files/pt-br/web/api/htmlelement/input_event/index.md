@@ -4,70 +4,41 @@ slug: Web/API/HTMLElement/input_event
 translation_of: Web/API/HTMLElement/input_event
 original_slug: Web/Events/input
 ---
-<p>O evento <code>input do </code>DOM é disparado sincronicamente quando o valor de um elemento {{HTMLElement("input")}}, {{HTMLElement("select")}}, ou {{HTMLElement("textarea")}} é alterado. (Para elementos input com <code>type=checkbox</code> ou <code>type=radio</code>, o evento <code>input</code> não é disparado quando o usuário clica no elemento, porque o valor do atributo não é alterado.) Além disso, o evento é disparado no <a href="/en-US/docs/Web/API/HTMLElement/contentEditable"><code>contenteditable</code></a> editors quando o seu conteúdo é alterado. Nesse caso, O alvo do evento é o elemento host da edição. Se houver dois ou mais elementos que tenha <code>contenteditable</code> como true, o "host de edição" é o elemento antepassado mais próximo cujo pai não é editável. Similarmente, ele também é disparado no element raiz do <a href="/en-US/docs/Web/API/Document/designMode"><code>designMode</code></a> editors.</p>
+O evento `input do `DOM é disparado sincronicamente quando o valor de um elemento {{HTMLElement("input")}}, {{HTMLElement("select")}}, ou {{HTMLElement("textarea")}} é alterado. (Para elementos input com `type=checkbox` ou `type=radio`, o evento `input` não é disparado quando o usuário clica no elemento, porque o valor do atributo não é alterado.) Além disso, o evento é disparado no [`contenteditable`](/pt-BR/docs/Web/API/HTMLElement/contentEditable) editors quando o seu conteúdo é alterado. Nesse caso, O alvo do evento é o elemento host da edição. Se houver dois ou mais elementos que tenha `contenteditable` como true, o "host de edição" é o elemento antepassado mais próximo cujo pai não é editável. Similarmente, ele também é disparado no element raiz do [`designMode`](/pt-BR/docs/Web/API/Document/designMode) editors.
 
-<h2 id="Informações_gerais">Informações gerais</h2>
+## Informações gerais
 
-<dl>
- <dt>Especificação</dt>
- <dd><a class="external" href="https://html.spec.whatwg.org/multipage/forms.html#event-input-input">HTML5</a>, <a href="https://dvcs.w3.org/hg/dom3events/raw-file/tip/html/DOM3-Events.html#event-type-input">DOM Level 3 Events</a></dd>
- <dt>Interface</dt>
- <dd>{{domxref("Event")}}, {{domxref("InputEvent")}}</dd>
- <dt>Borbulha</dt>
- <dd>Sim</dd>
- <dt>Cancelável</dt>
- <dd>Não</dd>
- <dt>Alvo</dt>
- <dd>Elemento</dd>
- <dt>Ação padrão</dt>
- <dd>O valor ou o conteúdo é modificado.</dd>
-</dl>
+- Especificação
+  - : [HTML5](https://html.spec.whatwg.org/multipage/forms.html#event-input-input), [DOM Level 3 Events](https://dvcs.w3.org/hg/dom3events/raw-file/tip/html/DOM3-Events.html#event-type-input)
+- Interface
+  - : {{domxref("Event")}}, {{domxref("InputEvent")}}
+- Borbulha
+  - : Sim
+- Cancelável
+  - : Não
+- Alvo
+  - : Elemento
+- Ação padrão
+  - : O valor ou o conteúdo é modificado.
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Propriedade</th>
-   <th scope="col">Tipo</th>
-   <th scope="col">Descrição</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>O alvo do evento (o alvo mais alto na árvore DOM).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>Tipo do evento.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Se o evento borbulha ou não.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Se o evento é cancelável, ou não.</td>
-  </tr>
- </tbody>
-</table>
+| Propriedade                           | Tipo                                 | Descrição                                          |
+| ------------------------------------- | ------------------------------------ | -------------------------------------------------- |
+| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | O alvo do evento (o alvo mais alto na árvore DOM). |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | Tipo do evento.                                    |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Se o evento borbulha ou não.                       |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Se o evento é cancelável, ou não.                  |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.HTMLElement.input_event")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{event("keydown")}}</li>
- <li>{{event("keyup")}}</li>
- <li>{{event("keypress")}}</li>
- <li>{{event("input")}}</li>
-</ul>
+- {{event("keydown")}}
+- {{event("keyup")}}
+- {{event("keypress")}}
+- {{event("input")}}
 
-<p>O evento de <code><a href="/en-US/docs/Web/Reference/Events/change">change</a></code> é relacionado. <code>change</code> dispara com menos frequência que o <code>input</code> – ele só irá disparar quando as mudanças forem finalizadas pelo usuário.</p>
+O evento de [`change`](/en-US/docs/Web/Reference/Events/change) é relacionado. `change` dispara com menos frequência que o `input` – ele só irá disparar quando as mudanças forem finalizadas pelo usuário.

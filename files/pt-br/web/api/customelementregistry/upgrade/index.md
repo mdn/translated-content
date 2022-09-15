@@ -2,47 +2,41 @@
 title: CustomElementRegistry.upgrade()
 slug: Web/API/CustomElementRegistry/upgrade
 tags:
-    - API
-    - CustomElementRegistry
-    - Method
-    - Reference
-    - Upgrade
-    - Web Components
-    - custom elements
+  - API
+  - CustomElementRegistry
+  - Method
+  - Reference
+  - Upgrade
+  - Web Components
+  - custom elements
 browser-compat: api.CustomElementRegistry.upgrade
 ---
+{{APIRef("CustomElementRegistry")}}
 
-<p>{{APIRef("CustomElementRegistry")}}</p>
-<p>
-    O <code><strong>upgrade()</strong></code> é um método de {{domxref("CustomElementRegistry")}} a interface atualiza todos os shadow-containing custom elements em um {{domxref("Node")}} da
-    subárvore, mesmo antes de estarem conectados ao principal documento.
-</p>
+O **`upgrade()`** é um método de {{domxref("CustomElementRegistry")}} a interface atualiza todos os shadow-containing custom elements em um {{domxref("Node")}} da
+subárvore, mesmo antes de estarem conectados ao principal documento.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
-customElements.upgrade(<em>root</em>);
-</pre>
+```js
+customElements.upgrade(root);
+```
 
-<h3 id="Parameters">Parâmetros</h3>
+### Parâmetros
 
-<dl>
-    <dt><code>root</code></dt>
-    <dd>
-        Uma instância de {{domxref("Node")}} com shadow-containing os elementos descendentes que serão atualizados. Se não houver elementos descendentes que possam ser atualizados, nenhum erro será
-        emitido.
-    </dd>
-</dl>
+- `root`
+  - : Uma instância de {{domxref("Node")}} com shadow-containing os elementos descendentes que serão atualizados. Se não houver elementos descendentes que possam ser atualizados, nenhum erro será
+    emitido.
 
-<h3 id="Return_value">Valor de retorno</h3>
+### Valor de retorno
 
-<p>Void.</p>
+Void.
 
-<h2 id="Examples">Exemplos</h2>
+## Exemplos
 
-<p>Retirado de <a href="https://html.spec.whatwg.org/multipage/custom-elements.html#dom-customelementregistry-upgrade">HTML spec</a>:</p>
+Retirado de [HTML spec](https://html.spec.whatwg.org/multipage/custom-elements.html#dom-customelementregistry-upgrade):
 
-<pre class="brush: js">
+```js
 const el = document.createElement("spider-man");
 
 class SpiderMan extends HTMLElement {}
@@ -52,12 +46,12 @@ console.assert(!(el instanceof SpiderMan)); // Ainda não atualizado
 
 customElements.upgrade(el);
 console.assert(el instanceof SpiderMan);    // Atualizado!
-</pre>
+```
 
-<h2 id="Specifications">Especificações</h2>
+## Especificações
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat}}</p>
+{{Compat}}

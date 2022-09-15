@@ -9,39 +9,27 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onchange
 original_slug: Web/API/GlobalEventHandlers/onchange
 ---
-<div>
-<div>{{ ApiRef("HTML DOM") }}</div>
-</div>
+{{ ApiRef("HTML DOM") }}
 
-<p>A propriedade <code>onchange</code> determina e retorna o <a href="/docs/Web/Guide/Events/Event_handlers" title="/en-US/docs/Web/Guide/DOM/Events/Event_handlers">manipulador de eventos</a> para o evento {{event("change")}}.</p>
+A propriedade `onchange` determina e retorna o [manipulador de eventos](/docs/Web/Guide/Events/Event_handlers "/en-US/docs/Web/Guide/DOM/Events/Event_handlers") para o evento {{event("change")}}.
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em><var>element</var></em>.onchange = <em>handlerFunction</em>;
-var <em>handlerFunction</em> = <em><var>element</var></em>.onchange;
-</pre>
+```
+element.onchange = handlerFunction;
+var handlerFunction = element.onchange;
+```
 
-<p><code><em>handlerFunction</em></code> deve ser ou <code>null</code> ou uma <a href="/en-US/docs/Web/JavaScript/Reference/Functions" title="/en-US/docs/JavaScript/Reference/Functions_and_function_scope">função JavaScript</a> especificando o manipulador para o evento.</p>
+`handlerFunction` deve ser ou `null` ou uma [função JavaScript](/pt-BR/docs/Web/JavaScript/Reference/Functions "/en-US/docs/JavaScript/Reference/Functions_and_function_scope") especificando o manipulador para o evento.
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p>Veja a página do <a href="/en-US/docs/Web/Guide/Events/Event_handlers" title="/en-US/docs/Web/Guide/DOM/Events/Event_handlers">manipulador de eventos do DOM</a> para informações sobre como trabalhar com manipuladores <code>on...</code> </p>
+Veja a página do [manipulador de eventos do DOM](/pt-BR/docs/Web/Guide/Events/Event_handlers "/en-US/docs/Web/Guide/DOM/Events/Event_handlers") para informações sobre como trabalhar com manipuladores `on...`
 
-<p>Veja a documentação do evento {{event("change")}} para informações sobre o evento.</p>
+Veja a documentação do evento {{event("change")}} para informações sobre o evento.
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentários</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onchange','onchange')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                    | Status                           | Comentários |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG','webappapis.html#handler-onchange','onchange')}} | {{Spec2('HTML WHATWG')}} |             |

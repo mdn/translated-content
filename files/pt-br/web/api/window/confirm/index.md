@@ -3,47 +3,44 @@ title: Window.confirm()
 slug: Web/API/Window/confirm
 translation_of: Web/API/Window/confirm
 ---
-<div>{{ApiRef("Window")}}</div>
+{{ApiRef("Window")}}
 
-<p>O método <code><strong>Window.confirm()</strong></code> mostra uma janela modal com uma mensagem opcional e dois botões, OK e Cancelar.</p>
+O método **`Window.confirm()`** mostra uma janela modal com uma mensagem opcional e dois botões, OK e Cancelar.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre><em>result</em>ado = window.confirm(<em>mensagem</em>);
-</pre>
+```
+resultado = window.confirm(mensagem);
+```
 
-<ul>
- <li><code>mensagem</code> é a string opcional que será mostrada no diálogo.</li>
- <li><code>resultado</code> é um booleano indicando se OK ou cancelar foram selecionados (<code>true</code> indicará OK).</li>
-</ul>
+- `mensagem` é a string opcional que será mostrada no diálogo.
+- `resultado` é um booleano indicando se OK ou cancelar foram selecionados (`true` indicará OK).
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<pre>if (window.confirm("Você realmente quer sair?")) {
+```
+if (window.confirm("Você realmente quer sair?")) {
   window.open("sair.html", "Obrigado pela visita!");
 }
-</pre>
+```
 
-<p>Produzirá:</p>
+Produzirá:
 
-<p><img alt="firefox confirm" src="https://mdn.mozillademos.org/files/7163/firefoxcomfirmdialog_zpsf00ec381.png" style="height: 119px; width: 354px;"><br>
-  </p>
+![firefox confirm](https://mdn.mozillademos.org/files/7163/firefoxcomfirmdialog_zpsf00ec381.png)
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p><span class="comment">The following text is shared between this article, DOM:window.prompt and DOM:window.alert</span> Caixas de diálogo são janelas modais - elas previnem o usuário de acessar o resto da interface da aplicação enquanto a caixa de diálogo não for fechada. Por esta razão, você não deve usar abusivamente nenhuma função que crie uma caixa de diálogo (ou uma janela modal). E independente disso, existem boas razões para <a href="http://alistapart.com/article/neveruseawarning">evitar o uso de caixas de diálogo para confirmações. </a></p>
+The following text is shared between this article, DOM:window\.prompt and DOM:window\.alert Caixas de diálogo são janelas modais - elas previnem o usuário de acessar o resto da interface da aplicação enquanto a caixa de diálogo não for fechada. Por esta razão, você não deve usar abusivamente nenhuma função que crie uma caixa de diálogo (ou uma janela modal). E independente disso, existem boas razões para [evitar o uso de caixas de diálogo para confirmações.](http://alistapart.com/article/neveruseawarning)
 
-<p>Usuários do <a href="/en-US/Chrome" title="Chrome">Mozilla Chrome</a> (Ex.: Extensões do Firefox) devem utilizar métodos de <code>nsIPromptService</code>.</p>
+Usuários do [Mozilla Chrome](/en-US/Chrome "Chrome") (Ex.: Extensões do Firefox) devem utilizar métodos de `nsIPromptService`.
 
-<p>{{gecko_minversion_inline("23.0")}}O argumento é opcional e não é requerido por especificações.</p>
+{{gecko_minversion_inline("23.0")}}O argumento é opcional e não é requerido por especificações.
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<p>Especificado em HTML5.</p>
+Especificado em HTML5.
 
-<h2 id="See_also" name="See_also">Veja Também</h2>
+## Veja Também
 
-<ul>
- <li>{{domxref("window.alert","alert")}}</li>
- <li>{{domxref("window.prompt","prompt")}}</li>
-</ul>
+- {{domxref("window.alert","alert")}}
+- {{domxref("window.prompt","prompt")}}

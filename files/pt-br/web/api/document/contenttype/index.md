@@ -3,42 +3,28 @@ title: Document.contentType
 slug: Web/API/Document/contentType
 translation_of: Web/API/Document/contentType
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>Document.contentType</strong></code> é uma propriedade somente de leitura, que retorna o tipo MIME do documento que esta sendo rendenrizado.Isso pode vir de cabeçalhos HTPP ou de outras fontes de informações MIME, e pode se afetado por conversões realizadas pelo navegador ou pelas extenções.</p>
+**`Document.contentType`** é uma propriedade somente de leitura, que retorna o tipo MIME do documento que esta sendo rendenrizado.Isso pode vir de cabeçalhos HTPP ou de outras fontes de informações MIME, e pode se afetado por conversões realizadas pelo navegador ou pelas extenções.
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> Esta proiedade não é afetada pelos elementos {{HTMLElement("meta")}}.</p>
-</div>
+> **Nota:** Esta proiedade não é afetada pelos elementos {{HTMLElement("meta")}}.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><var>contentType</var> = <var>document</var>.contentType;
-</pre>
+```
+contentType = document.contentType;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>contentType</code> é uma propriedade somente de leitura.</p>
+`contentType` é uma propriedade somente de leitura.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-document-contenttype', 'Document.contentType')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                            | Status                           | Comentário        |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
+| {{SpecName('DOM WHATWG', '#dom-document-contenttype', 'Document.contentType')}} | {{Spec2('DOM WHATWG')}} | Definição inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>{{Compat("api.Document.contentType")}}</div>
+{{Compat("api.Document.contentType")}}

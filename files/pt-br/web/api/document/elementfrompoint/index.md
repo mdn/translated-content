@@ -12,75 +12,65 @@ translation_of: Web/API/DocumentOrShadowRoot/elementFromPoint
 translation_of_original: Web/API/Document/elementFromPoint
 original_slug: Web/API/DocumentOrShadowRoot/elementFromPoint
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>O método <code><strong>elementFromPoint()</strong></code> da interface {{domxref("Document")}} retorna o elemento de maior nível nas coordenadas especificadas.</p>
+O método **`elementFromPoint()`** da interface {{domxref("Document")}} retorna o elemento de maior nível nas coordenadas especificadas.
 
-<p>Se o elemento no ponto especificado pertencer à outro documento (por exemplo, um subdocumento em um iframe), será retornado o pai do subdocumento (o próprio iframe). Se o elemento em determinado ponto for anônimo ou for um conteudo gerado por XBL, como por exemplo barras de scroll de caixas de texto, então será retornado o primeiro elemento pai, não-anônimo (por exemplo, a própria caixa de texto).</p>
+Se o elemento no ponto especificado pertencer à outro documento (por exemplo, um subdocumento em um iframe), será retornado o pai do subdocumento (o próprio iframe). Se o elemento em determinado ponto for anônimo ou for um conteudo gerado por XBL, como por exemplo barras de scroll de caixas de texto, então será retornado o primeiro elemento pai, não-anônimo (por exemplo, a própria caixa de texto).
 
-<p>Se o ponto especificado estiver fora dos limites visíveis do documento ou tiver uma coordenada negativa, o resultado é <code>null</code>.</p>
+Se o ponto especificado estiver fora dos limites visíveis do documento ou tiver uma coordenada negativa, o resultado é `null`.
 
-<p>Se você precisa encontrar uma posição específica dentro do elemento, use {{domxref("Document.caretPositionFromPoint()")}}.</p>
+Se você precisa encontrar uma posição específica dentro do elemento, use {{domxref("Document.caretPositionFromPoint()")}}.
 
-<p>{{Note("Chamados por documentos XUL devem esperar até o evento <code>onload</code> ser acionado antes de chamar este método.")}}</p>
+{{Note("Chamados por documentos XUL devem esperar até o evento <code>onload</code> ser acionado antes de chamar este método.")}}
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var element = document.elementFromPoint(x, y);</pre>
+```
+var element = document.elementFromPoint(x, y);
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt>x</dt>
- <dd>Uma posição horizontal dentro do viewport atual.</dd>
- <dt>y</dt>
- <dd>Uma position vertical dentro do viewport atual.</dd>
-</dl>
+- x
+  - : Uma posição horizontal dentro do viewport atual.
+- y
+  - : Uma position vertical dentro do viewport atual.
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>O objeto de nível mais alto {{domxref("Element")}} dentro das coordenadas declaradas.</p>
+O objeto de nível mais alto {{domxref("Element")}} dentro das coordenadas declaradas.
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;title&gt;exemplo de elementFromPoint&lt;/title&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>exemplo de elementFromPoint</title>
 
-&lt;script&gt;
+<script>
 function changeColor(newColor) {
   elem = document.elementFromPoint(2, 2);
   elem.style.color = newColor;
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body&gt;
-&lt;p id="para1"&gt;Algum texto aqui&lt;/p&gt;
-&lt;button onclick="changeColor('blue');"&gt;azul&lt;/button&gt;
-&lt;button onclick="changeColor('red');"&gt;vermelho&lt;/button&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<body>
+<p id="para1">Algum texto aqui</p>
+<button onclick="changeColor('blue');">azul</button>
+<button onclick="changeColor('red');">vermelho</button>
+</body>
+</html>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#dom-document-elementfrompoint', 'elementFromPoint')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td>Definição Inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                | Status                           | Comment            |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
+| {{SpecName('CSSOM View', '#dom-document-elementfrompoint', 'elementFromPoint')}} | {{Spec2('CSSOM View')}} | Definição Inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Document.elementFromPoint")}}

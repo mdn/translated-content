@@ -7,77 +7,76 @@ tags:
   - Property
 translation_of: Web/API/Node/textContent
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
+A propriedade **`textContent`** da interface {{domxref("Node")}} representa o conteúdo de texto de um nó e dos seus descendentes.
 
+> **Nota:** `textContent` e {{domxref("HTMLElement.innerText")}} são facilmente confundidos, mas [os dois possuem importantes diferenças entre sí.](#Differences_from_innerText)
 
-<p>A propriedade <code><strong>textContent</strong></code> da interface {{domxref("Node")}} representa o conteúdo de texto de um nó e dos seus descendentes.</p>
+## Sintaxe
 
-<div class="blockIndicator note">
-<p><strong>Nota:</strong> <code>textContent</code> e {{domxref("HTMLElement.innerText")}} são facilmente confundidos, mas <a href="#Differences_from_innerText">os dois possuem importantes diferenças entre sí.</a></p>
-</div>
+```js
+var text = Node.textContent;
+Node.textContent = string;
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Valor de retorno
 
-<pre class="brush: js">var <em>text</em> = <em>Node</em>.textContent;
-<em>Node</em>.textContent = <em>string</em>;
-</pre>
+Uma `String` ou `null`
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+## Descrição
 
-<p>Uma <code>String</code> ou <code>null</code></p>
+Ao obter valores desta propriedade:
 
-<h2 id="Descrição">Descrição</h2>
+- Se o nó for um [document](/pt-BR/docs/DOM/document), um [DOCTYPE](/pt-BR/docs/Glossary/Doctype), ou uma [notation](/pt-BR/docs/Web/API/Notation), o `textContent` retornará `null`. (Para se obter todo o texto e os [dados CDATA](/pt-BR/docs/Web/API/CDATASection) do documento inteiro, você poderá usar `document.documentElement.textContent`.)
+- Se o nó for uma [seção CDATA](/pt-BR/docs/Web/API/CDATASection), comentário, [instrução de processamento](/pt-BR/docs/Web/API/ProcessingInstruction), ou um [text node](/pt-BR/docs/Web/API/Document/createTextNode), o `textContent` retornará o texto dentro do nó, i.e., o {{domxref("Node.nodeValue")}}.
+- Para outros tipos de nó, o `textContent` retornará a concatenação `textContent` de cada nó filho, exceto comentários e instruções de processamento. Essa é uma string vazia se o nó não tiver filhos.
 
-<p>Ao obter valores desta propriedade:</p>
+Definir valores `textContent` em um nó, remove todos os nós filhos e os substituem por um único nó de texto cujo o valor é a string inserida.
 
-<ul>
- <li>Se o nó for um <a href="/en-US/docs/DOM/document">document</a>, um <a href="/en-US/docs/Glossary/Doctype">DOCTYPE</a>, ou uma <a href="/en-US/docs/Web/API/Notation">notation</a>, o <code>textContent</code> retornará <code>null</code>. (Para se obter todo o texto e os <a href="/en-US/docs/Web/API/CDATASection">dados CDATA</a> do documento inteiro, você poderá usar <code><a href="/en-US/docs/DOM/document.documentElement">document.documentElement</a>.textContent</code>.)</li>
- <li>Se o nó for uma <a href="/en-US/docs/Web/API/CDATASection">seção CDATA</a>, comentário, <a href="/en-US/docs/Web/API/ProcessingInstruction">instrução de processamento</a>, ou um <a href="/en-US/docs/Web/API/Document/createTextNode">text node</a>, o  <code>textContent</code> retornará o texto dentro do nó, i.e., o {{domxref("Node.nodeValue")}}.</li>
- <li>Para outros tipos de nó, o <code>textContent</code> retornará a concatenação <code>textContent</code> de cada nó filho, exceto comentários e instruções de processamento. Essa é uma string vazia se o nó não tiver filhos.</li>
-</ul>
+### Diferenças para o innerText
 
-<p>Definir valores <code>textContent</code> em um nó, remove todos os nós filhos e os substituem por um único nó de texto cujo o valor é a string inserida.</p>
+Não fique confuso pelas diferenças entre o `Node.textContent` e o {{domxref("HTMLElement.innerText")}}. Apesar dos nomes parecerem similares, eles possuem importantes diferenças:
 
-<h3 id="Diferenças_para_o_innerText">Diferenças para o innerText</h3>
+- `textContent` obtém o conteúdo de todos os elementos, incluindo os elementos {{HTMLElement("script")}} e {{HTMLElement("style")}}. por outro lado, o `innerText` mostra apenas os elementos para "leitura humana".
+- `textContent` retorna todos os elementos de um nó. Por outro lado, o `innerText` é ciente da estilização e não retorna elementos de texto "escondidos". Além disso, como o `innerText` leva em consideração os estilos CSS, a leitura do valor de `innerText` dispara um {{glossary("reflow")}} para assegurar a atualização dos estilos computados. (Reflows podem ser computacionalmente caros, e devem ser evitados quando for possível.)
+- ao contrário do `textContent`, alterar o `innerText` no Internet Explorer (versão 11 e anteriores) remove os nós filhos do elemento e, _destroi permanentemente_ todos os nós de texto descendentes. Isso torna impossível inserir novamente os nós em qualquer outro elemento ou no mesmo elemento.
 
-<p>Não fique confuso pelas diferenças entre o <code>Node.textContent</code> e o {{domxref("HTMLElement.innerText")}}. Apesar dos nomes parecerem similares, eles possuem importantes diferenças:</p>
+### Diferenças para o innerHTML
 
-<ul>
- <li><code>textContent</code> obtém o conteúdo de todos os elementos, incluindo os elementos {{HTMLElement("script")}} e {{HTMLElement("style")}}. por outro lado, o <code>innerText</code> mostra apenas os elementos para "leitura humana".</li>
- <li><code>textContent</code> retorna todos os elementos de um nó. Por outro lado, o  <code>innerText</code> é ciente da estilização e não retorna elementos de texto "escondidos". Além disso, como o <code>innerText</code> leva em consideração os estilos CSS, a leitura do valor de <code>innerText</code> dispara um  {{glossary("reflow")}} para assegurar a atualização dos estilos computados. (Reflows podem ser computacionalmente caros, e devem ser evitados quando for possível.)</li>
- <li>ao contrário do <code>textContent</code>, alterar o <code>innerText</code> no Internet Explorer (versão 11 e anteriores) remove os nós filhos do elemento e, <em>destroi permanentemente</em> todos os nós de texto descendentes. Isso torna impossível inserir novamente os nós em qualquer outro elemento ou no mesmo elemento.</li>
-</ul>
+O {{domxref("Element.innerHTML")}} retorna HTML, Como seu próprio nome indica. As vezes as pessoas usam o `innerHTML` para obter ou escrever textos dentro de um elemento, mas o `textContent` possui melhor performance pois seus valores não são analisados como HTML. Além do mais, utilizar `textContent` pode prevenir [ataques XSS](/pt-BR/docs/Glossary/Cross-site_scripting).
 
-<h3 id="Diferenças_para_o_innerHTML">Diferenças para o innerHTML</h3>
+## Exemplos
 
-<p>O {{domxref("Element.innerHTML")}} retorna HTML, Como seu próprio nome indica. As vezes as pessoas usam o <code>innerHTML</code> para obter ou escrever textos dentro de um elemento, mas o <code>textContent</code> possui melhor performance pois seus valores não são analisados como HTML. Além do mais, utilizar <code>textContent</code> pode prevenir <a href="/en-US/docs/Glossary/Cross-site_scripting">ataques XSS</a>.</p>
+Dado o seguinte fragmento HTML:
 
-<h2 id="Exemplos">Exemplos</h2>
+```html
+<div id="divA">Isto é<span>algum</span> texto!</div>
+```
 
-<p>Dado o seguinte fragmento HTML:</p>
+... Você pode usar `textContent` para obter o conteúdo de texto do elemento:
 
-<pre class="brush: html">&lt;div id="divA"&gt;Isto é&lt;span&gt;algum&lt;/span&gt; texto!&lt;/div&gt;</pre>
+```js
+let text = document.getElementById('divA').textContent;
+// Agora a variável de texto é: 'Isto é algum texto!'
+```
 
-<p>... Você pode usar <code>textContent</code> para obter o conteúdo de texto do elemento:</p>
+... Ou definir o conteúdo de texto do elemento:
 
-<pre class="brush: js">let text = document.getElementById('divA').textContent;
-// Agora a variável de texto é: 'Isto é algum texto!'</pre>
-
-<p>... Ou definir o conteúdo de texto do elemento:</p>
-
-<pre class="brush: js">document.getElementById('divA').textContent = 'Este texto é diferente!';
+```js
+document.getElementById('divA').textContent = 'Este texto é diferente!';
 // O HTML de divA agora é:
-// &lt;div id="divA"&gt;Este texto é diferente!&lt;/div&gt;
-</pre>
+// <div id="divA">Este texto é diferente!</div>
+```
 
-<h2 id="Polyfill_para_o_IE8">Polyfill para o IE8</h2>
+## Polyfill para o IE8
 
-<pre class="brush: js">// Fonte: Eli Grey @ https://eligrey.com/blog/post/textcontent-in-ie8
+```js
+// Fonte: Eli Grey @ https://eligrey.com/blog/post/textcontent-in-ie8
 if (Object.defineProperty
-  &amp;&amp; Object.getOwnPropertyDescriptor
-  &amp;&amp; Object.getOwnPropertyDescriptor(Element.prototype, "textContent")
-  &amp;&amp; !Object.getOwnPropertyDescriptor(Element.prototype, "textContent").get) {
+  && Object.getOwnPropertyDescriptor
+  && Object.getOwnPropertyDescriptor(Element.prototype, "textContent")
+  && !Object.getOwnPropertyDescriptor(Element.prototype, "textContent").get) {
   (function() {
     var innerText = Object.getOwnPropertyDescriptor(Element.prototype, "innerText");
     Object.defineProperty(Element.prototype, "textContent",
@@ -94,43 +93,22 @@ if (Object.defineProperty
    );
   })();
 }
-</pre>
+```
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("api.Node.textContent")}}</p>
+{{Compat("api.Node.textContent")}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-node-textcontent','Node.textContent')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Sem alterações vs. DOM4</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM4','#dom-node-textcontent','Node.textContent')}}</td>
-   <td>{{Spec2('DOM4')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core','core.html#Node3-textContent','Node.textContent')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Introduzida</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                           | Comment                 |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------- |
+| {{SpecName('DOM WHATWG','#dom-node-textcontent','Node.textContent')}}         | {{Spec2('DOM WHATWG')}} | Sem alterações vs. DOM4 |
+| {{SpecName('DOM4','#dom-node-textcontent','Node.textContent')}}                 | {{Spec2('DOM4')}}         |                         |
+| {{SpecName('DOM3 Core','core.html#Node3-textContent','Node.textContent')}} | {{Spec2('DOM3 Core')}}     | Introduzida             |
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("HTMLElement.innerText")}}</li>
- <li>{{domxref("Element.innerHTML")}}</li>
- <li><a href="http://perfectionkills.com/the-poor-misunderstood-innerText/">More on differences between <code>innerText</code> and <code>textContent</code></a> (blog post)</li>
-</ul>
+- {{domxref("HTMLElement.innerText")}}
+- {{domxref("Element.innerHTML")}}
+- [More on differences between `innerText` and `textContent`](http://perfectionkills.com/the-poor-misunderstood-innerText/) (blog post)

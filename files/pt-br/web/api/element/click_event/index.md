@@ -3,205 +3,108 @@ title: click
 slug: Web/API/Element/click_event
 translation_of: Web/API/Element/click_event
 ---
-<p>O evento <code>click</code> event é disparado quando o botão de um dispositivo apontador (normalmente o botão de um mouse) é pressionado e solto logo em seguida em um mesmo elemento.</p>
+O evento `click` event é disparado quando o botão de um dispositivo apontador (normalmente o botão de um mouse) é pressionado e solto logo em seguida em um mesmo elemento.
 
-<h2 id="Informações_gerais">Informações gerais</h2>
+## Informações gerais
 
-<dl>
- <dt style="float: left; text-align: right; width: 120px;">Especificação</dt>
- <dd style="margin: 0 0 0 120px;"><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-type-click">DOM L3</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">Interface</dt>
- <dd style="margin: 0 0 0 120px;">{{domxref("MouseEvent")}}</dd>
- <dt style="float: left; text-align: right; width: 120px;">Bubbles</dt>
- <dd style="margin: 0 0 0 120px;">Sim</dd>
- <dt style="float: left; text-align: right; width: 120px;">Cancelável</dt>
- <dd style="margin: 0 0 0 120px;">Sim</dd>
- <dt style="float: left; text-align: right; width: 120px;">Target</dt>
- <dd style="margin: 0 0 0 120px;">Element</dd>
- <dt style="float: left; text-align: right; width: 120px;">Ação padrão</dt>
- <dd style="margin: 0 0 0 120px;">Variável</dd>
-</dl>
+- Especificação
+  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-click)
+- Interface
+  - : {{domxref("MouseEvent")}}
+- Bubbles
+  - : Sim
+- Cancelável
+  - : Sim
+- Target
+  - : Element
+- Ação padrão
+  - : Variável
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/EventTarget" title="EventTarget is an interface implemented by objects that can receive events and may have listeners for them."><code>EventTarget</code></a></td>
-   <td>O alvo do evento (o mais alto na arvore de DOM).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td><code><a href="/en-US/docs/Web/API/DOMString" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String.">DOMString</a></code></td>
-   <td>Tipo do evento.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/Boolean" title="The Boolean object is an object wrapper for a boolean value."><code>Boolean</code></a></td>
-   <td>Se o evento "bubbles" naturalmente ou não.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/Boolean" title="The Boolean object is an object wrapper for a boolean value."><code>Boolean</code></a></td>
-   <td>Se o evento é cancelável ou não</td>
-  </tr>
-  <tr>
-   <td><code>view</code> {{readonlyInline}}</td>
-   <td><a class="new" href="/en-US/docs/Web/API/WindowProxy" rel="nofollow" title="The documentation about this has not yet been written; please consider contributing!"><code>WindowProxy</code></a></td>
-   <td><a href="/en-US/docs/Web/API/Document/defaultView" title="In browsers, document.defaultView returns the window object associated with a document, or null if none is available."><code>document.defaultView</code></a> (<code>window</code> do documento)</td>
-  </tr>
-  <tr>
-   <td><code>detail</code> {{readonlyInline}}</td>
-   <td><code>long</code> (<code>float</code>)</td>
-   <td>
-    <p>Um contador de cliques consecutivos que ocorrem em um curto espaço de tempo, incrementado em 1.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>currentTarget</code> {{readonlyInline}}</td>
-   <td>EventTarget</td>
-   <td>O node que contem o eventListener.</td>
-  </tr>
-  <tr>
-   <td><code>relatedTarget</code> {{readonlyInline}}</td>
-   <td>EventTarget</td>
-   <td>Para eventos <code>mouseover</code>, <code>mouseout</code>, <code>mouseenter</code> e <code>mouseleave</code>: o alvo do evento complementar (o <code>mouseleave</code> no caso de um evento <code>mouseenter</code> ). <code>null</code> , se falso.</td>
-  </tr>
-  <tr>
-   <td><code>screenX</code> {{readonlyInline}}</td>
-   <td>long</td>
-   <td>A coordenada X do ponteiro do mouse na tela.</td>
-  </tr>
-  <tr>
-   <td><code>screenY</code> {{readonlyInline}}</td>
-   <td>long</td>
-   <td>A coordenada Y do ponteiro do mouse na tela.</td>
-  </tr>
-  <tr>
-   <td><code>clientX</code> {{readonlyInline}}</td>
-   <td>long</td>
-   <td>A coordenada X do ponteiro do mouse no DOM atual.</td>
-  </tr>
-  <tr>
-   <td><code>clientY</code> {{readonlyInline}}</td>
-   <td>long</td>
-   <td>A coordenada Y do ponteiro do mouse no DOM atual.</td>
-  </tr>
-  <tr>
-   <td><code>button</code> {{readonlyInline}}</td>
-   <td>unsigned short</td>
-   <td>The button number that was pressed when the mouse event was fired: Left button=0, middle button=1 (if present), right button=2. For mice configured for left handed use in which the button actions are reversed the values are instead read from right to left.</td>
-  </tr>
-  <tr>
-   <td><code>buttons</code> {{readonlyInline}}</td>
-   <td>unsigned short</td>
-   <td>The buttons being pressed when the mouse event was fired: Left button=1, Right button=2, Middle (wheel) button=4, 4th button (typically, "Browser Back" button)=8, 5th button (typically, "Browser Forward" button)=16. If two or more buttons are pressed, returns the logical sum of the values. E.g., if Left button and Right button are pressed, returns 3 (=1 | 2). <a href="/en-US/docs/Web/API/MouseEvent">More info</a>.</td>
-  </tr>
-  <tr>
-   <td><code>mozPressure</code> {{readonlyInline}}</td>
-   <td>float</td>
-   <td>The amount of pressure applied to a touch or tabdevice when generating the event; this value ranges between 0.0 (minimum pressure) and 1.0 (maximum pressure).</td>
-  </tr>
-  <tr>
-   <td><code>ctrlKey</code> {{readonlyInline}}</td>
-   <td>boolean</td>
-   <td><code>true</code> if the control key was down when the event was fired. <code>false</code> otherwise.</td>
-  </tr>
-  <tr>
-   <td><code>shiftKey</code> {{readonlyInline}}</td>
-   <td>boolean</td>
-   <td><code>true</code> if the shift key was down when the event was fired. <code>false</code> otherwise.</td>
-  </tr>
-  <tr>
-   <td><code>altKey</code> {{readonlyInline}}</td>
-   <td>boolean</td>
-   <td><code>true</code> if the alt key was down when the event was fired. <code>false</code> otherwise.</td>
-  </tr>
-  <tr>
-   <td><code>metaKey</code> {{readonlyInline}}</td>
-   <td>boolean</td>
-   <td><code>true</code> if the meta key was down when the event was fired. <code>false</code> otherwise.</td>
-  </tr>
- </tbody>
-</table>
+| Property                                 | Type                                                                                                                                                            | Description                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `target` {{readonlyInline}}        | [`EventTarget`](/pt-BR/docs/Web/API/EventTarget "EventTarget is an interface implemented by objects that can receive events and may have listeners for them.")  | O alvo do evento (o mais alto na arvore de DOM).                                                                                                                                                                                                                                                                                                                                                                        |
+| `type` {{readonlyInline}}          | [`DOMString`](/en-US/docs/Web/API/DOMString "DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String.") | Tipo do evento.                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `bubbles` {{readonlyInline}}       | [`Boolean`](/pt-BR/docs/Web/API/Boolean "The Boolean object is an object wrapper for a boolean value.")                                                         | Se o evento "bubbles" naturalmente ou não.                                                                                                                                                                                                                                                                                                                                                                              |
+| `cancelable` {{readonlyInline}}    | [`Boolean`](/pt-BR/docs/Web/API/Boolean "The Boolean object is an object wrapper for a boolean value.")                                                         | Se o evento é cancelável ou não                                                                                                                                                                                                                                                                                                                                                                                         |
+| `view` {{readonlyInline}}          | [`WindowProxy`](/pt-BR/docs/Web/API/WindowProxy "The documentation about this has not yet been written; please consider contributing!")                         | [`document.defaultView`](/pt-BR/docs/Web/API/Document/defaultView "In browsers, document.defaultView returns the window object associated with a document, or null if none is available.") (`window` do documento)                                                                                                                                                                                                      |
+| `detail` {{readonlyInline}}        | `long` (`float`)                                                                                                                                                | Um contador de cliques consecutivos que ocorrem em um curto espaço de tempo, incrementado em 1.                                                                                                                                                                                                                                                                                                                         |
+| `currentTarget` {{readonlyInline}} | EventTarget                                                                                                                                                     | O node que contem o eventListener.                                                                                                                                                                                                                                                                                                                                                                                      |
+| `relatedTarget` {{readonlyInline}} | EventTarget                                                                                                                                                     | Para eventos `mouseover`, `mouseout`, `mouseenter` e `mouseleave`: o alvo do evento complementar (o `mouseleave` no caso de um evento `mouseenter` ). `null` , se falso.                                                                                                                                                                                                                                                |
+| `screenX` {{readonlyInline}}       | long                                                                                                                                                            | A coordenada X do ponteiro do mouse na tela.                                                                                                                                                                                                                                                                                                                                                                            |
+| `screenY` {{readonlyInline}}       | long                                                                                                                                                            | A coordenada Y do ponteiro do mouse na tela.                                                                                                                                                                                                                                                                                                                                                                            |
+| `clientX` {{readonlyInline}}       | long                                                                                                                                                            | A coordenada X do ponteiro do mouse no DOM atual.                                                                                                                                                                                                                                                                                                                                                                       |
+| `clientY` {{readonlyInline}}       | long                                                                                                                                                            | A coordenada Y do ponteiro do mouse no DOM atual.                                                                                                                                                                                                                                                                                                                                                                       |
+| `button` {{readonlyInline}}        | unsigned short                                                                                                                                                  | The button number that was pressed when the mouse event was fired: Left button=0, middle button=1 (if present), right button=2. For mice configured for left handed use in which the button actions are reversed the values are instead read from right to left.                                                                                                                                                        |
+| `buttons` {{readonlyInline}}       | unsigned short                                                                                                                                                  | The buttons being pressed when the mouse event was fired: Left button=1, Right button=2, Middle (wheel) button=4, 4th button (typically, "Browser Back" button)=8, 5th button (typically, "Browser Forward" button)=16. If two or more buttons are pressed, returns the logical sum of the values. E.g., if Left button and Right button are pressed, returns 3 (=1 \| 2). [More info](/pt-BR/docs/Web/API/MouseEvent). |
+| `mozPressure` {{readonlyInline}}   | float                                                                                                                                                           | The amount of pressure applied to a touch or tabdevice when generating the event; this value ranges between 0.0 (minimum pressure) and 1.0 (maximum pressure).                                                                                                                                                                                                                                                          |
+| `ctrlKey` {{readonlyInline}}       | boolean                                                                                                                                                         | `true` if the control key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                         |
+| `shiftKey` {{readonlyInline}}      | boolean                                                                                                                                                         | `true` if the shift key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                           |
+| `altKey` {{readonlyInline}}        | boolean                                                                                                                                                         | `true` if the alt key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                             |
+| `metaKey` {{readonlyInline}}       | boolean                                                                                                                                                         | `true` if the meta key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                            |
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: js">&lt;div id="test"&gt;&lt;/div&gt;
+```js
+<div id="test"></div>
 
-&lt;script&gt;
+<script>
   document.getElementById("test").addEventListener("click", function( event ) {
     // mostra o contador de cliques dentro da div clicada
     event.target.innerHTML = "Total de cliques: " + event.detail;
   }, false);
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<h3 id="Internet_Explorer">Internet Explorer</h3>
+### Internet Explorer
 
-<p>O Internet Explorer 8 e 9 apresentam um bug onde o elemento com a propriedade {{cssxref("background-color")}} é definida como <a href="/en-US/docs/Web/CSS/color_value#transparent_keyword"><code>transparent</code></a> that are overlaid on top of other element(s) won't receive <code>click</code> events. Todos os eventos <code>click</code> serão disparados no elemento underlying instead. Veja uma demonstração <a href="http://jsfiddle.net/YUKma/show/">neste exemplo</a>.</p>
+O Internet Explorer 8 e 9 apresentam um bug onde o elemento com a propriedade {{cssxref("background-color")}} é definida como [`transparent`](/pt-BR/docs/Web/CSS/color_value#transparent_keyword) that are overlaid on top of other element(s) won't receive `click` events. Todos os eventos `click` serão disparados no elemento underlying instead. Veja uma demonstração [neste exemplo](http://jsfiddle.net/YUKma/show/).
 
-<p>Soluções de contorno para este bug:</p>
+Soluções de contorno para este bug:
 
-<ul>
- <li>Somente para o IE9:
-  <ul>
-   <li>Defina o <code>{{cssxref("background-color")}} como: <a href="/en-US/docs/Web/CSS/color_value#rgba()">rgba</a>(0,0,0,0)</code></li>
-   <li>Defina  a <code>{{cssxref("opacity")}} como: 0</code> e defina explicitamente {{cssxref("background-color")}} com outro valor diferente de <a href="/en-US/docs/Web/CSS/color_value#transparent_keyword"><code>transparent</code></a></li>
-  </ul>
- </li>
- <li>Para IE8 e IE9: Defina a propriedade <code><a href="http://msdn.microsoft.com/en-us/library/ms532847(v=vs.85).aspx">filter</a> como: alpha(opacity=0);</code> e o {{cssxref("background-color")}} com outro valor diferente de <a href="/en-US/docs/Web/CSS/color_value#transparent_keyword"><code>transparent</code></a></li>
-</ul>
+- Somente para o IE9:
 
-<h3 id="Safari_Mobile">Safari Mobile</h3>
+  - Defina o `{{cssxref("background-color")}} como: rgba(0,0,0,0)`
+  - Defina a `{{cssxref("opacity")}} como: 0` e defina explicitamente {{cssxref("background-color")}} com outro valor diferente de [`transparent`](/pt-BR/docs/Web/CSS/color_value#transparent_keyword)
 
-<p>Safari Mobile 7.0+ (and likely earlier versions too) <a href="https://bugs.webkit.org/show_bug.cgi?id=153887">suffers from a bug</a> where <code>click</code> events aren't fired on elements that aren't typically interactive (e.g. {{HTMLElement("div")}}) and which also don't have event listeners directly attached to the elements themselves (i.e. <a href="http://davidwalsh.name/event-delegate">event delegation</a> is being used). See <a href="http://jsfiddle.net/cvrhulu/k9t0sdnf/show/">this live example</a> for a demonstration. See also <a href="https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW6">Safari's docs on making elements clickable</a> and the <a href="https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW7">definition of "clickable element"</a>.</p>
+- Para IE8 e IE9: Defina a propriedade `filter como: alpha(opacity=0);` e o {{cssxref("background-color")}} com outro valor diferente de [`transparent`](/pt-BR/docs/Web/CSS/color_value#transparent_keyword)
 
-<p>Known workarounds for this bug:</p>
+### Safari Mobile
 
-<ul>
- <li>Set {{cssxref("cursor")}}<code>: pointer;</code> on the element or any of its ancestors.</li>
- <li>Add a dummy <code>onclick="void(0)"</code> attribute to the element or any of its ancestors up to but not including {{HTMLElement("body")}}.</li>
- <li>Use a typically interactive element (e.g. {{HTMLElement("a")}}) instead of one that isn't typically interactive (e.g. {{HTMLElement("div")}}).</li>
- <li>Stop using <code>click</code> <a href="http://davidwalsh.name/event-delegate">event delegation</a>.</li>
-</ul>
+Safari Mobile 7.0+ (and likely earlier versions too) [suffers from a bug](https://bugs.webkit.org/show_bug.cgi?id=153887) where `click` events aren't fired on elements that aren't typically interactive (e.g. {{HTMLElement("div")}}) and which also don't have event listeners directly attached to the elements themselves (i.e. [event delegation](http://davidwalsh.name/event-delegate) is being used). See [this live example](http://jsfiddle.net/cvrhulu/k9t0sdnf/show/) for a demonstration. See also [Safari's docs on making elements clickable](https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW6) and the [definition of "clickable element"](https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW7).
 
-<p>Safari Mobile considers the following elements to be typically interactive (and thus they aren't affected by this bug):</p>
+Known workarounds for this bug:
 
-<ul>
- <li>{{HTMLElement("a")}} (but it must have an <code>href</code>)</li>
- <li>{{HTMLElement("area")}} (but it must have an <code>href</code>)</li>
- <li>{{HTMLElement("button")}}</li>
- <li>{{HTMLElement("img")}}</li>
- <li>{{HTMLElement("input")}}</li>
- <li>{{HTMLElement("label")}} (but it must be associated with a form control)</li>
- <li>{{HTMLElement("textarea")}}</li>
- <li><em>This list is incomplete; you can help MDN by doing further testing/research and expanding it.</em></li>
-</ul>
+- Set {{cssxref("cursor")}}`: pointer;` on the element or any of its ancestors.
+- Add a dummy `onclick="void(0)"` attribute to the element or any of its ancestors up to but not including {{HTMLElement("body")}}.
+- Use a typically interactive element (e.g. {{HTMLElement("a")}}) instead of one that isn't typically interactive (e.g. {{HTMLElement("div")}}).
+- Stop using `click` [event delegation](http://davidwalsh.name/event-delegate).
+
+Safari Mobile considers the following elements to be typically interactive (and thus they aren't affected by this bug):
+
+- {{HTMLElement("a")}} (but it must have an `href`)
+- {{HTMLElement("area")}} (but it must have an `href`)
+- {{HTMLElement("button")}}
+- {{HTMLElement("img")}}
+- {{HTMLElement("input")}}
+- {{HTMLElement("label")}} (but it must be associated with a form control)
+- {{HTMLElement("textarea")}}
+- _This list is incomplete; you can help MDN by doing further testing/research and expanding it._
 
 {{Compat("api.Element.click_event")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{event("mousedown")}}</li>
- <li>{{event("mouseup")}}</li>
- <li>{{event("mousemove")}}</li>
- <li>{{event("click")}}</li>
- <li>{{event("dblclick")}}</li>
- <li>{{event("mouseover")}}</li>
- <li>{{event("mouseout")}}</li>
- <li>{{event("mouseenter")}}</li>
- <li>{{event("mouseleave")}}</li>
- <li>{{event("contextmenu")}}</li>
-</ul>
+- {{event("mousedown")}}
+- {{event("mouseup")}}
+- {{event("mousemove")}}
+- {{event("click")}}
+- {{event("dblclick")}}
+- {{event("mouseover")}}
+- {{event("mouseout")}}
+- {{event("mouseenter")}}
+- {{event("mouseleave")}}
+- {{event("contextmenu")}}

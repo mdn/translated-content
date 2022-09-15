@@ -3,57 +3,54 @@ title: Element.matches()
 slug: Web/API/Element/matches
 translation_of: Web/API/Element/matches
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>O método <strong><code>Element.matches()</code></strong> retorna verdadeiro se o elemento puder ser selecionado pela sequência de caracteres específica; caso contrário retorna falso.</p>
+O método **`Element.matches()`** retorna verdadeiro se o elemento puder ser selecionado pela sequência de caracteres específica; caso contrário retorna falso.
 
-<div class="warning">
-<p>Diversos navegadores implementam isto, prefixado, sob nome não padronizado <code>matchesSelector()</code>.</p>
-</div>
+> **Aviso:** Diversos navegadores implementam isto, prefixado, sob nome não padronizado `matchesSelector()`.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><em>var result</em> = <em>element</em>.matches(selectorString);
-</pre>
+```
+var result = element.matches(selectorString);
+```
 
-<ul>
- <li><code>result contém o valor de retorno true ou false.</code></li>
- <li><code>selectorString</code> é uma string representando o seletor para teste.</li>
+- `result contém o valor de retorno true ou false.`
+- `selectorString` é uma string representando o seletor para teste.
+
+## Exemplo
+
+```html
+<ul id="birds">
+  <li>Orange-winged parrot</li>
+  <li class="endangered">Philippine eagle</li>
+  <li>Great white pelican</li>
 </ul>
 
-<h2 id="Exemplo">Exemplo</h2>
-
-<pre class="brush: html">&lt;ul id="birds"&gt;
-  &lt;li&gt;Orange-winged parrot&lt;/li&gt;
-  &lt;li class="endangered"&gt;Philippine eagle&lt;/li&gt;
-  &lt;li&gt;Great white pelican&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
   var birds = document.getElementsByTagName('li');
 
-  for (var i = 0; i &lt; birds.length; i++) {
+  for (var i = 0; i < birds.length; i++) {
     if (birds[i].matches('.endangered')) {
       console.log('The ' + birds[i].textContent + ' is endangered!');
     }
   }
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<p>Isto irá logar "The Philippine eagle is endangered!" para o console, desde que o elemento tenha de fato um atributo de classe com o valor <code>endangered</code>.</p>
+Isto irá logar "The Philippine eagle is endangered!" para o console, desde que o elemento tenha de fato um atributo de classe com o valor `endangered`.
 
-<h2 id="Exceções">Exceções</h2>
+## Exceções
 
-<dl>
- <dt><code>SYNTAX_ERR</code></dt>
- <dd>O seletor de string específico é inválido.</dd>
-</dl>
+- `SYNTAX_ERR`
+  - : O seletor de string específico é inválido.
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Para navegadores que não suportam <code>Element.matches()</code> ou <code>Element.matchesSelector()</code>,  mass possuem suporte para <code>document.querySelectorAll()</code>, existe um polyfill:</p>
+Para navegadores que não suportam `Element.matches()` ou `Element.matchesSelector()`, mass possuem suporte para `document.querySelectorAll()`, existe um polyfill:
 
-<pre>if (!Element.prototype.matches) {
+```
+if (!Element.prototype.matches) {
     Element.prototype.matches =
         Element.prototype.matchesSelector ||
         Element.prototype.mozMatchesSelector ||
@@ -63,30 +60,18 @@ translation_of: Web/API/Element/matches
         function(s) {
             var matches = (this.document || this.ownerDocument).querySelectorAll(s),
                 i = matches.length;
-            while (--i &gt;= 0 &amp;&amp; matches.item(i) !== this) {}
-            return i &gt; -1;
+            while (--i >= 0 && matches.item(i) !== this) {}
+            return i > -1;
         };
-}</pre>
+}
+```
 
-<h2 id="Especificação">Especificação</h2>
+## Especificação
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-element-matches', 'Element.prototype.matches')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                            | Status                           | Comentário         |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('DOM WHATWG', '#dom-element-matches', 'Element.prototype.matches')}} | {{Spec2('DOM WHATWG')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Element.matches")}}

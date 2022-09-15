@@ -11,119 +11,47 @@ tags:
   - TopicStub
 translation_of: Web/API/HTMLOptionElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLOptionElement</code></strong> interface represents {{HTMLElement("option")}} elements and inherits all classes and methods of the {{domxref("HTMLElement")}} interface.</p>
+The **`HTMLOptionElement`** interface represents {{HTMLElement("option")}} elements and inherits all classes and methods of the {{domxref("HTMLElement")}} interface.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Name</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>defaultSelected</code></td>
-   <td>{{domxref("Boolean")}}</td>
-   <td>Contains the initial value of the {{htmlattrxref("selected", "option")}} HTML attribute, indicating whether the option is selected by default or not.</td>
-  </tr>
-  <tr>
-   <td><code>disabled</code></td>
-   <td>{{domxref("Boolean")}}</td>
-   <td>Reflects the value of the {{htmlattrxref("disabled", "option")}} HTML attribute, which indicates that the option is unavailable to be selected. An option can also be disabled if it is a child of an {{HTMLElement("optgroup")}} element that is disabled.</td>
-  </tr>
-  <tr>
-   <td><code>form</code>{{readonlyInline}}</td>
-   <td>{{domxref("HTMLFormElement")}}</td>
-   <td>If the option is a descendent of a {{HTMLElement("select")}} element, then this property has the same value as the <code>form</code> property of the corresponding {{DomXref("HTMLSelectElement")}} object; otherwise, it is <code>null</code>.</td>
-  </tr>
-  <tr>
-   <td><code>index</code>{{readonlyInline}}</td>
-   <td><code>long</code></td>
-   <td>The position of the option within the list of options it belongs to, in tree-order. If the option is not part of a list of options, like when it is part of the {{HTMLElement("datalist")}} element, the value is <code>0</code>.</td>
-  </tr>
-  <tr>
-   <td><code>label</code></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>Reflects the value of the {{htmlattrxref("label", "option")}} HTML attribute, which provides a label for the option. If this attribute isn't specifically set, reading it returns the element's text content.</td>
-  </tr>
-  <tr>
-   <td><code>selected</code></td>
-   <td>{{domxref("Boolean")}}</td>
-   <td>Indicates whether the option is currently selected.</td>
-  </tr>
-  <tr>
-   <td><code>text</code></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>Contains the text content of the element.</td>
-  </tr>
-  <tr>
-   <td><code>value</code></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>Reflects the value of the {{htmlattrxref("value", "option")}} HTML attribute, if it exists; otherwise reflects value of the {{domxref("Node.textContent")}} property.</td>
-  </tr>
- </tbody>
-</table>
+| Name                            | Type                                     | Description                                                                                                                                                                                                                                                                        |
+| ------------------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `defaultSelected`               | {{domxref("Boolean")}}             | Contains the initial value of the {{htmlattrxref("selected", "option")}} HTML attribute, indicating whether the option is selected by default or not.                                                                                                                |
+| `disabled`                      | {{domxref("Boolean")}}             | Reflects the value of the {{htmlattrxref("disabled", "option")}} HTML attribute, which indicates that the option is unavailable to be selected. An option can also be disabled if it is a child of an {{HTMLElement("optgroup")}} element that is disabled. |
+| `form`{{readonlyInline}}  | {{domxref("HTMLFormElement")}} | If the option is a descendent of a {{HTMLElement("select")}} element, then this property has the same value as the `form` property of the corresponding {{DomXref("HTMLSelectElement")}} object; otherwise, it is `null`.                                       |
+| `index`{{readonlyInline}} | `long`                                   | The position of the option within the list of options it belongs to, in tree-order. If the option is not part of a list of options, like when it is part of the {{HTMLElement("datalist")}} element, the value is `0`.                                                    |
+| `label`                         | {{domxref("DOMString")}}         | Reflects the value of the {{htmlattrxref("label", "option")}} HTML attribute, which provides a label for the option. If this attribute isn't specifically set, reading it returns the element's text content.                                                         |
+| `selected`                      | {{domxref("Boolean")}}             | Indicates whether the option is currently selected.                                                                                                                                                                                                                                |
+| `text`                          | {{domxref("DOMString")}}         | Contains the text content of the element.                                                                                                                                                                                                                                          |
+| `value`                         | {{domxref("DOMString")}}         | Reflects the value of the {{htmlattrxref("value", "option")}} HTML attribute, if it exists; otherwise reflects value of the {{domxref("Node.textContent")}} property.                                                                                        |
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>Option()</dt>
- <dd>Is a constructor creating an <code>HTMLOptionElement</code> object. It has four values: the text to display, <code>text</code>, the value associated, <code>value</code>, the value of <code>defaultSelected</code>, and the value of <code>selected</code>. The last three values are optional.</dd>
-</dl>
+- Option()
+  - : Is a constructor creating an `HTMLOptionElement` object. It has four values: the text to display, `text`, the value associated, `value`, the value of `defaultSelected`, and the value of `selected`. The last three values are optional.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#htmloptionelement", "HTMLOptionElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "forms.html#the-option-element", "HTMLOptionElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>A constructor, <code>Option()</code>, has been added.<br>
-    The <code>form</code> property can be the <code>null</code> value.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-70901257', 'HTMLOptionElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>The <code>selected</code> property changed its meaning: it now indicates if the option is currently selected and no longer if it was initally selected.<br>
-    The <code>defaultSelected</code> property is no longer read-only.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-70901257', 'HTMLOptionElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                            | Status                           | Comment                                                                                                                                                                                             |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "#htmloptionelement", "HTMLOptionElement")}}             | {{Spec2('HTML WHATWG')}} |                                                                                                                                                                                                     |
+| {{SpecName('HTML5 W3C', "forms.html#the-option-element", "HTMLOptionElement")}} | {{Spec2('HTML5 W3C')}}     | A constructor, `Option()`, has been added. The `form` property can be the `null` value.                                                                                                             |
+| {{SpecName('DOM2 HTML', 'html.html#ID-70901257', 'HTMLOptionElement')}}         | {{Spec2('DOM2 HTML')}}     | The `selected` property changed its meaning: it now indicates if the option is currently selected and no longer if it was initally selected. The `defaultSelected` property is no longer read-only. |
+| {{SpecName('DOM1', 'level-one-html.html#ID-70901257', 'HTMLOptionElement')}}     | {{Spec2('DOM1')}}         | Initial definition                                                                                                                                                                                  |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("api.HTMLOptionElement")}}
 
+## See also
 
-<p>{{Compat("api.HTMLOptionElement")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>The HTML element implementing this interface: {{HTMLElement("option")}}.</li>
-</ul>
+- The HTML element implementing this interface: {{HTMLElement("option")}}.

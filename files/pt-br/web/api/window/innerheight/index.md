@@ -3,33 +3,36 @@ title: Window.innerHeight
 slug: Web/API/Window/innerHeight
 translation_of: Web/API/Window/innerHeight
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Altura (em pixels) da janela de visualização do navegador, incluindo, se renderizado, a barra de rolagem horizontal.</p>
+Altura (em pixels) da janela de visualização do navegador, incluindo, se renderizado, a barra de rolagem horizontal.
 
-<div class="note"><strong>Note:</strong> If you use <code>nsIDOMWindowUtils.setCSSViewport()</code> to set the virtual window size for page layout purposes, the value returned by this property corresponds to the viewport height set using that method.</div>
+> **Nota:** If you use `nsIDOMWindowUtils.setCSSViewport()` to set the virtual window size for page layout purposes, the value returned by this property corresponds to the viewport height set using that method.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>intViewportHeight</var> = window.innerHeight;</pre>
+```
+var intViewportHeight = window.innerHeight;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>On return, <code>intViewportHeight</code> is the height of the browser window's viewport.</p>
+On return, `intViewportHeight` is the height of the browser window's viewport.
 
-<p>The <code>window.innerHeight</code> property is read only; it has no default value.</p>
+The `window.innerHeight` property is read only; it has no default value.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>The <code>innerHeight</code> property is supported in any window object like a {{domxref("window")}}, a frame, a frameset, or a secondary window.</p>
+The `innerHeight` property is supported in any window object like a {{domxref("window")}}, a frame, a frameset, or a secondary window.
 
-<p>There is <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=189112#c7">an algorithm</a> to obtain the height of the viewport excluding, if rendered, the horizontal scrollbar.</p>
+There is [an algorithm](https://bugzilla.mozilla.org/show_bug.cgi?id=189112#c7) to obtain the height of the viewport excluding, if rendered, the horizontal scrollbar.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="Assuming_a_frameset">Assuming a frameset</h3>
+### Assuming a frameset
 
-<pre class="brush:js">var intFrameHeight = window.innerHeight; // or
+```js
+var intFrameHeight = window.innerHeight; // or
 
 var intFrameHeight = self.innerHeight;
 // will return the height of the frame viewport within the frameset
@@ -39,47 +42,32 @@ var intFramesetHeight = parent.innerHeight;
 
 var intOuterFramesetHeight = top.innerHeight;
 // will return the height of the viewport of the outermost frameset
-</pre>
+```
 
-<p>{{todo("link to an interactive demo here")}}</p>
+{{todo("link to an interactive demo here")}}
 
-<p>To change the size of a window, see {{domxref("window.resizeBy()")}} and {{domxref("window.resizeTo()")}}.</p>
+To change the size of a window, see {{domxref("window.resizeBy()")}} and {{domxref("window.resizeTo()")}}.
 
-<p>To get the outer height of a window, i.e. the height of the whole browser window, see {{domxref("window.outerHeight")}}.</p>
+To get the outer height of a window, i.e. the height of the whole browser window, see {{domxref("window.outerHeight")}}.
 
-<h3 id="Graphical_example">Graphical example</h3>
+### Graphical example
 
-<p>The following figure shows the difference between <code>outerHeight</code> and <code>innerHeight</code>.</p>
+The following figure shows the difference between `outerHeight` and `innerHeight`.
 
-<p><img alt="innerHeight vs outerHeight illustration" src="/@api/deki/files/213/=FirefoxInnerVsOuterHeight2.png"></p>
+![innerHeight vs outerHeight illustration](/@api/deki/files/213/=FirefoxInnerVsOuterHeight2.png)
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#dom-window-innerheight', 'window.innerHeight')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                           | Comment            |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('CSSOM View', '#dom-window-innerheight', 'window.innerHeight')}} | {{Spec2('CSSOM View')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Window.innerHeight")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("window.innerWidth")}}</li>
- <li>{{domxref("window.outerHeight")}}</li>
- <li>{{domxref("window.outerWidth")}}</li>
-</ul>
+- {{domxref("window.innerWidth")}}
+- {{domxref("window.outerHeight")}}
+- {{domxref("window.outerWidth")}}

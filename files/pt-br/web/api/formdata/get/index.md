@@ -3,70 +3,61 @@ title: FormData.get()
 slug: Web/API/FormData/get
 translation_of: Web/API/FormData/get
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p>O método get() da interface {{domxref("FormData")}} retorna o primeiro valor associado com a chave fornecida de um objeto do tipo FormData.</p>
+O método get() da interface {{domxref("FormData")}} retorna o primeiro valor associado com a chave fornecida de um objeto do tipo FormData.
 
-<div class="note">
-<p><strong>Nota</strong>: Este método está disponível em <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Nota:** Este método está disponível em [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush: js">formData.get(nome);</pre>
+```js
+formData.get(nome);
+```
 
-<h3 id="append()_Parameters" name="append()_Parameters">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>nome</code></dt>
- <dd>Um {{domxref("USVString")}} representando o nome da chave que queira retornar.</dd>
-</dl>
+- `nome`
+  - : Um {{domxref("USVString")}} representando o nome da chave que queira retornar.
 
-<h3 id="Retorno">Retorno</h3>
+### Retorno
 
-<p>Um {{domxref("FormDataEntryValue")}} contendo o valor.</p>
+Um {{domxref("FormDataEntryValue")}} contendo o valor.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>A linha abaixo cria um objeto vazio do tipo FormData.</p>
+A linha abaixo cria um objeto vazio do tipo FormData.
 
-<pre class="brush: js">var formData = new FormData();</pre>
+```js
+var formData = new FormData();
+```
 
-<p>Se adicionarmos dois valores usuario_nome usando {{domxref("FormData.append")}}:</p>
+Se adicionarmos dois valores usuario_nome usando {{domxref("FormData.append")}}:
 
-<pre class="brush: js">formData.append('usuario_nome', 'Sabrina');
-formData.append('usuario_nome', 'Antônio');</pre>
+```js
+formData.append('usuario_nome', 'Sabrina');
+formData.append('usuario_nome', 'Antônio');
+```
 
-<p>A função get() abaixo apenas irá retornar o primeiro valor usuario_nome incluido:</p>
+A função get() abaixo apenas irá retornar o primeiro valor usuario_nome incluido:
 
-<pre class="brush: js">formData.get('usuario_nome'); // Retorna "Sabrina"</pre>
+```js
+formData.get('usuario_nome'); // Retorna "Sabrina"
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest','#dom-formdata-get','get()')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                | Status                               | Comentário |
+| ---------------------------------------------------------------------------- | ------------------------------------ | ---------- |
+| {{SpecName('XMLHttpRequest','#dom-formdata-get','get()')}} | {{Spec2('XMLHttpRequest')}} |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.FormData.get")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="Using XMLHttpRequest">Using XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects" title="DOM/XMLHttpRequest/FormData/Using_FormData_objects">Using FormData objects</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Using XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Using FormData objects](/pt-BR/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
+- {{HTMLElement("Form")}}

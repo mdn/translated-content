@@ -7,19 +7,20 @@ tags:
 translation_of: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 original_slug: Web/API/WebGL_API/Tutorial/Adicionando_conteudo_2D_a_um_contexto_WebGL
 ---
-<p>{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}</p>
+{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
 
-<p>Uma vez que você tenha  <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL">criado um contexto WebGL</a> com sucesso, você pode iniciar a renderizar nele. O mais simples que podemos fazer é desenhar um objeto 2D não texturizado. Então vamos começar por aí, construindo o código necessário para se desenhar um quadrado.</p>
+Uma vez que você tenha [criado um contexto WebGL](/pt-BR/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL) com sucesso, você pode iniciar a renderizar nele. O mais simples que podemos fazer é desenhar um objeto 2D não texturizado. Então vamos começar por aí, construindo o código necessário para se desenhar um quadrado.
 
-<h2 id="Desenhando_a_cena">Desenhando a cena</h2>
+## Desenhando a cena
 
-<p>A coisa mais importante para se entender antes de começarmos é que, mesmo que estejamos só renderizando um objeto bidimensional nesse exemplo, nós ainda estamos desenhamos em um espaço 3d. Portanto, ainda precisamos estabelecer os shaders que irão criar a cor para a nossa cena simples, assim como desenhar o objeto. Eles irão estabelecer como o quadrado irá aparecer na tela.</p>
+A coisa mais importante para se entender antes de começarmos é que, mesmo que estejamos só renderizando um objeto bidimensional nesse exemplo, nós ainda estamos desenhamos em um espaço 3d. Portanto, ainda precisamos estabelecer os shaders que irão criar a cor para a nossa cena simples, assim como desenhar o objeto. Eles irão estabelecer como o quadrado irá aparecer na tela.
 
-<h3 id="Inicializando_os_shaders">Inicializando os shaders</h3>
+### Inicializando os shaders
 
-<p>Shaders são especificados ao usar a <a class="external" href="http://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf">Linguagem de Shading OpenGL ES</a>. Com o intuito de tornar mais fácil para manter e atualizar nosso conteúdo, nós podemos escrever nosso código que carrega os shaders para buscá-los no documento HTML, ao invés de termos de criar tudo em JavaScript. Vamos dar uma olhada na nossa rotina <code>initShaders()</code>, que cuida dessa tarefa:</p>
+Shaders são especificados ao usar a [Linguagem de Shading OpenGL ES](http://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf). Com o intuito de tornar mais fácil para manter e atualizar nosso conteúdo, nós podemos escrever nosso código que carrega os shaders para buscá-los no documento HTML, ao invés de termos de criar tudo em JavaScript. Vamos dar uma olhada na nossa rotina `initShaders()`, que cuida dessa tarefa:
 
-<pre class="brush: js">function initShaders() {
+```js
+function initShaders() {
   var fragmentShader = getShader(gl, "shader-fs");
   var vertexShader = getShader(gl, "shader-vs");
 
@@ -41,18 +42,18 @@ original_slug: Web/API/WebGL_API/Tutorial/Adicionando_conteudo_2D_a_um_contexto_
   vertexPositionAttribute = gl.getAttribLocation(shaderProgram, "aVertexPosition");
   gl.enableVertexAttribArray(vertexPositionAttribute);
 }
+```
 
-</pre>
+Dois programas estão sendo inicializados por essa rotina; o primeiro, fragment shader, é carregado a partir do elemento HTML com o id "shader-fs". O segundo, vertex shader, é carregado pelo elemento HTML com o id "shader-vs". Nós vamos analisar a função getShader() no próximo tutorial; Essa rotina, na verdade, lida com a parte de puxar os programas shader da DOM.
 
-<p>Dois programas estão sendo inicializados por essa rotina; o primeiro, fragment shader, é carregado a partir do elemento HTML com o id "shader-fs". O segundo, vertex shader, é carregado pelo elemento HTML com o id "shader-vs". Nós vamos analisar a função getShader() no próximo tutorial; Essa rotina, na verdade, lida com a parte de puxar os programas shader da DOM.</p>
+Então nós criamos o programa shader chamando do objeto WebGL a função createProgram(), anexamos dois shaders nele e fazemos o link com o programa shader. Depois de fazer isso, o parametro LINK_STATUS do objeto g1 é checado para ter certeza de que o link foi criado com sucesso; Se sim, nós ativamos o novo programa shader.
 
-<p>Então nós criamos o programa shader chamando do objeto WebGL a função createProgram(), anexamos dois shaders nele e fazemos o link com o programa shader. Depois de fazer isso, o parametro LINK_STATUS do objeto g1 é checado para ter certeza de que o link foi criado com sucesso; Se sim, nós ativamos o novo programa shader.</p>
+### Carregando os shaders da DOM
 
-<h3 id="Carregando_os_shaders_da_DOM">Carregando os shaders da DOM</h3>
+`A rotina getShader()` busca um programa shader com o nome específico do DOM, retornando o programa shader compilado para o requisitante, ou null se ele não pode ser carregado ou compilado.
 
-<p><code>A rotina getShader()</code> busca um programa shader com o nome específico do DOM, retornando o programa shader compilado para o requisitante, ou null se ele não pode ser carregado ou compilado.</p>
-
-<pre class="brush: js">function getShader(gl, id) {
+```js
+function getShader(gl, id) {
   var shaderScript, theSource, currentChild, shader;
 
   shaderScript = document.getElementById(id);
@@ -71,22 +72,25 @@ original_slug: Web/API/WebGL_API/Tutorial/Adicionando_conteudo_2D_a_um_contexto_
 
     currentChild = currentChild.nextSibling;
   }
-</pre>
+```
 
-<p>Uma vez que o elemento com o ID específico é encontrado, seu texto é lido na variável theSource.</p>
+Uma vez que o elemento com o ID específico é encontrado, seu texto é lido na variável theSource.
 
-<pre class="brush: js">  if (shaderScript.type == "x-shader/x-fragment") {
+```js
+  if (shaderScript.type == "x-shader/x-fragment") {
     shader = gl.createShader(gl.FRAGMENT_SHADER);
   } else if (shaderScript.type == "x-shader/x-vertex") {
     shader = gl.createShader(gl.VERTEX_SHADER);
   } else {
-     // <code>Tipo de shader desconhecido</code>
+     // Tipo de shader desconhecido
      return null;
-  }</pre>
+  }
+```
 
-<p>Uma vez que o código para o shader tenha sido lido, nós observamos o tipo MIME do objeto shader para determinar se é um sombreamento de vértice (MIME type "x-shader/x-vertex") ou um fragmento de shader (MIME type "x-shader/x-fragment"), em seguinda crie um tipo de shader apropriado para a partir do código fonte recuperado.</p>
+Uma vez que o código para o shader tenha sido lido, nós observamos o tipo MIME do objeto shader para determinar se é um sombreamento de vértice (MIME type "x-shader/x-vertex") ou um fragmento de shader (MIME type "x-shader/x-fragment"), em seguinda crie um tipo de shader apropriado para a partir do código fonte recuperado.
 
-<pre class="brush: js">  gl.shaderSource(shader, theSource);
+```js
+  gl.shaderSource(shader, theSource);
 
   // Compile o programa shader
   gl.compileShader(shader);
@@ -99,32 +103,34 @@ original_slug: Web/API/WebGL_API/Tutorial/Adicionando_conteudo_2D_a_um_contexto_
 
   return shader;
 }
-</pre>
+```
 
-<p>Finalmente, a fonte é passada para o shader e compilada. Se um erro ocorrer enquanto o shader estiver compilando, nós mostraremos um alerta e retornaremos null; Caso contrário, o shader recém compilado é retornado para o requisitante.</p>
+Finalmente, a fonte é passada para o shader e compilada. Se um erro ocorrer enquanto o shader estiver compilando, nós mostraremos um alerta e retornaremos null; Caso contrário, o shader recém compilado é retornado para o requisitante.
 
-<h3 id="Os_shaders">Os shaders</h3>
+### Os shaders
 
-<p>Agora, nós precisamos adicionar os programas shaders ao HTML para descrever nosso documento. Os detalhes sobre como os shaders trabalham estão além do escopo deste artigo, assim como a sintaxe da linguagem do shader.</p>
+Agora, nós precisamos adicionar os programas shaders ao HTML para descrever nosso documento. Os detalhes sobre como os shaders trabalham estão além do escopo deste artigo, assim como a sintaxe da linguagem do shader.
 
-<h4 id="Fragmentos_shader">Fragmentos shader</h4>
+#### Fragmentos shader
 
-<p>Cada pixel é um poligono chamado de fragmento (fragment) na linguagem GL. O trabalho do fragmento de shader é estabelecer a cor de cada pixel. Ness caso, nós estamos apenas definindo a cor branca para cada pixel.</p>
+Cada pixel é um poligono chamado de fragmento (fragment) na linguagem GL. O trabalho do fragmento de shader é estabelecer a cor de cada pixel. Ness caso, nós estamos apenas definindo a cor branca para cada pixel.
 
-<p>g1_FragColor é um construtor de variável GL que é utilizado para a cor do fragmento. Altere seu valor para definir a cor do pixel, como mostrado abaixo.</p>
+g1_FragColor é um construtor de variável GL que é utilizado para a cor do fragmento. Altere seu valor para definir a cor do pixel, como mostrado abaixo.
 
-<pre class="brush: html">&lt;script id="shader-fs" type="x-shader/x-fragment"&gt;
+```html
+<script id="shader-fs" type="x-shader/x-fragment">
   void main(void) {
     gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
   }
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h4 id="Vértice_do_shader">Vértice do shader</h4>
+#### Vértice do shader
 
-<p>A vértice (vertex) do shader define a posição e a forma de cada vértice.</p>
+A vértice (vertex) do shader define a posição e a forma de cada vértice.
 
-<pre class="brush: html">&lt;script id="shader-vs" type="x-shader/x-vertex"&gt;
+```html
+<script id="shader-vs" type="x-shader/x-vertex">
   attribute vec3 aVertexPosition;
 
   uniform mat4 uMVMatrix;
@@ -133,14 +139,15 @@ original_slug: Web/API/WebGL_API/Tutorial/Adicionando_conteudo_2D_a_um_contexto_
   void main(void) {
     gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
   }
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h2 id="Criando_um_objeto">Criando um objeto</h2>
+## Criando um objeto
 
-<p>Before we can render our square, we need to create the buffer that contains its vertices. We'll do that using a function we call <code>initBuffers()</code>; as we explore more advanced WebGL concepts, this routine will be augmented to create more -- and more complex -- 3D objects.</p>
+Before we can render our square, we need to create the buffer that contains its vertices. We'll do that using a function we call `initBuffers()`; as we explore more advanced WebGL concepts, this routine will be augmented to create more -- and more complex -- 3D objects.
 
-<pre class="brush: js">var horizAspect = 480.0/640.0;
+```js
+var horizAspect = 480.0/640.0;
 
 function initBuffers() {
   squareVerticesBuffer = gl.createBuffer();
@@ -155,17 +162,18 @@ function initBuffers() {
 
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
 }
-</pre>
+```
 
-<p>This routine is pretty simplistic given the basic nature of the scene in this example. It starts by calling the <code>gl</code> object's <code>createBuffer()</code> method to obtain a buffer into which we'll store the vertices. This is then bound to the context by calling the <code>bindBuffer()</code> method.</p>
+This routine is pretty simplistic given the basic nature of the scene in this example. It starts by calling the `gl` object's `createBuffer()` method to obtain a buffer into which we'll store the vertices. This is then bound to the context by calling the `bindBuffer()` method.
 
-<p>Once that's done, we create a JavaScript array containing the coordinates for each vertex of the square. This is then converted into an array of WebGL floats and passed into the <code>gl</code> object's <code>bufferData()</code> method to establish the vertices for the object.</p>
+Once that's done, we create a JavaScript array containing the coordinates for each vertex of the square. This is then converted into an array of WebGL floats and passed into the `gl` object's `bufferData()` method to establish the vertices for the object.
 
-<h2 id="Desenhando_a_cena_2">Desenhando a cena</h2>
+## Desenhando a cena
 
-<p>Once the shaders are established and the object constructed, we can actually render the scene. Since we're not animating anything in this example, our <code>drawScene()</code> function is very simple. It uses a few utility routines we'll cover shortly.</p>
+Once the shaders are established and the object constructed, we can actually render the scene. Since we're not animating anything in this example, our `drawScene()` function is very simple. It uses a few utility routines we'll cover shortly.
 
-<pre class="brush: js">function drawScene() {
+```js
+function drawScene() {
   gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
   perspectiveMatrix = makePerspective(45, 640.0/480.0, 0.1, 100.0);
@@ -178,25 +186,26 @@ function initBuffers() {
   setMatrixUniforms();
   gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
 }
-</pre>
+```
 
-<p>The first step is to clear the context to our background color; then we establish the camera's perspective. We set a field of view of 45°, with a width to height ratio of 640/480 (the dimensions of our canvas). We also specify that we only want objects between 0.1 and 100 units from the camera to be rendered.</p>
+The first step is to clear the context to our background color; then we establish the camera's perspective. We set a field of view of 45°, with a width to height ratio of 640/480 (the dimensions of our canvas). We also specify that we only want objects between 0.1 and 100 units from the camera to be rendered.
 
-<p>Then we establish the position of the square by loading the identity position and translating away from the camera by 6 units. After that, we bind the square's vertex buffer to the context, configure it, and draw the object by calling the <code>drawArrays()</code> method.</p>
+Then we establish the position of the square by loading the identity position and translating away from the camera by 6 units. After that, we bind the square's vertex buffer to the context, configure it, and draw the object by calling the `drawArrays()` method.
 
-<p>{{EmbedGHLiveSample('webgl-examples/tutorial/sample2/index.html', 670, 510) }}</p>
+{{EmbedGHLiveSample('webgl-examples/tutorial/sample2/index.html', 670, 510) }}
 
-<p><a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2">View the complete code</a> | <a href="http://mdn.github.io/webgl-examples/tutorial/sample2/">Open this demo on a new page</a></p>
+[View the complete code](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2) | [Open this demo on a new page](http://mdn.github.io/webgl-examples/tutorial/sample2/)
 
-<h2 id="Operações_úteis_da_Matrix">Operações úteis da Matrix</h2>
+## Operações úteis da Matrix
 
-<p>Matrix operations are complicated enough. Nobody really wants to write all the code needed to handle them on their own. Fortunately, there's <a class="external" href="http://sylvester.jcoglan.com/">Sylvester</a>, a very handy library for handling vector and matrix operations from JavaScript.</p>
+Matrix operations are complicated enough. Nobody really wants to write all the code needed to handle them on their own. Fortunately, there's [Sylvester](http://sylvester.jcoglan.com/), a very handy library for handling vector and matrix operations from JavaScript.
 
-<p>The <code>glUtils.js</code> file used by this demo is used by a number of WebGL demos floating around on the Web. Nobody seems entirely clear on where it came from, but it does simplify the use of Sylvester even further by adding methods for building special types of matrices, as well as outputting HTML for displaying them.</p>
+The `glUtils.js` file used by this demo is used by a number of WebGL demos floating around on the Web. Nobody seems entirely clear on where it came from, but it does simplify the use of Sylvester even further by adding methods for building special types of matrices, as well as outputting HTML for displaying them.
 
-<p>In addition, this demo defines a few helpful routines to interface with these libraries for specific tasks. What exactly they do is beyond the scope of this demo, but there are plenty of good references on matrices available online; see the <a href="#see_also">See also</a> section for a list of a few.</p>
+In addition, this demo defines a few helpful routines to interface with these libraries for specific tasks. What exactly they do is beyond the scope of this demo, but there are plenty of good references on matrices available online; see the [See also](#see_also) section for a list of a few.
 
-<pre class="brush: js">function loadIdentity() {
+```js
+function loadIdentity() {
   mvMatrix = Matrix.I(4);
 }
 
@@ -215,13 +224,11 @@ function setMatrixUniforms() {
   var mvUniform = gl.getUniformLocation(shaderProgram, "uMVMatrix");
   gl.uniformMatrix4fv(mvUniform, false, new Float32Array(mvMatrix.flatten()));
 }
-</pre>
+```
 
-<h2 id="Ver_Também">Ver Também</h2>
+## Ver Também
 
-<ul>
- <li><a class="external" href="http://mathworld.wolfram.com/Matrix.html">Matrices</a> on Wolfram MathWorld</li>
- <li><a class="external" href="http://en.wikipedia.org/wiki/Matrix_(mathematics)">Matriz</a> na Wikipedia</li>
-</ul>
+- [Matrices](http://mathworld.wolfram.com/Matrix.html) on Wolfram MathWorld
+- [Matriz](<http://en.wikipedia.org/wiki/Matrix_(mathematics)>) na Wikipedia
 
-<p>{{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}</p>
+{{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}

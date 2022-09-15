@@ -9,58 +9,42 @@ tags:
   - metodo
 translation_of: Web/API/Location/reload
 ---
-<p>{{ APIRef("HTML DOM") }}</p>
+{{ APIRef("HTML DOM") }}
 
-<p>O método <code><strong>Location.reload()</strong></code> recarrega a URL atual. Seu unico parâmetro opcional é um {{domxref("Boolean")}}, que, quando <code>true</code>, faz com que a página sempre seja recarregada do servidor. Se ele é <code>false</code> ou não estiver especificado, o navegador pode carregar ela do cache.</p>
+O método **`Location.reload()`** recarrega a URL atual. Seu unico parâmetro opcional é um {{domxref("Boolean")}}, que, quando `true`, faz com que a página sempre seja recarregada do servidor. Se ele é `false` ou não estiver especificado, o navegador pode carregar ela do cache.
 
-<p>Caso não seja possível recarregar por questões de violação de segurança, uma {{domxref("DOMException")}} do tipo <code>SECURITY_ERROR</code> é jogada. Isso acontece se a origem do script que chama o método é diferente da origem da página originalmente descrita pelo objeto {{domxref("Location")}}, usualmente quando o script é hosteado em um domínio diferente.</p>
+Caso não seja possível recarregar por questões de violação de segurança, uma {{domxref("DOMException")}} do tipo `SECURITY_ERROR` é jogada. Isso acontece se a origem do script que chama o método é diferente da origem da página originalmente descrita pelo objeto {{domxref("Location")}}, usualmente quando o script é hosteado em um domínio diferente.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><em>object</em>.reload(<em>forcedReload</em>);
-</pre>
+```
+object.reload(forcedReload);
+```
 
-<h3 id="Parametros">Parametros</h3>
+### Parametros
 
-<dl>
- <dt><em>forcedReload</em> {{optional_inline}}</dt>
- <dd>É uma flag {{domxref("Boolean")}}, que quando <code>true</code>, faz com que a página sempre seja recarregada do servidor, se é <code>false ou não for definido, </code>o navegador pode recarregar a página do cache.</dd>
-</dl>
+- _forcedReload_ {{optional_inline}}
+  - : É uma flag {{domxref("Boolean")}}, que quando `true`, faz com que a página sempre seja recarregada do servidor, se é `false ou não for definido, `o navegador pode recarregar a página do cache.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: js">// Recarrega a página atual sem usar o cache
-document.location.reload(true);</pre>
+```js
+// Recarrega a página atual sem usar o cache
+document.location.reload(true);
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "history.html#dom-location-reload", "Location.reload()")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Nenhuma mudança do  {{SpecName("HTML5 W3C")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "browsers.html#dom-location-reload", "Location.reload()")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                    | Status                           | Comment                                              |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "history.html#dom-location-reload", "Location.reload()")}} | {{Spec2('HTML WHATWG')}} | Nenhuma mudança do {{SpecName("HTML5 W3C")}}. |
+| {{SpecName('HTML5 W3C', "browsers.html#dom-location-reload", "Location.reload()")}} | {{Spec2('HTML5 W3C')}}     | Definição inicial.                                   |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Location.reload")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>A interface {{domxref("Location")}} que o método pertence.</li>
- <li>Métodos similares: {{domxref("Location.assign()")}} e {{domxref("Location.replace()")}}.</li>
-</ul>
+- A interface {{domxref("Location")}} que o método pertence.
+- Métodos similares: {{domxref("Location.assign()")}} e {{domxref("Location.replace()")}}.

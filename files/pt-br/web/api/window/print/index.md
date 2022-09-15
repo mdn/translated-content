@@ -7,48 +7,36 @@ tags:
   - print
 translation_of: Web/API/Window/print
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+## Sumário
 
-<p dir="ltr" id="tw-target-text">Abre a janela de impressão para imprimir o documento atual.</p>
+Abre a janela de impressão para imprimir o documento atual.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="eval">window.print()
-</pre>
+```
+window.print()
+```
 
-<h2 id="Specification" name="Specification">Notas</h2>
+## Notas
 
-<p>Começando com o  Chrome {{CompatChrome(46.0)}} este método é bloqueado dentro de um {{htmlelement("iframe")}} a menos que seu atributo sandbox tem o valor allow-modal .</p>
+Começando com o Chrome {{CompatChrome(46.0)}} este método é bloqueado dentro de um {{htmlelement("iframe")}} a menos que seu atributo sandbox tem o valor allow-modal .
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'timers-and-user-prompts.html#printing', 'print()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                            | Status                           | Comentário |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', 'timers-and-user-prompts.html#printing', 'print()')}} | {{Spec2('HTML WHATWG')}} |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("api.Window.print")}}</p>
+{{Compat("api.Window.print")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en/Printing" title="en/Printing">Printing</a></li>
- <li>{{ domxref("window.onbeforeprint") }}</li>
- <li>{{ domxref("window.onafterprint") }}</li>
-</ul>
+- [Printing](/en/Printing "en/Printing")
+- {{ domxref("window.onbeforeprint") }}
+- {{ domxref("window.onafterprint") }}
 
-<p>{{ languages( { "ja": "ja/DOM/window.print", "it": "it/DOM/window.print" , "zh-cn": "zh-cn/DOM/window.print" } ) }}</p>
+{{ languages( { "ja": "ja/DOM/window\.print", "it": "it/DOM/window\.print" , "zh-cn": "zh-cn/DOM/window\.print" } ) }}

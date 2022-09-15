@@ -6,39 +6,34 @@ tags:
   - metodo
 translation_of: Web/API/Console/timeEnd
 ---
-<div>
-<div>{{APIRef("Console API")}}{{Non-standard_header}}</div>
-</div>
+{{APIRef("Console API")}}{{Non-standard_header}}
 
-<h2 id="Summary" name="Summary">Resumo</h2>
+## Resumo
 
-<p>Interrompe um temporizador que foi anteriormente iniciado por uma chamada a {{domxref("console.time()")}}.</p>
+Interrompe um temporizador que foi anteriormente iniciado por uma chamada a {{domxref("console.time()")}}.
 
-<p>Veja <a href="/en-US/docs/DOM/console#Timers" title="DOM/console#Timers">Timers</a> na documentação de {{domxref("console")}} para detalhes e exemplos.</p>
+Veja [Timers](/pt-BR/docs/DOM/console#Timers "DOM/console#Timers") na documentação de {{domxref("console")}} para detalhes e exemplos.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">console.timeEnd(<var>label</var>);
-</pre>
+```
+console.timeEnd(label);
+```
 
-<h3 id="Parametros">Parametros</h3>
+### Parametros
 
-<dl>
- <dt><code>label</code></dt>
- <dd>O nome do temporizador a ser interrompido. Uma vez interrompido, o tempo decorrido é automaticamente apresentado no <a href="/en-US/docs/Tools/Web_Console" title="Web Console">Web Console</a>.</dd>
-</dl>
+- `label`
+  - : O nome do temporizador a ser interrompido. Uma vez interrompido, o tempo decorrido é automaticamente apresentado no [Web Console](/pt-BR/docs/Tools/Web_Console "Web Console").
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<p>Não é parte de qualquer especificação.</p>
+Não é parte de qualquer especificação.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.console.timeEnd")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("Console.time")}}</li>
- <li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
-</ul>
+- {{domxref("Console.time")}}
+- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)

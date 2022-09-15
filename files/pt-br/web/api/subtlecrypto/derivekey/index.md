@@ -11,65 +11,57 @@ tags:
   - metodo
 translation_of: Web/API/SubtleCrypto/deriveKey
 ---
-<p>{{APIRef("Web Crypto API")}}</p>
+{{APIRef("Web Crypto API")}}
 
-<p>O método <code><strong>SubtleCrypto.deriveKey()</strong></code> retorna como {{jsxref("Promise")}} de um recentemente gerado {{domxref("CryptoKey")}} derivada de uma master key e um algoritmo específico dados como parâmetro.</p>
+O método **`SubtleCrypto.deriveKey()`** retorna como {{jsxref("Promise")}} de um recentemente gerado {{domxref("CryptoKey")}} derivada de uma master key e um algoritmo específico dados como parâmetro.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var <em>result</em> = crypto<code>.subtle.deriveKey(<em>algorithm</em>, <em>masterKey</em>, <em>derivedKeyAlgorithm</em>, <em>extractable</em>, <em>keyUsages</em>)</code>;
-</pre>
+```
+var result = crypto.subtle.deriveKey(algorithm, masterKey, derivedKeyAlgorithm, extractable, keyUsages);
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<ul>
- <li><code><em>algorithm</em></code> é um objeto definindo o algoritmo de derivação a se usar. Os valores suportados são:
+- `algorithm` é um objeto definindo o algoritmo de derivação a se usar. Os valores suportados são:
 
-  <ul>
-   <li><code>{"name": "ECDH", "public": publicKey}</code></li>
-   <li><code>{"name": "DH", "public": publicKey}</code></li>
-   <li><code>{"name": "PBKDF2", salt, iterations, hash}</code> where <em><code>salt</code></em> is an {{jsxref("ArrayBuffer")}} ou um {{jsxref("ArrayBufferView")}}, <em><code>iterations</code></em> é o número de interações e <em><code>hash</code></em> é um {{domxref("DOMString")}} identificando o algoritmo hashing para uso.</li>
-   <li><code>{"name": "HKDF-CTR", hash, label, context}</code></li>
-  </ul>
- </li>
- <li><em><code>masterKey</code></em> é uma {{domxref("CryptoKey")}} representando a master key para ser utilizada por um algoritmo de derivação de key.</li>
- <li><code><em>derivedKeyAlgorithm</em></code> é um objeto que define o algoritmo, a key derivada será utilizada para {{domxref("DOMString")}} como um atalho para <code>{"name": derivedKeyAlgo}</code>. Para AES uma propriedade <code><em>length</em></code> também é requerida, e os valores possíveis são 128, 192 ou 256 bits.</li>
- <li><code><em>extractable</em></code> é um {{jsxref("Boolean")}} indicando se a key pode ser extraída de um objeto {{domxref("CryptoKey")}} em um estágio mais tardio.</li>
- <li><code><em>keyUsages</em></code>  é um {{jsxref("Array")}} indicando o que pode ser feito com a chave derivada. Os valores possíveis do array são:
-  <ul>
-   <li><code>"encrypt"</code>, permitindo que a key seja utilizada para {{glossary("encryption", "encrypting")}} mensagens.</li>
-   <li><code>"decrypt"</code>, permitindo que a key seja utilizada para {{glossary("decryption", "decrypting")}} mensagens.</li>
-   <li><code>"sign"</code>, permitindo que a key seja utilizada para {{glossary("signature", "signing")}} mensagens.</li>
-   <li><code>"verify"</code>, permitindo que a key seja utilizada para {{glossary("verification", "verifying the signature")}} de mensagens.</li>
-   <li><code>"deriveKey"</code>, permitindo que a key seja utilizada como key base na derivação de uma nova key.</li>
-   <li><code>"deriveBits"</code>, permitindo que a key seja utilizada como key base na derivação de bits de informação para uso em criptografias primitivas.</li>
-   <li><code>"wrapKey"</code>, permitindo que a key envolva uma key simétrica (transferência, armazenamento) em ambientes não seguros.</li>
-   <li><code>"unwrapKey"</code>, permitindo que a key se desvincule de uma key simétrica para uso (transfererência, armazenamento) em ambientes não seguros.</li>
-  </ul>
- </li>
-</ul>
+  - `{"name": "ECDH", "public": publicKey}`
+  - `{"name": "DH", "public": publicKey}`
+  - `{"name": "PBKDF2", salt, iterations, hash}` where _`salt`_ is an {{jsxref("ArrayBuffer")}} ou um {{jsxref("ArrayBufferView")}}, _`iterations`_ é o número de interações e _`hash`_ é um {{domxref("DOMString")}} identificando o algoritmo hashing para uso.
+  - `{"name": "HKDF-CTR", hash, label, context}`
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+- _`masterKey`_ é uma {{domxref("CryptoKey")}} representando a master key para ser utilizada por um algoritmo de derivação de key.
+- `derivedKeyAlgorithm` é um objeto que define o algoritmo, a key derivada será utilizada para {{domxref("DOMString")}} como um atalho para `{"name": derivedKeyAlgo}`. Para AES uma propriedade `length` também é requerida, e os valores possíveis são 128, 192 ou 256 bits.
+- `extractable` é um {{jsxref("Boolean")}} indicando se a key pode ser extraída de um objeto {{domxref("CryptoKey")}} em um estágio mais tardio.
+- `keyUsages` é um {{jsxref("Array")}} indicando o que pode ser feito com a chave derivada. Os valores possíveis do array são:
 
-<ul>
- <li><code><em>result</em></code> é uma {{jsxref("Promise")}} que retorna a key derivada como uma {{domxref("CryptoKey")}} ou uma {{domxref("CryptoKeyPair")}}.</li>
-</ul>
+  - `"encrypt"`, permitindo que a key seja utilizada para {{glossary("encryption", "encrypting")}} mensagens.
+  - `"decrypt"`, permitindo que a key seja utilizada para {{glossary("decryption", "decrypting")}} mensagens.
+  - `"sign"`, permitindo que a key seja utilizada para {{glossary("signature", "signing")}} mensagens.
+  - `"verify"`, permitindo que a key seja utilizada para {{glossary("verification", "verifying the signature")}} de mensagens.
+  - `"deriveKey"`, permitindo que a key seja utilizada como key base na derivação de uma nova key.
+  - `"deriveBits"`, permitindo que a key seja utilizada como key base na derivação de bits de informação para uso em criptografias primitivas.
+  - `"wrapKey"`, permitindo que a key envolva uma key simétrica (transferência, armazenamento) em ambientes não seguros.
+  - `"unwrapKey"`, permitindo que a key se desvincule de uma key simétrica para uso (transfererência, armazenamento) em ambientes não seguros.
 
-<h3 id="Exceções">Exceções</h3>
+### Valor de retorno
 
-<p>A promise é rejeitada quando uma das seguintes exceções é encontrada:</p>
+- `result` é uma {{jsxref("Promise")}} que retorna a key derivada como uma {{domxref("CryptoKey")}} ou uma {{domxref("CryptoKeyPair")}}.
 
-<ul>
- <li><code>InvalidAccessError</code> quando a master key não é uma key para o algoritmo de derivação requisitado ou se o valor desta chave, {{domxref("CryptoKey.usages")}}, não contém <code>"deriveKey"</code>.</li>
- <li><code>NotSupported</code> quando tentando usar um algoritmo que não é nem desconhecido e nem se encaixa para a derivação, ou se, o algoritmo requisitado da key derivada não define o comprimento da key.</li>
- <li><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError"><code>SyntaxError</code></a> quando <em><code>keyUsages</code></em> está vazio mas a key desvinculada é do tipo <code>"secret"</code> ou <code>"private"</code>.</li>
-</ul>
+### Exceções
 
-<h2 id="Exemplo" style="font-size: 2.14285714285714rem;">Exemplo</h2>
+A promise é rejeitada quando uma das seguintes exceções é encontrada:
 
-<p style="line-height: 16.7999992370605px;">Aqui está um exemplo de como usar <strong>deriveKey()</strong> para criar uma <strong>Secure Remote Password</strong> (também nomeado de <strong>Proof of Secret</strong>) da password de um usuário.</p>
+- `InvalidAccessError` quando a master key não é uma key para o algoritmo de derivação requisitado ou se o valor desta chave, {{domxref("CryptoKey.usages")}}, não contém `"deriveKey"`.
+- `NotSupported` quando tentando usar um algoritmo que não é nem desconhecido e nem se encaixa para a derivação, ou se, o algoritmo requisitado da key derivada não define o comprimento da key.
+- [`SyntaxError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) quando _`keyUsages`_ está vazio mas a key desvinculada é do tipo `"secret"` ou `"private"`.
 
-<pre class="brush: js" style="font-size: 14px;">// salt deve ser Uint8Array ou ArrayBuffer
+## Exemplo
+
+Aqui está um exemplo de como usar **deriveKey()** para criar uma **Secure Remote Password** (também nomeado de **Proof of Secret**) da password de um usuário.
+
+```js
+// salt deve ser Uint8Array ou ArrayBuffer
 var saltBuffer = Unibabel.hexToBuffer('e85c53e7f119d41fd7895cdc9d7bb9dd');
 
 // não use métodos naïve para conversão de texto, senão caracteres
@@ -118,44 +110,32 @@ window.crypto.subtle.importKey(
     var proofOfSecret = Unibabel.bufferToHex(buffer);
     // esta proof-of-secret / password remota-segura
     // pode agora ser enviada no lugar da password do usuário
-});</pre>
+});
+```
 
-<p style="line-height: 16.7999992370605px;">Nota: Por conta de não haver ferramentas nativas que convertam entre Uint8Array, Unicode, hex, e base64, você provavelmente vai querer utilizar algo como o <a href="https://github.com/coolaj86/unibabel-js">Unibabel</a> ou <a href="https://github.com/feross/buffer">Buffer</a> para converter entre eles.</p>
+Nota: Por conta de não haver ferramentas nativas que convertam entre Uint8Array, Unicode, hex, e base64, você provavelmente vai querer utilizar algo como o [Unibabel](https://github.com/coolaj86/unibabel-js) ou [Buffer](https://github.com/feross/buffer) para converter entre eles.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-deriveKey', 'SubtleCrypto.deriveKey()') }}</td>
-   <td>{{ Spec2('Web Crypto API') }}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                        | Status                                   | Comentário         |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
+| {{ SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-deriveKey', 'SubtleCrypto.deriveKey()') }} | {{ Spec2('Web Crypto API') }} | Definição inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.SubtleCrypto.deriveKey")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("Crypto")}} e {{domxref("Crypto.subtle")}}.</li>
- <li>{{domxref("SubtleCrypto")}}, a interface a qual ele pertence.</li>
-</ul>
+- {{domxref("Crypto")}} e {{domxref("Crypto.subtle")}}.
+- {{domxref("SubtleCrypto")}}, a interface a qual ele pertence.
 
-<h3 id="Dicionário">Dicionário:</h3>
+### Dicionário:
 
-<p>"Key" = "Chave"</p>
+"Key" = "Chave"
 
-<p>"Master key" = "Chave mestre"</p>
+"Master key" = "Chave mestre"
 
-<p>"Proof-of-secret" = "Prova de segredo ou Atestado de sigilo"</p>
+"Proof-of-secret" = "Prova de segredo ou Atestado de sigilo"
 
-<p>"Password" = "Palavra passe ou Senha"</p>
+"Password" = "Palavra passe ou Senha"

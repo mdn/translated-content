@@ -3,24 +3,22 @@ title: Event.srcElement
 slug: Web/API/Event/srcElement
 translation_of: Web/API/Event/srcElement
 ---
-<p>{{ApiRef("DOM")}}</p>
+{{ApiRef("DOM")}}
 
-<p>{{ Non-standard_header() }}</p>
+{{ Non-standard_header() }}
 
-<p><strong><code>Event.srcElement</code></strong> é uma propriedade <em>alias</em> para a propriedade padrão {{domxref("Event.target")}}. É específica para versões antigas do Microsoft Internet Explorer.</p>
+**`Event.srcElement`** é uma propriedade _alias_ para a propriedade padrão {{domxref("Event.target")}}. É específica para versões antigas do Microsoft Internet Explorer.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<p>Não é parte de nenhuma especificação.</p>
+Não é parte de nenhuma especificação.
 
-<p>Microsoft <a href="https://msdn.microsoft.com/en-us/library/ff974945(v=vs.85).aspx">tem uma descrição na MSDN</a>.</p>
+Microsoft [tem uma descrição na MSDN](<https://msdn.microsoft.com/en-us/library/ff974945(v=vs.85).aspx>).
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Event.srcElement")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("Window.event")}}</li>
-</ul>
+- {{domxref("Window.event")}}

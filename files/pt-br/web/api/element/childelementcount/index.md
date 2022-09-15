@@ -9,41 +9,40 @@ tags:
 translation_of: Web/API/ParentNode/childElementCount
 original_slug: Web/API/ParentNode/childElementCount
 ---
-<div>{{ APIRef("DOM") }}</div>
+{{ APIRef("DOM") }}
 
-<p>A propriedade <code><strong>ParentNode.childElementCount</strong></code>, do tipo "somente leitura" (read-only), tem como retorno um <code>unsigned long</code> que representa q quantidade de elementos filhos de um outro determinado elemento.</p>
+A propriedade **`ParentNode.childElementCount`**, do tipo "somente leitura" (read-only), tem como retorno um `unsigned long` que representa q quantidade de elementos filhos de um outro determinado elemento.
 
-<div class="note">
-<p>Essa propriedade foi inicialmente definida na interface pura {{domxref("ElementTraversal")}}. Como essa interface continha dois conjuntos distintos de propriedades, sendo uma destinada para {{domxref("Node")}} que tem filhos, e outra destinada para aqueles que são filhos de fato, essas propriedades foram movidas para duas interfaces puras distintas: {{domxref("ParentNode")}} e {{domxref("ChildNode")}}. Nesse caso, <code>childElementCount</code> foi movido para {{domxref("ParentNode")}}.  Essa é uma alteração bastante técnica que não deve afetar a compatibilidade.</p>
-</div>
+> **Nota:** Essa propriedade foi inicialmente definida na interface pura {{domxref("ElementTraversal")}}. Como essa interface continha dois conjuntos distintos de propriedades, sendo uma destinada para {{domxref("Node")}} que tem filhos, e outra destinada para aqueles que são filhos de fato, essas propriedades foram movidas para duas interfaces puras distintas: {{domxref("ParentNode")}} e {{domxref("ChildNode")}}. Nesse caso, `childElementCount` foi movido para {{domxref("ParentNode")}}. Essa é uma alteração bastante técnica que não deve afetar a compatibilidade.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var <var>count</var> = <em>node</em>.childElementCount;
-</pre>
+```
+var count = node.childElementCount;
+```
 
-<dl>
- <dt><code>count</code></dt>
- <dd>variável que recebe o valor retornado pelo método, sendo esse valor do tipo <code>unsigned long</code> (simplesmente um número inteiro).</dd>
- <dt><code>node</code></dt>
- <dd>Objeto que representa {{domxref("Document")}}, {{domxref("DocumentFragment")}}, ou {{domxref("Element")}}.</dd>
-</dl>
+- `count`
+  - : variável que recebe o valor retornado pelo método, sendo esse valor do tipo `unsigned long` (simplesmente um número inteiro).
+- `node`
+  - : Objeto que representa {{domxref("Document")}}, {{domxref("DocumentFragment")}}, ou {{domxref("Element")}}.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush:js">var foo = document.getElementById('foo');
-if (foo.childElementCount &gt; 0) {
+```js
+var foo = document.getElementById('foo');
+if (foo.childElementCount > 0) {
   // Faz algo
 }
-</pre>
+```
 
-<h2 id="Utilizando_Polyfill_no_IE8_IE9_e_Safari">Utilizando Polyfill no IE8, IE9 e Safari</h2>
+## Utilizando Polyfill no IE8, IE9 e Safari
 
-<p>Essa propriedade não é suportada em versões anteriores ao IE9. Já no IE9 ou Safari, não será suportada somente por Objetos de <code>Document</code> e <code>DocumentFragment</code>.</p>
+Essa propriedade não é suportada em versões anteriores ao IE9. Já no IE9 ou Safari, não será suportada somente por Objetos de `Document` e `DocumentFragment`.
 
-<pre class="brush:js">;(function(constructor) {
-  if (constructor &amp;&amp;
-      constructor.prototype &amp;&amp;
+```js
+;(function(constructor) {
+  if (constructor &&
+      constructor.prototype &&
       constructor.prototype.childElementCount == null) {
     Object.defineProperty(constructor.prototype, 'childElementCount', {
       get: function() {
@@ -56,40 +55,20 @@ if (foo.childElementCount &gt; 0) {
     });
   }
 })(window.Node || window.Element);
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentários</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-parentnode-childelementcount', 'ParentNode.childElementCount')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Divide a interface <code>ElementTraversal</code> entre {{domxref("ChildNode")}} e <code>ParentNode</code>. Esse método é definido ao final.<br>
-    {{domxref("Document")}} e {{domxref("DocumentFragment")}} implementam essas novas interfaces.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Element Traversal', '#attribute-childElementCount', 'ElementTraversal.childElementCount')}}</td>
-   <td>{{Spec2('Element Traversal')}}</td>
-   <td>
-    <p>Adicionada sua definição inicial à interface pura do <code>ElementTraversal</code> e use-a em {{domxref("Element")}}.</p>
-   </td>
-  </tr>
- </tbody>
-</table>
+| Especificações                                                                                                                           | Status                                   | Comentários                                                                                                                                                                                                                                   |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('DOM WHATWG', '#dom-parentnode-childelementcount', 'ParentNode.childElementCount')}}         | {{Spec2('DOM WHATWG')}}         | Divide a interface `ElementTraversal` entre {{domxref("ChildNode")}} e `ParentNode`. Esse método é definido ao final. {{domxref("Document")}} e {{domxref("DocumentFragment")}} implementam essas novas interfaces. |
+| {{SpecName('Element Traversal', '#attribute-childElementCount', 'ElementTraversal.childElementCount')}} | {{Spec2('Element Traversal')}} | Adicionada sua definição inicial à interface pura do `ElementTraversal` e use-a em {{domxref("Element")}}.                                                                                                                              |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("api.ParentNode.childElementCount")}}</p>
+{{Compat("api.ParentNode.childElementCount")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("ParentNode")}} e {{domxref("ChildNode")}}.</li>
- <li>Diferentes tipos de Objetos implementando as interfaces puras: {{domxref("Document")}}, {{domxref("Element")}}, e {{domxref("DocumentFragment")}}.</li>
-</ul>
+- {{domxref("ParentNode")}} e {{domxref("ChildNode")}}.
+- Diferentes tipos de Objetos implementando as interfaces puras: {{domxref("Document")}}, {{domxref("Element")}}, e {{domxref("DocumentFragment")}}.

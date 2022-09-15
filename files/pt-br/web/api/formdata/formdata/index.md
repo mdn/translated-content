@@ -3,89 +3,77 @@ title: FormData()
 slug: Web/API/FormData/FormData
 translation_of: Web/API/FormData/FormData
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p>O <code><strong>FormData()</strong></code> construtor cria um novo objeto {{domxref("FormData")}}.</p>
+O **`FormData()`** construtor cria um novo objeto {{domxref("FormData")}}.
 
-<div class="note">
-<p><strong>Nota</strong>: Este recurso está disponível em <a href="/pt-BR/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Nota:** Este recurso está disponível em [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush: js"><code>var formData = new FormData(</code><code>form</code><code>)</code></pre>
+```js
+var formData = new FormData(form)
+```
 
-<h3 id="Parameters" name="Parameters">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>form </code>{{optional_inline}}</dt>
- <dd>Um elemento HTML {{HTMLElement("form")}} — quando especifico, o objeto {{domxref("FormData")}} será preenchido com as chaves/valores atuais do formulário usando a propriedade <em>name </em>de cada elemento para as chaves e seu valor enviado para os valores. Também condificará conteúdo de entrada do arquivo.</dd>
-</dl>
+- `form `{{optional_inline}}
+  - : Um elemento HTML {{HTMLElement("form")}} — quando especifico, o objeto {{domxref("FormData")}} será preenchido com as chaves/valores atuais do formulário usando a propriedade _name_ de cada elemento para as chaves e seu valor enviado para os valores. Também condificará conteúdo de entrada do arquivo.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>A linha a seguir cria um objeto FormData vázio:</p>
+A linha a seguir cria um objeto FormData vázio:
 
-<pre class="brush: js">var formData = new FormData(); // Currently empty</pre>
+```js
+var formData = new FormData(); // Currently empty
+```
 
-<p>Você poderia adicionar uma chave/valor usando {{domxref("FormData.append")}}:</p>
+Você poderia adicionar uma chave/valor usando {{domxref("FormData.append")}}:
 
-<pre class="brush: js">formData.append('username', 'Chris');
-</pre>
+```js
+formData.append('username', 'Chris');
+```
 
-<p>Ou você pode especificicar o opcional <code><em>form</em></code> argument ao criar o objeto <code>FormData</code>, para o popular com valores de forma especifica:</p>
+Ou você pode especificicar o opcional `form` argument ao criar o objeto `FormData`, para o popular com valores de forma especifica:
 
-<pre class="brush: html">&lt;form id="myForm" name="myForm"&gt;
-  &lt;div&gt;
-    &lt;label for="username"&gt;Enter name:&lt;/label&gt;
-    &lt;input type="text" id="username" name="username"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for="useracc"&gt;Enter account number:&lt;/label&gt;
-    &lt;input type="text" id="useracc" name="useracc"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for="userfile"&gt;Upload file:&lt;/label&gt;
-    &lt;input type="file" id="userfile" name="userfile"&gt;
-  &lt;/div&gt;
-&lt;input type="submit" value="Submit!"&gt;
-&lt;/form&gt;
-</pre>
+```html
+<form id="myForm" name="myForm">
+  <div>
+    <label for="username">Enter name:</label>
+    <input type="text" id="username" name="username">
+  </div>
+  <div>
+    <label for="useracc">Enter account number:</label>
+    <input type="text" id="useracc" name="useracc">
+  </div>
+  <div>
+    <label for="userfile">Upload file:</label>
+    <input type="file" id="userfile" name="userfile">
+  </div>
+<input type="submit" value="Submit!">
+</form>
+```
 
-<div class="note">
-<p><strong>Nota</strong>: Todos os elementos de entrada têm um atributo 'name'. Para que possa acessar seus valores mais tarde.</p>
-</div>
+> **Nota:** Todos os elementos de entrada têm um atributo 'name'. Para que possa acessar seus valores mais tarde.
 
-<pre class="brush: js">var myForm = document.getElementById('myForm');
-formData = new FormData(myForm);</pre>
+```js
+var myForm = document.getElementById('myForm');
+formData = new FormData(myForm);
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest','#dom-formdata','FormData()')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                    | Status                               | Comentário        |
+| -------------------------------------------------------------------------------- | ------------------------------------ | ----------------- |
+| {{SpecName('XMLHttpRequest','#dom-formdata','FormData()')}} | {{Spec2('XMLHttpRequest')}} | Definição inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.FormData.FormData")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="Using XMLHttpRequest">Using XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects" title="DOM/XMLHttpRequest/FormData/Using_FormData_objects">Using FormData objects</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
-</div>
+- {{domxref("XMLHTTPRequest")}}
+- [Using XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Using FormData objects](/pt-BR/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
+- {{HTMLElement("Form")}}

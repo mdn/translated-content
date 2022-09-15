@@ -3,42 +3,43 @@ title: CanvasRenderingContext2D.quadraticCurveTo()
 slug: Web/API/CanvasRenderingContext2D/quadraticCurveTo
 translation_of: Web/API/CanvasRenderingContext2D/quadraticCurveTo
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>o método <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.quadraticCurveTo()</code></strong> da API Canvas 2D adiciona uma Curva de Bézier quadrática ao caminho. São exigidos dois pontos. O primeiro ponto é um ponto de controle e o segundo é o ponto final. The starting point is the last point in the current path, which can be changed using <code>moveTo()</code> before creating the quadratic Bézier curve.</p>
+o método **`CanvasRenderingContext2D`\*\***`.quadraticCurveTo()`\*\* da API Canvas 2D adiciona uma Curva de Bézier quadrática ao caminho. São exigidos dois pontos. O primeiro ponto é um ponto de controle e o segundo é o ponto final. The starting point is the last point in the current path, which can be changed using `moveTo()` before creating the quadratic Bézier curve.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">void <var><em>ctx</em>.quadraticCurveTo(cpx, cpy, x, y);</var>
-</pre>
+```
+void ctx.quadraticCurveTo(cpx, cpy, x, y);
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>cpx</code></dt>
- <dd>O eixo X da coordenada para o ponto de controle.</dd>
- <dt><code>cpy</code></dt>
- <dd>O eixo Y da coordenada para o ponto de controle.</dd>
- <dt><code>x</code></dt>
- <dd>O eixo X da coordenada para o ponto final.</dd>
- <dt><code>y</code></dt>
- <dd>O eixo Y da coordenada para o ponto final.</dd>
-</dl>
+- `cpx`
+  - : O eixo X da coordenada para o ponto de controle.
+- `cpy`
+  - : O eixo Y da coordenada para o ponto de controle.
+- `x`
+  - : O eixo X da coordenada para o ponto final.
+- `y`
+  - : O eixo Y da coordenada para o ponto final.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_o_método_quadraticCurveTo">Usando o método <code>quadraticCurveTo</code></h3>
+### Usando o método `quadraticCurveTo`
 
-<p>This is just a simple code snippet drawing a quadratic bezier curve. The <span style="color: red;">control point is red</span> and the <span style="color: blue;">start and end points are blue</span>.</p>
+This is just a simple code snippet drawing a quadratic bezier curve. The control point is red and the start and end points are blue.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 ctx.beginPath();
@@ -54,28 +55,30 @@ ctx.fillRect(50, 100, 10, 10);
 
 ctx.fillStyle = 'red';
 // control point
-ctx.fillRect(230, 30, 10, 10);</pre>
+ctx.fillRect(230, 30, 10, 10);
+```
 
-<p>{{ EmbedLiveSample('Using_the_quadraticCurveTo_method', 315, 165) }}</p>
+{{ EmbedLiveSample('Using_the_quadraticCurveTo_method', 315, 165) }}
 
-<h3 id="Trying_the_quadraticCurveTo_parameters">Trying the <code>quadraticCurveTo</code> parameters</h3>
+### Trying the `quadraticCurveTo` parameters
 
-<p>Edit the code below and see your changes update live in the canvas:</p>
+Edit the code below and see your changes update live in the canvas:
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.beginPath();
 ctx.moveTo(50,20);
 ctx.quadraticCurveTo(230, 30, 50, 100);
-ctx.stroke();&lt;/textarea&gt;
-</pre>
+ctx.stroke();</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -98,35 +101,21 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Trying_the_quadraticCurveTo_parameters', 700, 360) }}</p>
+{{ EmbedLiveSample('Trying_the_quadraticCurveTo_parameters', 700, 360) }}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-quadraticcurveto", "CanvasRenderingContext2D.quadraticCurveTo")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                                                        | Status                           | Comment |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-quadraticcurveto", "CanvasRenderingContext2D.quadraticCurveTo")}} | {{Spec2('HTML WHATWG')}} |         |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.CanvasRenderingContext2D.quadraticCurveTo")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>The interface defining it, {{domxref("CanvasRenderingContext2D")}}</li>
- <li><a href="http://en.wikipedia.org/wiki/B%C3%A9zier_curve">WikiPedia article on Bézier curves</a>.</li>
-</ul>
+- The interface defining it, {{domxref("CanvasRenderingContext2D")}}
+- [WikiPedia article on Bézier curves](http://en.wikipedia.org/wiki/B%C3%A9zier_curve).

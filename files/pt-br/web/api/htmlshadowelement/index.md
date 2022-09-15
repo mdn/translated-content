@@ -9,51 +9,36 @@ tags:
   - shadow dom
 translation_of: Web/API/HTMLShadowElement
 ---
-<p>{{obsolete_header}}</p>
+{{obsolete_header}}
 
-<p>{{ APIRef("Web Components") }}</p>
+{{ APIRef("Web Components") }}
 
-<p>A interface <code><strong>HTMLShadowElement</strong></code> representa um  elemento HTML {{HTMLElement("shadow")}}, Ao qual é usado no <a href="/en-US/docs/Web/Web_Components/Shadow_DOM">Shadow DOM</a>.</p>
+A interface **`HTMLShadowElement`** representa um elemento HTML {{HTMLElement("shadow")}}, Ao qual é usado no [Shadow DOM](/pt-BR/docs/Web/Web_Components/Shadow_DOM).
 
-<h2 id="Properties" name="Properties">Propriedades</h2>
+## Propriedades
 
-<p><em> Esta interface herda as propriedades do {{domxref("HTMLElement")}}.</em></p>
+_Esta interface herda as propriedades do {{domxref("HTMLElement")}}._
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<p><em>Esta interface herda os métodos do {{domxref("HTMLElement")}}.</em></p>
+_Esta interface herda os métodos do {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLShadowElement.getDistributedNodes()")}}</dt>
- <dd>Retorna uma estática {{domxref("NodeList")}} do {{glossary("distributed nodes")}} associado com este elemento &lt;shadow&gt;.</dd>
-</dl>
+- {{domxref("HTMLShadowElement.getDistributedNodes()")}}
+  - : Retorna uma estática {{domxref("NodeList")}} do {{glossary("distributed nodes")}} associado com este elemento \<shadow>.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Shadow DOM', '#the-shadow-element', 'shadow')}}</td>
-   <td>{{Spec2('Shadow DOM')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                    | Status                           | Comentário |
+| -------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('Shadow DOM', '#the-shadow-element', 'shadow')}} | {{Spec2('Shadow DOM')}} |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("api.HTMLShadowElement")}}</p>
+{{Compat("api.HTMLShadowElement")}}
 
-<p>Se Shadow DOM não é habilitado no Firefox, os elementos &lt;shadow&gt; se comportarão como {{domxref("HTMLUnknownElement")}}. Shadow DOM foi implementado primeiro no Firefox 28 e está por trás de uma preferência, <code>dom.webcomponents.enabled</code>, ao qual é desabilitado por padrão. [1]</p>
+Se Shadow DOM não é habilitado no Firefox, os elementos \<shadow> se comportarão como {{domxref("HTMLUnknownElement")}}. Shadow DOM foi implementado primeiro no Firefox 28 e está por trás de uma preferência, `dom.webcomponents.enabled`, ao qual é desabilitado por padrão. \[1]
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>O elemento HTML {{HTMLElement("shadow")}} , implementa esta interface.</li>
- <li><a href="/en-US/docs/Web/Web_Components/Shadow_DOM">Shadow DOM</a></li>
-</ul>
+- O elemento HTML {{HTMLElement("shadow")}} , implementa esta interface.
+- [Shadow DOM](/pt-BR/docs/Web/Web_Components/Shadow_DOM)

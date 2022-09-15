@@ -3,35 +3,26 @@ title: Navigator.deviceMemory
 slug: Web/API/Navigator/deviceMemory
 translation_of: Web/API/Navigator/deviceMemory
 ---
-<p>{{SeeCompatTable}}{{APIRef("Device Memory")}}</p>
+{{SeeCompatTable}}{{APIRef("Device Memory")}}
 
-<p>A propriedade de somente-leitura <strong><code>deviceMemory</code></strong> da interface {{domxref("navigator")}} retorna a quantidade de memória do dispositivo em gigabytes. Este valor é uma aproximação por arredondamento da potência mais próxima de 2 e dividindo este número por 1024.</p>
+A propriedade de somente-leitura **`deviceMemory`** da interface {{domxref("navigator")}} retorna a quantidade de memória do dispositivo em gigabytes. Este valor é uma aproximação por arredondamento da potência mais próxima de 2 e dividindo este número por 1024.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var <em>memory</em> = navigator.deviceMemory</pre>
+```
+var memory = navigator.deviceMemory
+```
 
-<h3 id="Valor">Valor</h3>
+### Valor
 
-<p>Um número de ponto flutuante.</p>
+Um número de ponto flutuante.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Device Memory','#sec-device-memory-js-api','deviceMemory')}}</td>
-   <td>{{Spec2('Device Memory')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                    | Status                               | Comentário         |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
+| {{SpecName('Device Memory','#sec-device-memory-js-api','deviceMemory')}} | {{Spec2('Device Memory')}} | Definição inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("api.Navigator.deviceMemory")}}</p>
+{{Compat("api.Navigator.deviceMemory")}}

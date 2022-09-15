@@ -4,136 +4,73 @@ slug: Web/API/Performance_API
 translation_of: Web/API/Performance_API
 original_slug: Web/API/API_de_Desempenho
 ---
-<div>{{DefaultAPISidebar("High Resolution Time")}}</div>
+{{DefaultAPISidebar("High Resolution Time")}}
 
-<p>The <a href="https://www.w3.org/TR/hr-time/">High Resolution Time</a> standard defines a {{domxref("Performance")}} interface that supports client-side latency measurements within applications. The {{domxref("Performance")}} interfaces are considered <em>high resolution</em> because they are accurate to a thousandth of a millisecond (subject to hardware or software constraints). The interfaces support a number of use cases including calculating frame-rates (potentially important in animations) and benchmarking (such as the time to load a resource).</p>
+The [High Resolution Time](https://www.w3.org/TR/hr-time/) standard defines a {{domxref("Performance")}} interface that supports client-side latency measurements within applications. The {{domxref("Performance")}} interfaces are considered _high resolution_ because they are accurate to a thousandth of a millisecond (subject to hardware or software constraints). The interfaces support a number of use cases including calculating frame-rates (potentially important in animations) and benchmarking (such as the time to load a resource).
 
-<p>Since a platform's <em>system clock</em> is subject to various <em>skews</em> (such as NTP adjustments), the interfaces support a <em>monotonic clock</em> i.e. a clock that is always increasing. As such, the <code>Performance</code> API defines a {{domxref("DOMHighResTimeStamp")}} type rather than using the {{jsxref("Date.now","Date.now()")}} interface.</p>
+Since a platform's _system clock_ is subject to various _skews_ (such as NTP adjustments), the interfaces support a _monotonic clock_ i.e. a clock that is always increasing. As such, the `Performance` API defines a {{domxref("DOMHighResTimeStamp")}} type rather than using the {{jsxref("Date.now","Date.now()")}} interface.
 
-<h2 id="DOMHighResTimeStamp">DOMHighResTimeStamp</h2>
+## DOMHighResTimeStamp
 
-<p>The {{domxref("DOMHighResTimeStamp")}} type, as its name implies, represents a high resolution point in time. This type is a <code>double</code> and is used by the performance interfaces. The value could be a discrete point in time or the difference in time between two discrete points in time.</p>
+The {{domxref("DOMHighResTimeStamp")}} type, as its name implies, represents a high resolution point in time. This type is a `double` and is used by the performance interfaces. The value could be a discrete point in time or the difference in time between two discrete points in time.
 
-<p>The unit of <code>DOMHighResTimeStamp</code> is milliseconds and should be accurate to 5 µs (microseconds). However, If the browser is unable to provide a time value accurate to 5 microseconds (because, for example, due to hardware or software constraints), the browser can represent the value as a time in milliseconds accurate to a millisecond.</p>
+The unit of `DOMHighResTimeStamp` is milliseconds and should be accurate to 5 µs (microseconds). However, If the browser is unable to provide a time value accurate to 5 microseconds (because, for example, due to hardware or software constraints), the browser can represent the value as a time in milliseconds accurate to a millisecond.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>The <code>{{domxref("Performance")}}</code> interface has two methods. The {{domxref("Performance.now","now()")}} method returns a {{domxref("DOMHighResTimeStamp")}} whose value that depends on the {{domxref("PerformanceTiming.navigationStart","navigation start")}} and scope. If the scope is a window, the value is the time the browser context was created and if the scope is a {{domxref("Worker","worker")}}, the value is the time the worker was created.</p>
+The `{{domxref("Performance")}}` interface has two methods. The {{domxref("Performance.now","now()")}} method returns a {{domxref("DOMHighResTimeStamp")}} whose value that depends on the {{domxref("PerformanceTiming.navigationStart","navigation start")}} and scope. If the scope is a window, the value is the time the browser context was created and if the scope is a {{domxref("Worker","worker")}}, the value is the time the worker was created.
 
-<p>The {{domxref("Performance.toJSON","toJSON()")}} method returns a serialization of the {{domxref("Performance")}} object, for those attributes that can be serialized.</p>
+The {{domxref("Performance.toJSON","toJSON()")}} method returns a serialization of the {{domxref("Performance")}} object, for those attributes that can be serialized.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>The <code>{{domxref("Performance")}}</code> interface has two properties. The {{domxref("Performance.timing","timing")}} property returns a {{domxref("PerformanceTiming")}} object containing latency-related performance information such as the start of navigation time, start and end times for redirects, start and end times for responses, etc.</p>
+The `{{domxref("Performance")}}` interface has two properties. The {{domxref("Performance.timing","timing")}} property returns a {{domxref("PerformanceTiming")}} object containing latency-related performance information such as the start of navigation time, start and end times for redirects, start and end times for responses, etc.
 
-<p>The <code>{{domxref("Performance.navigation","navigation")}}</code> property returns a {{domxref("PerformanceNavigation")}} object representing the type of navigation that occurs in the given browsing context, such as the page was navigated to from history, the page was navigated to by following a link, etc.</p>
+The `{{domxref("Performance.navigation","navigation")}}` property returns a {{domxref("PerformanceNavigation")}} object representing the type of navigation that occurs in the given browsing context, such as the page was navigated to from history, the page was navigated to by following a link, etc.
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
- <dt>{{domxref('Performance')}}</dt>
- <dd>Provides methods and properties containing timing-related performance information for the given page.</dd>
- <dt>{{domxref('PerformanceEntry')}}</dt>
- <dd>Provides methods and properties the encapsulate a single performance metric that is part of the performance timeline.</dd>
- <dt>{{domxref('PerformanceFrameTiming')}}</dt>
- <dd>Provides methods and properties containing frame timing data about the browser's event loop.</dd>
- <dt>{{domxref('PerformanceMark')}}</dt>
- <dd>An abstract interface for <a href="/en-US/docs/Web/API/PerformanceEntry"><code>performance entries</code></a> with an <a href="/en-US/docs/Web/API/PerformanceEntry/entryType"><code>entry type</code></a> of "<code>mark</code>". Entries of this type are created by calling <a href="/en-US/docs/Web/API/Performance/mark"><code>performance.mark()</code></a> to add a named <a href="/en-US/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> (the mark) to the browser's performance timeline.</dd>
- <dt>{{domxref('PerformanceMeasure')}}</dt>
- <dd>An abstract interface for <a href="/en-US/docs/Web/API/PerformanceEntry"><code>performance entries</code></a> with an <a href="/en-US/docs/Web/API/PerformanceEntry/entryType"><code>entry type</code></a> of "<code>measure</code>". Entries of this type are created by calling <a href="/en-US/docs/Web/API/Performance/measure"><code>performance.measure()</code></a> to add a named<a href="/en-US/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> (the measure) between two marks to the browser's performance timeline.</dd>
- <dt>{{domxref('PerformanceNavigationTiming')}}</dt>
- <dd>Provides methods and properties to store and retrieve <a href="/en-US/docs/Web/API/DOMHighResTimeStamp"><code>high resolution timestamps</code></a> or metrics regarding the browser's document navigation events.</dd>
- <dt>{{domxref('PerformanceObserver')}}</dt>
- <dd>Provides methods and properties used to observe performance measurement events and be notified of new <a href="/en-US/docs/Web/API/PerformanceEntry">performance entries</a> as they are recorded in the browser's performance timeline.</dd>
- <dt>{{domxref('PerformanceResourceTiming')}}</dt>
- <dd>Provides methods and properties for retrieving and analyzing detailed network timing data regarding the loading of an application's resources.</dd>
-</dl>
+- {{domxref('Performance')}}
+  - : Provides methods and properties containing timing-related performance information for the given page.
+- {{domxref('PerformanceEntry')}}
+  - : Provides methods and properties the encapsulate a single performance metric that is part of the performance timeline.
+- {{domxref('PerformanceFrameTiming')}}
+  - : Provides methods and properties containing frame timing data about the browser's event loop.
+- {{domxref('PerformanceMark')}}
+  - : An abstract interface for [`performance entries`](/pt-BR/docs/Web/API/PerformanceEntry) with an [`entry type`](/pt-BR/docs/Web/API/PerformanceEntry/entryType) of "`mark`". Entries of this type are created by calling [`performance.mark()`](/pt-BR/docs/Web/API/Performance/mark) to add a named [`DOMHighResTimeStamp`](/pt-BR/docs/Web/API/DOMHighResTimeStamp) (the mark) to the browser's performance timeline.
+- {{domxref('PerformanceMeasure')}}
+  - : An abstract interface for [`performance entries`](/pt-BR/docs/Web/API/PerformanceEntry) with an [`entry type`](/pt-BR/docs/Web/API/PerformanceEntry/entryType) of "`measure`". Entries of this type are created by calling [`performance.measure()`](/pt-BR/docs/Web/API/Performance/measure) to add a named[`DOMHighResTimeStamp`](/pt-BR/docs/Web/API/DOMHighResTimeStamp) (the measure) between two marks to the browser's performance timeline.
+- {{domxref('PerformanceNavigationTiming')}}
+  - : Provides methods and properties to store and retrieve [`high resolution timestamps`](/pt-BR/docs/Web/API/DOMHighResTimeStamp) or metrics regarding the browser's document navigation events.
+- {{domxref('PerformanceObserver')}}
+  - : Provides methods and properties used to observe performance measurement events and be notified of new [performance entries](/pt-BR/docs/Web/API/PerformanceEntry) as they are recorded in the browser's performance timeline.
+- {{domxref('PerformanceResourceTiming')}}
+  - : Provides methods and properties for retrieving and analyzing detailed network timing data regarding the loading of an application's resources.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Highres Time')}}</td>
-   <td>{{Spec2('Highres Time')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Highres Time Level 2')}}</td>
-   <td>{{Spec2('Highres Time Level 2')}}</td>
-   <td>Adds <code>performance</code> attribute on <code>Window</code> and <code>WorkerGlobalScope</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Highres Time Level 3')}}</td>
-   <td>{{Spec2('Highres Time Level 3')}}</td>
-   <td>Add <code>timeOrigin</code> property to <code>Performance</code> interface.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Frame Timing')}}</td>
-   <td>{{Spec2('Frame Timing')}}</td>
-   <td>Adds <code>PerformanceFrameTiming</code> interface.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Navigation Timing')}}</td>
-   <td>{{Spec2('Navigation Timing')}}</td>
-   <td>Adds the <code>PerformanceTiming</code> and <code>PerformanceNavigation</code> interfaces. Adds <code>timing</code> and <code>navigation</code> properties to the <code>Performance</code> interface.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Navigation Timing Level 2')}}</td>
-   <td>{{Spec2('Navigation Timing Level 2')}}</td>
-   <td>Adds the <code>PerformanceNavigationTiming</code> interface. Obsolete's the the <code>PerformanceTiming</code> interface, the <code>PerformanceNavigation</code> interface, as well as the <code>timing</code> and <code>navigation</code> properties to the <code>Performance</code> interface.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Performance Timeline')}}</td>
-   <td>{{Spec2('Performance Timeline')}}</td>
-   <td>Adds the <code>PerformanceEntry</code> interface, the <code>PerformanceEntryList</code> type, as well as the <code>getEntries()</code>, <code>getEntriesByType()</code>, and <code>getEntriesByName()</code> methods on the <code>Performance</code> interface.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Performance Timeline Level 2')}}</td>
-   <td>{{Spec2('Performance Timeline Level 2')}}</td>
-   <td>Adds serializer to the <code>PerformanceEntry</code> interface as well as adding the <code>PerformanceObserver</code> interface and callback</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Resource Timing')}}</td>
-   <td>{{Spec2('Resource Timing')}}</td>
-   <td>Adds the <code>PerformanceResourceTiming</code> interface. Adds the <code>clearResourceTimings()</code> method, the <code>setResourceTimingBufferSize()</code> method, and the <code>onresourcetimingbufferfull</code> event handler to the <code>Performance</code> interface. Also adds the <code>Timing-Allow-Origin</code> response header.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Resource Timing 2')}}</td>
-   <td>{{Spec2('Resource Timing 2')}}</td>
-   <td>Adds the <code>nextHopProtocol</code>, <code>workerStart</code>, <code>transferSize</code>, <code>encodedBodySize</code>, and <code>decodedBodySize</code> properties to the <code>PerformanceResourceTiming</code> interface.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Resource Timing 3')}}</td>
-   <td>{{Spec2('Resource Timing 3')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('User Timing')}}</td>
-   <td>{{Spec2('User Timing')}}</td>
-   <td>Adds <code>mark()</code>, <code>clearMarks()</code>, <code>measure()</code> and <code>clearMeasures()</code> methods to the <code>Performance</code> interface. Adds the <code>PerformanceMark</code> and <code>PeformanceMeasure</code> interfaces.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('User Timing Level 2')}}</td>
-   <td>{{Spec2('User Timing Level 2')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                | Status                                                   | Comment                                                                                                                                                                                                                                                                       |
+| ------------------------------------------------------------ | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('Highres Time')}}                         | {{Spec2('Highres Time')}}                         | Initial definition.                                                                                                                                                                                                                                                           |
+| {{SpecName('Highres Time Level 2')}}             | {{Spec2('Highres Time Level 2')}}             | Adds `performance` attribute on `Window` and `WorkerGlobalScope`.                                                                                                                                                                                                             |
+| {{SpecName('Highres Time Level 3')}}             | {{Spec2('Highres Time Level 3')}}             | Add `timeOrigin` property to `Performance` interface.                                                                                                                                                                                                                         |
+| {{SpecName('Frame Timing')}}                         | {{Spec2('Frame Timing')}}                         | Adds `PerformanceFrameTiming` interface.                                                                                                                                                                                                                                      |
+| {{SpecName('Navigation Timing')}}                 | {{Spec2('Navigation Timing')}}                 | Adds the `PerformanceTiming` and `PerformanceNavigation` interfaces. Adds `timing` and `navigation` properties to the `Performance` interface.                                                                                                                                |
+| {{SpecName('Navigation Timing Level 2')}}     | {{Spec2('Navigation Timing Level 2')}}     | Adds the `PerformanceNavigationTiming` interface. Obsolete's the the `PerformanceTiming` interface, the `PerformanceNavigation` interface, as well as the `timing` and `navigation` properties to the `Performance` interface.                                                |
+| {{SpecName('Performance Timeline')}}             | {{Spec2('Performance Timeline')}}             | Adds the `PerformanceEntry` interface, the `PerformanceEntryList` type, as well as the `getEntries()`, `getEntriesByType()`, and `getEntriesByName()` methods on the `Performance` interface.                                                                                 |
+| {{SpecName('Performance Timeline Level 2')}} | {{Spec2('Performance Timeline Level 2')}} | Adds serializer to the `PerformanceEntry` interface as well as adding the `PerformanceObserver` interface and callback                                                                                                                                                        |
+| {{SpecName('Resource Timing')}}                     | {{Spec2('Resource Timing')}}                     | Adds the `PerformanceResourceTiming` interface. Adds the `clearResourceTimings()` method, the `setResourceTimingBufferSize()` method, and the `onresourcetimingbufferfull` event handler to the `Performance` interface. Also adds the `Timing-Allow-Origin` response header. |
+| {{SpecName('Resource Timing 2')}}                 | {{Spec2('Resource Timing 2')}}                 | Adds the `nextHopProtocol`, `workerStart`, `transferSize`, `encodedBodySize`, and `decodedBodySize` properties to the `PerformanceResourceTiming` interface.                                                                                                                  |
+| {{SpecName('Resource Timing 3')}}                 | {{Spec2('Resource Timing 3')}}                 |                                                                                                                                                                                                                                                                               |
+| {{SpecName('User Timing')}}                         | {{Spec2('User Timing')}}                         | Adds `mark()`, `clearMarks()`, `measure()` and `clearMeasures()` methods to the `Performance` interface. Adds the `PerformanceMark` and `PeformanceMeasure` interfaces.                                                                                                       |
+| {{SpecName('User Timing Level 2')}}             | {{Spec2('User Timing Level 2')}}             |                                                                                                                                                                                                                                                                               |
 
-<h2 id="Implementation_status">Implementation status</h2>
+## Implementation status
 
-<p>As shown in the {{domxref("Performance")}} interface's <a href="/Web/API/Performance#Browser_compatibility">Browser Compatibility</a> table, most of these interfaces are broadly implemented by desktop browsers.</p>
+As shown in the {{domxref("Performance")}} interface's [Browser Compatibility](/Web/API/Performance#Browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers.
 
-<p>To test your browser's support for the {{domxref("Performance")}} interface, run the <code><a href="http://mdn.github.io/web-performance/perf-api-support.html">perf-api-support</a></code> application.</p>
+To test your browser's support for the {{domxref("Performance")}} interface, run the [`perf-api-support`](http://mdn.github.io/web-performance/perf-api-support.html) application.
 
-<h2 id="See_Also">See Also</h2>
+## See Also
 
-<ul>
- <li><a href="http://w3c.github.io/perf-timing-primer/">A Primer for Web Performance Timing APIs</a></li>
-</ul>
+- [A Primer for Web Performance Timing APIs](http://w3c.github.io/perf-timing-primer/)

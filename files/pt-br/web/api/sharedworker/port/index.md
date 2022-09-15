@@ -3,57 +3,42 @@ title: SharedWorker.port
 slug: Web/API/SharedWorker/port
 translation_of: Web/API/SharedWorker/port
 ---
-<div>{{APIRef("Web Workers API")}}</div>
+{{APIRef("Web Workers API")}}
 
-<p>A propriedade <code><strong>port</strong></code> do {{domxref ("SharedWorker")}} retorna um objeto {{domxref ("MessagePort")}} usado para comunicar e controlar o shared worker.</p>
+A propriedade **`port`** do {{domxref ("SharedWorker")}} retorna um objeto {{domxref ("MessagePort")}} usado para comunicar e controlar o shared worker.
 
-<p> </p>
+## Sintaxe
 
-<h2 id="Sintaxe">Sintaxe</h2>
+```
+myWorker.port;
+```
 
-<pre class="syntaxbox">myWorker.port;</pre>
+### Valor
 
-<h3 id="Valor">Valor</h3>
+Um objeto {{domxref("MessagePort")}}.
 
-<p>Um objeto {{domxref("MessagePort")}}.</p>
+## Exemplo
 
-<h2 id="Exemplo">Exemplo</h2>
+O snippet de código a seguir mostra a criação de um objeto SharedWorker usando o construtor {{domxref ("SharedWorker.SharedWorker", "SharedWorker ()")}} . Vários scripts podem acessar o worker através de um objeto do tipo {{domxref ("MessagePort")}} , usando a propriedade SharedWorker.port — A porta é iniciada usando o método `start()` .
 
-<p>O snippet de código a seguir mostra a criação de um objeto SharedWorker usando o construtor {{domxref ("SharedWorker.SharedWorker", "SharedWorker ()")}} . Vários scripts podem acessar o worker através de um objeto do tipo {{domxref ("MessagePort")}} , usando a propriedade SharedWorker.port  — A porta é iniciada usando o método <code>start()</code> .</p>
+```js
+var myWorker = new SharedWorker('worker.js');
+myWorker.port.start();
+```
 
-<pre class="brush: js">var myWorker = new SharedWorker('worker.js');
-myWorker.port.start();</pre>
+Veja um exemplo completo [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](http://mdn.github.io/simple-shared-worker/).)
 
-<p>Veja um exemplo completo <a class="external external-icon" href="https://github.com/mdn/simple-shared-worker">Basic shared worker example</a> (<a class="external external-icon" href="http://mdn.github.io/simple-shared-worker/">run shared worker</a>.)</p>
+## Especificações
 
-<h2 id="Especificações">Especificações</h2>
+| Specification                                                                                            | Status                           | Comment                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "#dom-sharedworker-port", "AbstractWorker.onerror")}} | {{Spec2('HTML WHATWG')}} | No change from {{SpecName("Web Workers")}}. |
+| {{SpecName('Web Workers', "#dom-sharedworker-port", "AbstractWorker.onerror")}} | {{Spec2('Web Workers')}} | Initial definition                                   |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#dom-sharedworker-port", "AbstractWorker.onerror")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change from {{SpecName("Web Workers")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Workers', "#dom-sharedworker-port", "AbstractWorker.onerror")}}</td>
-   <td>{{Spec2('Web Workers')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.SharedWorker.port")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{domxref("SharedWorker")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("SharedWorker")}} interface it belongs to.

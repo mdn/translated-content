@@ -5,40 +5,25 @@ translation_of: Web/API/DeviceMotionEventRotationRate
 translation_of_original: Web/API/DeviceRotationRate
 original_slug: Web/API/DeviceRotationRate
 ---
-<p>{{ ApiRef("Device Orientation Events") }} {{SeeCompatTable}}</p>
+{{ ApiRef("Device Orientation Events") }} {{SeeCompatTable}}
 
-<p>Um objeto <code>DeviceRotationRate</code> fornece informações sobre a taxa na qual o dispositivo está girando em torno de todos os três eixos.</p>
+Um objeto `DeviceRotationRate` fornece informações sobre a taxa na qual o dispositivo está girando em torno de todos os três eixos.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{ domxref("DeviceRotationRate.alpha") }} {{readonlyInline}}</dt>
- <dd>A quantidade de rotação em torno do eixo Z, em graus por segundo.</dd>
- <dt>{{ domxref("DeviceRotationRate.beta") }} {{readonlyInline}}</dt>
- <dd>A quantidade de rotação em torno do eixo Y, em graus por segundo</dd>
- <dt>{{ domxref("DeviceRotationRate.gamma") }} {{readonlyInline}}</dt>
- <dd>A quantidade de rotação em torno do eixo X, em graus por segundo</dd>
-</dl>
+- {{ domxref("DeviceRotationRate.alpha") }} {{readonlyInline}}
+  - : A quantidade de rotação em torno do eixo Z, em graus por segundo.
+- {{ domxref("DeviceRotationRate.beta") }} {{readonlyInline}}
+  - : A quantidade de rotação em torno do eixo Y, em graus por segundo
+- {{ domxref("DeviceRotationRate.gamma") }} {{readonlyInline}}
+  - : A quantidade de rotação em torno do eixo X, em graus por segundo
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificacões</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Device Orientation')}}</td>
-   <td>{{Spec2('Device Orientation')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificacões                               | Status                                   | Comentario         |
+| -------------------------------------------- | ---------------------------------------- | ------------------ |
+| {{SpecName('Device Orientation')}} | {{Spec2('Device Orientation')}} | Definição inicial. |
 
-<h2 id="Navegador_compativeís">Navegador compativeís</h2>
+## Navegador compativeís
 
 {{Compat("api.DeviceMotionEventRotationRate")}}

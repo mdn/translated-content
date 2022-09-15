@@ -7,53 +7,35 @@ tags:
   - Referencia
 translation_of: Web/API/Document/characterSet
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}A propriedade somente leitura Document.characterSet retorna a [character encoding](/pt-BR/docs/Glossary/character_encoding)(codificação de caracteres) do documento com o qual ele é renderizado atualmente. (Uma codificação de caracteres é um conjunto de caracteres e como interpretar bytes nesses caracteres.)
 
-<div><span class="tlid-translation translation" lang="pt"><span title="">A propriedade somente leitura Document.characterSet retorna a</span></span><span class="seoSummary"> <a href="/en-US/docs/Glossary/character_encoding">character encoding</a></span><span class="tlid-translation translation" lang="pt"><span title="">(codificação de caracteres) do documento com o qual ele é renderizado atualmente.</span> <span title="">(Uma codificação de caracteres é um conjunto de caracteres e como interpretar bytes nesses caracteres.)</span></span></div>
+> **Nota:** Um “character set”(conjunto de caracteres) e “character encoding”(codificação de caracteres) estão relacionados, mas diferentes. Apesar do nome dessa propriedade, ela retorna a codificação.
 
+Usuários podem sobrepor a codificação especificada pelo desenvolvedor dentro do cabeçalho [Content-Type](/pt-BR/docs/Web/HTTP/Headers/Content-Type) (tipo de conteúdo) ou embutida como \<meta charset = "utf-8">, como no menu <kbd>Exibir → Codificacao de Texto </kbd>. Essa substituição é fornecida para corrigir codificações especificadas pelo desenvolvedor incorretas que resultam em [texto ilegivel](https://en.wikipedia.org/wiki/Mojibake).
 
+> **Nota:** As propriedades `document.charset` e `document.inputEncoding` são aliases legados para `document.characterSet`. Não use mais eles.
 
-<div class="note">
-<p>Um “character set”(conjunto de caracteres) e “character encoding”(<span class="tlid-translation translation" lang="pt"><span title="">codificação de caracteres</span></span>) <span class="tlid-translation translation" lang="pt"><span title="">estão relacionados, mas diferentes.</span> <span title="">Apesar do nome dessa propriedade, ela retorna a codificação.</span></span></p>
-</div>
+## Sintaxe
 
-<p>Usuários podem sobrepor <span class="tlid-translation translation" lang="pt"><span title="">a codificação especificada pelo desenvolvedor dentro do cabeçalho <a href="/pt-BR/docs/Web/HTTP/Headers/Content-Type">Content-Type</a> (tipo de conteúdo) ou embutida como &lt;meta charset = "utf-8"&gt;, como no menu</span></span> <kbd>Exibir → Codificacao de Texto </kbd>. <span class="tlid-translation translation" lang="pt"><span title="">Essa substituição é fornecida para corrigir codificações especificadas pelo desenvolvedor incorretas que resultam em</span></span> <a href="https://en.wikipedia.org/wiki/Mojibake">texto ilegivel</a>.</p>
+```
+var string = document.characterSet;
+```
 
-<div class="note">
-<p>As propriedades <code>document.charset</code> e <code>document.inputEncoding</code> <span class="tlid-translation translation" lang="pt"><span title="">são aliases legados para</span></span> <code>document.characterSet</code>. N<span class="tlid-translation translation" lang="pt"><span title="">ã</span></span>o use mais eles.</p>
-</div>
+## Exemplos
 
-<h2 id="Sintaxe">Sintaxe</h2>
-
-<pre class="syntaxbox">var <em>string</em> = document.characterSet;</pre>
-
-<h2 id="Exemplos">Exemplos</h2>
-
-<pre class="brush: html">&lt;button onclick="console.log(document.characterSet);"&gt;
+```html
+<button onclick="console.log(document.characterSet);">
   Registro de Codificacao de Caracteres
-&lt;/button&gt;
-&lt;!-- mostra a codificacao de caracteres do documento no console do desevolvedor, como "ISO-8859-1" ou "UTF-8" --&gt;
-</pre>
+</button>
+<!-- mostra a codificacao de caracteres do documento no console do desevolvedor, como "ISO-8859-1" ou "UTF-8" -->
+```
 
-<h2 id="Especificações">Especifica<span class="tlid-translation translation" lang="pt"><span title="">ções</span></span></h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-document-characterset', 'characterSet')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>
-    <p>Defini<span class="tlid-translation translation" lang="pt"><span title="">ção</span></span> Inicial.</p>
-   </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                           | Comment            |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
+| {{SpecName('DOM WHATWG', '#dom-document-characterset', 'characterSet')}} | {{Spec2('DOM WHATWG')}} | Definição Inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</span></span></h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("api.Document.characterSet")}}</p>
+{{Compat("api.Document.characterSet")}}

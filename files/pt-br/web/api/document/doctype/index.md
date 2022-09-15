@@ -3,55 +3,43 @@ title: Document.doctype
 slug: Web/API/Document/doctype
 translation_of: Web/API/Document/doctype
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>Retorna a declaração do tipo de documento(Document Type Declaration (DTD)) associado ao documento atual. O objeto retornado implementa a interface {{domxref("DocumentType")}}. Use {{domxref("DOMImplementation.createDocumentType()")}} para criar um <code>DocumentType</code>.</p>
+Retorna a declaração do tipo de documento(Document Type Declaration (DTD)) associado ao documento atual. O objeto retornado implementa a interface {{domxref("DocumentType")}}. Use {{domxref("DOMImplementation.createDocumentType()")}} para criar um `DocumentType`.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><var>doctype</var> = <var>document</var>.doctype;
-</pre>
+```
+doctype = document.doctype;
+```
 
-<ul>
- <li><code>doctype</code> é uma proriedade somente de leitura.</li>
-</ul>
+- `doctype` é uma proriedade somente de leitura.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush:js">var doctypeObj = document.doctype;
+```js
+var doctypeObj = document.doctype;
 
 console.log(
   "doctypeObj.name: "           + doctypeObj.name            + "\n" +
   "doctypeObj.internalSubset: " + doctypeObj.internalSubset  + "\n" +
   "doctypeObj.publicId: "       + doctypeObj.publicId        + "\n" +
   "doctypeObj.systemId: "       + doctypeObj.systemId
-);</pre>
+);
+```
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>A propriedade retornará <code>null</code> se não houvernehum  DTD associado ao documento atual.</p>
+A propriedade retornará `null` se não houvernehum DTD associado ao documento atual.
 
-<p>O nível 2 do DOM não suporta a edição da declaração do tipo de documento.</p>
+O nível 2 do DOM não suporta a edição da declaração do tipo de documento.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-document-doctype', 'Document: doctype')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                    | Status                           | Comentário |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| {{SpecName('DOM WHATWG', '#dom-document-doctype', 'Document: doctype')}} | {{Spec2('DOM WHATWG')}} |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("api.Document.doctype")}}</p>
+{{Compat("api.Document.doctype")}}

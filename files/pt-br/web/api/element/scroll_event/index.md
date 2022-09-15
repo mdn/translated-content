@@ -4,92 +4,76 @@ slug: Web/API/Element/scroll_event
 translation_of: Web/API/GlobalEventHandlers/onscroll
 original_slug: Web/API/GlobalEventHandlers/onscroll
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>A propriedade <strong><code>onscroll</code></strong> do {{domxref("GlobalEventHandlers")}} é uma mistura de eventos {{event("Event_handlers", "event handler")}} que processam eventos <code>scroll</code>.</p>
+A propriedade **`onscroll`** do {{domxref("GlobalEventHandlers")}} é uma mistura de eventos {{event("Event_handlers", "event handler")}} que processam eventos `scroll`.
 
-<p>O evento <code>scroll</code> é disparado quando uma visão do documento ou um elemento foi rolado, seja por um usuário, uma <a href="/en-US/docs/Web/API">API Web</a>, ou o {{glossary("user agent")}}.</p>
+O evento `scroll` é disparado quando uma visão do documento ou um elemento foi rolado, seja por um usuário, uma [API Web](/pt-BR/docs/Web/API), ou o {{glossary("user agent")}}.
 
-<div class="blockIndicator note">
-<p><strong>Nota:</strong> Não confunda <code>onscroll</code> com {{domxref("GlobalEventHandlers.onwheel", "onwheel")}}: <code>onwheel</code> manipula a rotação da roda do mouse, enquanto <code>onscroll</code> manipula rolagem do conteúdo do objeto.</p>
-</div>
+> **Nota:** Não confunda `onscroll` com {{domxref("GlobalEventHandlers.onwheel", "onwheel")}}: `onwheel` manipula a rotação da roda do mouse, enquanto `onscroll` manipula rolagem do conteúdo do objeto.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><em>target</em>.onscroll = <em>functionRef</em>;
-</pre>
+```
+target.onscroll = functionRef;
+```
 
-<h3 id="Valor">Valor</h3>
+### Valor
 
-<p><code>functionRef</code> é o nome de uma função ou uma  <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">expressão de função</a>. A função recebe um  {{domxref("UIEvent")}} objeto com um único argumento.</p>
+`functionRef` é o nome de uma função ou uma [expressão de função](/pt-BR/docs/Web/JavaScript/Reference/Operators/function). A função recebe um {{domxref("UIEvent")}} objeto com um único argumento.
 
-<p>Apenas um manipulador <code>onscroll</code> pode ser associado à um objeto por vez. Para uma maior flexibilidade, você pode passar um {{event("scroll")}} evento para o {{domxref("EventTarget.addEventListener()")}} metódo ao invés disso.</p>
+Apenas um manipulador `onscroll` pode ser associado à um objeto por vez. Para uma maior flexibilidade, você pode passar um {{event("scroll")}} evento para o {{domxref("EventTarget.addEventListener()")}} metódo ao invés disso.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>Este exemplo monitora rolagens sobre o elemento {{HtmlElement("textarea")}}, e registra a posição vertical adequadamente.</p>
+Este exemplo monitora rolagens sobre o elemento {{HtmlElement("textarea")}}, e registra a posição vertical adequadamente.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;textarea&gt;1 2 3 4 5 6 7 8 9&lt;/textarea&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<textarea>1 2 3 4 5 6 7 8 9</textarea>
+<p id="log"></p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">textarea {
+```css
+textarea {
   width: 4rem;
   height: 8rem;
   font-size: 3rem;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const textarea = document.querySelector('textarea');
+```js
+const textarea = document.querySelector('textarea');
 const log = document.getElementById('log');
 
 textarea.onscroll = logScroll;
 
 function logScroll(e) {
   log.textContent = `Posição do scroll: ${e.target.scrollTop}`;
-}</pre>
+}
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample("Exemplo", 700, 200)}}</p>
+{{EmbedLiveSample("Exemplo", 700, 200)}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','#handler-onscroll','onscroll')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM3 Events", "#event-type-scroll", "onscroll")}}</td>
-   <td>{{Spec2("DOM3 Events")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                    | Status                           | Comentário         |
+| -------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('HTML WHATWG','#handler-onscroll','onscroll')}}     | {{Spec2('HTML WHATWG')}} |                    |
+| {{SpecName("DOM3 Events", "#event-type-scroll", "onscroll")}} | {{Spec2("DOM3 Events")}} | Initial definition |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("api.GlobalEventHandlers.onscroll")}}
 
+## Veja também
 
-<p>{{Compat("api.GlobalEventHandlers.onscroll")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Document/scroll_event">Document: evento <code>scroll</code></a></li>
- <li><a href="/en-US/docs/Web/API/Element/scroll_event">Element: evento <code>scroll</code></a></li>
-</ul>
+- [Document: evento `scroll`](/pt-BR/docs/Web/API/Document/scroll_event)
+- [Element: evento `scroll`](/pt-BR/docs/Web/API/Element/scroll_event)

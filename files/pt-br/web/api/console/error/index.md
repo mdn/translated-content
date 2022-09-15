@@ -3,64 +3,46 @@ title: Console.error()
 slug: Web/API/Console/error
 translation_of: Web/API/Console/error
 ---
-<div>{{APIRef("Console API")}}{{Non-standard_header}}</div>
+{{APIRef("Console API")}}{{Non-standard_header}}
 
-<p>'<em>Escreve</em>' uma mensagem de erro no  Web Console.</p>
+'_Escreve_' uma mensagem de erro no Web Console.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">console.error(<em>obj1</em> [, <em>obj2</em>, ..., <em>objN</em>]);
-console.error(<em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]);
-console.exception(<em>obj1</em> [, <em>obj2</em>, ..., <em>objN</em>]);
-console.exception(<em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]);
-</pre>
+```
+console.error(obj1 [, obj2, ..., objN]);
+console.error(msg [, subst1, ..., substN]);
+console.exception(obj1 [, obj2, ..., objN]);
+console.exception(msg [, subst1, ..., substN]);
+```
 
-<div class="note">
-<p><strong>Nota:</strong> <code>console.exception()</code> é um alias para <code>console.error()</code>; as funcionalidades deles são identicas.</p>
-</div>
+> **Nota:** `console.exception()` é um alias para `console.error()`; as funcionalidades deles são identicas.
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>obj1</code> ... <code>objN</code></dt>
- <dd>Uma lista de objetos Javascript para serem escritos. As representações String de cada um destes objetos é ligada junto na ordem listada e escrita.</dd>
- <dt><code>msg</code></dt>
- <dd>Uma String Javascript contendo zero ou mais Strings de substituição.</dd>
- <dt><code>subst1</code> ... <code>substN</code></dt>
- <dd>Objetos JavaScript o qual substituirão as Strings no <code>msg</code>. Este parâmetro fornece controle adicional sobre o formato de output.</dd>
-</dl>
+- `obj1` ... `objN`
+  - : Uma lista de objetos Javascript para serem escritos. As representações String de cada um destes objetos é ligada junto na ordem listada e escrita.
+- `msg`
+  - : Uma String Javascript contendo zero ou mais Strings de substituição.
+- `subst1` ... `substN`
+  - : Objetos JavaScript o qual substituirão as Strings no `msg`. Este parâmetro fornece controle adicional sobre o formato de output.
 
-<p>Veja <a href="/en-US/docs/Web/API/console#Outputting_text_to_the_console">Outputting text to the console</a> na documentação de {{domxref("console")}} para mais detalhes.</p>
+Veja [Outputting text to the console](/pt-BR/docs/Web/API/console#Outputting_text_to_the_console) na documentação de {{domxref("console")}} para mais detalhes.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#consoleerrorobject--object-", "console.error()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                            | Status                           | Comentário         |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName("Console API", "#consoleerrorobject--object-", "console.error()")}} | {{Spec2("Console API")}} | Initial definition |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.console.error")}}
 
-<h2 id="Ver_também">Ver também</h2>
+## Ver também
 
-<ul>
- <li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
- <li><a href="http://msdn.microsoft.com/library/gg589530">MSDN: Using the F12 Tools Console to View Errors and Status</a></li>
- <li><a href="https://developers.google.com/chrome-developer-tools/docs/console#errors_and_warnings">Chrome Developer Tools: Using the Console</a></li>
-</ul>
+- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
+- [Chrome Developer Tools: Using the Console](https://developers.google.com/chrome-developer-tools/docs/console#errors_and_warnings)

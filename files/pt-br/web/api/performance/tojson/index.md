@@ -3,56 +3,39 @@ title: Performance.toJSON()
 slug: Web/API/Performance/toJSON
 translation_of: Web/API/Performance/toJSON
 ---
-<div>{{APIRef("High Resolution Timing")}}</div>
+{{APIRef("High Resolution Timing")}}
 
-<p>O método <strong><code>toJSON()</code></strong> da interface {{domxref("Performance")}} é um serializador padrão: Ele retorna uma representação em JSON das propriedades do objeto performance.</p>
+O método **`toJSON()`** da interface {{domxref("Performance")}} é um serializador padrão: Ele retorna uma representação em JSON das propriedades do objeto performance.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">minhaPerf = performance.toJSON()
-</pre>
+```
+minhaPerf = performance.toJSON()
+```
 
-<h3 id="Argumentos">Argumentos</h3>
+### Argumentos
 
-<p>Nenhum</p>
+Nenhum
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<dl>
- <dt>minhaPerf</dt>
- <dd>Um objeto JSON que é a serialização do objeto {{domxref("Performance")}}.</dd>
-</dl>
+- minhaPerf
+  - : Um objeto JSON que é a serialização do objeto {{domxref("Performance")}}.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: js">var js;
+```js
+var js;
 js = window.performance.toJSON();
 console.log("json = " + JSON.stringify(js));
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Highres Time Level 2', '#the-performance-interface', 'toJSON() serializer')}}</td>
-   <td>{{Spec2('Highres Time Level 2')}}</td>
-   <td>Define <code>toJson()</code>.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                            | Status                                       | Comment            |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------ |
+| {{SpecName('Highres Time Level 2', '#the-performance-interface', 'toJSON() serializer')}} | {{Spec2('Highres Time Level 2')}} | Define `toJson()`. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
-<div>
-
-
-<p>{{Compat("api.Performance.toJSON")}}</p>
-</div>
-</div>
+{{Compat("api.Performance.toJSON")}}

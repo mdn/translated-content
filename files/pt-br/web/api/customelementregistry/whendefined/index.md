@@ -2,82 +2,61 @@
 title: CustomElementRegistry.whenDefined()
 slug: Web/API/CustomElementRegistry/whenDefined
 tags:
-    - API
-    - CustomElementRegistry
-    - Method
-    - Reference
-    - Web Components
-    - custom elements
-    - whenDefined
+  - API
+  - CustomElementRegistry
+  - Method
+  - Reference
+  - Web Components
+  - custom elements
+  - whenDefined
 browser-compat: api.CustomElementRegistry.whenDefined
 ---
+{{APIRef("CustomElementRegistry")}}
 
-<p>{{APIRef("CustomElementRegistry")}}</p>
+O **`whenDefined()`** é um método de {{domxref("CustomElementRegistry")}} e a interface retorna uma {{jsxref("Promise")}} que é resolvido quando o elemento nomeado é
+definido.
 
-<p>
-    O <code><strong>whenDefined()</strong></code> é um método de {{domxref("CustomElementRegistry")}} e a interface retorna uma {{jsxref("Promise")}} que é resolvido quando o elemento nomeado é
-    definido.
-</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+customElements.whenDefined(name): Promise<CustomElementConstructor>;
+```
 
-<pre class="brush: js">customElements.whenDefined(<em>name</em>): Promise&lt;CustomElementConstructor&gt;;</pre>
+### Parâmetros
 
-<h3 id="Parameters">Parâmetros</h3>
+- name
+  - : Nome do elemento personalizado.
 
-<dl>
-    <dt>name</dt>
-    <dd>Nome do elemento personalizado.</dd>
-</dl>
+### Valor de retorno
 
-<h3 id="Return_value">Valor de retorno</h3>
+A {{jsxref("Promise")}} que será cumprida com o [elemento personalizado](/pt-BR/docs/Web/API/Window/customElements)'s construtor quando um
+[custom element](/pt-BR/docs/Web/API/Window/customElements) torna-se definido com o nome fornecido. (Se o [custom element](/pt-BR/docs/Web/API/Window/customElements) já foi
+definido, a promessa devolvida será imediatamente cumprida.)
 
-<p>
-    A {{jsxref("Promise")}} que será cumprida com o <a href="/en-US/docs/Web/API/Window/customElements">elemento personalizado</a>'s construtor quando um
-    <a href="/en-US/docs/Web/API/Window/customElements">custom element</a> torna-se definido com o nome fornecido. (Se o <a href="/en-US/docs/Web/API/Window/customElements">custom element</a> já foi
-    definido, a promessa devolvida será imediatamente cumprida.)
-</p>
+### Exceções
 
-<h3 id="Exceptions">Exceções</h3>
+| Exceção       | Descrição                                                                                                                                                                                               |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `SyntaxError` | Se o nome fornecido não for um [nome de elemento personalizado válido](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name), a promessa rejeita com um `SyntaxError`. |
 
-<table>
-    <thead>
-        <tr>
-            <th scope="col">Exceção</th>
-            <th scope="col">Descrição</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><code>SyntaxError</code></td>
-            <td>
-                Se o nome fornecido não for um <a href="https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name">nome de elemento personalizado válido</a>, a promessa
-                rejeita com um <code>SyntaxError</code>.
-            </td>
-        </tr>
-    </tbody>
-</table>
+## Exemplos
 
-<h2 id="Examples">Exemplos</h2>
+Este exemplo usa `whenDefined()` para detectar quando os elementos personalizados que compõem um menu são definidos. O menu exibe o conteúdo do espaço reservado até que o conteúdo do
+menu real esteja pronto para ser exibido.
 
-<p>
-    Este exemplo usa <code>whenDefined()</code> para detectar quando os elementos personalizados que compõem um menu são definidos. O menu exibe o conteúdo do espaço reservado até que o conteúdo do
-    menu real esteja pronto para ser exibido.
-</p>
-
-<pre class="brush: html">
-&lt;nav id="menu-container"&gt;
-  &lt;div class="menu-placeholder"&gt;Loading...&lt;/div&gt;
-  &lt;nav-menu&gt;
-    &lt;menu-item&gt;Item 1&lt;/menu-item&gt;
-    &lt;menu-item&gt;Item 2&lt;/menu-item&gt;
+```html
+<nav id="menu-container">
+  <div class="menu-placeholder">Loading...</div>
+  <nav-menu>
+    <menu-item>Item 1</menu-item>
+    <menu-item>Item 2</menu-item>
      ...
-    &lt;menu-item&gt;Item N&lt;/menu-item&gt;
-  &lt;/nav-menu&gt;
-&lt;/nav&gt;
-</pre>
+    <menu-item>Item N</menu-item>
+  </nav-menu>
+</nav>
+```
 
-<pre class="brush: js">
+```js
 const container = document.getElementById('menu-container');
 const placeholder = container.querySelector('.menu-placeholder');
 // Busca todos os filhos do menu que ainda não foram definidos.
@@ -85,7 +64,7 @@ const undefinedElements = container.querySelectorAll(':not(:defined)');
 
 async function removePlaceholder(){
   const promises = [...undefinedElements].map(
-    button =&gt; customElements.whenDefined(button.localName)
+    button => customElements.whenDefined(button.localName)
   );
 
   // Espere que todos os filhos sejam atualizados
@@ -95,12 +74,12 @@ async function removePlaceholder(){
 }
 
 removePlaceholder();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat}}</p>
+{{Compat}}

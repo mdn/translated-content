@@ -6,97 +6,96 @@ tags:
 translation_of: Web/API/IndexedDB_API/Using_IndexedDB
 original_slug: Web/API/IndexedDB_API/Usando_IndexedDB
 ---
-<div class="summary">
-<p>IndexedDB é uma forma de armazenar dados no navegador do usuário. Com ele você pode criar aplicações web com possibilidade de fazer query sem necessidade de conexão, suas aplicações podem funcionar tanto online quanto offline. </p>
-</div>
+IndexedDB é uma forma de armazenar dados no navegador do usuário. Com ele você pode criar aplicações web com possibilidade de fazer query sem necessidade de conexão, suas aplicações podem funcionar tanto online quanto offline.
 
-<h2 id="Sobre_esse_documento">Sobre esse documento</h2>
+## Sobre esse documento
 
-<p>Esse tutorial utiliza a API assíncrona do IndexedDB. Se você não está familiarizado com IndexedDB, você pode ler <a href="/pt-BR/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB">Conceitos básicos sobre IndexedDB</a>.</p>
+Esse tutorial utiliza a API assíncrona do IndexedDB. Se você não está familiarizado com IndexedDB, você pode ler [Conceitos básicos sobre IndexedDB](/pt-BR/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB).
 
-<p>Para a documentação de referência, veja o artigo sobre <a href="/pt-BR/docs/IndexedDB" title="https://developer.mozilla.org/en/IndexedDB">API IndexedDB</a>, pois nele contém os tipos de objetos utilizados no IndexedDB,  como também métodos da API, tanto síncrona como assíncrona. </p>
+Para a documentação de referência, veja o artigo sobre [API IndexedDB](/pt-BR/docs/IndexedDB "https://developer.mozilla.org/en/IndexedDB"), pois nele contém os tipos de objetos utilizados no IndexedDB, como também métodos da API, tanto síncrona como assíncrona.
 
-<h2 id="pattern" name="pattern">Padrão básico</h2>
+## Padrão básico
 
-<p>O IndexedDB encoraja o uso do seguinte padrão:</p>
+O IndexedDB encoraja o uso do seguinte padrão:
 
-<ol>
- <li>Abrir um banco de dados.</li>
- <li>Criar um ObjectStore ao atualizar o banco. </li>
- <li>Iniciar uma transação e e faz um request para fazer alguma operação no banco, como adicionar ou obter dados.</li>
- <li>
-  <div>Esperar a operação ser completada ouvindo algum evento DOM.</div>
- </li>
- <li>
-  <div>Fazer algo com o resultado da query (que pode ser obtida pelo objeto request).</div>
- </li>
-</ol>
+1.  Abrir um banco de dados.
+2.  Criar um ObjectStore ao atualizar o banco.
+3.  Iniciar uma transação e e faz um request para fazer alguma operação no banco, como adicionar ou obter dados.
+4.  Esperar a operação ser completada ouvindo algum evento DOM.
+5.  Fazer algo com o resultado da query (que pode ser obtida pelo objeto request).
 
-<p>OK, então, agora com esses conceitos em mente, nós podemos fazer coisas mais concretas.</p>
+OK, então, agora com esses conceitos em mente, nós podemos fazer coisas mais concretas.
 
-<h2 id="open" name="open">Criando e estruturando o banco</h2>
+## Criando e estruturando o banco
 
-<p>Pelo fato  da especificação ainda estar evoluindo, as implementações do IndexedDB tem prefixos de navegadores. Os navegadores podem ter implementações diferentes da API IndexedDB até a especificação ser consolidada. Mas uma vez que tudo chegar a um consenso, os navegadores tirarão seus prefixos. Atualmente, algumas implementações removeram o prefixo: Internet Explorer 10, Firefox 16, Chrome 24. Quando eles usam prefixo, navegadores baseados no Gecko usam o prefixo <code>moz</code>, enquanto os navegadores baseados no WebKit usam o prefixo <code>webkit</code>.</p>
+Pelo fato da especificação ainda estar evoluindo, as implementações do IndexedDB tem prefixos de navegadores. Os navegadores podem ter implementações diferentes da API IndexedDB até a especificação ser consolidada. Mas uma vez que tudo chegar a um consenso, os navegadores tirarão seus prefixos. Atualmente, algumas implementações removeram o prefixo: Internet Explorer 10, Firefox 16, Chrome 24. Quando eles usam prefixo, navegadores baseados no Gecko usam o prefixo `moz`, enquanto os navegadores baseados no WebKit usam o prefixo `webkit`.
 
-<h3 id="Usando_uma_versão_experimental_do_IndexedDB">Usando uma versão experimental do IndexedDB</h3>
+### Usando uma versão experimental do IndexedDB
 
-<p>Se você quiser testar seu código em navegadores que usam prefixo, você pode usar o código abaixo:  </p>
+Se você quiser testar seu código em navegadores que usam prefixo, você pode usar o código abaixo:
 
-<pre class="brush: js">// Na linha abaixo, você deve incluir os prefixos do navegador que você vai testar.
+```js
+// Na linha abaixo, você deve incluir os prefixos do navegador que você vai testar.
 window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
 // Não use "var indexedDB = ..." se você não está numa function.
 // Posteriormente, você pode precisar de referências de algum objeto window.IDB*:
 window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction;
 window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
-// (Mozilla nunca usou prefixo nesses objetos, então não precisamos window.mozIDB*)</pre>
+// (Mozilla nunca usou prefixo nesses objetos, então não precisamos window.mozIDB*)
+```
 
-<p>Tome cuidado, implementações prefixadas podem estar com bugs ou implementando especificações antigas. Portanto, não é recomendado usar em produção. É preferível não usar IndexedDB em navegadores antigos:</p>
+Tome cuidado, implementações prefixadas podem estar com bugs ou implementando especificações antigas. Portanto, não é recomendado usar em produção. É preferível não usar IndexedDB em navegadores antigos:
 
-<pre class="brush: js">if (!window.indexedDB) {
+```js
+if (!window.indexedDB) {
     window.alert("Seu navegador não suporta uma versão estável do IndexedDB. Alguns recursos não estarão disponíveis.");
 }
-</pre>
+```
 
-<h3 id="Abrindo_um_banco">Abrindo um banco</h3>
+### Abrindo um banco
 
-<p>Começamos todo o processo assim:</p>
+Começamos todo o processo assim:
 
-<pre class="brush: js">// Abrindo o banco de dados
+```js
+// Abrindo o banco de dados
 var request = window.indexedDB.open("DBteste", 3);
-</pre>
+```
 
-<p>Abrir um banco é como qualquer outra operação — Você tem que "requerer (request)".</p>
+Abrir um banco é como qualquer outra operação — Você tem que "requerer (request)".
 
-<p>A requisição de abertura não abre o banco ou inicia a transação. A chamada da função <code>open()</code> retorna um objeto <a href="/en-US/docs/IndexedDB/IDBOpenDBRequest" title="/en-US/docs/IndexedDB/IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a> com o resultado (success) ou um erro que você terá que tratar. Muitas outras funções assíncronas no IndexedDB fazem a mesma coisa - retornam um objeto <a href="/en-US/docs/IndexedDB/IDBRequest" title="/en-US/docs/IndexedDB/IDBRequest"><code style="font-size: 14px; color: rgb(51, 51, 51);">IDBRequest</code></a> com o resultado ou erro. O resultado para a função open é uma instância de <code style="font-size: 14px; color: rgb(51, 51, 51);"><a href="/en-US/docs/IndexedDB/IDBDatabase" title="/en-US/docs/IndexedDB/IDBDatabase">IDBDatabase</a>.</code></p>
+A requisição de abertura não abre o banco ou inicia a transação. A chamada da função `open()` retorna um objeto [`IDBOpenDBRequest`](/pt-BR/docs/IndexedDB/IDBOpenDBRequest) com o resultado (success) ou um erro que você terá que tratar. Muitas outras funções assíncronas no IndexedDB fazem a mesma coisa - retornam um objeto [`IDBRequest`](/pt-BR/docs/IndexedDB/IDBRequest) com o resultado ou erro. O resultado para a função open é uma instância de `IDBDatabase.`
 
-<p>O segundo parâmetro para o método open é a versão do banco. A versão do banco determina seu schema — os registros no banco e sua estrutura. Se o banco não existe ainda, ele é criado pela operação <code>open</code>, então o evento<code> onupgradeneeded </code>é chamado e você cria o schema do banco nesse evento. Se o banco existe mas você está fornecendo um novo número de versão, o evento <code>onupgradeneeded </code>é chamado imediatamente, permitindo você tratar a atualização do schema. Para mais informações sobre isso veja <a href="#Updating_the_version_of_the_database">Updating the version of the database</a>.</p>
+O segundo parâmetro para o método open é a versão do banco. A versão do banco determina seu schema — os registros no banco e sua estrutura. Se o banco não existe ainda, ele é criado pela operação `open`, então o evento` onupgradeneeded `é chamado e você cria o schema do banco nesse evento. Se o banco existe mas você está fornecendo um novo número de versão, o evento `onupgradeneeded `é chamado imediatamente, permitindo você tratar a atualização do schema. Para mais informações sobre isso veja [Updating the version of the database](#Updating_the_version_of_the_database).
 
-<div class="warning">
-<p>O número de versão é um <code>unsigned long long</code>, o que significa que ele pode ver um inteiro muito grande. Isso também significa que você não pode usar float, pois ele será convertido em um inteiro pequeno e a transação pode não acontecer, ou o evento <code>upgradeneeded</code> pode não ser chamado. Então se você usar 2.4 como versão:</p>
+> **Aviso:** O número de versão é um `unsigned long long`, o que significa que ele pode ver um inteiro muito grande. Isso também significa que você não pode usar float, pois ele será convertido em um inteiro pequeno e a transação pode não acontecer, ou o evento `upgradeneeded` pode não ser chamado. Então se você usar 2.4 como versão:
+>
+> ```js
+> var request = indexedDB.open("DBteste", 2.4); // não faça isso, pois a versão será convertida para 2.
+> ```
 
-<pre class="brush: js">var request = indexedDB.open("DBteste", 2.4); // não faça isso, pois a versão será convertida para 2.</pre>
-</div>
+#### Gerenciando handlers
 
-<h4 id="Gerenciando_handlers">Gerenciando handlers</h4>
+A primeira coisa que você vai querer fazer em quase todos os requests é tratar os casos de success e error:
 
-<p>A primeira coisa que você vai querer fazer em quase todos os requests é tratar os casos de success e error:</p>
-
-<pre class="brush: js">request.onerror = function(event) {
+```js
+request.onerror = function(event) {
   // Fazer algo com request.errorCode!
 };
 request.onsuccess = function(event) {
   // Fazer algo com request.result!
-};</pre>
+};
+```
 
-<p>Qual das duas funções, <code>onsuccess()</code> ou <code>onerror()</code>,  será chamada? Se tudo correr bem, o evento de sucesso (que é um evento DOM event com propriedade <code>type</code> setada <code>"success"</code>) é chamado com <code>request</code> como seu <code>target</code>. Uma vez chamado, a função <code>onsuccess()</code> no <code>request</code> é chamada com o evento de sucesso em seu contexto. Por outro lado, se acontecer algum problema, um evento de erro (que é um evento DOM com a propriedade <code>type</code> setada para <code>"error"</code>) é chamado no <code>request</code>. Então a função <code><code>onerror()</code></code>  com o evento erro em seu contexto.</p>
+Qual das duas funções, `onsuccess()` ou `onerror()`, será chamada? Se tudo correr bem, o evento de sucesso (que é um evento DOM event com propriedade `type` setada `"success"`) é chamado com `request` como seu `target`. Uma vez chamado, a função `onsuccess()` no `request` é chamada com o evento de sucesso em seu contexto. Por outro lado, se acontecer algum problema, um evento de erro (que é um evento DOM com a propriedade `type` setada para `"error"`) é chamado no `request`. Então a função `onerror()` com o evento erro em seu contexto.
 
-<p>A API IndexedDB é feita para minimizar a necessidade de manipular erros, então você não fará muitos eventos de erro (ao menos, se você usar a API!) No  caso de abrir um banco, portanto, existe algumas condições comuns para eventos de erro. O problema mais comum é o usuário não dar permissão para criar o banco. Um dos principais objetivos do IndexedDB é permitir muitos dados serem armazenados para uso offline. (Para aprender mais sobre o quanto cada navegador pode armazenar, veja <a href="/en/IndexedDB#Storage_limits" title="https://developer.mozilla.org/en/IndexedDB#Storage_limits">Storage limits</a>).  </p>
+A API IndexedDB é feita para minimizar a necessidade de manipular erros, então você não fará muitos eventos de erro (ao menos, se você usar a API!) No caso de abrir um banco, portanto, existe algumas condições comuns para eventos de erro. O problema mais comum é o usuário não dar permissão para criar o banco. Um dos principais objetivos do IndexedDB é permitir muitos dados serem armazenados para uso offline. (Para aprender mais sobre o quanto cada navegador pode armazenar, veja [Storage limits](/en/IndexedDB#Storage_limits "https://developer.mozilla.org/en/IndexedDB#Storage_limits")).
 
-<p>Obviamente, navegadores não querem armazenar dados que poluem seu computador, então o navegador mostra uma mensagem ao usuário na primeira vez que um aplicativo tenta abrir o IndexedDB. O usuário pode escolher permitir ou negar acesso. O IndexedDB também é desabilitado no modo privado dos navegadores (ctrl+shift+N no Chrome e ctrl+shift+P no Firefox). Isso acontece porque o intuito do modo privado é não deixar rastros na navegação.</p>
+Obviamente, navegadores não querem armazenar dados que poluem seu computador, então o navegador mostra uma mensagem ao usuário na primeira vez que um aplicativo tenta abrir o IndexedDB. O usuário pode escolher permitir ou negar acesso. O IndexedDB também é desabilitado no modo privado dos navegadores (ctrl+shift+N no Chrome e ctrl+shift+P no Firefox). Isso acontece porque o intuito do modo privado é não deixar rastros na navegação.
 
-<p>Agora, assumindo que o usuário aprovou seu request para criar o banco, e você recebeu success; Qual é o próximo passo? O request foi gerado com a chamada de <code>indexedDB.open()</code>, e <code>request.result</code> é uma instância de <code>IDBDatabase</code>, e você definitivamente vai querer armazenar isso para usar depois. Veja abaixo:</p>
+Agora, assumindo que o usuário aprovou seu request para criar o banco, e você recebeu success; Qual é o próximo passo? O request foi gerado com a chamada de `indexedDB.open()`, e `request.result` é uma instância de `IDBDatabase`, e você definitivamente vai querer armazenar isso para usar depois. Veja abaixo:
 
-<pre class="brush: js">var db;
+```js
+var db;
 var request = indexedDB.open("DBteste");
 request.onerror = function(event) {
   alert("Você não habilitou minha web app para usar IndexedDB?!");
@@ -104,90 +103,70 @@ request.onerror = function(event) {
 request.onsuccess = function(event) {
   db = request.result;
 };
-</pre>
+```
 
-<h4 id="Tratando_Erros">Tratando Erros</h4>
+#### Tratando Erros
 
-<p>Como mencionado acima, o evento de erro é chamado quando o request dá erro. Se você quer evitar manipuladores de erro a cada request, você pode adicionar um único manipulador de erro no objeto db, como abaixo:</p>
+Como mencionado acima, o evento de erro é chamado quando o request dá erro. Se você quer evitar manipuladores de erro a cada request, você pode adicionar um único manipulador de erro no objeto db, como abaixo:
 
-<pre class="brush: js">db.onerror = function(event) {
+```js
+db.onerror = function(event) {
   // Função genérica para tratar os erros de todos os requests desse banco!
   alert("Database error: " + event.target.errorCode);
 };
-</pre>
+```
 
-<p>Um dos erros mais comuns ao abrir o banco é <code>VER_ERR</code>. Ele indica que a versão do banco existente é maior que a versão que você quer abrir.</p>
+Um dos erros mais comuns ao abrir o banco é `VER_ERR`. Ele indica que a versão do banco existente é maior que a versão que você quer abrir.
 
-<h3 id="Criando_ou_atualizando_a_versão_do_banco">Criando ou atualizando a versão do banco</h3>
+### Criando ou atualizando a versão do banco
 
-<p><a name="Updating_the_version_of_the_database"></a>Quando você cria um novo banco ou aumenta sua versão, o evento <code style="font-size: 14px; color: rgb(51, 51, 51);">onupgradeneeded</code> será chamado. No manipulador deste evento, você deve criar o objectStore necessário para a versão do banco:</p>
+Quando você cria um novo banco ou aumenta sua versão, o evento `onupgradeneeded` será chamado. No manipulador deste evento, você deve criar o objectStore necessário para a versão do banco:
 
-<pre class="brush:js;">// Este evento é implementado somente em navegadores mais recentes
+```js
+// Este evento é implementado somente em navegadores mais recentes
 request.onupgradeneeded = function(event) {
   var db = event.target.result;
 
   // cria um objectStore para esse banco
   var objectStore = db.createObjectStore("nome", { keyPath: "minhaChave" });
-};</pre>
+};
+```
 
-<p>Neste caso, o banco já terá objectStores de suas versões anteriores, então você não terá que criar esses objectStores de novo. Você somente precisará criar um novo objectStore qualquer, ou deletar objectStores da versão anterior que não serão utilizados. Se você precisa mudar um objectStore existente (mudar o <code>keyPath, por exemplo</code>),  então você precisa deletar o objectStore antigo e criá-lo novamente com as novas opções. (Note que isso irá deletar a informação no objectStore! Se você precisa salvar a informação, você deve ler isso e salvá-lo em algum lugar antes de atualizar o banco.)</p>
+Neste caso, o banco já terá objectStores de suas versões anteriores, então você não terá que criar esses objectStores de novo. Você somente precisará criar um novo objectStore qualquer, ou deletar objectStores da versão anterior que não serão utilizados. Se você precisa mudar um objectStore existente (mudar o `keyPath, por exemplo`), então você precisa deletar o objectStore antigo e criá-lo novamente com as novas opções. (Note que isso irá deletar a informação no objectStore! Se você precisa salvar a informação, você deve ler isso e salvá-lo em algum lugar antes de atualizar o banco.)
 
-<p>Blink/Webkit suporta a versão atual da especificação, nas versões do Chrome 23+ e Opera 17+; IE10+ também suporta. Outros motores e versões antigas não implementam a versão atual da especificação e não suportam a assinatura <code>indexedDB.open(name, version).onupgradeneeded</code> ainda.  Para mais informação sobre como atualizar a versão do banco em Webkit/Blink, veja <a href="/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated" title="https://developer.mozilla.org/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated">IDBDatabase reference article</a>.</p>
+Blink/Webkit suporta a versão atual da especificação, nas versões do Chrome 23+ e Opera 17+; IE10+ também suporta. Outros motores e versões antigas não implementam a versão atual da especificação e não suportam a assinatura `indexedDB.open(name, version).onupgradeneeded` ainda. Para mais informação sobre como atualizar a versão do banco em Webkit/Blink, veja [IDBDatabase reference article](</en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated> "https://developer.mozilla.org/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated").
 
-<h3 id="Estruturando_o_banco">Estruturando o banco</h3>
+### Estruturando o banco
 
-<p>Agora a estrutura do banco. IndexedDB usa "armazens de objetos" em vez de tabelas, e um único banco de dados pode conter qualquer número de "armazem de objetos". Sempre que um valor é armazenado num objectStore, ele é associado a uma chave. Existe várias maneiras diferentes de uma chave ser mostrada, dependendo do que o objectStore usa, um <a href="/en/IndexedDB#gloss_key_path" title="https://developer.mozilla.org/en/IndexedDB#gloss_key_path">key path</a> ou <a href="/en/IndexedDB#gloss_key_generator" title="en/IndexedDB#gloss key generator">key generator</a>.</p>
+Agora a estrutura do banco. IndexedDB usa "armazens de objetos" em vez de tabelas, e um único banco de dados pode conter qualquer número de "armazem de objetos". Sempre que um valor é armazenado num objectStore, ele é associado a uma chave. Existe várias maneiras diferentes de uma chave ser mostrada, dependendo do que o objectStore usa, um [key path](/en/IndexedDB#gloss_key_path "https://developer.mozilla.org/en/IndexedDB#gloss_key_path") ou [key generator](/en/IndexedDB#gloss_key_generator "en/IndexedDB#gloss key generator").
 
-<p>A tabela abaixo mostra as direfentes chaves suportadas:</p>
+A tabela abaixo mostra as direfentes chaves suportadas:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Key Path (<code>keyPath</code>)</th>
-   <th scope="col">Key Generator (<code>autoIncrement</code>)</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>Não</td>
-   <td>Não</td>
-   <td>Este objectStore pode ter qualquer tipo de valor primitivo como número ou string. Você deve suprir uma chave separada sempre que adicionar um novo valor.</td>
-  </tr>
-  <tr>
-   <td>Sim</td>
-   <td>Não</td>
-   <td>Este objectStore pode simplesmente armazenar objetos JavaScript. O objeto deve ter uma propriedade com o mesmo nome do key path.</td>
-  </tr>
-  <tr>
-   <td>Não</td>
-   <td>Sim</td>
-   <td>Este objectStore pode possuir qualquer tipo de valor. A chave é gerada para você, automaticamente, ou você pode suprir uma chave separada, caso utilize uma chave específica.</td>
-  </tr>
-  <tr>
-   <td>Sim</td>
-   <td>Sim</td>
-   <td>Este objectStore suporta somente objetos JavaScript. Normalmente uma chave é gerada e o valor dela é armazenado no objeto em uma propriedade com o mesmo nome da key path. Portanto, se a propriedade já existe, o valor dela será usado como chave, em vez do valor gerado.</td>
-  </tr>
- </tbody>
-</table>
+| Key Path (`keyPath`) | Key Generator (`autoIncrement`) | Description                                                                                                                                                                                                                                                                  |
+| -------------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Não                  | Não                             | Este objectStore pode ter qualquer tipo de valor primitivo como número ou string. Você deve suprir uma chave separada sempre que adicionar um novo valor.                                                                                                                    |
+| Sim                  | Não                             | Este objectStore pode simplesmente armazenar objetos JavaScript. O objeto deve ter uma propriedade com o mesmo nome do key path.                                                                                                                                             |
+| Não                  | Sim                             | Este objectStore pode possuir qualquer tipo de valor. A chave é gerada para você, automaticamente, ou você pode suprir uma chave separada, caso utilize uma chave específica.                                                                                                |
+| Sim                  | Sim                             | Este objectStore suporta somente objetos JavaScript. Normalmente uma chave é gerada e o valor dela é armazenado no objeto em uma propriedade com o mesmo nome da key path. Portanto, se a propriedade já existe, o valor dela será usado como chave, em vez do valor gerado. |
 
-<p>Você também pode criar índices em qualquer objectStore. Um indice deixa você olhar os valores armazenados no objectStore usando o valor de uma propriedade do objectStore, em vez de sua chave.</p>
+Você também pode criar índices em qualquer objectStore. Um indice deixa você olhar os valores armazenados no objectStore usando o valor de uma propriedade do objectStore, em vez de sua chave.
 
-<p>Adicionalmente, indices tem a habilidade de forçar restrições simples nos dados armazenados. Setando uma flag única quando criar o índice, reforça que dois objetos são armazenados contendo o mesmo valor para o key path do índice. Então, por exemplo, se você tem um objeto armazenado que tem um conjunto de pessoas, e você quer ter certeza que ninguém tera o mesmo e-mail, você pode usar um índice com flag única para forçar isso.</p>
+Adicionalmente, indices tem a habilidade de forçar restrições simples nos dados armazenados. Setando uma flag única quando criar o índice, reforça que dois objetos são armazenados contendo o mesmo valor para o key path do índice. Então, por exemplo, se você tem um objeto armazenado que tem um conjunto de pessoas, e você quer ter certeza que ninguém tera o mesmo e-mail, você pode usar um índice com flag única para forçar isso.
 
-<p>Isso soa meio confuso, mas este exemplo pode iluminar o conceito. Primeiro, vamos definir alguns dados a serem usados no exemplo:</p>
+Isso soa meio confuso, mas este exemplo pode iluminar o conceito. Primeiro, vamos definir alguns dados a serem usados no exemplo:
 
-<pre class="brush: js">// Isso é o que os dados de nossos clientes será.
+```js
+// Isso é o que os dados de nossos clientes será.
 const DadosClientes = [
   { ssn: "444-44-4444", nome: "Bill", idade: 35, email: "bill@company.com" },
   { ssn: "555-55-5555", nome: "Donna", idade: 32, email: "donna@home.org" }
 ];
-</pre>
+```
 
-<p>Agora  vamos ver  ccomo criar um IndexedDB para armazenar nossos dados:</p>
+Agora vamos ver ccomo criar um IndexedDB para armazenar nossos dados:
 
-<pre class="brush: js">const dbName = "clientes";
+```js
+const dbName = "clientes";
 
 var request = indexedDB.open(dbName, 2);
 
@@ -219,25 +198,26 @@ request.onupgradeneeded = function(event) {
     }
   }
 };
-</pre>
+```
 
-<p>Como falamos antes, <code>onupgradeneeded</code> é o único lugar onde você pode alterar a estrutura do banco. Nele você pode criar e deletar objectStores e construir ou remover índices.</p>
+Como falamos antes, `onupgradeneeded` é o único lugar onde você pode alterar a estrutura do banco. Nele você pode criar e deletar objectStores e construir ou remover índices.
 
-<div>Armazens de objetos são criados com uma única chamada de <code>createObjectStore()</code>. O método pega o nome do armazem e um objeto parâmetro. Mesmo que o objeto parâmetro seja opcional, ele é muito importante porque ele deixa você definir propriedades importantes e ajustar tipos de dados que você quer criar. No nosso caso, nós obtemos um objectStore chamado "clientes" e definimos um <code>keyPath</code>, que é a propriedade que faz um objeto individual ser único no banco. Essa propriedade, nesse exemplo, é "ssn", que simboliza o cpf (social security number), que é único. O "ssn" deve ser apresentado em cada objeto armazenado no <code>objectStore</code>. </div>
+Armazens de objetos são criados com uma única chamada de `createObjectStore()`. O método pega o nome do armazem e um objeto parâmetro. Mesmo que o objeto parâmetro seja opcional, ele é muito importante porque ele deixa você definir propriedades importantes e ajustar tipos de dados que você quer criar. No nosso caso, nós obtemos um objectStore chamado "clientes" e definimos um `keyPath`, que é a propriedade que faz um objeto individual ser único no banco. Essa propriedade, nesse exemplo, é "ssn", que simboliza o cpf (social security number), que é único. O "ssn" deve ser apresentado em cada objeto armazenado no `objectStore`.
 
-<p>Nós também criamos um índice chamado "nome" ligado à propriedade <code>nome</code>. Assim como o <code>createObjectStore()</code>, o <code>createIndex()</code> tem um parâmetro opcional <code>options</code> que cuida do tipo de índice que você quer criar. Adicionando objetos que não tem a propriedade <code>nome</code> terá sucesso, porém esses objetos não aparecerão no índice "nome".</p>
+Nós também criamos um índice chamado "nome" ligado à propriedade `nome`. Assim como o `createObjectStore()`, o `createIndex()` tem um parâmetro opcional `options` que cuida do tipo de índice que você quer criar. Adicionando objetos que não tem a propriedade `nome` terá sucesso, porém esses objetos não aparecerão no índice "nome".
 
-<p>Nós podemos obter os objetos de clientes armazenados usando os <code>ssn</code> da objectStore diretamente, ou usando os nomes usados no índice. Para aprender como isso é feito, veja a seção <a href="#Using_an_index" title="Using IndexedDB#Using an index">usando um índice</a>.</p>
+Nós podemos obter os objetos de clientes armazenados usando os `ssn` da objectStore diretamente, ou usando os nomes usados no índice. Para aprender como isso é feito, veja a seção [usando um índice](#Using_an_index "Using IndexedDB#Using an index").
 
-<h3 id="Usando_um_key_generator">Usando um key generator</h3>
+### Usando um key generator
 
-<p>Setando uma flag <code>autoIncrement </code>ao criar o objectStore habilitará o key generator. Por padrão ele não é setado.</p>
+Setando uma flag `autoIncrement `ao criar o objectStore habilitará o key generator. Por padrão ele não é setado.
 
-<p>Com o key generator, a chave será gerada automaticamente quando você adicionar algum valor no objectStore. O atual número do key generator é sempre setado 1 quando a primeira key generator do objectStore é criada. Basicamente a próxima chave recebe o incremento de 1. O número atual da key generator nunca decresce,  a não ser se alguma operação do banco for revertida, como numa transação abortada, por exemplo. No entanto, deletar um registro ou limpar todos os registros nunca afeta o key generator dos objectStores.</p>
+Com o key generator, a chave será gerada automaticamente quando você adicionar algum valor no objectStore. O atual número do key generator é sempre setado 1 quando a primeira key generator do objectStore é criada. Basicamente a próxima chave recebe o incremento de 1. O número atual da key generator nunca decresce, a não ser se alguma operação do banco for revertida, como numa transação abortada, por exemplo. No entanto, deletar um registro ou limpar todos os registros nunca afeta o key generator dos objectStores.
 
-<p>Nós podemos criar outro objectStore com o key generator como abaixo:</p>
+Nós podemos criar outro objectStore com o key generator como abaixo:
 
-<pre class="brush: js">// Abrindo o indexedDB.
+```js
+// Abrindo o indexedDB.
 var request = indexedDB.open(dbName, 3);
 
 request.onupgradeneeded = function (event) {
@@ -249,48 +229,50 @@ request.onupgradeneeded = function (event) {
 
     // Porque "names" tem o the key generator, a chave para o nome é gerada automaticamente.
     // Os registros adicionados serão assim:
-    // key : 1 =&gt; value : "Bill"
-    // key : 2 =&gt; value : "Donna"
+    // key : 1 => value : "Bill"
+    // key : 2 => value : "Donna"
     for (var i in DadosClientes) {
         objStore.add(DadosClientes[i].nome);
     }
-}</pre>
+}
+```
 
-<p>Para mais detalhes veja <a href="http://www.w3.org/TR/IndexedDB/#key-generator-concept">"W3C Key Generators"</a>.</p>
+Para mais detalhes veja ["W3C Key Generators"](http://www.w3.org/TR/IndexedDB/#key-generator-concept).
 
-<h2 id="Adicionando_obtendo_e_removendo_dados">Adicionando, obtendo e removendo dados</h2>
+## Adicionando, obtendo e removendo dados
 
-<p>Antes de fazer qualquer coisa em um novo banco, você precisa iniciar uma transação. Transações estão no objeto database, e você tem que especificar qual objectStore você quer na transaction. Uma vez que você está dentro da transação, você pode acessar os objectStores  com seus dados e fazer os requests. Depois, você precisa decidir se você vai fazer mudanças no banco ou se você simplesmente quer ler esses dados. Transações tem três modos disponíveis: <code>readonly</code>, <code>readwrite</code>, and <code>versionchange</code>.</p>
+Antes de fazer qualquer coisa em um novo banco, você precisa iniciar uma transação. Transações estão no objeto database, e você tem que especificar qual objectStore você quer na transaction. Uma vez que você está dentro da transação, você pode acessar os objectStores com seus dados e fazer os requests. Depois, você precisa decidir se você vai fazer mudanças no banco ou se você simplesmente quer ler esses dados. Transações tem três modos disponíveis: `readonly`, `readwrite`, and `versionchange`.
 
-<p>Para mudar o "schema" ou estrutura do banco — o que envolve criar ou deletar objectStores ou índices — a transação deve ser em modo <code>versionchange</code>. Esta transação é aberta chamando o método {{domxref("IDBFactory.open")}} especificando a  <code>version.</code> (Em navegadores com WebKit que não tem a ultima especificação implementada, o método {{domxref("IDBFactory.open")}} tem apenas um parâmetro, o <code>nome</code> do banco; então você deve chamar {{domxref("IDBVersionChangeRequest.setVersion")}} para estabelecer uma transação <code>versionchange</code>.)</p>
+Para mudar o "schema" ou estrutura do banco — o que envolve criar ou deletar objectStores ou índices — a transação deve ser em modo `versionchange`. Esta transação é aberta chamando o método {{domxref("IDBFactory.open")}} especificando a `version.` (Em navegadores com WebKit que não tem a ultima especificação implementada, o método {{domxref("IDBFactory.open")}} tem apenas um parâmetro, o `nome` do banco; então você deve chamar {{domxref("IDBVersionChangeRequest.setVersion")}} para estabelecer uma transação `versionchange`.)
 
-<p>Para ler os registros de um objectStore existente, a transação pode ser tanto<code> readonly</code> quanto <code>readwrite</code>. Para fazer mudanças em um objectStore existente, a transação deve ser em modo <code>readwrite</code>. Você abre essas transações usando {{domxref("IDBDatabase.transaction")}}. O método aceita dois parâmetros: o <code>storeNames</code> (o escopo, definido como um array de objectStores que você quer acessar) e o <code>modo</code> (<code>readonly</code> or <code>readwrite</code>) da transação. O método retorna o objeto detransação contendo o método {{domxref("IDBIndex.objectStore")}}, que você pode usar para acessar seu objectStore. Por padrão, quando nenhum modo é especificado, a transação é aberta no modo <code>readonly</code>.</p>
+Para ler os registros de um objectStore existente, a transação pode ser tanto` readonly` quanto `readwrite`. Para fazer mudanças em um objectStore existente, a transação deve ser em modo `readwrite`. Você abre essas transações usando {{domxref("IDBDatabase.transaction")}}. O método aceita dois parâmetros: o `storeNames` (o escopo, definido como um array de objectStores que você quer acessar) e o `modo` (`readonly` or `readwrite`) da transação. O método retorna o objeto detransação contendo o método {{domxref("IDBIndex.objectStore")}}, que você pode usar para acessar seu objectStore. Por padrão, quando nenhum modo é especificado, a transação é aberta no modo `readonly`.
 
-<p>Você pode deixar o acesso aos dados mais rápido usando o escopo correto e o modo correto de transação. Aqui vai algumas dicas:</p>
+Você pode deixar o acesso aos dados mais rápido usando o escopo correto e o modo correto de transação. Aqui vai algumas dicas:
 
-<ul>
- <li>Quando definir o escopo, especifique apenas os objectStores que você precisa. Desse jeito você pode rodar multiplas transações sem que uma sobreponha a outra.</li>
- <li>Somente especifique uma transação  <code>readwrite</code> quando necessário. Você pode rodar várias transações <code>readonly</code> com escopos sobreposts, mas você pode ter somente uma transação <code>readwrite</code> por objectStore. Para aprender mais sobre <dfn><a href="/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#Database">transactions</a></dfn> veja <a href="/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB">Basic Concepts</a>.</li>
-</ul>
+- Quando definir o escopo, especifique apenas os objectStores que você precisa. Desse jeito você pode rodar multiplas transações sem que uma sobreponha a outra.
+- Somente especifique uma transação `readwrite` quando necessário. Você pode rodar várias transações `readonly` com escopos sobreposts, mas você pode ter somente uma transação `readwrite` por objectStore. Para aprender mais sobre _[transactions](/pt-BR/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#Database)_ veja [Basic Concepts](/pt-BR/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB).
 
-<h3 id="Adicionando_dados_no_banco">Adicionando dados no banco</h3>
+### Adicionando dados no banco
 
-<p>Se você acabou de criar o banco, então você provavelmente quer escrever algo nele. Veja abaixo:</p>
+Se você acabou de criar o banco, então você provavelmente quer escrever algo nele. Veja abaixo:
 
-<pre class="brush:js;">var transaction = db.transaction(["clientes"], "readwrite");
+```js
+var transaction = db.transaction(["clientes"], "readwrite");
 // Nota: Implementações mais antigas usam uma versão IDBTransaction.READ_WRITE antiga em vez de "readwrite".
 // Então, para suportar versões antigas, escreva:
-// var transaction = db.transaction(["clientes"], IDBTransaction.READ_WRITE);</pre>
+// var transaction = db.transaction(["clientes"], IDBTransaction.READ_WRITE);
+```
 
-<p>A função <code>transaction()</code> tem dois argumentos (opcionais) e retorna um objeto de transação. O primeiro argumento é uma lista de objectStores que serão trabalhados na transação. Você pode passar um array vazio se você quer uma transação com todos os objectStores, mas não faça isso pois a especificação diz que um array vazio pode gerar um erro InvalidAccessError. Se você não especificar nada no segundo parâmetro, você tem uma transação read-only. Se você quer escrever no banco, use <code>"readwrite"</code>.</p>
+A função `transaction()` tem dois argumentos (opcionais) e retorna um objeto de transação. O primeiro argumento é uma lista de objectStores que serão trabalhados na transação. Você pode passar um array vazio se você quer uma transação com todos os objectStores, mas não faça isso pois a especificação diz que um array vazio pode gerar um erro InvalidAccessError. Se você não especificar nada no segundo parâmetro, você tem uma transação read-only. Se você quer escrever no banco, use `"readwrite"`.
 
-<p>Agora que você tem uma transação, você precisa entender seu tempo de uso. Transações são amarradas a um evento. Se você faz uma transação fora de um evento, ela ficará inativa. A única maneira de manter uma transação ativa é fazer um request nela. Quando o request acabar você terá a oportunidade de extender a transação durante o callback. Se você tentar extender uma transação dentro de um evento, então ela tornará inativa. Se existir requests pendentes, a transação continua ativa. O tempo de vida de uma transação é realmente simples mas deve ser usada em um curto espaço de tempo. Outros exemplos poderão ajudá-lo. Se você começar a ver<code> TRANSACTION_INACTIVE_ERR</code> error então você está fazendo algo errado.</p>
+Agora que você tem uma transação, você precisa entender seu tempo de uso. Transações são amarradas a um evento. Se você faz uma transação fora de um evento, ela ficará inativa. A única maneira de manter uma transação ativa é fazer um request nela. Quando o request acabar você terá a oportunidade de extender a transação durante o callback. Se você tentar extender uma transação dentro de um evento, então ela tornará inativa. Se existir requests pendentes, a transação continua ativa. O tempo de vida de uma transação é realmente simples mas deve ser usada em um curto espaço de tempo. Outros exemplos poderão ajudá-lo. Se você começar a ver` TRANSACTION_INACTIVE_ERR` error então você está fazendo algo errado.
 
-<p>Transações podem receber eventos DOM de três tipos diferentes: <code>error</code>, <code>abort</code>, e <code>complete</code>. Nós falamos sobre o <code>error</code>, ou seja, a transação recebe um error sempre que o request gerar erro. Um ponto mais sutil é que o comportamento padrão de um erro é abortar a transação na qual ele estava. A menos que você manipule o erro chamando <code>preventDefault()</code> e fazendo algo depois, a transaçaõ inteira será desfeita. Este design força você a pensar sobre manipulação de erros, mas você pode sempre adicionar um manipulador de todos os erros se a manipulação separada estiver complicada. Se você não tratar o erro ou chamar <code>abort()</code> na transação, então a transação é desfeita (roll back) e o evento <code>abort</code> é chamado. Por outro lado, depois de todo request completado, você tem um evento <code>complete</code>. Se você fazer várias operações no banco, então seguir as operações de transações pode ser um caminho a seguir.</p>
+Transações podem receber eventos DOM de três tipos diferentes: `error`, `abort`, e `complete`. Nós falamos sobre o `error`, ou seja, a transação recebe um error sempre que o request gerar erro. Um ponto mais sutil é que o comportamento padrão de um erro é abortar a transação na qual ele estava. A menos que você manipule o erro chamando `preventDefault()` e fazendo algo depois, a transaçaõ inteira será desfeita. Este design força você a pensar sobre manipulação de erros, mas você pode sempre adicionar um manipulador de todos os erros se a manipulação separada estiver complicada. Se você não tratar o erro ou chamar `abort()` na transação, então a transação é desfeita (roll back) e o evento `abort` é chamado. Por outro lado, depois de todo request completado, você tem um evento `complete`. Se você fazer várias operações no banco, então seguir as operações de transações pode ser um caminho a seguir.
 
-<p>Agora que você tem uma transação, você precisará obter um objectStore dela. Transações somente deixam você obter um objectStore citado na transação. Então você pode adicionar os dados que precisa.</p>
+Agora que você tem uma transação, você precisará obter um objectStore dela. Transações somente deixam você obter um objectStore citado na transação. Então você pode adicionar os dados que precisa.
 
-<pre class="brush: js">// Faz algo após a inserção dos dados.
+```js
+// Faz algo após a inserção dos dados.
 transaction.oncomplete = function(event) {
   alert("Pronto!");
 };
@@ -305,26 +287,30 @@ for (var i in DadosClientes) {
   request.onsuccess = function(event) {
     // event.target.result == DadosClientes[i].ssn;
   };
-}</pre>
+}
+```
 
-<p>O <code>result</code> de um request gerado de uma chamada de <code>add()</code> é a chave do valor  que foi adicionado. Então neste caso, ele deve ser igual ao valor do <code>ssn</code> do objeto que foi adicionado, desde que o objeto use o <code>ssn</code> como key path. Note que a função <code>add()</code> não deixa nenhum objeto ser adicionado com a mesma chave. Se você está tentando modificar um registro existente, você deve usar o <code>put()</code>, como explica a seção  <a href="#updating_an_entry_in_the_database">Updating an entry in the database</a>.</p>
+O `result` de um request gerado de uma chamada de `add()` é a chave do valor que foi adicionado. Então neste caso, ele deve ser igual ao valor do `ssn` do objeto que foi adicionado, desde que o objeto use o `ssn` como key path. Note que a função `add()` não deixa nenhum objeto ser adicionado com a mesma chave. Se você está tentando modificar um registro existente, você deve usar o `put()`, como explica a seção [Updating an entry in the database](#updating_an_entry_in_the_database).
 
-<h3 id="Removendo_dados_do_banco">Removendo dados do banco</h3>
+### Removendo dados do banco
 
-<p>Para remoção o código é parecido:</p>
+Para remoção o código é parecido:
 
-<pre class="brush: js">var request = db.transaction(["clientes"], "readwrite")
+```js
+var request = db.transaction(["clientes"], "readwrite")
                 .objectStore("clientes")
                 .delete("444-44-4444");
 request.onsuccess = function(event) {
   // Pronto!
-};</pre>
+};
+```
 
-<h3 id="Obtendo_dados_do_banco">Obtendo dados do banco</h3>
+### Obtendo dados do banco
 
-<p>Agora que o banco tem algumas informações nele, você pode obtê-las de diferentes maneiras. Primeiro, um <code>get()</code> simples. Você precisa informar a chave do valor a ser obtido:</p>
+Agora que o banco tem algumas informações nele, você pode obtê-las de diferentes maneiras. Primeiro, um `get()` simples. Você precisa informar a chave do valor a ser obtido:
 
-<pre class="brush: js">var transaction = db.transaction(["clientes"]);
+```js
+var transaction = db.transaction(["clientes"]);
 var objectStore = transaction.objectStore("clientes");
 var request = objectStore.get("444-44-4444");
 request.onerror = function(event) {
@@ -333,34 +319,30 @@ request.onerror = function(event) {
 request.onsuccess = function(event) {
   // Fazer algo com request.result!
   alert("O nome do SSN 444-44-4444 é " + request.result.name);
-};</pre>
+};
+```
 
-<p>Veja agora de maneira resumida:</p>
+Veja agora de maneira resumida:
 
-<pre class="brush: js">db.transaction("clientes").objectStore("clientes").get("444-44-4444").onsuccess = function(event) {
+```js
+db.transaction("clientes").objectStore("clientes").get("444-44-4444").onsuccess = function(event) {
   alert("O nome do SSN 444-44-4444 é " + request.result.name);
-};</pre>
+};
+```
 
-<p>Viu como funciona? Desde que exista um objectStore, você pode evitar passar uma lista de objectStores que precisa na transação e passar apenas o nome como string. Você também pode ler do banco, apenas, então não precisará de uma transação <code>"readwrite".</code> Chamando <code>transaction()</code> com nenhum modo especificado, você terá uma transação <code>"readonly"</code>. Outra consideração é que você não necessita salvar o request em uma variável. Desde que o evento DOM tenha o target que você precisará para obter a propriedade <code>result</code>.</p>
+Viu como funciona? Desde que exista um objectStore, você pode evitar passar uma lista de objectStores que precisa na transação e passar apenas o nome como string. Você também pode ler do banco, apenas, então não precisará de uma transação `"readwrite".` Chamando `transaction()` com nenhum modo especificado, você terá uma transação `"readonly"`. Outra consideração é que você não necessita salvar o request em uma variável. Desde que o evento DOM tenha o target que você precisará para obter a propriedade `result`.
 
-<div class="note">
-<p><strong>Note</strong>: Você pode deixar o acesso aos dados mais rápido limitando o escopo e o modo de transação. Veja algumas dicas:</p>
+> **Nota:** Você pode deixar o acesso aos dados mais rápido limitando o escopo e o modo de transação. Veja algumas dicas:
+>
+> - Quando definir o [escopo](#scope), especifique somente os objectStores que vai precisar. Assim você pode rodar multiplas transações sem sopreposições.
+> - Utilize uma transação `readwrite` somente quando necessário. Você pode rodar várias transações `readonly` simultâneas, mas apenas uma transação `readwrite` por objectStore. Para aprender mais sobre isso veja o artigo [_transactions_ in the Basic Concepts](/pt-BR/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction).
 
-<ul>
- <li>
-  <p>Quando definir o <a href="#scope">escopo</a>, especifique somente os objectStores que vai precisar. Assim você pode rodar multiplas transações sem sopreposições.</p>
- </li>
- <li>
-  <p>Utilize uma transação <code>readwrite</code>  somente quando necessário. Você pode rodar várias transações <code>readonly</code> simultâneas, mas apenas uma transação <code>readwrite</code> por objectStore. Para aprender mais sobre isso veja o artigo <a href="/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction"><dfn>transactions</dfn> in the Basic Concepts</a>.</p>
- </li>
-</ul>
-</div>
+### Atualizando um registro no banco
 
-<h3 id="Atualizando_um_registro_no_banco">Atualizando um registro no banco</h3>
+Agora que obtemos algum dado, atualizá-ls é inserí-los novamente no IndexedDB é bem simples. Vamos atualizar o exemplo anterior:
 
-<p>Agora que obtemos algum dado, atualizá-ls é inserí-los novamente no IndexedDB é bem simples. Vamos atualizar o exemplo anterior:</p>
-
-<pre class="brush: js">var objectStore = db.transaction(["clientes"], "readwrite").objectStore("clientes");
+```js
+var objectStore = db.transaction(["clientes"], "readwrite").objectStore("clientes");
 var request = objectStore.get("444-44-4444");
 request.onerror = function(event) {
   // Tratar erro
@@ -380,19 +362,19 @@ request.onsuccess = function(event) {
    requestUpdate.onsuccess = function(event) {
      // Sucesso na atualização \o/
    };
-};</pre>
+};
+```
 
-<p>Criamos uma <code>objectStore</code> e obtemos um cliente dele, identificado pelo ssn (<code>444-44-4444</code>). Nós atualizamos o objeto, passando-o como parâmetro de um método put de outro request (<code>requestUpdate</code>) sobrescrevendo o valor antigo.</p>
+Criamos uma `objectStore` e obtemos um cliente dele, identificado pelo ssn (`444-44-4444`). Nós atualizamos o objeto, passando-o como parâmetro de um método put de outro request (`requestUpdate`) sobrescrevendo o valor antigo.
 
-<div class="note">
-<p><strong>Note</strong> que neste caso nós temos que especificar a transação <code>readwrite</code> porque nós queremos escrever no banco, não somente ler os dados dele.</p>
-</div>
+> **Nota:** que neste caso nós temos que especificar a transação `readwrite` porque nós queremos escrever no banco, não somente ler os dados dele.
 
-<h3 id="Usando_um_cursor">Usando um cursor</h3>
+### Usando um cursor
 
-<p>Ao usar o método <code>get()</code> você precisa saber a chave do objeto que deseja obter. Se você quer passear entre todos os valores do seu objectStore, então você pode usar um cursor. Veja:</p>
+Ao usar o método `get()` você precisa saber a chave do objeto que deseja obter. Se você quer passear entre todos os valores do seu objectStore, então você pode usar um cursor. Veja:
 
-<pre class="brush: js">var objectStore = db.transaction("cliente").objectStore("cliente");
+```js
+var objectStore = db.transaction("cliente").objectStore("cliente");
 
 objectStore.openCursor().onsuccess = function(event) {
   var cursor = event.target.result;
@@ -403,13 +385,15 @@ objectStore.openCursor().onsuccess = function(event) {
   else {
     alert("Não existe mais registros!");
   }
-};</pre>
+};
+```
 
-<p><code>A função openCursor()</code> tem vários argumentos. Primeiro, você pode limitar o número de itens obtidos usando uma chave que veremos logo abaixo. Segundo, você pode especificar a direção que deseja iterar. No exemplo acima, nós estamos iterando em todos os objetos em ordem ascendente. O callback de sucesso para cursor é um pouco especial. O objeto cursor já é o <code>result</code> do request (acima nós usamos <code>event.target.result</code>). Então a chave atual e o valor pode ser encontrado na propriedade <code>key</code> e <code>value</code> do objeto cursor. Se você quer manter adiante, então você usa o método <code>continue()</code>. Quando você chegar ao fim dos dados (ou se não existem registros encontrados no <code>openCursor()</code>) você ainda tem um callback de sucesso, mas a propriedade <code>result</code> fica <code>undefined</code>.</p>
+`A função openCursor()` tem vários argumentos. Primeiro, você pode limitar o número de itens obtidos usando uma chave que veremos logo abaixo. Segundo, você pode especificar a direção que deseja iterar. No exemplo acima, nós estamos iterando em todos os objetos em ordem ascendente. O callback de sucesso para cursor é um pouco especial. O objeto cursor já é o `result` do request (acima nós usamos `event.target.result`). Então a chave atual e o valor pode ser encontrado na propriedade `key` e `value` do objeto cursor. Se você quer manter adiante, então você usa o método `continue()`. Quando você chegar ao fim dos dados (ou se não existem registros encontrados no `openCursor()`) você ainda tem um callback de sucesso, mas a propriedade `result` fica `undefined`.
 
-<p>Um padrão comum para cursores é obter todos os objetos em um objectStore e adicioná-los a um array como este:</p>
+Um padrão comum para cursores é obter todos os objetos em um objectStore e adicioná-los a um array como este:
 
-<pre class="brush: js">var clientes = [];
+```js
+var clientes = [];
 
 objectStore.openCursor().onsuccess = function(event) {
   var cursor = event.target.result;
@@ -420,32 +404,36 @@ objectStore.openCursor().onsuccess = function(event) {
   else {
     alert("Todos os clientes: " + clientes);
   }
-};</pre>
+};
+```
 
-<div class="note">
-<p>Note: Mozilla também implementou o método <code>getAll()</code> para ser usado nesse caso (e <code>getAllKeys()</code>, que está atualmente dentro da preferência do <code>dom.indexedDB.experimental</code> em about:config). Estes métodos não são parte do padrão IndexedDB, então eles podem desaparecer no futuro. Nós adicionamos porque achamos útil. O código abaixo faz o mesmo que o código acima:</p>
+> **Nota:** Note: Mozilla também implementou o método `getAll()` para ser usado nesse caso (e `getAllKeys()`, que está atualmente dentro da preferência do `dom.indexedDB.experimental` em about:config). Estes métodos não são parte do padrão IndexedDB, então eles podem desaparecer no futuro. Nós adicionamos porque achamos útil. O código abaixo faz o mesmo que o código acima:
+>
+> ```js
+> objectStore.getAll().onsuccess = function(event) {
+>   alert("Todos os clientes: " + event.target.result);
+> };
+> ```
+>
+> Existe um custo de performance associado com a propriedade `value` do cursor, porque o objeto é criado de forma lenta. Quando você usa `getAll()` por exemplo, Gecko deve criar todos os objetos de uma vez. Se você está somente interessado em cada chave, é muito melhor usar o cursor do que usar o `getAll()`. Se você está tentando obter um array de todos os objetos, então é melhor usar o `getAll()`.
 
-<pre class="brush: js">objectStore.getAll().onsuccess = function(event) {
-  alert("Todos os clientes: " + event.target.result);
-};</pre>
+### Usando um índice
 
-<p>Existe um custo de performance associado com a propriedade <code>value</code> do cursor, porque o objeto é criado de forma lenta. Quando você usa <code>getAll()</code> por exemplo, Gecko deve criar todos os objetos de uma vez. Se você está somente interessado em cada chave, é muito melhor usar o cursor do que usar o <code>getAll()</code>. Se você está tentando obter um array de todos os objetos, então é melhor usar o <code>getAll()</code>.</p>
-</div>
+Armazenar dados de um cliente usando o SSN como chave é lógico pois o SSN identifica o cliente de forma única. Se você precisa obter um cliente pelo seu nome, portanto, você precisará iterar todos os registros no banco e comparar os nomes até achar o que você procura. Buscar dessa maneira é algo lento, então criamos um índice.
 
-<h3 id="Usando_um_índice">Usando um índice</h3>
-
-<p>Armazenar dados de um cliente usando o SSN como chave é lógico pois o SSN identifica o cliente de forma única. Se você precisa obter um cliente pelo seu nome, portanto, você precisará iterar todos os registros no banco e comparar os nomes até achar o que você procura. Buscar dessa maneira é algo lento, então criamos um índice.</p>
-
-<pre class="brush: js">var index = objectStore.index("nome");
+```js
+var index = objectStore.index("nome");
 index.get("John").onsuccess = function(event) {
   alert("O SSN de John é " + event.target.result.ssn);
-};</pre>
+};
+```
 
-<p>O cursor "nome" não é único, então pode existir mais de um registro com o <code>nome</code> igual a <code>"John"</code>. Neste caso você sempre obtem o registro com a chave de menor valor.</p>
+O cursor "nome" não é único, então pode existir mais de um registro com o `nome` igual a `"John"`. Neste caso você sempre obtem o registro com a chave de menor valor.
 
-<p>Se você precisa acessar todos os registros retornados, você pode usar um cursor. Você pode abrir dois tipos de cursores. Um cursor normal mapeia o índice ao objeto na objectStore. Uma cursor-chave mapeia o a propriedade índice à chave usada para armazenar o objeto. As diferenças são ilustradas abaixo:</p>
+Se você precisa acessar todos os registros retornados, você pode usar um cursor. Você pode abrir dois tipos de cursores. Um cursor normal mapeia o índice ao objeto na objectStore. Uma cursor-chave mapeia o a propriedade índice à chave usada para armazenar o objeto. As diferenças são ilustradas abaixo:
 
-<pre class="brush: js">// Usando um cursor normal para obter todos os objetos
+```js
+// Usando um cursor normal para obter todos os objetos
 index.openCursor().onsuccess = function(event) {
   var cursor = event.target.result;
   if (cursor) {
@@ -464,13 +452,15 @@ index.openKeyCursor().onsuccess = function(event) {
     alert("Nome: " + cursor.key + ", SSN: " + cursor.value);
     cursor.continue();
   }
-};</pre>
+};
+```
 
-<h3 id="Especificando_o_número_e_a_direção_dos_cursores">Especificando o número e a direção dos cursores</h3>
+### Especificando o número e a direção dos cursores
 
-<p>Se você gostaria de limitar o número de valores retornados pelo cursor, você pode usar um objeto <code>IDBKeyRange</code> e passar isso como o primeiro argumento ao <code>openCursor()</code> ou <code>openKeyCursor()</code>. Você pode fazer um key range que permite um único valor, ou valores acima ou abaixo do especificado. O limite pode ser fechado (o key range inclui os valores dados) ou aberto (o key range não inclue os valores dados). Veja como funciona:</p>
+Se você gostaria de limitar o número de valores retornados pelo cursor, você pode usar um objeto `IDBKeyRange` e passar isso como o primeiro argumento ao `openCursor()` ou `openKeyCursor()`. Você pode fazer um key range que permite um único valor, ou valores acima ou abaixo do especificado. O limite pode ser fechado (o key range inclui os valores dados) ou aberto (o key range não inclue os valores dados). Veja como funciona:
 
-<pre class="brush: js">// Somente se for igual "Donna"
+```js
+// Somente se for igual "Donna"
 var singleKeyRange = IDBKeyRange.only("Donna");
 
 // Combinações menores que "Bill", incluindo "Bill"
@@ -492,45 +482,53 @@ index.openCursor(boundKeyRange).onsuccess = function(event) {
     // Faz algo com o que encontrar
     cursor.continue();
   }
-};</pre>
+};
+```
 
-<p>As vezes você pode querer iterar em ordem decrescente, em vez de crescente, alterando o segundo parâmetro de <code>openCursor()</code>:</p>
+As vezes você pode querer iterar em ordem decrescente, em vez de crescente, alterando o segundo parâmetro de `openCursor()`:
 
-<pre class="brush: js">objectStore.openCursor(boundKeyRange, "prev").onsuccess = function(event) {
+```js
+objectStore.openCursor(boundKeyRange, "prev").onsuccess = function(event) {
   var cursor = event.target.result;
   if (cursor) {
     // Prev indica ordem decrescente
     cursor.continue();
   }
-};</pre>
+};
+```
 
-<p>Se você apenas quer especificar a ordem sem key range, é só passar null no primeiro parâmetro:</p>
+Se você apenas quer especificar a ordem sem key range, é só passar null no primeiro parâmetro:
 
-<pre class="brush: js">objectStore.openCursor(null, "prev").onsuccess = function(event) {
+```js
+objectStore.openCursor(null, "prev").onsuccess = function(event) {
   var cursor = event.target.result;
   if (cursor) {
     // Faça algo com os resultados.
     cursor.continue();
   }
-};</pre>
+};
+```
 
-<p>Uma vez que o índice "nome" não é único, pode existir várias entradas onde o <code>nome</code> é o mesmo. Isso não acontece com objectStores porque a chave deve ser sempre única. Se você deseja filtrar valores duplicados numa iteração do cursor, você pode passar <code>nextunique</code> (ou <code>prevunique</code> se quiser decrescer) como parâmetro de direção. Quando <code>nextunique</code> ou <code>prevunique</code> é usado, o registro com menor chave é retornado.</p>
+Uma vez que o índice "nome" não é único, pode existir várias entradas onde o `nome` é o mesmo. Isso não acontece com objectStores porque a chave deve ser sempre única. Se você deseja filtrar valores duplicados numa iteração do cursor, você pode passar `nextunique` (ou `prevunique` se quiser decrescer) como parâmetro de direção. Quando `nextunique` ou `prevunique` é usado, o registro com menor chave é retornado.
 
-<pre class="brush: js">index.openKeyCursor(null, "nextunique").onsuccess = function(event) {
+```js
+index.openKeyCursor(null, "nextunique").onsuccess = function(event) {
   var cursor = event.target.result;
   if (cursor) {
     // Faça algo com os registros.
     cursor.continue();
   }
-};</pre>
+};
+```
 
-<p>Veja "<a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor?redirectlocale=en-US&amp;redirectslug=IndexedDB%2FIDBCursor#Constants">IDBCursor Constants</a>" para parâmetros válidos.</p>
+Veja "[IDBCursor Constants](/pt-BR/docs/Web/API/IDBCursor?redirectlocale=en-US&redirectslug=IndexedDB%2FIDBCursor#Constants)" para parâmetros válidos.
 
-<h2 id="Mudança_de_versão_quando_a_web_app_está_aberta_em_outra_aba.">Mudança de versão quando a web app está aberta em outra aba.</h2>
+## Mudança de versão quando a web app está aberta em outra aba.
 
-<p>Quando sua web app muda a versão você precisa considerar o que vai acontecer se o usuário está na versão antiga em uma aba, e carrega a versão nova na outra. Quando você chamar o <code>open()</code> com a versão mais nova, um evento <code>onblocked</code>  é chamado até que a aba da versão antiga seja fechada ou recarregada. Veja abaixo:</p>
+Quando sua web app muda a versão você precisa considerar o que vai acontecer se o usuário está na versão antiga em uma aba, e carrega a versão nova na outra. Quando você chamar o `open()` com a versão mais nova, um evento `onblocked` é chamado até que a aba da versão antiga seja fechada ou recarregada. Veja abaixo:
 
-<pre class="brush: js">var openReq = mozIndexedDB.open("DBteste", 2);
+```js
+var openReq = mozIndexedDB.open("DBteste", 2);
 
 openReq.onblocked = function(event) {
   // Se existe outra aba com a versão antiga
@@ -560,164 +558,166 @@ function useDatabase(db) {
 
   // Fazer algo com os bancos
 }
-</pre>
+```
 
-<h2 id="Segurança">Segurança</h2>
+## Segurança
 
-<p>IndexedDB usa o princípio de mesma origem, o que significa que o banco só será acessado pelo site que o criou.</p>
+IndexedDB usa o princípio de mesma origem, o que significa que o banco só será acessado pelo site que o criou.
 
-<p>É importante notar que o IndexedDB não funciona para conteúdo carregado em um frame de outro site (seja {{ HTMLElement("frame") }} ou {{ HTMLElement("iframe") }}. Esta é uma política de segurança e privacidade análoga ao bloqueio de cookies de terceiros. Para mais detalhes, veja {{ bug(595307) }}.</p>
+É importante notar que o IndexedDB não funciona para conteúdo carregado em um frame de outro site (seja {{ HTMLElement("frame") }} ou {{ HTMLElement("iframe") }}. Esta é uma política de segurança e privacidade análoga ao bloqueio de cookies de terceiros. Para mais detalhes, veja {{ bug(595307) }}.
 
-<h2 id="Alerta_sobre_fechar_o_navegador">Alerta sobre fechar o navegador</h2>
+## Alerta sobre fechar o navegador
 
-<p>Quando o navegador é fechado, qualquer transação pendente no IndexedDB será abortada (silenciosamente) — ele não vai completar, nem chamar o evento de erro.  Uma vez que o usuário pode sair do navegador, em qualquer momento, isto significa que você não pode confiar em qualquer transação específica para completar ou para saber que ela não foi concluída. Existem várias implicações nesse comportamento.</p>
+Quando o navegador é fechado, qualquer transação pendente no IndexedDB será abortada (silenciosamente) — ele não vai completar, nem chamar o evento de erro. Uma vez que o usuário pode sair do navegador, em qualquer momento, isto significa que você não pode confiar em qualquer transação específica para completar ou para saber que ela não foi concluída. Existem várias implicações nesse comportamento.
 
-<p>Primeiro, você deve ter o cuidado de sempre deixar seu banco de dados em um estado consistente, no final de cada transação. Por exemplo, suponha que você está usando IndexedDB para armazenar uma lista de itens que permitem ao usuário editar. Você salvar a lista após a edição, limpando o armazenamento de objetos e, em seguida, escrever a nova lista. Se você limpar o armazenamento de objetos em uma transação e escrever a nova lista em outra transação, há um perigo de que o navegador irá fechar após a limpeza de dados e antes da gravação, deixando-o com um banco de dados vazio. Para evitar isso, você deve combinar tanto a limpeza quanto a gravação em uma única transação.</p>
+Primeiro, você deve ter o cuidado de sempre deixar seu banco de dados em um estado consistente, no final de cada transação. Por exemplo, suponha que você está usando IndexedDB para armazenar uma lista de itens que permitem ao usuário editar. Você salvar a lista após a edição, limpando o armazenamento de objetos e, em seguida, escrever a nova lista. Se você limpar o armazenamento de objetos em uma transação e escrever a nova lista em outra transação, há um perigo de que o navegador irá fechar após a limpeza de dados e antes da gravação, deixando-o com um banco de dados vazio. Para evitar isso, você deve combinar tanto a limpeza quanto a gravação em uma única transação.
 
-<p>Em segundo lugar, você nunca deve amarrar as operações de banco de dados ao evento unload. Se o evento unload é acionado pelo fechamento do navegador, todas as transações criadas no unload nunca serão concluídas. Uma abordagem intuitiva para manter algumas informações em sessões do navegador é lê-la a partir do banco de dados quando o navegador (ou uma determinada página) é aberta, atualizá-la assim que o usuário interagir com o navegador, e depois salvá-lo para o banco de dados quando o navegador (ou página) será fechada. No entanto, isso não vai funcionar. As transações de banco de dados será criado no unload, mas como elas são assíncronas, serão abortadas antes que eles possam executar.</p>
+Em segundo lugar, você nunca deve amarrar as operações de banco de dados ao evento unload. Se o evento unload é acionado pelo fechamento do navegador, todas as transações criadas no unload nunca serão concluídas. Uma abordagem intuitiva para manter algumas informações em sessões do navegador é lê-la a partir do banco de dados quando o navegador (ou uma determinada página) é aberta, atualizá-la assim que o usuário interagir com o navegador, e depois salvá-lo para o banco de dados quando o navegador (ou página) será fechada. No entanto, isso não vai funcionar. As transações de banco de dados será criado no unload, mas como elas são assíncronas, serão abortadas antes que eles possam executar.
 
-<p>De fato, não existe uma maneira de garantir que as transações no IndexedDBserão completadas, mesmo com o fechamento padrão do navegador. Ver {{ bug(870645) }}.</p>
+De fato, não existe uma maneira de garantir que as transações no IndexedDBserão completadas, mesmo com o fechamento padrão do navegador. Ver {{ bug(870645) }}.
 
-<h2 id="Full_IndexedDB_example" name="Full_IndexedDB_example">Exemplo de IndexedDB</h2>
+## Exemplo de IndexedDB
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"&gt;&lt;/script&gt;
+```html
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
-    &lt;h1&gt;IndexedDB Demo: storing blobs, e-publication example&lt;/h1&gt;
-    &lt;div class="note"&gt;
-      &lt;p&gt;
+    <h1>IndexedDB Demo: storing blobs, e-publication example</h1>
+    <div class="note">
+      <p>
         Works and tested with:
-      &lt;/p&gt;
-      &lt;div id="compat"&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
+      </p>
+      <div id="compat">
+      </div>
+    </div>
 
-    &lt;div id="msg"&gt;
-    &lt;/div&gt;
+    <div id="msg">
+    </div>
 
-    &lt;form id="register-form"&gt;
-      &lt;table&gt;
-        &lt;tbody&gt;
-          &lt;tr&gt;
-            &lt;td&gt;
-              &lt;label for="pub-title" class="required"&gt;
+    <form id="register-form">
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <label for="pub-title" class="required">
                 Title:
-              &lt;/label&gt;
-            &lt;/td&gt;
-            &lt;td&gt;
-              &lt;input type="text" id="pub-title" name="pub-title" /&gt;
-            &lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td&gt;
-              &lt;label for="pub-biblioid" class="required"&gt;
-                Bibliographic ID:&lt;br/&gt;
-                &lt;span class="note"&gt;(ISBN, ISSN, etc.)&lt;/span&gt;
-              &lt;/label&gt;
-            &lt;/td&gt;
-            &lt;td&gt;
-              &lt;input type="text" id="pub-biblioid" name="pub-biblioid"/&gt;
-            &lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td&gt;
-              &lt;label for="pub-year"&gt;
+              </label>
+            </td>
+            <td>
+              <input type="text" id="pub-title" name="pub-title" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="pub-biblioid" class="required">
+                Bibliographic ID:<br/>
+                <span class="note">(ISBN, ISSN, etc.)</span>
+              </label>
+            </td>
+            <td>
+              <input type="text" id="pub-biblioid" name="pub-biblioid"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="pub-year">
                 Year:
-              &lt;/label&gt;
-            &lt;/td&gt;
-            &lt;td&gt;
-              &lt;input type="number" id="pub-year" name="pub-year" /&gt;
-            &lt;/td&gt;
-          &lt;/tr&gt;
-        &lt;/tbody&gt;
-        &lt;tbody&gt;
-          &lt;tr&gt;
-            &lt;td&gt;
-              &lt;label for="pub-file"&gt;
+              </label>
+            </td>
+            <td>
+              <input type="number" id="pub-year" name="pub-year" />
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td>
+              <label for="pub-file">
                 File image:
-              &lt;/label&gt;
-            &lt;/td&gt;
-            &lt;td&gt;
-              &lt;input type="file" id="pub-file"/&gt;
-            &lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td&gt;
-              &lt;label for="pub-file-url"&gt;
-                Online-file image URL:&lt;br/&gt;
-                &lt;span class="note"&gt;(same origin URL)&lt;/span&gt;
-              &lt;/label&gt;
-            &lt;/td&gt;
-            &lt;td&gt;
-              &lt;input type="text" id="pub-file-url" name="pub-file-url"/&gt;
-            &lt;/td&gt;
-          &lt;/tr&gt;
-        &lt;/tbody&gt;
-      &lt;/table&gt;
+              </label>
+            </td>
+            <td>
+              <input type="file" id="pub-file"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="pub-file-url">
+                Online-file image URL:<br/>
+                <span class="note">(same origin URL)</span>
+              </label>
+            </td>
+            <td>
+              <input type="text" id="pub-file-url" name="pub-file-url"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
-      &lt;div class="button-pane"&gt;
-        &lt;input type="button" id="add-button" value="Add Publication" /&gt;
-        &lt;input type="reset" id="register-form-reset"/&gt;
-      &lt;/div&gt;
-    &lt;/form&gt;
+      <div class="button-pane">
+        <input type="button" id="add-button" value="Add Publication" />
+        <input type="reset" id="register-form-reset"/>
+      </div>
+    </form>
 
-    &lt;form id="delete-form"&gt;
-      &lt;table&gt;
-        &lt;tbody&gt;
-          &lt;tr&gt;
-            &lt;td&gt;
-              &lt;label for="pub-biblioid-to-delete"&gt;
-                Bibliographic ID:&lt;br/&gt;
-                &lt;span class="note"&gt;(ISBN, ISSN, etc.)&lt;/span&gt;
-              &lt;/label&gt;
-            &lt;/td&gt;
-            &lt;td&gt;
-              &lt;input type="text" id="pub-biblioid-to-delete"
-                     name="pub-biblioid-to-delete" /&gt;
-            &lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td&gt;
-              &lt;label for="key-to-delete"&gt;
-                Key:&lt;br/&gt;
-                &lt;span class="note"&gt;(for example 1, 2, 3, etc.)&lt;/span&gt;
-              &lt;/label&gt;
-            &lt;/td&gt;
-            &lt;td&gt;
-              &lt;input type="text" id="key-to-delete"
-                     name="key-to-delete" /&gt;
-            &lt;/td&gt;
-          &lt;/tr&gt;
-        &lt;/tbody&gt;
-      &lt;/table&gt;
-      &lt;div class="button-pane"&gt;
-        &lt;input type="button" id="delete-button" value="Delete Publication" /&gt;
-        &lt;input type="button" id="clear-store-button"
-               value="Clear the whole store" class="destructive" /&gt;
-      &lt;/div&gt;
-    &lt;/form&gt;
+    <form id="delete-form">
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <label for="pub-biblioid-to-delete">
+                Bibliographic ID:<br/>
+                <span class="note">(ISBN, ISSN, etc.)</span>
+              </label>
+            </td>
+            <td>
+              <input type="text" id="pub-biblioid-to-delete"
+                     name="pub-biblioid-to-delete" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="key-to-delete">
+                Key:<br/>
+                <span class="note">(for example 1, 2, 3, etc.)</span>
+              </label>
+            </td>
+            <td>
+              <input type="text" id="key-to-delete"
+                     name="key-to-delete" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="button-pane">
+        <input type="button" id="delete-button" value="Delete Publication" />
+        <input type="button" id="clear-store-button"
+               value="Clear the whole store" class="destructive" />
+      </div>
+    </form>
 
-    &lt;form id="search-form"&gt;
-      &lt;div class="button-pane"&gt;
-        &lt;input type="button" id="search-list-button"
-               value="List database content" /&gt;
-      &lt;/div&gt;
-    &lt;/form&gt;
+    <form id="search-form">
+      <div class="button-pane">
+        <input type="button" id="search-list-button"
+               value="List database content" />
+      </div>
+    </form>
 
-    &lt;div&gt;
-      &lt;div id="pub-msg"&gt;
-      &lt;/div&gt;
-      &lt;div id="pub-viewer"&gt;
-      &lt;/div&gt;
-      &lt;ul id="pub-list"&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-</pre>
+    <div>
+      <div id="pub-msg">
+      </div>
+      <div id="pub-viewer">
+      </div>
+      <ul id="pub-list">
+      </ul>
+    </div>
+```
 
-<h3 id="CSS_Content">CSS Content</h3>
+### CSS Content
 
-<pre class="brush: css">body {
+```css
+body {
   font-size: 0.8em;
   font-family: Sans-Serif;
 }
@@ -802,23 +802,22 @@ input {
 .destructive:active {
   background-color: red;
 }
-</pre>
+```
 
-<p> </p>
+### JavaScript Content
 
-<h3 id="JavaScript_Content">JavaScript Content</h3>
-
-<pre class="brush: js">(function () {
+```js
+(function () {
   var COMPAT_ENVS = [
-    ['Firefox', "&gt;= 16.0"],
+    ['Firefox', ">= 16.0"],
     ['Google Chrome',
-     "&gt;= 24.0 (you may need to get Google Chrome Canary), NO Blob storage support"]
+     ">= 24.0 (you may need to get Google Chrome Canary), NO Blob storage support"]
   ];
   var compat = $('#compat');
   compat.empty();
-  compat.append('&lt;ul id="compat-list"&gt;&lt;/ul&gt;');
+  compat.append('<ul id="compat-list"></ul>');
   COMPAT_ENVS.forEach(function(val, idx, array) {
-    $('#compat-list').append('&lt;li&gt;' + val[0] + ': ' + val[1] + '&lt;/li&gt;');
+    $('#compat-list').append('<li>' + val[0] + ': ' + val[1] + '</li>');
   });
 
   const DB_NAME = 'mdn-demo-indexeddb-epublications';
@@ -909,8 +908,8 @@ input {
     // Thus the count text below will be displayed before the actual pub list
     // (not that it is algorithmically important in this case).
     req.onsuccess = function(evt) {
-      pub_msg.append('&lt;p&gt;There are &lt;strong&gt;' + evt.target.result +
-                     '&lt;/strong&gt; record(s) in the object store.&lt;/p&gt;');
+      pub_msg.append('<p>There are <strong>' + evt.target.result +
+                     '</strong> record(s) in the object store.</p>');
     };
     req.onerror = function(evt) {
       console.error("add error", this.error);
@@ -928,17 +927,17 @@ input {
         req = store.get(cursor.key);
         req.onsuccess = function (evt) {
           var value = evt.target.result;
-          var list_item = $('&lt;li&gt;' +
+          var list_item = $('<li>' +
                             '[' + cursor.key + '] ' +
                             '(biblioid: ' + value.biblioid + ') ' +
                             value.title +
-                            '&lt;/li&gt;');
+                            '</li>');
           if (value.year != null)
             list_item.append(' - ' + value.year);
 
-          if (value.hasOwnProperty('blob') &amp;&amp;
+          if (value.hasOwnProperty('blob') &&
               typeof value.blob != 'undefined') {
-            var link = $('&lt;a href="' + cursor.key + '"&gt;File&lt;/a&gt;');
+            var link = $('<a href="' + cursor.key + '">File</a>');
             link.on('click', function() { return false; });
             link.on('mouseenter', function(evt) {
                       setInViewer(evt.target.getAttribute('href')); });
@@ -964,7 +963,7 @@ input {
   function newViewerFrame() {
     var viewer = $('#pub-viewer');
     viewer.empty();
-    var iframe = $('&lt;iframe /&gt;');
+    var iframe = $('<iframe />');
     viewer.append(iframe);
     return iframe;
   }
@@ -996,7 +995,7 @@ input {
       } else if (blob.type.indexOf('image/') == 0) {
         iframe.load(function() {
           var img_id = 'image-' + key;
-          var img = $('&lt;img id="' + img_id + '"/&gt;');
+          var img = $('<img id="' + img_id + '"/>');
           $(this).contents().find('body').html(img);
           var obj_url = window.URL.createObjectURL(blob);
           $(this).contents().find('#' + img_id).attr('src', obj_url);
@@ -1166,11 +1165,11 @@ input {
 
   function displayActionSuccess(msg) {
     msg = typeof msg != 'undefined' ? "Success: " + msg : "Success";
-    $('#msg').html('&lt;span class="action-success"&gt;' + msg + '&lt;/span&gt;');
+    $('#msg').html('<span class="action-success">' + msg + '</span>');
   }
   function displayActionFailure(msg) {
     msg = typeof msg != 'undefined' ? "Failure: " + msg : "Failure";
-    $('#msg').html('&lt;span class="action-failure"&gt;' + msg + '&lt;/span&gt;');
+    $('#msg').html('<span class="action-failure">' + msg + '</span>');
   }
   function resetActionStatus() {
     console.log("resetActionStatus ...");
@@ -1256,27 +1255,23 @@ input {
   addEventListeners();
 
 })(); // Immediately-Invoked Function Expression (IIFE)
-</pre>
+```
 
-<p>{{ LiveSampleLink('Full_IndexedDB_example', "Test the online live demo") }}</p>
+{{ LiveSampleLink('Full_IndexedDB_example', "Test the online live demo") }}
 
-<h2 id="Ver_também">Ver também</h2>
+## Ver também
 
-<p>Uma leitura adicional para você encontrar mais informações.</p>
+Uma leitura adicional para você encontrar mais informações.
 
-<h3 id="Refências">Refências</h3>
+### Refências
 
-<ul>
- <li><a href="/en/IndexedDB" title="https://developer.mozilla.org/en/IndexedDB">IndexedDB API Reference</a></li>
- <li><a class="external" href="http://www.w3.org/TR/IndexedDB/">Indexed Database API Specification</a></li>
- <li><a href="/en-US/docs/IndexedDB/Using_IndexedDB_in_chrome" title="/en-US/docs/IndexedDB/Using_IndexedDB_in_chrome">Using IndexedDB in chrome</a></li>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_JavaScript_Generators_in_Firefox">Using JavaScript generators in Firefox</a></li>
- <li>IndexedDB <a class="link-https" href="https://mxr.mozilla.org/mozilla-central/find?text=&amp;string=dom%2FindexedDB%2F.*%5C.idl&amp;regexp=1" title="https://mxr.mozilla.org/mozilla-central/find?text=&amp;string=dom/indexedDB/.*\.idl&amp;regexp=1">interface files</a> in the Firefox source code</li>
-</ul>
+- [IndexedDB API Reference](/en/IndexedDB "https://developer.mozilla.org/en/IndexedDB")
+- [Indexed Database API Specification](http://www.w3.org/TR/IndexedDB/)
+- [Using IndexedDB in chrome](/pt-BR/docs/IndexedDB/Using_IndexedDB_in_chrome)
+- [Using JavaScript generators in Firefox](/pt-BR/docs/Web/API/IndexedDB_API/Using_JavaScript_Generators_in_Firefox)
+- IndexedDB [interface files](https://mxr.mozilla.org/mozilla-central/find?text=&string=dom%2FindexedDB%2F.*%5C.idl&regexp=1 "https://mxr.mozilla.org/mozilla-central/find?text=&string=dom/indexedDB/.*\\.idl®exp=1") in the Firefox source code
 
-<h3 id="Guias_e_tutoriais">Guias e tutoriais</h3>
+### Guias e tutoriais
 
-<ul>
- <li><a href="http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/">Databinding UI Elements with IndexedDB</a></li>
- <li><a class="external" href="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx">IndexedDB — The Store in Your Browser</a></li>
-</ul>
+- [Databinding UI Elements with IndexedDB](http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/)
+- [IndexedDB — The Store in Your Browser](http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx)

@@ -3,45 +3,43 @@ title: Element.closest()
 slug: Web/API/Element/closest
 translation_of: Web/API/Element/closest
 ---
-<div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
-<p>O método <code><strong>Element.closest()</strong></code> retorna o ancestral mais próximo, em relação ao elemento atual, que possui o seletor fornecido como parâmetro. No caso de o elemento atual possuir o seletor, o mesmo é retornado.  Caso não exista um ancestral o método retorna <code>null</code>.</p>
+O método **`Element.closest()`** retorna o ancestral mais próximo, em relação ao elemento atual, que possui o seletor fornecido como parâmetro. No caso de o elemento atual possuir o seletor, o mesmo é retornado. Caso não exista um ancestral o método retorna `null`.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var <em>elt =</em><em> element</em>.closest(<em>selectors</em>);
-</pre>
+```
+var elt = element.closest(selectors);
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<ul>
- <li><em>selectors</em> é um {{domxref("DOMString")}} contendo uma lista de seletores, por exemplo <code>"p:hover, .toto + q"</code></li>
- <li><em>element</em> é um {{domxref("Element")}} posicionado no início da árvore de elementos a ser percorrida.</li>
-</ul>
+- _selectors_ é um {{domxref("DOMString")}} contendo uma lista de seletores, por exemplo `"p:hover, .toto + q"`
+- _element_ é um {{domxref("Element")}} posicionado no início da árvore de elementos a ser percorrida.
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<ul>
- <li><em>elt</em> é um {{domxref("Element")}} selecionado como ancestral mais próximo  do elemento pelo qual se iniciou a pesquisa. O valor retornado pode ser <code>null</code>.</li>
-</ul>
+- _elt_ é um {{domxref("Element")}} selecionado como ancestral mais próximo do elemento pelo qual se iniciou a pesquisa. O valor retornado pode ser `null`.
 
-<h3 id="Exceções">Exceções</h3>
+### Exceções
 
-<ul>
- <li><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError"><code>SyntaxError</code></a> é lançada caso o parâmetro <code>selectors</code> não seja uma string válida contendo uma lista de seletores.</li>
-</ul>
+- [`SyntaxError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) é lançada caso o parâmetro `selectors` não seja uma string válida contendo uma lista de seletores.
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: html">&lt;article&gt;
-  &lt;div id="div-01"&gt;Esta é a div-01
-    &lt;div id="div-02"&gt;Esta é a div-02
-      &lt;div id="div-03"&gt;Esta é a div-03&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/article&gt;</pre>
+```html
+<article>
+  <div id="div-01">Esta é a div-01
+    <div id="div-02">Esta é a div-02
+      <div id="div-03">Esta é a div-03</div>
+    </div>
+  </div>
+</article>
+```
 
-<pre class="brush: js">var el = document.getElementById('div-03');
+```js
+var el = document.getElementById('div-03');
 
 var r1 = el.closest("#div-02");
 // retorna o elemento com id=div-02
@@ -49,18 +47,19 @@ var r1 = el.closest("#div-02");
 var r2 = el.closest("div div");
 // retorna o ancestral mais próximo que é uma div dentro de uma div, nesse caso div-03 é retornada
 
-var r3 = el.closest("article &gt; div");
+var r3 = el.closest("article > div");
 // retorna o ancestral mais próximo que é uma div e tem um article como elemento pai, nesse caso div-01 é retornada
 
 var r4 = el.closest(":not(div)");
 // retorna o ancestral mais próximo que não é uma div, neste caso article é retornado
-</pre>
+```
 
-<h2 id="Polyfill" name="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Para navegadores que não suportam <code>Element.closest()</code>, mas possuem suporte para <code>element.matches()</code> (ou um prefixo equivalente, ou seja IE9+), o seguinte polyfill pode ser usado: </p>
+Para navegadores que não suportam `Element.closest()`, mas possuem suporte para `element.matches()` (ou um prefixo equivalente, ou seja IE9+), o seguinte polyfill pode ser usado:
 
-<pre class="brush: js">if (!Element.prototype.matches)
+```js
+if (!Element.prototype.matches)
     Element.prototype.matches = Element.prototype.msMatchesSelector ||
                                 Element.prototype.webkitMatchesSelector;
 
@@ -74,11 +73,12 @@ if (!Element.prototype.closest)
         } while (el !== null);
         return null;
     };
-</pre>
+```
 
-<p>Contudo, se você de fato precisa dar suporte ao IE 8, você pode usar o polyfill abaixo, o qual é lento mas eficaz. Além disso, ele só garante suporte a seletores CSS 2.1 no IE 8 e ainda pode causar picos de lentidão em websites em produção.</p>
+Contudo, se você de fato precisa dar suporte ao IE 8, você pode usar o polyfill abaixo, o qual é lento mas eficaz. Além disso, ele só garante suporte a seletores CSS 2.1 no IE 8 e ainda pode causar picos de lentidão em websites em produção.
 
-<pre class="brush: js">if (window.Element &amp;&amp; !Element.prototype.closest) {
+```js
+if (window.Element && !Element.prototype.closest) {
     Element.prototype.closest =
     function(s) {
         var matches = (this.document || this.ownerDocument).querySelectorAll(s),
@@ -86,38 +86,25 @@ if (!Element.prototype.closest)
             el = this;
         do {
             i = matches.length;
-            while (--i &gt;= 0 &amp;&amp; matches.item(i) !== el) {};
-        } while ((i &lt; 0) &amp;&amp; (el = el.parentElement));
+            while (--i >= 0 && matches.item(i) !== el) {};
+        } while ((i < 0) && (el = el.parentElement));
         return el;
     };
 }
-</pre>
+```
 
-<h2 id="Specification" name="Specification">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-element-closest', 'Element.closest()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                    | Status                           | Comentário         |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
+| {{SpecName('DOM WHATWG', '#dom-element-closest', 'Element.closest()')}} | {{Spec2('DOM WHATWG')}} | Definição inicial. |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade em navegadores</h2>
+## Compatibilidade em navegadores
 
-<div>{{Compat("api.Element.closest")}}</div>
+{{Compat("api.Element.closest")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>A interface {{domxref("Element")}}.</li>
- <li>A sintaxe em Seletores</li>
- <li>Outros métodos que aceitam seletores: {{domxref("element.querySelector()")}} e {{domxref("element.matches()")}}.</li>
-</ul>
+- A interface {{domxref("Element")}}.
+- A sintaxe em Seletores
+- Outros métodos que aceitam seletores: {{domxref("element.querySelector()")}} e {{domxref("element.matches()")}}.

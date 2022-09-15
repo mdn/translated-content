@@ -3,54 +3,43 @@ title: Document.head
 slug: Web/API/Document/head
 translation_of: Web/API/Document/head
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>Retorna o elemento {{HTMLElement("head")}} do documento atual. Se existir mais de um elemento <code>&lt;head&gt;</code>, apenas o primeiro será devolvido.</p>
+Retorna o elemento {{HTMLElement("head")}} do documento atual. Se existir mais de um elemento `<head>`, apenas o primeiro será devolvido.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><em>var objRef</em> = document.head;
-</pre>
+```
+var objRef = document.head;
+```
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: js">// No HTML: &lt;head id="my-document-head"&gt;
+```js
+// No HTML: <head id="my-document-head">
 var aHead = document.head;
 
 alert(aHead.id); // "my-document-head";
 
 alert( document.head === document.querySelector("head") ); // true
-</pre>
+```
 
-<h2 id="Example" name="Example">Notas</h2>
+## Notas
 
-<p><code>document.head</code> suporta apenas leitura. Qualquer tentativa de atribuir um valor a essa propriedade irá falhar silenciosamente ou irá, usando o modo <a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode">ECMAScript Strict</a> de um browser Gecko, disparar um <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError"><code>TypeError</code></a>.</p>
+`document.head` suporta apenas leitura. Qualquer tentativa de atribuir um valor a essa propriedade irá falhar silenciosamente ou irá, usando o modo [ECMAScript Strict](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode) de um browser Gecko, disparar um [`TypeError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "dom.html#dom-tree-accessors", "document.head")}}</td>
-   <td>{{Spec2("HTML5 W3C")}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                    | Status                       | Comentário        |
+| ------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------- |
+| {{SpecName("HTML5 W3C", "dom.html#dom-tree-accessors", "document.head")}} | {{Spec2("HTML5 W3C")}} | Definição inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Document.head")}}
 
-<h2 id="sect1"> </h2>
+##
 
-<h2 id="Veja_Também">Veja Também</h2>
+## Veja Também
 
-<ul>
- <li>{{domxref("document.body")}}</li>
-</ul>
+- {{domxref("document.body")}}

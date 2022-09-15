@@ -9,66 +9,66 @@ tags:
   - Referencia
 translation_of: Web/API/CanvasRenderingContext2D/fillStyle
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>A propriedade <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.fillStyle</code></strong> da API do Canvas 2D especifica a cor ou o estilo para usar regiões internas. O valor inicial é <code>#000</code> (preto).</p>
+A propriedade **`CanvasRenderingContext2D`\*\***`.fillStyle`\*\* da API do Canvas 2D especifica a cor ou o estilo para usar regiões internas. O valor inicial é `#000` (preto).
 
-<p>Veja também o capítulo <a href="https://developer.mozilla.org/pt-BR/docs/Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors">Aplicando estilos e cores</a> no <a href="https://developer.mozilla.org/pt-BR/docs/Web/Guide/HTML/Canvas_tutorial">Canvas Tutorial</a>.</p>
+Veja também o capítulo [Aplicando estilos e cores](/pt-BR/docs/Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors) no [Canvas Tutorial](/pt-BR/docs/Web/Guide/HTML/Canvas_tutorial).
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><var><em>ctx</em>.fillStyle = color;
-</var><var><em>ctx</em>.fillStyle = gradient;
-</var><var><em>ctx</em>.fillStyle = pattern;</var>
-</pre>
+```
+ctx.fillStyle = color;
+ctx.fillStyle = gradient;
+ctx.fillStyle = pattern;
+```
 
-<h3 id="Opções">Opções</h3>
+### Opções
 
-<dl>
- <dt><code>color</code></dt>
- <dd>Um {{domxref("DOMString")}} passado como um valor de CSS {{cssxref("&lt;color&gt;")}}.</dd>
- <dt><code>gradient</code></dt>
- <dd>Um objeto {{domxref("CanvasGradient")}} (um gradiente linear ou radial).</dd>
- <dt><code>pattern</code></dt>
- <dd>Um objeto {{domxref("CanvasPattern")}} (uma imagem repetitiva).</dd>
-</dl>
+- `color`
+  - : Um {{domxref("DOMString")}} passado como um valor de CSS {{cssxref("&lt;color&gt;")}}.
+- `gradient`
+  - : Um objeto {{domxref("CanvasGradient")}} (um gradiente linear ou radial).
+- `pattern`
+  - : Um objeto {{domxref("CanvasPattern")}} (uma imagem repetitiva).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_the_fillStyle_property" name="Using_the_fillStyle_property">Usando a propriedade <code>fillStyle</code> para definir uma cor diferente</h3>
+### Usando a propriedade `fillStyle` para definir uma cor diferente
 
-<p>Isto é apenas um trecho de código simples usando a propriedade <code>fillStyle</code> para definir uma cor diferente.</p>
+Isto é apenas um trecho de código simples usando a propriedade `fillStyle` para definir uma cor diferente.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 ctx.fillStyle = 'blue';
 ctx.fillRect(10, 10, 100, 100);
-</pre>
+```
 
-<p>Edite o código abaixo e veja as alterações atualizadas na tela:</p>
+Edite o código abaixo e veja as alterações atualizadas na tela:
 
-<div class="hidden">
-<h6 id="Playable_code" name="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.fillStyle = 'blue';
-ctx.fillRect(10, 10, 100, 100);&lt;/textarea&gt;
-</pre>
+ctx.fillRect(10, 10, 100, 100);</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js hidden
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
@@ -91,71 +91,56 @@ edit.addEventListener('click', function() {
 
 textarea.addEventListener('input', drawCanvas);
 window.addEventListener('load', drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h3 id="Um_exemplo_de_fillStyle_com_laços_for">Um exemplo de <code>fillStyle</code> com laços <code>for</code></h3>
+### Um exemplo de `fillStyle` com laços `for`
 
-<p>Neste exemplo, nós usamos dois laços <code>for</code> para desenhar uma grade de retângulos, cada um com uma cor diferente. A imagem resultante deve parecer algo como uma captura de tela. Não há nada de espetacular acontecendo aqui. Usamos as duas variáveis <code>i</code> é <code>j</code> para gerar uma cor RGB exclusiva para cada quadrado, e apenas modificamos os valores vermelho e verde. O canal azul tem um valor fixo. Ao modificar os canais, você pode gerar todos os tipos de paletas. Ao aumentar os valores, você pode conseguir algo que pareça com as paletas de cores que o Photoshop usa.</p>
+Neste exemplo, nós usamos dois laços `for` para desenhar uma grade de retângulos, cada um com uma cor diferente. A imagem resultante deve parecer algo como uma captura de tela. Não há nada de espetacular acontecendo aqui. Usamos as duas variáveis `i` é `j` para gerar uma cor RGB exclusiva para cada quadrado, e apenas modificamos os valores vermelho e verde. O canal azul tem um valor fixo. Ao modificar os canais, você pode gerar todos os tipos de paletas. Ao aumentar os valores, você pode conseguir algo que pareça com as paletas de cores que o Photoshop usa.
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
-</div>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js">var ctx = document.getElementById('canvas').getContext('2d');
-for (var i = 0; i &lt; 6; i++){
-  for (var j = 0; j &lt; 6; j++){
+```js
+var ctx = document.getElementById('canvas').getContext('2d');
+for (var i = 0; i < 6; i++){
+  for (var j = 0; j < 6; j++){
     ctx.fillStyle = 'rgb(' + Math.floor(255 - 42.5 * i) + ',' +
                      Math.floor(255 - 42.5 * j) + ',0)';
     ctx.fillRect(j * 25, i * 25, 25, 25);
   }
 }
-</pre>
+```
 
-<p>O resultado fica assim:</p>
+O resultado fica assim:
 
-<p>{{EmbedLiveSample("Um_exemplo_de_fillStyle_com_laços_for", 160, 160, "https://mdn.mozillademos.org/files/5417/Canvas_fillstyle.png")}}</p>
+{{EmbedLiveSample("Um_exemplo_de_fillStyle_com_laços_for", 160, 160, "https://mdn.mozillademos.org/files/5417/Canvas_fillstyle.png")}}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-fillstyle", "CanvasRenderingContext2D.fillStyle")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                                    | Estado                           | Comentário |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-fillstyle", "CanvasRenderingContext2D.fillStyle")}} | {{Spec2('HTML WHATWG')}} |            |
 
-<h2 id="Compatibibidade_com_o_Navegador">Compatibibidade com o Navegador</h2>
+## Compatibibidade com o Navegador
 
 {{Compat("api.CanvasRenderingContext2D.fillStyle")}}
 
-<h2 id="Notas_específicas_doWebKitBlink">Notas específicas doWebKit/Blink</h2>
+## Notas específicas doWebKit/Blink
 
-<ul>
- <li>Nos navegadores baseados em WebKit e Blink, além da propriedade <code>fillStyle</code>, o método não padrão e obsoleto <code>ctx.setFillColor()</code> é implementado.
+- Nos navegadores baseados em WebKit e Blink, além da propriedade `fillStyle`, o método não padrão e obsoleto `ctx.setFillColor()` é implementado.
 
-  <pre class="brush: js">setFillColor(color, optional alpha);
-setFillColor(grayLevel, optional alpha);
-setFillColor(r, g, b, a);
-setFillColor(c, m, y, k, a);
-</pre>
- </li>
-</ul>
+  ```js
+  setFillColor(color, optional alpha);
+  setFillColor(grayLevel, optional alpha);
+  setFillColor(r, g, b, a);
+  setFillColor(c, m, y, k, a);
+  ```
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>A interface que o define, {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasGradient")}}</li>
- <li>{{domxref("CanvasPattern")}}</li>
-</ul>
+- A interface que o define, {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasGradient")}}
+- {{domxref("CanvasPattern")}}

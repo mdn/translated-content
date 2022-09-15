@@ -10,43 +10,30 @@ tags:
   - Referencia
 translation_of: Web/API/AnimationEvent/pseudoElement
 ---
-<p>{{SeeCompatTable}}{{ apiref("Web Animations API") }}</p>
+{{SeeCompatTable}}{{ apiref("Web Animations API") }}
 
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>O <code><strong>AnimationEvent.pseudoElement</strong></code> é uma propriedade só de leitura do {{domxref("DOMString")}}, começando com <code>'::'</code>, contendo o nome do <a href="/en-US/docs/Web/CSS/Pseudo-elements" title="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> em que a animação roda. Se a animação não roda em um pseudo-elemento mas em um elemento, então temos uma<em> string</em> vazia : <code>''</code><code>.</code></p>
+O **`AnimationEvent.pseudoElement`** é uma propriedade só de leitura do {{domxref("DOMString")}}, começando com `'::'`, contendo o nome do [pseudo-element](/pt-BR/docs/Web/CSS/Pseudo-elements) em que a animação roda. Se a animação não roda em um pseudo-elemento mas em um elemento, então temos uma _string_ vazia : ` ''``. `
 
-<h2 id="Síntaxe">Síntaxe</h2>
+## Síntaxe
 
-<pre class="syntaxbox"><em>name</em> = <em>AnimationEvent</em>.pseudoElement</pre>
+```
+name = AnimationEvent.pseudoElement
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Animations', '#AnimationEvent-pseudoElement', 'AnimationEvent.pseudoElement') }}</td>
-   <td>{{ Spec2('CSS3 Animations')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                        | Estado                                   | Comentário          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
+| {{ SpecName('CSS3 Animations', '#AnimationEvent-pseudoElement', 'AnimationEvent.pseudoElement') }} | {{ Spec2('CSS3 Animations')}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.AnimationEvent.pseudoElement")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_animations">Using CSS animations</a></li>
- <li>{{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.</li>
- <li>The {{domxref("AnimationEvent")}} interface it belongs to.</li>
-</ul>
+- [Using CSS animations](/pt-BR/docs/CSS/Using_CSS_animations)
+- {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.
+- The {{domxref("AnimationEvent")}} interface it belongs to.

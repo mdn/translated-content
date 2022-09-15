@@ -12,59 +12,54 @@ tags:
   - Workers
 translation_of: Web/API/SharedWorker
 ---
-<div>{{APIRef("Web Workers API")}}</div>
+{{APIRef("Web Workers API")}}
 
-<p>The <code><strong>SharedWorker</strong></code> interface represents a specific kind of worker that can be <em>accessed</em> from several browsing contexts, such as several windows, iframes or even workers. They implement an interface different than dedicated workers and have a different global scope, {{domxref("SharedWorkerGlobalScope")}}.</p>
+The **`SharedWorker`** interface represents a specific kind of worker that can be _accessed_ from several browsing contexts, such as several windows, iframes or even workers. They implement an interface different than dedicated workers and have a different global scope, {{domxref("SharedWorkerGlobalScope")}}.
 
-<div class="note">
-<p><strong>Note:</strong> If SharedWorker can be accessed from several browsing contexts, all those browsing contexts must share the exact same origin (same protocol, host and port).</p>
-</div>
+> **Nota:** If SharedWorker can be accessed from several browsing contexts, all those browsing contexts must share the exact same origin (same protocol, host and port).
 
-<div class="note">
-<p><strong>Note</strong>: In Firefox, shared workers cannot be shared between private (i.e. browsing in a private window) and non-private documents (see {{bug(1177621)}}.)</p>
-</div>
+> **Nota:** In Firefox, shared workers cannot be shared between private (i.e. browsing in a private window) and non-private documents (see {{bug(1177621)}}.)
 
-<h2 id="Constructors">Constructors</h2>
+## Constructors
 
-<dl>
- <dt>{{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}</dt>
- <dd>Creates a shared web worker that executes the script at the specified URL.</dd>
-</dl>
+- {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}
+  - : Creates a shared web worker that executes the script at the specified URL.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("EventTarget")}}, and implements properties from {{domxref("AbstractWorker")}}.</em></p>
+_Inherits properties from its parent, {{domxref("EventTarget")}}, and implements properties from {{domxref("AbstractWorker")}}._
 
-<dl>
- <dt>{{domxref("AbstractWorker.onerror")}}</dt>
- <dd>Is an {{domxref("EventListener")}} that is called whenever an {{domxref("ErrorEvent")}} of type <code>error</code> bubbles through the worker.</dd>
- <dt>{{domxref("SharedWorker.port")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("MessagePort")}} object used to communicate and control the shared worker.</dd>
-</dl>
+- {{domxref("AbstractWorker.onerror")}}
+  - : Is an {{domxref("EventListener")}} that is called whenever an {{domxref("ErrorEvent")}} of type `error` bubbles through the worker.
+- {{domxref("SharedWorker.port")}} {{readonlyInline}}
+  - : Returns a {{domxref("MessagePort")}} object used to communicate and control the shared worker.
 
-<dl>
-</dl>
+<!---->
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent, {{domxref("EventTarget")}}, and implements methods from {{domxref("AbstractWorker")}}.</em></p>
+_Inherits methods from its parent, {{domxref("EventTarget")}}, and implements methods from {{domxref("AbstractWorker")}}._
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In our <a class="external external-icon" href="https://github.com/mdn/simple-shared-worker">Basic shared worker example</a> (<a class="external external-icon" href="http://mdn.github.io/simple-shared-worker/">run shared worker</a>), we have two HTML pages, each of which uses some JavaScript to perform a simple calculation. The different scripts are using the same worker file to perform the calculation — they can both access it, even if their pages are running inside different windows.</p>
+In our [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](http://mdn.github.io/simple-shared-worker/)), we have two HTML pages, each of which uses some JavaScript to perform a simple calculation. The different scripts are using the same worker file to perform the calculation — they can both access it, even if their pages are running inside different windows.
 
-<p>The following code snippet shows creation of a <code>SharedWorker</code> object using the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor. Both scripts contain this:</p>
+The following code snippet shows creation of a `SharedWorker` object using the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor. Both scripts contain this:
 
-<pre class="brush: js">var myWorker = new SharedWorker('worker.js');
-</pre>
+```js
+var myWorker = new SharedWorker('worker.js');
+```
 
-<p>Both scripts then access the worker through a {{domxref("MessagePort")}} object created using the {{domxref("SharedWorker.port")}} property. If the onmessage event is attached using addEventListener, the port is manually started using its <code>start()</code> method:</p>
+Both scripts then access the worker through a {{domxref("MessagePort")}} object created using the {{domxref("SharedWorker.port")}} property. If the onmessage event is attached using addEventListener, the port is manually started using its `start()` method:
 
-<pre class="brush: js">myWorker.port.start();</pre>
+```js
+myWorker.port.start();
+```
 
-<p>When the port is started, both scripts post messages to the worker and handle messages sent from it using <code>port.postMessage()</code> and <code>port.onmessage</code>, respectively:</p>
+When the port is started, both scripts post messages to the worker and handle messages sent from it using `port.postMessage()` and `port.onmessage`, respectively:
 
-<pre class="brush: js">first.onchange = function() {
+```js
+first.onchange = function() {
   myWorker.port.postMessage([first.value,second.value]);
   console.log('Message posted to worker');
 }
@@ -77,11 +72,13 @@ second.onchange = function() {
 myWorker.port.onmessage = function(e) {
   result1.textContent = e.data;
   console.log('Message received from worker');
-}</pre>
+}
+```
 
-<p>Inside the worker we use the {{domxref("SharedWorkerGlobalScope.onconnect")}} handler to connect to the same port discussed above. The ports associated with that worker are accessible in the {{event("connect")}} event's <code>ports</code> property — we then use {{domxref("MessagePort")}} <code>start()</code> method to start the port, and the <code>onmessage</code> handler to deal with messages sent from the main threads.</p>
+Inside the worker we use the {{domxref("SharedWorkerGlobalScope.onconnect")}} handler to connect to the same port discussed above. The ports associated with that worker are accessible in the {{event("connect")}} event's `ports` property — we then use {{domxref("MessagePort")}} `start()` method to start the port, and the `onmessage` handler to deal with messages sent from the main threads.
 
-<pre class="brush: js">onconnect = function(e) {
+```js
+onconnect = function(e) {
   var port = e.ports[0];
 
   port.addEventListener('message', function(e) {
@@ -90,32 +87,20 @@ myWorker.port.onmessage = function(e) {
   });
 
   port.start(); // Required when using addEventListener. Otherwise called implicitly by onmessage setter.
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#sharedworker", "SharedWorker")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change from {{SpecName("Web Workers")}}.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                    | Status                           | Comment                                              |
+| -------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "#sharedworker", "SharedWorker")}} | {{Spec2('HTML WHATWG')}} | No change from {{SpecName("Web Workers")}}. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.SharedWorker")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Worker")}}</li>
- <li><a class="internal" href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
-</ul>
+- {{domxref("Worker")}}
+- [Using web workers](/pt-BR/docs/Web/Guide/Performance/Using_web_workers)

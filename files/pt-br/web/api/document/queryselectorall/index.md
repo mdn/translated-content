@@ -7,58 +7,54 @@ tags:
   - querySelector
 translation_of: Web/API/Document/querySelectorAll
 ---
-<p id="Summary">{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<h2 id="Summary" name="Summary">Introdução</h2>
+## Introdução
 
-<p>Retorna uma lista de elementos presentes no documento (usando ordenação em profundidade, pré-ordenada e transversal dos nós do documento) que coincidam com o grupo de seletores especificado. O objeto retornado é uma {{ domxref("NodeList") }}.</p>
+Retorna uma lista de elementos presentes no documento (usando ordenação em profundidade, pré-ordenada e transversal dos nós do documento) que coincidam com o grupo de seletores especificado. O objeto retornado é uma {{ domxref("NodeList") }}.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="eval"><em>elementList</em> = document.querySelectorAll(selectors);
-</pre>
+```
+elementList = document.querySelectorAll(selectors);
+```
 
-<p>onde</p>
+onde
 
-<ul>
- <li><code>elementList</code> é uma {{ domxref("NodeList") }} não-viva (alterações no DOM não refletem na lista) de objetos {{ domxref("Element") }}.</li>
- <li><code>selectors</code> é uma <em>string</em> contendo um ou mais seletores CSS separados por vírgulas.</li>
-</ul>
+- `elementList` é uma {{ domxref("NodeList") }} não-viva (alterações no DOM não refletem na lista) de objetos {{ domxref("Element") }}.
+- `selectors` é uma _string_ contendo um ou mais seletores CSS separados por vírgulas.
 
-<p>A NodeList retornada irá conter todos os elementos do documento que coincidam com os seletores especificados. Se a string <code><em>selectors</em></code> conter um CSS {{ cssxref("PseudoElements") }}, o retorno será uma NodeList vazia.</p>
+A NodeList retornada irá conter todos os elementos do documento que coincidam com os seletores especificados. Se a string `selectors` conter um CSS {{ cssxref("PseudoElements") }}, o retorno será uma NodeList vazia.
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<p>Esse exemplo retorna uma lista de todos os elementos <code>div</code> presentes no <code>document</code> que contenham as classes "<code>note</code>" ou "<code>alert</code>":</p>
+Esse exemplo retorna uma lista de todos os elementos `div` presentes no `document` que contenham as classes "`note`" ou "`alert`":
 
-<pre class="brush: js">var matches = document.querySelectorAll("div.note, div.alert");
-</pre>
+```js
+var matches = document.querySelectorAll("div.note, div.alert");
+```
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p>Retorna uma {{ jsxref("NodeList") }} não-viva (alterações no DOM não refletem na lista) de todos os elementos que coincidam com os seletores informados.</p>
+Retorna uma {{ jsxref("NodeList") }} não-viva (alterações no DOM não refletem na lista) de todos os elementos que coincidam com os seletores informados.
 
-<p>Lança uma exceção <code>SYNTAX_ERR</code> se o grupo especificado de seletores for inválido.</p>
+Lança uma exceção `SYNTAX_ERR` se o grupo especificado de seletores for inválido.
 
-<p><code>querySelectorAll()</code> foi introduzida na WebApps API.</p>
+`querySelectorAll()` foi introduzida na WebApps API.
 
-<p>Navegadores baseados em <em>WebKit</em> têm um <em>bug</em>: quando a string <code><em>seletores</em></code> contém um <a href="/en-US/docs/CSS/Pseudo-elements" title="/en-US/docs/CSS/Pseudo-elements">pseudo-elemento CSS</a>, a {{ jsxref("NodeList") }} retornada não esta vazia, neste caso ela contém o elemento {{ HTMLElement("html") }}.</p>
+Navegadores baseados em _WebKit_ têm um _bug_: quando a string `seletores` contém um [pseudo-elemento CSS](/pt-BR/docs/CSS/Pseudo-elements), a {{ jsxref("NodeList") }} retornada não esta vazia, neste caso ela contém o elemento {{ HTMLElement("html") }}.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Document.querySelectorAll")}}
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<ul>
- <li><a href="http://www.w3.org/TR/selectors-api/">API Selectors</a></li>
-</ul>
+- [API Selectors](http://www.w3.org/TR/selectors-api/)
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{ domxref("Element.querySelectorAll") }}</li>
- <li>{{ domxref("Document.querySelector") }}</li>
- <li>{{ domxref("Element.querySelector") }}</li>
- <li><code><a href="/pt-BR/docs/Code_snippets/QuerySelector" title="en-US/docs/Code_snippets/QuerySelector">Exemplos de código com querySelector</a></code></li>
-</ul>
+- {{ domxref("Element.querySelectorAll") }}
+- {{ domxref("Document.querySelector") }}
+- {{ domxref("Element.querySelector") }}
+- [`Exemplos de código com querySelector`](/pt-BR/docs/Code_snippets/QuerySelector "en-US/docs/Code_snippets/QuerySelector")

@@ -3,75 +3,62 @@ title: FormData.set()
 slug: Web/API/FormData/set
 translation_of: Web/API/FormData/set
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p>O método <code><strong>set()</strong></code> da interface {{domxref("FormData")}} adiciona o novo valor para um chave existente em um objeto <code>FormData</code>, ou adicionar a combinação chave/valor caso ela não exista.</p>
+O método **`set()`** da interface {{domxref("FormData")}} adiciona o novo valor para um chave existente em um objeto `FormData`, ou adicionar a combinação chave/valor caso ela não exista.
 
-<p>A diferença entre  <code>set()</code> e {{domxref("FormData.append")}} é que, se a chave especificada já existir, <code>set()</code> irá sobrescrever todos os valores existentes pelo novo valor, enquanto o {{domxref("FormData.append")}} apenas acrescenta o novo valor ao conjunto de valores existentes.</p>
+A diferença entre `set()` e {{domxref("FormData.append")}} é que, se a chave especificada já existir, `set()` irá sobrescrever todos os valores existentes pelo novo valor, enquanto o {{domxref("FormData.append")}} apenas acrescenta o novo valor ao conjunto de valores existentes.
 
-<div class="note">
-<p><strong>Nota</strong>: Esse método está disponível em <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Nota:** Esse método está disponível em [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<p>Existem duas versões desse método: uma com dois e outra com três parâmetros:</p>
+Existem duas versões desse método: uma com dois e outra com três parâmetros:
 
-<pre class="brush: js">formData.set(name, value);
-formData.set(name, value, filename);</pre>
+```js
+formData.set(name, value);
+formData.set(name, value, filename);
+```
 
-<h4 id="append()_Parameters" name="append()_Parameters">Parâmetros</h4>
+#### Parâmetros
 
-<dl>
- <dt><code>name</code></dt>
- <dd>O nome do campo cujo dado está em <code>value</code>.</dd>
- <dt><code>value</code></dt>
- <dd>O valor do campo. Na versão de dois parâmetros, esse é um {{domxref("USVString")}}, e caso não seja, ele é convertido para uma string. Na versão de três parâmetros ele pode ser um {domxref("Blob")}}, {{domxref("File")}}, ou um {{domxref("USVString")}}. Se nenhum desses valores forem especificados, o valor será convertido para string.</dd>
- <dt><code>filename </code>{{optional_inline}}</dt>
- <dd>O nome do arquivo a ser enviado (um {{domxref("USVString")}}), quando um {{domxref("Blob")}} ou um {{domxref("File")}} é passdo como o segundo parâmetro. O nome de arquivo padrão para objetos do tipo {{domxref("Blob")}} é "blob".</dd>
-</dl>
+- `name`
+  - : O nome do campo cujo dado está em `value`.
+- `value`
+  - : O valor do campo. Na versão de dois parâmetros, esse é um {{domxref("USVString")}}, e caso não seja, ele é convertido para uma string. Na versão de três parâmetros ele pode ser um {domxref("Blob")}}, {{domxref("File")}}, ou um {{domxref("USVString")}}. Se nenhum desses valores forem especificados, o valor será convertido para string.
+- `filename `{{optional_inline}}
+  - : O nome do arquivo a ser enviado (um {{domxref("USVString")}}), quando um {{domxref("Blob")}} ou um {{domxref("File")}} é passdo como o segundo parâmetro. O nome de arquivo padrão para objetos do tipo {{domxref("Blob")}} é "blob".
 
-<div class="note">
-<p><strong>Nota:</strong> Se você especificar um {{domxref("Blob")}} como o dado a ser acrescentado ao objeto <code>FormData</code>, o nome do arquivo que será enviado para o servidor, enviado no atributo "Content-Disposition" no cabeçalho varia de navegador para navegador.</p>
-</div>
+> **Nota:** Se você especificar um {{domxref("Blob")}} como o dado a ser acrescentado ao objeto `FormData`, o nome do arquivo que será enviado para o servidor, enviado no atributo "Content-Disposition" no cabeçalho varia de navegador para navegador.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>A linha a seguir cria um objeto <code>FormData</code> vazio:</p>
+A linha a seguir cria um objeto `FormData` vazio:
 
-<pre class="brush: js">var formData = new FormData(); // Currently empty</pre>
+```js
+var formData = new FormData(); // Currently empty
+```
 
-<p>Você pode adicionar os pares chave/valor usando (domxref("FormData.set")}}:</p>
+Você pode adicionar os pares chave/valor usando (domxref("FormData.set")}}:
 
-<pre class="brush: js">formData.set('username', 'Chris');
-formData.set('userpic', myFileInput.files[0], 'chris.jpg');</pre>
+```js
+formData.set('username', 'Chris');
+formData.set('userpic', myFileInput.files[0], 'chris.jpg');
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest','#dom-formdata-set','set()')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                | Status                               | Comentário |
+| ---------------------------------------------------------------------------- | ------------------------------------ | ---------- |
+| {{SpecName('XMLHttpRequest','#dom-formdata-set','set()')}} | {{Spec2('XMLHttpRequest')}} |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.FormData.set")}}
 
-<h2 id="Ver_também">Ver também</h2>
+## Ver também
 
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="Using XMLHttpRequest">Usando XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects" title="DOM/XMLHttpRequest/FormData/Using_FormData_objects">Usando objetos FormData</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Usando XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Usando objetos FormData](/pt-BR/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
+- {{HTMLElement("Form")}}

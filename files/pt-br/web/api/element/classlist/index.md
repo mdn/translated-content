@@ -3,38 +3,38 @@ title: Element.classList
 slug: Web/API/Element/classList
 translation_of: Web/API/Element/classList
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>O <strong>E</strong><strong>lement.classList</strong> é uma propriedade somente leitura que retorna uma coleção {{domxref ("DOMTokenList")}} ativa dos atributos de classe do elemento.</p>
+O **E\*\***lement.classList\*\* é uma propriedade somente leitura que retorna uma coleção {{domxref ("DOMTokenList")}} ativa dos atributos de classe do elemento.
 
-<p>Usar <strong>classList</strong> é uma alternativa conveniente para acessar a lista de classes de um elemento como uma seqüência delimitada por espaço através de {{domxref ("element.className")}}.</p>
+Usar **classList** é uma alternativa conveniente para acessar a lista de classes de um elemento como uma seqüência delimitada por espaço através de {{domxref ("element.className")}}.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">const <var>elementClasses</var> = elementNodeReference.classList;
-</pre>
+```
+const elementClasses = elementNodeReference.classList;
+```
 
-<p><strong><em>elementClasses</em></strong> é um DOMTokenList que representa o atributo de classe de <strong><em>elementNodeReference</em></strong>. Se o atributo de classe não foi definido ou está vazio <strong><em>elementClasses.length</em></strong> retorna 0. <strong>element.classList </strong>propriamente dito é somente leitura, embora você possa modificá-lo usando os métodos<em> <strong>add ()</strong></em><strong> </strong>e <em><strong>remove ()</strong></em>.</p>
+**_elementClasses_** é um DOMTokenList que representa o atributo de classe de **_elementNodeReference_**. Se o atributo de classe não foi definido ou está vazio **_elementClasses.length_** retorna 0. **element.classList** propriamente dito é somente leitura, embora você possa modificá-lo usando os métodos* **add ()***\*\* **e \_**remove ()\*\*\_.
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<dl>
- <dt>add( String [, String] )</dt>
- <dd>Adicione valores de classe especificados. Se essas classes já existem no atributo do elemento, elas são ignoradas.</dd>
- <dt>remove( String [,String] )</dt>
- <dd>Remover valores de classe específicos.</dd>
- <dt><strong>item</strong> ( Number )</dt>
- <dd>Retorna o valor da classe por índice na coleção.</dd>
- <dt><strong>toggle</strong> ( String [, force] )</dt>
- <dd>Quando apenas um argumento está presente: Toggle class value; Ou seja, se a classe existir, em seguida, removê-lo e retornar false, se não, então adicioná-lo e retornar true.<br>
- Quando um segundo argumento está presente: Se o segundo argumento é avaliado como true, adicione o valor especificado da classe e, se ele for avaliado como false, remova-o.</dd>
- <dt>contains( String )</dt>
- <dd>Verifica se o valor da classe especificado existe no atributo de classe do elemento.</dd>
-</dl>
+- add( String \[, String] )
+  - : Adicione valores de classe especificados. Se essas classes já existem no atributo do elemento, elas são ignoradas.
+- remove( String \[,String] )
+  - : Remover valores de classe específicos.
+- **item** ( Number )
+  - : Retorna o valor da classe por índice na coleção.
+- **toggle** ( String \[, force] )
+  - : Quando apenas um argumento está presente: Toggle class value; Ou seja, se a classe existir, em seguida, removê-lo e retornar false, se não, então adicioná-lo e retornar true.
+    Quando um segundo argumento está presente: Se o segundo argumento é avaliado como true, adicione o valor especificado da classe e, se ele for avaliado como false, remova-o.
+- contains( String )
+  - : Verifica se o valor da classe especificado existe no atributo de classe do elemento.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: js" dir="ltr">// div é uma referência de objeto para um elemento &lt;div&gt; com class = "foo bar"
+```js
+// div é uma referência de objeto para um elemento <div> com class = "foo bar"
 div.classList.remove("foo");
 div.classList.add("anotherclass");
 
@@ -42,54 +42,30 @@ div.classList.add("anotherclass");
 div.classList.toggle("visible");
 
 // adicionar/remover, dependendo do teste condicional, i menos de 10
-div.classList.toggle("visible", i &lt; 10 );
+div.classList.toggle("visible", i < 10 );
 
 alert(div.classList.contains("foo"));
 
 // adicionar ou remover várias classes
 div.classList.add("foo","bar");
-div.classList.remove("foo", "bar");</pre>
+div.classList.remove("foo", "bar");
+```
 
-<div class="note">
-<p>As versões do Firefox antes de 26 não implementam o uso de vários argumentos nos métodos add / remove / toggle. Veja <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=814014">https://bugzilla.mozilla.org/show_bug.cgi?id=814014</a></p>
-</div>
+> **Nota:** As versões do Firefox antes de 26 não implementam o uso de vários argumentos nos métodos add / remove / toggle. Veja <https://bugzilla.mozilla.org/show_bug.cgi?id=814014>
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "dom.html#dom-classlist", "Element.classList")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Observe dentro da especificação HTML relacionada ao {{htmlattrxref("class")}} attribute.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#dom-element-classlist", "Element.classList")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>Definição inicial</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#dom-element-classlist", "Element.classList")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificações                                                                                       | Status                           | Comentário                                                                                      |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------- |
+| {{SpecName("HTML WHATWG", "dom.html#dom-classlist", "Element.classList")}} | {{Spec2("HTML WHATWG")}} | Observe dentro da especificação HTML relacionada ao {{htmlattrxref("class")}} attribute. |
+| {{SpecName("DOM WHATWG", "#dom-element-classlist", "Element.classList")}}     | {{Spec2("DOM WHATWG")}} | Definição inicial                                                                               |
+| {{SpecName("DOM4", "#dom-element-classlist", "Element.classList")}}             | {{Spec2("DOM4")}}         |                                                                                                 |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Element.classList")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("element.className")}}</li>
- <li>{{domxref("DOMTokenList")}};</li>
-</ul>
+- {{domxref("element.className")}}
+- {{domxref("DOMTokenList")}};

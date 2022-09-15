@@ -11,61 +11,48 @@ tags:
 translation_of: Web/API/XMLHttpRequest/onreadystatechange
 original_slug: Web/API/XMLHttpRequest/onreadystatechange
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Um <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventHandler" title="A possible way to get notified of Events of a particular type (such as click) for a given object is to specify an event handler using:"><code>EventHandler</code></a> é chamado sempre que o atributo <code>readyState</code> é modificado. O callback é chamado a partir da interface do usuário. A propriedade <strong><code>XMLHttpRequest.onreadystatechange</code></strong> contém o manipulador de eventos que é chamado quando o evento <a href="/pt-BR/docs/Web/Events/readystatechange">readystatechange</a> é disparado, ou seja, toda vez que a propriedade {{domxref("XMLHttpRequest.readyState", "readyState")}} do {{domxref("XMLHttpRequest")}} é modificada.</p>
+Um [`EventHandler`](/pt-BR/docs/Web/API/EventHandler "A possible way to get notified of Events of a particular type (such as click) for a given object is to specify an event handler using:") é chamado sempre que o atributo `readyState` é modificado. O callback é chamado a partir da interface do usuário. A propriedade **`XMLHttpRequest.onreadystatechange`** contém o manipulador de eventos que é chamado quando o evento [readystatechange](/pt-BR/docs/Web/Events/readystatechange) é disparado, ou seja, toda vez que a propriedade {{domxref("XMLHttpRequest.readyState", "readyState")}} do {{domxref("XMLHttpRequest")}} é modificada.
 
-<div class="warning">
-<p><strong>Atenção:</strong> Isso não deve ser usado com solicitações síncronas e não deve ser usado como código nativo.</p>
-</div>
+> **Aviso:** **Atenção:** Isso não deve ser usado com solicitações síncronas e não deve ser usado como código nativo.
 
-<p>O evento <code>readystatechange</code> não será chamado quando a <code>XMLHttpRequest</code> request for cancelada pelo método <a href="/pt-BR/docs/Web/API/XMLHttpRequest/abort">abort()</a>.</p>
+O evento `readystatechange` não será chamado quando a `XMLHttpRequest` request for cancelada pelo método [abort()](/pt-BR/docs/Web/API/XMLHttpRequest/abort).
 
-<div class="note">
-<p><strong>Atualização</strong>: Está disparando na última versão de navegadores (Firefox 51.0.1, Opera 43.0.2442.991, Safari 10.0.3 (12602.4.8), Chrome 54.0.2840.71, Edge, IE11). Exemplo <a href="https://jsfiddle.net/merksam/ve5oc0gn/">aqui</a> - <em>basta recarregar a página algumas vezes</em>.</p>
-</div>
+> **Nota:** **Atualização**: Está disparando na última versão de navegadores (Firefox 51.0.1, Opera 43.0.2442.991, Safari 10.0.3 (12602.4.8), Chrome 54.0.2840.71, Edge, IE11). Exemplo [aqui](https://jsfiddle.net/merksam/ve5oc0gn/) - _basta recarregar a página algumas vezes_.
 
-<h2 id="Syntax" name="Syntax">Sitaxe</h2>
+## Sitaxe
 
-<pre class="syntaxbox"><em>XMLHttpRequest</em>.onreadystatechange = <em>callback</em>;</pre>
+```
+XMLHttpRequest.onreadystatechange = callback;
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<ul>
- <li><code><em>callback</em></code> é a função que será executada quando o readyState mudar.</li>
-</ul>
+- `callback` é a função que será executada quando o readyState mudar.
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: js">var xhr = new XMLHttpRequest(),
+```js
+var xhr = new XMLHttpRequest(),
     method = "GET",
     url = "https://developer.mozilla.org/";
 
-xhr.open(<em>method</em>, <em>url</em>, true);
+xhr.open(method, url, true);
 xhr.onreadystatechange = function () {
-        if(xhr.readyState === XMLHttpRequest.DONE &amp;&amp; xhr.status === 200) {
+        if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
             console.log(xhr.responseText);
         }
     };
-xhr.send();</pre>
+xhr.send();
+```
 
-<h2 id="Especificação">Especificação</h2>
+## Especificação
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#handler-xhr-onreadystatechange')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>WHATWG living standard</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                            | Status                               | Comentário             |
+| ---------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------- |
+| {{SpecName('XMLHttpRequest', '#handler-xhr-onreadystatechange')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.XMLHttpRequest.readystatechange_event")}}

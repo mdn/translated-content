@@ -2,42 +2,38 @@
 title: CustomElementRegistry.get()
 slug: Web/API/CustomElementRegistry/get
 tags:
-    - API
-    - CustomElementRegistry
-    - Experimental
-    - Method
-    - Reference
-    - Web Components
-    - custom elements
-    - get
+  - API
+  - CustomElementRegistry
+  - Experimental
+  - Method
+  - Reference
+  - Web Components
+  - custom elements
+  - get
 browser-compat: api.CustomElementRegistry.get
 ---
+{{APIRef("CustomElementRegistry")}}
 
-<p>{{APIRef("CustomElementRegistry")}}</p>
+O **`get()`** é um método de {{domxref("CustomElementRegistry")}} a interface retorna um construtor para um elemento personalizado previamente definido.
 
-<p>
-    O <code><strong>get()</strong></code> é um método de {{domxref("CustomElementRegistry")}} a interface retorna um construtor para um elemento personalizado previamente definido.
-</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+constructor = customElements.get(name);
+```
 
-<pre class="brush: js"><em>constructor</em> = customElements.get(<em>name</em>);
-</pre>
+### Parâmetros
 
-<h3 id="Parameters">Parâmetros</h3>
+- name
+  - : O nome do elemento personalizado cujo construtor você deseja retornar uma referência.
 
-<dl>
-    <dt>name</dt>
-    <dd>O nome do elemento personalizado cujo construtor você deseja retornar uma referência.</dd>
-</dl>
+### Valor de retorno
 
-<h3 id="Return_value">Valor de retorno</h3>
+O construtor do elemento personalizado nomeado, ou `undefined`se não há definição de elemento personalizado com esse nome.
 
-<p>O construtor do elemento personalizado nomeado, ou <code>undefined</code>se não há definição de elemento personalizado com esse nome.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
-
-<pre class="brush: js">
+```js
 customElements.define('my-paragraph',
   class extends HTMLElement {
     constructor() {
@@ -50,12 +46,12 @@ customElements.define('my-paragraph',
 
 // Retorne uma referência ao construtor my-paragraph
 let ctor = customElements.get('my-paragraph');
-</pre>
+```
 
-<h2 id="Specifications">Especificações</h2>
+## Especificações
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat}}</p>
+{{Compat}}

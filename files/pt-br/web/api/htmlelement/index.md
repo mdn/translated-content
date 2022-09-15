@@ -13,165 +13,121 @@ tags:
   - TopicStub
 translation_of: Web/API/HTMLElement
 ---
-<div>
-<div>{{ APIRef("HTML DOM") }}</div>
-</div>
+{{ APIRef("HTML DOM") }}
 
-<div> </div>
+A interface **`HTMLElement`** representa qualquer elemento [HTML](/pt-BR/docs/Web/HTML). Alguns elementos implementam diretamente essa interface, outros a implementam por meio de uma interface que a herda.
 
-<p>A interface <strong><code>HTMLElement</code></strong> representa qualquer elemento <a href="/en-US/docs/Web/HTML" title="/en-US/docs/Web/HTML">HTML</a>. Alguns elementos implementam diretamente essa interface, outros a implementam por meio de uma interface que a herda.</p>
+## Propriedades
 
-<h2 id="Propriedades">Propriedades</h2>
+_Propriedades herdadas do elemento pai, {{domxref("Element")}}, e aquelas implementadas de {{domxref("GlobalEventHandlers")}} e de {{domxref("TouchEventHandlers")}}._
 
-<p><em>Propriedades herdadas do elemento pai, {{domxref("Element")}}, e aquelas implementadas de {{domxref("GlobalEventHandlers")}} e de {{domxref("TouchEventHandlers")}}.</em></p>
+- {{domxref("HTMLElement.accessKey")}}
+  - : Is a {{domxref("DOMString")}} representing the access key assigned to the element.
+- {{domxref("HTMLElement.accessKeyLabel")}} {{readonlyInline}}
+  - : Returns a {{domxref("DOMString")}} containing the element's assigned access key.
+- {{domxref("HTMLElement.contentEditable")}}
+  - : Is a {{domxref("DOMString")}}, where a value of `"true"` means the element is editable and a value of `"false"` means it isn't.
+- {{domxref("HTMLElement.isContentEditable")}} {{readonlyInline}}
+  - : Returns a {{domxref("Boolean")}} that indicates whether or not the content of the element can be edited.
+- {{domxref("HTMLElement.contextMenu")}}
+  - : Is an {{domxref("HTMLMenuElement")}} representing the contextual menu associated with the element. It may be null
+- {{domxref("HTMLElement.dataset")}} {{readonlyInline}}
+  - : Returns a {{domxref("DOMStringMap")}} that allows access to read and write the element custom data attributes (`data-*`) .
+- {{domxref("HTMLElement.dir")}}
+  - : Is a {{domxref("DOMString")}}, reflecting the `dir` global attribute, representing the directionality of the element. Possible values are `"ltr"`, `"rtl"`, and `"auto"`.
+- {{domxref("HTMLElement.draggable")}}
+  - : Is a {{jsxref("Boolean")}} indicating if the element can be dragged.
+- {{domxref("HTMLElement.dropzone")}} {{readonlyInline}}
+  - : Returns a {{domxref("DOMSettableTokenList")}} reflecting the `dropzone` global attribute and describing the behavior of the element regarding a drop operation.
+- {{domxref("HTMLElement.hidden")}}
+  - : Is a {{jsxref("Boolean")}} indicating if the element is hidden or not.
+- {{domxref("HTMLElement.itemScope")}} {{experimental_inline}}
+  - : Is a {{jsxref("Boolean")}}…
+- {{domxref("HTMLElement.itemType")}} {{readonlyInline}}{{experimental_inline}}
+  - : Returns a {{domxref("DOMSettableTokenList")}}…
+- {{domxref("HTMLElement.itemId")}} {{experimental_inline}}
+  - : Is a {{domxref("DOMString")}}…
+- {{domxref("HTMLElement.itemRef")}} {{readonlyInline}}{{experimental_inline}}
+  - : Returns a {{domxref("DOMSettableTokenList")}}…
+- {{domxref("HTMLElement.itemProp")}} {{readonlyInline}}{{experimental_inline}}
+  - : Returns a {{domxref("DOMSettableTokenList")}}…
+- {{domxref("HTMLElement.itemValue")}} {{experimental_inline}}
+  - : Returns an {{jsxref("Object")}}…
+- {{domxref("HTMLElement.lang")}}
+  - : Is a {{domxref("DOMString")}} representing the language of an element's attributes, text, and element contents.
+- {{domxref("HTMLElement.offsetHeight")}} {{readonlyInline}}{{experimental_inline}}
+  - : Returns a `double` containing the height of an element, relative to the layout.
+- {{domxref("HTMLElement.offsetLeft")}}{{readonlyInline}}{{experimental_inline}}
+  - : Returns a `double`, the distance from this element's left border to its `offsetParent`'s left border.
+- {{domxref("HTMLElement.offsetParent")}}{{readonlyInline}}{{experimental_inline}}
+  - : Returns an {{domxref("Element")}} that is the element from which all offset calculations are currently computed.
+- {{domxref("HTMLElement.offsetTop")}}{{readonlyInline}}{{experimental_inline}}
+  - : Returns a `double`, the distance from this element's top border to its `offsetParent`'s top border.
+- {{domxref("HTMLElement.offsetWidth")}}{{readonlyInline}}{{experimental_inline}}
+  - : Returns a `double` containing the width of an element, relative to the layout.
+- {{domxref("HTMLElement.properties")}} {{readonlyInline}}{{experimental_inline}}
+  - : Returns an {{domxref("HTMLPropertiesCollection")}}…
+- {{domxref("HTMLElement.spellcheck")}}{{ gecko_minversion_inline("1.9")}}
+  - : Is a {{jsxref("Boolean")}} that controls [spell-checking](/pt-BR/docs/HTML/Controlling_spell_checking_in_HTML_forms "en/Controlling_spell_checking_in_HTML_forms"). It is present on all HTML elements, though it hasn't an effect on all of them.
+- {{domxref("HTMLElement.style")}}
+  - : Is {{domxref("CSSStyleDeclaration")}}, an object representing the declarations of an element's style attributes.
+- {{domxref("HTMLElement.tabIndex")}}
+  - : Is a `long` representing the position of the element in the tabbing order.
+- {{domxref("HTMLElement.title")}}
+  - : Is a {{domxref("DOMString")}} containing the text that appears in a popup box when mouse is over the element.
+- {{domxref("HTMLElement.translate")}} {{experimental_inline}}
+  - : Is a {{jsxref("Boolean")}}
 
-<dl>
- <dt>{{domxref("HTMLElement.accessKey")}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the access key assigned to the element.</dd>
- <dt>{{domxref("HTMLElement.accessKeyLabel")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("DOMString")}} containing the element's assigned access key.</dd>
- <dt>{{domxref("HTMLElement.contentEditable")}}</dt>
- <dd>Is a {{domxref("DOMString")}}, where a value of <code>"true"</code> means the element is editable and a value of <code>"false"</code> means it isn't.</dd>
- <dt>{{domxref("HTMLElement.isContentEditable")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("Boolean")}} that indicates whether or not the content of the element can be edited.</dd>
- <dt>{{domxref("HTMLElement.contextMenu")}}</dt>
- <dd>Is an {{domxref("HTMLMenuElement")}} representing the contextual menu associated with the element. It may be null</dd>
- <dt>{{domxref("HTMLElement.dataset")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("DOMStringMap")}} that allows access to read and write the element custom data attributes (<code>data-*</code>) .</dd>
- <dt>{{domxref("HTMLElement.dir")}}</dt>
- <dd>Is a {{domxref("DOMString")}}, reflecting the <code>dir</code> global attribute, representing the directionality of the element. Possible values are <code>"ltr"</code>, <code>"rtl"</code>, and <code>"auto"</code>.</dd>
- <dt>{{domxref("HTMLElement.draggable")}}</dt>
- <dd>Is a {{jsxref("Boolean")}} indicating if the element can be dragged.</dd>
- <dt>{{domxref("HTMLElement.dropzone")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("DOMSettableTokenList")}} reflecting the <code>dropzone</code> global attribute and describing the behavior of the element regarding a drop operation.</dd>
- <dt>{{domxref("HTMLElement.hidden")}}</dt>
- <dd>Is a {{jsxref("Boolean")}} indicating if the element is hidden or not.</dd>
- <dt>{{domxref("HTMLElement.itemScope")}} {{experimental_inline}}</dt>
- <dd>Is a {{jsxref("Boolean")}}…</dd>
- <dt>{{domxref("HTMLElement.itemType")}} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Returns a {{domxref("DOMSettableTokenList")}}…</dd>
- <dt>{{domxref("HTMLElement.itemId")}} {{experimental_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}}…</dd>
- <dt>{{domxref("HTMLElement.itemRef")}} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Returns a {{domxref("DOMSettableTokenList")}}…</dd>
- <dt>{{domxref("HTMLElement.itemProp")}} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Returns a {{domxref("DOMSettableTokenList")}}…</dd>
- <dt>{{domxref("HTMLElement.itemValue")}} {{experimental_inline}}</dt>
- <dd>Returns an {{jsxref("Object")}}…</dd>
- <dt>{{domxref("HTMLElement.lang")}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the language of an element's attributes, text, and element contents.</dd>
- <dt>{{domxref("HTMLElement.offsetHeight")}} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Returns a <code>double</code> containing the height of an element, relative to the layout.</dd>
- <dt>{{domxref("HTMLElement.offsetLeft")}}{{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Returns a <code>double</code>, the distance from this element's left border to its <code>offsetParent</code>'s left border.</dd>
- <dt>{{domxref("HTMLElement.offsetParent")}}{{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Returns an {{domxref("Element")}} that is the element from which all offset calculations are currently computed.</dd>
- <dt>{{domxref("HTMLElement.offsetTop")}}{{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Returns a <code>double</code>, the distance from this element's top border to its <code>offsetParent</code>'s top border.</dd>
- <dt>{{domxref("HTMLElement.offsetWidth")}}{{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Returns a <code>double</code> containing the width of an element, relative to the layout.</dd>
- <dt>{{domxref("HTMLElement.properties")}} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Returns an {{domxref("HTMLPropertiesCollection")}}…</dd>
- <dt>{{domxref("HTMLElement.spellcheck")}}{{ gecko_minversion_inline("1.9")}}</dt>
- <dd>Is a {{jsxref("Boolean")}} that controls <a href="/en-US/docs/HTML/Controlling_spell_checking_in_HTML_forms" title="en/Controlling_spell_checking_in_HTML_forms">spell-checking</a>. It is present on all HTML elements, though it hasn't an effect on all of them.</dd>
- <dt>{{domxref("HTMLElement.style")}}</dt>
- <dd>Is {{domxref("CSSStyleDeclaration")}}, an object representing the declarations of an element's style attributes.</dd>
- <dt>{{domxref("HTMLElement.tabIndex")}}</dt>
- <dd>Is a <code>long</code> representing the position of the element in the tabbing order.</dd>
- <dt>{{domxref("HTMLElement.title")}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing the text that appears in a popup box when mouse is over the element.</dd>
- <dt>{{domxref("HTMLElement.translate")}} {{experimental_inline}}</dt>
- <dd>Is a {{jsxref("Boolean")}}</dd>
-</dl>
+### Event handlers
 
-<h3 id="Event_handlers">Event handlers</h3>
+Most events properties, of the form `onXYZ`, are defined on the {{domxref("GlobalEventHandlers")}} or {{domxref("TouchEventHandlers")}}, implemented by `HTMLElement`. A few more are specific to `HTMLElement`.
 
-<p>Most events properties, of the form <code>onXYZ</code>, are defined on the {{domxref("GlobalEventHandlers")}} or {{domxref("TouchEventHandlers")}}, implemented by <code>HTMLElement</code>. A few more are specific to <code>HTMLElement</code>.</p>
+- {{ domxref("HTMLElement.oncopy") }} {{ non-standard_inline() }}
+  - : Returns the event handling code for the `copy` event ({{bug("280959")}}).
+- {{ domxref("HTMLElement.oncut") }} {{ non-standard_inline() }}
+  - : Returns the event handling code for the `cut` event ({{bug("280959")}}).
+- {{ domxref("HTMLElement.onpaste") }} {{ non-standard_inline() }}
+  - : Returns the event handling code for the `paste` event ({{bug("280959")}}).
+- {{domxref("TouchEventHandlers.ontouchstart")}} {{non-standard_inline}}
+  - : Returns the event handling code for the {{event("touchstart")}} event.
+- {{domxref("TouchEventHandlers.ontouchend")}} {{non-standard_inline}}
+  - : Returns the event handling code for the {{event("touchend")}} event.
+- {{domxref("TouchEventHandlers.ontouchmove")}} {{non-standard_inline}}
+  - : Returns the event handling code for the {{event("touchmove")}} event.
+- {{domxref("TouchEventHandlers.ontouchenter")}} {{non-standard_inline}}
+  - : Returns the event handling code for the {{event("touchenter")}} event.
+- {{domxref("TouchEventHandlers.ontouchleave")}} {{non-standard_inline}}
+  - : Returns the event handling code for the {{event("touchleave")}} event.
+- {{domxref("TouchEventHandlers.ontouchcancel")}} {{non-standard_inline}}
+  - : Returns the event handling code for the {{event("touchcancel")}} event.
 
-<dl>
- <dt>{{ domxref("HTMLElement.oncopy") }}  {{ non-standard_inline() }}</dt>
- <dd>Returns the event handling code for the <code>copy</code> event ({{bug("280959")}}).</dd>
- <dt>{{ domxref("HTMLElement.oncut") }}  {{ non-standard_inline() }}</dt>
- <dd>Returns the event handling code for the <code>cut</code> event ({{bug("280959")}}).</dd>
- <dt>{{ domxref("HTMLElement.onpaste") }} {{ non-standard_inline() }}</dt>
- <dd>Returns the event handling code for the <code>paste</code> event ({{bug("280959")}}).</dd>
- <dt>{{domxref("TouchEventHandlers.ontouchstart")}} {{non-standard_inline}}</dt>
- <dd>Returns the event handling code for the {{event("touchstart")}} event.</dd>
- <dt>{{domxref("TouchEventHandlers.ontouchend")}} {{non-standard_inline}}</dt>
- <dd>Returns the event handling code for the {{event("touchend")}} event.</dd>
- <dt>{{domxref("TouchEventHandlers.ontouchmove")}} {{non-standard_inline}}</dt>
- <dd>Returns the event handling code for the {{event("touchmove")}} event.</dd>
- <dt>{{domxref("TouchEventHandlers.ontouchenter")}} {{non-standard_inline}}</dt>
- <dd>Returns the event handling code for the {{event("touchenter")}} event.</dd>
- <dt>{{domxref("TouchEventHandlers.ontouchleave")}} {{non-standard_inline}}</dt>
- <dd>Returns the event handling code for the {{event("touchleave")}} event.</dd>
- <dt>{{domxref("TouchEventHandlers.ontouchcancel")}} {{non-standard_inline}}</dt>
- <dd>Returns the event handling code for the {{event("touchcancel")}} event.</dd>
-</dl>
+## Methods
 
-<h2 id="Methods">Methods</h2>
+_Inherits methods from its parent, {{domxref("Element")}}._
 
-<p><em>Inherits methods from its parent, {{domxref("Element")}}.</em></p>
+- {{domxref("HTMLElement.blur()")}}
+  - : Removes keyboard focus from the currently focused element.
+- {{domxref("HTMLElement.click()")}}
+  - : Sends a mouse click event to the element.
+- {{domxref("HTMLElement.focus()")}}
+  - : Makes the element the current keyboard focus.
+- {{domxref("HTMLElement.forceSpellCheck()")}} {{experimental_inline}}
+  - : Makes the spell checker runs on the element.
 
-<dl>
- <dt>{{domxref("HTMLElement.blur()")}}</dt>
- <dd>Removes keyboard focus from the currently focused element.</dd>
- <dt>{{domxref("HTMLElement.click()")}}</dt>
- <dd>Sends a mouse click event to the element.</dd>
- <dt>{{domxref("HTMLElement.focus()")}}</dt>
- <dd>Makes the element the current keyboard focus.</dd>
- <dt>{{domxref("HTMLElement.forceSpellCheck()")}} {{experimental_inline}}</dt>
- <dd>Makes the spell checker runs on the element.</dd>
-</dl>
+## Specifications
 
-<h2 id="Specifications">Specifications</h2>
+| Specification                                                                                                    | Status                           | Comment                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSSOM View', '#extensions-to-the-htmlelement-interface', 'HTMLElement')}} | {{Spec2('CSSOM View')}} | Added the following properties: `offsetParent`, `offsetTop`, `offsetLeft`, `offsetWidth`, and `offsetHeight`.                                                                                                                                                                                                                                                                                                                       |
+| {{SpecName('HTML WHATWG', 'elements.html#htmlelement', 'HTMLElement')}}                 | {{Spec2('HTML WHATWG')}} | Added the following properties: `translate`, `itemScope`, `itemType`, `itemId`, `itemRef`, `itemProp`, `properties`, and `itemValue`. Added the following method: `forceSpellcheck()`. Moved the `onXYZ` attributes to the {{domxref("GlobalEventHandlers")}} interface and added an inheritance from it.                                                                                                                 |
+| {{SpecName('HTML5 W3C', 'dom.html#htmlelement', 'HTMLElement')}}                             | {{Spec2('HTML5 W3C')}}     | Added the following properties: `dataset`, `hidden`, `tabindex`, `accessKey`, `accessKeyLabel`, `draggable`, `dropzone`, `contentEditable`, `isContentEditable`, `contextMenu`, `spellcheck`, `commandType`, `commandLabel`, `commandIcon`, `commandHidden`, `commandDisabled`, `commandChecked`, `style`, and all the `onXYZ` properties. Moved the `id` and `className` properties to the {{domxref("Element")}} interface. |
+| {{SpecName('DOM2 HTML', 'html.html#ID-011100101', 'HTMLElement')}}                         | {{Spec2('DOM2 HTML')}}     | No change from {{SpecName('DOM2 HTML')}}                                                                                                                                                                                                                                                                                                                                                                                     |
+| {{SpecName('DOM1', 'level-one-html.html#ID-011100101', 'HTMLElement')}}                 | {{Spec2('DOM1')}}         | Initial definition.                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#extensions-to-the-htmlelement-interface', 'HTMLElement')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td>Added the following properties: <code>offsetParent</code>, <code>offsetTop</code>, <code>offsetLeft</code>, <code>offsetWidth</code>, and <code>offsetHeight</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'elements.html#htmlelement', 'HTMLElement')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Added the following properties: <code>translate</code>, <code>itemScope</code>, <code>itemType</code>, <code>itemId</code>, <code>itemRef</code>, <code>itemProp</code>, <code>properties</code>, and <code>itemValue</code>.<br>
-    Added the following method: <code>forceSpellcheck()</code>.<br>
-    Moved the <code>onXYZ</code> attributes to the {{domxref("GlobalEventHandlers")}} interface and added an inheritance from it.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'dom.html#htmlelement', 'HTMLElement')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Added the following properties: <code>dataset</code>, <code>hidden</code>, <code>tabindex</code>, <code>accessKey</code>, <code>accessKeyLabel</code>, <code>draggable</code>, <code>dropzone</code>, <code>contentEditable</code>, <code>isContentEditable</code>, <code>contextMenu</code>, <code>spellcheck</code>, <code>commandType</code>, <code>commandLabel</code>, <code>commandIcon</code>, <code>commandHidden</code>, <code>commandDisabled</code>, <code>commandChecked</code>, <code>style</code>, and all the <code>onXYZ</code> properties.<br>
-    Moved the <code>id</code> and <code>className</code> properties to the {{domxref("Element")}} interface.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-011100101', 'HTMLElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>No change from {{SpecName('DOM2 HTML')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-011100101', 'HTMLElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.HTMLElement")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Element")}}</li>
-</ul>
+- {{domxref("Element")}}

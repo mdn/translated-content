@@ -11,53 +11,34 @@ tags:
   - ServiceWorkers
 translation_of: Web/API/ServiceWorkerGlobalScope/clients
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>A propriedade somente-leitura <strong><code>clients</code></strong> da interface {{domxref("ServiceWorkerGlobalScope")}} retorna os objetos dos <a href="https://developer.mozilla.org/en-US/docs/Web/API/Clients" title="The ServiceWorkerClients interface of the ServiceWorker API represents a container for a list of ServiceWorkerClient objects."><code>Clients</code></a> associatos ao <em>service worker</em>.</p>
+A propriedade somente-leitura **`clients`** da interface {{domxref("ServiceWorkerGlobalScope")}} retorna os objetos dos [`Clients`](/pt-BR/docs/Web/API/Clients "The ServiceWorkerClients interface of the ServiceWorker API represents a container for a list of ServiceWorkerClient objects.") associatos ao _service worker_.
 
-<h2 id="Syntax" name="Syntax" style="line-height: 30px; font-size: 2.14285714285714rem;">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox" style="font-size: 14px;">swClients = self.clients
-</pre>
+```
+swClients = self.clients
+```
 
-<h3 id="Valor">Valor</h3>
+### Valor
 
-<p>O objeto {{domxref("Clients")}} associado ao <em>service worker</em> específico.</p>
+O objeto {{domxref("Clients")}} associado ao _service worker_ específico.
 
-<h2 id="Especificações" style="line-height: 30px; font-size: 2.14285714285714rem;">Especificações</h2>
+## Especificações
 
-<div> </div>
+| Specification                                                                                                                                    | Status                               | Comment             |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
+| {{SpecName('Service Workers', '#service-worker-global-scope-clients', 'ServiceWorkerRegistration.clients')}} | {{Spec2('Service Workers')}} | Initial definition. |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col"><font face="Open Sans, sans-serif"><span style="font-weight: normal;">Specification</span></font></th>
-   <th scope="col"><font face="Open Sans, sans-serif"><span style="font-weight: normal;">Status</span></font></th>
-   <th scope="col"><font face="Open Sans, sans-serif"><span style="font-weight: normal;">Comment</span></font></th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#service-worker-global-scope-clients', 'ServiceWorkerRegistration.clients')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.<br>
-     </td>
-  </tr>
- </tbody>
-</table>
+## Compatibilidade
 
-<h2 id="Compatibilidade">Compatibilidade</h2>
+{{Compat("api.ServiceWorkerGlobalScope.clients")}}
 
-<div>
+## Veja também
 
-
-<p>{{Compat("api.ServiceWorkerGlobalScope.clients")}}</p>
-</div>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
-</ul>
+- [Using Service Workers](/pt-BR/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Using web workers](/pt-BR/docs/Web/Guide/Performance/Using_web_workers)

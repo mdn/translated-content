@@ -5,103 +5,78 @@ tags:
   - Web Performance API
 translation_of: Web/API/Navigation_timing_API
 ---
-<p>A <strong>API Navigation Timing</strong> fornece dados que podem ser usados para medir a performance de um website. Diferente de outros mecanismos baseados em Javascript que já foram usados para o mesmo propósito, esta API pode fornecer dados sobre a latência do começo ao fim que podem ser mais precisas e relevantes.</p>
+A **API Navigation Timing** fornece dados que podem ser usados para medir a performance de um website. Diferente de outros mecanismos baseados em Javascript que já foram usados para o mesmo propósito, esta API pode fornecer dados sobre a latência do começo ao fim que podem ser mais precisas e relevantes.
 
-<p>O exemplo a seguir mostra como você pode medir o tempo de carregamento percebido:</p>
+O exemplo a seguir mostra como você pode medir o tempo de carregamento percebido:
 
-<pre>function onLoad() {
+```
+function onLoad() {
   var now = new Date().getTime();
   var page_load_time = now - performance.timing.navigationStart;
   console.log("Tempo de carregamento percebido pelo usuário: " + page_load_time);
 }
-</pre>
+```
 
-<p>Existem muitos eventos medidos em milisegundos que podem ser acessados através da interface {{domxref("PerformanceTiming")}} interface. A lista de eventos na ordem em que ocorrem são:</p>
+Existem muitos eventos medidos em milisegundos que podem ser acessados através da interface {{domxref("PerformanceTiming")}} interface. A lista de eventos na ordem em que ocorrem são:
 
-<ul>
- <li>navigationStart</li>
- <li>unloadEventStart</li>
- <li>unloadEventEnd</li>
- <li>redirectStart</li>
- <li>redirectEnd</li>
- <li>fetchStart</li>
- <li>domainLookupStart</li>
- <li>domainLookupEnd</li>
- <li>connectStart</li>
- <li>connectEnd</li>
- <li>secureConnectionStart</li>
- <li>requestStart</li>
- <li>responseStart</li>
- <li>responseEnd</li>
- <li>domLoading</li>
- <li>domInteractive</li>
- <li>domContentLoadedEventStart</li>
- <li>domContentLoadedEventEnd</li>
- <li>domComplete</li>
- <li>loadEventStart</li>
- <li>loadEventEnd</li>
-</ul>
+- navigationStart
+- unloadEventStart
+- unloadEventEnd
+- redirectStart
+- redirectEnd
+- fetchStart
+- domainLookupStart
+- domainLookupEnd
+- connectStart
+- connectEnd
+- secureConnectionStart
+- requestStart
+- responseStart
+- responseEnd
+- domLoading
+- domInteractive
+- domContentLoadedEventStart
+- domContentLoadedEventEnd
+- domComplete
+- loadEventStart
+- loadEventEnd
 
-<p>O objeto <code>window.performance.navigation</code> guarda dois atributos que podem ser usados para saber se o carregamento da página é iniciada por um redirecionamento, pelo botão voltar/avançar ou pela URL mesmo.</p>
+O objeto `window.performance.navigation` guarda dois atributos que podem ser usados para saber se o carregamento da página é iniciada por um redirecionamento, pelo botão voltar/avançar ou pela URL mesmo.
 
-<p>window.performance.navigation.type:</p>
+window\.performance.navigation.type:
 
-<table class="standard-table" style="font-size: 14px;">
- <thead>
-  <tr>
-   <th scope="col">Constante</th>
-   <th scope="col">Valor</th>
-   <th scope="col">Descrição</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a name="const_next"><code>TYPE_NAVIGATENEXT</code></a></td>
-   <td>0</td>
-   <td>Navegação iniciada pelo clique em um link, ou pela entrada da URL na barra de endereços, ou envio de formulário, ou inicializada através da operação de um script diferente que os usados por TYPE_RELOAD e TYPE_BACK_FORWARD como listado abaixo.</td>
-  </tr>
-  <tr>
-   <td><a name="const_next_no_duplicate"><code>TYPE_RELOAD</code></a></td>
-   <td>1</td>
-   <td>Navegação através da operação de recarregamento ou pelo método location.reload().</td>
-  </tr>
-  <tr>
-   <td><a name="const_prev"><code>TYPE_BACK_FORWARD</code></a></td>
-   <td>2</td>
-   <td>Navegação através de uma operação de histórico.</td>
-  </tr>
-  <tr>
-   <td><a name="const_prev_no_duplicate"><code>TYPE_UNDEFINED</code></a></td>
-   <td>255</td>
-   <td>Qualquer tipo de navegação não definida pelos valores acima.</td>
-  </tr>
- </tbody>
-</table>
+| Constante           | Valor | Descrição                                                                                                                                                                                                                                          |
+| ------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `TYPE_NAVIGATENEXT` | 0     | Navegação iniciada pelo clique em um link, ou pela entrada da URL na barra de endereços, ou envio de formulário, ou inicializada através da operação de um script diferente que os usados por TYPE_RELOAD e TYPE_BACK_FORWARD como listado abaixo. |
+| `TYPE_RELOAD`       | 1     | Navegação através da operação de recarregamento ou pelo método location.reload().                                                                                                                                                                  |
+| `TYPE_BACK_FORWARD` | 2     | Navegação através de uma operação de histórico.                                                                                                                                                                                                    |
+| `TYPE_UNDEFINED`    | 255   | Qualquer tipo de navegação não definida pelos valores acima.                                                                                                                                                                                       |
 
-<p><code>window.performance.navigation.redirectCount</code> indicará, se houver, quantos redirecionamentos aconteceram até que a página final seja alcançada.</p>
+`window.performance.navigation.redirectCount` indicará, se houver, quantos redirecionamentos aconteceram até que a página final seja alcançada.
 
-<p>A API Navigation Timing pode ser usada para colher dados da performance do lado do cliente enviado para um servidor via XHR tanto quanto os dados medidos que eram muito dificultosos de medir de outras maneiras como o tempo de "descarga" de uma página anterior, tempo de look up do dominio, tempo total do window.onload total time, etc.</p>
+A API Navigation Timing pode ser usada para colher dados da performance do lado do cliente enviado para um servidor via XHR tanto quanto os dados medidos que eram muito dificultosos de medir de outras maneiras como o tempo de "descarga" de uma página anterior, tempo de look up do dominio, tempo total do window\.onload total time, etc.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>Calculando o tempo total necessário para carregar uma página:</p>
+Calculando o tempo total necessário para carregar uma página:
 
-<pre>var perfData = window.performance.timing;
+```
+var perfData = window.performance.timing;
 var pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
-</pre>
+```
 
-<p>Calculando os tempos de resposta da requisição:</p>
+Calculando os tempos de resposta da requisição:
 
-<pre>var connectTime = perfData.responseEnd - perfData.requestStart;</pre>
+```
+var connectTime = perfData.responseEnd - perfData.requestStart;
+```
 
-<h3 id="Browser_Compatibility" name="Browser_Compatibility">Links</h3>
+### Links
 
-<ul>
- <li><a class="external" href="http://webtimingdemo.appspot.com/">Test Page</a></li>
- <li><a class="external" href="http://w3c-test.org/webperf/specs/NavigationTiming/">http://w3c-test.org/webperf/specs/NavigationTiming/</a></li>
- <li><a class="external" href="http://www.w3.org/TR/navigation-timing/">http://www.w3.org/TR/navigation-timing/</a></li>
-</ul>
+- [Test Page](http://webtimingdemo.appspot.com/)
+- <http://w3c-test.org/webperf/specs/NavigationTiming/>
+- <http://www.w3.org/TR/navigation-timing/>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibillidade de Navegadores</h2>
+## Compatibillidade de Navegadores
 
 {{Compat("api.PerformanceNavigationTiming")}}

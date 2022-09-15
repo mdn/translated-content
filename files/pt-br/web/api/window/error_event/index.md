@@ -9,90 +9,75 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onerror
 original_slug: Web/API/GlobalEventHandlers/onerror
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>Um <a href="/en-US/docs/Web/Guide/Events/Event_handlers">event handler</a> para o evento <code><a href="/en-US/docs/Web/Events/error">error</a></code> . Eventos de erro são disparados contra diversos tipos de alvos, para diferentes tipos de erros: </p>
+Um [event handler](/pt-BR/docs/Web/Guide/Events/Event_handlers) para o evento [`error`](/en-US/docs/Web/Events/error) . Eventos de erro são disparados contra diversos tipos de alvos, para diferentes tipos de erros:
 
-<ul>
- <li>Quando um <strong>erro de execução (runtime error) de JavaScript</strong> (incluindo erros de sintaxe) ocorrem, um evento <code><a href="/en-US/docs/Web/Events/error">error</a></code> usando a interface {{domxref("ErrorEvent")}} é disparado  no  {{domxref("window")}} e <code>window.onerror()</code> é invocado.</li>
- <li>Quando um recurso (como um {{HTMLElement("img")}} ou {{HTMLElement("script")}}) <strong>falha na inicialização</strong>, um evento <code><a href="/en-US/docs/Web/Events/error">error</a></code> usando a interface {{domxref("Event")}} é disparado no elemento , que inicializa o load e o <code>onerror()</code> handler do elemento é invocado. Esse evento de erro emergem para a janela, mas (pelo menos no Firefox) pode ser manipulado com uma captura única {{domxref("window.addEventListener")}}.</li>
-</ul>
+- Quando um **erro de execução (runtime error) de JavaScript** (incluindo erros de sintaxe) ocorrem, um evento [`error`](/en-US/docs/Web/Events/error) usando a interface {{domxref("ErrorEvent")}} é disparado no {{domxref("window")}} e `window.onerror()` é invocado.
+- Quando um recurso (como um {{HTMLElement("img")}} ou {{HTMLElement("script")}}) **falha na inicialização**, um evento [`error`](/en-US/docs/Web/Events/error) usando a interface {{domxref("Event")}} é disparado no elemento , que inicializa o load e o `onerror()` handler do elemento é invocado. Esse evento de erro emergem para a janela, mas (pelo menos no Firefox) pode ser manipulado com uma captura única {{domxref("window.addEventListener")}}.
 
-<p>Instalando um manipulador de eventos de erro global é útil para compilação automatizada de relatórios de erro. </p>
+Instalando um manipulador de eventos de erro global é útil para compilação automatizada de relatórios de erro.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<p>Por questões históricas, diferentes argumentos são passados para os manipuladores window.onerror e element.onerror;</p>
+Por questões históricas, diferentes argumentos são passados para os manipuladores window\.onerror e element.onerror;
 
-<h3 id="window.onerror">window.onerror</h3>
+### window\.onerror
 
-<pre class="brush: js">window.onerror = function(message, source, lineno, colno, error) { ... }
-</pre>
+```js
+window.onerror = function(message, source, lineno, colno, error) { ... }
+```
 
-<p>Parâmetros da função:</p>
+Parâmetros da função:
 
-<ul>
- <li><code>message</code>: mensagem de erro (string). Disponível como <code>event</code> (sic!)  no manipulador HTML <code>onerror=""</code> .</li>
- <li><code>source</code>: URL do script onde o erro foi disparado(string)</li>
- <li><code>lineno</code>: Número da linha onde o evento foi disparado (number)</li>
- <li><code>colno</code>: Número da coluna para a linha onde o evento ocorreu (number) {{gecko_minversion_inline("31.0")}}</li>
- <li><code>error</code>: <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error Object</a> (object) {{gecko_minversion_inline("31.0")}}</li>
-</ul>
+- `message`: mensagem de erro (string). Disponível como `event` (sic!) no manipulador HTML `onerror=""` .
+- `source`: URL do script onde o erro foi disparado(string)
+- `lineno`: Número da linha onde o evento foi disparado (number)
+- `colno`: Número da coluna para a linha onde o evento ocorreu (number) {{gecko_minversion_inline("31.0")}}
+- `error`: [Error Object](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Error) (object) {{gecko_minversion_inline("31.0")}}
 
-<p> </p>
+Quando a função retorna verdadeira, ela evita o disparo do manipulador de evento padrão
 
-<p>Quando a função retorna verdadeira, ela evita o disparo do manipulador de evento padrão </p>
+### element.onerror
 
-<h3 id="element.onerror">element.onerror</h3>
+```js
+element.onerror = function(event) { ... }
+```
 
-<pre class="brush: js">element.onerror = function(event) { ... }
-</pre>
+`element.onerror` aceita uma função dom um único argumento do tipo {{domxref("Event")}}.
 
-<p><code>element.onerror</code> aceita uma função dom um único argumento do tipo {{domxref("Event")}}.</p>
+## Notas
 
-<h2 id="Notas">Notas</h2>
+Quando um erro de sintaxe**(?)** ocorre em um script, carregado de uma [origem diferente](/pt-BR/docs/Web/Security/Same-origin_policy), os detalhes do erro de sintaxe não são reportados para previnir vazamento de informações (veja {{bug("363897")}}). Ao invés de exibir simplesmente **`"Script error." (erro de script)`**, este comportamento pode ser sobrescrito em alguns navegadores usando o atributo `{{htmlattrxref("crossorigin","script")}}` no {{HTMLElement("script")}} e tendo o servidor enviado os cabeçalhos HTTP CORS apropriados. Uma solução alternativa é isolar o "Script error." e manipulá-lo sabendo que o detalhe do erro é visível somente no console do navegador e não acessível através do JavaScript.
 
-<p>Quando um erro de sintaxe<strong>(?)</strong> ocorre em um script, carregado de uma <a href="/en-US/docs/Web/Security/Same-origin_policy">origem diferente</a>, os detalhes do erro de sintaxe não são reportados para previnir vazamento de informações (veja {{bug("363897")}}). Ao invés de exibir simplesmente <code><strong>"Script error." (erro de script)</strong></code>, este comportamento pode ser sobrescrito em alguns navegadores usando o atributo  <code>{{htmlattrxref("crossorigin","script")}}</code> no {{HTMLElement("script")}} e tendo o servidor enviado os cabeçalhos HTTP CORS apropriados.  Uma solução alternativa é isolar o "Script error." e manipulá-lo sabendo que o detalhe do erro é visível somente no console do navegador e não acessível através do JavaScript.</p>
-
-<pre class="brush: js">window.onerror = function (msg, url, lineNo, columnNo, error) {
+```js
+window.onerror = function (msg, url, lineNo, columnNo, error) {
     var string = msg.toLowerCase();
     var substring = "script error";
-    if (string.indexOf(substring) &gt; -1){
+    if (string.indexOf(substring) > -1){
         alert('Script Error: See Browser Console for Detail');
     } else {
         alert(msg, url, lineNo, columnNo, error);
     }
   return false;
-};</pre>
+};
+```
 
-<p>Quando usamos a marcação HTML inline (<code>&lt;body onerror="alert('an error occurred')"&gt;</code>), a especificação HTML requer argumentos passados para o <code>onerror</code> identificados como <code>event</code>, <code>source</code>, <code>lineno</code>, <code>colno</code>, <code>error</code>. Os navegadors que não implementam este requerimento, podem ainda serem obtidos por <code>arguments[0]</code> até <code>arguments[2]</code>.</p>
+Quando usamos a marcação HTML inline (`<body onerror="alert('an error occurred')">`), a especificação HTML requer argumentos passados para o `onerror` identificados como `event`, `source`, `lineno`, `colno`, `error`. Os navegadors que não implementam este requerimento, podem ainda serem obtidos por `arguments[0]` até `arguments[2]`.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onerror','onerror')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                    | Status                           | Comentário |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG','webappapis.html#handler-onerror','onerror')}} | {{Spec2('HTML WHATWG')}} |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>Antes do Firefox 14, quando um {{HTMLElement("script")}} falhava na inicialização, <code>window.onerror</code> era invocada com a mensagem <strong>"Error loading script"(erro de leitura de script)</strong>. Isto foi corrigido no {{bug("737087")}}, agora <code>scriptElement.onerror</code> é chamado ao invés disto.</p>
+Antes do Firefox 14, quando um {{HTMLElement("script")}} falhava na inicialização, `window.onerror` era invocada com a mensagem **"Error loading script"(erro de leitura de script)**. Isto foi corrigido no {{bug("737087")}}, agora `scriptElement.onerror` é chamado ao invés disto.
 
-<p>Desde o Firefox 31, os últimos 2 argumentos (<code>colno</code> and <code>error</code>) foram adicionados, o que significa que você tem acesso a pilha de rastreamento de um erro de script através do <code>window.onerror</code> por intermédio do <code>Error</code> object ({{bug("355430")}}.)</p>
+Desde o Firefox 31, os últimos 2 argumentos (`colno` and `error`) foram adicionados, o que significa que você tem acesso a pilha de rastreamento de um erro de script através do `window.onerror` por intermédio do `Error` object ({{bug("355430")}}.)
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="http://blog.getsentry.com/2016/01/04/client-javascript-reporting-window-onerror.html">Capture e reporte erros JavaScript com window.onerror (blog.getsentry.com, 2016)</a></li>
- <li><a href="https://danlimerick.wordpress.com/2014/01/18/how-to-catch-javascript-errors-with-window-onerror-even-on-chrome-and-firefox/">Como capturar erros JavaScript com window.onerror (mesmo no Chrome ou Firefox) (danlimerick.wordpress.com, 2014)</a></li>
-</ul>
+- [Capture e reporte erros JavaScript com window.onerror (blog.getsentry.com, 2016)](http://blog.getsentry.com/2016/01/04/client-javascript-reporting-window-onerror.html)
+- [Como capturar erros JavaScript com window.onerror (mesmo no Chrome ou Firefox) (danlimerick.wordpress.com, 2014)](https://danlimerick.wordpress.com/2014/01/18/how-to-catch-javascript-errors-with-window-onerror-even-on-chrome-and-firefox/)

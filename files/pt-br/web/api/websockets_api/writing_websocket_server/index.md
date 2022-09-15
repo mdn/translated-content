@@ -4,43 +4,40 @@ slug: Web/API/WebSockets_API/Writing_WebSocket_server
 translation_of: Web/API/WebSockets_API/Writing_WebSocket_server
 original_slug: WebSockets/Writing_WebSocket_server
 ---
-<h2 id="Introdução">Introdução</h2>
+## Introdução
 
-<p>Se você quiser usar uma API WebSocket, você precisara ter um servidor. Neste artigo vou mostrar como escrever um WebSocket em C#. Você pode fazer isso em qualquer linguagem server-side, mas para manter as coisas simples e mais compreensíveis eu escolhi uma linguagem Microsoft.</p>
+Se você quiser usar uma API WebSocket, você precisara ter um servidor. Neste artigo vou mostrar como escrever um WebSocket em C#. Você pode fazer isso em qualquer linguagem server-side, mas para manter as coisas simples e mais compreensíveis eu escolhi uma linguagem Microsoft.
 
-<p>Este servidor está em conformidade com a <a href="http://tools.ietf.org/html/rfc6455">RFC 6455</a>, por isso irá tratar apenas as conexões com os navegadores Chrome versão 16, Firefox 11, IE 10 ou superior. </p>
+Este servidor está em conformidade com a [RFC 6455](http://tools.ietf.org/html/rfc6455), por isso irá tratar apenas as conexões com os navegadores Chrome versão 16, Firefox 11, IE 10 ou superior.
 
-<h2 id="Primeiros_passos">Primeiros passos</h2>
+## Primeiros passos
 
-<p>Os WebSocket´s se comunicam através de uma conexão TCP (Transmission Control Protocol), felizmente o C# possui a classe <a href="https://msdn.microsoft.com/pt-br/library/system.net.sockets.tcplistener.aspx">TcpListener</a> que, como o nome sugere, tem a função de escutar (Listener) as comunicações via TCP. A classe TcpListener está no namespace System.Net.Sockets.</p>
+Os WebSocket´s se comunicam através de uma conexão TCP (Transmission Control Protocol), felizmente o C# possui a classe [TcpListener](https://msdn.microsoft.com/pt-br/library/system.net.sockets.tcplistener.aspx) que, como o nome sugere, tem a função de escutar (Listener) as comunicações via TCP. A classe TcpListener está no namespace System.Net.Sockets.
 
-<div class="note">
-<p><span style="line-height: 1.572;">É uma boa idéia usar a palavra chave using para escrever menos. Isso significa que não é preciso você reescrever o namespace toda vez que usar uma classe dele.</span></p>
-</div>
+> **Nota:** É uma boa idéia usar a palavra chave using para escrever menos. Isso significa que não é preciso você reescrever o namespace toda vez que usar uma classe dele.
 
-<h3 id="TcpListener">TcpListener</h3>
+### TcpListener
 
-<p>Construtor:</p>
+Construtor:
 
-<pre class="brush: cpp">TcpListener(System.Net.IPAddress localaddr, int port)</pre>
+```cpp
+TcpListener(System.Net.IPAddress localaddr, int port)
+```
 
-<p>Aqui você define onde o servidor será acessível.</p>
+Aqui você define onde o servidor será acessível.
 
-<div class="note">
-<p><span style="line-height: 1.572;">Para setar facilmente o tipo esperado no primeiro parâmetro, use o método estático Parse da classe IPAddress.</span></p>
-</div>
+> **Nota:** Para setar facilmente o tipo esperado no primeiro parâmetro, use o método estático Parse da classe IPAddress.
 
-<p><span style="line-height: 1.572;">Métodos</span><span style="line-height: 1.572;">:</span></p>
+Métodos:
 
-<ul>
- <li><span style="line-height: 1.572;">Start()</span></li>
- <li><span style="line-height: 1.572;">System.Net.Sockets.<a href="http://msdn.microsoft.com/en-us/library/system.net.sockets.tcpclient.aspx">TcpClient</a> AcceptTcpClient()<br>
-  Espera por uma conexão TCP, aceita a conexão e retorna um objeto TcpClient.</span></li>
-</ul>
+- Start()
+- System.Net.Sockets.[TcpClient](http://msdn.microsoft.com/en-us/library/system.net.sockets.tcpclient.aspx) AcceptTcpClient()
+  Espera por uma conexão TCP, aceita a conexão e retorna um objeto TcpClient.
 
-<p><span style="line-height: 1.572;">Veja como usar o que aprendemos:</span></p>
+Veja como usar o que aprendemos:
 
-<pre class="brush: cpp">​using System.Net.Sockets;
+```cpp
+​using System.Net.Sockets;
 using System.Net;
 using System;
 
@@ -56,39 +53,40 @@ class Server {
         Console.WriteLine("A client connected.");
     }
 }
-</pre>
+```
 
-<h3 id="TcpClient"><span style="line-height: 1.572;">TcpClient</span></h3>
+### TcpClient
 
-<p>Métodos:</p>
+Métodos:
 
-<ul>
- <li><code>System.Net.Sockets.<a href="http://msdn.microsoft.com/en-us/library/system.net.sockets.networkstream.aspx">NetworkStream</a> GetStream()</code><br>
-  Obtém o fluxo (stream) do canal de comunicação. Ambos os lados do canal de comunicação possuem a capacidade de ler e escrever.</li>
-</ul>
+- `System.Net.Sockets.NetworkStream GetStream()`
+  Obtém o fluxo (stream) do canal de comunicação. Ambos os lados do canal de comunicação possuem a capacidade de ler e escrever.
 
-<p>Propriedades:</p>
+Propriedades:
 
-<ul>
- <li><code>int Available</code><br>
-  Este é o numero de bytes de dados que foram enviados. o valor é zero enquanto <em>NetworkStream.DataAvailable</em> for <em>falso</em>.</li>
-</ul>
+- `int Available`
+  Este é o numero de bytes de dados que foram enviados. o valor é zero enquanto _NetworkStream.DataAvailable_ for _falso_.
 
-<h3 id="NetworkStream">NetworkStream</h3>
+### NetworkStream
 
-<p>Métodos:</p>
+Métodos:
 
-<pre class="brush: cpp">Write(Byte[] buffer, int offset, int size)</pre>
+```cpp
+Write(Byte[] buffer, int offset, int size)
+```
 
-<p>Grava bytes do buffer, <em>offset </em>e <em>size </em>determinam o tamanho da mensagem.</p>
+Grava bytes do buffer, _offset_ e _size_ determinam o tamanho da mensagem.
 
-<pre><span class="brush: cpp" style="line-height: 1.572;">Read(Byte[] buffer, int offset, int size)</span></pre>
+```
+Read(Byte[] buffer, int offset, int size)
+```
 
-<p>Lê bytes para o <em>buffer, offset e size </em>determinam o tamanho da mensagem.<em> </em></p>
+Lê bytes para o _buffer, offset e size_ determinam o tamanho da mensagem.\_\_
 
-<p>Vamos estender nosso exemplo.</p>
+Vamos estender nosso exemplo.
 
-<pre class="brush: cpp">TcpClient client = server.AcceptTcpClient();
+```cpp
+TcpClient client = server.AcceptTcpClient();
 
 Console.WriteLine("A client connected.");
 
@@ -101,17 +99,17 @@ while (true) {
     Byte[] bytes = new Byte[client.Available];
 
     stream.Read(bytes, 0, bytes.Length);
-}</pre>
+}
+```
 
-<h2 id="Handshaking">Handshaking</h2>
+## Handshaking
 
-<p>Quando um cliente se conecta a um servidor, ele envia uma solicitação GET para atualizar a conexão com o WebSocket a partir de uma simples requisição HTTP. Isto é conhecido como handshaking (aperto de mão).</p>
+Quando um cliente se conecta a um servidor, ele envia uma solicitação GET para atualizar a conexão com o WebSocket a partir de uma simples requisição HTTP. Isto é conhecido como handshaking (aperto de mão).
 
-<div class="warning">
-<p>Este código tem um defeito. Digamos que a propriedade client.<code>Available</code> retorna o valor 2 porque somente a requisição GET está disponível até agora. a expressão regular iria falhar mesmo que os dados recebidos sejam perfeitamente válidos.</p>
-</div>
+> **Aviso:** Este código tem um defeito. Digamos que a propriedade client.`Available` retorna o valor 2 porque somente a requisição GET está disponível até agora. a expressão regular iria falhar mesmo que os dados recebidos sejam perfeitamente válidos.
 
-<pre class="brush: cpp">using System.Text;
+```cpp
+using System.Text;
 using System.Text.RegularExpressions;
 
 Byte[] bytes = new Byte[client.Available];
@@ -125,20 +123,20 @@ if (new Regex("^GET").IsMatch(data)) {
 
 } else {
 
-}</pre>
+}
+```
 
-<p>Criar a resposta é mais fácil do que entender porque você deve fazê-lo desta forma.</p>
+Criar a resposta é mais fácil do que entender porque você deve fazê-lo desta forma.
 
-<p>Você deve,</p>
+Você deve,
 
-<ol>
- <li>Obter o valor do cabeçalho da requisição <em>Sec-WebSocket-Key</em> sem qualquer espaço à direita e à esquerda;</li>
- <li>Concatenar com "258EAFA5-E914-47DA-95CA-C5AB0DC85B11";</li>
- <li>Calcular o código SHA-1 e Base64 dele;</li>
- <li>Reescreva no cabeçalho de resposta o valor de <em>Sec-WebSocket-Accept</em> como parte de uma resposta HTTP.</li>
-</ol>
+1.  Obter o valor do cabeçalho da requisição _Sec-WebSocket-Key_ sem qualquer espaço à direita e à esquerda;
+2.  Concatenar com "258EAFA5-E914-47DA-95CA-C5AB0DC85B11";
+3.  Calcular o código SHA-1 e Base64 dele;
+4.  Reescreva no cabeçalho de resposta o valor de _Sec-WebSocket-Accept_ como parte de uma resposta HTTP.
 
-<pre class="brush: cpp">if (new Regex("^GET").IsMatch(data)) {
+```cpp
+if (new Regex("^GET").IsMatch(data)) {
     Byte[] response = Encoding.UTF8.GetBytes("HTTP/1.1 101 Switching Protocols" + Environment.NewLine
         + "Connection: Upgrade" + Environment.NewLine
         + "Upgrade: websocket" + Environment.NewLine
@@ -153,84 +151,52 @@ if (new Regex("^GET").IsMatch(data)) {
 
     stream.Write(response, 0, response.Length);
 }
-</pre>
+```
 
-<h2 id="Decodificação_de_mensagens">Decodificação de mensagens</h2>
+## Decodificação de mensagens
 
-<p>Após um <em>handshake</em> de sucesso o cliente ponde enviar mensagens ao servidor, mas agora estas mensagens são codificadas.</p>
+Após um _handshake_ de sucesso o cliente ponde enviar mensagens ao servidor, mas agora estas mensagens são codificadas.
 
-<p>Se nós enviarmos "MDN", nós obtemos estes bytes:</p>
+Se nós enviarmos "MDN", nós obtemos estes bytes:
 
-<table>
- <tbody>
-  <tr>
-   <td>129</td>
-   <td>131</td>
-   <td>61</td>
-   <td>84</td>
-   <td>35</td>
-   <td>6</td>
-   <td>112</td>
-   <td>16</td>
-   <td>109</td>
-  </tr>
- </tbody>
-</table>
+| 129 | 131 | 61  | 84  | 35  | 6   | 112 | 16  | 109 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-<p>- 129:</p>
+\- 129:
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">FIN (Esta é toda a mensagem?)</th>
-   <th scope="col">RSV1</th>
-   <th scope="col">RSV2</th>
-   <th scope="col">RSV3</th>
-   <th scope="col">Opcode</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>1</td>
-   <td>0</td>
-   <td>0</td>
-   <td>0</td>
-   <td>0x1=0001</td>
-  </tr>
- </tbody>
-</table>
+| FIN (Esta é toda a mensagem?) | RSV1 | RSV2 | RSV3 | Opcode   |
+| ----------------------------- | ---- | ---- | ---- | -------- |
+| 1                             | 0    | 0    | 0    | 0x1=0001 |
 
-<p>FIN: Você pode enviar sua mensagem em quadros (frames), mas agora as coisas ficaram mais simples.<br>
- <span style="line-height: 1.572;">Opcode </span><em>0x1</em><span style="line-height: 1.572;"> significa que este é um texto. Veja aqui a </span><a href="http://tools.ietf.org/html/rfc6455#section-5.2" style="line-height: 1.572;">lista completa de Opcodes</a>.</p>
+FIN: Você pode enviar sua mensagem em quadros (frames), mas agora as coisas ficaram mais simples.
+Opcode _0x1_ significa que este é um texto. Veja aqui a [lista completa de Opcodes](http://tools.ietf.org/html/rfc6455#section-5.2).
 
-<p>- 131:</p>
+\- 131:
 
-<p>Se o segundo byte menos 128 estiver entre 0 e 125, este é o tamanho da mensagem. Se for 126, os 2 bytes seguintes (16-bit inteiro sem sinal) e se 127, os 8 bytes seguintes (64-bit inteiro sem sinal) são o comprimento.</p>
+Se o segundo byte menos 128 estiver entre 0 e 125, este é o tamanho da mensagem. Se for 126, os 2 bytes seguintes (16-bit inteiro sem sinal) e se 127, os 8 bytes seguintes (64-bit inteiro sem sinal) são o comprimento.
 
-<div class="note">
-<p>Eu posso escolher 128, porque o primeiro bit sempre será 1.</p>
-</div>
+> **Nota:** Eu posso escolher 128, porque o primeiro bit sempre será 1.
 
-<p>- 61, 84, 35 e 6 são os bytes de chave para decodificar. Sempre mudam.</p>
+\- 61, 84, 35 e 6 são os bytes de chave para decodificar. Sempre mudam.
 
-<p>- O restante dos bytes codificados são a mensagem<span style="line-height: 1.572;">.</span></p>
+\- O restante dos bytes codificados são a mensagem.
 
-<h3 id="Algoritmo_de_decodificação">Algoritmo de decodificação</h3>
+### Algoritmo de decodificação
 
-<p>byte decodificado = [byte codificado XOR (posição do byte codificado MOD 4º byte da chave)]</p>
+byte decodificado = \[byte codificado XOR (posição do byte codificado MOD 4º byte da chave)]
 
-<p>Exemplo em C#:</p>
+Exemplo em C#:
 
-<pre class="brush: cpp">Byte[] decoded = new Byte[3];
+```cpp
+Byte[] decoded = new Byte[3];
 Byte[] encoded = new Byte[3] {112, 16, 109};
 Byte[] key = Byte[4] {61, 84, 35, 6};
 
-for (int i = 0; i &lt; encoded.Length; i++) {
+for (int i = 0; i < encoded.Length; i++) {
     decoded[i] = (Byte)(encoded[i] ^ key[i % 4]);
-}</pre>
+}
+```
 
-<h2 id="Link_Relacionado">Link Relacionado</h2>
+## Link Relacionado
 
-<ul>
- <li><a href="/en-US/docs/WebSockets/Writing_WebSocket_servers">Writing WebSocket servers</a></li>
-</ul>
+- [Writing WebSocket servers](/pt-BR/docs/WebSockets/Writing_WebSocket_servers)

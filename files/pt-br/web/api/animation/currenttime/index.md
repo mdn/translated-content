@@ -3,58 +3,51 @@ title: Animation.currentTime
 slug: Web/API/Animation/currentTime
 translation_of: Web/API/Animation/currentTime
 ---
-<p>{{APIRef("Web Animations")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Animations")}}{{SeeCompatTable}}
 
-<p>A propriedade <code><strong>Animation</strong></code><strong><code>.currentTime</code></strong> da <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> retorna e altera o tempo atual da animação em milésimos de segundos, seja estando em execução ou pausada.</p>
+A propriedade **`Animation`\*\***`.currentTime`\*\* da [Web Animations API](/pt-BR/docs/Web/API/Web_Animations_API) retorna e altera o tempo atual da animação em milésimos de segundos, seja estando em execução ou pausada.
 
-<p>Se a animação não tem uma {{domxref("AnimationTimeline", "timeline")}}, está inativa, ou ainda não foi colocada em execução, o valor de retorno do <code>currentTime </code>será<code> null</code>. </p>
+Se a animação não tem uma {{domxref("AnimationTimeline", "timeline")}}, está inativa, ou ainda não foi colocada em execução, o valor de retorno do `currentTime `será` null`.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var<em>tempoAtual</em> = <em>Animation</em>.currentTime;
-<em>Animation</em>.currentTime =<em> novoTempo;</em></pre>
+```
+vartempoAtual = Animation.currentTime;
+Animation.currentTime = novoTempo;
+```
 
-<h3 id="Valor">Valor</h3>
+### Valor
 
-<p>Um número que representará no tempo atual da animação em milésimos de segundos, ou <code>null</code> para desativar a animação.</p>
+Um número que representará no tempo atual da animação em milésimos de segundos, ou `null` para desativar a animação.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>No <a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">jogo Drink Me/Eat Me</a>, O tamanho da Alice é animado e pode crescer ou diminuir. No início do jogo, o tamanho dela foi colocado entre os dois extremos do animation's <code>currentTime</code> no meio do <a href="/en-US/docs/Web/API/Web_Animations_API/Animation_timing_options"><code>KeyframeEffect</code>'s duration</a>, desta maneira:</p>
+No [jogo Drink Me/Eat Me](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010), O tamanho da Alice é animado e pode crescer ou diminuir. No início do jogo, o tamanho dela foi colocado entre os dois extremos do animation's `currentTime` no meio do [`KeyframeEffect`'s duration](/pt-BR/docs/Web/API/Web_Animations_API/Animation_timing_options), desta maneira:
 
-<pre class="brush: js">aliceChange<strong>.</strong>currentTime = aliceChange.effect.timing.duration / 2;</pre>
+```js
+aliceChange.currentTime = aliceChange.effect.timing.duration / 2;
+```
 
-<p>Outra forma mais genérica para encontrar o marco de 50% da animação pode ser feito da seguinte forma:</p>
+Outra forma mais genérica para encontrar o marco de 50% da animação pode ser feito da seguinte forma:
 
-<pre class="brush: js">animation.currentTime =
+```js
+animation.currentTime =
   animation.effect.getComputedTiming().delay +
-  animation.effect.getComputedTiming().activeDuration / 2;</pre>
+  animation.effect.getComputedTiming().activeDuration / 2;
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Animations', '#dom-animation-currenttime', 'currentTime')}}</td>
-   <td>{{Spec2("Web Animations")}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificações                                                                                       | Status                               | Comentário |
+| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ---------- |
+| {{SpecName('Web Animations', '#dom-animation-currenttime', 'currentTime')}} | {{Spec2("Web Animations")}} |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Animation.currentTime")}}
 
-<h2 id="Veja_também" style="line-height: 30px; font-size: 2.14285714285714rem;">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("Animation")}} para outros métodos e propriedades que você pode usar para controlar a animação da página web.</li>
- <li>{{domxref("Animation.startTime")}} para o tempo que a animação está programada começar.</li>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
-</ul>
+- {{domxref("Animation")}} para outros métodos e propriedades que você pode usar para controlar a animação da página web.
+- {{domxref("Animation.startTime")}} para o tempo que a animação está programada começar.
+- [Web Animations API](/pt-BR/docs/Web/API/Web_Animations_API)

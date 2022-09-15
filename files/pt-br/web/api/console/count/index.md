@@ -3,19 +3,20 @@ title: Console.count()
 slug: Web/API/Console/count
 translation_of: Web/API/Console/count
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>Exibe o número de vezes em que a chamada <code>count()</code> em particular foi invocada. Essa função recebe um argumento opcional <code>label</code>.</p>
+Exibe o número de vezes em que a chamada `count()` em particular foi invocada. Essa função recebe um argumento opcional `label`.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p>Se <code>label</code> é fornecido, essa função exibe o número de vezes que a função <code>count()</code> foi chamada com a respectiva label.</p>
+Se `label` é fornecido, essa função exibe o número de vezes que a função `count()` foi chamada com a respectiva label.
 
-<p>Se <code>label</code> for omitido, a função exibe o número de vezes que a função <code>count() </code>foi chamada na respectiva linha.</p>
+Se `label` for omitido, a função exibe o número de vezes que a função `count() `foi chamada na respectiva linha.
 
-<p>Por exemplo, no código abaixo:</p>
+Por exemplo, no código abaixo:
 
-<pre class="brush: js">var usuario = "";
+```js
+var usuario = "";
 
 function cumprimentar() {
   console.count();
@@ -27,21 +28,24 @@ cumprimentar();
 usario = "alice";
 cumprimentar();
 cumprimentar();
-console.count();</pre>
+console.count();
+```
 
-<p>A saída do console será algo como:</p>
+A saída do console será algo como:
 
-<pre class="eval">"&lt;no label&gt;: 1"
-"&lt;no label&gt;: 2"
-"&lt;no label&gt;: 3"
-"&lt;no label&gt;: 1"
-</pre>
+```
+"<no label>: 1"
+"<no label>: 2"
+"<no label>: 3"
+"<no label>: 1"
+```
 
-<p>Note a última linha da saída do console: a chamada individual de <code>count()</code> na linha 11 é tratada como um evento independente.</p>
+Note a última linha da saída do console: a chamada individual de `count()` na linha 11 é tratada como um evento independente.
 
-<p>Se passarmos a variável <code>usuario</code> como o argumento <code>label</code> para a primeira invocação de <code>count()</code>, e a string "alice" para a segunda:</p>
+Se passarmos a variável `usuario` como o argumento `label` para a primeira invocação de `count()`, e a string "alice" para a segunda:
 
-<pre class="brush: js">var usuario = "";
+```js
+var usuario = "";
 
 function cumprimentar() {
   console.count(usuario);
@@ -53,48 +57,37 @@ cumprimentar();
 usuario = "alice";
 cumprimentar();
 cumprimentar();
-console.count("alice");</pre>
+console.count("alice");
+```
 
-<p>Teremos uma saída assim:</p>
+Teremos uma saída assim:
 
-<pre class="eval">"bob: 1"
+```
+"bob: 1"
 "alice: 1"
 "alice: 2"
-"alice: 3"</pre>
+"alice: 3"
+```
 
-<p>Agora estamos mantendo contagens separadamente baseadas no valor de <code>label</code>. Como a label "alice" na linha 11 corresponde ao valor de <code>usuario</code> duas vezes, não é considerado um evento independente.</p>
+Agora estamos mantendo contagens separadamente baseadas no valor de `label`. Como a label "alice" na linha 11 corresponde ao valor de `usuario` duas vezes, não é considerado um evento independente.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">console.count([label]);
-</pre>
+```
+console.count([label]);
+```
 
-<h2 id="Parâmetros">Parâmetros</h2>
+## Parâmetros
 
-<dl>
- <dt><code>label</code></dt>
- <dd>Uma string. Se for fornecida, exibe o número de vezes que  <code>count()</code> foi invocada com a mesma label.</dd>
-</dl>
+- `label`
+  - : Uma string. Se for fornecida, exibe o número de vezes que `count()` foi invocada com a mesma label.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#count", "console.count()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                | Status                           | Comentário        |
+| ---------------------------------------------------------------------------- | -------------------------------- | ----------------- |
+| {{SpecName("Console API", "#count", "console.count()")}} | {{Spec2("Console API")}} | Definição inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.console.count")}}

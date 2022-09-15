@@ -3,55 +3,36 @@ title: ClipboardEvent
 slug: Web/API/ClipboardEvent
 translation_of: Web/API/ClipboardEvent
 ---
-<p>{{APIRef("Clipboard API")}} {{SeeCompatTable}}</p>
+{{APIRef("Clipboard API")}} {{SeeCompatTable}}
 
-<p>A interface <strong><code>ClipboardEvent</code></strong> representa eventos correlatos à modificação da área de transferência, i. e., eventos de cortar ({{event("cut")}}), de copiar ({{event("copy")}}), e de colar ({{event("paste")}}).</p>
+A interface **`ClipboardEvent`** representa eventos correlatos à modificação da área de transferência, i. e., eventos de cortar ({{event("cut")}}), de copiar ({{event("copy")}}), e de colar ({{event("paste")}}).
 
-<h2 id="Construtor">Construtor</h2>
+## Construtor
 
-<dl>
- <dt>{{domxref("ClipboardEvent.ClipboardEvent", "ClipboardEvent()")}}</dt>
- <dd>Cria um evento <code>ClipboardEvent</code> com os parâmetros fornecidos.</dd>
-</dl>
+- {{domxref("ClipboardEvent.ClipboardEvent", "ClipboardEvent()")}}
+  - : Cria um evento `ClipboardEvent` com os parâmetros fornecidos.
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<p><em>Ainda, propriedades herdadas de sua superclasse {{domxref("Event")}}</em>.</p>
+_Ainda, propriedades herdadas de sua superclasse {{domxref("Event")}}_.
 
-<dl>
- <dt>{{domxref("ClipboardEvent.clipboardData")}} {{readonlyInline}}</dt>
- <dd>é um objeto {{domxref("DataTransfer")}} contendo informação oriunda das operações de {{event("cut")}}, de {{event("copy")}}, ou de {{event("paste")}} iniciadas pelo usuário, juntamente com sua espécie/tipo MIME.</dd>
-</dl>
+- {{domxref("ClipboardEvent.clipboardData")}} {{readonlyInline}}
+  - : é um objeto {{domxref("DataTransfer")}} contendo informação oriunda das operações de {{event("cut")}}, de {{event("copy")}}, ou de {{event("paste")}} iniciadas pelo usuário, juntamente com sua espécie/tipo MIME.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Não há método próprio; métodos herdados de {{domxref("Event")}}</em>.</p>
+_Não há método próprio; métodos herdados de {{domxref("Event")}}_.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Clipboard API', '#clipboard-event-interfaces', 'ClipboardEvent') }}</td>
-   <td>{{ Spec2('Clipboard API') }}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                | Status                               | Comment           |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------------- |
+| {{ SpecName('Clipboard API', '#clipboard-event-interfaces', 'ClipboardEvent') }} | {{ Spec2('Clipboard API') }} | Definição inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("api.ClipboardEvent")}}</p>
+{{Compat("api.ClipboardEvent")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Copy-related events: {{event("copy")}}, {{event("cut")}}, {{event("paste")}}</li>
-</ul>
+- Copy-related events: {{event("copy")}}, {{event("cut")}}, {{event("paste")}}

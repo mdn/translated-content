@@ -3,76 +3,57 @@ title: MouseEvent.clientX
 slug: Web/API/MouseEvent/clientX
 translation_of: Web/API/MouseEvent/clientX
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>O <strong><code>clientX</code></strong> é uma propriedade somente de leitura da interface {{domxref("MouseEvent")}} que fornece as coordenadas horizontais dentro da área do aplicativo do cliente em que o evento ocorreu (diferente das coordenadas dentro da página). Por exemplo, clicando no canto superior esquerdo da área do cliente sempre irá resultar em um evento de mouse com um valor <code>clientX</code> de 0, independentemente se a página foi rolada horizontalmente. Originalmente, essa propriedade era definida como o número inteiro <code>long</code>. O Módulo de Visualização CSSOM o redefiniu como a fração<code>double</code>. Veja a seção de compatibilidade do Navegador para detalhes.</p>
+O **`clientX`** é uma propriedade somente de leitura da interface {{domxref("MouseEvent")}} que fornece as coordenadas horizontais dentro da área do aplicativo do cliente em que o evento ocorreu (diferente das coordenadas dentro da página). Por exemplo, clicando no canto superior esquerdo da área do cliente sempre irá resultar em um evento de mouse com um valor `clientX` de 0, independentemente se a página foi rolada horizontalmente. Originalmente, essa propriedade era definida como o número inteiro `long`. O Módulo de Visualização CSSOM o redefiniu como a fração`double`. Veja a seção de compatibilidade do Navegador para detalhes.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var <em>x</em> = <em>instanceOfMouseEvent</em>.clientX
-</pre>
+```
+var x = instanceOfMouseEvent.clientX
+```
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>Um número</p>
+Um número
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;clientX/clientY example&lt;/title&gt;
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>clientX/clientY example</title>
 
-    &lt;script&gt;
+    <script>
       function showCoords(evt){
         alert(
           "clientX value: " + evt.clientX + "\n" +
           "clientY value: " + evt.clientY + "\n"
         );
       }
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body onmousedown="showCoords(event)"&gt;
-    &lt;p&gt;Para mostrar as coordenadas do mouse em qualquer lugar da página.&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+    </script>
+  </head>
+  <body onmousedown="showCoords(event)">
+    <p>Para mostrar as coordenadas do mouse em qualquer lugar da página.</p>
+  </body>
+</html>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM View','#dom-mouseevent-clientx', 'clientX')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td>Redefine {{domxref("MouseEvent")}} de<code>long</code> para <code>double</code>. </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events','#widl-MouseEvent-clientX','MouseEvent.clientX')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>Nenhuma mudança de {{SpecName('DOM2 Events')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Events','#Events-MouseEvent','MouseEvent.clientX')}}</td>
-   <td>{{Spec2('DOM2 Events')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                        | Status                           | Comentário                                                        |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------- |
+| {{SpecName('CSSOM View','#dom-mouseevent-clientx', 'clientX')}}                 | {{Spec2('CSSOM View')}} | Redefine {{domxref("MouseEvent")}} de`long` para `double`. |
+| {{SpecName('DOM3 Events','#widl-MouseEvent-clientX','MouseEvent.clientX')}} | {{Spec2('DOM3 Events')}} | Nenhuma mudança de {{SpecName('DOM2 Events')}}.          |
+| {{SpecName('DOM2 Events','#Events-MouseEvent','MouseEvent.clientX')}}         | {{Spec2('DOM2 Events')}} | Definição inicial.                                                |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade com Navegadores</h2>
+## Compatibilidade com Navegadores
 
 {{Compat("api.MouseEvent.clientX")}}
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{ domxref("MouseEvent") }}</li>
- <li>{{domxref("MouseEvent.clientY","clientY")}}</li>
- <li>{{domxref("MouseEvent.screenX","screenX")}} / {{domxref("MouseEvent.screenY","screenY")}}</li>
-</ul>
+- {{ domxref("MouseEvent") }}
+- {{domxref("MouseEvent.clientY","clientY")}}
+- {{domxref("MouseEvent.screenX","screenX")}} / {{domxref("MouseEvent.screenY","screenY")}}

@@ -10,89 +10,65 @@ tags:
   - metodo
 translation_of: Web/API/SubtleCrypto/importKey
 ---
-<p>{{APIRef("Web Crypto API")}}</p>
+{{APIRef("Web Crypto API")}}
 
-<p>O método <code><strong>SubtleCrypto.importKey()</strong></code> retorna como {{jsxref("Promise")}} de uma {{domxref("CryptoKey")}} de uma informção dada como parâmetro.</p>
+O método **`SubtleCrypto.importKey()`** retorna como {{jsxref("Promise")}} de uma {{domxref("CryptoKey")}} de uma informção dada como parâmetro.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var <em>result</em> = <em>crypto</em><code>.subtle.importKey(<em>format</em>, <em>keyData</em>, <em>algo</em>, <em>extractable</em>, <em>usages</em>)</code>;
-</pre>
+```
+var result = crypto.subtle.importKey(format, keyData, algo, extractable, usages);
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<ul>
- <li><em><code>format</code></em> é um valor enumerado descrevendo o formato de informação da key exportada. Podendo ser um dos seguintes:
+- _`format`_ é um valor enumerado descrevendo o formato de informação da key exportada. Podendo ser um dos seguintes:
 
-  <ul>
-   <li><code>"raw"</code>, a key como um conjunto de bytes, normalmente uma key secreta.</li>
-   <li><code>"pkcs8"</code> uma key privada, no <a href="http://tools.ietf.org/html/rfc5208">IETF Public Key-Cryptographic Standard Encryption #8</a>.</li>
-   <li><code>"spki"</code>, normalmente uma key pública, no <a href="http://en.wikipedia.org/wiki/Simple_public-key_infrastructure">Simple public key infrastructure</a> padrão.</li>
-   <li><code>"jwk"</code>, a key no formato <a href="https://tools.ietf.org/html/draft-ietf-jose-json-web-key-41">JSON Web Key</a>.</li>
-  </ul>
- </li>
- <li><code><em>keyData</em></code> é uma {{domxref("ArrayBuffer")}} ou uma {{domxref("JSONWebKey")}} contendo uma key no formato dado.</li>
- <li><em><code>algo</code></em> é um objeto de dicionário que define o algoritmo que foi utilizado para gerar a key que está sendo importada.</li>
- <li><code><em>extractable</em></code> é um {{jsxref("Boolean")}} indicando se a key pode ser extraída de um objeto {{domxref("CryptoKey")}} em um estágio mais tardio.</li>
- <li><code><em>usages</em></code> é um {{jsxref("Array")}} que indica o que pode ser feito com a key. Valores possíveis do array são:
-  <ul>
-   <li><code>"encrypt"</code>, permitindo que a key seja utilizada para {{glossary("encryption", "encrypting")}} mensagens.</li>
-   <li><code>"decrypt"</code>, permitindo que a key seja utilizada para {{glossary("decryption", "decrypting")}} mensagens.</li>
-   <li><code>"sign"</code>, permitindo que a key seja utilizada para {{glossary("signature", "signing")}} mensagens.</li>
-   <li><code>"verify"</code>, permitindo que a key seja utilizada para {{glossary("verification", "verifying the signature")}} de mensagens.</li>
-   <li><code>"deriveKey"</code>, permitindo que a key seja utilizada como uma key base na derivação de uma nova key.</li>
-   <li><code>"deriveBits"</code>, permitindo que a key seja utilizada como key base na derivação de bits de informação para uso em criptografias primitivas.</li>
-   <li><code>"wrapKey"</code>, permitindo que a key envolva uma key simétrica para uso (transferência, armazenamento) em ambientes não seguros.</li>
-   <li><code>"unwrapKey"</code>, permitindo que a key se desvincule de uma key simétrica para uso (transferência, armazenamento) em ambientes não seguros.</li>
-  </ul>
- </li>
-</ul>
+  - `"raw"`, a key como um conjunto de bytes, normalmente uma key secreta.
+  - `"pkcs8"` uma key privada, no [IETF Public Key-Cryptographic Standard Encryption #8](http://tools.ietf.org/html/rfc5208).
+  - `"spki"`, normalmente uma key pública, no [Simple public key infrastructure](http://en.wikipedia.org/wiki/Simple_public-key_infrastructure) padrão.
+  - `"jwk"`, a key no formato [JSON Web Key](https://tools.ietf.org/html/draft-ietf-jose-json-web-key-41).
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+- `keyData` é uma {{domxref("ArrayBuffer")}} ou uma {{domxref("JSONWebKey")}} contendo uma key no formato dado.
+- _`algo`_ é um objeto de dicionário que define o algoritmo que foi utilizado para gerar a key que está sendo importada.
+- `extractable` é um {{jsxref("Boolean")}} indicando se a key pode ser extraída de um objeto {{domxref("CryptoKey")}} em um estágio mais tardio.
+- `usages` é um {{jsxref("Array")}} que indica o que pode ser feito com a key. Valores possíveis do array são:
 
-<ul>
- <li><code><em>result</em></code> é uma {{jsxref("Promise")}} que retorna a {{domxref("CryptoKey")}} gerada.</li>
-</ul>
+  - `"encrypt"`, permitindo que a key seja utilizada para {{glossary("encryption", "encrypting")}} mensagens.
+  - `"decrypt"`, permitindo que a key seja utilizada para {{glossary("decryption", "decrypting")}} mensagens.
+  - `"sign"`, permitindo que a key seja utilizada para {{glossary("signature", "signing")}} mensagens.
+  - `"verify"`, permitindo que a key seja utilizada para {{glossary("verification", "verifying the signature")}} de mensagens.
+  - `"deriveKey"`, permitindo que a key seja utilizada como uma key base na derivação de uma nova key.
+  - `"deriveBits"`, permitindo que a key seja utilizada como key base na derivação de bits de informação para uso em criptografias primitivas.
+  - `"wrapKey"`, permitindo que a key envolva uma key simétrica para uso (transferência, armazenamento) em ambientes não seguros.
+  - `"unwrapKey"`, permitindo que a key se desvincule de uma key simétrica para uso (transferência, armazenamento) em ambientes não seguros.
 
-<h3 id="Exceções">Exceções</h3>
+### Valor de retorno
 
-<p>A promise é rejeitada quando umas das seguintes exceções é encontrada:</p>
+- `result` é uma {{jsxref("Promise")}} que retorna a {{domxref("CryptoKey")}} gerada.
 
-<ul>
- <li><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError"><code>SyntaxError</code></a> quando <em><code>keyUsages</code></em> está vazia mas a key desvinculada é do tipo <code>"secret"</code> ou <code>"private"</code>.</li>
- <li>{{jsxref("TypeError")}} quando tentando utilizar um formato invalido ou se a <em><code>keyData</code></em> não é adequada para este formato.</li>
-</ul>
+### Exceções
 
-<h2 id="Especificações">Especificações</h2>
+A promise é rejeitada quando umas das seguintes exceções é encontrada:
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-importKey', 'SubtleCrypto.importKey()') }}</td>
-   <td>{{ Spec2('Web Crypto API') }}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+- [`SyntaxError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) quando _`keyUsages`_ está vazia mas a key desvinculada é do tipo `"secret"` ou `"private"`.
+- {{jsxref("TypeError")}} quando tentando utilizar um formato invalido ou se a _`keyData`_ não é adequada para este formato.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Especificações
+
+| Especificação                                                                                                                        | Status                                   | Comentário         |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
+| {{ SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-importKey', 'SubtleCrypto.importKey()') }} | {{ Spec2('Web Crypto API') }} | Definição inicial. |
+
+## Compatibilidade com navegadores
 
 {{Compat("api.SubtleCrypto.importKey")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("Crypto")}} e {{domxref("Crypto.subtle")}}.</li>
- <li>{{domxref("SubtleCrypto")}}, a interface a qual ele pertence.</li>
-</ul>
+- {{domxref("Crypto")}} e {{domxref("Crypto.subtle")}}.
+- {{domxref("SubtleCrypto")}}, a interface a qual ele pertence.
 
-<h3 id="Dicionário">Dicionário:</h3>
+### Dicionário:
 
-<p>"Key" = "Chave"</p>
-
-<p> </p>
+"Key" = "Chave"

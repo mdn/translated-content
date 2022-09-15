@@ -9,43 +9,33 @@ tags:
 translation_of: Web/API/HTMLContentElement/select
 original_slug: Web/API/HTMLContentElement/Seletor
 ---
-<p>{{ APIRef("Web Components") }}</p>
+{{ APIRef("Web Components") }}
 
-<p>A propriedade <code><strong>HTMLContentElement.select</strong></code> reflete o atributo selecionado. É um {{domxref("DOMString")}} contendo uma lista de spaço-separado de seletores CSS que seleciona o conteúdo para inserir em lugar do elemento &lt;content&gt;.</p>
+A propriedade **`HTMLContentElement.select`** reflete o atributo selecionado. É um {{domxref("DOMString")}} contendo uma lista de spaço-separado de seletores CSS que seleciona o conteúdo para inserir em lugar do elemento \<content>.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><em>object</em>.select = "<em>CSSselector</em> <em>CSSselector</em> ...";
-</pre>
+```
+object.select = "CSSselector CSSselector ...";
+```
 
-<h2 id="Specifications" name="Specifications">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: js">// Select &lt;h1&gt; elements and elements with class="error"
-myContentObject.select = "h1 .error";</pre>
+```js
+// Select <h1> elements and elements with class="error"
+myContentObject.select = "h1 .error";
+```
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Commentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Shadow DOM', '#the-content-element', 'content')}}</td>
-   <td>{{Spec2('Shadow DOM')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificações                                                                   | Status                           | Commentário |
+| -------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('Shadow DOM', '#the-content-element', 'content')}} | {{Spec2('Shadow DOM')}} |             |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.HTMLContentElement.select")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/API/HTMLContentElement">HTMLContentElement</a></li>
-</ul>
+- [HTMLContentElement](/pt-BR/docs/Web/API/HTMLContentElement)

@@ -3,39 +3,36 @@ title: Console.time()
 slug: Web/API/Console/time
 translation_of: Web/API/Console/time
 ---
-<p>{{ APIRef("Console API") }}{{Non-standard_header}}</p>
+{{ APIRef("Console API") }}{{Non-standard_header}}
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+## Sumário
 
-<p>Inicia um cronômetro que você pode usar para monitorar quanto tempo uma operação leva. Você dá para cada cronômetro um nome único, e deve ter no máximo 10.000 deles sendo executados na página. Quando você chama {{ domxref("console.timeEnd()") }} com o mesmo nome, o navegador mostrará o tempo, em milisegundos, que se passou desde que o cronômetro iniciou.</p>
+Inicia um cronômetro que você pode usar para monitorar quanto tempo uma operação leva. Você dá para cada cronômetro um nome único, e deve ter no máximo 10.000 deles sendo executados na página. Quando você chama {{ domxref("console.timeEnd()") }} com o mesmo nome, o navegador mostrará o tempo, em milisegundos, que se passou desde que o cronômetro iniciou.
 
-<p>Veja <a href="/pt-BR/DOM/console#Timers">Timers </a>na documentação {{ domxref("console") }} para detalhes e exemplos.</p>
+Veja [Timers ](/pt-BR/DOM/console#Timers)na documentação {{ domxref("console") }} para detalhes e exemplos.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">console.time(<em>label</em>);
-</pre>
+```
+console.time(label);
+```
 
-<h2 id="Parâmetros">Parâmetros</h2>
+## Parâmetros
 
-<dl>
- <dt><code>label</code></dt>
- <dd>O nome para dar ao novo cronômetro. Ele identificará o cronômetro; use o mesmo quando chamar {{ domxref("console.timeEnd()") }} para parar o cronômetro e obter o tempo na saída do console.</dd>
-</dl>
+- `label`
+  - : O nome para dar ao novo cronômetro. Ele identificará o cronômetro; use o mesmo quando chamar {{ domxref("console.timeEnd()") }} para parar o cronômetro e obter o tempo na saída do console.
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<p><a href="/pt-BR/docs/Web/API/Console">API do objeto Console</a></p>
+[API do objeto Console](/pt-BR/docs/Web/API/Console)
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.console.time")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{ domxref("Console.timeEnd()") }}</li>
- <li><a class="external" href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
-</ul>
+- {{ domxref("Console.timeEnd()") }}
+- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)

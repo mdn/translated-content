@@ -3,31 +3,31 @@ title: Element.setAttributeNS()
 slug: Web/API/Element/setAttributeNS
 translation_of: Web/API/Element/setAttributeNS
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p><code>setAttributeNS</code> adiciona um novo atributo ou modifica o valor de um atributo com um namespace e um nome.</p>
+`setAttributeNS` adiciona um novo atributo ou modifica o valor de um atributo com um namespace e um nome.
 
-<p>Syntax</p>
+Syntax
 
-<pre class="eval"><em>element</em>.setAttributeNS(<em>namespace</em>,<em>name</em>,<em>value</em>)
-</pre>
+```
+element.setAttributeNS(namespace,name,value)
+```
 
-<ul>
- <li><code>namespace</code> é uma string especificando o namespace do atributo.</li>
- <li><code>name</code> é uma string identificando o atributo que sera definido.</li>
- <li><code>value</code> é o novo valor desejado para o atributo.</li>
-</ul>
+- `namespace` é uma string especificando o namespace do atributo.
+- `name` é uma string identificando o atributo que sera definido.
+- `value` é o novo valor desejado para o atributo.
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<pre class="eval">var d = document.getElementById("d1");
-d.setAttributeNS("<span class="nowiki">http://www.mozilla.org/ns/specialspace</span>", "align", "center");
-</pre>
+```
+var d = document.getElementById("d1");
+d.setAttributeNS("http://www.mozilla.org/ns/specialspace", "align", "center");
+```
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p>{{ DOMAttributeMethods() }}</p>
+{{ DOMAttributeMethods() }}
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAttrNS">DOM Level 2 Core: setAttributeNS</a></p>
+[DOM Level 2 Core: setAttributeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAttrNS)

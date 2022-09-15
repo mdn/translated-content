@@ -3,28 +3,29 @@ title: Geolocation.getCurrentPosition()
 slug: Web/API/Geolocation/getCurrentPosition
 translation_of: Web/API/Geolocation/getCurrentPosition
 ---
-<p>{{ APIRef("Geolocation API") }}</p>
+{{ APIRef("Geolocation API") }}
 
-<p>O método <strong><code>Geolocation.getCurrentPosition()</code></strong> é utilizado para capturar a posição atual do dispositivo.</p>
+O método **`Geolocation.getCurrentPosition()`** é utilizado para capturar a posição atual do dispositivo.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">navigator.geolocation.getCurrentPosition(<em>success</em>, <em>error</em>, <em>options</em>)</pre>
+```
+navigator.geolocation.getCurrentPosition(success, error, options)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><em>success</em></dt>
- <dd>Uma função de retorno que captura um objeto {{domxref("Position")}} como seu parâmetro de entrada.</dd>
- <dt><em>erro</em>r {{optional_inline}}</dt>
- <dd>Uma função de retorno opcional que captura um objeto {{domxref ("PositionError")}} como seu parâmetro de entrada.</dd>
- <dt><em>options</em> {{optional_inline}}</dt>
- <dd>Um objeto opcional {{domxref("PositionOptions")}}.</dd>
-</dl>
+- _success_
+  - : Uma função de retorno que captura um objeto {{domxref("Position")}} como seu parâmetro de entrada.
+- \_erro_r {{optional_inline}}
+  - : Uma função de retorno opcional que captura um objeto {{domxref ("PositionError")}} como seu parâmetro de entrada.
+- _options_ {{optional_inline}}
+  - : Um objeto opcional {{domxref("PositionOptions")}}.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: js">var options = {
+```js
+var options = {
   enableHighAccuracy: true,
   timeout: 5000,
   maximumAge: 0
@@ -44,34 +45,19 @@ function error(err) {
 };
 
 navigator.geolocation.getCurrentPosition(success, error, options);
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Geolocation')}}</td>
-   <td>{{Spec2('Geolocation')}}</td>
-   <td>Especificação inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                        | Estado                           | Comentário             |
+| ------------------------------------ | -------------------------------- | ---------------------- |
+| {{SpecName('Geolocation')}} | {{Spec2('Geolocation')}} | Especificação inicial. |
 
-<h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
+## Navegadores compatíveis
 
 {{Compat("api.Geolocation.getCurrentPosition")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/WebAPI/Using_geolocation" title="/en-US/docs/WebAPI/Using_geolocation">Usando geolocalização</a></li>
- <li>{{domxref("Navigator.geolocation")}}</li>
-</ul>
+- [Usando geolocalização](/pt-BR/docs/WebAPI/Using_geolocation)
+- {{domxref("Navigator.geolocation")}}

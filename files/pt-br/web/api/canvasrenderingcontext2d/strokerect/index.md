@@ -9,64 +9,64 @@ tags:
   - metodo
 translation_of: Web/API/CanvasRenderingContext2D/strokeRect
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>O método <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.strokeRect()</code></strong> da API Canvas 2D desenha um retângulo na posição <em>(x, y)</em>, que possui uma largura<em> </em>(<em>width</em>) <em>w</em> e uma altura (<em>height</em>) <em>h</em><code>,</code> e não tem nenhum preenchimento (estilo <em>stroke</em>).</p>
+O método **`CanvasRenderingContext2D`\*\***`.strokeRect()`\*\* da API Canvas 2D desenha um retângulo na posição _(x, y)_, que possui uma largura\_ _(\_width_) _w_ e uma altura (_height_) _h_`,` e não tem nenhum preenchimento (estilo _stroke_).
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">void <var><em>ctx</em>.strokeRect(x, y, width, height);</var>
-</pre>
+```
+void ctx.strokeRect(x, y, width, height);
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>x</code></dt>
- <dd>O valor da coordenada x para o ponto inicial do retângulo.</dd>
- <dt><code>y</code></dt>
- <dd>O valor da coordenada y para o ponto inicial do retângulo.</dd>
- <dt><code>width</code></dt>
- <dd>A largura do retângulo.</dd>
- <dt><code>height</code></dt>
- <dd>A altura do retângulo.</dd>
-</dl>
+- `x`
+  - : O valor da coordenada x para o ponto inicial do retângulo.
+- `y`
+  - : O valor da coordenada y para o ponto inicial do retângulo.
+- `width`
+  - : A largura do retângulo.
+- `height`
+  - : A altura do retângulo.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_o_método_strokeRect">Usando o método <code>strokeRect</code></h3>
+### Usando o método `strokeRect`
 
-<p>Isto é só um simples trecho de código que usa o método <code>strokeRect</code>.</p>
+Isto é só um simples trecho de código que usa o método `strokeRect`.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 ctx.strokeStyle = 'green';
 ctx.strokeRect(10, 10, 100, 100);
-</pre>
+```
 
-<p>Edite o código abaixo e veja as alterações instantâneas no canvas:</p>
+Edite o código abaixo e veja as alterações instantâneas no canvas:
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.strokeStyle = "green";
-ctx.strokeRect(10, 10, 100, 100);&lt;/textarea&gt;
-</pre>
+ctx.strokeRect(10, 10, 100, 100);</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -89,37 +89,23 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-strokerect", "CanvasRenderingContext2D.strokeRect")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                                        | Estado                           | Comentário |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-strokerect", "CanvasRenderingContext2D.strokeRect")}} | {{Spec2('HTML WHATWG')}} |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.CanvasRenderingContext2D.strokeRect")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>A definição da interface {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.strokeStyle")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.clearRect()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.fillRect()")}}</li>
-</ul>
+- A definição da interface {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.strokeStyle")}}
+- {{domxref("CanvasRenderingContext2D.clearRect()")}}
+- {{domxref("CanvasRenderingContext2D.fillRect()")}}

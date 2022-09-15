@@ -4,100 +4,69 @@ slug: Web/API/Window/DOMContentLoaded_event
 translation_of: Web/API/Window/DOMContentLoaded_event
 original_slug: Web/Events/DOMContentLoaded
 ---
-<p>O evento <code>DOMContentLoaded</code> é acionado quando todo o HTML foi completamente carregado e analisado, sem aguardar pelo CSS, imagens, e subframes para encerrar o carregamento. Um evento muito diferente - <a href="/en-US/docs/Mozilla_event_reference/load"><code>load</code></a> - deve ser usado apenas para detectar uma página completamente carregada. É um engano comum as pessoas usarem <a href="/en-US/docs/Mozilla_event_reference/load" style="line-height: 19.0909080505371px;"><code>load</code></a><span style="line-height: 19.0909080505371px;"> quando </span><code style="font-style: normal; line-height: 19.0909080505371px;">DOMContentLoaded</code><span style="line-height: 19.0909080505371px;"> seria muito mais apropriado.</span></p>
+O evento `DOMContentLoaded` é acionado quando todo o HTML foi completamente carregado e analisado, sem aguardar pelo CSS, imagens, e subframes para encerrar o carregamento. Um evento muito diferente - [`load`](/pt-BR/docs/Mozilla_event_reference/load) - deve ser usado apenas para detectar uma página completamente carregada. É um engano comum as pessoas usarem [`load`](/pt-BR/docs/Mozilla_event_reference/load) quando `DOMContentLoaded` seria muito mais apropriado.
 
-<div class="note">
-<p><strong>Nota:</strong> Javascript Síncrono pausa a análise do DOM.</p>
-</div>
+> **Nota:** Javascript Síncrono pausa a análise do DOM.
 
-<h2 id="Acelerando" style="line-height: 30px; font-size: 2.14285714285714rem;">Acelerando</h2>
+## Acelerando
 
-<p>Se você quer que o DOM seja analisado o mais rápido possível após uma requisição do usuário, você deve usar recursos do <a href="/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests">javascript assíncrono</a> e <a href="https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery">otimizar o carregamento de folhas de estilo</a> pois, caso contrário, a página será carregada mais lentamente pois muitos itens serão carregados paralelamente, atrasando a visualização da página.</p>
+Se você quer que o DOM seja analisado o mais rápido possível após uma requisição do usuário, você deve usar recursos do [javascript assíncrono](/pt-BR/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) e [otimizar o carregamento de folhas de estilo](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery) pois, caso contrário, a página será carregada mais lentamente pois muitos itens serão carregados paralelamente, atrasando a visualização da página.
 
-<dl style="line-height: 19.0909080505371px;">
-</dl>
+## Informações gerais
 
-<h2 id="Informações_gerais">Informações gerais</h2>
+- Especificação
+  - : [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-end.html#the-end)
+- Interface
+  - : Event
+- Propaga
+  - : Sim
+- Cancelável
+  - : Sim (embora especificado como evento simples não-cancelável)
+- Alvo
+  - : Document
+- Ação Default
+  - : Nenhuma.
 
-<dl>
- <dt style="float: left; text-align: right; width: 120px;">Especificação</dt>
- <dd style="margin: 0 0 0 120px;"><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-end.html#the-end">HTML5</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">Interface</dt>
- <dd style="margin: 0 0 0 120px;">Event</dd>
- <dt style="float: left; text-align: right; width: 120px;">Propaga</dt>
- <dd style="margin: 0 0 0 120px;">Sim</dd>
- <dt style="float: left; text-align: right; width: 120px;">Cancelável</dt>
- <dd style="margin: 0 0 0 120px;">Sim (embora especificado como evento simples não-cancelável)</dd>
- <dt style="float: left; text-align: right; width: 120px;">Alvo</dt>
- <dd style="margin: 0 0 0 120px;">Document</dd>
- <dt style="float: left; text-align: right; width: 120px;">Ação Default</dt>
- <dd style="margin: 0 0 0 120px;">Nenhuma.</dd>
-</dl>
+## Propriedades
 
-<h2 id="Propriedades">Propriedades</h2>
+| Property                              | Type                                 | Description                           |
+| ------------------------------------- | ------------------------------------ | ------------------------------------- |
+| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | Alvo do evento (O topo do DOM).       |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | Tipo de evento                        |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | O evento é por padrão bubbles ou não. |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | O evento pode ser cancelado ou não.   |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>Alvo do evento (O topo do DOM).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>Tipo de evento</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>O evento é por padrão bubbles ou não.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>O evento pode ser cancelado ou não.</td>
-  </tr>
- </tbody>
-</table>
+## Exemplo
 
-<h2 id="Exemplo">Exemplo</h2>
+### Básico
 
-<h3 id="Básico">Básico</h3>
-
-<pre class="brush: html" style="font-size: 14px;">&lt;script&gt;
+```html
+<script>
   document.addEventListener("DOMContentLoaded", function(event) {
     console.log("DOM completamente carregado e analisado");
   });
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h3 id="Forçando_o_atraso_do_DOMContentLoaded">Forçando o atraso do DOMContentLoaded</h3>
+### Forçando o atraso do DOMContentLoaded
 
-<pre class="brush: html" style="font-size: 14px;">&lt;script&gt;
+```html
+<script>
   document.addEventListener("DOMContentLoaded", function(event) {
     console.log("DOM completamente carregado e analisado");
   });
 
-for(var i=0; i&lt;1000000000; i++)
+for(var i=0; i<1000000000; i++)
 {} // este script síncrono irá o atrasar carregamento do DOM. Então o evento DOMContentLoaded irá ser ativado mais tarde.
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<p> </p>
+### Verificando se o carregamento está completo
 
-<h3 id="Verificando_se_o_carregamento_está_completo">Verificando se o carregamento está completo</h3>
+`DOMContentLoaded` pode disparar antes do seu script ser carregado, então é importante validar antes de adicionar um listener.
 
-<p><code>DOMContentLoaded</code> pode disparar antes do seu script ser carregado, então é importante validar antes de adicionar um listener.</p>
-
-<pre>function doSomething() {
+```
+function doSomething() {
   console.info("DOM carregado");
 }
 
@@ -105,20 +74,17 @@ if (document.readyState === "loading") {  // Ainda carregando
   document.addEventListener("DOMContentLoaded", doSomething);
 } else {  // `DOMContentLoaded` foi disparado
   doSomething();
-}</pre>
+}
+```
 
-<p> </p>
-
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Window.DOMContentLoaded_event")}}
 
-<h2 id="Eventos_Relacionados">Eventos Relacionados</h2>
+## Eventos Relacionados
 
-<ul>
- <li>{{event("DOMContentLoaded")}}</li>
- <li>{{event("readystatechange")}}</li>
- <li>{{event("load")}}</li>
- <li>{{event("beforeunload")}}</li>
- <li>{{event("unload")}}</li>
-</ul>
+- {{event("DOMContentLoaded")}}
+- {{event("readystatechange")}}
+- {{event("load")}}
+- {{event("beforeunload")}}
+- {{event("unload")}}

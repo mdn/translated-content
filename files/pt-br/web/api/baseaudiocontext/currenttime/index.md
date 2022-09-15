@@ -11,52 +11,39 @@ tags:
 translation_of: Web/API/BaseAudioContext/currentTime
 original_slug: Web/API/AudioContext/currentTime
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>The <code>currentTime</code> read-only property of the {{ domxref("AudioContext") }} interface returns a double representing an ever-increasing hardware timestamp in seconds that can be used for scheduling audio playback, visualizing timelines, etc. It starts at 0.</p>
-</div>
+The `currentTime` read-only property of the {{ domxref("AudioContext") }} interface returns a double representing an ever-increasing hardware timestamp in seconds that can be used for scheduling audio playback, visualizing timelines, etc. It starts at 0.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 console.log(audioCtx.currentTime);
-</pre>
+```
 
-<h2 id="Exemplo">Exemplo:</h2>
+## Exemplo:
 
-<pre class="brush: js">var AudioContext = window.AudioContext || window.webkitAudioContext;
+```js
+var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 // Older webkit/blink browsers require a prefix
 
 ...
 
 console.log(audioCtx.currentTime);
-</pre>
+```
 
-<h2 id="Especificações">Especificações:</h2>
+## Especificações:
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificações:</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-currentTime', 'currentTime')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificações:                                                                                          | Status                               | Comentario |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ---------- |
+| {{SpecName('Web Audio API', '#widl-AudioContext-currentTime', 'currentTime')}} | {{Spec2('Web Audio API')}} |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.BaseAudioContext.currentTime")}}
 
-<h2 id="Veja_também">Veja também:</h2>
+## Veja também:
 
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Usando a API Web Audio API</a></li>
-</ul>
+- [Usando a API Web Audio API](/pt-BR/docs/Web_Audio_API/Using_Web_Audio_API)

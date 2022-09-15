@@ -3,35 +3,36 @@ title: Document.getElementsByTagName()
 slug: Web/API/Document/getElementsByTagName
 translation_of: Web/API/Document/getElementsByTagName
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>O método getElementsByTagName da interface Document retorna um HTMLCollection de elementos com o nome da tag fornecido. O documento completo é pesquisado, incluindo o nó raiz. A HTMLCollection retornada é ao vivo, o que significa que ela se atualiza automaticamente para permanecer em sincronia com a árvore DOM sem ter que chamar document.getElementsByTagName () novamente.</p>
+O método getElementsByTagName da interface Document retorna um HTMLCollection de elementos com o nome da tag fornecido. O documento completo é pesquisado, incluindo o nó raiz. A HTMLCollection retornada é ao vivo, o que significa que ela se atualiza automaticamente para permanecer em sincronia com a árvore DOM sem ter que chamar document.getElementsByTagName () novamente.
 
-<p><code><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">O método </span></font><strong>getElementsByTagName</strong></code> da {{domxref("Document")}} interface <span class="seoSummary">returns an {{domxref("HTMLCollection")}} of elements with the given tag name.</span> The complete document is searched, including the root node. The returned <code>HTMLCollection</code> is live, meaning that it updates itself automatically to stay in sync with the DOM tree without having to call <code>document.getElementsByTagName()</code> again.</p>
+`O método getElementsByTagName` da {{domxref("Document")}} interface returns an {{domxref("HTMLCollection")}} of elements with the given tag name. The complete document is searched, including the root node. The returned `HTMLCollection` is live, meaning that it updates itself automatically to stay in sync with the DOM tree without having to call `document.getElementsByTagName()` again.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>elements</var> = document.getElementsByTagName(<var>name</var>);</pre>
+```
+var elements = document.getElementsByTagName(name);
+```
 
-<ul>
- <li><var>elements</var> is a live {{domxref("HTMLCollection")}} (but see the note below) of found elements in the order they appear in the tree.</li>
- <li><var>name</var> is a string representing the name of the elements. The special string "*" represents all elements.</li>
-</ul>
+- _elements_ is a live {{domxref("HTMLCollection")}} (but see the note below) of found elements in the order they appear in the tree.
+- _name_ is a string representing the name of the elements. The special string "\*" represents all elements.
 
-<div class="note"><a href="https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html">The latest W3C specification</a> says <var>elements</var> is an <code>HTMLCollection</code>; however, this method returns a {{domxref("NodeList")}} in WebKit browsers. See {{bug(14869)}} for details.</div>
+> **Nota:** [The latest W3C specification](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html) says _elements_ is an `HTMLCollection`; however, this method returns a {{domxref("NodeList")}} in WebKit browsers. See {{bug(14869)}} for details.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following example, <code>getElementsByTagName()</code> starts from a particular parent element and searches top-down recursively through the DOM from that parent element, building a collection of all descendant elements which match the tag <code>name</code> parameter. This demonstrates both <code>document.getElementsByTagName()</code> and the functionally identical {{domxref("Element.getElementsByTagName()")}}, which starts the search at a specific element within the DOM tree.</p>
+In the following example, `getElementsByTagName()` starts from a particular parent element and searches top-down recursively through the DOM from that parent element, building a collection of all descendant elements which match the tag `name` parameter. This demonstrates both `document.getElementsByTagName()` and the functionally identical {{domxref("Element.getElementsByTagName()")}}, which starts the search at a specific element within the DOM tree.
 
-<p>Clicking the buttons uses <code>getElementsByTagName()</code> to count the descendant paragraph elements of a particular parent (either the document itself or one of two nested {{HTMLElement("div")}} elements).</p>
+Clicking the buttons uses `getElementsByTagName()` to count the descendant paragraph elements of a particular parent (either the document itself or one of two nested {{HTMLElement("div")}} elements).
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;meta charset="UTF-8" /&gt;
-  &lt;title&gt;getElementsByTagName example&lt;/title&gt;
-  &lt;script&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>getElementsByTagName example</title>
+  <script>
     function getAllParaElems() {
       var allParas = document.getElementsByTagName('p');
       var num = allParas.length;
@@ -51,63 +52,57 @@ translation_of: Web/API/Document/getElementsByTagName
       var num = div2Paras.length;
       alert('There are ' + num + ' paragraph in #div2');
     }
-  &lt;/script&gt;
-&lt;/head&gt;
-&lt;body style="border: solid green 3px"&gt;
-  &lt;p&gt;Some outer text&lt;/p&gt;
-  &lt;p&gt;Some outer text&lt;/p&gt;
+  </script>
+</head>
+<body style="border: solid green 3px">
+  <p>Some outer text</p>
+  <p>Some outer text</p>
 
-  &lt;div id="div1" style="border: solid blue 3px"&gt;
-    &lt;p&gt;Some div1 text&lt;/p&gt;
-    &lt;p&gt;Some div1 text&lt;/p&gt;
-    &lt;p&gt;Some div1 text&lt;/p&gt;
+  <div id="div1" style="border: solid blue 3px">
+    <p>Some div1 text</p>
+    <p>Some div1 text</p>
+    <p>Some div1 text</p>
 
-    &lt;div id="div2" style="border: solid red 3px"&gt;
-      &lt;p&gt;Some div2 text&lt;/p&gt;
-      &lt;p&gt;Some div2 text&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+    <div id="div2" style="border: solid red 3px">
+      <p>Some div2 text</p>
+      <p>Some div2 text</p>
+    </div>
+  </div>
 
-  &lt;p&gt;Some outer text&lt;/p&gt;
-  &lt;p&gt;Some outer text&lt;/p&gt;
+  <p>Some outer text</p>
+  <p>Some outer text</p>
 
-  &lt;button onclick="getAllParaElems();"&gt;
-    show all p elements in document&lt;/button&gt;&lt;br /&gt;
+  <button onclick="getAllParaElems();">
+    show all p elements in document</button><br />
 
-  &lt;button onclick="div1ParaElems();"&gt;
-    show all p elements in div1 element&lt;/button&gt;&lt;br /&gt;
+  <button onclick="div1ParaElems();">
+    show all p elements in div1 element</button><br />
 
-  &lt;button onclick="div2ParaElems();"&gt;
-    show all p elements in div2 element&lt;/button&gt;
+  <button onclick="div2ParaElems();">
+    show all p elements in div2 element</button>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>When called on an HTML document, <code>getElementsByTagName()</code> lower-cases its argument before proceeding. This is undesirable when trying to match camelCase SVG elements in a subtree in an HTML document. {{Domxref("document.getElementsByTagNameNS()")}} is useful in that case. See also {{Bug(499656)}}.</p>
+When called on an HTML document, `getElementsByTagName()` lower-cases its argument before proceeding. This is undesirable when trying to match camelCase SVG elements in a subtree in an HTML document. {{Domxref("document.getElementsByTagNameNS()")}} is useful in that case. See also {{Bug(499656)}}.
 
-<p><code>document.getElementsByTagName()</code> is similar to {{domxref("Element.getElementsByTagName()")}}, except that its search encompasses the whole document.</p>
+`document.getElementsByTagName()` is similar to {{domxref("Element.getElementsByTagName()")}}, except that its search encompasses the whole document.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<ul>
- <li><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents">HTML 5: APIs in HTML documents</a></li>
- <li><a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C9094">DOM Level 2 Core: Document.getElementsByTagName</a></li>
-</ul>
+- [HTML 5: APIs in HTML documents](https://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)
+- [DOM Level 2 Core: Document.getElementsByTagName](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C9094)
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("api.Document.getElementsByTagName")}}
 
+## See also
 
-<p>{{Compat("api.Document.getElementsByTagName")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("Element.getElementsByTagName()")}}</li>
- <li>{{domxref("document.getElementById()")}} to return a reference to an element by its <code>id</code></li>
- <li>{{domxref("document.getElementsByName()")}} to return a reference to an element by its <code>name</code></li>
- <li>{{domxref("document.querySelector()")}} for powerful selectors via queries like <code>'div.myclass'</code></li>
-</ul>
+- {{domxref("Element.getElementsByTagName()")}}
+- {{domxref("document.getElementById()")}} to return a reference to an element by its `id`
+- {{domxref("document.getElementsByName()")}} to return a reference to an element by its `name`
+- {{domxref("document.querySelector()")}} for powerful selectors via queries like `'div.myclass'`

@@ -6,28 +6,25 @@ tags:
   - Vetores
 translation_of: Web/API/SVGAElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}O **`SVGAElement`** interface fornece acesso as propriedades do elemento {{SVGElement("a")}}, bem como metodos para manipula-los.
 
-<div>O <strong><code>SVGAElement</code></strong> interface fornece acesso as propriedades do elemento {{SVGElement("a")}}, bem como metodos para manipula-los.</div>
+## Propriedades
 
-<h2 id="Propriedades">Propriedades</h2>
+_Esta interface também herda propriedades de sua interface pai,{{domxref("SVGGraphicsElement")}}, e implementa propriedades de {{domxref("SVGURIReference")}} e de {{domxref("HTMLHyperlinkElementUtils")}}._
 
-<p><em>Esta interface também herda propriedades de sua interface pai,{{domxref("SVGGraphicsElement")}}, e implementa propriedades de {{domxref("SVGURIReference")}} e de {{domxref("HTMLHyperlinkElementUtils")}}.</em></p>
+- {{domxref("SVGAElement.target")}} {{readonlyInline}}
+  - : It corresponds to the {{SVGAttr("target")}} attribute of the given element.
 
-<dl>
- <dt>{{domxref("SVGAElement.target")}} {{readonlyInline}}</dt>
- <dd>It corresponds to the {{SVGAttr("target")}} attribute of the given element.</dd>
-</dl>
+## Metodos
 
-<h2 id="Metodos">Metodos</h2>
+_Esta interface não tem metodos próprios, porém herda metodos da interface {{domxref("SVGGraphicsElement")}}._
 
-<p><em>Esta interface não tem metodos próprios, porém herda metodos da interface {{domxref("SVGGraphicsElement")}}.</em></p>
+## Exemplos
 
-<h2 id="Exemplos">Exemplos</h2>
+No exemplo abaixo, o {{SVGAttr("target")}} atributo do elemento {{SVGElement("a")}} recebe o valor `_blank` e quando o link for clicado, ele notifica se a condição é verdadeira ou falsa.
 
-<p>No exemplo abaixo, o {{SVGAttr("target")}} atributo do elemento {{SVGElement("a")}} recebe o valor <code>_blank</code> e quando o link for clicado, ele notifica se a condição é verdadeira ou falsa.</p>
-
-<pre class="brush: js">var linkRef = document.querySelector("a");
+```js
+var linkRef = document.querySelector("a");
 linkRef.target = "_self";
 
 linkRef.onclick = function(){
@@ -37,38 +34,20 @@ linkRef.onclick = function(){
   } else {
     console.log("SORRY! not _blank");
   }
-} </pre>
+}
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td>Especificação</td>
-   <td>Status</td>
-   <td>Comentário</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "linking.html#InterfaceSVGAElement")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Replaced inheritance from {{domxref("SVGElement")}} by {{domxref("SVGGraphicsElement")}} and removed the interface implementations of {{domxref("SVGTests")}}, {{domxref("SVGLangSpace")}}, {{domxref("SVGExternalResourcesRequired")}}, {{domxref("SVGStylable")}}, and {{domxref("SVGTransformable")}} by {{domxref("HTMLHyperlinkElementUtils")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "linking.html#InterfaceSVGAElement")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                    | Status                   | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| -------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName("SVG2", "linking.html#InterfaceSVGAElement")}}     | {{Spec2("SVG2")}} | Replaced inheritance from {{domxref("SVGElement")}} by {{domxref("SVGGraphicsElement")}} and removed the interface implementations of {{domxref("SVGTests")}}, {{domxref("SVGLangSpace")}}, {{domxref("SVGExternalResourcesRequired")}}, {{domxref("SVGStylable")}}, and {{domxref("SVGTransformable")}} by {{domxref("HTMLHyperlinkElementUtils")}} |
+| {{SpecName("SVG1.1", "linking.html#InterfaceSVGAElement")}} | {{Spec2("SVG1.1")}} | Definição inicial                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("api.SVGAElement")}}
 
+## Veja também
 
-<p>{{Compat("api.SVGAElement")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>SVG {{SVGElement("a")}} element</li>
-</ul>
+- SVG {{SVGElement("a")}} element

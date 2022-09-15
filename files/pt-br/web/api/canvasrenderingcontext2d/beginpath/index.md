@@ -9,29 +9,32 @@ tags:
   - metodo
 translation_of: Web/API/CanvasRenderingContext2D/beginPath
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>O método <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.beginPath()</code></strong> da API Canvas 2D  inicia um novo caminho (<em>path</em>), esvaziando a lista de sub-caminhos (<em>sub-paths</em>). Use esse método quando você quiser criar um novo <em>path</em>.</p>
+O método **`CanvasRenderingContext2D`\*\***`.beginPath()`\*\* da API Canvas 2D inicia um novo caminho (_path_), esvaziando a lista de sub-caminhos (_sub-paths_). Use esse método quando você quiser criar um novo _path_.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">void <var><em>ctx</em>.beginPath();</var>
-</pre>
+```
+void ctx.beginPath();
+```
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_o_método_beginPath">Usando o método <code>beginPath</code></h3>
+### Usando o método `beginPath`
 
-<p>Isto é só um simples trecho de código que usa o método <code>fillRect</code>.</p>
+Isto é só um simples trecho de código que usa o método `fillRect`.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 // Primeiro path
@@ -47,19 +50,17 @@ ctx.strokeStyle = 'green';
 ctx.moveTo(20, 20);
 ctx.lineTo(120, 120);
 ctx.stroke();
-</pre>
+```
 
-<p>Edite o código abaixo e veja as alterações instantâneas no canvas:</p>
+Edite o código abaixo e veja as alterações instantâneas no canvas:
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code" style="height:200px"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code" style="height:200px">
 // First path
 ctx.beginPath();
 ctx.strokeStyle = 'blue';
@@ -72,10 +73,11 @@ ctx.beginPath();
 ctx.strokeStyle = 'green';
 ctx.moveTo(20,20);
 ctx.lineTo(120, 120);
-ctx.stroke();&lt;/textarea&gt;
-</pre>
+ctx.stroke();</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -98,35 +100,21 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 460) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 460) }}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-beginpath", "CanvasRenderingContext2D.beginPath")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                                    | Estado                           | Comentário |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-beginpath", "CanvasRenderingContext2D.beginPath")}} | {{Spec2('HTML WHATWG')}} |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.CanvasRenderingContext2D.beginPath")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>A definição da interface {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.closePath()")}}</li>
-</ul>
+- A definição da interface {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.closePath()")}}

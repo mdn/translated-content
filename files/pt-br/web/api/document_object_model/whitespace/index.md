@@ -7,65 +7,65 @@ tags:
 translation_of: Web/API/Document_Object_Model/Whitespace
 original_slug: DOM/Referencia_do_DOM/Whitespace_in_the_DOM
 ---
-<h2 id="The_issue" name="The_issue">O problema</h2>
+## O problema
 
-<p>A presença de espaço branco no <a href="/pt-BR/docs/DOM">DOM</a> pode dificultar a manipulação da árvore de conteúdo de formas imprevisíveis. No Mozilla, todo o espaço branco no conteúdo de texto do documento original é representado no DOM (isso não inclui <a href="/en-US/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM">whitespace</a> entre tags). (Isso é necessário internamente para que o editor possa preservar a formatação de documentos e também que <code>white-space: pre</code> irá funcionar em <a href="/pt-BR/docs/CSS">CSS</a>). Isso significa que:</p>
+A presença de espaço branco no [DOM](/pt-BR/docs/DOM) pode dificultar a manipulação da árvore de conteúdo de formas imprevisíveis. No Mozilla, todo o espaço branco no conteúdo de texto do documento original é representado no DOM (isso não inclui [whitespace](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM) entre tags). (Isso é necessário internamente para que o editor possa preservar a formatação de documentos e também que `white-space: pre` irá funcionar em [CSS](/pt-BR/docs/CSS)). Isso significa que:
 
-<ul>
- <li>haverão alguns nós de texto que contêm somente <a href="/pt-BR/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM">whitespace</a>, e</li>
- <li>alguns nós de texto terão <a href="/en-US/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM">whitespace</a> no início ou no final.</li>
-</ul>
+- haverão alguns nós de texto que contêm somente [whitespace](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM), e
+- alguns nós de texto terão [whitespace](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM) no início ou no final.
 
-<p>Em outras palavras, a árvore do DOM para o documento seguinte irá parecer como a imagem abaixo (usando "\n" para representar novas linhas):</p>
+Em outras palavras, a árvore do DOM para o documento seguinte irá parecer como a imagem abaixo (usando "\n" para representar novas linhas):
 
-<pre class="brush: html">&lt;!-- Meu documento --&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Meu documento&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;Cabeçalho&lt;/h1&gt;
-  &lt;p&gt;
+```html
+<!-- Meu documento -->
+<html>
+<head>
+  <title>Meu documento</title>
+</head>
+<body>
+  <h1>Cabeçalho</h1>
+  <p>
     Parágrafo
-  &lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </p>
+</body>
+</html>
+```
 
-<p><img src="https://mdn.mozillademos.org/files/854/whitespace_tree.png" style="height: 306px; width: 618px;"></p>
+![](https://mdn.mozillademos.org/files/854/whitespace_tree.png)
 
-<p>Isto pode fazer as coisas um pouco difíceis para qualquer usuário do DOM que quer iterar através do conteúdo, excluindo o <a href="/en-US/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM">whitespace</a>.</p>
+Isto pode fazer as coisas um pouco difíceis para qualquer usuário do DOM que quer iterar através do conteúdo, excluindo o [whitespace](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM).
 
-<h2 id="Facilitando_as_coisas">Facilitando as coisas</h2>
+## Facilitando as coisas
 
-<p>É possível formatar o código como mostrado abaixo para contornar o problema:</p>
+É possível formatar o código como mostrado abaixo para contornar o problema:
 
-<pre class="brush: html">&lt;!-- Impressão bonita convencional
+```html
+<!-- Impressão bonita convencional
      com espaços brancos (whitespaces) entre as tags:
- --&gt;
-&lt;div&gt;
- &lt;ul&gt;
-  &lt;li&gt;Posição 1&lt;/li&gt;
-  &lt;li&gt;Posição 2&lt;/li&gt;
-  &lt;li&gt;Posição 3&lt;/li&gt;
- &lt;/ul&gt;
-&lt;/div&gt;
+ -->
+<div>
+ <ul>
+  <li>Posição 1</li>
+  <li>Posição 2</li>
+  <li>Posição 3</li>
+ </ul>
+</div>
 
-&lt;!-- Impressão bonita ajustada ao problema:
- --&gt;
-&lt;div
- &gt;&lt;ul
-  &gt;&lt;li&gt;Posição 1&lt;/li
-  &gt;&lt;li&gt;Posição 2&lt;/li
-  &gt;&lt;li&gt;Posição 3&lt;/li
- &gt;&lt;/ul
-&gt;&lt;/div&gt;
-</pre>
+<!-- Impressão bonita ajustada ao problema:
+ -->
+<div
+ ><ul
+  ><li>Posição 1</li
+  ><li>Posição 2</li
+  ><li>Posição 3</li
+ ></ul
+></div>
+```
 
-<p><br>
- O código Javascript abaixo define funções diversas que fazem a manipulação de <a href="/en-US/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM">whitespace </a>no DOM mais fácil.</p>
+O código Javascript abaixo define funções diversas que fazem a manipulação de [whitespace ](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM)no DOM mais fácil.
 
-<pre class="brush: js">/**
+```js
+/**
  * Em todo, o whitespace é definido como um dos caracteres
  *  "\t" TAB \u0009
  *  "\n" LF  \u000A
@@ -105,7 +105,7 @@ function is_all_ws( nod )
 function is_ignorable( nod )
 {
   return ( nod.nodeType == 8) || // Um nó de comentário
-         ( (nod.nodeType == 3) &amp;&amp; is_all_ws(nod) ); // um nó de texto, todo whitespace
+         ( (nod.nodeType == 3) && is_all_ws(nod) ); // um nó de texto, todo whitespace
 }
 
 /**
@@ -209,13 +209,14 @@ function data_of( txt )
     data = data.substring(0, data.length - 1);
   return data;
 }
-</pre>
+```
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<p>O código seguinte demonstra o uso das funções acima. Ele itera através dos filhos de um elemento (dos quais filhos são todos os elementos) para encontrar aquele cujo o texto seja <code>"Este é o terceiro parágrafo"</code>, e então muda o atributo da classe e os conteúdos daquele parágrafo.</p>
+O código seguinte demonstra o uso das funções acima. Ele itera através dos filhos de um elemento (dos quais filhos são todos os elementos) para encontrar aquele cujo o texto seja `"Este é o terceiro parágrafo"`, e então muda o atributo da classe e os conteúdos daquele parágrafo.
 
-<pre class="brush: js">var cur = first_child(document.getElementById("teste"));
+```js
+var cur = first_child(document.getElementById("teste"));
 while (cur)
 {
   if (data_of(cur.firstChild) == "Este é o terceiro parágrafo.")
@@ -225,4 +226,4 @@ while (cur)
   }
   cur = node_after(cur);
 }
-</pre>
+```

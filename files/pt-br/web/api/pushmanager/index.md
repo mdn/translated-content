@@ -11,50 +11,43 @@ tags:
   - Subir dados
 translation_of: Web/API/PushManager
 ---
-<p>{{SeeCompatTable}}{{ApiRef("Push API")}}</p>
+{{SeeCompatTable}}{{ApiRef("Push API")}}
 
-<p>A <code>PushManager</code>interface da <a href="/en-US/docs/Web/API/Push_API">API Push</a> fornece uma maneira de receber notificações de servidores de terceiros, bem como solicitar URLs para notificações push.</p>
+A `PushManager`interface da [API Push](/pt-BR/docs/Web/API/Push_API) fornece uma maneira de receber notificações de servidores de terceiros, bem como solicitar URLs para notificações push.
 
-<p>Essa interface é acessada através da propriedade {{domxref ("ServiceWorkerRegistration.pushManager")}}.</p>
+Essa interface é acessada através da propriedade {{domxref ("ServiceWorkerRegistration.pushManager")}}.
 
-<div class="note">
-<p><strong>Nota</strong> : Esta interface substitui a funcionalidade anteriormente oferecida pela interface obsoleta {{domxref ("PushRegistrationManager")}}.</p>
-</div>
+> **Nota:** : Esta interface substitui a funcionalidade anteriormente oferecida pela interface obsoleta {{domxref ("PushRegistrationManager")}}.
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<dl>
- <dt>{{domxref ("PushManager.supportedContentEncodings")}}</dt>
- <dd>Retorna uma série de codificações de conteúdo suportadas que podem ser usadas para criptografar a carga útil de uma mensagem push.</dd>
-</dl>
+- {{domxref ("PushManager.supportedContentEncodings")}}
+  - : Retorna uma série de codificações de conteúdo suportadas que podem ser usadas para criptografar a carga útil de uma mensagem push.
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<dl>
- <dt>{{domxref ("PushManager.getSubscription ()")}}</dt>
- <dd>Recupera uma assinatura de envio existente. Retorna uma {{jsxref ("Promise")}} que resolve um objeto {{domxref ("PushSubscription")}} contendo detalhes de uma assinatura existente. Se não existe uma subscrição existente, isso resolve um <code>null</code>valor.</dd>
- <dt>{{domxref ("PushManager.permissionState ()")}}</dt>
- <dd>Retorna uma {{jsxref ( "Promise")}} que resolve para o estado de permissão do atual {{domxref ( "PushManager")}}, que será um dos <code>'granted'</code>, <code>'denied'</code>ou <code>'prompt'</code>.</dd>
- <dt>{{domxref ("PushManager.subscribe ()")}}</dt>
- <dd>Assine um serviço push. Retorna uma {{jsxref ("Promise")}} que resolve um objeto {{domxref ("PushSubscription")}} contendo detalhes de uma inscrição de envio. Uma nova assinatura de envio é criada se o trabalhador de serviço atual não tiver uma assinatura existente.</dd>
-</dl>
+- {{domxref ("PushManager.getSubscription ()")}}
+  - : Recupera uma assinatura de envio existente. Retorna uma {{jsxref ("Promise")}} que resolve um objeto {{domxref ("PushSubscription")}} contendo detalhes de uma assinatura existente. Se não existe uma subscrição existente, isso resolve um `null`valor.
+- {{domxref ("PushManager.permissionState ()")}}
+  - : Retorna uma {{jsxref ( "Promise")}} que resolve para o estado de permissão do atual {{domxref ( "PushManager")}}, que será um dos `'granted'`, `'denied'`ou `'prompt'`.
+- {{domxref ("PushManager.subscribe ()")}}
+  - : Assine um serviço push. Retorna uma {{jsxref ("Promise")}} que resolve um objeto {{domxref ("PushSubscription")}} contendo detalhes de uma inscrição de envio. Uma nova assinatura de envio é criada se o trabalhador de serviço atual não tiver uma assinatura existente.
 
-<h3 id="Métodos_depreciados">Métodos depreciados</h3>
+### Métodos depreciados
 
-<dl>
- <dt>{{domxref ("PushManager.hasPermission ()")}} {{deprecated_inline}}</dt>
- <dd>Retorna uma {{jsxref ( "Promise")}} que resolve para o <code>PushPermissionStatus</code>do webapp requerente, que será um dos <code>granted</code>, <code>denied</code>ou <code>default</code>. Substituído por {{domxref ("PushManager.permissionState ()")}}.</dd>
- <dt>{{domxref ("PushManager.register ()")}} {{deprecated_inline}}</dt>
- <dd>Assina uma assinatura de envio. Substituído por {{domxref ("PushManager.subscribe ()")}}.</dd>
- <dt>{{domxref ("PushManager.registrations ()")}} {{deprecated_inline}}</dt>
- <dd>Recupera as assinaturas de envio existentes. Substituído por {{domxref ("PushManager.getSubscription ()")}}.</dd>
- <dt>{{domxref ("PushManager.unregister ()")}} {{deprecated_inline}}</dt>
- <dd>Anula e exclui um ponto final de assinatura especificado. Na API atualizada, uma assinatura não está registrada chamando o método {{domxref ("PushSubscription.unsubscribe ()")}}.</dd>
-</dl>
+- {{domxref ("PushManager.hasPermission ()")}} {{deprecated_inline}}
+  - : Retorna uma {{jsxref ( "Promise")}} que resolve para o `PushPermissionStatus`do webapp requerente, que será um dos `granted`, `denied`ou `default`. Substituído por {{domxref ("PushManager.permissionState ()")}}.
+- {{domxref ("PushManager.register ()")}} {{deprecated_inline}}
+  - : Assina uma assinatura de envio. Substituído por {{domxref ("PushManager.subscribe ()")}}.
+- {{domxref ("PushManager.registrations ()")}} {{deprecated_inline}}
+  - : Recupera as assinaturas de envio existentes. Substituído por {{domxref ("PushManager.getSubscription ()")}}.
+- {{domxref ("PushManager.unregister ()")}} {{deprecated_inline}}
+  - : Anula e exclui um ponto final de assinatura especificado. Na API atualizada, uma assinatura não está registrada chamando o método {{domxref ("PushSubscription.unsubscribe ()")}}.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre><code>this.onpush = function(event) {
+```
+this.onpush = function(event) {
   console.log(event.data);
   // From here we can write the data to IndexedDB, send it to any open
   // windows, display a notification, etc.
@@ -77,32 +70,20 @@ navigator.serviceWorker.register('serviceworker.js').then(
         console.log(error);
       }
     );
-  });</code></pre>
+  });
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Push API','#pushmanager-interface','PushManager')}}</td>
-   <td>{{Spec2('Push API')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                        | Status                       | Comentário         |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
+| {{SpecName('Push API','#pushmanager-interface','PushManager')}} | {{Spec2('Push API')}} | Definição inicial. |
 
-<h2 id="Compatibilidade_do_navegador">Compatibilidade do navegador</h2>
+## Compatibilidade do navegador
 
 {{Compat("api.PushManager")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Push_API">API de envio</a></li>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API">API do Worker Service</a> </li>
-</ul>
+- [API de envio](/pt-BR/docs/Web/API/Push_API)
+- [API do Worker Service](/pt-BR/docs/Web/API/Service_Worker_API)

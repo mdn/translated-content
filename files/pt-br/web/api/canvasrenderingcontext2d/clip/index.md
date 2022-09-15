@@ -3,48 +3,49 @@ title: CanvasRenderingContext2D.clip()
 slug: Web/API/CanvasRenderingContext2D/clip
 translation_of: Web/API/CanvasRenderingContext2D/clip
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>O método<code><strong> CanvasRenderingContext2D</strong></code><strong><code>.clip()</code></strong> da API do Canvas 2D transforma o caminho atualmente construido em um caminho atual de recorte.</p>
+O método**` CanvasRenderingContext2D`\*\***`.clip()`\*\* da API do Canvas 2D transforma o caminho atualmente construido em um caminho atual de recorte.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">void <var><em>ctx</em>.clip();</var>
-void <var><em>ctx</em>.clip(fillRule);</var>
-void <var><em>ctx</em>.clip(path, fillRule);</var>
-</pre>
+```
+void ctx.clip();
+void ctx.clip(fillRule);
+void ctx.clip(path, fillRule);
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/209/Canvas_clipping_path.png" style="float: right;"></p>
+![](https://mdn.mozillademos.org/files/209/Canvas_clipping_path.png)
 
-<dl>
- <dt><code>fillRule</code></dt>
- <dd>O algoritmo pelo qual determina se um ponto esta dentro de um caminho ou fora de um caminho.<br>
- Valores Possíveis:
- <ul>
-  <li><code><strong>"nonzero</strong></code>": A <a href="http://en.wikipedia.org/wiki/Nonzero-rule">regra contorno diferente de zero</a>, que é a regra padrão.</li>
-  <li><code><strong>"evenodd"</strong></code>: A <a href="http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule">regra do contorno par ou ímpar</a>.</li>
- </ul>
- </dd>
- <dt><code>path</code></dt>
- <dd>Um {{domxref("Path2D")}} caminho para recorte.</dd>
-</dl>
+- `fillRule`
 
-<h2 id="Exemplos">Exemplos</h2>
+  - : O algoritmo pelo qual determina se um ponto esta dentro de um caminho ou fora de um caminho.
+    Valores Possíveis:
 
-<h3 id="Usando_do_método_de_corte">Usando do método de corte</h3>
+    - **`"nonzero`**": A [regra contorno diferente de zero](http://en.wikipedia.org/wiki/Nonzero-rule), que é a regra padrão.
+    - **`"evenodd"`**: A [regra do contorno par ou ímpar](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
-<p>Isso é só um simples fragmento de código que usa o método de corte para criar uma região de recorte.</p>
+- `path`
+  - : Um {{domxref("Path2D")}} caminho para recorte.
 
-<h4 id="HTML">HTML</h4>
+## Exemplos
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+### Usando do método de corte
 
-<h4 id="JavaScript">JavaScript</h4>
+Isso é só um simples fragmento de código que usa o método de corte para criar uma região de recorte.
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+#### HTML
+
+```html
+<canvas id="canvas"></canvas>
+```
+
+#### JavaScript
+
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 // Cria uma região de recorte
@@ -52,25 +53,24 @@ ctx.arc(100, 100, 75, 0, Math.PI*2, false);
 ctx.clip();
 
 ctx.fillRect(0, 0, 100,100);
-</pre>
+```
 
-<p>Edite o código abaixo e veja suas mudanças atualizadas ao vivo no canvas:</p>
+Edite o código abaixo e veja suas mudanças atualizadas ao vivo no canvas:
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.arc(100, 100, 75, 0, Math.PI*2, false);
 ctx.clip();
-ctx.fillRect(0, 0, 100,100);&lt;/textarea&gt;
-</pre>
+ctx.fillRect(0, 0, 100,100);</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -93,38 +93,22 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<div class="note">
-<p><strong>Nota</strong>: Tenha consciência de que o <code>clip()</code> só funciona com formas adicionadas ao caminho; ele não funciona com uma forma primitiva, como retângulos criados com {{domxref("CanvasRenderingContext2D.fillRect()","fillRect()")}}. Nesse caso você teria que usar {{domxref("CanvasRenderingContext2D.rect()","rect()")}} para desenhar um caminho de forma retângular para ser recortado.</p>
-</div>
+> **Nota:** Tenha consciência de que o `clip()` só funciona com formas adicionadas ao caminho; ele não funciona com uma forma primitiva, como retângulos criados com {{domxref("CanvasRenderingContext2D.fillRect()","fillRect()")}}. Nesse caso você teria que usar {{domxref("CanvasRenderingContext2D.rect()","rect()")}} para desenhar um caminho de forma retângular para ser recortado.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-clip", "CanvasRenderingContext2D.clip")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                        | Estado                           | Comentário |
+| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-clip", "CanvasRenderingContext2D.clip")}} | {{Spec2('HTML WHATWG')}} |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.CanvasRenderingContext2D.clip")}}
 
-<h2 id="Ver_também">Ver também</h2>
+## Ver também
 
-<ul>
- <li>A interface como defini-la, {{domxref("CanvasRenderingContext2D")}}.</li>
-</ul>
+- A interface como defini-la, {{domxref("CanvasRenderingContext2D")}}.

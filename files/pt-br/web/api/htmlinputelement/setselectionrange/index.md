@@ -3,95 +3,72 @@ title: HTMLInputElement.setSelectionRange()
 slug: Web/API/HTMLInputElement/setSelectionRange
 translation_of: Web/API/HTMLInputElement/setSelectionRange
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>O método<strong><code>HTMLInputElement.setSelectionRange()</code></strong> define as posições inicial e final da seleção atual do texto em um elemento {{HTMLElement("input")}}.</p>
+O método**`HTMLInputElement.setSelectionRange()`** define as posições inicial e final da seleção atual do texto em um elemento {{HTMLElement("input")}}.
 
-<p>Opcionalmente, em navegadores mais novos, você pode especificar a direção na qual a seleção deve ser feita; isso permite a você indicar, por exemplo, que a seleção foi feita como se o usuário tivesse clicado no fim do texto selecionado e arrastado em direção ao início.</p>
+Opcionalmente, em navegadores mais novos, você pode especificar a direção na qual a seleção deve ser feita; isso permite a você indicar, por exemplo, que a seleção foi feita como se o usuário tivesse clicado no fim do texto selecionado e arrastado em direção ao início.
 
-<p>Esse método atualiza ao mesmo tempo <code>HTMLInputElement.selectionStart</code>, <code>selectionEnd</code>, and <code>selectionDirection</code>.</p>
+Esse método atualiza ao mesmo tempo `HTMLInputElement.selectionStart`, `selectionEnd`, and `selectionDirection`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">inputElement.setSelectionRange(<var>selectionStart</var>, <var>selectionEnd</var>, [optional] <var>selectionDirection</var>);
-</pre>
+```
+inputElement.setSelectionRange(selectionStart, selectionEnd, [optional] selectionDirection);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><em>selectionStart</em></dt>
- <dd>The 0-based index of the first selected character.</dd>
- <dt><em>selectionEnd</em></dt>
- <dd>The 0-based index of the character <em>after</em> the last selected character.</dd>
- <dt><em>selectionDirection</em> {{optional_inline}}</dt>
- <dd>A string indicating the direction in which the selection is performed. This string can be "forward" or "backward", or "none" if the direction is unknown or irrelevant.</dd>
-</dl>
+- _selectionStart_
+  - : The 0-based index of the first selected character.
+- _selectionEnd_
+  - : The 0-based index of the character _after_ the last selected character.
+- _selectionDirection_ {{optional_inline}}
+  - : A string indicating the direction in which the selection is performed. This string can be "forward" or "backward", or "none" if the direction is unknown or irrelevant.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following code:</p>
+The following code:
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta charset=utf-8&gt;
-&lt;title&gt;JS Bin&lt;/title&gt;
-&lt;script&gt;
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8>
+<title>JS Bin</title>
+<script>
 function SelectText () {
         var input = document.getElementById("mytextbox");
             input.focus();
             input.setSelectionRange(2,5);
 }
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;&lt;input type="text" id="mytextbox" size="20" value="Mozilla"/&gt;&lt;/p&gt;
-  &lt;p&gt;&lt;button onclick="SelectText()"&gt;Select text&lt;/button&gt;&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+</head>
+<body>
+  <p><input type="text" id="mytextbox" size="20" value="Mozilla"/></p>
+  <p><button onclick="SelectText()">Select text</button></p>
+</body>
+</html>
+```
 
-<p>will produce the following:</p>
+will produce the following:
 
-<p><img alt="example.png" class="default internal" src="/@api/deki/files/6104/=example.png"></p>
+![example.png](/@api/deki/files/6104/=example.png)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "forms.html#dom-textarea/input-setselectionrange", "HTMLInputElement.setSelectionRange()")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5.1", "forms.html#dom-textarea/input-setselectionrange", "HTMLInputElement.setSelectionRange()")}}</td>
-   <td>{{Spec2("HTML5.1")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "forms.html#dom-textarea/input-setselectionrange", "HTMLInputElement.setSelectionRange()")}}</td>
-   <td>{{Spec2("HTML5 W3C")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                                                | Status                           | Comment            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
+| {{SpecName("HTML WHATWG", "forms.html#dom-textarea/input-setselectionrange", "HTMLInputElement.setSelectionRange()")}} | {{Spec2("HTML WHATWG")}} | No change          |
+| {{SpecName("HTML5.1", "forms.html#dom-textarea/input-setselectionrange", "HTMLInputElement.setSelectionRange()")}}     | {{Spec2("HTML5.1")}}     | No change          |
+| {{SpecName("HTML5 W3C", "forms.html#dom-textarea/input-setselectionrange", "HTMLInputElement.setSelectionRange()")}} | {{Spec2("HTML5 W3C")}}     | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.HTMLInputElement.setSelectionRange")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTMLElement("input")}}</li>
- <li>{{domxref("HTMLInputElement")}}</li>
- <li>{{domxref("Selection")}}</li>
-</ul>
+- {{HTMLElement("input")}}
+- {{domxref("HTMLInputElement")}}
+- {{domxref("Selection")}}

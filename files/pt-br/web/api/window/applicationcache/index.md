@@ -3,31 +3,26 @@ title: Window.applicationCache
 slug: Web/API/Window/applicationCache
 translation_of: Web/API/Window/applicationCache
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+## Sumário
 
-<p>Retorna uma referência para o objeto de cache da janela.</p>
+Retorna uma referência para o objeto de cache da janela.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><var>cache</var> = window.applicationCache
-</pre>
+```
+cache = window.applicationCache
+```
 
-<h3 id="Parameters" name="Parameters">Parâmetros</h3>
+### Parâmetros
 
-<ul>
- <li><code>cache</code> é uma referência de objeto para {{domxref("OfflineResourceList")}}.</li>
-</ul>
+- `cache` é uma referência de objeto para {{domxref("OfflineResourceList")}}.
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<ul>
- <li>{{spec("http://www.w3.org/TR/2008/WD-html5-20080122/#appcache","HTML 5","WD")}}</li>
-</ul>
+- {{spec("http://www.w3.org/TR/2008/WD-html5-20080122/#appcache","HTML 5","WD")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Using_the_application_cache">Usando cache de aplicação</a></li>
-</ul>
+- [Usando cache de aplicação](/pt-BR/docs/Web/HTML/Using_the_application_cache)

@@ -10,37 +10,40 @@ tags:
   - Reference
 translation_of: Web/API/Document/anchors
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>{{deprecated_header("HTML5")}}</p>
+{{deprecated_header("HTML5")}}
 
-<p><code>anchors</code> retorna uma lista de todas as âncoras no documento.</p>
+`anchors` retorna uma lista de todas as âncoras no documento.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><var>nodeList</var> = document.anchors;
-</pre>
+```
+nodeList = document.anchors;
+```
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<pre class="brush:js">if ( document.anchors.length &gt;= 5 ) {
+```js
+if ( document.anchors.length >= 5 ) {
   dump("dump found too many anchors");
   window.location = "http://www.google.com";
 }
-</pre>
+```
 
-<p>O código a seguir é um exemplo que popula automaticamente um índice de conteúdo com cada âncora encontrada na página:</p>
+O código a seguir é um exemplo que popula automaticamente um índice de conteúdo com cada âncora encontrada na página:
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8" /&gt;
-&lt;title&gt;Test&lt;/title&gt;
-&lt;script&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Test</title>
+<script>
 function init() {
   var toc = document.getElementById("toc");
   var i, li, newAnchor;
-  for (i = 0; i &lt; document.anchors.length; i++) {
+  for (i = 0; i < document.anchors.length; i++) {
     li = document.createElement("li");
     newAnchor = document.createElement('a');
     newAnchor.href = "#" + document.anchors[i].name;
@@ -49,59 +52,42 @@ function init() {
     toc.appendChild(li);
   }
 }
-&lt;/script&gt;
+</script>
 
-&lt;/head&gt;
-&lt;body onload="init()"&gt;
+</head>
+<body onload="init()">
 
-&lt;h1&gt;Title&lt;/h1&gt;
-&lt;h2&gt;&lt;a name="contents"&gt;Contents&lt;/a&gt;&lt;/h2&gt;
-&lt;ul id="toc"&gt;&lt;/ul&gt;
+<h1>Title</h1>
+<h2><a name="contents">Contents</a></h2>
+<ul id="toc"></ul>
 
-&lt;h2&gt;&lt;a name="plants"&gt;Plants&lt;/a&gt;&lt;/h2&gt;
-&lt;ol&gt;
-    &lt;li&gt;Apples&lt;/li&gt;
-    &lt;li&gt;Oranges&lt;/li&gt;
-    &lt;li&gt;Pears&lt;/li&gt;
-&lt;/ol&gt;
+<h2><a name="plants">Plants</a></h2>
+<ol>
+    <li>Apples</li>
+    <li>Oranges</li>
+    <li>Pears</li>
+</ol>
 
-&lt;h2&gt;&lt;a name="veggies"&gt;Veggies&lt;/a&gt;&lt;/h2&gt;
-&lt;ol&gt;
-    &lt;li&gt;Carrots&lt;/li&gt;
-    &lt;li&gt;Celery&lt;/li&gt;
-    &lt;li&gt;Beats&lt;/li&gt;
-&lt;/ol&gt;
+<h2><a name="veggies">Veggies</a></h2>
+<ol>
+    <li>Carrots</li>
+    <li>Celery</li>
+    <li>Beats</li>
+</ol>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<p><a href="https://jsfiddle.net/S4yNp">View on JSFiddle</a></p>
+[View on JSFiddle](https://jsfiddle.net/S4yNp)
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p>Por motivos de compatibilidade, o conjunto de âncoras retornadas por <code>anchors</code> contém apenas as âncoras criadas com o atributo <code>name</code>, não incluindo as âncoras criadas com o atributo {{ htmlattrxref("id") }}.</p>
+Por motivos de compatibilidade, o conjunto de âncoras retornadas por `anchors` contém apenas as âncoras criadas com o atributo `name`, não incluindo as âncoras criadas com o atributo {{ htmlattrxref("id") }}.
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-document-anchors', 'Document.anchors')}}</td>
-   <td>{{ Spec2('HTML WHATWG') }}</td>
-   <td>Obsoleted.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-7577272', 'Document.anchors')}}</td>
-   <td>{{ Spec2('DOM2 Events') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                               | Comment             |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
+| {{SpecName('HTML WHATWG', '#dom-document-anchors', 'Document.anchors')}} | {{ Spec2('HTML WHATWG') }} | Obsoleted.          |
+| {{SpecName('DOM2 HTML', 'html.html#ID-7577272', 'Document.anchors')}}     | {{ Spec2('DOM2 Events') }} | Initial definition. |

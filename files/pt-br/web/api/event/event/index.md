@@ -3,64 +3,46 @@ title: Event()
 slug: Web/API/Event/Event
 translation_of: Web/API/Event/Event
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>O <code><strong>Event()</strong></code> cria uma nova {{domxref("Event")}}.</p>
+O **`Event()`** cria uma nova {{domxref("Event")}}.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"> <em>event</em> = new Event(<em>typeArg</em>, <em>eventInit</em>);</pre>
+```
+ event = new Event(typeArg, eventInit);
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><em>typeArg</em></dt>
- <dd>É uma {{domxref("DOMString")}} representa o nome do evento.</dd>
- <dt><em>eventInit</em>{{optional_inline}}</dt>
- <dd>É um dicionário <code>EventInit</code>, tendo os seguintes campos:
+- _typeArg_
+  - : É uma {{domxref("DOMString")}} representa o nome do evento.
+- _eventInit_{{optional_inline}}
 
- <ul>
-  <li><code>"bubbles"</code>, opcional e false por default, do tipo {{jsxref("Boolean")}}, indica se o evento é bubbles ou não.</li>
-  <li><code>"cancelable"</code>, opcional e false por default, do tipo {{jsxref("Boolean")}}, indica se o evento pode ser cancelado ou não.</li>
- </ul>
- </dd>
-</dl>
+  - : É um dicionário `EventInit`, tendo os seguintes campos:
 
-<h2 id="Exemplo">Exemplo</h2>
+    - `"bubbles"`, opcional e false por default, do tipo {{jsxref("Boolean")}}, indica se o evento é bubbles ou não.
+    - `"cancelable"`, opcional e false por default, do tipo {{jsxref("Boolean")}}, indica se o evento pode ser cancelado ou não.
 
-<pre class="brush: js">// criar um evento com bubbles true e que não pode ser cancelado
+## Exemplo
+
+```js
+// criar um evento com bubbles true e que não pode ser cancelado
 
 var ev = new Event("look", {"bubbles":true, "cancelable":false});
 document.dispatchEvent(ev);
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table" style="height: 49px; width: 1000px;">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#interface-event','Event()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                            | Status                           | Comentário         |
+| ------------------------------------------------------------------------ | -------------------------------- | ------------------ |
+| {{SpecName('DOM WHATWG','#interface-event','Event()')}} | {{Spec2('DOM WHATWG')}} | Definição inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("api.Event.Event")}}
 
+## Veja também
 
-<p>{{Compat("api.Event.Event")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{domxref("Event")}}</li>
-</ul>
+- {{domxref("Event")}}

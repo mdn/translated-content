@@ -3,54 +3,52 @@ title: Node.appendChild
 slug: Web/API/Node/appendChild
 translation_of: Web/API/Node/appendChild
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<h2 id="Summary" name="Summary">Resumo</h2>
+## Resumo
 
-<p>Adiciona um nó ao final da lista de filhos de um nó pai especificado. Se o nó já existir no documento, ele é removido de seu nó pai atual antes de ser adicionado ao novo pai.</p>
+Adiciona um nó ao final da lista de filhos de um nó pai especificado. Se o nó já existir no documento, ele é removido de seu nó pai atual antes de ser adicionado ao novo pai.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var filho = <em>elemento</em>.appendChild(<em>filho</em>);</pre>
+```
+var filho = elemento.appendChild(filho);
+```
 
-<ul>
- <li><code>elemento</code> é o <a href="/pt-BR/docs/DOM/element" title="/en-US/docs/DOM/element">elemento</a> pai.</li>
- <li><code>filho</code> é o nó a ser adicionado como filho de <code>elemento</code>. Também é devolvido.</li>
-</ul>
+- `elemento` é o [elemento](/pt-BR/docs/DOM/element "/en-US/docs/DOM/element") pai.
+- `filho` é o nó a ser adicionado como filho de `elemento`. Também é devolvido.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O método <code>appendChild</code> devolve uma referência ao nó adicionado.</p>
+O método `appendChild` devolve uma referência ao nó adicionado.
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<pre class="brush:js">// Cria um novo elemento de parágrafo e adiciona-o ao final do documento
+```js
+// Cria um novo elemento de parágrafo e adiciona-o ao final do documento
 var p = document.createElement("p");
-document.body.appendChild(p);</pre>
+document.body.appendChild(p);
+```
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p>Se <code>filho</code> é uma referência a um nó existente no documento, <code>appendChild</code> vai movê-lo de sua posição atual para a nova posição (i.e, não é necessário remover o nó de seu pai atual antes de adicioná-lo a outro nó).</p>
+Se `filho` é uma referência a um nó existente no documento, `appendChild` vai movê-lo de sua posição atual para a nova posição (i.e, não é necessário remover o nó de seu pai atual antes de adicioná-lo a outro nó).
 
-<p>Isso também significa que um nó não pode estar em dois lugares do documento ao mesmo tempo. Assim, se o nó já tem um pai, ele é primeiro removido para, <em>só então</em>, ser adicionado na nova posição.</p>
+Isso também significa que um nó não pode estar em dois lugares do documento ao mesmo tempo. Assim, se o nó já tem um pai, ele é primeiro removido para, _só então_, ser adicionado na nova posição.
 
-<p>Você pode usar o método {{domxref("Node.cloneNode")}} para criar uma cópia do nó antes de adicioná-lo ao novo pai. (Note que cópias feitas com o método <code>cloneNode</code> <strong>não </strong>serão mantidas sincronizadas automaticamente)</p>
+Você pode usar o método {{domxref("Node.cloneNode")}} para criar uma cópia do nó antes de adicioná-lo ao novo pai. (Note que cópias feitas com o método `cloneNode` **não** serão mantidas sincronizadas automaticamente)
 
-<p>Este método não permite mover nós entre documentos diferentes. Se você quiser adicionar um nó de um documento diferente (por exemplo para mostrar o resultado de uma requisição AJAX), você precisa primeiro usar o método {{domxref("document.importNode")}}.</p>
+Este método não permite mover nós entre documentos diferentes. Se você quiser adicionar um nó de um documento diferente (por exemplo para mostrar o resultado de uma requisição AJAX), você precisa primeiro usar o método {{domxref("document.importNode")}}.
 
-<p><code>appendChild()</code> é um dos métodos fundamentais da programação para a web usando o DOM. O método <code>appendChild()</code> insere um novo nó na estrutura do DOM de um documento, e é a segunda parte do processo criar-e-adicionar tão importante na construção de páginas web programaticamente.</p>
+`appendChild()` é um dos métodos fundamentais da programação para a web usando o DOM. O método `appendChild()` insere um novo nó na estrutura do DOM de um documento, e é a segunda parte do processo criar-e-adicionar tão importante na construção de páginas web programaticamente.
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-184E7107">DOM Level 3 Core: appendChild</a></li>
-</ul>
+- [DOM Level 3 Core: appendChild](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-184E7107)
 
-<h2 id="See_also" name="See_also">Ver também</h2>
+## Ver também
 
-<ul>
- <li>{{domxref("Node.removeChild")}}</li>
- <li>{{domxref("Node.replaceChild")}}</li>
- <li>{{domxref("Node.insertBefore")}}</li>
- <li>{{domxref("Node.hasChildNodes")}}</li>
-</ul>
+- {{domxref("Node.removeChild")}}
+- {{domxref("Node.replaceChild")}}
+- {{domxref("Node.insertBefore")}}
+- {{domxref("Node.hasChildNodes")}}

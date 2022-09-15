@@ -3,35 +3,30 @@ title: MessageChannel
 slug: Web/API/MessageChannel
 translation_of: Web/API/MessageChannel
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>A interface <strong><code>MessageChannel</code></strong> da <a href="/en-US/docs/Web/API/Channel_Messaging_API">API Channel Messaging</a> nos permite criar um novo canal de mensagem e enviar os dados através de suas duas propriedades {{domxref("MessagePort")}}.</p>
+A interface **`MessageChannel`** da [API Channel Messaging](/pt-BR/docs/Web/API/Channel_Messaging_API) nos permite criar um novo canal de mensagem e enviar os dados através de suas duas propriedades {{domxref("MessagePort")}}.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<dl>
- <dt>{{domxref("MessageChannel.port1")}} {{readonlyInline}}</dt>
- <dd>Retorna port1 do canal.</dd>
- <dt>{{domxref("MessageChannel.port2")}} {{readonlyInline}}</dt>
- <dd>Retorna port2 do canal.</dd>
-</dl>
+- {{domxref("MessageChannel.port1")}} {{readonlyInline}}
+  - : Retorna port1 do canal.
+- {{domxref("MessageChannel.port2")}} {{readonlyInline}}
+  - : Retorna port2 do canal.
 
-<h2 id="Construtor">Construtor</h2>
+## Construtor
 
-<dl>
- <dt>{{domxref("MessageChannel.MessageChannel", "MessageChannel()")}}</dt>
- <dd>
- <p>Retorna um novo objeto <code>MessageChannel</code> com dois novos objetos {{domxref("MessagePort")}}.</p>
- </dd>
-</dl>
+- {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}}
+  - : Retorna um novo objeto `MessageChannel` com dois novos objetos {{domxref("MessagePort")}}.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>No seguinte bloco de codigo, você pode ver um novo canal sendo criado usando o construtor {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}}. Quando o {{HTMLElement("iframe")}} tiver carregado, nos passamos o {{domxref("MessageChannel.port2")}} para o {{HTMLElement("iframe")}} usando {{domxref("MessagePort.postMessage")}} juntamente com uma mensagem. O manipulador <code>handleMessage</code> então reponde à mensagem que foi enviada de volta do {{HTMLElement("iframe")}} (using {{domxref("MessagePort.onmessage")}}), colocando-o em um parágrafo.</p>
+No seguinte bloco de codigo, você pode ver um novo canal sendo criado usando o construtor {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}}. Quando o {{HTMLElement("iframe")}} tiver carregado, nos passamos o {{domxref("MessageChannel.port2")}} para o {{HTMLElement("iframe")}} usando {{domxref("MessagePort.postMessage")}} juntamente com uma mensagem. O manipulador `handleMessage` então reponde à mensagem que foi enviada de volta do {{HTMLElement("iframe")}} (using {{domxref("MessagePort.onmessage")}}), colocando-o em um parágrafo.
 
-<pre class="brush: js">var channel = new MessageChannel();
+```js
+var channel = new MessageChannel();
 var para = document.querySelector('p');
 
 var ifr = document.querySelector('iframe');
@@ -46,33 +41,21 @@ function iframeLoaded() {
 channel.port1.onmessage = handleMessage;
 function handleMessage(e) {
   para.innerHTML = e.data;
-}   </pre>
+}
+```
 
-<p>Para um exemplo completo, veja nosso  <a class="external external-icon" href="https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic">channel messaging basic demo</a> no Github (<a class="external external-icon" href="https://mdn.github.io/dom-examples/channel-messaging-basic/">rode online também</a> ).</p>
+Para um exemplo completo, veja nosso [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) no Github ([rode online também](https://mdn.github.io/dom-examples/channel-messaging-basic/) ).
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'web-messaging.html#message-channels','Message channels')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificações                                                                                                   | Status                           | Comentário |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', 'web-messaging.html#message-channels','Message channels')}} | {{Spec2('HTML WHATWG')}} |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.MessageChannel")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</a></li>
-</ul>
+- [Using channel messaging](/pt-BR/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

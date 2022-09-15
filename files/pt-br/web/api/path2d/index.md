@@ -12,71 +12,48 @@ tags:
   - Referencia
 translation_of: Web/API/Path2D
 ---
-<div>{{APIRef("Canvas API")}} {{SeeCompatTable}}</div>
+{{APIRef("Canvas API")}} {{SeeCompatTable}}
 
-<p>A <strong><code>Path2D</code></strong> interface da API Canvas 2D é usada para declarar caminhos que são usados ​​posteriormente em objetos {{domxref("CanvasRenderingContext2D")}}. Os métodos de caminho da interface CanvasRenderingContext2D também estão presentes nessa interface e permitem criar caminhos que você pode reter e reproduzir conforme necessário em uma tela.</p>
+A **`Path2D`** interface da API Canvas 2D é usada para declarar caminhos que são usados ​​posteriormente em objetos {{domxref("CanvasRenderingContext2D")}}. Os métodos de caminho da interface CanvasRenderingContext2D também estão presentes nessa interface e permitem criar caminhos que você pode reter e reproduzir conforme necessário em uma tela.
 
-<h2 id="Construtores">Construtores</h2>
+## Construtores
 
-<dl>
- <dt>{{domxref("Path2D.Path2D", "Path2D()")}}</dt>
- <dd><code>Path2D</code> construtor. Cria um novo objeto <code>Path2D</code>.</dd>
-</dl>
+- {{domxref("Path2D.Path2D", "Path2D()")}}
+  - : `Path2D` construtor. Cria um novo objeto `Path2D`.
 
-<h2 id="Metodos">Metodos</h2>
+## Metodos
 
-<dl>
- <dt>{{domxref("Path2D.addPath()")}}</dt>
- <dd>Adiciona um caminho ao caminho atual.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.closePath", "Path2D.closePath()")}}</dt>
- <dd>Faz com que o ponto da caneta retorne ao início do sub-caminho atual. Ele tenta desenhar uma linha reta desde o ponto atual até o início. Se a forma já foi fechada ou tem apenas um ponto, essa função não faz nada.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.moveTo()", "Path2D.moveTo()")}}</dt>
- <dd>Move o ponto inicial de um novo subcaminho para as coordenadas (x, y).</dd>
- <dt>{{domxref("CanvasRenderingContext2D.lineTo()", "Path2D.lineTo()")}}</dt>
- <dd>Conecta o último ponto no subcaminho às coordenadas x, y com uma linha reta.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.bezierCurveTo()", "Path2D.bezierCurveTo()")}}</dt>
- <dd>Adiciona uma curva cúbica de Bézier ao caminho. Requer três pontos. Os dois primeiros pontos são pontos de controle e o terceiro é o ponto final. O ponto de partida é o último ponto no caminho atual, que pode ser alterado usando moveTo () antes de criar a curva Bézier.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.quadraticCurveTo()", "Path2D.quadraticCurveTo()")}}</dt>
- <dd>Adiciona uma curva quadrática de Bézier ao caminho atual.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.arc()", "Path2D.arc()")}}</dt>
- <dd>Adiciona um arco ao caminho que é centralizado na posição (x, y) com raio r iniciando em startAngle e terminando em endAngle indo na direção dada no sentido anti-horário (padrão no sentido horário).</dd>
- <dt>{{domxref("CanvasRenderingContext2D.arcTo()", "Path2D.arcTo()")}}</dt>
- <dd>Adiciona um arco ao caminho com os pontos de controle e raio dados, conectados ao ponto anterior por uma linha reta.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.ellipse()", "Path2D.ellipse()")}}</dt>
- <dd>Adiciona uma elipse ao caminho que é centralizado na posição (x, y) com os raios radiusX e radiusY começando em startAngle e terminando em endAngle indo na direção determinada no sentido anti-horário (padrão no sentido horário).</dd>
- <dt>{{domxref("CanvasRenderingContext2D.rect()", "Path2D.rect()")}}</dt>
- <dd>Cria um caminho para um retângulo na posição (x, y) com um tamanho determinado por <em>width</em> e <em>height</em>.</dd>
-</dl>
+- {{domxref("Path2D.addPath()")}}
+  - : Adiciona um caminho ao caminho atual.
+- {{domxref("CanvasRenderingContext2D.closePath", "Path2D.closePath()")}}
+  - : Faz com que o ponto da caneta retorne ao início do sub-caminho atual. Ele tenta desenhar uma linha reta desde o ponto atual até o início. Se a forma já foi fechada ou tem apenas um ponto, essa função não faz nada.
+- {{domxref("CanvasRenderingContext2D.moveTo()", "Path2D.moveTo()")}}
+  - : Move o ponto inicial de um novo subcaminho para as coordenadas (x, y).
+- {{domxref("CanvasRenderingContext2D.lineTo()", "Path2D.lineTo()")}}
+  - : Conecta o último ponto no subcaminho às coordenadas x, y com uma linha reta.
+- {{domxref("CanvasRenderingContext2D.bezierCurveTo()", "Path2D.bezierCurveTo()")}}
+  - : Adiciona uma curva cúbica de Bézier ao caminho. Requer três pontos. Os dois primeiros pontos são pontos de controle e o terceiro é o ponto final. O ponto de partida é o último ponto no caminho atual, que pode ser alterado usando moveTo () antes de criar a curva Bézier.
+- {{domxref("CanvasRenderingContext2D.quadraticCurveTo()", "Path2D.quadraticCurveTo()")}}
+  - : Adiciona uma curva quadrática de Bézier ao caminho atual.
+- {{domxref("CanvasRenderingContext2D.arc()", "Path2D.arc()")}}
+  - : Adiciona um arco ao caminho que é centralizado na posição (x, y) com raio r iniciando em startAngle e terminando em endAngle indo na direção dada no sentido anti-horário (padrão no sentido horário).
+- {{domxref("CanvasRenderingContext2D.arcTo()", "Path2D.arcTo()")}}
+  - : Adiciona um arco ao caminho com os pontos de controle e raio dados, conectados ao ponto anterior por uma linha reta.
+- {{domxref("CanvasRenderingContext2D.ellipse()", "Path2D.ellipse()")}}
+  - : Adiciona uma elipse ao caminho que é centralizado na posição (x, y) com os raios radiusX e radiusY começando em startAngle e terminando em endAngle indo na direção determinada no sentido anti-horário (padrão no sentido horário).
+- {{domxref("CanvasRenderingContext2D.rect()", "Path2D.rect()")}}
+  - : Cria um caminho para um retângulo na posição (x, y) com um tamanho determinado por _width_ e _height_.
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-path2d", "Path2D")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                           | Comment |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-path2d", "Path2D")}} | {{Spec2('HTML WHATWG')}} |         |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
+{{Compat("api.Path2D")}}
 
+## Veja também:
 
-<p>{{Compat("api.Path2D")}}</p>
-</div>
-
-<h2 id="Veja_também">Veja também:</h2>
-
-<ul>
- <li>{{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- {{domxref("CanvasRenderingContext2D")}}

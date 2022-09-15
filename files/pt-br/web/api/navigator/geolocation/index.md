@@ -3,44 +3,28 @@ title: Navigator.geolocation
 slug: Web/API/Navigator/geolocation
 translation_of: Web/API/Navigator/geolocation
 ---
-<div>{{APIRef("Geolocation API")}}</div>
+{{APIRef("Geolocation API")}}
 
-<p>A propriedade de apenas leitura <strong><code>Navigator.geolocation</code></strong> retorna um objeto {{domxref("Geolocation")}} que disponibiliza acesso de conteúdo Web à localização do dispositivo. Isso permite que um Web site ou aplicativo ofereçam resultados customizados baseado na localização do usuário.</p>
+A propriedade de apenas leitura **`Navigator.geolocation`** retorna um objeto {{domxref("Geolocation")}} que disponibiliza acesso de conteúdo Web à localização do dispositivo. Isso permite que um Web site ou aplicativo ofereçam resultados customizados baseado na localização do usuário.
 
-<div class="note">
-<p><strong>Nota:</strong> Por questão de segurança, quando uma página web tenta acessar as informações de localização, o usuário é notificado e lhe é perguntado se este garante permissão. Esteja alerta que cada navegador possui suas próprias políticas e métodos para requisitar permissão.</p>
-</div>
+> **Nota:** Por questão de segurança, quando uma página web tenta acessar as informações de localização, o usuário é notificado e lhe é perguntado se este garante permissão. Esteja alerta que cada navegador possui suas próprias políticas e métodos para requisitar permissão.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><var>geo</var> = <var>navigator</var>.geolocation
-</pre>
+```
+geo = navigator.geolocation
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Situação</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Geolocation', '#navi-geo', 'Navigator.geolocation')}}</td>
-   <td>{{Spec2('Geolocation')}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                            | Situação                         | Comentário        |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
+| {{SpecName('Geolocation', '#navi-geo', 'Navigator.geolocation')}} | {{Spec2('Geolocation')}} | Definição inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("api.Navigator.geolocation")}}</p>
+{{Compat("api.Navigator.geolocation")}}
 
-<p><span style="">Veja também</span></p>
+Veja também
 
-<ul>
- <li><a href="/en-US/docs/WebAPI/Using_geolocation">Utilizar geolocalização</a></li>
-</ul>
+- [Utilizar geolocalização](/pt-BR/docs/WebAPI/Using_geolocation)

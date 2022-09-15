@@ -3,77 +3,47 @@ title: popstate
 slug: Web/API/Window/popstate_event
 translation_of: Web/API/Window/popstate_event
 ---
-<p>O evento <code>popstate </code>é disparado quando a entrada do histórico ativa é alterado. Se o histórico de entrada a ser ativado for criado por uma chamada <code>history.pushState() </code>ou for afetada por uma chamada <code>history.replaceState(),</code> a propriedade dos eventos<code> popstate </code>contém uma cópia do histórico de entrada do objeto.<br>
- <br>
- Note  que apenas chamando <code>history.pushState()</code> ou <code>history.replaceState()</code> não ira disparar um evento <code>popstate. </code>O evento <code>popstate </code>apenas é disparado após uma ação no navegador como um click no botão de voltar (ou chamando <code>history.back() por javascript</code>)<br>
- <br>
- Navegadores tendem a lidar com o evento <code>popstate </code>diferentemente no carregamento da página. Chrome (anterior versão 34) e Safari sempre emitem um evento <code>popstate</code> no carregamento da página, mas o Firefox não.</p>
+O evento `popstate `é disparado quando a entrada do histórico ativa é alterado. Se o histórico de entrada a ser ativado for criado por uma chamada `history.pushState() `ou for afetada por uma chamada `history.replaceState(),` a propriedade dos eventos` popstate `contém uma cópia do histórico de entrada do objeto.
 
-<h2 id="Informação_geral">Informação geral</h2>
+Note que apenas chamando `history.pushState()` ou `history.replaceState()` não ira disparar um evento `popstate. `O evento `popstate `apenas é disparado após uma ação no navegador como um click no botão de voltar (ou chamando `history.back() por javascript`)
 
-<dl>
- <dt style="float: left; text-align: right; width: 120px;">Especificação</dt>
- <dd style="margin: 0 0 0 120px;"><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-popstate">HTML5</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">Interface</dt>
- <dd style="margin: 0 0 0 120px;">PopStateEvent</dd>
- <dt style="float: left; text-align: right; width: 120px;">Bubbles</dt>
- <dd style="margin: 0 0 0 120px;">Yes</dd>
- <dt style="float: left; text-align: right; width: 120px;">Cancelable</dt>
- <dd style="margin: 0 0 0 120px;">No</dd>
- <dt style="float: left; text-align: right; width: 120px;">Alvo</dt>
- <dd style="margin: 0 0 0 120px;">defaultView</dd>
- <dt style="float: left; text-align: right; width: 120px;">Ação padrão</dt>
- <dd style="margin: 0 0 0 120px;">None</dd>
-</dl>
+Navegadores tendem a lidar com o evento `popstate `diferentemente no carregamento da página. Chrome (anterior versão 34) e Safari sempre emitem um evento `popstate` no carregamento da página, mas o Firefox não.
 
-<h2 id="Propriedades">Propriedades</h2>
+## Informação geral
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>The browsing context (<code>window</code>).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>The type of event.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event normally bubbles or not.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event is cancellable or not.</td>
-  </tr>
-  <tr>
-   <td><code>state</code> {{readonlyInline}}</td>
-   <td><em>any</em></td>
-   <td>The current history entry's state object (if any).</td>
-  </tr>
- </tbody>
-</table>
+- Especificação
+  - : [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-popstate)
+- Interface
+  - : PopStateEvent
+- Bubbles
+  - : Yes
+- Cancelable
+  - : No
+- Alvo
+  - : defaultView
+- Ação padrão
+  - : None
 
-<h2 id="Compatiblidade_com_navegadores">Compatiblidade com navegadores</h2>
+## Propriedades
+
+| Property                              | Type                                 | Description                                        |
+| ------------------------------------- | ------------------------------------ | -------------------------------------------------- |
+| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The browsing context (`window`).                   |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                 |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.         |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.           |
+| `state` {{readonlyInline}}      | _any_                                | The current history entry's state object (if any). |
+
+## Compatiblidade com navegadores
 
 {{Compat("api.Window.popstate_event")}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>Um página no <code>http://example.com/example.html roda o código abaixo e irá gerar os logs indicados</code></p>
+Um página no `http://example.com/example.html roda o código abaixo e irá gerar os logs indicados`
 
-<pre class="brush: js">window.onpopstate = function(event) {
+```js
+window.onpopstate = function(event) {
   console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
 };
 history.pushState({page: 1}, "title 1", "?page=1");
@@ -82,13 +52,10 @@ history.replaceState({page: 3}, "title 3", "?page=3");
 history.back(); // Logs "location: http://example.com/example.html?page=1, state: {"page":1}"
 history.back(); // Logs "location: http://example.com/example.html, state: null
 history.go(2);  // Logs "location: http://example.com/example.html?page=3, state: {"page":3}
-</pre>
+```
 
-<p>Observe que mesmo que a entrada do histórico inicial(para <code>http://example.com/example.html</code>) não tem nenhum estado associado a ele, um evento <code>popstate </code>é ainda disparado quando nós ativamos essa entrada após a segunda chamada para<code> history.back ().</code><br>
-  </p>
+Observe que mesmo que a entrada do histórico inicial(para `http://example.com/example.html`) não tem nenhum estado associado a ele, um evento `popstate `é ainda disparado quando nós ativamos essa entrada após a segunda chamada para` history.back ().`
 
-<h2 id="Eventos_relacionados">Eventos relacionados</h2>
+## Eventos relacionados
 
-<ul>
- <li><a href="/en-US/docs/Mozilla_event_reference/hashchange"><code>hashchange</code></a></li>
-</ul>
+- [`hashchange`](/pt-BR/docs/Mozilla_event_reference/hashchange)

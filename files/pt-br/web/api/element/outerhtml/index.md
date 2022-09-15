@@ -3,94 +3,84 @@ title: Element.outerHTML
 slug: Web/API/Element/outerHTML
 translation_of: Web/API/Element/outerHTML
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+## Sumário
 
-<p>O atributo <code>outerHTML</code> da estrutura DOM(Document object model) obtem  um fragmento serializado de código HTML descrevendo o elemento incluindo seus descendentes. É possível substituir o elemento em questão com nós obtidos através da análise de uma string.</p>
+O atributo `outerHTML` da estrutura DOM(Document object model) obtem um fragmento serializado de código HTML descrevendo o elemento incluindo seus descendentes. É possível substituir o elemento em questão com nós obtidos através da análise de uma string.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<p><em>var conteudo</em> = <em>elemento</em>.outerHTML;</p>
+_var conteudo_ = _elemento_.outerHTML;
 
-<p>Na atribuição, <em>conteudo</em> armazena o fragmento de código HTML que descreve o elemento e seus descentes.</p>
+Na atribuição, _conteudo_ armazena o fragmento de código HTML que descreve o elemento e seus descentes.
 
-<pre class="eval"><em>elemento</em>.outerHTML = conteudo;
-</pre>
+```
+elemento.outerHTML = conteudo;
+```
 
-<p><code>Atribui a <em>elemento</em></code>  os nós obtidos pela análise da  string <code>conteudo</code>, tendo nó pai de elemento como nó de contexto o para o algoritmo de análise do fragmento de código HTML.</p>
+`Atribui a elemento` os nós obtidos pela análise da string `conteudo`, tendo nó pai de elemento como nó de contexto o para o algoritmo de análise do fragmento de código HTML.
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<p>Obtendo o valor da propriedade outerHtml de um elemento :</p>
+Obtendo o valor da propriedade outerHtml de um elemento :
 
-<pre class="brush: js">// HTML:
-// &lt;div id="d"&gt;&lt;p&gt;Conteúdo&lt;/p&gt;&lt;p&gt;Parágrafo&lt;/p&gt;&lt;/div&gt;
+```js
+// HTML:
+// <div id="d"><p>Conteúdo</p><p>Parágrafo</p></div>
 
 d = document.getElementById("d");
 dump(d.outerHTML);
 
-// A string '&lt;div id="d"&gt;&lt;p&gt;Conteúdo&lt;/p&gt;&lt;p&gt;Parágrafo&lt;/p&gt;&lt;/div&gt;'
+// A string '<div id="d"><p>Conteúdo</p><p>Parágrafo</p></div>'
 // é mostrada na janela do console.
-</pre>
+```
 
-<p>Substituindo um nó atribuindo- lhe a propriedade outerHTML</p>
+Substituindo um nó atribuindo- lhe a propriedade outerHTML
 
-<pre class="brush: js">// HTML:
-// &lt;div id="container"&gt;&lt;div id="d"&gt;Isto é uma div.&lt;/div&gt;&lt;/div&gt;
+```js
+// HTML:
+// <div id="container"><div id="d">Isto é uma div.</div></div>
 
 container = document.getElementById("container");
 d = document.getElementById("d");
 console.log(container.firstChild.nodeName); // mostra "DIV"
 
-d.outerHTML = "&lt;p&gt;Este parágrafo substitui a div original&lt;/p&gt;";
+d.outerHTML = "<p>Este parágrafo substitui a div original</p>";
 console.log(container.firstChild.nodeName); // mostra "P"
 
 // A div #d não faz mais parte da estrutura do documento,
 // O novo parágrafo a substituiu.
-</pre>
+```
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>Se o elemento não tiver um nó pai, ou seja se o nó é a raiz do documento, tentar alterar sua propriedade outerHTML irá lançar um  <code><a href="/en/DOM/DOMException" title="DOMException">DOMException</a></code> com o código de erro <code>NO_MODIFICATION_ALLOWED_ERR</code>. Por exemplo:</p>
+Se o elemento não tiver um nó pai, ou seja se o nó é a raiz do documento, tentar alterar sua propriedade outerHTML irá lançar um [`DOMException`](/en/DOM/DOMException "DOMException") com o código de erro `NO_MODIFICATION_ALLOWED_ERR`. Por exemplo:
 
-<pre class="brush: js">document.documentElement.outerHTML = "test";  // Irá lançar uma DOMException
-</pre>
+```js
+document.documentElement.outerHTML = "test";  // Irá lançar uma DOMException
+```
 
-<p>inclusive, quando o elemento for substituído na estrutura do documento, a variável a qual a propriedade <code>outerHTML</code> foi atribuída ainda irá conter uma referência para o elemento original.</p>
+inclusive, quando o elemento for substituído na estrutura do documento, a variável a qual a propriedade `outerHTML` foi atribuída ainda irá conter uma referência para o elemento original.
 
-<pre class="brush: js">var p = document.getElementsByTagName("p")[0];
+```js
+var p = document.getElementsByTagName("p")[0];
 console.log(p.nodeName); // mostra: "P"
-p.outerHTML = "&lt;div&gt;Esta div substituiu o parágrafo.&lt;/div&gt;";
+p.outerHTML = "<div>Esta div substituiu o parágrafo.</div>";
 console.log(p.nodeName); // ainda contém "P";
-</pre>
+```
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM Parsing', '#outerhtml', 'Element.outerHTML')}}</td>
-   <td>{{ Spec2('DOM Parsing') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                        | Status                               | Comment |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | ------- |
+| {{SpecName('DOM Parsing', '#outerhtml', 'Element.outerHTML')}} | {{ Spec2('DOM Parsing') }} |         |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Element.outerHTML")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("HTMLElement.outerText")}}</li>
- <li>MSDN: <a class="external" href="http://msdn.microsoft.com/en-us/library/ms534310%28v=vs.85%29.aspx">outerHTML Property</a> </li>
-</ul>
+- {{domxref("HTMLElement.outerText")}}
+- MSDN: [outerHTML Property](http://msdn.microsoft.com/en-us/library/ms534310%28v=vs.85%29.aspx)

@@ -8,146 +8,104 @@ tags:
 translation_of: Web/API/Notification
 original_slug: Web/API/notificacoes
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>A interface da <a href="/en-US/docs/Web/API/Notifications_API">API de Notificações</a> é usada para configurar e exibir notificações  na área de trabalho do usuário. A aparência e algumas funcionalidades específicas das notificações variam entre as plataformas mas geralmente eles fornecem uma forma assíncrona de prover informações para o usuário.</p>
+A interface da [API de Notificações](/pt-BR/docs/Web/API/Notifications_API) é usada para configurar e exibir notificações na área de trabalho do usuário. A aparência e algumas funcionalidades específicas das notificações variam entre as plataformas mas geralmente eles fornecem uma forma assíncrona de prover informações para o usuário.
 
+## Construtor
 
-<h2 id="Construtor">Construtor</h2>
+- {{domxref("Notification.Notification", "Notification()")}}
+  - : Cria uma nova instancia do objeto {{domxref('Notification')}}.
 
-<dl>
- <dt>{{domxref("Notification.Notification", "Notification()")}}</dt>
- <dd>Cria uma nova instancia do objeto {{domxref('Notification')}}.</dd>
-</dl>
+## Propriedades
 
-<h2 id="Propriedades">Propriedades</h2>
+### Propriedades estáticas
 
-<h3 id="Propriedades_estáticas">Propriedades estáticas</h3>
+Estas propriedades estão disponíveis apenas no próprio objeto `Notification`.
 
-<p>Estas propriedades estão disponíveis apenas no próprio objeto  <code>Notification</code>.</p>
+- {{domxref("Notification.permission")}} {{readonlyinline}}
+  - : Uma sequência de caracteres que representa a permissão atual para exibir notificações. Valor possíveis são: "denied" (o usuário se recusa a ter notificações exibidas), "granted" (o usuário aceita ter notificações exibidas) ou "default" (a escolha do usuário é desconhecido e, portanto, o navegador irá agir como se o valor foram negados).
 
-<dl>
- <dt>{{domxref("Notification.permission")}} {{readonlyinline}}</dt>
- <dd>
- <div id="gt-src-tools">
- <div id="gt-src-tools-l"></div>
- </div>
+### Propriedades da instância
 
- <div id="gt-input-tool">
- <div id="tts_button">Uma sequência de caracteres que representa a permissão atual para exibir notificações. Valor possíveis são: "denied" (o usuário se recusa a ter notificações exibidas), "granted" (o usuário aceita ter notificações exibidas) ou "default" (a escolha do usuário é desconhecido e, portanto, o navegador irá agir como se o valor foram negados).</div>
- </div>
- </dd>
-</dl>
+Estas propriedades estão disponíveis apenas em instâncias do objeto `Notification`.
 
-<h3 id="Propriedades_da_instância">Propriedades da instância</h3>
+- {{domxref("Notification.title")}} {{readonlyinline}}
+  - : Retorna o título da notificação conforme foi definido no parâmetro opções do construtor.
+- {{domxref("Notification.dir")}} {{readonlyinline}}
+  - : A direção do texto da notificação, conforme especificado no parâmetro opções do construtor.
+- {{domxref("Notification.lang")}} {{readonlyinline}}
+  - : O código de idioma da notificação, conforme especificado no parâmetro opções do construtor.
+- {{domxref("Notification.body")}} {{readonlyinline}}
+  - : O corpo(mensagem) da notificação, conforme especificado no parâmetro opções do construtor.
+- {{domxref("Notification.tag")}} {{readonlyinline}}
+  - : O ID da notificação (se houver), conforme especificado no parâmetro opções do construtor.
+- {{domxref("Notification.icon")}} {{readonlyinline}}
+  - : A URL da imagem usada como um ícone da notificação, conforme especificado no parâmetro opções do construtor.
+- {{domxref("Notification.data")}} {{readonlyinline}}
+  - : Retorna um clone estruturado de dados da notificação.
+- {{domxref("Notification.silent")}} {{readonlyinline}}
+  - : Especifica se a notificação deve ser silenciosa, ou seja, sons ou vibrações não devem ser emitidos, independentemente das configurações do dispositivo.
 
-<p>Estas propriedades estão disponíveis apenas em instâncias do objeto <code>Notification</code>.</p>
+#### Propriedades não suportadas
 
-<dl>
- <dt>{{domxref("Notification.title")}} {{readonlyinline}}</dt>
- <dd>Retorna o título da notificação conforme foi definido no parâmetro opções do construtor.</dd>
- <dt>{{domxref("Notification.dir")}} {{readonlyinline}}</dt>
- <dd>A direção do texto da notificação, conforme especificado no parâmetro opções do construtor.</dd>
- <dt>{{domxref("Notification.lang")}} {{readonlyinline}}</dt>
- <dd>
- <div id="gt-src-tools">
- <div id="tts_button">O código de idioma da notificação, conforme especificado no parâmetro opções do construtor.</div>
- </div>
- </dd>
- <dt>{{domxref("Notification.body")}} {{readonlyinline}}</dt>
- <dd>O corpo(mensagem) da notificação, conforme especificado no parâmetro opções do construtor.</dd>
- <dt>{{domxref("Notification.tag")}} {{readonlyinline}}</dt>
- <dd>O ID da notificação (se houver), conforme especificado no parâmetro opções do construtor.</dd>
- <dt>{{domxref("Notification.icon")}} {{readonlyinline}}</dt>
- <dd>A URL da imagem usada como um ícone da notificação, conforme especificado no parâmetro opções do construtor.</dd>
- <dt>{{domxref("Notification.data")}} {{readonlyinline}}</dt>
- <dd>Retorna um clone estruturado de dados da notificação.</dd>
- <dt>{{domxref("Notification.silent")}} {{readonlyinline}}</dt>
- <dd>
- <div id="gt-src-tools">
- <div id="tts_button">Especifica se a notificação deve ser silenciosa, ou seja, sons ou vibrações não devem ser emitidos, independentemente das configurações do dispositivo.</div>
- </div>
- </dd>
-</dl>
+As propriedades a seguir estão listados na especificação mais up-to-date, mas não são suportadas em quaisquer navegadores ainda. É aconselhável manter a verificação de volta regularmente para ver se o status destes actualiza, e deixe-nos saber se você encontrar qualquer informações desatualizadas.
 
-<h4 id="Propriedades_não_suportadas">Propriedades não suportadas</h4>
+- {{domxref("Notification.noscreen")}} {{readonlyinline}}
+  - : Especifica se o disparo notificação deve permitir que a tela do dispositivo ou não.
+- {{domxref("Notification.renotify")}} {{readonlyinline}}
+  - : Especifica se o usuário deve ser notificado após uma nova notificação substitui um antigo.
+- {{domxref("Notification.sound")}} {{readonlyinline}}
+  - : Especifica um recurso de som para reproduzir durante o disparo da notificação, em vez do som de notificação do sistema padrão.
+- {{domxref("Notification.sticky")}} {{readonlyinline}}
+  - : Especifica se a notificação deve ser "fixa", ou seja, não facilmente eliminável pelo usuário.
+- {{domxref("Notification.vibrate")}} {{readonlyinline}}
+  - : Especifica um padrão de vibração para dispositivos com hardware de vibração.
 
-<p>As propriedades a seguir estão listados na especificação mais up-to-date, mas não são suportadas em quaisquer navegadores ainda. É aconselhável manter a verificação de volta regularmente para ver se o status destes actualiza, e deixe-nos saber se você encontrar qualquer informações desatualizadas.</p>
+#### Manipuladores de Eventos
 
-<dl>
- <dt>{{domxref("Notification.noscreen")}} {{readonlyinline}}</dt>
- <dd>
- <div id="gt-src-tools">
- <div id="tts_button">Especifica se o disparo notificação deve permitir que a tela do dispositivo ou não.</div>
- </div>
- </dd>
- <dt>{{domxref("Notification.renotify")}} {{readonlyinline}}</dt>
- <dd>
- <div id="gt-src-tools">
- <div id="tts_button">Especifica se o usuário deve ser notificado após uma nova notificação substitui um antigo.</div>
- </div>
- </dd>
- <dt>{{domxref("Notification.sound")}} {{readonlyinline}}</dt>
- <dd>Especifica um recurso de som para reproduzir durante o disparo da notificação, em vez do som de notificação do sistema padrão.</dd>
- <dt>{{domxref("Notification.sticky")}} {{readonlyinline}}</dt>
- <dd>Especifica se a notificação deve ser "fixa", ou seja, não facilmente eliminável pelo usuário.</dd>
- <dt>{{domxref("Notification.vibrate")}} {{readonlyinline}}</dt>
- <dd>Especifica um padrão de vibração para dispositivos com hardware de vibração.</dd>
-</dl>
+- {{domxref("Notification.onclick")}}
+  - : O manipulador para o evento {{event("click")}} é acionado cada vez que o usuário clica sobre a notificação.
+- {{domxref("Notification.onerror")}}
+  - : O manipulador para o evento {{event("error")}} é acionado quando a notificação encontra um erro.
 
-<h4 id="Manipuladores_de_Eventos">Manipuladores de Eventos</h4>
+#### Manipuladores Obsoletos
 
-<dl>
- <dt>{{domxref("Notification.onclick")}}</dt>
- <dd>O manipulador para o evento {{event("click")}} é acionado cada vez que o usuário clica sobre a notificação.</dd>
- <dt>{{domxref("Notification.onerror")}}</dt>
- <dd>O manipulador para o evento {{event("error")}} é acionado quando a notificação encontra um erro.</dd>
-</dl>
+Os seguintes manipuladores de eventos ainda são suportados, conforme listado na seção [browser compatibility](#browser_compatibility). Estes serão listados abaixo, mas não são listados na especificação atual. Saiba que eles são obsoletos, e pode parar de funcionar em versões futuras do navegador.
 
-<h4 id="Manipuladores_Obsoletos">Manipuladores Obsoletos</h4>
+- {{domxref("Notification.onclose")}}
+  - : Manipulador do evento {{event("close")}} é acionado quando a notificação é fechada.
+- {{domxref("Notification.onshow")}}
+  - : Manipulador do evento {{event("show")}}. é acionado quando a notificação é exibida.
 
-<p>Os seguintes manipuladores de eventos ainda são suportados, conforme listado na seção <a href="#browser_compatibility">browser compatibility</a>. Estes serão listados abaixo, mas não são listados na especificação atual. Saiba que eles são obsoletos, e pode parar de funcionar em versões futuras do navegador.</p>
+## Métodos
 
-<dl>
- <dt>{{domxref("Notification.onclose")}}</dt>
- <dd>Manipulador do evento {{event("close")}} é acionado quando a notificação é fechada.</dd>
- <dt>{{domxref("Notification.onshow")}}</dt>
- <dd>Manipulador do evento {{event("show")}}. é acionado quando a notificação é exibida.</dd>
-</dl>
+### Métodos Estáticos
 
-<h2 id="Métodos">Métodos</h2>
+Estes métodos estão disponíveis apenas no próprio objeto `Notification`.
 
-<h3 id="Métodos_Estáticos">Métodos Estáticos</h3>
+- {{domxref("Notification.requestPermission()")}}
+  - : Solicita a permissão do usuário para exibir notificações.
 
-<p>Estes métodos estão disponíveis apenas no próprio objeto <code>Notification</code>.</p>
+### Métodos de instância
 
-<dl>
- <dt>{{domxref("Notification.requestPermission()")}}</dt>
- <dd>
- <div id="gt-src-tools">
- <div id="tts_button">Solicita a permissão do usuário para exibir notificações.</div>
- </div>
- </dd>
-</dl>
+Estas propriedades estão disponíveis apenas no objeto Notification ou através do seu [`prototype`](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain). O objeto de notificação também herda a interface {{domxref("EventTarget")}}.
 
-<h3 id="Métodos_de_instância">Métodos de instância</h3>
+- {{domxref("Notification.close()")}}
+  - : Programaticamente fecha uma notificação.
 
-<p>Estas propriedades estão disponíveis apenas no objeto Notification ou através do seu <code><a href="/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain">prototype</a></code>. O objeto de notificação também herda a interface {{domxref("EventTarget")}}.</p>
+## Exemplos
 
-<dl>
- <dt>{{domxref("Notification.close()")}}</dt>
- <dd>Programaticamente fecha uma notificação.</dd>
-</dl>
+Leve em conta este HTML básico:
 
-<h2 id="Exemplos">Exemplos</h2>
+```html
+<button onclick="notifyMe()">Notifique me!</button>
+```
 
-<p>Leve em conta este HTML básico:</p>
+É possível enviar uma notificação da seguinte forma - aqui nós apresentamos um conjunto bastante detalhado e completo de código que você pode usar se você quiser verificar primeiro se as notificações são suportados, em seguida, verifique se a permissão foi concedida para a origem atual para enviar notificações, em seguida, solicitar permissão, se necessário, antes, em seguida, enviar uma notificação.
 
-<pre class="brush: html notranslate">&lt;button onclick="notifyMe()"&gt;Notifique me!&lt;/button&gt;</pre>
-
-<p>É possível enviar uma notificação da seguinte forma - aqui nós apresentamos um conjunto bastante detalhado e completo de código que você pode usar se você quiser verificar primeiro se as notificações são suportados, em seguida, verifique se a permissão foi concedida para a origem atual para enviar notificações, em seguida, solicitar permissão, se necessário, antes, em seguida, enviar uma notificação.</p>
-
-<pre class="brush: js notranslate">function notifyMe() {
+```js
+function notifyMe() {
   // Verifica se o browser suporta notificações
   if (!("Notification" in window)) {
     alert("Este browser não suporta notificações de Desktop");
@@ -171,48 +129,39 @@ original_slug: Web/API/notificacoes
 
   // At last, if the user has denied notifications, and you
   // want to be respectful there is no need to bother them any more.
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('Exemplo', '100%', 30)}}</p>
+{{EmbedLiveSample('Exemplo', '100%', 30)}}
 
-<p>Em muitos casos, você não precisa estar presente detalhado. Por exemplo, na nosso <a href="http://mdn.github.io/emogotchi/">Emogotchi demo</a> (<a href="https://github.com/mdn/emogotchi">veja o código fonte</a>), basta simlesmente executar {{domxref("Notification.requestPermission")}} independentemente de se certificar de que pode obter permissão para enviar notificações:</p>
+Em muitos casos, você não precisa estar presente detalhado. Por exemplo, na nosso [Emogotchi demo](http://mdn.github.io/emogotchi/) ([veja o código fonte](https://github.com/mdn/emogotchi)), basta simlesmente executar {{domxref("Notification.requestPermission")}} independentemente de se certificar de que pode obter permissão para enviar notificações:
 
-<pre class="brush: js notranslate">Notification.requestPermission();</pre>
+```js
+Notification.requestPermission();
+```
 
-<p>Em seguida executar um simples <code>spawnNotification()</code> quando queremos disparar uma notificação — este é passado argumentos para especificar o, ícone corpo e título que queremos, então ele cria as opções necessárias objeto e dispara a notificação usando o construtor {{domxref("Notification.Notification","Notification()")}}.</p>
+Em seguida executar um simples `spawnNotification()` quando queremos disparar uma notificação — este é passado argumentos para especificar o, ícone corpo e título que queremos, então ele cria as opções necessárias objeto e dispara a notificação usando o construtor {{domxref("Notification.Notification","Notification()")}}.
 
-<pre class="brush: js notranslate">function spawnNotification(corpo,icone,titulo) {
+```js
+function spawnNotification(corpo,icone,titulo) {
   var opcoes = {
       body: corpo,
       icon: icone
   }
   var n = new Notification(titulo,opcoes);
-}</pre>
+}
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Notifications')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>Living standard</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                | Estado                                   | Comentário      |
+| -------------------------------------------- | ---------------------------------------- | --------------- |
+| {{SpecName('Web Notifications')}} | {{Spec2('Web Notifications')}} | Living standard |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("api.Notification")}}
 
+## Veja também
 
-<p>{{Compat("api.Notification")}}</p>
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Usando a API de Notificações</a></li>
-</ul>
+- [Usando a API de Notificações](/pt-BR/docs/Web/API/Notifications_API/Using_the_Notifications_API)

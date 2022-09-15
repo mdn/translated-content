@@ -11,54 +11,37 @@ tags:
   - shadow dom
 translation_of: Web/API/HTMLContentElement
 ---
-<p>{{ APIRef("Web Components") }}</p>
+{{ APIRef("Web Components") }}
 
-<p>{{Deprecated_header}}</p>
+{{Deprecated_header}}
 
-<p>A interface do <code><strong>HTMLContentElement</strong></code> representa um {{HTMLElement("content")}} Element HTML, ao qual é usado em <a href="/en-US/docs/Web/Web_Components/Shadow_DOM">Shadow DOM</a>. </p>
+A interface do **`HTMLContentElement`** representa um {{HTMLElement("content")}} Element HTML, ao qual é usado em [Shadow DOM](/pt-BR/docs/Web/Web_Components/Shadow_DOM).
 
-<h2 id="Properties" name="Properties">Propriedades</h2>
+## Propriedades
 
-<p><em>Esta interface herda as propriedades de {{domxref("HTMLElement")}}.</em></p>
+_Esta interface herda as propriedades de {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLContentElement.select")}}</dt>
- <dd>é um {{domxref("DOMString")}} que reflete o {{ htmlattrxref("select", "content") }} attributo HTML . O valor é uma lista de vírgula separada dos seletores CSS que selecionam o conteúdo para inserir em lugar do elemento <code>&lt;content&gt;</code>.</dd>
-</dl>
+- {{domxref("HTMLContentElement.select")}}
+  - : é um {{domxref("DOMString")}} que reflete o {{ htmlattrxref("select", "content") }} attributo HTML . O valor é uma lista de vírgula separada dos seletores CSS que selecionam o conteúdo para inserir em lugar do elemento `<content>`.
 
-<h2 id="Méthodos">Méthodos</h2>
+## Méthodos
 
-<p><em>Esta interface herda os méthodos de {{domxref("HTMLElement")}}.</em></p>
+_Esta interface herda os méthodos de {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLContentElement.getDistributedNodes()")}}</dt>
- <dd>Retorna um static {{domxref("NodeList")}} do {{glossary("distributed nodes")}} associado com este elemento <code>&lt;content&gt;</code>. </dd>
-</dl>
+- {{domxref("HTMLContentElement.getDistributedNodes()")}}
+  - : Retorna um static {{domxref("NodeList")}} do {{glossary("distributed nodes")}} associado com este elemento `<content>`.
 
-<h2 id="Specificações">Specificações</h2>
+## Specificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Commentários</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Shadow DOM', '#the-content-element', 'content')}}</td>
-   <td>{{Spec2('Shadow DOM')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specificações                                                                    | Status                           | Commentários |
+| -------------------------------------------------------------------------------- | -------------------------------- | ------------ |
+| {{SpecName('Shadow DOM', '#the-content-element', 'content')}} | {{Spec2('Shadow DOM')}} |              |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.HTMLContentElement")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>O elemento HTML {{HTMLElement("content")}} , implementa esta interface.</li>
- <li><a href="/en-US/docs/Web/Web_Components/Shadow_DOM">Shadow DOM</a></li>
-</ul>
+- O elemento HTML {{HTMLElement("content")}} , implementa esta interface.
+- [Shadow DOM](/pt-BR/docs/Web/Web_Components/Shadow_DOM)

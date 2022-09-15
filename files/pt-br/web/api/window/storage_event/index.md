@@ -10,37 +10,30 @@ tags:
 translation_of: Web/API/WindowEventHandlers/onstorage
 original_slug: Web/API/WindowEventHandlers/onstorage
 ---
-<div>{{ ApiRef() }}</div>
+{{ ApiRef() }}
 
-<p>A propriedade <strong><code>WindowEventHandlers.onstorage</code></strong> contém um manipulador de eventos que executa quando o evento {{event("storage")}} dispara. Isto ocorre quando a área de armazenamento é mudada. (ex. um novo item é armazenado.)</p>
+A propriedade **`WindowEventHandlers.onstorage`** contém um manipulador de eventos que executa quando o evento {{event("storage")}} dispara. Isto ocorre quando a área de armazenamento é mudada. (ex. um novo item é armazenado.)
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><em>windowObj</em>.onstorage = function() { ... };</pre>
+```
+windowObj.onstorage = function() { ... };
+```
 
-<h2 id="Specification" name="Specification">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: js">window.onstorage = function(e) {
+```js
+window.onstorage = function(e) {
   console.log('The ' + e.key + ' key has been changed from ' + e.oldValue + ' to ' + e.newValue + '.');
-};</pre>
+};
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-window-onstorage','onstorage')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                | Status                           | Comentário |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG','webappapis.html#handler-window-onstorage','onstorage')}} | {{Spec2('HTML WHATWG')}} |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Window.storage_event")}}

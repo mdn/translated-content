@@ -3,57 +3,52 @@ title: Document.querySelector()
 slug: Web/API/Document/querySelector
 translation_of: Web/API/Document/querySelector
 ---
-<div>
-<div>{{ ApiRef("DOM") }}</div>
-</div>
+{{ ApiRef("DOM") }}
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+## Sumário
 
-<p>Retorna o primeiro elemento dentro do documento (usando ordenação em profundidade, pré-ordenada e transversal dos nós do documento) que corresponde ao grupo especificado de seletores.</p>
+Retorna o primeiro elemento dentro do documento (usando ordenação em profundidade, pré-ordenada e transversal dos nós do documento) que corresponde ao grupo especificado de seletores.
 
-<h2 id="Syntax" name="Syntax">Sintaxe<span class="st"> </span></h2>
+## Sintaxe
 
-<pre><em>element</em> = document.querySelector(<em>selectors</em>);</pre>
+```
+element = document.querySelector(selectors);
+```
 
-<p>Onde:</p>
+Onde:
 
-<ul>
- <li><code>element</code> é um objeto {{ jsxref("Element")}}.</li>
- <li><code>selectors</code> é uma string que contém um ou mais seletores CSS separados por vírgulas.</li>
-</ul>
+- `element` é um objeto {{ jsxref("Element")}}.
+- `selectors` é uma string que contém um ou mais seletores CSS separados por vírgulas.
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<p>Neste exemplo, o primeiro elemento no documento com a classe "<code>myclass</code>" é retornado:</p>
+Neste exemplo, o primeiro elemento no documento com a classe "`myclass`" é retornado:
 
-<pre class="brush: js">var el = document.querySelector(".myclass");
-</pre>
+```js
+var el = document.querySelector(".myclass");
+```
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p>Retorna <code>null</code> se nenhum resultado for encontrado; caso contrário, retorna o primeiro elemento correspondente.</p>
+Retorna `null` se nenhum resultado for encontrado; caso contrário, retorna o primeiro elemento correspondente.
 
-<p>Se o seletor utilizado for um <code>ID</code> e este <code>ID</code> foi erroneamente utilizado várias vezes no documento, ele retorna somente o primeiro elemento correspondente.</p>
+Se o seletor utilizado for um `ID` e este `ID` foi erroneamente utilizado várias vezes no documento, ele retorna somente o primeiro elemento correspondente.
 
-<p>Gera uma exceção <code>SYNTAX_ERR</code> se o grupo de seletores utilizado for inválido.</p>
+Gera uma exceção `SYNTAX_ERR` se o grupo de seletores utilizado for inválido.
 
-<p><code>querySelector()</code> foi introduzido com a API de seletores.</p>
+`querySelector()` foi introduzido com a API de seletores.
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidade dos navegadores</h2>
+## Compatibilidade dos navegadores
 
 {{Compat("api.Document.querySelector")}}
 
-<h2 id="Specification" name="Specification">Especificação</h2>
+## Especificação
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/selectors-api/">Selectors API</a></li>
-</ul>
+- [Selectors API](http://www.w3.org/TR/selectors-api/)
 
-<h2 id="See_also" name="See_also">Veja também:</h2>
+## Veja também:
 
-<ul>
- <li>{{domxref("document.querySelectorAll()")}}</li>
- <li>{{domxref("element.querySelector()")}}</li>
- <li>{{domxref("element.querySelectorAll()")}}</li>
- <li><a href="/en-US/docs/Code_snippets/QuerySelector" title="en-US/docs/Code snippets/QuerySelector">Code snippets for querySelector</a></li>
-</ul>
+- {{domxref("document.querySelectorAll()")}}
+- {{domxref("element.querySelector()")}}
+- {{domxref("element.querySelectorAll()")}}
+- [Code snippets for querySelector](/pt-BR/docs/Code_snippets/QuerySelector "en-US/docs/Code snippets/QuerySelector")

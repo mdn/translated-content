@@ -3,51 +3,38 @@ title: Window.scrollBy()
 slug: Web/API/Window/scrollBy
 translation_of: Web/API/Window/scrollBy
 ---
-<p>{{ APIRef() }}</p>
+{{ APIRef() }}
 
-<h2 id="Summary" name="Summary">Resumo</h2>
+## Resumo
 
-<p>Desloca o documento dentro da janela pelo valor fornecido.</p>
+Desloca o documento dentro da janela pelo valor fornecido.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="eval">window.scrollBy(<em>X</em>, <em>Y</em>);
-</pre>
+```
+window.scrollBy(X, Y);
+```
 
-<h3 id="Parameters" name="Parameters">Parâmetros</h3>
+### Parâmetros
 
-<ul>
- <li><code>X</code> é o deslocamento em pixels (px) para a rolagem horizontalmente.</li>
- <li><code>Y</code> é o deslocamento em pixels (px) para a rolagem verticalmente.</li>
-</ul>
+- `X` é o deslocamento em pixels (px) para a rolagem horizontalmente.
+- `Y` é o deslocamento em pixels (px) para a rolagem verticalmente.
 
-<p>Coordenadas positivas deslocarão para a direita e para baixo. Coordenadas negativas deslocarão para a esquerda e para cima.</p>
+Coordenadas positivas deslocarão para a direita e para baixo. Coordenadas negativas deslocarão para a esquerda e para cima.
 
-<h2 id="Example" name="Example">Exemplo</h2>
+## Exemplo
 
-<pre class="eval">// Desloca a altura interna da janela
+```
+// Desloca a altura interna da janela
 window.scrollBy(0, window.innerHeight);
-</pre>
+```
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p><a href="/en-US/docs/DOM/Window.scrollBy">window.scrollBy</a> desloca uma quantidade específical enquanto <a href="/en-US/docs/DOM/Window.scroll">window.scroll</a> desloca para uma posição absoluta no documento. Veja Também <a href="/en-US/docs/DOM/Window.scrollByLines">window.scrollByLines</a>, <a href="/en-US/docs/DOM/Window.scrollByPages">window.scrollByPages</a></p>
+[window.scrollBy](/pt-BR/docs/DOM/Window.scrollBy) desloca uma quantidade específical enquanto [window.scroll](/pt-BR/docs/DOM/Window.scroll) desloca para uma posição absoluta no documento. Veja Também [window.scrollByLines](/pt-BR/docs/DOM/Window.scrollByLines), [window.scrollByPages](/pt-BR/docs/DOM/Window.scrollByPages)
 
-<h2 id="Specification" name="Specification">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSSOM View', '#dom-window-scrollby', 'window.scrollBy()') }}</td>
-   <td>{{ Spec2('CSSOM View') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                           | Comment             |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
+| {{ SpecName('CSSOM View', '#dom-window-scrollby', 'window.scrollBy()') }} | {{ Spec2('CSSOM View') }} | Initial definition. |

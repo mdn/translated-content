@@ -4,38 +4,25 @@ slug: Web/API/HTMLElement/innerText
 translation_of: Web/API/HTMLElement/innerText
 original_slug: Web/API/Node/innerText
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p><code><strong>Node.innerText</strong></code> é uma propriedade que representa o conteúdo textual "renderizado" de um nó e seus descendentes. Usada como <a href="/pt-BR/docs/">getter</a>, retorna de maneira aproximada o texto que o usuário obteria caso tivesse selecionado o conteúdo e copiado para a área de transferência. Este recurso fora introduzido originalmente pelo Internet Explorer, mas foi oficialmente especificado no padrão HTML apenas em 2016, sendo adotado por todos os principais navegadores a partir de então.</p>
+**`Node.innerText`** é uma propriedade que representa o conteúdo textual "renderizado" de um nó e seus descendentes. Usada como [getter](/pt-BR/docs/), retorna de maneira aproximada o texto que o usuário obteria caso tivesse selecionado o conteúdo e copiado para a área de transferência. Este recurso fora introduzido originalmente pelo Internet Explorer, mas foi oficialmente especificado no padrão HTML apenas em 2016, sendo adotado por todos os principais navegadores a partir de então.
 
-<p>{{domxref("Node.textContent")}} é uma alternativa similar, embora existam diferenças significativas entre as duas.</p>
+{{domxref("Node.textContent")}} é uma alternativa similar, embora existam diferenças significativas entre as duas.
 
-<h2 id="Especificação">Especificação</h2>
+## Especificação
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'dom.html#the-innertext-idl-attribute', 'innerText')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Introduzida, baseado no <a href="https://github.com/rocallahan/innerText-spec">rascunho da especifição de innerText</a>. Ver <a href="https://github.com/whatwg/html/issues/465">whatwg/html#465</a> e <a href="https://github.com/whatwg/compat/issues/5">whatwg/compat#5</a> para histórico.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                | Status                           | Comentário                                                                                                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', 'dom.html#the-innertext-idl-attribute', 'innerText')}} | {{Spec2('HTML WHATWG')}} | Introduzida, baseado no [rascunho da especifição de innerText](https://github.com/rocallahan/innerText-spec). Ver [whatwg/html#465](https://github.com/whatwg/html/issues/465) e [whatwg/compat#5](https://github.com/whatwg/compat/issues/5) para histórico. |
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidade de navegadores</h2>
+## Compatibilidade de navegadores
 
 {{Compat("api.HTMLElement.innerText")}}
 
-<h2 id="Ver_também">Ver também</h2>
+## Ver também
 
-<ul>
- <li>{{domxref("HTMLElement.outerText")}}</li>
- <li>{{domxref("Element.innerHTML")}}</li>
-</ul>
+- {{domxref("HTMLElement.outerText")}}
+- {{domxref("Element.innerHTML")}}

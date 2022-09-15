@@ -3,43 +3,43 @@ title: ServiceWorkerContainer.register()
 slug: Web/API/ServiceWorkerContainer/register
 translation_of: Web/API/ServiceWorkerContainer/register
 ---
-<div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p><span class="seoSummary">O método <strong><code>register()</code></strong>da interface {{domxref("ServiceWorkerContainer")}} cria ou atualiza um {{domxref("ServiceWorkerRegistration")}} passado em <code>scriptURL</code>.</span></p>
+O método **`register()`**da interface {{domxref("ServiceWorkerContainer")}} cria ou atualiza um {{domxref("ServiceWorkerRegistration")}} passado em `scriptURL`.
 
-<p>Em caso de sucesso, um registro de service worker vincula o URL do script fornecido ao es<em>copo</em>, que é usado posteriormente para a navegação correspondente. Você pode chamar esse método incondicionalmente da página controlada. Ou seja, você não precisa primeiro verificar se há um registro ativo.</p>
+Em caso de sucesso, um registro de service worker vincula o URL do script fornecido ao es*copo*, que é usado posteriormente para a navegação correspondente. Você pode chamar esse método incondicionalmente da página controlada. Ou seja, você não precisa primeiro verificar se há um registro ativo.
 
-<p>Há uma frequente confusão em relação ao significado e uso do escopo. Uma vez que um service worker não pode ter um escopo mais amplo do que sua própria localização, use apenas a opção `scope` quando precisar de um escopo mais limitado do que o padrão.</p>
+Há uma frequente confusão em relação ao significado e uso do escopo. Uma vez que um service worker não pode ter um escopo mais amplo do que sua própria localização, use apenas a opção \`scope\` quando precisar de um escopo mais limitado do que o padrão.
 
-<h2 id="Síntaxe">Síntaxe</h2>
+## Síntaxe
 
-<pre class="syntaxbox">ServiceWorkerContainer.register(scriptURL, options)
-  .then(function(ServiceWorkerRegistration) { ... });</pre>
+```
+ServiceWorkerContainer.register(scriptURL, options)
+  .then(function(ServiceWorkerRegistration) { ... });
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>scriptURL</code></dt>
- <dd>A URL do script service worker.</dd>
- <dt><code>options</code> <code>{{optional_inline}}</code></dt>
- <dd>Um objeto contendo as opções do registro. Atualmente as opções disponíveis são:
- <ul>
-  <li><code>scope</code>: Uma {{domxref("USVString")}} representando uma URL que define o registro do escopo de um service worker's ; ou seja, o alcance das URLs que o service worker pode controlar. É geralmente uma URL relativa. O valor padrão é o URL que você obtém se você resolvesse './' usando a localização da página web como  base.  Não é, como customa-se acreditar, relativo à localização do service worker. Veja as seções de <a href="#Example">Exemplos</a> para mais informações sobre como isso funciona.</li>
- </ul>
- </dd>
-</dl>
+- `scriptURL`
+  - : A URL do script service worker.
+- `options` `{{optional_inline}}`
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+  - : Um objeto contendo as opções do registro. Atualmente as opções disponíveis são:
 
-<p>Um {{domxref("Promise")}} que resolve com um objeto {{domxref("ServiceWorkerRegistration")}}.</p>
+    - `scope`: Uma {{domxref("USVString")}} representando uma URL que define o registro do escopo de um service worker's ; ou seja, o alcance das URLs que o service worker pode controlar. É geralmente uma URL relativa. O valor padrão é o URL que você obtém se você resolvesse './' usando a localização da página web como base. Não é, como customa-se acreditar, relativo à localização do service worker. Veja as seções de [Exemplos](#Example) para mais informações sobre como isso funciona.
 
-<h2 id="Exemplos">Exemplos</h2>
+### Valor retornado
 
-<p>Os exemplos descritos escrito aqui deve ser tomado em conjunto para obter um melhor entendimento de como escopos do service workers são aplicados a uma página. </p>
+Um {{domxref("Promise")}} que resolve com um objeto {{domxref("ServiceWorkerRegistration")}}.
 
-<p>O exemplo a seguir usa o valor padrão de<code>scope</code> (ao omití-lo). O service worker neste caso irá controlar<code>example.com/index.html</code> bem como páginas abaixo, como <code>example.com/product/description.html</code>.</p>
+## Exemplos
 
-<pre class="brush: js">if ('serviceWorker' in navigator) {
+Os exemplos descritos escrito aqui deve ser tomado em conjunto para obter um melhor entendimento de como escopos do service workers são aplicados a uma página.
+
+O exemplo a seguir usa o valor padrão de`scope` (ao omití-lo). O service worker neste caso irá controlar`example.com/index.html` bem como páginas abaixo, como `example.com/product/description.html`.
+
+```js
+if ('serviceWorker' in navigator) {
   // Registra um service worker hospeadado na raiz do
   // site usando o escopo padrão
   navigator.serviceWorker.register('/sw.js').then(function(registration) {
@@ -49,11 +49,13 @@ translation_of: Web/API/ServiceWorkerContainer/register
   });
 } else {
   console.log('Service workers não suportado!');
-}</pre>
+}
+```
 
-<p>O código a seguir,  se incluído em uma página na raiz de um site, seria aplicado  exatamente às mesmas páginas, como no exemplo acima. Lembre-se de que o escopo, quando incluído, usa a localização da página como base. Alternativamente, se esse código foi incluído em uma página <code>example.com/product/description.html</code>,  o escopo de<code>'./'</code> significa que o escopo que o service worker seria aplicado somente  aos recursos de<code>example.com/product</code>.  Se precisassemos de registrar um service worker em <code>example.com/product/description.html</code> aplicado a todoo <code>example.com</code>, deixaríamos o escopo acima.</p>
+O código a seguir, se incluído em uma página na raiz de um site, seria aplicado exatamente às mesmas páginas, como no exemplo acima. Lembre-se de que o escopo, quando incluído, usa a localização da página como base. Alternativamente, se esse código foi incluído em uma página `example.com/product/description.html`, o escopo de`'./'` significa que o escopo que o service worker seria aplicado somente aos recursos de`example.com/product`. Se precisassemos de registrar um service worker em `example.com/product/description.html` aplicado a todoo `example.com`, deixaríamos o escopo acima.
 
-<pre class="brush: js">if ('serviceWorker' in navigator) {
+```js
+if ('serviceWorker' in navigator) {
   // Registre um service worker hospeado na raiz do
   // site usando um escopo mais restritivo.
   navigator.serviceWorker.register('/sw.js', {scope: './'}).then(function(registration) {
@@ -64,25 +66,14 @@ translation_of: Web/API/ServiceWorkerContainer/register
 } else {
   console.log('Service workers não é suportado pelo navegador!.');
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#service-worker-container', 'ServiceWorkerContainer')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                        | Status                               | Comentário          |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
+| {{SpecName('Service Workers', '#service-worker-container', 'ServiceWorkerContainer')}} | {{Spec2('Service Workers')}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.ServiceWorkerContainer.register")}}

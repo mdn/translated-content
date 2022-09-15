@@ -8,61 +8,40 @@ tags:
   - Referencia
 translation_of: Web/API/CloseEvent/CloseEvent
 ---
-<div>{{APIRef("Websockets API")}}</div>
+{{APIRef("Websockets API")}}
 
-<p>O construtor <strong><code>CloseEvent()</code></strong>cria uma nova instância {{domxref("CloseEvent")}}.</p>
+O construtor **`CloseEvent()`**cria uma nova instância {{domxref("CloseEvent")}}.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var <em>event</em> = new CloseEvent(<em>typeArg</em>, <em>closeEventInit</em>);</pre>
+```
+var event = new CloseEvent(typeArg, closeEventInit);
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>typeArg</code></dt>
- <dd>É uma {{domxref("DOMString")}} que representa o nome do evento.</dd>
- <dt><code>closeEventInit</code> {{optional_inline}}</dt>
- <dd>É uma coleção <code>CloseEventInit</code>, que possui os seguintes campos:
+- `typeArg`
+  - : É uma {{domxref("DOMString")}} que representa o nome do evento.
+- `closeEventInit` {{optional_inline}}
 
- <ul>
-  <li><code>"wasClean"</code>, opcional e inicialmente de valor <code>false</code>, do tipo <code>long</code>, indica se uma conexão foi encerrada de forma limpa ou não.</li>
-  <li><code>"code"</code>, opcional e inicialmente de valor <code>0</code>, do tipo <code>unsigned short</code>, este é o código de encerramento da conexão enviado pelo servidor.</li>
-  <li><code>"reason"</code>, opcional e inicialmente de valor <code>''</code>, do tipo {{domxref("DOMString")}}, esta é uma razão humanamente compreensível do porque o servidor encerrou a conexão.</li>
- </ul>
+  - : É uma coleção `CloseEventInit`, que possui os seguintes campos:
 
- <div class="note">
- <p>A coleção <code>CloseEventInit</code> também aceita campos vindos da coleção {{domxref("Event.Event", "EventInit")}}.</p>
- </div>
- </dd>
-</dl>
+    - `"wasClean"`, opcional e inicialmente de valor `false`, do tipo `long`, indica se uma conexão foi encerrada de forma limpa ou não.
+    - `"code"`, opcional e inicialmente de valor `0`, do tipo `unsigned short`, este é o código de encerramento da conexão enviado pelo servidor.
+    - `"reason"`, opcional e inicialmente de valor `''`, do tipo {{domxref("DOMString")}}, esta é uma razão humanamente compreensível do porque o servidor encerrou a conexão.
 
-<h2 id="Especificações">Especificações</h2>
+    > **Nota:** A coleção `CloseEventInit` também aceita campos vindos da coleção {{domxref("Event.Event", "EventInit")}}.
 
-<table class="standard-table" style="height: 49px; width: 1000px;">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','comms.html#closeevent','CloseEvent()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+## Especificações
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+| Specification                                                                            | Status                           | Comment           |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
+| {{SpecName('HTML WHATWG','comms.html#closeevent','CloseEvent()')}} | {{Spec2('HTML WHATWG')}} | Definição inicial |
 
+## Compatibilidade com navegadores
 
+{{Compat("api.CloseEvent.CloseEvent")}}
 
-<p>{{Compat("api.CloseEvent.CloseEvent")}}</p>
+## Veja também
 
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{domxref("CloseEvent")}}, a interface de construção de seus objetos.</li>
-</ul>
+- {{domxref("CloseEvent")}}, a interface de construção de seus objetos.

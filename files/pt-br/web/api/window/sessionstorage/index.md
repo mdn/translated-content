@@ -8,31 +8,36 @@ tags:
   - Sessão
 translation_of: Web/API/Window/sessionStorage
 ---
-<p>{{APIRef()}}</p>
+{{APIRef()}}
 
-<p>A propriedade <code>sessionStorage</code> permite acessar um objeto tipo session {{domxref("Storage")}}. A sessionStorage é similar ao <a href="/en-US/docs/Web/API/Window.localStorage"><code>localStorage</code></a>, a única diferença é que enquanto os dados armazenados no <code>localStorage</code> não expiram, os dados no sessionstorage tem os seus dados limpos ao expirar a sessão da página. A sessão da página dura enquanto o browser está aberto e se mantém no recarregamento da página. <strong>Abrir a página em uma nova aba ou nova janela irá gerar uma nova sessão, </strong>o que diferencia de como os cookies trabalham<strong>.</strong></p>
+A propriedade `sessionStorage` permite acessar um objeto tipo session {{domxref("Storage")}}. A sessionStorage é similar ao [`localStorage`](/pt-BR/docs/Web/API/Window.localStorage), a única diferença é que enquanto os dados armazenados no `localStorage` não expiram, os dados no sessionstorage tem os seus dados limpos ao expirar a sessão da página. A sessão da página dura enquanto o browser está aberto e se mantém no recarregamento da página. **Abrir a página em uma nova aba ou nova janela irá gerar uma nova sessão,** o que diferencia de como os cookies trabalham**.**
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush: js">// Salva os dados na sessionStorage
+```js
+// Salva os dados na sessionStorage
 sessionStorage.setItem('chave', 'valor');
 
 // Obtém os dados da sessionStorage
-var data = sessionStorage.getItem('chave');</pre>
+var data = sessionStorage.getItem('chave');
+```
 
-<h3 id="Valor">Valor</h3>
+### Valor
 
-<p>Objeto {{domxref("Storage")}}.</p>
+Objeto {{domxref("Storage")}}.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>O seguinte trecho acessa o objeto da sessão do domínio atual {{domxref("Storage")}} e adiciona um item usando o {{domxref("Storage.setItem()")}}.</p>
+O seguinte trecho acessa o objeto da sessão do domínio atual {{domxref("Storage")}} e adiciona um item usando o {{domxref("Storage.setItem()")}}.
 
-<pre class="brush: js">sessionStorage.setItem('myCat', 'Tom');</pre>
+```js
+sessionStorage.setItem('myCat', 'Tom');
+```
 
-<p>O exemplo a seguir salva automaticamente o conteúdo da caixa de texto, e caso o browser seja acidentalmente recarregado, o conteúdo da caixa de texto é restaurado.</p>
+O exemplo a seguir salva automaticamente o conteúdo da caixa de texto, e caso o browser seja acidentalmente recarregado, o conteúdo da caixa de texto é restaurado.
 
-<pre class="brush: js">// Obtem a caixa de texto que vamos rastrear
+```js
+// Obtem a caixa de texto que vamos rastrear
 var field = document.getElementById("campo");
 
 // Se tivermos um valor salvo automaticamente
@@ -46,38 +51,22 @@ if (sessionStorage.getItem("autosave")) {
 field.addEventListener("change", function() {
   // E salva o resultado dentro de um objeto session storage
   sessionStorage.setItem("autosave", field.value);
-});</pre>
+});
+```
 
+> **Nota:** Por favor use o artigo [Using the Web Storage API](/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) para um exemplo completo.
 
+## Especificações
 
-<div class="note">
-<p><strong>Nota</strong>: Por favor use o artigo <a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a> para um exemplo completo.</p>
-</div>
+| Especificações                                                                                           | Status                           | Comentários |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('Web Storage', '#the-sessionstorage-attribute', 'sessionStorage')}} | {{Spec2('Web Storage')}} |             |
 
-<h2 id="Especificações">Especificações</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentários</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Storage', '#the-sessionstorage-attribute', 'sessionStorage')}}</td>
-   <td>{{Spec2('Web Storage')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatíveis">Browser compatíveis</h2>
+## Browser compatíveis
 
 {{Compat("api.Window.sessionStorage")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a></li>
- <li><a href="/en-US/docs/Web/API/Window.localStorage">Window.localStorage</a></li>
-</ul>
+- [Using the Web Storage API](/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [Window.localStorage](/pt-BR/docs/Web/API/Window.localStorage)

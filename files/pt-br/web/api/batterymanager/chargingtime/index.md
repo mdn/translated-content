@@ -8,27 +8,27 @@ tags:
   - Referencia
 translation_of: Web/API/BatteryManager/chargingTime
 ---
-<p>{{APIRef("Battery API")}}</p>
+{{APIRef("Battery API")}}
 
-<p>Indica a quantidade de tempo, em segundos, que resta até que a bateria esteja totalmente carregada.</p>
+Indica a quantidade de tempo, em segundos, que resta até que a bateria esteja totalmente carregada.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var <em>time</em> = navigator.battery.chargingTime</pre>
+```
+var time = navigator.battery.chargingTime
+```
 
-<p>No retorno, <code>time</code> é o tempo restante em segundos até que a bateria esteja totalmente carregada, ou 0 se a bateria já estiver com sua carga completa. Se a bateria estiver descarregando (ou se o sistema não é capaz de derminar o tempo restante para o carregamento), este valor é <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Infinity" title="/en-US/docs/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code>.</p>
+No retorno, `time` é o tempo restante em segundos até que a bateria esteja totalmente carregada, ou 0 se a bateria já estiver com sua carga completa. Se a bateria estiver descarregando (ou se o sistema não é capaz de derminar o tempo restante para o carregamento), este valor é [`Infinity`](/en-US/docs/JavaScript/Reference/Global_Objects/Infinity "/en-US/docs/JavaScript/Reference/Global_Objects/Infinity").
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<p>{{page("/pt-BR/docs/Web/API/BatteryManager","Specifications")}}</p>
+{{page("/pt-BR/docs/Web/API/BatteryManager","Specifications")}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{page("/pt-BR/docs/Web/API/BatteryManager","Browser_compatibility")}}</p>
+{{page("/pt-BR/docs/Web/API/BatteryManager","Browser_compatibility")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("BatteryManager")}}</li>
- <li>{{domxref("Navigator.battery")}}</li>
-</ul>
+- {{domxref("BatteryManager")}}
+- {{domxref("Navigator.battery")}}

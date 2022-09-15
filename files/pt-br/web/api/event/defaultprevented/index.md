@@ -3,25 +3,28 @@ title: Event.defaultPrevented
 slug: Web/API/Event/defaultPrevented
 translation_of: Web/API/Event/defaultPrevented
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<h3 id="Resumo">Resumo</h3>
+### Resumo
 
-<p>Retorna um booleano que indica se ou não {{ domxref("event.preventDefault()") }} foi chamado no evento.</p>
+Retorna um booleano que indica se ou não {{ domxref("event.preventDefault()") }} foi chamado no evento.
 
-<div class="note"><strong>Nota:</strong> Você deve usar isso em vez de a não-padrão, método desatualizado<code> getPreventDefault()</code>  (ver {{ bug(691151) }}).</div>
+> **Nota:** Você deve usar isso em vez de a não-padrão, método desatualizado` getPreventDefault()` (ver {{ bug(691151) }}).
 
-<h3 id="Sintaxe">Sintaxe</h3>
+### Sintaxe
 
-<pre class="eval">bool = event.defaultPrevented </pre>
+```
+bool = event.defaultPrevented
+```
 
-<h3 id="Exemplo">Exemplo</h3>
+### Exemplo
 
-<pre> if (e.defaultPrevented) {
+```
+ if (e.defaultPrevented) {
    /* o padrão foi impedido */
  }
-</pre>
+```
 
-<h3 id="Compatibilidade_do_navegador">Compatibilidade do navegador</h3>
+### Compatibilidade do navegador
 
 {{Compat("api.Event.defaultPrevented")}}

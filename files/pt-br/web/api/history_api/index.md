@@ -8,173 +8,153 @@ tags:
   - Histórico
 translation_of: Web/API/History_API
 ---
-<p>O objeto DOM {{ domxref("window") }} fornece acesso ao histórico do navegador através do objeto {{ domxref("window.history", "history") }}. Ele expõe métodos e propriedades úteis que permitem que você se mova para trás e para frente através do histórico de navegação do usuário, bem como -- iniciando com o HTML5 -- manipular o conteúdo da pilha de históricos.</p>
+O objeto DOM {{ domxref("window") }} fornece acesso ao histórico do navegador através do objeto {{ domxref("window.history", "history") }}. Ele expõe métodos e propriedades úteis que permitem que você se mova para trás e para frente através do histórico de navegação do usuário, bem como -- iniciando com o HTML5 -- manipular o conteúdo da pilha de históricos.
 
-<h2 id="Navegando_através_do_histórico">Navegando através do histórico</h2>
+## Navegando através do histórico
 
-<p>Mover para trás e para a frente através do histórico do usuário é feito usando os métodos <code>back()</code>, <code>forward()</code> e <code>go()</code>. </p>
+Mover para trás e para a frente através do histórico do usuário é feito usando os métodos `back()`, `forward()` e `go()`.
 
-<h3 id="Movendo_para_frente_e_para_trás">Movendo para frente e para trás</h3>
+### Movendo para frente e para trás
 
-<p>Para mover para trás no histórico, apenas faça:</p>
+Para mover para trás no histórico, apenas faça:
 
-<pre class="brush: js">window.history.back();
-</pre>
+```js
+window.history.back();
+```
 
-<p>Isso funcionará exatamente como se o usuário clicasse no botão Voltar na barra de ferramentas do navegador.<br>
- <br>
- Da mesma forma, você pode avançar (como se o usuário clicasse no botão Avançar), assim:</p>
+Isso funcionará exatamente como se o usuário clicasse no botão Voltar na barra de ferramentas do navegador.
 
-<pre class="brush: js">window.history.forward();
-</pre>
+Da mesma forma, você pode avançar (como se o usuário clicasse no botão Avançar), assim:
 
-<h3 id="Movendo_para_um_ponto_específico_no_histórico">Movendo para um ponto específico no histórico</h3>
+```js
+window.history.forward();
+```
 
-<p>Você pode usar o método <code>go()</code> para carregar uma página específica do histórico. Cada página é identificada por sua posição relativa à página atual (sendo a página atual o indíce 0). </p>
+### Movendo para um ponto específico no histórico
 
-<p>Para retornar uma página (equivalente ao método <code>back()</code>):</p>
+Você pode usar o método `go()` para carregar uma página específica do histórico. Cada página é identificada por sua posição relativa à página atual (sendo a página atual o indíce 0).
 
-<pre class="brush: js">window.history.go(-1);
-</pre>
+Para retornar uma página (equivalente ao método `back()`):
 
-<p>Para avançar uma página (equivalente ao método <code>forward()</code>):</p>
+```js
+window.history.go(-1);
+```
 
-<pre class="brush: js">window.history.go(1);
+Para avançar uma página (equivalente ao método `forward()`):
 
-</pre>
+```js
+window.history.go(1);
+```
 
-<p>O número de páginas do histórico pode ser determinado pela propriedade <em>length</em>:</p>
+O número de páginas do histórico pode ser determinado pela propriedade _length_:
 
-<pre class="brush: js">const numberOfEntries = window.history.length;
-</pre>
+```js
+const numberOfEntries = window.history.length;
+```
 
-<div class="note"><strong>Note: </strong>O Internet Explorer suporta URLs como argumento para o método <code>go()</code>; isso não é um comportamento padrão e não é suportado pelo Gecko.</div>
+> **Nota:**O Internet Explorer suporta URLs como argumento para o método `go()`; isso não é um comportamento padrão e não é suportado pelo Gecko.
 
-<h2 id="Adicionando_e_modificando_entradas">Adicionando e modificando entradas</h2>
+## Adicionando e modificando entradas
 
-<p>{{ gecko_minversion_header("2") }}</p>
+{{ gecko_minversion_header("2") }}
 
-<p>O HTML5 introduziu os métodos <a href="/en-US/docs/Web/API/History/pushState">history.pushState()</a> e <a href="/en-US/docs/Web/API/History_API#The_replaceState()_method">history.replaceState()</a>, que permitem adicionar e modificar entradas no histórico, respectivamente. Estes métodos funcionam em conjunto com o evento {{ domxref("window.onpopstate") }}.</p>
+O HTML5 introduziu os métodos [history.pushState()](/pt-BR/docs/Web/API/History/pushState) e [history.replaceState()](</pt-BR/docs/Web/API/History_API#The_replaceState()_method>), que permitem adicionar e modificar entradas no histórico, respectivamente. Estes métodos funcionam em conjunto com o evento {{ domxref("window.onpopstate") }}.
 
-<p>Usar <code>history.pushState()</code> modifica a referência que é utilizada no cabeçalho HTTP para objetos <code><a href="/en/DOM/XMLHttpRequest" title="en/XMLHttpRequest">XMLHttpRequest</a></code> criados após a utilização do método. A referência será a URL do documento cuja janela é o <code>this</code> no momento de criação do objeto <code><a href="/en/DOM/XMLHttpRequest" title="en/XMLHttpRequest">XMLHttpRequest</a></code>.</p>
+Usar `history.pushState()` modifica a referência que é utilizada no cabeçalho HTTP para objetos [`XMLHttpRequest`](/en/DOM/XMLHttpRequest "en/XMLHttpRequest") criados após a utilização do método. A referência será a URL do documento cuja janela é o `this` no momento de criação do objeto [`XMLHttpRequest`](/en/DOM/XMLHttpRequest "en/XMLHttpRequest").
 
-<h3 id="Exemplo_do_método_pushState()">Exemplo do método pushState()</h3>
+### Exemplo do método pushState()
 
-<p>Suponha que http://mozilla.org/foo.html executa o seguinte JavaScript:</p>
+Suponha que http\://mozilla.org/foo.html executa o seguinte JavaScript:
 
-<pre class="brush: js">const stateObj = { foo: "bar" };
+```js
+const stateObj = { foo: "bar" };
 history.pushState(stateObj, "page 2", "bar.html");
-</pre>
+```
 
-<p>Isto fará com que a barra URL mostre http://mozilla.org/bar.html, porém não fará com que o navegador carregue <code>bar.html</code> ou verifique se <code>bar.html</code> existe. </p>
+Isto fará com que a barra URL mostre http\://mozilla.org/bar.html, porém não fará com que o navegador carregue `bar.html` ou verifique se `bar.html` existe.
 
-<p>Agora suponha que o usuário navegue para http://google.com e logo em seguida clique no botão Voltar. Nesse momento, a barra de URL mostrará http://mozilla.org/bar.html, e se você ler o <code>history.state</code> você receberá o <code>stateObj</code>. O evento <code>popstate</code> não será disparado pois a página foi recarregada. A página carregada será <code>bar.html</code>.</p>
+Agora suponha que o usuário navegue para http\://google.com e logo em seguida clique no botão Voltar. Nesse momento, a barra de URL mostrará http\://mozilla.org/bar.html, e se você ler o `history.state` você receberá o `stateObj`. O evento `popstate` não será disparado pois a página foi recarregada. A página carregada será `bar.html`.
 
-<p>Se clicarmos no botão Voltar novamente, a URL modificará para http://mozilla.org/foo.html, e o documento receberá um evento <code>popstate</code>, dessa vez com objeto de estado sendo nulo. Nesse momento, o documento também não altera seu conteúdo em relação ao passo anterior, porém o documento pode atualizar seu conteúdo manualmente após o recebimento do evento <code>popstate</code>.</p>
+Se clicarmos no botão Voltar novamente, a URL modificará para http\://mozilla.org/foo.html, e o documento receberá um evento `popstate`, dessa vez com objeto de estado sendo nulo. Nesse momento, o documento também não altera seu conteúdo em relação ao passo anterior, porém o documento pode atualizar seu conteúdo manualmente após o recebimento do evento `popstate`.
 
-<h3 id="O_método_pushState()">O método pushState()</h3>
+### O método pushState()
 
-<p><code>pushState()</code> recebe três parâmetros: um objeto de estado, um título (que atualmente é ignorado) e (opcionalmente) uma URL. Vamos examinar cada um dos argumentos com mais detalhes:</p>
+`pushState()` recebe três parâmetros: um objeto de estado, um título (que atualmente é ignorado) e (opcionalmente) uma URL. Vamos examinar cada um dos argumentos com mais detalhes:
 
-<ul>
- <li>
-  <p><strong>objeto de estado</strong> — O objeto de estado é um objeto JavaScript que é associado com uma nova entrada no histórico criado por <code>pushState()</code>. Sempre que o usuário navegar para o novo estado um evento <code>popstate</code> é disparado e a propriedade <code>state</code> do evento contém uma cópia do objeto de estado da entrada no histórico.</p>
- </li>
- <li>
-  <p>O objeto de estado pode ser qualquer coisa que possa ser serializada. O Firefox salva o objeto de estado no disco do usuário para que possa ser restaurado após um reinício do navegador. É imposto um limite de 640k caracteres na representação serializada do objeto de estado. Caso um objeto de estado serializado maior que este valor seja passado como argumento para <code>pushState()</code>, o método irá ativar uma exceção. Caso você precise de mais espaço do que 640k, é recomendada a utilização do <code>sessionStorage</code> e/ou <code>localStorage</code>.</p>
- </li>
- <li>
-  <p><strong>título </strong>— Atualmente o Firefox ignora este parâmetro. Passar uma string vazia é suficiente contra futuras mudanças no método. Alternativamente, você pode passar um título curto para o estado.</p>
- </li>
- <li>
-  <p><strong>URL</strong> — A URL da nova entrada no histórico é passada por este parâmetro. Note que o navegador não tentará carregar essa URL após uma chamada do método <code>pushState()</code>, porém pode tentar carregar a URL mais tarde, por exemplo depois que o usuário reinicie o navegador. A nova URL não precisa ser absoluta; caso seja relativa, é resolvida em relação a atual URL. A nova URL precisar ser da mesma origem que a URL atual; caso contrário, <code>pushState()</code> ativará uma exceção. Este parâmetro é opcional; caso seja especificado, é utilizado como a atual URL do documento.</p>
- </li>
-</ul>
+- **objeto de estado** — O objeto de estado é um objeto JavaScript que é associado com uma nova entrada no histórico criado por `pushState()`. Sempre que o usuário navegar para o novo estado um evento `popstate` é disparado e a propriedade `state` do evento contém uma cópia do objeto de estado da entrada no histórico.
+- O objeto de estado pode ser qualquer coisa que possa ser serializada. O Firefox salva o objeto de estado no disco do usuário para que possa ser restaurado após um reinício do navegador. É imposto um limite de 640k caracteres na representação serializada do objeto de estado. Caso um objeto de estado serializado maior que este valor seja passado como argumento para `pushState()`, o método irá ativar uma exceção. Caso você precise de mais espaço do que 640k, é recomendada a utilização do `sessionStorage` e/ou `localStorage`.
+- **título** — Atualmente o Firefox ignora este parâmetro. Passar uma string vazia é suficiente contra futuras mudanças no método. Alternativamente, você pode passar um título curto para o estado.
+- **URL** — A URL da nova entrada no histórico é passada por este parâmetro. Note que o navegador não tentará carregar essa URL após uma chamada do método `pushState()`, porém pode tentar carregar a URL mais tarde, por exemplo depois que o usuário reinicie o navegador. A nova URL não precisa ser absoluta; caso seja relativa, é resolvida em relação a atual URL. A nova URL precisar ser da mesma origem que a URL atual; caso contrário, `pushState()` ativará uma exceção. Este parâmetro é opcional; caso seja especificado, é utilizado como a atual URL do documento.
 
-<div class="note"><strong>Nota: </strong>No Gecko 2.0 {{ geckoRelease("2.0") }} até Gecko 5.0 {{ geckoRelease("5.0") }}, o objeto passado é serializado utilizando JSON. A partir do Gecko 6.0 {{ geckoRelease("6.0") }}, o objeto é serializado usando <a href="/en/DOM/The_structured_clone_algorithm" title="en/DOM/The structured clone algorithm"> o algorítmo de clonagem estruturada</a>. Isso permite que uma variedade maior de objetos possam ser serializados.</div>
+> **Nota:**No Gecko 2.0 {{ geckoRelease("2.0") }} até Gecko 5.0 {{ geckoRelease("5.0") }}, o objeto passado é serializado utilizando JSON. A partir do Gecko 6.0 {{ geckoRelease("6.0") }}, o objeto é serializado usando [o algorítmo de clonagem estruturada](/en/DOM/The_structured_clone_algorithm "en/DOM/The structured clone algorithm"). Isso permite que uma variedade maior de objetos possam ser serializados.
 
-<p>De certa forma, chamar o método <code>pushState()</code> é similar a executar <code>window.location = "#foo"</code>,  no sentido de que ambos criarão e ativarão uma nova entrada no histórico associado com o documento atual. Porém <code>pushState()</code> tem algumas vantagens:</p>
+De certa forma, chamar o método `pushState()` é similar a executar `window.location = "#foo"`, no sentido de que ambos criarão e ativarão uma nova entrada no histórico associado com o documento atual. Porém `pushState()` tem algumas vantagens:
 
-<ul>
- <li>A nova URL pode ser qualquer URL na mesma origem da atual. Em contrapartida, modificar o valor de <code>window.location</code> o mantém no mesmo {{ domxref("document") }} somente se apenas a hash é modificada.</li>
- <li>Você não precisa mudar a URL caso não queira. Em contrapartida, executar <code>window.location = "#foo"</code> só cria uma nova entrada no histórico se a atual hash não for <code>#foo</code>.</li>
- <li>Você pode associar dados arbitrários com a nova entrada do histórico. Com a solução baseada em hash, você precisa codificar todos os dados relevantes em uma string curta.</li>
- <li>Se <code>title</code> for utilizado pelos navegadores, esse dado pode ser utilizado (independente do hash).</li>
-</ul>
+- A nova URL pode ser qualquer URL na mesma origem da atual. Em contrapartida, modificar o valor de `window.location` o mantém no mesmo {{ domxref("document") }} somente se apenas a hash é modificada.
+- Você não precisa mudar a URL caso não queira. Em contrapartida, executar `window.location = "#foo"` só cria uma nova entrada no histórico se a atual hash não for `#foo`.
+- Você pode associar dados arbitrários com a nova entrada do histórico. Com a solução baseada em hash, você precisa codificar todos os dados relevantes em uma string curta.
+- Se `title` for utilizado pelos navegadores, esse dado pode ser utilizado (independente do hash).
 
-<p>Note que <code>pushState()</code> nunca causa a ativação de um evento <code>hashchange</code>, mesmo se a nova URL diferir somente na hash,</p>
+Note que `pushState()` nunca causa a ativação de um evento `hashchange`, mesmo se a nova URL diferir somente na hash,
 
-<p>Em um documento <a href="/en-US/docs/Mozilla/Tech/XUL">XUL</a> é criado o elemento XUL especificado.</p>
+Em um documento [XUL](/pt-BR/docs/Mozilla/Tech/XUL) é criado o elemento XUL especificado.
 
-<p>Em outros documentos, é criado um elemento com um namespace <code>null</code> de URI.</p>
+Em outros documentos, é criado um elemento com um namespace `null` de URI.
 
-<h3 id="O_método_replaceState()">O método replaceState()</h3>
+### O método replaceState()
 
-<p><code>history.replaceState()</code> opera exatamente igual à <code>history.pushState()</code> com exceção de modificar a atual entrada no histórico ao invés de criar uma nova. Note que isso não impede a criação de uma nova entrada no histórico global do navegador.</p>
+`history.replaceState()` opera exatamente igual à `history.pushState()` com exceção de modificar a atual entrada no histórico ao invés de criar uma nova. Note que isso não impede a criação de uma nova entrada no histórico global do navegador.
 
-<p><code>replaceState()</code> é particularmente útil quando você quer atualizar o objeto de estado ou a URL da atual entrada do histórico como resposta a alguma ação do usuário.</p>
+`replaceState()` é particularmente útil quando você quer atualizar o objeto de estado ou a URL da atual entrada do histórico como resposta a alguma ação do usuário.
 
-<div class="note"><strong>Nota: </strong>Em Gecko 2.0 {{ geckoRelease("2.0") }} até Gecko 5.0 {{ geckoRelease("5.0") }}, o objeto passado é serializado utilizando JSON. Começando do Gecko 6.0 {{ geckoRelease("6.0") }}, o objeto é serializado usando <a href="/en/DOM/The_structured_clone_algorithm" title="en/DOM/The structured clone algorithm"> o algorítmo de clonagem estruturada</a>. Isso permite que uma variedade maior de objetos possam ser serializados.</div>
+> **Nota:**Em Gecko 2.0 {{ geckoRelease("2.0") }} até Gecko 5.0 {{ geckoRelease("5.0") }}, o objeto passado é serializado utilizando JSON. Começando do Gecko 6.0 {{ geckoRelease("6.0") }}, o objeto é serializado usando [o algorítmo de clonagem estruturada](/en/DOM/The_structured_clone_algorithm "en/DOM/The structured clone algorithm"). Isso permite que uma variedade maior de objetos possam ser serializados.
 
-<h3 id="Exemplo_do_método_replaceState()">Exemplo do método replaceState()</h3>
+### Exemplo do método replaceState()
 
-<p>Suponha que http://mozilla.org/foo.html execute o seguinte JavaScript:</p>
+Suponha que http\://mozilla.org/foo.html execute o seguinte JavaScript:
 
-<pre class="brush: js">const stateObj = { foo: "bar" };
+```js
+const stateObj = { foo: "bar" };
 history.pushState(stateObj, "page 2", "bar.html");
+```
 
-</pre>
+A explicação destas duas linhas acima pode ser encontrada na seção "Exemplo do método pushState()". Suponha, então, que http\://mozilla.org/bar.html execute o seguinte JavaScript:
 
-<p>A explicação destas duas linhas acima pode ser encontrada na seção "Exemplo do método pushState()". Suponha, então, que http://mozilla.org/bar.html execute o seguinte JavaScript:</p>
+```js
+history.replaceState(stateObj, "page 3", "bar2.html");
+```
 
-<pre class="brush: js">history.replaceState(stateObj, "page 3", "bar2.html");
-</pre>
+Isso fará com que a barra de URL do navegador exiba http\://mozilla.org/bar2.html, mas não fará com que o navegador carregue `bar2.html` ou cheque se `bar2.html` existe.
 
-<p>Isso fará com que a barra de URL do navegador exiba http://mozilla.org/bar2.html, mas não fará com que o navegador carregue <code>bar2.html</code> ou cheque se <code>bar2.html</code> existe.</p>
+Suponha agora que o usuário navegue até http\://www\.microsoft.com e, em seguida, clique no botão voltar. Neste momento, a barra de URL mostrará http\://mozilla.org/bar2.html. Caso o usuário clique novamente no botão voltar, a barra de URL mostrará http\://mozilla.org/foo.html e ignorará completamente `bar.html`.
 
-<p>Suponha agora que o usuário navegue até http://www.microsoft.com e, em seguida, clique no botão voltar. Neste momento, a barra de URL mostrará http://mozilla.org/bar2.html. Caso o usuário clique novamente no botão voltar, a barra de URL mostrará http://mozilla.org/foo.html e ignorará completamente <code>bar.html</code>.</p>
+### O evento popstate
 
-<h3 id="O_evento_popstate">O evento popstate</h3>
+O evento `popstate` é disparado sempre que a entrada do histórico ativo é alterada. Se a entrada do histórico ativa foi criada por uma chamada `pushState` ou afetada por uma chamada `replaceState`, a propriedade `state` do evento `popstate` contém uma cópia do objeto de estado da entrada do histórico.
 
-<p>O evento <code>popstate</code> é disparado sempre que a entrada do histórico ativo é alterada. Se a entrada do histórico ativa foi criada por uma chamada <code>pushState</code> ou afetada por uma chamada <code>replaceState</code>, a propriedade <code>state</code> do evento <code>popstate</code> contém uma cópia do objeto de estado da entrada do histórico.</p>
+Veja {{ domxref("window.onpopstate") }} para exemplo de utilização.
 
-<p>Veja {{ domxref("window.onpopstate") }} para exemplo de utilização.</p>
+### Lendo o estado atual
 
-<h3 id="Lendo_o_estado_atual">Lendo o estado atual</h3>
+Quando sua página é carregada, ela pode ter um objeto de estado não nulo. Isso pode acontecer, por exemplo, se a página definir um objeto de estado (usando `pushState()` ou `replaceState()`) e, em seguida, o usuário reiniciar seu navegador. Quando sua página é recarregada, ela receberá um evento `onload`, mas nenhum evento `popstate`. No entanto, se você ler a propriedade `history.state`, receberá o objeto de estado que teria obtido se um `popstate` tivesse sido disparado.
 
-<p>Quando sua página é carregada, ela pode ter um objeto de estado não nulo. Isso pode acontecer, por exemplo, se a página definir um objeto de estado (usando <code>pushState()</code> ou <code>replaceState()</code>) e, em seguida, o usuário reiniciar seu navegador. Quando sua página é recarregada, ela receberá um evento <code>onload</code>, mas nenhum evento <code>popstate</code>. No entanto, se você ler a propriedade <code>history.state</code>, receberá o objeto de estado que teria obtido se um <code>popstate</code> tivesse sido disparado.</p>
+Você pode ler o estado da entrada do histórico atual sem esperar por um evento `popstate` usando a propriedade `history.state` como o exemplo abaixo:
 
-<p>Você pode ler o estado da entrada do histórico atual sem esperar por um evento <code>popstate</code> usando a propriedade <code>history.state</code> como o exemplo abaixo:</p>
+```js
+var currentState = history.state;
+```
 
-<pre class="brush: js">var currentState = history.state;
-</pre>
+## Exemplos
 
-<h2 id="Exemplos">Exemplos</h2>
+Para um exemplo completo de um web site AJAX, veja: [Exemplo de navegação Ajax](/pt-BR/docs/Web/Guide/API/DOM/Manipulating_the_browser_history/Example "/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history/Example").
 
-<p>Para um exemplo completo de um web site AJAX, veja: <a href="/pt-BR/docs/Web/Guide/API/DOM/Manipulating_the_browser_history/Example" title="/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history/Example">Exemplo de navegação Ajax</a>.</p>
+## Especificações
 
-<h2 id="Especificações">Especificações</h2>
+| Especificação                                                                        | Status                           | Comentário                                             |
+| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------ |
+| {{SpecName('HTML WHATWG', "browsers.html#history", "History")}} | {{Spec2('HTML WHATWG')}} | Nenhuma alteração do {{SpecName("HTML5 W3C")}}. |
+| {{SpecName('HTML5 W3C', "browsers.html#history", "History")}}     | {{Spec2('HTML5 W3C')}}     | Definição inicial                                      |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "browsers.html#history", "History")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Nenhuma alteração do {{SpecName("HTML5 W3C")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "browsers.html#history", "History")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.History")}}

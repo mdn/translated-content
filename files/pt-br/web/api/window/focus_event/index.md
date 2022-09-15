@@ -4,34 +4,24 @@ slug: Web/API/Window/focus_event
 translation_of: Web/API/GlobalEventHandlers/onfocus
 original_slug: Web/API/GlobalEventHandlers/onfocus
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>A propriedade <strong>onfocus</strong> retorna o código de manipulador de eventos <em>onFocus</em> no elemento atual.</p>
+A propriedade **onfocus** retorna o código de manipulador de eventos _onFocus_ no elemento atual.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">element.onfocus = <em>código de manipulação de eventos</em>
-</pre>
+```
+element.onfocus = código de manipulação de eventos
+```
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>O evento <em>Focus </em>é gerado quando o usuario define o foco no elemento.</p>
+O evento _Focus_ é gerado quando o usuario define o foco no elemento.
 
-<p>Oposta à MSIE, em que quase todos os tipos de elementos recebem o evento <em>focus</em>, em navegadores Gecko quase todos os tipos de elementos não funcionam com este evento.</p>
+Oposta à MSIE, em que quase todos os tipos de elementos recebem o evento _focus_, em navegadores Gecko quase todos os tipos de elementos não funcionam com este evento.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">especificaçãos</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onfocus','onfocus')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| especificaçãos                                                                                   | Status                           | Comentario |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG','webappapis.html#handler-onfocus','onfocus')}} | {{Spec2('HTML WHATWG')}} |            |

@@ -3,24 +3,22 @@ title: Window.event
 slug: Web/API/Window/event
 translation_of: Web/API/Window/event
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>{{ Non-standard_header() }}</p>
+{{ Non-standard_header() }}
 
-<p><strong><code>window.event</code></strong> é uma propriedade proprietária do Microsoft Internet Explorer que só está disponível enquanto um manipulador de eventos DOM é chamado. Seu valor é o objeto Event atualmente tratado.</p>
+**`window.event`** é uma propriedade proprietária do Microsoft Internet Explorer que só está disponível enquanto um manipulador de eventos DOM é chamado. Seu valor é o objeto Event atualmente tratado.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<p>Não é parte de nenhuma especificação.</p>
+Não é parte de nenhuma especificação.
 
-<p>Microsoft <a href="https://msdn.microsoft.com/en-us/library/ms535863(v=vs.85).aspx">tem uma descrição na MSDN</a>.</p>
+Microsoft [tem uma descrição na MSDN](<https://msdn.microsoft.com/en-us/library/ms535863(v=vs.85).aspx>).
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidade de navegadores</h2>
+## Compatibilidade de navegadores
 
 {{Compat("api.Window.event")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("Event.srcElement")}}</li>
-</ul>
+- {{domxref("Event.srcElement")}}

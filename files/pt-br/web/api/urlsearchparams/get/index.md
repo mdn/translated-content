@@ -3,57 +3,47 @@ title: URLSearchParams.get()
 slug: Web/API/URLSearchParams/get
 translation_of: Web/API/URLSearchParams/get
 ---
-<p>{{ApiRef("URL API")}}{{SeeCompatTable}} </p>
+{{ApiRef("URL API")}}{{SeeCompatTable}}
 
-<p>O métod <strong>get() </strong> da interface {{domxref("URLSearchParams")}},  retorna o primeiro valor associado ao parametro de busca fornecido.</p>
+O métod **get()** da interface {{domxref("URLSearchParams")}}, retorna o primeiro valor associado ao parametro de busca fornecido.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">URLSearchParams.get(name)</pre>
+```
+URLSearchParams.get(name)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt>name</dt>
- <dd>O nome do parâmetro à ser retornado.</dd>
-</dl>
+- name
+  - : O nome do parâmetro à ser retornado.
 
-<h3 id="Retorno">Retorno</h3>
+### Retorno
 
-<p>Um {{domxref("USVString")}} se o parâmetro de pesquisa for encontrado; Caso contrário, <code><strong>null</strong></code>.</p>
+Um {{domxref("USVString")}} se o parâmetro de pesquisa for encontrado; Caso contrário, **`null`**.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>Se a URL da sua página é <code>https://example.com/?name=Jonathan&amp;age=18</code> você pode obter o parâmetro 'name' e 'age'  usando:</p>
+Se a URL da sua página é `https://example.com/?name=Jonathan&age=18` você pode obter o parâmetro 'name' e 'age' usando:
 
-<pre class="default prettyprint prettyprinted"><code>let params = new URLSearchParams(document.location.search.substring(1));
-let name = params.get("name")<span class="kwd">; // retorna a string "Jonathan"
-</span>let age = parseInt(params.get("age"), 10<span class="kwd">); // retorna o número 18</span></code>
-</pre>
+```
+let params = new URLSearchParams(document.location.search.substring(1));
+let name = params.get("name"); // retorna a string "Jonathan"
+let age = parseInt(params.get("age"), 10); // retorna o número 18
+```
 
-<p>Buscar um  parâmetro que não esteja presente na string de pesquisa, retornará  <code><strong>null</strong></code>:</p>
+Buscar um parâmetro que não esteja presente na string de pesquisa, retornará **`null`**:
 
-<pre><code>let address = params.get("address"); // null</code></pre>
+```
+let address = params.get("address"); // null
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('URL', '#dom-urlsearchparams-get', "get()")}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                | Status               | Comment            |
+| ---------------------------------------------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('URL', '#dom-urlsearchparams-get', "get()")}} | {{Spec2('URL')}} | Definição inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.URLSearchParams.get")}}

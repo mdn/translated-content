@@ -13,69 +13,56 @@ tags:
   - display
 translation_of: Web/API/Document/fullscreen
 ---
-<div>{{APIRef("Fullscreen API")}}{{Deprecated_Header}}</div>
+{{APIRef("Fullscreen API")}}{{Deprecated_Header}}
 
-<p><span class="seoSummary">A propriedade de somente leitura da interface <code><strong>fullscreen</strong></code> retorna se o documento correspondente está mostrando conteúdo em modo de tela cheia (full-screen). </span></p>
+A propriedade de somente leitura da interface **`fullscreen`** retorna se o documento correspondente está mostrando conteúdo em modo de tela cheia (full-screen).
 
-<p>Apesar dessa propriedade ser de somente leitura, ela não será executa se for modificada (mesmo em modo estrito); o setter não é um operador e não será modificado.</p>
+Apesar dessa propriedade ser de somente leitura, ela não será executa se for modificada (mesmo em modo estrito); o setter não é um operador e não será modificado.
 
-<div class="note">
-<p><strong>Nota:</strong> Desde que esta propriedade foi descontinuada, você pode determinar se o modo full-screen está ativo no documento checando se {{DOMxRef("Document.fullscreenElement")}} não é <code>null</code>.</p>
-</div>
+> **Nota:** Desde que esta propriedade foi descontinuada, você pode determinar se o modo full-screen está ativo no documento checando se {{DOMxRef("Document.fullscreenElement")}} não é `null`.
 
-<h2 id="Síntaxe">Síntaxe</h2>
+## Síntaxe
 
-<pre class="eval">var <var>isFullScreen</var> = <var>document</var>.fullscreen;
-</pre>
+```
+var isFullScreen = document.fullscreen;
+```
 
-<h3 id="Valor">Valor</h3>
+### Valor
 
-<p>Um valor booleano é <code>true</code> se o documento está mostrando um elemento no modo full-screen; se não, o valor é <code>false</code>.</p>
+Um valor booleano é `true` se o documento está mostrando um elemento no modo full-screen; se não, o valor é `false`.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>Esta simples função retorna se o modo full-sreen está ativo, usando a obsoleta propriedade <code><strong>fullscreen</strong></code>.</p>
+Esta simples função retorna se o modo full-sreen está ativo, usando a obsoleta propriedade **`fullscreen`**.
 
-<pre class="brush: js">function isDocumentInFullScreenMode() {
+```js
+function isDocumentInFullScreenMode() {
   return document.fullscreen;
 }
-</pre>
+```
 
-<p>Neste próximo exemplo, de outra maneira, usa a propriedade atual <code>fullscreenElement</code> para determinar a mesma coisa:</p>
+Neste próximo exemplo, de outra maneira, usa a propriedade atual `fullscreenElement` para determinar a mesma coisa:
 
-<pre class="brush: js">function isDocumentInFullScreenMode() {
+```js
+function isDocumentInFullScreenMode() {
   return document.fullscreenElement !== null;
-}</pre>
+}
+```
 
-<p><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">Se </span></font><code>fullscreenElement</code>  não é <code>null</code>, retorna <code>true</code>, indicando se modo full-screen está sendo usado.</p>
+Se `fullscreenElement` não é `null`, retorna `true`, indicando se modo full-screen está sendo usado.
 
-<h2 id="Específicações">Específicações</h2>
+## Específicações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Fullscreen", "#dom-document-fullscreen", "Document.fullscreen")}}</td>
-   <td>{{Spec2("Fullscreen")}}</td>
-   <td>Definição inicial (como uma proprieda obsoleta).</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                            | Status                           | Comment                                          |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------ |
+| {{SpecName("Fullscreen", "#dom-document-fullscreen", "Document.fullscreen")}} | {{Spec2("Fullscreen")}} | Definição inicial (como uma proprieda obsoleta). |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("api.Document.fullscreen")}}</p>
+{{Compat("api.Document.fullscreen")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a></li>
- <li><a href="/en-US/docs/Web/API/Fullscreen_API/Guide">Guide to the Fullscreen API</a></li>
- <li>{{DOMxRef("Document.fullscreenEnabled")}}</li>
-</ul>
+- [Fullscreen API](/pt-BR/docs/Web/API/Fullscreen_API)
+- [Guide to the Fullscreen API](/pt-BR/docs/Web/API/Fullscreen_API/Guide)
+- {{DOMxRef("Document.fullscreenEnabled")}}

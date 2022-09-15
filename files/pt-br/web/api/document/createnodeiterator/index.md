@@ -4,53 +4,32 @@ slug: Web/API/Document/createNodeIterator
 translation_of: Web/API/NodeFilter
 original_slug: Web/API/NodeFilter
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}Uma interface **`NodeFilter`** representa um objeto usado para filtrar os nós (elementos), em uma iteração {{ domxref("NodeIterator") }} ou {{ domxref("TreeWalker") }}. Essas interfaces não conhecem nada sobre o DOM ou sobre como percorrer ou atravessar, elementos; elas apenas sabem como avaliar se um único nó atende aos requisitos do filtro fornecido ou não.
 
-<div>Uma interface <strong><code>NodeFilter</code></strong>  representa um objeto usado para filtrar os nós (elementos), em uma iteração {{ domxref("NodeIterator") }} ou  {{ domxref("TreeWalker") }}. Essas interfaces não conhecem nada sobre o DOM ou sobre como percorrer ou atravessar, elementos; elas apenas sabem como avaliar se um único nó atende aos requisitos do filtro fornecido ou não.</div>
+> **Nota:** O navegador não fornece nenhum objeto que implemente essa interface. É esperado que o desenvolvedor escreva tal objeto, utilizando o método `acceptNode()` conforme as suas necessidades, podendo mesclar com objetos do tipo {{domxref("TreeWalker")}} ou {{domxref("NodeIterator")}} em sua implementação..
 
-<div> </div>
+## Properties
 
-<div class="note">
-<p>O navegador não fornece nenhum objeto que implemente essa interface. É esperado que o desenvolvedor escreva tal objeto, utilizando o método <code>acceptNode()</code> conforme as suas necessidades, podendo mesclar com objetos do tipo {{domxref("TreeWalker")}} ou {{domxref("NodeIterator")}}  em sua implementação.. </p>
-</div>
+_Essa interface não implementa, nem herda, nenhuma propriedade._
 
-<h2 id="Properties">Properties</h2>
+## Methods
 
-<p><em>Essa interface não implementa, nem herda, nenhuma propriedade.</em></p>
+_Essa interface não herda nenhum método._
 
-<h2 id="Methods">Methods</h2>
+- {{domxref("NodeFilter.acceptNode()")}}
 
-<p><em>Essa interface não herda nenhum método.</em></p>
+  - : Returns an `unsigned short` that will be used to tell if a given {{domxref("Node")}} must be accepted or not by the {{ domxref("NodeIterator") }} or {{ domxref("TreeWalker") }} iteration algorithm. This method is expected to be written by the user of a `NodeFilter`. Possible return values are:
 
-<dl>
- <dt>{{domxref("NodeFilter.acceptNode()")}}</dt>
- <dd>Returns an <code>unsigned short</code> that will be used to tell if a given {{domxref("Node")}} must be accepted or not by the {{ domxref("NodeIterator") }} or {{ domxref("TreeWalker") }} iteration algorithm. This method is expected to be written by the user of a <code>NodeFilter</code>. Possible return values are:
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <td class="header">Constant</td>
-    <td class="header">Description</td>
-   </tr>
-   <tr>
-    <td><code>FILTER_ACCEPT</code></td>
-    <td>Value returned by the {{ domxref("NodeFilter.acceptNode()") }} method when a node should be accepted.</td>
-   </tr>
-   <tr>
-    <td><code>FILTER_REJECT</code></td>
-    <td>Value to be returned by the {{ domxref("NodeFilter.acceptNode()") }} method when a node should be rejected. For {{ domxref("TreeWalker") }}, child nodes are also rejected. For {{ domxref("NodeIterator") }}, this flag is synonymous with FILTER_SKIP.</td>
-   </tr>
-   <tr>
-    <td><code>FILTER_SKIP</code></td>
-    <td>Value to be returned by {{ domxref("NodeFilter.acceptNode()") }} for nodes to be skipped by the {{ domxref("NodeIterator") }} or {{ domxref("TreeWalker") }} object. The children of skipped nodes are still considered. This is treated as "skip this node but not its children".</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
-</dl>
+    | Constant        | Description                                                                                                                                                                                                                                                                                                        |
+    | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+    | `FILTER_ACCEPT` | Value returned by the {{ domxref("NodeFilter.acceptNode()") }} method when a node should be accepted.                                                                                                                                                                                                  |
+    | `FILTER_REJECT` | Value to be returned by the {{ domxref("NodeFilter.acceptNode()") }} method when a node should be rejected. For {{ domxref("TreeWalker") }}, child nodes are also rejected. For {{ domxref("NodeIterator") }}, this flag is synonymous with FILTER_SKIP.                           |
+    | `FILTER_SKIP`   | Value to be returned by {{ domxref("NodeFilter.acceptNode()") }} for nodes to be skipped by the {{ domxref("NodeIterator") }} or {{ domxref("TreeWalker") }} object. The children of skipped nodes are still considered. This is treated as "skip this node but not its children". |
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var nodeIterator = document.createNodeIterator(
+```js
+var nodeIterator = document.createNodeIterator(
   // Node to use as root
   document.getElementById('someId'),
 
@@ -77,36 +56,19 @@ var node;
 while ((node = nodeIterator.nextNode())) {
   alert(node.data);
 }
-</pre>
+```
 
-<h2 id="Specification" name="Specification">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#interface-nodefilter', 'NodeFilter')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-NodeFilter', 'NodeFilter')}}</td>
-   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                            | Status                                       | Comment             |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------- |
+| {{SpecName('DOM WHATWG', '#interface-nodefilter', 'NodeFilter')}}                                 | {{Spec2('DOM WHATWG')}}             |                     |
+| {{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-NodeFilter', 'NodeFilter')}} | {{Spec2('DOM2 Traversal_Range')}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Document.createNodeIterator")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related interfaces: {{domxref("TreeWalker")}}, {{domxref("NodeIterator")}}.</li>
-</ul>
+- Related interfaces: {{domxref("TreeWalker")}}, {{domxref("NodeIterator")}}.

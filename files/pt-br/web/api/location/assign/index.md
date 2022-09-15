@@ -9,60 +9,44 @@ tags:
   - metodo
 translation_of: Web/API/Location/assign
 ---
-<p>{{ APIRef("HTML DOM") }}</p>
+{{ APIRef("HTML DOM") }}
 
-<p>O método <code><strong>Location.assign()</strong></code> faz com que o navegador carregue o documento na URL especificada e a exiba na janela atual.</p>
+O método **`Location.assign()`** faz com que o navegador carregue o documento na URL especificada e a exiba na janela atual.
 
-<p>Se a tatefa não poder ser executada por alguma violação de segurança, uma {{domxref("DOMException")}} do tipo <code>SECURITY_ERROR</code> será lançada. Isso acontece se a origem do script chamador do método for diferente da origem da página originalmente descrita no objeto {{domxref("Location")}}, geralmente quando o script está hospedado em um dominio diferente.</p>
+Se a tatefa não poder ser executada por alguma violação de segurança, uma {{domxref("DOMException")}} do tipo `SECURITY_ERROR` será lançada. Isso acontece se a origem do script chamador do método for diferente da origem da página originalmente descrita no objeto {{domxref("Location")}}, geralmente quando o script está hospedado em um dominio diferente.
 
-<p>Se a URL especificada for inválida, uma {{domxref("DOMException")}} do tipo <code>SYNTAX_ERROR</code> será lançada.</p>
+Se a URL especificada for inválida, uma {{domxref("DOMException")}} do tipo `SYNTAX_ERROR` será lançada.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><em>location</em>.assign(<em>url</em>);
-</pre>
+```
+location.assign(url);
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><em>url</em></dt>
- <dd>É uma {{domxref("DOMString")}} contendo a URL da página destino.</dd>
-</dl>
+- _url_
+  - : É uma {{domxref("DOMString")}} contendo a URL da página destino.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: js">// Navega para a página do artigo Location.reload
-document.location.assign('https://developer.mozilla.org/en-US/docs/Web/API/Location.reload');</pre>
+```js
+// Navega para a página do artigo Location.reload
+document.location.assign('https://developer.mozilla.org/en-US/docs/Web/API/Location.reload');
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentários</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "history.html#dom-location-assign", "Location.assign()")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Sem alterações  no {{SpecName("HTML5 W3C")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "browsers.html#dom-location-assign", "Location.assign()")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                    | Status                           | Comentários                                         |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "history.html#dom-location-assign", "Location.assign()")}} | {{Spec2('HTML WHATWG')}} | Sem alterações no {{SpecName("HTML5 W3C")}}. |
+| {{SpecName('HTML5 W3C', "browsers.html#dom-location-assign", "Location.assign()")}} | {{Spec2('HTML5 W3C')}}     | Definição inicial.                                  |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Location.assign")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>A interface {{domxref("Location")}}.</li>
- <li>Métodos Similares: {{domxref("Location.replace()")}} and {{domxref("Location.reload()")}}.</li>
-</ul>
+- A interface {{domxref("Location")}}.
+- Métodos Similares: {{domxref("Location.replace()")}} and {{domxref("Location.reload()")}}.

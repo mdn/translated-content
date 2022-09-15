@@ -3,163 +3,145 @@ title: Console
 slug: Web/API/Console
 translation_of: Web/API/Console
 ---
-<div>
-<div>{{APIRef("Console API")}}{{Non-standard_header}}</div>
-</div>
+{{APIRef("Console API")}}{{Non-standard_header}}
 
-<p>O objeto <code>console</code> fornece acesso ao console de debug do navegador (por exemplo, o <a href="/en-US/docs/Tools/Web_Console">Web Console</a> do Firefox). O seu funcionamento específico varia de navegador para navegador, mas existe um conjunto de ferramentas que na prática são fornecidas normalmente.</p>
+O objeto `console` fornece acesso ao console de debug do navegador (por exemplo, o [Web Console](/pt-BR/docs/Tools/Web_Console) do Firefox). O seu funcionamento específico varia de navegador para navegador, mas existe um conjunto de ferramentas que na prática são fornecidas normalmente.
 
-<p>Esta página documenta os <a href="#métodos">Métodos</a> disponíveis no objeto <code>console</code> e fornece alguns exemplos de <a href="#uso">Uso</a>.</p>
+Esta página documenta os [Métodos](#métodos) disponíveis no objeto `console` e fornece alguns exemplos de [Uso](#uso).
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<dl>
- <dt>{{domxref("console.assert()", "console.assert(expression, object[, object...])")}}</dt>
- <dd>Emite uma mensagem e traça a sequência de operações até o primeiro argumento for falso.</dd>
- <dt>{{domxref("console.count()", "console.count([label])")}}</dt>
- <dd>Mostra o número de vezes que esta linha foi chamada com a label fornecida.</dd>
- <dt>{{domxref("console.log()", "console.debug(object[, object...])")}} {{deprecated_inline("5.0")}}</dt>
- <dd>Um atalho para <code>log()</code>; que foi adicionado para melhorar a compatibilidade de páginas já existentes que utilizavam <code>debug()</code>. Porém, ao invés destes comandos você deve utilizar {{domxref("console.log()")}}.</dd>
- <dt>{{domxref("console.dir()", "console.dir(object)")}}</dt>
- <dd>Exibe uma listagem interativa das propriedades de um objeto JavaScript especificado. Esta listagem permite a você expandir o objeto para visualizar o conteúdo de objetos filhos.</dd>
- <dt>{{domxref("console.error()", "console.error(object[, object...])")}}</dt>
- <dd>Emite uma mensagem de erro<span>.</span> Você pode usar substituição de string e outros argumentos adicionais com este método. Consulte <a href="#uso_de_substituição_de_string">Uso de substituição de string</a>.</dd>
- <dt>{{domxref("console.error()", "console.exception(object[, object...])")}}</dt>
- <dd>Um atalho para <code>error();</code></dd>
- <dt>{{domxref("console.group()", "console.group(object[, object...])")}}</dt>
- <dd>Cria um novo grupo em linha e recua todas as mensagens seguintes para um nível de indentação superior. Para voltar um nível, utilize <code>groupEnd()</code>. Consulte <a href="#uso_de_grupos_no_console">Uso de grupos no console</a>.</dd>
- <dt>{{domxref("console.groupCollapsed()", "console.groupCollapsed(object[, object...])")}}</dt>
- <dd>Cria um novo grupo em linha e recua todas as mensagens seguintes para um nível de indentação superior; ao contrário de <code>group()</code>, o grupo em linha começa recolhido. Para revelar seu conteúdo, basta clicar no botão de revelação para expandí-lo. Para recuar um nível, utilize <code>groupEnd().</code> Consulte <a href="#uso_de_grupos_no_console">Uso de grupos no console</a>.</dd>
- <dt>{{domxref("console.groupEnd()")}}</dt>
- <dd>Sai do grupo em linha atual. Veja <a href="#uso_de_grupos_no_console">Uso de grupos no console</a>.</dd>
- <dt>{{domxref("console.info()", "console.info(object[, object...])")}}</dt>
- <dd>Informações de registro. Você pode utilizar substituição de string e outros argumentos com este método. Consulte <a href="#uso_de_substituição_de_string">Uso de substituição de string</a>.</dd>
- <dt>{{domxref("console.log()", "console.log(object[, object...])")}}</dt>
- <dd>Utilizado para a emissão de informações de registro em geral. Você pode utilizar substituição de string e outros argumentos com este método. Consulte <a href="#uso_de_substituição_de_string">Uso de substituição de string</a>.</dd>
- <dt>{{domxref("console.profile()", "console.profile( [profileLabel] )")}}</dt>
- <dd>Inicia o <a href="/en-US/docs/Tools/Profiler">JavaScript profiler</a>. Você pode especificar qualquer label opcional para o perfil.</dd>
- <dt>{{domxref("console.profileEnd()")}}</dt>
- <dd>Interrompe o profiler. Você pode ver o profile resultante no <a href="/en-US/docs/Tools/Profiler">JavaScript profiler</a>.</dd>
-</dl>
+- {{domxref("console.assert()", "console.assert(expression, object[, object...])")}}
+  - : Emite uma mensagem e traça a sequência de operações até o primeiro argumento for falso.
+- {{domxref("console.count()", "console.count([label])")}}
+  - : Mostra o número de vezes que esta linha foi chamada com a label fornecida.
+- {{domxref("console.log()", "console.debug(object[, object...])")}} {{deprecated_inline("5.0")}}
+  - : Um atalho para `log()`; que foi adicionado para melhorar a compatibilidade de páginas já existentes que utilizavam `debug()`. Porém, ao invés destes comandos você deve utilizar {{domxref("console.log()")}}.
+- {{domxref("console.dir()", "console.dir(object)")}}
+  - : Exibe uma listagem interativa das propriedades de um objeto JavaScript especificado. Esta listagem permite a você expandir o objeto para visualizar o conteúdo de objetos filhos.
+- {{domxref("console.error()", "console.error(object[, object...])")}}
+  - : Emite uma mensagem de erro. Você pode usar substituição de string e outros argumentos adicionais com este método. Consulte [Uso de substituição de string](#uso_de_substituição_de_string).
+- {{domxref("console.error()", "console.exception(object[, object...])")}}
+  - : Um atalho para `error();`
+- {{domxref("console.group()", "console.group(object[, object...])")}}
+  - : Cria um novo grupo em linha e recua todas as mensagens seguintes para um nível de indentação superior. Para voltar um nível, utilize `groupEnd()`. Consulte [Uso de grupos no console](#uso_de_grupos_no_console).
+- {{domxref("console.groupCollapsed()", "console.groupCollapsed(object[, object...])")}}
+  - : Cria um novo grupo em linha e recua todas as mensagens seguintes para um nível de indentação superior; ao contrário de `group()`, o grupo em linha começa recolhido. Para revelar seu conteúdo, basta clicar no botão de revelação para expandí-lo. Para recuar um nível, utilize `groupEnd().` Consulte [Uso de grupos no console](#uso_de_grupos_no_console).
+- {{domxref("console.groupEnd()")}}
+  - : Sai do grupo em linha atual. Veja [Uso de grupos no console](#uso_de_grupos_no_console).
+- {{domxref("console.info()", "console.info(object[, object...])")}}
+  - : Informações de registro. Você pode utilizar substituição de string e outros argumentos com este método. Consulte [Uso de substituição de string](#uso_de_substituição_de_string).
+- {{domxref("console.log()", "console.log(object[, object...])")}}
+  - : Utilizado para a emissão de informações de registro em geral. Você pode utilizar substituição de string e outros argumentos com este método. Consulte [Uso de substituição de string](#uso_de_substituição_de_string).
+- {{domxref("console.profile()", "console.profile( [profileLabel] )")}}
+  - : Inicia o [JavaScript profiler](/pt-BR/docs/Tools/Profiler). Você pode especificar qualquer label opcional para o perfil.
+- {{domxref("console.profileEnd()")}}
 
-<p> </p>
+  - : Interrompe o profiler. Você pode ver o profile resultante no [JavaScript profiler](/pt-BR/docs/Tools/Profiler).
 
-<dl>
- <dt>{{domxref("Console.table()")}}</dt>
- <dd>Exibe dados, como objeto e array, como uma tabela.</dd>
-</dl>
+- {{domxref("Console.table()")}}
 
-<p> </p>
+  - : Exibe dados, como objeto e array, como uma tabela.
 
-<dl>
- <dt>{{domxref("console.time()", "console.time(label)")}}</dt>
- <dd>Inicia um contador de tempo com o nome especificado no parâmetro <em>label</em>. Até 10.000 contadores de tempo podem ser rodados por página.</dd>
- <dt>{{domxref("console.timeEnd()", "console.timeEnd(label)")}}</dt>
- <dd>Interrompe o contador de tempo especificado e emite o tempo e registros do contador de tempo em milisegundos desde o seu início. Veja <a href="#contadores_de_tempo">Contadores de Tempo</a>.</dd>
- <dt>{{domxref("console.trace()")}}</dt>
- <dd>Emite um traçado de pilha. See <a href="#traçados_de_pilha">Traçados de pilha</a>.</dd>
- <dt>{{domxref("console.warn()", "console.warn(object[, object...])")}}</dt>
- <dd>Emite uma mensagem de alerta. Você pode utilizar substituição de string e argumentos adicionais com este método. Veja <a href="#uso_de_substituição_de_string">Uso de substituição de string</a>.</dd>
-</dl>
+- {{domxref("console.time()", "console.time(label)")}}
+  - : Inicia um contador de tempo com o nome especificado no parâmetro _label_. Até 10.000 contadores de tempo podem ser rodados por página.
+- {{domxref("console.timeEnd()", "console.timeEnd(label)")}}
+  - : Interrompe o contador de tempo especificado e emite o tempo e registros do contador de tempo em milisegundos desde o seu início. Veja [Contadores de Tempo](#contadores_de_tempo).
+- {{domxref("console.trace()")}}
+  - : Emite um traçado de pilha. See [Traçados de pilha](#traçados_de_pilha).
+- {{domxref("console.warn()", "console.warn(object[, object...])")}}
+  - : Emite uma mensagem de alerta. Você pode utilizar substituição de string e argumentos adicionais com este método. Veja [Uso de substituição de string](#uso_de_substituição_de_string).
 
+## Uso
 
-<h2 id="Usage" name="Usage">Uso</h2>
+### Output de texto para o console
 
-<h3 id="Outputting_text_to_the_console" name="Outputting_text_to_the_console">Output de texto para o console</h3>
+A utilização mais frequente do console é realizar o log de texto e de outros dados. Há quatro categorias de output que podem ser geradas, utilizando os métodos {{domxref("console.log()")}}, {{domxref("console.info()")}}, {{domxref("console.warn()")}} e o {{domxref("console.error()")}}. Cada um destes resultam em outputs que possuem estilos diferentes no log, e você pode utilizar os controles de filtragem fornecidos pelo navegador para ver apenas os outputs que lhe interessam.
 
-<p>A utilização mais frequente do console é realizar o log de texto e de outros dados. Há quatro categorias de output que podem ser geradas, utilizando os métodos {{domxref("console.log()")}}, {{domxref("console.info()")}}, {{domxref("console.warn()")}} e o {{domxref("console.error()")}}. Cada um destes resultam em outputs que possuem estilos diferentes no log, e você pode utilizar os controles de filtragem fornecidos pelo navegador para ver apenas os outputs que lhe interessam.</p>
+Há duas maneiros da utilizar cada um dos métodos de outuput. Você pode simplemente passar uma lista dos objetos cuja representação em string será concatenadas em uma string e então realizar o output para o console, ou você pode passar uma string contendo zero ou mais substituições de strings seguidas por uma lista de objetos para serem utilizados na substituição.
 
-<p>Há duas maneiros da utilizar cada um dos métodos de outuput. Você pode simplemente passar uma lista dos objetos cuja representação em string será concatenadas em uma string e então realizar o output  para o console, ou você pode passar uma string contendo zero ou mais substituições de strings seguidas por uma lista de objetos para serem utilizados na substituição.</p>
+#### Output de um único objeto
 
-<h4 id="Output_de_um_único_objeto">Output de um único objeto</h4>
+A forma mais simples de utilizar os métodos de log é realizar o output de um único objeto:
 
-<p>A forma mais simples de utilizar os métodos de log é realizar o output de um único objeto:</p>
-
-<pre class="brush: js">var algumObjeto = { str: "Algum texto", id: 5 };
+```js
+var algumObjeto = { str: "Algum texto", id: 5 };
 console.log(algumObjeto);
-</pre>
+```
 
-<p>O output vai se parecer como algo assim:</p>
+O output vai se parecer como algo assim:
 
-<pre>[09:27:13.475] ({str:"Algum texto", id:5})</pre>
+```
+[09:27:13.475] ({str:"Algum texto", id:5})
+```
 
-<h4 id="Output_de_múltiplos_objetos">Output de múltiplos objetos</h4>
+#### Output de múltiplos objetos
 
-<p>Você também pode realizar o output de múltiplos objetos ao simplesmente listá-los ao chamar o método de log, desta forma:</p>
+Você também pode realizar o output de múltiplos objetos ao simplesmente listá-los ao chamar o método de log, desta forma:
 
-<pre class="brush: js">var carro = "Fusca";
+```js
+var carro = "Fusca";
 var algumObjeto = {str:"Algum texto", id:5};
-console.info("Meu primeiro carro era um ", carro, ". O objeto é: ", algumObjeto);</pre>
+console.info("Meu primeiro carro era um ", carro, ". O objeto é: ", algumObjeto);
+```
 
-<p>O output será algo assim:</p>
+O output será algo assim:
 
-<pre>[09:28:22.711] Meu primeiro carro era um Fusca. O objeto é:  ({str:"Algum texto", id:5})
-</pre>
+```
+[09:28:22.711] Meu primeiro carro era um Fusca. O objeto é:  ({str:"Algum texto", id:5})
+```
 
-<h4 id="Uso_de_substituição_de_string">Uso de substituição de string</h4>
+#### Uso de substituição de string
 
-<p>O Gecko 9.0 {{geckoRelease("9.0")}} introduziu o suporte à substituição de strings. Ao fornecer uma string para um dos métodos do console que aceitam uma string, você pode utilizar estas strings de substituição:</p>
+O Gecko 9.0 {{geckoRelease("9.0")}} introduziu o suporte à substituição de strings. Ao fornecer uma string para um dos métodos do console que aceitam uma string, você pode utilizar estas strings de substituição:
 
-<table class="standard-table" style="width: auto;">
- <tbody>
-  <tr>
-   <td class="header">String de substituição</td>
-   <td class="header">Descrição</td>
-  </tr>
-  <tr>
-   <td>%o</td>
-   <td>Emite um link para o objeto JavaScript. Clicar no link abre um inspetor.</td>
-  </tr>
-  <tr>
-   <td>%d ou %i</td>
-   <td>Emite uma numero inteiro. A formatação ainda não possui suporte.</td>
-  </tr>
-  <tr>
-   <td>%s</td>
-   <td>Emite uma string.</td>
-  </tr>
-  <tr>
-   <td>%f</td>
-   <td>Emite um número de ponto flutuante. A formatação ainda não possui suporte.</td>
-  </tr>
- </tbody>
-</table>
+| String de substituição | Descrição                                                                  |
+| ---------------------- | -------------------------------------------------------------------------- |
+| %o                     | Emite um link para o objeto JavaScript. Clicar no link abre um inspetor.   |
+| %d ou %i               | Emite uma numero inteiro. A formatação ainda não possui suporte.           |
+| %s                     | Emite uma string.                                                          |
+| %f                     | Emite um número de ponto flutuante. A formatação ainda não possui suporte. |
 
-<p>Cada um destes puxam o próximo argumento na lista de parâmetros após a string fornecida inicialmente. Por exemplo:</p>
+Cada um destes puxam o próximo argumento na lista de parâmetros após a string fornecida inicialmente. Por exemplo:
 
-<pre>for (var i=0; i&lt;5; i++) {
+```
+for (var i=0; i<5; i++) {
   console.log("Olá, %s. Você me chamou pela %dª vez.", "João", i+1);
 }
-</pre>
+```
 
-<p>O output será algo assim:</p>
+O output será algo assim:
 
-<pre>[13:14:13.481] Olá, João. Você me chamou pela 1ª vez.
+```
+[13:14:13.481] Olá, João. Você me chamou pela 1ª vez.
 [13:14:13.483] Olá, João. Você me chamou pela 2ª vez.
 [13:14:13.485] Olá, João. Você me chamou pela 3ª vez.
 [13:14:13.487] Olá, João. Você me chamou pela 4ª vez.
 [13:14:13.488] Olá, João. Você me chamou pela 5ª vez.
-</pre>
+```
 
-<h4 id="Estilizando_o_output_no_console">Estilizando o output no console</h4>
+#### Estilizando o output no console
 
-<p>You can use the <code>"%c"</code> directive to apply a CSS style to console output:</p>
+You can use the `"%c"` directive to apply a CSS style to console output:
 
-<pre class="brush: js">console.log("%cMy stylish message", "color: red; font-style: italic");</pre>
+```js
+console.log("%cMy stylish message", "color: red; font-style: italic");
+```
 
-<div><img alt="" src="https://mdn.mozillademos.org/files/7739/console-style.png" style="display: block; height: 52px; margin-left: auto; margin-right: auto; width: 293px;"></div>
+![](https://mdn.mozillademos.org/files/7739/console-style.png)
 
-<h3>Usando grupos no console</h3>
+### Usando grupos no console
 
-<p>You can use nested groups to help organize your output by visually combining related material. To create a new nested block, call <code>console.group()</code>. The <code>console.groupCollapsed()</code> method is similar, but creates the new block collapsed, requiring the use of a disclosure button to open it for reading.</p>
+You can use nested groups to help organize your output by visually combining related material. To create a new nested block, call `console.group()`. The `console.groupCollapsed()` method is similar, but creates the new block collapsed, requiring the use of a disclosure button to open it for reading.
 
-<div class="note"><strong>Note:</strong> Collapsed groups are not supported yet in Gecko; the <code>groupCollapsed()</code> method is the same as <code>group()</code> at this time.</div>
+> **Nota:** Collapsed groups are not supported yet in Gecko; the `groupCollapsed()` method is the same as `group()` at this time.
 
-<p class="note">To exit the current group, simply call <code>console.groupEnd()</code>.</p>
+> **Nota:** To exit the current group, simply call `console.groupEnd()`.
 
-<p class="note">For example, given this code:</p>
+> **Nota:** For example, given this code:
 
-<pre class="brush: js">console.log("This is the outer level");
+```js
+console.log("This is the outer level");
 console.group();
 console.log("Level 2");
 console.group();
@@ -169,36 +151,38 @@ console.groupEnd();
 console.log("Back to level 2");
 console.groupEnd();
 console.debug("Back to the outer level");
-</pre>
+```
 
-<p>The output looks like this:</p>
+The output looks like this:
 
-<p><img alt="nesting.png" class="default internal" src="/@api/deki/files/6082/=nesting.png"></p>
+![nesting.png](/@api/deki/files/6082/=nesting.png)
 
-<h3>Temporizadores</h3>
+### Temporizadores
 
-<p>In order to calculate the duration of a specific operation, Gecko 10 introduced the support of timers in the <code>console</code> object. To start a timer, call the <code>console.time</code><code>()</code> method, giving it a name as only parameter. To stop the timer, and to get the elapsed time in miliseconds, just call the <code>console.timeEnd()</code> method, again passing the timer's name as the parameter. Up to 10,000 timers can run simultaneously on a given page.</p>
+In order to calculate the duration of a specific operation, Gecko 10 introduced the support of timers in the `console` object. To start a timer, call the ` console.time``() ` method, giving it a name as only parameter. To stop the timer, and to get the elapsed time in miliseconds, just call the `console.timeEnd()` method, again passing the timer's name as the parameter. Up to 10,000 timers can run simultaneously on a given page.
 
-<p>For example, given this code:</p>
+For example, given this code:
 
-<pre class="brush: js">console.time("answer time");
+```js
+console.time("answer time");
 alert("Click to continue");
 console.timeEnd("answer time");
-</pre>
+```
 
-<p>will log the time needed by the user to discard the alert box:</p>
+will log the time needed by the user to discard the alert box:
 
-<p><img alt="timerresult.png" class="default internal" src="/@api/deki/files/6084/=timerresult.png"></p>
+![timerresult.png](/@api/deki/files/6084/=timerresult.png)
 
-<p>Notice that the timer's name is displayed both when the timer is started and when it's stopped.</p>
+Notice that the timer's name is displayed both when the timer is started and when it's stopped.
 
-<div class="note"><strong>Note:</strong> It's important to note that if you're using this to log the timing for network traffic, the timer will report the total time for the transaction, while the time listed in the network panel is just the amount of time required for the header. If you have response body logging enabled, the time listed for the response header and body combined should match what you see in the console output.</div>
+> **Nota:** It's important to note that if you're using this to log the timing for network traffic, the timer will report the total time for the transaction, while the time listed in the network panel is just the amount of time required for the header. If you have response body logging enabled, the time listed for the response header and body combined should match what you see in the console output.
 
-<h3 id="Stack_traces">Stack traces</h3>
+### Stack traces
 
-<p>The console object also supports outputting a stack trace; this will show you the call path taken to reach the point at which you call {{domxref("console.trace()")}}. Given code like this:</p>
+The console object also supports outputting a stack trace; this will show you the call path taken to reach the point at which you call {{domxref("console.trace()")}}. Given code like this:
 
-<pre>foo();
+```
+foo();
 
 function foo() {
   function bar() {
@@ -206,37 +190,29 @@ function foo() {
   }
   bar();
 }
-</pre>
+```
 
-<p>The output in the console looks something like this:</p>
+The output in the console looks something like this:
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/7167/api-trace2.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+![](https://mdn.mozillademos.org/files/7167/api-trace2.png)
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<ul>
- <li>At least in Firefox, if a page defines a console object, that object overrides the one built into Firefox.</li>
- <li>Prior to {{Gecko("12.0")}}, the console object's methods only work when the Web Console is open. Starting with {{Gecko("12.0")}}, output is cached until the Web Console is opened, then displayed at that time.</li>
- <li>It's worth noting that the Firefox's built-in <code>console</code> object is compatible with the one provided by <a class="external" href="http://getfirebug.com/">Firebug</a>.</li>
-</ul>
+- At least in Firefox, if a page defines a console object, that object overrides the one built into Firefox.
+- Prior to {{Gecko("12.0")}}, the console object's methods only work when the Web Console is open. Starting with {{Gecko("12.0")}}, output is cached until the Web Console is opened, then displayed at that time.
+- It's worth noting that the Firefox's built-in `console` object is compatible with the one provided by [Firebug](http://getfirebug.com/).
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Tools" title="Tools">Tools</a></li>
- <li><a href="/en-US/docs/Tools/Web_Console" title="Web Console">Web Console</a> - how the Web Console in Firefox handles console API calls</li>
- <li><a href="/en-US/docs/Tools/Remote_Debugging">Remote debugging</a> - how to see console output when the debugging target is a mobile device</li>
- <li><a href="/en-US/Firefox_OS/Using_the_App_Manager">Debugging apps on Firefox OS</a> - using the App Manager to debug apps running on Firefox OS</li>
- <li><a href="/en-US/docs/Mozilla/Firefox_OS/Debugging/On-device_console_logging" title="/en-US/docs/Mozilla/Firefox_OS/Debugging/On-device_console_logging">On-device console logging</a> - how to do logging on Firefox OS devices</li>
-</ul>
+- [Tools](/pt-BR/docs/Tools "Tools")
+- [Web Console](/pt-BR/docs/Tools/Web_Console "Web Console") - how the Web Console in Firefox handles console API calls
+- [Remote debugging](/pt-BR/docs/Tools/Remote_Debugging) - how to see console output when the debugging target is a mobile device
+- [Debugging apps on Firefox OS](/en-US/Firefox_OS/Using_the_App_Manager) - using the App Manager to debug apps running on Firefox OS
+- [On-device console logging](/pt-BR/docs/Mozilla/Firefox_OS/Debugging/On-device_console_logging) - how to do logging on Firefox OS devices
 
-<h3 id="Other_implementations">Other implementations</h3>
+### Other implementations
 
-<p> </p>
-
-<ul>
- <li><a href="https://developers.google.com/chrome-developer-tools/docs/console-api">Google Chrome DevTools</a>;</li>
- <li><a href="http://getfirebug.com/wiki/index.php/Console_API">Firebug</a>;</li>
- <li><a href="http://msdn.microsoft.com/en-us/library/hh772173(v=vs.85).aspx">Internet Explorer</a>;</li>
- <li><a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html">Safari</a>.</li>
-</ul>
+- [Google Chrome DevTools](https://developers.google.com/chrome-developer-tools/docs/console-api);
+- [Firebug](http://getfirebug.com/wiki/index.php/Console_API);
+- [Internet Explorer](<http://msdn.microsoft.com/en-us/library/hh772173(v=vs.85).aspx>);
+- [Safari](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html).

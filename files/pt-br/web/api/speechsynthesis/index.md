@@ -13,54 +13,49 @@ tags:
   - sintetização
 translation_of: Web/API/SpeechSynthesis
 ---
-<p>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>A interface <strong><code>SpeechSynthesis</code></strong> da <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a> é a interface controladora para o serviço de fala; este pode ser usado para obter informações sobre as vozes sintetizadas disponíveis no dispositivo, reproduzir e pausar uma elocução, além de outros comandos.</p>
+A interface **`SpeechSynthesis`** da [Web Speech API](/pt-BR/docs/Web/API/Web_Speech_API) é a interface controladora para o serviço de fala; este pode ser usado para obter informações sobre as vozes sintetizadas disponíveis no dispositivo, reproduzir e pausar uma elocução, além de outros comandos.
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<p><em><code>SpeechSynthesis</code> também herda propriedades da sua interface pai, {{domxref("EventTarget")}}.</em></p>
+_`SpeechSynthesis` também herda propriedades da sua interface pai, {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("SpeechSynthesis.paused")}} {{readonlyinline}}</dt>
- <dd>Um {{domxref("Boolean")}} que retorna <code>true</code> se o objeto <code>SpeechSynthesis</code> está em estado de pausa.</dd>
- <dt>{{domxref("SpeechSynthesis.pending")}} {{readonlyinline}}</dt>
- <dd>Um {{domxref("Boolean")}} que retorna <code>true</code> se a fila de elocuções contém falas que ainda não foram reproduzidas.</dd>
- <dt>{{domxref("SpeechSynthesis.speaking")}} {{readonlyinline}}</dt>
- <dd>Um {{domxref("Boolean")}} que retorna <code>true</code> se uma elocução está sendo reproduzida atualmente — mesmo que <code>SpeechSynthesis</code> esteja em estado de pausa.</dd>
-</dl>
+- {{domxref("SpeechSynthesis.paused")}} {{readonlyinline}}
+  - : Um {{domxref("Boolean")}} que retorna `true` se o objeto `SpeechSynthesis` está em estado de pausa.
+- {{domxref("SpeechSynthesis.pending")}} {{readonlyinline}}
+  - : Um {{domxref("Boolean")}} que retorna `true` se a fila de elocuções contém falas que ainda não foram reproduzidas.
+- {{domxref("SpeechSynthesis.speaking")}} {{readonlyinline}}
+  - : Um {{domxref("Boolean")}} que retorna `true` se uma elocução está sendo reproduzida atualmente — mesmo que `SpeechSynthesis` esteja em estado de pausa.
 
-<h3 id="Tratamento_de_eventos">Tratamento de eventos</h3>
+### Tratamento de eventos
 
-<dl>
- <dt>{{domxref("SpeechSynthesis.onvoiceschanged")}}</dt>
- <dd>Disparado quando a lista de objetos {{domxref("SpeechSynthesisVoice")}} que pode ser retornada pelo método {{domxref("SpeechSynthesis.getVoices()")}} mudou.</dd>
-</dl>
+- {{domxref("SpeechSynthesis.onvoiceschanged")}}
+  - : Disparado quando a lista de objetos {{domxref("SpeechSynthesisVoice")}} que pode ser retornada pelo método {{domxref("SpeechSynthesis.getVoices()")}} mudou.
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<p><em><code>SpeechSynthesis</code> também herda métodos da sua interface pai, {{domxref("EventTarget")}}.</em></p>
+_`SpeechSynthesis` também herda métodos da sua interface pai, {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("SpeechSynthesis.cancel()")}}</dt>
- <dd>Remove todas as elocuções da fila para reprodução.</dd>
- <dt>{{domxref("SpeechSynthesis.getVoices()")}}</dt>
- <dd>Retorna uma lista de objetos {{domxref("SpeechSynthesisVoice")}} representando todas as vozes disponíveis no dispositivo atuall</dd>
- <dt>{{domxref("SpeechSynthesis.pause()")}}</dt>
- <dd>Deixa o objeto <code>SpeechSynthesis</code> em estado de pausa.</dd>
- <dt>{{domxref("SpeechSynthesis.resume()")}}</dt>
- <dd>Retira o estado de pausa do objeto <code>SpeechSynthesis</code>: retoma a reprodução se ele estiver pausado.</dd>
- <dt>{{domxref("SpeechSynthesis.speak()")}}</dt>
- <dd>Adiciona uma {{domxref("SpeechSynthesisUtterance", "utterance")}} à fila de reprodução; ela será reproduzida assim que todas as elocuções enfileiradas anteriormente tenham sido reproduzidas.</dd>
-</dl>
+- {{domxref("SpeechSynthesis.cancel()")}}
+  - : Remove todas as elocuções da fila para reprodução.
+- {{domxref("SpeechSynthesis.getVoices()")}}
+  - : Retorna uma lista de objetos {{domxref("SpeechSynthesisVoice")}} representando todas as vozes disponíveis no dispositivo atuall
+- {{domxref("SpeechSynthesis.pause()")}}
+  - : Deixa o objeto `SpeechSynthesis` em estado de pausa.
+- {{domxref("SpeechSynthesis.resume()")}}
+  - : Retira o estado de pausa do objeto `SpeechSynthesis`: retoma a reprodução se ele estiver pausado.
+- {{domxref("SpeechSynthesis.speak()")}}
+  - : Adiciona uma {{domxref("SpeechSynthesisUtterance", "utterance")}} à fila de reprodução; ela será reproduzida assim que todas as elocuções enfileiradas anteriormente tenham sido reproduzidas.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>Na nossa demonstração básica <a href="https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis">Speech synthesiser demo</a>, nós primeiro pegamos uma referência para o controlador SpeechSynthesis usando <code>window.speechSynthesis</code>. Após definir algumas variáveis necessárias, nós obtemos uma lista de vozes disponíveis usando o método {{domxref("SpeechSynthesis.getVoices()")}} usando-as para popular um menu de seleção de forma que o usuário possa escolher a voz que desejar.</p>
+Na nossa demonstração básica [Speech synthesiser demo](https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis), nós primeiro pegamos uma referência para o controlador SpeechSynthesis usando `window.speechSynthesis`. Após definir algumas variáveis necessárias, nós obtemos uma lista de vozes disponíveis usando o método {{domxref("SpeechSynthesis.getVoices()")}} usando-as para popular um menu de seleção de forma que o usuário possa escolher a voz que desejar.
 
-<p>Dentro do tratamento <code>inputForm.onsubmit</code>, nós impedimos a submissão do formulário com <a href="/en-US/docs/Web/API/Event/preventDefault">preventDefault()</a>,  instanciamos uma {{domxref("SpeechSynthesisUtterance")}} contendo o texto presente no {{htmlelement("input")}}, atribuímos a voz da elocução para a voz selecionada no elemento {{htmlelement("select")}}, e iniciamos a reprodução da elocução através do método {{domxref("SpeechSynthesis.speak()")}}.</p>
+Dentro do tratamento `inputForm.onsubmit`, nós impedimos a submissão do formulário com [preventDefault()](/pt-BR/docs/Web/API/Event/preventDefault), instanciamos uma {{domxref("SpeechSynthesisUtterance")}} contendo o texto presente no {{htmlelement("input")}}, atribuímos a voz da elocução para a voz selecionada no elemento {{htmlelement("select")}}, e iniciamos a reprodução da elocução através do método {{domxref("SpeechSynthesis.speak()")}}.
 
-<pre class="brush: js">var synth = window.speechSynthesis;
+```js
+var synth = window.speechSynthesis;
 
 var inputForm = document.querySelector('form');
 var inputTxt = document.querySelector('.txt');
@@ -76,7 +71,7 @@ var voices = [];
 function populateVoiceList() {
   voices = synth.getVoices();
 
-  for(i = 0; i &lt; voices.length ; i++) {
+  for(i = 0; i < voices.length ; i++) {
     var option = document.createElement('option');
     option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
 
@@ -100,7 +95,7 @@ inputForm.onsubmit = function(event) {
 
   var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i &lt; voices.length ; i++) {
+  for(i = 0; i < voices.length ; i++) {
     if(voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
@@ -110,31 +105,19 @@ inputForm.onsubmit = function(event) {
   synth.speak(utterThis);
 
   inputTxt.blur();
-}</pre>
+}
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Situação</th>
-   <th scope="col">Comentários</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Speech API', '#tts-section', 'SpeechSynthesis')}}</td>
-   <td>{{Spec2('Web Speech API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                            | Situação                             | Comentários |
+| ---------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
+| {{SpecName('Web Speech API', '#tts-section', 'SpeechSynthesis')}} | {{Spec2('Web Speech API')}} |             |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.SpeechSynthesis")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/pt-BR/docs/Web/API/Web_Speech_API)

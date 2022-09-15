@@ -4,73 +4,40 @@ slug: Web/API/Element/focusout_event
 translation_of: Web/API/Element/focusout_event
 original_slug: Web/Events/focusout
 ---
-<p>O evento <code>focusout</code> é acionado assim que o elemento perde o foco. A principal diferença entre esse evento e o evento <code><a href="/en-US/docs/Mozilla_event_reference/blur_(event)">blur</a></code>, é que esse ultimo não gera "borbulhas".</p>
+O evento `focusout` é acionado assim que o elemento perde o foco. A principal diferença entre esse evento e o evento [`blur`](</en-US/docs/Mozilla_event_reference/blur_(event)>), é que esse ultimo não gera "borbulhas".
 
-<h2 id="Informações_Gerais">Informações Gerais</h2>
+## Informações Gerais
 
-<dl>
- <dt style="float: left; text-align: right; width: 120px;">Especificação</dt>
- <dd style="margin: 0 0 0 120px;"><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusout">DOM L3</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">Interface</dt>
- <dd style="margin: 0 0 0 120px;">{{domxref("FocusEvent")}}</dd>
- <dt style="float: left; text-align: right; width: 120px;">Borbulha</dt>
- <dd style="margin: 0 0 0 120px;">Sim</dd>
- <dt style="float: left; text-align: right; width: 120px;">Cancelável</dt>
- <dd style="margin: 0 0 0 120px;">Não</dd>
- <dt style="float: left; text-align: right; width: 120px;">Alvo</dt>
- <dd style="margin: 0 0 0 120px;">Element</dd>
- <dt style="float: left; text-align: right; width: 120px;">Ação Padrão</dt>
- <dd style="margin: 0 0 0 120px;">Nenhuma.</dd>
-</dl>
+- Especificação
+  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusout)
+- Interface
+  - : {{domxref("FocusEvent")}}
+- Borbulha
+  - : Sim
+- Cancelável
+  - : Não
+- Alvo
+  - : Element
+- Ação Padrão
+  - : Nenhuma.
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>Event target losing focus.</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>The type of event.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event normally bubbles or not.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event is cancellable or not.</td>
-  </tr>
-  <tr>
-   <td><code>relatedTarget</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}} (DOM element)</td>
-   <td>Event target receiving focus.</td>
-  </tr>
- </tbody>
-</table>
+| Property                                 | Type                                               | Description                                |
+| ---------------------------------------- | -------------------------------------------------- | ------------------------------------------ |
+| `target` {{readonlyInline}}        | {{domxref("EventTarget")}}               | Event target losing focus.                 |
+| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                   | The type of event.                         |
+| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                       | Whether the event normally bubbles or not. |
+| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                       | Whether the event is cancellable or not.   |
+| `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM element) | Event target receiving focus.              |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.Element.focusout_event")}}
 
-<h2 id="Eventos_Relcionados">Eventos Relcionados</h2>
+## Eventos Relcionados
 
-<ul>
- <li>{{event("focus")}}</li>
- <li>{{event("blur")}}</li>
- <li>{{event("focusin")}}</li>
- <li>{{event("focusout")}}</li>
-</ul>
+- {{event("focus")}}
+- {{event("blur")}}
+- {{event("focusin")}}
+- {{event("focusout")}}

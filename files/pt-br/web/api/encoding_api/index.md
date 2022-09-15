@@ -3,53 +3,34 @@ title: Encoding API
 slug: Web/API/Encoding_API
 translation_of: Web/API/Encoding_API
 ---
-<p>{{DefaultAPISidebar("Encoding API")}}{{SeeCompatTable}}</p>
+{{DefaultAPISidebar("Encoding API")}}{{SeeCompatTable}}
 
-<p>O <strong>Encoding API</strong> providência uma mecânismo para tratar textos em vários tipos de {{Glossary("character encoding", "encode de caracteres")}}, incluindo encodes legados non-{{Glossary("UTF-8")}}</p>
+O **Encoding API** providência uma mecânismo para tratar textos em vários tipos de {{Glossary("character encoding", "encode de caracteres")}}, incluindo encodes legados non-{{Glossary("UTF-8")}}
 
-<p>A API provém de quatro interfaces: {{domxref("TextDecoder")}}, {{domxref("TextEncoder")}}, {{domxref("TextDecoderStream")}} e {{domxref("TextEncoderStream")}}.</p>
+A API provém de quatro interfaces: {{domxref("TextDecoder")}}, {{domxref("TextEncoder")}}, {{domxref("TextDecoderStream")}} e {{domxref("TextEncoderStream")}}.
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<div class="index">
-<ul>
- <li>{{DOMxRef("TextDecoder")}}</li>
- <li>{{DOMxRef("TextEncoder")}}</li>
- <li>{{DOMxRef("TextDecoderStream")}}</li>
- <li>{{DOMxRef("TextEncoderStream")}}</li>
-</ul>
-</div>
+- {{DOMxRef("TextDecoder")}}
+- {{DOMxRef("TextEncoder")}}
+- {{DOMxRef("TextDecoderStream")}}
+- {{DOMxRef("TextEncoderStream")}}
 
-<h2 id="Tutoriais_ferramentas">Tutoriais &amp; ferramentas</h2>
+## Tutoriais & ferramentas
 
-<ul>
- <li>O <a href="http://code.google.com/p/stringencoding/">shim</a> permite usar essa interface em navegadores que não a suportam.</li>
- <li><a href="/en-US/Add-ons/Code_snippets/StringView" title="/en-US/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code></a> – Um C-like reperesentação de strings baseados em arrays tipados</li>
-</ul>
+- O [shim](http://code.google.com/p/stringencoding/) permite usar essa interface em navegadores que não a suportam.
+- [`StringView`](/en-US/Add-ons/Code_snippets/StringView "/en-US/docs/Web/JavaScript/Typed_arrays/StringView") – Um C-like reperesentação de strings baseados em arrays tipados
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Encoding")}}</td>
-   <td>{{Spec2("Encoding")}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                    | Status                       | Comment            |
+| -------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName("Encoding")}} | {{Spec2("Encoding")}} | Definição inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+### `TextDecoder`
 
+{{Compat("api.TextDecoder")}}
 
-<h3 id="TextDecoder"><code>TextDecoder</code></h3>
+### `TextEncoder`
 
-<p>{{Compat("api.TextDecoder")}}</p>
-
-<h3 id="TextEncoder"><code>TextEncoder</code></h3>
-
-<p>{{Compat("api.TextEncoder")}}</p>
+{{Compat("api.TextEncoder")}}

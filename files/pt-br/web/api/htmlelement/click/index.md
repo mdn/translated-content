@@ -9,37 +9,24 @@ tags:
   - Reference
 translation_of: Web/API/HTMLElement/click
 ---
-<div>
-<div>{{ APIRef("HTML DOM") }}</div>
-</div>
+{{ APIRef("HTML DOM") }}
 
-<p>O método <code><strong>HTMLElement.click()</strong></code> simula o clique do mouse em um elemento.</p>
+O método **`HTMLElement.click()`** simula o clique do mouse em um elemento.
 
-<p>Quando clique é usado com elementos que o suportam (por exemplo, um dos {{HTMLElement ("input")}} tipos listados acima), ele também dispara evento de clique do elemento que vai propagar pelos elementos mais acima na árvore de documentos (ou cadeia do evento) e disparando seus eventos de clique também. No entanto, o evento de clique, propagado como bubble, não vai iniciar a navegação do elemento {{HTMLElement("a")}} como se uma verdadeiro clique do mouse tivesse sido recebido. </p>
+Quando clique é usado com elementos que o suportam (por exemplo, um dos {{HTMLElement ("input")}} tipos listados acima), ele também dispara evento de clique do elemento que vai propagar pelos elementos mais acima na árvore de documentos (ou cadeia do evento) e disparando seus eventos de clique também. No entanto, o evento de clique, propagado como bubble, não vai iniciar a navegação do elemento {{HTMLElement("a")}} como se uma verdadeiro clique do mouse tivesse sido recebido.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><em>elt</em>.click()</pre>
+```
+elt.click()
+```
 
-<h2 id="Especificação">Especificação</h2>
+## Especificação
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-2651361')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                    | Status                       | Comentário         |
+| ---------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('DOM2 HTML', 'html.html#ID-2651361')}} | {{Spec2('DOM2 HTML')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("api.HTMLElement.click")}}

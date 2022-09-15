@@ -5,6 +5,6 @@ translation_of: Web/API/DocumentOrShadowRoot/getSelection
 translation_of_original: Web/API/Document/getSelection
 original_slug: Web/API/DocumentOrShadowRoot/getSelection
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>Esse método funciona de forma idêntica ao método {{domxref("Window.getSelection()")}};  Ele retorna um objeto {{domxref("Selection")}} representando o texto atualmente selecionado no documento.</p>
+Esse método funciona de forma idêntica ao método {{domxref("Window.getSelection()")}}; Ele retorna um objeto {{domxref("Selection")}} representando o texto atualmente selecionado no documento.

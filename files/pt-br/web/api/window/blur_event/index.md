@@ -9,30 +9,31 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onblur
 original_slug: Web/API/GlobalEventHandlers/onblur
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>A propriedade <strong>onblur</strong> retorna o código que vai lidar com o evento onBlur, se houver, que existe no elemento atual.</p>
+A propriedade **onblur** retorna o código que vai lidar com o evento onBlur, se houver, que existe no elemento atual.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">element.onblur = function;
-</pre>
+```
+element.onblur = function;
+```
 
-<ul>
- <li><code>function</code> é o nome de uma função definida pelo usuário, sem o sufixo () ou qualquer parâmetro, ou uma declaração de função anônima, como por exemplo</li>
-</ul>
+- `function` é o nome de uma função definida pelo usuário, sem o sufixo () ou qualquer parâmetro, ou uma declaração de função anônima, como por exemplo
 
-<pre class="syntaxbox">element.onblur = function() { console.log("evento onblur detectado!"); };
-</pre>
+```
+element.onblur = function() { console.log("evento onblur detectado!"); };
+```
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: html">&lt;html&gt;
+```html
+<html>
 
-&lt;head&gt;
-&lt;title&gt;exemplo de evento onblur&lt;/title&gt;
+<head>
+<title>exemplo de evento onblur</title>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 var elem = null;
 
@@ -49,47 +50,36 @@ function doEvent()
   elem.value = 'Tchauzinho';
   console.log("Evento onblur detectado!")
 }
-&lt;/script&gt;
+</script>
 
-&lt;style type="text/css"&gt;
-&lt;!--
+<style type="text/css">
+<!--
 #foo {
 border: solid blue 2px;
 }
---&gt;
-&lt;/style&gt;
-&lt;/head&gt;
+-->
+</style>
+</head>
 
-&lt;body onload="initElement();"&gt;
-&lt;form&gt;
-&lt;input type="text" id="foo" value="Olá!" /&gt;
-&lt;/form&gt;
+<body onload="initElement();">
+<form>
+<input type="text" id="foo" value="Olá!" />
+</form>
 
-&lt;p&gt;Clique no elemento acima para dá-lo focus, depois clique fora do elemento.&lt;br /&gt; Recarregue a pagina através do NavBar.&lt;/p&gt;
+<p>Clique no elemento acima para dá-lo focus, depois clique fora do elemento.<br /> Recarregue a pagina através do NavBar.</p>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>O evento blur aparece quando um elemento perde o focus.</p>
+O evento blur aparece quando um elemento perde o focus.
 
-<p>Em contraste cp, MSIE--O qual faz quase todos os elementos receberem o evento blur--quase todos os elementos em navegadores baseados no Gecko NÃO funcionam com este evento.</p>
+Em contraste cp, MSIE--O qual faz quase todos os elementos receberem o evento blur--quase todos os elementos em navegadores baseados no Gecko NÃO funcionam com este evento.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onblur','onblur')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                | Status                           | Comentário |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG','webappapis.html#handler-onblur','onblur')}} | {{Spec2('HTML WHATWG')}} |            |

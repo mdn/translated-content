@@ -3,35 +3,36 @@ title: Option()
 slug: Web/API/HTMLOptionElement/Option
 translation_of: Web/API/HTMLOptionElement/Option
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>O construtor <strong><code>Option()</code></strong> cria novos {{domxref("HTMLOptionElement")}}.</p>
+O construtor **`Option()`** cria novos {{domxref("HTMLOptionElement")}}.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var <em>o</em><em>ptionElementReference</em> = new Option(<em>text</em>, <em>value</em>, <em>defaultSelected</em>, <em>selected</em>);</pre>
+```
+var optionElementReference = new Option(text, value, defaultSelected, selected);
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>text</code> {{optional_inline}}</dt>
- <dd>Um {{domxref("DOMString")}} representa o conteúdo do elemento, o texto mostrado na tela. Se  o texto não é especificado, o texto padrão "" (texto vazio) é  utilizado.</dd>
- <dt><code>value</code> {{optional_inline}}</dt>
- <dd>Um {{domxref("DOMString")}} representa o valor do {{domxref("HTMLOptionElement")}}, i.e. o valor do elemento {{htmlelement("option")}}. Se não especificado, o texto é usado como valor, e.g. o elemento {{htmlelement("select")}} tem seu valor associado quando o formulário é submetido ao servidor.</dd>
- <dt><code>defaultSelected</code> {{optional_inline}}</dt>
- <dd>Um {{domxref("Boolean")}} é usado para adicionar o atributo <strong>selected</strong>, para que este {{htmlelement("option")}} seja mostrado como selecionado no elemento {{htmlelement("select")}} quando a página for carregada. Se não especificado, o estado padrão é não selecionado. Observe que o <strong>defaultSelected = true</strong> não define a opção como o valor selecionado do elemento {{htmlelement("select")}}.</dd>
- <dt><code>selected</code> {{optional_inline}}</dt>
- <dd>Um {{domxref("Boolean")}} é usado para colocar elemento {{htmlelement("option")}} no estado de selecionado; como padrão do elemento tem o estado de não selecionado. Se omitido, mesmo que o parâmetro <strong>defaultSelected </strong>for verdadeiro, o elemento {{htmlelement("option")}} não é selecionado. </dd>
-</dl>
+- `text` {{optional_inline}}
+  - : Um {{domxref("DOMString")}} representa o conteúdo do elemento, o texto mostrado na tela. Se o texto não é especificado, o texto padrão "" (texto vazio) é utilizado.
+- `value` {{optional_inline}}
+  - : Um {{domxref("DOMString")}} representa o valor do {{domxref("HTMLOptionElement")}}, i.e. o valor do elemento {{htmlelement("option")}}. Se não especificado, o texto é usado como valor, e.g. o elemento {{htmlelement("select")}} tem seu valor associado quando o formulário é submetido ao servidor.
+- `defaultSelected` {{optional_inline}}
+  - : Um {{domxref("Boolean")}} é usado para adicionar o atributo **selected**, para que este {{htmlelement("option")}} seja mostrado como selecionado no elemento {{htmlelement("select")}} quando a página for carregada. Se não especificado, o estado padrão é não selecionado. Observe que o **defaultSelected = true** não define a opção como o valor selecionado do elemento {{htmlelement("select")}}.
+- `selected` {{optional_inline}}
+  - : Um {{domxref("Boolean")}} é usado para colocar elemento {{htmlelement("option")}} no estado de selecionado; como padrão do elemento tem o estado de não selecionado. Se omitido, mesmo que o parâmetro **defaultSelected** for verdadeiro, o elemento {{htmlelement("option")}} não é selecionado.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Adicionando_novas_tags_options">Adicionando novas tags options</h3>
+### Adicionando novas tags options
 
-<pre class="brush: js"> /* <code class="language-js">assumindo que temos este HTML</code>
-&lt;select id='s'&gt;
+```js
+ /* assumindo que temos este HTML
+<select id='s'>
 
-&lt;/select&gt;
+</select>
 */
 
 var s = document.getElementById('s');
@@ -41,28 +42,29 @@ options.forEach(function(elemento, chave) {
     s.appendChild(new Option(elemento, chave));
 });
 
- /* <code class="language-js">Resultado
-</code>&lt;select id='s'&gt;
-    &lt;option value="0"&gt;Quatro&lt;/option&gt;
-    &lt;option value="1"&gt;Cinco&lt;/option&gt;
-    &lt;option value="2"&gt;Seis&lt;/option&gt;
-&lt;/select&gt; */
-</pre>
+ /* Resultado
+<select id='s'>
+    <option value="0">Quatro</option>
+    <option value="1">Cinco</option>
+    <option value="2">Seis</option>
+</select> */
+```
 
-<h3 id="Adicionando_options_com_diferentes_parâmetros">Adicionando options com diferentes parâmetros</h3>
+### Adicionando options com diferentes parâmetros
 
-<pre class="brush: js"><code class="language-js">/* assumindo que temos este HTML
-&lt;select id="s"&gt;
-    &lt;option&gt;Primeiro&lt;/option&gt;
-    &lt;option&gt;Segundo&lt;/option&gt;
-    &lt;option&gt;Terceiro&lt;/option&gt;
-&lt;/select&gt;
+```js
+/* assumindo que temos este HTML
+<select id="s">
+    <option>Primeiro</option>
+    <option>Segundo</option>
+    <option>Terceiro</option>
+</select>
 */
 
 var s = document.getElementById('s');
-</code>var options = [ 'zero', 'um', 'dois' ];<code class="language-js">
+var options = [ 'zero', 'um', 'dois' ];
 
-options.forEach(function(elemento, chave) {</code>
+options.forEach(function(elemento, chave) {
   if (elemento == 'zero') {
     s[s.options.length] = new Option(elemento, s.options.length, false, false);
   }
@@ -72,30 +74,19 @@ options.forEach(function(elemento, chave) {</code>
   if (elemento == 'dois') {
     s[s.options.length] = new Option(elemento, s.options.length, false, true); // Apenas irá selecionar a opção na visualização
   }
-<code class="language-js">});
+});
 
 /* Resultado
-&lt;select id="s"&gt;
-  &lt;option value="0"&gt;zero&lt;/option&gt;
-  &lt;option value="1" selected=""&gt;um&lt;/option&gt;
-  &lt;option value="2"&gt;dois&lt;/option&gt; // O usuário verá esta opção selecionada
-&lt;/select&gt;
-</code>*/</pre>
+<select id="s">
+  <option value="0">zero</option>
+  <option value="1" selected="">um</option>
+  <option value="2">dois</option> // O usuário verá esta opção selecionada
+</select>
+*/
+```
 
-<h2 id="Especificação">Especificação</h2>
+## Especificação
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td><a class="external external-icon" href="http://www.w3.org/TR/2012/WD-html5-20121025/the-option-element.html#dom-option" hreflang="en" lang="en">HTML5<br>
-    <small lang="en-US">The definition of 'Option' in that specification.</small></a></td>
-   <td>Recomendado</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                             | Status      | Comentário |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
+| [HTML5 The definition of 'Option' in that specification.](http://www.w3.org/TR/2012/WD-html5-20121025/the-option-element.html#dom-option) | Recomendado |            |
