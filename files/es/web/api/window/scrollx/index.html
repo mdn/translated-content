@@ -11,7 +11,7 @@ translation_of: Web/API/Window/scrollX
 
 <h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-<pre class="syntaxbox">var x = window.scrollX;</pre>
+<pre class="js">var x = window.scrollX;</pre>
 
 <h3 id="Parameters" name="Parameters">Parámetros</h3>
 
@@ -21,7 +21,7 @@ translation_of: Web/API/Window/scrollX
 
 <h2 id="Example" name="Example">Ejemplo</h2>
 
-<pre class="brush:js">// Si scrollX es mayor que 400, reinicia la posición de desplazxamiento al inicio supuerior-izquierdo del documento.
+<pre class="js">// Si scrollX es mayor que 400, reinicia la posición de desplazxamiento al inicio supuerior-izquierdo del documento.
 if (window.scrollX &gt; 400) {
   window.scroll(0,0);
 }</pre>
@@ -30,11 +30,11 @@ if (window.scrollX &gt; 400) {
 
 <p><span style="line-height: 1.572;">La propiedad </span><code style="font-size: 14px;">pageXOffset</code><span style="line-height: 1.572;"> es un alias de la propiedad </span><code style="font-size: 14px;">scrollX</code><span style="line-height: 1.572;">:</span></p>
 
-<pre>window.pageXOffset == window.scrollX; // siempre true</pre>
+<pre class="js">window.pageXOffset == window.scrollX; // siempre true</pre>
 
 <p>Para compatibilidad cruzada entre navegadores, use <code>window.pageXOffset</code> en lugar de <code>window.scrollX</code>. <strong>Adicionalmente</strong>, versiones más antiguas de Internet Explorer (&lt; 9) no soportan ninguna de las dos propiedades y deben ser sorteadas examinando otras propiedade no estandar. Un ejemplo totalmente compatible:</p>
 
-<pre class="brush:js">var x = (window.pageXOffset !== undefined)
+<pre class="js">var x = (window.pageXOffset !== undefined)
   ? window.pageXOffset
   : (document.documentElement || document.body.parentNode || document.body).scrollLeft;
 

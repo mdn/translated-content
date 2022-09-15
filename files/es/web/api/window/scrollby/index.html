@@ -18,7 +18,7 @@ translation_of: Web/API/Window/scrollBy
 
 <h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-<pre>window.scrollBy(<em>X</em>, <em>Y</em>);
+<pre class="js">window.scrollBy(<em>X</em>, <em>Y</em>);
 window.scrollBy(opciones)</pre>
 
 <h3 id="Parameters" name="Parameters">Parámetros</h3>
@@ -45,17 +45,17 @@ window.scrollBy(opciones)</pre>
 
 <h2 id="Example" name="Example">Ejemplo</h2>
 
-<pre class="eval">// Desplazarse la longitud de una página
+<pre class="js">// Desplazarse la longitud de una página
 window.scrollBy(0, window.innerHeight);
 </pre>
 
 <p>Para hacer scroll hacia arriba:</p>
 
-<pre>window.scrollBy(0, -window.innerHeight);</pre>
+<pre class="js">window.scrollBy(0, -window.innerHeight);</pre>
 
 <p>Utilizando <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">opciones</span></font>:</p>
 
-<pre>window.scrollBy({
+<pre class="js">window.scrollBy({
   top: 100,
   left: 100,
   behaviour: 'smooth'

@@ -8,13 +8,15 @@ tags:
   - Window
 translation_of: Web/API/Window/innerHeight
 ---
-<div><strong><em>//Propiedad solo lectura del objeto window.</em></strong></div>
+{{APIRef}}
+
+<p>Propiedad solo lectura del objeto window.</p>
 
 <p>    Representa la altura (en pixeles) del viewport</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate">var <em>alturaDelViewport</em> = window.innerHeight;</pre>
+<pre class="js notranslate">var <em>alturaDelViewport</em> = window.innerHeight;</pre>
 
 <h3 id="Valor">Valor</h3>
 
@@ -22,7 +24,7 @@ translation_of: Web/API/Window/innerHeight
 
 <p>La propiedad <code>window.innerHeight</code> es solo de lectura; Y no tiene un valor por defecto.</p>
 
-<h2 id="Notas_."><span style="">Notas .                           </span></h2>
+<h2 id="Notas_."><span style="">Notas</span></h2>
 
 <p><span style="">La propiedad innerHeight es soportada por cualquier objeto de ventana. Pudiendo ejectutarse en un conjunto de marcos  (&lt;frameset&gt; &lt;/frameset&gt;). O en una ventana secundaria.</span></p>
 
@@ -32,7 +34,7 @@ translation_of: Web/API/Window/innerHeight
 
 <h3 id="Asumiendo_un_frameset">Asumiendo un frameset</h3>
 
-<pre class="brush:js notranslate">var alturaViewport = window.innerHeight;
+<pre class="js notranslate">var alturaViewport = window.innerHeight;
 
 var alturaViewport = self.innerHeight;
 // self es window
@@ -40,7 +42,7 @@ var alturaViewport = self.innerHeight;
 
 </pre>
 
-<p> <span class="seoSummary"> <strong>//otra forma de obtener la altura (aúnque, no del         viewport, síno de la ventana), es usando  la propiedad outerHeight, del objeto window.</strong></span></p>
+<p> <span class="seoSummary"> <strong>otra forma de obtener la altura (aúnque, no del         viewport, síno de la ventana), es usando  la propiedad outerHeight, del objeto window.</strong></span></p>
 
 <h3 id="Ejemplo_Grafica"><span style="">Ejemplo (Grafica)</span></h3>
 

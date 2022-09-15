@@ -6,15 +6,17 @@ tags:
 translation_of: Web/API/Window/load_event
 original_slug: Web/Events/load
 ---
+<p>{{ APIRef }}</p>
+
 <p>El evento <code>load</code> se dispara cuando un recurso y sus recursos dependientes han terminado de cargar.</p>
 
 <p> </p>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
-<h3 class="brush: html" id="Window">Window</h3>
+<h3 id="Window">Window</h3>
 
-<pre class="brush: html">&lt;script&gt;
+<pre class="html">&lt;script&gt;
   window.addEventListener("load", function(event) {
     console.log("'Todos los recursos terminaron de cargar!");
   });
@@ -22,7 +24,7 @@ original_slug: Web/Events/load
 
 <h3 id="Elemento_script">Elemento <code>script</code></h3>
 
-<pre class="brush: html">&lt;script&gt;
+<pre class="html">&lt;script&gt;
   var script = document.createElement("script");
   script.addEventListener("load", function(event) {
     console.log("Script terminó de cargarse y ejecutarse");

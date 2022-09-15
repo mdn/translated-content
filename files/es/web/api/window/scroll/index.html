@@ -14,7 +14,7 @@ translation_of: Web/API/Window/scroll
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox">window.scroll(<em>x-coord</em>, <em>y-coord</em>)
+<pre class="js">window.scroll(<em>x-coord</em>, <em>y-coord</em>)
 window.scroll(<em>options</em>)
 </pre>
 
@@ -33,14 +33,14 @@ window.scroll(<em>options</em>)
 
 <h2 id="Ejemplo">Ejemplo</h2>
 
-<pre class="brush:html;htmlScript:true;">&lt;!-- poner el pixel 100º verticalmente en el tope superior de la ventana --&gt;
+<pre class="html">&lt;!-- poner el pixel 100º verticalmente en el tope superior de la ventana --&gt;
 
 &lt;button onClick="scroll(0, 100);"&gt;Clic para desplazarse hacia abajo 100 pixeles&lt;/button&gt;
 </pre>
 
 <p>Utilizando <code>options</code>:</p>
 
-<pre class="brush: js">window.scroll({
+<pre class="js">window.scroll({
   top: 100,
   left: 100,
   behavior: 'smooth'

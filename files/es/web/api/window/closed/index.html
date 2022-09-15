@@ -17,7 +17,7 @@ translation_of: Web/API/Window/closed
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>isClosed</var> = <var>windowRef</var>.closed;
+<pre class="js"><var>isClosed</var> = <var>windowRef</var>.closed;
 </pre>
 
 <dl>
@@ -36,7 +36,7 @@ translation_of: Web/API/Window/closed
 
 <p>El siguiente ejemplo demuestra cómo una ventana emergente puede cambiar la URL de la ventana que la abrió. Antes de intentar cambiar la URL, verifica que la ventana actual tiene referencia a la ventana que la abrió usando la propiedad <a href="/en-US/docs/DOM/window.opener">window.opener</a> y que esa ventana no está cerrada:</p>
 
-<pre class="brush:js">// Verifica que <em>opener</em> existe y no esté cerrado
+<pre class="js">// Verifica que <em>opener</em> existe y no esté cerrado
 if (window.opener &amp;&amp; !window.opener.closed) {
   window.opener.location.href = "http://www.mozilla.org";
 }</pre>
@@ -47,7 +47,7 @@ if (window.opener &amp;&amp; !window.opener.closed) {
 
 <p>En este ejemplo la función <code>refreshPopupWindow()</code> llama al método <code>reload</code> del objeto location de la ventana emergente para actualizar su información. Si la ventana emergente no ha sido abierta o el usuario la cerró una nueva ventana es abierta.</p>
 
-<pre class="brush:js">var popupWindow = null;
+<pre class="js">var popupWindow = null;
 
 function refreshPopupWindow() {
   if (popupWindow &amp;&amp; !popupWindow.closed) {

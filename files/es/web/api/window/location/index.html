@@ -15,7 +15,7 @@ translation_of: Web/API/Window/location
 
 <h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-<pre class="syntaxbox">var <em>oldLocation</em> = location;
+<pre class="js">var <em>oldLocation</em> = location;
 location = <em>newLocation</em>;
 </pre>
 
@@ -23,25 +23,25 @@ location = <em>newLocation</em>;
 
 <h3 id="Ejemplo_básico">Ejemplo básico</h3>
 
-<pre class="brush: js">alert(location); // alerts "https://developer.mozilla.org/en-US/docs/Web/API/Window.location"</pre>
+<pre class="js">alert(location); // alerts "https://developer.mozilla.org/en-US/docs/Web/API/Window.location"</pre>
 
 <h3 id="Ejemplo_1_Navegar_a_una_nueva_página">Ejemplo #1: Navegar a una nueva página</h3>
 
 <p>Cuando un nuevo valor es asignado a un objeto location, un documento será cargado usando la URL como si location.assing() fuera llamada con la URL modificada. Note que configuraciones de seguridad como CORS, esto puede ser prevenido cuando pase.</p>
 
-<pre class="brush: js">location.assign("http://www.mozilla.org"); // o
+<pre class="js">location.assign("http://www.mozilla.org"); // o
 location = "http://www.mozilla.org";
 </pre>
 
 <h3 id="Ejemplo_2_Forzar_la_recarga_de_una_página_desde_el_servidor">Ejemplo #2: Forzar la recarga de una página desde el servidor</h3>
 
-<pre class="brush: js">location.reload(true);</pre>
+<pre class="js">location.reload(true);</pre>
 
 <h3 id="Ejemplo_3">Ejemplo #3</h3>
 
 <p>Considerando el siguiente ejemplo, el cual recargará la página usando el método <a href="/en-US/docs/Web/API/Location.replace"><code>replace()</code></a> para insertar un valor de location.pathname dentro del hash:</p>
 
-<pre class="brush: js">function reloadPageWithHash() {
+<pre class="js">function reloadPageWithHash() {
   var initialPage = location.pathname;
   location.replace('http://example.com/#' + initialPage);
 }
@@ -51,7 +51,7 @@ location = "http://www.mozilla.org";
 
 <h3 id="Ejemplo_4_Muestra_las_propiedades_de_la_URL_actual_en_una_ventana_emergente">Ejemplo #4: Muestra las propiedades de la URL actual en una ventana emergente:</h3>
 
-<pre class="brush: js">function showLoc() {
+<pre class="js">function showLoc() {
   var oLocation = location, aLog = ["Property (Typeof): Value", "location (" + (typeof oLocation) + "): " + oLocation ];
   for (var sProp in oLocation){
     aLog.push(sProp + " (" + (typeof oLocation[sProp]) + "): " +  (oLocation[sProp] || "n/a"));
@@ -64,7 +64,7 @@ location = "http://www.mozilla.org";
 
 <h3 id="Ejemplo_5_Enviar_una_cadena_de_caracteres_de_datos_al_servidor_por_modificar_la_propiedad_search">Ejemplo #5: Enviar una cadena de caracteres de datos al servidor por modificar la propiedad <code>search</code>:</h3>
 
-<pre class="brush: js">function sendData (sData) {
+<pre class="js">function sendData (sData) {
   location.search = sData;
 }
 
@@ -75,7 +75,7 @@ location = "http://www.mozilla.org";
 
 <h3 id="Ejemplo_6_Usando_marcadores_sin_cambiar_la_propiedad_hash">Ejemplo #6: Usando marcadores sin cambiar la propiedad hash:</h3>
 
-<pre class="brush: html">&lt;!doctype html&gt;
+<pre class="html">&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;meta charset="UTF-8"/&gt;
@@ -135,7 +135,7 @@ span.intLink {
 
 <p>…De igual manera pero con un scroll animado:</p>
 
-<pre class="brush: js">var showBookmark = (function () {
+<pre class="js">var showBookmark = (function () {
   var  _useHash, _scrollX, _scrollY, _nodeX, _nodeY, _itFrame, _scrollId = -1, _bookMark,
        /*
        * nDuration: the duration in milliseconds of each frame

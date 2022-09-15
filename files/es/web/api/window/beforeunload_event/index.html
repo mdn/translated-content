@@ -4,14 +4,16 @@ slug: Web/API/Window/beforeunload_event
 translation_of: Web/API/Window/beforeunload_event
 original_slug: Web/Events/beforeunload
 ---
-<div>El evento <strong>beforeunload</strong> es disparado cuando la ventana, el documento y sus recursos estan a punto de ser descargados. El documento todavia es visible y el evento todavia es cancelable en este punto.</div>
+{{APIRef}}
+
+<p>El evento <strong>beforeunload</strong> es disparado cuando la ventana, el documento y sus recursos estan a punto de ser descargados. El documento todavia es visible y el evento todavia es cancelable en este punto.</p>
 
 <div> </div>
 
 <p>Si es asignado un string a la propiedad del objeto Evento returnValue, una caja de dialogo aparece, preguntando al usuario que confirme que dejara la pagina(mirar el ejemplo de abajo).  Algunos navegadores muestran el string devuelto en una caja de dialogos, otros muestran un mensaje fijo. Si no se provee ningun valor, el evento procede silenciosamente.</p>
 
 <div class="note">
-<p><strong>Nota:</strong>Para combatir pop-ups indeseados, los navegadores pueden no mostrar mensajes creados en manejadores del evento beforeunload a menos que se haya interactuado con la pagina, o incluso sin que se haya interactuado en nada con esta.</p>
+<p><strong>Nota:</strong> Para combatir pop-ups indeseados, los navegadores pueden no mostrar mensajes creados en manejadores del evento beforeunload a menos que se haya interactuado con la pagina, o incluso sin que se haya interactuado en nada con esta.</p>
 </div>
 
 <table class="properties">
@@ -76,7 +78,7 @@ original_slug: Web/Events/beforeunload
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
-<pre class="brush:js;">window.addEventListener("beforeunload", function (event) {
+<pre class="js;">window.addEventListener("beforeunload", function (event) {
   event.returnValue = "\o/";
 });
 
@@ -87,7 +89,7 @@ window.addEventListener("beforeunload", function (event) {
 
 <p>Navegadores basados en WebKit no siguen las especificaciones para la caja de dialogos. Un ejemplo que funcione con distintos navegadores seria similar al siguiente:</p>
 
-<pre class="brush: js">window.addEventListener("beforeunload", function (e) {
+<pre class="js">window.addEventListener("beforeunload", function (e) {
   var confirmationMessage = "\o/";
 
   e.returnValue = confirmationMessage;     // Gecko, Trident, Chrome 34+

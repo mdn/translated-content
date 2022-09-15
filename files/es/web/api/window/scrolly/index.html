@@ -16,7 +16,7 @@ translation_of: Web/API/Window/scrollY
 
 <h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-<pre class="syntaxbox">var y = window.scrollY;</pre>
+<pre class="js">var y = window.scrollY;</pre>
 
 <ul>
  <li>y es el número de píxeles que se han desplazado actualmente desde el extremo superior de la página.</li>
@@ -24,7 +24,7 @@ translation_of: Web/API/Window/scrollY
 
 <h2 id="Example" name="Example">Ejemplo</h2>
 
-<pre class="brush:js">// Asegurate de bajar a la segunda página
+<pre class="js">// Asegurate de bajar a la segunda página
 if (window.scrollY) {
   window.scroll(0, 0);  // Restablece la posición de desplazamiento en la parte superior izquierda del documento
 }
@@ -37,11 +37,11 @@ window.scrollByPages(1);</pre>
 
 <p>La propiedad <code>pageYOffset</code> es un alias para la propiedad <code>scrollY</code>:</p>
 
-<pre>window.pageYOffset == window.scrollY; // Siempre verdadero</pre>
+<pre class="js">window.pageYOffset == window.scrollY; // Siempre verdadero</pre>
 
 <p>Para compatibilidad entre navegadores, es recomendable usar window.pageYOffset en vez de window.scrollY. <strong>Adicionalmente</strong>, tener en cuenta que versiones más viejas de Internet Explorer (&lt;9) no soportan del todo la propiedad y debe ser solucionado usando propiedades no estandarizadas . Un ejemplo totalmente compatible entre navegadores:</p>
 
-<pre class="brush:js">var supportPageOffset = window.pageXOffset !== undefined;
+<pre class="js">var supportPageOffset = window.pageXOffset !== undefined;
 var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
 
 var x = supportPageOffset ? window.pageXOffset : isCSS1Compat ? document.documentElement.scrollLeft : document.body.scrollLeft;
