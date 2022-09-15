@@ -8,7 +8,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/hidden
 original_slug: Web/HTML/Atributos_Globales/hidden
 ---
-> **Nota:** {{HTMLSidebar("Global_attributes")}}
+{{HTMLSidebar("Global_attributes")}}
 
 El [atributo global](/es/docs/Web/HTML/Atributos_Globales/) **hidden** es un atributo Booleano que indica que el elemento todavía no está , o ya no es relevante . Por ejemplo , puede ser usado para ocultar elelementos de la página que no pueden ser usados hasta que el proceso de login se haya completado . El explorador no dibujará dichos elementos .
 

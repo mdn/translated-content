@@ -8,7 +8,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/title
 original_slug: Web/HTML/Atributos_Globales/title
 ---
-> **Nota:** {{HTMLSidebar("Global_attributes")}}
+{{HTMLSidebar("Global_attributes")}}
 
 El [atributo global ](/es/docs/Web/HTML/Atributos_Globales)**title** contiene un texto representado información relacionada al elemento al cual pertenece . Tal información puede típicamente , pero no necesariamente , ser presentada al usuario como un tip . Aquí hay algunos usos típicos para este atributo :
 

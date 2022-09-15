@@ -26,28 +26,33 @@ Además de los atributos globales HTML básicos, también existen los siguientes
 - **`{{web.link("/es/docs/Web/HTML/Global_attributes/accesskey", "accesskey")}}`**
   - : Proporciona una pista para generar un atajo de teclado para el elemento actual. Este atributo consta de una lista de caracteres separados por espacios. El navegador debe utilizar el primero que exista en la distribución del teclado del ordenador.
 - **`{{web.link("/es/docs/Web/HTML/Global_attributes/autocapitalize", "autocapitalize")}}`**
-  - : Controla si la entrada de texto se pone en mayúsculas automáticamente a medida que el usuario la introduce o edita. Puede tener los siguientes valores:\* `off` o `none`, no se aplica capitalización automática (todas las letras están predeterminadas en minúsculas)
+  - : Controla si la entrada de texto se pone en mayúsculas automáticamente a medida que el usuario la introduce o edita. Puede tener los siguientes valores:
+    - `off` o `none`, no se aplica capitalización automática (todas las letras están predeterminadas en minúsculas)
     - `on` o `sentences`, la primera letra de cada oración de manera predeterminada tiene una letra mayúscula; todas las demás letras están predeterminadas en minúsculas
     - `words`, la primera letra de cada palabra de manera predeterminada tiene una letra mayúscula; todas las demás letras están predeterminadas en minúsculas
     - `characters`, todas las letras de manera predeterminada deben estar en mayúsculas
 - **`{{web.link("/es/docs/Web/HTML/Global_attributes/class", "class")}}`**
   - : Una lista separada por espacios de las clases del elemento. Las clases permiten que CSS y JavaScript seleccionen y accedan a elementos específicos a través de los {{web.link("/es/docs/Web/CSS/Class_selectors", "selectores de clase")}} o funciones como el método {{DOMxRef("document.getElementsByClassName()")}}.
 - **`{{web.link("/es/docs/Web/HTML/Global_attributes/contenteditable", "contenteditable")}}`**
-  - : Un atributo enumerado que indica si el usuario debe poder editar el elemento. Si es así, el navegador modifica su «_widget_» para permitir la edición. El atributo debe tomar uno de los siguientes valores:\* `true` o la _cadena vacía_, la cual indica que el elemento debe ser editable;
+  - : Un atributo enumerado que indica si el usuario debe poder editar el elemento. Si es así, el navegador modifica su «_widget_» para permitir la edición. El atributo debe tomar uno de los siguientes valores:
+    - `true` o la _cadena vacía_, la cual indica que el elemento debe ser editable;
     - `false`, el cual indica que el elemento no debe ser editable.
 - **`{{web.link("/es/docs/Web/HTML/Global_attributes/contextmenu", "contextmenu")}}`** {{Obsolete_Inline}}
   - : El [id](#attr-id) de un {{HTMLElement ("menu")}} para usar como el menú contextual para este elemento.
 - **`{{web.link("/es/docs/Web/HTML/Global_attributes/data-*", "data-*")}}`**
   - : Forma una clase de atributos, denominados atributos de datos personalizados, que permiten el intercambio de información de propiedad entre el {{web.link("/es/docs/Web/HTML", "HTML")}} y su representación {{Glossary("DOM")}} que pueden utilizar los scripts. Todos estos datos personalizados están disponibles a través de la interfaz {{DOMxRef("HTMLElement")}} del elemento en el que está configurado el atributo. La propiedad {{DOMxRef("HTMLElement.dataset")}} les da acceso.
 - **`{{web.link("/es/docs/Web/HTML/Global_attributes/dir", "dir")}}`**
-  - : Un atributo enumerado que indica la direccionalidad del texto del elemento. Puede tener los siguientes valores:\* `ltr`, que significa _de izquierda a derecha_ y s debe usar para idiomas que se escriben de izquierda a derecha (tal como el Español);
+  - : Un atributo enumerado que indica la direccionalidad del texto del elemento. Puede tener los siguientes valores:
+    - `ltr`, que significa _de izquierda a derecha_ y s debe usar para idiomas que se escriben de izquierda a derecha (tal como el Español);
     - `rtl`, que significa _de derecha a izquierda_ y se utiliza para idiomas que se escriben de derecha a izquierda (tal como el Árabe);
     - `auto`, permite que el agente de usuario decida. Utiliza un algoritmo básico ya que analiza los caracteres dentro del elemento hasta que encuentra un carácter con una direccionalidad fuerte, luego aplica esa direccionalidad a todo el elemento.
 - **`{{web.link("/es/docs/Web/HTML/Global_attributes/draggable", "draggable")}}`**
-  - : Un atributo enumerado que indica si el elemento se puede arrastrar mediante la {{web.link("/es/docs/DragDrop/Drag_and_Drop", "API de arrastrar y soltar")}}. Puede tener los siguientes valores:\* `true`, indica que el elemento se puede arrastrar
+  - : Un atributo enumerado que indica si el elemento se puede arrastrar mediante la {{web.link("/es/docs/DragDrop/Drag_and_Drop", "API de arrastrar y soltar")}}. Puede tener los siguientes valores:
+    - `true`, indica que el elemento se puede arrastrar
     - `false`, indica que el elemento **no** se puede arrastrar.
 - **`{{web.link("/es/docs/Web/HTML/Global_attributes/dropzone", "dropzone")}}`** {{deprecated_inline}}
-  - : Un atributo enumerado que indica qué tipos de contenido se pueden colocar en un elemento, utilizando la {{web.link("/es/docs/DragDrop/Drag_and_Drop", "API de arrastrar y soltar")}}. Puede tener los siguientes valores:\* `copy`, indica que soltar creará una copia del elemento que se arrastró
+  - : Un atributo enumerado que indica qué tipos de contenido se pueden colocar en un elemento, utilizando la {{web.link("/es/docs/DragDrop/Drag_and_Drop", "API de arrastrar y soltar")}}. Puede tener los siguientes valores:
+    -`copy`, indica que soltar creará una copia del elemento que se arrastró
     - `move`, indica que el elemento que se arrastró se moverá a esta nueva ubicación.
     - `link`, creará un enlace a los datos arrastrados.
 - **`{{web.link("/es/docs/Web/HTML/Global_attributes/exportparts", "exportparts")}}`** {{Experimental_Inline}}
@@ -80,18 +85,21 @@ Además de los atributos globales HTML básicos, también existen los siguientes
 - **`{{web.link("/es/docs/Web/HTML/Global_attributes/slot", "slot")}}`**
   - : Asigna un espacio en la sombra de un árbol {{web.link("/es/docs/Web/Web_Components/Shadow_DOM", "DOM de sombra")}} a un elemento: Un elemento con un atributo `slot` es asignado al espacio creado por el elemento {{HTMLElement("slot")}} cuyo valor del atributo {{HTMLAttrxRef("name", "slot")}} coincide con el valor del atributo `slot`.
 - **`{{web.link("/es/docs/Web/HTML/Global_attributes/spellcheck", "spellcheck")}}`**
-  - : Un atributo enumerado define si se puede verificar el elemento para detectar errores ortográficos. Puede tener los siguientes valores:\* `true`, el cual indica que, si es posible, el elemento se debe revisar para detectar errores ortográficos;
+  - : Un atributo enumerado define si se puede verificar el elemento para detectar errores ortográficos. Puede tener los siguientes valores:
+    - `true`, el cual indica que, si es posible, el elemento se debe revisar para detectar errores ortográficos;
     - `false`, indica que el elemento **no** se debe revisar para detectar errores ortográficos.
 - **`{{web.link("/es/docs/Web/HTML/Global_attributes/style", "style")}}`**
   - : Contiene declaraciones de estilo {{web.link("/en-US/docs/Web/CSS", "CSS")}} que se aplicarán al elemento. Ten en cuenta que se recomienda que los estilos se definan en un archivo o archivos separados. Este atributo y el elemento {{HTMLElement("style")}} principalmente tienen el propósito de permitir un estilo rápido, por ejemplo, con fines de prueba.
 - **`{{web.link("/es/docs/Web/HTML/Global_attributes/tabindex", "tabindex")}}`**
-  - : Un atributo entero que indica si el elemento puede tomar el foco de entrada (es _enfocable_), si debe participar en la navegación secuencial del teclado y, de ser así, en qué posición. Puede tomar varios valores:\* un _valor negativo_ significa que el elemento se debe poder enfocar, pero no debe ser accesible mediante la navegación secuencial del teclado;
+  - : Un atributo entero que indica si el elemento puede tomar el foco de entrada (es _enfocable_), si debe participar en la navegación secuencial del teclado y, de ser así, en qué posición. Puede tomar varios valores:
+    - un _valor negativo_ significa que el elemento se debe poder enfocar, pero no debe ser accesible mediante la navegación secuencial del teclado;
     - `0` significa que el elemento se debe poder enfocar y ser accesible a través de la navegación secuencial del teclado, pero su orden relativo está definido por la convención de la plataforma;
     - un _valor positivo_ significa que el elemento se debe poder enfocar y ser accesible mediante la navegación secuencial del teclado; el orden en el que se enfocan los elementos es el valor creciente del [tabindex](#attr-tabindex). Si varios elementos comparten el mismo `tabindex`, su orden relativo sigue sus posiciones relativas en el documento.
 - **`{{web.link("/es/docs/Web/HTML/Global_attributes/title", "title")}}`**
   - : Contiene un texto que representa información de advertencia relacionada con el elemento al que pertenece. Normalmente, pero no necesariamente, dicha información se puede presentar al usuario como información sobre herramientas.
 - **`{{web.link("/es/docs/Web/HTML/Global_attributes/translate", "translate")}}`** {{Experimental_Inline}}
-  - : Un atributo enumerado que se utiliza para especificar si los valores de atributo de un elemento y los valores de sus hijos de nodo {{DOMxRef("Text")}} se deben traducir cuando la página está localizada, o si se deben dejar sin cambios. Puede tener los siguientes valores:\* la cadena vacía y `yes`, indican que el elemento se traducirá.
+  - : Un atributo enumerado que se utiliza para especificar si los valores de atributo de un elemento y los valores de sus hijos de nodo {{DOMxRef("Text")}} se deben traducir cuando la página está localizada, o si se deben dejar sin cambios. Puede tener los siguientes valores:
+    - la cadena vacía y `yes`, indican que el elemento se traducirá.
     - `no`, lo cual indica que el elemento **no** se traducirá.
 
 ## Especificaciones

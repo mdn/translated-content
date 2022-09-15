@@ -115,13 +115,9 @@ Directions: <br>
 </div>
 ```
 
-### Resultados
-
-#### HTML
-
 Los siguientes son un ejemplo renderizado resultado del codigo del anterior ejemplo.
 
-{{EmbedLiveSample('Example', '500', '550', '', 'Web/HTML/Global_attributes/itemscope')}}
+{{EmbedLiveSample('', '500', '550')}}
 
 #### Structured data
 

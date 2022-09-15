@@ -8,7 +8,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/style
 original_slug: Web/HTML/Atributos_Globales/style
 ---
-> **Nota:** {{HTMLSidebar("Global_attributes")}}
+{{HTMLSidebar("Global_attributes")}}
 
 El [atributo global ](/es/docs/Web/HTML/Atributos_Globales)**style** contiene declaraciones de estilo [CSS](/es/docs/Web/CSS) a ser aplicados a un elemento . Notar que es recomandado para los estilos ser definidos en archivo o archivos separados . Este atributo y el elemento {{ HTMLElement("style") }} tienen principalmente el propósito de permitir el estilizamiento rápido , por ejemplo para propósitos de pruebas .
 

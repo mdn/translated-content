@@ -6,7 +6,7 @@ original_slug: Web/HTML/Atributos_Globales/x-ms-acceleratorkey
 ---
 {{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}
 
-La **`x-ms-acceleratorkey`**propiedad proporciona una forma de declarar que una tecla de aceleración se ha asignado a un elemento.
+La **`x-ms-acceleratorkey`** propiedad proporciona una forma de declarar que una tecla de aceleración se ha asignado a un elemento.
 
 Esta propiedad propietaria es específica de Internet Explorer y Microsoft Edge.
 

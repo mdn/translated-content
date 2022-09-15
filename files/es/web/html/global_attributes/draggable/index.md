@@ -10,7 +10,7 @@ translation_of: Web/HTML/Global_attributes/draggable
 original_slug: Web/HTML/Atributos_Globales/draggable
 browser-compat: html.global_elements.draggable
 ---
-> **Nota:** {{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
+{{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
 
 El [atributo global ](/es/docs/Web/HTML/Atributos_Globales)draggable es un atributo enumerado que indica si el elemento puede ser arrastrado , usando el {{domxref("HTML_Drag_and_Drop_API","HTML Drag and Drop API")}} . Puede tener los siguientes valores :
 

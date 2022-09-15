@@ -9,7 +9,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/spellcheck
 original_slug: Web/HTML/Atributos_Globales/spellcheck
 ---
-> **Nota:** {{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
+{{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
 
 El [atributo global ](/es/docs/Web/HTML/Atributos_Globales)**spellcheck** es un atributo enumerado que define si el elemento debe de ser verificado por errores de deletreado. Puede tener los siguientes valores :
 

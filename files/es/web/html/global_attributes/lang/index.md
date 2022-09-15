@@ -8,7 +8,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/lang
 original_slug: Web/HTML/Atributos_Globales/lang
 ---
-> **Nota:** {{HTMLSidebar("Global_attributes")}}
+{{HTMLSidebar("Global_attributes")}}
 
 El [atributo global ](/es/docs/Web/HTML/Atributos_Globales)**lang** participa en la definición del lenguaje del elemento , el lenguaje en que están escritos los elementos no editables o el lenguaje en el cual los elementos editables deberían de estar escritos . La etiqueta contiene un valor sencillo de entrada en el formato que define el documento [tags para identificar lenguajes ](http://www.ietf.org/rfc/bcp/bcp47.txt)_[](http://www.ietf.org/rfc/bcp/bcp47.txt)(BCP47)_ de la IETF . Si el contenido de la etiqueta es la _cadena vacía_ , el lenguaje se establece como _desconocido_ , si el contenido de la etiqueta no es válido respecto al documento BCP47 , se establece como _inválido ._
 
