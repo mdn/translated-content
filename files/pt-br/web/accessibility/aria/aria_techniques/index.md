@@ -10,185 +10,163 @@ tags:
   - Visão Geral
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques
 ---
-<p>O ARIA define as semânticas que podem ser aplicadas aos elementos, e são divididas em <strong>funções</strong> (definindo um tipo de elemento da interface do usuário) e <strong>estados</strong> e <strong>propriedades</strong> que são suportados por uma função. Os autores devem atribuir uma função ARIA e os estados e propriedades apropriados a um elemento durante seu ciclo de vida, a menos que o elemento já possua semântica ARIA apropriada (através do uso de um elemento HTML apropriado). A adição de semântica ARIA apenas expõe informações extras para a API de acessibilidade de um navegador e não afeta o DOM de uma página.</p>
+O ARIA define as semânticas que podem ser aplicadas aos elementos, e são divididas em **funções** (definindo um tipo de elemento da interface do usuário) e **estados** e **propriedades** que são suportados por uma função. Os autores devem atribuir uma função ARIA e os estados e propriedades apropriados a um elemento durante seu ciclo de vida, a menos que o elemento já possua semântica ARIA apropriada (através do uso de um elemento HTML apropriado). A adição de semântica ARIA apenas expõe informações extras para a API de acessibilidade de um navegador e não afeta o DOM de uma página.
 
-<h2 id="Funções">Funções</h2>
+## Funções
 
-<h3 id="Funções_de_widget">Funções de widget</h3>
+### Funções de widget
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role" title="Using the button role">button</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role" title="Using the checkbox role">checkbox</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_Role">gridcell</a></li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role" title="Using the Link role">link</a></li>
- <li>menuitem</li>
- <li>menuitemcheckbox </li>
- <li>menuitemradio</li>
- <li>option</li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role" title="en/ARIA/ARIA_Techniques/Using_the_progressbar_role">progressbar</a></li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_radio_role" title="en/ARIA/ARIA_Techniques/Using_the_radio_role">radio</a></li>
- <li>scrollbar</li>
- <li>searchbox</li>
- <li>separator (when focusable)</li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role" title="en/ARIA/ARIA_Techniques/Using_the_slider_role">slider</a></li>
- <li>spinbutton</li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Switch_role">switch</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role">tab</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Tabpanel_Role">tabpanel</a></li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_textbox_role" title="en/ARIA/ARIA_Techniques/Using_the_textbox_role">textbox</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Treeitem_Role">treeitem</a></li>
-</ul>
+- [button](/pt-BR/docs/Web/Accessibility/ARIA/Roles/button_role "Using the button role")
+- [checkbox](/pt-BR/docs/Web/Accessibility/ARIA/Roles/checkbox_role "Using the checkbox role")
+- [gridcell](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Gridcell_Role)
+- [link](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role "Using the Link role")
+- menuitem
+- menuitemcheckbox
+- menuitemradio
+- option
+- [progressbar](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role "en/ARIA/ARIA_Techniques/Using_the_progressbar_role")
+- [radio](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_radio_role "en/ARIA/ARIA_Techniques/Using_the_radio_role")
+- scrollbar
+- searchbox
+- separator (when focusable)
+- [slider](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role "en/ARIA/ARIA_Techniques/Using_the_slider_role")
+- spinbutton
+- [switch](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Switch_role)
+- [tab](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Tab_Role)
+- [tabpanel](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Tabpanel_Role)
+- [textbox](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_textbox_role "en/ARIA/ARIA_Techniques/Using_the_textbox_role")
+- [treeitem](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Treeitem_Role)
 
-<h3 id="Funções_compostas">Funções compostas</h3>
+### Funções compostas
 
-<p>As técnicas abaixo descrevem cada função composta, bem como suas funções filho obrigatórias e opcionais.</p>
+As técnicas abaixo descrevem cada função composta, bem como suas funções filho obrigatórias e opcionais.
 
-<ul>
- <li>combobox</li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid</a> (incluindo as funções <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role">row</a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_Role">gridcell</a>, rowheader, columnheader)</li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role" title="en/ARIA/ARIA_Techniques/Using_the_listbox_role">listbox</a> (incluindo a função option)</li>
- <li>menu</li>
- <li>menubar</li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_radio_role" title="en/ARIA/ARIA_Techniques/Using_the_radio_role">radiogroup (veja a função radio)</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Tablist_Role">tablist</a> (incluindo as funções <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role">tab</a> and <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Tabpanel_Role">tabpanel</a>)</li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Tree_Role">tree</a></li>
- <li>treegrid</li>
-</ul>
+- combobox
+- [grid](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Grid_Role) (incluindo as funções [row](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Row_Role), [gridcell](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Gridcell_Role), rowheader, columnheader)
+- [listbox](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role "en/ARIA/ARIA_Techniques/Using_the_listbox_role") (incluindo a função option)
+- menu
+- menubar
+- [radiogroup (veja a função radio)](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_radio_role "en/ARIA/ARIA_Techniques/Using_the_radio_role")
+- [tablist](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Tablist_Role) (incluindo as funções [tab](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Tab_Role) and [tabpanel](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Tabpanel_Role))
+- [tree](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Tree_Role)
+- treegrid
 
-<h3 id="Funções_da_estrutura_de_documento">Funções da estrutura de documento</h3>
+### Funções da estrutura de documento
 
-<ul>
- <li></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Application_Role">application</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_article_role">article</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_Role">cell</a></li>
- <li>columnheader</li>
- <li>definition</li>
- <li>directory</li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Document_Role">document</a></li>
- <li>feed</li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Figure_Role">figure</a></li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role" title="en/ARIA/ARIA_Techniques/Using_the_group_role">group</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role">heading</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Role_Img">img</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/List_role">list</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Listitem_role">listitem</a></li>
- <li>math</li>
- <li>none</li>
- <li>note</li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role" title="en/ARIA/ARIA_Techniques/Using_the_presentation_role">presentation</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role">row</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role">rowgroup</a></li>
- <li>rowheader</li>
- <li>separator</li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role">table</a></li>
- <li>term</li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_toolbar_role" title="en/ARIA/ARIA_Techniques/Using_the_toolbar_role">toolbar</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Tooltip_Role">tooltip</a></li>
-</ul>
+-
+- [application](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Application_Role)
+- [article](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Article_Role "en/Accessibility/ARIA/ARIA_Techniques/Using_the_article_role")
+- [cell](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Cell_Role)
+- columnheader
+- definition
+- directory
+- [document](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Document_Role)
+- feed
+- [figure](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Figure_Role)
+- [group](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role "en/ARIA/ARIA_Techniques/Using_the_group_role")
+- [heading](/pt-BR/docs/Web/Accessibility/ARIA/Roles/heading_role)
+- [img](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Role_Img)
+- [list](/pt-BR/docs/Web/Accessibility/ARIA/Roles/List_role)
+- [listitem](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Listitem_role)
+- math
+- none
+- note
+- [presentation](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role "en/ARIA/ARIA_Techniques/Using_the_presentation_role")
+- [row](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Row_Role)
+- [rowgroup](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role)
+- rowheader
+- separator
+- [table](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Table_Role)
+- term
+- [textbox](/pt-BR/docs/Web/Accessibility/ARIA/Roles/textbox_role)
+- [toolbar](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_toolbar_role "en/ARIA/ARIA_Techniques/Using_the_toolbar_role")
+- [tooltip](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Tooltip_Role)
 
-<h3 id="Funções_de_ponto_de_referência">Funções de ponto de referência</h3>
+### Funções de ponto de referência
 
-<ul>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_banner_role" title="en/ARIA/ARIA_Techniques/Using_the_banner_role">banner</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Complementary_role">complementary</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role">contentinfo</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Form_Role">form</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Main_role">main</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role">navigation</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Region_role">region</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Search_role">search</a></li>
-</ul>
+- [banner](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_banner_role "en/ARIA/ARIA_Techniques/Using_the_banner_role")
+- [complementary](/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Complementary_role)
+- [contentinfo](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role)
+- [form](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Form_Role)
+- [main](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Main_role)
+- [navigation](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Navigation_Role)
+- [region](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Region_role)
+- [search](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Search_role)
 
-<h3 id="Funções_de_regiões_ativa">Funções de regiões ativa</h3>
+### Funções de regiões ativa
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Alert_Role">alert</a></li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_log_role" title="Using the Log role">log</a></li>
- <li>marquee</li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role" title="Using the link role">status</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/ARIA_timer_role">timer</a></li>
-</ul>
+- [alert](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Alert_Role)
+- [log](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_log_role "Using the Log role")
+- marquee
+- [status](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role "Using the link role")
+- [timer](/pt-BR/docs/Web/Accessibility/ARIA/Roles/ARIA_timer_role)
 
-<h3 id="Funções_de_janela">Funções de janela</h3>
+### Funções de janela
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role">alertdialog</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role">dialog</a></li>
-</ul>
+- [alertdialog](/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role)
+- [dialog](/pt-BR/docs/Web/Accessibility/ARIA/Roles/dialog_role)
 
-<h2 id="Estados_e_propriedades">Estados e propriedades</h2>
+## Estados e propriedades
 
-<h3 id="Atributos_de_widget">Atributos de widget</h3>
+### Atributos de widget
 
-<ul>
- <li>aria-autocomplete</li>
- <li>aria-checked</li>
- <li>aria-current</li>
- <li>aria-disabled</li>
- <li>aria-errormessage</li>
- <li>aria-expanded</li>
- <li>aria-haspopup</li>
- <li>aria-hidden</li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_attribute" title="Using the aria-invalid attribute">aria-invalid</a></li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute" title="Using the aria-labelledby attribute">aria-label</a></li>
- <li>aria-level</li>
- <li>aria-modal</li>
- <li>aria-multiline</li>
- <li>aria-multiselectable</li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute">aria-orientation</a></li>
- <li>aria-placeholder</li>
- <li>aria-pressed</li>
- <li>aria-readonly</li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute" title="Using the aria-required property">aria-required</a></li>
- <li>aria-selected</li>
- <li>aria-sort</li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute" title="Using the aria-required attribute">aria-valuemax</a></li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute">aria-valuemin</a></li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute">aria-valuenow</a></li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute">aria-valuetext</a></li>
-</ul>
+- aria-autocomplete
+- aria-checked
+- aria-current
+- aria-disabled
+- aria-errormessage
+- aria-expanded
+- aria-haspopup
+- aria-hidden
+- [aria-invalid](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_attribute "Using the aria-invalid attribute")
+- [aria-label](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute "Using the aria-labelledby attribute")
+- aria-level
+- aria-modal
+- aria-multiline
+- aria-multiselectable
+- [aria-orientation](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute "en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute")
+- aria-placeholder
+- aria-pressed
+- aria-readonly
+- [aria-required](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute "Using the aria-required property")
+- aria-selected
+- aria-sort
+- [aria-valuemax](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute "Using the aria-required attribute")
+- [aria-valuemin](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute "en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute")
+- [aria-valuenow](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute "en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute")
+- [aria-valuetext](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute "en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute")
 
-<h3 id="Atributos_da_região_ativa">Atributos da região ativa</h3>
+### Atributos da região ativa
 
-<ul>
- <li>aria-live</li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute">aria-relevant</a></li>
- <li>aria-atomic</li>
- <li>aria-busy</li>
-</ul>
+- aria-live
+- [aria-relevant](/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute "en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute")
+- aria-atomic
+- aria-busy
 
-<h3 id="Atributos_de_drag_drop">Atributos de drag &amp; drop</h3>
+### Atributos de drag & drop
 
-<ul>
- <li>aria-dropeffect</li>
- <li>aria-dragged</li>
-</ul>
+- aria-dropeffect
+- aria-dragged
 
-<h3 id="Atributos_de_relacionamento">Atributos de relacionamento</h3>
+### Atributos de relacionamento
 
-<ul>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute" title="Role">aria-activedescendant</a></li>
- <li>aria-colcount</li>
- <li>aria-colindex</li>
- <li>aria-colspan</li>
- <li>aria-controls</li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute" title="Using the aria-labelledby attribute">aria-describedby</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Annotations#Associating_annotated_elements_with_their_details">aria-details</a></li>
- <li>aria-errormessage</li>
- <li>aria-flowto</li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute" title="en/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby</a></li>
- <li>aria-owns</li>
- <li>aria-posinset</li>
- <li>aria-rowcount</li>
- <li>aria-rowindex</li>
- <li>aria-rowspan</li>
- <li>aria-setsize</li>
-</ul>
+- [aria-activedescendant](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute "Role")
+- aria-colcount
+- aria-colindex
+- aria-colspan
+- aria-controls
+- [aria-describedby](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute "Using the aria-labelledby attribute")
+- [aria-details](/pt-BR/docs/Web/Accessibility/ARIA/Annotations#Associating_annotated_elements_with_their_details)
+- aria-errormessage
+- aria-flowto
+- [aria-labelledby](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute "en/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute")
+- aria-owns
+- aria-posinset
+- aria-rowcount
+- aria-rowindex
+- aria-rowspan
+- aria-setsize
 
-<h3 id="Propriedades_específicas_do_MicrosoftEdge">Propriedades específicas do MicrosoftEdge</h3>
+### Propriedades específicas do MicrosoftEdge
 
-<ul>
- <li><a href="/en-US/docs/Web/API/x-ms-aria-flowfrom">x-ms-aria-flowfrom</a> {{Non-standard_Inline}}</li>
-</ul>
+- [x-ms-aria-flowfrom](/pt-BR/docs/Web/API/x-ms-aria-flowfrom) {{Non-standard_Inline}}
