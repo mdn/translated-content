@@ -12,103 +12,60 @@ tags:
 translation_of: Games/Introduction_to_HTML5_Game_Development_(summary)
 original_slug: Games/Introduction_to_HTML5_Game_Gevelopment_(summary)
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
 
-<div>{{IncludeSubnav("/en-US/docs/Games")}}</div>
+## Vantagens
 
-<div>
-<h2 id="Vantagens" style="line-height: 30px;">Vantagens</h2>
+1.  Os Jogos criados com HTML5 funcionam em Smartphones, tablets, PCs e smart TVs.
+2.  Anuncie e promova seu jogo na Web, bem como em outros meios de comunicação.
+3.  Pagamentos. Carregue o que quiser e use o serviço de processamento de pagamento que desejar.
+4.  Atualize seu jogo sempre que quiser.
+5.  Colete suas próprias análises.
+6.  Conecte-se com seus clientes mais de perto.
+7.  Usuários podem jogar sempre que quiserem e quando quiserem.
 
-<ol>
- <li><span class="seoSummary">Os Jogos criados com HTML5 funcionam em Smartphones, tablets, PCs e smart TVs.</span></li>
- <li>Anuncie e promova seu jogo na Web, bem como em outros meios de comunicação.</li>
- <li>Pagamentos. Carregue o que quiser e use o serviço de processamento de pagamento que desejar.</li>
- <li>Atualize seu jogo sempre que quiser.</li>
- <li>Colete suas próprias análises.</li>
- <li>Conecte-se com seus clientes mais de perto.</li>
- <li><span class="seoSummary">Usuários podem jogar sempre que quiserem e quando quiserem.</span></li>
-</ol>
+## Tecnologias da Web
 
-<h2 id="Tecnologias_da_Web" style="line-height: 30px;">Tecnologias da Web</h2>
-</div>
+| **Function**      | **Tecnologias**                                                                                                                                                                                                                                                               |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Audio**         | [Web Audio API](/pt-BR/docs/Web_Audio_API)                                                                                                                                                                                                                                    |
+| **Gráficos**      | [WebGL](/pt-BR/docs/WebGL) ([OpenGL ES](http://www.khronos.org/opengles/) 2.0)                                                                                                                                                                                                |
+| **Entrada**       | [Touch events](/pt-BR/docs/DOM/Touch_events), [Gamepad API](/pt-BR/docs/API/Gamepad/Using_Gamepad_API), sensores de dispositivos, [WebRTC](/pt-BR/docs/WebRTC), [Full Screen API](/pt-BR/docs/DOM/Using_fullscreen_mode), [Pointer Lock API](/pt-BR/docs/WebAPI/Pointer_Lock) |
+| **Linguagens**    | [JavaScript](/pt-BR/docs/JavaScript) (ou C/C++ usando [Emscripten](https://github.com/kripken/emscripten/wiki) para compilar o JavaScript)                                                                                                                                    |
+| **Networking**    | [WebRTC](/pt-BR/docs/WebRTC) e/ou [WebSockets](/pt-BR/docs/WebSockets)                                                                                                                                                                                                        |
+| **Armazenamento** | [IndexedDB](/pt-BR/docs/IndexedDB) ou a "nuvem"                                                                                                                                                                                                                               |
+| **Web**           | [HTML](/pt-BR/docs/HTML), [CSS](/pt-BR/docs/CSS), [SVG](/pt-BR/docs/SVG), [Social API](/pt-BR/docs/Social_API) (e muito mais!)                                                                                                                                                |
 
-<div> </div>
+- [Full Screen API](/pt-BR/docs/DOM/Using_fullscreen_mode)
+  - : gameplay de tela cheia
+- [Gamepad API](/pt-BR/docs/API/Gamepad/Using_Gamepad_API)
+  - : Use gamepads ou outros controladores de jogos.
+- [HTML](/pt-BR/docs/HTML) e [CSS](/pt-BR/docs/CSS)
+  - : Contrua, estilize e disponha a interface de usuário do seu jogo.
+- [HTML audio](/pt-BR/docs/HTML/Element/audio)
+  - : Reproduza facilmente efeitos sonoros simples e música.
+- [IndexedDB](/pt-BR/docs/IndexedDB)
+  - : Armazene os dados de usuário em seu próprio computador ou dispositivo.
+- [JavaScript](/pt-BR/docs/JavaScript)
+  - : Linguagem de programação web rápida para escrever o código do seu jogo, para portar facilmente seus jogos existentes [Emscripten](https://github.com/kripken/emscripten/wiki) ou [Asm.js](http://asmjs.org/spec/latest/).
+- [Pointer Lock API](/pt-BR/docs/WebAPI/Pointer_Lock)
+  - : Bloquei o mouse ou outro dispositivo apontador na interface do seu jogo.
+- [SVG](/pt-BR/docs/SVG) (Gráficos Vetorias Escaláveis)
+  - : Crie gráficos vetoriais que sejam dimensionados sem problemas, independemente do tamanho ou da resolução da exibição do usuário.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col" style="text-align: left;"><strong>Function</strong></th>
-   <th scope="col" style="text-align: left;"><strong>Tecnologias</strong></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><strong>Audio</strong></td>
-   <td><a href="/en-US/docs/Web_Audio_API" title="/en-US/docs/Web_Audio_API">Web Audio API</a></td>
-  </tr>
-  <tr>
-   <td><strong>Gráficos</strong></td>
-   <td><a href="/en-US/docs/WebGL" title="/en-US/docs/WebGL">WebGL</a> (<a href="http://www.khronos.org/opengles/">OpenGL ES</a> 2.0)</td>
-  </tr>
-  <tr>
-   <td><strong>Entrada</strong></td>
-   <td><a href="/en-US/docs/DOM/Touch_events" title="/en-US/docs/DOM/Touch_events">Touch events</a>, <a href="/en-US/docs/API/Gamepad/Using_Gamepad_API" title="/en-US/docs/API/Gamepad/Using_Gamepad_API">Gamepad API</a>, sensores de dispositivos, <a href="/en-US/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a>, <a href="/en-US/docs/DOM/Using_fullscreen_mode" title="/en-US/docs/DOM/Using_fullscreen_mode">Full Screen API</a>, <a href="/en-US/docs/WebAPI/Pointer_Lock" title="/en-US/docs/WebAPI/Pointer_Lock">Pointer Lock API</a></td>
-  </tr>
-  <tr>
-   <td><strong>Linguagens</strong></td>
-   <td><a href="/en-US/docs/JavaScript" title="/en-US/docs/JavaScript">JavaScript</a> (ou C/C++ usando <a href="https://github.com/kripken/emscripten/wiki">Emscripten</a> para compilar o JavaScript)</td>
-  </tr>
-  <tr>
-   <td><strong>Networking</strong></td>
-   <td><a href="/en-US/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a> e/ou <a href="/en-US/docs/WebSockets" title="/en-US/docs/WebSockets">WebSockets</a></td>
-  </tr>
-  <tr>
-   <td><strong>Armazenamento</strong></td>
-   <td><a href="/en-US/docs/IndexedDB" title="/en-US/docs/IndexedDB">IndexedDB</a> ou a "nuvem"</td>
-  </tr>
-  <tr>
-   <td><strong>Web</strong></td>
-   <td><a href="/en-US/docs/HTML" title="/en-US/docs/HTML">HTML</a>, <a href="/en-US/docs/CSS" title="/en-US/docs/CSS">CSS</a>, <a href="/en-US/docs/SVG" title="/en-US/docs/SVG">SVG</a>, <a href="/en-US/docs/Social_API" title="/en-US/docs/Social_API">Social API</a> (e muito mais!)</td>
-  </tr>
- </tbody>
-</table>
+<!---->
 
-<div class="twocolumns">
-<dl>
- <dt><a href="/en-US/docs/DOM/Using_fullscreen_mode" title="/en-US/docs/DOM/Using_fullscreen_mode">Full Screen API</a></dt>
- <dd>gameplay de tela cheia</dd>
- <dt><a href="/en-US/docs/API/Gamepad/Using_Gamepad_API" title="/en-US/docs/API/Gamepad/Using_Gamepad_API">Gamepad API</a></dt>
- <dd>Use gamepads ou outros controladores de jogos.</dd>
- <dt><a href="/en-US/docs/HTML" title="/en-US/docs/HTML">HTML</a> e <a href="/en-US/docs/CSS" title="/en-US/docs/CSS">CSS</a></dt>
- <dd>Contrua, estilize e disponha a interface de usuário do seu jogo.</dd>
- <dt><a href="/en-US/docs/HTML/Element/audio" title="/en-US/docs/HTML/Element/audio">HTML audio</a></dt>
- <dd>Reproduza facilmente efeitos sonoros simples e música.</dd>
- <dt><a href="/en-US/docs/IndexedDB" title="/en-US/docs/IndexedDB">IndexedDB</a></dt>
- <dd>Armazene os dados de usuário em seu próprio computador ou dispositivo.</dd>
- <dt><a href="/en-US/docs/JavaScript" title="/en-US/docs/JavaScript">JavaScript</a></dt>
- <dd>Linguagem de programação web rápida para escrever o código do seu jogo, para portar facilmente seus jogos existentes <a href="https://github.com/kripken/emscripten/wiki" title="https://github.com/kripken/emscripten/wiki">Emscripten</a> ou <a href="http://asmjs.org/spec/latest/">Asm.js</a>.</dd>
- <dt><a href="/en-US/docs/WebAPI/Pointer_Lock" title="/en-US/docs/WebAPI/Pointer_Lock">Pointer Lock API</a></dt>
- <dd>Bloquei o mouse ou outro dispositivo apontador na interface do seu jogo.</dd>
- <dt><a href="/en-US/docs/SVG" title="/en-US/docs/SVG">SVG</a> (Gráficos Vetorias Escaláveis)</dt>
- <dd>Crie gráficos vetoriais que sejam dimensionados sem problemas, independemente do tamanho ou da resolução da exibição do usuário.</dd>
-</dl>
-
-<dl>
- <dt><a href="/en-US/docs/JavaScript/Typed_arrays" title="/en-US/docs/JavaScript/Typed_arrays">Typed Arrays</a></dt>
- <dd>Acessar dados binários brutos de dentro do JavaScript; Manipule texturas GL, dados de jogos ou qualquer outra coisa.</dd>
- <dt><a href="/en-US/docs/Web_Audio_API" title="/en-US/docs/Web_Audio_API">Web Audio API</a></dt>
- <dd>Controle a reprodução, síntese e manipulação de aúdio em tempo real.</dd>
- <dt><a href="/en-US/docs/WebGL" title="/en-US/docs/WebGL">WebGL</a></dt>
- <dd>Crie gráficos 2D e 3D acelerados por hardware de alto desempenho. <a href="http://www.khronos.org/opengles/">OpenGL ES</a> 2.0.</dd>
- <dt><a href="/en-US/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a></dt>
- <dd>Comunicações em tempo real para controlar dados de aúdio e vídeo, incluindo teleconferência e transmissão de outros dados de aplicativos entre dois usuários, como bate-papo.</dd>
- <dt><a href="/en-US/docs/WebSockets" title="/en-US/docs/WebSockets">WebSockets</a></dt>
- <dd>Conecte seu aplicativo ou site a um servidor para transmitir dados em tempo real. Perfeito para ação de jogo multiplayer, serviços de bate-papo e assim por diante.</dd>
- <dt><a href="/en-US/docs/DOM/Using_web_workers" title="/en-US/docs/DOM/Using_web_workers">Web Workers</a></dt>
- <dd>Crie threads em segundo plano executando seu próprio código JavaScript para processadres multi-core.</dd>
- <dt><a href="/en-US/docs/DOM/XMLHttpRequest" title="/en-US/docs/DOM/XMLHttpRequest">XMLHttpRequest</a> e <a href="/en-US/docs/DOM/File_API" title="/en-US/docs/DOM/File_API">File API</a></dt>
- <dd>Envie e receba quaisquer tipo de dados que você quiser de um servidor da Web, como baixar novos níveis de jogos e ilustrações para transmitir informações de status de jogos não em tempo real.</dd>
-</dl>
-</div>
-
-<p> </p>
+- [Typed Arrays](/pt-BR/docs/JavaScript/Typed_arrays)
+  - : Acessar dados binários brutos de dentro do JavaScript; Manipule texturas GL, dados de jogos ou qualquer outra coisa.
+- [Web Audio API](/pt-BR/docs/Web_Audio_API)
+  - : Controle a reprodução, síntese e manipulação de aúdio em tempo real.
+- [WebGL](/pt-BR/docs/WebGL)
+  - : Crie gráficos 2D e 3D acelerados por hardware de alto desempenho. [OpenGL ES](http://www.khronos.org/opengles/) 2.0.
+- [WebRTC](/pt-BR/docs/WebRTC)
+  - : Comunicações em tempo real para controlar dados de aúdio e vídeo, incluindo teleconferência e transmissão de outros dados de aplicativos entre dois usuários, como bate-papo.
+- [WebSockets](/pt-BR/docs/WebSockets)
+  - : Conecte seu aplicativo ou site a um servidor para transmitir dados em tempo real. Perfeito para ação de jogo multiplayer, serviços de bate-papo e assim por diante.
+- [Web Workers](/pt-BR/docs/DOM/Using_web_workers)
+  - : Crie threads em segundo plano executando seu próprio código JavaScript para processadres multi-core.
+- [XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest) e [File API](/pt-BR/docs/DOM/File_API)
+  - : Envie e receba quaisquer tipo de dados que você quiser de um servidor da Web, como baixar novos níveis de jogos e ilustrações para transmitir informações de status de jogos não em tempo real.
