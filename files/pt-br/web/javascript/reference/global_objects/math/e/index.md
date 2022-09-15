@@ -8,75 +8,47 @@ tags:
   - Referencia
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/E
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>A propriedade <strong><code>Math.E</code></strong> representa a base dos logarítmos naturais, aproximadamente 2.718.</p>
+A propriedade **`Math.E`** representa a base dos logarítmos naturais, aproximadamente 2.718.
 
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.E</mi></mstyle><mo>=</mo><mi>e</mi><mo>≈</mo><mn>2.718</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.E}} = e \approx 2.718</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.E</mi></mstyle><mo>=</mo><mi>e</mi><mo>≈</mo><mn>2.718</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.E}} = e \approx 2.718</annotation></semantics></math>
 
-<div>{{EmbedInteractiveExample("pages/js/math-e.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-e.html")}}{{js_property_attributes(0, 0, 0)}}
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+## Descrição
 
-<h2 id="Descrição">Descrição</h2>
+Como `E` é uma propriedade estática de `Math`, sempre use-a como `Math.E`, ao invés de uma propriedade de um objeto `Math` que você criou (`Math` não é um construtor).
 
-<p>Como <code>E</code> é uma propriedade estática de <code>Math</code>, sempre use-a como <code>Math.E</code>, ao invés de uma propriedade de um objeto <code>Math</code> que você criou (<code>Math</code> não é um construtor).</p>
+## Exemplos
 
-<h2 id="Exemplos">Exemplos</h2>
+### Usando `Math.E`
 
-<h3 id="Usando_Math.E">Usando <code>Math.E</code></h3>
+A seguinte função retorna o valor de _e_:
 
-<p>A seguinte função retorna o valor de <em>e</em>:</p>
-
-<pre class="brush: js">function getNapier() {
+```js
+function getNapier() {
   return Math.E;
 }
 
 getNapier(); // 2.718281828459045
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição inicial. Implementado no JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.1.1', 'Math.E')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.e', 'Math.E')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.e', 'Math.E')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                    | Status                       | Comentário                                         |
+| ---------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                         | {{Spec2('ES1')}}         | Definição inicial. Implementado no JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.1.1', 'Math.E')}} | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES6', '#sec-math.e', 'Math.E')}}     | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-math.e', 'Math.E')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("javascript.builtins.Math.E")}}
 
+## Veja também
 
-<p>{{Compat("javascript.builtins.Math.E")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{jsxref("Math.exp()")}}</li>
- <li>{{jsxref("Math.log()")}}</li>
- <li>{{jsxref("Math.log1p()")}}</li>
-</ul>
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.log1p()")}}

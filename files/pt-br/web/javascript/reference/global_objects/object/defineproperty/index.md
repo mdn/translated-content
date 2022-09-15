@@ -8,79 +8,70 @@ tags:
   - Objeto
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
+O método **`Object.defineProperty()`** define uma nova propriedade diretamente em um objeto, ou modifica uma propriedade já existente em um objeto, e retorna o objeto.
 
+> **Nota:** Você invoca este método diretamente no construtor do {{jsxref("Object")}} ao invés de invocar em uma instância do tipo `Object`.
 
-<p>O método <code><strong>Object.defineProperty()</strong></code> define uma nova propriedade diretamente em um objeto, ou modifica uma propriedade já existente em um objeto, e retorna o objeto.</p>
+## Sintaxe
 
-<div class="note">
-<p><strong>Nota</strong>: Você invoca este método diretamente no construtor do {{jsxref("Object")}} ao invés de invocar em uma instância do tipo <code>Object</code>.</p>
-</div>
+```
+Object.defineProperty(obj, prop, descriptor)
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Parâmetros
 
-<pre class="syntaxbox notranslate"><code>Object.defineProperty(<var>obj</var>, <var>prop</var>, <var>descriptor</var>)</code></pre>
+- `obj`
+  - : O objeto no qual será definida a propriedade.
+- `prop`
+  - : O nome da propriedade que será definida ou modificada.
+- `descriptor`
+  - : O descritor para a propriedade que será definida ou modificada.
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Valor de retorno
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>O objeto no qual será definida a propriedade.</dd>
- <dt><code>prop</code></dt>
- <dd>O nome da propriedade que será definida ou modificada.</dd>
- <dt><code>descriptor</code></dt>
- <dd>O descritor para a propriedade que será definida ou modificada.</dd>
-</dl>
+O objeto que foi passado à função.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+## Descrição
 
-<p>O objeto que foi passado à função.</p>
+Esse método permite uma precisa inclusão ou modificação de uma propriedade em um objeto. Enquanto a inclusão de propriedades através de atribuição cria propriedades que são visíveis durante a enumeração (por repetições {{jsxref("Statements/for...in", "for...in")}} ou pelo método {{jsxref("Object.keys")}}), e cujos valores podem ser alterados e {{jsxref("Operators/delete", "deletados", "", 1)}}, esse método permite a modificação deste comportamento padrão. Por padrão, valores incluídos utilizando `Object.defineProperty()` são imutáveis.
 
-<h2 id="Descrição">Descrição</h2>
+Os descritores de propriedades presentes nos objetos se apresentam em duas variedades: descritores de dados e descritores de assessores. Um _descritor de dado_ é uma propriedade que contém um valor, podendo este ser gravável ou não. Um _descritor de assessor_ é uma propriedade definida como um par de funções getter-setter. Um descritor deve ser de uma destas variedades; não pode ser de ambas.
 
-<p>Esse método permite uma precisa inclusão ou modificação de uma propriedade em um objeto. Enquanto a inclusão de propriedades através de atribuição cria propriedades que são visíveis durante a enumeração (por repetições {{jsxref("Statements/for...in", "for...in")}} ou pelo método {{jsxref("Object.keys")}}), e cujos valores podem ser alterados e {{jsxref("Operators/delete", "deletados", "", 1)}}, esse método permite a modificação deste comportamento padrão. Por padrão, valores incluídos utilizando <code>Object.defineProperty()</code> são imutáveis.</p>
+Ambos os descritores de dados e de assessor são objetos. Eles compartilham as seguintes chaves obrigatórias:
 
-<p>Os descritores de propriedades presentes nos objetos se apresentam em duas variedades: descritores de dados e descritores de assessores. Um <em>descritor de dado</em> é uma propriedade que contém um valor, podendo este ser gravável ou não. Um <em>descritor de assessor </em>é uma propriedade definida como um par de funções getter-setter. Um descritor deve ser de uma destas variedades; não pode ser de ambas.</p>
+- `configurable`
+  - : `true` se e somente se o tipo deste descritor de propriedade pode ser alterado e se a propriedade pode ser deletada do objeto correspondente.
+    **Valor padrão é `false`.**
+- `enumerable`
+  - : `true` se e somente se esta propriedade aparece durante enumeração das propriedades no objeto correspondente.
+    **Valor padrão é `false`.**
 
-<p>Ambos os descritores de dados e de assessor são objetos. Eles compartilham as seguintes chaves obrigatórias:</p>
+Um descritor de dados também possui as seguintes chaves opcionais:
 
-<dl>
- <dt><code>configurable</code></dt>
- <dd><code>true</code> se e somente se o tipo deste descritor de propriedade pode ser alterado e se a propriedade pode ser deletada do objeto correspondente.<br>
- <strong>Valor padrão é <code>false</code>.</strong></dd>
- <dt><code>enumerable</code></dt>
- <dd><code>true</code> se e somente se esta propriedade aparece durante enumeração das propriedades no objeto correspondente.<br>
- <strong>Valor padrão é <code>false</code>.</strong></dd>
-</dl>
+- `value`
+  - : O valor associado com a propriedade. Pode ser qualquer valor válido em Javascript (número, objeto, função, etc).
+    **Valor padrão é {{jsxref("undefined")}}.**
+- `writable`
+  - : `true` se e somente se o valor associado com a propriedade pode ser modificada com um {{jsxref("Operators/Assignment_Operators", "operador de atribuição", "", 1)}}.
+    **Valor padrão é `false`.**
 
-<p>Um descritor de dados também possui as seguintes chaves opcionais:</p>
+Um descritor de assessor também possui as seguintes chaves opcionais:
 
-<dl>
- <dt><code>value</code></dt>
- <dd>O valor associado com a propriedade. Pode ser qualquer valor válido em Javascript  (número, objeto, função, etc).<br>
- <strong>Valor padrão é {{jsxref("undefined")}}.</strong></dd>
- <dt><code>writable</code></dt>
- <dd><code>true</code> se e somente se o valor associado com a propriedade pode ser modificada com um {{jsxref("Operators/Assignment_Operators", "operador de atribuição", "", 1)}}.<br>
- <strong>Valor padrão é <code>false</code>.</strong></dd>
-</dl>
+- `get`
+  - : Uma função que servirá como um getter da propriedade, ou {{jsxref("undefined")}} se não houver getter. Quando a propriedade é acessada, esta função é chamada sem argumentos e com `this` define para o objeto no qual a propriedade é acessada (este pode não ser o objeto sobre o qual a propriedade está definida devido a herança). O valor retornado será usado como valor da propriedade.
+    **Valor padrão é {{jsxref("undefined")}}.**
+- `set`
+  - : A função que servirá como um setter para a propriedade, ou {{jsxref("undefined")}} se não houver setter. Quando a propriedade é atribuída, esta função é chamada com um argumento (o valor sendo atribuído para a propriedade) e com `this` configura o objeto através do qual a propriedade é atribuída.
+    **Valor padrão é {{jsxref("undefined")}}.**
 
-<p>Um descritor de assessor também possui as seguintes chaves opcionais:</p>
+Se um descritor tem nenhum das chaves `value`, `writable`, `get` e `set`, ele é tratado como um descritor de dados. Se um descritor tem ambas chaves `value` ou `writable` e `get` ou `set` keys, uma exceção é lançada.
 
-<dl>
- <dt><code>get</code></dt>
- <dd>Uma função que servirá como um getter da propriedade, ou {{jsxref("undefined")}} se não houver getter. Quando a propriedade é acessada, esta função é chamada sem argumentos e com <code>this</code> define para o objeto no qual a propriedade é acessada (este pode não ser o objeto sobre o qual a propriedade está definida devido a herança). O valor retornado será usado como valor da propriedade.<br>
- <strong>Valor padrão é {{jsxref("undefined")}}.</strong></dd>
- <dt><code>set</code></dt>
- <dd>A função que servirá como um setter para a propriedade, ou {{jsxref("undefined")}} se não houver setter. Quando a propriedade é atribuída, esta função é chamada com um argumento (o valor sendo atribuído para a propriedade) e com <code>this</code> configura o objeto através do qual a propriedade é atribuída.<br>
- <strong>Valor padrão é {{jsxref("undefined")}}.</strong></dd>
-</dl>
+Tenha em mente que estes atributos não são necessariamente as propriedades do próprio descritor. Propriedades herdadas serão consideradas também. Para garantir que estes padrões sejam preservados, você pode congelar o {{jsxref("Object.prototype")}} previamente, declarar todas as opções explicitamente, ou apontar para {{jsxref("null")}} com {{jsxref("Object.create", "Object.create(null)")}}.
 
-<p>Se um descritor tem  nenhum das chaves <code>value</code>, <code>writable</code>, <code>get</code> e <code>set</code>, ele é tratado como um descritor de dados. Se um descritor tem ambas chaves <code>value</code> ou <code>writable</code> e <code>get</code> ou <code>set</code> keys, uma exceção é lançada.</p>
-
-<p>Tenha em mente que estes atributos não são necessariamente as propriedades do próprio descritor. Propriedades herdadas serão consideradas também. Para garantir que estes padrões sejam preservados, você pode congelar o {{jsxref("Object.prototype")}} previamente, declarar todas as opções explicitamente, ou apontar para {{jsxref("null")}} com {{jsxref("Object.create", "Object.create(null)")}}.</p>
-
-<pre class="brush: js notranslate">// usando __proto__
+```js
+// usando __proto__
 var obj = {};
 var descriptor = Object.create(null); // não herdar propriedades
 // não enumerável, não configurável, não gravável por padrão
@@ -115,19 +106,21 @@ Object.defineProperty(obj, 'key', withValue('static'));
 // se o método freeze estiver disponível, prevenir as propriedades
 // (value, get, set, enumerable, writable, configurable) de serem
 // incluídas ou removidas do protótipo do objeto
-(Object.freeze || Object)(Object.prototype);</pre>
+(Object.freeze || Object)(Object.prototype);
+```
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>Se você deseja utilizar o método <code>Object.defineProperty</code> com uma sintaxe estilo <em>flags-binárias</em>, veja os <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty/Additional_examples">exemplos adicionais</a>.</p>
+Se você deseja utilizar o método `Object.defineProperty` com uma sintaxe estilo _flags-binárias_, veja os [exemplos adicionais](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty/Additional_examples).
 
-<h3 id="Criando_uma_propriedade">Criando uma propriedade</h3>
+### Criando uma propriedade
 
-<p>Quando a propriedade especificada não existe no objeto, <code>Object.defineProperty()</code>  cria uma nova propriedade conforme descrito anteriormente. Campos podem ser omitidos no descritor, e os valores padrão para esses campos serão introduzidos.</p>
+Quando a propriedade especificada não existe no objeto, `Object.defineProperty()` cria uma nova propriedade conforme descrito anteriormente. Campos podem ser omitidos no descritor, e os valores padrão para esses campos serão introduzidos.
 
-<p>Todos os campos do tipo Boolean possuem como valor padrão <code>false</code>. Os campos <code>value</code>, <code>get</code>, e <code>set</code> possuem como padrão {{jsxref("undefined")}}.  Uma propriedade que é definida sem os valores para <code>get</code>/<code>set</code>/<code>value</code>/<code>writable</code> é dita "genérica" e classificada como um descritor de dados.</p>
+Todos os campos do tipo Boolean possuem como valor padrão `false`. Os campos `value`, `get`, e `set` possuem como padrão {{jsxref("undefined")}}. Uma propriedade que é definida sem os valores para `get`/`set`/`value`/`writable` é dita "genérica" e classificada como um descritor de dados.
 
-<pre class="brush: js notranslate">var o = {}; // Criar um novo objeto
+```js
+var o = {}; // Criar um novo objeto
 
 // Exemplo de propriedade de objeto inserida através
 // de defineProperty com descritor do tipo dado
@@ -161,19 +154,21 @@ Object.defineProperty(o, 'conflict', {
   get: function() { return 0xdeadbeef; }
 });
 // lança um TypeError: value existe apenas em descritores
-// de dado, get existe apenas em descritores de assessor</pre>
+// de dado, get existe apenas em descritores de assessor
+```
 
-<h3 id="Modificando_uma_propriedade">Modificando uma propriedade</h3>
+### Modificando uma propriedade
 
-<p>Quando uma propriedade já existe, <code>Object.defineProperty()</code> tenta modificá-la de acordo com os valores do descritor e a configuração atual do objeto. Se o descritor antigo possuía seu atributo <code>configurable</code> como <code>false</code> a propriedade é chamada "não configurável" e nenhum atributo pode ser alterado <font face="consolas, Liberation Mono, courier, monospace">(exceto a alteração irreversível de <em>writable </em>para <em>false</em>)</font>. Não é possível alternar o tipo de uma propriedade entre dados e assessor quando esta for não-configurável.</p>
+Quando uma propriedade já existe, `Object.defineProperty()` tenta modificá-la de acordo com os valores do descritor e a configuração atual do objeto. Se o descritor antigo possuía seu atributo `configurable` como `false` a propriedade é chamada "não configurável" e nenhum atributo pode ser alterado (exceto a alteração irreversível de _writable_ para _false_). Não é possível alternar o tipo de uma propriedade entre dados e assessor quando esta for não-configurável.
 
-<p>Um {{jsxref("TypeError")}} é lançado quando são realizadas tentativas de se alterar propriedades não-configuráveis (exceto o atributo <code>writable</code>) a menos que o valor atual e o novo sejam os mesmos.</p>
+Um {{jsxref("TypeError")}} é lançado quando são realizadas tentativas de se alterar propriedades não-configuráveis (exceto o atributo `writable`) a menos que o valor atual e o novo sejam os mesmos.
 
-<h4 id="O_atributo_writable">O atributo writable</h4>
+#### O atributo writable
 
-<p>Quando o atributo <code>writable</code> de uma propriedade é definido como <code>false</code>, a propriedade é dita "não-gravável". Seu valor não poderá ser alterado.</p>
+Quando o atributo `writable` de uma propriedade é definido como `false`, a propriedade é dita "não-gravável". Seu valor não poderá ser alterado.
 
-<pre class="brush: js notranslate">var o = {}; // Cria um novo objeto
+```js
+var o = {}; // Cria um novo objeto
 
 Object.defineProperty(o, 'a', {
   value: 37,
@@ -185,15 +180,17 @@ console.log(o.a); // escreve 37
 o.a = 25; // Nenhum erro é lançado (no modo strict seria
           // lançado mesmo que o valor fosse o mesmo)
 
-console.log(o.a); // escreve 37. A atribuição não teve efeito.</pre>
+console.log(o.a); // escreve 37. A atribuição não teve efeito.
+```
 
-<p>Como visto no exemplo, tentativas de escrita em uma propriedade não-gravável não alteram seu valor, mas também não lançam erros.</p>
+Como visto no exemplo, tentativas de escrita em uma propriedade não-gravável não alteram seu valor, mas também não lançam erros.
 
-<h4 id="O_atributo_enumerable">O atributo enumerable</h4>
+#### O atributo enumerable
 
-<p>O atributo <code>enumerable</code> de uma propriedade define se ela deve ser exibida em uma repetição {{jsxref("Statements/for...in", "for...in")}} e por {{jsxref("Object.keys()")}} ou não.</p>
+O atributo `enumerable` de uma propriedade define se ela deve ser exibida em uma repetição {{jsxref("Statements/for...in", "for...in")}} e por {{jsxref("Object.keys()")}} ou não.
 
-<pre class="brush: js notranslate">var o = {};
+```js
+var o = {};
 
 Object.defineProperty(o, 'a', {
   value: 1,
@@ -221,13 +218,15 @@ Object.keys(o); // ['a', 'd']
 
 o.propertyIsEnumerable('a'); // true
 o.propertyIsEnumerable('b'); // false
-o.propertyIsEnumerable('c'); // false</pre>
+o.propertyIsEnumerable('c'); // false
+```
 
-<h4 id="O_atributo_configurable">O atributo configurable</h4>
+#### O atributo configurable
 
-<p>O atributo <code>configurable</code> controla ao mesmo se uma propriedade pode ser deletada do objeto, e se seus atributos (exceto a mudança de <code>writable</code> para <code>false</code>) podem ser alterados.</p>
+O atributo `configurable` controla ao mesmo se uma propriedade pode ser deletada do objeto, e se seus atributos (exceto a mudança de `writable` para `false`) podem ser alterados.
 
-<pre class="brush: js notranslate">var o = {};
+```js
+var o = {};
 
 Object.defineProperty(o, 'a', {
   get: function() { return 1; },
@@ -257,15 +256,17 @@ Object.defineProperty(o, 'a', {
 
 console.log(o.a); // escreve 1
 delete o.a; // Nada acontece
-console.log(o.a); // escreve 1</pre>
+console.log(o.a); // escreve 1
+```
 
-<p>Se o atributo <code>configurable</code> de <code>o.a</code> fosse <code>true</code>, nenhum dos erros seria lançado e a propriedade estaria deletada ao final.</p>
+Se o atributo `configurable` de `o.a` fosse `true`, nenhum dos erros seria lançado e a propriedade estaria deletada ao final.
 
-<h3 id="Incluindo_propriedades_e_valores_padrão">Incluindo propriedades e valores padrão</h3>
+### Incluindo propriedades e valores padrão
 
-<p>É importante considerar a forma como os valores padrão para atributos são aplicados. Normalmente existe diferença entre usar a notação por ponto para atribuir um valor e usar <code>Object.defineProperty()</code>, como pode ser visto no exemplo abaixo:</p>
+É importante considerar a forma como os valores padrão para atributos são aplicados. Normalmente existe diferença entre usar a notação por ponto para atribuir um valor e usar `Object.defineProperty()`, como pode ser visto no exemplo abaixo:
 
-<pre class="brush: js notranslate">var o = {};
+```js
+var o = {};
 
 o.a = 1;
 
@@ -286,13 +287,15 @@ Object.defineProperty(o, 'a', {
   writable: false,
   configurable: false,
   enumerable: false
-});</pre>
+});
+```
 
-<h3 id="Setters_e_getters_customizados">Setters e getters customizados</h3>
+### Setters e getters customizados
 
-<p>O exemplo abaixo mostra como implementar um objeto auto-arquivável. Quando a propriedade <code>temperature</code> é atribuída, o array <code>archive</code> recebe uma nova entrada de log.</p>
+O exemplo abaixo mostra como implementar um objeto auto-arquivável. Quando a propriedade `temperature` é atribuída, o array `archive` recebe uma nova entrada de log.
 
-<pre class="brush: js notranslate">function Archiver() {
+```js
+function Archiver() {
   var temperature = null;
   var archive = [];
 
@@ -314,11 +317,13 @@ var arc = new Archiver();
 arc.temperature; // 'get!'
 arc.temperature = 11;
 arc.temperature = 13;
-arc.getArchive(); // [{ val: 11 }, { val: 13 }]</pre>
+arc.getArchive(); // [{ val: 11 }, { val: 13 }]
+```
 
-<p>Neste exemplo, um getter sempre retorna o mesmo valor.</p>
+Neste exemplo, um getter sempre retorna o mesmo valor.
 
-<pre class="brush: js notranslate">var pattern = {
+```js
+var pattern = {
     get: function () {
         return 'Eu sempre retorno esta string, ' +
                'não importa o que você atribuiu';
@@ -339,13 +344,14 @@ console.log(instance.myproperty);
 // Eu sempre retorno esta string, não importa o que você atribuiu
 
 console.log(instance.myname); // esta string é meu nome
-</pre>
+```
 
-<h3 id="Propriedades_de_Herança">Propriedades de Herança </h3>
+### Propriedades de Herança
 
-<p>Se uma propriedade de acessor é herdada, métodos <code>get</code> e <code>set</code> serão chamados quando a propriedade é acessada e modificada sobre os objetos descendentes. Se estes métodos usam uma variável para armazenar o valor, este valor será compartilhada por todos os objetos.</p>
+Se uma propriedade de acessor é herdada, métodos `get` e `set` serão chamados quando a propriedade é acessada e modificada sobre os objetos descendentes. Se estes métodos usam uma variável para armazenar o valor, este valor será compartilhada por todos os objetos.
 
-<pre class="notranslate"><code>function myclass() {
+```
+function myclass() {
 }
 
 var value;
@@ -361,11 +367,13 @@ Object.defineProperty(myclass.prototype, "x", {
 var a = new myclass();
 var b = new myclass();
 a.x = 1;
-console.log(b.x); // 1</code></pre>
+console.log(b.x); // 1
+```
 
-<p>Isto pode ser corrigido armazenando o valor em outra propriedade. Em métodos <code>get</code> e <code>set</code>, <code>this</code> aponta para o objeto no qual é usado para acessar ou modificar a propriedade.</p>
+Isto pode ser corrigido armazenando o valor em outra propriedade. Em métodos `get` e `set`, `this` aponta para o objeto no qual é usado para acessar ou modificar a propriedade.
 
-<pre class="notranslate"><code>function myclass() {
+```
+function myclass() {
 }
 
 Object.defineProperty(myclass.prototype, "x", {
@@ -380,11 +388,13 @@ Object.defineProperty(myclass.prototype, "x", {
 var a = new myclass();
 var b = new myclass();
 a.x = 1;
-console.log(b.x); // undefined</code></pre>
+console.log(b.x); // undefined
+```
 
-<p>Ao contrário das propriedades do acessor, propriedades do valor serão sempre configuradas sobre  o próprio objeto, não sobre um protótipo. Entretanto, se uma propriedade de valor não-gravável é herdada, ele ainda previne de modicação a propriedade do objeto.</p>
+Ao contrário das propriedades do acessor, propriedades do valor serão sempre configuradas sobre o próprio objeto, não sobre um protótipo. Entretanto, se uma propriedade de valor não-gravável é herdada, ele ainda previne de modicação a propriedade do objeto.
 
-<pre class="notranslate"><code>function myclass() {
+```
+function myclass() {
 }
 
 myclass.prototype.x = 1;
@@ -399,76 +409,53 @@ console.log(a.x); // 2
 console.log(myclass.prototype.x); // 1
 a.y = 2; // Ignorado, lança no modo strict
 console.log(a.y); // 1
-console.log(myclass.prototype.y); // 1</code>
-</pre>
+console.log(myclass.prototype.y); // 1
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table>
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentários</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.6', 'Object.defineProperty')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Definição inicial. Implementada no JavaScript 1.8.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.defineproperty', 'Object.defineProperty')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.defineproperty', 'Object.defineProperty')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                            | Status                       | Comentários                                          |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.2.3.6', 'Object.defineProperty')}}                     | {{Spec2('ES5.1')}}     | Definição inicial. Implementada no JavaScript 1.8.5. |
+| {{SpecName('ES6', '#sec-object.defineproperty', 'Object.defineProperty')}}     | {{Spec2('ES6')}}         |                                                      |
+| {{SpecName('ESDraft', '#sec-object.defineproperty', 'Object.defineProperty')}} | {{Spec2('ESDraft')}} |                                                      |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Object.defineProperty")}}</p>
+{{Compat("javascript.builtins.Object.defineProperty")}}
 
-<h2 id="Notas_de_compatibilidade">Notas de compatibilidade</h2>
+## Notas de compatibilidade
 
-<h3 id="Redefinindo_a_propriedade_length_de_um_objeto_Array">Redefinindo a propriedade <code>length</code> de um objeto <code>Array</code> </h3>
+### Redefinindo a propriedade `length` de um objeto `Array`
 
-<p>É possível redefinir a propriedade {{jsxref("Array.length", "length")}} de arrays, sujeita às restrições de redefinição usuais. (A propriedade {{jsxref("Array.length", "length")}} é inicialmente não configurável, não enumerável, mas gravável. Assim, em um array que não foi modificado, é possível alterar o valor da propriedade {{jsxref("Array.length", "length")}} ou torná-la não-gravável. Não é permitido alterar sua enumerabilidade ou configurabilidade, ou quando se encontrar não-gravável, alterar seu valor ou torná-la gravável novamente.) Entretanto, nem todos os browsers permitem esta redefinição.</p>
+É possível redefinir a propriedade {{jsxref("Array.length", "length")}} de arrays, sujeita às restrições de redefinição usuais. (A propriedade {{jsxref("Array.length", "length")}} é inicialmente não configurável, não enumerável, mas gravável. Assim, em um array que não foi modificado, é possível alterar o valor da propriedade {{jsxref("Array.length", "length")}} ou torná-la não-gravável. Não é permitido alterar sua enumerabilidade ou configurabilidade, ou quando se encontrar não-gravável, alterar seu valor ou torná-la gravável novamente.) Entretanto, nem todos os browsers permitem esta redefinição.
 
-<p>Das versões 4 até 22 do Firefox, um {{jsxref("TypeError")}} é lançado em qualquer tentativa (seja ela permitida ou não) de redefinir a propriedade {{jsxref("Array.length", "length")}} de um array.</p>
+Das versões 4 até 22 do Firefox, um {{jsxref("TypeError")}} é lançado em qualquer tentativa (seja ela permitida ou não) de redefinir a propriedade {{jsxref("Array.length", "length")}} de um array.
 
-<p>Versões do Chrome que implementam <code>Object.defineProperty()</code> em algumas circunstâncias ignoram um valor para <em>length</em> diferente do valor atual da propriedade {{jsxref("Array.length", "length")}} do array. Em algumas circustâncias, alterar o atributo <code>writable</code> falha de forma silenciosa (sem lançar uma exceção). Além disso, alguns métodos que modificam o array como {jsxref("Array.prototype.push")}} não respeitam uma propriedade <em>length</em> não-gravável.</p>
+Versões do Chrome que implementam `Object.defineProperty()` em algumas circunstâncias ignoram um valor para _length_ diferente do valor atual da propriedade {{jsxref("Array.length", "length")}} do array. Em algumas circustâncias, alterar o atributo `writable` falha de forma silenciosa (sem lançar uma exceção). Além disso, alguns métodos que modificam o array como {jsxref("Array.prototype.push")}} não respeitam uma propriedade _length_ não-gravável.
 
-<p>Versões do Safari que implementam <code>Object.defineProperty()</code> ignoram um valor para <code>length</code> diferente do valor atual da propriedade {{jsxref("Array.length", "length")}}, e tentantivas de alterar o atributo <code>writable</code> executam sem erros embora não modifiquem seu comportamento.</p>
+Versões do Safari que implementam `Object.defineProperty()` ignoram um valor para `length` diferente do valor atual da propriedade {{jsxref("Array.length", "length")}}, e tentantivas de alterar o atributo `writable` executam sem erros embora não modifiquem seu comportamento.
 
-<p>Apenas o Internet Explorer 9 a posteriores, e o Firefox 23 e posteriores, parecem implementar total e corretamente a redefinição da propriedade {{jsxref("Array.length", "length")}} de arrays. Por enquanto, não confie que a redefinição da propriedade {{jsxref("Array.length", "length")}} vá funcionar, mesmo que de uma forma particular. E mesmo quando você <em>puder </em>confiar, <a href="http://whereswalden.com/2013/08/05/new-in-firefox-23-the-length-property-of-an-array-can-be-made-non-writable-but-you-shouldnt-do-it/">existem boas razões para não fazer isso</a>.</p>
+Apenas o Internet Explorer 9 a posteriores, e o Firefox 23 e posteriores, parecem implementar total e corretamente a redefinição da propriedade {{jsxref("Array.length", "length")}} de arrays. Por enquanto, não confie que a redefinição da propriedade {{jsxref("Array.length", "length")}} vá funcionar, mesmo que de uma forma particular. E mesmo quando você _puder_ confiar, [existem boas razões para não fazer isso](http://whereswalden.com/2013/08/05/new-in-firefox-23-the-length-property-of-an-array-can-be-made-non-writable-but-you-shouldnt-do-it/).
 
-<h3 id="Notas_específicas_para_o_Internet_Explorer_8">Notas específicas para o Internet Explorer 8</h3>
+### Notas específicas para o Internet Explorer 8
 
-<p>O Internet Explorer 8 implementa o método <code>Object.defineProperty()</code> para uso <a href="https://msdn.microsoft.com/en-us/library/dd229916%28VS.85%29.aspx">apenas em objetos DOM</a>. Algumas observações:</p>
+O Internet Explorer 8 implementa o método `Object.defineProperty()` para uso [apenas em objetos DOM](https://msdn.microsoft.com/en-us/library/dd229916%28VS.85%29.aspx). Algumas observações:
 
-<ul>
- <li>Tentativas de usar <code>Object.defineProperty()</code> em objetos nativos lançam um erro.</li>
- <li>Todos os atributos da propriedade devem ter seu valor definido. Os atributos <code>configurable</code>, <code>enumerable</code> e <code>writable</code> devem ser <code>true</code> para um descritor do tipo dado, e <code>true</code> para <code>configurable</code> e <code>false</code> para <code>enumerable</code> em descritores do tipo assessor. (?) Qualquer tentativa de usar outros valores (?) resultará no lançamento de um erro.</li>
- <li>Reconfigurar uma propriedade exige que ela seja deletada anteriormente. Se a propriedade não for deletada, ela permanecerá inalterada após a tentativa de reconfiguração.</li>
-</ul>
+- Tentativas de usar `Object.defineProperty()` em objetos nativos lançam um erro.
+- Todos os atributos da propriedade devem ter seu valor definido. Os atributos `configurable`, `enumerable` e `writable` devem ser `true` para um descritor do tipo dado, e `true` para `configurable` e `false` para `enumerable` em descritores do tipo assessor. (?) Qualquer tentativa de usar outros valores (?) resultará no lançamento de um erro.
+- Reconfigurar uma propriedade exige que ela seja deletada anteriormente. Se a propriedade não for deletada, ela permanecerá inalterada após a tentativa de reconfiguração.
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Enumerability_and_ownership_of_properties">Enumerabilidade and posse de propriedades</a></li>
- <li>{{jsxref("Object.defineProperties()")}}</li>
- <li>{{jsxref("Object.propertyIsEnumerable()")}}</li>
- <li>{{jsxref("Object.getOwnPropertyDescriptor()")}}</li>
- <li>{{jsxref("Object.prototype.watch()")}}</li>
- <li>{{jsxref("Object.prototype.unwatch()")}}</li>
- <li>{{jsxref("Operators/get", "get")}}</li>
- <li>{{jsxref("Operators/set", "set")}}</li>
- <li>{{jsxref("Object.create()")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty/Additional_examples">Exemplos adicionais de <code>Object.defineProperty</code></a></li>
- <li>{{jsxref("Reflect.defineProperty()")}}</li>
-</ul>
+- [Enumerabilidade and posse de propriedades](/pt-BR/docs/Enumerability_and_ownership_of_properties)
+- {{jsxref("Object.defineProperties()")}}
+- {{jsxref("Object.propertyIsEnumerable()")}}
+- {{jsxref("Object.getOwnPropertyDescriptor()")}}
+- {{jsxref("Object.prototype.watch()")}}
+- {{jsxref("Object.prototype.unwatch()")}}
+- {{jsxref("Operators/get", "get")}}
+- {{jsxref("Operators/set", "set")}}
+- {{jsxref("Object.create()")}}
+- [Exemplos adicionais de `Object.defineProperty`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty/Additional_examples)
+- {{jsxref("Reflect.defineProperty()")}}

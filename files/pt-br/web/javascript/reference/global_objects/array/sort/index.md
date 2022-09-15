@@ -3,36 +3,35 @@ title: Array.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>sort()</strong></code> ordena os elementos do próprio array e retorna o array. A ordenação não é necessariamente <a href="https://pt.wikipedia.org/wiki/Ordena%C3%A7%C3%A3o_est%C3%A1vel">estável</a>. A ordenação padrão é de acordo com a  pontuação de código unicode.</p>
+O método **`sort()`** ordena os elementos do próprio array e retorna o array. A ordenação não é necessariamente [estável](https://pt.wikipedia.org/wiki/Ordena%C3%A7%C3%A3o_est%C3%A1vel). A ordenação padrão é de acordo com a pontuação de código unicode.
 
-<p>A complexidade do tempo de execução ou a quantidade de memória utilizada pela ordenação não pode ser garantido e depende da implementação realizada.</p>
+A complexidade do tempo de execução ou a quantidade de memória utilizada pela ordenação não pode ser garantido e depende da implementação realizada.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code><var>arr</var>.sort([funcaoDeComparacao])</code></pre>
+```
+arr.sort([funcaoDeComparacao])
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>funcaoDeComparacao</code> {{optional_inline}}</dt>
- <dd>Especifica uma função que define a ordenação. Se omitido, o array é ordenado de acordo com a pontuação de código <a href="/en-US/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode">Unicode</a> de cada um dos caracteres, de acordo com a conversão de cada elemento para string.</dd>
- <dt>    <code>primeiroElemento</code></dt>
- <dd>    O primeiro elemento para a comparação.</dd>
- <dt>    <code>segundoElemento</code></dt>
- <dd>    O segundo elemento para comparação.</dd>
- <dt>
- <h3 id="Valor_de_Retorno">Valor de Retorno</h3>
- </dt>
- <dd>O array ordenado. Note que o array é ordenado de acordo com a pontuação de código <a href="/en-US/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode">Unicode</a> de cada um dos caracteres, e nenhuma cópia é feita.</dd>
-</dl>
+- `funcaoDeComparacao` {{optional_inline}}
+  - : Especifica uma função que define a ordenação. Se omitido, o array é ordenado de acordo com a pontuação de código [Unicode](/pt-BR/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode) de cada um dos caracteres, de acordo com a conversão de cada elemento para string.
+- `primeiroElemento`
+  - : O primeiro elemento para a comparação.
+- `segundoElemento`
+  - : O segundo elemento para comparação.
+- ### Valor de Retorno
+  - : O array ordenado. Note que o array é ordenado de acordo com a pontuação de código [Unicode](/pt-BR/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode) de cada um dos caracteres, e nenhuma cópia é feita.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Se <strong><code>funcaoDeComparacao</code></strong> não for informado, os elementos serão ordenados de acordo com a sua conversão para texto e o texto comparado na pontuação unicode do texto convertido. Por exemplo, "banana" vem antes de "cherry". Em uma ordenação numérica, 9 vem antes de 80, mas porque os números são convertidos para texto e, "80" vem antes de "9" na ordenação Unicode.</p>
+Se **`funcaoDeComparacao`** não for informado, os elementos serão ordenados de acordo com a sua conversão para texto e o texto comparado na pontuação unicode do texto convertido. Por exemplo, "banana" vem antes de "cherry". Em uma ordenação numérica, 9 vem antes de 80, mas porque os números são convertidos para texto e, "80" vem antes de "9" na ordenação Unicode.
 
-<pre class="brush: js notranslate">var fruit = ['cherries', 'apples', 'bananas'];
+```js
+var fruit = ['cherries', 'apples', 'bananas'];
 fruit.sort(); // ['apples', 'bananas', 'cherries']
 
 var scores = [1, 10, 2, 21];
@@ -44,20 +43,19 @@ var things = ['word', 'Word', '1 Word', '2 Words'];
 things.sort(); // ['1 Word', '2 Words', 'Word', 'word']
 // Em Unicode, números vêem antes de letras maiúsculas,
 // as quais vêem antes das minúsculas.
-</pre>
+```
 
-<p>Se o parametro <code>funcaoDeComparacao</code> é fornecido, o array será ordenado de acordo com o valor de retorno da <code>funcaoDeComparacao</code>. Considerando que <code>a</code> e <code>b</code> são dois elementos sendo comparados, então:</p>
+Se o parametro `funcaoDeComparacao` é fornecido, o array será ordenado de acordo com o valor de retorno da `funcaoDeComparacao`. Considerando que `a` e `b` são dois elementos sendo comparados, então:
 
-<ul>
- <li>Se <code>funcaoDeComparacao(a, b)</code> for menor que 0, ordena <code>a</code> para um índice anterior a <code>b</code>, i.e. a vem primeiro.</li>
- <li>Se <code>funcaoDeComparacao(a, b)</code> retornar 0, deixa <code>a</code> e <code>b</code> inalterados em relação um ao outro, mas ordenado em relação a todos os outros elementos. Nota: O padrão ECMAscript não garante este comportamento, e, portanto, nem todos os navegadores (e.g. Versões do Mozilla anteriores a 2003) respeitarão isto.</li>
- <li>Se <code>funcaoDeComparacao(a, b)</code> é maior que 0, ordena b para um índice anterior que a.</li>
- <li><code>funcaoDeComparacao(a, b)</code> sempre deve retornar o mesmo valor dado um par específico de elementos a e b como seus dois parametros. Se resultados inconsistentes são retornados, então a ordenação é indefinida.</li>
-</ul>
+- Se `funcaoDeComparacao(a, b)` for menor que 0, ordena `a` para um índice anterior a `b`, i.e. a vem primeiro.
+- Se `funcaoDeComparacao(a, b)` retornar 0, deixa `a` e `b` inalterados em relação um ao outro, mas ordenado em relação a todos os outros elementos. Nota: O padrão ECMAscript não garante este comportamento, e, portanto, nem todos os navegadores (e.g. Versões do Mozilla anteriores a 2003) respeitarão isto.
+- Se `funcaoDeComparacao(a, b)` é maior que 0, ordena b para um índice anterior que a.
+- `funcaoDeComparacao(a, b)` sempre deve retornar o mesmo valor dado um par específico de elementos a e b como seus dois parametros. Se resultados inconsistentes são retornados, então a ordenação é indefinida.
 
-<p>Então, a função de comparação tem a seguinte forma:</p>
+Então, a função de comparação tem a seguinte forma:
 
-<pre class="brush: js notranslate">function comparar(a, b) {
+```js
+function comparar(a, b) {
   if (a é menor que b em algum critério de ordenação) {
     return -1;
   }
@@ -67,27 +65,30 @@ things.sort(); // ['1 Word', '2 Words', 'Word', 'word']
   // a deve ser igual a b
   return 0;
 }
-</pre>
+```
 
-<p>Para comparar números ao invés de texto, a função de comparação pode simplesmente subtrair b de a. A função abaixo irá ordenar o array em ordem crescente:</p>
+Para comparar números ao invés de texto, a função de comparação pode simplesmente subtrair b de a. A função abaixo irá ordenar o array em ordem crescente:
 
-<pre class="brush: js notranslate">function compararNumeros(a, b) {
+```js
+function compararNumeros(a, b) {
   return a - b;
 }
-</pre>
+```
 
-<p>O método de ordenação pode convenientemente ser usada com {{jsxref("Operators/function", "funções anônimas", "", 1)}} (e <a href="/en-US/docs/Web/JavaScript/Guide/Closures">closures</a>):</p>
+O método de ordenação pode convenientemente ser usada com {{jsxref("Operators/function", "funções anônimas", "", 1)}} (e [closures](/pt-BR/docs/Web/JavaScript/Guide/Closures)):
 
-<pre class="brush: js notranslate">var numbers = [4, 2, 5, 1, 3];
+```js
+var numbers = [4, 2, 5, 1, 3];
 numbers.sort(function(a, b) {
   return a - b;
 });
 console.log(numbers);
-</pre>
+```
 
-<p>Objetos podem ser ordenados de acordo com o valor de uma de suas propriedades.</p>
+Objetos podem ser ordenados de acordo com o valor de uma de suas propriedades.
 
-<pre class="brush: js notranslate" id="expanded-example">var items = [
+```js
+var items = [
   { name: 'Edward', value: 21 },
   { name: 'Sharpe', value: 37 },
   { name: 'And', value: 45 },
@@ -96,24 +97,25 @@ console.log(numbers);
   { name: 'Zeros', value: 37 }
 ];
 items.sort(function (a, b) {
-  if (a.name &gt; b.name) {
+  if (a.name > b.name) {
     return 1;
   }
-  if (a.name &lt; b.name) {
+  if (a.name < b.name) {
     return -1;
   }
   // a must be equal to b
   return 0;
 });
-</pre>
+```
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Criando_exibindo_e_ordenando_um_array">Criando, exibindo, e ordenando um array</h3>
+### Criando, exibindo, e ordenando um array
 
-<p>O exemplo abaixo cria quatro arrays e mostra seu conteúdo original, então o conteúdo dos arrays ordenado. Os arrays numéricos são ordenados sem a função de comparação, e então, com a função.</p>
+O exemplo abaixo cria quatro arrays e mostra seu conteúdo original, então o conteúdo dos arrays ordenado. Os arrays numéricos são ordenados sem a função de comparação, e então, com a função.
 
-<pre class="brush: js notranslate">var stringArray = ['Blue', 'Humpback', 'Beluga'];
+```js
+var stringArray = ['Blue', 'Humpback', 'Beluga'];
 var numericStringArray = ['80', '9', '700'];
 var numberArray = [40, 1, 5, 200];
 var mixedNumericArray = ['80', '9', '700', 40, 1, 5, 200];
@@ -136,11 +138,12 @@ console.log('Ordenada com compararNumeros:', numericStringArray.sort(compararNum
 console.log('mixedNumericArray:', mixedNumericArray.join());
 console.log('Ordenada sem função de comparação:', mixedNumericArray.sort());
 console.log('Ordenada com compararNumeros:', mixedNumericArray.sort(compararNumeros));
-</pre>
+```
 
-<p>Este exemplo gera a saída abaixo. Como as saídas mostram, quando a função de comparação é usada, os números são ordenados corretamente, sejam eles números ou strings numéricas.</p>
+Este exemplo gera a saída abaixo. Como as saídas mostram, quando a função de comparação é usada, os números são ordenados corretamente, sejam eles números ou strings numéricas.
 
-<pre class="notranslate">stringArray: Blue,Humpback,Beluga
+```
+stringArray: Blue,Humpback,Beluga
 Ordenada: Beluga,Blue,Humpback
 
 numberArray: 40,1,5,200
@@ -154,25 +157,27 @@ Ordenada com compararNumeros: 9,80,700
 mixedNumericArray: 80,9,700,40,1,5,200
 Ordenada sem função de comparação: 1,200,40,5,700,80,9
 Ordenada com compararNumeros: 1,5,9,40,80,200,700
-</pre>
+```
 
-<h3 id="Ordenando_caracteres_não-ASCII">Ordenando caracteres não-ASCII</h3>
+### Ordenando caracteres não-ASCII
 
-<p>Para ordenar strings com caracteres não-ASCII, i.e. strings com caracteres acentuados (e, é, è, a, ä, etc.), strings de línguas diferentes do Inglês: use {{jsxref("String.localeCompare")}}. Esta função pode comparar estes caracteres, então eles aparecerão na ordem correta.</p>
+Para ordenar strings com caracteres não-ASCII, i.e. strings com caracteres acentuados (e, é, è, a, ä, etc.), strings de línguas diferentes do Inglês: use {{jsxref("String.localeCompare")}}. Esta função pode comparar estes caracteres, então eles aparecerão na ordem correta.
 
-<pre class="brush: js notranslate">var items = ['réservé', 'premier', 'cliché', 'communiqué', 'café', 'adieu'];
+```js
+var items = ['réservé', 'premier', 'cliché', 'communiqué', 'café', 'adieu'];
 items.sort(function (a, b) {
   return a.localeCompare(b);
 });
 
 // items é ['adieu', 'café', 'cliché', 'communiqué', 'premier', 'réservé']
-</pre>
+```
 
-<h3 id="Ordenando_com_mapa">Ordenando com mapa</h3>
+### Ordenando com mapa
 
-<p>A <code>funcaoDeComparacao</code> pode ser invocada múltiplas vezes por elemento do array. Dependendo da natureza da <code>funcaoDeComparacao</code>, isto pode causar um excesso processamento. Quanto mais trabalho a <code>funcaoDeComparacao</code> fizer, e quanto mais elementos houverem para ordenar, seria mais inteligente considerar  o uso de um mapa para a ordenação. A idéia é percorrer o array uma vez para extrair os valores já processados para a ordenação e armazenar em um array temporário, ordenar o array temporário e então percorrer o array temporário para conseguir a ordenação correta.</p>
+A `funcaoDeComparacao` pode ser invocada múltiplas vezes por elemento do array. Dependendo da natureza da `funcaoDeComparacao`, isto pode causar um excesso processamento. Quanto mais trabalho a `funcaoDeComparacao` fizer, e quanto mais elementos houverem para ordenar, seria mais inteligente considerar o uso de um mapa para a ordenação. A idéia é percorrer o array uma vez para extrair os valores já processados para a ordenação e armazenar em um array temporário, ordenar o array temporário e então percorrer o array temporário para conseguir a ordenação correta.
 
-<pre class="brush: js notranslate">// o array a ser ordenado
+```js
+// o array a ser ordenado
 var list = ['Delta', 'alpha', 'CHARLIE', 'bravo'];
 
 // array temporário que armazena os objetos com o índice e o valor para ordenação
@@ -182,49 +187,28 @@ var mapped = list.map(function(el, i) {
 
 // ordenando o array mapeado contendo os dados resumidos
 mapped.sort(function(a, b) {
-  return +(a.value &gt; b.value) || +(a.value === b.value) - 1;
+  return +(a.value > b.value) || +(a.value === b.value) - 1;
 });
 
 // container para o resultado ordenado
 var result = mapped.map(function(el){
   return list[el.index];
 });
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição Inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.11', 'Array.prototype.sort')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.sort', 'Array.prototype.sort')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                    | Status                   | Comentário         |
+| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
+| {{SpecName('ES1')}}                                                                         | {{Spec2('ES1')}}     | Definição Inicial. |
+| {{SpecName('ES5.1', '#sec-15.4.4.11', 'Array.prototype.sort')}}             | {{Spec2('ES5.1')}} |                    |
+| {{SpecName('ES6', '#sec-array.prototype.sort', 'Array.prototype.sort')}} | {{Spec2('ES6')}}     |                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div id="compat-desktop">{{Compat("javascript.builtins.Array.sort")}}</div>
+{{Compat("javascript.builtins.Array.sort")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Array.prototype.reverse()")}}</li>
- <li>{{jsxref("String.prototype.localeCompare()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.reverse()")}}
+- {{jsxref("String.prototype.localeCompare()")}}

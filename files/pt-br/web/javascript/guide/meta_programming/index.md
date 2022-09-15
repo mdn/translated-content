@@ -3,207 +3,361 @@ title: Meta programação
 slug: Web/JavaScript/Guide/Meta_programming
 translation_of: Web/JavaScript/Guide/Meta_programming
 ---
-<div>{{jsSidebar("JavaScript Guide")}} {{Previous("Web/JavaScript/Guide/Iterators_and_Generators")}}</div>
+{{jsSidebar("JavaScript Guide")}} {{Previous("Web/JavaScript/Guide/Iterators_and_Generators")}}
 
-<p>Começando com ECMAScript 6, o JavaScript ganha suporte para os objetos {{jsxref("Proxy")}} e {{jsxref("Reflect")}}, permitindo você interceptar e definir o comportamento personalizado para operações fundamentais da linguagem (por exemplo, pesquisa de propriedade, atribuição, enumeração, invocação de função, etc). Com a ajuda destes dois objetos você será capaz de programar a nível <a href="https://pt.wikipedia.org/wiki/Metaprograma%C3%A7%C3%A3o">meta</a> em JavaScript.</p>
+Começando com ECMAScript 6, o JavaScript ganha suporte para os objetos {{jsxref("Proxy")}} e {{jsxref("Reflect")}}, permitindo você interceptar e definir o comportamento personalizado para operações fundamentais da linguagem (por exemplo, pesquisa de propriedade, atribuição, enumeração, invocação de função, etc). Com a ajuda destes dois objetos você será capaz de programar a nível [meta](https://pt.wikipedia.org/wiki/Metaprograma%C3%A7%C3%A3o) em JavaScript.
 
-<h2 id="Proxies">Proxies</h2>
+## Proxies
 
-<p>Introduzido em ECMAScript 6, objetos {{jsxref("Proxy")}} permitem que você intercepte determinadas operações e implementar comportamentos personalizados. Por exemplo, receber uma propriedade em um objeto:</p>
+Introduzido em ECMAScript 6, objetos {{jsxref("Proxy")}} permitem que você intercepte determinadas operações e implementar comportamentos personalizados. Por exemplo, receber uma propriedade em um objeto:
 
-<pre class="brush: js notranslate">var handler = {
+```js
+var handler = {
   get: function(target, name){
     return name in target ? target[name] : 42;
 }};
 var p = new Proxy({}, handler);
 p.a = 1;
 console.log(p.a, p.b); // 1, 42
-</pre>
+```
 
-<p>O objeto Proxy define um <em>target</em> (um objeto vazio aqui) e um objeto <em>handler</em> em que um <code>get</code> <em>trap</em> é implementado. Aqui, um objeto que está em proxy não retornará indefinido quando receber propriedades indefinidas, mas, ao contrário, retornar o número 42.</p>
+O objeto Proxy define um _target_ (um objeto vazio aqui) e um objeto _handler_ em que um `get` _trap_ é implementado. Aqui, um objeto que está em proxy não retornará indefinido quando receber propriedades indefinidas, mas, ao contrário, retornar o número 42.
 
-<p>Exemplos adicionais estão disponíveis na página de referência de {{jsxref("Proxy")}} .</p>
+Exemplos adicionais estão disponíveis na página de referência de {{jsxref("Proxy")}} .
 
-<h3 id="Terminologia">Terminologia</h3>
+### Terminologia
 
-<p>Os seguintes termos são usados ​​quando se fala sobre a funcionalidade de proxies.</p>
+Os seguintes termos são usados ​​quando se fala sobre a funcionalidade de proxies.
 
-<dl>
- <dt>{{jsxref("Global_Objects/Proxy/handler","handler","","true")}}</dt>
- <dd>Espaço reservado de objeto que contenha traps.</dd>
- <dt>traps</dt>
- <dd>Os métodos que fornecem acesso de propriedade. Isto é análogo ao conceito de traps em sistemas operacionais.</dd>
- <dt>target</dt>
- <dd>Objeto que o proxy está virtualizando. Ele é frequentemente usado como backend de armazenamento para o proxy. Invariantes (semânticas que permanecem inalteradas) relativas a objetos que não podem ser extendidos ou propriedades que não podem ser configuradas são comparadas com o target. </dd>
- <dt>invariantes</dt>
- <dd>Semânticas que permanecem inalteradas na execução de operações personalizadas são chamados de <em>invariantes</em>. Se você violar as invariantes de um manipulador, um {{jsxref("TypeError")}} será lançado.</dd>
-</dl>
+- {{jsxref("Global_Objects/Proxy/handler","handler","","true")}}
+  - : Espaço reservado de objeto que contenha traps.
+- traps
+  - : Os métodos que fornecem acesso de propriedade. Isto é análogo ao conceito de traps em sistemas operacionais.
+- target
+  - : Objeto que o proxy está virtualizando. Ele é frequentemente usado como backend de armazenamento para o proxy. Invariantes (semânticas que permanecem inalteradas) relativas a objetos que não podem ser extendidos ou propriedades que não podem ser configuradas são comparadas com o target.
+- invariantes
+  - : Semânticas que permanecem inalteradas na execução de operações personalizadas são chamados de _invariantes_. Se você violar as invariantes de um manipulador, um {{jsxref("TypeError")}} será lançado.
 
-<h2 id="Handlers_e_traps">Handlers e traps</h2>
+## Handlers e traps
 
-<p>A tabela a seguir resume as traps disponíveis aos objetos do tipo Proxy. Veja as <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler">páginas de referência</a> para explicações detalhadas e exemplos.</p>
+A tabela a seguir resume as traps disponíveis aos objetos do tipo Proxy. Veja as [páginas de referência](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler) para explicações detalhadas e exemplos.
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th>Handler / trap</th>
-   <th>Interceptions</th>
-   <th>Invariants</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{jsxref("Global_Objects/Proxy/handler/getPrototypeOf", "handler.getPrototypeOf()")}}</td>
-   <td>{{jsxref("Object.getPrototypeOf()")}}<br>
-    {{jsxref("Reflect.getPrototypeOf()")}}<br>
-    {{jsxref("Object/proto", "__proto__")}}<br>
-    {{jsxref("Object.prototype.isPrototypeOf()")}}<br>
-    {{jsxref("Operators/instanceof", "instanceof")}}</td>
-   <td>
-    <ul style="padding-left: 20px; margin: 5px;">
-     <li>O método <code>getPrototypeOf</code> deve retornar um object ou <code>null</code>.</li>
-     <li><font face="Open Sans, arial, sans-serif">Se </font><code>target</code> não puder ser extendido, o método <code>Object.getPrototypeOf(proxy)</code> deve retornar o mesmo valor que <code>Object.getPrototypeOf(target)</code>.</li>
-    </ul>
-   </td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Global_Objects/Proxy/handler/setPrototypeOf", "handler.setPrototypeOf()")}}</td>
-   <td>{{jsxref("Object.setPrototypeOf()")}}<br>
-    {{jsxref("Reflect.setPrototypeOf()")}}</td>
-   <td>
-    <p>Se <code>target </code>não puder ser extendido, o parâmetro <code>prototype </code>dever ter o mesmo valor que  <code>Object.getPrototypeOf(target)</code>.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Global_Objects/Proxy/handler/isExtensible", "handler.isExtensible()")}}</td>
-   <td>{{jsxref("Object.isExtensible()")}}<br>
-    {{jsxref("Reflect.isExtensible()")}}</td>
-   <td><code>Object.isExtensible(proxy)</code> deve retornar o mesmo valor que <code>Object.isExtensible(target)</code>.</td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Global_Objects/Proxy/handler/preventExtensions", "handler.preventExtensions()")}}</td>
-   <td>{{jsxref("Object.preventExtensions()")}}<br>
-    {{jsxref("Reflect.preventExtensions()")}}</td>
-   <td><code>Object.preventExtensions(proxy)</code> retorna <code>true</code> somente se <code>Object.isExtensible(proxy)</code> retornar <code>false</code>.</td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Global_Objects/Proxy/handler/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}</td>
-   <td>{{jsxref("Object.getOwnPropertyDescriptor()")}}<br>
-    {{jsxref("Reflect.getOwnPropertyDescriptor()")}}</td>
-   <td>
-    <ul style="padding-left: 20px; margin: 5px;">
-     <li><code>getOwnPropertyDescriptor</code> deve retornar um object ou <code>undefined</code>.</li>
-     <li>Uma propriedade não pode ser descrita como não existente se ela existir como uma propriedade própria e não configurável do objeto alvo.</li>
-     <li>Uma propriedade não pode ser relatada como inexistente, se existir como uma propriedade própria do objeto de destino e o objeto de destino não for extensível.</li>
-     <li>Uma propriedade não pode ser relatada como existente, se não existir como uma propriedade própria do objeto de destino e o objeto de destino não for extensível.</li>
-     <li>Uma propriedade não pode ser relatada como não configurável, se não existir como uma propriedade própria do objeto de destino ou se existir como uma propriedade própria configurável do objeto de destino.</li>
-     <li>O resultado de <code>Object.getOwnPropertyDescriptor(target)</code> pode ser aplicado ao objeto de destino usando <code>Object.defineProperty</code> e não emitirá uma exceção.</li>
-    </ul>
-   </td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty()")}}</td>
-   <td>{{jsxref("Object.defineProperty()")}}<br>
-    {{jsxref("Reflect.defineProperty()")}}</td>
-   <td>
-    <ul style="padding-left: 20px; margin: 5px;">
-     <li>Uma propriedade não pode ser adicionada se o objeto de destino não for extensível.</li>
-     <li>Uma propriedade não pode ser adicionada como ou modificada para não ser configurável, se não existir como uma propriedade própria não configurável do objeto de destino.</li>
-     <li>Uma propriedade pode não ser não configurável, se existir uma propriedade configurável correspondente do objeto de destino.</li>
-     <li>Se uma propriedade tiver uma propriedade de objeto de destino correspondente <code>Object.defineProperty(target, prop, descriptor)</code> não lançará uma exceção.</li>
-     <li>No modo estrito, um valor de retorno <code>false</code> do manipulador <code>defineProperty</code> manipulador lançará um {{jsxref("TypeError")}} exceção.</li>
-    </ul>
-   </td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Global_Objects/Proxy/handler/has", "handler.has()")}}</td>
-   <td>Property query: <code>foo in proxy</code><br>
-    Inherited property query: <code>foo in Object.create(proxy)</code><br>
-    {{jsxref("Reflect.has()")}}</td>
-   <td>
-    <ul style="padding-left: 20px; margin: 5px;">
-     <li>Uma propriedade não pode ser relatada como inexistente, se existir como uma propriedade própria não configurável do objeto de destino.</li>
-     <li>Uma propriedade não pode ser relatada como inexistente, se existir como uma propriedade própria do objeto de destino e o objeto de destino não for extensível.</li>
-    </ul>
-   </td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Global_Objects/Proxy/handler/get", "handler.get()")}}</td>
-   <td>Property access: <code>proxy[foo]</code>and <code>proxy.bar</code><br>
-    Inherited property access: <code>Object.create(proxy)[foo]</code><br>
-    {{jsxref("Reflect.get()")}}</td>
-   <td>
-    <ul style="padding-left: 20px; margin: 5px;">
-     <li>O valor relatado para uma propriedade deve ser igual ao valor da propriedade do objeto de destino correspondente se a propriedade do objeto de destino for uma propriedade de dados não gravável e não configurável.</li>
-     <li>O valor relatado para uma propriedade deve ser indefinido se a propriedade do objeto de destino correspondente for uma propriedade acessora não configurável que tenha sido indefinida como seu atributo [[Get]].</li>
-    </ul>
-   </td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Global_Objects/Proxy/handler/set", "handler.set()")}}</td>
-   <td>Property assignment: <code>proxy[foo] = bar</code> and <code>proxy.foo = bar</code><br>
-    Inherited property assignment: <code>Object.create(proxy)[foo] = bar</code><br>
-    {{jsxref("Reflect.set()")}}</td>
-   <td>
-    <ul style="padding-left: 20px; margin: 5px;">
-     <li>Não é possível alterar o valor de uma propriedade para ser diferente do valor da propriedade do objeto de destino correspondente se a propriedade do objeto de destino correspondente for uma propriedade de dados não gravável e não configurável.</li>
-     <li>Não é possível definir o valor de uma propriedade se a propriedade do objeto de destino correspondente for uma propriedade acessadora não configurável que tenha <code>undefined</code> como seu atributo [[Set]].</li>
-     <li>No modo estrito, um valor de retorno <code>false</code> do manipulador <code>set</code> lançará uma exceção {{jsxref ("TypeError")}}}.</li>
-    </ul>
-   </td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Global_Objects/Proxy/handler/deleteProperty", "handler.deleteProperty()")}}</td>
-   <td>Property deletion: <code>delete proxy[foo]</code> and <code>delete proxy.foo</code><br>
-    {{jsxref("Reflect.deleteProperty()")}}</td>
-   <td>Uma propriedade não pode ser excluída, se existir como uma propriedade própria não configurável do objeto de destino.</td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Global_Objects/Proxy/handler/enumerate", "handler.enumerate()")}}</td>
-   <td>Property enumeration / for...in: <code>for (var name in proxy) {...}</code><br>
-    {{jsxref("Reflect.enumerate()")}}</td>
-   <td>
-    <p>O método <code>enumerate</code> deve retornar um objeto.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Global_Objects/Proxy/handler/ownKeys", "handler.ownKeys()")}}</td>
-   <td>{{jsxref("Object.getOwnPropertyNames()")}}<br>
-    {{jsxref("Object.getOwnPropertySymbols()")}}<br>
-    {{jsxref("Object.keys()")}}<br>
-    {{jsxref("Reflect.ownKeys()")}}</td>
-   <td>
-    <ul style="padding-left: 20px; margin: 5px;">
-     <li>O resultado de <code>ownKeys</code> é uma lista.</li>
-     <li>O tipo de cada elemento da lista de resultados é {{jsxref ("String")}} ou {{jsxref ("Symbol")}}.</li>
-     <li>A lista de resultados deve conter as chaves de todas as propriedades próprias não configuráveis do objeto de destino.</li>
-     <li>Se o objeto de destino não for extensível, a Lista de resultados deverá conter todas as chaves das próprias propriedades do objeto de destino e nenhum outro valor.</li>
-    </ul>
-   </td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Global_Objects/Proxy/handler/apply", "handler.apply()")}}</td>
-   <td><code>proxy(..args)</code><br>
-    {{jsxref("Function.prototype.apply()")}} and {{jsxref("Function.prototype.call()")}}<br>
-    {{jsxref("Reflect.apply()")}}</td>
-   <td>
-    <p>Não há invariantes para o método <code>handler.apply</code></p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Global_Objects/Proxy/handler/construct", "handler.construct()")}}</td>
-   <td><code>new proxy(...args)</code><br>
-    {{jsxref("Reflect.construct()")}}</td>
-   <td>O resultado deve ser um <code>Object</code>.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th>Handler / trap</th>
+      <th>Interceptions</th>
+      <th>Invariants</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{jsxref("Global_Objects/Proxy/handler/getPrototypeOf", "handler.getPrototypeOf()")}}
+      </td>
+      <td>
+        {{jsxref("Object.getPrototypeOf()")}}<br />{{jsxref("Reflect.getPrototypeOf()")}}<br />{{jsxref("Object/proto", "__proto__")}}<br />{{jsxref("Object.prototype.isPrototypeOf()")}}<br />{{jsxref("Operators/instanceof", "instanceof")}}
+      </td>
+      <td>
+        <ul style="padding-left: 20px; margin: 5px">
+          <li>
+            O método <code>getPrototypeOf</code> deve retornar um object ou
+            <code>null</code>.
+          </li>
+          <li>
+            <font face="Open Sans, arial, sans-serif">Se </font
+            ><code>target</code> não puder ser extendido, o método
+            <code>Object.getPrototypeOf(proxy)</code> deve retornar o mesmo
+            valor que <code>Object.getPrototypeOf(target)</code>.
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{jsxref("Global_Objects/Proxy/handler/setPrototypeOf", "handler.setPrototypeOf()")}}
+      </td>
+      <td>
+        {{jsxref("Object.setPrototypeOf()")}}<br />{{jsxref("Reflect.setPrototypeOf()")}}
+      </td>
+      <td>
+        <p>
+          Se <code>target </code>não puder ser extendido, o parâmetro
+          <code>prototype </code>dever ter o mesmo valor que
+          <code>Object.getPrototypeOf(target)</code>.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{jsxref("Global_Objects/Proxy/handler/isExtensible", "handler.isExtensible()")}}
+      </td>
+      <td>
+        {{jsxref("Object.isExtensible()")}}<br />{{jsxref("Reflect.isExtensible()")}}
+      </td>
+      <td>
+        <code>Object.isExtensible(proxy)</code> deve retornar o mesmo valor que
+        <code>Object.isExtensible(target)</code>.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{jsxref("Global_Objects/Proxy/handler/preventExtensions", "handler.preventExtensions()")}}
+      </td>
+      <td>
+        {{jsxref("Object.preventExtensions()")}}<br />{{jsxref("Reflect.preventExtensions()")}}
+      </td>
+      <td>
+        <code>Object.preventExtensions(proxy)</code> retorna
+        <code>true</code> somente se
+        <code>Object.isExtensible(proxy)</code> retornar <code>false</code>.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{jsxref("Global_Objects/Proxy/handler/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}
+      </td>
+      <td>
+        {{jsxref("Object.getOwnPropertyDescriptor()")}}<br />{{jsxref("Reflect.getOwnPropertyDescriptor()")}}
+      </td>
+      <td>
+        <ul style="padding-left: 20px; margin: 5px">
+          <li>
+            <code>getOwnPropertyDescriptor</code> deve retornar um object ou
+            <code>undefined</code>.
+          </li>
+          <li>
+            Uma propriedade não pode ser descrita como não existente se ela
+            existir como uma propriedade própria e não configurável do objeto
+            alvo.
+          </li>
+          <li>
+            Uma propriedade não pode ser relatada como inexistente, se existir
+            como uma propriedade própria do objeto de destino e o objeto de
+            destino não for extensível.
+          </li>
+          <li>
+            Uma propriedade não pode ser relatada como existente, se não existir
+            como uma propriedade própria do objeto de destino e o objeto de
+            destino não for extensível.
+          </li>
+          <li>
+            Uma propriedade não pode ser relatada como não configurável, se não
+            existir como uma propriedade própria do objeto de destino ou se
+            existir como uma propriedade própria configurável do objeto de
+            destino.
+          </li>
+          <li>
+            O resultado de
+            <code>Object.getOwnPropertyDescriptor(target)</code> pode ser
+            aplicado ao objeto de destino usando
+            <code>Object.defineProperty</code> e não emitirá uma exceção.
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty()")}}
+      </td>
+      <td>
+        {{jsxref("Object.defineProperty()")}}<br />{{jsxref("Reflect.defineProperty()")}}
+      </td>
+      <td>
+        <ul style="padding-left: 20px; margin: 5px">
+          <li>
+            Uma propriedade não pode ser adicionada se o objeto de destino não
+            for extensível.
+          </li>
+          <li>
+            Uma propriedade não pode ser adicionada como ou modificada para não
+            ser configurável, se não existir como uma propriedade própria não
+            configurável do objeto de destino.
+          </li>
+          <li>
+            Uma propriedade pode não ser não configurável, se existir uma
+            propriedade configurável correspondente do objeto de destino.
+          </li>
+          <li>
+            Se uma propriedade tiver uma propriedade de objeto de destino
+            correspondente
+            <code>Object.defineProperty(target, prop, descriptor)</code> não
+            lançará uma exceção.
+          </li>
+          <li>
+            No modo estrito, um valor de retorno <code>false</code> do
+            manipulador <code>defineProperty</code> manipulador lançará um
+            {{jsxref("TypeError")}} exceção.
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{jsxref("Global_Objects/Proxy/handler/has", "handler.has()")}}
+      </td>
+      <td>
+        Property query: <code>foo in proxy</code><br />Inherited property query:
+        <code>foo in Object.create(proxy)</code
+        ><br />{{jsxref("Reflect.has()")}}
+      </td>
+      <td>
+        <ul style="padding-left: 20px; margin: 5px">
+          <li>
+            Uma propriedade não pode ser relatada como inexistente, se existir
+            como uma propriedade própria não configurável do objeto de destino.
+          </li>
+          <li>
+            Uma propriedade não pode ser relatada como inexistente, se existir
+            como uma propriedade própria do objeto de destino e o objeto de
+            destino não for extensível.
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{jsxref("Global_Objects/Proxy/handler/get", "handler.get()")}}
+      </td>
+      <td>
+        Property access: <code>proxy[foo]</code>and <code>proxy.bar</code
+        ><br />Inherited property access: <code>Object.create(proxy)[foo]</code
+        ><br />{{jsxref("Reflect.get()")}}
+      </td>
+      <td>
+        <ul style="padding-left: 20px; margin: 5px">
+          <li>
+            O valor relatado para uma propriedade deve ser igual ao valor da
+            propriedade do objeto de destino correspondente se a propriedade do
+            objeto de destino for uma propriedade de dados não gravável e não
+            configurável.
+          </li>
+          <li>
+            O valor relatado para uma propriedade deve ser indefinido se a
+            propriedade do objeto de destino correspondente for uma propriedade
+            acessora não configurável que tenha sido indefinida como seu
+            atributo [[Get]].
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{jsxref("Global_Objects/Proxy/handler/set", "handler.set()")}}
+      </td>
+      <td>
+        Property assignment: <code>proxy[foo] = bar</code> and
+        <code>proxy.foo = bar</code><br />Inherited property assignment:
+        <code>Object.create(proxy)[foo] = bar</code
+        ><br />{{jsxref("Reflect.set()")}}
+      </td>
+      <td>
+        <ul style="padding-left: 20px; margin: 5px">
+          <li>
+            Não é possível alterar o valor de uma propriedade para ser diferente
+            do valor da propriedade do objeto de destino correspondente se a
+            propriedade do objeto de destino correspondente for uma propriedade
+            de dados não gravável e não configurável.
+          </li>
+          <li>
+            Não é possível definir o valor de uma propriedade se a propriedade
+            do objeto de destino correspondente for uma propriedade acessadora
+            não configurável que tenha <code>undefined</code> como seu atributo
+            [[Set]].
+          </li>
+          <li>
+            No modo estrito, um valor de retorno <code>false</code> do
+            manipulador <code>set</code> lançará uma exceção
+            {{jsxref ("TypeError")}}}.
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{jsxref("Global_Objects/Proxy/handler/deleteProperty", "handler.deleteProperty()")}}
+      </td>
+      <td>
+        Property deletion: <code>delete proxy[foo]</code> and
+        <code>delete proxy.foo</code
+        ><br />{{jsxref("Reflect.deleteProperty()")}}
+      </td>
+      <td>
+        Uma propriedade não pode ser excluída, se existir como uma propriedade
+        própria não configurável do objeto de destino.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{jsxref("Global_Objects/Proxy/handler/enumerate", "handler.enumerate()")}}
+      </td>
+      <td>
+        Property enumeration / for...in:
+        <code>for (var name in proxy) {...}</code
+        ><br />{{jsxref("Reflect.enumerate()")}}
+      </td>
+      <td>
+        <p>O método <code>enumerate</code> deve retornar um objeto.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{jsxref("Global_Objects/Proxy/handler/ownKeys", "handler.ownKeys()")}}
+      </td>
+      <td>
+        {{jsxref("Object.getOwnPropertyNames()")}}<br />{{jsxref("Object.getOwnPropertySymbols()")}}<br />{{jsxref("Object.keys()")}}<br />{{jsxref("Reflect.ownKeys()")}}
+      </td>
+      <td>
+        <ul style="padding-left: 20px; margin: 5px">
+          <li>O resultado de <code>ownKeys</code> é uma lista.</li>
+          <li>
+            O tipo de cada elemento da lista de resultados é
+            {{jsxref ("String")}} ou {{jsxref ("Symbol")}}.
+          </li>
+          <li>
+            A lista de resultados deve conter as chaves de todas as propriedades
+            próprias não configuráveis do objeto de destino.
+          </li>
+          <li>
+            Se o objeto de destino não for extensível, a Lista de resultados
+            deverá conter todas as chaves das próprias propriedades do objeto de
+            destino e nenhum outro valor.
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{jsxref("Global_Objects/Proxy/handler/apply", "handler.apply()")}}
+      </td>
+      <td>
+        <code>proxy(..args)</code
+        ><br />{{jsxref("Function.prototype.apply()")}} and
+        {{jsxref("Function.prototype.call()")}}<br />{{jsxref("Reflect.apply()")}}
+      </td>
+      <td>
+        <p>Não há invariantes para o método <code>handler.apply</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{jsxref("Global_Objects/Proxy/handler/construct", "handler.construct()")}}
+      </td>
+      <td>
+        <code>new proxy(...args)</code
+        ><br />{{jsxref("Reflect.construct()")}}
+      </td>
+      <td>O resultado deve ser um <code>Object</code>.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Proxy_Revogável">Proxy Revogável</h2>
+## Proxy Revogável
 
-<p>O método {{jsxref("Proxy.revocable()")}} é utilizado para criar um objeto Proxy revogável. Isso significa que o proxy pode ser revogado através da função <code>revoke</code>, desligando-o. Depois disso, qualquer operação com o proxy lançará um {{jsxref("TypeError")}}.</p>
+O método {{jsxref("Proxy.revocable()")}} é utilizado para criar um objeto Proxy revogável. Isso significa que o proxy pode ser revogado através da função `revoke`, desligando-o. Depois disso, qualquer operação com o proxy lançará um {{jsxref("TypeError")}}.
 
-<pre class="brush: js notranslate">var revocable = Proxy.revocable({}, {
+```js
+var revocable = Proxy.revocable({}, {
   get: function(target, name) {
     return "[[" + name + "]]";
   }
@@ -216,28 +370,33 @@ revocable.revoke();
 console.log(proxy.foo); // TypeError é lançado
 proxy.foo = 1           // TypeError novamente
 delete proxy.foo;       // ainda um TypeError
-typeof proxy            // "object", typeof não desencadeia nenhuma trap</pre>
+typeof proxy            // "object", typeof não desencadeia nenhuma trap
+```
 
-<h2 id="Reflexão">Reflexão</h2>
+## Reflexão
 
-<p>{{jsxref("Reflect")}} é um objeto embutido que contém métodos que permitem a criação  de operações interceptáveis em JavaScript. Os métodos são iguais àqueles de {{jsxref("Global_Objects/Proxy/handler","proxy handlers","","true")}}. <code>Reflect </code>não é um objeto do tipo function.</p>
+{{jsxref("Reflect")}} é um objeto embutido que contém métodos que permitem a criação de operações interceptáveis em JavaScript. Os métodos são iguais àqueles de {{jsxref("Global_Objects/Proxy/handler","proxy handlers","","true")}}. `Reflect `não é um objeto do tipo function.
 
-<p><code>Reflect </code>auxilia no encaminhamento de operações padrão do handler para o target.</p>
+`Reflect `auxilia no encaminhamento de operações padrão do handler para o target.
 
-<p>{{jsxref("Reflect.has()")}}, por exemplo, tem o mesmo efeito prático que o operador in, com a facilidade de ser utilizado como uma função:</p>
+{{jsxref("Reflect.has()")}}, por exemplo, tem o mesmo efeito prático que o operador in, com a facilidade de ser utilizado como uma função:
 
-<pre class="brush: js notranslate">Reflect.has(Object, "assign"); // true
-</pre>
+```js
+Reflect.has(Object, "assign"); // true
+```
 
-<h3 id="Uma_função_apply_melhorada">Uma função <code>apply </code>melhorada</h3>
+### Uma função `apply `melhorada
 
-<p>Em ES5, você normalmente utiliza o método {{jsxref("Function.prototype.apply()")}} para invocar uma função com um dado valor para <code>this</code> e <code>arguments</code> fornecido como um array (ou um <a href="/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects">objeto parecido com um array</a>).</p>
+Em ES5, você normalmente utiliza o método {{jsxref("Function.prototype.apply()")}} para invocar uma função com um dado valor para `this` e `arguments` fornecido como um array (ou um [objeto parecido com um array](/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)).
 
-<pre class="brush: js notranslate">Function.prototype.apply.call(Math.floor, undefined, [1.75]);</pre>
+```js
+Function.prototype.apply.call(Math.floor, undefined, [1.75]);
+```
 
-<p>Com {{jsxref("Reflect.apply")}} essa operação se torna menos verbosa e mais fácil de compreender:</p>
+Com {{jsxref("Reflect.apply")}} essa operação se torna menos verbosa e mais fácil de compreender:
 
-<pre class="brush: js notranslate">Reflect.apply(Math.floor, undefined, [1.75]);
+```js
+Reflect.apply(Math.floor, undefined, [1.75]);
 // 1;
 
 Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111]);
@@ -248,16 +407,18 @@ Reflect.apply(RegExp.prototype.exec, /ab/, ["confabulation"]).index;
 
 Reflect.apply("".charAt, "ponies", [3]);
 // "i"
-</pre>
+```
 
-<h3 id="Verificando_se_a_definição_da_propriedade_obteve_sucesso">Verificando se a definição da propriedade obteve sucesso</h3>
+### Verificando se a definição da propriedade obteve sucesso
 
-<p>Com {{jsxref("Object.defineProperty")}}, a qual retorna um <code>object</code> em caso de sucesso ou lança um  {{jsxref("TypeError")}} em caso contrário, você utilizaria um bloco  {{jsxref("Statements/try...catch","try...catch")}} para capturar qualquer erro que tenha ocorrido ao definir uma propriedade.  Devido ao fato de {{jsxref("Reflect.defineProperty")}} retornar um status do tipo <code>Boolean</code>,  você pode simplesmente utilizar aqui um bloco {{jsxref("Statements/if...else","if...else")}}:</p>
+Com {{jsxref("Object.defineProperty")}}, a qual retorna um `object` em caso de sucesso ou lança um {{jsxref("TypeError")}} em caso contrário, você utilizaria um bloco {{jsxref("Statements/try...catch","try...catch")}} para capturar qualquer erro que tenha ocorrido ao definir uma propriedade. Devido ao fato de {{jsxref("Reflect.defineProperty")}} retornar um status do tipo `Boolean`, você pode simplesmente utilizar aqui um bloco {{jsxref("Statements/if...else","if...else")}}:
 
-<pre class="brush: js notranslate">if (Reflect.defineProperty(target, property, attributes)) {
+```js
+if (Reflect.defineProperty(target, property, attributes)) {
   // success
 } else {
   // failure
-}</pre>
+}
+```
 
-<p>{{Previous("Web/JavaScript/Guide/Iterators_and_Generators")}}</p>
+{{Previous("Web/JavaScript/Guide/Iterators_and_Generators")}}

@@ -9,36 +9,37 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/cbrt
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>A função <strong><code>Math.cbrt()</code></strong> retorna a raiz cúbica de um número, isto é</p>
+A função **`Math.cbrt()`** retorna a raiz cúbica de um número, isto é
 
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mi>M</mi><mi>a</mi><mi>t</mi><mi>h</mi><mo>.</mo><mi>c</mi><mi>b</mi><mi>r</mi><mi>t</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mroot><mi>x</mi><mn>3</mn></mroot><mo> =</mo><mtext> y, tal que</mtext><mspace width="thickmathspace"></mspace><mtext></mtext><msup><mi>y</mi><mn>3</mn></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\mathtt{Math.cbrt(x)} = \sqrt[3]{x} = \text{the unique} \; y \; \text{such that} \; y^3 = x</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mi>M</mi><mi>a</mi><mi>t</mi><mi>h</mi><mo>.</mo><mi>c</mi><mi>b</mi><mi>r</mi><mi>t</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mroot><mi>x</mi><mn>3</mn></mroot><mo> =</mo><mtext> y, tal que</mtext><mspace width="thickmathspace"></mspace><mtext></mtext><msup><mi>y</mi><mn>3</mn></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\mathtt{Math.cbrt(x)} = \sqrt[3]{x} = \text{the unique} \; y \; \text{such that} \; y^3 = x</annotation></semantics></math>
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code>Math.cbrt(<var>x</var>)</code></pre>
+```
+Math.cbrt(x)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Um número.</dd>
-</dl>
+- `x`
+  - : Um número.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>A raiz cúbica do número fornecido.</p>
+A raiz cúbica do número fornecido.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Porque <code>cbrt()</code> é um método estático de <code>Math</code>, você sempre irá utilizar como <code>Math.cbrt()</code>, ao invés de um método de um objeto <code>Math</code> que você tenha criado (<code>Math</code> não é um construtor).</p>
+Porque `cbrt()` é um método estático de `Math`, você sempre irá utilizar como `Math.cbrt()`, ao invés de um método de um objeto `Math` que você tenha criado (`Math` não é um construtor).
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Utilizando_Math.cbrt()">Utilizando <code>Math.cbrt()</code></h3>
+### Utilizando `Math.cbrt()`
 
-<pre class="brush: js">Math.cbrt(NaN); // NaN
+```js
+Math.cbrt(NaN); // NaN
 Math.cbrt(-1); // -1
 Math.cbrt(-0); // -0
 Math.cbrt(-Infinity); // -Infinity
@@ -47,49 +48,33 @@ Math.cbrt(1); // 1
 Math.cbrt(Infinity); // Infinity
 Math.cbrt(null); // 0
 Math.cbrt(2);  // 1.2599210498948734
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Para todo <math><semantics><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="TeX">x \geq 0</annotation></semantics></math>, temos <math><semantics><mrow><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><msup><mi>x</mi><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></msup></mrow><annotation encoding="TeX">\sqrt[3]{x} = x^{1/3}</annotation></semantics></math>, então isto pode ser simulado pela seguinte função:</p>
+Para todo <math><semantics><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="TeX">x \geq 0</annotation></semantics></math>, temos <math><semantics><mrow><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><msup><mi>x</mi><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></msup></mrow><annotation encoding="TeX">\sqrt[3]{x} = x^{1/3}</annotation></semantics></math>, então isto pode ser simulado pela seguinte função:
 
-<pre class="brush: js">if (!Math.cbrt) {
+```js
+if (!Math.cbrt) {
   Math.cbrt = function(x) {
     var y = Math.pow(Math.abs(x), 1/3);
-    return x &lt; 0 ? -y : y;
+    return x < 0 ? -y : y;
   };
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.cbrt', 'Math.cbrt')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definição inicial</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.cbrt', 'Math.cbrt')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                            | Status                       | Comentário        |
+| ------------------------------------------------------------------------ | ---------------------------- | ----------------- |
+| {{SpecName('ES6', '#sec-math.cbrt', 'Math.cbrt')}}     | {{Spec2('ES6')}}         | Definição inicial |
+| {{SpecName('ESDraft', '#sec-math.cbrt', 'Math.cbrt')}} | {{Spec2('ESDraft')}} |                   |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Math.cbrt")}}</p>
+{{Compat("javascript.builtins.Math.cbrt")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Math.pow()")}}</li>
- <li>{{jsxref("Math.sqrt()")}}</li>
-</ul>
+- {{jsxref("Math.pow()")}}
+- {{jsxref("Math.sqrt()")}}

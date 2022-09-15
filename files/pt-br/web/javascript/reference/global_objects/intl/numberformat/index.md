@@ -7,115 +7,103 @@ tags:
   - NumberFormat
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 ---
-<h5 id="JSRef">{{JSRef}}</h5>
+##### {{JSRef}}
 
-<p>O objeto <strong><code>Intl.NumberFormat</code></strong> é um construtor para objetos que habilita formatação de número sensível a linguagem.</p>
+O objeto **`Intl.NumberFormat`** é um construtor para objetos que habilita formatação de número sensível a linguagem.
 
-<p>{{EmbedInteractiveExample("pages/js/intl-numberformat.html")}}</p>
+{{EmbedInteractiveExample("pages/js/intl-numberformat.html")}}
 
-<p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
+The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <https://github.com/mdn/interactive-examples> and send us a pull request.
 
+## Sintaxe
 
+```
+new Intl.NumberFormat([locales[, options]])
+Intl.NumberFormat.call(this[, locales[, options]])
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Parâmetros
 
-<pre class="syntaxbox"><code>new Intl.NumberFormat([<var>locales</var>[, <var>options</var>]])
-Intl.NumberFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</var>]])
-</code></pre>
+- `locales`
 
-<h3 id="Parâmetros">Parâmetros</h3>
+  - : Opcional. Uma string com uma tag de linguagem BCP 47 ou uma matriz delas. Para a forma geral e interpretação do argumento `locales`, veja {{jsxref("Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}. A seguinte chave extendida Unicode é permitida:
 
-<dl>
- <dt><code>locales</code></dt>
- <dd>
- <p>Opcional. Uma string com uma tag de linguagem BCP 47 ou uma matriz delas. Para a forma geral e interpretação do argumento <code>locales</code>, veja {{jsxref("Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}. A seguinte chave extendida Unicode é permitida:</p>
+    - `nu`
+      - : O sistema de numeração que será usado. Os valores permitidos são: `"arab"`, `"arabext"`, `"bali"`, `"beng"`, `"deva"`, `"fullwide"`, `"gujr"`, `"guru"`, `"hanidec"`, `"khmr"`, `"knda"`, `"laoo"`, `"latn"`, `"limb"`, `"mlym"`, `"mong"`, `"mymr"`, `"orya"`, `"tamldec"`, `"telu"`, `"thai"`, `"tibt"`.
 
- <dl>
-  <dt><code>nu</code></dt>
-  <dd>O sistema de numeração que será usado. Os valores permitidos são: <code>"arab"</code>, <code>"arabext"</code>, <code>"bali"</code>, <code>"beng"</code>, <code>"deva"</code>, <code>"fullwide"</code>, <code>"gujr"</code>, <code>"guru"</code>, <code>"hanidec"</code>, <code>"khmr"</code>, <code>"knda"</code>, <code>"laoo"</code>, <code>"latn"</code>, <code>"limb"</code>, <code>"mlym"</code>, <code>"mong"</code>, <code>"mymr"</code>, <code>"orya"</code>, <code>"tamldec"</code>, <code>"telu"</code>, <code>"thai"</code>, <code>"tibt"</code>.</dd>
- </dl>
- </dd>
- <dt><code>options</code></dt>
- <dd>
- <p>Opcional. Um objeto com alguns ou todas as seguintes propriedades:</p>
+- `options`
 
- <dl>
-  <dt><code>localeMatcher</code></dt>
-  <dd>O algoritmo de comparação de localização para utilizar. Os valores permitidos são <code>"lookup"</code> e <code>"best fit"</code>; o padrão é <code>"best fit"</code>. Para mais informações sobre esta opção, veja  {{jsxref("Global_Objects/Intl", "Intl page", "#Locale_negotiation", 1)}}.</dd>
-  <dt><code>style</code></dt>
-  <dd>O estilo do formato a ser utilizado. Os valores permitidos são <code>"decimal"</code> para formato de número simples, <code>"currency"</code> para formato monetário e <code>"percent"</code> para formato percentual; o padrão é <code>"decimal"</code>.</dd>
-  <dt><code>currency</code></dt>
-  <dd>A moeda para usar na formatação monetária. Os valores permitidos são os códigos de moedas da ISO 4217, como <code>"USD"</code> para dólar estadunidense, <code>"EUR"</code> para euro, ou <code>"CNY"</code> para RMB chinês — veja a <a href="http://www.currency-iso.org/en/home/tables/table-a1.html">Lista de códigos de moedas e fundos atuais</a>. Não há valor padrão; se o <code>style</code> for <code>"currency"</code>, a propriedade <code>currency</code> deverá ser informada.</dd>
-  <dt><code>currencyDisplay</code></dt>
-  <dd>Como será mostrada a moeda na formatação monetária. Os valores permitidos são<code> "symbol"</code> para usar um símbolo de moeda localizado como €, <code>"code"</code> para usar o código de moeda ISO, <code>"name"</code> para usar o nome da moeda localizado como <code>"dollar"</code>; o padrão é <code>"symbol"</code>.</dd>
-  <dt><code>useGrouping</code></dt>
-  <dd>Se usar separadores de agrupamento, como separadores de milhares ou milhares/cem mil/dez milhões. Os valores permitidos são <code>true</code> e <code>false</code>; o padrão é <code>true</code>.</dd>
- </dl>
+  - : Opcional. Um objeto com alguns ou todas as seguintes propriedades:
 
- <p>As próximas propriedades se dividem em dois grupos: <code>minimumIntegerDigits</code>, <code>minimumFractionDigits</code>, e <code>maximumFractionDigits</code> no primeiro grupo, <code>minimumSignificantDigits</code> and <code>maximumSignificantDigits</code> em outro. Se pelo menos uma propriedade do segundo grupo for informado, então o primeiro grupo é ignorado.</p>
+    - `localeMatcher`
+      - : O algoritmo de comparação de localização para utilizar. Os valores permitidos são `"lookup"` e `"best fit"`; o padrão é `"best fit"`. Para mais informações sobre esta opção, veja {{jsxref("Global_Objects/Intl", "Intl page", "#Locale_negotiation", 1)}}.
+    - `style`
+      - : O estilo do formato a ser utilizado. Os valores permitidos são `"decimal"` para formato de número simples, `"currency"` para formato monetário e `"percent"` para formato percentual; o padrão é `"decimal"`.
+    - `currency`
+      - : A moeda para usar na formatação monetária. Os valores permitidos são os códigos de moedas da ISO 4217, como `"USD"` para dólar estadunidense, `"EUR"` para euro, ou `"CNY"` para RMB chinês — veja a [Lista de códigos de moedas e fundos atuais](http://www.currency-iso.org/en/home/tables/table-a1.html). Não há valor padrão; se o `style` for `"currency"`, a propriedade `currency` deverá ser informada.
+    - `currencyDisplay`
+      - : Como será mostrada a moeda na formatação monetária. Os valores permitidos são` "symbol"` para usar um símbolo de moeda localizado como €, `"code"` para usar o código de moeda ISO, `"name"` para usar o nome da moeda localizado como `"dollar"`; o padrão é `"symbol"`.
+    - `useGrouping`
+      - : Se usar separadores de agrupamento, como separadores de milhares ou milhares/cem mil/dez milhões. Os valores permitidos são `true` e `false`; o padrão é `true`.
 
- <dl>
-  <dt><code>minimumIntegerDigits</code></dt>
-  <dd>A quantidade mínima de dígitos inteiros para utilizar. É possível usar valores de 1 a 21; o padrão é 1.</dd>
-  <dt><code>minimumFractionDigits</code></dt>
-  <dd>A quantidade mínima de dígitos fracionados para utilizar. É possível usar valores de 0 a 20; o padrão para formatos de números simples e percentuais é 0; o padrão para formatos monetários é a menor unidade de dígitos fornecidos pela <a href="http://www.currency-iso.org/en/home/tables/table-a1.html">lista de códigos de moedas ISO 4217</a> (2 se a lista não fornecer a informação).</dd>
-  <dt><code>maximumFractionDigits</code></dt>
-  <dd>O número máximo de dígitos fracionados para utilizar. É possível usar valores de 0 a 20; o padrão para a formatação de número simples é o maior entre <code>minimumFractionDigits</code> e 3; o padrão para formatos monetários é o maior número de dígitos entre  <code>minimumFractionDigits</code> e o fornecido pela <a href="http://www.currency-iso.org/en/home/tables/table-a1.html">lista de códigos de moedas ISO 4217</a> (2 se a lista não fornecer a informação); o padrão para a formatação percentual é o maior número entre <code>minimumFractionDigits</code> e 0.</dd>
-  <dt><code>minimumSignificantDigits</code></dt>
-  <dd>A quantidade mínima de dígitos significantes para usar. Os valores permitidos são de 1 a 21; o padrão é 1.</dd>
-  <dt><code>maximumSignificantDigits</code></dt>
-  <dd>A quantidade máxima de dígitos significantes para usar. Os valores permitidos são de 1 a 21; o padrão é <code>minimumSignificantDigits</code>.</dd>
- </dl>
- </dd>
-</dl>
+    As próximas propriedades se dividem em dois grupos: `minimumIntegerDigits`, `minimumFractionDigits`, e `maximumFractionDigits` no primeiro grupo, `minimumSignificantDigits` and `maximumSignificantDigits` em outro. Se pelo menos uma propriedade do segundo grupo for informado, então o primeiro grupo é ignorado.
 
-<h2 id="Descrição">Descrição</h2>
+    - `minimumIntegerDigits`
+      - : A quantidade mínima de dígitos inteiros para utilizar. É possível usar valores de 1 a 21; o padrão é 1.
+    - `minimumFractionDigits`
+      - : A quantidade mínima de dígitos fracionados para utilizar. É possível usar valores de 0 a 20; o padrão para formatos de números simples e percentuais é 0; o padrão para formatos monetários é a menor unidade de dígitos fornecidos pela [lista de códigos de moedas ISO 4217](http://www.currency-iso.org/en/home/tables/table-a1.html) (2 se a lista não fornecer a informação).
+    - `maximumFractionDigits`
+      - : O número máximo de dígitos fracionados para utilizar. É possível usar valores de 0 a 20; o padrão para a formatação de número simples é o maior entre `minimumFractionDigits` e 3; o padrão para formatos monetários é o maior número de dígitos entre `minimumFractionDigits` e o fornecido pela [lista de códigos de moedas ISO 4217](http://www.currency-iso.org/en/home/tables/table-a1.html) (2 se a lista não fornecer a informação); o padrão para a formatação percentual é o maior número entre `minimumFractionDigits` e 0.
+    - `minimumSignificantDigits`
+      - : A quantidade mínima de dígitos significantes para usar. Os valores permitidos são de 1 a 21; o padrão é 1.
+    - `maximumSignificantDigits`
+      - : A quantidade máxima de dígitos significantes para usar. Os valores permitidos são de 1 a 21; o padrão é `minimumSignificantDigits`.
 
-<h3 id="Propriedades">Propriedades</h3>
+## Descrição
 
-<dl>
- <dt>{{jsxref("NumberFormat.prototype", "Intl.NumberFormat.prototype")}}</dt>
- <dd>Pertime a inclusão de propriedades a todos os objetos.</dd>
-</dl>
+### Propriedades
 
-<h3 id="Métodos">Métodos</h3>
+- {{jsxref("NumberFormat.prototype", "Intl.NumberFormat.prototype")}}
+  - : Pertime a inclusão de propriedades a todos os objetos.
 
-<dl>
- <dt>{{jsxref("NumberFormat.supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}</dt>
- <dd>Retorna uma matriz contendo as localizações fornecidas que são suportadas sem retornar a localização padrão em tempo de execução.</dd>
-</dl>
+### Métodos
 
-<h2 id="Instâncias_NumberFormat">Instâncias <code>NumberFormat</code></h2>
+- {{jsxref("NumberFormat.supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}
+  - : Retorna uma matriz contendo as localizações fornecidas que são suportadas sem retornar a localização padrão em tempo de execução.
 
-<h3 id="Propriedades_2">Propriedades</h3>
+## Instâncias `NumberFormat`
 
-<p>As instâncias de <code>NumberFormat</code> herdam as seguntes propriedades de seu protótipo:</p>
+### Propriedades
 
-<div>{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/prototype', 'Propriedades')}}</div>
+As instâncias de `NumberFormat` herdam as seguntes propriedades de seu protótipo:
 
-<h3 id="Methods">Methods</h3>
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/prototype', 'Propriedades')}}
 
-<p>As instâncias de <code>NumberFormat</code> herdam os seguintes métodos de seu protótipo:</p>
+### Methods
 
-<div>{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/prototype', 'Métodos')}}</div>
+As instâncias de `NumberFormat` herdam os seguintes métodos de seu protótipo:
 
-<h2 id="Exemplos">Exemplos</h2>
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/prototype', 'Métodos')}}
 
-<h3 id="Uso_básico">Uso básico</h3>
+## Exemplos
 
-<p>No uso básico sem a especificação de uma localização, o método retornará uma string formatada com a localização e as opções padrão.</p>
+### Uso básico
 
-<pre class="brush: js">var numero = 3500;
+No uso básico sem a especificação de uma localização, o método retornará uma string formatada com a localização e as opções padrão.
+
+```js
+var numero = 3500;
 
 console.log(new Intl.NumberFormat().format(numero));
 // → '3,500' se a localização for U.S. English
-</pre>
+```
 
-<h3 id="Usando_locales">Usando <code>locales</code></h3>
+### Usando `locales`
 
-<p>Este exemplo mostra algumas variações de formatos de números localizados. A fim de obter o formato da linguagem utilizada na interface do usuário da sua aplicação, tenha certeza de especificar a língua (e possivelmente algumas línguas reservas) usando o argumento<code> locales</code>:</p>
+Este exemplo mostra algumas variações de formatos de números localizados. A fim de obter o formato da linguagem utilizada na interface do usuário da sua aplicação, tenha certeza de especificar a língua (e possivelmente algumas línguas reservas) usando o argumento` locales`:
 
-<pre class="brush: js">var numero = 123456.789;
+```js
+var numero = 123456.789;
 
 // O alemão usa vírgula como separador de decimal e ponto para milhares
 console.log(new Intl.NumberFormat('de-DE').format(numero));
@@ -137,13 +125,14 @@ console.log(new Intl.NumberFormat('zh-Hans-CN-u-nu-hanidec').format(numero));
 // inclua uma língua reseva, neste caso indonésio
 console.log(new Intl.NumberFormat(['ban', 'id']).format(numero));
 // → 123.456,789
-</pre>
+```
 
-<h3 id="Usando_options">Usando <code>options</code></h3>
+### Usando `options`
 
-<p>Os resultados podem ser personalizados usando o argumento <code>options</code>:</p>
+Os resultados podem ser personalizados usando o argumento `options`:
 
-<pre class="brush: js">var numero = 123456.789;
+```js
+var numero = 123456.789;
 
 // informando um formato de moeda
 console.log(new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(numero));
@@ -156,39 +145,20 @@ console.log(new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' 
 // limitando a três dígitos significativos
 console.log(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(numero));
 // → 1,23,000
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int 1.0', '#sec-11.1', 'Intl.NumberFormat')}}</td>
-   <td>{{Spec2('ES Int 1.0')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int 2.0', '#sec-11.1', 'Intl.NumberFormat')}}</td>
-   <td>{{Spec2('ES Int 2.0')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#numberformat-objects', 'Intl.NumberFormat')}}</td>
-   <td>{{Spec2('ES Int Draft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                        | Status                           | Comentário         |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('ES Int 1.0', '#sec-11.1', 'Intl.NumberFormat')}}                     | {{Spec2('ES Int 1.0')}} | Definição inicial. |
+| {{SpecName('ES Int 2.0', '#sec-11.1', 'Intl.NumberFormat')}}                     | {{Spec2('ES Int 2.0')}} |                    |
+| {{SpecName('ES Int Draft', '#numberformat-objects', 'Intl.NumberFormat')}} | {{Spec2('ES Int Draft')}} |                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Intl.NumberFormat")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<div>{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl', 'Veja_tambem')}}</div>
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl', 'Veja_tambem')}}

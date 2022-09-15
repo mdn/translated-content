@@ -7,30 +7,31 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>Object.getOwnPropertyNames()</code></strong> retorna um vetor com todas as propriedades (enumeráveis ou não) encontradas diretamente em um dado objeto.</p>
+O método **`Object.getOwnPropertyNames()`** retorna um vetor com todas as propriedades (enumeráveis ou não) encontradas diretamente em um dado objeto.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">Object.getOwnPropertyNames(<var>obj</var>)</pre>
+```
+Object.getOwnPropertyNames(obj)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>O objeto, cujas suas próprias propriedades, enumeráveis ou não, serão retornadas.</dd>
-</dl>
+- `obj`
+  - : O objeto, cujas suas próprias propriedades, enumeráveis ou não, serão retornadas.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p><code>Object.getOwnPropertyNames()</code> retorna um vetor cujos elementos são strings correspondentes as propriedades enumeráveis ou não, encontradas em <code>obj</code>. A ordem das propriedades enumeráveis no vetor é consistente com a ordenação exposta por um laço  {{jsxref("Statements/for...in", "for...in")}} (ou por {{jsxref("Object.keys()")}}) nas propriedades do objeto. A ordenação das propriedades não-enumeráveis no vetor, e entre as propriedades enumeráveis, não está definida.</p>
+`Object.getOwnPropertyNames()` retorna um vetor cujos elementos são strings correspondentes as propriedades enumeráveis ou não, encontradas em `obj`. A ordem das propriedades enumeráveis no vetor é consistente com a ordenação exposta por um laço {{jsxref("Statements/for...in", "for...in")}} (ou por {{jsxref("Object.keys()")}}) nas propriedades do objeto. A ordenação das propriedades não-enumeráveis no vetor, e entre as propriedades enumeráveis, não está definida.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_Object.getOwnPropertyNames()">Usando <code>Object.getOwnPropertyNames()</code></h3>
+### Usando `Object.getOwnPropertyNames()`
 
-<pre class="brush: js">var arr = ['a', 'b', 'c'];
+```js
+var arr = ['a', 'b', 'c'];
 console.log(Object.getOwnPropertyNames(arr).sort());
 // logs ["0", "1", "2", "length"]
 
@@ -41,12 +42,12 @@ console.log(Object.getOwnPropertyNames(obj).sort());
 
 // Logging property names and values using Array.forEach
 Object.getOwnPropertyNames(obj).forEach(function(val, idx, array) {
-  console.log(val + ' -&gt; ' + obj[val]);
+  console.log(val + ' -> ' + obj[val]);
 });
 // logs
-// 0 -&gt; a
-// 1 -&gt; b
-// 2 -&gt; c
+// 0 -> a
+// 1 -> b
+// 2 -> c
 
 // non-enumerable property
 var my_obj = Object.create({}, {
@@ -59,13 +60,14 @@ my_obj.foo = 1;
 
 console.log(Object.getOwnPropertyNames(my_obj).sort());
 // logs ["foo", "getFoo"]
-</pre>
+```
 
-<p>Se voce quer somente as propriedades enumeráveis, veja {{jsxref("Object.keys()")}} ou use um laço {{jsxref("Statements/for...in", "for...in")}} (contudo, note que isto irá retornar propriedades enumeráveis não encontradas diretamente naquele objeto, mas também junto com a cadeia prototype do objeto a menos que o último seja filtrado com {{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}}).</p>
+Se voce quer somente as propriedades enumeráveis, veja {{jsxref("Object.keys()")}} ou use um laço {{jsxref("Statements/for...in", "for...in")}} (contudo, note que isto irá retornar propriedades enumeráveis não encontradas diretamente naquele objeto, mas também junto com a cadeia prototype do objeto a menos que o último seja filtrado com {{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}}).
 
-<p>Ítens na cadeia prototype não são listados:</p>
+Ítens na cadeia prototype não são listados:
 
-<pre class="brush: js">function ParentClass() {}
+```js
+function ParentClass() {}
 ParentClass.prototype.inheritedMethod = function() {};
 
 function ChildClass() {
@@ -80,13 +82,14 @@ console.log(
     new ChildClass() // ["prop", "method"]
   )
 );
-</pre>
+```
 
-<h3 id="Obtenha_somente_não-enumeráveis">Obtenha somente não-enumeráveis</h3>
+### Obtenha somente não-enumeráveis
 
-<p>Isto usa a função {{jsxref("Array.prototype.filter()")}} para remover as chaves enumeráveis (obtidas com {{jsxref("Object.keys()")}}) de uma lista com todas as chaves (obtidas com <code>Object.getOwnPropertyNames()</code>) deixando somente as chaves não-enumeráveis.</p>
+Isto usa a função {{jsxref("Array.prototype.filter()")}} para remover as chaves enumeráveis (obtidas com {{jsxref("Object.keys()")}}) de uma lista com todas as chaves (obtidas com `Object.getOwnPropertyNames()`) deixando somente as chaves não-enumeráveis.
 
-<pre class="brush: js">var target = myObject;
+```js
+var target = myObject;
 var enum_and_nonenum = Object.getOwnPropertyNames(target);
 var enum_only = Object.keys(target);
 var nonenum_only = enum_and_nonenum.filter(function(key) {
@@ -101,63 +104,41 @@ var nonenum_only = enum_and_nonenum.filter(function(key) {
 });
 
 console.log(nonenum_only);
-</pre>
+```
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>No ES5, se o argumento desse método não é um objeto (um tipo primitivo), então isso causará um {{jsxref("TypeError")}}. No ES6, um argumento diferente de objeto será transformado em um objeto.</p>
+No ES5, se o argumento desse método não é um objeto (um tipo primitivo), então isso causará um {{jsxref("TypeError")}}. No ES6, um argumento diferente de objeto será transformado em um objeto.
 
-<pre class="brush: js">Object.getOwnPropertyNames('foo');
+```js
+Object.getOwnPropertyNames('foo');
 // TypeError: "foo" is not an object (ES5 code)
 
 Object.getOwnPropertyNames('foo');
 // ["0", "1", "2", "length"]  (ES6 code)
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Esperificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.4', 'Object.getOwnPropertyNames')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>
-    <p>Definição inicial. Implementado no JavaScript 1.8.5.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.getownpropertynames', 'Object.getOwnPropertyNames')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.getownpropertynames', 'Object.getOwnPropertyNames')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Esperificação                                                                                                        | Status                       | Comentário                                           |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.2.3.4', 'Object.getOwnPropertyNames')}}                         | {{Spec2('ES5.1')}}     | Definição inicial. Implementado no JavaScript 1.8.5. |
+| {{SpecName('ES6', '#sec-object.getownpropertynames', 'Object.getOwnPropertyNames')}}     | {{Spec2('ES6')}}         |                                                      |
+| {{SpecName('ESDraft', '#sec-object.getownpropertynames', 'Object.getOwnPropertyNames')}} | {{Spec2('ESDraft')}} |                                                      |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Object.getOwnPropertyNames")}}
 
-<h2 id="Notas_específicas_para_SpiderMonkey">Notas específicas para SpiderMonkey</h2>
+## Notas específicas para SpiderMonkey
 
-<p>Antes do SpiderMonkey 28 {{geckoRelease("28")}}, <code>Object.getOwnPropertyNames</code> não via propriedades não resolvidas de objetos {{jsxref("Error")}}. Isto foi resolvido em versões posteriores ({{bug("724768")}}).</p>
+Antes do SpiderMonkey 28 {{geckoRelease("28")}}, `Object.getOwnPropertyNames` não via propriedades não resolvidas de objetos {{jsxref("Error")}}. Isto foi resolvido em versões posteriores ({{bug("724768")}}).
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Enumerability_and_ownership_of_properties">Enumerabilidade e posse de propriedades</a></li>
- <li>{{jsxref("Object.prototype.hasOwnProperty()")}}</li>
- <li>{{jsxref("Object.prototype.propertyIsEnumerable()")}}</li>
- <li>{{jsxref("Object.create()")}}</li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li>{{jsxref("Array.forEach()")}}</li>
-</ul>
+- [Enumerabilidade e posse de propriedades](/pt-BR/docs/Enumerability_and_ownership_of_properties)
+- {{jsxref("Object.prototype.hasOwnProperty()")}}
+- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
+- {{jsxref("Object.create()")}}
+- {{jsxref("Object.keys()")}}
+- {{jsxref("Array.forEach()")}}

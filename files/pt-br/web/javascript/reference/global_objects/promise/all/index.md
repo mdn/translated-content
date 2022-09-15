@@ -9,70 +9,68 @@ tags:
   - Promise
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/all
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>Promise.all(iterable)</strong></code> retorna uma única {{jsxref("Promise")}} que resolve quando todas as promises no argumento iterável forem resolvidas ou quando o iterável passado como argumento não contém promises. É rejeitado com o motivo da primeira promise que foi rejeitada.</p>
+O método **`Promise.all(iterable)`** retorna uma única {{jsxref("Promise")}} que resolve quando todas as promises no argumento iterável forem resolvidas ou quando o iterável passado como argumento não contém promises. É rejeitado com o motivo da primeira promise que foi rejeitada.
 
-<p>{{EmbedInteractiveExample("pages/js/promise-all.html")}}</p>
+{{EmbedInteractiveExample("pages/js/promise-all.html")}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">Promise.all(iterable);</pre>
+```
+Promise.all(iterable);
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt>iterable</dt>
- <dd>Um objeto <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols">iterável</a>, como um {{jsxref("Array")}} ou {{jsxref("String")}}.</dd>
-</dl>
+- iterable
+  - : Um objeto [iterável](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols), como um {{jsxref("Array")}} ou {{jsxref("String")}}.
 
-<h3 id="Retorno">Retorno</h3>
+### Retorno
 
-<ul>
- <li>Uma {{jsxref("Promise")}}<strong> já resolvida</strong> se o iterável passado for vazio.</li>
- <li>Uma {{jsxref("Promise")}} <strong>resolvida assíncronamente</strong> se o iterável passado não conter promises. Nota, Google Chrome 58 retorna uma promise <strong>já resolvida</strong> nesse caso.</li>
- <li>Uma {{jsxref("Promise")}} <strong>pendente</strong> em todos os outros casos. Essa promise retornada é então resolvida/rejeitada <strong>assíncronamente</strong> (tão logo a pilha esteja vazia) quando todas as promises no dado iterável forem resolvidas, ou se alguma das promises for rejeitada. Veja o exemplo sobre "Assincronia ou sincronia da Promise.all" abaixo. Os valores retornados estarão na ordem em que as promises foram passadas. independentemente da ordem em que forem concluídas.</li>
-</ul>
+- Uma {{jsxref("Promise")}} **já resolvida** se o iterável passado for vazio.
+- Uma {{jsxref("Promise")}} **resolvida assíncronamente** se o iterável passado não conter promises. Nota, Google Chrome 58 retorna uma promise **já resolvida** nesse caso.
+- Uma {{jsxref("Promise")}} **pendente** em todos os outros casos. Essa promise retornada é então resolvida/rejeitada **assíncronamente** (tão logo a pilha esteja vazia) quando todas as promises no dado iterável forem resolvidas, ou se alguma das promises for rejeitada. Veja o exemplo sobre "Assincronia ou sincronia da Promise.all" abaixo. Os valores retornados estarão na ordem em que as promises foram passadas. independentemente da ordem em que forem concluídas.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Esse método pode ser usado para agregar resultados de várias promises.</p>
+Esse método pode ser usado para agregar resultados de várias promises.
 
-<h3 id="Resolução">Resolução</h3>
+### Resolução
 
-<p>A promise retornada é resolvida com um array contendo <strong>todos</strong> os valores dos iteráveis passados como argumento (como valores que não são promises).</p>
+A promise retornada é resolvida com um array contendo **todos** os valores dos iteráveis passados como argumento (como valores que não são promises).
 
-<ul>
- <li>Se um iterável vazio é passado, então esse método retorna (sincronamente) uma promise já resolvida.</li>
- <li>Se todas as promises passadas forem resolvidas, ou não forem promises, a promise retornada por <code>Promise.all</code> é resolvida assincronamente.</li>
-</ul>
+- Se um iterável vazio é passado, então esse método retorna (sincronamente) uma promise já resolvida.
+- Se todas as promises passadas forem resolvidas, ou não forem promises, a promise retornada por `Promise.all` é resolvida assincronamente.
 
-<h3 id="Rejeição">Rejeição</h3>
+### Rejeição
 
-<p>Se qualquer uma das promises passadas for rejeitada, <code>Promise.all</code> assíncronamente é rejeitada com o valor da promise rejeitada, independentemente se outras promises foram resolvidas.</p>
+Se qualquer uma das promises passadas for rejeitada, `Promise.all` assíncronamente é rejeitada com o valor da promise rejeitada, independentemente se outras promises foram resolvidas.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Utilizando_Promise.all">Utilizando Promise.all </h3>
+### Utilizando Promise.all
 
-<p><code>Promise.all</code> espera que todas as promises sejam resolvidas (ou a primeira rejeição).</p>
+`Promise.all` espera que todas as promises sejam resolvidas (ou a primeira rejeição).
 
-<pre class="brush: js">var p1 = Promise.resolve(3);
+```js
+var p1 = Promise.resolve(3);
 var p2 = 1337;
-var p3 = new Promise((resolve, reject) =&gt; {
-  setTimeout(() =&gt; {
+var p3 = new Promise((resolve, reject) => {
+  setTimeout(() => {
     resolve("foo");
   }, 100);
 });
 
-Promise.all([p1, p2, p3]).then(valores=&gt; {
+Promise.all([p1, p2, p3]).then(valores=> {
   console.log(valores); // [3, 1337, "foo"]
 });
-</pre>
+```
 
-<p>Se o iterável conter valores que não são promises, eles serão ignorados, mas ainda serão contados no array da promise retornada (se a promise for resolvida):</p>
+Se o iterável conter valores que não são promises, eles serão ignorados, mas ainda serão contados no array da promise retornada (se a promise for resolvida):
 
-<pre class="brush: js">// Essa será considerada como se o iterável passado fosse vazio, logo ela será resolvido
+```js
+// Essa será considerada como se o iterável passado fosse vazio, logo ela será resolvido
 var p = Promise.all([1,2,3]);
 // Essa será considerada como se o iterável passado contém apenas a promise resolvida com o valor "444", logo ela é resolvida
 var p2 = Promise.all([1,2,3, Promise.resolve(444)]);
@@ -87,16 +85,17 @@ setTimeout(function() {
 });
 
 // logs
-// Promise { &lt;estado&gt;: "resolvida", &lt;valor&gt;: Array[3] }
-// Promise { &lt;estado&gt;: "resolvida", &lt;valor&gt;: Array[4] }
-// Promise { &lt;estado&gt;: "rejeitada", &lt;razão&gt;: 555 }</code>
-</pre>
+// Promise { <estado>: "resolvida", <valor>: Array[3] }
+// Promise { <estado>: "resolvida", <valor>: Array[4] }
+// Promise { <estado>: "rejeitada", <razão>: 555 }
+```
 
-<h3 id="Assincronia_ou_sincronia_da_Promise.all">Assincronia ou sincronia da Promise.all</h3>
+### Assincronia ou sincronia da Promise.all
 
-<p>O exemplo a seguir demonstra a assincronia (ou sincronia, se o iterável passado for fazio) de <code>Promise.all</code>:</p>
+O exemplo a seguir demonstra a assincronia (ou sincronia, se o iterável passado for fazio) de `Promise.all`:
 
-<pre class="brush: js">// Passamos o argumento como um array de promises que já estão resolvidas para disparar Promise.all a mais rápido possível
+```js
+// Passamos o argumento como um array de promises que já estão resolvidas para disparar Promise.all a mais rápido possível
 var arrayPromisesResolvidas = [Promise.resolve(33), Promise.resolve(44)];
 
 var p = Promise.all(arrayPromisesResolvidas);
@@ -110,14 +109,15 @@ setTimeout(function() {
 });
 
 // logs, em ordem:
-// Promise { &lt;estado&gt;: "pendente" }
+// Promise { <estado>: "pendente" }
 // a pilha está vazia agora
-// Promise { &lt;estado&gt;: "resolvida", &lt;valor&gt;: Array[2] }
-</pre>
+// Promise { <estado>: "resolvida", <valor>: Array[2] }
+```
 
-<p>A mesma coisa acontece se <code>Promise.all</code> for rejeitada:</p>
+A mesma coisa acontece se `Promise.all` for rejeitada:
 
-<pre class="brush: js">var arrayPromisesMisturadas = [Promise.resolve(33), Promise.reject(44)];
+```js
+var arrayPromisesMisturadas = [Promise.resolve(33), Promise.reject(44)];
 var p = Promise.all(arrayPromisesMisturadas);
 console.log(p);
 setTimeout(function() {
@@ -126,14 +126,15 @@ setTimeout(function() {
 });
 
 // logs
-// Promise { &lt;estado&gt;: "pendente" }
+// Promise { <estado>: "pendente" }
 // a pilha está vazia agora
-// Promise { &lt;estado&gt;: "rejeitada", &lt;razão&gt;: 44 }
-</pre>
+// Promise { <estado>: "rejeitada", <razão>: 44 }
+```
 
-<p>Mas, <code>Promise.all</code> resolve sincromamente <strong>se e somente se</strong> o iterável passado for vazio:</p>
+Mas, `Promise.all` resolve sincromamente **se e somente se** o iterável passado for vazio:
 
-<pre class="brush: js">var p = Promise.all([]); // será resolvida imediatamente
+```js
+var p = Promise.all([]); // será resolvida imediatamente
 var p2 = Promise.all([1337, "oi"]); // um valor que não é uma promise será ignorado, mas a avaliação será feita assíncronamente
 console.log(p);
 console.log(p2)
@@ -143,95 +144,79 @@ setTimeout(function() {
 });
 
 // logs
-// Promise { &lt;estado&gt;: "resolvida", &lt;valor&gt;: Array[0] }
-// Promise { &lt;estado&gt;: "pendente" }
+// Promise { <estado>: "resolvida", <valor>: Array[0] }
+// Promise { <estado>: "pendente" }
 // a pilha está vazia agora
-// Promise { &lt;estado&gt;: "resolvida", &lt;valor&gt;: Array[2] }
-</pre>
+// Promise { <estado>: "resolvida", <valor>: Array[2] }
+```
 
-<h3 id="Comportamente_de_falhar_rapidamente_de_Promise.all">Comportamente de falhar rapidamente de Promise.all</h3>
+### Comportamente de falhar rapidamente de Promise.all
 
-<p><code>Promise.all</code> é rejeitada se qualquer um dos elementos for rejeitado. Por exemplo, se você passar quartro promises que resolvem após um intervalo de tempo e uma promise que rejeita imediatamente, então <code>Promise.all</code> será rejeitada imediatamente.</p>
+`Promise.all` é rejeitada se qualquer um dos elementos for rejeitado. Por exemplo, se você passar quartro promises que resolvem após um intervalo de tempo e uma promise que rejeita imediatamente, então `Promise.all` será rejeitada imediatamente.
 
-<pre class="brush: js">var p1 = new Promise((resolve, reject) =&gt; {
-  setTimeout(() =&gt; resolve('um'), 1000);
+```js
+var p1 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve('um'), 1000);
 });
-var p2 = new Promise((resolve, reject) =&gt; {
-  setTimeout(() =&gt; resolve('dois'), 2000);
+var p2 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve('dois'), 2000);
 });
-var p3 = new Promise((resolve, reject) =&gt; {
-  setTimeout(() =&gt; resolve('três'), 3000);
+var p3 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve('três'), 3000);
 });
-var p4 = new Promise((resolve, reject) =&gt; {
-  setTimeout(() =&gt; resolve('quatro'), 4000);
+var p4 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve('quatro'), 4000);
 });
-var p5 = new Promise((resolve, reject) =&gt; {
+var p5 = new Promise((resolve, reject) => {
   reject(new Error('rejeitada'));
 });
 
 
 // Usando .catch:
 Promise.all([p1, p2, p3, p4, p5])
-.then(valores =&gt; {
+.then(valores => {
   console.log(valores);
 })
-.catch(erro =&gt; {
+.catch(erro => {
   console.log(erro.message)
 });
 
 // No console:
 // "rejeitada"
-</pre>
+```
 
-<p>É possível mudar esse comportamente lidando com possíveis rejeições:</p>
+É possível mudar esse comportamente lidando com possíveis rejeições:
 
-<pre class="brush: js">var p1 = new Promise((resolve, reject) =&gt; {
-  setTimeout(() =&gt; resolve('p1_resolução_atrasada'), 1000);
+```js
+var p1 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve('p1_resolução_atrasada'), 1000);
 });
 
-var p2 = new Promise((resolve, reject) =&gt; {
+var p2 = new Promise((resolve, reject) => {
   reject(new Error('p2_rejeição_imediata'));
 });
 
 Promise.all([
-  p1.catch(erro =&gt; { return erro }),
-  p2.catch(erro =&gt; { return erro }),
-]).then(valores =&gt; {
+  p1.catch(erro => { return erro }),
+  p2.catch(erro => { return erro }),
+]).then(valores => {
   console.log(valores[0]) // "p1_resolução_atrasada"
   console.log(valores[1]) // "Erro: p2_rejeição_imediata"
-})</pre>
+})
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-promise.all', 'Promise.all')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>
-    <p>Definição inicial em um padrão ECMA.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-promise.all', 'Promise.all')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                | Status                       | Comentário                           |
+| ---------------------------------------------------------------------------- | ---------------------------- | ------------------------------------ |
+| {{SpecName('ES2015', '#sec-promise.all', 'Promise.all')}} | {{Spec2('ES2015')}}     | Definição inicial em um padrão ECMA. |
+| {{SpecName('ESDraft', '#sec-promise.all', 'Promise.all')}} | {{Spec2('ESDraft')}} |                                      |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Promise.all")}}</p>
+{{Compat("javascript.builtins.Promise.all")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
- <li>{{jsxref("Promise.race()")}}</li>
-</ul>
+- {{jsxref("Promise")}}
+- {{jsxref("Promise.race()")}}

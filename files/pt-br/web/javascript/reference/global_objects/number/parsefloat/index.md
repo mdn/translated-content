@@ -3,66 +3,49 @@ title: Number.parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
 ---
-<div>{{JSRef("Global_Objects", "Number")}}</div>
+{{JSRef("Global_Objects", "Number")}}
 
-<h2 id="Summary" name="Summary">Resumo</h2>
+## Resumo
 
-<p>O método <strong>Number.parseFloat()</strong> converte a string recebida como argumento e a retorna como um número de ponto flutuante. Este método se comporta de maneira idêntica a da função global {{jsxref("Global_Objects/parseFloat", "parseFloat")}} e é parte da especificação ECMAScript 6 (seu propósito é a modularização dos objetos globais).</p>
+O método **Number.parseFloat()** converte a string recebida como argumento e a retorna como um número de ponto flutuante. Este método se comporta de maneira idêntica a da função global {{jsxref("Global_Objects/parseFloat", "parseFloat")}} e é parte da especificação ECMAScript 6 (seu propósito é a modularização dos objetos globais).
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code>Number.parseFloat(<var>string</var>)</code></pre>
+```
+Number.parseFloat(string)
+```
 
-<h3 id="Parameters" name="Parameters">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code><var>string</var></code></dt>
- <dd>Uma string que represente o valor que se deseja converter.<br>
-  </dd>
-</dl>
+- `string`
+  - : Uma string que represente o valor que se deseja converter.
 
-<h3 id="Retorno">Retorno</h3>
+### Retorno
 
-<dl>
- <dt><code><var>string</var></code></dt>
- <dd>Um número de ponto flutuante a partir da string dada. Se a string não puder ser convertida em para um número, {{jsxref("Global_Objects/NaN","NaN")}} é retornado.</dd>
-</dl>
+- `string`
+  - : Um número de ponto flutuante a partir da string dada. Se a string não puder ser convertida em para um número, {{jsxref("Global_Objects/NaN","NaN")}} é retornado.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Este método tem a mesma funcionalidade do método global:  {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}</p>
+Este método tem a mesma funcionalidade do método global: {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
 
-<pre>Number.parseFloat === parseFloat; // true
-</pre>
+```
+Number.parseFloat === parseFloat; // true
+```
 
-<p>Por favor veja {{jsxref("parseFloat", "parseFloat()")}} para mais detalhes e exemplos.</p>
+Por favor veja {{jsxref("parseFloat", "parseFloat()")}} para mais detalhes e exemplos.
 
-<h2 id="Especificação">Especificação</h2>
+## Especificação
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Situação</th>
-   <th scope="col">Comentários</th>
-  </tr>
-  <tr>
-   <td>
-    <p>{{SpecName('ES6', '#sec-number.parsefloat', 'Number.parseFloat')}}</p>
-   </td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                            | Situação             | Comentários        |
+| ---------------------------------------------------------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('ES6', '#sec-number.parsefloat', 'Number.parseFloat')}} | {{Spec2('ES6')}} | Definição inicial. |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade dos Navegadores</h2>
+## Compatibilidade dos Navegadores
 
 {{Compat("javascript.builtins.Number.parseFloat")}}
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>O objeto {{jsxref("Global_Objects/Number", "Number")}} ao qual o método parseFloat pertence.</li>
- <li>O método global {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}.</li>
-</ul>
+- O objeto {{jsxref("Global_Objects/Number", "Number")}} ao qual o método parseFloat pertence.
+- O método global {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}.

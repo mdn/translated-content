@@ -12,27 +12,26 @@ tags:
   - trim()
 translation_of: Web/JavaScript/Reference/Global_Objects/String/Trim
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}O método **`trim()`** remove os espaços em branco ([whitespaces](/pt-BR/docs/DOM/Referencia_do_DOM/Whitespace_in_the_DOM)) do início e/ou fim de um texto. É considerado espaço em branco (espaço, tabulação, espaço fixo/rígido, etc.) e todo sinal de fim de linha de texto (LF, CR, etc.).
 
-<div>O método <strong><code>trim()</code></strong> remove os espaços em branco (<a href="/pt-BR/docs/DOM/Referencia_do_DOM/Whitespace_in_the_DOM">whitespaces</a>) do início e/ou fim de um texto. É considerado espaço em branco (espaço, tabulação, espaço fixo/rígido, etc.) e todo sinal de fim de linha de texto (LF, CR, etc.).</div>
+## Sintaxe
 
+```
+str.trim()
+```
 
+## Descrição
 
-<h2 id="Sintaxe">Sintaxe</h2>
+O método `trim()` retorna o texto sem espaços em branco no início e/ou fim da string. O `trim()` não altera o valor da string original.
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.trim()</code></pre>
+## Exemplos
 
-<h2 id="Descrição">Descrição</h2>
+### Usando `trim()`
 
-<p>O método <code>trim()</code> retorna o texto sem espaços em branco no início e/ou fim da string. O <code>trim()</code> não altera o valor da string original.</p>
+Os exemplos a seguir retornam o valor de `'foo'` sem espaços em branco:
 
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Usando_trim">Usando <code>trim()</code></h3>
-
-<p>Os exemplos a seguir retornam o valor de <code>'foo'</code> sem espaços em branco:</p>
-
-<pre class="brush: js notranslate">//.trim() removendo whitespace de ambos os lados
+```js
+//.trim() removendo whitespace de ambos os lados
 
 var str = '   foo  ';
 console.log(str.trim()); // retorna 'foo'
@@ -42,48 +41,32 @@ console.log(str.trim()); // retorna 'foo'
 
 var str= 'foo    ';
 console.log(str.trim()); // retorna 'foo'
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Executar o seguinte código antes antes de qualquer código irá criar o método <code>trim()</code> se o mesmo não estiver disponível nativamente.</p>
+Executar o seguinte código antes antes de qualquer código irá criar o método `trim()` se o mesmo não estiver disponível nativamente.
 
-<pre class="brush: js notranslate">if (!String.prototype.trim) {
+```js
+if (!String.prototype.trim) {
   String.prototype.trim = function () {
     return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
   };
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.4.20', 'String.prototype.trim')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Definição inicial. Implementado no JavaScript 1.8.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.trim', 'String.prototype.trim')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                   | Comment                                              |
+| ---------------------------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.5.4.20', 'String.prototype.trim')}}                 | {{Spec2('ES5.1')}} | Definição inicial. Implementado no JavaScript 1.8.1. |
+| {{SpecName('ES6', '#sec-string.prototype.trim', 'String.prototype.trim')}} | {{Spec2('ES6')}}     |                                                      |
 
-<h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
+## Navegadores compatíveis
 
 {{Compat("javascript.builtins.String.trim")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("String.prototype.trimLeft()")}} {{non-standard_inline}}</li>
- <li>{{jsxref("String.prototype.trimRight()")}} {{non-standard_inline}}</li>
-</ul>
+- {{jsxref("String.prototype.trimLeft()")}} {{non-standard_inline}}
+- {{jsxref("String.prototype.trimRight()")}} {{non-standard_inline}}

@@ -3,59 +3,60 @@ title: Array.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/find
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>find()</strong></code> retorna o <strong>valor </strong>do <strong>primeiro elemento</strong> do array que satisfizer a função de teste provida. Caso contrario, {{jsxref("undefined")}} é retornado.</p>
+O método **`find()`** retorna o **valor** do **primeiro elemento** do array que satisfizer a função de teste provida. Caso contrario, {{jsxref("undefined")}} é retornado.
 
-<div>{{EmbedInteractiveExample("pages/js/array-find.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-find.html")}}
 
-<p>Veja também o método {{jsxref("Array.findIndex", "findIndex()")}}, que retorna o <strong>índice</strong> do elemento encontrado no array ao invés do seu valor.</p>
+Veja também o método {{jsxref("Array.findIndex", "findIndex()")}}, que retorna o **índice** do elemento encontrado no array ao invés do seu valor.
 
-<p>Se você precisa encontrar a posição de um elemento ou se um elemento existe em um array, use {{jsxref("Array.prototype.indexOf()")}} ou {{jsxref("Array.prototype.includes()")}}.</p>
+Se você precisa encontrar a posição de um elemento ou se um elemento existe em um array, use {{jsxref("Array.prototype.indexOf()")}} ou {{jsxref("Array.prototype.includes()")}}.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><var>arr</var>.find(<var>callback(element[, index[, array]])</var>[, <var>thisArg</var>])</pre>
+```
+arr.find(callback(element[, index[, array]])[, thisArg])
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>Função executada a cada iteração do array, recebendo três argumentos:
- <dl>
-  <dt><code>element</code></dt>
-  <dd>O elemento atual que está sendo processado no array.</dd>
-  <dt><code>index</code>{{optional_inline}}</dt>
-  <dd>O índice do elemento atualmente sendo processado no array.</dd>
-  <dt><code>array</code>{{optional_inline}}</dt>
-  <dd>O array sobre o qual <code>find</code> foi chamado.</dd>
- </dl>
- </dd>
- <dt><code>thisArg</code>{{optional_inline}}</dt>
- <dd>Opcional. Objeto usado como <code>this</code> quando executando o <code>callback</code>.</dd>
-</dl>
+- `callback`
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+  - : Função executada a cada iteração do array, recebendo três argumentos:
 
-<p>O <strong>valor</strong> do <strong>primeiro elemento</strong> do array que satisfaz a função de teste fornecida; caso contrário, {{jsxref("undefined")}}.</p>
+    - `element`
+      - : O elemento atual que está sendo processado no array.
+    - `index`{{optional_inline}}
+      - : O índice do elemento atualmente sendo processado no array.
+    - `array`{{optional_inline}}
+      - : O array sobre o qual `find` foi chamado.
 
-<h2 id="Descrição">Descrição</h2>
+- `thisArg`{{optional_inline}}
+  - : Opcional. Objeto usado como `this` quando executando o `callback`.
 
-<p>O método <code>find</code> executa a função <code>callback</code> uma vez para cada elemento presente no array até que encontre um onde <code>callback</code> retorne o valor true. Se o elemento é encontrado, <code>find</code> retorna imediatamente o valor deste elemento. Caso contrário, <code>find</code> retorna {{jsxref("Global_Objects/undefined", "undefined")}}. O <code>callback</code> é acionado para todos os índices do array de <code>0</code> a <code>tamanho-1</code>, não apenas para aqueles que possuem valores atribuídos. Sendo assim, ele pode ser menos eficiente para arrays muito grandes em que existem outros métodos que só visitam os índices que tenham valor atribuído.</p>
+### Valor retornado
 
-<p>O <code>callback</code> é acionado com três argumentos: o valor do elemento, o índice do elemento e o objeto do Array que está sendo executado.</p>
+O **valor** do **primeiro elemento** do array que satisfaz a função de teste fornecida; caso contrário, {{jsxref("undefined")}}.
 
-<p>Se um parâmetro <code>thisArg</code> é provido ao <code>find</code>, ele será usado como o <code>this</code> para cada acionamento do <code>callback</code>. Se não for provido, então {{jsxref("Global_Objects/undefined", "undefined")}} é usado.</p>
+## Descrição
 
-<p>O <code>find</code> não altera a array à qual foi acionado.</p>
+O método `find` executa a função `callback` uma vez para cada elemento presente no array até que encontre um onde `callback` retorne o valor true. Se o elemento é encontrado, `find` retorna imediatamente o valor deste elemento. Caso contrário, `find` retorna {{jsxref("Global_Objects/undefined", "undefined")}}. O `callback` é acionado para todos os índices do array de `0` a `tamanho-1`, não apenas para aqueles que possuem valores atribuídos. Sendo assim, ele pode ser menos eficiente para arrays muito grandes em que existem outros métodos que só visitam os índices que tenham valor atribuído.
 
-<p>O conjunto dos elementos processados por <code>find</code> é definido antes do primeiro acionamento do <code>callback</code>. Elementos que são anexados à array após o início da chamada ao <code>find</code> não serão visitados pelo <code>callback</code>. Se um elemento existente ainda não visitado da array for alterado pelo <code>callback</code>, o valor passado ao <code>callback</code> quando o visitar será o valor no momento que <code>find</code> visita o índice daquele elemento; elementos excluídos ainda são visitados.</p>
+O `callback` é acionado com três argumentos: o valor do elemento, o índice do elemento e o objeto do Array que está sendo executado.
 
-<h2 id="Exemplos">Exemplos</h2>
+Se um parâmetro `thisArg` é provido ao `find`, ele será usado como o `this` para cada acionamento do `callback`. Se não for provido, então {{jsxref("Global_Objects/undefined", "undefined")}} é usado.
 
-<h3 id="Encontrar_um_objeto_em_um_array_por_uma_de_suas_propriedades">Encontrar um objeto em um array por uma de suas propriedades</h3>
+O `find` não altera a array à qual foi acionado.
 
-<pre class="brush: js notranslate">const inventory = [
+O conjunto dos elementos processados por `find` é definido antes do primeiro acionamento do `callback`. Elementos que são anexados à array após o início da chamada ao `find` não serão visitados pelo `callback`. Se um elemento existente ainda não visitado da array for alterado pelo `callback`, o valor passado ao `callback` quando o visitar será o valor no momento que `find` visita o índice daquele elemento; elementos excluídos ainda são visitados.
+
+## Exemplos
+
+### Encontrar um objeto em um array por uma de suas propriedades
+
+```js
+const inventory = [
     {name: 'apples', quantity: 2},
     {name: 'bananas', quantity: 0},
     {name: 'cerejas', quantity: 5}
@@ -66,43 +67,48 @@ function isCherries(fruit) {
 }
 
 console.log(inventory.find(isCherries));
-// { name: 'cerejas', quantity: 5 }</pre>
+// { name: 'cerejas', quantity: 5 }
+```
 
-<h4 id="Utilizando_arrow_function">Utilizando arrow function</h4>
+#### Utilizando arrow function
 
-<pre class="brush: js notranslate">const inventory = [
+```js
+const inventory = [
     {name: 'maças', quantity: 2},
     {name: 'bananas', quantity: 0},
     {name: 'cherries', quantity: 5}
 ];
 
-const result = inventory.find( fruit =&gt; fruit.name === 'cherries' );
+const result = inventory.find( fruit => fruit.name === 'cherries' );
 
-console.log(result) // { name: 'cherries', quantity: 5 }</pre>
+console.log(result) // { name: 'cherries', quantity: 5 }
+```
 
-<h3 id="Encontrar_um_número_primo_em_um_array">Encontrar um número primo em um array</h3>
+### Encontrar um número primo em um array
 
-<p>O exemplo a seguir encontra um elemento dentro da array que é número primo (ou retorna {{jsxref("Global_Objects/undefined", "undefined")}} se não houverem números primos).</p>
+O exemplo a seguir encontra um elemento dentro da array que é número primo (ou retorna {{jsxref("Global_Objects/undefined", "undefined")}} se não houverem números primos).
 
-<pre class="brush: js notranslate">function isPrime(element, index, array) {
+```js
+function isPrime(element, index, array) {
   var start = 2;
-  while (start &lt;= Math.sqrt(element)) {
-    if (element % start++ &lt; 1) {
+  while (start <= Math.sqrt(element)) {
+    if (element % start++ < 1) {
       return false;
     }
   }
-  return element &gt; 1;
+  return element > 1;
 }
 
 console.log([4, 6, 8, 12].find(isPrime)); // undefined, not found
 console.log([4, 5, 8, 12].find(isPrime)); // 5
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Este método foi adicionado à especificação do ECMAScript 2015 e pode não estar disponível em todas as implementações do JavaScript. Entretanto, você pode fazer um polyfill para o <code>Array.prototype.find</code> com o trecho de código abaixo:</p>
+Este método foi adicionado à especificação do ECMAScript 2015 e pode não estar disponível em todas as implementações do JavaScript. Entretanto, você pode fazer um polyfill para o `Array.prototype.find` com o trecho de código abaixo:
 
-<pre class="brush: js notranslate">if (!Array.prototype.find) {
+```js
+if (!Array.prototype.find) {
   Array.prototype.find = function(predicate) {
     if (this === null) {
       throw new TypeError('Array.prototype.find called on null or undefined');
@@ -111,11 +117,11 @@ console.log([4, 5, 8, 12].find(isPrime)); // 5
       throw new TypeError('predicate must be a function');
     }
     var list = Object(this);
-    var length = list.length &gt;&gt;&gt; 0;
+    var length = list.length >>> 0;
     var thisArg = arguments[1];
     var value;
 
-    for (var i = 0; i &lt; length; i++) {
+    for (var i = 0; i < length; i++) {
       value = list[i];
       if (predicate.call(thisArg, value, i, list)) {
         return value;
@@ -124,32 +130,19 @@ console.log([4, 5, 8, 12].find(isPrime)); // 5
     return undefined;
   };
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.find', 'Array.prototype.find')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                    | Status               | Comentário         |
+| ------------------------------------------------------------------------------------------------ | -------------------- | ------------------ |
+| {{SpecName('ES6', '#sec-array.prototype.find', 'Array.prototype.find')}} | {{Spec2('ES6')}} | Definição inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>{{Compat("javascript.builtins.Array.find")}}</div>
+{{Compat("javascript.builtins.Array.find")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Array.prototype.findIndex()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.findIndex()")}} {{experimental_inline}}
+- {{jsxref("Array.prototype.every()")}}

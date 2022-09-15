@@ -8,15 +8,16 @@ tags:
   - Propriedade
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/displayName
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p>A propriedade <strong><code>function.displayName</code></strong> retorna o nome de exibição da função.</p>
+A propriedade **`function.displayName`** retorna o nome de exibição da função.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Quando definida, a propriedade <code>displayName</code> retorna o nome de exibição da função.</p>
+Quando definida, a propriedade `displayName` retorna o nome de exibição da função.
 
-<pre class="brush: js">function doSomething() {}
+```js
+function doSomething() {}
 
 console.log(doSomething.displayName); // "undefined"
 
@@ -25,11 +26,12 @@ var popup = function(content) { console.log(content); };
 popup.displayName = 'Show Popup';
 
 console.log(popup.displayName); // "Show Popup"
-</pre>
+```
 
-<p>Você pode definir uma função com uma nome de exibição em um {{jsxref("Functions", "function expression", "", 1)}}:</p>
+Você pode definir uma função com uma nome de exibição em um {{jsxref("Functions", "function expression", "", 1)}}:
 
-<pre class="brush: js">var object = {
+```js
+var object = {
   someMethod: function() {}
 };
 
@@ -39,11 +41,12 @@ console.log(object.someMethod.displayName); // logs "someMethod"
 
 try { someMethod } catch(e) { console.log(e); }
 // ReferenceError: someMethod is not defined
-</pre>
+```
 
-<p>Você pode mudar dinamicamente o<code>displayName</code> de uma função:</p>
+Você pode mudar dinamicamente o`displayName` de uma função:
 
-<pre class="brush: js">var object = {
+```js
+var object = {
   // anonymous
   someMethod: function(value) {
     arguments.callee.displayName = 'someMethod (' + value + ')';
@@ -54,25 +57,25 @@ console.log(object.someMethod.displayName); // "undefined"
 
 object.someMethod('123')
 console.log(object.someMethod.displayName); // "someMethod (123)"
-</pre>
+```
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>Geralmente, é preferida por consoles e perfis em vez de  {{jsxref("Function.name", "func.name")}} mostrar o nome de uma função.</p>
+Geralmente, é preferida por consoles e perfis em vez de {{jsxref("Function.name", "func.name")}} mostrar o nome de uma função.
 
-<p>Entrando com o seguinte em um console, isso deverá mostrar algo como  "<code>function My Function()</code>":</p>
+Entrando com o seguinte em um console, isso deverá mostrar algo como "`function My Function()`":
 
-<pre class="brush: js">var a = function() {};
+```js
+var a = function() {};
 a.displayName = 'My Function';
 
-a; // "function My Function()"</pre>
+a; // "function My Function()"
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<p>Não faz parte de denhuma especificação.</p>
+Não faz parte de denhuma especificação.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
-  <p>{{Compat("javascript.builtins.Function.displayName")}}</p>
-</div>
+{{Compat("javascript.builtins.Function.displayName")}}

@@ -3,38 +3,35 @@ title: Set.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/has
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>has()</strong></code><strong> </strong>retorna um valor booleano indicando se um elemento com o valor especificado existe em um objecto <code>Set</code> ou não.</p>
+O método **`has()`\*\*** \*\*retorna um valor booleano indicando se um elemento com o valor especificado existe em um objecto `Set` ou não.
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-has.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-has.html")}}
 
+## Sintaxe
 
+```
+mySet.has(valor);
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Parâmetros
 
-<pre class="syntaxbox"><em>mySet</em>.has(<em>valor</em>);</pre>
+- `valor`
+  - : O valor para testar a existência no objeto `Set`.
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Valor de retorno
 
-<dl>
- <dt><code>valor</code></dt>
- <dd>O valor para testar a existência no objeto <code>Set</code>.</dd>
-</dl>
+Retorna `true` se um elemento com o valor especificado existe no objeto `Set`; `false` caso contrário.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+> **Nota:**Tecnicamente falando, `has()` usa o algorítimo [`sameValueZero`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality) para determinar quando o elemento dado é encontrado.
 
-<p>Retorna <code>true</code> se um elemento com o valor especificado existe no objeto <code>Set</code>; <code>false</code> caso contrário.</p>
+## Exemplos
 
-<div class="blockIndicator note">
-<p><strong>Nota: </strong>Tecnicamente falando, <code>has()</code> usa o algorítimo <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality">sameValueZero</a></code> para determinar quando o elemento dado é encontrado.</p>
-</div>
+### Usando o método `has`
 
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Usando_o_método_has">Usando o método <code>has</code></h3>
-
-<pre class="brush: js">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add('foo');
 
 mySet.has('foo');  // retorna true
@@ -47,40 +44,21 @@ set1.add(obj1);
 set1.has(obj1);        // retorna true
 set1.has({'key1': 1}); // retorna false porque obj1 e {'key': 1} fazem referência a objetos diferentes.
 set1.add({'key1': 1}); // agora set1 contém 2 registros
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-set.prototype.has', 'Set.prototype.has')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-set.prototype.has', 'Set.prototype.has')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                | Status                       | Comentário         |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('ES2015', '#sec-set.prototype.has', 'Set.prototype.has')}} | {{Spec2('ES2015')}}     | Definição inicial. |
+| {{SpecName('ESDraft', '#sec-set.prototype.has', 'Set.prototype.has')}} | {{Spec2('ESDraft')}} |                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("javascript.builtins.Set.has")}}
 
+## Veja também:
 
-<p>{{Compat("javascript.builtins.Set.has")}}</p>
-
-<h2 id="Veja_também">Veja também:</h2>
-
-<ul>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("Set.prototype.add()")}}</li>
- <li>{{jsxref("Set.prototype.delete()")}}</li>
-</ul>
+- {{jsxref("Set")}}
+- {{jsxref("Set.prototype.add()")}}
+- {{jsxref("Set.prototype.delete()")}}

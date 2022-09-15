@@ -3,115 +3,83 @@ title: Intl
 slug: Web/JavaScript/Reference/Global_Objects/Intl
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O objeto <strong><code>Intl</code></strong> é o namespace para a API de Internacionalização do ECMAScript , que fornece comparação de string sensível à línguagem, formatação de números, e formatação de data e hora. Os construtores para os objetos {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, e {{jsxref("DateTimeFormat")}} são propriedades do objecto <code>Intl</code>. Esta página documenta essas propriedades, bem como funcionalidades comuns aos construtores de internacionalização e outras funções sensíveis de linguagem.</p>
+O objeto **`Intl`** é o namespace para a API de Internacionalização do ECMAScript , que fornece comparação de string sensível à línguagem, formatação de números, e formatação de data e hora. Os construtores para os objetos {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, e {{jsxref("DateTimeFormat")}} são propriedades do objecto `Intl`. Esta página documenta essas propriedades, bem como funcionalidades comuns aos construtores de internacionalização e outras funções sensíveis de linguagem.
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<dl>
- <dt>{{jsxref("Global_Objects/Collator", "Intl.Collator")}}</dt>
- <dd>Construtor para <em>collators</em>, objetos que permitem comparação de string sensível a linguagem.</dd>
- <dt>{{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}</dt>
- <dd>Construtor para objetos que permitem formatação de data e hora sensível a linguagem.</dd>
- <dt>{{jsxref("Global_Objects/NumberFormat", "Intl.NumberFormat")}}</dt>
- <dd>Construtor para objetos que permitem formatação de número sensível a linguagem.</dd>
-</dl>
+- {{jsxref("Global_Objects/Collator", "Intl.Collator")}}
+  - : Construtor para _collators_, objetos que permitem comparação de string sensível a linguagem.
+- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
+  - : Construtor para objetos que permitem formatação de data e hora sensível a linguagem.
+- {{jsxref("Global_Objects/NumberFormat", "Intl.NumberFormat")}}
+  - : Construtor para objetos que permitem formatação de número sensível a linguagem.
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<dl>
- <dt>{{jsxref("Intl.getCanonicalLocales()")}}</dt>
- <dd>Retorna os nomes canônicos de local (ex.: en-US, pt-BR).</dd>
-</dl>
+- {{jsxref("Intl.getCanonicalLocales()")}}
+  - : Retorna os nomes canônicos de local (ex.: en-US, pt-BR).
 
-<h2 id="Identificação_e_negociação_de_local">Identificação e negociação de local</h2>
+## Identificação e negociação de local
 
-<p>Os construtores de internacionalização, assim como diversos métodos de outros construtores que são sensíveis a idioma (listados em <a href="#see_also">Veja também</a>) usam um padrão comum para identificar locais e determinar qual será utilizado: todos aceitam argumentos <code>locales</code> e <code>options</code> e negociam o(s) local(is) requisitado entre os locais suportados usando um algoritmo especificado na propriedade <code>options.localeMatcher</code>.</p>
+Os construtores de internacionalização, assim como diversos métodos de outros construtores que são sensíveis a idioma (listados em [Veja também](#see_also)) usam um padrão comum para identificar locais e determinar qual será utilizado: todos aceitam argumentos `locales` e `options` e negociam o(s) local(is) requisitado entre os locais suportados usando um algoritmo especificado na propriedade `options.localeMatcher`.
 
-<h3 id="Argumento_locales">Argumento <code>locales</code></h3>
+### Argumento `locales`
 
-<p>O argumento <code>locales</code> deve ser uma string contendo uma <a href="http://tools.ietf.org/html/rfc5646">tag de linguagem BCP 47</a> ou um array dessas tags. Se o argumento <code>locales</code> não for passado ou estiver indefinido, será utilizado o local padrão do runtime.</p>
+O argumento `locales` deve ser uma string contendo uma [tag de linguagem BCP 47](http://tools.ietf.org/html/rfc5646) ou um array dessas tags. Se o argumento `locales` não for passado ou estiver indefinido, será utilizado o local padrão do runtime.
 
-<p>Uma tag de linguagem BCP 47 identifica um idioma ou local (a diferença entre ambos neste caso é difusa). Em sua forma mais comum, ela pode conter, nesta ordem: um código de idioma, um código de escrita e um código de país, todos eparados por hífen. Exemplos:</p>
+Uma tag de linguagem BCP 47 identifica um idioma ou local (a diferença entre ambos neste caso é difusa). Em sua forma mais comum, ela pode conter, nesta ordem: um código de idioma, um código de escrita e um código de país, todos eparados por hífen. Exemplos:
 
-<ul>
- <li><code>"hi"</code>: Hindi.</li>
- <li><code>"de-AT"</code>: Alemão como usado na Áustria.</li>
- <li><code>"zh-Hans-CN"</code>: Chinês com escrita simplificada como usado na China.</li>
-</ul>
+- `"hi"`: Hindi.
+- `"de-AT"`: Alemão como usado na Áustria.
+- `"zh-Hans-CN"`: Chinês com escrita simplificada como usado na China.
 
-<p>As subtags identificando idiomas, escritas, países (regiões) e (raramente utilizadas) variantes nas tags de linguagem BCP 47 podem ser consultadas no <a href="http://www.iana.org/assignments/language-subtag-registry">Registro de Subtags de Linguagem da IANA</a>.</p>
+As subtags identificando idiomas, escritas, países (regiões) e (raramente utilizadas) variantes nas tags de linguagem BCP 47 podem ser consultadas no [Registro de Subtags de Linguagem da IANA](http://www.iana.org/assignments/language-subtag-registry).
 
-<p>BCP 47 também permite extensões, e uma delas é relevante para as funções JavaScript de internacionalização: a extensão <code>"u"</code> (Unicode). Ela pode ser utilizada para requisitar uma customização do comportamento específico local de um objeto {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, ou {{jsxref("DateTimeFormat")}}. Exemplos:</p>
+BCP 47 também permite extensões, e uma delas é relevante para as funções JavaScript de internacionalização: a extensão `"u"` (Unicode). Ela pode ser utilizada para requisitar uma customização do comportamento específico local de um objeto {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, ou {{jsxref("DateTimeFormat")}}. Exemplos:
 
-<ul>
- <li><code>"de-DE-u-co-phonebk"</code>: Use the phonebook variant of the German sort order, which expands umlauted vowels to character pairs: ä → ae, ö → oe, ü → ue.</li>
- <li><code>"th-TH-u-nu-thai"</code>: Use Thai digits (๐, ๑, ๒, ๓, ๔, ๕, ๖, ๗, ๘, ๙) in number formatting.</li>
- <li><code>"ja-JP-u-ca-japanese"</code>: Use the Japanese calendar in date and time formatting, so that 2013 is expressed as the year 25 of the Heisei period, or 平成25.</li>
-</ul>
+- `"de-DE-u-co-phonebk"`: Use the phonebook variant of the German sort order, which expands umlauted vowels to character pairs: ä → ae, ö → oe, ü → ue.
+- `"th-TH-u-nu-thai"`: Use Thai digits (๐, ๑, ๒, ๓, ๔, ๕, ๖, ๗, ๘, ๙) in number formatting.
+- `"ja-JP-u-ca-japanese"`: Use the Japanese calendar in date and time formatting, so that 2013 is expressed as the year 25 of the Heisei period, or 平成 25.
 
-<h3 id="Locale_negotiation">Locale negotiation</h3>
+### Locale negotiation
 
-<p>The <code>locales</code> argument, after stripping off all Unicode extensions, is interpreted as a prioritized request from the application. The runtime compares it against the locales it has available and picks the best one available. Two matching algorithms exist: the <code>"lookup"</code> matcher follows the Lookup algorithm specified in <a href="http://tools.ietf.org/html/rfc4647#section-3.4">BCP 47</a>; the <code>"best fit"</code> matcher lets the runtime provide a locale that's at least, but possibly more, suited for the request than the result of the Lookup algorithm. If the application doesn't provide a <code>locales</code> argument, or the runtime doesn't have a locale that matches the request, then the runtime's default locale is used. The matcher can be selected using a property of the <code>options</code> argument (see below).</p>
+The `locales` argument, after stripping off all Unicode extensions, is interpreted as a prioritized request from the application. The runtime compares it against the locales it has available and picks the best one available. Two matching algorithms exist: the `"lookup"` matcher follows the Lookup algorithm specified in [BCP 47](http://tools.ietf.org/html/rfc4647#section-3.4); the `"best fit"` matcher lets the runtime provide a locale that's at least, but possibly more, suited for the request than the result of the Lookup algorithm. If the application doesn't provide a `locales` argument, or the runtime doesn't have a locale that matches the request, then the runtime's default locale is used. The matcher can be selected using a property of the `options` argument (see below).
 
-<p>If the selected language tag had a Unicode extension substring, that extension is now used to customize the constructed object or the behavior of the function. Each constructor or function supports only a subset of the keys defined for the Unicode extension, and the supported values often depend on the language tag. For example, the <code>"co"</code> key (collation) is only supported by {{jsxref("Collator")}}, and its <code>"phonebk"</code> value is only supported for German.</p>
+If the selected language tag had a Unicode extension substring, that extension is now used to customize the constructed object or the behavior of the function. Each constructor or function supports only a subset of the keys defined for the Unicode extension, and the supported values often depend on the language tag. For example, the `"co"` key (collation) is only supported by {{jsxref("Collator")}}, and its `"phonebk"` value is only supported for German.
 
-<h3 id="options_argument"><code>options</code> argument</h3>
+### `options` argument
 
-<p>The <code>options</code> argument must be an object with properties that vary between constructors and functions. If the <code>options</code> argument is not provided or is undefined, default values are used for all properties.</p>
+The `options` argument must be an object with properties that vary between constructors and functions. If the `options` argument is not provided or is undefined, default values are used for all properties.
 
-<p>One property is supported by all language sensitive constructors and functions: The <code>localeMatcher</code> property, whose value must be a string <code>"lookup"</code> or <code>"best fit"</code> and which selects one of the locale matching algorithms described above.</p>
+One property is supported by all language sensitive constructors and functions: The `localeMatcher` property, whose value must be a string `"lookup"` or `"best fit"` and which selects one of the locale matching algorithms described above.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int 1.0', '#sec-8', 'Intl')}}</td>
-   <td>{{Spec2('ES Int 1.0')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int 2.0', '#sec-8', 'Intl')}}</td>
-   <td>{{Spec2('ES Int 2.0')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#intl-object', 'Intl')}}</td>
-   <td>{{Spec2('ES Int Draft')}}</td>
-   <td>Added Intl.getCanonicalLocales in the 4th edition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                        | Status                           | Comment                                            |
+| -------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------- |
+| {{SpecName('ES Int 1.0', '#sec-8', 'Intl')}}         | {{Spec2('ES Int 1.0')}} | Initial definition.                                |
+| {{SpecName('ES Int 2.0', '#sec-8', 'Intl')}}         | {{Spec2('ES Int 2.0')}} |                                                    |
+| {{SpecName('ES Int Draft', '#intl-object', 'Intl')}} | {{Spec2('ES Int Draft')}} | Added Intl.getCanonicalLocales in the 4th edition. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Intl")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>Introduction: <a href="http://norbertlindenberg.com/2012/12/ecmascript-internationalization-api/index.html">The ECMAScript Internationalization API</a></li>
- <li>Constructors
-  <ul>
-   <li>{{jsxref("Collator", "Intl.Collator")}}</li>
-   <li>{{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}</li>
-   <li>{{jsxref("NumberFormat", "Intl.NumberFormat")}}</li>
-  </ul>
- </li>
- <li>Methods
-  <ul>
-   <li>{{jsxref("String.prototype.localeCompare()")}}</li>
-   <li>{{jsxref("Number.prototype.toLocaleString()")}}</li>
-   <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
-   <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
-   <li>{{jsxref("Date.prototype.toLocaleTimeString()")}}</li>
-  </ul>
- </li>
-</ul>
+- Introduction: [The ECMAScript Internationalization API](http://norbertlindenberg.com/2012/12/ecmascript-internationalization-api/index.html)
+- Constructors
+
+  - {{jsxref("Collator", "Intl.Collator")}}
+  - {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
+  - {{jsxref("NumberFormat", "Intl.NumberFormat")}}
+
+- Methods
+
+  - {{jsxref("String.prototype.localeCompare()")}}
+  - {{jsxref("Number.prototype.toLocaleString()")}}
+  - {{jsxref("Date.prototype.toLocaleString()")}}
+  - {{jsxref("Date.prototype.toLocaleDateString()")}}
+  - {{jsxref("Date.prototype.toLocaleTimeString()")}}

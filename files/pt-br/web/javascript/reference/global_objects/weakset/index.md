@@ -3,60 +3,53 @@ title: WeakSet
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}O objeto **WeakSet** pertmite que você armazene objetos mantidos “fracamente” na coleção.
 
-<div>O objeto <strong>WeakSet</strong> pertmite que você armazene objetos mantidos “fracamente” na coleção.</div>
+## Syntaxe
 
-<div> </div>
+```
+ new WeakSet([iterable]);
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+### Parâmetros
 
-<pre class="syntaxbox"> new WeakSet([iterable]);</pre>
+- iterable
+  - : Se um[ objeto interagível ](pt-BR/docs/Web/JavaScript/Reference/Statements/for...of)é passado, todos os seus elementos serão adicionados ao novo `WeakSet`.
 
-<h3 id="Parâmetros">Parâmetros</h3>
+## Descrição
 
-<dl>
- <dt>iterable</dt>
- <dd>Se um<a href="pt-BR/docs/Web/JavaScript/Reference/Statements/for...of"> objeto interagível </a>é passado, todos os seus elementos serão adicionados ao novo <code>WeakSet</code>.</dd>
-</dl>
+Objetos `WeakSet` são coleções de objetos. Um objeto no `WeakSet `pode ocorrer uma vez; é único na coleção do `WeakSet`.
 
-<h2 id="Descrição">Descrição</h2>
+As principais diferenças para o objeto {{jsxref("Set")}} são:
 
-<p>Objetos <code>WeakSet</code> são coleções de objetos. Um objeto no <code>WeakSet </code>pode ocorrer uma vez; é único na coleção do <code>WeakSet</code>.</p>
+- Em contraste ao `Sets`, `WeakSets `são **coleções apenas de objetos** e não de valores arbitrários de qualquer tipo.
+- O `WeakSet `é _fraco_. Referências aos objetos nas coleções são mantidas "fracamente". Se não há outra referência para um objeto mantido na `WeakSet`, eles pode ser coletados pelo gerenciamento de memória (_garbage collection_).
 
-<p>As principais diferenças para o objeto {{jsxref("Set")}} são:</p>
+## Propriedades
 
-<ul>
- <li>Em contraste ao <code>Sets</code>, <code>WeakSets </code>são <strong>coleções apenas de objetos</strong> e não de valores arbitrários de qualquer tipo.</li>
- <li>O <code>WeakSet </code>é <em>fraco</em>. Referências aos objetos nas coleções são mantidas "fracamente". Se não há outra referência para um objeto mantido na <code>WeakSet</code>, eles pode ser coletados pelo gerenciamento de memória (<em>garbage collection</em>).</li>
-</ul>
+- `WeakSet.length`
+  - : O valor da propriedade de comprimento é 0.
+- {{jsxref("WeakSet.prototype")}}
+  - : Representa o protóripo para o construtos `Set`. Permite a adição de propriedades para todos os objetos do `WeakSet`.
 
-<h2 id="Propriedades">Propriedades</h2>
+## `Instâncias WeakSet`
 
-<dl>
- <dt><code>WeakSet.length</code></dt>
- <dd>O valor da propriedade de  comprimento é 0.</dd>
- <dt>{{jsxref("WeakSet.prototype")}}</dt>
- <dd>Representa o protóripo para o construtos <code>Set</code>. Permite a adição de propriedades para todos os objetos do <code>WeakSet</code>.</dd>
-</dl>
+Todas as instâncias do `WeakSet` herdam do {{jsxref("WeakSet.prototype")}}.
 
-<h2 id="Instâncias_WeakSet"><code>Instâncias WeakSet</code></h2>
+### Propriedades
 
-<p>Todas as instâncias do <code>WeakSet</code> herdam do {{jsxref("WeakSet.prototype")}}.</p>
+{{page('en-US/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype','Properties')}}
 
-<h3 id="Propriedades_2">Propriedades</h3>
+### Métodos
 
-<p>{{page('en-US/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype','Properties')}}</p>
+{{page('en-US/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype','Methods')}}
 
-<h3 id="Métodos">Métodos</h3>
+## Exemplos
 
-<p>{{page('en-US/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype','Methods')}}</p>
+### Usando o objeto do `WeakSet`
 
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Usando_o_objeto_do_WeakSet">Usando o objeto do <code>WeakSet</code></h3>
-
-<pre class="brush: js">var ws = new WeakSet();
+```js
+var ws = new WeakSet();
 var obj = {};
 var foo = {};
 
@@ -68,38 +61,21 @@ ws.has(foo);    // false, foo não foi adicionado ao set
 
 ws.delete(window); // remove window do set
 ws.has(window);    // false, window foi removido
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-weakset-objects', 'WeakSet')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definição inicial</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-weakset-objects', 'WeakSet')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                | Status                       | Comentário        |
+| ---------------------------------------------------------------------------- | ---------------------------- | ----------------- |
+| {{SpecName('ES6', '#sec-weakset-objects', 'WeakSet')}}     | {{Spec2('ES6')}}         | Definição inicial |
+| {{SpecName('ESDraft', '#sec-weakset-objects', 'WeakSet')}} | {{Spec2('ESDraft')}} |                   |
 
-<h2 id="Compatilidade_de_Browser">Compatilidade de Browser</h2>
+## Compatilidade de Browser
 
 {{Compat("javascript.builtins.WeakSet")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Map")}}</li>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("WeakMap")}}</li>
-</ul>
+- {{jsxref("Map")}}
+- {{jsxref("Set")}}
+- {{jsxref("WeakMap")}}

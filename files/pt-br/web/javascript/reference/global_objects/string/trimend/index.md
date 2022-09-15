@@ -11,70 +11,62 @@ tags:
   - trimEnd()
 translation_of: Web/JavaScript/Reference/Global_Objects/String/trimEnd
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code>trimEnd()</code> remove espaços do final de uma <em>string</em>. <code>trimRight()</code> é um apelido para este método.</p>
+O método `trimEnd()` remove espaços do final de uma _string_. `trimRight()` é um apelido para este método.
 
-<div>{{EmbedInteractiveExample("pages/js/string-trimend.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-trimend.html")}}
 
+## Sintaxe
 
+```
+str.trimEnd();
+str.trimRight();
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Valor retornado
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.trimEnd();
-<var>str</var>.trimRight();</code></pre>
+Uma nova _string_ representando a _string_ original sem espaços ao seu final (direita).
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+## Descrição
 
-<p>Uma nova <em>string </em>representando a <em>string</em> original sem espaços ao seu final (direita).</p>
+Os métodos `trimEnd()` / `trimRight()` retornam a _string_ sem os espaços à direita dela. `trimEnd()` ou `trimRight()` não altera o valor da _string_ original.
 
-<h2 id="Descrição">Descrição</h2>
+### _Aliasing_
 
-<p>Os métodos <code>trimEnd()</code> / <code>trimRight()</code> retornam a <em>string</em> sem os espaços à direita dela. <code>trimEnd()</code> ou <code>trimRight()</code> não altera o valor da <em>string</em> original.</p>
+Para consistência com funções como {{jsxref("String.prototype.padEnd")}} o nome padrão do método é `trimEnd`. Entretanto, por razões de compatibilidade na _web_, `trimRight` permanece como um apelido para `trimEnd`. Em alguns motores isso significa:
 
-<h3 id="Aliasing"><em>Aliasing</em></h3>
+```js
+String.prototype.trimRight.name === "trimEnd";
+```
 
-<p>Para consistência com funções como {{jsxref("String.prototype.padEnd")}} o nome padrão do método é <code>trimEnd</code>. Entretanto, por razões de compatibilidade na <em>web</em>, <code>trimRight</code> permanece como um apelido para <code>trimEnd</code>. Em alguns motores isso significa:</p>
+## Exemplos
 
-<pre class="brush: js notranslate">String.prototype.trimRight.name === "trimEnd";</pre>
+### Usando `trimEnd()`
 
-<h2 id="Exemplos">Exemplos</h2>
+O exemplo a seguir mostra a _string_ em caixa baixa `' foo'`:
 
-<h3 id="Usando_trimEnd">Usando <code>trimEnd()</code></h3>
-
-<p>O exemplo a seguir mostra a <em>string</em> em caixa baixa <code>'   foo'</code>:</p>
-
-<pre class="brush: js">var str = '   foo  ';
+```js
+var str = '   foo  ';
 
 console.log(str.length); // retorna 8
 
 str = str.trimEnd();
 console.log(str.length); // retorna 6
 console.log(str);        // retorna '   foo'
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.trimend', 'String.prototype.trimEnd')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-string.prototype.trimend', 'String.prototype.trimEnd')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.String.trimEnd")}}</p>
+{{Compat("javascript.builtins.String.trimEnd")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("String.prototype.trim()")}}</li>
- <li>{{jsxref("String.prototype.trimStart()")}}</li>
-</ul>
+- {{jsxref("String.prototype.trim()")}}
+- {{jsxref("String.prototype.trimStart()")}}

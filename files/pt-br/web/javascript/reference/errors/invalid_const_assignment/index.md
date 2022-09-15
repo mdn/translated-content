@@ -7,85 +7,94 @@ tags:
   - TypeError
 translation_of: Web/JavaScript/Reference/Errors/Invalid_const_assignment
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Mensagem">Mensagem</h2>
+## Mensagem
 
-<pre class="syntaxbox">TypeError: invalid assignment to const "x" (Firefox)
+```
+TypeError: invalid assignment to const "x" (Firefox)
 TypeError: Assignment to constant variable. (Chrome)
 TypeError: Assignment to const (Edge)
 TypeError: Redeclaration of const 'x' (IE)
-</pre>
+```
 
-<h2 id="Tipo_de_erro">Tipo de erro</h2>
+## Tipo de erro
 
-<p>{{jsxref("TypeError")}}</p>
+{{jsxref("TypeError")}}
 
-<h2 id="O_que_deu_errado">O que deu errado?</h2>
+## O que deu errado?
 
-<p>Uma constante é um valor que não pode ser alterado pelo programa durante a execução normal. Ele não pode mudar através de reatribuição e não pode ser redeclarado. Em JavaScript, as constantes são declaradas usando a palavra-chave <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code>.</p>
+Uma constante é um valor que não pode ser alterado pelo programa durante a execução normal. Ele não pode mudar através de reatribuição e não pode ser redeclarado. Em JavaScript, as constantes são declaradas usando a palavra-chave [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const).
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Redeclaração_inválida">Redeclaração inválida</h3>
+### Redeclaração inválida
 
-<p>Atribuir um valor ao mesmo nome de constante no mesmo escopo de bloco lançará o erro.</p>
+Atribuir um valor ao mesmo nome de constante no mesmo escopo de bloco lançará o erro.
 
-<pre class="brush: js example-bad">const COLUNAS = 80;
+```js example-bad
+const COLUNAS = 80;
 
 // ...
 
-COLUNAS = 120; // TypeError: invalid assignment to const `COLUNAS'</pre>
+COLUNAS = 120; // TypeError: invalid assignment to const `COLUNAS'
+```
 
-<h3 id="Corrigindo_o_erro">Corrigindo o erro</h3>
+### Corrigindo o erro
 
-<p>Existem várias opções para corrigir esse erro. Verifique o que se pretendia alcançar com a constante em questão.</p>
+Existem várias opções para corrigir esse erro. Verifique o que se pretendia alcançar com a constante em questão.
 
-<h4 id="Renomear">Renomear</h4>
+#### Renomear
 
-<p>Se você quis declarar outra constante, escolha outro nome e renomeie. Esse nome de constante já está sendo usado nesse escopo.</p>
+Se você quis declarar outra constante, escolha outro nome e renomeie. Esse nome de constante já está sendo usado nesse escopo.
 
-<pre class="brush: js example-good">const COLUNAS = 80;
-const COLUNAS_LARGAS = 120;</pre>
+```js example-good
+const COLUNAS = 80;
+const COLUNAS_LARGAS = 120;
+```
 
-<h4 id="const_let_ou_var"><code>const</code>, <code>let</code> ou <code>var</code>?</h4>
+#### `const`, `let` ou `var`?
 
-<p>Não use const se você não quis declarar uma constante. Talvez você quisesse declarar uma variável com escopo de bloco com <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code> ou uma variável global com <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var">var</a></code>.</p>
+Não use const se você não quis declarar uma constante. Talvez você quisesse declarar uma variável com escopo de bloco com [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) ou uma variável global com [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var).
 
-<pre class="brush: js example-good">let colunas = 80;
+```js example-good
+let colunas = 80;
 
 // ...
 
 let colunas = 120;
-</pre>
+```
 
-<h4 id="Escopo">Escopo</h4>
+#### Escopo
 
-<p>Verifique se você está no escopo correto. Essa constante deve aparecer nesse escopo ou deveria aparecer em uma função, por exemplo?</p>
+Verifique se você está no escopo correto. Essa constante deve aparecer nesse escopo ou deveria aparecer em uma função, por exemplo?
 
-<pre class="brush: js example-good">const COLUNAS = 80;
+```js example-good
+const COLUNAS = 80;
 
 function configurarAmbienteTelaGrande() {
   const COLUNAS = 120;
-}</pre>
+}
+```
 
-<h3 id="const_e_imutabilidade"><code>const</code> e imutabilidade</h3>
+### `const` e imutabilidade
 
-<p>A declaração <code>const</code> cria uma referência somente leitura para um valor. Isso <strong>não significa</strong> que o valor que ela contém é imutável, apenas que o identificador da variável não pode ser reatribuído. Por exemplo, caso o conteúdo seja um objeto, isso significa que o objeto em si ainda pode ser alterado. Isso significa que você não pode alterar o valor armazenado em uma variável:</p>
+A declaração `const` cria uma referência somente leitura para um valor. Isso **não significa** que o valor que ela contém é imutável, apenas que o identificador da variável não pode ser reatribuído. Por exemplo, caso o conteúdo seja um objeto, isso significa que o objeto em si ainda pode ser alterado. Isso significa que você não pode alterar o valor armazenado em uma variável:
 
-<pre class="brush: js example-bad">const obj = {foo: 'bar'};
+```js example-bad
+const obj = {foo: 'bar'};
 obj = {foo: 'baz'}; // TypeError: invalid assignment to const `obj'
-</pre>
+```
 
-<p>Mas você pode alterar as propriedades em uma variável:</p>
+Mas você pode alterar as propriedades em uma variável:
 
-<pre class="brush: js example-good">obj.foo = 'baz';
-obj; // Object { foo: "baz" }</pre>
+```js example-good
+obj.foo = 'baz';
+obj; // Object { foo: "baz" }
+```
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var">var</a></code></li>
-</ul>
+- [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const)
+- [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)
+- [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var)

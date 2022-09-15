@@ -10,42 +10,44 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>toLocaleString()</code></strong> retorna uma string com uma representação sensível a linguagem deste número.</p>
+O método **`toLocaleString()`** retorna uma string com uma representação sensível a linguagem deste número.
 
-<p>Os novos argumentos <code>locales</code> e <code>options</code> permitem às aplicações especificar a linguagem cujas convenções de formatações serão utilizadas e personalizar o comportamento da função. Nas implementações anteriores, que ignorava os argumentos <code>locales</code> e <code>options</code> arguments, a localização utilizada e a forma de retornar a string erão totalmente dependente da implementação.</p>
+Os novos argumentos `locales` e `options` permitem às aplicações especificar a linguagem cujas convenções de formatações serão utilizadas e personalizar o comportamento da função. Nas implementações anteriores, que ignorava os argumentos `locales` e `options` arguments, a localização utilizada e a forma de retornar a string erão totalmente dependente da implementação.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code><em>numObj</em>.toLocaleString(</code><code>[locales [, options]])</code></pre>
+```
+numObj.toLocaleString([locales [, options]])
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<p>Dê uma olhada na seção <a href="#Browser_compatibility">Compatibilidade do Navegador</a> para verificar quais navegadores suportam os argumentos <code>locales</code> e <code>options</code>, e o <a href="#">Exemplo: Verificando o suporte dos argumentos <code>locales</code> e <code>options</code></a> para detecção desta característica.</p>
+Dê uma olhada na seção [Compatibilidade do Navegador](#Browser_compatibility) para verificar quais navegadores suportam os argumentos `locales` e `options`, e o Exemplo: Verificando o suporte dos argumentos `locales` e `options` para detecção desta característica.
 
-<div class="note">
-<p><strong>Nota:</strong> ECMAScript Internationalization API, implementada com o Firefox 29, incluiu o argumento <code>locales</code> ao método <code>Number.toLocaleString()</code>. Se o argumento for {{jsxref("undefined")}}, este método retorna os dígitos de localização especificados pelo SO, enquanto que as versões anteriores doFirefox retornavam os dígitos<a href="https://en.wikipedia.org/wiki/Arabic_numerals"> Árabe Ocidental</a>. Esta mudança foi relatada como uma regressão que afeta a retrocompatibilidade que será corrigida em breve. ({{bug(999003)}})</p>
-</div>
+> **Nota:** ECMAScript Internationalization API, implementada com o Firefox 29, incluiu o argumento `locales` ao método `Number.toLocaleString()`. Se o argumento for {{jsxref("undefined")}}, este método retorna os dígitos de localização especificados pelo SO, enquanto que as versões anteriores doFirefox retornavam os dígitos[ Árabe Ocidental](https://en.wikipedia.org/wiki/Arabic_numerals). Esta mudança foi relatada como uma regressão que afeta a retrocompatibilidade que será corrigida em breve. ({{bug(999003)}})
 
-<div>{{page('pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat', 'Parâmetros')}}</div>
+{{page('pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat', 'Parâmetros')}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_toLocaleString">Usando <code>toLocaleString</code></h3>
+### Usando `toLocaleString`
 
-<p>No uso básico sem a especificação de uma localização, o método retornará uma string formatada com a localização e as opções padrão.</p>
+No uso básico sem a especificação de uma localização, o método retornará uma string formatada com a localização e as opções padrão.
 
-<pre class="brush: js">var numero = 3500;
+```js
+var numero = 3500;
 
 console.log(numero.toLocaleString()); // Mostra "3,500" se a localização for U.S. English
-</pre>
+```
 
-<h3 id="Verificando_o_suporte_dos_argumentos_locales_e_options">Verificando o suporte dos argumentos <code>locales</code> e <code>options</code></h3>
+### Verificando o suporte dos argumentos `locales` e `options`
 
-<p>Os argumentos <code>locales</code> e <code>options</code> não são suportados por todos os navegadores ainda. Para verificar pelo suporte das implementações do ES5.1 e posteriores, a requisição de tags de linguagem ilegais são rejeitadas com uma exceção {{jsxref("Global_Objects/RangeError", "RangeError")}} pode ser usada da seguinte forma:</p>
+Os argumentos `locales` e `options` não são suportados por todos os navegadores ainda. Para verificar pelo suporte das implementações do ES5.1 e posteriores, a requisição de tags de linguagem ilegais são rejeitadas com uma exceção {{jsxref("Global_Objects/RangeError", "RangeError")}} pode ser usada da seguinte forma:
 
-<pre class="brush: js">function toLocaleStringSupportsLocales() {
+```js
+function toLocaleStringSupportsLocales() {
   var numero = 0;
   try {
      numero.toLocaleString('i');
@@ -54,30 +56,32 @@ console.log(numero.toLocaleString()); // Mostra "3,500" se a localização for U
   }
   return false;
 }
-</pre>
+```
 
-<p>Antes da ES5.1, implementações que não exigiam um tratamento de erro se <code>toLocaleString</code> fosse chamada com argumentos.</p>
+Antes da ES5.1, implementações que não exigiam um tratamento de erro se `toLocaleString` fosse chamada com argumentos.
 
-<p>Uma verificação que funciona em todos os casos, incluindo aqueles que suportam ECMA-262 antes da edição 5.1, é testar pelas especificações de característicadas da ECMA-402 que exigem suporte de opções regionais para <code>Number.prototype.toLocaleString</code> diretamente:</p>
+Uma verificação que funciona em todos os casos, incluindo aqueles que suportam ECMA-262 antes da edição 5.1, é testar pelas especificações de característicadas da ECMA-402 que exigem suporte de opções regionais para `Number.prototype.toLocaleString` diretamente:
 
-<pre class="brush: js">function toLocaleStringSupportsOptions() {
-  return !!(typeof Intl == 'object' &amp;&amp; Intl &amp;&amp; typeof Intl.NumberFormat == 'function');
+```js
+function toLocaleStringSupportsOptions() {
+  return !!(typeof Intl == 'object' && Intl && typeof Intl.NumberFormat == 'function');
 }
-</pre>
+```
 
-<p>Estes testes para um objeto <code>Intl</code> global, verifica se ele não é <code>null</code> e se uma propriedade <code>NumberFormat</code> é uma função.</p>
+Estes testes para um objeto `Intl` global, verifica se ele não é `null` e se uma propriedade `NumberFormat` é uma função.
 
-<h3 id="Usando_locales">Usando <code>locales</code></h3>
+### Usando `locales`
 
-<p>Este exemplo mostra algumas variações de formatos de números localizados. A fim de obter o formato da linguagem utilizada na interface do usuário da sua aplicação, tenha certeza de especificar a língua (e possivelmente algumas línguas reservas) usando o argumento<code> locales</code>:</p>
+Este exemplo mostra algumas variações de formatos de números localizados. A fim de obter o formato da linguagem utilizada na interface do usuário da sua aplicação, tenha certeza de especificar a língua (e possivelmente algumas línguas reservas) usando o argumento` locales`:
 
-<pre class="brush: js">var numero = 123456.789;
+```js
+var numero = 123456.789;
 
 // O alemão usa vírgula como separador de decimal e ponto para milhares
 console.log(numero.toLocaleString('de-DE'));
 // → 123.456,789
 
-// O árabe usa dígitos <a href="https://en.wikipedia.org/wiki/Eastern_Arabic_numerals">Árabes Orientais</a> em muitos países que falam árabe
+// O árabe usa dígitos Árabes Orientais em muitos países que falam árabe
 console.log(numero.toLocaleString('ar-EG'));
 // → ١٢٣٤٥٦٫٧٨٩
 
@@ -93,13 +97,14 @@ console.log(numero.toLocaleString('zh-Hans-CN-u-nu-hanidec'));
 // inclua uma língua reseva, neste caso indonésio
 console.log(numero.toLocaleString(['ban', 'id']));
 // → 123.456,789
-</pre>
+```
 
-<h3 id="Usando_options">Usando <code>options</code></h3>
+### Usando `options`
 
-<p>Os resultados obtidos por <code>toLocaleString</code> pode ser personalizado usando o argumento<code> options</code>:</p>
+Os resultados obtidos por `toLocaleString` pode ser personalizado usando o argumento` options`:
 
-<pre class="brush: js">var numero = 123456.789;
+```js
+var numero = 123456.789;
 
 // informando um formato de moeda
 console.log(numero.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));
@@ -112,65 +117,28 @@ console.log(numero.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' 
 // limitando a três dígitos significativos
 console.log(numero.toLocaleString('en-IN', { maximumSignificantDigits: 3 }));
 // → 1,23,000
-</pre>
+```
 
-<h2 id="Desempenho">Desempenho</h2>
+## Desempenho
 
-<p>Quando formatar uma grande quantidade de números, é melhor criar um objeto {{jsxref("NumberFormat")}} e usar a função fornecida pela propriedade {{jsxref("NumberFormat.format")}}.</p>
+Quando formatar uma grande quantidade de números, é melhor criar um objeto {{jsxref("NumberFormat")}} e usar a função fornecida pela propriedade {{jsxref("NumberFormat.format")}}.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Definição inicial. Implementado no JavaScript 1.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.7.4.3', 'Number.prototype.toLocaleString')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int 1.0', '#sec-13.2.1', 'Number.prototype.toLocaleString')}}</td>
-   <td>{{Spec2('ES Int 1.0')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int 2.0', '#sec-13.2.1', 'Number.prototype.toLocaleString')}}</td>
-   <td>{{Spec2('ES Int 2.0')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#sec-Number.prototype.toLocaleString', 'Number.prototype.toLocaleString')}}</td>
-   <td>{{Spec2('ES Int Draft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                            | Status                           | Comentário                                         |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------- |
+| {{SpecName('ES3')}}                                                                                                                 | {{Spec2('ES3')}}             | Definição inicial. Implementado no JavaScript 1.5. |
+| {{SpecName('ES5.1', '#sec-15.7.4.3', 'Number.prototype.toLocaleString')}}                                         | {{Spec2('ES5.1')}}         |                                                    |
+| {{SpecName('ES6', '#sec-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}}             | {{Spec2('ES6')}}             |                                                    |
+| {{SpecName('ESDraft', '#sec-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}}     | {{Spec2('ESDraft')}}     |                                                    |
+| {{SpecName('ES Int 1.0', '#sec-13.2.1', 'Number.prototype.toLocaleString')}}                                     | {{Spec2('ES Int 1.0')}} |                                                    |
+| {{SpecName('ES Int 2.0', '#sec-13.2.1', 'Number.prototype.toLocaleString')}}                                     | {{Spec2('ES Int 2.0')}} |                                                    |
+| {{SpecName('ES Int Draft', '#sec-Number.prototype.toLocaleString', 'Number.prototype.toLocaleString')}} | {{Spec2('ES Int Draft')}} |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Number.toLocaleString")}}</p>
+{{Compat("javascript.builtins.Number.toLocaleString")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Number.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Number.prototype.toString()")}}

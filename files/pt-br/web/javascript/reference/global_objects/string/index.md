@@ -7,190 +7,152 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String
 ---
-<p>{{JSRef("Global_Objects", "String")}}</p>
+{{JSRef("Global_Objects", "String")}}
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+## Sumário
 
-<p>O objeto global <strong><code>String</code></strong>  é um construtor para <strong>strings,</strong> ou uma sequência de caracteres.</p>
+O objeto global **`String`** é um construtor para **strings,** ou uma sequência de caracteres.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<p>As formas literais de declaração de <em>String</em>  são:</p>
+As formas literais de declaração de _String_ são:
 
-<pre class="syntaxbox">'string text'
+```
+'string text'
 "string text"
-"中文 español English हिन्दी العربية português বাংলা русский 日本語 ਪੰਜਾਬੀ 한국어"</pre>
+"中文 español English हिन्दी العربية português বাংলা русский 日本語 ਪੰਜਾਬੀ 한국어"
+```
 
-<p>Além da forma regular, de caracteres<em> </em>de impressão, caracteres especiais podem ser codificados usando a <em>escape notation </em>(notação com barra invertida):</p>
+Além da forma regular, de caracteres\_ _de impressão, caracteres especiais podem ser codificados usando a \_escape notation_ (notação com barra invertida):
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Codigo</th>
-   <th scope="col">Saida</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>\0</td>
-   <td>o  caractere NULL</td>
-  </tr>
-  <tr>
-   <td>\'</td>
-   <td>aspas simples</td>
-  </tr>
-  <tr>
-   <td>\"</td>
-   <td>aspas duplas</td>
-  </tr>
-  <tr>
-   <td>\\</td>
-   <td>barra invertida</td>
-  </tr>
-  <tr>
-   <td>\n</td>
-   <td>nova linha</td>
-  </tr>
-  <tr>
-   <td>\r</td>
-   <td>carriage return</td>
-  </tr>
-  <tr>
-   <td>\v</td>
-   <td>tab vertical</td>
-  </tr>
-  <tr>
-   <td>\t</td>
-   <td>tab</td>
-  </tr>
-  <tr>
-   <td>\b</td>
-   <td>backspace</td>
-  </tr>
-  <tr>
-   <td>\f</td>
-   <td>form feed</td>
-  </tr>
-  <tr>
-   <td>\uXXXX</td>
-   <td>unicode codepoint</td>
-  </tr>
-  <tr>
-   <td>\xXX</td>
-   <td>the Latin-1 character</td>
-  </tr>
- </tbody>
-</table>
+| Codigo | Saida                 |
+| ------ | --------------------- |
+| \0     | o caractere NULL      |
+| \\'    | aspas simples         |
+| \\"    | aspas duplas          |
+| \\\\   | barra invertida       |
+| \n     | nova linha            |
+| \r     | carriage return       |
+| \v     | tab vertical          |
+| \t     | tab                   |
+| \b     | backspace             |
+| \f     | form feed             |
+| \uXXXX | unicode codepoint     |
+| \xXX   | the Latin-1 character |
 
-<p>Ou, usando o objeto global <code>String</code> diretamente:</p>
+Ou, usando o objeto global `String` diretamente:
 
-<pre class="syntaxbox">String(thing)
-new String(thing)</pre>
+```
+String(thing)
+new String(thing)
+```
 
-<h3 id="Parameters" name="Parameters">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>thing</code></dt>
- <dd>Qualquer coisa a ser convertida para uma string.</dd>
-</dl>
+- `thing`
+  - : Qualquer coisa a ser convertida para uma string.
 
-<h2 id="Description" name="Description">Descrição</h2>
+## Descrição
 
-<p>Strings são úteis para guardar dados que podem ser representados em forma de texto. Uma das operações mais usadas nas <strong>strings</strong> é checar seu {{jsxref("String.length", "tamanho")}}, para construir e concatená-las  usando <a href="/en-US/docs/Web/JavaScript/Reference/Operators/String_Operators">os operadores</a> <a href="/en-US/docs/Web/JavaScript/Reference/Operators/String_Operators">+ e +=, </a>checando pela existência ou posição de <em>substrings</em> com o método {{jsxref("String.indexOf", "indexOf")}} , ou extrair <em>substrings</em> com o método {{jsxref("String.substring", "substring")}}.</p>
+Strings são úteis para guardar dados que podem ser representados em forma de texto. Uma das operações mais usadas nas **strings** é checar seu {{jsxref("String.length", "tamanho")}}, para construir e concatená-las usando [os operadores](/pt-BR/docs/Web/JavaScript/Reference/Operators/String_Operators) [+ e +=, ](/pt-BR/docs/Web/JavaScript/Reference/Operators/String_Operators)checando pela existência ou posição de _substrings_ com o método {{jsxref("String.indexOf", "indexOf")}} , ou extrair _substrings_ com o método {{jsxref("String.substring", "substring")}}.
 
-<h3 id="Character_access" name="Character_access">Acesso à caractere</h3>
+### Acesso à caractere
 
-<p>Há duas maneiras de acessar um caractere individual em uma string. A primeira é o método {{jsxref("String.charAt", "charAt")}}:</p>
+Há duas maneiras de acessar um caractere individual em uma string. A primeira é o método {{jsxref("String.charAt", "charAt")}}:
 
-<pre class="brush: js">return 'cat'.charAt(1); // returns "a"
-</pre>
+```js
+return 'cat'.charAt(1); // returns "a"
+```
 
-<p>A outra maneira (introduzido no ECMAScript 5) consiste em tratar a string como um objeto Array-like, onde os caráteres individuais correspondem a um índice numérico:</p>
+A outra maneira (introduzido no ECMAScript 5) consiste em tratar a string como um objeto Array-like, onde os caráteres individuais correspondem a um índice numérico:
 
-<pre class="brush: js">return 'cat'[1]; // returns "a"
-</pre>
+```js
+return 'cat'[1]; // returns "a"
+```
 
-<p>Para acesso de caracteres usando uma notação de colchetes, tentando deletar ou designar um valor a estas propriedades não haverá sucesso. As propriedades envolvidas não são nem escritas ou configuráveis. (Veja {{jsxref("Object.defineProperty")}} para mais informações.)</p>
+Para acesso de caracteres usando uma notação de colchetes, tentando deletar ou designar um valor a estas propriedades não haverá sucesso. As propriedades envolvidas não são nem escritas ou configuráveis. (Veja {{jsxref("Object.defineProperty")}} para mais informações.)
 
-<h3 id="Comparing_strings" name="Comparing_strings">Comparando strings</h3>
+### Comparando strings
 
-<p>Desenvolvedores de C têm a função strcmp() para comparar strings. No JavaScript, basta usar o operador <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">maior que e menor que</a>:</p>
+Desenvolvedores de C têm a função strcmp() para comparar strings. No JavaScript, basta usar o operador [maior que e menor que](/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators):
 
-<pre class="brush: js">var a = "a";
+```js
+var a = "a";
 var b = "b";
-if (a &lt; b) // verdadeiro
+if (a < b) // verdadeiro
   print(a + " é menor que " + b);
-else if (a &gt; b)
+else if (a > b)
   print(a + " é maior que " + b);
 else
   print(a + " e " + b + " são iguais.");
-</pre>
+```
 
-<p>Um resultado similar pode ser alcançado usando o método  {{jsxref("String.localeCompare", "localeCompare")}} herdado pelas instâncias de <code>String</code>.</p>
+Um resultado similar pode ser alcançado usando o método {{jsxref("String.localeCompare", "localeCompare")}} herdado pelas instâncias de `String`.
 
-<h3 id="Distinção_entre_String_primitiva_e_objetos_String">Distinção entre String primitiva e objetos String</h3>
+### Distinção entre String primitiva e objetos String
 
-<p>Note que o JavaScript distingue entre objetos String e valores de string primitivas. (O mesmo é válido para {{jsxref("Global_Objects/Boolean", "Boolean")}} e {{jsxref("Global_Objects/Number", "Numbers")}}.)</p>
+Note que o JavaScript distingue entre objetos String e valores de string primitivas. (O mesmo é válido para {{jsxref("Global_Objects/Boolean", "Boolean")}} e {{jsxref("Global_Objects/Number", "Numbers")}}.)
 
-<p>Strings literais (definidas por aspas duplas ou aspas simples) e strings retornadas da chamada da função String fora do contexto de uma função construtora (sem o uso da palavra chave <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new</a>) são strings primitivas. O JavaScript converte automaticamente strings primitivas para objetos do tipo String, por isso é possível utilizar os métodos do objeto String através de strings primitivas. Em contextos onde um método é invocado de uma string primitiva ou uma propriedade é procurada, o JavaScript irá criar um objeto com a string primitiva e executar o método ou acessar a propriedade procurada.</p>
+Strings literais (definidas por aspas duplas ou aspas simples) e strings retornadas da chamada da função String fora do contexto de uma função construtora (sem o uso da palavra chave [new](/pt-BR/docs/Web/JavaScript/Reference/Operators/new)) são strings primitivas. O JavaScript converte automaticamente strings primitivas para objetos do tipo String, por isso é possível utilizar os métodos do objeto String através de strings primitivas. Em contextos onde um método é invocado de uma string primitiva ou uma propriedade é procurada, o JavaScript irá criar um objeto com a string primitiva e executar o método ou acessar a propriedade procurada.
 
-<pre class="brush: js">var s_prim = "foo";
+```js
+var s_prim = "foo";
 var s_obj = new String(s_prim);
 
 console.log(typeof s_prim); // Loga "string"
 console.log(typeof s_obj);  // Loga "object"
-</pre>
+```
 
-<p>String primitivas e objetos <code>String</code> também dão resultados diferentes quando usado {{jsxref("Global_Objects/eval", "eval")}}. Primitivas passadas para <code>eval</code> são tratadas como código fonte; Objetos <code>String</code> são tratados como todos os outros objetos são, retornando o objeto. Por exemplo:</p>
+String primitivas e objetos `String` também dão resultados diferentes quando usado {{jsxref("Global_Objects/eval", "eval")}}. Primitivas passadas para `eval` são tratadas como código fonte; Objetos `String` são tratados como todos os outros objetos são, retornando o objeto. Por exemplo:
 
-<pre class="brush: js">s1 = "2 + 2";               // cria uma string primitiva
+```js
+s1 = "2 + 2";               // cria uma string primitiva
 s2 = new String("2 + 2");   // cria um objeto de String
 console.log(eval(s1));      // retorna o número 4
 console.log(eval(s2));      // retorna a string "2 + 2"
-</pre>
+```
 
-<p>Por estas razões, o código pode quebrar quando encontra objetos <code>String</code> quando espera na verdade uma string primitiva, apesar de que geralmente autores não precisam se preocupar com a distinção.</p>
+Por estas razões, o código pode quebrar quando encontra objetos `String` quando espera na verdade uma string primitiva, apesar de que geralmente autores não precisam se preocupar com a distinção.
 
-<p>Um objeto <code>String</code> pode ser convertido sempre para sua contraparte primitiva com o método {{jsxref("String.valueOf", "valueOf")}}.</p>
+Um objeto `String` pode ser convertido sempre para sua contraparte primitiva com o método {{jsxref("String.valueOf", "valueOf")}}.
 
-<pre class="brush: js">console.log(eval(s2.valueOf())); // retorna o número 4
-</pre>
+```js
+console.log(eval(s2.valueOf())); // retorna o número 4
+```
 
-<div class="note"><strong>Note:</strong> Para uma outra possível abordagem para strings em JavaScript, favor ler o artigo sobre <a href="/en-US/docs/Web/JavaScript/Typed_arrays/StringView" title="/en-US/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a>.</div>
+> **Nota:** Para uma outra possível abordagem para strings em JavaScript, favor ler o artigo sobre [`StringView` – a C-like representation of strings based on typed arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays/StringView).
 
-<h2 id="Properties" name="Properties">Propriedades</h2>
+## Propriedades
 
-<dl>
- <dt>{{jsxref("String.prototype")}}</dt>
- <dd>Permite a adição de propriedades a um objeto String.</dd>
-</dl>
+- {{jsxref("String.prototype")}}
+  - : Permite a adição de propriedades a um objeto String.
 
-<div>{{jsOverrides("Function", "Properties", "prototype")}}</div>
+{{jsOverrides("Function", "Properties", "prototype")}}
 
-<h2 id="Methods" name="Methods">Métodos</h2>
+## Métodos
 
-<dl>
- <dt>{{jsxref("String.fromCharCode()")}}</dt>
- <dd>Retorna uma string criada usando a sequência especificada de valores Unicode.</dd>
- <dt>{{jsxref("String.fromCodePoint()")}} {{experimental_inline}}</dt>
- <dd>Retorna uma string criada usando a sequência especificada de posições de código.</dd>
-</dl>
+- {{jsxref("String.fromCharCode()")}}
+  - : Retorna uma string criada usando a sequência especificada de valores Unicode.
+- {{jsxref("String.fromCodePoint()")}} {{experimental_inline}}
+  - : Retorna uma string criada usando a sequência especificada de posições de código.
 
-<div>{{jsOverrides("Function", "Methods", "fromCharCode", "fromCodePoint")}}</div>
+{{jsOverrides("Function", "Methods", "fromCharCode", "fromCodePoint")}}
 
-<h2 id="Métodos_genéricos_de_Strings"><code>Métodos genéricos de Strings</code></h2>
+## `Métodos genéricos de Strings`
 
-<p>Métodos de instância <code>String</code> também estão disponíveis no Firefox a partir de JavaScript 1.6 (embora não faça parte dos padrões ECMAScript) no objeto String para aplicar métodos String a qualquer objeto:</p>
+Métodos de instância `String` também estão disponíveis no Firefox a partir de JavaScript 1.6 (embora não faça parte dos padrões ECMAScript) no objeto String para aplicar métodos String a qualquer objeto:
 
-<pre class="brush: js">var num = 15;
+```js
+var num = 15;
 alert(String.replace(num, /5/, '2'));
-</pre>
+```
 
-<p class="brush: js"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Array_generic_methods">Genéricos</a> também estão disponíveis em métodos {{jsxref("Global_Objects/Array", "Array")}}.</p>
+[Genéricos](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array#Array_generic_methods) também estão disponíveis em métodos {{jsxref("Global_Objects/Array", "Array")}}.
 
-<p class="brush: js">O seguinte é uma implementação para fornecer suporte a navegadores sem suporte:</p>
+O seguinte é uma implementação para fornecer suporte a navegadores sem suporte:
 
-<pre class="brush: js">/*globals define*/
+```js
+/*globals define*/
 // Assume que todos os métodos de instância String fornecidos
 // já presentes (podem ser usadas implementações para este se não disponível)
 (function () {
@@ -216,75 +178,55 @@ alert(String.replace(num, /5/, '2'));
             };
         };
 
-    for (i = 0; i &lt; methodCount; i++) {
+    for (i = 0; i < methodCount; i++) {
         assignStringGeneric(methods[i]);
     }
 }());
-</pre>
+```
 
-<h2 id="Instâncias_de_String">Instâncias de <code>String</code></h2>
+## Instâncias de `String`
 
-<h3 id="Propriedades">Propriedades</h3>
+### Propriedades
 
-<p>{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Propriedades')}}</p>
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Propriedades')}}
 
-<h3 id="Métodos">Métodos</h3>
+### Métodos
 
-<h4 id="Métodos_não_relacionados_ao_HTML">Métodos não relacionados ao HTML</h4>
+#### Métodos não relacionados ao HTML
 
-<p>{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Métodos_não_relacionados_ao_HTML')}}</p>
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Métodos_não_relacionados_ao_HTML')}}
 
-<h4 id="Métodos_de_envoltório_HTML">Métodos de envoltório HTML</h4>
+#### Métodos de envoltório HTML
 
-<p>{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Métodos_de_envoltório_HTML')}}</p>
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Métodos_de_envoltório_HTML')}}
 
-<h2 id="String_instances" name="String_instances">Exemplos</h2>
+## Exemplos
 
-<h3 id="Conversão_de_String">Conversão de String</h3>
+### Conversão de String
 
-<p>É possível usar <code>String</code> como uma alternativa "mais segura" {{jsxref("String.toString", "toString")}}, como embora normalmente ainda chama o <code>toString</code> subjacente, também funciona para <code>null</code> e <code>undefined</code>. Por exemplo:</p>
+É possível usar `String` como uma alternativa "mais segura" {{jsxref("String.toString", "toString")}}, como embora normalmente ainda chama o `toString` subjacente, também funciona para `null` e `undefined`. Por exemplo:
 
-<pre class="brush: js">var outputStrings = [];
-for (let i = 0, n = inputValues.length; i &lt; n; ++i) {
+```js
+var outputStrings = [];
+for (let i = 0, n = inputValues.length; i < n; ++i) {
   outputStrings.push(String(inputValues[i]));
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1st Edition.</td>
-   <td>Standard</td>
-   <td>Definições iniciais.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5', 'String')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string-objects', 'String')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                        | Status                   | Comment              |
+| -------------------------------------------------------------------- | ------------------------ | -------------------- |
+| ECMAScript 1st Edition.                                              | Standard                 | Definições iniciais. |
+| {{SpecName('ES5.1', '#sec-15.5', 'String')}}         | {{Spec2('ES5.1')}} |                      |
+| {{SpecName('ES6', '#sec-string-objects', 'String')}} | {{Spec2('ES6')}}     |                      |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.String")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/API/DOMString" title="/en-US/docs/Web/API/DOMString">DOMString</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays/StringView" title="/en-US/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMString/Binary">Binary strings</a></li>
-</ul>
+- [DOMString](/pt-BR/docs/Web/API/DOMString)
+- [`StringView` – a C-like representation of strings based on typed arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays/StringView)
+- [Binary strings](/pt-BR/docs/Web/API/DOMString/Binary)

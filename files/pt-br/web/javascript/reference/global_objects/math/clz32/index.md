@@ -7,81 +7,87 @@ tags:
   - sintaxe Math.clz32()
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/clz32
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>A função Math.clz32 () retorna o número de zero bit inicial na representação binária de 32 bits de um número.</p>
+A função Math.clz32 () retorna o número de zero bit inicial na representação binária de 32 bits de um número.
 
-<div>{{EmbedInteractiveExample("pages/js/math-clz32.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-clz32.html")}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code>Math.clz32(<var>x</var>)</code></pre>
+```
+Math.clz32(x)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><var>x</var></dt>
- <dd>Um número.</dd>
-</dl>
+- _x_
+  - : Um número.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>O número de zero bits à esquerda na representação binária de 32 bits do número fornecido.</p>
+O número de zero bits à esquerda na representação binária de 32 bits do número fornecido.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>"<code>clz32</code>" é short para<code>CountLeadingZeroes32</code>.</p>
+"`clz32`" é short para`CountLeadingZeroes32`.
 
-<p>Se x não for um número, ele será convertido em um número primeiro e depois convertido em um número inteiro não assinado de 32 bits.</p>
+Se x não for um número, ele será convertido em um número primeiro e depois convertido em um número inteiro não assinado de 32 bits.
 
-<p>Se o número inteiro não assinado de 32 bits convertido for 0, retorne 32, porque todos os bits são 0.</p>
+Se o número inteiro não assinado de 32 bits convertido for 0, retorne 32, porque todos os bits são 0.
 
-<p>Essa função é particularmente útil para sistemas que são compilados para JS, como o Emscripten.</p>
+Essa função é particularmente útil para sistemas que são compilados para JS, como o Emscripten.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_Math.clz32">Usando <code>Math.clz32()</code></h3>
+### Usando `Math.clz32()`
 
-<pre class="brush: js notranslate">Math.clz32(1);           // 31
+```js
+Math.clz32(1);           // 31
 Math.clz32(1000);        // 22
 Math.clz32();            // 32
 
 var stuff = [NaN, Infinity, -Infinity, 0, -0, null, undefined, 'foo', {}, []];
-stuff.every(n =&gt; Math.clz32(n) == 32);  // true
+stuff.every(n => Math.clz32(n) == 32);  // true
 
 Math.clz32(true);        // 31
-Math.clz32(3.5);         // 30</pre>
+Math.clz32(3.5);         // 30
+```
 
-<h2 id="Contagem_dos_principais_e_mais_além">Contagem dos principais e mais além</h2>
+## Contagem dos principais e mais além
 
-<p>No momento, não há Math.clon para "Count Leading Ones" (chamado "clon", não "clo", porque "clo" e "clz" são muito semelhantes, especialmente para pessoas que não falam inglês). No entanto, uma função clon pode ser criada facilmente, invertendo os bits de um número e passando o resultado para Math.clz32. Fazer isso funcionará porque o inverso de 1 é 0 e vice-versa. Assim, a inversão dos bits inverterá a quantidade medida de 0s (de Math.clz32), fazendo com que Math.clz32 conte o número de unidades em vez de contar o número de zeros.</p>
+No momento, não há Math.clon para "Count Leading Ones" (chamado "clon", não "clo", porque "clo" e "clz" são muito semelhantes, especialmente para pessoas que não falam inglês). No entanto, uma função clon pode ser criada facilmente, invertendo os bits de um número e passando o resultado para Math.clz32. Fazer isso funcionará porque o inverso de 1 é 0 e vice-versa. Assim, a inversão dos bits inverterá a quantidade medida de 0s (de Math.clz32), fazendo com que Math.clz32 conte o número de unidades em vez de contar o número de zeros.
 
-<p>Considere a seguinte palavra de 32 bits:</p>
+Considere a seguinte palavra de 32 bits:
 
-<pre class="brush: js notranslate">var a = 32776;   // 00000000000000001000000000001000 (16 zeros à esquerda)
+```js
+var a = 32776;   // 00000000000000001000000000001000 (16 zeros à esquerda)
 Math.clz32(a);   // 16
 
 var b = ~32776;  // 11111111111111110111111111110111 (32776 inverso, 0 zeros à esquerda)
-Math.clz32(b);   // 0 (isso é igual a quantos líderes existem em um)</pre>
+Math.clz32(b);   // 0 (isso é igual a quantos líderes existem em um)
+```
 
-<p>Usando essa lógica, uma função clon pode ser criada da seguinte maneira:</p>
+Usando essa lógica, uma função clon pode ser criada da seguinte maneira:
 
-<pre class="brush: js notranslate">var clz = Math.clz32;
+```js
+var clz = Math.clz32;
 function clon(integer){
     return clz(~integer);
 }
-</pre>
+```
 
-<p>Além disso, essa técnica pode ser estendida para criar funções inumeráveis "Contagem de zeros à direita" e funções de contagem de zeros, como mostrado abaixo. A função ctrz abaixo preenche todos os bits altos com o bit mais baixo preenchido e depois os anula para apagar todos os bits mais altos definidos, de modo que o clz possa ser usado.</p>
+Além disso, essa técnica pode ser estendida para criar funções inumeráveis "Contagem de zeros à direita" e funções de contagem de zeros, como mostrado abaixo. A função ctrz abaixo preenche todos os bits altos com o bit mais baixo preenchido e depois os anula para apagar todos os bits mais altos definidos, de modo que o clz possa ser usado.
 
-<pre class="brush: js notranslate">var clz = Math.clz32;
+```js
+var clz = Math.clz32;
 function ctrz(integer){ // contar zeros à direita
    // 1. preencha todos os bits mais altos após o primeiro
-    integer |= integer &lt;&lt; 16;
-    integer |= integer &lt;&lt; 8;
-    integer |= integer &lt;&lt; 4;
-    integer |= integer &lt;&lt; 2;
-    integer |= integer &lt;&lt; 1;
+    integer |= integer << 16;
+    integer |= integer << 8;
+    integer |= integer << 4;
+    integer |= integer << 2;
+    integer |= integer << 1;
 // 2. Agora, a inversão dos bits revela os bits mais baixos
     return 32 - clz(~integer) |0; // `|0`garante coerção inteira
 }
@@ -91,31 +97,32 @@ function ctron(integer){ // conta os que estão à direita
     return ctrz(~integer);
 / * Implementação alternativa para fins demonstrativos:
         // 1. apaga todos os bits mais altos após o primeiro zero
-       integer &amp;= (integer &lt;&lt; 16) | 0xffff;
-       integer &amp;= (integer &lt;&lt; 8 ) | 0x00ff;
-       integer &amp;= (integer &lt;&lt; 4 ) | 0x000f;
-       integer &amp;= (integer &lt;&lt; 2 ) | 0x0003;
-       integer &amp;= (integer &lt;&lt; 1 ) | 0x0001;
+       integer &= (integer << 16) | 0xffff;
+       integer &= (integer << 8 ) | 0x00ff;
+       integer &= (integer << 4 ) | 0x000f;
+       integer &= (integer << 2 ) | 0x0003;
+       integer &= (integer << 1 ) | 0x0001;
       // 2. Agora, reverter os bits revela os zeros mais baixos
        return 32 - clon(~integer) |0;
     */
 }
-</pre>
+```
 
-<p>Transforme essas funções auxiliares no módulo ASM.JS; então, você tem uma verdadeira obra-prima de desempenho. Situações como essas são exatamente para o que o ASM.JS foi projetado.</p>
+Transforme essas funções auxiliares no módulo ASM.JS; então, você tem uma verdadeira obra-prima de desempenho. Situações como essas são exatamente para o que o ASM.JS foi projetado.
 
-<pre class="brush: js notranslate">var countTrailsMethods = (function(stdlib, foreign, heap) {
+```js
+var countTrailsMethods = (function(stdlib, foreign, heap) {
     "use asm";
     var clz = stdlib.Math.clz32;
     function ctrz(integer) { // count trailing zeros
         integer = integer | 0; // coerce to an integer
 // 1. preencha todos os bits mais altos após o primeiro
-// ASM js, por algum motivo, não permite ^ =, &amp; = ou | =
-        integer = integer | (integer &lt;&lt; 16);
-        integer = integer | (integer &lt;&lt; 8);
-        integer = integer | (integer &lt;&lt; 4);
-        integer = integer | (integer &lt;&lt; 2);
-        integer = integer | (integer &lt;&lt; 1);
+// ASM js, por algum motivo, não permite ^ =, & = ou | =
+        integer = integer | (integer << 16);
+        integer = integer | (integer << 8);
+        integer = integer | (integer << 4);
+        integer = integer | (integer << 2);
+        integer = integer | (integer << 1);
       // 2. Agora, a inversão dos bits revela os bits mais baixos
         return 32 - clz(~integer) |0;
     }
@@ -127,49 +134,40 @@ function ctron(integer){ // conta os que estão à direita
     return {a: ctrz, b: ctron};
 })(window, null, null);
 var ctrz = countTrailsMethods.a;
-var ctron = countTrailsMethods.b;</pre>
+var ctron = countTrailsMethods.b;
+```
 
-<h2 id="Polyfill-Trecho_de_código">Polyfill-"Trecho de código"</h2>
+## Polyfill-"Trecho de código"
 
-<p>O seguinte polyfill é o mais eficiente.</p>
+O seguinte polyfill é o mais eficiente.
 
-<pre class="brush: js notranslate">if (!Math.clz32) Math.clz32 = (function(log, LN2){
+```js
+if (!Math.clz32) Math.clz32 = (function(log, LN2){
   return function(x) {
  // Seja n ToUint32 (x).
      // Seja p o número de zero bits iniciais em
      // a representação binária de 32 bits de n.
      // Retornar p.
-    var asUint = x &gt;&gt;&gt; 0;
+    var asUint = x >>> 0;
     if (asUint === 0) {
       return 32;
     }
     return 31 - (log(asUint) / LN2 | 0) |0; // the "| 0" acts like math.floor
   };
 })(Math.log, Math.LN2);
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.clz32', 'Math.clz32')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                |
+| ---------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-math.clz32', 'Math.clz32')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Math.clz32")}}</p>
+{{Compat("javascript.builtins.Math.clz32")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Math")}}</li>
- <li>{{jsxref("Math.imul")}}</li>
-</ul>
+- {{jsxref("Math")}}
+- {{jsxref("Math.imul")}}

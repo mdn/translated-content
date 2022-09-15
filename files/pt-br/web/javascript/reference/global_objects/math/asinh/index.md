@@ -6,90 +6,73 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/asinh
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>A função <strong><code>Math.asinh()</code></strong> retorna o arco-seno hiperbólico de um número, isto é:</p>
+A função **`Math.asinh()`** retorna o arco-seno hiperbólico de um número, isto é:
 
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.asinh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="thinmathspace">arsinh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">sinh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.asinh}(x)} = \operatorname{arsinh}(x) = \text{o} \; y \; \text{único tal que} \; \sinh(y) = x</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.asinh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="thinmathspace">arsinh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">sinh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.asinh}(x)} = \operatorname{arsinh}(x) = \text{o} \; y \; \text{único tal que} \; \sinh(y) = x</annotation></semantics></math>
 
-<div>{{EmbedInteractiveExample("pages/js/math-asinh.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-asinh.html")}}
 
+## Sintaxe
 
+```
+Math.asinh(x)
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Parâmetros
 
-<pre class="syntaxbox"><code>Math.asinh(<var>x</var>)</code></pre>
+- `x`
+  - : Um número.
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Valor de retorno
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Um número.</dd>
-</dl>
+O arco-seno hiperbólico de um dado número.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+## Descrição
 
-<p>O arco-seno hiperbólico de um dado número.</p>
+Como `asinh()` é um métodos estático de `Math`, você deve sempre chamá-lo como `Math.asinh()`, ao invés de um método de um objeto `Math` que você criou (`Math` não é um construtor).
 
-<h2 id="Descrição">Descrição</h2>
+## Exemplos
 
-<p>Como <code>asinh()</code> é um métodos estático de <code>Math</code>, você deve sempre chamá-lo como <code>Math.asinh()</code>, ao invés de um método de um objeto <code>Math</code> que você criou (<code>Math</code> não é um construtor).</p>
+### Usando `Math.asinh()`
 
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Usando_Math.asinh()">Usando <code>Math.asinh()</code></h3>
-
-<pre class="brush: js">Math.asinh(1);  // 0.881373587019543
+```js
+Math.asinh(1);  // 0.881373587019543
 Math.asinh(0);  // 0
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Como uma solução simples a expressçao<math><semantics><annotation encoding="TeX">\operatorname {arsinh} (x) = \ln \left(x + \sqrt{x^{2} + 1} \right)</annotation></semantics></math> pode ser usada diretamente para uma emulação grosseira pela seguinte função:</p>
+Como uma solução simples a expressçao<math><semantics><annotation encoding="TeX">\operatorname {arsinh} (x) = \ln \left(x + \sqrt{x^{2} + 1} \right)</annotation></semantics></math> pode ser usada diretamente para uma emulação grosseira pela seguinte função:
 
-<pre class="brush: js">Math.asinh = Math.asinh || function(x) {
+```js
+Math.asinh = Math.asinh || function(x) {
   if (x === -Infinity) {
     return x;
   } else {
     return Math.log(x + Math.sqrt(x * x + 1));
   }
 };
-</pre>
+```
 
-<p>Apesar de formalmente correta, ela sofre de algumas problemas relacionadas à computação de ponto flutuante. Resultados precisos precisam de tratamento especial de positivos/negativos e argumentos pequenos/grandes como feitos por exemplo em em <a href="https://sourceware.org/git/?p=glibc.git;a=blob;f=sysdeps/ieee754/dbl-64/s_asinh.c">glibc</a> ou<a href="http://git.savannah.gnu.org/cgit/gsl.git/tree/sys/invhyp.c">GNU Scientific Library</a>.</p>
+Apesar de formalmente correta, ela sofre de algumas problemas relacionadas à computação de ponto flutuante. Resultados precisos precisam de tratamento especial de positivos/negativos e argumentos pequenos/grandes como feitos por exemplo em em [glibc](https://sourceware.org/git/?p=glibc.git;a=blob;f=sysdeps/ieee754/dbl-64/s_asinh.c) ou[GNU Scientific Library](http://git.savannah.gnu.org/cgit/gsl.git/tree/sys/invhyp.c).
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.asinh', 'Math.asinh')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.asinh', 'Math.asinh')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                | Status                       | Comment             |
+| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-math.asinh', 'Math.asinh')}}         | {{Spec2('ES6')}}         | Initial definition. |
+| {{SpecName('ESDraft', '#sec-math.asinh', 'Math.asinh')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Math.asinh")}}</p>
+{{Compat("javascript.builtins.Math.asinh")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Math.acosh()")}}</li>
- <li>{{jsxref("Math.atanh()")}}</li>
- <li>{{jsxref("Math.cosh()")}}</li>
- <li>{{jsxref("Math.sinh()")}}</li>
- <li>{{jsxref("Math.tanh()")}}</li>
-</ul>
+- {{jsxref("Math.acosh()")}}
+- {{jsxref("Math.atanh()")}}
+- {{jsxref("Math.cosh()")}}
+- {{jsxref("Math.sinh()")}}
+- {{jsxref("Math.tanh()")}}

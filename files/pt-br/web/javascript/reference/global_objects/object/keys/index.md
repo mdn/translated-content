@@ -3,28 +3,29 @@ title: Object.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Object/keys
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/keys
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>Object.keys()</strong></code> retorna um array de propriedades enumeraveis de um determinado objeto, na mesma ordem em que é fornecida por um laço {{jsxref("Statements/for...in", "for...in")}} (a diferença é que um laço for-in  enumera propriedades que estejam na cadeia de protótipos).</p>
+O método **`Object.keys()`** retorna um array de propriedades enumeraveis de um determinado objeto, na mesma ordem em que é fornecida por um laço {{jsxref("Statements/for...in", "for...in")}} (a diferença é que um laço for-in enumera propriedades que estejam na cadeia de protótipos).
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code>Object.keys(<var>obj</var>)</code></pre>
+```
+Object.keys(obj)
+```
 
-<h3 id="Parametros">Parametros</h3>
+### Parametros
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>O objeto cujas propriedades são enumeráveis.</dd>
-</dl>
+- `obj`
+  - : O objeto cujas propriedades são enumeráveis.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p><code>Object.keys()</code> retorna um array cujo os  elementos são strings correspondentes para a propriedade enumerável encontrada diretamento sobre o objeto. A ordenação das propriedades é a mesma que a dada pelo loop sobre as propriedades do objeto manualmente.</p>
+`Object.keys()` retorna um array cujo os elementos são strings correspondentes para a propriedade enumerável encontrada diretamento sobre o objeto. A ordenação das propriedades é a mesma que a dada pelo loop sobre as propriedades do objeto manualmente.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: js">var arr = ['a', 'b', 'c'];
+```js
+var arr = ['a', 'b', 'c'];
 console.log(Object.keys(arr)); // console: ['0', '1', '2']
 
 // array com objeto
@@ -40,26 +41,28 @@ var my_obj = Object.create({}, { getFoo: { value: function() { return this.foo; 
 my_obj.foo = 1;
 
 console.log(Object.keys(my_obj)); // console: ['foo']
-</pre>
+```
 
-<p>Se você quiser todas as propriedades, mesmo que não enumeráveis, consulte:{{jsxref("Object.getOwnPropertyNames()")}}.</p>
+Se você quiser todas as propriedades, mesmo que não enumeráveis, consulte:{{jsxref("Object.getOwnPropertyNames()")}}.
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>Em ES5, Se o argumento para o método this não é um objeto(um primitivo), em seguida ele irá causar um {{jsxref("TypeError")}}. Em ES2015, um argumento não-objeto será forçado a um objeto.</p>
+Em ES5, Se o argumento para o método this não é um objeto(um primitivo), em seguida ele irá causar um {{jsxref("TypeError")}}. Em ES2015, um argumento não-objeto será forçado a um objeto.
 
-<pre class="brush: js">Object.keys("foo");
+```js
+Object.keys("foo");
 // TypeError: "foo" is not an object (ES5 code)
 
 Object.keys("foo");
 // ["0", "1", "2"]                   (ES2015 code)
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Para adicionar suporte Object.keys compatíveis em ambientes mais antigos que não têm suporte nativo para isso, copie o seguinte trecho:</p>
+Para adicionar suporte Object.keys compatíveis em ambientes mais antigos que não têm suporte nativo para isso, copie o seguinte trecho:
 
-<pre class="brush: js">// De https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+```js
+// De https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
 if (!Object.keys) {
   Object.keys = (function() {
     'use strict';
@@ -77,7 +80,7 @@ if (!Object.keys) {
         dontEnumsLength = dontEnums.length;
 
     return function(obj) {
-      if (typeof obj !== 'object' &amp;&amp; (typeof obj !== 'function' || obj === null)) {
+      if (typeof obj !== 'object' && (typeof obj !== 'function' || obj === null)) {
         throw new TypeError('Object.keys chamado de non-object');
       }
 
@@ -90,7 +93,7 @@ if (!Object.keys) {
       }
 
       if (hasDontEnumBug) {
-        for (i = 0; i &lt; dontEnumsLength; i++) {
+        for (i = 0; i < dontEnumsLength; i++) {
           if (hasOwnProperty.call(obj, dontEnums[i])) {
             result.push(dontEnums[i]);
           }
@@ -100,43 +103,26 @@ if (!Object.keys) {
     };
   }());
 }
-</pre>
+```
 
-<p>Por favor, note que o código acima inclui chaves não-enumeráveis no IE7 (e talvez IE8), ao passar em um objeto a partir de uma janela diferente.</p>
+Por favor, note que o código acima inclui chaves não-enumeráveis no IE7 (e talvez IE8), ao passar em um objeto a partir de uma janela diferente.
 
-<p>Para um simples Browser Polyfill, veja <a href="http://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html">Javascript - Object.keys Browser Compatibility</a>.</p>
+Para um simples Browser Polyfill, veja [Javascript - Object.keys Browser Compatibility](http://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html).
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.14', 'Object.keys')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Definição inicial. Implementado em  JavaScript 1.8.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-object.keys', 'Object.keys')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                | Status                   | Comentário                                           |
+| ---------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.2.3.14', 'Object.keys')}}     | {{Spec2('ES5.1')}} | Definição inicial. Implementado em JavaScript 1.8.5. |
+| {{SpecName('ES2015', '#sec-object.keys', 'Object.keys')}} | {{Spec2('ES2015')}} |                                                      |
 
-<h2 id="Browser_compatibilidade">Browser compatibilidade</h2>
+## Browser compatibilidade
 
 {{Compat("javascript.builtins.Object.keys")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Enumerability_and_ownership_of_properties">Enumerability and ownership of properties</a></li>
- <li>{{jsxref("Object.prototype.propertyIsEnumerable()")}}</li>
- <li>{{jsxref("Object.create()")}}</li>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
-</ul>
+- [Enumerability and ownership of properties](/pt-BR/docs/Enumerability_and_ownership_of_properties)
+- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
+- {{jsxref("Object.create()")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}

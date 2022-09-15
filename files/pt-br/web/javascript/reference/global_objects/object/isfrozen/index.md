@@ -3,36 +3,35 @@ title: Object.isFrozen()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>Object.isFrozen()</strong></code> determina se um objeto está {{jsxref("Object.freeze()", "frozen", "", 1)}}.</p>
+O método **`Object.isFrozen()`** determina se um objeto está {{jsxref("Object.freeze()", "frozen", "", 1)}}.
 
-<div>{{EmbedInteractiveExample("pages/js/object-isfrozen.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-isfrozen.html")}}
 
+## Sintaxe
 
+```
+Object.isFrozen(obj)
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Parameters
 
-<pre class="syntaxbox"><code>Object.isFrozen(<var>obj</var>)</code></pre>
+- `obj`
+  - : O objeto que será verificado.
 
-<h3 id="Parameters">Parameters</h3>
+### Return value
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>O objeto que será verificado.</dd>
-</dl>
+Um valor {{jsxref("Boolean")}} indicando se o objeto está frozen.
 
-<h3 id="Return_value">Return value</h3>
+## Descrição
 
-<p>Um valor {{jsxref("Boolean")}} indicando se o objeto está frozen.</p>
+Um objeto estará frozen se, e apenas se, ele não for {{jsxref("Object.isExtensible()", "extensible", "", 1)}}, todas as suas propriedades não são configuráveis e todas suas propriedades de dados (propriedades que não são asessores de propriedades com getters ou setters) não podem ser modificadas.
 
-<h2 id="Descrição">Descrição</h2>
+## Examples
 
-<p>Um objeto estará frozen se, e apenas se, ele não for {{jsxref("Object.isExtensible()", "extensible", "", 1)}}, todas as suas propriedades não são configuráveis e todas suas propriedades de dados (propriedades que não são asessores de propriedades com getters ou setters) não podem ser modificadas.</p>
-
-<h2 id="Examples">Examples</h2>
-
-<pre class="brush: js">// Um novo objeto é extensível, então ele não está frozen.
+```js
+// Um novo objeto é extensível, então ele não está frozen.
 Object.isFrozen({}); // === false
 
 // Um objeto vazio que não é extensível
@@ -113,60 +112,36 @@ Object.isExtensible(frozen); // === false
 
 // Também por definição, um objeto frozen estará sealed.
 Object.isSealed(frozen); // === true
-</pre>
+```
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>No ES5, se o argumento deste método não for um objeot (uma primitiva), ele irá lançar um {{jsxref("TypeError")}}. No ES2015, um argumento que não é objeto será sempre tratado como se fosse um objeto frozen, simplesmente retornando <code>true</code>.</p>
+No ES5, se o argumento deste método não for um objeot (uma primitiva), ele irá lançar um {{jsxref("TypeError")}}. No ES2015, um argumento que não é objeto será sempre tratado como se fosse um objeto frozen, simplesmente retornando `true`.
 
-<pre class="brush: js">Object.isFrozen(1);
+```js
+Object.isFrozen(1);
 // TypeError: 1 is not an object (ES5 code)
 
 Object.isFrozen(1);
 // true                          (ES2015 code)
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.12', 'Object.isFrozen')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.8.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.isfrozen', 'Object.isFrozen')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.isfrozen', 'Object.isFrozen')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                       | Comment                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.2.3.12', 'Object.isFrozen')}}             | {{Spec2('ES5.1')}}     | Initial definition. Implemented in JavaScript 1.8.5. |
+| {{SpecName('ES6', '#sec-object.isfrozen', 'Object.isFrozen')}}     | {{Spec2('ES6')}}         |                                                      |
+| {{SpecName('ESDraft', '#sec-object.isfrozen', 'Object.isFrozen')}} | {{Spec2('ESDraft')}} |                                                      |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
+{{Compat("javascript.builtins.Object.isFrozen")}}
 
+## Veja também
 
-<p>{{Compat("javascript.builtins.Object.isFrozen")}}</p>
-</div>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{jsxref("Object.freeze()")}}</li>
- <li>{{jsxref("Object.preventExtensions()")}}</li>
- <li>{{jsxref("Object.isExtensible()")}}</li>
- <li>{{jsxref("Object.seal()")}}</li>
- <li>{{jsxref("Object.isSealed()")}}</li>
-</ul>
+- {{jsxref("Object.freeze()")}}
+- {{jsxref("Object.preventExtensions()")}}
+- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Object.seal()")}}
+- {{jsxref("Object.isSealed()")}}

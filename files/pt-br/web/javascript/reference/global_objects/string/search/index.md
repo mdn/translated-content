@@ -11,91 +11,66 @@ tags:
   - search()
 translation_of: Web/JavaScript/Reference/Global_Objects/String/search
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code>search()</code> realiza uma busca por uma ocorrência entre uma expressão regular e uma {{jsxref ("String")}}.</p>
+O método `search()` realiza uma busca por uma ocorrência entre uma expressão regular e uma {{jsxref ("String")}}.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><var>str</var>.search(<var>regexp</var>)</pre>
+```
+str.search(regexp)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>regexp</code></dt>
- <dd>Um objeto contendo uma expressão regular. Se um objeto <code>obj</code> for passado como parâmetro e não for do tipo <code>RegExp</code>, ele será implicitamente convertido para uma {{jsxref("RegExp")}} através da instrução <code>new RegExp(obj)</code>.</dd>
-</dl>
+- `regexp`
+  - : Um objeto contendo uma expressão regular. Se um objeto `obj` for passado como parâmetro e não for do tipo `RegExp`, ele será implicitamente convertido para uma {{jsxref("RegExp")}} através da instrução `new RegExp(obj)`.
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>O índice na string do primeiro trecho que satisfaz a expressão regular. Do contrário, o valor <code>-1</code><strong> </strong>será retornado.</p>
+O índice na string do primeiro trecho que satisfaz a expressão regular. Do contrário, o valor `-1`\*\* \*\*será retornado.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Quando você quiser saber se um padrão foi encontrado, e também saber seu índice dentro de uma string, use <code>search()</code>. (Se você deseja apenas saber se ele existe, use o método semelhante {{jsxref ("RegExp.prototype.test()", "test()")}} do protótipo RegExp, que retorna um booleano.)</p>
+Quando você quiser saber se um padrão foi encontrado, e também saber seu índice dentro de uma string, use `search()`. (Se você deseja apenas saber se ele existe, use o método semelhante {{jsxref ("RegExp.prototype.test()", "test()")}} do protótipo RegExp, que retorna um booleano.)
 
-<p>Para obter mais informações (mas em compensação a execução se torna mais lenta), use {{jsxref ("String.prototype.match()", "match()")}} (semelhante ao método {{jsxref ("RegExp.prototype.exec()" , "exec()")}} da RegExp).</p>
+Para obter mais informações (mas em compensação a execução se torna mais lenta), use {{jsxref ("String.prototype.match()", "match()")}} (semelhante ao método {{jsxref ("RegExp.prototype.exec()" , "exec()")}} da RegExp).
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_search">Usando <code>search()</code></h3>
+### Usando `search()`
 
-<p>O exemplo a seguir pesquisa uma string com dois objetos <code>regexp</code> diferentes para mostrar uma pesquisa bem-sucedida (valor positivo) vs. uma pesquisa mal-sucedida (-1).</p>
+O exemplo a seguir pesquisa uma string com dois objetos `regexp` diferentes para mostrar uma pesquisa bem-sucedida (valor positivo) vs. uma pesquisa mal-sucedida (-1).
 
-<pre class="brush: js notranslate">let str = "hey JudE"
+```js
+let str = "hey JudE"
 let re = /[A-Z]/g
 let reDot = /[.]/g
 console.log(str.search(re))    // retorna 4, que é o índice da primeira letra maiúscula "J"
-console.log(str.search(reDot)) // retorna -1 pois não conseguiu encontrar o ponto "."</pre>
+console.log(str.search(reDot)) // retorna -1 pois não conseguiu encontrar o ponto "."
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário(s)</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Definição inicial. Implementado no JavaScript 1.2.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.4.12', 'String.prototype.search')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.search', 'String.prototype.search')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.search', 'String.prototype.search')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specificação                                                                                                 | Status                       | Comentário(s)                                      |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Definição inicial. Implementado no JavaScript 1.2. |
+| {{SpecName('ES5.1', '#sec-15.5.4.12', 'String.prototype.search')}}                     | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES6', '#sec-string.prototype.search', 'String.prototype.search')}}     | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-string.prototype.search', 'String.prototype.search')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
+## Navegadores compatíveis
 
 {{Compat("javascript.builtins.String.search")}}
 
-<h2 id="Notas_específicas_para_a_engine_Gecko">Notas específicas para a engine Gecko</h2>
+## Notas específicas para a engine Gecko
 
-<ul>
- <li>Antes do {{Gecko("8.0")}}, <code>search()</code> foi implementado incorretamente. Quando era chamadosem parâmetros ou com {{jsxref("undefined")}}, ele buscava pela string '<code>undefined</code>', ao invés de buscar pela string vazia. Isto foi corrigido. Agora <code>'a'.search()</code> e <code>'a'.search(undefined)</code> corretamente retornam 0.</li>
- <li>A partir do Gecko 39 {{geckoRelease(39)}}, o argumento não-padrão <code>flags</code> está defasado (deprecated) e dispara um aviso no console ({{bug(1142351)}}).</li>
- <li>A partir do Gecko 47 {{geckoRelease(47)}}, o argumento não-padrão <code>flags</code> não é mais suportado em builds <em>non-release</em> e em breve será removido inteiramente ({{bug(1245801)}}).</li>
- <li>A partir do Gecko 49 {{geckoRelease(49)}}, o argumento não-padrão <code>flags</code> não é mais suportado ({{bug(1108382)}}).</li>
-</ul>
+- Antes do {{Gecko("8.0")}}, `search()` foi implementado incorretamente. Quando era chamadosem parâmetros ou com {{jsxref("undefined")}}, ele buscava pela string '`undefined`', ao invés de buscar pela string vazia. Isto foi corrigido. Agora `'a'.search()` e `'a'.search(undefined)` corretamente retornam 0.
+- A partir do Gecko 39 {{geckoRelease(39)}}, o argumento não-padrão `flags` está defasado (deprecated) e dispara um aviso no console ({{bug(1142351)}}).
+- A partir do Gecko 47 {{geckoRelease(47)}}, o argumento não-padrão `flags` não é mais suportado em builds _non-release_ e em breve será removido inteiramente ({{bug(1245801)}}).
+- A partir do Gecko 49 {{geckoRelease(49)}}, o argumento não-padrão `flags` não é mais suportado ({{bug(1108382)}}).
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("String.prototype.match()")}}</li>
- <li>{{jsxref("RegExp.prototype.exec()")}}</li>
-</ul>
+- {{jsxref("String.prototype.match()")}}
+- {{jsxref("RegExp.prototype.exec()")}}

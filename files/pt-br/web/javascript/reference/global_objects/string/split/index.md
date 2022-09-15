@@ -11,71 +11,67 @@ tags:
   - split()
 translation_of: Web/JavaScript/Reference/Global_Objects/String/split
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code>split()</code> divide uma {{jsxref ("String")}} em uma lista ordenada de substrings, coloca essas substrings em um array e retorna o array. A divisão é feita procurando um padrão, onde o padrão é fornecido como o primeiro parâmetro na chamada do método.</p>
+O método `split()` divide uma {{jsxref ("String")}} em uma lista ordenada de substrings, coloca essas substrings em um array e retorna o array. A divisão é feita procurando um padrão, onde o padrão é fornecido como o primeiro parâmetro na chamada do método.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.split([separator[, limit]])</code></pre>
+```
+str.split([separator[, limit]])
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<ul>
- <li>O caso mais simples é quando o separador é apenas um único caractere que será usado para dividir a string. Por exemplo, uma string contendo valores separados por tabulação (TSV) poderia ser analisada passando um caractere de tabulação como separador, como este: myString.split ("\ t").</li>
- <li>Se o <code>separator</code> contiver vários caracteres, toda a sequência de caracteres deve ser encontrada para ser dividida.</li>
- <li>Se o <code>separator</code> for omitido ou não aparecer dentro da <code>str</code>, o array retornará um elemento consistindo em toda a string.</li>
- <li>Se o <code>separator</code> aparecer no início (ou no final) da string, ele ainda terá o efeito de divisão. O resultado é uma string vazia (ou seja, <code>str.length == 0</code>), que aparece na primeira (ou última) posição do array retornado.</li>
- <li>Se o <code>separator</code> for uma string vazia (""), <code>str</code> será convertido em um array contendo cada um de seus caracteres em UTF-16.</li>
-</ul>
+- O caso mais simples é quando o separador é apenas um único caractere que será usado para dividir a string. Por exemplo, uma string contendo valores separados por tabulação (TSV) poderia ser analisada passando um caractere de tabulação como separador, como este: myString.split ("\ t").
+- Se o `separator` contiver vários caracteres, toda a sequência de caracteres deve ser encontrada para ser dividida.
+- Se o `separator` for omitido ou não aparecer dentro da `str`, o array retornará um elemento consistindo em toda a string.
+- Se o `separator` aparecer no início (ou no final) da string, ele ainda terá o efeito de divisão. O resultado é uma string vazia (ou seja, `str.length == 0`), que aparece na primeira (ou última) posição do array retornado.
+- Se o `separator` for uma string vazia (""), `str` será convertido em um array contendo cada um de seus caracteres em UTF-16.
 
-<dl>
- <dt><code>separator</code></dt>
- <dd>Opcional. Especifica o caractere, ou conjunto de caracteres, a ser usado para separar a string. O separador pode ser uma string ou uma {{jsxref("Global_Objects/RegExp", "expressão regular", "", 1)}}.</dd>
-</dl>
+<!---->
 
-<div class="blockIndicator warning">
-<p><strong>Aviso:</strong> Quando uma string vazia (<code>""</code>) é usada como separador, a string não é dividida por caracteres percebidos pelo usuário (<a href="https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries">grapheme clusters</a>) ou caracteres Unicode (pontos de código), mas por unidades de código UTF-16. Isso destrói <a href="http://unicode.org/faq/utf_bom.html#utf16-2">pares substitutos</a>. Consulte “<a href="https://stackoverflow.com/questions/4547609/how-do-you-get-a-string-to-a-character-array-in-javascript/34717402#34717402">Como você transforma uma string em um array de caracteres em JavaScript?” no StackOverflow</a>.</p>
-</div>
+- `separator`
+  - : Opcional. Especifica o caractere, ou conjunto de caracteres, a ser usado para separar a string. O separador pode ser uma string ou uma {{jsxref("Global_Objects/RegExp", "expressão regular", "", 1)}}.
 
-<dl>
- <dt><code>limite</code></dt>
- <dd>
- <p>Opcional. Um número inteiro não negativo especificando um limite no número de divisões a serem encontradas. O método <code>split()</code> ainda dividirá em cada ocorrência do separador, até que o número de itens divididos corresponda ao limite ou que a string fique aquém do separador.</p>
+> **Aviso:** Quando uma string vazia (`""`) é usada como separador, a string não é dividida por caracteres percebidos pelo usuário ([grapheme clusters](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) ou caracteres Unicode (pontos de código), mas por unidades de código UTF-16. Isso destrói [pares substitutos](http://unicode.org/faq/utf_bom.html#utf16-2). Consulte “[Como você transforma uma string em um array de caracteres em JavaScript?” no StackOverflow](https://stackoverflow.com/questions/4547609/how-do-you-get-a-string-to-a-character-array-in-javascript/34717402#34717402).
 
- <ul>
-  <li>O array pode conter menos entradas do que o <code>limit</code> se o final da string for alcançado antes que o limite seja atingido.</li>
-  <li>Se o <code>limit</code> for <code>0</code>, <code>[]</code> será retornado.</li>
- </ul>
- </dd>
-</dl>
+- `limite`
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+  - : Opcional. Um número inteiro não negativo especificando um limite no número de divisões a serem encontradas. O método `split()` ainda dividirá em cada ocorrência do separador, até que o número de itens divididos corresponda ao limite ou que a string fique aquém do separador.
 
-<p>Um array de strings divididos em cada ponto onde o separador ocorre na string informada.</p>
+    - O array pode conter menos entradas do que o `limit` se o final da string for alcançado antes que o limite seja atingido.
+    - Se o `limit` for `0`, `[]` será retornado.
 
-<h2 id="Descrição">Descrição</h2>
+### Valor retornado
 
-<p>Quando encontrado, o caractere designado como o <code>separator</code> é removido da string e as substrings são retornadas em um array. Se o <code>separator</code> não for encontrado ou for omitido, o array irá conter um elemento consistindo da string inteira. Se o <code>separator</code> for uma string vazia, <code>str</code> será convertida em um array de caracteres.</p>
+Um array de strings divididos em cada ponto onde o separador ocorre na string informada.
 
-<p>Se o separador for uma expressão regular que contenha parênteses de captura, cada vez que o <code>separator</code> for encontrado, os resultados (incluindo qualquer resultado <code>undefined</code>) dos parênteses de captura serão emendados ao array de saída. Entretanto, nem todos os navegadores possuem suporte a isso.</p>
+## Descrição
 
-<h2 id="Exemplos">Exemplos</h2>
+Quando encontrado, o caractere designado como o `separator` é removido da string e as substrings são retornadas em um array. Se o `separator` não for encontrado ou for omitido, o array irá conter um elemento consistindo da string inteira. Se o `separator` for uma string vazia, `str` será convertida em um array de caracteres.
 
-<h3 id="Usando_split">Usando <code>split()</code></h3>
+Se o separador for uma expressão regular que contenha parênteses de captura, cada vez que o `separator` for encontrado, os resultados (incluindo qualquer resultado `undefined`) dos parênteses de captura serão emendados ao array de saída. Entretanto, nem todos os navegadores possuem suporte a isso.
 
-<p>Quando a string está vazia, o <code>split()</code> irá retornar um array contendo uma string vazia ao invés de um array vazio. Se a string e o separador forem ambos strings vazias, um array vazio será retornado.</p>
+## Exemplos
 
-<pre class="brush: js notranslate">const myString = ''
+### Usando `split()`
+
+Quando a string está vazia, o `split()` irá retornar um array contendo uma string vazia ao invés de um array vazio. Se a string e o separador forem ambos strings vazias, um array vazio será retornado.
+
+```js
+const myString = ''
 const splits = myString.split()
 
 console.log(splits);
 
-// retorna [""]</pre>
+// retorna [""]
+```
 
-<p>O exemplo a seguir define uma função que divide uma string em um array de strings usando o separador especificado. Depois de dividir a string, a função exibe mensagens indicando a string original (antes da divisão), o separador usado, o número de elementos no array e os elementos individuais do array.</p>
+O exemplo a seguir define uma função que divide uma string em um array de strings usando o separador especificado. Depois de dividir a string, a função exibe mensagens indicando a string original (antes da divisão), o separador usado, o número de elementos no array e os elementos individuais do array.
 
-<pre class="brush: js notranslate">function splitString(stringToSplit, separator) {
+```js
+function splitString(stringToSplit, separator) {
   var arrayOfStrings = stringToSplit.split(separator);
 
   console.log('A string original é: "' + stringToSplit + '"');
@@ -92,11 +88,12 @@ var comma = ',';
 splitString(tempestString, space);
 splitString(tempestString);
 splitString(monthString, comma);
-</pre>
+```
 
-<p>Esse exemplo produz a saída a seguir:</p>
+Esse exemplo produz a saída a seguir:
 
-<pre class="notranslate">A string original é: "Oh brave new world that has such people in it."
+```
+A string original é: "Oh brave new world that has such people in it."
 O separador é: " "
 O array possui 10 elementos: Oh / brave / new / world / that / has / such / people / in / it.
 
@@ -107,13 +104,14 @@ O array possui 1 elementos: Oh brave new world that has such people in it.
 A string original é: "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec"
 O separador é: ","
 O array possui 12 elementos: Jan / Feb / Mar / Apr / May / Jun / Jul / Aug / Sep / Oct / Nov / Dec
-</pre>
+```
 
-<h3 id="Removendo_espaços_de_uma_string">Removendo espaços de uma string</h3>
+### Removendo espaços de uma string
 
-<p>No exemplo a seguir, <code>split()</code> procura por 0 ou mais espaços seguidos por um ponto e vírgula seguido por 0 ou mais espaços e, quando encontrar, remove os espaços e os pontos e vírgulas da string.  <code>nameList</code> é o array retornado como resultado do <code>split()</code>.</p>
+No exemplo a seguir, `split()` procura por 0 ou mais espaços seguidos por um ponto e vírgula seguido por 0 ou mais espaços e, quando encontrar, remove os espaços e os pontos e vírgulas da string. `nameList` é o array retornado como resultado do `split()`.
 
-<pre class="brush: js notranslate">var names = 'Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand ';
+```js
+var names = 'Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand ';
 
 console.log(names);
 
@@ -121,114 +119,92 @@ var re = /\s*;\s*/;
 var nameList = names.split(re);
 
 console.log(nameList);
-</pre>
+```
 
-<p>O retorno do código acima são duas linhas. A primeira linha registra a string original e a segunda linha registra o array resultante.</p>
+O retorno do código acima são duas linhas. A primeira linha registra a string original e a segunda linha registra o array resultante.
 
-<pre class="notranslate">Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand
+```
+Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand
 [ "Harry Trump", "Fred Barney", "Helen Rigby", "Bill Abel", "Chris Hand " ]
-</pre>
+```
 
-<h3 id="Retornando_um_número_limitado_de_divisões">Retornando um número limitado de divisões</h3>
+### Retornando um número limitado de divisões
 
-<p>No exemplo a seguir, o <code>split()</code> procura por 0 ou mais espaços em uma string e retorna as 3 primeiras divisões que encontrar.</p>
+No exemplo a seguir, o `split()` procura por 0 ou mais espaços em uma string e retorna as 3 primeiras divisões que encontrar.
 
-<pre class="brush: js notranslate">var myString = 'Hello World. How are you doing?';
+```js
+var myString = 'Hello World. How are you doing?';
 var splits = myString.split(' ', 3);
 
 console.log(splits);
-</pre>
+```
 
-<p>O script exibirá o texto a seguir:</p>
+O script exibirá o texto a seguir:
 
-<pre class="notranslate">["Hello", "World.", "How"]
-</pre>
+```
+["Hello", "World.", "How"]
+```
 
-<h3 id="Parênteses_de_Captura">Parênteses de Captura</h3>
+### Parênteses de Captura
 
-<p>Se o <code>separator</code> contém parênteses de captura, os resultados correspondentes são retornados no array.</p>
+Se o `separator` contém parênteses de captura, os resultados correspondentes são retornados no array.
 
-<pre class="brush: js notranslate">var myString = 'Hello 1 word. Sentence number 2.';
+```js
+var myString = 'Hello 1 word. Sentence number 2.';
 var splits = myString.split(/(\d)/);
 
 console.log(splits);
-</pre>
+```
 
-<p>O script exibirá o texto a seguir:</p>
+O script exibirá o texto a seguir:
 
-<pre class="notranslate">[ "Hello ", "1", " word. Sentence number ", "2", "." ]
-</pre>
+```
+[ "Hello ", "1", " word. Sentence number ", "2", "." ]
+```
 
-<div class="blockIndicator note">
-<p><strong>Nota: </strong><code>\d</code> corresponde à classe de caracteres para dígitos entre 0 e 9.</p>
-</div>
+> **Nota:**`\d` corresponde à classe de caracteres para dígitos entre 0 e 9.
 
-<h3 id="Revertendo_uma_String_usando_split">Revertendo uma String usando <code>split()</code></h3>
+### Revertendo uma String usando `split()`
 
-<div class="blockIndicator warning">
-<p>Esta não é a melhor maneira de reverter uma string:</p>
+> **Aviso:** Esta não é a melhor maneira de reverter uma string:
+>
+> ```js example-bad
+> const str = 'asdfghjkl'
+> const strReverse = str.split('').reverse().join('')
+> // 'lkjhgfdsa'
+>
+> // split() retorna um array onde os métodos
+> // reverse() e join() podem ser aplicados
+> ```
+>
+> Não funciona se a string contém `grapheme clusters`, mesmo ao usar uma divisão compatível com Unicode. (Use, por exemplo, [esrever](https://github.com/mathiasbynens/esrever) no lugar.)
+>
+> ```js example-bad
+> const str = 'résumé'
+> const strReverse = str.split(/(?:)/u).reverse().join('')
+> // retorna "́emuśer"
+> ```
+>
+> **Bonus:** use o operador {{jsxref("Operators/Comparison_Operators", "===", "#Identity_strict_equality_(===)")}} para testar se a string original era um palíndromo.
 
-<pre class="brush: js example-bad notranslate">const str = 'asdfghjkl'
-const strReverse = str.split('').reverse().join('')
-// 'lkjhgfdsa'
+## Especificações
 
-// split() retorna um array onde os métodos
-// reverse() e join() podem ser aplicados</pre>
+| Especificação                                                                                                | Status                       | Comentário                                         |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Definição inicial. Implementado no JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.5.4.14', 'String.prototype.split')}}                     | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES6', '#sec-string.prototype.split', 'String.prototype.split')}}         | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-string.prototype.split', 'String.prototype.split')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<p>Não funciona se a string contém <code>grapheme clusters</code>, mesmo ao usar uma divisão compatível com Unicode. (Use, por exemplo, <a href="https://github.com/mathiasbynens/esrever">esrever</a> no lugar.)</p>
-
-<pre class="brush: js example-bad notranslate">const str = 'résumé'
-const strReverse = str.split(/(?:)/u).reverse().join('')
-// retorna "́emuśer"</pre>
-
-<p><strong>Bonus:</strong> use o operador {{jsxref("Operators/Comparison_Operators", "===", "#Identity_strict_equality_(===)")}} para testar se a string original era um palíndromo.</p>
-</div>
-
-
-
-<h2 id="Especificações">Especificações</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Definição inicial. Implementado no JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.4.14', 'String.prototype.split')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.split', 'String.prototype.split')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.split', 'String.prototype.split')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
+## Navegadores compatíveis
 
 {{Compat("javascript.builtins.String.split")}}
 
-<h2 id="sect1"></h2>
+##
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("String.prototype.charAt()")}}</li>
- <li>{{jsxref("String.prototype.indexOf()")}}</li>
- <li>{{jsxref("String.prototype.lastIndexOf()")}}</li>
- <li>{{jsxref("Array.prototype.join()")}}</li>
-</ul>
+- {{jsxref("String.prototype.charAt()")}}
+- {{jsxref("String.prototype.indexOf()")}}
+- {{jsxref("String.prototype.lastIndexOf()")}}
+- {{jsxref("Array.prototype.join()")}}

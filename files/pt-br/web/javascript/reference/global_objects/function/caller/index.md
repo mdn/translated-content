@@ -8,74 +8,77 @@ tags:
   - Propriedades
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/caller
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p>A propriedade <strong><code>function.caller</code></strong> retorna a função que invocou a função especificada.</p>
+A propriedade **`function.caller`** retorna a função que invocou a função especificada.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Se a função <code>f</code> foi invocada pelo codigo mais alto nível, o valor de <code>f.caller</code> é {{jsxref("null")}}, caso contrario, o valor será a função a qual invocou <code>f</code>.</p>
+Se a função `f` foi invocada pelo codigo mais alto nível, o valor de `f.caller` é {{jsxref("null")}}, caso contrario, o valor será a função a qual invocou `f`.
 
-<p>Esta propriedade substitui a propriedade obsoleta {{jsxref("Functions/arguments/caller", "arguments.caller")}} do objeto {{jsxref("Functions/arguments", "arguments")}}.</p>
+Esta propriedade substitui a propriedade obsoleta {{jsxref("Functions/arguments/caller", "arguments.caller")}} do objeto {{jsxref("Functions/arguments", "arguments")}}.
 
-<p>A propriedade especial <code>__caller__</code>, a qual retornou o objeto de ativação do chamador, permitindo assin reconstruir o stack, foi removido por motivo de segurança.</p>
+A propriedade especial `__caller__`, a qual retornou o objeto de ativação do chamador, permitindo assin reconstruir o stack, foi removido por motivo de segurança.
 
-<h3 id="Notas">Notas</h3>
+### Notas
 
-<p>Note que no caso de recurção, você não pode reconstruir o stack de chamadas usando esta propriedade. Considere:</p>
+Note que no caso de recurção, você não pode reconstruir o stack de chamadas usando esta propriedade. Considere:
 
-<pre class="brush: js">function f(n) { g(n - 1); }
-function g(n) { if (n &gt; 0) { f(n); } else { stop(); } }
+```js
+function f(n) { g(n - 1); }
+function g(n) { if (n > 0) { f(n); } else { stop(); } }
 f(2);
-</pre>
+```
 
-<p>No momento em que <code>stop()</code> é chamado o stack será:</p>
+No momento em que `stop()` é chamado o stack será:
 
-<pre class="brush: js">f(2) -&gt; g(1) -&gt; f(1) -&gt; g(0) -&gt; stop()
-</pre>
+```js
+f(2) -> g(1) -> f(1) -> g(0) -> stop()
+```
 
-<p>O seguinte é true:</p>
+O seguinte é true:
 
-<pre class="brush: js">stop.caller === g &amp;&amp; f.caller === g &amp;&amp; g.caller === f
-</pre>
+```js
+stop.caller === g && f.caller === g && g.caller === f
+```
 
-<p>então se você tentou recuperar o stack trace na função <code>stop()</code> assim:</p>
+então se você tentou recuperar o stack trace na função `stop()` assim:
 
-<pre class="brush: js">var f = stop;
+```js
+var f = stop;
 var stack = 'Stack trace:';
 while (f) {
   stack += '\n' + f.name;
   f = f.caller;
 }
-</pre>
+```
 
-<p>o loop nunca irá parar.</p>
+o loop nunca irá parar.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Verificando_o_valor_da_propriedade_caller_de_uma_função">Verificando o valor da propriedade <code>caller</code> de uma função</h3>
+### Verificando o valor da propriedade `caller` de uma função
 
-<p>O código a seguir verifica o valor da propriedade <code>caller</code> de uma função.</p>
+O código a seguir verifica o valor da propriedade `caller` de uma função.
 
-<pre class="brush: js">function myFunc() {
+```js
+function myFunc() {
   if (myFunc.caller == null) {
     return 'The function was called from the top!';
   } else {
     return 'This function\'s caller was ' + myFunc.caller;
   }
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<p>Não faz parte de nenhuma especificação. Implementado no JavaScript 1.5.</p>
+Não faz parte de nenhuma especificação. Implementado no JavaScript 1.5.
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Function.caller")}}
 
-<h2 id="Ver_também">Ver também</h2>
+## Ver também
 
-<ul>
- <li>Implementation bug for SpiderMonkey {{bug(65683)}}</li>
-</ul>
+- Implementation bug for SpiderMonkey {{bug(65683)}}

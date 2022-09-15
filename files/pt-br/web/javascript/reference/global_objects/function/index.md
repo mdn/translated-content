@@ -9,83 +9,83 @@ tags:
   - TopicStub
 translation_of: Web/JavaScript/Reference/Global_Objects/Function
 ---
-<div>{{JSRef("Global_Objects", "Function")}}</div>
+{{JSRef("Global_Objects", "Function")}}
 
-<h2 id="Summary" name="Summary">Resumo</h2>
+## Resumo
 
-<p>O <strong><code>construtor Function</code></strong> cria um novo objeto <code>Function</code>. Chamar o construtor diretamente pode criar funções dinamicamente, mas sofre com problemas de segurança e desempenho semelhante (mas muito menos significativo) a {{jsxref("eval")}}. No entanto, diferentemente de eval, a Função construtora cria funções que executam somente no escopo global.</p>
+O **`construtor Function`** cria um novo objeto `Function`. Chamar o construtor diretamente pode criar funções dinamicamente, mas sofre com problemas de segurança e desempenho semelhante (mas muito menos significativo) a {{jsxref("eval")}}. No entanto, diferentemente de eval, a Função construtora cria funções que executam somente no escopo global.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code>new Function ([<var>arg1</var>[, <var>arg2</var>[, ...<var>argN</var>]],] <var>functionBody</var>)</code></pre>
+```
+new Function ([arg1[, arg2[, ...argN]],] functionBody)
+```
 
-<h3 id="Parameters" name="Parameters">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>arg1, arg2, ... arg<em>N</em></code></dt>
- <dd>Nomes para serem usados pela função como nomes formais de argumentos. Cada um deve ser uma string que corresponde para uma válida identidade JavaScript ou uma lista de certas strings separadas com uma vírgula; por exemplo "x", "theValue". our "a,b".</dd>
- <dt><code>functionBody</code></dt>
- <dd>Uma string que contém as instruções JavaScript que compõem a definição da função.</dd>
-</dl>
+- `arg1, arg2, ... argN`
+  - : Nomes para serem usados pela função como nomes formais de argumentos. Cada um deve ser uma string que corresponde para uma válida identidade JavaScript ou uma lista de certas strings separadas com uma vírgula; por exemplo "x", "theValue". our "a,b".
+- `functionBody`
+  - : Uma string que contém as instruções JavaScript que compõem a definição da função.
 
-<h2 id="Description" name="Description">Descrição</h2>
+## Descrição
 
-<p>Objetos <code>Function</code> criados com o construtor <code>Function</code> são <em>parseados</em> quando a função é criada. Isto é menos eficiente que criar com uma <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/function">expressão de função</a> ou um <a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/function">declaração de função</a> e chamando-a dentro do seu código, porque tais funções são <em>parseadas</em> com o resto do código.</p>
+Objetos `Function` criados com o construtor `Function` são _parseados_ quando a função é criada. Isto é menos eficiente que criar com uma [expressão de função](/pt-BR/docs/Web/JavaScript/Reference/Operators/function) ou um [declaração de função](/pt-BR/docs/Web/JavaScript/Reference/Statements/function) e chamando-a dentro do seu código, porque tais funções são _parseadas_ com o resto do código.
 
-<p>Todos os argumentos passados para a função são tratados como os nomes dos indetificadores dos parâmetros na função a ser criada, na mesma ordem na qual eles foram passados.</p>
+Todos os argumentos passados para a função são tratados como os nomes dos indetificadores dos parâmetros na função a ser criada, na mesma ordem na qual eles foram passados.
 
-<div class="note">
-<p><strong>Nota:</strong> Funções criadas com o construtor <code>Function não criam closures</code> para o seu contexto de criação; elas sempre são criadas no escopo global. Quando executadas, elas terão acesso apenas às suas variáveis locais ou globais, não terão acesso às variáveis do escopo na qual o construtor <code>Function</code> foi chamado. Isto é diferente de usar {{jsxref("Global_Objects/eval", "eval")}} com o código de uma expressão de função.</p>
-</div>
+> **Nota:** Funções criadas com o construtor `Function não criam closures` para o seu contexto de criação; elas sempre são criadas no escopo global. Quando executadas, elas terão acesso apenas às suas variáveis locais ou globais, não terão acesso às variáveis do escopo na qual o construtor `Function` foi chamado. Isto é diferente de usar {{jsxref("Global_Objects/eval", "eval")}} com o código de uma expressão de função.
 
-<p>Invocar o construtor <code>Function</code> como uma função (sem usar o operador <code>new</code>) tem o mesmo efeito de chamá-la como um construtor.</p>
+Invocar o construtor `Function` como uma função (sem usar o operador `new`) tem o mesmo efeito de chamá-la como um construtor.
 
-<h2 id="Propriedades_e_Métodos_da_Function">Propriedades e Métodos da <code>Function</code></h2>
+## Propriedades e Métodos da `Function`
 
-<p>O objeto global <code>Function</code> não tem métodos ou propriedades próprias, no entanto, como ela é uma função, ela herda alguns métodos e propriedades através do prototype chain do {{jsxref("Function.prototype")}}.</p>
+O objeto global `Function` não tem métodos ou propriedades próprias, no entanto, como ela é uma função, ela herda alguns métodos e propriedades através do prototype chain do {{jsxref("Function.prototype")}}.
 
-<h2 id="Function_prototype_object"><code>Function</code> prototype object</h2>
+## `Function` prototype object
 
-<h3 id="Propriedades">Propriedades</h3>
+### Propriedades
 
-<div>{{page('/en-US/docs/JavaScript/Reference/Global_Objects/Function/prototype', 'Properties')}}</div>
+{{page('/en-US/docs/JavaScript/Reference/Global_Objects/Function/prototype', 'Properties')}}
 
-<h3 id="Methods" name="Methods">Métodos</h3>
+### Métodos
 
-<div>{{page('/en-US/docs/JavaScript/Reference/Global_Objects/Function/prototype', 'Methods')}}</div>
+{{page('/en-US/docs/JavaScript/Reference/Global_Objects/Function/prototype', 'Methods')}}
 
-<h2 id="Function_instances" name="Function_instances"><code>Function</code> instances</h2>
+## `Function` instances
 
-<p><code>Function</code> instances inherit methods and properties from {{jsxref("Function.prototype")}}. As with all constructors, you can change the constructor's prototype object to make changes to all <code>Function</code> instances.</p>
+`Function` instances inherit methods and properties from {{jsxref("Function.prototype")}}. As with all constructors, you can change the constructor's prototype object to make changes to all `Function` instances.
 
-<h2 id="Examples" name="Examples">Exemplos:</h2>
+## Exemplos:
 
-<h3 id="Example.3A_Specifying_arguments_with_the_Function_constructor" name="Example.3A_Specifying_arguments_with_the_Function_constructor">Exemplos: Especificando argumentos com o construtor <code>Function</code></h3>
+### Exemplos: Especificando argumentos com o construtor `Function`
 
-<p>O código a seguir cria um objeto <code>Function</code> que recebe dois argumentos.</p>
+O código a seguir cria um objeto `Function` que recebe dois argumentos.
 
-<pre class="brush: js">// O exemplo pode ser executado direto no seu console JavaScript
+```js
+// O exemplo pode ser executado direto no seu console JavaScript
 
 // Cria uma função que recebe 2 argumentos e retorna a soma entre os dois:
 var adder = new Function('a', 'b', 'return a + b');
 
 // Chamada da função
 adder(2, 6);
-// &gt; 8
-</pre>
+// > 8
+```
 
-<p>Os argumentos "<code>a</code>" e "<code>b</code>" são os argumentos que serão usados no corpo da função, "<code>return a + b</code>".</p>
+Os argumentos "`a`" e "`b`" são os argumentos que serão usados no corpo da função, "`return a + b`".
 
-<h3 id="Example_A_recursive_shortcut_to_massively_modify_the_DOM" name="Example:_A_recursive_shortcut_to_massively_modify_the_DOM">Exemplo: Um atalho recursivo para modificar o DOM em massa</h3>
+### Exemplo: Um atalho recursivo para modificar o DOM em massa
 
-<p>Creating functions with the <code>Function</code> constructor is one of the ways to dynamically create an indeterminate number of new objects with some executable code into the global scope from a function. The following example (a recursive shortcut to massively modify the DOM) is impossible without the invocation of the <code>Function</code> constructor for each new query if you want to avoid closures.</p>
+Creating functions with the `Function` constructor is one of the ways to dynamically create an indeterminate number of new objects with some executable code into the global scope from a function. The following example (a recursive shortcut to massively modify the DOM) is impossible without the invocation of the `Function` constructor for each new query if you want to avoid closures.
 
-<pre class="brush: html">&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
-&lt;title&gt;MDN Example - a recursive shortcut to massively modify the DOM&lt;/title&gt;
-&lt;script type="text/javascript"&gt;
+```html
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>MDN Example - a recursive shortcut to massively modify the DOM</title>
+<script type="text/javascript">
 var domQuery = (function() {
   var aDOMFunc = [
     Element.prototype.removeAttribute,
@@ -95,14 +95,14 @@ var domQuery = (function() {
   ];
 
   function setSomething(bStyle, sProp, sVal) {
-    var bSet = Boolean(sVal), fAction = aDOMFunc[bSet | bStyle &lt;&lt; 1],
+    var bSet = Boolean(sVal), fAction = aDOMFunc[bSet | bStyle << 1],
         aArgs = Array.prototype.slice.call(arguments, 1, bSet ? 3 : 2),
         aNodeList = bStyle ? this.cssNodes : this.nodes;
 
-    if (bSet &amp;&amp; bStyle) { aArgs.push(''); }
+    if (bSet && bStyle) { aArgs.push(''); }
     for (
       var nItem = 0, nLen = this.nodes.length;
-      nItem &lt; nLen;
+      nItem < nLen;
       fAction.apply(aNodeList[nItem++], aArgs)
     );
     this.follow = setSomething.caller;
@@ -127,60 +127,39 @@ var domQuery = (function() {
     return oQuery;
   });
 })();
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body&gt;
+<body>
 
-&lt;div class="testClass"&gt;Lorem ipsum&lt;/div&gt;
-&lt;p&gt;Some text&lt;/p&gt;
-&lt;div class="testClass"&gt;dolor sit amet&lt;/div&gt;
+<div class="testClass">Lorem ipsum</div>
+<p>Some text</p>
+<div class="testClass">dolor sit amet</div>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 domQuery('.testClass')
   .attributes('lang', 'en')('title', 'Risus abundat in ore stultorum')
   .inlineStyle('background-color', 'black')('color', 'white')('width', '100px')('height', '50px');
-&lt;/script&gt;
-&lt;/body&gt;
+</script>
+</body>
 
-&lt;/html&gt;
-</pre>
+</html>
+```
 
-<h2 id="Especificação">Especificação</h2>
+## Especificação
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1st Edition.</td>
-   <td>Standard</td>
-   <td>Definição inicial. Implementado no JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.3', 'Function')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-function-objects', 'Function')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                | Status                   | Comentário                                         |
+| ---------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
+| ECMAScript 1st Edition.                                                      | Standard                 | Definição inicial. Implementado no JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.3', 'Function')}}                 | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES6', '#sec-function-objects', 'Function')}} | {{Spec2('ES6')}}     |                                                    |
 
-<h2 id="Compatibilidade">Compatibilidade</h2>
+## Compatibilidade
 
 {{Compat("javascript.builtins.Function")}}
 
-<h2 id="See_also" name="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Operators/function", "function Expression", "", 1)}}</li>
- <li>{{jsxref("Statements/function", "function Statement", "", 1)}}</li>
- <li>{{jsxref("Functions_and_function_scope", "Functions and function scope", "", 1)}}</li>
-</ul>
+- {{jsxref("Operators/function", "function Expression", "", 1)}}
+- {{jsxref("Statements/function", "function Statement", "", 1)}}
+- {{jsxref("Functions_and_function_scope", "Functions and function scope", "", 1)}}

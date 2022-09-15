@@ -3,74 +3,77 @@ title: Array.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>some()</strong></code> testa se ao menos um dos elementos no array passa no teste implementado pela função atribuída e retorna um valor <code><strong>true</strong></code> ou <code><strong>false</strong></code>.</p>
+O método **`some()`** testa se ao menos um dos elementos no array passa no teste implementado pela função atribuída e retorna um valor **`true`** ou **`false`**.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code><var>arr</var>.some(<var>callback</var>[, <var>thisArg</var>])</code></pre>
+```
+arr.some(callback[, thisArg])
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>Função para testar cada elemento, recebendo três argumentos:
- <dl>
-  <dt><code>currentValue</code></dt>
-  <dd>O valor atual do elemento sendo processado no array.</dd>
-  <dt><code>index</code></dt>
-  <dd>O índice do elemento atual sendo processado no array.</dd>
-  <dt><code>array</code></dt>
-  <dd>O array onde o método <code>some()</code> foi chamado.</dd>
- </dl>
- </dd>
- <dt><code>thisArg</code></dt>
- <dd>Opcional. Valor para usar como  <em><code>this</code> </em>durante a execução do <code>callback</code>.</dd>
-</dl>
+- `callback`
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+  - : Função para testar cada elemento, recebendo três argumentos:
 
-<p>Esta função retorna <code><strong>true</strong></code> se a função callback retornar <code><strong>true</strong></code> para qualquer elemento do array; caso contrário, <code><strong>false</strong></code>.</p>
+    - `currentValue`
+      - : O valor atual do elemento sendo processado no array.
+    - `index`
+      - : O índice do elemento atual sendo processado no array.
+    - `array`
+      - : O array onde o método `some()` foi chamado.
 
-<h2 id="Descrição">Descrição</h2>
+- `thisArg`
+  - : Opcional. Valor para usar como \_`this` \_durante a execução do `callback`.
 
-<p><code>some()</code> executa a função callback uma vez para cada elemento presente no array até achar um onde o <code>callback</code> retorne um valor <em>true</em>. Se em qualquer dos elementos o valor for encontrado, <code>some()</code> imediatamente retorna <code>true</code>. Caso contrario, <code>some()</code> retorna <code>false</code>. <code>callback</code> é invocado somente para índices do array que contenham valor definido; não é invocado para índices que foram deletados ou os quais nunca tiveram valor definido.</p>
+### Valor de retorno
 
-<p><code>callback</code> é invocado com três argumentos: o valor do elemento, o índice do elemento, e o array onde a função foi chamada.</p>
+Esta função retorna **`true`** se a função callback retornar **`true`** para qualquer elemento do array; caso contrário, **`false`**.
 
-<p>Se o parâmetro <code>thisArg</code> foi passado ao <code>some()</code>, ele sera passado ao <code>callback</code> quando o mesmo for invocado,<font face="Open Sans, Arial, sans-serif"> para ser usado como o valor de </font><code>this</code> internamente na função callback. Caso contrario, o valor {{jsxref("undefined")}} será passado para uso como <code>this</code>. O valor <code>this</code> observado pela <code>callback</code>  é determinado de acordo com as regras usuais para determinar o que é visto por uma função.</p>
+## Descrição
 
-<p><code>some()</code> não altera o array dentro do qual ele é chamado. </p>
+`some()` executa a função callback uma vez para cada elemento presente no array até achar um onde o `callback` retorne um valor _true_. Se em qualquer dos elementos o valor for encontrado, `some()` imediatamente retorna `true`. Caso contrario, `some()` retorna `false`. `callback` é invocado somente para índices do array que contenham valor definido; não é invocado para índices que foram deletados ou os quais nunca tiveram valor definido.
 
-<p>O intervalo de elementos processado por <code>some()</code> é definido antes da primeira invocação da <code>callback</code>. Elementos contidos no array antes da chamada <code>some()</code> ser iniciada não serão testados pela <em>callback</em>. Se algum elemento pertencente ao array for alterado pela <code><var>callback</var></code>, o valor passado para a <code><var>callback</var></code> será o valor do momento em que a função <code>some()</code> encontra o índice daquele elemento. Elementos deletados não são testados.</p>
+`callback` é invocado com três argumentos: o valor do elemento, o índice do elemento, e o array onde a função foi chamada.
 
-<h2 id="Exemplos">Exemplos</h2>
+Se o parâmetro `thisArg` foi passado ao `some()`, ele sera passado ao `callback` quando o mesmo for invocado, para ser usado como o valor de `this` internamente na função callback. Caso contrario, o valor {{jsxref("undefined")}} será passado para uso como `this`. O valor `this` observado pela `callback` é determinado de acordo com as regras usuais para determinar o que é visto por uma função.
 
-<h3 id="Testando_valores_de_elementos_de_um_array">Testando valores de elementos de um array</h3>
+`some()` não altera o array dentro do qual ele é chamado.
 
-<p>O exemplo a seguir testa se algum elemento de um array é maior que 10.</p>
+O intervalo de elementos processado por `some()` é definido antes da primeira invocação da `callback`. Elementos contidos no array antes da chamada `some()` ser iniciada não serão testados pela _callback_. Se algum elemento pertencente ao array for alterado pela `callback`, o valor passado para a `callback` será o valor do momento em que a função `some()` encontra o índice daquele elemento. Elementos deletados não são testados.
 
-<pre class="brush: js notranslate">function isBiggerThan10(element, index, array) {
-  return element &gt; 10;
+## Exemplos
+
+### Testando valores de elementos de um array
+
+O exemplo a seguir testa se algum elemento de um array é maior que 10.
+
+```js
+function isBiggerThan10(element, index, array) {
+  return element > 10;
 }
 [2, 5, 8, 1, 4].some(isBiggerThan10);  // false
 [12, 5, 8, 1, 4].some(isBiggerThan10); // true
-</pre>
+```
 
-<h3 id="Testando_valores_de_elementos_de_um_array_usando_arrow_functions">Testando valores de elementos de um array usando arrow functions</h3>
+### Testando valores de elementos de um array usando arrow functions
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow functions</a> fornece uma sintaxe mais curta para o mesmo teste.</p>
+[Arrow functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions) fornece uma sintaxe mais curta para o mesmo teste.
 
-<pre class="brush: js notranslate">[2, 5, 8, 1, 4].some(elem =&gt; elem &gt; 10);  // false
-[12, 5, 8, 1, 4].some(elem =&gt; elem &gt; 10); // true
-</pre>
+```js
+[2, 5, 8, 1, 4].some(elem => elem > 10);  // false
+[12, 5, 8, 1, 4].some(elem => elem > 10); // true
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p><code>some()</code> was added to the ECMA-262 standard in the 5th edition; as such it may not be present in all implementations of the standard. You can work around this by inserting the following code at the beginning of your scripts, allowing use of <code>some()</code> in implementations which do not natively support it. This algorithm is exactly the one specified in ECMA-262, 5th edition, assuming {{jsxref("Object")}} and {{jsxref("TypeError")}} have their original values and that <code>fun.call</code> evaluates to the original value of {{jsxref("Function.prototype.call()")}}.</p>
+`some()` was added to the ECMA-262 standard in the 5th edition; as such it may not be present in all implementations of the standard. You can work around this by inserting the following code at the beginning of your scripts, allowing use of `some()` in implementations which do not natively support it. This algorithm is exactly the one specified in ECMA-262, 5th edition, assuming {{jsxref("Object")}} and {{jsxref("TypeError")}} have their original values and that `fun.call` evaluates to the original value of {{jsxref("Function.prototype.call()")}}.
 
-<pre class="brush: js notranslate">// Production steps of ECMA-262, Edition 5, 15.4.4.17
+```js
+// Production steps of ECMA-262, Edition 5, 15.4.4.17
 // Reference: http://es5.github.io/#x15.4.4.17
 if (!Array.prototype.some) {
   Array.prototype.some = function(fun/*, thisArg*/) {
@@ -85,11 +88,11 @@ if (!Array.prototype.some) {
     }
 
     var t = Object(this);
-    var len = t.length &gt;&gt;&gt; 0;
+    var len = t.length >>> 0;
 
-    var thisArg = arguments.length &gt;= 2 ? arguments[1] : void 0;
-    for (var i = 0; i &lt; len; i++) {
-      if (i in t &amp;&amp; fun.call(thisArg, t[i], i, t)) {
+    var thisArg = arguments.length >= 2 ? arguments[1] : void 0;
+    for (var i = 0; i < len; i++) {
+      if (i in t && fun.call(thisArg, t[i], i, t)) {
         return true;
       }
     }
@@ -97,38 +100,21 @@ if (!Array.prototype.some) {
     return false;
   };
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.17', 'Array.prototype.some')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Definição inicial. Implementada em JavaScript 1.6.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.some', 'Array.prototype.some')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                   | Comment                                            |
+| ------------------------------------------------------------------------------------------------ | ------------------------ | -------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.4.4.17', 'Array.prototype.some')}}             | {{Spec2('ES5.1')}} | Definição inicial. Implementada em JavaScript 1.6. |
+| {{SpecName('ES6', '#sec-array.prototype.some', 'Array.prototype.some')}} | {{Spec2('ES6')}}     |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>{{Compat("javascript.builtins.Array.some")}}</div>
+{{Compat("javascript.builtins.Array.some")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("TypedArray.prototype.some()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("TypedArray.prototype.some()")}}

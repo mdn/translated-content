@@ -9,72 +9,80 @@ tags:
   - Statement
 translation_of: Web/JavaScript/Reference/Statements/for...of
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>O loop <strong><code>for...of</code></strong> percorre <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/iterable">objetos iterativos</a> (incluindo {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, o objeto <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments">arguments</a> e assim por diante), chamando uma função personalizada com instruções a serem executadas para o valor de cada objeto distinto.</p>
+O loop **`for...of`** percorre [objetos iterativos](/pt-BR/docs/Web/JavaScript/Guide/iterable) (incluindo {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, o objeto [arguments](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) e assim por diante), chamando uma função personalizada com instruções a serem executadas para o valor de cada objeto distinto.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">for (<em>variavel</em> of <em>iteravel</em>) {
-<em>  declaração</em><em>
-</em>}
-</pre>
+```
+for (variavel of iteravel) {
+  declaração
+}
+```
 
-<dl>
- <dt><code>variável</code></dt>
- <dd>A cada iteração, um valor de uma propriedade diferente é atribuido à <em>variável</em>.</dd>
- <dt><code>iteravel</code></dt>
- <dd>Objeto cujos atributos serão iterados.</dd>
-</dl>
+- `variável`
+  - : A cada iteração, um valor de uma propriedade diferente é atribuido à _variável_.
+- `iteravel`
+  - : Objeto cujos atributos serão iterados.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Iterando_sobre_um_jsxref(Array)">Iterando sobre um {{jsxref("Array")}}</h3>
+### Iterando sobre um {{jsxref("Array")}}
 
-<pre class="brush:js"><code>let iterable = [10, 20, 30];
+```js
+let iterable = [10, 20, 30];
 
 for (let value of iterable) {
   console.log(value);
 }
 // 10
 // 20
-// 30</code></pre>
+// 30
+```
 
-<p>Ao invés de <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let"><code>let</code></a>, você pode usar <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const"><code>const</code></a> se você não for modificar a variável dentro do bloco.</p>
+Ao invés de [`let`](/pt-BR/docs/Web/JavaScript/Reference/Statements/let), você pode usar [`const`](/pt-BR/docs/Web/JavaScript/Reference/Statements/const) se você não for modificar a variável dentro do bloco.
 
-<pre><code>let iterable = [10, 20, 30];
+```
+let iterable = [10, 20, 30];
 
 for (const value of iterable) {
   console.log(value);
 }
 // 10
 // 20
-// 30</code></pre>
+// 30
+```
 
-<h3 id="Iterando_sobre_uma_jsxref(String)">Iterando sobre uma {{jsxref("String")}}</h3>
+### Iterando sobre uma {{jsxref("String")}}
 
-<pre><code>let iterable = "boo";
+```
+let iterable = "boo";
 
 for (let value of iterable) {
   console.log(value);
 }
 // "b"
 // "o"
-// "o"</code></pre>
+// "o"
+```
 
-<h3 id="Iterando_sobre_uma_jsxref(TypedArray)">Iterando sobre uma {{jsxref("TypedArray")}}</h3>
+### Iterando sobre uma {{jsxref("TypedArray")}}
 
-<pre><code>let iterable = new Uint8Array([0x00, 0xff]);
+```
+let iterable = new Uint8Array([0x00, 0xff]);
 
 for (let value of iterable) {
   console.log(value);
 }
 // 0
-// 255</code></pre>
+// 255
+```
 
-<h3 id="Iterando_sobre_um_jsxref(Map)">Iterando sobre um {{jsxref("Map")}}</h3>
+### Iterando sobre um {{jsxref("Map")}}
 
-<pre><code>let iterable = new Map([["a", 1], ["b", 2], ["c", 3]]);
+```
+let iterable = new Map([["a", 1], ["b", 2], ["c", 3]]);
 
 for (let entry of iterable) {
   console.log(entry);
@@ -88,22 +96,26 @@ for (let [key, value] of iterable) {
 }
 // 1
 // 2
-// 3</code></pre>
+// 3
+```
 
-<h3 id="Iterando_sobre_um_jsxref(Set)">Iterando sobre um {{jsxref("Set")}}</h3>
+### Iterando sobre um {{jsxref("Set")}}
 
-<pre><code>let iterable = new Set([1, 1, 2, 2, 3, 3]);
+```
+let iterable = new Set([1, 1, 2, 2, 3, 3]);
 
 for (let value of iterable) {
   console.log(value);
 }
 // 1
 // 2
-// 3</code></pre>
+// 3
+```
 
-<h3 id="Iterando_sobre_um_objeto_arguments">Iterando sobre um objeto <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments">arguments</a></h3>
+### Iterando sobre um objeto [arguments](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments)
 
-<pre><code>(function() {
+```
+(function() {
   for (let argument of arguments) {
     console.log(argument);
   }
@@ -111,25 +123,29 @@ for (let value of iterable) {
 
 // 1
 // 2
-// 3</code></pre>
+// 3
+```
 
-<h3 id="Iterando_sobre_uma_coleção_do_DOM">Iterando sobre uma coleção do DOM</h3>
+### Iterando sobre uma coleção do DOM
 
-<p>Iterar sobre uma coleção do DOM como {{domxref("NodeList")}}: o seguinte exemplo adiciona uma classe <code>read</code> aos parágrafos que são descendentes diretos de uma tag <code>article</code>:</p>
+Iterar sobre uma coleção do DOM como {{domxref("NodeList")}}: o seguinte exemplo adiciona uma classe `read` aos parágrafos que são descendentes diretos de uma tag `article`:
 
-<pre><code>// Nota: Isso irá funcionar somente em plataformas que tem
+```
+// Nota: Isso irá funcionar somente em plataformas que tem
 // suporte ao NodeList.prototype[Symbol.iterator]
-let articleParagraphs = document.querySelectorAll("article &gt; p");
+let articleParagraphs = document.querySelectorAll("article > p");
 
 for (let paragraph of articleParagraphs) {
   paragraph.classList.add("read");
-}</code></pre>
+}
+```
 
-<h3 id="Iterando_sobre_generators">Iterando sobre generators</h3>
+### Iterando sobre generators
 
-<p>Você pode também iterar sobre <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*">generators</a>:</p>
+Você pode também iterar sobre [generators](/pt-BR/docs/Web/JavaScript/Reference/Statements/function*):
 
-<pre><code>function* fibonacci() { // uma função geradora (generator)
+```
+function* fibonacci() { // uma função geradora (generator)
   let [prev, curr] = [1, 1];
   while (true) {
     [prev, curr] = [curr, prev + curr];
@@ -140,16 +156,18 @@ for (let paragraph of articleParagraphs) {
 for (let n of fibonacci()) {
   console.log(n);
   // Trunca a sequência em 1000
-  if (n &gt;= 1000) {
+  if (n >= 1000) {
     break;
   }
-}</code></pre>
+}
+```
 
-<h4 id="Não_reuse_generators">Não reuse generators</h4>
+#### Não reuse generators
 
-<p>Generators não devem ser re-usados, mesmo se o loop <code>for...of</code> for terminado precocemente, por exemplo através da palavra-chave {{jsxref("Statements/break", "break")}}. Enquanto em um loop ativo, o generator é fechado e tentar iterar novamente sobre ele não produz (yield) nenhum resultado adicional. O Firefox ainda não implementou este comportamento (o generator pode ser reutilizado, violando o padrão do ES2015 (<a href="https://www.ecma-international.org/ecma-262/6.0/#sec-13.7.5.13">13.7.5.13, step 5m</a>), mas isso irá mudar uma vez que o {{Bug(1147371)}} for resolvido.</p>
+Generators não devem ser re-usados, mesmo se o loop `for...of` for terminado precocemente, por exemplo através da palavra-chave {{jsxref("Statements/break", "break")}}. Enquanto em um loop ativo, o generator é fechado e tentar iterar novamente sobre ele não produz (yield) nenhum resultado adicional. O Firefox ainda não implementou este comportamento (o generator pode ser reutilizado, violando o padrão do ES2015 ([13.7.5.13, step 5m](https://www.ecma-international.org/ecma-262/6.0/#sec-13.7.5.13)), mas isso irá mudar uma vez que o {{Bug(1147371)}} for resolvido.
 
-<pre><code>var gen = (function *(){
+```
+var gen = (function *(){
   yield 1;
   yield 2;
   yield 3;
@@ -163,18 +181,20 @@ for (let o of gen) {
 // faz sentido!
 for (let o of gen) {
   console.log(o); // Nunca será chamado.
-}</code></pre>
+}
+```
 
-<h3 id="Iterando_sobre_outros_objetos_iteráveis">Iterando sobre outros objetos iteráveis</h3>
+### Iterando sobre outros objetos iteráveis
 
-<p>Você pode também iterar sobre um objeto que implementa explicitamente um protocolo <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterable">iterável</a> protocol:</p>
+Você pode também iterar sobre um objeto que implementa explicitamente um protocolo [iterável](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols#iterable) protocol:
 
-<pre><code>var iterable = {
+```
+var iterable = {
   [Symbol.iterator]() {
     return {
       i: 0,
       next() {
-        if (this.i &lt; 3) {
+        if (this.i < 3) {
           return { value: this.i++, done: false };
         }
         return { value: undefined, done: true };
@@ -188,17 +208,19 @@ for (var value of iterable) {
 }
 // 0
 // 1
-// 2</code></pre>
+// 2
+```
 
-<h3 id="Diferença_entre_for...of_e_for...in">Diferença entre <code>for...of</code> e <code>for...in</code></h3>
+### Diferença entre `for...of` e `for...in`
 
-<p>O loop <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code> irá iterar sobre todas as propriedades enumeráveis de um objeto.</p>
+O loop [`for...in`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in) irá iterar sobre todas as propriedades enumeráveis de um objeto.
 
-<p>A sintaxe do <code>for...of</code> é específica para <strong>coleções</strong>, ao invés de todos os objetos. Ela irá iterar desta maneira sobre os elementos de qualquer coleção que tiver uma propriedade <code>[Symbol.iterator]</code>.</p>
+A sintaxe do `for...of` é específica para **coleções**, ao invés de todos os objetos. Ela irá iterar desta maneira sobre os elementos de qualquer coleção que tiver uma propriedade `[Symbol.iterator]`.
 
-<p>O exemplo a seguir mostra a diferença entre um loop <code>for...of</code> e um loop <code>for...in</code>.</p>
+O exemplo a seguir mostra a diferença entre um loop `for...of` e um loop `for...in`.
 
-<pre><code>Object.prototype.objCustom = function () {};
+```
+Object.prototype.objCustom = function () {};
 Array.prototype.arrCustom = function () {};
 
 let iterable = [3, 5, 7];
@@ -210,37 +232,21 @@ for (let i in iterable) {
 
 for (let i of iterable) {
   console.log(i); // escreve 3, 5, 7
-}</code></pre>
+}
+```
 
-<h3 id="Especificações">Especificações</h3>
+### Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-for-in-and-for-of-statements', 'for...of statement')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definition Inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'for...of statement')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                | Status                       | Comentário          |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-for-in-and-for-of-statements', 'for...of statement')}}     | {{Spec2('ES6')}}         | Definition Inicial. |
+| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'for...of statement')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.statements.for_of")}}
 
-<h2 id="Consulte_também">Consulte também</h2>
+## Consulte também
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for_each...in">for each...in</a> - uma declaração similar, mas que itera entre os valores dos atributos de um objeto, ao invés dos seus nomes (obsoleto).</li>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
-</ul>
+- [for each...in](/pt-BR/docs/Web/JavaScript/Reference/Statements/for_each...in) - uma declaração similar, mas que itera entre os valores dos atributos de um objeto, ao invés dos seus nomes (obsoleto).
+- {{jsxref("Array.prototype.forEach()")}}

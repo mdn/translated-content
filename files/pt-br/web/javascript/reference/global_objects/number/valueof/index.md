@@ -3,76 +3,52 @@ title: Number.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/valueOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>valueOf()</code></strong> retorna o valor primitivo contido no objeto {{jsxref("Number")}}.</p>
+O método **`valueOf()`** retorna o valor primitivo contido no objeto {{jsxref("Number")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/number-valueof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-valueof.html")}}
 
+## Sintaxe
 
+```
+numObj.valueOf()
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Valor retornado
 
-<pre class="syntaxbox"><var>numObj</var>.valueOf()</pre>
+Um número representando o valor primitivo do objeto {{jsxref("Number")}}.
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+## Descrição
 
-<p>Um número representando o valor primitivo do objeto {{jsxref("Number")}}.</p>
+Este método normalmente é invocado internamente pelo JavaScript e não explicitamente em um código web.
 
-<h2 id="Descrição">Descrição</h2>
+## Exemplos
 
-<p>Este método normalmente é invocado internamente pelo JavaScript e não explicitamente em um código web.</p>
+### Utilizando `valueOf`
 
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Utilizando_valueOf">Utilizando <code>valueOf</code></h3>
-
-<pre class="brush: js">var numObj = new Number(10);
+```js
+var numObj = new Number(10);
 console.log(typeof numObj); // object
 
 var num = numObj.valueOf();
 console.log(num);           // 10
 console.log(typeof num);    // number
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição inicial. Implementada no JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.7.4.4', 'Number.prototype.valueOf')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-number.prototype.valueof', 'Number.prototype.valueOf')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.prototype.valueof', 'Number.prototype.valueOf')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                    | Status                       | Comment                                            |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}         | Definição inicial. Implementada no JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.7.4.4', 'Number.prototype.valueOf')}}                         | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES6', '#sec-number.prototype.valueof', 'Number.prototype.valueOf')}}     | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-number.prototype.valueof', 'Number.prototype.valueOf')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Number.valueOf")}}</p>
+{{Compat("javascript.builtins.Number.valueOf")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Number.prototype.toSource()")}}</li>
-</ul>
+- {{jsxref("Number.prototype.toSource()")}}

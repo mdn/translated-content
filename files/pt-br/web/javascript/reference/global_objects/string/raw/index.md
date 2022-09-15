@@ -9,52 +9,50 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/String/raw
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método estático <code>String.raw()</code> é uma função tag de <a href="/pt-BR/docs/Web/JavaScript/Reference/template_strings">modelos literais</a>, similar ao prefixo <code>r</code> no Python ou o prefixo <code>@</code> no C# para string literais (Mas não é <em>idêntico</em>, existe uma diferença, veja explicações nessa <a href="https://bugs.chromium.org/p/v8/issues/detail?id=5016">discussão</a>). Ele é usado para pegar as strings no formato "cru" de modelos literais, isto é, substituições (ex: <code>${foo}</code>) são processados, mas "escapes" (ex:. <code>\n</code>) não são.</p>
+O método estático `String.raw()` é uma função tag de [modelos literais](/pt-BR/docs/Web/JavaScript/Reference/template_strings), similar ao prefixo `r` no Python ou o prefixo `@` no C# para string literais (Mas não é _idêntico_, existe uma diferença, veja explicações nessa [discussão](https://bugs.chromium.org/p/v8/issues/detail?id=5016)). Ele é usado para pegar as strings no formato "cru" de modelos literais, isto é, substituições (ex: `${foo}`) são processados, mas "escapes" (ex:. `\n`) não são.
 
-<p>{{EmbedInteractiveExample("pages/js/string-raw.html")}}</p>
+{{EmbedInteractiveExample("pages/js/string-raw.html")}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code>String.raw(<var>callSite</var>, <var>...sub</var>)
+```
+String.raw(callSite, ...sub)
 
 String.raw`templateString`
-</code></pre>
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>callSite</code></dt>
- <dd> Modelo bem-formatado de objeto de local de chamada, como <code>{ raw: ['foo', 'bar', 'baz'] }</code>.</dd>
- <dt><code>...substitutions</code></dt>
- <dd>Contém os valores das substituições.</dd>
- <dt><code>templateString</code></dt>
- <dd>Um <a href="/en-US/docs/Web/JavaScript/Reference/template_strings">modelo string</a>, opcionalmente com substituições (<code>${...}</code>).</dd>
-</dl>
+- `callSite`
+  - : Modelo bem-formatado de objeto de local de chamada, como `{ raw: ['foo', 'bar', 'baz'] }`.
+- `...substitutions`
+  - : Contém os valores das substituições.
+- `templateString`
+  - : Um [modelo string](/pt-BR/docs/Web/JavaScript/Reference/template_strings), opcionalmente com substituições (`${...}`).
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>A forma crua de uma string de um modelo string dado.</p>
+A forma crua de uma string de um modelo string dado.
 
-<h3 id="Exceções">Exceções</h3>
+### Exceções
 
-<dl>
- <dt>{{jsxref("TypeError")}}</dt>
- <dd>Um {{jsxref("TypeError")}} é jogado se o primeiro argumento não é um Objeto bem formado.</dd>
-</dl>
+- {{jsxref("TypeError")}}
+  - : Um {{jsxref("TypeError")}} é jogado se o primeiro argumento não é um Objeto bem formado.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Na maioria dos casos, <code>String.raw()</code> é usado com modelos de strings. A primeira sintaxe mencionada acima raramente é usada, porque o mecanismo JavaScript a chamará com os argumentos apropriados para você, assim como com outras <a href="/pt-BR/docs/Web/JavaScript/Reference/template_strings">funções de tag</a>.</p>
+Na maioria dos casos, `String.raw()` é usado com modelos de strings. A primeira sintaxe mencionada acima raramente é usada, porque o mecanismo JavaScript a chamará com os argumentos apropriados para você, assim como com outras [funções de tag](/pt-BR/docs/Web/JavaScript/Reference/template_strings).
 
-<p><code>String.raw()</code> é a única função de tag embutida de strings de template; ele funciona exatamente como a função de modelo padrão e executa a concatenação. Você pode até reimplementá-lo com o código JavaScript normal.</p>
+`String.raw()` é a única função de tag embutida de strings de template; ele funciona exatamente como a função de modelo padrão e executa a concatenação. Você pode até reimplementá-lo com o código JavaScript normal.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_String.raw">Usando <code>String.raw()</code></h3>
+### Usando `String.raw()`
 
-<pre class="brush: js notranslate">String.raw`Hi\n${2+3}!`;
+```js
+String.raw`Hi\n${2+3}!`;
 // 'Hi\n5!', o caractere após 'Hi'
 // não é um caractere de quebra de linha,
 // '\' e 'n' são dois caracteres.
@@ -80,39 +78,21 @@ String.raw({ raw: 'test' }, 0, 1, 2); // 't0e1s2t'
 String.raw({
   raw: ['foo', 'bar', 'baz']
 }, 2 + 3, 'Java' + 'Script'); // 'foo5barJavaScriptbaz'
+```
 
-</pre>
+## Especificações
 
-<h2 id="Especificações">Especificações</h2>
+| Especificação                                                                | Status                       | Comentário         |
+| ---------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('ES2015', '#sec-string.raw', 'String.raw')}}     | {{Spec2('ES2015')}}     | Definição inicial. |
+| {{SpecName('ESDraft', '#sec-string.raw', 'String.raw')}} | {{Spec2('ESDraft')}} |                    |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-string.raw', 'String.raw')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.raw', 'String.raw')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+## Compatibilidade com navegadores
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+{{Compat("javascript.builtins.String.raw")}}
 
-<p>{{Compat("javascript.builtins.String.raw")}}</p>
+## Veja também
 
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/template_strings">Modelos de strings</a></li>
- <li>{{jsxref("String")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">Gramática lexical</a></li>
-</ul>
+- [Modelos de strings](/pt-BR/docs/Web/JavaScript/Reference/template_strings)
+- {{jsxref("String")}}
+- [Gramática lexical](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar)

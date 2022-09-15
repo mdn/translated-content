@@ -11,53 +11,52 @@ tags:
   - Web
 translation_of: Web/JavaScript/Reference/Global_Objects/EvalError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O Objeto <strong><code>EvalError</code></strong> indica um erro em relação a função global {{jsxref("Global_Objects/eval", "eval()")}}. Esta exceção não é mais lançada pelo JavaScript, no entanto, o objeto <code>EvalError</code> ainda permanece compatível.</p>
+O Objeto **`EvalError`** indica um erro em relação a função global {{jsxref("Global_Objects/eval", "eval()")}}. Esta exceção não é mais lançada pelo JavaScript, no entanto, o objeto `EvalError` ainda permanece compatível.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code>new EvalError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</code></pre>
+```
+new EvalError([message[, fileName[, lineNumber]]])
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>message</code></dt>
- <dd>Opcional. Descrição do erro legível para humanos</dd>
- <dt><code>fileName</code> {{non-standard_inline}}</dt>
- <dd>Opcional. O nome do arquivo que contém o código que causa a exceção</dd>
- <dt><code>lineNumber</code> {{non-standard_inline}}</dt>
- <dd>Opcional. O número da linha do código que causa a exceção</dd>
-</dl>
+- `message`
+  - : Opcional. Descrição do erro legível para humanos
+- `fileName` {{non-standard_inline}}
+  - : Opcional. O nome do arquivo que contém o código que causa a exceção
+- `lineNumber` {{non-standard_inline}}
+  - : Opcional. O número da linha do código que causa a exceção
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<dl>
- <dt>{{jsxref("EvalError.prototype")}}</dt>
- <dd>Permite a adição de propriedades para um objeto <code>EvalError</code>.</dd>
-</dl>
+- {{jsxref("EvalError.prototype")}}
+  - : Permite a adição de propriedades para um objeto `EvalError`.
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<p>O global <code>EvalError</code> não contém métodos próprios, no entando, ele irá herdar alguns métodos através da cadeia de protótipos.</p>
+O global `EvalError` não contém métodos próprios, no entando, ele irá herdar alguns métodos através da cadeia de protótipos.
 
-<h2 id="Instâncias_do_EvalError"><code>Instâncias do EvalError</code></h2>
+## `Instâncias do EvalError`
 
-<h3 id="Propriedades_2">Propriedades</h3>
+### Propriedades
 
-<div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError/prototype', 'Properties')}}</div>
+{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError/prototype', 'Properties')}}
 
-<h3 id="Métodos_2">Métodos</h3>
+### Métodos
 
-<div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError/prototype', 'Methods')}}</div>
+{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError/prototype', 'Methods')}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p><code>EvalError</code> não é usado na especificação ECMAScript e deste modo não será lançado pelo tempo de execução. No entando, o objeto em si permanece para compatibilidade com versões anteriores da especificação.</p>
+`EvalError` não é usado na especificação ECMAScript e deste modo não será lançado pelo tempo de execução. No entando, o objeto em si permanece para compatibilidade com versões anteriores da especificação.
 
-<h3 id="Criando_um_EvalError">Criando um <code>EvalError</code></h3>
+### Criando um `EvalError`
 
-<pre class="brush: js">try {
+```js
+try {
   throw new EvalError('Hello', 'someFile.js', 10);
 } catch (e) {
   console.log(e instanceof EvalError); // true
@@ -68,48 +67,23 @@ translation_of: Web/JavaScript/Reference/Global_Objects/EvalError
   console.log(e.columnNumber);         // 0
   console.log(e.stack);                // "@Scratchpad/2:2:9\n"
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.11.6.1', 'EvalError')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Não utilizada na especificação. Presente para compatibilidade com outras versões.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-evalerror', 'EvalError')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Não utilizada na especificação. Presente para compatibilidade com outras versões.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-evalerror', 'EvalError')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                    | Status                       | Comentário                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------------------------------------- |
+| {{SpecName('ES3')}}                                                                                                         | {{Spec2('ES3')}}         | Definição inicial.                                                                |
+| {{SpecName('ES5.1', '#sec-15.11.6.1', 'EvalError')}}                                                             | {{Spec2('ES5.1')}}     | Não utilizada na especificação. Presente para compatibilidade com outras versões. |
+| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-evalerror', 'EvalError')}}         | {{Spec2('ES6')}}         | Não utilizada na especificação. Presente para compatibilidade com outras versões. |
+| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-evalerror', 'EvalError')}} | {{Spec2('ESDraft')}} |                                                                                   |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.EvalError")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("EvalError.prototype")}}</li>
- <li>{{jsxref("Global_Objects/eval", "eval()")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("EvalError.prototype")}}
+- {{jsxref("Global_Objects/eval", "eval()")}}

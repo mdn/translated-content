@@ -3,67 +3,49 @@ title: Date.prototype.getUTCDay()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDay
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCDay
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>getUTCDay()</code></strong> retorna o dia da semana na data especificada de acordo com o horário universal, onde 0 representa domingo.</p>
+O método **`getUTCDay()`** retorna o dia da semana na data especificada de acordo com o horário universal, onde 0 representa domingo.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code><var>dateObj</var>.getUTCDay()</code></pre>
+```
+dateObj.getUTCDay()
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<p>Nenhum.</p>
+Nenhum.
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>O valor retornado por <code>getUTCDay()</code> é um inteiro correspondente ao dia da semana: 0 para domingo, 1 para segunda-feira, 2 para terça-feira e assim por diante.</p>
+O valor retornado por `getUTCDay()` é um inteiro correspondente ao dia da semana: 0 para domingo, 1 para segunda-feira, 2 para terça-feira e assim por diante.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_getUTCDay">Usando <code>getUTCDay()</code></h3>
+### Usando `getUTCDay()`
 
-<p>O exemplo a seguir atribui a parte do dia da semana da data atual à variável <code>diaDaSemana</code>.</p>
+O exemplo a seguir atribui a parte do dia da semana da data atual à variável `diaDaSemana`.
 
-<pre class="brush: js notranslate">var hoje = new Date();
-var <code>diaDaSemana</code> = hoje.getUTCDay();
-</pre>
+```js
+var hoje = new Date();
+var diaDaSemana = hoje.getUTCDay();
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Situação</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição inicial. Implementado no JavaScript 1.3.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.17', 'Date.prototype.getUTCDay')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.getutcday', 'Date.prototype.getUTCDay')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                | Situação                 | Comentário                                         |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------ | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.3. |
+| {{SpecName('ES5.1', '#sec-15.9.5.17', 'Date.prototype.getUTCDay')}}                     | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES6', '#sec-date.prototype.getutcday', 'Date.prototype.getUTCDay')}} | {{Spec2('ES6')}}     |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Date.getUTCDay")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCDate()")}}</li>
- <li>{{jsxref("Date.prototype.getDay()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCDate()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCDate()")}}
+- {{jsxref("Date.prototype.getDay()")}}
+- {{jsxref("Date.prototype.setUTCDate()")}}

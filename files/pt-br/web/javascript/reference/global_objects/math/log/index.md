@@ -3,98 +3,75 @@ title: Math.log()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/log
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>A função  <strong><code>Math.log()</code></strong> retorna o logaritmo natural(base {{jsxref("Math.E", "e")}}) de um número, que é:</p>
+A função **`Math.log()`** retorna o logaritmo natural(base {{jsxref("Math.E", "e")}}) de um número, que é:
 
-<p><math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><msup><mi>e</mi><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x &gt; 0, \mathtt{\operatorname{Math.log}(x)} = \ln(x) = \text{the unique} \; y \; \text{such that} \; e^y = x</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>></mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><msup><mi>e</mi><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x > 0, \mathtt{\operatorname{Math.log}(x)} = \ln(x) = \text{the unique} \; y \; \text{such that} \; e^y = x</annotation></semantics></math>
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code>Math.log(<var>x</var>)</code></pre>
+```
+Math.log(x)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Um número.</dd>
-</dl>
+- `x`
+  - : Um número.
 
-<h3 id="Retorno">Retorno</h3>
+### Retorno
 
-<p>O logaritmo natural (base {{jsxref("Math.E", "e")}}) de um número dado. Se o número é negativo, {{jsxref("NaN")}} é retornado.</p>
+O logaritmo natural (base {{jsxref("Math.E", "e")}}) de um número dado. Se o número é negativo, {{jsxref("NaN")}} é retornado.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Se o valor de  <code>x</code> é negativo, o retorno será sempre {{jsxref("NaN")}}.</p>
+Se o valor de `x` é negativo, o retorno será sempre {{jsxref("NaN")}}.
 
-<p>Por <code>log()</code> ser um método estático de <code>Math</code>, você sempre o usará como <code>Math.log()</code>, ao invés de um método de um objeto de <code> Math</code> que você criou(<code>Math</code> não é um construtor).</p>
+Por `log()` ser um método estático de `Math`, você sempre o usará como `Math.log()`, ao invés de um método de um objeto de `Math` que você criou(`Math` não é um construtor).
 
-<p>Caso você precise do logaritmo natural de 2 ou 10, use as constantes {{jsxref("Math.LN2")}} ou {{jsxref("Math.LN10")}} .  Caso você precise de um logaritmo de base 2 ou 10, use {{jsxref("Math.log2()")}} ou {{jsxref("Math.log10()")}} .  Caso você precise utilizar logaritmo de outras bases, use Math.log(x) / Math.log(outraBase) como no exemplo abaixo; talvez você queira pré-calcular 1 / Math.log(outraBase) .</p>
+Caso você precise do logaritmo natural de 2 ou 10, use as constantes {{jsxref("Math.LN2")}} ou {{jsxref("Math.LN10")}} . Caso você precise de um logaritmo de base 2 ou 10, use {{jsxref("Math.log2()")}} ou {{jsxref("Math.log10()")}} . Caso você precise utilizar logaritmo de outras bases, use Math.log(x) / Math.log(outraBase) como no exemplo abaixo; talvez você queira pré-calcular 1 / Math.log(outraBase) .
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_Math.log()">Usando <code>Math.log()</code></h3>
+### Usando `Math.log()`
 
-<pre class="brush: js">Math.log(-1); // NaN, out of range
+```js
+Math.log(-1); // NaN, out of range
 Math.log(0);  // -Infinity
 Math.log(1);  // 0
 Math.log(10); // 2.302585092994046
-</pre>
+```
 
-<h3 id="Usando_Math.log()_como_uma_base_diferente">Usando <code>Math.log()</code> como uma base diferente</h3>
+### Usando `Math.log()` como uma base diferente
 
-<p>As funções a seguir retornam o logaritmo de <code>y</code> na base <code>x</code> (ie. <math><semantics><mrow><msub><mo>log</mo><mi>x</mi></msub><mi>y</mi></mrow><annotation encoding="TeX">\log_x y</annotation></semantics></math>):</p>
+As funções a seguir retornam o logaritmo de `y` na base `x` (ie. <math><semantics><mrow><msub><mo>log</mo><mi>x</mi></msub><mi>y</mi></mrow><annotation encoding="TeX">\log_x y</annotation></semantics></math>):
 
-<pre class="brush: js">function getBaseLog(x, y) {
+```js
+function getBaseLog(x, y) {
   return Math.log(y) / Math.log(x);
 }
-</pre>
+```
 
-<p>Caso você execute <code>getBaseLog(10, 1000)</code> será retornado <code>2.9999999999999996</code> devido ao arredondamento de ponto-flutuante, o qual é bem próximo do retorno exato de 3.</p>
+Caso você execute `getBaseLog(10, 1000)` será retornado `2.9999999999999996` devido ao arredondamento de ponto-flutuante, o qual é bem próximo do retorno exato de 3.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição inicial. Implementado no JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.2.10', 'Math.log')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.log', 'Math.log')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.log', 'Math.log')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                        | Status                       | Comment                                            |
+| -------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Definição inicial. Implementado no JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.2.10', 'Math.log')}} | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES6', '#sec-math.log', 'Math.log')}}     | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-math.log', 'Math.log')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Math.log")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Math.exp()")}}</li>
- <li>{{jsxref("Math.log1p()")}}</li>
- <li>{{jsxref("Math.log10()")}}</li>
- <li>{{jsxref("Math.log2()")}}</li>
- <li>{{jsxref("Math.pow()")}}</li>
-</ul>
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log1p()")}}
+- {{jsxref("Math.log10()")}}
+- {{jsxref("Math.log2()")}}
+- {{jsxref("Math.pow()")}}

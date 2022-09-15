@@ -8,25 +8,26 @@ tags:
   - TopicStub
 translation_of: Web/JavaScript/Reference/Functions
 ---
-<div>{{jsSidebar("Functions")}}</div>
+{{jsSidebar("Functions")}}
 
-<p>De modo geral, função é um "subprograma" que pode ser <em>chamado</em> por código externo (ou interno no caso de recursão) à função. Assim como o programa em si, uma função é composta por uma sequência de instruções chamada <em>corpo da função</em>. Valores podem ser <em>passados</em> para uma função e ela vai <em>retornar</em> um valor.</p>
+De modo geral, função é um "subprograma" que pode ser _chamado_ por código externo (ou interno no caso de recursão) à função. Assim como o programa em si, uma função é composta por uma sequência de instruções chamada _corpo da função_. Valores podem ser _passados_ para uma função e ela vai _retornar_ um valor.
 
-<p>Em JavaScript, funções são objetos de primeira classe, pois elas podem ter propriedades e métodos como qualquer outro objeto. O que as difere de outros objetos é que as funções podem ser chamados. Em resumo, elas são objetos <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>.</p>
+Em JavaScript, funções são objetos de primeira classe, pois elas podem ter propriedades e métodos como qualquer outro objeto. O que as difere de outros objetos é que as funções podem ser chamados. Em resumo, elas são objetos [`Function`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function).
 
-<p>Para mais exemplos e explicações, veja também o <a href="/en-US/docs/Web/JavaScript/Guide/Functions">Guia de JavaScript sobre funções</a>.</p>
+Para mais exemplos e explicações, veja também o [Guia de JavaScript sobre funções](/pt-BR/docs/Web/JavaScript/Guide/Functions).
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Toda função em JavaScript é um objeto <code>Function</code>. Veja {{jsxref("Function")}} para informação das propriedades e métodos dos objetos <code>Function</code>.</p>
+Toda função em JavaScript é um objeto `Function`. Veja {{jsxref("Function")}} para informação das propriedades e métodos dos objetos `Function`.
 
-<p>Funções não são como procedimentos (<em>procedure</em>). Uma função sempre retorna um valor, mas um procedimento pode ou não retornar um valor.</p>
+Funções não são como procedimentos (_procedure_). Uma função sempre retorna um valor, mas um procedimento pode ou não retornar um valor.
 
-<p>Para retornar um valor diferente do padrão, uma função deve ter uma instrução <a href="/en-US/docs/Web/JavaScript/Reference/Statements/return">return</a> que específica o valor a ser retornado. Uma função sem um <code>return</code> retornará um valor padrão. No caso de um <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor">método construtor</a> chamado com a palavra reservada <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code></a>, o valor padrão é o valor do parâmetro <code>this</code>. Para todas as outras funções, o valor padrão de retorno é <code>undefined</code>.</p>
+Para retornar um valor diferente do padrão, uma função deve ter uma instrução [return](/pt-BR/docs/Web/JavaScript/Reference/Statements/return) que específica o valor a ser retornado. Uma função sem um `return` retornará um valor padrão. No caso de um [método construtor](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) chamado com a palavra reservada [`new`](/pt-BR/docs/Web/JavaScript/Reference/Operators/new), o valor padrão é o valor do parâmetro `this`. Para todas as outras funções, o valor padrão de retorno é `undefined`.
 
-<p>Os parâmetros de uma função são chamados de argumentos da função. Argumentos são passados para a função <em>por valor</em>. Se uma função muda o valor de um argumento, esta mudança não é refletida globalmente ou na chamada da função. Contudo, referência de objetos são valores também, e eles são especiais: se a função muda as propriedades do objeto referenciado, estas mudanças são visíveis fora da função, como é mostrado no exemplo a seguir:</p>
+Os parâmetros de uma função são chamados de argumentos da função. Argumentos são passados para a função _por valor_. Se uma função muda o valor de um argumento, esta mudança não é refletida globalmente ou na chamada da função. Contudo, referência de objetos são valores também, e eles são especiais: se a função muda as propriedades do objeto referenciado, estas mudanças são visíveis fora da função, como é mostrado no exemplo a seguir:
 
-<pre class="brush: js notranslate">/* Declare a função 'minhaFunção' */
+```js
+/* Declare a função 'minhaFunção' */
 function minhaFuncao(objeto) {
    objeto.marca = "Toyota";
  }
@@ -53,236 +54,228 @@ function minhaFuncao(objeto) {
   * do objeto, mudado pela função.
   */
  console.log(meucarro.marca);
-</pre>
+```
 
-<p>A palavra reservada <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> não se refere a função sendo executada no momento, então você deve referenciar um objeto <code>Function</code> pelo nome, mesmo dentro do corpo da função.</p>
+A palavra reservada [`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this) não se refere a função sendo executada no momento, então você deve referenciar um objeto `Function` pelo nome, mesmo dentro do corpo da função.
 
-<h2 id="Definindo_funções">Definindo funções</h2>
+## Definindo funções
 
-<p>Há várias maneiras de definir funções:</p>
+Há várias maneiras de definir funções:
 
-<h3 id="Declaração_de_função_Instrução_function">Declaração de função (Instrução <code>function</code>)</h3>
+### Declaração de função (Instrução `function`)
 
-<p>Há um sintaxe especial para declarar funções (veja <a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/function">Instrução function</a> para detalhes):</p>
+Há um sintaxe especial para declarar funções (veja [Instrução function](/pt-BR/docs/Web/JavaScript/Reference/Statements/function) para detalhes):
 
-<pre class="notranslate">function <em>nome</em>([<em>param</em>[, <em>param</em>[, ... <em>param</em>]]]) {
-   <em>instruções</em>
+```
+function nome([param[, param[, ... param]]]) {
+   instruções
 }
-</pre>
+```
 
-<dl>
- <dt><code>nome</code></dt>
- <dd>O nome da função.</dd>
-</dl>
+- `nome`
+  - : O nome da função.
 
-<dl>
- <dt><code>param</code></dt>
- <dd>O nome de um argumento a ser passado para a função.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code>instruções</code></dt>
- <dd>As instruções que formam o corpo da função.</dd>
-</dl>
+- `param`
+  - : O nome de um argumento a ser passado para a função.
 
-<h3 id="A_expressão_function_Operador_function">A expressão function (Operador <code>function</code>)</h3>
+<!---->
 
-<p>Uma expressão function é parecida com uma declaração function e tem até a mesma sintaxe (veja <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">Operador function</a> para detalhes):</p>
+- `instruções`
+  - : As instruções que formam o corpo da função.
 
-<pre class="notranslate">function [<em>nome</em>]([<em>param</em>] [, <em>param</em>] [..., <em>param</em>]) {
-   <em>instruções</em>
+### A expressão function (Operador `function`)
+
+Uma expressão function é parecida com uma declaração function e tem até a mesma sintaxe (veja [Operador function](/pt-BR/docs/Web/JavaScript/Reference/Operators/function) para detalhes):
+
+```
+function [nome]([param] [, param] [..., param]) {
+   instruções
 }
-</pre>
+```
 
-<dl>
- <dt><code>nome</code></dt>
- <dd>O nome da função. Pode ser omitido, e neste caso a função é conhecida como função anônima.</dd>
-</dl>
+- `nome`
+  - : O nome da função. Pode ser omitido, e neste caso a função é conhecida como função anônima.
 
-<dl>
- <dt><code>param</code></dt>
- <dd>O nome de um argumento a ser passado para a função.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code>instruções</code></dt>
- <dd>As instruções que formam o corpo da função.</dd>
-</dl>
+- `param`
+  - : O nome de um argumento a ser passado para a função.
 
-<h3 id="O_gerador_de_declaração_de_função_instrução_function*">O gerador de declaração de função (instrução <code>function*</code>)</h3>
+<!---->
 
-<div class="note">
-<p><strong>Nota:</strong> Expressão Arrow function é uma tecnologia experimental, parte da proposta do ECMAScript 6, e ainda não é amplamente suportada pelos navegadores.</p>
-</div>
+- `instruções`
+  - : As instruções que formam o corpo da função.
 
-<p>Uma expressão arrow function tem uma sintaxe curta e conecta seu valor lexicamente (veja <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a> para mais detalhes):</p>
+### O gerador de declaração de função (instrução `function*`)
 
-<pre class="notranslate">([param] [, param]) =&gt; {
+> **Nota:** Expressão Arrow function é uma tecnologia experimental, parte da proposta do ECMAScript 6, e ainda não é amplamente suportada pelos navegadores.
+
+Uma expressão arrow function tem uma sintaxe curta e conecta seu valor lexicamente (veja [arrow functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions) para mais detalhes):
+
+```
+([param] [, param]) => {
    instruções
 }
 
-param =&gt; expressão
-</pre>
+param => expressão
+```
 
-<dl>
- <dt><code>param</code></dt>
- <dd>O nome de um argumento. Quando não há argumentos deve ser indicado com o uso dos parênteses ( ). Para apenas um argumento os parênteses não são obrigatórios. (por exemplo <code>foo =&gt; 1</code>)</dd>
- <dt><code>instruções ou expressão</code></dt>
- <dd>Múltiplas instruções precisam ser envolvidas por chaves. Uma única expressão não requer chaves. A expressão também é implicitamente o valor de retorno  dessa função.</dd>
-</dl>
+- `param`
+  - : O nome de um argumento. Quando não há argumentos deve ser indicado com o uso dos parênteses ( ). Para apenas um argumento os parênteses não são obrigatórios. (por exemplo `foo => 1`)
+- `instruções ou expressão`
+  - : Múltiplas instruções precisam ser envolvidas por chaves. Uma única expressão não requer chaves. A expressão também é implicitamente o valor de retorno dessa função.
 
-<h3 id="The_Function_constructor" name="The_Function_constructor">O construtor <code>Function</code></h3>
+### O construtor `Function`
 
-<div class="note">
-<p><strong>Nota:</strong> O uso do construtor Function para criar funções não é recomendado uma vez que é requerido o corpo da função como string, o que pode impedir algumas otimizações por parte do motor JS e pode também causar outros problemas.</p>
-</div>
+> **Nota:** O uso do construtor Function para criar funções não é recomendado uma vez que é requerido o corpo da função como string, o que pode impedir algumas otimizações por parte do motor JS e pode também causar outros problemas.
 
-<p>Como todos os outros objetos, objetos {{jsxref("Function")}} podem ser criados usando o operador new:</p>
+Como todos os outros objetos, objetos {{jsxref("Function")}} podem ser criados usando o operador new:
 
-<pre class="notranslate">new Function (<em>arg1</em>, <em>arg2</em>, ... <em>argN</em>, <em>corpoDaFuncao</em>)
-</pre>
+```
+new Function (arg1, arg2, ... argN, corpoDaFuncao)
+```
 
-<dl>
- <dt><code>arg1, arg2, ... arg<em>N</em></code></dt>
- <dd>Nenhum ou mais nomes para serem usados pela função como nomes formais de argumentos. Cada um deve ser uma string em conformidade com as regras para um identificador JavaScript válido ou uma lista com tais strings separadas por vírgula; por exemplo "x", "oValor", ou "a, b".</dd>
-</dl>
+- `arg1, arg2, ... argN`
+  - : Nenhum ou mais nomes para serem usados pela função como nomes formais de argumentos. Cada um deve ser uma string em conformidade com as regras para um identificador JavaScript válido ou uma lista com tais strings separadas por vírgula; por exemplo "x", "oValor", ou "a, b".
 
-<dl>
- <dt><em>corpoDaFuncao</em></dt>
- <dd>Uma string contento as instruções JavaScript correspondendo a definição da função.</dd>
-</dl>
+<!---->
 
-<p>Invocar o construtor Function como uma função (sem usar o operador new) the o mesmo efeito de invocá-lo como um construtor comum.</p>
+- _corpoDaFuncao_
+  - : Uma string contento as instruções JavaScript correspondendo a definição da função.
 
-<h2 id="Parâmetros_de_Função">Parâmetros de Função</h2>
+Invocar o construtor Function como uma função (sem usar o operador new) the o mesmo efeito de invocá-lo como um construtor comum.
 
-<div class="note">
-<p><strong>Nota:</strong> Parâmetros Default e Rest são tecnologias experimentais, parte da proposta do ECMAScript 6, e ainda não são amplamente suportados pelos navegadores.</p>
-</div>
+## Parâmetros de Função
 
-<h3 id="Parâmetros_Default">Parâmetros Default</h3>
+> **Nota:** Parâmetros Default e Rest são tecnologias experimentais, parte da proposta do ECMAScript 6, e ainda não são amplamente suportados pelos navegadores.
 
-<p>Parâmetro Default de função permite que parâmetros formais sejam inicializados com valores padrão se nenhum valor ou valor undefined é passado. Para mais detalhes, veja <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">parâmetros default</a>.</p>
+### Parâmetros Default
 
-<h3 id="Parâmetros_Rest">Parâmetros Rest</h3>
+Parâmetro Default de função permite que parâmetros formais sejam inicializados com valores padrão se nenhum valor ou valor undefined é passado. Para mais detalhes, veja [parâmetros default](/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters).
 
-<p>A sintaxe do parâmetro rest permite representar um número indefinido de argumentos em forma de array. Para mais detalhes, veja <a href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">parâmetros rest</a>.</p>
+### Parâmetros Rest
 
-<h2 id="The_arguments_object" name="The_arguments_object">O objeto <code>arguments</code></h2>
+A sintaxe do parâmetro rest permite representar um número indefinido de argumentos em forma de array. Para mais detalhes, veja [parâmetros rest](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters).
 
-<p>Você pode referenciar aos argumentos da função dentro da função utilizando  o objeto arguments. Veja <a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a>.</p>
+## O objeto `arguments`
 
-<ul>
- <li><code><a href="/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments">arguments</a></code>: Um objeto array-like contendo os argumentos passados para a função atualmente  em execução.</li>
- <li><code><a href="/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/callee">arguments.callee</a></code> {{Deprecated_inline}}: A função atualmente em execução.</li>
- <li><code><a href="/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller">arguments.caller</a></code> {{Obsolete_inline}} : A função que invocou a função atualmente em execução.</li>
- <li><code><a href="/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length">arguments.length</a></code>: O número de argumentos passados para a função.</li>
-</ul>
+Você pode referenciar aos argumentos da função dentro da função utilizando o objeto arguments. Veja [arguments](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments).
 
-<h2 id="Definindo_Métodos_de_Funções">Definindo Métodos de Funções</h2>
+- [`arguments`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments): Um objeto array-like contendo os argumentos passados para a função atualmente em execução.
+- [`arguments.callee`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/callee) {{Deprecated_inline}}: A função atualmente em execução.
+- [`arguments.caller`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller) {{Obsolete_inline}} : A função que invocou a função atualmente em execução.
+- [`arguments.length`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length): O número de argumentos passados para a função.
 
-<h3 id="Funções_Getter_e_setter">Funções Getter e setter</h3>
+## Definindo Métodos de Funções
 
-<p>Você pode definir getters (métodos de acesso) and setters (métodos de alteração) em qualquer objeto interno padrão ou objeto definido pelo usuário que ofereça suporte à adição de novas propriedades. A sintaxe para definir getters e setters usa a sintaxe literal do objeto.</p>
+### Funções Getter e setter
 
-<dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">get</a></dt>
- <dd>
- <p>Vincula uma propriedade de objeto a uma função que será chamada quando essa propriedade é requisitada.</p>
- </dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">set</a></dt>
- <dd>Vincula uma propriedade de objeto a uma função a ser chamada quando há uma tentativa de definir essa propriedade.</dd>
-</dl>
+Você pode definir getters (métodos de acesso) and setters (métodos de alteração) em qualquer objeto interno padrão ou objeto definido pelo usuário que ofereça suporte à adição de novas propriedades. A sintaxe para definir getters e setters usa a sintaxe literal do objeto.
 
-<h3 id="Sintaxe_dos_métodos_de_funções">Sintaxe dos métodos de funções</h3>
+- [get](/pt-BR/docs/Web/JavaScript/Reference/Functions/get)
+  - : Vincula uma propriedade de objeto a uma função que será chamada quando essa propriedade é requisitada.
+- [set](/pt-BR/docs/Web/JavaScript/Reference/Functions/set)
+  - : Vincula uma propriedade de objeto a uma função a ser chamada quando há uma tentativa de definir essa propriedade.
 
-<div class="note">
-<p><strong>Nota:</strong> Definições de métodos são tecnologias experimentais, parte da proposta do ECMAScript 6, e ainda não são amplamente suportados pelos navegadores.</p>
-</div>
+### Sintaxe dos métodos de funções
 
-<p>Começando com ECMAScript 6, você é capaz de definir métodos próprios em uma sintaxe mais curta, semelhante aos getters e setters. Veja <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">method definitions</a> para mais informações.</p>
+> **Nota:** Definições de métodos são tecnologias experimentais, parte da proposta do ECMAScript 6, e ainda não são amplamente suportados pelos navegadores.
 
-<pre class="brush: js notranslate">var obj = {
+Começando com ECMAScript 6, você é capaz de definir métodos próprios em uma sintaxe mais curta, semelhante aos getters e setters. Veja [method definitions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Method_definitions) para mais informações.
+
+```js
+var obj = {
   foo() {},
   bar() {}
-};</pre>
+};
+```
 
-<h2 id="Function_constructor_vs._function_declaration_vs._function_expression" name="Function_constructor_vs._function_declaration_vs._function_expression"><code>Function</code> constructor vs. function declaration vs. function expression</h2>
+## `Function` constructor vs. function declaration vs. function expression
 
-<p>Compare o seguinte:</p>
+Compare o seguinte:
 
-<p>Uma função definida com <code>Function</code> <em>constructor</em> atribuída à variável <code>multiply</code></p>
+Uma função definida com `Function` _constructor_ atribuída à variável `multiply`
 
-<pre class="brush: js notranslate">var multiply = new Function('x', 'y', 'return x * y');
-</pre>
+```js
+var multiply = new Function('x', 'y', 'return x * y');
+```
 
-<p>Uma <em>function expression</em> de uma função anônima atribuída à variável <code>multiply</code></p>
+Uma _function expression_ de uma função anônima atribuída à variável `multiply`
 
-<pre class="brush: js notranslate">var multiply = function(x, y) {
+```js
+var multiply = function(x, y) {
    return x * y;
 };
-</pre>
+```
 
-<p>Uma <em>function expression </em>de uma função chamada <code>func_name</code> atribuída à variável <code>multiply</code></p>
+Uma _function expression_ de uma função chamada `func_name` atribuída à variável `multiply`
 
-<pre class="brush: js notranslate">var multiply = function func_name(x, y) {
+```js
+var multiply = function func_name(x, y) {
    return x * y;
 };
-</pre>
+```
 
-<h3 id="Diferenças">Diferenças</h3>
+### Diferenças
 
-<p>Todas fazem aproximadamente a mesma coisa, com algumas diferenças sutis:</p>
+Todas fazem aproximadamente a mesma coisa, com algumas diferenças sutis:
 
-<p>Há uma distinção entre o nome da função e a variável à qual a função é atribuída. O nome da função não pode ser alterado, enquanto a variável à qual a função está atribuída pode ser reatribuída. O nome da função pode ser usado somente dentro do corpo da função. A tentativa de usá-lo fora do corpo da função resulta em um <em>error </em>(ou <em>undefined </em>se o nome da função foi declarado anteriormente por meio de uma declaração de variável). Por exemplo:</p>
+Há uma distinção entre o nome da função e a variável à qual a função é atribuída. O nome da função não pode ser alterado, enquanto a variável à qual a função está atribuída pode ser reatribuída. O nome da função pode ser usado somente dentro do corpo da função. A tentativa de usá-lo fora do corpo da função resulta em um _error_ (ou _undefined_ se o nome da função foi declarado anteriormente por meio de uma declaração de variável). Por exemplo:
 
-<pre class="brush: js notranslate">var y = function x() {};
+```js
+var y = function x() {};
 alert(x); // throws an error
-</pre>
+```
 
-<p>O nome da função também aparece quando a função é serializada através do <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString"><code>método toString de Function()</code></a>.</p>
+O nome da função também aparece quando a função é serializada através do [`método toString de Function()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/toString).
 
-<p>Por outro lado, a variável à qual a função é atribuída é limitada somente pelo seu escopo, garantindo-se que ele inclui o escopo onde a função é declarada.</p>
+Por outro lado, a variável à qual a função é atribuída é limitada somente pelo seu escopo, garantindo-se que ele inclui o escopo onde a função é declarada.
 
-<p>Como o quarto exemplo mostra, o nome da função pode ser diferente da variável à qual a função é atribuída. Eles não têm relação um com o outro. Uma declaração de função também cria uma variável com o mesmo nome da função. Assim, ao contrário daquelas definidas por expressões de função, funções definidas por declarações de função podem ser acessadas pelo seu nome no escopo onde elas foram definidas:</p>
+Como o quarto exemplo mostra, o nome da função pode ser diferente da variável à qual a função é atribuída. Eles não têm relação um com o outro. Uma declaração de função também cria uma variável com o mesmo nome da função. Assim, ao contrário daquelas definidas por expressões de função, funções definidas por declarações de função podem ser acessadas pelo seu nome no escopo onde elas foram definidas:
 
-<p>Uma função definida por '<code>new Function'</code> não possui um nome. Entretanto, na máquina de JavaScript <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a>, a forma serializada da função aparece como se ela tivesse o nome "anonymous". Por exemplo, <code>alert(new Function())</code> gera como saída:</p>
+Uma função definida por '`new Function'` não possui um nome. Entretanto, na máquina de JavaScript [SpiderMonkey](/pt-BR/docs/Mozilla/Projects/SpiderMonkey), a forma serializada da função aparece como se ela tivesse o nome "anonymous". Por exemplo, `alert(new Function())` gera como saída:
 
-<pre class="brush: js notranslate">function anonymous() {
+```js
+function anonymous() {
 }
-</pre>
+```
 
-<p>Já que a função na realidade não possui um nome, <code>anonymous</code> não é uma variável que possa ser acessada dentro da função. Por exemplo, o código seguinte iria resultar em um erro:</p>
+Já que a função na realidade não possui um nome, `anonymous` não é uma variável que possa ser acessada dentro da função. Por exemplo, o código seguinte iria resultar em um erro:
 
-<pre class="brush: js notranslate">var foo = new Function("alert(anonymous);");
+```js
+var foo = new Function("alert(anonymous);");
 foo();
-</pre>
+```
 
-<p>Ao contrário das funções definidas por expressões de função ou pelo construtor <code>Function</code>, uma função definida por uma declaração de função pode ser usada antes da declaração da função em si. Por exemplo:</p>
+Ao contrário das funções definidas por expressões de função ou pelo construtor `Function`, uma função definida por uma declaração de função pode ser usada antes da declaração da função em si. Por exemplo:
 
-<pre class="brush: js notranslate">foo(); // alerts FOO!
+```js
+foo(); // alerts FOO!
 function foo() {
    alert('FOO!');
 }
-</pre>
+```
 
-<p>Uma função definida por uma expressão de função herda o escopo atual. Isto é, a função forma um closure. Por outro lado, uma função definida por um construtor <code>Function</code> não herda qualquer escopo a não ser o escopo global (que todas as funções herdam).</p>
+Uma função definida por uma expressão de função herda o escopo atual. Isto é, a função forma um closure. Por outro lado, uma função definida por um construtor `Function` não herda qualquer escopo a não ser o escopo global (que todas as funções herdam).
 
-<p>Funções definidas por expressões de função e declarações de função são analisadas somente uma vez, enquanto aquelas definidas pelo construtor <code>Function</code> não são. Isto é, a string que forma o corpo da função, passada para o construtor <code>Function</code> precisa ser analisada toda vez que o construtor é chamado. Embora uma expressão de função crie um closure a cada vez, o corpo da função não é reanalisado, assim expressões de função ainda são mais rápidas do que  "<code>new Function(...)</code>". Assim, o construtor <code>Function</code> deve geralmente ser evitado sempre que possível.</p>
+Funções definidas por expressões de função e declarações de função são analisadas somente uma vez, enquanto aquelas definidas pelo construtor `Function` não são. Isto é, a string que forma o corpo da função, passada para o construtor `Function` precisa ser analisada toda vez que o construtor é chamado. Embora uma expressão de função crie um closure a cada vez, o corpo da função não é reanalisado, assim expressões de função ainda são mais rápidas do que "`new Function(...)`". Assim, o construtor `Function` deve geralmente ser evitado sempre que possível.
 
-<p>Deve ser notado, entretanto, que expressões de função e declarações de função aninhadas dentro de uma função gerada pela análise da string de um construtor <code>Function</code> não são analisadas repetidamente. Por exemplo:</p>
+Deve ser notado, entretanto, que expressões de função e declarações de função aninhadas dentro de uma função gerada pela análise da string de um construtor `Function` não são analisadas repetidamente. Por exemplo:
 
-<pre class="brush: js notranslate">var foo = (new Function("var bar = \'FOO!\';\nreturn(function() {\n\talert(bar);\n});"))();
-foo(); // O segmento "function() {\n\talert(bar);\n}" do corpo da função não é reanalisado.</pre>
+```js
+var foo = (new Function("var bar = \'FOO!\';\nreturn(function() {\n\talert(bar);\n});"))();
+foo(); // O segmento "function() {\n\talert(bar);\n}" do corpo da função não é reanalisado.
+```
 
-<p>Uma declaração de função é muito facilmente (e às vezes de forma não intencional) transformada em uma expressão de função. Uma declaração de função deixa de ser o que ela é nos casos em que:</p>
+Uma declaração de função é muito facilmente (e às vezes de forma não intencional) transformada em uma expressão de função. Uma declaração de função deixa de ser o que ela é nos casos em que:
 
-<ul>
- <li>se torna parte de uma expressão; ou</li>
- <li>não é mais um "elemento fonte" de uma função ou do script em si. Um "elemento fonte" é uma instrução não aninhada no script ou no corpo de uma função:</li>
-</ul>
+- se torna parte de uma expressão; ou
+- não é mais um "elemento fonte" de uma função ou do script em si. Um "elemento fonte" é uma instrução não aninhada no script ou no corpo de uma função:
 
-<pre class="brush: js notranslate">var x = 0;               // elemento fonte
+```js
+var x = 0;               // elemento fonte
 if (x == 0) {            // elemento fonte
    x = 10;               // não é um elemento fonte
    function boo() {}     // não é um elemento fonte
@@ -295,11 +288,12 @@ function foo() {         // elemento fonte
       y++;               // não é um elemento fonte
    }
 }
-</pre>
+```
 
-<h3 id="Examples_2">Examples</h3>
+### Examples
 
-<pre class="brush: js notranslate">// declaração de função
+```js
+// declaração de função
 function foo() {}
 
 // expressão de função
@@ -324,107 +318,91 @@ function a() {
       function c() {}
    }
 }
-</pre>
+```
 
-<h2 id="Conditionally_defining_a_function" name="Conditionally_defining_a_function">Definindo uma função condicionalmente</h2>
+## Definindo uma função condicionalmente
 
-<p>As funções podem ser definidas condicionalmente usando instruções de função (uma extensão permitida para o padrão ECMA-262 Edição 3) ou o construtor 'Function'. Observe que essas instruções de funções não são mais permitidas no ES5 strinct. Além disso, esse recurso não funciona de forma consistente em navegadores, portanto, você não deve confiar nele.</p>
+As funções podem ser definidas condicionalmente usando instruções de função (uma extensão permitida para o padrão ECMA-262 Edição 3) ou o construtor 'Function'. Observe que essas instruções de funções não são mais permitidas no ES5 strinct. Além disso, esse recurso não funciona de forma consistente em navegadores, portanto, você não deve confiar nele.
 
-<p>No script a seguir, a função 'zero' nunca é definida e não pode ser chamada, porque 'if (0)' avalia sua condição como falso:</p>
+No script a seguir, a função 'zero' nunca é definida e não pode ser chamada, porque 'if (0)' avalia sua condição como falso:
 
-<pre class="brush: js notranslate">if (0) {
+```js
+if (0) {
    function zero() {
       document.writeln("Isso é zero.");
    }
 }
-</pre>
+```
 
-<p>If the script is changed so that the condition becomes '<code>if (1)</code>', function <code>zero</code> is defined.</p>
+If the script is changed so that the condition becomes '`if (1)`', function `zero` is defined.
 
-<p>Note: Although this kind of function looks like a function declaration, it is actually an expression (or statement), since it is nested within another statement. See differences between function declarations and function expressions.</p>
+Note: Although this kind of function looks like a function declaration, it is actually an expression (or statement), since it is nested within another statement. See differences between function declarations and function expressions.
 
-<p>Note: Some JavaScript engines, not including <a href="/en-US/docs/SpiderMonkey">SpiderMonkey</a>, incorrectly treat any function expression with a name as a function definition. This would lead to <code>zero</code> being defined, even with the always-false <code>if</code> condition. A safer way to define functions conditionally is to define the function anonymously and assign it to a variable:</p>
+Note: Some JavaScript engines, not including [SpiderMonkey](/pt-BR/docs/SpiderMonkey), incorrectly treat any function expression with a name as a function definition. This would lead to `zero` being defined, even with the always-false `if` condition. A safer way to define functions conditionally is to define the function anonymously and assign it to a variable:
 
-<pre class="brush: js notranslate">if (0) {
+```js
+if (0) {
    var zero = function() {
       document.writeln("Aqui tem zero.");
    }
 }
-</pre>
+```
 
-<h2 id="Examples" name="Examples">Exemplo</h2>
+## Exemplo
 
-<h3 id="Example_Returning_a_formatted_number" name="Example:_Returning_a_formatted_number">Exemplo: Retornando um número formatado</h3>
+### Exemplo: Retornando um número formatado
 
-<p>A função a seguir retorna uma sequência contendo a representação formatada de um número preenchido com zeros à esquerda.</p>
+A função a seguir retorna uma sequência contendo a representação formatada de um número preenchido com zeros à esquerda.
 
-<pre class="brush: js notranslate">// Esta função retorna uma string preenchida com zeros à esquerda
+```js
+// Esta função retorna uma string preenchida com zeros à esquerda
 function padZeros(num, totalLen) {
    var numStr = num.toString();             // Inicializar valor de retorno como string
    var numZeros = totalLen - numStr.length; // Calcular números de zeros
-   for (var i = 1; i &lt;= numZeros; i++) {    // Preencher a quantidade de zeros
+   for (var i = 1; i <= numZeros; i++) {    // Preencher a quantidade de zeros
       numStr = "0" + numStr;
    }
    return numStr; // Retorna a string já preenchida
 }
-</pre>
+```
 
-<p>The following statements call the padZeros function.</p>
+The following statements call the padZeros function.
 
-<pre class="brush: js notranslate">var resultado;
+```js
+var resultado;
 resultado = padZeros(42,4); // retorno "0042"
 resultado = padZeros(42,2); // retorno "42"
 resultado = padZeros(5,4);  // retorno "0005"
-</pre>
+```
 
-<h3 id="Example_Determining_whether_a_function_exists" name="Example:_Determining_whether_a_function_exists">Example: Determining whether a function exists</h3>
+### Example: Determining whether a function exists
 
-<p>You can determine whether a function exists by using the <code>typeof</code> operator. In the following example, a test is peformed to determine if the <code>window</code> object has a property called <code>noFunc</code> that is a function. If so, it is used; otherwise some other action is taken.</p>
+You can determine whether a function exists by using the `typeof` operator. In the following example, a test is peformed to determine if the `window` object has a property called `noFunc` that is a function. If so, it is used; otherwise some other action is taken.
 
-<pre class="brush: js notranslate"> if ('function' == typeof window.noFunc) {
+```js
+ if ('function' == typeof window.noFunc) {
    // use noFunc()
  } else {
    // do something else
  }
-</pre>
+```
 
-<p>Note that in the <code>if</code> test, a reference to <code>noFunc</code> is used—there are no brackets "()" after the function name so the actual function is not called.</p>
+Note that in the `if` test, a reference to `noFunc` is used—there are no brackets "()" after the function name so the actual function is not called.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1st Edition.</td>
-   <td>Standard</td>
-   <td>Initial definition. Implemented in JavaScript 1.0</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-13', 'Function Definition')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-function-definitions', 'Function definitions')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>New: Arrow functions, Generator functions, default parameters, rest parameters</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                   | Comment                                                                        |
+| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------------------------------------ |
+| ECMAScript 1st Edition.                                                                          | Standard                 | Initial definition. Implemented in JavaScript 1.0                              |
+| {{SpecName('ES5.1', '#sec-13', 'Function Definition')}}                         | {{Spec2('ES5.1')}} |                                                                                |
+| {{SpecName('ES6', '#sec-function-definitions', 'Function definitions')}} | {{Spec2('ES6')}}     | New: Arrow functions, Generator functions, default parameters, rest parameters |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.functions")}}
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a></li>
- <li><a href="/en-US/docs/JavaScript/Reference/Statements/function"><code>function</code> statement</a></li>
- <li><a href="/en-US/docs/JavaScript/Reference/Operators/function"><code>function</code> operator</a></li>
-</ul>
+- [`Function`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Function)
+- [`function` statement](/pt-BR/docs/JavaScript/Reference/Statements/function)
+- [`function` operator](/pt-BR/docs/JavaScript/Reference/Operators/function)

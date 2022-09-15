@@ -13,36 +13,37 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p>O método <code><strong>__lookupSetter__</strong></code> retorna a função vinculada como <em>setter</em> para a propriedade especificada.</p>
+O método **`__lookupSetter__`** retorna a função vinculada como _setter_ para a propriedade especificada.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code><var>obj</var>.__lookupSetter__(<var>sprop</var>)</code></pre>
+```
+obj.__lookupSetter__(sprop)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>sprop</code></dt>
- <dd>Uma cadeia de caracteres (<em>string</em>) contendo o nome da propriedade a qual o <em>setter</em> deve ser retornado.</dd>
-</dl>
+- `sprop`
+  - : Uma cadeia de caracteres (_string_) contendo o nome da propriedade a qual o _setter_ deve ser retornado.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>A função vinculada como <em>setter</em> para a propriedade especificada.</p>
+A função vinculada como _setter_ para a propriedade especificada.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Se o <em>setter</em> foi definido para uma propriedade do objeto, não era possível referenciar a função através da propriedade, porque aquela propriedade se refere ao valor de retorno da função. <code>__lookupSetter__</code> pode ser usado para obter a referência para a função <em>setter</em>.</p>
+Se o _setter_ foi definido para uma propriedade do objeto, não era possível referenciar a função através da propriedade, porque aquela propriedade se refere ao valor de retorno da função. `__lookupSetter__` pode ser usado para obter a referência para a função _setter_.
 
-<p>É possível agora fazer isso de forma padronizada usando {{jsxref("Object.getOwnPropertyDescriptor()")}}.</p>
+É possível agora fazer isso de forma padronizada usando {{jsxref("Object.getOwnPropertyDescriptor()")}}.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Formas_compatíveis_e_não_padronizadas_de_obter_um_definidor_de_propriedades">Formas compatíveis e não padronizadas de obter um definidor de propriedades</h3>
+### Formas compatíveis e não padronizadas de obter um definidor de propriedades
 
-<pre class="brush: js notranslate">var obj = {
+```js
+var obj = {
   set foo(value) {
     this.bar = value;
   }
@@ -57,23 +58,21 @@ obj.__lookupSetter__('foo')
 // Forma compatível padronizada
 Object.getOwnPropertyDescriptor(obj, 'foo').set;
 // (function(value) { this.bar = value; })
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Object.prototype.__lookupGetter__()")}}</li>
- <li>Operador {{jsxref("Functions/set", "set")}}</li>
- <li>{{jsxref("Object.getOwnPropertyDescriptor()")}} e {{jsxref("Object.getPrototypeOf()")}}</li>
- <li>{{jsxref("Object.prototype.__defineGetter__()")}}</li>
- <li>{{jsxref("Object.prototype.__defineSetter__()")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">JS Guide: Defining Getters and Setters</a></li>
-</ul>
+- {{jsxref("Object.prototype.__lookupGetter__()")}}
+- Operador {{jsxref("Functions/set", "set")}}
+- {{jsxref("Object.getOwnPropertyDescriptor()")}} e {{jsxref("Object.getPrototypeOf()")}}
+- {{jsxref("Object.prototype.__defineGetter__()")}}
+- {{jsxref("Object.prototype.__defineSetter__()")}}
+- [JS Guide: Defining Getters and Setters](/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)

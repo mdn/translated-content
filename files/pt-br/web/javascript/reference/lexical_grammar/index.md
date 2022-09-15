@@ -8,380 +8,278 @@ tags:
   - Palavras-chave
 translation_of: Web/JavaScript/Reference/Lexical_grammar
 ---
-<div>{{JsSidebar("More")}}</div>
+{{JsSidebar("More")}}
 
-<p>Esta página descreve a gramática léxica da linguagem JavaScript. O código fonte de um script ECMAScript é lido da esquerda para direita e traduzido em uma sequência de elementos de entrada, como símbolos, caracteres de controle, finalizadores de linha, comentários ou espaços em branco. ECMAScript também define certas palavras-chave e literais e possui regras para inserção automática de ponto e vírgula ao final de declarações.</p>
+Esta página descreve a gramática léxica da linguagem JavaScript. O código fonte de um script ECMAScript é lido da esquerda para direita e traduzido em uma sequência de elementos de entrada, como símbolos, caracteres de controle, finalizadores de linha, comentários ou espaços em branco. ECMAScript também define certas palavras-chave e literais e possui regras para inserção automática de ponto e vírgula ao final de declarações.
 
-<h2 id="Caracteres_de_controle">Caracteres de controle</h2>
+## Caracteres de controle
 
-<p> Caracteres de controle não possuem representação visual, mas são usados para controlar a interpretação do código.</p>
+Caracteres de controle não possuem representação visual, mas são usados para controlar a interpretação do código.
 
-<table class="standard-table">
- <caption>Caracteres de controle Unicode</caption>
- <tbody>
-  <tr>
-   <th>Código</th>
-   <th>Nome</th>
-   <th>Abreviação</th>
-   <th>Descrição</th>
-  </tr>
-  <tr>
-   <td><code>U+200C</code></td>
-   <td>
-    <p>Zero width non-joiner</p>
-   </td>
-   <td>&lt;ZWNJ&gt;</td>
-   <td>Colocado entre caracteres para evitar  que sejam visualmente ligados (fundidos) em algumas linguagens (<a href="http://en.wikipedia.org/wiki/Zero-width_non-joiner">Wikipedia</a>).</td>
-  </tr>
-  <tr>
-   <td><code>U+200D</code></td>
-   <td>
-    <p>Zero width joiner</p>
-   </td>
-   <td>&lt;ZWJ&gt;</td>
-   <td>Colocado entre caracteres que podem não estar normalmente conectados, para que estes caracteres sejam renderizados com suas devidas ligações em certas linguagens (<a href="http://en.wikipedia.org/wiki/Zero-width_joiner">Wikipedia</a>).</td>
-  </tr>
-  <tr>
-   <td><code>U+FEFF</code></td>
-   <td>Byte order mark</td>
-   <td>&lt;BOM&gt;</td>
-   <td>Usado no início do script para marcá-lo como Unicode e especificar a ordem de bytes do código (<a href="http://en.wikipedia.org/wiki/Byte_order_mark">Wikipedia</a>).</td>
-  </tr>
- </tbody>
-</table>
+| Código   | Nome                  | Abreviação | Descrição                                                                                                                                                                                                                        |
+| -------- | --------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `U+200C` | Zero width non-joiner | \<ZWNJ>    | Colocado entre caracteres para evitar que sejam visualmente ligados (fundidos) em algumas linguagens ([Wikipedia](http://en.wikipedia.org/wiki/Zero-width_non-joiner)).                                                          |
+| `U+200D` | Zero width joiner     | \<ZWJ>     | Colocado entre caracteres que podem não estar normalmente conectados, para que estes caracteres sejam renderizados com suas devidas ligações em certas linguagens ([Wikipedia](http://en.wikipedia.org/wiki/Zero-width_joiner)). |
+| `U+FEFF` | Byte order mark       | \<BOM>     | Usado no início do script para marcá-lo como Unicode e especificar a ordem de bytes do código ([Wikipedia](http://en.wikipedia.org/wiki/Byte_order_mark)).                                                                       |
 
-<h2 id="Espaço_em_branco">Espaço em branco</h2>
+## Espaço em branco
 
-<p>Espaços em branco ajudam na legibilidade do código e separam os símbolos um do outro.  Estes caracteres normalmente não são funcionais no código. <a href="https://en.wikipedia.org/wiki/Minification_%28programming%29">Ferramentas de minificação</a> podem ser usadas para remover espaços em branco do código reduzindo, assim, a quantidade de dados que precisam ser transferidos.</p>
+Espaços em branco ajudam na legibilidade do código e separam os símbolos um do outro. Estes caracteres normalmente não são funcionais no código. [Ferramentas de minificação](https://en.wikipedia.org/wiki/Minification_%28programming%29) podem ser usadas para remover espaços em branco do código reduzindo, assim, a quantidade de dados que precisam ser transferidos.
 
-<table class="standard-table">
- <caption>Caracteres de espaço em branco</caption>
- <tbody>
-  <tr>
-   <th>Código</th>
-   <th>Nome</th>
-   <th>Abreviação</th>
-   <th>Descrição</th>
-   <th>Sequência de escape</th>
-  </tr>
-  <tr>
-   <td>U+0009</td>
-   <td>
-    <p>Character tabulation</p>
-   </td>
-   <td>&lt;HT&gt;</td>
-   <td>Tabulação horizontal</td>
-   <td>\t</td>
-  </tr>
-  <tr>
-   <td>U+000B</td>
-   <td>
-    <p>Line tabulation</p>
-   </td>
-   <td>&lt;VT&gt;</td>
-   <td>Tabulação vertical</td>
-   <td>\v</td>
-  </tr>
-  <tr>
-   <td>U+000C</td>
-   <td>Form feed</td>
-   <td>&lt;FF&gt;</td>
-   <td>Pular para próxima página (<a href="http://en.wikipedia.org/wiki/Page_break#Form_feed">Wikipedia</a>).</td>
-   <td>\f</td>
-  </tr>
-  <tr>
-   <td>U+0020</td>
-   <td>Space</td>
-   <td>&lt;SP&gt;</td>
-   <td>Espaço normal</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>U+00A0</td>
-   <td>No-break space</td>
-   <td>&lt;NBSP&gt;</td>
-   <td>Espaço normal, sem marcar quebra de linha</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>Others</td>
-   <td>Other Unicode space characters</td>
-   <td>&lt;USP&gt;</td>
-   <td><a href="https://en.wikipedia.org/wiki/Space_%28punctuation%29#Spaces_in_Unicode">Outros tipos de espaço. Veja na Wikipedia</a></td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Código | Nome                           | Abreviação | Descrição                                                                                                            | Sequência de escape |
+| ------ | ------------------------------ | ---------- | -------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| U+0009 | Character tabulation           | \<HT>      | Tabulação horizontal                                                                                                 | \t                  |
+| U+000B | Line tabulation                | \<VT>      | Tabulação vertical                                                                                                   | \v                  |
+| U+000C | Form feed                      | \<FF>      | Pular para próxima página ([Wikipedia](http://en.wikipedia.org/wiki/Page_break#Form_feed)).                          | \f                  |
+| U+0020 | Space                          | \<SP>      | Espaço normal                                                                                                        |                     |
+| U+00A0 | No-break space                 | \<NBSP>    | Espaço normal, sem marcar quebra de linha                                                                            |                     |
+| Others | Other Unicode space characters | \<USP>     | [Outros tipos de espaço. Veja na Wikipedia](https://en.wikipedia.org/wiki/Space_%28punctuation%29#Spaces_in_Unicode) |                     |
 
-<h2 id="Finalizadores_de_linha">Finalizadores de linha</h2>
+## Finalizadores de linha
 
-<p>Além dos caracteres de espaço em branco, caracteres finalizadores de linha são usados  para melhorar a legibilidade do código. Contudo, em alguns casos, finalizadores de linha podem influenciar a execução do código JavaScript, por isso você não poderá usá-los em alguns casos. Eles também afetam o <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar$edit#Automatic_semicolon_insertion">processo automático de inserção de ponto e vírgula</a>. Em <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">expressões regulares</a> os finalizadores de linha podem ser indicados com a classe <strong>\s</strong>.</p>
+Além dos caracteres de espaço em branco, caracteres finalizadores de linha são usados para melhorar a legibilidade do código. Contudo, em alguns casos, finalizadores de linha podem influenciar a execução do código JavaScript, por isso você não poderá usá-los em alguns casos. Eles também afetam o [processo automático de inserção de ponto e vírgula](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar$edit#Automatic_semicolon_insertion). Em [expressões regulares](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions) os finalizadores de linha podem ser indicados com a classe **\s**.
 
-<p>Apenas os seguintes códigos Unicode são tratados como finalizadores de linha no ECMAScript, outros caracteres de quebra de linha são tratados apenas como espaço em branco (por exemplo, Next Line, NEL, U+0085 são considerados espaço em branco).</p>
+Apenas os seguintes códigos Unicode são tratados como finalizadores de linha no ECMAScript, outros caracteres de quebra de linha são tratados apenas como espaço em branco (por exemplo, Next Line, NEL, U+0085 são considerados espaço em branco).
 
-<table class="standard-table">
- <caption>Caracteres de finalização de linha</caption>
- <tbody>
-  <tr>
-   <th>Código</th>
-   <th>Nome</th>
-   <th>Abreviação</th>
-   <th>Descrião</th>
-   <th>Sequência de escape</th>
-  </tr>
-  <tr>
-   <td>U+000A</td>
-   <td>Line Feed</td>
-   <td>&lt;LF&gt;</td>
-   <td>Caractere de nova linha em sistemas UNIX.</td>
-   <td>\n</td>
-  </tr>
-  <tr>
-   <td>U+000D</td>
-   <td>Carriage Return</td>
-   <td>&lt;CR&gt;</td>
-   <td>Caractere de nova linha nos sistemas Commodore e nos primeiros Mac's.</td>
-   <td>\r</td>
-  </tr>
-  <tr>
-   <td>U+2028</td>
-   <td>Line Separator</td>
-   <td>&lt;LS&gt;</td>
-   <td><a href="http://en.wikipedia.org/wiki/Newline">Wikipedia</a></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>U+2029</td>
-   <td>Paragraph Separator</td>
-   <td>&lt;PS&gt;</td>
-   <td><a href="http://en.wikipedia.org/wiki/Newline">Wikipedia</a></td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Código | Nome                | Abreviação | Descrião                                                              | Sequência de escape |
+| ------ | ------------------- | ---------- | --------------------------------------------------------------------- | ------------------- |
+| U+000A | Line Feed           | \<LF>      | Caractere de nova linha em sistemas UNIX.                             | \n                  |
+| U+000D | Carriage Return     | \<CR>      | Caractere de nova linha nos sistemas Commodore e nos primeiros Mac's. | \r                  |
+| U+2028 | Line Separator      | \<LS>      | [Wikipedia](http://en.wikipedia.org/wiki/Newline)                     |                     |
+| U+2029 | Paragraph Separator | \<PS>      | [Wikipedia](http://en.wikipedia.org/wiki/Newline)                     |                     |
 
-<h2 id="Comentários">Comentários</h2>
+## Comentários
 
-<p>Comentários são usados para inserir dicas, notas, sugestões ou alertas no código JavaScript. Isto pode tornar mais fácil ler ou entender o que o código faz. Também pode ser usado para desabilitar código, evitando sua execução; isto pode ser uma valiosa ferramenta na hora de debugar seu código.</p>
+Comentários são usados para inserir dicas, notas, sugestões ou alertas no código JavaScript. Isto pode tornar mais fácil ler ou entender o que o código faz. Também pode ser usado para desabilitar código, evitando sua execução; isto pode ser uma valiosa ferramenta na hora de debugar seu código.
 
-<p>JavaScript possui duas formas de inserir comentário no código.</p>
+JavaScript possui duas formas de inserir comentário no código.
 
-<p>O primeiro é com o uso de duas barras <code>//</code>; isso faz com que qualquer coisa escrita a seguir, e na mesma linha, se torne comentário. Por exemplo:</p>
+O primeiro é com o uso de duas barras `//`; isso faz com que qualquer coisa escrita a seguir, e na mesma linha, se torne comentário. Por exemplo:
 
-<pre class="brush: js">function comment() {
+```js
+function comment() {
   // Isto é um comentário de uma linha em JavaScript
   console.log('Hello world!');
 }
 comment();
-</pre>
+```
 
-<p>A segunda forma é com o uso de <code>/* */</code>, que é muito mais flexível.</p>
+A segunda forma é com o uso de `/* */`, que é muito mais flexível.
 
-<p>Por exemplo, você pode usá-lo em uma única linha:</p>
+Por exemplo, você pode usá-lo em uma única linha:
 
-<pre class="brush: js">function comment() {
+```js
+function comment() {
   /* Isto é um comentário de uma linha em JavaScript */
   console.log('Hello world!');
 }
-comment();</pre>
+comment();
+```
 
-<p>Ou pode fazer um comentário de várias linhas, desta forma:</p>
+Ou pode fazer um comentário de várias linhas, desta forma:
 
-<pre class="brush: js">function comment() {
+```js
+function comment() {
   /* Este é um comentário de várias linhas. Observe que
  não precisamos encerrar o comentário até terminar. */
   console.log('Hello world!');
 }
-comment();</pre>
+comment();
+```
 
-<p>Você também pode usá-lo no meio de uma linha, se quiser, porém isto pode tornar seu código mais difícil de ler, portanto use com cautela:</p>
+Você também pode usá-lo no meio de uma linha, se quiser, porém isto pode tornar seu código mais difícil de ler, portanto use com cautela:
 
-<pre class="brush: js">function comment(x) {
+```js
+function comment(x) {
   console.log('Hello ' + x /* insira o valor de x */ + ' !');
 }
-comment('world');</pre>
+comment('world');
+```
 
+Além disso, você pode usá-lo para desativar algum código para evitar que seja executado, envolvendo o código em um comentário, assim:
 
-
-<p>Além disso, você pode usá-lo para desativar algum código para evitar que seja executado, envolvendo o código em um comentário, assim:</p>
-
-<pre class="brush: js">function comment() {
+```js
+function comment() {
   /* console.log('Hello world!'); */
 }
-comment();</pre>
+comment();
+```
 
-<p>Neste caso, a função <code>console.log()</code> nunca será invocada, pois está comentada. Qualquer quantidade de linhas de código podem ser desabilitadas desta forma.</p>
+Neste caso, a função `console.log()` nunca será invocada, pois está comentada. Qualquer quantidade de linhas de código podem ser desabilitadas desta forma.
 
-<h2 id="Palavras-chave">Palavras-chave</h2>
+## Palavras-chave
 
-<h3 id="Palavras-chave_reservadas_do_ECMAScript_2015">Palavras-chave reservadas do ECMAScript 2015</h3>
+### Palavras-chave reservadas do ECMAScript 2015
 
-<ul class="threecolumns">
- <li>{{jsxref("Statements/break", "break")}}</li>
- <li>{{jsxref("Statements/switch", "case")}}</li>
- <li>{{jsxref("Statements/try...catch", "catch")}}</li>
- <li>{{jsxref("Statements/class", "class")}}</li>
- <li>{{jsxref("Statements/const", "const")}}</li>
- <li>{{jsxref("Statements/continue", "continue")}}</li>
- <li>{{jsxref("Statements/debugger", "debugger")}}</li>
- <li>{{jsxref("Statements/default", "default")}}</li>
- <li>{{jsxref("Operators/delete", "delete")}}</li>
- <li>{{jsxref("Statements/do...while", "do")}}</li>
- <li>{{jsxref("Statements/if...else", "else")}}</li>
- <li>{{jsxref("Statements/export", "export")}}</li>
- <li>{{jsxref("Statements/class", "extends")}}</li>
- <li>{{jsxref("Statements/try...catch", "finally")}}</li>
- <li>{{jsxref("Statements/for", "for")}}</li>
- <li>{{jsxref("Statements/function", "function")}}</li>
- <li>{{jsxref("Statements/if...else", "if")}}</li>
- <li>{{jsxref("Statements/import", "import")}}</li>
- <li>{{jsxref("Operators/in", "in")}}</li>
- <li>{{jsxref("Operators/instanceof", "instanceof")}}</li>
- <li>{{jsxref("Operators/new", "new")}}</li>
- <li>{{jsxref("Statements/return", "return")}}</li>
- <li>{{jsxref("Operators/super", "super")}}</li>
- <li>{{jsxref("Statements/switch", "switch")}}</li>
- <li>{{jsxref("Operators/this", "this")}}</li>
- <li>{{jsxref("Statements/throw", "throw")}}</li>
- <li>{{jsxref("Statements/try...catch", "try")}}</li>
- <li>{{jsxref("Operators/typeof", "typeof")}}</li>
- <li>{{jsxref("Statements/var", "var")}}</li>
- <li>{{jsxref("Operators/void", "void")}}</li>
- <li>{{jsxref("Statements/while", "while")}}</li>
- <li>{{jsxref("Statements/with", "with")}}</li>
- <li>{{jsxref("Operators/yield", "yield")}}</li>
-</ul>
+- {{jsxref("Statements/break", "break")}}
+- {{jsxref("Statements/switch", "case")}}
+- {{jsxref("Statements/try...catch", "catch")}}
+- {{jsxref("Statements/class", "class")}}
+- {{jsxref("Statements/const", "const")}}
+- {{jsxref("Statements/continue", "continue")}}
+- {{jsxref("Statements/debugger", "debugger")}}
+- {{jsxref("Statements/default", "default")}}
+- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("Statements/do...while", "do")}}
+- {{jsxref("Statements/if...else", "else")}}
+- {{jsxref("Statements/export", "export")}}
+- {{jsxref("Statements/class", "extends")}}
+- {{jsxref("Statements/try...catch", "finally")}}
+- {{jsxref("Statements/for", "for")}}
+- {{jsxref("Statements/function", "function")}}
+- {{jsxref("Statements/if...else", "if")}}
+- {{jsxref("Statements/import", "import")}}
+- {{jsxref("Operators/in", "in")}}
+- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("Operators/new", "new")}}
+- {{jsxref("Statements/return", "return")}}
+- {{jsxref("Operators/super", "super")}}
+- {{jsxref("Statements/switch", "switch")}}
+- {{jsxref("Operators/this", "this")}}
+- {{jsxref("Statements/throw", "throw")}}
+- {{jsxref("Statements/try...catch", "try")}}
+- {{jsxref("Operators/typeof", "typeof")}}
+- {{jsxref("Statements/var", "var")}}
+- {{jsxref("Operators/void", "void")}}
+- {{jsxref("Statements/while", "while")}}
+- {{jsxref("Statements/with", "with")}}
+- {{jsxref("Operators/yield", "yield")}}
 
-<h3 id="Palavras-chave_reservadas_para_uso_futuro">Palavras-chave reservadas para uso futuro</h3>
+### Palavras-chave reservadas para uso futuro
 
-<p>As seguintes palavras-chave estão reservadas para uso futuro na especificação ECMAScript. Atualmente elas não tem funcionalidade, mas poderão ter no futuro, portanto elas também não podem ser usadas como identificadores.</p>
+As seguintes palavras-chave estão reservadas para uso futuro na especificação ECMAScript. Atualmente elas não tem funcionalidade, mas poderão ter no futuro, portanto elas também não podem ser usadas como identificadores.
 
-<p>Estes sempre são reservados:</p>
+Estes sempre são reservados:
 
-<ul>
- <li><code>enum</code></li>
-</ul>
+- `enum`
 
-<p>Os seguintes são reservados apenas quando o código está em modo estrito (<em>strict mode</em>):</p>
+Os seguintes são reservados apenas quando o código está em modo estrito (_strict mode_):
 
-<ul class="threecolumns">
- <li><code>implements</code></li>
- <li><code>interface</code></li>
- <li>{{jsxref("Statements/let", "let")}}</li>
- <li><code>package</code></li>
- <li><code>private</code></li>
- <li><code>protected</code></li>
- <li><code>public</code></li>
- <li><code>static</code></li>
-</ul>
+- `implements`
+- `interface`
+- {{jsxref("Statements/let", "let")}}
+- `package`
+- `private`
+- `protected`
+- `public`
+- `static`
 
-<p>Os seguintes são reservados apenas quando são encontrados no código do módulo:</p>
+Os seguintes são reservados apenas quando são encontrados no código do módulo:
 
-<ul>
- <li><code>await</code></li>
-</ul>
+- `await`
 
-<h4 id="Palavras-chave_reservadas_para_uso_futuro_em_versões_antigas">Palavras-chave reservadas para uso futuro em versões antigas</h4>
+#### Palavras-chave reservadas para uso futuro em versões antigas
 
-<p>As seguintes palavras-chave foram reservadas para uso futuro em especificações antigas do ECMAScript (ECMAScript 1 até 3).</p>
+As seguintes palavras-chave foram reservadas para uso futuro em especificações antigas do ECMAScript (ECMAScript 1 até 3).
 
-<ul class="threecolumns">
- <li><code>abstract</code></li>
- <li><code>boolean</code></li>
- <li><code>byte</code></li>
- <li><code>char</code></li>
- <li><code>double</code></li>
- <li><code>final</code></li>
- <li><code>float</code></li>
- <li><code>goto</code></li>
- <li><code>int</code></li>
- <li><code>long</code></li>
- <li><code>native</code></li>
- <li><code>short</code></li>
- <li><code>synchronized</code></li>
- <li><code>throws</code></li>
- <li><code>transient</code></li>
- <li><code>volatile</code></li>
-</ul>
+- `abstract`
+- `boolean`
+- `byte`
+- `char`
+- `double`
+- `final`
+- `float`
+- `goto`
+- `int`
+- `long`
+- `native`
+- `short`
+- `synchronized`
+- `throws`
+- `transient`
+- `volatile`
 
-<p>Além disso, os literais <code>null</code>, <code>true</code>, e <code>false</code> não podem ser usados como identificadores em ECMAScript.</p>
+Além disso, os literais `null`, `true`, e `false` não podem ser usados como identificadores em ECMAScript.
 
-<h3 id="Uso_de_palavras-chave_reservadas">Uso de palavras-chave reservadas</h3>
+### Uso de palavras-chave reservadas
 
-<p>Palavras reservadas atualmente só não podem ser usadas como identificadores . Como descrito em <a href="http://es5.github.com/#A.1">es5.github.com/#A.1</a>, não há problema em usar <font face="consolas, Liberation Mono, courier, monospace">palavras reservadas desta forma</font>.</p>
+Palavras reservadas atualmente só não podem ser usadas como identificadores . Como descrito em [es5.github.com/#A.1](http://es5.github.com/#A.1), não há problema em usar palavras reservadas desta forma.
 
-<pre class="brush: js">a.import
+```js
+a.import
 a['import']
 a = { import: 'test' }.
-</pre>
+```
 
-<p>Por outro lado, o seguinte é ilegal por quê a palavra reservada "<em>import</em>" está sendo usada como identificador. Identificadores podem ser usados em declaração de expressões e funções.</p>
+Por outro lado, o seguinte é ilegal por quê a palavra reservada "_import_" está sendo usada como identificador. Identificadores podem ser usados em declaração de expressões e funções.
 
-<pre class="brush: js">function import() {} // Proibido.</pre>
+```js
+function import() {} // Proibido.
+```
 
-<h2 id="Literais">Literais</h2>
+## Literais
 
-<h3 id="Null">Null</h3>
+### Null
 
-<p>Veja também <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> para mais informações.</p>
+Veja também [`null`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/null) para mais informações.
 
-<pre class="brush: js">null</pre>
+```js
+null
+```
 
-<h3 id="Booleanos">Booleanos</h3>
+### Booleanos
 
-<p>Veja também <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean"><code>Boolean</code></a> para mais informações.</p>
+Veja também [`Boolean`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean) para mais informações.
 
-<pre class="brush: js">true
-false</pre>
+```js
+true
+false
+```
 
-<h3 id="Números">Números</h3>
+### Números
 
-<h4 id="Decimal">Decimal</h4>
+#### Decimal
 
-<pre class="brush: js">1234567890
+```js
+1234567890
 42
 
 // Cuidado com o uso precedido de zero:
 0888 // 888 convertido como decimal
 0777 // Convertido como octal, 511 em decimal
-</pre>
+```
 
-<p>Veja que números decimais podem começar com zero (<code>0</code>) seguido de outro dígito decimal, porém se todos dígitos após o zero inicial forem menores que 8, o número é interpretado como um número octal. Isso não vai disparar um erro em JavaScript, veja {{bug(957513)}}. Veja também esta página sobre conversão de tipo <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt#Octal_interpretations_with_no_radix"><code>parseInt()</code></a>.</p>
+Veja que números decimais podem começar com zero (`0`) seguido de outro dígito decimal, porém se todos dígitos após o zero inicial forem menores que 8, o número é interpretado como um número octal. Isso não vai disparar um erro em JavaScript, veja {{bug(957513)}}. Veja também esta página sobre conversão de tipo [`parseInt()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt#Octal_interpretations_with_no_radix).
 
-<h4 id="Binário">Binário</h4>
+#### Binário
 
-<p>Números binários em JavaScript são iniciados em zero seguido da letra "B" em maiúsculo ou minúsculo (<code>0b</code> ou <code>0B</code>). Esta sintaxe é nova no ECMAScript 2015, por isso verifique a compatibilidade do navegador. Se o dígito seguinte ao <code>0b</code> não for 0 ou 1, o seguinte <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">erro de sintaxe</a> é disparado: "Missing binary digits after 0b".</p>
+Números binários em JavaScript são iniciados em zero seguido da letra "B" em maiúsculo ou minúsculo (`0b` ou `0B`). Esta sintaxe é nova no ECMAScript 2015, por isso verifique a compatibilidade do navegador. Se o dígito seguinte ao `0b` não for 0 ou 1, o seguinte [erro de sintaxe](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) é disparado: "Missing binary digits after 0b".
 
-<pre class="brush: js">var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
+```js
+var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
 var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
-var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607</pre>
+var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
+```
 
-<h4 id="Octal">Octal</h4>
+#### Octal
 
-<p>Números octais em JavaScript são escritos com zero inicial seguido da letra "O" em maiúsculo ou minúsculo (<code>0o</code> ou <code>0O)</code>. Esta sintaxe é nova no ECMAScript 2015, por isso verifique a compatibilidade do navegador. Se os dígitos após o <code>0o não forem octais válidos</code> (01234567), o seguinte <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">erro de sintaxe</a> será disparado:  "Missing octal digits after 0o".</p>
+Números octais em JavaScript são escritos com zero inicial seguido da letra "O" em maiúsculo ou minúsculo (`0o` ou `0O)`. Esta sintaxe é nova no ECMAScript 2015, por isso verifique a compatibilidade do navegador. Se os dígitos após o `0o não forem octais válidos` (01234567), o seguinte [erro de sintaxe](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) será disparado: "Missing octal digits after 0o".
 
-<pre class="brush: js">var n = 0O755; // 493
+```js
+var n = 0O755; // 493
 var m = 0o644; // 420
 
 // Também é possível com apenas um zero no início (veja sobre decimais acima)
 0755
 0644
-</pre>
+```
 
-<h4 id="Hexadecimal">Hexadecimal</h4>
+#### Hexadecimal
 
-<p>Números hexadecimais em JavaScript são iniciados com zero seguido da letra "X" em maiúsculo ou minúsculo (<code>0x</code> ou <code>0X)</code>. Se os dígitos após o 0x não forem hexadecimais válidos (0123456789ABCDEF),  o seguinte <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">erro de sintaxe</a> será disparado: "Identifier starts immediately after numeric literal".</p>
+Números hexadecimais em JavaScript são iniciados com zero seguido da letra "X" em maiúsculo ou minúsculo (`0x` ou `0X)`. Se os dígitos após o 0x não forem hexadecimais válidos (0123456789ABCDEF), o seguinte [erro de sintaxe](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) será disparado: "Identifier starts immediately after numeric literal".
 
-<pre class="brush: js">0xFFFFFFFFFFFFFFFFF // 295147905179352830000
+```js
+0xFFFFFFFFFFFFFFFFF // 295147905179352830000
 0x123456789ABCDEF   // 81985529216486900
 0XA                 // 10
-</pre>
+```
 
-<h3 id="Objetos">Objetos</h3>
+### Objetos
 
-<p>Veja também {{jsxref("Object")}} e <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">Object initializer</a> para mais informações.</p>
+Veja também {{jsxref("Object")}} e [Object initializer](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer) para mais informações.
 
-<pre class="brush: js">var o = { a: 'foo', b: 'bar', c: 42 };
+```js
+var o = { a: 'foo', b: 'bar', c: 42 };
 
 // Notação curta. Novidade no ES2015
 var a = 'foo', b = 'bar', c = 42;
@@ -389,171 +287,157 @@ var o = {a, b, c};
 
 // instead of
 var o = { a: a, b: b, c: c };
-</pre>
+```
 
-<h3 id="Arrays">Arrays</h3>
+### Arrays
 
-<p>Veja também {{jsxref("Array")}} para mais informações.</p>
+Veja também {{jsxref("Array")}} para mais informações.
 
-<pre class="brush: js">[1954, 1974, 1990, 2014]</pre>
+```js
+[1954, 1974, 1990, 2014]
+```
 
-<h3 id="Strings">Strings</h3>
+### Strings
 
-<pre class="brush: js">'foo'
-"bar"</pre>
+```js
+'foo'
+"bar"
+```
 
-<h4 id="Caracteres_de_escape_em_hexadecimal">Caracteres de escape em hexadecimal</h4>
+#### Caracteres de escape em hexadecimal
 
-<pre class="brush: js">'\xA9' // "©"
-</pre>
+```js
+'\xA9' // "©"
+```
 
-<h4 id="Caracteres_de_escape_em_Unicode">Caracteres de escape em Unicode</h4>
+#### Caracteres de escape em Unicode
 
-<p>A representação de caracteres de escape em Unicode requer ao menos quatro caracteres após o  <code>\u</code>.</p>
+A representação de caracteres de escape em Unicode requer ao menos quatro caracteres após o `\u`.
 
-<pre class="brush: js">'\u00A9' // "©"</pre>
+```js
+'\u00A9' // "©"
+```
 
-<h4 id="Codificação_de_caracteres_Unicode">Codificação de caracteres Unicode </h4>
+#### Codificação de caracteres Unicode
 
-<p>Novidade no ECMAScript 2015. Com a codificação de caracteres Unicode qualquer caractere pode ser representado usando sequência hexadecimal, desta forma podemos representar caracteres Unicode com sequência hexadecimal até <code>0x10FFFF</code>. Usando apenas Unicode, muitas vezes pode ser necessário utilizar mais de uma sequência para conseguir o mesmo resultado.</p>
+Novidade no ECMAScript 2015. Com a codificação de caracteres Unicode qualquer caractere pode ser representado usando sequência hexadecimal, desta forma podemos representar caracteres Unicode com sequência hexadecimal até `0x10FFFF`. Usando apenas Unicode, muitas vezes pode ser necessário utilizar mais de uma sequência para conseguir o mesmo resultado.
 
-<p>Veja também {{jsxref("String.fromCodePoint()")}} ou {{jsxref("String.prototype.codePointAt()")}}.</p>
+Veja também {{jsxref("String.fromCodePoint()")}} ou {{jsxref("String.prototype.codePointAt()")}}.
 
-<pre class="brush: js">'\u{2F804}'
+```js
+'\u{2F804}'
 
 // O mesmo usando apenas Unicode
-'\uD87E\uDC04'</pre>
+'\uD87E\uDC04'
+```
 
-<h3 id="Expressões_regulares">Expressões regulares</h3>
+### Expressões regulares
 
-<p>Veja também <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp"><code>RegExp</code></a> para mais informações.</p>
+Veja também [`RegExp`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp) para mais informações.
 
-<pre class="brush: js">/ab+c/g
+```js
+/ab+c/g
 
 // Um "espaço vazio" em expressão regular
 // Para evitar confusão com comentário de linha única
 // faça o seguinte:
-/(?:)/</pre>
+/(?:)/
+```
 
-<h3 id="Templates">Templates</h3>
+### Templates
 
-<p>Veja também <a href="/en-US/docs/Web/JavaScript/Reference/template_strings">template strings</a> para mais informações .</p>
+Veja também [template strings](/pt-BR/docs/Web/JavaScript/Reference/template_strings) para mais informações .
 
-<pre class="brush: js">`texto`
+```js
+`texto`
 
 `linha de texto 1
  linha de texto 2`
 
 `texto ${expressão} texto`
 
-tag `texto ${expressão} texto`</pre>
+tag `texto ${expressão} texto`
+```
 
-<h2 id="Inserção_automática_de_ponto_e_vírgula">Inserção automática de ponto e vírgula</h2>
+## Inserção automática de ponto e vírgula
 
-<p> Algumas <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements">declarações</a> JavaScript precisam ser finalizadas com ponto e vírgula e, por isso, são afetadas pelo mecanismo automático de inserção de ponto evírgula (na silga ASI, em inglês):</p>
+Algumas [declarações](/pt-BR/docs/Web/JavaScript/Reference/Statements) JavaScript precisam ser finalizadas com ponto e vírgula e, por isso, são afetadas pelo mecanismo automático de inserção de ponto evírgula (na silga ASI, em inglês):
 
-<ul>
- <li>Declaração vazia</li>
- <li><code>let</code>, <code>const</code>, declaração de variável</li>
- <li><code>import</code>, <code>export</code>, declaração module</li>
- <li>Expressões</li>
- <li><code>debugger</code></li>
- <li><code>continue</code>, <code>break</code>, <code>throw</code></li>
- <li><code>return</code></li>
-</ul>
+- Declaração vazia
+- `let`, `const`, declaração de variável
+- `import`, `export`, declaração module
+- Expressões
+- `debugger`
+- `continue`, `break`, `throw`
+- `return`
 
-<p>A especificação ECMAScript menciona <a href="https://tc39.github.io/ecma262/#sec-rules-of-automatic-semicolon-insertion">três regras para inserção de ponto e vírgula</a>.</p>
+A especificação ECMAScript menciona [três regras para inserção de ponto e vírgula](https://tc39.github.io/ecma262/#sec-rules-of-automatic-semicolon-insertion).
 
-<p>1.  Um ponto e vírgula é inserido antes, quando um <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar$edit#Line_terminators">finalizador de linha</a> ou um "}" é encontrado em local não permitido pela sintaxe.</p>
+1\. Um ponto e vírgula é inserido antes, quando um [finalizador de linha](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar$edit#Line_terminators) ou um "}" é encontrado em local não permitido pela sintaxe.
 
-<pre class="brush: js">{ 1 2 } 3
+```js
+{ 1 2 } 3
 
 // É transformado pelo ASI em
 
-{ 1 2 ;} 3;</pre>
+{ 1 2 ;} 3;
+```
 
-<p>2.  Um ponto e vírgula é inserido ao final, quando o sinal de final de linha é detectado e o conversor não é capaz de unir a linha seguinte em um único comando.</p>
+2\. Um ponto e vírgula é inserido ao final, quando o sinal de final de linha é detectado e o conversor não é capaz de unir a linha seguinte em um único comando.
 
-<p>Aqui o <code>++ não é interpretado como <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment">operador de incremento</a> aplicado à variável b por que há um finalizador de linha entre o b e ++</code> .</p>
+Aqui o `++ não é interpretado como operador de incremento aplicado à variável b por que há um finalizador de linha entre o b e ++` .
 
-<pre class="brush: js">a = b
+```js
+a = b
 ++c
 
 // É transformado pelo ASI em
 
 a = b;
 ++c;
-</pre>
+```
 
-<p>3.  Um ponto e vírgula é inserido ao final quando uma declaração com regra léxica restrita é encontrada seguida de um finalizador de linha. As declaraçõs sem regra específica de finalizador de linha são:</p>
+3\. Um ponto e vírgula é inserido ao final quando uma declaração com regra léxica restrita é encontrada seguida de um finalizador de linha. As declaraçõs sem regra específica de finalizador de linha são:
 
-<ul>
- <li>Operadores de incremento ou decremento (<code>++</code> and <code>--</code>)</li>
- <li><code>continue</code></li>
- <li><code>break</code></li>
- <li><code>return</code></li>
- <li><code>yield</code>, <code>yield*</code></li>
- <li><code>module</code></li>
-</ul>
+- Operadores de incremento ou decremento (`++` and `--`)
+- `continue`
+- `break`
+- `return`
+- `yield`, `yield*`
+- `module`
 
-<pre class="brush: js">return
+```js
+return
 a + b
 
 // É transformado pelo ASI em
 
 return;
 a + b;
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2("ES1")}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-7', 'Lexical Conventions')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-ecmascript-language-lexical-grammar', 'Lexical Grammar')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Adicionado: números Binarios e Octais, Unicode code point, Templates</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-ecmascript-language-lexical-grammar', 'Lexical Grammar')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                        | Status                       | Comment                                                              |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                             | {{Spec2("ES1")}}         | Definição inicial.                                                   |
+| {{SpecName('ES5.1', '#sec-7', 'Lexical Conventions')}}                                             | {{Spec2('ES5.1')}}     |                                                                      |
+| {{SpecName('ES6', '#sec-ecmascript-language-lexical-grammar', 'Lexical Grammar')}}         | {{Spec2('ES6')}}         | Adicionado: números Binarios e Octais, Unicode code point, Templates |
+| {{SpecName('ESDraft', '#sec-ecmascript-language-lexical-grammar', 'Lexical Grammar')}} | {{Spec2('ESDraft')}} |                                                                      |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.grammar")}}
 
-<h2 id="Firefox-notas_específicas">Firefox-notas específicas</h2>
+## Firefox-notas específicas
 
-<ul>
- <li>Em versões anteriores ao Firefox 5 (JavaScript 1.8.6) palavras reservadas para uso futuro não pdem ser usadas em strict mode. Essa falha de ECMAScript foi corrigida no Firefox 5.</li>
-</ul>
+- Em versões anteriores ao Firefox 5 (JavaScript 1.8.6) palavras reservadas para uso futuro não pdem ser usadas em strict mode. Essa falha de ECMAScript foi corrigida no Firefox 5.
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="http://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/">Jeff Walden: Binary and octal numbers</a></li>
- <li><a href="http://mathiasbynens.be/notes/javascript-escapes">Mathias Bynens: JavaScript character escape sequences</a></li>
- <li>{{jsxref("Boolean")}}</li>
- <li>{{jsxref("Number")}}</li>
- <li>{{jsxref("RegExp")}}</li>
- <li>{{jsxref("String")}}</li>
-</ul>
+- [Jeff Walden: Binary and octal numbers](http://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
+- [Mathias Bynens: JavaScript character escape sequences](http://mathiasbynens.be/notes/javascript-escapes)
+- {{jsxref("Boolean")}}
+- {{jsxref("Number")}}
+- {{jsxref("RegExp")}}
+- {{jsxref("String")}}

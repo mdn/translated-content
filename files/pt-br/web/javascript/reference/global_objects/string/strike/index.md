@@ -10,57 +10,51 @@ tags:
   - strike()
 translation_of: Web/JavaScript/Reference/Global_Objects/String/strike
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p>O método <code>strike()</code> cria um elemento HTML <code><a href="/en-US/docs/Web/HTML/Element/strike">&lt;strike&gt;</a></code> que faz com que uma string seja exibida com o texto riscado.</p>
+O método `strike()` cria um elemento HTML [`<strike>`](/en-US/docs/Web/HTML/Element/strike) que faz com que uma string seja exibida com o texto riscado.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.strike()</code></pre>
+```
+str.strike()
+```
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>Uma string contendo um elemento HTML <code><a href="/en-US/docs/Web/HTML/Element/strike">&lt;strike&gt;</a></code>.</p>
+Uma string contendo um elemento HTML [`<strike>`](/en-US/docs/Web/HTML/Element/strike).
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O método <code>strike()</code> cria uma string dentro uma tag <code>&lt;strike&gt;</code>: "<code>&lt;strike&gt;str&lt;/strike&gt;</code>".</p>
+O método `strike()` cria uma string dentro uma tag `<strike>`: "`<strike>str</strike>`".
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_strike">Usando <code>strike()</code></h3>
+### Usando `strike()`
 
-<p>O exemplo a seguir usa métodos do objeto global String para alterar a formatação da string:</p>
+O exemplo a seguir usa métodos do objeto global String para alterar a formatação da string:
 
-<pre class="brush: js notranslate">var worldString = 'Olá, mundo';
+```js
+var worldString = 'Olá, mundo';
 
-console.log(worldString.blink()); // &lt;blink&gt;Olá, mundo&lt;/blink&gt;
-console.log(worldString.bold()); // &lt;b&gt;Olá, mundo&lt;/b&gt;
-console.log(worldString.italics()); // &lt;i&gt;Olá, mundo&lt;/i&gt;
-console.log(worldString.strike()); // &lt;strike&gt;Olá, mundo&lt;/strike&gt;
-</pre>
+console.log(worldString.blink()); // <blink>Olá, mundo</blink>
+console.log(worldString.bold()); // <b>Olá, mundo</b>
+console.log(worldString.italics()); // <i>Olá, mundo</i>
+console.log(worldString.strike()); // <strike>Olá, mundo</strike>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.strike', 'String.prototype.strike')}}</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                |
+| ------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-string.prototype.strike', 'String.prototype.strike')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.String.strike")}}</p>
+{{Compat("javascript.builtins.String.strike")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("String.prototype.blink()")}}</li>
- <li>{{jsxref("String.prototype.bold()")}}</li>
- <li>{{jsxref("String.prototype.italics()")}}</li>
-</ul>
+- {{jsxref("String.prototype.blink()")}}
+- {{jsxref("String.prototype.bold()")}}
+- {{jsxref("String.prototype.italics()")}}

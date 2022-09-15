@@ -8,42 +8,39 @@ tags:
   - Operador
 translation_of: Web/JavaScript/Reference/Operators/async_function
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}A palavra chave async pode ser usado para definir funções async dentro das expressões.Você tambem pode definir funções async usando a declaração de função async.
 
-<div>A palavra chave async pode ser usado para definir funções async dentro das expressões.</div>
+## Sintaxe
 
-<div>Você tambem pode definir funções async usando a declaração de função async.</div>
+```
+async function [nome]([parametro1[, parametro2[, ..., parametroN]]]) {
+    declarações
+}
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+Como no [ES2015](/pt-BR/docs/), você tambem pode usar [arrow functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
-<pre class="syntaxbox">async function [<em>nome</em>]([<em>parametro1</em>[, <em>parametro2[</em>, ..., <em>parametroN</em>]]]) {
-    <em>declarações</em>
-}</pre>
+### Parâmetros
 
-<p>Como no  <a href="https://developer.mozilla.org/en-US/docs/">ES2015</a>, você tambem pode usar  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a>.</p>
+- `nome`
+  - : O nome da função.Pode ser omitida, na qual a função se torna anonima . O nome é somente local para o corpo da função.
+- `parametroN`
+  - : O nome do argumento passado para a função.
+- `declarações`
+  - : As declarações que compoem o corpo da função .
 
-<h3 id="Parâmetros">Parâmetros</h3>
+## Descrição
 
-<dl>
- <dt><code>nome</code></dt>
- <dd>O nome da função.Pode ser omitida, na qual a função se torna anonima . O nome é somente local para o corpo da função.</dd>
- <dt><code>parametroN</code></dt>
- <dd>O nome do argumento passado para a função.</dd>
- <dt><code>declarações</code></dt>
- <dd>As declarações que compoem o corpo da função .</dd>
-</dl>
+Uma expressão `async function` é muito similar, e tem quase a mesma sintaxe de uma {{jsxref('Statements/async_function', 'declaração async function')}}. A principal diferença entre uma expressão `async function `e uma declaração `async function` é o _nome da função\_\_,_ que pode ser omitido em expressões `async function` para criar _funções anônimas_. Uma expressão `async function` pode ser utilizada como um {{Glossary("IIFE")}} (Immediately Invoked Function Expression, em tradução livre: Expressão de Função Invocada Imediatamente) que roda assim que definido. Veja também o capítulo sobre [funções](/pt-BR/docs/Web/JavaScript/Reference/Functions) para mais informações.
 
-<h2 id="Descrição">Descrição</h2>
+## Exemplos
 
-<p>Uma expressão <code>async function</code> é muito similar, e tem quase a mesma sintaxe de uma {{jsxref('Statements/async_function', 'declaração async function')}}. A principal diferença entre uma expressão <code>async function </code>e uma declaração <code>async function</code> é o <em>nome da função</em><em>,</em> que pode ser omitido em expressões <code>async function</code> para criar <em>funções anônimas</em>. Uma expressão <code>async function</code> pode ser utilizada como um {{Glossary("IIFE")}} (Immediately Invoked Function Expression, em tradução livre: Expressão de Função Invocada Imediatamente) que roda assim que definido. Veja também o capítulo sobre <a href="/en-US/docs/Web/JavaScript/Reference/Functions">funções</a> para mais informações.</p>
+### Exemplo simples
 
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Exemplo_simples">Exemplo simples</h3>
-
-<pre class="brush: js">function resolveAfter2Seconds(x) {
-  return new Promise(resolve =&gt; {
-    setTimeout(() =&gt; {
+```js
+function resolveAfter2Seconds(x) {
+  return new Promise(resolve => {
+    setTimeout(() => {
       resolve(x);
     }, 2000);
   });
@@ -53,7 +50,7 @@ translation_of: Web/JavaScript/Reference/Operators/async_function
   var a = resolveAfter2Seconds(20);
   var b = resolveAfter2Seconds(30);
   return x + await a + await b;
-})(10).then(v =&gt; {
+})(10).then(v => {
   console.log(v);  // imprime 60 após 2 segundo.
 });
 
@@ -63,38 +60,23 @@ var add = async function(x) { // async function expression atribuída a uma vari
   return x + a + b;
 };
 
-add(10).then(v =&gt; {
+add(10).then(v => {
   console.log(v);  // imprime 60 após 4 segundos.
 });
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Definição inicial no ES2017.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                        | Status                       | Comentário                   |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------- |
+| {{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}} | {{Spec2('ESDraft')}} | Definição inicial no ES2017. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.operators.async_function")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Statements/async_function", "async function")}}</li>
- <li>{{jsxref("AsyncFunction")}} object</li>
- <li>{{jsxref("Operators/await", "await")}}</li>
-</ul>
+- {{jsxref("Statements/async_function", "async function")}}
+- {{jsxref("AsyncFunction")}} object
+- {{jsxref("Operators/await", "await")}}

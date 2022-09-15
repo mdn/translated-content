@@ -9,71 +9,53 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDay
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<h2 id="Summary" name="Summary">Resumo</h2>
+## Resumo
 
-<p>O método <strong><code>getDay()</code></strong> retorna o dia da semana para a data especificada de acordo com a hora local, onde 0 representa o Domingo.</p>
+O método **`getDay()`** retorna o dia da semana para a data especificada de acordo com a hora local, onde 0 representa o Domingo.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code><var>dateObj</var>.getDay()</code></pre>
+```
+dateObj.getDay()
+```
 
-<h3 id="Parameters" name="Parameters">Parâmetros</h3>
+### Parâmetros
 
-<p>Nenhum.</p>
+Nenhum.
 
-<h3 id="Returns" name="Returns">Retorna</h3>
+### Retorna
 
-<p>O valor retornado por <code>getDay()</code> é um inteiro que corresponde com o dia da semana: 0 para Domingo, 1 para Segunda-Feira, 2 para Terça-Feira, e assim por diante.</p>
+O valor retornado por `getDay()` é um inteiro que corresponde com o dia da semana: 0 para Domingo, 1 para Segunda-Feira, 2 para Terça-Feira, e assim por diante.
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<h3 id="Example:_Using_getDay" name="Example:_Using_getDay">Exemplo: Usando <code>getDay()</code></h3>
+### Exemplo: Usando `getDay()`
 
-<p>O segundo statement abaixo atribui o valor 1 à variável weekday (dia da semana), baseado no valor do objeto {{jsxref("Global_Objects/Date", "Date")}} <code>Xmas95</code>. A data 25 de Dezembro de 1995 é uma Segunda-Feira.</p>
+O segundo statement abaixo atribui o valor 1 à variável weekday (dia da semana), baseado no valor do objeto {{jsxref("Global_Objects/Date", "Date")}} `Xmas95`. A data 25 de Dezembro de 1995 é uma Segunda-Feira.
 
-<pre class="brush: js">var Xmas95 = new Date('December 25, 1995 23:15:30');
+```js
+var Xmas95 = new Date('December 25, 1995 23:15:30');
 var weekday = Xmas95.getDay();
 
 console.log(weekday); // 1
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col"><strong style="background-color: rgba(212, 221, 228, 0.498039); font-family: open sans light,helvetica,arial,sans-serif; font-weight: bold;">Especificação</strong></th>
-   <th scope="col">Status</th>
-   <th scope="col"><strong style="background-color: rgba(212, 221, 228, 0.498039); font-family: open sans light,helvetica,arial,sans-serif; font-weight: bold;">Comentário</strong></th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1st Edition.</td>
-   <td>Standard</td>
-   <td>Definição inicial. Implementado em JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.16', 'Date.prototype.getDay')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.getday', 'Date.prototype.getDay')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| **Especificação**                                                                                    | Status                   | **Comentário**                                     |
+| ---------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
+| ECMAScript 1st Edition.                                                                              | Standard                 | Definição inicial. Implementado em JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.9.5.16', 'Date.prototype.getDay')}}                 | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES6', '#sec-date.prototype.getday', 'Date.prototype.getDay')}} | {{Spec2('ES6')}}     |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Date.getDay")}}
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCDate()")}}</li>
- <li>{{jsxref("Date.prototype.getUTCDay()")}}</li>
- <li>{{jsxref("Date.prototype.setDate()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCDate()")}}
+- {{jsxref("Date.prototype.getUTCDay()")}}
+- {{jsxref("Date.prototype.setDate()")}}

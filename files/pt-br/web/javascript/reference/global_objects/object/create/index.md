@@ -3,38 +3,39 @@ title: Object.create()
 slug: Web/JavaScript/Reference/Global_Objects/Object/create
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>Object.create()</strong></code> cria um novo objeto, utilizando um outro objecto existente como protótipo para o novo objeto a ser criado.</p>
+O método **`Object.create()`** cria um novo objeto, utilizando um outro objecto existente como protótipo para o novo objeto a ser criado.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code>Object.create(<var>proto</var>[, <var>propertiesObject</var>])</code></pre>
+```
+Object.create(proto[, propertiesObject])
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>proto</code></dt>
- <dd>O objeto que deve ser o protótipo do objeto recém-criado.</dd>
- <dt><code>propertiesObject</code></dt>
- <dd>Opcional. Se especificado e não {{jsxref("undefined")}}, um objeto cuja as propriedades próprias enumeráveis (isto é, aquelas propriedades definidas sobre si mesmo, e <em>não</em> propriedades enumeráveis ao longo da sua cadeia protótipa) especificam os nomes das propriedades a serem adicionadas ao objeto recém-criado, com os nomes das propriedades correspondentes. Essas propriedades correspondem ao segundo argumento de {{jsxref("Object.defineProperties()")}}.</dd>
-</dl>
+- `proto`
+  - : O objeto que deve ser o protótipo do objeto recém-criado.
+- `propertiesObject`
+  - : Opcional. Se especificado e não {{jsxref("undefined")}}, um objeto cuja as propriedades próprias enumeráveis (isto é, aquelas propriedades definidas sobre si mesmo, e _não_ propriedades enumeráveis ao longo da sua cadeia protótipa) especificam os nomes das propriedades a serem adicionadas ao objeto recém-criado, com os nomes das propriedades correspondentes. Essas propriedades correspondem ao segundo argumento de {{jsxref("Object.defineProperties()")}}.
 
-<h3 id="Retorno">Retorno</h3>
+### Retorno
 
-<p>Um novo objeto com o protótipo de objeto e propriedades especificadas.</p>
+Um novo objeto com o protótipo de objeto e propriedades especificadas.
 
-<h3 id="Exceções">Exceções</h3>
+### Exceções
 
-<p>Uma exceção {{jsxref("TypeError")}} se o parâmetro <code>proto</code> não for {{jsxref("null")}} ou um objeto.</p>
+Uma exceção {{jsxref("TypeError")}} se o parâmetro `proto` não for {{jsxref("null")}} ou um objeto.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Herança_tradicional_com_Object.create()">Herança tradicional com <code>Object.create()</code></h3>
+### Herança tradicional com `Object.create()`
 
-<p>A seguir, um exemplo de como usar <code>Object.create()</code> para realizar uma herança tradicional. Isto é para herança simples, que é a única herança suportada pelo JavaScript.</p>
+A seguir, um exemplo de como usar `Object.create()` para realizar uma herança tradicional. Isto é para herança simples, que é a única herança suportada pelo JavaScript.
 
-<pre class="brush: js">// Shape - superclasse
+```js
+// Shape - superclasse
 function Shape() {
   this.x = 0;
   this.y = 0;
@@ -61,11 +62,12 @@ var rect = new Rectangle();
 console.log('Rect é uma instância de Rectangle?', rect instanceof Rectangle);// true
 console.log('Rect é uma instância de Shape?', rect instanceof Shape);// true
 rect.move(1, 1); // Saída: 'Shape moved.'
-</pre>
+```
 
-<p>Caso queira realizar herança de múltiplos objetos, então mixins ("mistura") são uma possibilidade.</p>
+Caso queira realizar herança de múltiplos objetos, então mixins ("mistura") são uma possibilidade.
 
-<pre class="brush: js">function MyClass() {
+```js
+function MyClass() {
   SuperClass.call(this);
   OtherSuperClass.call(this);
 }
@@ -76,13 +78,14 @@ mixin(MyClass.prototype, OtherSuperClass.prototype); // mixin
 MyClass.prototype.myMethod = function() {
   // faz algo
 };
-</pre>
+```
 
-<p>A função <code>mixin</code> copia as funções do protótipo da superclasse para o protótipo da subclasse, a função mixin precisa ser fornecida pelo usuário. Um exemplo de uma função do tipo mixin seria <a href="https://api.jquery.com/jQuery.extend/">jQuery.extend()</a>.</p>
+A função `mixin` copia as funções do protótipo da superclasse para o protótipo da subclasse, a função mixin precisa ser fornecida pelo usuário. Um exemplo de uma função do tipo mixin seria [jQuery.extend()](https://api.jquery.com/jQuery.extend/).
 
-<h3 id="Usando_argumento_propertiesObject_com_Object.create()">Usando argumento <code>propertiesObject</code> com <code>Object.create()</code></h3>
+### Usando argumento `propertiesObject` com `Object.create()`
 
-<pre class="brush: js">var o;
+```js
+var o;
 
 // cria um objeto com protótipo null
 o = Object.create(null);
@@ -145,19 +148,20 @@ o2 = Object.create({}, {
     configurable: true
   }
 });
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Este polyfill cobre o caso de uso principal que é a crição de um novo objeto em que o protótipo foi escolhido mas não leva em consideração o segundo argumento.</p>
+Este polyfill cobre o caso de uso principal que é a crição de um novo objeto em que o protótipo foi escolhido mas não leva em consideração o segundo argumento.
 
-<p>Note que, enquanto a configuração  <code>null</code> as <code>[[Prototype]]</code> é suportada no ES5 <code>Object.create</code>, este polyfill não suporta devido à limitação inerente em versões do ECMAScript inferiores a 5.</p>
+Note que, enquanto a configuração `null` as `[[Prototype]]` é suportada no ES5 `Object.create`, este polyfill não suporta devido à limitação inerente em versões do ECMAScript inferiores a 5.
 
-<pre class="brush: js">if (typeof Object.create != 'function') {
+```js
+if (typeof Object.create != 'function') {
   Object.create = (function() {
     var Temp = function() {};
     return function (prototype) {
-      if (arguments.length &gt; 1) {
+      if (arguments.length > 1) {
         throw Error('Second argument not supported');
       }
       if (typeof prototype != 'object') {
@@ -169,44 +173,24 @@ o2 = Object.create({}, {
       return result;
     };
   })();
-}</pre>
+}
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentários</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.5', 'Object.create')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Definição inicial. Implementada no JavaScript 1.8.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.create', 'Object.create')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.create', 'Object.create')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                        | Status                       | Comentários                                          |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.2.3.5', 'Object.create')}}             | {{Spec2('ES5.1')}}     | Definição inicial. Implementada no JavaScript 1.8.5. |
+| {{SpecName('ES6', '#sec-object.create', 'Object.create')}}         | {{Spec2('ES6')}}         |                                                      |
+| {{SpecName('ESDraft', '#sec-object.create', 'Object.create')}} | {{Spec2('ESDraft')}} |                                                      |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Object.create")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Object.defineProperty()")}}</li>
- <li>{{jsxref("Object.defineProperties()")}}</li>
- <li>{{jsxref("Object.prototype.isPrototypeOf()")}}</li>
- <li>Post de John Resig sobre <a href="http://ejohn.org/blog/objectgetprototypeof/">getPrototypeOf()</a></li>
-</ul>
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Object.defineProperties()")}}
+- {{jsxref("Object.prototype.isPrototypeOf()")}}
+- Post de John Resig sobre [getPrototypeOf()](http://ejohn.org/blog/objectgetprototypeof/)

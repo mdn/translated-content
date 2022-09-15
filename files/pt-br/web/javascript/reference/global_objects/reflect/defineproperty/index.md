@@ -9,89 +9,76 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método estático <code><strong>Reflect</strong></code><strong><code>.defineProperty()</code></strong> é como o {{jsxref("Object.defineProperty()")}}, mas retorna um {{jsxref("Boolean")}}.</p>
+O método estático **`Reflect`\*\***`.defineProperty()`\*\* é como o {{jsxref("Object.defineProperty()")}}, mas retorna um {{jsxref("Boolean")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-defineproperty.html")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-defineproperty.html")}}
 
+## Sintaxe
 
+```
+Reflect.defineProperty(target, propertyKey, attributes)
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Parâmetros
 
-<pre class="syntaxbox notranslate">Reflect.defineProperty(<var>target</var>, <var>propertyKey</var>, <var>attributes</var>)
-</pre>
+- `target`
+  - : O objeto de destino onde será definida a propriedade.
+- `propertyKey`
+  - : O nome da propriedade a ser definida ou modificada.
+- `attributes`
+  - : Os atributos para a propriedade que está sendo definida ou modificada.
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Valor de retorno
 
-<dl>
- <dt><code><var>target</var></code></dt>
- <dd>O objeto de destino onde será definida a propriedade.</dd>
- <dt><code><var>propertyKey</var></code></dt>
- <dd>O nome da propriedade a ser definida ou modificada.</dd>
- <dt><code><var>attributes</var></code></dt>
- <dd>Os atributos para a propriedade que está sendo definida ou modificada.</dd>
-</dl>
+Um {{jsxref("Boolean")}} indicando se a propriedade foi ou não definida com êxito.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Erros
 
-<p>Um {{jsxref("Boolean")}} indicando se a propriedade foi ou não definida com êxito.</p>
+Um {{jsxref("TypeError")}}, se `target` não for um {{jsxref("Object")}}.
 
-<h3 id="Erros">Erros</h3>
+## Descrição
 
-<p>Um {{jsxref("TypeError")}}, se <code><var>target</var></code> não for um {{jsxref("Object")}}.</p>
+O método `Reflect.defineProperty` permite a adição precisa ou a modificação de uma propriedade em um objeto. Para mais detalhes veja o {{jsxref("Object.defineProperty")}}, que é semelhante.
 
-<h2 id="Descrição">Descrição</h2>
+> **Nota:** **Uma diferença fundamental:** `Object.defineProperty` retorna o objeto ou lança um {{jsxref ("TypeError")}} se a propriedade não tiver sido definida com êxito. `Reflect.defineProperty`, no entanto, simplesmente retorna um {{jsxref ("Boolean")}} indicando se a propriedade foi ou não definida com êxito.
 
-<p>O método <code>Reflect.defineProperty</code> permite a adição precisa ou a modificação de uma propriedade em um objeto. Para mais detalhes veja o {{jsxref("Object.defineProperty")}}, que é semelhante.</p>
+## Exemplos
 
-<div class="blockIndicator note">
-<p><strong>Uma diferença fundamental:</strong> <code>Object.defineProperty</code> retorna o objeto ou lança um {{jsxref ("TypeError")}} se a propriedade não tiver sido definida com êxito. <code>Reflect.defineProperty</code>, no entanto, simplesmente retorna um {{jsxref ("Boolean")}} indicando se a propriedade foi ou não definida com êxito.</p>
-</div>
+### Usando `Reflect.defineProperty()`
 
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Usando_Reflect.defineProperty">Usando <code>Reflect.defineProperty()</code></h3>
-
-<pre class="brush: js notranslate">let obj = {}
+```js
+let obj = {}
 Reflect.defineProperty(obj, 'x', {value: 7})  // true
 obj.x                                         // 7
-</pre>
+```
 
-<h3 id="Verificando_se_a_definição_da_propriedade_foi_bem-sucedida">Verificando se a definição da propriedade foi bem-sucedida</h3>
+### Verificando se a definição da propriedade foi bem-sucedida
 
-<p>Com o {{jsxref ("Object.defineProperty")}}, que retorna um objeto se for bem-sucedido ou lança um {{jsxref ("TypeError")}}, você usaria um bloco <a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a> para detectar qualquer erro que ocorreu ao definir uma propriedade.</p>
+Com o {{jsxref ("Object.defineProperty")}}, que retorna um objeto se for bem-sucedido ou lança um {{jsxref ("TypeError")}}, você usaria um bloco [try...catch](/pt-BR/docs/Web/JavaScript/Reference/Statements/try...catch) para detectar qualquer erro que ocorreu ao definir uma propriedade.
 
-<p>Como <code>Reflect.defineProperty</code> retorna um status de sucesso booleano, você pode usar apenas um bloco <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if...else</a></code> aqui:</p>
+Como `Reflect.defineProperty` retorna um status de sucesso booleano, você pode usar apenas um bloco [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) aqui:
 
-<pre class="brush: js notranslate">if (Reflect.defineProperty(target, property, attributes)) {
+```js
+if (Reflect.defineProperty(target, property, attributes)) {
   // success
 } else {
   // failure
-}</pre>
+}
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-reflect.defineproperty', 'Reflect.defineProperty')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                |
+| ------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-reflect.defineproperty', 'Reflect.defineProperty')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("javascript.builtins.Reflect.defineProperty")}}
 
+## Veja também
 
-<p>{{Compat("javascript.builtins.Reflect.defineProperty")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li>{{jsxref("Object.defineProperty()")}}</li>
-</ul>
+- {{jsxref("Reflect")}}
+- {{jsxref("Object.defineProperty()")}}

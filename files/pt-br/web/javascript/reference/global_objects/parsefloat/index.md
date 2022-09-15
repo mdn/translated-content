@@ -8,65 +8,66 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/parseFloat
 browser-compat: javascript.builtins.parseFloat
 ---
+{{jsSidebar("Objects")}}
 
-<div>{{jsSidebar("Objects")}}</div>
-
-
-<p>A função <code>parseFloat</code> analisa um argumento (convertendo-o para uma string primeiro caso necessário) e retorna um número de ponto flutuante (número decimal).</p>
+A função `parseFloat` analisa um argumento (convertendo-o para uma string primeiro caso necessário) e retorna um número de ponto flutuante (número decimal).
 
 {{EmbedInteractiveExample("pages/js/globalprops-parsefloat.html")}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush: js">parseFloat(string)</pre>
+```js
+parseFloat(string)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>string</code></dt>
- <dd>O valor para analisar. Se este argumento não é uma string, então ele é convertido para uma, usando a operação abstrata <code><a href="https://tc39.es/ecma262/#sec-tostring">ToString</a></code>. Espaços em branco são ignorados.</dd>
-</dl>
+- `string`
+  - : O valor para analisar. Se este argumento não é uma string, então ele é convertido para uma, usando a operação abstrata [`ToString`](https://tc39.es/ecma262/#sec-tostring). Espaços em branco são ignorados.
 
-<h3 id="Retorna">Retorna</h3>
+### Retorna
 
-<p>Um número de ponto flutuante da <code>string</code> dada. Ou {{jsxref("NaN")}} quando o primeiro carácter, diferente de um espaço em branco, não pôde ser convertido para um número</p>
+Um número de ponto flutuante da `string` dada. Ou {{jsxref("NaN")}} quando o primeiro carácter, diferente de um espaço em branco, não pôde ser convertido para um número
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p><code>parseFloat</code> é uma função top-level e não está associada a nenhum objeto.</p>
+`parseFloat` é uma função top-level e não está associada a nenhum objeto.
 
-<p><code>parseFloat</code> analisa um argumento string, e retorna um numero de ponto flutuante. Se ele encontrar um carácter diferente de um sinal (+ ou -), numeral (0-9), um ponto decimal, ou um expoente, ele retorna o valor até esse ponto e ignora esse caractere e todos os caracteres seguintes. Espaços a direita e a esquerda são permitidos.</p>
+`parseFloat` analisa um argumento string, e retorna um numero de ponto flutuante. Se ele encontrar um carácter diferente de um sinal (+ ou -), numeral (0-9), um ponto decimal, ou um expoente, ele retorna o valor até esse ponto e ignora esse caractere e todos os caracteres seguintes. Espaços a direita e a esquerda são permitidos.
 
-<p>Se o primeiro carácter não puder ser convertido para um número, <code>parseFloat</code> retorna <code>NaN</code>.</p>
+Se o primeiro carácter não puder ser convertido para um número, `parseFloat` retorna `NaN`.
 
-<p>Para propósitos aritméticos, o valor <code>NaN</code> não é um número de qualquer raiz. Você pode chamar a função {{jsxref("isNaN")}} para determinar se o resultado do <code>parseFloat</code> é <code>NaN</code>. Se <code>NaN</code> for passado em operações aritméticas, a operação também retornará <code>NaN</code>.</p>
+Para propósitos aritméticos, o valor `NaN` não é um número de qualquer raiz. Você pode chamar a função {{jsxref("isNaN")}} para determinar se o resultado do `parseFloat` é `NaN`. Se `NaN` for passado em operações aritméticas, a operação também retornará `NaN`.
 
-<p><code>parseFloat</code> também pode analisar e retornar o valor <code>Infinity</code>. Você pode usar a função {{jsxref("isFinite")}} para determinar se a função é um número finito (not <code>Infinity</code>, <code>-Infinity</code>, ou <code>NaN</code>).</p>
+`parseFloat` também pode analisar e retornar o valor `Infinity`. Você pode usar a função {{jsxref("isFinite")}} para determinar se a função é um número finito (not `Infinity`, `-Infinity`, ou `NaN`).
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="parseFloat_retornando_um_número"><code>parseFloat</code> retornando um número</h3>
+### `parseFloat` retornando um número
 
-<p>O exemplo a seguir sempre retorna <code>3.14</code>:</p>
+O exemplo a seguir sempre retorna `3.14`:
 
-<pre class="brush:js">parseFloat("3.14");
+```js
+parseFloat("3.14");
 parseFloat("314e-2");
 parseFloat("0.0314E+2");
 parseFloat("3.14more non-digit characters");
-</pre>
+```
 
-<h3 id="parseFloat_retornando_NaN"><code>parseFloat</code> retornando <code>NaN</code>:</h3>
+### `parseFloat` retornando `NaN`:
 
-<p>O exemplo a seguir retorna <code>NaN</code></p>
+O exemplo a seguir retorna `NaN`
 
-<pre class="brush: js">parseFloat("FF2");
-</pre>
+```js
+parseFloat("FF2");
+```
 
-<h3 id="A_função_stricter_parse">Uma função de análise estrita</h3>
+### Uma função de análise estrita
 
-<p>As vezes é útil ter uma maneira mais rigorosa para analisar valores float, expressões regulares podem ajudar:</p>
+As vezes é útil ter uma maneira mais rigorosa para analisar valores float, expressões regulares podem ajudar:
 
-<pre class="brush: js">var filterFloat = function (value) {
+```js
+var filterFloat = function (value) {
     if(/^(\-|\+)?([0-9]+(\.[0-9]+)?|Infinity)$/
       .test(value))
       return Number(value);
@@ -81,22 +82,21 @@ console.log(filterFloat('1.61803398875'));     // 1.61803398875
 console.log(filterFloat('421e+0'));            // NaN
 console.log(filterFloat('421hop'));            // NaN
 console.log(filterFloat('hop1.61803398875'));  // NaN
+```
 
-</pre>
+Observe que este código é somente um exemplo; ele não aceita números válidos, tais como 1. ou 0,5.
 
-<p>Observe que este código é somente um exemplo; ele não aceita números válidos, tais como 1. ou 0,5.</p>
+## Especificações
 
-<h2 id="Especificações">Especificações</h2>
 {{Specifications}}
 
-<h2 id="Compatibilidade">Compatibilidade</h2>
+## Compatibilidade
+
 {{Compat}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Global_Objects/parseInt", "parseInt()")}}</li>
- <li>{{jsxref("Number.parseFloat()")}}</li>
- <li>{{jsxref("Number.parseInt()")}}</li>
- <li>{{jsxref("Global_Objects/isNaN", "isNaN()")}}</li>
-</ul>
+- {{jsxref("Global_Objects/parseInt", "parseInt()")}}
+- {{jsxref("Number.parseFloat()")}}
+- {{jsxref("Number.parseInt()")}}
+- {{jsxref("Global_Objects/isNaN", "isNaN()")}}

@@ -3,68 +3,48 @@ title: decodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 translation_of: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<p>O método <code><strong>decodeURIComponent()</strong></code> decodifica um componente Identificador Uniforme de Recursos (URI) criado anteriormente por um {{jsxref("encodeURIComponent")}} ou por uma rotina semelhante.</p>
+O método **`decodeURIComponent()`** decodifica um componente Identificador Uniforme de Recursos (URI) criado anteriormente por um {{jsxref("encodeURIComponent")}} ou por uma rotina semelhante.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code>decodeURIComponent(<em>encodedURI</em>)</code></pre>
+```
+decodeURIComponent(encodedURI)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>encodedURI</code></dt>
- <dd>Um componente codificado de um Identificador Uniforme de Recursos.</dd>
-</dl>
+- `encodedURI`
+  - : Um componente codificado de um Identificador Uniforme de Recursos.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Substitui cada sequência escapada no componente URI codificado com o caractere que a representa.</p>
+Substitui cada sequência escapada no componente URI codificado com o caractere que a representa.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Decodificando_um_componente_URL_Cirílico">Decodificando um componente URL Cirílico</h3>
+### Decodificando um componente URL Cirílico
 
-<pre class="brush: js">decodeURIComponent("JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B");
+```js
+decodeURIComponent("JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B");
 // "JavaScript_шеллы"
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Definição inicial</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.1.3.2', 'decodeURIComponent')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-decodeuricomponent-encodeduricomponent', 'decodeURIComponent')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                        | Status                   | Comentário        |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | ----------------- |
+| {{SpecName('ES3')}}                                                                                             | {{Spec2('ES3')}}     | Definição inicial |
+| {{SpecName('ES5.1', '#sec-15.1.3.2', 'decodeURIComponent')}}                                     | {{Spec2('ES5.1')}} |                   |
+| {{SpecName('ES6', '#sec-decodeuricomponent-encodeduricomponent', 'decodeURIComponent')}} | {{Spec2('ES6')}}     |                   |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.decodeURIComponent")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("decodeURI")}}</li>
- <li>{{jsxref("encodeURI")}}</li>
- <li>{{jsxref("encodeURIComponent")}}</li>
-</ul>
+- {{jsxref("decodeURI")}}
+- {{jsxref("encodeURI")}}
+- {{jsxref("encodeURIComponent")}}

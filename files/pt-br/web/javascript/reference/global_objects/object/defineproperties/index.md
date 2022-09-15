@@ -8,55 +8,55 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método  <code><strong>Object.defineProperties()</strong></code> define uma nova propriedade ou modifica uma existente no objeto, retornando o objeto.</p>
+O método **`Object.defineProperties()`** define uma nova propriedade ou modifica uma existente no objeto, retornando o objeto.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code>Object.defineProperties(<var>obj</var>, <var>props</var>)</code></pre>
+```
+Object.defineProperties(obj, props)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>O objeto no qual se cria ou modifica suas propriedades.</dd>
- <dt><code>props</code></dt>
- <dd><p>Um objeto do qual propriedades enumeráveis constitui descritores para as propriedades serem definidas ou modificadas. Descritores de propriedade presente nos objetos provém em dois principais tipos: descritores de dados e de acesso (veja {{jsxref("Object.defineProperty()")}} para mais detalhes). Descritores têm as seguintes chaves:</p>
- <dl>
-  <dt><code>configurable</code></dt>
-  <dd><code>true</code> se e somente se o tipo deste descritor de propriedades pode ser modificada e se a propriedade pode ser apagada do objeto correspondente.<br>
-  <strong>Valor padrão é <code>false</code>.</strong></dd>
-  <dt><code>enumerable</code></dt>
-  <dd><code>true</code> se e somente se este propriedade aparece durante enumeração das propriedade sobre o objeto correspondente.<br>
-  <strong>Valor padrão é <code>false</code>.</strong></dd>
-  <dt><code>value</code></dt>
-  <dd>O valor associado com a propriedade. Pode ser qualquer valor válido em JavaScript value (número, objeto, função, etc).<br>
-  <strong>Valor padrão é {{jsxref("undefined")}}.</strong></dd>
-  <dt><code>writable</code></dt>
-  <dd><code>true</code> se e somente se o valor associado com a propriedade pode ser modificada com um {{jsxref("Operators/Assignment_Operators", "assignment operator", "", 1)}}.<br>
-  <strong>Valor padrão é <code>false</code>.</strong></dd>
-  <dt><code>get</code></dt>
-  <dd>Uma função a qual serve com um getter para a propriedade, ou {{jsxref("undefined")}} se não existe getter. A retorno da função será usado como o valor da propriedade.<br>
-  <strong>Valor padrão é {{jsxref("undefined")}}.</strong></dd>
-  <dt><code>set</code></dt>
-  <dd>Uma função a qual server com um setter para a propriedade, ou {{jsxref("undefined")}} se não existe setter. A função receberá como argumento somente o novo valor sendo atribuído à propriedade.<br>
-  <strong>Valor padrão é {{jsxref("undefined")}}.</strong></dd>
- </dl>
- </dd>
-</dl>
+- `obj`
+  - : O objeto no qual se cria ou modifica suas propriedades.
+- `props`
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+  - : Um objeto do qual propriedades enumeráveis constitui descritores para as propriedades serem definidas ou modificadas. Descritores de propriedade presente nos objetos provém em dois principais tipos: descritores de dados e de acesso (veja {{jsxref("Object.defineProperty()")}} para mais detalhes). Descritores têm as seguintes chaves:
 
-<p>O objeto que foi passado para a função.</p>
+    - `configurable`
+      - : `true` se e somente se o tipo deste descritor de propriedades pode ser modificada e se a propriedade pode ser apagada do objeto correspondente.
+        **Valor padrão é `false`.**
+    - `enumerable`
+      - : `true` se e somente se este propriedade aparece durante enumeração das propriedade sobre o objeto correspondente.
+        **Valor padrão é `false`.**
+    - `value`
+      - : O valor associado com a propriedade. Pode ser qualquer valor válido em JavaScript value (número, objeto, função, etc).
+        **Valor padrão é {{jsxref("undefined")}}.**
+    - `writable`
+      - : `true` se e somente se o valor associado com a propriedade pode ser modificada com um {{jsxref("Operators/Assignment_Operators", "assignment operator", "", 1)}}.
+        **Valor padrão é `false`.**
+    - `get`
+      - : Uma função a qual serve com um getter para a propriedade, ou {{jsxref("undefined")}} se não existe getter. A retorno da função será usado como o valor da propriedade.
+        **Valor padrão é {{jsxref("undefined")}}.**
+    - `set`
+      - : Uma função a qual server com um setter para a propriedade, ou {{jsxref("undefined")}} se não existe setter. A função receberá como argumento somente o novo valor sendo atribuído à propriedade.
+        **Valor padrão é {{jsxref("undefined")}}.**
 
-<h2 id="Descrição">Descrição</h2>
+### Valor de retorno
 
-<p><code>Object.defineProperties</code>, em essência, define todas as propriedades correspondentes para as propriedades próprias  enumeráveis de <code>props</code> sobre o objeto <code>obj</code>.</p>
+O objeto que foi passado para a função.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Descrição
 
-<pre class="brush: js">var obj = {};
+`Object.defineProperties`, em essência, define todas as propriedades correspondentes para as propriedades próprias enumeráveis de `props` sobre o objeto `obj`.
+
+## Exemplo
+
+```js
+var obj = {};
 Object.defineProperties(obj, {
   'property1': {
     value: true,
@@ -68,13 +68,14 @@ Object.defineProperties(obj, {
   }
   // etc. etc.
 });
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Assumindo uma execução intocada com todos os nomes e propriedades referindo para seus valores iniciais, <code>Object.defineProperties</code> é quase completamente equivalente (note o comentário em <code>isCallable</code>) para a seguinte reimplementação em JavaScript:</p>
+Assumindo uma execução intocada com todos os nomes e propriedades referindo para seus valores iniciais, `Object.defineProperties` é quase completamente equivalente (note o comentário em `isCallable`) para a seguinte reimplementação em JavaScript:
 
-<pre class="brush: js">function defineProperties(obj, properties) {
+```js
+function defineProperties(obj, properties) {
   function convertToDescriptor(desc) {
     function hasProperty(obj, prop) {
       return Object.prototype.hasOwnProperty.call(obj, prop);
@@ -101,18 +102,18 @@ Object.defineProperties(obj, {
     if (hasProperty(desc, 'get')) {
       var g = desc.get;
 
-      if (!isCallable(g) &amp;&amp; typeof g !== 'undefined')
+      if (!isCallable(g) && typeof g !== 'undefined')
         throw new TypeError('bad get');
       d.get = g;
     }
     if (hasProperty(desc, 'set')) {
       var s = desc.set;
-      if (!isCallable(s) &amp;&amp; typeof s !== 'undefined')
+      if (!isCallable(s) && typeof s !== 'undefined')
         throw new TypeError('bad set');
       d.set = s;
     }
 
-    if (('get' in d || 'set' in d) &amp;&amp; ('value' in d || 'writable' in d))
+    if (('get' in d || 'set' in d) && ('value' in d || 'writable' in d))
       throw new TypeError('identity-confused descriptor');
 
     return d;
@@ -126,51 +127,30 @@ Object.defineProperties(obj, {
   var keys = Object.keys(properties);
   var descs = [];
 
-  for (var i = 0; i &lt; keys.length; i++)
+  for (var i = 0; i < keys.length; i++)
     descs.push([keys[i], convertToDescriptor(properties[keys[i]])]);
 
-  for (var i = 0; i &lt; descs.length; i++)
+  for (var i = 0; i < descs.length; i++)
     Object.defineProperty(obj, descs[i][0], descs[i][1]);
 
   return obj;
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.7', 'Object.defineProperties')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Definição inicial. Implementada no JavaScript 1.8.5</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.defineproperties', 'Object.defineProperties')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.defineproperties', 'Object.defineProperties')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                | Status                       | Comentário                                          |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.2.3.7', 'Object.defineProperties')}}                     | {{Spec2('ES5.1')}}     | Definição inicial. Implementada no JavaScript 1.8.5 |
+| {{SpecName('ES6', '#sec-object.defineproperties', 'Object.defineProperties')}}     | {{Spec2('ES6')}}         |                                                     |
+| {{SpecName('ESDraft', '#sec-object.defineproperties', 'Object.defineProperties')}} | {{Spec2('ESDraft')}} |                                                     |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Object.defineProperties")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Object.defineProperty()")}}</li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li><a href="/en-US/docs/Enumerability_and_ownership_of_properties">Enumerabilidade e direito de propriedades</a></li>
-</ul>
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Object.keys()")}}
+- [Enumerabilidade e direito de propriedades](/pt-BR/docs/Enumerability_and_ownership_of_properties)

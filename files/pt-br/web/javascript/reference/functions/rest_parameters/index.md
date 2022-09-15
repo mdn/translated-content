@@ -3,38 +3,38 @@ title: Parâmetros Rest
 slug: Web/JavaScript/Reference/Functions/rest_parameters
 translation_of: Web/JavaScript/Reference/Functions/rest_parameters
 ---
-<div>{{jsSidebar("Functions")}}</div>
+{{jsSidebar("Functions")}}
 
-<p>A sintaxe de <strong>rest parameter (parâmetros rest)</strong>  nos permite representar um número indefinido de argumentos como um array.</p>
+A sintaxe de **rest parameter (parâmetros rest)** nos permite representar um número indefinido de argumentos como um array.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush: js">function(a, b, ...theArgs) {
+```js
+function(a, b, ...theArgs) {
   // ...
 }
-</pre>
+```
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Se o último argumento nomeado de uma função tiver prefixo com  <code>...</code>, ele irá se tornar um array em que os elemento de 0 (inclusive) até theArgs.length (exclusivo) são disponibilizados pelos argumentos atuais passados à função.</p>
+Se o último argumento nomeado de uma função tiver prefixo com `...`, ele irá se tornar um array em que os elemento de 0 (inclusive) até theArgs.length (exclusivo) são disponibilizados pelos argumentos atuais passados à função.
 
-<p>No exemplo acima, <code>theArgs</code> irá coletar o terceiro argumento da função (porquê o primeiro é mapeado para <code>a</code>, e o segundo para <code>b</code>) e assim por diante em todos os argumentos consecutivos.</p>
+No exemplo acima, `theArgs` irá coletar o terceiro argumento da função (porquê o primeiro é mapeado para `a`, e o segundo para `b`) e assim por diante em todos os argumentos consecutivos.
 
-<h3 id="Diferença_entre_rest_parameters_e_arguments_object">Diferença entre <em>rest parameters</em> e <em><code>arguments</code> object</em></h3>
+### Diferença entre _rest parameters_ e _`arguments` object_
 
-<p>Há três diferenças principais entre <em>rest parameters</em> e os <a href="/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments" title="arguments"><code>arguments</code></a> objects:</p>
+Há três diferenças principais entre _rest parameters_ e os [`arguments`](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments "arguments") objects:
 
-<ul>
- <li><em>rest parameters</em> são os únicos que não foram atribuidos a um nome separado, enquanto os <code>arguments</code> object contêm todos os argumentos passados para a função;</li>
- <li>o objeto <code>arguments</code> não é um array, enquanto  rest parameters são instâncias <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array" title="Array"><code>Array</code></a>,  isso significa que métodos como <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort" title="Array sort method"><code>sort</code></a>, <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map" title="Array map method"><code>map</code></a>, <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" title="Array forEach method"><code>forEach</code></a> ou <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/pop" title="Array pop method"><code>pop</code></a> podem ser aplicados diretamente;</li>
- <li> o objeto <code>arguments</code> possui a funcionalidade adicional de especificar ele mesmo (como a propriedade <code>callee</code>). </li>
-</ul>
+- _rest parameters_ são os únicos que não foram atribuidos a um nome separado, enquanto os `arguments` object contêm todos os argumentos passados para a função;
+- o objeto `arguments` não é um array, enquanto rest parameters são instâncias [`Array`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array "Array"), isso significa que métodos como [`sort`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort "Array sort method"), [`map`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map "Array map method"), [`forEach`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach "Array forEach method") ou [`pop`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/pop "Array pop method") podem ser aplicados diretamente;
+- o objeto `arguments` possui a funcionalidade adicional de especificar ele mesmo (como a propriedade `callee`).
 
-<h3 id="De_arguments_para_array">De arguments para array</h3>
+### De arguments para array
 
-<p>Rest parameters foram criados para reduzir o código padrão que foi induzida pelos argumentos</p>
+Rest parameters foram criados para reduzir o código padrão que foi induzida pelos argumentos
 
-<pre class="brush: js">// Antes rest parameters, o seguinte codigo pode ser encontrado
+```js
+// Antes rest parameters, o seguinte codigo pode ser encontrado
 function f(a, b){
   var args = Array.prototype.slice.call(arguments, f.length);
 
@@ -46,24 +46,26 @@ function f(a, b){
 function(a, b, ...args) {
 
 }
-</pre>
+```
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>Como  <code>theArgs</code> é um array, você pode pegar número de elementos usando a propriedade <code>length</code>:</p>
+Como `theArgs` é um array, você pode pegar número de elementos usando a propriedade `length`:
 
-<pre class="brush: js">function fun1(...theArgs) {
+```js
+function fun1(...theArgs) {
   console.log(theArgs.length);
 }
 
 fun1();  // 0
 fun1(5); // 1
 fun1(5, 6, 7); // 3
-</pre>
+```
 
-<p>No próximo exemplo, nós usamos o rest parâmetro para buscar argumentos do segundo parâmetro para o fim. Nós multiplicamos eles pelo primeiro parâmetro:</p>
+No próximo exemplo, nós usamos o rest parâmetro para buscar argumentos do segundo parâmetro para o fim. Nós multiplicamos eles pelo primeiro parâmetro:
 
-<pre class="brush: js">function multiply(multiplier, ...theArgs) {
+```js
+function multiply(multiplier, ...theArgs) {
   return theArgs.map(function (element) {
     return multiplier * element;
   });
@@ -71,11 +73,12 @@ fun1(5, 6, 7); // 3
 
 var arr = multiply(2, 1, 2, 3);
 console.log(arr); // [2, 4, 6]
-</pre>
+```
 
-<p>O próximo exemplo mostra como você pode usar metodos do Array em rest params, mas não no objeto <code>arguments</code>:</p>
+O próximo exemplo mostra como você pode usar metodos do Array em rest params, mas não no objeto `arguments`:
 
-<pre class="brush: js">function sortRestArgs(...theArgs) {
+```js
+function sortRestArgs(...theArgs) {
   var sortedArgs = theArgs.sort();
   return sortedArgs;
 }
@@ -89,38 +92,25 @@ function sortArguments() {
 
 // throws a TypeError: arguments.sort is not a function
 console.log(sortArguments(5,3,7,1));
-</pre>
+```
 
-<p>a fim de usar o objeto <code>arguments</code>, você precisará converte-lo para um array antes.</p>
+a fim de usar o objeto `arguments`, você precisará converte-lo para um array antes.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-function-definitions', 'Function Definitions')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Especificações                                                                                   | Status               | Comentário          |
+| ------------------------------------------------------------------------------------------------ | -------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-function-definitions', 'Function Definitions')}} | {{Spec2('ES6')}} | Initial definition. |
 
-<h2 id="Compatibilidade">Compatibilidade</h2>
+## Compatibilidade
 
 {{Compat("javascript.functions.rest_parameters")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments" title="arguments">Arguments object</a></li>
- <li><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array" title="Array">Array</a></li>
- <li><a href="/pt-BR/docs/Web/JavaScript/Reference/Functions" title="Functions and function scope">Functions</a></li>
- <li><a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator" title="spread operator">Spread Operator</a></li>
- <li><a class="external" href="http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters">Original proposal at ecmascript.org</a></li>
- <li><a class="external" href="http://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/">JavaScript arguments object and beyond</a></li>
-</ul>
+- [Arguments object](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments "arguments")
+- [Array](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array "Array")
+- [Functions](/pt-BR/docs/Web/JavaScript/Reference/Functions "Functions and function scope")
+- [Spread Operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator "spread operator")
+- [Original proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters)
+- [JavaScript arguments object and beyond](http://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)

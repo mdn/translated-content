@@ -3,87 +3,66 @@ title: Date.prototype.getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getTime
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>getTime()</code></strong> retorna o valor numérico correspondente ao horário da data especificada de acordo com o horário universal.</p>
+O método **`getTime()`** retorna o valor numérico correspondente ao horário da data especificada de acordo com o horário universal.
 
-<p>Você pode usar este método para atribuir uma data e horário a outro objeto {{jsxref("Date")}}. Este método é funcionalmente equivalente ao método {{jsxref("Date.valueof", "valueOf()")}}.</p>
+Você pode usar este método para atribuir uma data e horário a outro objeto {{jsxref("Date")}}. Este método é funcionalmente equivalente ao método {{jsxref("Date.valueof", "valueOf()")}}.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code><var>dateObj</var>.getTime()</code></pre>
+```
+dateObj.getTime()
+```
 
-<h3 id="Retorna">Retorna</h3>
+### Retorna
 
-<p>Um número representando os milissegundos passados entre 1 de Janeiro de 1970 00:00:00 UTC e a data atual.</p>
+Um número representando os milissegundos passados entre 1 de Janeiro de 1970 00:00:00 UTC e a data atual.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_getTime()_para_duplicar_datas">Usando <code>getTime()</code> para duplicar datas</h3>
+### Usando `getTime()` para duplicar datas
 
-<p>Construindo um objeto de data com um horário idêntico.</p>
+Construindo um objeto de data com um horário idêntico.
 
-<pre class="brush: js">// Sendo o mês iniciado em zero, birthday será 10 de Janeiro de 1995
+```js
+// Sendo o mês iniciado em zero, birthday será 10 de Janeiro de 1995
 var birthday = new Date(1994, 12, 10);
 var copy = new Date();
 copy.setTime(birthday.getTime());
-</pre>
+```
 
-<h3 id="Medindo_tempo_de_execução">Medindo tempo de execução</h3>
+### Medindo tempo de execução
 
-<p>Subtrair duas chamadas subsequentes a <code>getTime()</code> em objetos {{jsxref("Date")}} recém criados resultará no intervalo de tempo entre essas duas chamadas. Isso pode ser usado para calcular o tempo de execução de algumas operações. Veja também {{jsxref("Date.now()")}} para evitar instanciar objetos {{jsxref("Date")}} desnecessariamente.</p>
+Subtrair duas chamadas subsequentes a `getTime()` em objetos {{jsxref("Date")}} recém criados resultará no intervalo de tempo entre essas duas chamadas. Isso pode ser usado para calcular o tempo de execução de algumas operações. Veja também {{jsxref("Date.now()")}} para evitar instanciar objetos {{jsxref("Date")}} desnecessariamente.
 
-<pre class="brush: js">var end, start;
+```js
+var end, start;
 
 start = new Date();
-for (var i = 0; i &lt; 1000; i++) {
+for (var i = 0; i < 1000; i++) {
   Math.sqrt(i);
 }
 end = new Date();
 
 console.log('Operation took ' + (end.getTime() - start.getTime()) + ' msec');
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição inicial. Implementado em JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.9', 'Date.prototype.getTime')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.gettime', 'Date.prototype.getTime')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.gettime', 'Date.prototype.getTime')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                | Status                       | Comment                                            |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}         | Definição inicial. Implementado em JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.9.5.9', 'Date.prototype.getTime')}}                         | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES6', '#sec-date.prototype.gettime', 'Date.prototype.getTime')}}         | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-date.prototype.gettime', 'Date.prototype.getTime')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Date.getTime")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Date.prototype.setTime()")}}</li>
- <li>{{jsxref("Date.prototype.valueOf()")}}</li>
- <li>{{jsxref("Date.now()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.setTime()")}}
+- {{jsxref("Date.prototype.valueOf()")}}
+- {{jsxref("Date.now()")}}

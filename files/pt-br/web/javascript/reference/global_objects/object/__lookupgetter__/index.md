@@ -3,65 +3,64 @@ title: Object.prototype.__lookupGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p>O método <code><strong>__lookupGetter__</strong></code> retorna a função limite como uma getter para a específica propriedade.</p>
+O método **`__lookupGetter__`** retorna a função limite como uma getter para a específica propriedade.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code><var>obj</var>.__lookupGetter__(<var>sprop</var>)</code></pre>
+```
+obj.__lookupGetter__(sprop)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>sprop</code></dt>
- <dd>Uma sequência de caracteres contendo o nome da propriedade cuja getter deve retornar.</dd>
-</dl>
+- `sprop`
+  - : Uma sequência de caracteres contendo o nome da propriedade cuja getter deve retornar.
 
-<h3 id="Valores_de_retorno">Valores de retorno</h3>
+### Valores de retorno
 
-<p>A função limite como uma getter para a específica propriedade.</p>
+A função limite como uma getter para a específica propriedade.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Se uma getter foi definida por uma propriedade de um objeto, não é possível referir-se a função getter através da propriedade, porque essa propriedade se refere ao retorno do valor daquela função. <code>__lookupGetter__</code> pode ser usado para obter referência à função getter.</p>
+Se uma getter foi definida por uma propriedade de um objeto, não é possível referir-se a função getter através da propriedade, porque essa propriedade se refere ao retorno do valor daquela função. `__lookupGetter__` pode ser usado para obter referência à função getter.
 
-<p>Agora é possível fazer isso de um jeito uniforme usando:. {{jsxref("Object.getOwnPropertyDescriptor()")}} e  {{jsxref("Object.getPrototypeOf()")}}.</p>
+Agora é possível fazer isso de um jeito uniforme usando:. {{jsxref("Object.getOwnPropertyDescriptor()")}} e {{jsxref("Object.getPrototypeOf()")}}.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: js">var obj = {
+```js
+var obj = {
   get foo() {
-    return Math.random() &gt; 0.5 ? 'foo' : 'bar';
+    return Math.random() > 0.5 ? 'foo' : 'bar';
   }
 };
 
 
 // Non-standard and deprecated way
 obj.__lookupGetter__('foo');
-// (function() { return Math.random() &gt; 0.5 ? 'foo' : 'bar'; })
+// (function() { return Math.random() > 0.5 ? 'foo' : 'bar'; })
 
 
 // Standard-compliant way
 Object.getOwnPropertyDescriptor(obj, "foo").get;
-// (function() { return Math.random() &gt; 0.5 ? 'foo' : 'bar'; })
-</pre>
+// (function() { return Math.random() > 0.5 ? 'foo' : 'bar'; })
+```
 
-<h2 id="Specificações">Specificações</h2>
+## Specificações
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat}}
 
-<h2 id="Ver_também">Ver também</h2>
+## Ver também
 
-<ul>
- <li>{{jsxref("Object.prototype.__lookupSetter__()")}}</li>
- <li>{{jsxref("Functions/get", "get")}} operador</li>
- <li>{{jsxref("Object.getOwnPropertyDescriptor()")}} e {{jsxref("Object.getPrototypeOf()")}}</li>
- <li>{{jsxref("Object.prototype.__defineGetter__()")}}</li>
- <li>{{jsxref("Object.prototype.__defineSetter__()")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">JS Guide: Defining Getters and Setters</a></li>
-</ul>
+- {{jsxref("Object.prototype.__lookupSetter__()")}}
+- {{jsxref("Functions/get", "get")}} operador
+- {{jsxref("Object.getOwnPropertyDescriptor()")}} e {{jsxref("Object.getPrototypeOf()")}}
+- {{jsxref("Object.prototype.__defineGetter__()")}}
+- {{jsxref("Object.prototype.__defineSetter__()")}}
+- [JS Guide: Defining Getters and Setters](/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)

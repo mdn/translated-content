@@ -12,76 +12,52 @@ tags:
   - toUpperCase()
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code>toUpperCase()</code> retorna o valor da string original convertido em letras maiúsculas.</p>
+O método `toUpperCase()` retorna o valor da string original convertido em letras maiúsculas.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.toUpperCase()</code></pre>
+```
+str.toUpperCase()
+```
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>Uma nova string representando a string original convertida em maiúsculas.</p>
+Uma nova string representando a string original convertida em maiúsculas.
 
-<h3 id="Exceções">Exceções</h3>
+### Exceções
 
-<dl>
- <dt>{{jsxref("TypeError")}}</dt>
- <dd>Quando chamado em uma string contendo valor {{jsxref("null")}} ou {{jsxref("undefined")}}, por exemplo, <code>String.prototype.toUpperCase.call(undefined)</code>.</dd>
-</dl>
+- {{jsxref("TypeError")}}
+  - : Quando chamado em uma string contendo valor {{jsxref("null")}} ou {{jsxref("undefined")}}, por exemplo, `String.prototype.toUpperCase.call(undefined)`.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O método <code>toUpperCase()</code> retorna o valor da string convertido para letras maiúsculas. <code>toUpperCase()</code> não altera o valor da string original.</p>
+O método `toUpperCase()` retorna o valor da string convertido para letras maiúsculas. `toUpperCase()` não altera o valor da string original.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Uso_básico">Uso básico</h3>
+### Uso básico
 
-<pre class="brush: js notranslate">console.log('alfabeto'.toUpperCase()); // 'ALFABETO'
-</pre>
+```js
+console.log('alfabeto'.toUpperCase()); // 'ALFABETO'
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição inicial. Implementado no JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.4.18', 'String.prototype.toUpperCase')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.touppercase', 'String.prototype.toUpperCase')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.touppercase', 'String.prototype.toUpperCase')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                | Status                       | Comentário                                         |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                                     | {{Spec2('ES1')}}         | Definição inicial. Implementado no JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.5.4.18', 'String.prototype.toUpperCase')}}                             | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES6', '#sec-string.prototype.touppercase', 'String.prototype.toUpperCase')}}         | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-string.prototype.touppercase', 'String.prototype.toUpperCase')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
+## Navegadores compatíveis
 
 {{Compat("javascript.builtins.String.toUpperCase")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("String.prototype.toLocaleLowerCase()")}}</li>
- <li>{{jsxref("String.prototype.toLocaleUpperCase()")}}</li>
- <li>{{jsxref("String.prototype.toLowerCase()")}}</li>
-</ul>
+- {{jsxref("String.prototype.toLocaleLowerCase()")}}
+- {{jsxref("String.prototype.toLocaleUpperCase()")}}
+- {{jsxref("String.prototype.toLowerCase()")}}

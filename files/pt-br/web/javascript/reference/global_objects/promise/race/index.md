@@ -9,30 +9,31 @@ tags:
   - Promise
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/race
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>Promise.race(iterable)</strong></code> retorna uma promise que resolve ou rejeita assim que uma das promises no iterável resolver ou rejeitar, com o valor ou razão daquela promise.</p>
+O método **`Promise.race(iterable)`** retorna uma promise que resolve ou rejeita assim que uma das promises no iterável resolver ou rejeitar, com o valor ou razão daquela promise.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><var>Promise.race(iterable)</var>;</pre>
+```
+Promise.race(iterable);
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt>iterable</dt>
- <dd>Um objeto iterável, como um {{jsxref("Array")}}. Veja <a href="/en-US/docs/Web/JavaScript/Guide/iterable">iterável</a>.</dd>
-</dl>
+- iterable
+  - : Um objeto iterável, como um {{jsxref("Array")}}. Veja [iterável](/pt-BR/docs/Web/JavaScript/Guide/iterable).
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>A função <code>race</code> retorna uma <code>Promise</code> que é estabelecida da mesma forma que a primeira promise passada estabelecer. Ela resolve ou rejeita, o que acontecer primeiro.</p>
+A função `race` retorna uma `Promise` que é estabelecida da mesma forma que a primeira promise passada estabelecer. Ela resolve ou rejeita, o que acontecer primeiro.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_Promise.race_–_exemplos_com_setTimeout">Usando <code>Promise.race</code> – exemplos com <code>setTimeout</code></h3>
+### Usando `Promise.race` – exemplos com `setTimeout`
 
-<pre class="brush: js">var p1 = new Promise(function(resolve, reject) {
+```js
+var p1 = new Promise(function(resolve, reject) {
     setTimeout(resolve, 500, "one");
 });
 var p2 = new Promise(function(resolve, reject) {
@@ -71,31 +72,18 @@ Promise.race([p5, p6]).then(function(value) {
   console.log(reason); // "six"
   // p6 é mais rápido, então ela rejeita
 });
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-promise.race', 'Promise.race')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definição inicial em um padrão ECMA.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                | Status               | Comentário                           |
+| ---------------------------------------------------------------------------- | -------------------- | ------------------------------------ |
+| {{SpecName('ES6', '#sec-promise.race', 'Promise.race')}} | {{Spec2('ES6')}} | Definição inicial em um padrão ECMA. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Promise.race")}}
 
-<h2 id="Ver_também">Ver também</h2>
+## Ver também
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
-</ul>
+- {{jsxref("Promise")}}

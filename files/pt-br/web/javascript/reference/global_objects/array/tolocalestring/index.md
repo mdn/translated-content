@@ -3,45 +3,37 @@ title: Array.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}O método **`toLocaleString()`** retorna uma representaçao de elementos de um array. Os elementos são convertidos para Strings utilizando seus respectivos métodos `toLocaleString` e essas cadeias são separadas por uma sequência específica de localidade (separados por virgula ",").
 
-<div>O método <code><strong>toLocaleString()</strong></code> retorna uma representaçao de elementos de um array. Os elementos são convertidos para Strings utilizando seus respectivos métodos <code>toLocaleString</code> e essas cadeias são separadas por uma sequência específica de localidade (separados por virgula ","). </div>
+## Sintaxe
 
-<div> </div>
+```
+array.toLocaleString();
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Parâmetros
 
-<pre class="syntaxbox"><code><var>array</var>.toLocaleString();</code>
-</pre>
+- `locales` {{optional_inline}}
+  - : Uma string com uma tag de linguagem BCP 47, ou um array como strings. Para uma forma geral e uma interpretação do arquivo `locales`, veja a página {{jsxref("Intl")}}.
+- `options` {{optional_inline}}
+  - : Um objeto com as propriedades de configurações, para números veja {{jsxref("Number.prototype.toLocaleString()")}}, e para datas veja {{jsxref("Date.prototype.toLocaleString()")}}.
 
-<p> </p>
+### Retorno
 
-<h3 id="Parâmetros">Parâmetros</h3>
+Uma string que representa os elementos de um array.
 
-<dl>
- <dt><code>locales</code> {{optional_inline}}</dt>
- <dd>Uma string com uma tag de linguagem BCP 47, ou um array como strings. Para uma forma geral e uma interpretação do arquivo <code>locales</code>, veja a página {{jsxref("Intl")}}.</dd>
- <dt><code>options</code> {{optional_inline}}</dt>
- <dd>Um objeto com as propriedades de configurações, para números veja {{jsxref("Number.prototype.toLocaleString()")}}, e para datas veja {{jsxref("Date.prototype.toLocaleString()")}}.</dd>
-</dl>
+## Exemplos
 
-<h3 id="Retorno">Retorno</h3>
+### Usando `toLocaleString`
 
-<p>Uma string que representa os elementos de um array.</p>
+Os elementos de um array são convertidos para strings usando seus respectivos métodos `toLocaleString:`
 
-<h2 id="Exemplos">Exemplos</h2>
+- `Object`: {{jsxref("Object.prototype.toLocaleString()")}}
+- `Number`: {{jsxref("Number.prototype.toLocaleString()")}}
+- `Date`: {{jsxref("Date.prototype.toLocaleString()")}}
 
-<h3 id="Usando_toLocaleString">Usando <code>toLocaleString</code></h3>
-
-<p>Os elementos de um array são convertidos para strings usando seus respectivos métodos <code>toLocaleString:</code></p>
-
-<ul>
- <li><code>Object</code>: {{jsxref("Object.prototype.toLocaleString()")}}</li>
- <li><code>Number</code>: {{jsxref("Number.prototype.toLocaleString()")}}</li>
- <li><code>Date</code>: {{jsxref("Date.prototype.toLocaleString()")}}</li>
-</ul>
-
-<pre class="brush: js">var numero = 1337;
+```js
+var numero = 1337;
 var data = new Date();
 var meuArray = [numero, data, 'foo'];
 
@@ -50,43 +42,22 @@ var resultado = meuArray.toLocaleString();
 console.log(resultado);
 // saída '1337,July 26, 2015 at 20:02:23 GMT-3,foo'
 // se estiver no Brasil com o fuso horario GMT-0300 (BRT) de Brasília.
-</pre>
+```
 
-<p>Para mais exemplos, veja as páginas {{jsxref("Intl")}}, {{jsxref("NumberFormat")}}, e {{jsxref("DateTimeFormat")}}.</p>
+Para mais exemplos, veja as páginas {{jsxref("Intl")}}, {{jsxref("NumberFormat")}}, e {{jsxref("DateTimeFormat")}}.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentários</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.4.3', 'Array.prototype.toLocaleString')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.tolocalestring', 'Array.prototype.toLocaleString')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                | Status                   | Comentários        |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
+| {{SpecName('ES3')}}                                                                                                     | {{Spec2('ES3')}}     | Definição inicial. |
+| {{SpecName('ES5.1', '#sec-15.2.4.3', 'Array.prototype.toLocaleString')}}                             | {{Spec2('ES5.1')}} |                    |
+| {{SpecName('ES6', '#sec-array.prototype.tolocalestring', 'Array.prototype.toLocaleString')}} | {{Spec2('ES6')}}     |                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Array.toLocaleString")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Array.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.toString()")}}

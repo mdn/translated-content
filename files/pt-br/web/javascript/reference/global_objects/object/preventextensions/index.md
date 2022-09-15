@@ -6,36 +6,37 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>Object.preventExtensions()</strong></code>  impede que novas propriedades sejam adicionadas a um objeto (isto é, impede futuras extensões ao objeto).</p>
+O método **`Object.preventExtensions()`** impede que novas propriedades sejam adicionadas a um objeto (isto é, impede futuras extensões ao objeto).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">Object.preventExtensions(<var>obj</var>)</pre>
+```
+Object.preventExtensions(obj)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>O objeto a tornar-se não-extensível.</dd>
-</dl>
+- `obj`
+  - : O objeto a tornar-se não-extensível.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>Um objeto tornado não-extensível.</p>
+Um objeto tornado não-extensível.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Um objeto é extensível se novas propriedades puderem der adicionadas ao mesmo. <code>Object.preventExtensions()</code> marca um objeto como não mais extensível, de forma que este nunca terá novas propriedades além daquelas que o objeto tinha quando foi marcado como não-extensível. Note que as propriedades de um objeto não-extensível, em geral, ainda poderão ser <em>apagadas</em>. Tentativas de adicionar novas propriedades a um objeto não-extensível falharão, tanto silenciosamente ou lançando uma exceção {{jsxref("TypeError")}} (mais comumente, mas não exclusivamente, quando em {{jsxref("Functions_and_function_scope/Strict_mode", "strict mode", "", 1)}}).</p>
+Um objeto é extensível se novas propriedades puderem der adicionadas ao mesmo. `Object.preventExtensions()` marca um objeto como não mais extensível, de forma que este nunca terá novas propriedades além daquelas que o objeto tinha quando foi marcado como não-extensível. Note que as propriedades de um objeto não-extensível, em geral, ainda poderão ser _apagadas_. Tentativas de adicionar novas propriedades a um objeto não-extensível falharão, tanto silenciosamente ou lançando uma exceção {{jsxref("TypeError")}} (mais comumente, mas não exclusivamente, quando em {{jsxref("Functions_and_function_scope/Strict_mode", "strict mode", "", 1)}}).
 
-<p><code>Object.preventExtensions()</code> evita apenas a adição de novas propriedades diretas. Proprieades ainda poderão ser adicionadas ao protótipo do objeto.</p>
+`Object.preventExtensions()` evita apenas a adição de novas propriedades diretas. Proprieades ainda poderão ser adicionadas ao protótipo do objeto.
 
-<p>É impossível tornar um objeto extensível novamente uma vez que o mesmo tenha se tornado não-extensível.</p>
+É impossível tornar um objeto extensível novamente uma vez que o mesmo tenha se tornado não-extensível.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: js">// Object.preventExtensions retorna o objeto
+```js
+// Object.preventExtensions retorna o objeto
 // tornado não-extensível.
 var obj = {};
 var obj2 = Object.preventExtensions(obj);
@@ -65,67 +66,45 @@ function fail() {
   nonExtensible.newProperty = 'FAIL';
 }
 fail();
-</pre>
+```
 
-<p>O protótipo não-extensível de um objeto é imutável:</p>
+O protótipo não-extensível de um objeto é imutável:
 
-<pre class="brush: js">var fixed = Object.preventExtensions({});
+```js
+var fixed = Object.preventExtensions({});
 // lança um 'TypeError'.
-fixed.__proto__ = { oh: 'hai' };</pre>
+fixed.__proto__ = { oh: 'hai' };
+```
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>No ES5, se o argumento atribuído a este método não for um objeto (for um primitivo), isso causará um erro de tipo {{jsxref("TypeError")}}. No ES2015, um argumento não-objeto será tratado como se o mesmo fosse um objeto não-extensível comum, simplesmente retornando-o.</p>
+No ES5, se o argumento atribuído a este método não for um objeto (for um primitivo), isso causará um erro de tipo {{jsxref("TypeError")}}. No ES2015, um argumento não-objeto será tratado como se o mesmo fosse um objeto não-extensível comum, simplesmente retornando-o.
 
-<pre class="brush: js">Object.preventExtensions(1);
+```js
+Object.preventExtensions(1);
 // TypeError: 1 não é um objeto (código ES5)
 
 Object.preventExtensions(1);
 // 1                             (código ES2015)
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.10', 'Object.preventExtensions')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Definição inicial. Implementado em JavaScript 1.8.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.preventextensions', 'Object.preventExtensions')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.preventextensions', 'Object.preventExtensions')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                    | Status                       | Comment                                              |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.2.3.10', 'Object.preventExtensions')}}                         | {{Spec2('ES5.1')}}     | Definição inicial. Implementado em JavaScript 1.8.5. |
+| {{SpecName('ES6', '#sec-object.preventextensions', 'Object.preventExtensions')}}     | {{Spec2('ES6')}}         |                                                      |
+| {{SpecName('ESDraft', '#sec-object.preventextensions', 'Object.preventExtensions')}} | {{Spec2('ESDraft')}} |                                                      |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
+{{Compat("javascript.builtins.Object.preventExtensions")}}
 
+## Veja também
 
-<p>{{Compat("javascript.builtins.Object.preventExtensions")}}</p>
-</div>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{jsxref("Object.isExtensible()")}}</li>
- <li>{{jsxref("Object.seal()")}}</li>
- <li>{{jsxref("Object.isSealed()")}}</li>
- <li>{{jsxref("Object.freeze()")}}</li>
- <li>{{jsxref("Object.isFrozen()")}}</li>
- <li>{{jsxref("Reflect.preventExtensions()")}}</li>
-</ul>
+- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Object.seal()")}}
+- {{jsxref("Object.isSealed()")}}
+- {{jsxref("Object.freeze()")}}
+- {{jsxref("Object.isFrozen()")}}
+- {{jsxref("Reflect.preventExtensions()")}}

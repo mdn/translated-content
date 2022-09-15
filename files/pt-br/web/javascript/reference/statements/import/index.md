@@ -11,177 +11,151 @@ tags:
   - import
 translation_of: Web/JavaScript/Reference/Statements/import
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<div>
-<p>A declaração estática <strong><code>import</code></strong> é usada para importar vínculos que são exportados por um outro módulo. Os módulos importados estão em {{JSxRef("Strict_mode","strict mode")}},  declarado como tal ou não. A declaração <code>import</code> não pode ser usada em scripts embutidos, a menos que tal script tenha um <code>type="module"</code>.</p>
+A declaração estática **`import`** é usada para importar vínculos que são exportados por um outro módulo. Os módulos importados estão em {{JSxRef("Strict_mode","strict mode")}}, declarado como tal ou não. A declaração `import` não pode ser usada em scripts embutidos, a menos que tal script tenha um `type="module"`.
 
-<p>Há também uma função dinâmica<strong> </strong><code><strong>import()</strong></code>, que não requer scripts de <code>type="module"</code>.</p>
+Há também uma função dinâmica** \*\***`import()`\*\*, que não requer scripts de `type="module"`.
 
-<p>A compatibilidade com versões anteriores pode ser garantida usando o atributo <code>nomodule </code>na tag de script.</p>
+A compatibilidade com versões anteriores pode ser garantida usando o atributo `nomodule `na tag de script.
 
-<p>A importação dinâmica é útil em situações em que você deseja carregar um módulo condicionalmente ou sob demanda. A forma estática é preferível para carregar dependências iniciais e pode se beneficiar mais prontamente de ferramentas de análise estática e <a href="/en-US/docs/Glossary/Tree_shaking">tree shaking</a>.</p>
-</div>
+A importação dinâmica é útil em situações em que você deseja carregar um módulo condicionalmente ou sob demanda. A forma estática é preferível para carregar dependências iniciais e pode se beneficiar mais prontamente de ferramentas de análise estática e [tree shaking](/pt-BR/docs/Glossary/Tree_shaking).
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre>import <em>defaultExport</em> from "<em>module-name</em>";
-import * as <em>name</em> from "<em>module-name</em>";
-import { <em>export </em>} from "<em>module-name</em>";
-import { <em>export</em> as <em>alias </em>} from "<em>module-name</em>";
-import { <em>export1 , export2</em> } from "<em>module-name</em>";
-import { <em>foo , bar</em> } from "<em>module-name/path/to/specific/un-exported/file</em>";
-import { <em>export1 , export2</em> as <em>alias2</em> , <em>[...]</em> } from "<em>module-name</em>";
-import <em>defaultExport</em>, { <em>export</em> [ , <em>[...]</em> ] } from "<em>module-name</em>";
-import <em>defaultExport</em>, * as <em>name</em> from "<em>module-name</em>";
-import "<em>module-name</em>"; var <em>promise</em> = import("module-name"); // This is a stage 3 proposal.</pre>
+```
+import defaultExport from "module-name";
+import * as name from "module-name";
+import { export } from "module-name";
+import { export as alias } from "module-name";
+import { export1 , export2 } from "module-name";
+import { foo , bar } from "module-name/path/to/specific/un-exported/file";
+import { export1 , export2 as alias2 , [...] } from "module-name";
+import defaultExport, { export [ , [...] ] } from "module-name";
+import defaultExport, * as name from "module-name";
+import "module-name"; var promise = import("module-name"); // This is a stage 3 proposal.
+```
 
-<dl>
- <dt><code>defaultExport</code></dt>
- <dd>Nome que de referência para a exportação padrão do módulo.</dd>
- <dt><code>module-name</code></dt>
- <dd>O módulo para importar. Geralmente, esse é um nome de caminho relativo ou absoluto para o arquivo <code>.js</code> contendo esse módulo. Certos empacotadores podem permitir ou exigir o uso da extensão; verifique seu ambiente. Apenas aspas simples e aspas duplas são permitidas.</dd>
- <dt><code>name</code></dt>
- <dd>Nome do objeto do módulo que será usado como um tipo de espaço de nomes ao se referir às importações.</dd>
- <dt><code>export, exportN</code></dt>
- <dd>Nome das exportações a serem importadas.</dd>
- <dt><code>alias, aliasN</code></dt>
- <dd>Nomes que se referem às importações nomeadas.</dd>
-</dl>
+- `defaultExport`
+  - : Nome que de referência para a exportação padrão do módulo.
+- `module-name`
+  - : O módulo para importar. Geralmente, esse é um nome de caminho relativo ou absoluto para o arquivo `.js` contendo esse módulo. Certos empacotadores podem permitir ou exigir o uso da extensão; verifique seu ambiente. Apenas aspas simples e aspas duplas são permitidas.
+- `name`
+  - : Nome do objeto do módulo que será usado como um tipo de espaço de nomes ao se referir às importações.
+- `export, exportN`
+  - : Nome das exportações a serem importadas.
+- `alias, aliasN`
+  - : Nomes que se referem às importações nomeadas.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O parâmetro name é o nome do "objeto módulo", que será usado como um tipo de namespace para se referir às exportações. Os parâmetros de exportação especificam exportações nomeadas individuais, enquanto a importação * como sintaxe de nome importa todos eles. Abaixo estão alguns exemplos para esclarecer a sintaxe.</p>
+O parâmetro name é o nome do "objeto módulo", que será usado como um tipo de namespace para se referir às exportações. Os parâmetros de exportação especificam exportações nomeadas individuais, enquanto a importação \* como sintaxe de nome importa todos eles. Abaixo estão alguns exemplos para esclarecer a sintaxe.
 
-<h3 id="Importar_o_conteúdo_de_todo_um_módulo">Importar o conteúdo de todo um módulo</h3>
+### Importar o conteúdo de todo um módulo
 
-<p>Isso insere <code>myModule</code> no escopo atual, contendo todas as exportações do módulo no arquivo localizado em <code>/modules/my-module.js</code>.</p>
+Isso insere `myModule` no escopo atual, contendo todas as exportações do módulo no arquivo localizado em `/modules/my-module.js`.
 
-<pre><code>import * as myModule from '/modules/my-module.js';</code></pre>
+```
+import * as myModule from '/modules/my-module.js';
+```
 
-<p>Aqui, acessar as exportações significa usar o nome do módulo ("myModule" neste caso) como um namespace. Por exemplo, se o módulo importado acima incluir um export <code>doAllTheAmazingThings()</code>, você o chamaria assim:</p>
+Aqui, acessar as exportações significa usar o nome do módulo ("myModule" neste caso) como um namespace. Por exemplo, se o módulo importado acima incluir um export `doAllTheAmazingThings()`, você o chamaria assim:
 
-<pre><code>myModule.doAllTheAmazingThings();</code></pre>
+```
+myModule.doAllTheAmazingThings();
+```
 
-<h3 id="Importar_uma_única_exportação_de_um_módulo">Importar uma única exportação de um módulo</h3>
+### Importar uma única exportação de um módulo
 
-<p>Dado um objeto ou valor chamado <code>myExport</code>que foi exportado do módulo <code>my-module</code>  implicitamente (porque o módulo inteiro é exportado) ou explicitamente (usando a instrução {{JSxRef("Statements/export", "export")}} statement), isso insere  <code>myExport</code> no escopo atual.</p>
+Dado um objeto ou valor chamado `myExport`que foi exportado do módulo `my-module` implicitamente (porque o módulo inteiro é exportado) ou explicitamente (usando a instrução {{JSxRef("Statements/export", "export")}} statement), isso insere `myExport` no escopo atual.
 
-<pre><code>import {myExport} from '</code>/modules/my-module.js';</pre>
+```
+import {myExport} from '/modules/my-module.js';
+```
 
-<h3 id="Importar_várias_exportações_do_módulo">Importar várias exportações do módulo</h3>
+### Importar várias exportações do módulo
 
-<p>Isso inclui tanto <code>foo</code> como <code>bar</code>  no escopo atual.</p>
+Isso inclui tanto `foo` como `bar` no escopo atual.
 
-<h3 id="Importar_uma_exportação_com_um_alias_mais_conveniente">Importar uma exportação com um alias mais conveniente</h3>
+### Importar uma exportação com um alias mais conveniente
 
-<p>Você pode renomear uma exportação ao importá-la. Por exemplo, isso insere <code>shortName</code> no escopo atual.</p>
+Você pode renomear uma exportação ao importá-la. Por exemplo, isso insere `shortName` no escopo atual.
 
-<p> </p>
+```
+import {reallyReallyLongModuleExportName as shortName}
+  from '/modules/my-module.js';
+```
 
-<pre><code>import {reallyReallyLongModuleExportName as shortName}
-</code>  from '/modules/my-module.js';</pre>
+### Renomear várias exportações durante a importação
 
-<h3 id="Renomear_várias_exportações_durante_a_importação">Renomear várias exportações durante a importação</h3>
+Importe várias exportações de um módulo com aliases convenientes.
 
-<p>Importe várias exportações de um módulo com aliases convenientes.</p>
-
-<p> </p>
-
-<pre><code>import {
+```
+import {
   reallyReallyLongModuleExportName as shortName,
   anotherLongModuleName as short
-</code>} from '/modules/my-module.js';</pre>
+} from '/modules/my-module.js';
+```
 
-<h3 id="Importar_um_módulo_apenas_para_seus_efeitos_colaterais">Importar um módulo apenas para seus efeitos colaterais</h3>
+### Importar um módulo apenas para seus efeitos colaterais
 
-<p>Importe um módulo inteiro somente para efeitos colaterais, sem importar nada. Isso executa o código global do módulo, mas na verdade não importa nenhum valor.</p>
+Importe um módulo inteiro somente para efeitos colaterais, sem importar nada. Isso executa o código global do módulo, mas na verdade não importa nenhum valor.
 
-<p> </p>
+```
+import '/modules/my-module.js';
+```
 
-<pre>import '/modules/my-module.js';</pre>
+### Importando Padrões
 
-<h3 id="Importando_Padrões">Importando Padrões</h3>
+É possível ter um padrão {{JSxRef ("Declarações / exportação", "exportação")}} (seja um objeto, uma função, uma classe etc.). A declaração de importação pode então ser usada para importar esses padrões.
 
-<p>É possível ter um padrão {{JSxRef ("Declarações / exportação", "exportação")}} (seja um objeto, uma função, uma classe etc.). A declaração de importação pode então ser usada para importar esses padrões.</p>
+A versão mais simples importa diretamente o padrão:
 
-<p> </p>
+```
+import myDefault from '/modules/my-module.js';
+```
 
-<p>A versão mais simples importa diretamente o padrão:</p>
+Também é possível usar a sintaxe padrão com as vistas acima (importações de namespace ou importações nomeadas). Em tais casos, a importação padrão terá que ser declarada primeiro. Por exemplo:
 
-<p> </p>
+```
+import myDefault, * as myModule from '/modules/my-module.js';
+// myModule used as a namespace
+```
 
-<pre><code>import myDefault from '/modules/my-module.</code>js';</pre>
+Ou
 
-<p> </p>
+```
+import myDefault, {foo, bar} from '/modules/my-module.js';
+// specific, named imports
+```
 
-<p>Também é possível usar a sintaxe padrão com as vistas acima (importações de namespace ou importações nomeadas). Em tais casos, a importação padrão terá que ser declarada primeiro. Por exemplo:</p>
+### Importações Dinâmicas
 
-<p> </p>
+A palavra-chave `import` pode ser chamada como uma função para importar dinamicamente um módulo. Quando usado dessa maneira, retorna uma promessa.
 
-<pre><code>import myDefault, * as myModule from '/modules/my-module.js';
-// myModule used as a namespac</code>e</pre>
-
-<p>Ou</p>
-
-<p> </p>
-
-<pre><code>import myDefault, {foo, bar} from '/modules/my-module.js';
-</code>// specific, named imports</pre>
-
-<p> </p>
-
-<h3 id="Importações_Dinâmicas">Importações Dinâmicas</h3>
-
-<p> </p>
-
-<p>A palavra-chave <code>import</code> pode ser chamada como uma função para importar dinamicamente um módulo. Quando usado dessa maneira, retorna uma promessa.</p>
-
-<p> </p>
-
-<pre><code>import('/modules/my-module.js')
-  .then((module) =&gt; {
+```
+import('/modules/my-module.js')
+  .then((module) => {
     // Do something with the module.
- </code> });</pre>
+  });
+```
 
-<p> </p>
+Este formulário também suporta a palavra-chave await.
 
-<p>Este formulário também suporta a palavra-chave await.</p>
+```
+let module = await import('/modules/my-module.js');
+```
 
-<p> </p>
+## Exemplos
 
-<pre><code>let module = await import('/modules/my-module.js');</code>
-</pre>
+### Padrão Import
 
-<p> </p>
+O código abaixo mostra como importar um módulo secundário para auxiliar no processamento de uma requisição AJAX que retorna um JSON.
 
-<p> </p>
+#### O Módulo: file.js
 
-<p> </p>
-
-<p> </p>
-
-<p> </p>
-
-<p> </p>
-
-<p> </p>
-
-<p> </p>
-
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Padrão_Import">Padrão Import</h3>
-
-<p>O código abaixo mostra como importar um módulo secundário para auxiliar no processamento de uma requisição AJAX que retorna um JSON.</p>
-
-<p> </p>
-
-<h4 id="O_Módulo_file.js">O Módulo: file.js</h4>
-
-<p> </p>
-
-<pre><code>function getJSON(url, callback) {
+```
+function getJSON(url, callback) {
   let xhr = new XMLHttpRequest();
   xhr.onload = function () {
     callback(this.responseText)
@@ -191,96 +165,60 @@ import "<em>module-name</em>"; var <em>promise</em> = import("module-name"); // 
 }
 
 export function getUsefulContents(url, callback) {
-  getJSON(url, data =&gt; callback(JSON.parse(data)));
-}</code></pre>
+  getJSON(url, data => callback(JSON.parse(data)));
+}
+```
 
-<p><strong>O programa principal: main.js</strong></p>
+**O programa principal: main.js**
 
-<p> </p>
-
-<pre class="brush: js">im<code>port { getUsefulContents } from '/modules/file.js';
+```js
+import { getUsefulContents } from '/modules/file.js';
 
 getUsefulContents('http://www.example.com',
-    data =&gt; { doSomethingUseful(data); });</code></pre>
+    data => { doSomethingUseful(data); });
+```
 
-<h3 id="Dynamic_Import">Dynamic Import</h3>
+### Dynamic Import
 
-<p>Este exemplo mostra como carregar a funcionalidade em uma página com base em uma ação do usuário, nesse caso, um clique no botão e, em seguida, chamar uma função dentro desse módulo. Esta não é a única maneira de implementar essa funcionalidade. A função <code>import()</code> também é compatível com <code>await</code>.</p>
+Este exemplo mostra como carregar a funcionalidade em uma página com base em uma ação do usuário, nesse caso, um clique no botão e, em seguida, chamar uma função dentro desse módulo. Esta não é a única maneira de implementar essa funcionalidade. A função `import()` também é compatível com `await`.
 
-<p> </p>
-
-<pre class="brush: js"><code>const main = document.querySelector("main");
-for (const link of document.querySelectorAll("nav &gt; a")) {
-  link.addEventListener("click", e =&gt; {
+```js
+const main = document.querySelector("main");
+for (const link of document.querySelectorAll("nav > a")) {
+  link.addEventListener("click", e => {
     e.preventDefault();
 
     import('/modules/my-module.js')
-      .then(module =&gt; {
+      .then(module => {
         module.loadPageInto(main);
       })
-      .catch(err =&gt; {
+      .catch(err => {
         main.textContent = err.message;
       });
   });
-}</code></pre>
+}
+```
 
-<p> </p>
+## Especificações
 
-<p> </p>
+| Especificação                                                                                          | Estado                       | Comentário         |
+| ------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
+| ["function-like" dynamic `import()` proposal](https://github.com/tc39/proposal-dynamic-import/#import) | Stage 3                      |                    |
+| {{SpecName("ESDraft", "#sec-imports", "Imports")}}                                   | {{Spec2("ESDraft")}} |                    |
+| {{SpecName("ES2018", "#sec-imports", "Imports")}}                                       | {{Spec2("ES2018")}}     |                    |
+| {{SpecName("ES2017", "#sec-imports", "Imports")}}                                       | {{Spec2("ES2017")}}     |                    |
+| {{SpecName("ES2016", "#sec-imports", "Imports")}}                                       | {{Spec2("ES2016")}}     |                    |
+| {{SpecName("ES2015", "#sec-imports", "Imports")}}                                       | {{Spec2("ES2015")}}     | Definição inicial. |
 
-<h2 id="Especificações">Especificações</h2>
+## Compatibilidade com navegadores
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td><a href="https://github.com/tc39/proposal-dynamic-import/#import">"function-like" dynamic <code>import()</code> proposal</a></td>
-   <td>Stage 3</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("ESDraft", "#sec-imports", "Imports")}}</td>
-   <td>{{Spec2("ESDraft")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("ES2018", "#sec-imports", "Imports")}}</td>
-   <td>{{Spec2("ES2018")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("ES2017", "#sec-imports", "Imports")}}</td>
-   <td>{{Spec2("ES2017")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("ES2016", "#sec-imports", "Imports")}}</td>
-   <td>{{Spec2("ES2016")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("ES2015", "#sec-imports", "Imports")}}</td>
-   <td>{{Spec2("ES2015")}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+{{Compat("javascript.statements.import")}}
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Veja também
 
-<p>{{Compat("javascript.statements.import")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{JSxRef("Statements/export", "export")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import.meta"><code>import.meta</code></a></li>
- <li><a href="https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/">Previewing ES6 Modules and more from ES2015, ES2016 and beyond</a></li>
- <li><a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES6 in Depth: Modules</a>, Hacks blog post by Jason Orendorff</li>
- <li><a href="https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/">ES modules: A cartoon deep-dive</a>, Hacks blog post by Lin Clark</li>
- <li><a href="http://exploringjs.com/es6/ch_modules.html">Axel Rauschmayer's book: "Exploring JS: Modules"</a></li>
-</ul>
+- {{JSxRef("Statements/export", "export")}}
+- [`import.meta`](/pt-BR/docs/Web/JavaScript/Reference/Statements/import.meta)
+- [Previewing ES6 Modules and more from ES2015, ES2016 and beyond](https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/)
+- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
+- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
+- [Axel Rauschmayer's book: "Exploring JS: Modules"](http://exploringjs.com/es6/ch_modules.html)

@@ -7,36 +7,35 @@ tags:
   - Operador
 translation_of: Web/JavaScript/Reference/Operators/await
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>O operador <code>await</code> é utilizado para esperar por uma {{jsxref("Promise")}}. Ele pode ser usado apenas dentro de uma {{jsxref("Statements/async_function", "async function")}}.</p>
+O operador `await` é utilizado para esperar por uma {{jsxref("Promise")}}. Ele pode ser usado apenas dentro de uma {{jsxref("Statements/async_function", "async function")}}.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">[<em>rv</em>] = await <em>expressão</em>;</pre>
+```
+[rv] = await expressão;
+```
 
-<dl>
- <dt><code>expressão</code></dt>
- <dd>Uma {{jsxref("Promise")}} ou qualquer valor para esperar uma resolução.</dd>
- <dt><code>rv</code></dt>
- <dd>
- <p>Retorna um valor final da promise, ou o próprio valor se ele não for uma <code>Promise</code>.</p>
- </dd>
-</dl>
+- `expressão`
+  - : Uma {{jsxref("Promise")}} ou qualquer valor para esperar uma resolução.
+- `rv`
+  - : Retorna um valor final da promise, ou o próprio valor se ele não for uma `Promise`.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>A expressão <code>await</code> faz a execução de uma função <code>async</code> pausar, para esperar pelo retorno da <code>Promise</code>, e resume a execução da função <code>async</code> quando o valor da Promise é resolvido. Ele então retorna o valor final da Promise. Se esse valor não for uma <code>Promise</code>, ele é convertido para uma <code>Promise </code>resolvida.</p>
+A expressão `await` faz a execução de uma função `async` pausar, para esperar pelo retorno da `Promise`, e resume a execução da função `async` quando o valor da Promise é resolvido. Ele então retorna o valor final da Promise. Se esse valor não for uma `Promise`, ele é convertido para uma `Promise `resolvida.
 
-<p>Se a <code>Promise</code> for rejeitada, a expressão <code>await</code> invoca uma Exception com o valor rejeitado.</p>
+Se a `Promise` for rejeitada, a expressão `await` invoca uma Exception com o valor rejeitado.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>Se uma <code>Promise</code> é passada para uma expressão <code>await</code>, ele espera pela sefinalização da <code>Promise</code> e retorna seu valor final.</p>
+Se uma `Promise` é passada para uma expressão `await`, ele espera pela sefinalização da `Promise` e retorna seu valor final.
 
-<pre class="brush: js">function resolveAfter2Seconds(x) {
-  return new Promise(resolve =&gt; {
-    setTimeout(() =&gt; {
+```js
+function resolveAfter2Seconds(x) {
+  return new Promise(resolve => {
+    setTimeout(() => {
       resolve(x);
     }, 2000);
   });
@@ -47,54 +46,43 @@ async function f1() {
   console.log(x); // 10
 }
 f1();
-</pre>
+```
 
-<p>Se o valor não for uma <code>Promise</code>, ele converte o valor para uma <code>Promise </code>resolvida,  e espera por ele.</p>
+Se o valor não for uma `Promise`, ele converte o valor para uma `Promise `resolvida, e espera por ele.
 
-<pre class="brush: js">async function f2() {
+```js
+async function f2() {
   var y = await 20;
   console.log(y); // 20
 }
-f2();</pre>
+f2();
+```
 
-<p>Se a <code>Promise</code> for rejeitada, o valor rejeitado é invocado em uma Exception.</p>
+Se a `Promise` for rejeitada, o valor rejeitado é invocado em uma Exception.
 
-<pre class="brush: js">async function f3() {
+```js
+async function f3() {
   try {
     var z = await Promise.reject(30);
   } catch(e) {
     console.log(e); // 30
   }
 }
-f3();</pre>
+f3();
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-async-function-definitions', 'async functions')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Definição inicial no ES2017.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                            | Status                       | Comentário                   |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------- |
+| {{SpecName('ESDraft', '#sec-async-function-definitions', 'async functions')}} | {{Spec2('ESDraft')}} | Definição inicial no ES2017. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.operators.await")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Statements/async_function", "async function")}}</li>
- <li>{{jsxref("Operators/async_function", "async function expression")}}</li>
- <li>{{jsxref("AsyncFunction")}} object</li>
-</ul>
+- {{jsxref("Statements/async_function", "async function")}}
+- {{jsxref("Operators/async_function", "async function expression")}}
+- {{jsxref("AsyncFunction")}} object

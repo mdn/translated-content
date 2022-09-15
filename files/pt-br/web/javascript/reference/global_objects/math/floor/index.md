@@ -7,38 +7,40 @@ tags:
   - Method
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/floor
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary" name="Summary">Resumo</h2>
+## Resumo
 
-<p>A função <code><strong>Math.floor(x)</strong></code> retorna o menor número inteiro dentre o número "x".</p>
+A função **`Math.floor(x)`** retorna o menor número inteiro dentre o número "x".
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code>Math.floor(<em>x</em>) </code></pre>
+```
+Math.floor(x)
+```
 
-<h3 id="Parameters" name="Parameters">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Um número.</dd>
-</dl>
+- `x`
+  - : Um número.
 
-<h2 id="Description" name="Description">Descrição</h2>
+## Descrição
 
-<p>Por <code>floor</code> ser um método estático de <code>Math</code>, você sempre irá usar como <code>Math.floor()</code>,e não como método do objeto <code>Math que você criou</code>.</p>
+Por `floor` ser um método estático de `Math`, você sempre irá usar como `Math.floor()`,e não como método do objeto `Math que você criou`.
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<h3 id="Example:_Using_Math.floor" name="Example:_Using_Math.floor">Exemplo: Usando <code>Math.floor</code></h3>
+### Exemplo: Usando `Math.floor`
 
-<pre class="brush:js">Math.floor( 45.95); //  45
+```js
+Math.floor( 45.95); //  45
 Math.floor(-45.95); // -46
-</pre>
+```
 
-<h3 id="Example:_Decimal_adjustment" name="Example:_Decimal_adjustment">Exemplo: Ajuste Decimal</h3>
+### Exemplo: Ajuste Decimal
 
-<pre class="brush:js">// Closure
+```js
+// Closure
 (function(){
 
 	/**
@@ -57,7 +59,7 @@ Math.floor(-45.95); // -46
 		value = +value;
 		exp = +exp;
 		// If the value is not a number or the exp is not an integer...
-		if (isNaN(value) || !(typeof exp === 'number' &amp;&amp; exp % 1 === 0)) {
+		if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
 			return NaN;
 		}
 		// Shift
@@ -108,44 +110,23 @@ Math.ceil10(55.51, -1); // 55.6
 Math.ceil10(51, 1); // 60
 Math.ceil10(-55.59, -1); // -55.5
 Math.ceil10(-59, 1); // -50
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1st Edition. Implemented in JavaScript 1.0</td>
-   <td>Standard</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.2.9', 'Math.floor')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.floor', 'Math.floor')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                        | Status                   | Comment             |
+| -------------------------------------------------------------------- | ------------------------ | ------------------- |
+| ECMAScript 1st Edition. Implemented in JavaScript 1.0                | Standard                 | Initial definition. |
+| {{SpecName('ES5.1', '#sec-15.8.2.9', 'Math.floor')}} | {{Spec2('ES5.1')}} |                     |
+| {{SpecName('ES6', '#sec-math.floor', 'Math.floor')}} | {{Spec2('ES6')}}     |                     |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Math.floor")}}
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>The {{jsxref("Global_Objects/Math", "Math")}} object it belongs to.</li>
- <li>{{jsxref("Math.abs")}}</li>
- <li>{{jsxref("Math.ceil()")}}</li>
- <li>{{jsxref("Math.round()")}}</li>
-</ul>
+- The {{jsxref("Global_Objects/Math", "Math")}} object it belongs to.
+- {{jsxref("Math.abs")}}
+- {{jsxref("Math.ceil()")}}
+- {{jsxref("Math.round()")}}

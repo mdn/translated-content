@@ -3,86 +3,62 @@ title: Math.sin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sin
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/sin
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>A função <strong><code>Math.sin()</code></strong> retorna o seno de um número.</p>
+A função **`Math.sin()`** retorna o seno de um número.
 
-<div>{{EmbedInteractiveExample("pages/js/math-sin.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-sin.html")}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code>Math.sin(<var>x</var>)</code></pre>
+```
+Math.sin(x)
+```
 
-<h3 id="Paramêtros">Paramêtros</h3>
+### Paramêtros
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Um número (dado em radianos)</dd>
-</dl>
+- `x`
+  - : Um número (dado em radianos)
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>O seno de um número dado.</p>
+O seno de um número dado.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O método <code>Math.sin()</code> retorna um valor numérico entre -1 e 1, que representa o seno de um angulo dado em radianos.</p>
+O método `Math.sin()` retorna um valor numérico entre -1 e 1, que representa o seno de um angulo dado em radianos.
 
-<p>Como <code>sin()</code> é um método estático de <code>Math</code>, você sempre o usa como <code>Math.sin()</code>, ao invés de um método de um objeto Math que você criou (<code>Math</code> não é um construtor).</p>
+Como `sin()` é um método estático de `Math`, você sempre o usa como `Math.sin()`, ao invés de um método de um objeto Math que você criou (`Math` não é um construtor).
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_Math.sin()">Usando <code>Math.sin()</code></h3>
+### Usando `Math.sin()`
 
-<pre class="brush: js">Math.sin(0);           // 0
+```js
+Math.sin(0);           // 0
 Math.sin(1);           // 0.8414709848078965
 
 Math.sin(Math.PI / 2); // 1
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição inicial. Implementado no JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.2.16', 'Math.sin')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.sin', 'Math.sin')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.sin', 'Math.sin')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                        | Status                       | Comment                                            |
+| -------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Definição inicial. Implementado no JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.2.16', 'Math.sin')}} | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES6', '#sec-math.sin', 'Math.sin')}}     | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-math.sin', 'Math.sin')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Math.sin")}}</p>
+{{Compat("javascript.builtins.Math.sin")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Math.acos()")}}</li>
- <li>{{jsxref("Math.asin()")}}</li>
- <li>{{jsxref("Math.atan()")}}</li>
- <li>{{jsxref("Math.atan2()")}}</li>
- <li>{{jsxref("Math.cos()")}}</li>
- <li>{{jsxref("Math.tan()")}}</li>
-</ul>
+- {{jsxref("Math.acos()")}}
+- {{jsxref("Math.asin()")}}
+- {{jsxref("Math.atan()")}}
+- {{jsxref("Math.atan2()")}}
+- {{jsxref("Math.cos()")}}
+- {{jsxref("Math.tan()")}}

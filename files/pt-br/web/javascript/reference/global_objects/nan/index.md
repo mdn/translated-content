@@ -3,75 +3,53 @@ title: NaN
 slug: Web/JavaScript/Reference/Global_Objects/NaN
 translation_of: Web/JavaScript/Reference/Global_Objects/NaN
 ---
-<div>
-<div>
-<div>{{jsSidebar("Objects")}}</div>
-</div>
-</div>
+{{jsSidebar("Objects")}}
 
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p>A propriedade global <code><strong>NaN</strong></code> é um valor especial que significa <em>Not-A-Number</em> (não é um número).</p>
+A propriedade global **`NaN`** é um valor especial que significa _Not-A-Number_ (não é um número).
 
-<p>{{js_property_attributes(0,0,0)}}</p>
+{{js_property_attributes(0,0,0)}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code>NaN</code></pre>
+```
+NaN
+```
 
-<h2 id="Description" name="Description">Descrição</h2>
+## Descrição
 
-<p><code>NaN</code> é uma propriedade do <em>objeto global</em>.</p>
+`NaN` é uma propriedade do _objeto global_.
 
-<p>O valor inicial de <code>NaN</code> é Not-A-Number - o mesmo valor de <code>Number.NaN</code>. Nos navegadores modernos, o <code>NaN</code> é uma propriedade somente leitura e não configurável. Mesmo quando não for este o caso, evite sobrescrevê-lo.</p>
+O valor inicial de `NaN` é Not-A-Number - o mesmo valor de `Number.NaN`. Nos navegadores modernos, o `NaN` é uma propriedade somente leitura e não configurável. Mesmo quando não for este o caso, evite sobrescrevê-lo.
 
-<p>Não é usual a utilização do <code>NaN</code>. Ele é retornado quando uma operação matemática falha (Math.sqrt(-1)) ou quando uma função tenta transformar uma string em inteiro (parseInt("blabla")).</p>
+Não é usual a utilização do `NaN`. Ele é retornado quando uma operação matemática falha (Math.sqrt(-1)) ou quando uma função tenta transformar uma string em inteiro (parseInt("blabla")).
 
-<h3 id="Testando_um_valor_NaN">Testando um valor <code>NaN</code></h3>
+### Testando um valor `NaN`
 
-<p>Os operadores de igualdade (<code>==</code> e <code>===</code>) não podem ser usados para testar um valor NaN. Ao invés disso, utilize {{jsxref("Number.isNaN()")}} ou {{jsxref("Global_Objects/isNaN", "isNaN()")}}.</p>
+Os operadores de igualdade (`==` e `===`) não podem ser usados para testar um valor NaN. Ao invés disso, utilize {{jsxref("Number.isNaN()")}} ou {{jsxref("Global_Objects/isNaN", "isNaN()")}}.
 
-<pre class="brush: js">NaN === NaN;        // falso
+```js
+NaN === NaN;        // falso
 Number.NaN === NaN; // falso
 isNaN(NaN);         // verdadeiro
 isNaN(Number.NaN);  // verdadeiro
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentários</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1st Edition.</td>
-   <td>Standard</td>
-   <td>Definição inicial. Implementado no JavaScript 1.3</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.1.1.1', 'NaN')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-value-properties-of-the-global-object-nan', 'NaN')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                        | Status                   | Comentários                                       |
+| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------- |
+| ECMAScript 1st Edition.                                                                              | Standard                 | Definição inicial. Implementado no JavaScript 1.3 |
+| {{SpecName('ES5.1', '#sec-15.1.1.1', 'NaN')}}                                         | {{Spec2('ES5.1')}} |                                                   |
+| {{SpecName('ES6', '#sec-value-properties-of-the-global-object-nan', 'NaN')}} | {{Spec2('ES6')}}     |                                                   |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.NaN")}}
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Number.NaN")}}</li>
- <li>{{jsxref("Number.isNaN()")}}</li>
- <li>{{jsxref("Global_Objects/isNaN", "isNaN()")}}</li>
-</ul>
+- {{jsxref("Number.NaN")}}
+- {{jsxref("Number.isNaN()")}}
+- {{jsxref("Global_Objects/isNaN", "isNaN()")}}

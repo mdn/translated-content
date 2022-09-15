@@ -7,62 +7,71 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/Reference/Operators/Spread_syntax
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}**Sintaxe de Espalhamento (Spread syntax)** permite que um objeto iterável, como uma expressão de array ou uma string seja expandido para ser usado onde zero ou mais argumentos (para chamadas de funções) ou elementos (para arrays _literais_) são esperados, ou que um objeto seja expandido onde zero ou mais pares _propriedade:valor_ (para objetos _literais_) são esperados.{{EmbedInteractiveExample("pages/js/expressions-spreadsyntax.html")}}
 
-<div><strong>Sintaxe de Espalhamento (Spread syntax)</strong> permite que um objeto iterável, como uma expressão de array ou uma string seja expandido para ser usado onde zero ou mais argumentos (para chamadas de funções) ou elementos (para arrays <em>literais</em>) são esperados, ou que um objeto seja expandido onde zero ou mais pares <em>propriedade:valor</em> (para objetos <em>literais</em>) são esperados.</div>
+## Sintaxe
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-spreadsyntax.html")}}</div>
+Para chamada de funções:
 
-<h2 id="Sintaxe">Sintaxe</h2>
+```
+myFunction(...iterableObj);
+```
 
-<p>Para chamada de funções:</p>
+Para arrays literais ou strings:
 
-<pre class="syntaxbox">myFunction(...iterableObj);
-</pre>
+```
+[...iterableObj, '4', 'five', 6];
+```
 
-<p>Para arrays literais ou strings:</p>
+Para objetos literais (novo em ECMAScript 2018; stage 3 draft):
 
-<pre class="syntaxbox">[...iterableObj, '4', 'five', 6];</pre>
+```
+let objClone = { ...obj };
+```
 
-<p>Para objetos literais (novo em ECMAScript 2018; stage 3 draft):</p>
+## Exemplos
 
-<pre class="syntaxbox">let objClone = { ...obj };</pre>
+### Espalhamento e chamadas de funções
 
-<h2 id="Exemplos">Exemplos</h2>
+#### Substituindo apply
 
-<h3 id="Espalhamento_e_chamadas_de_funções">Espalhamento e chamadas de funções</h3>
+É comum usar {{jsxref( "Function.prototype.apply")}} em casos onde você quer usar os elementos de um array como argumentos para uma função.
 
-<h4 id="Substituindo_apply">Substituindo apply</h4>
-
-<p>É comum usar {{jsxref( "Function.prototype.apply")}} em casos onde você quer usar os elementos de um array como argumentos para uma função.</p>
-
-<pre class="brush: js">function myFunction(x, y, z) { }
+```js
+function myFunction(x, y, z) { }
 var args = [0, 1, 2];
-myFunction.apply(null, args);</pre>
+myFunction.apply(null, args);
+```
 
-<p>Com a sintaxe de espalhamento, o código acima pode ser escrito assim:</p>
+Com a sintaxe de espalhamento, o código acima pode ser escrito assim:
 
-<pre class="brush: js">function myFunction(x, y, z) { }
+```js
+function myFunction(x, y, z) { }
 var args = [0, 1, 2];
-myFunction(...args);</pre>
+myFunction(...args);
+```
 
-<p>Qualquer argumento numa lista de argumentos pode usar a sintaxe de espalhamento e pode ser usado mais de uma vez.</p>
+Qualquer argumento numa lista de argumentos pode usar a sintaxe de espalhamento e pode ser usado mais de uma vez.
 
-<pre class="brush: js">function myFunction(v, w, x, y, z) { }
+```js
+function myFunction(v, w, x, y, z) { }
 var args = [0, 1];
-myFunction(-1, ...args, 2, ...[3]);</pre>
+myFunction(-1, ...args, 2, ...[3]);
+```
 
-<h4 id="Apply_para_new">Apply para new</h4>
+#### Apply para new
 
-<p>Quando um construtor é chamado com <code>new</code>, não é possivel usar diretamente um array e <code>apply</code> (<code>apply</code> executa o <code>[[Call]]</code> e não o <code>[[Construct]]</code>). No entanto, um array pode facilmente ser usado com <code>new</code> graças ao operador de espalhamento:</p>
+Quando um construtor é chamado com `new`, não é possivel usar diretamente um array e `apply` (`apply` executa o `[[Call]]` e não o `[[Construct]]`). No entanto, um array pode facilmente ser usado com `new` graças ao operador de espalhamento:
 
-<pre class="brush: js">var dateFields = [1970, 0, 1];  // 1 Jan 1970
+```js
+var dateFields = [1970, 0, 1];  // 1 Jan 1970
 var d = new Date(...dateFields);
-</pre>
+```
 
-<p>Para usar o <code>new</code> com array de parâmetros sem a sintaxa de espalhamento, você teria que fazer isso <strong>indiretamente </strong>por meio da aplicação parcial:</p>
+Para usar o `new` com array de parâmetros sem a sintaxa de espalhamento, você teria que fazer isso **indiretamente** por meio da aplicação parcial:
 
-<pre class="brush: js">function applyAndNew(constructor, args) {
+```js
+function applyAndNew(constructor, args) {
    function partial () {
       return constructor.apply(this, args);
    };
@@ -86,137 +95,127 @@ var myConstructorWithArguments = applyAndNew(myConstructor, myArguments);
 console.log(new myConstructorWithArguments);
 // (internal log of myConstructor):           arguments.length: 6
 // (internal log of myConstructor):           ["hi", "how", "are", "you", "mr", null]
-// (log of "new myConstructorWithArguments"): {prop1: "val1", prop2: "val2"}</pre>
+// (log of "new myConstructorWithArguments"): {prop1: "val1", prop2: "val2"}
+```
 
-<h3 id="Espalhamento_em_arrays_literais">Espalhamento em arrays literais</h3>
+### Espalhamento em arrays literais
 
-<h4 id="Um_array_literal_mais_poderoso">Um array literal mais poderoso</h4>
+#### Um array literal mais poderoso
 
-<p>Criar um novo array usando um array existente como parte dele, não é possível utilizando apenas a sintaxe de array literal. O código imperativo deve ser usado ao invés da combinação de <code>push</code>, <code>splice</code>, <code>concat</code>, etc. Com a sintaxe de espalhamento isso se torna muito mais sucinto:</p>
+Criar um novo array usando um array existente como parte dele, não é possível utilizando apenas a sintaxe de array literal. O código imperativo deve ser usado ao invés da combinação de `push`, `splice`, `concat`, etc. Com a sintaxe de espalhamento isso se torna muito mais sucinto:
 
-<pre class="brush: js">var parts = ['shoulders', 'knees'];
+```js
+var parts = ['shoulders', 'knees'];
 var lyrics = ['head', ...parts, 'and', 'toes'];
 // ["head", "shoulders", "knees", "and", "toes"]
-</pre>
+```
 
-<p>Assim como espalhar a lista de argumentos, <code>...</code>  pode ser usado em qualquer lugar em um array literal e pode ser usado multiplas vezes.</p>
+Assim como espalhar a lista de argumentos, `...` pode ser usado em qualquer lugar em um array literal e pode ser usado multiplas vezes.
 
-<h4 id="Copiando_um_array">Copiando um array</h4>
+#### Copiando um array
 
-<pre class="brush: js">var arr = [1, 2, 3];
+```js
+var arr = [1, 2, 3];
 var arr2 = [...arr]; // like arr.slice()
 arr2.push(4);
 
 // arr2 becomes [1, 2, 3, 4]
 // arr remains unaffected
-</pre>
+```
 
-<p><strong>Nota:</strong> A sintaxe de espalhamento efetivamente vai um nível mais profundo quando se copia um array. Assim sendo, pode ser inadequado para copiar arrays multidimensionais como o exemplo a seguir mostra (é o mesmo com {{jsxref("Object.assign()")}} e a sintaxe de espalhamento).</p>
+**Nota:** A sintaxe de espalhamento efetivamente vai um nível mais profundo quando se copia um array. Assim sendo, pode ser inadequado para copiar arrays multidimensionais como o exemplo a seguir mostra (é o mesmo com {{jsxref("Object.assign()")}} e a sintaxe de espalhamento).
 
-<pre class="brush: js">var a = [[1], [2], [3]];
+```js
+var a = [[1], [2], [3]];
 var b = [...a];
 b.shift().shift(); // 1
 // Now array a is affected as well: [[], [2], [3]]
-</pre>
+```
 
-<h4 id="Uma_maneira_melhor_de_concatenar_arrays">Uma maneira melhor de concatenar arrays</h4>
+#### Uma maneira melhor de concatenar arrays
 
-<p>{{jsxref("Array.concat")}} é frequentemente usado para concatenar um array no final de um array existente. Sem a sintaxe de espalhamento é feito assim:</p>
+{{jsxref("Array.concat")}} é frequentemente usado para concatenar um array no final de um array existente. Sem a sintaxe de espalhamento é feito assim:
 
-<pre class="brush: js">var arr1 = [0, 1, 2];
+```js
+var arr1 = [0, 1, 2];
 var arr2 = [3, 4, 5];
 // Append all items from arr2 onto arr1
-arr1 = arr1.concat(arr2);</pre>
+arr1 = arr1.concat(arr2);
+```
 
-<p>Com a sintaxe de espalhamento se torna isso:</p>
+Com a sintaxe de espalhamento se torna isso:
 
-<pre class="brush: js">var arr1 = [0, 1, 2];
+```js
+var arr1 = [0, 1, 2];
 var arr2 = [3, 4, 5];
 arr1 = [...arr1, ...arr2];
-</pre>
+```
 
-<p>{{jsxref("Array.unshift")}} é frequentemente usado para inserir um array de valores no inicio de um array existente. Sem a sintaxe de espalhamento é feito assim:</p>
+{{jsxref("Array.unshift")}} é frequentemente usado para inserir um array de valores no inicio de um array existente. Sem a sintaxe de espalhamento é feito assim:
 
-<pre class="brush: js">var arr1 = [0, 1, 2];
+```js
+var arr1 = [0, 1, 2];
 var arr2 = [3, 4, 5];
 // Prepend all items from arr2 onto arr1
-Array.prototype.unshift.apply(arr1, arr2) // arr1 is now [3, 4, 5, 0, 1, 2]</pre>
+Array.prototype.unshift.apply(arr1, arr2) // arr1 is now [3, 4, 5, 0, 1, 2]
+```
 
-<p>Com a <em>sintaxe de espalhamento</em> isso se torna <em>[Note, no entanto, que isso cria um novo <code>arr1</code> array. Ao contrário de {{jsxref("Array.unshift")}}, isso não modifica o array original <code>arr1</code> array]</em>:</p>
+Com a _sintaxe de espalhamento_ isso se torna _\[Note, no entanto, que isso cria um novo `arr1` array. Ao contrário de {{jsxref("Array.unshift")}}, isso não modifica o array original `arr1` array]_:
 
-<pre class="brush: js">var arr1 = [0, 1, 2];
+```js
+var arr1 = [0, 1, 2];
 var arr2 = [3, 4, 5];
 arr1 = [...arr2, ...arr1]; // arr1 is now [3, 4, 5, 0, 1, 2]
-</pre>
+```
 
-<h3 id="Espalhamento_em_objetos_literais">Espalhamento em objetos literais</h3>
+### Espalhamento em objetos literais
 
-<p>A proposta <a href="https://github.com/tc39/proposal-object-rest-spread">Rest/Spread Properties for ECMAScript</a> (stage 3) adiciona espalhamento de propriedades para <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">objetos literais</a>. Este copia as propriedades enumeráveis de um objeto informado em um novo objeto.</p>
+A proposta [Rest/Spread Properties for ECMAScript](https://github.com/tc39/proposal-object-rest-spread) (stage 3) adiciona espalhamento de propriedades para [objetos literais](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer). Este copia as propriedades enumeráveis de um objeto informado em um novo objeto.
 
-<p><strong>Cópia-rasa (Shallow-cloning)</strong> (excluindo o protótipo) ou fusão (<strong>merge</strong>) de objetos agora é possivel usando uma sintaxe mais curta que {{jsxref("Object.assign()")}}.</p>
+**Cópia-rasa (Shallow-cloning)** (excluindo o protótipo) ou fusão (**merge**) de objetos agora é possivel usando uma sintaxe mais curta que {{jsxref("Object.assign()")}}.
 
-<pre class="brush: js">var obj1 = { foo: 'bar', x: 42 };
+```js
+var obj1 = { foo: 'bar', x: 42 };
 var obj2 = { foo: 'baz', y: 13 };
 
 var clonedObj = { ...obj1 };
 // Object { foo: "bar", x: 42 }
 
 var mergedObj = { ...obj1, ...obj2 };
-// Object { foo: "baz", x: 42, y: 13 }</pre>
+// Object { foo: "baz", x: 42, y: 13 }
+```
 
-<p>Note que {{jsxref("Object.assign()")}} chamada os <a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setters</a> e a <em>sintaxe de espalhamento</em> não.</p>
+Note que {{jsxref("Object.assign()")}} chamada os [setters](/pt-BR/docs/Web/JavaScript/Reference/Functions/set) e a _sintaxe de espalhamento_ não.
 
-<h3 id="Apenas_para_iteráveis">Apenas para iteráveis</h3>
+### Apenas para iteráveis
 
-<p>A sintaxe de espalhamento (diferente de propriedades espalhadas) só pode ser utilizada com objetos iteráveis.</p>
+A sintaxe de espalhamento (diferente de propriedades espalhadas) só pode ser utilizada com objetos iteráveis.
 
-<pre class="brush: js">var obj = {'key1': 'value1'};
+```js
+var obj = {'key1': 'value1'};
 var array = [...obj]; // TypeError: obj is not iterable
-</pre>
+```
 
-<h3 id="Espalhamento_com_muitos_valores">Espalhamento com muitos valores</h3>
+### Espalhamento com muitos valores
 
-<p>Quando usar a sintaxe de espalhamento para chamada de funções, esteja ciente da possibilidade de exceder tamanho máximo de argumentos do motor do Javascript. Veja <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply" title="The apply() method calls a function with a given this value, and arguments provided as an array (or an array-like object)."><code>apply()</code></a> para mais detalhes.</p>
+Quando usar a sintaxe de espalhamento para chamada de funções, esteja ciente da possibilidade de exceder tamanho máximo de argumentos do motor do Javascript. Veja [`apply()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply "The apply() method calls a function with a given this value, and arguments provided as an array (or an array-like object).") para mais detalhes.
 
-<h2 id="Sintaxe_Rest_parâmetros">Sintaxe Rest (parâmetros)</h2>
+## Sintaxe Rest (parâmetros)
 
-<p>A <em>sintaxe rest</em> se parece exatamente como a <em>sintaxe de espalhamento</em>, mas esta é usada para desestruturar arrays e objetos. De certa forma, a <em>sintaxe rest</em> é o oposto da <em>sintaxe de espalhamento</em>: A <em>sintaxe de espalhamento (spread)</em> 'expande' um array em vários elementos, enquanto a <em>sintaxe rest</em> coleta multiplos elementos e 'condensa' eles em um único elemento. Veja <a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters">parâmetros rest.</a></p>
+A _sintaxe rest_ se parece exatamente como a _sintaxe de espalhamento_, mas esta é usada para desestruturar arrays e objetos. De certa forma, a _sintaxe rest_ é o oposto da _sintaxe de espalhamento_: A _sintaxe de espalhamento (spread)_ 'expande' um array em vários elementos, enquanto a _sintaxe rest_ coleta multiplos elementos e 'condensa' eles em um único elemento. Veja [parâmetros rest.](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters)
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-array-initializer')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Defined in several sections of the specification: <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-array-initializer">Array Initializer</a>, <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-argument-lists">Argument Lists</a></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array-initializer')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>No changes.</td>
-  </tr>
-  <tr>
-   <td><a href="https://github.com/tc39/proposal-object-rest-spread">Rest/Spread Properties for ECMAScript </a></td>
-   <td>Draft</td>
-   <td>Stage 3 draft.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                       | Comment                                                                                                                                                                                                                            |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ES2015', '#sec-array-initializer')}}                             | {{Spec2('ES2015')}}     | Defined in several sections of the specification: [Array Initializer](http://www.ecma-international.org/ecma-262/6.0/#sec-array-initializer), [Argument Lists](http://www.ecma-international.org/ecma-262/6.0/#sec-argument-lists) |
+| {{SpecName('ESDraft', '#sec-array-initializer')}}                             | {{Spec2('ESDraft')}} | No changes.                                                                                                                                                                                                                        |
+| [Rest/Spread Properties for ECMAScript](https://github.com/tc39/proposal-object-rest-spread) | Draft                        | Stage 3 draft.                                                                                                                                                                                                                     |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.operators.spread")}}</p>
+{{Compat("javascript.operators.spread")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters">Parâmetros Rest</a> (also ‘<code>...</code>’)</li>
-</ul>
+- [Parâmetros Rest](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters) (also ‘`...`’)

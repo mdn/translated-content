@@ -10,32 +10,33 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code>lastIndexOf()</code> retorna o índice da última ocorrência do valor especificado encontrado na {{jsxref("String")}}. Quando <code>fromIndex</code> é especificado, a pesquisa é realizada de trás para frente. Retorna <code>-1</code> se o valor não for encontrado.</p>
+O método `lastIndexOf()` retorna o índice da última ocorrência do valor especificado encontrado na {{jsxref("String")}}. Quando `fromIndex` é especificado, a pesquisa é realizada de trás para frente. Retorna `-1` se o valor não for encontrado.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.lastIndexOf(<var>searchValue</var>[, <var>fromIndex</var>])</code></pre>
+```
+str.lastIndexOf(searchValue[, fromIndex])
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>searchValue</code></dt>
- <dd>Uma string representando o valor a ser procurado. Se <code>searchValue</code> for uma string vazia, <code>str.length</code> é retornado.</dd>
- <dt><code>fromIndex</code></dt>
- <dd>Opcional. O índice no qual a pesquisa será iniciada de trás para frente. O valor padrão é <code>+Infinity</code>. Se <code>fromIndex &gt;= str.length</code>, toda string é pesquisada. Se <code>fromIndex &lt; 0</code>, o comportamento será o mesmo que seria com o índice <code>0</code>.</dd>
-</dl>
+- `searchValue`
+  - : Uma string representando o valor a ser procurado. Se `searchValue` for uma string vazia, `str.length` é retornado.
+- `fromIndex`
+  - : Opcional. O índice no qual a pesquisa será iniciada de trás para frente. O valor padrão é `+Infinity`. Se `fromIndex >= str.length`, toda string é pesquisada. Se `fromIndex < 0`, o comportamento será o mesmo que seria com o índice `0`.
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>O índice da última ocorrência referente ao valor especificado em <code>searchValue</code>. É retornado <code>-1</code> se nada for encontrado.</p>
+O índice da última ocorrência referente ao valor especificado em `searchValue`. É retornado `-1` se nada for encontrado.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Os caracteres em uma string são indexados da esquerda para a direita. O índice do primeiro caractere é <code>0</code>, e o índice do último caractere é <code>str.length - 1</code>.</p>
+Os caracteres em uma string são indexados da esquerda para a direita. O índice do primeiro caractere é `0`, e o índice do último caractere é `str.length - 1`.
 
-<pre class="brush: js notranslate">'ricardo'.lastIndexOf('r');     // retorna 4
+```js
+'ricardo'.lastIndexOf('r');     // retorna 4
 'ricardo'.lastIndexOf('a', 3);  // retorna 3
 'ricardo'.lastIndexOf('a', 0);  // retorna -1
 'ricardo'.lastIndexOf('x');     // retorna -1
@@ -43,72 +44,49 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 'ricardo'.lastIndexOf('r', 0);  // retorna 0
 'ricardo'.lastIndexOf('');      // retorna 7
 'ricardo'.lastIndexOf('', 2);   // retorna 2
-</pre>
+```
 
-<h3 id="Sensível_a_maiúsculas_e_minúsculas">Sensível a maiúsculas e minúsculas</h3>
+### Sensível a maiúsculas e minúsculas
 
-<p>O método <code>lastIndexOf()</code> é sensível a letras maiúsculas e minúsculas. Por exemplo, a seguinte expressão retorna <code>-1</code>:</p>
+O método `lastIndexOf()` é sensível a letras maiúsculas e minúsculas. Por exemplo, a seguinte expressão retorna `-1`:
 
-<pre class="brush: js notranslate">'Blue Whale, Killer Whale'.lastIndexOf('blue'); // retorna -1
-</pre>
+```js
+'Blue Whale, Killer Whale'.lastIndexOf('blue'); // retorna -1
+```
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_lastIndexOf">Usando <code>lastIndexOf()</code></h3>
+### Usando `lastIndexOf()`
 
-<p>O seguinte exemplo usa <code>lastIndexOf()</code> para localizar valores nas string <code>"Brave new world"</code>.</p>
+O seguinte exemplo usa `lastIndexOf()` para localizar valores nas string `"Brave new world"`.
 
-<pre class="brush: js notranslate">var anyString = 'Brave new world';
+```js
+var anyString = 'Brave new world';
 
 console.log('O índice do primeiro w a partir do final é ' + anyString.lastIndexOf('w'));
 // retorna 10
 
 console.log('O índice de "new" a partir do final é ' + anyString.lastIndexOf('new'));
 // retorna 6
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentários</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.4.8', 'String.prototype.lastIndexOf')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.lastindexof', 'String.prototype.lastIndexOf')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.lastindexof', 'String.prototype.lastIndexOf')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                | Estado                       | Comentários        |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('ES1')}}                                                                                                     | {{Spec2('ES1')}}         | Definição inicial. |
+| {{SpecName('ES5.1', '#sec-15.5.4.8', 'String.prototype.lastIndexOf')}}                                 | {{Spec2('ES5.1')}}     |                    |
+| {{SpecName('ES6', '#sec-string.prototype.lastindexof', 'String.prototype.lastIndexOf')}}         | {{Spec2('ES6')}}         |                    |
+| {{SpecName('ESDraft', '#sec-string.prototype.lastindexof', 'String.prototype.lastIndexOf')}} | {{Spec2('ESDraft')}} |                    |
 
-<h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
+## Navegadores compatíveis
 
 {{Compat("javascript.builtins.String.lastIndexOf")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("String.prototype.charAt()")}}</li>
- <li>{{jsxref("String.prototype.indexOf()")}}</li>
- <li>{{jsxref("String.prototype.split()")}}</li>
- <li>{{jsxref("Array.prototype.indexOf()")}}</li>
- <li>{{jsxref("Array.prototype.lastIndexOf()")}}</li>
-</ul>
+- {{jsxref("String.prototype.charAt()")}}
+- {{jsxref("String.prototype.indexOf()")}}
+- {{jsxref("String.prototype.split()")}}
+- {{jsxref("Array.prototype.indexOf()")}}
+- {{jsxref("Array.prototype.lastIndexOf()")}}

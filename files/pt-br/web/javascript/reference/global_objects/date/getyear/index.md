@@ -10,112 +10,93 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getYear
 ---
-<div>{{JSRef("Global_Objects", "Date")}} {{deprecated_header}}</div>
+{{JSRef("Global_Objects", "Date")}} {{deprecated_header}}
 
-<h2 id="Summary" name="Summary">Resumo</h2>
+## Resumo
 
-<p>O método <strong><code>getYear()</code></strong> retorna o ano especificado pela data de acordo com a hora local. Por conta do fato de que <code>getYear()</code> não retorna anos completos ("problema do ano 2000"), este método não é mais utilizado e foi substituido pelo método {{jsxref("Date.prototype.getFullYear", "getFullYear()")}}.</p>
+O método **`getYear()`** retorna o ano especificado pela data de acordo com a hora local. Por conta do fato de que `getYear()` não retorna anos completos ("problema do ano 2000"), este método não é mais utilizado e foi substituido pelo método {{jsxref("Date.prototype.getFullYear", "getFullYear()")}}.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code><var>dateObj</var>.getYear()</code></pre>
+```
+dateObj.getYear()
+```
 
-<h3 id="Parameters" name="Parameters">Parâmetros</h3>
+### Parâmetros
 
-<p>Nenhum.</p>
+Nenhum.
 
-<h3 id="Returns" name="Returns">Retorna</h3>
+### Retorna
 
-<p>O método <code>getYear()</code> retorna o ano menos 1900; então:</p>
+O método `getYear()` retorna o ano menos 1900; então:
 
-<ul>
- <li>Para ano maior ou igual a 2000, o valor retornado por <code>getYear()</code> é 100 ou mais. Por exemplo, se o ano for 2026, <code>getYear()</code> retorna 126.</li>
- <li>Para ano entre e incluindo 1900 e 1999, o valor retornado por <code>getYear()</code> é entre 0 e 99. Por exemplo, se o anor for 1976, <code>getYear()</code> retorna 76.</li>
- <li>Para ano menor que 1900, o valor retornado por <code>getYear()</code> é menor que 0. Por exemplo, se o ano for 1800, <code>getYear()</code> retorna -100.</li>
-</ul>
+- Para ano maior ou igual a 2000, o valor retornado por `getYear()` é 100 ou mais. Por exemplo, se o ano for 2026, `getYear()` retorna 126.
+- Para ano entre e incluindo 1900 e 1999, o valor retornado por `getYear()` é entre 0 e 99. Por exemplo, se o anor for 1976, `getYear()` retorna 76.
+- Para ano menor que 1900, o valor retornado por `getYear()` é menor que 0. Por exemplo, se o ano for 1800, `getYear()` retorna -100.
 
-<p>Para levar em consideração anos antes e depois de 2000, você deve utilizar {{jsxref("Date.prototype.getFullYear", "getFullYear()")}} ao invés de <code>getYear()</code> para que o ano seja especificado por completo.</p>
+Para levar em consideração anos antes e depois de 2000, você deve utilizar {{jsxref("Date.prototype.getFullYear", "getFullYear()")}} ao invés de `getYear()` para que o ano seja especificado por completo.
 
-<h2 id="Backward_compatibility" name="Backward_compatibility">Retrocombatibilidade</h2>
+## Retrocombatibilidade
 
-<h3 id="JavaScript_1.2_and_earlier" name="JavaScript_1.2_and_earlier">Comportamento em JavaScript 1.2 e anteriores</h3>
+### Comportamento em JavaScript 1.2 e anteriores
 
-<p>O método <code>getYear()</code> retorna um ano de 2 ou 4 dígitos:</p>
+O método `getYear()` retorna um ano de 2 ou 4 dígitos:
 
-<ul>
- <li>Para anos entre e incluindo 1900 e 1999, o valor retornado por <code>getYear()</code> é o ano menos 1900. Por exemplo, se o ano é 1976, o valor retornado é 76.</li>
- <li>Para anos menores que 1900 ou maiores que 1999, o valor retornado por <code>getYear()</code> é um ano de 4 dígitos. Por exemplo, se o ano é 1856, o valor retornado é 1856. Se o ano é 2026, o valor retornado é 2026.</li>
-</ul>
+- Para anos entre e incluindo 1900 e 1999, o valor retornado por `getYear()` é o ano menos 1900. Por exemplo, se o ano é 1976, o valor retornado é 76.
+- Para anos menores que 1900 ou maiores que 1999, o valor retornado por `getYear()` é um ano de 4 dígitos. Por exemplo, se o ano é 1856, o valor retornado é 1856. Se o ano é 2026, o valor retornado é 2026.
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<h3 id="Example:_Years_between_1900_and_1999" name="Example:_Years_between_1900_and_1999">Exemplo: Anos entre 1900 e 1999</h3>
+### Exemplo: Anos entre 1900 e 1999
 
-<p>O segundo statement atribui o valor 95 à variável <code>year</code>.</p>
+O segundo statement atribui o valor 95 à variável `year`.
 
-<pre class="brush: js">var Xmas = new Date('December 25, 1995 23:15:00');
+```js
+var Xmas = new Date('December 25, 1995 23:15:00');
 var year = Xmas.getYear(); // returns 95
-</pre>
+```
 
-<h3 id="Example:_Years_above_1999" name="Example:_Years_above_1999">Exemplo: Anos depois de 1999</h3>
+### Exemplo: Anos depois de 1999
 
-<p>O segundo statement atribui o valor 100 à variável <code>year</code>.</p>
+O segundo statement atribui o valor 100 à variável `year`.
 
-<pre class="brush: js">var Xmas = new Date('December 25, 2000 23:15:00');
+```js
+var Xmas = new Date('December 25, 2000 23:15:00');
 var year = Xmas.getYear(); // returns 100
-</pre>
+```
 
-<h3 id="Example:_Years_below_1900" name="Example:_Years_below_1900">Exemplo: Anos antes de 1900</h3>
+### Exemplo: Anos antes de 1900
 
-<p>O segundo statement atribui o valor  -100 à variável <code>year</code>.</p>
+O segundo statement atribui o valor -100 à variável `year`.
 
-<pre class="brush: js">var Xmas = new Date('December 25, 1800 23:15:00');
+```js
+var Xmas = new Date('December 25, 1800 23:15:00');
 var year = Xmas.getYear(); // returns -100
-</pre>
+```
 
-<h3 id="Example:_Setting_and_getting_a_year_between_1900_and_1999" name="Example:_Setting_and_getting_a_year_between_1900_and_1999">Exemplo: Setando e recuperando um ano entre 1900 e 1999</h3>
+### Exemplo: Setando e recuperando um ano entre 1900 e 1999
 
-<p>O segundo statement atribui o valor 95 à variável <code>year</code>, representanto o ano 1995.</p>
+O segundo statement atribui o valor 95 à variável `year`, representanto o ano 1995.
 
-<pre class="brush: js">var Xmas.setYear(95);
+```js
+var Xmas.setYear(95);
 var year = Xmas.getYear(); // returns 95
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col"><strong style="background-color: rgba(212, 221, 228, 0.498039); font-family: open sans light,helvetica,arial,sans-serif;">Especificação</strong></th>
-   <th scope="col">Status</th>
-   <th scope="col"><strong style="background-color: rgba(212, 221, 228, 0.498039); font-family: open sans light,helvetica,arial,sans-serif;">Comentário</strong></th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1st Edition.</td>
-   <td>Standard</td>
-   <td>Definição inicial. Implementado em JavaScript 1.3.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-B.2.4', 'Date.prototype.getYear')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Definido em (informativo) compatibilidade annex.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.getyear', 'Date.prototype.getYear')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definido em (normativo) annex para funcionalidades adicionais para futuros browsers web.</td>
-  </tr>
- </tbody>
-</table>
+| **Especificação**                                                                                    | Status                   | **Comentário**                                                                           |
+| ---------------------------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------------------------------------------- |
+| ECMAScript 1st Edition.                                                                              | Standard                 | Definição inicial. Implementado em JavaScript 1.3.                                       |
+| {{SpecName('ES5.1', '#sec-B.2.4', 'Date.prototype.getYear')}}                     | {{Spec2('ES5.1')}} | Definido em (informativo) compatibilidade annex.                                         |
+| {{SpecName('ES6', '#sec-date.prototype.getyear', 'Date.prototype.getYear')}} | {{Spec2('ES6')}}     | Definido em (normativo) annex para funcionalidades adicionais para futuros browsers web. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Date.getYear")}}
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Date.prototype.getFullYear()")}}</li>
- <li>{{jsxref("Date.prototype.getUTCFullYear()")}}</li>
- <li>{{jsxref("Date.prototype.setYear()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getFullYear()")}}
+- {{jsxref("Date.prototype.getUTCFullYear()")}}
+- {{jsxref("Date.prototype.setYear()")}}

@@ -3,64 +3,41 @@ title: Infinity
 slug: Web/JavaScript/Reference/Global_Objects/Infinity
 translation_of: Web/JavaScript/Reference/Global_Objects/Infinity
 ---
-<div>
-<div>
-<div>{{jsSidebar("Objects")}}</div>
-</div>
-</div>
+{{jsSidebar("Objects")}}
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+## Sumário
 
-<p>A propriedade global <code><strong>Infinity</strong></code> é um valor numérico que representa infinito.</p>
+A propriedade global **`Infinity`** é um valor numérico que representa infinito.
 
-<p>{{js_property_attributes(0,0,0)}}</p>
+{{js_property_attributes(0,0,0)}}
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code>Infinity </code></pre>
+```
+Infinity
+```
 
-<h2 id="Description" name="Description">Descrição</h2>
+## Descrição
 
-<p><code>Infinity</code> é uma propriedade do <em>objeto global</em>, ou seja, é uma varíavel no escopo global.</p>
+`Infinity` é uma propriedade do _objeto global_, ou seja, é uma varíavel no escopo global.
 
-<p>O valor inicial de <code>Infinity</code> é {{jsxref("Number.POSITIVE_INFINITY")}}. O valor <code>Infinity</code> (positivo) é maior do que qualquer outro número. Este valor se comporta matematicamente como infinito; por exemplo, qualquer número positivo multiplicado por <code>Infinity</code> é <code>Infinity</code>, e qualquer coisa dividida por <code>Infinity</code> é 0.</p>
+O valor inicial de `Infinity` é {{jsxref("Number.POSITIVE_INFINITY")}}. O valor `Infinity` (positivo) é maior do que qualquer outro número. Este valor se comporta matematicamente como infinito; por exemplo, qualquer número positivo multiplicado por `Infinity` é `Infinity`, e qualquer coisa dividida por `Infinity` é 0.
 
-<p>Pela especificação ECMAScript 5, <code>Infinity</code> é somente leitura (implementado no JavaScript 1.8.5  / Firefox 4).</p>
+Pela especificação ECMAScript 5, `Infinity` é somente leitura (implementado no JavaScript 1.8.5 / Firefox 4).
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1ª Edição.</td>
-   <td>Padrão</td>
-   <td>Definição inicial. Implementado no JavaScript 1.3</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.1.1.2', 'Infinity')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-value-properties-of-the-global-object-infinity', 'Infinity')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                        | Status                   | Comentário                                        |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------- |
+| ECMAScript 1ª Edição.                                                                                                | Padrão                   | Definição inicial. Implementado no JavaScript 1.3 |
+| {{SpecName('ES5.1', '#sec-15.1.1.2', 'Infinity')}}                                                 | {{Spec2('ES5.1')}} |                                                   |
+| {{SpecName('ES6', '#sec-value-properties-of-the-global-object-infinity', 'Infinity')}} | {{Spec2('ES6')}}     |                                                   |
 
-<h2 id="Compatibilidade">Compatibilidade</h2>
+## Compatibilidade
 
 {{Compat("javascript.builtins.Infinity")}}
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Number.NEGATIVE_INFINITY")}}</li>
- <li>{{jsxref("Number.POSITIVE_INFINITY")}}</li>
-</ul>
+- {{jsxref("Number.NEGATIVE_INFINITY")}}
+- {{jsxref("Number.POSITIVE_INFINITY")}}

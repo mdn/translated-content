@@ -3,79 +3,87 @@ title: for
 slug: Web/JavaScript/Reference/Statements/for
 translation_of: Web/JavaScript/Reference/Statements/for
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>A instrução <code>for</code><strong> </strong>cria um loop que consiste em três expressões opcionais, dentro de parênteses e separadas por ponto e vírgula, seguidas por uma declaração ou uma sequência de declarações executadas em sequência.</p>
+A instrução `for`\*\* \*\*cria um loop que consiste em três expressões opcionais, dentro de parênteses e separadas por ponto e vírgula, seguidas por uma declaração ou uma sequência de declarações executadas em sequência.
 
-<p>A fonte desse exemplo interativo está armazenada em um repositório do GitHub. Se você gostaria de contribuir com os projetos de exemplos interativos, por favor clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>  e nos envie um pull request (requisição para puxar).</p>
+A fonte desse exemplo interativo está armazenada em um repositório do GitHub. Se você gostaria de contribuir com os projetos de exemplos interativos, por favor clone <https://github.com/mdn/interactive-examples> e nos envie um pull request (requisição para puxar).
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate">for ([<em>inicialização</em>]; [<em>condição</em>]; [<em>expressão final</em>])
-  <em> declaração</em>
-</pre>
+```
+for ([inicialização]; [condição]; [expressão final])
+   declaração
+```
 
-<dl>
- <dt><code>inicialização</code></dt>
- <dd><p>Uma expressão (incluindo expressões de atribuição) ou declarações variáveis. Geralmente usada para iniciar o contador de variáveis. Esta expressão pode, opcionalmente, declarar novas variáveis com a palavra chave <code>var</code>. Essas variáveis não são locais no loop, isto é, elas estão no mesmo escopo que o loop <code>for</code><strong> </strong>está. Variáveis declaradas com let são locais para a declaração.</p>
- <p>O resultado desta expressão é descartado.</p></dd>
- <dt><code>condição</code></dt>
- <dd>Uma expressão para ser avaliada antes de cada iteração do loop. Se esta expressão for avaliada para true, <code>declaração</code> será executado. Este teste da condição é opcional. Se omitido, a condição sempre será avaliada como verdadeira. Se a expressão for avaliada como falsa, a execução irá para a primeira expressão após a construção loop <code>for</code>.</dd>
- <dt><code>expressão final</code></dt>
- <dd>Uma expressão que será validada no final de cada iteração de loop. Isso ocorre antes da próxima avaliação da condição. Geralmente usado para atualizar ou incrementar a variável do contador.</dd>
- <dt><code>declaração</code></dt>
- <dd>Uma declaração que é executada enquanto a condição for verdadeira. Para executar múltiplas condições dentro do loop, use uma instrução de bloco <code>({...})</code> para agrupar essas condições. Para não executar declarações dentro do loop, use uma instrução vazia <code>(;)</code>.</dd>
-</dl>
+- `inicialização`
 
-<h2 id="Exemplos_de_uso">Exemplos de uso</h2>
+  - : Uma expressão (incluindo expressões de atribuição) ou declarações variáveis. Geralmente usada para iniciar o contador de variáveis. Esta expressão pode, opcionalmente, declarar novas variáveis com a palavra chave `var`. Essas variáveis não são locais no loop, isto é, elas estão no mesmo escopo que o loop `for`\*\* \*\*está. Variáveis declaradas com let são locais para a declaração.
 
-<h3 id="Usando_for">Usando <code>for</code></h3>
+    O resultado desta expressão é descartado.
 
-<p>A declaração <code>for</code> começa declarando a variável <code>i</code> e inicializando-a como <code>0</code>. Ela verifica se <code>i</code> é menor que nove, executa as duas instruções subsequentes e incrementa 1 a variável <code>i</code> após cada passagem pelo loop.</p>
+- `condição`
+  - : Uma expressão para ser avaliada antes de cada iteração do loop. Se esta expressão for avaliada para true, `declaração` será executado. Este teste da condição é opcional. Se omitido, a condição sempre será avaliada como verdadeira. Se a expressão for avaliada como falsa, a execução irá para a primeira expressão após a construção loop `for`.
+- `expressão final`
+  - : Uma expressão que será validada no final de cada iteração de loop. Isso ocorre antes da próxima avaliação da condição. Geralmente usado para atualizar ou incrementar a variável do contador.
+- `declaração`
+  - : Uma declaração que é executada enquanto a condição for verdadeira. Para executar múltiplas condições dentro do loop, use uma instrução de bloco `({...})` para agrupar essas condições. Para não executar declarações dentro do loop, use uma instrução vazia `(;)`.
 
-<pre class="brush: js notranslate">for (var i = 0; i &lt; 9; i++) {
+## Exemplos de uso
+
+### Usando `for`
+
+A declaração `for` começa declarando a variável `i` e inicializando-a como `0`. Ela verifica se `i` é menor que nove, executa as duas instruções subsequentes e incrementa 1 a variável `i` após cada passagem pelo loop.
+
+```js
+for (var i = 0; i < 9; i++) {
    console.log(i);
    // more statements
 }
-</pre>
+```
 
-<h3 id="Expressões_for_opcionais">Expressões <code>for</code> opcionais</h3>
+### Expressões `for` opcionais
 
-<p>Todas as três expressões na condição do loop <code>for</code> são opcionais.</p>
+Todas as três expressões na condição do loop `for` são opcionais.
 
-<p>Por exemplo, no bloco de <em>inicialização</em>, não é necessário inicializar variáveis:</p>
+Por exemplo, no bloco de _inicialização_, não é necessário inicializar variáveis:
 
-<pre class="brush: js notranslate">var i = 0;
-for (; i &lt; 9; i++) {
+```js
+var i = 0;
+for (; i < 9; i++) {
     console.log(i);
     // more statements
 }
-</pre>
+```
 
-<p>Assim como ocorre no bloco de <em>inicialização</em>, a <em>condição</em> também é opcional. Se você está omitindo essa expressão, você deve certificar-se de quebrar o loop no corpo para não criar um loop infinito.</p>
+Assim como ocorre no bloco de _inicialização_, a _condição_ também é opcional. Se você está omitindo essa expressão, você deve certificar-se de quebrar o loop no corpo para não criar um loop infinito.
 
-<pre class="brush: js notranslate">for (var i = 0;; i++) {
+```js
+for (var i = 0;; i++) {
    console.log(i);
-   if (i &gt; 3) break;
+   if (i > 3) break;
    // more statements
-}</pre>
+}
+```
 
-<p>Você também pode omitir todos os três blocos. Novamente, certifique-se de usar uma instrução <code>break</code> no final do loop e também modificar (incrementar) uma variável, para que a condição do <code>break</code> seja verdadeira em algum momento.</p>
+Você também pode omitir todos os três blocos. Novamente, certifique-se de usar uma instrução `break` no final do loop e também modificar (incrementar) uma variável, para que a condição do `break` seja verdadeira em algum momento.
 
-<pre class="brush: js notranslate">var i = 0;
+```js
+var i = 0;
 
 for (;;) {
-  if (i &gt; 3) break;
+  if (i > 3) break;
   console.log(i);
   i++;
 }
-</pre>
+```
 
-<h3 id="Usando_for_sem_uma_declaração">Usando <code>for</code> sem uma declaração </h3>
+### Usando `for` sem uma declaração
 
-<p>O ciclo <code>for</code> a seguir calcula a posição de deslocamento de um nó na seção [expressão final] e, portanto, não requer o uso de uma declaração ou de um bloco de declaração, e no seu lugar é usado um ponto-vírgula - <code>;</code>.</p>
+O ciclo `for` a seguir calcula a posição de deslocamento de um nó na seção \[expressão final] e, portanto, não requer o uso de uma declaração ou de um bloco de declaração, e no seu lugar é usado um ponto-vírgula - `;`.
 
-<pre class="brush: js notranslate">function showOffsetPos (sId) {
+```js
+function showOffsetPos (sId) {
   var nLeft = 0, nTop = 0;
 
   for (var oItNode = document.getElementById(sId); // inicialização
@@ -93,51 +101,29 @@ showOffsetPos("content");
 // Resultado:
 // "Offset position of "content" element:
 // left: 0px;
-// top: 153px;"</pre>
+// top: 153px;"
+```
 
-<div class="note"><strong>Nota:</strong> Nesse caso, quando você não usa a seção de declaração, <strong>o</strong><strong> ponto-e-vírgula é colocada imediatamente após a declaração do ciclo</strong>.</div>
+> **Nota:** Nesse caso, quando você não usa a seção de declaração, **o** **ponto-e-vírgula é colocada imediatamente após a declaração do ciclo**.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1st Edition.</td>
-   <td>Padrão</td>
-   <td>
-    <p>Definição inicial.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-12.6.3', 'for statement')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-for-statement', 'for statement')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                | Status                   | Comentário         |
+| ---------------------------------------------------------------------------- | ------------------------ | ------------------ |
+| ECMAScript 1st Edition.                                                      | Padrão                   | Definição inicial. |
+| {{SpecName('ES5.1', '#sec-12.6.3', 'for statement')}}     | {{Spec2('ES5.1')}} |                    |
+| {{SpecName('ES6', '#sec-for-statement', 'for statement')}} | {{Spec2('ES6')}}     |                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.statements.for")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Statements/break", "break")}}</li>
- <li>{{jsxref("Statements/continue", "continue")}}</li>
- <li>{{jsxref("Statements/empty", "empty")}}</li>
- <li>{{jsxref("Statements/while", "while")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/do...while"><code>do...while</code></a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><code>for...in</code></a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of"><code>for...of</code></a></li>
-</ul>
+- {{jsxref("Statements/break", "break")}}
+- {{jsxref("Statements/continue", "continue")}}
+- {{jsxref("Statements/empty", "empty")}}
+- {{jsxref("Statements/while", "while")}}
+- [`do...while`](/pt-BR/docs/Web/JavaScript/Reference/Statements/do...while)
+- [`for...in`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in)
+- [`for...of`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of)

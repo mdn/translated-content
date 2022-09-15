@@ -3,36 +3,35 @@ title: WeakMap.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/set
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>set()</code></strong> adiciona um novo elemento com a <code>chave</code> e o <code>valor</code> especificados em um objeto <code>WeakMap</code>.</p>
+O método **`set()`** adiciona um novo elemento com a `chave` e o `valor` especificados em um objeto `WeakMap`.
 
-<div>{{EmbedInteractiveExample("pages/js/weakmap-prototype-set.html")}}</div>
+{{EmbedInteractiveExample("pages/js/weakmap-prototype-set.html")}}
 
+## Sintaxe
 
+```
+wm.set(chave, valor);
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Parâmetros
 
-<pre class="syntaxbox"><code><em>wm</em>.set(chave, valor);</code></pre>
+- chave
+  - : Obrigatório. A chave do elemento a ser adicionado no objeto `WeakMap`.
+- valor
+  - : Obrigatório. O valor do elemento a ser adicionado no objeto `WeakMap`.
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Valor de retorno
 
-<dl>
- <dt>chave</dt>
- <dd>Obrigatório. A chave do elemento a ser adicionado no objeto <code>WeakMap</code>.</dd>
- <dt>valor</dt>
- <dd>Obrigatório. O valor do elemento a ser adicionado no objeto <code>WeakMap</code>.</dd>
-</dl>
+O objeto `WeakMap`.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+## Exemplos
 
-<p>O objeto <code>WeakMap</code>.</p>
+### Utilizando o método `set`
 
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Utilizando_o_método_set">Utilizando o método <code>set</code> </h3>
-
-<pre class="brush: js">var wm = new WeakMap();
+```js
+var wm = new WeakMap();
 var obj = {};
 
 // Adicionar novos elementos ao WeakMap
@@ -40,46 +39,25 @@ wm.set(obj, 'foo').set(window, 'bar'); // encadeável
 
 // Atualizar um elemento no WeakMap
 wm.set(obj, 'baz');
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-weakmap.prototype.set', 'WeakMap.prototype.set')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-weakmap.prototype.set', 'WeakMap.prototype.set')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                            | Status                       | Comment             |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES2015', '#sec-weakmap.prototype.set', 'WeakMap.prototype.set')}} | {{Spec2('ES2015')}}     | Initial definition. |
+| {{SpecName('ESDraft', '#sec-weakmap.prototype.set', 'WeakMap.prototype.set')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("javascript.builtins.WeakMap.set")}}
 
+## Notas específicas ao Firefox
 
-<p>{{Compat("javascript.builtins.WeakMap.set")}}</p>
+- Antes do Firefox 33 {{geckoRelease("33")}}, `WeakMap.prototype.set` retornava `undefined` e, portanto, não era encadeável. Isso foi resolvido ({{bug(1031632)}}). O comportamento também podia ser encontrado no Chrome/v8 ([issue](https://code.google.com/p/v8/issues/detail?id=3410)).
 
-<h2 id="Notas_específicas_ao_Firefox">Notas específicas ao Firefox</h2>
+## Ver também
 
-<ul>
- <li>Antes do Firefox 33 {{geckoRelease("33")}}, <code>WeakMap.prototype.set</code> retornava <code>undefined</code> e, portanto, não era encadeável. Isso foi resolvido ({{bug(1031632)}}). O comportamento também podia ser encontrado no Chrome/v8 (<a href="https://code.google.com/p/v8/issues/detail?id=3410">issue</a>).</li>
-</ul>
-
-<h2 id="Ver_também">Ver também</h2>
-
-<ul>
- <li>{{jsxref("WeakMap")}}</li>
- <li>{{jsxref("WeakMap.prototype.get()")}}</li>
- <li>{{jsxref("WeakMap.prototype.has()")}}</li>
-</ul>
+- {{jsxref("WeakMap")}}
+- {{jsxref("WeakMap.prototype.get()")}}
+- {{jsxref("WeakMap.prototype.has()")}}

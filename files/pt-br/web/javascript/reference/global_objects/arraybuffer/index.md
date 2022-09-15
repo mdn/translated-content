@@ -8,133 +8,107 @@ tags:
   - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p>O objeto <strong><code>ArrayBuffer</code></strong> é um tipo de dado usado para representar um genérico, buffer de dados binários de tamanho fixo. Você não pode manipular diretamente os conteúdos de um <code>ArrayBuffer</code>;  em vez disso, você cria um objeto <a href="/en/JavaScript_typed_arrays/ArrayBufferView" title="en/JavaScript typed arrays/ArrayBufferView"><code>ArrayBufferView</code></a> que representa o buffer em um formato específico, e usa para ler e escrever os conteúdos do buffer.</p>
+O objeto **`ArrayBuffer`** é um tipo de dado usado para representar um genérico, buffer de dados binários de tamanho fixo. Você não pode manipular diretamente os conteúdos de um `ArrayBuffer`; em vez disso, você cria um objeto [`ArrayBufferView`](/en/JavaScript_typed_arrays/ArrayBufferView "en/JavaScript typed arrays/ArrayBufferView") que representa o buffer em um formato específico, e usa para ler e escrever os conteúdos do buffer.
 
-<p>{{EmbedInteractiveExample("pages/js/arraybuffer-constructor.html")}}</p>
+{{EmbedInteractiveExample("pages/js/arraybuffer-constructor.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>new ArrayBuffer(length)
-</pre>
+```
+new ArrayBuffer(length)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>length</code></dt>
- <dd>The size, in bytes, of the array buffer to create.</dd>
-</dl>
+- `length`
+  - : The size, in bytes, of the array buffer to create.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new <code>ArrayBuffer</code> object of the specified size. Its contents are initialized to 0.</p>
+A new `ArrayBuffer` object of the specified size. Its contents are initialized to 0.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>A {{jsxref("RangeError")}} is thrown if the <code>length</code> is larger than {{jsxref("Number.MAX_SAFE_INTEGER")}} (&gt;= 2 ** 53) or negative.</p>
+A {{jsxref("RangeError")}} is thrown if the `length` is larger than {{jsxref("Number.MAX_SAFE_INTEGER")}} (>= 2 \*\* 53) or negative.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>ArrayBuffer</code> constructor creates a new <code>ArrayBuffer</code> of the given length in bytes.</p>
+The `ArrayBuffer` constructor creates a new `ArrayBuffer` of the given length in bytes.
 
-<h3 id="Getting_an_array_buffer_from_existing_data">Getting an array buffer from existing data</h3>
+### Getting an array buffer from existing data
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer">From a Base64 string</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/FileReader#readAsArrayBuffer()">From a local file</a></li>
-</ul>
+- [From a Base64 string](/pt-BR/docs/Web/API/WindowBase64/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)
+- [From a local file](</pt-BR/docs/Web/API/FileReader#readAsArrayBuffer()>)
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt><code>ArrayBuffer.length</code></dt>
- <dd>The <code>ArrayBuffer</code> constructor's length property whose value is 1.</dd>
- <dt>{{jsxref("ArrayBuffer.@@species", "get ArrayBuffer[@@species]")}}</dt>
- <dd>The constructor function that is used to create derived objects.</dd>
- <dt>{{jsxref("ArrayBuffer.prototype")}}</dt>
- <dd>Allows the addition of properties to all <code>ArrayBuffer</code> objects.</dd>
-</dl>
+- `ArrayBuffer.length`
+  - : The `ArrayBuffer` constructor's length property whose value is 1.
+- {{jsxref("ArrayBuffer.@@species", "get ArrayBuffer[@@species]")}}
+  - : The constructor function that is used to create derived objects.
+- {{jsxref("ArrayBuffer.prototype")}}
+  - : Allows the addition of properties to all `ArrayBuffer` objects.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{jsxref("ArrayBuffer.isView", "ArrayBuffer.isView(arg)")}}</dt>
- <dd>Returns <code>true</code> if <code>arg</code> is one of the ArrayBuffer views, such as <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">typed array objects</a> or a {{jsxref("DataView")}}. Returns <code>false</code> otherwise.</dd>
- <dt>{{jsxref("ArrayBuffer.transfer", "ArrayBuffer.transfer(oldBuffer [, newByteLength])")}} {{experimental_inline}}</dt>
- <dd>
- <p>Returns a new <code>ArrayBuffer</code> whose contents are taken from the <code>oldBuffer</code>'s data and then is either truncated or zero-extended by <code>newByteLength</code>.</p>
- </dd>
-</dl>
+- {{jsxref("ArrayBuffer.isView", "ArrayBuffer.isView(arg)")}}
+  - : Returns `true` if `arg` is one of the ArrayBuffer views, such as [typed array objects](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) or a {{jsxref("DataView")}}. Returns `false` otherwise.
+- {{jsxref("ArrayBuffer.transfer", "ArrayBuffer.transfer(oldBuffer [, newByteLength])")}} {{experimental_inline}}
+  - : Returns a new `ArrayBuffer` whose contents are taken from the `oldBuffer`'s data and then is either truncated or zero-extended by `newByteLength`.
 
-<h2 id="Instances">Instances</h2>
+## Instances
 
-<p>All <code>ArrayBuffer</code> instances inherit from {{jsxref("ArrayBuffer.prototype")}}.</p>
+All `ArrayBuffer` instances inherit from {{jsxref("ArrayBuffer.prototype")}}.
 
-<h3 id="Properties_2">Properties</h3>
+### Properties
 
-<p>{{page('en-US/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/prototype','Properties')}}</p>
+{{page('en-US/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/prototype','Properties')}}
 
-<h3 id="Methods_2">Methods</h3>
+### Methods
 
-<p>{{page('en-US/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/prototype','Methods')}}</p>
+{{page('en-US/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/prototype','Methods')}}
 
-<dl>
- <dt>{{jsxref("ArrayBuffer.slice()")}} {{non-standard_inline}}</dt>
- <dd>Has the same functionality as {{jsxref("ArrayBuffer.prototype.slice()")}}.</dd>
-</dl>
+- {{jsxref("ArrayBuffer.slice()")}} {{non-standard_inline}}
+  - : Has the same functionality as {{jsxref("ArrayBuffer.prototype.slice()")}}.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>In this example, we create a 8-byte buffer with a {{jsxref("Global_Objects/Int32Array", "Int32Array")}} view referring to the buffer:</p>
+In this example, we create a 8-byte buffer with a {{jsxref("Global_Objects/Int32Array", "Int32Array")}} view referring to the buffer:
 
-<pre><code>var buffer = new ArrayBuffer(8);
-var view   = new Int32Array(buffer);</code></pre>
+```
+var buffer = new ArrayBuffer(8);
+var view   = new Int32Array(buffer);
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Typed Array')}}</td>
-   <td>{{Spec2('Typed Array')}}</td>
-   <td>Substituído pelo ECMAScript 6</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-arraybuffer-constructor', 'ArrayBuffer')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definição inicial no ECMA standard. Specified that <code>new</code> is required.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-arraybuffer-constructor', 'ArrayBuffer')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                | Status                           | Comentário                                                            |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------- |
+| {{SpecName('Typed Array')}}                                                         | {{Spec2('Typed Array')}} | Substituído pelo ECMAScript 6                                         |
+| {{SpecName('ES6', '#sec-arraybuffer-constructor', 'ArrayBuffer')}}     | {{Spec2('ES6')}}             | Definição inicial no ECMA standard. Specified that `new` is required. |
+| {{SpecName('ESDraft', '#sec-arraybuffer-constructor', 'ArrayBuffer')}} | {{Spec2('ESDraft')}}     |                                                                       |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.ArrayBuffer")}}</p>
+{{Compat("javascript.builtins.ArrayBuffer")}}
 
-<h2 id="Compatibility_notes">Compatibility notes</h2>
+## Compatibility notes
 
-<p>Starting with ECMAScript 2015, <code>ArrayBuffer</code> constructors require to be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling an <code>ArrayBuffer</code> constructor as a function without <code>new</code>, will throw a {{jsxref("TypeError")}} from now on.</p>
+Starting with ECMAScript 2015, `ArrayBuffer` constructors require to be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling an `ArrayBuffer` constructor as a function without `new`, will throw a {{jsxref("TypeError")}} from now on.
 
-<pre class="brush: js example-bad">var dv = ArrayBuffer(10);
+```js example-bad
+var dv = ArrayBuffer(10);
 // TypedError: calling a builtin ArrayBuffer constructor
-// without new is forbidden</pre>
+// without new is forbidden
+```
 
-<pre class="brush: js example-good">var dv = new ArrayBuffer(10);</pre>
+```js example-good
+var dv = new ArrayBuffer(10);
+```
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
- <li>{{jsxref("SharedArrayBuffer")}}</li>
-</ul>
+- [JavaScript typed arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays)
+- {{jsxref("SharedArrayBuffer")}}

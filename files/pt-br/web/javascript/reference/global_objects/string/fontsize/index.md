@@ -11,71 +11,62 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/String/fontsize
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p>O método <code>fontsize()</code> cria um elemento HTML <a href="/en-US/docs/Web/HTML/Element/font">&lt;font&gt;</a> que faz com que uma string seja exibida no tamanho da fonte especificada.</p>
+O método `fontsize()` cria um elemento HTML [\<font>](/pt-BR/docs/Web/HTML/Element/font) que faz com que uma string seja exibida no tamanho da fonte especificada.
 
-<div class="note">
-<p><strong>Nota de uso:</strong> O elemento <code>&lt;font&gt;</code> foi removido do <a href="/pt-BR/docs/Web/HTML/HTML5">HTML5</a> e não deve mais ser usado. Em vez disso, web developers devem usar a <a href="/pt-BR/docs/Web/CSS/font-size">propriedade CSS correspondente</a>.</p>
-</div>
+> **Nota:** **Nota de uso:** O elemento `<font>` foi removido do [HTML5](/pt-BR/docs/Web/HTML/HTML5) e não deve mais ser usado. Em vez disso, web developers devem usar a [propriedade CSS correspondente](/pt-BR/docs/Web/CSS/font-size).
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.fontsize(<var>size</var>)</code></pre>
+```
+str.fontsize(size)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>size</code></dt>
- <dd>Um número inteiro entre 1 e 7.</dd>
-</dl>
+- `size`
+  - : Um número inteiro entre 1 e 7.
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>Uma string contendo um elemento HTML <a href="/en-US/docs/Web/HTML/Element/font">&lt;font&gt;</a>.</p>
+Uma string contendo um elemento HTML [\<font>](/pt-BR/docs/Web/HTML/Element/font).
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Ao especificar o tamanho como um inteiro, você define o tamanho da fonte do texto para um dos 7 tamanhos definidos. Ao especificar <code>size</code> como uma string como "-2", você ajusta o tamanho da fonte do texto em relação ao tamanho definido na tag <a href="/en-US/docs/Web/HTML/Element/basefont">&lt;basefont&gt;</a>.</p>
+Ao especificar o tamanho como um inteiro, você define o tamanho da fonte do texto para um dos 7 tamanhos definidos. Ao especificar `size` como uma string como "-2", você ajusta o tamanho da fonte do texto em relação ao tamanho definido na tag [\<basefont>](/pt-BR/docs/Web/HTML/Element/basefont).
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_fontsize">Usando <code>fontsize()</code></h3>
+### Usando `fontsize()`
 
-<p>O exemplo a seguir usa métodos do objeto global String para alterar o tamanho de uma string:</p>
+O exemplo a seguir usa métodos do objeto global String para alterar o tamanho de uma string:
 
-<pre class="brush: js notranslate">var worldString = 'Olá, mundo';
+```js
+var worldString = 'Olá, mundo';
 
-console.log(worldString.small());     // &lt;small&gt;Olá, mundo&lt;/small&gt;
-console.log(worldString.big());       // &lt;big&gt;Olá, mundo&lt;/big&gt;
-console.log(worldString.fontsize(7)); // &lt;font size="7"&gt;Olá, mundo&lt;/fontsize&gt;
-</pre>
+console.log(worldString.small());     // <small>Olá, mundo</small>
+console.log(worldString.big());       // <big>Olá, mundo</big>
+console.log(worldString.fontsize(7)); // <font size="7">Olá, mundo</fontsize>
+```
 
-<p>Com o objeto <code><a href="/en-US/docs/Web/API/ElementCSSInlineStyle/style">element.style</a></code> você pode obter o atributo <code>style</code> do elemento e manipulá-lo de forma mais genérica, por exemplo:</p>
+Com o objeto [`element.style`](/en-US/docs/Web/API/ElementCSSInlineStyle/style) você pode obter o atributo `style` do elemento e manipulá-lo de forma mais genérica, por exemplo:
 
-<pre class="brush: js notranslate">document.getElementById('#oIdDoElemento').style.fontSize = '0.7em';
-</pre>
+```js
+document.getElementById('#oIdDoElemento').style.fontSize = '0.7em';
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.fontsize', 'String.prototype.fontsize')}}</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-string.prototype.fontsize', 'String.prototype.fontsize')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.String.fontsize")}}</p>
+{{Compat("javascript.builtins.String.fontsize")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("String.prototype.big()")}}</li>
- <li>{{jsxref("String.prototype.small()")}}</li>
-</ul>
+- {{jsxref("String.prototype.big()")}}
+- {{jsxref("String.prototype.small()")}}

@@ -4,13 +4,14 @@ slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
 translation_of: Web/JavaScript/Reference/Operators/Destructuring_assignment
 original_slug: Web/JavaScript/Reference/Operators/Atribuicao_via_desestruturacao
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>A sintaxe de <strong>atribuição via desestruturação (destructuring assignment)</strong> é uma expressão JavaScript que possibilita extrair dados de arrays ou objetos em variáveis distintas.</p>
+A sintaxe de **atribuição via desestruturação (destructuring assignment)** é uma expressão JavaScript que possibilita extrair dados de arrays ou objetos em variáveis distintas.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush:js notranslate">var a, b, rest;
+```js
+var a, b, rest;
 [a, b] = [1, 2];
 console.log(a); // 1
 console.log(b); // 2
@@ -26,79 +27,87 @@ console.log(b); // 2
 
 // ES2016 - não implementado em Firefox 47a01
 ({a, b, ...rest} = {a:1, b:2, c:3, d:4});
-</pre>
+```
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>As expressões de objeto e matriz literais fornecem uma maneira fácil de criar pacotes <em>ad hoc</em> de dados .</p>
+As expressões de objeto e matriz literais fornecem uma maneira fácil de criar pacotes _ad hoc_ de dados .
 
-<pre class="brush: js notranslate">var x = [1, 2, 3, 4, 5];</pre>
+```js
+var x = [1, 2, 3, 4, 5];
+```
 
-<p>A atribuição via desestruturação usa sintaxe similar, mas no lado esquerdo da atribuição são definidos quais elementos devem ser extraídos da variável de origem.</p>
+A atribuição via desestruturação usa sintaxe similar, mas no lado esquerdo da atribuição são definidos quais elementos devem ser extraídos da variável de origem.
 
-<pre class="brush: js notranslate">var x = [1, 2, 3, 4, 5];
+```js
+var x = [1, 2, 3, 4, 5];
 var [y, z] = x;
 console.log(y); // 1
 console.log(z); // 2
-</pre>
+```
 
-<p>Esse recurso é semelhante aos recursos presentes em linguagens como Perl e Python.</p>
+Esse recurso é semelhante aos recursos presentes em linguagens como Perl e Python.
 
-<h2 id="Desestruturação_de_array">Desestruturação de array</h2>
+## Desestruturação de array
 
-<h3 id="Atribuição_básica_de_variável">Atribuição básica de variável</h3>
+### Atribuição básica de variável
 
-<pre class="brush: js notranslate">var foo = ["one", "two", "three"];
+```js
+var foo = ["one", "two", "three"];
 
 var [one, two, three] = foo;
 console.log(one); // "one"
 console.log(two); // "two"
 console.log(three); // "three"
-</pre>
+```
 
-<h3 id="Atribuição_separada_da_declaração">Atribuição separada da declaração</h3>
+### Atribuição separada da declaração
 
-<p>Uma variável pode ter seu valor atribuído via desestruturação separadamente da declaração dela.</p>
+Uma variável pode ter seu valor atribuído via desestruturação separadamente da declaração dela.
 
-<pre class="brush:js notranslate">var a, b;
+```js
+var a, b;
 
 [a, b] = [1, 2];
 console.log(a); // 1
 console.log(b); // 2
-</pre>
+```
 
-<h3 id="Valores_padrão">Valores padrão</h3>
+### Valores padrão
 
-<p>Uma variável pode ser atribuída de um padrão, no caso em que o valor retirado do array é undefined.</p>
+Uma variável pode ser atribuída de um padrão, no caso em que o valor retirado do array é undefined.
 
-<pre class="brush: js notranslate">var a, b;
+```js
+var a, b;
 
 [a=5, b=7] = [1];
 console.log(a); // 1
 console.log(b); // 7
-</pre>
+```
 
-<h3 id="Trocando_variáveis">Trocando variáveis</h3>
+### Trocando variáveis
 
-<p>Os valores de duas variáveis podem ser trocados em uma expressão de desestruturação.</p>
+Os valores de duas variáveis podem ser trocados em uma expressão de desestruturação.
 
-<p>Sem atribuição via desestruturação, trocar dois valores requer uma variável temporária (ou, em algumas linguagens de baixo nível, o <a class="external" href="https://pt.wikipedia.org/wiki/Algoritmo_XOR_Swap">Algoritmo XOR Swap</a>).</p>
+Sem atribuição via desestruturação, trocar dois valores requer uma variável temporária (ou, em algumas linguagens de baixo nível, o [Algoritmo XOR Swap](https://pt.wikipedia.org/wiki/Algoritmo_XOR_Swap)).
 
-<pre class="brush:js notranslate">var a = 1;
+```js
+var a = 1;
 var b = 3;
 
 [a, b] = [b, a];
 console.log(a); // 3
 console.log(b); // 1
-</pre>
+```
 
-<h3 id="Analisando_um_array_retornado_de_uma_função">Analisando um array retornado de uma função</h3>
+### Analisando um array retornado de uma função
 
-<p>Sempre foi possível retornar uma matriz de uma função. A desestruturação pode tornar mais conciso o trabalho com um valor de retorno do tipo array.</p>
+Sempre foi possível retornar uma matriz de uma função. A desestruturação pode tornar mais conciso o trabalho com um valor de retorno do tipo array.
 
-<p>Neste exemplo, <code>f()</code> retorna os valores <code>[1, 2]</code> como saída, que podem ser analisados em uma única linha com desestruturação.</p>
+Neste exemplo, `f()` retorna os valores `[1, 2]` como saída, que podem ser analisados em uma única linha com desestruturação.
 
-<pre class="brush:js notranslate">function f() {
+```js
+function f() {
   return [1, 2];
 }
 
@@ -106,39 +115,44 @@ var a, b;
 [a, b] = f();
 console.log(a); // 1
 console.log(b); // 2
-</pre>
+```
 
-<h3 id="Ignorando_alguns_valores_retornados">Ignorando alguns valores retornados</h3>
+### Ignorando alguns valores retornados
 
-<p>Você pode ignorar valores retornados que você não tem interesse:</p>
+Você pode ignorar valores retornados que você não tem interesse:
 
-<pre class="brush:js notranslate">function f() {
+```js
+function f() {
   return [1, 2, 3];
 }
 
 var [a, , b] = f();
 console.log(a); // 1
 console.log(b); // 3
-</pre>
+```
 
-<p>Você também pode ignorar todos os valores retornados:</p>
+Você também pode ignorar todos os valores retornados:
 
-<pre class="brush:js notranslate">[,,] = f();
-</pre>
+```js
+[,,] = f();
+```
 
-<h3 id="Atribuindo_o_resto_de_um_array_para_uma_variável">Atribuindo o resto de um array para uma variável</h3>
+### Atribuindo o resto de um array para uma variável
 
-<p>Ao desestruturar um array, você pode atribuir a parte restante deste em uma viáriável usando o padrão rest:</p>
+Ao desestruturar um array, você pode atribuir a parte restante deste em uma viáriável usando o padrão rest:
 
-<pre class="brush: js notranslate">var [a, ...b] = [1, 2, 3];
+```js
+var [a, ...b] = [1, 2, 3];
 console.log(a); // 1
-console.log(b); // [2, 3]</pre>
+console.log(b); // [2, 3]
+```
 
-<h3 id="Extraindo_valores_do_resultado_de_uma_expressão_regular">Extraindo valores do resultado de uma expressão regular</h3>
+### Extraindo valores do resultado de uma expressão regular
 
-<p>Quando o método de expressão regular <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec">exec()</a></code> encontra um resultado, ele retorna um array que contém primeiro toda a porção resultante da string e depois cada uma das porções da string resultante envolvidas por parênteses na expressão regular. A atribuição via desestruturação lhe permite extrair as partes desses array facilmente, ignorando a porção resultante completa se não precisar.</p>
+Quando o método de expressão regular [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) encontra um resultado, ele retorna um array que contém primeiro toda a porção resultante da string e depois cada uma das porções da string resultante envolvidas por parênteses na expressão regular. A atribuição via desestruturação lhe permite extrair as partes desses array facilmente, ignorando a porção resultante completa se não precisar.
 
-<pre class="brush:js notranslate">var url = "https://developer.mozilla.org/en-US/Web/JavaScript";
+```js
+var url = "https://developer.mozilla.org/en-US/Web/JavaScript";
 
 var parsedURL = /^(\w+)\:\/\/([^\/]+)\/(.*)$/.exec(url);
 console.log(parsedURL); // ["https://developer.mozilla.org/en-US/Web/JavaScript", "https", "developer.mozilla.org", "en-US/Web/JavaScript"]
@@ -146,59 +160,65 @@ console.log(parsedURL); // ["https://developer.mozilla.org/en-US/Web/JavaScript"
 var [, protocol, fullhost, fullpath] = parsedURL;
 
 console.log(protocol); // "https"
-</pre>
+```
 
-<h2 id="Desestruturação_de_objeto">Desestruturação de objeto</h2>
+## Desestruturação de objeto
 
-<h3 id="Atribuição_básica">Atribuição básica</h3>
+### Atribuição básica
 
-<pre class="brush: js notranslate">var o = {p: 42, q: true};
+```js
+var o = {p: 42, q: true};
 var {p, q} = o;
 
 console.log(p); // 42
 console.log(q); // true
-</pre>
+```
 
-<h3 id="Atribuição_sem_declaração">Atribuição sem declaração</h3>
+### Atribuição sem declaração
 
-<p>Uma variável pode ter seu valor atribuído via desestruturação separadamente da sua declaração.</p>
+Uma variável pode ter seu valor atribuído via desestruturação separadamente da sua declaração.
 
-<pre class="brush:js notranslate">var a, b;
+```js
+var a, b;
 
-({a, b} = {a:1, b:2});</pre>
+({a, b} = {a:1, b:2});
+```
 
-<div class="note">
-<p>Os parênteses <code>( ... )</code> ao redor da declaração de atribuição é uma sintaxe necessária  quando se utiliza a atribuição via desestruturação de objeto literal sem uma declaração.</p>
+> **Nota:** Os parênteses `( ... )` ao redor da declaração de atribuição é uma sintaxe necessária quando se utiliza a atribuição via desestruturação de objeto literal sem uma declaração.
+>
+> `{a, b} = {a:1, b:2}` não é uma sintaxe stand-alone válida, pois `{a, b}` no lado esquerdo é considarada um bloco, não um objeto literal.
+>
+> No entanto, `({a, b} = {a:1, b:2})` é valida, assim como `var {a, b} = {a:1, b:2}`
 
-<p><code>{a, b} = {a:1, b:2}</code> não é uma sintaxe stand-alone válida, pois <code>{a, b}</code> no lado esquerdo é considarada um bloco, não um objeto literal.</p>
+### Atribuição para variáveis com novos nomes
 
-<p>No entanto, <code>({a, b} = {a:1, b:2})</code> é valida, assim como <code>var {a, b} = {a:1, b:2}</code></p>
-</div>
+Uma variável pode ser extraída de um objeto e atribuída a uma variável com um nome diferente da propriedade do objeto.
 
-<h3 id="Atribuição_para_variáveis_com_novos_nomes">Atribuição para variáveis com novos nomes</h3>
-
-<p>Uma variável pode ser extraída de um objeto e atribuída a uma variável com um nome diferente da propriedade do objeto.</p>
-
-<pre class="brush: js notranslate">var o = {p: 42, q: true};
+```js
+var o = {p: 42, q: true};
 var {p: foo, q: bar} = o;
 
 console.log(foo); // 42
-console.log(bar); // true  </pre>
+console.log(bar); // true
+```
 
-<h3 id="Valores_padrão_2">Valores padrão</h3>
+### Valores padrão
 
-<p>Uma variável pode ser atribuída de um padrão, no caso em que o valor retirado do objeto é undefined.</p>
+Uma variável pode ser atribuída de um padrão, no caso em que o valor retirado do objeto é undefined.
 
-<pre class="brush: js notranslate">var {a=10, b=5} = {a: 3};
+```js
+var {a=10, b=5} = {a: 3};
 
 console.log(a); // 3
-console.log(b); // 5</pre>
+console.log(b); // 5
+```
 
-<h3 id="Definindo_um_valor_padrão_de_parâmetro_de_função">Definindo um valor padrão de parâmetro de função</h3>
+### Definindo um valor padrão de parâmetro de função
 
-<h4 id="Versão_ES5">Versão ES5</h4>
+#### Versão ES5
 
-<pre class="brush: js notranslate">function drawES5Chart(options) {
+```js
+function drawES5Chart(options) {
   options = options === undefined ? {} : options;
   var size = options.size === undefined ? 'big' : options.size;
   var cords = options.cords === undefined ? { x: 0, y: 0 } : options.cords;
@@ -210,11 +230,13 @@ console.log(b); // 5</pre>
 drawES5Chart({
   cords: { x: 18, y: 30 },
   radius: 30
-});</pre>
+});
+```
 
-<h4 id="Versão_ES2015">Versão ES2015</h4>
+#### Versão ES2015
 
-<pre class="brush: js notranslate">function drawES2015Chart({size = 'big', cords = { x: 0, y: 0 }, radius = 25} = {}) {
+```js
+function drawES2015Chart({size = 'big', cords = { x: 0, y: 0 }, radius = 25} = {}) {
   console.log(size, cords, radius);
   // do some chart drawing
 }
@@ -222,11 +244,13 @@ drawES5Chart({
 drawES2015Chart({
   cords: { x: 18, y: 30 },
   radius: 30
-});</pre>
+});
+```
 
-<h3 id="Objeto_aninhado_e_desestruturação_de_array">Objeto aninhado e desestruturação de array</h3>
+### Objeto aninhado e desestruturação de array
 
-<pre class="brush:js notranslate">var metadata = {
+```js
+var metadata = {
     title: "Scratchpad",
     translations: [
        {
@@ -243,11 +267,13 @@ drawES2015Chart({
 var { title: englishTitle, translations: [{ title: localeTitle }] } = metadata;
 
 console.log(englishTitle); // "Scratchpad"
-console.log(localeTitle);  // "JavaScript-Umgebung"</pre>
+console.log(localeTitle);  // "JavaScript-Umgebung"
+```
 
-<h3 id="For_de_iteração_e_desestruturação">For de iteração e desestruturação</h3>
+### For de iteração e desestruturação
 
-<pre class="brush: js notranslate">var people = [
+```js
+var people = [
   {
     name: "Mike Smith",
     family: {
@@ -273,11 +299,13 @@ for (var {name: n, family: { father: f } } of people) {
 }
 
 // "Name: Mike Smith, Father: Harry Smith"
-// "Name: Tom Jones, Father: Richard Jones"</pre>
+// "Name: Tom Jones, Father: Richard Jones"
+```
 
-<h3 id="Extraindo_campos_de_objetos_passados_como_parâmetro_de_função">Extraindo campos de objetos passados como parâmetro de função</h3>
+### Extraindo campos de objetos passados como parâmetro de função
 
-<pre class="brush:js notranslate">function userId({id}) {
+```js
+function userId({id}) {
   return id;
 }
 
@@ -295,56 +323,39 @@ var user = {
 };
 
 console.log("userId: " + userId(user)); // "userId: 42"
-whois(user); // "jdoe is John"</pre>
+whois(user); // "jdoe is John"
+```
 
-<p>Isso extrai o <code>id</code>, <code>displayName</code> e <code>firstName</code> do objeto <code>user</code> e os imprime na tela.</p>
+Isso extrai o `id`, `displayName` e `firstName` do objeto `user` e os imprime na tela.
 
-<h3 id="Nomes_computados_de_propriedade_de_objeto_e_desestruturação">Nomes computados de propriedade de objeto e desestruturação</h3>
+### Nomes computados de propriedade de objeto e desestruturação
 
-<p>Nomes computados de propriedades, como em <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names">objetos literais</a>, podem ser usados com desestruturação.</p>
+Nomes computados de propriedades, como em [objetos literais](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names), podem ser usados com desestruturação.
 
-<pre class="brush: js notranslate">let key = "z";
+```js
+let key = "z";
 let { [key]: foo } = { z: "bar" };
 
 console.log(foo); // "bar"
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Espeficiação</th>
-   <th scope="col">Situação</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-destructuring-assignment', 'Destructuring assignment')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-destructuring-assignment', 'Destructuring assignment')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Espeficiação                                                                                                     | Situação                     | Comentário         |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('ES2015', '#sec-destructuring-assignment', 'Destructuring assignment')}} | {{Spec2('ES2015')}}     | Definição inicial. |
+| {{SpecName('ESDraft', '#sec-destructuring-assignment', 'Destructuring assignment')}} | {{Spec2('ESDraft')}} |                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.operators.destructuring")}}
 
-<h2 id="Notas_específicas_do_Firefox">Notas específicas do Firefox</h2>
+## Notas específicas do Firefox
 
-<ul>
- <li>O Firefox forneceu uma extensão não-padronizada de linguagem em <a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/1.7">JS1.7</a> para desestruturação. Esta extensão foi removida no Gecko 40 {{geckoRelease (40)}}. Consulte {{bug (1083498)}}.</li>
- <li>A partir do Gecko 41 {{geckoRelease (41)}} e para cumprir com a especificação ES2015, padrões de desestruturação com parênteses, como <code>([a, b]) = [1, 2]</code> or <code>({a, b}) = { a: 1, b: 2 }</code>, agora são considerados inválidos e lançarão um {{jsxref ( "SyntaxError")}}. Veja a postagem no blog de Jeff Walden e {{bug (1146136)}} para mais detalhes.</li>
-</ul>
+- O Firefox forneceu uma extensão não-padronizada de linguagem em [JS1.7](/pt-BR/docs/Web/JavaScript/New_in_JavaScript/1.7) para desestruturação. Esta extensão foi removida no Gecko 40 {{geckoRelease (40)}}. Consulte {{bug (1083498)}}.
+- A partir do Gecko 41 {{geckoRelease (41)}} e para cumprir com a especificação ES2015, padrões de desestruturação com parênteses, como `([a, b]) = [1, 2]` or `({a, b}) = { a: 1, b: 2 }`, agora são considerados inválidos e lançarão um {{jsxref ( "SyntaxError")}}. Veja a postagem no blog de Jeff Walden e {{bug (1146136)}} para mais detalhes.
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">Operadores de Atribuição</a></li>
- <li><a href="https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/">"ES6 in Depth: Destructuring" on hacks.mozilla.org (em inglês)</a></li>
-</ul>
+- [Operadores de Atribuição](/pt-BR/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)
+- ["ES6 in Depth: Destructuring" on hacks.mozilla.org (em inglês)](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/)

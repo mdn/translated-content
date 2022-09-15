@@ -10,93 +10,91 @@ tags:
   - Referencia
 translation_of: Web/JavaScript/Reference/Global_Objects/Error
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O construtor de <strong><code>Error</code></strong> cria um objeto de erro. Instâncias de objetos <code>Error</code> são lançadas quando erros de tempo de execução ocorrem. O objeto <code>Error</code> também pode ser usado como objeto base para exceções definidas pelo usuário. Veja abaixo tipos de erro padrões embutidos.</p>
+O construtor de **`Error`** cria um objeto de erro. Instâncias de objetos `Error` são lançadas quando erros de tempo de execução ocorrem. O objeto `Error` também pode ser usado como objeto base para exceções definidas pelo usuário. Veja abaixo tipos de erro padrões embutidos.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">new Error([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</pre>
+```
+new Error([message[, fileName[, lineNumber]]])
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>message</code></dt>
- <dd>Opcional. Descrição do erro legível para humanos.</dd>
- <dt><code>fileName</code> {{non-standard_inline}}</dt>
- <dd>Opcional. O valor da propriedade <code>fileName</code>  no objeto de erro criado. O padrão é o nome do arquivo contendo o código que chamou o construtor de <code>Error()</code>.</dd>
- <dt><code>lineNumber</code> {{non-standard_inline}}</dt>
- <dd>Opcional. O valor da propriedade <code>lineNumber</code> no objeto de <code>Error</code> criado. O padrão é o número da linha contendo a invocação do construtor <code>Error()</code>.</dd>
-</dl>
+- `message`
+  - : Opcional. Descrição do erro legível para humanos.
+- `fileName` {{non-standard_inline}}
+  - : Opcional. O valor da propriedade `fileName` no objeto de erro criado. O padrão é o nome do arquivo contendo o código que chamou o construtor de `Error()`.
+- `lineNumber` {{non-standard_inline}}
+  - : Opcional. O valor da propriedade `lineNumber` no objeto de `Error` criado. O padrão é o número da linha contendo a invocação do construtor `Error()`.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Erros em tempo de execução resultam em novos objetos <code>Error</code> sendo criados e lançados.</p>
+Erros em tempo de execução resultam em novos objetos `Error` sendo criados e lançados.
 
-<p>Esta página documenta o uso do objeto <code>Error</code> em si e seu uso como uma função construtora. Para uma lista de propriedades e métodos herdados por instâncias de <code>Error</code>, veja {{jsxref("Error.prototype")}}.</p>
+Esta página documenta o uso do objeto `Error` em si e seu uso como uma função construtora. Para uma lista de propriedades e métodos herdados por instâncias de `Error`, veja {{jsxref("Error.prototype")}}.
 
-<h3 id="Tipos_de_erro">Tipos de erro</h3>
+### Tipos de erro
 
-<p>Além do construtor genérico de <code>Error</code>, existem outros seis construtores principais de erro  no JavaScript. Para exceções em <em>client-side</em>, veja <a href="/en-US/docs/Web/JavaScript/Guide/Statements#Exception_Handling_Statements">Exceções na captura de Instruções</a>.</p>
+Além do construtor genérico de `Error`, existem outros seis construtores principais de erro no JavaScript. Para exceções em _client-side_, veja [Exceções na captura de Instruções](/pt-BR/docs/Web/JavaScript/Guide/Statements#Exception_Handling_Statements).
 
-<dl>
- <dt>{{jsxref("EvalError")}}</dt>
- <dd>Cria uma instância representando um erro que ocorre na função global. {{jsxref("Global_Objects/eval", "eval()")}}.</dd>
- <dt>{{jsxref("InternalError")}} {{non-standard_inline}}</dt>
- <dd>Cria uma instância representando um erro que ocorre quando um erro interno na <em>engine</em> do JavaScript é lançado. Ex: "too much recursion".</dd>
- <dt>{{jsxref("RangeError")}}</dt>
- <dd>Cria uma instância representando um erro que ocorre quando um valor ou parâmetro numérico está fora de seus limites válidos.</dd>
- <dt>{{jsxref("ReferenceError")}}</dt>
- <dd>Cria uma instância representando um erro que ocorre ao de-referenciar uma referência inválida.</dd>
- <dt>{{jsxref("SyntaxError")}}</dt>
- <dd>Cria uma instância representando um erro que ocorre ao fazer o <em>parse</em> do código em {{jsxref("Global_Objects/eval", "eval()")}}.</dd>
- <dt>{{jsxref("TypeError")}}</dt>
- <dd>Cria uma instância representando um erro que ocorre quando uma variável ou parâmetro não é de um tipo válido.</dd>
- <dt>{{jsxref("URIError")}}</dt>
- <dd>Cria uma instância representando um erro que ocorre quando são passados parâmetros inválidos para {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} ou {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}.</dd>
-</dl>
+- {{jsxref("EvalError")}}
+  - : Cria uma instância representando um erro que ocorre na função global. {{jsxref("Global_Objects/eval", "eval()")}}.
+- {{jsxref("InternalError")}} {{non-standard_inline}}
+  - : Cria uma instância representando um erro que ocorre quando um erro interno na _engine_ do JavaScript é lançado. Ex: "too much recursion".
+- {{jsxref("RangeError")}}
+  - : Cria uma instância representando um erro que ocorre quando um valor ou parâmetro numérico está fora de seus limites válidos.
+- {{jsxref("ReferenceError")}}
+  - : Cria uma instância representando um erro que ocorre ao de-referenciar uma referência inválida.
+- {{jsxref("SyntaxError")}}
+  - : Cria uma instância representando um erro que ocorre ao fazer o _parse_ do código em {{jsxref("Global_Objects/eval", "eval()")}}.
+- {{jsxref("TypeError")}}
+  - : Cria uma instância representando um erro que ocorre quando uma variável ou parâmetro não é de um tipo válido.
+- {{jsxref("URIError")}}
+  - : Cria uma instância representando um erro que ocorre quando são passados parâmetros inválidos para {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} ou {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}.
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<dl>
- <dt>{{jsxref("Error.prototype")}}</dt>
- <dd>Permite a criação de propriedades para instâncias de <code>Error</code>.</dd>
-</dl>
+- {{jsxref("Error.prototype")}}
+  - : Permite a criação de propriedades para instâncias de `Error`.
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<p>O objeto <code>Error</code> global não contém métodos próprios, entretanto, ele herda alguns métodos através da cadeia de <em>prototypes</em>.</p>
+O objeto `Error` global não contém métodos próprios, entretanto, ele herda alguns métodos através da cadeia de _prototypes_.
 
-<h2 id="Instâncias_de_Error"><code>Instâncias de Error</code></h2>
+## `Instâncias de Error`
 
-<div>{{page('pt-BR/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Description')}}</div>
+{{page('pt-BR/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Description')}}
 
-<h3 id="Propriedades_2">Propriedades</h3>
+### Propriedades
 
-<div>{{page('pt-BR/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Properties')}}</div>
+{{page('pt-BR/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Properties')}}
 
-<h3 id="Métodos_2">Métodos</h3>
+### Métodos
 
-<div>{{page('pt-BR/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Methods')}}</div>
+{{page('pt-BR/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Methods')}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Lançando_um_erro_genérico">Lançando um erro genérico</h3>
+### Lançando um erro genérico
 
-<p>Geralmente você cria um objeto <code>Error</code> com a intenção de lançá-lo usando a palavra-chave {{jsxref("Statements/throw", "throw")}}. Você pode capturar o erro usando uma construção de {{jsxref("Statements/try...catch", "try...catch")}}:</p>
+Geralmente você cria um objeto `Error` com a intenção de lançá-lo usando a palavra-chave {{jsxref("Statements/throw", "throw")}}. Você pode capturar o erro usando uma construção de {{jsxref("Statements/try...catch", "try...catch")}}:
 
-<pre class="brush: js">try {
+```js
+try {
   throw new Error('Oooops!');
 } catch (e) {
   alert(e.name + ': ' + e.message);
 }
-</pre>
+```
 
-<h3 id="Capturando_um_erro_específico">Capturando um erro específico</h3>
+### Capturando um erro específico
 
-<p>Você pode escolher por capturar apenas tipos de erro específicos testando o tipo do erro com a propriedade {{jsxref("Object.prototype.constructor", "constructor")}} de erro ou, se você está escrevendo para <em>engines</em> de JavaScript modernas, a palavra-chave {{jsxref("Operators/instanceof", "instanceof")}}:</p>
+Você pode escolher por capturar apenas tipos de erro específicos testando o tipo do erro com a propriedade {{jsxref("Object.prototype.constructor", "constructor")}} de erro ou, se você está escrevendo para _engines_ de JavaScript modernas, a palavra-chave {{jsxref("Operators/instanceof", "instanceof")}}:
 
-<pre class="brush: js">try {
+```js
+try {
   Objeto.Metodo();
 } catch (e) {
   if (e instanceof EvalError) {
@@ -106,19 +104,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Error
   }
   // ... etc
 }
-</pre>
+```
 
-<h3 id="Tipos_de_erro_customizados">Tipos de erro customizados</h3>
+### Tipos de erro customizados
 
-<p>Você pode escolher definir seus próprios tipos de erro derivando de <code>Error</code> para conseguir usar <code>throw new MeuErro()</code> e usar <code>instanceof MeuErro </code>para checar o tipo de erro na captura da exceção. A forma comum para isso está demonstrada abaixo</p>
+Você pode escolher definir seus próprios tipos de erro derivando de `Error` para conseguir usar `throw new MeuErro()` e usar `instanceof MeuErro `para checar o tipo de erro na captura da exceção. A forma comum para isso está demonstrada abaixo
 
-<div class="warning">
-<p>Note que as instâncias <code>MeuErro</code> lançadas vão reportar valores de <code>lineNumber</code> e <code>fileName</code> incorretos, ao menos no Firefox.</p>
-</div>
+> **Aviso:** Note que as instâncias `MeuErro` lançadas vão reportar valores de `lineNumber` e `fileName` incorretos, ao menos no Firefox.
 
-<p>Veja também <a href="http://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript">"esta discussão no Stackoverflow (em inglês): What's a good way to extend Error in JavaScript?"</a>.</p>
+Veja também ["esta discussão no Stackoverflow (em inglês): What's a good way to extend Error in JavaScript?"](http://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript).
 
-<pre class="brush: js">// Cria um novo objeto que herda o construtor de Error através do prototype.
+```js
+// Cria um novo objeto que herda o construtor de Error através do prototype.
 function MeuErro(message) {
   this.name = 'MeuErro';
   this.message = message || 'Mensagem de erro padrão';
@@ -139,43 +136,23 @@ try {
 } catch (e) {
   console.log(e.name);     // 'MeuErro'
   console.log(e.message);  // 'Mensagem customizada'
-}</pre>
+}
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição inicial. Implementada no JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.11', 'Error')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-error-objects', 'Error')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                        | Status                   | Comentário                                         |
+| -------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}     | Definição inicial. Implementada no JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.11', 'Error')}}         | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES6', '#sec-error-objects', 'Error')}} | {{Spec2('ES6')}}     |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Error")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Error.prototype")}}</li>
- <li>{{jsxref("Statements/throw", "throw")}}</li>
- <li>{{jsxref("Statements/try...catch", "try...catch")}}</li>
-</ul>
+- {{jsxref("Error.prototype")}}
+- {{jsxref("Statements/throw", "throw")}}
+- {{jsxref("Statements/try...catch", "try...catch")}}

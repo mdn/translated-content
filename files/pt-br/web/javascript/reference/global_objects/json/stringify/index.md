@@ -3,40 +3,39 @@ title: JSON.stringify()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 translation_of: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 ---
-<div>{{JSRef("Global_Objects", "JSON")}}</div>
+{{JSRef("Global_Objects", "JSON")}}
 
-<h2 id="Summary" name="Summary">Resumo</h2>
+## Resumo
 
-<p>O método <strong><code>JSON.stringify()</code></strong> converte valores em javascript para uma String  JSON. Esses valores podem ser substituidos especificando a função <em>replacer</em>, ou incluindo somente as propriedades específicas, quando o array do replacer for especificado.</p>
+O método **`JSON.stringify()`** converte valores em javascript para uma String JSON. Esses valores podem ser substituidos especificando a função _replacer_, ou incluindo somente as propriedades específicas, quando o array do replacer for especificado.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code>JSON.stringify(<var>valor</var>[, <var>replacer</var>[, espaço]])</code></pre>
+```
+JSON.stringify(valor[, replacer[, espaço]])
+```
 
-<h3 id="Parameters" name="Parameters">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>valor</code></dt>
- <dd>O valor a ser convertido para uma string JSON.</dd>
- <dt><code>replacer</code> {{optional_inline}}</dt>
- <dd>Uma função que altera o comportamento do processo de transformação em string, ou um array de objetos {{jsxref("String")}} e {{jsxref("Number")}} que servem como uma lista branca para selecionar as propriedades do objeto valor a ser incluído na string JSON. Se este valor for nulo ou não fornecido, todas as propriedades do objeto são incluídas na string JSON resultante.</dd>
- <dt><code>espaço</code> {{optional_inline}}</dt>
- <dd>Um objeto {{jsxref("String")}} ou {{jsxref("Number")}} que é usado para inserir espaço em branco na saída da string JSON para propósito de legibilidade. Se isto for um <code>Number</code>, indica o número de caracteres espaço para usar como espaço em branco; este número é limitado em 10 se for maior que isso. Valores menores que 1 indicam que nenhum espaço deve ser usado. Se isto for uma <code>String</code>, a string (ou os primeiros 10 caracteres da string, se for maior que isso) é usado como espaço em branco. Se esse parâmetro não for fornecido (ou for null), nenhum espaço em branco é usado.</dd>
-</dl>
+- `valor`
+  - : O valor a ser convertido para uma string JSON.
+- `replacer` {{optional_inline}}
+  - : Uma função que altera o comportamento do processo de transformação em string, ou um array de objetos {{jsxref("String")}} e {{jsxref("Number")}} que servem como uma lista branca para selecionar as propriedades do objeto valor a ser incluído na string JSON. Se este valor for nulo ou não fornecido, todas as propriedades do objeto são incluídas na string JSON resultante.
+- `espaço` {{optional_inline}}
+  - : Um objeto {{jsxref("String")}} ou {{jsxref("Number")}} que é usado para inserir espaço em branco na saída da string JSON para propósito de legibilidade. Se isto for um `Number`, indica o número de caracteres espaço para usar como espaço em branco; este número é limitado em 10 se for maior que isso. Valores menores que 1 indicam que nenhum espaço deve ser usado. Se isto for uma `String`, a string (ou os primeiros 10 caracteres da string, se for maior que isso) é usado como espaço em branco. Se esse parâmetro não for fornecido (ou for null), nenhum espaço em branco é usado.
 
-<h2 id="Description" name="Description">Descrição</h2>
+## Descrição
 
-<p><code>JSON.stringify()</code> converte um valor para uma notação JSON que o representa:</p>
+`JSON.stringify()` converte um valor para uma notação JSON que o representa:
 
-<ul>
- <li>Se o valor tiver um método <code>toJSON()</code>, é responsável por definir quais dados serão serializados.</li>
- <li>{{jsxref("Boolean")}}, {{jsxref("Number")}}, and {{jsxref("String")}} os objetos são convertidos para os valores primitivos correspondentes durante a stringificação, de acordo com a semântica de conversão.</li>
- <li>Se {{jsxref("undefined")}}, uma função, ou um symbol é encontrado durante a conversão é omitido (quando é encontrado em um objeto) ou censurado para {{jsxref("null")}} (quando é encontrado em um Array). <code>JSON.stringify</code> pode também somente retornar <code>undefined</code> ao passar valores puros como <code>JSON.stringify(function(){})</code> ou <code>JSON.stringify(undefined)</code>.</li>
- <li>Todas as propriedades com chave de símbolo serão completamente ignoradas, mesmo quando usar a função  <code>replacer</code>.</li>
- <li>Propriedades não enumeráveis serão ignoradas.</li>
-</ul>
+- Se o valor tiver um método `toJSON()`, é responsável por definir quais dados serão serializados.
+- {{jsxref("Boolean")}}, {{jsxref("Number")}}, and {{jsxref("String")}} os objetos são convertidos para os valores primitivos correspondentes durante a stringificação, de acordo com a semântica de conversão.
+- Se {{jsxref("undefined")}}, uma função, ou um symbol é encontrado durante a conversão é omitido (quando é encontrado em um objeto) ou censurado para {{jsxref("null")}} (quando é encontrado em um Array). `JSON.stringify` pode também somente retornar `undefined` ao passar valores puros como `JSON.stringify(function(){})` ou `JSON.stringify(undefined)`.
+- Todas as propriedades com chave de símbolo serão completamente ignoradas, mesmo quando usar a função `replacer`.
+- Propriedades não enumeráveis serão ignoradas.
 
-<pre class="brush: js notranslate">JSON.stringify({});                  // '{}'
+```js
+JSON.stringify({});                  // '{}'
 JSON.stringify(true);                // 'true'
 JSON.stringify('foo');               // '"foo"'
 JSON.stringify([1, 'false', false]); // '[1,"false",false]'
@@ -60,27 +59,24 @@ JSON.stringify({ [Symbol.for('foo')]: 'foo' }, function(k, v) {
   }
 });
 // '{}'
-</pre>
+```
 
-<h3 id="O_parâmetro_replacer_parameter">O parâmetro <code>replacer</code> parameter</h3>
+### O parâmetro `replacer` parameter
 
-<p dir="ltr" id="tw-target-text">O parâmetro <kbd>replacer</kbd> pode ser uma função ou uma matriz. Como função, são necessários dois parâmetros, a <kbd>chave</kbd> e os valores que estão sendo especificados. O objeto no qual a <kbd>chave</kbd> foi encontrada é fornecido como substituto desse parâmetro. Inicialmente, ele é chamado com uma chave vazia que representa o objeto que está sendo codificado e, em seguida, é chamado para cada propriedade no <kbd>objeto</kbd> ou matriz que está sendo codificada. Ele deve retornar o valor que deve ser adicionado à cadeia JSON, da seguinte maneira:</p>
+O parâmetro <kbd>replacer</kbd> pode ser uma função ou uma matriz. Como função, são necessários dois parâmetros, a <kbd>chave</kbd> e os valores que estão sendo especificados. O objeto no qual a <kbd>chave</kbd> foi encontrada é fornecido como substituto desse parâmetro. Inicialmente, ele é chamado com uma chave vazia que representa o objeto que está sendo codificado e, em seguida, é chamado para cada propriedade no <kbd>objeto</kbd> ou matriz que está sendo codificada. Ele deve retornar o valor que deve ser adicionado à cadeia JSON, da seguinte maneira:
 
-<ul>
- <li>Se você retornar um {{jsxref("Number")}}, a string correspondente a esse número é usada como o valor da propriedade quando adicionada à sequência JSON.</li>
- <li>If you return a {{jsxref("String")}}, that string is used as the property's value when adding it to the JSON string.</li>
- <li>If you return a {{jsxref("Boolean")}}, "true" or "false" is used as the property's value, as appropriate, when adding it to the JSON string.</li>
- <li>If you return any other object, the object is recursively stringified into the JSON string, calling the <code>replacer</code> function on each property, unless the object is a function, in which case nothing is added to the JSON string.</li>
- <li>If you return <code>undefined</code>, the property is not included in the output JSON string. </li>
-</ul>
+- Se você retornar um {{jsxref("Number")}}, a string correspondente a esse número é usada como o valor da propriedade quando adicionada à sequência JSON.
+- If you return a {{jsxref("String")}}, that string is used as the property's value when adding it to the JSON string.
+- If you return a {{jsxref("Boolean")}}, "true" or "false" is used as the property's value, as appropriate, when adding it to the JSON string.
+- If you return any other object, the object is recursively stringified into the JSON string, calling the `replacer` function on each property, unless the object is a function, in which case nothing is added to the JSON string.
+- If you return `undefined`, the property is not included in the output JSON string.
 
-<div class="blockIndicator note">
-<p><strong>Nota: </strong>Você não pode usar a função <code>replacer</code> para remover valoeres em uma <code>array</code>. Se você retornar <code>undefined</code>, <code>null</code> será usado no lugar.</p>
-</div>
+> **Nota:**Você não pode usar a função `replacer` para remover valoeres em uma `array`. Se você retornar `undefined`, `null` será usado no lugar.
 
-<h4 id="Exemplo_de_uma_função">Exemplo de uma função</h4>
+#### Exemplo de uma função
 
-<pre class="brush: js notranslate">function replacer(key, value) {
+```js
+function replacer(key, value) {
   if (typeof value === "string") {
     return undefined;
   }
@@ -89,43 +85,47 @@ JSON.stringify({ [Symbol.for('foo')]: 'foo' }, function(k, v) {
 
 var foo = {fundação: "Mozilla", modelo: "caixa", semana: 45, transporte: "carro", mês: 7};
 var jsonString = JSON.stringify(foo, replacer);
-</pre>
+```
 
-<p>O resultado do JSON é:  <code>{"semana":45,"mês":7}</code>.</p>
+O resultado do JSON é: `{"semana":45,"mês":7}`.
 
-<h4 id="Example_of_using_replacer_parameter" name="Example_of_using_replacer_parameter">Exemplo em uma array</h4>
+#### Exemplo em uma array
 
-<p>Se <code>replacer</code> é usado em uma array, os valores da array indicam os nomes das propriedades no objeto, que devem ser incluídas na sequência JSON resultante.</p>
+Se `replacer` é usado em uma array, os valores da array indicam os nomes das propriedades no objeto, que devem ser incluídas na sequência JSON resultante.
 
-<pre class="brush: js notranslate">JSON.stringify(foo, ['semana', 'mês']);
+```js
+JSON.stringify(foo, ['semana', 'mês']);
 // '{"semana":45,"mês":7}', apenas mantém as propriedades "semana" e "mês"
-</pre>
+```
 
-<h3 id="space_argument" name="space_argument">O argumento <code>space</code> </h3>
+### O argumento `space`
 
-<p>O argumento <code>space</code> O argumento pode ser usado para controlar o espaçamento na sequência final. Se for um número, os níveis sucessivos na stringficação serão recuados por esse número de caracteres de espaço (até 10). Se for uma sequência, os níveis sucessivos serão recuados por essa sequência (ou pelos dez primeiros caracteres).</p>
+O argumento `space` O argumento pode ser usado para controlar o espaçamento na sequência final. Se for um número, os níveis sucessivos na stringficação serão recuados por esse número de caracteres de espaço (até 10). Se for uma sequência, os níveis sucessivos serão recuados por essa sequência (ou pelos dez primeiros caracteres).
 
-<pre class="brush: js notranslate">JSON.stringify({ a: 2 }, null, ' ');
+```js
+JSON.stringify({ a: 2 }, null, ' ');
 // '{
 //  "a": 2
 // }'
-</pre>
+```
 
-<p>O uso de um caractere de tabulação imita a aparência padrão de impressão pretty-print.</p>
+O uso de um caractere de tabulação imita a aparência padrão de impressão pretty-print.
 
-<pre class="brush: js notranslate">JSON.stringify({ um: 1, dois: 2 }, null, '\t');
+```js
+JSON.stringify({ um: 1, dois: 2 }, null, '\t');
 // r:
 // '{
 //     "um": 1,
 //     "dois": 2
 // }'
-</pre>
+```
 
-<h3 id="toJSON_behavior" name="toJSON_behavior">Comportamento de <code>toJSON()</code></h3>
+### Comportamento de `toJSON()`
 
-<p>Se um objeto sendo stringificado tiver uma propriedade denominada <font face="consolas, Liberation Mono, courier, monospace">toJSON()</font> cujo valor é uma função, o método <code>toJSON()</code> personaliza o comportamento da stringificação JSON, em vez de o objeto ser serializado, o valor retornado pelo método <code>toJSON()</code> quando chamado será serializado. Por exemplo:</p>
+Se um objeto sendo stringificado tiver uma propriedade denominada toJSON() cujo valor é uma função, o método `toJSON()` personaliza o comportamento da stringificação JSON, em vez de o objeto ser serializado, o valor retornado pelo método `toJSON()` quando chamado será serializado. Por exemplo:
 
-<pre class="brush: js notranslate">var obj = {
+```js
+var obj = {
   foo: 'foo',
   toJSON: function() {
     return 'bar';
@@ -133,17 +133,16 @@ var jsonString = JSON.stringify(foo, replacer);
 };
 JSON.stringify(obj);        // '"bar"'
 JSON.stringify({ x: obj }); // '{"x":"bar"}'
-</pre>
+```
 
-<h3 id="Example_of_using_JSON.stringify_with_localStorage" name="Example_of_using_JSON.stringify_with_localStorage">Exemplo de uso de <code>JSON.stringify()</code> com <code>localStorage</code></h3>
+### Exemplo de uso de `JSON.stringify()` com `localStorage`
 
-<p>No caso em que você deseja armazenar um objeto criado por seu usuário e permitir que ele seja restaurado mesmo após o fechamento do navegador, o exemplo a seguir é um modelo para a aplicabilidade de <code>JSON.stringify()</code>:</p>
+No caso em que você deseja armazenar um objeto criado por seu usuário e permitir que ele seja restaurado mesmo após o fechamento do navegador, o exemplo a seguir é um modelo para a aplicabilidade de `JSON.stringify()`:
 
-<div class="warning">
-<p>As funções não são um tipo de dados JSON válido, portanto, elas não funcionarão. Também alguns objetos como {{jsxref("Date")}} será uma string depois {{jsxref("JSON.parse()")}}.</p>
-</div>
+> **Aviso:** As funções não são um tipo de dados JSON válido, portanto, elas não funcionarão. Também alguns objetos como {{jsxref("Date")}} será uma string depois {{jsxref("JSON.parse()")}}.
 
-<pre class="brush: js notranslate">// Criando um exemplo em JSON
+```js
+// Criando um exemplo em JSON
 var seção = {
   'telas': [],
   'estado': true
@@ -166,38 +165,19 @@ var seçãoRestaurada = JSON.parse(localStorage.getItem('seção'));
 // Agora, a variável seçãoRestaurada contém o objeto que foi salvo
 // no localStorage
 console.log(seçãoRestaurada);
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">Especificações </h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.12.3', 'JSON.stringify')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>
-    <p dir="ltr" id="tw-target-text">Definição inicial. Implementado em JavaScript 1.7.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-json.stringify', 'JSON.stringify')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                    | Status                   | Comentário                                         |
+| -------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.12.3', 'JSON.stringify')}}         | {{Spec2('ES5.1')}} | Definição inicial. Implementado em JavaScript 1.7. |
+| {{SpecName('ES6', '#sec-json.stringify', 'JSON.stringify')}} | {{Spec2('ES6')}}     |                                                    |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade em navegadores</h2>
+## Compatibilidade em navegadores
 
 {{Compat("javascript.builtins.JSON.stringify")}}
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("JSON.parse()")}}</li>
-</ul>
+- {{jsxref("JSON.parse()")}}

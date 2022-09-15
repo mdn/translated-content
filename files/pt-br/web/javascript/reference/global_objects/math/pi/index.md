@@ -8,73 +8,47 @@ tags:
   - Propriedade
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/PI
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>A propriedade <strong><code>Math.PI</code></strong> representa a proporção entre circunferência de um círculo com o seu diâmetro, aproximadamente 3.14159:</p>
+A propriedade **`Math.PI`** representa a proporção entre circunferência de um círculo com o seu diâmetro, aproximadamente 3.14159:
 
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.PI</mi></mstyle><mo>=</mo><mi>π</mi><mo>≈</mo><mn>3.14159</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.PI}} = \pi \approx 3.14159</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.PI</mi></mstyle><mo>=</mo><mi>π</mi><mo>≈</mo><mn>3.14159</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.PI}} = \pi \approx 3.14159</annotation></semantics></math>
 
-<p>{{EmbedInteractiveExample("pages/js/math-pi.html")}}</p>
+{{EmbedInteractiveExample("pages/js/math-pi.html")}}
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+{{js_property_attributes(0, 0, 0)}}
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Como <code>PI</code> é uma propriedade estática de <code>Math</code>, sempre use-a como <code>Math.PI</code>, ao invés de uma propriedade de um objeto <code>Math</code> que você criou (<code>Math</code> não é um construtor).</p>
+Como `PI` é uma propriedade estática de `Math`, sempre use-a como `Math.PI`, ao invés de uma propriedade de um objeto `Math` que você criou (`Math` não é um construtor).
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_Math.PI">Usando <code>Math.PI</code></h3>
+### Usando `Math.PI`
 
-<p>A seguinte função usa <code>Math.PI</code> para calcular a circunferência de um círculo com um dado raio.</p>
+A seguinte função usa `Math.PI` para calcular a circunferência de um círculo com um dado raio.
 
-<pre class="brush: js">function calcularCircunferencia(raio) {
+```js
+function calcularCircunferencia(raio) {
   return 2 * Math.PI * raio;
 }
 
 calcularCircunferencia(1);  // 6.283185307179586
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definiçao inicial. Implementado no JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.1.6', 'Math.PI')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.pi', 'Math.PI')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.pi', 'Math.PI')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                        | Status                       | Comment                                            |
+| -------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Definiçao inicial. Implementado no JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.1.6', 'Math.PI')}}     | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES6', '#sec-math.pi', 'Math.PI')}}         | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-math.pi', 'Math.PI')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("javascript.builtins.Math.PI")}}
 
+## Veja também
 
-<p>{{Compat("javascript.builtins.Math.PI")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{jsxref("Math")}}</li>
-</ul>
+- {{jsxref("Math")}}

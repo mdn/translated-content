@@ -8,37 +8,37 @@ tags:
   - globalThis
 translation_of: Web/JavaScript/Reference/Global_Objects/globalThis
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<p>A propriedade global <code><strong>globalThis</strong></code> retorna um objeto global de nível superior.</p>
+A propriedade global **`globalThis`** retorna um objeto global de nível superior.
 
-<div>{{EmbedInteractiveExample("pages/js/globalprops-globalthis.html")}}</div>
+{{EmbedInteractiveExample("pages/js/globalprops-globalthis.html")}}
 
+## Sintaxe
 
+```
+globalThis
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Descrição
 
-<pre class="syntaxbox"><code>globalThis</code>
-</pre>
+Historicamente, o acesso ao escopo global exigiu uma sintaxe diferente em diferentes ambientes JavaScript. Na web você pode usar [`window`](/en-US/docs/Web/API/Window/window), [`self`](/en-US/docs/Web/API/Window/self) ou [`frames`](/en-US/docs/Web/API/Window/frames) - porém em [Web Workers](/pt-BR/docs/Web/API/Worker) somente `self` funcionará. Em Node.js nada disso funciona e você deve usar `global`.
+A palavra-chave `this` poderia ser usada dentro de funções em execução no modo _sloppy_, mas `this` será `undefined` em módulos, e dentro de funções em execução no _strict mode_.
 
-<h2 id="Descrição">Descrição</h2>
+A propriedade `globalThis` fornece uma maneira padrão de acessar o objeto global entre ambientes. Ao contrário de propriedades semelhantes, como [`window`](/en-US/docs/Web/API/Window/window) e [`self`](/en-US/docs/Web/API/Window/self), é garantido que funcione em contextos _window_ e _non-window_. Dessa forma, você pode acessar o objeto global de maneira consistente sem precisar saber em qual ambiente o código está sendo executado.
 
-<p>Historicamente, o acesso ao escopo global exigiu uma sintaxe diferente em diferentes ambientes JavaScript. Na web você pode usar <code><a href="/en-US/docs/Web/API/Window/window">window</a></code>, <code><a href="/en-US/docs/Web/API/Window/self">self</a></code> ou <code><a href="/en-US/docs/Web/API/Window/frames">frames</a></code> - porém em <a href="/en-US/docs/Web/API/Worker">Web Workers</a> somente <code>self</code> funcionará. Em Node.js nada disso funciona e você deve usar <code>global</code>.<br>
- A palavra-chave <code>this</code> poderia ser usada dentro de funções em execução no modo <em>sloppy</em>, mas <code>this</code> será <code>undefined</code> em módulos, e dentro de funções em execução no <em>strict mode</em>.</p>
+Para ajudá-lo a lembrar o nome, lembre-se que no escopo global, o valor de `this` é `globalThis`.
 
-<p>A propriedade <code>globalThis</code> fornece uma maneira padrão de acessar o objeto global entre ambientes. Ao contrário de propriedades semelhantes, como <code><a href="/en-US/docs/Web/API/Window/window">window</a></code> e <code><a href="/en-US/docs/Web/API/Window/self">self</a></code>, é garantido que funcione em contextos <em>window</em> e <em>non-window</em>. Dessa forma, você pode acessar o objeto global de maneira consistente sem precisar saber em qual ambiente o código está sendo executado.</p>
+### Nome
 
-<p>Para ajudá-lo a lembrar o nome, lembre-se que no escopo global, o valor de <code>this</code> é <code>globalThis</code>.</p>
+Várias outras opções de nomes populares, como `self` e `global` foram removidas da discussão devido ao seu potencial em quebrar a compatibilidade com o código existente.
 
-<h3 id="Nome">Nome</h3>
+## Exemplos
 
-<p>Várias outras opções de nomes populares, como <code>self</code> e <code>global</code> foram removidas da discussão devido ao seu potencial em quebrar a compatibilidade com o código existente.</p>
+Antes de `globalThis`, a única maneira confiável de obter o objeto global para um ambiente era `Function('return this')()`. No entanto, isso causa violações [CSP](/pt-BR/docs/Web/HTTP/CSP) em algumas configurações, então [es6-shim](https://github.com/paulmillr/es6-shim) usa uma verificação como essa, por exemplo:
 
-<h2 id="Exemplos">Exemplos</h2>
-
-<p>Antes de <code>globalThis</code>, a única maneira confiável de obter o objeto global para um ambiente era <code>Function('return this')()</code>. No entanto, isso causa violações <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> em algumas configurações, então <a href="https://github.com/paulmillr/es6-shim">es6-shim</a> usa uma verificação como essa, por exemplo:</p>
-
-<pre class="brush: js">var getGlobal = function () {
+```js
+var getGlobal = function () {
   if (typeof self !== 'undefined') { return self; }
   if (typeof window !== 'undefined') { return window; }
   if (typeof global !== 'undefined') { return global; }
@@ -50,31 +50,22 @@ var globals = getGlobal();
 if (typeof globals.setTimeout !== 'function') {
   // sem setTimeout neste ambiente!
 }
-</pre>
+```
 
-<p>Com <code>globalThis</code> disponível, a busca global adicional entre ambientes não é mais necessária:</p>
+Com `globalThis` disponível, a busca global adicional entre ambientes não é mais necessária:
 
-<pre class="brush: js">if (typeof globalThis.setTimeout !== 'function') {
+```js
+if (typeof globalThis.setTimeout !== 'function') {
   // sem setTimeout neste ambiente!
-}</pre>
+}
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td><a href="https://github.com/tc39/proposal-global">globalThis proposal</a></td>
-   <td>Stage 3</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                  | Status  | Comentário |
+| -------------------------------------------------------------- | ------- | ---------- |
+| [globalThis proposal](https://github.com/tc39/proposal-global) | Stage 3 |            |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.globalThis")}}</p>
+{{Compat("javascript.builtins.globalThis")}}

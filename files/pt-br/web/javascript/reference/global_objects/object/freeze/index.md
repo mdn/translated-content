@@ -3,34 +3,35 @@ title: Object.freeze()
 slug: Web/JavaScript/Reference/Global_Objects/Object/freeze
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/freeze
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>Object.freeze()</strong></code> congela um objeto: isto é, impede que novas propriedades sejam adicionadas a ele; impede que as propriedades existentes sejam removidas; e impede que propriedades existentes, ou sua inumerabilidade, configurabilidade, ou capacidade de escrita sejam alteradas. Em essência o objeto é efetivamente imutável. O método retorna o objeto congelado.</p>
+O método **`Object.freeze()`** congela um objeto: isto é, impede que novas propriedades sejam adicionadas a ele; impede que as propriedades existentes sejam removidas; e impede que propriedades existentes, ou sua inumerabilidade, configurabilidade, ou capacidade de escrita sejam alteradas. Em essência o objeto é efetivamente imutável. O método retorna o objeto congelado.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code>Object.freeze(<var>obj</var>)</code></pre>
+```
+Object.freeze(obj)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>O objeto a ser congelado.</dd>
-</dl>
+- `obj`
+  - : O objeto a ser congelado.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>O objeto congelado.</p>
+O objeto congelado.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Nada pode ser adicionado ou removido do conjunto de propriedades de um objeto congelado. Qualquer tentativa de fazê-lo irá falhar, ou silenciosamente ou através de um {{jsxref("TypeError")}} exception (mais frequentemente, mas não exclusivamente, quando em {{jsxref("Strict_mode", "strict mode", "", 1)}}).</p>
+Nada pode ser adicionado ou removido do conjunto de propriedades de um objeto congelado. Qualquer tentativa de fazê-lo irá falhar, ou silenciosamente ou através de um {{jsxref("TypeError")}} exception (mais frequentemente, mas não exclusivamente, quando em {{jsxref("Strict_mode", "strict mode", "", 1)}}).
 
-<p>Valores não podem ser alterados para propriedades de dados. As propriedades do Accessor (getters e setters) funcionam da mesma forma (e ainda dão a ilusão de que você está alterando o valor). Observe que valores que são objetos ainda podem ser modificados, a menos que eles também sejam congelados.</p>
+Valores não podem ser alterados para propriedades de dados. As propriedades do Accessor (getters e setters) funcionam da mesma forma (e ainda dão a ilusão de que você está alterando o valor). Observe que valores que são objetos ainda podem ser modificados, a menos que eles também sejam congelados.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: js">var obj = {
+```js
+var obj = {
   prop: function() {},
   foo: 'bar'
 };
@@ -64,11 +65,12 @@ fail();
 // As tentativas de alteração através de Object.defineProperty também irão lançar
 Object.defineProperty(obj, 'ohai', { value: 17 }); // throws um TypeError
 Object.defineProperty(obj, 'foo', { value: 'eit' }); // throws um TypeError
-</pre>
+```
 
-<p>O exemplo a seguir mostra que  valores do tipo objeto, em um objeto congelado, podem ser alterados (freeze é raso).</p>
+O exemplo a seguir mostra que valores do tipo objeto, em um objeto congelado, podem ser alterados (freeze é raso).
 
-<pre class="brush: js">obj1 = {
+```js
+obj1 = {
   internal: {}
 };
 
@@ -89,7 +91,7 @@ function deepFreeze(obj) {
     var prop = obj[name];
 
     // Congele prop se for um objeto
-    if (typeof prop == 'object' &amp;&amp; prop !== null)
+    if (typeof prop == 'object' && prop !== null)
       deepFreeze(prop);
   });
 
@@ -104,56 +106,36 @@ obj2 = {
 deepFreeze(obj2);
 obj2.internal.a = 'anotherValue';
 obj2.internal.a; // undefined
-</pre>
+```
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>Em ES5, se um argumento para este método não for um objeto (um primitivo), então isso irá causar um {{jsxref("TypeError")}}. Em ES6, um argumento não-objeto vai ser tratado como se fosse um objeto comum congelado e simplesmente retornado.</p>
+Em ES5, se um argumento para este método não for um objeto (um primitivo), então isso irá causar um {{jsxref("TypeError")}}. Em ES6, um argumento não-objeto vai ser tratado como se fosse um objeto comum congelado e simplesmente retornado.
 
-<pre class="brush: js">&gt; Object.freeze(1)
+```js
+> Object.freeze(1)
 TypeError: 1 is not an object // ES5 code
 
-&gt; Object.freeze(1)
+> Object.freeze(1)
 1                             // ES6 code
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentários</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.9', 'Object.freeze')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Definição inicial. Implementado em JavaScript 1.8.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.freeze', 'Object.freeze')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.freeze', 'Object.freeze')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificações                                                                       | Status                       | Comentários                                          |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.2.3.9', 'Object.freeze')}}             | {{Spec2('ES5.1')}}     | Definição inicial. Implementado em JavaScript 1.8.5. |
+| {{SpecName('ES6', '#sec-object.freeze', 'Object.freeze')}}         | {{Spec2('ES6')}}         |                                                      |
+| {{SpecName('ESDraft', '#sec-object.freeze', 'Object.freeze')}} | {{Spec2('ESDraft')}} |                                                      |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Object.freeze")}}
 
-<h2 id="Ver_também">Ver também</h2>
+## Ver também
 
-<ul>
- <li>{{jsxref("Object.isFrozen()")}}</li>
- <li>{{jsxref("Object.preventExtensions()")}}</li>
- <li>{{jsxref("Object.isExtensible()")}}</li>
- <li>{{jsxref("Object.seal()")}}</li>
- <li>{{jsxref("Object.isSealed()")}}</li>
-</ul>
+- {{jsxref("Object.isFrozen()")}}
+- {{jsxref("Object.preventExtensions()")}}
+- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Object.seal()")}}
+- {{jsxref("Object.isSealed()")}}

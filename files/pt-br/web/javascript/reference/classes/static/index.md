@@ -9,27 +9,28 @@ tags:
   - Static
 translation_of: Web/JavaScript/Reference/Classes/static
 ---
-<div>{{jsSidebar("Classes")}}</div>
+{{jsSidebar("Classes")}}
 
-<p>A palavra chave <strong>static</strong> define um método estático para a classe. Métodos estáticos não são chamados na instâncias da classe. Em vez disso, eles são chamados na própria classe. Geralmente, são funções utilitárias, como funções para criar ou clonar objetos.</p>
+A palavra chave **static** define um método estático para a classe. Métodos estáticos não são chamados na instâncias da classe. Em vez disso, eles são chamados na própria classe. Geralmente, são funções utilitárias, como funções para criar ou clonar objetos.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">static nomeDoMetodo() { ... }</pre>
+```
+static nomeDoMetodo() { ... }
+```
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Chamadas a métodos estáticos são feitas diretamente na classe e não podem ser feitas em uma instância da classe. Métodos estáticos são comumente utilizados como funções utilitárias.</p>
+Chamadas a métodos estáticos são feitas diretamente na classe e não podem ser feitas em uma instância da classe. Métodos estáticos são comumente utilizados como funções utilitárias.
 
-<h2 id="Chamada_de_métodos_estáticos">Chamada de métodos estáticos</h2>
+## Chamada de métodos estáticos
 
-<h3 id="De_outro_método_estático">De outro método estático</h3>
+### De outro método estático
 
-<p>Para chamar um método estático dentro de outro método estático da mesma classe, podemos utilizar a palavra reservada <code>this</code>.</p>
+Para chamar um método estático dentro de outro método estático da mesma classe, podemos utilizar a palavra reservada `this`.
 
-
-
-<pre class="brush: js"><code>class ChamadaDoMetodoEstatico {
+```js
+class ChamadaDoMetodoEstatico {
   static metodoEstatico() {
     return 'O método estático foi chamado';
   }
@@ -41,24 +42,25 @@ ChamadaDoMetodoEstatico.metodoEstatico();
 // 'O método estático foi chamado'
 
 ChamadaDoMetodoEstatico.outroMetodoEstatico();
-// 'O método estático foi chamado de outro método estático'</code>
-</pre>
+// 'O método estático foi chamado de outro método estático'
+```
 
-<h3 id="De_outro_construtor_e_outros_métodos">De outro construtor e outros métodos</h3>
+### De outro construtor e outros métodos
 
-<p>Métodos estáticos não são diretamente acessíveis utilizando-se <code>this </code>a partir de métodos não estáticos. É necessário chamá-los usando o nome da classe:</p>
+Métodos estáticos não são diretamente acessíveis utilizando-se `this `a partir de métodos não estáticos. É necessário chamá-los usando o nome da classe:
 
-<pre class="brush: js">nomeDaClasse.nomeDoMetodoEstatico()</pre>
+```js
+nomeDaClasse.nomeDoMetodoEstatico()
+```
 
-<p>ou chamando o método como uma propriedade do construtor:</p>
+ou chamando o método como uma propriedade do construtor:
 
-<pre class="brush: js">this.constructor.nomeDoMetodoEstatico().</pre>
+```js
+this.constructor.nomeDoMetodoEstatico().
+```
 
-
-
-
-
-<pre class="brush: js"><code>class ChamadaDoMetodoEstatico {
+```js
+class ChamadaDoMetodoEstatico {
   constructor() {
     console.log(ChamadaDoMetodoEstatico.MetodoEstatico());
     // 'O método estático foi chamado.'
@@ -70,17 +72,15 @@ ChamadaDoMetodoEstatico.outroMetodoEstatico();
   static MetodoEstatico() {
     return 'O método estático foi chamado.';
   }
-}</code></pre>
+}
+```
 
+## Exemplos
 
+O exemplo a seguir demonstra várias coisas. Ele mostra como um método estático é implementado em uma classe e como uma classe com um membro estático pode virar uma subclasse. Por fim, ele mostra como um método estático pode e não pode ser chamado.
 
-
-
-<h2 id="Exemplos">Exemplos</h2>
-
-<p>O exemplo a seguir demonstra várias coisas. Ele mostra como um método estático é implementado em uma classe e como uma classe com um membro estático pode virar uma subclasse. Por fim, ele mostra como um método estático pode e não pode ser chamado.</p>
-
-<pre class="brush: js">class Tripple {
+```js
+class Tripple {
   static tripple(n) {
     n = n | 1;
     return n * 3;
@@ -97,35 +97,21 @@ console.log(Tripple.tripple());
 console.log(Tripple.tripple(6));
 console.log(BiggerTripple.tripple(3));
 var tp = new Tripple();
-console.log(tp.tripple()); //Logs 'tp.tripple is not a function'.</pre>
+console.log(tp.tripple()); //Logs 'tp.tripple is not a function'.
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-class-definitions', 'Class definitions')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                | Status                   | Comentário         |
+| -------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
+| {{SpecName('ES2015', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES2015')}} | Definição inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("javascript.classes.static")}}
 
+## Veja também
 
-<p>{{Compat("javascript.classes.static")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/class"><code>class</code> expression</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/class"><code>class</code> declaration</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
-</ul>
+- [`class` expression](/pt-BR/docs/Web/JavaScript/Reference/Operators/class)
+- [`class` declaration](/pt-BR/docs/Web/JavaScript/Reference/Statements/class)
+- [Classes](/pt-BR/docs/Web/JavaScript/Reference/Classes)

@@ -8,129 +8,120 @@ tags:
   - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/Int16Array
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p> </p>
+A matriz do tipo **`Int16Array`** representa uma matriz de inteiros assinados de 16 bits com dois complementos na ordem de bytes da plataforma. Se o controle sobre a ordem de bytes for necessário, use {{jsxref ("DataView")}}. O conteúdo é inicializado em 0. Uma vez estabelecido, você pode fazer referência a elementos na matriz usando os métodos do objeto ou usando a sintaxe de índice da matriz padrão (ou seja, usando a notação de colchetes).
 
-<p>A matriz do tipo <strong><code>Int16Array</code></strong> representa uma matriz de inteiros assinados de 16 bits com dois complementos na ordem de bytes da plataforma. Se o controle sobre a ordem de bytes for necessário, use {{jsxref ("DataView")}}. O conteúdo é inicializado em 0. Uma vez estabelecido, você pode fazer referência a elementos na matriz usando os métodos do objeto ou usando a sintaxe de índice da matriz padrão (ou seja, usando a notação de colchetes).</p>
+## Sintaxe
 
-<h2 id="Sintaxe">Sintaxe</h2>
-
-<pre class="syntaxbox">new Int16Array(); // novo no ES2017
+```
+new Int16Array(); // novo no ES2017
 new Int16Array(length);
 new Int16Array(typedArray);
 new Int16Array(object);
-new Int16Array(buffer [, byteOffset [, length]]);</pre>
+new Int16Array(buffer [, byteOffset [, length]]);
+```
 
-<p> </p>
+Para obter mais informações sobre a sintaxe do construtor e os parâmetros, consulte _[TypedArray](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
 
-<p>Para obter mais informações sobre a sintaxe do construtor e os parâmetros, consulte <em><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax">TypedArray</a></em>.</p>
+## Propriedades
 
-<h2 id="Propriedades">Propriedades</h2>
+- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Int16Array.BYTES_PER_ELEMENT")}}
+  - : Retorna um valor numérico do tamanho do elemento. `2` no caso de um `Int16Array`.
+- Int16Array.length
+  - : Propriedade de comprimento estático cujo valor é 0. Para o comprimento real (número de elementos), consulte {{jsxref("TypedArray.prototype.length", "Int16Array.prototype.length")}}.
+- {{jsxref("TypedArray.name", "Int16Array.name")}}
+  - : Retorna o valor da string do nome do construtor. No caso do tipo `Int16Array`: "Int16Array".
+- {{jsxref("TypedArray.prototype", "Int16Array.prototype")}}
+  - : Protótipo para os objetos TypedArray.
 
-<dl>
- <dt>{{jsxref("TypedArray.BYTES_PER_ELEMENT", "Int16Array.BYTES_PER_ELEMENT")}}</dt>
- <dd>Retorna um valor numérico do tamanho do elemento. <code>2</code> no caso de um <code>Int16Array</code>.</dd>
- <dt>Int16Array.length</dt>
- <dd>Propriedade de comprimento estático cujo valor é 0. Para o comprimento real (número de elementos), consulte {{jsxref("TypedArray.prototype.length", "Int16Array.prototype.length")}}.</dd>
- <dt>{{jsxref("TypedArray.name", "Int16Array.name")}}</dt>
- <dd>Retorna o valor da string do nome do construtor. No caso do tipo <code>Int16Array</code>: "Int16Array".</dd>
- <dt>{{jsxref("TypedArray.prototype", "Int16Array.prototype")}}</dt>
- <dd>Protótipo para os objetos TypedArray.</dd>
-</dl>
+## Métodos
 
-<h2 id="Métodos">Métodos</h2>
+- {{jsxref("TypedArray.from", "Int16Array.from()")}}
+  - : Cria um novo `Int16Array` de um objeto semelhante a uma matriz ou iterável. Veja também {{jsxref("Array.from()")}}.
+- {{jsxref("TypedArray.of", "Int16Array.of()")}}
+  - : Cria um novo `Int16Array` com um número variável de argumentos. Veja também {{jsxref("Array.of()")}}.
 
-<dl>
- <dt>{{jsxref("TypedArray.from", "Int16Array.from()")}}</dt>
- <dd>Cria um novo <code>Int16Array</code> de um objeto semelhante a uma matriz ou iterável. Veja também {{jsxref("Array.from()")}}.</dd>
- <dt>{{jsxref("TypedArray.of", "Int16Array.of()")}}</dt>
- <dd>Cria um novo <code>Int16Array</code> com um número variável de argumentos. Veja também {{jsxref("Array.of()")}}.</dd>
-</dl>
+## `Int16Array` prototype
 
-<h2 id="Int16Array_prototype"><code>Int16Array</code> prototype</h2>
+Todos `Int16Array` objetos herdam de {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.
 
-<p>Todos <code>Int16Array</code> objetos herdam de {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.</p>
+### Propriedades
 
-<h3 id="Propriedades_2">Propriedades</h3>
+- `Int16Array.prototype.constructor`
+  - : Retorna a função que criou o protótipo de uma instância. Este é o construtor `Int16Array` por padrão.
+- {{jsxref("TypedArray.prototype.buffer", "Int16Array.prototype.buffer")}} {{readonlyInline}}
+  - : Retorna o {{jsxref("ArrayBuffer")}} referenciado pelo `Int16Array` Fixado em tempo de construção e **apenas leitura**.
+- {{jsxref("TypedArray.prototype.byteLength", "Int16Array.prototype.byteLength")}} {{readonlyInline}}
+  - : Retorna o tamanho (em bytes) de um `Int16Array` desde o ínicio {{jsxref("ArrayBuffer")}}. Fixado em tempo de construção e **apenas leitura**.
+- {{jsxref("TypedArray.prototype.byteOffset", "Int16Array.prototype.byteOffset")}} {{readonlyInline}}
+  - : Retorna o deslocamento (em bytes) de um `Int16Array` desde o ínicio {{jsxref("ArrayBuffer")}}. Fixado em tempo de construção e **apenas leitura**.
+- {{jsxref("TypedArray.prototype.length", "Int16Array.prototype.length")}} {{readonlyInline}}
+  - : Retorna o número de elementos em um `Int16Array`. Fixado em tempo de construção e **apenas leitura**.
 
-<dl>
- <dt><code>Int16Array.prototype.constructor</code></dt>
- <dd>Retorna a função que criou o protótipo de uma instância. Este é o construtor <code>Int16Array</code> por padrão.</dd>
- <dt>{{jsxref("TypedArray.prototype.buffer", "Int16Array.prototype.buffer")}} {{readonlyInline}}</dt>
- <dd>Retorna o {{jsxref("ArrayBuffer")}} referenciado pelo <code>Int16Array</code> Fixado em tempo de construção e <strong>apenas leitura</strong>.</dd>
- <dt>{{jsxref("TypedArray.prototype.byteLength", "Int16Array.prototype.byteLength")}} {{readonlyInline}}</dt>
- <dd>Retorna o tamanho (em bytes) de um <code>Int16Array</code> desde o ínicio {{jsxref("ArrayBuffer")}}. Fixado em tempo de construção e <strong>apenas leitura</strong>.</dd>
- <dt>{{jsxref("TypedArray.prototype.byteOffset", "Int16Array.prototype.byteOffset")}} {{readonlyInline}}</dt>
- <dd>Retorna o deslocamento (em bytes) de um <code>Int16Array</code> desde o ínicio {{jsxref("ArrayBuffer")}}. Fixado em tempo de construção e <strong>apenas leitura</strong>.</dd>
- <dt>{{jsxref("TypedArray.prototype.length", "Int16Array.prototype.length")}} {{readonlyInline}}</dt>
- <dd>Retorna o número de elementos em um <code>Int16Array</code>. Fixado em tempo de construção e <strong>apenas leitura</strong>.</dd>
-</dl>
+### Métodos
 
-<h3 id="Métodos_2">Métodos</h3>
+- {{jsxref("TypedArray.copyWithin", "Int16Array.prototype.copyWithin()")}}
+  - : Copia uma sequência de elementos da matriz dentro da matriz. Veja também {{jsxref("Array.prototype.copyWithin()")}}.
+- {{jsxref("TypedArray.entries", "Int16Array.prototype.entries()")}}
+  - : Retorna um novo `Array Iterator` objeto que contém os pares de chave / valor para cada índice na matriz. Veja também {{jsxref("Array.prototype.entries()")}}.
+- {{jsxref("TypedArray.every", "Int16Array.prototype.every()")}}
+  - : Testa se todos os elementos na matriz passam no teste fornecido por uma função. Veja também {{jsxref("Array.prototype.every()")}}.
+- {{jsxref("TypedArray.fill", "Int16Array.prototype.fill()")}}
+  - : Preenche todos os elementos de uma matriz de um índice inicial para um índice final com um valor estático. Veja também {{jsxref("Array.prototype.fill()")}}.
+- {{jsxref("TypedArray.filter", "Int16Array.prototype.filter()")}}
+  - : Cria uma nova matriz com todos os elementos dessa matriz para os quais a função de filtragem fornecida retorna true. Veja também {{jsxref("Array.prototype.filter()")}}.
+- {{jsxref("TypedArray.find", "Int16Array.prototype.find()")}}
+  - : Retorna o valor encontrado na matriz, se um elemento na matriz satisfizer a função de teste fornecida ou `undefined` se não encontrado. Veja também {{jsxref("Array.prototype.find()")}}.
+- {{jsxref("TypedArray.findIndex", "Int16Array.prototype.findIndex()")}}
+  - : Retorna o índice encontrado na matriz, se um elemento na matriz satisfizer a função de teste fornecida ou -1, se não for encontrado. Veja também {{jsxref("Array.prototype.findIndex()")}}.
+- {{jsxref("TypedArray.forEach", "Int16Array.prototype.forEach()")}}
+  - : Chama uma função para cada elemento na matriz. Veja também {{jsxref("Array.prototype.forEach()")}}.
+- {{jsxref("TypedArray.includes", "Int16Array.prototype.includes()")}} {{experimental_inline}}
+  - : Determina se uma matriz tipificada inclui um determinado elemento, retornando `true` ou `false`. Veja também {{jsxref("Array.prototype.includes()")}}.
+- {{jsxref("TypedArray.indexOf", "Int16Array.prototype.indexOf()")}}
+  - : Retorna o primeiro (menos) índice de um elemento dentro da matriz igual ao valor especificado ou -1 se nenhum for encontrado. Veja também {{jsxref("Array.prototype.indexOf()")}}.
+- {{jsxref("TypedArray.join", "Int16Array.prototype.join()")}}
+  - : Junta todos os elementos de um array em uma string. Veja também {{jsxref("Array.prototype.join()")}}.
+- {{jsxref("TypedArray.keys", "Int16Array.prototype.keys()")}}
+  - : Retorna um novo `Array Iterator` que contém uma chave para cada índice no array. Veja também {{jsxref("Array.prototype.keys()")}}.
+- {{jsxref("TypedArray.lastIndexOf", "Int16Array.prototype.lastIndexOf()")}}
+  - : Retorna o último (maior) índice de um elemento dentro da matriz igual ao valor especificado ou -1 se nenhum for encontrado. Veja também {{jsxref("Array.prototype.lastIndexOf()")}}.
+- {{jsxref("TypedArray.map", "Int16Array.prototype.map()")}}
+  - : Cria uma nova matriz com os resultados da chamada de uma função fornecida em todos os elementos dessa matriz. Veja também {{jsxref("Array.prototype.map()")}}.
+- {{jsxref("TypedArray.move", "Int16Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}
+  - : Versão não-padrão anterior de {{jsxref("TypedArray.copyWithin", "Int16Array.prototype.copyWithin()")}}.
+- {{jsxref("TypedArray.reduce", "Int16Array.prototype.reduce()")}}
+  - : Aplique uma função contra um acumulador e cada valor da matriz (da esquerda para a direita) para reduzi-lo a um único valor. Veja também {{jsxref("Array.prototype.reduce()")}}.
+- {{jsxref("TypedArray.reduceRight", "Int16Array.prototype.reduceRight()")}}
+  - : Aplique uma função contra um acumulador e cada valor da matriz (da direita para a esquerda) para reduzi-lo a um único valor. Veja também {{jsxref("Array.prototype.reduceRight()")}}.
+- {{jsxref("TypedArray.reverse", "Int16Array.prototype.reverse()")}}
+  - : Inverte a ordem dos elementos de um array - o primeiro torna-se o último e o último torna-se o primeiro. Veja também {{jsxref("Array.prototype.reverse()")}}.
+- {{jsxref("TypedArray.set", "Int16Array.prototype.set()")}}
+  - : Armazena vários valores na matriz tipada, lendo valores de entrada de uma matriz especificada.
+- {{jsxref("TypedArray.slice", "Int16Array.prototype.slice()")}}
+  - : Extrai uma seção de uma matriz e retorna uma nova matriz. Veja também {{jsxref("Array.prototype.slice()")}}.
+- {{jsxref("TypedArray.some", "Int16Array.prototype.some()")}}
+  - : Retorna true se pelo menos um elemento nessa matriz satisfizer a função de teste fornecida. Veja também {{jsxref("Array.prototype.some()")}}.
+- {{jsxref("TypedArray.sort", "Int16Array.prototype.sort()")}}
+  - : Classifica os elementos de uma matriz e retorna a matriz. Veja também {{jsxref("Array.prototype.sort()")}}.
+- {{jsxref("TypedArray.subarray", "Int16Array.prototype.subarray()")}}
+  - : Retorna um novo `Int16Array `a partir do índice de elemento inicial e final fornecido.
+- {{jsxref("TypedArray.values", "Int16Array.prototype.values()")}}
+  - : Retorna um novo objeto `Array Iterator` que contém os valores para cada índice na matriz. Veja também {{jsxref("Array.prototype.values()")}}.
+- {{jsxref("TypedArray.toLocaleString", "Int16Array.prototype.toLocaleString()")}}
+  - : Retorna uma string localizada representando a matriz e seus elementos. Veja também {{jsxref("Array.prototype.toLocaleString()")}}.
+- {{jsxref("TypedArray.toString", "Int16Array.prototype.toString()")}}
+  - : Retorna uma string representando a matriz e seus elementos. Veja também {{jsxref("Array.prototype.toString()")}}.
+- {{jsxref("TypedArray.@@iterator", "Int16Array.prototype[@@iterator]()")}}
+  - : Retorna um novo objeto `Array Iterator` que contém os valores para cada índice na lista.
 
-<dl>
- <dt>{{jsxref("TypedArray.copyWithin", "Int16Array.prototype.copyWithin()")}}</dt>
- <dd>Copia uma sequência de elementos da matriz dentro da matriz. Veja também {{jsxref("Array.prototype.copyWithin()")}}.</dd>
- <dt>{{jsxref("TypedArray.entries", "Int16Array.prototype.entries()")}}</dt>
- <dd>Retorna um novo <code>Array Iterator</code> objeto que contém os pares de chave / valor para cada índice na matriz. Veja também {{jsxref("Array.prototype.entries()")}}.</dd>
- <dt>{{jsxref("TypedArray.every", "Int16Array.prototype.every()")}}</dt>
- <dd>Testa se todos os elementos na matriz passam no teste fornecido por uma função. Veja também {{jsxref("Array.prototype.every()")}}.</dd>
- <dt>{{jsxref("TypedArray.fill", "Int16Array.prototype.fill()")}}</dt>
- <dd>Preenche todos os elementos de uma matriz de um índice inicial para um índice final com um valor estático. Veja também {{jsxref("Array.prototype.fill()")}}.</dd>
- <dt>{{jsxref("TypedArray.filter", "Int16Array.prototype.filter()")}}</dt>
- <dd>Cria uma nova matriz com todos os elementos dessa matriz para os quais a função de filtragem fornecida retorna true. Veja também {{jsxref("Array.prototype.filter()")}}.</dd>
- <dt>{{jsxref("TypedArray.find", "Int16Array.prototype.find()")}}</dt>
- <dd>Retorna o valor encontrado na matriz, se um elemento na matriz satisfizer a função de teste fornecida ou <code>undefined</code> se não encontrado. Veja também {{jsxref("Array.prototype.find()")}}.</dd>
- <dt>{{jsxref("TypedArray.findIndex", "Int16Array.prototype.findIndex()")}}</dt>
- <dd>Retorna o índice encontrado na matriz, se um elemento na matriz satisfizer a função de teste fornecida ou -1, se não for encontrado. Veja também {{jsxref("Array.prototype.findIndex()")}}.</dd>
- <dt>{{jsxref("TypedArray.forEach", "Int16Array.prototype.forEach()")}}</dt>
- <dd>Chama uma função para cada elemento na matriz. Veja também {{jsxref("Array.prototype.forEach()")}}.</dd>
- <dt>{{jsxref("TypedArray.includes", "Int16Array.prototype.includes()")}} {{experimental_inline}}</dt>
- <dd>Determina se uma matriz tipificada inclui um determinado elemento, retornando <code>true</code> ou <code>false</code>. Veja também {{jsxref("Array.prototype.includes()")}}.</dd>
- <dt>{{jsxref("TypedArray.indexOf", "Int16Array.prototype.indexOf()")}}</dt>
- <dd>Retorna o primeiro (menos) índice de um elemento dentro da matriz igual ao valor especificado ou -1 se nenhum for encontrado. Veja também {{jsxref("Array.prototype.indexOf()")}}.</dd>
- <dt>{{jsxref("TypedArray.join", "Int16Array.prototype.join()")}}</dt>
- <dd>Junta todos os elementos de um array em uma string. Veja também {{jsxref("Array.prototype.join()")}}.</dd>
- <dt>{{jsxref("TypedArray.keys", "Int16Array.prototype.keys()")}}</dt>
- <dd>Retorna um novo <code>Array Iterator</code> que contém uma chave para cada índice no array. Veja também {{jsxref("Array.prototype.keys()")}}.</dd>
- <dt>{{jsxref("TypedArray.lastIndexOf", "Int16Array.prototype.lastIndexOf()")}}</dt>
- <dd>Retorna o último (maior) índice de um elemento dentro da matriz igual ao valor especificado ou -1 se nenhum for encontrado. Veja também {{jsxref("Array.prototype.lastIndexOf()")}}.</dd>
- <dt>{{jsxref("TypedArray.map", "Int16Array.prototype.map()")}}</dt>
- <dd>Cria uma nova matriz com os resultados da chamada de uma função fornecida em todos os elementos dessa matriz. Veja também {{jsxref("Array.prototype.map()")}}.</dd>
- <dt>{{jsxref("TypedArray.move", "Int16Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}</dt>
- <dd>Versão não-padrão anterior de {{jsxref("TypedArray.copyWithin", "Int16Array.prototype.copyWithin()")}}.</dd>
- <dt>{{jsxref("TypedArray.reduce", "Int16Array.prototype.reduce()")}}</dt>
- <dd>Aplique uma função contra um acumulador e cada valor da matriz (da esquerda para a direita) para reduzi-lo a um único valor. Veja também {{jsxref("Array.prototype.reduce()")}}.</dd>
- <dt>{{jsxref("TypedArray.reduceRight", "Int16Array.prototype.reduceRight()")}}</dt>
- <dd>Aplique uma função contra um acumulador e cada valor da matriz (da direita para a esquerda) para reduzi-lo a um único valor. Veja também {{jsxref("Array.prototype.reduceRight()")}}.</dd>
- <dt>{{jsxref("TypedArray.reverse", "Int16Array.prototype.reverse()")}}</dt>
- <dd>Inverte a ordem dos elementos de um array - o primeiro torna-se o último e o último torna-se o primeiro. Veja também {{jsxref("Array.prototype.reverse()")}}.</dd>
- <dt>{{jsxref("TypedArray.set", "Int16Array.prototype.set()")}}</dt>
- <dd>Armazena vários valores na matriz tipada, lendo valores de entrada de uma matriz especificada.</dd>
- <dt>{{jsxref("TypedArray.slice", "Int16Array.prototype.slice()")}}</dt>
- <dd>Extrai uma seção de uma matriz e retorna uma nova matriz. Veja também {{jsxref("Array.prototype.slice()")}}.</dd>
- <dt>{{jsxref("TypedArray.some", "Int16Array.prototype.some()")}}</dt>
- <dd>Retorna true se pelo menos um elemento nessa matriz satisfizer a função de teste fornecida. Veja também {{jsxref("Array.prototype.some()")}}.</dd>
- <dt>{{jsxref("TypedArray.sort", "Int16Array.prototype.sort()")}}</dt>
- <dd>Classifica os elementos de uma matriz e retorna a matriz. Veja também {{jsxref("Array.prototype.sort()")}}.</dd>
- <dt>{{jsxref("TypedArray.subarray", "Int16Array.prototype.subarray()")}}</dt>
- <dd>Retorna um novo <code>Int16Array </code>a partir do índice de elemento inicial e final fornecido.</dd>
- <dt>{{jsxref("TypedArray.values", "Int16Array.prototype.values()")}}</dt>
- <dd>Retorna um novo objeto  <code>Array Iterator</code> que contém os valores para cada índice na matriz. Veja também {{jsxref("Array.prototype.values()")}}.</dd>
- <dt>{{jsxref("TypedArray.toLocaleString", "Int16Array.prototype.toLocaleString()")}}</dt>
- <dd>Retorna uma string localizada representando a matriz e seus elementos. Veja também {{jsxref("Array.prototype.toLocaleString()")}}.</dd>
- <dt>{{jsxref("TypedArray.toString", "Int16Array.prototype.toString()")}}</dt>
- <dd>Retorna uma string representando a matriz e seus elementos. Veja também {{jsxref("Array.prototype.toString()")}}.</dd>
- <dt>{{jsxref("TypedArray.@@iterator", "Int16Array.prototype[@@iterator]()")}}</dt>
- <dd>Retorna um novo objeto <code>Array Iterator</code> que contém os valores para cada índice na lista.</dd>
-</dl>
+## Exemplos
 
-<h2 id="Exemplos">Exemplos</h2>
+Diferentes opções de criar um `Int16Array`:
 
-<p>Diferentes opções de criar um <code>Int16Array</code>:</p>
-
-<pre class="brush: js">// De um tamanho
+```js
+// De um tamanho
 var int16 = new Int16Array(2);
 int16[0] = 42;
 console.log(int16[0]); // 42
@@ -154,55 +145,36 @@ var z = new Int16Array(buffer, 0, 4);
 var iterable = function*(){ yield* [1,2,3]; }();
 var int16 = new Int16Array(iterable);
 // Int16Array[1, 2, 3]
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Typed Array')}}</td>
-   <td>{{Spec2('Typed Array')}}</td>
-   <td>Substituído pelo ECMAScript 2015.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#table-49', 'TypedArray constructors')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definição inicial em um padrão ECMA. Especificado <code>new</code> como requerido.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>ECMAScript 2017 mudou o construtor <code>Int16Array</code> para usar a operação <code>ToIndex</code> e permitir construtores sem argumentos.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                        | Status                           | Comentário                                                                                                             |
+| ------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('Typed Array')}}                                                 | {{Spec2('Typed Array')}} | Substituído pelo ECMAScript 2015.                                                                                      |
+| {{SpecName('ES2015', '#table-49', 'TypedArray constructors')}} | {{Spec2('ES2015')}}         | Definição inicial em um padrão ECMA. Especificado `new` como requerido.                                                |
+| {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}}     | ECMAScript 2017 mudou o construtor `Int16Array` para usar a operação `ToIndex` e permitir construtores sem argumentos. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("javascript.builtins.Int16Array")}}
 
+## Notas de compatibilidade
 
-<p>{{Compat("javascript.builtins.Int16Array")}}</p>
+A partir do ECMAScript 2015, os construtores `Int16Array` precisam ser construídos com um operador {{jsxref("Operators/new", "new")}}. Chamar um construtor `Int16Array` como uma função sem o `new`, irá resultar em {{jsxref("TypeError")}}.
 
-<h2 id="Notas_de_compatibilidade">Notas de compatibilidade</h2>
-
-<p>A partir do ECMAScript 2015, os construtores <code>Int16Array</code> precisam ser construídos com um operador {{jsxref("Operators/new", "new")}}. Chamar um construtor <code>Int16Array</code> como uma função sem o <code>new</code>, irá resultar em {{jsxref("TypeError")}}.</p>
-
-<pre class="brush: js example-bad">var dv = Int16Array([1, 2, 3]);
+```js example-bad
+var dv = Int16Array([1, 2, 3]);
 // TypeError: calling a builtin Int16Array constructor
-// without new is forbidden</pre>
+// without new is forbidden
+```
 
-<pre class="brush: js example-good">var dv = new Int16Array([1, 2, 3]);</pre>
+```js example-good
+var dv = new Int16Array([1, 2, 3]);
+```
 
-<h2 id="Ver_também">Ver também</h2>
+## Ver também
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays" title="en/JavaScript typed arrays">JavaScript typed arrays</a></li>
- <li>{{jsxref("ArrayBuffer")}}</li>
- <li>{{jsxref("DataView")}}</li>
-</ul>
+- [JavaScript typed arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays "en/JavaScript typed arrays")
+- {{jsxref("ArrayBuffer")}}
+- {{jsxref("DataView")}}

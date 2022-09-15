@@ -3,31 +3,32 @@ title: in operator
 slug: Web/JavaScript/Reference/Operators/in
 translation_of: Web/JavaScript/Reference/Operators/in
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>O <strong>operador</strong> <strong><code>in</code> </strong>retorna  <code>true</code> se a propriedade especificada estiver no objeto especificado ou na sua cadeia de protótipo (prototype chain) desde objeto.</p>
+O **operador** **`in` **retorna `true` se a propriedade especificada estiver no objeto especificado ou na sua cadeia de protótipo (prototype chain) desde objeto.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><em>prop</em> in <em>object</em></pre>
+```
+prop in object
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>prop</code></dt>
- <dd>Um string ou símbolo representando o nome de uma propriedade ou o índice de um array (não-símbolos serão trazidos para strings).</dd>
-</dl>
+- `prop`
+  - : Um string ou símbolo representando o nome de uma propriedade ou o índice de um array (não-símbolos serão trazidos para strings).
 
-<dl>
- <dt><code>object</code></dt>
- <dd>Objeto para verificar se este (ou sua cadeia de protótipo) contém a propriedade com o nome especificado.</dd>
-</dl>
+<!---->
 
-<h2 id="Descrição">Descrição</h2>
+- `object`
+  - : Objeto para verificar se este (ou sua cadeia de protótipo) contém a propriedade com o nome especificado.
 
-<p>Os exemplos a seguir mostram alguns usos do operador <code>in</code>.</p>
+## Descrição
 
-<pre class="brush:js">// Arrays
+Os exemplos a seguir mostram alguns usos do operador `in`.
+
+```js
+// Arrays
 var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 0 in trees        // retorna true
 3 in trees        // retorna true
@@ -44,94 +45,72 @@ Symbol.iterator in trees // retorna true (arrays são iteráveis, funciona apena
 var mycar = {make: 'Honda', model: 'Accord', year: 1998};
 'make' in mycar  // retorna true
 'model' in mycar // retorna true
-</pre>
+```
 
-<p>Você precisa especificar um objeto no lado direito do operador <code>in</code>. Por exemplo, você pode especifica um string criado com o construtor <code>String,</code> mas você não pode especificar um string literal.</p>
+Você precisa especificar um objeto no lado direito do operador `in`. Por exemplo, você pode especifica um string criado com o construtor `String,` mas você não pode especificar um string literal.
 
-<pre class="brush:js">var color1 = new String('green');
+```js
+var color1 = new String('green');
 'length' in color1 // retorna true
 
 var color2 = 'coral';
 // gera um erro (color2 não é um objeto String)
 'length' in color2
-</pre>
+```
 
-<h3 id="Usando_in_com_propriedade_removida_ou_undefined">Usando <code>in</code> com propriedade removida ou undefined</h3>
+### Usando `in` com propriedade removida ou undefined
 
-<p>Se você remover uma propriedade com o operador <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code> , o operador <code>in</code> retorna <code>false</code> para essa propriedade.</p>
+Se você remover uma propriedade com o operador [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) , o operador `in` retorna `false` para essa propriedade.
 
-<pre class="brush:js">var mycar = {make: 'Honda', model: 'Accord', year: 1998};
+```js
+var mycar = {make: 'Honda', model: 'Accord', year: 1998};
 delete mycar.make;
 'make' in mycar;  // retorna false
 
 var trees = new Array('redwood', 'bay', 'cedar', 'oak', 'maple');
 delete trees[3];
 3 in trees; // retorna false
-</pre>
+```
 
-<p>Se você definir uma propriedade como {{jsxref("Global_Objects/undefined", "undefined")}}, mas não a remover, o operador <code>in</code> retorna <code>true</code> para essa propriedade.</p>
+Se você definir uma propriedade como {{jsxref("Global_Objects/undefined", "undefined")}}, mas não a remover, o operador `in` retorna `true` para essa propriedade.
 
-<pre class="brush:js">var mycar = {make: 'Honda', model: 'Accord', year: 1998};
+```js
+var mycar = {make: 'Honda', model: 'Accord', year: 1998};
 mycar.make = undefined;
 'make' in mycar;  // retorna true
-</pre>
+```
 
-<pre class="brush:js">var trees = new Array('redwood', 'bay', 'cedar', 'oak', 'maple');
+```js
+var trees = new Array('redwood', 'bay', 'cedar', 'oak', 'maple');
 trees[3] = undefined;
 3 in trees; // retorna true
-</pre>
+```
 
-<h3 id="Propriedades_herdadas">Propriedades herdadas</h3>
+### Propriedades herdadas
 
-<p>O operador <code>in</code> retorna <code>true</code> para propriedades que estão na cadeida de protótipo (prototype chain).</p>
+O operador `in` retorna `true` para propriedades que estão na cadeida de protótipo (prototype chain).
 
-<pre class="brush:js">'toString' in {}; // retorna true
-</pre>
+```js
+'toString' in {}; // retorna true
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Situação</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-relational-operators', 'Relational Operators')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-relational-operators', 'Relational Operators')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-11.8.7', 'The in Operator')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3', '#sec-11.8.7', 'The in Operator')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Definição inicial. Implementado no JavaScript 1.4.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                        | Situação                     | Comentário                                         |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-relational-operators', 'Relational Operators')}} | {{Spec2('ESDraft')}} |                                                    |
+| {{SpecName('ES2015', '#sec-relational-operators', 'Relational Operators')}} | {{Spec2('ES2015')}}     |                                                    |
+| {{SpecName('ES5.1', '#sec-11.8.7', 'The in Operator')}}                             | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES3', '#sec-11.8.7', 'The in Operator')}}                             | {{Spec2('ES3')}}         | Definição inicial. Implementado no JavaScript 1.4. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("javascript.operators.in")}}
 
+## Ver também
 
-<p>{{Compat("javascript.operators.in")}}</p>
-
-<h2 id="Ver_também">Ver também</h2>
-
-<ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code></li>
- <li>{{jsxref("Object.prototype.hasOwnProperty()")}}</li>
- <li>{{jsxref("Reflect.has()")}}</li>
- <li><a href="/en-US/docs/Enumerability_and_ownership_of_properties">Enumerability and ownership of properties</a></li>
-</ul>
+- [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
+- [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
+- {{jsxref("Object.prototype.hasOwnProperty()")}}
+- {{jsxref("Reflect.has()")}}
+- [Enumerability and ownership of properties](/pt-BR/docs/Enumerability_and_ownership_of_properties)

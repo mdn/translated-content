@@ -10,133 +10,98 @@ tags:
   - replace()
 translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
 ---
-<div>{{JSRef("Global_Objects", "String")}}</div>
+{{JSRef("Global_Objects", "String")}}
 
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p>O método <code>replace()</code> retorna uma nova string com algumas ou todas as correspondências de um padrão substituídas por um determinado caractere (ou caracteres). O padrão pode ser uma string ou uma {{jsxref("RegExp")}}, e a substituição pode ser uma string ou uma função a ser chamada para cada correspondência. Se o padrão for uma string, apenas a primeira ocorrência será substituída.</p>
+O método `replace()` retorna uma nova string com algumas ou todas as correspondências de um padrão substituídas por um determinado caractere (ou caracteres). O padrão pode ser uma string ou uma {{jsxref("RegExp")}}, e a substituição pode ser uma string ou uma função a ser chamada para cada correspondência. Se o padrão for uma string, apenas a primeira ocorrência será substituída.
 
-<p>A string original não é modificada.</p>
+A string original não é modificada.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><var>str</var>.replace(<var>regexp</var>|<var>substr</var>, <var>newSubStr</var>|<var>function</var>)</pre>
+```
+str.replace(regexp|substr, newSubStr|function)
+```
 
-<h3 id="Parameters" name="Parameters">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>regexp </code></dt>
- <dd>Um objeto {{jsxref ("RegExp")}} ou literal. A correspondência ou correspondências são substituídas por <em><code>newSubStr</code></em> ou o valor retornado pela <code>function</code> especificada.</dd>
- <dt><code>substr</code></dt>
- <dd>Uma {{jsxref ("String")}} que será substituída por <code>newSubStr</code>. Ele é tratado como uma string textual e não é interpretado como uma expressão regular. Apenas a primeira ocorrência será substituída.</dd>
- <dt><code>newSubStr</code></dt>
- <dd>A {{jsxref("Global_Objects/String", "String")}} que substitui a <code>substr</code> recebida do parâmetro #1. Uma série de padrões de substituições especiais são suportados. Veja a seção "<a href="#" id="Specifying_a_string_as_a_parameter">Especificando uma string como parâmetro</a>" abaixo.</dd>
- <dt><code>function</code></dt>
- <dd>A função (function) chamada cria uma nova substring (para ser colocada no lugar da substring recebida pelo parametro #1). Os argumentos fornececidos para essa função estão descritos na seção "<a href="#" id="Specifying_a_string_as_a_parameter">Especificando uma função como parâmetro</a>" mais abaixo.</dd>
- <dt><code>flags</code> {{non-standard_inline}}</dt>
- <dd>
- <p>Uma string especificando uma combinação de <a href="/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions">flags de expressão regular</a>. O uso do parâmetro <code>flags</code> no método <code>String.prototype.replace()</code> é não-padrão. Ao invés de usar este parâmetro, use um objeto {{jsxref("Global_Objects/RegExp", "RegExp")}} com as flags correspondentes. O valor deste parâmetro deve ser uma string consistindo em um ou mais dos seguintes caracteres para afetar a operação, tais como descrito:</p>
+- `regexp`
+  - : Um objeto {{jsxref ("RegExp")}} ou literal. A correspondência ou correspondências são substituídas por _`newSubStr`_ ou o valor retornado pela `function` especificada.
+- `substr`
+  - : Uma {{jsxref ("String")}} que será substituída por `newSubStr`. Ele é tratado como uma string textual e não é interpretado como uma expressão regular. Apenas a primeira ocorrência será substituída.
+- `newSubStr`
 
- <dl>
-  <dt><code>g</code></dt>
-  <dd>Combinação global.</dd>
-  <dt><code>i</code></dt>
-  <dd>Ignora diferenças entre maiúsculas e minúsculas.</dd>
-  <dt><code>m</code></dt>
-  <dd>Combinação em várias linhas.</dd>
-  <dt><code>y</code> {{experimental_inline}}</dt>
-  <dd>Sticky</dd>
- </dl>
+  - : A {{jsxref("Global_Objects/String", "String")}} que substitui a `substr` recebida do parâmetro #1. Uma série de padrões de substituições especiais são suportados. Veja a seção "
 
- <div class="blockIndicator note">
- <p><strong>Nota: </strong>O argumento <code>flags</code> não funciona no v8 Core (Chrome e NodeJs).</p>
- </div>
- </dd>
-</dl>
+    Especificando uma string como parâmetro
 
-<h3 id="Returns" name="Returns">Valor retornado</h3>
+    " abaixo.
 
-<p>Uma nova string com alguma ou todas as combinações do padrão substituído(s) pelo valor de substituição.</p>
+- `function`
 
-<h2 id="Description" name="Description">Descrição</h2>
+  - : A função (function) chamada cria uma nova substring (para ser colocada no lugar da substring recebida pelo parametro #1). Os argumentos fornececidos para essa função estão descritos na seção "
 
-<p>Este método não muda o objeto {{jsxref("Global_Objects/String", "String")}}. Ele simplesmente retorna uma nova string.</p>
+    Especificando uma função como parâmetro
 
-<p>Para realizar uma pesquisa global e substituir, inclua a flag <code>g</code> na expressão regular ou se o primeiro parâmetro for uma string, inclua <code>g</code> no parâmetro flags.</p>
+    " mais abaixo.
 
-<h3 id="Specifying_a_string_as_a_parameter" name="Specifying_a_string_as_a_parameter">Especificando uma string como parâmetro</h3>
+- `flags` {{non-standard_inline}}
 
-<p>A string substituidora pode incluir o seguinte padrão de substituição especial:</p>
+  - : Uma string especificando uma combinação de [flags de expressão regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions). O uso do parâmetro `flags` no método `String.prototype.replace()` é não-padrão. Ao invés de usar este parâmetro, use um objeto {{jsxref("Global_Objects/RegExp", "RegExp")}} com as flags correspondentes. O valor deste parâmetro deve ser uma string consistindo em um ou mais dos seguintes caracteres para afetar a operação, tais como descrito:
 
-<table class="fullwidth-table" style="height: 140px; width: 575px;">
- <tbody>
-  <tr>
-   <td class="header"><strong>Padrão       </strong></td>
-   <td class="header"><strong>Insere</strong></td>
-  </tr>
-  <tr>
-   <td><code>$$</code></td>
-   <td>Insere um "$".</td>
-  </tr>
-  <tr>
-   <td><code>$&amp;</code></td>
-   <td>Insere a string casada.</td>
-  </tr>
-  <tr>
-   <td><code>$`</code></td>
-   <td>Insere a porção da string que precede a substring combinada.</td>
-  </tr>
-  <tr>
-   <td><code>$'</code></td>
-   <td>Insere a porção da string que segue a substring combinada.</td>
-  </tr>
-  <tr>
-   <td><code>$<em>n</em></code> ou <code>$<em>nn</em></code></td>
-   <td>Onde <code><em>n</em></code> ou <code><em>nn</em></code> são dígitos decimais, insere a <em>n</em>-ésima substring entre parêntesis casada, dado o primeiro argumento foi um objeto {{jsxref("Global_Objects/RegExp", "RegExp")}}.</td>
-  </tr>
- </tbody>
-</table>
+    - `g`
+      - : Combinação global.
+    - `i`
+      - : Ignora diferenças entre maiúsculas e minúsculas.
+    - `m`
+      - : Combinação em várias linhas.
+    - `y` {{experimental_inline}}
+      - : Sticky
 
-<h3 id="Specifying_a_function_as_a_parameter" name="Specifying_a_function_as_a_parameter">Especificando uma função como parâmetro</h3>
+    > **Nota:**O argumento `flags` não funciona no v8 Core (Chrome e NodeJs).
 
-<p>Você pode especificar uma função no segundo parâmetro. Neste caso, a função será chamada depois que a correspôndecia for encontrada. O resultado da função (valor retornado) será usado como a string substituta. (Atenção: os padrões de substituição citados acima não se aplicam neste caso). Note que a função será chamada múltiplas vezes para combinação que deve ser substituída se a expressão regular no primeiro parâmetro tiver a regra global.</p>
+### Valor retornado
 
-<p>Os parâmetros da função são:</p>
+Uma nova string com alguma ou todas as combinações do padrão substituído(s) pelo valor de substituição.
 
-<table class="fullwidth-table" style="height: 375px; width: 490px;">
- <tbody>
-  <tr>
-   <td class="header"><strong>Possíveis nomes            </strong></td>
-   <td class="header"><strong>Valor fornecido</strong></td>
-  </tr>
-  <tr>
-   <td><code>match</code></td>
-   <td>A substring encontrada. Corresponde ao <code>$&amp;</code> acima.</td>
-  </tr>
-  <tr>
-   <td><code>p1, p2, ...</code></td>
-   <td>O enésimo parâmetro entre parênteses da RegEx no primeiro parâmetro na função <code>replace()</code> {{jsxref("Global_Objects/RegExp", "RegExp")}}. (Corresponde a <code>$1</code>, <code>$2</code>, etc. acima.) Por exemplo, se <code>/(\a+)(\b+)/</code>, for o primeiro parâmetro, <code>p1</code> é a combinação para <code>\a+</code>, e <code>p2</code> para <code>\b+</code>.</td>
-  </tr>
-  <tr>
-   <td><code>offset</code></td>
-   <td>O offset da string encontrada em relação ao resto da string. Por exemplo, se a string for 'abcd' e a string a ser encontrada for 'bc', então este parâmetro terá o valor 1.</td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>string</code></p>
-   </td>
-   <td>
-    <p>A string completa que está sendo examinada.</p>
-   </td>
-  </tr>
- </tbody>
-</table>
+## Descrição
 
-<p>(O número exato de argumentos dependerá se o primeiro parâmetro for uma {{jsxref("Global_Objects/RegExp", "RegExp")}} e de quantas combinações entre parênteses houver).</p>
+Este método não muda o objeto {{jsxref("Global_Objects/String", "String")}}. Ele simplesmente retorna uma nova string.
 
-<p>O exemplo a seguir irá substituir o valor de <code>newString</code> para <code>'abc - 12345 - #$*%'</code>:</p>
+Para realizar uma pesquisa global e substituir, inclua a flag `g` na expressão regular ou se o primeiro parâmetro for uma string, inclua `g` no parâmetro flags.
 
-<pre class="brush: js">function replacer(match, p1, p2, p3, offset, string) {
+### Especificando uma string como parâmetro
+
+A string substituidora pode incluir o seguinte padrão de substituição especial:
+
+| **Padrão**    | **Insere**                                                                                                                                                                                         |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$$`          | Insere um "$".                                                                                                                                                                                     |
+| `$&`          | Insere a string casada.                                                                                                                                                                            |
+| `` $` ``      | Insere a porção da string que precede a substring combinada.                                                                                                                                       |
+| `$'`          | Insere a porção da string que segue a substring combinada.                                                                                                                                         |
+| `$n` ou `$nn` | Onde `n` ou `nn` são dígitos decimais, insere a _n_-ésima substring entre parêntesis casada, dado o primeiro argumento foi um objeto {{jsxref("Global_Objects/RegExp", "RegExp")}}. |
+
+### Especificando uma função como parâmetro
+
+Você pode especificar uma função no segundo parâmetro. Neste caso, a função será chamada depois que a correspôndecia for encontrada. O resultado da função (valor retornado) será usado como a string substituta. (Atenção: os padrões de substituição citados acima não se aplicam neste caso). Note que a função será chamada múltiplas vezes para combinação que deve ser substituída se a expressão regular no primeiro parâmetro tiver a regra global.
+
+Os parâmetros da função são:
+
+| **Possíveis nomes** | **Valor fornecido**                                                                                                                                                                                                                                                                                          |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `match`             | A substring encontrada. Corresponde ao `$&` acima.                                                                                                                                                                                                                                                           |
+| `p1, p2, ...`       | O enésimo parâmetro entre parênteses da RegEx no primeiro parâmetro na função `replace()` {{jsxref("Global_Objects/RegExp", "RegExp")}}. (Corresponde a `$1`, `$2`, etc. acima.) Por exemplo, se `/(\a+)(\b+)/`, for o primeiro parâmetro, `p1` é a combinação para `\a+`, e `p2` para `\b+`. |
+| `offset`            | O offset da string encontrada em relação ao resto da string. Por exemplo, se a string for 'abcd' e a string a ser encontrada for 'bc', então este parâmetro terá o valor 1.                                                                                                                                  |
+| `string`            | A string completa que está sendo examinada.                                                                                                                                                                                                                                                                  |
+
+(O número exato de argumentos dependerá se o primeiro parâmetro for uma {{jsxref("Global_Objects/RegExp", "RegExp")}} e de quantas combinações entre parênteses houver).
+
+O exemplo a seguir irá substituir o valor de `newString` para `'abc - 12345 - #$*%'`:
+
+```js
+function replacer(match, p1, p2, p3, offset, string) {
   // p1 não possui digitos,
   // p2 possui dígitos, e p3 não possui alfanuméricos
   return [p1, p2, p3].join(' - ');
@@ -144,153 +109,148 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
 var newString = 'abc12345#$*%'.replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
 
 // retorna "abc - 12345 - #$*%"
-</pre>
+```
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Definindo_uma_expressão_regular_com_replace">Definindo uma expressão regular com <code>replace()</code></h3>
+### Definindo uma expressão regular com `replace()`
 
-<p>No exemplo a seguir foi definida uma expressão regular com a flag "<code>i</code>" (que ignora diferenças entre maiúsculas e minúsculas) no método <code>replace()</code>.</p>
+No exemplo a seguir foi definida uma expressão regular com a flag "`i`" (que ignora diferenças entre maiúsculas e minúsculas) no método `replace()`.
 
-<pre class="brush: js">var str = 'Twas the night before Xmas...';
+```js
+var str = 'Twas the night before Xmas...';
 var newstr = str.replace(/xmas/i, 'Christmas');
 
 console.log(newstr);
-// retorna "Twas the night before Christmas..."</pre>
+// retorna "Twas the night before Christmas..."
+```
 
-<div class="blockIndicator note">
-<p><strong>Nota:</strong> Veja <a href="/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions">este guia</a> para maiores explicações as sobre expressões regulares.</p>
-</div>
+> **Nota:** Veja [este guia](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions) para maiores explicações as sobre expressões regulares.
 
-<h3 id="Usando_global_e_ignore_com_replace">Usando <code>global</code> e <code>ignore</code> com <code>replace()</code></h3>
+### Usando `global` e `ignore` com `replace()`
 
-<p>Substituir globalmente, "<code>g</code>", só pode ser feito com uma expressão regular. No exemplo a seguir, a expressão regular inclui as flags global e ignore que permitem a função <code>replace()</code> substituir cada "<code>maçãs</code>" por "<code>laranjas</code>" na string.</p>
+Substituir globalmente, "`g`", só pode ser feito com uma expressão regular. No exemplo a seguir, a expressão regular inclui as flags global e ignore que permitem a função `replace()` substituir cada "`maçãs`" por "`laranjas`" na string.
 
-<pre class="brush: js">var re = /maçãs/gi;
+```js
+var re = /maçãs/gi;
 var str = 'As maçãs são redondas. As maçãs são suculentas.';
 var newstr = str.replace(re, 'laranjas');
 
 console.log(newstr);
 // retorna
-// "As laranjas são redondas. As laranjas são suculentas."</pre>
+// "As laranjas são redondas. As laranjas são suculentas."
+```
 
-<h3 id="Trocando_palavras_em_uma_string">Trocando palavras em uma string</h3>
+### Trocando palavras em uma string
 
-<p>O script a seguir troca as palavras na string. Para o texto que vai substituir, o script usa <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">grupos de captura</a> e os padrões de substituição <code>$1</code> e <code>$2</code>.</p>
+O script a seguir troca as palavras na string. Para o texto que vai substituir, o script usa [grupos de captura](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) e os padrões de substituição `$1` e `$2`.
 
-<pre class="brush: js">var re = /(\w+)\s(\w+)/;
+```js
+var re = /(\w+)\s(\w+)/;
 var str = 'John Smith';
 var newstr = str.replace(re, '$2, $1');
-console.log(newstr);  // Smith, John</pre>
+console.log(newstr);  // Smith, John
+```
 
-<h3 id="Usando_uma_função_que_modifica_os_caracteres_coincidentes">Usando uma função que modifica os caracteres coincidentes</h3>
+### Usando uma função que modifica os caracteres coincidentes
 
-<p>Neste exemplo, todas as ocorrências de letras maiúsculas na string são convertidas em minúsculas e um hífen é inserido antes do local de correspondência. O importante aqui é que é necessário uma operação adicional no item antes dele ser retornado como substituído.</p>
+Neste exemplo, todas as ocorrências de letras maiúsculas na string são convertidas em minúsculas e um hífen é inserido antes do local de correspondência. O importante aqui é que é necessário uma operação adicional no item antes dele ser retornado como substituído.
 
-<p>A função de substituição aceita a string coincidida como parâmetro e usa ela para transformar os caracteres e concatenar um hífen antes de retornar.</p>
+A função de substituição aceita a string coincidida como parâmetro e usa ela para transformar os caracteres e concatenar um hífen antes de retornar.
 
-<pre class="brush: js">function styleHyphenFormat(propertyName) {
+```js
+function styleHyphenFormat(propertyName) {
   function upperToHyphenLower(match, offset, string) {
     return (offset ? '-' : '') + match.toLowerCase();
   }
   return propertyName.replace(/[A-Z]/g, upperToHyphenLower);
-}</pre>
+}
+```
 
-<p>Dado o seguinte parâmetro: <code>styleHyphenFormat('borderTop')</code>, o valor retornado é '<code>border-top</code>'.</p>
+Dado o seguinte parâmetro: `styleHyphenFormat('borderTop')`, o valor retornado é '`border-top`'.
 
-<p>Como queremos transformar o resultado da coincidencia antes da substituição final, nós devemos usar uma função. Isto força que a transformação seja feita antes da chamada do método {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}. Se tivéssemos tentado isto sem a função, o método {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} não teria efeito.</p>
+Como queremos transformar o resultado da coincidencia antes da substituição final, nós devemos usar uma função. Isto força que a transformação seja feita antes da chamada do método {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}. Se tivéssemos tentado isto sem a função, o método {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} não teria efeito.
 
-<pre class="brush: js">let newString = propertyName.replace(/[A-Z]/g, '-' + '$&amp;'.toLowerCase());  // não funciona</pre>
+```js
+let newString = propertyName.replace(/[A-Z]/g, '-' + '$&'.toLowerCase());  // não funciona
+```
 
-<p>Isso acontece porque <code>'$&amp;'.toLowerCase()</code> será executada antes (resultando no mesmo que <code>'$&amp;'</code>) em vez de usar os caracteres da string a ser transformada.</p>
+Isso acontece porque `'$&'.toLowerCase()` será executada antes (resultando no mesmo que `'$&'`) em vez de usar os caracteres da string a ser transformada.
 
-<h3 id="Substituindo_graus_Fahrenheit_em_Celsius">Substituindo graus Fahrenheit em Celsius</h3>
+### Substituindo graus Fahrenheit em Celsius
 
-<p>O exemplo a seguir converte graus Fahrenheit em Celsius. O grau Fahrenheit deve ser um número terminado com "<code>F</code>". A função retorna o número em Celsius terminando em "<code>C</code>". Por exemplo, se o valor de entrada for "<code>212F</code>", a função deve retornar "<code>100C</code>". Se o número for "<code>0F</code>", a função deve retornar "<code>-17.77777777777778C</code>".</p>
+O exemplo a seguir converte graus Fahrenheit em Celsius. O grau Fahrenheit deve ser um número terminado com "`F`". A função retorna o número em Celsius terminando em "`C`". Por exemplo, se o valor de entrada for "`212F`", a função deve retornar "`100C`". Se o número for "`0F`", a função deve retornar "`-17.77777777777778C`".
 
-<p>A expressão regular <code>test</code> verifica por números que terminem com "<code>F</code>". O número de graus Fahrenheit é acessível pela função pelo segundo parâmetro, <code>p1</code>. A função calcula o Celsius baseado no Fahrenheit passado via string para a função <code>f2c()</code>. A <code>f2c()</code> então retorna o número em Celsius.</p>
+A expressão regular `test` verifica por números que terminem com "`F`". O número de graus Fahrenheit é acessível pela função pelo segundo parâmetro, `p1`. A função calcula o Celsius baseado no Fahrenheit passado via string para a função `f2c()`. A `f2c()` então retorna o número em Celsius.
 
-<pre class="brush: js">function f2c(x) {
+```js
+function f2c(x) {
   function convert(str, p1, offset, s) {
     return ((p1 - 32) * 5/9) + 'C';
   }
   var s = String(x);
   var test = /(-?\d+(?:\.\d*)?)F\b/g;
   return s.replace(test, convert);
-}</pre>
+}
+```
 
-<h3 id="Use_uma_função_com_expressão_regular_para_evitar_loops_for">Use uma função com expressão regular para evitar loops for</h3>
+### Use uma função com expressão regular para evitar loops for
 
-<p>O exemplo a seguir pega um padrão de string e converte em um array de objetos.</p>
+O exemplo a seguir pega um padrão de string e converte em um array de objetos.
 
-<p><strong>Entrada:</strong></p>
+**Entrada:**
 
-<p>Uma string com caracteres: <code>x</code>, <code>-</code> e <code>_</code></p>
+Uma string com caracteres: `x`, `-` e `_`
 
-<pre>x-x_
+```
+x-x_
 x---x---x---x---
 x-xxx-xx-x-
-x_x_x___x___x___</pre>
+x_x_x___x___x___
+```
 
-<p><strong>Saída:</strong></p>
+**Saída:**
 
-<p>Um array de objetos. Um <code>'x'</code> denota um estado <code>'on'</code>, um <code>'-'</code> (hífen) denota um estado <code>'off'</code>  e um <code>'_'</code> (underline) denota o comprimento do estado <code>'on'</code>.</p>
+Um array de objetos. Um `'x'` denota um estado `'on'`, um `'-'` (hífen) denota um estado `'off'` e um `'_'` (underline) denota o comprimento do estado `'on'`.
 
-<pre>[
+```
+[
   { on: true, length: 1 },
   { on: false, length: 1 },
   { on: true, length: 2 }
   ...
-]</pre>
+]
+```
 
-<p><strong>Código:</strong></p>
+**Código:**
 
-<pre class="brush: js">var str = 'x-x_';
+```js
+var str = 'x-x_';
 var retArr = [];
 str.replace(/(x_*)|(-)/g, function(match, p1, p2) {
   if (p1) { retArr.push({ on: true, length: p1.length }); }
   if (p2) { retArr.push({ on: false, length: 1 }); }
 });
 
-console.log(retArr);</pre>
+console.log(retArr);
+```
 
-<p>O código gera um array de 3 objetos como desejado sem usar uma função de loop.</p>
+O código gera um array de 3 objetos como desejado sem usar uma função de loop.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3rd Edition.</td>
-   <td>Standard</td>
-   <td>Defnição inicial. Implementado no JavaScript 1.2.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.4.11', 'String.prototype.replace')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.replace', 'String.prototype.replace')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                | Status                   | Comentário                                        |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------- |
+| ECMAScript 3rd Edition.                                                                                      | Standard                 | Defnição inicial. Implementado no JavaScript 1.2. |
+| {{SpecName('ES5.1', '#sec-15.5.4.11', 'String.prototype.replace')}}                     | {{Spec2('ES5.1')}} |                                                   |
+| {{SpecName('ES6', '#sec-string.prototype.replace', 'String.prototype.replace')}} | {{Spec2('ES6')}}     |                                                   |
 
-<h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
+## Navegadores compatíveis
 
 {{Compat("javascript.builtins.String.replace")}}
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("String.prototype.match()")}}</li>
- <li>{{jsxref("RegExp.prototype.exec()")}}</li>
- <li>{{jsxref("RegExp.prototype.test()")}}</li>
-</ul>
+- {{jsxref("String.prototype.match()")}}
+- {{jsxref("RegExp.prototype.exec()")}}
+- {{jsxref("RegExp.prototype.test()")}}

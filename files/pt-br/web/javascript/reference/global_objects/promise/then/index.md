@@ -3,44 +3,44 @@ title: Promise.prototype.then()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/then
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/then
 ---
-<div>{{JSRef("Global_Objects", "Promise")}}</div>
+{{JSRef("Global_Objects", "Promise")}}
 
-<h2 id="Summary" name="Summary">Resumo</h2>
+## Resumo
 
-<p>O método <strong>then()</strong> retorna uma <strong>Promise</strong>. Possui dois argumentos, ambos são "<strong>call back functions</strong>", sendo uma para o sucesso e outra para o fracasso da promessa.</p>
+O método **then()** retorna uma **Promise**. Possui dois argumentos, ambos são "**call back functions**", sendo uma para o sucesso e outra para o fracasso da promessa.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><var>p.then(</var><strong style="font-weight: bold;">quandoRealizada</strong><var>, </var><strong style="font-weight: bold;">quandoRejeitada</strong><var>)</var>;
+```
+p.then(quandoRealizada, quandoRejeitada);
 
 p.then(function(valor) {
    // sucesso
   }, function(motivo) {
   // rejeitada
 });
-</pre>
+```
 
-<h3 id="Parametros">Parametros</h3>
+### Parametros
 
-<dl>
- <dt>quandoRealizada</dt>
- <dd>Uma {{jsxref("Function")}} chamada quando a <strong>Promise</strong> é cumprida (Sucesso). Essa função tem um argumento, o valor do cumprimento.</dd>
-</dl>
+- quandoRealizada
+  - : Uma {{jsxref("Function")}} chamada quando a **Promise** é cumprida (Sucesso). Essa função tem um argumento, o valor do cumprimento.
 
-<dl>
- <dt>quandoRejeitada</dt>
- <dd>Uma {{jsxref("Function")}} chamada quando a Promise é rejeitada. Essa função tem um argumento, o motivo da recusa.</dd>
-</dl>
+<!---->
 
-<h2 id="Description" name="Description">Descrição</h2>
+- quandoRejeitada
+  - : Uma {{jsxref("Function")}} chamada quando a Promise é rejeitada. Essa função tem um argumento, o motivo da recusa.
 
-<p>Assim como o método .then()  e {{jsxref("Promise.prototype.catch()")}} retornam uma <strong>Promise</strong>, eles podem ser encadeados - uma operação chamada <em><strong>composition</strong>.</em></p>
+## Descrição
 
-<h2 id="Exemplos">Exemplos</h2>
+Assim como o método .then() e {{jsxref("Promise.prototype.catch()")}} retornam uma **Promise**, eles podem ser encadeados - uma operação chamada _**composition**._
 
-<h3 id="Usando_o_método_then">Usando o método then</h3>
+## Exemplos
 
-<pre class="brush: js">var p1 = new Promise(function(resolve, reject) {
+### Usando o método then
+
+```js
+var p1 = new Promise(function(resolve, reject) {
   resolve("Success!");
   // or
   // reject ("Error!");
@@ -51,13 +51,14 @@ p1.then(function(value) {
 }, function(reason) {
   console.log(reason); // Error!
 });
-</pre>
+```
 
-<h3 id="Encadeando">Encadeando</h3>
+### Encadeando
 
-<p>Já que o método then() devolve uma <strong>Promise</strong>, você pode facilmente encadeá-los. </p>
+Já que o método then() devolve uma **Promise**, você pode facilmente encadeá-los.
 
-<pre class="brush: js">var p2 = new Promise(function(resolve, reject) {
+```js
+var p2 = new Promise(function(resolve, reject) {
   resolve(1);
 });
 
@@ -67,12 +68,12 @@ p2.then(function(value) {
 }).then(function(value) {
   console.log(value); // 2
 });
+```
 
-</pre>
+No exemplo acima, o último **.then()** recebeu a soma value + 1, que resultou em 2, porém se o retorno de value + 1 fosse uma **Promise** que também retornasse value + 1, o resultado seria o mesmo. Note, no exemplo abaixo, que leva 1000ms para a impressão de 2 ocorrer.
 
-<p>No exemplo acima, o último <strong>.then()</strong> recebeu a soma value + 1, que resultou em 2, porém se o retorno de value + 1 fosse uma <strong>Promise</strong> que também retornasse value + 1, o resultado seria o mesmo. Note, no exemplo abaixo, que leva 1000ms para a impressão de 2 ocorrer.</p>
-
-<pre class="brush: js">var p2 = new Promise(function(resolve, reject) {
+```js
+var p2 = new Promise(function(resolve, reject) {
    resolve(1);
 });
 
@@ -85,43 +86,23 @@ p2.then(function(value) {
   });
 }).then(function(value) {
   console.log(value); // 2
-});</pre>
+});
+```
 
-<p> </p>
+##
 
-<p> </p>
+## Especificações
 
-<h2 id="sect1"> </h2>
+| Especificações                                                                                       | Status               | Comentários                                |
+| ---------------------------------------------------------------------------------------------------- | -------------------- | ------------------------------------------ |
+| [domenic/promises-unwrapping](https://github.com/domenic/promises-unwrapping)                        | Draft                | Standardization work is taking place here. |
+| {{SpecName('ES6', '#sec-promise.prototype.then', 'Promise.prototype.then')}} | {{Spec2('ES6')}} | Initial definition in an ECMA standard.    |
 
-<h2 id="Especificações">Especificações</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentários</th>
-  </tr>
-  <tr>
-   <td><a href="https://github.com/domenic/promises-unwrapping">domenic/promises-unwrapping</a></td>
-   <td>Draft</td>
-   <td>Standardization work is taking place here.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-promise.prototype.then', 'Promise.prototype.then')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Initial definition in an ECMA standard.</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Promise.then")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
- <li>{{jsxref("Promise.prototype.catch()")}}</li>
-</ul>
+- {{jsxref("Promise")}}
+- {{jsxref("Promise.prototype.catch()")}}

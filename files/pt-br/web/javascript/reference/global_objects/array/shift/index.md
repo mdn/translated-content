@@ -9,35 +9,38 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/shift
 ---
-<div>{{JSRef("Global_Objects", "Array")}}</div>
+{{JSRef("Global_Objects", "Array")}}
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+## Sumário
 
-<p>O método <strong><code>shift()</code></strong>remove o <strong>primeiro</strong> elemento de um array e retorna esse elemento. Este método muda o tamanho do array.</p>
+O método **`shift()`**remove o **primeiro** elemento de um array e retorna esse elemento. Este método muda o tamanho do array.
 
-<p>{{EmbedInteractiveExample("pages/js/array-shift.html")}}</p>
+{{EmbedInteractiveExample("pages/js/array-shift.html")}}
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code><var>arr</var>.shift()</code></pre>
+```
+arr.shift()
+```
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>O elemento removido do array; {{jsxref("undefined")}} se o array estiver vazio.</p>
+O elemento removido do array; {{jsxref("undefined")}} se o array estiver vazio.
 
-<h2 id="Description" name="Description">Descrição</h2>
+## Descrição
 
-<p>O método shift remove o elemento de índice zero, diminui em 1 os indices dos demais valores e retorna o valor removido. Se a propriedade {{jsxref("Array.length", "length")}} for 0, então {{jsxref("undefined")}} é retornado.</p>
+O método shift remove o elemento de índice zero, diminui em 1 os indices dos demais valores e retorna o valor removido. Se a propriedade {{jsxref("Array.length", "length")}} for 0, então {{jsxref("undefined")}} é retornado.
 
-<p><code>shift</code> é intencionalmente genérico; esse método pode ser {{jsxref("Function.call", "chamado", "", 1)}} ou {{jsxref("Function.apply", "aplicado", "", 1)}} para objetos parecidos com arrays. Objetos que não contém a propriedade <code>length </code>representando o tamanho de uma série consecutiva, começando em zero, podem não se comportar de maneira correta.</p>
+`shift` é intencionalmente genérico; esse método pode ser {{jsxref("Function.call", "chamado", "", 1)}} ou {{jsxref("Function.apply", "aplicado", "", 1)}} para objetos parecidos com arrays. Objetos que não contém a propriedade `length `representando o tamanho de uma série consecutiva, começando em zero, podem não se comportar de maneira correta.
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<h3 id="Example_Removing_an_element_from_an_array" name="Example:_Removing_an_element_from_an_array">Removendo um elemento de array</h3>
+### Removendo um elemento de array
 
-<p>O código a seguir mostra o array <code>minhaLista</code> antes e depois de remover seu primeiro elemento. Ele também mostra o elemento removido.</p>
+O código a seguir mostra o array `minhaLista` antes e depois de remover seu primeiro elemento. Ele também mostra o elemento removido.
 
-<pre class="brush: js notranslate">var minhaLista = ['anjo', 'casa', 'mandarim', 'medico'];
+```js
+var minhaLista = ['anjo', 'casa', 'mandarim', 'medico'];
 
 console.log('minhaLista antes: ' + minhaLista);
 // minhaList antes: ['anjo', 'casa', 'mandarim', 'medico']
@@ -47,54 +50,35 @@ console.log('minhaLista depois: ' + minhaLista);
 // minhaList depois: ['casa', 'mandarim', 'medico']
 console.log('Elemento removido: ' + shifted);
 // Elemento removido: anjo
-</pre>
+```
 
-<h3 id="Example_Removing_an_element_from_an_array" name="Example:_Removing_an_element_from_an_array">Usando o método shift() dentro de um loop de while</h3>
+### Usando o método shift() dentro de um loop de while
 
-<p>O médodo shift() é frequentemente usado como condição dentro de um loop de while. No exemplo a seguir, cada iteração removerá o elemento seguinte do array, até que ele esteja vazio:</p>
+O médodo shift() é frequentemente usado como condição dentro de um loop de while. No exemplo a seguir, cada iteração removerá o elemento seguinte do array, até que ele esteja vazio:
 
-<pre class="brush: js notranslate">var nomes = ["André", "Eduardo", "Paulo", "Cris", "João"];
+```js
+var nomes = ["André", "Eduardo", "Paulo", "Cris", "João"];
 while( (i = nomes.shift()) !== undefined ) {
     console.log(i);
 }
-// André Eduardo Paulo Cris João</pre>
+// André Eduardo Paulo Cris João
+```
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3rd Edition</td>
-   <td>Standard</td>
-   <td>Implementação inicial. Implementado no JavaScript 1.2.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.9', 'Array.prototype.shift')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.shift', 'Array.prototype.shift')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                        | Estado                   | Comentário                                             |
+| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
+| ECMAScript 3rd Edition                                                                               | Standard                 | Implementação inicial. Implementado no JavaScript 1.2. |
+| {{SpecName('ES5.1', '#sec-15.4.4.9', 'Array.prototype.shift')}}                 | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-array.prototype.shift', 'Array.prototype.shift')}} | {{Spec2('ES6')}}     |                                                        |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade de Browser</h2>
+## Compatibilidade de Browser
 
-<div>{{Compat("javascript.builtins.Array.shift")}}</div>
+{{Compat("javascript.builtins.Array.shift")}}
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Array.prototype.push()")}}</li>
- <li>{{jsxref("Array.prototype.pop()")}}</li>
- <li>{{jsxref("Array.prototype.unshift()")}}</li>
- <li>{{jsxref("Array.prototype.concat()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.push()")}}
+- {{jsxref("Array.prototype.pop()")}}
+- {{jsxref("Array.prototype.unshift()")}}
+- {{jsxref("Array.prototype.concat()")}}

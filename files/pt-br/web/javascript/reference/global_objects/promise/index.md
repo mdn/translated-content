@@ -7,88 +7,80 @@ tags:
   - Promise
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 ---
-<div>{{JSRef("Global_Objects", "Promise")}}</div>
+{{JSRef("Global_Objects", "Promise")}}
 
-<p><strong><code>Promise</code></strong> é um objeto usado para processamento assíncrono. Uma <code>Promise</code> (<em>de "promessa"</em>) representa um valor que pode estar disponível agora, no futuro ou nunca.</p>
+**`Promise`** é um objeto usado para processamento assíncrono. Uma `Promise` (_de "promessa"_) representa um valor que pode estar disponível agora, no futuro ou nunca.
 
-<div class="note">
-<p><strong>Nota:</strong> Esse artigo descreve o construtor <code>Promise,</code>os métodos e propriedades de tais objetos. Para aprender sobre como promises funcionam e como utilizá-los, é aconselhavel a leitura de <a href="/pt-BR/docs/Web/JavaScript/Guide/Usando_promises">utilizando promises</a>. O construtor é utilizado para embrulhar funções sem suporte ao conceito "promise".</p>
-</div>
+> **Nota:** Esse artigo descreve o construtor `Promise,`os métodos e propriedades de tais objetos. Para aprender sobre como promises funcionam e como utilizá-los, é aconselhavel a leitura de [utilizando promises](/pt-BR/docs/Web/JavaScript/Guide/Usando_promises). O construtor é utilizado para embrulhar funções sem suporte ao conceito "promise".
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Uma <code><strong>Promise</strong></code> representa um proxy para um valor que não é necessariamente conhecido quando a promessa é criada. Isso permite a associação de métodos de tratamento para eventos da ação assíncrona num caso eventual de sucesso ou de falha. Isto permite que métodos assíncronos retornem valores como métodos síncronos: ao invés do valor final, o método assíncrono retorna uma <em>promessa</em> ao valor em algum momento no futuro.</p>
+Uma **`Promise`** representa um proxy para um valor que não é necessariamente conhecido quando a promessa é criada. Isso permite a associação de métodos de tratamento para eventos da ação assíncrona num caso eventual de sucesso ou de falha. Isto permite que métodos assíncronos retornem valores como métodos síncronos: ao invés do valor final, o método assíncrono retorna uma _promessa_ ao valor em algum momento no futuro.
 
-<p>Uma <strong><code>Promise</code></strong> está em um destes estados: </p>
+Uma **`Promise`** está em um destes estados:
 
-<ul>
- <li><em>pending (</em>pendente<em>)</em>: Estado inicial, que não foi realizada nem rejeitada.</li>
- <li><em>fulfilled (</em>realizada): sucesso na operação.</li>
- <li><em>rejected (</em>rejeitado):  falha na operação.</li>
-</ul>
+- _pending (\_pendente_)\_: Estado inicial, que não foi realizada nem rejeitada.
+- \_fulfilled (\_realizada): sucesso na operação.
+- \_rejected (\_rejeitado): falha na operação.
 
-<p>Uma promessa pendente pode se tornar <em>realizada</em> com um valor ou <em>rejeitada</em> por um motivo (erro). Quando um desses estados ocorre, o método <code>then</code> do <code>Promise</code> é chamado, e ele chama o método de tratamento associado ao estado (<code>rejected</code> ou <code>resolved</code>).  Se a promessa foi realizada ou rejeitada quando o método de tratamento correspondente for associado, o método será chamado, desta forma não há uma condição de competição entre uma operação assíncrona e seus manipuladores que estão sendo associados.</p>
+Uma promessa pendente pode se tornar _realizada_ com um valor ou _rejeitada_ por um motivo (erro). Quando um desses estados ocorre, o método `then` do `Promise` é chamado, e ele chama o método de tratamento associado ao estado (`rejected` ou `resolved`). Se a promessa foi realizada ou rejeitada quando o método de tratamento correspondente for associado, o método será chamado, desta forma não há uma condição de competição entre uma operação assíncrona e seus manipuladores que estão sendo associados.
 
-<p>Como os métodos <code>Promise.prototype.then</code> e <code>Promise.prototype.catch</code>  retornam promises, eles podem ser encadeados — uma operação chamada <em>composição</em>.</p>
+Como os métodos `Promise.prototype.then` e `Promise.prototype.catch` retornam promises, eles podem ser encadeados — uma operação chamada _composição_.
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/8633/promises.png" style="height: 297px; width: 801px;"></p>
+![](https://mdn.mozillademos.org/files/8633/promises.png)
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<dl>
- <dt><code>Promise.length</code></dt>
- <dd>Propriedade length cujo valor é sempre 1 (número de argumentos do método construtor).</dd>
- <dt>{{jsxref("Promise.prototype")}}</dt>
- <dd>Representa o protótipo para o método construtor da <code>Promise</code>.</dd>
-</dl>
+- `Promise.length`
+  - : Propriedade length cujo valor é sempre 1 (número de argumentos do método construtor).
+- {{jsxref("Promise.prototype")}}
+  - : Representa o protótipo para o método construtor da `Promise`.
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<dl>
- <dt>{{jsxref("Promise.all", "Promise.all(lista)")}}</dt>
- <dd>Retorna uma promise que é resolvida quando todas as promises no argumento <em>lista</em> forem resolvidas ou rejeitada assim que uma das promises da lista for rejeitada. Se a promise retornada for resolvida, ela é resolvida com um array dos valores das promises resolvidas da lista. Se a promise for rejeitada, ela é rejeitada com o motivo da primeira promise que foi rejeitada na lista. Este método pode ser útil para agregar resultados de múltiplas promises.</dd>
- <dt>{{jsxref("Promise.race", "Promise.race(lista)")}}</dt>
- <dd>Retorna uma promise que resolve ou rejeita assim que uma das promises do argumento lista resolve ou rejeita, com um valor ou o motivo daquela promise.</dd>
-</dl>
+- {{jsxref("Promise.all", "Promise.all(lista)")}}
+  - : Retorna uma promise que é resolvida quando todas as promises no argumento _lista_ forem resolvidas ou rejeitada assim que uma das promises da lista for rejeitada. Se a promise retornada for resolvida, ela é resolvida com um array dos valores das promises resolvidas da lista. Se a promise for rejeitada, ela é rejeitada com o motivo da primeira promise que foi rejeitada na lista. Este método pode ser útil para agregar resultados de múltiplas promises.
+- {{jsxref("Promise.race", "Promise.race(lista)")}}
+  - : Retorna uma promise que resolve ou rejeita assim que uma das promises do argumento lista resolve ou rejeita, com um valor ou o motivo daquela promise.
 
-<dl>
- <dt>{{jsxref("Promise.reject", "Promise.reject(motivo)")}}</dt>
- <dd>Retorna um objeto <code>Promise</code> que foi rejeitado por um dado motivo.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt>{{jsxref("Promise.resolve", "Promise.resolve(valor)")}}</dt>
- <dd>Retorna um objeto <code>Promise</code> que foi resolvido com um dado valor. Se o valor é <code>thenable</code> (possui um método <code>then</code>), a promise retornada "seguirá" este método, adotando esse estado eventual; caso contrário a promise retornada será realizada com o valor. Geralmente, se você quer saber se um valor é uma promise ou não, utilize {{jsxref("Promise.resolve", "Promise.resolve(valor)")}} e trabalhe com a valor de retorno que é sempre uma promise.</dd>
-</dl>
+- {{jsxref("Promise.reject", "Promise.reject(motivo)")}}
+  - : Retorna um objeto `Promise` que foi rejeitado por um dado motivo.
 
-<h2 id="Protótipo_Promise">Protótipo Promise</h2>
+<!---->
 
-<h3 id="Propriedades_2">Propriedades</h3>
+- {{jsxref("Promise.resolve", "Promise.resolve(valor)")}}
+  - : Retorna um objeto `Promise` que foi resolvido com um dado valor. Se o valor é `thenable` (possui um método `then`), a promise retornada "seguirá" este método, adotando esse estado eventual; caso contrário a promise retornada será realizada com o valor. Geralmente, se você quer saber se um valor é uma promise ou não, utilize {{jsxref("Promise.resolve", "Promise.resolve(valor)")}} e trabalhe com a valor de retorno que é sempre uma promise.
 
-<p>{{page('pt-BR/Web/JavaScript/Reference/Global_Objects/Promise/prototype','Propriedades')}}</p>
+## Protótipo Promise
 
-<h3 id="Métodos_2">Métodos</h3>
+### Propriedades
 
-<p>{{page('pt-BR/Web/JavaScript/Reference/Global_Objects/Promise/prototype','Métodos')}}</p>
+{{page('pt-BR/Web/JavaScript/Reference/Global_Objects/Promise/prototype','Propriedades')}}
 
-<h2 id="Exemplos">Exemplos</h2>
+### Métodos
 
-<h3 id="Criando_uma_Promise">Criando uma Promise</h3>
+{{page('pt-BR/Web/JavaScript/Reference/Global_Objects/Promise/prototype','Métodos')}}
 
-&lt;div id="log"&gt;&lt;/div&gt;
-</pre>
+## Exemplos
 
-<p>Este pequeno exemplo mostra o mecanismo de uma <code>Promise</code>. O método <code>testPromise()</code> é chamado cada vez que {{HTMLElement("button")}} é clicado. Isso cria uma promise que resolverá, usando {{domxref("window.setTimeout()")}}, o contador de promise <code>promiseCount</code> (iniciando em 1) a cada 1 a 3s randomicamente. O construtor <code>Promise()</code> é usado para criar a promise.</p>
+### Criando uma Promise
 
-<p>A realização da promise é simplesmente registrada, por meio de configuração na função callback de realização  usando {{jsxref("Promise.prototype.then()","p1.then()")}}. Alguns logs mostram como a parte síncrona do método é desacoplada da conclusão assíncrona da promise.</p>
+\<div id="log">\</div>
 
-<pre class="brush: js notranslate">var promiseCount = 0;
+Este pequeno exemplo mostra o mecanismo de uma `Promise`. O método `testPromise()` é chamado cada vez que {{HTMLElement("button")}} é clicado. Isso cria uma promise que resolverá, usando {{domxref("window.setTimeout()")}}, o contador de promise `promiseCount` (iniciando em 1) a cada 1 a 3s randomicamente. O construtor `Promise()` é usado para criar a promise.
+
+A realização da promise é simplesmente registrada, por meio de configuração na função callback de realização usando {{jsxref("Promise.prototype.then()","p1.then()")}}. Alguns logs mostram como a parte síncrona do método é desacoplada da conclusão assíncrona da promise.
+
+```js
+var promiseCount = 0;
 function testPromise() {
   var thisPromiseCount = ++promiseCount;
 
   var log = document.getElementById('log');
   log.insertAdjacentHTML('beforeend', thisPromiseCount +
-      ') Started (&lt;small&gt;Sync code started&lt;/small&gt;)&lt;br/&gt;');
+      ') Started (<small>Sync code started</small>)<br/>');
 
   // Criamos uma nova promise: prometemos a contagem dessa promise (após aguardar 3s)
   var p1 = new Promise(
@@ -96,7 +88,7 @@ function testPromise() {
     // rejeitar a promise
     function(resolve, reject) {
       log.insertAdjacentHTML('beforeend', thisPromiseCount +
-          ') Promise started (&lt;small&gt;Async code started&lt;/small&gt;)&lt;br/&gt;');
+          ') Promise started (<small>Async code started</small>)<br/>');
       // Isto é apenas um exemplo para criar assincronismo
       window.setTimeout(
         function() {
@@ -110,15 +102,16 @@ function testPromise() {
     // apenas logamos a mensagem e o valor
     function(val) {
       log.insertAdjacentHTML('beforeend', val +
-          ') Promise fulfilled (&lt;small&gt;Async code terminated&lt;/small&gt;)&lt;br/&gt;');
+          ') Promise fulfilled (<small>Async code terminated</small>)<br/>');
     });
 
   log.insertAdjacentHTML('beforeend', thisPromiseCount +
-      ') Promise made (&lt;small&gt;Sync code terminated&lt;/small&gt;)&lt;br/&gt;');
+      ') Promise made (<small>Sync code terminated</small>)<br/>');
 }
-</pre>
+```
 
-<pre class="brush:js hidden">if ("Promise" in window) {
+```js hidden
+if ("Promise" in window) {
   btn = document.getElementById("btn");
    btn.addEventListener("click",testPromise);
 }
@@ -126,48 +119,31 @@ else {
   log = document.getElementById('log');
   log.innerHTML = "Live example not available as your browser doesn't support the Promise interface.";
 }
-</pre>
+```
 
-<p>Este exemplo é executado pelo click do botão. Você precisa de uma versão de navegedor com suporte a <code>Promise</code>. Clicando algumas vezes no botão num curto intervalo de tempo, você verá as diferentes promises sendo realizadas uma após a outra.</p>
+Este exemplo é executado pelo click do botão. Você precisa de uma versão de navegedor com suporte a `Promise`. Clicando algumas vezes no botão num curto intervalo de tempo, você verá as diferentes promises sendo realizadas uma após a outra.
 
-<p>{{EmbedLiveSample("Criando_uma_Promise", "500", "200")}}</p>
+{{EmbedLiveSample("Criando_uma_Promise", "500", "200")}}
 
-<h3 id="Carregando_uma_imagem_com_XHR">Carregando uma imagem com XHR</h3>
+### Carregando uma imagem com XHR
 
-<p>Outro simples exemplo usando <code>Promise</code> e <code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHTTPRequest</a></code> para carregar imagens está disponível no repositório GitHub MDN<a href="https://github.com/mdn/js-examples/blob/master/promises-test/index.html"> promise-test</a>. Você também pode <a href="https://mdn.github.io/js-examples/promises-test/">vê-lo em ação</a>. Cada passo é comentado e lhe permite acompanhar de perto a arquitetura de Promise e XHR.</p>
+Outro simples exemplo usando `Promise` e [`XMLHTTPRequest`](/en-US/docs/Web/API/XMLHttpRequest) para carregar imagens está disponível no repositório GitHub MDN[ promise-test](https://github.com/mdn/js-examples/blob/master/promises-test/index.html). Você também pode [vê-lo em ação](https://mdn.github.io/js-examples/promises-test/). Cada passo é comentado e lhe permite acompanhar de perto a arquitetura de Promise e XHR.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td><a href="https://github.com/domenic/promises-unwrapping">domenic/promises-unwrapping</a></td>
-   <td>Draft</td>
-   <td>Standardization work is taking place here.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-promise-objects', 'Promise')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition in an ECMA standard.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                 | Status                   | Comentário                                 |
+| ----------------------------------------------------------------------------- | ------------------------ | ------------------------------------------ |
+| [domenic/promises-unwrapping](https://github.com/domenic/promises-unwrapping) | Draft                    | Standardization work is taking place here. |
+| {{SpecName('ES2015', '#sec-promise-objects', 'Promise')}}  | {{Spec2('ES2015')}} | Initial definition in an ECMA standard.    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Promise")}}</p>
+{{Compat("javascript.builtins.Promise")}}
 
-<p>Veja também</p>
+Veja também
 
-<ul>
- <li><a href="http://promisesaplus.com/">Promises/A+ specification</a></li>
- <li><a href="http://www.html5rocks.com/en/tutorials/es6/promises/">Jake Archibald: JavaScript Promises: There and Back Again</a></li>
- <li><a href="http://de.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript">Domenic Denicola: Callbacks, Promises, and Coroutines – Asynchronous Programming Patter in JavaScript</a></li>
- <li><a href="http://www.mattgreer.org/articles/promises-in-wicked-detail/">Matt Greer: JavaScript Promises ... In Wicked Detail</a></li>
- <li><a href="https://www.promisejs.org/">Forbes Lindesay: promisejs.org</a></li>
-</ul>
+- [Promises/A+ specification](http://promisesaplus.com/)
+- [Jake Archibald: JavaScript Promises: There and Back Again](http://www.html5rocks.com/en/tutorials/es6/promises/)
+- [Domenic Denicola: Callbacks, Promises, and Coroutines – Asynchronous Programming Patter in JavaScript](http://de.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript)
+- [Matt Greer: JavaScript Promises ... In Wicked Detail](http://www.mattgreer.org/articles/promises-in-wicked-detail/)
+- [Forbes Lindesay: promisejs.org](https://www.promisejs.org/)

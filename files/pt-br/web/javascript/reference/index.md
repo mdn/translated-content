@@ -6,59 +6,48 @@ tags:
   - Referencia
 translation_of: Web/JavaScript/Reference
 ---
-<h2 id="About_this_Reference" name="About_this_Reference"><a href="/en-US/docs/JavaScript/Reference/About" title="JavaScript/Reference/About">Sobre essa Referência</a></h2>
+## [Sobre essa Referência](/pt-BR/docs/JavaScript/Reference/About "JavaScript/Reference/About")
 
-<div>{{page("/pt-BR/docs/JavaScript/Reference/About")}}</div>
+{{page("/pt-BR/docs/JavaScript/Reference/About")}}
 
-<h2 id="Objetos_Globais"><a href="/en-US/docs/JavaScript/Reference/Global_Objects" title="JavaScript/Reference/Global_Objects">Objetos Globais</a></h2>
+## [Objetos Globais](/pt-BR/docs/JavaScript/Reference/Global_Objects "JavaScript/Reference/Global_Objects")
 
-<div>{{page('/pt-BR/docs/JavaScript/Reference/Global_Objects', 'Standard global objects (by category)')}}</div>
+{{page('/pt-BR/docs/JavaScript/Reference/Global_Objects', 'Standard global objects (by category)')}}
 
-<h2 id="Functions" name="Functions"><a href="/en-US/docs/JavaScript/Reference/Functions_and_function_scope" title="JavaScript/Reference/Functions_and_function_scope">Funções e escopo de função</a></h2>
+## [Funções e escopo de função](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope "JavaScript/Reference/Functions_and_function_scope")
 
+- [`argumentos`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments "JavaScript/Reference/Functions_and_function_scope/arguments")
+- [Modo Strict](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode "JavaScript/Reference/Functions_and_function_scope/Strict_mode")
 
-<ul>
- <li><code><a href="/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments" title="JavaScript/Reference/Functions_and_function_scope/arguments">argumentos</a></code></li>
- <li><a href="/en-US/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode" title="JavaScript/Reference/Functions_and_function_scope/Strict_mode">Modo Strict</a></li>
-</ul>
+## [Declarações](/pt-BR/docs/JavaScript/Reference/Statements "JavaScript/Reference/Statements")
 
-<h2 id="Statements" name="Statements"><a href="/en-US/docs/JavaScript/Reference/Statements" title="JavaScript/Reference/Statements">Declarações</a></h2>
+{{page('/pt-BR/docs/JavaScript/Reference/Statements')}}
 
-<div>{{page('/pt-BR/docs/JavaScript/Reference/Statements')}}</div>
+## [Operadores e outras palavras-chave](/pt-BR/docs/JavaScript/Reference/Operators "JavaScript/Reference/Operators")
 
-<h2 id="Operators" name="Operators"><a href="/en-US/docs/JavaScript/Reference/Operators" title="JavaScript/Reference/Operators">Operadores e outras palavras-chave</a></h2>
+{{page('/pt-BR/docs/JavaScript/Reference/Operators')}}
 
-<div>{{page('/pt-BR/docs/JavaScript/Reference/Operators')}}</div>
+## Comentários
 
-<h2 id="Comments" name="Comments">Comentários</h2>
+- [Comentários de código](/pt-BR/docs/JavaScript/Reference/Code_comments "JavaScript/Reference/Code comments") (`//` and `/* */`)
 
-<ul>
- <li><a href="/en-US/docs/JavaScript/Reference/Code_comments" title="JavaScript/Reference/Code comments">Comentários de código</a> (<code>//</code> and <code>/* */</code>)</li>
-</ul>
+## [E4X (extensão)](/pt-BR/docs/E4X "E4X"){{deprecated_inline}}
 
-<h2 id="E4X" name="E4X"><a href="/en-US/docs/E4X" title="E4X">E4X (extensão)</a>{{deprecated_inline}}</h2>
+Declarações Globais:
 
-<p>Declarações Globais:</p>
+- [default XML namespace](/pt-BR/docs/E4X/Processing_XML_with_E4X#Handling_namespaces "JavaScript/ Guide/Processing XML with E4X#Handling namespaces")
 
-<ul>
- <li><a href="/en-US/docs/E4X/Processing_XML_with_E4X#Handling_namespaces" title="JavaScript/ Guide/Processing XML with E4X#Handling namespaces">default XML namespace</a></li>
-</ul>
+Funções Globais:
 
-<p>Funções Globais:</p>
+- [isXMLName()](/pt-BR/docs/E4X:isXMLName "E4X:isXMLName")
 
-<ul>
- <li><a href="/en-US/docs/E4X:isXMLName" title="E4X:isXMLName">isXMLName()</a></li>
-</ul>
+Construtores Globais:
 
-<p>Construtores Globais:</p>
+- [Namespace()](/pt-BR/docs/E4X:Namespace "E4X:Namespace")
+- [QName()](/pt-BR/docs/E4X:QName "E4X:QName")
+- [XML()](/pt-BR/docs/E4X:XML "E4X:XML")
+- [XMLList()](/pt-BR/docs/E4X:XMLList "E4X:XMLList")
 
-<ul>
- <li><a href="/en-US/docs/E4X:Namespace" title="E4X:Namespace">Namespace()</a></li>
- <li><a href="/en-US/docs/E4X:QName" title="E4X:QName">QName()</a></li>
- <li><a href="/en-US/docs/E4X:XML" title="E4X:XML">XML()</a></li>
- <li><a href="/en-US/docs/E4X:XMLList" title="E4X:XMLList">XMLList()</a></li>
-</ul>
+## [Apêndice A - Palavras Reservadas](/pt-BR/docs/JavaScript/Reference/Reserved_Words "JavaScript/Reference/Reserved_Words")
 
-<h2 id="Appendix_A_-_Reserved_Words" name="Appendix_A_-_Reserved_Words"><a href="/en-US/docs/JavaScript/Reference/Reserved_Words" title="JavaScript/Reference/Reserved_Words">Apêndice A - Palavras Reservadas</a></h2>
-
-<h2 id="Appendix_B_-_Deprecated_Features" name="Appendix_B_-_Deprecated_Features"><a href="/en-US/docs/JavaScript/Reference/Deprecated_and_obsolete_features" title="JavaScript/Reference/Deprecated_Features">Apêndice B - Funcionalidades Obsoletas</a></h2>
+## [Apêndice B - Funcionalidades Obsoletas](/pt-BR/docs/JavaScript/Reference/Deprecated_and_obsolete_features "JavaScript/Reference/Deprecated_Features")

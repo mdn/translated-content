@@ -3,36 +3,37 @@ title: Array.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>copyWithin()</strong></code> copia parte de um array para outra localização dentro deste mesmo array e o retorna, sem alterar seu tamanho. </p>
+O método **`copyWithin()`** copia parte de um array para outra localização dentro deste mesmo array e o retorna, sem alterar seu tamanho.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code><var>arr</var>.copyWithin(<var>target</var>, <var>start</var>[, <var>end</var> = this.length])</code></pre>
+```
+arr.copyWithin(target, start[, end = this.length])
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>target</code></dt>
- <dd>Posição para a qual os elementos serão copiados. Caso negativo, o <code>target</code> será contado a partir do final.</dd>
- <dt><code>start</code></dt>
- <dd>Índice inicial de onde se copiará os elementos. Caso negativo, o <code>start</code> será contado a partir do final.</dd>
- <dt><code>end </code>{{optional_inline}}</dt>
- <dd>Índice final de onde se copiará os elementos. Caso negativo, o <code>end</code> será contado a partir do final.</dd>
-</dl>
+- `target`
+  - : Posição para a qual os elementos serão copiados. Caso negativo, o `target` será contado a partir do final.
+- `start`
+  - : Índice inicial de onde se copiará os elementos. Caso negativo, o `start` será contado a partir do final.
+- `end `{{optional_inline}}
+  - : Índice final de onde se copiará os elementos. Caso negativo, o `end` será contado a partir do final.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Os argumentos <code>target</code>, <code>start</code> e <code>end</code> são restritos a {{jsxref("Number")}} e truncados para valores inteiros.</p>
+Os argumentos `target`, `start` e `end` são restritos a {{jsxref("Number")}} e truncados para valores inteiros.
 
-<p>Se <code>start</code> for negativo, ele é tratado como <code>length+start</code>, onde <code>length</code> é o comprimento do array. Se <code>end</code> for negativo, ele é tratado como <code>length+end</code>.</p>
+Se `start` for negativo, ele é tratado como `length+start`, onde `length` é o comprimento do array. Se `end` for negativo, ele é tratado como `length+end`.
 
-<p>A função <code>copyWithin</code> é intencionalmente <em>genérica</em>, não requer que seu valor <code>this</code> seja um objeto {{jsxref("Array")}} e, adicionalmente, <code>copyWithin</code> é um <em>método mutável</em>, irá mudar o próprio objeto <code>this</code> e retorná-lo, não apenas retornar uma cópia dele.</p>
+A função `copyWithin` é intencionalmente _genérica_, não requer que seu valor `this` seja um objeto {{jsxref("Array")}} e, adicionalmente, `copyWithin` é um _método mutável_, irá mudar o próprio objeto `this` e retorná-lo, não apenas retornar uma cópia dele.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: js">[1, 2, 3, 4, 5].copyWithin(0, 3);
+```js
+[1, 2, 3, 4, 5].copyWithin(0, 3);
 // [4, 5, 3, 4, 5]
 
 [1, 2, 3, 4, 5].copyWithin(0, 3, 4);
@@ -53,11 +54,12 @@ i32a.copyWithin(0, 2);
 // Em plataformas que ainda não são compatíveis com ES6:
 [].copyWithin.call(new Int32Array([1, 2, 3, 4, 5]), 0, 3, 4);
 // Int32Array [4, 2, 3, 4, 5]
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: js">if (!Array.prototype.copyWithin) {
+```js
+if (!Array.prototype.copyWithin) {
   Array.prototype.copyWithin = function(target, start/*, end*/) {
     // Passos 1-2.
     if (this == null) {
@@ -67,27 +69,27 @@ i32a.copyWithin(0, 2);
     var O = Object(this);
 
     // Passos 3-5.
-    var len = O.length &gt;&gt;&gt; 0;
+    var len = O.length >>> 0;
 
     // Passos 6-8.
-    var relativeTarget = target &gt;&gt; 0;
+    var relativeTarget = target >> 0;
 
-    var to = relativeTarget &lt; 0 ?
+    var to = relativeTarget < 0 ?
       Math.max(len + relativeTarget, 0) :
       Math.min(relativeTarget, len);
 
     // Passos 9-11.
-    var relativeStart = start &gt;&gt; 0;
+    var relativeStart = start >> 0;
 
-    var from = relativeStart &lt; 0 ?
+    var from = relativeStart < 0 ?
       Math.max(len + relativeStart, 0) :
       Math.min(relativeStart, len);
 
     // Passos 12-14.
     var end = arguments[2];
-    var relativeEnd = end === undefined ? len : end &gt;&gt; 0;
+    var relativeEnd = end === undefined ? len : end >> 0;
 
-    var final = relativeEnd &lt; 0 ?
+    var final = relativeEnd < 0 ?
       Math.max(len + relativeEnd, 0) :
       Math.min(relativeEnd, len);
 
@@ -97,14 +99,14 @@ i32a.copyWithin(0, 2);
     // Passos 16-17.
     var direction = 1;
 
-    if (from &lt; to &amp;&amp; to &lt; (from + count)) {
+    if (from < to && to < (from + count)) {
       direction = -1;
       from += count - 1;
       to += count - 1;
     }
 
     // Passo 18.
-    while (count &gt; 0) {
+    while (count > 0) {
       if (from in O) {
         O[to] = O[from];
       } else {
@@ -120,36 +122,19 @@ i32a.copyWithin(0, 2);
     return O;
   };
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.copyWithin', 'Array.prototype.copyWithin')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.copyWithin', 'Array.prototype.copyWithin')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                        | Status                       | Comentário         |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('ES6', '#sec-array.prototype.copyWithin', 'Array.prototype.copyWithin')}}     | {{Spec2('ES6')}}         | Definição inicial. |
+| {{SpecName('ESDraft', '#sec-array.prototype.copyWithin', 'Array.prototype.copyWithin')}} | {{Spec2('ESDraft')}} |                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Array.copyWithin")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Array")}}</li>
-</ul>
+- {{jsxref("Array")}}

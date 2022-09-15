@@ -8,17 +8,18 @@ tags:
   - object.constructor
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/constructor
 ---
-<div>{{JSRef("Global_Objects", "Object")}}</div>
+{{JSRef("Global_Objects", "Object")}}
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+## Sumário
 
-<p>Retorna uma referência para a função {{jsxref("Global_Objects/Object", "Object")}} que cria a instância do protótipo. Note que o valor desse protótipo é uma referência para a própria função, não uma string contendo o nome da função. O valor é apenas <em>read-only</em> para valores primitivos como <code>1</code>, <code>true</code> e <code>"test"</code>.</p>
+Retorna uma referência para a função {{jsxref("Global_Objects/Object", "Object")}} que cria a instância do protótipo. Note que o valor desse protótipo é uma referência para a própria função, não uma string contendo o nome da função. O valor é apenas _read-only_ para valores primitivos como `1`, `true` e `"test"`.
 
-<h2 id="Description" name="Description">Descrição</h2>
+## Descrição
 
-<p>Todos os objetos herdam a propriedade <em>construtor</em> de seu protótipo:</p>
+Todos os objetos herdam a propriedade _construtor_ de seu protótipo:
 
-<pre class="brush: js">var o = {};
+```js
+var o = {};
 o.constructor === Object; // true
 
 var a = [];
@@ -26,34 +27,37 @@ a.constructor === Array; // true
 
 var n = new Number(3);
 n.constructor === Number; // true
-</pre>
+```
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<h3 id="Example:_Displaying_the_constructor_of_an_object" name="Example:_Displaying_the_constructor_of_an_object">Exemplo: Apresentando o construtor de um objeto</h3>
+### Exemplo: Apresentando o construtor de um objeto
 
-<p>O exemplo a seguir cria um protótipo, <code>Tree</code>, e um objeto desse tipo, <code>theTree</code>. O exemplo, então, apresenta a propriedade <em>constructor </em>do objeto <code>theTree</code>.</p>
+O exemplo a seguir cria um protótipo, `Tree`, e um objeto desse tipo, `theTree`. O exemplo, então, apresenta a propriedade _constructor_ do objeto `theTree`.
 
-<pre class="brush: js">function Tree(name) {
+```js
+function Tree(name) {
   this.name = name;
 }
 
 var theTree = new Tree('Redwood');
 console.log('theTree.constructor is ' + theTree.constructor);
-</pre>
+```
 
-<p>Esse exemplo apresenta a seguinte saída:</p>
+Esse exemplo apresenta a seguinte saída:
 
-<pre class="brush: js">theTree.constructor is function Tree(name) {
+```js
+theTree.constructor is function Tree(name) {
   this.name = name;
 }
-</pre>
+```
 
-<h3 id="Example:_Changing_the_constructor_of_an_object" name="Example:_Changing_the_constructor_of_an_object">Exemplo: Mudando o construtor de um objeto</h3>
+### Exemplo: Mudando o construtor de um objeto
 
-<p>O exemplo a seguir apresenta como modificar o valor do construtor de um objeto genérico. Apenas <code>true</code>, <code>1</code> e <code>"test" </code>não serão afetados sendo que eles tem <code>construtores </code><em>read-only</em> nativos. Esse exemplo apresenta que nem sempre é seguro depender da propriedade <code>constructor</code> de um objeto.</p>
+O exemplo a seguir apresenta como modificar o valor do construtor de um objeto genérico. Apenas `true`, `1` e `"test" `não serão afetados sendo que eles tem `construtores `_read-only_ nativos. Esse exemplo apresenta que nem sempre é seguro depender da propriedade `constructor` de um objeto.
 
-<pre class="brush:js">function Type () {}
+```js
+function Type () {}
 
 var types = [
   new Array(),
@@ -75,17 +79,18 @@ var types = [
   'test'            // remains unchanged
 ];
 
-for (var i = 0; i &lt; types.length; i++) {
+for (var i = 0; i < types.length; i++) {
   types[i].constructor = Type;
   types[i] = [types[i].constructor, types[i] instanceof Type, types[i].toString()];
 }
 
 console.log(types.join('\n'));
-</pre>
+```
 
-<p>Esse exemplo apresenta a seguinte saída:</p>
+Esse exemplo apresenta a seguinte saída:
 
-<pre class="brush: js">function Type() {},false,
+```js
+function Type() {},false,
 function Type() {},false,
 function Type() {},false,false
 function Boolean() {
@@ -110,35 +115,16 @@ function Type() {},false,
 function String() {
     [native code]
 },false,test
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1ª Edição.</td>
-   <td>Padrão</td>
-   <td>Definição inicial. Implementado no JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.4.1', 'Object.prototype.constructor')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.prototype.constructor', 'Object.prototype.constructor')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                        | Status                   | Comentário                                         |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
+| ECMAScript 1ª Edição.                                                                                                | Padrão                   | Definição inicial. Implementado no JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.2.4.1', 'Object.prototype.constructor')}}                         | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES6', '#sec-object.prototype.constructor', 'Object.prototype.constructor')}} | {{Spec2('ES6')}}     |                                                    |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade de Browser</h2>
+## Compatibilidade de Browser
 
 {{Compat("javascript.builtins.Object.constructor")}}

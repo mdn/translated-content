@@ -10,70 +10,46 @@ tags:
   - Referencia
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>A propriedade <code>Math.SQRT1_2</code> representa a raiz quadrada de <math><semantics><mfrac><mn>1</mn><mn>2</mn></mfrac><annotation encoding="TeX">\frac{1}{2}</annotation></semantics></math>, que é aproximadamente 0.707:</p>
+A propriedade `Math.SQRT1_2` representa a raiz quadrada de <math><semantics><mfrac><mn>1</mn><mn>2</mn></mfrac><annotation encoding="TeX">\frac{1}{2}</annotation></semantics></math>, que é aproximadamente 0.707:
 
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.SQRT1_2</mi></mstyle><mo>=</mo><msqrt><mfrac><mn>1</mn><mn>2</mn></mfrac></msqrt><mo>=</mo><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mo>≈</mo><mn>0.707</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.SQRT1_2}} = \sqrt{\frac{1}{2}} = \frac{1}{\sqrt{2}} \approx 0.707</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.SQRT1_2</mi></mstyle><mo>=</mo><msqrt><mfrac><mn>1</mn><mn>2</mn></mfrac></msqrt><mo>=</mo><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mo>≈</mo><mn>0.707</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.SQRT1_2}} = \sqrt{\frac{1}{2}} = \frac{1}{\sqrt{2}} \approx 0.707</annotation></semantics></math>
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+{{js_property_attributes(0, 0, 0)}}
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Por <code>SQRT1_2</code> ser um método estático de <code>Math</code>, deve-se sempre usá-lo como <code>Math.SQRT1_2()</code>, e não como um método de um objeto <code>Math</code> que você criou.</p>
+Por `SQRT1_2` ser um método estático de `Math`, deve-se sempre usá-lo como `Math.SQRT1_2()`, e não como um método de um objeto `Math` que você criou.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_Math.SQRT1_2">Usando <code>Math.SQRT1_2</code></h3>
+### Usando `Math.SQRT1_2`
 
-<p>A função a seguir retorna 1 sobre a raiz quadrada de 2:</p>
+A função a seguir retorna 1 sobre a raiz quadrada de 2:
 
-<pre class="brush:js">function getRoot1_2() {
+```js
+function getRoot1_2() {
   return Math.SQRT1_2;
 }
 
 getRoot1_2(); // 0.7071067811865476
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.1.7', 'Math.SQRT1_2')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.sqrt1_2', 'Math.SQRT1_2')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.sqrt1_2', 'Math.SQRT1_2')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                    | Status                       | Comment                                            |
+| -------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                         | {{Spec2('ES1')}}         | Initial definition. Implemented in JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.1.7', 'Math.SQRT1_2')}}         | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES6', '#sec-math.sqrt1_2', 'Math.SQRT1_2')}}     | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-math.sqrt1_2', 'Math.SQRT1_2')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Math.SQRT1_2")}}</p>
+{{Compat("javascript.builtins.Math.SQRT1_2")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Math.pow()")}}</li>
- <li>{{jsxref("Math.sqrt()")}}</li>
-</ul>
+- {{jsxref("Math.pow()")}}
+- {{jsxref("Math.sqrt()")}}

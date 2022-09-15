@@ -11,54 +11,49 @@ tags:
   - substr()
 translation_of: Web/JavaScript/Reference/Global_Objects/String/substr
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code>substr()</code> retorna uma parte da string, começando no índice especificado e estendendo-se por um determinado número de caracteres posteriormente.</p>
+O método `substr()` retorna uma parte da string, começando no índice especificado e estendendo-se por um determinado número de caracteres posteriormente.
 
-<div>{{EmbedInteractiveExample("pages/js/string-substr.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-substr.html")}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><var>str</var>.substr(<var>start</var>[, <var>length</var>])</pre>
+```
+str.substr(start[, length])
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>start</code></dt>
- <dd>Local para começar a extrair os caracteres.</dd>
- <dt><code>length</code></dt>
- <dd>Opcional. O número de caracteres a serem extraídos.</dd>
-</dl>
+- `start`
+  - : Local para começar a extrair os caracteres.
+- `length`
+  - : Opcional. O número de caracteres a serem extraídos.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>Uma nova string contendo a seção extraída da string fornecida.</p>
+Uma nova string contendo a seção extraída da string fornecida.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O <code>substr()</code> extrai caracteres de comprimento de uma <code>str</code>, contando a partir do índice inicial.</p>
+O `substr()` extrai caracteres de comprimento de uma `str`, contando a partir do índice inicial.
 
-<ul>
- <li>Se o <code>start</code> for um número positivo, o índice começa a contar no início da string. Seu valor é limitado ao tamanho da string (<code>str.length</code>).</li>
- <li>Se o <code>start</code> for um número negativo, o índice começa a contar a partir do final da string. Seu valor é limitado ao tamanho da string (<code>-str.length</code>).</li>
-</ul>
+- Se o `start` for um número positivo, o índice começa a contar no início da string. Seu valor é limitado ao tamanho da string (`str.length`).
+- Se o `start` for um número negativo, o índice começa a contar a partir do final da string. Seu valor é limitado ao tamanho da string (`-str.length`).
 
-<div class="blockIndicator note">
-<p><strong>Nota</strong>: No Microsoft JScript, valores negativos no argumento <code>start</code> não são considerados como referência ao final da string.</p>
-</div>
+> **Nota:** No Microsoft JScript, valores negativos no argumento `start` não são considerados como referência ao final da string.
 
-<ul>
- <li>Se <code>length</code> for omitido, <code>substr()</code> extrairá caracteres até o final da string.</li>
- <li>Se <code>length</code> for {{jsxref("undefined")}}, <code>substr()</code> extrai os caracteres até o final da string.</li>
- <li>Se <code>length</code> for um número negativo, ele será tratado como <code>0</code>.</li>
- <li>Para <code>start</code> e <code>length</code>, {{jsxref("NaN")}} é tratado como 0.</li>
-</ul>
+- Se `length` for omitido, `substr()` extrairá caracteres até o final da string.
+- Se `length` for {{jsxref("undefined")}}, `substr()` extrai os caracteres até o final da string.
+- Se `length` for um número negativo, ele será tratado como `0`.
+- Para `start` e `length`, {{jsxref("NaN")}} é tratado como 0.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_substr">Usando <code>substr()</code></h3>
+### Usando `substr()`
 
-<pre class="brush: js notranslate">var aString = 'Mozilla';
+```js
+var aString = 'Mozilla';
 
 console.log(aString.substr(0, 1));   // 'M'
 console.log(aString.substr(1, 0));   // ''
@@ -67,13 +62,15 @@ console.log(aString.substr(1, -1));  // ''
 console.log(aString.substr(-3));     // 'lla'
 console.log(aString.substr(1));      // 'ozilla'
 console.log(aString.substr(-20, 2)); // 'Mo'
-console.log(aString.substr(20, 2));  // ''</pre>
+console.log(aString.substr(20, 2));  // ''
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>JScript da Microsoft não suporta valores negativos para o índice de <code>start</code>. Se você deseja usar esse recurso, você pode usar o seguinte código de compatibilidade para evitar esse erro:</p>
+JScript da Microsoft não suporta valores negativos para o índice de `start`. Se você deseja usar esse recurso, você pode usar o seguinte código de compatibilidade para evitar esse erro:
 
-<pre class="brush: js notranslate">// only run when the substr() function is broken
+```js
+// only run when the substr() function is broken
 if ('ab'.substr(-1) != 'b') {
   /**
    *  Get the substring of a string
@@ -87,52 +84,27 @@ if ('ab'.substr(-1) != 'b') {
       return substr.call(this,
       	// did we get a negative start, calculate how much it is from the beginning of the string
         // adjust the start parameter for negative value
-        start &lt; 0 ? this.length + start : start,
+        start < 0 ? this.length + start : start,
         length)
     }
   }(String.prototype.substr);
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Defined in the (informative) Compatibility Annex B. Implemented in JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-B.2.3', 'String.prototype.substr')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Defined in the (informative) Compatibility Annex B</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.substr', 'String.prototype.substr')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Defined in the (normative) Annex B for Additional ECMAScript Features for Web Browsers</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.substr', 'String.prototype.substr')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Defined in the (normative) Annex B for Additional ECMAScript Features for Web Browsers</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                | Status                       | Comment                                                                                |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------------------------------------------- |
+| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Defined in the (informative) Compatibility Annex B. Implemented in JavaScript 1.0.     |
+| {{SpecName('ES5.1', '#sec-B.2.3', 'String.prototype.substr')}}                         | {{Spec2('ES5.1')}}     | Defined in the (informative) Compatibility Annex B                                     |
+| {{SpecName('ES6', '#sec-string.prototype.substr', 'String.prototype.substr')}}     | {{Spec2('ES6')}}         | Defined in the (normative) Annex B for Additional ECMAScript Features for Web Browsers |
+| {{SpecName('ESDraft', '#sec-string.prototype.substr', 'String.prototype.substr')}} | {{Spec2('ESDraft')}} | Defined in the (normative) Annex B for Additional ECMAScript Features for Web Browsers |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.String.substr")}}</p>
+{{Compat("javascript.builtins.String.substr")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("String.prototype.slice()")}}</li>
- <li>{{jsxref("String.prototype.substring()")}}</li>
-</ul>
+- {{jsxref("String.prototype.slice()")}}
+- {{jsxref("String.prototype.substring()")}}

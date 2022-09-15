@@ -3,51 +3,56 @@ title: Object.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>valueOf()</strong></code> retorna o valor primitivo do objeto especificado.</p>
+O método **`valueOf()`** retorna o valor primitivo do objeto especificado.
 
-<div>{{EmbedInteractiveExample("pages/js/object-prototype-valueof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-prototype-valueof.html")}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code><var>object</var>.valueOf()</code></pre>
+```
+object.valueOf()
+```
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>O valor primitivo do objeto especificado.</p>
+O valor primitivo do objeto especificado.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>JavaScript chama o método <code>valueOf</code> para converter um objeto em um valor primitivo. Você raramente precisará chamar o método <code>valueOf</code> por ele mesmo; O JavaScript chamará ele automaticamente quando encontrar um objeto onde um valor primitivo for esperado.</p>
+JavaScript chama o método `valueOf` para converter um objeto em um valor primitivo. Você raramente precisará chamar o método `valueOf` por ele mesmo; O JavaScript chamará ele automaticamente quando encontrar um objeto onde um valor primitivo for esperado.
 
-<p>Por padrão, o método <code>valueOf</code> é herdado por cada objeto descendente de {{jsxref("Object")}}. Todo núcleo embutido do objeto sobrescreve esse método para retornar um valor apropriado. Se um objeto não tem um valor primitivo, <code>valueOf</code> retorna o próprio objeto.</p>
+Por padrão, o método `valueOf` é herdado por cada objeto descendente de {{jsxref("Object")}}. Todo núcleo embutido do objeto sobrescreve esse método para retornar um valor apropriado. Se um objeto não tem um valor primitivo, `valueOf` retorna o próprio objeto.
 
-<p>Você pode usar <code>valueOf</code> dentro do seu próprio código para converter um objeto embutido, em um valor primitivo. Quando você criar um objeto customizado, você pode sobrescrever <code>Object.prototype.valueOf()</code> para chamar um método customizado ao invés do método padrão  {{jsxref("Object")}}.</p>
+Você pode usar `valueOf` dentro do seu próprio código para converter um objeto embutido, em um valor primitivo. Quando você criar um objeto customizado, você pode sobrescrever `Object.prototype.valueOf()` para chamar um método customizado ao invés do método padrão {{jsxref("Object")}}.
 
-<h3 id="Sobrescrevendo_valueOf_para_objetos_customizados">Sobrescrevendo <code>valueOf</code> para objetos customizados</h3>
+### Sobrescrevendo `valueOf` para objetos customizados
 
-<p>Você pode criar uma função para ser chamada no lougar do método padrão <code>valueOf</code>. Sua função não pode ter nenhum argumento.</p>
+Você pode criar uma função para ser chamada no lougar do método padrão `valueOf`. Sua função não pode ter nenhum argumento.
 
-<p>Suponha que você tem um tipo de objeto <code>MyNumberType</code> e você quer criar um método <code>valueOf</code> para ele. O código a seguir atribui uma função definida por usuário para o método <code>valueOf</code> desse objeto:</p>
+Suponha que você tem um tipo de objeto `MyNumberType` e você quer criar um método `valueOf` para ele. O código a seguir atribui uma função definida por usuário para o método `valueOf` desse objeto:
 
-<pre class="brush: js">MyNumberType.prototype.valueOf = function() { return customPrimitiveValue; };</pre>
+```js
+MyNumberType.prototype.valueOf = function() { return customPrimitiveValue; };
+```
 
-<p>Com o código anterior no lugar, a qualquer hora um objeto do tipo <code>MyNumberType</code> é usado em um contexto onde deve ser representado como um valor primitivo, o JavaScript chama automaticamente a função definida no código anterior.</p>
+Com o código anterior no lugar, a qualquer hora um objeto do tipo `MyNumberType` é usado em um contexto onde deve ser representado como um valor primitivo, o JavaScript chama automaticamente a função definida no código anterior.
 
-<p>Um método <code>valueOf</code> de um objeto é geralmente chamado pelo JavaScript, mas você pode chamá-lo se quiser da seguinte maneira:</p>
+Um método `valueOf` de um objeto é geralmente chamado pelo JavaScript, mas você pode chamá-lo se quiser da seguinte maneira:
 
-<pre class="brush: js">myNumberType.valueOf()</pre>
+```js
+myNumberType.valueOf()
+```
 
-<div class="note">
-<p><strong>Nota:</strong> Objetos em contexto de string convertidos através do método {{jsxref("Object.toString", "toString()")}}, o que é diferente de objetos {{jsxref("String")}} convertendo para string primiriva utlizando <code>valueOf</code>. Todos os objetos têm uma conversão string, somente se "<code>[object <em>type</em>]</code>". Mas muitos objetos não convertem para number, boolean, or function.</p>
-</div>
+> **Nota:** Objetos em contexto de string convertidos através do método {{jsxref("Object.toString", "toString()")}}, o que é diferente de objetos {{jsxref("String")}} convertendo para string primiriva utlizando `valueOf`. Todos os objetos têm uma conversão string, somente se "`[object type]`". Mas muitos objetos não convertem para number, boolean, or function.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_valueOf">Usando <code>valueOf</code></h3>
+### Usando `valueOf`
 
-<pre class="brush: js">function MyNumberType(n) {
+```js
+function MyNumberType(n) {
     this.number = n;
 }
 
@@ -57,50 +62,23 @@ MyNumberType.prototype.valueOf = function() {
 
 var myObj = new MyNumberType(4);
 myObj + 3; // 7
-</pre>
+```
 
-<h2 id="Espeficações">Espeficações</h2>
+## Espeficações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Cometário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.4.4', 'Object.prototype.valueOf')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.prototype.valueof', 'Object.prototype.valueOf')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.prototype.valueof', 'Object.prototype.valueOf')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                    | Status                       | Cometário                                          |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}         | Initial definition. Implemented in JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.2.4.4', 'Object.prototype.valueOf')}}                         | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES6', '#sec-object.prototype.valueof', 'Object.prototype.valueOf')}}     | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-object.prototype.valueof', 'Object.prototype.valueOf')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
-  <p>{{Compat("javascript.builtins.Object.valueOf")}}</p>
-</div>
+{{Compat("javascript.builtins.Object.valueOf")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Object.prototype.toString()")}}</li>
- <li>{{jsxref("parseInt", "parseInt()")}}</li>
- <li>{{jsxref("Symbol.toPrimitive")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toString()")}}
+- {{jsxref("parseInt", "parseInt()")}}
+- {{jsxref("Symbol.toPrimitive")}}

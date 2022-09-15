@@ -4,76 +4,73 @@ slug: Web/JavaScript/Guide/Loops_and_iteration
 translation_of: Web/JavaScript/Guide/Loops_and_iteration
 original_slug: Web/JavaScript/Guide/Lacos_e_iteracoes
 ---
-<div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}</div>
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
 
-<div class="summary">
-<p>Laços oferecem um jeito fácil e rápido de executar uma ação repetidas vezes. Este capítulo do <a href="/en-US/docs/Web/JavaScript/Guide">guia do JavaScript</a> abordará diferentes formas de iterações existentes no JavaScript.</p>
-</div>
+Laços oferecem um jeito fácil e rápido de executar uma ação repetidas vezes. Este capítulo do [guia do JavaScript](/pt-BR/docs/Web/JavaScript/Guide) abordará diferentes formas de iterações existentes no JavaScript.
 
-<p>Você pode pensar em um laço de repetição como um jogo onde você manda o seu personagem andar X passos em uma direção e Y passos em outra; por exemplo, a ideia "vá 5 passos para leste" pode ser expressa em um laço desta forma:</p>
+Você pode pensar em um laço de repetição como um jogo onde você manda o seu personagem andar X passos em uma direção e Y passos em outra; por exemplo, a ideia "vá 5 passos para leste" pode ser expressa em um laço desta forma:
 
-<pre class="brush: js">var passo;
-for (passo = 0; passo &lt; 5; passo++) {
+```js
+var passo;
+for (passo = 0; passo < 5; passo++) {
   // Executa 5 vezes, com os valores de passos de 0 a 4.
   console.log('Ande um passo para o leste');
 }
-</pre>
+```
 
-<p>Existem várias formas diferentes de laços, mas eles essencialmente fazem a mesma coisa: repetir uma ação múltiplas vezes ( inclusive você poderá repetir 0 vezes). Os vários mecanismos diferentes de laços oferecem diferentes formas de determinar quando este irá começar ou terminar. Há várias situações em que é mais fácil resolver um problema utilizando um determinado tipo de laço do que outros.</p>
+Existem várias formas diferentes de laços, mas eles essencialmente fazem a mesma coisa: repetir uma ação múltiplas vezes ( inclusive você poderá repetir 0 vezes). Os vários mecanismos diferentes de laços oferecem diferentes formas de determinar quando este irá começar ou terminar. Há várias situações em que é mais fácil resolver um problema utilizando um determinado tipo de laço do que outros.
 
-<p>Os possíveis laços de repetição em JavaScript:</p>
+Os possíveis laços de repetição em JavaScript:
 
-<ul>
- <li><a href="#for_statement">for_statement</a></li>
- <li><a href="#do...while_statement">do...while_statement</a></li>
- <li><a href="#while_statement">while_statement</a></li>
- <li><a href="#label_statement">label_statement</a></li>
- <li><a href="#break_statement">break_statement</a></li>
- <li><a href="#continue_statement">continue_statement</a></li>
- <li><a href="#for...in_statement">for...in_statement</a></li>
- <li><a href="#for...of_statement">for...of_statement</a></li>
-</ul>
+- [for_statement](#for_statement)
+- [do...while_statement](#do...while_statement)
+- [while_statement](#while_statement)
+- [label_statement](#label_statement)
+- [break_statement](#break_statement)
+- [continue_statement](#continue_statement)
+- [for...in_statement](#for...in_statement)
+- [for...of_statement](#for...of_statement)
 
-<h2 id="for_statement" name="for_statement"><code>Declaração for</code></h2>
+## `Declaração for`
 
-<p>Um laço <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for</a> é repetido até que a condição especificada seja falsa. O laço for no JavaScript é similar ao Java e C. Uma declaração for é feita da seguinte maneira:</p>
+Um laço [for](/pt-BR/docs/Web/JavaScript/Reference/Statements/for) é repetido até que a condição especificada seja falsa. O laço for no JavaScript é similar ao Java e C. Uma declaração for é feita da seguinte maneira:
 
-<pre class="syntaxbox">for ([expressaoInicial]; [condicao]; [incremento])
+```
+for ([expressaoInicial]; [condicao]; [incremento])
   declaracao
-</pre>
+```
 
-<p>Quando um for é executado, ocorre o seguinte:</p>
+Quando um for é executado, ocorre o seguinte:
 
-<ol>
- <li>A expressão <code>expressao Inicial</code> é inicializada e, caso possível, é executada. Normalmente essa expressão inicializa um ou mais contadores, mas a sintaxe permite expressões de qualquer grau de complexidade. Podendo conter também declaração de variáveis.</li>
- <li>A expressão <code>condicao</code> é avaliada. caso o resultado de <code>condicao</code> seja verdadeiro, o laço é executado. Se o valor de <code>condicao</code> é falso, então o laço terminará. Se a expressão <code>condicao</code> é omitida, a <code>condicao</code> é assumida como verdadeira.</li>
- <li> A instrução é executada. Para executar múltiplas declarações, use uma declaração em bloco ({ ... }) para agrupá-las.</li>
- <li>A atualização da expressão <code>incremento</code>, se houver, executa, e retorna o controle para o passo 2.</li>
-</ol>
+1.  A expressão `expressao Inicial` é inicializada e, caso possível, é executada. Normalmente essa expressão inicializa um ou mais contadores, mas a sintaxe permite expressões de qualquer grau de complexidade. Podendo conter também declaração de variáveis.
+2.  A expressão `condicao` é avaliada. caso o resultado de `condicao` seja verdadeiro, o laço é executado. Se o valor de `condicao` é falso, então o laço terminará. Se a expressão `condicao` é omitida, a `condicao` é assumida como verdadeira.
+3.  A instrução é executada. Para executar múltiplas declarações, use uma declaração em bloco ({ ... }) para agrupá-las.
+4.  A atualização da expressão `incremento`, se houver, executa, e retorna o controle para o passo 2.
 
-<h3 id="Exemplo"><strong>Exemplo</strong></h3>
+### Exemplo
 
-<p>A função a seguir contém uma declaração <code>for</code> que contará o número de opções selecionadas em uma lista (um elemento {{HTMLElement("select")}} permite várias seleções). Dentro do <code>for</code> é declarado uma váriavel <code>i</code> inicializada com zero. A declaração <code>for</code> verifica se <code>i</code> é menor que o número de opções no elemento <code>&lt;select&gt;</code>, executa sucessivas declaração  <code>if</code>, e incrementa <code>i</code> de um em um a cada passagem pelo laço.</p>
+A função a seguir contém uma declaração `for` que contará o número de opções selecionadas em uma lista (um elemento {{HTMLElement("select")}} permite várias seleções). Dentro do `for` é declarado uma váriavel `i` inicializada com zero. A declaração `for` verifica se `i` é menor que o número de opções no elemento `<select>`, executa sucessivas declaração `if`, e incrementa `i` de um em um a cada passagem pelo laço.
 
-<pre class="brush: html">&lt;form name="selectForm"&gt;
-  &lt;p&gt;
-    &lt;label for="tipoMusica"&gt;Escolha alguns tipos de música, em seguida, clique no botão abaixo:&lt;/label&gt;
-    &lt;select id="tipoMusica" name="tipoMusica" multiple="multiple"&gt;
-      &lt;option selected="selected"&gt;R&amp;B&lt;/option&gt;
-      &lt;option&gt;Jazz&lt;/option&gt;
-      &lt;option&gt;Blues&lt;/option&gt;
-      &lt;option&gt;New Age&lt;/option&gt;
-      &lt;option&gt;Classico&lt;/option&gt;
-      &lt;option&gt;Ópera&lt;/option&gt;
-    &lt;/select&gt;
-  &lt;/p&gt;
-  &lt;p&gt;&lt;input id="btn" type="button" value="Quantos foram selecionados?" /&gt;&lt;/p&gt;
-&lt;/form&gt;
+```html
+<form name="selectForm">
+  <p>
+    <label for="tipoMusica">Escolha alguns tipos de música, em seguida, clique no botão abaixo:</label>
+    <select id="tipoMusica" name="tipoMusica" multiple="multiple">
+      <option selected="selected">R&B</option>
+      <option>Jazz</option>
+      <option>Blues</option>
+      <option>New Age</option>
+      <option>Classico</option>
+      <option>Ópera</option>
+    </select>
+  </p>
+  <p><input id="btn" type="button" value="Quantos foram selecionados?" /></p>
+</form>
 
-&lt;script&gt;
+<script>
 function howMany(selectObject) {
   var numeroSelecionadas = 0;
-  for (var i = 0; i &lt; selectObject.options.length; i++) {
+  for (var i = 0; i < selectObject.options.length; i++) {
     if (selectObject.options[i].selected) {
       numeroSelecionadas++;
     }
@@ -85,125 +82,131 @@ var btn = document.getElementById("btn");
 btn.addEventListener("click", function(){
   alert('Total de opções selecionadas: ' + howMany(document.selectForm.tipoMusica))
 });
-&lt;/script&gt;
+</script>
+```
 
-</pre>
+## `Declaração do...while`
 
-<h2 id="do...while_statement" name="do...while_statement"><code>Declaração do...while</code></h2>
+A instrução [do...while](/pt-BR/docs/Web/JavaScript/Reference/Statements/do...while) repetirá até que a condição especificada seja falsa.
 
-<p>A instrução <a href="/en-US/docs/Web/JavaScript/Reference/Statements/do...while">do...while</a> repetirá até que a condição especificada seja falsa.</p>
-
-<pre class="syntaxbox">do
+```
+do
   declaracao
 while (condicao);
-</pre>
+```
 
-<p>A instrução será executada uma vez antes da condição ser verificada. Para executar multiplas instruções utilize uma declaração de bloco ({ ... }) para agrupá-las. Caso a <code>condicao</code> seja verdadeira, então o laço será executado novamente. Ao final de cada execução, a <code>condicao</code> é verificada. Quando a condição contida no while for falsa a execução do laço é terminada e o controle é passado para a instrução seguinte a <code>do...while</code>.</p>
+A instrução será executada uma vez antes da condição ser verificada. Para executar multiplas instruções utilize uma declaração de bloco ({ ... }) para agrupá-las. Caso a `condicao` seja verdadeira, então o laço será executado novamente. Ao final de cada execução, a `condicao` é verificada. Quando a condição contida no while for falsa a execução do laço é terminada e o controle é passado para a instrução seguinte a `do...while`.
 
-<h3 id="Exemplo_2"><strong>Exemplo</strong></h3>
+### Exemplo
 
-<p>No exemplo a seguir, o laço é executado pelo menos uma vez e irá executar até que <code>i</code> seja menor que 5.</p>
+No exemplo a seguir, o laço é executado pelo menos uma vez e irá executar até que `i` seja menor que 5.
 
-<pre class="brush: js">do {
+```js
+do {
   i += 1;
   console.log(i);
-} while (i &lt; 5);</pre>
+} while (i < 5);
+```
 
-<h2 id="while_statement" name="while_statement"><code>Declaração while</code></h2>
+## `Declaração while`
 
-<p>Uma declaração <a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/while">while</a> executa suas instruções, desde que uma condição especificada seja avaliada como verdadeira. Segue uma declaração <code>while</code>: </p>
+Uma declaração [while](/pt-BR/docs/Web/JavaScript/Reference/Statements/while) executa suas instruções, desde que uma condição especificada seja avaliada como verdadeira. Segue uma declaração `while`:
 
-<pre class="syntaxbox">while (condicao)
+```
+while (condicao)
   declaracao
-</pre>
+```
 
-<p>Se a condição se tornar falsa,  a declaração dentro do laço para a execução e o controle é passado para a instrução após o laço.</p>
+Se a condição se tornar falsa, a declaração dentro do laço para a execução e o controle é passado para a instrução após o laço.
 
-<p>O teste da condição ocorre antes que o laço seja executado. Desta forma se a condição for verdadeira o laço executará e testará a condição novamente. Se a condição for falsa o laço termina e passa o controle para as instruções após o laço.</p>
+O teste da condição ocorre antes que o laço seja executado. Desta forma se a condição for verdadeira o laço executará e testará a condição novamente. Se a condição for falsa o laço termina e passa o controle para as instruções após o laço.
 
-<p>Para executar múltiplas declarações, use uma declaração em bloco ({ ... }) para agrupar essas declarações.</p>
+Para executar múltiplas declarações, use uma declaração em bloco ({ ... }) para agrupar essas declarações.
 
-<h3 id="Exemplo_1"><strong>Exemplo 1</strong></h3>
+### Exemplo 1
 
-<p>O <code>while</code> a seguir executará enquanto <code>n</code> for menor que três:</p>
+O `while` a seguir executará enquanto `n` for menor que três:
 
-<pre class="brush: js">n = 0;
+```js
+n = 0;
 x = 0;
-while (n &lt; 3) {
+while (n < 3) {
   n++;
   x += n;
 }
-</pre>
+```
 
-<p>A cada iteração, o laço incrementa <code>n</code> e adiciona este valor para <code>x</code>. Portanto, <code>x</code> e <code>n</code> recebem os seguintes valores:</p>
+A cada iteração, o laço incrementa `n` e adiciona este valor para `x`. Portanto, `x` e `n` recebem os seguintes valores:
 
-<ul>
- <li>Depois de executar pela primeira vez: <code>n</code> = 1 e <code>x</code> = 1</li>
- <li>Depois da segunda vez: <code>n</code> = 2 e <code>x</code> = 3</li>
- <li>Depois da terceira vez: <code>n</code> = 3 e <code>x</code> = 6</li>
-</ul>
+- Depois de executar pela primeira vez: `n` = 1 e `x` = 1
+- Depois da segunda vez: `n` = 2 e `x` = 3
+- Depois da terceira vez: `n` = 3 e `x` = 6
 
-<p>Depois de executar pela terceira vez, a condição <code>n &lt; 3</code> não será mais verdadeira, então o laço encerrará.</p>
+Depois de executar pela terceira vez, a condição `n < 3` não será mais verdadeira, então o laço encerrará.
 
-<h3 id="Exemplo_2_2"><strong>Exemplo 2</strong></h3>
+### Exemplo 2
 
-<p>Evite laços infinitos. Tenha certeza que a condição do laço eventualmente será falsa; caso contrário, o laço nunca terminará. O while a seguir executará para sempre pois sua condição nunca será falsa:</p>
+Evite laços infinitos. Tenha certeza que a condição do laço eventualmente será falsa; caso contrário, o laço nunca terminará. O while a seguir executará para sempre pois sua condição nunca será falsa:
 
-<pre class="brush: js">while (true) {
+```js
+while (true) {
   console.log("Olá, mundo");
-}</pre>
+}
+```
 
-<h2 id="Declaração_label"><code>Declaração label</code></h2>
+## `Declaração label`
 
-<p>Um <a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/label">label</a> provê um identificador que permite que este seja referenciado em outro lugar no seu programa. Por exemplo, você pode usar uma label para identificar um laço, e então usar <code>break</code> ou <code>continue</code> para indicar quando o programa deverá interromper o laço ou continuar sua execução.</p>
+Um [label](/pt-BR/docs/Web/JavaScript/Reference/Statements/label) provê um identificador que permite que este seja referenciado em outro lugar no seu programa. Por exemplo, você pode usar uma label para identificar um laço, e então usar `break` ou `continue` para indicar quando o programa deverá interromper o laço ou continuar sua execução.
 
-<p>Segue a sintaxe da instrução label:</p>
+Segue a sintaxe da instrução label:
 
-<pre class="syntaxbox">label : declaracao
-</pre>
+```
+label : declaracao
+```
 
-<p>Um label pode usar qualquer idenficador que não seja uma palavra reservada do JavaScript. Você pode identificar qualquer instrução com um label.</p>
+Um label pode usar qualquer idenficador que não seja uma palavra reservada do JavaScript. Você pode identificar qualquer instrução com um label.
 
-<h3 id="Exemplo_3"><strong>Exemplo</strong></h3>
+### Exemplo
 
-<p>Neste exemplo, o label <code>markLoop</code> idenfica um laço <code>while</code>.</p>
+Neste exemplo, o label `markLoop` idenfica um laço `while`.
 
-<pre class="brush: js">markLoop:
+```js
+markLoop:
 while (theMark == true) {
    facaAlgo();
-}</pre>
+}
+```
 
-<h2 id="break_statement" name="break_statement"><code>Declaração break</code></h2>
+## `Declaração break`
 
-<p>Use <a href="/en-US/docs/Web/JavaScript/Reference/Statements/break">break</a> para terminar laços, <code>switch</code>, ou um conjunto que utiliza label.</p>
+Use [break](/pt-BR/docs/Web/JavaScript/Reference/Statements/break) para terminar laços, `switch`, ou um conjunto que utiliza label.
 
-<ul>
- <li>Quando você utiliza <code>break</code> sem um label, ele encerrará imediatamente o laço mais interno <code>while</code>, <code>do-while</code>, <code>for</code>, ou <code>switch</code> e transferirá o controle para a próxima instrução.</li>
- <li>Quando você utiliza <code>break</code> com um label, ele encerrará o label específico.</li>
-</ul>
+- Quando você utiliza `break` sem um label, ele encerrará imediatamente o laço mais interno `while`, `do-while`, `for`, ou `switch` e transferirá o controle para a próxima instrução.
+- Quando você utiliza `break` com um label, ele encerrará o label específico.
 
-<p>Segue a sintaxe do break:</p>
+Segue a sintaxe do break:
 
-<ol>
- <li><code>break;</code></li>
- <li><code>break <em>label</em>;</code></li>
-</ol>
+1.  `break;`
+2.  `break label;`
 
-<p>Na primeira opção será encerrado o laço de repetição mais interno ou <code>switch</code>. Já na segunda opção será encerrada o bloco de código referente a label.</p>
+Na primeira opção será encerrado o laço de repetição mais interno ou `switch`. Já na segunda opção será encerrada o bloco de código referente a label.
 
-<h3 id="Exemplo_1_2"><strong>Exemplo</strong> <strong>1</strong></h3>
+### **Exemplo** **1**
 
-<p>O exemplo a seguir percorre os elementos de um array até que ele encontre o índice do elemento que possui o valor contido em <code>theValue</code>:</p>
+O exemplo a seguir percorre os elementos de um array até que ele encontre o índice do elemento que possui o valor contido em `theValue`:
 
-<pre class="brush: js">for (i = 0; i &lt; a.length; i++) {
+```js
+for (i = 0; i < a.length; i++) {
   if (a[i] == theValue) {
     break;
   }
-}</pre>
+}
+```
 
-<h3 id="Exemplo_2_Utilizando_break_em_label"><strong>Exemplo 2: </strong>Utilizando break em label</h3>
+### **Exemplo 2:** Utilizando break em label
 
-<pre class="brush: js">var x = 0;
+```js
+var x = 0;
 var z = 0
 labelCancelaLaco: while (true) {
   console.log("Laço exterior: " + x);
@@ -212,58 +215,56 @@ labelCancelaLaco: while (true) {
   while (true) {
     console.log("Laço interior: " + z);
     z += 1;
-    if (z === 10 &amp;&amp; x === 10) {
+    if (z === 10 && x === 10) {
       break labelCancelaLaco;
     } else if (z === 10) {
       break;
     }
   }
 }
-</pre>
+```
 
-<h2 id="continue_statement" name="continue_statement"><code>Declaração continue</code></h2>
+## `Declaração continue`
 
-<p>A declaração <a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/continue">continue</a> pode ser usada para reiniciar uma instrução <code>while</code>, <code>do-while</code>, <code>for</code>, ou <code>label</code>.</p>
+A declaração [continue](/pt-BR/docs/Web/JavaScript/Reference/Statements/continue) pode ser usada para reiniciar uma instrução `while`, `do-while`, `for`, ou `label`.
 
-<ul>
- <li>Quando você utiliza <code>continue</code> sem uma label, ele encerrará a iteração atual mais interna de uma instrução <code>while</code>, <code>do-while</code>, ou <code>for</code> e continuará a execução do laço a partir da próxima iteração. Ao contrário da instrução <code>break</code>, <code>continue</code> não encerra a execução completa do laço. Em um laço <code>while</code>, ele voltará para a condição. Em um laço <code>for</code>, ele pulará para a expressão de incrementação.</li>
- <li>Quando você utiliza <code>continue</code> com uma label, o <code>continue</code> será aplicado ao laço identificado por esta label. </li>
-</ul>
+- Quando você utiliza `continue` sem uma label, ele encerrará a iteração atual mais interna de uma instrução `while`, `do-while`, ou `for` e continuará a execução do laço a partir da próxima iteração. Ao contrário da instrução `break`, `continue` não encerra a execução completa do laço. Em um laço `while`, ele voltará para a condição. Em um laço `for`, ele pulará para a expressão de incrementação.
+- Quando você utiliza `continue` com uma label, o `continue` será aplicado ao laço identificado por esta label.
 
-<p>Segue a sintaxe do <code>continue</code>:</p>
+Segue a sintaxe do `continue`:
 
-<ol>
- <li><code>continue;</code></li>
- <li><code>continue </code><em><code>label;</code></em></li>
-</ol>
+1.  `continue;`
+2.  `continue `_`label;`_
 
-<h3 id="Exemplo_1_3"><strong>Exemplo 1</strong></h3>
+### Exemplo 1
 
-<p>O exemplo a seguir mostra um laço <code>while</code> utlizando <code>continue</code> que executará quando o valor de <code>i</code> for igual a 3. Desta forma, <code>n</code> recebe os valores um, três, sete, e doze.</p>
+O exemplo a seguir mostra um laço `while` utlizando `continue` que executará quando o valor de `i` for igual a 3. Desta forma, `n` recebe os valores um, três, sete, e doze.
 
-<pre class="brush: js">i = 0;
+```js
+i = 0;
 n = 0;
-while (i &lt; 5) {
+while (i < 5) {
   i++;
   if (i == 3) {
     continue;
   }
   n += i;
 }
-</pre>
+```
 
-<h3 id="Exemplo_2_3"><strong>Exemplo 2</strong></h3>
+### Exemplo 2
 
-<p>Uma instrução label <code>checkiandj</code> contém uma instrução label c<code>heckj</code>. Se o <code>continue</code> for executado, o programa terminará a iteração atual de <code>checkj</code> e começará a próxima iteração. Toda vez que o <code>continue</code> for executado, <code>checkj</code> recomeçará até que a condição do <code>while</code> for falsa. Quando isto ocorrer <code>checkiandj</code> executará até que sua condição seja falsa.</p>
+Uma instrução label `checkiandj` contém uma instrução label c`heckj`. Se o `continue` for executado, o programa terminará a iteração atual de `checkj` e começará a próxima iteração. Toda vez que o `continue` for executado, `checkj` recomeçará até que a condição do `while` for falsa. Quando isto ocorrer `checkiandj` executará até que sua condição seja falsa.
 
-<p>Se o <code>continue</code> estivesse referenciando <code>checkiandj</code>, o programa deveria continuar do topo de <code>checkiandj</code>.</p>
+Se o `continue` estivesse referenciando `checkiandj`, o programa deveria continuar do topo de `checkiandj`.
 
-<pre class="brush: js">checkiandj:
-  while (i &lt; 4) {
+```js
+checkiandj:
+  while (i < 4) {
     console.log(i);
     i += 1;
     checkj:
-      while (j &gt; 4) {
+      while (j > 4) {
         console.log(j);
         j -= 1;
         if ((j % 2) == 0) {
@@ -273,53 +274,60 @@ while (i &lt; 5) {
       }
       console.log("i = " + i);
       console.log("j = " + j);
-  }</pre>
+  }
+```
 
-<h2 id="for...in_statement" name="for...in_statement"><code>Declaração for...in</code></h2>
+## `Declaração for...in`
 
-<p>A declaração <a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a> executa iterações a partir de uma variável específica, percorrendo todas as propriedades de um objeto.<br>
- Para cada propriedade distinta, o JavaScript executará uma iteração. Segue a sintaxe:</p>
+A declaração [for...in](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in) executa iterações a partir de uma variável específica, percorrendo todas as propriedades de um objeto.
+Para cada propriedade distinta, o JavaScript executará uma iteração. Segue a sintaxe:
 
-<pre class="syntaxbox">for (variavel in objeto) {
+```
+for (variavel in objeto) {
   declaracoes
 }
-</pre>
+```
 
-<h3 id="Exemplo_4"><strong>Exemplo</strong></h3>
+### Exemplo
 
-<p>A função a seguir recebe em seu argumento um objeto e o nome deste objeto. Então executará uma iteração para cada elemento e retornará uma lista de string, que irá conter o nome da propriedade e seu valor.</p>
+A função a seguir recebe em seu argumento um objeto e o nome deste objeto. Então executará uma iteração para cada elemento e retornará uma lista de string, que irá conter o nome da propriedade e seu valor.
 
-<pre class="brush: js">function dump_props(obj, obj_name) {
+```js
+function dump_props(obj, obj_name) {
   var result = "";
   for (var i in obj) {
-    result += obj_name + "." + i + " = " + obj[i] + "&lt;br&gt;";
+    result += obj_name + "." + i + " = " + obj[i] + "<br>";
   }
-  result += "&lt;hr&gt;";
+  result += "<hr>";
   return result;
 }
-</pre>
+```
 
-<p>Para um objeto chamado <code>car</code> com propriedades <code>make</code> e <code>model</code>, o resultado será:</p>
+Para um objeto chamado `car` com propriedades `make` e `model`, o resultado será:
 
-<pre class="brush: js">car.make = Ford
+```js
+car.make = Ford
 car.model = Mustang
-</pre>
+```
 
-<h3 id="Arrays"><strong>Arrays</strong></h3>
+### Arrays
 
-<p>Embora seja tentador usar esta forma para interagir com os elementos de um Array, a declaração <strong>for...in</strong> irá retornar o nome pré-definido da propriedade ao invés do seu index numérico. Assim é melhor usar o tradicional <a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/for">for</a> com index numérico quando interagir com arrays, pois o <strong>for...in</strong> interage com as propriedades definidas pelo programador ao invés dos elementos do array.</p>
+Embora seja tentador usar esta forma para interagir com os elementos de um Array, a declaração **for...in** irá retornar o nome pré-definido da propriedade ao invés do seu index numérico. Assim é melhor usar o tradicional [for](/pt-BR/docs/Web/JavaScript/Reference/Statements/for) com index numérico quando interagir com arrays, pois o **for...in** interage com as propriedades definidas pelo programador ao invés dos elementos do array.
 
-<h2 id="for...of_statement" name="for...of_statement">Declaração <code>for...of</code></h2>
+## Declaração `for...of`
 
-<p> A declaração for...of cria uma laço com objetos interativos ((incluindo, {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, assim por conseguinte ), executando uma iteração para o valor de cada propriedade distinta.</p>
+A declaração for...of cria uma laço com objetos interativos ((incluindo, {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, assim por conseguinte ), executando uma iteração para o valor de cada propriedade distinta.
 
-<pre class="syntaxbox">for (<em>variavel</em> of <em>objeto</em>) {
-  <em>declaracoes
-</em>}</pre>
+```
+for (variavel of objeto) {
+  declaracoes
+}
+```
 
-<p>O exemplo a seguir mostra a diferença entre o <code>for...of</code> e o <code><a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code>. Enquanto o <code>for...in</code> interage com o nome das propriedades, o <code>for...of</code> interage com o valor das propriedades.</p>
+O exemplo a seguir mostra a diferença entre o `for...of` e o [`for...in`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in). Enquanto o `for...in` interage com o nome das propriedades, o `for...of` interage com o valor das propriedades.
 
-<pre class="brush:js">let arr = [3, 5, 7];
+```js
+let arr = [3, 5, 7];
 arr.foo = "hello";
 
 for (let i in arr) {
@@ -329,6 +337,6 @@ for (let i in arr) {
 for (let i of arr) {
    console.log(i); // logs "3", "5", "7"
 }
-</pre>
+```
 
-<p>{{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}</p>
+{{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}

@@ -3,66 +3,69 @@ title: Array.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>lastIndexOf()</strong></code> retorna o ultimo índice que um certo elemento pode ser encontrado no array, ou -1 se o elemento não estiver presente. O array é pesquisado de trás para frente, começando pelo <code>fromIndex</code>.</p>
+O método **`lastIndexOf()`** retorna o ultimo índice que um certo elemento pode ser encontrado no array, ou -1 se o elemento não estiver presente. O array é pesquisado de trás para frente, começando pelo `fromIndex`.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code><var>arr</var>.lastIndexOf(<var>searchElement</var>[, <var>fromIndex</var> = arr.length - 1])</code></pre>
+```
+arr.lastIndexOf(searchElement[, fromIndex = arr.length - 1])
+```
 
-<h2 id="Parâmetros">Parâmetros</h2>
+## Parâmetros
 
-<dl>
- <dt><code>searchElement</code></dt>
- <dd>Elemento para ser localizado no array.</dd>
- <dt><code>fromIndex</code></dt>
- <dd>Opcional. O índice ao qual a busca será iniciada de traz para frente. O valor padrão é o tamanho total do array menos um (array.length -1), ou seja, todo o array será pesquisado. Se o índice for maior ou igual ao tamanho do array, o array inteiro será pesquisado. Se for negativo, ele é tomado como deslocamento no final do array. Note que mesmo se o índice for negativo, o array ainda será pesquisado de traz para frente. Se o índice calculado for menor que 0, -1 será retornado, ou seja, o array não será pesquisado.</dd>
-</dl>
+- `searchElement`
+  - : Elemento para ser localizado no array.
+- `fromIndex`
+  - : Opcional. O índice ao qual a busca será iniciada de traz para frente. O valor padrão é o tamanho total do array menos um (array.length -1), ou seja, todo o array será pesquisado. Se o índice for maior ou igual ao tamanho do array, o array inteiro será pesquisado. Se for negativo, ele é tomado como deslocamento no final do array. Note que mesmo se o índice for negativo, o array ainda será pesquisado de traz para frente. Se o índice calculado for menor que 0, -1 será retornado, ou seja, o array não será pesquisado.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p><code>lastIndexOf</code> compara <code>searchElement</code> a elementos do Array usando <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators">igualdade rigorosa</a> (o mesmo método usado pelo operador ===, ou "igual triplo").</p>
+`lastIndexOf` compara `searchElement` a elementos do Array usando [igualdade rigorosa](/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators) (o mesmo método usado pelo operador ===, ou "igual triplo").
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Exemplo_Usando_lastIndexOf">Exemplo: Usando <code>lastIndexOf</code></h3>
+### Exemplo: Usando `lastIndexOf`
 
-<p>O seguinte exemplo utiliza <code>lastIndexOf</code> para localizar elementos em um array.</p>
+O seguinte exemplo utiliza `lastIndexOf` para localizar elementos em um array.
 
-<pre class="brush: js">var array = [2, 5, 9, 2];
+```js
+var array = [2, 5, 9, 2];
 array.lastIndexOf(2);     // 3
 array.lastIndexOf(7);     // -1
 array.lastIndexOf(2, 3);  // 3
 array.lastIndexOf(2, 2);  // 0
 array.lastIndexOf(2, -2); // 0
 array.lastIndexOf(2, -1); // 3
-</pre>
+```
 
-<h3 id="Exemplo_Encontrando_todas_as_ocorrências_de_um_elemento">Exemplo: Encontrando todas as ocorrências de um elemento</h3>
+### Exemplo: Encontrando todas as ocorrências de um elemento
 
-<p>O seguinte exemplo utiliza <code>lastIndexOf</code> para encontrar todos os índices de um elemento em um dado array, utilizando {{jsxref("Array.prototype.push", "push")}} para adicioná-los em outro array quando são encontrados.</p>
+O seguinte exemplo utiliza `lastIndexOf` para encontrar todos os índices de um elemento em um dado array, utilizando {{jsxref("Array.prototype.push", "push")}} para adicioná-los em outro array quando são encontrados.
 
-<pre class="brush: js">var indices = [];
+```js
+var indices = [];
 var array = ['a', 'b', 'a', 'c', 'a', 'd'];
 var element = 'a';
 var idx = array.lastIndexOf(element);
 while (idx != -1) {
   indices.push(idx);
-  idx = (idx &gt; 0 ? array.lastIndexOf(element, idx - 1) : -1);
+  idx = (idx > 0 ? array.lastIndexOf(element, idx - 1) : -1);
 }
 
 console.log(indices);
 // [4, 2, 0]
-</pre>
+```
 
-<p>Note que devemos tratar o caso <code>idx == 0</code> separadamente aqui pois o elemento será sempre encontrado independente do parâmetro <code>fromIndex</code> se ele for o primeiro elemento do array. Isso é diferente do método {{jsxref("Array.prototype.indexOf", "indexOf")}}.</p>
+Note que devemos tratar o caso `idx == 0` separadamente aqui pois o elemento será sempre encontrado independente do parâmetro `fromIndex` se ele for o primeiro elemento do array. Isso é diferente do método {{jsxref("Array.prototype.indexOf", "indexOf")}}.
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p><code>lastIndexOf</code> foi adicionado ao padrão ECMA-262 na 5ª edição; devido a isso, não deve estar presente em outras implementações do padrão. Você pode contornar isso inserindo o seguinte código no início dos seus scripts, permitindo o uso de <code>lastIndexOf</code> em implementações que não o suportam nativamente. Esse algorítimo é exatamente o mesmo especificado no padrão ECMA-262, 5ª edição, assumindo que {{jsxref("Global_Objects/Object", "Object")}}, {{jsxref("Global_Objects/TypeError", "TypeError")}}, {{jsxref("Global_Objects/Number", "Number")}}, {{jsxref("Math.floor")}}, {{jsxref("Math.abs")}}, e {{jsxref("Math.min")}} possuem seus valores originais.</p>
+`lastIndexOf` foi adicionado ao padrão ECMA-262 na 5ª edição; devido a isso, não deve estar presente em outras implementações do padrão. Você pode contornar isso inserindo o seguinte código no início dos seus scripts, permitindo o uso de `lastIndexOf` em implementações que não o suportam nativamente. Esse algorítimo é exatamente o mesmo especificado no padrão ECMA-262, 5ª edição, assumindo que {{jsxref("Global_Objects/Object", "Object")}}, {{jsxref("Global_Objects/TypeError", "TypeError")}}, {{jsxref("Global_Objects/Number", "Number")}}, {{jsxref("Math.floor")}}, {{jsxref("Math.abs")}}, e {{jsxref("Math.min")}} possuem seus valores originais.
 
-<pre class="brush: js">// Production steps of ECMA-262, Edition 5, 15.4.4.15
+```js
+// Production steps of ECMA-262, Edition 5, 15.4.4.15
 // Reference: http://es5.github.io/#x15.4.4.15
 if (!Array.prototype.lastIndexOf) {
   Array.prototype.lastIndexOf = function(searchElement /*, fromIndex*/) {
@@ -74,63 +77,46 @@ if (!Array.prototype.lastIndexOf) {
 
     var n, k,
       t = Object(this),
-      len = t.length &gt;&gt;&gt; 0;
+      len = t.length >>> 0;
     if (len === 0) {
       return -1;
     }
 
     n = len - 1;
-    if (arguments.length &gt; 1) {
+    if (arguments.length > 1) {
       n = Number(arguments[1]);
       if (n != n) {
         n = 0;
       }
-      else if (n != 0 &amp;&amp; n != (1 / 0) &amp;&amp; n != -(1 / 0)) {
-        n = (n &gt; 0 || -1) * Math.floor(Math.abs(n));
+      else if (n != 0 && n != (1 / 0) && n != -(1 / 0)) {
+        n = (n > 0 || -1) * Math.floor(Math.abs(n));
       }
     }
 
-    for (k = n &gt;= 0 ? Math.min(n, len - 1) : len - Math.abs(n); k &gt;= 0; k--) {
-      if (k in t &amp;&amp; t[k] === searchElement) {
+    for (k = n >= 0 ? Math.min(n, len - 1) : len - Math.abs(n); k >= 0; k--) {
+      if (k in t && t[k] === searchElement) {
         return k;
       }
     }
     return -1;
   };
 }
-</pre>
+```
 
-<p>Novamente, perceba que essa implementação foca na absoluta compatibilidade com <code>lastIndexOf</code> no Firefox e no motor JavaScript SpiderMonkey, incluíndo vários casos que são, indiscutivelmente, extremos. Se você pretende usar isso em aplicações reais, é possível calcular <code>from</code> com um código menos complicado se você ignorar esses casos.</p>
+Novamente, perceba que essa implementação foca na absoluta compatibilidade com `lastIndexOf` no Firefox e no motor JavaScript SpiderMonkey, incluíndo vários casos que são, indiscutivelmente, extremos. Se você pretende usar isso em aplicações reais, é possível calcular `from` com um código menos complicado se você ignorar esses casos.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.15', 'Array.prototype.lastIndexOf')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Definição inicial. Implementado no JavaScript 1.6.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.lastindexof', 'Array.prototype.lastIndexOf')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                        | Status                   | Comentário                                         |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.4.4.15', 'Array.prototype.lastIndexOf')}}                         | {{Spec2('ES5.1')}} | Definição inicial. Implementado no JavaScript 1.6. |
+| {{SpecName('ES6', '#sec-array.prototype.lastindexof', 'Array.prototype.lastIndexOf')}} | {{Spec2('ES6')}}     |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Array.lastIndexOf")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Array.prototype.indexOf()")}}</li>
- <li>{{jsxref("TypedArray.prototype.lastIndexOf()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.indexOf()")}}
+- {{jsxref("TypedArray.prototype.lastIndexOf()")}}

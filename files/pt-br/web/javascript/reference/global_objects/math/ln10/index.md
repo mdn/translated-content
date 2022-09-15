@@ -3,71 +3,47 @@ title: Math.LN10
 slug: Web/JavaScript/Reference/Global_Objects/Math/LN10
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/LN10
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>A propriedade <strong><code>Math.LN10</code></strong> representa o logaritmo natural de 10, aproximadamente 2.302:</p>
+A propriedade **`Math.LN10`** representa o logaritmo natural de 10, aproximadamente 2.302:
 
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LN10</mi></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>10</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>2.302</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LN10}} = \ln(10) \approx 2.302</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LN10</mi></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>10</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>2.302</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LN10}} = \ln(10) \approx 2.302</annotation></semantics></math>
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+{{js_property_attributes(0, 0, 0)}}
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Como <code>LN10</code> é uma propriedade estática de <code>Math</code>,  você sempre deve usa-lo como <code>Math.LN10</code>, ao invés de uma propriedade do objeto <code>Math</code> que você tenha criado (<code>Math</code> não é um construtor).</p>
+Como `LN10` é uma propriedade estática de `Math`, você sempre deve usa-lo como `Math.LN10`, ao invés de uma propriedade do objeto `Math` que você tenha criado (`Math` não é um construtor).
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_Math.LN10">Usando <code>Math.LN10</code></h3>
+### Usando `Math.LN10`
 
-<p>A seguinte função retorna o log natural de 10:</p>
+A seguinte função retorna o log natural de 10:
 
-<pre class="brush:js">function getNatLog10() {
+```js
+function getNatLog10() {
   return Math.LN10;
 }
 
 getNatLog10(); // 2.302585092994046
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição inicial. Implementado em JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.1.2', 'Math.LN10')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.ln10', 'Math.LN10')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.ln10', 'Math.LN10')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                            | Status                       | Comentário                                         |
+| ------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Definição inicial. Implementado em JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.1.2', 'Math.LN10')}}     | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES6', '#sec-math.ln10', 'Math.LN10')}}     | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-math.ln10', 'Math.LN10')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Math.LN10")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Math.exp()")}}</li>
- <li>{{jsxref("Math.log()")}}</li>
- <li>{{jsxref("Math.log10()")}}</li>
-</ul>
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.log10()")}}

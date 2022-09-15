@@ -3,147 +3,158 @@ title: Function.name
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/name
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>A propriedade somente-leitura <code><strong>name</strong></code> de um objeto {{jsxref("Function")}} indica o nome da função como especificado quando esta foi criada, ou <code>"anonymous"</code> para funções criadas anonimamente.</p>
+A propriedade somente-leitura **`name`** de um objeto {{jsxref("Function")}} indica o nome da função como especificado quando esta foi criada, ou `"anonymous"` para funções criadas anonimamente.
 
-<div>{{EmbedInteractiveExample("pages/js/function-name.html")}}</div>
+{{EmbedInteractiveExample("pages/js/function-name.html")}}{{js_property_attributes(0,0,1)}}
 
-<div>{{js_property_attributes(0,0,1)}}</div>
+> **Nota:** Note que em implementações não-standard anteriores à ES2015 o atributo `configurable` tinha também o valor `false`.
 
-<div class="note">
-<p>Note que em implementações não-standard anteriores à ES2015 o atributo <code>configurable</code> tinha também o valor <code>false</code>.</p>
-</div>
+## Exemplos
 
-<h2 id="Exemplos">Exemplos</h2>
+### Nome de declaração da função
 
-<h3 id="Nome_de_declaração_da_função">Nome de declaração da função</h3>
+A propriedade `name` retorna o nome de uma declaração de função.
 
-<p>A propriedade <code>name</code> retorna o nome de uma declaração de função.</p>
-
-<pre class="brush: js">function doSomething() {}
+```js
+function doSomething() {}
 doSomething.name; // "doSomething"
-</pre>
+```
 
-<h3 id="Nome_do_construtor_da_função">Nome do construtor da função</h3>
+### Nome do construtor da função
 
-<p>Funções criadas com a sintaxe <code>new Function(...)</code> ou somente <code>Function(...)</code> criam objetos {{jsxref("Function")}} com o nome "anonymous".</p>
+Funções criadas com a sintaxe `new Function(...)` ou somente `Function(...)` criam objetos {{jsxref("Function")}} com o nome "anonymous".
 
-<pre>(new Function).name; // "anonymous"</pre>
+```
+(new Function).name; // "anonymous"
+```
 
-<h3 id="Nomes_de_função_inferidos">Nomes de função inferidos</h3>
+### Nomes de função inferidos
 
-<p>Variáveis e métodos podem inferir o nome de uma função anônima a partir de sua posição sintática (novo na ECMAScript 2015).</p>
+Variáveis e métodos podem inferir o nome de uma função anônima a partir de sua posição sintática (novo na ECMAScript 2015).
 
-<pre class="brush: js">var f = function() {};
+```js
+var f = function() {};
 var object = {
   someMethod: function() {}
 };
 
 console.log(f.name); // "f"
 console.log(object.someMethod.name); // "someMethod"
-</pre>
+```
 
-<p>Você pode definir uma função com um nome numa {{jsxref("Operators/Function", "expressão de função", "", 1)}}:</p>
+Você pode definir uma função com um nome numa {{jsxref("Operators/Function", "expressão de função", "", 1)}}:
 
-<pre class="brush: js">var object = {
+```js
+var object = {
   someMethod: function object_someMethod() {}
 };
 console.log(object.someMethod.name); // grava o log "object_someMethod"
 
 try { object_someMethod } catch(e) { console.log(e); }
 // ReferenceError: object_someMethod is not defined
-</pre>
+```
 
-<p>Você não pode mudar o nome de uma função, pois a propriedade é somente-leitura:</p>
+Você não pode mudar o nome de uma função, pois a propriedade é somente-leitura:
 
-<pre class="brush: js">var object = {
+```js
+var object = {
   // anonymous
   someMethod: function() {}
 };
 
 object.someMethod.name = 'otherMethod';
 console.log(object.someMethod.name); // someMethod
-</pre>
+```
 
-<p>Para mudá-lo, você poderia no entanto usar {{jsxref("Object.defineProperty()")}}.</p>
+Para mudá-lo, você poderia no entanto usar {{jsxref("Object.defineProperty()")}}.
 
-<h3 id="Nomes_curtos_de_métodos">Nomes curtos de métodos</h3>
+### Nomes curtos de métodos
 
-<pre class="brush: js">var o = {
+```js
+var o = {
   foo(){}
 };
-o.foo.name; // "foo";</pre>
+o.foo.name; // "foo";
+```
 
-<h3 id="Nomes_de_funções_vinculadas">Nomes de funções vinculadas</h3>
+### Nomes de funções vinculadas
 
-<p>{{jsxref("Function.bind()")}} produz uma função cujo nome é "bound " seguido do nome da função.</p>
+{{jsxref("Function.bind()")}} produz uma função cujo nome é "bound " seguido do nome da função.
 
-<pre class="brush: js">function foo() {};
+```js
+function foo() {};
 foo.bind({}).name; // "bound foo"
-</pre>
+```
 
-<h3 id="Nomes_de_função_para_getters_e_setters">Nomes de função para <em>getters</em> e <em>setters</em></h3>
+### Nomes de função para _getters_ e _setters_
 
-<p>Ao usar propriedades acessórias <code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">get</a></code> e <code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">set</a></code>, "get" ou "set" aparecerão no nome da função.</p>
+Ao usar propriedades acessórias [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get) e [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set), "get" ou "set" aparecerão no nome da função.
 
-<pre class="brush: js">var o = {
+```js
+var o = {
   get foo(){},
   set foo(x){}
 };
 
 var descriptor = Object.getOwnPropertyDescriptor(o, "foo");
 descriptor.get.name; // "get foo"
-descriptor.set.name; // "set foo";</pre>
+descriptor.set.name; // "set foo";
+```
 
-<h3 id="Nomes_de_funções_em_classes">Nomes de funções em classes</h3>
+### Nomes de funções em classes
 
-<p>Você pode usar <code>obj.constructor.name</code> para checar a "classe" de um objeto (porém leia com atenção os avisos abaixo):</p>
+Você pode usar `obj.constructor.name` para checar a "classe" de um objeto (porém leia com atenção os avisos abaixo):
 
-<pre class="brush: js">function Foo() {}  // Sintaxe ES2015: class Foo {}
+```js
+function Foo() {}  // Sintaxe ES2015: class Foo {}
 
 var fooInstance = new Foo();
 console.log(fooInstance.constructor.name); // grava o log "Foo"
-</pre>
+```
 
-<div class="warning">
-<p><strong>Aviso:</strong> O interpretador vai definir a propriedade  interna <code>Function.name</code> somente se uma função não tiver uma propriedade já com o nome <em>name</em> (veja a seção <a href="https://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname">9.2.11 da ECMAScript2015 Language Specification</a>). Porém, a ES2015 especifica que a palavra-chave <em>static</em> de maneira que métodos estáticos serão definidos como OwnProperty da função construtora de classe (ECMAScript2015, <a href="https://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-classdefinitionevaluation">14.5.14.21.b</a> + <a href="https://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation">12.2.6.9</a>).</p>
-</div>
+> **Aviso:** O interpretador vai definir a propriedade interna `Function.name` somente se uma função não tiver uma propriedade já com o nome _name_ (veja a seção [9.2.11 da ECMAScript2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname)). Porém, a ES2015 especifica que a palavra-chave _static_ de maneira que métodos estáticos serão definidos como OwnProperty da função construtora de classe (ECMAScript2015, [14.5.14.21.b](https://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-classdefinitionevaluation) + [12.2.6.9](https://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation)).
 
-<p>Portanto não podemos obter o nome de virtualmente qualquer classe com um método estático <code>name()</code>:</p>
+Portanto não podemos obter o nome de virtualmente qualquer classe com um método estático `name()`:
 
-<pre class="brush: js">class Foo {
+```js
+class Foo {
   constructor() {}
   static name() {}
 }
-</pre>
+```
 
-<p>Com um método <code>static name()</code>, <code>Foo.name</code> não guarda mais o nome verdadeiro da classe mas uma referência ao objeto de função <code>name()</code>. A definição de classe acima, escrita em sintaxe ES2015, se comportará de maneira similar ao seguinte trecho de código em sintaxe ES5 no Chrome ou no Firefox:</p>
+Com um método `static name()`, `Foo.name` não guarda mais o nome verdadeiro da classe mas uma referência ao objeto de função `name()`. A definição de classe acima, escrita em sintaxe ES2015, se comportará de maneira similar ao seguinte trecho de código em sintaxe ES5 no Chrome ou no Firefox:
 
-<pre class="brush: js">function Foo() {}
+```js
+function Foo() {}
 Object.defineProperty(Foo, 'name', { writable: true });
 Foo.name = function() {};
-</pre>
+```
 
-<p>Tentar obter a classe de <code>fooInstance</code> via <code>fooInstance.constructor.name</code> não nos dará de maneira alguma o nome da classe, mas sim uma referência ao método estático da classe. Exemplo:</p>
+Tentar obter a classe de `fooInstance` via `fooInstance.constructor.name` não nos dará de maneira alguma o nome da classe, mas sim uma referência ao método estático da classe. Exemplo:
 
-<pre class="brush: js">var fooInstance = new Foo();
+```js
+var fooInstance = new Foo();
 console.log(fooInstance.constructor.name); // grava o name() da função no log
-</pre>
+```
 
-<p>Você pode ver também, a partir do exemplo de sintaxe ES5, que, no Chrome ou no Firefox, a nossa definição estática de <code>Foo.name</code> se torna <em>writable</em>. A predefinição interna na ausência de uma definição estática customizada é somente-leitura:</p>
+Você pode ver também, a partir do exemplo de sintaxe ES5, que, no Chrome ou no Firefox, a nossa definição estática de `Foo.name` se torna _writable_. A predefinição interna na ausência de uma definição estática customizada é somente-leitura:
 
-<pre class="brush: js">Foo.name = 'Hello';
+```js
+Foo.name = 'Hello';
 console.log(Foo.name); // logs "Hello" if class Foo has a static name() property but "Foo" if not.
-</pre>
+```
 
-<p>Portanto, você não pode assumir que a propriedade interna <code>Function.name</code> sempre guardará um nome de classe..</p>
+Portanto, você não pode assumir que a propriedade interna `Function.name` sempre guardará um nome de classe..
 
-<h3 id="Símbolos_como_nome_de_função">Símbolos como nome de função</h3>
+### Símbolos como nome de função
 
-<p>Se um {{jsxref("Symbol")}} é usado como nome de função e o símbolo tem uma descrição, o nome do método será a descrição entre colchetes.</p>
+Se um {{jsxref("Symbol")}} é usado como nome de função e o símbolo tem uma descrição, o nome do método será a descrição entre colchetes.
 
-<pre>var sym1 = Symbol("foo");
+```
+var sym1 = Symbol("foo");
 var sym2 = Symbol();
 var o = {
   [sym1]: function(){},
@@ -151,17 +162,17 @@ var o = {
 };
 
 o[sym1].name; // "[foo]"
-o[sym2].name; // ""</pre>
+o[sym2].name; // ""
+```
 
-<h2 id="Compressores_e_minificadores_JavaScript">Compressores e minificadores JavaScript</h2>
+## Compressores e minificadores JavaScript
 
-<div class="warning">
-<p><strong>Aviso:</strong> Tenha cuidado ao usar <code>Function.name</code> e transformações de código-fonte, como aquelas executadas por compressores (minificadores) ou obfuscadores de JavaScript. Estas ferramentas são comumente usadas como parte de processos de <em>build  </em>de JavaScript para reduzir os tamanhos de programas antes da implementação em produção. Tais transformações frequentemente mudam nomes de função durante o <em>build</em>.</p>
-</div>
+> **Aviso:** Tenha cuidado ao usar `Function.name` e transformações de código-fonte, como aquelas executadas por compressores (minificadores) ou obfuscadores de JavaScript. Estas ferramentas são comumente usadas como parte de processos de _build_ de JavaScript para reduzir os tamanhos de programas antes da implementação em produção. Tais transformações frequentemente mudam nomes de função durante o _build_.
 
-<p>Código fonte do tipo:</p>
+Código fonte do tipo:
 
-<pre class="brush: js">function Foo() {};
+```js
+function Foo() {};
 var foo = new Foo();
 
 if (foo.constructor.name === 'Foo') {
@@ -169,45 +180,29 @@ if (foo.constructor.name === 'Foo') {
 } else {
   console.log('Oops!');
 }
-</pre>
+```
 
-<p>pode ser comprimido e se tornar:</p>
+pode ser comprimido e se tornar:
 
-<pre class="brush: js">function a() {};
+```js
+function a() {};
 var b = new a();
 if (b.constructor.name === 'Foo') {
   console.log("'foo' is an instance of 'Foo'");
 } else {
   console.log('Oops!');
 }
-</pre>
+```
 
-<p>Na versão descomprimida, o programa cai no bloco-verdade e grava o log <em>'foo' is an instance of 'Foo'</em>. Todavia, na versão comprimida ele se comporta diferentemente, e cai no bloco <code>else</code>. Se você depende de <code>Function.name</code>, como no exemplo acima, tenha certeza que seu processo de <em>build</em> não mude nomes de função, ou então não assuma que uma função terá um nome determinado.</p>
+Na versão descomprimida, o programa cai no bloco-verdade e grava o log _'foo' is an instance of 'Foo'_. Todavia, na versão comprimida ele se comporta diferentemente, e cai no bloco `else`. Se você depende de `Function.name`, como no exemplo acima, tenha certeza que seu processo de _build_ não mude nomes de função, ou então não assuma que uma função terá um nome determinado.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-name', 'name')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-function-instances-name', 'name')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                        | Status                       | Comment            |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
+| {{SpecName('ES2015', '#sec-name', 'name')}}                             | {{Spec2('ES2015')}}     | Definição inicial. |
+| {{SpecName('ESDraft', '#sec-function-instances-name', 'name')}} | {{Spec2('ESDraft')}} |                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
-  <p>{{Compat("javascript.builtins.Function.name")}}</p>
-</div>
+{{Compat("javascript.builtins.Function.name")}}

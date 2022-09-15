@@ -3,32 +3,33 @@ title: Array.isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/isArray
 ---
-<div>{{JSRef("Global_Objects", "Array")}}</div>
+{{JSRef("Global_Objects", "Array")}}
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+## Sumário
 
-<p><font face="Open Sans, Arial, sans-serif">O método </font><code><strong>Array.isArray()</strong></code> retorna <code>true</code> se um objeto é uma array, e <code>false</code> se não é.</p>
+O método **`Array.isArray()`** retorna `true` se um objeto é uma array, e `false` se não é.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code>Array.isArray(<var>obj</var>)</code></pre>
+```
+Array.isArray(obj)
+```
 
-<h3 id="Parameters" name="Parameters">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>O objeto a ser verificado.</dd>
-</dl>
+- `obj`
+  - : O objeto a ser verificado.
 
-<h2 id="Description" name="Description">Descrição</h2>
+## Descrição
 
-<p>Se o objeto é um {{jsxref("Array")}}, retorna <code>true</code>(verdadeiro), caso contrário é retornado <code>false</code>(falso).</p>
+Se o objeto é um {{jsxref("Array")}}, retorna `true`(verdadeiro), caso contrário é retornado `false`(falso).
 
-<p>Veja o artigo <a href="http://web.mit.edu/jwalden/www/isArray.html">“Determinando com absoluta precisão se um objeto em Javascript é ou não uma array”</a> para mais detalhes.</p>
+Veja o artigo [“Determinando com absoluta precisão se um objeto em Javascript é ou não uma array”](http://web.mit.edu/jwalden/www/isArray.html) para mais detalhes.
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: js">// todas as chamadas conseguintes retornam <code style="font-style: normal;">true</code>
+```js
+// todas as chamadas conseguintes retornam true
 Array.isArray([]);
 Array.isArray([1]);
 Array.isArray(new Array());
@@ -45,47 +46,31 @@ Array.isArray('Array');
 Array.isArray(true);
 Array.isArray(false);
 Array.isArray({ __proto__: Array.prototype });
-</pre>
+```
 
-<h2 id="Polyfill" name="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Executando o seguinte código antes de qualquer outro, o método <code>Array.isArray()</code> será criado, caso o browser não o disponibilize nativamente.</p>
+Executando o seguinte código antes de qualquer outro, o método `Array.isArray()` será criado, caso o browser não o disponibilize nativamente.
 
-<pre class="brush: js">if (!Array.isArray) {
+```js
+if (!Array.isArray) {
   Array.isArray = function(arg) {
     return Object.prototype.toString.call(arg) === '[object Array]';
   };
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.3.2', 'Array.isArray')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Definição Inicial. Implementado em JavaScript 1.8.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.isarray', 'Array.isArray')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                | Status                   | Comentário                                           |
+| ---------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.4.3.2', 'Array.isArray')}}     | {{Spec2('ES5.1')}} | Definição Inicial. Implementado em JavaScript 1.8.5. |
+| {{SpecName('ES6', '#sec-array.isarray', 'Array.isArray')}} | {{Spec2('ES6')}}     |                                                      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade com o Browser</h2>
+## Compatibilidade com o Browser
 
 {{Compat("javascript.builtins.Array.isArray")}}
 
-<h2 id="See_also" name="See_also">Veja Também</h2>
+## Veja Também
 
-<ul>
- <li>{{jsxref("Global_Objects/Array", "Array")}}</li>
-</ul>
+- {{jsxref("Global_Objects/Array", "Array")}}

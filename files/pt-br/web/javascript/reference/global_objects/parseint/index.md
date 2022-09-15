@@ -3,61 +3,58 @@ title: parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/parseInt
 translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+## Sumário
 
-<p>A função <code><strong>parseInt()</strong></code> analisa um argumento <code>string</code> e retorna um inteiro na <code>base</code> especificada.</p>
+A função **`parseInt()`** analisa um argumento `string` e retorna um inteiro na `base` especificada.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">parseInt(<em>string</em>, <em>base</em>);</pre>
+```
+parseInt(string, base);
+```
 
-<h2 id="Parameters" name="Parameters">Parâmetros</h2>
+## Parâmetros
 
-<dl>
- <dt><code>string</code></dt>
- <dd>
- <p>O valor a analisar. Se o argumento <code>string</code> não for uma string, então o valor é convertido para uma string (utilizando a operação abstrata <code><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-tostring">ToString</a></code>). Os espaços em branco na <code>string</code> são ignorados.</p>
- </dd>
-</dl>
+- `string`
+  - : O valor a analisar. Se o argumento `string` não for uma string, então o valor é convertido para uma string (utilizando a operação abstrata [`ToString`](http://www.ecma-international.org/ecma-262/6.0/#sec-tostring)). Os espaços em branco na `string` são ignorados.
 
-<dl>
- <dt><code>base</code></dt>
- <dd>Um inteiro entre 2 e 36 que representa a <em>base</em> da <code>string (</code>sistemas numéricos matemáticos<code>) </code>mencionada no parâmetro anterior. Especifique <code>10</code> para o sistema numérico decimal comumente usado por humanos. <strong>Sempre especifique este parâmetro</strong> para eliminar confusão do leitor e para garantir o comportamento esperado. Implementações diferentes produzem resultados diferentes quando <code>base</code> não é especificado, normalmente assumindo o valor como 10.</dd>
-</dl>
+<!---->
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+- `base`
+  - : Um inteiro entre 2 e 36 que representa a _base_ da `string (`sistemas numéricos matemáticos`) `mencionada no parâmetro anterior. Especifique `10` para o sistema numérico decimal comumente usado por humanos. **Sempre especifique este parâmetro** para eliminar confusão do leitor e para garantir o comportamento esperado. Implementações diferentes produzem resultados diferentes quando `base` não é especificado, normalmente assumindo o valor como 10.
 
-<p>Um número inteiro analisado a partir da string fornecida. Se o primeiro caracter não puder ser convertido para um número, {{jsxref("NaN")}} é retornado.</p>
+### Valor de retorno
 
-<h2 id="Description" name="Description">Descrição</h2>
+Um número inteiro analisado a partir da string fornecida. Se o primeiro caracter não puder ser convertido para um número, {{jsxref("NaN")}} é retornado.
 
-<p>A função <code>parseInt</code> converte seu primeiro argumento para uma string, analisa, e retorna um inteiro ou <code>NaN</code>. Se não <code>NaN</code>, o valor retornado será a representação decimal inteira do primeiro argumento obtido como um número na base especificada. Por exemplo, uma<em>base</em> 10 indica para converter de um número decimal, 8 octal, 16 hexadecimal, e assim por diante. Para bases acima de <code>10</code>, as letras do alfabeto indicam numerais maiores que <code>9</code>. Por exemplo, para números hexadecimais (base 16), <code>A</code> até <code>F</code> são usados.</p>
+## Descrição
 
-<p>Se <code>parseInt</code> encontrar um caracter que não seja um numeral na base especificada, ele o ignora e a todos os caracteres subsequentes e retorna o valor inteiro analisado até aquele ponto. <code>parseInt</code> trunca números para valores inteiros. Espaços no início e fim são permitidos.</p>
+A função `parseInt` converte seu primeiro argumento para uma string, analisa, e retorna um inteiro ou `NaN`. Se não `NaN`, o valor retornado será a representação decimal inteira do primeiro argumento obtido como um número na base especificada. Por exemplo, uma*base* 10 indica para converter de um número decimal, 8 octal, 16 hexadecimal, e assim por diante. Para bases acima de `10`, as letras do alfabeto indicam numerais maiores que `9`. Por exemplo, para números hexadecimais (base 16), `A` até `F` são usados.
 
-<p>Se <var>base</var> é <code>undefined</code> ou 0 (ou ausente), JavaScript assume o seguinte:</p>
+Se `parseInt` encontrar um caracter que não seja um numeral na base especificada, ele o ignora e a todos os caracteres subsequentes e retorna o valor inteiro analisado até aquele ponto. `parseInt` trunca números para valores inteiros. Espaços no início e fim são permitidos.
 
-<ul>
- <li>Se a <code>string</code> de entrada começa com "0x" ou "0X", a <var>base</var> é 16 (hexadecimal) e o restante da string é analisado.</li>
- <li>Se a <code>string</code> de entrada começa com "0", a <var>base</var> é oito (octal) ou 10 (decimal).  Exatamente qual base é escolhida é dependente da implementação. O ECMAScript 5 especifica que 10 (decimal) seja utilizado, mas nem todos os browsers suportam isso ainda. Por essa razão <strong>sempre especifique uma base quando estiver usando <code>parseInt</code></strong>.</li>
- <li>Se a <code>string</code> de entrada começa com qualquer outro valor, a base é 10 (decimal).</li>
-</ul>
+Se _base_ é `undefined` ou 0 (ou ausente), JavaScript assume o seguinte:
 
-<p>Se o primeiro caracter não puder ser convertido para um número, <code>parseInt</code> retorna <code>NaN</code>.</p>
+- Se a `string` de entrada começa com "0x" ou "0X", a _base_ é 16 (hexadecimal) e o restante da string é analisado.
+- Se a `string` de entrada começa com "0", a _base_ é oito (octal) ou 10 (decimal). Exatamente qual base é escolhida é dependente da implementação. O ECMAScript 5 especifica que 10 (decimal) seja utilizado, mas nem todos os browsers suportam isso ainda. Por essa razão **sempre especifique uma base quando estiver usando `parseInt`**.
+- Se a `string` de entrada começa com qualquer outro valor, a base é 10 (decimal).
 
-<p>Para propósitos aritméticos, o valor <code>NaN</code> não é um número em qualquer base. Você pode chamar a função {{jsxref("Global_Objects/isNaN", "isNaN")}} para determinar se o resultado de <code>parseInt</code> é <code>NaN</code>. Se <code>NaN</code> for passado em operações aritméticas, o resultado da operação também será <code>NaN</code>.</p>
+Se o primeiro caracter não puder ser convertido para um número, `parseInt` retorna `NaN`.
 
-<p>Para converter um número para seu literal string em uma base específica use <code>intValue.toString(base)</code>.</p>
+Para propósitos aritméticos, o valor `NaN` não é um número em qualquer base. Você pode chamar a função {{jsxref("Global_Objects/isNaN", "isNaN")}} para determinar se o resultado de `parseInt` é `NaN`. Se `NaN` for passado em operações aritméticas, o resultado da operação também será `NaN`.
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+Para converter um número para seu literal string em uma base específica use `intValue.toString(base)`.
 
-<h3 id="Example:_Using_parseInt" name="Example:_Using_parseInt">Exemplo: Usando <code>parseInt</code></h3>
+## Exemplos
 
-<p>Os seguintes exemplos sempre retornam <strong><code>15</code></strong>:</p>
+### Exemplo: Usando `parseInt`
 
-<pre>parseInt(" 0xF", 16);
+Os seguintes exemplos sempre retornam **`15`**:
+
+```
+parseInt(" 0xF", 16);
 parseInt(" F", 16);
 parseInt("17", 8);
 parseInt(021, 8);
@@ -69,17 +66,19 @@ parseInt("15*3", 10);
 parseInt("15e2", 10);
 parseInt("15px", 10);
 parseInt("12", 13);
-</pre>
+```
 
-<p>Os seguintes exemplos sempre retornam <strong><code>NaN</code></strong>:</p>
+Os seguintes exemplos sempre retornam **`NaN`**:
 
-<pre>parseInt("Hello", 8); // Não é realmente um número
+```
+parseInt("Hello", 8); // Não é realmente um número
 parseInt("546", 2);   // Dígitos não são válidos para representações binárias
-</pre>
+```
 
-<p>Os seguintes exemplos sempre retornam <strong><code>-15</code></strong>:</p>
+Os seguintes exemplos sempre retornam **`-15`**:
 
-<pre>parseInt("-F", 16);
+```
+parseInt("-F", 16);
 parseInt("-0F", 16);
 parseInt("-0XF", 16);
 parseInt(-15.1, 10)
@@ -88,36 +87,39 @@ parseInt(" -15", 10);
 parseInt("-1111", 2);
 parseInt("-15e1", 10);
 parseInt("-12", 13);
-</pre>
+```
 
-<p>O seguinte exemplo retorna <strong><code>224</code></strong>:</p>
+O seguinte exemplo retorna **`224`**:
 
-<pre>parseInt("0e0", 16);
-</pre>
+```
+parseInt("0e0", 16);
+```
 
-<h2 id="Interpretação_octal_sem_informar_a_base">Interpretação octal sem informar a base</h2>
+## Interpretação octal sem informar a base
 
-<p>Embora desencorajado pelo ECMAScript 3 e proibido pelo ECMAScript 5, muitas implementações interpretam uma string numérica começando com um <code>0</code> como octal. O exemplo abaixo pode ter um resultado octal, ou ele pode ter um resultado decimal.  <strong>Sempre especifique uma base para evitar este comportamento não confiável.</strong></p>
+Embora desencorajado pelo ECMAScript 3 e proibido pelo ECMAScript 5, muitas implementações interpretam uma string numérica começando com um `0` como octal. O exemplo abaixo pode ter um resultado octal, ou ele pode ter um resultado decimal. **Sempre especifique uma base para evitar este comportamento não confiável.**
 
-<pre>parseInt("0e0"); // 0
+```
+parseInt("0e0"); // 0
 parseInt("08"); // 0, '8' não é um dígito octal.
-</pre>
+```
 
-<h3 id="O_ECMAScript_5_remove_a_interpretação_octal">O ECMAScript 5 remove a interpretação octal</h3>
+### O ECMAScript 5 remove a interpretação octal
 
-<p>A especificação ECMAScript 5 da funcão <code>parseInt</code> não permite mais que as implementações tratem Strings começando com o caracter 0 como um valor octal. O ECMAScript 5 declara:</p>
+A especificação ECMAScript 5 da funcão `parseInt` não permite mais que as implementações tratem Strings começando com o caracter 0 como um valor octal. O ECMAScript 5 declara:
 
-<p>A função <code>parseInt</code> produz um valor inteiro ditado pela interpretação do conteúdo de uma argumento string de acordo com uma base específicada. Espaços em branco no início da string são ignorados. Se a base for undefined ou <code>0</code>, ela é assumida como <code>10</code> exceto quando o número começa com os pares de caracter <code>0x</code> or <code>0X</code>, e neste caso a base 16 é assumida. Se a base é <code>16</code>, o número pode também opcionalmente começar com os pares de caracter <code>0x</code> or <code>0X</code>.</p>
+A função `parseInt` produz um valor inteiro ditado pela interpretação do conteúdo de uma argumento string de acordo com uma base específicada. Espaços em branco no início da string são ignorados. Se a base for undefined ou `0`, ela é assumida como `10` exceto quando o número começa com os pares de caracter `0x` or `0X`, e neste caso a base 16 é assumida. Se a base é `16`, o número pode também opcionalmente começar com os pares de caracter `0x` or `0X`.
 
-<p>Isto difere do ECMAScript 3, que desencoraja mas permite a interpretação octal.</p>
+Isto difere do ECMAScript 3, que desencoraja mas permite a interpretação octal.
 
-<p>Muitas implementações não adotaram este comportamento a partir de 2013, e porque browser antigos devem ser suportados, <strong>sempre especifique uma base</strong>.</p>
+Muitas implementações não adotaram este comportamento a partir de 2013, e porque browser antigos devem ser suportados, **sempre especifique uma base**.
 
-<h2 id="Uma_função_de_análise_mais_rigorosa">Uma função de análise mais rigorosa</h2>
+## Uma função de análise mais rigorosa
 
-<p>É útil em algum momento ter uma maneira mais rigorosa para analisar valores inteiros. Expressões regulares podem ajudar:</p>
+É útil em algum momento ter uma maneira mais rigorosa para analisar valores inteiros. Expressões regulares podem ajudar:
 
-<pre class="brush: js">filterInt = function (value) {
+```js
+filterInt = function (value) {
   if(/^(\-|\+)?([0-9]+|Infinity)$/.test(value))
     return Number(value);
   return NaN;
@@ -131,46 +133,25 @@ console.log(filterInt('421e+0'));            // NaN
 console.log(filterInt('421hop'));            // NaN
 console.log(filterInt('hop1.61803398875'));  // NaN
 console.log(filterInt('1.61803398875'));     // NaN
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1st Edition.</td>
-   <td>Padrão</td>
-   <td>Definição inicial</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.1.2.2', 'parseInt')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-parseint-string-radix', 'parseInt')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                    | Status                   | Comentário        |
+| -------------------------------------------------------------------------------- | ------------------------ | ----------------- |
+| ECMAScript 1st Edition.                                                          | Padrão                   | Definição inicial |
+| {{SpecName('ES5.1', '#sec-15.1.2.2', 'parseInt')}}             | {{Spec2('ES5.1')}} |                   |
+| {{SpecName('ES6', '#sec-parseint-string-radix', 'parseInt')}} | {{Spec2('ES6')}}     |                   |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.parseInt")}}
 
-<h2 id="See_Also" name="See_Also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Global_Objects/parseFloat", "parseFloat()")}}</li>
- <li>{{jsxref("Number.parseFloat()")}}</li>
- <li>{{jsxref("Number.parseInt()")}}</li>
- <li>{{jsxref("Global_Objects/isNaN", "isNaN()")}}</li>
- <li>{{jsxref("Number.toString()")}}</li>
- <li>{{jsxref("Object.valueOf")}}</li>
-</ul>
+- {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
+- {{jsxref("Number.parseFloat()")}}
+- {{jsxref("Number.parseInt()")}}
+- {{jsxref("Global_Objects/isNaN", "isNaN()")}}
+- {{jsxref("Number.toString()")}}
+- {{jsxref("Object.valueOf")}}

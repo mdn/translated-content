@@ -3,82 +3,76 @@ title: Math.cosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cosh
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/cosh
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>A função <strong><code>Math.cosh()</code></strong> retorna o cosseno hiperbólico de um número, que pode ser expressada usando {{jsxref("Math.E", "constante e", "", 1)}}:</p>
+A função **`Math.cosh()`** retorna o cosseno hiperbólico de um número, que pode ser expressada usando {{jsxref("Math.E", "constante e", "", 1)}}:
 
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mo lspace="0em" rspace="thinmathspace">Math.cosh(x)</mo></mstyle><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.cosh(x)}} = \frac{e^x + e^{-x}}{2}</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mo lspace="0em" rspace="thinmathspace">Math.cosh(x)</mo></mstyle><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.cosh(x)}} = \frac{e^x + e^{-x}}{2}</annotation></semantics></math>
 
-<div>{{EmbedInteractiveExample("pages/js/math-cosh.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-cosh.html")}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code>Math.cosh(<var>x</var>)</code></pre>
+```
+Math.cosh(x)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><strong><code>x</code></strong></dt>
- <dd>Um número.</dd>
-</dl>
+- **`x`**
+  - : Um número.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>O cosseno hiperbólico do número dado.</p>
+O cosseno hiperbólico do número dado.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Por <code>cosh()</code> ser um método estático de <code>Math</code>, sempre utilize como <code>Math.cosh()</code>, ao invés de como um método de um objeto <code>Math</code> que você criou (<code>Math</code> não é um construtor).</p>
+Por `cosh()` ser um método estático de `Math`, sempre utilize como `Math.cosh()`, ao invés de como um método de um objeto `Math` que você criou (`Math` não é um construtor).
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_Math.cosh">Usando <code>Math.cosh()</code></h3>
+### Usando `Math.cosh()`
 
-<pre class="brush: js">Math.cosh(0);  // 1
+```js
+Math.cosh(0);  // 1
 Math.cosh(1);  // 1.5430806348152437
 Math.cosh(-1); // 1.5430806348152437
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Isto pode ser emulado com a ajuda da função {{jsxref("Math.exp()")}}:</p>
+Isto pode ser emulado com a ajuda da função {{jsxref("Math.exp()")}}:
 
-<pre class="brush: js">Math.cosh = Math.cosh || function(x) {
+```js
+Math.cosh = Math.cosh || function(x) {
   return (Math.exp(x) + Math.exp(-x)) / 2;
 }
-</pre>
+```
 
-<p>ou usando apenas uma chamada da função {{jsxref("Math.exp()")}}:</p>
+ou usando apenas uma chamada da função {{jsxref("Math.exp()")}}:
 
-<pre class="brush: js">Math.cosh = Math.cosh || function(x) {
+```js
+Math.cosh = Math.cosh || function(x) {
   var y = Math.exp(x);
   return (y + 1 / y) / 2;
 };
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificações</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.cosh', 'Math.cosh')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificações                                                           |
+| ------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-math.cosh', 'Math.cosh')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Math.cosh")}}</p>
+{{Compat("javascript.builtins.Math.cosh")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Math.acosh()")}}</li>
- <li>{{jsxref("Math.asinh()")}}</li>
- <li>{{jsxref("Math.atanh()")}}</li>
- <li>{{jsxref("Math.sinh()")}}</li>
- <li>{{jsxref("Math.tanh()")}}</li>
-</ul>
+- {{jsxref("Math.acosh()")}}
+- {{jsxref("Math.asinh()")}}
+- {{jsxref("Math.atanh()")}}
+- {{jsxref("Math.sinh()")}}
+- {{jsxref("Math.tanh()")}}

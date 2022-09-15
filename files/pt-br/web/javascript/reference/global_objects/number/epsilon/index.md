@@ -10,58 +10,47 @@ tags:
   - Propriedade
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>A propriedade <strong><code>Number.EPSILON</code></strong> representa a diferença entre 1 e o menor ponto flutuante maior que 1.</p>
+A propriedade **`Number.EPSILON`** representa a diferença entre 1 e o menor ponto flutuante maior que 1.
 
-<p>Você não tem que criar um objeto {{jsxref("Number")}} para acessar esta propriedade estática (use <code>Number.EPSILON</code>).</p>
+Você não tem que criar um objeto {{jsxref("Number")}} para acessar esta propriedade estática (use `Number.EPSILON`).
 
-<div>{{EmbedInteractiveExample("pages/js/number-epsilon.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-epsilon.html")}}{{js_property_attributes(0, 0, 0)}}
 
+## Descrição
 
+A propriedade `EPSILON` tem o valor de aproximadamente `2.2204460492503130808472633361816E-16`, ou `2-52`.
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+## Polyfill
 
-<h2 id="Descrição">Descrição</h2>
-
-<p>A propriedade <code>EPSILON</code> tem o valor de aproximadamente <code>2.2204460492503130808472633361816E-16</code>, ou <code>2<sup>-52</sup></code>.</p>
-
-<h2 id="Polyfill">Polyfill</h2>
-
-<pre class="brush: js notranslate">if (Number.EPSILON === undefined) {
+```js
+if (Number.EPSILON === undefined) {
     Number.EPSILON = Math.pow(2, -52);
 }
-</pre>
+```
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Testando_igualdade">Testando igualdade</h3>
+### Testando igualdade
 
-<pre class="brush: js notranslate">x = 0.2;
+```js
+x = 0.2;
 y = 0.3;
 z = 0.1;
-equal = (Math.abs(x - y + z) &lt; Number.EPSILON);
-</pre>
+equal = (Math.abs(x - y + z) < Number.EPSILON);
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.epsilon', 'Number.EPSILON')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                        |
+| ------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-number.epsilon', 'Number.EPSILON')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Number.EPSILON")}}</p>
+{{Compat("javascript.builtins.Number.EPSILON")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>O objeto {{jsxref("Number")}} que esta propriedade pertence.</li>
-</ul>
+- O objeto {{jsxref("Number")}} que esta propriedade pertence.

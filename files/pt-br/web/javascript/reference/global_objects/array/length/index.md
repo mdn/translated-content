@@ -3,78 +3,61 @@ title: Array.prototype.length
 slug: Web/JavaScript/Reference/Global_Objects/Array/length
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/length
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>A propriedade <code><strong>length</strong></code> representa um inteiro de 32-bit sem sinal, que especifíca o número de elementos em um array.</p>
+A propriedade **`length`** representa um inteiro de 32-bit sem sinal, que especifíca o número de elementos em um array.
 
-<div>{{js_property_attributes(1, 0, 0)}}</div>
+{{js_property_attributes(1, 0, 0)}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code><var>arr</var>.length</code></pre>
+```
+arr.length
+```
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O valor da propriedade length é um inteiro com um sinal positivo e valor menor que 2 elevado na 32ª potência(2<sup>32</sup>).</p>
+O valor da propriedade length é um inteiro com um sinal positivo e valor menor que 2 elevado na 32ª potência(232).
 
-<p>Você pode setar o a propriedade <code>length</code> para truncar um array a qualquer momento. Quando você extende um array mudando sua propriedade <code>length</code>, o numero de elementos atuais não é incrementado; por exemplo, se você setar o tamanho para 3 quando ele é atualmente 2, o array continua somente com 2 elementos. Assim, a propriedade <code>length</code> não diz nada sobre o tamanho de valores definidos no array. Veja também <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Relationship_between_length_and_numerical_properties" title="Relationship between length and numerical properties">Relacionamento entre <code>length</code> e propriedades numérica</a>s.</p>
+Você pode setar o a propriedade `length` para truncar um array a qualquer momento. Quando você extende um array mudando sua propriedade `length`, o numero de elementos atuais não é incrementado; por exemplo, se você setar o tamanho para 3 quando ele é atualmente 2, o array continua somente com 2 elementos. Assim, a propriedade `length` não diz nada sobre o tamanho de valores definidos no array. Veja também [Relacionamento entre `length` e propriedades numérica](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array#Relationship_between_length_and_numerical_properties "Relationship between length and numerical properties")s.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Iterando_sobre_um_array">Iterando sobre um array</h3>
+### Iterando sobre um array
 
-<p>No exemplo a seguir <code>numbers </code>é iterado considerando a propriedade <code>length</code> para ver quantos elementos ele tem. O valor de cada elemento recebe então o dobro.</p>
+No exemplo a seguir `numbers `é iterado considerando a propriedade `length` para ver quantos elementos ele tem. O valor de cada elemento recebe então o dobro.
 
-<pre class="brush: js">var numbers = [1, 2, 3, 4, 5];
+```js
+var numbers = [1, 2, 3, 4, 5];
 
-for (var i = 0; i &lt; numbers.length; i++) {
+for (var i = 0; i < numbers.length; i++) {
   numbers[i] *= 2;
 }
 // numbers is now [2, 4, 6, 8, 10]
-</pre>
+```
 
-<h3 id="Encurtando_um_array">Encurtando um array</h3>
+### Encurtando um array
 
-<p>O exemplo a seguir encurta o array  <code>statesUS</code> para um tamanho de 50 se o tamanho corrente for maior do que 50.</p>
+O exemplo a seguir encurta o array `statesUS` para um tamanho de 50 se o tamanho corrente for maior do que 50.
 
-<pre class="brush: js">if (statesUS.length &gt; 50) {
+```js
+if (statesUS.length > 50) {
   statesUS.length = 50;
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.5.2', 'Array.length')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-properties-of-array-instances-length', 'Array.length')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                | Status                   | Comentário          |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
+| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}     | Initial definition. |
+| {{SpecName('ES5.1', '#sec-15.4.5.2', 'Array.length')}}                                     | {{Spec2('ES5.1')}} |                     |
+| {{SpecName('ES6', '#sec-properties-of-array-instances-length', 'Array.length')}} | {{Spec2('ES6')}}     |                     |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Array.length")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Array")}}</li>
-</ul>
+- {{jsxref("Array")}}

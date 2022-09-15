@@ -10,55 +10,41 @@ tags:
   - Propriedade
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>A constante <strong><code>Number.MIN_SAFE_INTEGER</code></strong> representa o menor inteiro seguro no JavaScript (<code>-(2<sup>53</sup> - 1)</code>).</p>
+A constante **`Number.MIN_SAFE_INTEGER`** representa o menor inteiro seguro no JavaScript (`-(253 - 1)`).
 
-<p>Para representar inteiros menores do que isso, considere usar {{jsxref("BigInt")}}.</p>
+Para representar inteiros menores do que isso, considere usar {{jsxref("BigInt")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/number-min-safe-integer.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-min-safe-integer.html")}}{{js_property_attributes(0, 0, 0)}}
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+## Descrição
 
-<h2 id="Descrição">Descrição</h2>
+A constante `MIN_SAFE_INTEGER` tem o valor de `-9007199254740991` (-9,007,199,254,740,991 ou -9 quadrilhões). A razão por trás deste número é que o JavaScript usa o [formato de número de ponto-flutuante de precisão-dupla](http://en.wikipedia.org/wiki/Double_precision_floating-point_format) como especificado na [IEEE 754](http://en.wikipedia.org/wiki/IEEE_floating_point) e pode seguramente representar número entre `-(253 - 1)` e `253 - 1`. Veja {{jsxref("Number.isSafeInteger()")}} para mais informações.
 
-<p>A constante <code>MIN_SAFE_INTEGER</code> tem o valor de <code>-9007199254740991</code> (-9,007,199,254,740,991 ou -9 quadrilhões). A razão por trás deste número é que o JavaScript usa o <a class="external external-icon" href="http://en.wikipedia.org/wiki/Double_precision_floating-point_format" rel="noopener">formato de número de ponto-flutuante de precisão-dupla</a> como especificado na <a class="external external-icon" href="http://en.wikipedia.org/wiki/IEEE_floating_point" rel="noopener">IEEE 754</a> e pode seguramente representar número entre <code>-(2<sup>53</sup> - 1)</code> e <code>2<sup>53</sup> - 1</code>.  Veja {{jsxref("Number.isSafeInteger()")}} para mais informações.</p>
+Por `MIN_SAFE_INTEGER` ser uma propriedade estática de {{jsxref("Number")}}, você sempre deve usar como `Number.MIN_SAFE_INTEGER`, ao invés de uma propriedade do objeto {{jsxref("Number")}} que você criou.
 
-<p>Por <code>MIN_SAFE_INTEGER</code> ser uma propriedade estática de {{jsxref("Number")}}, você sempre deve usar como <code>Number.MIN_SAFE_INTEGER</code>, ao invés de uma propriedade do objeto {{jsxref("Number")}} que você criou.</p>
+## Exemplos
 
-<h2 id="Exemplos">Exemplos</h2>
+### Usando MIN_SAFE_INTEGER
 
-<h3 id="Usando_MIN_SAFE_INTEGER">Usando MIN_SAFE_INTEGER</h3>
-
-<pre class="brush: js notranslate">Number.MIN_SAFE_INTEGER // -9007199254740991
+```js
+Number.MIN_SAFE_INTEGER // -9007199254740991
 -(Math.pow(2, 53) - 1)  // -9007199254740991
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.min_safe_integer', 'Number.MIN_SAFE_INTEGER')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                |
+| ------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-number.min_safe_integer', 'Number.MIN_SAFE_INTEGER')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("javascript.builtins.Number.MIN_SAFE_INTEGER")}}
 
+## Veja também
 
-<p>{{Compat("javascript.builtins.Number.MIN_SAFE_INTEGER")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{jsxref("Number.MAX_SAFE_INTEGER")}}</li>
- <li>{{jsxref("Number.isSafeInteger()")}}</li>
- <li>{{jsxref("BigInt")}}</li>
-</ul>
+- {{jsxref("Number.MAX_SAFE_INTEGER")}}
+- {{jsxref("Number.isSafeInteger()")}}
+- {{jsxref("BigInt")}}

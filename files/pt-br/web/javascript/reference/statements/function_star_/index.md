@@ -9,50 +9,51 @@ tags:
   - Statement
 translation_of: Web/JavaScript/Reference/Statements/function*
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>A declaração <code><strong>function*</strong></code> (palavra chave <code>function</code> seguida de um asterisco) define uma <em>função geradora</em> (<em>generator function</em>), que retorna um objeto {{jsxref("Global_Objects/Generator","Generator")}}.</p>
+A declaração **`function*`** (palavra chave `function` seguida de um asterisco) define uma _função geradora_ (_generator function_), que retorna um objeto {{jsxref("Global_Objects/Generator","Generator")}}.
 
-<p>{{EmbedInteractiveExample("pages/js/statement-functionasterisk.html")}}</p>
+{{EmbedInteractiveExample("pages/js/statement-functionasterisk.html")}}
 
-<p>Você também pode definir funções geradoras usando o construtor {{jsxref("GeneratorFunction")}} ou a sintaxe da expressão de uma função. </p>
+Você também pode definir funções geradoras usando o construtor {{jsxref("GeneratorFunction")}} ou a sintaxe da expressão de uma função.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate">function* <em>name</em>([<em>param</em>[, <em>param</em>[, ... <em>param</em>]]]) {
-   <em>statements</em>
-}</pre>
+```
+function* name([param[, param[, ... param]]]) {
+   statements
+}
+```
 
-<dl>
- <dt><code>name</code></dt>
- <dd>O nome da função.</dd>
-</dl>
+- `name`
+  - : O nome da função.
 
-<dl>
- <dt><code>param</code></dt>
- <dd>O nome do argumento que será passado á função. Uma função pode ter até 255 argumentos.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code>statements</code></dt>
- <dd>As instruções que formam o corpo da função.</dd>
-</dl>
+- `param`
+  - : O nome do argumento que será passado á função. Uma função pode ter até 255 argumentos.
 
-<h2 id="Descrição">Descrição</h2>
+<!---->
 
-<p>Geradores são funções cuja execução pode ser interrompida e posteriormente reconduzida. Seus contextos (de associações de variáveis) ficarão salvos entre cada recondução.</p>
+- `statements`
+  - : As instruções que formam o corpo da função.
 
-<p>Geradores em JavaScript -- especialmente quando combinados com <em>Promises </em>-- são uma ferramenta muito poderosa para programação assíncrona, por mitigarem -- se não eliminarem -- problemas com callbacks, como o <a href="http://callbackhell.com/">Callback Hell</a> e <a href="https://frontendmasters.com/courses/rethinking-async-js/callback-problems-inversion-of-control/">Inversão de Controle</a>. Funções <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function">async</a></code> são fundamentadas nisso.</p>
+## Descrição
 
-<p>Chamar uma função geradora não executa seu conteúdo imediatamente; ao invés disso um objeto <em><a href="/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol">iterator</a></em> é retornado. Quando o método <code>next()</code> do objeto <em>iterator</em> é chamado, o conteúdo da função do gerador é executado até a primeira expressão {{jsxref("Operators/yield", "yield")}}, que especifica o valor a ser devolvido do <em>iterator </em>ou com {{jsxref("Operators/yield*", "yield*")}} que delega para outra função geradora. O método <code style="font-style: normal; line-height: 1.5;">next()</code> retorna um objeto com uma propriedade <code>value</code> contendo o valor retornado e a propriedade <em>boolean</em>: <code>done</code> indicando se o gerador produziu seu último valor. Chamar o método <code>next()</code> com um argumento resumirá a execução da função geradora, substituindo a expressão <code>yield</code> onde a execução foi pausada com o argumento de <code>next()</code>.</p>
+Geradores são funções cuja execução pode ser interrompida e posteriormente reconduzida. Seus contextos (de associações de variáveis) ficarão salvos entre cada recondução.
 
-<p>Uma expressão <code>return</code> em um gerador, quando executada, fará com que o gerador termine (isto é, a propriedade <code>done</code> do objeto retornado será atribuído com o valor <code>true</code>). Se um valor foi retornado, este será usado como propriedade <code>value</code> do objeto retornado pelo gerador. Semelhantemente a uma expressão <code>return</code>, um erro lançado dentro do gerador o terminará -- a não ser que tratado no corpo do gerador. Quando um gerador estiver terminado, chamadas <code>next</code> subsequentes não executarão nenhum código do gerador, retornarão simplesmente um objeto da seguinte forma: <code>{value: undefined, done: true}</code>.</p>
+Geradores em JavaScript -- especialmente quando combinados com _Promises_ -- são uma ferramenta muito poderosa para programação assíncrona, por mitigarem -- se não eliminarem -- problemas com callbacks, como o [Callback Hell](http://callbackhell.com/) e [Inversão de Controle](https://frontendmasters.com/courses/rethinking-async-js/callback-problems-inversion-of-control/). Funções [`async`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) são fundamentadas nisso.
 
-<h2 id="Exemplos">Exemplos</h2>
+Chamar uma função geradora não executa seu conteúdo imediatamente; ao invés disso um objeto _[iterator](/pt-BR/docs/Web/JavaScript/Guide/The_Iterator_protocol)_ é retornado. Quando o método `next()` do objeto _iterator_ é chamado, o conteúdo da função do gerador é executado até a primeira expressão {{jsxref("Operators/yield", "yield")}}, que especifica o valor a ser devolvido do _iterator_ ou com {{jsxref("Operators/yield*", "yield*")}} que delega para outra função geradora. O método `next()` retorna um objeto com uma propriedade `value` contendo o valor retornado e a propriedade _boolean_: `done` indicando se o gerador produziu seu último valor. Chamar o método `next()` com um argumento resumirá a execução da função geradora, substituindo a expressão `yield` onde a execução foi pausada com o argumento de `next()`.
 
-<h3 id="Exemplo_simples">Exemplo simples</h3>
+Uma expressão `return` em um gerador, quando executada, fará com que o gerador termine (isto é, a propriedade `done` do objeto retornado será atribuído com o valor `true`). Se um valor foi retornado, este será usado como propriedade `value` do objeto retornado pelo gerador. Semelhantemente a uma expressão `return`, um erro lançado dentro do gerador o terminará -- a não ser que tratado no corpo do gerador. Quando um gerador estiver terminado, chamadas `next` subsequentes não executarão nenhum código do gerador, retornarão simplesmente um objeto da seguinte forma: `{value: undefined, done: true}`.
 
-<pre class="brush: js notranslate">function* idMaker(){
+## Exemplos
+
+### Exemplo simples
+
+```js
+function* idMaker(){
     var index = 0;
     while(true)
         yield index++;
@@ -63,12 +64,14 @@ var gen = idMaker();
 console.log(gen.next().value); // 0
 console.log(gen.next().value); // 1
 console.log(gen.next().value); // 2
-<code>console.log(gen.next().value); // 3</code>
-// ...</pre>
+console.log(gen.next().value); // 3
+// ...
+```
 
-<h3 id="Exemplo_com_yield*">Exemplo com yield*</h3>
+### Exemplo com yield\*
 
-<pre class="brush: js notranslate">function* outroGerador(i) {
+```js
+function* outroGerador(i) {
   yield i + 1;
   yield i + 2;
   yield i + 3;
@@ -87,11 +90,12 @@ console.log(gen.next().value); // 11
 console.log(gen.next().value); // 12
 console.log(gen.next().value); // 13
 console.log(gen.next().value); // 20
-</pre>
+```
 
-<h3 id="Passando_argumentos_em_geradores">Passando argumentos em geradores</h3>
+### Passando argumentos em geradores
 
-<pre class="notranslate"><code>function* logGenerator() {
+```
+function* logGenerator() {
   console.log(0);
   console.log(1, yield);
   console.log(2, yield);
@@ -105,11 +109,13 @@ var gen = logGenerator();
 gen.next();             // 0
 gen.next('pretzel');    // 1 pretzel
 gen.next('california'); // 2 california
-gen.next('mayonnaise'); // 3 mayonnaise</code></pre>
+gen.next('mayonnaise'); // 3 mayonnaise
+```
 
-<h3 id="Declaração_de_retono_em_um_gerador">Declaração de retono em um gerador</h3>
+### Declaração de retono em um gerador
 
-<pre class="notranslate"><code>function* yieldAndReturn() {
+```
+function* yieldAndReturn() {
   yield "Y";
   return "R";
   yield "unreachable";
@@ -118,86 +124,64 @@ gen.next('mayonnaise'); // 3 mayonnaise</code></pre>
 var gen = yieldAndReturn()
 console.log(gen.next()); // { value: "Y", done: false }
 console.log(gen.next()); // { value: "R", done: true }
-console.log(gen.next()); // { value: undefined, done: true }</code></pre>
+console.log(gen.next()); // { value: undefined, done: true }
+```
 
-<h3 id="Geradores_não_possuem_construtor">Geradores não possuem construtor</h3>
+### Geradores não possuem construtor
 
-<pre class="notranslate"><code>function* f() {}
-var obj = new f; // lança o TypeError: f não é construtor</code></pre>
+```
+function* f() {}
+var obj = new f; // lança o TypeError: f não é construtor
+```
 
-<h3 id="Gerador_definido_em_uma_expressão">Gerador definido em uma expressão</h3>
+### Gerador definido em uma expressão
 
-<pre class="notranslate"><code>const foo = function* () {
+```
+const foo = function* () {
   yield 10;
   yield 20;
 };
 
 const bar = foo();
-console.log(bar.next()); // {value: 10, done: false}</code></pre>
+console.log(bar.next()); // {value: 10, done: false}
+```
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-generator-function-definitions', 'function*')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2016', '#sec-generator-function-definitions', 'function*')}}</td>
-   <td>{{Spec2('ES2016')}}</td>
-   <td>Mudou para que <em>generators </em>não tenham a armadilha de [[Construct]] e irão lançar um erro, quando usados com <code>new</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-generator-function-definitions', 'function*')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                        | Status                       | Comentário                                                                                                            |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ES2015', '#sec-generator-function-definitions', 'function*')}} | {{Spec2('ES2015')}}     | Definição inicial.                                                                                                    |
+| {{SpecName('ES2016', '#sec-generator-function-definitions', 'function*')}} | {{Spec2('ES2016')}}     | Mudou para que _generators_ não tenham a armadilha de \[\[Construct]] e irão lançar um erro, quando usados com `new`. |
+| {{SpecName('ESDraft', '#sec-generator-function-definitions', 'function*')}} | {{Spec2('ESDraft')}} |                                                                                                                       |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("javascript.statements.generator_function")}}
 
+## Observações específicas Firefox
 
-<div id="compat-mobile">{{Compat("javascript.statements.generator_function")}}</div>
+#### Generators e iterators no Firefox em versões anteriores a 26
 
-<h2 id="Observações_específicas_Firefox">Observações específicas Firefox</h2>
+Versões mais antigas do Firefox implementam uma versão antiga da proposta de _generators_. Na versão mais antiga, _generators_ foram intruídos a usarem a palavra chave `function`(sem um asterísco) dentre outras diferenças.
 
-<h4 id="Generators_e_iterators_no_Firefox_em_versões_anteriores_a_26">Generators e iterators no Firefox em versões anteriores a 26</h4>
+#### O retorno do objeto `IteratorResult` ao invés de um throw
 
-<p>Versões mais antigas do Firefox implementam uma versão antiga da proposta de <em>generators</em>. Na versão mais antiga, <em>generators </em>foram intruídos a usarem a palavra chave <code>function</code>(sem um asterísco) dentre outras diferenças.</p>
+Iniciando com Gecko 29 {{geckoRelease(29)}}, o _generator_ finalizado não lança mais um {{jsxref("TypeError")}} "generator has already finished". Ao invés disso, ele retorna um objeto `IteratorResult`, como por exemplo `{ value: undefined, done: true }` ({{bug(958951)}}).
 
-<h4 id="O_retorno_do_objeto_IteratorResult_ao_invés_de_um_throw">O retorno do objeto <code>IteratorResult</code> ao invés de um throw</h4>
+## Veja também
 
-<p>Iniciando com Gecko 29 {{geckoRelease(29)}}, o <em>generator </em>finalizado não lança mais um {{jsxref("TypeError")}} "generator has already finished". Ao invés disso, ele retorna um objeto <code>IteratorResult</code>, como por exemplo <code>{ value: undefined, done: true }</code> ({{bug(958951)}}).</p>
+- {{jsxref("Operators/function*", "function* expression")}}
+- {{jsxref("GeneratorFunction")}} object
+- [The Iterator protocol](/pt-BR/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- {{jsxref("Operators/yield", "yield")}}
+- {{jsxref("Operators/yield*", "yield*")}}
+- {{jsxref("Function")}} object
+- {{jsxref("Statements/function", "function declaration")}}
+- {{jsxref("Operators/function", "function expression")}}
+- {{jsxref("Functions_and_function_scope", "Functions and function scope")}}
+- Outras fontes na web:
 
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{jsxref("Operators/function*", "function* expression")}}</li>
- <li>{{jsxref("GeneratorFunction")}} object</li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol">The Iterator protocol</a></li>
- <li>{{jsxref("Operators/yield", "yield")}}</li>
- <li>{{jsxref("Operators/yield*", "yield*")}}</li>
- <li>{{jsxref("Function")}} object</li>
- <li>{{jsxref("Statements/function", "function declaration")}}</li>
- <li>{{jsxref("Operators/function", "function expression")}}</li>
- <li>{{jsxref("Functions_and_function_scope", "Functions and function scope")}}</li>
- <li>Outras fontes na web:
-  <ul>
-   <li><a href="http://facebook.github.io/regenerator/">Regenerator</a> um ES6 generator que compila para ES5</li>
-   <li><a href="http://www.youtube.com/watch?v=qbKWsbJ76-s">Forbes Lindesay: Promises and Generators: control flow utopia -- JSConf EU 2013</a></li>
-   <li><a href="https://www.youtube.com/watch?v=ZrgEZykBHVo&amp;list=PLuoyIZT5fPlG44bPq50Wgh0INxykdrYX7&amp;index=1">Hemanth.HM: The New gen of *gen(){}</a></li>
-   <li><a href="http://taskjs.org/">Task.js</a></li>
-  </ul>
- </li>
-</ul>
+  - [Regenerator](http://facebook.github.io/regenerator/) um ES6 generator que compila para ES5
+  - [Forbes Lindesay: Promises and Generators: control flow utopia -- JSConf EU 2013](http://www.youtube.com/watch?v=qbKWsbJ76-s)
+  - [Hemanth.HM: The New gen of \*gen(){}](https://www.youtube.com/watch?v=ZrgEZykBHVo&list=PLuoyIZT5fPlG44bPq50Wgh0INxykdrYX7&index=1)
+  - [Task.js](http://taskjs.org/)

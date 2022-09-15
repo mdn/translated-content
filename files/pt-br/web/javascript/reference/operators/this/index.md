@@ -8,72 +8,78 @@ tags:
   - Referencia
 translation_of: Web/JavaScript/Reference/Operators/this
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>A palavra-chave <strong><code>this</code></strong> comporta-se um pouco diferente em Javascript se comparado com outras linguagens. Também possui algumas diferenças entre o <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones/Modo_estricto" title="en-US/docs/JavaScript/Strict mode">modo estrito</a> e o modo não estrito.</p>
+A palavra-chave **`this`** comporta-se um pouco diferente em Javascript se comparado com outras linguagens. Também possui algumas diferenças entre o [modo estrito](/pt-BR/docs/Web/JavaScript/Referencia/Funciones/Modo_estricto "en-US/docs/JavaScript/Strict mode") e o modo não estrito.
 
-<p>Em muitos casos, o valor <code>this</code> é determinado pela forma como a função é chamada. Ele não pode ser assinado durante a execução, e isso pode ser diferente a cada vez que a função é chamada. ES5 introduziu o método <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">bind</a></code> para estabelecer o valor <code>this</code> da função, independentemente de como ela seja chamada, e ECMAScript 2015 introduziu o <a href="../Functions/Arrow_functions">arrow functions</a>, cujo <code>this</code> é lexicalmente delimitado (o valor <code>this</code> é estabelecido segundo o escopo de execução no qual está inserido).</p>
+Em muitos casos, o valor `this` é determinado pela forma como a função é chamada. Ele não pode ser assinado durante a execução, e isso pode ser diferente a cada vez que a função é chamada. ES5 introduziu o método [`bind`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) para estabelecer o valor `this` da função, independentemente de como ela seja chamada, e ECMAScript 2015 introduziu o [arrow functions](../Functions/Arrow_functions), cujo `this` é lexicalmente delimitado (o valor `this` é estabelecido segundo o escopo de execução no qual está inserido).
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">this</pre>
+```
+this
+```
 
-<h2 id="Contexto_global">Contexto global</h2>
+## Contexto global
 
-<p>No contexto de execução global (fora de qualquer função), <code>this</code> refere-se ao objeto global, seja em modo estrito ou não.</p>
+No contexto de execução global (fora de qualquer função), `this` refere-se ao objeto global, seja em modo estrito ou não.
 
-<pre class="brush:js">console.log(this.document === document); // true
+```js
+console.log(this.document === document); // true
 
 // Em navegadores web, o objeto window é também o objeto global:
 console.log(this === window); // true
 
 this.a = 37;
 console.log(window.a); // 37
-</pre>
+```
 
-<h2 id="Contexto_de_função">Contexto de função</h2>
+## Contexto de função
 
-<p>Dentro de uma função, o valor de <code>this</code> depende de como a função é chamada.</p>
+Dentro de uma função, o valor de `this` depende de como a função é chamada.
 
-<h3 id="Chamada_simples">Chamada simples</h3>
+### Chamada simples
 
-<p>Como o código a seguir não está no modo estrito, o valor de <code>this</code> não é definido pela chamada. Por padrão, <code>this</code> será o objeto global que no navegador é o <code>window</code>.</p>
+Como o código a seguir não está no modo estrito, o valor de `this` não é definido pela chamada. Por padrão, `this` será o objeto global que no navegador é o `window`.
 
-<pre class="brush: js">function f1(){
+```js
+function f1(){
   return this;
 }
 
 // No navegador
 f1() === window; // true
-</pre>
+```
 
-<p>Em modo estrito, o valor de <code>this</code> permanece seja qual for o definido ao entrar no contexto de execução, assim, no caso a seguir, <code>this</code> por padrão será indefinido (<code>undefined</code>):</p>
+Em modo estrito, o valor de `this` permanece seja qual for o definido ao entrar no contexto de execução, assim, no caso a seguir, `this` por padrão será indefinido (`undefined`):
 
-<pre class="brush:js">function f2(){
+```js
+function f2(){
   "use strict"; // assume modo estrito
   return this;
 }
 
 f2() === undefined; // true
-</pre>
+```
 
-<p>Portanto, em modo estrito, se <code>this</code> não for definido durante o contexto da execução, ele permanecerá indefinido (<code>undefined</code>).</p>
+Portanto, em modo estrito, se `this` não for definido durante o contexto da execução, ele permanecerá indefinido (`undefined`).
 
-<div class="note">No segundo exemplo, <code>this</code> deveria ser <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined"><code>undefined</code></a>, porque <code>f2</code> foi chamada diretamente e não como um método ou popriedade de um objeto (ou seja, <code>window.f2()</code>). Esta característica não foi implementada em alguns navegadores quando começaram a dar suporte ao <a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode" title="Strict mode">strict mode</a> (modo estrito). Como resultado, eles incorretamente retornavam o objeto <code>window</code>.</div>
+> **Nota:** No segundo exemplo, `this` deveria ser [`undefined`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/undefined), porque `f2` foi chamada diretamente e não como um método ou popriedade de um objeto (ou seja, `window.f2()`). Esta característica não foi implementada em alguns navegadores quando começaram a dar suporte ao [strict mode](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode "Strict mode") (modo estrito). Como resultado, eles incorretamente retornavam o objeto `window`.
 
-<p> </p>
+### Funções Arrow (seta)
 
-<h3 id="Funções_Arrow_(seta)">Funções Arrow (seta)</h3>
+Nas [arrow functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (funções seta), o `this` é definido lexicalmente, isto é, seu valor é definido pelo contexto de execução onde está inserido. Em um código global, this assume o objeto global:
 
-<p>Nas <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a> (funções seta), o <code>this</code> é definido lexicalmente, isto é, seu valor é definido pelo contexto de execução onde está inserido. Em um código global, this assume o objeto global:</p>
+```js
+var globalObject = this;
+var foo = (() => this);
+console.log(foo() === globalObject); // true
+```
 
-<pre class="brush: js">var globalObject = this;
-var foo = (() =&gt; this);
-console.log(foo() === globalObject); // true</pre>
+Não importa como `foo` é chamado, o `this` continuará como o objeto global. Isto continua verdadeiro mesmo se chamá-lo como método de um determinado objeto (o que normalmente definiria seu this ao objeto), com `call` ou `apply` ou `bind` é usado:
 
-<p>Não importa como <code>foo</code> é chamado, o <code>this</code> continuará como o objeto global. Isto continua verdadeiro mesmo se chamá-lo como método de um determinado objeto (o que normalmente definiria seu this ao objeto), com <code>call</code> ou <code>apply</code> ou <code>bind</code> é usado:</p>
-
-<pre class="brush: js">// Chama como um método de um objeto
+```js
+// Chama como um método de um objeto
 var obj = {foo: foo};
 console.log(obj.foo() === globalObject); // true
 
@@ -82,17 +88,19 @@ console.log(foo.call(obj) === globalObject); // true
 
 // Tentantiva de definir this usando bind
 foo = foo.bind(obj);
-console.log(foo() === globalObject); // true</pre>
+console.log(foo() === globalObject); // true
+```
 
-<p>Não importa como for, o this do foo mantém o valor que recebeu quando foi criado (no exemplo acima, o objeto global). O mesmo se aplica para funções arrow criadas dentro de outras funções: seus this são definidos em seus respectivos contextos de execução.</p>
+Não importa como for, o this do foo mantém o valor que recebeu quando foi criado (no exemplo acima, o objeto global). O mesmo se aplica para funções arrow criadas dentro de outras funções: seus this são definidos em seus respectivos contextos de execução.
 
-<pre class="brush: js">// Cria obj com um método bar que retorna uma função que
+```js
+// Cria obj com um método bar que retorna uma função que
 // retorna seu this. A função retornada é criada como
 // uma função arrow, para que seu this esteja permanentemente
 // ligado ao this da função que a envolve. O valor de bar pode ser // definido na chamada, que por sua vez define o valor da função
 // retornada.
 var obj = { bar : function() {
-                    var x = (() =&gt; this);
+                    var x = (() => this);
                     return x;
                   }
           };
@@ -103,17 +111,19 @@ var fn = obj.bar();
 
 // Chamar fn, sem definir this, por padrão, referenciaria
 // ao objeto global ou undefined em modo estrito (strict mode)
-console.log(fn() === obj); // true</pre>
+console.log(fn() === obj); // true
+```
 
-<p>No exemplo acima, a função (chamemos função anônima A) atribuída a obj.bar retorna outra função (chamemos função anônima B) que é criada como uma função arrow (seta). Como resultado, o this da função B é permanentemente definido como o this de obj.bar (função A) quando chamado. Quando a função retornada (função B) é chamada, seu this sempre será aquele que foi definido inicialmente. No exemplo de código acima, o this da função B é definido com o this da função A, que é obj, por isso permanece definido para obj, mesmo quando chamado de uma maneira que normalmente definiria seu this como undefined ou como objeto global (ou qualquer outro método, como naquele exemplo anterior de contexto de execução global).</p>
+No exemplo acima, a função (chamemos função anônima A) atribuída a obj.bar retorna outra função (chamemos função anônima B) que é criada como uma função arrow (seta). Como resultado, o this da função B é permanentemente definido como o this de obj.bar (função A) quando chamado. Quando a função retornada (função B) é chamada, seu this sempre será aquele que foi definido inicialmente. No exemplo de código acima, o this da função B é definido com o this da função A, que é obj, por isso permanece definido para obj, mesmo quando chamado de uma maneira que normalmente definiria seu this como undefined ou como objeto global (ou qualquer outro método, como naquele exemplo anterior de contexto de execução global).
 
-<h3 id="Como_método_de_um_objeto">Como método de um objeto</h3>
+### Como método de um objeto
 
-<p>Quando uma função é chamada como um método de um objeto, seu this toma o valor do objeto pertencente ao método chamado.</p>
+Quando uma função é chamada como um método de um objeto, seu this toma o valor do objeto pertencente ao método chamado.
 
-<p>No exemplo a seguir, quando <code>o.f()</code> é invocado, o this dentro da função é vinculado ao objeto o.</p>
+No exemplo a seguir, quando `o.f()` é invocado, o this dentro da função é vinculado ao objeto o.
 
-<pre class="brush:js">var o = {
+```js
+var o = {
   prop: 37,
   f: function() {
     return this.prop;
@@ -121,11 +131,12 @@ console.log(fn() === obj); // true</pre>
 };
 
 console.log(o.f()); // logs 37
-</pre>
+```
 
-<p>Observe que esse comportamento não é afetado mesmo pela forma como (ou onde) a função foi definida. No exemplo anterior, nós definimos a função in-line (em linha) como o membro f durante a definição de o. No entanto, poderíamos ter apenas facilmente definido a função primeiro e depois anexado a o.f. Fazendo isso resulta no mesmo comportamento:</p>
+Observe que esse comportamento não é afetado mesmo pela forma como (ou onde) a função foi definida. No exemplo anterior, nós definimos a função in-line (em linha) como o membro f durante a definição de o. No entanto, poderíamos ter apenas facilmente definido a função primeiro e depois anexado a o.f. Fazendo isso resulta no mesmo comportamento:
 
-<pre class="brush:js">var o = {prop: 37};
+```js
+var o = {prop: 37};
 
 function independent() {
   return this.prop;
@@ -134,35 +145,38 @@ function independent() {
 o.f = independent;
 
 console.log(o.f()); // registra 37
-</pre>
+```
 
-<p>Isto demonstra que é importante apenas que a função foi chamada a partir do membro f de o.</p>
+Isto demonstra que é importante apenas que a função foi chamada a partir do membro f de o.
 
-<p>Da mesma forma, a vinculação de this só é afetada pela referência do membro mais imediato. No exemplo a seguir, quando invocamos a função, podemos chamá-la como um método g do objeto o.b. Desta vez, durante a execução, o this dentro da função irá se referir a o.b. O fato do objeto ser um membro de o não tem qualquer consequência; a referência mais imediata é tudo que importa.</p>
+Da mesma forma, a vinculação de this só é afetada pela referência do membro mais imediato. No exemplo a seguir, quando invocamos a função, podemos chamá-la como um método g do objeto o.b. Desta vez, durante a execução, o this dentro da função irá se referir a o.b. O fato do objeto ser um membro de o não tem qualquer consequência; a referência mais imediata é tudo que importa.
 
-<pre class="brush:js">o.b = {g: independent, prop: 42};
+```js
+o.b = {g: independent, prop: 42};
 console.log(o.b.g()); // registra 42
-</pre>
+```
 
-<h4 id="this_na_cadeia_de_protótipos_(prototype_chain)_do_objeto"><code>this</code> na cadeia de protótipos (prototype chain) do objeto</h4>
+#### `this` na cadeia de protótipos (prototype chain) do objeto
 
-<p>A mesma noção vale para métodos definidos em algum lugar da cadeia de protótipos do objeto. Se o método está na cadeia de protótipo de um objeto, this refere-se ao objeto que é proprietário do método chamado, como se o método estivesse no objeto.</p>
+A mesma noção vale para métodos definidos em algum lugar da cadeia de protótipos do objeto. Se o método está na cadeia de protótipo de um objeto, this refere-se ao objeto que é proprietário do método chamado, como se o método estivesse no objeto.
 
-<pre class="brush:js">var o = {f:function(){ return this.a + this.b; }};
+```js
+var o = {f:function(){ return this.a + this.b; }};
 var p = Object.create(o);
 p.a = 1;
 p.b = 4;
 
 console.log(p.f()); // 5
-</pre>
+```
 
-<p>Neste exemplo, o objeto atribuído à variável p não tem sua própria propriedade f, ele o herda de seu protótipo. Mas não importa que a procura por f finalmente encontre um membro com esse nome em o; a procura começou como uma referência para a p.f, portanto o this dentro da função recebe o valor do objeto referido como p. Isto é, já que f é chamado como um método de p, seu this refere-se a p. Este é um recurso interessante de herança prototípica do JavaScript.</p>
+Neste exemplo, o objeto atribuído à variável p não tem sua própria propriedade f, ele o herda de seu protótipo. Mas não importa que a procura por f finalmente encontre um membro com esse nome em o; a procura começou como uma referência para a p.f, portanto o this dentro da função recebe o valor do objeto referido como p. Isto é, já que f é chamado como um método de p, seu this refere-se a p. Este é um recurso interessante de herança prototípica do JavaScript.
 
-<h4 id="this_com_seletores_(getter)_ou_modificadores_(setter)"><code>this</code> com seletores (getter) ou modificadores (setter) </h4>
+#### `this` com seletores (getter) ou modificadores (setter)
 
-<p>Mais uma vez, a mesma noção se aplica quando uma função é chamada a partir de um getter ou setter. A função usada como getter ou setter tem seu this ligado ao objeto do qual a propriedade está sendo modificada ou selecionada.</p>
+Mais uma vez, a mesma noção se aplica quando uma função é chamada a partir de um getter ou setter. A função usada como getter ou setter tem seu this ligado ao objeto do qual a propriedade está sendo modificada ou selecionada.
 
-<pre class="brush:js">function modulus(){
+```js
+function modulus(){
   return Math.sqrt(this.re * this.re + this.im * this.im);
 }
 
@@ -178,15 +192,16 @@ Object.defineProperty(o, 'modulus', {
     get: modulus, enumerable:true, configurable:true});
 
 console.log(o.phase, o.modulus); // logs -0.78 1.4142
-</pre>
+```
 
-<h3 id="Como_um_construtor_(constructor)">Como um construtor (constructor)</h3>
+### Como um construtor (constructor)
 
-<p>Quando a função é usada com um construtor (com a palavra chave <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new</a></code>), seu this é vinculado ao novo objeto sendo contruído.</p>
+Quando a função é usada com um construtor (com a palavra chave [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new)), seu this é vinculado ao novo objeto sendo contruído.
 
-<p>Nota: enquanto o padrão para um construtor é retornar o objeto referenciado por this, ele pode retornar, ao invés, algum outro objeto (se o valor de retorno não é um objeto, então o objeto this é retornado).</p>
+Nota: enquanto o padrão para um construtor é retornar o objeto referenciado por this, ele pode retornar, ao invés, algum outro objeto (se o valor de retorno não é um objeto, então o objeto this é retornado).
 
-<pre class="brush:js">/*
+```js
+/*
  * Contrutores funcionam da seguinte forma:
  *
  * function MyConstructor(){
@@ -220,15 +235,16 @@ function C2(){
 
 o = new C2();
 console.log(o.a); // registra 38
-</pre>
+```
 
-<p>No último exemplo (C2), porque um objeto foi retornado durante a construção, o novo objeto que this foi vinculado simplesmente é descartado. (Isso essencialmente faz da expressão "this.a = 37;" código morto. Não é exatamente morto, pois ele é executado, mas ele pode ser eliminado sem efeitos colaterais.)</p>
+No último exemplo (C2), porque um objeto foi retornado durante a construção, o novo objeto que this foi vinculado simplesmente é descartado. (Isso essencialmente faz da expressão "this.a = 37;" código morto. Não é exatamente morto, pois ele é executado, mas ele pode ser eliminado sem efeitos colaterais.)
 
-<h3 id="call_e_apply"><code>call</code> e <code>apply</code></h3>
+### `call` e `apply`
 
-<p>Quando uma função usa a palavra-chave this em seu corpo, o seu valor pode ser vinculado a um determinado objeto na chamada utilizando os métodos <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call">call</a></code> or <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">apply</a></code> que todas as funções herdam de Function.prototype.</p>
+Quando uma função usa a palavra-chave this em seu corpo, o seu valor pode ser vinculado a um determinado objeto na chamada utilizando os métodos [`call`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) or [`apply`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) que todas as funções herdam de Function.prototype.
 
-<pre class="brush:js">function add(c, d){
+```js
+function add(c, d){
   return this.a + this.b + c + d;
 }
 
@@ -243,22 +259,24 @@ add.call(o, 5, 7); // 1 + 3 + 5 + 7 = 16
 // 'this', o segundo é um arranjo (array) cujos
 // membros são usados como argumentos na função chamada
 add.apply(o, [10, 20]); // 1 + 3 + 10 + 20 = 34
-</pre>
+```
 
-<p>Observe que, com call e apply, se o valor passado como this não for um objeto, será feita uma tentativa de convertê-lo em um objeto usando a operação interna ToObject. Portanto, se o valor passado é um primitivo como 7 ou 'foo', ele será convertido para um objeto usando o construtor relacionado, de modo que o número primitivo 7 é convertido em um objeto, como realizado por new Number(7), e a cadeia de caracteres 'foo' em um objeto, como realizado por new String(' foo '), por exemplo.</p>
+Observe que, com call e apply, se o valor passado como this não for um objeto, será feita uma tentativa de convertê-lo em um objeto usando a operação interna ToObject. Portanto, se o valor passado é um primitivo como 7 ou 'foo', ele será convertido para um objeto usando o construtor relacionado, de modo que o número primitivo 7 é convertido em um objeto, como realizado por new Number(7), e a cadeia de caracteres 'foo' em um objeto, como realizado por new String(' foo '), por exemplo.
 
-<pre class="brush:js">function bar() {
+```js
+function bar() {
   console.log(Object.prototype.toString.call(this));
 }
 
 bar.call(7); // [object Number]
-</pre>
+```
 
-<h3 id="O_método_bind">O método <code>bind</code></h3>
+### O método `bind`
 
-<p>ECMAScript 5 introduziu <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">Function.prototype.bind</a></code>. Chamando f.bind(algumObjeto) cria-se uma nova função com o mesmo corpo e escopo que f, mas onde o this ocorrer na função original, na nova função ele será permanentemente ligado ao primeiro argumento de bind, independentemente de como a função esteja sendo usada.</p>
+ECMAScript 5 introduziu [`Function.prototype.bind`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind). Chamando f.bind(algumObjeto) cria-se uma nova função com o mesmo corpo e escopo que f, mas onde o this ocorrer na função original, na nova função ele será permanentemente ligado ao primeiro argumento de bind, independentemente de como a função esteja sendo usada.
 
-<pre class="brush:js">function f(){
+```js
+function f(){
   return this.a;
 }
 
@@ -270,13 +288,14 @@ console.log.(h()); // azerty
 
 var o = {a:37, f:f, g:g, h: h};
 console.log(o.a, o.f(), o.g(), o.h()); // 37, 37, azerty, azerty
-</pre>
+```
 
-<h3 id="Como_um_manipulador_de_eventos_DOM">Como um manipulador de eventos DOM</h3>
+### Como um manipulador de eventos DOM
 
-<p>Quando uma função é usada como um manipulador de eventos, seu this está definido para o elemento do evento a partir do qual foi disparado (alguns navegadores não seguem essa convenção para os listeners adicionados dinamicamente com métodos que não sejam addEventListener).</p>
+Quando uma função é usada como um manipulador de eventos, seu this está definido para o elemento do evento a partir do qual foi disparado (alguns navegadores não seguem essa convenção para os listeners adicionados dinamicamente com métodos que não sejam addEventListener).
 
-<pre class="brush:js">// Quando chamado como listener, transforma o elemento blue
+```js
+// Quando chamado como listener, transforma o elemento blue
 // relacionado
 function bluify(e){
   // sempre true
@@ -291,72 +310,46 @@ var elements = document.getElementsByTagName('*');
 
 // Adiciona bluify com um click listener (escutador de click)
 // para que quando o elemento seja clicado se torne azul
-for(var i=0 ; i&lt;elements.length ; i++){
+for(var i=0 ; i<elements.length ; i++){
   elements[i].addEventListener('click', bluify, false);
-}</pre>
+}
+```
 
-<h3 id="Em_um_manipulador_de_evento_in-line_(em_linha)">Em um manipulador de evento in-line (em linha)</h3>
+### Em um manipulador de evento in-line (em linha)
 
-<p>Quando o código é chamado de um manipulador de evento in-line, seu this está definido para o elemento DOM em que o listener é colocado:</p>
+Quando o código é chamado de um manipulador de evento in-line, seu this está definido para o elemento DOM em que o listener é colocado:
 
-<pre class="brush:js">&lt;button onclick="alert(this.tagName.toLowerCase());"&gt;
+```js
+<button onclick="alert(this.tagName.toLowerCase());">
   Show this
-&lt;/button&gt;
-</pre>
+</button>
+```
 
-<p>O alerta acima mostra button. Note, porém, que apenas o código exterior tem um this definido desta maneira:</p>
+O alerta acima mostra button. Note, porém, que apenas o código exterior tem um this definido desta maneira:
 
-<pre class="brush:js">&lt;button onclick="alert((function(){return this}()));"&gt;
+```js
+<button onclick="alert((function(){return this}()));">
   Show inner this
-&lt;/button&gt;
-</pre>
+</button>
+```
 
-<p>Neste caso, o this da função interior não está definido, portanto ele retorna o objeto global/objeto window (ou seja, o objeto padrão no modo não-estrito onde this não está definido pela chamada).</p>
+Neste caso, o this da função interior não está definido, portanto ele retorna o objeto global/objeto window (ou seja, o objeto padrão no modo não-estrito onde this não está definido pela chamada).
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-this-keyword', 'The this keyword')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-this-keyword', 'The this keyword')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-11.1.1', 'The this keyword')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3', '#sec-11.1.1', 'The this keyword')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1', '#sec-11.1.1', 'The this keyword')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.0.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                        | Estado                       | Comentário                                         |
+| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-this-keyword', 'The this keyword')}} | {{Spec2('ESDraft')}} |                                                    |
+| {{SpecName('ES6', '#sec-this-keyword', 'The this keyword')}}     | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ES5.1', '#sec-11.1.1', 'The this keyword')}}         | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES3', '#sec-11.1.1', 'The this keyword')}}             | {{Spec2('ES3')}}         |                                                    |
+| {{SpecName('ES1', '#sec-11.1.1', 'The this keyword')}}             | {{Spec2('ES1')}}         | Initial definition. Implemented in JavaScript 1.0. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.operators.this")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode">Strict mode</a></li>
- <li><a href="http://bjorn.tipling.com/all-this">All this</a>, um artigo sobre this em diferentes contextos</li>
-</ul>
+- [Strict mode](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)
+- [All this](http://bjorn.tipling.com/all-this), um artigo sobre this em diferentes contextos

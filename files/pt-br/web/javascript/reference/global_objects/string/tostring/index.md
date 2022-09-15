@@ -10,68 +10,46 @@ tags:
   - toString()
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>toString()</code></strong> retorna uma string representando o objeto especificado.</p>
+O método **`toString()`** retorna uma string representando o objeto especificado.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.toString()</code></pre>
+```
+str.toString()
+```
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O objeto {{jsxref("String")}} substitui o método <code>toString()</code> do objeto {{jsxref("Object")}}. Ele não herda {{jsxref("Object.prototype.toString()")}}. Para objetos {{jsxref("String")}}, o método <code>toString()</code> retorna uma representação de string do objeto e é o mesmo que o método {{jsxref("String.prototype.valueOf()")}}.</p>
+O objeto {{jsxref("String")}} substitui o método `toString()` do objeto {{jsxref("Object")}}. Ele não herda {{jsxref("Object.prototype.toString()")}}. Para objetos {{jsxref("String")}}, o método `toString()` retorna uma representação de string do objeto e é o mesmo que o método {{jsxref("String.prototype.valueOf()")}}.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_toString">Usando <code>toString()</code></h3>
+### Usando `toString()`
 
-<p>O exemplo a seguir exibe o valor string de um objeto {{jsxref("String")}}:</p>
+O exemplo a seguir exibe o valor string de um objeto {{jsxref("String")}}:
 
-<pre class="brush: js notranslate">var x = new String('Hello world');
+```js
+var x = new String('Hello world');
 
 console.log(x.toString()); // retorna 'Hello world'
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Definição inicial. Implementado no JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.4.2', 'String.prototype.toString')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.tostring', 'String.prototype.toString')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.tostring', 'String.prototype.toString')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                        | Estado                       | Comentário                                         |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES3')}}                                                                                             | {{Spec2('ES3')}}         | Definição inicial. Implementado no JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.5.4.2', 'String.prototype.toString')}}                             | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES6', '#sec-string.prototype.tostring', 'String.prototype.toString')}}         | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-string.prototype.tostring', 'String.prototype.toString')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
+## Navegadores compatíveis
 
 {{Compat("javascript.builtins.String.toString")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Object.prototype.toSource()")}}</li>
- <li>{{jsxref("String.prototype.valueOf()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("String.prototype.valueOf()")}}

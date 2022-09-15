@@ -6,31 +6,30 @@ tags:
   - memória(2)
 translation_of: Web/JavaScript/Memory_Management
 ---
-<div>{{JsSidebar("Advanced")}}</div>
+{{JsSidebar("Advanced")}}
 
-<h2 id="Introdução">Introdução</h2>
+## Introdução
 
-<p>Linguagens de baixo nível, como C, tem primitivas de gerenciamento de memória de baixo nível como <code>malloc()</code> e <code>free()</code>. Em contrapartida, os valores do JavaScript são alocados quando coisas (objetos, strings, etc.) são criadas e "automaticamente" liberadas quando não são mais usadas. Este último processo se chama <em>garbage collection</em>. Facilmente se torna uma fonte de confusão e dá a impressão aos desenvolvedores JavaScript (e outras linguagens de alto nível) que eles não precisam se preocupar com o consumo de memória. Isto é um erro.</p>
+Linguagens de baixo nível, como C, tem primitivas de gerenciamento de memória de baixo nível como `malloc()` e `free()`. Em contrapartida, os valores do JavaScript são alocados quando coisas (objetos, strings, etc.) são criadas e "automaticamente" liberadas quando não são mais usadas. Este último processo se chama _garbage collection_. Facilmente se torna uma fonte de confusão e dá a impressão aos desenvolvedores JavaScript (e outras linguagens de alto nível) que eles não precisam se preocupar com o consumo de memória. Isto é um erro.
 
-<h2 id="Ciclo_de_vida_da_memória">Ciclo de vida da memória</h2>
+## Ciclo de vida da memória
 
-<p>Independentemente da linguagem de programação, o ciclo de vida da memória é praticamente sempre o mesmo:</p>
+Independentemente da linguagem de programação, o ciclo de vida da memória é praticamente sempre o mesmo:
 
-<ol>
- <li>Alocar a memória que você precisa</li>
- <li>Utilizar a memória alocada (ler, escrever)</li>
- <li>Liberar a memória alocada quando não é mais necessária</li>
-</ol>
+1.  Alocar a memória que você precisa
+2.  Utilizar a memória alocada (ler, escrever)
+3.  Liberar a memória alocada quando não é mais necessária
 
-<p>A primeira e a segunda parte são explícitas em todas as linguagens. A última parte é explicita em linguagens de baixo nível, porém implícito em linguagens de alto nível como JavaScript.</p>
+A primeira e a segunda parte são explícitas em todas as linguagens. A última parte é explicita em linguagens de baixo nível, porém implícito em linguagens de alto nível como JavaScript.
 
-<h3 id="Alocação_no_JavaScript">Alocação no JavaScript</h3>
+### Alocação no JavaScript
 
-<h4 id="Inicialização_de_valor">Inicialização de valor</h4>
+#### Inicialização de valor
 
-<p>A fim de não incomodar o programador com alocações, o JavaScript faz isso com os valores conforme são declarados.</p>
+A fim de não incomodar o programador com alocações, o JavaScript faz isso com os valores conforme são declarados.
 
-<pre class="brush: js">var n = 123; // aloca memória para um número
+```js
+var n = 123; // aloca memória para um número
 var s = "azerty"; // aloca memória para uma string
 
 var o = {
@@ -50,20 +49,22 @@ function f(a) {
 someElement.addEventListener('click', function(){
   someElement.style.backgroundColor = 'blue';
 }, false);
-</pre>
+```
 
-<h4 id="Alocação_via_chamada_de_uma_função">Alocação via chamada de uma função</h4>
+#### Alocação via chamada de uma função
 
-<p>Algumas funções quando chamadas resultam na alocação de um objeto.</p>
+Algumas funções quando chamadas resultam na alocação de um objeto.
 
-<pre class="brush: js">var d = new Date();
+```js
+var d = new Date();
 // aloca um elemento do DOM
 var e = document.createElement('div');
-</pre>
+```
 
-<p>Alguns métodos alocam novos valores ou objetos:</p>
+Alguns métodos alocam novos valores ou objetos:
 
-<pre class="brush: js">var s = "azerty";
+```js
+var s = "azerty";
 var s2 = s.substr(0, 3); // s2 é uma nova string
 // Como as strings são valores imutáveis,
 // o JavaScript pode decidir não alocar memória,
@@ -74,35 +75,36 @@ var a2 = ["generation", "nan nan"];
 var a3 = a.concat(a2);
 // novo vetor com 4 elementos sendo
 // a concatenação dos elementos a e a2
-</pre>
+```
 
-<h3 id="Utilização_de_valores">Utilização de valores</h3>
+### Utilização de valores
 
-<p>A utilização de valores basicamente significa leitura e escrita em memória alocada. Isto pode ser feito ao ler ou escrever o valor de uma variável ou a propriedade de um objeto ou até mesmo ao passar um argumento para uma função.</p>
+A utilização de valores basicamente significa leitura e escrita em memória alocada. Isto pode ser feito ao ler ou escrever o valor de uma variável ou a propriedade de um objeto ou até mesmo ao passar um argumento para uma função.
 
-<h3 id="Libere_quando_a_memória_não_for_mais_necessária">Libere quando a memória não for mais necessária</h3>
+### Libere quando a memória não for mais necessária
 
-<p>A maioria dos problemas relacionados ao gerenciamento de memória aparecem nesta fase. A tarefa mais complicada aqui é descobrir quando "a memória alocada não é mais necessária". Geralmente exige que o desenvolvedor determine a onde no programa tal pedaço da memória não é mais necessária e liberá-la.</p>
+A maioria dos problemas relacionados ao gerenciamento de memória aparecem nesta fase. A tarefa mais complicada aqui é descobrir quando "a memória alocada não é mais necessária". Geralmente exige que o desenvolvedor determine a onde no programa tal pedaço da memória não é mais necessária e liberá-la.
 
-<p>Linguagens de alto nível vêm com um pedaço de software chamado "garbage collector" (coletor de sujeira), cujo trabalho é monitorar a alocação de memória a fim de descobrir quando um pedaço de código não é mais necessário e neste caso, automaticamente liberá-lo. Este processo é algo aproximado já que, em geral, saber se um pedaço de memória é necessário é algo <a class="external" href="http://pt.wikipedia.org/wiki/Decidibilidade">indecidível</a> (que não pode ser resolvido através de um algoritmo).</p>
+Linguagens de alto nível vêm com um pedaço de software chamado "garbage collector" (coletor de sujeira), cujo trabalho é monitorar a alocação de memória a fim de descobrir quando um pedaço de código não é mais necessário e neste caso, automaticamente liberá-lo. Este processo é algo aproximado já que, em geral, saber se um pedaço de memória é necessário é algo [indecidível](http://pt.wikipedia.org/wiki/Decidibilidade) (que não pode ser resolvido através de um algoritmo).
 
-<h2 id="Garbage_collection">Garbage collection</h2>
+## Garbage collection
 
-<p>Como foi mencionado acima, em geral o problema de automaticamente descobrir se a memória "não é mais necessária" é indecidível. Como consequência, os <em>garbage collections</em> implementam uma limitação de uma solução ao problema em geral. Esta seção irá explicar os conceitos necessários para entender os principais algoritmos de garbage collection e suas limitações.</p>
+Como foi mencionado acima, em geral o problema de automaticamente descobrir se a memória "não é mais necessária" é indecidível. Como consequência, os _garbage collections_ implementam uma limitação de uma solução ao problema em geral. Esta seção irá explicar os conceitos necessários para entender os principais algoritmos de garbage collection e suas limitações.
 
-<h3 id="Referências">Referências</h3>
+### Referências
 
-<p>O principal conceito de algoritmos do garbage collection depende do conceito de <em>referência</em>. Dentro do contexto de gerenciamento de memória, é dito que um objeto faz referência a outro, caso o primeiro tenha acesso a este último (de maneira implícita ou explícita). Por exemplo, um objeto JavaScript tem uma referência ao seu <a href="/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain">prototype</a> (referência implícita) e para os valores de suas propriedades (referência explícita).</p>
+O principal conceito de algoritmos do garbage collection depende do conceito de _referência_. Dentro do contexto de gerenciamento de memória, é dito que um objeto faz referência a outro, caso o primeiro tenha acesso a este último (de maneira implícita ou explícita). Por exemplo, um objeto JavaScript tem uma referência ao seu [prototype](/pt-BR/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) (referência implícita) e para os valores de suas propriedades (referência explícita).
 
-<p>Neste contexto, o conceito de "objeto" se extende para algo mais abrangente do que os objetos comuns do JavaScript, e também contém escopos de função (ou o escopo lexical global).</p>
+Neste contexto, o conceito de "objeto" se extende para algo mais abrangente do que os objetos comuns do JavaScript, e também contém escopos de função (ou o escopo lexical global).
 
-<h3 id="Referência_de_contagem_do_garbage_collection">Referência de contagem do garbage collection</h3>
+### Referência de contagem do garbage collection
 
-<p>Este é o algoritmo mais ingênuo de garbage collection. este algoritmo reduz a definição de "um objeto não mais necessário" para "um objeto não tem outro objeto referenciando ele". Um objeto pode ser coletado pelo garbage collector se não existir referência apontando para este objeto.</p>
+Este é o algoritmo mais ingênuo de garbage collection. este algoritmo reduz a definição de "um objeto não mais necessário" para "um objeto não tem outro objeto referenciando ele". Um objeto pode ser coletado pelo garbage collector se não existir referência apontando para este objeto.
 
-<h4 id="Exemplo">Exemplo</h4>
+#### Exemplo
 
-<pre class="brush: js">var o = {
+```js
+var o = {
   a: {
     b:2
   }
@@ -130,13 +132,14 @@ o2 = "yo"; // O objeto que estava originalmente em 'o' agora não tem
 
 oa = null; // O que era a propriedade 'a' do objeto original em 'o'
            // não tem mais refêrencia para ele. Então pode ser coletado.
-</pre>
+```
 
-<h4 id="Limitação_ciclos">Limitação : ciclos</h4>
+#### Limitação : ciclos
 
-<p>Esse algoritmo ingênuo tem a limitação de que objetos que referenciam um ao outro (e formam um ciclo), podem ser "não mais necessários" e ainda assim não serem coletados.</p>
+Esse algoritmo ingênuo tem a limitação de que objetos que referenciam um ao outro (e formam um ciclo), podem ser "não mais necessários" e ainda assim não serem coletados.
 
-<pre class="brush: js">function f(){
+```js
+function f(){
   var o = {};
   var o2 = {};
   o.a = o2; // o referencia o2
@@ -152,46 +155,45 @@ f();
 // Entretanto, o algoritmo contador de referências considera que desde que ambos
 // os objetos sejam referenciados pelo menos uma vez,
 // nenhum deles podem ser coletados.
-</pre>
+```
 
-<h4 id="Exemplo_da_vida_real">Exemplo da vida real</h4>
+#### Exemplo da vida real
 
-<p>Internet Explorer 6 e 7 são conhecidos por terem um coletor com contador de referências para os objetos do DOM. Ciclos são um erro comum que podem gerar erros na memória:</p>
+Internet Explorer 6 e 7 são conhecidos por terem um coletor com contador de referências para os objetos do DOM. Ciclos são um erro comum que podem gerar erros na memória:
 
-<pre class="brush: js">var div;
+```js
+var div;
 window.onload = function(){
   div = document.getElementById("minhaDiv");
   div.referenciaCircular = div;
   div.muitosDados = new Array(10000).join("*");
 };
-</pre>
+```
 
-<p>No exemplo acima, o elemento do DOM "minhaDiv" tem uma referência circular para ela mesma na propriedade "referenciaCircular". Se a propriedade não for removida ou anulada explicitamente, o contador de referências do coletor sempre terá pelo menos uma referência intacta e irá manter o elemento do DOM na memória mesmo se ele for removido da árvore do DOM. Se o elemento do DOM retém muitos dados (ilustrado no exemplo acima com a propriedade "muitosDados"), a memória consumida por esses dados não será liberada.</p>
+No exemplo acima, o elemento do DOM "minhaDiv" tem uma referência circular para ela mesma na propriedade "referenciaCircular". Se a propriedade não for removida ou anulada explicitamente, o contador de referências do coletor sempre terá pelo menos uma referência intacta e irá manter o elemento do DOM na memória mesmo se ele for removido da árvore do DOM. Se o elemento do DOM retém muitos dados (ilustrado no exemplo acima com a propriedade "muitosDados"), a memória consumida por esses dados não será liberada.
 
-<h3 id="Algoritmo_de_varredura_e_rotulação">Algoritmo de varredura e rotulação</h3>
+### Algoritmo de varredura e rotulação
 
-<p>Esse algoritmo reduz a definição de "um objeto não é mais necessário" para "um objeto é inacessível".</p>
+Esse algoritmo reduz a definição de "um objeto não é mais necessário" para "um objeto é inacessível".
 
-<p>Esse algoritmo assume o conhecimento de uma lista de objetos chamada <em>roots </em>(raízes) (no JavaScript, o root é o objeto global). Periodicamente, o coletor iniciará por esses roots, encontrando todos os objetos que são referenciados por esses roots, então todos os objetos referenciados por eles, etc. Começando pelos roots, o coletor encontrará todos os objetos acessíveis e coletará todos os objetos inacessíveis.</p>
+Esse algoritmo assume o conhecimento de uma lista de objetos chamada _roots_ (raízes) (no JavaScript, o root é o objeto global). Periodicamente, o coletor iniciará por esses roots, encontrando todos os objetos que são referenciados por esses roots, então todos os objetos referenciados por eles, etc. Começando pelos roots, o coletor encontrará todos os objetos acessíveis e coletará todos os objetos inacessíveis.
 
-<p>Esse algoritmo é melhor que o anterior pois "um objeto que não tem referência" leva a esse objeto inacessível. O oposto não é verdadeiro como nós vimos com os ciclos.</p>
+Esse algoritmo é melhor que o anterior pois "um objeto que não tem referência" leva a esse objeto inacessível. O oposto não é verdadeiro como nós vimos com os ciclos.
 
-<p>A partir de 2012, todos os navegadores modernos vem com um coletor com varredura e rotulação. Todas as melhorias feitas nessa área do coletor do JavaScript (geracional/incremental/concorrência/coletor paralelo) nos últimos anos são implementações melhoradas deste algoritmo, mas não melhorias para o coletor propriamente nem a redução da definição de quando "um objeto não é mais necessário".</p>
+A partir de 2012, todos os navegadores modernos vem com um coletor com varredura e rotulação. Todas as melhorias feitas nessa área do coletor do JavaScript (geracional/incremental/concorrência/coletor paralelo) nos últimos anos são implementações melhoradas deste algoritmo, mas não melhorias para o coletor propriamente nem a redução da definição de quando "um objeto não é mais necessário".
 
-<h4 id="Ciclos_não_são_mais_um_problema">Ciclos não são mais um problema</h4>
+#### Ciclos não são mais um problema
 
-<p>No primeiro exemplo, depois do retorno da chamada da função, os 2 objetos não são mais referenciados por algo acessível pelo objeto global. Consequentemente, eles não serão acessíveis pelo coletor.</p>
+No primeiro exemplo, depois do retorno da chamada da função, os 2 objetos não são mais referenciados por algo acessível pelo objeto global. Consequentemente, eles não serão acessíveis pelo coletor.
 
-<p>A mesma coisa acontece com o segundo exemplo. Uma vez que o div e o seu gerenciador de eventos se tornem inacessíveis pelos roots, ambos podem ser coletados, apesar de referenciar um ao outro.</p>
+A mesma coisa acontece com o segundo exemplo. Uma vez que o div e o seu gerenciador de eventos se tornem inacessíveis pelos roots, ambos podem ser coletados, apesar de referenciar um ao outro.
 
-<h4 id="Limitação_objetos_devem_ser_feitos_explicitamente_inacessíveis">Limitação: objetos devem ser feitos explicitamente inacessíveis</h4>
+#### Limitação: objetos devem ser feitos explicitamente inacessíveis
 
-<p>Apesar disso ser marcado como uma limitação, isso é algo raro na prática e é por isso que ninguém se importa muito sobre o coletor.</p>
+Apesar disso ser marcado como uma limitação, isso é algo raro na prática e é por isso que ninguém se importa muito sobre o coletor.
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a class="external" href="http://www.ibm.com/developerworks/web/library/wa-memleak/">IBM article on "Memory leak patterns in JavaScript" (2007)</a></li>
- <li><a class="external" href="http://msdn.microsoft.com/en-us/magazine/ff728624.aspx">Kangax article on how to register event handler and avoid memory leaks (2010)</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Performance" title="https://developer.mozilla.org/en-US/docs/Mozilla/Performance">Performance</a></li>
-</ul>
+- [IBM article on "Memory leak patterns in JavaScript" (2007)](http://www.ibm.com/developerworks/web/library/wa-memleak/)
+- [Kangax article on how to register event handler and avoid memory leaks (2010)](http://msdn.microsoft.com/en-us/magazine/ff728624.aspx)
+- [Performance](/pt-BR/docs/Mozilla/Performance)

@@ -8,28 +8,30 @@ tags:
   - SyntaxError
 translation_of: Web/JavaScript/Reference/Errors/Missing_formal_parameter
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Mensagem">Mensagem</h2>
+## Mensagem
 
-<pre class="syntaxbox">SyntaxError: missing formal parameter (Firefox)
-</pre>
+```
+SyntaxError: missing formal parameter (Firefox)
+```
 
-<h2 id="Tipo_de_error">Tipo de error</h2>
+## Tipo de error
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="O_que_deu_errado">O que deu errado?</h2>
+## O que deu errado?
 
-<p>"Parâmetro Formal" é uma maneira elegante de dizer "parâmetro de função". Faltam parâmetros válidos em sua função. Na declaração de uma função os parâmetros devem ser {{Glossary("Identifier", "identifiers")}}, em vez de um valor como números, strings ou objetos. Declarar funções e chamar funções são dois passos diferentes. Declarações exigem identificadores como parâmetros e é apenas ao chamar (invocar) a função que você fornece os valores que a função deve usar.</p>
+"Parâmetro Formal" é uma maneira elegante de dizer "parâmetro de função". Faltam parâmetros válidos em sua função. Na declaração de uma função os parâmetros devem ser {{Glossary("Identifier", "identifiers")}}, em vez de um valor como números, strings ou objetos. Declarar funções e chamar funções são dois passos diferentes. Declarações exigem identificadores como parâmetros e é apenas ao chamar (invocar) a função que você fornece os valores que a função deve usar.
 
-<p>Em {{glossary("JavaScript")}}, identificadores podem obter apenas caracteres alfanuméricos (ou "$" e "_"), e não podem começar com um número. Um identificador difere de uma <strong>string</strong> porque uma string é um dado, enquanto que um identificador é parte do código.</p>
+Em {{glossary("JavaScript")}}, identificadores podem obter apenas caracteres alfanuméricos (ou "$" e "\_"), e não podem começar com um número. Um identificador difere de uma **string** porque uma string é um dado, enquanto que um identificador é parte do código.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>Parâmetros de função devem ser identificadores ao se configurar uma função. Todas essas declarações de função abaixo falham, pois estão fornecendo valores para seus parâmetros:</p>
+Parâmetros de função devem ser identificadores ao se configurar uma função. Todas essas declarações de função abaixo falham, pois estão fornecendo valores para seus parâmetros:
 
-<pre class="brush: js example-bad">function quadrado(3) {
+```js example-bad
+function quadrado(3) {
   return numero * numero;
 };
 // SyntaxError: missing formal parameter
@@ -43,11 +45,12 @@ function log({ obj: "valor"}) {
   console.log(arg)
 };
 // SyntaxError: missing formal parameter
-</pre>
+```
 
-<p>Você terá de usar identificadores nas declarações de função:</p>
+Você terá de usar identificadores nas declarações de função:
 
-<pre class="brush: js example-good">function quadrado(numero) {
+```js example-good
+function quadrado(numero) {
   return numero * numero;
 };
 
@@ -57,24 +60,22 @@ function saudar(saudacao) {
 
 function log(arg) {
   console.log(arg)
-};</pre>
+};
+```
 
-<p>You can then call these functions with the arguments you like:</p>
+You can then call these functions with the arguments you like:
 
-<pre class="brush: js">quadrado(2); // 4
+```js
+quadrado(2); // 4
 
 saudar("Olá"); // "Olá"
 
 log({obj: "valor"}); // Object { obj: "valor" }
-</pre>
+```
 
-<h2 id="Ver_também">Ver também</h2>
+## Ver também
 
-<ul>
- <li>Outros erros referentes a parâmetros formais:
-  <ul>
-   <li><a href="/en-US/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter">SyntaxError: Parâmetro formal mal formado</a></li>
-   <li><a href="/en-US/docs/Web/JavaScript/Reference/Errors/Redeclared_parameter">SyntaxError: redeclaração de parâmetro formal "x"</a></li>
-  </ul>
- </li>
-</ul>
+- Outros erros referentes a parâmetros formais:
+
+  - [SyntaxError: Parâmetro formal mal formado](/pt-BR/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter)
+  - [SyntaxError: redeclaração de parâmetro formal "x"](/pt-BR/docs/Web/JavaScript/Reference/Errors/Redeclared_parameter)

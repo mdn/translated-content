@@ -6,62 +6,53 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/keys
 ---
-<div>{{JSRef("Global_Objects", "Array")}}</div>
+{{JSRef("Global_Objects", "Array")}}
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+## Sumário
 
-<p>O método <code><strong>keys()</strong></code> retorna um novo <code><strong>Array Iterator</strong></code> que contém as chaves para cada <em>index</em> do array.</p>
+O método **`keys()`** retorna um novo **`Array Iterator`** que contém as chaves para cada _index_ do array.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code><var>arr</var>.keys()</code></pre>
+```
+arr.keys()
+```
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<h3 id="Exemplo_uso_básico">Exemplo: uso básico</h3>
+### Exemplo: uso básico
 
-<pre class="brush: js">var arr = ["a", "b", "c"];
+```js
+var arr = ["a", "b", "c"];
 var iterator = arr.keys();
 
 console.log(iterator.next()); // { value: 0, done: false }
 console.log(iterator.next()); // { value: 1, done: false }
 console.log(iterator.next()); // { value: 2, done: false }
 console.log(iterator.next()); // { value: undefined, done: true }
-</pre>
+```
 
-<h3 id="Exemplo_keys_iterator_não_ignora_lacunas">Exemplo: keys iterator não ignora lacunas</h3>
+### Exemplo: keys iterator não ignora lacunas
 
-<pre class="brush: js">var arr = ["a", , "c"];
+```js
+var arr = ["a", , "c"];
 var sparseKeys = Object.keys(arr);
 var denseKeys = [...arr.keys()];
 console.log(sparseKeys); // [0, 2]
 console.log(denseKeys);  // [0, 1, 2]
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.keys', 'Array.prototype.keys')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                    | Status               | Comentário         |
+| ------------------------------------------------------------------------------------------------ | -------------------- | ------------------ |
+| {{SpecName('ES6', '#sec-array.prototype.keys', 'Array.prototype.keys')}} | {{Spec2('ES6')}} | Definição inicial. |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade de Browser</h2>
+## Compatibilidade de Browser
 
 {{Compat("javascript.builtins.Array.keys")}}
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Array.prototype.values()")}}</li>
- <li>{{jsxref("Array.prototype.entries()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.values()")}}
+- {{jsxref("Array.prototype.entries()")}}
