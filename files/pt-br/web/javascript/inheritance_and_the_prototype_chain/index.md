@@ -185,5 +185,3 @@ O único bom motivo para estender um protótipo nativo do JavaScript é para dar
 ### Conclusão
 
 É essencial entender bem "prototypal inheritance" antes de escrever códigos complexos. Tome cuidado com o tamanho da sua cadeia de protótipos, quebre a cadeia caso necessário para evitar problemas de performance. Nunca estenda protótipos nativos a menos que seja para conseguir compatibilidade com novas "features" do JavaScript.
-
-{{ languages( {"zh-cn": "zh-cn/JavaScript/Guide/Inheritance\_and\_the\_prototype\_chain" } ) }}
