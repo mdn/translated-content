@@ -10,92 +10,76 @@ tags:
   - padEnd()
 translation_of: Web/JavaScript/Reference/Global_Objects/String/padEnd
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code>padEnd()</code> preenche a string original com um determinado caractere, ou conjunto de caraceres, (repetidamente, se necessário) para que a string resultante alcance um determinado comprimento. O preenchimento é aplicado a partir do final (direita) da string original. A string original não é modificada.</p>
+O método `padEnd()` preenche a string original com um determinado caractere, ou conjunto de caraceres, (repetidamente, se necessário) para que a string resultante alcance um determinado comprimento. O preenchimento é aplicado a partir do final (direita) da string original. A string original não é modificada.
 
-<div>{{EmbedInteractiveExample("pages/js/string-padend.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-padend.html")}}
 
+## Sintaxe
 
+```
+str.padEnd(targetLength [, padString])
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Parâmetros
 
-<pre class="syntaxbox notranslate"><var>str</var>.padEnd(<var>targetLength</var> [, <var>padString</var>])</pre>
+- `targetLength`
+  - : O comprimento da string resultante após a string original ter sido preenchida. Se o valor for menor do que o próprio comprimento da string original, a string original é retornada sem modificações.
+- `padString`
+  - : Opcional. O caractere (ou caracteres) que deve completar a string atual. Caso o comprimento desta string seja muito longo, estando acima do comprimento alvo, ela será truncada e sua parte esquerda restante é aplicada. O valor padrão para esse parâmetro é "` `" (`U+0020`).
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Valor retornado
 
-<dl>
- <dt><code>targetLength</code></dt>
- <dd>O comprimento da string resultante após a string original ter sido preenchida. Se o valor for menor do que o próprio comprimento da string original, a string original é retornada sem modificações.</dd>
- <dt><code>padString</code></dt>
- <dd>Opcional. O caractere (ou caracteres) que deve completar a string atual. Caso o comprimento desta string seja muito longo, estando acima do comprimento alvo, ela será truncada e sua parte esquerda restante é aplicada. O valor padrão para esse parâmetro é  "<code> </code>" (<code>U+0020</code>).</dd>
-</dl>
+Uma {{jsxref("String")}} cuja composição vem da string original, completada por um ou mais caracteres de preenchimento, respeitando o comprimento alvo.
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+## Exemplos
 
-<p>Uma {{jsxref("String")}} cuja composição vem da string original, completada por um ou mais caracteres de preenchimento, respeitando o comprimento alvo.</p>
+### Usando padEnd
 
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Usando_padEnd">Usando padEnd</h3>
-
-<pre class="brush: js notranslate">'abc'.padEnd(10);          // "abc       "
+```js
+'abc'.padEnd(10);          // "abc       "
 'abc'.padEnd(10, "foo");   // "abcfoofoof"
 'abc'.padEnd(6, "123456"); // "abc123"
-'abc'.padEnd(1);           // "abc"</pre>
+'abc'.padEnd(1);           // "abc"
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Rodando o seguinte código antes de qualquer código irá criar o método <code>String.prototype.padEnd()</code> caso ele não esteja disponível nativamente:</p>
+Rodando o seguinte código antes de qualquer código irá criar o método `String.prototype.padEnd()` caso ele não esteja disponível nativamente:
 
-<pre class="brush: js notranslate">// https://github.com/uxitten/polyfill/blob/master/string.polyfill.js
+```js
+// https://github.com/uxitten/polyfill/blob/master/string.polyfill.js
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd
 if (!String.prototype.padEnd) {
     String.prototype.padEnd = function padEnd(targetLength,padString) {
-        targetLength = targetLength&gt;&gt;0; //floor if number or convert non-number to 0;
+        targetLength = targetLength>>0; //floor if number or convert non-number to 0;
         padString = String((typeof padString !== 'undefined' ? padString : ' '));
-        if (this.length &gt; targetLength) {
+        if (this.length > targetLength) {
             return String(this);
         }
         else {
             targetLength = targetLength-this.length;
-            if (targetLength &gt; padString.length) {
+            if (targetLength > padString.length) {
                 padString += padString.repeat(targetLength/padString.length); //append to original to ensure we are longer than needed
             }
             return String(this) + padString.slice(0,targetLength);
         }
     };
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.padend', 'String.prototype.padEnd')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Definição inicial no ECMAScript 2017.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES8', '#sec-string.prototype.padend', 'String.prototype.padEnd')}}</td>
-   <td>{{Spec2('ES8')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                | Status                       | Comentário                            |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------- |
+| {{SpecName('ESDraft', '#sec-string.prototype.padend', 'String.prototype.padEnd')}} | {{Spec2('ESDraft')}} | Definição inicial no ECMAScript 2017. |
+| {{SpecName('ES8', '#sec-string.prototype.padend', 'String.prototype.padEnd')}}     | {{Spec2('ES8')}}         |                                       |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.String.padEnd")}}</p>
+{{Compat("javascript.builtins.String.padEnd")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("String.prototype.padStart()")}}</li>
-</ul>
+- {{jsxref("String.prototype.padStart()")}}

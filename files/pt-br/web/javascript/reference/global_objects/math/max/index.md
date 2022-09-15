@@ -7,101 +7,87 @@ tags:
   - Method
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/max
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+## Sumário
 
-<p>A função <code><strong>Math.max()</strong></code> retorna o maior de um ou mais números.</p>
+A função **`Math.max()`** retorna o maior de um ou mais números.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code>Math.max([<em>valor1</em>[,<em>valor2</em>, ...]]) </code></pre>
+```
+Math.max([valor1[,valor2, ...]])
+```
 
-<h3 id="Parameters" name="Parameters">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>valor1, valor2, ...</code></dt>
- <dd>Números.</dd>
-</dl>
+- `valor1, valor2, ...`
+  - : Números.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>O maior dos números passados como argumentos. Se pelo menos um dos argumentos não puder ser convertido para um número {{jsxref("NaN")}} é retornado.</p>
+O maior dos números passados como argumentos. Se pelo menos um dos argumentos não puder ser convertido para um número {{jsxref("NaN")}} é retornado.
 
-<h2 id="Description" name="Description">Descrição</h2>
+## Descrição
 
-<p>Por <code>max</code> ser um método estático em <code>Math</code>, você sempre irá usá-lo da seguinte maneira <code>Math.max()</code>, e não como um método da classe <code>Math</code> que você tenha instanciado.</p>
+Por `max` ser um método estático em `Math`, você sempre irá usá-lo da seguinte maneira `Math.max()`, e não como um método da classe `Math` que você tenha instanciado.
 
-<p>Se nenhum argumento for passado o resultado sempre será - {{jsxref("Global_Objects/Infinity", "Infinity")}}.</p>
+Se nenhum argumento for passado o resultado sempre será - {{jsxref("Global_Objects/Infinity", "Infinity")}}.
 
-<p>Se um dos argumentos não puder ser convertido em um número, o resultado será {{jsxref("Global_Objects/NaN", "NaN")}}.</p>
+Se um dos argumentos não puder ser convertido em um número, o resultado será {{jsxref("Global_Objects/NaN", "NaN")}}.
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<h3 id="Example:_Using_Math.max" name="Example:_Using_Math.max">Usando <code>Math.max</code></h3>
+### Usando `Math.max`
 
-<pre class="brush: js">Math.max(10, 20);   //  20
+```js
+Math.max(10, 20);   //  20
 Math.max(-10, -20); // -10
 Math.max(-10, 20);  //  20
-</pre>
+```
 
-<h3 id="Retornando_o_maior_elemento_de_um_array">Retornando o maior elemento de um array</h3>
+### Retornando o maior elemento de um array
 
-<p>{{jsxref("Array.prototype.reduce", "Array.reduce()")}} pode ser usada para encontrar o maior elemento em um vetor numérico, comparando cada valor:</p>
+{{jsxref("Array.prototype.reduce", "Array.reduce()")}} pode ser usada para encontrar o maior elemento em um vetor numérico, comparando cada valor:
 
-<pre class="brush: js">var arr = [1, 2, 3];
+```js
+var arr = [1, 2, 3];
 var max = arr.reduce(function(a, b) {
   return Math.max(a, b);
-}, -Infinity);</pre>
+}, -Infinity);
+```
 
-<p>A função a seguir utiliza {{jsxref("Function.prototype.apply()")}} para encontrar o elemento de maior valor dentro do array. <code>getMaxOfArray([1,2,3])</code> é equivalente a <code>Math.max(1, 2, 3)</code>, mas você pode usar <code>getMaxOfArray</code>  em arrays construídos programaticamente e o ideal é utilizá-la somente em arrays com relativamente poucos elementos.</p>
+A função a seguir utiliza {{jsxref("Function.prototype.apply()")}} para encontrar o elemento de maior valor dentro do array. `getMaxOfArray([1,2,3])` é equivalente a `Math.max(1, 2, 3)`, mas você pode usar `getMaxOfArray` em arrays construídos programaticamente e o ideal é utilizá-la somente em arrays com relativamente poucos elementos.
 
-<pre class="brush:js">function getMaxOfArray(numArray) {
+```js
+function getMaxOfArray(numArray) {
     return Math.max.apply(null, numArray);
-}</pre>
+}
+```
 
-<p>O novo <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator">operador spread</a> é um modo curto de se escrever a solução com <code>apply</code> para retornar o maior valor de um array.</p>
+O novo [operador spread](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator) é um modo curto de se escrever a solução com `apply` para retornar o maior valor de um array.
 
-<pre class="brush: js">var arr = [1, 2, 3];
+```js
+var arr = [1, 2, 3];
 var max = Math.max(...arr);
-// max: 3</pre>
+// max: 3
+```
 
-<p>Entretanto, tanto spread(<code>...</code>) quanto <code>apply</code> irão ou falhar ou retornar o resultado errado caso o array tenha muitos elementos, porque eles tentam passar o array de elementos como parâmetros de funções. Veja <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#Usando_apply_e_funções_embutidas">usando apply e funções embutidas</a> para mais detalhes. A solução com <code>reduce</code> não apresenta esse problema.</p>
+Entretanto, tanto spread(`...`) quanto `apply` irão ou falhar ou retornar o resultado errado caso o array tenha muitos elementos, porque eles tentam passar o array de elementos como parâmetros de funções. Veja [usando apply e funções embutidas](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#Usando_apply_e_funções_embutidas) para mais detalhes. A solução com `reduce` não apresenta esse problema.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1st Edition. Implemented in JavaScript 1.0</td>
-   <td>Standard</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-15.8.2.11', 'Math.max')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.max', 'Math.max')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                    | Status                   | Comentário          |
+| ---------------------------------------------------------------- | ------------------------ | ------------------- |
+| ECMAScript 1st Edition. Implemented in JavaScript 1.0            | Standard                 | Initial definition. |
+| {{SpecName('ES6', '#sec-15.8.2.11', 'Math.max')}} | {{Spec2('ES5.1')}} |                     |
+| {{SpecName('ES6', '#sec-math.max', 'Math.max')}} | {{Spec2('ES6')}}     |                     |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Math.max")}}
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>O objeto {{jsxref("Global_Objects/Math", "Math")}} pertence a.</li>
- <li>{{jsxref("Math.min()")}}</li>
-</ul>
+- O objeto {{jsxref("Global_Objects/Math", "Math")}} pertence a.
+- {{jsxref("Math.min()")}}

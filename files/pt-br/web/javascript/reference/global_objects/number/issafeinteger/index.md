@@ -7,48 +7,44 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>Number.isSafeInteger()</code></strong> determina se o valor fornecido é seja um número seguro.</p>
+O método **`Number.isSafeInteger()`** determina se o valor fornecido é seja um número seguro.
 
-<div>{{EmbedInteractiveExample("pages/js/number-issafeinteger.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-issafeinteger.html")}}
 
+Um inteiro seguro é um inteiro que:
 
+- pode ser representando exatamente como um número IEEE-754 de dupla precisão e
+- pode ser representando exatamente como um número IEEE-754
+  de precisão dupla e
+- cuja representação IEEE-754 não pode ser o resultado do arrendodamento de qualquer outro número inteiro para se ajustar ao IEEE-754.
 
-<p>Um inteiro seguro é um inteiro que:</p>
+Exemplo, `253 - 1` é um inteiro seguro: pode ser exatamente representado, e nenhum outro numero arredondado existe para ele na represetanção IEEE-754. Em contexto, `253` _não_ é um inteiro seguro: pode ser representado em IEEE-754, mas um inteiro `253 + 1` não pode ser diretamente representado em IEEE-754 mas instanciado do arrendamento de `253` sob arrendamento para o mais próximo e do arrendamento de zero a zero. Os inteiros seguros consistem em todos os inteiros de `-(253 - 1)` inclusive para `253 - 1` (sendo ± `9007199254740991` ou ± 9,007,199,254,740,991).
 
-<ul>
- <li>pode ser representando exatamente como um número IEEE-754 de dupla precisão e</li>
- <li>pode ser representando exatamente como um número IEEE-754<br>
-  de precisão dupla e</li>
- <li>cuja representação IEEE-754 não pode ser o resultado do arrendodamento de qualquer outro número inteiro para se ajustar ao IEEE-754.</li>
-</ul>
+A manipulação de valores entre \~9 quadrilhões com precisão total requer o uso de [arbitrary precision arithmetic library](https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic) (biblioteca aritmética de precisão arbitrária). Veja [What Every Programmer Needs to Know about Floating Point Arithmetic](http://floating-point-gui.de/) (o que todo programador precisa saber sobre aritmética de ponto flutuante) para mais informações sobre represetanções de número de ponto flutuante.
 
-<p>Exemplo, <code>2<sup>53</sup> - 1</code> é um inteiro seguro: pode ser exatamente representado, e nenhum outro numero arredondado existe para ele na represetanção IEEE-754. Em contexto, <code>2<sup>53</sup></code> <em>não</em> é um inteiro seguro: pode ser representado em IEEE-754, mas um inteiro <code>2<sup>53</sup> + 1</code> não pode ser diretamente representado em IEEE-754 mas instanciado do arrendamento de <code>2<sup>53</sup></code> sob arrendamento para o mais próximo e do arrendamento de zero a zero. Os inteiros seguros consistem em todos os inteiros de <code>-(2<sup>53</sup> - 1)</code> inclusive para <code>2<sup>53</sup> - 1</code> (sendo ± <code>9007199254740991</code> ou ± 9,007,199,254,740,991).  </p>
+Para números inteiros maiores, considere o uso do tipo {{jsxref("BigInt")}}.
 
-<p>A manipulação de valores entre ~9 quadrilhões com precisão total requer o uso de <a href="https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic">arbitrary precision arithmetic library</a> (biblioteca aritmética de precisão arbitrária).  Veja <a href="http://floating-point-gui.de/">What Every Programmer Needs to Know about Floating Point Arithmetic</a> (o que todo programador precisa saber sobre aritmética de ponto flutuante) para mais informações sobre represetanções de número de ponto flutuante.</p>
+## Sintaxe
 
-<p>Para números inteiros maiores, considere o uso do tipo {{jsxref("BigInt")}}.</p>
+```
+Number.isSafeInteger(valorTest)
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Parâmetros
 
-<pre class="syntaxbox"><code>Number.isSafeInteger(valorTest)</code>
-</pre>
+- `valorTest`
+  - : O valor a ser testado pode ser um número inteiro seguro.
 
-<h3 id="Parâmetros"><strong>Parâmetros</strong></h3>
+### Retorno
 
-<dl>
- <dt><code>valorTest</code></dt>
- <dd>O valor a ser testado pode ser um número inteiro seguro.</dd>
-</dl>
+Um {{jsxref("Boolean")}} indica se o valor fornecido é um número seguro ou não.
 
-<h3 id="Retorno">Retorno</h3>
+## Exemplos
 
-<p>Um {{jsxref("Boolean")}} indica se o valor fornecido é um número seguro ou não.</p>
-
-<h2 id="Exemplos">Exemplos</h2>
-
-<pre class="brush: js">Number.isSafeInteger(3);                    // true
+```js
+Number.isSafeInteger(3);                    // true
 Number.isSafeInteger(Math.pow(2, 53));      // false
 Number.isSafeInteger(Math.pow(2, 53) - 1);  // true
 Number.isSafeInteger(NaN);                  // false
@@ -56,46 +52,30 @@ Number.isSafeInteger(Infinity);             // false
 Number.isSafeInteger('3');                  // false
 Number.isSafeInteger(3.1);                  // false
 Number.isSafeInteger(3.0);                  // true
-</pre>
+```
 
-<h2 id="Polyfill_caso_não_exista_suporte">Polyfill (caso não exista suporte)</h2>
+## Polyfill (caso não exista suporte)
 
-<pre class="brush: js">Number.isSafeInteger = Number.isSafeInteger || function (value) {
-   return Number.isInteger(value) &amp;&amp; Math.abs(value) &lt;= Number.MAX_SAFE_INTEGER;
+```js
+Number.isSafeInteger = Number.isSafeInteger || function (value) {
+   return Number.isInteger(value) && Math.abs(value) <= Number.MAX_SAFE_INTEGER;
 };
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Coméntario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-number.issafeinteger', 'Number.isSafeInteger')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definição inicial</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.issafeinteger', 'Number.isSafeInteger')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                        | Status                       | Coméntario        |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------- |
+| {{SpecName('ES2015', '#sec-number.issafeinteger', 'Number.isSafeInteger')}} | {{Spec2('ES2015')}}     | Definição inicial |
+| {{SpecName('ESDraft', '#sec-number.issafeinteger', 'Number.isSafeInteger')}} | {{Spec2('ESDraft')}} |                   |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Number.isSafeInteger")}}</p>
+{{Compat("javascript.builtins.Number.isSafeInteger")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>O objeto pertence a {{jsxref("Number")}}</li>
- <li>{{jsxref("Number.MIN_SAFE_INTEGER")}}</li>
- <li>{{jsxref("Number.MAX_SAFE_INTEGER")}}</li>
- <li>{{jsxref("BigInt")}}</li>
-</ul>
+- O objeto pertence a {{jsxref("Number")}}
+- {{jsxref("Number.MIN_SAFE_INTEGER")}}
+- {{jsxref("Number.MAX_SAFE_INTEGER")}}
+- {{jsxref("BigInt")}}

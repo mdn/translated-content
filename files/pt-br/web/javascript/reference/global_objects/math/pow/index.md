@@ -10,32 +10,33 @@ tags:
   - potência
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/pow
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>A função <strong><code>Math.pow()</code></strong> retorna a <em>base </em>elevada ao expoente <em>power</em>, ou seja, <code>base<sup>expoente</sup></code>.</p>
+A função **`Math.pow()`** retorna a _base_ elevada ao expoente _power_, ou seja, `baseexpoente`.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code>Math.pow(<var>base</var>, <var>expoente</var>)</code></pre>
+```
+Math.pow(base, expoente)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>base</code></dt>
- <dd>O número da base.</dd>
- <dt><code>expoente</code></dt>
- <dd>O expoente usado para elevar a <code>base</code>.</dd>
-</dl>
+- `base`
+  - : O número da base.
+- `expoente`
+  - : O expoente usado para elevar a `base`.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Como <code>pow()</code> é um método estático de <code>Math</code>, você sempre irá usá-lo como <code>Math.pow()</code>, ao invés de usá-lo como um método de um objeto do tipo <code>Math</code> que você tenha criado (<code>Math</code> não é um construtor).</p>
+Como `pow()` é um método estático de `Math`, você sempre irá usá-lo como `Math.pow()`, ao invés de usá-lo como um método de um objeto do tipo `Math` que você tenha criado (`Math` não é um construtor).
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_Math.pow()">Usando <code>Math.pow()</code></h3>
+### Usando `Math.pow()`
 
-<pre class="brush: js">// simples
+```js
+// simples
 Math.pow(7, 2);    // 49
 Math.pow(7, 3);    // 343
 Math.pow(2, 10);   // 1024
@@ -45,8 +46,8 @@ Math.pow(8, 1/3);  // 2 (raiz cúbica de 8)
 Math.pow(2, 0.5);  // 1.4142135623730951 (raiz quadrada de 2)
 Math.pow(2, 1/3);  // 1.2599210498948732 (raiz cúbica de 2)
 // expoentes com sinais
-Math.pow(7, -2);   // 0.02040816326530612 == (1/7)<sup>2 </sup>== (1/49)
-Math.pow(8, -1/3); // 0.5 == (1/8)<sup>1/3</sup> == 1/2
+Math.pow(7, -2);   // 0.02040816326530612 == (1/7)2 == (1/49)
+Math.pow(8, -1/3); // 0.5 == (1/8)1/3 == 1/2
 // bases com sinal
 Math.pow(-7, 2);   // 49 (quadrados sempre são positivos)
 Math.pow(-7, 3);   // -343 (cubos podem ser negativos conforme a base)
@@ -55,45 +56,24 @@ Math.pow(-7, 0.5); // NaN (números negativos não tem uma raiz quadrada real)
 // e limitam a precisão de ponto flutuante,
 // bases negativas com expoentes fracionários sempre retornam NaN
 Math.pow(-7, 1/3); // NaN
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição Inicial. Implementado no JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.2.13', 'Math.pow')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.pow', 'Math.pow')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                        | Status                   | Comentário                                         |
+| -------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}     | Definição Inicial. Implementado no JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.2.13', 'Math.pow')}} | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES6', '#sec-math.pow', 'Math.pow')}}     | {{Spec2('ES6')}}     |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Math.pow")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Math.cbrt()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Math.exp()")}}</li>
- <li>{{jsxref("Math.log()")}}</li>
- <li>{{jsxref("Math.sqrt()")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation" title="Arithmetic operators take numerical values (either literals or variables) as their operands and return a single numerical value. The standard arithmetic operators are addition (+), subtraction (-), multiplication (*), and division (/).">Operador Exponencial</a> {{experimental_inline}}</li>
-</ul>
+- {{jsxref("Math.cbrt()")}} {{experimental_inline}}
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.sqrt()")}}
+- [Operador Exponencial](/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation "Arithmetic operators take numerical values (either literals or variables) as their operands and return a single numerical value. The standard arithmetic operators are addition (+), subtraction (-), multiplication (*), and division (/).") {{experimental_inline}}

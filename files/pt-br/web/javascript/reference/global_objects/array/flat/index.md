@@ -10,36 +10,33 @@ tags:
   - flat
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/flat
 ---
-<div>{{JSRef}} {{SeeCompatTable}}</div>
+{{JSRef}} {{SeeCompatTable}}
 
-<p>O método <code><strong>flat()</strong></code> cria um novo array com todos elementos sub-arrays concatenados nele de forma recursiva até a profundidade<em> </em>especificada.</p>
+O método **`flat()`** cria um novo array com todos elementos sub-arrays concatenados nele de forma recursiva até a profundidade\_ \_especificada.
 
-<div>{{EmbedInteractiveExample("pages/js/array-flat.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-flat.html")}}
 
+## Sintaxe
 
-<h2 id="Sintaxe">Sintaxe</h2>
-
-<pre class="brush: js notranslate">
+```js
   flat()
   flat(depth)
-</pre>
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>depth</code> {{optional_inline}}</dt>
- <dd>O nível de profundidade especifíca o quão profundo um array aninhando deve ser achatado. O padrão é 1.</dd>
-</dl>
+- `depth` {{optional_inline}}
+  - : O nível de profundidade especifíca o quão profundo um array aninhando deve ser achatado. O padrão é 1.
 
-<h3 id="Retorno">Retorno</h3>
+### Retorno
 
-<p>Um novo array com os elementos sub-array concatenados nele.</p>
+Um novo array com os elementos sub-array concatenados nele.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Achatando_arrays_aninhados">Achatando arrays aninhados</h3>
+### Achatando arrays aninhados
 
-<pre class="brush: js notranslate">
+```js
 var arr1 = [1, 2, [3, 4]];
 arr1.flat();
 // [1, 2, 3, 4]
@@ -55,81 +52,62 @@ arr3.flat(2);
 const arr4 = [1, 2, [3, 4, [5, 6, [7, 8]]]];
 arr4.flat(Infinity);
 // [1, 2, 3, 4, 5, 6, 7, 8]
-</pre>
+```
 
-<h3 id="Achatando_e_buracos_em_array">Achatando e buracos em array</h3>
+### Achatando e buracos em array
 
-<p>o método flat remove espaços vazios do array:</p>
+o método flat remove espaços vazios do array:
 
-<pre class="brush: js notranslate">
+```js
 var arr5 = [1, 2, , 4, 5];
 arr5.flat();
 // [1, 2, 4, 5]
-</pre>
+```
 
-<div class="line"></div>
+## Alternativa
 
-<h2 id="Alternativa">Alternativa</h2>
+### `reduce` e `concat`
 
-<h3 id="reduce_e_concat"><code>reduce</code> e <code>concat</code></h3>
-
-<pre class="brush: js notranslate">
+```js
 var arr = [1, 2, [3, 4]];
 
 // Achatar array de nível único
 arr.flat();
 // É equivalente à
-arr.reduce((acc, val) =&gt; acc.concat(val), []);
+arr.reduce((acc, val) => acc.concat(val), []);
 // [1, 2, 3, 4]
 
 // Ou com sintaxe de decomposição
-const flattened = (arr) =&gt; [].concat(...arr);
-</pre>
+const flattened = (arr) => [].concat(...arr);
+```
 
-<h3 id="reduce_concat_isarray_recursividade"><code>reduce</code> + <code>concat</code> + <code>isArray</code> + recursividade</h3>
+### `reduce` + `concat` + `isArray` + recursividade
 
-<pre class="brush: js notranslate">
+```js
 var arr = [1, 2, [3, 4, [5, 6]]];
 
 // Para achatamentos mais profundos, use recursividade com reduce e concat
 function flatDeep(arr, d = 1) {
-   return d &gt; 0 ? arr.reduce((acc, val) =&gt; acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val), []) : arr.slice();
+   return d > 0 ? arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val), []) : arr.slice();
 };
 
 flatDeep(arr, Infinity);
 // [1, 2, 3, 4, 5, 6]
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentários</th>
-  </tr>
-  <tr>
-   <td><a href="https://tc39.github.io/proposal-flatMap/#sec-Array.prototype.flat"><code>Array.prototype.flat</code> proposal</a></td>
-   <td>Draft</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                        | Status | Comentários |
+| ---------------------------------------------------------------------------------------------------- | ------ | ----------- |
+| [`Array.prototype.flat` proposal](https://tc39.github.io/proposal-flatMap/#sec-Array.prototype.flat) | Draft  |             |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
+{{Compat("javascript.builtins.Array.flat")}}
 
+## Veja Também
 
-<p>{{Compat("javascript.builtins.Array.flat")}}</p>
-</div>
-
-<h2 id="Veja_Também">Veja Também</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.flatMap()")}}</li>
- <li>{{jsxref("Array.prototype.map()")}}</li>
- <li>{{jsxref("Array.prototype.reduce()")}}</li>
- <li>{{jsxref("Array.prototype.concat()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.flatMap()")}}
+- {{jsxref("Array.prototype.map()")}}
+- {{jsxref("Array.prototype.reduce()")}}
+- {{jsxref("Array.prototype.concat()")}}

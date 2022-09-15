@@ -11,69 +11,65 @@ tags:
   - match()
 translation_of: Web/JavaScript/Reference/Global_Objects/String/match
 ---
-<p>{{JSRef("Global_Objects", "String")}}</p>
+{{JSRef("Global_Objects", "String")}}
 
-<h2 id="Summary" name="Summary">Resumo</h2>
+## Resumo
 
-<p>O método <code>match()</code> retorna uma correspondência entre uma string com uma <a href="/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions">expressão regular</a>.</p>
+O método `match()` retorna uma correspondência entre uma string com uma [expressão regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions).
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code><em>str</em>.match(regexp);</code></pre>
+```
+str.match(regexp);
+```
 
-<h3 id="Parameters" name="Parameters">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>regexp</code></dt>
- <dd>Um objeto de <a href="/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions">expressão regular</a>. Se <em><code>regexp</code></em> não for uma <strong><code>RegExp</code></strong>, o mesmo será convertido para uma nova RegExp usando <code>new <strong>RegExp</strong>(<em>regexp</em>)</code>.<br>
- <br>
- Se você não fornecer nenhum parâmetro ao usar o método <code>match()</code>, você obterá um {{jsxref ("Array")}} com uma string vazia: <code>[""]</code>.</dd>
-</dl>
+- `regexp`
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+  - : Um objeto de [expressão regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions). Se _`regexp`_ não for uma **`RegExp`**, o mesmo será convertido para uma nova RegExp usando `new RegExp(regexp)`.
 
-<ul>
- <li>Se o sinalizador <code>g</code> for usado, todos os resultados correspondentes à expressão regular serão retornados, mas a captura de grupos não.</li>
- <li>se o sinalizador <code>g</code> não for usado, apenas a primeira correspondência completa e seus grupos de captura relacionados serão retornados. Nesse caso, o item devolvido terá propriedades adicionais conforme descrito a seguir.</li>
-</ul>
+    Se você não fornecer nenhum parâmetro ao usar o método `match()`, você obterá um {{jsxref ("Array")}} com uma string vazia: `[""]`.
 
-<dl>
- <dt><code>array</code></dt>
- <dd>Um {{jsxref ("Array")}} cujo conteúdo depende da presença ou ausência do sinalizador global (<code>g</code>), ou {{jsxref ("null")}} se nenhuma correspondência for encontrada.</dd>
-</dl>
+### Valor retornado
 
-<h4 id="Propriedades_adicionais">Propriedades adicionais</h4>
+- Se o sinalizador `g` for usado, todos os resultados correspondentes à expressão regular serão retornados, mas a captura de grupos não.
+- se o sinalizador `g` não for usado, apenas a primeira correspondência completa e seus grupos de captura relacionados serão retornados. Nesse caso, o item devolvido terá propriedades adicionais conforme descrito a seguir.
 
-<p>Conforme explicado acima, alguns resultados contêm propriedades adicionais conforme descrito abaixo.</p>
+<!---->
 
-<dl>
- <dt><code>groups</code></dt>
- <dd>Um objeto de grupos de captura nomeados cujas chaves são os nomes, e valores são os grupos de captura ou {{jsxref ("undefined")}} se nenhum grupo de captura nomeado foi definido. Consulte <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">Grupos e Intervalos</a> para obter mais informações.</dd>
- <dt><code>index</code></dt>
- <dd>O índice da pesquisa em que o resultado foi encontrado.</dd>
- <dt><code>input</code></dt>
- <dd>Uma cópia da string pesquisada.</dd>
-</dl>
+- `array`
+  - : Um {{jsxref ("Array")}} cujo conteúdo depende da presença ou ausência do sinalizador global (`g`), ou {{jsxref ("null")}} se nenhuma correspondência for encontrada.
 
-<h2 id="Description" name="Description">Descrição</h2>
+#### Propriedades adicionais
 
-<p>Se a expressão regular não incluir o sinalizador <code>g</code>, <code>str.match()</code> retornará o mesmo resultado que {{jsxref ("RegExp.prototype.exec()", "RegExp.exec()")}}.</p>
+Conforme explicado acima, alguns resultados contêm propriedades adicionais conforme descrito abaixo.
 
-<h3 id="Notes" name="Notes">Veja também: métodos RegExp</h3>
+- `groups`
+  - : Um objeto de grupos de captura nomeados cujas chaves são os nomes, e valores são os grupos de captura ou {{jsxref ("undefined")}} se nenhum grupo de captura nomeado foi definido. Consulte [Grupos e Intervalos](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) para obter mais informações.
+- `index`
+  - : O índice da pesquisa em que o resultado foi encontrado.
+- `input`
+  - : Uma cópia da string pesquisada.
 
-<ul>
- <li>Se você precisar saber se uma string corresponde a uma expressão regular, use {{jsxref("RegExp.test()", "RegExp.test()")}}.</li>
- <li>Se você quiser encontrar apenas uma correspondência, você pode querer usar {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}}.</li>
- <li>Se você deseja obter grupos de captura e o sinalizador global (<code>g</code>) está definido, você precisa usar {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}} ou {{jsxref("String. prototype.matchAll() ")}} em vez disso.</li>
-</ul>
+## Descrição
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+Se a expressão regular não incluir o sinalizador `g`, `str.match()` retornará o mesmo resultado que {{jsxref ("RegExp.prototype.exec()", "RegExp.exec()")}}.
 
-<h3 id="Example_Using_match" name="Example:_Using_match">Usando <code>match()</code></h3>
+### Veja também: métodos RegExp
 
-<p>No exemplo a seguir, <code>match()</code> é usado para encontrar "Capítulo", seguido de um ou mais caracteres numéricos, seguido por um ponto decimal e caracteres numéricos 0 ou mais vezes. A expressão inclui a flag <code>i</code> para que diferenças de maiúscula/minúscula sejam ignoradas.</p>
+- Se você precisar saber se uma string corresponde a uma expressão regular, use {{jsxref("RegExp.test()", "RegExp.test()")}}.
+- Se você quiser encontrar apenas uma correspondência, você pode querer usar {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}}.
+- Se você deseja obter grupos de captura e o sinalizador global (`g`) está definido, você precisa usar {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}} ou {{jsxref("String. prototype.matchAll() ")}} em vez disso.
 
-<pre class="brush:js notranslate">var str = "Para maiores informações, veja o Capítulo 3.4.5.1";
+## Exemplos
+
+### Usando `match()`
+
+No exemplo a seguir, `match()` é usado para encontrar "Capítulo", seguido de um ou mais caracteres numéricos, seguido por um ponto decimal e caracteres numéricos 0 ou mais vezes. A expressão inclui a flag `i` para que diferenças de maiúscula/minúscula sejam ignoradas.
+
+```js
+var str = "Para maiores informações, veja o Capítulo 3.4.5.1";
 var re = /(capítulo \d+(\.\d)*)/i;
 var found = str.match(re);
 
@@ -90,49 +86,51 @@ console.log(found);
 // ".1" é o útlimo valor de (\.\d).
 // A propriedade "index" (33) é o índice de base zero da correspôndencia inteira.
 // A propriedade "input" é a string original que foi analisada.
-</pre>
+```
 
-<h3 id="Example_Using_global_and_ignore_case_flags_with_match" name="Example:_Using_global_and_ignore_case_flags_with_match">Usando as bandeiras (flags) global e ignore com<br>
- <code>match()</code></h3>
+### Usando as bandeiras (flags) global e ignore com<br>`match()`
 
-<p>O exemplo a seguir demonstra o uso das bandeiras (flags) global e ignore com <code>match()</code>. Todas as letras de <code>A</code> a <code>E</code> e <code>a</code> a <code>e</code> são retornadas, com cada letra sendo um elemento no array.</p>
+O exemplo a seguir demonstra o uso das bandeiras (flags) global e ignore com `match()`. Todas as letras de `A` a `E` e `a` a `e` são retornadas, com cada letra sendo um elemento no array.
 
-<pre class="brush:js notranslate">var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+```js
+var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 var regexp = /[A-E]/gi;
 var matches_array = str.match(regexp);
 
 console.log(matches_array);
-// <code>['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']</code>
-</pre>
+// ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']
+```
 
-<div class="blockIndicator note">
-<p><strong>Nota:</strong> Veja também {{jsxref("String.prototype.matchAll()")}} e <a href="/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions#Pesquisa_avan%C3%A7ada_com_Flags">Pesquisa avançada com sinalizadores</a>.</p>
-</div>
+> **Nota:** Veja também {{jsxref("String.prototype.matchAll()")}} e [Pesquisa avançada com sinalizadores](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions#Pesquisa_avan%C3%A7ada_com_Flags).
 
-<h3 id="Usando_grupos_de_captura_nomeados">Usando grupos de captura nomeados</h3>
+### Usando grupos de captura nomeados
 
-<p>Em navegadores que suportam grupos de captura nomeados, o código a seguir captura "<code>fox</code>" ou "<code>cat</code>" em um grupo denominado "<code>animal</code>":</p>
+Em navegadores que suportam grupos de captura nomeados, o código a seguir captura "`fox`" ou "`cat`" em um grupo denominado "`animal`":
 
-<pre class="brush: js notranslate">const paragraph = 'The quick brown fox jumps over the lazy dog. It barked.';
+```js
+const paragraph = 'The quick brown fox jumps over the lazy dog. It barked.';
 
-const capturingRegex = /(?&lt;animal&gt;fox|cat) jumps over/;
+const capturingRegex = /(?<animal>fox|cat) jumps over/;
 const found = paragraph.match(capturingRegex);
-console.log(found.groups); // {animal: "fox"}</pre>
+console.log(found.groups); // {animal: "fox"}
+```
 
-<h3 id="Usando_match_sem_parâmetros">Usando <code>match()</code> sem parâmetros</h3>
+### Usando `match()` sem parâmetros
 
-<pre class="brush: js notranslate">var str = "nada se perde, tudo se transforma";
+```js
+var str = "nada se perde, tudo se transforma";
 
 str.match();  // retorna [""]
-</pre>
+```
 
-<h3 id="Um_objeto_não-RegExp_como_parâmetro">Um objeto não-RegExp como parâmetro</h3>
+### Um objeto não-RegExp como parâmetro
 
-<p>Quando o parâmetro <em><code>regexp</code></em> é uma string ou um número, ele é convertido implicitamente em um {{jsxref("RegExp")}} usando o <code>new <strong>RegExp</strong>(<em>regexp</em>)</code>.<br>
- <br>
- Se for um número positivo com um sinal positivo, <code>RegExp()</code> irá ignorar o sinal positivo.</p>
+Quando o parâmetro _`regexp`_ é uma string ou um número, ele é convertido implicitamente em um {{jsxref("RegExp")}} usando o `new RegExp(regexp)`.
 
-<pre class="brush: js notranslate"><code>var str1 = "NaN significa 'não é um número'. Infinity contem -Infinity e +Infinity em JavaScript.",
+Se for um número positivo com um sinal positivo, `RegExp()` irá ignorar o sinal positivo.
+
+```js
+var str1 = "NaN significa 'não é um número'. Infinity contem -Infinity e +Infinity em JavaScript.",
     str2 = "Meu avô tem 65 anos e minha avô tem 63.",
     str3 = "O contrato foi declarado null (nulo) e void (sem efeito)";
 str1.match("número");   // "número" é um string. retorna ["número"]
@@ -142,43 +140,22 @@ str1.match(+Infinity);  // retorna ["Infinity"]
 str1.match(-Infinity);  // retorna ["-Infinity"]
 str2.match(65);         // retorna ["65"]
 str2.match(+65);        // Um número com sinal positivo. retorna ["65"]
-str3.match(null);       // retorna ["null"]</code></pre>
+str3.match(null);       // retorna ["null"]
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3rd Edition.</td>
-   <td>Standard</td>
-   <td>Definição inicial.<br>
-    Implementado no JavaScript 1.2</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.4.10', 'String.prototype.match')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.match', 'String.prototype.match')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificações                                                                                       | Estado                   | Comentário                                        |
+| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------- |
+| ECMAScript 3rd Edition.                                                                              | Standard                 | Definição inicial. Implementado no JavaScript 1.2 |
+| {{SpecName('ES5.1', '#sec-15.5.4.10', 'String.prototype.match')}}             | {{Spec2('ES5.1')}} |                                                   |
+| {{SpecName('ES6', '#sec-string.prototype.match', 'String.prototype.match')}} | {{Spec2('ES6')}}     |                                                   |
 
-<h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
+## Navegadores compatíveis
 
 {{Compat("javascript.builtins.String.match")}}
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("RegExp.prototype.exec()")}}</li>
- <li>{{jsxref("RegExp.prototype.test()")}}</li>
-</ul>
+- {{jsxref("RegExp.prototype.exec()")}}
+- {{jsxref("RegExp.prototype.test()")}}

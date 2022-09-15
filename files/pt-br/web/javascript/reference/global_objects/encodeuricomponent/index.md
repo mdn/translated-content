@@ -3,28 +3,29 @@ title: encodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 translation_of: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<p>O método <code><strong>encodeURIComponent()</strong></code> codifica  uma URI (Identificador recurso uniforme) substituindo cada ocorrência de determinados caracteres por um, dois, três, ou quatro seqüências de escape que representam a codificação UTF-8 do caractere (só será quatro seqüências de escape para caracteres compostos por dois caracteres "substituto").</p>
+O método **`encodeURIComponent()`** codifica uma URI (Identificador recurso uniforme) substituindo cada ocorrência de determinados caracteres por um, dois, três, ou quatro seqüências de escape que representam a codificação UTF-8 do caractere (só será quatro seqüências de escape para caracteres compostos por dois caracteres "substituto").
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">encodeURIComponent(str);</pre>
+```
+encodeURIComponent(str);
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>str</code></dt>
- <dd>String. Uma sequência URI.</dd>
-</dl>
+- `str`
+  - : String. Uma sequência URI.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p><code>encodeURIComponent</code> escapa todos os caracteres, exceto: alfabeto, dígitos decimais, <code>- _ . ! ~ * ' ( )</code></p>
+`encodeURIComponent` escapa todos os caracteres, exceto: alfabeto, dígitos decimais, `- _ . ! ~ * ' ( )`
 
-<p>Note-se que um{{jsxref("URIError")}} será gerada se uma tentativas para codificar um substituto que não faz parte de um par de alta-baixa, por exemplo,</p>
+Note-se que um{{jsxref("URIError")}} será gerada se uma tentativas para codificar um substituto que não faz parte de um par de alta-baixa, por exemplo,
 
-<pre class="brush: js">// high-low par ok
+```js
+// high-low par ok
 console.log(encodeURIComponent('\uD800\uDFFF'));
 
 // lone high surrogate throws "URIError: malformed URI sequence"
@@ -32,26 +33,28 @@ console.log(encodeURIComponent('\uD800'));
 
 // lone low surrogate throws "URIError: malformed URI sequence"
 console.log(encodeURIComponent('\uDFFF'));
-</pre>
+```
 
-<p>Para previnir requisões inesperadas ao servidor, deve-se chamar <code>encodeURIComponent</code> ou qualquer parâmetro fornecido pelo usuário que será passado como parte da URI. Por exemplo, um usuário poderia digitar "<code>Thyme &amp;time=again</code>" para uma variável <code>commentario</code>. Ao não usar <code>encodeURIComponent</code> nessa variável irá ser obetido <code>commentario=Thyme%20&amp;time=again</code>. Note que o ampersa  e o sinal de igual marcam um novo par de chave e valor. Então ao invés de ter um POST com a chave <code>commentario</code> igual a "<code>Thyme &amp;time=again</code>", tem-se chaves em  POST, uma igual a "<code>Thyme </code>" e outra (<code>time</code>) igual a <code>again</code>.</p>
+Para previnir requisões inesperadas ao servidor, deve-se chamar `encodeURIComponent` ou qualquer parâmetro fornecido pelo usuário que será passado como parte da URI. Por exemplo, um usuário poderia digitar "`Thyme &time=again`" para uma variável `commentario`. Ao não usar `encodeURIComponent` nessa variável irá ser obetido `commentario=Thyme%20&time=again`. Note que o ampersa e o sinal de igual marcam um novo par de chave e valor. Então ao invés de ter um POST com a chave `commentario` igual a "`Thyme &time=again`", tem-se chaves em POST, uma igual a "`Thyme `" e outra (`time`) igual a `again`.
 
-<p>Para <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#application/x-www-form-urlencoded-encoding-algorithm"><code>application/x-www-form-urlencoded</code></a>, espaços são substituídos por '+', então pode-se querer seguir um <code>encodeURIComponent</code> substituição com uma substituição adicional de "%20" com "+".</p>
+Para [`application/x-www-form-urlencoded`](http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#application/x-www-form-urlencoded-encoding-algorithm), espaços são substituídos por '+', então pode-se querer seguir um `encodeURIComponent` substituição com uma substituição adicional de "%20" com "+".
 
-<p>Para ser mais rigoroso à aderência da <a class="external" href="http://tools.ietf.org/html/rfc3986">RFC 3986</a> (qual reserva !, ', (, ), e *), mesmo que esses caracteres não tenham usos formalizados de delimitação de URI, o seguinte pode ser usado com segurança:</p>
+Para ser mais rigoroso à aderência da [RFC 3986](http://tools.ietf.org/html/rfc3986) (qual reserva !, ', (, ), e \*), mesmo que esses caracteres não tenham usos formalizados de delimitação de URI, o seguinte pode ser usado com segurança:
 
-<pre class="brush: js">function ajustadoEncodeURIComponent (str) {
+```js
+function ajustadoEncodeURIComponent (str) {
   return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
     return '%' + c.charCodeAt(0).toString(16);
   });
 }
-</pre>
+```
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>O exemplo seguinte provê o encoding especial requerido pelo UTF-8 nos parâmetros <code>Content-Disposition</code> e <code>Link</code> no cabeçalho de uma Response (e.g., UTF-8 filenames):</p>
+O exemplo seguinte provê o encoding especial requerido pelo UTF-8 nos parâmetros `Content-Disposition` e `Link` no cabeçalho de uma Response (e.g., UTF-8 filenames):
 
-<pre class="brush: js">var fileName = 'my file(2).txt';
+```js
+var fileName = 'my file(2).txt';
 var header = "Content-Disposition: attachment; filename*=UTF-8''"
              + encodeRFC5987ValueChars(fileName);
 
@@ -69,43 +72,22 @@ function encodeRFC5987ValueChars (str) {
             // so we can allow for a little better readability over the wire: |`^
             replace(/%(?:7C|60|5E)/g, unescape);
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Definição Inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.1.3.4', 'encodeURIComponent')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-encodeuricomponent-uricomponent', 'encodeURIComponent')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                | Status                   | Comentario         |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
+| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}     | Definição Inicial. |
+| {{SpecName('ES5.1', '#sec-15.1.3.4', 'encodeURIComponent')}}                             | {{Spec2('ES5.1')}} |                    |
+| {{SpecName('ES6', '#sec-encodeuricomponent-uricomponent', 'encodeURIComponent')}} | {{Spec2('ES6')}}     |                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.encodeURIComponent")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("decodeURI")}}</li>
- <li>{{jsxref("encodeURI")}}</li>
- <li>{{jsxref("decodeURIComponent")}}</li>
-</ul>
+- {{jsxref("decodeURI")}}
+- {{jsxref("encodeURI")}}
+- {{jsxref("decodeURIComponent")}}

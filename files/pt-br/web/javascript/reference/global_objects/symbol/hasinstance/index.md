@@ -6,17 +6,18 @@ tags:
   - Referencia
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O symbol bem-conhecido <strong><code>Symbol.hasInstance</code></strong> é usado para determinar se um objeto construtor reconhece um objeto como de sua instância. O comportamento do operador {{jsxref("Operators/instanceof", "instanceof")}} pode ser customizado por este symbol.</p>
+O symbol bem-conhecido **`Symbol.hasInstance`** é usado para determinar se um objeto construtor reconhece um objeto como de sua instância. O comportamento do operador {{jsxref("Operators/instanceof", "instanceof")}} pode ser customizado por este symbol.
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+{{js_property_attributes(0,0,0)}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>Você pode implementar o comportamento customizado do seu <code>instanceof</code> deste jeito; por exemplo:</p>
+Você pode implementar o comportamento customizado do seu `instanceof` deste jeito; por exemplo:
 
-<pre class="brush: js">class MyArray {
+```js
+class MyArray {
   static [Symbol.hasInstance](instance) {
     return this.prototype.isPrototypeOf(instance) ||
            Array.isArray(instance);
@@ -30,37 +31,21 @@ console.log(new Image instanceof MyArray); // false
 class MySubArray extends MyArray {}
 console.log(new MySubArray instanceof MySubArray); // true
 console.log(new MySubArray instanceof MyArray); // true
-console.log(new MyArray instanceof MySubArray); // false</pre>
+console.log(new MyArray instanceof MySubArray); // false
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-symbol.hasinstance', 'Symbol.hasInstance')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-symbol.hasinstance', 'Symbol.hasInstance')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                       | Comment             |
+| ------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-symbol.hasinstance', 'Symbol.hasInstance')}}     | {{Spec2('ES6')}}         | Initial definition. |
+| {{SpecName('ESDraft', '#sec-symbol.hasinstance', 'Symbol.hasInstance')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Symbol.hasInstance")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Operators/instanceof", "instanceof")}}</li>
- <li>{{jsxref("Global_Objects/Object/isPrototypeOf", "isPrototypeOf()")}}</li>
-</ul>
+- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("Global_Objects/Object/isPrototypeOf", "isPrototypeOf()")}}

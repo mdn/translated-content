@@ -3,47 +3,45 @@ title: Reflect.set()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/set
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/set
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método estático <code><strong>Reflect</strong></code><strong><code>.set()</code></strong> define uma propriedade em um objeto.</p>
+O método estático **`Reflect`\*\***`.set()`\*\* define uma propriedade em um objeto.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">Reflect.set(alvo, propriedade, valor[, receptor])
-</pre>
+```
+Reflect.set(alvo, propriedade, valor[, receptor])
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>alvo</code></dt>
- <dd>O objeto alvo onde a propriedade será definida.</dd>
- <dt><code>propriedade</code></dt>
- <dd>O nome da propriedade a ser definida.</dd>
- <dt>valor</dt>
- <dd>o valor a ser definido para a propriedade.</dd>
- <dt>receptor</dt>
- <dd>
- <p>O valor do <code>this </code>fornecido para a chamada do alvo se um setter é encontrado.</p>
- </dd>
-</dl>
+- `alvo`
+  - : O objeto alvo onde a propriedade será definida.
+- `propriedade`
+  - : O nome da propriedade a ser definida.
+- valor
+  - : o valor a ser definido para a propriedade.
+- receptor
+  - : O valor do `this `fornecido para a chamada do alvo se um setter é encontrado.
 
-<h3 id="Retorno">Retorno</h3>
+### Retorno
 
-<p>Um {{jsxref("Boolean")}} indicando se a definicão da propriedade ocorreu com sucesso ou não.</p>
+Um {{jsxref("Boolean")}} indicando se a definicão da propriedade ocorreu com sucesso ou não.
 
-<h3 id="Exceções">Exceções</h3>
+### Exceções
 
-<p>Um {{jsxref("TypeError")}}, se o <code>alvo</code> não for um {{jsxref("Object")}}.</p>
+Um {{jsxref("TypeError")}}, se o `alvo` não for um {{jsxref("Object")}}.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O método <code>Reflect.set</code> permite que você defina uma propriedade em um objeto. Ele define a propriedade e is like the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">property accessor</a> syntax as a function.</p>
+O método `Reflect.set` permite que você defina uma propriedade em um objeto. Ele define a propriedade e is like the [property accessor](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_Accessors) syntax as a function.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_Reflect.set()">Usando <code>Reflect.set()</code></h3>
+### Usando `Reflect.set()`
 
-<pre class="brush: js">// Object
+```js
+// Object
 var obj = {};
 Reflect.set(obj, "prop", "value"); // true
 obj.prop; // "value"
@@ -62,37 +60,20 @@ var obj = {};
 Reflect.set(obj); // true
 Reflect.getOwnPropertyDescriptor(obj, "undefined");
 // { value: undefined, writable: true, enumerable: true, configurable: true }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-reflect.set', 'Reflect.set')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-reflect.set', 'Reflect.set')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                | Status                       | Comment            |
+| ---------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('ES6', '#sec-reflect.set', 'Reflect.set')}}     | {{Spec2('ES6')}}         | Definição inicial. |
+| {{SpecName('ESDraft', '#sec-reflect.set', 'Reflect.set')}} | {{Spec2('ESDraft')}} |                    |
 
-<h2 id="Compatilibidade_com_navegadores">Compatilibidade com navegadores</h2>
+## Compatilibidade com navegadores
 
 {{Compat("javascript.builtins.Reflect.set")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">Property accessors</a></li>
-</ul>
+- {{jsxref("Reflect")}}
+- [Property accessors](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_Accessors)

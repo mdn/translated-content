@@ -3,60 +3,47 @@ title: Promise.allSettled()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p>O método <code><strong>Promise.allSettled()</strong></code> retorna uma promessa que é resolvida após todas as promessas dadas serem resolvidas ou rejeitadas, com um array de objetos que descrevem o resultado de cada promessa.</p>
+O método **`Promise.allSettled()`** retorna uma promessa que é resolvida após todas as promessas dadas serem resolvidas ou rejeitadas, com um array de objetos que descrevem o resultado de cada promessa.
 
-<p>É tipicamente usado quando você tem múltiplas tarefas assíncronas que não são dependentes das conclusões umas das outras, ou quando você sempre quer ter o resultado de cada promessa.</p>
+É tipicamente usado quando você tem múltiplas tarefas assíncronas que não são dependentes das conclusões umas das outras, ou quando você sempre quer ter o resultado de cada promessa.
 
-<p>Para comparação, a promessa retornada por {{jsxref("Promise.all()")}} pode ser mais apropriada para tarefas que dependem umas das outras, ou se você precisa que todas as tarefas sejam rejeitadas quando apenas uma é. </p>
+Para comparação, a promessa retornada por {{jsxref("Promise.all()")}} pode ser mais apropriada para tarefas que dependem umas das outras, ou se você precisa que todas as tarefas sejam rejeitadas quando apenas uma é.
 
-<div>{{EmbedInteractiveExample("pages/js/promise-allsettled.html")}}</div>
+{{EmbedInteractiveExample("pages/js/promise-allsettled.html")}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><em>promise</em>.allSettled(<em>iterable</em>);</pre>
+```
+promise.allSettled(iterable);
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>iterable</code></dt>
- <dd>Um objeto <a href="/en-US/docs/Web/JavaScript/Guide/iterable">iterável</a>, como um {{jsxref("Array")}}, onde cada membro é uma <code>Promise</code>.</dd>
-</dl>
+- `iterable`
+  - : Um objeto [iterável](/pt-BR/docs/Web/JavaScript/Guide/iterable), como um {{jsxref("Array")}}, onde cada membro é uma `Promise`.
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>Uma {{jsxref("Promise")}} <strong>pendente</strong> que vai ser <strong>preenchida assíncronamente</strong> quando todas as promessas na coleção fornecida forem completas, sendo aceitas ou rejeitadas. Quando isso acontecer, é retornado um array contendo um resultado para cada promessa passada como entrada.</p>
+Uma {{jsxref("Promise")}} **pendente** que vai ser **preenchida assíncronamente** quando todas as promessas na coleção fornecida forem completas, sendo aceitas ou rejeitadas. Quando isso acontecer, é retornado um array contendo um resultado para cada promessa passada como entrada.
 
-<p>Para cada objeto no array retornado, existe uma string <code>status</code>. Se o status for <code>fulfilled</code>, então o campo <code>value</code> estará presente. Se o status for <code>rejected</code>, então o campo <code>reason</code> estará presente. O valor (value) ou o motivo da falha (reason) refletem o valor com que cada promessa foi completada (ou rejeitada).</p>
+Para cada objeto no array retornado, existe uma string `status`. Se o status for `fulfilled`, então o campo `value` estará presente. Se o status for `rejected`, então o campo `reason` estará presente. O valor (value) ou o motivo da falha (reason) refletem o valor com que cada promessa foi completada (ou rejeitada).
 
-<h2 id="Especificaçṍes">Especificaçṍes</h2>
+## Especificaçṍes
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td><a href="https://tc39.es/proposal-promise-allSettled/"><code>Promise.allSettled()</code> (TC39 Stage 4 Draft)</a></td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                               | Status                       | Comment |
+| ------------------------------------------------------------------------------------------- | ---------------------------- | ------- |
+| [`Promise.allSettled()` (TC39 Stage 4 Draft)](https://tc39.es/proposal-promise-allSettled/) | {{Spec2('ESDraft')}} |         |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Promise.allSettled")}}</p>
+{{Compat("javascript.builtins.Promise.allSettled")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Archive/Add-ons/Techniques/Promises">Promessas</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Using_promises">Usando promessas</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">Programando assincronamente de maneira elegante usando promessas</a></li>
- <li>{{jsxref("Promise")}}</li>
- <li>{{jsxref("Promise.all()")}}</li>
-</ul>
+- [Promessas](/pt-BR/docs/Archive/Add-ons/Techniques/Promises)
+- [Usando promessas](/pt-BR/docs/Web/JavaScript/Guide/Using_promises)
+- [Programando assincronamente de maneira elegante usando promessas](/pt-BR/docs/Learn/JavaScript/Asynchronous/Promises)
+- {{jsxref("Promise")}}
+- {{jsxref("Promise.all()")}}

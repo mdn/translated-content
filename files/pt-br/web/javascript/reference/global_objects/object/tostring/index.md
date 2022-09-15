@@ -2,48 +2,48 @@
 title: Object.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toString
 tags:
- - JavaScript
- - Method
- - Object
- - Prototype
-browser-compat: javascript.builtins.Object.toString
+  - JavaScript
+  - Method
+  - Object
+  - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/toString
+browser-compat: javascript.builtins.Object.toString
 ---
-<div>{{JSRef("Global_Objects", "Object")}}</div>
+{{JSRef("Global_Objects", "Object")}}
 
-<h2 id="Summary" name="Summary">Sumário</h2>
+## Sumário
 
-<p>O método <code>toString()</code> retorna uma string representando o objeto.</p>
+O método `toString()` retorna uma string representando o objeto.
 
 {{EmbedInteractiveExample("pages/js/object-prototype-tostring.html")}}
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush: js">
+```js
 obj.toString()
-</pre>
+```
 
-<h2 id="Description" name="Description">Descrição</h2>
+## Descrição
 
-<p>Todo objeto possui um método <code>toString()</code> que é chamado automaticamente quando o objeto precisa ser representado como um valor em texto ou quando o objeto é referenciado de uma maneira que requeira uma string. Por padrão, o método <code>toString()</code> é herdado de todo objeto descendente de  <code>Object</code>. Se e o método não é sobrescrito em um objeto personalizado, <code>toString()</code> retorna "[object <em>type</em>]", onde <code><em>type</em></code> é o tipo do objeto. O código a seguir ilustra isso:</p>
+Todo objeto possui um método `toString()` que é chamado automaticamente quando o objeto precisa ser representado como um valor em texto ou quando o objeto é referenciado de uma maneira que requeira uma string. Por padrão, o método `toString()` é herdado de todo objeto descendente de `Object`. Se e o método não é sobrescrito em um objeto personalizado, `toString()` retorna "\[object _type_]", onde `type` é o tipo do objeto. O código a seguir ilustra isso:
 
-<pre class="brush: js">var o = new Object();
+```js
+var o = new Object();
 o.toString();           // retorna [object Object]
-</pre>
+```
 
-<div class="note">
-<p><strong>Note:</strong> Starting in JavaScript 1.8.5 <code>toString()</code> called on {{jsxref("Global_Objects/null", "null")}} returns <code>[object <em>Null</em>]</code>, and {{jsxref("Global_Objects/undefined", "undefined")}} returns <code>[object <em>Undefined</em>]</code>, as defined in the 5th Edition of ECMAScript and a subsequent Errata. See <a href="#example:_using_tostring_to_detect_object_type">Using toString to detect object type</a>.</p>
-</div>
+> **Nota:** Starting in JavaScript 1.8.5 `toString()` called on {{jsxref("Global_Objects/null", "null")}} returns `[object Null]`, and {{jsxref("Global_Objects/undefined", "undefined")}} returns `[object Undefined]`, as defined in the 5th Edition of ECMAScript and a subsequent Errata. See [Using toString to detect object type](#example:_using_tostring_to_detect_object_type).
 
-<h2 id="Examples" name="Examples">Examples</h2>
+## Examples
 
-<h3 id="Example:_Overriding_the_default_toString_method" name="Example:_Overriding_the_default_toString_method">Exemplo: Sobrepondo o método inicial <code>toString</code> </h3>
+### Exemplo: Sobrepondo o método inicial `toString`
 
-<p>Você pode criar uma função para ser chamada no lugar do método <code>toString()</code>. O método <code>toString()</code> não requer parâmetros e deve retornar uma string. O método <code>toString()</code> criado por você pode ter o valor que quiser, mas será mais útil se usar informações do objeto.</p>
+Você pode criar uma função para ser chamada no lugar do método `toString()`. O método `toString()` não requer parâmetros e deve retornar uma string. O método `toString()` criado por você pode ter o valor que quiser, mas será mais útil se usar informações do objeto.
 
-<p>O código abaixo define o objeto <code>Dog</code> e cria <code>theDog</code>, um objeto do tipo <code>Dog</code>:</p>
+O código abaixo define o objeto `Dog` e cria `theDog`, um objeto do tipo `Dog`:
 
-<pre class="brush: js">function Dog(name, breed, color, sex) {
+```js
+function Dog(name, breed, color, sex) {
   this.name = name;
   this.breed = breed;
   this.color = color;
@@ -51,31 +51,35 @@ o.toString();           // retorna [object Object]
 }
 
 theDog = new Dog('Gabby', 'Lab', 'chocolate', 'female');
-</pre>
+```
 
-<p>Se você chamar o método <code>toString()</code> neste objeto, ele retornará o valor original herdado de {{jsxref("Global_Objects/Object", "Object")}}:</p>
+Se você chamar o método `toString()` neste objeto, ele retornará o valor original herdado de {{jsxref("Global_Objects/Object", "Object")}}:
 
-<pre class="brush: js">theDog.toString(); // returns [object Object]
-</pre>
+```js
+theDog.toString(); // returns [object Object]
+```
 
-<p>O código abaixo cria e faz com que <code>dogToString()</code> sobrescreva o <code>toString()</code> original. Esta função gera uma string contendo <strong>name, breed, color, and sex</strong> do objeto, na forma de "<code>propriedade = valor;</code>".</p>
+O código abaixo cria e faz com que `dogToString()` sobrescreva o `toString()` original. Esta função gera uma string contendo **name, breed, color, and sex** do objeto, na forma de "`propriedade = valor;`".
 
-<pre class="brush: js">Dog.prototype.toString = function dogToString() {
+```js
+Dog.prototype.toString = function dogToString() {
   var ret = 'Dog ' + this.name + ' is a ' + this.sex + ' ' + this.color + ' ' + this.breed;
   return ret;
 }
-</pre>
+```
 
-<p>Usando este código, toda vez que <code>theDog</code> for usado em um texto (string), JavaScript automaticamente chamará a função <code>dogToString()</code>, a qual retornará:</p>
+Usando este código, toda vez que `theDog` for usado em um texto (string), JavaScript automaticamente chamará a função `dogToString()`, a qual retornará:
 
-<pre>Dog Gabby is a female chocolate Lab
-</pre>
+```
+Dog Gabby is a female chocolate Lab
+```
 
-<h3 id="Example:_Using_toString_to_detect_object_type" name="Example:_Using_toString_to_detect_object_type">Exemplo: Usando <code>toString()</code> para detectar a classe do objeto</h3>
+### Exemplo: Usando `toString()` para detectar a classe do objeto
 
-<p><code>toString()</code> pode ser usado com qualquer objeto e permite que você determine sua classe. Para usar <code>Object.prototype.toString()</code> com qualquer objeto, deverá chamar {{jsxref("Function.prototype.call()")}} ou {{jsxref("Function.prototype.apply()")}} nele, passando o objeto que quer inspecionar como o primeiro parâmetro, chamado <code>thisArg</code>.</p>
+`toString()` pode ser usado com qualquer objeto e permite que você determine sua classe. Para usar `Object.prototype.toString()` com qualquer objeto, deverá chamar {{jsxref("Function.prototype.call()")}} ou {{jsxref("Function.prototype.apply()")}} nele, passando o objeto que quer inspecionar como o primeiro parâmetro, chamado `thisArg`.
 
-<pre class="brush: js">var toString = Object.prototype.toString;
+```js
+var toString = Object.prototype.toString;
 
 toString.call(new Date);    // [object Date]
 toString.call(new String);  // [object String]
@@ -84,20 +88,17 @@ toString.call(Math);        // [object Math]
 // Since JavaScript 1.8.5
 toString.call(undefined);   // [object Undefined]
 toString.call(null);        // [object Null]
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<div>{{Specifications}}</div>
+{{Specifications}}
 
-<h2 id="Compatibilidade">Compatibilidade</h2>
+## Compatibilidade
 
-<div>{{Compat}}</div>
+{{Compat}}
 
+## Veja também
 
-<h2 id="See_also" name="See_also">Veja também</h2>
-
-<ul>
- <li>{{jsxref("Object.prototype.toSource()")}}</li>
- <li>{{jsxref("Object.prototype.valueOf()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("Object.prototype.valueOf()")}}

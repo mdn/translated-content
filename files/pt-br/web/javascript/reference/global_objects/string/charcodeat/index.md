@@ -9,51 +9,51 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>charCodeAt()</code></strong> retorna um número inteiro entre <code>0</code> e <code>65535</code> que representa a unidade de código UTF-16 no índice fornecido. A unidade de código UTF-16 corresponde ao ponto de código Unicode para pontos de códigos representáveis em uma única unidade de código UTF-16, mas também pode ser a primeira unidade de código de um par substituto não representável em uma única unidade de código UTF-16. Po exemplo: pontos de código Unicode  &gt; (0x10000). Se você quer o valor do ponto de código inteiro, use <strong><code>codePointAt</code></strong>().</p>
+O método **`charCodeAt()`** retorna um número inteiro entre `0` e `65535` que representa a unidade de código UTF-16 no índice fornecido. A unidade de código UTF-16 corresponde ao ponto de código Unicode para pontos de códigos representáveis em uma única unidade de código UTF-16, mas também pode ser a primeira unidade de código de um par substituto não representável em uma única unidade de código UTF-16. Po exemplo: pontos de código Unicode > (0x10000). Se você quer o valor do ponto de código inteiro, use **`codePointAt`**().
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.charCodeAt(<em>index</em>)</code></pre>
+```
+str.charCodeAt(index)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>index</code></dt>
- <dd>Um inteiro maior ou igual a <code>0</code> e menor que o comprimento da string. Se não for um número, o padrão será <code>0</code>.</dd>
-</dl>
+- `index`
+  - : Um inteiro maior ou igual a `0` e menor que o comprimento da string. Se não for um número, o padrão será `0`.
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>Um número representando o valor de unidade de código UTF-16 do caractere no índice fornecido. O valor {{jsxref("Global_Objects/NaN", "NaN")}} é retornado se o índice estiver fora do intervalo aceitável.</p>
+Um número representando o valor de unidade de código UTF-16 do caractere no índice fornecido. O valor {{jsxref("Global_Objects/NaN", "NaN")}} é retornado se o índice estiver fora do intervalo aceitável.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Os pontos de código Unicode variam de <code>0</code> a <code>1114111</code> (<code>0x10FFFF</code>). Os primeiros 128 pontos de código Unicode são uma correspondência direta da codificação de caracteres ASCII. (Para informações sobre Unicode, veja o <a href="/pt-BR/docs/Web/JavaScript/Guide/Values,_variables,_and_literals">JavaScript Guide</a>.)</p>
+Os pontos de código Unicode variam de `0` a `1114111` (`0x10FFFF`). Os primeiros 128 pontos de código Unicode são uma correspondência direta da codificação de caracteres ASCII. (Para informações sobre Unicode, veja o [JavaScript Guide](/pt-BR/docs/Web/JavaScript/Guide/Values,_variables,_and_literals).)
 
-<div class="blockIndicator note">
-<p><strong>Nota</strong>: o <code>charCodeAt()</code> sempre retornará um valor menor do que <code>65536</code>. Isso ocorre pois os pontos de código mais altos são representados por um par de pseudo-caracteres "substitutos" (de menor valor) que são usados para compreender o caracter real.<br>
- <br>
- Por isso, para examinar (ou reproduzir) o caractere completo para valores de caracteres individuais de valor <code>65536</code> e acima, é necessário recuperar não apenas o <code>charCodeAt(<em>i</em>)</code>, mas também o <code>charCodeAt(<em>i</em>+1)</code> (como se examinando/reproduzindo a string com duas letras), ou usar o <code>codePointAt(<em>i</em>)</code>. Veja o exemplo 2 e 3 (abaixo).</p>
-</div>
+> **Nota:** o `charCodeAt()` sempre retornará um valor menor do que `65536`. Isso ocorre pois os pontos de código mais altos são representados por um par de pseudo-caracteres "substitutos" (de menor valor) que são usados para compreender o caracter real.
+>
+> Por isso, para examinar (ou reproduzir) o caractere completo para valores de caracteres individuais de valor `65536` e acima, é necessário recuperar não apenas o `charCodeAt(i)`, mas também o `charCodeAt(i+1)` (como se examinando/reproduzindo a string com duas letras), ou usar o `codePointAt(i)`. Veja o exemplo 2 e 3 (abaixo).
 
-<p>Compatibilidade com versões anteriores: Em versões históricas (como JavaScript 1.2) o método <code>charCodeAt()</code> retorna um número indicando o valor de conjunto de códigos ISO-Latin-1 do caractere no dado índice. O conjunto de códigos ISO-Latin-1 varia de <code>0</code> a <code>255</code>. Os primeiros <code>128</code> (do <code>0</code> ao <code>127</code>) são uma correspondência direta ao conjunto de caracteres ASCII.</p>
+Compatibilidade com versões anteriores: Em versões históricas (como JavaScript 1.2) o método `charCodeAt()` retorna um número indicando o valor de conjunto de códigos ISO-Latin-1 do caractere no dado índice. O conjunto de códigos ISO-Latin-1 varia de `0` a `255`. Os primeiros `128` (do `0` ao `127`) são uma correspondência direta ao conjunto de caracteres ASCII.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_charCodeAt">Usando <code>charCodeAt()</code></h3>
+### Usando `charCodeAt()`
 
-<p>O exemplo a seguir retorna <code>65</code>, o valor Unicode para A.</p>
+O exemplo a seguir retorna `65`, o valor Unicode para A.
 
-<pre class="brush: js notranslate">'ABC'.charCodeAt(0); // retorna 65
-</pre>
+```js
+'ABC'.charCodeAt(0); // retorna 65
+```
 
-<h3 id="Corrigindo_o_charCodeAt_para_manipular_caracteres_de_Plano_Multilingual_não_Básico_se_sua_presença_na_string_é_desconhecida">Corrigindo o <code>charCodeAt()</code> para manipular caracteres de Plano Multilingual não Básico se sua presença na string é desconhecida</h3>
+### Corrigindo o `charCodeAt()` para manipular caracteres de Plano Multilingual não Básico se sua presença na string é desconhecida
 
-<p>Essa versão pode ser usada em loops <strong>for </strong>e afins quando não sabemos se caracteres de Plano Multilingual não Básico existem antes da posição do índice especificado.</p>
+Essa versão pode ser usada em loops **for** e afins quando não sabemos se caracteres de Plano Multilingual não Básico existem antes da posição do índice especificado.
 
-<pre class="brush: js notranslate">function fixedCharCodeAt(str, idx) {
+```js
+function fixedCharCodeAt(str, idx) {
   // ex. fixedCharCodeAt('\uD800\uDC00', 0); // 65536
   // ex. fixedCharCodeAt('\uD800\uDC00', 1); // false
   idx = idx || 0;
@@ -62,7 +62,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 
   // Substituto elevado (poderia mudar o último hex para 0xDB7F para tratar
   // substitutos privados elevados como caracteres únicos)
-  if (0xD800 &lt;= code &amp;&amp; code &lt;= 0xDBFF) {
+  if (0xD800 <= code && code <= 0xDBFF) {
     hi = code;
     low = str.charCodeAt(idx + 1);
     if (isNaN(low)) {
@@ -70,7 +70,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
     }
     return ((hi - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000;
   }
-  if (0xDC00 &lt;= code &amp;&amp; code &lt;= 0xDFFF) { // Low surrogate
+  if (0xDC00 <= code && code <= 0xDFFF) { // Low surrogate
     // Retornamos false para permitir os loops pularem essa iteração já que já deveria
     //ter tratado os substitutos elevados acima, na iteração anterior
     return false;
@@ -80,11 +80,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
   }
   return code;
 }
-</pre>
+```
 
-<h3 id="Corrigindo_o_charCodeAt_para_manipular_caracteres_de_Plano_Multilingual_não_Básico_se_sua_presença_na_string_é_desconhecida_2">Corrigindo o <code>charCodeAt()</code> para manipular caracteres de Plano Multilingual não Básico se sua presença na string é desconhecida</h3>
+### Corrigindo o `charCodeAt()` para manipular caracteres de Plano Multilingual não Básico se sua presença na string é desconhecida
 
-<pre class="brush: js notranslate">function knownCharCodeAt(str, idx) {
+```js
+function knownCharCodeAt(str, idx) {
   str += '';
   var code,
       end = str.length;
@@ -92,7 +93,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
   var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
   while ((surrogatePairs.exec(str)) != null) {
     var li = surrogatePairs.lastIndex;
-    if (li - 2 &lt; idx) {
+    if (li - 2 < idx) {
       idx++;
     }
     else {
@@ -100,14 +101,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
     }
   }
 
-  if (idx &gt;= end || idx &lt; 0) {
+  if (idx >= end || idx < 0) {
     return NaN;
   }
 
   code = str.charCodeAt(idx);
 
   var hi, low;
-  if (0xD800 &lt;= code &amp;&amp; code &lt;= 0xDBFF) {
+  if (0xD800 <= code && code <= 0xDBFF) {
     hi = code;
     low = str.charCodeAt(idx + 1);
     // Vá um adiante, já que um dos "characters" é parte de um par substituto
@@ -115,51 +116,26 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
   }
   return code;
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição inicial. Implementado no JavaScript 1.2.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.4.5', 'String.prototype.charCodeAt')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.charcodeat', 'String.prototype.charCodeAt')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.charcodeat', 'String.prototype.charCodeAt')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                            | Status                       | Comentário                                         |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                                 | {{Spec2('ES1')}}         | Definição inicial. Implementado no JavaScript 1.2. |
+| {{SpecName('ES5.1', '#sec-15.5.4.5', 'String.prototype.charCodeAt')}}                             | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES6', '#sec-string.prototype.charcodeat', 'String.prototype.charCodeAt')}}     | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-string.prototype.charcodeat', 'String.prototype.charCodeAt')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
+## Navegadores compatíveis
 
 {{Compat("javascript.builtins.String.charCodeAt")}}
 
-<h2 id="sect1"></h2>
+##
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("String.fromCharCode()")}}</li>
- <li>{{jsxref("String.prototype.charAt()")}}</li>
- <li>{{jsxref("String.fromCodePoint()")}}</li>
- <li>{{jsxref("String.prototype.codePointAt()")}}</li>
-</ul>
+- {{jsxref("String.fromCharCode()")}}
+- {{jsxref("String.prototype.charAt()")}}
+- {{jsxref("String.fromCodePoint()")}}
+- {{jsxref("String.prototype.codePointAt()")}}

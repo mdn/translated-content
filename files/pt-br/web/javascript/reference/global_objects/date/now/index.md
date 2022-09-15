@@ -10,67 +10,52 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/now
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<h2 id="Summary" name="Summary">Resumo</h2>
+## Resumo
 
-<p>O método<strong><code> Date.now()</code></strong> retorna o número de milisegundos decorridos desde 1 de janeiro de 1970 00:00:00 UTC.</p>
+O método**` Date.now()`** retorna o número de milisegundos decorridos desde 1 de janeiro de 1970 00:00:00 UTC.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var timeInMs = Date.now();
-</pre>
+```
+var timeInMs = Date.now();
+```
 
-<h3 id="Parameters" name="Parameters">Parâmetros</h3>
+### Parâmetros
 
-<p>Nenhum.</p>
+Nenhum.
 
-<h2 id="Description" name="Description">Descrição</h2>
+## Descrição
 
-<p>O método <strong><code>now()</code></strong> retorna os milisegundos decorridos desde 1 de janeiro de 1970 00:00:00 UTC até agora como um  {{jsxref("Global_Objects/Number", "Number")}}.</p>
+O método **`now()`** retorna os milisegundos decorridos desde 1 de janeiro de 1970 00:00:00 UTC até agora como um {{jsxref("Global_Objects/Number", "Number")}}.
 
-<p>Por que <strong><code>now</code> </strong>é um método estático de <strong><code>Date</code></strong>, você sempre o usará como <strong><code>Date.now()</code></strong>.</p>
+Por que **`now` **é um método estático de **`Date`**, você sempre o usará como **`Date.now()`**.
 
-<h2 id="Compatibility" name="Compatibility">Polyfill</h2>
+## Polyfill
 
-<p>Este método foi padronizado no ECMA-262 5<sup>th</sup> edition. Em ambientes que não estão atualizados para suportar este método você pode suprir esta carência utilizando o seguinte:</p>
+Este método foi padronizado no ECMA-262 5th edition. Em ambientes que não estão atualizados para suportar este método você pode suprir esta carência utilizando o seguinte:
 
-<pre class="brush: js">if (!Date.now) {
+```js
+if (!Date.now) {
   Date.now = function now() {
     return new Date().getTime();
   };
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.4.4', 'Date.now')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Definição inicial. Implementado no JavaScript 1.5</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.now', 'Date.now')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                        | Status                   | Comentário                                        |
+| -------------------------------------------------------------------- | ------------------------ | ------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.9.4.4', 'Date.now')}} | {{Spec2('ES5.1')}} | Definição inicial. Implementado no JavaScript 1.5 |
+| {{SpecName('ES6', '#sec-date.now', 'Date.now')}}     | {{Spec2('ES6')}}     |                                                   |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{domxref("window.performance.now")}} - fornece timestamps com sub-millisegundo precisão para uso em medir o desempenho da página</li>
- <li>{{domxref("console.time")}} / {{domxref("console.timeEnd")}}</li>
-</ul>
+- {{domxref("window.performance.now")}} - fornece timestamps com sub-millisegundo precisão para uso em medir o desempenho da página
+- {{domxref("console.time")}} / {{domxref("console.timeEnd")}}

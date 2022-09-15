@@ -3,61 +3,65 @@ title: 'SyntaxError: missing ; before statement'
 slug: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
 translation_of: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Messagem">Messagem</h2>
+## Messagem
 
-<pre class="syntaxbox">SyntaxError: falta ; antes da declaração
-</pre>
+```
+SyntaxError: falta ; antes da declaração
+```
 
-<h2 id="Tipo_de_erro">Tipo de erro</h2>
+## Tipo de erro
 
-<p>{{jsxref("SyntaxError")}}.</p>
+{{jsxref("SyntaxError")}}.
 
-<h2 id="O_que_deu_errado">O que deu errado?</h2>
+## O que deu errado?
 
-<p>Falta um ponto-e-vírgula (<code>;</code>) em algum lugar. <a href="/en-US/docs/Web/JavaScript/Reference/Statements">JavaScript statements</a> must be terminated with semicolons. Some of them are affected by <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion">automatic semicolon insertion (ASI)</a>, but in this case you need to provide a semicolon, so that JavaScript can parse the source code correctly.</p>
+Falta um ponto-e-vírgula (`;`) em algum lugar. [JavaScript statements](/pt-BR/docs/Web/JavaScript/Reference/Statements) must be terminated with semicolons. Some of them are affected by [automatic semicolon insertion (ASI)](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion), but in this case you need to provide a semicolon, so that JavaScript can parse the source code correctly.
 
-<p>However, oftentimes, this error is only a consequence of another error, like not escaping strings properly, or using <code>var</code> wrongly. You might also have too many parenthesis somewhere. Carefully check the syntax when this error is thrown.</p>
+However, oftentimes, this error is only a consequence of another error, like not escaping strings properly, or using `var` wrongly. You might also have too many parenthesis somewhere. Carefully check the syntax when this error is thrown.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Unescaped_strings">Unescaped strings</h3>
+### Unescaped strings
 
-<p>This error can occur easily when not escaping strings properly and the JavaScript engine is expecting the end of your string already. For example:</p>
+This error can occur easily when not escaping strings properly and the JavaScript engine is expecting the end of your string already. For example:
 
-<pre class="brush: js example-bad">var foo = 'Tom's bar';
-// SyntaxError: missing ; before statement</pre>
+```js example-bad
+var foo = 'Tom's bar';
+// SyntaxError: missing ; before statement
+```
 
-<p>You can use double quotes, or escape the apostrophe:</p>
+You can use double quotes, or escape the apostrophe:
 
-<pre class="brush: js example-good">var foo = "Tom's bar";
+```js example-good
+var foo = "Tom's bar";
 var foo = 'Tom\'s bar';
-</pre>
+```
 
-<h3 id="Declaring_properties_with_var">Declaring properties with var</h3>
+### Declaring properties with var
 
-<p>You <strong>cannot</strong> declare properties of an object or array with a <code>var</code> declaration.</p>
+You **cannot** declare properties of an object or array with a `var` declaration.
 
-<pre class="brush: js example-bad">var obj = {};
+```js example-bad
+var obj = {};
 var obj.foo = 'hi'; // SyntaxError missing ; before statement
 
 var array = [];
 var array[0] = 'there'; // SyntaxError missing ; before statement
-</pre>
+```
 
-<p>Instead, omit the <code>var</code> keyword:</p>
+Instead, omit the `var` keyword:
 
-<pre class="brush: js example-good">var obj = {};
+```js example-good
+var obj = {};
 obj.foo = 'hi';
 
 var array = [];
 array[0] = 'there';
-</pre>
+```
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion">Automatic semicolon insertion (ASI)</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements">JavaScript statements</a></li>
-</ul>
+- [Automatic semicolon insertion (ASI)](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion)
+- [JavaScript statements](/pt-BR/docs/Web/JavaScript/Reference/Statements)

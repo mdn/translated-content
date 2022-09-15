@@ -10,78 +10,73 @@ tags:
   - reduce()
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>reduce()</strong></code> executa uma função <strong>reducer</strong> (fornecida por você) para cada elemento do array, resultando num único valor de retorno.</p>
+O método **`reduce()`** executa uma função **reducer** (fornecida por você) para cada elemento do array, resultando num único valor de retorno.
 
-<div>{{EmbedInteractiveExample("pages/js/array-reduce.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-reduce.html")}}
 
-<p>A função <strong>reducer</strong> recebe quatro parâmetros:</p>
+A função **reducer** recebe quatro parâmetros:
 
-<ol>
- <li>Acumulador (<code>acc</code>)</li>
- <li>Valor Atual (<code>cur</code>)</li>
- <li>Index Atual (<code>idx</code>)</li>
- <li>Array original (<code>src</code>)</li>
-</ol>
+1.  Acumulador (`acc`)
+2.  Valor Atual (`cur`)
+3.  Index Atual (`idx`)
+4.  Array original (`src`)
 
-<p>O valor de retorno da sua função <strong>reducer</strong> é atribuída ao acumulador. O acumulador, com seu valor atualizado, é repassado para cada iteração subsequente pelo array, que por fim, se tornará o valor resultante, único, final.</p>
+O valor de retorno da sua função **reducer** é atribuída ao acumulador. O acumulador, com seu valor atualizado, é repassado para cada iteração subsequente pelo array, que por fim, se tornará o valor resultante, único, final.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="brush: js"><var>array</var>.reduce(<var>callback( acumulador, valorAtual</var>[, index[, array]] )[, <var>valorInicial</var>]))</pre>
+```js
+array.reduce(callback( acumulador, valorAtual[, index[, array]] )[, valorInicial]))
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>Função que é executada em cada valor no array (exceto no primeiro, se nenhum <code>valorInicial</code> for passado); recebe quatro argumentos:</dd>
-</dl>
+- `callback`
+  - : Função que é executada em cada valor no array (exceto no primeiro, se nenhum `valorInicial` for passado); recebe quatro argumentos:
 
-<dl>
- <dt><code>acumulador</code></dt>
- <dd>É o valor inicial (ou o valor do callback anterior). Este valor inicia com o <code>valorInicial</code> e será retornado na última iteração.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code>valorAtual</code></dt>
- <dd>Opcional. O índice do elemento atual que está sendo processado no array. Começa a partir do index <code>0</code> se um <code>valorInicial</code> for fornecido. Do contrário, começa do index <code>1</code>.</dd>
-</dl>
+- `acumulador`
+  - : É o valor inicial (ou o valor do callback anterior). Este valor inicia com o `valorInicial` e será retornado na última iteração.
 
-<dl>
- <dt><code>valorInicial</code></dt>
- <dd>Opcional. Valor a ser usado como o primeiro argumento da primeira chamada da função <code>callback</code>. Se nenhum <code>valorInicial</code> é fornecido, o primeiro elemento do array será usado como o valor inicial do <code>acumulador</code> e o <code>valorAtual</code> não será lido. Chamar <code>reduce()</code> em uma array vazia sem valor inicial retornará um erro.</dd>
-</dl>
+<!---->
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+- `valorAtual`
+  - : Opcional. O índice do elemento atual que está sendo processado no array. Começa a partir do index `0` se um `valorInicial` for fornecido. Do contrário, começa do index `1`.
 
-<p>O valor que resulta da execução da função de callback do "reducer" até a conclusão de todo o array.</p>
+<!---->
 
-<h2 id="Description" name="Description">Descrição</h2>
+- `valorInicial`
+  - : Opcional. Valor a ser usado como o primeiro argumento da primeira chamada da função `callback`. Se nenhum `valorInicial` é fornecido, o primeiro elemento do array será usado como o valor inicial do `acumulador` e o `valorAtual` não será lido. Chamar `reduce()` em uma array vazia sem valor inicial retornará um erro.
 
-<p>O método <code>reduce()</code> executa a função de <code>callback</code> uma vez para cada elemento presente no array, excluindo furos (valores indefinidos), recebendo quatro argumentos:</p>
+### Valor retornado
 
-<ol>
- <li><em>acumulador</em> - valor inicial (ou o valor do callback anterior),</li>
- <li><em>valorAtual</em> - o valor do elemento atual</li>
- <li><em>index</em> - o índice atual e</li>
- <li><code><var>array</var></code> - o array onde a iteração está ocorrendo.</li>
-</ol>
+O valor que resulta da execução da função de callback do "reducer" até a conclusão de todo o array.
 
-<p>A primeira vez que o callback é chamado, o <code>acumulador</code> e o <code>valorAtual</code> podem ter um de dois valores possíveis. Se o <code>valorInicial</code> tiver sido fornecido na chamada à função <code>reduce()</code>, então o <code>acumulador</code> será igual ao <code>valorInicial</code> e o <code>valorAtual</code> será igual ao primeiro valor no array. Caso nenhum <code>valorInicial</code> seja fornecido, <code>acumulador</code> será igual ao primeiro valor no array, e <code>valorAtual</code> será igual ao segundo.</p>
+## Descrição
 
-<div class="note">
-<p><strong>Nota</strong>: Se o <code>valorInicial</code> não tiver sido passado como argumento, então reduce() executará o callback da função começando a partir do índice 1 (index 1), pulando o primeiro índice (<code>index 0</code>). Se o <code>valorInicial</code> for passado como argumento, a função irá começar no index 0.</p>
-</div>
+O método `reduce()` executa a função de `callback` uma vez para cada elemento presente no array, excluindo furos (valores indefinidos), recebendo quatro argumentos:
 
-<p>Se a array estiver vazia e o <code>valorInicial</code> não tiver sido informado, uma exceção do tipo {{jsxref("Global_Objects/TypeError", "TypeError")}} será lançada.</p>
+1.  _acumulador_ - valor inicial (ou o valor do callback anterior),
+2.  _valorAtual_ - o valor do elemento atual
+3.  _index_ - o índice atual e
+4.  `array` - o array onde a iteração está ocorrendo.
 
-<p>Se a array possuir somente um elemento (independente da posição) e o <code>valorInicial</code> não tiver sido fornecido, ou se <code>valorInicial</code> for fornecido, mas a array estiver vazia, o valor será retornado sem que a função de <code>callback</code> seja chamada.</p>
+A primeira vez que o callback é chamado, o `acumulador` e o `valorAtual` podem ter um de dois valores possíveis. Se o `valorInicial` tiver sido fornecido na chamada à função `reduce()`, então o `acumulador` será igual ao `valorInicial` e o `valorAtual` será igual ao primeiro valor no array. Caso nenhum `valorInicial` seja fornecido, `acumulador` será igual ao primeiro valor no array, e `valorAtual` será igual ao segundo.
 
-<p>É mais seguro provir um <code>valorInicial</code>, porque existem até <em>quatro</em> possíveis saídas sem o <code>valorInicial</code>, como mostrado no exemplo:</p>
+> **Nota:** Se o `valorInicial` não tiver sido passado como argumento, então reduce() executará o callback da função começando a partir do índice 1 (index 1), pulando o primeiro índice (`index 0`). Se o `valorInicial` for passado como argumento, a função irá começar no index 0.
 
-<pre class="brush: js">var maxCallback = ( acc, cur ) =&gt; Math.max( acc.x, cur.x );
-var maxCallback2 = ( max, cur ) =&gt; Math.max( max, cur );
+Se a array estiver vazia e o `valorInicial` não tiver sido informado, uma exceção do tipo {{jsxref("Global_Objects/TypeError", "TypeError")}} será lançada.
+
+Se a array possuir somente um elemento (independente da posição) e o `valorInicial` não tiver sido fornecido, ou se `valorInicial` for fornecido, mas a array estiver vazia, o valor será retornado sem que a função de `callback` seja chamada.
+
+É mais seguro provir um `valorInicial`, porque existem até _quatro_ possíveis saídas sem o `valorInicial`, como mostrado no exemplo:
+
+```js
+var maxCallback = ( acc, cur ) => Math.max( acc.x, cur.x );
+var maxCallback2 = ( max, cur ) => Math.max( max, cur );
 
 // reduce() sem valores iniciais
 [ { x: 22 }, { x: 42 } ].reduce( maxCallback ); // 42
@@ -89,196 +84,128 @@ var maxCallback2 = ( max, cur ) =&gt; Math.max( max, cur );
 [                      ].reduce( maxCallback ); // TypeError
 
 // map/reduce; melhor solução, funciona para vetores vazios e tambem para vetores grandes
-[ { x: 22 }, { x: 42 } ].map( el =&gt; el.x )
-                        .reduce( maxCallback2, -Infinity );</pre>
+[ { x: 22 }, { x: 42 } ].map( el => el.x )
+                        .reduce( maxCallback2, -Infinity );
+```
 
-<h3 id="Como_funciona_o_reduce">Como funciona o reduce()</h3>
+### Como funciona o reduce()
 
-<p>Suponha que o seguinte uso de reduce() tenha ocorrido:</p>
+Suponha que o seguinte uso de reduce() tenha ocorrido:
 
-<pre class="brush: js">[0, 1, 2, 3, 4].reduce(function(acumulador, valorAtual, index, array) {
+```js
+[0, 1, 2, 3, 4].reduce(function(acumulador, valorAtual, index, array) {
   return acumulador + valorAtual;
 });
-// 10</pre>
+// 10
+```
 
-<p>O callback será invocado quatro vezes, com os argumentos e valores em cada chamada  sendo:</p>
+O callback será invocado quatro vezes, com os argumentos e valores em cada chamada sendo:
 
-<table style="width: 100%;">
- <thead>
-  <tr>
-   <th scope="col"></th>
-   <th scope="col"><code>acumulador</code></th>
-   <th scope="col">valorAtual</th>
-   <th scope="col">index</th>
-   <th scope="col"><code>array</code></th>
-   <th scope="col"><strong>valor de retorno</strong></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">primeira chamada</th>
-   <td><code>0</code></td>
-   <td><code>1</code></td>
-   <td><code>1</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">segunda chamada</th>
-   <td><code>1</code></td>
-   <td><code>2</code></td>
-   <td><code>2</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>3</code></td>
-  </tr>
-  <tr>
-   <th scope="row">terceira chamada</th>
-   <td><code>3</code></td>
-   <td><code>3</code></td>
-   <td><code>3</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>6</code></td>
-  </tr>
-  <tr>
-   <th scope="row">quarta chamada</th>
-   <td><code>6</code></td>
-   <td><code>4</code></td>
-   <td><code>4</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>10</code></td>
-  </tr>
- </tbody>
-</table>
+|                  | `acumulador` | valorAtual | index | `array`           | **valor de retorno** |
+| ---------------- | ------------ | ---------- | ----- | ----------------- | -------------------- |
+| primeira chamada | `0`          | `1`        | `1`   | `[0, 1, 2, 3, 4]` | `1`                  |
+| segunda chamada  | `1`          | `2`        | `2`   | `[0, 1, 2, 3, 4]` | `3`                  |
+| terceira chamada | `3`          | `3`        | `3`   | `[0, 1, 2, 3, 4]` | `6`                  |
+| quarta chamada   | `6`          | `4`        | `4`   | `[0, 1, 2, 3, 4]` | `10`                 |
 
-<p>O valor retornado pelo <code>reduce</code> será o da última chamada à callback <code>(10)</code>.</p>
+O valor retornado pelo `reduce` será o da última chamada à callback `(10)`.
 
-<p>Você também pode usar uma {{jsxref("Functions/Arrow_functions", "Arrow Function","",1)}} em vez de uma função completa. O código abaixo produz a mesma saída que o código do bloco acima:</p>
+Você também pode usar uma {{jsxref("Functions/Arrow_functions", "Arrow Function","",1)}} em vez de uma função completa. O código abaixo produz a mesma saída que o código do bloco acima:
 
-<pre class="brush: js">[0, 1, 2, 3, 4].reduce( (accum, curr) =&gt; accum + curr );</pre>
+```js
+[0, 1, 2, 3, 4].reduce( (accum, curr) => accum + curr );
+```
 
-<p>Se você informar um valorInicial como o segundo argumento de reduce, o resultado será:</p>
+Se você informar um valorInicial como o segundo argumento de reduce, o resultado será:
 
-<pre class="brush: js">[0, 1, 2, 3, 4].reduce(function(acumulador, valorAtual, indice, array) {
+```js
+[0, 1, 2, 3, 4].reduce(function(acumulador, valorAtual, indice, array) {
   return acumulador + valorAtual;
 }, 10);
 
-// 20</pre>
+// 20
+```
 
-<table style="width: 100%;">
- <thead>
-  <tr>
-   <th scope="col"><code>callback</code></th>
-   <th scope="col"><code>acumulador</code></th>
-   <th scope="col"><code>valorAtual</code></th>
-   <th scope="col"><code>index</code></th>
-   <th scope="col"><code>array</code></th>
-   <th scope="col"><code>valor de retorno</code></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">primeira chamada</th>
-   <td><code>10</code></td>
-   <td><code>0</code></td>
-   <td><code>0</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>10</code></td>
-  </tr>
-  <tr>
-   <th scope="row">segunda chamada</th>
-   <td><code>10</code></td>
-   <td><code>1</code></td>
-   <td><code>1</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>11</code></td>
-  </tr>
-  <tr>
-   <th scope="row">terceira chamada</th>
-   <td><code>11</code></td>
-   <td><code>2</code></td>
-   <td><code>2</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>13</code></td>
-  </tr>
-  <tr>
-   <th scope="row">quarta chamada</th>
-   <td><code>13</code></td>
-   <td><code>3</code></td>
-   <td><code>3</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>16</code></td>
-  </tr>
-  <tr>
-   <th scope="row">quinta chamada</th>
-   <td><code>16</code></td>
-   <td><code>4</code></td>
-   <td><code>4</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>20</code></td>
-  </tr>
- </tbody>
-</table>
+| `callback`       | `acumulador` | `valorAtual` | `index` | `array`           | `valor de retorno` |
+| ---------------- | ------------ | ------------ | ------- | ----------------- | ------------------ |
+| primeira chamada | `10`         | `0`          | `0`     | `[0, 1, 2, 3, 4]` | `10`               |
+| segunda chamada  | `10`         | `1`          | `1`     | `[0, 1, 2, 3, 4]` | `11`               |
+| terceira chamada | `11`         | `2`          | `2`     | `[0, 1, 2, 3, 4]` | `13`               |
+| quarta chamada   | `13`         | `3`          | `3`     | `[0, 1, 2, 3, 4]` | `16`               |
+| quinta chamada   | `16`         | `4`          | `4`     | `[0, 1, 2, 3, 4]` | `20`               |
 
-<p>O retorno da última chamada <code>20</code>,é retornado como resultado da função <code>reduce()</code>.</p>
+O retorno da última chamada `20`,é retornado como resultado da função `reduce()`.
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<h3 id="Example_Sum_up_all_values_within_an_array" name="Example:_Sum_up_all_values_within_an_array">Soma todos os valores de uma array</h3>
+### Soma todos os valores de uma array
 
-<pre class="brush: js">let total = [0, 1, 2, 3].reduce(function(acumulador, valorAtual) {
+```js
+let total = [0, 1, 2, 3].reduce(function(acumulador, valorAtual) {
    return acumulador + valorAtual;
  }, 0)
-// retorna 6</pre>
+// retorna 6
+```
 
-<p>outra alternativa é usar uma arrow function:</p>
+outra alternativa é usar uma arrow function:
 
-<pre class="brush: js">var total = [ 0, 1, 2, 3 ].reduce(
-  ( acumulador, valorAtual ) =&gt; acumulador + valorAtual,
+```js
+var total = [ 0, 1, 2, 3 ].reduce(
+  ( acumulador, valorAtual ) => acumulador + valorAtual,
   0
-);</pre>
+);
+```
 
-<h3 id="Soma_de_valores_de_um_objeto_de_um_array">Soma de valores de um objeto de um array</h3>
+### Soma de valores de um objeto de um array
 
-<p>Para resumir os valores contidos em um array, você <strong>deve </strong>fornecer um valorInicial, para que cada item passe por sua função.</p>
+Para resumir os valores contidos em um array, você **deve** fornecer um valorInicial, para que cada item passe por sua função.
 
-<pre class="brush: js">var valorInicial = 0;
+```js
+var valorInicial = 0;
 var soma = [{x: 1}, {x: 2}, {x: 3}].reduce(function (acumulador, valorAtual) {
     return acumulador + valorAtual.x;
 }, valorInicial)
 
-console.log(soma) // retorna 6</pre>
+console.log(soma) // retorna 6
+```
 
-<p>Utilizando uma arrow function:</p>
+Utilizando uma arrow function:
 
-<pre class="brush: js">var valorInicial = 0;
+```js
+var valorInicial = 0;
 var soma = [{x: 1}, {x: 2}, {x: 3}].reduce(
-    (acumulador , valorAtual) =&gt; acumulador + valorAtual.x
+    (acumulador , valorAtual) => acumulador + valorAtual.x
     , valorInicial
 );
 
 console.log(soma) // retorna 6
-</pre>
+```
 
-<h3 id="Example_Flatten_an_array_of_arrays" name="Example:_Flatten_an_array_of_arrays">Redução de um array de arrays</h3>
+### Redução de um array de arrays
 
-<pre class="brush: js">let reduzido = [[0, 1], [2, 3], [4, 5]].reduce(
+```js
+let reduzido = [[0, 1], [2, 3], [4, 5]].reduce(
   function(acumulador, valorAtual) {
     return acumulador.concat(valorAtual)
   },
   []
 )
-// reduzido é [0, 1, 2, 3, 4, 5]</pre>
+// reduzido é [0, 1, 2, 3, 4, 5]
+```
 
-<p>Utilizando uma arrow function:</p>
+Utilizando uma arrow function:
 
-<pre class="brush: js">let reduzido = [[0, 1], [2, 3], [4, 5]].reduce(
-  ( acumulador, valorAtual ) =&gt; acumulador.concat(valorAtual),
+```js
+let reduzido = [[0, 1], [2, 3], [4, 5]].reduce(
+  ( acumulador, valorAtual ) => acumulador.concat(valorAtual),
   []
-);</pre>
+);
+```
 
-<h3 id="Contando_valores_iguais_em_um_objeto">Contando valores iguais em um objeto</h3>
+### Contando valores iguais em um objeto
 
-<pre class="brush: js">let nomes = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
+```js
+let nomes = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
 
 let quantidadeNomes = nomes.reduce(function (todosNomes, nome) {
   if (nome in todosNomes) {
@@ -291,11 +218,12 @@ let quantidadeNomes = nomes.reduce(function (todosNomes, nome) {
 }, {});
 // quantidade de nomes:
 // { 'Alice': 2, 'Bob': 1, 'Tiff': 1, 'Bruce': 1 }
-</pre>
+```
 
-<h3 id="Agrupando_objetos_por_uma_propriedade">Agrupando objetos por uma propriedade</h3>
+### Agrupando objetos por uma propriedade
 
-<pre class="brush: js">let pessoas = [
+```js
+let pessoas = [
   { nome: 'Alice', idade: 21 },
   { nome: 'Max', idade: 20 },
   { nome: 'Jane', idade: 20 }
@@ -320,11 +248,13 @@ let grupodePessoas = agruparPor(pessoas, 'idade');
 //     { nome: 'Jane', idade: 20 }
 //   ],
 //   21: [{ nome: 'Alice', idade: 21 }]
-// }</pre>
+// }
+```
 
-<h3 id="Juntando_arrays_contidos_num_array_de_objetos_usando_o_operador_spread_e_o_valorInicial">Juntando arrays contidos num array de objetos usando o operador spread e o <code>valorInicial</code></h3>
+### Juntando arrays contidos num array de objetos usando o operador spread e o `valorInicial`
 
-<pre class="brush: js">// friends - um array de objetos
+```js
+// friends - um array de objetos
 // onde o campo "books" é a lista de livros favoritos
 var friends = [{
   name: 'Anna',
@@ -350,87 +280,92 @@ var allbooks = friends.reduce(function(prev, curr) {
 //   'Alphabet', 'Bible', 'Harry Potter', 'War and peace',
 //   'Romeo and Juliet', 'The Lord of the Rings',
 //   'The Shining'
-// ]</pre>
+// ]
+```
 
-<h3 id="Removendo_itens_duplicados_num_array">Removendo itens duplicados num array</h3>
+### Removendo itens duplicados num array
 
-<div class="blockIndicator note">
-<p><strong>Nota:</strong> Se você estiver usando um ambiente compatível com {{jsxref("Set")}} and {{jsxref("Array.from()")}}, você pode usar <code>let orderedArray = Array.from(new Set(myArray))</code> para obter um array em que os itens duplicados tenham sido removidos.</p>
-</div>
+> **Nota:** Se você estiver usando um ambiente compatível com {{jsxref("Set")}} and {{jsxref("Array.from()")}}, você pode usar `let orderedArray = Array.from(new Set(myArray))` para obter um array em que os itens duplicados tenham sido removidos.
 
-<pre class="brush: js">let arr = [1, 2, 1, 2, 3, 5, 4, 5, 3, 4, 4, 4, 4];
-let result = arr.sort().reduce((init, current) =&gt; {
+```js
+let arr = [1, 2, 1, 2, 3, 5, 4, 5, 3, 4, 4, 4, 4];
+let result = arr.sort().reduce((init, current) => {
     if (init.length === 0 || init[init.length - 1] !== current) {
         init.push(current);
     }
     return init;
 }, []);
 console.log(result); //[1,2,3,4,5]
-</pre>
+```
 
-<h3 id="Substituindo_.filter.map_por_.reduce">Substituindo .filter().map() por .reduce()</h3>
+### Substituindo .filter().map() por .reduce()
 
-<p>Usar {{jsxref("Array.filter()")}} seguido por {{jsxref("Array.map()")}} faz com que o array seja percorrido duas vezes. Você pode obter o mesmo resultado percorrendo o array apenas uma vez com {{jsxref("Array.reduce()")}}, o que é, portanto, mais eficiente. (Se você gosta de for loops, você pode usar filter e map percorrendo o array apenas uma vez com {{jsxref("Array.forEach()")}}).</p>
+Usar {{jsxref("Array.filter()")}} seguido por {{jsxref("Array.map()")}} faz com que o array seja percorrido duas vezes. Você pode obter o mesmo resultado percorrendo o array apenas uma vez com {{jsxref("Array.reduce()")}}, o que é, portanto, mais eficiente. (Se você gosta de for loops, você pode usar filter e map percorrendo o array apenas uma vez com {{jsxref("Array.forEach()")}}).
 
-<pre class="brush: js">const numbers = [-5, 6, 2, 0,];
+```js
+const numbers = [-5, 6, 2, 0,];
 
-const doubledPositiveNumbers = numbers.reduce((accumulator, currentValue) =&gt; {
-  if (currentValue &gt; 0) {
+const doubledPositiveNumbers = numbers.reduce((accumulator, currentValue) => {
+  if (currentValue > 0) {
     const doubled = currentValue * 2;
     accumulator.push(doubled);
   }
   return accumulator;
 }, []);
 
-console.log(doubledPositiveNumbers); // [12, 4]</pre>
+console.log(doubledPositiveNumbers); // [12, 4]
+```
 
-<h3 id="Rodando_promises_em_sequência">Rodando promises em sequência</h3>
+### Rodando promises em sequência
 
-<pre class="brush: js">/**
+```js
+/**
  * Roda promises de um promise array de uma maneira encadeada
  *
  * @param {array} arr - promise arr
  * @return {Object} promise object
  */
 function runPromiseInSequense(arr) {
-  return arr.reduce((promiseChain, currentPromise) =&gt; {
-    return promiseChain.then((chainedResult) =&gt; {
+  return arr.reduce((promiseChain, currentPromise) => {
+    return promiseChain.then((chainedResult) => {
       return currentPromise(chainedResult)
-        .then((res) =&gt; res)
+        .then((res) => res)
     })
   }, Promise.resolve());
 }
 
 // promise function 1
 function p1() {
-  return new Promise((resolve, reject) =&gt; {
+  return new Promise((resolve, reject) => {
     resolve(5);
   });
 }
 
 // promise function 2
 function p2(a) {
-  return new Promise((resolve, reject) =&gt; {
+  return new Promise((resolve, reject) => {
     resolve(a * 2);
   });
 }
 
 // promise function 3
 function p3(a) {
-  return new Promise((resolve, reject) =&gt; {
+  return new Promise((resolve, reject) => {
     resolve(a * 3);
   });
 }
 
 const promiseArr = [p1, p2, p3];
 runPromiseInSequense(promiseArr)
-  .then((res) =&gt; {
+  .then((res) => {
     console.log(res);   // 30
-  });</pre>
+  });
+```
 
-<h3 id="Escrever_map_usando_reduce">Escrever map usando reduce</h3>
+### Escrever map usando reduce
 
-<pre class="brush: js">if (!Array.prototype.mapUsingReduce) {
+```js
+if (!Array.prototype.mapUsingReduce) {
   Array.prototype.mapUsingReduce = function(callback, thisArg) {
     return this.reduce(function(mappedArray, currentValue, index, array) {
       mappedArray[index] = callback.call(thisArg, currentValue, index, array)
@@ -440,14 +375,16 @@ runPromiseInSequense(promiseArr)
 }
 
 [1, 2, , 3].mapUsingReduce(
-  (currentValue, index, array) =&gt; currentValue + index + array.length
-) // [5, 7, , 10]</pre>
+  (currentValue, index, array) => currentValue + index + array.length
+) // [5, 7, , 10]
+```
 
-<h2 id="Polyfill" name="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p><code>Array.prototype.reduce</code> foi adicionado ao padrão ECMA-262  na quinta edição; e portanto, pode não estar presente em todas as implementações do padrão. Você pode contornar isso inserindo o código a seguir no início de seus scripts, permitindo o uso do <code>reduce()</code> em implementações que não possuem suporte nativo a ele.</p>
+`Array.prototype.reduce` foi adicionado ao padrão ECMA-262 na quinta edição; e portanto, pode não estar presente em todas as implementações do padrão. Você pode contornar isso inserindo o código a seguir no início de seus scripts, permitindo o uso do `reduce()` em implementações que não possuem suporte nativo a ele.
 
-<pre class="brush: js">// Etapas de produção para o ECMA-262, Edition 5, 15.4.4.21
+```js
+// Etapas de produção para o ECMA-262, Edition 5, 15.4.4.21
 // Referencia: http://es5.github.io/#x15.4.4.21
 if (!Array.prototype.reduce) {
   Array.prototype.reduce = function(callback /*, valorInicial*/) {
@@ -458,19 +395,19 @@ if (!Array.prototype.reduce) {
     if (typeof callback !== 'function') {
       throw new TypeError(callback + ' não é uma função')
     }
-    var t = Object(this), len = t.length &gt;&gt;&gt; 0, k = 0, value;
+    var t = Object(this), len = t.length >>> 0, k = 0, value;
     if (arguments.length == 2) {
       value = arguments[1];
     } else {
-      while (k &lt; len &amp;&amp; !(k in t)) {
+      while (k < len && !(k in t)) {
         k++;
       }
-      if (k &gt;= len) {
+      if (k >= len) {
         throw new TypeError('Reduce possui um array vazio sem um valor inicial');
       }
       value = t[k++];
     }
-    for (; k &lt; len; k++) {
+    for (; k < len; k++) {
       if (k in t) {
         value = callback(value, t[k], k, t);
       }
@@ -478,38 +415,19 @@ if (!Array.prototype.reduce) {
     return value;
   };
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.21', 'Array.prototype.reduce')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>
-    <p>Definição inicial. Implemetada no JavaScript 1.8.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.reduce', 'Array.prototype.reduce')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                        | Status                   | Comentário                                        |
+| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.4.4.21', 'Array.prototype.reduce')}}             | {{Spec2('ES5.1')}} | Definição inicial. Implemetada no JavaScript 1.8. |
+| {{SpecName('ES6', '#sec-array.prototype.reduce', 'Array.prototype.reduce')}} | {{Spec2('ES6')}}     |                                                   |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>{{Compat("javascript.builtins.Array.reduce")}}</div>
+{{Compat("javascript.builtins.Array.reduce")}}
 
-<h2 id="See_also" name="See_also">Leia também</h2>
+## Leia também
 
-<ul>
- <li>{{jsxref("Array.prototype.reduceRight()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.reduceRight()")}}

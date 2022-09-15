@@ -6,32 +6,33 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>Number.isInteger()</code></strong> determina se o valor passado é um inteiro.</p>
+O método **`Number.isInteger()`** determina se o valor passado é um inteiro.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code>Number.isInteger(v<var>alue</var>)</code></pre>
+```
+Number.isInteger(value)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>value</code></dt>
- <dd>O valor a testar se é um inteiro.</dd>
-</dl>
+- `value`
+  - : O valor a testar se é um inteiro.
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>Um {{jsxref("Boolean")}} indicando se o valor é inteiro ou não.</p>
+Um {{jsxref("Boolean")}} indicando se o valor é inteiro ou não.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Se o alvo for um inteiro, retorna <code>true</code>, senão retorna <code>false</code>. Se o valor é {{jsxref("NaN")}} ou infinito, retorna <code>false</code>.</p>
+Se o alvo for um inteiro, retorna `true`, senão retorna `false`. Se o valor é {{jsxref("NaN")}} ou infinito, retorna `false`.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: js">Number.isInteger(0);         // true
+```js
+Number.isInteger(0);         // true
 Number.isInteger(1);         // true
 Number.isInteger(-100000);   // true
 
@@ -44,45 +45,29 @@ Number.isInteger("10");      // false
 Number.isInteger(true);      // false
 Number.isInteger(false);     // false
 Number.isInteger([1]);       // false
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: js">Number.isInteger = Number.isInteger || function(value) {
-  return typeof value === "number" &amp;&amp;
-    isFinite(value) &amp;&amp;
+```js
+Number.isInteger = Number.isInteger || function(value) {
+  return typeof value === "number" &&
+    isFinite(value) &&
     Math.floor(value) === value;
 };
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-number.isinteger', 'Number.isInteger')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.isinteger', 'Number.isInteger')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                | Status                       | Comentário         |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('ES6', '#sec-number.isinteger', 'Number.isInteger')}}         | {{Spec2('ES6')}}         | Definição inicial. |
+| {{SpecName('ESDraft', '#sec-number.isinteger', 'Number.isInteger')}} | {{Spec2('ESDraft')}} |                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Number.isInteger")}}
 
-<h2 id="Ver_tabém">Ver tabém</h2>
+## Ver tabém
 
-<ul>
- <li>O objeto {{jsxref("Number")}} a qual este método pertence.</li>
-</ul>
+- O objeto {{jsxref("Number")}} a qual este método pertence.

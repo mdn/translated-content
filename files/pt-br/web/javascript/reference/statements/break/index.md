@@ -3,46 +3,47 @@ title: break
 slug: Web/JavaScript/Reference/Statements/break
 translation_of: Web/JavaScript/Reference/Statements/break
 ---
-<div>
-<div>{{jsSidebar("Statements")}}</div>
-</div>
+{{jsSidebar("Statements")}}
 
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>O comando <strong>break </strong>encerra o loop atual, {{jsxref("Statements/switch", "switch")}}, ou o loop que foi informado no {{jsxref("Statements/label", "label")}} e transfere o controle da execução do programa para o comando seguinte.</p>
+O comando **break** encerra o loop atual, {{jsxref("Statements/switch", "switch")}}, ou o loop que foi informado no {{jsxref("Statements/label", "label")}} e transfere o controle da execução do programa para o comando seguinte.
 
-<h2 id="Síntaxe">Síntaxe</h2>
+## Síntaxe
 
-<pre class="syntaxbox"><code>break [label];</code></pre>
+```
+break [label];
+```
 
-<dl>
- <dt><code>label</code></dt>
- <dd>Opcional. Identificador associado ao label de um comando. Se a estrutura não for um loop ou {{jsxref("Statements/switch", "switch")}}, ele será um pré-requisito.</dd>
-</dl>
+- `label`
+  - : Opcional. Identificador associado ao label de um comando. Se a estrutura não for um loop ou {{jsxref("Statements/switch", "switch")}}, ele será um pré-requisito.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O comando <code>break</code> inclui um label opcional que permite ao programa encerrar a execução da estrutura que possui o nome informado na label. O comando <code>break</code> deve estar dentro dessa estrutura informada no label. A estrutura que possui o nome informada na label pode ser qualquer comando {{jsxref("Statements/block", "block")}}; não é necessário que seja precedida por um loop.</p>
+O comando `break` inclui um label opcional que permite ao programa encerrar a execução da estrutura que possui o nome informado na label. O comando `break` deve estar dentro dessa estrutura informada no label. A estrutura que possui o nome informada na label pode ser qualquer comando {{jsxref("Statements/block", "block")}}; não é necessário que seja precedida por um loop.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>A função a seguir possui um comando <code>break</code> que encerra o loop  {{jsxref("Statements/while", "while")}} quando a variável i vale 3, e então retorna o valor 3 * <code>x</code>.</p>
+A função a seguir possui um comando `break` que encerra o loop {{jsxref("Statements/while", "while")}} quando a variável i vale 3, e então retorna o valor 3 \* `x`.
 
-<pre class="brush:js">function testaBreak(x) {
+```js
+function testaBreak(x) {
    var i = 0;
 
-   while (i &lt; 6) {
+   while (i < 6) {
       if (i == 3) {
          break;
       }
       i += 1;
    }
    return i * x;
-}</pre>
+}
+```
 
-<p>O código a seguir possui o comando break dentro de uma estrutura nomeada. O comando <code>break</code> deverá estar dentro da estrutura na qual o label se refere. Veja que  <code>inner_block</code> está dentro de <code>outer_block</code>.</p>
+O código a seguir possui o comando break dentro de uma estrutura nomeada. O comando `break` deverá estar dentro da estrutura na qual o label se refere. Veja que `inner_block` está dentro de `outer_block`.
 
-<pre class="brush:js">bloco_externo:{
+```js
+bloco_externo:{
 
   bloco_interno:{
     console.log ('1');
@@ -52,11 +53,12 @@ translation_of: Web/JavaScript/Reference/Statements/break
 
   console.log ('2');        // não é executado
 }
-</pre>
+```
 
-<p>O código a seguir também utiliza o comando break com blocos nomeados mas gera um erro de sintaxe pois o comando break está dentro do bloco_1 mas faz uma referência ao bloco_2. Um comando break sempre deverá estar dentro da estrutura nomeada na qual fizer referência.</p>
+O código a seguir também utiliza o comando break com blocos nomeados mas gera um erro de sintaxe pois o comando break está dentro do bloco_1 mas faz uma referência ao bloco_2. Um comando break sempre deverá estar dentro da estrutura nomeada na qual fizer referência.
 
-<pre class="brush:js">bloco_1:{
+```js
+bloco_1:{
   console.log ('1');
   break bloco_2;            // SyntaxError: label not found
 }
@@ -64,48 +66,23 @@ translation_of: Web/JavaScript/Reference/Statements/break
 bloco_2:{
   console.log ('2');
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1st Edition</td>
-   <td>Standard</td>
-   <td>Definição inicial. Versão sem o uso do label.</td>
-  </tr>
-  <tr>
-   <td>ECMAScript 3rd Edition</td>
-   <td>Standard</td>
-   <td>Versão com label adicionada.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-12.8', 'Break statement')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-break-statement', 'Break statement')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                        | Status                   | Comentário                                    |
+| ------------------------------------------------------------------------------------ | ------------------------ | --------------------------------------------- |
+| ECMAScript 1st Edition                                                               | Standard                 | Definição inicial. Versão sem o uso do label. |
+| ECMAScript 3rd Edition                                                               | Standard                 | Versão com label adicionada.                  |
+| {{SpecName('ES5.1', '#sec-12.8', 'Break statement')}}             | {{Spec2('ES5.1')}} |                                               |
+| {{SpecName('ES6', '#sec-break-statement', 'Break statement')}} | {{Spec2('ES6')}}     |                                               |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.statements.break")}}
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Statements/continue", "continue")}}</li>
- <li>{{jsxref("Statements/label", "label")}}</li>
- <li>{{jsxref("Statements/switch", "switch")}}</li>
-</ul>
+- {{jsxref("Statements/continue", "continue")}}
+- {{jsxref("Statements/label", "label")}}
+- {{jsxref("Statements/switch", "switch")}}

@@ -7,163 +7,136 @@ tags:
   - TopicStub
 translation_of: Web/JavaScript/Reference/Global_Objects
 ---
+{{jsSidebar("Objects")}}
 
-<div>{{jsSidebar("Objects")}}</div>
+## Resumo
 
-<h2 id="Summary" name="Summary">Resumo</h2>
+Este capítulo documenta todos os objetos nativos do JavaScript padrão, assim como seus métodos e propriedades.
 
-<p>Este capítulo documenta todos os objetos nativos do JavaScript padrão, assim como seus métodos e propriedades.</p>
+O termo "objetos globais" (ou objetos nativos por padrão) aqui não deve ser confundido com o de **objeto global**. Aqui, objetos globais se referem aos **objetos no escopo global** (somente se o modo estrito/_strict mode_ do ECMAScript 5 não for usado; Nesse caso retorna {{jsxref("undefined")}}). O **objeto global** pode ser acessado usando o operador {{jsxref("Operators/this", "this")}} no escopo global. De fato, o escopo global **consiste em\_ \_**propriedades do objeto global, incluindo propriedades herdadas, se houver.
 
-<p>O termo "objetos globais" (ou objetos nativos por padrão) aqui não deve ser confundido com o de <strong>objeto global</strong>. Aqui, objetos globais se referem aos <strong>objetos no escopo global</strong> (somente se o modo estrito/<em>strict mode</em> do ECMAScript 5 não for usado; Nesse caso retorna {{jsxref("undefined")}}). O <strong>objeto global</strong> pode ser acessado usando o operador {{jsxref("Operators/this", "this")}} no escopo global. De fato, o escopo global <strong>consiste em<em> </em></strong>propriedades do objeto global, incluindo propriedades herdadas, se houver.</p>
+Outros objetos no escopo global também são [criados pelo desenvolvedor](/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#Creating_new_objects) ou fornecido pela aplicação _host_. Os objetos disponíveis no _host_ no contexto do browser são documentados na [API reference](/pt-BR/docs/Web/API/Reference). Para maiores informações sobre as distinções entre [DOM](/pt-BR/docs/DOM/DOM_Reference) e core [JavaScript](/pt-BR/docs/Web/JavaScript), veja [visão geral das tecnologias JavaScript](/pt-BR/docs/Web/JavaScript/JavaScript_technologies_overview).
 
-<p>Outros objetos no escopo global também são <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Creating_new_objects">criados pelo desenvolvedor</a> ou fornecido pela aplicação <em>host</em>. Os objetos disponíveis no <em>host</em> no contexto do browser são documentados na <a href="https://developer.mozilla.org/en-US/docs/Web/API/Reference">API reference</a>. Para maiores informações sobre as distinções entre <a href="https://developer.mozilla.org/en-US/docs/DOM/DOM_Reference">DOM</a> e core <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a>, veja <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/JavaScript_technologies_overview">visão geral das tecnologias JavaScript</a>.</p>
+## Objetos padrão (por categoria)
 
-<h2 id="Objetos_padrão_(por_categoria)">Objetos padrão (por categoria)</h2>
+### Propriedades de valor
 
-<h3 id="Propriedades_de_valor">Propriedades de valor</h3>
+Propriedades globais retornam um valor simples; eles não tem propriedades ou métodos.
 
-<p>Propriedades globais retornam um valor simples; eles não tem propriedades ou métodos.</p>
+- {{jsxref("Global_Objects/Infinity", "Infinity")}}
+- {{jsxref("Global_Objects/NaN", "NaN")}}
+- {{jsxref("Global_Objects/undefined", "undefined")}}
+- {{jsxref("Global_Objects/null", "null")}} literal
 
-<ul>
- <li>{{jsxref("Global_Objects/Infinity", "Infinity")}}</li>
- <li>{{jsxref("Global_Objects/NaN", "NaN")}}</li>
- <li>{{jsxref("Global_Objects/undefined", "undefined")}}</li>
- <li>{{jsxref("Global_Objects/null", "null")}} literal</li>
-</ul>
+### Propriedades de função
 
-<h3 id="Propriedades_de_função">Propriedades de função</h3>
+Estas funções globais —funções que são chamadas globalmente ao invés de em um objeto—retornam diretamente seus resultados a quem chama.
 
-<p>Estas funções globais —funções que são chamadas globalmente ao invés de em um objeto—retornam diretamente seus resultados a quem chama.</p>
+- {{jsxref("Global_Objects/eval", "eval()")}}
+- {{jsxref("Global_Objects/uneval", "uneval()")}} {{non-standard_inline()}}
+- {{jsxref("Global_Objects/isFinite", "isFinite()")}}
+- {{jsxref("Global_Objects/isNaN", "isNaN()")}}
+- {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
+- {{jsxref("Global_Objects/parseInt", "parseInt()")}}
+- {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
+- {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
+- {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
+- {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
+- {{jsxref("Global_Objects/escape", "escape()")}} {{deprecated_inline()}}
+- {{jsxref("Global_Objects/unescape", "unescape()")}} {{deprecated_inline()}}
 
-<ul>
- <li>{{jsxref("Global_Objects/eval", "eval()")}}</li>
- <li>{{jsxref("Global_Objects/uneval", "uneval()")}} {{non-standard_inline()}}</li>
- <li>{{jsxref("Global_Objects/isFinite", "isFinite()")}}</li>
- <li>{{jsxref("Global_Objects/isNaN", "isNaN()")}}</li>
- <li>{{jsxref("Global_Objects/parseFloat", "parseFloat()")}}</li>
- <li>{{jsxref("Global_Objects/parseInt", "parseInt()")}}</li>
- <li>{{jsxref("Global_Objects/decodeURI", "decodeURI()")}}</li>
- <li>{{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}</li>
- <li>{{jsxref("Global_Objects/encodeURI", "encodeURI()")}}</li>
- <li>{{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}</li>
- <li>{{jsxref("Global_Objects/escape", "escape()")}} {{deprecated_inline()}}</li>
- <li>{{jsxref("Global_Objects/unescape", "unescape()")}} {{deprecated_inline()}}</li>
-</ul>
+### Objetos fundamentais
 
-<h3 id="Objetos_fundamentais">Objetos fundamentais</h3>
+Estes são objetos básicos e fundamentais nos quais todos os outros objetos são baseados. Isso inclui objetos que representam objetos genéricos, funções e erros.
 
-<p>Estes são objetos básicos e fundamentais nos quais todos os outros objetos são baseados. Isso inclui objetos que representam objetos genéricos, funções e erros.</p>
+- {{jsxref("Global_Objects/Object", "Object")}}
+- {{jsxref("Global_Objects/Function", "Function")}}
+- {{jsxref("Global_Objects/Boolean", "Boolean")}}
+- {{jsxref("Global_Objects/Symbol", "Symbol")}} {{experimental_inline()}}
+- {{jsxref("Global_Objects/Error", "Error")}}
+- {{jsxref("Global_Objects/EvalError", "EvalError")}}
+- {{jsxref("Global_Objects/InternalError", "InternalError")}}
+- {{jsxref("Global_Objects/RangeError", "RangeError")}}
+- {{jsxref("Global_Objects/ReferenceError", "ReferenceError")}}
+- {{jsxref("Global_Objects/StopIteration", "StopIteration")}}
+- {{jsxref("Global_Objects/SyntaxError", "SyntaxError")}}
+- {{jsxref("Global_Objects/TypeError", "TypeError")}}
+- {{jsxref("Global_Objects/URIError", "URIError")}}
 
-<ul>
- <li>{{jsxref("Global_Objects/Object", "Object")}}</li>
- <li>{{jsxref("Global_Objects/Function", "Function")}}</li>
- <li>{{jsxref("Global_Objects/Boolean", "Boolean")}}</li>
- <li>{{jsxref("Global_Objects/Symbol", "Symbol")}} {{experimental_inline()}}</li>
- <li>{{jsxref("Global_Objects/Error", "Error")}}</li>
- <li>{{jsxref("Global_Objects/EvalError", "EvalError")}}</li>
- <li>{{jsxref("Global_Objects/InternalError", "InternalError")}}</li>
- <li>{{jsxref("Global_Objects/RangeError", "RangeError")}}</li>
- <li>{{jsxref("Global_Objects/ReferenceError", "ReferenceError")}}</li>
- <li>{{jsxref("Global_Objects/StopIteration", "StopIteration")}}</li>
- <li>{{jsxref("Global_Objects/SyntaxError", "SyntaxError")}}</li>
- <li>{{jsxref("Global_Objects/TypeError", "TypeError")}}</li>
- <li>{{jsxref("Global_Objects/URIError", "URIError")}}</li>
-</ul>
+### Números e datas
 
-<h3 id="Números_e_datas">Números e datas</h3>
+Estes são objetos base para a representação de números, datas e cálculos matemáticos.
 
-<p>Estes são objetos base para a representação de números, datas e cálculos matemáticos.</p>
+- {{jsxref("Global_Objects/Number", "Number")}}
+- {{jsxref("Global_Objects/Math", "Math")}}
+- {{jsxref("Global_Objects/Date", "Date")}}
 
-<ul>
- <li>{{jsxref("Global_Objects/Number", "Number")}}</li>
- <li>{{jsxref("Global_Objects/Math", "Math")}}</li>
- <li>{{jsxref("Global_Objects/Date", "Date")}}</li>
-</ul>
+### Processamento de texto
 
-<h3 id="Processamento_de_texto">Processamento de texto</h3>
+Estes objetos representam strings e manipulam as mesmas.
 
-<p>Estes objetos representam strings e manipulam as mesmas.</p>
+- {{jsxref("Global_Objects/String", "String")}}
+- {{jsxref("Global_Objects/RegExp", "RegExp")}}
 
-<ul>
- <li>{{jsxref("Global_Objects/String", "String")}}</li>
- <li>{{jsxref("Global_Objects/RegExp", "RegExp")}}</li>
-</ul>
+### Coleções indexadas
 
-<h3 id="Coleções_indexadas">Coleções indexadas</h3>
+Estes objetos representam coleções de dados que são ordenados pelo valor de um índice. Isso inclui arrays (tipados) e arrays baseados em outros construtores, como `[]`.
 
-<p>Estes objetos representam coleções de dados que são ordenados pelo valor de um índice. Isso inclui arrays (tipados) e arrays baseados em outros construtores, como <code>[]</code>.</p>
+- {{jsxref("Global_Objects/Array", "Array")}}
+- [`Float32Array`](https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Float32Array "JavaScript_typed_arrays/Float32Array")
+- [`Float64Array`](https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Float64Array "JavaScript_typed_arrays/Float64Array")
+- [`Int16Array`](https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Int16Array "JavaScript_typed_arrays/Int16Array")
+- [`Int32Array`](https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Int32Array "JavaScript_typed_arrays/Int32Array")
+- [`Int8Array`](https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Int8Array "JavaScript_typed_arrays/Int8Array")
+- [`Uint16Array`](https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Uint16Array "JavaScript_typed_arrays/int16Array")
+- [`Uint32Array`](https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Uint32Array "JavaScript_typed_arrays/Uint32Array")
+- [`Uint8Array`](https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Uint8Array "JavaScript_typed_arrays/int8Array")
+- [`Uint8ClampedArray`](https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Uint8ClampedArray "JavaScript_typed_arrays/Uint8ClampedArray")
+- {{jsxref("Global_Objects/ParallelArray", "ParallelArray")}} {{non-standard_inline()}}
 
-<ul>
- <li>{{jsxref("Global_Objects/Array", "Array")}}</li>
- <li><code><a href="https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Float32Array" title="JavaScript_typed_arrays/Float32Array">Float32Array</a></code></li>
- <li><code><a href="https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Float64Array" title="JavaScript_typed_arrays/Float64Array">Float64Array</a></code></li>
- <li><code><a href="https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Int16Array" title="JavaScript_typed_arrays/Int16Array">Int16Array</a></code></li>
- <li><code><a href="https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Int32Array" title="JavaScript_typed_arrays/Int32Array">Int32Array</a></code></li>
- <li><code><a href="https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Int8Array" title="JavaScript_typed_arrays/Int8Array">Int8Array</a></code></li>
- <li><code><a href="https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Uint16Array" title="JavaScript_typed_arrays/int16Array">Uint16Array</a></code></li>
- <li><code><a href="https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Uint32Array" title="JavaScript_typed_arrays/Uint32Array">Uint32Array</a></code></li>
- <li><code><a href="https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Uint8Array" title="JavaScript_typed_arrays/int8Array">Uint8Array</a></code></li>
- <li><code><a href="https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Uint8ClampedArray" title="JavaScript_typed_arrays/Uint8ClampedArray">Uint8ClampedArray</a></code></li>
- <li>{{jsxref("Global_Objects/ParallelArray", "ParallelArray")}} {{non-standard_inline()}}</li>
-</ul>
+### Coleções chaveadas
 
-<h3 id="Coleções_chaveadas">Coleções chaveadas</h3>
+Estes objetos representam coleções que usam chaves; estas contém elementos que são iteráveis na ordem de inserção.
 
-<p>Estes objetos representam coleções que usam chaves; estas contém elementos que são iteráveis na ordem de inserção.</p>
+- {{jsxref("Global_Objects/Map", "Map")}} {{experimental_inline()}}
+- {{jsxref("Global_Objects/Set", "Set")}} {{experimental_inline()}}
+- {{jsxref("Global_Objects/WeakMap", "WeakMap")}} {{experimental_inline()}}
+- {{jsxref("Global_Objects/WeakSet", "WeakSet")}} {{experimental_inline()}}
 
-<ul>
- <li>{{jsxref("Global_Objects/Map", "Map")}} {{experimental_inline()}}</li>
- <li>{{jsxref("Global_Objects/Set", "Set")}} {{experimental_inline()}}</li>
- <li>{{jsxref("Global_Objects/WeakMap", "WeakMap")}} {{experimental_inline()}}</li>
- <li>{{jsxref("Global_Objects/WeakSet", "WeakSet")}} {{experimental_inline()}}</li>
-</ul>
+### Dados estruturados
 
-<h3 id="Dados_estruturados">Dados estruturados</h3>
+Estes objetos representam e interagem com buffers de dados estruturados e dados codificados usando JavaScript Object Notation (JSON).
 
-<p>Estes objetos representam e interagem com buffers de dados estruturados e dados codificados usando JavaScript Object Notation (JSON).</p>
+- {{jsxref("ArrayBuffer")}}
+- {{jsxref("DataView")}}
+- {{jsxref("JSON")}}
 
-<ul>
- <li>{{jsxref("ArrayBuffer")}}</li>
- <li>{{jsxref("DataView")}}</li>
- <li>{{jsxref("JSON")}}</li>
-</ul>
+### Controle de abstrações de objetos
 
-<h3 id="Controle_de_abstrações_de_objetos">Controle de abstrações de objetos</h3>
+- {{jsxref("Promise")}} {{experimental_inline}}
+- {{jsxref("Generator")}} {{experimental_inline}}
+- {{jsxref("GeneratorFunction")}} {{experimental_inline}}
 
-<ul>
- <li>{{jsxref("Promise")}} {{experimental_inline}}</li>
- <li>{{jsxref("Generator")}} {{experimental_inline}}</li>
- <li>{{jsxref("GeneratorFunction")}} {{experimental_inline}}</li>
-</ul>
+### Reflexão (reflection)
 
-<h3 id="Reflexão_(reflection)">Reflexão (reflection)</h3>
+- {{jsxref("Reflect")}} {{experimental_inline}}
+- {{jsxref("Proxy")}} {{experimental_inline}}
 
-<ul>
- <li>{{jsxref("Reflect")}} {{experimental_inline}}</li>
- <li>{{jsxref("Proxy")}} {{experimental_inline}}</li>
-</ul>
+### Internacionalização
 
-<h3 id="Internacionalização">Internacionalização</h3>
+Adições ao core do ECMAScript para funcionalidades sensíveis à linguagem.
 
-<p>Adições ao core do ECMAScript para funcionalidades sensíveis à linguagem.</p>
+- {{jsxref("Global_Objects/Intl", "Intl")}}
+- {{jsxref("Global_Objects/Collator", "Intl.Collator")}}
+- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("Global_Objects/NumberFormat", "Intl.NumberFormat")}}
 
-<ul>
- <li>{{jsxref("Global_Objects/Intl", "Intl")}}</li>
- <li>{{jsxref("Global_Objects/Collator", "Intl.Collator")}}</li>
- <li>{{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}</li>
- <li>{{jsxref("Global_Objects/NumberFormat", "Intl.NumberFormat")}}</li>
-</ul>
+### Objetos não-padrão
 
-<h3 id="Objetos_não-padrão" style="font-size: 1.71428571428571rem;">Objetos não-padrão</h3>
+- {{jsxref("Iterator")}} {{non-standard_inline}}
+- {{jsxref("ParallelArray")}} {{non-standard_inline}}
+- {{jsxref("StopIteration")}} {{non-standard_inline}}
 
-<ul>
- <li>{{jsxref("Iterator")}} {{non-standard_inline}}</li>
- <li>{{jsxref("ParallelArray")}} {{non-standard_inline}}</li>
- <li>{{jsxref("StopIteration")}} {{non-standard_inline}}</li>
-</ul>
+### Outros
 
-<h3 id="Outros">Outros</h3>
-
-<ul>
- <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments">arguments</a></code></li>
-</ul>
+- [`arguments`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments)

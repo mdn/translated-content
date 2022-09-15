@@ -3,69 +3,51 @@ title: Date.prototype.toJSON()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toJSON
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toJSON
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>toJSON()</code></strong> retorna uma representação representation do objeto  {{jsxref("Date")}} como string.</p>
+O método **`toJSON()`** retorna uma representação representation do objeto {{jsxref("Date")}} como string.
 
-<div>{{EmbedInteractiveExample("pages/js/date-tojson.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-tojson.html")}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code><var>dateObj</var>.toJSON()</code></pre>
+```
+dateObj.toJSON()
+```
 
-<h3 id="Retorno">Retorno</h3>
+### Retorno
 
-<p>Uma representação da data como string.</p>
+Uma representação da data como string.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Instâncias de {{jsxref("Date")}} referem-se a um específico ponto no tempo. Invocar <code>toJSON()</code> retorna uma string (usando {{jsxref("Date.prototype.toISOString()", "toISOString()")}}) representando o valor do objeto {{jsxref("Date")}}. Por padrão este método é destinado a serializar objetos {{jsxref("Date")}} em serializações {{Glossary("JSON")}}.</p>
+Instâncias de {{jsxref("Date")}} referem-se a um específico ponto no tempo. Invocar `toJSON()` retorna uma string (usando {{jsxref("Date.prototype.toISOString()", "toISOString()")}}) representando o valor do objeto {{jsxref("Date")}}. Por padrão este método é destinado a serializar objetos {{jsxref("Date")}} em serializações {{Glossary("JSON")}}.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_toJSON()">Usando <code>toJSON()</code></h3>
+### Usando `toJSON()`
 
-<pre class="brush:js">var jsonDate = (new Date()).toJSON();
+```js
+var jsonDate = (new Date()).toJSON();
 var backToDate = new Date(jsonDate);
 
 console.log(jsonDate); //2015-10-26T07:46:36.611Z
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentários</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.44', 'Date.prototype.toJSON')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Definição inicial. Implementado no JavaScript 1.8.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.tojson', 'Date.prototype.toJSON')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.tojson', 'Date.prototype.toJSON')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                            | Status                       | Comentários                                          |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.9.5.44', 'Date.prototype.toJSON')}}                     | {{Spec2('ES5.1')}}     | Definição inicial. Implementado no JavaScript 1.8.5. |
+| {{SpecName('ES6', '#sec-date.prototype.tojson', 'Date.prototype.toJSON')}}     | {{Spec2('ES6')}}         |                                                      |
+| {{SpecName('ESDraft', '#sec-date.prototype.tojson', 'Date.prototype.toJSON')}} | {{Spec2('ESDraft')}} |                                                      |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Date.toJSON")}}</p>
+{{Compat("javascript.builtins.Date.toJSON")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
- <li>{{jsxref("Date.prototype.toTimeString()")}}</li>
- <li>{{jsxref("Date.prototype.toUTCString()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.toLocaleDateString()")}}
+- {{jsxref("Date.prototype.toTimeString()")}}
+- {{jsxref("Date.prototype.toUTCString()")}}

@@ -3,68 +3,46 @@ title: Date.prototype.getUTCDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>getUTCDate()</code></strong> retorna o dia (data) do mês na data especificada de acordo com o horário universal.</p>
+O método **`getUTCDate()`** retorna o dia (data) do mês na data especificada de acordo com o horário universal.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code><var>dateObj</var>.getUTCDate()</code></pre>
+```
+dateObj.getUTCDate()
+```
 
-<h3 id="Retorna">Retorna</h3>
+### Retorna
 
-<p>Um número inteiro, entre 1 e 31, representando o dia do mês na data especificada de acordo com o horário universal.</p>
+Um número inteiro, entre 1 e 31, representando o dia do mês na data especificada de acordo com o horário universal.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_getUTCDate()">Usando <code>getUTCDate()</code></h3>
+### Usando `getUTCDate()`
 
-<p>O exemplo a seguir atribui o dia da data atual à variável <code>day</code>:</p>
+O exemplo a seguir atribui o dia da data atual à variável `day`:
 
-<pre class="brush: js">var today = new Date();
+```js
+var today = new Date();
 var day = today.getUTCDate();
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição inicial. Implementado no JavaScript 1.3.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.15', 'Date.prototype.getUTCDate')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.getutcdate', 'Date.prototype.getUTCDate')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.getutcdate', 'Date.prototype.getUTCDate')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                        | Status                       | Comment                                            |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                             | {{Spec2('ES1')}}         | Definição inicial. Implementado no JavaScript 1.3. |
+| {{SpecName('ES5.1', '#sec-15.9.5.15', 'Date.prototype.getUTCDate')}}                         | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES6', '#sec-date.prototype.getutcdate', 'Date.prototype.getUTCDate')}}         | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-date.prototype.getutcdate', 'Date.prototype.getUTCDate')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Date.getUTCDate")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Date.prototype.getDate()")}}</li>
- <li>{{jsxref("Date.prototype.getUTCDay()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCDate()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getDate()")}}
+- {{jsxref("Date.prototype.getUTCDay()")}}
+- {{jsxref("Date.prototype.setUTCDate()")}}

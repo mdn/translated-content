@@ -3,77 +3,50 @@ title: escape()
 slug: Web/JavaScript/Reference/Global_Objects/escape
 translation_of: Web/JavaScript/Reference/Global_Objects/escape
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}A função obsoleta `escape() retorna uma nova string com` certos caracteres substituídos por sua sequência hexadecial. Use {{jsxref("encodeURI")}} ou {{jsxref("encodeURIComponent")}} em seu lugar.
 
-<div>A função obsoleta <code><strong>escape() </strong>retorna uma nova string com</code> certos caracteres substituídos por sua sequência hexadecial. Use {{jsxref("encodeURI")}} ou {{jsxref("encodeURIComponent")}} em seu lugar.</div>
+## Sintaxe
 
-<div> </div>
+```
+escape(str)
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Parâmetros
 
-<pre class="syntaxbox"><code>escape(str)</code></pre>
+- `str`
+  - : Uma string para ser codificada.
 
-<h3 id="Parâmetros">Parâmetros</h3>
+## Descrição
 
-<dl>
- <dt><code>str</code></dt>
- <dd>Uma string para ser codificada.</dd>
-</dl>
+A função **`escape `**`é uma propriedade do `_global object._ Caracteres especiais são codificados, com a exceção de: @\*\_+-./
 
-<h2 id="Descrição">Descrição</h2>
+O formato hexadecimal de caracteres, que o valor unitário do código é **0xFF or less,** é uma sequência de escape de 2 digitos: %xx. Para caracteres com um código unitário maior, uma sequência de 4 digitos %**u**xxxx é usada.
 
-<p>A função <strong><code>escape </code></strong><code>é uma propriedade do </code><em>global object. </em>Caracteres especiais são codificados, com a exceção de: @*_+-./</p>
+## Exemplos
 
-<p>O formato hexadecimal de caracteres, que o valor unitário do código é <strong>0xFF or less, </strong>é uma sequência de escape de 2 digitos: %xx. Para caracteres com um código unitário maior, uma sequência de 4 digitos %<strong>u</strong>xxxx é usada.</p>
-
-<h2 id="Exemplos">Exemplos</h2>
-
-<pre class="brush: js">escape("abc123");     // "abc123"
+```js
+escape("abc123");     // "abc123"
 escape("äöü");        // "%E4%F6%FC"
 escape("ć");          // "%u0107"
 
 // Caracteres Especiais
-escape("@*_+-./");    // "@*_+-./"</pre>
+escape("@*_+-./");    // "@*_+-./"
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-B.2.1', 'escape')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Definido no (informativo) de compatibilidade Anexo B</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-escape-string', 'escape')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definido no (normativo) Anexo B para recursos adicionais do ECMAScript para navegadores da web</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-escape-string', 'escape')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Definido no (normativa) Anexo B para recursos adicionais do ECMAScript para navegadores da web</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                            | Status                       | Comentário                                                                                     |
+| ------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------------------------------------------------- |
+| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Definição inicial.                                                                             |
+| {{SpecName('ES5.1', '#sec-B.2.1', 'escape')}}             | {{Spec2('ES5.1')}}     | Definido no (informativo) de compatibilidade Anexo B                                           |
+| {{SpecName('ES6', '#sec-escape-string', 'escape')}}     | {{Spec2('ES6')}}         | Definido no (normativo) Anexo B para recursos adicionais do ECMAScript para navegadores da web |
+| {{SpecName('ESDraft', '#sec-escape-string', 'escape')}} | {{Spec2('ESDraft')}} | Definido no (normativa) Anexo B para recursos adicionais do ECMAScript para navegadores da web |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.escape")}}
 
-<h2 id="Veja_Também">Veja Também</h2>
+## Veja Também
 
-<ul>
- <li>{{jsxref("encodeURI")}}</li>
- <li>{{jsxref("encodeURIComponent")}}</li>
-</ul>
+- {{jsxref("encodeURI")}}
+- {{jsxref("encodeURIComponent")}}

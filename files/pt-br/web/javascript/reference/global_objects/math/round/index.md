@@ -7,38 +7,39 @@ tags:
   - Method
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/round
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p>A função <code><strong>Math.round()</strong></code> retorna o valor de um número arredondado para o inteiro mais proximo.</p>
+A função **`Math.round()`** retorna o valor de um número arredondado para o inteiro mais proximo.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code> Math.round(<em>x</em>) </code></pre>
+```
+ Math.round(x)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Um número.</dd>
-</dl>
+- `x`
+  - : Um número.
 
-<h3 id="Retorno">Retorno</h3>
+### Retorno
 
-<p>O valor de um número dado aproximado para o inteiro mais próximo</p>
+O valor de um número dado aproximado para o inteiro mais próximo
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Se a parte fracionária do <font face="Courier New, Andale Mono, monospace">número</font> for maior ou igual a  0.5, o argumento x é arredondado para o próximo número inteiro acima, entretanto se a parte fracionária do <code>número</code> for menor que 0.5, então o valor de x é arredondado para o próximo número inteiro abaixo. Se a parte fracionária for exatamente igual a 0.5, o número é arredondado para o próximo inteiro na direção de +∞.</p>
+Se a parte fracionária do número for maior ou igual a 0.5, o argumento x é arredondado para o próximo número inteiro acima, entretanto se a parte fracionária do `número` for menor que 0.5, então o valor de x é arredondado para o próximo número inteiro abaixo. Se a parte fracionária for exatamente igual a 0.5, o número é arredondado para o próximo inteiro na direção de +∞.
 
-<p>Por <code>round</code> ser um método estático de <code>Math</code>, você sempre irá usá-lo como <code>Math.round()</code>, ao invés de usá-lo como um método da instância do objeto <code>Math</code> que você criou.</p>
+Por `round` ser um método estático de `Math`, você sempre irá usá-lo como `Math.round()`, ao invés de usá-lo como um método da instância do objeto `Math` que você criou.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Exemplo_Uso_de_Math.round">Exemplo: Uso de  <code>Math.round</code></h3>
+### Exemplo: Uso de `Math.round`
 
-<pre class="brush:js">// Retorna o valor 20
+```js
+// Retorna o valor 20
 x = Math.round(20.49);
 
 // Retorna o valor 21
@@ -54,11 +55,12 @@ x = Math.round(-20.51);
 // Note o erro de arredondamento por causa da inacurácia de aritmética de ponto flutuante
 // Compare o exemplo abaixo com Math.round(1.005, -2)
 x = Math.round(1.005*100)/100;
-</pre>
+```
 
-<h3 id="Exemplo_Arredondamento_decimal.">Exemplo: Arredondamento decimal.</h3>
+### Exemplo: Arredondamento decimal.
 
-<pre class="brush:js">// Closure
+```js
+// Closure
 (function(){
 
 	/**
@@ -77,7 +79,7 @@ x = Math.round(1.005*100)/100;
 		value = +value;
 		exp = +exp;
 		// Se o valor não é um número ou o exp não é inteiro...
-		if (isNaN(value) || !(typeof exp === 'number' &amp;&amp; exp % 1 === 0)) {
+		if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
 			return NaN;
 		}
 		// Transformando para string
@@ -129,13 +131,14 @@ Math.ceil(55.51, -1); // 55.6
 Math.ceil(51, 1); // 60
 Math.ceil(-55.59, -1); // -55.5
 Math.ceil(-59, 1); // -50
-</pre>
+```
 
-<h3 id="Método_de_arredondamento_PHP">Método de arredondamento PHP</h3>
+### Método de arredondamento PHP
 
-<p>O código abaixo pode ser utilizado para adicionar sua própria versão do Math.round ao seu namespace no qual tenha um parâmetro de precisão. Diferentemente do arredondamento decimal do exemplo acima, esse método não realiza conversão de e para strings, e o parâmetro de precisão funciona da mesma maneira que PHP e Excel onde um positivo 1 seria arredondado para 1 casa decimal e -1 seria arredondado para os decimais.</p>
+O código abaixo pode ser utilizado para adicionar sua própria versão do Math.round ao seu namespace no qual tenha um parâmetro de precisão. Diferentemente do arredondamento decimal do exemplo acima, esse método não realiza conversão de e para strings, e o parâmetro de precisão funciona da mesma maneira que PHP e Excel onde um positivo 1 seria arredondado para 1 casa decimal e -1 seria arredondado para os decimais.
 
-<pre><code>var myNamespace = {};
+```
+var myNamespace = {};
 
 myNamespace.round = function(number, precision) {
     var factor = Math.pow(10, precision);
@@ -145,44 +148,23 @@ myNamespace.round = function(number, precision) {
 };
 
 myNamespace.round(1234.5678, 1); // 1234.6
-myNamespace.round(1234.5678, -1); // 1230</code>
-</pre>
+myNamespace.round(1234.5678, -1); // 1230
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1ª Edição. Implementado em JavaScript 1.0.</td>
-   <td>Padrão</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.2.15', 'Math.round')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.round', 'Math.round')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                            | Status                   | Comentário         |
+| ------------------------------------------------------------------------ | ------------------------ | ------------------ |
+| ECMAScript 1ª Edição. Implementado em JavaScript 1.0.                    | Padrão                   | Definição inicial. |
+| {{SpecName('ES5.1', '#sec-15.8.2.15', 'Math.round')}} | {{Spec2('ES5.1')}} |                    |
+| {{SpecName('ES6', '#sec-math.round', 'Math.round')}}     | {{Spec2('ES6')}}     |                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Math.round")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Math.abs()")}}</li>
- <li>{{jsxref("Math.ceil()")}}</li>
- <li>{{jsxref("Math.floor()")}}</li>
-</ul>
+- {{jsxref("Math.abs()")}}
+- {{jsxref("Math.ceil()")}}
+- {{jsxref("Math.floor()")}}

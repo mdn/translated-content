@@ -9,37 +9,36 @@ tags:
   - Nova versão JavaScript
 translation_of: Web/JavaScript/Reference/Classes/constructor
 ---
-<div>O construtor é um método especial para criar e inicializar um objeto criado a partir de uma classe.</div>
+O construtor é um método especial para criar e inicializar um objeto criado a partir de uma classe.
 
+## Sintaxe
 
+```
+constructor([argumentos]) { ... }
+```
 
+## Descrição
 
+Apenas um método especial com o nome _constructor_ pode existir em uma classe. O erro {{jsxref("SyntaxError")}} será mostrado se a classe contiver mais de um método _constructor._
 
-<h2 id="Sintaxe">Sintaxe</h2>
+Um construtor pode usar a palavra reservada _super_ para se referir ao construtor da classe pai (**superior**).
 
-<pre class="syntaxbox notranslate">constructor([argumentos]) { ... }</pre>
+Um construtor padrão será usado se você não especificá-lo*.*
 
-<h2 id="Descrição">Descrição</h2>
+## Exemplos
 
-<p>Apenas um método especial com o nome <em>constructor</em> pode existir em uma classe. O erro {{jsxref("SyntaxError")}} será mostrado se a classe contiver mais de um método <em>constructor.</em></p>
+### Usando o método _constructor_
 
-<p>Um construtor pode usar a palavra reservada <em>super</em> para se referir ao construtor da classe pai (<strong>superior</strong>).</p>
+O trecho de código foi fornecido por [exemplo de classes](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html) ([live demo](https://googlechrome.github.io/samples/classes-es6/index.html)).
 
-<p>Um construtor padrão será usado se você não especificá-lo<em>.</em></p>
-
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Usando_o_método_constructor">Usando o método <em>constructor</em></h3>
-
-<p>O trecho de código foi fornecido por <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">exemplo de classes</a> (<a href="https://googlechrome.github.io/samples/classes-es6/index.html">live demo</a>).</p>
-
-<pre class="brush: js notranslate">class Quadrado extends Poligono {
+```js
+class Quadrado extends Poligono {
   constructor(comprimento) {
     // super chama o construtor da classe pai que vai atribuir comprimento para
     // os atributos comprimento e altura herdados pela nossa classe filha Quadrado
     super(comprimento, comprimento);
-    // Nas classes filhas, <em>super()</em> deve ser chamado antes de usar o <em>this</em>. Sem ele
-    // vai ocorrer um erro de referência. O <em>this</em> agora se refere a classe filha Quadrado
+    // Nas classes filhas, super() deve ser chamado antes de usar o this. Sem ele
+    // vai ocorrer um erro de referência. O this agora se refere a classe filha Quadrado
     this.nome = 'Quadrado';
   }
 
@@ -52,52 +51,39 @@ translation_of: Web/JavaScript/Reference/Classes/constructor
   set area(valor) {
     this.area = valor;
   }
-}</pre>
+}
+```
 
-<h3 id="Construtores_padrão_constructors">Construtores padrão (<em>constructors</em>)</h3>
+### Construtores padrão (_constructors_)
 
-<p>Um construtor padrão será usado pela classe caso nenhum seja especificado. Para as classes de base o construtor padrão é:</p>
+Um construtor padrão será usado pela classe caso nenhum seja especificado. Para as classes de base o construtor padrão é:
 
-<pre class="brush: js notranslate">constructor() {} //construtor criado por padrão
-</pre>
+```js
+constructor() {} //construtor criado por padrão
+```
 
-<p>Para as classes filhas o construtor padrão é:</p>
+Para as classes filhas o construtor padrão é:
 
-<pre class="brush: js notranslate">constructor(...args) {
+```js
+constructor(...args) {
   super(...args);
-}</pre>
+}
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-static-semantics-constructormethod', 'Constructor Method')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definição inicial</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-static-semantics-constructormethod', 'Constructor Method')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                        | Status                       | Comentário        |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------- |
+| {{SpecName('ES6', '#sec-static-semantics-constructormethod', 'Constructor Method')}}     | {{Spec2('ES6')}}         | Definição inicial |
+| {{SpecName('ESDraft', '#sec-static-semantics-constructormethod', 'Constructor Method')}} | {{Spec2('ESDraft')}} |                   |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/super">super()</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/class"><code>class</code> expressão</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/class"><code>class</code> declaração</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
-</ul>
+- [super()](/pt-BR/docs/Web/JavaScript/Reference/Operators/super)
+- [`class` expressão](/pt-BR/docs/Web/JavaScript/Reference/Operators/class)
+- [`class` declaração](/pt-BR/docs/Web/JavaScript/Reference/Statements/class)
+- [Classes](/pt-BR/docs/Web/JavaScript/Reference/Classes)

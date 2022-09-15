@@ -3,87 +3,72 @@ title: Math.log10()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log10
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/log10
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>A função <strong><code>Math.log10()</code></strong> retorna o logaritmo de base 10 de um número, que é</p>
+A função **`Math.log10()`** retorna o logaritmo de base 10 de um número, que é
 
-<p><math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log10</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>10</mn></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><msup><mn>10</mn><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x &gt; 0, \mathtt{\operatorname{Math.log10}(x)} = \log_10(x) = \text{the unique} \; y \; \text{such that} \; 10^y = x</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>></mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log10</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>10</mn></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><msup><mn>10</mn><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x > 0, \mathtt{\operatorname{Math.log10}(x)} = \log_10(x) = \text{the unique} \; y \; \text{such that} \; 10^y = x</annotation></semantics></math>
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">Math.log10(<var>x</var>)</pre>
+```
+Math.log10(x)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Um número.</dd>
-</dl>
+- `x`
+  - : Um número.
 
-<h3 id="Retorno">Retorno</h3>
+### Retorno
 
-<p>O logaritmo de base 10 de um número. Caso o número seja negativo, {{jsxref("NaN")}} é retornado.</p>
+O logaritmo de base 10 de um número. Caso o número seja negativo, {{jsxref("NaN")}} é retornado.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Caso o valor de <code>x</code> seja menor que 0, então o retorno será sempre {{jsxref("NaN")}}.</p>
+Caso o valor de `x` seja menor que 0, então o retorno será sempre {{jsxref("NaN")}}.
 
-<p>Por <code>log10()</code> ser um método estático de <code>Math</code>, você sempre o usará como <code>Math.log10()</code>, ao invés de usá-lo como método de um objeto <code>Math</code> criado (<code>Math</code> não é um construtor).</p>
+Por `log10()` ser um método estático de `Math`, você sempre o usará como `Math.log10()`, ao invés de usá-lo como método de um objeto `Math` criado (`Math` não é um construtor).
 
-<p>Esta função é equivalente a Math.log(x) / Math.log(10).  Para log10(e) use a constante {{jsxref("Math.LOG10E")}} que é 1 / {{jsxref("Math.LN10")}}.  </p>
+Esta função é equivalente a Math.log(x) / Math.log(10). Para log10(e) use a constante {{jsxref("Math.LOG10E")}} que é 1 / {{jsxref("Math.LN10")}}.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_Math.log10()">Usando <code>Math.log10()</code></h3>
+### Usando `Math.log10()`
 
-<pre class="brush: js">Math.log10(2);      // 0.3010299956639812
+```js
+Math.log10(2);      // 0.3010299956639812
 Math.log10(1);      // 0
 Math.log10(0);      // -Infinity
 Math.log10(-2);     // NaN
 Math.log10(100000); // 5
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Isso pode ser simulado a partir da seguinte função:</p>
+Isso pode ser simulado a partir da seguinte função:
 
-<pre class="brush: js">Math.log10 = Math.log10 || function(x) {
+```js
+Math.log10 = Math.log10 || function(x) {
   return Math.log(x) * Math.LOG10E;
 };
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.log10', 'Math.log10')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.log10', 'Math.log10')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                | Status                       | Comentário          |
+| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-math.log10', 'Math.log10')}}         | {{Spec2('ES6')}}         | Initial definition. |
+| {{SpecName('ESDraft', '#sec-math.log10', 'Math.log10')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Math.log10")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Math.exp()")}}</li>
- <li>{{jsxref("Math.log()")}}</li>
- <li>{{jsxref("Math.log1p()")}}</li>
- <li>{{jsxref("Math.log2()")}}</li>
- <li>{{jsxref("Math.pow()")}}</li>
-</ul>
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.log1p()")}}
+- {{jsxref("Math.log2()")}}
+- {{jsxref("Math.pow()")}}

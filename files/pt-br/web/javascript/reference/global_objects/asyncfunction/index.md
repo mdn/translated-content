@@ -10,66 +10,64 @@ tags:
   - Referência(2)
 translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O <strong>construtor</strong> <code><strong>Async</strong></code><strong><code>Function</code> </strong>cria um novo objeto {{jsxref("Statements/async_function", "async function")}}. Em JavaScript cada função assíncrona é atualmente um objeto do tipo <code>AsyncFunction</code>.</p>
+O **construtor** **`Async`\*\***`Function` \*\*cria um novo objeto {{jsxref("Statements/async_function", "async function")}}. Em JavaScript cada função assíncrona é atualmente um objeto do tipo `AsyncFunction`.
 
-<p>Note que<code>AsyncFunction</code> não é um objeto global. Ele poderia ser obtido analisando o seguinte código:</p>
+Note que`AsyncFunction` não é um objeto global. Ele poderia ser obtido analisando o seguinte código:
 
-<pre class="brush: js">Object.getPrototypeOf(async function(){}).constructor
-</pre>
+```js
+Object.getPrototypeOf(async function(){}).constructor
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">new AsyncFunction([<var>arg1</var>[, <var>arg2</var>[, ...<var>argN</var>]],] <var>functionBody</var>)</pre>
+```
+new AsyncFunction([arg1[, arg2[, ...argN]],] functionBody)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>arg1, arg2, ... arg<em>N</em></code></dt>
- <dd>Nomes que vão ser usados pela função como argumentos formais. Cada um deve ser uma string que corresponde a um indentificador JavaScript válido ou uma lista das strings separadas com uma vírgula; por exemplo "<code>x</code>", "<code>oValor</code>", or "<code>a,b</code>".</dd>
- <dt><code>functionBody</code></dt>
- <dd>Uma string contendo as declarações JavaScript que compõem a definição da função.</dd>
-</dl>
+- `arg1, arg2, ... argN`
+  - : Nomes que vão ser usados pela função como argumentos formais. Cada um deve ser uma string que corresponde a um indentificador JavaScript válido ou uma lista das strings separadas com uma vírgula; por exemplo "`x`", "`oValor`", or "`a,b`".
+- `functionBody`
+  - : Uma string contendo as declarações JavaScript que compõem a definição da função.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Objetos {{jsxref("Statements/async_function", "async function")}} criados com o construtor <code>AsyncFunction</code> são tratados quando a função é criada. Isso é menos eficiente que declarar uma função async com a {{jsxref("Statements/async_function", "expression async function")}} e chama-la com seu código, porque essas funções são tratadas com o resto do código.</p>
+Objetos {{jsxref("Statements/async_function", "async function")}} criados com o construtor `AsyncFunction` são tratados quando a função é criada. Isso é menos eficiente que declarar uma função async com a {{jsxref("Statements/async_function", "expression async function")}} e chama-la com seu código, porque essas funções são tratadas com o resto do código.
 
-<p>Todos os argumentos passado para a função são tratados como nomes dos identificadores dos parâmetros na função que vai ser criada, na ordem que eles são passados.</p>
+Todos os argumentos passado para a função são tratados como nomes dos identificadores dos parâmetros na função que vai ser criada, na ordem que eles são passados.
 
-<div class="note">
-<p><strong>Nota:</strong> {{jsxref("Statements/async_function", "async functions")}} criadas com o construtor <code>AsyncFunction</code> não cria closures para seus contextos de criação; elas sempre criadas no escopo global. Quando rodar eles, eles só poderão acessar suas variáveis local e as globais, mas não as que estão no escopo que o construtor foi <code>AsyncFunction</code> chamado. Isso é diferente de usar {{jsxref("Global_Objects/eval", "eval")}} com código para uma expressão async function.</p>
-</div>
+> **Nota:** {{jsxref("Statements/async_function", "async functions")}} criadas com o construtor `AsyncFunction` não cria closures para seus contextos de criação; elas sempre criadas no escopo global. Quando rodar eles, eles só poderão acessar suas variáveis local e as globais, mas não as que estão no escopo que o construtor foi `AsyncFunction` chamado. Isso é diferente de usar {{jsxref("Global_Objects/eval", "eval")}} com código para uma expressão async function.
 
-<p>Invocar o construtor <code>AsyncFunction</code> como uma função (sem usar o operador <code>new</code>) tem o mesmo efeito de invocá-lo como um construtor.</p>
+Invocar o construtor `AsyncFunction` como uma função (sem usar o operador `new`) tem o mesmo efeito de invocá-lo como um construtor.
 
-<h2 id="Propriedas">Propriedas</h2>
+## Propriedas
 
-<dl>
- <dt><code><strong>AsyncFunction.length</strong></code></dt>
- <dd>A propriedade tamanho do construtor da <code>AsyncFunction</code> cujo valor é 1.</dd>
- <dt>{{jsxref("AsyncFunction.prototype")}}</dt>
- <dd>Permite a adição de propriedades para todos os objetos async function.</dd>
-</dl>
+- **`AsyncFunction.length`**
+  - : A propriedade tamanho do construtor da `AsyncFunction` cujo valor é 1.
+- {{jsxref("AsyncFunction.prototype")}}
+  - : Permite a adição de propriedades para todos os objetos async function.
 
-<h2 id="AsyncFunction_prototype_object"><code>AsyncFunction </code>prototype object</h2>
+## `AsyncFunction `prototype object
 
-<h3 id="Propriedades">Propriedades</h3>
+### Propriedades
 
-<div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype', 'Propriedades')}}</div>
+{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype', 'Propriedades')}}
 
-<h2 id="AsyncFunction_instances"><code>AsyncFunction</code> instances</h2>
+## `AsyncFunction` instances
 
-<p>Instância <code>AsyncFunction</code> herdam métodos e propriedades do {{jsxref("AsyncFunction.prototype")}}. Com todos os contrutores, que podem mudar o prototype do objeto construtor para fazer mudanças em todas as instâncias do <code>AsyncFunction</code>.</p>
+Instância `AsyncFunction` herdam métodos e propriedades do {{jsxref("AsyncFunction.prototype")}}. Com todos os contrutores, que podem mudar o prototype do objeto construtor para fazer mudanças em todas as instâncias do `AsyncFunction`.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Criando_uma_async_function_a_partir_do_construtor_de_uma_AsyncFunction">Criando uma async function a partir do construtor de uma <code>AsyncFunction</code></h3>
+### Criando uma async function a partir do construtor de uma `AsyncFunction`
 
-<pre class="brush: js">function resolveAfter2Seconds(x) {
-  return new Promise(resolve =&gt; {
-    setTimeout(() =&gt; {
+```js
+function resolveAfter2Seconds(x) {
+  return new Promise(resolve => {
+    setTimeout(() => {
       resolve(x);
     }, 2000);
   });
@@ -81,41 +79,26 @@ var a = new AsyncFunction('a',
                           'b',
                           'return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);');
 
-a(10, 20).then(v =&gt; {
+a(10, 20).then(v => {
   console.log(v); // imprime 30 após 4 seconds
 });
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Situação</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-async-function-objects', 'AsyncFunction object')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Definição inicial no ES2017.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                            | Situação                     | Comentário                   |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------- |
+| {{SpecName('ESDraft', '#sec-async-function-objects', 'AsyncFunction object')}} | {{Spec2('ESDraft')}} | Definição inicial no ES2017. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.AsyncFunction")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Statements/async_function", "async function function")}}</li>
- <li>{{jsxref("Operators/async_function", "async function expression")}}</li>
- <li>{{jsxref("Global_Objects/Function", "Function")}}</li>
- <li>{{jsxref("Statements/function", "function statement")}}</li>
- <li>{{jsxref("Operators/function", "function expression")}}</li>
- <li>{{jsxref("Functions_and_function_scope", "Funções e escopo de função", "", 1)}}</li>
-</ul>
+- {{jsxref("Statements/async_function", "async function function")}}
+- {{jsxref("Operators/async_function", "async function expression")}}
+- {{jsxref("Global_Objects/Function", "Function")}}
+- {{jsxref("Statements/function", "function statement")}}
+- {{jsxref("Operators/function", "function expression")}}
+- {{jsxref("Functions_and_function_scope", "Funções e escopo de função", "", 1)}}

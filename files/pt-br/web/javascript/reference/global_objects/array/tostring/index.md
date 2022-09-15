@@ -3,65 +3,47 @@ title: Array.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toString
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/toString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>toString()</strong></code> retorna uma string representando um array específico e seus elementos.</p>
+O método **`toString()`** retorna uma string representando um array específico e seus elementos.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code><var>arr</var>.toString()</code></pre>
+```
+arr.toString()
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<p>Nenhum.</p>
+Nenhum.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O objeto {{jsxref("Array")}} substitui o método toString() de {{jsxref("Object")}}. Para objetos do tipo Array, o método toString() concatena todos os valores em apenas uma string. Segue exemplo abaixo, de como ele se comporta.</p>
+O objeto {{jsxref("Array")}} substitui o método toString() de {{jsxref("Object")}}. Para objetos do tipo Array, o método toString() concatena todos os valores em apenas uma string. Segue exemplo abaixo, de como ele se comporta.
 
-<pre class="brush: js">var monthNames = ['Jan', 'Feb', 'Mar', 'Apr'];
+```js
+var monthNames = ['Jan', 'Feb', 'Mar', 'Apr'];
 var myVar = monthNames.toString(); // atribui 'Jan,Feb,Mar,Apr' para myVar.
-</pre>
+```
 
-<p>JavaScript chama o método toString automaticamente quando um Array é para ser representado como um valor de texto ou quando um Array é designado em uma concatenação.</p>
+JavaScript chama o método toString automaticamente quando um Array é para ser representado como um valor de texto ou quando um Array é designado em uma concatenação.
 
-<h3 id="Semântica_ECMAScript_5">Semântica ECMAScript 5</h3>
+### Semântica ECMAScript 5
 
-<p>Implementado no JavaScript 1.8.5 (Firefox 4), e compatível com a 5ª versão do ECMAScript, a função toString() é genérica e pode ser usada em qualquer Objeto. Se o objeto tem um método join(), ele será chamado e esse valor será devolvido. Do contrário, {{jsxref("Object.prototype.toString()")}} será chamado, e o valor será retornado.</p>
+Implementado no JavaScript 1.8.5 (Firefox 4), e compatível com a 5ª versão do ECMAScript, a função toString() é genérica e pode ser usada em qualquer Objeto. Se o objeto tem um método join(), ele será chamado e esse valor será devolvido. Do contrário, {{jsxref("Object.prototype.toString()")}} será chamado, e o valor será retornado.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentários</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição inicial. Implementado no JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.2', 'Array.prototype.toString')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.tostring', 'Array.prototype.toString')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                | Status                   | Comentários                                        |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------ | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.4.4.2', 'Array.prototype.toString')}}                     | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES6', '#sec-array.prototype.tostring', 'Array.prototype.toString')}} | {{Spec2('ES6')}}     |                                                    |
 
-<h2 id="Browsers_compatíveis">Browsers compatíveis</h2>
+## Browsers compatíveis
 
 {{Compat("javascript.builtins.Array.toString")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Object.prototype.toSource()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toSource()")}}

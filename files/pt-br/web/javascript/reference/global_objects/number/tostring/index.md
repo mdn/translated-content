@@ -3,45 +3,44 @@ title: Number.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toString
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/toString
 ---
-<div>{{JSRef("Global_Objects", "Number")}}</div>
+{{JSRef("Global_Objects", "Number")}}
 
-<h2 id="Summary" name="Summary">Resumo</h2>
+## Resumo
 
-<p>O método <strong><code>toString()</code></strong> retorna uma string representando o objeto {{jsxref("Global_Objects/Number", "Number")}} especificado.</p>
+O método **`toString()`** retorna uma string representando o objeto {{jsxref("Global_Objects/Number", "Number")}} especificado.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code><var>numObj</var>.toString([<var>radix</var>])</code></pre>
+```
+numObj.toString([radix])
+```
 
-<h3 id="Parameters" name="Parameters">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>radix</code></dt>
- <dd>Opcional. Um inteiro entre 2 e 36 especificando a base utilizada para representar os valores numéricos.</dd>
-</dl>
+- `radix`
+  - : Opcional. Um inteiro entre 2 e 36 especificando a base utilizada para representar os valores numéricos.
 
-<h3 id="Throws" name="Throws">Exceções</h3>
+### Exceções
 
-<dl>
- <dt>{{jsxref("Global_Objects/RangeError", "RangeError")}}</dt>
- <dd>se <code>toString()</code> receber um valor de radix fora do intervalo entre 2 e 36, uma exceção {{jsxref("Global_Objects/RangeError", "RangeError")}} é lançada.</dd>
-</dl>
+- {{jsxref("Global_Objects/RangeError", "RangeError")}}
+  - : se `toString()` receber um valor de radix fora do intervalo entre 2 e 36, uma exceção {{jsxref("Global_Objects/RangeError", "RangeError")}} é lançada.
 
-<h2 id="Description" name="Description">Descrição</h2>
+## Descrição
 
-<p>O objeto {{jsxref("Global_Objects/Number", "Number")}} sobrescreve o método <code>toString()</code> do objeto {{jsxref("Global_Objects/Object", "Object")}}; ele não herda  de {{jsxref("Object.prototype.toString()")}}. Para objetos {{jsxref("Global_Objects/Number", "Number")}}, o método <code>toString()</code> retorna uma representação string do objeto na base especificada.</p>
+O objeto {{jsxref("Global_Objects/Number", "Number")}} sobrescreve o método `toString()` do objeto {{jsxref("Global_Objects/Object", "Object")}}; ele não herda de {{jsxref("Object.prototype.toString()")}}. Para objetos {{jsxref("Global_Objects/Number", "Number")}}, o método `toString()` retorna uma representação string do objeto na base especificada.
 
-<p>O método <code>toString()</code> analisa seu primeiro argumento e tenta retornar uma representação string na raiz (base) especificada. Para raizes maiores que 10, as letras do alfabeto indicam valores maiores que 9. Por exemplo, para números hexadecimais (base 16),  letras entre <code>a</code> e <code>f</code> são utilizadas.</p>
+O método `toString()` analisa seu primeiro argumento e tenta retornar uma representação string na raiz (base) especificada. Para raizes maiores que 10, as letras do alfabeto indicam valores maiores que 9. Por exemplo, para números hexadecimais (base 16), letras entre `a` e `f` são utilizadas.
 
-<p>Se o <code>radix</code> não for especificado, a raiz assumida como preferencial é a 10.</p>
+Se o `radix` não for especificado, a raiz assumida como preferencial é a 10.
 
-<p>Se o <code>numObj</code> for negativo, o sinal é preservado. Isto acontece mesmo se a raiz for 2; a string retornada é a representação binária positiva de <code>numObj</code> precedida por um sinal <code>- e</code> <strong>não</strong> o complemento de dois do <code>numObj</code>.</p>
+Se o `numObj` for negativo, o sinal é preservado. Isto acontece mesmo se a raiz for 2; a string retornada é a representação binária positiva de `numObj` precedida por um sinal `- e` **não** o complemento de dois do `numObj`.
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<h3 id="Example:_Using_toString" name="Example:_Using_toString">Exemplo: Usando <code>toString</code></h3>
+### Exemplo: Usando `toString`
 
-<pre class="brush: js">var count = 10;
+```js
+var count = 10;
 
 console.log(count.toString());    // displays '10'
 console.log((17).toString());     // displays '17'
@@ -53,43 +52,22 @@ console.log((254).toString(16));  // displays 'fe'
 
 console.log((-10).toString(2));   // displays '-1010'
 console.log((-0xff).toString(2)); // displays '-11111111'
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentários</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1ª edição.</td>
-   <td>Standard</td>
-   <td>Definição inicial. Implementado no JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.7.4.2', 'Number.prototype.tostring')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-number.prototype.tostring', 'Number.prototype.tostring')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                | Status                   | Comentários                                        |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------ | -------------------------------------------------- |
+| ECMAScript 1ª edição.                                                                                        | Standard                 | Definição inicial. Implementado no JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.7.4.2', 'Number.prototype.tostring')}}                     | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES6', '#sec-number.prototype.tostring', 'Number.prototype.tostring')}} | {{Spec2('ES6')}}     |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Number.toString")}}
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Number.prototype.toFixed()")}}</li>
- <li>{{jsxref("Number.prototype.toExponential()")}}</li>
- <li>{{jsxref("Number.prototype.toPrecision()")}}</li>
-</ul>
+- {{jsxref("Number.prototype.toFixed()")}}
+- {{jsxref("Number.prototype.toExponential()")}}
+- {{jsxref("Number.prototype.toPrecision()")}}

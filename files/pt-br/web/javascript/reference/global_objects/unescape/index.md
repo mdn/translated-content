@@ -3,82 +3,52 @@ title: unescape()
 slug: Web/JavaScript/Reference/Global_Objects/unescape
 translation_of: Web/JavaScript/Reference/Global_Objects/unescape
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}{{Deprecated_header}}A função **unescape()** obsolta computa uma nova string na qual as sequencias hexadecimal são esquecidas com o caractere que representa. As sequências de escape podem ser introduzidas como funções {{jsxref("escape")}}. Porque a função 'unescape' está obsoleta, ao invez disso, use {{jsxref("decodeURI")}} ou {{jsxref("decodeURIComponent")}}.
 
-<div>{{Deprecated_header}}</div>
+> **Nota:** Não use `unescape` para decodificar URIs, use `decodeURI` ao invez disso.
 
-<div>A função <strong>unescape()</strong> obsolta computa uma nova string na qual as sequencias hexadecimal são esquecidas com o caractere que representa. As sequências de escape podem ser introduzidas como funções {{jsxref("escape")}}. Porque a função 'unescape' está obsoleta, ao invez disso, use {{jsxref("decodeURI")}} ou {{jsxref("decodeURIComponent")}}.</div>
+## Syntax
 
-<div> </div>
+```
+unescape(str)
+```
 
-<div class="note"><strong>Nota:</strong> Não use <code>unescape</code> para decodificar URIs, use <code>decodeURI</code> ao invez disso.</div>
+### Parâmetros
 
-<h2 id="Syntax">Syntax</h2>
+- `str`
+  - : Uma string a ser decodificada.
 
-<pre class="syntaxbox"><code>unescape(str)</code></pre>
+### Valor retornado
 
-<h3 id="Parâmetros">Parâmetros</h3>
+Uma nova string na qual alguns caracteres tem que ser 'unescaped'.
 
-<dl>
- <dt><code>str</code></dt>
- <dd>Uma string a ser decodificada.</dd>
-</dl>
+## Descrição
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+A função `unescape` é uma propriedade do objeto global.
 
-<p>Uma nova string na qual alguns caracteres tem que ser 'unescaped'.</p>
+## Exemplos
 
-<h2 id="Descrição">Descrição</h2>
-
-<p>A função <code>unescape</code> é uma propriedade do objeto global.</p>
-
-<h2 id="Exemplos">Exemplos</h2>
-
-<pre class="brush: js">unescape('abc123');     // "abc123"
+```js
+unescape('abc123');     // "abc123"
 unescape('%E4%F6%FC');  // "äöü"
 unescape('%u0107');     // "ć"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1', '#sec-15.1.2.5', 'unescape')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição Inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-B.2.2', 'unescape')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Definido na compatibilidade Annex B</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-unescape-string', 'unescape')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Difinito na (normativa) Annex B Para novidades adicionais do ECMAScript para browsers</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-unescape-string', 'unescape')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Difinito na (normativa) Annex B Para novidades adicionais do ECMAScript para browsers</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                    | Status                       | Comment                                                                               |
+| -------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------- |
+| {{SpecName('ES1', '#sec-15.1.2.5', 'unescape')}}                 | {{Spec2('ES1')}}         | Definição Inicial.                                                                    |
+| {{SpecName('ES5.1', '#sec-B.2.2', 'unescape')}}                 | {{Spec2('ES5.1')}}     | Definido na compatibilidade Annex B                                                   |
+| {{SpecName('ES6', '#sec-unescape-string', 'unescape')}}         | {{Spec2('ES6')}}         | Difinito na (normativa) Annex B Para novidades adicionais do ECMAScript para browsers |
+| {{SpecName('ESDraft', '#sec-unescape-string', 'unescape')}} | {{Spec2('ESDraft')}} | Difinito na (normativa) Annex B Para novidades adicionais do ECMAScript para browsers |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.unescape")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("decodeURI")}}</li>
- <li>{{jsxref("decodeURIComponent")}}</li>
- <li>{{jsxref("escape")}}</li>
-</ul>
+- {{jsxref("decodeURI")}}
+- {{jsxref("decodeURIComponent")}}
+- {{jsxref("escape")}}

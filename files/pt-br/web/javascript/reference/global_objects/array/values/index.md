@@ -3,71 +3,60 @@ title: Array.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Array/values
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/values
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>values()</code></strong> retorna um novo objeto de  <strong><code>Array Iterator</code></strong> que contém os valores para cada índice no array.</p>
+O método **`values()`** retorna um novo objeto de **`Array Iterator`** que contém os valores para cada índice no array.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code><var>arr</var>.values()</code></pre>
+```
+arr.values()
+```
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Iteração_usando_for...of_loop">Iteração usando <code>for...of</code> loop</h3>
+### Iteração usando `for...of` loop
 
-<pre class="brush: js">var arr = ['w', 'y', 'k', 'o', 'p'];
+```js
+var arr = ['w', 'y', 'k', 'o', 'p'];
 var eArr = arr.values();
 // seu navegador deve suportar for..of loop
 // e deixar variáveis let-scoped no for loops
 for (let letter of eArr) {
   console.log(letter);
 }
-</pre>
+```
 
-<h3 id="Iteração_alternativa">Iteração alternativa</h3>
+### Iteração alternativa
 
-<pre class="brush: js">var arr = ['w', 'y', 'k', 'o', 'p'];
+```js
+var arr = ['w', 'y', 'k', 'o', 'p'];
 var eArr = arr.values();
 console.log(eArr.next().value); // w
 console.log(eArr.next().value); // y
 console.log(eArr.next().value); // k
 console.log(eArr.next().value); // o
 console.log(eArr.next().value); // p
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.values', 'Array.prototype.values')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                        | Status               | Comentário         |
+| ---------------------------------------------------------------------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('ES6', '#sec-array.prototype.values', 'Array.prototype.values')}} | {{Spec2('ES6')}} | Definição inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Array.values")}}
 
-<h2 id="Notas_específicas_do_Firefox">Notas específicas do Firefox</h2>
+## Notas específicas do Firefox
 
-<ul>
- <li>Devido a um <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=875433">problema de compatibilidade</a>, <code>Array.prototype.values()</code> foi removido do  SpiderMonkey por enquanto.</li>
-</ul>
+- Devido a um [problema de compatibilidade](https://bugzilla.mozilla.org/show_bug.cgi?id=875433), `Array.prototype.values()` foi removido do SpiderMonkey por enquanto.
 
-<h2 id="Ver_também">Ver também</h2>
+## Ver também
 
-<ul>
- <li>{{jsxref("Array.prototype.keys()")}}</li>
- <li>{{jsxref("Array.prototype.entries()")}}</li>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.keys()")}}
+- {{jsxref("Array.prototype.entries()")}}
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}

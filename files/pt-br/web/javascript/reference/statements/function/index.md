@@ -3,126 +3,99 @@ title: Declaração de função
 slug: Web/JavaScript/Reference/Statements/function
 translation_of: Web/JavaScript/Reference/Statements/function
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>A <strong>declaração function </strong>define uma função com os especificados parâmetros.<strong> </strong></p>
+A **declaração function** define uma função com os especificados parâmetros.\*\*\*\*
 
-<p>Você pode também definir funções usando o construtor {{jsxref("Function")}}  e uma {{jsxref("Operators/function", "function expression")}}.</p>
+Você pode também definir funções usando o construtor {{jsxref("Function")}} e uma {{jsxref("Operators/function", "function expression")}}.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">function <em>name</em>([<em>param</em>,[, <em>param</em>,[..., <em>param</em>]]]) {
-   [<em>statements</em>]
+```
+function name([param,[, param,[..., param]]]) {
+   [statements]
 }
-</pre>
+```
 
-<dl>
- <dt><code>name</code></dt>
- <dd>O nome da função.</dd>
-</dl>
+- `name`
+  - : O nome da função.
 
-<dl>
- <dt><code>param</code></dt>
- <dd>O nome de um argumento a ser passado para a função. Uma função pode ter atè 255 argumentos.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code>statements</code></dt>
- <dd>As instruções que compõem o corpo da função.</dd>
-</dl>
+- `param`
+  - : O nome de um argumento a ser passado para a função. Uma função pode ter atè 255 argumentos.
 
-<h2 id="Descrição">Descrição</h2>
+<!---->
 
-<p>Uma função criada com uma declaração function é um objeto <code>Function</code> e tem todas as propriedades, métodos e comportamentos dos objetos <code>Function</code>. Veja {{jsxref("Function")}} para informações detalhadas sobre as funções.</p>
+- `statements`
+  - : As instruções que compõem o corpo da função.
 
-<p>Uma função pode também ser criada usando uma expressão (veja {{jsxref("Operators/function", "function expression")}}).</p>
+## Descrição
 
-<p>Por padrão, funções retornam <code>undefined</code>. Para retornar qualquer outro valor, a função precisa ter uma instrução {{jsxref("Statements/return", "return")}} que especifica o valor para retorno.</p>
+Uma função criada com uma declaração function é um objeto `Function` e tem todas as propriedades, métodos e comportamentos dos objetos `Function`. Veja {{jsxref("Function")}} para informações detalhadas sobre as funções.
 
-<h3 id="Criando_funções_condicionalmente.">Criando funções condicionalmente.</h3>
+Uma função pode também ser criada usando uma expressão (veja {{jsxref("Operators/function", "function expression")}}).
 
-<p>Funções podem ser condicionalmente declaradas, isso é, uma instrução de função pode ser aninhada dentro de uma instrução <code>if</code>. A maioria dos navegadores que não sejam Mozilla ir tratar essas declarações condicionais como uma incondicional e criará a função se a condição for true ou não, veja <a href="http://kangax.github.io/nfe/#function-statements">esse artigo</a> para uma visão geral. Portanto, ela não pode ser usada para criação de expressões de função condicional.</p>
+Por padrão, funções retornam `undefined`. Para retornar qualquer outro valor, a função precisa ter uma instrução {{jsxref("Statements/return", "return")}} que especifica o valor para retorno.
 
-<h3 id="Declarações_de_funções_hoisting">Declarações de funções hoisting</h3>
+### Criando funções condicionalmente.
 
-<p>Declarações de funções em JavaScript são hoisted à definição da função. Você pode usar uma função antes de tê-la declarado:</p>
+Funções podem ser condicionalmente declaradas, isso é, uma instrução de função pode ser aninhada dentro de uma instrução `if`. A maioria dos navegadores que não sejam Mozilla ir tratar essas declarações condicionais como uma incondicional e criará a função se a condição for true ou não, veja [esse artigo](http://kangax.github.io/nfe/#function-statements) para uma visão geral. Portanto, ela não pode ser usada para criação de expressões de função condicional.
 
-<pre class="brush: js">hoisted(); // logs "foo"
+### Declarações de funções hoisting
+
+Declarações de funções em JavaScript são hoisted à definição da função. Você pode usar uma função antes de tê-la declarado:
+
+```js
+hoisted(); // logs "foo"
 
 function hoisted() {
   console.log("foo");
 }
-</pre>
+```
 
-<p>Note que {{jsxref("Operators/function", "function expressions")}} não são hoisted:</p>
+Note que {{jsxref("Operators/function", "function expressions")}} não são hoisted:
 
-<pre class="brush: js">notHoisted(); // TypeError: notHoisted is not a function
+```js
+notHoisted(); // TypeError: notHoisted is not a function
 
 var notHoisted = function() {
    console.log("bar");
 };
-</pre>
+```
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_funções">Usando funções</h3>
+### Usando funções
 
-<p>O seguinte código declara uma função que retorna a quantidade total das vendas, quando dados os números de unidades vendidas dos produtos a, b e c.</p>
+O seguinte código declara uma função que retorna a quantidade total das vendas, quando dados os números de unidades vendidas dos produtos a, b e c.
 
-<pre class="brush: js">function calc_sales(units_a, units_b, units_c) {
+```js
+function calc_sales(units_a, units_b, units_c) {
    return units_a * 79 + units_b * 129 + units_c * 699;
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-function-definitions', 'Function definitions')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-function-definitions', 'Function definitions')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-13', 'Function definition')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3', '#sec-13', 'Function definition')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1', '#sec-13', 'Function definition')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição inicial. Implementado em JavaScript 1.0.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                       | Comment                                            |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-function-definitions', 'Function definitions')}} | {{Spec2('ESDraft')}} |                                                    |
+| {{SpecName('ES6', '#sec-function-definitions', 'Function definitions')}}     | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ES5.1', '#sec-13', 'Function definition')}}                             | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES3', '#sec-13', 'Function definition')}}                             | {{Spec2('ES3')}}         |                                                    |
+| {{SpecName('ES1', '#sec-13', 'Function definition')}}                             | {{Spec2('ES1')}}         | Definição inicial. Implementado em JavaScript 1.0. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.statements.function")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Functions_and_function_scope", "Functions and function scope")}}</li>
- <li>{{jsxref("Function")}}</li>
- <li>{{jsxref("Operators/function", "function expression")}}</li>
- <li>{{jsxref("Statements/function*", "function* statement")}}</li>
- <li>{{jsxref("Operators/function*", "function* expression")}}</li>
- <li>{{jsxref("Functions/Arrow_functions", "Arrow functions")}}</li>
- <li>{{jsxref("GeneratorFunction")}}</li>
-</ul>
+- {{jsxref("Functions_and_function_scope", "Functions and function scope")}}
+- {{jsxref("Function")}}
+- {{jsxref("Operators/function", "function expression")}}
+- {{jsxref("Statements/function*", "function* statement")}}
+- {{jsxref("Operators/function*", "function* expression")}}
+- {{jsxref("Functions/Arrow_functions", "Arrow functions")}}
+- {{jsxref("GeneratorFunction")}}

@@ -8,121 +8,95 @@ tags:
   - Statement
 translation_of: Web/JavaScript/Reference/Statements/block
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>Uma <strong>declaração em bloco </strong>(ou <strong>declaração composta (compound)</strong> em outras linguagens) é usado para agrupar nenhum ou mais declarações. O bloco é delimitado por um par de chaves e pode opcionalmente ser {{jsxref("Statements/label", "nomeado")}}:</p>
+Uma **declaração em bloco** (ou **declaração composta (compound)** em outras linguagens) é usado para agrupar nenhum ou mais declarações. O bloco é delimitado por um par de chaves e pode opcionalmente ser {{jsxref("Statements/label", "nomeado")}}:
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<h3 id="Declaração_de_Bloco">Declaração de Bloco</h3>
+### Declaração de Bloco
 
-<pre class="syntaxbox">{
-  <em>ListaDeDeclarações</em>
+```
+{
+  ListaDeDeclarações
 }
-</pre>
+```
 
-<h3 id="Declaração_de_Bloco_Nomeada">Declaração de Bloco Nomeada</h3>
+### Declaração de Bloco Nomeada
 
-<pre class="syntaxbox"><em>NomeIdentificador</em>: {
-  <em>ListaDeDeclarações</em>
+```
+NomeIdentificador: {
+  ListaDeDeclarações
 }
-</pre>
+```
 
-<dl>
- <dt><code>ListaDeDeclarações</code></dt>
- <dd>Declarações agroupadas com a declaração em bloco.</dd>
- <dt><code>NomeIdentificador</code></dt>
- <dd>Um {{jsxref("Statements/label", "nome (label)")}} opcional para identificação visual ou um alvo para {{jsxref("Statements/break", "break")}}.</dd>
-</dl>
+- `ListaDeDeclarações`
+  - : Declarações agroupadas com a declaração em bloco.
+- `NomeIdentificador`
+  - : Um {{jsxref("Statements/label", "nome (label)")}} opcional para identificação visual ou um alvo para {{jsxref("Statements/break", "break")}}.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>A declaração em bloco é frequentemente chamada de <strong>declaração composta (compound)</strong> em outras linguagens. Ela permite que você use multiplas declarações onde o JavaScript espera apenas uma declaração. Combinar declarações em blocos são uma prática comum em JavaScript. O comportamento oposto é possível usando uma <a href="/en-US/docs/Web/JavaScript/Reference/Statements/Empty">declaração vazia</a>, onde você fornece nenhuma declaração, mesmo que uma seja requerida.</p>
+A declaração em bloco é frequentemente chamada de **declaração composta (compound)** em outras linguagens. Ela permite que você use multiplas declarações onde o JavaScript espera apenas uma declaração. Combinar declarações em blocos são uma prática comum em JavaScript. O comportamento oposto é possível usando uma [declaração vazia](/pt-BR/docs/Web/JavaScript/Reference/Statements/Empty), onde você fornece nenhuma declaração, mesmo que uma seja requerida.
 
-<h3 id="Regras_de_Bloqueio_de_Escopo">Regras de Bloqueio de Escopo</h3>
+### Regras de Bloqueio de Escopo
 
-<h4 id="Com_var">Com <code>var</code></h4>
+#### Com `var`
 
-<p>Variáveis declaradas com <code>var</code> <strong>não</strong> possuem bloqueio de escopo. Variáveis introduzidas com um bloco são guardadas no escopo da função que elas estão ou script, e os efeitos de configura-las persistem pelo próprio bloco. Em outras palavras, declarações em bloco não introduzem um escopo. Mesmo blocos "standalone" são sintaxes válidas, você não vai querer usar blocos standalone em JavaScript, porque não fazem o que você pensa que eles fazem, se você pensa que eles fazer coisas como blocos em C ou Java. Por exemplo:</p>
+Variáveis declaradas com `var` **não** possuem bloqueio de escopo. Variáveis introduzidas com um bloco são guardadas no escopo da função que elas estão ou script, e os efeitos de configura-las persistem pelo próprio bloco. Em outras palavras, declarações em bloco não introduzem um escopo. Mesmo blocos "standalone" são sintaxes válidas, você não vai querer usar blocos standalone em JavaScript, porque não fazem o que você pensa que eles fazem, se você pensa que eles fazer coisas como blocos em C ou Java. Por exemplo:
 
-<pre class="brush: js example-bad">var x = 1;
+```js example-bad
+var x = 1;
 {
   var x = 2;
 }
 console.log(x); // imprime 2
-</pre>
+```
 
-<p>Isso loga 2 porque a declaração <code>var x</code> com o bloco está no mesmo escopo que a declaração <code>var x</code> antes do bloco. No C ou Java, o código equivalente iria imprimir 1.</p>
+Isso loga 2 porque a declaração `var x` com o bloco está no mesmo escopo que a declaração `var x` antes do bloco. No C ou Java, o código equivalente iria imprimir 1.
 
-<h4 id="Com_let_e_const">Com <code>let e</code> <code>const</code></h4>
+#### Com `let e` `const`
 
-<p>Por contraste, variáveis declaradas com {{jsxref("Statements/let", "let")}} e {{jsxref("Statements/const", "const")}} <strong>tem </strong>escopo bloqueado:</p>
+Por contraste, variáveis declaradas com {{jsxref("Statements/let", "let")}} e {{jsxref("Statements/const", "const")}} **tem** escopo bloqueado:
 
-<pre class="brush: js">let x = 1;
+```js
+let x = 1;
 {
   let x = 2;
 }
-console.log(x); // imprime 1 1</pre>
+console.log(x); // imprime 1 1
+```
 
-<p><code><font face="Open Sans, arial, x-locale-body, sans-serif">O </font>x = 2</code> é limitado ao escopo do bloco em que ele foi definido.</p>
+`O x = 2` é limitado ao escopo do bloco em que ele foi definido.
 
-<p>O mesmo true de <code>const</code>:</p>
+O mesmo true de `const`:
 
-<pre class="brush: js">const c = 1;
+```js
+const c = 1;
 {
   const c = 2;
 }
-console.log(c); // imprime 1 e não invoca uma throw SyntaxError...</pre>
+console.log(c); // imprime 1 e não invoca uma throw SyntaxError...
+```
 
-<p>Note que o escope bloqueado de <code>const c = 2</code> <em>não invoca uma</em> <code>SyntaxError: Identifier 'c' has already been declared</code> porque ele foi unicamente declarado no bloco.</p>
+Note que o escope bloqueado de `const c = 2` _não invoca uma_ `SyntaxError: Identifier 'c' has already been declared` porque ele foi unicamente declarado no bloco.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Situação</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-block', 'Block statement')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-block', 'Block statement')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-12.1', 'Block statement')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3', '#sec-12.1', 'Block statement')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1', '#sec-12.1', 'Block statement')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>
-    <p>Definição inicial. Implementada no JavaScript 1.0.</p>
-   </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                | Situação                     | Comentário                                         |
+| ---------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-block', 'Block statement')}} | {{Spec2('ESDraft')}} |                                                    |
+| {{SpecName('ES6', '#sec-block', 'Block statement')}}         | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ES5.1', '#sec-12.1', 'Block statement')}}     | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES3', '#sec-12.1', 'Block statement')}}         | {{Spec2('ES3')}}         |                                                    |
+| {{SpecName('ES1', '#sec-12.1', 'Block statement')}}         | {{Spec2('ES1')}}         | Definição inicial. Implementada no JavaScript 1.0. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.statements.block")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Statements/while", "while")}}</li>
- <li>{{jsxref("Statements/if...else", "if...else")}}</li>
- <li>{{jsxref("Statements/let", "let")}}</li>
-</ul>
+- {{jsxref("Statements/while", "while")}}
+- {{jsxref("Statements/if...else", "if...else")}}
+- {{jsxref("Statements/let", "let")}}

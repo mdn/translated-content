@@ -9,45 +9,46 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
 original_slug: Web/JavaScript/Reference/Errors/Fecha_chaves_esquecida_apos_lista_propriedades
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Mensagem">Mensagem</h2>
+## Mensagem
 
-<pre class="syntaxbox">SyntaxError: missing } after property list
-</pre>
+```
+SyntaxError: missing } after property list
+```
 
-<h2 id="Tipo_de_erro">Tipo de erro</h2>
+## Tipo de erro
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="O_que_deu_errado">O que deu errado?</h2>
+## O que deu errado?
 
-<p>Aconteceu um engano na sintaxe do <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">inicializador do objeto</a> em algum lugar. Pode ser que você esqueceu de colocar uma chave, mas também pode ser uma vírgula que foi esquecida, por exemplo. Verifique também se alguma chave de finalização ou parêntesis estão em algum lugar que não deveriam estar. Indente ou formate o código de uma maneira legível pode te ajudar a enxergar no meio dessa selva.</p>
+Aconteceu um engano na sintaxe do [inicializador do objeto](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer) em algum lugar. Pode ser que você esqueceu de colocar uma chave, mas também pode ser uma vírgula que foi esquecida, por exemplo. Verifique também se alguma chave de finalização ou parêntesis estão em algum lugar que não deveriam estar. Indente ou formate o código de uma maneira legível pode te ajudar a enxergar no meio dessa selva.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Vírgula_esquecida">Vírgula esquecida</h3>
+### Vírgula esquecida
 
-<p>Muitas vezes esquecemos uma vígula no inicializador de objeto:</p>
+Muitas vezes esquecemos uma vígula no inicializador de objeto:
 
-<pre class="brush: js example-bad">var obj = {
+```js example-bad
+var obj = {
   a: 1,
   b: { minhaProp: 2 }
   c: 3
 };
-</pre>
+```
 
-<p>O código correto deve ser:</p>
+O código correto deve ser:
 
-<pre class="brush: js example-good">var obj = {
+```js example-good
+var obj = {
   a: 1,
   b: { minhaProp: 2 },
   c: 3
 };
-</pre>
+```
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">Inicializador de objeto</a></li>
-</ul>
+- [Inicializador de objeto](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer)

@@ -8,36 +8,39 @@ tags:
   - ReferenceError
 translation_of: Web/JavaScript/Reference/Errors/Undefined_prop
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Mensagem">Mensagem</h2>
+## Mensagem
 
-<pre class="syntaxbox">ReferenceError: reference to undefined property "x" (Firefox)
-</pre>
+```
+ReferenceError: reference to undefined property "x" (Firefox)
+```
 
-<h2 id="Tipo_de_Erro">Tipo de Erro</h2>
+## Tipo de Erro
 
-<p>(Apenas no Firefox) O aviso {{jsxref("ReferenceError")}} é reportado somente se a preferência <code>javascript.options.strict</code> está definida como <code>true</code>.</p>
+(Apenas no Firefox) O aviso {{jsxref("ReferenceError")}} é reportado somente se a preferência `javascript.options.strict` está definida como `true`.
 
-<h2 id="O_que_está_errado">O que está errado?</h2>
+## O que está errado?
 
-<p>O script tentou acessar uma propriedade de objeto que não existe. Existem duas maneiras de acessar propriedades; veja a página de referência {{jsxref ("Operators / Property_Accessors", "property accessors", 0, 1)}} para saber mais sobre eles.</p>
+O script tentou acessar uma propriedade de objeto que não existe. Existem duas maneiras de acessar propriedades; veja a página de referência {{jsxref ("Operators / Property_Accessors", "property accessors", 0, 1)}} para saber mais sobre eles.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Errado">Errado</h3>
+### Errado
 
-<p>Neste caso, a propriedade <code>bar</code> é uma propriedade não definida, assim, ocorrerá um <code>ReferenceError</code>.</p>
+Neste caso, a propriedade `bar` é uma propriedade não definida, assim, ocorrerá um `ReferenceError`.
 
-<pre class="brush: js example-bad">var foo = {};
+```js example-bad
+var foo = {};
 foo.bar; // ReferenceError: reference to undefined property "bar"
-</pre>
+```
 
-<h3 id="Certo">Certo</h3>
+### Certo
 
-<p>Para evitar o erro, você precisa adicionar uma definição de <code>bar</code> ao objeto ou verificar a existência da propriedade <code>bar</code> antes de tentar acessá-la; Uma maneira de fazer isso é usar o método {{jsxref ("Object.prototype.hasOwnProperty ()")}}, desta forma:</p>
+Para evitar o erro, você precisa adicionar uma definição de `bar` ao objeto ou verificar a existência da propriedade `bar` antes de tentar acessá-la; Uma maneira de fazer isso é usar o método {{jsxref ("Object.prototype.hasOwnProperty ()")}}, desta forma:
 
-<pre class="brush: js example-good">var foo = {};
+```js example-good
+var foo = {};
 
 // Define a propriedade bar
 
@@ -48,10 +51,9 @@ console.log(foo.bar); // "moon"
 
 if (foo.hasOwnProperty('bar')) {
   console.log(foo.bar);
-}</pre>
+}
+```
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Operators/Property_Accessors", "property accessors", 0, 1)}}</li>
-</ul>
+- {{jsxref("Operators/Property_Accessors", "property accessors", 0, 1)}}

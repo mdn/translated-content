@@ -8,25 +8,28 @@ tags:
   - unário
 translation_of: Web/JavaScript/Reference/Operators/void
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>O <strong><code>operador void</code></strong> avalia a expressão dada e, em seguida, retorna {{jsxref("Global_Objects/undefined", "undefined")}}.</p>
+O **`operador void`** avalia a expressão dada e, em seguida, retorna {{jsxref("Global_Objects/undefined", "undefined")}}.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox" id="void_expressão">void <em>expressão</em></pre>
+```
+void expressão
+```
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Este operador permite a inserção de expressões que produzem efeitos secundários em lugares onde uma expressão que avalia a ação {{jsxref("Global_Objects/undefined", "undefined")}} é desejada.</p>
+Este operador permite a inserção de expressões que produzem efeitos secundários em lugares onde uma expressão que avalia a ação {{jsxref("Global_Objects/undefined", "undefined")}} é desejada.
 
-<p>O operador <code>void</code> é muitas vezes utilizado apenas para obter o valor primitivo <code>undefined</code>, geralmente usando "<code>void(0)</code>" (o que equivale a "<code>void 0</code>"). Nestes casos, a variável global {{jsxref("Global_Objects/undefined", "undefined")}} pode ser utilizado em vez (supondo que ele não tenha sido atribuído a um valor não-padrão).</p>
+O operador `void` é muitas vezes utilizado apenas para obter o valor primitivo `undefined`, geralmente usando "`void(0)`" (o que equivale a "`void 0`"). Nestes casos, a variável global {{jsxref("Global_Objects/undefined", "undefined")}} pode ser utilizado em vez (supondo que ele não tenha sido atribuído a um valor não-padrão).
 
-<h2 id="Chamada_imediata_das_expressões_da_função">Chamada imediata das expressões da função</h2>
+## Chamada imediata das expressões da função
 
-<p>Quando usamos uma <a href="/en-US/docs/Glossary/IIFE">Chamada imediata das expressões da função</a>, valores nulos podem ser usado para forçar a palavra-chave da função a ser tratada como uma expressão em vez de uma declaração.</p>
+Quando usamos uma [Chamada imediata das expressões da função](/pt-BR/docs/Glossary/IIFE), valores nulos podem ser usado para forçar a palavra-chave da função a ser tratada como uma expressão em vez de uma declaração.
 
-<pre class="brush: js">void function iife() {
+```js
+void function iife() {
     var bar = function () {};
     var baz = function () {};
     var foo = function () {
@@ -38,56 +41,36 @@ translation_of: Web/JavaScript/Reference/Operators/void
     foo();
     biz();
 }();
-</pre>
+```
 
-<h2 id="JavaScript_URIs">JavaScript URIs</h2>
+## JavaScript URIs
 
-<p>Quando o navegador segue uma URI <code>javascript</code>, ele avalia o código na URI e então troca o conteúdo da página pelo valor retornado por este, a não ser que o valor retornado seja {{jsxref("Global_Objects/undefined", "undefined")}}. O operador <code>void</code> pode ser usado para retornar {{jsxref("Global_Objects/undefined", "undefined")}}. Por exemplo:</p>
+Quando o navegador segue uma URI `javascript`, ele avalia o código na URI e então troca o conteúdo da página pelo valor retornado por este, a não ser que o valor retornado seja {{jsxref("Global_Objects/undefined", "undefined")}}. O operador `void` pode ser usado para retornar {{jsxref("Global_Objects/undefined", "undefined")}}. Por exemplo:
 
-<pre class="brush: html">&lt;a href="javascript:void(0);"&gt;
+```html
+<a href="javascript:void(0);">
   Clique aqui para não fazer nada
-&lt;/a&gt;
+</a>
 
-&lt;a href="javascript:void(document.body.style.backgroundColor='green');"&gt;
+<a href="javascript:void(document.body.style.backgroundColor='green');">
   Clique aqui para o papel de parede ser verde
-&lt;/a&gt;
-</pre>
+</a>
+```
 
-<p>Note que no entanto o pseudo protocolo <code>javascript:</code> tem seu uso desencorajado perante outras alternativas como <em>unobtrusive event handlers</em>.</p>
+Note que no entanto o pseudo protocolo `javascript:` tem seu uso desencorajado perante outras alternativas como _unobtrusive event handlers_.
 
-<h2 id="Specificações">Specificações</h2>
+## Specificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1</td>
-   <td>Standard</td>
-   <td>Initial definition. Implemented in JavaScript 1.1</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-11.4.2', 'The void Operator')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-void-operator', 'The void Operator')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specificação                                                                         | Status                   | Comentário                                        |
+| ------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------- |
+| ECMAScript 1                                                                         | Standard                 | Initial definition. Implemented in JavaScript 1.1 |
+| {{SpecName('ES5.1', '#sec-11.4.2', 'The void Operator')}}         | {{Spec2('ES5.1')}} |                                                   |
+| {{SpecName('ES6', '#sec-void-operator', 'The void Operator')}} | {{Spec2('ES6')}}     |                                                   |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.operators.void")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></code></li>
-</ul>
+- [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)

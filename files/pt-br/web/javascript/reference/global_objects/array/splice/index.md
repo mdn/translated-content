@@ -8,46 +8,51 @@ tags:
   - splice
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/splice
 ---
-<div>{{JSRef("Global_Objects", "Array")}}</div>
+{{JSRef("Global_Objects", "Array")}}
 
-<h2 id="Resumo">Resumo</h2>
+## Resumo
 
-<p>O método <strong>splice() </strong>altera o conteúdo de uma lista, adicionando novos elementos enquanto remove elementos antigos.</p>
+O método **splice()** altera o conteúdo de uma lista, adicionando novos elementos enquanto remove elementos antigos.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code><em>array</em>.splice(<em>indice</em>[,<em> deleteCount</em>[<em>,</em><em> elemento1</em>[, ...[, <em>elementoN</em>]]])</code>
+```
+array.splice(indice[, deleteCount[, elemento1[, ...[, elementoN]]])
 
-<code><em>array</em>.splice(<em>indice</em>) // SpiderMonkey/Firefox extension</code></pre>
+array.splice(indice) // SpiderMonkey/Firefox extension
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>indice</code></dt>
- <dd>Índice o qual deve iniciar a alterar a lista. Se maior que o tamanho total da mesma, nenhum elemento será alterado. Se negativo, irá iniciar a partir daquele número de elementos a partir do fim.</dd>
- <dt><code>deleteCount</code></dt>
- <dd><p>Um inteiro indicando o número de antigos elementos que devem ser removidos.</p>
- <p>Se o parâmetro <code><em>deleteCount</em></code> não é especificado, ou se é maior que o número de elementos restantes na lista iniciando pelo índice, então todos os elementos até o fim da lista serão deletados.</p>
- <p>Se <code><em>deleteCount</em></code> é 0, nenhum elemento é removido. Neste caso você deve especificar pelo menos um novo elemento.</p></dd>
- <dt><code>elemento1, ..., elemento<em>N</em></code></dt>
- <dd>Os elementos a adicionar na lista. Se você não especificar nenhum elemento, splice simplesmente removerá elementos da mesma.</dd>
-</dl>
+- `indice`
+  - : Índice o qual deve iniciar a alterar a lista. Se maior que o tamanho total da mesma, nenhum elemento será alterado. Se negativo, irá iniciar a partir daquele número de elementos a partir do fim.
+- `deleteCount`
 
-<h3 id="Retorno">Retorno</h3>
+  - : Um inteiro indicando o número de antigos elementos que devem ser removidos.
 
-<p>Uma lista contendo os elementos removidos. Se apenas um elemento é removido, por exemplo, uma lista contendo apenas um elemento é retornada. Se nenhum elemento é removido, uma lista vazia é retornada.</p>
+    Se o parâmetro `deleteCount` não é especificado, ou se é maior que o número de elementos restantes na lista iniciando pelo índice, então todos os elementos até o fim da lista serão deletados.
 
-<p><strong style="font-size: 30px; font-weight: 700; letter-spacing: -1px; line-height: 30px;">Descrição</strong></p>
+    Se `deleteCount` é 0, nenhum elemento é removido. Neste caso você deve especificar pelo menos um novo elemento.
 
-<p>Se você especificar um número diferente de elementos a inserir comparado ao número de elementos que você está removendo, a lista terá um tamanho diferente no final da execução.</p>
+- `elemento1, ..., elementoN`
+  - : Os elementos a adicionar na lista. Se você não especificar nenhum elemento, splice simplesmente removerá elementos da mesma.
 
-<h2 id="Exemplo">Exemplo</h2>
+### Retorno
 
-<h3 id="Exemplo_Removendo_0_elementos_do_indice_2_e_inserindo_drum">Exemplo: Removendo 0 elementos do indice 2, e inserindo "drum"</h3>
+Uma lista contendo os elementos removidos. Se apenas um elemento é removido, por exemplo, uma lista contendo apenas um elemento é retornada. Se nenhum elemento é removido, uma lista vazia é retornada.
 
-<p>O script a seguir ilustra o uso do <em>splice</em>:</p>
+**Descrição**
 
-<pre class="brush: js">var myFish = ["angel", "clown", "mandarin", "surgeon"];
+Se você especificar um número diferente de elementos a inserir comparado ao número de elementos que você está removendo, a lista terá um tamanho diferente no final da execução.
+
+## Exemplo
+
+### Exemplo: Removendo 0 elementos do indice 2, e inserindo "drum"
+
+O script a seguir ilustra o uso do _splice_:
+
+```js
+var myFish = ["angel", "clown", "mandarin", "surgeon"];
 
 //remove 0 elementos a partir do índice 2, e insere "drum"
 var removed = myFish.splice(2, 0, "drum");
@@ -72,44 +77,23 @@ removed = myFish.splice(0, 2, "parrot", "anemone", "blue");
 //remove 2 elementos a partir do indice 3
 removed = myFish.splice(3, Number.MAX_VALUE);
 //myFish é ["parrot", "anemone", "blue"]
-//removed é ["trumpet", "surgeon"]</pre>
+//removed é ["trumpet", "surgeon"]
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3rd Edition</td>
-   <td>Padrão</td>
-   <td>Definição inicial.<br>
-    Implementado no JavaScript 1.2</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.12', 'Array.prototype.splice')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.splice', 'Array.prototype.splice')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                        | Status                   | Comentário                                        |
+| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------- |
+| ECMAScript 3rd Edition                                                                               | Padrão                   | Definição inicial. Implementado no JavaScript 1.2 |
+| {{SpecName('ES5.1', '#sec-15.4.4.12', 'Array.prototype.splice')}}             | {{Spec2('ES5.1')}} |                                                   |
+| {{SpecName('ES6', '#sec-array.prototype.splice', 'Array.prototype.splice')}} | {{Spec2('ES6')}}     |                                                   |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Array.splice")}}
 
-<h2 id="See_also" name="See_also">Veja Também</h2>
+## Veja Também
 
-<ul>
- <li>{{jsxref("Array.push", "push")}} / {{jsxref("Array.pop", "pop")}} - adiciona/remove elementos do final do array;</li>
- <li>{{jsxref("Array.unshift", "unshift")}} / {{jsxref("Array.shift", "shift")}} - adiciona/remove elementos do início do array;</li>
- <li>{{jsxref("Array.concat", "concat")}} - returns a new array comprised of this array joined with other array(s) and/or value(s).</li>
-</ul>
+- {{jsxref("Array.push", "push")}} / {{jsxref("Array.pop", "pop")}} - adiciona/remove elementos do final do array;
+- {{jsxref("Array.unshift", "unshift")}} / {{jsxref("Array.shift", "shift")}} - adiciona/remove elementos do início do array;
+- {{jsxref("Array.concat", "concat")}} - returns a new array comprised of this array joined with other array(s) and/or value(s).

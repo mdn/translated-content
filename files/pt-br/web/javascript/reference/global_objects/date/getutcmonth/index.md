@@ -9,67 +9,45 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCMonth
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>A função <strong><code>getUTCMonth()</code></strong> retorna o mês da data especificada de acordo com o horário universal, como um valor iniciado em zero (aonde zero indica o primeiro mês do ano).</p>
+A função **`getUTCMonth()`** retorna o mês da data especificada de acordo com o horário universal, como um valor iniciado em zero (aonde zero indica o primeiro mês do ano).
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code><var>dateObj</var>.getUTCMonth()</code></pre>
+```
+dateObj.getUTCMonth()
+```
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>Um número inteiro, entre 0 e 11, correspondente ao mês da data informada de acordo com o horário universal. 0 para Janeiro, 1 para Fevereiro, 2 para Março, e assim em diante.</p>
+Um número inteiro, entre 0 e 11, correspondente ao mês da data informada de acordo com o horário universal. 0 para Janeiro, 1 para Fevereiro, 2 para Março, e assim em diante.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_getUTCMonth()">Usando <code>getUTCMonth()</code></h3>
+### Usando `getUTCMonth()`
 
-<p>O exemplo a seguir atribui a parte do mês da data atual a variável <code>month</code>.</p>
+O exemplo a seguir atribui a parte do mês da data atual a variável `month`.
 
-<pre class="brush: js">var today = new Date();
+```js
+var today = new Date();
 var month = today.getUTCMonth();
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.3.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.13', 'Date.prototype.getUTCMonth')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.getutcmonth', 'Date.prototype.getUTCMonth')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.getutcmonth', 'Date.prototype.getUTCMonth')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                        | Status                       | Comment                                            |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                             | {{Spec2('ES1')}}         | Initial definition. Implemented in JavaScript 1.3. |
+| {{SpecName('ES5.1', '#sec-15.9.5.13', 'Date.prototype.getUTCMonth')}}                         | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES6', '#sec-date.prototype.getutcmonth', 'Date.prototype.getUTCMonth')}}     | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-date.prototype.getutcmonth', 'Date.prototype.getUTCMonth')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Date.getUTCMonth")}}</p>
+{{Compat("javascript.builtins.Date.getUTCMonth")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Date.prototype.getMonth()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCMonth()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getMonth()")}}
+- {{jsxref("Date.prototype.setUTCMonth()")}}

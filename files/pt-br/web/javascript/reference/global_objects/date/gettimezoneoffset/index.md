@@ -3,57 +3,41 @@ title: Date.prototype.getTimezoneOffset()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>getTimezoneOffset()</code></strong> retorna a diferença, em minutos, do deslocamento de fuso horário entre o UTC (Tempo Universal Coordenado) e a localidade atual.</p>
+O método **`getTimezoneOffset()`** retorna a diferença, em minutos, do deslocamento de fuso horário entre o UTC (Tempo Universal Coordenado) e a localidade atual.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code><var>dateObj</var>.getTimezoneOffset()</code></pre>
+```
+dateObj.getTimezoneOffset()
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<p>Nenhum</p>
+Nenhum
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>O deslocamento de fuso horário é a diferença, em minutos, entre o UTC (Tempo Universal Coordenado) e o horário local. Perceba que isto significa que o deslocamento será negativo se o fuso horário local está à direita do UTC e positivo se está a esquerda. Por exemplo, se seu fuso horário é UTC+10(Padrão da Austrália Oriental), -600 será retornado. O Horário de verão evita que este valor seja sempre o mesmo para uma determinada localidade.</p>
+O deslocamento de fuso horário é a diferença, em minutos, entre o UTC (Tempo Universal Coordenado) e o horário local. Perceba que isto significa que o deslocamento será negativo se o fuso horário local está à direita do UTC e positivo se está a esquerda. Por exemplo, se seu fuso horário é UTC+10(Padrão da Austrália Oriental), -600 será retornado. O Horário de verão evita que este valor seja sempre o mesmo para uma determinada localidade.
 
-<p>Exemplo</p>
+Exemplo
 
-<h3 id="Utilizando_getTimezoneOffset()">Utilizando <code>getTimezoneOffset()</code></h3>
+### Utilizando `getTimezoneOffset()`
 
-<pre class="brush: js">var x = new Date();
+```js
+var x = new Date();
 var currentTimeZoneOffsetInHours = x.getTimezoneOffset() / 60;
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Situação</th>
-   <th scope="col">comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.26', 'Date.prototype.getTimezoneOffset')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.gettimezoneoffset', 'Date.prototype.getTimezoneOffset')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                    | Situação                 | comentário                                         |
+| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                                         | {{Spec2('ES1')}}     | Initial definition. Implemented in JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.9.5.26', 'Date.prototype.getTimezoneOffset')}}                             | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES6', '#sec-date.prototype.gettimezoneoffset', 'Date.prototype.getTimezoneOffset')}} | {{Spec2('ES6')}}     |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Date.getTimezoneOffset")}}

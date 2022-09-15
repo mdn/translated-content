@@ -3,30 +3,31 @@ title: TypedArray.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>sort()</strong></code> ordena os elementos de uma matriz tipada <em>no local</em> e retorna a matriz ordenada. Esse método tem o mesmo algoritmo que {{jsxref("Array.prototype.sort()")}}<em>.</em> <em>TypedArray</em> é uma das maneiras de <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">escrever matrizes</a>.</p>
+O método **`sort()`** ordena os elementos de uma matriz tipada _no local_ e retorna a matriz ordenada. Esse método tem o mesmo algoritmo que {{jsxref("Array.prototype.sort()")}}_._ _TypedArray_ é uma das maneiras de [escrever matrizes](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><var>typedarray</var>.sort([<var>compareFunction</var>])</pre>
+```
+typedarray.sort([compareFunction])
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>compareFunction</code> {{optional_inline}}</dt>
- <dd>Especifica uma função que define a ordem de classificação.</dd>
-</dl>
+- `compareFunction` {{optional_inline}}
+  - : Especifica uma função que define a ordem de classificação.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>A matriz ordenada.</p>
+A matriz ordenada.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>Para mais exemplos, acesse o método {{jsxref("Array.prototype.sort()")}}.</p>
+Para mais exemplos, acesse o método {{jsxref("Array.prototype.sort()")}}.
 
-<pre class="brush: js">var numbers = new Uint8Array([40, 1, 5, 200]);
+```js
+var numbers = new Uint8Array([40, 1, 5, 200]);
 numbers.sort();
 // Uint8Array [ 1, 5, 40, 200 ]
 // A compare function is not required as in the case of Array
@@ -43,36 +44,19 @@ function compareNumbers(a, b) {
 
 numbers.sort(compareNumbers);
 // [ 1, 5, 40, 200 ]
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentários</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-%typedarray%.prototype.sort', 'TypedArray.prototype.sort')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.sort', 'TypedArray.prototype.sort')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificações                                                                                                       | Status                       | Comentários        |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('ES2015', '#sec-%typedarray%.prototype.sort', 'TypedArray.prototype.sort')}} | {{Spec2('ES2015')}}     | Definição inicial. |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.sort', 'TypedArray.prototype.sort')}} | {{Spec2('ESDraft')}} |                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.TypedArray.sort")}}
 
-<h2 id="Ver_também">Ver também</h2>
+## Ver também
 
-<ul>
- <li>{{jsxref("Array.prototype.sort()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.sort()")}}

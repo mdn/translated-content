@@ -3,88 +3,79 @@ title: Symbol.toStringTag
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O símbolo <strong><code>Symbol.toStringTag</code></strong> é uma propriedade com valor string que é usada para a criação de uma descrição de string de um objeto padrão. É acessado internalmente pelo método {{jsxref("Object.prototype.toString()")}}.</p>
+O símbolo **`Symbol.toStringTag`** é uma propriedade com valor string que é usada para a criação de uma descrição de string de um objeto padrão. É acessado internalmente pelo método {{jsxref("Object.prototype.toString()")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-tostringtag.html")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-tostringtag.html")}}{{js_property_attributes(0,0,0)}}
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+## Exemplos
 
-<h2 id="Exemplos">Exemplos</h2>
+### Tags padrões
 
-<h3 id="Tags_padrões">Tags padrões</h3>
-
-<pre class="brush: js notranslate">Object.prototype.toString.call('foo');     // "[object String]"
+```js
+Object.prototype.toString.call('foo');     // "[object String]"
 Object.prototype.toString.call([1, 2]);    // "[object Array]"
 Object.prototype.toString.call(3);         // "[object Number]"
 Object.prototype.toString.call(true);      // "[object Boolean]"
 Object.prototype.toString.call(undefined); // "[object Undefined]"
 Object.prototype.toString.call(null);      // "[object Null]"
 // ... e mais
-</pre>
+```
 
-<h3 id="Símbolos_built-in_toStringTag">Símbolos built-in toStringTag </h3>
+### Símbolos built-in toStringTag
 
-<pre class="brush: js notranslate">Object.prototype.toString.call(new Map());       // "[object Map]"
+```js
+Object.prototype.toString.call(new Map());       // "[object Map]"
 Object.prototype.toString.call(function* () {}); // "[object GeneratorFunction]"
 Object.prototype.toString.call(Promise.resolve()); // "[object Promise]"
 // ... e mais
-</pre>
+```
 
-<h3 id="Classes_personalizadas_para_objeto_tag">Classes personalizadas para objeto tag</h3>
+### Classes personalizadas para objeto tag
 
-<p>Quando cria sua própria classe, o JavaScript padroniza para "Object" tag:</p>
+Quando cria sua própria classe, o JavaScript padroniza para "Object" tag:
 
-<pre class="brush: js notranslate">class ValidatorClass {}
+```js
+class ValidatorClass {}
 
 Object.prototype.toString.call(new ValidatorClass()); // "[object Object]"
-</pre>
+```
 
-<h3 id="Tag_costumizada_com_toStringTag">Tag costumizada com toStringTag</h3>
+### Tag costumizada com toStringTag
 
-<p>Agora, com a ajuda do <code>toStringTag</code>, você é capaz de costumizar sua própria tag:</p>
+Agora, com a ajuda do `toStringTag`, você é capaz de costumizar sua própria tag:
 
-<pre class="brush: js notranslate">class ValidatorClass {
+```js
+class ValidatorClass {
   get [Symbol.toStringTag]() {
     return 'Validator';
   }
 }
 
 Object.prototype.toString.call(new ValidatorClass()); // "[object Validator]"
-</pre>
+```
 
-<h3 id="toStringTag_disponível_em_todos_os_objetos_protótipos_da_DOM">toStringTag disponível em todos os objetos protótipos da DOM </h3>
+### toStringTag disponível em todos os objetos protótipos da DOM
 
-<p>Devido a uma mudança nas especificações <a href="https://github.com/heycam/webidl/pull/357">WebIDL spec change</a> em meados de 2020, navegadores estão adicionando uma propriedade <code>Symbol.toStringTag</code> para todos os objetos protótipos da DOM . Por exemplo, para acessar a propriedade <code>Symbol.toStringTag</code> no {{domxref("HTMLButtonElement")}}:</p>
+Devido a uma mudança nas especificações [WebIDL spec change](https://github.com/heycam/webidl/pull/357) em meados de 2020, navegadores estão adicionando uma propriedade `Symbol.toStringTag` para todos os objetos protótipos da DOM . Por exemplo, para acessar a propriedade `Symbol.toStringTag` no {{domxref("HTMLButtonElement")}}:
 
-<pre class="brush: js notranslate">let test = document.createElement('button');
+```js
+let test = document.createElement('button');
 test.toString(); // Retorna [object HTMLButtonElement]
-test[Symbol.toStringTag];  // Retona HTMLButtonElement</pre>
+test[Symbol.toStringTag];  // Retona HTMLButtonElement
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-symbol.tostringtag', 'Symbol.toStringTag')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                    |
+| ------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-symbol.tostringtag', 'Symbol.toStringTag')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("javascript.builtins.Symbol.toStringTag")}}
 
+## Veja também
 
-<p>{{Compat("javascript.builtins.Symbol.toStringTag")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{jsxref("Object.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toString()")}}

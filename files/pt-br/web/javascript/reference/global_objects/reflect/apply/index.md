@@ -8,47 +8,49 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/apply
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método estático <code><strong>Reflect</strong></code><strong><code>.apply()</code></strong> chama uma função alvo com os argumentos especificados.</p>
+O método estático **`Reflect`\*\***`.apply()`\*\* chama uma função alvo com os argumentos especificados.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">Reflect.apply(target, thisArgument, argumentsList)
-</pre>
+```
+Reflect.apply(target, thisArgument, argumentsList)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt>target</dt>
- <dd>Função que será chamada.</dd>
- <dt>thisArgument</dt>
- <dd>O valor de "<code>this"</code> que será usado pela function do target.</dd>
- <dt>argumentsList</dt>
- <dd>Um objeto do tipo array que especifica os argumentos com que o <em><code>target</code></em> deve ser chamado.</dd>
-</dl>
+- target
+  - : Função que será chamada.
+- thisArgument
+  - : O valor de "`this"` que será usado pela function do target.
+- argumentsList
+  - : Um objeto do tipo array que especifica os argumentos com que o _`target`_ deve ser chamado.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>O resultado da função alvo chamada com o <code><strong>this</strong></code>  e argumentos especificados.</p>
+O resultado da função alvo chamada com o **`this`** e argumentos especificados.
 
-<h3 id="Exceções">Exceções</h3>
+### Exceções
 
-<p>Um {{jsxref("TypeError")}}, se a função especificada no <em>target</em> não for invocável.</p>
+Um {{jsxref("TypeError")}}, se a função especificada no _target_ não for invocável.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>No ES5, tipicamente é usado o método {{jsxref("Function.prototype.apply()")}} para chamar uma função com o valor de <code>this e argumentos</code> <font face="Consolas, Liberation Mono, Courier, monospace">fornecidos como um array</font> (ou um <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects">array-like object</a>).</p>
+No ES5, tipicamente é usado o método {{jsxref("Function.prototype.apply()")}} para chamar uma função com o valor de `this e argumentos` fornecidos como um array (ou um [array-like object](/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)).
 
-<pre class="brush: js">Function.prototype.apply.call(Math.floor, undefined, [1.75]);</pre>
+```js
+Function.prototype.apply.call(Math.floor, undefined, [1.75]);
+```
 
-<p>Com o <code>Reflect.apply</code> isso se torna menos verboso e mais fácil de entender.</p>
+Com o `Reflect.apply` isso se torna menos verboso e mais fácil de entender.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_Reflect.apply()">Usando <code>Reflect.apply()</code></h3>
+### Usando `Reflect.apply()`
 
-<pre class="brush: js">Reflect.apply(Math.floor, undefined, [1.75]);
+```js
+Reflect.apply(Math.floor, undefined, [1.75]);
 // 1;
 
 Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111]);
@@ -59,37 +61,20 @@ Reflect.apply(RegExp.prototype.exec, /ab/, ["confabulation"]).index;
 
 Reflect.apply("".charAt, "ponies", [3]);
 // "i"
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-reflect.apply', 'Reflect.apply')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-reflect.apply', 'Reflect.apply')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                        | Status                       | Comentário         |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
+| {{SpecName('ES6', '#sec-reflect.apply', 'Reflect.apply')}}         | {{Spec2('ES6')}}         | Definição inicial. |
+| {{SpecName('ESDraft', '#sec-reflect.apply', 'Reflect.apply')}} | {{Spec2('ESDraft')}} |                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Reflect.apply")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li>{{jsxref("Function.prototype.apply()")}}</li>
-</ul>
+- {{jsxref("Reflect")}}
+- {{jsxref("Function.prototype.apply()")}}

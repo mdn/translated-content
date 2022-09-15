@@ -3,21 +3,20 @@ title: Symbol.split
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/split
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O <code><strong>Symbol.split</strong></code> é um símbolo conhecido que especifica o método que divide uma string nos índices correspondentes a uma expressão regular. Essa função é chamada pelo método {{jsxref("String.prototype.split()")}}.</p>
+O **`Symbol.split`** é um símbolo conhecido que especifica o método que divide uma string nos índices correspondentes a uma expressão regular. Essa função é chamada pelo método {{jsxref("String.prototype.split()")}}.
 
-<p>Para mais informações, veja {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}} e {{jsxref("String.prototype.split()")}}.</p>
+Para mais informações, veja {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}} e {{jsxref("String.prototype.split()")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-split.html")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-split.html")}}{{js_property_attributes(0,0,0)}}
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+## Exemplos
 
-<h2 id="Exemplos">Exemplos</h2>
+### Divisão reversa personalizada
 
-<h3 id="Divisão_reversa_personalizada">Divisão reversa personalizada</h3>
-
-<pre class="brush: js notranslate">class ReverseSplit {
+```js
+class ReverseSplit {
   [Symbol.split](string) {
     const array = string.split(' ');
     return array.reverse();
@@ -25,34 +24,22 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/split
 }
 
 console.log('Another one bites the dust'.split(new ReverseSplit()));
-// resultado esperado: [ "dust", "the", "bites", "one", "Another" ]</pre>
+// resultado esperado: [ "dust", "the", "bites", "one", "Another" ]
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-symbol.split', 'Symbol.split')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                    |
+| -------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-symbol.split', 'Symbol.split')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("javascript.builtins.Symbol.split")}}
 
+## Veja também
 
-<p>{{Compat("javascript.builtins.Symbol.split")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{jsxref("Symbol.match")}}</li>
- <li>{{jsxref("Symbol.replace")}}</li>
- <li>{{jsxref("Symbol.search")}}</li>
- <li>{{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}}</li>
-</ul>
+- {{jsxref("Symbol.match")}}
+- {{jsxref("Symbol.replace")}}
+- {{jsxref("Symbol.search")}}
+- {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}}

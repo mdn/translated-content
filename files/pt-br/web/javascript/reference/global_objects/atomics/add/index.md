@@ -9,70 +9,56 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/add
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método estátitico <code><strong>Atomics</strong></code><strong><code>.add()</code></strong> adiciona um dado valor em uma determinada posição no array e retorna o valor antigo daquela posição. Esta operação atômica garante que nenhuma outra escrita ocorra até que o valor modificado seja escrito de volta.</p>
+O método estátitico **`Atomics`\*\***`.add()`\*\* adiciona um dado valor em uma determinada posição no array e retorna o valor antigo daquela posição. Esta operação atômica garante que nenhuma outra escrita ocorra até que o valor modificado seja escrito de volta.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">Atomics.add(typedArray, index, value)
-</pre>
+```
+Atomics.add(typedArray, index, value)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>typedArray</code></dt>
- <dd>Um array tipado de inteiros compartilhado. Pode ser {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, ou {{jsxref("Uint32Array")}}.</dd>
- <dt><code>index</code></dt>
- <dd>A posição no <code>typedArray</code> onde o <code>value</code> será adicionado.</dd>
- <dt><code>value</code></dt>
- <dd>Número que será adicionado.</dd>
-</dl>
+- `typedArray`
+  - : Um array tipado de inteiros compartilhado. Pode ser {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, ou {{jsxref("Uint32Array")}}.
+- `index`
+  - : A posição no `typedArray` onde o `value` será adicionado.
+- `value`
+  - : Número que será adicionado.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>O valor antigo na determinada posição (<code>typedArray[index]</code>).</p>
+O valor antigo na determinada posição (`typedArray[index]`).
 
-<h3 id="Exceções">Exceções</h3>
+### Exceções
 
-<ul>
- <li>Lança uma exceção {{jsxref("TypeError")}}, se o <code>typedArray</code> não for um dos tipos de inteiro permitidos.</li>
- <li>Lança uma exceção {{jsxref("TypeError")}}, se o <code>typedArray</code> não for tipo array tipado compartilhado.</li>
- <li>Lança uma exceção {{jsxref("RangeError")}}, se o <code>index</code> estiver fora dos limites no <code>typedArray</code>.</li>
-</ul>
+- Lança uma exceção {{jsxref("TypeError")}}, se o `typedArray` não for um dos tipos de inteiro permitidos.
+- Lança uma exceção {{jsxref("TypeError")}}, se o `typedArray` não for tipo array tipado compartilhado.
+- Lança uma exceção {{jsxref("RangeError")}}, se o `index` estiver fora dos limites no `typedArray`.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: js">var sab = new SharedArrayBuffer(1024);
+```js
+var sab = new SharedArrayBuffer(1024);
 var ta = new Uint8Array(sab);
 
 Atomics.add(ta, 0, 12); // retorna 0, o valor antigo
-Atomics.load(ta, 0); // 12</pre>
+Atomics.load(ta, 0); // 12
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-atomics.add', 'Atomics.add')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Definição inicial no ES2017.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                | Status                       | Comentário                   |
+| ---------------------------------------------------------------------------- | ---------------------------- | ---------------------------- |
+| {{SpecName('ESDraft', '#sec-atomics.add', 'Atomics.add')}} | {{Spec2('ESDraft')}} | Definição inicial no ES2017. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Atomics.add")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Atomics")}}</li>
- <li>{{jsxref("Atomics.sub()")}}</li>
-</ul>
+- {{jsxref("Atomics")}}
+- {{jsxref("Atomics.sub()")}}

@@ -3,88 +3,65 @@ title: do...while
 slug: Web/JavaScript/Reference/Statements/do...while
 translation_of: Web/JavaScript/Reference/Statements/do...while
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}A declaração **` do...while``  `**cria um laço que executa uma declaração até que o teste da condição for falsa (false). A condição é avaliada depois que o bloco de código é executado, resultando que uma declaração seja executada pelo menos uma vez.
 
+## Sintaxe
 
+```
+do
+   statement
+while (condition);
+```
 
-<div>A declaração <strong><code>do...while</code><code> </code></strong>cria um laço que executa uma declaração até que o teste da condição for falsa (false). A condição é avaliada depois que o bloco de código é executado, resultando que uma declaração seja executada pelo menos uma vez.</div>
+- `declarações`
+  - : A declaração é executada pelo menos uma vez e re-executada cada vez que a condição (`condition`) for avaliada como verdadeira (true). Para executar múltiplas declarações dentro do laço, use um {{jsxref("declaração/block", "block")}} declaração (`{ ... }`) ao grupo dessas declarações.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+<!---->
 
-<pre class="syntaxbox">do
-   <em>statement</em>
-while (<em>condition</em>);
-</pre>
+- `condição`
+  - : Uma expressão é validade depois de cada passagem pelo laço. Se a condição `(condition) `é avaliada como verdadeira (true) o bloco de código é executado novamente. Quando a condição `(condition) `é avaliada como falsa (false), o controle passa para a instrução seguinte ao laço **do...while**.
 
-<dl>
- <dt><code>declarações</code></dt>
- <dd>A declaração é executada pelo menos uma vez e re-executada cada vez que a condição (<code>condition</code>) for avaliada como verdadeira (true). Para executar múltiplas declarações dentro do laço, use um {{jsxref("declaração/block", "block")}} declaração (<code>{ ... }</code>) ao grupo dessas declarações.</dd>
-</dl>
+## Exemplos
 
-<dl>
- <dt><code>condição</code></dt>
- <dd>Uma expressão é validade depois de cada passagem pelo laço. Se a condição <code>(condition) </code>é avaliada como verdadeira (true) o bloco de código é executado novamente. Quando a condição <code>(condition) </code>é avaliada como falsa (false),  o controle passa para a instrução seguinte ao laço <strong>do...while</strong>.</dd>
-</dl>
+### Usando `do...while`
 
-<h2 id="Exemplos">Exemplos</h2>
+No exemplo seguinte, o laço **do...while** soma pelo menos uma vez e executa novamente até `i` não ser menor que 5.
 
-<h3 id="Usando_do...while">Usando <code>do...while</code></h3>
+### Conteúdo HTML
 
-<p>No exemplo seguinte, o laço <strong>do...while</strong> soma pelo menos uma vez e executa novamente até <code>i</code> não ser menor que 5.</p>
+```html
+<div id="exemplo"></div>
+```
 
-<h3 id="Conteúdo_HTML">Conteúdo HTML </h3>
+### Conteúdo JavaScript
 
-<pre class="brush: html">&lt;div id="exemplo"&gt;&lt;/div&gt;</pre>
-
-<h3 id="Conteúdo_JavaScript">Conteúdo JavaScript </h3>
-
-<pre class="brush: js">var resultado = '';
+```js
+var resultado = '';
 var i = 0;
 do {
    i += 1;
    resultado += i + ' ';
-} while (i &lt; 5);
-document.getElementById('exemplo').innerHTML = resultado;</pre>
+} while (i < 5);
+document.getElementById('exemplo').innerHTML = resultado;
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{ EmbedLiveSample('Exemplos') }}</p>
+{{ EmbedLiveSample('Exemplos') }}
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3rd Edition.</td>
-   <td>Standard</td>
-   <td>Initial definition.<br>
-    Implemented in JavaScript 1.2</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-12.6.1', 'do-while statement')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-do-while-statement', 'do-while statement')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Trailing ; is now optional.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                   | Comment                                           |
+| -------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------- |
+| ECMAScript 3rd Edition.                                                                      | Standard                 | Initial definition. Implemented in JavaScript 1.2 |
+| {{SpecName('ES5.1', '#sec-12.6.1', 'do-while statement')}}                 | {{Spec2('ES5.1')}} |                                                   |
+| {{SpecName('ES6', '#sec-do-while-statement', 'do-while statement')}} | {{Spec2('ES6')}}     | Trailing ; is now optional.                       |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.statements.do_while")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Statements/while", "while")}}</li>
- <li>{{jsxref("Statements/for", "for")}}</li>
-</ul>
+- {{jsxref("Statements/while", "while")}}
+- {{jsxref("Statements/for", "for")}}

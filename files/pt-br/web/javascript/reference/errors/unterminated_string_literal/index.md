@@ -3,61 +3,64 @@ title: 'SyntaxError: unterminated string literal'
 slug: Web/JavaScript/Reference/Errors/Unterminated_string_literal
 translation_of: Web/JavaScript/Reference/Errors/Unterminated_string_literal
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Mensagem">Mensagem</h2>
+## Mensagem
 
-<pre class="syntaxbox">SyntaxError: unterminated string literal
-</pre>
+```
+SyntaxError: unterminated string literal
+```
 
-<h2 id="Tipo_de_Erro">Tipo de Erro</h2>
+## Tipo de Erro
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="O_que_deu_errado">O que deu errado?</h2>
+## O que deu errado?
 
-<p>Há uma {{jsxref("String")}} não finalizada em algum lugar do código. String literais devem se fechadas com aspas simples (<code>'</code>) ou duplas (<code>"</code>) . O JavaScript não faz distinção entre strings com aspas simples ou aspas duplas. <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation">As sequências de escape </a>trabalham com strings criadas tanto com aspas simples, quanto com aspas duplas. Para consertar este erro, verifique se:</p>
+Há uma {{jsxref("String")}} não finalizada em algum lugar do código. String literais devem se fechadas com aspas simples (`'`) ou duplas (`"`) . O JavaScript não faz distinção entre strings com aspas simples ou aspas duplas. [As sequências de escape ](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation)trabalham com strings criadas tanto com aspas simples, quanto com aspas duplas. Para consertar este erro, verifique se:
 
-<ul>
- <li>você abriu e fechou sua string literal com aspas (simples ou duplas),</li>
- <li>você escapou sua string literal corretamente,</li>
- <li>sua string funciona corretamente em várias linhas, se houver.</li>
-</ul>
+- você abriu e fechou sua string literal com aspas (simples ou duplas),
+- você escapou sua string literal corretamente,
+- sua string funciona corretamente em várias linhas, se houver.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Múltiplas_linhas">Múltiplas linhas</h3>
+### Múltiplas linhas
 
-<p>Você não pode dividir sua string em múltiplas linhas em Javascript:</p>
+Você não pode dividir sua string em múltiplas linhas em Javascript:
 
-<pre class="brush: js example-bad">var longString = "This is a very long string which needs
+```js example-bad
+var longString = "This is a very long string which needs
                   to wrap across multiple lines because
                   otherwise my code is unreadable.";
-// SyntaxError: unterminated string literal</pre>
+// SyntaxError: unterminated string literal
+```
 
-<p>Ao invés disso, você deve utilizar o operador<a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition"> + operator</a>, uma barra invertida(\), ou <a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">modelos literais</a>. Uma forma de uso do operador<code> +, seria assim:</code></p>
+Ao invés disso, você deve utilizar o operador[ + operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition), uma barra invertida(\\), ou [modelos literais](/pt-BR/docs/Web/JavaScript/Reference/Template_literals). Uma forma de uso do operador` +, seria assim:`
 
-<pre class="brush: js example-good">var longString = "This is a very long string which needs " +
+```js example-good
+var longString = "This is a very long string which needs " +
                  "to wrap across multiple lines because " +
                  "otherwise my code is unreadable.";
-</pre>
+```
 
-<p>Ou você pode usar uma barra invertida ("\") ao final de cada linha para indicar que a string continuará na próxima linha. Certifique-se de que não há espaço ou qualquer outro caractere após a barra invertida (excento quando for uma quebra de linha), ou como indentação; caso contrário, não funcionará. Esta forma ficaria assim:</p>
+Ou você pode usar uma barra invertida ("\\") ao final de cada linha para indicar que a string continuará na próxima linha. Certifique-se de que não há espaço ou qualquer outro caractere após a barra invertida (excento quando for uma quebra de linha), ou como indentação; caso contrário, não funcionará. Esta forma ficaria assim:
 
-<pre class="brush: js example-good">var longString = "This is a very long string which needs \
+```js example-good
+var longString = "This is a very long string which needs \
 to wrap across multiple lines because \
 otherwise my code is unreadable.";
-</pre>
+```
 
-<p>Uma outra possibilidade é usar um  <a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">modelo literal</a>, que é suportado pelos ambientes ECMAScript 2015:</p>
+Uma outra possibilidade é usar um [modelo literal](/pt-BR/docs/Web/JavaScript/Reference/Template_literals), que é suportado pelos ambientes ECMAScript 2015:
 
-<pre class="brush: js example-good">var longString = `This is a very long string which needs
+```js example-good
+var longString = `This is a very long string which needs
                   to wrap across multiple lines because
-                  otherwise my code is unreadable.`;</pre>
+                  otherwise my code is unreadable.`;
+```
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("String")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">Modelos literais</a></li>
-</ul>
+- {{jsxref("String")}}
+- [Modelos literais](/pt-BR/docs/Web/JavaScript/Reference/Template_literals)

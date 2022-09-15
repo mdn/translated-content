@@ -3,27 +3,26 @@ title: Symbol.toPrimitive
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O <code><strong>Symbol.toPrimitive</strong></code> é um símbolo que específica uma propriedade com valor função que é chamada para converter um ojbeto para um valor primitivo correspondente. </p>
+O **`Symbol.toPrimitive`** é um símbolo que específica uma propriedade com valor função que é chamada para converter um ojbeto para um valor primitivo correspondente.
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-toprimitive.html")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-toprimitive.html")}}
 
+## Descrição
 
+Com a ajuda da propriedade **`Symbol.toPrimitive`** (usada como uma função valor), um objeto pode ser convertido para um valor primitivo. a função é chamada com um argumento string **`hint`**, que espcífica o tipo de preferência do resultado do valor primitivo. O argumento **`hint`** pode ser um `"number"`, `"string"`, e `"default"`.
 
-<h2 id="Descrição">Descrição</h2>
+{{js_property_attributes(0,0,0)}}
 
-<p>Com a ajuda da propriedade <strong><code>Symbol.toPrimitive</code></strong> (usada como uma função valor), um objeto pode ser convertido para um valor primitivo. a função é chamada com um argumento string <strong><code>hint</code></strong>, que espcífica o tipo de preferência do resultado do valor primitivo. O argumento <strong><code>hint</code></strong> pode ser um <code>"<em>number</em>"</code>, <code>"<em>string</em>"</code>, e <code>"<em>default</em>"</code>.</p>
+## Exemplos
 
-<p>{{js_property_attributes(0,0,0)}}</p>
+### Modificando valores primitivos convertendo para um objeto
 
-<h2 id="Exemplos">Exemplos</h2>
+O exemplo a seguir descreve que a propriedade **`Symbol.toPrimitive`** pode ser modificar o valor primitivo convertendo para um objeto.
 
-<h3 id="Modificando_valores_primitivos_convertendo_para_um_objeto">Modificando valores primitivos convertendo para um objeto</h3>
-
-<p>O exemplo a seguir descreve que a propriedade <strong><code>Symbol.toPrimitive</code></strong> pode ser modificar o valor primitivo convertendo para um objeto.</p>
-
-<pre class="brush: js notranslate">// Um objeto sem propriedade Symbol.toPrimitive.
+```js
+// Um objeto sem propriedade Symbol.toPrimitive.
 var obj1 = {};
 console.log(+obj1);     // NaN
 console.log(`${obj1}`); // "[object Object]"
@@ -44,32 +43,21 @@ var obj2 = {
 console.log(+obj2);     // 10        -- dica é "number"
 console.log(`${obj2}`); // "hello"   -- dica é "string"
 console.log(obj2 + ''); // "true"    -- dica é "default"
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-symbol.toprimitive', 'Symbol.toPrimitive')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                    |
+| ------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-symbol.toprimitive', 'Symbol.toPrimitive')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("javascript.builtins.Symbol.toPrimitive")}}
 
+## Veja também
 
-<p>{{Compat("javascript.builtins.Symbol.toPrimitive")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{jsxref("Date.@@toPrimitive", "Date.prototype[@@toPrimitive]")}}</li>
- <li>{{jsxref("Symbol.@@toPrimitive", "Symbol.prototype[@@toPrimitive]")}}</li>
- <li>{{jsxref("Object.prototype.toString()")}}</li>
- <li>{{jsxref("Object.prototype.valueOf()")}}</li>
-</ul>
+- {{jsxref("Date.@@toPrimitive", "Date.prototype[@@toPrimitive]")}}
+- {{jsxref("Symbol.@@toPrimitive", "Symbol.prototype[@@toPrimitive]")}}
+- {{jsxref("Object.prototype.toString()")}}
+- {{jsxref("Object.prototype.valueOf()")}}

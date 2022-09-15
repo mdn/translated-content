@@ -8,19 +8,14 @@ tags:
   - Web
 translation_of: Web/JavaScript/Reference/Statements/switch
 ---
-<div>
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}A condicional **switch** avalia uma [expressão](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators), combinando o valor da expressão para um cláusula **case**, e executa as [instruções](/pt-BR/docs/Web/JavaScript/Reference/Statements) associadas ao **case**.
 
-<div>A condicional <strong>switch </strong>avalia uma <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators">expressão</a>, combinando o valor da expressão para um cláusula <strong>case</strong>, e executa as <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements">instruções</a>  associadas ao <strong>case</strong>.</div>
+{{EmbedInteractiveExample("pages/js/statement-switch.html")}}
 
-<div> </div>
-</div>
+## Sintaxe
 
-<p id="sect1">{{EmbedInteractiveExample("pages/js/statement-switch.html")}}</p>
-
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
-
-<pre class="syntaxbox">switch (expressão) {
+```
+switch (expressão) {
   case valor1:
     //Instruções executadas quando o resultado da expressão for igual á valor1
     [break;]
@@ -34,30 +29,30 @@ translation_of: Web/JavaScript/Reference/Statements/switch
   default:
     //Instruções executadas quando o valor da expressão é diferente de todos os cases
     [break;]
-}</pre>
+}
+```
 
-<dl>
- <dt><code>expressão</code></dt>
- <dd>Uma expressão que será comparada á cada cláusula <strong>case</strong>.</dd>
- <dt><code>case expressão</code></dt>
- <dd>Uma cláusula <strong>case</strong> que será comparada á expressão.</dd>
-</dl>
+- `expressão`
+  - : Uma expressão que será comparada á cada cláusula **case**.
+- `case expressão`
+  - : Uma cláusula **case** que será comparada á expressão.
 
-<h2 id="Description" name="Description">Descrição</h2>
+## Descrição
 
-<p>Se a condição for correspondida, o programa executa as instruções asssociadas. Se múltiplos casos corresponderem o valor, o primeiro caso que corresponder é selecionado, mesmo se os casos não forem iguais entre si.</p>
+Se a condição for correspondida, o programa executa as instruções asssociadas. Se múltiplos casos corresponderem o valor, o primeiro caso que corresponder é selecionado, mesmo se os casos não forem iguais entre si.
 
-<p>O programa primeiro procura por um caso o qual a expressão avalie como tendo o mesmo valor que o input da expressão (usando a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">comparação de igualdade estrita</a>, <code>===) </code>transferindo assim o controle para a cláusula encontrada e em seguida executando as instruções associadas. Caso nenhum caso seja correspondido, então o programa procura pela cláusula opcional <code>default</code>, que, se encontrado, tem o controle transferido a ele, executando suas instruções associadas. Se não houver uma cláusula <code>default</code>, o programa continua a execução da instrução seguindo para o final do <code>switch</code>. Por convenção, a cláusula default é a última, mas não é algo obrigatório.</p>
+O programa primeiro procura por um caso o qual a expressão avalie como tendo o mesmo valor que o input da expressão (usando a [comparação de igualdade estrita](/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators), `===) `transferindo assim o controle para a cláusula encontrada e em seguida executando as instruções associadas. Caso nenhum caso seja correspondido, então o programa procura pela cláusula opcional `default`, que, se encontrado, tem o controle transferido a ele, executando suas instruções associadas. Se não houver uma cláusula `default`, o programa continua a execução da instrução seguindo para o final do `switch`. Por convenção, a cláusula default é a última, mas não é algo obrigatório.
 
-<p>A instrução opcional <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/break" title="JavaScript/Reference/Statements/break">break</a></code> associada com cada <code>case</code> garante que o programa saia da condicional <code>switch</code> assim que a instrução correspondente for executada  e executa a instrução que segue logo após o switch. Caso <code>break</code> seja omitido, o programa continua a execução para a próxima instrução dentro de <code>switch</code>. </p>
+A instrução opcional [`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break "JavaScript/Reference/Statements/break") associada com cada `case` garante que o programa saia da condicional `switch` assim que a instrução correspondente for executada e executa a instrução que segue logo após o switch. Caso `break` seja omitido, o programa continua a execução para a próxima instrução dentro de `switch`.
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<h3 id="Example:_Using_switch" name="Example:_Using_switch">Exemplo: Usando <code>switch</code></h3>
+### Exemplo: Usando `switch`
 
-<p>No exemplo a seguir, if <code>expr</code> é avaliado como "Bananas", o programa corresponde o valor com o <code>case</code> "Bananas" e executa a instrução associada. Quando <code>break</code> for encontrado, o programa para (break), saindo de <code>switch</code> e executa a instrução localizada após o <code>switch</code>. Se <code>break</code> fosse omitido, a instrução para "Cherries" também seria executada.</p>
+No exemplo a seguir, if `expr` é avaliado como "Bananas", o programa corresponde o valor com o `case` "Bananas" e executa a instrução associada. Quando `break` for encontrado, o programa para (break), saindo de `switch` e executa a instrução localizada após o `switch`. Se `break` fosse omitido, a instrução para "Cherries" também seria executada.
 
-<pre class="brush: js">switch (expr) {
+```js
+switch (expr) {
   case "Laranjas":
     console.log("As laranjas custam $0.59 o quilo.");
     break;
@@ -79,13 +74,14 @@ translation_of: Web/JavaScript/Reference/Statements/switch
 }
 
 console.log("Tem algo mais que você gostaria de levar?");
-</pre>
+```
 
-<h3 id="What_happens_if_I_forgot_a_break" name="What_happens_if_I_forgot_a_break">Exemplo: O que acontece se eu esquecer um break?</h3>
+### Exemplo: O que acontece se eu esquecer um break?
 
-<p>Se você esquecer um break então o script irá rodar a partir do caso onde o critério foi correspondido e irá rodar também o caso seguinte independentemente do critério ter sido correspondido ou não:</p>
+Se você esquecer um break então o script irá rodar a partir do caso onde o critério foi correspondido e irá rodar também o caso seguinte independentemente do critério ter sido correspondido ou não:
 
-<pre class="brush: js">var foo = 0;
+```js
+var foo = 0;
 switch (foo) {
     case -1:
         console.log('1 negativo');
@@ -101,23 +97,23 @@ switch (foo) {
         break;
     default:
         console.log('default');
-}</pre>
+}
+```
 
-<h3 id="Methods_for_Multi-criteria_Case" name="Methods_for_Multi-criteria_Case">Exemplo: Métodos para múltiplos casos</h3>
+### Exemplo: Métodos para múltiplos casos
 
-<p>Referência para esta técnica abaixo:</p>
+Referência para esta técnica abaixo:
 
-<p><a href="http://stackoverflow.com/questions/13207927/switch-statement-multiple-cases-in-javascript">- Switch statement multiple cases in JavaScript (Stack Overflow)</a></p>
+[- Switch statement multiple cases in JavaScript (Stack Overflow)](http://stackoverflow.com/questions/13207927/switch-statement-multiple-cases-in-javascript)
 
-<h4 id="Multi-Caso_-_Operação_Simples">Multi-Caso - Operação Simples</h4>
+#### Multi-Caso - Operação Simples
 
-<p>Esse método toma vantagem do fato de não existir um break após um case e irá continuara  executar o próximo case independentemente se o case corresponde ao critério. Veja o título desta seção "O que acontece se eu esquecer um break?"</p>
+Esse método toma vantagem do fato de não existir um break após um case e irá continuara executar o próximo case independentemente se o case corresponde ao critério. Veja o título desta seção "O que acontece se eu esquecer um break?"
 
-<p>Esse é um exemplo de uma operação sequencial simples com a instrução switch, onde quatro valores diferentes fazem a mesma coisa..</p>
+Esse é um exemplo de uma operação sequencial simples com a instrução switch, onde quatro valores diferentes fazem a mesma coisa..
 
-<p> </p>
-
-<pre class="brush: js">var Animal = 'Girafa';
+```js
+var Animal = 'Girafa';
 switch (Animal) {
     case 'Vaca':
     case 'Girafa':
@@ -128,15 +124,17 @@ switch (Animal) {
     case 'Dinossauro':
     default:
         alert('Esse animal não vai.');
-}</pre>
+}
+```
 
-<h4 id="Multi-Caso_-_Operações_encadeadas">Multi-Caso - Operações encadeadas </h4>
+#### Multi-Caso - Operações encadeadas
 
-<p>Esse é um exemplo de múltiplas operações squenciais usando a instrução <code>switch</code>, onde, dependendo do número inteiro, você poderá receber outputs diferentes. Isso mostra que você pode alterar a ordem que você insere as instruções de <code>case</code>, e isso não precisa ser uma sequência numérica. Em JavaScript, você pode até mesmo misturar definições de strings dentro desses <code>cases</code>. </p>
+Esse é um exemplo de múltiplas operações squenciais usando a instrução `switch`, onde, dependendo do número inteiro, você poderá receber outputs diferentes. Isso mostra que você pode alterar a ordem que você insere as instruções de `case`, e isso não precisa ser uma sequência numérica. Em JavaScript, você pode até mesmo misturar definições de strings dentro desses `cases`.
 
-<p>This is an example of a multiple-operation sequential switch statement, where, depending on the provided integer, you can receive different output. This shows you that it wil traverse in the order that you put the case statements, and it does not have to be numerically sequential. In JavaScript, you can even mix in definitions of strings into these case statements as well.</p>
+This is an example of a multiple-operation sequential switch statement, where, depending on the provided integer, you can receive different output. This shows you that it wil traverse in the order that you put the case statements, and it does not have to be numerically sequential. In JavaScript, you can even mix in definitions of strings into these case statements as well.
 
-<pre class="brush: js">var foo = 1;
+```js
+var foo = 1;
 var output = 'Output: ';
 switch (foo) {
     case 10:
@@ -158,83 +156,33 @@ switch (foo) {
         break;
     default:
         alert('Favor escolher um número de 0 à 6!');
-}</pre>
+}
+```
 
-<p>Output para esse exemplo:</p>
+Output para esse exemplo:
 
-<table class="standard-table" style="height: 270px; width: 522px;">
- <tbody>
-  <tr>
-   <th scope="col">Value</th>
-   <th scope="col">Alert Text</th>
-  </tr>
-  <tr>
-   <td>foo é NaN ou não é 1, 2, 3, 4, 5 ou 10</td>
-   <td>Favor escolher um número de 0 à 6!</td>
-  </tr>
-  <tr>
-   <td>10</td>
-   <td>Output: Então Qual É O Seu Nome?</td>
-  </tr>
-  <tr>
-   <td>1</td>
-   <td>Output: Qual É O Seu Nome?</td>
-  </tr>
-  <tr>
-   <td>2</td>
-   <td>Output: Seu Nome?</td>
-  </tr>
-  <tr>
-   <td>3</td>
-   <td>Output: Nome?</td>
-  </tr>
-  <tr>
-   <td>4</td>
-   <td>Output: ?</td>
-  </tr>
-  <tr>
-   <td>5</td>
-   <td>Output: !</td>
-  </tr>
- </tbody>
-</table>
+| Value                                  | Alert Text                         |
+| -------------------------------------- | ---------------------------------- |
+| foo é NaN ou não é 1, 2, 3, 4, 5 ou 10 | Favor escolher um número de 0 à 6! |
+| 10                                     | Output: Então Qual É O Seu Nome?   |
+| 1                                      | Output: Qual É O Seu Nome?         |
+| 2                                      | Output: Seu Nome?                  |
+| 3                                      | Output: Nome?                      |
+| 4                                      | Output: ?                          |
+| 5                                      | Output: !                          |
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<p> </p>
+| Especificação                                                                        | Status                   | Comentário                                        |
+| ------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------- |
+| ECMAScript 3ª Edição                                                                 | Standard                 | Definição inicial. Implementado no JavaScript 1.2 |
+| {{SpecName('ES5.1', '#sec-12.11', 'switch statement')}}             | {{Spec2('ES5.1')}} |                                                   |
+| {{SpecName('ES6', '#sec-switch-statement', 'switch statement')}} | {{Spec2('ES6')}}     |                                                   |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3ª Edição</td>
-   <td>Standard</td>
-   <td>Definição inicial.<br>
-    Implementado no JavaScript 1.2</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-12.11', 'switch statement')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-switch-statement', 'switch statement')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.statements.switch")}}
 
-<h2 id="See_also" name="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else"><code>if...else</code></a></li>
-</ul>
+- [`if...else`](/pt-BR/docs/Web/JavaScript/Reference/Statements/if...else)

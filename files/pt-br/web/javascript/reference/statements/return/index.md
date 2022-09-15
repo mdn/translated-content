@@ -7,64 +7,69 @@ tags:
   - Statement
 translation_of: Web/JavaScript/Reference/Statements/return
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>A <strong>declaração <code>return</code></strong> finaliza a execução de uma função e especifica os valores que devem ser retonados para onde a função foi chamada.</p>
+A **declaração `return`** finaliza a execução de uma função e especifica os valores que devem ser retonados para onde a função foi chamada.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">return [[expression]]; </pre>
+```
+return [[expression]];
+```
 
-<dl>
- <dt><code>expression</code></dt>
- <dd>A expressão cujo valor será retornado. Se omitido, <code>undefined</code> é retornado.</dd>
-</dl>
+- `expression`
+  - : A expressão cujo valor será retornado. Se omitido, `undefined` é retornado.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Quando uma declaração <code>return</code> é usada em um corpo de função, a execução dessa função é parada. Se especificado, um dado valor é retornado à quem chamou a função. Se a expressão for omitida, <code>undefined</code> será retornado. Todas as declarações return a seguir param a execução da função:</p>
+Quando uma declaração `return` é usada em um corpo de função, a execução dessa função é parada. Se especificado, um dado valor é retornado à quem chamou a função. Se a expressão for omitida, `undefined` será retornado. Todas as declarações return a seguir param a execução da função:
 
-<pre class="brush: js">return;
+```js
+return;
 return true;
 return false;
 return x;
 return x + y / 3;
-</pre>
+```
 
-<h3 id="Inserção_Automática_de_Ponto-e-Vírgula">Inserção Automática de Ponto-e-Vírgula</h3>
+### Inserção Automática de Ponto-e-Vírgula
 
-<p>A declaração <code>return</code> é afetada pela <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion">inserção automática de ponto e vírgula (ASI)</a>. Nenhum terminador de linha é permitido entre a palavra-chave <code>return</code> e a expressão.</p>
+A declaração `return` é afetada pela [inserção automática de ponto e vírgula (ASI)](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion). Nenhum terminador de linha é permitido entre a palavra-chave `return` e a expressão.
 
-<pre class="brush: js">return
+```js
+return
 a + b;
-</pre>
+```
 
-<p>é transformado pelo ASI em:</p>
+é transformado pelo ASI em:
 
-<pre>return;
+```
+return;
 a + b;
-</pre>
+```
 
-<p>O console irá alertar "unreachable code after return statement" (código inacessível após a declaração return).</p>
+O console irá alertar "unreachable code after return statement" (código inacessível após a declaração return).
 
-<div class="note">A partir do Gecko 40 {{geckoRelease(40)}}, um alerta é mostrado no console se um código inacessível é encontrado após uma declaração <code>return</code>.</div>
+> **Nota:** A partir do Gecko 40 {{geckoRelease(40)}}, um alerta é mostrado no console se um código inacessível é encontrado após uma declaração `return`.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="return">return</h3>
+### return
 
-<p>A função a seguir retorna o quadro do seu argumento, <code>x</code>, quando <code>x</code> é um número.</p>
+A função a seguir retorna o quadro do seu argumento, `x`, quando `x` é um número.
 
-<pre class="brush: js">function square(x) {
+```js
+function square(x) {
    return x * x;
 }
-</pre>
+```
 
-<h3 id="Interrompendo_uma_função">Interrompendo uma função</h3>
+### Interrompendo uma função
 
-<p>Uma função para imediatamente no ponto em que <code>return</code> é chamado.</p>
+Uma função para imediatamente no ponto em que `return` é chamado.
 
-<pre class="brush: js">function counter() {
+```js
+function counter() {
   for (var count = 1; ; count++) {  // loop infinito
     console.log(count + 'A'); // até 5
       if (count === 5) {
@@ -87,59 +92,35 @@ counter();
 // 4A
 // 4B
 // 5A
-</pre>
+```
 
-<h3 id="Retornando_uma_função">Retornando uma função</h3>
+### Retornando uma função
 
-<p>Veja também o artigo sobre <a href="/en-US/docs/Web/JavaScript/Closures">Closures</a>.</p>
+Veja também o artigo sobre [Closures](/pt-BR/docs/Web/JavaScript/Closures).
 
-<pre class="brush: js">function magic(x) {
+```js
+function magic(x) {
   return function calc(x) { return x * 42; };
 }
 
 var answer = magic();
 answer(1337); // 56154
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Situação</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-12.9', 'Return statement')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-return-statement', 'Return statement')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-return-statement', 'Return statement')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                | Situação                     | Comentário         |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('ES1')}}                                                                     | {{Spec2('ES1')}}         | Definição inicial. |
+| {{SpecName('ES5.1', '#sec-12.9', 'Return statement')}}                     | {{Spec2('ES5.1')}}     |                    |
+| {{SpecName('ES6', '#sec-return-statement', 'Return statement')}}         | {{Spec2('ES6')}}         |                    |
+| {{SpecName('ESDraft', '#sec-return-statement', 'Return statement')}} | {{Spec2('ESDraft')}} |                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.statements.return")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope" title="En/Core_JavaScript_1.5_Reference/Functions">Funções</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Closures">Closures</a></li>
-</ul>
+- [Funções](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope "En/Core_JavaScript_1.5_Reference/Functions")
+- [Closures](/pt-BR/docs/Web/JavaScript/Closures)

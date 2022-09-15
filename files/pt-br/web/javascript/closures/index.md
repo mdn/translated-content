@@ -10,15 +10,16 @@ tags:
 translation_of: Web/JavaScript/Closures
 original_slug: Web/JavaScript/Guide/Closures
 ---
-<div>{{jsSidebar("Intermediate")}}</div>
+{{jsSidebar("Intermediate")}}
 
-<p class="summary">Uma <b>closure</b> é a combinação de uma função com as referências ao estado que a circunda (o <b>ambiente léxico</b>). Em outras palavras, uma closure lhe dá acesso ao escopo de uma função externa a partir de uma função interna. Em JavaScript, as closures são criadas toda vez que uma função é criada, no momento da criação da função.</p>
+Uma **closure** é a combinação de uma função com as referências ao estado que a circunda (o **ambiente léxico**). Em outras palavras, uma closure lhe dá acesso ao escopo de uma função externa a partir de uma função interna. Em JavaScript, as closures são criadas toda vez que uma função é criada, no momento da criação da função.
 
-<h2 id="Escopo_léxico">Escopo léxico</h2>
+## Escopo léxico
 
-<p>Considere a função abaixo:</p>
+Considere a função abaixo:
 
-<pre class="brush: js">function init() {
+```js
+function init() {
   var name = "Mozilla"; // name é uma variável local criada pelo init
   function displayName() {
     // displayName() é a função interna, uma closure
@@ -27,17 +28,18 @@ original_slug: Web/JavaScript/Guide/Closures
   displayName();
 }
 init();
-</pre>
+```
 
-<p>A função <code>init()</code> cria uma variável local chamada <code>name</code>, e depois define uma função chamada <code>displayName()</code>. <code>displayName()</code> é uma função aninhada (uma <em>closure</em>) — ela é definida dentro da função <code>init()</code>, e está disponivel apenas dentro do corpo daquela função. Diferente de <span style="font-family: courier new,andale mono,monospace; line-height: 1.5;">init()</span><span style="line-height: 1.5;">,</span><span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">displayName()</code><span style="line-height: 1.5;"> não tem variáveis locais próprias, e ao invés disso reusa a variável </span><code style="font-style: normal; line-height: 1.5;">name</code><span style="line-height: 1.5;"> declarada na função pai.</span></p>
+A função `init()` cria uma variável local chamada `name`, e depois define uma função chamada `displayName()`. `displayName()` é uma função aninhada (uma _closure_) — ela é definida dentro da função `init()`, e está disponivel apenas dentro do corpo daquela função. Diferente de init(), `displayName()` não tem variáveis locais próprias, e ao invés disso reusa a variável `name` declarada na função pai.
 
-<p><a href="http://jsfiddle.net/xAFs9/3/">Rode</a> o código e veja que isso funciona. Este é um exemplo de <em>escopo léxico:</em> em JavaScript, o escopo de uma variável é definido por sua localização dentro do código fonte (isto é aparentemente <em>léxico</em>) e funções aninhadas têm acesso às variáveis declaradas em seu escopo externo.</p>
+[Rode](http://jsfiddle.net/xAFs9/3/) o código e veja que isso funciona. Este é um exemplo de _escopo léxico:_ em JavaScript, o escopo de uma variável é definido por sua localização dentro do código fonte (isto é aparentemente _léxico_) e funções aninhadas têm acesso às variáveis declaradas em seu escopo externo.
 
-<h2 id="Closure">Closure</h2>
+## Closure
 
-<p>Agora considere o seguinte exemplo:</p>
+Agora considere o seguinte exemplo:
 
-<pre class="brush: js">function makeFunc() {
+```js
+function makeFunc() {
   var name = "Mozilla";
   function displayName() {
     alert(name);
@@ -47,17 +49,18 @@ init();
 
 var myFunc = makeFunc();
 myFunc();
-</pre>
+```
 
-<p>Se você rodar este código o mesmo terá exatamente o mesmo efeito que o <code>init()</code> do exemplo anterior: a palavra "Mozilla" será mostrada na caixa de alerta. O que é diferente - e interessante - é o fato de que a função interna do <code>displayName()</code> foi retornada da função externa antes de ser executada.</p>
+Se você rodar este código o mesmo terá exatamente o mesmo efeito que o `init()` do exemplo anterior: a palavra "Mozilla" será mostrada na caixa de alerta. O que é diferente - e interessante - é o fato de que a função interna do `displayName()` foi retornada da função externa antes de ser executada.
 
-<p>Pode parecer não muito intuitivo de que o código de fato funciona. Normalmente variáveis locais de uma função, apenas existem pela duração de sua execução. Uma vez que <code>makeFunc()</code> terminou de executar, é razoável esperar que a variável <code>name</code> não será mais necessária. Dado que o código ainda funciona como o esperado, este não é o caso.</p>
+Pode parecer não muito intuitivo de que o código de fato funciona. Normalmente variáveis locais de uma função, apenas existem pela duração de sua execução. Uma vez que `makeFunc()` terminou de executar, é razoável esperar que a variável `name` não será mais necessária. Dado que o código ainda funciona como o esperado, este não é o caso.
 
-<p>A solução para tal problema é que a função <code>myFunc</code> tornou-se uma <code>closure</code>. Uma closure trata-se de um tipo especial de objeto que combina duas coisas: a função e o ambiente onde a função foi criada. Este ambiente consiste de quaisquer variáveis que estavam no escopo naquele momento em que a função foi criada. Neste caso, <code>myFunc</code> é a closure que incorpora tanto a função <code>displayName</code> quanto a palavra <em>Mozilla</em> que existia quando a closure foi criada.</p>
+A solução para tal problema é que a função `myFunc` tornou-se uma `closure`. Uma closure trata-se de um tipo especial de objeto que combina duas coisas: a função e o ambiente onde a função foi criada. Este ambiente consiste de quaisquer variáveis que estavam no escopo naquele momento em que a função foi criada. Neste caso, `myFunc` é a closure que incorpora tanto a função `displayName` quanto a palavra _Mozilla_ que existia quando a closure foi criada.
 
-<p>Aqui temos um exemplo um pouco mais interessante, a função <code>makeAdder</code>:</p>
+Aqui temos um exemplo um pouco mais interessante, a função `makeAdder`:
 
-<pre class="brush: js">function makeAdder(x) {
+```js
+function makeAdder(x) {
   return function(y) {
     return x + y;
   };
@@ -68,25 +71,26 @@ var add10 = makeAdder(10);
 
 print(add5(2));  // 7
 print(add10(2)); // 12
-</pre>
+```
 
-<p>Neste exemplo definimos a função <code>makeAdder(x)</code> que toma um único argumento <code>x</code> e retorna uma nova função. A função retornada toma então um único argumento, <code>y</code>, e retorna então a soma de <code>x</code> e de <code>y</code>.</p>
+Neste exemplo definimos a função `makeAdder(x)` que toma um único argumento `x` e retorna uma nova função. A função retornada toma então um único argumento, `y`, e retorna então a soma de `x` e de `y`.
 
-<p>Na essência o <code>makeAdder</code> trata-se de uma <em>função fábrica - </em>irá construir outras funções que podem adicionar um determinado valor específico a seu argumento. No exemplo acima usamos a fábrica de funções para criar duas novas funções - uma que adiciona 5 ao argumento, e outra que adiciona 10.</p>
+Na essência o `makeAdder` trata-se de uma _função fábrica -_ irá construir outras funções que podem adicionar um determinado valor específico a seu argumento. No exemplo acima usamos a fábrica de funções para criar duas novas funções - uma que adiciona 5 ao argumento, e outra que adiciona 10.
 
-<p>Ambas as funções <code>add5</code> e <code>add10</code><em> </em><code> </code>são closures. Compartilham o mesmo corpo de definição de função mas armazenam diferentes ambientes. No ambiente da <code>add5</code>, por exemplo, <code>x</code> equivale a 5, enquanto na <code>add10</code> o valor de x é 10.</p>
+Ambas as funções `add5` e `add10`\_ \_``são closures. Compartilham o mesmo corpo de definição de função mas armazenam diferentes ambientes. No ambiente da `add5`, por exemplo, `x`equivale a 5, enquanto na`add10` o valor de x é 10.
 
-<h2 id="Closures_na_prática">Closures na prática</h2>
+## Closures na prática
 
-<p>Esta é a teoria — mas closures são realmente úteis? Vamos considerar suas aplicações práticas. Uma closure deixa você associar dados (do ambiente) com uma função que trabalha estes dados. Isto está diretamente ligado com programação orientada a objetos, onde objetos nos permitem associar dados (as propriedades do objeto) utilizando um ou mais métodos.</p>
+Esta é a teoria — mas closures são realmente úteis? Vamos considerar suas aplicações práticas. Uma closure deixa você associar dados (do ambiente) com uma função que trabalha estes dados. Isto está diretamente ligado com programação orientada a objetos, onde objetos nos permitem associar dados (as propriedades do objeto) utilizando um ou mais métodos.
 
-<p>Consequentemente, você pode utilizar uma closure em qualquer lugar onde você normalmente utilizaria um objeto de único método.</p>
+Consequentemente, você pode utilizar uma closure em qualquer lugar onde você normalmente utilizaria um objeto de único método.
 
-<p>Situações onde você poderia utilizar isto são comuns em ambientes web. Muitos códigos escritos em JavaScript para web são baseados em eventos - nós definimos algum comportamento e então, o atribuimos a um evento que será disparado pelo usuário (quando uma tecla for pressionada, por exemplo). Nosso código normalmente é utilizado como callback: uma função que será executada como resposta ao evento.</p>
+Situações onde você poderia utilizar isto são comuns em ambientes web. Muitos códigos escritos em JavaScript para web são baseados em eventos - nós definimos algum comportamento e então, o atribuimos a um evento que será disparado pelo usuário (quando uma tecla for pressionada, por exemplo). Nosso código normalmente é utilizado como callback: uma função que será executada como resposta ao evento.
 
-<p>Aqui temos um exemplo prático: suponha que queremos adicionar alguns botões para ajustar o tamanho do texto de uma página. Um jeito de fazer seria especificar o tamanho da fonte no elemento body e então definir o tamanho dos outros elementos da página (os cabeçalhos, por exemplo) utilizando a unidade relativa em:</p>
+Aqui temos um exemplo prático: suponha que queremos adicionar alguns botões para ajustar o tamanho do texto de uma página. Um jeito de fazer seria especificar o tamanho da fonte no elemento body e então definir o tamanho dos outros elementos da página (os cabeçalhos, por exemplo) utilizando a unidade relativa em:
 
-<pre class="brush: css">body {
+```css
+body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 12px;
 }
@@ -97,13 +101,14 @@ h1 {
 h2 {
   font-size: 1.2em;
 }
-</pre>
+```
 
-<p>Nossos botões interativos de tamanho de texto podem alterar a propriedade font-size do elemento body, e os ajustes serão refletidos em outros elementos graças à unidade relativa.</p>
+Nossos botões interativos de tamanho de texto podem alterar a propriedade font-size do elemento body, e os ajustes serão refletidos em outros elementos graças à unidade relativa.
 
-<p>O código JavaScript:</p>
+O código JavaScript:
 
-<pre class="brush: js">function makeSizer(size) {
+```js
+function makeSizer(size) {
   return function() {
     document.body.style.fontSize = size + 'px';
   };
@@ -112,31 +117,34 @@ h2 {
 var size12 = makeSizer(12);
 var size14 = makeSizer(14);
 var size16 = makeSizer(16);
-</pre>
+```
 
-<p><code>size12</code>, <code>size14</code> e <code>size16</code> agora são funções que devem redimensionar o texto do elemento body para 12, 14 e 16 pixels respectivamente. Nós podemos designá-las a botões (neste caso, links) como feito a seguir:</p>
+`size12`, `size14` e `size16` agora são funções que devem redimensionar o texto do elemento body para 12, 14 e 16 pixels respectivamente. Nós podemos designá-las a botões (neste caso, links) como feito a seguir:
 
-<pre class="brush: js">document.getElementById('size-12').onclick = size12;
+```js
+document.getElementById('size-12').onclick = size12;
 document.getElementById('size-14').onclick = size14;
 document.getElementById('size-16').onclick = size16;
-</pre>
+```
 
-<pre class="brush: html">&lt;a href="#" id="size-12"&gt;12&lt;/a&gt;
-&lt;a href="#" id="size-14"&gt;14&lt;/a&gt;
-&lt;a href="#" id="size-16"&gt;16&lt;/a&gt;
-</pre>
+```html
+<a href="#" id="size-12">12</a>
+<a href="#" id="size-14">14</a>
+<a href="#" id="size-16">16</a>
+```
 
-<p><a href="https://jsfiddle.net/vnkuZ">View on JSFiddle</a></p>
+[View on JSFiddle](https://jsfiddle.net/vnkuZ)
 
-<h2 id="Emulando_métodos_privados_com_closures">Emulando métodos privados com closures</h2>
+## Emulando métodos privados com closures
 
-<p>Linguagens como Java oferecem a habilidade de declarar métodos privados, o que significa que eles só poderão ser chamados por outros métodos na mesma classe.</p>
+Linguagens como Java oferecem a habilidade de declarar métodos privados, o que significa que eles só poderão ser chamados por outros métodos na mesma classe.
 
-<p>O JavaScript não oferece uma maneira nativa de fazer isso, mas é possível emular métodos privados usando closures. Métodos privados não são somente úteis para restringir acesso ao código: eles também oferecem uma maneira eficaz de gerenciar seu namespace global, evitando que métodos não essenciais baguncem a interface pública do seu código.</p>
+O JavaScript não oferece uma maneira nativa de fazer isso, mas é possível emular métodos privados usando closures. Métodos privados não são somente úteis para restringir acesso ao código: eles também oferecem uma maneira eficaz de gerenciar seu namespace global, evitando que métodos não essenciais baguncem a interface pública do seu código.
 
-<p>Veja como definir algumas funções públicas que acessam funções e variáveis privadas, usando closures que também é conhecido como <a class="external" href="http://www.google.com/search?q=javascript+module+pattern">module pattern</a>:</p>
+Veja como definir algumas funções públicas que acessam funções e variáveis privadas, usando closures que também é conhecido como [module pattern](http://www.google.com/search?q=javascript+module+pattern):
 
-<pre class="brush: js">var Counter = (function() {
+```js
+var Counter = (function() {
   var privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
@@ -160,19 +168,18 @@ Counter.increment();
 alert(Counter.value()); /* Alerts 2 */
 Counter.decrement();
 alert(Counter.value()); /* Alerts 1 */
-</pre>
+```
 
-<p>Tem muita coisa acontecendo aqui. Nos exemplos anteriores cada closure teve o seu próprio ambiente; aqui nós criamos um ambiente único que é compartilhado por três funções: <code>Counter.increment</code>, <code>Counter.decrement</code> e <code>Counter.value</code>.</p>
+Tem muita coisa acontecendo aqui. Nos exemplos anteriores cada closure teve o seu próprio ambiente; aqui nós criamos um ambiente único que é compartilhado por três funções: `Counter.increment`, `Counter.decrement` e `Counter.value`.
 
-<p>O ambiente compartilhado é criado no corpo de uma função anônima, da qual é executada assim que é definida. O ambiente contém dois itens privados: uma variável chamada <code>privateCounter</code> e uma função chamada <code>changeBy</code>. Nenhum desses itens privados podem ser acessados diretamente de fora da função anônima. Ao invés disso, eles devem ser acessados pelas três funções públicas que são retornadas.</p>
+O ambiente compartilhado é criado no corpo de uma função anônima, da qual é executada assim que é definida. O ambiente contém dois itens privados: uma variável chamada `privateCounter` e uma função chamada `changeBy`. Nenhum desses itens privados podem ser acessados diretamente de fora da função anônima. Ao invés disso, eles devem ser acessados pelas três funções públicas que são retornadas.
 
-<p>Aquelas três funções públicas são closures que compartilham o mesmo ambiente. Graças ao escopo léxico do JavaScript, cada uma delas tem acesso a variável <code>privateCounter</code> e à função <code>changeBy</code>.</p>
+Aquelas três funções públicas são closures que compartilham o mesmo ambiente. Graças ao escopo léxico do JavaScript, cada uma delas tem acesso a variável `privateCounter` e à função `changeBy`.
 
-<div class="blockIndicator note">
-<p>Você perceberá que estamos definindo uma função anônima que cria um contador , e então o executamos imediatamente e atribuímos o resultado à variável <code>Counter</code>. Poderíamos armazenar essa função em uma variável separada e usá-la para criar diversos contadores.</p>
-</div>
+> **Nota:** Você perceberá que estamos definindo uma função anônima que cria um contador , e então o executamos imediatamente e atribuímos o resultado à variável `Counter`. Poderíamos armazenar essa função em uma variável separada e usá-la para criar diversos contadores.
 
-<pre class="brush: js">var makeCounter = function() {
+```js
+var makeCounter = function() {
   var privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
@@ -199,28 +206,25 @@ alert(Counter1.value()); /* Alerts 2 */
 Counter1.decrement();
 alert(Counter1.value()); /* Alerts 1 */
 alert(Counter2.value()); /* Alerts 0 */
-</pre>
+```
 
-<p>Observe como cada um dos contadores mantém a sua independência em relação ao outro. Seu ambiente durante a execução da função <code>makeCounter()</code> é diferente a cada vez que ocorre. A variável <code>privateCounter</code> contém uma instância diferente a cada vez.</p>
+Observe como cada um dos contadores mantém a sua independência em relação ao outro. Seu ambiente durante a execução da função `makeCounter()` é diferente a cada vez que ocorre. A variável `privateCounter` contém uma instância diferente a cada vez.
 
-<div class="blockIndicator note">
-<p>Usar closures desta maneira oferece uma série de benefícios que estão normalmente associados a programação orientada a objetos, em particular encapsulamento e ocultação de dados.</p>
-</div>
+> **Nota:** Usar closures desta maneira oferece uma série de benefícios que estão normalmente associados a programação orientada a objetos, em particular encapsulamento e ocultação de dados.
 
-<dl>
-</dl>
+## Criando closures dentro de loops: Um erro comum
 
-<h2 id="Criando_closures_dentro_de_loops_Um_erro_comum">Criando closures dentro de loops: Um erro comum</h2>
+Antes da introdução da palavra chave [`let`](/pt-BR/docs/JavaScript/Reference/Statements/let "let") no JavaScript 1.7, um problema comum ocorria com closures quando eram criadas dentro de um loop. Considere o exemplo:
 
-<p>Antes da introdução da palavra chave <a href="/pt-BR/docs/JavaScript/Reference/Statements/let" title="let"><code>let</code></a> no JavaScript 1.7, um problema comum ocorria com closures quando eram criadas dentro de um loop. Considere o exemplo:</p>
+```html
+<p id="help">Notas úteis aparecerão aqui</p>
+<p>E-mail: <input type="text" id="email" name="email"></p>
+<p>Nome: <input type="text" id="name" name="name"></p>
+<p>Idade: <input type="text" id="age" name="age"></p>
+```
 
-<pre class="brush: html">&lt;p id="help"&gt;Notas úteis aparecerão aqui&lt;/p&gt;
-&lt;p&gt;E-mail: &lt;input type="text" id="email" name="email"&gt;&lt;/p&gt;
-&lt;p&gt;Nome: &lt;input type="text" id="name" name="name"&gt;&lt;/p&gt;
-&lt;p&gt;Idade: &lt;input type="text" id="age" name="age"&gt;&lt;/p&gt;
-</pre>
-
-<pre class="brush: js">function showHelp(help) {
+```js
+function showHelp(help) {
   document.getElementById('help').innerHTML = help;
 }
 
@@ -231,7 +235,7 @@ function setupHelp() {
     {'id': 'age', 'help': 'Sua idade (você deve ter mais de 16 anos)'}
   ];
 
-  for (var i = 0; i &lt; helpText.length; i++) {
+  for (var i = 0; i < helpText.length; i++) {
     // O culpado é o uso do `var` nesta linha
     var item = helpText[i];
     document.getElementById(item.id).onfocus = function() {
@@ -241,19 +245,20 @@ function setupHelp() {
 }
 
 setupHelp();
-</pre>
+```
 
-<p><a href="https://jsfiddle.net/v7gjv">View on JSFiddle</a></p>
+[View on JSFiddle](https://jsfiddle.net/v7gjv)
 
-<p>O array <code>helpText</code> define três dicas úteis, cada uma associada ao ID de um input no documento. O loop percorre essas definições, atrelando um evento <code>onfocus</code> para cada um que mostra o método de ajuda associado.</p>
+O array `helpText` define três dicas úteis, cada uma associada ao ID de um input no documento. O loop percorre essas definições, atrelando um evento `onfocus` para cada um que mostra o método de ajuda associado.
 
-<p>Se você tentar executar esse código, Você verá que não vai funcionar como esperado. Não importa em qual campo ocorre o focus, a mensagem sobre a sua idade será mostrada.</p>
+Se você tentar executar esse código, Você verá que não vai funcionar como esperado. Não importa em qual campo ocorre o focus, a mensagem sobre a sua idade será mostrada.
 
-<p>O motivo disto é que as funções atreladas ao <code>onfocus</code> são closures; elas consistem na definição da função e do ambiente capturado do escopo da função <code>setupHelp</code>. Três closures foram criados, mas todos eles compartilham o mesmo ambiente. No momento em que os callbacks do <code>onfocus</code> são executados, o loop segue seu curso e então a variável <code>item</code> (compartilhada por todos os três closures) fica apontando para a última entrada na lista <code>helpText</code>.</p>
+O motivo disto é que as funções atreladas ao `onfocus` são closures; elas consistem na definição da função e do ambiente capturado do escopo da função `setupHelp`. Três closures foram criados, mas todos eles compartilham o mesmo ambiente. No momento em que os callbacks do `onfocus` são executados, o loop segue seu curso e então a variável `item` (compartilhada por todos os três closures) fica apontando para a última entrada na lista `helpText`.
 
-<p>Uma solução seria neste caso usar mais closures: em particular, usar uma fábrica de funções como descrito anteriormente:</p>
+Uma solução seria neste caso usar mais closures: em particular, usar uma fábrica de funções como descrito anteriormente:
 
-<pre class="brush: js">function showHelp(help) {
+```js
+function showHelp(help) {
   document.getElementById('help').textContent = help;
 }
 
@@ -270,22 +275,23 @@ function setupHelp() {
     {'id': 'age', 'help': 'Sua idade (você deve ter mais de 16 anos)'}
   ];
 
-  for (var i = 0; i &lt; helpText.length; i++) {
+  for (var i = 0; i < helpText.length; i++) {
     var item = helpText[i];
     document.getElementById(item.id).onfocus = makeHelpCallback(item.help);
   }
 }
 
 setupHelp();
-</pre>
+```
 
-<p><a href="https://jsfiddle.net/v7gjv/1">View on JSFiddle</a></p>
+[View on JSFiddle](https://jsfiddle.net/v7gjv/1)
 
-<p>Isto funciona conforme o esperado. Ao invés dos callbacks compartilharem o mesmo ambiente, a função <code>makeHelpCallback</code> cria um novo ambiente para cada um no qual <code>help</code> se refere à string correspondente do array <code>helpText</code>.</p>
+Isto funciona conforme o esperado. Ao invés dos callbacks compartilharem o mesmo ambiente, a função `makeHelpCallback` cria um novo ambiente para cada um no qual `help` se refere à string correspondente do array `helpText`.
 
-<p>Uma outra maneira de escrever o mesmo usando closures anônimas é:</p>
+Uma outra maneira de escrever o mesmo usando closures anônimas é:
 
-<pre class="brush: js">function showHelp(help) {
+```js
+function showHelp(help) {
   document.getElementById('help').textContent = help;
 }
 
@@ -307,11 +313,12 @@ function setupHelp() {
 }
 
 setupHelp();
-</pre>
+```
 
-<p>Se você não quiser usar mais closures, você pode usar a palavra-chave <a href="/pt-BR/docs/JavaScript/Reference/Statements/let"><code>let</code></a> ou <a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/const"><code>const</code></a>:</p>
+Se você não quiser usar mais closures, você pode usar a palavra-chave [`let`](/pt-BR/docs/JavaScript/Reference/Statements/let) ou [`const`](/pt-BR/docs/Web/JavaScript/Reference/Statements/const):
 
-<pre class="brush: js">function showHelp(help) {
+```js
+function showHelp(help) {
   document.getElementById('help').textContent = help;
 }
 
@@ -331,13 +338,14 @@ function setupHelp() {
 }
 
 setupHelp();
-</pre>
+```
 
-<p>Este exemplo usa <code>const</code> em vez de <code>var</code>, portanto cada closure vincula a variável com escopo de bloco, o que significa que nenhuma closure adicional é necessária.</p>
+Este exemplo usa `const` em vez de `var`, portanto cada closure vincula a variável com escopo de bloco, o que significa que nenhuma closure adicional é necessária.
 
-<p>Outra alternativa poderia ser usar <code>forEach()</code> para iterar sobre o array <code>helpText</code> e anexar um ouvinte a cada <a href="/pt-BR/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a>, conforme mostrado:</p>
+Outra alternativa poderia ser usar `forEach()` para iterar sobre o array `helpText` e anexar um ouvinte a cada [`<input>`](/pt-BR/docs/Web/HTML/Element/input), conforme mostrado:
 
-<pre class="brush: js">function showHelp(help) {
+```js
+function showHelp(help) {
   document.getElementById('help').textContent = help;
 }
 
@@ -356,17 +364,18 @@ function setupHelp() {
 }
 
 setupHelp();
-</pre>
+```
 
-<h2 id="Considerações_de_performance">Considerações de performance</h2>
+## Considerações de performance
 
-<p>Não é sábio criar funções dentro de outras funções se a closure não for necessário para uma tarefa em particular, pois ele afetará a performance do script de forma bem negativa tanto em velocidade de processamento quanto em consumo de memória.</p>
+Não é sábio criar funções dentro de outras funções se a closure não for necessário para uma tarefa em particular, pois ele afetará a performance do script de forma bem negativa tanto em velocidade de processamento quanto em consumo de memória.
 
-<p>Por exemplo, ao criar uma nova classe/objeto, os métodos devem normalmente estar associados ao protótipo do objeto do que definido no construtor. O motivo disso é que sempre que o construtor for chamado os métodos serão reatribuídos (isto é, para cada criação de objeto).</p>
+Por exemplo, ao criar uma nova classe/objeto, os métodos devem normalmente estar associados ao protótipo do objeto do que definido no construtor. O motivo disso é que sempre que o construtor for chamado os métodos serão reatribuídos (isto é, para cada criação de objeto).
 
-<p>Considere o seguinte exemplo pouco prático porém demonstrativo:</p>
+Considere o seguinte exemplo pouco prático porém demonstrativo:
 
-<pre class="brush: js">function MyObject(name, message) {
+```js
+function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
   this.getName = function() {
@@ -377,11 +386,12 @@ setupHelp();
     return this.message;
   };
 }
-</pre>
+```
 
-<p>O código anterior não aproveita os benefícios dos closures e portanto poderia ser reformulado assim:</p>
+O código anterior não aproveita os benefícios dos closures e portanto poderia ser reformulado assim:
 
-<pre class="brush: js">function MyObject(name, message) {
+```js
+function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
 }
@@ -393,11 +403,12 @@ MyObject.prototype = {
     return this.message;
   }
 };
-</pre>
+```
 
-<p>Ou assim:</p>
+Ou assim:
 
-<pre class="brush: js">function MyObject(name, message) {
+```js
+function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
 }
@@ -407,6 +418,6 @@ MyObject.prototype.getName = function() {
 MyObject.prototype.getMessage = function() {
   return this.message;
 };
-</pre>
+```
 
-<p>Nos dois exemplos anteriores, o protótipo herdado pode ser compartilhado por todos os objetos, e as definições de métodos não precisam ocorrer sempre que o objeto for criado. Veja <a href="/en-US/docs/JavaScript/Guide/Details_of_the_Object_Model" title="Detalhes do modelo de objeto">Detalhes do modelo de objeto</a> para mais detalhes.</p>
+Nos dois exemplos anteriores, o protótipo herdado pode ser compartilhado por todos os objetos, e as definições de métodos não precisam ocorrer sempre que o objeto for criado. Veja [Detalhes do modelo de objeto](/pt-BR/docs/JavaScript/Guide/Details_of_the_Object_Model "Detalhes do modelo de objeto") para mais detalhes.

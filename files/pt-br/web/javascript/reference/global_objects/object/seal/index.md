@@ -5,36 +5,37 @@ tags:
   - objeto selar selado
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/seal
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>Object.seal()</strong></code> sela um Objeto, evitando que novas propriedades sejam adicionadas à ele e marcando todas as propriedades existentes como não configuráveis. Valores das propriedades atuais ainda podem ser alterados desde que essas propriedades sejam graváveis (writable).</p>
+O método **`Object.seal()`** sela um Objeto, evitando que novas propriedades sejam adicionadas à ele e marcando todas as propriedades existentes como não configuráveis. Valores das propriedades atuais ainda podem ser alterados desde que essas propriedades sejam graváveis (writable).
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code>Object.seal(<var>obj</var>)</code></pre>
+```
+Object.seal(obj)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>O Objeto que deve ser selado.</dd>
-</dl>
+- `obj`
+  - : O Objeto que deve ser selado.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>O Objeto sendo selado.</p>
+O Objeto sendo selado.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Por padrão, objetos são {{jsxref("Object.isExtensible()", "extensible", "", 1)}} (novas propriedades podem ser adicionadas à eles). Selar um objeto evita que novas propriedades sejam adicionadas e marca todas as propriedades existentes como não configuráveis. Isto tem o efeito de tornar as propriedades no objeto fixas e imutáveis. Tornando todas as propriedades não configuráveis também evita que as mesmas sejam convertidas de propriedades de dados para propriedades de acesso e vice-versa, mas não evita que os valores das propriedades de dados sejam alterados. A tentativa de deletar ou adicionar propriedades à um objeto selado, ou converter uma propriedade de dado para uma propriedade de acesso ou vice-versa, irá falhar, seja silenciosamente como jogando o erro {{jsxref("TypeError")}} (mais comumente, mas não exclusivamente, quando em modo rigoroso {{jsxref("Strict_mode", "strict mode", "", 1)}} de código).</p>
+Por padrão, objetos são {{jsxref("Object.isExtensible()", "extensible", "", 1)}} (novas propriedades podem ser adicionadas à eles). Selar um objeto evita que novas propriedades sejam adicionadas e marca todas as propriedades existentes como não configuráveis. Isto tem o efeito de tornar as propriedades no objeto fixas e imutáveis. Tornando todas as propriedades não configuráveis também evita que as mesmas sejam convertidas de propriedades de dados para propriedades de acesso e vice-versa, mas não evita que os valores das propriedades de dados sejam alterados. A tentativa de deletar ou adicionar propriedades à um objeto selado, ou converter uma propriedade de dado para uma propriedade de acesso ou vice-versa, irá falhar, seja silenciosamente como jogando o erro {{jsxref("TypeError")}} (mais comumente, mas não exclusivamente, quando em modo rigoroso {{jsxref("Strict_mode", "strict mode", "", 1)}} de código).
 
-<p>A cadeia de prototipação permanece intocada. Entretanto, a propriedade {{jsxref("Object.proto", "__proto__")}} {{deprecated_inline}} é selada também.</p>
+A cadeia de prototipação permanece intocada. Entretanto, a propriedade {{jsxref("Object.proto", "__proto__")}} {{deprecated_inline}} é selada também.
 
-<p>Retorna a referência ao Objeto passado.</p>
+Retorna a referência ao Objeto passado.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: js">var obj = {
+```js
+var obj = {
   prop: function() {},
   foo: 'bar'
 };
@@ -70,56 +71,36 @@ fail();
 // Tentativas através do Object.defineProperty também irão falhar.
 Object.defineProperty(obj, 'ohai', { value: 17 }); // lança um erro do tipo TypeError
 Object.defineProperty(obj, 'foo', { value: 'eit' }); // altera o valor da propriedade existente
-</pre>
+```
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>No ES5, se o argumento passado à este método não é um objeto (primitivo) , irá causar um erro {{jsxref("TypeError")}}. No ES6, qualquer argumento que não seja um objeto será tratado como se fosse um objeto ordinário selado e simplesmente irá retorná-lo</p>
+No ES5, se o argumento passado à este método não é um objeto (primitivo) , irá causar um erro {{jsxref("TypeError")}}. No ES6, qualquer argumento que não seja um objeto será tratado como se fosse um objeto ordinário selado e simplesmente irá retorná-lo
 
-<pre class="brush: js">Object.seal(1);
+```js
+Object.seal(1);
 // TypeError: 1 não é um Objeto (código ES5)
 
 Object.seal(1);
 // 1                             (código ES6)
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.8', 'Object.seal')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Definição inicial. Implementado no Javascript 1.8.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.seal', 'Object.seal')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.seal', 'Object.seal')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                | Status                       | Comentário                                           |
+| ---------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.2.3.8', 'Object.seal')}}     | {{Spec2('ES5.1')}}     | Definição inicial. Implementado no Javascript 1.8.5. |
+| {{SpecName('ES6', '#sec-object.seal', 'Object.seal')}}     | {{Spec2('ES6')}}         |                                                      |
+| {{SpecName('ESDraft', '#sec-object.seal', 'Object.seal')}} | {{Spec2('ESDraft')}} |                                                      |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Object.seal")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Object.isSealed()")}}</li>
- <li>{{jsxref("Object.preventExtensions()")}}</li>
- <li>{{jsxref("Object.isExtensible()")}}</li>
- <li>{{jsxref("Object.freeze()")}}</li>
- <li>{{jsxref("Object.isFrozen()")}}</li>
-</ul>
+- {{jsxref("Object.isSealed()")}}
+- {{jsxref("Object.preventExtensions()")}}
+- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Object.freeze()")}}
+- {{jsxref("Object.isFrozen()")}}

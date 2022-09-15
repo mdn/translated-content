@@ -10,69 +10,47 @@ tags:
   - toLowerCase()
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>toLowerCase()</code></strong> retorna o valor da string que foi chamada convertido para minúsculo.</p>
+O método **`toLowerCase()`** retorna o valor da string que foi chamada convertido para minúsculo.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.toLowerCase()</code></pre>
+```
+str.toLowerCase()
+```
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>Uma nova string contendo o valor da string original convertido para minúsculo.</p>
+Uma nova string contendo o valor da string original convertido para minúsculo.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O método <code>toLowerCase()</code> retorna o valor da string original convertido para minúsculo. <code>toLowerCase()</code> não altera o valor da string original.</p>
+O método `toLowerCase()` retorna o valor da string original convertido para minúsculo. `toLowerCase()` não altera o valor da string original.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_toLowerCase">Usando <code>toLowerCase()</code></h3>
+### Usando `toLowerCase()`
 
-<pre class="brush: js notranslate">console.log('ALFABETO'.toLowerCase()); // 'alfabeto'
-</pre>
+```js
+console.log('ALFABETO'.toLowerCase()); // 'alfabeto'
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição inicial. Implementada no JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.4.16', 'String.prototype.toLowerCase')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.tolowercase', 'String.prototype.toLowerCase')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.tolowercase', 'String.prototype.toLowerCase')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                | Estado                       | Comentário                                         |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                                     | {{Spec2('ES1')}}         | Definição inicial. Implementada no JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.5.4.16', 'String.prototype.toLowerCase')}}                             | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES6', '#sec-string.prototype.tolowercase', 'String.prototype.toLowerCase')}}         | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-string.prototype.tolowercase', 'String.prototype.toLowerCase')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
+## Navegadores compatíveis
 
 {{Compat("javascript.builtins.String.toLowerCase")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("String.prototype.toLocaleLowerCase()")}}</li>
- <li>{{jsxref("String.prototype.toLocaleUpperCase()")}}</li>
- <li>{{jsxref("String.prototype.toUpperCase()")}}</li>
-</ul>
+- {{jsxref("String.prototype.toLocaleLowerCase()")}}
+- {{jsxref("String.prototype.toLocaleUpperCase()")}}
+- {{jsxref("String.prototype.toUpperCase()")}}

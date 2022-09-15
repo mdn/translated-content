@@ -3,95 +3,69 @@ title: Number.prototype.toExponential()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toExponential
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/toExponential
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>toExponential()</code></strong> retorna uma string  representando o objeto {{jsxref("Global_Objects/Number", "Number")}} por meio de notação exponencial.</p>
+O método **`toExponential()`** retorna uma string representando o objeto {{jsxref("Global_Objects/Number", "Number")}} por meio de notação exponencial.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><code><var>numObj</var>.toExponential([<var>fractionDigits</var>])</code></pre>
+```
+numObj.toExponential([fractionDigits])
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>fractionDigits</code></dt>
- <dd>Optional. An integer specifying the number of digits after the decimal point. Defaults to as many digits as necessary to specify the number.</dd>
-</dl>
+- `fractionDigits`
+  - : Optional. An integer specifying the number of digits after the decimal point. Defaults to as many digits as necessary to specify the number.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A string representing the given {{jsxref("Number")}} object in exponential notation with one digit before the decimal point, rounded to <code>fractionDigits</code> digits after the decimal point.</p>
+A string representing the given {{jsxref("Number")}} object in exponential notation with one digit before the decimal point, rounded to `fractionDigits` digits after the decimal point.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
- <dt>{{jsxref("RangeError")}}</dt>
- <dd>If <code>fractionDigits</code> is too small or too large. Values between 0 and 20, inclusive, will not cause a {{jsxref("RangeError")}}. Implementations are allowed to support larger and smaller values as well.</dd>
- <dt>{{jsxref("TypeError")}}</dt>
- <dd>If this method is invoked on an object that is not a {{jsxref("Number")}}.</dd>
-</dl>
+- {{jsxref("RangeError")}}
+  - : If `fractionDigits` is too small or too large. Values between 0 and 20, inclusive, will not cause a {{jsxref("RangeError")}}. Implementations are allowed to support larger and smaller values as well.
+- {{jsxref("TypeError")}}
+  - : If this method is invoked on an object that is not a {{jsxref("Number")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>If the <code>fractionDigits</code> argument is omitted, the number of digits after the decimal point defaults to the number of digits necessary to represent the value uniquely.</p>
+If the `fractionDigits` argument is omitted, the number of digits after the decimal point defaults to the number of digits necessary to represent the value uniquely.
 
-<p>If you use the <code>toExponential()</code> method for a numeric literal and the numeric literal has no exponent and no decimal point, leave whitespace(s) before the dot that precedes the method call to prevent the dot from being interpreted as a decimal point.</p>
+If you use the `toExponential()` method for a numeric literal and the numeric literal has no exponent and no decimal point, leave whitespace(s) before the dot that precedes the method call to prevent the dot from being interpreted as a decimal point.
 
-<p>If a number has more digits than requested by the <code>fractionDigits</code> parameter, the number is rounded to the nearest number represented by <code>fractionDigits</code> digits. See the discussion of rounding in the description of the {{jsxref("Number.prototype.toFixed", "toFixed()")}} method, which also applies to <code>toExponential()</code>.</p>
+If a number has more digits than requested by the `fractionDigits` parameter, the number is rounded to the nearest number represented by `fractionDigits` digits. See the discussion of rounding in the description of the {{jsxref("Number.prototype.toFixed", "toFixed()")}} method, which also applies to `toExponential()`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_toExponential">Using <code>toExponential</code></h3>
+### Using `toExponential`
 
-<pre class="brush: js">var numObj = 77.1234;
+```js
+var numObj = 77.1234;
 
 console.log(numObj.toExponential());  // logs 7.71234e+1
 console.log(numObj.toExponential(4)); // logs 7.7123e+1
 console.log(numObj.toExponential(2)); // logs 7.71e+1
 console.log(77.1234.toExponential()); // logs 7.71234e+1
 console.log(77 .toExponential());     // logs 7.7e+1
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.7.4.6', 'Number.prototype.toExponential')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-number.prototype.toexponential', 'Number.prototype.toExponential')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.prototype.toexponential', 'Number.prototype.toExponential')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                    | Status                       | Comment                                            |
+| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES3')}}                                                                                                         | {{Spec2('ES3')}}         | Initial definition. Implemented in JavaScript 1.5. |
+| {{SpecName('ES5.1', '#sec-15.7.4.6', 'Number.prototype.toExponential')}}                                 | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES6', '#sec-number.prototype.toexponential', 'Number.prototype.toExponential')}}     | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-number.prototype.toexponential', 'Number.prototype.toExponential')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Number.toExponential")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Number.prototype.toFixed()")}}</li>
- <li>{{jsxref("Number.prototype.toPrecision()")}}</li>
- <li>{{jsxref("Number.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Number.prototype.toFixed()")}}
+- {{jsxref("Number.prototype.toPrecision()")}}
+- {{jsxref("Number.prototype.toString()")}}

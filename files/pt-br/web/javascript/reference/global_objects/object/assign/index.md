@@ -10,71 +10,75 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/assign
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>Object.assign()</code></strong> é usado para copiar os valores de todas as propriedades próprias enumeráveis de um ou mais objetos <em>de origem</em> para um objeto <em>destino</em>. Este método irá retornar o objeto <em>destino</em>.</p>
+O método **`Object.assign()`** é usado para copiar os valores de todas as propriedades próprias enumeráveis de um ou mais objetos _de origem_ para um objeto _destino_. Este método irá retornar o objeto _destino_.
 
-<p>{{EmbedInteractiveExample("pages/js/object-assign.html")}}</p>
+{{EmbedInteractiveExample("pages/js/object-assign.html")}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code>Object.assign(<var>destino</var>, ...<em>origens</em>)</code></pre>
+```
+Object.assign(destino, ...origens)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>destino</code></dt>
- <dd>O objeto <em>destino</em>.</dd>
- <dt><code>origens</code></dt>
- <dd>Um ou mais objetos de <em>origem</em>.</dd>
-</dl>
+- `destino`
+  - : O objeto _destino_.
+- `origens`
+  - : Um ou mais objetos de _origem_.
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>O objeto <em>destino</em> será retornado.</p>
+O objeto _destino_ será retornado.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O método <code>Object.assign()</code> copia apenas propriedades <em>enumeráveis</em><em> </em>e<em> próprias</em> de um objeto <em>de origem</em> para um objeto destino. Ele usa <code>[[Get]]</code> na origem e <code>[[Put]]</code> no <em>destino</em>, então isto irá invocar <em>getters</em> e <em>setters</em>.</p>
+O método `Object.assign()` copia apenas propriedades _enumeráveis\_\_ \_e \_próprias_ de um objeto _de origem_ para um objeto destino. Ele usa `[[Get]]` na origem e `[[Put]]` no _destino_, então isto irá invocar _getters_ e _setters_.
 
-<p>Portanto, ele <em>atribui</em> propriedades, em vez de simplesmente copiar ou definir novas propriedades. Isso pode fazê-lo impróprio para combinar novas propriedades com um <em>prototype</em> se os objetos <em>de origem</em> contiverem getters. Para copiar definições de propriedades, incluindo sua enumerabilidade, para <em>prototypes</em> {{jsxref("Object.getOwnPropertyDescriptor()")}} e {{jsxref("Object.defineProperty()")}} devem ser utilizadas no lugar.</p>
+Portanto, ele _atribui_ propriedades, em vez de simplesmente copiar ou definir novas propriedades. Isso pode fazê-lo impróprio para combinar novas propriedades com um _prototype_ se os objetos _de origem_ contiverem getters. Para copiar definições de propriedades, incluindo sua enumerabilidade, para _prototypes_ {{jsxref("Object.getOwnPropertyDescriptor()")}} e {{jsxref("Object.defineProperty()")}} devem ser utilizadas no lugar.
 
-<p>Ambas as propriedades {{jsxref("String")}} e {{jsxref("Symbol")}} são copiadas.</p>
+Ambas as propriedades {{jsxref("String")}} e {{jsxref("Symbol")}} são copiadas.
 
-<p>No caso de erro, por exemplo, se uma propriedade não é <em>writable</em>, um {{jsxref("TypeError")}} será lançado e o objeto <em>destino</em> permanecerá inalterado. Note que <code>Object.assign()</code> não lança erros caso algum argumento <em>source</em> seja {{jsxref("null")}} ou {{jsxref("undefined")}}.</p>
+No caso de erro, por exemplo, se uma propriedade não é _writable_, um {{jsxref("TypeError")}} será lançado e o objeto _destino_ permanecerá inalterado. Note que `Object.assign()` não lança erros caso algum argumento _source_ seja {{jsxref("null")}} ou {{jsxref("undefined")}}.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Clonando_um_objeto">Clonando um objeto</h3>
+### Clonando um objeto
 
-<pre class="brush: js">var obj = { a: 1 };
+```js
+var obj = { a: 1 };
 var copy = Object.assign({}, obj);
 console.log(copy); // { a: 1 }
-</pre>
+```
 
-<h3 id="Mesclando_objetos">Mesclando objetos</h3>
+### Mesclando objetos
 
-<pre class="brush: js">var o1 = { a: 1 };
+```js
+var o1 = { a: 1 };
 var o2 = { b: 2 };
 var o3 = { c: 3 };
 
 var obj = Object.assign(o1, o2, o3);
 console.log(obj); // { a: 1, b: 2, c: 3 }
 console.log(o1);  // { a: 1, b: 2, c: 3 }, target object itself is changed.
-</pre>
+```
 
-<h3 id="Copiando_propriedades_Symbol">Copiando propriedades Symbol</h3>
+### Copiando propriedades Symbol
 
-<pre class="brush: js">var o1 = { a: 1 };
+```js
+var o1 = { a: 1 };
 var o2 = { [Symbol('foo')]: 2 };
 
 var obj = Object.assign({}, o1, o2);
 console.log(obj); // { a: 1, [Symbol("foo")]: 2 }
-</pre>
+```
 
-<h3 id="Propriedades_herdadas_e_não_enumeráveis_não_podem_ser_copiadas">Propriedades herdadas e não enumeráveis não podem ser copiadas</h3>
+### Propriedades herdadas e não enumeráveis não podem ser copiadas
 
-<pre class="brush: js">var obj = Object.create({ foo: 1 }, { // foo is an inherit property.
+```js
+var obj = Object.create({ foo: 1 }, { // foo is an inherit property.
   bar: {
     value: 2  // bar is a non-enumerable property.
   },
@@ -86,11 +90,12 @@ console.log(obj); // { a: 1, [Symbol("foo")]: 2 }
 
 var copy = Object.assign({}, obj);
 console.log(copy); // { baz: 3 }
-</pre>
+```
 
-<h3 id="Primitivas_serão_encapsuladas_em_objetos">Primitivas serão encapsuladas em objetos</h3>
+### Primitivas serão encapsuladas em objetos
 
-<pre class="brush: js">var v1 = '123';
+```js
+var v1 = '123';
 var v2 = true;
 var v3 = 10;
 var v4 = Symbol('foo')
@@ -99,11 +104,12 @@ var obj = Object.assign({}, v1, null, v2, undefined, v3, v4);
 // Primitives will be wrapped, null and undefined will be ignored.
 // Note, only string wrappers can have own enumerable properties.
 console.log(obj); // { "0": "1", "1": "2", "2": "3" }
-</pre>
+```
 
-<h3 id="Exceções_irão_interromper_a_tarefa_de_cópia_em_execução">Exceções irão interromper a tarefa de cópia em execução</h3>
+### Exceções irão interromper a tarefa de cópia em execução
 
-<pre class="brush: js">var target = Object.defineProperty({}, 'foo', {
+```js
+var target = Object.defineProperty({}, 'foo', {
   value: 1,
   writeable: false
 }); // target.foo is a read-only property
@@ -117,11 +123,12 @@ console.log(target.foo2); // 3, the first property of the second source was copi
 console.log(target.foo);  // 1, exception is thrown here.
 console.log(target.foo3); // undefined, assign method has finished, foo3 will not be copied.
 console.log(target.baz);  // undefined, the third source will not be copied either.
-</pre>
+```
 
-<h3 id="Copiando_acessores">Copiando acessores</h3>
+### Copiando acessores
 
-<pre class="brush: js">var obj = {
+```js
+var obj = {
   foo: 1,
   get bar() {
     return 2;
@@ -134,8 +141,8 @@ console.log(copy);
 
 // This is an assign function which can copy accessors.
 function myAssign(target, ...sources) {
-  sources.forEach(source =&gt; {
-    Object.defineProperties(target, Object.keys(source).reduce((descriptors, key) =&gt; {
+  sources.forEach(source => {
+    Object.defineProperties(target, Object.keys(source).reduce((descriptors, key) => {
       descriptors[key] = Object.getOwnPropertyDescriptor(source, key);
       return descriptors;
     }, {}));
@@ -146,13 +153,14 @@ function myAssign(target, ...sources) {
 var copy = myAssign({}, obj);
 console.log(copy);
 // { foo:1, get bar() { return 2 } }
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Este polyfill não suporta propriedades {{jsxref("Symbol")}}, visto que ES5 não possui símbolos:</p>
+Este polyfill não suporta propriedades {{jsxref("Symbol")}}, visto que ES5 não possui símbolos:
 
-<pre class="brush: js">if (!Object.assign) {
+```js
+if (!Object.assign) {
   Object.defineProperty(Object, 'assign', {
     enumerable: false,
     configurable: true,
@@ -164,7 +172,7 @@ console.log(copy);
       }
 
       var to = Object(target);
-      for (var i = 1; i &lt; arguments.length; i++) {
+      for (var i = 1; i < arguments.length; i++) {
         var nextSource = arguments[i];
         if (nextSource === undefined || nextSource === null) {
           continue;
@@ -172,10 +180,10 @@ console.log(copy);
         nextSource = Object(nextSource);
 
         var keysArray = Object.keys(Object(nextSource));
-        for (var nextIndex = 0, len = keysArray.length; nextIndex &lt; len; nextIndex++) {
+        for (var nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex++) {
           var nextKey = keysArray[nextIndex];
           var desc = Object.getOwnPropertyDescriptor(nextSource, nextKey);
-          if (desc !== undefined &amp;&amp; desc.enumerable) {
+          if (desc !== undefined && desc.enumerable) {
             to[nextKey] = nextSource[nextKey];
           }
         }
@@ -184,32 +192,19 @@ console.log(copy);
     }
   });
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-object.assign', 'Object.assign')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                    | Status                   | Comment           |
+| -------------------------------------------------------------------------------- | ------------------------ | ----------------- |
+| {{SpecName('ES2015', '#sec-object.assign', 'Object.assign')}} | {{Spec2('ES2015')}} | Definição inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Object.assign")}}</p>
+{{Compat("javascript.builtins.Object.assign")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Object.defineProperties()")}}</li>
- <li><a href="/pt-BR/docs/Web/JavaScript/Enumerabilidade_e_posse_de_propriedades">Enumerabilidade e posse de propriedades</a></li>
-</ul>
+- {{jsxref("Object.defineProperties()")}}
+- [Enumerabilidade e posse de propriedades](/pt-BR/docs/Web/JavaScript/Enumerabilidade_e_posse_de_propriedades)

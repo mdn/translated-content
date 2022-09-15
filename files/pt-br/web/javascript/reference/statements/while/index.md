@@ -6,89 +6,60 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/Reference/Statements/while
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>A <strong>declaração while</strong> cria um laço que executa uma rotina especifica enquanto a condição de teste for avaliada como verdadeira. A condição é avaliada antes da execução da rotina.</p>
+A **declaração while** cria um laço que executa uma rotina especifica enquanto a condição de teste for avaliada como verdadeira. A condição é avaliada antes da execução da rotina.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">while (<code>condição</code>) {
+```
+while (condição) {
   rotina
-}</pre>
+}
+```
 
-<dl>
- <dt><code>condição</code></dt>
- <dd>Uma expressão avaliada antes de cada passagem através do laço. Se essa condição for avaliada como verdadeira, a rotina é executada. Quando a condição for avaliada como falsa, a execução continua na declaração depois do laço<code> while</code>.</dd>
- <dt>rotina</dt>
- <dd>Uma declaração que é executada enquanto a condição é avaliada como verdadeira. Para executar multiplas declarações dentro de um laço, use uma declaração em <a href="/en-US/docs/" title="JavaScript/Reference/Statements/block">bloco</a> (<code>{ ... }</code>) para agrupar essas declarações.</dd>
-</dl>
+- `condição`
+  - : Uma expressão avaliada antes de cada passagem através do laço. Se essa condição for avaliada como verdadeira, a rotina é executada. Quando a condição for avaliada como falsa, a execução continua na declaração depois do laço` while`.
+- rotina
+  - : Uma declaração que é executada enquanto a condição é avaliada como verdadeira. Para executar multiplas declarações dentro de um laço, use uma declaração em [bloco](/pt-BR/docs/ "JavaScript/Reference/Statements/block") (`{ ... }`) para agrupar essas declarações.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>O seguinte laço <code>while</code> itera enquanto n é menor que três.</p>
+O seguinte laço `while` itera enquanto n é menor que três.
 
-<pre class="brush:js">var n = 0;
+```js
+var n = 0;
 var x = 0;
 
-while (n &lt; 3) {
+while (n < 3) {
   n++;
   x += n;
-}</pre>
+}
+```
 
-<p>Cada iteração, o laço incrementa n e soma à x. Portanto, x e n assumem os seguintes valores:</p>
+Cada iteração, o laço incrementa n e soma à x. Portanto, x e n assumem os seguintes valores:
 
-<ul>
- <li>Depois da primeira passagem: n = 1 e x = 1</li>
- <li>Depois da segunda passagem: n = 2 e x = 3</li>
- <li>Depois da terceira passagem: n = 3 e x = 6</li>
-</ul>
+- Depois da primeira passagem: n = 1 e x = 1
+- Depois da segunda passagem: n = 2 e x = 3
+- Depois da terceira passagem: n = 3 e x = 6
 
-<p>Depois de completar a terceira passagem, a condição n &lt; 3 não é mais verdadeira, então o laço termina.</p>
+Depois de completar a terceira passagem, a condição n < 3 não é mais verdadeira, então o laço termina.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-while-statement', 'while statement')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-while-statement', 'while statement')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-12.6.2', 'while statement')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3', '#sec-12.6.2', 'while statement')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1', '#sec-12.6.1', 'while statement')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição inicial</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                       | Comment           |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | ----------------- |
+| {{SpecName('ESDraft', '#sec-while-statement', 'while statement')}} | {{Spec2('ESDraft')}} |                   |
+| {{SpecName('ES6', '#sec-while-statement', 'while statement')}}     | {{Spec2('ES6')}}         |                   |
+| {{SpecName('ES5.1', '#sec-12.6.2', 'while statement')}}                 | {{Spec2('ES5.1')}}     |                   |
+| {{SpecName('ES3', '#sec-12.6.2', 'while statement')}}                 | {{Spec2('ES3')}}         |                   |
+| {{SpecName('ES1', '#sec-12.6.1', 'while statement')}}                 | {{Spec2('ES1')}}         | Definição inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.statements.while")}}
 
-<h2 id="Veja_Também">Veja Também</h2>
+## Veja Também
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/do...while"><code>do...while</code></a></li>
- <li>{{jsxref("Statements/for", "for")}}</li>
-</ul>
+- [`do...while`](/pt-BR/docs/Web/JavaScript/Reference/Statements/do...while)
+- {{jsxref("Statements/for", "for")}}

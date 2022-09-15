@@ -7,47 +7,50 @@ tags:
   - Method
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/ceil
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary" name="Summary">Resumo</h2>
+## Resumo
 
-<p><code><font face="Open Sans, sans-serif">A função </font><strong>Math.ceil(x)</strong></code> retorna o menor número inteiro maior ou igual a "x".</p>
+`A função Math.ceil(x)` retorna o menor número inteiro maior ou igual a "x".
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">Math.ceil(<em>x</em>) </pre>
+```
+Math.ceil(x)
+```
 
-<h3 id="Parameters" name="Parameters">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Um número.</dd>
-</dl>
+- `x`
+  - : Um número.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>O menor inteiro maior ou igual ao número fornecido.</p>
+O menor inteiro maior ou igual ao número fornecido.
 
-<h2 id="Description" name="Description">Descrição</h2>
+## Descrição
 
-<p>Por <code>ceil</code> ser um método estático de <code>Math</code>, você sempre usará como <code>Math.ceil()</code>, e não como um método do objeto <code>Math</code> que você criou.</p>
+Por `ceil` ser um método estático de `Math`, você sempre usará como `Math.ceil()`, e não como um método do objeto `Math` que você criou.
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<h3 id="Example_Using_Math.ceil" name="Example:_Using_Math.ceil">Usando <code>Math.ceil()</code></h3>
+### Usando `Math.ceil()`
 
-<p>O exemplo a seguir mostra um exemplo de uso de <code>Math.ceil()</code>.</p>
+O exemplo a seguir mostra um exemplo de uso de `Math.ceil()`.
 
-<pre class="brush:js;"><code>Math.ceil(.95);    // 1
+```js
+Math.ceil(.95);    // 1
 Math.ceil(4);      // 4
 Math.ceil(7.004);  // 8
 Math.ceil(-0.95);  // -0
 Math.ceil(-4);     // -4
-Math.ceil(-7.004); // -7</code></pre>
+Math.ceil(-7.004); // -7
+```
 
-<h3 id="Example_Decimal_adjustment" name="Example:_Decimal_adjustment">Ajuste decimal</h3>
+### Ajuste decimal
 
-<pre class="brush:js">// Closure
+```js
+// Closure
 (function(){
 
 	/**
@@ -66,7 +69,7 @@ Math.ceil(-7.004); // -7</code></pre>
 		value = +value;
 		exp = +exp;
 		// If the value is not a number or the exp is not an integer...
-		if (isNaN(value) || !(typeof exp === 'number' &amp;&amp; exp % 1 === 0)) {
+		if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
 			return NaN;
 		}
 		// Shift
@@ -117,46 +120,25 @@ Math.ceil10(55.51, -1); // 55.6
 Math.ceil10(51, 1); // 60
 Math.ceil10(-55.59, -1); // -55.5
 Math.ceil10(-59, 1); // -50
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1st Edition. implementado em JavaScript 1.0</td>
-   <td>Padrão</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.2.6', 'Math.ceil')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.ceil', 'Math.ceil')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                        | Status                   | Comentário         |
+| -------------------------------------------------------------------- | ------------------------ | ------------------ |
+| ECMAScript 1st Edition. implementado em JavaScript 1.0               | Padrão                   | Definição inicial. |
+| {{SpecName('ES5.1', '#sec-15.8.2.6', 'Math.ceil')}} | {{Spec2('ES5.1')}} |                    |
+| {{SpecName('ES6', '#sec-math.ceil', 'Math.ceil')}} | {{Spec2('ES6')}}     |                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Math.ceil")}}
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li>O objeto {{jsxref("Global_Objects/Math", "Math")}} pertence a.</li>
- <li>{{jsxref("Math.abs()")}}</li>
- <li>{{jsxref("Math.floor()")}}</li>
- <li>{{jsxref("Math.round()")}}</li>
- <li>{{jsxref("Math.sign()")}}</li>
- <li>{{jsxref("Math.trunc()")}}</li>
-</ul>
+- O objeto {{jsxref("Global_Objects/Math", "Math")}} pertence a.
+- {{jsxref("Math.abs()")}}
+- {{jsxref("Math.floor()")}}
+- {{jsxref("Math.round()")}}
+- {{jsxref("Math.sign()")}}
+- {{jsxref("Math.trunc()")}}

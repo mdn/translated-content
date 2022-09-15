@@ -3,100 +3,76 @@ title: Math.atan2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan2
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/atan2
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>A função <strong><code>Math.atan2()</code></strong> retorna o arco tangente do coeficiente dos argumentos passado.</p>
+A função **`Math.atan2()`** retorna o arco tangente do coeficiente dos argumentos passado.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code>Math.atan2(<var>y</var>, <var>x</var>)</code></pre>
+```
+Math.atan2(y, x)
+```
 
-<h3 id="Parâmentros">Parâmentros</h3>
+### Parâmentros
 
-<dl>
- <dt><code>y</code></dt>
- <dd>Primeiro numero.</dd>
- <dt><code>x</code></dt>
- <dd>Segundo numero.</dd>
-</dl>
+- `y`
+  - : Primeiro numero.
+- `x`
+  - : Segundo numero.
 
-<h3 id="Retorno">Retorno</h3>
+### Retorno
 
-<p>O arco tagente do coegiente dos parâmetros</p>
+O arco tagente do coegiente dos parâmetros
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O <code>Math.atan2()</code> método retorna um valor numérico entre -π e π representando o ângulo teta entre (x, y).  Assim indo no sentido anti-horario ao ângulo, medido em radianos, entre o eixo X positivo, e o ponto<code>(x, y)</code>.Nota os argumentos para essa função: primeiro o eixo Y(ordenadas) e o eixo X(absissas) como segundo parâmetro.</p>
+O `Math.atan2()` método retorna um valor numérico entre -π e π representando o ângulo teta entre (x, y). Assim indo no sentido anti-horario ao ângulo, medido em radianos, entre o eixo X positivo, e o ponto`(x, y)`.Nota os argumentos para essa função: primeiro o eixo Y(ordenadas) e o eixo X(absissas) como segundo parâmetro.
 
-<p><img alt="A simple diagram showing the angle returned by atan2(y, x)" src="https://mdn.mozillademos.org/files/11557/atan2.png" style="height: 300px; width: 300px;"></p>
+![A simple diagram showing the angle returned by atan2(y, x)](https://mdn.mozillademos.org/files/11557/atan2.png)
 
-<p><code>Math.atan2()os argumentos são passados separados x e y enquanto no Math.atan() é passado a razão entre esses argumentos.</code></p>
+`Math.atan2()os argumentos são passados separados x e y enquanto no Math.atan() é passado a razão entre esses argumentos.`
 
-<p>Porque <code>atan2()</code> é um método estático de  <code>Math</code>, você sempre usará  <code>Math.atan2()</code>, ao inves de um objeto Math criado (<code>Math</code> não é um construtor).</p>
+Porque `atan2()` é um método estático de `Math`, você sempre usará `Math.atan2()`, ao inves de um objeto Math criado (`Math` não é um construtor).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_Math.atan2()">Using <code>Math.atan2()</code></h3>
+### Using `Math.atan2()`
 
-<pre class="brush: js">Math.atan2(90, 15); // 1.4056476493802699
+```js
+Math.atan2(90, 15); // 1.4056476493802699
 Math.atan2(15, 90); // 0.16514867741462683
 
 Math.atan2(±0, -0);               // ±PI.
 Math.atan2(±0, +0);               // ±0.
-Math.atan2(±0, -x);               // ±PI for x &gt; 0.
-Math.atan2(±0, x);                // ±0 for x &gt; 0.
-Math.atan2(-y, ±0);               // -PI/2 for y &gt; 0.
-Math.atan2(y, ±0);                // PI/2 for y &gt; 0.
-Math.atan2(±y, -Infinity);        // ±PI for finite y &gt; 0.
-Math.atan2(±y, +Infinity);        // ±0 for finite y &gt; 0.
+Math.atan2(±0, -x);               // ±PI for x > 0.
+Math.atan2(±0, x);                // ±0 for x > 0.
+Math.atan2(-y, ±0);               // -PI/2 for y > 0.
+Math.atan2(y, ±0);                // PI/2 for y > 0.
+Math.atan2(±y, -Infinity);        // ±PI for finite y > 0.
+Math.atan2(±y, +Infinity);        // ±0 for finite y > 0.
 Math.atan2(±Infinity, x);         // ±PI/2 for finite x.
 Math.atan2(±Infinity, -Infinity); // ±3*PI/4.
 Math.atan2(±Infinity, +Infinity); // ±PI/4.
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.2.5', 'Math.atan2')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.atan2', 'Math.atan2')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.atan2', 'Math.atan2')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                | Status                       | Comment                                            |
+| ---------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                     | {{Spec2('ES1')}}         | Initial definition. Implemented in JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.2.5', 'Math.atan2')}}         | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES6', '#sec-math.atan2', 'Math.atan2')}}         | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-math.atan2', 'Math.atan2')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Math.atan2")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Math.acos()")}}</li>
- <li>{{jsxref("Math.asin()")}}</li>
- <li>{{jsxref("Math.atan()")}}</li>
- <li>{{jsxref("Math.cos()")}}</li>
- <li>{{jsxref("Math.sin()")}}</li>
- <li>{{jsxref("Math.tan()")}}</li>
-</ul>
+- {{jsxref("Math.acos()")}}
+- {{jsxref("Math.asin()")}}
+- {{jsxref("Math.atan()")}}
+- {{jsxref("Math.cos()")}}
+- {{jsxref("Math.sin()")}}
+- {{jsxref("Math.tan()")}}

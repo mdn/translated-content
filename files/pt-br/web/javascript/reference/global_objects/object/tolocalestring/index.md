@@ -12,102 +12,95 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p>O método <code><strong>toLocaleString()</strong></code> retorna uma cadeia de caracteres (<em>string</em>) representando o objeto. Este método é feito para ser sobrescrito por objetos derivados para propósitos de localização específica.</p>
+O método **`toLocaleString()`** retorna uma cadeia de caracteres (_string_) representando o objeto. Este método é feito para ser sobrescrito por objetos derivados para propósitos de localização específica.
 
-<div>{{EmbedInteractiveExample("pages/js/object-prototype-tolocalestring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-prototype-tolocalestring.html")}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><var>obj</var>.toLocaleString()</pre>
+```
+obj.toLocaleString()
+```
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>Uma <em>string</em> representando o objeto.</p>
+Uma _string_ representando o objeto.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p><code>toLocaleString</code> do {{jsxref("Object")}} retorna o resultado da chamada {{jsxref("Object.toString", "toString()")}}.</p>
+`toLocaleString` do {{jsxref("Object")}} retorna o resultado da chamada {{jsxref("Object.toString", "toString()")}}.
 
-<p>Esta função é provida para dar aos objetos um método <code>toLocaleString</code> genérico, mesmo que nem todos os usem. Veja a lista abaixo.</p>
+Esta função é provida para dar aos objetos um método `toLocaleString` genérico, mesmo que nem todos os usem. Veja a lista abaixo.
 
-<h3 id="Objetos_sobrescrevendo_toLocaleString">Objetos sobrescrevendo toLocaleString</h3>
+### Objetos sobrescrevendo toLocaleString
 
-<ul>
- <li>{{jsxref("Array")}}: {{jsxref("Array.prototype.toLocaleString()")}}</li>
- <li>{{jsxref("Number")}}: {{jsxref("Number.prototype.toLocaleString()")}}</li>
- <li>{{jsxref("Date")}}: {{jsxref("Date.prototype.toLocaleString()")}}</li>
- <li>{{jsxref("TypedArray")}}: {{jsxref("TypedArray.prototype.toLocaleString()")}}</li>
- <li>{{jsxref("BigInt")}}: {{jsxref("BigInt.prototype.toLocaleString()")}}</li>
-</ul>
+- {{jsxref("Array")}}: {{jsxref("Array.prototype.toLocaleString()")}}
+- {{jsxref("Number")}}: {{jsxref("Number.prototype.toLocaleString()")}}
+- {{jsxref("Date")}}: {{jsxref("Date.prototype.toLocaleString()")}}
+- {{jsxref("TypedArray")}}: {{jsxref("TypedArray.prototype.toLocaleString()")}}
+- {{jsxref("BigInt")}}: {{jsxref("BigInt.prototype.toLocaleString()")}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Sobrescrita_do_Array_toLocaleString">Sobrescrita do Array toLocaleString()</h3>
+### Sobrescrita do Array toLocaleString()
 
-<p>Em objetos {{jsxref("Array")}}, {{jsxref("Array.toLocaleString", "toLocaleString()")}} pode ser usado para imprimir valores do arranjo como uma <em>string</em>, opcionalmente com identificadores de localização específicos (como símbolos monetários) atrelados a eles:</p>
+Em objetos {{jsxref("Array")}}, {{jsxref("Array.toLocaleString", "toLocaleString()")}} pode ser usado para imprimir valores do arranjo como uma _string_, opcionalmente com identificadores de localização específicos (como símbolos monetários) atrelados a eles:
 
-<p>Por exemplo:</p>
+Por exemplo:
 
-<pre class="brush: js notranslate">const testArray = [4, 7, 10];
+```js
+const testArray = [4, 7, 10];
 
 let euroPrices = testArray.toLocaleString('fr', { style: 'currency', currency: 'EUR'});
-// "4,00 €,7,00 €,10,00 €"</pre>
+// "4,00 €,7,00 €,10,00 €"
+```
 
-<h3 id="Sobrescrita_do_Date_toLocaleString">Sobrescrita do Date toLocaleString()</h3>
+### Sobrescrita do Date toLocaleString()
 
-<p>Em objetos {{jsxref("Date")}}, {{jsxref("Date.toLocaleString", "toLocaleString()")}} é usado para imprimir datas mais apropriadas para localizações específicas:</p>
+Em objetos {{jsxref("Date")}}, {{jsxref("Date.toLocaleString", "toLocaleString()")}} é usado para imprimir datas mais apropriadas para localizações específicas:
 
-<p>Por exemplo:</p>
+Por exemplo:
 
-<pre class="brush: js notranslate">const testDate = new Date(Date.now());
+```js
+const testDate = new Date(Date.now());
 // "Date Fri May 29 2020 18:04:24 GMT+0100 (British Summer Time)"
 
 let deDate = testDate.toLocaleString('de');
 // "29.5.2020, 18:04:24"
 
 var frDate = testDate.toLocaleString('fr');
-//"29/05/2020 à 18:04:24"</pre>
+//"29/05/2020 à 18:04:24"
+```
 
-<h3 id="Sobrescrita_de_Number_toLocaleString">Sobrescrita de Number toLocaleString()</h3>
+### Sobrescrita de Number toLocaleString()
 
-<p>Em objetos {{jsxref("Number")}}, {{jsxref("Number.toLocaleString", "toLocaleString()")}} é usado para imprimir números para localizações específicas, e.g. com os corretos separadores:</p>
+Em objetos {{jsxref("Number")}}, {{jsxref("Number.toLocaleString", "toLocaleString()")}} é usado para imprimir números para localizações específicas, e.g. com os corretos separadores:
 
-<p>Por exemplo:</p>
+Por exemplo:
 
-<pre class="brush: js notranslate">const testNumber = 2901234564;
+```js
+const testNumber = 2901234564;
 // "2901234564"
 
 let deNumber = testNumber.toLocaleString('de');
 // "2.901.234.564"
 
 let frNumber = testNumber.toLocaleString('fr');
-// "2 901 234 564"</pre>
+// "2 901 234 564"
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.prototype.tolocalestring', 'Object.prototype.toLocaleString')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-object.prototype.tolocalestring', 'Object.prototype.toLocaleString')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("javascript.builtins.Object.toLocaleString")}}
 
+## Veja também
 
-<p>{{Compat("javascript.builtins.Object.toLocaleString")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{jsxref("Object.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toString()")}}

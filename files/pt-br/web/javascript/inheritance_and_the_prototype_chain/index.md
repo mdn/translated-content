@@ -6,32 +6,33 @@ tags:
 translation_of: Web/JavaScript/Inheritance_and_the_prototype_chain
 original_slug: Web/JavaScript/Guide/Inheritance_and_the_prototype_chain
 ---
-<div>{{jsSidebar("Advanced")}}</div>
+{{jsSidebar("Advanced")}}
 
-<p>JavaScript é um pouco confuso para desenvolvedores com experiência em linguagens baseadas em classes (como Java ou C++), porque é dinâmico e não dispõe de uma implementação de uma <code>class</code> (a palavra-chave <code>class</code> foi introduzida no ES2015, mas é syntax sugar, o JavaScript permanece baseado em <code>prototype</code>).</p>
+JavaScript é um pouco confuso para desenvolvedores com experiência em linguagens baseadas em classes (como Java ou C++), porque é dinâmico e não dispõe de uma implementação de uma `class` (a palavra-chave `class` foi introduzida no ES2015, mas é syntax sugar, o JavaScript permanece baseado em `prototype`).
 
-<p>Quando se trata de herança, o JavaScript tem somente um construtor: objetos. Cada objeto tem um link interno para um outro objeto chamado <code>prototype</code>. Esse objeto <code>prototype</code> também tem um atributo <code>prototype</code>, e assim por diante até o que o valor <code>null</code> seja encontrado como sendo o seu <code>prototype</code>. <code>null</code> que, por definição, não tem <code>prototype</code>, e age como um link final nesta <strong>cadeia de protótipos</strong> (prototype chain).</p>
+Quando se trata de herança, o JavaScript tem somente um construtor: objetos. Cada objeto tem um link interno para um outro objeto chamado `prototype`. Esse objeto `prototype` também tem um atributo `prototype`, e assim por diante até o que o valor `null` seja encontrado como sendo o seu `prototype`. `null` que, por definição, não tem `prototype`, e age como um link final nesta **cadeia de protótipos** (prototype chain).
 
-<p>Isto muitas vezes é considerado como um dos pontos fracos do JavaScript, mas o modelo de herança prototipal é de fato mais potente do que o modelo clássico. É, por exemplo, relativamente trivial construir um "modelo clássico" (como na implementaçao de <code>class</code>), enquanto o contrário é uma tarefa muito mais difícil.</p>
+Isto muitas vezes é considerado como um dos pontos fracos do JavaScript, mas o modelo de herança prototipal é de fato mais potente do que o modelo clássico. É, por exemplo, relativamente trivial construir um "modelo clássico" (como na implementaçao de `class`), enquanto o contrário é uma tarefa muito mais difícil.
 
-<p><sup>1 </sup><em>N. da T: Como em uma implementação de fila em C, por exemplo.</em></p>
+1 _N. da T: Como em uma implementação de fila em C, por exemplo._
 
-<h2 id="Herança_com_o_encadeamento_de_protótipos">Herança com o encadeamento de protótipos</h2>
+## Herança com o encadeamento de protótipos
 
-<h3 id="Propriedades_de_heranças">Propriedades de heranças</h3>
+### Propriedades de heranças
 
-<p>Objetos em JavaScript são "sacos" dinâmicos de propriedades (a que se refere as próprias propriedades) e cada um tem um link para um objeto <code>prototype</code>. Eis o que acontece quando se tenta acessar uma propriedade:</p>
+Objetos em JavaScript são "sacos" dinâmicos de propriedades (a que se refere as próprias propriedades) e cada um tem um link para um objeto `prototype`. Eis o que acontece quando se tenta acessar uma propriedade:
 
-<pre><code>// </code>Vamos criar um objeto o da função f com suas próprias propriedades a e b:<code>
+```
+// Vamos criar um objeto o da função f com suas próprias propriedades a e b:
 let f = function () {
    this.a = 1;
    this.b = 2;
 }
 let o = new f(); // {a: 1, b: 2}
 
-// </code>adicionar propriedades no protótipo da função f<code>
+// adicionar propriedades no protótipo da função f
 f.prototype.b = 3;
-f.prototype.c = 4;</code>
+f.prototype.c = 4;
 
 // não defina o protótipo f.prototype = {b: 3, c: 4}; isso vai quebrar a cadeia de protótipos
 // o. [[Prototype]] possui propriedades bec.
@@ -40,9 +41,9 @@ f.prototype.c = 4;</code>
 // Este é o fim da cadeia de protótipos, como nulo,
 // por definição, não possui [[Prototype]].
 // Assim, a cadeia completa de protótipos se parece com:
-// {a: 1, b: 2} ---&gt; {b: 3, c: 4} ---&gt; Object.prototype ---&gt; null dfdf
+// {a: 1, b: 2} ---> {b: 3, c: 4} ---> Object.prototype ---> null dfdf
 
-<code>console.log(o.a); // 1
+console.log(o.a); // 1
 // Existe uma propriedade 'a' no objeto o? Sim, e seu valor é 1.
 
 console.log(o.b); // 2
@@ -59,20 +60,21 @@ console.log(o.d); // undefined
 // Existe uma propriedade 'd' em o. [[Prototype]]? Não, verifique seu prototype.
 // o. [[Prototype]]. [[Prototype]] é Object.prototype e não há propriedade 'd' por padrão, verifique seu prototype.
 // o. [[Prototype]]. [[Prototype]]. [[Prototype]] é nulo, pare de pesquisar,
-// nenhuma propriedade encontrada, retorne indefinido.</code>
-</pre>
+// nenhuma propriedade encontrada, retorne indefinido.
+```
 
-<p><a href="https://repl.it/@khaled_hossain_code/prototype" style="background-color: rgb(255, 255, 255); font-family: Arial, x-locale-body, sans-serif; font-size: 1rem; letter-spacing: -0.00278rem;">Code Link</a></p>
+[Code Link](https://repl.it/@khaled_hossain_code/prototype)
 
-<p>Atribuir uma propriedade a um objeto cria uma propriedade nele. A única exceção às regras de obtenção e definição de comportamento é quando há uma propriedade herdada com um <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters" title="Defining Getters and Setters">getter or a setter</a>.</p>
+Atribuir uma propriedade a um objeto cria uma propriedade nele. A única exceção às regras de obtenção e definição de comportamento é quando há uma propriedade herdada com um [getter or a setter](/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters "Defining Getters and Setters").
 
-<h3 id="Herança_de_métodos">Herança de "métodos"</h3>
+### Herança de "métodos"
 
-<p>JavaScript não tem "métodos" como os que conhecemos em linguagens baseadas em classes. Em JavaScript, qualquer função pode ser adicionada em um objeto em forma de propriedade. Uma herança de funções age como a herança de quaisquer outras propriedades que não sejam funções, e podemos inclusive realizar sobre-escrita de função (<em>method overriding</em>)!</p>
+JavaScript não tem "métodos" como os que conhecemos em linguagens baseadas em classes. Em JavaScript, qualquer função pode ser adicionada em um objeto em forma de propriedade. Uma herança de funções age como a herança de quaisquer outras propriedades que não sejam funções, e podemos inclusive realizar sobre-escrita de função (_method overriding_)!
 
-<p>Quando uma herança de função é executada, o valor de <a href="/en/JavaScript/Reference/Operators/this" title="this"><code>this</code></a> aponta para o objeto que herdou as propriedades, não para o objeto prototype onde as propriedades foram escritas originalmente.</p>
+Quando uma herança de função é executada, o valor de [`this`](/en/JavaScript/Reference/Operators/this "this") aponta para o objeto que herdou as propriedades, não para o objeto prototype onde as propriedades foram escritas originalmente.
 
-<pre class="brush: js">var o = {
+```js
+var o = {
   a: 2,
   m: function(b){
     return this.a + 1;
@@ -89,41 +91,42 @@ p.a = 12; // cria uma propriedade 'a' no objeto 'p'
 console.log(p.m()); // 13
 // Ao chamar 'p.m', 'this' refere-se a 'p'
 // Então, quando 'p' herda a função de 'm' de 'o', 'this.a' representa 'p.a' que é a própria propriedade 'a' de 'p'
+```
 
-</pre>
+## Maneiras de criar objetos e resultados dos protótipos encadeados
 
-<h2 id="Maneiras_de_criar_objetos_e_resultados_dos_protótipos_encadeados">Maneiras de criar objetos e resultados dos protótipos encadeados</h2>
+### Objetos criados com sintaxe de construtores
 
-<h3 id="Objetos_criados_com_sintaxe_de_construtores">Objetos criados com sintaxe de construtores</h3>
-
-<pre class="brush: js">var o = {a: 1};
+```js
+var o = {a: 1};
 
 // O recém-criado objecto 'o' tem Object.prototype como o seu [[Prototype]]
 // 'o' não tem não tem uma propriedade chamada 'hasOwnProperty'
 // hasOwnProperty é uma propriedade própria de Object.prototype. Então 'o' herda hasOwnProperty de Object.prototype
 
 // Object.prototype tem null como seu protótipo.
-// o ---&gt; Object.prototype ---&gt; null
+// o ---> Object.prototype ---> null
 
 var a = ["yo", "whadup", "?"];
 
 // Arrays herdam de Array.prototype (que tem métodos como indexOf, forEach, etc.)
 // A cadeia de protótipos se parece com isso:
-// a ---&gt; Array.prototype ---&gt; Object.prototype ---&gt; null
+// a ---> Array.prototype ---> Object.prototype ---> null
 
 function f(){
   return 2;
 }
 
 // Funções herdam de Function.prototype (que tem métodos como call, bind, etc.)
-// f ---&gt; Function.prototype ---&gt; Object.prototype ---&gt; null
-</pre>
+// f ---> Function.prototype ---> Object.prototype ---> null
+```
 
-<h3 id="Com_um_construtor">Com um construtor</h3>
+### Com um construtor
 
-<p>Um "construtor" em JavaScript é "somente" uma função que passa a ser chamada com o operador <a href="/en/JavaScript/Reference/Operators/new" title="new">new</a>.</p>
+Um "construtor" em JavaScript é "somente" uma função que passa a ser chamada com o operador [new](/en/JavaScript/Reference/Operators/new "new").
 
-<pre class="brush: js">function Graph() {
+```js
+function Graph() {
   this.vertexes = [];
   this.edges = [];
 }
@@ -137,58 +140,50 @@ Graph.prototype = {
 var g = new Graph();
 // 'g' é um objeto com as propriedades 'vertexes' e 'edges'.
 // g.[[Prototype]] é o valor de Graph.prototype quando new Graph() é executada.
-</pre>
+```
 
-<h3 id="Com_Object.create">Com Object.create</h3>
+### Com Object.create
 
-<p>ECMAScript 5 introduziu o novo método: <a href="/en/JavaScript/Reference/Global_Objects/Object/create" title="create">Object.create</a>. Invocando este método podemos criar novos objetos. O prototype destes novos objetos é o primeiro argumento do método:</p>
+ECMAScript 5 introduziu o novo método: [Object.create](/en/JavaScript/Reference/Global_Objects/Object/create "create"). Invocando este método podemos criar novos objetos. O prototype destes novos objetos é o primeiro argumento do método:
 
-<pre class="brush: js">var a = {a: 1};
-// a ---&gt; Object.prototype ---&gt; null
+```js
+var a = {a: 1};
+// a ---> Object.prototype ---> null
 
 var b = Object.create(a);
-// b ---&gt; a ---&gt; Object.prototype ---&gt; null
+// b ---> a ---> Object.prototype ---> null
 console.log(b.a); // 1 (inherited)
 
 var c = Object.create(b);
-// c ---&gt; b ---&gt; a ---&gt; Object.prototype ---&gt; null
+// c ---> b ---> a ---> Object.prototype ---> null
 
 var d = Object.create(null);
-// d ---&gt; null
+// d ---> null
 console.log(d.hasOwnProperty); // undefined, porque não herda de Object.prototype
-</pre>
+```
 
-<div>
-<h3 id="Performance">Performance</h3>
+### Performance
 
-<p>O tempo de pesquisa para as propriedades que estão no alto da cadeia de protótipos pode ter um impacto negativo no desempenho, e isso pode ser significativo no código em que o desempenho é crítico. Além disso, tentar acessar propriedades inexistentes irá sempre atravessar a cadeia cheia do protótipo (full prototype chain).</p>
+O tempo de pesquisa para as propriedades que estão no alto da cadeia de protótipos pode ter um impacto negativo no desempenho, e isso pode ser significativo no código em que o desempenho é crítico. Além disso, tentar acessar propriedades inexistentes irá sempre atravessar a cadeia cheia do protótipo (full prototype chain).
 
-<p>Porém, quando estamos interagindo com as propriedades de um objeto, <strong>toda</strong> propriedade que está na cadeia do prototype (prototype chain) vai ser enumerada.</p>
+Porém, quando estamos interagindo com as propriedades de um objeto, **toda** propriedade que está na cadeia do prototype (prototype chain) vai ser enumerada.
 
-<p>Para verificar se um objeto tem uma propriedade definida em si mesmo e não em algum lugar na sua cadeia de protótipo, é necessário usar o método <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty" title="/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"><code>hasOwnProperty</code></a> que todos os objetos herdam do Object.prototype.</p>
+Para verificar se um objeto tem uma propriedade definida em si mesmo e não em algum lugar na sua cadeia de protótipo, é necessário usar o método [`hasOwnProperty`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty "/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty") que todos os objetos herdam do Object.prototype.
 
-<p><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty" title="/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"><code>hasOwnProperty</code></a> é a única alternativa em JavaScript que lida com propriedades sem atravessar a cadeia de protótipos.</p>
+[`hasOwnProperty`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty "/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty") é a única alternativa em JavaScript que lida com propriedades sem atravessar a cadeia de protótipos.
 
+> **Nota:** Observação: **Não** é suficiente apenas verificar se o valor da propriedade é [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined "/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined") para saber se ela existe. A propriedade pode muito bem existir e não ter sido inicializada, sendo assim o seu valor undefined.
 
-<div class="note">Observação: <strong>Não</strong> é suficiente apenas verificar se o valor da propriedade é <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></code> para saber se ela existe. A propriedade pode muito bem existir e não ter sido inicializada, sendo assim o seu valor undefined.</div>
+### Má Pratica: Estender protótipos nativos
 
-<div>
-<h3 id="Má_Pratica_Estender_protótipos_nativos">Má Pratica: Estender protótipos nativos</h3>
+Um erro frequentemente cometido por programadores é estender um Object.prototype.
 
-<p>Um erro frequentemente cometido por programadores é estender um Object.prototype.</p>
+Esta técnica é chamada de "monkey patching" e quebra o encapsulamento. Não existe uma boa razão para desorganizar tipos nativos do JavaScript para adicionar uma nova funcionalidade ao mesmo.
 
-<p>Esta técnica é chamada de "monkey patching" e quebra o encapsulamento. Não existe uma boa razão para desorganizar tipos nativos do JavaScript para adicionar uma nova funcionalidade ao mesmo. </p>
+O único bom motivo para estender um protótipo nativo do JavaScript é para dar suporte a novas "features" do JavaScript; por exemplo: Array.forEach, etc.
 
-<p>O único bom motivo para estender um protótipo nativo do JavaScript é para dar suporte a novas "features" do JavaScript; por exemplo: Array.forEach, etc.</p>
-</div>
+### Conclusão
 
-<div>
-<h3 id="Conclusão">Conclusão</h3>
+É essencial entender bem "prototypal inheritance" antes de escrever códigos complexos. Tome cuidado com o tamanho da sua cadeia de protótipos, quebre a cadeia caso necessário para evitar problemas de performance. Nunca estenda protótipos nativos a menos que seja para conseguir compatibilidade com novas "features" do JavaScript.
 
-<p>É essencial entender bem  "prototypal inheritance" antes de escrever códigos complexos. Tome cuidado com o tamanho da sua cadeia de protótipos, quebre a cadeia caso necessário para evitar problemas de performance. Nunca estenda protótipos nativos a menos que seja para conseguir compatibilidade com novas "features" do JavaScript.</p>
-
-
-</div>
-</div>
-
-<p>{{ languages( {"zh-cn": "zh-cn/JavaScript/Guide/Inheritance_and_the_prototype_chain" } ) }}</p>
+{{ languages( {"zh-cn": "zh-cn/JavaScript/Guide/Inheritance\_and\_the\_prototype\_chain" } ) }}

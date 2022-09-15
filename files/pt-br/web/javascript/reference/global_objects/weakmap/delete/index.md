@@ -3,69 +3,51 @@ title: WeakMap.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>delete()</strong></code> remover o elemento especificado ou setado a partir de um objeto instanciado do <code>WeakMap</code>.</p>
+O método **`delete()`** remover o elemento especificado ou setado a partir de um objeto instanciado do `WeakMap`.
 
-<div>{{EmbedInteractiveExample("pages/js/weakmap-prototype-delete.html")}}</div>
+{{EmbedInteractiveExample("pages/js/weakmap-prototype-delete.html")}}
 
+## Sintaxe
 
+```
+wm.delete(key);
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Parâmetros
 
-<pre class="syntaxbox"><code><em>wm</em>.delete(key);</code></pre>
+- chave(key)
+  - : Requerido. A chave(`key`) do elemento a ser removido do objeto instanciado do `WeakMap`.
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Valores retornados
 
-<dl>
- <dt>chave(key)</dt>
- <dd>Requerido. A chave(<code>key</code>) do elemento a ser removido do objeto instanciado do <code>WeakMap</code>.</dd>
-</dl>
+`true` se o emento do objeto do `WeakMap` tenha sido removido com sucesso. `false` se a chave(`key`) não for encontrada no `WeakMap` ou se a chave(`key`) não for um objeto.
 
-<h3 id="Valores_retornados">Valores retornados</h3>
+## Exemplos
 
-<p><code>true</code> se o emento do objeto do <code>WeakMap</code> tenha sido removido com sucesso. <code>false</code> se a chave(<code>key</code>) não for encontrada no <code>WeakMap</code> ou se a chave(<code>key</code>) não for um objeto.</p>
+### Usando o método `delete`
 
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Usando_o_método_delete">Usando o método <code>delete</code> </h3>
-
-<pre class="brush: js">var wm = new WeakMap();
+```js
+var wm = new WeakMap();
 wm.set(window, 'foo');
 
 console.log(wm.delete(window)); // Retorna true. Removido com sucesso.
 
 wm.has(window);    // Retorna false. O objeto window não é mais pertecente ao WeakMap.
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-weakmap.prototype.delete', 'WeakMap.prototype.delete')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definição inicial</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-weakmap.prototype.delete', 'WeakMap.prototype.delete')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                    | Status                       | Comentário        |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------- |
+| {{SpecName('ES2015', '#sec-weakmap.prototype.delete', 'WeakMap.prototype.delete')}} | {{Spec2('ES2015')}}     | Definição inicial |
+| {{SpecName('ESDraft', '#sec-weakmap.prototype.delete', 'WeakMap.prototype.delete')}} | {{Spec2('ESDraft')}} |                   |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.WeakMap.delete")}}</p>
+{{Compat("javascript.builtins.WeakMap.delete")}}
 
-<h2 id="Ver_também">Ver também</h2>
+## Ver também
 
-<ul>
- <li>{{jsxref("WeakMap")}}</li>
-</ul>
+- {{jsxref("WeakMap")}}

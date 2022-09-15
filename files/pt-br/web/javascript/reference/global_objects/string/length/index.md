@@ -10,29 +10,32 @@ tags:
   - length
 translation_of: Web/JavaScript/Reference/Global_Objects/String/length
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>A propriedade <code>length</code> de um objeto {{jsxref("String")}} contém o comprimento da string. <code>length</code> é uma propriedade <code>read-only</code> (somente leitura) de instâncias de string.</p>
+A propriedade `length` de um objeto {{jsxref("String")}} contém o comprimento da string. `length` é uma propriedade `read-only` (somente leitura) de instâncias de string.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.length</code></pre>
+```
+str.length
+```
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Essa propriedade retorna o número de unidades de código presentes na string. {{interwiki("wikipedia", "UTF-16")}}, a codificação utilizada pelo JavaScript, utiliza uma unidade de código de 16-bits para representar os caracteres mais comuns, mas precisa usar duas unidades para caracteres menos usados, então é possível que o valor retornado por <code>length</code> não seja exatamente o número de caracteres na string.</p>
+Essa propriedade retorna o número de unidades de código presentes na string. {{interwiki("wikipedia", "UTF-16")}}, a codificação utilizada pelo JavaScript, utiliza uma unidade de código de 16-bits para representar os caracteres mais comuns, mas precisa usar duas unidades para caracteres menos usados, então é possível que o valor retornado por `length` não seja exatamente o número de caracteres na string.
 
-<p>ECMASCript 2016 (ed. 7) estabeleceu um comprimento máximo de <code>2^53 - 1</code> elementos. Anteriormente, nenhum comprimento máximo havia sido especificado. No Firefox, as strings têm um comprimento (<code>length</code>) máximo de <code>2**30 - 2</code> (~ 1 GB). Em versões anteriores ao Firefox 65, o comprimento máximo era <code>2**28 - 1</code> (~ 256 MB).</p>
+ECMASCript 2016 (ed. 7) estabeleceu um comprimento máximo de `2^53 - 1` elementos. Anteriormente, nenhum comprimento máximo havia sido especificado. No Firefox, as strings têm um comprimento (`length`) máximo de `2**30 - 2` (\~ 1 GB). Em versões anteriores ao Firefox 65, o comprimento máximo era `2**28 - 1` (\~ 256 MB).
 
-<p>Para uma string vazia, <code>length</code> é <code>0</code>.</p>
+Para uma string vazia, `length` é `0`.
 
-<p>A propriedade estática <code>String.length</code> retorna o valor <code>1</code>.</p>
+A propriedade estática `String.length` retorna o valor `1`.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Uso_básico">Uso básico</h3>
+### Uso básico
 
-<pre class="brush: js notranslate">var x = 'Mozilla';
+```js
+var x = 'Mozilla';
 var empty = '';
 
 console.log('Mozilla possui ' + x.length + ' unidades de código de comprimento');
@@ -40,11 +43,12 @@ console.log('Mozilla possui ' + x.length + ' unidades de código de comprimento'
 
 console.log('A string vazia possui um comprimento de ' + empty.length);
 /* "A string vazia possui um comprimento de 0" */
-</pre>
+```
 
-<h3 id="Atribuindo_valor_ao_comprimento">Atribuindo valor ao comprimento</h3>
+### Atribuindo valor ao comprimento
 
-<pre class="brush: js notranslate">let myString = "campainhas";
+```js
+let myString = "campainhas";
 
 // A tentativa de atribuir um valor à propriedade .length
 // de uma string não tem efeito observável.
@@ -54,41 +58,20 @@ console.log(myString);
 // retorna  "campainhas"
 console.log(myString.length);
 // retorna 10
-</pre>
+```
 
-<h2 id="Especificação">Especificação</h2>
+## Especificação
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentários</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição inicial. Implementada no JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.5.1', 'String.prototype.length')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-properties-of-string-instances-length', 'String.prototype.length')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                | Estado                   | Comentários                                        |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                                     | {{Spec2('ES1')}}     | Definição inicial. Implementada no JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.5.5.1', 'String.prototype.length')}}                                     | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES6', '#sec-properties-of-string-instances-length', 'String.prototype.length')}} | {{Spec2('ES6')}}     |                                                    |
 
-<h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
+## Navegadores compatíveis
 
 {{Compat("javascript.builtins.String.length")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="http://developer.teradata.com/blog/jasonstrimpel/2011/11/javascript-string-length-and-internationalizing-web-applications">JavaScript <code>String.length</code> and Internationalizing Web Applications</a></li>
-</ul>
+- [JavaScript `String.length` and Internationalizing Web Applications](http://developer.teradata.com/blog/jasonstrimpel/2011/11/javascript-string-length-and-internationalizing-web-applications)

@@ -3,23 +3,20 @@ title: Symbol.replace
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/replace
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/replace
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O símbolo <code><strong>Symbol.replace</strong></code> é conhecido por especificar o método que substitui as substrings conrrespondentes de uma string. Essa função é chamada pelo método {{jsxref("String.prototype.replace()")}}.</p>
+O símbolo **`Symbol.replace`** é conhecido por especificar o método que substitui as substrings conrrespondentes de uma string. Essa função é chamada pelo método {{jsxref("String.prototype.replace()")}}.
 
-<p>Para mais informações, veja {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}} e {{jsxref("String.prototype.replace()")}}.</p>
+Para mais informações, veja {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}} e {{jsxref("String.prototype.replace()")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-replace.html")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-replace.html")}}{{js_property_attributes(0,0,0)}}
 
+## Exemplos
 
+### Usando Symbol.replace
 
-<div>{{js_property_attributes(0,0,0)}}</div>
-
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Usando_Symbol.replace">Usando Symbol.replace</h3>
-
-<pre class="brush: js notranslate">class CustomReplacer {
+```js
+class CustomReplacer {
   constructor(value) {
     this.value = value;
   }
@@ -29,32 +26,22 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/replace
 }
 
 console.log('football'.replace(new CustomReplacer('foo')));
-// resultado esperado: "#!@?tball"</pre>
+// resultado esperado: "#!@?tball"
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-symbol.replace', 'Symbol.replace')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                        |
+| ------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-symbol.replace', 'Symbol.replace')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("javascript.builtins.Symbol.replace")}}
 
+## Veja também
 
-<p>{{Compat("javascript.builtins.Symbol.replace")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{jsxref("Symbol.match")}}</li>
- <li>{{jsxref("Symbol.search")}}</li>
- <li>{{jsxref("Symbol.split")}}</li>
- <li>{{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}}</li>
-</ul>
+- {{jsxref("Symbol.match")}}
+- {{jsxref("Symbol.search")}}
+- {{jsxref("Symbol.split")}}
+- {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}}

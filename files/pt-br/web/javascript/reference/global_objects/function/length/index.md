@@ -3,67 +3,47 @@ title: Function.length
 slug: Web/JavaScript/Reference/Global_Objects/Function/length
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/length
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>A propriedade <code><strong>length</strong></code> especifica o número de argumentos esperados pela função.</p>
+A propriedade **`length`** especifica o número de argumentos esperados pela função.
 
-<div>{{js_property_attributes(0,0,1)}}</div>
+{{js_property_attributes(0,0,1)}}
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p><code>length é uma propriedade de um objeto função</code>, e indica quantos argumentos a função espera, i.e. o número de parametros formais. Este número não incluí o {{jsxref("rest_parameters", "rest parameter", "", 1)}}. Por contraste, {{jsxref("Functions_and_function_scope/arguments/length", "arguments.length")}} é local para a função e fornece o número de argumentos que foram realmente passados.</p>
+`length é uma propriedade de um objeto função`, e indica quantos argumentos a função espera, i.e. o número de parametros formais. Este número não incluí o {{jsxref("rest_parameters", "rest parameter", "", 1)}}. Por contraste, {{jsxref("Functions_and_function_scope/arguments/length", "arguments.length")}} é local para a função e fornece o número de argumentos que foram realmente passados.
 
-<h3 id="Propriedade_de_Dados_do_construtor_Function">Propriedade de Dados do construtor <code>Function</code></h3>
+### Propriedade de Dados do construtor `Function`
 
-<p>O construtor {{jsxref("Function")}} é propriamente um objeto {{jsxref("Function")}}. A proproedade de dados do seu <code>length</code> tem o valor de 1. Os atributos da propriedade são: Escrita: <code>false</code>, Enumerável: <code>false</code>, Configurável: <code>true</code>.</p>
+O construtor {{jsxref("Function")}} é propriamente um objeto {{jsxref("Function")}}. A proproedade de dados do seu `length` tem o valor de 1. Os atributos da propriedade são: Escrita: `false`, Enumerável: `false`, Configurável: `true`.
 
-<h3 id="Propriedades_do_objeto_prototype_de_Function">Propriedades do objeto prototype de <code>Function</code></h3>
+### Propriedades do objeto prototype de `Function`
 
-<p>A propriedade length do objeto prototype {{jsxref("Function")}} tem o valor de 0.</p>
+A propriedade length do objeto prototype {{jsxref("Function")}} tem o valor de 0.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: js notranslate">console.log(Function.length); /* 1 */
+```js
+console.log(Function.length); /* 1 */
 
 console.log((function()        {}).length); /* 0 */
 console.log((function(a)       {}).length); /* 1 */
 console.log((function(a, b)    {}).length); /* 2 etc. */
 console.log((function(...args) {}).length); /* 0, rest parameter is not counted */
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.3.5.1', 'Function.length')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-function-instances-length', 'Function.length')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>The <code>configurable</code> attribute of this property is now <code>true</code>.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                   | Comment                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------------------ |
+| {{SpecName('ES1')}}                                                                         | {{Spec2('ES1')}}     | Initial definition. Implemented in JavaScript 1.1.           |
+| {{SpecName('ES5.1', '#sec-15.3.5.1', 'Function.length')}}                     | {{Spec2('ES5.1')}} |                                                              |
+| {{SpecName('ES6', '#sec-function-instances-length', 'Function.length')}} | {{Spec2('ES6')}}     | The `configurable` attribute of this property is now `true`. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Function.length")}}
 
-<h2 id="Veja_tambem">Veja tambem</h2>
+## Veja tambem
 
-<ul>
- <li>{{jsxref("Function")}}</li>
-</ul>
+- {{jsxref("Function")}}

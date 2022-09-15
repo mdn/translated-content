@@ -9,49 +9,54 @@ tags:
   - Referencia
 translation_of: Web/JavaScript/Reference/Functions/Arrow_functions
 ---
-<div>{{jsSidebar("Functions")}}</div>
+{{jsSidebar("Functions")}}
 
-<p>Uma <strong>expressão <em>arrow function</em></strong> possui uma sintaxe mais curta quando comparada a uma expressão de função (<em><a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/function">function expression</a></em>) e não tem seu próprio <em><a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/this">this</a></em>, <em><a href="/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a></em>, <em><a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/super">super</a></em> ou <em><a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/new.target">new.target</a></em>. Estas expressões de funções são melhor aplicadas para funções que não sejam métodos, e elas não podem ser usadas como construtoras (<em>constructors</em>).</p>
+Uma **expressão _arrow function_** possui uma sintaxe mais curta quando comparada a uma expressão de função (_[function expression](/pt-BR/docs/Web/JavaScript/Reference/Operators/function)_) e não tem seu próprio _[this](/pt-BR/docs/Web/JavaScript/Reference/Operators/this)_, _[arguments](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments)_, _[super](/pt-BR/docs/Web/JavaScript/Reference/Operators/super)_ ou _[new.target](/pt-BR/docs/Web/JavaScript/Reference/Operators/new.target)_. Estas expressões de funções são melhor aplicadas para funções que não sejam métodos, e elas não podem ser usadas como construtoras (_constructors_).
 
-<p>{{EmbedInteractiveExample("pages/js/functions-arrow.html")}}</p>
+{{EmbedInteractiveExample("pages/js/functions-arrow.html")}}
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<h3 id="Sintaxe_básica">Sintaxe básica</h3>
+### Sintaxe básica
 
-<pre>(param1, param2, …, paramN) =&gt; { statements }
-(param1, param2, …, paramN) =&gt; expression
-// equivalente a: =&gt; { return expression; }
+```
+(param1, param2, …, paramN) => { statements }
+(param1, param2, …, paramN) => expression
+// equivalente a: => { return expression; }
 
 // Parênteses são opcionais quando só há um nome de parâmetro:
-(singleParam) =&gt; { statements }
-singleParam =&gt; { statements }
+(singleParam) => { statements }
+singleParam => { statements }
 
 // A lista de parâmetros para uma função sem parâmetros deve ser escrita com um par de parênteses.
-() =&gt; { statements }</pre>
+() => { statements }
+```
 
-<h3 id="Sintaxe_avançada">Sintaxe avançada</h3>
+### Sintaxe avançada
 
-<pre>// Envolva o corpo da função em parênteses para retornar uma expressão literal de objeto:
-params =&gt; ({foo: bar})
+```
+// Envolva o corpo da função em parênteses para retornar uma expressão literal de objeto:
+params => ({foo: bar})
 
-// Parâmetros rest (<em><a href="/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest parameters</a>)</em> e parâmetros padrões (<em><a href="/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters">default parameters</a></em>) são suportados
-(param1, param2, ...rest) =&gt; { statements }
-(param1 = defaultValue1, param2, …, paramN = defaultValueN) =&gt; { statements }
+// Parâmetros rest (rest parameters) e parâmetros padrões (default parameters) são suportados
+(param1, param2, ...rest) => { statements }
+(param1 = defaultValue1, param2, …, paramN = defaultValueN) => { statements }
 
-// Desestruturação (<em><a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructuring</a></em>) dentro da lista de parâmetros também é suportado
-var f = ([a, b] = [1, 2], {x: c} = {x: a + b}) =&gt; a + b + c;
-f(); // 6</pre>
+// Desestruturação (destructuring) dentro da lista de parâmetros também é suportado
+var f = ([a, b] = [1, 2], {x: c} = {x: a + b}) => a + b + c;
+f(); // 6
+```
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Veja também <a href="https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/">"ES6 In Depth: Arrow functions" on hacks.mozilla.org</a>.</p>
+Veja também ["ES6 In Depth: Arrow functions" on hacks.mozilla.org](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/).
 
-<p>Dois fatores influenciaram a introdução das <em>arrow functions</em>: funções mais curtas e a inexistência da palavra chave <code>this</code>.</p>
+Dois fatores influenciaram a introdução das _arrow functions_: funções mais curtas e a inexistência da palavra chave `this`.
 
-<h3 id="Funções_mais_curtas">Funções mais curtas</h3>
+### Funções mais curtas
 
-<pre><code>var elements = [
+```
+var elements = [
   'Hydrogen',
   'Helium',
   'Lithium',
@@ -62,37 +67,39 @@ elements.map(function(element) {
   return element.length;
 }); // esta sentença retorna o array: [8, 6, 7, 9]
 
-// A função regular acima pode ser escrita como a <em>arrow function</em> abaixo
-elements.map((element) =&gt; {
+// A função regular acima pode ser escrita como a arrow function abaixo
+elements.map((element) => {
   return element.length;
 }); // [8, 6, 7, 9]
 
 // Quando só existe um parâmetro, podemos remover os parênteses envolvendo os parâmetros:
-elements.map(element =&gt; {
+elements.map(element => {
   return element.length;
 }); // [8, 6, 7, 9]
 
-// Quando a única sentença em uma <em>arrow function</em> é `return`, podemos remover `return` e remover
+// Quando a única sentença em uma arrow function é `return`, podemos remover `return` e remover
 // as chaves envolvendo a sentença
-elements.map(element =&gt; element.length); // [8, 6, 7, 9]
+elements.map(element => element.length); // [8, 6, 7, 9]
 
-// Neste caso, porque só precisamos da propriedade <em>length</em>, podemos usar o parâmetro de destruição (<em>destructing parameter</em>):
-// Note que a <em>string</em> `"<em>length</em>"` corresponde a propriedade que queremos obter enquanto que a
-// obviamente propriedade não especial `<em>lengthFooBArX</em>` é só o nome de uma variável que pode ser mudado
+// Neste caso, porque só precisamos da propriedade length, podemos usar o parâmetro de destruição (destructing parameter):
+// Note que a string `"length"` corresponde a propriedade que queremos obter enquanto que a
+// obviamente propriedade não especial `lengthFooBArX` é só o nome de uma variável que pode ser mudado
 // para qualquer nome válido de variável que você quiser
-elements.map(({ "length": lengthFooBArX }) =&gt; lengthFooBArX); // [8, 6, 7, 9]
+elements.map(({ "length": lengthFooBArX }) => lengthFooBArX); // [8, 6, 7, 9]
 
-// Esta atribuição de parâmetro de destruição (<em>destructing parameter</em>) pode ser escrita como visto abaixo. Entretanto, note que
+// Esta atribuição de parâmetro de destruição (destructing parameter) pode ser escrita como visto abaixo. Entretanto, note que
 // não há um específico `"length"` para selecionar qual propriedade nós queremos obter. Ao invés disso, o nome literal
 // da própria variável `length` é usado como a propriedade que queremos recuperar do objeto.
-elements.map(({ length }) =&gt; length); // [8, 6, 7, 9]</code></pre>
+elements.map(({ length }) => length); // [8, 6, 7, 9]
+```
 
-<h3 id="Sem_this_separado">Sem <code>this</code> separado</h3>
+### Sem `this` separado
 
-<p>Antes das <em>arrow functions</em>, toda nova função definia seu próprio valor de <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/this">this</a> (baseado em como a função era chamada, um novo objeto no caso de um construtor, <em>undefined</em> em chamadas de funções com modo estrito (<em><a href="/pt-BR/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>)</em>, o objeto base se a função é chamada como um "método de objeto", etc.). Este comportamento é importuno com um estilo de programação orientado a objeto.</p>
+Antes das _arrow functions_, toda nova função definia seu próprio valor de [this](/pt-BR/docs/Web/JavaScript/Reference/Operators/this) (baseado em como a função era chamada, um novo objeto no caso de um construtor, _undefined_ em chamadas de funções com modo estrito (_[strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode))_, o objeto base se a função é chamada como um "método de objeto", etc.). Este comportamento é importuno com um estilo de programação orientado a objeto.
 
-<pre class="brush: js">function Person() {
-  // O contrutor Person() define `<code>this`</code> como uma instância dele mesmo.
+```js
+function Person() {
+  // O contrutor Person() define `this` como uma instância dele mesmo.
   this.age = 0;
 
   setInterval(function growUp() {
@@ -104,11 +111,13 @@ elements.map(({ length }) =&gt; length); // [8, 6, 7, 9]</code></pre>
   }, 1000);
 }
 
-var p = new Person();</pre>
+var p = new Person();
+```
 
-<p>No ECMAScript 3/5, este comportamento era corrigido definindo o valor em <code>this</code> à uma variável que pudesse ser encapsulada.</p>
+No ECMAScript 3/5, este comportamento era corrigido definindo o valor em `this` à uma variável que pudesse ser encapsulada.
 
-<pre class="brush: js">function Person() {
+```js
+function Person() {
   var that = this;
   that.age = 0;
 
@@ -117,45 +126,51 @@ var p = new Person();</pre>
     // o valor é o objeto esperado.
     that.age++;
   }, 1000);
-}</pre>
+}
+```
 
-<p>Alternativamente, uma função de ligação (<a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">bound function</a>) pode ser criada para que o valor pré-atribuido à <code>this</code> seja passado para a função alvo de ligação (a função <code>growUp()</code> no exemplo acima.</p>
+Alternativamente, uma função de ligação ([bound function](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)) pode ser criada para que o valor pré-atribuido à `this` seja passado para a função alvo de ligação (a função `growUp()` no exemplo acima.
 
-<p>Uma <em>arrow function</em> não tem seu próprio <code>this;</code> o valor <code>this</code> do contexto léxico encapsulado é usado. Ex: <em>Arrow functions</em> seguem as regras normais de pesquisa de variáveis. Então, ao procurar por <code>this</code>, que não está no escopo atual elas acabam encontrando <code>this</code> no escopo encapsulado. Assim, no código a seguir, o <code>this</code> dentro da função que é passado para <code>setInterval</code> tem o mesmo valor do <code>this</code> na função lexicamente encapsulada:</p>
+Uma _arrow function_ não tem seu próprio `this;` o valor `this` do contexto léxico encapsulado é usado. Ex: _Arrow functions_ seguem as regras normais de pesquisa de variáveis. Então, ao procurar por `this`, que não está no escopo atual elas acabam encontrando `this` no escopo encapsulado. Assim, no código a seguir, o `this` dentro da função que é passado para `setInterval` tem o mesmo valor do `this` na função lexicamente encapsulada:
 
-<pre class="brush: js">function Person(){
+```js
+function Person(){
   this.age = 0;
 
-  setInterval(() =&gt; {
+  setInterval(() => {
     this.age++; // |this| corretamente se refere ao objeto Person
   }, 1000);
 }
 
-var p = new Person();</pre>
+var p = new Person();
+```
 
-<h4 id="Relação_com_strict_mode">Relação com <em>strict mode</em></h4>
+#### Relação com _strict mode_
 
-<p>Considerando que <code>this</code> vem do contexto léxico envolvente, as regras do modo estrito (<em><a href="/pt-BR/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a></em>) em relação ao <code>this</code> são ignoradas.</p>
+Considerando que `this` vem do contexto léxico envolvente, as regras do modo estrito (_[strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode)_) em relação ao `this` são ignoradas.
 
-<pre class="brush: js">var f = () =&gt; { 'use strict'; return this };
-f() === window; // ou o objeto global</pre>
+```js
+var f = () => { 'use strict'; return this };
+f() === window; // ou o objeto global
+```
 
-<p>O restante das regras do modo estrito (<em>strict mode)</em> são aplicadas normalmente.</p>
+O restante das regras do modo estrito (_strict mode)_ são aplicadas normalmente.
 
-<h4 id="Invocação_por_call_ou_apply">Invocação por call ou apply</h4>
+#### Invocação por call ou apply
 
-<p>Já que as <em>arrow functions</em> não têm o próprio  <code>this</code>, os métodos <code>call()</code> ou <code>apply()</code> só podem passar parâmetros. <code>thisArg</code> é ignorado.</p>
+Já que as _arrow functions_ não têm o próprio `this`, os métodos `call()` ou `apply()` só podem passar parâmetros. `thisArg` é ignorado.
 
-<pre><code>var adder = {
+```
+var adder = {
   base: 1,
 
   add: function(a) {
-    var f = v =&gt; v + this.base;
+    var f = v => v + this.base;
     return f(a);
   },
 
   addThruCall: function(a) {
-    var f = v =&gt; v + this.base;
+    var f = v => v + this.base;
     var b = {
       base: 2
     };
@@ -165,216 +180,217 @@ f() === window; // ou o objeto global</pre>
 };
 
 console.log(adder.add(1));         // Deve logar 2
-console.log(adder.addThruCall(1)); // Deve logar 2 ainda</code></pre>
+console.log(adder.addThruCall(1)); // Deve logar 2 ainda
+```
 
-<h3 id="Sem_ligação_(binding)_de_argumentos_(arguments)">Sem ligação (<em>binding</em>) de argumentos (<code><em>arguments</em></code>)</h3>
+### Sem ligação (_binding_) de argumentos (`arguments`)
 
-<p><em>Arrow functions</em> não tem o próprio objeto argumentos (<a href="/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments">arguments object</a>). Assim, neste exemplo, <code>arguments</code> é simplesmente uma referência aos argumentos do escopo encapsulado:</p>
+_Arrow functions_ não tem o próprio objeto argumentos ([arguments object](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments)). Assim, neste exemplo, `arguments` é simplesmente uma referência aos argumentos do escopo encapsulado:
 
-<pre><code>var arguments = [1, 2, 3];
-var arr = () =&gt; arguments[0];
+```
+var arguments = [1, 2, 3];
+var arr = () => arguments[0];
 
 arr(); // 1
 
 function foo(n) {
-  var f = () =&gt; arguments[0] + n; // ligação implícita dos argumentos de foo. arguments[0] é n
+  var f = () => arguments[0] + n; // ligação implícita dos argumentos de foo. arguments[0] é n
   return f();
 }
 
-foo(3); // 6</code></pre>
+foo(3); // 6
+```
 
-<p>Na maioria dos casos, usar parâmetros rest (<em><a href="/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest parameters</a></em>) é uma boa alternativa a usar um objeto <code>arguments</code>.</p>
+Na maioria dos casos, usar parâmetros rest (_[rest parameters](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters)_) é uma boa alternativa a usar um objeto `arguments`.
 
-<pre class="brush: js"><code>function foo(n) {
-  var f = (...args) =&gt; args[0] + n;
+```js
+function foo(n) {
+  var f = (...args) => args[0] + n;
   return f(10);
 }
 
-foo(1); // 11</code></pre>
+foo(1); // 11
+```
 
-<h3 id="Arrow_functions_usadas_como_métodos"><em>Arrow functions</em> usadas como métodos</h3>
+### _Arrow functions_ usadas como métodos
 
-<p>Como afirmado anteriormente, expressões <em>arrow function</em> são melhores para funções que não sejam métods. Vamos ver o que acontece quando tentamos usá-las como métodos.</p>
+Como afirmado anteriormente, expressões _arrow function_ são melhores para funções que não sejam métods. Vamos ver o que acontece quando tentamos usá-las como métodos.
 
-<pre><code>'use strict';
+```
+'use strict';
 
 var obj = {
   i: 10,
-  b: () =&gt; console.log(this.i, this),
+  b: () => console.log(this.i, this),
   c: function() {
     console.log(this.i, this);
   }
 }
 
 obj.b(); // imprime undefined, Window {...} (ou o objeto global)
-obj.c(); // imprime 10, Object {...}</code></pre>
+obj.c(); // imprime 10, Object {...}
+```
 
-<p><em>Arrow functions</em> não tem o próprio <code>this</code>. Outro exemplo envolvendo {{jsxref("Object.defineProperty()")}}:</p>
+_Arrow functions_ não tem o próprio `this`. Outro exemplo envolvendo {{jsxref("Object.defineProperty()")}}:
 
-<pre><code>'use strict';
+```
+'use strict';
 
 var obj = {
   a: 10
 };
 
 Object.defineProperty(obj, 'b', {
-  get: () =&gt; {
+  get: () => {
     console.log(this.a, typeof this.a, this); // undefined 'undefined' Window {...} (ou o objeto global)
     return this.a + 10; // representa o objeto global 'Window', portanto 'this.a' retorna 'undefined'
   }
-});</code></pre>
+});
+```
 
-<h3 id="Uso_do_operador_new">Uso do operador <code>new</code></h3>
+### Uso do operador `new`
 
-<p>Arrow functions não podem ser usadas como construtores e lançarão um erro quando usadas com o <code>new</code>.</p>
+Arrow functions não podem ser usadas como construtores e lançarão um erro quando usadas com o `new`.
 
-<h3 id="Uso_da_propriedade_prototype">Uso da propriedade <code>prototype</code></h3>
+### Uso da propriedade `prototype`
 
-<p><em>Arrow functions</em> não têm a propriedade <code>prototype</code>.</p>
+_Arrow functions_ não têm a propriedade `prototype`.
 
-<pre><code>var Foo = () =&gt; {};
-console.log(Foo.prototype); // undefined</code></pre>
+```
+var Foo = () => {};
+console.log(Foo.prototype); // undefined
+```
 
-<h3 id="Uso_da_palavra_chave_yield">Uso da palavra chave <code>yield</code></h3>
+### Uso da palavra chave `yield`
 
-<p>A palavra chave <code><a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code> não pode ser usada no corpo de uma <em>arrow function</em> (exceto quando permitido dentro de funções aninhadas dentro delas). como consequência, <em>arrow functions</em> não podem ser usadas como geradoras (<em>generators</em>).</p>
+A palavra chave [`yield`](/pt-BR/docs/Web/JavaScript/Reference/Operators/yield) não pode ser usada no corpo de uma _arrow function_ (exceto quando permitido dentro de funções aninhadas dentro delas). como consequência, _arrow functions_ não podem ser usadas como geradoras (_generators_).
 
-<h2 id="Corpo_de_função">Corpo de função</h2>
+## Corpo de função
 
-<p><em>Arrow functions</em> podem ter um corpo conciso (<em>"concise body")</em> ou o usual corpo em bloco (<em>"block body")</em>.</p>
+_Arrow functions_ podem ter um corpo conciso (_"concise body")_ ou o usual corpo em bloco (_"block body")_.
 
-<p>Em um <em>concise body</em>, apenas uma expressão é especificada, a qual se torna o valor de retorno implícito. Em um <em>block body</em>, você precisa explicitamente usar a declaração de retorno, ou seja, o <code>return</code>.</p>
+Em um _concise body_, apenas uma expressão é especificada, a qual se torna o valor de retorno implícito. Em um _block body_, você precisa explicitamente usar a declaração de retorno, ou seja, o `return`.
 
-<pre><code>var func = x =&gt; x * x;
+```
+var func = x => x * x;
 // sintaxe de concise body. O "return" é implícito
 
-var func = (x, y) =&gt; { return x + y; };
-// Em um função com block body, é necessário um "return" explícito</code></pre>
+var func = (x, y) => { return x + y; };
+// Em um função com block body, é necessário um "return" explícito
+```
 
-<h2 id="Retornando_objetos_literais">Retornando objetos literais</h2>
+## Retornando objetos literais
 
-<p>Tenha em mente que retornar objetos literais usando a sintaxe de corpo conciso (<em>concise body</em>) <code>params =&gt; {object:literal}</code> não funcionará como esperado.</p>
+Tenha em mente que retornar objetos literais usando a sintaxe de corpo conciso (_concise body_) `params => {object:literal}` não funcionará como esperado.
 
-<pre><code>var func = () =&gt; { foo: 1 };
+```
+var func = () => { foo: 1 };
 // Chamar func() retornará undefined!
 
-var func = () =&gt; { foo: function() {} };
-// SyntaxError (Erro de sintaxe): a declaração da função requer um nome</code></pre>
+var func = () => { foo: function() {} };
+// SyntaxError (Erro de sintaxe): a declaração da função requer um nome
+```
 
-<p> </p>
+Isto acontece porque o código dentro das chaves ({}) é convertido como uma sequência de sentenças (ex: `foo` é tratado como um título, não como uma chave num objeto literal).
 
-<p>Isto acontece porque o código dentro das chaves ({}) é convertido como uma sequência de sentenças (ex: <code>foo</code> é tratado como um título, não como uma chave num objeto literal).</p>
+Se lembre de envolver o objeto literal em parênteses.
 
-<p>Se lembre de envolver o objeto literal em parênteses.</p>
+```
+var func = () => ({foo: 1});
+```
 
-<pre><code>var func = () =&gt; ({foo: 1});</code>
-</pre>
+## Quebras de linha
 
-<h2 id="Quebras_de_linha">Quebras de linha</h2>
+Uma _arrow function_ não pode conter uma quebra de linha entre seus parâmetros e sua flecha.
 
-<p>Uma <em>arrow function</em> não pode conter uma quebra de linha entre seus parâmetros e sua flecha.</p>
+```
+var func = (a, b, c)
+           => 1;
+// SyntaxError (Erro de sintaxe): esperada expressão, mas obteve '=>'
+```
 
-<pre><code>var func = (a, b, c)
-           =&gt; 1;
-// SyntaxError (Erro de sintaxe): esperada expressão, mas obteve '=&gt;'</code></pre>
+Entretanto, isto pode ser corrigido ao usar parênteses ou colocar a quebra de linha dentro dos argumentos como visto abaixo para garantir que o código permaneça bonito e leve.
 
-<p>Entretanto, isto pode ser corrigido ao usar parênteses ou colocar a quebra de linha dentro dos argumentos como visto abaixo para garantir que o código permaneça bonito e leve.</p>
-
-<pre class="brush: js"><code>var func = (
+```js
+var func = (
   a,
   b,
   c
-) =&gt; (
+) => (
   1
 );
-// SyntaxError (erro de sintaxe) não é lançado</code></pre>
+// SyntaxError (erro de sintaxe) não é lançado
+```
 
-<p> </p>
+## Ordem de análise
 
-<h2 id="Ordem_de_análise">Ordem de análise</h2>
+Apesar de a flecha numa _arrow function_ não ser um operador, _arrow functions_ possuem regras especiais de análise que interagem diferentemente com precedência de operador ([operator precedence](/pt-BR/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)) comparadas à funções comuns.
 
-<p>Apesar de a flecha numa <em>arrow function</em> não ser um operador, <em>arrow functions</em> possuem regras especiais de análise que interagem diferentemente com precedência de operador (<a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">operator precedence</a>) comparadas à funções comuns.</p>
-
-<pre><code>let callback;
+```
+let callback;
 
 callback = callback || function() {}; // ok
 
-callback = callback || () =&gt; {};
+callback = callback || () => {};
 // SyntaxError (Erro de sintaxe): argumentos inválidos de arrow-function
 
-callback = callback || (() =&gt; {});    // ok</code></pre>
+callback = callback || (() => {});    // ok
+```
 
-<p> </p>
+## Mais exemplos
 
-<h2 id="Mais_exemplos">Mais exemplos</h2>
+```
+// Uma arrow function vazia retorna undefined
+let empty = () => {};
 
-<pre><code>// Uma arrow function vazia retorna undefined
-let empty = () =&gt; {};
-
-(() =&gt; 'foobar')();
+(() => 'foobar')();
 // Retorna "foobar"
 // (esta é uma Expressão de Função Invocada Imediatamente (Immediately Invoked Function Expression)
 // veja 'IIFE' no glossário)
 
-var simple = a =&gt; a &gt; 15 ? 15 : a;
+var simple = a => a > 15 ? 15 : a;
 simple(16); // 15
 simple(10); // 10
 
-let max = (a, b) =&gt; a &gt; b ? a : b;
+let max = (a, b) => a > b ? a : b;
 
 // Mapeamento, filtragem, ... simples de array
 
 var arr = [5, 6, 13, 0, 1, 18, 23];
 
-var sum = arr.reduce((a, b) =&gt; a + b);
+var sum = arr.reduce((a, b) => a + b);
 // 66
 
-var even = arr.filter(v =&gt; v % 2 == 0);
+var even = arr.filter(v => v % 2 == 0);
 // [6, 0, 18]
 
-var double = arr.map(v =&gt; v * 2);
+var double = arr.map(v => v * 2);
 // [10, 12, 26, 0, 2, 36, 46]
 
-// Cadeias de promessa (<em>promisse chains</em>) mais concisas
-promise.then(a =&gt; {
+// Cadeias de promessa (promisse chains) mais concisas
+promise.then(a => {
   // ...
-}).then(b =&gt; {
+}).then(b => {
   // ...
 });
 
 // Arrow functions sem parâmetros que são visualmente mais fáceis de analisar
-setTimeout( () =&gt; {
+setTimeout( () => {
   console.log('E aconteço antes');
-  setTimeout( () =&gt; {
+  setTimeout( () => {
     // deeper code
     console.log('Eu aconteço depois');
   }, 1);
-}, 1);</code></pre>
+}, 1);
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-arrow-function-definitions', 'Arrow Function Definitions')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-arrow-function-definitions', 'Arrow Function Definitions')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                        | Status                       | Comentário         |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('ES2015', '#sec-arrow-function-definitions', 'Arrow Function Definitions')}} | {{Spec2('ES2015')}}     | Definição inicial. |
+| {{SpecName('ESDraft', '#sec-arrow-function-definitions', 'Arrow Function Definitions')}} | {{Spec2('ESDraft')}} |                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>{{Compat("javascript.functions.arrow_functions")}}</div>
-
-<div id="compat-mobile"> </div>
+{{Compat("javascript.functions.arrow_functions")}}

@@ -8,203 +8,211 @@ tags:
   - argumentos
 translation_of: Web/JavaScript/Reference/Functions/arguments
 ---
-<div>
-<div>{{jsSidebar("Functions")}}</div>
-</div>
+{{jsSidebar("Functions")}}
 
-<p>O objeto <strong><code>arguments</code></strong> é como um objeto Array correspondendo aos argumentos passados para uma função.</p>
+O objeto **`arguments`** é como um objeto Array correspondendo aos argumentos passados para uma função.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">arguments</pre>
+```
+arguments
+```
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O objeto <code>arguments</code> é uma variável local disponível dentro de todas as funções. Você pode referenciar os argumentos de uma função dentro da função usando o objeto <code>arguments</code>. Esse objeto contém um registro para cada argumento fornecido para a função, com o índice do primeiro registro começando em 0. Por exemplo, se são passados três argumentos para uma função, você pode referenciá-los como a seguir: </p>
+O objeto `arguments` é uma variável local disponível dentro de todas as funções. Você pode referenciar os argumentos de uma função dentro da função usando o objeto `arguments`. Esse objeto contém um registro para cada argumento fornecido para a função, com o índice do primeiro registro começando em 0. Por exemplo, se são passados três argumentos para uma função, você pode referenciá-los como a seguir:
 
-<pre class="brush: js">arguments[0]
+```js
+arguments[0]
 arguments[1]
 arguments[2]
-</pre>
+```
 
-<p>Os argumentos também podem ser definidos:</p>
+Os argumentos também podem ser definidos:
 
-<pre class="brush: js">arguments[1] = 'novo valor';</pre>
+```js
+arguments[1] = 'novo valor';
+```
 
-<p>O objeto <code>argumentos</code> não é um {{jsxref("Array")}}. É similar a um Array, mas não possui as propriedades de <code>Array</code>, exceto <code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments/length" title="JavaScript/Reference/Functions_and_function_scope/arguments/length">length</a></code>. Por exemplo, ele não possui o método <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop" title="JavaScript/Reference/Global_Objects/Array/pop">pop</a></code>. Entretanto, ele pode ser convertido em um <code>Array</code> real:</p>
+O objeto `argumentos` não é um {{jsxref("Array")}}. É similar a um Array, mas não possui as propriedades de `Array`, exceto [`length`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/length "JavaScript/Reference/Functions_and_function_scope/arguments/length"). Por exemplo, ele não possui o método [`pop`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop "JavaScript/Reference/Global_Objects/Array/pop"). Entretanto, ele pode ser convertido em um `Array` real:
 
-<pre class="brush: java"><code>var args = Array.prototype.slice.call(arguments);
+```java
+var args = Array.prototype.slice.call(arguments);
 var args = [].slice.call(arguments);
 
 // ES2015
-var args = Array.from(arguments);</code></pre>
+var args = Array.from(arguments);
+```
 
-<div class="warning">
-<p>Usar slice nos argumentos impedem otimizações em alguns motores JavaScript (V8 por exemplo - <a href="https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments">mais informações</a>). Se você precisar, tente construir um novo array iterando através dos argumentos do objeto. Uma alternativa seria usar o construtor do <code>Array</code> como uma função:</p>
+> **Aviso:** Usar slice nos argumentos impedem otimizações em alguns motores JavaScript (V8 por exemplo - [mais informações](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments)). Se você precisar, tente construir um novo array iterando através dos argumentos do objeto. Uma alternativa seria usar o construtor do `Array` como uma função:
+>
+> ```js
+> var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
+> ```
 
-<pre class="brush: js"><code>var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));</code></pre>
-</div>
+Você pode usar o objeto `arguments` se você chamar uma função com mais argumentos do que ele é formalmente declarado para aceitar. Esta técnica é útil para funções que podem ser passada em um número de variáveis de argumentos. Você pode usar [`arguments.length`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length "JavaScript/Reference/Functions_and_function_scope/arguments/length") para determinar o número de argumentos passado para a função, e então processar cada argumento usando o objeto `arguments`. Para determinar o número de parâmetros declarados na [assinatura](/pt-BR/docs/Glossary/Signature/Function) da função, use a propriedade[` Function.length`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/length "JavaScript/Reference/Global_Objects/Function/length").
 
-<p>Você pode usar o objeto <code>arguments</code> se você chamar uma função com mais argumentos do que ele é formalmente declarado para aceitar. Esta técnica é útil para funções que podem ser passada em um número de variáveis de argumentos. Você pode usar <code><a href="/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length" title="JavaScript/Reference/Functions_and_function_scope/arguments/length">arguments.length</a></code> para determinar o número de argumentos passado para a função, e então processar cada argumento usando o objeto <code>arguments</code>. Para determinar o número de parâmetros declarados na <a href="/pt-BR/docs/Glossary/Signature/Function">assinatura</a> da função, use a propriedade<code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function/length" title="JavaScript/Reference/Global_Objects/Function/length"> Function.length</a></code>.</p>
+### Usando typeof com Arguments
 
-<h3 id="Usando_typeof_com_Arguments">Usando typeof com Arguments</h3>
+O comando `typeof arguments` retorna 'object'.
 
-<p>O comando <code>typeof arguments</code> retorna 'object'. </p>
+```js
+console.log(typeof arguments); // 'object'
+```
 
-<pre class="brush: js"><code>console.log(typeof arguments); // 'object'</code></pre>
+O `typeof` de argumentos individuais pode ser determinado com o uso do índice.
 
-<p>O <code>typeof</code> de argumentos individuais pode ser determinado com o uso do índice.</p>
+```js
+console.log(typeof arguments[0]); //this will return the typeof individual arguments.
+```
 
-<pre class="brush: js"><code>console.log(typeof arguments[0]); //this will return the typeof individual arguments.</code></pre>
+### Usando a Sintaxe Spread com Arguments
 
-<h3 id="Usando_a_Sintaxe_Spread_com_Arguments">Usando a Sintaxe Spread com Arguments</h3>
+Você também pode usar o método {{jsxref("Array.from()")}} ou o [operador spread](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator) para converter argumentos em um Array real:
 
-<p>Você também pode usar o método {{jsxref("Array.from()")}} ou o <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator">operador spread</a> para converter argumentos em um Array real:</p>
+```js
+var args = Array.from(arguments);
+var args = [...arguments];
+```
 
-<pre class="brush: js"><code>var args = Array.from(arguments);
-var args = [...arguments];</code></pre>
+## Propriedades
 
-<h2 id="Propriedades">Propriedades</h2>
+- [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee "JavaScript/Reference/Functions_and_function_scope/arguments/callee")
+  - : Referência para a função atualmente em execução.
+- [`arguments.caller`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/caller "JavaScript/Reference/Functions_and_function_scope/arguments/caller") {{ Obsolete_inline() }}
+  - : Referência para a função que invocou a função atualmente em execução.
+- [`arguments.length`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/length "JavaScript/Reference/Functions_and_function_scope/arguments/length")
+  - : Referência para o número de argumentos passados para a função.
+- [`arguments[@@iterator]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator "JavaScript/Reference/Functions_and_function_scope/arguments/@@iterator")
+  - : Retorna um novo objeto Array Iterator que contém os valores para cada índice dos argumentos.
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee" title="JavaScript/Reference/Functions_and_function_scope/arguments/callee">arguments.callee</a></code></dt>
- <dd>Referência para a função atualmente em execução.</dd>
- <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments/caller" title="JavaScript/Reference/Functions_and_function_scope/arguments/caller">arguments.caller</a></code> {{ Obsolete_inline() }}</dt>
- <dd>Referência para a função que invocou a função atualmente em execução.</dd>
- <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments/length" title="JavaScript/Reference/Functions_and_function_scope/arguments/length">arguments.length</a></code></dt>
- <dd>Referência para o número de argumentos passados para a função.</dd>
- <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator" title="JavaScript/Reference/Functions_and_function_scope/arguments/@@iterator">arguments[@@iterator]</a></code></dt>
- <dd>Retorna um novo objeto Array Iterator que contém os valores para cada índice dos argumentos.</dd>
-</dl>
+## Exemplos
 
-<h2 id="Exemplos">Exemplos</h2>
+### Definindo uma função que concatena várias strings
 
-<h3 id="Definindo_uma_função_que_concatena_várias_strings">Definindo uma função que concatena várias strings</h3>
+Este exemplo define uma função que concatena várias strings. O único argumento formal para a função é uma string que especifica os caracteres que separam os itens a concatenar. A função é definida como se segue:
 
-<p>Este exemplo define uma função que concatena várias strings. O único argumento formal para a função é uma string que especifica os caracteres que separam os itens a concatenar. A função é definida como se segue:</p>
-
-<pre class="brush:js">function myConcat(separator) {
+```js
+function myConcat(separator) {
   var args = Array.prototype.slice.call(arguments, 1);
   return args.join(separator);
-}</pre>
+}
+```
 
-<p>Você pode passar qualquer número de argumentos para essa função e ela cria uma lista usando cada argumento como um item na lista.</p>
+Você pode passar qualquer número de argumentos para essa função e ela cria uma lista usando cada argumento como um item na lista.
 
-<pre class="brush:js">// returns "red, orange, blue"
+```js
+// returns "red, orange, blue"
 myConcat(", ", "red", "orange", "blue");
 
 // returns "elephant; giraffe; lion; cheetah"
 myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
 
 // returns "sage. basil. oregano. pepper. parsley"
-myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");</pre>
+myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
+```
 
-<h3 id="Definindo_uma_função_que_cria_listas_HTML">Definindo uma função que cria listas HTML</h3>
+### Definindo uma função que cria listas HTML
 
-<p>Este exemplo define uma função que cria uma string contatenado HTML para uma lista. O único argumento formal para a função é uma string que é "u" se a lista for desordenada (marcadores), ou "o" se a lista for ordenada (numerada). A função é definida como se segue:</p>
+Este exemplo define uma função que cria uma string contatenado HTML para uma lista. O único argumento formal para a função é uma string que é "u" se a lista for desordenada (marcadores), ou "o" se a lista for ordenada (numerada). A função é definida como se segue:
 
-<pre class="brush:js">function list(type) {
-  var result = "&lt;" + type + "l&gt;&lt;li&gt;";
+```js
+function list(type) {
+  var result = "<" + type + "l><li>";
   var args = Array.prototype.slice.call(arguments, 1);
-  result += args.join("&lt;/li&gt;&lt;li&gt;");
-  result += "&lt;/li&gt;&lt;/" + type + "l&gt;"; // end list
+  result += args.join("</li><li>");
+  result += "</li></" + type + "l>"; // end list
 
   return result;
-}</pre>
+}
+```
 
-<p>Você pode passar qualquer número de argumentos para essa função, e ela adiciona cada argumento como um item para uma lista do tipo indicado. Por exemplo:</p>
+Você pode passar qualquer número de argumentos para essa função, e ela adiciona cada argumento como um item para uma lista do tipo indicado. Por exemplo:
 
-<pre class="brush:js">var listHTML = list("u", "One", "Two", "Three");
+```js
+var listHTML = list("u", "One", "Two", "Three");
 
 /* listHTML is:
 
-"&lt;ul&gt;&lt;li&gt;One&lt;/li&gt;&lt;li&gt;Two&lt;/li&gt;&lt;li&gt;Three&lt;/li&gt;&lt;/ul&gt;"
+"<ul><li>One</li><li>Two</li><li>Three</li></ul>"
 
-*/</pre>
+*/
+```
 
-<h3 id="Rest_default_e_parâmetros_desestruturados">Rest, default e parâmetros desestruturados</h3>
+### Rest, default e parâmetros desestruturados
 
-<p>O objeto <code>arguments</code> pode ser usado em conjunto com os parâmetros <a href="/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest</a>, <a href="/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters">default</a> e <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destruturados</a>.</p>
+O objeto `arguments` pode ser usado em conjunto com os parâmetros [rest](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters) e [destruturados](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 
-<pre class="brush: js"><code>function foo(...args) {
+```js
+function foo(...args) {
   return args;
 }
-foo(1, 2, 3); // [1,2,3]</code></pre>
+foo(1, 2, 3); // [1,2,3]
+```
 
-<p>Enquanto a presença dos parâmetros <a href="/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest</a>, <a href="/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters">default</a>, ou <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">desestruturados</a> não alteram o <a href="/pt-BR/docs/Web/JavaScript/Reference/Strict_mode#Making_eval_and_arguments_simpler">comportamento do objeto <code>arguments</code> no código em strict mode</a>, existe uma sutil diferença para o código non-strict.</p>
+Enquanto a presença dos parâmetros [rest](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters), ou [desestruturados](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) não alteram o [comportamento do objeto `arguments` no código em strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode#Making_eval_and_arguments_simpler), existe uma sutil diferença para o código non-strict.
 
-<p>Quando uma função não-strict <strong><strong>não</strong></strong> contém parâmetros <a href="/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest</a>, <a href="/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters">default</a>, ou <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">desestruturados</a>, os valores no objeto <code>arguments</code> <strong>modificam</strong> os valores dos argumentos (e vice-versa). Veja o código:</p>
+Quando uma função não-strict \***\*não\*\*** contém parâmetros [rest](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters), ou [desestruturados](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), os valores no objeto `arguments` **modificam** os valores dos argumentos (e vice-versa). Veja o código:
 
-<pre class="brush: js"><code>function func(a) {
+```js
+function func(a) {
   arguments[0] = 99; // updating arguments[0] also updates a
   console.log(a);
 }
-func(10); // 99</code></pre>
+func(10); // 99
+```
 
-<p>e</p>
+e
 
-<pre class="brush: js"><code>function func(a) {
+```js
+function func(a) {
   a = 99; // updating a also updates arguments[0]
   console.log(arguments[0]);
 }
-func(10); // 99</code></pre>
+func(10); // 99
+```
 
-<p>Quando uma função não-strict <strong>contém</strong> parâmetros <a href="/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest</a>, <a href="/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters">default</a>, ou <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">desestruturados</a>, os valores no objeto <code>arguments</code> <strong>não modificam</strong> os valores dos argumentos (e vice-versa). Ao invés disso, eles refletem os argumentos fornecidos no momento da chamada:</p>
+Quando uma função não-strict **contém** parâmetros [rest](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters), ou [desestruturados](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), os valores no objeto `arguments` **não modificam** os valores dos argumentos (e vice-versa). Ao invés disso, eles refletem os argumentos fornecidos no momento da chamada:
 
-<pre class="brush: js"><code>function func(a = 55) {
+```js
+function func(a = 55) {
   arguments[0] = 99; // updating arguments[0] does not also update a
   console.log(a);
 }
-func(10); // 10</code></pre>
+func(10); // 10
+```
 
-<p>e</p>
+e
 
-<pre class="brush: js"><code>function func(a = 55) {
+```js
+function func(a = 55) {
   a = 99; // updating a does not also update arguments[0]
   console.log(arguments[0]);
 }
-func(10); // 10</code></pre>
+func(10); // 10
+```
 
-<p>e</p>
+e
 
-<pre class="brush: js"><code>function func(a = 55) {
+```js
+function func(a = 55) {
   console.log(arguments[0]);
 }
-func(); // undefined</code></pre>
+func(); // undefined
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição inicial. Implementado em JavaScript 1.1</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-10.6', 'Arguments Object')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificações                                                                                               | Status                   | Comentário                                        |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}     | Definição inicial. Implementado em JavaScript 1.1 |
+| {{SpecName('ES5.1', '#sec-10.6', 'Arguments Object')}}                                     | {{Spec2('ES5.1')}} |                                                   |
+| {{SpecName('ES6', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}} | {{Spec2('ES6')}}     |                                                   |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.functions.arguments")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Function")}}</li>
-</ul>
+- {{jsxref("Function")}}

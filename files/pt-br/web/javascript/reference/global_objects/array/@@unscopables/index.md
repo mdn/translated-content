@@ -1,5 +1,5 @@
 ---
-title: 'Array.prototype[@@unscopables]'
+title: Array.prototype[@@unscopables]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
 tags:
   - ES2015
@@ -8,27 +8,28 @@ tags:
   - Prototipo
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}A propriedade de símbolo **`@@unscopable`** contém nomes de propriedades que não foram incluídos no padrão ECMAScript antes da versão ES2015. Essas propriedades são excluídas do statement bindings [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with).
 
-<div>A propriedade de símbolo <code><strong>@@unscopable</strong></code> contém nomes de propriedades que não foram incluídos no padrão ECMAScript antes da versão ES2015. Essas propriedades são excluídas do statement bindings <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/with">with</a></code>. </div>
+## Sintaxe
 
-<h2 id="Sintaxe">Sintaxe</h2>
+```
+arr[Symbol.unscopables]
+```
 
-<pre class="syntaxbox"><var>arr</var>[Symbol.unscopables]</pre>
+## Descrição
 
-<h2 id="Descrição">Descrição</h2>
+As propriedades padrão de array que são excluídas dos bindings `with` são: copyWithin, entries, fill, find, findIndex, includes, keys, e values.
 
-<p>As propriedades padrão de array que são excluídas dos bindings <code>with</code> são: copyWithin, entries, fill, find, findIndex, includes, keys, e values.</p>
+Veja {{jsxref("Symbol.unscopables")}} para saber como definir `unscopables` para seus objetos.
 
-<p>Veja {{jsxref("Symbol.unscopables")}} para saber como definir <code>unscopables</code> para seus objetos.</p>
+{{js_property_attributes(0,0,1)}}
 
-<p>{{js_property_attributes(0,0,1)}}</p>
+## Exemplos
 
-<h2 id="Exemplos">Exemplos</h2>
+O código a seguir funciona bem no ES5 e abaixo. No entanto, no ECMAScript 2015 e posterior, o método {{jsxref("Array.prototype.keys()")}} foi introduzido. Isso significa que dentro de ambientes `with`, as "keys" seriam agora o método e não a variável. É aqui que a propriedade de símbolo `@@unscopables` `Array.prototype[@@unscopables]` entra em ação e impede que alguns métodos do Array estejam sendo definidos na instrução `with`.
 
-<p>O código a seguir funciona bem no ES5 e abaixo. No entanto, no ECMAScript 2015 e posterior, o método {{jsxref("Array.prototype.keys()")}} foi introduzido. Isso significa que dentro de ambientes <code>with</code>, as "keys" seriam agora o método e não a variável. É aqui que a propriedade de símbolo <code>@@unscopables</code> <code>Array.prototype[@@unscopables]</code> entra em ação e impede que alguns métodos do Array estejam sendo definidos na instrução <code>with</code>.</p>
-
-<pre class="brush: js">var keys = [];
+```js
+var keys = [];
 
 with (Array.prototype) {
   keys.push('alguma coisa');
@@ -36,40 +37,20 @@ with (Array.prototype) {
 
 Object.keys(Array.prototype[Symbol.unscopables]);
 // ["copyWithin", "entries", "fill", "find", "findIndex",
-//  "includes", "keys", "values"]</pre>
+//  "includes", "keys", "values"]
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-array.prototype-@@unscopables', 'Array.prototype[@@unscopables]')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype-@@unscopables', 'Array.prototype[@@unscopables]')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                    | Status                       | Comentário          |
+| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES2015', '#sec-array.prototype-@@unscopables', 'Array.prototype[@@unscopables]')}}     | {{Spec2('ES2015')}}     | Initial definition. |
+| {{SpecName('ESDraft', '#sec-array.prototype-@@unscopables', 'Array.prototype[@@unscopables]')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
+{{Compat("javascript.builtins.Array.@@unscopables")}}
 
+## Veja também
 
-<p>{{Compat("javascript.builtins.Array.@@unscopables")}}</p>
-</div>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{jsxref("Symbol.unscopables")}}</li>
-</ul>
+- {{jsxref("Symbol.unscopables")}}

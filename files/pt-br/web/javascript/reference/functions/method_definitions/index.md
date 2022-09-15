@@ -10,54 +10,58 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions/Method_definitions
 original_slug: Web/JavaScript/Reference/Functions/Definicoes_metodos
 ---
-<div>{{JsSidebar("Functions")}}</div>
+{{JsSidebar("Functions")}}
 
-<p>No ECMAScript 2015 foi introduzida uma sintaxe reduzida para definição de métodos em inicializadores de objetos. É uma abreviação para uma função atribuída ao nome do método.</p>
+No ECMAScript 2015 foi introduzida uma sintaxe reduzida para definição de métodos em inicializadores de objetos. É uma abreviação para uma função atribuída ao nome do método.
 
-<p>{{EmbedInteractiveExample("pages/js/functions-definitions.html")}}</p>
+{{EmbedInteractiveExample("pages/js/functions-definitions.html")}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var obj = {
-  <var>propriedade</var>( <var>parametros…</var> ) {},
-  *<var>generator</var>( <var>parametros…</var> ) {},
+```
+var obj = {
+  propriedade( parametros… ) {},
+  *generator( parametros… ) {},
 // também com chaves computadas:
-  [<var>propriedade</var>]( <var>parameters…</var> ) {},
-  *[generator]( <var>parametros…</var> ) {},
+  [propriedade]( parameters… ) {},
+  *[generator]( parametros… ) {},
 // compare ES5 sintaxe para getter/setter:
-  get <var>propriedade</var>() {},
-  set <var>propriedade</var>(<var>valor</var>) {}
+  get propriedade() {},
+  set propriedade(valor) {}
 };
-</pre>
+```
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>A sintaxe reduzida é similar à da <a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">getter</a> e <a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setter</a>  introduzida no ECMAScript 5.</p>
+A sintaxe reduzida é similar à da [getter](/pt-BR/docs/Web/JavaScript/Reference/Functions/get) e [setter](/pt-BR/docs/Web/JavaScript/Reference/Functions/set) introduzida no ECMAScript 5.
 
-<p>Dado o seguinte código:</p>
+Dado o seguinte código:
 
-<pre class="brush: js">var obj = {
+```js
+var obj = {
   foo: function() {},
   bar: function() {}
-};</pre>
+};
+```
 
-<p>Agora você pode reduzi-lo para isto:</p>
+Agora você pode reduzi-lo para isto:
 
-<pre class="brush: js">var obj = {
+```js
+var obj = {
   foo() {},
   bar() {}
-};</pre>
+};
+```
 
-<h3 id="Generator_methods">Generator methods</h3>
+### Generator methods
 
-<p>Os <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/function*">generator methods</a> também podem ser definidos utilizando a sintaxe reduzida.</p>
+Os [generator methods](/pt-BR/docs/Web/JavaScript/Reference/Statements/function*) também podem ser definidos utilizando a sintaxe reduzida.
 
-<ul>
- <li>Observe que o asterisco (*) na sintaxe reduzida deve estar antes do nome da propriedade generator. Assim, <code>* g(){}</code> funcionará, porém <code>g *(){}</code> não.</li>
- <li>Se o método não for generator, sua definição não pode conter a palavra-chave <code>yield</code>. Dessa forma, <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/Generator_function_legada">generator functions legadas </a>também não funcionarão, lançando um {{jsxref("SyntaxError")}}. Sempre utilize <code>yield</code> em conjunto com o asterisco (*)</li>
-</ul>
+- Observe que o asterisco (\*) na sintaxe reduzida deve estar antes do nome da propriedade generator. Assim, `* g(){}` funcionará, porém `g *(){}` não.
+- Se o método não for generator, sua definição não pode conter a palavra-chave `yield`. Dessa forma, [generator functions legadas ](/pt-BR/docs/Web/JavaScript/Reference/Statements/Generator_function_legada)também não funcionarão, lançando um {{jsxref("SyntaxError")}}. Sempre utilize `yield` em conjunto com o asterisco (\*)
 
-<pre class="brush: js">// Utilizando a propriedade com nome (pre-ES6)
+```js
+// Utilizando a propriedade com nome (pre-ES6)
 var obj2 = {
   g: function*() {
     var indice = 0;
@@ -77,13 +81,15 @@ var obj2 = {
 
 var coisa = obj2.g();
 console.log(coisa.next().value); // 0
-console.log(coisa.next().value); // 1</pre>
+console.log(coisa.next().value); // 1
+```
 
-<h3 id="Métodos_assíncronos">Métodos assíncronos</h3>
+### Métodos assíncronos
 
-<p>{{jsxref("Statements/funcoes_assincronas", "Funções assíncronas", "", 1)}} também podem ser definidas usando a sintaxe reduzida.</p>
+{{jsxref("Statements/funcoes_assincronas", "Funções assíncronas", "", 1)}} também podem ser definidas usando a sintaxe reduzida.
 
-<pre class="brush: js">// Utilizando a propriedade com nome (pre-ES6)
+```js
+// Utilizando a propriedade com nome (pre-ES6)
 var obj3 = {
   f: async function () {
     await alguma_promise;
@@ -95,13 +101,15 @@ var obj3 = {
   async f() {
     await alguma_promise;
   }
-};</pre>
+};
+```
 
-<h3 id="Generator_methods_assíncronos">Generator methods assíncronos</h3>
+### Generator methods assíncronos
 
-<p>  Os <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/function*">generator methods</a> também podem ser {{jsxref("Statements/funcoes_assincronas", "assíncronos", "", 1)}}</p>
+Os [generator methods](/pt-BR/docs/Web/JavaScript/Reference/Statements/function*) também podem ser {{jsxref("Statements/funcoes_assincronas", "assíncronos", "", 1)}}
 
-<pre class="brush: js">var obj4 = {
+```js
+var obj4 = {
   f: async function* () {
     yield 1;
     yield 2;
@@ -116,13 +124,15 @@ var obj4 = {
    yield 2;
    yield 3;
   }
-};</pre>
+};
+```
 
-<h3 id="Métodos_reduzidos_não_são_construíveis">Métodos reduzidos não são construíveis</h3>
+### Métodos reduzidos não são construíveis
 
-<p>Métodos assim definidos não são construtores e lançarão um {{jsxref("TypeError")}} se você tentar instanciá-los.</p>
+Métodos assim definidos não são construtores e lançarão um {{jsxref("TypeError")}} se você tentar instanciá-los.
 
-<pre class="brush: js">var obj = {
+```js
+var obj = {
   metodo() {},
 };
 new obj.metodo; // TypeError: obj.method is not a constructor
@@ -131,24 +141,26 @@ var obj = {
   * g() {}
 };
 new obj.g; // TypeError: obj.g is not a constructor (modificado no ES2016)
-</pre>
+```
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Caso_de_teste_simples">Caso de teste simples</h3>
+### Caso de teste simples
 
-<pre class="brush: js">var obj = {
+```js
+var obj = {
   a : "foo",
   b(){ return this.a; }
 };
 console.log(obj.b()); // "foo"
-</pre>
+```
 
-<h3 id="Nome_de_propriedades_computados">Nome de propriedades computados</h3>
+### Nome de propriedades computados
 
-<p>A sintaxe reduzida também suporta nome de propriedades computados.</p>
+A sintaxe reduzida também suporta nome de propriedades computados.
 
-<pre class="brush: js">var bar = {
+```js
+var bar = {
   foo0 : function (){return 0;},
   foo1(){return 1;},
   ["foo" + 2](){return 2;},
@@ -156,38 +168,22 @@ console.log(obj.b()); // "foo"
 
 console.log(bar.foo0()); // 0
 console.log(bar.foo1()); // 1
-console.log(bar.foo2()); // 2</pre>
+console.log(bar.foo2()); // 2
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-method-definitions', 'Method definitions')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificações                                                                                   | Estado                       | Comentário          |
+| ------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-method-definitions', 'Method definitions')}}     | {{Spec2('ES6')}}         | Initial definition. |
+| {{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.functions.method_definitions")}}</p>
+{{Compat("javascript.functions.method_definitions")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><code><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/get">get</a></code></li>
- <li><code><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/set">set</a></code></li>
- <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar">Gramática léxica</a></li>
-</ul>
+- [`get`](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/get)
+- [`set`](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/set)
+- [Gramática léxica](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar)

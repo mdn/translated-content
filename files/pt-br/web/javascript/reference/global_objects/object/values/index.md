@@ -3,32 +3,33 @@ title: Object.values()
 slug: Web/JavaScript/Reference/Global_Objects/Object/values
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/values
 ---
-<div>{{JSRef}} {{SeeCompatTable}}</div>
+{{JSRef}} {{SeeCompatTable}}
 
-<p>O método <code><strong>Object.values()</strong></code> retorna um array com os valores das propriedades de um dado objeto, na mesma ordem provida pelo {{jsxref("Statements/for...in", "for...in")}} laço (sendo a diferença que o laço for-in também enumera as propriedades na cadeia prototype).</p>
+O método **`Object.values()`** retorna um array com os valores das propriedades de um dado objeto, na mesma ordem provida pelo {{jsxref("Statements/for...in", "for...in")}} laço (sendo a diferença que o laço for-in também enumera as propriedades na cadeia prototype).
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">Object.values(<var>obj</var>)</pre>
+```
+Object.values(obj)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>O objeto cujos valores das propriedades enumeradas serão retornados.</dd>
-</dl>
+- `obj`
+  - : O objeto cujos valores das propriedades enumeradas serão retornados.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>Um array contendo os valores das propriedades enumeradas do dado objeto.</p>
+Um array contendo os valores das propriedades enumeradas do dado objeto.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p><code>Object.values()</code> retorna um array cujos elementos são os valores das propriedades enumeradas encontradas no objeto. A ordem das propriedades é a mesma que a dada pelo laço sobre os valores da propriedade do objeto manualmente.</p>
+`Object.values()` retorna um array cujos elementos são os valores das propriedades enumeradas encontradas no objeto. A ordem das propriedades é a mesma que a dada pelo laço sobre os valores da propriedade do objeto manualmente.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: js">var obj = { foo: "bar", baz: 42 };
+```js
+var obj = { foo: "bar", baz: 42 };
 console.log(Object.values(obj)); // ['bar', 42]
 
 // array como objeto
@@ -46,40 +47,27 @@ console.log(Object.values(my_obj)); // ['bar']
 
 // argumento não-objeto será coagido num objeto
 console.log(Object.values("foo")); // ['f', 'o', 'o']
-</pre>
+```
 
-<h2 id="Biblioteca_de_Suporte">Biblioteca de Suporte</h2>
+## Biblioteca de Suporte
 
-<p><code><font face="Open Sans, Arial, sans-serif">Para adicionar compatibilidade ao suporte de  </font>Object.values</code> em ambientes antigos que nativamente não o suportam, você pode encontrar uma biblioteca de suporte nos repositórios <a href="https://github.com/tc39/proposal-object-values-entries">tc39/proposal-object-values-entries</a> ou no <a href="https://github.com/es-shims/Object.values">es-shims/Object.values</a>.</p>
+`Para adicionar compatibilidade ao suporte de Object.values` em ambientes antigos que nativamente não o suportam, você pode encontrar uma biblioteca de suporte nos repositórios [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) ou no [es-shims/Object.values](https://github.com/es-shims/Object.values).
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Situação</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.values', 'Object.values')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Especificações                                                                       | Situação                     | Comentário          |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
+| {{SpecName('ESDraft', '#sec-object.values', 'Object.values')}} | {{Spec2('ESDraft')}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Object.values")}}
 
-<h2 id="Ver_também">Ver também</h2>
+## Ver também
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">Enumerability and ownership of properties</a></li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li>{{jsxref("Object.entries()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Object.prototype.propertyIsEnumerable()")}}</li>
- <li>{{jsxref("Object.create()")}}</li>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
-</ul>
+- [Enumerability and ownership of properties](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- {{jsxref("Object.keys()")}}
+- {{jsxref("Object.entries()")}} {{experimental_inline}}
+- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
+- {{jsxref("Object.create()")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}

@@ -3,29 +3,31 @@ title: super
 slug: Web/JavaScript/Reference/Operators/super
 translation_of: Web/JavaScript/Reference/Operators/super
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>A palavra-chave <strong>super</strong> é usada para acessar o objeto pai de um objeto, em outros casos, é usada para acessar a classe pai de uma classe.</p>
+A palavra-chave **super** é usada para acessar o objeto pai de um objeto, em outros casos, é usada para acessar a classe pai de uma classe.
 
-<h2 id="Síntaxe">Síntaxe</h2>
+## Síntaxe
 
-<pre class="syntaxbox">// chama o objeto (ou construtor) pai
+```
+// chama o objeto (ou construtor) pai
 super(...[arguments]);
 // chama um método da classe/objeto pai
 super.metodo([arguments]);
-</pre>
+```
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Quando usada no construtor de uma classe, a palavra-chave <code>super</code> deve ser usada apenas uma vez, e precisa ser usada antes que a palavra-chave <code>this</code> possa ser usada. Essa palavra-chave também pode ser usada para chamar uma função ou objeto pai.</p>
+Quando usada no construtor de uma classe, a palavra-chave `super` deve ser usada apenas uma vez, e precisa ser usada antes que a palavra-chave `this` possa ser usada. Essa palavra-chave também pode ser usada para chamar uma função ou objeto pai.
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<h3 id="Usando_super_em_classes">Usando <code>super</code> em classes</h3>
+### Usando `super` em classes
 
-<p>Esse trecho de código foi obtido através de <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">classes sample</a> (<a href="https://googlechrome.github.io/samples/classes-es6/index.html">demonstração</a>). Aqui <code>super()</code> é chamado para evitar duplicar a parte do construtor que é comum entre <code>Polygon</code> e <code>Square</code>.</p>
+Esse trecho de código foi obtido através de [classes sample](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html) ([demonstração](https://googlechrome.github.io/samples/classes-es6/index.html)). Aqui `super()` é chamado para evitar duplicar a parte do construtor que é comum entre `Polygon` e `Square`.
 
-<pre class="brush: js">class Polygon {
+```js
+class Polygon {
   constructor(height, width) {
     this.name = 'Polygon';
     this.height = height;
@@ -41,11 +43,11 @@ class Square extends Polygon {
     this.height; // ReferenceError, precisa chamar o super primeiro!
 
     // Aqui, ele chama a classe construtora pai com o tamanho
-    // provido pelo Polygon -&gt; width e height
+    // provido pelo Polygon -> width e height
     super(length, length);
 
-    // Nota: Em classes derivadas, <code>super()</code> deve ser chamado antes de
-    // usar <code>this</code>. Deixar isso de fora vai causar um ReferenceError.
+    // Nota: Em classes derivadas, super() deve ser chamado antes de
+    // usar this. Deixar isso de fora vai causar um ReferenceError.
     this.name = 'Square';
   }
 
@@ -56,13 +58,15 @@ class Square extends Polygon {
   set area(value) {
     this.area = value;
   }
-}</pre>
+}
+```
 
-<h3 id="Super_chamando_métodos_estáticos">Super chamando métodos estáticos</h3>
+### Super chamando métodos estáticos
 
-<p>Você também pode chamar o super em métodos <a href="/en-US/docs/Web/JavaScript/Reference/Classes/static">estáticos</a>.</p>
+Você também pode chamar o super em métodos [estáticos](/pt-BR/docs/Web/JavaScript/Reference/Classes/static).
 
-<pre class="brush: js">class Human {
+```js
+class Human {
   constructor() {}
   static ping() {
     return 'ping';
@@ -76,13 +80,14 @@ class Computer extends Human {
   }
 }
 Computer.pingpong(); // 'ping pong'
-</pre>
+```
 
-<h3 id="Ao_deletar_propriedades_do_super_será_emitido_um_erro">Ao deletar propriedades do super, será emitido um erro</h3>
+### Ao deletar propriedades do super, será emitido um erro
 
-<p>Você não pode utilizar o <a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete operator</a> e <code>super.prop</code> ou <code>super[expr]</code> para deletar uma propriedade da classe pai. Isto emitirá um {{jsxref("ReferenceError")}}.</p>
+Você não pode utilizar o [delete operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/delete) e `super.prop` ou `super[expr]` para deletar uma propriedade da classe pai. Isto emitirá um {{jsxref("ReferenceError")}}.
 
-<pre class="brush: js">class Base {
+```js
+class Base {
   constructor() {}
   foo() {}
 }
@@ -93,13 +98,15 @@ class Derived extends Base {
   }
 }
 
-new Derived().delete(); // ReferenceError: invalid delete involving 'super'. </pre>
+new Derived().delete(); // ReferenceError: invalid delete involving 'super'.
+```
 
-<h3 id="Super.prop_não_pode_sobrescrever_propriedades_não_editáveis"><code>Super.prop</code> não pode sobrescrever propriedades não editáveis</h3>
+### `Super.prop` não pode sobrescrever propriedades não editáveis
 
-<p><code>super</code>não pode sobrescrever o valor de uma propriedade quando esta houver sido definida como não editável ('writable: false') com, e.g., {{jsxref("Object.defineProperty")}}.</p>
+`super`não pode sobrescrever o valor de uma propriedade quando esta houver sido definida como não editável ('writable: false') com, e.g., {{jsxref("Object.defineProperty")}}.
 
-<pre class="brush: js">class X {
+```js
+class X {
   constructor() {
     Object.defineProperty(this, "prop", {
       configurable: true,
@@ -115,13 +122,14 @@ new Derived().delete(); // ReferenceError: invalid delete involving 'super'. </p
 var x = new X();
 x.f();
 console.log(x.prop); // 1
-</pre>
+```
 
-<h3 id="Usando_super.prop_em_objetos_literais">Usando <code>super.prop</code> em objetos literais</h3>
+### Usando `super.prop` em objetos literais
 
-<p><code>super</code> também pode ser usado na inicialização da notação literal de objetos. No exemplo abaixo, cada objeto define um método. No segundo objeto, <code>super</code> chama o método do primeiro objeto. Isso funciona graças ao {{jsxref("Object.setPrototypeOf()")}}, com o qual é possível configurar o prototype do <code>obj2</code> para o <code>obj1</code>, tornando o <code>super</code> capaz de encontrar o <code>method1()</code> por meio do <code>obj2</code>.</p>
+`super` também pode ser usado na inicialização da notação literal de objetos. No exemplo abaixo, cada objeto define um método. No segundo objeto, `super` chama o método do primeiro objeto. Isso funciona graças ao {{jsxref("Object.setPrototypeOf()")}}, com o qual é possível configurar o prototype do `obj2` para o `obj1`, tornando o `super` capaz de encontrar o `method1()` por meio do `obj2`.
 
-<pre class="brush: js">var obj1 = {
+```js
+var obj1 = {
   method1() {
     console.log("method 1");
   }
@@ -135,42 +143,23 @@ var obj2 = {
 
 Object.setPrototypeOf(obj2, obj1);
 obj2.method2(); // retorna "method 1"
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-super-keyword', 'super')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-super-keyword', 'super')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                            | Status                       | Comment            |
+| ------------------------------------------------------------------------ | ---------------------------- | ------------------ |
+| {{SpecName('ES6', '#sec-super-keyword', 'super')}}     | {{Spec2('ES6')}}         | Definição inicial. |
+| {{SpecName('ESDraft', '#sec-super-keyword', 'super')}} | {{Spec2('ESDraft')}} |                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.operators.super")}}
 
-<h2 id="Notas_Gecko_específicas">Notas Gecko específicas</h2>
+## Notas Gecko específicas
 
-<ul>
- <li><code>super()</code> ainda não funciona como esperado para prototypes nativos.</li>
-</ul>
+- `super()` ainda não funciona como esperado para prototypes nativos.
 
-<h2 id="Veja_mais">Veja mais</h2>
+## Veja mais
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
-</ul>
+- [Classes](/pt-BR/docs/Web/JavaScript/Reference/Classes)

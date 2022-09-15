@@ -3,60 +3,60 @@ title: 'ReferenceError: Atribuição à variável não declarada "x"'
 slug: Web/JavaScript/Reference/Errors/Undeclared_var
 translation_of: Web/JavaScript/Reference/Errors/Undeclared_var
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="syntaxbox">ReferenceError: Atribuição à variável não declarada "x"(Firefox)
+```
+ReferenceError: Atribuição à variável não declarada "x"(Firefox)
 ReferenceError: "x" não está definido (Chrome)
-ReferenceError: Variável indefinida em <em>strict mode</em> (Edge)
-</pre>
+ReferenceError: Variável indefinida em strict mode (Edge)
+```
 
-<h2 id="Tipo_de_erro">Tipo de erro</h2>
+## Tipo de erro
 
-<p>{{jsxref("ReferenceError")}} aviso em <em><a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a></em> somente.</p>
+{{jsxref("ReferenceError")}} aviso em _[strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode)_ somente.
 
-<h2 id="O_que_deu_errado">O que deu errado?</h2>
+## O que deu errado?
 
-<p>Um valor foi atribuído a uma variável não declarada. Em outras palavras, houve uma atribuição sem a palavra-chave var. Existem algumas diferenças entre as variáveis declaradas e não declaradas, o que pode levar a resultados inesperados e é por isso que o JavaScript apresenta um erro no modo estrito.</p>
+Um valor foi atribuído a uma variável não declarada. Em outras palavras, houve uma atribuição sem a palavra-chave var. Existem algumas diferenças entre as variáveis declaradas e não declaradas, o que pode levar a resultados inesperados e é por isso que o JavaScript apresenta um erro no modo estrito.
 
-<p>Três coisas a observar sobre as variáveis declaradas e não declaradas:</p>
+Três coisas a observar sobre as variáveis declaradas e não declaradas:
 
-<ul>
- <li>Variáveis declaradas são limitadas no contexto de execução em que são declarados. Variáveis não declaradas são sempre globais.</li>
- <li>Variáveis declaradas são criados antes de qualquer código ser executado. Variáveis não declaradas não existem até que o código atribuido for executado.</li>
- <li>Variáveis declaradas são uma propriedade não-configurável de seu contexto de execução (função ou global). Variáveis não declaradas são configuráveis (por exemplo, pode ser excluído).</li>
-</ul>
+- Variáveis declaradas são limitadas no contexto de execução em que são declarados. Variáveis não declaradas são sempre globais.
+- Variáveis declaradas são criados antes de qualquer código ser executado. Variáveis não declaradas não existem até que o código atribuido for executado.
+- Variáveis declaradas são uma propriedade não-configurável de seu contexto de execução (função ou global). Variáveis não declaradas são configuráveis (por exemplo, pode ser excluído).
 
-<p>Para mais exemplos, veja a página de referência <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var">var</a></code>.</p>
+Para mais exemplos, veja a página de referência [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var).
 
-<p>Erros sobre atribuições de variáveis não declaradas ocorrem apenas em <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">código de modo estrito</a>. Em código não-estrito, eles são silenciosamente ignorados.</p>
+Erros sobre atribuições de variáveis não declaradas ocorrem apenas em [código de modo estrito](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode). Em código não-estrito, eles são silenciosamente ignorados.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Casos_inválidos">Casos inválidos</h3>
+### Casos inválidos
 
-<p>neste caso, a variavel "bar" é uma variavel não declarada.</p>
+neste caso, a variavel "bar" é uma variavel não declarada.
 
-<pre class="brush: js example-bad">function foo() {
+```js example-bad
+function foo() {
   "use strict";
   bar = true;
 }
 foo(); // ReferenceError: assignment to undeclared variable bar
-</pre>
+```
 
-<h3 id="Casos_válidos">Casos válidos</h3>
+### Casos válidos
 
-<p>Para fazer uma variável declarada "bar", você pode adicionar a palavra-chave <a href="/en-US/docs/Web/JavaScript/Reference/Statements/var">var</a> na frente dele.</p>
+Para fazer uma variável declarada "bar", você pode adicionar a palavra-chave [var](/pt-BR/docs/Web/JavaScript/Reference/Statements/var) na frente dele.
 
-<pre class="brush: js example-good">function foo() {
+```js example-good
+function foo() {
   "use strict";
   var bar = true;
 }
-foo();</pre>
+foo();
+```
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><em><a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">Strict mode</a></em></li>
-</ul>
+- _[Strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode)_

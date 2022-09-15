@@ -3,71 +3,56 @@ title: WeakMap
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap
 ---
-<div>{{JSRef("Global_Objects", "WeakMap")}}</div>
+{{JSRef("Global_Objects", "WeakMap")}}
 
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>O objeto WeakMap é uma coleção de pares key/value na qual as chaves são fracamente referenciadas.<br>
- As chaves <strong>devem </strong>ser objetos, e os valores podem ser de tipos arbitrários.</p>
+O objeto WeakMap é uma coleção de pares key/value na qual as chaves são fracamente referenciadas.
+As chaves **devem** ser objetos, e os valores podem ser de tipos arbitrários.
 
-<p>Você pode descobrir mais sobre <code>WeakMap</code>s na seção {{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Keyed_collections", "WeakMap object")}}.</p>
+Você pode descobrir mais sobre `WeakMap`s na seção {{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Keyed_collections", "WeakMap object")}}.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code>new WeakMap([iterable])
-</code></pre>
+```
+new WeakMap([iterable])
+```
 
-<h3 id="Parameters" name="Parameters">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>iterable</code></dt>
- <dd>Iterable é um Array ou outro objeto iterável cujos elementos são pares key-value (Arrays de dois elementos). Cada par key-value será adicionados ao novo <code>WeakMap</code>. <code>null</code> é tratado como <code>undefined</code>.</dd>
-</dl>
+- `iterable`
+  - : Iterable é um Array ou outro objeto iterável cujos elementos são pares key-value (Arrays de dois elementos). Cada par key-value será adicionados ao novo `WeakMap`. `null` é tratado como `undefined`.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<h3 id="Por_quê_WeakMap">Por quê <em>Weak</em>Map?</h3>
+### Por quê \_Weak_Map?
 
-<p>Um programador JavaScript experiente vai notar que esta API pode ser implementada em JavaScript com dois arrays (um para chaves, um para valores) compartilhado pelos 4 métodos da API. Tal implementação teria duas principais incoveniências. A primeira é uma busca O(n) (n sendo o número de chaves no map). A segunda é o problema de memory leak. Com maps escritos manualmente, o array de chaves guardaria referências para objetos chave, prevenindo-os de serem coletados pelo Garbage Collector. Nos WeakMaps nativos, referências aos objetos chave são segurados de modo "fraco", o que significa que eles não previnem a coleção pelo GC no caso de não haver nenhuma outra referência ao objeto. </p>
+Um programador JavaScript experiente vai notar que esta API pode ser implementada em JavaScript com dois arrays (um para chaves, um para valores) compartilhado pelos 4 métodos da API. Tal implementação teria duas principais incoveniências. A primeira é uma busca O(n) (n sendo o número de chaves no map). A segunda é o problema de memory leak. Com maps escritos manualmente, o array de chaves guardaria referências para objetos chave, prevenindo-os de serem coletados pelo Garbage Collector. Nos WeakMaps nativos, referências aos objetos chave são segurados de modo "fraco", o que significa que eles não previnem a coleção pelo GC no caso de não haver nenhuma outra referência ao objeto.
 
-<p>Por conta das referências serem fracas, chaves de <code>WeakMap</code> não são enumeráveis (i.e. não existe um método que dá a você uma lista de chaves). Se existisse tal método, a lista dependeria no estado da coleção do GC, introduzindo não-determinismo. Se você quiser ter uma lista de chaves, deve usar um {{jsxref("Map")}}. </p>
+Por conta das referências serem fracas, chaves de `WeakMap` não são enumeráveis (i.e. não existe um método que dá a você uma lista de chaves). Se existisse tal método, a lista dependeria no estado da coleção do GC, introduzindo não-determinismo. Se você quiser ter uma lista de chaves, deve usar um {{jsxref("Map")}}.
 
-<h2 id="constructor" name="constructor">Construtor</h2>
+## Construtor
 
-<dl>
-  <dt>{{jsxref("WeakMap/WeakMap", "WeakMap()")}}</dt>
-  <dd>Cria um novo objeto <code>WeakMap</code>.</dd>
-</dl>
+- {{jsxref("WeakMap/WeakMap", "WeakMap()")}}
+  - : Cria um novo objeto `WeakMap`.
 
-<h2 id="instance_methods" name="instance_methods">Métodos de instância</h2>
+## Métodos de instância
 
-<dl>
-  <dt>{{jsxref("WeakMap.delete", "WeakMap.prototype.delete(<var>key</var>)")}}</dt>
-  <dd>
-    Remove qualquer valor associado à chave(<code>key</code>). <code>WeakMap.prototype.has(key)</code> retornará <code>false</code> depois.
-  </dd>
+- {{jsxref("WeakMap.delete", "WeakMap.prototype.delete(<var>key</var>)")}}
+  - : Remove qualquer valor associado à chave(`key`). `WeakMap.prototype.has(key)` retornará `false` depois.
+- {{jsxref("WeakMap.get", "WeakMap.prototype.get(<var>key</var>)")}}
+  - : Retorna o valor associado à chave(`key`). Ou `undefined` se não houver.
+- {{jsxref("WeakMap.has", "WeakMap.prototype.has(<var>key</var>)")}}
+  - : Retorna um boolean afirmando se um valor foi associado à chave(`key`) no objeto `WeakMap` ou não.
+- {{jsxref("WeakMap.set", "WeakMap.prototype.set(<var>key</var>, <var>value</var>)")}}
+  - : Define o valor(`value`) da chave(`key`) no objeto `WeakMap`. Retorna o objeto `WeakMap`.
 
-  <dt>{{jsxref("WeakMap.get", "WeakMap.prototype.get(<var>key</var>)")}}</dt>
-  <dd>
-    Retorna o valor associado à chave(<code>key</code>). Ou <code>undefined</code> se não houver.
-  </dd>
+## Exemplos
 
-  <dt>{{jsxref("WeakMap.has", "WeakMap.prototype.has(<var>key</var>)")}}</dt>
-  <dd>
-    Retorna um boolean afirmando se um valor foi associado à chave(<code>key</code>) no objeto <code>WeakMap</code> ou não.
-  </dd>
+### Exemplo: Usando `WeakMap`
 
-  <dt>{{jsxref("WeakMap.set", "WeakMap.prototype.set(<var>key</var>, <var>value</var>)")}}</dt>
-  <dd>
-    Define o valor(<code>value</code>) da chave(<code>key</code>) no objeto <code>WeakMap</code>. Retorna o objeto <code>WeakMap</code>.
-  </dd>
-</dl>
-
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Exemplo_Usando_WeakMap">Exemplo: Usando <code>WeakMap</code></h3>
-
-<pre class="brush: js">var wm1 = new WeakMap(),
+```js
+var wm1 = new WeakMap(),
     wm2 = new WeakMap(),
     wm3 = new WeakMap();
 var o1 = {},
@@ -96,45 +81,23 @@ wm3.get(o1); // undefined, pois wm3 foi 'limpado' e não há mais valor para o1.
 wm1.has(o1);   // true
 wm1.delete(o1);
 wm1.has(o1);   // false
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-weakmap-objects', 'WeakMap')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-weakmap-objects', 'WeakMap')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificações                                                               | Status                       | Comentário         |
+| ---------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('ES2015', '#sec-weakmap-objects', 'WeakMap')}} | {{Spec2('ES2015')}}     | Definição inicial. |
+| {{SpecName('ESDraft', '#sec-weakmap-objects', 'WeakMap')}} | {{Spec2('ESDraft')}} |                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p><br>
- {{Compat("javascript.builtins.WeakMap")}}</p>
+{{Compat("javascript.builtins.WeakMap")}}
 
-<div id="compat-mobile"> </div>
+## Veja também
 
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=547941">WeakMap bug at Mozilla</a></li>
- <li><a href="http://fitzgeraldnick.com/weblog/53/">Hiding Implementation Details with ECMAScript 2015 WeakMaps</a></li>
- <li>{{jsxref("Map")}}</li>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("WeakSet")}}</li>
-</ul>
+- [WeakMap bug at Mozilla](https://bugzilla.mozilla.org/show_bug.cgi?id=547941)
+- [Hiding Implementation Details with ECMAScript 2015 WeakMaps](http://fitzgeraldnick.com/weblog/53/)
+- {{jsxref("Map")}}
+- {{jsxref("Set")}}
+- {{jsxref("WeakSet")}}

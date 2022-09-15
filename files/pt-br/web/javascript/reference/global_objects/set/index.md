@@ -9,60 +9,62 @@ tags:
   - conjuntos
 translation_of: Web/JavaScript/Reference/Global_Objects/Set
 ---
-<div>{{JSRef("Global_Objects", "Set")}}</div>
+{{JSRef("Global_Objects", "Set")}}
 
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>O objeto <strong><code>Set</code></strong> permite que você armazene valores <em>únicos</em> de qualquer tipo, desde {{Glossary("Primitive", "valores primitivos")}} a referências a objetos.</p>
+O objeto **`Set`** permite que você armazene valores _únicos_ de qualquer tipo, desde {{Glossary("Primitive", "valores primitivos")}} a referências a objetos.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"> new Set([iterable]);</pre>
+```
+ new Set([iterable]);
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt>iterable</dt>
- <dd>Se um <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">objeto iterável </a>é passado, todos os seus elementos serão adicionados ao novo Set. Se tal parâmetro não for específicado, ou se seu valor for <code>null</code>, o novo <code>Set</code> estará vazio.</dd>
-</dl>
+- iterable
+  - : Se um [objeto iterável ](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of)é passado, todos os seus elementos serão adicionados ao novo Set. Se tal parâmetro não for específicado, ou se seu valor for `null`, o novo `Set` estará vazio.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Objetos <code style="font-style: normal; line-height: 1.5;">Set</code> são coleções de valores nas quais é possível iterar os elementos em ordem de inserção. Um valor no <code style="font-style: normal; line-height: 1.5;">Set</code> <strong>pode ocorrer apenas uma vez</strong>; ele é único na coleção do <code style="font-style: normal; line-height: 1.5;">Set</code>.</p>
+Objetos `Set` são coleções de valores nas quais é possível iterar os elementos em ordem de inserção. Um valor no `Set` **pode ocorrer apenas uma vez**; ele é único na coleção do `Set`.
 
-<h3 id="Igualdade_de_valores">Igualdade de valores</h3>
+### Igualdade de valores
 
-<p>Como cada valor no Set deve ser único, a igualdade será checada e não é baseada no mesmo algoritmo que aquele usado no operador ===. Especificamente, para <code>Set</code>s, <code>+0</code> (que é exatamente igual a - 0) e <code>- 0</code> são valores diferentes. No entanto, isto foi modificado na última especificação ECMAScript 2015. Iniciado com o Gecko 29.0 {{geckoRelease("29")}} ({{bug("952870")}}) e pelo  <a href="https://code.google.com/p/v8/issues/detail?id=3069">recent nightly Chrome</a>, +0 e -0 são tratados com sendo o mesmo valor em objetos conjunto (Set). Também, <code>NaN</code> e <code>undefined </code>podem ser armazenados em um conjunto Set.</p>
+Como cada valor no Set deve ser único, a igualdade será checada e não é baseada no mesmo algoritmo que aquele usado no operador ===. Especificamente, para `Set`s, `+0` (que é exatamente igual a - 0) e `- 0` são valores diferentes. No entanto, isto foi modificado na última especificação ECMAScript 2015. Iniciado com o Gecko 29.0 {{geckoRelease("29")}} ({{bug("952870")}}) e pelo [recent nightly Chrome](https://code.google.com/p/v8/issues/detail?id=3069), +0 e -0 são tratados com sendo o mesmo valor em objetos conjunto (Set). Também, `NaN` e `undefined `podem ser armazenados em um conjunto Set.
 
-<h2 id="Properties" name="Properties">Propriedades</h2>
+## Propriedades
 
-<dl>
- <dt><code>Set.length</code></dt>
- <dd><p>O valor da propriedade comprimento é 0.</p>
- <p>Para contar o número de elementos de um <code>Set</code>, use {{jsxref("Set.prototype.size")}}.</p></dd>
- <dt>{{jsxref("Set.@@species", "get Set[@@species]")}}</dt>
- <dd>A função construtora usada para criar objetos derivados.</dd>
- <dt>{{jsxref("Set.prototype")}}</dt>
- <dd>Representa o prototype do constructor do <code>Set</code>. Permite a adição de propriedades para todos os objetos do tipo <code>Set</code>.</dd>
-</dl>
+- `Set.length`
 
-<h2 id="Boolean_instances" name="Boolean_instances">Instâncias <code>Set</code> </h2>
+  - : O valor da propriedade comprimento é 0.
 
-<p>Todas as instâncias de <code>Set</code> herdam de {{jsxref("Set.prototype")}}.</p>
+    Para contar o número de elementos de um `Set`, use {{jsxref("Set.prototype.size")}}.
 
-<h3 id="Propriedades">Propriedades</h3>
+- {{jsxref("Set.@@species", "get Set[@@species]")}}
+  - : A função construtora usada para criar objetos derivados.
+- {{jsxref("Set.prototype")}}
+  - : Representa o prototype do constructor do `Set`. Permite a adição de propriedades para todos os objetos do tipo `Set`.
 
-<p>{{page('pt-BR/Web/JavaScript/Reference/Global_Objects/Set/prototype','Properties')}}</p>
+## Instâncias `Set`
 
-<h3 id="Métodos">Métodos</h3>
+Todas as instâncias de `Set` herdam de {{jsxref("Set.prototype")}}.
 
-<p>{{page('pt-BR/Web/JavaScript/Reference/Global_Objects/Set/prototype','Methods')}}</p>
+### Propriedades
 
-<h2 id="Exemplos">Exemplos</h2>
+{{page('pt-BR/Web/JavaScript/Reference/Global_Objects/Set/prototype','Properties')}}
 
-<h3 id="Utilizando_o_objeto_Set">Utilizando o objeto <code>Set</code></h3>
+### Métodos
 
-<pre class="brush: js">var meuSet = new Set();
+{{page('pt-BR/Web/JavaScript/Reference/Global_Objects/Set/prototype','Methods')}}
+
+## Exemplos
+
+### Utilizando o objeto `Set`
+
+```js
+var meuSet = new Set();
 
 meuSet.add(1); // meuSet [1]
 meuSet.add(5); // meuSet [1, 5]
@@ -88,13 +90,12 @@ meuSet.has(5);    // false, 5 já foi removido
 meuSet.size; // 4, nós simplesmente removemos um valor
 
 console.log(meuSet) // Set { 1, 'texto', { a: 1, b: 2 }, { a: 1, b: 2 } }
-</pre>
+```
 
+### Iterando objetos `Set`
 
-
-<h3 id="Iterando_objetos_Set">Iterando objetos <code>Set</code></h3>
-
-<pre class="brush: js">// iterar sobre os itens em set
+```js
+// iterar sobre os itens em set
 // loga os itens na ordem: 1, "texto"
 for (let item of meuSet) console.log(item);
 
@@ -121,7 +122,7 @@ mySet2.size; // 4
 [...mySet2]; // [1,2,3,4]
 
 // intersecção pode ser simulado via
-var intersection = new Set([...set1].filter(x =&gt; set2.has(x)));
+var intersection = new Set([...set1].filter(x => set2.has(x)));
 
 // Iterar entradas set com forEach
 meuSet.forEach(function(value) {
@@ -131,11 +132,13 @@ meuSet.forEach(function(value) {
 // 1
 // 2
 // 3
-// 4</pre>
+// 4
+```
 
-<h3 id="Implementando_operações_básicas_entre_conjuntos">Implementando operações básicas entre conjuntos</h3>
+### Implementando operações básicas entre conjuntos
 
-<pre class="brush: js">function isSuperset(set, subset) {
+```js
+function isSuperset(set, subset) {
     for (var elem of subset) {
         if (!set.has(elem)) {
             return false;
@@ -187,15 +190,17 @@ var setA = new Set([1, 2, 3, 4]),
     setB = new Set([2, 3]),
     setC = new Set([3, 4, 5, 6]);
 
-isSuperset(setA, setB); // =&gt; true
-uniao(setA, setC); // =&gt; Set [1, 2, 3, 4, 5, 6]
-interseccao(setA, setC); // =&gt; Set [3, 4]
-diferencaSimetrica(setA, setC); // =&gt; Set [1, 2, 5, 6]
-diferenca(setA, setC); // =&gt; Set [1, 2]</pre>
+isSuperset(setA, setB); // => true
+uniao(setA, setC); // => Set [1, 2, 3, 4, 5, 6]
+interseccao(setA, setC); // => Set [3, 4]
+diferencaSimetrica(setA, setC); // => Set [1, 2, 5, 6]
+diferenca(setA, setC); // => Set [1, 2]
+```
 
-<h3 id="Relação_com_objetos_Array">Relação com objetos <code>Array</code> </h3>
+### Relação com objetos `Array`
 
-<pre class="brush: js">var myArray = ["value1", "value2", "value3"];
+```js
+var myArray = ["value1", "value2", "value3"];
 
 // Use o construtor regular de Set para transformar um array dentro de um Set
 var mySet = new Set(myArray);
@@ -203,57 +208,43 @@ var mySet = new Set(myArray);
 mySet.has("value1"); // retorna true
 
 // Use o operador de propagação para transformar um Set em um Array.
-alert(uneval([...mySet])); // Irá mostrar-lhe exatamente o mesmo Array como myArray</pre>
+alert(uneval([...mySet])); // Irá mostrar-lhe exatamente o mesmo Array como myArray
+```
 
-<h3 id="Removendo_elementos_duplicados_de_um_Array">Removendo elementos duplicados de um <code>Array</code></h3>
+### Removendo elementos duplicados de um `Array`
 
-<pre class="brush: js">// Use para remover elementos duplicados de um Array
+```js
+// Use para remover elementos duplicados de um Array
 
 const numeros = [2,3,4,4,2,3,3,4,4,5,5,6,6,7,5,32,3,4,5]
 
 console.log([...new Set(numeros)])
 
-// [2, 3, 4, 5, 6, 7, 32]</pre>
+// [2, 3, 4, 5, 6, 7, 32]
+```
 
-<h3 id="Relação_com_objetos_String">Relação com objetos <code>String</code></h3>
+### Relação com objetos `String`
 
-<pre class="brush: js">var texto = 'India';
+```js
+var texto = 'India';
 
 var meuSet = new Set(texto);  // Set ['I', 'n', 'd', 'i', 'a']
-meuSet.size;  // 5</pre>
+meuSet.size;  // 5
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-set-objects', 'Set')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-set-objects', 'Set')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                        | Status                       | Comentário         |
+| -------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('ES2015', '#sec-set-objects', 'Set')}}     | {{Spec2('ES2015')}}     | Definição inicial. |
+| {{SpecName('ESDraft', '#sec-set-objects', 'Set')}} | {{Spec2('ESDraft')}} |                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("javascript.builtins.Set")}}
 
+## Veja também
 
-<p>{{Compat("javascript.builtins.Set")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{jsxref("Map")}}</li>
- <li>{{jsxref("WeakMap")}}</li>
- <li>{{jsxref("WeakSet")}}</li>
-</ul>
+- {{jsxref("Map")}}
+- {{jsxref("WeakMap")}}
+- {{jsxref("WeakSet")}}

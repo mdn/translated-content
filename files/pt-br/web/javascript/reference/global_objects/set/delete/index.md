@@ -9,67 +9,51 @@ tags:
   - set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/delete
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>delete()</strong></code> remove o elemento especificado de um objeto <code>Set</code>.</p>
+O método **`delete()`** remove o elemento especificado de um objeto `Set`.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code><em>mySet</em>.delete(value);</code></pre>
+```
+mySet.delete(value);
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt>value</dt>
- <dd>Requerido. O valor do elemento a ser removido do objeto Set.</dd>
-</dl>
+- value
+  - : Requerido. O valor do elemento a ser removido do objeto Set.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Retorna <code>true</code> se um elemento contido no objeto Set foi removido com sucesso; caso contrário <code>false</code>.</p>
+Retorna `true` se um elemento contido no objeto Set foi removido com sucesso; caso contrário `false`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Uso_do_método_delete">Uso do método <code>delete</code></h3>
+### Uso do método `delete`
 
-<pre class="brush: js">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add("foo");
 
 mySet.delete("bar"); // Retorna false. Nenhum elemento "bar" foi encontrado para deletar.
 mySet.delete("foo"); // Retorna true. remoção bem sucedida.
 
 mySet.has("foo");    // Retorna false. O elemento "foo" não está mais presente.
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-set.prototype.delete', 'Set.prototype.delete')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-set.prototype.delete', 'Set.prototype.delete')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                        | Status                       | Comentário         |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('ES6', '#sec-set.prototype.delete', 'Set.prototype.delete')}}     | {{Spec2('ES6')}}         | Definição inicial. |
+| {{SpecName('ESDraft', '#sec-set.prototype.delete', 'Set.prototype.delete')}} | {{Spec2('ESDraft')}} |                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Set.delete")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("Set.prototype.clear()")}}</li>
-</ul>
+- {{jsxref("Set")}}
+- {{jsxref("Set.prototype.clear()")}}

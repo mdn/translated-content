@@ -6,36 +6,39 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/Reference/Statements/throw
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>A <strong>declaração</strong> <strong><code>throw</code> </strong>lança uma exceção definida pelo usuário. A execução da função atual vai parar (as instruções após o <code>throw</code> não serão executadas), e o controle será passado para o primeiro bloco <a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch"><code>catch</code></a> na pilha de chamadas. Se nenhum bloco <code>catch</code> existe entre as funções "chamadoras", o programa vai terminar.</p>
+A **declaração** **`throw` **lança uma exceção definida pelo usuário. A execução da função atual vai parar (as instruções após o `throw` não serão executadas), e o controle será passado para o primeiro bloco [`catch`](/pt-BR/docs/Web/JavaScript/Reference/Statements/try...catch) na pilha de chamadas. Se nenhum bloco `catch` existe entre as funções "chamadoras", o programa vai terminar.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">throw <em>expressão</em>; </pre>
+```
+throw expressão;
+```
 
-<dl>
- <dt><code>expressão</code></dt>
- <dd>A expressão a ser lançada.</dd>
-</dl>
+- `expressão`
+  - : A expressão a ser lançada.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Use a instrução <code>throw</code> para lançar uma exceção. Quando você lança uma exceção, <code>expressão</code> especifica o valor da exceção. Cada uma das intruções a seguir lança uma exceção:</p>
+Use a instrução `throw` para lançar uma exceção. Quando você lança uma exceção, `expressão` especifica o valor da exceção. Cada uma das intruções a seguir lança uma exceção:
 
-<pre class="brush: js">throw "Erro2"; // gera uma exceção com um valor string
+```js
+throw "Erro2"; // gera uma exceção com um valor string
 throw 42;      // gera uma exceção com o valor 42
-throw true;    // gera uma exceção com o valor true</pre>
+throw true;    // gera uma exceção com o valor true
+```
 
-<p>Note também que a instrução <code>throw</code> é afetada pela <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion">inserção automática de ponto-e-vírgula (ASI)</a> como nenhum terminador de linha entre a palavra <code>throw</code> e a expressão é permitido.</p>
+Note também que a instrução `throw` é afetada pela [inserção automática de ponto-e-vírgula (ASI)](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion) como nenhum terminador de linha entre a palavra `throw` e a expressão é permitido.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Lançando_um_objeto">Lançando um objeto</h3>
+### Lançando um objeto
 
-<p>Você pode especificar um objeto quando você lança uma exceção. Você pode então referenciar as propriedades do objeto no bloco <code>catch</code>. O exemplo a seguir cria um objeto do tipo <code>UserException</code> e o usa na intrução <code>throw</code>.</p>
+Você pode especificar um objeto quando você lança uma exceção. Você pode então referenciar as propriedades do objeto no bloco `catch`. O exemplo a seguir cria um objeto do tipo `UserException` e o usa na intrução `throw`.
 
-<pre class="brush: js">function UserException(message) {
+```js
+function UserException(message) {
    this.message = message;
    this.name = "UserException";
 }
@@ -58,13 +61,14 @@ try {
    monthName = "unknown";
    logMyErrors(e.message, e.name); // pass exception object to err handler
 }
-</pre>
+```
 
-<h3 id="Outro_exemplo_lançando_um_objeto">Outro exemplo lançando um objeto</h3>
+### Outro exemplo lançando um objeto
 
-<p>O exemplo a seguir testa uma string de entrada para um cep dos Estados Unidos. Se o CEP utiliza um formato inválido, a intrução throw lança uma exceção através da criação de um objeto do tipo <code>ZipCodeFormatException</code>.</p>
+O exemplo a seguir testa uma string de entrada para um cep dos Estados Unidos. Se o CEP utiliza um formato inválido, a intrução throw lança uma exceção através da criação de um objeto do tipo `ZipCodeFormatException`.
 
-<pre class="brush: js">/*
+```js
+/*
  * Cria um objeto ZipCode.
  *
  * Formatos aceitos para o CEP são:
@@ -128,62 +132,38 @@ b = verifyZipCode(9560);          // retorna -1
 c = verifyZipCode("a");           // retorna -1
 d = verifyZipCode("95060");       // retorna 95060
 e = verifyZipCode("95060 1234");  // retorna 95060 1234
-</pre>
+```
 
-<h3 id="Relançando_uma_exceção">Relançando uma exceção</h3>
+### Relançando uma exceção
 
-<p>Você pode usar <code>throw</code> para relançar uma exceção após você pegá-la. O exemplo a seguir pega uma exceção com um valor numérico e a relança se o valor for maior que 50. A exceção relançada propaga para a função encapsuladora ou para o nível superior para que o usuário a veja.</p>
+Você pode usar `throw` para relançar uma exceção após você pegá-la. O exemplo a seguir pega uma exceção com um valor numérico e a relança se o valor for maior que 50. A exceção relançada propaga para a função encapsuladora ou para o nível superior para que o usuário a veja.
 
-<pre class="brush: js">try {
+```js
+try {
    throw n; // lança uma exceção com um valor numérico
 } catch (e) {
-   if (e &lt;= 50) {
+   if (e <= 50) {
       // instruções para tratar exceções 1-50
    } else {
       // não pode tratar esta exceção então relança
       throw e;
    }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Definição inicial. Implementada no JavaScript 1.4</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-12.13', 'throw statement')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-throw-statement', 'throw statement')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-throw-statement', 'throw statement')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                       | Comment                                           |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------- |
+| {{SpecName('ES3')}}                                                                 | {{Spec2('ES3')}}         | Definição inicial. Implementada no JavaScript 1.4 |
+| {{SpecName('ES5.1', '#sec-12.13', 'throw statement')}}                 | {{Spec2('ES5.1')}}     |                                                   |
+| {{SpecName('ES6', '#sec-throw-statement', 'throw statement')}}     | {{Spec2('ES6')}}         |                                                   |
+| {{SpecName('ESDraft', '#sec-throw-statement', 'throw statement')}} | {{Spec2('ESDraft')}} |                                                   |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.statements.throw")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch"><code>try...catch</code></a></li>
-</ul>
+- [`try...catch`](/pt-BR/docs/Web/JavaScript/Reference/Statements/try...catch)

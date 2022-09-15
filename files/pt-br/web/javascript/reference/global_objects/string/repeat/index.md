@@ -11,51 +11,50 @@ tags:
   - repeat()
 translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>repeat()</code></strong> constrói e retorna uma nova string com um determinado número de cópias concatenadas da string original.</p>
+O método **`repeat()`** constrói e retorna uma nova string com um determinado número de cópias concatenadas da string original.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.repeat(<var>count</var>);</code>
-</pre>
+```
+str.repeat(count);
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>count</code></dt>
- <dd>Um número inteiro entre 0 e  {{jsxref("Global_Objects/Number/POSITIVE_INFINITY", "+Infinity")}}, indicando o número de vezes que a string deve ser repetida.</dd>
-</dl>
+- `count`
+  - : Um número inteiro entre 0 e {{jsxref("Global_Objects/Number/POSITIVE_INFINITY", "+Infinity")}}, indicando o número de vezes que a string deve ser repetida.
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>Uma nova string contendo o número especificado de cópias da string original.</p>
+Uma nova string contendo o número especificado de cópias da string original.
 
-<h3 id="Exceções">Exceções</h3>
+### Exceções
 
-<ul>
- <li>{{jsxref("Errors/Negative_repetition_count", "RangeError")}}: o número de repetições não pode ser negativo.</li>
- <li>{{jsxref("Errors/Resulting_string_too_large", "RangeError")}}: o número de repetições deve ser menor que infinito e não deve ultrapassar o tamanho máximo da string.</li>
-</ul>
+- {{jsxref("Errors/Negative_repetition_count", "RangeError")}}: o número de repetições não pode ser negativo.
+- {{jsxref("Errors/Resulting_string_too_large", "RangeError")}}: o número de repetições deve ser menor que infinito e não deve ultrapassar o tamanho máximo da string.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: js notranslate">'abc'.repeat(-1);   // RangeError
+```js
+'abc'.repeat(-1);   // RangeError
 'abc'.repeat(0);    // ''
 'abc'.repeat(1);    // 'abc'
 'abc'.repeat(2);    // 'abcabc'
 'abc'.repeat(3.5);  // 'abcabcabc' (o número será convertido para inteiro)
 'abc'.repeat(1/0);  // RangeError
 
-({ toString: () =&gt; 'abc', repeat: String.prototype.repeat }).repeat(2);
+({ toString: () => 'abc', repeat: String.prototype.repeat }).repeat(2);
 // 'abcabc' (repeat() é um método genérico)
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>O método <code>repeat()</code> foi adicionado à especificação ECMAScript 2015 e pode ainda não estar disponível em todas as implementações do JavaScript. No entanto, você pode usar o seguinte polyfill para implementar o <code>String.prototype.repeat()</code>:</p>
+O método `repeat()` foi adicionado à especificação ECMAScript 2015 e pode ainda não estar disponível em todas as implementações do JavaScript. No entanto, você pode usar o seguinte polyfill para implementar o `String.prototype.repeat()`:
 
-<pre class="brush: js notranslate">if (!String.prototype.repeat) {
+```js
+if (!String.prototype.repeat) {
   String.prototype.repeat = function(count) {
     'use strict';
     if (this == null) {
@@ -66,7 +65,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
     if (count != count) {
       count = 0;
     }
-    if (count &lt; 0) {
+    if (count < 0) {
       throw new RangeError('o núm. de repetições não pode ser negativo');
     }
     if (count == Infinity) {
@@ -79,29 +78,30 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
 
     // Ao Garantir que count seja um inteiro de 31 bits nos dá uma grande otimização
     // na parte principal. Porém, navegadores atuais (de agosto de 2014 pra cá)
-    // não conseguem mais manipular strings de 1 &lt;&lt; 28 chars ou maiores, então:
-    if (str.length * count &gt;= 1 &lt;&lt; 28) {
+    // não conseguem mais manipular strings de 1 << 28 chars ou maiores, então:
+    if (str.length * count >= 1 << 28) {
       throw new RangeError('o núm. de repetições não deve estourar o tamanho máx. de uma string');
     }
     var rpt = '';
-    for (var i = 0; i &lt; count; i++) {
+    for (var i = 0; i < count; i++) {
       rpt += str;
     }
     return rpt;
   }
 }
-</pre>
+```
 
-<h4 id="Polyfill_ES5">Polyfill ES5</h4>
+#### Polyfill ES5
 
-<pre class="syntaxbox notranslate">//#es5
+```
+//#es5
 'use strict';
 (function(win){
- var typeOf=(function(w){var f=function f(x){return typeof(x)},o=w.Symbol,p;if(o &amp;&amp; typeof(o)==='function' &amp;&amp; typeof(o.iterator)==='symbol'){p=o.prototype;f=function(x){return x &amp;&amp; x.constructor===o &amp;&amp; x!==p?'symbol':typeof x}};return f})(win),
- exist=function(o,p,t){return p in o &amp;&amp; typeOf(o[p])===t};
+ var typeOf=(function(w){var f=function f(x){return typeof(x)},o=w.Symbol,p;if(o && typeof(o)==='function' && typeof(o.iterator)==='symbol'){p=o.prototype;f=function(x){return x && x.constructor===o && x!==p?'symbol':typeof x}};return f})(win),
+ exist=function(o,p,t){return p in o && typeOf(o[p])===t};
  (function(w){
     var o=w.String.prototype;
-    if(!exist(o,'repeat','function')){o.repeat=(function(A,E){return function(n){var i=n&gt;&gt;0,s=this,l=s.length,j;if(i===0||l&lt;1){s=''}else{j=268435456;if(i&lt;0||i&gt;=j||i*l&gt;j){throw new RE('Invalidcountvalue')}else if(i&gt;0){s=A(++i).join(s)}};return s}})(w.Array,w.RangeError)};
+    if(!exist(o,'repeat','function')){o.repeat=(function(A,E){return function(n){var i=n>>0,s=this,l=s.length,j;if(i===0||l<1){s=''}else{j=268435456;if(i<0||i>=j||i*l>j){throw new RE('Invalidcountvalue')}else if(i>0){s=A(++i).join(s)}};return s}})(w.Array,w.RangeError)};
  })(win);
 })(window);
 
@@ -136,18 +136,18 @@ es5 src:
 'use strict';
 (function(win){
 
- var typeOf=(function(w){var f=function f(x){return typeof(x)},o=w.Symbol,p;if(o &amp;&amp; typeof(o)==='function' &amp;&amp; typeof(o.iterator)==='symbol'){p=o.prototype;f=function(x){return x &amp;&amp; x.constructor===o &amp;&amp; x!==p?'symbol':typeof x}};return f})(win),
- exist=function(o,p,t){return p in o &amp;&amp; typeOf(o[p])===t};
+ var typeOf=(function(w){var f=function f(x){return typeof(x)},o=w.Symbol,p;if(o && typeof(o)==='function' && typeof(o.iterator)==='symbol'){p=o.prototype;f=function(x){return x && x.constructor===o && x!==p?'symbol':typeof x}};return f})(win),
+ exist=function(o,p,t){return p in o && typeOf(o[p])===t};
 
  (function(w){
     var o=w.String.prototype;
     if(!exist(o,'repeat','function')){
         o.repeat=(function(A,E){
             return function(n){
-                var i=n&gt;&gt;0,s=this,l=s.length,j;
-                if(i===0||l&lt;1){s=''}else{
+                var i=n>>0,s=this,l=s.length,j;
+                if(i===0||l<1){s=''}else{
                     j=268435456;
-                    if(i&lt;0||i&gt;=j||i*l&gt;j){throw new RE('Invalidcountvalue')}else if(i&gt;0){s=A(++i).join(s)}
+                    if(i<0||i>=j||i*l>j){throw new RE('Invalidcountvalue')}else if(i>0){s=A(++i).join(s)}
                 };
                 return s
             };
@@ -158,21 +158,22 @@ es5 src:
 
 })(window);
 */
-</pre>
+```
 
-<h4 id="Polyfill_ES6">Polyfill ES6</h4>
+#### Polyfill ES6
 
-<pre class="syntaxbox notranslate">//#es6
+```
+//#es6
 
-(w=&gt;{
+(w=>{
 
-    const typeOf=(o=&gt;{let f=x=&gt;typeof x;if(o &amp;&amp; 'function'===typeof o){const s='symbol';if(s===typeof o.iterator){const p=o.prototype;f=x=&gt;x &amp;&amp; x.constructor===o &amp;&amp; x!==p?s:typeof x}};return f})(w.Symbol),
+    const typeOf=(o=>{let f=x=>typeof x;if(o && 'function'===typeof o){const s='symbol';if(s===typeof o.iterator){const p=o.prototype;f=x=>x && x.constructor===o && x!==p?s:typeof x}};return f})(w.Symbol),
 
-    exist=(o,p,t)=&gt;p in o &amp;&amp; typeOf(o[p])===t;
+    exist=(o,p,t)=>p in o && typeOf(o[p])===t;
 
-    (o=&gt;{
+    (o=>{
 
-        if(!exist(o,'repeat','function')){const A=w.Array,E=w.RangeError;o.repeat=function(n){var i=n&gt;&gt;0,s='';if(i!==0){let t=this;const l=t.length;if(l!==0){if(i&lt;0||i&gt;=(t=268435456)||i*l&gt;t){throw new E('Invalid count value')}else if(i&gt;0){s=A(++i).join(t)}}};return s}};
+        if(!exist(o,'repeat','function')){const A=w.Array,E=w.RangeError;o.repeat=function(n){var i=n>>0,s='';if(i!==0){let t=this;const l=t.length;if(l!==0){if(i<0||i>=(t=268435456)||i*l>t){throw new E('Invalid count value')}else if(i>0){s=A(++i).join(t)}}};return s}};
 
     })(w.String.prototype);
 
@@ -182,20 +183,20 @@ es5 src:
 
 es6 src:
 
-(w=&gt;{
+(w=>{
 
-    const typeOf=(o=&gt;{let f=x=&gt;typeof x;if(o &amp;&amp; 'function'===typeof o){const s='symbol';if(s===typeof o.iterator){const p=o.prototype;f=x=&gt;x &amp;&amp; x.constructor===o &amp;&amp; x!==p?s:typeof x}};return f})(w.Symbol),
+    const typeOf=(o=>{let f=x=>typeof x;if(o && 'function'===typeof o){const s='symbol';if(s===typeof o.iterator){const p=o.prototype;f=x=>x && x.constructor===o && x!==p?s:typeof x}};return f})(w.Symbol),
 
-    exist=(o,p,t)=&gt;p in o &amp;&amp; typeOf(o[p])===t;
+    exist=(o,p,t)=>p in o && typeOf(o[p])===t;
 
 
-    (o=&gt;{
+    (o=>{
 
         if(!exist(o,'repeat','function')){
 
             const A=w.Array;
 
-            o.repeat=function(n){var i=n&gt;&gt;0,s='';if(i!==0){let t=this;const l=t.length;if(l!==0){if(i&lt;0||i&gt;=(t=268435456)||i*l&gt;t){throw new RangeError('Invalid count value')}else if(i&gt;0){s=A(++i).join(t)}}};return s};
+            o.repeat=function(n){var i=n>>0,s='';if(i!==0){let t=this;const l=t.length;if(l!==0){if(i<0||i>=(t=268435456)||i*l>t){throw new RangeError('Invalid count value')}else if(i>0){s=A(++i).join(t)}}};return s};
 
         };
 
@@ -257,36 +258,20 @@ console.log(
 
 'abc'.repeat(-1)//RangeError: Invalid count value
 
-);</pre>
+);
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-string.prototype.repeat', 'String.prototype.repeat')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.repeat', 'String.prototype.repeat')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                | Status                       | Comment            |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
+| {{SpecName('ES2015', '#sec-string.prototype.repeat', 'String.prototype.repeat')}} | {{Spec2('ES2015')}}     | Definição inicial. |
+| {{SpecName('ESDraft', '#sec-string.prototype.repeat', 'String.prototype.repeat')}} | {{Spec2('ESDraft')}} |                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.String.repeat")}}</p>
+{{Compat("javascript.builtins.String.repeat")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("String.prototype.concat()")}}</li>
-</ul>
+- {{jsxref("String.prototype.concat()")}}

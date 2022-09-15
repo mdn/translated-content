@@ -8,61 +8,63 @@ tags:
   - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O <strong><code>DataView</code></strong> provê uma interface de baixo nível para leitura e escrita de múltiplos tipos de número em um {{jsxref("ArrayBuffer")}}, independentemente da <a href="/pt-BR/docs/Glossario/Endianness">extremidade (<em>endianness</em>) da plataforma</a>.</p>
+O **`DataView`** provê uma interface de baixo nível para leitura e escrita de múltiplos tipos de número em um {{jsxref("ArrayBuffer")}}, independentemente da [extremidade (_endianness_) da plataforma](/pt-BR/docs/Glossario/Endianness).
 
-<p>{{EmbedInteractiveExample("pages/js/dataview-constructor.html")}}</p>
+{{EmbedInteractiveExample("pages/js/dataview-constructor.html")}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">new DataView(buffer [, byteOffset [, byteLength]])</pre>
+```
+new DataView(buffer [, byteOffset [, byteLength]])
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>buffer</code></dt>
- <dd>{{jsxref("ArrayBuffer")}} ou {{jsxref("SharedArrayBuffer")}} {{experimental_inline}} existente para usar como armazenamento de um novo objeto <code>DataView</code>.</dd>
- <dt><code>byteOffset</code> {{optional_inline}}</dt>
- <dd>A mudança, em bytes, do primeiro byte determinado em um buffer, que será referenciado pela nova view. Se não for especificado, a view do buffer começará no primeiro byte.</dd>
- <dt><code>byteLength</code> {{optional_inline}}</dt>
- <dd>O número de elementos no array de bytes. Se não especificado, o tamanho da view será do mesmo tamanho do buffer.</dd>
-</dl>
+- `buffer`
+  - : {{jsxref("ArrayBuffer")}} ou {{jsxref("SharedArrayBuffer")}} {{experimental_inline}} existente para usar como armazenamento de um novo objeto `DataView`.
+- `byteOffset` {{optional_inline}}
+  - : A mudança, em bytes, do primeiro byte determinado em um buffer, que será referenciado pela nova view. Se não for especificado, a view do buffer começará no primeiro byte.
+- `byteLength` {{optional_inline}}
+  - : O número de elementos no array de bytes. Se não especificado, o tamanho da view será do mesmo tamanho do buffer.
 
-<h3 id="Retorno">Retorno</h3>
+### Retorno
 
-<p>Um novo objeto <code>DataView</code> que representa o buffer de dados especificado. (Provavelmente não foi uma descrição muito útil.)</p>
+Um novo objeto `DataView` que representa o buffer de dados especificado. (Provavelmente não foi uma descrição muito útil.)
 
-<p>Você pode pensar nesse objeto retornado como um "intérprete" de um array buffer de bytes - ele sabe como converter números para inserir em um buffer corretamente, tanto ao ler quanto ao gravar. Isso significa lidar com conversões <em>integer,</em> <em>float,</em> <em>endianness</em> e outros detalhes da representação de números em formato binário.</p>
+Você pode pensar nesse objeto retornado como um "intérprete" de um array buffer de bytes - ele sabe como converter números para inserir em um buffer corretamente, tanto ao ler quanto ao gravar. Isso significa lidar com conversões _integer,_ _float,_ _endianness_ e outros detalhes da representação de números em formato binário.
 
-<h3 id="Exceções">Exceções</h3>
+### Exceções
 
-<dl>
- <dt><code>{{jsxref("RangeError")}}</code></dt>
- <dd><p>Lançado se o <code>byteOffset</code> ou <code>byteLength</code> especificados ultrapassarem o final do buffer.</p>
- <p>Por exemplo, se o buffer tem 16 bytes de comprimento, o <code>byteOffset</code> é 8 e o <code>byteLength</code> é 10, esse erro será lançado porque a view resultante tenta estender 2 bytes acima do comprimento total do buffer.</p></dd>
-</dl>
+- `{{jsxref("RangeError")}}`
 
-<h2 id="Descrição">Descrição</h2>
+  - : Lançado se o `byteOffset` ou `byteLength` especificados ultrapassarem o final do buffer.
 
-<h3 id="Endianness"><em>Endianness</em></h3>
+    Por exemplo, se o buffer tem 16 bytes de comprimento, o `byteOffset` é 8 e o `byteLength` é 10, esse erro será lançado porque a view resultante tenta estender 2 bytes acima do comprimento total do buffer.
 
-<p>Formatos de números <em>Multi-byte</em> são representados de maneira diferente na memória, dependendo da arquitetura da máquina, veja {{Glossary("Endianness")}} para mais informações. Assessores de <code>DataView</code> fornecem controle explícito de como o dado será acessado, independente do <em>endianness </em>da arquitetura em execução. </p>
+## Descrição
 
-<pre class="brush: js">var littleEndian = (function() {
+### _Endianness_
+
+Formatos de números _Multi-byte_ são representados de maneira diferente na memória, dependendo da arquitetura da máquina, veja {{Glossary("Endianness")}} para mais informações. Assessores de `DataView` fornecem controle explícito de como o dado será acessado, independente do _endianness_ da arquitetura em execução.
+
+```js
+var littleEndian = (function() {
   var buffer = new ArrayBuffer(2);
   new DataView(buffer).setInt16(0, 256, true /* littleEndian */);
   // Int16Array uses the platform's endianness.
   return new Int16Array(buffer)[0] === 256;
 })();
 console.log(littleEndian); // true or false
-</pre>
+```
 
-<h3 id="Valores_inteiros_de_64_bits">Valores inteiros de 64 bits</h3>
+### Valores inteiros de 64 bits
 
-<p>Como JavaScript atualmente não inclui suporte padrão para valores inteiros de 64 bits, <code>DataView</code> não oferece operações nativas de 64 bits. Como solução alternativa, você poderia implementar sua própria função getUint64() para obter um valor com a precisão de {{jsxref("Number.MAX_SAFE_INTEGER")}}, o que pode ser bom para determinados casos.</p>
+Como JavaScript atualmente não inclui suporte padrão para valores inteiros de 64 bits, `DataView` não oferece operações nativas de 64 bits. Como solução alternativa, você poderia implementar sua própria função getUint64() para obter um valor com a precisão de {{jsxref("Number.MAX_SAFE_INTEGER")}}, o que pode ser bom para determinados casos.
 
-<pre class="brush: js">function getUint64(dataview, byteOffset, littleEndian) {
+```js
+function getUint64(dataview, byteOffset, littleEndian) {
   // split 64-bit number into two 32-bit (4-byte) parts
   const left =  dataview.getUint32(byteOffset, littleEndian);
   const right = dataview.getUint32(byteOffset+4, littleEndian);
@@ -74,11 +76,13 @@ console.log(littleEndian); // true or false
     console.warn(combined, 'exceeds MAX_SAFE_INTEGER. Precision may be lost');
 
   return combined;
-}</pre>
+}
+```
 
-<p>Como alternativa, se você precisar de um intervalo completo de 64 bits, poderá criar um {{jsxref("BigInt")}}.</p>
+Como alternativa, se você precisar de um intervalo completo de 64 bits, poderá criar um {{jsxref("BigInt")}}.
 
-<pre class="brush: js">function getUint64BigInt(dataview, byteOffset, littleEndian) {
+```js
+function getUint64BigInt(dataview, byteOffset, littleEndian) {
   // split 64-bit number into two 32-bit (4-byte) parts
   const left = dataview.getUint32(byteOffset, littleEndian);
   const right = dataview.getUint32(byteOffset + 4, littleEndian);
@@ -90,71 +94,55 @@ console.log(littleEndian); // true or false
 
   return BigInt(`0x${combined}`);
 }
-</pre>
+```
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<p>Todas as instâncias de <code>DataView</code> herdam {{jsxref("DataView.prototype")}} e permitem a adição de propriedades a todos os objetos DataView.</p>
+Todas as instâncias de `DataView` herdam {{jsxref("DataView.prototype")}} e permitem a adição de propriedades a todos os objetos DataView.
 
-<p>{{page('en-US/Web/JavaScript/Reference/Global_Objects/DataView/prototype','Properties')}}</p>
+{{page('en-US/Web/JavaScript/Reference/Global_Objects/DataView/prototype','Properties')}}
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<p>{{page('en-US/Web/JavaScript/Reference/Global_Objects/DataView/prototype','Methods')}}</p>
+{{page('en-US/Web/JavaScript/Reference/Global_Objects/DataView/prototype','Methods')}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: js">var buffer = new ArrayBuffer(16);
+```js
+var buffer = new ArrayBuffer(16);
 var dv = new DataView(buffer, 0);
 
 dv.setInt16(1, 42);
 dv.getInt16(1); //42
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Typed Array')}}</td>
-   <td>{{Spec2('Typed Array')}}</td>
-   <td>Substituído pelo ECMAScript 6</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-dataview-constructor', 'DataView')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definição inicial no ECMA standard</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-dataview-constructor', 'DataView')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                        | Status                           | Comentário                         |
+| ------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------- |
+| {{SpecName('Typed Array')}}                                                 | {{Spec2('Typed Array')}} | Substituído pelo ECMAScript 6      |
+| {{SpecName('ES6', '#sec-dataview-constructor', 'DataView')}}     | {{Spec2('ES6')}}             | Definição inicial no ECMA standard |
+| {{SpecName('ESDraft', '#sec-dataview-constructor', 'DataView')}} | {{Spec2('ESDraft')}}     |                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.DataView")}}</p>
+{{Compat("javascript.builtins.DataView")}}
 
-<h2 id="Notas_de_compatibilidade">Notas de compatibilidade</h2>
+## Notas de compatibilidade
 
-<p>Começando com o Firefox 40, <code>DataView</code> deve ser construído com o operador {{jsxref("Operators/new", "new")}} . Chamando <code>DataView()</code> como uma função sem o <code>new</code>,  irá lançar um {{jsxref("TypeError")}} de agora em diante.</p>
+Começando com o Firefox 40, `DataView` deve ser construído com o operador {{jsxref("Operators/new", "new")}} . Chamando `DataView()` como uma função sem o `new`, irá lançar um {{jsxref("TypeError")}} de agora em diante.
 
-<pre class="brush: js example-bad">var dv = DataView(buffer, 0);
-// TypeError: calling a builtin DataView constructor without new is forbidden</pre>
+```js example-bad
+var dv = DataView(buffer, 0);
+// TypeError: calling a builtin DataView constructor without new is forbidden
+```
 
-<pre class="brush: js example-good">var dv = new DataView(buffer, 0);</pre>
+```js example-good
+var dv = new DataView(buffer, 0);
+```
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a class="link-https" href="https://github.com/jDataView/jDataView">jDataView</a>: Biblioteca javascript que faz o polyfill e extende a API do <code>DataView</code> para todos os browsers e para o Node.js.</li>
- <li>{{jsxref("ArrayBuffer")}}</li>
- <li>{{jsxref("SharedArrayBuffer")}}</li>
-</ul>
+- [jDataView](https://github.com/jDataView/jDataView): Biblioteca javascript que faz o polyfill e extende a API do `DataView` para todos os browsers e para o Node.js.
+- {{jsxref("ArrayBuffer")}}
+- {{jsxref("SharedArrayBuffer")}}

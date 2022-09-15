@@ -1,5 +1,5 @@
 ---
-title: 'String.prototype[@@iterator]()'
+title: String.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/String/@@iterator
 tags:
   - Iterador
@@ -10,33 +10,37 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/String/@@iterator
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>[@@iterator]()</code></strong> retorna um novo objeto <code>Iterator</code> que itera sobre os pontos de código do valor da String, retornando cada ponto de código como um valor String.</p>
+O método **`[@@iterator]()`** retorna um novo objeto `Iterator` que itera sobre os pontos de código do valor da String, retornando cada ponto de código como um valor String.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code><var>str</var>[Symbol.iterator]</code></pre>
+```
+str[Symbol.iterator]
+```
 
-<h3 id="Valor_de_Retorno">Valor de Retorno</h3>
+### Valor de Retorno
 
-<p>Novo objeto <code>Iterator</code>.</p>
+Novo objeto `Iterator`.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_iterator">Usando <code>[@@iterator]()</code></h3>
+### Usando `[@@iterator]()`
 
-<pre class="brush:js notranslate">var str = 'A\uD835\uDC68';
+```js
+var str = 'A\uD835\uDC68';
 
 var strIter = str[Symbol.iterator]();
 
 console.log(strIter.next().value); // "A"
 console.log(strIter.next().value); // "\uD835\uDC68"
-</pre>
+```
 
-<h3 id="Usando_iterator_com_for..of">Usando <code>[@@iterator]()</code> com <code>for..of</code></h3>
+### Usando `[@@iterator]()` com `for..of`
 
-<pre class="brush:js notranslate">var str = 'A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A';
+```js
+var str = 'A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A';
 
 for (var v of str) {
   console.log(v);
@@ -47,36 +51,19 @@ for (var v of str) {
 // "\uD835\uDC69"
 // "C"
 // "\uD835\uDC6A"
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col"></th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-string.prototype-@@iterator', 'String.prototype[@@iterator]()')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype-@@iterator', 'String.prototype[@@iterator]()')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+|                                                                                                                              | Status                       | Comment            |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('ES2015', '#sec-string.prototype-@@iterator', 'String.prototype[@@iterator]()')}} | {{Spec2('ES2015')}}     | Definição inicial. |
+| {{SpecName('ESDraft', '#sec-string.prototype-@@iterator', 'String.prototype[@@iterator]()')}} | {{Spec2('ESDraft')}} |                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.String.@@iterator")}}</p>
+{{Compat("javascript.builtins.String.@@iterator")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">Iteration protocols</a></li>
-</ul>
+- [Iteration protocols](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols)

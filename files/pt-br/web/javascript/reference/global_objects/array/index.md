@@ -9,72 +9,90 @@ tags:
   - TopicStub
 translation_of: Web/JavaScript/Reference/Global_Objects/Array
 ---
-<p>{{JSRef("Global_Objects", "Array")}}</p>
+{{JSRef("Global_Objects", "Array")}}
 
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>O objeto <code>Array</code> do JavaScript é um objeto global usado na construção de 'arrays': objetos de alto nível semelhantes a listas.</p>
+O objeto `Array` do JavaScript é um objeto global usado na construção de 'arrays': objetos de alto nível semelhantes a listas.
 
-<p><strong>Criando um Array</strong></p>
+**Criando um Array**
 
-<pre class="brush: js">var frutas = ['Maçã', 'Banana'];
+```js
+var frutas = ['Maçã', 'Banana'];
 
 console.log(frutas.length);
 // 2
-</pre>
+```
 
-<p><strong>Acessar um item (<em>index</em>) do Array</strong></p>
+**Acessar um item (_index_) do Array**
 
-<pre class="brush: js">var primeiro = frutas[0];
+```js
+var primeiro = frutas[0];
 // Maçã
 
 var ultimo = frutas[frutas.length - 1];
-// Banana</pre>
+// Banana
+```
 
-<p><strong>Iterar um Array</strong></p>
+**Iterar um Array**
 
-<pre class="brush: js">frutas.forEach(function (item, indice, array) {
+```js
+frutas.forEach(function (item, indice, array) {
   console.log(item, indice);
 });
 // Maçã 0
-// Banana 1</pre>
+// Banana 1
+```
 
-<p><strong>Adicionar um item ao final do Array</strong></p>
+**Adicionar um item ao final do Array**
 
-<pre class="brush: js">var adicionar = frutas.push('Laranja');
-// ['Maçã', 'Banana', 'Laranja']</pre>
+```js
+var adicionar = frutas.push('Laranja');
+// ['Maçã', 'Banana', 'Laranja']
+```
 
-<p><strong>Remover um item do final do Array</strong></p>
+**Remover um item do final do Array**
 
-<pre class="brush: js">var ultimo = frutas.pop(); // remove Laranja (do final)
-// ['Maçã', 'Banana'];</pre>
+```js
+var ultimo = frutas.pop(); // remove Laranja (do final)
+// ['Maçã', 'Banana'];
+```
 
-<p><strong>Remover do início do Array</strong></p>
+**Remover do início do Array**
 
-<pre class="brush: js">var primeiro = frutas.shift(); // remove Maçã do início
-// ['Banana'];</pre>
+```js
+var primeiro = frutas.shift(); // remove Maçã do início
+// ['Banana'];
+```
 
-<p><strong>Adicionar ao início do Array</strong></p>
+**Adicionar ao início do Array**
 
-<pre class="brush: js">var adicionar = frutas.unshift('Morango') // adiciona ao início
-// ['Morango', 'Banana'];</pre>
+```js
+var adicionar = frutas.unshift('Morango') // adiciona ao início
+// ['Morango', 'Banana'];
+```
 
-<p><strong>Procurar o índice de um item na Array</strong></p>
+**Procurar o índice de um item na Array**
 
-<pre class="brush: js">frutas.push('Manga');
+```js
+frutas.push('Manga');
 // ['Morango', 'Banana', 'Manga']
 
 var pos = frutas.indexOf('Banana');
-// 1</pre>
+// 1
+```
 
-<p><strong>Remover um item pela posição do índice</strong></p>
+**Remover um item pela posição do índice**
 
-<pre class="brush: js">var removedItem = frutas.splice(pos, 1); // é assim que se remove um item
-// ['Morango', 'Manga']</pre>
+```js
+var removedItem = frutas.splice(pos, 1); // é assim que se remove um item
+// ['Morango', 'Manga']
+```
 
-<p><strong>Remover itens de uma posição de índice</strong></p>
+**Remover itens de uma posição de índice**
 
-<pre class="brush: js">var vegetais = ['Repolho', 'Nabo', 'Rabanete', 'Cenoura'];
+```js
+var vegetais = ['Repolho', 'Nabo', 'Rabanete', 'Cenoura'];
 console.log(vegetais);
 // ['Repolho', 'Nabo', 'Rabanete', 'Cenoura']
 
@@ -88,228 +106,211 @@ console.log(vegetais);
 // ['Repolho', 'Cenoura'] (o array original é alterado)
 
 console.log(itensRemovidos);
-// ['Nabo', 'Rabanete']</pre>
+// ['Nabo', 'Rabanete']
+```
 
-<p><strong>Copiar um Array</strong></p>
+**Copiar um Array**
 
-<pre class="brush: js">var copiar = frutas.slice(); // é assim que se copia
-// ['Morango', 'Manga']</pre>
+```js
+var copiar = frutas.slice(); // é assim que se copia
+// ['Morango', 'Manga']
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><var>[element0</var>, <var>element1</var>, ..., <var>elementN</var>]
-new Array(<em>element0</em>, <em>element1</em>, ..., <em>elementN</em>)
-new Array(<em>arrayLength</em>)
-</pre>
+```
+[element0, element1, ..., elementN]
+new Array(element0, element1, ..., elementN)
+new Array(arrayLength)
+```
 
-<dl>
- <dt><code><var>element0</var>, <var>element1</var>, ..., <var>elementN</var> </code></dt>
- <dd>Um array JavaScript é inicializado com os elementos contém, exceto no caso onde um único argumento é passado para o construtor do <code>Array</code> e esse argumento é um número (veja o parâmetro arrayLength abaixo). Esse caso especial só se aplica para os arrays JavaScript criados com o construtor <code>Array</code> , e não para literais de array criados com a sintaxe de colchetes [].</dd>
- <dt><code><var>arrayLength</var></code></dt>
- <dd>Se o único argumento passado para o construtor do <code>Array</code> for um número inteiro entre 0 e 2<sup>32</sup>-1 (inclusive), um novo array com o tamanho desse número é retornado. Se o argumento for qualquer outro número, uma exceção <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/RangeError" title="JavaScript/Reference/Global_Objects/RangeError">RangeError</a></code> é lançada.</dd>
-</dl>
+- `element0, element1, ..., elementN`
+  - : Um array JavaScript é inicializado com os elementos contém, exceto no caso onde um único argumento é passado para o construtor do `Array` e esse argumento é um número (veja o parâmetro arrayLength abaixo). Esse caso especial só se aplica para os arrays JavaScript criados com o construtor `Array` , e não para literais de array criados com a sintaxe de colchetes \[].
+- `arrayLength`
+  - : Se o único argumento passado para o construtor do `Array` for um número inteiro entre 0 e 232-1 (inclusive), um novo array com o tamanho desse número é retornado. Se o argumento for qualquer outro número, uma exceção [`RangeError`](/en-US/docs/JavaScript/Reference/Global_Objects/RangeError "JavaScript/Reference/Global_Objects/RangeError") é lançada.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Arrays são objetos semelhantes a listas que vêm com uma série de métodos embutidos para realizar operações de travessia e mutação. Nem o tamanho de um array JavaScript nem os tipos de elementos são fixos. Já que o tamanho de um array pode ser alterado a qualquer momento e os dados podem ser armazenados em posições não contíguas, arrays JavaScript não tem a garantia de serem densos; isso depende de como o programador escolhe usá-los. De uma maneira geral, essas são características convenientes, mas, se esses recursos não são desejáveis para o seu caso em particular, você pode considerar usar arrays tipados.</p>
+Arrays são objetos semelhantes a listas que vêm com uma série de métodos embutidos para realizar operações de travessia e mutação. Nem o tamanho de um array JavaScript nem os tipos de elementos são fixos. Já que o tamanho de um array pode ser alterado a qualquer momento e os dados podem ser armazenados em posições não contíguas, arrays JavaScript não tem a garantia de serem densos; isso depende de como o programador escolhe usá-los. De uma maneira geral, essas são características convenientes, mas, se esses recursos não são desejáveis para o seu caso em particular, você pode considerar usar arrays tipados.
 
-<p>Arrays não podem usar strings como índices (como em um <a href="https://pt.wikipedia.org/wiki/Vetor_associativo">array associativo</a>), devem ser usados números inteiros. Definir ou acessar não-inteiros usando <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_Accessors">notação de colchetes (ou notação de ponto)</a> não vai definir ou recuperar um elemento do array em si, mas sim definir ou acessar uma variável associada com a <a href="/pt-BR/docs/Web/JavaScript/Data_structures#Propriedades">coleção de propriedades de objeto</a> daquele array. As propriedades de objeto do array e a lista de elementos do array são separados, e as operações de travessia e mutação não podem ser aplicadas a essas propriedades nomeadas.</p>
+Arrays não podem usar strings como índices (como em um [array associativo](https://pt.wikipedia.org/wiki/Vetor_associativo)), devem ser usados números inteiros. Definir ou acessar não-inteiros usando [notação de colchetes (ou notação de ponto)](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_Accessors) não vai definir ou recuperar um elemento do array em si, mas sim definir ou acessar uma variável associada com a [coleção de propriedades de objeto](/pt-BR/docs/Web/JavaScript/Data_structures#Propriedades) daquele array. As propriedades de objeto do array e a lista de elementos do array são separados, e as operações de travessia e mutação não podem ser aplicadas a essas propriedades nomeadas.
 
-<h3 id="Accessando_elementos_de_um_array">Accessando elementos de um array </h3>
+### Accessando elementos de um array
 
-<p>Arrays JavaScript começam com índice zero: o primeiro elemento de um array está na posição <code>0</code> e o último elemento está na  posição equivalente ao valor da propriedade <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array/length" title="JavaScript/Reference/Global_Objects/Array/length">length</a></code> (tamanho) menos 1.</p>
+Arrays JavaScript começam com índice zero: o primeiro elemento de um array está na posição `0` e o último elemento está na posição equivalente ao valor da propriedade [`length`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/length "JavaScript/Reference/Global_Objects/Array/length") (tamanho) menos 1.
 
-<pre class="brush: js">var arr = ['este é o primeiro elemento', 'este é o segundo elemento'];
+```js
+var arr = ['este é o primeiro elemento', 'este é o segundo elemento'];
 console.log(arr[0]);              // exibe 'este é o primeiro elemento'
 console.log(arr[1]);              // exibe 'este é o segundo elemento'
 console.log(arr[arr.length - 1]); // exibe 'este é o segundo elemento'
-</pre>
+```
 
-<p>Elementos de um array são somente propriedades de objetos, da forma que <code><a href="/en-US/docs/toString" title="toString">toString</a></code> é uma propriedade. Contudo, note que tentando acessar o primeiro elemento de um array da seguinte forma causará um erro de sintaxe, pois o nome da propriedade é inválido:</p>
+Elementos de um array são somente propriedades de objetos, da forma que [`toString`](/en-US/docs/toString "toString") é uma propriedade. Contudo, note que tentando acessar o primeiro elemento de um array da seguinte forma causará um erro de sintaxe, pois o nome da propriedade é inválido:
 
-<pre class="brush: js">console.log(arr.0); // um erro de sintaxe
-</pre>
+```js
+console.log(arr.0); // um erro de sintaxe
+```
 
-<p>Não há nada de especial a respeito de arrays JavaScript e suas propriedades que causam isso. As propriedades JavaScript que começam com um dígito não podem ser referenciadas com notação de ponto. Elas necesitam usar notação de colchetes para poderem ser acessadas. Por exemplo, se você tivesse um objeto com a propriedade "3d", também teria que ser referenciá-la usando notação de colchetes. Por exemplo:</p>
+Não há nada de especial a respeito de arrays JavaScript e suas propriedades que causam isso. As propriedades JavaScript que começam com um dígito não podem ser referenciadas com notação de ponto. Elas necesitam usar notação de colchetes para poderem ser acessadas. Por exemplo, se você tivesse um objeto com a propriedade "3d", também teria que ser referenciá-la usando notação de colchetes. Por exemplo:
 
-<pre class="brush: js">var anos = [1950, 1960, 1970, 1980, 1990, 2000, 2010];
+```js
+var anos = [1950, 1960, 1970, 1980, 1990, 2000, 2010];
 console.log(anos.0); // um erro de sintaxe
 console.log(anos[0]); // funciona corretamente
-</pre>
+```
 
-<pre class="brush: js">renderer.3d.setTexture(model, 'personagem.png'); // um erro de sintaxe
+```js
+renderer.3d.setTexture(model, 'personagem.png'); // um erro de sintaxe
 renderer['3d'].setTexture(model, 'personagem.png'); //funciona corretamente
-</pre>
+```
 
-<p>Note que no exemplo <code>3d</code>, <code>'3d'</code> teve de ser colocado entre aspas. É possivel também colocar entre aspas os índices de arrays JavaScript (ou seja, <code>years['2']</code> ao invés de <code>years[2]</code>), contudo isto não é necessário. O valor 2 em <code>years[2]</code> eventualmente será convertido a uma string pela engine do JavaScript  através de uma conversão explicita com o método <code>toString</code>. E é por esta razão que  <code>'2'</code> e <code>'02'</code> irão referenciar dois slots diferentes no objeto <code>anos</code> e o seguinte exemplo pode ser <em><code>true</code></em>:</p>
+Note que no exemplo `3d`, `'3d'` teve de ser colocado entre aspas. É possivel também colocar entre aspas os índices de arrays JavaScript (ou seja, `years['2']` ao invés de `years[2]`), contudo isto não é necessário. O valor 2 em `years[2]` eventualmente será convertido a uma string pela engine do JavaScript através de uma conversão explicita com o método `toString`. E é por esta razão que `'2'` e `'02'` irão referenciar dois slots diferentes no objeto `anos` e o seguinte exemplo pode ser _`true`_:
 
-<pre class="brush: js">console.log(anos['2'] != anos['02']);
-</pre>
+```js
+console.log(anos['2'] != anos['02']);
+```
 
-<p>De forma similar, propriedades de objeto que sejam palavras reservadas(!) só podem ser acessadas como strings em notação de colchetes:</p>
+De forma similar, propriedades de objeto que sejam palavras reservadas(!) só podem ser acessadas como strings em notação de colchetes:
 
-<pre class="brush: js">var promessa = {
+```js
+var promessa = {
   'var': 'texto',
   'array': [1, 2, 3, 4]
 };
 
 console.log(promessa['var']);
-</pre>
+```
 
-<h3 id="Relação_entre_length_e_propriedades_numéricas">Relação entre <em><code>length</code></em> e propriedades numéricas</h3>
+### Relação entre _`length`_ e propriedades numéricas
 
-<p>As propriedades <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array/length" title="JavaScript/Reference/Global_Objects/Array/length">length</a></code> e numéricas de um array Javascript são conectadas. Varios dos métodos javascript pré-definidos (por exemplo, <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array/join" title="JavaScript/Reference/Global_Objects/Array/join">join</a></code>, <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array/slice" title="JavaScript/Reference/Global_Objects/Array/slice">slice</a></code>, <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array/indexOf" title="JavaScript/Reference/Global_Objects/Array/indexOf">indexOf</a></code> etc.) levam em conta o valor da propriedade <code>length</code> de um array quando eles são chamados. Outros métodos (por exemplo, <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array/push" title="JavaScript/Reference/Global_Objects/Array/push">push</a></code>, <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array/splice" title="JavaScript/Reference/Global_Objects/Array/splice">splice</a></code> etc.) também resultam em uma atualização na propriedade <code>length</code> do array.</p>
+As propriedades [`length`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/length "JavaScript/Reference/Global_Objects/Array/length") e numéricas de um array Javascript são conectadas. Varios dos métodos javascript pré-definidos (por exemplo, [`join`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/join "JavaScript/Reference/Global_Objects/Array/join"), [`slice`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/slice "JavaScript/Reference/Global_Objects/Array/slice"), [`indexOf`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/indexOf "JavaScript/Reference/Global_Objects/Array/indexOf") etc.) levam em conta o valor da propriedade `length` de um array quando eles são chamados. Outros métodos (por exemplo, [`push`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/push "JavaScript/Reference/Global_Objects/Array/push"), [`splice`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/splice "JavaScript/Reference/Global_Objects/Array/splice") etc.) também resultam em uma atualização na propriedade `length` do array.
 
-<pre class="brush: js">var frutas = [];
+```js
+var frutas = [];
 frutas.push('banana', 'maça', 'pêssego');
 
-console.log(frutas.length); // 3</pre>
+console.log(frutas.length); // 3
+```
 
-<p>Quando configurar uma propriedade num array Javascript em que a propriedade é um índice valido do array e este índice está fora do atual limite do array, o array irá crescer para um tamanho grande o suficiente para acomodar o elemento neste índice, e a engine irá atualizar a propriedade <em>length</em> do array de acordo com isto:</p>
+Quando configurar uma propriedade num array Javascript em que a propriedade é um índice valido do array e este índice está fora do atual limite do array, o array irá crescer para um tamanho grande o suficiente para acomodar o elemento neste índice, e a engine irá atualizar a propriedade _length_ do array de acordo com isto:
 
-<pre class="brush: js">frutas[5] = 'manga';
+```js
+frutas[5] = 'manga';
 console.log(frutas[5]); // 'manga'
 console.log(Object.keys(frutas)); // ['0', '1', '2', '5']
-console.log(frutas.length); // 6</pre>
+console.log(frutas.length); // 6
+```
 
-<p>Configurar a propriedade <code>length</code> diretamente, também resulta em um comportamento especial:</p>
+Configurar a propriedade `length` diretamente, também resulta em um comportamento especial:
 
-<pre class="brush: js">frutas.length = 10;
+```js
+frutas.length = 10;
 console.log(Object.keys(frutas)); // ['0', '1', '2', '5']
 console.log(frutas.length); // 10
-</pre>
+```
 
-<p>Diminuir o valor de <code>length</code>, entretanto, apaga elementos:</p>
+Diminuir o valor de `length`, entretanto, apaga elementos:
 
-<pre class="brush: js">frutas.length = 2;
+```js
+frutas.length = 2;
 console.log(Object.keys(frutas)); // ['0', '1']
-console.log(frutas.length); // 2</pre>
+console.log(frutas.length); // 2
+```
 
-<h3 id="Criando_um_array_usando_o_resultado_de_uma_comparação">Criando um array usando o resultado de uma comparação</h3>
+### Criando um array usando o resultado de uma comparação
 
-<p>O resultado de uma comparação entre uma <em>expressão regular</em> e uma string pode criar um array Javascript. Este array tem propriedades e elementos que disponibilizam informações sobre a comparação. Esse array é o valor de retorno dos métodos {{jsxref("RegExp.exec")}}, {{jsxref("String.match")}}, e {{jsxref("String.replace")}}. Para explicar melhor sobre estas propriedades e elementos, veja o seguinte exemplo e então consulte a tabela abaixo:</p>
+O resultado de uma comparação entre uma _expressão regular_ e uma string pode criar um array Javascript. Este array tem propriedades e elementos que disponibilizam informações sobre a comparação. Esse array é o valor de retorno dos métodos {{jsxref("RegExp.exec")}}, {{jsxref("String.match")}}, e {{jsxref("String.replace")}}. Para explicar melhor sobre estas propriedades e elementos, veja o seguinte exemplo e então consulte a tabela abaixo:
 
-<pre class="brush: js">// Encontra um d seguido por um ou mais b's seguido por um d
+```js
+// Encontra um d seguido por um ou mais b's seguido por um d
 // Salva os b's encontrados e o d seguinte
 // Ignora caixa (maiúscula/minúscula)
 
 var minhaRegex = /d(b+)(d)/i;
 var meuArray = minhaRegex.exec('cdbBdbsbz');
-</pre>
+```
 
-<p>As propriedades e elementos retornados desta comparação são os seguintes:</p>
+As propriedades e elementos retornados desta comparação são os seguintes:
 
-<table class="fullwidth-table">
- <tbody>
-  <tr>
-   <td class="header">Propriedade/Elemento</td>
-   <td class="header">Descrição</td>
-   <td class="header">Exemplo</td>
-  </tr>
-  <tr>
-   <td><code>input</code></td>
-   <td>
-    <p>Uma propriedade somente-leitura que reflete a string original a qual a expressão regular foi comparada.</p>
-   </td>
-   <td>cdbBdbsbz</td>
-  </tr>
-  <tr>
-   <td><code>index</code></td>
-   <td>Uma propriedade somente-leitura que é o índice baseado em zero da comparação na string.</td>
-   <td>1</td>
-  </tr>
-  <tr>
-   <td><code>[0]</code></td>
-   <td>Um elemento somente-leitura que especifica os ultimos caracteres que foram encontrados.</td>
-   <td>dbBd</td>
-  </tr>
-  <tr>
-   <td><code>[1], ...[n]</code></td>
-   <td>Elementos somente-leitura que especificam as <em>substrings</em> de comparações entre parênteses encontradas, se incluidas na expressão regular. O número de possíveis <em>substrings </em>entre parenteses é ilimitado.</td>
-   <td>[1]: bB<br>
-    [2]: d</td>
-  </tr>
- </tbody>
-</table>
+| Propriedade/Elemento | Descrição                                                                                                                                                                                                  | Exemplo          |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| `input`              | Uma propriedade somente-leitura que reflete a string original a qual a expressão regular foi comparada.                                                                                                    | cdbBdbsbz        |
+| `index`              | Uma propriedade somente-leitura que é o índice baseado em zero da comparação na string.                                                                                                                    | 1                |
+| `[0]`                | Um elemento somente-leitura que especifica os ultimos caracteres que foram encontrados.                                                                                                                    | dbBd             |
+| `[1], ...[n]`        | Elementos somente-leitura que especificam as _substrings_ de comparações entre parênteses encontradas, se incluidas na expressão regular. O número de possíveis _substrings_ entre parenteses é ilimitado. | \[1]: bB \[2]: d |
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<dl>
- <dt><code>Array.length</code></dt>
- <dd>Propriedade comprimento do construtor <code>Array</code>, cujo valor é 1.</dd>
- <dt>{{jsxref("Array.@@species", "get Array[@@species]")}}</dt>
- <dd>A função de construtor que é utilizada para criar objetos derivados.</dd>
-</dl>
+- `Array.length`
+  - : Propriedade comprimento do construtor `Array`, cujo valor é 1.
+- {{jsxref("Array.@@species", "get Array[@@species]")}}
+  - : A função de construtor que é utilizada para criar objetos derivados.
 
-<dl>
- <dt>{{jsxref("Array.prototype")}}</dt>
- <dd>Permite a adição de propriedades para todos os objetos array.</dd>
-</dl>
+<!---->
 
-<h2 id="Métodos">Métodos</h2>
+- {{jsxref("Array.prototype")}}
+  - : Permite a adição de propriedades para todos os objetos array.
 
-<div>
-<dl>
- <dt>{{jsxref("Array.from()")}}</dt>
- <dd>Cria uma nova instância de <code>Array</code> a partir de um objeto semelhante ou iterável.</dd>
- <dt>{{jsxref("Array.isArray()")}}</dt>
- <dd>Retorna <code>true</code> se a variável é um array e <code>false</code> caso contrário.</dd>
- <dt>{{jsxref("Array.of()")}}</dt>
- <dd>Cria uma nova instância de <code>Array</code> com um número variável de argumentos, independentemente do número ou tipo dos argumentos.</dd>
-</dl>
-</div>
+## Métodos
 
-<div> </div>
+- {{jsxref("Array.from()")}}
+  - : Cria uma nova instância de `Array` a partir de um objeto semelhante ou iterável.
+- {{jsxref("Array.isArray()")}}
+  - : Retorna `true` se a variável é um array e `false` caso contrário.
+- {{jsxref("Array.of()")}}
+  - : Cria uma nova instância de `Array` com um número variável de argumentos, independentemente do número ou tipo dos argumentos.
 
-<h2 id="Instâncias_de_Array">Instâncias de <code>Array</code></h2>
+## Instâncias de `Array`
 
-<p>Todas as instâncias de <code>Array</code> herdam de <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array/prototype" title="Core_JavaScript_1.5_Reference/Global_Objects/Array/prototype">Array.prototype</a></code>.  O protótipo do construtor <code>Array</code> pode ser modificado de forma a afetar todas as instâncias de <code>Array</code>.</p>
+Todas as instâncias de `Array` herdam de [`Array.prototype`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/prototype "Core_JavaScript_1.5_Reference/Global_Objects/Array/prototype"). O protótipo do construtor `Array` pode ser modificado de forma a afetar todas as instâncias de `Array`.
 
-<h3 id="Properties_of_Array_instances" name="Properties_of_Array_instances">Propriedades</h3>
+### Propriedades
 
-<div>{{ page('/pt-BR/docs/JavaScript/Reference/Global_Objects/Array/prototype', 'Properties') }}</div>
+{{ page('/pt-BR/docs/JavaScript/Reference/Global_Objects/Array/prototype', 'Properties') }}
 
-<h3 id="Methods_of_Array_instances" name="Methods_of_Array_instances">Métodos</h3>
+### Métodos
 
-<h4 id="Métodos_modificadores">Métodos modificadores</h4>
+#### Métodos modificadores
 
-<div>{{ page('/pt-BR/docs/JavaScript/Reference/Global_Objects/Array/prototype', 'Mutator_methods') }}</div>
+{{ page('/pt-BR/docs/JavaScript/Reference/Global_Objects/Array/prototype', 'Mutator_methods') }}
 
-<h4 id="Métodos_de_acesso">Métodos de acesso</h4>
+#### Métodos de acesso
 
-<div>{{ page('/pt-BR/docs/JavaScript/Reference/Global_Objects/Array/prototype', 'Accessor_methods') }}</div>
+{{ page('/pt-BR/docs/JavaScript/Reference/Global_Objects/Array/prototype', 'Accessor_methods') }}
 
-<h4 id="Métodos_de_iteração">Métodos de iteração</h4>
+#### Métodos de iteração
 
-<div>{{ page('/pt-BR/docs/JavaScript/Reference/Global_Objects/Array/prototype', 'Iteration_methods') }}</div>
+{{ page('/pt-BR/docs/JavaScript/Reference/Global_Objects/Array/prototype', 'Iteration_methods') }}
 
-<h2 id="Métodos_genéricos_de_Array">Métodos genéricos de <code>Array</code></h2>
+## Métodos genéricos de `Array`
 
-<div class="warning">
-<p><strong>Métodos genéricos de arrays não seguem o padrão, são obsoletos e serão removidos em breve.</strong></p>
-</div>
+> **Aviso:** **Métodos genéricos de arrays não seguem o padrão, são obsoletos e serão removidos em breve.**
 
-<p>Algumas vezes você poderá querer aplicar métodos de arrays para strings ou outros objetos parecidos com arrays (como em <code><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments" title="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments">argumentos</a></code> de funções). Ao fazer isto, você trata uma string como um array de caracteres (ou em outros casos onde trata-se não-arrays como um array).  Por exemplo,  para checar se cada caractere em uma varivável <var>str</var> é uma letra, você poderia escrever:</p>
+Algumas vezes você poderá querer aplicar métodos de arrays para strings ou outros objetos parecidos com arrays (como em [`argumentos`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments "https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments") de funções). Ao fazer isto, você trata uma string como um array de caracteres (ou em outros casos onde trata-se não-arrays como um array). Por exemplo, para checar se cada caractere em uma varivável _str_ é uma letra, você poderia escrever:
 
-<pre class="brush: js">function isLetter(character) {
-  return (character &gt;= "a" &amp;&amp; character &lt;= "z");
+```js
+function isLetter(character) {
+  return (character >= "a" && character <= "z");
 }
 
 if (Array.prototype.every.call(str, isLetter))
   alert("A string '" + str + "' contém somente letras!");
-</pre>
+```
 
-<p>Esta notação é um pouco despendiosa e o JavaScript 1.6 introduziu a seguinte abreviação genérica:</p>
+Esta notação é um pouco despendiosa e o JavaScript 1.6 introduziu a seguinte abreviação genérica:
 
-<pre class="brush: js">if (Array.every(isLetter, str))
+```js
+if (Array.every(isLetter, str))
   alert("A string '" + str + "' contém somente letras!");
-</pre>
+```
 
-<p><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String#String_generic_methods" title="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String#String_generic_methods">Generics</a> também estão disponíveis em <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String" title="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String"><code>String</code></a>.</p>
+[Generics](/pt-BR/docs/JavaScript/Reference/Global_Objects/String#String_generic_methods) também estão disponíveis em [`String`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String).
 
-<p>Estes não são atualmente parte dos padrões ECMAScript (através do ES2015 <a href="https://github.com/monolithed/ECMAScript-6"><code>Array.from()</code></a> pode se conseguir isto). A seguir segue uma adaptação para permitir o uso em todos os navegadores:</p>
+Estes não são atualmente parte dos padrões ECMAScript (através do ES2015 [`Array.from()`](https://github.com/monolithed/ECMAScript-6) pode se conseguir isto). A seguir segue uma adaptação para permitir o uso em todos os navegadores:
 
-<pre class="brush: js">/*globals define*/
+```js
+/*globals define*/
 // Assumes Array extras already present (one may use shims for these as well)
 (function () {
     'use strict';
@@ -332,30 +333,33 @@ if (Array.prototype.every.call(str, isLetter))
             };
         };
 
-    for (i = 0; i &lt; methodCount; i++) {
+    for (i = 0; i < methodCount; i++) {
         assignArrayGeneric(methods[i]);
     }
-}());</pre>
+}());
+```
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Exemplo_Criando_um_array">Exemplo: Criando um array</h3>
+### Exemplo: Criando um array
 
-<p>O exemplo a seguir cria um array, <code>msgArray</code>, com <em>length</em> 0, então atribui valores para <code>msgArray[0]</code> e <code>msgArray[99]</code>, trocando o <em>length</em> do array para 100.</p>
+O exemplo a seguir cria um array, `msgArray`, com _length_ 0, então atribui valores para `msgArray[0]` e `msgArray[99]`, trocando o _length_ do array para 100.
 
-<pre class="brush: js">var msgArray = new Array();
+```js
+var msgArray = new Array();
 msgArray[0] = "Hello";
 msgArray[99] = "world";
 
 if (msgArray.length == 100)
    console.log("O length é 100.");
-</pre>
+```
 
-<h3 id="Exemplo_Criando_um_array_bi-dimensional">Exemplo: Criando um array bi-dimensional</h3>
+### Exemplo: Criando um array bi-dimensional
 
-<p>O exemplo a seguir cria um tabuleiro de xadrez usando dois arrays bi-dimensionais de string. A primeira jogada é feita copiando o 'p' em 6,4 para 4,4.  A posição antiga de 6,4 é colocada em branco.</p>
+O exemplo a seguir cria um tabuleiro de xadrez usando dois arrays bi-dimensionais de string. A primeira jogada é feita copiando o 'p' em 6,4 para 4,4. A posição antiga de 6,4 é colocada em branco.
 
-<pre class="brush: js">var board =
+```js
+var board =
 [ ['R','N','B','Q','K','B','N','R'],
   ['P','P','P','P','P','P','P','P'],
   [' ',' ',' ',' ',' ',' ',' ',' '],
@@ -370,11 +374,12 @@ console.log(board.join('\n') + '\n\n');
 board[4][4] = board[6][4];
 board[6][4] = ' ';
 console.log(board.join('\n'));
-</pre>
+```
 
-<p>Saída:</p>
+Saída:
 
-<pre class="eval">R,N,B,Q,K,B,N,R
+```
+R,N,B,Q,K,B,N,R
 P,P,P,P,P,P,P,P
  , , , , , , ,
  , , , , , , ,
@@ -391,22 +396,25 @@ P,P,P,P,P,P,P,P
  , , , , , , ,
 p,p,p,p, ,p,p,p
 r,n,b,q,k,b,n,r
-</pre>
+```
 
-<h3 id="Browser_compatibility" name="Browser_compatibility">Utilizando um array para tabular um conjunto de valores</h3>
+### Utilizando um array para tabular um conjunto de valores
 
-<pre class="brush: js">values = [];
-for (var x = 0; x &lt; 10; x++){
+```js
+values = [];
+for (var x = 0; x < 10; x++){
  values.push([
   2 ** x,
   2 * x ** 2
  ])
 };
-console.table(values)</pre>
+console.table(values)
+```
 
-<p>Saída:</p>
+Saída:
 
-<pre>0	1	0
+```
+0	1	0
 1	2	2
 2	4	8
 3	8	18
@@ -415,49 +423,25 @@ console.table(values)</pre>
 6	64	72
 7	128	98
 8	256	128
-9	512	162</pre>
+9	512	162
+```
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Especificações</h2>
+## Especificações
 
-<table>
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição inicial</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4', 'Array')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Novos metodos adicionados: {{jsxref("Array.isArray")}}, {{jsxref("Array.prototype.indexOf", "indexOf")}}, {{jsxref("Array.prototype.lastIndexOf", "lastIndexOf")}}, {{jsxref("Array.prototype.every", "every")}}, {{jsxref("Array.prototype.some", "some")}}, {{jsxref("Array.prototype.forEach", "forEach")}}, {{jsxref("Array.prototype.map", "map")}}, {{jsxref("Array.prototype.filter", "filter")}}, {{jsxref("Array.prototype.reduce", "reduce")}}, {{jsxref("Array.prototype.reduceRight", "reduceRight")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-array-objects', 'Array')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Novos metodos adicionados: {{jsxref("Array.from")}}, {{jsxref("Array.of")}}, {{jsxref("Array.prototype.find", "find")}}, {{jsxref("Array.prototype.findIndex", "findIndex")}}, {{jsxref("Array.prototype.fill", "fill")}}, {{jsxref("Array.prototype.copyWithin", "copyWithin")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array-objects', 'Array')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Novo metodo adicionado: {{jsxref("Array.prototype.includes()")}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                            | Status                       | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Definição inicial                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| {{SpecName('ES5.1', '#sec-15.4', 'Array')}}                 | {{Spec2('ES5.1')}}     | Novos metodos adicionados: {{jsxref("Array.isArray")}}, {{jsxref("Array.prototype.indexOf", "indexOf")}}, {{jsxref("Array.prototype.lastIndexOf", "lastIndexOf")}}, {{jsxref("Array.prototype.every", "every")}}, {{jsxref("Array.prototype.some", "some")}}, {{jsxref("Array.prototype.forEach", "forEach")}}, {{jsxref("Array.prototype.map", "map")}}, {{jsxref("Array.prototype.filter", "filter")}}, {{jsxref("Array.prototype.reduce", "reduce")}}, {{jsxref("Array.prototype.reduceRight", "reduceRight")}} |
+| {{SpecName('ES2015', '#sec-array-objects', 'Array')}} | {{Spec2('ES2015')}}     | Novos metodos adicionados: {{jsxref("Array.from")}}, {{jsxref("Array.of")}}, {{jsxref("Array.prototype.find", "find")}}, {{jsxref("Array.prototype.findIndex", "findIndex")}}, {{jsxref("Array.prototype.fill", "fill")}}, {{jsxref("Array.prototype.copyWithin", "copyWithin")}}                                                                                                                                                                                                                                                                                                             |
+| {{SpecName('ESDraft', '#sec-array-objects', 'Array')}} | {{Spec2('ESDraft')}} | Novo metodo adicionado: {{jsxref("Array.prototype.includes()")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade com os navegadores</h2>
+## Compatibilidade com os navegadores
 
 {{Compat("javascript.builtins.Array")}}
 
-<h2 id="See_also" name="See_also">Ver também</h2>
+## Ver também
 
-<ul>
- <li><a href="/en-US/docs/JavaScript/Guide/Working_with_Objects#Indexing_object_properties" title="JavaScript/Guide/Working_with_objects#Indexing_object_properties">"Indexing object properties" in JavaScript Guide: "Working with objects"</a></li>
- <li><a href="/en-US/docs/JavaScript/New_in_JavaScript/1.7#Array_comprehensions" title="New_in_JavaScript_1.7#Array_comprehensions">New in JavaScript 1.7: Array comprehensions</a></li>
- <li><a href="/en-US/docs/JavaScript/New_in_JavaScript/1.6#Array_extras" title="New_in_JavaScript_1.6#Array_extras">New in JavaScript 1.6: Array extras</a></li>
- <li><a href="/en-US/docs/JavaScript_typed_arrays" title="JavaScript_typed_arrays">Draft: Typed Arrays</a></li>
-</ul>
+- ["Indexing object properties" in JavaScript Guide: "Working with objects"](/pt-BR/docs/JavaScript/Guide/Working_with_Objects#Indexing_object_properties "JavaScript/Guide/Working_with_objects#Indexing_object_properties")
+- [New in JavaScript 1.7: Array comprehensions](/pt-BR/docs/JavaScript/New_in_JavaScript/1.7#Array_comprehensions "New_in_JavaScript_1.7#Array_comprehensions")
+- [New in JavaScript 1.6: Array extras](/pt-BR/docs/JavaScript/New_in_JavaScript/1.6#Array_extras "New_in_JavaScript_1.6#Array_extras")
+- [Draft: Typed Arrays](/pt-BR/docs/JavaScript_typed_arrays "JavaScript_typed_arrays")

@@ -3,99 +3,74 @@ title: Atomics
 slug: Web/JavaScript/Reference/Global_Objects/Atomics
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
 ---
-<div>{{JSRef}} {{SeeCompatTable}}</div>
+{{JSRef}} {{SeeCompatTable}}
 
-<p>O objeto <strong><code>Atomics </code></strong>fornece operações atômicas como metodos estáticos. Eles são usados com objetos {{jsxref("SharedArrayBuffer")}}.</p>
+O objeto **`Atomics `**fornece operações atômicas como metodos estáticos. Eles são usados com objetos {{jsxref("SharedArrayBuffer")}}.
 
-<p>As operações atômicas estão localizadas no modulo <code>Atomics</code>. Diferente de outros <em>global objects</em>, <code>Atomics</code> não é um construtor. Você não deve usa-lo com o <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> operator</a> ou invocar objetos <code>Atomics</code> como funções. Todas as propriedades e método do <code>Atomics</code> são estáticos (como é o caso com o objeto {{jsxref("Math")}}, por exemplo).</p>
+As operações atômicas estão localizadas no modulo `Atomics`. Diferente de outros _global objects_, `Atomics` não é um construtor. Você não deve usa-lo com o [`new` operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/new) ou invocar objetos `Atomics` como funções. Todas as propriedades e método do `Atomics` são estáticos (como é o caso com o objeto {{jsxref("Math")}}, por exemplo).
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<h3 id="Operações_Atômicas">Operações Atômicas</h3>
+### Operações Atômicas
 
-<p>Quando a memória é compartilhada, multiplas threads podem ser lidas e escritas no mesmo dado da memória. Operações atômicas garantem que os valores previstos sejam lidos e escritos, estas operações são finalizadas antes da próxima operação iniciar e que as mesmas não sejam interrompidas.</p>
+Quando a memória é compartilhada, multiplas threads podem ser lidas e escritas no mesmo dado da memória. Operações atômicas garantem que os valores previstos sejam lidos e escritos, estas operações são finalizadas antes da próxima operação iniciar e que as mesmas não sejam interrompidas.
 
-<dl>
- <dt>{{jsxref("Atomics.add()")}}</dt>
- <dd>Adiciona o valor recebido na posiçao recebida no array. Retorna o valor anterior nesta posição.</dd>
- <dt>{{jsxref("Atomics.and()")}}</dt>
- <dd>Calcula um bit a bit AND na posição recebida no array. Retorna o valor anterior nesta posição.</dd>
- <dt>{{jsxref("Atomics.compareExchange()")}}</dt>
- <dd>Armazena o valor recebido na posição recebida no array, se este foi igual ao valor recebido. Retorna o valor anterior nesta posição.</dd>
- <dt>{{jsxref("Atomics.exchange()")}}</dt>
- <dd>Armazena o valor recebido na posição recebida no array. Retorna o valor anterior.</dd>
-</dl>
+- {{jsxref("Atomics.add()")}}
+  - : Adiciona o valor recebido na posiçao recebida no array. Retorna o valor anterior nesta posição.
+- {{jsxref("Atomics.and()")}}
+  - : Calcula um bit a bit AND na posição recebida no array. Retorna o valor anterior nesta posição.
+- {{jsxref("Atomics.compareExchange()")}}
+  - : Armazena o valor recebido na posição recebida no array, se este foi igual ao valor recebido. Retorna o valor anterior nesta posição.
+- {{jsxref("Atomics.exchange()")}}
+  - : Armazena o valor recebido na posição recebida no array. Retorna o valor anterior.
 
-<dl>
- <dt>{{jsxref("Atomics.load()")}}</dt>
- <dd>Retorna o valor na posição recebida no array.</dd>
- <dt>{{jsxref("Atomics.or()")}}</dt>
- <dd>Calcula um bit a bit OR na posição recebida no array. Retorna o valor anterior nesta posição.</dd>
- <dt>{{jsxref("Atomics.store()")}}</dt>
- <dd>Armazena o valor recebido na posição recebida no array. Retorna o valor.</dd>
- <dt>{{jsxref("Atomics.sub()")}}</dt>
- <dd>Subtrai o valor recebido na posição recebida no array. Retorna o valor anterior nesta posição.</dd>
- <dt>{{jsxref("Atomics.xor()")}}</dt>
- <dd>Calcula um bit a bit XOR na posição recebida no array. Retorna o valor anterior nesta posição.</dd>
-</dl>
+<!---->
 
-<h3 id="Wait_e_wake">Wait e wake</h3>
+- {{jsxref("Atomics.load()")}}
+  - : Retorna o valor na posição recebida no array.
+- {{jsxref("Atomics.or()")}}
+  - : Calcula um bit a bit OR na posição recebida no array. Retorna o valor anterior nesta posição.
+- {{jsxref("Atomics.store()")}}
+  - : Armazena o valor recebido na posição recebida no array. Retorna o valor.
+- {{jsxref("Atomics.sub()")}}
+  - : Subtrai o valor recebido na posição recebida no array. Retorna o valor anterior nesta posição.
+- {{jsxref("Atomics.xor()")}}
+  - : Calcula um bit a bit XOR na posição recebida no array. Retorna o valor anterior nesta posição.
 
-<p>Os métodos <code>wait()</code> e <code>wake()</code> são modelados no Linux futexes ("fast user-space mutex") e fornece formas de aguardar até que certas condições se tornem <code>true</code> e são tipicamente usadas como construtores de bloco.</p>
+### Wait e wake
 
-<dl>
- <dt>{{jsxref("Atomics.wait()")}}</dt>
- <dd>
- <p>Verifica se a posição informada no array ainda contém a valor recebido e dorme à espera ou até o tempo limite. Retorna  <code>"ok"</code>, <code>"not-equal"</code>, ou <code>"timed-out"</code>. Se a espera não for permitida no agente de chamada ele irá lançar uma exceção de erro (muitos navegadores não permitem  <code>wait()</code> na thread main do navegador).</p>
- </dd>
- <dt>{{jsxref("Atomics.wake()")}}</dt>
- <dd>"Acorda" alguns agentes que estavam "dormindo" na lista de espera na posição recebida do array. Retorna o número de agentes que estão sendo "acordados".</dd>
- <dt>{{jsxref("Atomics.isLockFree()", "Atomics.isLockFree(size)")}}</dt>
- <dd>
- <p>Uma otimização primitiva que pode ser usada para determinar se deve ser usado lock ou operações atômicas. Retorna <code>true</code>, se uma operação atômica em matrizes de um dado tamanho do elemento vai ser implementado utilizando uma operação atômica de hardware (como oposição a lock). Só para experientes.</p>
- </dd>
-</dl>
+Os métodos `wait()` e `wake()` são modelados no Linux futexes ("fast user-space mutex") e fornece formas de aguardar até que certas condições se tornem `true` e são tipicamente usadas como construtores de bloco.
 
-<h2 id="Especificações">Especificações</h2>
+- {{jsxref("Atomics.wait()")}}
+  - : Verifica se a posição informada no array ainda contém a valor recebido e dorme à espera ou até o tempo limite. Retorna `"ok"`, `"not-equal"`, ou `"timed-out"`. Se a espera não for permitida no agente de chamada ele irá lançar uma exceção de erro (muitos navegadores não permitem `wait()` na thread main do navegador).
+- {{jsxref("Atomics.wake()")}}
+  - : "Acorda" alguns agentes que estavam "dormindo" na lista de espera na posição recebida do array. Retorna o número de agentes que estão sendo "acordados".
+- {{jsxref("Atomics.isLockFree()", "Atomics.isLockFree(size)")}}
+  - : Uma otimização primitiva que pode ser usada para determinar se deve ser usado lock ou operações atômicas. Retorna `true`, se uma operação atômica em matrizes de um dado tamanho do elemento vai ser implementado utilizando uma operação atômica de hardware (como oposição a lock). Só para experientes.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Shared Memory', '#AtomicsObject', 'Atomics')}}</td>
-   <td>{{Spec2('Shared Memory')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+## Especificações
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+| Especificações                                                               | Status                               | Comentário         |
+| ---------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
+| {{SpecName('Shared Memory', '#AtomicsObject', 'Atomics')}} | {{Spec2('Shared Memory')}} | Definição inicial. |
+
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Atomics")}}
 
-<h2 id="Observações_de_compatibilidade">Observações de compatibilidade</h2>
+## Observações de compatibilidade
 
-<p>[3] A especificação de compartilhamento de memória está sendo estabilizada. Anterior ao SpiderMonkey 48 {{geckoRelease(48)}}, a última API e semântica não foram implementadas ainda. As alterações entre as versões 46 e 48 do Firefox são:</p>
+\[3] A especificação de compartilhamento de memória está sendo estabilizada. Anterior ao SpiderMonkey 48 {{geckoRelease(48)}}, a última API e semântica não foram implementadas ainda. As alterações entre as versões 46 e 48 do Firefox são:
 
-<ul>
- <li>Os métodos <code>Atomics.futexWakeOrRequeue()</code> e <code>Atomics.fence()</code> foram totalmente removidos ({{bug(1259544)}} e {{bug(1225028)}}).</li>
- <li>O método {{jsxref("Atomics.wait()")}} e {{jsxref("Atomics.wake()")}} foram nomeados como <code>Atomics.futexWait()</code> e <code>Atomics.futexWake()</code> ({{bug(1260910)}}). Os nomes antigos foram mantidos como alias, e serão removidos na versão 49 ({{bug(1262062)}}).</li>
- <li>As propriedades <code>Atomics.OK</code>, <code>Atomics.TIMEDOUT</code>, <code>Atomics.NOTEQUAL</code> foram removidas. O método {{jsxref("Atomics.wait()")}} agora retorna "ok", "timed-out" e "not-equal" ({{bug(1260835)}}).</li>
- <li>
-  <p>O parâmetro <code>count</code> do método {{jsxref("Atomics.wake()")}} foi alterado: este agora possui o valor padrão <code>+Infinity</code>, e não <code>0</code> ({{bug(1253350)}}).</p>
- </li>
-</ul>
+- Os métodos `Atomics.futexWakeOrRequeue()` e `Atomics.fence()` foram totalmente removidos ({{bug(1259544)}} e {{bug(1225028)}}).
+- O método {{jsxref("Atomics.wait()")}} e {{jsxref("Atomics.wake()")}} foram nomeados como `Atomics.futexWait()` e `Atomics.futexWake()` ({{bug(1260910)}}). Os nomes antigos foram mantidos como alias, e serão removidos na versão 49 ({{bug(1262062)}}).
+- As propriedades `Atomics.OK`, `Atomics.TIMEDOUT`, `Atomics.NOTEQUAL` foram removidas. O método {{jsxref("Atomics.wait()")}} agora retorna "ok", "timed-out" e "not-equal" ({{bug(1260835)}}).
+- O parâmetro `count` do método {{jsxref("Atomics.wake()")}} foi alterado: este agora possui o valor padrão `+Infinity`, e não `0` ({{bug(1253350)}}).
 
-<h2 id="Veja_Também">Veja Também</h2>
+## Veja Também
 
-<ul>
- <li>{{jsxref("ArrayBuffer")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a></li>
- <li><a href="https://github.com/lars-t-hansen/parlib-simple">parlib-simple </a>– a simple library providing synchronization and work distribution abstractions.</li>
- <li><a href="https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md">Shared Memory – a brief tutorial</a></li>
-</ul>
+- {{jsxref("ArrayBuffer")}}
+- [JavaScript typed arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays)
+- [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API)
+- [parlib-simple ](https://github.com/lars-t-hansen/parlib-simple)– a simple library providing synchronization and work distribution abstractions.
+- [Shared Memory – a brief tutorial](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md)

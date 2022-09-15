@@ -3,23 +3,20 @@ title: Symbol.search
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/search
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/search
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O símbolo <code><strong>Symbol.search</strong></code> é um método conhecido por retornar o índice com uma string que corresponde a expressão regular. Essa função é chamada pelo método {{jsxref("String.prototype.search()")}}.</p>
+O símbolo **`Symbol.search`** é um método conhecido por retornar o índice com uma string que corresponde a expressão regular. Essa função é chamada pelo método {{jsxref("String.prototype.search()")}}.
 
-<p>Para mais informação, veja {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}} e {{jsxref("String.prototype.search()")}}.</p>
+Para mais informação, veja {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}} e {{jsxref("String.prototype.search()")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-search.html")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-search.html")}}{{js_property_attributes(0,0,0)}}
 
+## Exemplos
 
+### Pesquisa de string personalizada
 
-<div>{{js_property_attributes(0,0,0)}}</div>
-
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Pesquisa_de_string_personalizada">Pesquisa de string personalizada</h3>
-
-<pre class="brush: js notranslate">class caseInsensitiveSearch {
+```js
+class caseInsensitiveSearch {
   constructor(value) {
     this.value = value.toLowerCase();
   }
@@ -29,32 +26,22 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/search
 }
 
 console.log('foobar'.search(new caseInsensitiveSearch('BaR')));
-// resultado esperado: 3</pre>
+// resultado esperado: 3
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-symbol.search', 'Symbol.search')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                        |
+| ------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-symbol.search', 'Symbol.search')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("javascript.builtins.Symbol.search")}}
 
+## Veja também
 
-<p>{{Compat("javascript.builtins.Symbol.search")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{jsxref("Symbol.match")}}</li>
- <li>{{jsxref("Symbol.replace")}}</li>
- <li>{{jsxref("Symbol.split")}}</li>
- <li>{{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}}</li>
-</ul>
+- {{jsxref("Symbol.match")}}
+- {{jsxref("Symbol.replace")}}
+- {{jsxref("Symbol.split")}}
+- {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}}

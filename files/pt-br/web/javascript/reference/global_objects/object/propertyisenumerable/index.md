@@ -3,62 +3,65 @@ title: Object.prototype.propertyIsEnumerable()
 slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>propertyIsEnumerable()</strong></code> retorna um booleano indicando quando a propriedade especificada é enumerável e é a propriedade do próprio objeto</p>
+O método **`propertyIsEnumerable()`** retorna um booleano indicando quando a propriedade especificada é enumerável e é a propriedade do próprio objeto
 
-<div>{{EmbedInteractiveExample("pages/js/object-prototype-propertyisenumerable.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/object-prototype-propertyisenumerable.html", "taller")}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code><var>obj</var>.propertyIsEnumerable(<var>prop</var>)</code></pre>
+```
+obj.propertyIsEnumerable(prop)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>prop</code></dt>
- <dd>O nome da propriedade para teste</dd>
-</dl>
+- `prop`
+  - : O nome da propriedade para teste
 
-<h3 id="Valor_de_Retorno">Valor de Retorno</h3>
+### Valor de Retorno
 
-<p>O {{jsxref("Boolean")}} indicando se a propriedade especificada é enumeravel e é a propriedade do objeto</p>
+O {{jsxref("Boolean")}} indicando se a propriedade especificada é enumeravel e é a propriedade do objeto
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Every object has a <code>propertyIsEnumerable</code> method. This method can determine whether the specified property in an object can be enumerated by a {{jsxref("Statements/for...in", "for...in")}} loop, with the exception of properties inherited through the prototype chain. If the object does not have the specified property, this method returns <code>false</code>.</p>
+Every object has a `propertyIsEnumerable` method. This method can determine whether the specified property in an object can be enumerated by a {{jsxref("Statements/for...in", "for...in")}} loop, with the exception of properties inherited through the prototype chain. If the object does not have the specified property, this method returns `false`.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="O_uso_basico_de_propertyIsEnumerable">O uso basico de <code>propertyIsEnumerable</code></h3>
+### O uso basico de `propertyIsEnumerable`
 
-<p>O exemplos a seguir mostram o uso de <code>propertyIsEnumerable</code> em um objeto e um array:</p>
+O exemplos a seguir mostram o uso de `propertyIsEnumerable` em um objeto e um array:
 
-<pre class="brush: js notranslate">var o = {};
+```js
+var o = {};
 var a = [];
 o.prop = 'is enumerable';
 a[0] = 'is enumerable';
 
 o.propertyIsEnumerable('prop');   // returns true
 a.propertyIsEnumerable(0);        // returns true
-</pre>
+```
 
-<h3 id="Objetos_User-defined_vs._built-in">Objetos User-defined vs. built-in</h3>
+### Objetos User-defined vs. built-in
 
-<p>Os exemplos a seguir demostram a enumerabilidade da propriedade user-defined vs. built-in :</p>
+Os exemplos a seguir demostram a enumerabilidade da propriedade user-defined vs. built-in :
 
-<pre class="brush: js notranslate">var a = ['is enumerable'];
+```js
+var a = ['is enumerable'];
 
 a.propertyIsEnumerable(0);          // returns true
 a.propertyIsEnumerable('length');   // returns false
 
 Math.propertyIsEnumerable('random');   // returns false
 this.propertyIsEnumerable('Math');     // returns false
-</pre>
+```
 
-<h3 id="Propriedade_Direct_vs._inherited">Propriedade Direct vs. inherited</h3>
+### Propriedade Direct vs. inherited
 
-<pre class="brush: js notranslate">var a = [];
+```js
+var a = [];
 a.propertyIsEnumerable('constructor');         // returns false
 
 function firstConstructor() {
@@ -91,36 +94,21 @@ o.propertyIsEnumerable('property');            // returns true
 o.propertyIsEnumerable('prototype');   // returns false (as of JS 1.8.1/FF3.6)
 o.propertyIsEnumerable('constructor'); // returns false
 o.propertyIsEnumerable('firstMethod'); // returns false
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.prototype.propertyisenumerable', 'Object.prototype.propertyIsEnumerable')}}</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-object.prototype.propertyisenumerable', 'Object.prototype.propertyIsEnumerable')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
+{{Compat("javascript.builtins.Object.propertyIsEnumerable")}}
 
+## Veja também
 
-<p>{{Compat("javascript.builtins.Object.propertyIsEnumerable")}}</p>
-</div>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">Enumerability and ownership of properties</a></li>
- <li>{{jsxref("Statements/for...in", "for...in")}}</li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li>{{jsxref("Object.defineProperty()")}}</li>
-</ul>
+- [Enumerability and ownership of properties](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- {{jsxref("Statements/for...in", "for...in")}}
+- {{jsxref("Object.keys()")}}
+- {{jsxref("Object.defineProperty()")}}

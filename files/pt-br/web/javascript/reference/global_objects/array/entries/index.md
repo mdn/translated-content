@@ -3,27 +3,31 @@ title: Array.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Array/entries
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/entries
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>entries()</strong></code> retorna um novo objeto <code><strong>Array Iterator</strong></code> que contém os pares chave/valor para cada índice no array.</p>
+O método **`entries()`** retorna um novo objeto **`Array Iterator`** que contém os pares chave/valor para cada índice no array.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code><var>arr</var>.entries()</code></pre>
+```
+arr.entries()
+```
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush:js">var arr = ['a', 'b', 'c'];
+```js
+var arr = ['a', 'b', 'c'];
 var eArr = arr.entries();
 
 console.log(eArr.next().value); // [0, 'a']
 console.log(eArr.next().value); // [1, 'b']
 console.log(eArr.next().value); // [2, 'c']
-</pre>
+```
 
-<h3 id="O_mesmo_que_acima_utilizando_um_loop_for…of">O mesmo que acima, utilizando um loop <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of">for…of</a></h3>
+### O mesmo que acima, utilizando um loop [for…of](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of)
 
-<pre class="brush:js">var arr = ['a', 'b', 'c'];
+```js
+var arr = ['a', 'b', 'c'];
 var eArr = arr.entries();
 
 for (let e of eArr) {
@@ -31,39 +35,23 @@ for (let e of eArr) {
 }
 // [0, 'a']
 // [1, 'b']
-// [2, 'c']</pre>
+// [2, 'c']
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.entries', 'Array.prototype.entries')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.entries', 'Array.prototype.entries')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                | Status                       | Comentário         |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
+| {{SpecName('ES6', '#sec-array.prototype.entries', 'Array.prototype.entries')}}     | {{Spec2('ES6')}}         | Definição inicial. |
+| {{SpecName('ESDraft', '#sec-array.prototype.entries', 'Array.prototype.entries')}} | {{Spec2('ESDraft')}} |                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Array.entries")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Array.prototype.keys()")}}</li>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.keys()")}}
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}

@@ -9,38 +9,39 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/String/charAt
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>charAt()</code></strong> retorna o caractere especificado a partir de uma string.</p>
+O método **`charAt()`** retorna o caractere especificado a partir de uma string.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.charAt(<var>index</var>)</code></pre>
+```
+str.charAt(index)
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>index</code></dt>
- <dd>Um inteiro entre <code>0</code> e <code>str.length - 1</code>. Se nenhum índice for definido, <code>charAt()</code> usará <code>0</code> como índice.</dd>
-</dl>
+- `index`
+  - : Um inteiro entre `0` e `str.length - 1`. Se nenhum índice for definido, `charAt()` usará `0` como índice.
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>Uma string representando o caractere no índice especificado. Uma string vazia se o <strong><code>index</code> </strong>fornecido estiver fora do intervalo de índices da string <code>str</code>.</p>
+Uma string representando o caractere no índice especificado. Uma string vazia se o **`index` **fornecido estiver fora do intervalo de índices da string `str`.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Caracteres em uma string são indexados da esquerda para a direita. O índice do primeiro caractere é <code>0</code><strong> </strong>(zero), e o índice do último caractere em uma string declarada como <code>stringName</code> é <code>stringName.length - 1</code>. Se o índice que você fornecer estiver fora do intervalo de índices da string, JavaScript retornará uma string vazia.</p>
+Caracteres em uma string são indexados da esquerda para a direita. O índice do primeiro caractere é `0`\*\* \*\*(zero), e o índice do último caractere em uma string declarada como `stringName` é `stringName.length - 1`. Se o índice que você fornecer estiver fora do intervalo de índices da string, JavaScript retornará uma string vazia.
 
-<p>Se nenhum índice for passado para <code>charAt()</code>, <code>0</code> será usado por padrão.</p>
+Se nenhum índice for passado para `charAt()`, `0` será usado por padrão.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Mostrando_caracteres_em_diferente_localizações_em_uma_string">Mostrando caracteres em diferente localizações em uma string</h3>
+### Mostrando caracteres em diferente localizações em uma string
 
-<p>O exemplo a seguir mostra caracteres em diferentes locais em uma string <code>"Brave new world"</code>:</p>
+O exemplo a seguir mostra caracteres em diferentes locais em uma string `"Brave new world"`:
 
-<pre class="brush: js notranslate">var anyString = 'Brave new world';
+```js
+var anyString = 'Brave new world';
 
 console.log("A letra no índice 0 é '" + anyString.charAt(0)   + "'");
 console.log("A letra no índice 1 é '" + anyString.charAt(1)   + "'");
@@ -48,24 +49,26 @@ console.log("A letra no índice 2 é '" + anyString.charAt(2)   + "'");
 console.log("A letra no índice 3 é '" + anyString.charAt(3)   + "'");
 console.log("A letra no índice 4 é '" + anyString.charAt(4)   + "'");
 console.log("A letra no índice 99 é '" + anyString.charAt(999) + "'");
-</pre>
+```
 
-<p>As linhas acima retornam o seguinte:</p>
+As linhas acima retornam o seguinte:
 
-<pre class="brush: js notranslate">A letra no índice 0 é 'B'
+```js
+A letra no índice 0 é 'B'
 A letra no índice 1 é 'r'
 A letra no índice 2 é 'a'
 A letra no índice 3 é 'v'
 A letra no índice 4 é 'e'
 A letra no índice 99 é ''
-</pre>
+```
 
-<h3 id="Obtendo_caracteres_inteiros">Obtendo caracteres inteiros</h3>
+### Obtendo caracteres inteiros
 
-<p>O seguinte código fornece um meio de garantir que passar por um loop de string sempre forneça um caractere inteiro, mesmo se a string contiver caracteres que não estão no <a href="https://pt.wikipedia.org/wiki/Plano_(Unicode)">Plano Multilíngue Básico</a>.</p>
+O seguinte código fornece um meio de garantir que passar por um loop de string sempre forneça um caractere inteiro, mesmo se a string contiver caracteres que não estão no [Plano Multilíngue Básico](<https://pt.wikipedia.org/wiki/Plano_(Unicode)>).
 
-<pre class="brush: js notranslate">var str = 'A \uD87E\uDC04 Z'; // We could also use a non-BMP character directly
-for (var i = 0, chr; i &lt; str.length; i++) {
+```js
+var str = 'A \uD87E\uDC04 Z'; // We could also use a non-BMP character directly
+for (var i = 0, chr; i < str.length; i++) {
   if ((chr = getWholeChar(str, i)) === false) {
     continue;
   }
@@ -82,23 +85,23 @@ function getWholeChar(str, i) {
   if (isNaN(code)) {
     return ''; // Position not found
   }
-  if (code &lt; 0xD800 || code &gt; 0xDFFF) {
+  if (code < 0xD800 || code > 0xDFFF) {
     return str.charAt(i);
   }
 
   // High surrogate (could change last hex to 0xDB7F to treat high private
   // surrogates as single characters)
-  if (0xD800 &lt;= code &amp;&amp; code &lt;= 0xDBFF) {
-    if (str.length &lt;= (i + 1)) {
+  if (0xD800 <= code && code <= 0xDBFF) {
+    if (str.length <= (i + 1)) {
       throw 'High surrogate without following low surrogate';
     }
     var next = str.charCodeAt(i + 1);
-      if (0xDC00 &gt; next || next &gt; 0xDFFF) {
+      if (0xDC00 > next || next > 0xDFFF) {
         throw 'High surrogate without following low surrogate';
       }
       return str.charAt(i) + str.charAt(i + 1);
   }
-  // Low surrogate (0xDC00 &lt;= code &amp;&amp; code &lt;= 0xDFFF)
+  // Low surrogate (0xDC00 <= code && code <= 0xDFFF)
   if (i === 0) {
     throw 'Low surrogate without preceding high surrogate';
   }
@@ -106,19 +109,20 @@ function getWholeChar(str, i) {
 
   // (could change last hex to 0xDB7F to treat high private
   // surrogates as single characters)
-  if (0xD800 &gt; prev || prev &gt; 0xDBFF) {
+  if (0xD800 > prev || prev > 0xDBFF) {
     throw 'Low surrogate without preceding high surrogate';
   }
   // We can pass over low surrogates now as the second component
   // in a pair which we have already processed
   return false;
 }
-</pre>
+```
 
-<p>Em um ambiente ECMAScript 2016 que permite atribuição desestruturada, o seguinte código é uma alternativa mais sucinta e um pouco mais flexível, pois faz incremento para uma variável de incremento automaticamente (se o caractere justificar que seja um par substituto).</p>
+Em um ambiente ECMAScript 2016 que permite atribuição desestruturada, o seguinte código é uma alternativa mais sucinta e um pouco mais flexível, pois faz incremento para uma variável de incremento automaticamente (se o caractere justificar que seja um par substituto).
 
-<pre class="brush: js notranslate">var str = 'A\uD87E\uDC04Z'; // We could also use a non-BMP character directly
-for (var i = 0, chr; i &lt; str.length; i++) {
+```js
+var str = 'A\uD87E\uDC04Z'; // We could also use a non-BMP character directly
+for (var i = 0, chr; i < str.length; i++) {
   [chr, i] = getWholeCharAndI(str, i);
   // Adapt this line at the top of each loop, passing in the whole string and
   // the current iteration and returning an array with the individual character
@@ -133,23 +137,23 @@ function getWholeCharAndI(str, i) {
   if (isNaN(code)) {
     return ''; // Position not found
   }
-  if (code &lt; 0xD800 || code &gt; 0xDFFF) {
+  if (code < 0xD800 || code > 0xDFFF) {
     return [str.charAt(i), i]; // Normal character, keeping 'i' the same
   }
 
   // High surrogate (could change last hex to 0xDB7F to treat high private
   // surrogates as single characters)
-  if (0xD800 &lt;= code &amp;&amp; code &lt;= 0xDBFF) {
-    if (str.length &lt;= (i + 1)) {
+  if (0xD800 <= code && code <= 0xDBFF) {
+    if (str.length <= (i + 1)) {
       throw 'High surrogate without following low surrogate';
     }
     var next = str.charCodeAt(i + 1);
-      if (0xDC00 &gt; next || next &gt; 0xDFFF) {
+      if (0xDC00 > next || next > 0xDFFF) {
         throw 'High surrogate without following low surrogate';
       }
       return [str.charAt(i) + str.charAt(i + 1), i + 1];
   }
-  // Low surrogate (0xDC00 &lt;= code &amp;&amp; code &lt;= 0xDFFF)
+  // Low surrogate (0xDC00 <= code && code <= 0xDFFF)
   if (i === 0) {
     throw 'Low surrogate without preceding high surrogate';
   }
@@ -157,19 +161,20 @@ function getWholeCharAndI(str, i) {
 
   // (could change last hex to 0xDB7F to treat high private surrogates
   // as single characters)
-  if (0xD800 &gt; prev || prev &gt; 0xDBFF) {
+  if (0xD800 > prev || prev > 0xDBFF) {
     throw 'Low surrogate without preceding high surrogate';
   }
   // Return the next character instead (and increment)
   return [str.charAt(i + 1), i + 1];
 }
-</pre>
+```
 
-<h3 id="Corrigindo_charAt_para_suportar_caracteres_não-Plano-Multilíngüe-Básico_PMB">Corrigindo <code>charAt()</code> para suportar caracteres não-Plano-Multilíngüe-Básico (PMB)</h3>
+### Corrigindo `charAt()` para suportar caracteres não-Plano-Multilíngüe-Básico (PMB)
 
-<p>Embora o exemplo anterior possa ser mais útil para programas que devem suportar caracteres não BMP (uma vez que não exige que o chamador saiba onde qualquer caractere não BMP pode aparecer), no caso de desejar, na escolha de um caractere por índice, para tratar os pares substitutos em uma string como os caracteres únicos que eles representam, pode-se usar o seguinte:</p>
+Embora o exemplo anterior possa ser mais útil para programas que devem suportar caracteres não BMP (uma vez que não exige que o chamador saiba onde qualquer caractere não BMP pode aparecer), no caso de desejar, na escolha de um caractere por índice, para tratar os pares substitutos em uma string como os caracteres únicos que eles representam, pode-se usar o seguinte:
 
-<pre class="brush: js notranslate">function fixedCharAt(str, idx) {
+```js
+function fixedCharAt(str, idx) {
   var ret = '';
   str += '';
   var end = str.length;
@@ -177,66 +182,45 @@ function getWholeCharAndI(str, i) {
   var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
   while ((surrogatePairs.exec(str)) != null) {
     var li = surrogatePairs.lastIndex;
-    if (li - 2 &lt; idx) {
+    if (li - 2 < idx) {
       idx++;
     } else {
       break;
     }
   }
 
-  if (idx &gt;= end || idx &lt; 0) {
+  if (idx >= end || idx < 0) {
     return '';
   }
 
   ret += str.charAt(idx);
 
-  if (/[\uD800-\uDBFF]/.test(ret) &amp;&amp; /[\uDC00-\uDFFF]/.test(str.charAt(idx + 1))) {
+  if (/[\uD800-\uDBFF]/.test(ret) && /[\uDC00-\uDFFF]/.test(str.charAt(idx + 1))) {
     // Go one further, since one of the "characters" is part of a surrogate pair
     ret += str.charAt(idx + 1);
   }
   return ret;
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.4.4', 'String.prototype.charAt')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.charat', 'String.prototype.charAt')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                            | Status                   | Comentário          |
+| -------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
+| {{SpecName('ES1')}}                                                                                 | {{Spec2('ES1')}}     | Initial definition. |
+| {{SpecName('ES5.1', '#sec-15.5.4.4', 'String.prototype.charAt')}}                 | {{Spec2('ES5.1')}} |                     |
+| {{SpecName('ES6', '#sec-string.prototype.charat', 'String.prototype.charAt')}} | {{Spec2('ES6')}}     |                     |
 
-<h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
+## Navegadores compatíveis
 
 {{Compat("javascript.builtins.String.charAt")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("String.prototype.indexOf()")}}</li>
- <li>{{jsxref("String.prototype.lastIndexOf()")}}</li>
- <li>{{jsxref("String.prototype.charCodeAt()")}}</li>
- <li>{{jsxref("String.prototype.codePointAt()")}}</li>
- <li>{{jsxref("String.prototype.split()")}}</li>
- <li>{{jsxref("String.fromCodePoint()")}}</li>
- <li><a href="https://mathiasbynens.be/notes/javascript-unicode">JavaScript has a Unicode problem – Mathias Bynens</a></li>
-</ul>
+- {{jsxref("String.prototype.indexOf()")}}
+- {{jsxref("String.prototype.lastIndexOf()")}}
+- {{jsxref("String.prototype.charCodeAt()")}}
+- {{jsxref("String.prototype.codePointAt()")}}
+- {{jsxref("String.prototype.split()")}}
+- {{jsxref("String.fromCodePoint()")}}
+- [JavaScript has a Unicode problem – Mathias Bynens](https://mathiasbynens.be/notes/javascript-unicode)

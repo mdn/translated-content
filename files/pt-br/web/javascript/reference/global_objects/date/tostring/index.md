@@ -12,101 +12,88 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>toString()</code></strong> retorna uma cadeia de caracteres (<em>string</em>) representando o objeto {{jsxref("Date")}} especificado.</p>
+O método **`toString()`** retorna uma cadeia de caracteres (_string_) representando o objeto {{jsxref("Date")}} especificado.
 
-<div>{{EmbedInteractiveExample("pages/js/date-tostring.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/date-tostring.html","shorter")}}
 
+## Sintaxe
 
+```
+dateObj.toString()
+```
 
-<h2 id="Sintaxe">Sintaxe</h2>
+### Valor de retorno
 
-<pre class="syntaxbox notranslate"><var>dateObj</var>.toString()</pre>
+Uma _string_ representando a data.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+## Descrição
 
-<p>Uma <em>string</em> representando a data.</p>
+Instâncias de {{jsxref("Date")}} herdam o método `toString()` de {{jsxref("Date.prototype")}}, não {{jsxref("Object.prototype")}}. `Date.prototype.toString()` retorna uma _string_ com a representação de Date no formato especificado na ECMA-262 que pode ser resumida como:
 
-<h2 id="Descrição">Descrição</h2>
+- Dia da semana: 3 letras do nome do dia da semana em Inglês, e.g. "Sat"
+- espaço
+- Nome do mês: 3 letras do nome do mês em Inglês, e.g. "Sep"
+- espaço
+- Dia: Dia do mês em 2 dígitos, e.g. "01"
+- espaço
+- Ano: Ano no formato de 4 dígitos, e.g. "2018"
+- espaço
+- Hora: Hora do dia em 2 dígitos, e.g. "14"
+- dois-pontos
+- Minuto: Minutos da hora em 2 dígitos, e.g. "53"
+- dois-pontos
+- Segundos: Segundos do minuto em 2 dígitos, e.g. "26"
+- espaço
+- A _string_ "GMT"
+- Sinal do deslocamento do fuso horário, pode ser:
 
-<p>Instâncias de {{jsxref("Date")}} herdam o método <code>toString()</code> de {{jsxref("Date.prototype")}}, não {{jsxref("Object.prototype")}}. <code>Date.prototype.toString()</code> retorna uma <em>string</em> com a representação de Date no formato especificado na ECMA-262 que pode ser resumida como:</p>
+  - "+" para deslocamentos positivos (0 ou maior)
+  - "-" para deslocamentos negativos (menores que 0)
 
-<ul>
- <li>Dia da semana: 3 letras do nome do dia da semana em Inglês, e.g. "Sat"</li>
- <li>espaço</li>
- <li>Nome do mês: 3 letras do nome do mês em Inglês, e.g. "Sep"</li>
- <li>espaço</li>
- <li>Dia: Dia do mês em 2 dígitos, e.g. "01"</li>
- <li>espaço</li>
- <li>Ano: Ano no formato de 4 dígitos, e.g. "2018"</li>
- <li>espaço</li>
- <li>Hora: Hora do dia em 2 dígitos, e.g. "14"</li>
- <li>dois-pontos</li>
- <li>Minuto: Minutos da hora em 2 dígitos, e.g. "53"</li>
- <li>dois-pontos</li>
- <li>Segundos: Segundos do minuto em 2 dígitos, e.g. "26"</li>
- <li>espaço</li>
- <li>A <em>string</em> "GMT"</li>
- <li>Sinal do deslocamento do fuso horário, pode ser:
-  <ul>
-   <li>"+" para deslocamentos positivos (0 ou maior)</li>
-   <li>"-" para deslocamentos negativos (menores que 0)</li>
-  </ul>
- </li>
- <li>Dois dígitos da hora do deslocamento, e.g. "14"</li>
- <li>Dois dígitos dos minutos do deslocamento, e.g. "00"</li>
- <li>Opcionalmente, um nome de fuso horário consistindo de:
-  <ul>
-   <li>espaço</li>
-   <li>parênteses esquerdo, i.e. "("</li>
-   <li>Uma representação de <em>string</em> dependente da implementação do fuso horário, que pode ser uma abreviação ou o nome completo (não há um padrão para nomes ou abreviação de fusos horários), e.g. "Line Islands Time" ou "LINT"</li>
-   <li>parênteses direito, i.e. ")"</li>
-  </ul>
- </li>
-</ul>
+- Dois dígitos da hora do deslocamento, e.g. "14"
+- Dois dígitos dos minutos do deslocamento, e.g. "00"
+- Opcionalmente, um nome de fuso horário consistindo de:
 
-<p>E.g. "Sat Sep 01 2018 14:53:26 GMT+1400 (LINT)"</p>
+  - espaço
+  - parênteses esquerdo, i.e. "("
+  - Uma representação de _string_ dependente da implementação do fuso horário, que pode ser uma abreviação ou o nome completo (não há um padrão para nomes ou abreviação de fusos horários), e.g. "Line Islands Time" ou "LINT"
+  - parênteses direito, i.e. ")"
 
-<p>Até o ECMAScript 2018 (edição 9), o formato da <em>string</em> retornada pelo <code>Date.prototype.toString</code> era dependente da implementação. Portanto, não se deve confiar que ela está no formato especificado.</p>
+E.g. "Sat Sep 01 2018 14:53:26 GMT+1400 (LINT)"
 
-<p>O método <code>toString()</code> é automaticamente chamado quando a data deve ser representada como texto, e.g. <code>console.log(new Date())</code>, ou quando a data é utilizada em uma concatenação de <em>string</em>, como <code>var today = 'Today is ' + new Date()</code>.</p>
+Até o ECMAScript 2018 (edição 9), o formato da _string_ retornada pelo `Date.prototype.toString` era dependente da implementação. Portanto, não se deve confiar que ela está no formato especificado.
 
-<p><code>toString()</code> é um método genérico, ele não requer que seu <code>this</code> seja uma instância de {{jsxref("Date")}}. Entretanto, ele deve ter uma propriedade interna <code>[[TimeValue]]</code> que não pode ser construída usando JavaScript nativo, então ela é efetivamente limitada a ser usada com instâncias {{jsxref("Date")}}. Se chamado em uma instância que não seja Date, um {{jsxref("TypeError")}} é jogado.</p>
+O método `toString()` é automaticamente chamado quando a data deve ser representada como texto, e.g. `console.log(new Date())`, ou quando a data é utilizada em uma concatenação de _string_, como `var today = 'Today is ' + new Date()`.
 
-<h2 id="Exemplos">Exemplos</h2>
+`toString()` é um método genérico, ele não requer que seu `this` seja uma instância de {{jsxref("Date")}}. Entretanto, ele deve ter uma propriedade interna `[[TimeValue]]` que não pode ser construída usando JavaScript nativo, então ela é efetivamente limitada a ser usada com instâncias {{jsxref("Date")}}. Se chamado em uma instância que não seja Date, um {{jsxref("TypeError")}} é jogado.
 
-<h3 id="Usando_toString">Usando <code>toString()</code></h3>
+## Exemplos
 
-<p>O exemplo asseguir atribui o valor de <code>toString()</code> de um objeto {{jsxref("Date")}} para <code>myVar</code>:</p>
+### Usando `toString()`
 
-<pre class="brush: js notranslate">var x = new Date();
+O exemplo asseguir atribui o valor de `toString()` de um objeto {{jsxref("Date")}} para `myVar`:
+
+```js
+var x = new Date();
 var myVar = x.toString(); // atribui uma string em myVar no mesmo formato que este:
                           // Mon Sep 08 1998 14:36:22 GMT-0700 (PDT)
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.tostring', 'Date.prototype.toString')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                |
+| ------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-date.prototype.tostring', 'Date.prototype.toString')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Date.toString")}}</p>
+{{Compat("javascript.builtins.Date.toString")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Object.prototype.toString()")}}</li>
- <li>{{jsxref("Date.prototype.toDateString()")}}</li>
- <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
- <li>{{jsxref("Date.prototype.toTimeString()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toString()")}}
+- {{jsxref("Date.prototype.toDateString()")}}
+- {{jsxref("Date.prototype.toLocaleString()")}}
+- {{jsxref("Date.prototype.toTimeString()")}}

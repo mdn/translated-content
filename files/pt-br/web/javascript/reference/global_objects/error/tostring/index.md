@@ -9,23 +9,26 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/toString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>toString()</strong></code> retorna uma string representando o objeto {{jsxref("Error")}}.</p>
+O método **`toString()`** retorna uma string representando o objeto {{jsxref("Error")}}.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code><var>e</var>.toString()</code></pre>
+```
+e.toString()
+```
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>A string representando o objeto {{jsxref("Error")}} especificado.</p>
+A string representando o objeto {{jsxref("Error")}} especificado.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O objeto {{jsxref("Error")}} sobrescreve o método {{jsxref("Object.prototype.toString()")}} herdado por todos os objetos. Sua semântica é a seguinte (assumindo que {{jsxref("Object")}} e {{jsxref("String")}} tem seus valores originais):</p>
+O objeto {{jsxref("Error")}} sobrescreve o método {{jsxref("Object.prototype.toString()")}} herdado por todos os objetos. Sua semântica é a seguinte (assumindo que {{jsxref("Object")}} e {{jsxref("String")}} tem seus valores originais):
 
-<pre class="brush: js notranslate">Error.prototype.toString = function() {
+```js
+Error.prototype.toString = function() {
   'use strict';
 
   var obj = Object(this);
@@ -48,13 +51,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Error/toString
 
   return name + ': ' + msg;
 };
-</pre>
+```
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_toString">Usando toString()</h3>
+### Usando toString()
 
-<pre class="brush: js notranslate">var e = new Error('fatal error');
+```js
+var e = new Error('fatal error');
 console.log(e.toString()); // 'Error: fatal error'
 
 e.name = undefined;
@@ -68,33 +72,18 @@ console.log(e.toString()); // ''
 
 e.name = 'hello';
 console.log(e.toString()); // 'hello'
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-error.prototype.tostring', 'Error.prototype.toString')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-error.prototype.tostring', 'Error.prototype.toString')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
+{{Compat("javascript.builtins.Error.toString")}}
 
+## Veja também
 
-<p>{{Compat("javascript.builtins.Error.toString")}}</p>
-</div>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{jsxref("Error.prototype.toSource()")}}</li>
-</ul>
+- {{jsxref("Error.prototype.toSource()")}}

@@ -9,57 +9,43 @@ tags:
   - Referencia
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>A propriedade <strong><code>Number.MAX_VALUE</code></strong> representa o maior valor numérico representável em JavaScript.</p>
+A propriedade **`Number.MAX_VALUE`** representa o maior valor numérico representável em JavaScript.
 
-<div>{{EmbedInteractiveExample("pages/js/number-maxvalue.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-maxvalue.html")}}{{js_property_attributes(0, 0, 0)}}
 
+## Descrição
 
+A propriedade `MAX_VALUE` tem o valor de aproximadamente `1.79E+308`, ou 21024. Valores maiores que `MAX_VALUE` são representados como {{jsxref("Infinity")}}.
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+Por `MAX_VALUE` ser uma propriedade estática de {{jsxref("Number")}}, você sempre deve usar como `Number.MAX_VALUE`, ao invés de uma propriedade do objeto {{jsxref("Number")}} que você criou.
 
-<h2 id="Descrição">Descrição</h2>
+## Exemplos
 
-<p>A propriedade <code>MAX_VALUE</code> tem o valor de aproximadamente <code>1.79E+308</code>, ou 2<sup>1024</sup>. Valores maiores que <code>MAX_VALUE</code> são representados como {{jsxref("Infinity")}}.</p>
+### Usando `MAX_VALUE`
 
-<p>Por <code>MAX_VALUE</code> ser uma propriedade estática de {{jsxref("Number")}}, você sempre deve usar como <code>Number.MAX_VALUE</code>, ao invés de uma propriedade do objeto {{jsxref("Number")}} que você criou. </p>
+O código a seguir multiplica dois valores numéricos. Se o resultado é menor ou igual a `MAX_VALUE`, a função `func1` é chamada; caso contrário, a função `func2` é chamada.
 
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Usando_MAX_VALUE">Usando <code>MAX_VALUE</code></h3>
-
-<p>O código a seguir multiplica dois valores numéricos. Se o resultado é menor ou igual a <code>MAX_VALUE</code>, a função <code>func1</code> é chamada; caso contrário, a função <code>func2</code> é chamada.</p>
-
-<pre class="brush: js notranslate">if (num1 * num2 &lt;= Number.MAX_VALUE) {
+```js
+if (num1 * num2 <= Number.MAX_VALUE) {
   func1();
 } else {
   func2();
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.max_value', 'Number.MAX_VALUE')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                |
+| -------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-number.max_value', 'Number.MAX_VALUE')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("javascript.builtins.Number.MAX_VALUE")}}
 
+## Veja também
 
-<p>{{Compat("javascript.builtins.Number.MAX_VALUE")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{jsxref("Number.MIN_VALUE")}}</li>
- <li>O objeto {{jsxref("Number")}} a qual ela pertence</li>
-</ul>
+- {{jsxref("Number.MIN_VALUE")}}
+- O objeto {{jsxref("Number")}} a qual ela pertence

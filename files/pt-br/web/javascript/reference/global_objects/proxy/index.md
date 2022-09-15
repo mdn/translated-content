@@ -3,57 +3,51 @@ title: Proxy
 slug: Web/JavaScript/Reference/Global_Objects/Proxy
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
 ---
-<div>
-<div>{{JSRef}}</div>
-</div>
+{{JSRef}}
 
-<p>O objeto <strong>Proxy</strong> é usado para definir comportamentos customizados para operações fundamentais (por exemplo, pesquisa de propriedade, atribuição, enumeração, invocação de função, etc.).</p>
+O objeto **Proxy** é usado para definir comportamentos customizados para operações fundamentais (por exemplo, pesquisa de propriedade, atribuição, enumeração, invocação de função, etc.).
 
-<h2 id="Terminologia">Terminologia</h2>
+## Terminologia
 
-<dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler">handler</a></dt>
- <dd>Objeto marcador que contém <em>traps</em>.</dd>
- <dt>traps</dt>
- <dd>Métodos que fornecem acesso à propriedade. Isto é análogo ao conceito de <em>traps </em>(armadilhas) em sistemas operacionais</dd>
- <dt>target</dt>
- <dd>Objeto que o proxy virtualiza. É frequentemente utilizado como back-end de armazenamento para o proxy. Os invariantes (semânticas que permanecem inalterados) em relação à não-extensibilidade do objeto ou propriedades não-configuráveis são verificados em relação ao <em>target</em>.</dd>
-</dl>
+- [handler](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler)
+  - : Objeto marcador que contém _traps_.
+- traps
+  - : Métodos que fornecem acesso à propriedade. Isto é análogo ao conceito de _traps_ (armadilhas) em sistemas operacionais
+- target
+  - : Objeto que o proxy virtualiza. É frequentemente utilizado como back-end de armazenamento para o proxy. Os invariantes (semânticas que permanecem inalterados) em relação à não-extensibilidade do objeto ou propriedades não-configuráveis são verificados em relação ao _target_.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var p = new Proxy(target, handler);
-</pre>
+```
+var p = new Proxy(target, handler);
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>target</code></dt>
- <dd>Um objeto target (pode ser qualquer tipo de objeto, incluindo um array, uma função ou até mesmo outro <em>Proxy</em>) a ser envolvido com o <code>Proxy</code>.</dd>
- <dt><code>handler</code></dt>
- <dd>Um objeto cujas propriedades são funções que definem o comportamento do proxy quando uma operação é realizada sobre ele.</dd>
-</dl>
+- `target`
+  - : Um objeto target (pode ser qualquer tipo de objeto, incluindo um array, uma função ou até mesmo outro _Proxy_) a ser envolvido com o `Proxy`.
+- `handler`
+  - : Um objeto cujas propriedades são funções que definem o comportamento do proxy quando uma operação é realizada sobre ele.
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<dl>
- <dt>{{jsxref("Proxy.revocable()")}}</dt>
- <dd>Cria um objeto <code> Proxy </code> revogável.</dd>
-</dl>
+- {{jsxref("Proxy.revocable()")}}
+  - : Cria um objeto `Proxy `revogável.
 
-<h2 id="Métodos_para_manipular_objetos">Métodos para manipular objetos</h2>
+## Métodos para manipular objetos
 
-<p>O objeto manipulado é um objeto reservado que contém traps para <code> Proxy. </code></p>
+O objeto manipulado é um objeto reservado que contém traps para `Proxy.`
 
-<div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler', 'Methods') }}</div>
+{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler', 'Methods') }}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Exemplo_básico">Exemplo básico</h3>
+### Exemplo básico
 
-<p>Neste exemplo simples, o número <code> 37 </code> é retornado como o valor padrão quando o nome da propriedade não está no objeto. Usa-se o manipulador <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/get"><code>get</code></a>.</p>
+Neste exemplo simples, o número `37 `é retornado como o valor padrão quando o nome da propriedade não está no objeto. Usa-se o manipulador [`get`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/get).
 
-<pre class="brush: js">var handler = {
+```js
+var handler = {
     get: function(target, name) {
         return name in target ?
             target[name] :
@@ -67,31 +61,33 @@ p.b = undefined;
 
 console.log(p.a, p.b); // 1, undefined
 console.log('c' in p, p.c); // false, 37
-</pre>
+```
 
-<h3 id="Encaminhamento_de_Proxy">Encaminhamento de Proxy</h3>
+### Encaminhamento de Proxy
 
-<p>Neste exemplo, estamos usando um objeto JavaScript nativo ao qual nosso proxy irá encaminhar todas as operações que são aplicadas para ele.</p>
+Neste exemplo, estamos usando um objeto JavaScript nativo ao qual nosso proxy irá encaminhar todas as operações que são aplicadas para ele.
 
-<pre class="brush: js">var target = {};
+```js
+var target = {};
 var p = new Proxy(target, {});
 
 p.a = 37; // Operação encaminhada para o alvo
 
 console.log(target.a); // 37. A operação foi devidamente encaminhada
-</pre>
+```
 
-<h3 id="Validação">Validação</h3>
+### Validação
 
-<p>Com um <code> Proxy</code>, você pode validar facilmente o valor passado para um objeto. Este exemplo usa o manipulador <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set"> <code> set</code></a>.</p>
+Com um `Proxy`, você pode validar facilmente o valor passado para um objeto. Este exemplo usa o manipulador [`set`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set).
 
-<pre class="brush: js">let validator = {
+```js
+let validator = {
   set: function(obj, prop, value) {
     if (prop === 'age') {
       if (!Number.isInteger(value)) {
         throw new TypeError('The age is not an integer');
       }
-      if (value &gt; 200) {
+      if (value > 200) {
         throw new RangeError('The age seems invalid');
       }
     }
@@ -109,13 +105,15 @@ let person = new Proxy({}, validator);
 person.age = 100;
 console.log(person.age); // 100
 person.age = 'young'; // Lança uma exceção
-person.age = 300; // Lança uma exceção</pre>
+person.age = 300; // Lança uma exceção
+```
 
-<h3 id="Construtor_de_extensão">Construtor de extensão</h3>
+### Construtor de extensão
 
-<p>Um proxy de função poderia facilmente estender um construtor com um novo construtor. Este exemplo usa os manipuladores <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct"> <code> construct </code> </a> e <a href="/En-US/docs/Web/JavaScript/Referência/Global_Objects/Proxy/handler/apply"> <code> apply</code></a>.</p>
+Um proxy de função poderia facilmente estender um construtor com um novo construtor. Este exemplo usa os manipuladores [`construct `](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct)e [`apply`](/pt-BR/docs/Web/JavaScript/Referência/Global_Objects/Proxy/handler/apply).
 
-<pre class="brush: js">function extend(sup, base) {
+```js
+function extend(sup, base) {
   var descriptor = Object.getOwnPropertyDescriptor(
     base.prototype, 'constructor'
   );
@@ -150,13 +148,15 @@ Boy.prototype.sex = 'M';
 var Peter = new Boy('Peter', 13);
 console.log(Peter.sex);  // "M"
 console.log(Peter.name); // "Peter"
-console.log(Peter.age);  // 13</pre>
+console.log(Peter.age);  // 13
+```
 
-<h3 id="DOM_manipulação_de_nós">DOM manipulação de nós</h3>
+### DOM manipulação de nós
 
-<p>Às vezes, você deseja alternar o atributo ou o nome da classe de dois elementos diferentes. Veja como usar o manipulador <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set"> <code> set</code></a>.</p>
+Às vezes, você deseja alternar o atributo ou o nome da classe de dois elementos diferentes. Veja como usar o manipulador [`set`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set).
 
-<pre class="brush: js">let view = new Proxy({
+```js
+let view = new Proxy({
   selected: null
 },
 {
@@ -185,13 +185,15 @@ console.log(i1.getAttribute('aria-selected')); // 'true'
 
 let i2 = view.selected = document.getElementById('item-2');
 console.log(i1.getAttribute('aria-selected')); // 'false'
-console.log(i2.getAttribute('aria-selected')); // 'true'</pre>
+console.log(i2.getAttribute('aria-selected')); // 'true'
+```
 
-<h3 id="Correção_de_valor_e_uma_propriedade_extra">Correção de valor e uma propriedade extra</h3>
+### Correção de valor e uma propriedade extra
 
-<p>O objeto de proxy <code> produtos </code> avalia o valor passado e converte-o em uma matriz, se necessário. O objeto também suporta uma propriedade adicional chamada <code> latestBrowser </code> tanto em getters como em setters.</p>
+O objeto de proxy `produtos `avalia o valor passado e converte-o em uma matriz, se necessário. O objeto também suporta uma propriedade adicional chamada `latestBrowser `tanto em getters como em setters.
 
-<pre class="brush: js">let products = new Proxy({
+```js
+let products = new Proxy({
   browsers: ['Internet Explorer', 'Netscape']
 },
 {
@@ -226,17 +228,19 @@ console.log(i2.getAttribute('aria-selected')); // 'true'</pre>
 
 console.log(products.browsers); // ['Internet Explorer', 'Netscape']
 products.browsers = 'Firefox'; // pass a string (by mistake)
-console.log(products.browsers); // ['Firefox'] &lt;- no problem, the value is an array
+console.log(products.browsers); // ['Firefox'] <- no problem, the value is an array
 
 products.latestBrowser = 'Chrome';
 console.log(products.browsers); // ['Firefox', 'Chrome']
-console.log(products.latestBrowser); // 'Chrome'</pre>
+console.log(products.latestBrowser); // 'Chrome'
+```
 
-<h3 id="Encontrando_um_item_de_objeto_em_uma_matriz_por_propriedade">Encontrando um item de objeto em uma matriz por propriedade</h3>
+### Encontrando um item de objeto em uma matriz por propriedade
 
-<p>Esta proxy estende uma matriz com alguns recursos de utilidade. Como você vê, você pode "definir" propriedades flexíveis sem usar <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties"> <code> Object.defineProperties</code></a>. Este exemplo pode ser adaptado para encontrar uma linha de tabela por sua célula. Nesse caso, o alvo será <a href="/en-US/docs/DOM/table.rows"> <code> table.rows </code> </a></p>
+Esta proxy estende uma matriz com alguns recursos de utilidade. Como você vê, você pode "definir" propriedades flexíveis sem usar [`Object.defineProperties`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties). Este exemplo pode ser adaptado para encontrar uma linha de tabela por sua célula. Nesse caso, o alvo será [`table.rows`](/pt-BR/docs/DOM/table.rows)
 
-<pre class="brush: js">let products = new Proxy([
+```js
+let products = new Proxy([
   { name: 'Firefox', type: 'browser' },
   { name: 'SeaMonkey', type: 'browser' },
   { name: 'Thunderbird', type: 'mailer' }
@@ -290,13 +294,15 @@ console.log(products['Firefox']); // { name: 'Firefox', type: 'browser' }
 console.log(products['Chrome']); // undefined
 console.log(products.browser); // [{ name: 'Firefox', type: 'browser' }, { name: 'SeaMonkey', type: 'browser' }]
 console.log(products.types); // ['browser', 'mailer']
-console.log(products.number); // 3</pre>
+console.log(products.number); // 3
+```
 
-<h3 id="Um_exemplo_completo_de_lista_de_traps">Um exemplo completo de lista de <code>traps</code></h3>
+### Um exemplo completo de lista de `traps`
 
-<p>Agora, para criar uma lista completa de amostra de <code>traps</code>, para fins didáticos, tentaremos propor um objeto <em>não nativo</em> que seja particularmente adequado para este tipo de operação: o objeto global <code>docCookies</code> criado por <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie/Simple_document.cookie_framework" title="https://developer.mozilla.org/en-US/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support"> a "little framework" publicada na página<code>document.cookie</code></a>.</p>
+Agora, para criar uma lista completa de amostra de `traps`, para fins didáticos, tentaremos propor um objeto _não nativo_ que seja particularmente adequado para este tipo de operação: o objeto global `docCookies` criado por [a "little framework" publicada na página`document.cookie`](/pt-BR/docs/Web/API/Document/cookie/Simple_document.cookie_framework "https://developer.mozilla.org/en-US/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support").
 
-<pre class="brush: js">/*
+```js
+/*
   var docCookies = ... get the "docCookies" object here:
   https://developer.mozilla.org/en-US/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support
 */
@@ -323,7 +329,7 @@ var docCookies = new Proxy(docCookies, {
     return sKey in oTarget || oTarget.hasItem(sKey);
   },
   defineProperty: function (oTarget, sKey, oDesc) {
-    if (oDesc &amp;&amp; 'value' in oDesc) { oTarget.setItem(sKey, oDesc.value); }
+    if (oDesc && 'value' in oDesc) { oTarget.setItem(sKey, oDesc.value); }
     return oTarget;
   },
   getOwnPropertyDescriptor: function (oTarget, sKey) {
@@ -343,54 +349,34 @@ console.log(docCookies.my_cookie1 = 'First value');
 console.log(docCookies.getItem('my_cookie1'));
 
 docCookies.setItem('my_cookie1', 'Changed value');
-console.log(docCookies.my_cookie1);</pre>
+console.log(docCookies.my_cookie1);
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-proxy-objects', 'Proxy')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definição Inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-proxy-objects', 'Proxy')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>?</td>
-  </tr>
- </tbody>
-</table>
+| Especificações                                                           | Status                       | Comentário         |
+| ------------------------------------------------------------------------ | ---------------------------- | ------------------ |
+| {{SpecName('ES2015', '#sec-proxy-objects', 'Proxy')}} | {{Spec2('ES2015')}}     | Definição Inicial. |
+| {{SpecName('ESDraft', '#sec-proxy-objects', 'Proxy')}} | {{Spec2('ESDraft')}} | ?                  |
 
-<h2 id="Navegadores_Compatíveis">Navegadores Compatíveis</h2>
+## Navegadores Compatíveis
 
+{{Compat("javascript.builtins.Proxy", 2)}}
 
+## Notas Especificas Gecko
 
-<p>{{Compat("javascript.builtins.Proxy", 2)}}</p>
+- No momento, `Object.getPrototypeOf(proxy)` retorna incondicionalmente um `Object.getPrototypeOf(target)`, porque a trap ES2015 getPrototypeOf não foi implementada ({{bug(795904)}}, {{bug(888969)}}).
+- `Array.isArray(proxy)` retorna incondicionalmente um `Array.isArray(target)` ({{bug(1096753)}}, {{bug(1111785)}}).
+- `Object.prototype.toString.call(proxy)` retorna incondicionalmente `Object.prototype.toString.call(target)`, porque ES2015 Symbol.toStringTag não foi implementado ({{bug(1114580)}}).
 
-<h2 id="Notas_Especificas_Gecko">Notas Especificas Gecko</h2>
+## Veja também
 
-<ul>
- <li>No momento, <code>Object.getPrototypeOf(proxy)</code> retorna incondicionalmente um <code>Object.getPrototypeOf(target)</code>, porque a trap ES2015 getPrototypeOf não foi implementada ({{bug(795904)}}, {{bug(888969)}}).</li>
- <li><code>Array.isArray(proxy)</code> retorna incondicionalmente um <code>Array.isArray(target)</code> ({{bug(1096753)}}, {{bug(1111785)}}).</li>
- <li><code>Object.prototype.toString.call(proxy)</code> retorna incondicionalmente <code>Object.prototype.toString.call(target)</code>, porque ES2015 Symbol.toStringTag não foi implementado ({{bug(1114580)}}).</li>
-</ul>
+- ["Proxies are awesome" Brendan Eich presentation at JSConf](https://www.youtube.com/watch?v=sClk6aB_CPk) ([slides](http://www.slideshare.net/BrendanEich/metaprog-5303821))
+- [ECMAScript Harmony Proxy proposal page](http://wiki.ecmascript.org/doku.php?id=harmony:proxies) e [ECMAScript página de semântica de proxy Harmony](http://wiki.ecmascript.org/doku.php?id=harmony:proxies_semantics)
+- [Tutorial em proxies](http://soft.vub.ac.be/~tvcutsem/proxies/)
+- [SpiderMonkey specific Old Proxy API](/pt-BR/docs/JavaScript/Old_Proxy_API)
+- {{jsxref("Object.watch()")}} É um recurso não padrão, mas foi suportado no Gecko há muito tempo.
 
-<h2 id="Veja_também">Veja também</h2>
+## `Nota de licença`
 
-<ul>
- <li><a class="external" href="https://www.youtube.com/watch?v=sClk6aB_CPk">"Proxies are awesome" Brendan Eich presentation at JSConf</a> (<a class="external" href="http://www.slideshare.net/BrendanEich/metaprog-5303821">slides</a>)</li>
- <li><a class="external" href="http://wiki.ecmascript.org/doku.php?id=harmony:proxies">ECMAScript Harmony Proxy proposal page</a> e <a class="external" href="http://wiki.ecmascript.org/doku.php?id=harmony:proxies_semantics">ECMAScript página de semântica de proxy Harmony</a></li>
- <li><a class="external" href="http://soft.vub.ac.be/~tvcutsem/proxies/">Tutorial em proxies</a></li>
- <li><a href="/en-US/docs/JavaScript/Old_Proxy_API" title="/en-US/docs/JavaScript/Old_Proxy_API">SpiderMonkey specific Old Proxy API</a></li>
- <li>{{jsxref("Object.watch()")}} É um recurso não padrão, mas foi suportado no Gecko há muito tempo.</li>
-</ul>
-
-<h2 id="Nota_de_licença"><code><code>Nota de licença</code></code></h2>
-
-<p>Alguns conteúdos (texto, exemplos) nesta página foram copiados ou adaptados do <a class="external" href="http://wiki.ecmascript.org/doku.php"> ECMAScript wiki </a> que contém à licença de conteúdo <a class="external" href="http://creativecommons.org/licenses/by-nc-sa/2.0/"> CC 2.0 BY-NC-SA </a>.</p>
+Alguns conteúdos (texto, exemplos) nesta página foram copiados ou adaptados do [ECMAScript wiki ](http://wiki.ecmascript.org/doku.php)que contém à licença de conteúdo [CC 2.0 BY-NC-SA ](http://creativecommons.org/licenses/by-nc-sa/2.0/).

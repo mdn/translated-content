@@ -3,70 +3,52 @@ title: WeakMap.prototype.get()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/get
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/get
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>get()</strong></code> retorna um elemento especificado de um objeto <code>WeakMap</code>.</p>
+O método **`get()`** retorna um elemento especificado de um objeto `WeakMap`.
 
-<div>{{EmbedInteractiveExample("pages/js/weakmap-prototype-get.html")}}</div>
+{{EmbedInteractiveExample("pages/js/weakmap-prototype-get.html")}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code><em>wm</em>.get(chave);</code></pre>
+```
+wm.get(chave);
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt>chave</dt>
- <dd>Obrigatório. A chave do elemento a ser retornado pelo objeto <code>WeakMap</code>.</dd>
-</dl>
+- chave
+  - : Obrigatório. A chave do elemento a ser retornado pelo objeto `WeakMap`.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>O elemento associado à chave especificada no objeto <code>WeakMap</code>. Se a chave não for encontrada, retorna-se {{jsxref("undefined")}}.</p>
+O elemento associado à chave especificada no objeto `WeakMap`. Se a chave não for encontrada, retorna-se {{jsxref("undefined")}}.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Utilizando_o_método_get">Utilizando o método <code>get</code> </h3>
+### Utilizando o método `get`
 
-<pre class="brush: js">var wm = new WeakMap();
+```js
+var wm = new WeakMap();
 wm.set(window, 'foo');
 
 wm.get(window); // Retorna "foo".
 wm.get('baz');  // Retorna undefined.
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-weakmap.prototype.get', 'WeakMap.prototype.get')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-weakmap.prototype.get', 'WeakMap.prototype.get')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                            | Status                       | Comment             |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES2015', '#sec-weakmap.prototype.get', 'WeakMap.prototype.get')}} | {{Spec2('ES2015')}}     | Initial definition. |
+| {{SpecName('ESDraft', '#sec-weakmap.prototype.get', 'WeakMap.prototype.get')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("javascript.builtins.WeakMap.get")}}
 
+## Ver também
 
-<p>{{Compat("javascript.builtins.WeakMap.get")}}</p>
-
-<h2 id="Ver_também">Ver também</h2>
-
-<ul>
- <li>{{jsxref("WeakMap")}}</li>
- <li>{{jsxref("WeakMap.set()")}}</li>
- <li>{{jsxref("WeakMap.has()")}}</li>
-</ul>
+- {{jsxref("WeakMap")}}
+- {{jsxref("WeakMap.set()")}}
+- {{jsxref("WeakMap.has()")}}

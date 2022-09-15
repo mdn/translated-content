@@ -3,55 +3,54 @@ title: ReferenceError
 slug: Web/JavaScript/Reference/Global_Objects/ReferenceError
 translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O objeto <code><strong>ReferenceError</strong></code> representa um erro quando uma variável não existente é referenciada.</p>
+O objeto **`ReferenceError`** representa um erro quando uma variável não existente é referenciada.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code>new ReferenceError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</code></pre>
+```
+new ReferenceError([message[, fileName[, lineNumber]]])
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>message</code></dt>
- <dd>Opcional. Descrição legível do erro.</dd>
- <dt><code>fileName</code> {{non-standard_inline}}</dt>
- <dd>Opcional. O nome do arquivo contendo o código que causou a excessão.</dd>
- <dt><code>lineNumber</code> {{non-standard_inline}}</dt>
- <dd>Opcional. O número da linha do código que causou a excessão.</dd>
-</dl>
+- `message`
+  - : Opcional. Descrição legível do erro.
+- `fileName` {{non-standard_inline}}
+  - : Opcional. O nome do arquivo contendo o código que causou a excessão.
+- `lineNumber` {{non-standard_inline}}
+  - : Opcional. O número da linha do código que causou a excessão.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O  <code>ReferenceError</code> acontece quando é feita uma tentativa de referenciar uma variável que não foi declarada.</p>
+O `ReferenceError` acontece quando é feita uma tentativa de referenciar uma variável que não foi declarada.
 
-<h2 id="Propriedades">Propriedades</h2>
+## Propriedades
 
-<dl>
- <dt>{{jsxref("ReferenceError.prototype")}}</dt>
- <dd>Permite a inclusão de propriedades em um objeto <code>ReferenceError</code>.</dd>
-</dl>
+- {{jsxref("ReferenceError.prototype")}}
+  - : Permite a inclusão de propriedades em um objeto `ReferenceError`.
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<p>O <code>ReferenceError</code> não contém métodos próprios, porém, ele herda alguns métodos através da cadeia de protótipos.</p>
+O `ReferenceError` não contém métodos próprios, porém, ele herda alguns métodos através da cadeia de protótipos.
 
-<h2 id="Instâncias_do_ReferenceError">Instâncias do <code>ReferenceError</code> </h2>
+## Instâncias do `ReferenceError`
 
-<h3 id="Propriedades_2">Propriedades</h3>
+### Propriedades
 
-<div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Properties')}}</div>
+{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Properties')}}
 
-<h3 id="Métodos_2">Métodos</h3>
+### Métodos
 
-<div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Methods')}}</div>
+{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Methods')}}
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Capturando_um_ReferenceError">Capturando um <code>ReferenceError</code></h3>
+### Capturando um `ReferenceError`
 
-<pre class="brush: js">try {
+```js
+try {
   var a = variavelNaoDefinida;
 } catch (e) {
   console.log(e instanceof ReferenceError); // true
@@ -62,11 +61,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
   console.log(e.columnNumber);              // 6
   console.log(e.stack);                     // "@Scratchpad/2:2:7\n"
 }
-</pre>
+```
 
-<h3 id="Criando_um_ReferenceError">Criando um <code>ReferenceError</code></h3>
+### Criando um `ReferenceError`
 
-<pre class="brush: js">try {
+```js
+try {
   throw new ReferenceError('Olá', 'arquivoQualquer.js', 10);
 } catch (e) {
   console.log(e instanceof ReferenceError); // true
@@ -77,47 +77,22 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
   console.log(e.columnNumber);              // 0
   console.log(e.stack);                     // "@Scratchpad/2:2:9\n"
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.11.6.3', 'ReferenceError')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-referenceerror', 'ReferenceError')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-referenceerror', 'ReferenceError')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                                | Estado                       | Comentário         |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('ES3')}}                                                                                                                     | {{Spec2('ES3')}}         | Definição inicial. |
+| {{SpecName('ES5.1', '#sec-15.11.6.3', 'ReferenceError')}}                                                                 | {{Spec2('ES5.1')}}     |                    |
+| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-referenceerror', 'ReferenceError')}}     | {{Spec2('ES6')}}         |                    |
+| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-referenceerror', 'ReferenceError')}} | {{Spec2('ESDraft')}} |                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.ReferenceError")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("ReferenceError.prototype")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("ReferenceError.prototype")}}

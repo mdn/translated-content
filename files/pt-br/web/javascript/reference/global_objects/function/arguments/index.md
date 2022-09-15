@@ -3,25 +3,26 @@ title: Function.arguments
 slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/arguments
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p>A propriedade <strong><code>function.arguments</code></strong> diz respeito a um objeto tipo array (array-like object) correspondente aos argumentos passados para uma função. Use somente a variável {{jsxref("Functions/arguments", "arguments")}} em vez disso.</p>
+A propriedade **`function.arguments`** diz respeito a um objeto tipo array (array-like object) correspondente aos argumentos passados para uma função. Use somente a variável {{jsxref("Functions/arguments", "arguments")}} em vez disso.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>A sintaxe <code>function.arguments</code> está obsoleta. A forma recomendada de acessar o objeto  {{jsxref("Functions/arguments", "arguments")}} disponível dentro das funções, é simplesmente referenciar a variável {{jsxref("Functions/arguments", "arguments")}}.</p>
+A sintaxe `function.arguments` está obsoleta. A forma recomendada de acessar o objeto {{jsxref("Functions/arguments", "arguments")}} disponível dentro das funções, é simplesmente referenciar a variável {{jsxref("Functions/arguments", "arguments")}}.
 
-<p>No caso de recursão, ou seja, uma função f aparecer várias vezes na pilha de chamadas, o valor de <code>f.arguments</code> representa os argumentos correspondentes a invocação mais recente da função.</p>
+No caso de recursão, ou seja, uma função f aparecer várias vezes na pilha de chamadas, o valor de `f.arguments` representa os argumentos correspondentes a invocação mais recente da função.
 
-<p>O valor da propriedade arguments é normalmente nulo (<code>null</code>) se não houver nenhuma invocação pendente da função em andamento (ou seja, a função foi chamada mas ainda não retornou).</p>
+O valor da propriedade arguments é normalmente nulo (`null`) se não houver nenhuma invocação pendente da função em andamento (ou seja, a função foi chamada mas ainda não retornou).
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: js">function f(n) { g(n - 1); }
+```js
+function f(n) { g(n - 1); }
 
 function g(n) {
   console.log('before: ' + g.arguments[0]);
-  if (n &gt; 0) { f(n); }
+  if (n > 0) { f(n); }
   console.log('after: ' + g.arguments[0]);
 }
 
@@ -36,47 +37,22 @@ console.log('returned: ' + g.arguments);
 // after: 0
 // after: 1
 // returned: null
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definiçao inicial. Implementado em JavaScript 1.0. Obsoleto em favor de {{jsxref("Functions/arguments", "arguments")}} em ES3.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-10.6', 'arguments object')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>{{jsxref("Functions/arguments", "arguments")}} object</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-arguments-object', 'arguments object')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>{{jsxref("Functions/arguments", "arguments")}} object</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-arguments-object', 'arguments object')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>{{jsxref("Functions/arguments", "arguments")}} object</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                | Status                       | Comentário                                                                                                                                   |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                     | {{Spec2('ES1')}}         | Definiçao inicial. Implementado em JavaScript 1.0. Obsoleto em favor de {{jsxref("Functions/arguments", "arguments")}} em ES3. |
+| {{SpecName('ES5.1', '#sec-10.6', 'arguments object')}}                     | {{Spec2('ES5.1')}}     | {{jsxref("Functions/arguments", "arguments")}} object                                                                          |
+| {{SpecName('ES6', '#sec-arguments-object', 'arguments object')}}         | {{Spec2('ES6')}}         | {{jsxref("Functions/arguments", "arguments")}} object                                                                          |
+| {{SpecName('ESDraft', '#sec-arguments-object', 'arguments object')}} | {{Spec2('ESDraft')}} | {{jsxref("Functions/arguments", "arguments")}} object                                                                          |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Function.arguments")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Functions/arguments", "arguments")}} object</li>
- <li>{{jsxref("Functions", "Functions and function scope", "", 1)}}</li>
-</ul>
+- {{jsxref("Functions/arguments", "arguments")}} object
+- {{jsxref("Functions", "Functions and function scope", "", 1)}}

@@ -3,38 +3,42 @@ title: Assessores de propriedade
 slug: Web/JavaScript/Reference/Operators/Property_Accessors
 translation_of: Web/JavaScript/Reference/Operators/Property_Accessors
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>Os assessores de propriedade fornecem acesso as propriedades de um objeto usando a notação de ponto ou a notação de colchetes.</p>
+Os assessores de propriedade fornecem acesso as propriedades de um objeto usando a notação de ponto ou a notação de colchetes.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">object.property
+```
+object.property
 object["property"]
-</pre>
+```
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Pode-se pensar em um objeto como uma matriz associativa (a.k.a. <em>map</em>, <em>dictionary</em>, <em>hash</em>, <em>lookup table</em>). As chaves nesta matriz são os nomes das propriedades dos objetos. É típico quando se fala de propriedades de um objeto para fazer uma distinção entre propriedades e métodos. No entanto, a distinção entre propriedade/método é um pouco mais do que convenção. Um método é simplesmente uma propriedade que pode ser chamada, por exemplo, se tiver uma referência a uma instância de <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions">Function</a> como seu valor.</p>
+Pode-se pensar em um objeto como uma matriz associativa (a.k.a. _map_, _dictionary_, _hash_, _lookup table_). As chaves nesta matriz são os nomes das propriedades dos objetos. É típico quando se fala de propriedades de um objeto para fazer uma distinção entre propriedades e métodos. No entanto, a distinção entre propriedade/método é um pouco mais do que convenção. Um método é simplesmente uma propriedade que pode ser chamada, por exemplo, se tiver uma referência a uma instância de [Function](/pt-BR/docs/Web/JavaScript/Reference/Functions) como seu valor.
 
-<p>Há duas maneira de acessar propriedades: notação de ponto ou a notação de colchetes.</p>
+Há duas maneira de acessar propriedades: notação de ponto ou a notação de colchetes.
 
-<h3 id="Notação_de_ponto">Notação de ponto</h3>
+### Notação de ponto
 
-<pre class="brush: js">get = object.property;
+```js
+get = object.property;
 object.property = set;
-</pre>
+```
 
-<p>Neste código, a propriedade deve ser um identificador válido, i.e. uma sequência de carácteres alfanuméricos, incluíndo também o underline ("<code>_</code>") e o cifrão ("<code>$</code>"), não pode começar com um número. Por exemplo, <code>object.$1</code> é valido, enquanto <code>object.1</code> não é.</p>
+Neste código, a propriedade deve ser um identificador válido, i.e. uma sequência de carácteres alfanuméricos, incluíndo também o underline ("`_`") e o cifrão ("`$`"), não pode começar com um número. Por exemplo, `object.$1` é valido, enquanto `object.1` não é.
 
-<pre class="brush: js">document.createElement('pre');
-</pre>
+```js
+document.createElement('pre');
+```
 
-<p>Aqui, o método chamado "createElement" é recuperado do documento e é chamado.</p>
+Aqui, o método chamado "createElement" é recuperado do documento e é chamado.
 
-<p>Se você usar um método para um literal numérico e o literal numérico não tem expoente e nenhum ponto decimal, deixar de espaço em branco antes do ponto que precede a chamada de método para evitar que o ponto seja interpretado como um ponto decimal.</p>
+Se você usar um método para um literal numérico e o literal numérico não tem expoente e nenhum ponto decimal, deixar de espaço em branco antes do ponto que precede a chamada de método para evitar que o ponto seja interpretado como um ponto decimal.
 
-<pre class="brush: js">77 .toExponential();
+```js
+77 .toExponential();
 // ou
 77
 .toExponential();
@@ -44,98 +48,82 @@ object.property = set;
 77..toExponential();
 // ou
 77.0.toExponential();
-// porque 77. === 77.0, sem ambiguidade :p</pre>
+// porque 77. === 77.0, sem ambiguidade :p
+```
 
-<h3 id="Notação_de_colchete">Notação de colchete</h3>
+### Notação de colchete
 
-<pre class="brush: js">get = object[property_name];
+```js
+get = object[property_name];
 object[property_name] = set;
-</pre>
+```
 
-<p><code>property_name</code> é uma string. A string não precisa ser um identificador válido; pode ser qualquer valor, e.g. "1foo", "!bar!", ou até " " (um espaço).</p>
+`property_name` é uma string. A string não precisa ser um identificador válido; pode ser qualquer valor, e.g. "1foo", "!bar!", ou até " " (um espaço).
 
-<pre class="brush: js">document['createElement']('pre');
-</pre>
+```js
+document['createElement']('pre');
+```
 
-<p>Isto faz exatamente a mesma coisa que o exemplo anterior.</p>
+Isto faz exatamente a mesma coisa que o exemplo anterior.
 
-<p>Um espaço antes da notação de colchete é permitido.</p>
+Um espaço antes da notação de colchete é permitido.
 
-<pre class="brush: js">document ['createElement']('pre');</pre>
+```js
+document ['createElement']('pre');
+```
 
-<h3 id="Nomes_de_propriedades">Nomes de propriedades</h3>
+### Nomes de propriedades
 
-<p>Nomes de propriedades devem ser strings. Isto significa que objetos não-string não podem ser usados como chave em um objeto. Qualquer objeto não-string, incluindo um número, é estereotipado como uma string pelo método <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString">toString</a>.</p>
+Nomes de propriedades devem ser strings. Isto significa que objetos não-string não podem ser usados como chave em um objeto. Qualquer objeto não-string, incluindo um número, é estereotipado como uma string pelo método [toString](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/toString).
 
-<pre class="brush: js">var object = {};
+```js
+var object = {};
 object['1'] = 'value';
 console.log(object[1]);
-</pre>
+```
 
-<p>A saída é "value", desde 1 é estereotipado como '1'.</p>
+A saída é "value", desde 1 é estereotipado como '1'.
 
-<pre class="brush: js">var foo = {unique_prop: 1}, bar = {unique_prop: 2}, object = {};
+```js
+var foo = {unique_prop: 1}, bar = {unique_prop: 2}, object = {};
 object[foo] = 'value';
 console.log(object[bar]);
-</pre>
+```
 
-<p>A saída também é "value", já que ambos foo e bar são convertidos para a mesma string. No motor de Javascript <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a>, esta string poderia ser "['object Object']".</p>
+A saída também é "value", já que ambos foo e bar são convertidos para a mesma string. No motor de Javascript [SpiderMonkey](/pt-BR/docs/Mozilla/Projects/SpiderMonkey), esta string poderia ser "\['object Object']".
 
-<h3 id="Ligação_de_método">Ligação de método</h3>
+### Ligação de método
 
-<p>Um método não é limitado ao objeto de quem é metodo. Especificamente, <code>this</code> não é fixo em um método, i.e., <code>this</code> não se referece necessariamente ao objeto contendo o método. Ao invés disso, <code>this</code> é "passado" pela função call. Veja <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/this#Method_binding">method binding</a>.</p>
+Um método não é limitado ao objeto de quem é metodo. Especificamente, `this` não é fixo em um método, i.e., `this` não se referece necessariamente ao objeto contendo o método. Ao invés disso, `this` é "passado" pela função call. Veja [method binding](/pt-BR/docs/Web/JavaScript/Reference/Operators/this#Method_binding).
 
-<h3 id="Nota_sobre_eval">Nota sobre <code>eval</code></h3>
+### Nota sobre `eval`
 
-<p>Novatos em JavaScript comentem muitas vezes o erro de usar <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval</a> onde a notação de colchete pode ser usada no lugar. Por exemplo, a sintaxe a seguir é muitas vezes vista em muitos scripts.</p>
+Novatos em JavaScript comentem muitas vezes o erro de usar [eval](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/eval) onde a notação de colchete pode ser usada no lugar. Por exemplo, a sintaxe a seguir é muitas vezes vista em muitos scripts.
 
-<pre class="brush: js">x = eval('document.forms.form_name.elements.' + strFormControl + '.value');
-</pre>
+```js
+x = eval('document.forms.form_name.elements.' + strFormControl + '.value');
+```
 
-<p><code>eval</code> é lento e deve ser evitado sempre que possível. Também, <code>strFormControl</code> would have to hold an identifier, which is not required for names and IDs of form controls. It is better to use bracket notation instead:</p>
+`eval` é lento e deve ser evitado sempre que possível. Também, `strFormControl` would have to hold an identifier, which is not required for names and IDs of form controls. It is better to use bracket notation instead:
 
-<pre class="brush: js">x = document.forms["form_name"].elements[strFormControl].value;
-</pre>
+```js
+x = document.forms["form_name"].elements[strFormControl].value;
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-property-accessors', 'Property Accessors')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-property-accessors', 'Property Accessors')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-11.2.1', 'Property Accessors')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1', '#sec-11.2.1', 'Property Accessors')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.0.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                       | Comment                                            |
+| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-property-accessors', 'Property Accessors')}} | {{Spec2('ESDraft')}} |                                                    |
+| {{SpecName('ES6', '#sec-property-accessors', 'Property Accessors')}}     | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ES5.1', '#sec-11.2.1', 'Property Accessors')}}                     | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES1', '#sec-11.2.1', 'Property Accessors')}}                     | {{Spec2('ES1')}}         | Initial definition. Implemented in JavaScript 1.0. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.operators.property_accessors")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Object")}}</li>
- <li>{{jsxref("Object/defineProperty")}}</li>
-</ul>
+- {{jsxref("Object")}}
+- {{jsxref("Object/defineProperty")}}

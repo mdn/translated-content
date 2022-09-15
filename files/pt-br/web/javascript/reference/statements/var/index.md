@@ -5,37 +5,36 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/Reference/Statements/var
 ---
-<div>
-<div>{{jsSidebar("Statements")}}</div>
-</div>
+{{jsSidebar("Statements")}}
 
-<h2 id="Sumário">Sumário</h2>
+## Sumário
 
-<p>O <strong><code>variable</code> statement</strong> declara uma variável, opcionalmente é possível atribuir à ela um valor em sua inicialização.</p>
+O **`variable` statement** declara uma variável, opcionalmente é possível atribuir à ela um valor em sua inicialização.
 
-<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">var <em>varname1 [</em>= <em>value1 [</em>, <em>varname2 [</em>, <em>varname3 ... [</em>, <em>varnameN]]]]</em>;</pre>
+```
+var varname1 [= value1 [, varname2 [, varname3 ... [, varnameN]]]];
+```
 
-<dl>
- <dt><code>varnameN</code></dt>
- <dd>Nome da variável. Pode ser utilizado qualquer identificador legal.</dd>
-</dl>
+- `varnameN`
+  - : Nome da variável. Pode ser utilizado qualquer identificador legal.
 
-<dl>
- <dt><code>valueN</code></dt>
- <dd>Valor inicial da variável. Pode ser qualquer expressão legal.</dd>
-</dl>
+<!---->
 
-<h2 id="Description" name="Description">Descrição</h2>
+- `valueN`
+  - : Valor inicial da variável. Pode ser qualquer expressão legal.
 
-<p>Declarações de variáveis, onde quer que elas ocorram, são processadas antes que qualquer outro código seja executado. O escopo de uma variável declarada com  <code>var</code> é seu contexto atual em execução, o qual é a função a qual pertence ou, para variáveis declaradas fora de qualquer função, o escopo é o global.</p>
+## Descrição
 
-<p>Atribuir um valor a uma variável não declarada anteriormente implica em criar uma variável global (ela se torna uma propriedade do objeto global) quando a atribuição é executada. As diferenças entre uma variável declarada e uma não delcarada são:</p>
+Declarações de variáveis, onde quer que elas ocorram, são processadas antes que qualquer outro código seja executado. O escopo de uma variável declarada com `var` é seu contexto atual em execução, o qual é a função a qual pertence ou, para variáveis declaradas fora de qualquer função, o escopo é o global.
 
-<p>1. Variáveis declaradas estão relacionadas com o contexto de execução quando elas são criadas (por exemplo, uma função, objeto). Por outro lado, as variaveis não declaradas sempre são globais.</p>
+Atribuir um valor a uma variável não declarada anteriormente implica em criar uma variável global (ela se torna uma propriedade do objeto global) quando a atribuição é executada. As diferenças entre uma variável declarada e uma não delcarada são:
 
-<pre class="brush: js">function x() {
+1\. Variáveis declaradas estão relacionadas com o contexto de execução quando elas são criadas (por exemplo, uma função, objeto). Por outro lado, as variaveis não declaradas sempre são globais.
+
+```js
+function x() {
   y = 1;   // Lança a exceção ReferenceError em modo restrito (strict mode)
   var z = 2;
 }
@@ -44,35 +43,42 @@ x();
 
 console.log(y); // logs "1"
 console.log(z); // Lança a exceção ReferenceError: z não foi definida fora da função x()
-</pre>
+```
 
-<p>2. Variáveis declaradas são criadas antes de qualquer código ser executado. As variáveis não declaradas não existem até quando o código atribuir um valor a ela.</p>
+2\. Variáveis declaradas são criadas antes de qualquer código ser executado. As variáveis não declaradas não existem até quando o código atribuir um valor a ela.
 
-<pre class="brush: js">console.log(a);                // Lança a exceção ReferenceError.
-console.log('still going...'); // Nunca será executado.</pre>
+```js
+console.log(a);                // Lança a exceção ReferenceError.
+console.log('still going...'); // Nunca será executado.
+```
 
-<pre class="brush: js">var a;
+```js
+var a;
 console.log(a);                // mostra "undefined" ou "" dependendo do naveador.
-console.log('still going...'); // mostra "still going...".</pre>
+console.log('still going...'); // mostra "still going...".
+```
 
-<p>3. Variáveis declaradas são propriedades não configuráveis no contexto de execução (função ou global). Variaveis não declaradas são configuráveis (por exemplo, podem ser excluídas).</p>
+3\. Variáveis declaradas são propriedades não configuráveis no contexto de execução (função ou global). Variaveis não declaradas são configuráveis (por exemplo, podem ser excluídas).
 
-<pre class="brush: js">var a = 1;
+```js
+var a = 1;
 b = 2;
 
 delete this.a; // Lança a exceção TypeError em modo restrito(strict mode). Caso contrário, Falha silenciosamente.
 delete this.b;
 
 console.log(a, b); // Throws a ReferenceError.
-// A propriedade 'b' foi deletada e não existe mais.</pre>
+// A propriedade 'b' foi deletada e não existe mais.
+```
 
-<p>Por conta dessas três diferenças, falha para declarar variáveis, muito provavelmente, levar a resultados inesperados. <strong>Então, é recomendado sempre declarar as variáveis, independentemente se as variáveis estão em escopo de função ou escopo global</strong>. E o modo restrito (<a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode">strict mode</a>) do ECMAScript 5 sempre lançará uma exceçao quando o código atribuir um valor a uma variável não declarada.</p>
+Por conta dessas três diferenças, falha para declarar variáveis, muito provavelmente, levar a resultados inesperados. **Então, é recomendado sempre declarar as variáveis, independentemente se as variáveis estão em escopo de função ou escopo global**. E o modo restrito ([strict mode](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)) do ECMAScript 5 sempre lançará uma exceçao quando o código atribuir um valor a uma variável não declarada.
 
-<h3 id="var_hoisting">var hoisting</h3>
+### var hoisting
 
-<p>Como as declarações de variáveis (e declarações em geral) são processadas antes de qualquer código seja executado, declarar uma variável em qualquer lugar no código é equivalente a declarar no inicio. Isso também significa que uma variável pode aparecer para ser usada antes dela ser declarada. Esse comportamento é chamado de "hoisting", a variável é movida para o inicio da função ou do código global.</p>
+Como as declarações de variáveis (e declarações em geral) são processadas antes de qualquer código seja executado, declarar uma variável em qualquer lugar no código é equivalente a declarar no inicio. Isso também significa que uma variável pode aparecer para ser usada antes dela ser declarada. Esse comportamento é chamado de "hoisting", a variável é movida para o inicio da função ou do código global.
 
-<pre class="brush: js">bla = 2
+```js
+bla = 2
 var bla;
 // ...
 
@@ -80,38 +86,42 @@ var bla;
 
 var bla;
 bla = 2;
-</pre>
+```
 
-<p>Por essa razão, recomenda-se sempre declarar variáveis na parte superior do seu escopo de aplicação (o topo do código global e a parte superior do código da função). Por isso, é claro que as variáveis são função de escopo (local) e que são resolvidos na cadeia de escopo.</p>
+Por essa razão, recomenda-se sempre declarar variáveis na parte superior do seu escopo de aplicação (o topo do código global e a parte superior do código da função). Por isso, é claro que as variáveis são função de escopo (local) e que são resolvidos na cadeia de escopo.
 
-<h2 id="Examples" name="Examples">Exemplos</h2>
+## Exemplos
 
-<h3 id="Declarando_e_inicializando_duas_variáveis">Declarando e inicializando duas variáveis</h3>
+### Declarando e inicializando duas variáveis
 
-<pre class="brush: js">var a = 0, b = 0;
-</pre>
+```js
+var a = 0, b = 0;
+```
 
-<h3 id="Atribuindo_duas_variáveis_com_uma_única_expressão">Atribuindo duas variáveis com uma única expressão</h3>
+### Atribuindo duas variáveis com uma única expressão
 
-<pre class="brush: js">var a = "A";
+```js
+var a = "A";
 var b = a;
 
 // Equivalente a:
 
 var a, b = a = "A";
-</pre>
+```
 
-<p>É sempre importante lembrar da ordem da declaração das variáveis:</p>
+É sempre importante lembrar da ordem da declaração das variáveis:
 
-<pre class="brush: js">var x = y, y = 'A';
+```js
+var x = y, y = 'A';
 console.log(x + y); // undefinedA
-</pre>
+```
 
-<p>Então, x e y são declarados antes de qualquer código seja executado, a atribuição ocorre posteriormente. Quando "x = y" for executado, y existe e nenhum exceção ReferenceError é lançada, e o valor de y será considerado como '<code style="font-style: normal;">undefined</code>'. Por este motivo, este valor é atribuido a x. Depois disso, o valor 'A' é atribuido a variável y. Consequentemente, depois da primeira linha, x === undefined &amp;&amp; y === 'A', então o resultado.</p>
+Então, x e y são declarados antes de qualquer código seja executado, a atribuição ocorre posteriormente. Quando "x = y" for executado, y existe e nenhum exceção ReferenceError é lançada, e o valor de y será considerado como '`undefined`'. Por este motivo, este valor é atribuido a x. Depois disso, o valor 'A' é atribuido a variável y. Consequentemente, depois da primeira linha, x === undefined && y === 'A', então o resultado.
 
-<h3 id="Iniciando_diversas_variáveis">Iniciando diversas variáveis</h3>
+### Iniciando diversas variáveis
 
-<pre class="brush: js">var x = 0;
+```js
+var x = 0;
 
 function f(){
   var x = y = 1; // x é declarado localmente,y não é!
@@ -120,13 +130,15 @@ f();
 
 console.log(x, y); // 0, 1
 // x é uma variável global como experado
-// y vazou para fora da função!</pre>
+// y vazou para fora da função!
+```
 
-<h3 id="Variável_global_implícita_e_fora_do_escopo_da_função">Variável global implícita e fora do escopo da função</h3>
+### Variável global implícita e fora do escopo da função
 
-<p>Variáveis que aparecem como variáveis globais implicitas podem ser referenciadas como variáveis fora do escopo da função:</p>
+Variáveis que aparecem como variáveis globais implicitas podem ser referenciadas como variáveis fora do escopo da função:
 
-<pre class="brush: js">var x = 0;  // x é declarada como global e é igual a 0
+```js
+var x = 0;  // x é declarada como global e é igual a 0
 
 console.log(typeof z); // undefined, desde que z não tenha sido criada anteriormente
 
@@ -147,44 +159,23 @@ function a() { // quando a for chamada,
 
 a();                   // chamando a, também irá chamar b
 console.log(x, z);     // 3 5
-console.log(typeof y); // indefinido já que y é uma variável local da função a</pre>
+console.log(typeof y); // indefinido já que y é uma variável local da função a
+```
 
-<h2 id="Especificação">Especificação</h2>
+## Especificação
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1st Edition</td>
-   <td>Standard</td>
-   <td>Primeira definição.<br>
-    Implementada no JavaScript 1.0</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-12.2', 'var statement')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-variable-statement', 'variable statement')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                   | Comment                                            |
+| -------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
+| ECMAScript 1st Edition                                                                       | Standard                 | Primeira definição. Implementada no JavaScript 1.0 |
+| {{SpecName('ES5.1', '#sec-12.2', 'var statement')}}                         | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES6', '#sec-variable-statement', 'variable statement')}} | {{Spec2('ES6')}}     |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.statements.var")}}
 
-<h2 id="See_also" name="See_also">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let"><code>let</code></a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const"><code>const</code></a></li>
- <li><a class="external" href="http://blog.safeshepherd.com/23/how-one-missing-var-ruined-our-launch/">How One Missing `var` Ruined our Launch</a></li>
-</ul>
+- [`let`](/pt-BR/docs/Web/JavaScript/Reference/Statements/let)
+- [`const`](/pt-BR/docs/Web/JavaScript/Reference/Statements/const)
+- [How One Missing \`var\` Ruined our Launch](http://blog.safeshepherd.com/23/how-one-missing-var-ruined-our-launch/)

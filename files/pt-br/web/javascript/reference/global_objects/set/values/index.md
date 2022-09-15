@@ -3,28 +3,30 @@ title: Set.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Set/values
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/values
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>values()</strong></code> retorna um novo objeto <code>Iterator</code> que contem os valores para cada elemento dentro do objeto <code>Set</code> por ordem de inserção.</p>
+O método **`values()`** retorna um novo objeto `Iterator` que contem os valores para cada elemento dentro do objeto `Set` por ordem de inserção.
 
-<p>O método <strong><code>keys()</code></strong> é um alias desse método (por similaridade com os objetos {{jsxref("Map")}}); ele se comporta exatamente da mesma forma e retorna os <strong>valores</strong> dos elementos do <code>Set</code>.</p>
+O método **`keys()`** é um alias desse método (por similaridade com os objetos {{jsxref("Map")}}); ele se comporta exatamente da mesma forma e retorna os **valores** dos elementos do `Set`.
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-values.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-values.html")}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code><em>mySet</em>.values();
-</code></pre>
+```
+mySet.values();
+```
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>Um novo objeto <code><strong>Iterator</strong></code> condendo os valores de cada elemento contido no <code>Set</code>, por ordem de inserção.</p>
+Um novo objeto **`Iterator`** condendo os valores de cada elemento contido no `Set`, por ordem de inserção.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_values()">Usando <code>values()</code></h3>
+### Usando `values()`
 
-<pre class="brush:js">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add('foo');
 mySet.add('bar');
 mySet.add('baz');
@@ -33,38 +35,20 @@ var setIter = mySet.values();
 
 console.log(setIter.next().value); // "foo"
 console.log(setIter.next().value); // "bar"
-console.log(setIter.next().value); // "baz"</pre>
+console.log(setIter.next().value); // "baz"
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-set.prototype.values', 'Set.prototype.values')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definições iniciais.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-set.prototype.values', 'Set.prototype.values')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                        | Status                       | Comentário           |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-set.prototype.values', 'Set.prototype.values')}} | {{Spec2('ES2015')}}     | Definições iniciais. |
+| {{SpecName('ESDraft', '#sec-set.prototype.values', 'Set.prototype.values')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Browsers_compatíveis">Browsers compatíveis</h2>
+## Browsers compatíveis
 
+{{Compat("javascript.builtins.Set.values")}}
 
+## Veja também
 
-<p>{{Compat("javascript.builtins.Set.values")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{jsxref("Set.prototype.entries()")}}</li>
-</ul>
+- {{jsxref("Set.prototype.entries()")}}

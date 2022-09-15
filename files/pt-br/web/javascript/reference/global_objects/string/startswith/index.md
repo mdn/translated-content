@@ -12,84 +12,76 @@ tags:
   - startsWith()
 translation_of: Web/JavaScript/Reference/Global_Objects/String/startsWith
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>startsWith()</code></strong> determina se uma string começa com os caracteres especificados, retornando <code>true</code> ou <code>false</code>.</p>
+O método **`startsWith()`** determina se uma string começa com os caracteres especificados, retornando `true` ou `false`.
 
-<p>{{EmbedInteractiveExample("pages/js/string-startswith.html")}}</p>
+{{EmbedInteractiveExample("pages/js/string-startswith.html")}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.startsWith(<var>searchString</var>[, <var>position</var>])</code></pre>
+```
+str.startsWith(searchString[, position])
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><em><code>searchString</code></em></dt>
- <dd>Os caracteres a serem procurados a partir do início dessa string.</dd>
- <dt><em><code>position</code></em></dt>
- <dd>Opcional. A posição nessa string na qual se inicia a busca pela <em><code>searchString</code></em>. O valor padrão é <code>0</code>.</dd>
-</dl>
+- _`searchString`_
+  - : Os caracteres a serem procurados a partir do início dessa string.
+- _`position`_
+  - : Opcional. A posição nessa string na qual se inicia a busca pela _`searchString`_. O valor padrão é `0`.
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p><strong><code>true</code></strong> se os caracteres fornecidos forem encontrados no início da string. Se não, <strong><code>false</code></strong>.</p>
+**`true`** se os caracteres fornecidos forem encontrados no início da string. Se não, **`false`**.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Esse método permite determinar se uma string começa ou não com outra string. Esse método é case-sensitive (difere maiúsculas de minúsculas, e vice-versa).</p>
+Esse método permite determinar se uma string começa ou não com outra string. Esse método é case-sensitive (difere maiúsculas de minúsculas, e vice-versa).
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_startsWith">Usando <code>startsWith()</code></h3>
+### Usando `startsWith()`
 
-<pre class="brush: js notranslate">//startswith
+```js
+//startswith
 let str = 'Ser ou não ser, eis a questão.';
 
 console.log(str.startsWith('Ser'))          // true
 console.log(str.startsWith('não ser'))      // false
 console.log(str.startsWith('não ser', 7))  // true
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Este método foi adicionaldo à especificação ECMAScript 2015 e pode ainda não estar disponível em todas as implementações do JavaScript. No entanto, você pode usar o polyfill <code>String.prototype.startsWith()</code> adicionando o seguinte código:</p>
+Este método foi adicionaldo à especificação ECMAScript 2015 e pode ainda não estar disponível em todas as implementações do JavaScript. No entanto, você pode usar o polyfill `String.prototype.startsWith()` adicionando o seguinte código:
 
-<pre class="notranslate">if (!String.prototype.startsWith) {
+```
+if (!String.prototype.startsWith) {
     Object.defineProperty(String.prototype, 'startsWith', {
         value: function(search, rawPos) {
-            var pos = rawPos &gt; 0 ? rawPos|0 : 0;
+            var pos = rawPos > 0 ? rawPos|0 : 0;
             return this.substring(pos, pos + search.length) === search;
         }
     });
-}</pre>
+}
+```
 
-<p>Um polyfill mais robusto (totalmente conforme com a especificação ES2015), mas com menor desempenho e compacto está disponível <a href="https://github.com/mathiasbynens/String.prototype.startsWith">no GitHub por Mathias Bynens</a>.</p>
+Um polyfill mais robusto (totalmente conforme com a especificação ES2015), mas com menor desempenho e compacto está disponível [no GitHub por Mathias Bynens](https://github.com/mathiasbynens/String.prototype.startsWith).
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.startswith', 'String.prototype.startsWith')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-string.prototype.startswith', 'String.prototype.startsWith')}} |
 
-<h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
+## Navegadores compatíveis
 
-<div>{{Compat("javascript.builtins.String.startsWith")}}</div>
+{{Compat("javascript.builtins.String.startsWith")}}
 
-<div id="compat-mobile"></div>
+## Veja também
 
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{jsxref("String.prototype.endsWith()")}}</li>
- <li>{{jsxref("String.prototype.includes()")}}</li>
- <li>{{jsxref("String.prototype.indexOf()")}}</li>
- <li>{{jsxref("String.prototype.lastIndexOf()")}}</li>
-</ul>
+- {{jsxref("String.prototype.endsWith()")}}
+- {{jsxref("String.prototype.includes()")}}
+- {{jsxref("String.prototype.indexOf()")}}
+- {{jsxref("String.prototype.lastIndexOf()")}}

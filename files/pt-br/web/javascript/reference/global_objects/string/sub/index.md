@@ -10,66 +10,52 @@ tags:
   - sub()
 translation_of: Web/JavaScript/Reference/Global_Objects/String/sub
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p>O método <code>sub()</code> cria um elemento HTML <code><a href="/en-US/docs/Web/HTML/Element/sub">&lt;sub&gt;</a></code> que faz com que uma string seja exibida como subscrito (texto pequeno).</p>
+O método `sub()` cria um elemento HTML [`<sub>`](/en-US/docs/Web/HTML/Element/sub) que faz com que uma string seja exibida como subscrito (texto pequeno).
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.sub()</code></pre>
+```
+str.sub()
+```
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>Uma string contendo um elemento HTML <code><a href="/en-US/docs/Web/HTML/Element/sub">&lt;sub&gt;</a></code>.</p>
+Uma string contendo um elemento HTML [`<sub>`](/en-US/docs/Web/HTML/Element/sub).
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O método <code>sub()</code> cria uma string dentro de uma tag <code>&lt;sub&gt;</code>: <code>"&lt;sub&gt;str&lt;/sub&gt;"</code>.</p>
+O método `sub()` cria uma string dentro de uma tag `<sub>`: `"<sub>str</sub>"`.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_os_métodos_sub_e_sup">Usando os métodos <code>sub()</code> e <code>sup()</code></h3>
+### Usando os métodos `sub()` e `sup()`
 
-<p>Os exemplos seguintes usam o métodos <code>sub()</code> e {{jsxref("String.prototype.sup()", "sup()")}} para formatar uma string:</p>
+Os exemplos seguintes usam o métodos `sub()` e {{jsxref("String.prototype.sup()", "sup()")}} para formatar uma string:
 
-<pre class="brush: js notranslate">var superText = 'superscript';
+```js
+var superText = 'superscript';
 var subText = 'subscript';
 
 console.log('This is what a ' + superText.sup() + ' looks like.');
-// This is what a &lt;sup&gt;superscript&lt;/sup&gt; looks like
+// This is what a <sup>superscript</sup> looks like
 
 console.log('This is what a ' + subText.sub() + ' looks like.');
-// This is what a &lt;sub&gt;subscript&lt;/sub&gt; looks like.
-</pre>
+// This is what a <sub>subscript</sub> looks like.
+```
 
-<h2 id="Especificação">Especificação</h2>
+## Especificação
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.sub', 'String.prototype.sub')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definição inicial. Implementado no JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.sub', 'String.prototype.sub')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                        | Status                       | Comentário                                         |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES6', '#sec-string.prototype.sub', 'String.prototype.sub')}}     | {{Spec2('ES6')}}         | Definição inicial. Implementado no JavaScript 1.0. |
+| {{SpecName('ESDraft', '#sec-string.prototype.sub', 'String.prototype.sub')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
+## Navegadores compatíveis
 
 {{Compat("javascript.builtins.String.sub")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("String.prototype.sup()")}}</li>
-</ul>
+- {{jsxref("String.prototype.sup()")}}

@@ -3,31 +3,30 @@ title: instanceof
 slug: Web/JavaScript/Reference/Operators/instanceof
 translation_of: Web/JavaScript/Reference/Operators/instanceof
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}O operador **`instanceof`** testa se um objeto tem, em seu prototype, a função construtora.
 
-<div>O operador <strong><code>instanceof</code></strong> testa se um objeto tem, em seu prototype, a função construtora.</div>
+## Sintaxe
 
-<h2 id="Sintaxe">Sintaxe</h2>
+```
+objeto instanceof construtor
+```
 
-<pre class="syntaxbox"><em>objeto</em> instanceof <em>construtor</em></pre>
+### Parâmetros
 
-<h3 id="Parâmetros">Parâmetros</h3>
+- `objeto`
+  - : O objeto a ser testado
 
-<dl>
- <dt><code>objeto</code></dt>
- <dd>O objeto a ser testado</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code>construtor</code></dt>
- <dd>Função construtora a ser verificada</dd>
-</dl>
+- `construtor`
+  - : Função construtora a ser verificada
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O operador instanceof testa a presença da função construtora no prototype do objeto.</p>
+O operador instanceof testa a presença da função construtora no prototype do objeto.
 
-<pre class="brush: js">// definindo construtores
+```js
+// definindo construtores
 function C(){}
 function D(){}
 
@@ -54,26 +53,27 @@ D.prototype = new C(); // use inheritance
 var o3 = new D();
 o3 instanceof D; // true
 o3 instanceof C; // true
-</pre>
+```
 
-<p>Note que o resultado do instanceof pode alterar quando a gente altera o prototype da função construtora. No entanto, a gente não pode alterar (por padrão) o prototype do objeto. Só é possível fazer essa alteração usando a pseudopropriedade __proto__.</p>
+Note que o resultado do instanceof pode alterar quando a gente altera o prototype da função construtora. No entanto, a gente não pode alterar (por padrão) o prototype do objeto. Só é possível fazer essa alteração usando a pseudopropriedade \_\_proto\_\_.
 
-<h3 id="instanceof_and_multiple_context_(e.g._frames_or_windows)"><code>instanceof</code> and multiple context (e.g. frames or windows)</h3>
+### `instanceof` and multiple context (e.g. frames or windows)
 
-<p>Different scope have different execution environments. This means that they have different built-ins (different global object, different constructors, etc.). This may result in unexpected results. For instance, <code>[] instanceof window.frames[0].Array</code> will return <code>false</code>, because <code>Array.prototype !== </code><code>window.frames[0].Array</code> and arrays inherit from the former. This may not make sense at first but when you start dealing with multiple frames or windows in your script and pass objects from one context to another via functions, this will be a valid and strong issue. For instance, you can securely check if a given object is in fact an Array using <code>Array.isArray(myObj)</code></p>
+Different scope have different execution environments. This means that they have different built-ins (different global object, different constructors, etc.). This may result in unexpected results. For instance, `[] instanceof window.frames[0].Array` will return `false`, because ` Array.prototype !== ``window.frames[0].Array ` and arrays inherit from the former. This may not make sense at first but when you start dealing with multiple frames or windows in your script and pass objects from one context to another via functions, this will be a valid and strong issue. For instance, you can securely check if a given object is in fact an Array using `Array.isArray(myObj)`
 
-<div class="note"><strong>Note for Mozilla developers:</strong><br>
-In code using XPCOM <code>instanceof</code> has special effect: <code>obj instanceof </code><em><code>xpcomInterface</code></em> (e.g. <code>Components.interfaces.nsIFile</code>) calls <code>obj.QueryInterface(<em>xpcomInterface</em>)</code> and returns <code>true</code> if QueryInterface succeeded. A side effect of such call is that you can use <em><code>xpcomInterface</code></em>'s properties on <code>obj</code> after a successful <code>instanceof</code> test. Unlike standard JavaScript globals, the test <code>obj instanceof xpcomInterface </code>works as expected even if <code>obj</code> is from a different scope.</div>
+> **Nota:** **Note for Mozilla developers:**
+> In code using XPCOM `instanceof` has special effect: `obj instanceof `_`xpcomInterface`_ (e.g. `Components.interfaces.nsIFile`) calls `obj.QueryInterface(xpcomInterface)` and returns `true` if QueryInterface succeeded. A side effect of such call is that you can use _`xpcomInterface`_'s properties on `obj` after a successful `instanceof` test. Unlike standard JavaScript globals, the test `obj instanceof xpcomInterface `works as expected even if `obj` is from a different scope.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Demonstrating_that_String_and_Date_are_of_type_Object_and_exceptional_cases">Demonstrating that <code>String</code> and <code>Date</code> are of type <code>Object</code> and exceptional cases</h3>
+### Demonstrating that `String` and `Date` are of type `Object` and exceptional cases
 
-<p>The following code uses <code>instanceof</code> to demonstrate that <code>String</code> and <code>Date</code> objects are also of type <code>Object</code> (they are derived from <code>Object</code>).</p>
+The following code uses `instanceof` to demonstrate that `String` and `Date` objects are also of type `Object` (they are derived from `Object`).
 
-<p>However, objects created with the object literal notation are an exception here: Although the prototype is undefined, <code>instanceof Object</code> returns <code>true</code>.</p>
+However, objects created with the object literal notation are an exception here: Although the prototype is undefined, `instanceof Object` returns `true`.
 
-<pre class="brush: js">var simpleStr = "This is a simple string";
+```js
+var simpleStr = "This is a simple string";
 var myString  = new String();
 var newStr    = new String("String created with constructor");
 var myDate    = new Date();
@@ -92,13 +92,14 @@ myString instanceof Date;   // returns false
 myDate instanceof Date;     // returns true
 myDate instanceof Object;   // returns true
 myDate instanceof String;   // returns false
-</pre>
+```
 
-<h3 id="Demonstrating_that_mycar_is_of_type_Car_and_type_Object">Demonstrating that <code>mycar</code> is of type <code>Car</code> and type <code>Object</code></h3>
+### Demonstrating that `mycar` is of type `Car` and type `Object`
 
-<p>The following code creates an object type <code>Car</code> and an instance of that object type, <code>mycar</code>. The <code>instanceof</code> operator demonstrates that the <code>mycar</code> object is of type <code>Car</code> and of type <code>Object</code>.</p>
+The following code creates an object type `Car` and an instance of that object type, `mycar`. The `instanceof` operator demonstrates that the `mycar` object is of type `Car` and of type `Object`.
 
-<pre class="brush: js">function Car(make, model, year) {
+```js
+function Car(make, model, year) {
   this.make = make;
   this.model = model;
   this.year = year;
@@ -106,41 +107,20 @@ myDate instanceof String;   // returns false
 var mycar = new Car("Honda", "Accord", 1998);
 var a = mycar instanceof Car;    // retorna true
 var b = mycar instanceof Object; // retorna true
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1st Edition.</td>
-   <td>Standard</td>
-   <td>Definição inicial. Implementada no JavaScript 1.4</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-11.8.6', 'The instanceof operator')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-relational-operators', 'Relational Operators')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                    | Status                   | Comentário                                        |
+| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------- |
+| ECMAScript 1st Edition.                                                                          | Standard                 | Definição inicial. Implementada no JavaScript 1.4 |
+| {{SpecName('ES5.1', '#sec-11.8.6', 'The instanceof operator')}}             | {{Spec2('ES5.1')}} |                                                   |
+| {{SpecName('ES6', '#sec-relational-operators', 'Relational Operators')}} | {{Spec2('ES6')}}     |                                                   |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.operators.instanceof")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof" title="/en-US/docs/JavaScript/Reference/Operators/typeof">typeof</a></code></li>
-</ul>
+- [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof "/en-US/docs/JavaScript/Reference/Operators/typeof")

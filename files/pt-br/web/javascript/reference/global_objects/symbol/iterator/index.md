@@ -3,50 +3,48 @@ title: Symbol.iterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O símbolo conhecido <code><strong>Symbol.iterator</strong></code> especifíca o iterador padrão para um objeto. Usado por <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of"><code>for...of</code></a>.</p>
+O símbolo conhecido **`Symbol.iterator`** especifíca o iterador padrão para um objeto. Usado por [`for...of`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of).
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-iterator.html")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-iterator.html")}}
 
+## Descrição
 
+Sempre que um objeto precisa ser iterado (como um começo de um `for..of` loop), o método `@@iterator` é chamado sem argumentos, e o **iterador** retornado é usado para obter os valores para serem iterados.
 
-<h2 id="Descrição">Descrição</h2>
+Alguns tipos built-in tem um comportamento padrão de iteração, enquanto outros tipos (assim como {{jsxref("Object")}}) não tem. O tipo built-in com um método `@@iterator` são:
 
-<p>Sempre que um objeto precisa ser iterado (como um começo de um <code>for..of</code> loop), o método <code>@@iterator</code> é chamado sem argumentos, e o <strong>iterador</strong> retornado é usado para obter os valores para serem iterados.</p>
+- {{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}
+- {{jsxref("String.@@iterator", "String.prototype[@@iterator]()")}}
+- {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
+- {{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}
 
-<p>Alguns tipos built-in tem um comportamento padrão de iteração, enquanto outros tipos (assim como {{jsxref("Object")}}) não tem. O tipo built-in com um método <code>@@iterator</code> são:</p>
+Veja também [Iteration protocols](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols) para mais informação.
 
-<ul>
- <li>{{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}</li>
- <li>{{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}</li>
- <li>{{jsxref("String.@@iterator", "String.prototype[@@iterator]()")}}</li>
- <li>{{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}</li>
- <li>{{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}</li>
-</ul>
+{{js_property_attributes(0,0,0)}}
 
-<p>Veja também <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">Iteration protocols</a> para mais informação.</p>
+## Exemplos
 
-<p>{{js_property_attributes(0,0,0)}}</p>
+### Iteráveis ​​definidos pelo usuário
 
-<h2 id="Exemplos">Exemplos</h2>
+Podemos fazer nosso próprio iterável dessa forma:
 
-<h3 id="Iteráveis_​​definidos_pelo_usuário">Iteráveis ​​definidos pelo usuário</h3>
-
-<p>Podemos fazer nosso próprio iterável dessa forma:</p>
-
-<pre class="brush: js notranslate">var myIterable = {}
+```js
+var myIterable = {}
 myIterable[Symbol.iterator] = function* () {
     yield 1;
     yield 2;
     yield 3;
 };
 [...myIterable] // [1, 2, 3]
-</pre>
+```
 
-<p>Ou iteráveis podem ser definidos diretamente dentro de uma classe ou um objeto usando  <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names">computed property</a>:</p>
+Ou iteráveis podem ser definidos diretamente dentro de uma classe ou um objeto usando [computed property](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names):
 
-<pre class="brush: js notranslate">class Foo {
+```js
+class Foo {
   *[Symbol.iterator] () {
     yield 1;
     yield 2;
@@ -63,45 +61,33 @@ const someObj = {
 
 [...new Foo] // [ 1, 2, 3 ]
 [...someObj] // [ 'a', 'b' ]
-</pre>
+```
 
-<h3 id="Iteráveis_​​não_bem_formados">Iteráveis ​​não bem formados</h3>
+### Iteráveis ​​não bem formados
 
-<p>Se um método <code>@@iterator</code> não retornar um objeto iterador, então é um iterável não bem formado. Usando dessa forma é resultará em uma excessão de tempo ou comportamentos com erros:</p>
+Se um método `@@iterator` não retornar um objeto iterador, então é um iterável não bem formado. Usando dessa forma é resultará em uma excessão de tempo ou comportamentos com erros:
 
-<pre class="brush: js notranslate">var nonWellFormedIterable = {}
-nonWellFormedIterable[Symbol.iterator] = () =&gt; 1
+```js
+var nonWellFormedIterable = {}
+nonWellFormedIterable[Symbol.iterator] = () => 1
 [...nonWellFormedIterable] // TypeError: [] is not a function
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-symbol.iterator', 'Symbol.iterator')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                            |
+| ---------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-symbol.iterator', 'Symbol.iterator')}} |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
+{{Compat("javascript.builtins.Symbol.iterator")}}
 
+## Veja também
 
-<p>{{Compat("javascript.builtins.Symbol.iterator")}}</p>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">Iteration protocols</a></li>
- <li>{{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}</li>
- <li>{{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}</li>
- <li>{{jsxref("String.@@iterator", "String.prototype[@@iterator]()")}}</li>
- <li>{{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}</li>
- <li>{{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}</li>
-</ul>
+- [Iteration protocols](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols)
+- {{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}
+- {{jsxref("String.@@iterator", "String.prototype[@@iterator]()")}}
+- {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
+- {{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}

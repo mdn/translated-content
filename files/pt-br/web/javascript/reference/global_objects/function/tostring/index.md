@@ -8,230 +8,135 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/toString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>toString()</strong></code> retorna uma string representando o código fonte da função.</p>
+O método **`toString()`** retorna uma string representando o código fonte da função.
 
-<div>{{EmbedInteractiveExample("pages/js/function-tostring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/function-tostring.html")}}
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code><var>function</var>.toString()</code></pre>
+```
+function.toString()
+```
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>Uma string representando o código fonte da função.</p>
+Uma string representando o código fonte da função.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O objeto da {{jsxref("Function")}} substitui o método {{jsxref("Object.prototype.toString", "toString")}} herdado de {{jsxref("Object")}}; ele não herda {{jsxref("Object.prototype.toString")}}. Para objetos {{jsxref("Function")}} definidos pelo usuário, o método <code>toString</code> retorna uma string contendo o seguimento de texto de origem que foi usado para definir a função</p>
+O objeto da {{jsxref("Function")}} substitui o método {{jsxref("Object.prototype.toString", "toString")}} herdado de {{jsxref("Object")}}; ele não herda {{jsxref("Object.prototype.toString")}}. Para objetos {{jsxref("Function")}} definidos pelo usuário, o método `toString` retorna uma string contendo o seguimento de texto de origem que foi usado para definir a função
 
-<p>O JavaScript chama o método <code>toString</code> automaticamente quando uma {{jsxref("Function")}} pode ser representada como um valor de texto. e.x. quando uma função é concatenada com uma string.</p>
+O JavaScript chama o método `toString` automaticamente quando uma {{jsxref("Function")}} pode ser representada como um valor de texto. e.x. quando uma função é concatenada com uma string.
 
-<p>O método <code>toString()</code> lançará uma exceção do tipo {{jsxref("TypeError")}} ("Function.prototype.toString called on incompatible object") se o valor <code>this</code> do objeto não é um objeto do tipo <code>Function.</code></p>
+O método `toString()` lançará uma exceção do tipo {{jsxref("TypeError")}} ("Function.prototype.toString called on incompatible object") se o valor `this` do objeto não é um objeto do tipo `Function.`
 
-<pre class="brush: js example-bad notranslate">Function.prototype.toString.call('foo'); // TypeError
-</pre>
+```js example-bad
+Function.prototype.toString.call('foo'); // TypeError
+```
 
-<p>Se o método <code>toString()</code> é chamado por objetos de funções embutidas ou por uma função criada por <code>Function.prototype.bind</code>, <code>toString()</code> retorna uma string de uma função nativa que parece</p>
+Se o método `toString()` é chamado por objetos de funções embutidas ou por uma função criada por `Function.prototype.bind`, `toString()` retorna uma string de uma função nativa que parece
 
-<pre class="brush: js notranslate">"function () {\n    [native code]\n}"
-</pre>
+```js
+"function () {\n    [native code]\n}"
+```
 
-<p>Se o método <code>toString()</code> é chamado por uma função criada pelo contrutor de <code>Function</code>, <code>toString()</code> retorna o código fonte de uma declaração de função sintetizada chamada "anonymous" usando os parâmetros passados e o corpo da função.</p>
+Se o método `toString()` é chamado por uma função criada pelo contrutor de `Function`, `toString()` retorna o código fonte de uma declaração de função sintetizada chamada "anonymous" usando os parâmetros passados e o corpo da função.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Função</th>
-   <th scope="col">Function.prototype.toString resultado</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>
-    <pre class="notranslate">
-function f(){}</pre>
-   </td>
-   <td>
-    <pre class="notranslate">
-"function f(){}"</pre>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <pre class="notranslate">
-class A { a(){} }</pre>
-   </td>
-   <td>
-    <pre class="notranslate">
-"class A { a(){} }"</pre>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <pre class="notranslate">
-function* g(){}</pre>
-   </td>
-   <td>
-    <pre class="notranslate">
-"function* g(){}"</pre>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <pre class="notranslate">
-a =&gt; a</pre>
-   </td>
-   <td>
-    <pre class="notranslate">
-"a =&gt; a"</pre>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <pre class="notranslate">
-({ a(){} }.a)</pre>
-   </td>
-   <td>
-    <pre class="notranslate">
-"a(){}"</pre>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <pre class="notranslate">
-({ *a(){} }.a)</pre>
-   </td>
-   <td>
-    <pre class="notranslate">
-"*a(){}"</pre>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <pre class="notranslate">
-({ [0](){} }[0])</pre>
-   </td>
-   <td>
-    <pre class="notranslate">
-"[0](){}"</pre>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <pre class="notranslate">
+  <thead>
+    <tr>
+      <th scope="col">Função</th>
+      <th scope="col">Function.prototype.toString resultado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><pre class="notranslate">function f(){}</pre></td>
+      <td><pre class="notranslate">"function f(){}"</pre></td>
+    </tr>
+    <tr>
+      <td><pre class="notranslate">class A { a(){} }</pre></td>
+      <td><pre class="notranslate">"class A { a(){} }"</pre></td>
+    </tr>
+    <tr>
+      <td><pre class="notranslate">function* g(){}</pre></td>
+      <td><pre class="notranslate">"function* g(){}"</pre></td>
+    </tr>
+    <tr>
+      <td><pre class="notranslate">a => a</pre></td>
+      <td><pre class="notranslate">"a => a"</pre></td>
+    </tr>
+    <tr>
+      <td><pre class="notranslate">({ a(){} }.a)</pre></td>
+      <td><pre class="notranslate">"a(){}"</pre></td>
+    </tr>
+    <tr>
+      <td><pre class="notranslate">({ *a(){} }.a)</pre></td>
+      <td><pre class="notranslate">"*a(){}"</pre></td>
+    </tr>
+    <tr>
+      <td><pre class="notranslate">({ [0](){} }[0])</pre></td>
+      <td><pre class="notranslate">"[0](){}"</pre></td>
+    </tr>
+    <tr>
+      <td>
+        <pre class="notranslate">
 Object.getOwnPropertyDescriptor({
     get a(){}
-}, "a").get</pre>
-   </td>
-   <td>
-    <pre class="notranslate">
-"get a(){}"</pre>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <pre class="notranslate">
+}, "a").get</pre
+        >
+      </td>
+      <td><pre class="notranslate">"get a(){}"</pre></td>
+    </tr>
+    <tr>
+      <td>
+        <pre class="notranslate">
 Object.getOwnPropertyDescriptor({
     set a(x){}
-}, "a").set</pre>
-   </td>
-   <td>
-    <pre class="notranslate">
-"set a(x){}"</pre>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <pre class="notranslate">
-Function.prototype.toString</pre>
-   </td>
-   <td>
-    <pre class="notranslate">
-"function toString() { [native code] }"</pre>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <pre class="notranslate">
-(function f(){}.bind(0))</pre>
-   </td>
-   <td>
-    <pre class="notranslate">
-"function () { [native code] }"</pre>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <pre class="notranslate">
-Function("a", "b")</pre>
-   </td>
-   <td>
-    <pre class="notranslate">
-"function anonymous(a\n) {\nb\n}"</pre>
-   </td>
-  </tr>
- </tbody>
+}, "a").set</pre
+        >
+      </td>
+      <td><pre class="notranslate">"set a(x){}"</pre></td>
+    </tr>
+    <tr>
+      <td><pre class="notranslate">Function.prototype.toString</pre></td>
+      <td>
+        <pre class="notranslate">"function toString() { [native code] }"</pre>
+      </td>
+    </tr>
+    <tr>
+      <td><pre class="notranslate">(function f(){}.bind(0))</pre></td>
+      <td><pre class="notranslate">"function () { [native code] }"</pre></td>
+    </tr>
+    <tr>
+      <td><pre class="notranslate">Function("a", "b")</pre></td>
+      <td><pre class="notranslate">"function anonymous(a\n) {\nb\n}"</pre></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>
-    <p>Definição inicial. Implementado no JavaScript 1.1.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-function.prototype.tostring', 'Function.prototype.toString')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>
-    <p>Mais requisitos específicos foram incluídos para representação de string.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://tc39.github.io/Function-prototype-toString-revision/#sec-introduction"><code>Function.prototype.toString</code> revisions proposal</a></td>
-   <td>Rascunho</td>
-   <td>
-    <p>Padroniza a função de string navida e fins de linha.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-function.prototype.tostring', 'Function.prototype.toString')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                                     | Status                       | Comentário                                                                |
+| --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                                          | {{Spec2('ES1')}}         | Definição inicial. Implementado no JavaScript 1.1.                        |
+| {{SpecName('ES6', '#sec-function.prototype.tostring', 'Function.prototype.toString')}}              | {{Spec2('ES6')}}         | Mais requisitos específicos foram incluídos para representação de string. |
+| [`Function.prototype.toString` revisions proposal](https://tc39.github.io/Function-prototype-toString-revision/#sec-introduction) | Rascunho                     | Padroniza a função de string navida e fins de linha.                      |
+| {{SpecName('ESDraft', '#sec-function.prototype.tostring', 'Function.prototype.toString')}}          | {{Spec2('ESDraft')}} |                                                                           |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>
+{{Compat("javascript.builtins.Function.toString")}}
 
+## Notas específicas do Firefox
 
-<p>{{Compat("javascript.builtins.Function.toString")}}</p>
-</div>
+- Desde o Firefox 17 a função `Function.prototype.toString()` tem sido implementada salvando o fonte da função. O descompilador foi removido o que torna o parâmetro `indentation` desnecessário. Veja {{bug("761723")}} para mais detalhes.
+- Do Firefox 38 para o 63 a função `Function.prototype.toString()` lançava exceções para objetos {{jsxref("Proxy")}} ({{bug(1100936)}} e {{bug(1440468)}}).
 
-<h2 id="Notas_específicas_do_Firefox">Notas específicas do Firefox</h2>
+## Veja também
 
-<ul>
- <li>Desde o Firefox 17 a função <code>Function.prototype.toString()</code> tem sido implementada salvando o fonte da função. O descompilador foi removido o que torna o parâmetro <code>indentation</code> desnecessário. Veja {{bug("761723")}} para mais detalhes.</li>
- <li>Do Firefox 38 para o 63 a função <code>Function.prototype.toString()</code> lançava exceções para objetos {{jsxref("Proxy")}} ({{bug(1100936)}} e {{bug(1440468)}}).</li>
-</ul>
-
-<h2 id="Veja_também">Veja também</h2>
-
-<ul>
- <li>{{jsxref("Object.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toString()")}}

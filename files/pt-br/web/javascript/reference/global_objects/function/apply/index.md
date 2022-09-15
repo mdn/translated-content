@@ -7,68 +7,66 @@ tags:
   - Métodos
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>apply()</strong></code> chama uma função com um dado valor <code>this </code>e <code>arguments </code>providos como uma array (ou um objeto parecido com um array).</p>
+O método **`apply()`** chama uma função com um dado valor `this `e `arguments `providos como uma array (ou um objeto parecido com um array).
 
-<div class="note">
-<p><strong>Nota:</strong> A sintaxe desta função é quase idêntica a essa da {{jsxref("Function.call", "call()")}}, a diferença é que <code>call()</code> aceita uma <strong> lista de </strong><strong style="background-color: rgba(231, 228, 157, 0.247059); color: rgba(0, 0, 0, 0.65098); font-style: italic;">argumentos</strong>, enquanto <code>apply()</code> aceita um<strong> array de argumentos</strong>.</p>
-</div>
+> **Nota:** A sintaxe desta função é quase idêntica a essa da {{jsxref("Function.call", "call()")}}, a diferença é que `call()` aceita uma **lista de** **argumentos**, enquanto `apply()` aceita um **array de argumentos**.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code><var>fun</var>.apply(<var>thisArg, </var>[<var>argsArray</var>])</code></pre>
+```
+fun.apply(thisArg, [argsArray])
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>thisArg</code></dt>
- <dd>
- <p>O valor de <code>this</code> é fornecido para a chamada de <em>fun. </em>Note que isso talvez não seja o valor real visto pelo método:  se um método é uma função em código {{jsxref("Functions/Strict_mode", "non-strict mode", "", 1)}} , {{jsxref("null")}} e {{jsxref("undefined")}} serão substituidos com o objeto global, e os valores primitivos serão embalados.</p>
- </dd>
- <dt><code>argsArray</code></dt>
- <dd>Um objeto parecido com um array (array-like), especificando os argumentos com os quais <em>fun </em>deve ser chamado, ou {{jsxref("null")}} ou {{jsxref("undefined")}} se não houverem argumentos que possam ser passados para a função. Começando com ECMAScript5 esses argumentos podem ser um objeto genérico array-like ao invés de um array. Veja abaixo a informação de <a href="#browser_compatibility">compatibilidade de browsers</a>.</dd>
-</dl>
+- `thisArg`
+  - : O valor de `this` é fornecido para a chamada de _fun._ Note que isso talvez não seja o valor real visto pelo método: se um método é uma função em código {{jsxref("Functions/Strict_mode", "non-strict mode", "", 1)}} , {{jsxref("null")}} e {{jsxref("undefined")}} serão substituidos com o objeto global, e os valores primitivos serão embalados.
+- `argsArray`
+  - : Um objeto parecido com um array (array-like), especificando os argumentos com os quais _fun_ deve ser chamado, ou {{jsxref("null")}} ou {{jsxref("undefined")}} se não houverem argumentos que possam ser passados para a função. Começando com ECMAScript5 esses argumentos podem ser um objeto genérico array-like ao invés de um array. Veja abaixo a informação de [compatibilidade de browsers](#browser_compatibility).
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Você pode atribuir um objeto <code>this</code><em> </em>diferente quando chamar uma função existente. <code>this</code><em> </em>refere-se ao objeto atual, o objeto da chamada. Com <code>apply</code><em>, </em>você pode escrever um método apenas uma vez e então herdá-lo em outro objeto, sem ter que reescrever o método para o novo objeto.</p>
+Você pode atribuir um objeto `this`\_ _diferente quando chamar uma função existente. `this`_ _refere-se ao objeto atual, o objeto da chamada. Com `apply`_,\_ você pode escrever um método apenas uma vez e então herdá-lo em outro objeto, sem ter que reescrever o método para o novo objeto.
 
-<p><code>apply </code>é muito parecido com {{jsxref("Function.call", "call()")}}, exceto pelo tipo de argumentos que ele suporta. Você pode usar um array de argumentos em vez de conjunto de parâmetros nomeados. Com <code>apply, </code>você pode usar um array literal, por exemplo, <code><em>fun</em>.apply(this, ['comer', 'bananas'])</code>, ou um objeto {{jsxref("Array")}}, por exemplo <code><em>fun</em>.apply(this, new Array('comer', 'bananas')).</code></p>
+`apply `é muito parecido com {{jsxref("Function.call", "call()")}}, exceto pelo tipo de argumentos que ele suporta. Você pode usar um array de argumentos em vez de conjunto de parâmetros nomeados. Com `apply, `você pode usar um array literal, por exemplo, `fun.apply(this, ['comer', 'bananas'])`, ou um objeto {{jsxref("Array")}}, por exemplo `fun.apply(this, new Array('comer', 'bananas')).`
 
-<p>Você pode também usar {{jsxref("Functions/arguments", "arguments")}} para o parâmetro <code>argsArray.</code> <code>arguments </code>é uma variável local de uma função.  Ele pode ser utilizado para todos os argumentos não especificados do objeto chamado. Assim, você não tem que saber os argumentos do objeto chamado quando você usa o método <code>apply</code>. Você pode usar <code>arguments </code>para passar todos os argumentos para o objeto da chamada. O objeto chamado fica então responsável por manipular os argumentos.</p>
+Você pode também usar {{jsxref("Functions/arguments", "arguments")}} para o parâmetro `argsArray.` `arguments `é uma variável local de uma função. Ele pode ser utilizado para todos os argumentos não especificados do objeto chamado. Assim, você não tem que saber os argumentos do objeto chamado quando você usa o método `apply`. Você pode usar `arguments `para passar todos os argumentos para o objeto da chamada. O objeto chamado fica então responsável por manipular os argumentos.
 
-<p>Desde a 5a versão do ECMAScript você pode utilizar qualquer tipo de objeto que é parecido com um array (array-like), então na prática isso significa que ele vai ter uma propriedade <code>length </code>e propriedades inteiras no intervalor (<code>0... length</code>). Como um exemplo, você pode agora usar um {{domxref("NodeList")}} ou um objeto personalizado como <code>{ 'length': 2, '0': 'comer', '1': 'bananas' }</code>.</p>
+Desde a 5a versão do ECMAScript você pode utilizar qualquer tipo de objeto que é parecido com um array (array-like), então na prática isso significa que ele vai ter uma propriedade `length `e propriedades inteiras no intervalor (`0... length`). Como um exemplo, você pode agora usar um {{domxref("NodeList")}} ou um objeto personalizado como `{ 'length': 2, '0': 'comer', '1': 'bananas' }`.
 
-<p>{{note("Muitos navegadores, incluindo o Chrome 14 e o Internet Explorer 9, ainda não aceitam objetos parecidos com array e irão lançar uma exceção.")}}.</p>
+{{note("Muitos navegadores, incluindo o Chrome 14 e o Internet Explorer 9, ainda não aceitam objetos parecidos com array e irão lançar uma exceção.")}}.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_apply_para_cadeia_de_construtores">Usando <code>apply</code> para cadeia de construtores</h3>
+### Usando `apply` para cadeia de construtores
 
-<p>Você pode usar <code>apply </code>para encadear {{jsxref("Operators/new", "construtores", "", 1)}} em um objeto, similar ao Java. No exemplo seguinte nós iremos criar um método de {{jsxref("Global_Objects/Function", "Função")}} global chamado <code>construct, </code>que fará você capaz de usar um objeto parecido com um array com um construtor ao invés de uma lista de argumentos</p>
+Você pode usar `apply `para encadear {{jsxref("Operators/new", "construtores", "", 1)}} em um objeto, similar ao Java. No exemplo seguinte nós iremos criar um método de {{jsxref("Global_Objects/Function", "Função")}} global chamado `construct, `que fará você capaz de usar um objeto parecido com um array com um construtor ao invés de uma lista de argumentos
 
-<pre class="brush: js">Function.prototype.construct = function (aArgs) {
+```js
+Function.prototype.construct = function (aArgs) {
   var oNew = Object.create(this.prototype);
   this.apply(oNew, aArgs);
   return oNew;
 };
-</pre>
+```
 
-<div class="note">
-<p><strong>Note:</strong> O método <code>Object.create()</code>  usado acima é relativamente novo. Para um método alternativo utilizando closures, por favor considere a seguinte alternativa.</p>
+> **Nota:** O método `Object.create()` usado acima é relativamente novo. Para um método alternativo utilizando closures, por favor considere a seguinte alternativa.
+>
+> ```js
+> Function.prototype.construct = function(aArgs) {
+>   var fConstructor = this, fNewConstr = function() { fConstructor.apply(this, aArgs); };
+>   fNewConstr.prototype = fConstructor.prototype;
+>   return new fNewConstr();
+> };
+> ```
 
-<pre class="brush: js">Function.prototype.construct = function(aArgs) {
-  var fConstructor = this, fNewConstr = function() { fConstructor.apply(this, aArgs); };
-  fNewConstr.prototype = fConstructor.prototype;
-  return new fNewConstr();
-};</pre>
-</div>
+Exemplo de uso:
 
-<p>Exemplo de uso:</p>
-
-<pre class="brush: js">function MyConstructor() {
-  for (var nProp = 0; nProp &lt; arguments.length; nProp++) {
+```js
+function MyConstructor() {
+  for (var nProp = 0; nProp < arguments.length; nProp++) {
     this['property' + nProp] = arguments[nProp];
   }
 }
@@ -79,17 +77,16 @@ var myInstance = MyConstructor.construct(myArray);
 console.log(myInstance.property1);                // logs 'Hello world!'
 console.log(myInstance instanceof MyConstructor); // logs 'true'
 console.log(myInstance.constructor);              // logs 'MyConstructor'
-</pre>
+```
 
-<div class="note">
-<p><strong>Nota:</strong>  Este método não nativo <code>Function.construct </code>não irá funcionar com alguns construtores nativos (como {{jsxref("Date")}}, por exemplo). Nestes casos você tem que usar o método {{jsxref("Function.prototype.bind")}} (por exemplo, imagine ter um array como o seguinte, para ser usado com o construtor {{jsxref("Global_Objects/Date", "Date")}}: <code>[2012, 11, 4]</code>; Neste caso você tem que escrever algom como: <code>new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))() - </code>de qualquer maneira essa não é a melhor forma de fazer as coisas e provavelmente não deve ser utilizado em qualquer ambiente de produção</p>
-</div>
+> **Nota:** Este método não nativo `Function.construct `não irá funcionar com alguns construtores nativos (como {{jsxref("Date")}}, por exemplo). Nestes casos você tem que usar o método {{jsxref("Function.prototype.bind")}} (por exemplo, imagine ter um array como o seguinte, para ser usado com o construtor {{jsxref("Global_Objects/Date", "Date")}}: `[2012, 11, 4]`; Neste caso você tem que escrever algom como: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))() - `de qualquer maneira essa não é a melhor forma de fazer as coisas e provavelmente não deve ser utilizado em qualquer ambiente de produção
 
-<h3 id="Usando_apply_e_funções_embutidas">Usando <code>apply</code> e funções embutidas</h3>
+### Usando `apply` e funções embutidas
 
-<p>A forma inteligente com que <code>apply</code> é utilizado permite à você usar funções nativas que de outra forma provavelmente teriam que ser escritas iterando sobre um array de valores. Aqui, como exemplo, iremos utilizar <code>Math.max</code>/<code>Math.min</code> para achar o valor máximo/mínimo value em um array.</p>
+A forma inteligente com que `apply` é utilizado permite à você usar funções nativas que de outra forma provavelmente teriam que ser escritas iterando sobre um array de valores. Aqui, como exemplo, iremos utilizar `Math.max`/`Math.min` para achar o valor máximo/mínimo value em um array.
 
-<pre class="brush: js">/* número min/max em um array */
+```js
+/* número min/max em um array */
 var numbers = [5, 6, 2, 3, 7];
 
 /* utilizando Math.min/Math.max apply */
@@ -100,23 +97,24 @@ var min = Math.min.apply(null, numbers);
 /* vs. algoritmo simples baseado em loop */
 max = -Infinity, min = +Infinity;
 
-for (var i = 0; i &lt; numbers.length; i++) {
-  if (numbers[i] &gt; max) {
+for (var i = 0; i < numbers.length; i++) {
+  if (numbers[i] > max) {
     max = numbers[i];
   }
-  if (numbers[i] &lt; min) {
+  if (numbers[i] < min) {
     min = numbers[i];
   }
 }
-</pre>
+```
 
-<p>Mas tome cuidado: ao utilizar o <code>apply</code> desta forma, você corre o risco de exceder o limite de argumentos do JavaScript. As consequências de fazer applying em uma função com muitos argumentos (pense em algo como dezenas de centenas de argumentos) varia de acordo com os engines (JavaScriptCore tem um <a class="link-https" href="https://bugs.webkit.org/show_bug.cgi?id=80797">limite de argumentos de 65536</a> hard-coded), visto que o limite (na verdade, até mesmo a natureza de qualquer comportamento de um stack excessivamente grande) não é especificado. Algumas engines irão jogar uma excessão. De uma forma mais incisiva, outras engines irão limitar de forma arbitrária o número de argumentos que poderção ser aplicados à função. (Para ilustrar esse último caso: se uma engine dessas tem um limite de quatro argumentos [obviamente, os limites atuais são significativamente maiores], isso seria como se os argumentos <code>5, 6, 2, 3</code> do exemplo anterior fossem passados ao <code>apply</code>, ao invés do array completo.) Se o valor do seu array puder crescer à casa das dezenas de centenas, use uma estratégia híbrida: aplique suas funções em cada bloco de array por vez:</p>
+Mas tome cuidado: ao utilizar o `apply` desta forma, você corre o risco de exceder o limite de argumentos do JavaScript. As consequências de fazer applying em uma função com muitos argumentos (pense em algo como dezenas de centenas de argumentos) varia de acordo com os engines (JavaScriptCore tem um [limite de argumentos de 65536](https://bugs.webkit.org/show_bug.cgi?id=80797) hard-coded), visto que o limite (na verdade, até mesmo a natureza de qualquer comportamento de um stack excessivamente grande) não é especificado. Algumas engines irão jogar uma excessão. De uma forma mais incisiva, outras engines irão limitar de forma arbitrária o número de argumentos que poderção ser aplicados à função. (Para ilustrar esse último caso: se uma engine dessas tem um limite de quatro argumentos \[obviamente, os limites atuais são significativamente maiores], isso seria como se os argumentos `5, 6, 2, 3` do exemplo anterior fossem passados ao `apply`, ao invés do array completo.) Se o valor do seu array puder crescer à casa das dezenas de centenas, use uma estratégia híbrida: aplique suas funções em cada bloco de array por vez:
 
-<pre class="brush: js">function minOfArray(arr) {
+```js
+function minOfArray(arr) {
   var min = Infinity;
   var QUANTUM = 32768;
 
-  for (var i = 0, len = arr.length; i &lt; len; i += QUANTUM) {
+  for (var i = 0, len = arr.length; i < len; i += QUANTUM) {
     var submin = Math.min.apply(null, arr.slice(i, Math.min(i + QUANTUM, len)));
     min = Math.min(submin, min);
   }
@@ -125,13 +123,14 @@ for (var i = 0; i &lt; numbers.length; i++) {
 }
 
 var min = minOfArray([5, 6, 2, 3, 7]);
-</pre>
+```
 
-<h3 id="Usando_apply_em_monkey-patching">Usando apply em "monkey-patching"</h3>
+### Usando apply em "monkey-patching"
 
-<p>Apply pode ser a melhor forma de monkey-patch uma função nativa do Firefox, ou de bibliotecas em JS. Dada uma função <code>someobject.foo</code>, você poderá modificar a função de uma maneira hackeresca, como por exemplo:</p>
+Apply pode ser a melhor forma de monkey-patch uma função nativa do Firefox, ou de bibliotecas em JS. Dada uma função `someobject.foo`, você poderá modificar a função de uma maneira hackeresca, como por exemplo:
 
-<pre class="brush: js">var originalfoo = someobject.foo;
+```js
+var originalfoo = someobject.foo;
 someobject.foo = function() {
   // Faça coisas antes de chamar a função
   console.log(arguments);
@@ -139,46 +138,25 @@ someobject.foo = function() {
   originalfoo.apply(this, arguments);
   // Rode as coisas que vem depois, aqui.
 }
-</pre>
+```
 
-<p>Esse método é especialmente útil quando você quer fazer debug de eventos, ou interagir com algo que não tem nenhuma API como os diversos eventos <code>.on([event]...</code> events, por exemplo aqueles utilizáveis no <a href="/en-US/docs/Tools/Page_Inspector#Developer_API">Devtools Inspector</a>).</p>
+Esse método é especialmente útil quando você quer fazer debug de eventos, ou interagir com algo que não tem nenhuma API como os diversos eventos `.on([event]...` events, por exemplo aqueles utilizáveis no [Devtools Inspector](/pt-BR/docs/Tools/Page_Inspector#Developer_API)).
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3º Edição.</td>
-   <td>Padrão</td>
-   <td>Definição inicial, implementado no JavaScript 1.3.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.3.4.3', 'Function.prototype.apply')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-function.prototype.apply', 'Function.prototype.apply')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                | Status                   | Comentário                                         |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------ | -------------------------------------------------- |
+| ECMAScript 3º Edição.                                                                                        | Padrão                   | Definição inicial, implementado no JavaScript 1.3. |
+| {{SpecName('ES5.1', '#sec-15.3.4.3', 'Function.prototype.apply')}}                     | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES6', '#sec-function.prototype.apply', 'Function.prototype.apply')}} | {{Spec2('ES6')}}     |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Function.apply")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>Objeto {{jsxref("Functions/arguments", "arguments")}}</li>
- <li>{{jsxref("Function.prototype.bind()")}}</li>
- <li>{{jsxref("Function.prototype.call()")}}</li>
- <li>{{jsxref("Functions", "Funções e escopo de funções", "", 1)}}</li>
-</ul>
+- Objeto {{jsxref("Functions/arguments", "arguments")}}
+- {{jsxref("Function.prototype.bind()")}}
+- {{jsxref("Function.prototype.call()")}}
+- {{jsxref("Functions", "Funções e escopo de funções", "", 1)}}

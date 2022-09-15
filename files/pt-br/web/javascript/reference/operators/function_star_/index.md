@@ -3,74 +3,58 @@ title: Expressão function*
 slug: Web/JavaScript/Reference/Operators/function*
 translation_of: Web/JavaScript/Reference/Operators/function*
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>A palavra-chave <strong><code>function*</code></strong> pode ser usada para definir uma função generator dentro de uma expressão.</p>
+A palavra-chave **`function*`** pode ser usada para definir uma função generator dentro de uma expressão.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">function* [<em>nome</em>]([<em>param1</em>[, <em>param2[</em>, ..., <em>paramN</em>]]]) {
-    <em>declarações</em>
-}</pre>
+```
+function* [nome]([param1[, param2[, ..., paramN]]]) {
+    declarações
+}
+```
 
-<dl>
- <dt><code>nome</code></dt>
- <dd>O nome da função. Pode ser omitido, no caso da função ser anônima. O nome é local apenas para o corpo da função.</dd>
- <dt><code>paramN</code></dt>
- <dd>O nome de um argumento para ser passado para a função. Uma função pode ter até 255 argumentos.</dd>
- <dt><code>declarações</code></dt>
- <dd>As declarações que compõem o corpo da função.</dd>
-</dl>
+- `nome`
+  - : O nome da função. Pode ser omitido, no caso da função ser anônima. O nome é local apenas para o corpo da função.
+- `paramN`
+  - : O nome de um argumento para ser passado para a função. Uma função pode ter até 255 argumentos.
+- `declarações`
+  - : As declarações que compõem o corpo da função.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Uma expressão <code>function*</code> é muito similar e tem quase a mesma sintaxe que a {{jsxref('Statements/function*', 'declaração function*')}}. A principal diferença entre uma expressão  <code>function*</code> e a declaração <code>function*</code> é o <em>nome da função</em>, que pode ser omitido em expressões <code>function*</code> para criar funções <em>anônimas</em>. Veja também o capítulo sobre <a href="/en-US/docs/Web/JavaScript/Reference/Functions">funções</a> para mais informações.</p>
+Uma expressão `function*` é muito similar e tem quase a mesma sintaxe que a {{jsxref('Statements/function*', 'declaração function*')}}. A principal diferença entre uma expressão `function*` e a declaração `function*` é o _nome da função_, que pode ser omitido em expressões `function*` para criar funções _anônimas_. Veja também o capítulo sobre [funções](/pt-BR/docs/Web/JavaScript/Reference/Functions) para mais informações.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<p>O exemplo a seguir define uma função generator e atribui à variável <code>x</code>. A função faz um yield do quadrado do seu argumento:</p>
+O exemplo a seguir define uma função generator e atribui à variável `x`. A função faz um yield do quadrado do seu argumento:
 
-<pre class="brush: js">var x = function*(y) {
+```js
+var x = function*(y) {
    yield y * y;
 };
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Situação</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#', 'function*')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#', 'function*')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                            | Situação                     | Comentário         |
+| -------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('ES2015', '#', 'function*')}}     | {{Spec2('ES2015')}}     | Definição inicial. |
+| {{SpecName('ESDraft', '#', 'function*')}} | {{Spec2('ESDraft')}} |                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.operators.generator_function")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Statements/function*", "function* statement")}}</li>
- <li>{{jsxref("GeneratorFunction")}} object</li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol">The Iterator protocol</a></li>
- <li>{{jsxref("Operators/yield", "yield")}}</li>
- <li>{{jsxref("Operators/yield*", "yield*")}}</li>
- <li>{{jsxref("Function")}} object</li>
- <li>{{jsxref("Statements/function", "function statement")}}</li>
- <li>{{jsxref("Operators/function", "function expression")}}</li>
- <li>{{jsxref("Functions_and_function_scope", "Functions and function scope")}}</li>
-</ul>
+- {{jsxref("Statements/function*", "function* statement")}}
+- {{jsxref("GeneratorFunction")}} object
+- [The Iterator protocol](/pt-BR/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- {{jsxref("Operators/yield", "yield")}}
+- {{jsxref("Operators/yield*", "yield*")}}
+- {{jsxref("Function")}} object
+- {{jsxref("Statements/function", "function statement")}}
+- {{jsxref("Operators/function", "function expression")}}
+- {{jsxref("Functions_and_function_scope", "Functions and function scope")}}

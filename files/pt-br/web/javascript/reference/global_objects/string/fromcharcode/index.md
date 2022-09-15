@@ -10,85 +10,61 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <strong><code>String.fromCharCode()</code></strong> retorna uma string criada ao usar uma sequência específica de valores Unicode.</p>
+O método **`String.fromCharCode()`** retorna uma string criada ao usar uma sequência específica de valores Unicode.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox notranslate"><code>String.fromCharCode(<var>num1</var>[, ...[, <var>numN</var>]])</code></pre>
+```
+String.fromCharCode(num1[, ...[, numN]])
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code>num1, ..., num<em>N</em></code></dt>
- <dd>Uma sequência de números que devem ser valores UTF-16. O tamanho é entre <code>0</code> e <code>65535</code> (<code>0xFFFF</code>). Números maiores do que <code>0xFFFF</code> são desconsiderados. Nenhuma verificação de vadalida é realizada.</dd>
-</dl>
+- `num1, ..., numN`
+  - : Uma sequência de números que devem ser valores UTF-16. O tamanho é entre `0` e `65535` (`0xFFFF`). Números maiores do que `0xFFFF` são desconsiderados. Nenhuma verificação de vadalida é realizada.
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>Uma string contendo os caracteres correspondentes à sequência de valores Unicode.</p>
+Uma string contendo os caracteres correspondentes à sequência de valores Unicode.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Esse método retorna uma string e não um objeto {{jsxref("String")}}.</p>
+Esse método retorna uma string e não um objeto {{jsxref("String")}}.
 
-<p>Como <code>fromCharCode() </code>é um método estático de {{jsxref("String")}}, você sempre o usará como <code>String.fromCharCode()</code>, ao invés de um método de um objeto {{jsxref("String")}} que você tenha criado.</p>
+Como `fromCharCode() `é um método estático de {{jsxref("String")}}, você sempre o usará como `String.fromCharCode()`, ao invés de um método de um objeto {{jsxref("String")}} que você tenha criado.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_fromCharCode">Usando <code>fromCharCode()</code></h3>
+### Usando `fromCharCode()`
 
-<p>O seguinte exemplo retorna a string "ABC".</p>
+O seguinte exemplo retorna a string "ABC".
 
-<pre class="brush: js notranslate">String.fromCharCode(65, 66, 67);  // retorna "ABC"
-</pre>
+```js
+String.fromCharCode(65, 66, 67);  // retorna "ABC"
+```
 
-<h2 id="Fazendo-o_funcionar_com_valores_maiores">Fazendo-o funcionar com valores maiores</h2>
+## Fazendo-o funcionar com valores maiores
 
-<p>Embora os valores Unicode mais comuns possam ser representados com um número de 16 bits (como experado durante a padronização do JavaScript) e o fromCharCode() possa ser usado para retornar um único caracter dos valores mais comuns (por exemplo: valores UCS-2 que são os melhores subconjuntos do UTF-16 com os caractres mais comuns), a fim de resolver TODOS os valores Unicode legais (até 21 bits) o método fromCharCode() sozinho é inadequado. Como os caracteres de ponto de código mais alto usam 2 (valor menor) numeros "substitutos" para formar um único caracter, {{jsxref("String.fromCodePoint()")}} (parte do padrão ES2015) pode ser usado para retornar tal par e ainda representar adequadamente esses caracteres de valores altos.</p>
+Embora os valores Unicode mais comuns possam ser representados com um número de 16 bits (como experado durante a padronização do JavaScript) e o fromCharCode() possa ser usado para retornar um único caracter dos valores mais comuns (por exemplo: valores UCS-2 que são os melhores subconjuntos do UTF-16 com os caractres mais comuns), a fim de resolver TODOS os valores Unicode legais (até 21 bits) o método fromCharCode() sozinho é inadequado. Como os caracteres de ponto de código mais alto usam 2 (valor menor) numeros "substitutos" para formar um único caracter, {{jsxref("String.fromCodePoint()")}} (parte do padrão ES2015) pode ser usado para retornar tal par e ainda representar adequadamente esses caracteres de valores altos.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição inicial. Implementado no JavaScript 1.2.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.3.2', 'StringfromCharCode')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.fromcharcodes', 'String.fromCharCode')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.fromcharcodes', 'String.fromCharCode')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                        | Status                       | Comentário                                         |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                             | {{Spec2('ES1')}}         | Definição inicial. Implementado no JavaScript 1.2. |
+| {{SpecName('ES5.1', '#sec-15.5.3.2', 'StringfromCharCode')}}                     | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES6', '#sec-string.fromcharcodes', 'String.fromCharCode')}}     | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-string.fromcharcodes', 'String.fromCharCode')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
+## Navegadores compatíveis
 
 {{Compat("javascript.builtins.String.fromCharCode")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("String.fromCodePoint()")}}</li>
- <li>{{jsxref("String.prototype.charAt()")}}</li>
- <li>{{jsxref("String.prototype.charCodeAt()")}}</li>
- <li>{{jsxref("String.prototype.codePointAt()")}}</li>
-</ul>
+- {{jsxref("String.fromCodePoint()")}}
+- {{jsxref("String.prototype.charAt()")}}
+- {{jsxref("String.prototype.charCodeAt()")}}
+- {{jsxref("String.prototype.codePointAt()")}}

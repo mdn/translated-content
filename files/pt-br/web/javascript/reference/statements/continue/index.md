@@ -5,43 +5,42 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/Reference/Statements/continue
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>A palavra chave <strong>continue</strong> termina a atual iteração do laço em que ele se encontra ou de um laço rotulado, e continua a execução deste laço com a próxima iteração.</p>
+A palavra chave **continue** termina a atual iteração do laço em que ele se encontra ou de um laço rotulado, e continua a execução deste laço com a próxima iteração.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">continue [<em>rótulo</em>];</pre>
+```
+continue [rótulo];
+```
 
-<dl>
- <dt><code>rótulo</code></dt>
- <dd>Identificador associado ao laço.</dd>
-</dl>
+- `rótulo`
+  - : Identificador associado ao laço.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>Diferentemente do  {{jsxref("Statements/break", "break")}}, o <code>continue</code> não termina a execução do laço completamente, em vez disso ele:</p>
+Diferentemente do {{jsxref("Statements/break", "break")}}, o `continue` não termina a execução do laço completamente, em vez disso ele:
 
-<ul>
- <li>Volta à condição, em um laço do tipo {{jsxref("Statements/while", "while")}}.</li>
-</ul>
+- Volta à condição, em um laço do tipo {{jsxref("Statements/while", "while")}}.
 
-<ul>
- <li>Volta à expressão, atualizando-a, em um laço do tipo {{jsxref("Statements/for", "for")}}.</li>
-</ul>
+<!---->
 
-<p>O <code>continue</code> pode incluir, opcionalmente, um rótulo que premite ao programa pular para a próxima iteração de um laço rotulado em vez de pular o loop em que ele se encontra. Neste caso, o <code>continue</code> necessita estar dentro deste laço rotulado.</p>
+- Volta à expressão, atualizando-a, em um laço do tipo {{jsxref("Statements/for", "for")}}.
 
-<h2 id="Exemplos">Exemplos</h2>
+O `continue` pode incluir, opcionalmente, um rótulo que premite ao programa pular para a próxima iteração de um laço rotulado em vez de pular o loop em que ele se encontra. Neste caso, o `continue` necessita estar dentro deste laço rotulado.
 
-<h3 id="Usando_continue_com_while">Usando <code>continue</code> com <code>while</code></h3>
+## Exemplos
 
-<p>O exemplo abaixo mostra um laço {{jsxref("Statements/while", "while")}} que tem um  <code>continue</code> que será executado quando o valor de <code>i</code> for 3. Assim, <code>n</code> terá os valores 1, 3, 7, e 12.</p>
+### Usando `continue` com `while`
 
-<pre class="brush: js">var i = 0;
+O exemplo abaixo mostra um laço {{jsxref("Statements/while", "while")}} que tem um `continue` que será executado quando o valor de `i` for 3. Assim, `n` terá os valores 1, 3, 7, e 12.
+
+```js
+var i = 0;
 var n = 0;
 
-while (i &lt; 5) {
+while (i < 5) {
   i++;
 
   if (i === 3) {
@@ -50,24 +49,25 @@ while (i &lt; 5) {
 
   n += i;
 }
-</pre>
+```
 
-<h3 id="Usando_o_continue_com_um_rótulo">Usando o <code>continue</code> com um rótulo</h3>
+### Usando o `continue` com um rótulo
 
-<p>No exemplo abaixo, um laço rotulado como <code>checkiandj</code> contém o laço rotulado <code>checkj</code>. Se o <code>continue</code> for alcançado, o programa continua a execução voltando ao topo do rótulo <code>checkj</code>. Cada vez que o <code>continue</code> for alcançado, <code>checkj</code> reiterará até sua condição for falsa. Quando retornar <code>false</code>, o restante de <code>checkiandj</code> será executado.</p>
+No exemplo abaixo, um laço rotulado como `checkiandj` contém o laço rotulado `checkj`. Se o `continue` for alcançado, o programa continua a execução voltando ao topo do rótulo `checkj`. Cada vez que o `continue` for alcançado, `checkj` reiterará até sua condição for falsa. Quando retornar `false`, o restante de `checkiandj` será executado.
 
-<p>Se o <code>continue</code> tivesse o rótulo <code>checkiandj</code>, o programa iria continuar retornando a execução ao label <code>checkiandj</code>.</p>
+Se o `continue` tivesse o rótulo `checkiandj`, o programa iria continuar retornando a execução ao label `checkiandj`.
 
-<p>Veja também {{jsxref("Statements/label", "label")}}.</p>
+Veja também {{jsxref("Statements/label", "label")}}.
 
-<pre class="brush: js">var i = 0;
+```js
+var i = 0;
 var j = 8;
 
-checkiandj: while (i &lt; 4) {
+checkiandj: while (i < 4) {
   console.log("i: " + i);
   i += 1;
 
-  checkj: while (j &gt; 4) {
+  checkj: while (j > 4) {
     console.log("j: "+ j);
     j -= 1;
 
@@ -78,11 +78,12 @@ checkiandj: while (i &lt; 4) {
   console.log("i = " + i);
   console.log("j = " + j);
 }
-</pre>
+```
 
-<p>Output:</p>
+Output:
 
-<pre class="brush: js">"i: 0"
+```js
+"i: 0"
 
 // start checkj
 "j: 8"
@@ -107,52 +108,23 @@ checkiandj: while (i &lt; 4) {
 "i: 3"
 "i = 4"
 "j = 4"
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentários</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição inicial. Versão sem rótulo.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Versão rotulada adicionada.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-12.7', 'Continue statement')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-continue-statement', 'Continue statement')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-continue-statement', 'Continue statement')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                    | Status                       | Comentários                           |
+| ------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------- |
+| {{SpecName('ES1')}}                                                                         | {{Spec2('ES1')}}         | Definição inicial. Versão sem rótulo. |
+| {{SpecName('ES3')}}                                                                         | {{Spec2('ES3')}}         | Versão rotulada adicionada.           |
+| {{SpecName('ES5.1', '#sec-12.7', 'Continue statement')}}                     | {{Spec2('ES5.1')}}     |                                       |
+| {{SpecName('ES6', '#sec-continue-statement', 'Continue statement')}}     | {{Spec2('ES6')}}         |                                       |
+| {{SpecName('ESDraft', '#sec-continue-statement', 'Continue statement')}} | {{Spec2('ESDraft')}} |                                       |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.statements.continue")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Statements/break", "break")}}</li>
- <li>{{jsxref("Statements/label", "label")}}</li>
-</ul>
+- {{jsxref("Statements/break", "break")}}
+- {{jsxref("Statements/label", "label")}}

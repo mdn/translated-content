@@ -3,40 +3,41 @@ title: Array.prototype.fill()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/fill
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>fill()</strong></code> preenche todos os valores do array a partir do índice inicial a um índice final com um valor estático.</p>
+O método **`fill()`** preenche todos os valores do array a partir do índice inicial a um índice final com um valor estático.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code><var>arr</var>.fill(<var>valor</var>[, <var>ínicio<var> = 0[, <var>fim</var> = this.length]])</var></var></code></pre>
+```
+arr.fill(valor[, ínicio = 0[, fim = this.length]])
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<dl>
- <dt><code><var>valor</var></code></dt>
- <dd>Valor para preencher o array.</dd>
- <dt><code><var>ínicio</var></code></dt>
- <dd>Opcional. Índice inicial.</dd>
- <dt><code><var><var><var>fim</var></var></var></code></dt>
- <dd>Opcional. Índice final.</dd>
-</dl>
+- `valor`
+  - : Valor para preencher o array.
+- `ínicio`
+  - : Opcional. Índice inicial.
+- `fim`
+  - : Opcional. Índice final.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O intervalo de preenchimento dos elementos é  [<code>início</code>, <code>fim</code>).</p>
+O intervalo de preenchimento dos elementos é \[`início`, `fim`).
 
-<p>O método <strong><code>fill</code></strong> pode receber até três argumentos <code>valor</code>, <code>ínicio</code> e <code>fim</code>. Os argumentos <code>ínicio</code> e <code>fim</code> são opcionais com valor padrão <code>0 (valor) </code>e o tamanho do objeto <code>(fim)</code>.</p>
+O método **`fill`** pode receber até três argumentos `valor`, `ínicio` e `fim`. Os argumentos `ínicio` e `fim` são opcionais com valor padrão `0 (valor) `e o tamanho do objeto `(fim)`.
 
-<p>Se o <code>ínicio</code> for negativo, ele será tratado como <code>tamanho + ínicio</code> onde <code>tamanho é o tamanho total do array</code>. Se o <code>fim</code> for negativo, ele será tratado como <code>tamanho + fim</code>.</p>
+Se o `ínicio` for negativo, ele será tratado como `tamanho + ínicio` onde `tamanho é o tamanho total do array`. Se o `fim` for negativo, ele será tratado como `tamanho + fim`.
 
-<p>A função <strong>fill</strong> é intencionalmente genérica, ele não precisa que o valor do this seja um objeto Array.</p>
+A função **fill** é intencionalmente genérica, ele não precisa que o valor do this seja um objeto Array.
 
-<p>O método <strong>fill</strong> é um método mutável, ele irá mudar o objeto em si, e retorná-lo, não somente uma cópia do objeto.</p>
+O método **fill** é um método mutável, ele irá mudar o objeto em si, e retorná-lo, não somente uma cópia do objeto.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<pre class="brush: js">[1, 2, 3].fill(4);               // [4, 4, 4]
+```js
+[1, 2, 3].fill(4);               // [4, 4, 4]
 [1, 2, 3].fill(4, 1);            // [1, 4, 4]
 [1, 2, 3].fill(4, 1, 2);         // [1, 4, 3]
 [1, 2, 3].fill(4, 1, 1);         // [1, 2, 3]
@@ -44,11 +45,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/fill
 [1, 2, 3].fill(4, NaN, NaN);     // [1, 2, 3]
 Array(3).fill(4);                // [4, 4, 4]
 [].fill.call({ length: 3 }, 4);  // {0: 4, 1: 4, 2: 4, length: 3}
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: js">if (!Array.prototype.fill) {
+```js
+if (!Array.prototype.fill) {
   Array.prototype.fill = function(value) {
 
     // Passo 1-2.
@@ -59,29 +61,29 @@ Array(3).fill(4);                // [4, 4, 4]
     var O = Object(this);
 
     // Passo 3-5.
-    var len = O.length &gt;&gt;&gt; 0;
+    var len = O.length >>> 0;
 
     // Passo 6-7.
     var start = arguments[1];
-    var relativeStart = start &gt;&gt; 0;
+    var relativeStart = start >> 0;
 
     // Passo 8.
-    var k = relativeStart &lt; 0 ?
+    var k = relativeStart < 0 ?
       Math.max(len + relativeStart, 0) :
       Math.min(relativeStart, len);
 
     // Passo 9-10.
     var end = arguments[2];
     var relativeEnd = end === undefined ?
-      len : end &gt;&gt; 0;
+      len : end >> 0;
 
     // Passo 11.
-    var final = relativeEnd &lt; 0 ?
+    var final = relativeEnd < 0 ?
       Math.max(len + relativeEnd, 0) :
       Math.min(relativeEnd, len);
 
     // Passo 12.
-    while (k &lt; final) {
+    while (k < final) {
       O[k] = value;
       k++;
     }
@@ -90,36 +92,21 @@ Array(3).fill(4);                // [4, 4, 4]
     return O;
   };
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.fill', 'Array.prototype.fill')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                    | Status               | Comentário         |
+| ------------------------------------------------------------------------------------------------ | -------------------- | ------------------ |
+| {{SpecName('ES6', '#sec-array.prototype.fill', 'Array.prototype.fill')}} | {{Spec2('ES6')}} | Definição inicial. |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<div>{{Compat("javascript.builtins.Array.fill")}}</div>
+{{Compat("javascript.builtins.Array.fill")}}
 
-<div id="compat-desktop"></div>
+\[1] Começando com Chrome 36, isto era disponível com uma mudança nas preferencias. Em chrome://flags, ativar a entrada “Enable Experimental JavaScript”.
 
-<p>[1] Começando com Chrome 36, isto era disponível com uma mudança nas preferencias. Em chrome://flags, ativar a entrada “Enable Experimental JavaScript”.</p>
+## Ver também
 
-<h2 id="Ver_também">Ver também</h2>
-
-<ul>
- <li>{{jsxref("Array")}}</li>
- <li>{{jsxref("TypedArray.prototype.fill()")}}</li>
-</ul>
+- {{jsxref("Array")}}
+- {{jsxref("TypedArray.prototype.fill()")}}

@@ -3,65 +3,47 @@ title: Boolean.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
 translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>O método <code><strong>valueOf()</strong></code> retorna o valor primitivo de um objeto {{jsxref("Boolean")}}.</p>
+O método **`valueOf()`** retorna o valor primitivo de um objeto {{jsxref("Boolean")}}.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox"><code><var>bool</var>.valueOf()</code></pre>
+```
+bool.valueOf()
+```
 
-<h3 id="Parâmetros">Parâmetros</h3>
+### Parâmetros
 
-<p>Nenhum.</p>
+Nenhum.
 
-<h2 id="Descrição">Descrição</h2>
+## Descrição
 
-<p>O método <code>valueOf do </code>{{jsxref("Boolean")}} retorna o valor primitivo de um objeto {{jsxref("Boolean")}} ou um literal {{jsxref("Boolean")}} como tipo de dado Boolean.</p>
+O método `valueOf do `{{jsxref("Boolean")}} retorna o valor primitivo de um objeto {{jsxref("Boolean")}} ou um literal {{jsxref("Boolean")}} como tipo de dado Boolean.
 
-<p>Esse método é geralmente chamado internamente pelo JavaScript e não explicitamente no código.</p>
+Esse método é geralmente chamado internamente pelo JavaScript e não explicitamente no código.
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_valueOf">Usando <code>valueOf</code></h3>
+### Usando `valueOf`
 
-<pre class="brush: js">x = new Boolean();
+```js
+x = new Boolean();
 myVar = x.valueOf(); // atribui o valor false à variável myVar
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Condição</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição inicial. Implementado no JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.6.4.3', 'Boolean.prototype.valueOf')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-boolean.prototype.valueof', 'Boolean.prototype.valueOf')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                | Condição                 | Comentário                                         |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------ | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.6.4.3', 'Boolean.prototype.valueOf')}}                     | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES6', '#sec-boolean.prototype.valueof', 'Boolean.prototype.valueOf')}} | {{Spec2('ES6')}}     |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Boolean.valueOf")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Object.prototype.valueOf()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.valueOf()")}}

@@ -11,81 +11,51 @@ tags:
   - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setTime
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}O método **`setTime() `**atribui ao objecto {{jsxref("Date")}} a hora representada pelo número de milisegundos desde 1 de janeiro de 1970 as 00:00:00 UTC.{{EmbedInteractiveExample("pages/js/date-settime.html")}}
 
-<div>O método <strong><code>setTime() </code></strong>atribui ao objecto {{jsxref("Date")}} a hora representada pelo número de milisegundos desde 1 de janeiro de 1970 as 00:00:00 UTC.</div>
+## Sintáxe
 
-<div> </div>
+```
+dateObj.setTime(timeValue)
+```
 
-<div>{{EmbedInteractiveExample("pages/js/date-settime.html")}}</div>
+### Parâmetros
 
-<h2 id="Sintáxe">Sintáxe</h2>
+- `timeValue`
+  - : Um inteiro representando o número de milisegundos desde 1 de janeiro 1970, 00:00:00 UTC.
 
-<pre class="syntaxbox"><code><var>dateObj</var>.setTime(<var>timeValue</var>)</code></pre>
+### Valor retornado
 
-<h3 id="Parâmetros">Parâmetros</h3>
+O número de milisegundos entre 1 de janeiro de 1970 00:00:00 UTC e a data atualizada (efetivamente, o valor do argumento).
 
-<dl>
- <dt><code>timeValue</code></dt>
- <dd>Um inteiro representando o número de milisegundos desde 1 de janeiro 1970, 00:00:00 UTC.</dd>
-</dl>
+## Descrição
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+Use o método `setTime()` para ajudar a atribuir data e hora para outro objeto {{jsxref("Date")}}.
 
-<p>O número de milisegundos entre 1 de janeiro de 1970 00:00:00 UTC e a data atualizada (efetivamente, o valor do argumento).</p>
+## Exemplos
 
-<h2 id="Descrição">Descrição</h2>
+### Usando `setTime()`
 
-<p>Use o método <code>setTime()</code> para ajudar a atribuir data e hora para outro objeto {{jsxref("Date")}}.</p>
-
-<h2 id="Exemplos">Exemplos</h2>
-
-<h3 id="Usando_setTime()">Usando <code>setTime()</code></h3>
-
-<pre class="brush: js">var theBigDay = new Date('July 1, 1999');
+```js
+var theBigDay = new Date('July 1, 1999');
 var sameAsBigDay = new Date();
 sameAsBigDay.setTime(theBigDay.getTime());
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição inicial. Implementado no JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.27', 'Date.prototype.setTime')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.settime', 'Date.prototype.setTime')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.settime', 'Date.prototype.setTime')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                | Status                       | Comentário                                         |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}         | Definição inicial. Implementado no JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.9.5.27', 'Date.prototype.setTime')}}                     | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES6', '#sec-date.prototype.settime', 'Date.prototype.setTime')}}         | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-date.prototype.settime', 'Date.prototype.setTime')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
-<p>{{Compat("javascript.builtins.Date.setTime")}}</p>
+{{Compat("javascript.builtins.Date.setTime")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Date.prototype.getTime()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCHours()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getTime()")}}
+- {{jsxref("Date.prototype.setUTCHours()")}}

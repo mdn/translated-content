@@ -9,155 +9,135 @@ tags:
   - se então
 translation_of: Web/JavaScript/Reference/Statements/if...else
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>A condicional<strong> if </strong> é uma estrutura condicional que executa a afirmação, dentro do bloco, se determinada condição for verdadeira. Se for falsa, executa as afirmações dentro de <strong>else</strong>.</p>
+A condicional **if** é uma estrutura condicional que executa a afirmação, dentro do bloco, se determinada condição for verdadeira. Se for falsa, executa as afirmações dentro de **else**.
 
-<h2 id="Sintaxe">Sintaxe</h2>
+## Sintaxe
 
-<pre class="syntaxbox">if (<em>condição</em>) <em>afirmação1 [</em>else <em>afirmação2</em>]</pre>
+```
+if (condição) afirmação1 [else afirmação2]
+```
 
-<dl>
- <dt><code>condição</code></dt>
- <dd>Uma <a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions">expressão</a> (premissa) que pode ser avaliada como verdadeira (true) ou falsa (false), veja lógica de programação para entender melhor.</dd>
-</dl>
+- `condição`
+  - : Uma [expressão](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions) (premissa) que pode ser avaliada como verdadeira (true) ou falsa (false), veja lógica de programação para entender melhor.
 
-<dl>
- <dt><code>condição1</code></dt>
- <dd>Condicional que será executada caso a condição em <em>if</em> seja verdadeira (true). Pode ser qualquer instrução, incluindo mais condicionais <em>if</em> aninhadas à instrução. Para executar multiplas instruções, faça um agrupamento com uma instrução em <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block" title="en/JavaScript/Reference/Statements/block">bloco</a> ({ ... }). Para não executar nenhuma instrução, utilize uma instrução vazia (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/Empty">empty</a>).</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code>condição2</code></dt>
- <dd>Condicional que será executada caso a condição em <em>if</em> seja avaliada como falsa (false) e a condição <em>else</em> exista. Pode ser qualquer instrução, incluindo instruões em bloco e mais condicionais <em>if</em> aninhadas. </dd>
-</dl>
+- `condição1`
+  - : Condicional que será executada caso a condição em _if_ seja verdadeira (true). Pode ser qualquer instrução, incluindo mais condicionais _if_ aninhadas à instrução. Para executar multiplas instruções, faça um agrupamento com uma instrução em [bloco](/pt-BR/docs/Web/JavaScript/Reference/Statements/block "en/JavaScript/Reference/Statements/block") ({ ... }). Para não executar nenhuma instrução, utilize uma instrução vazia ([empty](/pt-BR/docs/Web/JavaScript/Reference/Statements/Empty)).
 
-<h2 id="Descrição">Descrição</h2>
+<!---->
 
-<p>Múltiplas condicionais<em> if ... else</em> podem ser aninhados quando necessário. Observe que não existe elseif (em uma palavra). O correto é a instrução com espaços (else if), conforme abaixo:</p>
+- `condição2`
+  - : Condicional que será executada caso a condição em _if_ seja avaliada como falsa (false) e a condição _else_ exista. Pode ser qualquer instrução, incluindo instruões em bloco e mais condicionais _if_ aninhadas.
 
-<pre class="eval">if (<em>condição1</em>)
-   <em>instrução1</em>
-else if (<em>condição2</em>)
-   <em>instrução2</em>
-else if (<em>condição3</em>)
-   <em>instrução3</em>
+## Descrição
+
+Múltiplas condicionais _if ... else_ podem ser aninhados quando necessário. Observe que não existe elseif (em uma palavra). O correto é a instrução com espaços (else if), conforme abaixo:
+
+```
+if (condição1)
+   instrução1
+else if (condição2)
+   instrução2
+else if (condição3)
+   instrução3
 ...
 else
-   <em>instruçãoN</em>
-</pre>
+   instruçãoN
+```
 
-<p>Para ver seu funcionamento, abaixo está a instrução como deveria ser caso identada corretamente.</p>
+Para ver seu funcionamento, abaixo está a instrução como deveria ser caso identada corretamente.
 
-<pre class="eval">if (<em>condição1</em>)
-   <em>instrução1</em>
+```
+if (condição1)
+   instrução1
 else
-   if (<em>condição2</em>)
-      <em>instrução2</em>
+   if (condição2)
+      instrução2
    else
-      if (<em>condição3</em>)
+      if (condição3)
 ...
-</pre>
+```
 
-<p>Para executar multiplas instruções dentro de uma condição, utilize um bloco (<code>{ ... }</code>) . Em geral, é sempre uma boa prática utilizar instruções dentro de blocos, especialmente em códigos que envolvam condicionais <em>if </em>aninhadas:</p>
+Para executar multiplas instruções dentro de uma condição, utilize um bloco (`{ ... }`) . Em geral, é sempre uma boa prática utilizar instruções dentro de blocos, especialmente em códigos que envolvam condicionais _if_ aninhadas:
 
-<pre class="eval">if (<em>condição</em>) {
-   <em>instrução1</em>
+```
+if (condição) {
+   instrução1
 } else {
-   <em>instrução2</em>
+   instrução2
 }
-</pre>
+```
 
-<p>Não confunda os valores boolean primitivos <code>true</code> e <code>false</code> com os valores true e false do objeto <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean" title="en/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>. Qualquer valor que não for <code>undefined</code>, <code>null</code>, <code>0</code>, <code>NaN</code>, ou uma string vazia (<code>""</code>), e qualquer objeto, incluíndo um objeto Boolean cujo valor é false, é avaliado como true quando passado por uma condicional. Por exemplo:</p>
+Não confunda os valores boolean primitivos `true` e `false` com os valores true e false do objeto [Boolean](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean "en/JavaScript/Reference/Global_Objects/Boolean"). Qualquer valor que não for `undefined`, `null`, `0`, `NaN`, ou uma string vazia (`""`), e qualquer objeto, incluíndo um objeto Boolean cujo valor é false, é avaliado como true quando passado por uma condicional. Por exemplo:
 
-<pre class="brush: js">var b = new Boolean(false);
+```js
+var b = new Boolean(false);
 if (b) // essa condição é avaliada como true
-</pre>
+```
 
-<h2 id="Exemplos">Exemplos</h2>
+## Exemplos
 
-<h3 id="Usando_if...else">Usando <code>if...else</code></h3>
+### Usando `if...else`
 
-<pre class="brush: js">if (cipher_char === from_char) {
+```js
+if (cipher_char === from_char) {
    result = result + to_char;
    x++;
 } else {
    result = result + clear_char;
 }
-</pre>
+```
 
-<h3 id="Usando_else_if">Usando <code>else if</code></h3>
+### Usando `else if`
 
-<p>Perceba que não existe sintaxe de <code>elseif</code> em JavaScript. Entretanto, você pode escrevê-la com um espaço entre o if e o  else.</p>
+Perceba que não existe sintaxe de `elseif` em JavaScript. Entretanto, você pode escrevê-la com um espaço entre o if e o else.
 
-<pre class="brush: js">if (x &gt; 5) {
+```js
+if (x > 5) {
 
-} else if (x &gt; 50) {
+} else if (x > 50) {
 
 } else {
 
-}</pre>
+}
+```
 
-<h3 id="Atribuições_junto_de_expressões_condicionais">Atribuições junto de expressões condicionais</h3>
+### Atribuições junto de expressões condicionais
 
-<p>É recomendado não utilizar atribuições simples junto de uma expressão condicional, visto que atribuições podem ser confundidas com igualdade ao olhar o código. Por exemplo, não use o código abaixo:</p>
+É recomendado não utilizar atribuições simples junto de uma expressão condicional, visto que atribuições podem ser confundidas com igualdade ao olhar o código. Por exemplo, não use o código abaixo:
 
-<pre class="brush: js">if (x = y) {
+```js
+if (x = y) {
    /* faça a coisa certa */
 }
-</pre>
+```
 
-<p>Caso você precise utilizar uma atribuição em uma expressão condicional, uma prática comum é inserir parênteses adicionais em volta da atribuição. Por exemplo:</p>
+Caso você precise utilizar uma atribuição em uma expressão condicional, uma prática comum é inserir parênteses adicionais em volta da atribuição. Por exemplo:
 
-<pre class="brush: js">if ((x = y)) {
+```js
+if ((x = y)) {
    /* faça a coisa certa */
 }
-</pre>
+```
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-if-statement', 'if statement')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-if-statement', 'if statement')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-12.5', 'if statement')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3', '#sec-12.5', 'if statement')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1', '#sec-12.5', 'if statement')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição Inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                    | Status                       | Comentário        |
+| -------------------------------------------------------------------------------- | ---------------------------- | ----------------- |
+| {{SpecName('ESDraft', '#sec-if-statement', 'if statement')}} | {{Spec2('ESDraft')}} |                   |
+| {{SpecName('ES6', '#sec-if-statement', 'if statement')}}     | {{Spec2('ES6')}}         |                   |
+| {{SpecName('ES5.1', '#sec-12.5', 'if statement')}}             | {{Spec2('ES5.1')}}     |                   |
+| {{SpecName('ES3', '#sec-12.5', 'if statement')}}                 | {{Spec2('ES3')}}         |                   |
+| {{SpecName('ES1', '#sec-12.5', 'if statement')}}                 | {{Spec2('ES1')}}         | Definição Inicial |
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("javascript.statements.if_else")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{jsxref("Statements/block", "block")}}</li>
- <li>{{jsxref("Statements/switch", "switch")}}</li>
-</ul>
+- {{jsxref("Statements/block", "block")}}
+- {{jsxref("Statements/switch", "switch")}}
