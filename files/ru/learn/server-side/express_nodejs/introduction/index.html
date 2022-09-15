@@ -7,7 +7,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Introduction
 
 <p class="summary">В этой первой статье по Express мы ответим на вопросы "Что такое Node?" и "Что такое Express?", и сделаем обзор того, что делает веб-фреймворк Express таким особенным. Мы расскажем об основных функциях и покажем вам некоторые из основных строительных блоков приложения Express (хотя на данный момент у вас ещё нет среды разработки, в которой можно её протестировать).</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Предварительные знания:</th>
@@ -43,38 +43,31 @@ translation_of: Learn/Server-side/Express_Nodejs/Introduction
 
 <ol>
  <li>Откройте терминал (в Windows окно командной строки)</li>
- <li>Создайте папку, куда вы хотите сохранить программу, к примеру <code>test-node</code> и перейдите в неё с помощью следующей команды:</li>
-</ol>
-
-<pre><code>cd test-node</code></pre>
-
-<ol start="3">
- <li>Используя любимый текстовый редактор, создайте файл <code>hello.js</code> и вставьте в него код:</li>
-</ol>
-
-<pre class="brush: js">// Загружаем HTTP модуль
-const http = require("http");
-
-const hostname = "127.0.0.1";
-const port = 8000;
-
-// Создаём HTTP-сервер
-const server = http.createServer((req, res) =&gt; {
-
-   // Устанавливаем HTTP-заголовок ответа с HTTP статусом и Content type
-   res.writeHead(200, {'Content-Type': 'text/plain'});
-
-   // Отсылаем тело ответа "Hello World"
-   res.end('Hello World\n');
-});
-
-// Выводим лог как только сервер будет запущен
-server.listen(port, hostname, () =&gt; {
-   console.log(`Server running at http://${hostname}:${port}/`);
-})
-</pre>
-
-<ol start="4">
+ <li><p>Создайте папку, куда вы хотите сохранить программу, к примеру <code>test-node</code> и перейдите в неё с помощью следующей команды:</p>
+ <pre><code>cd test-node</code></pre></li>
+ <li><p>Используя любимый текстовый редактор, создайте файл <code>hello.js</code> и вставьте в него код:</p>
+  <pre class="brush: js">// Загружаем HTTP модуль
+    const http = require("http");
+    
+    const hostname = "127.0.0.1";
+    const port = 8000;
+    
+    // Создаём HTTP-сервер
+    const server = http.createServer((req, res) =&gt; {
+    
+       // Устанавливаем HTTP-заголовок ответа с HTTP статусом и Content type
+       res.writeHead(200, {'Content-Type': 'text/plain'});
+    
+       // Отсылаем тело ответа "Hello World"
+       res.end('Hello World\n');
+    });
+    
+    // Выводим лог как только сервер будет запущен
+    server.listen(port, hostname, () =&gt; {
+       console.log(`Server running at http://${hostname}:${port}/`);
+    })
+    </pre>
+</li>
  <li>Сохраните файл в папку, созданную выше.</li>
  <li>Вернитесь в терминал и выполните следующую команду:</li>
 </ol>

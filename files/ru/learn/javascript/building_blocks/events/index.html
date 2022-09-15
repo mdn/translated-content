@@ -15,7 +15,7 @@ original_slug: Learn/JavaScript/Building_blocks/События
 
 <p class="summary">События — это действия или случаи, возникающие в программируемой вами системе, о которых система сообщает вам для того, чтобы вы могли с ними взаимодействовать. Например, если пользователь нажимает кнопку на веб-странице, вы можете ответить на это действие, отобразив информационное окно. В этой статье мы обсудим некоторые важные концепции, связанные с событиями, и посмотрим, как они работают в браузерах. Эта статья не является исчерпывающим источником по этой теме — здесь только то, что вам нужно знать на этом этапе.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Предпосылки:</th>
@@ -170,7 +170,7 @@ for (var i = 0; i &lt; buttons.length; i++) {
   buttons[i].onclick = bgChange;
 }</pre>
 
-<p class="brush: js">Обратите внимание, что для перебора всех элементов, которые содержит объект <code><a href="/en-US/docs/Web/API/NodeList">NodeList</a></code>, можно воспользоваться встроенным методом <code><a href="/en-US/docs/Web/API/NodeList/forEach">forEach()</a></code>:</p>
+<p>Обратите внимание, что для перебора всех элементов, которые содержит объект <code><a href="/en-US/docs/Web/API/NodeList">NodeList</a></code>, можно воспользоваться встроенным методом <code><a href="/en-US/docs/Web/API/NodeList/forEach">forEach()</a></code>:</p>
 
 <pre class="brush: js">buttons.forEach(function(button) {
   button.onclick = bgChange;

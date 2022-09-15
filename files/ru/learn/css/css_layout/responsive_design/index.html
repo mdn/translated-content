@@ -8,7 +8,7 @@ original_slug: Learn/CSS/CSS_layout/Отзывчивый_дизайн
 
 <p>На заре веб-дизайна страницы создавались для экрана определённого размера. Если у пользователя был экран большего или меньшего размера чем ожидал дизайнер, то результат мог быть от нежелательных полос прокрутки, до слишком длинной строки и плохого использования пространства. Поскольку становились доступны много различных размеров экранов, появилась концепция <em>отзывчивого (адаптивного) веб-дизайна</em> <em>(responsive web design</em> (RWD)) — набор методов, которые позволяют веб-страницам менять свой макет и внешний вид в соответствии с разной шириной экрана, разрешением и т.д. Это та самая, идея которая изменила подход к дизайну веба для множества устройств, и в этой статье мы поможем вам понять основные методы, которые вам необходимо знать, чтобы освоить его.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Необходимые знания:</th>
@@ -36,9 +36,7 @@ original_slug: Learn/CSS/CSS_layout/Отзывчивый_дизайн
 
 <p>Эти два подхода, как правило, приводили к тому, что веб-сайт лучше всего выглядел на экране человека, создавшего сайт! Жидкий сайт приводил к раздавленному дизайну на маленьких экранах (как видно ниже) и не читаемо длинным строкам на больших.</p>
 
-<figure><img alt="A layout with two columns squashed into a mobile size viewport." src="https://mdn.mozillademos.org/files/16834/mdn-rwd-liquid.png" style="display: block; height: 406px; width: 300px;">
-<figcaption></figcaption>
-</figure>
+<img alt="A layout with two columns squashed into a mobile size viewport." src="https://mdn.mozillademos.org/files/16834/mdn-rwd-liquid.png" style="display: block; height: 406px; width: 300px;">
 
 <div class="blockIndicator note">
 <p><strong>Примечание</strong>: Посмотрите этот простой жидкий макет: <a href="https://mdn.github.io/css-examples/learn/rwd/liquid-width.html">пример</a>, <a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html">исходный код</a>. При просмотре примера, растягивайте и сжимайте окно браузера чтобы увидеть, как это выглядит при разных размерах.</p>
@@ -46,9 +44,7 @@ original_slug: Learn/CSS/CSS_layout/Отзывчивый_дизайн
 
 <p>Сайт с фиксированной шириной рисковал иметь горизонтальную полосу прокрутки на экранах меньших чем ширина сайта (как видно ниже) и много белого пространства на краях дизайна на больших экранах.</p>
 
-<figure><img alt="A layout with a horizontal scrollbar in a mobile viewport." src="https://mdn.mozillademos.org/files/16835/mdn-rwd-fixed.png" style="display: block; height: 411px; width: 300px;">
-<figcaption></figcaption>
-</figure>
+<img alt="A layout with a horizontal scrollbar in a mobile viewport." src="https://mdn.mozillademos.org/files/16835/mdn-rwd-fixed.png" style="display: block; height: 411px; width: 300px;">
 
 <div class="blockIndicator note">
 <p><strong>Примечание</strong>: Посмотрите этот простой макет с фиксированной шириной: <a href="https://mdn.github.io/css-examples/learn/rwd/fixed-width.html">пример</a>, <a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html">исходный код</a>. Снова изучите результат по мере изменения размера окна браузера.</p>
@@ -123,15 +119,11 @@ original_slug: Learn/CSS/CSS_layout/Отзывчивый_дизайн
 
 <p>Следующий пример демонстрирует простой отзывчивый дизайн, с использованием медиавыражений и гибких сеток. На узких экранах макет отображает блоки, расположенные друг над другом:</p>
 
-<figure><img alt="A mobile view of the layout with boxes stacked on top of each other vertically." src="https://mdn.mozillademos.org/files/16836/mdn-rwd-mobile.png" style="display: block; height: 407px; width: 300px;">
-<figcaption></figcaption>
-</figure>
+<img alt="A mobile view of the layout with boxes stacked on top of each other vertically." src="https://mdn.mozillademos.org/files/16836/mdn-rwd-mobile.png" style="display: block; height: 407px; width: 300px;">
 
 <p>На более широких экранах они перемещаются в два столбца:</p>
 
-<figure><img alt="A desktop view of a layout with two columns." src="https://mdn.mozillademos.org/files/16837/mdn-rwd-desktop.png" style="display: block; height: 217px; width: 600px;">
-<figcaption></figcaption>
-</figure>
+<img alt="A desktop view of a layout with two columns." src="https://mdn.mozillademos.org/files/16837/mdn-rwd-desktop.png" style="display: block; height: 217px; width: 600px;">
 
 <div class="blockIndicator note">
 <p><strong>Примечание</strong>: вы можете найти <a href="https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html">живой пример</a> и <a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html">исходный код</a> этого примера на GitHub.</p>
@@ -232,15 +224,11 @@ h1 {
 
 <p>В мобильных версиях заголовок меньше:</p>
 
-<figure><img alt="A stacked layout with a small heading size." src="https://mdn.mozillademos.org/files/16838/mdn-rwd-font-mobile.png" style="display: block; height: 407px; width: 300px;">
-<figcaption></figcaption>
-</figure>
+<img alt="A stacked layout with a small heading size." src="https://mdn.mozillademos.org/files/16838/mdn-rwd-font-mobile.png" style="display: block; height: 407px; width: 300px;">
 
 <p>На компьютерах, однако, мы видим больший размер заголовка:</p>
 
-<figure><img alt="A two column layout with a large heading." src="https://mdn.mozillademos.org/files/16839/mdn-rwd-font-desktop.png" style="display: block; height: 169px; width: 600px;">
-<figcaption></figcaption>
-</figure>
+<img alt="A two column layout with a large heading." src="https://mdn.mozillademos.org/files/16839/mdn-rwd-font-desktop.png" style="display: block; height: 169px; width: 600px;">
 
 <div class="blockIndicator note">
 <p><strong>Примечание</strong>: смотрите этот пример в действии: <a href="https://mdn.github.io/css-examples/learn/rwd/type-rwd.html">пример</a>, <a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html">исходный код</a>.</p>
