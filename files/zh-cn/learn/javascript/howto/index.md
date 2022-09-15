@@ -206,6 +206,6 @@ const myObject = {
 - [如何创建一个新的构造函数，从父构造函数中继承其成员？](/zh-CN/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
 - [什么时候应当在 JavaScript 中使用继承？](/zh-CN/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#继承)
 
-### Web API 接口
+### Web API
 
 - [如何使用 JavaScript 操作 DOM 模型（如添加或删除元素）？](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#主动学习：基本的_dom_操作)
