@@ -8,48 +8,44 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/marker
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>O elemento <code>marker</code> define os gráficos quem devem ser usados para desenhar setas or polymarkers em um determinado elemento {{ SVGElement("path") }}, {{ SVGElement("line") }}, {{ SVGElement("polyline") }} ou {{ SVGElement("polygon") }}.</p>
+O elemento `marker` define os gráficos quem devem ser usados para desenhar setas or polymarkers em um determinado elemento {{ SVGElement("path") }}, {{ SVGElement("line") }}, {{ SVGElement("polyline") }} ou {{ SVGElement("polygon") }}.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>» <a href="https://developer.mozilla.org/files/3267/marker.svg" title="https://developer.mozilla.org/files/3267/marker.svg">marker.svg</a></p>
+» [marker.svg](https://developer.mozilla.org/files/3267/marker.svg)
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<h3 id="Atributos_globais">Atributos globais</h3>
+### Atributos globais
 
-<ul>
- <li><a href="/pt-BR/SVG/Attribute#Core" title="en/SVG/Attribute#Core">Atributos principais</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#Presentation" title="en/SVG/Attribute#Presentation">Atributos de apresentação</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
- <li>{{ SVGAttr("viewBox") }}</li>
- <li>{{ SVGAttr("preserveAspectRatio") }}</li>
- <li>{{ SVGAttr("transform") }}</li>
-</ul>
+- [Atributos principais](/pt-BR/SVG/Attribute#Core "en/SVG/Attribute#Core") »
+- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
+- {{ SVGAttr("viewBox") }}
+- {{ SVGAttr("preserveAspectRatio") }}
+- {{ SVGAttr("transform") }}
 
-<h3 id="Atributos_específicos">Atributos específicos</h3>
+### Atributos específicos
 
-<ul>
- <li>{{ SVGAttr("markerUnits") }}</li>
- <li>{{ SVGAttr("refX") }}</li>
- <li>{{ SVGAttr("refY") }}</li>
- <li>{{ SVGAttr("markerWidth") }}</li>
- <li>{{ SVGAttr("markerHeight") }}</li>
- <li>{{ SVGAttr("orient") }}</li>
-</ul>
+- {{ SVGAttr("markerUnits") }}
+- {{ SVGAttr("refX") }}
+- {{ SVGAttr("refY") }}
+- {{ SVGAttr("markerWidth") }}
+- {{ SVGAttr("markerHeight") }}
+- {{ SVGAttr("orient") }}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Este elemento implementa a interface do <code><a href="/pt-BR/DOM/SVGMarkerElement" title="en/DOM/SVGMarkerElement">SVGMarkerElement</a></code>.</p>
+Este elemento implementa a interface do [`SVGMarkerElement`](/pt-BR/DOM/SVGMarkerElement "en/DOM/SVGMarkerElement").
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("svg.elements.marker")}}

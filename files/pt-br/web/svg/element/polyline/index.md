@@ -8,50 +8,44 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/polyline
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>O elemento <code>polyline</code> é uma forma básica do SVG, utilizado para criar uma séries de linhas retas conectando vários pontos. Tipicamente um <code>polyline</code> é usado para criar formas abertas.</p>
+O elemento `polyline` é uma forma básica do SVG, utilizado para criar uma séries de linhas retas conectando vários pontos. Tipicamente um `polyline` é usado para criar formas abertas.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>» <a href="https://developer.mozilla.org/files/3260/polyline.svg" title="https://developer.mozilla.org/files/3260/polyline.svg">polyline.svg</a></p>
+» [polyline.svg](https://developer.mozilla.org/files/3260/polyline.svg)
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<h3 id="Atributos_globais">Atributos globais</h3>
+### Atributos globais
 
-<ul>
- <li><a href="/pt-BR/SVG/Attribute#ConditionalProccessing" title="en/SVG/Attribute#ConditionalProccessing">Atributos de processamento condicional</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#Core" title="en/SVG/Attribute#Core">Atributos principais</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#GraphicalEvent" title="en/SVG/Attribute#GraphicalEvent">Atributos de eventos gráficos</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#Presentation" title="en/SVG/Attribute#Presentation">Atributos de apresentação</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
- <li>{{ SVGAttr("transform") }}</li>
-</ul>
+- [Atributos de processamento condicional](/pt-BR/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
+- [Atributos principais](/pt-BR/SVG/Attribute#Core "en/SVG/Attribute#Core") »
+- [Atributos de eventos gráficos](/pt-BR/SVG/Attribute#GraphicalEvent "en/SVG/Attribute#GraphicalEvent") »
+- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
+- {{ SVGAttr("transform") }}
 
-<h3 id="Atributos_específicos">Atributos específicos</h3>
+### Atributos específicos
 
-<ul>
- <li>{{ SVGAttr("points") }}</li>
-</ul>
+- {{ SVGAttr("points") }}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Este elemento implementa a interface do <code><a href="/pt-BR/DOM/SVGPolylineElement" title="en/DOM/SVGPolylineElement">SVGPolylineElement</a></code>.</p>
+Este elemento implementa a interface do [`SVGPolylineElement`](/pt-BR/DOM/SVGPolylineElement "en/DOM/SVGPolylineElement").
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("svg.elements.polyline")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{ SVGElement("line") }}</li>
- <li>{{ SVGElement("polygon") }}</li>
-</ul>
+- {{ SVGElement("line") }}
+- {{ SVGElement("polygon") }}

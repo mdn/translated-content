@@ -8,48 +8,42 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/mask
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>No SVG, você pode especificar que quaisquer outros objetos gráficos ou elementos {{ SVGElement("g") }} podem ser utilizados com uma máscar de alfa para a composição do objeto atual para o fundo. A mask is defined with the <code>mask</code> element. A máscara é usada/referenciada usando a propriedade {{ SVGAttr("mask") }}.</p>
+No SVG, você pode especificar que quaisquer outros objetos gráficos ou elementos {{ SVGElement("g") }} podem ser utilizados com uma máscar de alfa para a composição do objeto atual para o fundo. A mask is defined with the `mask` element. A máscara é usada/referenciada usando a propriedade {{ SVGAttr("mask") }}.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>» <a href="https://developer.mozilla.org/files/3269/mask.svg" title="https://developer.mozilla.org/files/3269/mask.svg">mask.svg</a></p>
+» [mask.svg](https://developer.mozilla.org/files/3269/mask.svg)
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<h3 id="Atributos_globais">Atributos globais</h3>
+### Atributos globais
 
-<ul>
- <li><a href="/pt-BR/SVG/Attribute#ConditionalProccessing" title="en/SVG/Attribute#ConditionalProccessing">Atributos de processamento condicional</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#Core" title="en/SVG/Attribute#Core">Atributos principais</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#Presentation" title="en/SVG/Attribute#Presentation">Atributos de apresentação</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
-</ul>
+- [Atributos de processamento condicional](/pt-BR/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
+- [Atributos principais](/pt-BR/SVG/Attribute#Core "en/SVG/Attribute#Core") »
+- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
 
-<h3 id="Atributos_específicos">Atributos específicos</h3>
+### Atributos específicos
 
-<ul>
- <li>{{ SVGAttr("maskUnits") }}</li>
- <li>{{ SVGAttr("maskContentUnits") }}</li>
- <li>{{ SVGAttr("x") }}</li>
- <li>{{ SVGAttr("y") }}</li>
- <li>{{ SVGAttr("width") }}</li>
- <li>{{ SVGAttr("height") }}</li>
-</ul>
+- {{ SVGAttr("maskUnits") }}
+- {{ SVGAttr("maskContentUnits") }}
+- {{ SVGAttr("x") }}
+- {{ SVGAttr("y") }}
+- {{ SVGAttr("width") }}
+- {{ SVGAttr("height") }}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Este elemento implementa a interface do <code><a href="/pt-BR/DOM/SVGMaskElement" title="en/DOM/SVGMaskElement">SVGMaskElement</a></code>.</p>
+Este elemento implementa a interface do [`SVGMaskElement`](/pt-BR/DOM/SVGMaskElement "en/DOM/SVGMaskElement").
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{ SVGElement("clipPath") }}</li>
-</ul>
+- {{ SVGElement("clipPath") }}

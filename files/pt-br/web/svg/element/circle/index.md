@@ -10,61 +10,53 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/circle
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>O elemento <code>circle</code> é uma forma básica do SVG, utilizada para criar círculos baseado em um ponto central e um raio.</p>
+O elemento `circle` é uma forma básica do SVG, utilizada para criar círculos baseado em um ponto central e um raio.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p> </p>
+```xml
+<?xml version="1.0"?>
+<svg viewBox="0 0 120 120" version="1.1"
+  xmlns="http://www.w3.org/2000/svg">
+  <circle cx="60" cy="60" r="50"/>
+</svg>
+```
 
-<pre class="brush: xml line-numbers  language-xml"><code class="language-xml"><span class="prolog token">&lt;?xml version="1.0"?&gt;</span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>svg</span> <span class="attr-name token">viewBox</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>0 0 120 120<span class="punctuation token">"</span></span> <span class="attr-name token">version</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>1.1<span class="punctuation token">"</span></span>
-  <span class="attr-name token">xmlns</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>http://www.w3.org/2000/svg<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>circle</span> <span class="attr-name token">cx</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>60<span class="punctuation token">"</span></span> <span class="attr-name token">cy</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>60<span class="punctuation token">"</span></span> <span class="attr-name token">r</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>50<span class="punctuation token">"</span></span><span class="punctuation token">/&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>svg</span><span class="punctuation token">&gt;</span></span></code></pre>
+» [circle.svg](https://mdn.mozillademos.org/files/7707/circle2.svg)
 
-<p> </p>
+## Atributos
 
-<p>» <a href="https://mdn.mozillademos.org/files/7707/circle2.svg">circle.svg</a></p>
+### Atributos globais
 
-<h2 id="Atributos">Atributos</h2>
+- [Atributos de processamento condicional](/pt-BR/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
+- [Atributos principais](/pt-BR/SVG/Attribute#Core "en/SVG/Attribute#Core") »
+- [Atributos de eventos gráficos](/pt-BR/SVG/Attribute#GraphicalEvent "en/SVG/Attribute#GraphicalEvent") »
+- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
+- {{ SVGAttr("transform") }}
 
-<h3 id="Atributos_globais">Atributos globais</h3>
+### Atributos específicos
 
-<ul>
- <li><a href="/pt-BR/SVG/Attribute#ConditionalProccessing" title="en/SVG/Attribute#ConditionalProccessing">Atributos de processamento condicional</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#Core" title="en/SVG/Attribute#Core">Atributos principais</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#GraphicalEvent" title="en/SVG/Attribute#GraphicalEvent">Atributos de eventos gráficos</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#Presentation" title="en/SVG/Attribute#Presentation">Atributos de apresentação</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
- <li>{{ SVGAttr("transform") }}</li>
-</ul>
+- {{ SVGAttr("cx") }}
+- {{ SVGAttr("cy") }}
+- {{ SVGAttr("r") }}
 
-<h3 id="Atributos_específicos">Atributos específicos</h3>
+## Interface DOM
 
-<ul>
- <li>{{ SVGAttr("cx") }}</li>
- <li>{{ SVGAttr("cy") }}</li>
- <li>{{ SVGAttr("r") }}</li>
-</ul>
+Este elemento implementa a interface do {{ domxref("SVGCircleElement") }} interface.
 
-<h2 id="Interface_DOM">Interface DOM</h2>
-
-<p>Este elemento implementa a interface do {{ domxref("SVGCircleElement") }} interface.</p>
-
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("svg.elements.circle")}}
 
-<h2 id="Relacionado">Relacionado</h2>
+## Relacionado
 
-<ul>
- <li>{{ SVGElement("ellipse") }}</li>
-</ul>
+- {{ SVGElement("ellipse") }}

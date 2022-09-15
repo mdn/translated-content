@@ -7,53 +7,50 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/title
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>Cada elemento recipiente ou elemento gráfico em um desenho SVG pode fornecer uma descrição de <code>title</code>, onde esta descrição é de apenas texto. Quando o atual fragmento do documento SVG é renderizado em aparelhos audiovisuais, o elemento <code>title</code> não é renderizado como parte do gráfico. Entretanto, alguns agentes de usuários poderão, por exemplo, exibir o elemento <code>title</code> como uma dica. Apresentações alternativas são possíveis, tanto visual quanto auditiva, que exibem o elemento <code>title</code> mas não mostram o elemento <code>path</code> ou outros elementos gráficos. O elemento <code>title</code> geralmente aumenta a acessibilidade de documentos SVG.</p>
+Cada elemento recipiente ou elemento gráfico em um desenho SVG pode fornecer uma descrição de `title`, onde esta descrição é de apenas texto. Quando o atual fragmento do documento SVG é renderizado em aparelhos audiovisuais, o elemento `title` não é renderizado como parte do gráfico. Entretanto, alguns agentes de usuários poderão, por exemplo, exibir o elemento `title` como uma dica. Apresentações alternativas são possíveis, tanto visual quanto auditiva, que exibem o elemento `title` mas não mostram o elemento `path` ou outros elementos gráficos. O elemento `title` geralmente aumenta a acessibilidade de documentos SVG.
 
-<p>Geralmente o elemento <code>title</code> deve ser o primeiro elemento filho de seu pai. Observe que estas implementações que utilizam o <code>title</code> para exibir uma dica, muitas vezes só o farão se o <code>title</code> for o primeiro elemento filho de seu pai.</p>
+Geralmente o elemento `title` deve ser o primeiro elemento filho de seu pai. Observe que estas implementações que utilizam o `title` para exibir uma dica, muitas vezes só o farão se o `title` for o primeiro elemento filho de seu pai.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>O seguinte trecho de código demonstra a utilização da tag SVG <code>&lt;title&gt;</code>.</p>
+O seguinte trecho de código demonstra a utilização da tag SVG `<title>`.
 
-<pre class="brush: xml">&lt;svg width="500" height="300" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;g&gt;
-    &lt;title&gt;Exemplo Demonstrativo de Título SVG&lt;/title&gt;
-    &lt;rect x="10" y="10" width="200" height="50"
-    style="fill:none; stroke:blue; stroke-width:1px"/&gt;
-  &lt;/g&gt;
-&lt;/svg&gt;
-</pre>
+```xml
+<svg width="500" height="300" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <title>Exemplo Demonstrativo de Título SVG</title>
+    <rect x="10" y="10" width="200" height="50"
+    style="fill:none; stroke:blue; stroke-width:1px"/>
+  </g>
+</svg>
+```
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<h3 id="Atributos_globais">Atributos globais</h3>
+### Atributos globais
 
-<ul>
- <li><a href="/pt-BR/SVG/Attribute#Core">Atributos principais</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
-</ul>
+- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
 
-<h3 id="Atributos_específicos">Atributos específicos</h3>
+### Atributos específicos
 
-<p><em>Não existem atributos específicos</em></p>
+_Não existem atributos específicos_
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Este elemento implementa a interface do <code><a href="/pt-BR/DOM/SVGTitleElement">SVGTitleElement</a></code>.</p>
+Este elemento implementa a interface do [`SVGTitleElement`](/pt-BR/DOM/SVGTitleElement).
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("svg.elements.title")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{ SVGElement("desc") }}</li>
-</ul>
+- {{ SVGElement("desc") }}

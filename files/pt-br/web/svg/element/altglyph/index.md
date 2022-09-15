@@ -8,56 +8,50 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/altGlyph
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>O elemento <code>altGlyph</code> habilita a seleção sofisticada de símbolos utilizada para renderizar os dados de caractere de seu elemento filho.</p>
+O elemento `altGlyph` habilita a seleção sofisticada de símbolos utilizada para renderizar os dados de caractere de seu elemento filho.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<h3 id="Atributos_globais">Atributos globais</h3>
+### Atributos globais
 
-<ul>
- <li><a href="/en/SVG/Attribute#ConditionalProccessing" title="en/SVG/Attribute#ConditionalProccessing">Atributos de processamento condicional</a> »</li>
- <li><a href="/en/SVG/Attribute#Core" title="en/SVG/Attribute#Core">Atributos principais</a> »</li>
- <li><a href="/en/SVG/Attribute#GraphicalEvent" title="en/SVG/Attribute#GraphicalEvent">Atributos de eventos gráficos</a> »</li>
- <li><a href="/en/SVG/Attribute#Presentation" title="en/SVG/Attribute#Presentation">Atributos de apresentação</a> »</li>
- <li><a href="/en/SVG/Attribute#XLink" title="en/SVG/Attribute#XLink">Atributos XLink</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
-</ul>
+- [Atributos de processamento condicional](/en/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
+- [Atributos principais](/en/SVG/Attribute#Core "en/SVG/Attribute#Core") »
+- [Atributos de eventos gráficos](/en/SVG/Attribute#GraphicalEvent "en/SVG/Attribute#GraphicalEvent") »
+- [Atributos de apresentação](/en/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
+- [Atributos XLink](/en/SVG/Attribute#XLink "en/SVG/Attribute#XLink") »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
 
-<h3 id="Atributos_específicos">Atributos específicos</h3>
+### Atributos específicos
 
-<ul>
- <li>{{ SVGAttr("x") }}</li>
- <li>{{ SVGAttr("y") }}</li>
- <li>{{ SVGAttr("dx") }}</li>
- <li>{{ SVGAttr("dy") }}</li>
- <li>{{ SVGAttr("rotate") }}</li>
- <li>{{ SVGAttr("glyphRef") }}</li>
- <li>{{ SVGAttr("format") }}</li>
- <li>{{ SVGAttr("xlink:href") }}</li>
-</ul>
+- {{ SVGAttr("x") }}
+- {{ SVGAttr("y") }}
+- {{ SVGAttr("dx") }}
+- {{ SVGAttr("dy") }}
+- {{ SVGAttr("rotate") }}
+- {{ SVGAttr("glyphRef") }}
+- {{ SVGAttr("format") }}
+- {{ SVGAttr("xlink:href") }}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Este elemento implementa a interface do <code><a href="/en-US/docs/Web/API/SVGAltGlyphElement" title="en/DOM/SVGAltGlyphElement">SVGAltGlyphElement</a></code>.</p>
+Este elemento implementa a interface do [`SVGAltGlyphElement`](/en-US/docs/Web/API/SVGAltGlyphElement "en/DOM/SVGAltGlyphElement").
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("svg.elements.altGlyph")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{ SVGElement("tspan") }}</li>
- <li>{{ SVGElement("glyph") }}</li>
- <li>{{ SVGElement("altGlyphDef") }}</li>
-</ul>
+- {{ SVGElement("tspan") }}
+- {{ SVGElement("glyph") }}
+- {{ SVGElement("altGlyphDef") }}

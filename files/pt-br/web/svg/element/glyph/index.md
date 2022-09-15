@@ -8,80 +8,73 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/glyph
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>O <code>glyph</code> determina um único glifo em uma fonte SVG.</p>
+O `glyph` determina um único glifo em uma fonte SVG.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: xml">&lt;?xml version="1.0" standalone="yes"?&gt;
-&lt;svg width="400px" height="300px" version="1.1"
-  xmlns = 'http://www.w3.org/2000/svg'&gt;
-&lt;!-- Exemplo copiado de http://www.w3.org/TR/SVG/fonts.html#GlyphElement --&gt;
-  &lt;defs&gt;
+```xml
+<?xml version="1.0" standalone="yes"?>
+<svg width="400px" height="300px" version="1.1"
+  xmlns = 'http://www.w3.org/2000/svg'>
+<!-- Exemplo copiado de http://www.w3.org/TR/SVG/fonts.html#GlyphElement -->
+  <defs>
 
-    &lt;font id="Font1" horiz-adv-x="1000"&gt;
-      &lt;font-face font-family="Super Sans" font-weight="bold" font-style="normal"
+    <font id="Font1" horiz-adv-x="1000">
+      <font-face font-family="Super Sans" font-weight="bold" font-style="normal"
           units-per-em="1000" cap-height="600" x-height="400"
           ascent="700" descent="300"
-          alphabetic="0" mathematical="350" ideographic="400" hanging="500"&gt;
-        &lt;font-face-src&gt;
-          &lt;font-face-name name="Super Sans Bold"/&gt;
-        &lt;/font-face-src&gt;
-      &lt;/font-face&gt;
+          alphabetic="0" mathematical="350" ideographic="400" hanging="500">
+        <font-face-src>
+          <font-face-name name="Super Sans Bold"/>
+        </font-face-src>
+      </font-face>
 
-      &lt;missing-glyph&gt;&lt;path d="M0,0h200v200h-200z"/&gt;&lt;/missing-glyph&gt;
-      &lt;glyph unicode="!" horiz-adv-x="80" d="M0,0h200v200h-200z"&gt;&lt;/glyph&gt;
-      &lt;glyph unicode="@" d="M0,50l100,300l400,100z"&gt;&lt;/glyph&gt;
+      <missing-glyph><path d="M0,0h200v200h-200z"/></missing-glyph>
+      <glyph unicode="!" horiz-adv-x="80" d="M0,0h200v200h-200z"></glyph>
+      <glyph unicode="@" d="M0,50l100,300l400,100z"></glyph>
 
-    &lt;/font&gt;
-  &lt;/defs&gt;
-  &lt;text x="100" y="100"
+    </font>
+  </defs>
+  <text x="100" y="100"
            style="font-family: 'Super Sans', Helvetica, sans-serif;
-                  font-weight: bold; font-style: normal"&gt;Texto utilizando fonte embed@da!&lt;/text&gt;
-&lt;/svg&gt;
+                  font-weight: bold; font-style: normal">Texto utilizando fonte embed@da!</text>
+</svg>
+```
 
+## Atributos
 
-</pre>
+### Atributos globais
 
-<h2 id="Atributos">Atributos</h2>
+- [Atributos principais](/pt-BR/SVG/Attribute#Core "en/SVG/Attribute#Core") »
+- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
 
-<h3 id="Atributos_globais">Atributos globais</h3>
+### Atributos específicos
 
-<ul>
- <li><a href="/pt-BR/SVG/Attribute#Core" title="en/SVG/Attribute#Core">Atributos principais</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#Presentation" title="en/SVG/Attribute#Presentation">Atributos de apresentação</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
-</ul>
+- {{ SVGAttr("d") }}
+- {{ SVGAttr("horiz-adv-x") }}
+- {{ SVGAttr("vert-origin-x") }}
+- {{ SVGAttr("vert-origin-y") }}
+- {{ SVGAttr("vert-adv-y") }}
+- {{ SVGAttr("unicode") }}
+- {{ SVGAttr("glyph-name") }}
+- {{ SVGAttr("orientation") }}
+- {{ SVGAttr("arabic-form") }}
+- {{ SVGAttr("lang") }}
 
-<h3 id="Atributos_específicos">Atributos específicos</h3>
+## Interface DOM
 
-<ul>
- <li>{{ SVGAttr("d") }}</li>
- <li>{{ SVGAttr("horiz-adv-x") }}</li>
- <li>{{ SVGAttr("vert-origin-x") }}</li>
- <li>{{ SVGAttr("vert-origin-y") }}</li>
- <li>{{ SVGAttr("vert-adv-y") }}</li>
- <li>{{ SVGAttr("unicode") }}</li>
- <li>{{ SVGAttr("glyph-name") }}</li>
- <li>{{ SVGAttr("orientation") }}</li>
- <li>{{ SVGAttr("arabic-form") }}</li>
- <li>{{ SVGAttr("lang") }}</li>
-</ul>
+Este elemento implementa a interface do [`SVGGlyphElement`](/pt-BR/DOM/SVGGlyphElement "en/DOM/SVGGlyphElement").
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Relacionado
 
-<p>Este elemento implementa a interface do <code><a href="/pt-BR/DOM/SVGGlyphElement" title="en/DOM/SVGGlyphElement">SVGGlyphElement</a></code>.</p>
-
-<h2 id="Relacionado">Relacionado</h2>
-
-<ul>
- <li>{{ SVGElement("font") }}</li>
- <li>{{ SVGElement("missing-glyph") }}</li>
- <li><a href="/pt-BR/SVG/Tutorial/SVG_fonts" title="en/SVG/Tutorial/SVG_Fonts">Tutorial SVG: SVG fonts</a></li>
-</ul>
+- {{ SVGElement("font") }}
+- {{ SVGElement("missing-glyph") }}
+- [Tutorial SVG: SVG fonts](/pt-BR/SVG/Tutorial/SVG_fonts "en/SVG/Tutorial/SVG_Fonts")

@@ -9,60 +9,57 @@ tags:
   - tag
 translation_of: Web/SVG/Element/defs
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>A especificação do SVG permite que objetos gráficos sejam definidos para reuso posteriormente. Recomenda-se que, sempre que possível, os elementos referenciados sejam definidos dentro da tag <code>defs</code>. A definição destes elementos dentro de uma tag <code>defs</code> promove o entendimento do conteúdo do SVG e, consequentemente, promove a acessibilidade. Elementos gráficos definidos dentro da tag <code>defs</code> não serão diretamente renderizados. Você pode utilizar a tag {{ SVGElement("use") }} para renderizar tais elementos na janela de visualização.</p>
+A especificação do SVG permite que objetos gráficos sejam definidos para reuso posteriormente. Recomenda-se que, sempre que possível, os elementos referenciados sejam definidos dentro da tag `defs`. A definição destes elementos dentro de uma tag `defs` promove o entendimento do conteúdo do SVG e, consequentemente, promove a acessibilidade. Elementos gráficos definidos dentro da tag `defs` não serão diretamente renderizados. Você pode utilizar a tag {{ SVGElement("use") }} para renderizar tais elementos na janela de visualização.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: xml">&lt;svg width="80px" height="30px" viewBox="0 0 80 30"
-     xmlns="http://www.w3.org/2000/svg"&gt;
+```xml
+<svg width="80px" height="30px" viewBox="0 0 80 30"
+     xmlns="http://www.w3.org/2000/svg">
 
-  &lt;defs&gt;
-    &lt;linearGradient id="Gradient01"&gt;
-      &lt;stop offset="20%" stop-color="#39F" /&gt;
-      &lt;stop offset="90%" stop-color="#F3F" /&gt;
-    &lt;/linearGradient&gt;
-  &lt;/defs&gt;
+  <defs>
+    <linearGradient id="Gradient01">
+      <stop offset="20%" stop-color="#39F" />
+      <stop offset="90%" stop-color="#F3F" />
+    </linearGradient>
+  </defs>
 
-  &lt;rect x="10" y="10" width="60" height="10"
-        fill="url(#Gradient01)"  /&gt;
-&lt;/svg&gt;
-</pre>
+  <rect x="10" y="10" width="60" height="10"
+        fill="url(#Gradient01)"  />
+</svg>
+```
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<h3 id="Atributos_globais">Atributos globais</h3>
+### Atributos globais
 
-<ul>
- <li><a href="/en/SVG/Attribute#ConditionalProccessing" title="en/SVG/Attribute#ConditionalProccessing">Atributos de processamento condicional</a> »</li>
- <li><a href="/en/SVG/Attribute#Core" title="en/SVG/Attribute#Core">Atributos centrais</a> »</li>
- <li><a href="/en/SVG/Attribute#GraphicalEvent" title="en/SVG/Attribute#GraphicalEvent">Atributos de eventos gráficos</a> »</li>
- <li><a href="/en/SVG/Attribute#Presentation" title="en/SVG/Attribute#Presentation">Atributos de apresentação</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
- <li>{{ SVGAttr("transform") }}</li>
-</ul>
+- [Atributos de processamento condicional](/en/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
+- [Atributos centrais](/en/SVG/Attribute#Core "en/SVG/Attribute#Core") »
+- [Atributos de eventos gráficos](/en/SVG/Attribute#GraphicalEvent "en/SVG/Attribute#GraphicalEvent") »
+- [Atributos de apresentação](/en/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
+- {{ SVGAttr("transform") }}
 
-<h3 id="Atributos_específicos">Atributos específicos</h3>
+### Atributos específicos
 
-<p><em>Não existem atributos específicos</em></p>
+_Não existem atributos específicos_
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>Este elemento implementa a interface <code><a href="/en/DOM/SVGDefsElement" title="en/DOM/SVGDefsElement">SVGDefsElement</a></code>.</p>
+Este elemento implementa a interface [`SVGDefsElement`](/en/DOM/SVGDefsElement "en/DOM/SVGDefsElement").
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("svg.elements.defs")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{ SVGElement("use") }}</li>
-</ul>
+- {{ SVGElement("use") }}

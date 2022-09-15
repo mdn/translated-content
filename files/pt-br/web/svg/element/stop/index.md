@@ -7,70 +7,65 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/stop
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>A rampa de cores para utilizar em um gradiente é definido pelo elemento <code>stop</code> que é elemento filho do elemento {{SVGElement("linearGradient")}} ou do elemento {{SVGElement("radialGradient")}}.</p>
+A rampa de cores para utilizar em um gradiente é definido pelo elemento `stop` que é elemento filho do elemento {{SVGElement("linearGradient")}} ou do elemento {{SVGElement("radialGradient")}}.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: html">&lt;svg width="100%" height="100%" viewBox="0 0 80 40"
-     xmlns="http://www.w3.org/2000/svg"&gt;
+```html
+<svg width="100%" height="100%" viewBox="0 0 80 40"
+     xmlns="http://www.w3.org/2000/svg">
 
-  &lt;defs&gt;
-    &lt;linearGradient id="MyGradient"&gt;
-      &lt;stop offset="5%" stop-color="#F60" /&gt;
-      &lt;stop offset="95%" stop-color="#FF6" /&gt;
-    &lt;/linearGradient&gt;
-  &lt;/defs&gt;
+  <defs>
+    <linearGradient id="MyGradient">
+      <stop offset="5%" stop-color="#F60" />
+      <stop offset="95%" stop-color="#FF6" />
+    </linearGradient>
+  </defs>
 
-  &lt;!-- Outline the drawing area in black --&gt;
-  &lt;rect fill="none" stroke="black"
-        x="0.5" y="0.5" width="79" height="39"/&gt;
+  <!-- Outline the drawing area in black -->
+  <rect fill="none" stroke="black"
+        x="0.5" y="0.5" width="79" height="39"/>
 
-  &lt;!-- The rectangle is filled using a linear gradient --&gt;
-  &lt;rect fill="url(#MyGradient)" stroke="black" stroke-width="1"
-        x="10" y="10" width="60" height="20"/&gt;
-&lt;/svg&gt;
-</pre>
+  <!-- The rectangle is filled using a linear gradient -->
+  <rect fill="url(#MyGradient)" stroke="black" stroke-width="1"
+        x="10" y="10" width="60" height="20"/>
+</svg>
+```
 
-<p>Resultado:</p>
+Resultado:
 
-<p>{{EmbedLiveSample("Exemplo",160,95)}}</p>
+{{EmbedLiveSample("Exemplo",160,95)}}
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<h3 id="Atributos_globais">Atributos globais</h3>
+### Atributos globais
 
-<ul>
- <li><a href="/pt-BR/docs/Web/SVG/Attribute#Core">Atributos principais</a> »</li>
- <li><a href="/pt-BR/docs/Web/SVG/Attribute#Presentation">Atributos de apresentação</a> »</li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
-</ul>
+- [Atributos principais](/pt-BR/docs/Web/SVG/Attribute#Core) »
+- [Atributos de apresentação](/pt-BR/docs/Web/SVG/Attribute#Presentation) »
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
 
-<h3 id="Atributos_específicos">Atributos específicos</h3>
+### Atributos específicos
 
-<ul>
- <li>{{SVGAttr("offset")}}</li>
- <li>{{SVGAttr("stop-color")}}</li>
- <li>{{SVGAttr("stop-opacity")}}</li>
-</ul>
+- {{SVGAttr("offset")}}
+- {{SVGAttr("stop-color")}}
+- {{SVGAttr("stop-opacity")}}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Este elemento implementa a interface do <code><a href="/pt-BR/docs/Web/API/SVGStopElement">SVGStopElement</a></code>.</p>
+Este elemento implementa a interface do [`SVGStopElement`](/pt-BR/docs/Web/API/SVGStopElement).
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("svg.elements.stop")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{SVGElement("linearGradient")}}</li>
- <li>{{SVGElement("radialGradient")}}</li>
-</ul>
+- {{SVGElement("linearGradient")}}
+- {{SVGElement("radialGradient")}}

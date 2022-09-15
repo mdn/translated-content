@@ -7,22 +7,23 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/script
 ---
-<p>Um elemento <code>script</code> é equivalente a um elemento <a href="/pt-BR/HTML/Element/Script"><code>script</code></a> em HTML e, portanto, é o lugar para os scripts (por exemplo, ECMAScript).</p>
+Um elemento `script` é equivalente a um elemento [`script`](/pt-BR/HTML/Element/Script) em HTML e, portanto, é o lugar para os scripts (por exemplo, ECMAScript).
 
-<p>Quaisquer funções definidas dentro de qualquer elemento <code>script</code> tem um escopo global em todo o documento atual.</p>
+Quaisquer funções definidas dentro de qualquer elemento `script` tem um escopo global em todo o documento atual.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>O seguinte trecho de código demonstra o uso da tag <code>script</code> do SVG. Neste código, nós usamos o JavaScript para alterar o raio do elemento SVG {{SVGElement("circle")}}.</p>
+O seguinte trecho de código demonstra o uso da tag `script` do SVG. Neste código, nós usamos o JavaScript para alterar o raio do elemento SVG {{SVGElement("circle")}}.
 
-<pre class="brush: html">&lt;svg width="100%" height="100%" viewBox="0 0 100 100"
-     xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;script type="text/javascript"&gt;
-    // &lt;![CDATA[
+```html
+<svg width="100%" height="100%" viewBox="0 0 100 100"
+     xmlns="http://www.w3.org/2000/svg">
+  <script type="text/javascript">
+    // <![CDATA[
     function change(evt) {
       var target = evt.target;
       var radius = target.getAttribute("r");
@@ -35,47 +36,41 @@ translation_of: Web/SVG/Element/script
 
       target.setAttribute("r",radius);
    }
-   // ]]&gt;
-  &lt;/script&gt;
+   // ]]>
+  </script>
 
-  &lt;circle cx="50" cy="50" r="45" fill="green"
-          onclick="change(evt)" /&gt;
-&lt;/svg&gt;
-</pre>
+  <circle cx="50" cy="50" r="45" fill="green"
+          onclick="change(evt)" />
+</svg>
+```
 
-<p>Resultado:</p>
+Resultado:
 
-<p>{{EmbedLiveSample("Exemplo",150,165)}}</p>
+{{EmbedLiveSample("Exemplo",150,165)}}
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<h3 id="Atributos_globais">Atributos globais</h3>
+### Atributos globais
 
-<ul>
- <li><a href="/pt-BR/SVG/Attribute#Core">Atributos principais</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#XLink">Atributos XLink</a> »</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
-</ul>
+- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
+- [Atributos XLink](/pt-BR/SVG/Attribute#XLink) »
+- {{SVGAttr("externalResourcesRequired")}}
 
-<h3 id="Atributos_específicos">Atributos específicos</h3>
+### Atributos específicos
 
-<ul>
- <li>{{SVGAttr("type")}}</li>
- <li>{{SVGAttr("xlink:href")}}</li>
-</ul>
+- {{SVGAttr("type")}}
+- {{SVGAttr("xlink:href")}}
 
-<h2 id="DOM_interface">DOM interface</h2>
+## DOM interface
 
-<p>Este elemento implementa a interface do <code><a href="/pt-BR/DOM/SVGScriptElement">SVGScriptElement</a></code>.</p>
+Este elemento implementa a interface do [`SVGScriptElement`](/pt-BR/DOM/SVGScriptElement).
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("svg.elements.script")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/pt-BR/HTML/Element/Script">Elemento <code>script</code> em HTML</a></li>
-</ul>
+- [Elemento `script` em HTML](/pt-BR/HTML/Element/Script)
 
-<p>{{SVGRef}}</p>
+{{SVGRef}}

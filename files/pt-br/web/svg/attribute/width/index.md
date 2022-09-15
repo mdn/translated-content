@@ -3,66 +3,44 @@ title: Width
 slug: Web/SVG/Attribute/width
 translation_of: Web/SVG/Attribute/width
 ---
-<p>« <a href="/en/SVG/Attribute" title="en/SVG/Attribute">SVG Attribute reference home</a></p>
+« [SVG Attribute reference home](/en/SVG/Attribute "en/SVG/Attribute")
 
-<p>Esse atributo indica  um compromimento horizontal no sistema de coordenadas do usuário. O efeito exato dessa coordenada, depende de cada elemento. Na maioria das vezes, representa a largura da região retangular do elemento de referência.</p>
+Esse atributo indica um compromimento horizontal no sistema de coordenadas do usuário. O efeito exato dessa coordenada, depende de cada elemento. Na maioria das vezes, representa a largura da região retangular do elemento de referência.
 
-<p>Esse atributo precisa ser especificado, exceto para o elemento {{ SVGElement("svg") }} onde o valor padrão é <strong>100% </strong>(com exceção do elemento root {{ SVGElement("svg") }} que contém pais HTML). e o {{ SVGElement("filter") }} e {{ SVGElement("mask") }}, elementos que o valor padrão é <strong>120%.</strong></p>
+Esse atributo precisa ser especificado, exceto para o elemento {{ SVGElement("svg") }} onde o valor padrão é **100%** (com exceção do elemento root {{ SVGElement("svg") }} que contém pais HTML). e o {{ SVGElement("filter") }} e {{ SVGElement("mask") }}, elementos que o valor padrão é **120%.**
 
-<h2 id="Contexto_de_Uso">Contexto de Uso</h2>
+## Contexto de Uso
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Categories</th>
-   <td>None</td>
-  </tr>
-  <tr>
-   <th scope="row">Value</th>
-   <td><a href="/en/SVG/Content_type#Length" title="https://developer.mozilla.org/en/SVG/Content_type#Length">&lt;length&gt;</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Normative document</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG/extend.html#ForeignObjectElementWidthAttribute">SVG 1.1 (2nd Edition): foreignObject element</a><br>
-    <a class="external" href="http://www.w3.org/TR/SVG/struct.html#ImageElementWidthAttribute">SVG 1.1 (2nd Edition): image element</a><br>
-    <a class="external" href="http://www.w3.org/TR/SVG/pservers.html#PatternElementWidthAttribute">SVG 1.1 (2nd Edition): pattern element</a><br>
-    <a class="external" href="http://www.w3.org/TR/SVG/shapes.html#RectElementWidthAttribute">SVG 1.1 (2nd Edition): rect element</a><br>
-    <a class="external" href="http://www.w3.org/TR/SVG/struct.html#SVGElementWidthAttribute">SVG 1.1 (2nd Edition): svg element</a><br>
-    <a class="external" href="http://www.w3.org/TR/SVG/struct.html#UseElementWidthAttribute">SVG 1.1 (2nd Edition): use element</a><br>
-    <a class="external" href="http://www.w3.org/TR/SVG/filters.html#FilterPrimitiveWidthAttribute">SVG 1.1 (2nd Edition): Filter primitive</a><br>
-    <a class="external" href="http://www.w3.org/TR/SVG/masking.html#MaskElementWidthAttribute">SVG 1.1 (2nd Edition): mask element</a></td>
-  </tr>
- </tbody>
-</table>
+| Categories         | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Value              | [\<length>](/en/SVG/Content_type#Length "https://developer.mozilla.org/en/SVG/Content_type#Length")                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Animatable         | Yes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Normative document | [SVG 1.1 (2nd Edition): foreignObject element](http://www.w3.org/TR/SVG/extend.html#ForeignObjectElementWidthAttribute) [SVG 1.1 (2nd Edition): image element](http://www.w3.org/TR/SVG/struct.html#ImageElementWidthAttribute) [SVG 1.1 (2nd Edition): pattern element](http://www.w3.org/TR/SVG/pservers.html#PatternElementWidthAttribute) [SVG 1.1 (2nd Edition): rect element](http://www.w3.org/TR/SVG/shapes.html#RectElementWidthAttribute) [SVG 1.1 (2nd Edition): svg element](http://www.w3.org/TR/SVG/struct.html#SVGElementWidthAttribute) [SVG 1.1 (2nd Edition): use element](http://www.w3.org/TR/SVG/struct.html#UseElementWidthAttribute) [SVG 1.1 (2nd Edition): Filter primitive](http://www.w3.org/TR/SVG/filters.html#FilterPrimitiveWidthAttribute) [SVG 1.1 (2nd Edition): mask element](http://www.w3.org/TR/SVG/masking.html#MaskElementWidthAttribute) |
 
-<p>{{ page("/en/SVG/Content_type","Length") }}</p>
+{{ page("/en/SVG/Content_type","Length") }}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: xml line-numbers  language-xml"><code class="language-xml"><span class="prolog token">&lt;?xml version="1.0"?&gt;</span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>svg</span> <span class="attr-name token">width</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>120<span class="punctuation token">"</span></span> <span class="attr-name token">height</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>120<span class="punctuation token">"</span></span>
-     <span class="attr-name token">viewBox</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>0 0 120 120<span class="punctuation token">"</span></span>
-     <span class="attr-name token">xmlns</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>http://www.w3.org/2000/svg<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
+```xml
+<?xml version="1.0"?>
+<svg width="120" height="120"
+     viewBox="0 0 120 120"
+     xmlns="http://www.w3.org/2000/svg">
 
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>rect</span> <span class="attr-name token">x</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>10<span class="punctuation token">"</span></span> <span class="attr-name token">y</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>10<span class="punctuation token">"</span></span> <span class="attr-name token">width</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>100<span class="punctuation token">"</span></span> <span class="attr-name token">height</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>100<span class="punctuation token">"</span></span><span class="punctuation token">/&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>svg</span><span class="punctuation token">&gt;</span></span></code></pre>
+  <rect x="10" y="10" width="100" height="100"/>
+</svg>
+```
 
-<h2 id="Elementos">Elementos</h2>
+## Elementos
 
-<p>Os seguintes elementos podem user o atributo witdh</p>
+Os seguintes elementos podem user o atributo witdh
 
-<ul>
- <li><a href="/en/SVG/Element#FilterPrimitive" title="en/SVG/Element#FilterPrimitive">Filter primitive elements</a> »</li>
- <li>{{ SVGElement("filter") }}</li>
- <li>{{ SVGElement("foreignObject") }}</li>
- <li>{{ SVGElement("image") }}</li>
- <li>{{ SVGElement("pattern") }}</li>
- <li>{{ SVGElement("rect") }}</li>
- <li>{{ SVGElement("svg") }}</li>
- <li>{{ SVGElement("use") }}</li>
- <li>{{ SVGElement("mask") }}</li>
-</ul>
+- [Filter primitive elements](/en/SVG/Element#FilterPrimitive "en/SVG/Element#FilterPrimitive") »
+- {{ SVGElement("filter") }}
+- {{ SVGElement("foreignObject") }}
+- {{ SVGElement("image") }}
+- {{ SVGElement("pattern") }}
+- {{ SVGElement("rect") }}
+- {{ SVGElement("svg") }}
+- {{ SVGElement("use") }}
+- {{ SVGElement("mask") }}

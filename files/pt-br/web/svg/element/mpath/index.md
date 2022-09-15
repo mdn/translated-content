@@ -11,68 +11,63 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/mpath
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>O sub elemento <code>mpath</code> do elemento {{ SVGElement("animateMotion") }} fornece a habilidade de referenciar um elemento externo {{ SVGElement("path") }} como uma definição de um caminho de movimento.</p>
+O sub elemento `mpath` do elemento {{ SVGElement("animateMotion") }} fornece a habilidade de referenciar um elemento externo {{ SVGElement("path") }} como uma definição de um caminho de movimento.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: html">&lt;svg width="100%" height="100%"  viewBox="0 0 500 300"
+```html
+<svg width="100%" height="100%"  viewBox="0 0 500 300"
      xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink" &gt;
+     xmlns:xlink="http://www.w3.org/1999/xlink" >
 
-  &lt;rect x="1" y="1" width="498" height="298"
-        fill="none" stroke="blue" stroke-width="2" /&gt;
+  <rect x="1" y="1" width="498" height="298"
+        fill="none" stroke="blue" stroke-width="2" />
 
-  &lt;!-- Desenha o contorno da trajetória de movimento em azul, ao longo, com três pequenos círculos: inicio, meio e fim. --&gt;
-  &lt;path id="path1" d="M100,250 C 100,50 400,50 400,250"
-        fill="none" stroke="blue" stroke-width="7.06"  /&gt;
-  &lt;circle cx="100" cy="250" r="17.64" fill="blue"  /&gt;
-  &lt;circle cx="250" cy="100" r="17.64" fill="blue"  /&gt;
-  &lt;circle cx="400" cy="250" r="17.64" fill="blue"  /&gt;
+  <!-- Desenha o contorno da trajetória de movimento em azul, ao longo, com três pequenos círculos: inicio, meio e fim. -->
+  <path id="path1" d="M100,250 C 100,50 400,50 400,250"
+        fill="none" stroke="blue" stroke-width="7.06"  />
+  <circle cx="100" cy="250" r="17.64" fill="blue"  />
+  <circle cx="250" cy="100" r="17.64" fill="blue"  />
+  <circle cx="400" cy="250" r="17.64" fill="blue"  />
 
-  &lt;!-- Aqui temos um triângulo que andará sobre o caminho do movimento.
-       Define-se com uma orientação vertical com base no triângulo horizontalmente centralizado logo acima da origem. --&gt;
-  &lt;path d="M-25,-12.5 L25,-12.5 L 0,-87.5 z"
-        fill="yellow" stroke="red" stroke-width="7.06"  &gt;
-    &lt;!-- Define o caminho de movimento da animação --&gt;
-    &lt;animateMotion dur="6s" repeatCount="indefinite" rotate="auto" &gt;
-       &lt;mpath xlink:href="#path1"/&gt;
-    &lt;/animateMotion&gt;
-  &lt;/path&gt;
-&lt;/svg&gt;
-</pre>
+  <!-- Aqui temos um triângulo que andará sobre o caminho do movimento.
+       Define-se com uma orientação vertical com base no triângulo horizontalmente centralizado logo acima da origem. -->
+  <path d="M-25,-12.5 L25,-12.5 L 0,-87.5 z"
+        fill="yellow" stroke="red" stroke-width="7.06"  >
+    <!-- Define o caminho de movimento da animação -->
+    <animateMotion dur="6s" repeatCount="indefinite" rotate="auto" >
+       <mpath xlink:href="#path1"/>
+    </animateMotion>
+  </path>
+</svg>
+```
 
-<p>Resultado:</p>
+Resultado:
 
-<p>{{EmbedLiveSample("Example",250,165)}}</p>
+{{EmbedLiveSample("Example",250,165)}}
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<h3 id="Atributos_globais">Atributos globais</h3>
+### Atributos globais
 
-<ul>
- <li><a href="/pt-BR/SVG/Attribute#Core" title="en/SVG/Attribute#Core">Atributos principais</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#XLink" title="en/SVG/Attribute#XLink">Atributos XLink</a> »</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
-</ul>
+- [Atributos principais](/pt-BR/SVG/Attribute#Core "en/SVG/Attribute#Core") »
+- [Atributos XLink](/pt-BR/SVG/Attribute#XLink "en/SVG/Attribute#XLink") »
+- {{ SVGAttr("externalResourcesRequired") }}
 
-<h3 id="Atributos_específicos">Atributos específicos</h3>
+### Atributos específicos
 
-<ul>
- <li>{{ SVGAttr("xlink:href") }}</li>
-</ul>
+- {{ SVGAttr("xlink:href") }}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Este elemento implementa a interface do <code><a href="/pt-BR/DOM/SVGMPathElement" title="en/DOM/SVGMPathElement">SVGMPathElement</a></code>.</p>
+Este elemento implementa a interface do [`SVGMPathElement`](/pt-BR/DOM/SVGMPathElement "en/DOM/SVGMPathElement").
 
-<h2 id="Relacionado">Relacionado</h2>
+## Relacionado
 
-<ul>
- <li>{{ SVGElement("animateMotion") }}</li>
-</ul>
+- {{ SVGElement("animateMotion") }}

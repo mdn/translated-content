@@ -8,32 +8,30 @@ tags:
   - SVG Descritivo
 translation_of: Web/SVG/Element/metadata
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>Metadados são dados estruturados sobre dados. Metadados que são incluídos com um conteúdo SVG devem ser especificados com um elemento <code>metadata</code>. O conteúdo do <code>metadata</code> devem ser elementos de outros namespaces XML tais como RDF, FOAF, etc.</p>
+Metadados são dados estruturados sobre dados. Metadados que são incluídos com um conteúdo SVG devem ser especificados com um elemento `metadata`. O conteúdo do `metadata` devem ser elementos de outros namespaces XML tais como RDF, FOAF, etc.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<h3 id="Atributos_globais">Atributos globais</h3>
+### Atributos globais
 
-<ul>
- <li><a href="/pt-BR/SVG/Attribute#Core">Atributos principais</a> »</li>
-</ul>
+- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
 
-<h3 id="Atributos_específicos">Atributos específicos</h3>
+### Atributos específicos
 
-<p><em>Não existem atributos específicos</em></p>
+_Não existem atributos específicos_
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Este elemento implementa a interface do <code><a href="/pt-BR/DOM/SVGMetadataElement">SVGMetadataElement</a></code>.</p>
+Este elemento implementa a interface do [`SVGMetadataElement`](/pt-BR/DOM/SVGMetadataElement).
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("svg.elements.metadata")}}

@@ -7,47 +7,43 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/pattern
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>Um padrão é utilizado para preenchimento ou traçado de um objeto utilizando um objeto gráfico pré-definido o qual pode ser replicado ("ladrilhado") com intervalos fixados em x e y para cobrir as áreas que serão pintadas. Padrões são definidos utilizando o elemento <code>pattern</code> e, em seguida, referenciado pelas propriedades <code>fill</code> e <code>stroke</code> em um determinado elemento gráfico para indicar que o elemento em questão deveria ser preenchido ou traçado com o padrão referenciado.</p>
+Um padrão é utilizado para preenchimento ou traçado de um objeto utilizando um objeto gráfico pré-definido o qual pode ser replicado ("ladrilhado") com intervalos fixados em x e y para cobrir as áreas que serão pintadas. Padrões são definidos utilizando o elemento `pattern` e, em seguida, referenciado pelas propriedades `fill` e `stroke` em um determinado elemento gráfico para indicar que o elemento em questão deveria ser preenchido ou traçado com o padrão referenciado.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>» <a href="https://developer.mozilla.org/files/3268/pattern.svg" title="https://developer.mozilla.org/files/3268/pattern.svg">pattern.svg</a></p>
+» [pattern.svg](https://developer.mozilla.org/files/3268/pattern.svg)
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<h3 id="Atributos_globais">Atributos globais</h3>
+### Atributos globais
 
-<ul>
- <li><a href="/pt-BR/SVG/Attribute#ConditionalProccessing" title="en/SVG/Attribute#ConditionalProccessing">Atributos de processamento condicional</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#Core" title="en/SVG/Attribute#Core">Atributos principais</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#Presentation" title="en/SVG/Attribute#Presentation">Atributos de apresentação</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#XLink" title="en/SVG/Attribute#XLink">Atributos XLink</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
- <li>{{ SVGAttr("viewBox") }}</li>
-</ul>
+- [Atributos de processamento condicional](/pt-BR/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
+- [Atributos principais](/pt-BR/SVG/Attribute#Core "en/SVG/Attribute#Core") »
+- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
+- [Atributos XLink](/pt-BR/SVG/Attribute#XLink "en/SVG/Attribute#XLink") »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
+- {{ SVGAttr("viewBox") }}
 
-<h3 id="Atributos_específicos">Atributos específicos</h3>
+### Atributos específicos
 
-<ul>
- <li>{{ SVGAttr("patternUnits") }}</li>
- <li>{{ SVGAttr("patternContentUnits") }}</li>
- <li>{{ SVGAttr("patternTransform") }}</li>
- <li>{{ SVGAttr("x") }}</li>
- <li>{{ SVGAttr("y") }}</li>
- <li>{{ SVGAttr("width") }}</li>
- <li>{{ SVGAttr("height") }}</li>
- <li>{{ SVGAttr("xlink:href") }}</li>
- <li>{{ SVGAttr("preserveAspectRatio") }}</li>
-</ul>
+- {{ SVGAttr("patternUnits") }}
+- {{ SVGAttr("patternContentUnits") }}
+- {{ SVGAttr("patternTransform") }}
+- {{ SVGAttr("x") }}
+- {{ SVGAttr("y") }}
+- {{ SVGAttr("width") }}
+- {{ SVGAttr("height") }}
+- {{ SVGAttr("xlink:href") }}
+- {{ SVGAttr("preserveAspectRatio") }}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Este elemento implementa a interface do <code><a href="/pt-BR/DOM/SVGPatternElement" title="en/DOM/SVGPatternElement">SVGPatternElement</a></code>.</p>
+Este elemento implementa a interface do [`SVGPatternElement`](/pt-BR/DOM/SVGPatternElement "en/DOM/SVGPatternElement").

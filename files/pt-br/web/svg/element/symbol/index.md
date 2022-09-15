@@ -8,66 +8,61 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/symbol
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>O elemento <code>symbol</code> é usado para definir um template que pode ser inicializado por um elemento {{ SVGElement("use") }}. A utilização de elementos <code>symbol</code> para gráficos que são usados várias vezes no mesmo documento acrescenta estrutura e semântica. Documentos que são ricos em estrutura podem ser renderizados graficamente, através da fala, ou do braille, e assim promover a acessibilidade. Note que o elemento <code>symbol</code> em si não é renderizado. Somente instâncias de um elemento <code>symbol</code> (por exemplo, uma referência à um elemento <code>symbol</code> feita por um elemento {{ SVGElement("use") }}) são renderizadas.</p>
+O elemento `symbol` é usado para definir um template que pode ser inicializado por um elemento {{ SVGElement("use") }}. A utilização de elementos `symbol` para gráficos que são usados várias vezes no mesmo documento acrescenta estrutura e semântica. Documentos que são ricos em estrutura podem ser renderizados graficamente, através da fala, ou do braille, e assim promover a acessibilidade. Note que o elemento `symbol` em si não é renderizado. Somente instâncias de um elemento `symbol` (por exemplo, uma referência à um elemento `symbol` feita por um elemento {{ SVGElement("use") }}) são renderizadas.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<pre class="brush: html">&lt;svg&gt;
-&lt;!-- definição de symbol NUNCA é renderizada --&gt;
-&lt;symbol id="sym01" viewBox="0 0 150 110"&gt;
-  &lt;circle cx="50" cy="50" r="40" stroke-width="8" stroke="red" fill="red"/&gt;
-  &lt;circle cx="90" cy="60" r="40" stroke-width="8" stroke="green" fill="white"/&gt;
-&lt;/symbol&gt;
+```html
+<svg>
+<!-- definição de symbol NUNCA é renderizada -->
+<symbol id="sym01" viewBox="0 0 150 110">
+  <circle cx="50" cy="50" r="40" stroke-width="8" stroke="red" fill="red"/>
+  <circle cx="90" cy="60" r="40" stroke-width="8" stroke="green" fill="white"/>
+</symbol>
 
-&lt;!-- renderização por elementos "use" --&gt;
-&lt;use xlink:href="#sym01"
-     x="0" y="0" width="100" height="50"/&gt;
-&lt;use xlink:href="#sym01"
-     x="0" y="50" width="75" height="38"/&gt;
-&lt;use xlink:href="#sym01"
-     x="0" y="100" width="50" height="25"/&gt;
-&lt;/svg&gt;
-</pre>
+<!-- renderização por elementos "use" -->
+<use xlink:href="#sym01"
+     x="0" y="0" width="100" height="50"/>
+<use xlink:href="#sym01"
+     x="0" y="50" width="75" height="38"/>
+<use xlink:href="#sym01"
+     x="0" y="100" width="50" height="25"/>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Exemplo",150,110)}}</p>
+{{EmbedLiveSample("Exemplo",150,110)}}
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<h3 id="Atributos_globais">Atributos globais</h3>
+### Atributos globais
 
-<ul>
- <li><a href="/pt-BR/SVG/Attribute#Core" title="pt-BR/SVG/Attribute#Core">Atributos principais</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#GraphicalEvent" title="pt-BR/SVG/Attribute#GraphicalEvent">Atributos de eventos gráficos</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#Presentation" title="pt-BR/SVG/Attribute#Presentation">Atributos de apresentação</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
-</ul>
+- [Atributos principais](/pt-BR/SVG/Attribute#Core "pt-BR/SVG/Attribute#Core") »
+- [Atributos de eventos gráficos](/pt-BR/SVG/Attribute#GraphicalEvent "pt-BR/SVG/Attribute#GraphicalEvent") »
+- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation "pt-BR/SVG/Attribute#Presentation") »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
 
-<h3 id="Atributos_específicos">Atributos específicos</h3>
+### Atributos específicos
 
-<ul>
- <li>{{ SVGAttr("preserveAspectRatio") }}</li>
- <li>{{ SVGAttr("viewBox") }}</li>
-</ul>
+- {{ SVGAttr("preserveAspectRatio") }}
+- {{ SVGAttr("viewBox") }}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Esse elemento implementa a interface do <code><a href="/pt-BR/DOM/SVGSymbolElement" title="pt-BR/DOM/SVGSymbolElement">SVGSymbolElement</a></code>.</p>
+Esse elemento implementa a interface do [`SVGSymbolElement`](/pt-BR/DOM/SVGSymbolElement "pt-BR/DOM/SVGSymbolElement").
 
-<h2 id="Compatibilidade">Compatibilidade</h2>
+## Compatibilidade
 
 {{Compat("svg.elements.symbol")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{ SVGElement("marker") }}</li>
- <li>{{ SVGElement("pattern") }}</li>
-</ul>
+- {{ SVGElement("marker") }}
+- {{ SVGElement("pattern") }}

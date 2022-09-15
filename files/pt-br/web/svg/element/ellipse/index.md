@@ -9,54 +9,48 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/ellipse
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>O elemento <code>ellipse</code> é uma forma básica do SVG, utilizado para criar elipses baseado em uma coordenada central, tanto no raio x quanto no y.</p>
+O elemento `ellipse` é uma forma básica do SVG, utilizado para criar elipses baseado em uma coordenada central, tanto no raio x quanto no y.
 
-<p>As elipses são incapazes de especificar a orientação exatada dela mesma (se, por exemplo, você quiser desenha uma elipse inclinada a um ângulo de 45 graus), mas poderá ser rotacionada utilizando o atributo {{ SVGAttr("transform") }}.</p>
+As elipses são incapazes de especificar a orientação exatada dela mesma (se, por exemplo, você quiser desenha uma elipse inclinada a um ângulo de 45 graus), mas poderá ser rotacionada utilizando o atributo {{ SVGAttr("transform") }}.
 
-<h2 id="Contexto_de_uso">Contexto de uso</h2>
+## Contexto de uso
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemplo">Exemplo</h2>
+## Exemplo
 
-<p>» <a href="https://developer.mozilla.org/files/3253/ellipse.svg" title="https://developer.mozilla.org/files/3253/ellipse.svg">ellipse.svg</a></p>
+» [ellipse.svg](https://developer.mozilla.org/files/3253/ellipse.svg)
 
-<h2 id="Atributos">Atributos</h2>
+## Atributos
 
-<h3 id="Atributos_globais">Atributos globais</h3>
+### Atributos globais
 
-<ul>
- <li><a href="/pt-BR/SVG/Attribute#ConditionalProccessing" title="en-US/SVG/Attribute#ConditionalProccessing">Atributos de processamento condicional</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#Core" title="en-US/SVG/Attribute#Core">Atributos principais</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#GraphicalEvent" title="en-US/SVG/Attribute#GraphicalEvent">Atributos de eventos gráficos</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#Presentation" title="en-US/SVG/Attribute#Presentation">Atributos de apresentação</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
- <li>{{ SVGAttr("transform") }}</li>
-</ul>
+- [Atributos de processamento condicional](/pt-BR/SVG/Attribute#ConditionalProccessing "en-US/SVG/Attribute#ConditionalProccessing") »
+- [Atributos principais](/pt-BR/SVG/Attribute#Core "en-US/SVG/Attribute#Core") »
+- [Atributos de eventos gráficos](/pt-BR/SVG/Attribute#GraphicalEvent "en-US/SVG/Attribute#GraphicalEvent") »
+- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation "en-US/SVG/Attribute#Presentation") »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
+- {{ SVGAttr("transform") }}
 
-<h3 id="Atributos_específicos">Atributos específicos</h3>
+### Atributos específicos
 
-<ul>
- <li>{{ SVGAttr("cx") }}</li>
- <li>{{ SVGAttr("cy") }}</li>
- <li>{{ SVGAttr("rx") }}</li>
- <li>{{ SVGAttr("ry") }}</li>
-</ul>
+- {{ SVGAttr("cx") }}
+- {{ SVGAttr("cy") }}
+- {{ SVGAttr("rx") }}
+- {{ SVGAttr("ry") }}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Este elemento implementa a interface do <code><a href="/pt-BR/DOM/SVGEllipseElement" title="en-US/DOM/SVGEllipseElement">SVGEllipseElement</a></code>.</p>
+Este elemento implementa a interface do [`SVGEllipseElement`](/pt-BR/DOM/SVGEllipseElement "en-US/DOM/SVGEllipseElement").
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+## Compatibilidade com navegadores
 
 {{Compat("svg.elements.ellipse")}}
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{ SVGElement("circle") }}</li>
-</ul>
+- {{ SVGElement("circle") }}
