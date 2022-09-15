@@ -4,239 +4,105 @@ slug: Web/Demos
 translation_of: Web/Demos_of_open_web_technologies
 original_slug: Web/Demos_of_open_web_technologies
 ---
-<p class="summary">A mozilla suporta uma grande variedade de tecnologias abertas da web aberta e nós encorajamos seu uso.Esta página oferece links para demonstrações interessantes dessas tecnologia.</p>
+A mozilla suporta uma grande variedade de tecnologias abertas da web aberta e nós encorajamos seu uso.Esta página oferece links para demonstrações interessantes dessas tecnologia.
 
-<p>Se você conhece uma boa demonstração ou aplicação da tecnologia web aberta, adicione um link para a seção apropriada aqui.</p>
+Se você conhece uma boa demonstração ou aplicação da tecnologia web aberta, adicione um link para a seção apropriada aqui.
 
-<h2 id="Gráficos_2D">Gráficos 2D</h2>
+## Gráficos 2D
 
-<h3 dir="ltr" id="Tela_de_pintura">Tela de pintura</h3>
+### Tela de pintura
 
-<ul>
- <li>
-  <p><a href="http://www.blobsallad.se/">Blob Sallad: an interactive blob using javascript and canvas</a> (<a href="http://blobsallad.se/article/">code demos)</a></p>
- </li>
- <li>
-  <p><a href="http://arapehlivanian.com/wp-content/uploads/2007/02/canvas.html">Flying through space</a></p>
- </li>
- <li>
-  <p><a href="/samples/raycaster/RayCaster.html" title="https://developer.mozilla.org/editor/fckeditor/core/editor/samples/raycaster/RayCaster.html">3D RayCaster</a></p>
- </li>
- <li>
-  <p><a href="http://processingjs.org/exhibition/">processing.js</a></p>
- </li>
- <li>
-  <p><a href="http://gyu.que.jp/jscloth/">3D on 2D Canvas</a></p>
- </li>
- <li>
-  <p><a href="http://viliusle.github.io/miniPaint/">miniPaint: Image editor</a> (<a href="https://github.com/viliusle/miniPaint">source code</a>)</p>
- </li>
-</ul>
+- [Blob Sallad: an interactive blob using javascript and canvas](http://www.blobsallad.se/) ([code demos)](http://blobsallad.se/article/)
+- [Flying through space](http://arapehlivanian.com/wp-content/uploads/2007/02/canvas.html)
+- [3D RayCaster](/samples/raycaster/RayCaster.html "https://developer.mozilla.org/editor/fckeditor/core/editor/samples/raycaster/RayCaster.html")
+- [processing.js](http://processingjs.org/exhibition/)
+- [3D on 2D Canvas](http://gyu.que.jp/jscloth/)
+- [miniPaint: Image editor](http://viliusle.github.io/miniPaint/) ([source code](https://github.com/viliusle/miniPaint))
 
-<h3 id="SVG" name="SVG">SVG</h3>
+### SVG
 
-<ul>
- <li>
-  <p><a href="http://starkravingfinkle.org/projects/demo/svg-bubblemenu-in-html.xml">Bubblemenu</a> (visual effects and interaction)</p>
- </li>
- <li>
-  <p><a href="http://starkravingfinkle.org/blog/2007/07/firefox-3-svg-foreignobject/">HTML transformations</a> using <code>foreignObject</code> (visual effects and transforms)</p>
- </li>
- <li>
-  <p><a href="http://svg-whiz.com/svg/linguistics/theCreepyMouth.svg">Phonetics Guide</a> (interactive)</p>
- </li>
- <li>
-  <p><a href="http://www.lutanho.net/svgvml3d/platonic.html">3D objects demo</a> (interactive)</p>
- </li>
- <li>
-  <p><a href="http://www.themaninblue.com/experiment/Blobular/">Blobular</a> (interactive)</p>
- </li>
- <li>
-  <p><a href="http://www.double.co.nz/video_test/video.svg">Video embedded in SVG</a> (or use the <a href="http://www.double.co.nz/video_test/video_svg.tar.bz2">local download</a>)</p>
- </li>
- <li>
-  <p><a href="http://summerstyle.github.io/summer/">Summer HTML image map creator</a> (<a href="https://github.com/summerstyle/summer">source code</a>)</p>
- </li>
-</ul>
+- [Bubblemenu](http://starkravingfinkle.org/projects/demo/svg-bubblemenu-in-html.xml) (visual effects and interaction)
+- [HTML transformations](http://starkravingfinkle.org/blog/2007/07/firefox-3-svg-foreignobject/) using `foreignObject` (visual effects and transforms)
+- [Phonetics Guide](http://svg-whiz.com/svg/linguistics/theCreepyMouth.svg) (interactive)
+- [3D objects demo](http://www.lutanho.net/svgvml3d/platonic.html) (interactive)
+- [Blobular](http://www.themaninblue.com/experiment/Blobular/) (interactive)
+- [Video embedded in SVG](http://www.double.co.nz/video_test/video.svg) (or use the [local download](http://www.double.co.nz/video_test/video_svg.tar.bz2))
+- [Summer HTML image map creator](http://summerstyle.github.io/summer/) ([source code](https://github.com/summerstyle/summer))
 
-<h3 dir="ltr" id="Vídeo">Vídeo</h3>
+### Vídeo
 
-<ul>
- <li>
-  <p><a href="https://vimeo.com/172328210">Video 3D Animation "mozilla constantly evolving"</a></p>
- </li>
- <li>
-  <p><a href="https://vimeo.com/173851395">Video 3D animation "Floating Dance"</a></p>
- </li>
- <li>
-  <p><a href="http://www.double.co.nz/video_test/test1.html">Streaming Anime, Movie Trailer and Interview</a></p>
- </li>
- <li>
-  <p><a href="http://www.double.co.nz/video_test/test2.html">Billy's Browser Firefox Flick</a></p>
- </li>
- <li>
-  <p><a href="http://www.double.co.nz/video_test/test3.html">Virtual Barber Shop</a></p>
- </li>
- <li>
-  <p><a href="http://www.double.co.nz/video_test/test4.html">Transformers Movie Trailer</a></p>
- </li>
- <li>
-  <p><a href="http://www.double.co.nz/video_test/test5.html">A Scanner Darkly Movie Trailer</a> (with built in controls)</p>
- </li>
- <li>
-  <p><a href="http://www.double.co.nz/video_test/events.html">Events firing and volume control</a></p>
- </li>
- <li>
-  <p><a href="http://www.double.co.nz/video_test/video.svg">Dragable and sizable videos</a></p>
- </li>
-</ul>
+- [Video 3D Animation "mozilla constantly evolving"](https://vimeo.com/172328210)
+- [Video 3D animation "Floating Dance"](https://vimeo.com/173851395)
+- [Streaming Anime, Movie Trailer and Interview](http://www.double.co.nz/video_test/test1.html)
+- [Billy's Browser Firefox Flick](http://www.double.co.nz/video_test/test2.html)
+- [Virtual Barber Shop](http://www.double.co.nz/video_test/test3.html)
+- [Transformers Movie Trailer](http://www.double.co.nz/video_test/test4.html)
+- [A Scanner Darkly Movie Trailer](http://www.double.co.nz/video_test/test5.html) (with built in controls)
+- [Events firing and volume control](http://www.double.co.nz/video_test/events.html)
+- [Dragable and sizable videos](http://www.double.co.nz/video_test/video.svg)
 
-<h2 id="Gráficos_3D">Gráficos 3D</h2>
+## Gráficos 3D
 
-<h3 id="WebGL">WebGL</h3>
+### WebGL
 
-<ul>
- <li>
-  <p><a href="http://ondras.github.io/fireworks-webgl/">Web Audio Fireworks</a></p>
- </li>
- <li>
-  <p>IoQuake3 (<a href="https://github.com/klaussilveira/ioquake3.js">source code</a>)</p>
- </li>
- <li>
-  <p>Escher puzzle (<a href="https://github.com/micahbolen/demoscene">source code</a>)</p>
- </li>
- <li>
-  <p><a href="http://collinhover.github.io/kaiopua/">Kai 'Opua</a> (<a href="https://github.com/collinhover/kaiopua">source code</a>)</p>
- </li>
-</ul>
+- [Web Audio Fireworks](http://ondras.github.io/fireworks-webgl/)
+- IoQuake3 ([source code](https://github.com/klaussilveira/ioquake3.js))
+- Escher puzzle ([source code](https://github.com/micahbolen/demoscene))
+- [Kai 'Opua](http://collinhover.github.io/kaiopua/) ([source code](https://github.com/collinhover/kaiopua))
 
-<h3 id="Realidade_virtual">Realidade virtual</h3>
+### Realidade virtual
 
-<ul>
- <li>
-  <p><a href="http://mozvr.com/demos/polarsea/">The Polar Sea</a> (<a href="https://github.com/MozVR/polarsea">source code</a>)</p>
- </li>
- <li>
-  <p>Sechelt fly-through (<a href="https://github.com/mozvr/sechelt">source code</a>)</p>
- </li>
-</ul>
+- [The Polar Sea](http://mozvr.com/demos/polarsea/) ([source code](https://github.com/MozVR/polarsea))
+- Sechelt fly-through ([source code](https://github.com/mozvr/sechelt))
 
-<h2 id="CSS">CSS</h2>
+## CSS
 
-<ul>
- <li>
-  <p><a href="http://www.csszengarden.com/">CSS Zen Garden</a></p>
- </li>
- <li>
-  <p><a href="http://codepen.io/SoftwareRVG/pen/OXkOWj/">CSS floating logo "mozilla"</a></p>
- </li>
- <li>
-  <p><a href="http://felixniklas.com/paperfold/">Paperfold</a></p>
- </li>
- <li>
-  <p><a href="http://ondras.github.io/blockout/">CSS Blockout</a></p>
- </li>
- <li>
-  <p><a href="http://ondras.zarovi.cz/demos/rubik/">Rubik's cube</a></p>
- </li>
- <li>
-  <p><a href="http://ondras.zarovi.cz/demos/nojs/">Pure CSS Slides</a></p>
- </li>
- <li>
-  <p>Planetarium (<a href="https://github.com/littleworkshop/planetarium">source code</a>)</p>
- </li>
-</ul>
+- [CSS Zen Garden](http://www.csszengarden.com/)
+- [CSS floating logo "mozilla"](http://codepen.io/SoftwareRVG/pen/OXkOWj/)
+- [Paperfold](http://felixniklas.com/paperfold/)
+- [CSS Blockout](http://ondras.github.io/blockout/)
+- [Rubik's cube](http://ondras.zarovi.cz/demos/rubik/)
+- [Pure CSS Slides](http://ondras.zarovi.cz/demos/nojs/)
+- Planetarium ([source code](https://github.com/littleworkshop/planetarium))
 
-<h3 id="Transformações">Transformações</h3>
+### Transformações
 
-<ul>
- <li>
-  <p><a href="http://impress.github.io/impress.js">Impress.js</a> (<a href="https://github.com/impress/impress.js">source code</a>)</p>
- </li>
-</ul>
+- [Impress.js](http://impress.github.io/impress.js) ([source code](https://github.com/impress/impress.js))
 
-<h2 id="jogos">jogos</h2>
+## jogos
 
-<ul>
- <li>
-  <p>IoQuake3 (<a href="https://github.com/klaussilveira/ioquake3.js">source code</a>)</p>
- </li>
- <li>
-  <p><a href="http://collinhover.github.io/kaiopua/">Kai 'Opua</a> (<a href="https://github.com/collinhover/kaiopua">source code</a>)</p>
- </li>
- <li>
-  <p><a href="https://github.com/gustavoSoriano/game-canvas">Game canvas (source code)</a></p>
- </li>
-</ul>
+- IoQuake3 ([source code](https://github.com/klaussilveira/ioquake3.js))
+- [Kai 'Opua](http://collinhover.github.io/kaiopua/) ([source code](https://github.com/collinhover/kaiopua))
+- [Game canvas (source code)](https://github.com/gustavoSoriano/game-canvas)
 
-<h2 id="HTML">HTML</h2>
+## HTML
 
-<ul>
- <li>
-  <p> <a href="http://zenphoton.com">Zen Photon Garden </a>(<a href="https://github.com/scanlime/zenphoton">source code</a>)</p>
- </li>
-</ul>
+- [Zen Photon Garden ](http://zenphoton.com)([source code](https://github.com/scanlime/zenphoton))
 
-<h2 id="API_da_Web">API da Web</h2>
+## API da Web
 
-<ul>
-</ul>
+### API de notificações
 
-<h3 id="API_de_notificações">API de notificações</h3>
+- [HTML5 Notifications](http://elfoxero.github.io/html5notifications/) ([source code](https://github.com/elfoxero/html5notifications))
 
-<ul>
- <li>
-  <p><a href="http://elfoxero.github.io/html5notifications/">HTML5 Notifications</a> (<a href="https://github.com/elfoxero/html5notifications">source code</a>)</p>
- </li>
-</ul>
+<!---->
 
-<ul>
-</ul>
+### API de áudio da Web
 
-<h3 dir="ltr" id="API_de_áudio_da_Web">API de áudio da Web</h3>
+- [Web Audio Fireworks](http://ondras.github.io/fireworks-webgl/)
+- [oscope.js - JavaScript oscilloscope](http://ondras.github.io/oscope/)
+- [HTML5 Web Audio Showcase](http://nipe-systems.de/webapps/html5-web-audio/) ([source code](https://github.com/NIPE-SYSTEMS/html5-web-audio-showcase))
+- [HTML5 Audio Visualizer](http://wayou.github.io/HTML5_Audio_Visualizer/) ([source code](https://github.com/Wayou/HTML5_Audio_Visualizer))
+- [Graphical Filter Editor and Visualizer](http://carlosrafaelgn.com.br/GraphicalFilterEditor/) ([source code](https://github.com/carlosrafaelgn/GraphicalFilterEditor))
 
-<ul>
- <li>
-  <p><a href="http://ondras.github.io/fireworks-webgl/">Web Audio Fireworks</a></p>
- </li>
- <li>
-  <p><a href="http://ondras.github.io/oscope/">oscope.js - JavaScript oscilloscope</a></p>
- </li>
- <li>
-  <p><a href="http://nipe-systems.de/webapps/html5-web-audio/">HTML5 Web Audio Showcase</a> (<a href="https://github.com/NIPE-SYSTEMS/html5-web-audio-showcase">source code</a>)</p>
- </li>
- <li>
-  <p><a href="http://wayou.github.io/HTML5_Audio_Visualizer/">HTML5 Audio Visualizer</a> (<a href="https://github.com/Wayou/HTML5_Audio_Visualizer">source code</a>)</p>
- </li>
- <li>
-  <p><a href="http://carlosrafaelgn.com.br/GraphicalFilterEditor/">Graphical Filter Editor and Visualizer</a> (<a href="https://github.com/carlosrafaelgn/GraphicalFilterEditor">source code</a>)</p>
- </li>
-</ul>
+### API de arquivos
 
-<h3 id="API_de_arquivos">API de arquivos</h3>
+- [Slide My Text - presentation from plain text files](http://palerdot.github.io/slide-my-text/)
 
-<ul>
- <li>
-  <p><a href="http://palerdot.github.io/slide-my-text/">Slide My Text - presentation from plain text files</a></p>
- </li>
-</ul>
+### Trabalhadores da Web
 
-<h3 id="Unclassified" name="Unclassified">Trabalhadores da Web</h3>
-
-<ul>
- <li>
-  <p><a href="http://ondras.github.io/fractal/">Web Worker Fractals</a></p>
- </li>
- <li>
-  <p><a href="http://ondras.github.io/photo/">Photo editor</a></p>
- </li>
- <li>
-  <p><a href="http://ondras.github.io/coral/">Coral generator</a></p>
- </li>
- <li>
-  <p><a href="http://nerget.com/rayjs-mt/rayjs.html">Raytracer</a></p>
- </li>
- <li>
-  <p><a href="http://palerdot.github.io/hotcold/">HotCold Touch Typing</a></p>
- </li>
-</ul>
+- [Web Worker Fractals](http://ondras.github.io/fractal/)
+- [Photo editor](http://ondras.github.io/photo/)
+- [Coral generator](http://ondras.github.io/coral/)
+- [Raytracer](http://nerget.com/rayjs-mt/rayjs.html)
+- [HotCold Touch Typing](http://palerdot.github.io/hotcold/)
