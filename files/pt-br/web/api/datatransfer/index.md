@@ -309,5 +309,3 @@ Holds a list of the format types of the data that is stored for an item at the s
 ## See also
 
 [Drag and Drop](/En/DragDrop/Drag_and_Drop "Drag and Drop")
-
-{{ languages( { "ja": "Ja/DragDrop/DataTransfer" } ) }}

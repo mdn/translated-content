@@ -685,5 +685,3 @@ avegadores mais recentes, incluindo o Firefox, também suporta ouvir as XMLHttpR
 - ["Using the XMLHttpRequest Object" (jibbering.com)](http://jibbering.com/2002/4/httprequest.html)
 - [XMLHttpRequest - REST and the Rich User Experience](http://www.peej.co.uk/articles/rich-user-experience.html)
 - [HTML5 Rocks - New Tricks in XMLHttpRequest2](http://www.html5rocks.com/en/tutorials/file/xhr2/)
-
-{{ languages( { "es": "es/XMLHttpRequest", "fr": "fr/XMLHttpRequest", "it": "it/XMLHttpRequest", "ja": "ja/XMLHttpRequest", "ko": "ko/XMLHttpRequest", "pl": "pl/XMLHttpRequest", "zh-cn": "zh-cn/DOM/XMLHttpRequest" } ) }}

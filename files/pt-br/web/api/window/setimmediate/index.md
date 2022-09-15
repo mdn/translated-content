@@ -50,5 +50,3 @@ Não faz parte de nenhuma especificação e não em uma faixa de padrões.
 {{ spec("https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/setImmediate/Overview.html", "Specification: Efficient Script Yielding") }}
 
 [Microsoft setImmediate API Demo](http://ie.microsoft.com/testdrive/Performance/setImmediateSorting/Default.html)
-
-{{ languages( { "zh-cn": "zh-cn/DOM/window\.setImmediate" } ) }}
