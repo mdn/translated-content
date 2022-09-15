@@ -19,6 +19,8 @@ Los elementos {{HTMLElement("input")}} del tipo «**`color`**» proporciona un e
 
 La presentación del elemento puede variar considerablamente entre navegadores y plataformas: podría ser un campo de entrada sencillo que valida automáticamente que la entrada esté en el formato adecuado, o podría lanzar un selector de colores estándar de la plataforma, o incluso podría abrir una ventana de colores personalizada.
 
+## Ejemplo
+
 ```html
 <input type="color">
 ```

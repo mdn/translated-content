@@ -19,6 +19,8 @@ original_slug: Web/HTML/Elemento/input/hidden
 
 > **Nota:** Hay un ejemplo en vivo debajo de las siguientes líneas de código — si esta funcionando correctamente no debería ver algo.
 
+## Ejemplo
+
 ```html
 <input id="prodId" name="prodId" type="hidden" value="xm234jq">
 ```

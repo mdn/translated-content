@@ -13,7 +13,7 @@ original_slug: Web/HTML/Elemento/option
 ---
 {{HTMLRef}}
 
-En un formulario Web , el **elemento** **HTML\_ _`<option>`_ \_**se usa para representar un item dentro de un {{HTMLElement("select")}}, un {{HTMLElement("optgroup")}} o un elemento HTML5 {{HTMLElement("datalist")}} .
+En un formulario Web , el **elemento** **HTML `<option>`** se usa para representar un item dentro de un {{HTMLElement("select")}}, un {{HTMLElement("optgroup")}} o un elemento HTML5 {{HTMLElement("datalist")}} .
 
 | [Contenido de las categorías](/es/docs/Web/HTML/Content_categories) | Ninguna                                                                                                                                                                                                                                                     |
 | ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -29,7 +29,8 @@ Este elemento posee los [atributos globales](/es/docs/Web/HTML/Global_attributes
 - {{htmlattrdef("disabled")}}
   - : Si está establecido el elemento no se puede seleccionar. A menudo los navegadores ponen en gris el elemento y de esa manera no recibirá ningún evento de navegación como clicks de ratón o eventos relacionados con la obtención del foco. Si este atributo no está definido el elemento puede ser aún deshabilitado si uno de sus ancestros es un elemento {{HTMLElement("optgroup")}} deshabilitado.
 - {{htmlattrdef("label")}}
-  - : Este atributo es el texto para la etiqueta que determina el significado de la opción. Si el atributo **`label`** no está definidio su valor será el texto del contenido del elemento> **Nota:** _Nota de Uso:_ El atributo **label** está diseñado para contener una etiqueta corta que se usará típicamente en un menú jerárquico. El **`atributo value`** describe una etiqueta más larga para ser usada, por ejemplo, cerca de un radio button
+  - : Este atributo es el texto para la etiqueta que determina el significado de la opción. Si el atributo **`label`** no está definidio su valor será el texto del contenido del elemento 
+    > **Nota:** El atributo **label** está diseñado para contener una etiqueta corta que se usará típicamente en un menú jerárquico. El **`atributo value`** describe una etiqueta más larga para ser usada, por ejemplo, cerca de un radio button
 - {{htmlattrdef("selected")}}
   - : Si está presente, este atributo booleano indica si esta opción es la inicialmente seleccionada. Si el elemento `<option> es descendiente de un elemento `{{HTMLElement("select")}} cuyo atributo {{htmlattrxref("multiple", "select")}} no esté definidio únicamente un sólo `<option>` de este elemento {{HTMLElement("select")}} puede tener este atributo **selected** attribute.
 - {{htmlattrdef("value")}}

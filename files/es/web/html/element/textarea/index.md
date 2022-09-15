@@ -12,7 +12,7 @@ original_slug: Web/HTML/Elemento/textarea
 ---
 ## Resumen
 
-El **elemento** **HTML `<textarea> `**representa un control para la edición mutilínea de texto sin formato.
+El **elemento** **HTML `<textarea>`** representa un control para la edición mutilínea de texto sin formato.
 
 ## Contenido de Uso
 
@@ -28,15 +28,19 @@ El **elemento** **HTML `<textarea> `**representa un control para la edición mut
 Este elemento contiene [global attributes](/es/docs/HTML/Global_attributes "HTML/Global attributes").
 
 - {{htmlattrdef("autocapitalize")}} {{non-standard_inline}}
-  - : Este es un atributo no estándar utilizado por iOS Safari Mobile (y, por lo tanto, también por casi todos los navegadores de iOS, incluyendo Safari, Firefox y Chrome). Controla cuándo y cómo el texto debe ponerse automáticamente en mayúsculas mientras es ingresado/editado por el usuario. Los valores no obsoletos están disponible en iOs 5 y en versiones posteriores. Sus valores posibles son:\* `none`: Deshabilita la capitalización automática
+  - : Este es un atributo no estándar utilizado por iOS Safari Mobile (y, por lo tanto, también por casi todos los navegadores de iOS, incluyendo Safari, Firefox y Chrome). Controla cuándo y cómo el texto debe ponerse automáticamente en mayúsculas mientras es ingresado/editado por el usuario. Los valores no obsoletos están disponible en iOs 5 y en versiones posteriores. Sus valores posibles son:
+    - `none`: Deshabilita la capitalización automática
     - `sentences`: Escribe automáticamente con mayúscula la primera letra de cada frase.
     - `words`: Automáticamente escribe con mayúsculas la primera letra de las palabras.
     - `characters`: Automáticamente escribe con mayúscula todos los caracteres.
     - `on`: {{deprecated_inline()}} En desuso desde la versión 5 de iOS.
     - `off`: {{deprecated_inline()}} En desuso desde la versión 5 de iOS.
 - {{htmlattrdef("autocomplete")}} {{HTMLVersionInline("5")}}
-  - : Este atributo indica si el valor del control puede ser completado automáticamente por el navegador. Los posibles valores son:\* `off`: El usuario debe explícitamente introducir el valor del campo para cada uso, o el documento proporciona su propio método de auto-completado; el navegador no completa automáticamente.
-    - `on`: El navegador puede completar automáticamente el valor basándose en valores que el usuario haya insertado durante usos previos.Si el atributo **autocomplete** no está definidio en el elemento textarea, entonces el navegador usa el valor del atributo **autocomplete** del propietario del elemento `<textarea>` . El propietario del formulario es o bien el elemento form del cual el \<textarea> es descendiente o el elemento form cuyo id está especificado en el atributo form del elemento. Para más información, ver el atributo {{htmlattrxref("autocomplete", "form")}} en {{HTMLElement("form")}}.
+  - : Este atributo indica si el valor del control puede ser completado automáticamente por el navegador. Los posibles valores son:
+    - `off`: El usuario debe explícitamente introducir el valor del campo para cada uso, o el documento proporciona su propio método de auto-completado; el navegador no completa automáticamente.
+    - `on`: El navegador puede completar automáticamente el valor basándose en valores que el usuario haya insertado durante usos previos.
+    
+    Si el atributo **autocomplete** no está definidio en el elemento textarea, entonces el navegador usa el valor del atributo **autocomplete** del propietario del elemento `<textarea>` . El propietario del formulario es o bien el elemento form del cual el \<textarea> es descendiente o el elemento form cuyo id está especificado en el atributo form del elemento. Para más información, ver el atributo {{htmlattrxref("autocomplete", "form")}} en {{HTMLElement("form")}}.
 - {{ htmlattrdef("autofocus") }} {{ HTMLVersionInline("5") }}
   - : Este atributo booleano te permite especificar que un control de un formulario adquiera el foco cuando se carga la página, salvo que el usuario anule esto , por ejemplo tecleando en un control diferente. Sólo se puede especificar este atributo en los elementos asociados a formularios.
 - {{ htmlattrdef("cols") }}
@@ -68,8 +72,9 @@ Este elemento contiene [global attributes](/es/docs/HTML/Global_attributes "HTML
 - {{ htmlattrdef("spellcheck") }} {{ HTMLVersionInline(5) }}
   - : Un valor `true` en este atributo indica que el elemento necesita tener `checked` el corrector ortográfico y gramatical. El caloor `default` indica que el elemento va a comportarse de acuerdo al comportamiento por defecto, basado en el `spellcheck` del padre. El valor `false` indica que no se deben hacer esas comprobaciones.
 - {{ htmlattrdef("wrap") }} {{ HTMLVersionInline("5") }}
-  - : Indica como el control envuelve al texto. Los posibles valores son:\* hard: El navegador insertar automáticamente caracteres de nueva línea (CR+LF) para que ninguna línea tenga más anchura que la del control; el atributo `cols` debe estar espeficicado.
-    - soft: El navegador asegura que todas las nuevas líneas constan de la pareja de caracteres CR+LF , pero no insertar nuevas líneas adicionales.Soft es el valor por defecto si no se especifica nada.
+  - : Indica como el control envuelve al texto. Los posibles valores son:
+    - `hard`: El navegador insertar automáticamente caracteres de nueva línea (CR+LF) para que ninguna línea tenga más anchura que la del control; el atributo `cols` debe estar espeficicado.
+    - `soft`: El navegador asegura que todas las nuevas líneas constan de la pareja de caracteres CR+LF , pero no insertar nuevas líneas adicionales.Soft es el valor por defecto si no se especifica nada.
 
 ## Interfaz DOM
 

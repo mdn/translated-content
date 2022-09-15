@@ -13,8 +13,8 @@ original_slug: Web/HTML/Elemento/Elementos_títulos
 ---
 Los elementos de **encabezado** implementan seis niveles de encabezado del documento, `<h1>` es el más importante, y `<h6>`, el menos importante. Un elemento de encabezado describe brevemente el tema de la sección que presenta. La información de encabezado puede ser usada por los agentes usuarios, por ejemplo, para construir una tabla de contenidos para un documento automáticamente.
 
-> **Nota:** **Notas de uso:\*** No se deben usar niveles inferiores para reducir el tamaño de la fuente: use la propiedad [CSS](/es/docs/Web/CSS) {{cssxref("font-size")}} para eso.
->
+> **Nota:**
+> - No se deben usar niveles inferiores para reducir el tamaño de la fuente: use la propiedad [CSS](/es/docs/Web/CSS) {{cssxref("font-size")}} para eso.
 > - Evite omitir niveles de encabezado: siempre comience con `<h1>`, después use `<h2>` y así sucesivamente.
 > - Con el elemento {{HTMLElement("section")}}, debe considerar evitar usar \<h1> más de una vez en una página; por costumbre, se usa para mostrar el título de la página, con todos los encabezados debajo de éste comenzando con `<h2>`. Cuando se usan secciones, debe usarse un `<h1>` por sección. Véase [Definiendo secciones](/es/docs/Sections_and_Outlines_of_an_HTML5_document#Definiendo_secciones_en_HTML5) en [Secciones y esquema de un documento HTML5](/es/docs/Sections_and_Outlines_of_an_HTML5_document) para más información.
 

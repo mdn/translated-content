@@ -14,7 +14,7 @@ original_slug: Web/HTML/Elemento/nav
 ---
 {{HTMLRef}}
 
-El **elemento** **HTML `<nav>` **representa una sección de una página cuyo propósito es proporcionar enlaces de navegación, ya sea dentro del documento actual o a otros documentos. Ejemplos comunes de secciones de navegación son menús, tablas de contenido e índices.
+El **elemento** **HTML `<nav>`** representa una sección de una página cuyo propósito es proporcionar enlaces de navegación, ya sea dentro del documento actual o a otros documentos. Ejemplos comunes de secciones de navegación son menús, tablas de contenido e índices.
 
 | [Content categories](/es/docs/Web/Guide/HTML/categorias_de_contenido) | [Flow content](/es/docs/HTML/Content_categories#Flow_content), [sectioning content](/es/docs/HTML/Content_categories#Sectioning_content), palpable content. |
 | --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |

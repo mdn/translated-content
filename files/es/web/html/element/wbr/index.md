@@ -29,7 +29,7 @@ Este elemento solo incluye los[ atributos globales](/es/docs/Web/HTML/Atributos_
 
 ## Interfase DOM
 
-## Este elemento implementa la interface [HTMLElement ](/es/docs/Web/API/HTMLElement).
+Este elemento implementa la interface [HTMLElement ](/es/docs/Web/API/HTMLElement).
 
 ## Ejemplo
 

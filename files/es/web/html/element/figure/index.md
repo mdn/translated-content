@@ -12,8 +12,8 @@ original_slug: Web/HTML/Elemento/figure
 ---
 El _elemento HTML_ \<figure> representa contenido independiente, a menudo con un título. Si bien se relaciona con el flujo principal, su posición es independiente de éste. Por lo general, se trata de una imagen, una ilustración, un diagrama, un fragmento de código, o un esquema al que se hace referencia en el texto principal, pero que se puede mover a otra página o a un apéndice sin que afecte al flujo principal.
 
-> **Nota:** _Notas de uso:_\* Al ser una [seccionador raíz](/es/Secciones_y_esquema_de_un_documento_HTML_5#Seccionador_ra.c3.adz "https://developer.mozilla.org/es/Secciones_y_esquema_de_un_documento_HTML_5#Seccionador_ra.c3.adz"), el esbozo del contenido del elemento \<figure> está excluido del esbozo principal del documento.
->
+> **Nota:** 
+> - Al ser una [seccionador raíz](/es/Secciones_y_esquema_de_un_documento_HTML_5#Seccionador_ra.c3.adz "https://developer.mozilla.org/es/Secciones_y_esquema_de_un_documento_HTML_5#Seccionador_ra.c3.adz"), el esbozo del contenido del elemento \<figure> está excluido del esbozo principal del documento.
 > - Un título puede estar asociado con el elemento \<figure> mediante la inserción de un {{ HTMLElement ("figcaption") }} en su interior (como el primero o el último hijo).
 
 ### Contexto de uso

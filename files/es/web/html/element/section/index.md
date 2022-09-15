@@ -8,8 +8,8 @@ original_slug: Web/HTML/Elemento/section
 
 El elemento de _HTML section_ (`<section>`) representa una sección genérica de un documento. Sirve para determinar qué contenido corresponde a qué parte de un esquema. Piensa en el esquema como en el índice de contenido de un libro; un tema común y subsecciones relacionadas. Es, por lo tanto, una etiqueta semántica. Su funcionalidad principal es estructurar semánticamente un documento a la hora de ser representado por parte de un agente usuario. Por ejemplo, un agente de usuario que represente el documento en voz, podría exponer al usuario el índice de contenido por niveles para navegar rápidamente por las distintas partes.
 
-> **Nota:** _Notas de uso:_\* Si la intención es indicar el contenido de un elemento {{HTMLElement("section")}} , es mejor usar el elemento {{HTMLElement("article")}} en su lugar, a modo de artículos independientes como en las revistas. {{HTMLElement("section")}} está diseñado para contenidos dependientes, pero diferenciados.
->
+> **Nota:** 
+> - Si la intención es indicar el contenido de un elemento {{HTMLElement("section")}} , es mejor usar el elemento {{HTMLElement("article")}} en su lugar, a modo de artículos independientes como en las revistas. {{HTMLElement("section")}} está diseñado para contenidos dependientes, pero diferenciados.
 > - No se debe usar el elemento {{HTMLElement("section")}} como un mero contenedor genérico; para esto ya existe {{HTMLElement("div")}}, especialmente si el objetivo solamente es aplicar un estilo (CSS) a la sección. Como regla general, el título de una sección debería aparecer en el esquema del documento.
 
 ## Contexto de uso

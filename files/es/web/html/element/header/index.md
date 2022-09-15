@@ -10,7 +10,8 @@ original_slug: Web/HTML/Elemento/header
 ---
 El _elemento de HTML Header_ (\<header>) representa un grupo de ayudas introductorias o de navegación. Puede contener algunos elementos de encabezado, así como también un logo, un formulario de búsqueda, un nombre de autor y otros componentes.
 
-> **Nota:** **Nota de uso:\*** El elemento \<header> no es contenido de sección y, por lo tanto, no introduce una nueva sección en [descripción](/en/Sections_and_Outlines_of_an_HTML5_document "en/Sections and Outlines of an HTML5 document").
+> **Nota:**
+> - El elemento `<header>` no es contenido de sección y, por lo tanto, no introduce una nueva sección en [descripción](/en/Sections_and_Outlines_of_an_HTML5_document "en/Sections and Outlines of an HTML5 document").
 
 ### Contexto de uso
 
