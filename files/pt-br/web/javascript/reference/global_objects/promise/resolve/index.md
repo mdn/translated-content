@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 ---
 {{JSRef}}
 
-O método **`Promise.resolve(value)`** retorna um objeto {{jsxref("Promise")}} que é resolvido com o valor passado. Se o valor for _thenable_ (ex: tiver um método {{jsxref("Promise.then", "\"then\"")}}), a promise retornada irá "seguir" esse _thenable_, adotando seu estado final; se o valor for uma promise, o objeto será o resultado da chamada Promise.resolve; do contrário a promise será realizada com o valor.
+O método **`Promise.resolve(value)`** retorna um objeto {{jsxref("Promise")}} que é resolvido com o valor passado. Se o valor for _thenable_ (ex: tiver um método {{jsxref("Promise.then", "then")}}), a promise retornada irá "seguir" esse _thenable_, adotando seu estado final; se o valor for uma promise, o objeto será o resultado da chamada Promise.resolve; do contrário a promise será realizada com o valor.
 
 ## Sintaxe
 
