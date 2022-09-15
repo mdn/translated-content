@@ -32,7 +32,7 @@ Palavras-chave e expressões básicas em JavaScript.
   - : Delegar a outra função gerador ou objeto iterável.
 - {{jsxref("Global_Objects/Array", "[]")}}
   - : Array initializer/literal syntax.
-- {{jsxref("Operators/Object\_initializer", "{}")}}
+- {{jsxref("Operators/Object_initializer", "{}")}}
   - : Object initializer/literal syntax.
 - {{jsxref("Global_Objects/RegExp", "/ab+c/i")}}
   - : Regular expression literal syntax.
@@ -199,7 +199,7 @@ An assignment operator assigns a value to its left operand based on the value of
 - {{jsxref("Operators/Assignment_Operators", "|=", "#Bitwise_OR_assignment")}}
   - : Bitwise OR assignment.
 - {{experimental_inline}} {{jsxref("Operators/Destructuring_assignment", "[a, b] = [1, 2]")}}
-  {{experimental_inline}} {{jsxref("Operators/Destructuring\_assignment", "{a, b} = {a:1, b:2}")}}
+  {{experimental_inline}} {{jsxref("Operators/Destructuring_assignment", "{a, b} = {a:1, b:2}")}}
   - : Destructuring assignment allows you to assign the properties of an array or object to variables using syntax that looks similar to array or object literals.
 
 ### Comma operator

@@ -32,7 +32,7 @@ Alguns deste métodos são também os mesmos correspondentes aos métodos em {{j
   - : Similar ao {{jsxref("Object.defineProperty()")}}. Retorna um {{jsxref("Boolean")}} com o valor `true` _se a propriedade foi definida com sucesso_.
 - {{jsxref("Reflect.deleteProperty()", "Reflect.deleteProperty(<var>target</var>, <var>propertyKey</var>)")}}
   - : O [operador delete](/pt-BR/docs/Web/JavaScript/Reference/Operators/delete) como uma função. Equivalente a chamada `delete target[name]`.
-- {{jsxref("Reflect.get()")}}, "Reflect.get(_target_, _propertyKey_\[, _receiver_])"}}
+- {{jsxref("Reflect.get()")}}, "Reflect.get(_target_, _propertyKey_[, _receiver_])"}}
   - : Uma função que retorna o valor da propriedade. Funciona como obter uma propriedade de um objeto (`target[propertyKey]`) como uma função.
 - {{jsxref("Reflect.getOwnPropertyDescriptor()", "Reflect.getOwnPropertyDescriptor(<var>target</var>, <var>propertyKey</var>)")}}
   - : Similar ao {{jsxref("Object.getOwnPropertyDescriptor()")}}. Retorna um descritor de propriedade da propriedade dada se existir no objeto, {{jsxref ("undefined")}} caso contrário.
