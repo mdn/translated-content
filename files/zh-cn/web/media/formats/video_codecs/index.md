@@ -1740,7 +1740,7 @@ VP9 被浏览器广泛支持，并且编解码器的硬件实现相当普遍。V
     </video>
     ```
 
-> **备注：** 无论 {{HTMLElement("video")}} 元素中是否有任何 {{HTMLElement("source")}} 元素，{{HTMLElement("video")}} 元素都是需要闭合的 `</video> ` 标签。
+> **备注：** 无论 {{HTMLElement("video")}} 元素中是否有任何 {{HTMLElement("source")}} 元素，{{HTMLElement("video")}} 元素都是需要闭合的 `</video>` 标签。
 
 ### 高质量视频演示的建议
 
