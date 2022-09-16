@@ -1,14 +1,6 @@
 ---
 title: CSS セレクターと XPath の比較
 slug: Web/XPath/Comparison_with_CSS_selectors
-tags:
-  - CSS
-  - Draft
-  - NeedsContent
-  - Reference
-  - Selectors
-  - XPath
-translation_of: Web/XPath/Comparison_with_CSS_selectors
 ---
 {{XSLTRef}}
 
