@@ -11,7 +11,7 @@ translation_of: Web/API/CanvasRenderingContext2D/fillStyle
 ---
 <div>{{APIRef}}</div>
 
-<p>A propriedade <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.fillStyle</code></strong> da API do Canvas 2D <span id="result_box" lang="pt"><span>especifica a cor ou o estilo para usar regiões internas</span></span>. O valor inicial é <code>#000</code> (preto).</p>
+<p>A propriedade <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.fillStyle</code></strong> da API do Canvas 2D especifica a cor ou o estilo para usar regiões internas. O valor inicial é <code>#000</code> (preto).</p>
 
 <p>Veja também o capítulo <a href="https://developer.mozilla.org/pt-BR/docs/Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors">Aplicando estilos e cores</a> no <a href="https://developer.mozilla.org/pt-BR/docs/Web/Guide/HTML/Canvas_tutorial">Canvas Tutorial</a>.</p>
 
@@ -37,7 +37,7 @@ translation_of: Web/API/CanvasRenderingContext2D/fillStyle
 
 <h3 id="Using_the_fillStyle_property" name="Using_the_fillStyle_property">Usando a propriedade <code>fillStyle</code> para definir uma cor diferente</h3>
 
-<p><span id="result_box" lang="pt"><span class="alt-edited">Isto é apenas um trecho de código simples usando a propriedade</span></span> <code>fillStyle</code> para definir uma cor diferente.</p>
+<p>Isto é apenas um trecho de código simples usando a propriedade <code>fillStyle</code> para definir uma cor diferente.</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -53,7 +53,7 @@ ctx.fillStyle = 'blue';
 ctx.fillRect(10, 10, 100, 100);
 </pre>
 
-<p><span id="result_box" lang="pt"><span>Edite o código abaixo e veja as alterações atualizadas na tela</span></span>:</p>
+<p>Edite o código abaixo e veja as alterações atualizadas na tela:</p>
 
 <div class="hidden">
 <h6 id="Playable_code" name="Playable_code">Playable code</h6>
@@ -98,7 +98,7 @@ window.addEventListener('load', drawCanvas);
 
 <h3 id="Um_exemplo_de_fillStyle_com_laços_for">Um exemplo de <code>fillStyle</code> com laços <code>for</code></h3>
 
-<p>Neste exemplo, nós usamos dois laços <code>for</code> para desenhar uma grade de retângulos, cada um com uma cor diferente. <span id="result_box" lang="pt"><span>A imagem resultante deve parecer algo como uma captura de tela.</span> <span>Não há nada de espetacular acontecendo aqui.</span> <span>Usamos as duas variáveis</span></span> <code>i</code> é <code>j</code> <span id="result_box" lang="pt"><span>para gerar uma cor RGB exclusiva para cada quadrado, e apenas modificamos os valores vermelho e verde.</span> <span>O canal azul tem um valor fixo.</span> <span>Ao modificar os canais, você pode gerar todos os tipos de paletas.</span> <span>Ao aumentar os valores, você pode conseguir algo que pareça com as paletas de cores que o Photoshop usa.</span></span></p>
+<p>Neste exemplo, nós usamos dois laços <code>for</code> para desenhar uma grade de retângulos, cada um com uma cor diferente. A imagem resultante deve parecer algo como uma captura de tela. Não há nada de espetacular acontecendo aqui. Usamos as duas variáveis <code>i</code> é <code>j</code> para gerar uma cor RGB exclusiva para cada quadrado, e apenas modificamos os valores vermelho e verde. O canal azul tem um valor fixo. Ao modificar os canais, você pode gerar todos os tipos de paletas. Ao aumentar os valores, você pode conseguir algo que pareça com as paletas de cores que o Photoshop usa.</p>
 
 <div class="hidden">
 <pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
@@ -114,7 +114,7 @@ for (var i = 0; i &lt; 6; i++){
 }
 </pre>
 
-<p><span class="short_text" id="result_box" lang="pt"><span>O resultado fica assim</span></span>:</p>
+<p>O resultado fica assim:</p>
 
 <p>{{EmbedLiveSample("Um_exemplo_de_fillStyle_com_laços_for", 160, 160, "https://mdn.mozillademos.org/files/5417/Canvas_fillstyle.png")}}</p>
 
@@ -139,10 +139,10 @@ for (var i = 0; i &lt; 6; i++){
 
 {{Compat("api.CanvasRenderingContext2D.fillStyle")}}
 
-<h2 id="Notas_específicas_doWebKitBlink"><span class="short_text" id="result_box" lang="pt"><span>Notas específicas do</span></span>WebKit/Blink</h2>
+<h2 id="Notas_específicas_doWebKitBlink">Notas específicas doWebKit/Blink</h2>
 
 <ul>
- <li>Nos navegadores baseados em WebKit e Blink, <span class="short_text" id="result_box" lang="pt"><span>além da propriedade </span></span><code>fillStyle</code><span class="short_text" lang="pt"><span>, o método não padrão e obsoleto</span></span> <code>ctx.setFillColor()</code> <span class="short_text" id="result_box" lang="pt"><span>é implementado</span></span>.
+ <li>Nos navegadores baseados em WebKit e Blink, além da propriedade <code>fillStyle</code>, o método não padrão e obsoleto <code>ctx.setFillColor()</code> é implementado.
 
   <pre class="brush: js">setFillColor(color, optional alpha);
 setFillColor(grayLevel, optional alpha);
@@ -155,7 +155,7 @@ setFillColor(c, m, y, k, a);
 <h2 id="Veja_também">Veja também</h2>
 
 <ul>
- <li><span class="short_text" id="result_box" lang="pt"><span>A interface que o define</span></span>, {{domxref("CanvasRenderingContext2D")}}</li>
+ <li>A interface que o define, {{domxref("CanvasRenderingContext2D")}}</li>
  <li>{{domxref("CanvasGradient")}}</li>
  <li>{{domxref("CanvasPattern")}}</li>
 </ul>

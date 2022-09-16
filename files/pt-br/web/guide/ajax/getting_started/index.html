@@ -85,7 +85,7 @@ httpRequest.send(null);
 }
 </pre>
 
-<p><span style="line-height: 1.5;">A lista completa dos valores <code>readyState</code> é a seguinte:</span></p>
+<p>A lista completa dos valores <code>readyState</code> é a seguinte:</p>
 
 <ul>
  <li>0 (não inicializado)</li>
@@ -110,14 +110,14 @@ httpRequest.send(null);
 }
 </pre>
 
-<p>Agora, após você ter checado o estado da requisição e o código de status do HTTP da resposta, caberá a você fazer o que quiser com os dados que o servidor lhe enviou.<span id="result_box" lang="pt"> <span class="hps">Você tem duas opções</span> <span class="hps">para acessar esses dados</span><span>:</span></span></p>
+<p>Agora, após você ter checado o estado da requisição e o código de status do HTTP da resposta, caberá a você fazer o que quiser com os dados que o servidor lhe enviou. Você tem duas opções para acessar esses dados:</p>
 
 <ul>
  <li><code>httpRequest.responseText</code> – retorna a resposta do servidor como uma string de texto</li>
  <li><code>httpRequest.responseXML</code> – retorna a resposta do servidor como um objeto XMLDocument no qual você poderá percorrer usando as funções DOM do JavaScript</li>
 </ul>
 
-<p><span id="result_box" lang="pt"><span class="hps">Note que os passos</span> <span class="hps">acima são</span> <span class="hps">válidos somente</span> <span class="hps">se você usou</span> <span class="hps">uma solicitação assíncrona</span> <span class="atn hps">(</span><span>terceiro parâmetro</span> <span class="hps">de</span> <code><span class="hps">open()</span></code> <span class="hps">foi</span> <span class="hps">definido como</span> <span class="hps"><code>true</code>)</span><span>.</span> <span class="hps">Se você usou</span> <span class="hps">um</span> <span class="hps">pedido</span> <strong><span class="hps">síncrono</span></strong> <span class="hps">você não</span> <span class="hps">precisa especificar</span> <span class="hps">uma função,</span> <span class="hps">você pode acessar</span> <span class="hps">o retorno</span> <span class="hps">de dados</span> <span class="hps">pelo servidor</span> <span class="hps">diretamente</span> <span class="hps">depois de chamar</span> <code><span class="hps">send()</span></code><span>,</span> <span class="hps">porque o script</span> <span class="hps">irá parar e</span> <span class="hps">esperar pela resposta</span> <span class="hps">do servidor.</span></span></p>
+<p>Note que os passos acima são válidos somente se você usou uma solicitação assíncrona (terceiro parâmetro de <code>open()</code> foi definido como <code>true</code>). Se você usou um pedido <strong>síncrono</strong> você não precisa especificar uma função, você pode acessar o retorno de dados pelo servidor diretamente depois de chamar <code>send()</code>, porque o script irá parar e esperar pela resposta do servidor.</p>
 
 <h3 id="Passo_3_–_Um_simples_exemplo">Passo 3 – Um simples exemplo</h3>
 
@@ -178,11 +178,11 @@ httpRequest.send(null);
  <li><code>alertContents()</code> checa se a resposta foi recebida e se está OK, então <code>alert()</code> mostra o conteúdo do arquivo <code>test.html.</code></li>
 </ul>
 
-<div class="note"><strong>Nota</strong>: <span id="result_box" lang="pt"><span class="hps"><span id="result_box" lang="pt"><span class="alt-edited hps">Se você está enviando</span> <span class="alt-edited hps">uma solicitação para um</span> <span class="hps">pedaço de código</span> <span class="alt-edited hps">que retornará</span> <span class="hps">XML</span><span>, ao invés de</span> <span class="hps">um arquivo</span> <span class="hps">XML</span> <span class="hps">estático</span><span>, é necessário definir</span> <span class="hps">alguns</span> <span class="hps">cabeçalhos de resposta</span> <span class="hps">se a sua página</span> <span class="alt-edited hps">é para trabalhar</span> <span class="alt-edited hps">com o Internet Explorer e com o</span> <span class="hps">Mozilla.</span> <span class="hps">Se</span> <span class="hps">você não definir</span> <span class="hps">cabeçalho</span> <code><span class="hps">Content-Type</span><span>: application/</span><span class="hps">xml</span></code><span>, o IE irá</span> <span class="hps">lançar um erro</span> <span class="hps">JavaScript,</span> <span class="atn hps">"</span><span>Objeto esperado</span><span>"</span><span>,</span> <span class="hps">após a linha</span> <span class="hps">onde você tentar</span> <span class="hps">acessar um elemento</span> <span class="hps">XML.</span></span>.</span></span></div>
+<div class="note"><strong>Nota</strong>: Se você está enviando uma solicitação para um pedaço de código que retornará XML, ao invés de um arquivo XML estático, é necessário definir alguns cabeçalhos de resposta se a sua página é para trabalhar com o Internet Explorer e com o Mozilla. Se você não definir cabeçalho <code>Content-Type: application/xml</code>, o IE irá lançar um erro JavaScript, "Objeto esperado", após a linha onde você tentar acessar um elemento XML..</div>
 
-<div class="note"><strong>Nota 2</strong>: <span id="result_box" lang="pt"><span class="hps">Se</span> <span class="hps">você não definir</span> <span class="hps">cabeçalho</span> <code><span class="atn hps">Cache-</span><span>Control: no</span><span>-cache</span></code> <span class="alt-edited hps">o navegador</span> <span class="alt-edited hps">armazenará em cache</span> <span class="hps">a resposta</span> <span class="alt-edited hps">e jamais</span> <span class="alt-edited hps">voltará a submeter</span> <span class="hps">o pedido</span><span>, tornando</span> <span class="hps">a depuração</span> <span class="atn hps">"</span><span class="alt-edited">desafiadora".</span> <span class="alt-edited hps">Também é</span> <span class="alt-edited hps">possível acrescentar</span> <span class="hps">um parâmetro</span> <span class="hps">GET</span> <span class="hps">adicional</span> <span class="hps">sempre</span> <span class="hps">diferente,</span> <span class="hps">como o</span> <span class="hps">timestamp</span> <span class="hps">ou</span> <span class="hps">um número aleatório</span> <span class="atn hps">(</span><span>veja</span> <a href="https://developer.mozilla.org/en/DOM/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache" title="https://developer.mozilla.org/En/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache">bypassing the cache</a><span class="hps">).</span></span></div>
+<div class="note"><strong>Nota 2</strong>: Se você não definir cabeçalho <code>Cache-Control: no-cache</code> o navegador armazenará em cache a resposta e jamais voltará a submeter o pedido, tornando a depuração "desafiadora". Também é possível acrescentar um parâmetro GET adicional sempre diferente, como o timestamp ou um número aleatório (veja <a href="https://developer.mozilla.org/en/DOM/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache" title="https://developer.mozilla.org/En/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache">bypassing the cache</a>).</div>
 
-<div class="note"><strong>Nota 3</strong>: <span id="result_box" lang="pt"><span class="hps">Se a variável</span> <span class="hps">httpRequest</span> <span class="alt-edited hps">é utilizada</span> <span class="hps">globalmente</span><span class="alt-edited">, funções</span> <span class="alt-edited hps">concorrentes</span> <span class="hps">chamando</span> <code><span class="hps">makeRequest</span></code><span class="alt-edited hps"><code>()</code> podem</span> <span class="alt-edited hps">sobrescrever</span> uma à<span class="hps"> outra,</span> <span class="hps">causando</span> <span class="hps">uma condição de corrida</span><span>.</span> <span class="hps">Declarando</span> <span class="hps">o</span> <span class="hps">httpRequest</span> <span class="hps">variável local para</span> <span class="hps">um <a href="https://developer.mozilla.org/en/JavaScript/Guide/Closures" title="https://developer.mozilla.org/en/JavaScript/Guide/Closures">closure</a></span> <span class="hps">contendo as funções</span> <span class="hps">AJAX</span> <span class="hps">impede</span> <span class="hps">a condição de corrida</span><span>.</span></span></div>
+<div class="note"><strong>Nota 3</strong>: Se a variável httpRequest é utilizada globalmente, funções concorrentes chamando <code>makeRequest</code><code>()</code> podem sobrescrever uma à outra, causando uma condição de corrida. Declarando o httpRequest variável local para um <a href="https://developer.mozilla.org/en/JavaScript/Guide/Closures" title="https://developer.mozilla.org/en/JavaScript/Guide/Closures">closure</a> contendo as funções AJAX impede a condição de corrida.</div>
 
 <p>Caso ocorra um erro de comunicação (tal como a queda de do servidor web), uma exceção será lançada no método onreadystatechange quando o campo status for acessado. Tenha a certeza de envolver sua declaração if...then dentro de um bloco try...catch.</p>
 
@@ -251,7 +251,7 @@ alert(root_node.firstChild.data);
   };
 </pre>
 
-<p><span id="result_box" lang="pt"><span class="hps">Precisamos</span> <span class="hps">modificar</span> <code><span class="hps">makeRequest</span> </code><span class="hps"><code>()</code> para aceitar</span> <span class="hps">os dados do usuário</span> <span class="hps">e</span> <span class="hps">passá-lo para</span> <span class="hps">o servidor</span></span>. Vamos mudar o método de requisição de <code>GET</code> para <code>POST</code>, e incluir nossos dados como um parâmetro na chamada para <code>httpRequest.send()</code>:</p>
+<p>Precisamos modificar <code>makeRequest </code><code>()</code> para aceitar os dados do usuário e passá-lo para o servidor. Vamos mudar o método de requisição de <code>GET</code> para <code>POST</code>, e incluir nossos dados como um parâmetro na chamada para <code>httpRequest.send()</code>:</p>
 
 <pre class="brush: js">  function makeRequest(url, userName) {
 
@@ -268,7 +268,7 @@ alert(root_node.firstChild.data);
 
 <p><code>{"userData":"Jane","computedString":"Hi, Jane!"}</code></p>
 
-<p><span class="short_text" id="result_box" lang="pt"><span class="hps">Para utilizar</span> <span class="hps">estes dados</span> <span class="hps">dentro de </span></span><code>alertContents()</code>, nós não podemos simplesmente exibir com <code>alert()</code>  a propriedade <code>responseText</code>. Temos que analisar (parse) e então alertar (<code>alert()</code>) <code>computedString,</code> a propriedade que queremos:</p>
+<p>Para utilizar estes dados dentro de <code>alertContents()</code>, nós não podemos simplesmente exibir com <code>alert()</code>  a propriedade <code>responseText</code>. Temos que analisar (parse) e então alertar (<code>alert()</code>) <code>computedString,</code> a propriedade que queremos:</p>
 
 <pre class="brush: js">function alertContents() {
     if (httpRequest.readyState === 4) {

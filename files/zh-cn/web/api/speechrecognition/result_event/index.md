@@ -24,7 +24,7 @@ The **`result`** event of the [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_AP
       <th scope="row">Event handler property</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/API/SpeechRecognition/onresult"
+          ><a href="/zh-CN/docs/Web/API/SpeechRecognition/onresult"
             >onresult</a
           ></code
         >

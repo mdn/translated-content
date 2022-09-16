@@ -105,8 +105,8 @@ A `getDataDirectory()` method has been added to [`Addon`](/zh-CN/Add-ons/Add-on_
 
 #### Highlights
 
-- Added [`exclude`](/en-US/Add-ons/SDK/High-Level_APIs/page-mod#PageMod%28options%29) option to `PageMod`.
-- Added [`anonymous`](/en-US/Add-ons/SDK/High-Level_APIs/request#Request%28options%29) option to `Request`.
+- Added [`exclude`](/zh-CN/Add-ons/SDK/High-Level_APIs/page-mod#PageMod%28options%29) option to `PageMod`.
+- Added [`anonymous`](/zh-CN/Add-ons/SDK/High-Level_APIs/request#Request%28options%29) option to `Request`.
 - [Add-on Debugger](/zh-CN/Add-ons/Add-on_Debugger) now includes a Console and a Scratchpad.
 
 #### Details

@@ -21,15 +21,7 @@ translation_of: Web/JavaScript/Reference/Errors/Undefined_prop
 
 <h2 id="O_que_está_errado">O que está errado?</h2>
 
-<div class="oSioSc">
-<div id="tw-target">
-<div class="g9WsWb" id="kAz1tf">
-<div class="tw-ta-container tw-nfl" id="tw-target-text-container">
-<p class="tw-data-text tw-text-large tw-ta" dir="ltr" id="tw-target-text" style="text-align: left;"><span lang="pt">O script tentou acessar uma propriedade de objeto que não existe. Existem duas maneiras de acessar propriedades; veja a página de referência {{jsxref ("Operators / Property_Accessors", "property accessors", 0, 1)}} para saber mais sobre eles.</span></p>
-</div>
-</div>
-</div>
-</div>
+<p>O script tentou acessar uma propriedade de objeto que não existe. Existem duas maneiras de acessar propriedades; veja a página de referência {{jsxref ("Operators / Property_Accessors", "property accessors", 0, 1)}} para saber mais sobre eles.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
@@ -43,9 +35,7 @@ foo.bar; // ReferenceError: reference to undefined property "bar"
 
 <h3 id="Certo">Certo</h3>
 
-<div class="tw-ta-container tw-nfl" id="tw-target-text-container">
-<p class="tw-data-text tw-text-large tw-ta" dir="ltr" id="tw-target-text" style="text-align: left;"><span lang="pt">Para evitar o erro, você precisa adicionar uma definição de <code>bar</code> ao objeto ou verificar a existência da propriedade <code>bar</code> antes de tentar acessá-la; Uma maneira de fazer isso é usar o método {{jsxref ("Object.prototype.hasOwnProperty ()")}}, desta forma:</span></p>
-</div>
+<p>Para evitar o erro, você precisa adicionar uma definição de <code>bar</code> ao objeto ou verificar a existência da propriedade <code>bar</code> antes de tentar acessá-la; Uma maneira de fazer isso é usar o método {{jsxref ("Object.prototype.hasOwnProperty ()")}}, desta forma:</p>
 
 <pre class="brush: js example-good">var foo = {};
 

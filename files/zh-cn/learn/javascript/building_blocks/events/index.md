@@ -12,7 +12,7 @@ slug: Learn/JavaScript/Building_blocks/Events
       <th scope="row">前提：</th>
       <td>
         基本电脑知识，对 HTML 和 CSS 的基本了解，及
-        <a href="/en-US/docs/Learn/JavaScript/First_steps"
+        <a href="/zh-CN/docs/Learn/JavaScript/First_steps"
           >JavaScript first steps</a
         >.
       </td>
