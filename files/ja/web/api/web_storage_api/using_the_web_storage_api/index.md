@@ -93,7 +93,7 @@ else {
 
 ![](event-output.png)
 
-> **Note:**: 上記のリンクから実際のページを参照することができます。また、[ソースコードも確認できます](https://github.com/mdn/dom-examples/tree/master/web-storage)。
+> **Note:**  上記のリンクから実際のページを参照することができます。また、[ソースコードも確認できます](https://github.com/mdn/dom-examples/tree/master/web-storage)。
 
 ### ストレージが存在しているかを確認する
 
