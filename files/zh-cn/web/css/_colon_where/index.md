@@ -27,7 +27,7 @@ footer p:hover {
 
 ### 容许解析错误的选择器
 
-规范指定了 `:is()` 和 `:where()` 可以接受一个 [有错误的选择器列表](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list).
+规范指定了 `:is()` 和 `:where()` 可以接受一个[有错误的选择器列表](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list).
 
 在 CSS 中使用选择器列表时，如果任何选择器无效，则整个列表被视为无效。当使用 `:is()` 或 `:where()` 而不是整个选择器列表时，如果某个选择器无法解析，则被视为无效，不正确或不受支持的选择器将被忽略，其他选择器将被使用。
 
@@ -139,7 +139,7 @@ footer a {
 
 > **备注：** 你也可以在 GitHub 上找到这个示例；参见 [is-where](https://mdn.github.io/css-examples/is-where/)。
 
-{{EmbedLiveSample('Examples', '100%', 600)}}
+{{EmbedLiveSample('示例', '100%', 600)}}
 
 ## 语法
 
@@ -159,4 +159,4 @@ footer a {
 
 - {{CSSxRef(":is", ":is()")}}
 - [选择器列表](/zh-CN/docs/Web/CSS/Selector_list)
-- [Web components](/zh-CN/docs/Web/Web_Components)
+- [Web component](/zh-CN/docs/Web/Web_Components)
