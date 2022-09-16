@@ -1,7 +1,10 @@
 ---
 title: Array.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
+l10n:
+  sourceCommit: 9b38f886d21c5d0a428f58acb20c4d0fc6c2e098
 ---
+
 {{JSRef}}
 
 **`reduceRight()`** メソッドは、アキュームレーターと配列のそれぞれの値に対して (右から左へ) 関数を適用して、単一の値にします。
@@ -14,20 +17,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 
 ```js
 // アロー関数
-reduceRight((accumulator, currentValue) => { ... } )
-reduceRight((accumulator, currentValue, index) => { ... } )
-reduceRight((accumulator, currentValue, index, array) => { ... } )
-reduceRight((accumulator, currentValue, index, array) => { ... }, initialValue)
+reduceRight((accumulator, currentValue) => { /* … */ } )
+reduceRight((accumulator, currentValue, index) => { /* … */ } )
+reduceRight((accumulator, currentValue, index, array) => { /* … */ } )
+reduceRight((accumulator, currentValue, index, array) => { /* … */ }, initialValue)
 
 // コールバック関数
 reduceRight(callbackFn)
 reduceRight(callbackFn, initialValue)
 
 // コールバック畳み込み関数
-reduceRight(function callbackFn(accumulator, currentValue) { ... })
-reduceRight(function callbackFn(accumulator, currentValue, index) { ... })
-reduceRight(function callbackFn(accumulator, currentValue, index, array){ ... })
-reduceRight(function callbackFn(accumulator, currentValue, index, array) { ... }, initialValue)
+reduceRight(function(accumulator, currentValue) { /* … */ })
+reduceRight(function(accumulator, currentValue, index) { /* … */ })
+reduceRight(function(accumulator, currentValue, index, array){ /* … */ })
+reduceRight(function(accumulator, currentValue, index, array) { /* … */ }, initialValue)
 ```
 
 ### 引数
