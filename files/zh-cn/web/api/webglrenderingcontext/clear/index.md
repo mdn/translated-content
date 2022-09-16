@@ -4,7 +4,7 @@ slug: Web/API/WebGLRenderingContext/clear
 ---
 {{APIRef("WebGL")}}
 
-[WebGL API](/en-US/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.clear()`** 方法使用预设值来清空缓冲。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.clear()`** 方法使用预设值来清空缓冲。
 
 预设值可以使用 {{domxref("WebGLRenderingContext.clearColor", "clearColor()")}} 、 {{domxref("WebGLRenderingContext.clearDepth", "clearDepth()")}} 或 {{domxref("WebGLRenderingContext.clearStencil", "clearStencil()")}} 设置。
 

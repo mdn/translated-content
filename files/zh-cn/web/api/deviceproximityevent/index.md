@@ -31,4 +31,4 @@ window.addEventListener('deviceproximity', function(event) {
 
 - {{event("deviceproximity")}}
 - {{domxref("UserProximityEvent")}}
-- [Proximity API](/en-US/docs/WebAPI/Proximity)
+- [Proximity API](/zh-CN/docs/WebAPI/Proximity)

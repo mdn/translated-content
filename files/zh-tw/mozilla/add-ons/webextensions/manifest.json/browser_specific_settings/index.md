@@ -14,7 +14,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
       <th scope="row">強制</th>
       <td>
         通常是不強制（請看<a
-          href="/en-US/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_add-on_ID"
+          href="/zh-TW/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_add-on_ID"
           >你什麼時候會需要 Add-on ID？</a
         >）。在 Firefox 48（桌面）前以及Android版Firefox 是強制的。
       </td>

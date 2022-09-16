@@ -14,10 +14,10 @@ slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
       <th scope="row">Prerequisites:</th>
       <td>
         JavaScript 基础 (查看
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">第一步</a>,
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks">构建的块</a>,
-        <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript 对象</a>),
-        <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
+        <a href="/zh-CN/docs/Learn/JavaScript/First_steps">第一步</a>,
+        <a href="/zh-CN/docs/Learn/JavaScript/Building_blocks">构建的块</a>,
+        <a href="/zh-CN/docs/Learn/JavaScript/Objects">JavaScript 对象</a>),
+        <a href="/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
           >基础的客户端 API</a
         >
       </td>

@@ -34,7 +34,7 @@ Enumerable properties are those properties whose internal \[\[Enumerable]] flag 
               <td>
                 <code
                   ><a
-                    href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
+                    href="/zh-TW/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
                     >propertyIsEnumerable</a
                   ></code
                 >
@@ -42,14 +42,14 @@ Enumerable properties are those properties whose internal \[\[Enumerable]] flag 
               <td>
                 <code
                   ><a
-                    href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"
+                    href="/zh-TW/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"
                     >hasOwnProperty</a
                   ></code
                 >
                 and not
                 <code
                   ><a
-                    href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
+                    href="/zh-TW/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
                     >propertyIsEnumerable</a
                   ></code
                 >
@@ -57,7 +57,7 @@ Enumerable properties are those properties whose internal \[\[Enumerable]] flag 
               <td>
                 <code
                   ><a
-                    href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"
+                    href="/zh-TW/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"
                     >hasOwnProperty</a
                   ></code
                 >
@@ -85,7 +85,7 @@ Enumerable properties are those properties whose internal \[\[Enumerable]] flag 
               <td>
                 <code
                   ><a
-                    href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/keys"
+                    href="/zh-TW/docs/JavaScript/Reference/Global_Objects/Object/keys"
                     >Object.keys</a
                   ></code
                 >
@@ -93,14 +93,14 @@ Enumerable properties are those properties whose internal \[\[Enumerable]] flag 
               <td>
                 <code
                   ><a
-                    href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
+                    href="/zh-TW/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
                     >getOwnPropertyNames</a
                   ></code
                 >
                 filtered to include properties when not passing
                 <code
                   ><a
-                    href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
+                    href="/zh-TW/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
                     >propertyIsEnumerable</a
                   ></code
                 >
@@ -108,7 +108,7 @@ Enumerable properties are those properties whose internal \[\[Enumerable]] flag 
               <td>
                 <code
                   ><a
-                    href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
+                    href="/zh-TW/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
                     >getOwnPropertyNames</a
                   ></code
                 >
@@ -137,7 +137,7 @@ Enumerable properties are those properties whose internal \[\[Enumerable]] flag 
                 Iterate over
                 <code
                   ><a
-                    href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/keys"
+                    href="/zh-TW/docs/JavaScript/Reference/Global_Objects/Object/keys"
                     >Object.keys</a
                   ></code
                 >
@@ -146,13 +146,13 @@ Enumerable properties are those properties whose internal \[\[Enumerable]] flag 
                 Iterate over
                 <code
                   ><a
-                    href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
+                    href="/zh-TW/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
                     >getOwnPropertyNames</a
                   > </code
                 >filtered to include properties when not passing
                 <code
                   ><a
-                    href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
+                    href="/zh-TW/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
                     >propertyIsEnumerable</a
                   ></code
                 >
@@ -161,7 +161,7 @@ Enumerable properties are those properties whose internal \[\[Enumerable]] flag 
                 Iterate over
                 <code
                   ><a
-                    href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
+                    href="/zh-TW/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
                     >getOwnPropertyNames</a
                   ></code
                 >
@@ -184,7 +184,7 @@ Enumerable properties are those properties whose internal \[\[Enumerable]] flag 
               <td>
                 <code
                   ><a
-                    href="/en-US/docs/JavaScript/Reference/Statements/for...in"
+                    href="/zh-TW/docs/JavaScript/Reference/Statements/for...in"
                     >for..in</a
                   ></code
                 >

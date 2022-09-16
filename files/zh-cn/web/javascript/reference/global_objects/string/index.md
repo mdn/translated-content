@@ -40,7 +40,7 @@ new String(thing)
 
 ### 模板字面量
 
-从 ECMAScript 2015 开始，字符串字面量也可以称为[模板字面量](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)：
+从 ECMAScript 2015 开始，字符串字面量也可以称为[模板字面量](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)：
 
 ```plain
 `hello world` `hello! world!` `hello ${who}` escape `<a>${who}</a>`
@@ -92,7 +92,7 @@ otherwise my code is unreadable.";
 
 ## 描述
 
-字符串对于保存可以以文本形式表示的数据非常有用。 一些常用的字符串操作有：查询[字符串长度](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length)，使用 [+ 和 +=](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/String_Operators) 运算符来构建和连接字符串，使用 [indexOf](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf) 方法检查某一子字符串在父字符串中的位置，又或是使用 [substring](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring) 方法提取从父字符串中提取子字符串。
+字符串对于保存可以以文本形式表示的数据非常有用。 一些常用的字符串操作有：查询[字符串长度](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length)，使用 [+ 和 +=](/zh-CN/docs/Web/JavaScript/Reference/Operators/String_Operators) 运算符来构建和连接字符串，使用 [indexOf](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf) 方法检查某一子字符串在父字符串中的位置，又或是使用 [substring](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring) 方法提取从父字符串中提取子字符串。
 
 ### 从字符串中获取单个字符
 
@@ -185,7 +185,7 @@ let num = 15;
 console.log(String.replace(num, /5/, '2'));
 ```
 
-移除字符串泛型的措施，参见 [Warning: String.x is deprecated; use String.prototype.x instead](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_string_generics).
+移除字符串泛型的措施，参见 [Warning: String.x is deprecated; use String.prototype.x instead](/zh-CN/docs/Web/JavaScript/Reference/Errors/Deprecated_string_generics).
 
 {{jsxref("Global_Objects/Array", "Generics", "#Array_generic_methods", 1)}} 在 Javascript 1.6 中同样支持{{jsxref("Global_Objects/Array", "Array")}}。
 

@@ -1,11 +1,6 @@
 ---
 title: Error() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Error/Error
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/Error
 ---
 {{JSRef}}
 

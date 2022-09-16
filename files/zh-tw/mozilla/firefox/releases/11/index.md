@@ -52,7 +52,7 @@ _No change._
 
 ### IndexedDB
 
-- The support for [IDBFactory.cmp()](/en-US/docs/IndexedDB/IDBFactory#cmp%28%29) has been added.
+- The support for [IDBFactory.cmp()](/zh-TW/docs/IndexedDB/IDBFactory#cmp%28%29) has been added.
 - An [IndexedDB key](/zh-TW/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#section_6) can also be of one of the following types: Date, Arrays and Float (and not only String and Integer).
 
 ### Network
@@ -72,7 +72,7 @@ _No change._
 
 #### NetUtil.jsm
 
-- [`readInputStreamToString()`](</en-US/docs/JavaScript_code_modules/NetUtil.jsm#readInputStreamToString()>) has a new, optional, parameter to configure the character set interpretation while reading the input stream.
+- [`readInputStreamToString()`](https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/NetUtil.html) has a new, optional, parameter to configure the character set interpretation while reading the input stream.
 
 #### New JavaScript code modules
 
@@ -95,7 +95,7 @@ The following interfaces were implementation details that are no longer needed:
 
 ### Theme-related changes
 
-- The `omni.jar` file is now called [`omni.ja`](</en-US/docs/Mozilla/About_omni.ja_(formerly_omni.jar)>).
+- The `omni.jar` file is now called [`omni.ja`](</zh-TW/docs/Mozilla/About_omni.ja_(formerly_omni.jar)>).
 
 ### Preference changes
 

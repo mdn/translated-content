@@ -30,7 +30,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Element/button">&#x3C;button></a></code
+          ><a href="/zh-CN/docs/Web/HTML/Element/button">&#x3C;button></a></code
         >
       </td>
       <td>
@@ -43,7 +43,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
       <td>
         <p>
           <code
-            ><a href="/en-US/docs/Web/HTML/Element/select"
+            ><a href="/zh-CN/docs/Web/HTML/Element/select"
               >&#x3C;select></a
             ></code
           >
@@ -62,7 +62,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Element/textarea"
+          ><a href="/zh-CN/docs/Web/HTML/Element/textarea"
             >&#x3C;textarea></a
           ></code
         >
@@ -77,7 +77,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
       <td>
         Parent of an
         <code
-          ><a href="/en-US/docs/Web/HTML/Element/input">&#x3C;input></a></code
+          ><a href="/zh-CN/docs/Web/HTML/Element/input">&#x3C;input></a></code
         >
       </td>
       <td>

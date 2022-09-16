@@ -34,7 +34,7 @@ html, body, svg {
 
 ## Usage notes
 
-| Value         | [`<media-query-list>`](/en-US/docs/Web/CSS/@media#media-query-list) |
+| Value         | [`<media-query-list>`](/zh-CN/docs/Web/CSS/@media#media-query-list) |
 | ------------- | ------------------------------------------------------------------- |
 | Default value | `all`                                                               |
 | Animatable    | Yes                                                                 |

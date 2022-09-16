@@ -55,7 +55,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/options_ui
       <td>
         <code
           ><a
-            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles"
+            href="/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles"
             >browser_style</a
           ></code
         >

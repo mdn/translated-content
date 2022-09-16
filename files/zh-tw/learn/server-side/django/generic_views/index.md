@@ -12,7 +12,7 @@ slug: Learn/Server-side/Django/Generic_views
       <th scope="row">前提:</th>
       <td>
         Complete all previous tutorial topics, including
-        <a href="/en-US/docs/Learn/Server-side/Django/Home_page"
+        <a href="/zh-TW/docs/Learn/Server-side/Django/Home_page"
           >Django Tutorial Part 5: Creating our home page</a
         >.
       </td>

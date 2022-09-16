@@ -22,9 +22,9 @@ slug: Web/API/SubtleCrypto
 
 这些函数你可以用来实现系统中的隐私和身份验证等安全功能。**SubtleCrypto** API 提供了如下加密函数：
 
-- [`sign()`](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/sign) 、 [`verify()`](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/verify): 创建和验证数字签名。
-- [`encrypt()`](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/encrypt) 和 [`decrypt()`](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/decrypt): 加密和解密数据。
-- [`digest()`](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest)：为数据生成一个定长的，防碰撞的消息摘要。
+- [`sign()`](/zh-CN/docs/Web/API/SubtleCrypto/sign) 、 [`verify()`](/zh-CN/docs/Web/API/SubtleCrypto/verify): 创建和验证数字签名。
+- [`encrypt()`](/zh-CN/docs/Web/API/SubtleCrypto/encrypt) 和 [`decrypt()`](/zh-CN/docs/Web/API/SubtleCrypto/decrypt): 加密和解密数据。
+- [`digest()`](/zh-CN/docs/Web/API/SubtleCrypto/digest)：为数据生成一个定长的，防碰撞的消息摘要。
 
 ### 密钥管理功能
 
@@ -32,7 +32,7 @@ slug: Web/API/SubtleCrypto
 
 #### 生成和派生密钥
 
-[`generateKey()`](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/generateKey) 和 [`deriveKey()`](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/deriveKey) 函数都可以创建一个新的 [`CryptoKey`](https://developer.mozilla.org/en-US/docs/Web/API/CryptoKey) 对象。
+[`generateKey()`](/zh-CN/docs/Web/API/SubtleCrypto/generateKey) 和 [`deriveKey()`](/zh-CN/docs/Web/API/SubtleCrypto/deriveKey) 函数都可以创建一个新的 [`CryptoKey`](/zh-CN/docs/Web/API/CryptoKey) 对象。
 
 不同之处在于 `generateKey()` 每次都会生成一个新的键值对， 而 `deriveKey()` 通过从基础密钥资源中生成一个新的密钥。如果为两个独立的`deriveKey()`提供相同的基础密钥资源，那么你会获得两个具有相同基础值的 `CryptoKey` 对象。如果你想通过密码派生加密密钥，然后从相同的密码派生相同的密钥以解密数据，那么这将会非常有用。
 
@@ -40,15 +40,15 @@ slug: Web/API/SubtleCrypto
 
 要在应用程序外部使密钥可用，您需要导出密钥，`exportKey()` 可以为你提供该功能。你可以选择多种导出格式。
 
-[`importKey()`](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey)与 `exportKey()` 刚好相反。你可以从其他系统导入密钥，并且支持像 [PKCS #8](https://tools.ietf.org/html/rfc5208) 和 [JSON Web Key](https://tools.ietf.org/html/rfc7517) 这样可以帮助你执行此操作的标准格式。`exportKey()` 函数以非标准格式导出密钥。
+[`importKey()`](/zh-CN/docs/Web/API/SubtleCrypto/importKey)与 `exportKey()` 刚好相反。你可以从其他系统导入密钥，并且支持像 [PKCS #8](https://tools.ietf.org/html/rfc5208) 和 [JSON Web Key](https://tools.ietf.org/html/rfc7517) 这样可以帮助你执行此操作的标准格式。`exportKey()` 函数以非标准格式导出密钥。
 
-如果密钥是敏感的，你需要使用 [`wrapKey()`](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/wrapKey), 该函数导出密钥并且使用另外一个密钥加密它。
+如果密钥是敏感的，你需要使用 [`wrapKey()`](/zh-CN/docs/Web/API/SubtleCrypto/wrapKey), 该函数导出密钥并且使用另外一个密钥加密它。
 
 `unwrapKey()` 与 `wrapKey()` 相反，该函数解密密钥后导入解密的密钥
 
 #### 存储密钥
 
-`CryptoKey`对象可以通过 [`structured clone algorithm`](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)来存储，这意味着你可以通过 web storage APIs 来存储和获取他们。更为规范的方式是通过使用[`IndexedDB API`](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) 来存储`CryptoKey`对象。
+`CryptoKey`对象可以通过 [`structured clone algorithm`](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)来存储，这意味着你可以通过 web storage APIs 来存储和获取他们。更为规范的方式是通过使用[`IndexedDB API`](/zh-CN/docs/Web/API/IndexedDB_API) 来存储`CryptoKey`对象。
 
 ### 支持的算法
 

@@ -99,14 +99,14 @@ _No change._
 
 Xray vision is now applied to JavaScript objects that are not themselves DOM objects: [Xrays for JavaScript objects](/zh-CN/docs/Xray_vision#Xrays_for_JavaScript_objects).
 
-A [`getDataDirectory()`](</en-US/Add-ons/Add-on_Manager/Addon#getDataDirectory()>) method has been added to [`Addon`](/zh-CN/Add-ons/Add-on_Manager/Addon) instances. This method returns the preferred location, within the current profile, for add-ons to store data.
+A `getDataDirectory()` method has been added to [`Addon`](/zh-CN/Add-ons/Add-on_Manager/Addon) instances. This method returns the preferred location, within the current profile, for add-ons to store data.
 
 ### Add-on SDK
 
 #### Highlights
 
-- Added [`exclude`](/en-US/Add-ons/SDK/High-Level_APIs/page-mod#PageMod%28options%29) option to `PageMod`.
-- Added [`anonymous`](/en-US/Add-ons/SDK/High-Level_APIs/request#Request%28options%29) option to `Request`.
+- Added [`exclude`](/zh-CN/Add-ons/SDK/High-Level_APIs/page-mod#PageMod%28options%29) option to `PageMod`.
+- Added [`anonymous`](/zh-CN/Add-ons/SDK/High-Level_APIs/request#Request%28options%29) option to `Request`.
 - [Add-on Debugger](/zh-CN/Add-ons/Add-on_Debugger) now includes a Console and a Scratchpad.
 
 #### Details

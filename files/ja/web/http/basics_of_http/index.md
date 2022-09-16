@@ -1,12 +1,6 @@
 ---
 title: HTTP の基本
 slug: Web/HTTP/Basics_of_HTTP
-tags:
-  - Guide
-  - HTTP
-  - ガイド
-  - 概要
-translation_of: Web/HTTP/Basics_of_HTTP
 ---
 {{HTTPSidebar}}
 

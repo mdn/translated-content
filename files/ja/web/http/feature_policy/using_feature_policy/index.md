@@ -1,20 +1,6 @@
 ---
 title: 機能ポリシーの使用
 slug: Web/HTTP/Feature_Policy/Using_Feature_Policy
-tags:
-  - Feature Policy
-  - Feature-Policy
-  - HTTP
-  - Permissions
-  - Privileges
-  - Reference
-  - Security
-  - access
-  - delegation
-  - header
-  - セキュリティ
-  - 機能ポリシー
-translation_of: Web/HTTP/Feature_Policy/Using_Feature_Policy
 ---
 {{HTTPSidebar}}
 
@@ -36,7 +22,7 @@ translation_of: Web/HTTP/Feature_Policy/Using_Feature_Policy
 - `'self'`: この機能はこの文書と、含まれるすべての閲覧コンテキスト (iframe) のうち、同じオリジンのものに許可されます。
 - `'src'`: (iframe の allow 属性のみ) この iframe に読み込まれた文書が iframe の {{HTMLElement('iframe','src','#Attributes')}} 属性の URL と同じオリジンから来ている限り、この機能はこの iframe で許可されます。
 - `'none'`: この機能は最上位および含まれる閲覧コンテキストで無効になります。
-- \<origin(s)>: この機能は特定のオリジン (例えば、 https\://example.com) で許可されます。オリジンは空白で区切ってください。
+- \<origin(s)>: この機能は特定のオリジン (例えば、 `https://example.com`) で許可されます。オリジンは空白で区切ってください。
 
 `*` の値 (すべてのオリジンで有効) または `'none'` (すべてのオリジンで無効) は単独でのみ使用できますが、 `'self'` と `'src'` は一つ以上のオリジンと一緒に使用することができます。
 

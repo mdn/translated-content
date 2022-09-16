@@ -11,7 +11,7 @@ original_slug: Web/API/DOMString/Binary
 
 かつては、バイナリーデータを扱うには、データを[文字列](/ja/docs/JavaScript/Reference/Global_Objects/String)として扱い、[`charCodeAt()`](/ja/docs/JavaScript/Reference/Global_Objects/String/charCodeAt) メソッドを使ってデータバッファー (つまりバイナリー文字列) からバイトを読むといった、模擬的な方法によらざるを得ませんでした。しかしこの方法は遅く、複数回の変換が必要になるため、エラーも起こしやすいものでした (特にバイナリーデータの構造が実際にはバイト単位ではなく、例えば 32 ビットの整数や実数である場合)。
 
-[JavaScript 型付き配列](/ja/docs/Web/JavaScript/Typed_arrays) を使えば、より効率的に生のバイナリーデータを処理することができます。また、[`StringView`](/ja/docs/Web/JavaScript/Typed_arrays/StringView) <span class="inlineIndicator" title="この API はネイティブではありません">非ネイティブ</span> コンストラクターは、型付き配列の 1 レベル上であり、[C 言語](https://ja.wikipedia.org/wiki/C%E8%A8%80%E8%AA%9E) に似た文字列用のインターフェイスを提供します。
+[JavaScript 型付き配列](/ja/docs/Web/JavaScript/Typed_arrays) を使えば、より効率的に生のバイナリーデータを処理することができます。また、[`StringView`](/ja/docs/Web/JavaScript/Typed_arrays/StringView) 非ネイティブ コンストラクターは、型付き配列の 1 レベル上であり、[C 言語](https://ja.wikipedia.org/wiki/C%E8%A8%80%E8%AA%9E) に似た文字列用のインターフェイスを提供します。
 
 ## 関連情報
 

@@ -120,10 +120,14 @@ console.log([0].concat(obj1, obj2));
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{jsxref("Array.push", "push")}} / {{jsxref("Array.pop", "pop")}} — add/remove elements from the end of the array
-- {{jsxref("Array.unshift", "unshift")}} / {{jsxref("Array.shift", "shift")}} — add/remove elements from the beginning of the array
-- {{jsxref("Array.splice", "splice")}} — add/remove elements from the specified location of the array
+- [Polyfill of `Array.prototype.concat` in `core-js` with fixes and implementation of modern behavior like `Symbol.isConcatSpreadable` support](https://github.com/zloirock/core-js#ecmascript-array)
+- {{jsxref("Array.push", "push")}} / {{jsxref("Array.pop", "pop")}} — add/remove
+  elements from the end of the array
+- {{jsxref("Array.unshift", "unshift")}} / {{jsxref("Array.shift", "shift")}} —
+  add/remove elements from the beginning of the array
+- {{jsxref("Array.splice", "splice")}} — add/remove elements from the specified
+  location of the array
 - {{jsxref("String.prototype.concat()")}}
-- {{jsxref("Symbol.isConcatSpreadable")}} – control flattening.
+- {{jsxref("Symbol.isConcatSpreadable")}} — control flattening.

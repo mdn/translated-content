@@ -21,7 +21,7 @@ new OffscreenCanvas(width, height);
 
 ## 示例
 
-创建一个离屏 Canvas 并且初始一个 [WebGL](/en-US/docs/Web/API/WebGL_API) 上下文：
+创建一个离屏 Canvas 并且初始一个 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 上下文：
 
 ```js
 var offscreen = new OffscreenCanvas(256, 256);

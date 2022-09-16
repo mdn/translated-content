@@ -42,7 +42,7 @@ A transceiver is uniquely identified using its {{domxref("RTCRtpTransceiver.mid"
 
 ## See also
 
-- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Introduction to the Real-time Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
+- [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API)
+- [Introduction to the Real-time Transport Protocol (RTP)](/zh-CN/docs/Web/API/WebRTC_API/Intro_to_RTP)
 - {{domxref("RTCPeerConnection.addTrack()")}} and {{domxref("RTCPeerConnection.addTransceiver()")}} both create transceivers
 - {{domxref("RTCRtpReceiver")}} and {{domxref("RTCRtpSender")}}

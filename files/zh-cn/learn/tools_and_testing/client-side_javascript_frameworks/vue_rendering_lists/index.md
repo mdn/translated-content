@@ -12,12 +12,12 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_li
       <th scope="row">Prerequisites:</th>
       <td>
         <p>
-          Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-          <a href="/en-US/docs/Learn/CSS">CSS</a>, and
-          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages,
+          Familiarity with the core <a href="/zh-CN/docs/Learn/HTML">HTML</a>,
+          <a href="/zh-CN/docs/Learn/CSS">CSS</a>, and
+          <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> languages,
           knowledge of the
           <a
-            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >terminal/command line</a
           >.
         </p>

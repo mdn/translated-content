@@ -1,13 +1,6 @@
 ---
 title: <frameset>
 slug: Web/HTML/Element/frameset
-tags:
-  - Deprecated
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/frameset
 ---
 {{HTMLRef}}{{Deprecated_header}}
 

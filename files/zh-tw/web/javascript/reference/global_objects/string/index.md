@@ -59,9 +59,9 @@ String(thing)
 
 有些時候，你的程式碼會包含非常長的字串。 為了不讓長字串無止盡地往下長，抑或是在你心血來潮的時候，你可能希望將這樣長的字串能夠斷成多行卻不影響到實際的內容。
 
-你可以用 [+](</en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition_()>) 運算子附加多個字串在一起，像是這樣：
+你可以用 [+](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#字串運算子) 運算子附加多個字串在一起，像是這樣：
 
-```plain
+```js
 let longString = "This is a very long string which needs " +
                  "to wrap across multiple lines because " +
                  "otherwise my code is unreadable.";

@@ -1,18 +1,6 @@
 ---
 title: Intl.Locale.prototype.weekInfo
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/weekInfo
-tags:
-  - 国際化
-  - Intl
-  - JavaScript
-  - プロパティ
-  - Locale
-  - ローカライズ
-  - プロトタイプ
-  - リファレンス
-  - weekInfo
-browser-compat: javascript.builtins.Intl.Locale.weekInfo
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/weekInfo
 ---
 {{JSRef}}
 

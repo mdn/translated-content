@@ -307,44 +307,46 @@ true/false テスト（例えば条件内 - [below](#conditionals)参照）を�
       <td><code>===</code></td>
       <td>厳密に等しい (全く同じかどうか)</td>
       <td>
-        <pre
-          class="brush: js line-numbers language-js notranslate"
-        ><code class="language-js"><span class="number token">5</span> <span class="operator token">===</span> <span class="number token">2</span> <span class="operator token">+</span> <span class="number token">4</span> <span class="comment token">// false</span>
-<span class="string token">'Chris'</span> <span class="operator token">===</span> <span class="string token">'Bob'</span> <span class="comment token">// false</span>
-<span class="number token">5</span> <span class="operator token">===</span> <span class="number token">2</span> <span class="operator token">+</span> <span class="number token">3</span> <span class="comment token">// true</span>
-<span class="number token">2</span> <span class="operator token">===</span> <span class="string token">'2'</span> <span class="comment token">// false; number versus string</span></code></pre>
+        <pre class="brush: js">
+5 === 2 + 4 // false
+'Chris' === 'Bob' // false
+5 === 2 + 3 // true
+2 === '2' // false; number versus string
+</pre
+        >
       </td>
     </tr>
     <tr>
       <td><code>!==</code></td>
       <td>等しくない (違うかどうか)</td>
       <td>
-        <pre
-          class="brush: js line-numbers language-js notranslate"
-        ><code class="language-js"><span class="number token">5</span> <span class="operator token">!==</span> <span class="number token">2</span> <span class="operator token">+</span> <span class="number token">4</span> <span class="comment token">// true</span>
-<span class="string token">'Chris'</span> <span class="operator token">!==</span> <span class="string token">'Bob'</span> <span class="comment token">// true</span>
-<span class="number token">5</span> <span class="operator token">!==</span> <span class="number token">2</span> <span class="operator token">+</span> <span class="number token">3</span> <span class="comment token">// false</span>
-<span class="number token">2</span> <span class="operator token">!==</span> <span class="string token">'2'</span> <span class="comment token">// true; number versus string</span></code></pre>
+        <pre class="brush: js">
+5 !== 2 + 4 // true
+'Chris' !== 'Bob' // true
+5 !== 2 + 3 // false
+2 !== '2' // true; number versus string
+</pre
+        >
       </td>
     </tr>
     <tr>
       <td><code>&#x3C;</code></td>
       <td>小なり</td>
       <td>
-        <pre
-          class="brush: js line-numbers language-js notranslate"
-        ><code class="language-js"><span class="number token">6</span> <span class="operator token">&#x3C;</span> <span class="number token">10</span> <span class="comment token">// true</span>
-<span class="number token">20</span> <span class="operator token">&#x3C;</span> <span class="number token">10</span> <span class="comment token">// false</span></code></pre>
+        <pre class="brush: js">
+6 &#x3C; 10 // true
+20 &#x3C; 10 // false</pre
+        >
       </td>
     </tr>
     <tr>
       <td><code>></code></td>
       <td>大なり</td>
       <td>
-        <pre
-          class="brush: js line-numbers language-js notranslate"
-        ><code class="language-js"><span class="number token">6</span> <span class="operator token">></span> <span class="number token">10</span> <span class="comment token">// false</span>
-<span class="number token">20</span> <span class="operator token">></span> <span class="number token">10</span>  <span class="comment token">// true</span></code></pre>
+        <pre class="brush: js">
+6 > 10 // false
+20 > 10  // true</pre
+        >
       </td>
     </tr>
   </thead>

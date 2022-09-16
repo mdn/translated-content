@@ -15,7 +15,7 @@ var successBool = window.navigator.vibrate(pattern);
 ```
 
 - _pattern_
-  - : 提供一个震动、暂停间隔的模式。每一个值表示交替震动或者暂停的毫秒数。你可以提供一个单个的值（震动一次的毫秒数）或者一个包含整数的数组来交替的震动、暂停、震动。详情参见 [Vibration API](/en-US/docs/WebAPI/Vibration)。
+  - : 提供一个震动、暂停间隔的模式。每一个值表示交替震动或者暂停的毫秒数。你可以提供一个单个的值（震动一次的毫秒数）或者一个包含整数的数组来交替的震动、暂停、震动。详情参见 [Vibration API](/zh-CN/docs/WebAPI/Vibration)。
 
 传递一个 `0`、一个空数组或者一个元素全部为 `0` 的数组会结束当前正在运行中的震动模式。
 
@@ -36,4 +36,4 @@ window.navigator.vibrate([100,30,100,30,100,200,200,30,200,30,200,200,100,30,100
 
 ## 更多
 
-- [Vibration API](/en-US/docs/WebAPI/Vibration)
+- [Vibration API](/zh-CN/docs/WebAPI/Vibration)

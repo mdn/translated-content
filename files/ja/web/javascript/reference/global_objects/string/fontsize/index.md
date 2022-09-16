@@ -1,17 +1,6 @@
 ---
 title: String.prototype.fontsize()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontsize
-tags:
-  - Deprecated
-  - HTML wrapper methods
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fontsize
-browser-compat: javascript.builtins.String.fontsize
 ---
 {{JSRef}} {{deprecated_header}}
 

@@ -74,7 +74,7 @@ handlePermission();
 
 ### 权限描述符
 
-{{domxref("Permissions.query()")}} 方法接受一个 `PermissionDescriptor` 字典作为参数 — 它包含你感兴趣的 API 的名称。一些 API 有继承自默认的 `PermissionDescriptor` 的更加复杂的 `PermissionDescriptor`s 以包含更多额外的信息。例如，`PushPermissionDescriptor` 也包含一个比尔值指定 [`userVisibleOnly`](https://developer.mozilla.org/en-US/docs/Web/API/PushManager/subscribe#Parameters) 是 `true` 还是 `false`.
+{{domxref("Permissions.query()")}} 方法接受一个 `PermissionDescriptor` 字典作为参数 — 它包含你感兴趣的 API 的名称。一些 API 有继承自默认的 `PermissionDescriptor` 的更加复杂的 `PermissionDescriptor`s 以包含更多额外的信息。例如，`PushPermissionDescriptor` 也包含一个比尔值指定 [`userVisibleOnly`](/zh-CN/docs/Web/API/PushManager/subscribe#Parameters) 是 `true` 还是 `false`.
 
 ### 重置权限
 

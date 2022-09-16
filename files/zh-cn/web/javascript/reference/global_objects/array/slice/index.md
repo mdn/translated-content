@@ -10,8 +10,10 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/slice
 
 ## 语法
 
-```plain
-arr.slice([begin[, end]])
+```js
+slice()
+slice(start)
+slice(start, end)
 ```
 
 ## 参数
@@ -193,7 +195,7 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Array.prototype.splice()")}}
 - {{jsxref("Function.prototype.call()")}}
