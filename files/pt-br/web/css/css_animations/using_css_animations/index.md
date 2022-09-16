@@ -93,8 +93,6 @@ O segundo (e último) keyframe ocorre na etapa 100% do progresso (ou seja, o úl
 
 ```
 
-A Caterpillar e a Alice se olharam por algum tempo em silêncio: Finalmente, a Caterpillar tirou o narguilé da boca e dirigiu-se Ela com uma voz lenta e sonolenta.
-
 {{EmbedLiveSample("Making_text_slide_across_the_browser_window","100%","250")}}
 
 ### Adicionando outro keyframe
@@ -132,8 +130,6 @@ p {
 
 ```
 
-A Caterpillar e a Alice se olharam por algum tempo em silêncio: Finalmente, a Caterpillar tirou o narguilé da boca e dirigiu-se Ela com uma voz lenta e sonolenta.
-
 Isso indica ao navegador que até atingir a etapa 75% do progresso da sequência da animação o elemento deve ter 25% no valor da sua margem esquerda e sua largura deve ser de 150%.
 
 {{EmbedLiveSample("Adicionando_outro_keyframe","100%","250")}}
@@ -167,8 +163,6 @@ p {
 ```html hidden
 
 ```
-
-A Caterpillar e a Alice se olharam por algum tempo em silêncio: Finalmente, a Caterpillar tirou o narguilé da boca e dirigiu-se Ela com uma voz linda e sonolenta.
 
 {{EmbedLiveSample("Faça_repetir-se","100%","250")}}
 
