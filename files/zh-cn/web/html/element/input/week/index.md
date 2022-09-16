@@ -347,7 +347,7 @@ function populateWeeks() {
 }
 ```
 
-> **备注：** 请记住，有些年份有 53 周（请参阅[每年的周数](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year))！在开发生产应用程序时，需要考虑到这一点。
+> **备注：** 请记住，有些年份有 53 周（请参阅[每年的周数](https://zh.wikipedia.org/wiki/ISO週日曆#每年的星期))！在开发生产应用程序时，需要考虑到这一点。
 
 ## 规范
 
