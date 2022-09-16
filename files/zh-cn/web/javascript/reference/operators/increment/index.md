@@ -1,5 +1,5 @@
 ---
-title: 自增 (++)
+title: 自增（++）
 slug: Web/JavaScript/Reference/Operators/Increment
 ---
 
