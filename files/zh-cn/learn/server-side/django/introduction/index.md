@@ -12,11 +12,11 @@ slug: Learn/Server-side/Django/Introduction
       <th scope="row">先决条件：</th>
       <td>
         基本的电脑知识。对
-        <a href="/en-US/docs/Learn/Server-side/First_steps"
+        <a href="/zh-CN/docs/Learn/Server-side/First_steps"
           >服务器端网站编程的一般了解</a
         >, 特别是
         <a
-          href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview"
+          href="/zh-CN/docs/Learn/Server-side/First_steps/Client-Server_overview"
           >网站中客户端 - 服务器交互的机制</a
         >.
       </td>

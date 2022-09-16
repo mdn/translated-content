@@ -52,7 +52,7 @@ ball.draw();</pre>
 
 <p>Agora que você tem a bola, Nós estamos prontos para adicionar uma animação como nós temos aprendido no <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">último capítulo</a> deste tutorial. Denovo, {{domxref("window.requestAnimationFrame()")}} ajuda-nos a controlar a animação. a bola pega o movimento adicionando um vetor de velocidade para a posição. Para cada frame, N[ós também {{domxref("CanvasRenderingContext2D.clearRect", "clear", "", 1)}}o canvas para remover velhor círculos da prioridade dos frames.</p>
 
-<pre class="brush: js; highlight:[8,9,24,25]">var canvas = document.getElementById('canvas');
+<pre class="brush: js">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var raf;
 

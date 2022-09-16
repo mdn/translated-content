@@ -15,11 +15,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
 
 <div>O método <strong><code>toLocaleTimeString()</code></strong> retorna uma string com uma representação sensível ao idioma de uma porção de tempo desta data. Os novos argumentos <code>locales</code> e <code>options</code> possibilitam aplicações especificarem que formato de linguagem deve ser usado, podendo customizar o comportamento da função. Em implementações antigas, que ignoram os argumentos <code>locales</code> e <code>options</code>, o local utilizado e o formato retornado da string são implementações completamente dependentes.</div>
 
-<div> </div>
-
 <div>{{EmbedInteractiveExample("pages/js/date-tolocaletimestring.html")}}</div>
-
-<p class="hidden">A fonte deste exemplo interativo é armazenado em um repositório do GitHub. Se você deseja contribuir em exemplos interativos, por favor, clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> e nos envie um pull request.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -88,7 +84,7 @@ console.log(date.toLocaleTimeString('ko-KR'));
 
 // Arabic na maiorias dos países que falam árabe usa-se os dígitos arábicos reais
 console.log(date.toLocaleTimeString('ar-EG'));
-// → "<span dir="rtl">٧:٠٠:٠٠ م</span>"
+// → "٧:٠٠:٠٠ م"
 
 // quando solicitar um idioma que talvez não seja suportado, como o
 // Balinese, inclua um idioma de fallback, nesse caso Indonesian

@@ -14,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
 
 ## Global 实例
 
-所有的 `Global` 实例 继承自 `Global()` 构造函数 [prototype object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/prototype) — 修改会影响 所有 `Global` 实例。
+所有的 `Global` 实例 继承自 `Global()` 构造函数 [prototype object](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/prototype) — 修改会影响 所有 `Global` 实例。
 
 ### 实例属性
 
@@ -75,7 +75,7 @@ WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
 
 ## See also
 
-- [WebAssembly](/en-US/docs/WebAssembly) overview page
-- [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly](/zh-CN/docs/WebAssembly) overview page
+- [WebAssembly concepts](/zh-CN/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Using_the_JavaScript_API)
 - [Import/Export mutable globals proposal](https://github.com/WebAssembly/mutable-global/blob/master/proposals/mutable-global/Overview.md)

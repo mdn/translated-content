@@ -19,10 +19,10 @@ slug: Learn/CSS/Building_blocks/Overflowing_content
           href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
           >处理文件</a
         >的基础知识，HTML 基础（学习
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >），对 CSS 的工作原理有所了解（学习
-        <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>.)
+        <a href="/zh-CN/docs/Learn/CSS/First_steps">CSS first steps</a>.)
       </td>
     </tr>
     <tr>

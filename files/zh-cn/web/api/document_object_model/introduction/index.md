@@ -92,7 +92,7 @@ p_list = doc.getElementsByTagName("para");
         <code><strong>ownerDocument</strong></code> 属性返回它所属于
         <code>document</code> ) ，这个对象就是 root
         <code>document</code> 对象本身。
-        <a href="/en-US/docs/DOM/document"
+        <a href="/zh-CN/docs/DOM/document"
           >DOM <code>document</code> Reference</a
         >
         一章对 <code>document</code> 对象进行了描述。

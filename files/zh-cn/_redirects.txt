@@ -529,7 +529,6 @@
 /zh-CN/docs/Glossary/IP地址	/zh-CN/docs/Glossary/IP_Address
 /zh-CN/docs/Glossary/Serialize	/zh-CN/docs/Glossary/Serialization
 /zh-CN/docs/Glossary/Symbol	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol
-/zh-CN/docs/Glossary/jQuery	/zh-CN/docs/orphaned/Glossary/jQuery
 /zh-CN/docs/Glossary/主轴	/zh-CN/docs/Glossary/Main_Axis
 /zh-CN/docs/Glossary/交叉轴	/zh-CN/docs/Glossary/Cross_Axis
 /zh-CN/docs/Glossary/代理服务器	/zh-CN/docs/Glossary/Proxy_server
@@ -1383,7 +1382,7 @@
 /zh-CN/docs/Web/API/Document/touchcancel_event	/zh-CN/docs/conflicting/Web/API/Element/touchcancel_event
 /zh-CN/docs/Web/API/Document/touchend_event	/zh-CN/docs/Web/API/Element/touchend_event
 /zh-CN/docs/Web/API/Document/touchmove_event	/zh-CN/docs/conflicting/Web/API/Element/touchmove_event
-/zh-CN/docs/Web/API/Document/touchstart_event	/zh-CN/docs/conflicting/Web/API/Element/touchstart_event
+/zh-CN/docs/Web/API/Document/touchstart_event	/zh-CN/docs/Web/API/Element/touchstart_event
 /zh-CN/docs/Web/API/Document/width	/zh-CN/docs/Web/API/Element/clientWidth
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/activeElement	/zh-CN/docs/Web/API/Document/activeElement
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/elementFromPoint	/zh-CN/docs/Web/API/Document/elementFromPoint
@@ -1586,6 +1585,7 @@
 /zh-CN/docs/Web/API/HTMLHyperlinkElementUtils/search	/zh-CN/docs/Web/API/HTMLAnchorElement/search
 /zh-CN/docs/Web/API/HTMLHyperlinkElementUtils/toString	/zh-CN/docs/Web/API/HTMLAnchorElement/toString
 /zh-CN/docs/Web/API/HTMLHyperlinkElementUtils/username	/zh-CN/docs/Web/API/HTMLAnchorElement/username
+/zh-CN/docs/Web/API/HTMLMediaElement/onerror	/zh-CN/docs/conflicting/Web/API/HTMLMediaElement/error_event
 /zh-CN/docs/Web/API/HTMLTableElement.deleteTHead	/zh-CN/docs/Web/API/HTMLTableElement/deleteTHead
 /zh-CN/docs/Web/API/Headers/getAll	/zh-CN/docs/Web/API/Headers/get
 /zh-CN/docs/Web/API/IDBCursor.direction	/zh-CN/docs/Web/API/IDBCursor/direction

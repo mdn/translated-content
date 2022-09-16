@@ -24,7 +24,7 @@ slug: Web/API/Worker/messageerror_event
       <th scope="row">对应事件处理属性</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/API/Worker/onmessageerror"
+          ><a href="/zh-CN/docs/Web/API/Worker/onmessageerror"
             >onmessageerror</a
           ></code
         >

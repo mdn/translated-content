@@ -49,8 +49,8 @@ slug: Web/SVG/Element/mpath
 
 ### 全局属性
 
-- [核心属性](/en/SVG/Attribute#Core) »
-- [Xlink 属性](/en/SVG/Attribute#XLink) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [Xlink 属性](/zh-CN/SVG/Attribute#XLink) »
 - {{ SVGAttr("externalResourcesRequired") }}
 
 ### 专有属性
@@ -59,7 +59,7 @@ slug: Web/SVG/Element/mpath
 
 ## DOM 接口
 
-该元素实现了[`SVGMPathElement`](/en/DOM/SVGMPathElement)接口。
+该元素实现了[`SVGMPathElement`](/zh-CN/DOM/SVGMPathElement)接口。
 
 ## 相关的内容
 

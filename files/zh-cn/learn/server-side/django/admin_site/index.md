@@ -13,7 +13,7 @@ original_slug: learn/Server-side/Django/管理站点
       <th scope="row">前提：</th>
       <td>
         完成:
-        <a href="/en-US/docs/Learn/Server-side/Django/Models"
+        <a href="/zh-CN/docs/Learn/Server-side/Django/Models"
           >Django Tutorial Part 3: 使用模型</a
         >。
       </td>
