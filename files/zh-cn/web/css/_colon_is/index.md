@@ -149,18 +149,54 @@ function applyHandler(elem) {
 
 ```css
 /* 3-deep (or more) unordered lists use a square */
-ol ol ul,     ol ul ul,     ol menu ul,     ol dir ul,
-ol ol menu,   ol ul menu,   ol menu menu,   ol dir menu,
-ol ol dir,    ol ul dir,    ol menu dir,    ol dir dir,
-ul ol ul,     ul ul ul,     ul menu ul,     ul dir ul,
-ul ol menu,   ul ul menu,   ul menu menu,   ul dir menu,
-ul ol dir,    ul ul dir,    ul menu dir,    ul dir dir,
-menu ol ul,   menu ul ul,   menu menu ul,   menu dir ul,
-menu ol menu, menu ul menu, menu menu menu, menu dir menu,
-menu ol dir,  menu ul dir,  menu menu dir,  menu dir dir,
-dir ol ul,    dir ul ul,    dir menu ul,    dir dir ul,
-dir ol menu,  dir ul menu,  dir menu menu,  dir dir menu,
-dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
+ol ol ul,
+ol ul ul,
+ol menu ul,
+ol dir ul,
+ol ol menu,
+ol ul menu,
+ol menu menu,
+ol dir menu,
+ol ol dir,
+ol ul dir,
+ol menu dir,
+ol dir dir,
+ul ol ul,
+ul ul ul,
+ul menu ul,
+ul dir ul,
+ul ol menu,
+ul ul menu,
+ul menu menu,
+ul dir menu,
+ul ol dir,
+ul ul dir,
+ul menu dir,
+ul dir dir,
+menu ol ul,
+menu ul ul,
+menu menu ul,
+menu dir ul,
+menu ol menu,
+menu ul menu,
+menu menu menu,
+menu dir menu,
+menu ol dir,
+menu ul dir,
+menu menu dir,
+menu dir dir,
+dir ol ul,
+dir ul ul,
+dir menu ul,
+dir dir ul,
+dir ol menu,
+dir ul menu,
+dir menu menu,
+dir dir menu,
+dir ol dir,
+dir ul dir,
+dir menu dir,
+dir dir dir {
   list-style-type: square;
 }
 ```
@@ -277,6 +313,6 @@ some-element::after {
 
 ## 参见
 
-- {{CSSxRef(":where", ":where()")}}——类似于 `:is()`，但是其[优先级](/zh-CN/docs/Web/CSS/Specificity)为0。
+- {{CSSxRef(":where", ":where()")}}——类似于 `:is()`，但是其[优先级](/zh-CN/docs/Web/CSS/Specificity)为 0。
 - [选择器列表](/zh-CN/docs/Web/CSS/Selector_list)
-- [Web components](/zh-CN/docs/Web/Web_Components)
+- [Web component](/zh-CN/docs/Web/Web_Components)
