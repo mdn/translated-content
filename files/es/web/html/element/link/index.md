@@ -40,8 +40,10 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 - {{htmlattrdef("disabled")}} {{Non-standard_inline}}
   - : Este atributo es usado para deshabilitar una relación de enlace. Agregando programación, este atributo puede ser usado para habilitar o deshabilitar la relación con distintas hojas de estilos.
     > **Nota:** Aunque no hay atributo `disabled` en el estándar de HTML, **sí** hay un atributo `disabled` en el objeto DOM `HTMLLinkElement`.El uso de `disabled` como atributo HTML no es estándar, y solo puede ser usado en algunos navegadores ([W3 #27677](https://www.w3.org/Bugs/Public/show_bug.cgi?id=27677)). **No debe usarse**. Para lograr un efecto similar, se puede usar una de las siguientes técnicas:
+    >
     > - Si el atributo `disabled` fue añadido directamente al elemento en la página, no incluya el elemento {{HTMLElement("link")}} en vez de eso;
     > - Establezca la **propiedad** `disabled` del objeto DOM `StyleSheet` vía programación.
+    >
 - {{htmlattrdef("href")}}
   - : Este atributo especifica la {{glossary("URL")}} del recurso enlazado. La URL debe ser absoluta o relativa.
 - {{htmlattrdef("hreflang")}}
@@ -50,9 +52,11 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
   - : Contiene metadatos en línea, el valor criptográfico codificado a base 64 de un recurso (archivo) que se le está indicando al navegador que obtenga, el cual puede ser utilizado por el agente usuario para verificar si el recurso obtenido ha sido entregado libre de manipulaciones inesperadas. Véase [Integridad de subrecursos](/es/docs/Web/Security/Subresource_Integrity).
 - {{htmlattrdef("media")}}
   - : Este atributo especifica el tipo de medio al que aplica el recurso enlazado. Su valor debe ser un [media query](/es/docs/CSS/Media_queries). Este atributo es usado principalmente cuando se enlaza a una hoja de esetilos externa en la que se le permita al agenete usuario seleccionar la que mejor se adapte al dispositivo sobre el que se ejecuta.
-    > **Nota:** 
+    > **Nota:**
+    >
     > - En HTML 4, esto puede ser solamente una lista simple de literales de medios separadas por espacio, es decir, [tipos de medios y grupos](/es/docs/Web/CSS/@media), donde se definían valores para este atributo, tales como `print`, `screen`, `aural`, `braille`. HTML5 extiende esto a cualquier clase de [media queries](/es/docs/CSS/Media_queries), los cuales son un superconjunto de los valores permitidos de HTML 4.
     > - Los navegadores que no soporten los [Media Queries de CSS3](/es/docs/CSS/Media_queries) no necesariamente reconocerán el enlace adecuado; no olvide establecer enlaces de _fallback_, usando los conjuntos de media queriese definidos en HTML 4.
+
 - {{htmlattrdef("methods")}} {{Non-standard_inline}}
   - : El valor de este atributo provee información acerca de las funciones que podrían ser ejecutadas en un objeto. Los valores son generalmente indicados por el protocolo HTTP cuando se usa, pero podrían (por razones similares a las del atributo **title**) ser usados para incluir información de ayuda por adelantado en el enlace. Por ejemplo, el navegador podría elegir una representación diferente de un enlace como una función de los métodos especificados; algo que es buscable podría tener un ícono diferente, o un enlace externo podría dibujar una indicación de que se dejará el sitio actual. Este atributo no está bien comprendido, ni soportado, aun por el navegador en el que se definió, Internet Explorer 4. Véase [Propiedades de métodos (MSDN)](http://msdn.microsoft.com/en-us/library/ms534168%28VS.85%29.aspx).
 - {{htmlattrdef("referrerpolicy")}} {{experimental_inline}}
@@ -71,8 +75,10 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
     - `any`, significa que el ícono puede ser escalado a cualquier tamaño, ya que está en un formato vectorial, como `image/svg+xml`.
     - una lista de tamaños separados por espacios en blanco, cada uno en formato `<anchura en píxeles>`x`<altura en píxeles>` or `<anchura en píxeles>`X`<altura en píxeles>`. Cada uno de estos tamaños debe estar contenido en el recurso.
       > **Nota:**
+      >
       > - La mayoría de los formatos de ícono solo permiten almacenar un ícono; por lo que la mayoría de las ocasiones, el atributo {{htmlattrxref("sizes")}} contiene solamente una entrada. El formato ICO de Microsoft lo hace, así como el formato ICN de Apple. Siendo ICO más común, es el que se recomienda usar.
       > - iOS de Apple no soporta este atributo, por lo que iPhone y iPad de Apple usan [tipos de enlaces](/es/docs/Web/HTML/Tipos_de_enlaces) especiales, no estándares, para definir los íconos a usar como Web Clip o contenedor de inicio: apple-touch-icon y apple-touch-startup-icon.
+
 - {{htmlattrdef("target")}}{{Non-standard_inline}}
   - : Define el nombre del frame o ventana que tendrá la relación de enlace o que mostrará la representación de algun recurso enlazado.
 - {{htmlattrdef("title")}}

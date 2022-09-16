@@ -21,7 +21,8 @@ La [pseudoclase](/es/docs/Web/CSS/Pseudo-classes) **`:not()`** de [CSS](/es/docs
 }
 ```
 
-> **Nota:** 
+> **Nota:**
+>
 > - Se pueden escribir selectores inútiles usando esta pseudoclase. Por ejemplo, `:not(*)` coincide con cualquier elemento que no sea un elemento, por lo que la regla nunca se aplicará.
 > - Esta pseudoclase puede aumentar la [especificidad](/es/docs/Web/CSS/Specificity) de una regla. Por ejemplo, `#foo:not(#bar)` coincidirá con el mismo elemento que el `#foo` más simple, pero tiene una especificidad más alta.
 > - `:not(.foo)` coincidirá con cualquier cosa que no sea `.foo`, _incluidos {{HTMLElement("html")}} y {{HTMLElement("body")}}._
