@@ -131,9 +131,9 @@ use wasm_bindgen::prelude::*;
 
 第三行包括了一个将库中的代码引入到你的代码中的使用命令。在这个情况下，将会引入 `wasm_bindgen::prelude` 的全部模块。我们将在下一节中使用这些内容。
 
-在我们开始下一节之前，我们将讲一讲 `wasm-bindgen`.
+在我们开始下一节之前，我们将讲一讲 `wasm-bindgen`。
 
-`wasm-pack` 使用 `wasm-bindgen`，其它工具，去提供一个连接 JavaScript 和 Rust 的桥。它允许 JavaScript 使用 string 调用 Rust API，或者调用一个 Rust function 去捕获 JavaScript 异常。
+`wasm-pack` 使用另一个工具 `wasm-bindgen` 来提供 JavaScript 和 Rust 类型之间的桥梁。它允许 JavaScript 使用字符串调用 Rust API，或调用 Rust 函数来捕获 JavaScript 异常。
 
 我们将在我们的包中使用 `wasm-bindgen` 的功能。事实上，这是下一节的内容！
 

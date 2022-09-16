@@ -45,7 +45,7 @@ const args = [...arguments];
 > var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
 > ```
 
-如果调用的参数多于正式声明接受的参数，则可以使用`arguments`对象。这种技术对于可以传递可变数量的参数的函数很有用。使用 [`arguments.length`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length)来确定传递给函数参数的个数，然后使用`arguments`对象来处理每个参数。要确定函数[签名](/zh-CN/docs/Glossary/Signature/Function)中（输入）参数的数量，请使用[`Function.length`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/length)属性。
+如果调用的参数多于正式声明接受的参数，则可以使用`arguments`对象。这种技术对于可以传递可变数量的参数的函数很有用。使用 [`arguments.length`](/zh-CN/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length)来确定传递给函数参数的个数，然后使用`arguments`对象来处理每个参数。要确定函数[签名](/zh-CN/docs/Glossary/Signature/Function)中（输入）参数的数量，请使用[`Function.length`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Function/length)属性。
 
 ### 对参数使用 `typeof`
 

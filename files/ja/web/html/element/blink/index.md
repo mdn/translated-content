@@ -1,15 +1,6 @@
 ---
 title: '<blink>: 点滅文字列要素'
 slug: Web/HTML/Element/blink
-tags:
-  - Blink
-  - 要素
-  - HTML
-  - 非推奨
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.blink
-translation_of: Web/HTML/Element/blink
 ---
 
 {{HTMLRef}}{{Deprecated_header}}

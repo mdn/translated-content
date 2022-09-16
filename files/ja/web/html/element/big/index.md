@@ -1,14 +1,6 @@
 ---
 title: '<big>: 大きめの文字列要素'
 slug: Web/HTML/Element/big
-tags:
-  - 要素
-  - HTML
-  - 非推奨
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.big
-translation_of: Web/HTML/Element/big
 ---
 
 {{deprecated_header}}

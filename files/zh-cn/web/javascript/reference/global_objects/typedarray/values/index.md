@@ -52,7 +52,7 @@ console.log(eArr.next().value); // 50
 
 ## 另见
 
-- [JavaScript 类型化数组](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}
 - {{jsxref("TypedArray.prototype.keys()")}}

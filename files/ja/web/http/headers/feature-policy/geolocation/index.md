@@ -1,14 +1,6 @@
 ---
 title: 'Feature-Policy: geolocation'
 slug: Web/HTTP/Headers/Feature-Policy/geolocation
-tags:
-  - 機能ポリシー
-  - Geolocation
-  - HTTP
-  - ヘッダー
-  - 実験的
-browser-compat: http.headers.Feature-Policy.geolocation
-translation_of: Web/HTTP/Headers/Feature-Policy/geolocation
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}
 

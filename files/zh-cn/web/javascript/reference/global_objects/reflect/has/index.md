@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/has
 ---
 {{JSRef}}
 
-静态方法 **`Reflect.has()`** 作用与 [`in` 操作符](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in) 相同。
+静态方法 **`Reflect.has()`** 作用与 [`in` 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/in) 相同。
 
 ## 句法
 
@@ -29,7 +29,7 @@ Reflect.has(target, propertyKey)
 
 ## 描述
 
-`Reflect.has` 用于检查一个对象是否拥有某个属性， 相当于[`in` 操作符](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in) 。
+`Reflect.has` 用于检查一个对象是否拥有某个属性， 相当于[`in` 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/in) 。
 
 ## 示例
 
@@ -61,4 +61,4 @@ Reflect.has(obj, "dormitory"); // false
 ## 相关连接
 
 - {{jsxref("Reflect")}}
-- [`in` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in)
+- [`in` operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/in)

@@ -1,24 +1,6 @@
 ---
 title: '<nav>: ナビゲーションセクション要素'
 slug: Web/HTML/Element/nav
-tags:
-  - Element
-  - HTML
-  - HTML セクション
-  - HTML:フローコンテンツ
-  - HTML:区分コンテンツ
-  - HTML:知覚可能コンテンツ
-  - Reference
-  - Sections
-  - Web
-  - nav
-  - ウェブ
-  - セクション
-  - ナビゲーション
-  - リファレンス
-  - リンク
-  - 要素
-translation_of: Web/HTML/Element/nav
 ---
 {{HTMLRef}}
 

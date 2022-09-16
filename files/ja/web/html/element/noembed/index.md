@@ -1,17 +1,6 @@
 ---
 title: '<noembed>: 埋め込みフォールバック要素'
 slug: Web/HTML/Element/noembed
-tags:
-  - 要素
-  - Embedded content
-  - Embedding
-  - HTML
-  - Non-standard
-  - 非推奨
-  - リファレンス
-  - noembed
-browser-compat: html.elements.noembed
-translation_of: Web/HTML/Element/noembed
 ---
 
 {{HTMLRef}}{{Non-standard_header}}{{deprecated_header}}

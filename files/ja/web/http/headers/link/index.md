@@ -1,17 +1,6 @@
 ---
 title: Link
 slug: Web/HTTP/Headers/Link
-tags:
-  - Draft
-  - HTTP
-  - HTTP ヘッダー
-  - Link
-  - NeedsCompatTable
-  - NeedsContent
-  - NeedsSyntax
-  - リファレンス
-browser-compat: http.headers.Link
-translation_of: Web/HTTP/Headers/Link
 ---
 {{HTTPSidebar}}
 

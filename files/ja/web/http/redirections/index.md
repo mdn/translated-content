@@ -1,11 +1,6 @@
 ---
 title: HTTP のリダイレクト
 slug: Web/HTTP/Redirections
-tags:
-  - Guide
-  - HTTP
-  - redirects
-translation_of: Web/HTTP/Redirections
 ---
 {{HTTPSidebar}}
 

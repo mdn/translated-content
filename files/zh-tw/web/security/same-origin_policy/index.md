@@ -6,7 +6,7 @@ slug: Web/Security/Same-origin_policy
 
 ## 同源定義
 
-所謂同源是指兩份網頁具備相同協定、埠號 (如果有指定) 以及主機位置，下表提供了一些例子展示那些來源和 http\://store.company.com/dir/page.html 屬於同源:
+所謂同源是指兩份網頁具備相同協定、埠號 (如果有指定) 以及主機位置，下表提供了一些例子展示那些來源和 `http://store.company.com/dir/page.html` 屬於同源:
 
 | URL                                               | Outcome | Reason       |
 | ------------------------------------------------- | ------- | ------------ |
@@ -22,13 +22,13 @@ Cookie 的來源定義和上述不一樣。
 
 ## 變更來源
 
-網頁能夠有限地變更來源，我們可以將 {{domxref("document.domain")}} 存為目前網域後半部，然後較短的網域就會作為之後來源檢查，譬如我們在 http\://store.company.com/dir/other.html 的文件裡執行以下程式碼:
+網頁能夠有限地變更來源，我們可以將 {{domxref("document.domain")}} 存為目前網域後半部，然後較短的網域就會作為之後來源檢查，譬如我們在 `http://store.company.com/dir/other.html` 的文件裡執行以下程式碼:
 
 ```plain
 document.domain = "company.com";
 ```
 
-執行完後，網頁能以 http\://company.com/dir/page.html 通過同源檢查。然而基於同源檢查，company.com 無法將 document.domain 存為 othercompany.com。
+執行完後，網頁能以 `http://company.com/dir/page.html` 通過同源檢查。然而基於同源檢查，company.com 無法將 document.domain 存為 othercompany.com。
 
 任何變更 document.domain 行為，包括 document.domain = document.domain 都會導致埠號重置為 null，因此無法只藉由執行 document.domain = "company.com" 讓 company.com:8080 和 company.com 互動，必須兩邊都重新設定好讓埠號都一致重置為 null。
 

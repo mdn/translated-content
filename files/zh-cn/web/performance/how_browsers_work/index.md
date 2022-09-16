@@ -160,7 +160,7 @@ CSSOM 树包括来自用户代理样式表的样式。浏览器从适用于节�
 
 像 [`<head>`](/zh-CN/docs/Web/HTML/Element/head) 和它的子节点以及任何具有 `display: none` 样式的结点，例如 `script { display: none; }`（在 user agent stylesheets 可以看到这个样式）这些标签将不会显示，也就是它们不会出现在 Render 树上。具有 `visibility: hidden` 的节点会出现在 Render 树上，因为它们会占用空间。由于我们没有给出任何指令来覆盖用户代理的默认值，因此上面代码示例中的 `script` 节点将不会包含在 Render 树中。
 
-每个可见节点都应用了其 CSSOM 规则。Render 树保存所有具有内容和计算样式的可见节点——将所有相关样式匹配到 DOM 树中的每个可见节点，并根据 [CSS 级联](/en-US/docs/Web/CSS/Cascade)确定每个节点的计算样式。
+每个可见节点都应用了其 CSSOM 规则。Render 树保存所有具有内容和计算样式的可见节点——将所有相关样式匹配到 DOM 树中的每个可见节点，并根据 [CSS 级联](/zh-CN/docs/Web/CSS/Cascade)确定每个节点的计算样式。
 
 ### Layout
 

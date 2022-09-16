@@ -18,11 +18,11 @@ slug: Web/CSS/basic-shape
 
 以下为当前支持的图形。所有\<basic-shape>值都由函数表达式定义，并且遵循属性值定义语法（[value definition syntax](/zh-CN/docs/Web/CSS/Value_definition_syntax)）。
 
-- `inset()`
+- {{cssxref("basic-shape/inset","inset()")}}
 
   - : 定义了一个插进的长方形。
 
-    ```
+    ```css
     inset( <shape-arg>{1,4} [round <border-radius>]? )
     ```
 
@@ -32,7 +32,7 @@ slug: Web/CSS/basic-shape
 
     如果一对插进图形在通过堆叠产生的高于当前使用维度的维度中（例如，左右插进图像相叠 75%）将会定义一个包围不了任何区域的图形。这种情况会在元素中产生一个空白且平坦的区域。
 
-- `circle()`
+- {{cssxref("basic-shape/circle","circle()")}}
 
   - : 使用一个半径和一个位置定义一个圆形。
 
@@ -44,7 +44,7 @@ slug: Web/CSS/basic-shape
 
     {{cssxref("&lt;position&gt;")}} 参数定义了圆心的位置。省缺值为盒模型的中心。
 
-- `ellipse()`
+- {{cssxref("basic-shape/ellipse","ellipse()")}}
 
   - : 使用两个半径和一个位置定义一个椭圆。
 
@@ -56,7 +56,7 @@ slug: Web/CSS/basic-shape
 
     \<position>参数定义了椭圆形圆心的位子。其省缺值为盒模型的中心。
 
-- `polygon()`
+- {{cssxref("basic-shape/polygon","polygon()")}}
 
   - : 使用一个 SVG {{SVGAttr("fill-rule")}} 和一组顶点定义一个多边形，
 
@@ -68,21 +68,21 @@ slug: Web/CSS/basic-shape
 
     每一对在列表中的参数都代表了多边形顶点的坐标， _xi_ 与 _yi_ ，i 代表顶点的编号，即，第 i 个顶点。
 
-- `path()`{{Experimental_Inline}}
+- {{cssxref("path","path()")}}
 
-  - : 使用一个 SVG {{SVGAttr("fill-rule")}} 和 SVG \[路径定义]\(/en-US/docs/Web/SVG/Attribute/d)定义一个形状。
+  - : 使用一个 SVG {{SVGAttr("fill-rule")}} 和 SVG [路径定义](/zh-CN/docs/Web/SVG/Attribute/d)来定义一个形状。
 
-    ```
+    ```css
     path( [<fill-rule>,]? <string>)
     ```
 
-    可选的 `<fill-rule>` 表示 [filling rule](/zh-CN/docs/Web/SVG/Attribute/fill-rule) 填充规则。可选 `nonzero`（非零环绕规则）和 `evenodd`（奇偶规则） 。 默认是（Default value when omitted）`nonzero`。
+    可选的 `<fill-rule>` 表示 {{SVGAttr("fill-rule")}} 填充规则。可选 `nonzero`（非零环绕规则）和 `evenodd`（奇偶规则）。如果省略，则默认是 `nonzero`。
 
     参数 \<string> 是用引号包含的 [SVG Path](/zh-CN/docs/SVG/Attribute/d) 字符串
 
 上文未曾解释的参数如下：
 
-```
+```css
 <shape-arg> = <length> | <percentage>
 <shape-radius> = <length> | <percentage> | closest-side | farthest-side
 ```

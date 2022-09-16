@@ -17,11 +17,11 @@ oReq.send();</pre>
 
 <h2 id="Tipos_de_Requisições">Tipos de Requisições</h2>
 
-<p>Uma requisição feita via XMLHttpRequest pode buscar dados de duas maneiras, sícrona e assíncrona. <span style="line-height: 1.5;">O tipo de requisição é dado pelo argumento <code>async</code> que é opcional (terceiro argumento) e é definido no método XMLHttpRequest </span><a href="/en-US/docs/DOM/XMLHttpRequest#open()" style="line-height: 1.5;" title="DOM/XMLHttpRequest#open()">open()</a><span style="line-height: 1.5;">. Se esse argumento for <code>true</code> ou não especificado, o <code>XMLHttpRequest</code> será processado de maneira assíncrona, caso contrário o processamento será síncrono. Uma discussão detalhada e demonstrações desses dois tipos podem ser encontradas na página </span><a href="/en-US/docs/DOM/XMLHttpRequest/Synchronous_and_Asynchronous_Requests" style="line-height: 1.5;" title="Synchronous and Asynchronous Requests">requisições síncronas e assíncronas</a><span style="line-height: 1.5;">. No geral a melhor prática é a das solicitações assíncronas.</span></p>
+<p>Uma requisição feita via XMLHttpRequest pode buscar dados de duas maneiras, sícrona e assíncrona. O tipo de requisição é dado pelo argumento <code>async</code> que é opcional (terceiro argumento) e é definido no método XMLHttpRequest <a href="/en-US/docs/DOM/XMLHttpRequest#open()" style="line-height: 1.5;" title="DOM/XMLHttpRequest#open()">open()</a>. Se esse argumento for <code>true</code> ou não especificado, o <code>XMLHttpRequest</code> será processado de maneira assíncrona, caso contrário o processamento será síncrono. Uma discussão detalhada e demonstrações desses dois tipos podem ser encontradas na página <a href="/en-US/docs/DOM/XMLHttpRequest/Synchronous_and_Asynchronous_Requests" style="line-height: 1.5;" title="Synchronous and Asynchronous Requests">requisições síncronas e assíncronas</a>. No geral a melhor prática é a das solicitações assíncronas.</p>
 
 <h2 id="Manipulando_Respostas">Manipulando Respostas</h2>
 
-<p>Existem vários tipos de <a href="http://www.w3.org/TR/XMLHttpRequest2/#response">atributos de resposta</a> definidos pela especificação da W3C para o  XMLHttpRequest.  Eles informam ao cliente que efetuou a requisição XMLHttpRequest informações importantes sobre o status da resposta. Em alguns casos onde se lida com tipos de resposa de não-texto, os tipos de resposta podem envolver alguma manipulação e/ou análise conforme descrito nas seções seguintes<span style="line-height: 1.572;">.</span></p>
+<p>Existem vários tipos de <a href="http://www.w3.org/TR/XMLHttpRequest2/#response">atributos de resposta</a> definidos pela especificação da W3C para o  XMLHttpRequest.  Eles informam ao cliente que efetuou a requisição XMLHttpRequest informações importantes sobre o status da resposta. Em alguns casos onde se lida com tipos de resposa de não-texto, os tipos de resposta podem envolver alguma manipulação e/ou análise conforme descrito nas seções seguintes.</p>
 
 <h3 id="Analisando_e_manipulando_a_propriedade_responseXML">Analisando e manipulando a propriedade <code>responseXML</code></h3>
 
@@ -49,9 +49,9 @@ oReq.send();</pre>
  <li><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/RegExp" title="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/regexp">RegExp </a>pode se usada se você sempre conhece o conteúdo HTML <code>responseText </code>de que tem em mãos. Você pode quere remover quebras de linha, se você usar RegExp para varrer no que diz respeito a quebra de linhas. Contudo, este método é um "último recurso" uma vez que se o código HTML mudar um pouco, o método provavelmente irá falhar.</li>
 </ol>
 
-<h2 id="Manipulação_de_dados_binários"><span class="short_text" id="result_box" lang="pt"><span class="hps">Manipulação</span> <span class="hps">de dados binários</span></span></h2>
+<h2 id="Manipulação_de_dados_binários">Manipulação de dados binários</h2>
 
-<p>Apesar de <code>XMLHttpRequest</code> ser mais comumente usado para enviar e receber dados textual, <span id="result_box" lang="pt"><span class="hps">ele pode</span> <span class="hps">ser</span> <span class="hps">utilizado</span> <span class="hps">para enviar</span> <span class="hps">e</span> <span class="hps">receber</span> <span class="hps">conteúdo binário</span></span>.<span id="result_box" lang="pt"><span class="hps"> Existem vários</span> <span class="hps">métodos</span> <span class="hps">bem</span> <span class="hps">testados</span> <span class="hps">para</span> <span class="alt-edited hps">forçar</span> <span class="hps">a</span> <span class="hps">resposta</span> <span class="hps">de</span> <span class="hps">um XMLHttpRequest</span> <span class="hps">para</span> <span class="hps">o envio de dados</span> <span class="hps">binário</span></span>. Eles envolvem a utilização do método  .overrideMimeType()  sobre o objeto  XMLHttpRequest e é uma solução viável.</p>
+<p>Apesar de <code>XMLHttpRequest</code> ser mais comumente usado para enviar e receber dados textual, ele pode ser utilizado para enviar e receber conteúdo binário. Existem vários métodos bem testados para forçar a resposta de um XMLHttpRequest para o envio de dados binário. Eles envolvem a utilização do método  .overrideMimeType()  sobre o objeto  XMLHttpRequest e é uma solução viável.</p>
 
 <pre class="brush:js">var oReq = new XMLHttpRequest();
 oReq.open("GET", url, true);
@@ -77,7 +77,7 @@ oReq.send();
 
 <h2 id="Monitorando_o_progresso">Monitorando o progresso</h2>
 
-<p><code>XMLHttpRequest</code> <span id="result_box" lang="pt"><span class="hps">fornece a capacidade de</span> <span class="hps">ouvir vários</span> <span class="hps">eventos que podem</span> <span class="hps">ocorrer</span> <span class="hps">enquanto o</span> <span class="hps">pedido está sendo processado</span></span>. <span id="result_box" lang="pt"><span class="alt-edited">Isso inclui notificações periódicas de progresso, notificações de erro e assim por diante</span></span>.</p>
+<p><code>XMLHttpRequest</code> fornece a capacidade de ouvir vários eventos que podem ocorrer enquanto o pedido está sendo processado. Isso inclui notificações periódicas de progresso, notificações de erro e assim por diante.</p>
 
 <p>Suporte para evento de progresso DOM monitorando a conexão <code>XMLHttpRequest</code> transfers siga a Web API <a href="http://dev.w3.org/2006/webapi/progress/Progress.html">specification for progress events</a>: estes eventos implementam a interface {{domxref("ProgressEvent")}} .</p>
 
@@ -92,26 +92,26 @@ oReq.open();
 
 // ...A transferência foi cancelada pelo usuário
 
-// <span id="result_box" lang="pt"><span class="hps">progresso</span> <span class="alt-edited hps">de transferências do</span> <span class="hps">servidor para o cliente</span> <span class="atn hps">(</span><span>downloads)</span></span>
+// progresso de transferências do servidor para o cliente (downloads)
 function updateProgress (oEvent) {
   if (oEvent.lengthComputable) {
     var percentComplete = oEvent.loaded / oEvent.total;
     // ...
   } else {
-    // <span id="result_box" lang="pt"><span class="hps">Não é possível</span> <span class="hps">calcular</span> <span class="hps">informações de progresso</span> <span class="alt-edited hps">uma vez que</span> <span class="alt-edited hps">a dimensão total</span> <span class="alt-edited hps">é desconhecida</span></span>
+    // Não é possível calcular informações de progresso uma vez que a dimensão total é desconhecida
   }
 }
 
 function transferComplete(evt) {
-  alert("<span class="short_text" id="result_box" lang="pt"><span class="hps">A</span> <span class="alt-edited hps">transferência foi concluída</span></span>.");
+  alert("A transferência foi concluída.");
 }
 
 function transferFailed(evt) {
-  alert("<span class="short_text" id="result_box" lang="pt"><span class="alt-edited hps">Um erro ocorreu</span> <span class="hps">durante a transferência</span> <span class="hps">do arquivo</span></span>.");
+  alert("Um erro ocorreu durante a transferência do arquivo.");
 }
 
 function transferCanceled(evt) {
-  alert("<span class="short_text" id="result_box" lang="pt"><span class="hps">A transferência</span> <span class="hps">foi cancelada</span> <span class="hps">pelo usuário</span></span>.");
+  alert("A transferência foi cancelada pelo usuário.");
 }</pre>
 
 <p>Lines 3-6 adiciona receptores de eventos (event listeners) para os vários que são enviados ao executar uma transferência de dados usando <code>XMLHttpRequest</code>.</p>
@@ -120,7 +120,7 @@ function transferCanceled(evt) {
 
 <p>O manipulador de evento  de prograsso, especificado pela função <code>updateProgress()</code> neste exemplo, recebe o número total de bytes para transferir, bem como o número de bytes transferidos até o momento em total de eventos e campos  carregados . No entanto, se o campo lengthComputable é false, o comprimento total não é conhecido e será zero..</p>
 
-<p><span id="result_box" lang="pt"><span class="alt-edited">Eventos de progresso existem para ambos as transferências de download e upload.</span></span> The download events are fired on the <code>XMLHttpRequest</code> object itself, as shown in the above sample. The upload events are fired on the <code>XMLHttpRequest.upload</code> object, as shown below:</p>
+<p>Eventos de progresso existem para ambos as transferências de download e upload. The download events are fired on the <code>XMLHttpRequest</code> object itself, as shown in the above sample. The upload events are fired on the <code>XMLHttpRequest.upload</code> object, as shown below:</p>
 
 <pre class="brush:js">var oReq = new XMLHttpRequest();
 
@@ -132,16 +132,16 @@ oReq.upload.addEventListener("abort", transferCanceled, false);
 oReq.open();
 </pre>
 
-<div class="note"><strong>Nota:</strong> <span id="result_box" lang="pt"><span class="alt-edited hps">eventos de progresso</span> <span class="hps">não estão disponíveis para</span> <span class="hps">o arquivo</span></span><code>:</code> protocol.</div>
+<div class="note"><strong>Nota:</strong> eventos de progresso não estão disponíveis para o arquivo<code>:</code> protocol.</div>
 
 <div class="note"><strong>Nota</strong>: Atualmente, existem bugs em aberto para o evento de progresso que continua fetando a versão 25 do Firefox sobre <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=908375">OS X</a> e <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=786953">Linux</a>.</div>
 
 <div class="note">
-<p><strong>Nota:</strong> Iniciando no {{Gecko("9.0")}}, <span id="result_box" lang="pt"><span class="hps">eventos de progresso</span> <span class="alt-edited hps">agora podem</span> <span class="alt-edited hps">ser invocados</span> <span class="alt-edited hps">a entrar para</span> <span class="hps">cada</span> <span class="hps">pedaço de</span> <span class="hps">dados recebidos</span></span>, <span id="result_box" lang="pt"><span class="alt-edited">incluindo o último bloco, nos casos em que o último pacote é recebido e a conexão fechada antes do evento progresso ser disparado</span></span>. Neste caso, o evento de progresso é automaticamente <span id="result_box" lang="pt"><span class="hps">acionado quando o</span> <span class="alt-edited hps">evento load</span> <span class="hps">ocorre para</span> <span class="alt-edited hps">esse pacote</span></span>. <span id="result_box" lang="pt"><span class="alt-edited">Isso permite que você agora acompanhe de forma confiável apenas observando o evento de progresso</span></span></p>
+<p><strong>Nota:</strong> Iniciando no {{Gecko("9.0")}}, eventos de progresso agora podem ser invocados a entrar para cada pedaço de dados recebidos, incluindo o último bloco, nos casos em que o último pacote é recebido e a conexão fechada antes do evento progresso ser disparado. Neste caso, o evento de progresso é automaticamente acionado quando o evento load ocorre para esse pacote. Isso permite que você agora acompanhe de forma confiável apenas observando o evento de progresso</p>
 </div>
 
 <div class="note">
-<p><strong>Nota:</strong> A partir do {{Gecko("12.0")}}, se o seu evento de progresso e chamado com um <code>responseType</code> de "moz-blob", o valor da resposta será um {{domxref("Blob")}} <span class="short_text" id="result_box" lang="pt"><span class="hps">contendo</span> <span class="hps">os</span> <span class="hps">dados recebidos</span> <span class="hps">até agora</span></span>r.</p>
+<p><strong>Nota:</strong> A partir do {{Gecko("12.0")}}, se o seu evento de progresso e chamado com um <code>responseType</code> de "moz-blob", o valor da resposta será um {{domxref("Blob")}} contendo os dados recebidos até agorar.</p>
 </div>
 
 <p>POde-se também detectar todas as três condições de fim de carga (<code>abort</code>, <code>load</code>, or <code>error</code>) usando o evento <code>loadend</code>:</p>
@@ -149,11 +149,11 @@ oReq.open();
 <pre class="brush:js">req.addEventListener("loadend", loadEnd, false);
 
 function loadEnd(e) {
-  alert("<span class="short_text" id="result_box" lang="pt"><span class="hps">A</span> <span class="hps">transferência</span> <span class="alt-edited hps">terminou</span></span> (<span class="short_text" id="result_box" lang="pt"><span class="hps">embora</span> <span class="hps">não sabemos</span> <span class="hps">se ele</span> <span class="hps">conseguiu</span> <span class="hps">ou não</span></span>).");
+  alert("A transferência terminou (embora não sabemos se ele conseguiu ou não).");
 }
 </pre>
 
-<p><span id="result_box" lang="pt"><span class="alt-edited hps">Note que</span> <span class="hps">não há nenhuma</span> <span class="hps">maneira de ter certeza</span> <span class="alt-edited hps">a partir da</span> <span class="hps">informação recebida</span> <span class="hps">pelo evento</span> <span class="hps">loadend</span> <span class="hps">sobre qual</span> <span class="hps">condição</span> <span class="hps">causou a</span> <span class="hps">operação</span> <span class="alt-edited hps">de encerrar</span><span>;</span> <span class="hps">no entanto, você</span> <span class="hps">pode usar isso para</span> <span class="hps">lidar com tarefas</span> <span class="hps">que</span> <span class="hps">precisam ser realizadas</span> <span class="hps">em todos os cenários</span> <span class="hps">de fim-de</span><span class="atn">-</span><span>transferência.</span></span></p>
+<p>Note que não há nenhuma maneira de ter certeza a partir da informação recebida pelo evento loadend sobre qual condição causou a operação de encerrar; no entanto, você pode usar isso para lidar com tarefas que precisam ser realizadas em todos os cenários de fim-de-transferência.</p>
 
 <h2 id="Submitting_forms_and_uploading_files">Submitting forms and uploading files</h2>
 
@@ -473,7 +473,7 @@ var AJAXSubmit = (function () {
 &lt;/html&gt;</pre>
 </div>
 
-<p>To test it, please, create a<span class="long_text short_text" id="result_box" lang="en"><span class="hps"> </span></span>page named <strong>register.php</strong> (which is the <code>action</code> attribute of these sample forms) and just put the following <em><span class="long_text short_text" id="result_box" lang="en"><span class="hps">minimalistic </span></span></em>content:</p>
+<p>To test it, please, create a page named <strong>register.php</strong> (which is the <code>action</code> attribute of these sample forms) and just put the following <em>minimalistic </em>content:</p>
 
 <pre class="brush: php">&lt;?php
 
@@ -632,7 +632,7 @@ function AJAXSubmit (oFormElement) {
 
 <h2 id="Bypassing_the_cache">Bypassing the cache</h2>
 
-<p><span style="line-height: 1.572;">A, cross-browser compatible approach to bypassing the cache is to append a timestamp to the URL, being sure to include a "?" or "&amp;" as appropriate.  For example:</span></p>
+<p>A, cross-browser compatible approach to bypassing the cache is to append a timestamp to the URL, being sure to include a "?" or "&amp;" as appropriate.  For example:</p>
 
 <pre>http://foo.com/bar.html -&gt; http://foo.com/bar.html?12345
 http://foo.com/bar.html?foobar=baz -&gt; http://foo.com/bar.html?foobar=baz&amp;12345

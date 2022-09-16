@@ -15,15 +15,15 @@ original_slug: Learn/CSS/Building_blocks/处理_不同_方向的_文本
       <th scope="row">先决条件：</th>
       <td>
         计算机基础知识，基本软件（参见<a
-          href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software"
           >basic software installed</a
         >），文件管理的基本知识（参见<a
-          href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/zh-CN/Learn/Getting_started_with_the_web/Dealing_with_files"
           >working with files</a
         >），HTML 基础（HTML 学习<a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
-        >）以及 CSS 基础（学习<a href="/en-US/docs/Learn/CSS/First_steps"
+        >）以及 CSS 基础（学习<a href="/zh-CN/docs/Learn/CSS/First_steps"
           >CSS first steps</a
         >）。
       </td>

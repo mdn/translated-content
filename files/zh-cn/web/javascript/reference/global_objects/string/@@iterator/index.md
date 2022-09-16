@@ -59,4 +59,4 @@ for (var v of string) {
 
 ## 相关链接
 
-- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [Iteration protocols](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)

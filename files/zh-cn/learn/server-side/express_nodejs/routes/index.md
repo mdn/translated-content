@@ -12,10 +12,10 @@ slug: Learn/Server-side/Express_Nodejs/routes
       <th scope="row">预备知识：</th>
       <td>
         回顾
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction"
+        <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction"
           >Express/Node 入门</a
         >。完成本教程之前小节（<a
-          href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose"
+          href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose"
           >Express 教程 3：使用数据库 (Mongoose)</a
         >
         等）。了解服务器端编程，了解正则表达式。

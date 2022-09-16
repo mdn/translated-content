@@ -1,13 +1,6 @@
 ---
 title: If-Match
 slug: Web/HTTP/Headers/If-Match
-tags:
-  - HTTP
-  - HTTP ヘッダー
-  - Reference
-  - リクエストヘッダー
-  - 条件付きリクエスト
-translation_of: Web/HTTP/Headers/If-Match
 ---
 {{HTTPSidebar}}
 

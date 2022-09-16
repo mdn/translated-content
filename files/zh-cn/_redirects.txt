@@ -1340,7 +1340,7 @@
 /zh-CN/docs/Web/API/CanvasRenderingContext2D.createLinearGradient	/zh-CN/docs/Web/API/CanvasRenderingContext2D/createLinearGradient
 /zh-CN/docs/Web/API/CanvasRenderingContext2D.createPattern	/zh-CN/docs/Web/API/CanvasRenderingContext2D/createPattern
 /zh-CN/docs/Web/API/CanvasRenderingContext2D/currentTransform	/zh-CN/docs/Web/API/CanvasRenderingContext2D
-/zh-CN/docs/Web/API/CanvasRenderingContext2D/drawWindow	/zh-CN/docs/conflicting/Web/API/CanvasRenderingContext2D/drawImage
+/zh-CN/docs/Web/API/CanvasRenderingContext2D/drawWindow	/zh-CN/docs/Web/API/CanvasRenderingContext2D/drawImage
 /zh-CN/docs/Web/API/Channel_Messaging_API/使用_channel_messaging	/zh-CN/docs/Web/API/Channel_Messaging_API/Using_channel_messaging
 /zh-CN/docs/Web/API/ChildNode.nextElementSibling	/zh-CN/docs/Web/API/Element/nextElementSibling
 /zh-CN/docs/Web/API/Childnode.previousElementSibling	/zh-CN/docs/Web/API/Element/previousElementSibling
@@ -1382,7 +1382,7 @@
 /zh-CN/docs/Web/API/Document/touchcancel_event	/zh-CN/docs/conflicting/Web/API/Element/touchcancel_event
 /zh-CN/docs/Web/API/Document/touchend_event	/zh-CN/docs/Web/API/Element/touchend_event
 /zh-CN/docs/Web/API/Document/touchmove_event	/zh-CN/docs/conflicting/Web/API/Element/touchmove_event
-/zh-CN/docs/Web/API/Document/touchstart_event	/zh-CN/docs/conflicting/Web/API/Element/touchstart_event
+/zh-CN/docs/Web/API/Document/touchstart_event	/zh-CN/docs/Web/API/Element/touchstart_event
 /zh-CN/docs/Web/API/Document/width	/zh-CN/docs/Web/API/Element/clientWidth
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/activeElement	/zh-CN/docs/Web/API/Document/activeElement
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/elementFromPoint	/zh-CN/docs/Web/API/Document/elementFromPoint
@@ -1585,6 +1585,7 @@
 /zh-CN/docs/Web/API/HTMLHyperlinkElementUtils/search	/zh-CN/docs/Web/API/HTMLAnchorElement/search
 /zh-CN/docs/Web/API/HTMLHyperlinkElementUtils/toString	/zh-CN/docs/Web/API/HTMLAnchorElement/toString
 /zh-CN/docs/Web/API/HTMLHyperlinkElementUtils/username	/zh-CN/docs/Web/API/HTMLAnchorElement/username
+/zh-CN/docs/Web/API/HTMLMediaElement/onerror	/zh-CN/docs/conflicting/Web/API/HTMLMediaElement/error_event
 /zh-CN/docs/Web/API/HTMLTableElement.deleteTHead	/zh-CN/docs/Web/API/HTMLTableElement/deleteTHead
 /zh-CN/docs/Web/API/Headers/getAll	/zh-CN/docs/Web/API/Headers/get
 /zh-CN/docs/Web/API/IDBCursor.direction	/zh-CN/docs/Web/API/IDBCursor/direction

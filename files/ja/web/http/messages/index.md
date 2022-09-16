@@ -1,12 +1,6 @@
 ---
 title: HTTP メッセージ
 slug: Web/HTTP/Messages
-tags:
-  - Guide
-  - HTTP
-  - WebMechanics
-  - ガイド
-translation_of: Web/HTTP/Messages
 ---
 {{HTTPSidebar}}
 
