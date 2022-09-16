@@ -1,7 +1,6 @@
 ---
-title: 自减 (--)
+title: 自减（--）
 slug: Web/JavaScript/Reference/Operators/Decrement
-original_slug: Web/JavaScript/Reference/Operators/自减
 ---
 
 {{jsSidebar("Operators")}}
