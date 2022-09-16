@@ -8,38 +8,38 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 ---
 <p>{{AddonSidebar}}</p>
 
-<p><span>Расширение состоит из набора файлов, упакованных для распространения и установки.</span> <span> В этой статье мы быстро рассмотрим файлы, которые могут присутствовать в расширении.</span></p>
+<p>Расширение состоит из набора файлов, упакованных для распространения и установки.  В этой статье мы быстро рассмотрим файлы, которые могут присутствовать в расширении.</p>
 
 <h2 id="manifest.json">manifest.json</h2>
 
-<p><span>Это единственный файл, который должен присутствовать в каждом расширении.</span> <span> Он содержит основные метаданные, такие как его имя, версию и требуемые разрешения.</span> <span> Он также предоставляет указатели на другие файлы в расширении.</span></p>
+<p>Это единственный файл, который должен присутствовать в каждом расширении.  Он содержит основные метаданные, такие как его имя, версию и требуемые разрешения.  Он также предоставляет указатели на другие файлы в расширении.</p>
 
-<p><span>Этот манифест также может содержать указатели на несколько других типов файлов:</span></p>
+<p>Этот манифест также может содержать указатели на несколько других типов файлов:</p>
 
 <ul>
- <li><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">Background pages</a>: <span>Реализует долгоиграющую логику.</span></li>
- <li><span>Иконки для расширения и любых кнопок, которые оно может определить.</span></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Sidebars_popups_options_pages">Sidebars, popups, and options pages</a>: <span>HTML-документы, которые предоставляют содержимое для различных компонентов пользовательского интерфейса.</span></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts">Content scripts</a>: <span>JavaScript сценарии вашего расширения, которые будут исполняться на веб-страницах.</span></li>
+ <li><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">Background pages</a>: Реализует долгоиграющую логику.</li>
+ <li>Иконки для расширения и любых кнопок, которые оно может определить.</li>
+ <li><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Sidebars_popups_options_pages">Sidebars, popups, and options pages</a>: HTML-документы, которые предоставляют содержимое для различных компонентов пользовательского интерфейса.</li>
+ <li><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts">Content scripts</a>: JavaScript сценарии вашего расширения, которые будут исполняться на веб-страницах.</li>
  <li><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Web_accessible_resources">Web-accessible resources</a>: Делает контент вашего расширения видимым для веб-страниц и скриптов.</li>
 </ul>
 
 <p><br>
  <img alt="" src="https://mdn.mozillademos.org/files/13669/webextension-anatomy.png" style="display: block; height: 581px; margin-left: auto; margin-right: auto; width: 600px;"></p>
 
-<p><span>Для получения подробной информации см. справочную страницу </span> <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></p>
+<p>Для получения подробной информации см. справочную страницу  <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></p>
 
-<p><span>Помимо ссылок, указанных в манифесте, расширение может включать дополнительные</span> <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Extension_pages">веб-страницы расширения</a><span> с поддерживающимися файлами.</span></p>
+<p>Помимо ссылок, указанных в манифесте, расширение может включать дополнительные <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Extension_pages">веб-страницы расширения</a> с поддерживающимися файлами.</p>
 
 <h2 id="Фоновые_скрипты">Фоновые скрипты</h2>
 
-<p><span>Расширения часто должны поддерживать долгосрочное состояние или выполнять долгосрочные операции независимо от срока жизни любой конкретной веб-страницы или окна браузера.</span> <span> Для этого нужны фоновые сценарии.</span></p>
+<p>Расширения часто должны поддерживать долгосрочное состояние или выполнять долгосрочные операции независимо от срока жизни любой конкретной веб-страницы или окна браузера.  Для этого нужны фоновые сценарии.</p>
 
-<p><span>Фоновые сценарии загружаются сразу после загрузки расширения и остаются загруженными до тех пор, пока расширение не будет отключено или удалено.</span> <span> вы можете использовать любой</span> <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/API">API расширений</a> <span>в сценарии, если вы запросили необходимые </span><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">разрешения</a>.</p>
+<p>Фоновые сценарии загружаются сразу после загрузки расширения и остаются загруженными до тех пор, пока расширение не будет отключено или удалено.  вы можете использовать любой <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/API">API расширений</a> в сценарии, если вы запросили необходимые <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">разрешения</a>.</p>
 
 <h3 id="Спецификации_фоновых_скриптов">Спецификации фоновых скриптов</h3>
 
-<p><span>Вы можете включить фоновый скрипт, используя <code>background</code> ключ в «manifest.json»:</span></p>
+<p>Вы можете включить фоновый скрипт, используя <code>background</code> ключ в «manifest.json»:</p>
 
 <pre class="brush: json">// manifest.json
 
@@ -47,27 +47,27 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
   "scripts": ["background-script.js"]
 }</pre>
 
-<p><span>Вы можете указать несколько фоновых сценариев: если вы это сделаете, они выполняются в том же контексте, как и несколько сценариев, загруженных на одной веб-странице.</span></p>
+<p>Вы можете указать несколько фоновых сценариев: если вы это сделаете, они выполняются в том же контексте, как и несколько сценариев, загруженных на одной веб-странице.</p>
 
-<p>Вместо указания <span>несколько фоновых сценариев</span> вы можете указать фоновую страницу, которая так же преимущества поддержки ES6 модулей:</p>
+<p>Вместо указания несколько фоновых сценариев вы можете указать фоновую страницу, которая так же преимущества поддержки ES6 модулей:</p>
 
 <p style="margin-bottom: 0em;"><strong>manifest.json</strong></p>
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="comment token">// manifest.json</span>
+<pre class="brush: json line-numbers  language-json"><code class="language-json">// manifest.json
 
-<span class="key token">"background":</span> <span class="punctuation token">{</span>
-  <span class="key token">"page":</span> <span class="string token">"background-page.html"</span>
-<span class="punctuation token">}</span></code></pre>
+"background": {
+  "page": "background-page.html"
+}</code></pre>
 
 <p style="margin-bottom: 0em;"><strong>background-page.html</strong></p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="doctype token">&lt;!DOCTYPE html&gt;</span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>html</span> <span class="attr-name token">lang</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>en<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>head</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>meta</span> <span class="attr-name token">charset</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>utf-8<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>module<span class="punctuation token">"</span></span> <span class="attr-name token">src</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>background-script.js<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>head</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>html</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;script type="module" src="background-script.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+&lt;/html&gt;</code></pre>
 
 <h3 id="Окружение_фоновых_скриптов">Окружение фоновых скриптов</h3>
 
@@ -96,7 +96,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 <p>Ваше расширение может иметь разнообразные компоненты интерфейса, определённые в HTML документах:</p>
 
 <ul>
- <li><font color="#0b0116"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars">Боковая панель (sidebar</a></font>) - это панель, отображаемая в окне браузера с левой стороны, рядом с веб-страницей</li>
+ <li><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars">Боковая панель (sidebar</a>) - это панель, отображаемая в окне браузера с левой стороны, рядом с веб-страницей</li>
  <li><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">Всплывающие окна (popup</a>) - диалоговое окно, отображаемое по клику на <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action">кнопке</a> на <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action">панели инструментов</a> или в адресной строке</li>
  <li><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages">Страница настроек</a> открывается, когда пользователь обращается к настройкам расширения на странице менеджера расширений.</li>
 </ul>
@@ -135,9 +135,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 <p>Подробнее см. <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a>.</p>
 
-<h2 id="Веб-доступные_ресурсы"><span class="tlid-translation translation"><span title="">Веб-доступные ресурсы</span></span></h2>
+<h2 id="Веб-доступные_ресурсы">Веб-доступные ресурсы</h2>
 
-<p><span class="tlid-translation translation"><span title="">Веб-доступные ресурсы</span></span> - это ресурсы вроде изображений, HTML, CSS и JavaScript, которые вы включаете в расширение и хотите сделать доступными для встраиваемых скриптов и оригинальных скриптов веб-страницы. Такие ресурсы могут быть доступны скриптам через специальную URI схему.</p>
+<p>Веб-доступные ресурсы - это ресурсы вроде изображений, HTML, CSS и JavaScript, которые вы включаете в расширение и хотите сделать доступными для встраиваемых скриптов и оригинальных скриптов веб-страницы. Такие ресурсы могут быть доступны скриптам через специальную URI схему.</p>
 
 <p>Например, если встраиваемый скрипт хочет добавить какие-либо изображения в веб-страницу, вы можете включить эти изображения в расширение и сделать их веб-доступными. Тогда встраиваемый скрипт может создать и добавить <code><a href="/en-US/docs/Web/HTML/Element/img">img</a></code> тэги, которые будут ссылаться на эти изображения через <code>src</code> атрибут.</p>
 
