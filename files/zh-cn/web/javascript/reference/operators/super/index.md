@@ -74,7 +74,9 @@ class Rectangle {
 }
 
 class Square extends Rectangle {
-  constructor() {}
+  constructor() {
+    super()
+  }
   static logDescription() {
     return super.logNbSides() + ' which are all equal';
   }
@@ -92,7 +94,9 @@ class Base {
   foo() {}
 }
 class Derived extends Base {
-  constructor() {}
+  constructor() {
+    super()
+  }
   delete() {
     delete super.foo; // this is bad
   }
