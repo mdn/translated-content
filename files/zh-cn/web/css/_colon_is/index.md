@@ -9,14 +9,13 @@ slug: Web/CSS/:is
 [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) **`:is()`** 函数将选择器列表作为参数，并选择该列表中任意一个选择器可以选择的元素。这对于以更紧凑的形式编写大型选择器非常有用。
 
 ```css
-/* Selects any paragraph inside a header, main
-   or footer element that is being hovered */
+/* 选择 header、main、footer 里的任意一个悬浮状态的段落 */
 :is(header, main, footer) p:hover {
   color: red;
   cursor: pointer;
 }
 
-/* The above is equivalent to the following */
+/* 以上内容相当于以下内容 */
 header p:hover,
 main p:hover,
 footer p:hover {
@@ -29,11 +28,11 @@ footer p:hover {
 
 ### 区分 :is() 和 :where()
 
-两者的区别在于 `:is()` 计入整体选择器的优先级（它接受优先级最高参数的优先级），而 [`:where()`](/zh-CN/docs/Web/CSS/:where) 的优先级为 0。[参考 `:where()` 页面上的示例](/zh-CN/docs/Web/CSS/:where#examples)，它证明了这一点。
+两者的区别在于 `:is()` 计入整体选择器的优先级（它接受优先级最高参数的优先级），而 [`:where()`](/zh-CN/docs/Web/CSS/:where) 的优先级为 0。[参考 `:where()` 页面上的示例](/zh-CN/docs/Web/CSS/:where#示例)，它证明了这一点。
 
 ### 容许解析错误的选择器
 
-规范指定了 `:is()` 和 `:where()` 可以接受一个 [有错误的选择器列表](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list).
+规范指定了 `:is()` 和 `:where()` 可以接受一个[有错误的选择器列表](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list)。
 
 在 CSS 中使用选择器列表时，如果任何选择器无效，则整个列表被视为无效。当使用 `:is()` 或 `:where()` 而不是整个选择器列表时，如果某个选择器无法解析，则被视为无效，不正确或不受支持的选择器将被忽略，其他选择器将被使用。
 
