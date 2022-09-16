@@ -25,7 +25,7 @@ x++
 自增操作符只能应用于引用的操作数（变量和对象属性，即有效的[赋值目标](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)）。`++x` 本身的计算结果是一个值，而不是一个引用，因此不能将多个自增操作符链接在一起。
 
 ```js example-bad
-++(++x); // SyntaxError: 前缀操作中的左侧表达式无效
+++(++x); // SyntaxError: Invalid left-hand side expression in prefix operation
 ```
 
 ## 示例
