@@ -4,7 +4,7 @@ slug: Web/API/Element/mouseenter_event
 ---
 {{APIRef}}
 
-当一个定点设备（通常指鼠标）第一次移动到触发事件元素中的激活区域时，**`mouseenter`** 事件在 {{domxref("Element")}} 中触发。
+当一个定点设备（通常指鼠标）第一次移动到触发事件元素中的激活区域时，**`mouseenter`** 事件在该 {{domxref("Element")}} 中触发。
 
 ## 语法
 
@@ -77,7 +77,7 @@ _这个接口也继承其父 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的
 
 ## 使用说明
 
-尽管于 {{domxref("Element/mouseover_event", "mouseover")}} 类似，但是 `mouseenter` 的不同之处在于当鼠标指针从它后代的物理空间移动到它自己的物理空间时，它不会[冒泡](/zh-CN/docs/Web/API/Event/bubbles)，也不会发送给它的任何后代。
+尽管与 {{domxref("Element/mouseover_event", "mouseover")}} 类似，但是 `mouseenter` 的不同之处在于当鼠标指针从它后代的物理空间移动到它自己的物理空间时，它不会[冒泡](/zh-CN/docs/Web/API/Event/bubbles)，也不会发送给它的任何后代。
 
 ### `mouseenter` 事件的行为：
 
@@ -87,9 +87,9 @@ _这个接口也继承其父 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的
 ### `mouseover` 事件的行为：
 
 ![](mouseover.png)
-单个 `mouseover` 事件被发送到 DOM 树最深的元素中，然后它会按层次结构冒泡，直到它被取处理程序消或者到达根。
+单个 `mouseover` 事件被发送到 DOM 树最深的元素中，然后它会按层次结构冒泡，直到它被处理程序取消或者到达根。
 
-由于层次结构很深，发送到 `mouseover` 事件可能相当多，并导致严重的性能问题。在这种情况下，最好监听 `mouseenter` 事件。
+由于层次结构很深，发送到 `mouseover` 事件可能相当多，并导致严重的性能问题。在这种情况下，最好是监听 `mouseenter` 事件。
 
 结合相应的 `mouseleave`（当鼠标退出其内容区域时向元素触发），`mouseenter` 事件的作用与 CSS 伪类 {{cssxref(':hover')}} 非常相似。
 
