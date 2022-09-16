@@ -4,7 +4,7 @@ slug: Web/HTML/Element/Input/week
 ---
 {{HTMLRef("Input_types")}}
 
-{{HTMLElement("input")}} 类型为 **`week`** 的元素会创建输入字段，以便轻松输入年份以及该年（即第 1 周到第 [52 或 53](https://zh.wikipedia.org/zh-cn/ISO_8601#日历星期表示法)周）的 [ISO 8601 星期数](https://zh.wikipedia.org/zh-cn/ISO_8601#日历星期表示法)
+{{HTMLElement("input")}} 类型为 **`week`** 的元素会创建输入字段，以便轻松输入年份以及该年（即第 1 周到第 [52 或 53](https://zh.wikipedia.org/zh-cn/ISO_8601#日历星期表示法) 周）的 [ISO 8601 星期数](https://zh.wikipedia.org/zh-cn/ISO_8601#日历星期表示法)
 
 {{EmbedInteractiveExample("pages/tabbed/input-week.html", "tabbed-shorter")}}
 
@@ -75,7 +75,7 @@ weekControl.value = '2017-W45';
 
 ### max
 
-接受以上 [值](#值) 部分中讨论的字符串格式的按时间最新年份和星期数。如果输入到该元素中的 {{htmlattrxref("value", "input")}} 超过此值，则元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。 如果 `max` 属性的值不是有效的星期字符串，则该元素没有最大值。
+接受以上[值](#值)部分中讨论的字符串格式的按时间最新年份和星期数。如果输入到该元素中的 {{htmlattrxref("value", "input")}} 超过此值，则元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。 如果 `max` 属性的值不是有效的星期字符串，则该元素没有最大值。
 
 此值必须大于或等于 `min` 属性指定的年和星期。
 
@@ -107,7 +107,7 @@ _目前，尚不清楚当与 `week` 输入一起使用时，`"any"` 的值对 `s
 
 乍看之下，星期输入听起来很方便，因为它们提供了用于选择星期的简单 UI，并且标准化了发送到服务器的数据格式，而与用户的浏览器或区域设置无关。但是，`<input type="week">` 存在问题，因为不能保证所有浏览器都支持该特性。
 
-我们将研究 `<input type="week">` 的基本和更复杂的用法，然后在以后提供有关缓解浏览器支持问题的建议（请参阅 [处理浏览器支持](#处理浏览器支持)).
+我们将研究 `<input type="week">` 的基本和更复杂的用法，然后在以后提供有关缓解浏览器支持问题的建议（请参阅[处理浏览器支持](#处理浏览器支持)）。
 
 ### 星期的基本用途
 
@@ -179,7 +179,7 @@ input:valid + span::after {
 
 结果是，在支持的浏览器中，2017 年 W01 到 W52 之间只有几周才被视为有效，并且可以选择。
 
-### 使星期值成为必需
+### 使星期值成为必需值
 
 另外，您可以使用 {{htmlattrxref("required", "input")}} 属性来强制填写星期。因此，如果您尝试提交空白的星期字段，则支持的浏览器将显示错误。
 
@@ -206,7 +206,7 @@ input:valid + span::after {
 
 如果您尝试提交不带任何值的表单，浏览器将显示错误。 现在尝试使用示例：
 
-{{EmbedLiveSample('使星期值成为必需', 600, 120)}}
+{{EmbedLiveSample('使星期值成为必需值', 600, 120)}}
 
 这是使用不支持该控件的浏览器的屏幕截图：
 
@@ -347,7 +347,7 @@ function populateWeeks() {
 }
 ```
 
-> **备注：** 请记住，有些年份有 53 周（请参阅[每年的周数](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year))！ 在开发生产应用程序时，需要考虑到这一点。
+> **备注：** 请记住，有些年份有 53 周（请参阅[每年的周数](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year))！在开发生产应用程序时，需要考虑到这一点。
 
 ## 规范
 
