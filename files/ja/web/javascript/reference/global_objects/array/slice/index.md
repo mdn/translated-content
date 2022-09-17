@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`slice()`** メソッドは、配列の一部を `start` から `end` （`end` は含まれない）までの範囲で、選択した新しい配列オブジェクトに[シャローコピー](/ja/docs/Glossary/Shallow_copy)して返します。ここで `start` と `end` はその配列に含まれる項目の添字を表します。元の配列は変更されません．
+**`slice()`** メソッドは、配列の一部を `start` から `end` （`end` は含まれない）までの範囲で、選択した新しい配列オブジェクトに[シャローコピー](/ja/docs/Glossary/Shallow_copy)して返します。ここで `start` と `end` はその配列に含まれる項目の添字を表します。元の配列は変更されません。
 
 {{EmbedInteractiveExample("pages/js/array-slice.html", "taller")}}
 
@@ -50,7 +50,7 @@ slice(start, end)
 `slice` は元の配列を変更せず、元の配列から要素を[シャローコピー](/ja/docs/Glossary/Shallow_copy)した新しい配列を返します。元の配列の要素は以下のように返される配列にコピーされます。
 
 - (実際のオブジェクトではない) オブジェクトの参照については、`slice` はオブジェクトの参照を新しい配列にコピーします。元の配列も新しい配列も同じオブジェクトを参照します。参照されたオブジェクトが修正された場合、その変更は新しい配列と元の配列の両方に現れます。
-- ({{jsxref("String")}}, {{jsxref("Number")}}, {{jsxref("Boolean")}} オブジェクトではなく) 文字列、数値、真偽値では、`slice` は値を新しい配列にコピーします。一方の配列の文字列や数値に変更を加えても、他の配列に影響はしません。
+- ({{jsxref("String")}}, {{jsxref("Number")}}, {{jsxref("Boolean")}} オブジェクトではなく) 文字列、数値、論理値では、`slice` は値を新しい配列にコピーします。一方の配列の文字列や数値に変更を加えても、他の配列に影響はしません。
 
 一方の配列に新しい要素が追加されても、他方の配列に影響はしません。
 
@@ -121,7 +121,7 @@ function list() {
 const list1 = list(1, 2, 3); // [1, 2, 3]
 ```
 
-結合 (Binding) は {{jsxref("Function.prototype")}} の {{jsxref("Function.prototype.call", "call()")}} メソッドを用いて行うことができますし、`[].slice.call(arguments)` を `Array.prototype.slice.call` の代わりに使って減らすこともできます。
+結合 (Binding) は {{jsxref("Function")}} の {{jsxref("Function.prototype.call", "call()")}} メソッドを用いて行うことができますし、`[].slice.call(arguments)` を `Array.prototype.slice.call` の代わりに使って減らすこともできます。
 
 いずれにせよ、{{jsxref("Function.prototype.bind", "bind")}} を使用することで簡略化することができます。
 
