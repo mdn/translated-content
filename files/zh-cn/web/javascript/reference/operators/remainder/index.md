@@ -79,4 +79,3 @@ Infinity % Infinity // NaN
 - [一元减法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_negation)
 - [一元加法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)
 - [取余运算和取模运算的区别](https://2ality.com/2019/08/remainder-vs-modulo.html)
-- [Mod and Remainder are not the Same](https://bigmachine.io/2018/08/21/mod-and-remainder-are-not-the-same-2/)
