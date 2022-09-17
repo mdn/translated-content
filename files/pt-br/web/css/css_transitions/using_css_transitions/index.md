@@ -1032,9 +1032,6 @@ Você pode usar o evento {{event("transitionend")}} para detectar a uma animaç�
 
 - `propertyName`
   - : A string indicando o nome da propriedade CSS cuja transição será completada
-
-<!---->
-
 - `elapsedTime`
   - : A float indicating the number of seconds the transition had been running at the time the event fired. This value isn't affected by the value of {{cssxref("transition-delay")}}.
 

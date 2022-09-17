@@ -58,9 +58,6 @@ option:checked {
 
 - `input[type="radio"]:checked`
   - : Representa todos os botões de rádio na página que estão ativos
-
-<!---->
-
 - `input[type="checkbox"]:checked`
   - : Representa todos os checkboxes na página que estão ativos
 - `option:checked`
