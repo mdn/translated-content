@@ -1,13 +1,6 @@
 ---
 title: JavaScript モジュール
 slug: Web/JavaScript/Guide/Modules
-tags:
-  - Guide
-  - JavaScript
-  - Modules
-  - export
-  - impot
-translation_of: Web/JavaScript/Guide/Modules
 ---
 {{jsSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}
 

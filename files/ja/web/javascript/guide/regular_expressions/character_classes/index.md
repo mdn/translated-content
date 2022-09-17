@@ -1,12 +1,6 @@
 ---
 title: 文字クラス
 slug: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
-tags:
-  - JavaScript
-  - Reference
-  - RegExp
-  - Regular Expressions
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
 ---
 {{JSSidebar("JavaScript Guide")}}
 
