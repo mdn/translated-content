@@ -188,4 +188,4 @@ MDN 學習專區不是要讓「初學者」變成「專家」；而是想讓「�
     4. [工具與設定](/zh-TW/docs/Learn/Common_questions#Tools_and_setup)
     5. [設計與親和度](/zh-TW/docs/Learn/Common_questions#Design_and_accessibility)
 
-6. [該如何貢獻](/zh-TW/docs/Learn/How_to_contribute)[](/zh-TW/docs/Learn/How_to_contribute)
+6. [該如何貢獻](/zh-TW/docs/Learn/How_to_contribute)
