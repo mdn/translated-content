@@ -11,7 +11,7 @@ A propriedade CSS `transform` permite modificar o espaço coordenado do modelo d
 
 {{EmbedInteractiveExample("pages/css/transform.html")}}
 
-Se a propriedade tem um valor diferente de `none, `um contexto de empilhamento será criado. Neste caso, o objeto atuará como um bloco recipiente para `position: fixed` para os elementos que estão contidos.
+Se a propriedade tem um valor diferente de `none`, um contexto de empilhamento será criado. Neste caso, o objeto atuará como um bloco recipiente para `position: fixed` para os elementos que estão contidos.
 
 ## Sintaxe
 
@@ -58,7 +58,7 @@ Se {{cssxref("transform-function/perspective()", "perspective()")}} é uma das m
 
 ## Exemplos
 
-Veja [Using CSS transforms](/En/CSS/Using_CSS_transforms "En/CSS/Using_CSS_transforms").
+Veja [Using CSS transforms](/En/CSS/Using_CSS_transforms).
 
 ### Exemplo ao vivo:
 

@@ -42,7 +42,7 @@ background-position: initial;
 background-position: unset;
 ```
 
-A propriedade `background-position` é especificada como um determinado numero de valores de [`<position>`](#<position>) , separados por espaços.
+A propriedade `background-position` é especificada como um determinado numero de valores de [`<position>`](#position) , separados por espaços.
 
 ### Values
 
@@ -142,5 +142,5 @@ div {
 - {{cssxref("background-position-y")}}
 - {{cssxref("background-position-inline")}}
 - {{cssxref("background-position-block")}}
-- [Using multiple backgrounds](/pt-BR/docs/CSS/Multiple_backgrounds "CSS/Multiple backgrounds")
+- [Using multiple backgrounds](/pt-BR/docs/CSS/Multiple_backgrounds)
 - {{cssxref("transform-origin")}}

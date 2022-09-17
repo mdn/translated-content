@@ -297,7 +297,7 @@ Você pode controlar componentes individuais da transição com a seguinte sub p
 
 - {{cssxref("transition-timing-function")}}
 
-  - : ![](/files/3434/TF_with_output_gt_than_1.png) Especifica uma função para definir como os valores intermediários das propriedades são calculados. As[ timing functions](/pt-BR/docs/Web/CSS/timing-function) determinam como os valores intermediários da transição são calculados. A maioria das funções de temporização pode ser especificada fornecendo o gráfico da função correspondente, conforme definido por quatro pontos definindo um bezier cúbico. Você também pode escolher o [Easing Functions Cheat Sheet](http://easings.net/).
+  - : ![](/files/3434/TF_with_output_gt_than_1.png) Especifica uma função para definir como os valores intermediários das propriedades são calculados. As [timing functions](/pt-BR/docs/Web/CSS/timing-function) determinam como os valores intermediários da transição são calculados. A maioria das funções de temporização pode ser especificada fornecendo o gráfico da função correspondente, conforme definido por quatro pontos definindo um bezier cúbico. Você também pode escolher o [Easing Functions Cheat Sheet](http://easings.net/).
 
     `transition-timing-function: ease`
 

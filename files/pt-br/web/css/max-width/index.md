@@ -52,9 +52,9 @@ max-width: unset;
 
 - `none`
   - : A largura não possui valor máximo. (padrão)
-- `max-content`{{experimental_inline()}}
+- `max-content` {{experimental_inline()}}
   - : A `max-width` intrínseca preferida.
-- `min-content`{{experimental_inline()}}
+- `min-content` {{experimental_inline()}}
   - : O mínimo `max-width` intrínseco.
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Use a fórmula `fit-content` com o espaço disponível substituído pelo argumento especificado, i.e. `min(max-content, max(min-content, argumento)).`
@@ -63,9 +63,9 @@ max-width: unset;
 
 Certifique-se que os elementos definidos com `max-width` não sejam truncados e/ou não obscureçam outros conteúdos quando a página for ampliada para aumentar o tamanho do texto.
 
-- `fill-available`{{experimental_inline()}}
+- `fill-available` {{experimental_inline()}}
   - : A largura contida do bloco sem o margin, border e padding horizontal. (Note que alguns navegadores implementaram um nome antigo para essa keyword, `available`.)
-- `fit-content`{{experimental_inline()}}
+- `fit-content` {{experimental_inline()}}
   - : O mesmo que `max-content.`
 
 #### Sintaxe formal
@@ -153,4 +153,4 @@ Garantir que os elementos atribuidos com `max-width` não estejam cortados e/ou 
 ## Veja também
 
 - {{ Cssxref("width") }}, {{ Cssxref("min-width") }}, {{ Cssxref("max-height") }}
-- [The box model](/en/CSS/box_model "en/CSS/box_model"), {{ Cssxref("box-sizing") }}
+- [The box model](/en/CSS/box_model), {{ Cssxref("box-sizing") }}
