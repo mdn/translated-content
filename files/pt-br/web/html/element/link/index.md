@@ -7,7 +7,7 @@ translation_of: Web/HTML/Element/link
 
 O **Elemento HTML _\<link>_** especifica as relações entre o documento atual e um recurso externo. Possíveis usos para este elemento incluem a definição de uma estrutura relacional para navegação. Este elemento é mais usado para vincular as folhas de estilo.
 
-- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ Metadata content. If {{htmlattrxref("itemprop", "link")}} is present: [flow content](/pt-BR/docs/Web/HTML/Content_categories#Flow_content)[ phrasing content](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content)
+- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ Metadata content. If {{htmlattrxref("itemprop", "link")}} is present: [flow content](/pt-BR/docs/Web/HTML/Content_categories#Flow_content) [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content)
 - _Conteúdo permitido_ None, it is an {{Glossary("empty element")}}.
 - _Omissão de tag_ As it is a void element, the start tag must be present and the end tag must not be present
 - _Elementos pai permitidos_ Any element that accepts metadata elements. If {{htmlattrxref("itemprop", "link")}} is present: any element that accepts [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content).

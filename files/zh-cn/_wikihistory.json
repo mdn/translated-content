@@ -8419,10 +8419,6 @@
     "modified": "2019-03-23T22:20:46.971Z",
     "contributors": ["876843240"]
   },
-  "Web/API/Document/pointerlockchange_event": {
-    "modified": "2020-10-15T22:32:28.124Z",
-    "contributors": ["vent"]
-  },
   "Web/API/Document/preferredStyleSheetSet": {
     "modified": "2020-10-15T22:21:17.584Z",
     "contributors": ["goden.cheng"]
@@ -8549,10 +8545,6 @@
       "irenesmith",
       "zhaoqize"
     ]
-  },
-  "Web/API/Document/selectstart_event": {
-    "modified": "2019-04-30T14:03:08.442Z",
-    "contributors": ["wbamberg", "irenesmith", "zhangchen", "zhaoqize"]
   },
   "Web/API/Document/styleSheetSets": {
     "modified": "2019-03-23T22:11:26.505Z",
@@ -9269,6 +9261,10 @@
   "Web/API/Element/pointerleave_event": {
     "modified": "2020-10-15T22:08:42.646Z",
     "contributors": ["ensleep"]
+  },
+  "Web/API/Element/pointerlockchange_event": {
+    "modified": "2020-10-15T22:32:28.124Z",
+    "contributors": ["vent"]
   },
   "Web/API/Element/pointermove_event": {
     "modified": "2019-03-18T21:28:25.512Z",
@@ -11019,10 +11015,6 @@
     "modified": "2019-03-23T22:03:28.345Z",
     "contributors": ["EmiliaMiyuki"]
   },
-  "Web/API/HTMLMediaElement/onerror": {
-    "modified": "2020-10-15T22:20:09.423Z",
-    "contributors": ["HaukWong"]
-  },
   "Web/API/HTMLMediaElement/pause": {
     "modified": "2020-10-15T22:29:04.236Z",
     "contributors": ["xialeistudio", "crazymxm"]
@@ -12703,6 +12695,10 @@
   "Web/API/Node/replaceChild": {
     "modified": "2020-10-15T21:04:16.398Z",
     "contributors": ["RainSlide", "luobotang", "teoli", "khalid32", "ziyunfei"]
+  },
+  "Web/API/Node/selectstart_event": {
+    "modified": "2019-04-30T14:03:08.442Z",
+    "contributors": ["wbamberg", "irenesmith", "zhangchen", "zhaoqize"]
   },
   "Web/API/Node/textContent": {
     "modified": "2020-10-15T21:24:14.842Z",
@@ -33877,12 +33873,8 @@
     "modified": "2019-04-30T14:14:32.752Z",
     "contributors": ["wbamberg", "irenesmith", "fscholz", "zhaosource"]
   },
-  "conflicting/Web/API/Element/touchstart_event": {
-    "modified": "2020-10-15T22:30:05.652Z",
-    "contributors": ["Carllllo"]
-  },
-  "orphaned/Glossary/jQuery": {
-    "modified": "2020-05-09T23:15:26.173Z",
-    "contributors": ["RainSlide", "yshaojun", "iigmir"]
+  "conflicting/Web/API/HTMLMediaElement/error_event": {
+    "modified": "2020-10-15T22:20:09.423Z",
+    "contributors": ["HaukWong"]
   }
 }

@@ -36,7 +36,7 @@ var myTable = new WebAssembly.Table(tableDescriptor);
 
 ## `Table` Instance
 
-所有`Table`实例都继承自`Table()`构造函数的[原型对象](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/prototype)-可以对其进行修改以影响所有`Table`实例。
+所有`Table`实例都继承自`Table()`构造函数的[原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/prototype)-可以对其进行修改以影响所有`Table`实例。
 
 ### Instance 属性
 
@@ -75,7 +75,7 @@ var importObj = {
 };
 ```
 
-Finally, we load and instantiate a wasm module (table2.wasm) using the {{jsxref("WebAssembly.instantiateStreaming()")}} method. The table2.wasm module contains two functions (one that returns 42 and another that returns 83) and stores both into elements 0 and 1 of the imported table (see [text representation](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat)). So after instantiation, the table still has length 2, but the elements now contain callable [Exported WebAssembly Functions](/en-US/docs/WebAssembly/Exported_functions) which we can call from JS.
+Finally, we load and instantiate a wasm module (table2.wasm) using the {{jsxref("WebAssembly.instantiateStreaming()")}} method. The table2.wasm module contains two functions (one that returns 42 and another that returns 83) and stores both into elements 0 and 1 of the imported table (see [text representation](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat)). So after instantiation, the table still has length 2, but the elements now contain callable [Exported WebAssembly Functions](/zh-CN/docs/WebAssembly/Exported_functions) which we can call from JS.
 
 ```js
 WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)
@@ -100,6 +100,6 @@ This example shows that we're creating and accessing the table from JavaScript, 
 
 ## 相关链接
 
-- [WebAssembly](/en-US/docs/WebAssembly) overview page
-- [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly](/zh-CN/docs/WebAssembly) overview page
+- [WebAssembly concepts](/zh-CN/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Using_the_JavaScript_API)

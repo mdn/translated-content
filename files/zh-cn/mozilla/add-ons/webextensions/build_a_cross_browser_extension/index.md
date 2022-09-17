@@ -147,7 +147,7 @@ if (typeof <function> === "function") {
       <td><p>否</p></td>
       <td>
         <p>
-          <a href="/en-US/Add-ons/WebExtensions/web-ext_command_reference"
+          <a href="/zh-CN/Add-ons/WebExtensions/web-ext_command_reference"
             >web-ext</a
           >
         </p>

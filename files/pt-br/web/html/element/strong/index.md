@@ -75,7 +75,7 @@ Este elemento inclui apenas os [atributos globais](/pt-BR/docs/Web/HTML/Global_a
 
 ## Notas de uso
 
-O elemento `<strong> `é utilizado em conteúdos que são de "grande importância", incluindo coisas de urgentes (como alertas). Podem ser sentenças que são de grande importância para toda a página, ou, você pode meramente tentar pontuar que algumas palavras são de grande importância, comparado ao conteúdo próximo.
+O elemento `<strong>` é utilizado em conteúdos que são de "grande importância", incluindo coisas de urgentes (como alertas). Podem ser sentenças que são de grande importância para toda a página, ou, você pode meramente tentar pontuar que algumas palavras são de grande importância, comparado ao conteúdo próximo.
 
 Tipicamente, estes elementos são renderizados por padrão, usando fontes em negrito. Contudo, ele não deve ser usado para simplesmente aplicar o estilo negrito; use o CSS {{cssxref("font-weight")}} para este propósito. Use o elemento {{HTMLElement("b")}} para chamar a atenção para certos textos sem a indicação de grande nível de importância. Use o elemento {{HTMLElement("em")}} para marcar textos que tem necessitam de ênfase.
 
@@ -117,8 +117,6 @@ Ao fazer x é **imperativo** que se faça y antes de prosseguir.
 ## Navegadores Compatíveis
 
 {{Compat("html.elements.strong")}}
-
-##
 
 ## Veja também
 

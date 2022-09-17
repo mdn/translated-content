@@ -17,10 +17,9 @@ translation_of: Web/API/WebVR_API
 
 <p>O método {{domxref("HMDVRDevice.getEyeParameters()")}} retorna um objeto {{domxref("VREyeParameters")}}, que pode ser usado para retornar informações do campo de exibição - quanto da cena a tela montada na cabeça pode ver.O {{domxref("VREyeParameters.currentFieldOfView")}} retorna um objeto {{domxref("VRFieldOfView")}} que contém 4 ângulos que descrevem a vista atual a partir de um ponto central. Você também pode alterar o campo de visualização usando {{domxref("HMDVRDevice.setFieldOfView()")}}.</p>
 
-<div id="gt-res-content">
-<h2 class="trans-verified-button-small" dir="ltr" id="WebVR_Interfaces">WebVR Interfaces</h2>
+<h2 id="WebVR_Interfaces">WebVR Interfaces</h2>
 
-<p class="trans-verified-button-small" dir="ltr">{{domxref("VRDisplay")}}<br>
+<p>{{domxref("VRDisplay")}}<br>
  Representa qualquer dispositivo VR suportado por esta API. Ele inclui informações genéricas, como IDs de dispositivo e descrições, bem como métodos para começar a apresentar uma cena VR, recuperar os parâmetros do olho e exibir capacidades e outras funcionalidades importantes.<br>
  {{domxref("VRDisplayCapabilities")}}<br>
  Descreve os recursos de um {{domxref("VRDisplay")}} - seus recursos podem ser usados ​​para executar testes de capacidade do dispositivo VR, por exemplo, ele pode retornar informações de posição.<br>
@@ -35,9 +34,9 @@ translation_of: Web/API/WebVR_API
  {{domxref("VRStageParameters")}}<br>
  Representa os valores que descrevem a área de estágio para dispositivos que suportam experiências em escala de sala.</p>
 
-<h2 class="trans-verified-button-small" dir="ltr" id="Extensões_para_outras_interfaces">Extensões para outras interfaces</h2>
+<h2 id="Extensões_para_outras_interfaces">Extensões para outras interfaces</h2>
 
-<p class="trans-verified-button-small" dir="ltr">{{domxref("Gamepad.displayId")}} {{readonlyInline}}<br>
+<p>{{domxref("Gamepad.displayId")}} {{readonlyInline}}<br>
  Retorna o {{domxref("VRDisplay.displayId")}} do associado {{domxref("VRDisplay")}} - o VRDisplay que o gamepad está controlando a cena exibida de.<br>
  {{domxref("Navigator.activeVRDisplays")}} {{readonlyInline}}<br>
  Retorna uma matriz contendo todos os objetos {{domxref("VRDisplay")}} que está sendo apresentado ({{domxref("VRDisplay.ispresenting")}}).<br>
@@ -49,7 +48,6 @@ translation_of: Web/API/WebVR_API
  Representa um manipulador de eventos que será executado quando um dispositivo VR compatível tiver sido desconectado do computador (quando o evento {{event("vrdisplaydisconnected")}} for acionado).<br>
  {{domxref("Window.onvrdisplaypresentchange")}}<br>
  Representa um manipulador de eventos que será executado quando o estado de apresentação de um dispositivo VR mudar - isto é, vai de apresentar a não apresentar, ou vice-versa (quando o evento {{event("onvrdisplaypresentchange")}} é acionado).</p>
-</div>
 
 <h2 id="Exemplos">Exemplos</h2>
 

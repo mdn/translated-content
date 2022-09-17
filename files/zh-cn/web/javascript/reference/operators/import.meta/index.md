@@ -76,5 +76,5 @@ new URL(import.meta.url).searchParams.get('someURLInfo'); // 5
 
 ## See also
 
-- [import](/en-US/docs/Web/JavaScript/Reference/Statements/import)
-- [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export)
+- [import](/zh-CN/docs/Web/JavaScript/Reference/Statements/import)
+- [`export`](/zh-CN/docs/Web/JavaScript/Reference/Statements/export)

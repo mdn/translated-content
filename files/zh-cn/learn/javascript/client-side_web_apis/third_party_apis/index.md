@@ -12,13 +12,13 @@ slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
       <th scope="row">先决条件：</th>
       <td>
         JavaScript 基础知识 (see
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">first steps</a>,
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+        <a href="/zh-CN/docs/Learn/JavaScript/First_steps">first steps</a>,
+        <a href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
           >building blocks</a
         >,
-        <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript objects</a>),
+        <a href="/zh-CN/docs/Learn/JavaScript/Objects">JavaScript objects</a>),
         the
-        <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
+        <a href="/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
           >basics of Client-side APIs</a
         >
       </td>

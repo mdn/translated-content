@@ -1,10 +1,6 @@
 ---
 title: 並行モデルとイベントループ
 slug: Web/JavaScript/EventLoop
-tags:
-  - Advanced
-  - JavaScript
-translation_of: Web/JavaScript/EventLoop
 ---
 {{JsSidebar("Advanced")}}
 

@@ -111,7 +111,7 @@ In Unicode, two sequences of code points are compatible if they represent the sa
 
 All canonically equivalent sequences are also compatible, but not vice versa.
 
-For example, the code point U+FB00 represents the [ligature](/en-US/docs/Glossary/Ligature) `"ﬀ"`. It is compatible with two consecutive U+0066 code points (`"ff"`).
+For example, the code point U+FB00 represents the [ligature](/zh-CN/docs/Glossary/Ligature) `"ﬀ"`. It is compatible with two consecutive U+0066 code points (`"ff"`).
 
 In some respects (such as sorting) they should be treated as equivalent—and in some (such as visual appearance) they should not, so they are not canonically equivalent.
 

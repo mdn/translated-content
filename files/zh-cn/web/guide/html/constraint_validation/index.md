@@ -110,7 +110,7 @@ Note that most input types don't have intrinsic constraints, as some are simply 
       <td>text, search, url, tel, email, password</td>
       <td>
         A
-        <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions"
+        <a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions"
           >JavaScript regular expression</a
         >
         (compiled with the

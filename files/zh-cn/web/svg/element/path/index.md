@@ -48,7 +48,7 @@ path 元素是用来定义形状的通用元素。所有的基本形状都可以
 
 ## DOM 接口
 
-该元素实现了[`SVGPathElement`](/en-US/docs/DOM/SVGPathElement)接口。
+该元素实现了[`SVGPathElement`](/zh-CN/docs/DOM/SVGPathElement)接口。
 
 ## 浏览器兼容性
 

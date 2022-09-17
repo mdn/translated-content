@@ -51,12 +51,12 @@ NaN % 2 // NaN
 
 ## 相关链接
 
-- [Addition operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Subtraction operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Division operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Division)
-- [Multiplication operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Exponentiation operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Increment operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Decrement operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Unary negation operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Unary plus operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [Addition operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Subtraction operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [Division operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Division)
+- [Multiplication operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Exponentiation operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [Increment operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Increment)
+- [Decrement operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [Unary negation operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [Unary plus operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)

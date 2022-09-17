@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 ---
 <div>{{JSRef}}</div>
 
-<p>O método <code><strong>slice()</strong></code> retorna uma cópia de parte de um array a partir de um subarray criado entre as posições <code>início</code> e <code>fim</code> (<font face="consolas, Liberation Mono, courier, monospace"><span>fim</span></font> não é necessário) de um array original. O Array original não é modificado.</p>
+<p>O método <code><strong>slice()</strong></code> retorna uma cópia de parte de um array a partir de um subarray criado entre as posições <code>início</code> e <code>fim</code> (fim não é necessário) de um array original. O Array original não é modificado.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
@@ -21,15 +21,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 
 <dl>
  <dt><code>início</code> {{optional_inline}}</dt>
- <dd>Índice baseado em zero no qual se inicia a extração.</dd>
- <dd>Como um índice negativo, <code>início</code> indica um deslocamento em relação ao fim da sequência. <code>slice(-2)</code> extrai os dois últimos elementos do array.</dd>
- <dd>Se <font face="consolas, Liberation Mono, courier, monospace"><span>início</span></font> for omitido, <code>slice</code> inicia a partir do índice <font face="Consolas, Liberation Mono, Courier, monospace">0</font>.</dd>
- <dd>Se <font face="consolas, Liberation Mono, courier, monospace"><span>início</span></font> for maior que o comprimento do array, é retornado um array vazio.</dd>
+ <dd><p>Índice baseado em zero no qual se inicia a extração.</p>
+ <p>Como um índice negativo, <code>início</code> indica um deslocamento em relação ao fim da sequência. <code>slice(-2)</code> extrai os dois últimos elementos do array.</p>
+ <p>Se <code>início</code> for omitido, <code>slice</code> inicia a partir do índice <code>0</code>.</p>
+ <p>Se <code>início</code> for maior que o comprimento do array, é retornado um array vazio.</p></dd>
  <dt><code>fim</code> {{optional_inline}}</dt>
- <dd>Índice baseado em zero o qual é o final da extração. <code>slice</code> extrai até, não incluindo, <code>fim</code>.</dd>
- <dd><code>slice(1,4)</code> extrai do segundo até o quarto elemento (elementos de índice 1, 2 e 3).</dd>
- <dd>Como índice negativo, <code>fim</code> indica um deslocamento em relação ao fim do array. <code>slice(2,-1)</code> extrai o terceiro elemento através do segundo-para-o-último elemento no array.</dd>
- <dd>Se <code>fim</code> for omitido ou for maior que o tamanho do array, <code>slice</code> considerará o último elemento do array como sendo o <code>fim </code>(<code>arr.length</code>)<code>.</code></dd>
+ <dd><p>Índice baseado em zero o qual é o final da extração. <code>slice</code> extrai até, não incluindo, <code>fim</code>.</p>
+ <p><code>slice(1,4)</code> extrai do segundo até o quarto elemento (elementos de índice 1, 2 e 3).</p>
+ <p>Como índice negativo, <code>fim</code> indica um deslocamento em relação ao fim do array. <code>slice(2,-1)</code> extrai o terceiro elemento através do segundo-para-o-último elemento no array.</p>
+ <p>Se <code>fim</code> for omitido ou for maior que o tamanho do array, <code>slice</code> considerará o último elemento do array como sendo o <code>fim </code>(<code>arr.length</code>)<code>.</code></p></dd>
 </dl>
 
 <h3 id="Valor_de_retorno">Valor de retorno</h3>
@@ -117,9 +117,9 @@ function list() {
 var list1 = list(1, 2, 3); // [1, 2, 3]
 </pre>
 
-<h2 id="Simplificando_o_comportamento_entre_navegadores"><span class="short_text" id="result_box" lang="pt"><span>Simplificando o comportamento entre navegadores</span></span></h2>
+<h2 id="Simplificando_o_comportamento_entre_navegadores">Simplificando o comportamento entre navegadores</h2>
 
-<p><span id="result_box" lang="pt"><span>Embora os objetos de host (como objetos DOM) não sejam obrigados pela especificação a seguir o comportamento do Mozilla quando convertidos por Array.prototype.slice e IE &lt;9 não o fazem</span></span>, versões do IE começando pela versão 9 permitem isso. “Shimming” pode permitir um comportamento confiável entre navegadores. Enquanto outros navegadores modernos continuem suportando essa habilidade, como atualmente IE, Mozilla, Chrome, Safari, e Opera fazem, desenvolvedores lendo (DOM-supporting) o código slice confiando neste shim não serão desencaminhados pela semântica; eles podem confiar seguramente na semântica para fornecer o agora aparentemente comportamento padrão de fato. (Isso também corrige o problema com IE &lt; 9 onde o segundo argumento do <code>slice</code> era explicitamente {{jsxref("null")}}/{{jsxref("undefined")}})</p>
+<p>Embora os objetos de host (como objetos DOM) não sejam obrigados pela especificação a seguir o comportamento do Mozilla quando convertidos por Array.prototype.slice e IE &lt;9 não o fazem, versões do IE começando pela versão 9 permitem isso. “Shimming” pode permitir um comportamento confiável entre navegadores. Enquanto outros navegadores modernos continuem suportando essa habilidade, como atualmente IE, Mozilla, Chrome, Safari, e Opera fazem, desenvolvedores lendo (DOM-supporting) o código slice confiando neste shim não serão desencaminhados pela semântica; eles podem confiar seguramente na semântica para fornecer o agora aparentemente comportamento padrão de fato. (Isso também corrige o problema com IE &lt; 9 onde o segundo argumento do <code>slice</code> era explicitamente {{jsxref("null")}}/{{jsxref("undefined")}})</p>
 
 <pre class="brush: js notranslate">(function () {
   'use strict';

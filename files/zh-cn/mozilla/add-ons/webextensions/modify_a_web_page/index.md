@@ -141,14 +141,14 @@ modify-page/
       <th scope="row">发送消息</th>
       <td>
         <code
-          ><a href="/en-US/Add-ons/WebExtensions/API/runtime#sendMessage()"
+          ><a href="/zh-CN/Add-ons/WebExtensions/API/runtime#sendMessage()"
             >browser.runtime.sendMessage()</a
           ></code
         >
       </td>
       <td>
         <code
-          ><a href="/en-US/Add-ons/WebExtensions/API/Tabs/sendMessage"
+          ><a href="/zh-CN/Add-ons/WebExtensions/API/Tabs/sendMessage"
             >browser.tabs.sendMessage()</a
           ></code
         >
@@ -158,14 +158,14 @@ modify-page/
       <th scope="row">接收消息</th>
       <td>
         <code
-          ><a href="/en-US/Add-ons/WebExtensions/API/runtime/onMessage"
+          ><a href="/zh-CN/Add-ons/WebExtensions/API/runtime/onMessage"
             >browser.runtime.onMessage</a
           ></code
         >
       </td>
       <td>
         <code
-          ><a href="/en-US/Add-ons/WebExtensions/API/runtime#onMessage"
+          ><a href="/zh-CN/Add-ons/WebExtensions/API/runtime#onMessage"
             >browser.runtime.onMessage</a
           ></code
         >

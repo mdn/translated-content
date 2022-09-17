@@ -5,11 +5,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary">O objeto Intl.DateTimeFormat é um constructor para objetos que habilita o formato de data e hora no idioma padrão.</span> </p>
+<p>O objeto Intl.DateTimeFormat é um constructor para objetos que habilita o formato de data e hora no idioma padrão. </p>
 
 <div>{{EmbedInteractiveExample("pages/js/intl-datetimeformat.html")}}</div>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Constructor">Constructor</h2>
 
@@ -76,7 +74,7 @@ console.log(new Intl.DateTimeFormat('ko-KR').format(date));
 
 // Arabic in most Arabic speaking countries uses real Arabic digits
 console.log(new Intl.DateTimeFormat('ar-EG').format(date));
-// → "١٩<span dir="rtl">‏/١٢‏/٢٠١٢</span>"
+// → "١٩‏/١٢‏/٢٠١٢"
 
 // for Japanese, applications may want to use the Japanese calendar,
 // where 2012 was the year 24 of the Heisei era

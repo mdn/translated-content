@@ -19,7 +19,7 @@ translation_of: Web/HTML/Global_attributes
 
 **Atributos Globais** são atributos comuns a todos elementos HTML; eles podem ser usados em todos os elementos, embora os atributos não tenham efeito em alguns elementos.
 
-Os atributos globais podem ser especificados em todos os elementos HTML, mesmo aqueles não especificados no padrão. Isso significa que qualquer elemento não padrão ainda deve permitir esses atributos, mesmo que usar esses elementos significa que o documento não é mais compatível com HTML5. Por exemplo, navegadores compatíveis com HTML5 escondem o conteúdo marcado como `<foo hidden>...<foo>, `mesmo que `<foo>` não seja um elemento HTML válido.
+Os atributos globais podem ser especificados em todos os elementos HTML, mesmo aqueles não especificados no padrão. Isso significa que qualquer elemento não padrão ainda deve permitir esses atributos, mesmo que usar esses elementos significa que o documento não é mais compatível com HTML5. Por exemplo, navegadores compatíveis com HTML5 escondem o conteúdo marcado como `<foo hidden>...<foo>,` mesmo que `<foo>` não seja um elemento HTML válido.
 
 Além dos atributos globais HTML básicos, os seguintes atributos globais também existem:
 
@@ -81,7 +81,7 @@ Além dos atributos globais HTML básicos, os seguintes atributos globais també
   - : Usado para adicionar propriedades a um item. Cada elemento HTML pode ter um atributo itemprop especificado, onde um itemprop consiste em um par de nomes e valores.
 - [`itemref`](/en-US/docs/Web/HTML/Global_attributes/itemref) {{experimental_inline}}
   - : As propriedades que não são descendentes de um elemento com o atributo `itemscope` podem ser associadas ao item usando um **itemref**. Itemref fornece uma lista de ids de elementos (não `itemid`) com propriedades adicionais em outro lugar do documento.
-- `itemscope `{{experimental_inline}}
+- `itemscope` {{experimental_inline}}
   - : Este atributo funciona, em geral, com o atributo [`itemtype`](/en-US/docs/Web/HTML/Global_attributes/itemtype) para especificar o HTML dentro de um bloco é sobre um item particular. [`itemscope`](/en-US/docs/Web/HTML/Global_attributes/itemscope) cria o item e define o escopo do [`itemtype`](/en-US/docs/Web/HTML/Global_attributes/itemtype) associado a ele. [`itemtype`](/en-US/docs/Web/HTML/Global_attributes/itemtype) é uma URL válida de um vocabulário (como o [schema.org](http://schema.org/)) que descreve o item e o context de seus atributos.
 - [`itemtype`](/en-US/docs/Web/HTML/Global_attributes/itemtype) {{experimental_inline}}
   - : Especifica a URL do vocabulário que será usado para definir as propriedades do item na estrutura de dados. [`itemscope`](/en-US/docs/Web/HTML/Global_attributes/itemscope) é usado para alterar o escopo na estrutura de dados onde o vocabulário definido por [`itemtype`](/en-US/docs/Web/HTML/Global_attributes/itemtype) estará ativo.

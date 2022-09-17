@@ -12,11 +12,11 @@ slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
       <th scope="row">前提：</th>
       <td>
         你需要了解
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 的基本知识</a
         >
         并且知道如何
-        <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
+        <a href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
           >在你的文档中插入图片</a
         >.
       </td>

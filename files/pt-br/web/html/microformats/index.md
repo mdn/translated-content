@@ -47,7 +47,7 @@ Todas os nomes de classes de microformatos utilizam prefixos. Os prefixos são O
 
 - **"dt-\*" para propriedades de data e hora**, p.ex "dt-start", "dt-end", "dt-bday"
 
-  - Análise especial necessária: [value-class-pattern](http://microformats.org/wiki/value-class-pattern "value-class-pattern") and separate date time value parsing for readability.
+  - Análise especial necessária: [value-class-pattern](http://microformats.org/wiki/value-class-pattern) and separate date time value parsing for readability.
 
 - **"e-\*" para propriedades da árvore de elementos** em que toda a hierarquia de elementos contidos é o valor, p.ex "e-content". O prefixo "e-" também pode ser lembrado mnemonicamente como "árvore de elementos", "marcação incorporada", ou "marcação encapsulada".
 
@@ -203,7 +203,7 @@ Exemplo de h-entry como uma postagem em blog:
 
 ### h-feed
 
-O [h-feed](http://microformats.org/wiki/h-feed) é um fluxo de dados ou um feed de posts de [h-entry](http://microformats.org/wiki/h-entry "h-entry"), como postagens completas em uma página inicial ou em páginas de arquivo, sumários ou outras listagens de postagens
+O [h-feed](http://microformats.org/wiki/h-feed) é um fluxo de dados ou um feed de posts de [h-entry](http://microformats.org/wiki/h-entry), como postagens completas em uma página inicial ou em páginas de arquivo, sumários ou outras listagens de postagens
 
 #### Exemplo h-feed
 
