@@ -1378,7 +1378,9 @@
 /zh-CN/docs/Web/API/Document/ononline	/zh-CN/docs/Web/API/Window/online_event
 /zh-CN/docs/Web/API/Document/onreadystatechange	/en-US/docs/Web/API/Document/readystatechange_event
 /zh-CN/docs/Web/API/Document/onvisibilitychange	/zh-CN/docs/Web/API/Document/visibilitychange_event
+/zh-CN/docs/Web/API/Document/pointerlockchange_event	/zh-CN/docs/Web/API/Element/pointerlockchange_event
 /zh-CN/docs/Web/API/Document/rouchmove_event	/zh-CN/docs/conflicting/Web/API/Element/touchmove_event
+/zh-CN/docs/Web/API/Document/selectstart_event	/zh-CN/docs/Web/API/Node/selectstart_event
 /zh-CN/docs/Web/API/Document/touchcancel_event	/zh-CN/docs/conflicting/Web/API/Element/touchcancel_event
 /zh-CN/docs/Web/API/Document/touchend_event	/zh-CN/docs/Web/API/Element/touchend_event
 /zh-CN/docs/Web/API/Document/touchmove_event	/zh-CN/docs/conflicting/Web/API/Element/touchmove_event
@@ -1540,7 +1542,7 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers/onscroll	/zh-CN/docs/Web/API/Element/scroll_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onselect	/zh-CN/docs/Web/API/HTMLInputElement/select_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onselectionchange	/zh-CN/docs/Web/API/HTMLInputElement/selectionchange_event
-/zh-CN/docs/Web/API/GlobalEventHandlers/onselectstart	/zh-CN/docs/Web/API/Document/selectstart_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/onselectstart	/zh-CN/docs/Web/API/Node/selectstart_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onsubmit	/zh-CN/docs/Web/API/HTMLFormElement/submit_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/ontouchcancel	/zh-CN/docs/Web/API/Element/touchcancel_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/ontouchmove	/zh-CN/docs/Web/API/Element/touchmove_event
@@ -2145,7 +2147,7 @@
 /zh-CN/docs/Web/Events/scroll	/zh-CN/docs/Web/API/Document/scroll_event
 /zh-CN/docs/Web/Events/select	/zh-CN/docs/Web/API/HTMLInputElement/select_event
 /zh-CN/docs/Web/Events/selectionchange	/zh-CN/docs/Web/API/Document/selectionchange_event
-/zh-CN/docs/Web/Events/selectstart	/zh-CN/docs/Web/API/Document/selectstart_event
+/zh-CN/docs/Web/Events/selectstart	/zh-CN/docs/Web/API/Node/selectstart_event
 /zh-CN/docs/Web/Events/show	/zh-CN/docs/Web/API/Element/show_event
 /zh-CN/docs/Web/Events/storage	/zh-CN/docs/Web/API/Window/storage_event
 /zh-CN/docs/Web/Events/timeout	/zh-CN/docs/Web/API/XMLHttpRequest/timeout_event
