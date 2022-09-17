@@ -16,7 +16,9 @@ HTML 문서가 `designMode`로 전환되면 문서에서 `execCommand` 메서드
 
 ## 문법
 
-    bool = document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
+```js
+bool = document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
+```
 
 ### 반환값
 

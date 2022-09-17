@@ -1,12 +1,6 @@
 ---
 title: start_url
 slug: Web/Manifest/start_url
-tags:
-  - マニフェスト
-  - ウェブ
-  - start_url
-browser-compat: html.manifest.start_url
-translation_of: Web/Manifest/start_url
 ---
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 

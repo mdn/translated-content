@@ -49,13 +49,8 @@ _Cette interface ne dispose pas de méthodes spécifiques et implémente celles 
 
 ## Spécifications
 
-| Spécification                                                                                    | État                             | Commentaires                                                         |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#interface-cdatasection', 'CDATASection')}}     | {{Spec2('DOM WHATWG')}} | Rajouté dans le bogue [#295](https://github.com/whatwg/dom/pull/295) |
-| {{SpecName('DOM3 Core', 'core.html#ID-667469212', 'CDATASection')}}         | {{Spec2('DOM3 Core')}}     | Aucune modification depuis {{SpecName('DOM2 Core')}}          |
-| {{SpecName('DOM2 Core', 'core.html#ID-667469212', 'CDATASection')}}         | {{Spec2('DOM2 Core')}}     | Aucune modification depuis {{SpecName('DOM1')}}.             |
-| {{SpecName('DOM1', 'level-one-core.html#ID-667469212', 'CDATASection')}} | {{Spec2('DOM1')}}         | Définition initiale.                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CDATASection")}}
+{{Compat}}

@@ -1,15 +1,6 @@
 ---
 title: ReadableStreamBYOBReader.closed
 slug: Web/API/ReadableStreamBYOBReader/closed
-tags:
-  - API
-  - Experimental
-  - Property
-  - ReadableStreamBYOBReader
-  - Reference
-  - Streams
-  - closed
-translation_of: Web/API/ReadableStreamBYOBReader/closed
 ---
 {{SeeCompatTable}}{{APIRef("Streams")}}
 

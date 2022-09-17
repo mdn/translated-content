@@ -1,12 +1,6 @@
 ---
 title: 非推奨の機能、廃止された機能
 slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
-tags:
-  - 非推奨
-  - ガイド
-  - JavaScript
-  - 廃止
-translation_of: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 ---
 {{JsSidebar("More")}}
 
@@ -89,7 +83,7 @@ translation_of: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 | {{jsxref("RegExp.global", "global")}}             | 対象文字列で可能な一致すべてに対して正規表現をテストするか、それとも、最初の一致に対してのみテストするどうかのフラグです。 |
 | {{jsxref("RegExp.ignoreCase", "ignoreCase")}} | 文字列の照合を試みる際に、大文字と小文字の違いを無視するかどうかのフラグです。                                                |
 | {{jsxref("RegExp.lastIndex", "lastIndex")}}     | 次の照合が始まる位置です。                                                                        |
-| {{jsxref("RegExp.multiline", "multiline")}}     | 複数行に渡って文字列を検索するかどうかのフラグです。。                                                         |
+| {{jsxref("RegExp.multiline", "multiline")}}     | 複数行に渡って文字列を検索するかどうかのフラグです。                                                         |
 | {{jsxref("RegExp.source", "source")}}             | パターンのテキストです。                                                                                           |
 
 ### `RegExp` オブジェクトのメソッド

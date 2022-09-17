@@ -78,7 +78,7 @@ Premièrement, en mode strict, il est impossible de créer accidentellement des 
 
 ```js
 "use strict";
-varialeMalDéclarée = 17; // lève une ReferenceError
+variableMalDéclarée = 17; // lève une ReferenceError
 ```
 
 Deuxièmement, le mode strict fait en sorte que les affectations qui échoueraient silencieusement lèveront aussi une exception. Par exemple, {{jsxref("Objets_globaux/NaN","NaN")}} est une variable globale en lecture seule. En mode normal, une affectation à `NaN` ne fera rien ; le développeur ne recevra aucun retour par rapport à cette faute. En mode strict, affecter une valeur quelconque à `NaN` lèvera une exception. Toute affectation qui échouera silencieusement en mode non-strict (affectation à une propriété en lecture seule, affectation à une propriété sans méthode `set`, affectation à une nouvelle propriété sur un objet [non-extensible](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/preventExtensions)) lèvera une exception en mode strict :

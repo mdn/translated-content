@@ -84,10 +84,8 @@ function check_PerformanceEntry(obj) {
 
 ## Spécifications
 
-| Spécification                                                                                                                | Statut                                                   | Commentaire                                   |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | --------------------------------------------- |
-| {{SpecName('Performance Timeline Level 2', '#dom-performanceentry-tojson', 'toJSON')}} | {{Spec2('Performance Timeline Level 2')}} | Définition initiale de la méthode `toJSON()`. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceEntry.toJSON")}}
+{{Compat}}

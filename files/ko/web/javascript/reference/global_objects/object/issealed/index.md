@@ -17,7 +17,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/isSealed
 
 ## 구문
 
-    Object.isSealed(obj)
+```js
+Object.isSealed(obj)
+```
 
 ### 매개변수
 

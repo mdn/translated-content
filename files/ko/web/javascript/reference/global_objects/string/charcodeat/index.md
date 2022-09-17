@@ -18,7 +18,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 
 ## 구문
 
-    str.charCodeAt(index)
+```js
+str.charCodeAt(index)
+```
 
 ### 매개변수
 

@@ -16,7 +16,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/Promise
 
 ## 구문
 
-    new Promise(executor)
+```js
+new Promise(executor)
+```
 
 ### 매개변수
 

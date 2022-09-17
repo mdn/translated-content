@@ -1,13 +1,6 @@
 ---
 title: メディアクエリーの初心者向けガイド
 slug: Learn/CSS/CSS_layout/Media_queries
-tags:
-  - Beginner
-  - CSS
-  - Layout
-  - Learn
-  - media query
-translation_of: Learn/CSS/CSS_layout/Media_queries
 ---
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}
 

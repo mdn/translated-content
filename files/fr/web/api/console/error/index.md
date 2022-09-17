@@ -39,15 +39,13 @@ console.exception(msg [, subst1, ..., substN]);
 
 Voir [Afficher du texte dans la console](/fr/docs/Web/API/console#Outputting_text_to_the_console) dans la documentation de  {{domxref("console")}} pour plus de détails.
 
-## Spécification
+## Spécifications
 
-| Specification                                                                | Status                           | Comment             |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("Console API", "#error", "console.error()")}} | {{Spec2("Console API")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.error")}}
+{{Compat}}
 
 ## Voir aussi
 

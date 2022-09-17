@@ -39,7 +39,7 @@ slug: Learn/Common_questions/Pages_sites_servers_and_search_engines
 
 ## 自主学习
 
-_还没有可用的资料。[Please, consider contributing](/en-US/docs/MDN/Getting_started)._
+_还没有可用的资料。[Please, consider contributing](/zh-CN/docs/MDN/Getting_started)._
 
 ## 深入探索
 
@@ -47,7 +47,7 @@ _还没有可用的资料。[Please, consider contributing](/en-US/docs/MDN/Gett
 
 ### 网页
 
-一份网页文档是交给{{Glossary("浏览器")}}显示的简单文档。这种文档是由{{Glossary("超文本标记语言 HTML")}}来编写的 (在[other articles](/en-US/docs/Web/HTML)可查看更多详细内容)。网页文档可以插入各种各样不同类型的资源，例如：
+一份网页文档是交给{{Glossary("浏览器")}}显示的简单文档。这种文档是由{{Glossary("超文本标记语言 HTML")}}来编写的 (在[other articles](/zh-CN/docs/Web/HTML)可查看更多详细内容)。网页文档可以插入各种各样不同类型的资源，例如：
 
 - _样式信息_ — 控制页面的观感
 - _脚本_— 为页面添加交互性

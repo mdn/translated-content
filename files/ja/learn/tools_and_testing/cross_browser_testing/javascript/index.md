@@ -1,19 +1,6 @@
 ---
 title: JavaScript のよくある問題を扱う
 slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - Learn
-  - Libraries
-  - Testing
-  - cross browser
-  - feature detection
-  - linting
-  - polyfills
-translation_of: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
 

@@ -75,13 +75,11 @@ Les coefficients de la transformation de Fourier doivent être données dans un 
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#dom-baseaudiocontext-createperiodicwave', 'createPeriodicWave')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.BaseAudioContext.createPeriodicWave")}}
+{{Compat}}
 
 ## Voir aussi
 

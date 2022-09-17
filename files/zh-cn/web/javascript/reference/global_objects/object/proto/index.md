@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/proto
 
 使用`__proto__` 是有争议的，也不鼓励使用它。因为它从来没有被包括在 EcmaScript 语言规范中，但是现代浏览器都实现了它。`__proto__` 属性已在 ECMAScript 6 语言规范中标准化，用于确保 Web 浏览器的兼容性，因此它未来将被支持。它已被不推荐使用，现在更推荐使用{{jsxref("Object.getPrototypeOf")}}/{{jsxref("Reflect.getPrototypeOf")}} 和{{jsxref("Object.setPrototypeOf")}}/{{jsxref("Reflect.setPrototypeOf")}}（尽管如此，设置对象的 \[\[Prototype]] 是一个缓慢的操作，如果性能是一个问题，应该避免）。
 
-\_\_proto\_\_ 属性也可以在对象文字定义中使用对象 \[\[Prototype]] 来创建，作为{{jsxref("Object.create()")}} 的一个替代。请参阅：[object initializer / literal syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer).
+\_\_proto\_\_ 属性也可以在对象文字定义中使用对象 \[\[Prototype]] 来创建，作为{{jsxref("Object.create()")}} 的一个替代。请参阅：[object initializer / literal syntax](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer).
 
 ## 语法
 
@@ -85,7 +85,7 @@ obj.myname();//myname
 
 `__proto__` 的设置器 (setter) 允许对象的 `[[Prototype]]` 被变更。前提是这个对象必须通过 {{jsxref("Object.isExtensible()")}} 判断为是可扩展的，如果不可扩展，则会抛出一个 {{jsxref("Global_Objects/TypeError", "TypeError")}} 错误。要变更的值必须是一个 object 或{{jsxref("Global_Objects/null", "null")}}，提供其它值将不起任何作用。
 
-要理解原型如何被使用，请查看相关文章：[Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)。
+要理解原型如何被使用，请查看相关文章：[Inheritance and the prototype chain](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)。
 
 `__proto__` 属性是 {{jsxref("Object.prototype")}} 一个简单的访问器属性，其中包含了 get（获取）和 set（设置）的方法，任何一个 `__proto__` 的存取属性都继承于 {{jsxref("Object.prototype")}}，但一个访问属性如果不是来源于 {{jsxref("Object.prototype")}} 就不拥有 `__proto__` 属性，譬如一个元素设置了其他的 `__proto__` 属性在 {{jsxref("Object.prototype")}} 之前，将会覆盖原有的 {{jsxref("Object.prototype")}}。
 

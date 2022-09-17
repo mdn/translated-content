@@ -53,5 +53,5 @@ console.log(myString);
 ## 같이 보기
 
 - [Firefox Developer Tools](/ko/docs/Tools)
-- [Web Console](/ko/docs/Tools/Web_Console "Web Console") — how the Web Console in Firefox handles console API calls
+- [Web Console](/ko/docs/Tools/Web_Console) — how the Web Console in Firefox handles console API calls
 - [Remote debugging](/ko/docs/Tools/Remote_Debugging) — how to see console output when the debugging target is a mobile device

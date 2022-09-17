@@ -51,9 +51,9 @@ Si le document contient des attributs [`xml:base`](/fr/docs/Introduction_%C3%A0_
 
 Vous pouvez utiliser `{{domxref("element")}}.baseURI` pour obtenir l'URL de base d'un élément.
 
-## Spécification
+## Spécifications
 
-- {{spec("http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-baseURI","DOM Level 3 Core: baseURI","REC")}}
+{{Specifications}}
 
 ## Voir aussi
 

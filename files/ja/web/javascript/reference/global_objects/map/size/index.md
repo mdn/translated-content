@@ -1,12 +1,6 @@
 ---
 title: Map.prototype.size
 slug: Web/JavaScript/Reference/Global_Objects/Map/size
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Property
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/size
 ---
 {{JSRef}}
 

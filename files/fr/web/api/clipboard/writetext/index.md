@@ -38,10 +38,8 @@ navigator.clipboard.writeText("<presse-papiers vide>").then(function() {
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Clipboard API','#h-clipboard-writetext-data','writeText()')}} | {{Spec2('Clipboard API')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Clipboard.writeText")}}
+{{Compat}}

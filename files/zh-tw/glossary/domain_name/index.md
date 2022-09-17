@@ -9,4 +9,4 @@ slug: Glossary/Domain_name
 ### **基礎知識**
 
 - 維基百科上的 [域名](https://zh.wikipedia.org/wiki/Domain_name)
-- [理解域名](/en-US/Learn/Understanding_domain_names)
+- [理解域名](/zh-TW/Learn/Understanding_domain_names)

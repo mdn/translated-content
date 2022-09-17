@@ -1,15 +1,6 @@
 ---
 title: 代替スタイルシート
 slug: Web/CSS/Alternative_style_sheets
-tags:
-  - CSS
-  - Guide
-  - HTML
-  - NeedsCompatTable
-  - NeedsUpdate
-  - Reference
-  - ガイド
-translation_of: Web/CSS/Alternative_style_sheets
 ---
 {{cssref}}
 

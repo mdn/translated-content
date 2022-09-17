@@ -1,7 +1,6 @@
 ---
 title: 'Document: selectstart event'
 slug: Web/API/Document/selectstart_event
-translation_of: Web/API/Document/selectstart_event
 ---
 {{APIRef}}
 
@@ -54,7 +53,7 @@ document.onselectstart = () => {
 
 ## ブラウザ互換性
 
-{{Compat("api.Document.selectstart_event")}}
+{{Compat}}
 
 ## 参照
 

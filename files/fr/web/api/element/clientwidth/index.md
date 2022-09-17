@@ -30,17 +30,11 @@ var intElemClientWidth = element.clientWidth;
 
 ## Spécifications
 
-| Spécification                                                                                | État                             | Commentaires |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('CSSOM View', '#dom-element-clientwidth', 'clientWidth')}} | {{Spec2("CSSOM View")}} |              |
-
-### Notes
-
-`clientWidth` fut d'abord introduit avec le modèle objet DHTML de Microsoft Internet Explorer.
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.clientWidth")}}
+{{Compat}}
 
 ## Voir aussi
 

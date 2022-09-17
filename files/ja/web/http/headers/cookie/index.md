@@ -1,15 +1,6 @@
 ---
 title: Cookie
 slug: Web/HTTP/Headers/Cookie
-tags:
-  - HTTP
-  - cookie
-  - クッキー
-  - ヘッダー
-  - リクエストヘッダー
-  - リファレンス
-  - 禁止ヘッダー名
-translation_of: Web/HTTP/Headers/Cookie
 ---
 {{HTTPSidebar}}
 

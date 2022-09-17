@@ -1,14 +1,6 @@
 ---
 title: 'Window: hashchange イベント'
 slug: Web/API/Window/hashchange_event
-tags:
-  - API
-  - Event
-  - HTML DOM
-  - Reference
-  - Window
-  - イベント
-translation_of: Web/API/Window/hashchange_event
 ---
 {{APIRef}}
 

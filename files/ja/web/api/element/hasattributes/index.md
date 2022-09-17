@@ -1,14 +1,6 @@
 ---
 title: Element.hasAttributes()
 slug: Web/API/Element/hasAttributes
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
-  - メソッド
-translation_of: Web/API/Element/hasAttributes
 ---
 {{ApiRef("DOM")}}
 
@@ -54,7 +46,7 @@ if (foo.hasAttributes()) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Element.hasAttributes")}}
+{{Compat}}
 
 ## 関連情報
 

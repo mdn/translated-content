@@ -16,9 +16,11 @@ translation_of: Web/API/CSSMediaRule
 
 [WebIDL](https://heycam.github.io/webidl/) 형식을 사용해 서술합니다.
 
-    interface CSSMediaRule : CSSConditionRule {
-        readonly attribute MediaList media;
-    }
+```
+interface CSSMediaRule : CSSConditionRule {
+    readonly attribute MediaList media;
+}
+```
 
 ## 속성
 

@@ -30,4 +30,4 @@ Where `funcRef` is a reference to a function. This function receives a {{ domxre
 
 - {{ event("devicemotion") }}
 - {{ domxref("DeviceMotionEvent") }}
-- [Detecting device orientation](/en/Detecting_device_orientation)
+- [Detecting device orientation](/zh-CN/Detecting_device_orientation)

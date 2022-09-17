@@ -1,14 +1,6 @@
 ---
 title: File.lastModified
 slug: Web/API/File/lastModified
-tags:
-  - API
-  - File API
-  - ファイル
-  - プロパティ
-  - リファレンス
-browser-compat: api.File.lastModified
-translation_of: Web/API/File/lastModified
 ---
 {{APIRef("File")}}
 

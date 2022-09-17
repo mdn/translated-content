@@ -1,12 +1,6 @@
 ---
 title: 'SyntaxError: missing formal parameter'
 slug: Web/JavaScript/Reference/Errors/Missing_formal_parameter
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Missing_formal_parameter
 ---
 {{jsSidebar("Errors")}}
 

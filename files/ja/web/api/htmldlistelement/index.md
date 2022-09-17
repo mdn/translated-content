@@ -1,15 +1,6 @@
 ---
 title: HTMLDListElement
 slug: Web/API/HTMLDListElement
-page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - NeedsNewLayout
-  - リファレンス
-browser-compat: api.HTMLDListElement
-translation_of: Web/API/HTMLDListElement
 ---
 {{ApiRef("HTML DOM")}}
 

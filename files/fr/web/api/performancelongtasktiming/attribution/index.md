@@ -26,10 +26,8 @@ Une séquence d'instances [`TaskAttributionTiming`](/fr/docs/Web/API/TaskAttribu
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('Long Tasks','#dom-performancelongtasktiming-attribution','attribution')}} | {{Spec2('Long Tasks')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceLongTaskTiming.attribution")}}
+{{Compat}}

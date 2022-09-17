@@ -1,13 +1,6 @@
 ---
 title: Element.part
 slug: Web/API/Element/part
-tags:
-  - API
-  - Element
-  - プロパティ
-  - リファレンス
-  - part
-browser-compat: api.Element.part
 ---
 {{ ApiRef("DOM") }}
 

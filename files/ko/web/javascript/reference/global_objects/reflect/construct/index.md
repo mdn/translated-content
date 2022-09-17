@@ -17,7 +17,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 
 ## 구문
 
-    Reflect.construct(target, argumentsList[, newTarget])
+```js
+Reflect.construct(target, argumentsList[, newTarget])
+```
 
 ### 매개변수
 

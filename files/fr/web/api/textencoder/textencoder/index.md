@@ -25,15 +25,13 @@ encoder = new TextEncoder();
 
 - `TextEncoder()` ne lève plus d'exception en cas de type d'encodage inconnu depuis Firefox 48 et Chrome 53.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                    | Statu                        | Commentaire         |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName("Encoding", "#dom-textencoder", "TextEncoder()")}} | {{Spec2("Encoding")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.TextEncoder.TextEncoder")}}
+{{Compat}}
 
 ## Voir aussi
 

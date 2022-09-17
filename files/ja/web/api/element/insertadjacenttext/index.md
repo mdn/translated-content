@@ -1,7 +1,6 @@
 ---
 title: Element.insertAdjacentText()
 slug: Web/API/Element/insertAdjacentText
-translation_of: Web/API/Element/insertAdjacentText
 ---
 {{APIRef("DOM")}}
 
@@ -71,7 +70,7 @@ afterBtn.addEventListener('click', function() {
 
 ## ブラウザー間の互換性
 
-{{Compat("api.Element.insertAdjacentText")}}
+{{Compat}}
 
 ## 関連項目
 

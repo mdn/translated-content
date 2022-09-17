@@ -1,12 +1,6 @@
 ---
 title: Document.createElementNS()
 slug: Web/API/Document/createElementNS
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-translation_of: Web/API/Document/createElementNS
 ---
 {{APIRef("DOM")}}
 
@@ -96,7 +90,7 @@ The new {{DOMxRef("Element")}}.
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.createElementNS")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -33,14 +33,11 @@ var node = treeWalker.parentNode(); // returns null as there is no parent
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                                       | Commentaire                                                           |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-treewalker-parentnode', 'TreeWalker.parentNode')}}                                         | {{Spec2('DOM WHATWG')}}             | Pas de changement de {{SpecName('DOM2 Traversal_Range')}} |
-| {{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-TreeWalker-parentNode', 'TreeWalker.parentNode')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale.                                                  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.TreeWalker.parentNode")}}
+{{Compat}}
 
 ## Voir aussi
 

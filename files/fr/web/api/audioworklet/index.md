@@ -41,13 +41,11 @@ Voir {{domxref("AudioWorkletNode")}} pour des exemples complets de création de 
 
 ## Spécifications
 
-| Spécification                                                                    | Status                               | Commentaire         |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Web Audio API','#audioworklet','AudioWorklet')}} | {{Spec2('Web Audio API')}} | Définition intiale. |
+{{Specifications}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.AudioWorklet")}}
+{{Compat}}
 
 ## Voir aussi
 

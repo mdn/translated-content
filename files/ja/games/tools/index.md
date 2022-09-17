@@ -1,12 +1,6 @@
 ---
 title: ゲーム開発のためのツール
 slug: Games/Tools
-tags:
-  - Games
-  - Gecko
-  - Guide
-  - JavaScript
-translation_of: Games/Tools
 ---
 {{GamesSidebar}}
 

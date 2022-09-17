@@ -13,19 +13,21 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/of
 
 ## 문법
 
-    TypedArray.of(element0[, element1[, ...[, elementN]]])
+```
+TypedArray.of(element0[, element1[, ...[, elementN]]])
+```
 
-    where TypedArray is one of:
+where TypedArray is one of:
 
-    Int8Array
-    Uint8Array
-    Uint8ClampedArray
-    Int16Array
-    Uint16Array
-    Int32Array
-    Uint32Array
-    Float32Array
-    Float64Array
+- Int8Array
+- Uint8Array
+- Uint8ClampedArray
+- Int16Array
+- Uint16Array
+- Int32Array
+- Uint32Array
+- Float32Array
+- Float64Array
 
 ### 매개변수
 

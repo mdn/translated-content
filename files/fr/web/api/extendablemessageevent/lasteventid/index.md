@@ -50,13 +50,11 @@ self.onmessage = function(e) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                                    | Statut                               | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Service Workers', '#extendablemessage-event-lasteventid-attribute', 'ExtendableMessageEvent.lastEventId')}} | {{Spec2('Service Workers')}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilités des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.ExtendableMessageEvent.lastEventId")}}
+{{Compat}}
 
 ## Voir aussi
 

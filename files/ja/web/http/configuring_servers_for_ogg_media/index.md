@@ -1,12 +1,6 @@
 ---
 title: Ogg メディア用のサーバーの設定
 slug: Web/HTTP/Configuring_servers_for_Ogg_media
-tags:
-  - Audio
-  - Media
-  - Ogg
-  - Video
-translation_of: Web/HTTP/Configuring_servers_for_Ogg_media
 ---
 {{HTTPSidebar}}
 

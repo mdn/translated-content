@@ -1,13 +1,6 @@
 ---
 title: 'HTML attribute: pattern'
 slug: Web/HTML/Attributes/pattern
-tags:
-  - Attribute
-  - Attributes
-  - Constraint Validation API
-  - HTML
-  - Reference
-translation_of: Web/HTML/Attributes/pattern
 ---
 {{HTMLSidebar}}
 
@@ -129,7 +122,7 @@ This renders like so:
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.attributes.pattern")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -1,13 +1,6 @@
 ---
 title: NAT
 slug: Glossary/NAT
-tags:
-  - Beginner
-  - Glossary
-  - Infrastructure
-  - WebMechanics
-  - WebRTC
-translation_of: Glossary/NAT
 ---
 **NAT** (Network Address Translation: ネットワークアドレス変換) は、複数のコンピューターで IP アドレスを共有するための技術です。NAT は一意のアドレスをローカルネットワーク上のコンピューターへ割り当て、正しい場所へデータを届けるために、ネットワークトラフィックを調整します。
 

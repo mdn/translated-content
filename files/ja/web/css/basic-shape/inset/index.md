@@ -1,17 +1,7 @@
 ---
 title: inset()
 slug: Web/CSS/basic-shape/inset
-tags:
-  - CSS
-  - CSS データ型
-  - CSS シェイプ
-  - inset
-  - CSS 関数
-  - データ型
-  - Reference
-translation_of: Web/CSS/basic-shape/inset()
 original_slug: Web/CSS/basic-shape/inset()
-browser-compat: css.types.basic-shape.inset
 ---
 {{CSSRef}}
 

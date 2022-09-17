@@ -15,9 +15,9 @@ WebGL 基於 {{Glossary("OpenGL")}} ES 2.0. 且 正被[科納斯組織](https://
 ### 基礎知識
 
 - 維基百科上的 [WebGL](https://zh.wikipedia.org/wiki/WebGL)
-- 看一下 你的電腦支不支援 WebGL[](https://get.webgl.org/)
+- 看一下 你的電腦支不支援 [WebGL](https://get.webgl.org/)
 
 ### 技術文章
 
-- [MDN 上的 Ｗ ebGL](/en-US/docs/Web/API/WebGL_API)
+- [MDN 上的 Ｗ ebGL](/zh-TW/docs/Web/API/WebGL_API)
 - [支援 WebGL 瀏覽器列表](https://caniuse.com/#feat=webgl)

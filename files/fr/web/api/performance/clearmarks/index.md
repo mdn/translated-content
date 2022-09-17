@@ -64,11 +64,8 @@ logMarkCount() // "J'ai trouvé autant d'entrées : 0"
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                                       | Commentaire                      |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------------------- |
-| {{SpecName('User Timing Level 2', '#dom-performance-clearmarks', 'clearMarks()')}} | {{Spec2('User Timing Level 2')}} | Clarification de `clearMarks()`. |
-| {{SpecName('User Timing', '#dom-performance-clearmarks', 'clearMarks()')}}                     | {{Spec2('User Timing')}}             | Définition initiale.             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Performance.clearMarks")}}
+{{Compat}}

@@ -1,12 +1,6 @@
 ---
 title: 'Document: readystatechange イベント'
 slug: Web/API/Document/readystatechange_event
-tags:
-  - Event
-  - Reference
-  - XMLHttpRequest
-  - interactive
-translation_of: Web/API/Document/readystatechange_event
 ---
 {{APIRef}}
 
@@ -118,7 +112,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.readystatechange_event")}}
+{{Compat}}
 
 ## 関連情報
 

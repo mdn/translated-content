@@ -1,7 +1,6 @@
 ---
 title: VREyeParameters.offset
 slug: Web/API/VREyeParameters/offset
-translation_of: Web/API/VREyeParameters/offset
 ---
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 

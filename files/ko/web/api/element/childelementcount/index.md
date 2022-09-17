@@ -18,7 +18,9 @@ original_slug: Web/API/ParentNode/childElementCount
 
 ## 문법
 
-    var count = node.childElementCount;
+```js
+var count = node.childElementCount;
+```
 
 - `count`
   - : `unsigned long`(정수) 타입의 반환값.

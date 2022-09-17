@@ -1,15 +1,6 @@
 ---
 title: CSSKeyframesRule.deleteRule()
 slug: Web/API/CSSKeyframesRule/deleteRule
-tags:
-  - API
-  - CSSOM
-  - CSSKeyframesRule
-  - CSS アニメーション
-  - メソッド
-  - リファレンス
-browser-compat: api.CSSKeyframesRule.deleteRule
-translation_of: Web/API/CSSKeyframesRule/deleteRule
 ---
 {{APIRef("CSSOM") }}
 

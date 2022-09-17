@@ -1,15 +1,6 @@
 ---
 title: counter-increment
 slug: Web/CSS/counter-increment
-tags:
-  - CSS
-  - CSS カウンター
-  - CSS リスト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.counter-increment
-translation_of: Web/CSS/counter-increment
 ---
 {{CSSRef}}
 

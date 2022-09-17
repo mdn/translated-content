@@ -1,13 +1,6 @@
 ---
 title: Timing-Allow-Origin
 slug: Web/HTTP/Headers/Timing-Allow-Origin
-tags:
-  - CORS
-  - HTTP
-  - Reference
-  - Timing-Allow-Origin
-  - header
-translation_of: Web/HTTP/Headers/Timing-Allow-Origin
 ---
 {{HTTPSidebar}}
 

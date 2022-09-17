@@ -1,21 +1,6 @@
 ---
 title: <input type="submit">
 slug: Web/HTML/Element/input/submit
-tags:
-  - Element
-  - Form Button
-  - Form input
-  - HTML
-  - HTML forms
-  - Input
-  - Input Types
-  - Reference
-  - Submit Form
-  - button
-  - form
-  - submit
-  - submit button
-translation_of: Web/HTML/Element/input/submit
 ---
 {{HTMLRef("Input_types")}}
 
@@ -224,7 +209,7 @@ We've included simple examples above. There isn't really anything more to say ab
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.input.input-submit")}}
+{{Compat}}
 
 ## 関連情報
 

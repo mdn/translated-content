@@ -1,15 +1,6 @@
 ---
 title: DOM の紹介
 slug: Web/API/Document_Object_Model/Introduction
-tags:
-  - 初心者
-  - DOM
-  - 文書
-  - ガイド
-  - HTML DOM
-  - 導入
-  - チュートリアル
-translation_of: Web/API/Document_Object_Model/Introduction
 ---
 {{DefaultAPISidebar("DOM")}}
 

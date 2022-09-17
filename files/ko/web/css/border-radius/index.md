@@ -161,11 +161,11 @@ border-bottom-left-radius:  3px 4px;
 
 ### 라이브 샘플
 
-1.  <http://jsfiddle.net/Tripad/qnGKj/2/>
-2.  <http://jsfiddle.net/Tripad/qnGKj/3/>
-3.  [http://jsfiddle.net/Tripad/qnGKj/4/](http://jsfiddle.net/Tripad/qnGKj/3/)
-4.  [http://jsfiddle.net/Tripad/qnGKj/5/](http://jsfiddle.net/Tripad/qnGKj/3/)
-5.  [http://jsfiddle.net/Tripad/qnGKj/6/](http://jsfiddle.net/Tripad/qnGKj/3/)
+1. <http://jsfiddle.net/Tripad/qnGKj/2/>
+2. <http://jsfiddle.net/Tripad/qnGKj/3/>
+3. <http://jsfiddle.net/Tripad/qnGKj/4/>
+4. <http://jsfiddle.net/Tripad/qnGKj/5/>
+5. <http://jsfiddle.net/Tripad/qnGKj/6/>
 
 ## 명세
 

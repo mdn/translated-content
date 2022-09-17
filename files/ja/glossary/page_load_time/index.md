@@ -1,13 +1,6 @@
 ---
 title: ページ読み込み時間
 slug: Glossary/Page_load_time
-tags:
-  - Glossary
-  - Timings
-  - Web Performance
-  - metrics
-  - page load time
-translation_of: Glossary/Page_load_time
 ---
 **ページ読み込み時間**とはページの読み込みにかかる時間のことであり、[ナビゲーション開始時](/ja/docs/Web/API/PerformanceTiming/navigationStart)から[ロードイベント開始時](/ja/docs/Web/API/PerformanceTiming/loadEventStart)までをもって測定されます。
 

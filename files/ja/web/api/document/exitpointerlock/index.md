@@ -1,13 +1,6 @@
 ---
 title: Document.exitPointerLock()
 slug: Web/API/Document/exitPointerLock
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - mouse lock
-translation_of: Web/API/Document/exitPointerLock
 ---
 {{APIRef("DOM")}} {{seeCompatTable}}
 
@@ -29,7 +22,7 @@ document.exitPointerLock();
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.exitPointerLock")}}
+{{Compat}}
 
 ## 関連情報
 

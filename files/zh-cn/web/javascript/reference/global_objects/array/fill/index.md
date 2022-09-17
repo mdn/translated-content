@@ -11,7 +11,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/fill
 ## 语法
 
 ```js
-arr.fill(value[, start[, end]])
+fill(value)
+fill(value, start)
+fill(value, start, end)
 ```
 
 ### 参数
@@ -21,7 +23,7 @@ arr.fill(value[, start[, end]])
 - `start` {{optional_inline}}
   - : 起始索引，默认值为 0。
 - `end` {{optional_inline}}
-  - : 终止索引，默认值为 `this.length`。
+  - : 终止索引，默认值为 `arr.length`。
 
 ### 返回值
 
@@ -54,62 +56,11 @@ Array(3).fill(4);                // [4, 4, 4]
 [].fill.call({ length: 3 }, 4);  // {0: 4, 1: 4, 2: 4, length: 3}
 
 // Objects by reference.
-var arr = Array(3).fill({}) // [{}, {}, {}];
+const arr = Array(3).fill({}) // [{}, {}, {}];
 // 需要注意如果 fill 的参数为引用类型，会导致都执行同一个引用类型
 // 如 arr[0] === arr[1] 为 true
 arr[0].hi = "hi"; // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]
 ```
-
-## Polyfill
-
-```js
-if (!Array.prototype.fill) {
-  Object.defineProperty(Array.prototype, 'fill', {
-    value: function(value) {
-
-      // Steps 1-2.
-      if (this == null) {
-        throw new TypeError('this is null or not defined');
-      }
-
-      var O = Object(this);
-
-      // Steps 3-5.
-      var len = O.length &gt;&gt;&gt; 0;
-
-      // Steps 6-7.
-      var start = arguments[1];
-      var relativeStart = start &gt;&gt; 0;
-
-      // Step 8.
-      var k = relativeStart &lt; 0 ?
-        Math.max(len + relativeStart, 0) :
-        Math.min(relativeStart, len);
-
-      // Steps 9-10.
-      var end = arguments[2];
-      var relativeEnd = end === undefined ?
-        len : end &gt;&gt; 0;
-
-      // Step 11.
-      var final = relativeEnd &lt; 0 ?
-        Math.max(len + relativeEnd, 0) :
-        Math.min(relativeEnd, len);
-
-      // Step 12.
-      while (k &lt; final) {
-        O[k] = value;
-        k++;
-      }
-
-      // Step 13.
-      return O;
-    }
-  });
-}
-```
-
-如果你确实需要维护已过时的不支持 [`Object.defineProperty`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) 的 JavaScript 引擎，那么最好完全不向 `Array.prototype` 添加方法，因为你不能使它不可枚举。
 
 ## 规范
 
@@ -121,5 +72,6 @@ if (!Array.prototype.fill) {
 
 ## 参见
 
+- [Polyfill of `Array.prototype.fill` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array")}}
 - {{jsxref("TypedArray.prototype.fill()")}}

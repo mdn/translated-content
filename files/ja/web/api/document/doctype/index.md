@@ -1,14 +1,6 @@
 ---
 title: Document.doctype
 slug: Web/API/Document/doctype
-tags:
-  - API
-  - DOCTYPE
-  - DOM
-  - Document
-  - Reference
-  - プロパティ
-translation_of: Web/API/Document/doctype
 ---
 {{ApiRef("DOM")}}
 
@@ -49,4 +41,4 @@ DOM レベル 2 では、文書型宣言の編集に対応していません。
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.doctype")}}
+{{Compat}}

@@ -1,13 +1,6 @@
 ---
 title: Atomics.add()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/add
-tags:
-  - Atomics
-  - JavaScript
-  - メソッド
-  - 共有メモリー
-browser-compat: javascript.builtins.Atomics.add
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/add
 ---
 {{JSRef}}
 

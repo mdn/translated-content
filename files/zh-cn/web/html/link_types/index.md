@@ -31,7 +31,7 @@ slug: Web/HTML/Link_types
           <li>
             如果{{htmlattrxref("type","link")}}设置为<code>application/rss+xml</code>或者<code>application/atom+xml</code>,
             则 link 被定义为<a
-              href="/en-US/docs/RSS/Getting_Started/Syndicating"
+              href="/zh-CN/docs/RSS/Getting_Started/Syndicating"
               >syndication feed</a
             >. 页面中第一个被定义的为默认的。
           </li>
@@ -424,7 +424,7 @@ slug: Web/HTML/Link_types
           开始，考虑了{{HTMLAttrxRef("crossorigin", "link")}}属性的值，从而可以进行匿名预取。
         </p>
         <p>
-          注意：<a href="/en-US/docs/Link_prefetching_FAQ">Link Prefetch FAQ</a
+          注意：<a href="/zh-CN/docs/Link_prefetching_FAQ">Link Prefetch FAQ</a
           >详细说明了可以预取的链接以及替代方法。
         </p>
       </td>
@@ -487,7 +487,7 @@ slug: Web/HTML/Link_types
         </p>
         <p>
           如果将{{htmlattrxref("type","link")}}属性设置为<code>application/opensearchdescription+xml</code>，则该资源是<a
-            href="/en-US/docs/Creating_OpenSearch_plugins_for_Firefox"
+            href="/zh-CN/docs/Creating_OpenSearch_plugins_for_Firefox"
             >OpenSearch 插件</a
           >，可以轻松将其添加到 Firefox 或 Internet Explorer
           等某些浏览器的界面中。
@@ -544,7 +544,7 @@ slug: Web/HTML/Link_types
           <code>type</code>，在进一步检查之前，浏览器应该假定它是
           <code>text/css</code> 样式表。<br /><br />如果与
           <code>alternate</code> 关键字结合使用，则定义一个
-          <a href="/en-US/docs/Alternative_style_sheets">可选样式表</a>
+          <a href="/zh-CN/docs/Alternative_style_sheets">可选样式表</a>
           ;在这种情况下，{{htmlattrxref("title", "link")}}
           属性必须出现，而不能是空字符串。
         </p>

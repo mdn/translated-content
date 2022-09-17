@@ -23,7 +23,7 @@ _None; 而且，`PeriodicWave` 继承任何属性。_
 
 ## 例子
 
-{{page("/zh-CN/docs/Web/API/BaseAudioContext/createPeriodicWave","例子")}}
+参见 {{domxref("BaseAudioContext.createPeriodicWave")}} 以获取简单的示例代码，其展示了如何创建一个包含简单的正弦波的 `PeriodicWave` 对象。
 
 ## 规格
 
@@ -35,4 +35,4 @@ _None; 而且，`PeriodicWave` 继承任何属性。_
 
 ## 参见
 
-- [Using the Web Audio API](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

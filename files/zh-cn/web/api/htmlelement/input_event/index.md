@@ -96,4 +96,4 @@ function updateValue(e) {
 - {{domxref("HTMLElement/change_event", "change")}}
 - {{domxref("HTMLInputElement/invalid_event", "invalid")}}
 
-此外，还有一个类似的 [`change`](https://developer.mozilla.org/en-US/docs/Web/Reference/Events/change) 事件。change 触发的频率低于 `input` - 它只会在用户提交更改时触发。
+此外，还有一个类似的 [`change`](/zh-CN/docs/Web/Reference/Events/change) 事件。change 触发的频率低于 `input` - 它只会在用户提交更改时触发。

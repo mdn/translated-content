@@ -1,14 +1,6 @@
 ---
 title: background-position
 slug: Web/CSS/background-position
-tags:
-  - CSS
-  - CSS 背景
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.background-position
-translation_of: Web/CSS/background-position
 ---
 {{CSSRef}}
 

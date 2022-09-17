@@ -136,7 +136,7 @@ Ces fichiers agiront comme une fausse base de données ; dans une vraie applicat
     request.responseType = 'text';
     ```
 
-8. Récupérer une ressource sur le réseau est une opération {{glossary("asynchronous","asynchrone")}}, ce qui signifie que vous devez attendre que cette opération se termine (par exemple, que la ressource soit renvoyée) avant de pouvoir récupérer la réponse — sans quoi une erreur est levée. XHR permet d'exécuter du code lorsque la réponse est reçue grâce au gestionnaire d'évènement {{domxref("XMLHttpRequest.onload", "onload")}} — quand l'évènement {{event("load")}} est déclenché. Une fois que la réponse a été reçue, alors la réponse est accessible via la propriété `response` de l'objet XHR utilisé.
+8. Récupérer une ressource sur le réseau est une opération {{glossary("asynchronous","asynchrone")}}, ce qui signifie que vous devez attendre que cette opération se termine (par exemple, que la ressource soit renvoyée) avant de pouvoir récupérer la réponse — sans quoi une erreur est levée. XHR permet d'exécuter du code lorsque la réponse est reçue grâce au gestionnaire d'évènement {{domxref("XMLHttpRequest.onload", "onload")}} — quand l'évènement [`load`](/fr//docs/Web/API/Window/load_event) est déclenché. Une fois que la réponse a été reçue, alors la réponse est accessible via la propriété `response` de l'objet XHR utilisé.
 
     Ajoutez le bloc de code qui suit toujours au bas de la fonction `updateDisplay()`. Vous verrez qu'à l'intérieur du gestionnaire d'évènement `onload`, nous assignons la propriété [`textContent`](/fr/docs/Web/API/Node/textContent) de `poemDisplay` (l'élément {{htmlelement("pre")}}) à la valeur de la propriété {{domxref("XMLHttpRequest.response", "request.response")}}.
 

@@ -1,12 +1,6 @@
 ---
 title: Node.nextSibling
 slug: Web/API/Node/nextSibling
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Node.nextSibling
-translation_of: Web/API/Node/nextSibling
 ---
 {{APIRef("DOM")}}
 

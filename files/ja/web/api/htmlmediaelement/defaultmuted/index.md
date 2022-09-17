@@ -1,15 +1,6 @@
 ---
 title: HTMLMediaElement.defaultMuted
 slug: Web/API/HTMLMediaElement/defaultMuted
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Web
-browser-compat: api.HTMLMediaElement.defaultMuted
-translation_of: Web/API/HTMLMediaElement/defaultMuted
 ---
 {{APIRef("HTML DOM")}}
 

@@ -18,10 +18,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 
 **리듀서** 함수는 네 개의 인자를 가집니다.
 
-1.  누산기 (acc)
-2.  현재 값 (cur)
-3.  현재 인덱스 (idx)
-4.  원본 배열 (src)
+1. 누산기 (acc)
+2. 현재 값 (cur)
+3. 현재 인덱스 (idx)
+4. 원본 배열 (src)
 
 리듀서 함수의 반환 값은 누산기에 할당되고, 누산기는 순회 중 유지되므로 결국 최종 결과는 하나의 값이 됩니다.
 
@@ -34,7 +34,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 ### 매개변수
 
 - `callback`
-  - : 배열의 각 요소에 대해 실행할 함수. 
+  - : 배열의 각 요소에 대해 실행할 함수.
     다음 네 가지 인수를 받습니다.
     - `accumulator`
       - : 누산기는 콜백의 반환값을 누적합니다. 콜백의 이전 반환값 또는, 콜백의 첫 번째 호출이면서 `initialValue`를 제공한 경우에는 `initialValue`의 값입니다.

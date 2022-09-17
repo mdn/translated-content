@@ -1,14 +1,6 @@
 ---
 title: Element.scrollTo()
 slug: Web/API/Element/scrollTo
-tags:
-  - API
-  - Element
-  - Method
-  - Reference
-  - scrollTo
-  - メソッド
-translation_of: Web/API/Element/scrollTo
 ---
 {{APIRef}}
 
@@ -54,7 +46,7 @@ element.scrollTo({
 
 ## ブラウザーの互換性
 
-{{Compat("api.Element.scrollTo")}}
+{{Compat}}
 
 ## 関連情報
 

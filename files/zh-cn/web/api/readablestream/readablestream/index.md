@@ -2,7 +2,7 @@
 title: ReadableStream.ReadableStream()
 slug: Web/API/ReadableStream/ReadableStream
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
 **`ReadableStream()`** 构造函数创建并从给定的处理程序返回一个可读的流对象。
 
@@ -35,7 +35,7 @@ new ReadableStream(underlyingSource, queuingStrategy)
 
 - queueingStrategy {{optional_inline}}
 
-  - : 一个可选择定义流的排队策略的对象。这需要两个参数：
+  - : 一个可选择定义流的队列策略的对象。这需要两个参数：
 
     - highWaterMark
       - : 非负整数 - 这定义了在应用背压之前可以包含在内部队列中的块的总数。

@@ -1,14 +1,6 @@
 ---
 title: animation-direction
 slug: Web/CSS/animation-direction
-tags:
-  - CSS
-  - CSS アニメーション
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.animation-direction
-translation_of: Web/CSS/animation-direction
 ---
 {{CSSRef}}
 

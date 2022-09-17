@@ -1,14 +1,6 @@
 ---
 title: Symbol.iterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Symbol
-  - Polyfill
-browser-compat: javascript.builtins.Symbol.iterator
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 ---
 <div>{{JSRef}}</div>
 

@@ -4,15 +4,34 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/name
 ---
 {{JSRef("Global_Objects", "Function")}}`function.name` 属性返回函数实例的名称。
 
+{{EmbedInteractiveExample("pages/js/function-name.html")}}
+
 {{js_property_attributes(0,0,1)}}
 
-> **备注：** 在非标准的 ES2015 之前的实现中，`configurable`属性也是`false` 。
+> **备注：** 在非标准的 ES2015 之前的实现中，`configurable` 属性也是 `false`。
+
+## 描述
+
+函数的 `name` 属性可用于在调试工具或错误消息中标识该函数。它对语言本身没有任何意义。
+
+`name` 属性是只读的，不能用赋值操作符修改:
+
+```js
+function someFunction() {}
+
+someFunction.name = 'otherFunction';
+console.log(someFunction.name); // someFunction
+```
+
+想要改变它, 请使用 {{jsxref("Object.defineProperty()")}}.
+
+`name` 属性通常是从函数的定义方式推断出来的。在下面的部分中，我们将描述推断它的各种方法。
 
 ## 示例
 
 ### 函数声明的名称
 
-`name` 属性返回一个函数声明的名称。
+`name` 属性会返回函数的名称。
 
 ```js
 function doSomething() { }

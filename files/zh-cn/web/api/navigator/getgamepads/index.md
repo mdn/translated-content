@@ -33,5 +33,5 @@ window.addEventListener("gamepadconnected", function(e) {
 
 ## 另请参阅
 
-- [Using the Gamepad API](/en-US/docs/Web/Guide/API/Gamepad)
-- [Gamepad API](/en-US/docs/Web/API/Gamepad_API)
+- [Using the Gamepad API](/zh-CN/docs/Web/Guide/API/Gamepad)
+- [Gamepad API](/zh-CN/docs/Web/API/Gamepad_API)

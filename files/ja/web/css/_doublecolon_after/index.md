@@ -1,15 +1,6 @@
 ---
 title: '::after (:after)'
 slug: Web/CSS/::after
-tags:
-  - CSS
-  - レイアウト
-  - 擬似要素
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.after
-translation_of: Web/CSS/::after
 ---
 {{CSSRef}}
 

@@ -1,11 +1,6 @@
 ---
 title: Database
 slug: Glossary/Database
-tags:
-  - Database
-  - Glossary
-  - Sql
-translation_of: Glossary/Database
 ---
 **データベース** は、データの整理や収集を行い保存をするシステムです。データベースを使うことで検索、構造化、拡張などの作業を簡単に行うことができます。
 
@@ -15,7 +10,7 @@ translation_of: Glossary/Database
 
 ブラウザー上で動く {{glossary("IndexedDB")}} と呼ばれる独自データベースシステムもあります。
 
-1.  {{Interwiki("wikipedia", "データベース")}} (Wikipedia)
+1. {{Interwiki("wikipedia", "データベース")}} (Wikipedia)
 
-    1.  {{Glossary("IndexedDB")}}
-    2.  {{Glossary("SQL")}}
+    1. {{Glossary("IndexedDB")}}
+    2. {{Glossary("SQL")}}

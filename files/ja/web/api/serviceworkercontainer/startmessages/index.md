@@ -1,13 +1,6 @@
 ---
 title: ServiceWorkerContainer.startMessages()
 slug: Web/API/ServiceWorkerContainer/startMessages
-tags:
-  - API
-  - Reference
-  - Service Workers
-  - ServiceWorkerContainer
-  - startMessages
-translation_of: Web/API/ServiceWorkerContainer/startMessages
 ---
 {{APIRef("Service Workers API")}}
 

@@ -30,17 +30,15 @@ _Hérite également des propriétés de son parent {{domxref("Event")}}_ .
 - {{domxref("TransitionEvent.initTransitionEvent ()")}} {{non-standard_inline}} {{deprecated_inline}}
   - : Initialise un `TransitionEvent`créé en utilisant la méthode {{domxref("Document.createEvent ()")}} déconseillée.
 
-## Caractéristiques
+## Spécifications
 
-| spécification                                                                                                        | Statut                                   | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName ('Transitions CSS3', '# Événements-TransitionEvent', 'TransitionEvent')}} | {{Spec2 ('Transitions CSS3')}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
 {{Compat}}
 
-## Voir également
+## Voir aussi
 
 - [Utilisation des transitions CSS](/fr/docs/Web/Guide/CSS/Using_CSS_transitions)
 - Propriétés de CSS: {{cssxref ("transition")}}, {{cssxref ("transition-delay")}}, {{cssxref ("transition-duration")}}, {{cssxref ("transition-property") }}, {{Cssxref ("transition-timing-function")}}.

@@ -30,10 +30,8 @@ TBD
 
 ## Spécifications
 
-| Spécification                                                        | Statut                               | Commentaire         |
-| -------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#client-id', 'id')}} | {{Spec2('Service Workers')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Client.id")}}
+{{Compat}}

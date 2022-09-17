@@ -1,15 +1,6 @@
 ---
 title: Object.prototype.__defineGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-  - Polyfill
-browser-compat: javascript.builtins.Object.defineGetter
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 ---
 {{JSRef}}
 

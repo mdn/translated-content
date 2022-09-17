@@ -1,15 +1,6 @@
 ---
 title: RegExp.$1-$9
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/n
-tags:
-  - JavaScript
-  - Non-standard
-  - Property
-  - Read-only
-  - Reference
-  - RegExp
-  - Regular Expressions
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/n
 ---
 {{JSRef}}
 
@@ -38,8 +29,6 @@ str.replace(re, '$2, $1'); // "Smith, John"
 RegExp.$1; // "John"
 RegExp.$2; // "Smith"
 ```
-
-###
 
 次のスクリプトは、 {{jsxref("RegExp")}} インスタンスの {{jsxref("RegExp.prototype.test()", "test()")}} メソッドを使用して、一般的な文字列で数値を取得しています。
 

@@ -39,10 +39,8 @@ une  {{domxref("DOMString")}}.
 
 ## Spécifications
 
-| Specification                                                                                        | Status                               | Comment             |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#window-client-interface', 'WindowClient')}} | {{Spec2('Service Workers')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WindowClient.visibilityState")}}
+{{Compat}}

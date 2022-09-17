@@ -1,15 +1,6 @@
 ---
 title: RegExp.leftContext ($`)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/leftContext
-tags:
-  - JavaScript
-  - Non-standard
-  - Property
-  - Read-only
-  - Reference
-  - RegExp
-  - Regular Expressions
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/leftContext
 ---
 {{JSRef}} {{non-standard_header}}
 

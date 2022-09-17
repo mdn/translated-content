@@ -25,10 +25,8 @@ Une chaîne de caractères {{domxref("USVString")}} contenant le mot de passe.
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('Credential Management','#dom-passwordcredential-password','password')}} | {{Spec2('Credential Management')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PasswordCredential.password")}}
+{{Compat}}

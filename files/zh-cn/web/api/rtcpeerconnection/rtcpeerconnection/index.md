@@ -35,7 +35,7 @@ pc = new RTCPeerConnection([configuration]);
 
 ## 引申阅读
 
-- [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
-- [WebRTC architecture overview](/en-US/docs/Web/API/WebRTC_API/Architecture)
-- [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
+- [Signaling and video calling](/zh-CN/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
+- [WebRTC architecture overview](/zh-CN/docs/Web/API/WebRTC_API/Architecture)
+- [Lifetime of a WebRTC session](/zh-CN/docs/Web/API/WebRTC_API/Session_lifetime)
 - {{domxref("RTCPeerConnection")}}

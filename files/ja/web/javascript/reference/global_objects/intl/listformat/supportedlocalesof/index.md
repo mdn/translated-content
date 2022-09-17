@@ -1,15 +1,6 @@
 ---
 title: Intl.ListFormat.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/supportedLocalesOf
-tags:
-  - 国際化
-  - Intl
-  - JavaScript
-  - ListFormat
-  - メソッド
-  - リファレンス
-browser-compat: javascript.builtins.Intl.ListFormat.supportedLocalesOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/supportedLocalesOf
 ---
 {{JSRef}}
 

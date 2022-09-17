@@ -1,12 +1,6 @@
 ---
 title: Document.getElementsByTagName()
 slug: Web/API/Document/getElementsByTagName
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-translation_of: Web/API/Document/getElementsByTagName
 ---
 {{APIRef("DOM")}}
 
@@ -102,7 +96,7 @@ HTML 文書上で呼び出された場合、 `getElementsByTagName()` は処理�
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.getElementsByTagName")}}
+{{Compat}}
 
 ## 関連情報
 

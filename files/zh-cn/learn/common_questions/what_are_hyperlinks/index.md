@@ -86,5 +86,5 @@ slug: Learn/Common_questions/What_are_hyperlinks
 
 所以现在当然你想要建立一些链接的网页！
 
-- 为了获得更多的理论背景，了解 [URL 以及其结构](/en-US/docs/Learn/Common_questions/What_is_a_URL),因为每个链接都指向一个 URL.
-- 想要一些更实际的东西？我们的 [HTML 介绍](/en-US/docs/Learn/HTML/Introduction_to_HTML) 模块中的[创建超链接](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) 解释了如何实现详细的超链接
+- 为了获得更多的理论背景，了解 [URL 以及其结构](/zh-CN/docs/Learn/Common_questions/What_is_a_URL),因为每个链接都指向一个 URL.
+- 想要一些更实际的东西？我们的 [HTML 介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML) 模块中的[创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) 解释了如何实现详细的超链接

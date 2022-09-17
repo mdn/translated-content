@@ -49,7 +49,7 @@ X-Cache: Hit from cloudfront
 X-Cache-Info: cached
 ```
 
-## En apprendre plus
+## Voir aussi
 
 ### Culture générale
 

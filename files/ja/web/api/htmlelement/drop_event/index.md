@@ -1,17 +1,6 @@
 ---
 title: 'HTMLElement: drop イベント'
 slug: Web/API/HTMLElement/drop_event
-page-type: web-api-event
-tags:
-  - DOM
-  - Drag Event
-  - Drop
-  - Event
-  - HTML 5
-  - Reference
-  - drag and drop
-browser-compat: api.HTMLElement.drop_event
-translation_of: Web/API/HTMLElement/drop_event
 ---
 {{APIRef}}
 
@@ -52,7 +41,7 @@ translation_of: Web/API/HTMLElement/drop_event
 
 ここでは、 3 つのイベントハンドラーを使用しています。
 
-- dragstart` イベント ハンドラーでは、ユーザーがドラッグした要素へのリファレンスを取得します。
+- `dragstart` イベント ハンドラーでは、ユーザーがドラッグした要素へのリファレンスを取得します。
 - ターゲットコンテナーの `dragover` イベントハンドラーでは、 `event.preventDefault()` を呼び出し、`drop` イベントを受信できるようにします。
 - ドロップゾーンの `drop` イベントハンドラーでは、ドラッグ可能な要素を元のコンテナからドロップゾーンに移動する処理を行います。
 

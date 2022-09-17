@@ -15,11 +15,11 @@ slug: Web/CSS/angle
 ### 单位
 
 - `deg`
-  - [: 度](<https://zh.wikipedia.org/wiki/%E5%BA%A6_(%E8%A7%92)>)。一个完整的圆是 `360deg`。例：`0deg`，` 90deg，``14.23deg `。
+  - : [度](<https://zh.wikipedia.org/wiki/%E5%BA%A6_(%E8%A7%92)>)。一个完整的圆是 `360deg`。例：`0deg`，`90deg`，`14.23deg`。
 - `grad`
-  - [: 百分度](https://zh.wikipedia.org/wiki/%E7%99%BE%E5%88%86%E5%BA%A6)。一个完整的圆是 `400grad`。例：`0grad`，`100grad`，`38.8grad`。
+  - : [百分度](https://zh.wikipedia.org/wiki/%E7%99%BE%E5%88%86%E5%BA%A6)。一个完整的圆是 `400grad`。例：`0grad`，`100grad`，`38.8grad`。
 - `rad`
-  - [: 弧度](https://zh.wikipedia.org/wiki/%E5%BC%A7%E5%BA%A6)。一个完整的圆是 2π 弧度，约等于 `6.2832rad`。`1rad` 是 180/π 度。例：`0rad`，`1.0708rad`，`6.2832rad`。
+  - : [弧度](https://zh.wikipedia.org/wiki/%E5%BC%A7%E5%BA%A6)。一个完整的圆是 2π 弧度，约等于 `6.2832rad`。`1rad` 是 180/π 度。例：`0rad`，`1.0708rad`，`6.2832rad`。
 - turn
   - : 圈数。一个完整的圆是 `1turn`。例：`0turn`，`0.25turn`，`1.2turn`。
 

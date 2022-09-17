@@ -1,13 +1,6 @@
 ---
 title: Document.createNSResolver()
 slug: Web/API/Document/createNSResolver
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Method
-  - Reference
-translation_of: Web/API/Document/createNSResolver
 ---
 {{ ApiRef("DOM") }}
 
@@ -43,7 +36,7 @@ nsResolver = document.createNSResolver(node);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.createNSResolver")}}
+{{Compat}}
 
 ## 関連情報
 

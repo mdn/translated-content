@@ -16,7 +16,7 @@ original_slug: Web/Guide/CSS/Visual_formatting_model
 
 - 상자의 면적: 정확히 정의하거나 제약을 받거나, 아에 정의하지 않습니다.
 - 상자의 유형: 인라인, 인라인수준, 원자 인라인수준, 블록.
-- [위치잡기 기법](/ko/docs/CSS/Box_positioning_scheme "CSS/Box positioning scheme"): 일반 대열 소속, 부동체, 또는 절대 위치잡기.
+- [위치잡기 기법](/ko/docs/CSS/Box_positioning_scheme): 일반 대열 소속, 부동체, 또는 절대 위치잡기.
 - 트리 구조에 속한 다른 요소 무리: 그것의 자녀와 이웃.
 - {{glossary("viewport")}} 크기와 위치.
 - 컨테이너에 속한 이미지의 고유한 면적.
@@ -32,11 +32,11 @@ original_slug: Web/Guide/CSS/Visual_formatting_model
 
 어떤 요소를 *블록수준*이라고 말하려면 계산된 {{ cssxref("display") }} 씨에스에스 속성값이 `block`, `list-item`, 또는 `table`일 때입니다. 블록수준 요소는 사실상 하나의 블록으로 취급되어 시각적으로 서식되며, 수직적으로 겹겹이 포개집니다.
 
-각각의 블록수준 상자는 [블록 서식 상황](/ko/docs/CSS/block_formatting_context "block formatting context")에 참여합니다. 각 블록수준 요소는 적어도 하나의 블록수준 상자를 생성하며 이를 일컬어 **수석 블록수준 상자<** (principal block-level box) 라고 합니다. 일부 요소 무리는 목록항목 요소와 같이 목록 항목을 안내하는 글머리표와 서로 다른 타이포그래픽 요소를 처리하기 위한 상자를 추가적으로 생성하듯 더 많은 상자 무리를 생성할 수 있습니다. 대다수는 수석 블록 수준 상자만을 생성합니다.
+각각의 블록수준 상자는 [블록 서식 상황](/ko/docs/CSS/block_formatting_context)에 참여합니다. 각 블록수준 요소는 적어도 하나의 블록수준 상자를 생성하며 이를 일컬어 **수석 블록수준 상자<** (principal block-level box) 라고 합니다. 일부 요소 무리는 목록항목 요소와 같이 목록 항목을 안내하는 글머리표와 서로 다른 타이포그래픽 요소를 처리하기 위한 상자를 추가적으로 생성하듯 더 많은 상자 무리를 생성할 수 있습니다. 대다수는 수석 블록 수준 상자만을 생성합니다.
 
-수석 블록수준 상자는 자손이 생성한 상자 및 콘텐츠를 포함합니다. 상자는 [위치잡기 기법](/ko/docs/CSS/Positioning_scheme "CSS/Positioning scheme")에도 관여하고 있습니다.
+수석 블록수준 상자는 자손이 생성한 상자 및 콘텐츠를 포함합니다. 상자는 [위치잡기 기법](/ko/docs/CSS/Positioning_scheme)에도 관여하고 있습니다.
 
-![venn_blocks.png](/@api/deki/files/5995/=venn_blocks.png)블록 수준 상자는 역시 블록 콘테이너 상자도 될 수 있습니다. *블록 컨테이너 상자*는 다른 블록수준 상자만을 포함하고 [인라인 서식 상황](/ko/docs/Web/CSS/Inline_formatting_context "CSS/Inline formatting context")을 생성하므로 인라인 상자 무리만을 포함합니다.
+![venn_blocks.png](/@api/deki/files/5995/=venn_blocks.png)블록 수준 상자는 역시 블록 콘테이너 상자도 될 수 있습니다. *블록 컨테이너 상자*는 다른 블록수준 상자만을 포함하고 [인라인 서식 상황](/ko/docs/Web/CSS/Inline_formatting_context)을 생성하므로 인라인 상자 무리만을 포함합니다.
 
 중요한 점은 블록수준 상자와 블록 컨테이너 상자의 개념은 별개라는 점에 유의해야 한다는 것입니다. 첫째, 상자가 자기 부모와 형제자매과 함께하는 행동 방식을 설명합니다. 둘째, 상자가 자기 자손과는 어떻게 상호작용하는지 설명합니다. 테이블과 같은 블록 수준의 상자 무리는 블록 컨테이너 상자가 아닙니다. 마찬가지로 **비객원<** (non-replaced) 인라인 블록과 비객원 테이블 셀과 같은 일부 블록 컨테이너 상자는 블록 수준 상자가 아닙니다.
 
@@ -106,7 +106,7 @@ original_slug: Web/Guide/CSS/Visual_formatting_model
 
 > **경고:** 이 도식은 구식 용어를 사용합니다: 아래 참조 사항을 보세요. 그것 이외에도 오른쪽의 노란색 타원은 정의에 따르면 왼쪽의 타원형과 동일하거나 그보다 크기 때문에(수학적 상위집합일 수 있어) 그림이 틀렀습니다, 왜냐하면 해당 씨에스에스 스펙을 보면 "인라인수준 요소는 인라인 서식 상황에 참여하는 상자인 인라인수준 상자를 생성한다"라고 쓰여있기 때문입니다. 씨에스에스 2.2, 9.2.2장 참조
 
-인라인 수준 요소는 [인라인 서식 상황](/ko/docs/CSS/Inline_formatting_context "CSS/Inline formatting context")에 참여하는 상자로 정의되는 *인라인수준 상자*를 생성합니다. *인라인 상자*는 상자와 인라인 수준 상자 모두가 해당합니다. 다만 이들 상자의 콘텐츠는 인라인 서식 상황에 참여해야 합니다. 예를 들어, `display: inline` 속성을 가진 모든 비객원 상자의 경우가 인라인입니다. 인라인 서식 상황에 참여하지 않는 인라인수준 상자를 **원자 인라인수준 상자** (atomic inline-level boxes)라고 합니다. 객원 인라인수준 요소 또는 계산된 {{ cssxref("display") }} 값이 `inline-block`인 요소에 의해 생성된 해당 상자 무리는 인라인 상자에서 가능했던 것처럼 여러 상자로 쪼개지지 않습니다.
+인라인 수준 요소는 [인라인 서식 상황](/ko/docs/CSS/Inline_formatting_context)에 참여하는 상자로 정의되는 *인라인수준 상자*를 생성합니다. *인라인 상자*는 상자와 인라인 수준 상자 모두가 해당합니다. 다만 이들 상자의 콘텐츠는 인라인 서식 상황에 참여해야 합니다. 예를 들어, `display: inline` 속성을 가진 모든 비객원 상자의 경우가 인라인입니다. 인라인 서식 상황에 참여하지 않는 인라인수준 상자를 **원자 인라인수준 상자** (atomic inline-level boxes)라고 합니다. 객원 인라인수준 요소 또는 계산된 {{ cssxref("display") }} 값이 `inline-block`인 요소에 의해 생성된 해당 상자 무리는 인라인 상자에서 가능했던 것처럼 여러 상자로 쪼개지지 않습니다.
 
 > **참고:** 처음에는 원자 인라인수준 상자를 원자 인라인 상자라고 불렀습니다. 그 명명은 불행한 일입니다. 인라인 상자가 **아니기** 때문입니다. 이건 씨에스에스 규격 상에 오타로 시정된 겁니다. 그렇긴 하지만, 문장 속에서 원자 인라인 상자를 마주칠 때마다 무리없이 원자 인라인 수준 상자로 읽을 수 있습니다. 그냥 이름 변경에 불과하기 때문입니다.
 
@@ -137,6 +137,7 @@ original_slug: Web/Guide/CSS/Visual_formatting_model
    없 습니다. 왜냐면 </span> 그것이 인라인 블록이기 때문입니다.
 </div>
 ```
+
  이 것의 결과는:스팬 요소에 포함된 텍스트는 분할될 수 없습니다. 왜냐면 인라인 블록 상자이기 때문입니다.
 
 #### 무명 인라인 상자
@@ -151,7 +152,7 @@ original_slug: Web/Guide/CSS/Visual_formatting_model
 
 #### 라인 상자
 
-*라인 상자*는 텍스트 라인을 표현하기 위해 [인라인 서식 상황](/ko/docs/CSS/Inline_formatting_context "block formatting context")에 의해 생성되는 상자입니다. 블록 상자 내부의 라인 상자는 상자의 한쪽 테두리로부터 반대측의 테두리까지 넓어집니다. [부동체](/ko/docs/CSS/float "float")가 있을 경우 라인 상자 구역은 왼쪽 부동체의 맨우측 테두리에서 시작해 우측 부동체의 맨좌측 테두리에서 끝납니다.
+*라인 상자*는 텍스트 라인을 표현하기 위해 [인라인 서식 상황](/ko/docs/CSS/Inline_formatting_context)에 의해 생성되는 상자입니다. 블록 상자 내부의 라인 상자는 상자의 한쪽 테두리로부터 반대측의 테두리까지 넓어집니다. [부동체](/ko/docs/CSS/float)가 있을 경우 라인 상자 구역은 왼쪽 부동체의 맨우측 테두리에서 시작해 우측 부동체의 맨좌측 테두리에서 끝납니다.
 
 이들 상자는 기술적인 것으로, 보통 웹 저술가가 이것에 대해 고민할 필요는 없습니다.
 
@@ -165,8 +166,8 @@ original_slug: Web/Guide/CSS/Visual_formatting_model
 
 인라인 및 블록 서식 상황 외에도 씨에스에스는 요소에 적용할 수 있는 몇 가지 추가 *콘텐츠 모델*을 지정할 수 있습니다. 특정 레이아웃을 설명하는 데 사용되는 이러한 추가 모델은 추가 상자 유형을 정의할 수 있습니다.
 
-- [테이블 콘텐츠 모델](/ko/docs/CSS/table-layout "table-layout")은 *테이블 래퍼 상자*와 *테이블 상자*를 생성할 수 있을뿐만 아니라 *캡션 상자*같은 특정 상자도 생성할 수 있습니다.
-- The [다단 콘텐츠 모델](/ko/docs/CSS/Using_CSS_multi-column_layouts "Using CSS multi-column layouts") 은 컨테이너 상자와 컨텐츠 사이에
+- [테이블 콘텐츠 모델](/ko/docs/CSS/table-layout)은 *테이블 래퍼 상자*와 *테이블 상자*를 생성할 수 있을뿐만 아니라 *캡션 상자*같은 특정 상자도 생성할 수 있습니다.
+- The [다단 콘텐츠 모델](/ko/docs/CSS/Using_CSS_multi-column_layouts) 은 컨테이너 상자와 컨텐츠 사이에
 
   **열 상자** (column boxes)
 
@@ -211,7 +212,7 @@ _일반 대열_ 속 상자 무리는 하나씩 차례대로 배치됩니다. 블
 
 ### 절대 위치잡기
 
-**절대 위치잡기 기법** (absolute positioning scheme)에 포함된 상자는 대열에서 제거되어 대열과는 어떤 상호작용도 하지 않습니다. 그들은 {{ cssxref("top") }}과 {{ cssxref("bottom") }}, {{ cssxref("left") }}와 {{ cssxref("right") }}를 사용해서 [상위 컨테이너 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block "CSS/Containing block") 기준으로 비례해서 위치잡기합니다.
+**절대 위치잡기 기법** (absolute positioning scheme)에 포함된 상자는 대열에서 제거되어 대열과는 어떤 상호작용도 하지 않습니다. 그들은 {{ cssxref("top") }}과 {{ cssxref("bottom") }}, {{ cssxref("left") }}와 {{ cssxref("right") }}를 사용해서 [상위 컨테이너 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block) 기준으로 비례해서 위치잡기합니다.
 
 하나의 요소를 절대 위치잡기하려면 {{ cssxref("position") }}이 `absolute` 또는 `fixed`로 설정하면 됩니다.
 

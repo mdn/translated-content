@@ -89,15 +89,11 @@ Vous avez alors le [contexte 2D de représentation](/fr/docs/Web/API/CanvasRende
 
 ## Spécifications
 
-| Spécification                                                                                                                        | Statut                           | Commentaire                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-canvas-getcontext", "HTMLCanvasElement.getContext")}} | {{Spec2('HTML WHATWG')}} | Pas de changement depuis l'instantané le plus récent, {{SpecName('HTML5 W3C')}} |
-| {{SpecName('HTML5.1', "scripting-1.html#dom-canvas-getcontext", "HTMLCanvasElement.getContext")}}     | {{Spec2('HTML5.1')}}     |                                                                                        |
-| {{SpecName('HTML5 W3C', "scripting-1.html#dom-canvas-getcontext", "HTMLCanvasElement.getContext")}} | {{Spec2('HTML5 W3C')}}     | Instantané du {{SpecName('HTML WHATWG')}} contenant la définition initiale.   |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.HTMLCanvasElement.getContext")}}
+{{Compat}}
 
 ## Voir aussi
 

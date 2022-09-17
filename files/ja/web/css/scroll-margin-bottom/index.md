@@ -1,17 +1,6 @@
 ---
 title: scroll-margin-bottom
 slug: Web/CSS/scroll-margin-bottom
-tags:
-  - CSS
-  - CSS プロパティ
-  - Reference
-  - Scroll margin bottom
-  - Web
-  - recipe:css-property
-  - scroll-margin
-  - scroll-margin-bottom
-browser-compat: css.properties.scroll-margin-bottom
-translation_of: Web/CSS/scroll-margin-bottom
 ---
 {{CSSRef}}
 

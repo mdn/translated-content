@@ -72,10 +72,8 @@ Cet exemple plus complexe montre la différence entre retourner une racine norma
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG','#dom-node-getrootnode','getRootNode()')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.getRootNode")}}
+{{Compat}}

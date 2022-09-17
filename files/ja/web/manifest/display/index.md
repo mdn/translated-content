@@ -1,12 +1,6 @@
 ---
 title: display
 slug: Web/Manifest/display
-tags:
-  - マニフェスト
-  - ウェブ
-  - display
-browser-compat: html.manifest.display
-translation_of: Web/Manifest/display
 ---
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 

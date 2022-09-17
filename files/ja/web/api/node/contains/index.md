@@ -1,11 +1,6 @@
 ---
 title: Node.contains()
 slug: Web/API/Node/contains
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.Node.contains
-translation_of: Web/API/Node/contains
 ---
 {{APIRef("DOM")}}
 

@@ -1,14 +1,6 @@
 ---
 title: WebAssembly.Table
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
-tags:
-  - Class
-  - JavaScript
-  - Reference
-  - WebAssembly
-  - table
-browser-compat: javascript.builtins.WebAssembly.Table
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 ---
 {{JSRef}}
 

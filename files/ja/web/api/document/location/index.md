@@ -1,15 +1,6 @@
 ---
 title: Document.location
 slug: Web/API/Document/location
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Read-only
-  - Reference
-  - プロパティ
-translation_of: Web/API/Document/location
 ---
 {{APIRef("DOM")}}
 
@@ -46,7 +37,7 @@ console.log(document.location);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.location")}}
+{{Compat}}
 
 ## 関連情報
 

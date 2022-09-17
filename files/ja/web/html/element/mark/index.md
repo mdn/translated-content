@@ -1,19 +1,6 @@
 ---
 title: '<mark>: 文字列マーク要素'
 slug: Web/HTML/Element/mark
-tags:
-  - HTML
-  - HTML 文字レベルの意味付け
-  - HTML5
-  - HTML:フローコンテンツ
-  - HTML:知覚可能コンテンツ
-  - HTML:記述コンテンツ
-  - Reference
-  - ウェブ
-  - マーク
-  - 強調
-  - 要素
-translation_of: Web/HTML/Element/mark
 ---
 {{HTMLRef}}
 

@@ -1,14 +1,6 @@
 ---
 title: HTMLElement.title
 slug: Web/API/HTMLElement/title
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLElement.title
-translation_of: Web/API/HTMLElement/title
 ---
 {{ APIRef("HTML DOM") }}
 

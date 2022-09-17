@@ -1,16 +1,6 @@
 ---
 title: Document.getElementsByClassName()
 slug: Web/API/Document/getElementsByClassName
-tags:
-  - API
-  - DOM
-  - DOM Element Methods
-  - Element
-  - HTML5
-  - Method
-  - Reference
-  - メソッド
-translation_of: Web/API/Document/getElementsByClassName
 ---
 {{APIRef("DOM")}}
 
@@ -136,4 +126,4 @@ document.getElementById("resultArea").value = result;
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.getElementsByClassName")}}
+{{Compat}}

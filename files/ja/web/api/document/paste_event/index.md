@@ -1,15 +1,6 @@
 ---
 title: 'Document: paste イベント'
 slug: Web/API/Document/paste_event
-tags:
-  - API
-  - Document
-  - Event
-  - Reference
-  - Web
-  - paste
-  - イベント
-translation_of: Web/API/Document/paste_event
 ---
 {{APIRef}}
 
@@ -54,7 +45,7 @@ document.addEventListener('paste', (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.paste_event")}}
+{{Compat}}
 
 ## 関連情報
 

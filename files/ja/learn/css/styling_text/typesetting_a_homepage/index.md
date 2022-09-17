@@ -1,17 +1,6 @@
 ---
 title: コミュニティスクールのホームページの組版
 slug: Learn/CSS/Styling_text/Typesetting_a_homepage
-tags:
-  - Assessment
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Link
-  - Styling text
-  - font
-  - list
-  - web font
-translation_of: Learn/CSS/Styling_text/Typesetting_a_homepage
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
@@ -42,7 +31,7 @@ translation_of: Learn/CSS/Styling_text/Typesetting_a_homepage
 
 一般的なテキスト装飾
 
-- サイト全体の `font-size `を `10px` にします。
+- サイト全体の `font-size` を `10px` にします。
 - 見出しや他の要素タイプには、適切な相対単位を使用して定義された適切な `font-size` を与えます。
 - 本文に適切な `line-height` を与えます。
 - トップレベルの見出しをページの中央に配置します。

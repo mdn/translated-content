@@ -47,6 +47,6 @@ _这些属性接口同样继承自 {{domxref("EventTarget")}}._
 
 ## See also
 
-- [Network Information API](/en-US/docs/Web/API/Network_Information_API)
-- [Online and offline events](/en-US/docs/Online_and_offline_events)
+- [Network Information API](/zh-CN/docs/Web/API/Network_Information_API)
+- [Online and offline events](/zh-CN/docs/Online_and_offline_events)
 - The {{domxref("Navigator")}} interface that implements it.

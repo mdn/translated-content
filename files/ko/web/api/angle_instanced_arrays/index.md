@@ -7,7 +7,7 @@ translation_of: Web/API/ANGLE_instanced_arrays
 
 이 **`ANGLE_instanced_arrays`**확장은 [WebGL API의](/ko/docs/Web/API/WebGL_API) 일부이며 동일한 객체 또는 동일한 객체 그룹을 같은 정점 데이터, 기본 개수 및 유형을 공유하는 경우 여러 번 그릴 수 있습니다.
 
-WebGL 확장은 {{domxref ( "WebGLRenderingContext.getExtension()")}} 메서드를 사용하여 사용할 수 있습니다. 자세한 내용 은 [WebGL 자습서의 ](/ko/docs/Web/API/WebGL_API/Tutorial)[Extensions 사용을](/ko/docs/Web/API/WebGL_API/Using_Extensions) 참조하십시오 .
+WebGL 확장은 {{domxref ( "WebGLRenderingContext.getExtension()")}} 메서드를 사용하여 사용할 수 있습니다. 자세한 내용 은 [WebGL 자습서의](/ko/docs/Web/API/WebGL_API/Tutorial) [Extensions 사용을](/ko/docs/Web/API/WebGL_API/Using_Extensions) 참조하십시오 .
 
 > **참고:** **가용성 :** 이 확장은 {{domxref ( "WebGLRenderingContext", "WebGL1", "", 1)}} 컨텍스트에서만 사용할 수 있습니다. {{domxref ( "WebGL2RenderingContext", "WebGL2", "", 1)}}에서이 확장 기능은 기본적으로 WebGL2 컨텍스트에서 사용할 수 있으며 상수 및 메서드는 `ANGLE`접미사 없이 사용할 수 있습니다 ."ANGLE"이라는 이름에도 불구하고이 확장은 하드웨어가 ANGLE 라이브러리를 사용할 때 Windows에서만 지원하는 것이 아닌 모든 장치에서 작동합니다. "ANGLE"은이 확장이 ANGLE 라이브러리 작성자에 의해 작성되었음을 나타냅니다.
 

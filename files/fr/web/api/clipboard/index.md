@@ -54,10 +54,8 @@ De plus, {{domxref("Clipboard.read", "read()")}} et {{domxref("Clipboard.write",
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Clipboard API','#clipboard-interface','Clipboard')}} | {{Spec2('Clipboard API')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Clipboard")}}
+{{Compat}}

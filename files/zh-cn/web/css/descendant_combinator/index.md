@@ -72,4 +72,4 @@ li li {
 
 ## 相关
 
-- [Child combinator](/en-US/docs/Web/CSS/Child_combinator)
+- [Child combinator](/zh-CN/docs/Web/CSS/Child_combinator)

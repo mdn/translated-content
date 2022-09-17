@@ -1,14 +1,6 @@
 ---
 title: 'HTML 属性: readonly'
 slug: Web/HTML/Attributes/readonly
-tags:
-  - 属性
-  - Attributes
-  - 制約検証
-  - フォーム
-  - required
-spec-urls: https://html.spec.whatwg.org/multipage/forms.html#attr-input-readonly
-translation_of: Web/HTML/Attributes/readonly
 ---
 
 {{HTMLSidebar}}
@@ -80,7 +72,7 @@ readonly が付いた値を動的に変更できる唯一の方法は、スク�
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.attributes.readonly")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -62,7 +62,7 @@ Dans l'exemple ci-dessous, nous avons un conteneur de grille avec deux élément
 
 {{ EmbedLiveSample('Exemple', '300', '280') }}
 
-## En apprendre plus
+## Voir aussi
 
 ### Références de propriété
 

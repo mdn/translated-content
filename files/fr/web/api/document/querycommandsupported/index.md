@@ -45,13 +45,11 @@ if(flg) {
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire          |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('HTML Editing','#querycommandsupported()','querycommandsupported')}} | {{Spec2('HTML Editing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.queryCommandSupported")}}
+{{Compat}}
 
 ## Voir aussi
 

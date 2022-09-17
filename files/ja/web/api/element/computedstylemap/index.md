@@ -1,18 +1,6 @@
 ---
 title: Element.computedStyleMap()
 slug: Web/API/Element/computedStyleMap
-tags:
-  - API
-  - CSS Typed Object Model API
-  - Element
-  - 実験的
-  - Houdini
-  - メソッド
-  - リファレンス
-  - StylePropertyMapReadOnly
-  - computedStyleMap()
-browser-compat: api.Element.computedStyleMap
-translation_of: Web/API/Element/computedStyleMap
 ---
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 

@@ -1,16 +1,6 @@
 ---
 title: StylePropertyMapReadOnly
 slug: Web/API/StylePropertyMapReadOnly
-tags:
-  - API
-  - CSS 型付きオブジェクトモデル API
-  - 実験的
-  - Houdini
-  - インターフェイス
-  - リファレンス
-  - StylePropertyMapReadOnly
-browser-compat: api.StylePropertyMapReadOnly
-translation_of: Web/API/StylePropertyMapReadOnly
 ---
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 

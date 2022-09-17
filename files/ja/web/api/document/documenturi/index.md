@@ -1,14 +1,6 @@
 ---
 title: Document.documentURI
 slug: Web/API/Document/documentURI
-tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Read-only
-  - Reference - Web - プロパティ
-translation_of: Web/API/Document/documentURI
 ---
 {{ApiRef("DOM")}}
 
@@ -49,7 +41,7 @@ document.getElementById("url").textContent = document.documentURI;
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.documentURI")}}
+{{Compat}}
 
 ## 関連情報
 

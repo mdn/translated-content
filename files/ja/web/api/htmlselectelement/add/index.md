@@ -1,14 +1,6 @@
 ---
 title: HTMLSelectElement.add()
 slug: Web/API/HTMLSelectElement/add
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - メソッド
-  - リファレンス
-browser-compat: api.HTMLSelectElement.add
-translation_of: Web/API/HTMLSelectElement/add
 ---
 {{APIRef("HTML DOM")}}
 

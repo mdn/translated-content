@@ -39,13 +39,11 @@ Pour l'exemple complet en fonctionnement, voir [Basic shared worker example](htt
 
 ## Spécifications
 
-| Spécification                                                                                                        | Status                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', '#handler-sharedworkerglobalscope-onconnect', 'onconnect')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.SharedWorkerGlobalScope.onconnect")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,13 +1,6 @@
 ---
 title: 'ServiceWorkerGlobalScope: message event'
 slug: Web/API/ServiceWorkerGlobalScope/message_event
-tags:
-  - Event
-  - Reference
-  - Service worker API
-  - ServiceWorkerGlobalScope
-  - message
-translation_of: Web/API/ServiceWorkerGlobalScope/message_event
 ---
 {{APIRef}}
 

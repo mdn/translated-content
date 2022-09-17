@@ -1,14 +1,6 @@
 ---
 title: FocusEvent
 slug: Web/API/FocusEvent
-tags:
-  - API
-  - DOM
-  - DOM イベント
-  - イベント
-  - リファレンス
-browser-compat: api.FocusEvent
-translation_of: Web/API/FocusEvent
 ---
 {{APIRef("DOM Events")}}
 

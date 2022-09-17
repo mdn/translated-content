@@ -39,7 +39,7 @@ L'événement **abort** est déclenché lorsque la progression a été interompu
 - {{event("progress")}}
 - {{event("error")}}
 - {{event("abort")}}
-- {{event("load")}}
+- [`load`](/fr//docs/Web/API/Window/load_event)
 - {{event("loadend")}}
 
 ## Voir aussi

@@ -1,13 +1,6 @@
 ---
 title: Document.dir
 slug: Web/API/Document/dir
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Reference
-  - プロパティ
-translation_of: Web/API/Document/dir
 ---
 {{ApiRef("HTML DOM")}}
 
@@ -28,7 +21,7 @@ document.dir = dirStr
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.dir")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -36,15 +36,13 @@ Cette interface hérite des méthodes de ses parents, {{domxref("UIEvent")}} et 
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('InputEvents2','#interface-InputEvent','InputEvent')}} | {{Spec2('InputEvents2')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.InputEvent")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{ event("beforeinput") }}
-- [l’évènement `input`](/docs/Web/API/InputEvent/input_event)
+- L'évènement [`beforeinput`](/fr/docs/Web/API/HTMLElement/beforeinput_event)
+- L'évènement [`input`](/fr/docs/Web/API/HTMLElement/input_event)

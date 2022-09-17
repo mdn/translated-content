@@ -324,7 +324,7 @@ This results in the following layout:
 
 ![](viewport-fail-fixed.png)
 
-> **备注：** Another solution with respect to orientation might be to just lock the orientation of your app, to portrait or landscape. If you are working on an installed app, you can easily do this with the [orientation manifest field](https://developer.mozilla.org/en-US/Apps/Build/Manifest#orientation). If you want a solution that works across general web apps, you could use the [Screen orientation API](/zh-CN/docs/Web/API/CSS_Object_Model/Managing_screen_orientation#Locking_the_screen_orientation), and/or provide a message asking the user to rotate their screen if they are using the wrong orientation (for example, if `window.innerWidth` is larger than `window.innerHeight`, assume the
+> **备注：** Another solution with respect to orientation might be to just lock the orientation of your app, to portrait or landscape. If you are working on an installed app, you can easily do this with the [orientation manifest field](/zh-CN/Apps/Build/Manifest#orientation). If you want a solution that works across general web apps, you could use the [Screen orientation API](/zh-CN/docs/Web/API/CSS_Object_Model/Managing_screen_orientation#Locking_the_screen_orientation), and/or provide a message asking the user to rotate their screen if they are using the wrong orientation (for example, if `window.innerWidth` is larger than `window.innerHeight`, assume the
 > game is landscape mode and show a "please rotate" message.)
 
 ## Viewport

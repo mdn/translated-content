@@ -16,7 +16,7 @@ slug: Web/SVG/Element/hkern
 
 ### 全局属性
 
-- [核心属性](/en/SVG/Attribute#Core) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
 
 ### 专有属性
 
@@ -28,11 +28,11 @@ slug: Web/SVG/Element/hkern
 
 ## DOM 接口
 
-该元素实现了[`SVGHKernElement`](/en/DOM/SVGVKernElement)接口。
+该元素实现了[`SVGHKernElement`](/zh-CN/DOM/SVGVKernElement)接口。
 
 ## 参见
 
 - {{ SVGElement("font") }}
 - {{ SVGElement("glyph") }}
 - {{ SVGElement("hkern") }}
-- [SVG 教程：SVG 字体](/en/SVG/Tutorial/SVG_fonts)
+- [SVG 教程：SVG 字体](/zh-CN/SVG/Tutorial/SVG_fonts)

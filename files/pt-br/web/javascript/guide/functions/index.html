@@ -66,14 +66,14 @@ var x = square(4) //x recebe o valor 16</pre>
 
 <p>No entanto, um nome pode ser fornecido com uma expressão de função e pode ser utilizado no interior da função para se referir a si mesma, ou em um debugger para identificar a função em stack traces:</p>
 
-<pre class="brush: js" style="font-size: 14px;">var fatorial = function fac(n) {return n&lt;2 ? 1 : n*fac(n-1)};
+<pre class="brush: js">var fatorial = function fac(n) {return n&lt;2 ? 1 : n*fac(n-1)};
 
 console.log(fatorial(3));
 </pre>
 
 <p>As expressões de função são convenientes ao passar uma função como um argumento para outra função. O exemplo a seguir mostra uma função <code>map </code>sendo definida e, em seguida, chamada com uma função anônima como seu primeiro parâmetro:</p>
 
-<pre class="brush: js" style="font-size: 14px;">function map(f,a) {
+<pre class="brush: js">function map(f,a) {
   var result = []; // Cria um novo Array
   var i;
   for (i = 0; i != a.length; i++)
@@ -84,7 +84,7 @@ console.log(fatorial(3));
 
 <p>O código a seguir:</p>
 
-<pre class="brush: js" style="font-size: 14px;">map(function(x) {return x * x * x}, [0, 1, 2, 5, 10]);
+<pre class="brush: js">map(function(x) {return x * x * x}, [0, 1, 2, 5, 10]);
 </pre>
 
 <p>retorna [0, 1, 8, 125, 1000].</p>
@@ -98,7 +98,7 @@ if (num == 0){
   }
 }</pre>
 
-<p><span style="line-height: 1.572;">Além de definir funções, você também pode usar o construtor </span>{{jsxref("Function")}} <span style="line-height: 1.572;">para criar funções a partir de uma string<code> </code>em tempo real, como no método </span>{{jsxref("eval()")}}<span style="line-height: 1.572;">.</span></p>
+<p>Além de definir funções, você também pode usar o construtor {{jsxref("Function")}} para criar funções a partir de uma string<code> </code>em tempo real, como no método {{jsxref("eval()")}}.</p>
 
 <p>Um <strong>método</strong> é uma função invocada por um objeto. Leia mais sobre objetos e métodos em <a href="/pt-BR/docs/JavaScript/Guide/Working_with_Objects" title="en-US/docs/JavaScript/Guide/Working with Objects">Trabalhando com Objetos</a>.</p>
 
@@ -154,7 +154,7 @@ e = fatorial(5); // e recebe o valor 120
 
 <p>Há outras maneiras de chamar funções. Muitas vezes há casos em que uma função precisa ser chamada dinamicamente, ou o número de argumentos de uma função varia, ou em que o contexto da chamada de função precisa ser definido para um objeto específico determinado em tempo de execução. Acontece que as funções são, por si mesmas, objetos, e esses objetos por sua vez têm métodos (veja objeto {{jsxref("Function")}}). Um desses, o método {{jsxref("Function.apply", "apply()")}}, pode ser usado para atingir esse objetivo.</p>
 
-<h2 class="deki-transform" id="Function_scope" name="Function_scope">Escopo da função</h2>
+<h2 id="Function_scope" name="Function_scope">Escopo da função</h2>
 
 <p>As variáveis definidas no interior de uma função não podem ser acessadas de nenhum lugar fora da função, porque a variável está definida apenas no escopo da função. No entanto, uma função pode acessar todas variáveis e funções definida fora do escopo onde ela está definida. Em outras palavras, a função definida no escopo global pode acessar todas as variáveis definidas no escopo global. A função definida dentro de outra função também pode acessar todas as variáveis definidas na função hospedeira e outras variáveis ao qual a função hospedeira tem acesso.</p>
 
@@ -491,21 +491,21 @@ myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 
 <p>No passado, a estratégia geral para definir padrões era testar os valores de parâmetro no corpo da função e atribuir um valor se eles fossem <code>undefined</code>. Se, no exemplo a seguir, nenhum valor é fornecido para <code>b</code> na chamada, seu valor seria <code>undefined</code> ao avaliar <code>a*b</code> e a chamada para <code>multiplicar</code> retornaria <code>NaN</code>. No entanto, isso é pego com a segunda linha neste exemplo:</p>
 
-<pre class="brush: js"><code>function multiplicar(a, b) {
+<pre class="brush: js">function multiplicar(a, b) {
   b = typeof b !== 'undefined' ?  b : 1;
 
   return a*b;
 }
 
-multiplicar(5); // 5</code></pre>
+multiplicar(5); // 5</pre>
 
 <p>Com parâmetros padrão, a verificação no corpo da função não é mais necessária. Agora você pode simplesmente colocar <code>1</code> como valor padrão para <code>b</code> no campo de declaração de parâmetros:</p>
 
-<pre class="brush: js"><code>function multiplicar(a, b = 1) {
+<pre class="brush: js">function multiplicar(a, b = 1) {
   return a*b;
 }
 
-multiplicar(5); // 5</code></pre>
+multiplicar(5); // 5</pre>
 
 <p>Mais detalhes, consulte <a href="/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters">parâmetros padrão</a> na referência.</p>
 
@@ -513,12 +513,12 @@ multiplicar(5); // 5</code></pre>
 
 <p>A sintaxe de <a href="/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters">parâmetro rest</a> permite representar um número indefinido de argumentos como um <em>array</em>. No exemplo, usamos parâmetros <em>rest</em> para coletar argumentos do segundo argumento ao último. Então os multiplicamos pelo primeiro argumento. Neste exemplo é usado uma <em>arrow function</em>, que será introduzida na próxima seção.</p>
 
-<pre class="brush: js"><code>function multiplicar(multiplicador, ...args) {
+<pre class="brush: js">function multiplicar(multiplicador, ...args) {
   return args.map(x =&gt; multiplicador * x);
 }
 
 var arr = multiplicar(2, 1, 2, 3);
-console.log(arr); // [2, 4, 6]</code></pre>
+console.log(arr); // [2, 4, 6]</pre>
 
 <h2 id="Arrow_functions" name="Arrow_functions">Funções de seta</h2>
 
@@ -530,7 +530,7 @@ console.log(arr); // [2, 4, 6]</code></pre>
 
 <p>Em alguns padrões funcionais, funções curtas são bem-vindas. Compare:</p>
 
-<pre class="brush: js"><code>var a = [
+<pre class="brush: js">var a = [
   "Hydrogen",
   "Helium",
   "Lithium",
@@ -539,7 +539,7 @@ console.log(arr); // [2, 4, 6]</code></pre>
 
 var a2 = a.map(function(s){ return s.length });
 
-var a3 = a.map( s =&gt; s.length );</code></pre>
+var a3 = a.map( s =&gt; s.length );</pre>
 
 <h3 id="Léxico_this">Léxico this</h3>
 
@@ -557,23 +557,23 @@ var p = new Pessoa();</pre>
 
 <p>No ECMAScript 3/5, este problema foi resolvido atribuindo o valor em <code>this</code> a uma variável que poderia ser fechada.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">Pessoa</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">var</span> self <span class="operator token">=</span> <span class="keyword token">this</span><span class="punctuation token">;</span> <span class="comment token">// Alguns preferem 'that' em vez de 'self'. </span>
-                   <span class="comment token">// Escolha um e seja consistente.</span>
-  self<span class="punctuation token">.</span></code><code>idade </code><code class="language-js"><span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span>
+<pre class="brush: js">function Pessoa() {
+  var self = this; // Alguns preferem 'that' em vez de 'self'. 
+                   // Escolha um e seja consistente.
+  self.idade = 0;
 
-  <span class="function token">setInterval</span><span class="punctuation token">(</span><span class="keyword token">function</span> crescer<span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="comment token">// A chamada de retorno refere-se à variável 'self' na qual</span>
-    <span class="comment token">// o valor é o objeto esperado.</span>
-    self<span class="punctuation token">.</span></code><code>idade</code><code class="language-js"><span class="operator token">++</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="number token">1000</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+  setInterval(function crescer() {
+    // A chamada de retorno refere-se à variável 'self' na qual
+    // o valor é o objeto esperado.
+    self.idade++;
+  }, 1000);
+}</pre>
 
 <p>Como alternativa, uma <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">função vinculada</a> poderia ser criada para que o valor da propriedade <code>this</code> seja passado para a função <code>crescer()</code>.</p>
 
 <p>Funções de seta capturam o valor <code>this</code> do contexto delimitado, então o código a seguir funciona conforme o esperado.</p>
 
-<pre><code>function Pessoa(){
+<pre>function Pessoa(){
   this.idade = 0;
 
   setInterval(() =&gt; {
@@ -581,7 +581,7 @@ var p = new Pessoa();</pre>
   }, 1000);
 }
 
-var p = new Pessoa();</code></pre>
+var p = new Pessoa();</pre>
 
 <h2 id="Funções_pré-definidas">Funções pré-definidas</h2>
 

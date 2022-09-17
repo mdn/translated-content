@@ -1,17 +1,6 @@
 ---
 title: XMLHttpRequest.overrideMimeType()
 slug: Web/API/XMLHttpRequest/overrideMimeType
-tags:
-  - API
-  - ファイル形式
-  - MIME タイプ
-  - メソッド
-  - リファレンス
-  - XHR
-  - XHR MIME タイプ
-  - XMLHttpRequest
-  - overrideMimeType
-browser-compat: api.XMLHttpRequest.overrideMimeType
 ---
 {{APIRef('XMLHttpRequest')}}
 

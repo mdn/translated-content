@@ -1,20 +1,6 @@
 ---
 title: HTMLImageElement.height
 slug: Web/API/HTMLImageElement/height
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - 画像
-  - プロパティ
-  - リファレンス
-  - dimensions
-  - height
-  - size
-browser-compat: api.HTMLImageElement.height
-translation_of: Web/API/HTMLImageElement/height
 ---
 {{APIRef("HTML DOM")}}
 

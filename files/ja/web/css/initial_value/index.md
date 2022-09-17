@@ -1,12 +1,6 @@
 ---
 title: 初期値
 slug: Web/CSS/initial_value
-tags:
-  - CSS
-  - Guide
-  - Reference
-spec-urls: https://www.w3.org/TR/CSS22/cascade.html#specified-value
-translation_of: Web/CSS/initial_value
 ---
 {{CSSRef}}
 

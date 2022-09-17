@@ -1,20 +1,6 @@
 ---
 title: '::backdrop'
 slug: Web/CSS/::backdrop
-tags:
-  - API
-  - CSS
-  - ダイアログ
-  - 全画面
-  - Fullscreen API
-  - HTML DOM
-  - レイアウト
-  - 擬似要素
-  - リファレンス
-  - セレクター
-  - フルスクリーン
-browser-compat: css.selectors.backdrop
-translation_of: Web/CSS/::backdrop
 ---
 {{CSSRef}}
 

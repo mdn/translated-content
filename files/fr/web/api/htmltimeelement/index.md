@@ -22,15 +22,11 @@ _Pas de méthode spécifique, mais cette interface hérite des méthodes de {{do
 
 ## Spécifications
 
-| Spécification                                                                                                            | Status                           | Commentaires                                               |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "#htmltimeelement", "HTMLTimeElement")}}                                 | {{Spec2('HTML WHATWG')}} |                                                            |
-| {{SpecName('HTML5.1', "text-level-semantics.html#the-time-element", "HTMLTimeElement")}}     | {{Spec2('HTML5.1')}}     | Pas de changement depuis {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', "text-level-semantics.html#the-time-element", "HTMLTimeElement")}} | {{Spec2('HTML5 W3C')}}     | Définition initiale.                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLTimeElement")}}
+{{Compat}}
 
 ## Voir aussi
 

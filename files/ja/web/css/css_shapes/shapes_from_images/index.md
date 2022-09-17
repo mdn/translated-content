@@ -1,11 +1,6 @@
 ---
 title: 画像からのシェイプの作成
 slug: Web/CSS/CSS_Shapes/Shapes_From_Images
-tags:
-  - CSS
-  - CSS シェイプ
-  - ガイド
-translation_of: Web/CSS/CSS_Shapes/Shapes_From_Images
 ---
 {{CSSRef}}
 

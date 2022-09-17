@@ -1,18 +1,6 @@
 ---
 title: ServiceWorkerRegistration.getNotifications()
 slug: Web/API/ServiceWorkerRegistration/getNotifications
-tags:
-  - API
-  - 実験的
-  - メソッド
-  - 通知
-  - リファレンス
-  - サービスワーカー
-  - サービスワーカー API
-  - ServiceWorker
-  - ServiceWorkerRegistration
-  - getNotifications
-translation_of: Web/API/ServiceWorkerRegistration/getNotifications
 ---
 {{APIRef("Service Workers API")}}
 

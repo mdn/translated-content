@@ -45,4 +45,4 @@ slug: Web/API/Element/show_event
 
 ## 相关事件
 
-- [`contextmenu`](/en-US/Mozilla_event_reference/contextmenu)
+- [`contextmenu`](/zh-CN/Mozilla_event_reference/contextmenu)

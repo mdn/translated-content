@@ -42,8 +42,8 @@ elem.requestFullscreen();
 
 ## 参见
 
-- [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API)
-- [Guide to the Fullscreen API](/en-US/docs/Web/API/Fullscreen_API/Guide)
+- [Fullscreen API](/zh-CN/docs/Web/API/Fullscreen_API)
+- [Guide to the Fullscreen API](/zh-CN/docs/Web/API/Fullscreen_API/Guide)
 - {{event("fullscreenerror")}}
 - {{domxref("Element.onfullscreenchange")}}
 - {{domxref("Document.onfullscreenerror")}}

@@ -1,17 +1,6 @@
 ---
 title: Intl.Locale.prototype.numeric
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/numeric
-tags:
-  - 国際化
-  - Intl
-  - JavaScript
-  - プロパティ
-  - Locale
-  - ローカライズ
-  - プロトタイプ
-  - リファレンス
-browser-compat: javascript.builtins.Intl.Locale.numeric
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/numeric
 ---
 {{JSRef}}
 

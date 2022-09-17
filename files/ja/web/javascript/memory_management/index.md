@@ -16,9 +16,9 @@ C のような低水準言語は、`malloc()` や `free()` のような低水準
 
 プログラミング言語に関係なく、メモリーのライフサイクルはほぼいつも同じです:
 
-1.  必要なメモリーを割り当てる
-2.  割り当てられたメモリーを使用する (読み込む, 書き込む)
-3.  必要なくなったら、割り当てられたメモリーを開放する
+1. 必要なメモリーを割り当てる
+2. 割り当てられたメモリーを使用する (読み込む, 書き込む)
+3. 必要なくなったら、割り当てられたメモリーを開放する
 
 2 に関してはすべての言語で明示的に行われます。1 と 3 は低水準の言語では明示的ですが、JavaScript のような高水準言語では、ほとんどの場合暗黙的に行われます。
 
@@ -188,4 +188,4 @@ window.onload = function(){
 
 - [IBM article on "Memory leak patterns in JavaScript" (2007)](http://www.ibm.com/developerworks/web/library/wa-memleak/)
 - [Kangax article on how to register event handler and avoid memory leaks (2010)](http://msdn.microsoft.com/en-us/magazine/ff728624.aspx)
-- [Performance](/ja/docs/Mozilla/Performance "/docs/Mozilla/Performance")
+- [Performance](/ja/docs/Mozilla/Performance)

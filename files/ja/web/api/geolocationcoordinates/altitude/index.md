@@ -1,15 +1,6 @@
 ---
 title: GeolocationCoordinates.altitude
 slug: Web/API/GeolocationCoordinates/altitude
-tags:
-  - API
-  - 位置情報 API
-  - GeolocationCoordinates
-  - プロパティ
-  - 安全なコンテキスト
-  - altitude
-browser-compat: api.GeolocationCoordinates.altitude
-translation_of: Web/API/GeolocationCoordinates/altitude
 ---
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 

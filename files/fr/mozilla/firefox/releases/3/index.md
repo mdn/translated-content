@@ -256,6 +256,6 @@ Pour les développeurs qui désirent prendre connaissance de toutes les nouvelle
 - **Vitesse.** Firefox 3 dispose d'une amélioration des performances grâce au remplacement de la partie s'occupant de l'affichage à l'écran, ainsi que la gestion de la disposition du contenu.
 - **Utilisation mémoire.** Firefox 3 utilise la mémoire de manière plus efficiente avec plus de 300 bugs concernant des fuites mémoire corrigées et de nouvelles fonctionnalités aidant à identifier et libérer automatiquement les blocs mémoire qui ne sont plus utilisés.
 
-## Voir également
+## Voir aussi
 
 {{Firefox_for_developers('2')}}

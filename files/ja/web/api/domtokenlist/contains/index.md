@@ -1,11 +1,6 @@
 ---
 title: DOMTokenList.contains()
 slug: Web/API/DOMTokenList/contains
-tags:
-- メソッド
-- リファレンス
-browser-compat: api.DOMTokenList.contains
-translation_of: Web/API/DOMTokenList/contains
 ---
 {{APIRef("DOM")}}
 

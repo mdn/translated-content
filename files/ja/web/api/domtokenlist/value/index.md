@@ -1,11 +1,6 @@
 ---
 title: DOMTokenList.value
 slug: Web/API/DOMTokenList/value
-tags:
-- プロパティ
-- リファレンス
-browser-compat: api.DOMTokenList.value
-translation_of: Web/API/DOMTokenList/value
 ---
 {{APIRef("DOM")}}
 

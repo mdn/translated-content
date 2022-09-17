@@ -1,23 +1,6 @@
 ---
 title: RTCPeerConnection
 slug: Web/API/RTCPeerConnection
-page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Communication
-  - Interface
-  - Media
-  - NeedsUpdate
-  - Networking
-  - RTCPeerConnection
-  - Reference
-  - Telecom
-  - Video
-  - WebRTC
-  - WebRTC API
-browser-compat: api.RTCPeerConnection
-translation_of: Web/API/RTCPeerConnection
 ---
 {{APIRef('WebRTC')}}
 

@@ -1,20 +1,6 @@
 ---
 title: Element.outerHTML
 slug: Web/API/Element/outerHTML
-tags:
-  - API
-  - DOM
-  - DOM 解釈
-  - Element
-  - NeedsMobileBrowserCompatibility
-  - Parsing
-  - プロパティ
-  - リファレンス
-  - シリアライズ
-  - Serializing
-  - outerHTML
-browser-compat: api.Element.outerHTML
-translation_of: Web/API/Element/outerHTML
 ---
 {{APIRef("DOM")}}
 

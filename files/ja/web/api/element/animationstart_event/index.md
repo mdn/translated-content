@@ -1,17 +1,6 @@
 ---
 title: 'Document: animationstart イベント'
 slug: Web/API/Element/animationstart_event
-tags:
-  - CSS Animations
-  - CSS アニメーション
-  - Document
-  - Event
-  - Reference
-  - Web
-  - animationstart
-  - イベント
-  - ウェブ
-translation_of: Web/API/Document/animationstart_event
 original_slug: Web/API/Document/animationstart_event
 ---
 {{APIRef}}
@@ -71,7 +60,7 @@ document.onanimationstart = () => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Document.animationstart_event")}}
+{{Compat}}
 
 ## 関連情報
 

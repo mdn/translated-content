@@ -1,12 +1,6 @@
 ---
 title: PerformanceResourceTiming.transferSize
 slug: Web/API/PerformanceResourceTiming/transferSize
-tags:
-  - API
-  - Web パフォーマンス
-  - プロパティ
-  - リファレンス
-translation_of: Web/API/PerformanceResourceTiming/transferSize
 ---
 {{APIRef("Resource Timing API")}}
 

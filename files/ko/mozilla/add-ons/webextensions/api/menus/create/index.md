@@ -1,7 +1,6 @@
 ---
 title: menus.create()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/create
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/create
 original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus/create
 ---
 {{AddonSidebar()}}
@@ -95,7 +94,6 @@ browser.menus.create(
 
 - `callback` {{optional_inline}}
   - : `function`. Called when the item has been created. If there were any problems creating the item, details will be available in {{WebExtAPIRef('runtime.lastError')}}.
-
 
 ### Return value
 

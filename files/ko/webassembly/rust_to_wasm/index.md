@@ -214,11 +214,11 @@ JavaScript 함수를 호출하고 싶을 때면 언제든지 이들을 파일에
 
 이 명령어를 입력하면 많은 일이 일어납니다. (그리고 특히 `wasm-pack`을 처음 실행했을 때 처럼 많은 시간이 걸립니다.) 이에 대한 자세한 사항을 알고 싶으면, [Mozilla Hacks의 블로그 포스트](https://hacks.mozilla.org/2018/04/hello-wasm-pack/)를 확인해보세요. 간단히 요약하자면, `wasm-pack build`는:
 
-1.  Rust 코드를 WebAssembly로 컴파일 합니다.
-2.  그 WebAssembly 위에서 `wasm-bindgen`을 실행하여, WebAssembly를 npm이 이해할 수 있는 모듈로 감싸는 JavaScript 파일을 생성합니다.
-3.  `pkg` 디렉터리를 만들고 JavaScript 파일과 WebAssembly 코드를 그 안으로 옮깁니다.
-4.  `Cargo.toml`을 읽고 동등한 `package.json`을 생성합니다.
-5.  `README.md`가 있다면 패키지로 복사합니다.
+1. Rust 코드를 WebAssembly로 컴파일 합니다.
+2. 그 WebAssembly 위에서 `wasm-bindgen`을 실행하여, WebAssembly를 npm이 이해할 수 있는 모듈로 감싸는 JavaScript 파일을 생성합니다.
+3. `pkg` 디렉터리를 만들고 JavaScript 파일과 WebAssembly 코드를 그 안으로 옮깁니다.
+4. `Cargo.toml` 을 읽고 동등한 `package.json`을 생성합니다.
+5. `README.md` 가 있다면 패키지로 복사합니다.
 
 빌드가 끝났다면, `pkg` 디렉터리에 npm 패키지가 생성될 것입니다.
 

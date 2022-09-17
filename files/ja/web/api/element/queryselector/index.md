@@ -1,23 +1,6 @@
 ---
 title: Element.querySelector()
 slug: Web/API/Element/querySelector
-tags:
-  - API
-  - CSS
-  - CSS セレクター
-  - DOM
-  - Element
-  - 要素
-  - Finding Elements
-  - Locating Elements
-  - メソッド
-  - リファレンス
-  - Searching Elements
-  - Selecting Elements
-  - セレクター
-  - querySelector
-browser-compat: api.Element.querySelector
-translation_of: Web/API/Element/querySelector
 ---
 {{APIRef("DOM")}}
 

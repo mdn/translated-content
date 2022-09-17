@@ -14,7 +14,7 @@ Dans la spécification, flexbox est décrite comme un modèle de disposition pou
 
 Flexbox permet également l'alignement des éléments sur l'axe principal ou transversal, offrant ainsi un niveau élevé de contrôle sur la taille et l'alignement d'un groupe d'éléments.
 
-## En apprendre plus
+## Voir aussi
 
 ### Références de la propriété
 

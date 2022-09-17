@@ -63,9 +63,9 @@ Du point de vue d'ECMAScript, les objets définis dans la spécification DOM son
 
 ### Le DOM HTML
 
-[HTML](/fr/docs/Web/HTML), le langage de balisage du Web, est spécifié en termes de DOM. Comme une couche au-dessus des concepts abstraits définis dans DOM Core, HTML définit également la _signification_ des éléments. Le DOM HTML inclut des choses telles que la propriété `className` sur des éléments HTML, or des API telles que {{domxref("document.body")}}.
+[HTML](/fr/docs/Web/HTML), le langage de balisage du Web, est spécifié en termes de DOM. Comme une couche au-dessus des concepts abstraits définis dans DOM Core, HTML définit également la _signification_ des éléments. Le DOM HTML inclut des choses telles que la propriété `className` sur des éléments HTML, ou des API telles que {{domxref("document.body")}}.
 
-La spécification HTML définit aussi les restrictions sur les documents ; par exemple, elle requiert que tous les enfants d'un élément {{HTMLRef("ul")}} (une liste non-ordonnée) soient des éléments {{HTMLRef("li")}}, puisqu'ils représentent les éléments d'une liste. En général, cela interdit aussi l'utilisation d'éléments et d'attributs qui ne sont pas définis dans un certain standard.
+La spécification HTML définit aussi les restrictions sur les documents ; par exemple, elle requiert que tous les enfants d'un élément [`<ul>`](/fr/docs/Web/HTML/Element/ul) (une liste non-ordonnée) soient des éléments [`<li>`](/fr/docs/Web/HTML/Element/li), puisqu'ils représentent les éléments d'une liste. En général, cela interdit aussi l'utilisation d'éléments et d'attributs qui ne sont pas définis dans un certain standard.
 
 Si vous cherchez la documentation sur l'objet {{domxref("Document")}}, l'objet {{domxref("Window")}} ou sur les autres éléments du DOM, vous pouvez lire [la documentation relative au DOM](/fr/docs/Web/API/Référence_du_DOM_Gecko).
 

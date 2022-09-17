@@ -25,7 +25,7 @@ function potentiallyBuggyCode() {
 
 呼叫除錯器時，程式會在 debugger 宣告處暫停執行。它有點像是程式碼的斷點。
 
-[![Paused at a debugger statement.](screen_shot_2014-02-07_at_9.14.35_am.png)](<https://mdn.mozillademos.org/files/6963/Screen Shot 2014-02-07 at 9.14.35 AM.png>)
+[![Paused at a debugger statement.](screen_shot_2014-02-07_at_9.14.35_am.png)](screen_shot_2014-02-07_at_9.14.35_am.png)
 
 ## 規範
 

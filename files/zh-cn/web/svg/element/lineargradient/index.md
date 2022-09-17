@@ -37,9 +37,9 @@ html,body,svg { height:100% }
 
 ### Global 属性
 
-- [核心属性](/en/SVG/Attribute#Core) »
-- [外观属性](/en/SVG/Attribute#Presentation) »
-- [Xlink 属性](/en/SVG/Attribute#XLink) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
+- [Xlink 属性](/zh-CN/SVG/Attribute#XLink) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -57,7 +57,7 @@ html,body,svg { height:100% }
 
 ## DOM 接口
 
-该元素实现了[`SVGLinearGradientElement`](/en/DOM/SVGLinearGradientElement)接口。
+该元素实现了[`SVGLinearGradientElement`](/zh-CN/DOM/SVGLinearGradientElement)接口。
 
 ## 浏览器兼容性
 
