@@ -34,7 +34,7 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
 
     - A definição de um valor o sugere como o nome do arquivo. Caracteres `/` e `\` são convertidos para _underscores_ (`_`).Arquivos de sistema talvez proibam alguns caracteres em nomes de arquivos, então o navegador irá ajustar o nome sugerido caso necessário.
 
-    > **Note:** **Notes:**- `download` somente funciona para [URLs de mesma origem ](/pt-BR/docs/Web/Security/Same-origin_policy), ou os esquemas `blob:` e `data:`
+    > **Note:** **Notes:**- `download` somente funciona para [URLs de mesma origem](/pt-BR/docs/Web/Security/Same-origin_policy), ou os esquemas `blob:` e `data:`
     >
     > - Se `Content-Disposition` tiver um diferente `filename` (nome do arquivo) que `download`, o cabeçalho tem prioridade. (Se `Content-Disposition: inline`, Firefox prioriza o cabeçalho enquanto o Chrome escolhe `download`.)
 

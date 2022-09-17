@@ -9,7 +9,7 @@ O elemento HTML _select_ (\<select>) representa um controle que apresenta um men
 
 ## Contexto de uso
 
-| [Categorias de conteúdo](/pt-BR/docs/HTML/Categorias_de_conteúdo "HTML/Categorias de conteúdo") | [conteúdo fluido](/pt-BR/docs/HTML/Categorias_de_conteúdo#Conteúdo_fluido "HTML/Categorias de conteúdo#Conteúdo fluido"), [conteúdo fraseado](/pt-BR/docs/HTML/Categorias_de_conteúdo#Conteúdo_fraseado "HTML/Categorias de conteúdo#Conteúdo fraseado"), [conteúdo interativo](/pt-BR/docs/HTML/Categorias_de_conteúdo#Conteúdo_interativo "HTML/Categorias de conteúdo#Conteúdo interativo"), [listado](/pt-BR/docs/HTML/Categorias_de_conteúdo#Listado_em_formulários "HTML/Categorias de conteúdo#Listado em formulários"), [rotulável](/pt-BR/docs/HTML/Categorias_de_conteúdo#Rotulável_em_formulários "HTML/Categorias de conteúdo#Rotulável em formulários"), [resetável](/pt-BR/docs/HTML/Categorias_de_conteúdo#Resetável_em_formulários "HTML/Categorias de conteúdo#Resetável em formulários"), e [enviável](/pt-BR/docs/HTML/Categorias_de_conteúdo#Enviável_em_formulários "HTML/Categorias de conteudo#Enviável em formulários") [associado a formulários](/pt-BR/docs/HTML/Categorias_de_conteúdo#Associado_a_formulários "HTML/Categorias de conteúdo#Associado a formulários") |
+| [Categorias de conteúdo](/pt-BR/docs/HTML/Categorias_de_conteúdo) | [conteúdo fluido](/pt-BR/docs/HTML/Categorias_de_conteúdo#Conteúdo_fluido), [conteúdo fraseado](/pt-BR/docs/HTML/Categorias_de_conteúdo#Conteúdo_fraseado), [conteúdo interativo](/pt-BR/docs/HTML/Categorias_de_conteúdo#Conteúdo_interativo), [listado](/pt-BR/docs/HTML/Categorias_de_conteúdo#Listado_em_formulários), [rotulável](/pt-BR/docs/HTML/Categorias_de_conteúdo#Rotulável_em_formulários), [resetável](/pt-BR/docs/HTML/Categorias_de_conteúdo#Resetável_em_formulários), e [enviável](/pt-BR/docs/HTML/Categorias_de_conteúdo#Enviável_em_formulários) [associado a formulários](/pt-BR/docs/HTML/Categorias_de_conteúdo#Associado_a_formulários) |
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Conteúdo permitido                                                                              | Zero ou mais elementos {{HTMLElement("option")}} ou {{HTMLElement("optgroup")}}.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | Omissão de tag                                                                                  | Nenhuma, tanto tag de início quanto de fim são obrigatórias                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -17,7 +17,7 @@ O elemento HTML _select_ (\<select>) representa um controle que apresenta um men
 
 ## Atributos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Atributos_globais "HTML/Atributos globais").
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Atributos_globais).
 
 - {{htmlattrdef("autofocus")}} {{HTMLVersionInline("5")}}
   - : Este atributo permite especificar que um controle de formulário deve ter foco de entrada quando a página é carregada, a não ser que o usuário o substitua, por exemplo digitando em um controle diferente. Somente um elemento de formulário em um documento pode ter o atributo `autofocus`, que é booleano.
@@ -38,7 +38,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Atributos_globa
 
 ## Interface DOM
 
-Este elemento implementa a interface [`HTMLSelectElement`](/pt-BR/docs/DOM/HTMLSelectElement "DOM/select").
+Este elemento implementa a interface [`HTMLSelectElement`](/pt-BR/docs/DOM/HTMLSelectElement).
 
 ## Exemplos
 
@@ -53,11 +53,11 @@ Este elemento implementa a interface [`HTMLSelectElement`](/pt-BR/docs/DOM/HTMLS
 
 ### Notas
 
-O conteúdo deste elemento é estático e não [editável](/pt-BR/docs/HTML/Content_Editable "HTML/Content_Editable").
+O conteúdo deste elemento é estático e não [editável](/pt-BR/docs/HTML/Content_Editable).
 
 A seguir um exemplo de como simular uma lista de seleção com opções editáveis, **mas esteja ciente** de que leitores de tela e dispositivos de acessibilidade _não_ interpretarão o formulário corretamente; este exemplo seria HTML inválido se os elementos corretos fossem usados:
 
-[Este é um exemplo](/files/4563/editable_select.html "Simulando um select editável com um fieldset de botões de escolha e caixas de texto") de um select editável usando um {{HTMLElement("fieldset")}} de [botões de opção](/pt-BR/docs/HTML/Element/Input "HTML/Element/Input") e [caixas de texto](/pt-BR/docs/HTML/Element/Input "HTML/Element/Input") (**escrito somente com CSS**, sem JavaScript),
+[Este é um exemplo](/files/4563/editable_select.html) de um select editável usando um {{HTMLElement("fieldset")}} de [botões de opção](/pt-BR/docs/HTML/Element/Input) e [caixas de texto](/pt-BR/docs/HTML/Element/Input) (**escrito somente com CSS**, sem JavaScript),
 
 ## Especificações
 

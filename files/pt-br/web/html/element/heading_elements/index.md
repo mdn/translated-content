@@ -88,8 +88,6 @@ Em {{HTMLVersionInline(5)}}, use o elemento {{HTMLElement("section")}} para defi
 
 {{Compat("html.elements.h1")}}
 
-##
-
 ## Veja também
 
 - {{HTMLElement("p")}}

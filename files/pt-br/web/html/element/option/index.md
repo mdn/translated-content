@@ -7,7 +7,7 @@ translation_of: Web/HTML/Element/option
 
 Em um formulário Web, o **elemento HTML** `<option>` é usado para criar um controle que representa um item dentro de um elemento HTML5 {{HTMLElement("select")}}, {{HTMLElement("optgroup")}} ou {{HTMLElement("datalist")}}.
 
-- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Categorias_de_conteúdo "HTML/Categorias_de_conteúdo")_ Nenhuma.
+- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Categorias_de_conteúdo)_ Nenhuma.
 - _Conteúdo permitido_ Texto com caracteres escapados (como `&eacute;`) ocasionalmente.
 - _Omissão de tags_ A tag de abertura é obrigatória. A tag de fechamento é opcional se este elemento é imediatamente seguido por um outro elemento `<option>` ou um {{HTMLElement("optgroup")}}, ou se o elemento pai não tem mais nenhum conteúdo.
 - _Elementos pai permitidos_ {{HTMLElement("select")}}, {{HTMLElement("optgroup")}} ou {{HTMLElement("datalist")}}.
@@ -15,7 +15,7 @@ Em um formulário Web, o **elemento HTML** `<option>` é usado para criar um con
 
 ## Atributos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Atributos_globais "HTML/Atributos globais").
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Atributos_globais).
 
 - {{htmlattrdef("disabled")}}
   - : Se este atributo booleano estiver definido, esta opção não é selecionável. Frequentemente navegadores acinzentam este tipo de controle, e ele deixa de receber quaisquer eventos de navegação, como cliques do mouse ou eventos relacionados a foco. Se este atributo não estiver definido, o elemento ainda pode ser desabilitado se um de seus ancestrais é um elemento {{HTMLElement("optgroup")}} desabilitado.
