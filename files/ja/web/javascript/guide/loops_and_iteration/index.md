@@ -1,13 +1,6 @@
 ---
 title: ループと反復処理
 slug: Web/JavaScript/Guide/Loops_and_iteration
-tags:
-  - Guide
-  - JavaScript
-  - Loop
-  - Syntax
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Loops_and_iteration
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
 
