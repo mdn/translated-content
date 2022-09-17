@@ -1,6 +1,7 @@
 ---
 title: 'Document: pointerlockchange event'
-slug: Web/API/Document/pointerlockchange_event
+slug: Web/API/Element/pointerlockchange_event
+original_slug: Web/API/Document/pointerlockchange_event
 ---
 {{APIRef}}
 

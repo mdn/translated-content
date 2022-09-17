@@ -8419,10 +8419,6 @@
     "modified": "2019-03-23T22:20:46.971Z",
     "contributors": ["876843240"]
   },
-  "Web/API/Document/pointerlockchange_event": {
-    "modified": "2020-10-15T22:32:28.124Z",
-    "contributors": ["vent"]
-  },
   "Web/API/Document/preferredStyleSheetSet": {
     "modified": "2020-10-15T22:21:17.584Z",
     "contributors": ["goden.cheng"]
@@ -8549,10 +8545,6 @@
       "irenesmith",
       "zhaoqize"
     ]
-  },
-  "Web/API/Document/selectstart_event": {
-    "modified": "2019-04-30T14:03:08.442Z",
-    "contributors": ["wbamberg", "irenesmith", "zhangchen", "zhaoqize"]
   },
   "Web/API/Document/styleSheetSets": {
     "modified": "2019-03-23T22:11:26.505Z",
@@ -9269,6 +9261,10 @@
   "Web/API/Element/pointerleave_event": {
     "modified": "2020-10-15T22:08:42.646Z",
     "contributors": ["ensleep"]
+  },
+  "Web/API/Element/pointerlockchange_event": {
+    "modified": "2020-10-15T22:32:28.124Z",
+    "contributors": ["vent"]
   },
   "Web/API/Element/pointermove_event": {
     "modified": "2019-03-18T21:28:25.512Z",
@@ -12699,6 +12695,10 @@
   "Web/API/Node/replaceChild": {
     "modified": "2020-10-15T21:04:16.398Z",
     "contributors": ["RainSlide", "luobotang", "teoli", "khalid32", "ziyunfei"]
+  },
+  "Web/API/Node/selectstart_event": {
+    "modified": "2019-04-30T14:03:08.442Z",
+    "contributors": ["wbamberg", "irenesmith", "zhangchen", "zhaoqize"]
   },
   "Web/API/Node/textContent": {
     "modified": "2020-10-15T21:24:14.842Z",
