@@ -686,7 +686,7 @@ window.addEventListener('load', () => {
 
 ### `role` 属性
 
-[ARIA](/ja/docs/Web/Accessibility/ARIA "docs/Web/Accessibility/ARIA") で使用される主要な属性が、[`role`](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques) 属性です。[`role`](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques) 属性は、要素を何に使用するかを定義する値を受け入れます。それぞれのロールは、自身の要件や動作を定義します。本記事の例では、ロール [`listbox`](/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role) を使用します。これは "composite role" であり、このロールの要素は子要素を持ち、またそれぞれの子要素も特定のロールを持ちます (この例では、ロール `option` の子要素が少なくとも 1 つ)。
+[ARIA](/ja/docs/Web/Accessibility/ARIA) で使用される主要な属性が、[`role`](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques) 属性です。[`role`](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques) 属性は、要素を何に使用するかを定義する値を受け入れます。それぞれのロールは、自身の要件や動作を定義します。本記事の例では、ロール [`listbox`](/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role) を使用します。これは "composite role" であり、このロールの要素は子要素を持ち、またそれぞれの子要素も特定のロールを持ちます (この例では、ロール `option` の子要素が少なくとも 1 つ)。
 
 また、ARIA は標準の HTML マークアップにデフォルトで適用されるロールを定義することも特筆に値します。例えば、{{HTMLElement("table")}} 要素はロール `grid` に、{{HTMLElement("ul")}} 要素はロール `list` にマッチします。{{HTMLElement("ul")}} 要素を使用しているため、私たちのコントロールのロール `listbox` が、{{HTMLElement("ul")}} 要素のロール `list` を置き換えるようにしなければなりません。そのために、ロール `presentation` を使用します。このロールは要素に特別な意味はないことを示せるようにするためのものであり、単に情報を与えるために使用されます。これを {{HTMLElement("ul")}} 要素に適用します。
 
