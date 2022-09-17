@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Operators/void
 ---
 {{jsSidebar("Operators")}}
 
-**`void` 运算符** 对给定的表达式进行求值，然后返回 {{jsxref("undefined")}}。
+**`void` 运算符**对给定的表达式进行求值，然后返回 {{jsxref("undefined")}}。
 
 {{EmbedInteractiveExample("pages/js/expressions-voidoperator.html", "taller")}}
 
@@ -69,8 +69,7 @@ void function () {
 
 ```html
 <a href="javascript:void(0);">
-  这个链接点击之后不会做任何事情，如果去掉 void()，
-  点击之后整个页面会被替换成一个字符 0。
+  这个链接点击之后不会做任何事情
 </a>
 
 <a href="javascript:void(document.body.style.backgroundColor='green');">
