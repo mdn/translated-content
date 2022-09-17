@@ -8,7 +8,7 @@ slug: Web/API/Element/mouseenter_event
 
 ## 语法
 
-在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 方法中使用事件的名称，或者设置一个事件处理程序。
+在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或者设置事件处理器属性。
 
 ```js
 addEventListener('mouseenter', (event) => {});
@@ -158,7 +158,7 @@ function addListItem(text) {
 }
 ```
 
-### 结果
+#### 结果
 
 {{EmbedLiveSample('mouseenter')}}
 
@@ -172,7 +172,7 @@ function addListItem(text) {
 
 ## 参见
 
-- [Introduction to events](/zh/docs/Learn/JavaScript/Building_blocks/Events)
+- [事件介绍](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
 - {{domxref("Element/mousedown_event", "mousedown")}}
 - {{domxref("Element/mouseup_event", "mouseup")}}
 - {{domxref("Element/mousemove_event", "mousemove")}}
