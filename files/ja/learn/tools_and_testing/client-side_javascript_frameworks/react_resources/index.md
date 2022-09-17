@@ -156,4 +156,4 @@ React コミュニティはクライアントサイドルーティングにつ�
   - [Angular アプリのスタイリング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
   - [item コンポーネントの作成](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
   - [To Do アイテムのフィルタリング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Building Angular applications and further resources](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
+  - [Angular アプリケーションのビルドとその他のリソース](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
