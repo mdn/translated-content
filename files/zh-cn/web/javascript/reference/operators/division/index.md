@@ -47,12 +47,12 @@ Math.floor(3 / 2) // 1
 
 ## 参见
 
-- [Addition operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Subtraction operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Multiplication operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Remainder operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Exponentiation operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Increment operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Decrement operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Unary negation operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Unary plus operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [加法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)
+- [减法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [除法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Division)
+- [乘法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [幂运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [自增运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Increment)
+- [自减运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [一元减法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [一元加法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)
