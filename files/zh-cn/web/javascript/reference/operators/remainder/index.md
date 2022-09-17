@@ -1,18 +1,19 @@
 ---
-title: 取余 (%)
+title: 取余（%）
 slug: Web/JavaScript/Reference/Operators/Remainder
 original_slug: Web/JavaScript/Reference/Operators/取余
 ---
+
 {{jsSidebar("Operators")}}
 
-当一个操作数除以第二个操作数时，取余运算符（％）返回剩余的余数。它与被除数的符号保持一致。
+当一个操作数除以第二个操作数时，取余运算符（`％`）返回剩余的余数。它总是与被除数的符号保持一致。
 
 {{EmbedInteractiveExample("pages/js/expressions-remainder.html")}}
 
 ## 语法
 
-```plain
-Operator: var1 % var2
+```js-nolint
+x % y
 ```
 
 ## 示例
@@ -20,7 +21,7 @@ Operator: var1 % var2
 ### 被除数为正数
 
 ```js
- 12 % 5  //  2
+ 13 % 5  //  3
  1 % -2 //  1
  1 % 2  //  1
  2 % 3  //  2
@@ -30,7 +31,7 @@ Operator: var1 % var2
 ### 被除数为负数
 
 ```js
--12 % 5 // -2
+-13 % 5 // -3
 -1 % 2  // -1
 -4 % 2  // -0
 ```
@@ -41,6 +42,16 @@ Operator: var1 % var2
 NaN % 2 // NaN
 ```
 
+### 被除数为 Infinity
+
+```js
+Infinity % 2 // NaN
+Infinity % 0 // NaN
+Infinity % Infinity // NaN
+2 % Infinity // 2
+0 % Infinity // 0
+```
+
 ## 规范
 
 {{Specifications}}
@@ -49,7 +60,7 @@ NaN % 2 // NaN
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [Addition operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)
 - [Subtraction operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Subtraction)
@@ -60,3 +71,5 @@ NaN % 2 // NaN
 - [Decrement operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Decrement)
 - [Unary negation operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_negation)
 - [Unary plus operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [Remainder operator vs. modulo operator](https://2ality.com/2019/08/remainder-vs-modulo.html)
+- [Mod and Remainder are not the Same](https://bigmachine.io/2018/08/21/mod-and-remainder-are-not-the-same-2/)
