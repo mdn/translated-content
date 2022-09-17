@@ -49,8 +49,8 @@ Math.floor(3 / 2) // 1
 
 - [加法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)
 - [减法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [除法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Division)
 - [乘法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [除法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Division)
 - [幂运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation)
 - [自增运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Increment)
 - [自减运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Decrement)
