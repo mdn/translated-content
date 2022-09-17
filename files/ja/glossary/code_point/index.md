@@ -1,14 +1,14 @@
 ---
-title: Code point
+title: Code point (コードポイント)
 slug: Glossary/Code_point
 tags:
   - Glossary
 ---
 
-A **code point** is a number assigned to represent an abstract character in a system for representing text (such as Unicode). In Unicode, a code point is expressed in the form "U+1234" where "1234" is the assigned number. For example, the character "A" is assigned a code point of U+0041.
+**コードポイント**は、（Unicodeなどの）テキストを表現するシステムにおいて、抽象文字を表現するために割り当てられた番号のことです。Unicodeでは、コードポイントは、"U+1234"という形式で表現されます。ここで「1234」が割り当てられた番号です。例えば、"A"という文字には、U+0041というコードポイントが割り当てられています。
 
-Character encoding forms, such as UTF-8 and UTF-16, determine how a Unicode code point should be encoded as a sequence of bytes. Different encoding forms may encode the same code point as different byte sequences: for example, the Cyrillic character "Ф", whose code point is U+0424, is encoded as `0xd0a4` in UTF-8 and as `0x0424` in UTF-16.
+UTF-8やUTF-16などの文字エンコーディング形式では、Unicodeのコードポイントをバイト列としてどのように符号化するべきかを決めています。エンコーディング形式が異なると、同じコードポイントが異なるバイト列に符号化される場合もあります。例えば、コードポイントがU+0424であるキリル文字"Ф"は、UTF-8では`0xd0a4`として符号化され、UTF-16では`0x0424`として符号化されます。
 
-## See also
+## 関連情報
 
 - [The Unicode Standard: Code Points and Characters](https://www.unicode.org/versions/Unicode14.0.0/ch02.pdf#G25564)
