@@ -1,20 +1,21 @@
 ---
-title: 除法 (/)
+title: 除法（/）
 slug: Web/JavaScript/Reference/Operators/Division
 ---
+
 {{jsSidebar("Operators")}}
 
-除法运算符 (`/`) 计算了两个操作数的商，左边的数是被除数，右边的是除数
+除法运算符（`/`）计算了两个操作数的商，左边的数是被除数，右边的是除数。
 
 {{EmbedInteractiveExample("pages/js/expressions-division.html")}}
 
 ## 语法
 
-```plain
-Operator: x / y
+```js-nolint
+x / y
 ```
 
-## 例子
+## 示例
 
 ### 基本除法
 
