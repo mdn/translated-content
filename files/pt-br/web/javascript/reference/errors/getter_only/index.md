@@ -33,7 +33,7 @@ Isto será silenciosamente ignorado no modo non-strict, enquanto vai lançar um 
 
 ### Propriedades sem setter
 
-O exemplo abaixo mostra como definir um getter para uma propriedade. Isso não especifica um [setter](/pt-BR/docs/Web/JavaScript/Reference/Functions/set), então um 
+O exemplo abaixo mostra como definir um getter para uma propriedade. Isso não especifica um [setter](/pt-BR/docs/Web/JavaScript/Reference/Functions/set), então um
 `TypeError` vai ser lançado quando for feita a tentativa de definir a propriedade `temperatura` para `30`. Para mais detalhes veja também a página {{jsxref("Object.defineProperty()")}}.
 
 ```js example-bad

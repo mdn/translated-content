@@ -9,7 +9,7 @@ O elemento HTML _details_ (`<details>`) é usado como uma ferramenta de onde o u
 
 ## Contexto de uso
 
-| Conteúdo permitido        | Um elemento {{ HTMLElement("summary") }} seguido por [flow content](/en/HTML/Content_categories#Flow_content "en/HTML/Content categories#Flow content") |
+| Conteúdo permitido        | Um elemento {{ HTMLElement("summary") }} seguido por [flow content](/en/HTML/Content_categories#Flow_content) |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Omissão de tag            | Nenhuma, tanto as tas iniciais quanto as finais são obrigatórias.                                                                                               |
 | Elementos pais permitidos | Qualquer elemento que aceite flow content.                                                                                                                      |
@@ -24,7 +24,7 @@ Como todos os elementos HTML, esse elemento aceita os [global attributes](/en/HT
 
 ## Interface do DOM
 
-Esse elemento implemena a interface[` HTMLDetailsElement`](/en/DOM/HTMLDetailsElement "en/DOM/HTMLDetailsElement").
+Esse elemento implemena a interface[`HTMLDetailsElement`](/en/DOM/HTMLDetailsElement).
 
 ## Exemplos
 

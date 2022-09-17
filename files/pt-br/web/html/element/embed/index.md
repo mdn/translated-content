@@ -25,9 +25,9 @@ O **elemento HTML `<embed>` **incorpora conteúdo externo no ponto especificado 
 
 > **Note:** **Nota**: Este tópico documenta apenas o elemento definido como parte do HTML5. Ele não trata da implementação anterior e não padronizada do elemento.
 
-Lembre-se de que a maioria dos navegadores modernos descontinuou e removeu o suporte para plug-ins de navegador. Portanto, confiar no `<embed> `geralmente não é aconselhável se você deseja que seu site funcione no navegador do usuário comum.
+Lembre-se de que a maioria dos navegadores modernos descontinuou e removeu o suporte para plug-ins de navegador. Portanto, confiar no `<embed>` geralmente não é aconselhável se você deseja que seu site funcione no navegador do usuário comum.
 
-- _[Categoria de conteúdo](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content categories#Phrasing content"), embedded content, interactive content, palpable content.
+- _[Categoria de conteúdo](/pt-BR/docs/HTML/Content_categories)_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content), embedded content, interactive content, palpable content.
 - _Conteúdo permitido_ Nenhum, é um {{Glossary("empty element")}}.
 - \_Omissão de Tag_Deve iniciar com uma tag de início, mas não deve ter uma tag de fechamento.
 - \_Elementos pai (ancestral)
@@ -36,7 +36,7 @@ Lembre-se de que a maioria dos navegadores modernos descontinuou e removeu o sup
 
 ## Atributos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes "HTML/Global attributes").
+Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
 - {{htmlattrdef("height")}}
   - : A altura apresentada do recurso, em [CSS pixels.](https://drafts.csswg.org/css-values/#px) Este deve ser um valor absoluto; porcentagens _não_ são permitidas.
