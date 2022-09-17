@@ -39,5 +39,5 @@ bar /= 'foo' // NaN
 
 ## 参见
 
-- [Assignment operators in the JS guide](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
-- [Division operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Division)
+- [JS 指南中的赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#赋值运算符)
+- [除法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Division)
