@@ -392,7 +392,7 @@ JavaScript では値の表現に*リテラル*を使います。これらは固�
 let coffees = ['French Roast', 'Colombian', 'Kona'];
 ```
 
-> **Note:** **注:** 配列リテラルは*オブジェクト初期化子*の一種です。[オブジェクト初期化子の使用](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#Using_object_initializers)を参照してください。
+> **Note:** 配列リテラルは*オブジェクト初期化子*の一種です。[オブジェクト初期化子の使用](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#Using_object_initializers)を参照してください。
 
 トップレベルのスクリプト内でリテラルを用いて配列を作成した場合、JavaScript は配列リテラルを含む式を評価するたびに配列を解釈します。さらに関数内で使用されたリテラルは、関数が呼び出されるたびに生成されます。
 
@@ -416,7 +416,7 @@ let fish = ['Lion', , 'Angel'];
 
 次の例では、配列の長さ (`length`) は 3 です。`myList[3]` は存在しません。リスト内の他のカンマはすべて、新しい要素を示します。
 
-> **Note:** **注:** 末尾にカンマを置くと古いブラウザーでエラーになる場合があるので、取り除くのが最善です。
+> **Note:** 末尾にカンマを置くと古いブラウザーでエラーになる場合があるので、取り除くのが最善です。
 
 ```js
 let myList = ['home', , 'school', ];

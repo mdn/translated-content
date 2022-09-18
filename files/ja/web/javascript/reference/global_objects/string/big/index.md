@@ -6,7 +6,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/big
 
 **`big()`** メソッドは、文字列が大きなフォントで表示されるように HTML の {{HTMLElement("big")}} 要素を生成します。
 
-> **Note:** **注:** \<big> 要素は [HTML5](/ja/docs/Glossary/HTML5) で廃止されており、今後使用するべきではありません。代わりにウェブ開発者は [CSS](/ja/docs/Web/CSS) プロパティを使用してください。
+> **Note:** \<big> 要素は [HTML5](/ja/docs/Glossary/HTML5) で廃止されており、今後使用するべきではありません。代わりにウェブ開発者は [CSS](/ja/docs/Web/CSS) プロパティを使用してください。
 
 ## 構文
 

@@ -341,7 +341,7 @@ var endGame = function() {
 }
 ```
 
-> **Note:** **注意:**`getAnimations()` と `effect` はこの記事執筆時点では完全にサポートされていませんが polyfill は今現在サポートしています。
+> **Note:** `getAnimations()` と `effect` はこの記事執筆時点では完全にサポートされていませんが polyfill は今現在サポートしています。
 
 ## コールバックと Promise
 

@@ -30,7 +30,7 @@ request.open("POST", "http://foo.com/submitform.php");
 request.send(formData);
 ```
 
-> **Note:** **注:** フィールド "userfile" および "webmasterfile" はどちらも、ファイルを含んでいます。フィールド "accountnum" に与えた数値は [`FormData.append()`](</ja/docs/Web/API/FormData#append()>) メソッドにより直ちに文字列へ変換されます (フィールドの値として {{ domxref("Blob") }}、 {{ domxref("File") }}、または文字列をとることができます。**値が Blob でもファイルでもない場合は、文字列に変換されます**)。
+> **Note:** フィールド "userfile" および "webmasterfile" はどちらも、ファイルを含んでいます。フィールド "accountnum" に与えた数値は [`FormData.append()`](</ja/docs/Web/API/FormData#append()>) メソッドにより直ちに文字列へ変換されます (フィールドの値として {{ domxref("Blob") }}、 {{ domxref("File") }}、または文字列をとることができます。**値が Blob でもファイルでもない場合は、文字列に変換されます**)。
 
 この例では、 "username", "accountnum", "userfile", "webmasterfile" というフィールドの値を含む `FormData` インスタンスを構築し、 `XMLHttpRequest` のメソッド [`send()`](</ja/docs/Web/API/XMLHttpRequest#send()>) を使用してフォームのデータを送信します。 "webmasterfile" というフィールドは {{domxref("Blob")}} です。 `Blob` オブジェクトは、不変的な生データのファイルのようなオブジェクトを表します。 Blob は、必ずしも JavaScript に適した形式ではないデータを表します。 {{ domxref("File") }} インターフェースは `Blob` をベースにしており、 Blob の機能を継承し、ユーザーのシステム上のファイルをサポートするように拡張されています。 `Blob` を作成するには、 {{domxref("Blob.Blob","Blob() constructor")}} コンストラクターを呼び出します。
 

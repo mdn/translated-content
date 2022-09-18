@@ -29,7 +29,7 @@ slug: Web/API/Element/scroll_event
   </tbody>
 </table>
 
-> **Note:** **注:** iOS の UIWebViews では、 `scroll` イベントはスクロールしている最中には発行されません。スクロールが完了した後に発行されます。 [Bootstrap issue #16202](https://github.com/twbs/bootstrap/issues/16202) を参照してください。 Safari と WKWebViews はこのバグの影響を受けません。
+> **Note:** iOS の UIWebViews では、 `scroll` イベントはスクロールしている最中には発行されません。スクロールが完了した後に発行されます。 [Bootstrap issue #16202](https://github.com/twbs/bootstrap/issues/16202) を参照してください。 Safari と WKWebViews はこのバグの影響を受けません。
 
 ## 例
 
