@@ -38,7 +38,7 @@ var IDBOpenDBRequest = indexedDB.open(name, version);
 
     > **Warning:** **警告:** `storage` 属性は非推奨であり、まもなく Gecko から削除される予定です。永続的なストレージを得るには、代わりに {{domxref("StorageManager.persist()")}} を使用してください。
 
-> **Note:** **メモ**: 利用可能な様々なストレージ種別における詳細情報や、 Firefox がクライアント側データストレージを扱う方法については、 [ブラウザーのストレージ制限と削除基準](/ja/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)で見つけることができます。
+> **Note:**  利用可能な様々なストレージ種別における詳細情報や、 Firefox がクライアント側データストレージを扱う方法については、 [ブラウザーのストレージ制限と削除基準](/ja/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)で見つけることができます。
 
 ### 返値
 

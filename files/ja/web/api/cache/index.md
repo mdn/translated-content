@@ -10,9 +10,9 @@ slug: Web/API/Cache
 
 また、定期的にキャッシュエントリを一掃する必要があります。各ブラウザーは、指定されたオリジンが使用できるキャッシュストレージの総量に厳しい制限を設けています。キャッシュ容量の概算の使用量は {{domxref("StorageEstimate")}} API を用いて確認することができます。ブラウザーはディスク容量の管理に最善を尽くしますが、あるオリジンのキャッシュストレージを削除することがあります。ブラウザーはふつう、あるオリジンのデータをすべて削除するか、まったく削除しないかのいずれかです。名前を用いてキャッシュをバージョン管理し、安全に操作できるスクリプトのバージョンからのみキャッシュを使用するようにしてください。詳細は、[古いキャッシュの削除](/ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers#Deleting_old_caches)を確認してください。
 
-> **Note:** **メモ**: キーの照合アルゴリズムは、値の中にある [VARY ヘッダー](https://www.fastly.com/blog/best-practices-for-using-the-vary-header)に依存しています。そのため、新しいキーを照合するには、キャッシュ内のエントリのキーと値の両方を調べる必要があります。
+> **Note:**  キーの照合アルゴリズムは、値の中にある [VARY ヘッダー](https://www.fastly.com/blog/best-practices-for-using-the-vary-header)に依存しています。そのため、新しいキーを照合するには、キャッシュ内のエントリのキーと値の両方を調べる必要があります。
 
-> **Note:** **メモ**: キャッシュ API は HTTP のキャッシュヘッダーを尊重しません。
+> **Note:**  キャッシュ API は HTTP のキャッシュヘッダーを尊重しません。
 
 ## メソッド
 
@@ -43,7 +43,7 @@ slug: Web/API/Cache
 
 このコード例において、 `caches` は {{domxref("ServiceWorkerGlobalScope")}} のプロパティです。これは `CacheStorage` オブジェクトを保持し、 {{domxref("CacheStorage")}} インターフェイスでアクセスすることができます。これは {{domxref("WindowOrWorkerGlobalScope")}} ミックスインを実装したものです。
 
-> **Note:** **メモ**: Chrome では、 `chrome://inspect/#service-workers` にアクセスして、登録されたサービスワーカーの下の "inspect" リンクをクリックすると、 [`service-worker.js`](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js) スクリプトが行う様々なアクションのログ状態を見ることができます。
+> **Note:**  Chrome では、 `chrome://inspect/#service-workers` にアクセスして、登録されたサービスワーカーの下の "inspect" リンクをクリックすると、 [`service-worker.js`](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js) スクリプトが行う様々なアクションのログ状態を見ることができます。
 
 ```js
 var CACHE_VERSION = 1;
