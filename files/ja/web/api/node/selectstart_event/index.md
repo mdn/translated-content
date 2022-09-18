@@ -1,6 +1,7 @@
 ---
 title: 'Document: selectstart event'
-slug: Web/API/Document/selectstart_event
+slug: Web/API/Node/selectstart_event
+original_slug: Web/API/Document/selectstart_event
 ---
 {{APIRef}}
 
