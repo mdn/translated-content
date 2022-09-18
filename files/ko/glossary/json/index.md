@@ -17,4 +17,4 @@ Much like XML, JSON has the ability to store hierarchical data unlike the more t
 
 ### Technical reference
 
-- {{Link("/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON")}} on MDN
+- [JSON](/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON) on MDN
