@@ -151,7 +151,7 @@ slug: Web/Media/Formats/Video_codecs
       </td>
     </tr>
     <tr>
-      <th scope="row">Noise</th>
+      <th scope="row">噪声</th>
       <td>
         图片噪声（例如胶片颗粒效果、灰尘或图像的其他粗糙度）会引入易变性。易变性通常使压缩更加困难，因为为了达到相同的压缩水平需要丢弃掉更多的细节，因此会导致更多的质量损失。
       </td>
@@ -193,13 +193,13 @@ slug: Web/Media/Formats/Video_codecs
   <tbody>
     <tr>
       <th scope="row">无损压缩</th>
-      <td>No loss of quality</td>
+      <td>无质量损失</td>
       <td>
         无损压缩不能像有损压缩那样减小整体视频大小；生成的文件对于一般用途来说可能仍然太大。
       </td>
     </tr>
     <tr>
-      <th scope="row">Lossy compression</th>
+      <th scope="row">有损压缩</th>
       <td>
         在某种程度上，会出现鬼影和其他形式的质量下降，具体取决于特定的编解码器和应用了多少压缩
       </td>
@@ -242,7 +242,6 @@ slug: Web/Media/Formats/Video_codecs
       <td>
         <h4 id="Moiré_patterns">摩尔纹</h4>
         <p>
-          A
           <a href="https://zh.wikipedia.org/wiki/莫列波紋"
             ><strong>摩尔纹</strong></a
           >是当源图像中的一个图案和编码器的操作方式在空间上略微失准时产生的大尺度空间干涉图案。然后，编码器生成的鬼影会在解码时在源图像的图案中引入奇怪的漩涡效果。
@@ -389,7 +388,7 @@ slug: Web/Media/Formats/Video_codecs
 
 同样，你可以完全从视频中删除帧并降低帧速率以进行补偿。这有两个好处：它使整个视频更小，并且更小的尺寸允许运动补偿带来更好的效果。例如，不是计算由于帧间运动而相隔两个像素的两个帧的运动差异，而是每隔一帧跳过一次可能会导致计算得出四个运动像素的差异。这使得相机的整体运动可以用更少的剩余帧来表示。
 
-视频在其内容不再被人眼感知为运动之前可以达到的绝对最小帧速率约为每秒 12 帧。少于这个临界值，视频就变成了一系列静止图像。电影胶片通常是每秒 24 帧，而标准清晰度电视大约是每秒 30 帧（稍微少一点，但足够接近），而高清电视是每秒 24 到 60 帧。任何从 24 FPS 以上的图像通常看起来都会很平滑； 30 或 60 FPS 是理想的帧率，具体的取决于需求。
+视频在其内容不再被人眼感知为运动之前可以达到的绝对最小帧速率约为每秒 12 帧。少于这个临界值，视频就变成了一系列静止图像。电影胶片通常是每秒 24 帧，而标准清晰度电视大约是每秒 30 帧（稍微少一点，但足够接近），而高清电视是每秒 24 到 60 帧。任何从 24 FPS 以上的图像通常看起来都会很平滑；30 或 60 FPS 是理想的帧率，具体的取决于需求。
 
 最后，做出哪些牺牲完全取决于你和你的设计团队。
 
@@ -1797,7 +1796,7 @@ let recorder = new MediaRecorder(sourceStream, options);
 
 将 `codecs` 参数的值分解为其点描述的属性，我们看到以下内容：
 
-| Value  | Description                                                                                                                                                                                                                                                                             |
+| Value  | Description                                                                                                                                                                                                                                                                              |
 | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `av01` | The four-character code (4CC) designation identifying the [AV1](#av1) codec.                                                                                                                                                                                                             |
 | `2`    | The profile. A value of 2 indicates the Professional profile. A value of 1 is the High profile, while a value of 0 would specify the Main profile.                                                                                                                                       |
@@ -1807,7 +1806,7 @@ let recorder = new MediaRecorder(sourceStream, options);
 | `000`  | The chroma subsampling mode, taken from [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) in the AV1 specification. A value of 000, combined with the monochrome mode value 0, indicates that we want 4:4:4 chroma subsampling, or no loss of color data. |
 | `09`   | The color primaries to use. This value comes from [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) in the AV1 specification; 9 indicates that we want to use BT.2020 color, which is used for HDR.                                                       |
 | `16`   | The transfer characteristics to use. This comes from [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) as well; 16 indicates that we want to use the characteristics for BT.2100 PQ color.                                                                |
-| `09`   | The matrix coefficients to use, from the [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) again. A value of 9 specifies that we want to use BT.2020 with variable luminance; this is also known as BT.2010 YbCbCr.                                        |
+| `09`   | The matrix coefficients to use, from the [section 6.4.2](https://aomediacodec.github.io/av1-spec/#color-config-semantics) again. A value of 9 specifies that we want to use BT.2020 with variable luminance; this is also known as BT.2010 YbCbCr.                                       |
 | `1`    | The video "full range" flag. A value of 1 indicates that we want the full color range to be used.                                                                                                                                                                                        |
 
 你选择编解码器的文档可能会提供你在构建 `codecs` 参数时将使用的信息。
