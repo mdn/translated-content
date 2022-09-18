@@ -218,7 +218,7 @@ For checking non-existent variables that would otherwise throw a {{JSxRef("Refer
 
 ## 相关链接
 
-- [`instanceof`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof)
+- [`instanceof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof)
 - [Why typeof is no longer "safe"](http://es-discourse.com/t/why-typeof-is-no-longer-safe/15)
 - [document.all willful violation of the standard](https://github.com/tc39/ecma262/issues/668)
 - [The history of “typeof null”](https://2ality.com/2013/10/typeof-null.html)

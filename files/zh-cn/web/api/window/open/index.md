@@ -8,8 +8,7 @@ slug: Web/API/Window/open
 
 ## 语法
 
-```
-
+```js
 let windowObjectReference = window.open(strUrl, strWindowName, [strWindowFeatures]);
 ```
 
@@ -38,7 +37,7 @@ let windowObjectReference = window.open(strUrl, strWindowName, [strWindowFeature
 
 ## 例子
 
-```
+```js
 let windowObjectReference;
 let strWindowFeatures = `
     menubar=yes,
@@ -58,7 +57,7 @@ function openRequestedPopup() {
 }
 ```
 
-```
+```js
 let WindowObjectReference;
 
 const openRequestedPopup = () => {

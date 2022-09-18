@@ -330,6 +330,6 @@ You can also find our [pattern validation example on GitHub](https://github.com/
 
 - [HTML forms guide](/zh-CN/docs/Learn/HTML/Forms)
 - {{HTMLElement("input")}}
-- [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel)
-- [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email)
+- [`<input type="tel">`](/zh-CN/docs/Web/HTML/Element/input/tel)
+- [`<input type="email">`](/zh-CN/docs/Web/HTML/Element/input/email)
 - [Compatibility of CSS properties](/zh-CN/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)

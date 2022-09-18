@@ -13,7 +13,7 @@ slug: Learn/Server-side/Express_Nodejs/forms
       <td>
         <p>
           完成前面所有的教程，包括
-          <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data"
+          <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data"
             >Express 教程第 5 章：展示图书馆数据</a
           >
         </p>

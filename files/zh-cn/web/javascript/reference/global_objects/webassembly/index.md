@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
 ---
 {{JSRef}}
 
-**`WebAssembly`**JavaScript 对象是所有 [WebAssembly](/en-US/docs/WebAssembly) 相关功能的命名空间。
+**`WebAssembly`**JavaScript 对象是所有 [WebAssembly](/zh-CN/docs/WebAssembly) 相关功能的命名空间。
 
 和大多数全局对象不一样，`WebAssembly`不是一个构造函数（它不是一个函数对象）。它类似于 {{jsxref("Math")}} 对象或者 {{jsxref("Intl")}} 对象，Math 对象也是一个命名空间对象，用于保存数学常量和函数；Intl 则是用于国际化和其他语言相关函数的命名空间对象。
 
@@ -71,6 +71,6 @@ WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
 
 ## 参见
 
-- [WebAssembly](/en-US/docs/WebAssembly) overview page
-- [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly](/zh-CN/docs/WebAssembly) overview page
+- [WebAssembly concepts](/zh-CN/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Using_the_JavaScript_API)

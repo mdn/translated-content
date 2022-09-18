@@ -28,7 +28,7 @@ Array(arrayLength)
 ### 异常
 
 - {{jsxref("RangeError")}}
-    - : 如果只有一个参数（`arrayLength`）且其值不在 0 到 2<sup>32</sup> - 1（包括） 之间，则会触发异常。
+  - : 如果只有一个参数（`arrayLength`）且其值不在 0 到 2<sup>32</sup> - 1（包括） 之间，则会触发异常。
 
 ## 示例
 

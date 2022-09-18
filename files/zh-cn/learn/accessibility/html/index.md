@@ -13,8 +13,8 @@ original_slug: learn/Accessibility/HTML:为无障碍提供一个良好的基础
       <th scope="row">前提：</th>
       <td>
         有一定的 HTML 基础 (可参阅
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">HTML 入门</a
-        >)，理解<a href="/en-US/docs/Learn/Accessibility/What_is_accessibility"
+        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 入门</a
+        >)，理解<a href="/zh-CN/docs/Learn/Accessibility/What_is_accessibility"
           >什么是无障碍</a
         >。
       </td>

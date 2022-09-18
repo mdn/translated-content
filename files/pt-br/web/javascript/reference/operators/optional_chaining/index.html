@@ -7,13 +7,11 @@ translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
 
 <p>O operador de <strong>encadeamento opcional</strong> <strong><code>?.</code></strong> permite a leitura do valor de uma propriedade localizada internamente em uma cadeia de objetos conectados, sem que a validação de cada referência da cadeia seja expressivamente realizada.</p>
 
-<p>O operador <strong><code>?.</code></strong> funciona de maneira similar ao operador <span class="seoSummary"><code>.</code> de encadeamento, exceto que, ao invés de causar um erro se a referência é <a href="/pt_BR/docs/Glossary/nullish">nullish</a> ({{JSxRef("null")}} ou {{JSxRef("undefined")}}), a expressão sofre um "curto-circuito" e retorna com um valor de <code>undefined</code>.</span> Quando utilizado com uma chamada de função, retorna <code>undefined</code> se a função executada não existir.</p>
+<p>O operador <strong><code>?.</code></strong> funciona de maneira similar ao operador <code>.</code> de encadeamento, exceto que, ao invés de causar um erro se a referência é <a href="/pt_BR/docs/Glossary/nullish">nullish</a> ({{JSxRef("null")}} ou {{JSxRef("undefined")}}), a expressão sofre um "curto-circuito" e retorna com um valor de <code>undefined</code>. Quando utilizado com uma chamada de função, retorna <code>undefined</code> se a função executada não existir.</p>
 
 <p>Isso resulta em expressões mais curtas e simples ao acessar propriedades encadeadas quando a possibilidade de uma referência ser inexistente. Isso também pode auxiliar ao explorar o conteúdo de um objeto quando não existe garantia da existência de determinadas propriedades obrigatórias.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-optionalchainingoperator.html", "taller")}}</div>
-
-<div class="hidden">A fonte desse exemplo interativo está armazenada em um repositório no GitHub. Se você gostaria de contribuir para esses exemplos interativos, por favor, clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> e nos envie um pull request.</div>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 

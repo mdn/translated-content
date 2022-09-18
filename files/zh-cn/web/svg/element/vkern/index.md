@@ -14,7 +14,7 @@ slug: Web/SVG/Element/vkern
 
 ### 全局属性
 
-- [核心属性](/en/SVG/Attribute#Core) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
 
 ### 专有属性
 
@@ -43,4 +43,4 @@ slug: Web/SVG/Element/vkern
 - {{ SVGElement("font") }}
 - {{ SVGElement("glyph") }}
 - {{ SVGElement("hkern") }}
-- [SVG 教程：SVG 字体](/en-US/docs/Web/SVG/Tutorial/SVG_fonts)
+- [SVG 教程：SVG 字体](/zh-CN/docs/Web/SVG/Tutorial/SVG_fonts)

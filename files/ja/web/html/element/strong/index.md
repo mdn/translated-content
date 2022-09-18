@@ -1,19 +1,6 @@
 ---
 title: '<strong>: 強い重要性要素'
 slug: Web/HTML/Element/strong
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Strong Importance
-  - Urgency
-  - Web
-  - strong
-translation_of: Web/HTML/Element/strong
 ---
 {{HTMLRef}}
 

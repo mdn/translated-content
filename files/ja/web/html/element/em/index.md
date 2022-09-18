@@ -1,13 +1,6 @@
 ---
 title: '<em>: 強調要素'
 slug: Web/HTML/Element/em
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/em
 ---
 {{HTMLRef}}
 

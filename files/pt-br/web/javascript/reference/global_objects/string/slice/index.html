@@ -23,24 +23,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/slice
 
 <dl>
  <dt><code>startIndex</code></dt>
- <dd>É o índice, de base zero, onde se inicia a extração. Se for um número negativo, será o mesmo que executar <em><code>str.length + startIndex</code></em> (por exemplo, se <em><code>startIndex</code></em> for <em><code>-3</code></em>, será o mesmo que executar <em><code>str.length - 3</code></em>).</dd>
- <dd>
+ <dd><p>É o índice, de base zero, onde se inicia a extração. Se for um número negativo, será o mesmo que executar <em><code>str.length + startIndex</code></em> (por exemplo, se <em><code>startIndex</code></em> for <em><code>-3</code></em>, será o mesmo que executar <em><code>str.length - 3</code></em>).</p>
  <pre class="brush: js notranslate">const nome = 'Ricardo';
 console.log(nome.slice(-3)); // retorna 'rdo'</pre>
- </dd>
-</dl>
-
-<dl>
- <dd>Se <em><code>startIndex</code></em> for maior ou igual a <code><var>str</var><em>.length</em></code>, uma string vazia será retornada.</dd>
- <dd>
+ <p>Se <em><code>startIndex</code></em> for maior ou igual a <code><var>str</var><em>.length</em></code>, uma string vazia será retornada.</p>
  <pre class="brush: js notranslate">const nome = 'Ricardo';
 console.log(nome.slice(7)); // retorna &lt;empty string&gt;'
 </pre>
  </dd>
  <dt><code>endIndex</code></dt>
- <dd>Opcional. É o índice, de base zero, onde termina a extração. O caractere que possuir este índice não será incluso.</dd>
- <dd>Se omitido ou possuir valor de <em><code>undefined</code></em>, ou for maior que <code><var>str</var><em>.length</em></code>, <em><code>slice()</code></em> extrairá até o fim da string.</dd>
- <dd>
+ <dd><p>Opcional. É o índice, de base zero, onde termina a extração. O caractere que possuir este índice não será incluso.</p>
+ <p>Se omitido ou possuir valor de <em><code>undefined</code></em>, ou for maior que <code><var>str</var><em>.length</em></code>, <em><code>slice()</code></em> extrairá até o fim da string.</p>
  <pre class="brush: js notranslate">const nome = 'Ricardo';
 
 // omitindo fimSlice
@@ -52,18 +45,11 @@ console.log(nome.slice(0, i)); // retorna 'Ricardo'
 
 // passando número maior que o tamanho da string
 console.log(nome.slice(0, 7)); // retorna 'Ricardo'</pre>
- </dd>
- <dd>Se negativo, é o mesmo que executar <em><code>str.length + endIndex</code></em> onde <em><code>str.length</code></em> é o tamanho da string (por exemplo, se <em><code>endIndex</code></em> é <em><code>-3</code></em>, é como executar <code><em>str.length - 3</em></code>).</dd>
-</dl>
-
-<dl>
- <dd>
+ <p>Se negativo, é o mesmo que executar <em><code>str.length + endIndex</code></em> onde <em><code>str.length</code></em> é o tamanho da string (por exemplo, se <em><code>endIndex</code></em> é <em><code>-3</code></em>, é como executar <code><em>str.length - 3</em></code>).</p>
  <pre class="brush: js notranslate">const nome = 'Ricardo';<strong>
 </strong>console.log(nome.slice(0, -3)); // retorna 'Rica'
 </pre>
- </dd>
- <dd>Se for um valor diferente de indefinido e, ao mesmo tempo não for um número, uma string vazia será retornada</dd>
- <dd>
+ <p>Se for um valor diferente de indefinido e, ao mesmo tempo não for um número, uma string vazia será retornada</p>
  <pre class="brush: js notranslate">const nome = 'Ricardo';
 let i; // variável criada sem valor atribuído
 

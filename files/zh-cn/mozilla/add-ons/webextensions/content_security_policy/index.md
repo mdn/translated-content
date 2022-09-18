@@ -57,7 +57,7 @@ slug: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 这会被应用在任何没有明确在 manifest.json 中的[`content_security_policy`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) 项设置自己的内容安全策略的插件中。它有以下几种效果：
 
 - [你只能将本地的 \<script> 和 \<object> 资源加载到插件中。](/zh-CN/Add-ons/WebExtensions/Content_Security_Policy#Location_of_script_and_object_resources)
-- [插件无法将字符串转换为 JavaScript 执行。](</en-US/Add-ons/WebExtensions/Content_Security_Policy#eval()_and_friends>)
+- [插件无法将字符串转换为 JavaScript 执行。](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#eval_和_friends)
 - [内联 JavaScript 不会被执行。](/zh-CN/Add-ons/WebExtensions/Content_Security_Policy#Inline_JavaScript)
 
 ### script 和 object 资源的位置

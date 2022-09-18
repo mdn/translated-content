@@ -1,11 +1,6 @@
 ---
 title: stroke-linecap
 slug: Web/SVG/Attribute/stroke-linecap
-tags:
-  - NeedsCompatTable
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/stroke-linecap
 ---
 « [SVG 属性リファレンスホーム](/ja/docs/Web/SVG/Attribute)
 

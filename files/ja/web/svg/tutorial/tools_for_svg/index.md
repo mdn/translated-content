@@ -1,12 +1,6 @@
 ---
 title: SVG のツール
 slug: Web/SVG/Tutorial/Tools_for_SVG
-tags:
-  - Intermediate
-  - NeedsUpdate
-  - SVG
-  - Tools
-translation_of: Web/SVG/Tutorial/Tools_for_SVG
 ---
 {{ PreviousNext("Web/SVG/Tutorial/SVG_Image_Tag") }}
 

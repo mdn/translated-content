@@ -1,15 +1,6 @@
 ---
 title: '<del>: 削除済み文字列要素'
 slug: Web/HTML/Element/del
-tags:
-  - Deleted Text
-  - Element
-  - HTML
-  - HTML edits
-  - Reference
-  - Web
-  - del
-translation_of: Web/HTML/Element/del
 ---
 {{HTMLRef}}
 

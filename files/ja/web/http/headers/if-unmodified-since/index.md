@@ -1,13 +1,6 @@
 ---
 title: If-Unmodified-Since
 slug: Web/HTTP/Headers/If-Unmodified-Since
-tags:
-  - HTTP
-  - HTTP ヘッダー
-  - Reference
-  - リクエストヘッダー
-  - リファレンス
-translation_of: Web/HTTP/Headers/If-Unmodified-Since
 ---
 {{HTTPSidebar}}
 

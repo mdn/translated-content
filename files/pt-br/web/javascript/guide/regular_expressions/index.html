@@ -58,7 +58,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 <p>A tabela abaixo fornece uma lista completa dos caracteres especiais que podem ser utilizados nas expressões regulares, com sua respectiva descrição. Para testar os exemplos de expressão regular você pode usar o <a href="http://regexr.com/">regExr</a>.</p>
 
 <table class="fullwidth-table">
- <caption>Caracteres especiais utilizados em expressões regulares.<span class="hidden"> </span><span class="hidden"> </span></caption>
+ <caption>Caracteres especiais utilizados em expressões regulares.</caption>
  <thead>
   <tr>
    <th scope="col">Caractere</th>
@@ -190,7 +190,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    <td>
     <p>Um conjunto de caracteres. Pesquisa correspondência para qualquer um dos caracteres entre colchetes. Você pode especificar um intervalo de caracteres usando hífen. Caracteres especiais (como o ponto (.) e o asterisco(*)) não tem significado algum quando está dentro de um conjunto de caracteres. Não necessita utilizar escape neles. Mas, se utilizar escape também irá funcionar.</p>
 
-    <p>Por exemplo, <code>[abcd]</code> é o mesmo que <code><span style="font-family: monospace;">[</span>a-d]</code>. Com a expressão será encontrado o 'b' em "beijo" e o 'c' em "chop". A expressão <code>/[a-z.]+/</code> e <code>/[\w.]+/</code> ambos encontraram as letras que formam "test.i.ng".</p>
+    <p>Por exemplo, <code>[abcd]</code> é o mesmo que <code>[a-d]</code>. Com a expressão será encontrado o 'b' em "beijo" e o 'c' em "chop". A expressão <code>/[a-z.]+/</code> e <code>/[\w.]+/</code> ambos encontraram as letras que formam "test.i.ng".</p>
    </td>
   </tr>
   <tr>
@@ -336,7 +336,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 
 <p>Usar parênteses em volta de qualquer parte de uma expressão regular faz com que essa parte seja lembrada para ser usada depois, como descrito em  {{ web.link("#Using_Parenthesized_Substring_Matches", "Usando as Substrings entre Parênteses na Expressão Regular") }}.</p>
 
-<p>Por Exemplo, a expressão <code>/Capitulo (\d+)\.\d*/</code> <span id="result_box" lang="pt"><span>ilustra caracteres adicionais escapados e especiais e indica que parte do padrão deve ser lembrado.</span></span> Corresponde precisamente aos caracteres 'Capitulo ' seguidos por um ou mais caracteres numéricos (<code>\d</code> significa qualquer caracter numérico e <code>+</code> significa 1 ou mais vezes), seguidos por um ponto decimal (que é um caracter especial; preceder com um \ significa que a expressão regular deve buscar pelo caracter literal '.'), seguido por qualquer caracter numérico 0 ou mais vezes (<code>\d</code> significa caracter numérico, <code>*</code> significa 0 ou mais vezes). Além disso, os parenteses são usados para relembrar os primeiros caracteres numéricos correspondentes.</p>
+<p>Por Exemplo, a expressão <code>/Capitulo (\d+)\.\d*/</code> ilustra caracteres adicionais escapados e especiais e indica que parte do padrão deve ser lembrado. Corresponde precisamente aos caracteres 'Capitulo ' seguidos por um ou mais caracteres numéricos (<code>\d</code> significa qualquer caracter numérico e <code>+</code> significa 1 ou mais vezes), seguidos por um ponto decimal (que é um caracter especial; preceder com um \ significa que a expressão regular deve buscar pelo caracter literal '.'), seguido por qualquer caracter numérico 0 ou mais vezes (<code>\d</code> significa caracter numérico, <code>*</code> significa 0 ou mais vezes). Além disso, os parenteses são usados para relembrar os primeiros caracteres numéricos correspondentes.</p>
 
 <p>Esse padrão é encontrado em "Abra o capitulo 4.3, parágrafo 6" o '4' é relembrado. O padrão não é encontrado em "Capitulo 3 e 4", porque essa string não tem um período após o '3'.</p>
 

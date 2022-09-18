@@ -59,7 +59,7 @@ _No change._
 
 ### XUL
 
-- 在 {{ XULElem("window") }}元素上添加了新的 {{ XULAttr("fullscreenbutton") }}属性; 将该属性设置为`true,会在`窗口上添加一个进入全屏模式的按钮。
+- 在 `<window>` 元素上添加了新的 `fullscreenbutton` 属性；将该属性设置为`true`，会在窗口上添加一个进入全屏模式的按钮。
 
 ### 接口
 
