@@ -7493,14 +7493,6 @@
     "modified": "2020-10-15T22:25:33.509Z",
     "contributors": ["mfuji09"]
   },
-  "Web/API/Document/pointerlockchange_event": {
-    "modified": "2020-10-15T22:15:21.525Z",
-    "contributors": ["mfuji09"]
-  },
-  "Web/API/Document/pointerlockerror_event": {
-    "modified": "2020-10-15T22:15:23.341Z",
-    "contributors": ["mfuji09"]
-  },
   "Web/API/Document/preferredStyleSheetSet": {
     "modified": "2020-10-16T14:05:35.162Z",
     "contributors": ["mfuji09"]
@@ -7588,10 +7580,6 @@
       "TNKSoftware",
       "chikoski"
     ]
-  },
-  "Web/API/Document/selectstart_event": {
-    "modified": "2020-10-15T22:22:27.399Z",
-    "contributors": ["oreno4649"]
   },
   "Web/API/Document/styleSheetSets": {
     "modified": "2020-10-15T22:12:37.542Z",
@@ -8193,6 +8181,14 @@
   "Web/API/Element/pointerleave_event": {
     "modified": "2020-10-15T22:20:45.066Z",
     "contributors": ["mfuji09", "Wind1808"]
+  },
+  "Web/API/Element/pointerlockchange_event": {
+    "modified": "2020-10-15T22:15:21.525Z",
+    "contributors": ["mfuji09"]
+  },
+  "Web/API/Element/pointerlockerror_event": {
+    "modified": "2020-10-15T22:15:23.341Z",
+    "contributors": ["mfuji09"]
   },
   "Web/API/Element/pointermove_event": {
     "modified": "2020-10-15T22:20:46.283Z",
@@ -11321,6 +11317,10 @@
   "Web/API/Node/replaceChild": {
     "modified": "2019-03-23T23:54:12.010Z",
     "contributors": ["Uemmra3", "fscholz", "xuancanh", "ethertank", "Ryotakano"]
+  },
+  "Web/API/Node/selectstart_event": {
+    "modified": "2020-10-15T22:22:27.399Z",
+    "contributors": ["oreno4649"]
   },
   "Web/API/Node/textContent": {
     "modified": "2020-10-15T21:24:59.576Z",

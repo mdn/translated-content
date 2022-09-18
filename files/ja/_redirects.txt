@@ -3228,10 +3228,13 @@
 /ja/docs/Web/API/Document/pointerdown_event	/ja/docs/conflicting/Web/API/Element/pointerdown_event
 /ja/docs/Web/API/Document/pointerenter_event	/ja/docs/conflicting/Web/API/Element/pointerenter_event
 /ja/docs/Web/API/Document/pointerleave_event	/ja/docs/conflicting/Web/API/Element/pointerleave_event
+/ja/docs/Web/API/Document/pointerlockchange_event	/ja/docs/Web/API/Element/pointerlockchange_event
+/ja/docs/Web/API/Document/pointerlockerror_event	/ja/docs/Web/API/Element/pointerlockerror_event
 /ja/docs/Web/API/Document/pointermove_event	/ja/docs/conflicting/Web/API/Element/pointermove_event
 /ja/docs/Web/API/Document/pointerout_event	/ja/docs/conflicting/Web/API/Element/pointerout_event
 /ja/docs/Web/API/Document/pointerover_event	/ja/docs/conflicting/Web/API/Element/pointerover_event
 /ja/docs/Web/API/Document/pointerup_event	/ja/docs/conflicting/Web/API/Element/pointerup_event
+/ja/docs/Web/API/Document/selectstart_event	/ja/docs/Web/API/Node/selectstart_event
 /ja/docs/Web/API/Document/tooltipNode	/ja/docs/orphaned/Web/API/Document/tooltipNode
 /ja/docs/Web/API/Document/touchcancel_event	/ja/docs/conflicting/Web/API/Element/touchcancel_event
 /ja/docs/Web/API/Document/touchend_event	/ja/docs/conflicting/Web/API/Element/touchend_event
