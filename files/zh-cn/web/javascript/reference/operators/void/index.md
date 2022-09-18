@@ -16,7 +16,7 @@ void expression
 
 ## 描述
 
-这个运算符能向期望一个表达式的值是 {{jsxref("undefined")}} 的地方插入会产生副作用的表达式。
+这个运算符允许在表达式执行完成时，产生（某些地方）期望获得的 {{jsxref("undefined")}} 值。
 
 `void` 运算符通常只用于获取 `undefined` 的原始值，一般使用 `void(0)`（等同于 `void 0`）。在上述情况中，也可以使用全局变量 {{jsxref("undefined")}} 来代替。
 
@@ -31,7 +31,7 @@ void (2 === '2'); // void (2 === '2')，返回 undefined
 
 ### 立即调用的函数表达式
 
-在使用[立即执行的函数表达式](/zh-CN/docs/Glossary/IIFE)时，`function` 关键字不可直接位于语句开头，因为会被识别成函数表达式而不是[函数声明](zh-CN/docs/Web/JavaScript/Reference/Statements/function)，并会在达到代表调用的括号时产生一个语法错误。如果是匿名函数，那么如果函数被解析为声明，就会立即产生一个语法错误。
+在使用[立即调用的函数表达式](/zh-CN/docs/Glossary/IIFE)时，`function` 关键字不可直接位于语句开头，因为该表达式会被解析为[函数声明](zh-CN/docs/Web/JavaScript/Reference/Statements/function)，并会在解析到代表调用的括号时产生语法错误。如果是匿名函数，那么如果函数被解析为声明，就会立即产生语法错误。
 
 ```js example-bad
 function iife() {
