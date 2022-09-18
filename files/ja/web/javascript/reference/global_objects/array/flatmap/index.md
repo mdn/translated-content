@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 968e6f1f3b6f977a09e116a0ac552459b741eac3
 ---
 
-{{JSRef}}20
+{{JSRef}}
 
 **`flatMap()`** メソッドは、最初にマッピング関数を使用してそれぞれの要素をマップした後、結果を新しい配列内にフラット化します。これは、{{jsxref("Array.prototype.map","map()")}} の後に深さ 1 の {{jsxref("Array.prototype.flat","flat()")}} を行うのと同じですが (`arr.map(...args).flat()`)、これら 2 つのメソッドを別々に呼び出すよりもわずかに効率的です。
 
