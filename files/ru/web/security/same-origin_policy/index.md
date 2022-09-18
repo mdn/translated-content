@@ -3,262 +3,147 @@ title: Same-origin policy
 slug: Web/Security/Same-origin_policy
 translation_of: Web/Security/Same-origin_policy
 ---
-<p><strong>Политика одинакового источника</strong> (same-origin policy) определяет как документ или скрипт, загруженный из одного источника ({{Glossary("origin")}}), может взаимодействовать с ресурсом из другого источника. Это помогает изолировать потенциально вредоносные документы, снижая количество возможных векторов атак.</p>
+**Политика одинакового источника** (same-origin policy) определяет как документ или скрипт, загруженный из одного источника ({{Glossary("origin")}}), может взаимодействовать с ресурсом из другого источника. Это помогает изолировать потенциально вредоносные документы, снижая количество возможных векторов атак.
 
-<h2 id="Определение_origin">Определение origin</h2>
+## Определение origin
 
-<p>Две страницы имеют одинаковый origin (источник) если протокол , порт (если указан), и хост одинаковы для обоих страниц. Время от времени, вы можете видеть это как  "scheme/host/port tuple" (где "tuple"<sup> переводится как кортеж или запись</sup> набор из трёх компонент, которые вместе составляют единое целое).</p>
+Две страницы имеют одинаковый origin (источник) если протокол , порт (если указан), и хост одинаковы для обоих страниц. Время от времени, вы можете видеть это как "scheme/host/port tuple" (где "tuple" переводится как кортеж или запись набор из трёх компонент, которые вместе составляют единое целое).
 
-<p>В следующей таблице даны примеры origin-сравнений с URL <code>http://store.company.com/dir/page.html</code>:</p>
+В следующей таблице даны примеры origin-сравнений с URL `http://store.company.com/dir/page.html`:
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>URL</th>
-   <th>Outcome</th>
-   <th>Reason</th>
-  </tr>
-  <tr>
-   <td><code>http://store.company.com/dir2/other.html</code></td>
-   <td>Success</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>http://store.company.com/dir/inner/another.html</code></td>
-   <td>Success</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>https://store.company.com/secure.html</code></td>
-   <td>Failure</td>
-   <td>Different protocol</td>
-  </tr>
-  <tr>
-   <td><code>http://store.company.com:81/dir/etc.html</code></td>
-   <td>Failure</td>
-   <td>Different port</td>
-  </tr>
-  <tr>
-   <td><code>http://news.company.com/dir/other.html</code></td>
-   <td>Failure</td>
-   <td>Different host</td>
-  </tr>
- </tbody>
-</table>
+| URL                                               | Outcome | Reason             |
+| ------------------------------------------------- | ------- | ------------------ |
+| `http://store.company.com/dir2/other.html`        | Success |                    |
+| `http://store.company.com/dir/inner/another.html` | Success |                    |
+| `https://store.company.com/secure.html`           | Failure | Different protocol |
+| `http://store.company.com:81/dir/etc.html`        | Failure | Different port     |
+| `http://news.company.com/dir/other.html`          | Failure | Different host     |
 
-<p>Смотрите также <a href="/en-US/docs/Same-origin_policy_for_file:_URIs" title="Same-origin_policy_for_file:_URIs">origin definition for <code>file:</code> URLs</a>.</p>
+Смотрите также [origin definition for `file:` URLs](/ru/docs/Same-origin_policy_for_file:_URIs "Same-origin_policy_for_file:_URIs").
 
-<h3 id="Наследование_origins">Наследование origins</h3>
+### Наследование origins
 
-<p>Контент из <code>about:blank</code> и <code>javascript:</code> адреса наследуют источник документа, содержащего этот URL, поскольку они не содержат информации о сервере происхождения.</p>
+Контент из `about:blank` и `javascript:` адреса наследуют источник документа, содержащего этот URL, поскольку они не содержат информации о сервере происхождения.
 
-<div class="note">
-<p>Например, <code>about:blank</code> часто используется в качестве URL новых, пустых окон в которые родительский скрипт записывает контент (например, с помощью {{domxref("Window.open()")}}). Если это окно также содержит JavaScript, то скрипт будет наследовать то же происхождение, что и его родитель.</p>
-</div>
+> **Примечание:** Например, `about:blank` часто используется в качестве URL новых, пустых окон в которые родительский скрипт записывает контент (например, с помощью {{domxref("Window.open()")}}). Если это окно также содержит JavaScript, то скрипт будет наследовать то же происхождение, что и его родитель.
 
-<div class="blockIndicator warning">
-<p style="line-height: 30px;"><code>data:</code> адреса получают новый, пустой, безопасный контекст.</p>
-</div>
+> **Предупреждение:** `data:` адреса получают новый, пустой, безопасный контекст.
 
-<h3 id="Исключения_в_Internet_Explorer">Исключения в Internet Explorer</h3>
+### Исключения в Internet Explorer
 
-<p>Internet Explorer два основных исключения из политики одно происхождения:</p>
+Internet Explorer два основных исключения из политики одно происхождения:
 
-<dl>
- <dt>Trust Zones (Зоны доверия)</dt>
- <dd>Если оба домена находятся в зоне высокого доверия (например, зоны корпоративной интрасети), то ограничения на одно и то же происхождение не применяется.</dd>
- <dt>Порт</dt>
- <dd>IE не включает порт в same-origin проверку. Следовательно, <code>https://company.com:81/index.html</code> и <code>https://company.com/index.html</code> являются адресами одного происхождения и ограничения действовать не будут.</dd>
-</dl>
+- Trust Zones (Зоны доверия)
+  - : Если оба домена находятся в зоне высокого доверия (например, зоны корпоративной интрасети), то ограничения на одно и то же происхождение не применяется.
+- Порт
+  - : IE не включает порт в same-origin проверку. Следовательно, `https://company.com:81/index.html` и `https://company.com/index.html` являются адресами одного происхождения и ограничения действовать не будут.
 
-<p>Эти исключения являются нестандартными и не поддерживаются в любом другом браузере</p>
+Эти исключения являются нестандартными и не поддерживаются в любом другом браузере
 
-<h2 id="Изменение_origin">Изменение origin</h2>
+## Изменение origin
 
-<p>Страница может изменить свой оригинальный origin с некоторыми ограничениями. Скрипт может установить значение {{domxref("document.domain")}} на текущий домен или супердомен текущего домена. Если значение будет установлено на супердомен текущего домена, более короткий домен будет использован для последующей проверки origin'а. Например, предполагается, что скрипт в документе по адресу <code>http://store.company.com/dir/other.html</code> выполняется следующим выражением:</p>
+Страница может изменить свой оригинальный origin с некоторыми ограничениями. Скрипт может установить значение {{domxref("document.domain")}} на текущий домен или супердомен текущего домена. Если значение будет установлено на супердомен текущего домена, более короткий домен будет использован для последующей проверки origin'а. Например, предполагается, что скрипт в документе по адресу `http://store.company.com/dir/other.html` выполняется следующим выражением:
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">document<span class="punctuation token">.</span>domain <span class="operator token">=</span> <span class="string token">"company.com"</span><span class="punctuation token">;</span></code></pre>
+```js
+document.domain = "company.com";
+```
 
-<p>После этого, страница может пройти такую же проверку на <code>http://company.com/dir/page.html</code> (<code>предполагая, что http://company.com/dir/page.html</code> установил <code>document.domain</code> в значение "<code>company.com</code>" чтобы указать, что у него получилось разрешение - смотри {{domxref("document.domain")}}). Однако, <code>company.com</code> <strong>не может </strong>установить <code>document.domain</code> в значение <code>othercompany.com</code>, поскольку это значение не является супердоменом <code>company.com</code>.</p>
+После этого, страница может пройти такую же проверку на `http://company.com/dir/page.html` (`предполагая, что http://company.com/dir/page.html` установил `document.domain` в значение "`company.com`" чтобы указать, что у него получилось разрешение - смотри {{domxref("document.domain")}}). Однако, `company.com` **не может** установить `document.domain` в значение `othercompany.com`, поскольку это значение не является супердоменом `company.com`.
 
-<p>Номер порта проверяется браузером отдельно. Любой вызов <code>document.domain</code>, включающий <code>document.domain = document.domain</code>, заменяет номер порта, устанавливая его в значение <code>null</code>. Следовательно, <strong>невозможно</strong> вызов <code>company.com:8080</code> обозначить <code>company.com</code> одной лишь установкой<code>document.domain = "company.com"</code> в начале. Он должен быть установлен в обоих случаях и номер портов в этих случаях должны равняться значению <code>null</code>.</p>
+Номер порта проверяется браузером отдельно. Любой вызов `document.domain`, включающий `document.domain = document.domain`, заменяет номер порта, устанавливая его в значение `null`. Следовательно, **невозможно** вызов `company.com:8080` обозначить `company.com` одной лишь установкой`document.domain = "company.com"` в начале. Он должен быть установлен в обоих случаях и номер портов в этих случаях должны равняться значению `null`.
 
-<div class="note">
-<p><strong>Замечание:</strong> Когда используется <code>document.domain</code> для разрешения поддомена для родительского доступа к нему, вы должны установить <code>document.domain</code> в<em> такое же значение, </em>как в родительском домене, так и в поддомене. Это необходимо, даже если при этом просто восстанавливается исходное значение родительского домена. Несоблюдение этого правила может привести к ошибкам разрешений.</p>
-</div>
+> **Примечание:** **Замечание:** Когда используется `document.domain` для разрешения поддомена для родительского доступа к нему, вы должны установить `document.domain` в _такое же значение,_ как в родительском домене, так и в поддомене. Это необходимо, даже если при этом просто восстанавливается исходное значение родительского домена. Несоблюдение этого правила может привести к ошибкам разрешений.
 
-<h2 id="Cross-origin_network_access">Cross-origin network access</h2>
+## Cross-origin network access
 
-<p>The same-origin policy controls interactions between two different origins, such as when you use {{domxref("XMLHttpRequest")}} or an {{htmlelement("img")}} element. These interactions are typically placed into three categories:</p>
+The same-origin policy controls interactions between two different origins, such as when you use {{domxref("XMLHttpRequest")}} or an {{htmlelement("img")}} element. These interactions are typically placed into three categories:
 
-<ul>
- <li>Cross-origin <em>writes </em>are typically allowed. Examples are links, redirects and form submissions. Certain rarely used HTTP requests require <a href="/en-US/docs/HTTP/Access_control_CORS#Preflighted_requests" title="HTTP/Access_control_CORS#Preflighted_requests">preflight</a>.</li>
- <li>Cross-origin <em>embedding </em>is typically allowed. Examples are listed below.</li>
- <li>Cross-origin <em>reads </em>are typically not allowed, but read access is often leaked by embedding. For example, you can read the width and height of an embedded image, the actions of an embedded script, or the <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=629094">availability of an embedded resource</a>.</li>
-</ul>
+- Cross-origin _writes_ are typically allowed. Examples are links, redirects and form submissions. Certain rarely used HTTP requests require [preflight](/ru/docs/HTTP/Access_control_CORS#Preflighted_requests "HTTP/Access_control_CORS#Preflighted_requests").
+- Cross-origin _embedding_ is typically allowed. Examples are listed below.
+- Cross-origin _reads_ are typically not allowed, but read access is often leaked by embedding. For example, you can read the width and height of an embedded image, the actions of an embedded script, or the [availability of an embedded resource](https://bugzilla.mozilla.org/show_bug.cgi?id=629094).
 
-<p>Here are some examples of resources which may be embedded cross-origin:</p>
+Here are some examples of resources which may be embedded cross-origin:
 
-<ul>
- <li>JavaScript with <code>&lt;script src="..."&gt;&lt;/script&gt;</code>. Error messages for syntax errors are only available for same-origin scripts.</li>
- <li>CSS with <code>&lt;link rel="stylesheet" href="..."&gt;</code>. Due to the <a href="http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html" title="http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html">relaxed syntax rules</a> of CSS, cross-origin CSS requires a correct <code>Content-Type</code> header. Restrictions vary by browser: <a href="http://msdn.microsoft.com/en-us/library/ie/gg622939%28v=vs.85%29.aspx">IE</a>, <a href="http://www.mozilla.org/security/announce/2010/mfsa2010-46.html" title="http://www.mozilla.org/security/announce/2010/mfsa2010-46.html">Firefox</a>, <a href="http://code.google.com/p/chromium/issues/detail?id=9877">Chrome</a>, <a href="http://support.apple.com/kb/HT4070">Safari</a> (scroll down to CVE-2010-0051) and <a href="http://www.opera.com/support/kb/view/943/">Opera</a>.</li>
- <li>Images with {{htmlelement("img")}}. Supported image formats include PNG, JPEG, GIF, BMP, SVG, ...</li>
- <li>Media files with {{htmlelement("video")}} and {{htmlelement("audio")}}.</li>
- <li>Plug-ins with <a href="/en-US/docs/HTML/Element/object" title="HTML/Element/object"><code>&lt;object&gt;</code></a>, <a href="/en-US/docs/HTML/Element/embed" title="HTML/Element/embed"><code>&lt;embed&gt;</code></a> and <a href="/en-US/docs/HTML/Element/applet" title="HTML/Element/applet"><code>&lt;applet&gt;</code></a>.</li>
- <li>Fonts with <a href="/en-US/docs/CSS/@font-face" title="CSS/@font-face"><code>@font-face</code></a>. Some browsers allow cross-origin fonts, others require same-origin fonts.</li>
- <li>Anything with <a href="/en-US/docs/HTML/Element/frame" title="HTML/Element/frame"><code>&lt;frame&gt;</code></a> and <a href="/en-US/docs/HTML/Element/iframe" title="HTML/Element/iframe"><code>&lt;iframe&gt;</code></a>. A site can use the <code><a href="/en-US/docs/HTTP/X-Frame-Options" title="HTTP/X-Frame-Options">X-Frame-Options</a></code> header to prevent this form of cross-origin interaction.</li>
-</ul>
+- JavaScript with `<script src="..."></script>`. Error messages for syntax errors are only available for same-origin scripts.
+- CSS with `<link rel="stylesheet" href="...">`. Due to the [relaxed syntax rules](http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html) of CSS, cross-origin CSS requires a correct `Content-Type` header. Restrictions vary by browser: [IE](http://msdn.microsoft.com/en-us/library/ie/gg622939%28v=vs.85%29.aspx), [Firefox](http://www.mozilla.org/security/announce/2010/mfsa2010-46.html), [Chrome](http://code.google.com/p/chromium/issues/detail?id=9877), [Safari](http://support.apple.com/kb/HT4070) (scroll down to CVE-2010-0051) and [Opera](http://www.opera.com/support/kb/view/943/).
+- Images with {{htmlelement("img")}}. Supported image formats include PNG, JPEG, GIF, BMP, SVG, ...
+- Media files with {{htmlelement("video")}} and {{htmlelement("audio")}}.
+- Plug-ins with [`<object>`](/ru/docs/HTML/Element/object "HTML/Element/object"), [`<embed>`](/ru/docs/HTML/Element/embed "HTML/Element/embed") and [`<applet>`](/ru/docs/HTML/Element/applet "HTML/Element/applet").
+- Fonts with [`@font-face`](/ru/docs/CSS/@font-face "CSS/@font-face"). Some browsers allow cross-origin fonts, others require same-origin fonts.
+- Anything with [`<frame>`](/ru/docs/HTML/Element/frame "HTML/Element/frame") and [`<iframe>`](/ru/docs/HTML/Element/iframe "HTML/Element/iframe"). A site can use the [`X-Frame-Options`](/en-US/docs/HTTP/X-Frame-Options "HTTP/X-Frame-Options") header to prevent this form of cross-origin interaction.
 
-<h3 id="How_to_allow_cross-origin_access">How to allow cross-origin access</h3>
+### How to allow cross-origin access
 
-<p>Use <a href="/en-US/docs/HTTP/Access_control_CORS" title="HTTP/Access_control_CORS">CORS</a> to allow cross-origin access.</p>
+Use [CORS](/ru/docs/HTTP/Access_control_CORS "HTTP/Access_control_CORS") to allow cross-origin access.
 
-<h3 id="How_to_block_cross-origin_access">How to block cross-origin access</h3>
+### How to block cross-origin access
 
-<ul>
- <li>To prevent cross-origin writes, check for an unguessable token in the request, known as a <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29">Cross-Site Request Forgery (CSRF)</a> token. You must prevent cross-origin reads of pages that know this token.</li>
- <li>To prevent cross-origin reads of a resource, ensure that it is not embeddable. It is often necessary to prevent embedding because embedding a resource always leaks some information about it.</li>
- <li>To prevent cross-origin embedding, ensure that your resource cannot be interpreted as one of the embeddable formats listed above. The browser does not respect the <code>Content-Type</code> in most cases. For example, if you point a <code>&lt;script&gt;</code> tag at an HTML document, the browser will try to parse the HTML as JavaScript. When your resource is not an entry point to your site, you can also use a CSRF token to prevent embedding.</li>
-</ul>
+- To prevent cross-origin writes, check for an unguessable token in the request, known as a [Cross-Site Request Forgery (CSRF)](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29) token. You must prevent cross-origin reads of pages that know this token.
+- To prevent cross-origin reads of a resource, ensure that it is not embeddable. It is often necessary to prevent embedding because embedding a resource always leaks some information about it.
+- To prevent cross-origin embedding, ensure that your resource cannot be interpreted as one of the embeddable formats listed above. The browser does not respect the `Content-Type` in most cases. For example, if you point a `<script>` tag at an HTML document, the browser will try to parse the HTML as JavaScript. When your resource is not an entry point to your site, you can also use a CSRF token to prevent embedding.
 
-<h2 id="Cross-origin_script_API_access">Cross-origin script API access</h2>
+## Cross-origin script API access
 
-<p>JavaScript APIs such as <a href="/en-US/docs/DOM/HTMLIFrameElement" title="DOM/HTMLIFrameElement"><code>iframe.contentWindow</code></a>, {{domxref("window.parent")}}, {{domxref("window.open")}} and {{domxref("window.opener")}} allow documents to directly reference each other. When the two documents do not have the same origin, these references provide very limited access to <a href="/en-US/docs/Web/API/Window"><code>Window</code></a> and <a href="/en-US/docs/Web/API/Location"><code>Location</code></a> objects, as described in the next two sections.</p>
+JavaScript APIs such as [`iframe.contentWindow`](/ru/docs/DOM/HTMLIFrameElement "DOM/HTMLIFrameElement"), {{domxref("window.parent")}}, {{domxref("window.open")}} and {{domxref("window.opener")}} allow documents to directly reference each other. When the two documents do not have the same origin, these references provide very limited access to [`Window`](/ru/docs/Web/API/Window) and [`Location`](/ru/docs/Web/API/Location) objects, as described in the next two sections.
 
-<p>To communicate further between documents from different origins, use {{domxref("window.postMessage")}}.</p>
+To communicate further between documents from different origins, use {{domxref("window.postMessage")}}.
 
-<h3 id="Window">Window</h3>
+### Window
 
-<p>Specification:  <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window">http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window</a>.</p>
+Specification: <http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window>.
 
-<p>The following cross-origin access to <code>Window</code> properties is allowed:</p>
+The following cross-origin access to `Window` properties is allowed:
 
-<table class="fullwidth-table standard-table">
- <thead>
-  <tr>
-   <th scope="col">Methods</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{domxref("window.blur")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("window.close")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("window.focus")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("window.postMessage")}}</td>
-  </tr>
- </tbody>
-</table>
+| Methods                                      |
+| -------------------------------------------- |
+| {{domxref("window.blur")}}         |
+| {{domxref("window.close")}}         |
+| {{domxref("window.focus")}}         |
+| {{domxref("window.postMessage")}} |
 
-<table class="fullwidth-table standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attributes</th>
-   <th scope="col"></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{domxref("window.closed")}}</td>
-   <td>Read only.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("window.frames")}}</td>
-   <td>Read only.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("window.length")}}</td>
-   <td>Read only.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("window.location")}}</td>
-   <td>Read/write.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("window.opener")}}</td>
-   <td>Read only.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("window.parent")}}</td>
-   <td>Read only.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("window.self")}}</td>
-   <td>Read only.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("window.top")}}</td>
-   <td>Read only.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("window.window")}}</td>
-   <td>Read only.</td>
-  </tr>
- </tbody>
-</table>
+| Attributes                               |             |
+| ---------------------------------------- | ----------- |
+| {{domxref("window.closed")}}     | Read only.  |
+| {{domxref("window.frames")}}     | Read only.  |
+| {{domxref("window.length")}}     | Read only.  |
+| {{domxref("window.location")}} | Read/write. |
+| {{domxref("window.opener")}}     | Read only.  |
+| {{domxref("window.parent")}}     | Read only.  |
+| {{domxref("window.self")}}     | Read only.  |
+| {{domxref("window.top")}}         | Read only.  |
+| {{domxref("window.window")}}     | Read only.  |
 
-<p>Some browsers allow access to more properties than the specification allows.</p>
+Some browsers allow access to more properties than the specification allows.
 
-<h3 id="Location">Location</h3>
+### Location
 
-<p>Specification:  <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-location">http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-location</a>.</p>
+Specification: <http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-location>.
 
-<p>The following cross-origin access to <code>Location</code> properties is allowed:</p>
+The following cross-origin access to `Location` properties is allowed:
 
-<table class="fullwidth-table standard-table">
- <thead>
-  <tr>
-   <th scope="col">Methods</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{domxref("location.replace")}}</td>
-  </tr>
- </tbody>
-</table>
+| Methods                                  |
+| ---------------------------------------- |
+| {{domxref("location.replace")}} |
 
-<table class="fullwidth-table standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attributes</th>
-   <th scope="col"></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{domxref("URLUtils.href")}}</td>
-   <td>Write only.</td>
-  </tr>
- </tbody>
-</table>
+| Attributes                           |             |
+| ------------------------------------ | ----------- |
+| {{domxref("URLUtils.href")}} | Write only. |
 
-<p>Some browsers allow access to more properties than the specification allows.</p>
+Some browsers allow access to more properties than the specification allows.
 
-<h2 id="Cross-origin_data_storage_access">Cross-origin data storage access</h2>
+## Cross-origin data storage access
 
-<p>Access to data stored in the browser such as <a href="/en-US/docs/Web/Guide/API/DOM/Storage">localStorage</a> and <a href="/en-US/docs/IndexedDB">IndexedDB</a> are separated by origin. Each origin gets its own separate storage, and JavaScript in one origin cannot read from or write to the storage belonging to another origin.</p>
+Access to data stored in the browser such as [localStorage](/ru/docs/Web/Guide/API/DOM/Storage) and [IndexedDB](/ru/docs/IndexedDB) are separated by origin. Each origin gets its own separate storage, and JavaScript in one origin cannot read from or write to the storage belonging to another origin.
 
-<p>Cookies use a separate definition of origins. A page can set a cookie for its own domain or any parent domain, as long as the parent domain is not a public suffix. Firefox and Chrome use the <a href="http://publicsuffix.org/">Public Suffix List</a> to determine if a domain is a public suffix. Internet Explorer uses its own internal method to determine if a domain is a public suffix. The browser will make a cookie available to the given domain including any sub-domains, no matter which protocol (HTTP/HTTPS) or port is used. When you set a cookie, you can limit its availability using the Domain, Path, Secure and Http-Only flags. When you read a cookie, you cannot see from where it was set. Even if you use only secure https connections, any cookie you see may have been set using an insecure connection.</p>
+Cookies use a separate definition of origins. A page can set a cookie for its own domain or any parent domain, as long as the parent domain is not a public suffix. Firefox and Chrome use the [Public Suffix List](http://publicsuffix.org/) to determine if a domain is a public suffix. Internet Explorer uses its own internal method to determine if a domain is a public suffix. The browser will make a cookie available to the given domain including any sub-domains, no matter which protocol (HTTP/HTTPS) or port is used. When you set a cookie, you can limit its availability using the Domain, Path, Secure and Http-Only flags. When you read a cookie, you cannot see from where it was set. Even if you use only secure https connections, any cookie you see may have been set using an insecure connection.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Same-origin_policy_for_file:_URIs" title="Same-origin policy for file: URIs">Same-origin policy for file: URIs</a></li>
- <li><a href="http://www.w3.org/Security/wiki/Same_Origin_Policy">Same-Origin Policy at W3C</a></li>
-</ul>
+- [Same-origin policy for file: URIs](/ru/docs/Same-origin_policy_for_file:_URIs "Same-origin policy for file: URIs")
+- [Same-Origin Policy at W3C](http://www.w3.org/Security/wiki/Same_Origin_Policy)
 
-<div class="originaldocinfo">
-<h2 id="Original_Document_Information">Original Document Information</h2>
+## Original Document Information
 
-<ul>
- <li>Author(s): Jesse Ruderman</li>
-</ul>
-</div>
+- Author(s): Jesse Ruderman
 
-<p>{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}</p>
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
