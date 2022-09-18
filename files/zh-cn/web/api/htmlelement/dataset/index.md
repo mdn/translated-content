@@ -99,4 +99,4 @@ if (!('someDataAttr' in el.dataset)) {
 
 - 全局属性的 HTML [`data-*`](/zh-CN/docs/Web/HTML/Global_attributes/data-*) 类。
 - [使用 data 属性](/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes)
-- {{DOMxRef("Element.getAttribute()")}} and {{DOMxRef("Element.setAttribute()")}}
+- {{DOMxRef("Element.getAttribute()")}} 和 {{DOMxRef("Element.setAttribute()")}}
