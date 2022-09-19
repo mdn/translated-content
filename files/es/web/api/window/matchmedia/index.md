@@ -50,7 +50,7 @@ Consulte [Probando media queries](/es/docs/DOM/Using_media_queries_from_code "CS
 ## Ver también
 
 - [Media queries](/es/docs/CSS/Media_queries "CSS/Media queries")
-- [Probando media queries](/es/docs/Web/Guide/CSS/probando_media_queries "CSS/Probando media queries
+- [Probando media queries](/es/docs/Web/Guide/CSS/probando_media_queries)
 ")
 - {{domxref("MediaQueryList")}}
 - {{domxref("MediaQueryListListener")}}
