@@ -8,31 +8,30 @@ tags:
   - Экспортированные функции
 translation_of: WebAssembly/Exported_functions
 ---
-<div>{{WebAssemblySidebar}}</div>
+{{WebAssemblySidebar}}
 
-<p class="summary">Экспортированные функции WebAssembly - это функции вашего модуля доступные в JavaScript. В этой статье более подробно описывается, что они из себя представляют.</p>
+Экспортированные функции WebAssembly - это функции вашего модуля доступные в JavaScript. В этой статье более подробно описывается, что они из себя представляют.
 
-<h2 id="Экспортированные…_что">Экспортированные… что?</h2>
+## Экспортированные… что?
 
-<p>Экспортированные функции это просто JavaScript обёртки, которые вызывают функции модуля WebAssembly. При их использовании происходит неявное преобразование типов аргументов функции в типы, с которыми может работать WebAssembly (например, преобразование number в int32). Дальше эти аргументы передаются функции вашего модуля и она вызывается. Результат также преобразовывается и возвращается в JavaScript.</p>
+Экспортированные функции это просто JavaScript обёртки, которые вызывают функции модуля WebAssembly. При их использовании происходит неявное преобразование типов аргументов функции в типы, с которыми может работать WebAssembly (например, преобразование number в int32). Дальше эти аргументы передаются функции вашего модуля и она вызывается. Результат также преобразовывается и возвращается в JavaScript.
 
-<p>Вы можете получить список экспортированных функций двумя способами:</p>
+Вы можете получить список экспортированных функций двумя способами:
 
-<ul>
- <li>Вызовите <code><a href="/en-US/docs/WebAssembly/API/Table/get">Table.prototype.get()</a></code> у существующей таблице;</li>
- <li>Через <code><a href="/en-US/docs/WebAssembly/API/Instance/exports">Instance.exports</a></code> существующего экземпляра модуля.</li>
-</ul>
+- Вызовите [`Table.prototype.get()`](/en-US/docs/WebAssembly/API/Table/get) у существующей таблице;
+- Через [`Instance.exports`](/en-US/docs/WebAssembly/API/Instance/exports) существующего экземпляра модуля.
 
-<p>В любом случае вы получаете одну и туже обёртку функции вашего модуля. С точки зрения JavaScript, все экспортированные функции wasm являются функциями JavaScript, но они инкапсулированы экземпляром модуля wasm, и имеют только ограниченный способ доступа к ним.</p>
+В любом случае вы получаете одну и туже обёртку функции вашего модуля. С точки зрения JavaScript, все экспортированные функции wasm являются функциями JavaScript, но они инкапсулированы экземпляром модуля wasm, и имеют только ограниченный способ доступа к ним.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Давайте посмотрим на пример, чтобы прояснить ситуацию (вы можете найти его на GitHub как <a href="https://github.com/mdn/webassembly-examples/blob/master/other-examples/table-set.html">table-set.html</a> или <a href="https://mdn.github.io/webassembly-examples/other-examples/table-set.html">запустить в своём браузере</a>, и посмотреть <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat">текстовое представление модуля wasm</a>):</p>
+Давайте посмотрим на пример, чтобы прояснить ситуацию (вы можете найти его на GitHub как [table-set.html](https://github.com/mdn/webassembly-examples/blob/master/other-examples/table-set.html) или [запустить в своём браузере](https://mdn.github.io/webassembly-examples/other-examples/table-set.html), и посмотреть [текстовое представление модуля wasm](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat)):
 
-<pre class="brush: js">var otherTable = new WebAssembly.Table({ element: "anyfunc", initial: 2 });
+```js
+var otherTable = new WebAssembly.Table({ element: "anyfunc", initial: 2 });
 
 WebAssembly.instantiateStreaming(fetch('table.wasm'))
-.then(obj =&gt; {
+.then(obj => {
   var tbl = obj.instance.exports.tbl;
   console.log(tbl.get(0)());  // 13
   console.log(tbl.get(1)());  // 42
@@ -40,35 +39,38 @@ WebAssembly.instantiateStreaming(fetch('table.wasm'))
   otherTable.set(1,tbl.get(1));
   console.log(otherTable.get(0)());
   console.log(otherTable.get(1)());
-});</pre>
+});
+```
 
-<p>Здесь мы создаём таблицу (<code>otherTable</code>) из JavaScript используя конструктор {{jsxref("WebAssembly.Table")}}, после этого мы загружаем модуль <code>table.wasm</code> при помощи функции {{jsxref("WebAssembly.instantiateStreaming()")}}.</p>
+Здесь мы создаём таблицу (`otherTable`) из JavaScript используя конструктор {{jsxref("WebAssembly.Table")}}, после этого мы загружаем модуль `table.wasm` при помощи функции {{jsxref("WebAssembly.instantiateStreaming()")}}.
 
-<p>Затем мы получаем объект содержащий все функции, экспортированные из экземпляра модуля. Извлекаем ссылки на эти функции через  <code><a href="/en-US/docs/WebAssembly/API/Table/get">tbl.get()</a>,</code> вызываем их и выводим результат работы в консоль. Затем мы используем <code>set()</code> чтобы таблица  <code>otherTable</code> содержала ссылки на те же функции, что и таблица <code>tbl</code>.</p>
+Затем мы получаем объект содержащий все функции, экспортированные из экземпляра модуля. Извлекаем ссылки на эти функции через `tbl.get(),` вызываем их и выводим результат работы в консоль. Затем мы используем `set()` чтобы таблица `otherTable` содержала ссылки на те же функции, что и таблица `tbl`.
 
-<p>Чтобы доказать это, мы получаем ссылки на функции из таблицы  <code>otherTable</code> и вызываем их. При выводе в консоль они дают такие же результаты.</p>
+Чтобы доказать это, мы получаем ссылки на функции из таблицы `otherTable` и вызываем их. При выводе в консоль они дают такие же результаты.
 
-<h2 id="Они_являются_настоящими_функциями">Они являются настоящими функциями</h2>
+## Они являются настоящими функциями
 
-<p>В предыдущем примере возвращаемое значение каждого вызова <code><a href="/en-US/docs/WebAssembly/API/Table/get">Table.prototype.get()</a></code> является экспортированной функцией WebAssembly — это именно то, о чем мы говорили.</p>
+В предыдущем примере возвращаемое значение каждого вызова [`Table.prototype.get()`](/en-US/docs/WebAssembly/API/Table/get) является экспортированной функцией WebAssembly — это именно то, о чем мы говорили.
 
-<p>Стоит заметить что помимо того что они являются обёртками для функций WebAssembly, это обычные функции JavaScript. Если вы загрузите приведённый выше пример в <a href="/en-US/docs/WebAssembly#Browser_compatibility">браузере с поддержкой WebAssembly</a>, и запустите следующие строки в консоли:</p>
+Стоит заметить что помимо того что они являются обёртками для функций WebAssembly, это обычные функции JavaScript. Если вы загрузите приведённый выше пример в [браузере с поддержкой WebAssembly](/ru/docs/WebAssembly#Browser_compatibility), и запустите следующие строки в консоли:
 
-<pre class="brush: js">var testFunc = otherTable.get(0);
-typeof testFunc;</pre>
+```js
+var testFunc = otherTable.get(0);
+typeof testFunc;
+```
 
-<p>результатом выполнения будет <code>function</code>. Вы можете сделать с ней все тоже самое что и с другими <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">функциями</a> в JavaScript — <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call">call()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">bind()</a> </code>и т.д. Вызов <code>testFunc.toString()</code> возвращает интересный результат:</p>
+результатом выполнения будет `function`. Вы можете сделать с ней все тоже самое что и с другими [функциями](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function) в JavaScript — [`call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call), `bind() `и т.д. Вызов `testFunc.toString()` возвращает интересный результат:
 
-<pre class="brush: js">function 0() {
+```js
+function 0() {
     [native code]
-}</pre>
+}
+```
 
-<p>Это наводит на мысль о том что эта функция является обёрткой.</p>
+Это наводит на мысль о том что эта функция является обёрткой.
 
-<p>Дополнительные сведения которые нужно знать при работе с экспортированными функциями:</p>
+Дополнительные сведения которые нужно знать при работе с экспортированными функциями:
 
-<ul>
- <li>Их свойство <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length">length</a> это количество аргументов указанных в сигнатуре wasm функции.</li>
- <li>Их свойство <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name">name</a> является результатом вызова <code>toString()</code> индекса функции в модуле wasm.</li>
- <li>Если вы попытаетесь вызвать экспортированную функцию wasm, которая принимает или возвращает значение типа i64, то это приведёт к ошибке, поскольку в настоящее время JavaScript не имеет точного способа представления i64. Однако в дальнейшем это может измениться - новый тип int64 рассматривается для будущих стандартов, который затем может использоваться wasm.</li>
-</ul>
+- Их свойство [length](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/length) это количество аргументов указанных в сигнатуре wasm функции.
+- Их свойство [name](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/name) является результатом вызова `toString()` индекса функции в модуле wasm.
+- Если вы попытаетесь вызвать экспортированную функцию wasm, которая принимает или возвращает значение типа i64, то это приведёт к ошибке, поскольку в настоящее время JavaScript не имеет точного способа представления i64. Однако в дальнейшем это может измениться - новый тип int64 рассматривается для будущих стандартов, который затем может использоваться wasm.
