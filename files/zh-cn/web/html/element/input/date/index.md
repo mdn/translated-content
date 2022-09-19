@@ -315,7 +315,9 @@ input:valid + span::after {
 
 ### JavaScript
 
-该代码中可能有趣的另一部分是特性检测代码。要检测浏览器是否支持 `<input type="date">`，我们创建一个新的 {{htmlelement("input")}} 元素，尝试将其 `type` 设置为 `date`，然后立即检查其 `type` 值。不支持的浏览器将返回 `text`，因为 `date` 类型将回退为 `text` 类型。如果不支持 `<input type="date">`，我们将隐藏原生选择器并显示后备选择器 UI（{{htmlelement("select")}} 元素）。
+该代码中可能有趣的另一部分是特性检测代码——检测浏览器是否支持 `<input type="date">`。
+
+我们创建一个新的 {{htmlelement("input")}} 元素，尝试将其 `type` 设置为 `date`，然后立即检查其 `type` 值。不支持的浏览器将返回 `text`，因为 `date` 类型将回退为 `text` 类型。如果不支持 `<input type="date">`，我们将隐藏原生选择器并显示后备选择器 UI（{{htmlelement("select")}} 元素）。
 
 ```js
 // 获取 UI 元素
@@ -436,7 +438,7 @@ daySelect.onchange = () => {
 }
 ```
 
-> **备注：** 请记住有些年份有 53 周（见 [**每年的周数**](https://zh.wikipedia.org/wiki/ISO週日曆#每年的星期)）！当你在开发产品应用时应当考虑这个问题。
+> **备注：** 请记住有些年份有 53 周（见[**每年的周数**](https://zh.wikipedia.org/wiki/ISO週日曆#每年的星期)）！当你在开发产品应用时应当考虑这个问题。
 
 ## 规范
 
