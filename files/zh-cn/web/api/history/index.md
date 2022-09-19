@@ -44,7 +44,7 @@ _History 接口不继承任何方法。_
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 
