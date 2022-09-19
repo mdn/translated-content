@@ -1,15 +1,6 @@
 ---
-title: 'CSP ソース値'
+title: CSP ソース値
 slug: Web/HTTP/Headers/Content-Security-Policy/Sources
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-  - source
-translation_of: Web/HTTP/Headers/Content-Security-Policy/Sources
 ---
 {{HTTPSidebar}}
 

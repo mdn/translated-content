@@ -14,13 +14,21 @@ gen.next(value)
 
 ### 引数
 
-<dl><dt><code><var>value</var></code></dt><dd>ジェネレーターへ送る値です。</dd><dd>この値は <code>yield</code> 式の結果として代入されます。例えば <code><var>variable</var> = yield <var>expression</var></code> の場合、 <code>.next()</code> 関数に渡された値は <code><var>variable</var></code> に代入されます。</dd></dl>
+- `<var>value</var>`
+  - : ジェネレーターへ送る値です。
+
+    この値は `yield` 式の結果として代入されます。例えば `<var>variable</var> = yield <var>expression</var>` の場合、 `.next()` 関数に渡された値は `<var>variable</var>` に代入されます。
 
 ### 返値
 
 以下の２つのプロパティを持った {{jsxref("Object")}} です。
 
-<dl><dt><code>done</code> (boolean)</dt><dd>イテレーターが反復処理の末尾を過ぎている場合、値は <code>true</code> になります。この場合、 <code>value</code> はオプションでそのイテレーターの<em>返値</em>を指定します。</dd><dd>イテレーターが反復処理の次の値を生成することができた場合、値は <code>false</code> になります。これは <code>done</code> プロパティを指定しない場合も同等です。</dd><dt><code>value</code></dt><dd>イテレーターが返す何らかの JavaScript の値です。 <code>done</code> が <code>true</code> の場合は省略可能です。</dd></dl>
+- `done` (boolean)
+  - : イテレーターが反復処理の末尾を過ぎている場合、値は `true` になります。この場合、 `value` はオプションでそのイテレーターの _返値_ を指定します。
+
+    イテレーターが反復処理の次の値を生成することができた場合、値は `false` になります。これは `done` プロパティを指定しない場合も同等です。
+- `value`
+  - : イテレーターが返す何らかの JavaScript の値です。 `done` が `true` の場合は省略可能です。
 
 ## 例
 

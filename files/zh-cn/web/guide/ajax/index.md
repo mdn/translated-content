@@ -5,7 +5,7 @@ slug: Web/Guide/AJAX
 **[新手入门](/zh-CN/docs/Web/Guide/AJAX/Getting_Started)**
 Ajax 简介
 
-Asynchronous JavaScript + XML（异步 JavaScript 和 XML）, 其本身不是一种新技术，而是一个在 2005 年被 Jesse James Garrett 提出的新术语，用来描述一种使用现有技术集合的‘新’方法，包括：[HTML](/zh-CN/docs/HTML) 或 [XHTML](/en-US/docs/XHTML), [CSS](/zh-CN/docs/Web/CSS), [JavaScript](/en-US/docs/JavaScript), [DOM](/zh-CN/docs/Web/API/Document_Object_Model), [XML](/en-US/docs/XML), [XSLT](/en-US/docs/XSLT), 以及最重要的 {{domxref("XMLHttpRequest")}}。当使用结合了这些技术的 AJAX 模型以后， 网页应用能够快速地将增量更新呈现在用户界面上，而不需要重载（刷新）整个页面。这使得程序能够更快地回应用户的操作。
+Asynchronous JavaScript + XML（异步 JavaScript 和 XML）, 其本身不是一种新技术，而是一个在 2005 年被 Jesse James Garrett 提出的新术语，用来描述一种使用现有技术集合的‘新’方法，包括：[HTML](/zh-CN/docs/HTML) 或 [XHTML](/zh-CN/docs/XHTML), [CSS](/zh-CN/docs/Web/CSS), [JavaScript](/zh-CN/docs/JavaScript), [DOM](/zh-CN/docs/Web/API/Document_Object_Model), [XML](/zh-CN/docs/XML), [XSLT](/zh-CN/docs/XSLT), 以及最重要的 {{domxref("XMLHttpRequest")}}。当使用结合了这些技术的 AJAX 模型以后， 网页应用能够快速地将增量更新呈现在用户界面上，而不需要重载（刷新）整个页面。这使得程序能够更快地回应用户的操作。
 
 尽管 X 在 Ajax 中代表 XML，但由于{{glossary("JSON")}}的许多优势，比如更加轻量以及作为 Javascript 的一部分，目前 JSON 的使用比 XML 更加普遍。JSON 和 XML 都被用于在 Ajax 模型中打包信息。
 
@@ -26,7 +26,7 @@ Asynchronous JavaScript + XML（异步 JavaScript 和 XML）, 其本身不是一
 - [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
   - : Fetch API 提供一个获取资源的接口。对于用过 {{domxref("XMLHTTPRequest")}} 的人来说会觉得很熟悉，但这个 API 提供了更加强大且灵活的特性。
 - [Server-sent 事件](/zh-CN/docs/Server-sent_events)
-  - : 在过去，一个网页必须发送请求到服务器来获取新的数据，也就是说，网页必须主动向服务器请求数据。有了 server-sent events 之后，服务器可以向网页推送消息，使得服务器可以随时向网页传送数据。这些发送过来的消息可以看作是带有数据的[事件](/en-US/docs/DOM/event)。参见：[Using server-sent events](/en-US/docs/Server-sent_events/Using_server-sent_events).
+  - : 在过去，一个网页必须发送请求到服务器来获取新的数据，也就是说，网页必须主动向服务器请求数据。有了 server-sent events 之后，服务器可以向网页推送消息，使得服务器可以随时向网页传送数据。这些发送过来的消息可以看作是带有数据的[事件](/zh-CN/docs/DOM/event)。参见：[Using server-sent events](/zh-CN/docs/Server-sent_events/Using_server-sent_events).
 - [纯 Ajax 导航示例](/zh-CN/docs/Web/API/History_API/Example)
   - : 本文提供了一个仅由三个页面组成的纯 Ajax 网站的（简易）工作示例。
 - [发送和接收二进制数据](/zh-CN/docs/DOM/XMLHttpRequest/Sending_and_Receiving_Binary_Data)

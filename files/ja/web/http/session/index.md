@@ -1,9 +1,6 @@
 ---
 title: 典型的な HTTP セッション
 slug: Web/HTTP/Session
-tags:
-  - HTTP
-translation_of: Web/HTTP/Session
 ---
 {{HTTPSidebar}}
 

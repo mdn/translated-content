@@ -1,12 +1,6 @@
 ---
 title: 201 Created
 slug: Web/HTTP/Status/201
-tags:
-  - HTTP
-  - Reference
-  - ステータスコード
-  - 成功
-translation_of: Web/HTTP/Status/201
 ---
 {{HTTPSidebar}}
 

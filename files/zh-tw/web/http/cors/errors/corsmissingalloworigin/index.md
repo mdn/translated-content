@@ -16,7 +16,7 @@ The response to the {{Glossary("CORS")}} request is missing the required {{HTTPH
 
 If the server is under your control, add the origin of the requesting site to the set of domains permitted access by adding it to the `Access-Control-Allow-Origin` header's value.
 
-For example, to allow a site at https\://amazing.site to access the resource using CORS, the header should be:
+For example, to allow a site at `https://amazing.site` to access the resource using CORS, the header should be:
 
 ```plain
 Access-Control-Allow-Origin: https://amazing.site

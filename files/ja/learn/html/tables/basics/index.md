@@ -156,9 +156,7 @@ slug: Learn/HTML/Tables/Basics
     </tr>
     <tr>
       <th colspan="2" scope="rowgroup">
-        <span class="tlid-translation translation" lang="ja"
-          ><span title="">矮星</span></span
-        >
+        矮星
       </th>
       <th scope="row">冥王星</th>
       <td>0.0146</td>

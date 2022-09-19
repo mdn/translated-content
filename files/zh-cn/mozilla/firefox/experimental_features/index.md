@@ -68,7 +68,7 @@ Mozilla 发布了测试的 nightly 版本，用于测试新的浏览器特性。
       <td>
         <strong>Positioned CSS Masks</strong><br />A subset of CSS Masks that
         includes
-        <a href="/en-US/docs/Web/CSS/CSS_Masks"
+        <a href="/zh-CN/docs/Web/CSS/CSS_Masks"
           >longhand properties of CSS Masks</a
         >, as well as a change in the shorthand property
       </td>
@@ -199,7 +199,7 @@ Mozilla 发布了测试的 nightly 版本，用于测试新的浏览器特性。
       <td>
         <strong>The <code>frames()</code> timing function</strong><br />See
         <a
-          href="/en-US/docs/Web/CSS/single-transition-timing-function#The_frames()_class_of_timing-functions"
+          href="/zh-CN/docs/Web/CSS/single-transition-timing-function#The_frames()_class_of_timing-functions"
           >The frames() class of timing-functions</a
         >
         for more details.
@@ -251,7 +251,7 @@ See also [ECMAScript Next support](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/
     <tr>
       <td>
         <strong>Mac 上的 WebVR API 1.1</strong><br /><a
-          href="/en-US/docs/Web/API/WebVR_API"
+          href="/zh-CN/docs/Web/API/WebVR_API"
           >WebVR API</a
         >
         允许你控制并和使用虚拟现实设备。
@@ -265,7 +265,7 @@ See also [ECMAScript Next support](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/
     <tr>
       <td>
         <strong>游戏手柄扩展</strong><br /><a
-          href="/en-US/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions"
+          href="/zh-CN/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions"
           >The Gamepad Extensions</a
         >
         provide access to additional functionality such as pose information in
@@ -283,7 +283,7 @@ See also [ECMAScript Next support](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/
         <strong>Experimental fetch controller/signal/observer interfaces</strong
         ><br />Also known as "cancellable fetch",
         <a
-          href="/en-US/docs/Web/API/Fetch_API#Experimental_fetch_controllersignalobserver_interfaces"
+          href="/zh-CN/docs/Web/API/Fetch_API#Experimental_fetch_controllersignalobserver_interfaces"
           >these interfaces</a
         >
         contain functionality to allow fetch request operations to be observed
@@ -397,7 +397,7 @@ See also [ECMAScript Next support](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/
         <strong>Performance Observer API</strong><br />The
         {{domxref("PerformanceObserver")}} interface is used to
         <em>observe</em> performance measurement events and be notified of new
-        <a href="/en-US/docs/Web/API/PerformanceEntry">performance entries</a>
+        <a href="/zh-CN/docs/Web/API/PerformanceEntry">performance entries</a>
         as they are recorded in the browser's <em>performance timeline</em>.
       </td>
       <td>49</td>
@@ -409,7 +409,7 @@ See also [ECMAScript Next support](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/
     <tr>
       <td>
         <strong>WebVTT Regions API</strong><br /><a
-          href="/en-US/docs/Web/API/Web_Video_Text_Tracks_Format"
+          href="/zh-CN/docs/Web/API/Web_Video_Text_Tracks_Format"
           >WebVTT</a
         >
         regions are parts of the video viewport that provide a rendering area
@@ -505,7 +505,7 @@ See also [ECMAScript Next support](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/
     <tr>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/API/Web_Animations_API"
+          ><a href="/zh-CN/docs/Web/API/Web_Animations_API"
             >Web Animations API: KeyframeEffect and KeyframeEffectReadOnly</a
           ></strong
         ><br />The
@@ -540,7 +540,7 @@ See also [ECMAScript Next support](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/
     <tr>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/API/Payment_Request_API"
+          ><a href="/zh-CN/docs/Web/API/Payment_Request_API"
             >Payment Request API</a
           ></strong
         ><br />为网络支付提供的一个 API。
@@ -630,7 +630,7 @@ See also [ECMAScript Next support](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/
       <td>
         <strong>Layout side panel</strong><br />The Layout side panel allows to
         inspect and manage different CSS layout types like
-        <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a>.
+        <a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a>.
       </td>
       <td>Disabled<br /><sub>(available since 52)</sub></td>
       <td>Disabled<br /><sub>(available since 52)</sub></td>

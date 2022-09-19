@@ -51,7 +51,7 @@ var importObj = {
 };
 ```
 
-最後に、 wasm モジュール (table2.wasm) を {{jsxref("WebAssembly.instantiateStreaming()")}} を使用して読み込みインスタンス化します。テーブルの長さを記録し、テーブルに格納された 2 つの関数参照を呼び出します (table2.wasm モジュール ([テキスト表現]](https://github.com/mdn/webassembly-examples/blob/master/text-format-examples/table2.was)) がテーブルに 2 つの関数の参照を追加し、どちらも単純な表示を表示します)。
+最後に、 wasm モジュール (table2.wasm) を {{jsxref("WebAssembly.instantiateStreaming()")}} を使用して読み込みインスタンス化します。テーブルの長さを記録し、テーブルに格納された 2 つの関数参照を呼び出します (table2.wasm モジュール ([テキスト表現](https://github.com/mdn/webassembly-examples/blob/master/text-format-examples/table2.was)) がテーブルに 2 つの関数の参照を追加し、どちらも単純な表示を表示します)。
 
 ```js
 WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)

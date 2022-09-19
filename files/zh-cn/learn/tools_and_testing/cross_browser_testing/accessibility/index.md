@@ -12,12 +12,12 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/可访问性
     <tr>
       <th scope="row">前提：</th>
       <td>
-        熟悉<a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>,和<a
-          href="/en-US/docs/Learn/JavaScript"
+        熟悉<a href="/zh-CN/docs/Learn/HTML">HTML</a>,
+        <a href="/zh-CN/docs/Learn/CSS">CSS</a>,和<a
+          href="/zh-CN/docs/Learn/JavaScript"
           >JavaScript</a
         >语言; 理解<a
-          href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
+          href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
           >跨浏览器测试原理</a
         >
       </td>

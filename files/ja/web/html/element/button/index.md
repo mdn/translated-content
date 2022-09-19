@@ -1,18 +1,6 @@
 ---
 title: '<button>: ボタン要素'
 slug: Web/HTML/Element/button
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - HTML:フローコンテンツ
-  - HTML:対話型コンテンツ
-  - HTML:知覚可能コンテンツ
-  - HTML:記述コンテンツ
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/button
 ---
 {{HTMLRef}}
 

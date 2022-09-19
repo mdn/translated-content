@@ -20,7 +20,7 @@ slug: Web/API/TouchList
 
 ## 示例
 
-参考这个[主要 Touch 事件的示例](/en/DOM/Touch_events#Example).
+参考这个[主要 Touch 事件的示例](/zh-CN/DOM/Touch_events#Example).
 
 ## 规范
 
@@ -32,5 +32,5 @@ slug: Web/API/TouchList
 
 ## 相关链接
 
-- [Touch 事件](/en/DOM/Touch_events)
+- [Touch 事件](/zh-CN/DOM/Touch_events)
 - {{domxref("Document.createTouchList()")}}

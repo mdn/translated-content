@@ -2,7 +2,7 @@
 title: WebGLRenderingContext.compileShader()
 slug: Web/API/WebGLRenderingContext/compileShader
 ---
-{{APIRef("WebGL")}}[WebGL API](/en-US/docs/Web/API/WebGL_API)下的方法 **`WebGLRenderingContext.compileShader()`** 用于编译一个 GLSL 着色器，使其成为为二进制数据，然后就可以被{{domxref("WebGLProgram")}}对象所使用。
+{{APIRef("WebGL")}}[WebGL API](/zh-CN/docs/Web/API/WebGL_API)下的方法 **`WebGLRenderingContext.compileShader()`** 用于编译一个 GLSL 着色器，使其成为为二进制数据，然后就可以被{{domxref("WebGLProgram")}}对象所使用。
 
 ## 语法
 

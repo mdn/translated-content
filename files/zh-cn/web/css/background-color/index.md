@@ -97,4 +97,4 @@ background-color: unset;
 
 ## 查看更多
 
-- [Multiple backgrounds](https://developer.mozilla.org/en/CSS/Multiple_backgrounds)
+- [Multiple backgrounds](/zh-CN/CSS/Multiple_backgrounds)

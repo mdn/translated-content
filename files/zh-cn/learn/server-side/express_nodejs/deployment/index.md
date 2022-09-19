@@ -12,7 +12,7 @@ slug: Learn/Server-side/Express_Nodejs/deployment
       <th scope="row">预备知识：</th>
       <td>
         完成前面所有的指南主题，包括
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms"
+        <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms"
           >Express Tutorial Part 6: Working with forms</a
         >.
       </td>

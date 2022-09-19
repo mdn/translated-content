@@ -16,7 +16,19 @@ arr.copyWithin(target[, start[, end]])
 
 ### 引数
 
-<dl><dt><code>target</code></dt><dd>シーケンスのコピー先となる、0 から始まるインデックスです。負の場合、<code>target</code> は最後から数えられます。</dd><dd><code>target</code> が <code>arr.length</code> 以上の場合、何もコピーされません。 <code>target</code> が <code>start</code> より後に配置されている場合、コピーされたシーケンスは <code>arr.length</code> に合うように切り詰められます。</dd><dt><code>start</code> {{optional_inline}}</dt><dd>要素のコピー元の始まりを表す、0 から始まるインデックスです。負の場合、 <code>start</code> は最後から数えられます。</dd><dd><code>start</code> が省略された場合、<code>copyWithin</code> は最初の要素からコピーします（つまり、初期値は 0 です）。</dd><dt><code>end</code> {{optional_inline}}</dt><dd>要素のコピー元の末尾を表す、0 から始まるインデックスです。 <code>copyWithin</code> のコピーは <code>end</code> を含みません。負の場合、 <code>end</code> は最後から数えられます。</dd><dd><code>end</code> が省略された場合、 <code>copyWithin</code> は最後までコピーします（つまり、初期値は <code>arr.length</code> です）。</dd></dl>
+- `target`
+  - : シーケンスのコピー先となる、0 から始まるインデックスです。負の場合、`target` は最後から数えられます。
+
+    `target` が `arr.length` 以上の場合、何もコピーされません。 `target` が `start` より後に配置されている場合、コピーされたシーケンスは `arr.length` に合うように切り詰められます。
+
+- `start` {{optional_inline}}
+  - : 要素のコピー元の始まりを表す、0 から始まるインデックスです。負の場合、 `start` は最後から数えられます。
+
+    `start` が省略された場合、`copyWithin` は最初の要素からコピーします（つまり、初期値は 0 です）。
+- `end` {{optional_inline}}
+  - : 要素のコピー元の末尾を表す、0 から始まるインデックスです。 `copyWithin` のコピーは `end` を含みません。負の場合、 `end` は最後から数えられます。
+
+   `end` が省略された場合、 `copyWithin` は最後までコピーします（つまり、初期値は `arr.length` です）。
 
 ### 戻り値
 

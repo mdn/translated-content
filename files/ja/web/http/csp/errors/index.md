@@ -1,15 +1,6 @@
 ---
 title: CSP のエラーと警告 (Content Security Policy)
 slug: Web/HTTP/CSP/Errors
-tags:
-  - CSP
-  - Errors
-  - HTTP
-  - Landing
-  - Messages
-  - Warnings
-  - console
-  - log
 ---
 {{HTTPSidebar}}
 

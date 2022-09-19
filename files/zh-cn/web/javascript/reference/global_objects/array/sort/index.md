@@ -278,5 +278,5 @@ ES10（EcmaScript 2019）以前没有要求稳定性，意味着你可能会得�
 - {{jsxref("Array.prototype.reverse()")}}
 - {{jsxref("String.prototype.localeCompare()")}}
 - [About the stability of the algorithm used by V8 engine](https://v8.dev/blog/array-sort)
-- - [\[译\] V8 引擎中的排序](https://zhuanlan.zhihu.com/p/55338902)
+- [\[译\] V8 引擎中的排序](https://zhuanlan.zhihu.com/p/55338902)
 - [Mathias Bynens' sort stability demo](https://mathiasbynens.be/demo/sort-stability)

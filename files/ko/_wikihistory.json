@@ -679,10 +679,6 @@
     "modified": "2019-03-18T20:53:11.377Z",
     "contributors": ["jisooeulee"]
   },
-  "Glossary/jQuery": {
-    "modified": "2019-10-06T09:53:54.369Z",
-    "contributors": ["Eumhongin", "jisooeulee"]
-  },
   "Glossary/undefined": {
     "modified": "2019-05-26T04:16:46.198Z",
     "contributors": ["alattalatta"]
@@ -11423,6 +11419,10 @@
   "orphaned/Glossary/Dynamic_programming_language": {
     "modified": "2019-03-18T21:23:35.310Z",
     "contributors": ["flat81"]
+  },
+  "orphaned/Glossary/jQuery": {
+    "modified": "2019-10-06T09:53:54.369Z",
+    "contributors": ["Eumhongin", "jisooeulee"]
   },
   "orphaned/How_to_Build_an_XPCOM_Component_in_Javascript": {
     "modified": "2019-03-23T23:49:04.482Z",

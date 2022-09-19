@@ -1,17 +1,6 @@
 ---
 title: '<picture>: 画像要素'
 slug: Web/HTML/Element/picture
-tags:
-  - Element
-  - Graphics
-  - HTML
-  - HTML embedded content
-  - Images
-  - Reference
-  - Web
-  - WebP
-  - picture
-translation_of: Web/HTML/Element/picture
 ---
 {{HTMLRef}}
 

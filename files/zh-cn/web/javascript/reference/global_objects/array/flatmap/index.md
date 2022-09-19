@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 ---
 {{JSRef}}
 
-**`flatMap()`** 方法首先使用映射函数映射每个元素，然后将结果压缩成一个新数组。它与 [map](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) 连着深度值为 1 的 [flat](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) 几乎相同，但 `flatMap` 通常在合并成一种方法的效率稍微高一些。
+**`flatMap()`** 方法首先使用映射函数映射每个元素，然后将结果压缩成一个新数组。它与 [map](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map) 连着深度值为 1 的 [flat](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) 几乎相同，但 `flatMap` 通常在合并成一种方法的效率稍微高一些。
 
 {{EmbedInteractiveExample("pages/js/array-flatmap.html")}}
 
@@ -49,7 +49,7 @@ flatMap(function(currentValue, index, array) { /* … */ }, thisArg)
 
 ## 描述
 
-有关回调函数的详细描述，请参见 {{jsxref("Array.prototype.map()")}} 。 `flatMap` 方法与 [`map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) 方法和深度 depth 为 1 的 [`flat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) 几乎相同。
+有关回调函数的详细描述，请参见 {{jsxref("Array.prototype.map()")}} 。 `flatMap` 方法与 [`map`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map) 方法和深度 depth 为 1 的 [`flat`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) 几乎相同。
 
 ## 示例
 
@@ -87,7 +87,7 @@ arr1.flatMap(x => x.split(" "));
 
 ### 在一个 `map()` 期间增加或去除一些项
 
-`flatMap` 能用于在 map 期间增删项目（也就是修改 items 的数量）。换句话说，它允许你遍历很多项使之成为另一些项（靠分别把它们放进去来处理），而不是总是一对一。 从这个意义上讲，它的作用类似于 [filter](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)的对立面。只需返回一个 1 项元素数组以保留该项，返回一个多元素数组以添加项，或返回一个 0 项元素数组以删除该项。
+`flatMap` 能用于在 map 期间增删项目（也就是修改 items 的数量）。换句话说，它允许你遍历很多项使之成为另一些项（靠分别把它们放进去来处理），而不是总是一对一。 从这个意义上讲，它的作用类似于 [filter](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)的对立面。只需返回一个 1 项元素数组以保留该项，返回一个多元素数组以添加项，或返回一个 0 项元素数组以删除该项。
 
 ```plain
 // Let's say we want to remove all the negative numbers and split the odd numbers into an even number and a 1

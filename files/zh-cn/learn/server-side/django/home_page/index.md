@@ -13,7 +13,7 @@ original_slug: learn/Server-side/Django/主页构建
       <th scope="row">前提：</th>
       <td>
         读 the
-        <a href="/en-US/docs/Learn/Server-side/Django/Introduction"
+        <a href="/zh-CN/docs/Learn/Server-side/Django/Introduction"
           >Django Introduction</a
         >. 完成上章节 (including
         <a href="/zh-CN/docs/Learn/Server-side/Django/Admin_site"

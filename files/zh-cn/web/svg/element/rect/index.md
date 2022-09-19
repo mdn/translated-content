@@ -32,10 +32,10 @@ html,body,svg { height:100% }
 
 ### 全局属性
 
-- [条件处理属性](/en/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/en/SVG/Attribute#Core) »
-- [图形事件属性](/en/SVG/Attribute#GraphicalEvent) »
-- [外观属性](/en/SVG/Attribute#Presentation) »
+- [条件处理属性](/zh-CN/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [图形事件属性](/zh-CN/SVG/Attribute#GraphicalEvent) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -52,7 +52,7 @@ html,body,svg { height:100% }
 
 ## DOM 接口
 
-这个元素实现了 [`SVGRectElement`](/en/DOM/SVGRectElement) 接口。
+这个元素实现了 [`SVGRectElement`](/zh-CN/DOM/SVGRectElement) 接口。
 
 ## 浏览器支持
 

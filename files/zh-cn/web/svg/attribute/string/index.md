@@ -10,7 +10,7 @@ Only one element is using this attribute: {{SVGElement("font-face-format")}}
 
 ## Usage notes
 
-| Value         | [`<anything>`](/en-US/docs/Web/SVG/Content_type#Anything) |
+| Value         | [`<anything>`](/zh-CN/docs/Web/SVG/Content_type#Anything) |
 | ------------- | --------------------------------------------------------- |
 | Default value | _None_                                                    |
 | Animatable    | No                                                        |
