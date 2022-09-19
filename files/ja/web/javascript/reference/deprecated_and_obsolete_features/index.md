@@ -24,7 +24,7 @@ slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
       <td>{{jsxref("RegExp.n", "$1-$9")}}</td>
       <td>
         <p>
-          （もしあれば）括弧で囲まれた部分文字列にイッチします。
+          （もしあれば）括弧で囲まれた部分文字列に一致します。
           <strong>警告:</strong>このプロパティを使うことで、問題が起こる恐れがあります。なぜなら、ブラウザーの拡張機能がそれらを変更可能なためです。使用は避けるべきです。
         </p>
       </td>

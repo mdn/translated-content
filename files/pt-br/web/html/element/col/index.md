@@ -62,9 +62,9 @@ This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes
 
     > **Note:**Do not use this attribute as it is obsolete (not supported) in the latest standard.- To achieve the same effect as the `left`, `center`, `right` or `justify` values:
     >
-    >     -   Do not try to set the {{cssxref("text-align")}} property on a selector giving a {{HTMLElement("col")}} element. Because {{HTMLElement("td")}} elements are not descendant of the {{HTMLElement("col")}} element, they won't inherit it.
-    >     -   If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the `td:nth-child(an+b)` CSS selector. Set `a` to zero and `b `to the position of the column in the table, e.g. `td:nth-child(2) { text-align: right; }` to right-align the second column.
-    >     -   If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
+    > - Do not try to set the {{cssxref("text-align")}} property on a selector giving a {{HTMLElement("col")}} element. Because {{HTMLElement("td")}} elements are not descendant of the {{HTMLElement("col")}} element, they won't inherit it.
+    > - If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the `td:nth-child(an+b)` CSS selector. Set `a` to zero and `b`to the position of the column in the table, e.g. `td:nth-child(2) { text-align: right; }` to right-align the second column.
+    > - If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
     >
     > - To achieve the same effect as the `char` value, in CSS3, you can use the value of the {{htmlattrxref("char", "col")}} as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
 

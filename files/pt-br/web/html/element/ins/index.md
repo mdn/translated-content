@@ -7,15 +7,15 @@ translation_of: Web/HTML/Element/ins
 
 The **HTML `<ins>` Element** (or _HTML Inserted Text_) HTML represents a range of text that has been added to a document.
 
-- _[Content categories](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_[Phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content categories#Phrasing content") or [flow content](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content").
-- _Permitted content_ [Transparent](/pt-BR/docs/HTML/Content_categories#Transparent "HTML/Content categories#Transparent").
+- _[Content categories](/pt-BR/docs/HTML/Content_categories)_[Phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content) or [flow content](/pt-BR/docs/HTML/Content_categories#Flow_content).
+- _Permitted content_ [Transparent](/pt-BR/docs/HTML/Content_categories#Transparent).
 - _Tag omission_ {{no_tag_omission}}
-- _Permitted parent elements_ Any element that accepts [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Phrasing_content").
+- _Permitted parent elements_ Any element that accepts [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
 - _DOM interface_ {{domxref("HTMLModElement")}}
 
 ## Attributes
 
-This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes "HTML/Global attributes").
+This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes).
 
 - {{htmlattrdef("cite")}}
   - : This attribute defines the URI of a resource that explains the change, like a link to some meeting minutes or a ticket in a troubleshooting sytem.

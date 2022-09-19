@@ -55,7 +55,7 @@ O **Elemento** **HTML `<caption>` (**ou _Elemento HTML Subtitulo de Tabela_) rep
 
 ## Atributos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes "HTML/Global attributes").
+Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
 ### Atributos obsoletos
 
@@ -70,7 +70,7 @@ Os seguintes atributos são obsoletos e não devem ser usados. Estão documentad
     - `right`, exibido a direita da tabela
     - `bottom`, exibido abaixo da tabela
 
-    > **Note:** **Nota de uso:** Não use este atributo, como ele foi depreciado: o elemento {{HTMLElement("caption")}} deve ser estilizado usando [CSS](/pt-BR/docs/CSS "CSS"). Para dar um efeito similar ao atributo `align`, use as propriedades [CSS](/pt-BR/docs/CSS "CSS") {{cssxref("caption-side")}} e {{cssxref("text-align")}}.
+    > **Note:** **Nota de uso:** Não use este atributo, como ele foi depreciado: o elemento {{HTMLElement("caption")}} deve ser estilizado usando [CSS](/pt-BR/docs/CSS). Para dar um efeito similar ao atributo `align`, use as propriedades [CSS](/pt-BR/docs/CSS) {{cssxref("caption-side")}} e {{cssxref("text-align")}}.
 
 ## Notas de uso
 

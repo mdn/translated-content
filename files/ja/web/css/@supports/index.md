@@ -1,15 +1,6 @@
 ---
 title: '@supports'
 slug: Web/CSS/@supports
-tags:
-  - アットルール
-  - CSS
-  - レイアウト
-  - リファレンス
-  - ウェブ
-  - supports
-browser-compat: css.at-rules.supports
-translation_of: Web/CSS/@supports
 ---
 {{CSSRef}}
 

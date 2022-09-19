@@ -75,7 +75,7 @@ Se você não especificar um `value`, você obtém um botão vazio:
 
 ## Usando buttons
 
-Elementos `<input type="button">` não possuem comportamento padrão (seu primos,` <input type="submit">` e [`<input type="reset">`](/en-US/docs/Web/HTML/Element/input/reset) são usados para submeter e resetar formulários). Para que botões possam fazer algo, você tem de escrever um código em JavaScript para fazê-lo trabalhar.
+Elementos `<input type="button">` não possuem comportamento padrão (seu primos, `<input type="submit">` e [`<input type="reset">`](/en-US/docs/Web/HTML/Element/input/reset) são usados para submeter e resetar formulários). Para que botões possam fazer algo, você tem de escrever um código em JavaScript para fazê-lo trabalhar.
 
 ### Um simples botão
 

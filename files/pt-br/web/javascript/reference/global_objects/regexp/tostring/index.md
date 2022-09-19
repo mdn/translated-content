@@ -23,8 +23,8 @@ Uma string representando o objeto dado.
 ## Descrição
 
 O objeto {{jsxref("RegExp")}} subscreve o método `toString()` do objeto
-{{jsxref("Object")}}; ele não herda {{jsxref("Object.prototype.toString()")}}. 
-Para objetos {{jsxref("RegExp")}}, o método `toString()` retorna uma 
+{{jsxref("Object")}}; ele não herda {{jsxref("Object.prototype.toString()")}}.
+Para objetos {{jsxref("RegExp")}}, o método `toString()` retorna uma
 representação da expressão regular como string.
 
 ## Exemplos
@@ -42,7 +42,7 @@ console.log(foo.toString());    // logs '/bar/g'
 
 ### Expressões regulares vazias e escape
 
-Introduzindo o ECMAScript 5, uma expressão regular vazia retorna a string "/(?:)/" e 
+Introduzindo o ECMAScript 5, uma expressão regular vazia retorna a string "/(?:)/" e
 terminadores de linha como "\n" são utilizados
 
 ```js

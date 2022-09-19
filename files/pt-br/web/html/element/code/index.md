@@ -62,7 +62,7 @@ O **elemento** **HTML `<code>` **apresenta seu conteúdo estilizado de maneira a
 
 ## Atributos
 
-Esse elemento inclui apenas os [global attributes](/pt-BR/docs/Web/HTML/Global_attributes "HTML/Atributos Globais").
+Esse elemento inclui apenas os [global attributes](/pt-BR/docs/Web/HTML/Global_attributes).
 
 ## Exemplo
 

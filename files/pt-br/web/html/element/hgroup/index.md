@@ -96,7 +96,7 @@ Isso é, o esboço renderizado deve ser o título primário, HTML, seguido por d
 
 Ou, o esboço renderizado para aquele documento poderia ser como:
 
-![Rendered outline that includes an <hgroup> element, with parens around the secondary heading](https://mdn.mozillademos.org/files/14601/outline-paren.png)
+![Rendered outline that includes an \<hgroup> element, with parens around the secondary heading](https://mdn.mozillademos.org/files/14601/outline-paren.png)
 
 Isso é, o esboço renderizado deve mostrar o título primário, HTML, seguido pelo título secundário mostrado entre parênteses: (Living Standard - Last Updated 12 August 2016).
 
@@ -120,4 +120,4 @@ Isso é, o esboço renderizado deve mostrar o título primário, HTML, seguido p
 ## See also
 
 - Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
-- [Sections and outlines of an HTML5 document](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document "Sections and Outlines of an HTML5 document").
+- [Sections and outlines of an HTML5 document](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document).

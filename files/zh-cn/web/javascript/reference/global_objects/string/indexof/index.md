@@ -25,13 +25,13 @@ indexOf(searchString, position)
     如果不带参数调用方法，`searchString` 将被强制转换为 `"undefined"`。因此，`"undefined". indexof()` 返回 `0`——因为子字符串 `"undefined"` 在字符串 `"undefined"` 中的 `0` 位置找到。但是 `"undefine".indexof()` 返回 `-1`——因为子字符串 `"undefine"` 在字符串 `"undefined"` 中找不到。
 
 - `position` {{optional_inline}}
-  
+
   - : 该方法返回指定子字符串在大于或等于 `position` 位置的第一次出现的索引，默认为 `0`。如果 `position` 大于调用字符串的长度，则该方法根本不搜索调用字符串。 如果 `position` 小于零，该方法的行为就像 `position` 为 `0` 时一样。
-  
+
     - `hello world hello'.indexOf('o', -5)` 返回 `4`——因为它使该方法的行为类似于第二个参数为 `0`，并且 `o` 在大于或等于 `0` 位置的第一次出现是在 `4` 位置。
-    
+
     - `'hello world hello'.indexOf('world', 12)` 返回 `-1`——因为，虽然子字符串 `world` 确实出现在索引 `6` 处，但该位置不大于或等于 `12`。
-    
+
     - `'hello world hello'.indexOf('o', 99)` 返回 `-1`——因为 `99` 大于 `hello world hello` 的长度，这会导致方法根本不搜索字符串。
 
 ### 返回值

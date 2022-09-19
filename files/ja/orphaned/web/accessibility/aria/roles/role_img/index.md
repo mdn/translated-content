@@ -1,11 +1,6 @@
 ---
 title: 'ARIA: img ロール'
 slug: orphaned/Web/Accessibility/ARIA/Roles/Role_Img
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/Role_Img
 original_slug: Web/Accessibility/ARIA/Roles/Role_Img
 ---
 ARIA の画像 (`img`) ロールは、単一の画像とみなすべきページコンテンツ内の複数の要素を識別するために使用できます。 これらの要素は、組み合わせることで視覚的な方法で情報を伝達できる、画像、コードスニペット、テキスト、絵文字、またはその他のコンテンツである可能性があります。

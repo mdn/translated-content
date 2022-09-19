@@ -25,7 +25,7 @@ E o que é ainda melhor é que ele está sendo desenvolvido como um padrão web 
 - [Compilando C/C++ para WebAssembly](/pt-BR/docs/WebAssembly/C_to_wasm)
   - : Quando você escreve o código em C/C++, você pode então compilá-lo em .wasm usando uma ferramenta como [Emscripten](/pt-BR/docs/Mozilla/Projects/Emscripten/). Veja como isso funciona.
 - [Carregando e executando código WebAssembly](/pt-BR/docs/WebAssembly/Loading_and_running)
-  - : Depois de ter um .wasm, este artigo aborda como buscá-lo, compilá-lo e instanciá-lo, combinando a API [JavaScript WebAssembly ](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly)como [Obter ](/pt-BR/docs/Web/API/Fetch_API)ou APIs [XHR.](/pt-BR/docs/Web/API/XMLHttpRequest)
+  - : Depois de ter um .wasm, este artigo aborda como buscá-lo, compilá-lo e instanciá-lo, combinando a API [JavaScript WebAssembly](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly)como [Obter](/pt-BR/docs/Web/API/Fetch_API) ou APIs [XHR.](/pt-BR/docs/Web/API/XMLHttpRequest)
 - [Compilando módulos de WebAssembly no cache](/pt-BR/docs/WebAssembly/Caching_modules)
   - : O cache de grandes módulos WebAssembly no cliente é útil para melhorar o desempenho da inicialização do aplicativo. Este artigo explica como usar isso usando [IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API).
 - [Usando a API JavaScript do WebAssembly](/pt-BR/docs/WebAssembly/Using_the_JavaScript_API)
@@ -44,15 +44,15 @@ E o que é ainda melhor é que ele está sendo desenvolvido como um padrão web 
 - {{jsxref("Global_objects/WebAssembly/Module", "WebAssembly.Module")}}
   - : A `WebAssembly.Module` o objeto contém o código da WebAssembly sem estado que já foi compilado pelo navegador e pode ser eficientemente [compartilhado com os trabalhos](/pt-BR/docs/Web/API/Worker/postMessage), [armazenados em cache no IndexedDB](</pt-BR/docs /WebAssembly/Caching_modules>), e instanciados várias vezes.
 - {{jsxref("Global_objects/WebAssembly/Instance", "WebAssembly.Instance")}}
-  - : A `WebAssembly.Instance` o objeto é uma instância executável e estável de um `Módulo`. Os objetos `Instanciados `contêm todas as [funções de WebAssembly exportadas ](/pt-BR/docs/WebAssembly/Exported_functions)que permitem chamar o código WebAssembly do JavaScript.
+  - : A `WebAssembly.Instance` o objeto é uma instância executável e estável de um `Módulo`. Os objetos `Instanciados` contêm todas as [funções de WebAssembly exportadas](/pt-BR/docs/WebAssembly/Exported_functions)que permitem chamar o código WebAssembly do JavaScript.
 - {{jsxref("Global_objects/WebAssembly/instantiate", "WebAssembly.instantiate()")}}
-  - : The `WebAssembly.instantiate()` a função é a API primária para compilar e instanciar o código WebAssembly, retornando um `Module `e sua primeira `instância `.
+  - : The `WebAssembly.instantiate()` a função é a API primária para compilar e instanciar o código WebAssembly, retornando um `Module` e sua primeira `instância`.
 - {{jsxref("Global_objects/WebAssembly/Memory", "WebAssembly.Memory()")}}
-  - : Em `WebAssembly. `O objeto `Memory `é redimensionável {{jsxref ("Global_objects / ArrayBuffer","ArrayBuffer")}} que detém os bytes de memória invocados por uma `instância` de código.
+  - : Em `WebAssembly`. O objeto `Memory` é redimensionável {{jsxref ("Global_objects / ArrayBuffer","ArrayBuffer")}} que detém os bytes de memória invocados por uma `instância` de código.
 - {{jsxref("Global_objects/WebAssembly/Table", "WebAssembly.Table()")}}
-  - : Em `WebAssembly. `O objeto `Table `é uma matriz redimensionável de valores opacos, como referências de funções, acessadas por uma `instância` de código.
+  - : Em `WebAssembly`. O objeto `Table` é uma matriz redimensionável de valores opacos, como referências de funções, acessadas por uma `instância` de código.
 - {{jsxref("WebAssembly.CompileError()")}}
-  - : Cria um novo objeto WebAssembly` CompileError`.
+  - : Cria um novo objeto WebAssembly `CompileError`.
 - {{jsxref("WebAssembly.LinkError()")}}
   - : Cria um novo objeto WebAssembly `LinkError`.
 - {{jsxref("WebAssembly.RuntimeError()")}}
@@ -61,7 +61,7 @@ E o que é ainda melhor é que ele está sendo desenvolvido como um padrão web 
 ## Exemplos
 
 - [WASMSobel](https://github.com/JasonWeathersby/WASMSobel)
-- Consulte nosso [webassembly-examples ](https://github.com/mdn/webassembly-examples/)para outros exemplos.
+- Consulte nosso [webassembly-examples](https://github.com/mdn/webassembly-examples/) para outros exemplos.
 
 ## Especificações
 
