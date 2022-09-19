@@ -20,7 +20,7 @@ func.call([thisArg[, arg1, arg2, ...argN]])
 
   - : `func` が呼び出されたときに `this` として使用される値です。
 
-    > **Note:** **注意:** 特定の場面では、 `thisArg` はメソッドから見える実際の値でない場合があります。
+    > **Note:** 特定の場面では、 `thisArg` はメソッドから見える実際の値でない場合があります。
     >
     > もし、そのメソッドが{{jsxref("Strict_mode", "厳格モード", "", 1)}}の関数ではなかった場合、 {{jsxref("Global_Objects/null", "null")}} と {{jsxref("Global_Objects/undefined", "undefined")}} はグローバルオブジェクトで置き換えられ、プリミティブ値はオブジェクトに変換されます。
 
