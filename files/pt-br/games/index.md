@@ -55,8 +55,6 @@ Para uma lista de exemplos de jogos web, veja a nossa [página de exemplos](/pt-
 - [HTML5 Game Devs Forum](http://www.html5gamedevs.com/)
   - : Fóruns para desenvolvedores, criadores de framework e publicadores. Faça perguntas, obtenha retorno, ajude outras pessoas.
 
-<!---->
-
 - [HTML5 Game Engine](http://html5gameengine.com/)
   - : Lista dos frameworks HTML5 mais populares para jogos, juntamente com a sua classificação, benefícios e exemplos.
 - [JSBreakouts](http://www.jsbreakouts.org/)

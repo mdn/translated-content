@@ -53,8 +53,6 @@ original_slug: Games/Introduction_to_HTML5_Game_Gevelopment_(summary)
 - [SVG](/pt-BR/docs/SVG) (Gráficos Vetorias Escaláveis)
   - : Crie gráficos vetoriais que sejam dimensionados sem problemas, independemente do tamanho ou da resolução da exibição do usuário.
 
-<!---->
-
 - [Typed Arrays](/pt-BR/docs/JavaScript/Typed_arrays)
   - : Acessar dados binários brutos de dentro do JavaScript; Manipule texturas GL, dados de jogos ou qualquer outra coisa.
 - [Web Audio API](/pt-BR/docs/Web_Audio_API)
