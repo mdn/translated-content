@@ -38,7 +38,7 @@ _History 接口不继承任何方法。_
 - {{domxref("History.pushState()","pushState()")}}
   - : 按指定的名称和 URL（如果提供该参数）将数据 push 进会话历史栈，数据被 DOM 进行不透明处理；你可以指定任何可以被序列化的 javascript 对象。请注意，除了 Safria 所有浏览器现在都忽略了 title 参数。更多的信息，请看[使用 History API](/zh-CN/docs/Web/API/History_API)。
 - {{domxref("History.replaceState()","replaceState()")}}
-  - : 按指定的数据，名称和 URL（如果提供该参数），更新历史栈上最新的入口。这个数据被 DOM 进行了不透明处理。你可以指定任何可以被序列化的 javascript 对象。请注意，除了 Safria 所有浏览器现在都忽略了 title 参数。更多的信息，请看[使用 History API](/zh-CN/docs/Web/API/History_API)。
+  - : 按指定的数据、名称和 URL（如果提供该参数），更新 history 栈上最新的条目。这个数据被 DOM 进行了不透明处理。你可以指定任何可以被序列化的 javascript 对象。请注意，除了 Safria 所有浏览器现在都忽略了 title 参数。更多的信息，请看[使用 History API](/zh-CN/docs/Web/API/History_API)。
 
 ## 规范
 
