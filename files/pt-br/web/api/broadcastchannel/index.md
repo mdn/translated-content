@@ -12,7 +12,7 @@ translation_of: Web/API/BroadcastChannel
 ---
 {{APIRef("Broadcast Channel API")}}
 
-A interface **`BroadcastChannel`\*\*** **(canal de transmissão)** \*\*representa um canal com um nome em que qualquer {{glossary("browsing context")}} (contexto de navegação) de uma determinada {{glossary("origin")}} (origem) pode assinar. Permite a comunicação entre diferentes documentos (em diferentes janelas, abas, frames ou iframes) da mesma _origin_. As mensagens são transmitidas através de um evento {{event("message")}} acionado em todos objetos do tipo `BroadcastChannel` que estão ouvindo o canal.
+A interface **`BroadcastChannel`** representa um canal com um nome em que qualquer {{glossary("browsing context")}} (contexto de navegação) de uma determinada {{glossary("origin")}} (origem) pode assinar. Permite a comunicação entre diferentes documentos (em diferentes janelas, abas, frames ou iframes) da mesma _origin_. As mensagens são transmitidas através de um evento {{event("message")}} acionado em todos objetos do tipo `BroadcastChannel` que estão ouvindo o canal.
 
 {{AvailableInWorkers}}
 
