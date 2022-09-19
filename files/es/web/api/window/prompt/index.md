@@ -48,7 +48,7 @@ Un diálogo prompt contiene un cuadro de texto de una línea, un botón Cancel (
 
 The following text is shared between this article, DOM:window\.confirm and DOM:window\.alertLos cuadros de diálogo son ventanas modales; previenen que el usuario acceda al resto de la interfaz del programa hasta que el cuadro de diálogo es cerrado. Por esta razón, no se debe abusar de cualquier función que crea un cuadro de diálogo (o ventana modal).
 
-Nótese que el resultado es una cadena de texto. Esto significa que a veces se deberá hacer una conversión al valor introducido por el usuario. Por ejemplo, si la respuesta debe ser un valor numérico, se debe hacer la conversión del valor a tipo Number. var aNumber = Number(window\.prompt("Type a number", ""));
+Nótese que el resultado es una cadena de texto. Esto significa que a veces se deberá hacer una conversión al valor introducido por el usuario. Por ejemplo, si la respuesta debe ser un valor numérico, se debe hacer la conversión del valor a tipo Number. `var aNumber = Number(window\.prompt("Type a number", ""))`;
 
 Usuarios de [Mozilla Chrome](/en-US/Chrome "Chrome") (p.ej. extensiones de Firefox) deben usar preferentemente métodos de `nsIPromptService`.
 
