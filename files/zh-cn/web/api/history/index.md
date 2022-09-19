@@ -19,7 +19,7 @@ _`History` 接口不继承于任何属性。_
 
 ## 方法
 
-_History 接口不继承任何方法。_
+_`History` 接口不继承任何方法。_
 
 - {{domxref("History.back()","back()")}}
 
