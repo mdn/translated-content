@@ -231,7 +231,7 @@ input:valid + span::after {
 - `2017-W01`
 - 等等。
 
-目前，以跨浏览器方式处理星期/年的最佳方法是让用户在单独的控件中输入星期数和年份（特别是在 ({{htmlelement("select")}} 元素中，参见下面的示例），或使用 JavaScript 库（例如 [jQuery 日期选择器](https://jqueryui.com/datepicker/)。
+目前，以跨浏览器方式处理星期/年的最佳方法是让用户在单独的控件中输入星期数和年份（特别是在 {{htmlelement("select")}} 元素中，参见下面的示例），或使用 JavaScript 库（例如 [jQuery 日期选择器](https://jqueryui.com/datepicker/)）。
 
 ## 例子
 
