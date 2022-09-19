@@ -24,7 +24,7 @@ Streams の基本的な使用法は、応答をストリームとして利用可
 
 {{domxref("WritableStream")}} を使用してストリームにデータを書き込むこともできます。
 
-> **Note:** **注**: ストリームの理論と実践の詳細については、[Streams API の概念](/ja/docs/Web/API/Streams_API/Concepts)、[読み取り可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_streams)、[書き込み可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_writable_streams)の記事をご覧ください。
+> **Note:**: ストリームの理論と実践の詳細については、[Streams API の概念](/ja/docs/Web/API/Streams_API/Concepts)、[読み取り可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_streams)、[書き込み可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_writable_streams)の記事をご覧ください。
 
 ## ストリームのインターフェイス
 

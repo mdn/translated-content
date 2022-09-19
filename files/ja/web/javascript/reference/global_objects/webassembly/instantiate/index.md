@@ -86,7 +86,7 @@ fetch('simple.wasm').then(response =>
 );
 ```
 
-> **Note:** **注**: この例は Github 上の [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html) でも見ることができます ([動作例](https://mdn.github.io/webassembly-examples/js-api-examples/))。
+> **Note:**: この例は Github 上の [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html) でも見ることができます ([動作例](https://mdn.github.io/webassembly-examples/js-api-examples/))。
 
 ### 第二のオーバーロードの例
 

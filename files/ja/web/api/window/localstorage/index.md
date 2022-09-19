@@ -43,7 +43,7 @@ localStorage 項目の削除の文法は以下の通り:
 localStorage.removeItem("myCat");
 ```
 
-> **Note:** **注**: 詳細な使用例は [Using the Web Storage API](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) の記事を参照してください。
+> **Note:**: 詳細な使用例は [Using the Web Storage API](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) の記事を参照してください。
 
 ## 仕様
 

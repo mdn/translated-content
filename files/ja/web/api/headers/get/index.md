@@ -47,7 +47,7 @@ myHeaders.append('Accept-Encoding', 'gzip');
 myHeaders.get('Accept-Encoding'); // "deflate,gzip" を返します
 ```
 
-> **Note:** **注**: {{domxref("Headers.getAll")}} にはこの機能があり、{{domxref("Headers.get")}} は `Headers` オブジェクトに追加された最初の値のみを返します。最新の仕様では `getAll()` が削除され、すべての値を返すように `get()` が更新されました。
+> **Note:**: {{domxref("Headers.getAll")}} にはこの機能があり、{{domxref("Headers.get")}} は `Headers` オブジェクトに追加された最初の値のみを返します。最新の仕様では `getAll()` が削除され、すべての値を返すように `get()` が更新されました。
 
 ## 仕様書
 

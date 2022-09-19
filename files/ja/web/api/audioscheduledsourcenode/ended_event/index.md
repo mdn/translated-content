@@ -7,7 +7,7 @@ original_slug: Web/API/AudioScheduledSourceNode/onended
 
 `AudioBufferSourceNodeの` `onended` イベントハンドラーは{{event("ended_(Web_Audio)", "ended")}} イベントに関するコ − ルバック関数を格納します。これによりオーディオトラックの再生終了時に実行するコードを設定することができます。
 
-> **Note:** **注**: `onended` ハンドラーは loop プロパティーが true に設定されている場合はオーディオが再生終了することが無いので効果がありません。このような場合にこの機能を有効にするには {{ domxref("AudioBufferSourceNode.stop()") }}　を使用してください。
+> **Note:**: `onended` ハンドラーは loop プロパティーが true に設定されている場合はオーディオが再生終了することが無いので効果がありません。このような場合にこの機能を有効にするには {{ domxref("AudioBufferSourceNode.stop()") }}　を使用してください。
 
 ## 構文
 
