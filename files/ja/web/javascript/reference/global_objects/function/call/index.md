@@ -37,7 +37,7 @@ func.call([thisArg[, arg1, arg2, ...argN]])
 
 `call()` は関数やメソッドに `this` の新しい値を提供します。 `call()` によって、いったんメソッドを書いてから、新しいオブジェクトへメソッドを描き直さずに他のオブジェクトへと継承することができます。
 
-> **Note:** **注:** このメソッドの構文は {{jsxref("Function.prototype.apply", "apply()")}} とほぼ同じですが、基本的な違いは `call()` が**引数リスト**を受け取るのに対して、 `apply()` は**引数の単一の配列**を受け取る点です。
+> **Note:** このメソッドの構文は {{jsxref("Function.prototype.apply", "apply()")}} とほぼ同じですが、基本的な違いは `call()` が**引数リスト**を受け取るのに対して、 `apply()` は**引数の単一の配列**を受け取る点です。
 
 ## 例
 
@@ -125,7 +125,7 @@ function display() {
 display.call();  // sData value is Wisen
 ```
 
-> **Note:** **注:** 厳格モードでは `this` の値は `undefined` になります。以下を参照してください。
+> **Note:** 厳格モードでは `this` の値は `undefined` になります。以下を参照してください。
 
 ```js
 'use strict';
