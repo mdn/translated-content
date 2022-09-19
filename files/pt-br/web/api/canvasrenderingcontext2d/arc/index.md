@@ -13,7 +13,7 @@ translation_of: Web/API/CanvasRenderingContext2D/arc
 ---
 {{APIRef}}
 
-O método **`CanvasRenderingContext2D`\*\***`.arc()`\*\* da API Canvas 2D adiciona um arco circular para o atual sub-caminhoa (_sub-path_).
+O método **`CanvasRenderingContext2D.arc()`** da API Canvas 2D adiciona um arco circular para o atual sub-caminhoa (_sub-path_).
 
 ## Sintaxe
 

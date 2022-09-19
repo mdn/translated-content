@@ -20,17 +20,14 @@ Different nodes can be linked together to build a _processing graph_. Such a gra
 - {{domxref("AudioNode.context")}} {{readonlyInline}}
   - : Returns the associated {{domxref("AudioContext")}}, that is the object representing the processing graph the node is participating in.
 
-<!---->
 
 - {{domxref("AudioNode.numberOfInputs")}} {{readonlyInline}}
   - : Returns the number of inputs feeding the node. Source nodes are defined as nodes having a `numberOfInputs` property with a value of `0`.
 
-<!---->
 
 - {{domxref("AudioNode.numberOfOutputs")}} {{readonlyInline}}
   - : Returns the number of outputs coming out of the node. Destination nodes — like {{ domxref("AudioDestinationNode") }} — have a value of `0` for this attribute.
 
-<!---->
 
 - {{domxref("AudioNode.channelCount")}}
   - : Represents an integer used to determine how many channels are used when [up-mixing and down-mixing](/pt-BR/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing) connections to any inputs to the node. Its usage and precise definition depend on the value of {{domxref("AudioNode.channelCountMode")}}.
