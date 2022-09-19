@@ -1,14 +1,6 @@
 ---
 title: width
 slug: Web/CSS/@media/width
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - メディア特性
-  - リファレンス
-browser-compat: css.at-rules.media.width
-translation_of: Web/CSS/@media/width
 ---
 {{CSSRef}}
 
