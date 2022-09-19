@@ -15,7 +15,7 @@ _`History` 接口不继承于任何属性。_
 - {{domxref("History.scrollRestoration","scrollRestoration")}}
   - : 允许 Web 应用程序在历史导航上显式地设置默认滚动恢复行为。此属性可以是自动的（`auto`）或者手动的（`manual`）。
 - {{domxref("History.state","state")}} {{ReadOnlyInline}}
-  - : 返回一个表示历史堆栈顶部的状态的任意（`any`）值。这是一种可以不必等待 {{event("popstate")}} 事件而查看状态的方式。
+  - : 返回一个表示历史堆栈顶部的状态的任意（`any`）值。这是一种不必等待 {{domxref("Window/popstate_event", "popstate")}} 事件而查看状态的方式。
 
 ## 方法
 
