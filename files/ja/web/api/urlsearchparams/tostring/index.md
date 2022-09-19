@@ -6,7 +6,7 @@ slug: Web/API/URLSearchParams/toString
 
 {{domxref("URLSearchParams")}} インターフェイスの **`toString()`** メソッドは、URL での使用に適したクエリー文字列を返します。
 
-> **Note:**: このメソッドは、疑問符のないクエリー文字列を返します。 これは、それを含む [`window.location.search`](/ja/docs/Web/API/HTMLHyperlinkElementUtils/search) とは異なります。
+> **Note:** このメソッドは、疑問符のないクエリー文字列を返します。 これは、それを含む [`window.location.search`](/ja/docs/Web/API/HTMLHyperlinkElementUtils/search) とは異なります。
 
 {{availableinworkers}}
 

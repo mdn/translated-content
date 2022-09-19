@@ -23,7 +23,7 @@ url = new URL(url, [base])
 - `base`\_ \_{{optional_inline}}
   - : `url` が相対 URL の場合に使用するベース URL を表す {{domxref("USVString")}}。 指定しない場合のデフォルトは `''` です。
 
-> **Note:**: 既存の {{domxref("URL")}} オブジェクトを `base` に使用することも可能で、オブジェクトの {{domxref("URL.href","href")}} プロパティにそれ自体を文字列化します。
+> **Note:** 既存の {{domxref("URL")}} オブジェクトを `base` に使用することも可能で、オブジェクトの {{domxref("URL.href","href")}} プロパティにそれ自体を文字列化します。
 
 ### 例外
 

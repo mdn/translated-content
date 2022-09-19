@@ -282,7 +282,7 @@ article, aside, footer, header, nav, section {
 </noscript>
 ```
 
-> **Note:**: このコードは [HTML validator](https://validator.w3.org/) ではエラーが発生します。これは必ずしも本当に悪いことだとは言えません — サイトには若干のバリデーションエラーがあるものです — が、気を付けなければなりません。
+> **Note:** このコードは [HTML validator](https://validator.w3.org/) ではエラーが発生します。これは必ずしも本当に悪いことだとは言えません — サイトには若干のバリデーションエラーがあるものです — が、気を付けなければなりません。
 
 ## まとめ
 

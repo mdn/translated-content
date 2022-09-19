@@ -6,7 +6,7 @@ slug: Web/API/ReadableStreamBYOBReader/ReadableStreamBYOBReader
 
 **`ReadableStreamBYOBReader()`** コンストラクターは、`ReadableStreamBYOBReader` オブジェクトのインスタンスを作成して返します。
 
-> **Note:**: 通常、このコンストラクターを手動で使用することはありません。 代わりに、{{domxref("ReadableStream.getReader()")}} メソッドを使用します。
+> **Note:** 通常、このコンストラクターを手動で使用することはありません。 代わりに、{{domxref("ReadableStream.getReader()")}} メソッドを使用します。
 
 ## 構文
 

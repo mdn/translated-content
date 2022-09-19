@@ -38,7 +38,7 @@ request.send(formData);
 
 既存の {{ HTMLElement("form") }} のデータを含む `FormData` オブジェクトを構築するには、 `FormData` オブジェクトの作成時にその form 要素を指定します。
 
-> **Note:**: FormData は name 属性を使用する入力フィールドのみを使用します。
+> **Note:** FormData は name 属性を使用する入力フィールドのみを使用します。
 
 ```js
 var formData = new FormData(someFormElement);
@@ -109,7 +109,7 @@ form.addEventListener('submit', function(ev) {
 }, false);
 ```
 
-> **Note:**: フォームへの参照を渡した場合は、 open() の呼び出しで指定した[リクエストメソッド](/ja/docs/Web/HTTP/Methods)よりもフォームで指定したメソッドを優先します。
+> **Note:** フォームへの参照を渡した場合は、 open() の呼び出しで指定した[リクエストメソッド](/ja/docs/Web/HTTP/Methods)よりもフォームで指定したメソッドを優先します。
 
 > **Warning:** **警告**: FormData を使用して、{{ domxref("XMLHttpRequest") }} または {{ domxref("Fetch_API") }} を使用して、 `multipart/form-data` の Content-Type で POST リクエストを送信する場合 (Files や Blob をサーバーにアップロードする場合など)、リクエストの [`Content-Type`](/ja/docs/Web/HTTP/Headers/Content-Type) ヘッダーを明示的に設定しないでください。そうすると、ブラウザーがリクエスト本文のフォームフィールドの区切りに使用する境界の表現で Content-Type ヘッダーを設定することができなくなります。
 
@@ -164,7 +164,7 @@ formElem.addEventListener('formdata', (e) => {
 });
 ```
 
-> **Note:**: `formdata` イベントと {{domxref("FormDataEvent")}} オブジェクトは、 Chrome ではバージョン 77 (および同等の Chromium) から、 Firefox ではバージョン 72 から利用可能です (Firefox 71 で `dom.formdata.event.enabled` を設定することで初めて利用可能になりました)。
+> **Note:** `formdata` イベントと {{domxref("FormDataEvent")}} オブジェクトは、 Chrome ではバージョン 77 (および同等の Chromium) から、 Firefox ではバージョン 72 から利用可能です (Firefox 71 で `dom.formdata.event.enabled` を設定することで初めて利用可能になりました)。
 
 ## `FormData` オブジェクトを*使用せずに* AJAX でフォームやファイルを送信する
 

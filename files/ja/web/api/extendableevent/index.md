@@ -8,13 +8,13 @@ slug: Web/API/ExtendableEvent
 
 {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} が `ExtendableEvent` ハンドラーの外で呼び出された場合、ブラウザーは `InvalidStateError` をスローする必要があります。 また、複数の呼び出しが積み重なり、その結果の Promise が存続期間延長 Promise（[extend lifetime promises](https://w3c.github.io/ServiceWorker/#extendableevent-extend-lifetime-promises)）のリストに追加されることにも注意してください。
 
-> **Note:**: 上記の段落で説明した振る舞いは、Firefox 43 で修正されました（{{bug(1180274)}} を参照）。
+> **Note:** 上記の段落で説明した振る舞いは、Firefox 43 で修正されました（{{bug(1180274)}} を参照）。
 
 このインターフェイスは、{{domxref("Event")}} インターフェイスを継承しています。
 
 {{InheritanceDiagram(700, 60, 20)}}
 
-> **Note:**: このインターフェイスは、グローバルスコープが {{domxref("ServiceWorkerGlobalScope")}} の場合にのみ使用できます。 {{domxref("Window")}} または別の種類のワーカーのスコープの場合は使用できません。
+> **Note:** このインターフェイスは、グローバルスコープが {{domxref("ServiceWorkerGlobalScope")}} の場合にのみ使用できます。 {{domxref("Window")}} または別の種類のワーカーのスコープの場合は使用できません。
 
 ## コンストラクター
 
@@ -38,7 +38,7 @@ _親である {{domxref("Event")}} からメソッドを継承しています。
 
 コードスニペットは、サービスワーカーが使用するキャッシュのバージョン管理のベストプラクティスも示しています。 この例ではキャッシュは 1 つしかありませんが、同じアプローチを複数のキャッシュに使用できます。 キャッシュの一括指定識別子を特定のバージョン管理されたキャッシュ名にマップします。
 
-> **Note:**: Chrome では、ログ文は、chrome://serviceworker-internals を介してアクセスされる関連サービスワーカーの "Inspect" インターフェイスを介して表示されます。
+> **Note:** Chrome では、ログ文は、chrome://serviceworker-internals を介してアクセスされる関連サービスワーカーの "Inspect" インターフェイスを介して表示されます。
 
 ```js
 var CACHE_VERSION = 1;

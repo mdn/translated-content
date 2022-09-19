@@ -92,7 +92,7 @@ window.addEventListener("gamepadconnected", function(e) {
 - `axes`: デバイス上に軸があるコントロールを表す配列 (例：アナログサムスティック)。 配列の各エントリは-1.0〜1.0 の範囲の浮動小数点値で、最小値 (-1.0) から最大値 (1.0) までの軸の位置を表します。
 - `timestamp`: このゲームパッドのデータが最後に更新された時刻を表す {{ domxref("DOMHighResTimeStamp") }} を返します。この値により、開発者は `axes` と `button` のデータがハードウェアから更新されたかどうかを判断できます。 値は、 {{ domxref("PerformanceTiming") }} インターフェイスの `navigationStart` 属性との相対値でなければなりません。 値は単調に増加します。つまり、更新の順序を決定するために比較することができます。新しい値は常に古い値よりも大きいか等しいためです。このプロパティは現在 Firefox ではサポートされていません。
 
-> **Note:**: Gamepad オブジェクトは、セキュリティ上の理由から {{ domxref("Window") }} オブジェクトではなく {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} イベントで使用できます。一度リファレンスを取得すると、そのプロパティでゲームパッドの現在の状態に関する情報を照会できます。 このオブジェクトは、ゲームパッドの状態が変わるたびに更新されます。
+> **Note:** Gamepad オブジェクトは、セキュリティ上の理由から {{ domxref("Window") }} オブジェクトではなく {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} イベントで使用できます。一度リファレンスを取得すると、そのプロパティでゲームパッドの現在の状態に関する情報を照会できます。 このオブジェクトは、ゲームパッドの状態が変わるたびに更新されます。
 
 ### ボタン情報の使用
 
