@@ -30,7 +30,7 @@ hasOwn(instance, prop)
 
 ## 描述
 
-如果指定的属性是该对象的直接属性——**`Object.hasOwn()`** 方法返回 `true`，即使属性值是 `null` 或 `undefined`。如果属性是继承的或者不存在，该方法返回 `false`。它不像 {{jsxref("Operators/in", "in")}} 操作符，这个方法不检查对象的原型链中的指定属性。
+如果指定的属性是该对象的直接属性——**`Object.hasOwn()`** 方法返回 `true`，即使属性值是 `null` 或 `undefined`。如果属性是继承的或者不存在，该方法返回 `false`。它不像 {{jsxref("Operators/in", "in")}} 运算符，这个方法不检查对象的原型链中的指定属性。
 
 建议在 {{jsxref("Object.hasOwnProperty()")}} 上使用它，因为它适用于使用 `Object.create(null)` 创建的对象以及覆盖继承了 `hasOwnProperty()` 方法的对象。尽管可以通过在外部对象上调用 `Object.prototype.hasOwnProperty()` 解决这些问题，但是 `Object.hasOwn()` 更加直观。
 
