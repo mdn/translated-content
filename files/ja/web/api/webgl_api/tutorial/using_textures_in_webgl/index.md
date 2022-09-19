@@ -114,7 +114,7 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
 
 テクスチャマッピングの配列を設定したら、配列をバッファに渡すことで GL がそのデータを使用する準備が完了します。
 
-> **Note:** 注記: WebKit ベースのブラウザでは、`WebGLFloatArray` の代わりに `Float32Array` を使用しなければならないでしょう。
+> **Note:** WebKit ベースのブラウザでは、`WebGLFloatArray` の代わりに `Float32Array` を使用しなければならないでしょう。
 
 ## シェーダーを更新する
 
