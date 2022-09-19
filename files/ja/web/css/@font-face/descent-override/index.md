@@ -1,15 +1,6 @@
 ---
 title: descent-override
 slug: Web/CSS/@font-face/descent-override
-tags:
-  - '@font-face'
-  - アットルール記述子
-  - CSS
-  - リファレンス
-  - 記述子
-  - descent-override
-browser-compat: css.at-rules.font-face.descent-override
-translation_of: Web/CSS/@font-face/descent-override
 ---
 {{CSSRef}}
 
