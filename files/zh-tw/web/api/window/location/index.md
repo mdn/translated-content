@@ -38,14 +38,14 @@ All of the following properties are strings. You can read them to get informatio
 
 The "Example" column contains the values of the properties of the following URL:
 
-- http\://\[www\.example.com]:80/search?q=devmo#test
+- `http://[www.example.com]:80/search?q=devmo#test`
 
 | Property   | Description                                                                                                                                                                                                                     | Example                                         |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
 | `hash`     | the part of the URL that follows the # symbol, including the # symbol. You can listen for the [hashchange event](/zh-TW/docs/Mozilla_event_reference/hashchange) to get notified of changes to the hash in supporting browsers. | #test                                           |
 | `host`     | the host name and port number.                                                                                                                                                                                                  | [www.example.com]:80                            |
 | `hostname` | the host name (without the port number or square brackets).                                                                                                                                                                     | www.example.com                                 |
-| `href`     | the entire URL.                                                                                                                                                                                                                 | http://[www.example.com]:80/search?q=devmo#test |
+| `href`     | the entire URL.                                                                                                                                                                                                                 | <http://[www.example.com>]:80/search?q=devmo#test |
 | `pathname` | the path (relative to the host).                                                                                                                                                                                                | /search                                         |
 | `port`     | the port number of the URL.                                                                                                                                                                                                     | 80                                              |
 | `protocol` | the protocol of the URL.                                                                                                                                                                                                        | http:                                           |
@@ -53,7 +53,7 @@ The "Example" column contains the values of the properties of the following URL:
 
 If the hash part of the URL contains encoded characters (see [Core_JavaScript_1.5_Reference:Global_Functions:encodeURIComponent](/zh-TW/JavaScript/Reference/Global_Objects/encodeURIComponent)), `hash` returns the decoded URL part. This is a [bug](https://bugzilla.mozilla.org/show_bug.cgi?id=483304) in Firefox. `href`, `search` and `pathname` return the correct, encoded URL parts. For example:
 
-- http\://www\.example.com/search?q=Fire%20fox#Fire%20fox
+- `http://www.example.com/search?q=Fire%20fox#Fire%20fox`
 
 results in:
 

@@ -23,7 +23,6 @@ dispatchEvent(event)
 - `event`
   - : 被派发的 {{domxref("Event")}}。其 {{domxref("Event.target")}} 属性为当前的 {{domxref("EventTarget")}}。
 
-
 ### 返回值
 
 - 当 `event` 可被取消（`cancelable` 值为 `true`），且 `event` 中至少有一个事件处理程序调用了 {{domxref("Event.preventDefault()")}} 方法时，返回 `false`。否则，返回 `true`。

@@ -22,7 +22,7 @@ reverse()
 
 `reverse` 方法颠倒数组中元素的位置，改变了数组，并返回该数组的引用。
 
-reverse 方法是特意类化的；此方法可被 [called](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) 或 [applied](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)于类似数组对象。对象如果不包含反映一系列连续的、基于零的数值属性中的最后一个长度的属性，则该对象可能不会以任何有意义的方式运行。
+reverse 方法是特意类化的；此方法可被 [called](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call) 或 [applied](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)于类似数组对象。对象如果不包含反映一系列连续的、基于零的数值属性中的最后一个长度的属性，则该对象可能不会以任何有意义的方式运行。
 
 ## 示例
 

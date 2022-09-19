@@ -16,7 +16,7 @@ Media Source Extensions を使用する場合、アセットをストリーミ�
 
 ここにリストされている手順を実行したいが、実験するメディアがない場合は、Big Buck Bunny の予告編 \[0] を[ここ](http://wayback.archive.org/web/20161102172252id_/http://video.blendertestbuilds.de/download.php?file=download.blender.org/peach/trailer_1080p.mov)で入手できます。 Big Buck Bunny は、[Creative Commons Attribution 3.0](http://creativecommons.org/licenses/by/3.0/) ライセンスの下でライセンスされています。 このチュートリアル全体を通して、ダウンロードしたファイル名 `trailer_1080p.mov` を参照します。
 
-\[0] (c) Copyright 2008, Blender Foundation / www\.bigbuckbunny.org / https\://peach.blender.org/about/
+\[0] (c) Copyright 2008, Blender Foundation / www.bigbuckbunny.org / <https://peach.blender.org/about/>
 
 ### 必要なツール
 
@@ -69,13 +69,13 @@ MP4 ファイルが適切な MP4 ストリームであるかどうかを確認�
 まだ MP4 ではないアセットがある場合、ffmpeg は次のように `-movflags frag_keyframe+empty_moov` コマンドラインフラグを使用して、トランスコードプロセス中に適切に断片化された MP4 の発行を処理できます。
 
 ```bash
-$ ffmpeg -i trailer_1080p.mov -c:v copy -c:a copy -movflags frag_keyframe+empty_moov bunny_fragmented.mp4
+ffmpeg -i trailer_1080p.mov -c:v copy -c:a copy -movflags frag_keyframe+empty_moov bunny_fragmented.mp4
 ```
 
 すでに MP4 を持っているが、適切に断片化されていない場合は、ffmpeg を改めて使用できます。
 
 ```
-$ ffmpeg -i non_fragmented.mp4 -movflags frag_keyframe+empty_moov fragmented.mp4
+ffmpeg -i non_fragmented.mp4 -movflags frag_keyframe+empty_moov fragmented.mp4
 ```
 
 どちらの場合でも、Chrome は次の追加のムービーフラグを設定する必要がある場合があります。

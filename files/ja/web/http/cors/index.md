@@ -1,19 +1,6 @@
 ---
 title: オリジン間リソース共有 (CORS)
 slug: Web/HTTP/CORS
-tags:
-  - AJAX
-  - CORS
-  - オリジン間リソース共有
-  - Fetch
-  - Fetch API
-  - HTTP
-  - HTTP アクセス制御
-  - 同一オリジンポリシー
-  - セキュリティ
-  - XMLHttpRequest
-  - l10n:priority
-translation_of: Web/HTTP/CORS
 ---
 {{HTTPSidebar}}
 

@@ -254,7 +254,7 @@ Heroku 與 **git** 源代碼版本控制系統緊密集成，使用它來上傳/
 
 4. 按 **Create repository**.
 5. 單擊新倉庫頁面上的綠色“克隆或下載”按鈕 "**Clone or download**" 。
-6. 從顯示的對話框的文本字段，複製 URL 值（它應該類似於：**https\://github.com/_\<your_git_user_id>_/express-locallibrary-tutorial.git**）。
+6. 從顯示的對話框的文本字段，複製 URL 值（它應該類似於：`https://github.com/<your_git_user_id>/express-locallibrary-tutorial.git`）。
 
 現在創建了儲存庫（“repo”），我們將要在本地計算機上克隆它：
 

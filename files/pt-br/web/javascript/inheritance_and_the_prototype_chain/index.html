@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Guide/Inheritance_and_the_prototype_chain
 
 <p>Quando se trata de herança, o JavaScript tem somente um construtor: objetos. Cada objeto tem um link interno para um outro objeto chamado <code>prototype</code>. Esse objeto <code>prototype</code> também tem um atributo <code>prototype</code>, e assim por diante até o que o valor <code>null</code> seja encontrado como sendo o seu <code>prototype</code>. <code>null</code> que, por definição, não tem <code>prototype</code>, e age como um link final nesta <strong>cadeia de protótipos</strong> (prototype chain).</p>
 
-<p><span id="result_box" lang="pt">Isto<span class="hps"> muitas vezes é</span> <span class="hps">considerado como</span> <span class="hps">um dos</span> <span class="hps">pontos fracos</span> <span class="hps">do JavaScript</span><span>, mas o modelo de</span> <span class="hps">herança prototipal</span> <span class="hps">é de fato</span> <span class="hps">mais potente</span> <span class="hps">do que o modelo</span> <span class="hps">clássico.</span> <span class="hps">É</span><span>,</span> <span class="hps">por exemplo</span><span>,</span> <span class="hps">relativamente</span> <span class="hps">trivial</span> <span class="hps">construir</span> <span class="hps">um</span> "<span class="hps">modelo</span> <span class="hps">clássico" (como na implementaçao de <code>class</code></span>)<span>,</span> <span class="hps">enquanto</span> <span class="hps">o contrário</span> <span class="hps">é</span> <span class="hps">uma</span> <span class="hps">tarefa</span> <span class="hps">muito mais</span> <span class="hps">difícil</span><span>.</span></span></p>
+<p>Isto muitas vezes é considerado como um dos pontos fracos do JavaScript, mas o modelo de herança prototipal é de fato mais potente do que o modelo clássico. É, por exemplo, relativamente trivial construir um "modelo clássico" (como na implementaçao de <code>class</code>), enquanto o contrário é uma tarefa muito mais difícil.</p>
 
 <p><sup>1 </sup><em>N. da T: Como em uma implementação de fila em C, por exemplo.</em></p>
 
@@ -20,7 +20,7 @@ original_slug: Web/JavaScript/Guide/Inheritance_and_the_prototype_chain
 
 <h3 id="Propriedades_de_heranças">Propriedades de heranças</h3>
 
-<p><span id="result_box" lang="pt"><span class="hps">Objetos em JavaScript</span> <span class="hps">são</span> <span class="hps">"sacos"</span> <span class="hps">dinâmicos de</span> <span class="atn hps">propriedades (</span><span>a que se refere</span> <span class="hps">as próprias propriedades</span><span>)</span> <span class="hps">e cada um tem</span> <span class="hps">um link para um</span> <span class="hps">objeto </span><span><code>prototype</code>.</span> <span class="hps">Eis o que acontece</span> <span class="hps">quando se tenta</span> <span class="hps">acessar uma propriedade</span><span>:</span></span></p>
+<p>Objetos em JavaScript são "sacos" dinâmicos de propriedades (a que se refere as próprias propriedades) e cada um tem um link para um objeto <code>prototype</code>. Eis o que acontece quando se tenta acessar uma propriedade:</p>
 
 <pre><code>// </code>Vamos criar um objeto o da função f com suas próprias propriedades a e b:<code>
 let f = function () {
@@ -64,7 +64,7 @@ console.log(o.d); // undefined
 
 <p><a href="https://repl.it/@khaled_hossain_code/prototype" style="background-color: rgb(255, 255, 255); font-family: Arial, x-locale-body, sans-serif; font-size: 1rem; letter-spacing: -0.00278rem;">Code Link</a></p>
 
-<p><span id="result_box" lang="pt"><span class="hps">Atribuir uma propriedade</span> <span class="hps">a um objeto</span> <span class="hps">cria uma</span> <span class="hps">propriedade nele.</span> <span class="hps">A única</span> <span class="hps">exceção às regras</span> <span class="hps">de obtenção e definição</span> <span class="hps">de comportamento</span> <span class="hps">é quando há</span> <span class="hps">uma propriedade herdada</span> <span class="hps">com </span></span>um <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters" title="Defining Getters and Setters">getter or a setter</a>.</p>
+<p>Atribuir uma propriedade a um objeto cria uma propriedade nele. A única exceção às regras de obtenção e definição de comportamento é quando há uma propriedade herdada com um <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters" title="Defining Getters and Setters">getter or a setter</a>.</p>
 
 <h3 id="Herança_de_métodos">Herança de "métodos"</h3>
 
@@ -80,7 +80,7 @@ console.log(o.d); // undefined
 };
 
 console.log(o.m()); // 3
-// <span class="short_text" id="result_box" lang="pt"><span class="hps">Ao chamar</span> <span class="atn hps">'</span><span>o.m</span><span>'</span> <span class="hps">neste caso,</span> <span class="hps">"this" </span><span class="hps">refere-se a</span> <span class="hps">'o'</span></span>
+// Ao chamar 'o.m' neste caso, "this" refere-se a 'o'
 
 var p = Object.create(o);
 // 'p' é um objeto que foi herdado de 'o'
@@ -88,7 +88,7 @@ var p = Object.create(o);
 p.a = 12; // cria uma propriedade 'a' no objeto 'p'
 console.log(p.m()); // 13
 // Ao chamar 'p.m', 'this' refere-se a 'p'
-// <span id="result_box" lang="pt"><span class="hps">Então,</span> <span class="atn hps">quando '</span><span>p'</span> <span class="hps">herda</span> <span class="hps">a função de</span> <span class="hps">'m'</span> <span class="hps">de</span> <span class="hps">'o'</span><span>,</span> <span class="atn hps">'</span><span>this.a</span><span>'</span> representa <span class="atn hps">'p</span><span>.a</span><span>'</span> que é <span class="hps">a</span> <span class="hps">própria propriedade</span> <span class="hps">'a'</span> <span class="hps">de</span> <span class="hps">'p'</span></span>
+// Então, quando 'p' herda a função de 'm' de 'o', 'this.a' representa 'p.a' que é a própria propriedade 'a' de 'p'
 
 </pre>
 
@@ -98,16 +98,16 @@ console.log(p.m()); // 13
 
 <pre class="brush: js">var o = {a: 1};
 
-// <span id="result_box" lang="pt"><span class="hps">O recém-criado</span> <span class="hps">objecto 'o'</span> <span class="hps">tem</span> <span class="hps">Object.prototype</span> <span class="hps">como o seu</span> <span class="atn hps">[[</span><span>Prototype</span><span>]]</span></span>
-// <span id="result_box" lang="pt"><span class="hps">'o'</span> <span class="hps">não tem</span> <span class="hps">não tem uma propriedade chamada </span><span class="atn hps">'</span><span>hasOwnProperty</span><span>'</span></span>
-// <span id="result_box" lang="pt"><span class="hps">hasOwnProperty</span> <span class="hps">é uma propriedade</span> <span class="hps">própria</span> <span class="hps">de</span> <span class="hps">Object.prototype</span><span>.</span> <span class="hps">Então</span> <span class="hps">'o'</span> <span class="hps">herda</span> <span class="hps">hasOwnProperty</span> <span class="hps">de</span> <span class="hps">Object.prototype</span></span>
+// O recém-criado objecto 'o' tem Object.prototype como o seu [[Prototype]]
+// 'o' não tem não tem uma propriedade chamada 'hasOwnProperty'
+// hasOwnProperty é uma propriedade própria de Object.prototype. Então 'o' herda hasOwnProperty de Object.prototype
 
 // Object.prototype tem null como seu protótipo.
 // o ---&gt; Object.prototype ---&gt; null
 
 var a = ["yo", "whadup", "?"];
 
-// <span id="result_box" lang="pt"><span class="hps">Arrays</span> <span class="hps">herdam de</span> <span class="hps">Array.prototype</span> <span class="hps">(que tem</span> <span class="hps">métodos como</span> <span class="hps">indexOf</span><span>,</span> <span class="hps">forEach</span><span>, etc.)</span></span>
+// Arrays herdam de Array.prototype (que tem métodos como indexOf, forEach, etc.)
 // A cadeia de protótipos se parece com isso:
 // a ---&gt; Array.prototype ---&gt; Object.prototype ---&gt; null
 
@@ -115,7 +115,7 @@ function f(){
   return 2;
 }
 
-// <span id="result_box" lang="pt"><span class="hps">Funções</span> <span class="hps">herdam de</span> <span class="hps">Function.prototype</span> <span class="hps">(que tem</span> <span class="hps">métodos como</span> <span class="hps">call, </span><span class="hps">bind,</span> <span class="hps">etc.)</span></span>
+// Funções herdam de Function.prototype (que tem métodos como call, bind, etc.)
 // f ---&gt; Function.prototype ---&gt; Object.prototype ---&gt; null
 </pre>
 
@@ -155,7 +155,7 @@ var c = Object.create(b);
 
 var d = Object.create(null);
 // d ---&gt; null
-console.log(d.hasOwnProperty); // undefined, <span class="short_text" id="result_box" lang="pt"><span class="hps">porque</span> <span class="hps">não herda de</span> <span class="hps">Object.prototype</span></span>
+console.log(d.hasOwnProperty); // undefined, porque não herda de Object.prototype
 </pre>
 
 <div>

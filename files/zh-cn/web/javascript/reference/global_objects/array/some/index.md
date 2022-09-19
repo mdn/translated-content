@@ -55,7 +55,7 @@ some(function(element, index, array) { /* … */ }, thisArg)
 
 `callback` 被调用时传入三个参数：元素的值，元素的索引，被遍历的数组。
 
-如果一个`thisArg`参数提供给 some()，它将被用作调用的 `callback`的 `this` 值。否则， 它的 `this` value 将是 `undefined`。`this`的值最终通过 callback 来观察，根据 [the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this)的 this 判定规则来确定。
+如果一个`thisArg`参数提供给 some()，它将被用作调用的 `callback`的 `this` 值。否则， 它的 `this` value 将是 `undefined`。`this`的值最终通过 callback 来观察，根据 [the usual rules for determining the `this` seen by a function](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)的 this 判定规则来确定。
 
 `some()` 被调用时不会改变数组。
 
@@ -78,7 +78,7 @@ function isBiggerThan10(element, index, array) {
 
 ### 使用箭头函数测试数组元素的值
 
-[箭头函数](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 可以通过更简洁的语法实现相同的用例。
+[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 可以通过更简洁的语法实现相同的用例。
 
 ```js
 [2, 5, 8, 1, 4].some(x => x > 10);  // false

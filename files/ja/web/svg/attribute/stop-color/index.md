@@ -1,12 +1,6 @@
 ---
 title: stop-color
 slug: Web/SVG/Attribute/stop-color
-tags:
-  - NeedsExample
-  - SVG
-  - SVG 属性
-browser-compat: svg.attributes.presentation.stop-color
-translation_of: Web/SVG/Attribute/stop-color
 ---
 {{SVGRef}}
 

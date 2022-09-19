@@ -15,7 +15,7 @@ slug: Learn/CSS/Building_blocks/Organizing
           href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software"
           >安装了必要的软件</a
         >，<a
-          href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/zh-CN/Learn/Getting_started_with_the_web/Dealing_with_files"
           >处理文件</a
         >的基本知识，HTML 基础（学习<a
           href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"

@@ -4,7 +4,7 @@ slug: Web/CSS/animation-fill-mode
 ---
 {{CSSRef}}
 
-[CSS](/en/CSS) 属性 **`animation-fill-mode`** 设置 CSS 动画在执行之前和之后如何将样式应用于其目标。
+[CSS](/zh-CN/CSS) 属性 **`animation-fill-mode`** 设置 CSS 动画在执行之前和之后如何将样式应用于其目标。
 
 {{EmbedInteractiveExample("pages/css/animation-fill-mode.html")}}
 
@@ -100,7 +100,7 @@ animation-fill-mode: both, forwards, none;
 
 {{EmbedLiveSample('Example',700,300)}}
 
-更多示例请查看 [CSS 动画](/en/CSS/CSS_animations) 。
+更多示例请查看 [CSS 动画](/zh-CN/CSS/CSS_animations) 。
 
 ## 规范
 

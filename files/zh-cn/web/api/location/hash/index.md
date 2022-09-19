@@ -18,7 +18,7 @@ object.hash = string;
 ## Examples
 
 ```html
-<a id="myAnchor" href="/en-US/docs/Location.href#Examples">Examples</a>
+<a id="myAnchor" href="/zh-CN/docs/Location.href#Examples">Examples</a>
 <script>
   var anchor = document.getElementById("myAnchor");
   console.log(anchor.hash); // 返回'#Examples'

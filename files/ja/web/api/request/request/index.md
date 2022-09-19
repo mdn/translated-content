@@ -42,7 +42,7 @@ var myRequest = new Request(input[, init]);
 
 | 型          | 説明                                                                                                                                                                       |
 | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `TypeError` | [Firefox 43](/ja/docs/Mozilla/Firefox/Releases/43) 以降、http\://user:password\@example.com のような認証情報を含む URL だった場合、Request() は TypeError をスローします。 |
+| `TypeError` | [Firefox 43](/ja/docs/Mozilla/Firefox/Releases/43) 以降、`http://user:password@example.com` のような認証情報を含む URL だった場合、Request() は TypeError をスローします。 |
 
 ## 例
 
@@ -108,7 +108,7 @@ var myRequest = new Request('flowers.jpg', myInit);
 var copy = new Request(myRequest);
 ```
 
-> **Note:** **メモ**: 最後の使い方は[サービスワーカー](/ja/docs/Web/API/ServiceWorker_API)内でのみ使用できます。
+> **Note:**  最後の使い方は[サービスワーカー](/ja/docs/Web/API/ServiceWorker_API)内でのみ使用できます。
 
 ## 仕様書
 

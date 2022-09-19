@@ -8,9 +8,9 @@ slug: Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes
 
 {{EmbedInteractiveExample("pages/js/regexp-unicode-property-escapes.html", "taller")}}
 
-> **备注：** 使用 Unicode 属性转义依靠 [`\u` 标识](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode)，`\u` 表示该字符串被视为一串 Unicode 代码点。参考 [`RegExp.prototype.nicode`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode).
+> **备注：** 使用 Unicode 属性转义依靠 [`\u` 标识](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode)，`\u` 表示该字符串被视为一串 Unicode 代码点。参考 [`RegExp.prototype.nicode`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode).
 
-> **备注：** 某些 Unicode 属性比[字符类](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)(如 `\w` 只匹配拉丁字母 `a` 到 `z`) 包含更多的字符 ，但后者浏览器兼容性更好 (截至 2020 一月).
+> **备注：** 某些 Unicode 属性比[字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)(如 `\w` 只匹配拉丁字母 `a` 到 `z`) 包含更多的字符 ，但后者浏览器兼容性更好 (截至 2020 一月).
 
 ## 句法
 
@@ -108,7 +108,7 @@ mixedCharacters.match(/\p{Sc=Cyrillic}/u); // Л
 
 ### Unicode 属性转义 vs. 字符类
 
-JavaScript 正则表达式可以使用 [字符类](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes) 尤其是 `\w` 或 `\d` 匹配字母或数字，然而，这样的形式只匹配拉丁文字的字符 (换言之，`a` 到 `z`、 `A` 到 `Z` 的 `\w` 和 `0` 到 `9` 的 `\d`)，见[例子](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes#Looking_for_a_word_from_Unicode_characters)，这样的使用放到非拉丁文本中是有些蠢的。
+JavaScript 正则表达式可以使用 [字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes) 尤其是 `\w` 或 `\d` 匹配字母或数字，然而，这样的形式只匹配拉丁文字的字符 (换言之，`a` 到 `z`、 `A` 到 `Z` 的 `\w` 和 `0` 到 `9` 的 `\d`)，见[例子](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes#Looking_for_a_word_from_Unicode_characters)，这样的使用放到非拉丁文本中是有些蠢的。
 
 Unicode 属性转义 categories 包含更多字符， `\p{Letter}` 或 `\p{Number}` 将会适用于任何文字。
 
@@ -128,15 +128,15 @@ console.table(nonEnglishText.match(regexpUPE));
 
 ## See also
 
-- [Regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Regular expressions guide](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
 
-  - [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
-  - [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
-  - [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
-  - [Groups and ranges](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
+  - [Character classes](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
+  - [Assertions](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
+  - [Quantifiers](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
+  - [Groups and ranges](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
 
-- [The `RegExp()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
-- [`RegExp.prototype.unicode`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode)
+- [The `RegExp()` constructor](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+- [`RegExp.prototype.unicode`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode)
 - [Unicode character property — Wikipedia](https://en.wikipedia.org/wiki/Unicode_character_property)
 - [A blog post from Axel Rauschmayer about Unicode property escapes](https://2ality.com/2017/07/regexp-unicode-property-escapes.html)
 - [The Unicode document for Unicode properties](https://unicode.org/reports/tr18/#Categories)

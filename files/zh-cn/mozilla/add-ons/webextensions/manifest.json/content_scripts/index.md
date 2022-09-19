@@ -101,7 +101,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
       </td>
       <td><code>Array</code></td>
       <td>
-        一个<a href="/en-US/Add-ons/WebExtensions/match_patterns"
+        一个<a href="/zh-CN/Add-ons/WebExtensions/match_patterns"
           >match patterns</a
         >的数组，请参阅下面的<a href="#Matching_URL_patterns">匹配 URL 格式</a
         >。
@@ -149,7 +149,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
       <td><code>Array</code></td>
       <td>
         <p>
-          一个<a href="/en-US/Add-ons/WebExtensions/match_patterns"
+          一个<a href="/zh-CN/Add-ons/WebExtensions/match_patterns"
             >match patterns</a
           >的数组，请参阅下面的<a href="#Matching_URL_patterns">匹配 URL 格式</a
           >。

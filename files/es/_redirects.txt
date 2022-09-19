@@ -514,6 +514,7 @@
 /es/docs/Glossary/XForm	/es/docs/Glossary/XForms
 /es/docs/Glossary/coercion	/es/docs/Glossary/Type_coercion
 /es/docs/Glossary/conjunto_de_caracteres	/es/docs/Glossary/character_set
+/es/docs/Glossary/jQuery	/es/docs/orphaned/Glossary/jQuery
 /es/docs/Glossary/miga-de-pan	/es/docs/Glossary/Breadcrumb
 /es/docs/Glossary/propiedad	/es/docs/Glossary/property
 /es/docs/Glossary/seguro	/es/docs/Glossary/safe

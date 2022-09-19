@@ -2,7 +2,7 @@
 title: 'ARIA: textbox ロール'
 slug: Web/Accessibility/ARIA/Roles/textbox_role
 ---
-\\{{ariaref}}`textbox` ロールは、自由形式テキストの入力を可能にする要素を識別するために使用されます。 可能であれば、このロールを使用するのではなく、単一行入力の場合は [`type="text"`](/ja/docs/Web/HTML/Element/input/text) の {{HTMLElement("input")}} 要素を使用し、複数行入力の場合は {{HTMLElement("textarea")}} 要素を使用してください。
+`textbox` ロールは、自由形式テキストの入力を可能にする要素を識別するために使用されます。 可能であれば、このロールを使用するのではなく、単一行入力の場合は [`type="text"`](/ja/docs/Web/HTML/Element/input/text) の {{HTMLElement("input")}} 要素を使用し、複数行入力の場合は {{HTMLElement("textarea")}} 要素を使用してください。
 
 ## 説明
 

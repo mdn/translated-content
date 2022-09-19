@@ -1,21 +1,6 @@
 ---
 title: ウェブ上のリソースの識別
 slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
-tags:
-  - Domain
-  - HTTP
-  - Path
-  - Scheme
-  - Syntax
-  - URI
-  - URL
-  - URL Syntax
-  - Web
-  - fragment
-  - port
-  - query
-  - resources
-translation_of: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 ---
 {{HTTPSidebar}}
 

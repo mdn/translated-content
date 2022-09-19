@@ -12,10 +12,10 @@ slug: Learn/Server-side/Django/Tutorial_local_library_website
       <th scope="row">前提：</th>
       <td>
         阅读
-        <a href="/en-US/docs/Learn/Server-side/Django/Introduction"
+        <a href="/zh-CN/docs/Learn/Server-side/Django/Introduction"
           >Django 介绍</a
         >。在接下来的文章里你需要
-        <a href="/en-US/docs/Learn/Server-side/Django/development_environment"
+        <a href="/zh-CN/docs/Learn/Server-side/Django/development_environment"
           >创建 Django 开发环境</a
         >.
       </td>
