@@ -11,7 +11,7 @@ slug: Web/API/History
 _`History`_ _接口不继承于任何属性。_
 
 - {{domxref("History.length","length")}} {{readOnlyInline}}
-  - : 返回一个整数（`Integer`），该整数表示会话历史中元素的数目，包括当前加载的页。例如，在一个新的选项卡加载的一个页面中，这个属性返回 1。
+  - : 返回一个整数（`Integer`），该整数表示会话历史中元素的数目，包括当前加载的页。例如，在一个新的选项卡加载的一个页面中，这个属性返回 `1`。
 - {{domxref("History.scrollRestoration","scrollRestoration")}}
   - : 允许 Web 应用程序在历史导航上显式地设置默认滚动恢复行为。此属性可以是自动的（`auto`）或者手动的（`manual`）。
 - {{domxref("History.state","state")}} {{ReadOnlyInline}}
