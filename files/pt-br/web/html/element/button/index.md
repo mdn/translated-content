@@ -15,17 +15,17 @@ translation_of: Web/HTML/Element/button
 
 O **Elemento HTML _`<button>`_** representa um botão clicável.
 
-- _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_ [Conteúdo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), [conteúdo fraseado](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content categories#Phrasing content"), [Conteúdo iterativo](/pt-BR/docs/HTML/Content_categories#Interactive_content "HTML/Content categories#Interactive content"), [listado](/pt-BR/docs/HTML/Content_categories#Form_listed "HTML/Content categories#Form listed"), [rotulável](/pt-BR/docs/HTML/Content_categories#Form_labelable "HTML/Content categories#Form labelable"), e elemento [enviável](/pt-BR/docs/HTML/Content_categories#Form_submittable "HTML/Content categories#Form submittable") [associado a formulário](/pt-BR/docs/HTML/Content_categories#Form-associated_ "HTML/Content categories#Form-associated "), conteúdo palpável.
-- _Conteúdo permitido_ [Conteúdo fraseado](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Phrasing_content").
+- _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories)_ [Conteúdo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content), [conteúdo fraseado](/pt-BR/docs/HTML/Content_categories#Phrasing_content), [Conteúdo iterativo](/pt-BR/docs/HTML/Content_categories#Interactive_content), [listado](/pt-BR/docs/HTML/Content_categories#Form_listed), [rotulável](/pt-BR/docs/HTML/Content_categories#Form_labelable), e elemento [enviável](/pt-BR/docs/HTML/Content_categories#Form_submittable) [associado a formulário](/pt-BR/docs/HTML/Content_categories#Form-associated_), conteúdo palpável.
+- _Conteúdo permitido_ [Conteúdo fraseado](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
 - \_Omissão de Tag_Nenhuma, as tags de abertura e fechamento são obrigatórias.
-- _Elementos pai permitidos_ Qualquer elemento que aceite [conteúdo fraseado](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Phrasing_content").
+- _Elementos pai permitidos_ Qualquer elemento que aceite [conteúdo fraseado](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
 - _Interface DOM_ {{domxref("HTMLButtonElement")}}
 - _Tipo de elemento_ Inline
 -
 
 ## Atributos
 
-Esse elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes "HTML/Global attributes").
+Esse elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
 - {{htmlattrdef("autofocus")}} {{HTMLVersionInline(5)}}
   - : Esse atributo booleano permite-o especificar que o botão possuirá o foco de entrada assim que a página carrega, a menos que o usuário sobrecreva esse comportamento digitanto um controle diferente. Apenas um elemento de um documento associado a um formulário pode ter esse atributo específico.

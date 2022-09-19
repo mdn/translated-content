@@ -7,15 +7,15 @@ translation_of: Web/HTML/Element/del
 
 O **elemento** **HTML `<del>`** (ou _Elemento_ _HTML_ _de Texto Excluído_) representa uma parte do texto que foi excluída de um documento. Este elemento é (não necessariamente) renderizado pelos navegadores com uma linha entre o texto.
 
-- _[Content categories](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_[Phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content categories#Phrasing content") or [flow content](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content").
-- _Permitted content_ [Transparent](/pt-BR/docs/HTML/Content_categories#Transparent "HTML/Content categories#Transparent").
+- _[Content categories](/pt-BR/docs/HTML/Content_categories)_[Phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content) or [flow content](/pt-BR/docs/HTML/Content_categories#Flow_content).
+- _Permitted content_ [Transparent](/pt-BR/docs/HTML/Content_categories#Transparent).
 - _Tag omission_ {{no_tag_omission}}
-- _Permitted parent elements_ Any element that accepts [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Phrasing_content").
+- _Permitted parent elements_ Any element that accepts [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
 - _DOM interface_ {{domxref("HTMLModElement")}}
 
 ## Attributes
 
-This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes "HTML/Global attributes").
+This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes).
 
 - {{htmlattrdef("cite")}}
   - : A URI for a resource that explains the change (for example, meeting minutes).

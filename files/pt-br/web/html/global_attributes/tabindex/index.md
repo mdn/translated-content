@@ -24,7 +24,7 @@ Ele aceita valores inteiros, com diferentes resultados dependendo do valor desse
 
   > **Warning:** Evite usar valores do `tabindex` maiores que 0. Ao fazer isso dificulta para pessoas que dependem de tecnologias assistivas para navegar e operar o conteúdo da página. Ao invés disso, escreva o documento com os elementos em uma sequência lógica.
 
-Se o atributo `tabindex` for definido em um elemento div {{htmlelement("div")}}, seu conteúdo filho (interno) não poderá ser rolado utilizando as teclas direcionais a menos que seja definido `tabindex` no conteúdo também.[ Veja este fiddle para entender melhor os efeitos de rolagem do tabindex](https://jsfiddle.net/jainakshay/0b2q4Lgv/).
+Se o atributo `tabindex` for definido em um elemento div {{htmlelement("div")}}, seu conteúdo filho (interno) não poderá ser rolado utilizando as teclas direcionais a menos que seja definido `tabindex` no conteúdo também. [Veja este fiddle para entender melhor os efeitos de rolagem do tabindex](https://jsfiddle.net/jainakshay/0b2q4Lgv/).
 
 ## Especificações
 
@@ -43,4 +43,4 @@ Se o atributo `tabindex` for definido em um elemento div {{htmlelement("div")}},
 
 - Todos os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 - {{domxref("HTMLElement.tabIndex")}} que reflete este atributo.
-- Problemas de acessibilidade com tabindex: veja [Don’t Use Tabindex Greater than 0 | Adrian Roselli](http://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html "Don’t Use Tabindex Greater than 0 | Adrian Roselli") (em inglês).
+- Problemas de acessibilidade com tabindex: veja [Don’t Use Tabindex Greater than 0 | Adrian Roselli](http://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html) (em inglês).

@@ -93,9 +93,9 @@ A ferramenta Emscripten é capaz de pegar qualquer código fonte C/C++ e compil�
 
 De maneira resumida, o processo funciona da seguinte maneira:
 
-1.  Emscripten primeiro alimenta o C/C++ no clang+LLVM — um maduro compilador C/C++, enviado como parte do Xcode do OSX, por exemplo.
-2.  Emscripten transforma o resultado compilado do clang+LLVM em um binário .wasm
-3.  Por si só, o WebAssembly atualmente não pode acessar diretamente o DOM; ele só pode chamar o JavaScript, transmitindo tipos de dados primitivos de ponto flutuante e inteiro. Portanto, para acessar qualquer API da Web, o WebAssembly precisa chamar o JavaScript, que faz a chamada da API da Web. Portanto, o Emscripten cria o código de “cola” HTML e JavaScript necessário para alcançar isso.
+1. Emscripten primeiro alimenta o C/C++ no clang+LLVM — um maduro compilador C/C++, enviado como parte do Xcode do OSX, por exemplo.
+2. Emscripten transforma o resultado compilado do clang+LLVM em um binário .wasm
+3. Por si só, o WebAssembly atualmente não pode acessar diretamente o DOM; ele só pode chamar o JavaScript, transmitindo tipos de dados primitivos de ponto flutuante e inteiro. Portanto, para acessar qualquer API da Web, o WebAssembly precisa chamar o JavaScript, que faz a chamada da API da Web. Portanto, o Emscripten cria o código de “cola” HTML e JavaScript necessário para alcançar isso.
 
 > **Nota:** Existem planos futuros para [permitir o WebAssembly chamar APIs Web diretamente](https://github.com/WebAssembly/gc/blob/master/README.md).
 

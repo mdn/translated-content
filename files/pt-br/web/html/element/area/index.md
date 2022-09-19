@@ -7,15 +7,15 @@ translation_of: Web/HTML/Element/area
 
 O _HTML `<area>` elemento_ define uma região hot-spot em uma imagem, e, opcionalmente, associa-lo com um {{Glossary ("Hyperlink", "link de hipertexto")}}. Este elemento é usado somente dentro de um {{HTMLElement ("map")}} elemento.
 
-- _[As categorias de conteúdo](/pt-BR/docs/HTML/Content_categories "HTML / Content_categories")_ [de conteúdo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content "Categorias HTML / conteúdo # content Fluxo") , [conteúdo fraseado](/pt-BR/docs/HTML/Content_categories#Phrasing_content "Categorias HTML / conteúdo # content Phrasing") .
+- _[As categorias de conteúdo](/pt-BR/docs/HTML/Content_categories)_ [de conteúdo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content) , [conteúdo fraseado](/pt-BR/docs/HTML/Content_categories#Phrasing_content) .
 - _Permitida conteúdo_ vazio; este é um elemento vazio.
 - _Tag omissão_ {{no_tag_omission}}
-- _Permitida elementos pai_ Qualquer elemento que aceita [conteúdo fraseado](/pt-BR/docs/HTML/Content_categories#Phrasing_content "Categorias HTML / conteúdo # content Phrasing") . O `<area>` elemento deve ter um ancestral {{HTMLElement ("mapa")}}, mas ele não precisa ser um pai direta.
+- _Permitida elementos pai_ Qualquer elemento que aceita [conteúdo fraseado](/pt-BR/docs/HTML/Content_categories#Phrasing_content) . O `<area>` elemento deve ter um ancestral {{HTMLElement ("mapa")}}, mas ele não precisa ser um pai direta.
 - _Interface DOM_ {{domxref ("HTMLAreaElement")}}
 
 ## Atributos
 
-Este elemento inclui os [atributos globais ](/pt-BR/docs/HTML/Global_attributes "HTML / atributos globais").
+Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
 - {{Htmlattrdef ("accesskey")}} {{HTMLVersionInline ("4")}} só, {{obsolete_inline ("5.0")}}
   - : Especifica um acelerador de navegação pelo teclado para o elemento. Pressionando ALT ou uma chave semelhante, em associação com o caractere especificado seleciona a forma de controle correlacionada com a seqüência de teclas. Os projetistas de página são avisados ​​para evitar sequências de teclas já vinculados aos navegadores. Este atributo é global desde HTML5.

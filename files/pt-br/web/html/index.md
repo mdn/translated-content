@@ -23,7 +23,7 @@ Os artigos abaixo podem ajudá-lo a aprender mais sobre HTML.
 
 - Introdução ao HTML
 
-  Se você é novo no desenvolvimento web, não deixe de ler nosso artigo [O Básico do HTML ](/pt-BR/docs/Aprender/Getting_started_with_the_web/HTML_basico)para aprender o que é HTML e como usá-lo.
+  Se você é novo no desenvolvimento web, não deixe de ler nosso artigo [O Básico do HTML](/pt-BR/docs/Aprender/Getting_started_with_the_web/HTML_basico) para aprender o que é HTML e como usá-lo.
 
 - Tutoriais HTML
 
