@@ -22,7 +22,7 @@ hasOwn(instance, prop)
 - `instance`
   - : 要测试的 JavaScript 实例对象。
 - `prop`
-  - : 要测试属性的 {{jsxref("String")}} 类型的名称或者 [Symbol](/zh/docs/Web/JavaScript/Reference/Global_Objects/Symbol)。
+  - : 要测试属性的 {{jsxref("String")}} 类型的名称或者 [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol)。
 
 ### 返回值
 
