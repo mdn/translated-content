@@ -1305,7 +1305,7 @@
 /fr/docs/Glossaire/Blink	/fr/docs/Glossary/Blink
 /fr/docs/Glossaire/Block_cipher_mode_of_operation	/fr/docs/Glossary/Block_cipher_mode_of_operation
 /fr/docs/Glossaire/Boolean	/fr/docs/Glossary/Boolean
-/fr/docs/Glossaire/Boot2Gecko	/fr/docs/Glossary/Boot2Gecko
+/fr/docs/Glossaire/Boot2Gecko	/fr/docs/Glossary/Firefox_OS
 /fr/docs/Glossaire/Breadcrumb	/fr/docs/Glossary/Breadcrumb
 /fr/docs/Glossaire/Browsing_context	/fr/docs/Glossary/Browsing_context
 /fr/docs/Glossaire/Bézier_curve	/fr/docs/Glossary/Bezier_curve
@@ -6125,7 +6125,7 @@
 /fr/docs/conflicting/Glossary/Chrome	/fr/docs/Glossary/Chrome
 /fr/docs/conflicting/Glossary/DOM	/fr/docs/Glossary/DOM
 /fr/docs/conflicting/Glossary/Doctype	/fr/docs/Glossary/Doctype
-/fr/docs/conflicting/Glossary/Firefox_OS	/fr/docs/Glossary/Boot2Gecko
+/fr/docs/conflicting/Glossary/Firefox_OS	/fr/docs/Glossary/Firefox_OS
 /fr/docs/conflicting/Glossary/TCP	/fr/docs/Glossary/TCP
 /fr/docs/conflicting/Learn	/fr/docs/Learn
 /fr/docs/conflicting/Learn/CSS/Building_blocks	/fr/docs/Learn/CSS/Building_blocks
