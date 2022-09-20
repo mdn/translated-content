@@ -96,7 +96,7 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 日期控件提供了一个简单的日期选择 UI 界面，还标准化了发送到服务器的数据格式，而与用户的浏览器或区域设置无关。
 
-在本章，我们将研究 `<input type="date">` 基础的和更复杂的的用法。
+在本章，我们将研究 `<input type="date">` 基础的和更复杂的用法。
 
 ### 日期控件基本用法
 
