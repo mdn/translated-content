@@ -17,7 +17,7 @@ var x = window.scrollX;
 
 ### Parámetros
 
-- x será el número de pixels que el documento está desplazado actualmente desde la izquierda.
+- `x` será el número de pixels que el documento está desplazado actualmente desde la izquierda.
 
 ## Ejemplo
 
