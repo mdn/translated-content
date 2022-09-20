@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
 original_slug: Web/CSS/CSS_Flow_Layout/Disposition_de_bloc_en_ligne_avec_flux_normal
 ---
+
 {{CSSRef}}
 
 Dans ce guide, nous verrons le comportement des éléments de bloc et des éléments en ligne lorsqu'ils sont placés dans le flux normal.

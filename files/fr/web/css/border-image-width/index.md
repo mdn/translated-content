@@ -4,6 +4,7 @@ slug: Web/CSS/border-image-width
 translation_of: Web/CSS/border-image-width
 browser-compat: css.properties.border-image-width
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-image-width`** définit la largeur de [l'image de bordure](/fr/docs/Web/CSS/border-image) d'un élément.

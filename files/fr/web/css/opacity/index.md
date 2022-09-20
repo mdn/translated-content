@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/opacity
 ---
+
 {{CSSRef}}
 
 La propriété **`opacity`** définit la transparence d'un élément. Autrement dit, elle permet de définir le degré de visibilité de l'arrière-plan sur lequel est placé l'élément.

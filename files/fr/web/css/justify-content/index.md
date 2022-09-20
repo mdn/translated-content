@@ -8,6 +8,7 @@ tags:
   - flexbox
 translation_of: Web/CSS/justify-content
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`justify-content`** indique la façon dont l'espace doit être réparti entre et autour des éléments selon [l'axe principal](/fr/docs/Web/CSS/CSS_Box_Alignment#Concepts_majeurs_et_terminologie) d'un conteneur flexible ou selon l'axe en ligne lorsque le conteneur est une grille.

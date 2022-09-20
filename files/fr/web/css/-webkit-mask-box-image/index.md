@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/CSS/-webkit-mask-box-image
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La propriété **`-webkit-mask-box-image`** permet de définir l'image de masque utilisée pour la boîte de bordure d'un élément.

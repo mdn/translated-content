@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/overflow-wrap
 ---
+
 {{CSSRef}}
 
 La propriété **`overflow-wrap`** s'applique aux éléments en ligne (_inline_) et est utilisée afin de définir si le navigateur peut ou non faire la césure à l'intérieur d'un mot pour éviter le dépassement d'une chaîne qui serait trop longue afin qu'elle ne dépasse pas de la boîte.

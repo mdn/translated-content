@@ -8,6 +8,7 @@ tags:
   - SVG
 translation_of: Web/CSS/text-rendering
 ---
+
 {{CSSRef}}
 
 La propriété **`text-rendering`** donne de l'information au moteur de rendu sur ce qu'il doit optimiser lors de l'affichage du texte.
