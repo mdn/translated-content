@@ -117,4 +117,4 @@ A seguir, é apresentada uma lista completa de todos os elementos no nível de b
 
 ### Veja também
 
-- [Elementos Emlinha](/pt-BR/docs/Web/HTML/Inline_elements "en/HTML/Inline_elements")
+- [Elementos Emlinha](/pt-BR/docs/Web/HTML/Inline_elements)

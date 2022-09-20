@@ -1,17 +1,6 @@
 ---
 title: unicode-range
 slug: Web/CSS/@font-face/unicode-range
-tags:
-  - アットルール記述子
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - 実験的
-  - レイアウト
-  - リファレンス
-  - ウェブ
-browser-compat: css.at-rules.font-face.unicode-range
-translation_of: Web/CSS/@font-face/unicode-range
 ---
 {{CSSRef}}
 

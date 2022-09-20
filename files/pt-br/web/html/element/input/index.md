@@ -168,11 +168,11 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Atributos_globais).
 - {{htmlattrdef("max")}} {{HTMLVersionInline("5")}}
   - : O valor máximo (numérico ou data) para este item, que não deve ser menor que seu valor mínimo (atributo **min**).
 - {{htmlattrdef("maxlength")}}
-  - : Se o valor do atributo **type** for `text`, `email`,` search`, `password`, `tel` ou `url`, este atributo especifica o número máximo de caracteres (em pontos de código Unicode) que o usuário pode inserir; para outros tipos de controle, este atributo é ignorado. Seu valor pode exceder o do atributo **size**. Se não for especificado, o usuário pode inserir uma quantidade ilimitada de caracteres. Especificar um valor negativo resulta no comportamento padrão, isto é, o usuário vai poder inserir um número ilimitado de caracteres. Esta regra só é validada quando o valor do atributo é modificado.
+  - : Se o valor do atributo **type** for `text`, `email`, `search`, `password`, `tel` ou `url`, este atributo especifica o número máximo de caracteres (em pontos de código Unicode) que o usuário pode inserir; para outros tipos de controle, este atributo é ignorado. Seu valor pode exceder o do atributo **size**. Se não for especificado, o usuário pode inserir uma quantidade ilimitada de caracteres. Especificar um valor negativo resulta no comportamento padrão, isto é, o usuário vai poder inserir um número ilimitado de caracteres. Esta regra só é validada quando o valor do atributo é modificado.
 - {{htmlattrdef("min")}} {{HTMLVersionInline("5")}}
   - : O valor mínimo (númerico ou data) para este item, que não deve ser maior do que seu máximo (atributo **max**).
 - {{htmlattrdef("minlength")}} {{HTMLVersionInline("5")}}
-  - : Se o valor do atributo **type** for `text`, `email`,` search`, `password`, `tel` ou `url`, este atributo especifica o número mínimo de caracteres (em pontos de código Unicode) que o usuário pode inserir; para outros tipos de controle, este atributo é ignorado.
+  - : Se o valor do atributo **type** for `text`, `email`, `search`, `password`, `tel` ou `url`, este atributo especifica o número mínimo de caracteres (em pontos de código Unicode) que o usuário pode inserir; para outros tipos de controle, este atributo é ignorado.
 - {{htmlattrdef("multiple")}} {{HTMLVersionInline("5")}}
   - : Este atributo booleano indica se o usuário pode inserir mais de um valor. Ele é aplicado quando o atributo **type** está definido como `email` ou `file`; em outros casos, é ignorado.
 - {{htmlattrdef("name")}}

@@ -13,15 +13,15 @@ translation_of: Web/HTML/Element/ruby
 
 O **elemento** **HTML `<ruby>` **representa uma anotação ruby. Anotações ruby são para mostrar a pronúncia de caracteres do Leste Asiático
 
-- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories "HTML/Content_categories")_ [Conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#Flow_content "HTML/Content_categories#Phrasing_content"), [conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Phrasing_content"), conteúdo palpável.
-- _Conteúdo permitido_ [Conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Phrasing_content").
+- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#Flow_content), [conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content), conteúdo palpável.
+- _Conteúdo permitido_ [Conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content).
 - _Omissão de tag_ {{no_tag_omission}}
 - \_Elementos pais permitidos_Ver prosa
 - _Interface DOM_ {{domxref("HTMLElement")}}
 
 ## Atributos
 
-Esse elemento somente inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes "HTML/Atributos Globais").
+Esse elemento somente inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 ## Exemplos
 

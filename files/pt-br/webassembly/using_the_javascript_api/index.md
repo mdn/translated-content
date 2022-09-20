@@ -27,10 +27,10 @@ Vamos percorrer o passo a passo de um exemplo que explica como usar a API JavaSc
 
 ### Preparando o exemplo
 
-1.  Primeiro precisamos de um módulo wasm! Pegue o nosso arquivo [simple.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm) e salve uma cópia em um novo diretório em sua máquina local.
-2.  Depois, tenha certeza de que você está usando um browser com suporte ao WebAssembly. O Firefox 52+ e o Chrome 57+ já vem com WebAssembly habilitado por padrão.
-3.  Depois, crie um arquivo html simples chamado `index.html` no mesmo diretório que seu arquivo wasm (você pode usar o nosso [template simples](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) caso você não tenha algum por aí).
-4.  Agora, para ajudar a entender o que está acontecendo aqui, vamos olhar a representação textual do nosso módulo wasm (do qual também encontramos em [Converting WebAssembly format to wasm](/pt-BR/docs/WebAssembly/Text_format_to_wasm#A_first_look_at_the_text_format)):
+1. Primeiro precisamos de um módulo wasm! Pegue o nosso arquivo [simple.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm) e salve uma cópia em um novo diretório em sua máquina local.
+2. Depois, tenha certeza de que você está usando um browser com suporte ao WebAssembly. O Firefox 52+ e o Chrome 57+ já vem com WebAssembly habilitado por padrão.
+3. Depois, crie um arquivo html simples chamado `index.html` no mesmo diretório que seu arquivo wasm (você pode usar o nosso [template simples](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) caso você não tenha algum por aí).
+4. Agora, para ajudar a entender o que está acontecendo aqui, vamos olhar a representação textual do nosso módulo wasm (do qual também encontramos em [Converting WebAssembly format to wasm](/pt-BR/docs/WebAssembly/Text_format_to_wasm#A_first_look_at_the_text_format)):
 
     ```
     (module
@@ -40,7 +40,7 @@ Vamos percorrer o passo a passo de um exemplo que explica como usar a API JavaSc
         call $i))
     ```
 
-5.  Na segunda linha, você perceberá que o import tem um namespace de dois níveis — a função interna `$i` que é importada do `imports.imported_func`. Precisamos refletir esse namespace de dois níveis no JavaScript ao escrever o objeto que será importado no módulo wasm. Crie um elemento `<script></script>` no seu arquivo HTML, e adicione o seguinte código:
+5. Na segunda linha, você perceberá que o import tem um namespace de dois níveis — a função interna `$i` que é importada do `imports.imported_func`. Precisamos refletir esse namespace de dois níveis no JavaScript ao escrever o objeto que será importado no módulo wasm. Crie um elemento `<script></script>` no seu arquivo HTML, e adicione o seguinte código:
 
     ```js
     var importObject = {
@@ -104,8 +104,8 @@ In JavaScript, a Memory instance can be thought of as a resizable ArrayBuffer an
 
 Let’s start exploring this by looking at a quick example.
 
-1.  Create another new simple HTML page (copy our [simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)) and call it `memory.html`. Add a `<script></script>` element to the page.
-2.  Now add the following line to the top of your script, to create a memory instance:
+1. Create another new simple HTML page (copy our [simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)) and call it `memory.html`. Add a `<script></script>` element to the page.
+2. Now add the following line to the top of your script, to create a memory instance:
 
     ```js
     var memory = new WebAssembly.Memory({initial:10, maximum:100});
@@ -125,7 +125,7 @@ Let’s start exploring this by looking at a quick example.
     new Uint32Array(memory.buffer)[0]
     ```
 
-3.  Try this now in your demo — save what you’ve added so far, load it in your browser, then try entering the above two lines in your JavaScript console.
+3. Try this now in your demo — save what you’ve added so far, load it in your browser, then try entering the above two lines in your JavaScript console.
 
 ### Growing memory
 
@@ -145,11 +145,11 @@ Just like functions, linear memories can be defined inside a module or imported.
 
 Let’s make the above assertions clearer by looking at a more involved memory example — a WebAssembly module that sums an array of integers. You can find this at [memory.wasm.](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/memory.wasm)
 
-1.  make a local copy of `memory.wasm` in the same directory as before.
+1. make a local copy of `memory.wasm` in the same directory as before.
 
     > **Nota:** You can see the module’s text representation at [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat).
 
-2.  Go back to your `memory.html` sample file, and fetch, compile, and instantiate your wasm module as before — add the following to the bottom of your script:
+2. Go back to your `memory.html` sample file, and fetch, compile, and instantiate your wasm module as before — add the following to the bottom of your script:
 
     ```js
     fetch('memory.wasm').then(response =>
@@ -161,7 +161,7 @@ Let’s make the above assertions clearer by looking at a more involved memory e
     });
     ```
 
-3.  Since this module exports its memory, given an Instance of this module called instance we can use an exported function `accumulate()` to create and populate an input array directly in the module instance’s linear memory (`mem`). Add the following into your code, where indicated:
+3. Since this module exports its memory, given an Instance of this module called instance we can use an exported function `accumulate()` to create and populate an input array directly in the module instance’s linear memory (`mem`). Add the following into your code, where indicated:
 
     ```js
     var i32 = new Uint32Array(results.instance.exports.mem.buffer);
@@ -198,12 +198,12 @@ Tables can be mutated via [`Table.prototype.set()`](/en-US/docs/Web/JavaScript/R
 
 Let’s looking at an simple table example — a WebAssembly module that creates and exports a table with two elements: element 0 returns 13 and element 1 returns 42. You can find this at [table.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/table.wasm).
 
-1.  Make a local copy of `table.wasm` in a new directory.
+1. Make a local copy of `table.wasm` in a new directory.
 
     > **Nota:** You can see the module’s text representation at [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat).
 
-2.  Create a new copy of our [HTML template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) in the same directory and call it `table.html`.
-3.  As before, fetch, compile, and instantiate your wasm module — add the following into a {{htmlelement("script")}} element at the bottom of your HTML body:
+2. Create a new copy of our [HTML template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) in the same directory and call it `table.html`.
+3. As before, fetch, compile, and instantiate your wasm module — add the following into a {{htmlelement("script")}} element at the bottom of your HTML body:
 
     ```js
     fetch('table.wasm').then(response =>
@@ -215,7 +215,7 @@ Let’s looking at an simple table example — a WebAssembly module that creates
     });
     ```
 
-4.  Now let’s access the data in the tables — add the following lines to your code in the indicated place:
+4. Now let’s access the data in the tables — add the following lines to your code in the indicated place:
 
     ```js
     var tbl = results.instance.exports.tbl;

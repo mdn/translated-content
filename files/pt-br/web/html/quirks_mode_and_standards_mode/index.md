@@ -42,7 +42,7 @@ Veja também uma descrição detalhada de [quando diferentes navegadores escolhe
 
 ### XHTML
 
-Se você servir sua página como [XHTML](/pt-BR/docs/XHTML "XHTML") usando o MIME type `application/xhtml+xml` no cabeçalho HTTP `Content-Type`, você não precisará de um DOCTYPE para ativar o _full standards mode_, já que tais documentos sempre usam este modo. Note porém que servir suas páginas como `application/xhtml+xml` irá fazer com que o Internet Explorer 8 (e anteriores) [mostre uma caixa de diálogo para download](/pt-BR/docs/XHTML#Support "XHTML") de um formato desconhecido ao invés de exibir sua página, pois a primeira versão do Internet Explorer com suporte ao XHTML é o Internet Explorer 9.
+Se você servir sua página como [XHTML](/pt-BR/docs/XHTML) usando o MIME type `application/xhtml+xml` no cabeçalho HTTP `Content-Type`, você não precisará de um DOCTYPE para ativar o _full standards mode_, já que tais documentos sempre usam este modo. Note porém que servir suas páginas como `application/xhtml+xml` irá fazer com que o Internet Explorer 8 (e anteriores) [mostre uma caixa de diálogo para download](/pt-BR/docs/XHTML#Support) de um formato desconhecido ao invés de exibir sua página, pois a primeira versão do Internet Explorer com suporte ao XHTML é o Internet Explorer 9.
 
 Se você servir conteúdo como XHTML usando o MIME type `text/html`, os navegadores irão lê-lo como HTML, e você precisará colocar o DOCTYPE para usar o _standards mode_.
 
@@ -54,4 +54,4 @@ No Internet Explorer, pressione _F12_, e procure por _Modo de Documento_.
 
 ## Quais as diferenças entre os modos?
 
-Veja a [lista de peculiaridades ("quirks")](/pt-BR/docs/Mozilla_Quirks_Mode_Behavior "Mozilla_Quirks_Mode_Behavior") e "[almost standards mode](/pt-BR/docs/Gecko's_"Almost_Standards"_Mode "Gecko%27s_%22Almost_Standards%22_Mode")" para entender a diferença entre estes modos.
+Veja a [lista de peculiaridades ("quirks")](/pt-BR/docs/Mozilla_Quirks_Mode_Behavior) e "[almost standards mode](/pt-BR/docs/Gecko's_"Almost_Standards"_Mode)" para entender a diferença entre estes modos.

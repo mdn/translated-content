@@ -33,7 +33,7 @@ Este elemento não é suportado, e portanto implementa a interface {{domxref("HT
 
 ## Especificação
 
-Este elemento não é padrão e não faz parte de nenhuma especificação. Se você não acredita em nós,[ veja por si mesmo na especificação HTML](http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#non-conforming-features).
+Este elemento não é padrão e não faz parte de nenhuma especificação. Se você não acredita em nós, [veja por si mesmo na especificação HTML](http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#non-conforming-features).
 
 ## Compatibilidade com navegadores
 
