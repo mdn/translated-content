@@ -1,21 +1,6 @@
 ---
 title: ウェブの行列計算
 slug: Web/API/WebGL_API/Matrix_math_for_the_web
-tags:
-  - 3D
-  - 3D2D
-  - Animation
-  - CSS
-  - GLSL
-  - Graphics
-  - Guide
-  - WebGL
-  - WebXR
-  - matrices
-  - matrix
-  - rendering
-  - transform3d
-translation_of: Web/API/WebGL_API/Matrix_math_for_the_web
 ---
 {{WebGLSidebar}}
 

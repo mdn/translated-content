@@ -4,7 +4,7 @@ slug: Web/API/Element/transitionstart_event
 ---
 {{APIRef}}{{SeeCompatTable}}
 
-**`transitionstart`** 事件会在 [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) 实际开始的时候触发， 或者说在某个 {{cssxref("transition-delay")}} 已经结束之后触发。
+**`transitionstart`** 事件会在 [CSS transition](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) 实际开始的时候触发， 或者说在某个 {{cssxref("transition-delay")}} 已经结束之后触发。
 
 <table class="properties">
   <tbody>
@@ -39,7 +39,7 @@ element.addEventListener('transitionstart', () => {
 });
 ```
 
-一样的代码，但是使用 [`ontransitionstart`](/en-US/docs/Web/API/GlobalEventHandlers/ontransitionstart) 属性来替代 `addEventListener()`：
+一样的代码，但是使用 [`ontransitionstart`](/zh-CN/docs/Web/API/GlobalEventHandlers/ontransitionstart) 属性来替代 `addEventListener()`：
 
 ```js
 element.ontransitionstart = () => {

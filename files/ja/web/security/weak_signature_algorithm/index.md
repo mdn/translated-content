@@ -1,12 +1,6 @@
 ---
 title: 脆弱な署名アルゴリズム
 slug: Web/Security/Weak_Signature_Algorithm
-tags:
-  - Cryptography
-  - ウェブ
-  - ガイド
-  - セキュリティ
-translation_of: Web/Security/Weak_Signature_Algorithm
 ---
 {{Glossary("Digital certificate", "ディジタル証明書")}}の{{Glossary("Signature/Security", "電子署名")}}に用いられるハッシュアルゴリズムの強度は、証明書のセキュリティにおいて核心的な要素です。この記事では、脆弱になったため、可能であれば避けるものと知られている署名アルゴリズムについて、いくらかの情報を提供します。
 

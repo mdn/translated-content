@@ -1,19 +1,6 @@
 ---
 title: VideoTrack.kind
 slug: Web/API/VideoTrack/kind
-tags:
-  - API
-  - HTML DOM
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Video
-  - Video Track
-  - VideoTrack
-  - id
-  - track
-translation_of: Web/API/VideoTrack/kind
 ---
 {{APIRef("HTML DOM")}}
 

@@ -1,14 +1,6 @@
 ---
 title: CSS Houdini
 slug: Web/CSS/CSS_Houdini
-tags:
-  - CSS
-  - Houdini
-  - Experimental
-  - Guide
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Houdini
 ---
 {{CSSRef}}
 

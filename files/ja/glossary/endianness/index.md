@@ -14,16 +14,16 @@ slug: Glossary/Endianness
 - _ビッグエンディアン_: `0x12 0x34 0x56 0x78`
 - _ミックスドエンディアン_ (古く非常に稀): `0x34 0x12 0x78 0x56`
 
-1.  関連情報
+1. 関連情報
 
-    1.  {{jsxref("ArrayBuffer")}}
-    2.  {{jsxref("DataView")}}
-    3.  [型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+    1. {{jsxref("ArrayBuffer")}}
+    2. {{jsxref("DataView")}}
+    3. [型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
 
-2.  Wikipedia 記事
+2. Wikipedia 記事
 
-    1.  {{Interwiki("wikipedia", "エンディアン")}}
+    1. {{Interwiki("wikipedia", "エンディアン")}}
 
-3.  [用語集](/ja/docs/Glossary)
+3. [用語集](/ja/docs/Glossary)
 
-    1.  {{Glossary("Data structure", "データ構造")}}
+    1. {{Glossary("Data structure", "データ構造")}}

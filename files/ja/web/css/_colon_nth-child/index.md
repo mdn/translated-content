@@ -1,15 +1,6 @@
 ---
 title: ':nth-child()'
 slug: Web/CSS/:nth-child
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.nth-child
-translation_of: Web/CSS/:nth-child
 ---
 {{CSSRef}}
 

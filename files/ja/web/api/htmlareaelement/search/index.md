@@ -1,14 +1,6 @@
 ---
 title: HTMLAreaElement.search
 slug: Web/API/HTMLAreaElement/search
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAreaElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAreaElement.search
-translation_of: Web/API/HTMLAreaElement/search
 original_slug: Web/API/HTMLHyperlinkElementUtils/search
 ---
 {{ApiRef("HTML DOM")}}

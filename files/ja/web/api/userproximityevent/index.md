@@ -1,12 +1,6 @@
 ---
 title: UserProximityEvent
 slug: Web/API/UserProximityEvent
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Proximity Events
-translation_of: Web/API/UserProximityEvent
 ---
 {{APIRef("Proximity Events")}}{{SeeCompatTable}}
 

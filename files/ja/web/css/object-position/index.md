@@ -1,19 +1,6 @@
 ---
 title: object-position
 slug: Web/CSS/object-position
-tags:
-  - CSS
-  - CSS 画像
-  - CSS プロパティ
-  - レイアウト
-  - 位置
-  - Reference
-  - 置換要素
-  - css レイアウト
-  - object-position
-  - recipe:css-property
-browser-compat: css.properties.object-position
-translation_of: Web/CSS/object-position
 ---
 {{CSSRef}}
 

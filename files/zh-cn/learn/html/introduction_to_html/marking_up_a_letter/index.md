@@ -44,7 +44,7 @@ slug: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
 - 信件正文中有 5 个首字母缩略词/缩写词（PhD、HTML、CSS、BC、Esq），给出这些词语的英文全称。
 - 正确标注 6 个下标/上标（位于化学方程式、科学计数法中）。
 - 试着标记至少对两个单词进行着重（`<strong>`）/ 强调（`<em>`）显示。
-- 有两个地方应加上超链接，要为它们添加适当的标题。链接指向 https\://example.com/ 即可。
+- 有两个地方应加上超链接，要为它们添加适当的标题。链接指向 `https://example.com/` 即可。
 - 用适当的元素标记校训和引文。
 
 ### 文档的头部

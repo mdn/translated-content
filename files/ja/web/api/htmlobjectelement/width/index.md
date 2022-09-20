@@ -1,17 +1,6 @@
 ---
 title: HTMLObjectElement.width
 slug: Web/API/HTMLObjectElement/width
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLObjectElement
-  - NeedsExample
-  - Property
-  - Reference
-  - width
-browser-compat: api.HTMLObjectElement.width
-translation_of: Web/API/HTMLObjectElement/width
 ---
 {{APIRef("HTML DOM")}}
 

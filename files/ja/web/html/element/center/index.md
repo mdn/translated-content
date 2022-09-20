@@ -1,18 +1,6 @@
 ---
 title: '<center>: 文字列の中央揃え要素'
 slug: Web/HTML/Element/center
-tags:
-  - 要素
-  - HTML
-  - 非推奨
-  - リファレンス
-  - テキスト
-  - テキスト配置
-  - ウェブ
-  - 配置
-  - center
-browser-compat: html.elements.center
-translation_of: Web/HTML/Element/center
 ---
 
 {{deprecated_header}}

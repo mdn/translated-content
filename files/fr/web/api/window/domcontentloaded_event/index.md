@@ -61,5 +61,5 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 ## Voir aussi
 
-- Évènements associés&nbsp;: {{event("load")}}, {{event("readystatechange")}}, {{event("beforeunload")}}, {{event("unload")}}
+- Évènements associés&nbsp;: [`load`](/fr//docs/Web/API/Window/load_event), [`readystatechange`](/fr/docs/Web/API/Document/readystatechange_event), [`beforeunload`](/fr/docs/Web/API/Window/beforeunload_event), [`unload`](/fr/docs/Web/API/Window/unload_event)
 - Cet évènement sur les cibles {{domxref("Document")}}&nbsp;: {{domxref("Document/DOMContentLoaded_event", "Document: DOMContentLoaded event")}}

@@ -1,14 +1,6 @@
 ---
 title: History API
 slug: Web/API/History_API
-tags:
-  - API
-  - Advanced
-  - DOM
-  - HTML5
-  - History
-  - 履歴
-translation_of: Web/API/History_API
 ---
 {{DefaultAPISidebar("History API")}}
 

@@ -1,16 +1,6 @@
 ---
 title: RegExp.prototype.hasIndices
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices
-tags:
-  - Draft
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
-browser-compat: javascript.builtins.RegExp.hasIndices
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices
 ---
 {{JSRef}}
 

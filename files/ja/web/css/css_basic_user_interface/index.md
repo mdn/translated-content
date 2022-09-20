@@ -1,13 +1,6 @@
 ---
 title: CSS 基本ユーザーインターフェイス
 slug: Web/CSS/CSS_Basic_User_Interface
-tags:
-  - CSS
-  - CSS 基本ユーザーインターフェイス
-  - ガイド
-  - 概要
-  - Reference
-translation_of: Web/CSS/CSS_Basic_User_Interface
 ---
 {{CSSRef}}
 

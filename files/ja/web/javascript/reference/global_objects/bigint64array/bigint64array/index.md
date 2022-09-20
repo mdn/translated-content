@@ -1,13 +1,6 @@
 ---
 title: BigInt64Array() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/BigInt64Array/BigInt64Array
-tags:
-  - BigInt
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt64Array/BigInt64Array
 ---
 {{JSRef}}
 
@@ -77,6 +70,6 @@ var bigint64 = new BigInt64Array(iterable);
 
 ## 関連情報
 
-- [JavaScript typed arrays](/ja/docs/Web/JavaScript/Typed_arrays "en/JavaScript typed arrays")
+- [JavaScript typed arrays](/ja/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("BigUint64Array")}}
 - {{jsxref("DataView")}}

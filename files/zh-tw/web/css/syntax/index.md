@@ -2,6 +2,7 @@
 title: 語法
 slug: Web/CSS/Syntax
 ---
+
 {{cssref}}
 
 串接式樣式表 ([CSS](/zh-TW/docs/Web/CSS)) 語言的基礎目標是是讓瀏覽器引擎用特定的功能將元素寫在頁面上，像是顏色、位置與裝飾。CSS 語法反映出了目的，而它的基本組成為：

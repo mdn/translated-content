@@ -1,15 +1,6 @@
 ---
 title: WindowClient
 slug: Web/API/WindowClient
-tags:
-  - API
-  - Client
-  - Interface
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - WindowClient
-translation_of: Web/API/WindowClient
 ---
 {{APIRef("Service Workers API")}}
 

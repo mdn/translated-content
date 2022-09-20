@@ -1,15 +1,6 @@
 ---
 title: WindowClient.focused
 slug: Web/API/WindowClient/focused
-tags:
-  - API
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - WindowClient
-  - focused
-translation_of: Web/API/WindowClient/focused
 ---
 {{APIRef("Service Workers API")}}
 

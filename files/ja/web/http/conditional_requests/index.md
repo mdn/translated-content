@@ -1,11 +1,6 @@
 ---
 title: HTTP 条件付きリクエスト
 slug: Web/HTTP/Conditional_requests
-tags:
-  - Conditional Requests
-  - Guide
-  - HTTP
-translation_of: Web/HTTP/Conditional_requests
 ---
 {{HTTPSidebar}}
 

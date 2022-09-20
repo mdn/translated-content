@@ -1,20 +1,6 @@
 ---
 title: HTMLImageElement.border
 slug: Web/API/HTMLImageElement/border
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - 画像
-  - プロパティ
-  - リファレンス
-  - border
-  - img
-  - 非推奨
-browser-compat: api.HTMLImageElement.border
-translation_of: Web/API/HTMLImageElement/border
 ---
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 

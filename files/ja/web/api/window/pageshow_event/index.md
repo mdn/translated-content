@@ -1,23 +1,6 @@
 ---
 title: 'Window: pageshow イベント'
 slug: Web/API/Window/pageshow_event
-tags:
-  - API
-  - Document
-  - Event
-  - History
-  - Navigation
-  - Page
-  - PageTransitionEvent
-  - Reference
-  - Window
-  - pageshow
-  - show
-  - イベント
-  - ナビゲーション
-  - ページ
-  - 履歴
-translation_of: Web/API/Window/pageshow_event
 ---
 {{APIRef("HTML DOM")}}
 

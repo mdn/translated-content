@@ -1,14 +1,7 @@
 ---
 title: scaleZ()
 slug: Web/CSS/transform-function/scaleZ
-tags:
-  - CSS
-  - CSS 関数
-  - CSS 座標変換
-  - 関数
-  - リファレンス
 original_slug: Web/CSS/transform-function/scaleZ()
-browser-compat: css.types.transform-function.scaleZ
 ---
 {{CSSRef}}
 

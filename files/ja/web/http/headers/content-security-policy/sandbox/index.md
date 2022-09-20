@@ -1,15 +1,6 @@
 ---
 title: 'CSP: sandbox'
 slug: Web/HTTP/Headers/Content-Security-Policy/sandbox
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Sandbox
-  - Security
-browser-compat: http.headers.Content-Security-Policy.sandbox
-translation_of: Web/HTTP/Headers/Content-Security-Policy/sandbox
 ---
 {{HTTPSidebar}}
 

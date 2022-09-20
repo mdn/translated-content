@@ -1,17 +1,6 @@
 ---
 title: WebSocket サーバーの記述
 slug: Web/API/WebSockets_API/Writing_WebSocket_servers
-tags:
-  - ガイド
-  - HTML5
-  - NeedsContent
-  - NeedsExample
-  - NeedsMarkupWork
-  - チュートリアル
-  - WebSocket
-  - WebSocket API
-  - WebSockets
-translation_of: Web/API/WebSockets_API/Writing_WebSocket_servers
 ---
 {{APIRef("Websockets API")}}
 

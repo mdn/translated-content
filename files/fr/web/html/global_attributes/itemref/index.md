@@ -59,14 +59,11 @@ Au format [JSON-LD](https://json-ld.org/) :
 
 ## Spécifications
 
-| Spécification                                                                                | État                                 | Commentaires |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------ |
-| {{SpecName('HTML Microdata', "#dfn-itemref", "itemref")}}                 | {{Spec2('HTML Microdata')}} |              |
-| {{SpecName('HTML WHATWG', "microdata.html#attr-itemref", "itemref")}} | {{Spec2('HTML WHATWG')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.itemref")}}
+{{Compat}}
 
 ## Voir aussi
 

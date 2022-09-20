@@ -1,14 +1,6 @@
 ---
 title: 段組みレイアウトの使用
 slug: Web/CSS/CSS_Columns/Using_multi-column_layouts
-tags:
-  - Advanced
-  - CSS
-  - CSS Multi-column Layout
-  - Guide
-  - Layout
-  - Web
-translation_of: Web/CSS/CSS_Columns/Using_multi-column_layouts
 l10n:
   sourceCommit: 77abaefce3b90a6439c5bd4a162956e7d0cf8fda
 ---

@@ -1,14 +1,6 @@
 ---
 title: IDBFactory.cmp
 slug: Web/API/IDBFactory/cmp
-tags:
-  - API
-  - Database
-  - IDBFactory
-  - IndexedDB
-  - Storage
-  - cmp
-translation_of: Web/API/IDBFactory/cmp
 ---
 {{ APIRef("IDBFactory") }}
 

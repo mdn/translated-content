@@ -1,11 +1,6 @@
 ---
 title: CharacterData.substringData()
 slug: Web/API/CharacterData/substringData
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.CharacterData.substringData
-translation_of: Web/API/CharacterData/substringData
 ---
 {{APIRef("DOM")}}
 

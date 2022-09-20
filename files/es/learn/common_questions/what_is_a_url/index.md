@@ -105,40 +105,78 @@ Veamos algunos ejemplos para aclarar esto.
 
 #### Ejemplos de URL absolutas
 
-- URL Completa (la misma que usamos antes)
-  - : &nbsp;
-      ```
-      https://developer.mozilla.org/en-US/docs/Learn
-      ```
-- Protocolo implícito
-  - : &nbsp;
-      ```
-      //developer.mozilla.org/en-US/docs/Learn
-      ```
-      En este caso, el navegador llamará a esa URL con el mismo protocolo que el utilizado para cargar el documento que aloja esa URL.
-- Nombre de dominio implícito
-  - : &nbsp;
-      ```
-      /en-US/docs/Learn
-      ```
-      Este es el caso de uso más común para una URL absoluta dentro de un documento HTML. El navegador utilizará el mismo protocolo y el mismo nombre de dominio que el utilizado para cargar el documento que aloja esa URL. **Nota:** no es posible omitir el nombre de dominio sin omitir también el protocolo.
+<table>
+  <tbody>
+    <tr>
+      <td>URL Completa (la misma que usamos antes)</td>
+      <td><pre>https://developer.mozilla.org/en-US/docs/Learn</pre></td>
+    </tr>
+    <tr>
+      <td>Protocolo implícito</td>
+      <td>
+        <pre>//developer.mozilla.org/en-US/docs/Learn</pre>
+        <p>
+          En este caso, el navegador llamará a esa URL con el mismo protocolo
+          que el utilizado para cargar el documento que aloja esa URL.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>Nombre de dominio implícito</td>
+      <td>
+        <pre>/en-US/docs/Learn</pre>
+        <p>
+          Este es el caso de uso más común para una URL absoluta dentro de un
+          documento HTML. El navegador utilizará el mismo protocolo y el mismo
+          nombre de dominio que el utilizado para cargar el documento que aloja
+          esa URL.
+          <strong>Note:</strong>
+          <em
+            >no es posible omitir el nombre de dominio sin omitir también el
+            protocolo.</em
+          >.
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 #### Ejemplos de URL relativas
 
 Para comprender mejor los siguientes ejemplos, supongamos que las URL se invocan desde el documento ubicado en la siguiente URL: `https://developer.mozilla.org/en-US/docs/Learn`
 
-- Sub-recursos
-  - : &nbsp;
-      ```
-      Skills/Infrastructure/Understanding_URLs
-      ```
-      Debido a que la URL no se inicia con `/`, el navegador intentará encontrar el documento en un subdirectorio del que contiene el recurso actual. Entonces, en este ejemplo, realmente queremos llegar a esta URL: `https://developer.mozilla.org/en-US/docs/Learn/Skills/Infrastructure/Understanding_URLs`
-- Volviendo en el árbol de directorios
-  - : &nbsp;
-      ```
-      ../CSS/display
-      ```
-      En este caso, usamos el `../` convención de escritura, heredada del mundo del sistema de archivos UNIX, para decirle al navegador que queremos subir desde un directorio. Aquí queremos llegar a esta URL:`https://developer.mozilla.org/en-US/docs/Learn/../CSS/display`, que se puede simplificar a: `https://developer.mozilla.org/en-US/docs/CSS/display`
+<table>
+  <tbody>
+    <tr>
+      <td>Sub-recursos</td>
+      <td>
+        <pre>Skills/Infrastructure/Understanding_URLs</pre>
+        <p>
+          Debido a que la URL no se inicia con <code>/</code>el navegador
+          intentará encontrar el documento en un subdirectorio del que contiene
+          el recurso actual. Entonces, en este ejemplo, realmente queremos
+          llegar a esta URL:
+          https://developer.mozilla.org/en-US/docs/Learn/Skills/Infrastructure/Understanding_URLs.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>Volviendo en el árbol de directorios</td>
+      <td>
+        <pre>../CSS/display</pre>
+        <p>
+          En este caso, usamos el <code>../</code> convención de escritura,
+          heredada del mundo del sistema de archivos UNIX, para decirle al
+          navegador que queremos subir desde un directorio. Aquí queremos
+          llegar a esta URL:
+          https://developer.mozilla.org/en-US/docs/Learn/../CSS/display, que se
+          puede simplificar a:
+          https://developer.mozilla.org/en-US/docs/CSS/display.
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ### URL semánticas
 

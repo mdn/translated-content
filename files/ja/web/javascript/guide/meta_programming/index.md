@@ -1,14 +1,6 @@
 ---
 title: メタプログラミング
 slug: Web/JavaScript/Guide/Meta_programming
-tags:
-  - ECMAScript 2015
-  - Guide
-  - JavaScript
-  - Proxy
-  - Reflect
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Meta_programming
 ---
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Iterators_and_Generators", "Web/JavaScript/Guide/Modules")}}
 
@@ -240,6 +232,7 @@ console.log(p.a, p.b) // 1, 42
           </dd>
           <dt>継承されたプロパティへのアクセス</dt>
           <dd>
+            <!-- markdownlint-disable MD011 -->
             <code>Object.create(<var>proxy</var>)[foo]</code
             ><br />{{jsxref("Reflect.get()")}}
           </dd>

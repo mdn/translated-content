@@ -1,18 +1,6 @@
 ---
 title: 制御フローとエラー処理
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
-tags:
-  - Beginner
-  - Decision making
-  - Error Handling
-  - Flow control
-  - Guide
-  - JavaScript
-  - Logic
-  - control
-  - l10n:priority
-  - statements
-translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
 
@@ -427,8 +415,8 @@ try {
 
 内側の `try...catch` 文に `catch` ブロックが*ない*場合は次のようになります。
 
-1.  `finally` ブロックを含む必要があります。そして、
-2.  囲んでいる `try...catch` 文の `catch` ブロックがエラーの照合先としてチェックされます。
+1. `finally` ブロックを含む必要があります。そして、
+2. 囲んでいる `try...catch` 文の `catch` ブロックがエラーの照合先としてチェックされます。
 
 詳しくは、[`try...catch`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) の中の [nested try-blocks](/ja/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks) を参照してください。
 

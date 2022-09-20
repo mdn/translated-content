@@ -1,12 +1,6 @@
 ---
 title: <xsl:apply-imports>
 slug: Web/XSLT/Element/apply-imports
-tags:
-  - XSLT
-  - apply-imports
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/apply-imports
 ---
 {{ XsltRef() }}
 

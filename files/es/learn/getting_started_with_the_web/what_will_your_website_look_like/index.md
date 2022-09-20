@@ -27,9 +27,9 @@ Antes de hacer nada, necesitas algunas ideas. ¿Qué debería hacer realmente tu
 
 Para comenzar, deberás responder estas preguntas:
 
-1.  **¿De qué trata tu sitio web?**, ¿te gustan los perros, Nueva York o Pac-Man?
-2.  **¿Qué información presentas sobre el tema?**; Escribe un título y algunos párrafos y piensa en una imagen que te gustaría mostrar en tu página.
-3.  **¿Cómo se ve tu sitio web**, en términos simples de alto nivel?, ¿cuál es el color de fondo?, ¿qué tipo de letra es apropiado: formal, caricaturesca, atrevida y fuerte, sutil?
+1. **¿De qué trata tu sitio web?**, ¿te gustan los perros, Nueva York o Pac-Man?
+2. **¿Qué información presentas sobre el tema?**; Escribe un título y algunos párrafos y piensa en una imagen que te gustaría mostrar en tu página.
+3. **¿Cómo se ve tu sitio web**, en términos simples de alto nivel?, ¿cuál es el color de fondo?, ¿qué tipo de letra es apropiado: formal, caricaturesca, atrevida y fuerte, sutil?
 
 > **Nota:** Los proyectos complejos necesitan pautas detalladas que incluyan todos los detalles de los colores, los tipos de letra, el espacio entre los elementos de una página, el estilo de escritura adecuado, etc. Esto, a veces, se denomina guía de diseño, sistema de diseño o libro de marcas, y puedes ver un ejemplo en el [Sistema de diseño de fotones de Firefox](https://design.firefox.com/photon/).
 
@@ -61,8 +61,8 @@ Para elegir un color, ve al [Selector de color](https://developer.mozilla.org/es
 
 Para elegir una imagen, ve a [Imágenes Google](https://www.google.com/imghp?gws_rd=ssl) y busca algo adecuado.
 
-1.  Cuando encuentres la imagen que deseas, haz clic en la imagen para obtener una vista ampliada de la misma.
-2.  Haz clic con el botón derecho en la imagen (Ctrl+clic en una Mac), elige _Guardar imagen como..._ y elige un lugar seguro para guardar tu imagen. Alternativamente, copia la dirección web de la imagen de la barra de direcciones de tu navegador para su posterior uso.
+1. Cuando encuentres la imagen que deseas, haz clic en la imagen para obtener una vista ampliada de la misma.
+2. Haz clic con el botón derecho en la imagen (Ctrl+clic en una Mac), elige _Guardar imagen como..._ y elige un lugar seguro para guardar tu imagen. Alternativamente, copia la dirección web de la imagen de la barra de direcciones de tu navegador para su posterior uso.
 
 ![Imágenes](https://mdn.mozillademos.org/files/16599/updated-google-images.png)
 
@@ -74,10 +74,10 @@ Ten en cuenta que la mayoría de las imágenes en la web, incluidas las de Imág
 
 Para elegir un tipo de letra:
 
-1.  Ve a [Google Fonts](http://www.google.com/fonts) y desplázate hacia abajo en la lista hasta que encuentres una que te guste. También puedes utilizar los controles de la derecha para filtrar aún más los resultados.
-2.  Haz clic en el icono "más" (Agregar a) junto al tipo de letra que desees.
-3.  Haz clic en el botón _"*Familia seleccionada"_ en el panel en la parte inferior de la página ("\*" depende de cuántos tipos de letra hayas seleccionado).
-4.  En el cuadro emergente, puedes ver y copiar las líneas de código que Google te brinda en tu editor de texto para guardarlas para más adelante.
+1. Ve a [Google Fonts](http://www.google.com/fonts) y desplázate hacia abajo en la lista hasta que encuentres una que te guste. También puedes utilizar los controles de la derecha para filtrar aún más los resultados.
+2. Haz clic en el icono "más" (Agregar a) junto al tipo de letra que desees.
+3. Haz clic en el botón _"*Familia seleccionada"_ en el panel en la parte inferior de la página ("\*" depende de cuántos tipos de letra hayas seleccionado).
+4. En el cuadro emergente, puedes ver y copiar las líneas de código que Google te brinda en tu editor de texto para guardarlas para más adelante.
 
 ![Archivos de tipo de letra](https://mdn.mozillademos.org/files/13871/font1.png)
 

@@ -5,7 +5,7 @@ original_slug: Web/Guide/CSS/Using_the_:target_selector
 ---
 {{CSSRef}}
 
-为了辅助标识那些指向文档特定部分链接的目标，[CSS3 选择器](http://www.w3.org/TR/css3-selectors/#target-pseudo) 引入了` {{ Cssxref(":target") }} `[伪类](/en/CSS/Pseudo-classes). Netscape 7.1 已经在 Netscape 系列中加入了这个伪类的支持，这一新的举措让页面作者能够辅助用户在较大的页面中定位。
+为了辅助标识那些指向文档特定部分链接的目标，[CSS3 选择器](http://www.w3.org/TR/css3-selectors/#target-pseudo) 引入了` {{ Cssxref(":target") }} `[伪类](/zh-CN/CSS/Pseudo-classes). Netscape 7.1 已经在 Netscape 系列中加入了这个伪类的支持，这一新的举措让页面作者能够辅助用户在较大的页面中定位。
 
 ### 选择一个目标
 

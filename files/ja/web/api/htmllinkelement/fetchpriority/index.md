@@ -1,18 +1,6 @@
 ---
 title: HTMLLinkElement.fetchPriority
 slug: Web/API/HTMLLinkElement/fetchPriority
-page-type: web-api-instance-property
-tags:
-  - API
-  - Element
-  - HTMLLinkElement
-  - リンク
-  - 先読み API
-  - プロパティ
-  - リファレンス
-  - fetchPriority
-browser-compat: api.HTMLLinkElement.fetchPriority
-translation_of: Web/API/HTMLLinkElement/fetchPriority
 ---
 {{SeeCompatTable}}{{APIRef("HTML DOM")}}
 

@@ -1,12 +1,6 @@
 ---
 title: Firefox 64 for developers
 slug: Mozilla/Firefox/Releases/64
-tags:
-  - '64'
-  - Firefox
-  - Mozilla
-  - Release
-translation_of: Mozilla/Firefox/Releases/64
 ---
 {{FirefoxSidebar}}
 

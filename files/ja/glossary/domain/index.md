@@ -8,9 +8,9 @@ slug: Glossary/Domain
 
 例として、"developer.mozilla.org"というドメイン名の場合：
 
-1.  "org"は、 {{interwiki("wikipedia", "トップレベルドメイン")}} です。トップレベルドメインは、 {{interwiki("wikipedia", "Internet_Assigned_Numbers_Authority", "IANA")}} によってインターネット標準として登録されています。 ここでは"org"とは、最上位のドメインレジストリで定義される"organization（組織）"を意味します。
-2.  "mozilla"は、ドメインです。ドメインを所有したい場合は、最上位のドメインレジストリで許可されているドメイン名 {{interwiki("wikipedia", "レジストラ")}}のひとつとして登録する必要があります。
-3.  "developer"は、サブドメインです。あなたがドメインの所有者であると自分自身を定義することができます。 多くのドメイン所有者は{{Glossary("World_Wide_Web")}}リソースを指すようにサブドメインに "www"を選択しますが、必須ではありません（ただし、余り好ましくないです）。
+1. "org"は、 {{interwiki("wikipedia", "トップレベルドメイン")}} です。トップレベルドメインは、 {{interwiki("wikipedia", "Internet_Assigned_Numbers_Authority", "IANA")}} によってインターネット標準として登録されています。 ここでは"org"とは、最上位のドメインレジストリで定義される"organization（組織）"を意味します。
+2. "mozilla"は、ドメインです。ドメインを所有したい場合は、最上位のドメインレジストリで許可されているドメイン名 {{interwiki("wikipedia", "レジストラ")}}のひとつとして登録する必要があります。
+3. "developer"は、サブドメインです。あなたがドメインの所有者であると自分自身を定義することができます。 多くのドメイン所有者は{{Glossary("World_Wide_Web")}}リソースを指すようにサブドメインに "www"を選択しますが、必須ではありません（ただし、余り好ましくないです）。
 
 ## 詳細情報
 

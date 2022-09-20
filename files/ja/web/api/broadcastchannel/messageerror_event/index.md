@@ -1,9 +1,6 @@
 ---
 title: 'BroadcastChannel: messageerror イベント'
 slug: Web/API/BroadcastChannel/messageerror_event
-tags:
-  - Event
-translation_of: Web/API/BroadcastChannel/messageerror_event
 ---
 {{APIRef}}
 

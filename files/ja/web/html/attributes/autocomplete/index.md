@@ -1,23 +1,6 @@
 ---
 title: 'HTML 属性: autocomplete'
 slug: Web/HTML/Attributes/autocomplete
-tags:
-  - 住所
-  - 属性
-  - メールアドレス
-  - フォーム
-  - HTML
-  - Input
-  - 電話番号
-  - リファレンス
-  - Select
-  - テキスト
-  - ユーザー名
-  - autocomplete
-  - form
-  - パスワード
-  - textarea
-translation_of: Web/HTML/Attributes/autocomplete
 ---
 
 {{HTMLSidebar}}

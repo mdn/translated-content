@@ -1,12 +1,6 @@
 ---
 title: HTMLModElement
 slug: Web/API/HTMLModElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
-translation_of: Web/API/HTMLModElement
 ---
 {{ APIRef("HTML DOM") }}
 

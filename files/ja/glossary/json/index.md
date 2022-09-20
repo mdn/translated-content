@@ -16,4 +16,4 @@ JSON は伝統的な CSV 形式とは異なり、XML のような階層データ
 
 ### 技術リファレンス
 
-- MDN の {{Link("/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON")}}
+- MDN の [JSON](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON)

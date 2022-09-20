@@ -1,15 +1,6 @@
 ---
 title: ':valid'
 slug: Web/CSS/:valid
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.valid
-translation_of: Web/CSS/:valid
 ---
 {{CSSRef}}
 

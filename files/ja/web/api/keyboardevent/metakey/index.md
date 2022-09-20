@@ -1,16 +1,6 @@
 ---
 title: KeyboardEvent.metaKey
 slug: Web/API/KeyboardEvent/metaKey
-page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
-browser-compat: api.KeyboardEvent.metaKey
-translation_of: Web/API/KeyboardEvent/metaKey
 ---
 {{APIRef("UI Events")}}
 

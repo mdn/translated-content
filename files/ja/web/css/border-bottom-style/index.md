@@ -1,14 +1,6 @@
 ---
 title: border-bottom-style
 slug: Web/CSS/border-bottom-style
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.border-bottom-style
-translation_of: Web/CSS/border-bottom-style
 ---
 {{CSSRef}}
 

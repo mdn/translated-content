@@ -124,13 +124,11 @@ body {
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-rb-element', '&lt;rb&gt;')}} | {{Spec2('HTML5 W3C')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.rb")}}
+{{Compat}}
 
 ## Voir aussi
 

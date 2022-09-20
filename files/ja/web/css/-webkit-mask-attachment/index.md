@@ -1,16 +1,6 @@
 ---
 title: '-webkit-mask-attachment'
 slug: Web/CSS/-webkit-mask-attachment
-tags:
-  - CSS
-  - CSS プロパティ
-  - レイアウト
-  - 標準外
-  - リファレンス
-  - ウェブ
-  - recipe:css-property
-browser-compat: css.properties.-webkit-mask-attachment
-translation_of: Web/CSS/-webkit-mask-attachment
 ---
 {{CSSRef}}{{Non-standard_Header}}
 

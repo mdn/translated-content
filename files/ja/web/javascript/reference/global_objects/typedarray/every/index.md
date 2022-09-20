@@ -1,14 +1,6 @@
 ---
 title: TypedArray.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/every
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/every
 ---
 {{JSRef}}
 

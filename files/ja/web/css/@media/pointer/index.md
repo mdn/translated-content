@@ -1,14 +1,6 @@
 ---
 title: pointer
 slug: Web/CSS/@media/pointer
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.pointer
-translation_of: Web/CSS/@media/pointer
 ---
 {{CSSRef}}
 

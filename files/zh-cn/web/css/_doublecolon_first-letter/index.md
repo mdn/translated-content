@@ -4,7 +4,7 @@ slug: Web/CSS/::first-letter
 ---
 {{ CSSRef() }}
 
-[CSS](/en/CSS) [伪元素](/en/CSS/Pseudo-elements) `::first-letter`会选中某 [block-level element](/zh-CN/docs/Web/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes)（块级元素）第一行的第一个字母，并且文字所处的行之前没有其他内容（如图片和内联的表格）。
+[CSS](/zh-CN/CSS) [伪元素](/zh-CN/CSS/Pseudo-elements) `::first-letter`会选中某 [block-level element](/zh-CN/docs/Web/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes)（块级元素）第一行的第一个字母，并且文字所处的行之前没有其他内容（如图片和内联的表格）。
 
 ```
 /* Selects the first letter of a <p> */
@@ -19,7 +19,7 @@ p::first-letter {
 - 另外还会有一些以大写双字母组合命名的语言，比如荷兰的 `IJ`. 在这种罕见情况下，两个大写字母都理应被 `::first-letter` 伪元素匹配到. (但是浏览器对此支持得很糟糕，可以用[浏览器兼容性表格](#浏览器兼容性)进行核实).
 - {{ cssxref("::before") }} 伪元素 和 {{ cssxref("content") }} 属性结合起来有可能会在元素前面注入一些文本。如此，`::first-letter` 将会匹配到 content 文本的首字母。
 
-首行只在 [block-container box](/en/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes)内部才有意义，因此 `::first-letter` 伪元素 只在{{ cssxref("display") }}属性值为 block, `inline-block`, `table-cell`, `list-item` 或者 `table-caption`的元素上才起作用。其他情况下，`::first-letter` 毫无意义。
+首行只在 [block-container box](/zh-CN/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes)内部才有意义，因此 `::first-letter` 伪元素 只在{{ cssxref("display") }}属性值为 block, `inline-block`, `table-cell`, `list-item` 或者 `table-caption`的元素上才起作用。其他情况下，`::first-letter` 毫无意义。
 
 ## 允许的属性值
 

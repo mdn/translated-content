@@ -1,17 +1,6 @@
 ---
 title: String.prototype.split()
 slug: Web/JavaScript/Reference/Global_Objects/String/split
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Regular Expressions
-  - String
-  - プロトタイプ
-  - メソッド
-  - 正規表現
-translation_of: Web/JavaScript/Reference/Global_Objects/String/split
 ---
 {{JSRef}}
 
@@ -151,7 +140,7 @@ console.log(splits)
 
 ### `RegExp` で分割して結果に区切り文字列の一部を含める
 
-`separator` がキャプチャの括弧 ` (``) ` を含む正規表現である場合、一致した結果が配列に含まれます。
+`separator` がキャプチャの括弧 `(` `)` を含む正規表現である場合、一致した結果が配列に含まれます。
 
 ```js
 const myString = 'Hello 1 word. Sentence number 2.'

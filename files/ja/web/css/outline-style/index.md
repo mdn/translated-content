@@ -1,14 +1,6 @@
 ---
 title: outline-style
 slug: Web/CSS/outline-style
-tags:
-  - CSS
-  - CSS 輪郭線
-  - CSS プロパティ
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.outline-style
-translation_of: Web/CSS/outline-style
 ---
 {{CSSRef}}
 

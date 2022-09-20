@@ -1,16 +1,6 @@
 ---
 title: BaseAudioContext.createChannelSplitter()
 slug: Web/API/BaseAudioContext/createChannelSplitter
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - メソッド
-  - リファレンス
-  - ウェブ音声 API
-  - createChannelSplitter
-browser-compat: api.BaseAudioContext.createChannelSplitter
-translation_of: Web/API/BaseAudioContext/createChannelSplitter
 original_slug: Web/API/AudioContext/createChannelSplitter
 ---
 {{ APIRef("Web Audio API") }}

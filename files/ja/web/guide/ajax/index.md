@@ -1,14 +1,6 @@
 ---
 title: AJAX
 slug: Web/Guide/AJAX
-tags:
-  - AJAX
-  - DOM
-  - JSON
-  - JavaScript
-  - References
-  - XMLHttpRequest
-translation_of: Web/Guide/AJAX
 ---
 ## [はじめに](/ja/docs/Web/Guide/AJAX/Getting_Started)
 

@@ -71,7 +71,7 @@ slug: Web/HTML/Element/Input/submit
 
 一个字符串，指示要将数据提交到的 URL。 这优先于拥有 {{HTMLElement("input")}} 的 {{HTMLElement("form")}} 元素上的 {{htmlattrxref("action", "form")}} 属性。
 
-此属性在 [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) 元素和{{HTMLElement("button")}} 元素上也可用。
+此属性在 [`<input type="image">`](/zh-CN/docs/Web/HTML/Element/input/image) 元素和{{HTMLElement("button")}} 元素上也可用。
 
 ### formenctype
 
@@ -80,13 +80,13 @@ slug: Web/HTML/Element/Input/submit
 - `application/x-www-form-urlencoded`
   - : 这是默认值，它使用 {{jsxref("encodeURI", "encodeURI()")}} 之类的算法对文本进行 URL 编码后，以字符串形式发送表单数据。
 - `multipart/form-data`
-  - : 使用 {{domxref("FormData")}} API 来管理数据，从而允许将文件提交到服务器。 如果您的表单包含 {{htmlattrxref("type", "input")}} `file` ([`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file)) 的任何 {{HTMLElement("input")}} 元素，则必须使用此编码类型。
+  - : 使用 {{domxref("FormData")}} API 来管理数据，从而允许将文件提交到服务器。 如果您的表单包含 {{htmlattrxref("type", "input")}} `file` ([`<input type="file">`](/zh-CN/docs/Web/HTML/Element/input/file)) 的任何 {{HTMLElement("input")}} 元素，则必须使用此编码类型。
 - `text/plain`
   - : 纯文本; 通常仅对调试有用，因此您可以轻松查看要提交的数据。
 
 如果指定，则 `formenctype` 属性的值将覆盖拥有表单的 {{htmlattrxref("action", "form")}}属性。
 
-此属性在 [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) 元素和{{HTMLElement("button")}} 元素上也可用。
+此属性在 [`<input type="image">`](/zh-CN/docs/Web/HTML/Element/input/image) 元素和{{HTMLElement("button")}} 元素上也可用。
 
 ### formmethod
 
@@ -99,13 +99,13 @@ slug: Web/HTML/Element/Input/submit
 - `dialog`
   - : 此方法用于指示按钮仅关闭与输入关联的对话框，而根本不传输表单数据。
 
-此属性在 [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) 元素和{{HTMLElement("button")}} 元素上也可用。
+此属性在 [`<input type="image">`](/zh-CN/docs/Web/HTML/Element/input/image) 元素和{{HTMLElement("button")}} 元素上也可用。
 
 ### formnovalidate
 
 布尔属性，如果存在，则指定在提交给服务器之前不应对表单进行验证。 这将覆盖元素拥有表单上的 {{htmlattrxref("novalidate", "form")}} 属性的值。
 
-此属性在 [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) 元素和{{HTMLElement("button")}} 元素上也可用。
+此属性在 [`<input type="image">`](/zh-CN/docs/Web/HTML/Element/input/image) 元素和{{HTMLElement("button")}} 元素上也可用。
 
 ### formtarget
 
@@ -122,11 +122,11 @@ slug: Web/HTML/Element/Input/submit
 - `_top`
   - : 将响应加载到顶级浏览上下文中； 这是浏览上下文，它是当前上下文的最高级祖先。 如果当前上下文是最顶层的上下文，则其行为与 `_self`相同。
 
-此属性在 [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) 元素和{{HTMLElement("button")}} 元素上也可用。
+此属性在 [`<input type="image">`](/zh-CN/docs/Web/HTML/Element/input/image) 元素和{{HTMLElement("button")}} 元素上也可用。
 
 ## 使用提交按钮
 
-`<input type="submit">` 按钮用于提交 form 表单。如果你想要创建一个自定义的按钮，然后通过 JavaScript 自定义按钮的行为，你需要使用 [`<input type="button">`](/en-US/docs/Web/HTML/Element/input/button), 或者使用更好的 {{htmlelement("button")}} 元素。
+`<input type="submit">` 按钮用于提交 form 表单。如果你想要创建一个自定义的按钮，然后通过 JavaScript 自定义按钮的行为，你需要使用 [`<input type="button">`](/zh-CN/docs/Web/HTML/Element/input/button), 或者使用更好的 {{htmlelement("button")}} 元素。
 
 如果你选择使用`<button>` 在你的 form 表单里创建按钮，请记住: 它只是在{{HTMLElement("form")}}内部的 `<button>` ， 应该被当作 "submit" 按钮来处理。 所以你应该有一个明确指定哪一个按钮是提交按钮的习惯。
 
@@ -191,7 +191,7 @@ slug: Web/HTML/Element/Input/submit
 
 您可以在运行时通过简单地将`disable`设置为`true`或`false`来启用和禁用按钮。 在 JavaScript 中，这看起来像 `btn.disabled = true` or `btn.disabled = false`.
 
-> **备注：** 有关启用和禁用按钮的更多想法，请参见 [`<input type="button">`](/en-US/docs/Web/HTML/Element/input/button#Disabling_and_enabling_a_button) 。
+> **备注：** 有关启用和禁用按钮的更多想法，请参见 [`<input type="button">`](/zh-CN/docs/Web/HTML/Element/input/button#Disabling_and_enabling_a_button) 。
 
 ## 验证方式
 

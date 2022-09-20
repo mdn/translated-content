@@ -118,7 +118,7 @@ where <side-or-corner> = [ left | right ] || [ top | bottom ]
 -moz-linear-gradient([ [ [top | bottom] || [left | right] ],]? <color-stop>[, <color-stop>]+);
 ```
 
-新的语法不需要` to()、``from()和``color-stop()函数，所以这些函数被丢弃。而``top `/`bottom`与`left`/`right的顺序也被标记为不重要，所以`Mozilla 移除了必需首先定义`top`/`bottom`的限制。
+新的语法不需要 `to()`、`from()` 和 `color-stop()` 函数，所以这些函数被丢弃。而 `top` / `bottom` 与 `left` / `right` 的顺序也被标记为不重要，所以 `Mozilla` 移除了必需首先定义 `top` / `bottom` 的限制。
 
 新的语法仍然有一个缺点：它只允许水平和垂直渐变。在多次变更解决了方向限制的问题之后，它被增加到[CSS Images Values and Content Replacement Level 3 draft in 2011-02-17](http://www.w3.org/TR/2011/WD-css3-images-20110217/#ltlinear-gradient)。
 

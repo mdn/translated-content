@@ -1,14 +1,6 @@
 ---
 title: margin-left
 slug: Web/CSS/margin-left
-tags:
-  - CSS
-  - CSS プロパティ
-  - Layout
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.margin-left
-translation_of: Web/CSS/margin-left
 ---
 {{CSSRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: VRDisplayCapabilities.hasOrientation
 slug: Web/API/VRDisplayCapabilities/hasOrientation
-translation_of: Web/API/VRDisplayCapabilities/hasOrientation
 ---
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 

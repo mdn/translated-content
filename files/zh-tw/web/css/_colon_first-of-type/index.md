@@ -2,6 +2,7 @@
 title: ':first-of-type'
 slug: Web/CSS/:first-of-type
 ---
+
 {{CSSRef}}
 
 在 CSS 虛擬類別（pseudo-class）中，**`:first-of-type`** 代表本節點為兄弟節點中第一個此類型節點。

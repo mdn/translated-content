@@ -1,14 +1,6 @@
 ---
 title: transform
 slug: Web/CSS/transform
-tags:
-  - CSS
-  - CSS プロパティ
-  - Reference
-  - 座標変換
-  - recipe:css-property
-browser-compat: css.properties.transform
-translation_of: Web/CSS/transform
 ---
 {{CSSRef}}
 

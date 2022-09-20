@@ -134,7 +134,7 @@ function simulateClick() {
 
 ## 参见
 
-- [CustomEvent()](/en-US/docs/Web/API/CustomEvent/CustomEvent)
+- [CustomEvent()](/zh-CN/docs/Web/API/CustomEvent/CustomEvent)
 - {{domxref("document.createEvent()")}}
 - {{domxref("Event.initEvent()")}}
 - {{domxref("EventTarget.dispatchEvent()")}}

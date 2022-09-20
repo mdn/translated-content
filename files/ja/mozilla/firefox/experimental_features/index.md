@@ -1,12 +1,6 @@
 ---
 title: Firefox における実験的機能
 slug: Mozilla/Firefox/Experimental_features
-tags:
-  - 実験的
-  - Firefox
-  - 設定
-  - 機能
-translation_of: Mozilla/Firefox/Experimental_features
 ---
 {{FirefoxSidebar}}
 

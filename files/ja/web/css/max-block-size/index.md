@@ -1,21 +1,6 @@
 ---
 title: max-block-size
 slug: Web/CSS/max-block-size
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Layout
-  - Maximum Height
-  - Maximum Width
-  - Reference
-  - height
-  - max-block-size
-  - recipe:css-property
-  - size
-  - width
-browser-compat: css.properties.max-block-size
-translation_of: Web/CSS/max-block-size
 ---
 {{CSSRef}}
 

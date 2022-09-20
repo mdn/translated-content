@@ -1,12 +1,6 @@
 ---
 title: 文字クラス
 slug: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
-tags:
-  - JavaScript
-  - Reference
-  - RegExp
-  - Regular Expressions
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
 ---
 {{JSSidebar("JavaScript Guide")}}
 
@@ -277,7 +271,7 @@ console.table(aliceExcerpt.match(regexpWordStartingWithA));
 
 ### （ユニコード文字の）単語を探す
 
-単語を表すために、ラテンアルファベットではなく、 <span class="ILfuVd"><span class="e24Kjd">Unicode</span></span> 文字の範囲が使えます。（つまり、ロシア語やアラビア語のような他の言語のテキストを扱えます。） <span class="ILfuVd"><span class="e24Kjd">Unicode</span></span> の 「<span class="ILfuVd"><span class="e24Kjd">基本多言語面</span></span>」には、世界中で使われているほとんどの文字が含まれており、それらの文字で書かれた単語にマッチするための文字クラスと範囲を利用できます。
+単語を表すために、ラテンアルファベットではなく、 Unicode 文字の範囲が使えます。（つまり、ロシア語やアラビア語のような他の言語のテキストを扱えます。） Unicode の 「基本多言語面」には、世界中で使われているほとんどの文字が含まれており、それらの文字で書かれた単語にマッチするための文字クラスと範囲を利用できます。
 
 ```js
 var nonEnglishText = "Приключения Алисы в Стране чудес";

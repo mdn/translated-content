@@ -1,19 +1,6 @@
 ---
 title: contain
 slug: Web/CSS/contain
-tags:
-  - CSS
-  - CSS 封じ込め
-  - CSS プロパティ
-  - レイアウト
-  - NeedsExample
-  - Paint
-  - リファレンス
-  - Style
-  - ウェブ
-  - recipe:css-property
-browser-compat: css.properties.contain
-translation_of: Web/CSS/contain
 ---
 {{CSSRef}}
 

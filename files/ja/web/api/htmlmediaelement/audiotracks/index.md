@@ -1,21 +1,6 @@
 ---
 title: HTMLMediaElement.audioTracks
 slug: Web/API/HTMLMediaElement/audioTracks
-page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Audio Tracks
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Property
-  - Reference
-  - Tracks
-  - Web
-  - audiotracks
-browser-compat: api.HTMLMediaElement.audioTracks
-translation_of: Web/API/HTMLMediaElement/audioTracks
 ---
 {{APIRef("HTML DOM")}}
 

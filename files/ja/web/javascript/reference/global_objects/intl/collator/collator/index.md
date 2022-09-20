@@ -1,16 +1,6 @@
 ---
 title: Intl.Collator() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator
-tags:
-  - Collator
-  - コンストラクター
-  - 国際化
-  - Intl
-  - JavaScript
-  - ローカライズ
-  - リファレンス
-browser-compat: javascript.builtins.Intl.Collator.Collator
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator
 ---
 {{JSRef}}
 

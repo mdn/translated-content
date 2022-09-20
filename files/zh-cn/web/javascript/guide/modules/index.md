@@ -78,7 +78,7 @@ modules 目录下的两个模块的描述如下：
 
 ## 导出模块的功能
 
-为了获得模块的功能要做的第一件事是把它们导出来。使用 [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) 语句来完成。
+为了获得模块的功能要做的第一件事是把它们导出来。使用 [`export`](/zh-CN/docs/Web/JavaScript/Reference/Statements/export) 语句来完成。
 
 最简单的方法是把它（指上面的 export 语句）放到你想要导出的项前面，比如：
 
@@ -114,7 +114,7 @@ export { name, draw, reportArea, reportPerimeter };
 import { name, draw, reportArea, reportPerimeter } from '/js-examples/modules/basic-modules/modules/square.mjs';
 ```
 
-使用 [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) 语句，然后你被花括号包围的用逗号分隔的你想导入的功能列表，然后是关键字 from，然后是模块文件的路径。模块文件的路径是相对于站点根目录的相对路径，对于我们的 `basic-modules` 应该是 `/js-examples/modules/basic-modules`。
+使用 [`import`](/zh-CN/docs/Web/JavaScript/Reference/Statements/import) 语句，然后你被花括号包围的用逗号分隔的你想导入的功能列表，然后是关键字 from，然后是模块文件的路径。模块文件的路径是相对于站点根目录的相对路径，对于我们的 `basic-modules` 应该是 `/js-examples/modules/basic-modules`。
 
 当然，我们写的路径有一点不同 -- 我们使用点语法意味 “当前路径”，跟随着包含我们想要找的文件的路径。这比每次都要写下整个相对路径要好得多，因为它更短，使得 URL 可移植 -- 如果在站点层中你把它移动到不同的路径下面仍然能够工作（修订版 1889482）。
 
@@ -445,7 +445,7 @@ import('/modules/myModule.mjs')
 
 在这个例子中，我们只对 [index.html](https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/index.html) 和 [main.mjs](https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/main.js) 文件进行了更改 -- 模块导出保持与以前相同。
 
-在`main.mjs`中，我们使用[`document.querySelector()`](/en-US/docs/Web/API/Document/querySelector)调用获取了对每个按钮的引用，例如：
+在`main.mjs`中，我们使用[`document.querySelector()`](/zh-CN/docs/Web/API/Document/querySelector)调用获取了对每个按钮的引用，例如：
 
 ```js
 let squareBtn = document.querySelector('.square');

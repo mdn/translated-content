@@ -168,13 +168,10 @@ html,body,svg { height:100% }
 
 {{EmbedLiveSample('square', '100%', 200)}}
 
+## Spécifications
+
+{{Specifications}}
+
 ## Compatibilité des navigateurs
 
-{{Compat("svg.attributes.presentation.stroke-linecap")}}
-
-## Spécification
-
-| Spécification                                                                                            | Statut                   | Commentaire                                     |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------------- |
-| {{SpecName("SVG2", "painting.html#StrokeLinecapProperty", "stroke-linecap")}} | {{Spec2("SVG2")}} | Définition pour les formes et le texte          |
-| {{SpecName("SVG1.1", "painting.html#StrokeLinecapProperty", "stroke-linecap")}} | {{Spec2("SVG1.1")}} | Définition initiale pour les formes et le texte |
+{{Compat}}

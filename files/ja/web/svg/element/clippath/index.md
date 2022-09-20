@@ -1,12 +1,6 @@
 ---
 title: <clipPath>
 slug: Web/SVG/Element/clipPath
-tags:
-  - 要素
-  - リファレンス
-  - SVG
-browser-compat: svg.elements.clipPath
-translation_of: Web/SVG/Element/clipPath
 ---
 {{SVGRef}}
 

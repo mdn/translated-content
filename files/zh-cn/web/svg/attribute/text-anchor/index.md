@@ -3,7 +3,7 @@ title: text-anchor
 slug: Web/SVG/Attribute/text-anchor
 original_slug: Web/SVG/Attribute/文本锚点
 ---
-« [SVG Attribute reference home](/en/SVG/Attribute)
+« [SVG Attribute reference home](/zh-CN/SVG/Attribute)
 
 文本锚点属性被用来描述该文本与所给点的对齐方式 (开头、中间、末尾对齐) 。
 
@@ -67,7 +67,7 @@ text{
 
 以下元素可以运用文本锚点属性：
 
-- [Text content elements](/en/SVG/Element#Text_content_elements) »
+- [Text content elements](/zh-CN/SVG/Element#Text_content_elements) »
 
 ## 规范
 

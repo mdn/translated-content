@@ -1,16 +1,6 @@
 ---
 title: HTMLAnchorElement.download
 slug: Web/API/HTMLAnchorElement/download
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLAnchorElement
-  - プロパティ
-  - リファレンス
-  - download
-browser-compat: api.HTMLAnchorElement.download
-translation_of: Web/API/HTMLAnchorElement/download
 ---
 {{APIRef("HTML DOM")}}
 
