@@ -1,7 +1,6 @@
 ---
 title: Map.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Map/has
-original_slug: Web/JavaScript/Reference/Global_Objects/Map/has
 ---
 
 {{JSRef}}
@@ -23,7 +22,7 @@ has(key)
 
 ### 返回值
 
-如果 `Map` 对象中存在具有指定键的元素，则返回 `true`; 否则返回 `false`。
+如果 `Map` 对象中存在具有指定键的元素，则返回 `true`；否则返回 `false`。
 
 ## 案例
 

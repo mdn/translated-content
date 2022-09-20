@@ -1,7 +1,6 @@
 ---
 title: Map.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Map/clear
-original_slug: Web/JavaScript/Reference/Global_Objects/Map/clear
 ---
 
 {{JSRef}}

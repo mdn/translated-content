@@ -1,7 +1,6 @@
 ---
 title: Map.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Map/delete
-original_slug: Web/JavaScript/Reference/Global_Objects/Map/delete
 ---
 
 {{JSRef}}

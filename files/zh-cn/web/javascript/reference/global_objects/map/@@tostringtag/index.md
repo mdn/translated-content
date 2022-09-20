@@ -35,4 +35,3 @@ Object.prototype.toString.call(new Map()) // "[object Map]"
 ## 参见
 
 - {{jsxref("Symbol.toStringTag")}}
-

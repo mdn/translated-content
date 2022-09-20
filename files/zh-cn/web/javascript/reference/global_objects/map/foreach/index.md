@@ -1,7 +1,6 @@
 ---
 title: Map.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Map/forEach
-original_slug: Web/JavaScript/Reference/Global_Objects/Map/forEach
 ---
 
 {{JSRef}}

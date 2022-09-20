@@ -1,7 +1,6 @@
 ---
 title: Map.prototype.size
 slug: Web/JavaScript/Reference/Global_Objects/Map/size
-original_slug: Web/JavaScript/Reference/Global_Objects/Map/size
 ---
 
 {{JSRef}}
