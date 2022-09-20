@@ -1,6 +1,7 @@
 ---
 title: WebAssembly.compileStreaming()
-slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming
+slug: WebAssembly/JavaScript_interface/compileStreaming
+original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming
 ---
 {{JSRef}}
 
