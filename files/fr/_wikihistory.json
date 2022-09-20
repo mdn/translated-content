@@ -28109,14 +28109,6 @@
       "dattaz"
     ]
   },
-  "conflicting/Glossary/Firefox_OS": {
-    "modified": "2019-03-23T22:44:37.220Z",
-    "contributors": ["loella16", "Bat"]
-  },
-  "orphaned/Glossary/jQuery": {
-    "modified": "2019-03-18T21:44:06.026Z",
-    "contributors": ["loella16"]
-  },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
     "modified": "2020-10-15T21:27:51.341Z",
     "contributors": [
