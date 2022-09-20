@@ -54,4 +54,4 @@ function myFunc () {
 
 ## 参见
 
-- [for loop](/en-US/docs/Web/JavaScript/Reference/Statements/for)
+- [for loop](/zh-CN/docs/Web/JavaScript/Reference/Statements/for)

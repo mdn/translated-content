@@ -27,7 +27,7 @@ throw 42;       // 抛出了一个值为整数 42 的异常
 throw true;     // 抛出了一个值为 true 的异常
 ```
 
-注意`throw`语句同样受到[自动分号插入（ASI](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion)）机制的控制，在`throw`关键字和值之间不允许有行终止符。
+注意`throw`语句同样受到[自动分号插入（ASI](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion)）机制的控制，在`throw`关键字和值之间不允许有行终止符。
 
 ## 示例
 
@@ -157,4 +157,4 @@ try {
 
 ## 相关链接
 
-- [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
+- [`try...catch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch)

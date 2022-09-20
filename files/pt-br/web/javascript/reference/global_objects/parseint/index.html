@@ -115,7 +115,7 @@ parseInt("08"); // 0, '8' não é um dígito octal.
 
 <h2 id="Uma_função_de_análise_mais_rigorosa">Uma função de análise mais rigorosa</h2>
 
-<p><span id="result_box" lang="pt"><span class="hps">É</span> <span class="hps">útil</span> <span class="hps">em algum momento</span> <span class="hps">ter uma maneira</span> <span class="hps">mais rigorosa</span> <span class="hps">para analisar</span> <span class="hps">valores inteiros</span><span>.</span> <span class="hps">Expressões regulares podem</span> <span class="hps">ajudar:</span></span></p>
+<p>É útil em algum momento ter uma maneira mais rigorosa para analisar valores inteiros. Expressões regulares podem ajudar:</p>
 
 <pre class="brush: js">filterInt = function (value) {
   if(/^(\-|\+)?([0-9]+|Infinity)$/.test(value))

@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/of
 
 <p>O método <code><strong>Array.of()</strong></code> cria um nova instância de <code>Array</code> com um número variável de argumentos, independentemente do número ou do tipo dos argumentos.</p>
 
-<p>A diferença entre o <code><strong>Array.of()</strong></code> e o construtor de <code><strong>Array</strong></code> é no tratamento dos argumentos inteiros: <code><strong>Array.of(7)</strong></code> cria um array com um único elemento, <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">7</span></font>, enquanto <code><strong>Array(7)</strong></code> cria um array vazio de propriedade <code>length</code> igual a <code>7</code> (<strong>Nota</strong>: isso quer dizer um array com <code>7</code> espaços vazios, e não com valores do tipo {{jsxref("undefined")}}).</p>
+<p>A diferença entre o <code><strong>Array.of()</strong></code> e o construtor de <code><strong>Array</strong></code> é no tratamento dos argumentos inteiros: <code><strong>Array.of(7)</strong></code> cria um array com um único elemento, <code>7</code>, enquanto <code><strong>Array(7)</strong></code> cria um array vazio de propriedade <code>length</code> igual a <code>7</code> (<strong>Nota</strong>: isso quer dizer um array com <code>7</code> espaços vazios, e não com valores do tipo {{jsxref("undefined")}}).</p>
 
 <pre>Array.of(7);       // [7]
 Array.of(1, 2, 3); // [1, 2, 3]

@@ -1,13 +1,6 @@
 ---
 title: 403 Forbidden
 slug: Web/HTTP/Status/403
-tags:
-  - HTTP
-  - HTTP ステータスコード
-  - Reference
-  - クライアントエラー
-  - ステータスコード
-translation_of: Web/HTTP/Status/403
 ---
 {{HTTPSidebar}}
 

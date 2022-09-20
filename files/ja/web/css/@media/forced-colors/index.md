@@ -1,14 +1,6 @@
 ---
 title: forced-colors
 slug: Web/CSS/@media/forced-colors
-tags:
-  - CSS
-  - リファレンス
-  - 色
-  - forced-colors
-  - メディア特性
-browser-compat: css.at-rules.media.forced-colors
-translation_of: Web/CSS/@media/forced-colors
 ---
 {{CSSRef}}
 

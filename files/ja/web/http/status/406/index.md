@@ -1,11 +1,6 @@
 ---
 title: 406 Not Acceptable
 slug: Web/HTTP/Status/406
-tags:
-  - HTTP
-  - HTTP ステータスコード
-  - Reference
-translation_of: Web/HTTP/Status/406
 ---
 {{HTTPSidebar}}
 

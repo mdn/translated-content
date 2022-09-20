@@ -24,7 +24,7 @@ slug: Web/API/Window/error_event
       <th scope="row">Event handler property（事件处理程序属性）</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/API/GlobalEventHandlers/onerror"
+          ><a href="/zh-CN/docs/Web/API/GlobalEventHandlers/onerror"
             >onerror</a
           ></code
         >

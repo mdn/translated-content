@@ -76,7 +76,7 @@ IDBRequest add (in any value, in optional any key) raises (DOMException);
       <td>ReadOnlyError</td>
       <td>
         The transaction associated with this operation is in read-only
-        <a href="/en-US/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.
+        <a href="/zh-CN/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.
       </td>
     </tr>
     <tr>
@@ -393,7 +393,7 @@ This method may raise a [DOMException](/zh-CN/docs/DOM/DOMException) with a [DOM
       <td>ReadOnlyError</td>
       <td>
         The transaction associated with this operation is in read-only
-        <a href="/en-US/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.
+        <a href="/zh-CN/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.
       </td>
     </tr>
     <tr>

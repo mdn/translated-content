@@ -1061,10 +1061,6 @@
     "modified": "2019-03-18T21:20:16.521Z",
     "contributors": ["mikelmg", "BubuAnabelas"]
   },
-  "Glossary/jQuery": {
-    "modified": "2019-03-23T22:02:49.153Z",
-    "contributors": ["yancarq", "velizluisma"]
-  },
   "Glossary/jpeg": {
     "modified": "2019-03-23T22:15:35.380Z",
     "contributors": ["gparra989"]
@@ -3798,10 +3794,6 @@
     "modified": "2019-03-23T22:05:31.350Z",
     "contributors": ["arquigames"]
   },
-  "Web/API/Document/pointerlockchange_event": {
-    "modified": "2019-03-18T21:16:43.654Z",
-    "contributors": ["ExE-Boss", "fscholz", "arquigames"]
-  },
   "Web/API/Document/querySelector": {
     "modified": "2019-03-23T22:58:51.923Z",
     "contributors": ["BrodaNoel", "Luis_Calvo", "dannysalazar90"]
@@ -3839,10 +3831,6 @@
       "PatoDeTuring",
       "Thargelion"
     ]
-  },
-  "Web/API/Document/selectstart_event": {
-    "modified": "2019-03-18T21:23:16.974Z",
-    "contributors": ["Grijander81"]
   },
   "Web/API/Document/styleSheets": {
     "modified": "2019-03-23T23:58:05.224Z",
@@ -4114,6 +4102,10 @@
   "Web/API/Element/outerHTML": {
     "modified": "2019-03-23T22:32:38.203Z",
     "contributors": ["Grijander81"]
+  },
+  "Web/API/Element/pointerlockchange_event": {
+    "modified": "2019-03-18T21:16:43.654Z",
+    "contributors": ["ExE-Boss", "fscholz", "arquigames"]
   },
   "Web/API/Element/prefix": {
     "modified": "2019-03-23T22:25:56.753Z",
@@ -5066,6 +5058,10 @@
   "Web/API/Node/replaceChild": {
     "modified": "2019-03-23T22:46:30.428Z",
     "contributors": ["pakitometal"]
+  },
+  "Web/API/Node/selectstart_event": {
+    "modified": "2019-03-18T21:23:16.974Z",
+    "contributors": ["Grijander81"]
   },
   "Web/API/Node/textContent": {
     "modified": "2020-10-15T21:21:16.429Z",
@@ -15294,6 +15290,10 @@
   "orphaned/Glossary/elemento": {
     "modified": "2019-01-16T19:38:18.287Z",
     "contributors": ["BubuAnabelas", "HerberWest"]
+  },
+  "orphaned/Glossary/jQuery": {
+    "modified": "2019-03-23T22:02:49.153Z",
+    "contributors": ["yancarq", "velizluisma"]
   },
   "orphaned/Guía_para_el_desarrollador_de_agregados_para_Firefox": {
     "modified": "2019-01-16T14:29:03.747Z",

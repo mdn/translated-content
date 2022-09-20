@@ -20,4 +20,3 @@ l10n:
 - [Le projet WebKit (en anglais)](https://webkit.org/)
 - [Les versions nocturnes de WebKit, compilées régulièrement (en anglais)](https://webkit.org/build-archives/)
 - [Rapporter un <i lang="en">bug</i> sur Safari (en anglais)](https://bugs.webkit.org/)
-
