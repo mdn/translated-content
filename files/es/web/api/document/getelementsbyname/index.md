@@ -45,15 +45,11 @@ El método **getElementsByName** trabaja de diferente manera en diferentes naveg
 
 ## Especificaciones
 
-- [DOM Level 2 HTML: getElementsByName](http://www.w3.org/TR/DOM-Level-2-HTML/)
-- [HTML5: getElementsByName](http://www.whatwg.org/html/#dom-document-getelementsbyname)
+{{Specifications}}
 
-## Especificaciones
+## Compatibilidad del Navegador
 
-| Especificaciones                                                                                                             | estado                               | Comentario         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('HTML WHATWG', '#dom-document-getelementsbyname', "Document.getElementsByName()")}} | {{ Spec2('HTML WHATWG') }} |                    |
-| {{SpecName("DOM2 HTML", "html.html#ID-71555259", "Document.getElementsByName()")}}                 | {{Spec2("DOM2 HTML")}}         | Initial definition |
+{{Compat}}
 
 ## Mira también
 

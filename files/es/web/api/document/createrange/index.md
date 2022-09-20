@@ -15,7 +15,7 @@ Retorna un nuevo objeto [`Rango`](https://developer.mozilla.org/es/docs/Web/API/
 
 ### Sintáxis
 
-```
+```js
 range = document.createRange();
 ```
 
@@ -23,7 +23,7 @@ En este ejemplo, `range` es el nuevo objeto [rango](/es/docs/Web/API/Range) crea
 
 ### Ejemplo
 
-```
+```js
 var range = document.createRange();
 range.setStart(startNode, startOffset);
 range.setEnd(endNode, endOffset);
@@ -33,6 +33,10 @@ range.setEnd(endNode, endOffset);
 
 Una vez que se ha creado un objeto `Rango`, se necesita configurar sus puntos límites antes de hacer uso de la mayoría de sus métodos.
 
-### Especificación
+## Especificaciones
 
-[DOM Level 2 Range: DocumentRange.createRange](http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-DocumentRange-method-createRange)
+{{Specifications}}
+
+## Compatibilidad del Navegador
+
+{{Compat}}

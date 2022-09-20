@@ -31,6 +31,10 @@ Este método devuelve un nuevo objeto {{ domxref("Event") }} del DOM del tipo in
 var nuevoEvento = document.createEvent("UIEvents");
 ```
 
-### Especificación
+## Especificaciones
 
-- [DOM Level 2 Events](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-document)
+{{Specifications}}
+
+## Compatibilidad del Navegador
+
+{{Compat}}

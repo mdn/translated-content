@@ -18,7 +18,7 @@ var element = document.createElementNS(namespaceURI, qualifiedName[, options]);
 ### Parámetros
 
 - `namespaceURI`
-  - : _String_ que especifica el [namespace URI](http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI) a asociar con el elemento. La propiedad [namespaceURI](/es/docs/DOM/element.namespaceURI) del elemento creado es inicializada con el valor del `namespaceURI`. Ver [Namespace URIs válidos](/es/docs/Web/API/Document/createElementNS#Valid_Namespace_URI's).
+  - : _String_ que especifica el [namespace URI](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI) a asociar con el elemento. La propiedad [namespaceURI](/es/docs/DOM/element.namespaceURI) del elemento creado es inicializada con el valor del `namespaceURI`. Ver [Namespace URIs válidos](/es/docs/Web/API/Document/createElementNS#Valid_Namespace_URI's).
 - `qualifiedName`
   - : _String_ que especifica el tipo del elemento a ser creado. La propiedad [nodeName](/es/docs/DOM/element.nodeName) del elemento creado es inicializada con el valor `qualifiedName`.
 - `options`{{optional_inline}}
@@ -77,17 +77,15 @@ El código siguiente crea un elemento \<div> nuevo en el namespace [XHTML](/es/d
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estatus                          | Comentario |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('DOM WHATWG', "#dom-document-createelementns", "Document.createElement")}} | {{Spec2('DOM WHATWG')}} |            |
+{{Specifications}}
 
-## Compatibilidad con navegadores
+## Compatibilidad del Navegador
 
-{{Compat("api.Document.createElementNS")}}
+{{Compat}}
 
 ## Ver también
 
 - [document.createElement](createElement)
 - [document.createTextNode](createTextNode)
 - [Node.namespaceURI](../Node/namespaceURI)
-- [Namespaces in XML](http://www.w3.org/TR/1999/REC-xml-names-19990114)
+- [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114)

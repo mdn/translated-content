@@ -45,9 +45,9 @@ var el = document.querySelector("div.user-panel.main input[name='login']");
 - Devuelve `null` si no se encuentran coincidencias, de lo contrario, retorna el primer elemento encontrado.
 - Si el selector coincide con un ID y este ID es usado erróneamente varias veces en el documento, devuelve el primer elemento encontrado.
 - Lanza una excepción de tipo SYNTAX_ERR si el grupo de selectores especificado no es válido.
-- querySelector() se introdujo en la [API Selectors](http://www.w3.org/TR/selectors-api/).
+- querySelector() se introdujo en la [API Selectors](https://www.w3.org/TR/selectors-api/).
 - La cadena de caracteres que se pasa como argumento a `querySelector debe seguir la sintaxis CSS.`
-- Las Pseudo-clases CSS nunca devolverán elementos, tal y como está especificado en la [`AP​I Selectors`](http://www.w3.org/TR/selectors-api/#grammar).
+- Las Pseudo-clases CSS nunca devolverán elementos, tal y como está especificado en la [`AP​I Selectors`](https://www.w3.org/TR/selectors-api/#grammar).
 - Para que coincidan ID's o selectores que no siguen la sintáxis CSS (usando inapropiadamente dos puntos o un espacio por ejemplo), se debe 'escapar' el carácter con una barra invertida (\\). Como la barra invertida es un carácter de 'escape' en JavaScript, si estás indicando una cadena de caracteres literal, debes 'escaparla' dos veces (una para la cadena de caracteres JavaScript y otra para el querySelector):
 
 ```html

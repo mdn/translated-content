@@ -17,17 +17,21 @@ Devuelve una lista de objetos de tipo [stylesheet](/es/DOM/stylesheet "es/DOM/st
 
 ### Sintaxis
 
-```
+```js
 styleSheetList = document.styleSheets
 ```
 
-El objeto devuelto es del tipo [StyleSheetList](http://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-DocumentStyle-styleSheets).
+El objeto devuelto es del tipo [StyleSheetList](https://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-DocumentStyle-styleSheets).
 
 Es una colección ordenada de objetos de tipo [stylesheet](/es/DOM/stylesheet "es/DOM/stylesheet"). `styleSheetList.item(index)` o simplemente `styleSheetList{{ mediawiki.external('
  <i>
   index</i>
  ') }}` devuelve un único objeto de tipo stylesheet con el índice especificado (el índice es de origen 0).
 
-### Especificación
+## Especificaciones
 
-[DOM Level 2 Style: styleSheets](http://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-DocumentStyle-styleSheets)
+{{Specifications}}
+
+## Compatibilidad del Navegador
+
+{{Compat}}

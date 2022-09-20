@@ -47,10 +47,10 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement){
 });
 ```
 
-## Compatibilidad con navegadores
+## Especificaciones
 
-{{Compat("api.Document.getElementsByClassName")}}
+{{Specifications}}
 
-## Especifiación
+## Compatibilidad del Navegador
 
-- [W3C: getElementsByClassName](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-document-getelementsbyclassname)
+{{Compat}}

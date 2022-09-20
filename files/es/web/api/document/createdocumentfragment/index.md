@@ -33,14 +33,14 @@ Este ejemplo crea una lista de los principales navegadores web en un _DocumentFr
 
 HTML
 
-```
+```html
 <ul id="ul">
 </ul>
 ```
 
 JavaScript
 
-```
+```js
 var element  = document.getElementById('ul'); // assuming ul exists
 var fragment = document.createDocumentFragment();
 var browsers = ['Firefox', 'Chrome', 'Opera',
@@ -59,14 +59,17 @@ Resultado
 
 {{EmbedLiveSample("Example", 600, 140)}}
 
-## Compatibilidad de navegadores
+## Especificaciones
 
-{{Compat("api.Document.createDocumentFragment")}}
+{{Specifications}}
 
-## Especificaciónes
+## Compatibilidad del Navegador
 
-- DOM Level 2: [createDocumentFragment](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-35CB04B5)
-- DOM Level 3: [createDocumentFragment](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-35CB04B5)
+{{Compat}}
+
+## Compatibilidad del Navegador
+
+{{Compat}}
 
 ## Vea También
 

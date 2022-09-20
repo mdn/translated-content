@@ -15,13 +15,13 @@ Devuelve el [`Element`](es/DOM/element) que es el elemento raíz de [document](e
 
 ### Sintaxis
 
-```
+```js
 varelement = document.documentElement;
 ```
 
 ### Ejemplo
 
-```
+```js
 var rootElement = document.documentElement;
 var firstTier = rootElement.childNodes;
 // firstTier el la NodeList de los hijos directos del elemento raízof the direct children of the root element
@@ -39,6 +39,10 @@ Los documentos HTML contienen normalmente un único hijo directo, `<html>`, quiz
 
 Por tanto, deberías usar `document.documentElement` en lugar de {{ Domxref("document.firstChild") }} para obtener el elemento raíz.
 
-### Especificación
+## Especificaciones
 
-[DOM Level 2 Core: Document.documentElement](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-87CD092)
+{{Specifications}}
+
+## Compatibilidad del Navegador
+
+{{Compat}}

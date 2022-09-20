@@ -54,10 +54,8 @@ function addTextNode(text) {
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estado                           | Comentario |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('DOM WHATWG', '#dom-document-createtextnode', 'Document: createTextNode')}} | {{Spec2('DOM WHATWG')}} |            |
+{{Specifications}}
 
-## Compatibilidad con navegadores
+## Compatibilidad del Navegador
 
-{{Compat("api.Document.createTextNode")}}
+{{Compat}}

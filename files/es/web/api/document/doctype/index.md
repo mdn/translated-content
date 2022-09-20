@@ -40,10 +40,10 @@ console.log(
 La propiedad devuelve `null` si no hay DTD asociada al documento actual.
 
 El nivel 2 de DOM no soporta la edición de la declaración de tipo de documento.
-
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                       | Comentario                                                                                                                                                |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("DOM3 Core", "core.html#ID-B63ED1A31", "Document.doctype")}} | {{Spec2("DOM3 Core")}} | Cambiado el valor de retorno para documentos HTML sin el elemento {{HTMLElement("html")}}. Define que el tipo de documento puede ser modificado. |
-| {{SpecName("DOM2 Core", "core.html#ID-B63ED1A31", "Document.doctype")}} | {{Spec2("DOM2 Core")}} | Definición inicial                                                                                                                                        |
+{{Specifications}}
+
+## Compatibilidad del Navegador
+
+{{Compat}}

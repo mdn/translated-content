@@ -42,14 +42,11 @@ document.getElementById("url").textContent = document.URL;
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                           | Comentario                                                                                                       |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("DOM WHATWG", "#dom-document-url", "Document.URL")}}             | {{Spec2("DOM WHATWG")}} | Define que la propiedad es una {{domxref("USVString")}} en lugar de un {{domxref("DOMString")}}. |
-| {{SpecName("DOM1", "level-one-html.html#attribute-URL", "Document.URL")}} | {{Spec2("DOM1")}}         | Definición inicial                                                                                               |
+{{Specifications}}
 
-## Compatibilidad con navegadores
+## Compatibilidad del Navegador
 
-{{Compat("api.Document.URL")}}
+{{Compat}}
 
 ## Ver también
 

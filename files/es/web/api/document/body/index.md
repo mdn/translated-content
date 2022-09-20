@@ -11,15 +11,14 @@ Devuelve el nodo del `<body>` o el nodo del `<frameset>` del documento.
 
 ### Sintaxis
 
-```
+```js
 objRef = document.body
-document.body =
-objRef
+document.body = objRef
 ```
 
 ### Ejemplo
 
-```
+```js
 // en HTML: <body id="oldBodyElement"></body>
 alert(document.body.id); // "oldBodyElement"
 var aNewBodyElement = document.createElement("body");
@@ -34,6 +33,10 @@ alert(document.body.id); // "newBodyElement"
 
 Aunque `body` es programable, colocando un nuevo cuerpo en un documento efectivamente quitará a todos los hijos actuales del elemento existente `<body>`.
 
-### Especificación
+## Especificaciones
 
-[DOM Level 2 HTML: HTMLDocument.body](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-56360201)
+{{Specifications}}
+
+## Compatibilidad del Navegador
+
+{{Compat}}

@@ -45,16 +45,12 @@ console.log(nodo.getAttribute("miAtributo")); // "nuevoVal"
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estatus                          | Comentario                                         |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------- |
-| {{SpecName('DOM WHATWG','#dom-document-createattribute','Document.createAttribute()')}} | {{Spec2("DOM WHATWG")}} | Comportamiento preciso con caracteres en mayuscula |
-| {{SpecName('DOM3 Core','core.html#ID-1084891198','Document.createAttribute()')}}         | {{Spec2('DOM3 Core')}}     | Sin cambios                                        |
-| {{SpecName('DOM2 Core','core.html#ID-1084891198','Document.createAttribute()')}}         | {{Spec2('DOM2 Core')}}     | Sin cambios                                        |
-| {{SpecName('DOM1','level-one-core.html#ID-1084891198','Document.createAttribute()')}}     | {{Spec2('DOM1')}}         | Definición inicial                                 |
+{{Specifications}}
 
-## Compatibilidad del buscador
+## Compatibilidad del Navegador
 
-{{Compat("api.Document.createAttribute")}}
+{{Compat}}
+
 
 ## Ver ademas
 

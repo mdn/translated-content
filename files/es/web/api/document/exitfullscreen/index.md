@@ -41,13 +41,11 @@ document.onclick = function (event) {
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estado                           | Comentarios        |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("Fullscreen", "#dom-document-exitfullscreen", "Document.exitFullscreen()")}} | {{Spec2("Fullscreen")}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad del Navegador
 
-{{Compat("api.Document.exitFullscreen")}}
+{{Compat}}
 
 ## Ver también
 

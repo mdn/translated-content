@@ -45,13 +45,11 @@ mytag.textContent = "I am a my-tag element.";
 
 ## Especificaciones
 
-| Especificación                           | Estado                               | Comentario         |
-| ---------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('Custom Elements')}} | {{Spec2('Custom Elements')}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad del Navegador
 
-{{Compat("api.Document.registerElement")}}
+{{Compat}}
 
 ## Ver también
 

@@ -29,11 +29,8 @@ Los documentos HTML tienen una propiedad {{domxref("document.URL")}} la cual dev
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                       | Comentario         |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('DOM4', '#dom-document-documenturi','documentURI')}}     | {{Spec2('DOM4')}}     |                    |
-| {{SpecName('DOM3 Core', '#Document3-documentURI', 'documentURI')}} | {{Spec2('DOM3 Core')}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad del Navegador
 
-{{Compat("api.Document.documentURI")}}
+{{Compat}}

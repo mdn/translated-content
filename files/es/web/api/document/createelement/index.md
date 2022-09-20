@@ -75,13 +75,12 @@ function addElement () {
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                           | Comentario |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('DOM WHATWG', "#dom-document-createelement", "Document.createElement")}} | {{Spec2('DOM WHATWG')}} |            |
+{{Specifications}}
 
-## Compatibilidad con navegadores
+## Compatibilidad del Navegador
 
-{{Compat("api.Document.createElement")}}
+{{Compat}}
+
 
 ## Ver también
 

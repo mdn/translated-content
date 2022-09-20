@@ -31,13 +31,11 @@ iframeNode.contentDocument.designMode = "on";
 
 ## Especificaciones
 
-| Especificación                                                                                                                                   | Estado                           | Comentario          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('HTML WHATWG', '#making-entire-documents-editable:-the-designmode-idl-attribute', 'designMode')}} | {{Spec2('HTML WHATWG')}} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad del Navegador
 
-{{Compat("api.Document.designMode")}}
+{{Compat}}
 
 ## Ver también
 

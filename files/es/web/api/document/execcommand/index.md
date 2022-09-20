@@ -10,7 +10,7 @@ tags:
   - editor
 translation_of: Web/API/Document/execCommand
 ---
-{{ApiRef("DOM")}}
+{{ApiRef("DOM")}}{{ Deprecated_header() }}
 
 ## Resumen
 
@@ -24,11 +24,11 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 
 ### Parámetros
 
-- aCommandName
+- `aCommandName`
   - : Una {{domxref("DOMString")}} que especifica el nombre del comando a ejecutar. Vea [Comandos](#comandos) para una lista de posibles comandos.
-- aShowDefaultUI
+- `aShowDefaultUI`
   - : Un {{jsxref("Boolean")}} que indica si la interfaz de usuario por defecto se debe mostrar. Esto no se ha implementado en Mozilla.
-- aValueArgument
+- `aValueArgument`
   - : Una {{domxref("DOMString")}} representando algunos comandos (como `insertImage`) requiere un argumento valor extra (url de la imagen). Pasar un argumento de `null` si no se necesita ningún argumento.
 
 ### Comandos
@@ -128,16 +128,13 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 
 (Este artículo está actualmente incompleto y carece de un ejemplo.)
 
-## Compatibilidad del navegador
+## Especificaciones
 
-{{Compat("api.Document.execCommand")}}
+{{Specifications}}
 
-## Especificación
+## Compatibilidad del Navegador
 
-| Especificación                                                                   | Estado                           | Comentario |
-| -------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML Editing','#execcommand()','execCommand')}} | {{Spec2('HTML Editing')}} |            |
-
+{{Compat}}
 ## Vea también
 
 - {{domxref("document.contentEditable")}}

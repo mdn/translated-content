@@ -118,6 +118,10 @@ Es importante mencionar que la restricción path no protege contra la lectura no
 - Puedes eliminar una cookie simplemente estableciendo su fecha de expiración a cero.
 - Cabe mencionar que entre más cookies se tengan, mayor cantidad de datos serán transferidos entre el servidor y el cliente en cada solicitud. Esto reducirá el tiempo entre cada solicitud. Es altamente recomendado que se utilice [WHATWG DOM Storage](/es/DOM/Storage "es/DOM/Storage") si se van a mantener los datos solamente en el cliente.
 
-### Especificación
+## Especificaciones
 
-[DOM Level 2: HTMLDocument.cookie](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-8747038)
+{{Specifications}}
+
+## Compatibilidad del Navegador
+
+{{Compat}}

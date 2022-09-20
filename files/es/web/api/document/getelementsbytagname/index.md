@@ -13,7 +13,7 @@ Devuelve una lista de elementos con un nombre determinado. Se busca en todo el d
 
 ### Sintaxis
 
-```
+```js
 elements = document.getElementsByTagName(name)
 ```
 
@@ -99,6 +99,10 @@ function div2ParaElems()
 </html>
 ```
 
-### Especificación
+## Especificaciones
 
-[DOM Level 2 Core: Document.getElementsByTagName](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C9094)
+{{Specifications}}
+
+## Compatibilidad del Navegador
+
+{{Compat}}

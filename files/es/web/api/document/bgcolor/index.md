@@ -9,7 +9,7 @@ translation_of: Web/API/Document/bgColor
 
 ### Sintaxis
 
-```
+```js
 color = document.bgColor
 document.bgColor =
 color
@@ -21,17 +21,22 @@ color
 
 ### Ejemplos
 
-```
-# document.bgColor = "darkblue";
-# document.bgColor = "#ff00ff";
+```js
+document.bgColor = "darkblue";
+document.bgColor = "#ff00ff";
 ```
 
 ### Notas
 
 El valor por defecto de esta propiedad en Mozilla Firefox es blanco (`#ffffff` en hexadecimal).
 
-`document.bgColor` está desaprobado en [DOM Level 2 HTML](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268). La alternativa recomendada es el uso del estilo [background-color](es/CSS/background-color) de CSS el cual puede ser accesado a través del DOM con `document.body.style.backgroundColor`. Otra alternativa es `document.body.bgColor`, sin embargo, ésta última también está desaprobada en HTML 4.01 a favor de la alternativa CSS.
+`document.bgColor` está desaprobado en [DOM Level 2 HTML](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268). La alternativa recomendada es el uso del estilo [background-color](es/CSS/background-color) de CSS el cual puede ser accesado a través del DOM con `document.body.style.backgroundColor`. Otra alternativa es `document.body.bgColor`, sin embargo, ésta última también está desaprobada en HTML 4.01 a favor de la alternativa CSS.
 
-### Especificación
 
-DOM Nivel 0. No es parte de ningún estándar.
+## Especificaciones
+
+{{Specifications}}
+
+## Compatibilidad del Navegador
+
+{{Compat}}

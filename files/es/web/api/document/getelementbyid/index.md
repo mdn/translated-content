@@ -106,18 +106,13 @@ var el = document.getElementById('testqq'); // el será null!
 
 **Documentos no-HTML**. La implementación de DOM debe tener información que diga que atributos son del tipo ID. Los atributos con el nombre "id" son son del tipo ID a menos que se los defina en el DTD del documento. El atributo `id` es definido para ser del tipo ID en los casos comunes de [XHTML](/es/docs/XHTML), [XUL](/es/docs/Mozilla/Tech/XUL), y otros. Las implementaciones que no sepan si los atributos son o no del tipo ID se espera que retornen null.
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                               | Status                           | Comentarios                          |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------ |
-| {{SpecName('DOM1','level-one-html.html#method-getElementById','getElementById')}} | {{Spec2('DOM1')}}         | Definición inicial para la interfase |
-| {{SpecName('DOM2 Core','core.html#ID-getElBId','getElementById')}}                     | {{Spec2('DOM2 Core')}}     | Supersede DOM 1                      |
-| {{SpecName('DOM3 Core','core.html#ID-getElBId','getElementById')}}                     | {{Spec2('DOM3 Core')}}     | Supersede DOM 2                      |
-| {{SpecName('DOM WHATWG','#interface-nonelementparentnode','getElementById')}}     | {{Spec2('DOM WHATWG')}} | Intend to supersede DOM 3            |
+{{Specifications}}
 
-## Compatibilidad con navegadores
+## Compatibilidad del Navegador
 
-{{Compat("api.Document.getElementById")}}
+{{Compat}}
 
 ## Ver también
 

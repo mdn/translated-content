@@ -24,10 +24,8 @@ document.addEventListener("visibilitychange", function() {
 
 ## Especificaciones
 
-| Especificacion                                                                                           | Estado                                       | Comentario         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------ |
-| {{SpecName('Page Visibility API','#dom-document-hidden', 'Document.hidden')}} | {{Spec2('Page Visibility API')}} | definicion inicial |
+{{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad del Navegador
 
-{{Compat("api.Document.hidden")}}
+{{Compat}}

@@ -9,7 +9,7 @@ El método `document.close()` finaliza la escritura de un documento abierta con 
 
 ## Sintaxis
 
-```
+```js
 document.close();
 ```
 
@@ -24,6 +24,10 @@ document.write("<p>El único contenido.</p>");
 document.close();
 ```
 
-## Especificación
+## Especificaciones
 
-[DOM Level 2 HTML: `close()` Method](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-98948567)
+{{Specifications}}
+
+## Compatibilidad del Navegador
+
+{{Compat}}

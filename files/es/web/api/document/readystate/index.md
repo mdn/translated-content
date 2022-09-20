@@ -72,14 +72,13 @@ document.onreadystatechange = function () {
 }
 ```
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                               | Estado                           | Comentario              |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------- |
-| {{SpecName("HTML WHATWG", "#current-document-readiness", "Document readiness")}} | {{Spec2('HTML WHATWG')}} |                         |
-| {{SpecName("HTML5.1", "#current-document-readiness", "Document readiness")}}         | {{Spec2('HTML5.1')}}     |                         |
-| {{SpecName("HTML5 W3C", "#current-document-readiness", "Document readiness")}}     | {{Spec2('HTML5 W3C')}}     | Especificación inicial. |
+{{Specifications}}
 
+## Compatibilidad del Navegador
+
+{{Compat}}
 ## Ver también
 
 - Evento {{event("readystatechange")}}

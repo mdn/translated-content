@@ -13,7 +13,7 @@ Devuelve una lista de elementos cuyo nombre pertenece a un determinado 'namespac
 
 ### Sintaxis
 
-```
+```js
 elements = document.getElementsByTagNameNS(namespace,name)
 ```
 
@@ -102,6 +102,10 @@ function div2ParaElems()
 </html>
 ```
 
-### Especificación
+## Especificaciones
 
-[DOM Level 2 Core: Document.getElementsByTagNameNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getElBTNNS)
+{{Specifications}}
+
+## Compatibilidad del Navegador
+
+{{Compat}}

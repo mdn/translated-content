@@ -21,10 +21,14 @@ No hace nada en versiones más recientes basado en Mozilla así como en Internet
 
 ## Síntaxis
 
-```
+```js
 document.clear()
 ```
 
-## Especificación
+## Especificaciones
 
-- [HTML5](http://www.whatwg.org/html/#dom-document-clear)
+{{Specifications}}
+
+## Compatibilidad del Navegador
+
+{{Compat}}

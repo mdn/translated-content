@@ -9,8 +9,6 @@ El evento **`scroll`** se produce cuando la vista del documento o un elemento es
 
 ## Información General
 
-- Especificación
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-scroll), [CSSOM View](http://www.w3.org/TR/cssom-view/#scrolling-0)
 - Interfaz
   - : UIEvent
 - Bubbles
@@ -63,8 +61,10 @@ window.addEventListener('scroll', function(e) {
 
 Más ejemplos se pueden ver en el evento [resize](/es/docs/Web/Events/resize#Example).
 
-## Compatibilidad en navegadores
+## Especificaciones
 
-### iOS UIWebView
+{{Specifications}}
 
-En iOS UIWebViews, los eventos `scroll` no se ejecutan mientras el _escroleo/deslizamiento_ se lleva a cabo; solo son ejecutados cuando el deslizamiento terminó. Ver [Bootstrap issue #16202](https://github.com/twbs/bootstrap/issues/16202). Safari y WKWebViews no se ven afectados por este bug.
+## Compatibilidad del Navegador
+
+{{Compat}}

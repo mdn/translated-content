@@ -38,17 +38,17 @@ iframeImages.forEach(function(imgEl) {
 
 ## Notas
 
-Los nodos de documentos externos deberían ser clonados utilizando {{domxref("document.importNode()")}} (o adoptado utilizando `document.adoptNode()`) antes de que puedan ser insertados en el documento actual. Para más incidencias sobre {{domxref("Node.ownerDocument")}}, vea el [W3C DOM FAQ](http://www.w3.org/DOM/faq.html#ownerdoc).
+Los nodos de documentos externos deberían ser clonados utilizando {{domxref("document.importNode()")}} (o adoptado utilizando `document.adoptNode()`) antes de que puedan ser insertados en el documento actual. Para más incidencias sobre {{domxref("Node.ownerDocument")}}, vea el [W3C DOM FAQ](https://www.w3.org/DOM/faq.html#ownerdoc).
 
 Firefox actualmente no obliga a cumplir esta regla (lo hizo un tiempo durante el desarrollo de Firefox 3, pero muchos sitios se rompían cuando esta regla era obligatoria). Animamos a los desarrolladores web a que corrijan su código para seguir esta regla con el fin de mejorar la compatibilidad futura.
 
-## Epecificación
+## Especificaciones
 
-- [DOM Level 3 Core: Document.adoptNode](http://www.w3.org/TR/DOM-Level-3-Core/core.html#Document3-adoptNode)
+{{Specifications}}
 
-## Compatibilidad con navegadores
+## Compatibilidad del Navegador
 
-{{Compat("api.Document.adoptNode")}}
+{{Compat}}
 
 ## Vea también
 

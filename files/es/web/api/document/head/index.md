@@ -28,10 +28,10 @@ alert( document.head === document.querySelector("head") ); // true
 
 `document.head` is de sólo lectura. Cualquier intento de asignar un valor a esta propiedad fallará silenciosamente o, en caso de que se encuentre en [Modo estricto de ECMAScript](/es/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode) en un navegador Gecko, lanzará un [`TypeError`](/es/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
 
-## Compatibilidad con navegadores
+## Especificaciones
 
-{{Compat("api.Document.head")}}
+{{Specifications}}
 
-## Especificación
+## Compatibilidad del Navegador
 
-- [HTML5: DOM Tree Accessors](http://www.w3.org/TR/html5/dom.html#dom-tree-accessors)
+{{Compat}}

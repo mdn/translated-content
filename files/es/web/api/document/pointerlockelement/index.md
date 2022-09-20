@@ -20,13 +20,11 @@ Un {{domxref("Element")}} o `null`.
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                           | Comentario                         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------- |
-| {{SpecName('Bloquear puntero','l#extension-to-the-document-interface','Document')}} | {{Spec2('Pointer lock')}} | Extiende de la interfaz `Document` |
+{{Specifications}}
 
 ## Compatibilidad del Navegador
 
-{{Compat("api.Document.pointerLockElement")}}
+{{Compat}}
 
 ## Véase también:
 

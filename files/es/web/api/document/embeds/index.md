@@ -25,10 +25,8 @@ Una {{domxref("HTMLCollection")}}.
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                               | Comentario |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('HTML WHATWG', '#dom-document-embeds', 'Document.embeds')}} | {{ Spec2('HTML WHATWG') }} |            |
+{{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad del Navegador
 
-{{Compat("api.Document.embeds")}}
+{{Compat}}

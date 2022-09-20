@@ -21,7 +21,7 @@ Escribe una cadena de texto dentro del hilo de un `document `abierto por [docume
 document.write(texto);
 ```
 
-`texto `es una cadena de texto que contiene el texto a ser impreso en el documento.
+`texto` es una cadena de texto que contiene el texto a ser impreso en el documento.
 
 ### Example
 
@@ -60,15 +60,17 @@ Si la llamada a document.write() se ejecuta dentro de una etiqueta `<script>` in
 </script>
 ```
 
-> **Nota:** `document.write` y `document.writeln` [no funcionan dentro de un documento XHTML](/es/docs/Archive/Web/Writing_JavaScript_for_HTML) (obtendrás un mensaje de error que dice "Operación no soportada" ("Operation is not supported") \[`NS_ERROR_DOM_NOT_SUPPORTED_ERR`] en la consola). Esto sucede cuando abrimos un archivo local de extensión .xhtml o para cualquier document servido con un [MIME del tipo ](/es/docs/Glossary/MIME_type)`application/xhtml+xml`. Hay más información disponible en [W3C XHTML FAQ](http://www.w3.org/MarkUp/2004/xhtml-faq#docwrite).
+> **Nota:** `document.write` y `document.writeln` [no funcionan dentro de un documento XHTML](/es/docs/Archive/Web/Writing_JavaScript_for_HTML) (obtendrás un mensaje de error que dice "Operación no soportada" ("Operation is not supported") \[`NS_ERROR_DOM_NOT_SUPPORTED_ERR`] en la consola). Esto sucede cuando abrimos un archivo local de extensión .xhtml o para cualquier document servido con un [MIME del tipo ](/es/docs/Glossary/MIME_type)`application/xhtml+xml`. Hay más información disponible en [W3C XHTML FAQ](https://www.w3.org/MarkUp/2004/xhtml-faq#docwrite).
 
 > **Nota:** `document.write` en scripts de modo [diferido](/es/docs/Web/HTML/Element/script#attr-defer) o [asyncrónico](/es/docs/Web/HTML/Element/script#attr-async) serán ignorados, y recibirás un mensaje de error en la consola del tipo "Una llamada a document.write() desde un script cargado asincrónicamente fue ignorado" ("A call to `document.write()` from an asynchronously-loaded external script was ignored").
 
 ## Especificaciones
 
-- [DOM Level 2 HTML: `write()` Method](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-75233634)
-- [Dynamic markup insertion in HTML](http://www.w3.org/TR/2011/WD-html5-author-20110705/apis-in-html-documents.html#dynamic-markup-insertion)
+{{Specifications}}
 
+## Compatibilidad del Navegador
+
+{{Compat}}
 ## También puedes ver
 
 - {{ domxref("element.innerHTML") }}

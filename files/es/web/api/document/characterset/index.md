@@ -11,15 +11,16 @@ Devuelve la codificación de caracteres (conjunto de caracteres) usado en el doc
 
 ### Sintaxis
 
-```
+```js
 string = document.characterSet
 ```
 
 ### Ejemplo
 
-```
-<button onclick="alert(document.characterSet);"
->Mostrar conjunto de caracteres</button>
+```html
+<button onclick="alert(document.characterSet);">
+    Mostrar conjunto de caracteres
+</button>
 // devuelve el conjunto de caracteres del documento, por ejemplo "ISO-8859-1 o UTF-8"
 ```
 
@@ -29,6 +30,10 @@ La codificación de caracteres es el conjunto de caracteres usados para interpre
 
 Para una lista completa de juegos/conjuntos de caracteres, visite: <http://www.iana.org/assignments/character-sets>.
 
-### Especificación
+## Especificaciones
 
-DOM Nivel 0. No es parte de ningún estándar.
+{{Specifications}}
+
+## Compatibilidad del Navegador
+
+{{Compat}}

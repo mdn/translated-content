@@ -31,7 +31,7 @@ Una instancia del objeto Document (`Document)`.
 
 El código simple a continuación abre el documento y reemplaza su contenido con un número de diferentes fragmentos HTML antes de cerrarlo nuevamente.
 
-```
+```js
 document.open();
 document.write("<p>Hola mundo!</p>");
 document.write("<p>Soy un pez</p>");
@@ -75,16 +75,13 @@ Where `type` specified the MIME type of the data you are writing (e.g. `text/htm
 
 This form is now obsolete; it won't throw an error, but instead just forwards to `document.open()` (i.e. is the equivalent of just running it with no arguments). The history-replacement behavior now always happens.
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                | Status                           | Comment |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName("HTML WHATWG", "#dom-document-open", "document.open()")}} | {{Spec2("HTML WHATWG")}} |         |
-| {{SpecName("DOM2 HTML", "html.html#ID-72161170", "document.open()")}} | {{Spec2("DOM2 HTML")}}     |         |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad del Navegador
 
-{{Compat("api.Document.open")}}
+{{Compat}}
 
 ## See also
 

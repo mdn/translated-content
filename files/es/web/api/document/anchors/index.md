@@ -24,7 +24,7 @@ Una {{domxref("HTMLCollection")}}.
 
 ## Ejemplo
 
-```
+```js
 if ( document.anchors.length >= 5 ) {
     dump("dump found too many anchors");
     window.location = "http://www.google.com";
@@ -86,8 +86,9 @@ Por razones de retrocompatibilidad, el conjunto de anclas devuelto sólo contien
 
 ## Especificaciones
 
-[DOM Level 2 HTML: anchors](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-7577272)
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad del Navegador
 
-{{Compat("api.Document.anchors")}}
+{{Compat}}
+

@@ -133,16 +133,11 @@ inner.length; // 0
 
 ## Especificaciones
 
-| Especificación                                                                                                                               | Estado                                       | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------- |
-| {{SpecName("DOM WHATWG", "#dom-parentnode-queryselectorall", "ParentNode.querySelectorAll()")}}             | {{Spec2("DOM WHATWG")}}             | Estándar vivo       |
-| {{SpecName("Selectors API Level 2", "#dom-parentnode-queryselectorall", "ParentNode.querySelectorAll()")}} | {{Spec2("Selectors API Level 2")}} | Sin cambios         |
-| {{SpecName("DOM4", "#dom-parentnode-queryselectorall", "ParentNode.querySelectorAll()")}}                     | {{Spec2("DOM4")}}                     | Definición inicial  |
-| {{SpecName("Selectors API Level 1", "#interface-definitions", "document.querySelector()")}}                     | {{Spec2("Selectors API Level 1")}} | Definición original |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad del Navegador
 
-{{Compat("api.Document.querySelectorAll")}}
+{{Compat}}
 
 ## Ver también
 
