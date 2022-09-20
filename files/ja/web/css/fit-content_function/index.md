@@ -1,15 +1,6 @@
 ---
 title: fit-content()
 slug: Web/CSS/fit-content_function
-tags:
-  - CSS
-  - CSS 関数
-  - CSS グリッド
-  - 関数
-  - レイアウト
-  - リファレンス
-  - ウェブ
-translation_of: Web/CSS/fit-content()
 original_slug: Web/CSS/fit-content()
 ---
 {{CSSRef}}

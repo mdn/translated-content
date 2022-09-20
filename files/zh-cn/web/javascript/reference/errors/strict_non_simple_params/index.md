@@ -44,7 +44,7 @@ function sum(a=1, b=2) {
 }
 ```
 
-如果这个函数应该处于 [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)，并且整个脚本或封装函数也可以在严格模式下，可以移动 "use strict" 指令到函数之外：
+如果这个函数应该处于 [strict mode](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)，并且整个脚本或封装函数也可以在严格模式下，可以移动 "use strict" 指令到函数之外：
 
 ```js example-good
 "use strict";

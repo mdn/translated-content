@@ -1,12 +1,6 @@
 ---
 title: '실력을 평가해 보세요: 이벤트'
 slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Events
-tags:
-  - Beginner
-  - JavaScript
-  - Learn
-  - events
-  - test your skills
 ---
 {{learnsidebar}}
 

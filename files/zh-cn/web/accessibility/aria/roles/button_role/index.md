@@ -26,7 +26,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role
 
 ## Labeling buttons
 
-按钮应该总是有一个可访问的名称。对于大多数按钮，这个名称将与按钮中的文本相同。在某些情况下，例如图标按钮，可通过 [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute) 或 [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) 属性提供可访问的名称。
+按钮应该总是有一个可访问的名称。对于大多数按钮，这个名称将与按钮中的文本相同。在某些情况下，例如图标按钮，可通过 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute) 或 [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) 属性提供可访问的名称。
 
 ## 对用户代理和辅助技术的可能影响
 

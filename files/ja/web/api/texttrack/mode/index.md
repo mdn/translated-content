@@ -1,15 +1,6 @@
 ---
 title: TextTrack.mode
 slug: Web/API/TextTrack/mode
-tags:
-  - Accessibility
-  - NeedsExample
-  - Property
-  - TextTrack
-  - Web
-  - WebVTT
-  - mode
-translation_of: Web/API/TextTrack/mode
 ---
 {{APIRef("WebVTT")}}
 

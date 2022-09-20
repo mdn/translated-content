@@ -1,14 +1,6 @@
 ---
 title: border-image
 slug: Web/CSS/border-image
-tags:
-  - CSS
-  - CSS 背景と境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.border-image
-translation_of: Web/CSS/border-image
 ---
 {{CSSRef}}
 

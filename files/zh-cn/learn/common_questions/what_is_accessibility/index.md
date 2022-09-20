@@ -23,7 +23,7 @@ slug: Learn/Common_questions/What_is_accessibility
 
 ## 自主学习
 
-_还没有可用的资料。 [Please, consider contributing](/en-US/docs/MDN/Getting_started)._
+_还没有可用的资料。 [Please, consider contributing](/zh-CN/docs/MDN/Getting_started)._
 
 ## 深入探索
 
@@ -75,5 +75,5 @@ Since 1999, the {{Glossary("W3C")}} has operated a working group called the {{Gl
 
 Accessibility can impact both a website's design and technical structure.
 
-- From a design point of view, we suggest learning about [designing for all types of users](/en-US/docs/Learn/Design_for_all_types_of_users_101).
-- If the technical side interests you more, you could learn how to [embed images in webpages](/en-US/docs/Learn/Using_images).
+- From a design point of view, we suggest learning about [designing for all types of users](/zh-CN/docs/Learn/Design_for_all_types_of_users_101).
+- If the technical side interests you more, you could learn how to [embed images in webpages](/zh-CN/docs/Learn/Using_images).

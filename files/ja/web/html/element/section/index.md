@@ -1,17 +1,6 @@
 ---
 title: '<section>: 汎用セクション要素'
 slug: Web/HTML/Element/section
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - HTML:フローコンテンツ
-  - HTML:区分コンテンツ
-  - HTML:知覚可能コンテンツ
-  - Reference
-  - Section
-  - Web
-translation_of: Web/HTML/Element/section
 ---
 {{HTMLRef}}
 

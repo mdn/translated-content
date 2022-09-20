@@ -1,14 +1,6 @@
 ---
 title: CSSRuleList.length
 slug: Web/API/CSSRuleList/length
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - length
-  - CSSRuleList
-browser-compat: api.CSSRuleList.length
-translation_of: Web/API/CSSRuleList/length
 ---
 {{ APIRef("CSSOM") }}
 

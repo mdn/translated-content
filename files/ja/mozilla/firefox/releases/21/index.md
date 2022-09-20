@@ -1,10 +1,6 @@
 ---
 title: Firefox 21 for developers
 slug: Mozilla/Firefox/Releases/21
-tags:
-  - Firefox
-  - Firefox 21
-translation_of: Mozilla/Firefox/Releases/21
 ---
 Gecko 21 を搭載した Firefox 21 は米国時間 2013 年 5 月 14 日にリリースされました。このページでは、開発者に影響する Firefox 20 の変更点をまとめています。
 
@@ -18,7 +14,7 @@ Gecko 21 を搭載した Firefox 21 は米国時間 2013 年 5 月 14 日にリ�
 ### JavaScript
 
 - 旧式の JavaScript 拡張である [E4X](/ja/docs/E4X) を削除しました。Gecko しか実装せず、有意な牽引力は得られませんでした ({{bug("788293")}})。
-- [parseInt](/ja/docs/JavaScript/Reference/Global_Objects/parseInt "JavaScript/Reference/Global_Objects/parseInt") は、先頭が "0" の文字列を 8 進数として扱わないようになりました ({{bug("786135")}})。
+- [parseInt](/ja/docs/JavaScript/Reference/Global_Objects/parseInt) は、先頭が "0" の文字列を 8 進数として扱わないようになりました ({{bug("786135")}})。
 
 ### CSS
 

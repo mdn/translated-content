@@ -1,15 +1,7 @@
 ---
 title: scale()
 slug: Web/CSS/transform-function/scale
-tags:
-  - CSS
-  - CSS 関数
-  - CSS 座標変換
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/transform-function/scale()
 original_slug: Web/CSS/transform-function/scale()
-browser-compat: css.types.transform-function.scale
 ---
 {{CSSRef}}
 

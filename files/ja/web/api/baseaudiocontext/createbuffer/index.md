@@ -1,20 +1,6 @@
 ---
 title: BaseAudioContext.createBuffer()
 slug: Web/API/BaseAudioContext/createBuffer
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - BaseAudioContext
-  - バッファー
-  - メディア
-  - メソッド
-  - リファレンス
-  - ウェブ音声
-  - ウェブ音声 API
-  - createBuffer
-browser-compat: api.BaseAudioContext.createBuffer
-translation_of: Web/API/BaseAudioContext/createBuffer
 original_slug: Web/API/AudioContext/createBuffer
 ---
 {{ APIRef("Web Audio API") }}

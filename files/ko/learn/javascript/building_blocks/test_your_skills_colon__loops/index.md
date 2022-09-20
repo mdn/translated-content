@@ -1,11 +1,6 @@
 ---
 title: '실력을 평가해 보세요: 반복문'
 slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Loops
-tags:
-  - Beginner
-  - JavaScript
-  - Learn
-  - Loops
 ---
 {{learnsidebar}}
 

@@ -1,15 +1,6 @@
 ---
 title: window.self
 slug: Web/API/Window/self
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - Property
-  - Read-only
-  - Reference
-  - Window
-translation_of: Web/API/Window/self
 ---
 {{ APIRef() }}
 

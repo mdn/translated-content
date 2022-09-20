@@ -1,13 +1,6 @@
 ---
 title: Atomics.sub()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/sub
-tags:
-  - Atomics
-  - JavaScript
-  - メソッド
-  - 共有メモリー
-browser-compat: javascript.builtins.Atomics.sub
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/sub
 ---
 {{JSRef}}
 

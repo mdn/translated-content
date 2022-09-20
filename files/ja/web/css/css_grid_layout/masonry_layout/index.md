@@ -1,12 +1,6 @@
 ---
 title: 組積レイアウト
 slug: Web/CSS/CSS_Grid_Layout/Masonry_Layout
-tags:
-  - CSS
-  - CSS グリッド
-  - 実験的
-  - 組積
-translation_of: Web/CSS/CSS_Grid_Layout/Masonry_Layout
 ---
 {{CSSRef}}
 

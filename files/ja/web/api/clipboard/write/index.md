@@ -1,22 +1,6 @@
 ---
 title: Clipboard.write()
 slug: Web/API/Clipboard/write
-page-type: web-api-instance-method
-tags:
-  - API
-  - Clip
-  - Clipboard
-  - Clipboard API
-  - Cut
-  - Method
-  - Pasteboard
-  - Reference
-  - Scrap
-  - copy
-  - paste
-  - write
-translation_of: Web/API/Clipboard/write
-browser-compat: api.Clipboard.write
 ---
 {{APIRef("Clipboard API")}}
 

@@ -1,16 +1,6 @@
 ---
 title: 'HTMLMediaElement: ratechange イベント'
 slug: Web/API/HTMLMediaElement/ratechange_event
-page-type: web-api-event
-tags:
-  - API
-  - Audio
-  - Event
-  - HTMLMediaElement
-  - Reference
-  - Video
-browser-compat: api.HTMLMediaElement.ratechange_event
-translation_of: Web/API/HTMLMediaElement/ratechange_event
 ---
 {{APIRef("HTMLMediaElement")}}
 

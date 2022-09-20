@@ -1,14 +1,6 @@
 ---
 title: Flexbox
 slug: Learn/CSS/CSS_layout/Flexbox
-tags:
-  - 문서
-  - 안내서
-  - 용어집
-  - 초보자
-  - 코딩스크립팅
-  - 학습
-translation_of: Learn/CSS/CSS_layout/Flexbox
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
 

@@ -1,13 +1,6 @@
 ---
 title: CSS フォント
 slug: Web/CSS/CSS_Fonts
-tags:
-  - CSS
-  - CSS フォント
-  - ガイド
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/CSS_Fonts
 ---
 {{CSSRef}}
 

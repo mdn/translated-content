@@ -1,19 +1,6 @@
 ---
 title: HTMLMediaElement.duration
 slug: Web/API/HTMLMediaElement/duration
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Read-only
-  - Time
-  - Web
-  - duration
-  - seconds
-browser-compat: api.HTMLMediaElement.duration
-translation_of: Web/API/HTMLMediaElement/duration
 ---
 {{APIRef("HTML DOM")}}
 

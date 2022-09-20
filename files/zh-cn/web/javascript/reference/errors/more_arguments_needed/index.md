@@ -42,4 +42,4 @@ var obj = Object.setPrototypeOf({}, null);
 
 ## 相关
 
-- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/zh-CN/docs/Web/JavaScript/Guide/Functions)

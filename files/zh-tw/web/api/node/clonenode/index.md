@@ -2,6 +2,7 @@
 title: Node.cloneNode()
 slug: Web/API/Node/cloneNode
 ---
+
 {{APIRef("DOM")}}
 
 **`Node.cloneNode()`** 方法會回傳一個呼叫此方法之節點物件的拷貝。

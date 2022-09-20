@@ -6,13 +6,13 @@ slug: Glossary/CSS_preprocessor
 
 CSS プリプロセッサーを使うためには、 CSS コンパイラーをウェブ{{Glossary("server", "サーバー")}}にインストールするか、 CSS プリプロセッサーを使用して開発環境でコンパイルしてから、コンパイル済みの CSS ファイルをウェブサーバーにアップロードする必要があります。
 
-1.  有名な CSS プリプロセッサーの例
+1. 有名な CSS プリプロセッサーの例
 
-    1.  [Sass](http://sass-lang.com/)
-    2.  [LESS](http://lesscss.org/)
-    3.  [Stylus](http://stylus-lang.com/)
-    4.  [PostCSS](http://postcss.org/)
+    1. [Sass](http://sass-lang.com/)
+    2. [LESS](http://lesscss.org/)
+    3. [Stylus](http://stylus-lang.com/)
+    4. [PostCSS](http://postcss.org/)
 
-2.  [MDN Web Docs 用語集](/ja/docs/Glossary)
+2. [MDN Web Docs 用語集](/ja/docs/Glossary)
 
-    1.  {{Glossary("CSS")}}
+    1. {{Glossary("CSS")}}

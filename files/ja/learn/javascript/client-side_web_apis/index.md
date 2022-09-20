@@ -25,7 +25,7 @@ Web サイトやアプリケーション用にクライアント側の JavaScrip
 - [サードパーティ API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
   - : これまでに説明した API はブラウザーに組込まれていますが、全ての API が組込まれているのではありません。グーグルマップや Twitter、Facebook、ペイパルなど、多くの巨大な Web サイトやサービスが、開発者に対して彼らのデータを利用したり(例:あなたのブログに twitter のタイムラインを表示させる)、サービスを利用したり(例:あなたのサイトに独自のグーグルマップを表示したり、あなたのサービス利用者に Facebook でログインできたり)するための API を提供しています。この記事ではブラウザー API とサードパーティ API の違いを見ていき、典型的な後者の使い方をお見せします。
 - [絵を描く](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-  - : ブラウザーにはグラフィックを描くためのとても強力なツールがいくつか組込まれています。[SVG](/ja/docs/Web/SVG)(Scalable Vector Graphics) 言語から、HTML の {{htmlelement("canvas")}} キャンバス要素に描画するための API まで ([キャンバス API ](/ja/docs/Web/API/Canvas_API)や [WebGL](/ja/docs/Web/API/WebGL_API)を参照)。 この記事ではキャンバス API への導入を説明し、もっと深く学習していくためのリソースをご紹介します。
+  - : ブラウザーにはグラフィックを描くためのとても強力なツールがいくつか組込まれています。[SVG](/ja/docs/Web/SVG)(Scalable Vector Graphics) 言語から、HTML の {{htmlelement("canvas")}} キャンバス要素に描画するための API まで ([キャンバス API](/ja/docs/Web/API/Canvas_API) や [WebGL](/ja/docs/Web/API/WebGL_API)を参照)。 この記事ではキャンバス API への導入を説明し、もっと深く学習していくためのリソースをご紹介します。
 - [動画と音声の API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
   - : HTML5 には文書にリッチなメディアを埋め込むための要素が備わっています — {{htmlelement("video")}} と {{htmlelement("audio")}} — それぞれに再生やシークなどの操作するための独自 API を備えています。この記事では独自の再生操作パネルを作成するような、よくある仕事をどうやればいいのかお見せします。
 - [クライアント側でのデータ保存](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

@@ -1,16 +1,6 @@
 ---
 title: ':left'
 slug: Web/CSS/:left
-tags:
-  - '@page'
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - Reference
-  - セレクター
-  - Web
-browser-compat: css.selectors.left
-translation_of: Web/CSS/:left
 ---
 {{ CSSRef() }}
 

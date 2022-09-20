@@ -1,14 +1,6 @@
 ---
 title: Window.scrollMaxX
 slug: Web/API/Window/scrollMaxX
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - Non-standard
-  - Property
-  - Window
-translation_of: Web/API/Window/scrollMaxX
 ---
 {{APIRef}} {{Non-standard_header}}
 

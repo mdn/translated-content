@@ -2,6 +2,7 @@
 title: Array.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 ---
+
 {{JSRef}}
 
 **`indexOf()`** 方法會回傳給定元素於陣列中第一個被找到之索引，若不存在於陣列中則回傳 -1。

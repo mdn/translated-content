@@ -1,14 +1,6 @@
 ---
 title: PWA をインストール可能にするには
 slug: Web/Progressive_web_apps/Installable_PWAs
-tags:
-  - PWA
-  - a2hs
-  - js13kGames
-  - インストール可能
-  - ホーム画面に追加
-  - 進歩的ウェブアプリ
-translation_of: Web/Progressive_web_apps/Installable_PWAs
 ---
 {{PreviousMenuNext("Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
 

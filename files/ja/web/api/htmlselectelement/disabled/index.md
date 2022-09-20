@@ -1,13 +1,6 @@
 ---
 title: HTMLSelectElement.disabled
 slug: Web/API/HTMLSelectElement/disabled
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - プロパティ
-browser-compat: api.HTMLSelectElement.disabled
-translation_of: Web/API/HTMLSelectElement/disabled
 ---
 {{ APIRef("HTML DOM") }}
 

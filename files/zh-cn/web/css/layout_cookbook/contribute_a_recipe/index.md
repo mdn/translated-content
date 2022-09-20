@@ -16,7 +16,7 @@ slug: Web/CSS/Layout_cookbook/Contribute_a_recipe
 
 1. 一个动态的示例，存储在 [CSS Examples GitHub repo](https://github.com/mdn/css-examples) 之上。
 2. 这份示例的可供下载版本，同样也存储在 CSS Examples repo 之上。
-3. 该网站的某个页面在 [CSS layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook) 上应详细说明：
+3. 该网站的某个页面在 [CSS layout cookbook](/zh-CN/docs/Web/CSS/Layout_cookbook) 上应详细说明：
 
     1. 要求
     2. recipe
@@ -48,7 +48,7 @@ You need to add the HTML for your component twice. First inside the section with
 
 Your editable CSS, from the second block in the head, also needs to be copied into the `playable-css` section.
 
-A simple worked example is [center.html](https://github.com/mdn/css-examples/blob/master/css-cookbook/center.html), which is embedded on the page [Center an element](/en-US/docs/user:chrisdavidmills/Layout_Cookbook_Home/Center_an_element). You can use this to see how to add the various bits correctly.
+A simple worked example is [center.html](https://github.com/mdn/css-examples/blob/master/css-cookbook/center.html), which is embedded on the page [Center an element](/zh-CN/docs/user:chrisdavidmills/Layout_Cookbook_Home/Center_an_element). You can use this to see how to add the various bits correctly.
 
 If you have forked the repo and therefore have our CSS and JavaScript files alongside your example, if you open up your live example in the browser you should see everything working exactly as it will when included in a page.
 
@@ -68,7 +68,7 @@ Make a PR on the [CSS Examples repo](https://github.com/mdn/css-examples). This 
 
 ### 5. 创建您的页面
 
-Once your example is merged you can create your page. You will need an MDN account to do so with [page creation permissions](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Create_and_edit_pages#Getting_page_creation_permissions), and you can then create the page as a subpage of the CSS Cookbook page. [There is a template for Cookbook pages here](/en-US/docs/user:chrisdavidmills/Layout_Cookbook_Home/Contribute_a_recipe/Cookbook_template).
+Once your example is merged you can create your page. You will need an MDN account to do so with [page creation permissions](/zh-CN/docs/MDN/Contribute/Howto/Create_and_edit_pages#Getting_page_creation_permissions), and you can then create the page as a subpage of the CSS Cookbook page. [There is a template for Cookbook pages here](/zh-CN/docs/user:chrisdavidmills/Layout_Cookbook_Home/Contribute_a_recipe/Cookbook_template).
 
 The template explains what should be part of each section, and you can refer to other cookbook examples for more help. If you click to edit any of those pages then you will be able to see things such as the macros used to embed compat data, and live examples.
 
@@ -78,5 +78,5 @@ If you need to ask any questions, or want someone to take a look at your page th
 
 ## See also
 
-- [Cookbook page template](/en-US/docs/user:chrisdavidmills/Layout_Cookbook_Home/Contribute_a_recipe/Cookbook_template)
+- [Cookbook page template](/zh-CN/docs/user:chrisdavidmills/Layout_Cookbook_Home/Contribute_a_recipe/Cookbook_template)
 - [CSS Examples repo](https://github.com/mdn/css-examples)

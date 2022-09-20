@@ -1,14 +1,6 @@
 ---
 title: Headers.append()
 slug: Web/API/Headers/append
-tags:
-  - API
-  - Append
-  - Experimental
-  - Fetch
-  - Method
-  - Reference
-translation_of: Web/API/Headers/append
 ---
 {{APIRef("Fetch")}}{{ SeeCompatTable() }}
 

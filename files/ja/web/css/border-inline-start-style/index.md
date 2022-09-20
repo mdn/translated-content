@@ -1,19 +1,6 @@
 ---
 title: border-inline-start-style
 slug: Web/CSS/border-inline-start-style
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - border-inline
-  - border-inline-start
-  - border-inline-start-style
-  - border-inline-style
-  - recipe:css-property
-browser-compat: css.properties.border-inline-start-style
-translation_of: Web/CSS/border-inline-start-style
 ---
 {{CSSRef}}
 

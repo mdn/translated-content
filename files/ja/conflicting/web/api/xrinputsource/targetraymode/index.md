@@ -1,27 +1,6 @@
 ---
 title: XRTargetRayMode
 slug: conflicting/Web/API/XRInputSource/targetRayMode
-tags:
-  - 3D
-  - API
-  - AR
-  - Enum
-  - Enumerated Type
-  - Input
-  - Reality
-  - Reference
-  - Type
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRTargetRayMode
-  - augmented
-  - source
-  - target
-translation_of: Web/API/XRTargetRayMode
 original_slug: Web/API/XRTargetRayMode
 ---
 {{APIRef("WebXR")}}

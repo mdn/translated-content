@@ -26,17 +26,17 @@ XSS is a term used to describe a class of attacks that allow an attacker to inje
 
 Django's template system protects you against the majority of XSS attacks by [escaping specific characters](https://docs.djangoproject.com/en/2.0/ref/templates/language/#automatic-html-escaping) that are "dangerous" in HTML. We can demonstrate this by attempting to inject some JavaScript into our LocalLibrary website using the Create-author form we set up in [Django Tutorial Part 9: Working with forms](/ja/docs/Learn/Server-side/Django/Forms).
 
-1.  Start the website using the development server (`python3 manage.py runserver`).
-2.  Open the site in your local browser and login to your superuser account.
-3.  Navigate to the author-creation page (which should be at URL: [`http://127.0.0.1:8000/catalog/author/create/`](http://127.0.0.1:8000/catalog/author/create/)).
-4.  Enter names and date details for a new user, and then append the following text to the Last Name field:
+1. Start the website using the development server (`python3 manage.py runserver`).
+2. Open the site in your local browser and login to your superuser account.
+3. Navigate to the author-creation page (which should be at URL: [`http://127.0.0.1:8000/catalog/author/create/`](http://127.0.0.1:8000/catalog/author/create/)).
+4. Enter names and date details for a new user, and then append the following text to the Last Name field:
     `<script>alert('Test alert');</script>`.
     ![Author Form XSS test](author_create_form_alert_xss.png)
 
     > **Note:** This is a harmless script that, if executed, will display an alert box in your browser. If the alert is displayed when you submit the record then the site is vulnerable to XSS threats.
 
-5.  Press **Submit** to save the record.
-6.  When you save the author it will be displayed as shown below. Because of the XSS protections the `alert()` should not be run. Instead the script is displayed as plain text.![Author detail view XSS test](author_detail_alert_xss.png)
+5. Press **Submit** to save the record.
+6. When you save the author it will be displayed as shown below. Because of the XSS protections the `alert()` should not be run. Instead the script is displayed as plain text.![Author detail view XSS test](author_detail_alert_xss.png)
 
 If you view the page HTML source code, you can see that the dangerous characters for the script tags have been turned into their harmless escape code equivalents (e.g. `>` is now `&gt;`)
 
@@ -95,7 +95,7 @@ Django also provides other forms of protection (most of which would be hard or n
 - SQL injection protection
   - : SQL injection vulnerabilities enable malicious users to execute arbitrary SQL code on a database, allowing data to be accessed, modified, or deleted irrespective of the user's permissions. In almost every case you'll be accessing the database using Django’s querysets/models, so the resulting SQL will be properly escaped by the underlying database driver. If you do need to write raw queries or custom SQL then you'll need to explicitly think about preventing SQL injection.
 - Clickjacking protection
-  - : In this attack a malicious user hijacks clicks meant for a visible top level site and routes them to a hidden page beneath. This technique might be used, for example, to display a legitimate bank site but capture the login credentials in an invisible [`<iframe>`](/ja/docs/Web/HTML/Element/iframe "The HTML Inline Frame Element (<iframe>) represents a nested browsing context, effectively embedding another HTML page into the current page. In HTML 4.01, a document may contain a head and a body or a head and a frameset, but not both a body and a frameset. However, an <iframe> can be used within a normal document body. Each browsing context has its own session history and active document. The browsing context that contains the embedded content is called the parent browsing context. The top-level browsing context (which has no parent) is typically the browser window.") controlled by the attacker. Django contains [clickjacking protection](https://docs.djangoproject.com/en/2.0/ref/clickjacking/#clickjacking-prevention) in the form of the [`X-Frame-Options middleware`](https://docs.djangoproject.com/en/2.0/ref/middleware/#django.middleware.clickjacking.XFrameOptionsMiddleware "django.middleware.clickjacking.XFrameOptionsMiddleware") which, in a supporting browser, can prevent a site from being rendered inside a frame.
+  - : In this attack a malicious user hijacks clicks meant for a visible top level site and routes them to a hidden page beneath. This technique might be used, for example, to display a legitimate bank site but capture the login credentials in an invisible [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) controlled by the attacker. Django contains [clickjacking protection](https://docs.djangoproject.com/en/2.0/ref/clickjacking/#clickjacking-prevention) in the form of the [`X-Frame-Options middleware`](https://docs.djangoproject.com/en/2.0/ref/middleware/#django.middleware.clickjacking.XFrameOptionsMiddleware) which, in a supporting browser, can prevent a site from being rendered inside a frame.
 - Enforcing SSL/HTTPS
   - : SSL/HTTPS can be enabled on the web server in order to encrypt all traffic between the site and browser, including authentication credentials that would otherwise be sent in plain text (enabling HTTPS is highly recommended). If HTTPS is enabled then Django provides a number of other protections you can use:
 

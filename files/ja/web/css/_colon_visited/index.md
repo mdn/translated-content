@@ -1,14 +1,6 @@
 ---
 title: ':visited'
 slug: Web/CSS/:visited
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-translation_of: Web/CSS/:visited
 ---
 {{CSSRef}}
 

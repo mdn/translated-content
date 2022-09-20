@@ -1,14 +1,6 @@
 ---
 title: TaskAttributionTiming.containerSrc
 slug: Web/API/TaskAttributionTiming/containerSrc
-tags:
-  - API
-  - Long Tasks API
-  - Performance
-  - Property
-  - Reference
-  - TaskAttributionTiming
-translation_of: Web/API/TaskAttributionTiming/containerSrc
 ---
 {{SeeCompatTable}}{{APIRef("Long Tasks")}}
 

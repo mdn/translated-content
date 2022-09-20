@@ -3,6 +3,7 @@ title: Document.createTreeWalker()
 slug: Web/API/Document/createTreeWalker
 original_slug: Web/API/document.createTreeWalker
 ---
+
 {{ApiRef("Document")}}
 
 **`Document.createTreeWalker()`** 方法，能建立一個 {{domxref("TreeWalker")}} 物件並傳回.

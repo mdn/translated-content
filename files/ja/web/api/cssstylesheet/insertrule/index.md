@@ -1,13 +1,6 @@
 ---
 title: CSSStyleSheet.insertRule()
 slug: Web/API/CSSStyleSheet/insertRule
-tags:
-  - API
-  - CSSOM
-  - CSSStyleSheet
-  - Method
-  - Reference
-translation_of: Web/API/CSSStyleSheet/insertRule
 ---
 **CSSStyleSheet.insertRule()** メソッドは、新しい [CSS 規則](/ja/docs/Web/API/CSSRule)を[現在のスタイルシート](/ja/docs/Web/API/CSSStyleSheet)に挿入しますが、いくつかの[制限](#Restrictions)があります。
 

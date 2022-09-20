@@ -42,11 +42,11 @@ var myRequest = new Request(input[, init]);
 
 | 型          | 説明                                                                                                                                                                       |
 | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `TypeError` | [Firefox 43](/ja/docs/Mozilla/Firefox/Releases/43) 以降、http\://user:password\@example.com のような認証情報を含む URL だった場合、Request() は TypeError をスローします。 |
+| `TypeError` | [Firefox 43](/ja/docs/Mozilla/Firefox/Releases/43) 以降、`http://user:password@example.com` のような認証情報を含む URL だった場合、Request() は TypeError をスローします。 |
 
 ## 例
 
-[Fetch Request example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request) ([Fetch Request live ](http://mdn.github.io/fetch-examples/fetch-request/)を参照) では、コンストラクターを使用して新しいリクエストオブジェクトを生成してから、 {{domxref("GlobalFetch.fetch")}} 呼び出しを使用して取得しています。画像を取得してから、それを適切に処理できるように MIME タイプを設定するため、レスポンスの {{domxref("Body.blob")}} を実行しています。それから、オブジェクト URL を生成して、 {{htmlelement("img")}} 要素に表示しています。
+[Fetch Request example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request) ([Fetch Request live](http://mdn.github.io/fetch-examples/fetch-request/) を参照) では、コンストラクターを使用して新しいリクエストオブジェクトを生成してから、 {{domxref("GlobalFetch.fetch")}} 呼び出しを使用して取得しています。画像を取得してから、それを適切に処理できるように MIME タイプを設定するため、レスポンスの {{domxref("Body.blob")}} を実行しています。それから、オブジェクト URL を生成して、 {{htmlelement("img")}} 要素に表示しています。
 
 ```js
 var myImage = document.querySelector('img');
@@ -61,7 +61,7 @@ fetch(myRequest).then(function(response) {
 });
 ```
 
-[Fetch Request with init example](https://github.com/mdn/fetch-examples/tree/master/fetch-request-with-init) ([Fetch Request init live ](http://mdn.github.io/fetch-examples/fetch-request-with-init/)を参照) では、 `fetch()` を呼び出すときに init オブジェクトを渡している以外は同じです。
+[Fetch Request with init example](https://github.com/mdn/fetch-examples/tree/master/fetch-request-with-init) ([Fetch Request init live](http://mdn.github.io/fetch-examples/fetch-request-with-init/) を参照) では、 `fetch()` を呼び出すときに init オブジェクトを渡している以外は同じです。
 
 ```js
 var myImage = document.querySelector('img');
@@ -108,7 +108,7 @@ var myRequest = new Request('flowers.jpg', myInit);
 var copy = new Request(myRequest);
 ```
 
-> **Note:** **メモ**: 最後の使い方は[サービスワーカー](/ja/docs/Web/API/ServiceWorker_API)内でのみ使用できます。
+> **Note:**  最後の使い方は[サービスワーカー](/ja/docs/Web/API/ServiceWorker_API)内でのみ使用できます。
 
 ## 仕様書
 

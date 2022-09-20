@@ -1,14 +1,6 @@
 ---
 title: HTML 要素リファレンス
 slug: Web/HTML/Element
-tags:
-  - Basic
-  - 要素
-  - HTML
-  - リファレンス
-  - ウェブ
-  - l10n:priority
-translation_of: Web/HTML/Element
 ---
 
 {{HTMLSidebar("Elements")}}

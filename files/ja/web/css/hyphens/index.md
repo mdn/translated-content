@@ -1,14 +1,6 @@
 ---
 title: hyphens
 slug: Web/CSS/hyphens
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS テキスト
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.hyphens
-translation_of: Web/CSS/hyphens
 ---
 {{CSSRef}}
 

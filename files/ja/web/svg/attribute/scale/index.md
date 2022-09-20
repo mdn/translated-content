@@ -1,11 +1,6 @@
 ---
 title: scale
 slug: Web/SVG/Attribute/scale
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/scale
 ---
 {{SVGRef}}
 

@@ -1,17 +1,6 @@
 ---
 title: 認証情報管理 API
 slug: Web/API/Credential_Management_API
-tags:
-  - API
-  - Credential Management API
-  - Landing
-  - NeedsContent
-  - Overview
-  - Reference
-  - credential management
-  - 認証情報
-  - 認証情報管理
-translation_of: Web/API/Credential_Management_API
 ---
 {{DefaultAPISidebar("Credential Management API")}}{{ SeeCompatTable() }}
 

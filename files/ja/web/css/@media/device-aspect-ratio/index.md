@@ -1,16 +1,6 @@
 ---
 title: device-aspect-ratio
 slug: Web/CSS/@media/device-aspect-ratio
-tags:
-  - '@media'
-  - CSS
-  - 非推奨
-  - メディアクエリー
-  - リファレンス
-  - ウェブ
-  - メディア特性
-browser-compat: css.at-rules.media.device-aspect-ratio
-translation_of: Web/CSS/@media/device-aspect-ratio
 ---
 {{CSSRef}} {{deprecated_header}}
 

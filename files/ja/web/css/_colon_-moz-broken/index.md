@@ -1,16 +1,6 @@
 ---
 title: ':-moz-broken'
 slug: Web/CSS/:-moz-broken
-tags:
-  - CSS
-  - CSS:Mozilla 拡張
-  - NeedsCompatTable
-  - 標準外
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.-moz-broken
-translation_of: 'Web/CSS/:-moz-broken'
 ---
 {{CSSRef}}{{Non-standard_header}}
 

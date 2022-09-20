@@ -1,13 +1,6 @@
 ---
 title: MessagePort.start()
 slug: Web/API/MessagePort/start
-tags:
-  - API
-  - Channel messaging
-  - MessagePort
-  - Method
-  - Reference
-translation_of: Web/API/MessagePort/start
 ---
 {{APIRef("HTML DOM")}}
 

@@ -1,18 +1,7 @@
 ---
 title: minmax()
 slug: Web/CSS/minmax
-tags:
-  - CSS
-  - CSS 関数
-  - CSS グリッド
-  - Experimental
-  - 関数
-  - リファレンス
-  - ウェブ
-  - レイアウト
-translation_of: Web/CSS/minmax()
 original_slug: Web/CSS/minmax()
-browser-compat: css.properties.grid-template-columns.minmax
 ---
 {{CSSRef}}
 

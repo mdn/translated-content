@@ -1,14 +1,6 @@
 ---
 title: URLSearchParams.values()
 slug: Web/API/URLSearchParams/values
-tags:
-  - API
-  - Iterator
-  - Method
-  - Reference
-  - URL API
-  - URLSearchParams
-translation_of: Web/API/URLSearchParams/values
 ---
 {{APIRef("URL API")}}
 

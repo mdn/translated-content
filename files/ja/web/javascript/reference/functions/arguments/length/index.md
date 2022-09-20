@@ -1,13 +1,6 @@
 ---
 title: arguments.length
 slug: Web/JavaScript/Reference/Functions/arguments/length
-tags:
-  - 関数
-  - JavaScript
-  - プロパティ
-  - arguments
-browser-compat: javascript.functions.arguments.length
-translation_of: Web/JavaScript/Reference/Functions/arguments/length
 ---
 {{jsSidebar("Functions")}}
 

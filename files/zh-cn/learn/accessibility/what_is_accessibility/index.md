@@ -90,8 +90,8 @@ slug: Learn/Accessibility/What_is_accessibility
 
 ### 注意
 
-- 具有[认知无障碍](/en-US/docs/Web/Accessibility/Cognitive_accessibility)的设计将导致良好的设计实践。他们将使所有人受益。
-- 许多有认知障碍的人也可能患有身体残疾。网站必须遵循 W3C 的“[网页内容无障碍指南](https://www.w3.org/WAI/standards-guidelines/wcag/)”包括[认知无障碍指南](/en-US/docs/Web/Accessibility/Cognitive_accessibility#Guidelines)。
+- 具有[认知无障碍](/zh-CN/docs/Web/Accessibility/Cognitive_accessibility)的设计将导致良好的设计实践。他们将使所有人受益。
+- 许多有认知障碍的人也可能患有身体残疾。网站必须遵循 W3C 的“[网页内容无障碍指南](https://www.w3.org/WAI/standards-guidelines/wcag/)”包括[认知无障碍指南](/zh-CN/docs/Web/Accessibility/Cognitive_accessibility#Guidelines)。
 - W3C 的“[认知和学习残疾无障碍专案组](https://www.w3.org/WAI/GL/task-forces/coga/)”为认知障碍人士制作了 web 无障碍指南。
 - WebAIM 有一个[认知网页](https://webaim.org/articles/cognitive/)提供了相关的信息和资源。
 - 美国疾病控制中心估计，截至 2018 年，美国四分之一的公民有残疾，[其中认知障碍是年轻人最常见的疾病](https://www.cdc.gov/media/releases/2018/p0816-disability.html)。
@@ -151,7 +151,7 @@ Web 浏览器使用特殊的无障碍 API(由底层操作系统提供)，这些 
 - Android: Accessibility framework
 - iOS: UIAccessibility
 
-如果 Web 应用中的 HTML 元素提供的本机语义信息失效，则可以使用 [WAI-ARIA specification](https://www.w3.org/TR/wai-aria/) 的功能来补充该信息，这些功能向辅助功能树添加语义信息以提高无障碍。在 [WAI-ARIA basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) 文章中了解有关 WAI-ARIA 的更多详细信息。
+如果 Web 应用中的 HTML 元素提供的本机语义信息失效，则可以使用 [WAI-ARIA specification](https://www.w3.org/TR/wai-aria/) 的功能来补充该信息，这些功能向辅助功能树添加语义信息以提高无障碍。在 [WAI-ARIA basics](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics) 文章中了解有关 WAI-ARIA 的更多详细信息。
 
 ## 摘要
 
@@ -161,19 +161,19 @@ Web 浏览器使用特殊的无障碍 API(由底层操作系统提供)，这些 
 
 ## 在本模块中
 
-- [What is accessibility?](/en-US/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/en-US/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/en-US/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting)
+- [What is accessibility?](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
+- [HTML: A good basis for accessibility](/zh-CN/docs/Learn/Accessibility/HTML)
+- [CSS and JavaScript accessibility best practices](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript)
+- [WAI-ARIA basics](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)
+- [Accessible multimedia](/zh-CN/docs/Learn/Accessibility/Multimedia)
+- [Mobile accessibility](/zh-CN/docs/Learn/Accessibility/Mobile)
+- [Accessibility troubleshooting](/zh-CN/docs/Learn/Accessibility/Accessibility_troubleshooting)
 
 ## 另见
 
-- [WCAG](/en-US/docs/Web/Accessibility/Understanding_WCAG)
+- [WCAG](/zh-CN/docs/Web/Accessibility/Understanding_WCAG)
 
-  - [Perceivable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
-  - [Operable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable)
-  - [Understandable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable)
-  - [Robust](/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust)
+  - [Perceivable](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
+  - [Operable](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Operable)
+  - [Understandable](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Understandable)
+  - [Robust](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Robust)

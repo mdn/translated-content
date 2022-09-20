@@ -1,14 +1,6 @@
 ---
 title: Django 개발 환경 세팅하기
 slug: Learn/Server-side/Django/development_environment
-tags:
-  - 개발환경
-  - 들어가기
-  - 설치
-  - 장고
-  - 초심자
-  - 파이썬
-translation_of: Learn/Server-side/Django/development_environment
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
 

@@ -285,9 +285,9 @@ function showHeroes(obj) {
 5. 別の `for` ループを使用して、今のヒーローの超能力を反復処理します。それぞれに対して `<li>` 要素を作成し、中に超能力を入れ、 `listItem` に `<ul>` 要素（`myList`）を `appendChild()` で追加します。
 6. 最後に、 `<h2>`、`<p>`、`<ul>` を `<article>` (`myArticle`) の中に追加してから、その `<article>` を `<section>` の中に追加します。これらを追加する順序は重要で、これが HTML の中で表示される順序になります。
 
-> **Note:**: 試してみるための例が上手く取得できなかった場合は、 [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) ソースコードを参照してみてください（こちらで[ライブ実行](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html)もできます）。
+> **Note:**  試してみるための例が上手く取得できなかった場合は、 [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) ソースコードを参照してみてください（こちらで[ライブ実行](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html)もできます）。
 
-> **Note:**: もし、 JavaScript オブジェクトへのアクセスに使用しているドット/ブラケット記法がよく分からない場合は、 [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) を別のタブやテキストエディターで開き、それを参照しながら JavaScript を読んでみるとよいでしょう。また、ドットやブラケット記法の詳細については、 [JavaScript オブジェクトの基本](/ja/docs/Learn/JavaScript/Objects/Basics)の記事を見返してみてください。
+> **Note:**  もし、 JavaScript オブジェクトへのアクセスに使用しているドット/ブラケット記法がよく分からない場合は、 [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) を別のタブやテキストエディターで開き、それを参照しながら JavaScript を読んでみるとよいでしょう。また、ドットやブラケット記法の詳細については、 [JavaScript オブジェクトの基本](/ja/docs/Learn/JavaScript/Objects/Basics)の記事を見返してみてください。
 
 ## オブジェクトとテキスト間の変換
 

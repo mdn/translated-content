@@ -1,11 +1,6 @@
 ---
 title: CharacterData.before()
 slug: Web/API/CharacterData/before
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.CharacterData.before
-translation_of: Web/API/CharacterData/before
 ---
 {{APIRef("DOM")}}
 

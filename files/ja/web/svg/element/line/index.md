@@ -1,13 +1,6 @@
 ---
 title: line
 slug: Web/SVG/Element/line
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Graphics
-  - 要素
-translation_of: Web/SVG/Element/line
 ---
 {{SVGRef}}
 

@@ -1,15 +1,6 @@
 ---
 title: CanvasRenderingContext2D.direction
 slug: Web/API/CanvasRenderingContext2D/direction
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - 実験的
-  - プロパティ
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.direction
-translation_of: Web/API/CanvasRenderingContext2D/direction
 ---
 {{APIRef}} {{SeeCompatTable}}
 

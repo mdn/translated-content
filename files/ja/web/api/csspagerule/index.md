@@ -1,12 +1,6 @@
 ---
 title: CSSPageRule
 slug: Web/API/CSSPageRule
-tags:
-  - API
-  - CSSOM
-  - Interface
-  - Reference
-translation_of: Web/API/CSSPageRule
 ---
 {{APIRef("CSSOM")}}
 

@@ -1,14 +1,6 @@
 ---
 title: HTMLTableColElement
 slug: Web/API/HTMLTableColElement
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - NeedsNewLayout
-  - リファレンス
-browser-compat: api.HTMLTableColElement
-translation_of: Web/API/HTMLTableColElement
 ---
 {{ APIRef("HTML DOM") }}
 

@@ -1,9 +1,6 @@
 ---
 title: Tips for Authoring Fast-loading HTML Pages
 slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
-tags:
-  - HTML
-translation_of: Learn/HTML/Howto/Author_fast-loading_HTML_pages
 original_slug: Tips_for_Authoring_Fast-loading_HTML_Pages
 ---
 Summary: Learn common-sense tips for producing HTML pages which load quickly and provide visitor satisfaction. 여기에 나온 팁들은 상식과 실험에 바탕을 두고 있습니다. 만약 당신이 페이지 불러오기 성능을 향상시킬 수 있는 팁을 알고 있다면 이 글의 토론 페이지에 조언해 주시기 바랍니다.

@@ -1,7 +1,6 @@
 ---
 title: WebGL の型
 slug: Web/API/WebGL_API/Types
-translation_of: Web/API/WebGL_API/Types
 ---
 {{WebGLSidebar}}
 

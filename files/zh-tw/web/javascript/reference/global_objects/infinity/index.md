@@ -2,6 +2,7 @@
 title: Infinity
 slug: Web/JavaScript/Reference/Global_Objects/Infinity
 ---
+
 {{jsSidebar("Objects")}}
 
 全域 **`Infinity`** 屬性是一個表示無窮大的數值。

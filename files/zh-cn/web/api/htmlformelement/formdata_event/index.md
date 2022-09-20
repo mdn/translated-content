@@ -61,6 +61,6 @@ formElem.onformdata = (e) => {
 
 ## 另见
 
-- [`formdata` event](/en-US/docs/Web/API/HTMLFormElement/formdata_event)
+- [`formdata` event](/zh-CN/docs/Web/API/HTMLFormElement/formdata_event)
 - {{domxref("FormDataEvent")}}
-- [Using FormData Objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- [Using FormData Objects](/zh-CN/docs/Web/API/FormData/Using_FormData_Objects)

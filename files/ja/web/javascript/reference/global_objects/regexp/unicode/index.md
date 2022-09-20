@@ -1,15 +1,6 @@
 ---
 title: RegExp.prototype.unicode
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/unicode
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/unicode
 ---
 {{JSRef}}
 

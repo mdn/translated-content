@@ -13,7 +13,7 @@ original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 
 ## さあ始めよう
 
-下の Live エディタで試すこともできますし、[我々の Github リポジトリ](https://github.com/mdn/css-examples/blob/master/learn/getting-started/biog-download.html/)からサンプルファイルをダウンロードして試してみることもできます。ここで使うサンプルはシンプルな一ページの HTML で、頭にはとりあえずシンプルな CSS が埋め込まれています。もしローカルで動かすとき HTML と CSS が一緒になっているのが嫌だったら別々のファイルに分割しても構いません。あるいは、[CodePen](https://codepen.io/) や [jsFiddle](https://jsfiddle.net/)、[Glitch ](https://glitch.com/)といったオンラインエディタを使うこともできます。
+下の Live エディタで試すこともできますし、[我々の Github リポジトリ](https://github.com/mdn/css-examples/blob/master/learn/getting-started/biog-download.html/)からサンプルファイルをダウンロードして試してみることもできます。ここで使うサンプルはシンプルな一ページの HTML で、頭にはとりあえずシンプルな CSS が埋め込まれています。もしローカルで動かすとき HTML と CSS が一緒になっているのが嫌だったら別々のファイルに分割しても構いません。あるいは、[CodePen](https://codepen.io/) や [jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) といったオンラインエディタを使うこともできます。
 
 > **Note:** 注記: もし途中で詰まったら、私達に気兼ねなく相談してください！詳しくはこの記事の一番下にある「アセスメントとさらなるヘルプ」の部分を見てください。
 
@@ -32,11 +32,11 @@ original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 
 プロパティの値をいろいろに変えて見た目がどう変わるか試してみましょう。
 
-1.  見出し 1 の文字色をピンクに変えてみましょう。色の指定には `hotpink` を使うとよいでしょう。
-2.  見出し 1 の下に太さ 10px の点線をつけてみましょう。そしてその色を `purple` にしてみましょう。
-3.  見出し 2 の書体をイタリックに変えてみましょう。
-4.  連絡先情報の部分で使われている `ul` 要素の {{cssxref("background-color")}} を `#eeeeee` にして、{{cssxref("border")}} を太さ 5px の紫の線に変えてみましょう。また、{{cssxref("padding")}} を指定してコンテンツと連絡先情報の部分にスペースが空くように設定しましょう。
-5.  リンクの部分にマウスが乗ったとき、リンクが `green` に変わるように設定しましょう。
+1. 見出し 1 の文字色をピンクに変えてみましょう。色の指定には `hotpink` を使うとよいでしょう。
+2. 見出し 1 の下に太さ 10px の点線をつけてみましょう。そしてその色を `purple` にしてみましょう。
+3. 見出し 2 の書体をイタリックに変えてみましょう。
+4. 連絡先情報の部分で使われている `ul` 要素の {{cssxref("background-color")}} を `#eeeeee` にして、{{cssxref("border")}} を太さ 5px の紫の線に変えてみましょう。また、{{cssxref("padding")}} を指定してコンテンツと連絡先情報の部分にスペースが空くように設定しましょう。
+5. リンクの部分にマウスが乗ったとき、リンクが `green` に変わるように設定しましょう。
 
 完成したら次の画像のようになるはずです。
 
@@ -52,8 +52,8 @@ original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 
 作ったものを見てほしいときや、作業に詰まってしまって質問をしたいとき：
 
-1.  あなたが作ったものを [CodePen](https://codepen.io/) や [jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのコード共有サービスに公開してください。
-2.  添削の依頼あるいは訊きたいことを [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn) に投稿してください。ここに投稿するときには次のことを忘れないようにしてください。
+1. あなたが作ったものを [CodePen](https://codepen.io/) や [jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのコード共有サービスに公開してください。
+2. 添削の依頼あるいは訊きたいことを [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn) に投稿してください。ここに投稿するときには次のことを忘れないようにしてください。
 
     - タイトルは何についての質問か分かるように、「Assessment wanted for CSS First Steps」のようにしてください。
     - 添削や質問を依頼したいコードへのリンクを貼ってください。ソースコードを示してもらわないとこちらもどうサポートしたらよいかがわからないからです。
@@ -67,8 +67,8 @@ original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 
 ## このモジュール内
 
-1.  [What is CSS?](/ja/docs/Learn/CSS/First_steps/What_is_CSS)
-2.  [Getting started with CSS](/ja/docs/Learn/CSS/First_steps/Getting_started)
-3.  [How CSS is structured](/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4.  [How CSS works](/ja/docs/Learn/CSS/First_steps/How_CSS_works)
-5.  [Using your new knowledge](/ja/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+1. [What is CSS?](/ja/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [Getting started with CSS](/ja/docs/Learn/CSS/First_steps/Getting_started)
+3. [How CSS is structured](/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4. [How CSS works](/ja/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [Using your new knowledge](/ja/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

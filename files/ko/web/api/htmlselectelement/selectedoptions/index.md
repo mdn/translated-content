@@ -11,7 +11,9 @@ An option is considered selected if it has an {{domxref("HTMLOptionElement.selec
 
 ## Syntax
 
-    var selectedCollection = HTMLSelectElement.selectedOptions;
+```js
+var selectedCollection = HTMLSelectElement.selectedOptions;
+```
 
 ### Value
 

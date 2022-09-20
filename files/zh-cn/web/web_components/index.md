@@ -84,7 +84,7 @@ Web Components 旨在解决这些问题 — 它由三项主要技术组成，它
   - : 包含一个 HTML 片段，不会在文档初始化时渲染。但是可以在运行时使用 JavaScript 显示。主要用作自定义元素结构的基础。关联的 DOM 接口是{{domxref("HTMLTemplateElement")}}。
 - {{htmlelement("slot")}}
   - : web component 中的一个占位符，你可以填充自己的标记，这样你就可以创建单独的 DOM 树并将它们呈现在一起。关联的 DOM 接口是{{domxref("HTMLSlotElement")}}。
-- The [`slot`](/en-US/docs/Web/HTML/Global_attributes/slot) global HTML attribute
+- The [`slot`](/zh-CN/docs/Web/HTML/Global_attributes/slot) global HTML attribute
   - : 将在 shadow DOM 树中的插槽分配给一个元素。
 - {{domxref("Slotable")}}
   - : 由 {{domxref("Element")}} 和 {{domxref("Text")}} 节点实现的 mixin，定义了允许它们成为 {{htmlelement("slot")}} 元素内容的特性。mixin 定义了一个属性， {{domxref("Slotable.assignedSlot")}}，返回节点所插入的插槽的引用。

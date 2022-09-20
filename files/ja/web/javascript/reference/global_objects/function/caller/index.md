@@ -1,12 +1,6 @@
 ---
 title: Function.caller
 slug: Web/JavaScript/Reference/Global_Objects/Function/caller
-tags:
-  - Deprecated
-  - Function
-  - JavaScript
-  - Property
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/caller
 ---
 {{JSRef}} {{deprecated_header}}
 

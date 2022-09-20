@@ -1,13 +1,6 @@
 ---
 title: HTMLParagraphElement
 slug: Web/API/HTMLParagraphElement
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - リファレンス
-browser-compat: api.HTMLParagraphElement
-translation_of: Web/API/HTMLParagraphElement
 ---
 {{ APIRef("HTML DOM") }}
 

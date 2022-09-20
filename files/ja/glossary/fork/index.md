@@ -14,11 +14,11 @@ Fork (フォーク) とは、ある時点での既存のソフトウェアプロ
 - [Node.js と io.js (のちに統合されました)](https://nodejs.org/en/blog/announcements/foundation-v4-announce/)
 - [LibreOffice (OpenOffice からのフォーク)](https://www.libreoffice.org/about-us/who-are-we/)
 
-1.  General Knowledge
+1. General Knowledge
 
-    1.  Wikipedia の {{interwiki("wikipedia", "フォーク_(ソフトウェア開発)","フォーク")}}
-    2.  [How to fork a GitHub repo](https://help.github.com/articles/fork-a-repo/) (Git コンテキストのフォーク)
+    1. Wikipedia の {{interwiki("wikipedia", "フォーク_(ソフトウェア開発)","フォーク")}}
+    2. [How to fork a GitHub repo](https://help.github.com/articles/fork-a-repo/) (Git コンテキストのフォーク)
 
-2.  [MDN Web Docs 用語集](/ja/docs/Glossary)
+2. [MDN Web Docs 用語集](/ja/docs/Glossary)
 
-    1.  {{Glossary("Fork", "フォーク")}}
+    1. {{Glossary("Fork", "フォーク")}}

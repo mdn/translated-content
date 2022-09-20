@@ -58,13 +58,13 @@ html,body,svg { height:100% }
 
 ### 全局属性
 
-- [Core Attributes](https://developer.mozilla.org/docs/Web/SVG/Attribute/Core)
+- [Core Attributes](/docs/Web/SVG/Attribute/Core)
   - : Most notably: {{SVGAttr('id')}}
-- [Styling Attributes](https://developer.mozilla.org/docs/Web/SVG/Attribute/Styling)
+- [Styling Attributes](/docs/Web/SVG/Attribute/Styling)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [Conditional Processing Attributes](https://developer.mozilla.org/docs/Web/SVG/Attribute/Conditional_Processing)
+- [Conditional Processing Attributes](/docs/Web/SVG/Attribute/Conditional_Processing)
   - : Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
-- [Presentation Attributes](https://developer.mozilla.org/docs/Web/SVG/Attribute/Presentation)
+- [Presentation Attributes](/docs/Web/SVG/Attribute/Presentation)
   - : Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 
 ## 用法

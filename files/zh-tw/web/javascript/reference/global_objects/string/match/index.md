@@ -2,6 +2,7 @@
 title: String.prototype.match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
 ---
+
 {{JSRef}}
 
 The **`match()`** method retrieves the matches when matching a _string_ against a _regular expression_.

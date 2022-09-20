@@ -1,11 +1,6 @@
 ---
 title: CharacterData.data
 slug: Web/API/CharacterData/data
-tags:
-  - プロパティ
-  - リファレンス
-browser-compat: api.CharacterData.data
-translation_of: Web/API/CharacterData/data
 ---
 {{APIRef("DOM")}}
 

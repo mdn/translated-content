@@ -1,15 +1,6 @@
 ---
 title: AudioBuffer.sampleRate
 slug: Web/API/AudioBuffer/sampleRate
-tags:
-  - API
-  - AudioBuffer
-  - プロパティ
-  - リファレンス
-  - ウェブ音声 API
-  - sampleRate
-browser-compat: api.AudioBuffer.sampleRate
-translation_of: Web/API/AudioBuffer/sampleRate
 ---
 {{ APIRef("Web Audio API") }}
 
