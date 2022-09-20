@@ -1,0 +1,23 @@
+{
+  "name": "@mdn/translated-content",
+  "version": "1.0.0",
+  "description": "Translated content of https://developer.mozilla.org",
+  "private": true,
+  "engines": {
+    "node": "^16.0.0 || >=18.0.0"
+  },
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdn/translated-content.git"
+  },
+  "author": "MDN Web Docs",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/mdn/translated-content/issues"
+  },
+  "homepage": "https://github.com/mdn/translated-content#readme",
+  "devDependencies": {
+  }
+}
