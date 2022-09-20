@@ -63,11 +63,7 @@ Resultado
 
 {{Specifications}}
 
-## Compatibilidad del Navegador
-
-{{Compat}}
-
-## Compatibilidad del Navegador
+## Compatibilidad con navegadores
 
 {{Compat}}
 

@@ -35,8 +35,8 @@ En el código anterior, _`nuevacookie`_ es una cadena de la forma _`clave=valor`
   - `;path=path` (p. ej.: '/'. '/midir'). Si no se especifica, por defecto corresponde a la ruta del documento actual.
     La ruta debe ser **absoluta** (ver [RFC 6265](https://tools.ietf.org/html/rfc6265)). Para más información sobre cómo utilizar rutas relativas, ir a [este párrafo](/es/docs/DOM/document.cookie$edit#Using_relative_URLs_in_the_path_parameter).
   - `;domain=domain` (p. ej. 'example.com', 'subdomain.example.com'). Si no se especifica, su valor por defecto es la porción de la dirección web de la ubicación actual del archivo. A diferencia de lo que ocurría en las primeras especificaciones, los puntos iniciales de los nombre de dominio se ignoran, pero los navegadores pueden impedir crear cookies que contengan dichos puntos. Si se especifica un dominio, los subdominios siempre son incluidos.
-  - `;max-age=`_`duración-máxima-en-segundos`_ Por ejemplo: 60\*60\*24\*365 para un año.
-  - `;expires=`\_`fecha-en-formato-GMTString` \_Si no se especifica `max-age` ni `expires`, la cookie expirará al terminar la sesión actual.
+  - `;max-age=duración-máxima-en-segundos` Por ejemplo: 60\*60\*24\*365 para un año.
+  - `;expires=fecha-en-formato-GMTString` Si no se especifica `max-age` ni `expires`, la cookie expirará al terminar la sesión actual.
   - `;secure` La cookie sólo será transmitida en un protocolo seguro (HTTPS, SSL). Antes de Chrmoe 52, este atributo podía aparecer con cookes de dominios http.
   - `;samesite` Este atributo impide al navegador enviar esta cookie a través de peticiones cross-site. Los valores posibles son lax o strict. El soporte de este atributo se añadió en Chrome 51.
 
@@ -64,7 +64,7 @@ function alertCookie() {
 }
 ```
 
-```js
+```html
 <button onclick="alertCookie()">Mostrar cookies</button>
 ```
 
@@ -83,7 +83,7 @@ function alertCookieValue() {
 }
 ```
 
-```js
+```html
 <button onclick="alertCookieValue()">Mostrar valor de cookie</button>
 ```
 
@@ -102,7 +102,7 @@ function hazUnaVez() {
 }
 ```
 
-```js
+```html
 <button onclick="dhacerUnaVez()">Solo hacer algo una vez</button>
 ```
 

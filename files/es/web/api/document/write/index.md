@@ -13,7 +13,7 @@ translation_of: Web/API/Document/write
 
 Escribe una cadena de texto dentro del hilo de un `document `abierto por [document.open()](/es/docs/Web/API/document.open).
 
-> **Nota:** Nota: dado que `document.write` escribe directo al hilo **(stream**) de un documento, la llamada a `document.write` en un documento ya cargado automáticamente ejecuta `document.open`, [lo cual limpiará todo el contenido del documento en cuestión](/es/docs/Web/API/document.open#Notes).
+> **Nota:** Dado que `document.write` escribe directo al hilo **(stream**) de un documento, la llamada a `document.write` en un documento ya cargado automáticamente ejecuta `document.open`, [lo cual limpiará todo el contenido del documento en cuestión](/es/docs/Web/API/document.open#Notes).
 
 ## Sintaxis
 
