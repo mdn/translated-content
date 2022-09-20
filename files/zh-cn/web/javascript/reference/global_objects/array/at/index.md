@@ -6,7 +6,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/at
 
 **`at()`** 方法接收一个整数值并返回该索引的项目，允许正数和负数。负整数从数组中的最后一个项目开始倒数。
 
-方括号符号没有问题。例如，`array[0]` 将返回第一个项目。然而，对于后面的项目，不要使用 {{jsxref('Array.prototype.length','array.length')}}，例如，对于最后一个项目，可以调用 `array.at(-1)`。[(参见以下示例)](#examples)
+这不代表使用方括号符号有什么问题。例如，`array[0]` 将返回第一个项目。然而，对于后面的元素的读取，你需要用到 {{jsxref('Array.prototype.length','array.length')}}，例如，读取最后一个元素，你需要使用 `array[array-1]`，对比以上方法读取最后一个项目，你可以调用 `array.at(-1)`。（[参见以下示例](#示例)）
 
 {{EmbedInteractiveExample("pages/js/array-at.html")}}
 
