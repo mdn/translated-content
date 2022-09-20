@@ -13,12 +13,15 @@ original_slug: Web/JavaScript/Referencia/Acerca_de
 JavaScript versión 1.5 provee las siguientes nuevas características y extensiones:
 
 **Errores en tiempo de ejecución**
+
 Los errores en tiempo de ejecución son ahora reportados como [excepciones](/es/Guía_JavaScript_1.5/Sentencias_de_manejo_de_excepciones "es/Guía_JavaScript_1.5/Sentencias_de_manejo_de_excepciones").
 
 **Extensiones para el formato de números**
+
 El formato de números ha sido extendido para incluir los métodos `Number.prototype.toExponential`, `Number.prototype.toFixed` y `Number.prototype.toPrecision`.
 
 **Extensiones de expresiones regulares**
+
 Las siguientes extensiones para expresiones regulares han sido añadidas:
 
 - Cuantificadores avaros: `— +, *, ? y {}`:ahora pueden seguirse por un `?` para forzarlos ha no ser avaros. Para la entrada **?** Véase la página [Escribir un patrón de expresiones regulares](/es/Guía_JavaScript_1.5/Escribir_un_patrón_de_expresión_regular#Uso_de_caracteres_especiales "es/Guía_JavaScript_1.5/Escribir_un_patrón_de_expresión_regular#Uso_de_caracteres_especiales").
@@ -65,7 +68,7 @@ La siguiente tabla lista las veriones de JavaScript soportadas por las diferente
 | JavaScript 1.2        | Navegador 4.0-4.05                                           |
 | JavaScript 1.3        | Navegador 4.06-4.7x                                          |
 | JavaScript 1.4        | n/a                                                          |
-| JavaScript 1.5        | Navegador 6.0Mozilla 0.6x-0.9x (navegador de código abierto) |
+| JavaScript 1.5        | Navegador 6.0, Mozilla 0.6x-0.9x (navegador de código abierto) |
 | JavaScript 1.6        | Mozilla Firefox 1.5                                          |
 | JavaScript 1.7        | Mozilla Firefox 2                                            |
 

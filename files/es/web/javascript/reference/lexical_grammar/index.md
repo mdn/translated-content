@@ -20,9 +20,9 @@ Los caracteres de control no tienen representación visual, pero se utilizan par
 
 | Punto de código | Nombre                  | Abreviatura | Descripción                                                                                                                                                                                                               |
 | --------------- | ----------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `U+200C`        | Separador de ancho cero | <ZWNJ>      | Colocado entre caracteres para evitar que se conecten a ligaduras en ciertos idiomas ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_non-joiner)).                                                                  |
-| `U+200D`        | Conector de ancho cero  | <ZWJ>       | Colocado entre caracteres que normalmente no estarían conectados para hacer que los caracteres se rendericen usando su forma conectada en ciertos idiomas ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_joiner)). |
-| `U+FEFF`        | Marca de orden de bytes | <BOM>       | Se usa al comienzo del script para marcarlo como Unicode y el orden de bytes del texto ([Wikipedia](https://en.wikipedia.org/wiki/Marca_de_orden_de_bytes)).                                                              |
+| `U+200C`        | Separador de ancho cero | `<ZWNJ>`      | Colocado entre caracteres para evitar que se conecten a ligaduras en ciertos idiomas ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_non-joiner)).                                                                  |
+| `U+200D`        | Conector de ancho cero  | `<ZWJ>`       | Colocado entre caracteres que normalmente no estarían conectados para hacer que los caracteres se rendericen usando su forma conectada en ciertos idiomas ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_joiner)). |
+| `U+FEFF`        | Marca de orden de bytes | `<BOM>`       | Se usa al comienzo del script para marcarlo como Unicode y el orden de bytes del texto ([Wikipedia](https://en.wikipedia.org/wiki/Marca_de_orden_de_bytes)).                                                              |
 
 ## Espacio en blanco
 
@@ -30,12 +30,12 @@ Los caracteres de {{Glossary("Espacio_en_blanco")}} mejoran la legibilidad del t
 
 | Punto de código | Nombre                              | Abreviatura | Descripción                                                                                               | Secuencia de escape |
 | --------------- | ----------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------- | ------------------- |
-| U+0009          | Caracter de tabulación              | <HT>        | Tabulación horizontal                                                                                     | \t                  |
-| U+000B          | Tabulación de línea                 | <VT>        | Tabulación vertical                                                                                       | \v                  |
-| U+000C          | Avance de Página                    | <FF>        | Carácter de control de salto de página ([Wikipedia](https://en.wikipedia.org/wiki/Page_break#Form_feed)). | \f                  |
-| U+0020          | Espacio                             | <SP>        | Espacio normal                                                                                            |                     |
-| U+00A0          | Espacio irrompible                  | <NBSP>      | Espacio normal, pero ningún punto en el que una línea se pueda romper                                     |                     |
-| Otros           | Otros caracteres de espacio Unicode | <USP>       | [Espacios Unicode en Wikipedia](<https://es.wikipedia.org/wiki/Espacio_(puntuaci%C3%B3n)>)                |                     |
+| U+0009          | Caracter de tabulación              | `<HT>`        | Tabulación horizontal                                                                                     | \t                  |
+| U+000B          | Tabulación de línea                 | `<VT>`        | Tabulación vertical                                                                                       | \v                  |
+| U+000C          | Avance de Página                    | `<FF>`        | Carácter de control de salto de página ([Wikipedia](https://en.wikipedia.org/wiki/Page_break#Form_feed)). | \f                  |
+| U+0020          | Espacio                             | `<SP>`        | Espacio normal                                                                                            |                     |
+| U+00A0          | Espacio irrompible                  | `<NBSP>`      | Espacio normal, pero ningún punto en el que una línea se pueda romper                                     |                     |
+| Otros           | Otros caracteres de espacio Unicode | `<USP>`       | [Espacios Unicode en Wikipedia](<https://es.wikipedia.org/wiki/Espacio_(puntuaci%C3%B3n)>)                |                     |
 
 ## Terminadores de línea
 
@@ -45,10 +45,10 @@ Solo los siguientes puntos de código Unicode se tratan como terminadores de lí
 
 | Punto de código | Nombre                | Abreviatura | Descripción                                                       | Secuencia de escape |
 | --------------- | --------------------- | ----------- | ----------------------------------------------------------------- | ------------------- |
-| U+000A          | Alimentación de linea | <LF>        | Caracter de nueva línea en sistemas UNIX.                         | \n                  |
-| U+000D          | Retorno de carro      | <CR>        | Caracter de nueva línea en Commodore y los primeros sistemas Mac. | \r                  |
-| U+2028          | Separador de línea    | <LS>        | [Wikipedia](https://es.wikipedia.org/wiki/Nueva_l%C3%ADnea)       |                     |
-| U+2029          | Separador de párrafos | <PS>        | [Wikipedia](https://es.wikipedia.org/wiki/Nueva_l%C3%ADnea)       |                     |
+| U+000A          | Alimentación de linea | `<LF>`        | Caracter de nueva línea en sistemas UNIX.                         | \n                  |
+| U+000D          | Retorno de carro      | `<CR>`        | Caracter de nueva línea en Commodore y los primeros sistemas Mac. | \r                  |
+| U+2028          | Separador de línea    | `<LS>`        | [Wikipedia](https://es.wikipedia.org/wiki/Nueva_l%C3%ADnea)       |                     |
+| U+2029          | Separador de párrafos | `<PS>`        | [Wikipedia](https://es.wikipedia.org/wiki/Nueva_l%C3%ADnea)       |                     |
 
 ## Comentarios
 
