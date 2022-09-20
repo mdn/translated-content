@@ -6,6 +6,7 @@ tags:
 translation_of: Glossary/Data_structure
 original_slug: Glossaire/Structure_de_données
 ---
+
 Une **structure de données** est une façon particulière d'organiser des _données_ afin de pouvoir les utiliser efficacement.
 
 ## Voir aussi

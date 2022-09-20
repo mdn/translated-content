@@ -9,6 +9,7 @@ tags:
 translation_of: Games/Introduction
 original_slug: Jeux/Introduction
 ---
+
 {{GamesSidebar}}
 
 Le Web d'aujourd'hui est désormais une plate-forme viable pour créer des jeux époustouflants et de bonne qualité, mais aussi et surtout pour distribuer ces jeux. Imaginez tous les jeux qui peuvent être créés...

@@ -8,6 +8,7 @@ tags:
   - django
 translation_of: Learn/Server-side/Django
 ---
+
 {{LearnSidebar}}
 
 Django est une infrastructure d'application (aussi appelé framework) côté serveur extremement populaire et dotée de beaucoup de fonctionnalités, écrite en Python. Ce module vous montrera pourquoi Django fait partie des frameworks web les plus populaires ainsi que comment l'installer, le mettre en place, et s'en servir afin de créer vos propres applications web.
