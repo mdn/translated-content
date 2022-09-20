@@ -20,7 +20,7 @@ Retorna el número de píxeles que han sido desplazados en el documento mediante
 var y = window.scrollY;
 ```
 
-- y es el número de píxeles que se han desplazado actualmente desde el extremo superior de la página.
+- `y` es el número de píxeles que se han desplazado actualmente desde el extremo superior de la página.
 
 ## Ejemplo
 
