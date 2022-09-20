@@ -2,6 +2,7 @@
 title: <table>（表格元素）
 slug: Web/HTML/Element/table
 ---
+
 {{HTMLRef}}
 
 **HTML `<table>` 元件**代表表格數據 ── 換句話說，就是透過二維資料表來呈現資訊。

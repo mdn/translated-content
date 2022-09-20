@@ -2,6 +2,7 @@
 title: 使用 web 和 XML 開發來使用 DOM
 slug: Web/API/Document_Object_Model/Examples
 ---
+
 本章介紹了使用 DOM 進行 Web 以及 XML 開發的一些長範例。只要可能，在例子就會使用通用的 JavaScript Web API 、技巧以及模式來操作文檔對象（the document object）。
 
 ## 範例一：高度和寬度

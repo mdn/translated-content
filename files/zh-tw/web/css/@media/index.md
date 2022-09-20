@@ -2,6 +2,7 @@
 title: '@media'
 slug: Web/CSS/@media
 ---
+
 {{CSSRef}}
 
 ## 概要

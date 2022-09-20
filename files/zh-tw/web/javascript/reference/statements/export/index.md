@@ -2,6 +2,7 @@
 title: export
 slug: Web/JavaScript/Reference/Statements/export
 ---
+
 {{jsSidebar("Statements")}}
 
 用 **export** 可以指派函式、物件或變數，透過 {{jsxref("Statements/import", "import")}} 宣告給外部檔案引用。

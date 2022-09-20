@@ -2,6 +2,7 @@
 title: <a>
 slug: Web/HTML/Element/a
 ---
+
 **HTML `<a>` 元素**（意為 Anchor）建立了通往其他頁面、檔案、Email 地址、或其他 URL 的超連結。
 
 | [內容類型](/zh-TW/docs/HTML/Content_categories) | [流型內容](/zh-TW/docs/HTML/Content_categories#Flow_content)、[phrasing content](/zh-TW/docs/HTML/Content_categories#Phrasing_content), [interactive content](/zh-TW/docs/Web/Guide/HTML/Content_categories#interactive_content), palpable content.                                                                                                                                                                           |

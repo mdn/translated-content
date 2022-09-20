@@ -2,6 +2,7 @@
 title: NodeList
 slug: Web/API/NodeList
 ---
+
 {{APIRef("DOM")}}
 
 **`NodeList`** 物件是節點的集合，可藉由 {{domxref("Node.childNodes")}} 屬性以及 {{domxref("document.querySelectorAll()")}} 方法取得。

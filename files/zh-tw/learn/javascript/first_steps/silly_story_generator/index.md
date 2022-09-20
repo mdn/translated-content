@@ -2,6 +2,7 @@
 title: 傻故事產生器
 slug: Learn/JavaScript/First_steps/Silly_story_generator
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 
 在本次評估中，您被賦予的任務內容將與本單元學習到的知識息息相關，並將其應用於創建一個能隨機生成傻故事的有趣應用程式。 祝玩的開心！

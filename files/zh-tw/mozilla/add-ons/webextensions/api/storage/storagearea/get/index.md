@@ -2,6 +2,7 @@
 title: StorageArea.get()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
 ---
+
 {{AddonSidebar()}}
 
 從儲存空間內檢查一個或多個單元（item）。

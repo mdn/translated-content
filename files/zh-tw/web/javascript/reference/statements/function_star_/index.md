@@ -2,6 +2,7 @@
 title: function*
 slug: Web/JavaScript/Reference/Statements/function*
 ---
+
 {{jsSidebar("Statements")}}
 
 **`function*`** 宣告式（`function` 關鍵字後面跟著一個星號）定義了一個*生成器函式（generator function）*，他會回傳一個{{jsxref("Global_Objects/Generator","生成器（Generator）")}}物件。
