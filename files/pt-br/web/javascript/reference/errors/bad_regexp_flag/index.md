@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: invalid regular expression flag "x"'
+title: 'SyntaxError: flag de expressão regular inválida "x"'
 slug: Web/JavaScript/Reference/Errors/Bad_regexp_flag
 tags:
   - Error
