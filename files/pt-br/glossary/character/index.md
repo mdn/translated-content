@@ -8,16 +8,14 @@ tags:
 translation_of: Glossary/Character
 original_slug: Glossario/Caractere
 ---
-<p>Um <em>caractere</em> é um símbolo (letras, números, pontuação)  ou de controle não imprimível (por exemplo, carriage return ou hífen). {{glossary ("UTF-8")}} é o conjunto de caracteres mais comum e inclui os grafemas dos idiomas humanos mais populares.</p>
+Um _caractere_ é um símbolo (letras, números, pontuação) ou de controle não imprimível (por exemplo, carriage return ou hífen). {{glossary ("UTF-8")}} é o conjunto de caracteres mais comum e inclui os grafemas dos idiomas humanos mais populares.
 
-<h2 id="Saiba_Mais">Saiba Mais</h2>
+## Saiba Mais
 
-<h3 id="Conhecimento_Geral">Conhecimento Geral</h3>
+### Conhecimento Geral
 
-<ul>
- <li>{{interwiki("wikipedia", "Caractere")}} no Wikipedia</li>
- <li>{{interwiki("wikipedia", "Codificação de caracteres")}} no Wikipedia</li>
- <li>{{interwiki("wikipedia", "ASCII")}} on Wikipedia</li>
- <li>{{interwiki("wikipedia", "UTF-8")}} on Wikipedia</li>
- <li>{{interwiki("wikipedia", "Unicode")}} on Wikipedia</li>
-</ul>
+- {{interwiki("wikipedia", "Caractere")}} no Wikipedia
+- {{interwiki("wikipedia", "Codificação de caracteres")}} no Wikipedia
+- {{interwiki("wikipedia", "ASCII")}} on Wikipedia
+- {{interwiki("wikipedia", "UTF-8")}} on Wikipedia
+- {{interwiki("wikipedia", "Unicode")}} on Wikipedia

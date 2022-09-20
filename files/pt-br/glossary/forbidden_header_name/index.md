@@ -4,37 +4,33 @@ slug: Glossary/Forbidden_header_name
 translation_of: Glossary/Forbidden_header_name
 original_slug: Glossario/Forbidden_header_name
 ---
-<p><font><font>Um </font></font><dfn><font><font>nome de cabeçalho proibido</font></font></dfn><font><font> é o nome de qualquer </font></font><a href="/en-US/docs/Web/HTTP/Headers">cabeçalho HTTP</a> <font><font>que não pode ser modificado programaticamente; </font><font>especificamente, um </font><font>nome de cabeçalho de </font></font><strong><font><font>solicitação</font></font></strong><font><font> HTTP </font><font>(em contraste com um</font></font> {{Glossary("Forbidden response header name")}}).</p>
+Um _nome de cabeçalho proibido_ é o nome de qualquer [cabeçalho HTTP](/pt-BR/docs/Web/HTTP/Headers) que não pode ser modificado programaticamente; especificamente, um nome de cabeçalho de **solicitação** HTTP (em contraste com um {{Glossary("Forbidden response header name")}}).
 
-<p><font><font>Modificar esses cabeçalhos é proibido porque o agente do usuário retém o controle total sobre eles. </font><font>Nomes começando com ` </font></font><code title="">Sec-</code><font><font>` são reservados para criar novos cabeçalhos seguros de </font></font>{{glossary("API","APIs")}} usando <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> que concedem aos desenvolvedores controle sobre cabeçalhos, como {{domxref("XMLHttpRequest")}}.</p>
+Modificar esses cabeçalhos é proibido porque o agente do usuário retém o controle total sobre eles. Nomes começando com \` `Sec-`\` são reservados para criar novos cabeçalhos seguros de {{glossary("API","APIs")}} usando [Fetch](/pt-BR/docs/Web/API/Fetch_API) que concedem aos desenvolvedores controle sobre cabeçalhos, como {{domxref("XMLHttpRequest")}}.
 
-<p><font><font>Nomes de cabeçalho proibidos começam com </font></font><code>Proxy-</code><font><font>ou </font></font><code>Sec-</code><font><font>, ou são um dos seguintes nomes:</font></font></p>
+Nomes de cabeçalho proibidos começam com `Proxy-`ou `Sec-`, ou são um dos seguintes nomes:
 
-<ul class="brief">
- <li><code title="">Accept-Charset</code></li>
- <li><code title="">Accept-Encoding</code></li>
- <li><code title="">Access-Control-Request-Headers</code></li>
- <li><code title="">Access-Control-Request-Method</code></li>
- <li><code title="">Connection</code></li>
- <li><code title="">Content-Length</code></li>
- <li><code title="">Cookie</code></li>
- <li><code title="">Cookie2</code></li>
- <li><code title="">Date</code></li>
- <li><code title="">DNT</code></li>
- <li><code title="">Expect</code></li>
- <li><code title="">Host</code></li>
- <li><code title="">Keep-Alive</code></li>
- <li><code title="http-origin">Origin</code></li>
- <li><code title="http-origin">Proxy-</code></li>
- <li><code title="http-origin">Sec-</code></li>
- <li><code title="">Referer</code></li>
- <li><code title="">TE</code></li>
- <li><code title="">Trailer</code></li>
- <li><code title="">Transfer-Encoding</code></li>
- <li><code title="">Upgrade</code></li>
- <li><code title="">Via</code></li>
-</ul>
+- `Accept-Charset`
+- `Accept-Encoding`
+- `Access-Control-Request-Headers`
+- `Access-Control-Request-Method`
+- `Connection`
+- `Content-Length`
+- `Cookie`
+- `Cookie2`
+- `Date`
+- `DNT`
+- `Expect`
+- `Host`
+- `Keep-Alive`
+- `Origin`
+- `Proxy-`
+- `Sec-`
+- `Referer`
+- `TE`
+- `Trailer`
+- `Transfer-Encoding`
+- `Upgrade`
+- `Via`
 
-<div class="note">
-<p><strong>Nota</strong>: O cabeçalho <code>User-Agent</code> não é mais proibido, de <a href="https://fetch.spec.whatwg.org/#terminology-headers">acordo com a especificação</a> <font>- consulte a lista de nomes de cabeçalhos proibidos (isso foi implementado no Firefox 43) - agora ele pode ser definido em um </font><font>objeto e busca de </font><a href="/en-US/docs/Web/API/Headers">Headers</a>, ou via XHR <a href="/en-US/docs/Web/API/XMLHttpRequest#setRequestHeader%28%29">setRequestHeader()</a>.</p>
-</div>
+> **Nota:** O cabeçalho `User-Agent` não é mais proibido, de [acordo com a especificação](https://fetch.spec.whatwg.org/#terminology-headers) - consulte a lista de nomes de cabeçalhos proibidos (isso foi implementado no Firefox 43) - agora ele pode ser definido em um objeto e busca de [Headers](/pt-BR/docs/Web/API/Headers), ou via XHR [setRequestHeader()](/pt-BR/docs/Web/API/XMLHttpRequest#setRequestHeader%28%29).

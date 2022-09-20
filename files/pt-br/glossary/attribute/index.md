@@ -9,18 +9,16 @@ tags:
 translation_of: Glossary/Attribute
 original_slug: Glossario/Atributo
 ---
-<p><span class="glossaryLink new"><em>Atributos</em></span> estendem uma {{Glossary("tag")}} ("etiqueta"), modificando o comportamento dela ou fornecendo meta dados.<br>
- Um atributo sempre tem a forma <code>nome=valor</code> (especificando o identificador do atributo e o valor associado a ele).</p>
+_Atributos_ estendem uma {{Glossary("tag")}} ("etiqueta"), modificando o comportamento dela ou fornecendo meta dados.
+Um atributo sempre tem a forma `nome=valor` (especificando o identificador do atributo e o valor associado a ele).
 
-<p>Exemplo:</p>
+Exemplo:
 
-<p>&lt;div id="principal" class="principal"&gt;  Neste cado o <code>id</code> e <code>class</code> são o atributo e o nome pricipal o valor.</p>
+\<div id="principal" class="principal"> Neste cado o `id` e `class` são o atributo e o nome pricipal o valor.
 
-<h2 id="Aprenda_mais">Aprenda mais</h2>
+## Aprenda mais
 
-<h3 id="Referência_Técnica">Referência Técnica</h3>
+### Referência Técnica
 
-<ul>
- <li><a href="/en-US/docs/Web/HTML/Attributes">Referência de atributos de HTML</a></li>
- <li>Informações sobre <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributos globais</a> de HTML.</li>
-</ul>
+- [Referência de atributos de HTML](/pt-BR/docs/Web/HTML/Attributes)
+- Informações sobre [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes) de HTML.

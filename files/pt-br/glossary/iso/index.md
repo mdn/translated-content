@@ -8,10 +8,8 @@ tags:
 translation_of: Glossary/ISO
 original_slug: Glossario/ISO
 ---
-<p>A <strong>Organização Internacional de Padronização,</strong> popularmente conhecida como <strong>ISO</strong> (em inglês: International Organization for Standardization), é uma organização internacional que cria padrões/normas para cada tipo de indústria, visando uma melhor coordenação e união internacional. Atualmente 164 países fazem parte da ISO.</p>
+A **Organização Internacional de Padronização,** popularmente conhecida como **ISO** (em inglês: International Organization for Standardization), é uma organização internacional que cria padrões/normas para cada tipo de indústria, visando uma melhor coordenação e união internacional. Atualmente 164 países fazem parte da ISO.
 
-<h2 id="Veja_mais">Veja mais</h2>
+## Veja mais
 
-<ul>
- <li><a href="http://www.iso.org/iso/home.html">Site oficial</a></li>
-</ul>
+- [Site oficial](http://www.iso.org/iso/home.html)

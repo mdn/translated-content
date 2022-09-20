@@ -4,26 +4,26 @@ slug: Glossary/Falsy
 translation_of: Glossary/Falsy
 original_slug: Glossario/Falsy
 ---
-<p id="Summary">Um valor <strong>falsy</strong> é um valor que se traduz em falso quando avaliado em um contexto {{Glossary("Boolean")}}.</p>
+Um valor **falsy** é um valor que se traduz em falso quando avaliado em um contexto {{Glossary("Boolean")}}.
 
-<p>{{Glossary("JavaScript")}} usa tipo {{Glossary("Type_Conversion", "coercion")}} em contextos booleanos.</p>
+{{Glossary("JavaScript")}} usa tipo {{Glossary("Type_Conversion", "coercion")}} em contextos booleanos.
 
-<p>Exemplos de valores <em>falsy</em> em JavaScript (que se traduzirá em false e assim <em>ignorar</em> o bloco <code>if</code>):</p>
+Exemplos de valores _falsy_ em JavaScript (que se traduzirá em false e assim _ignorar_ o bloco `if`):
 
-<pre class="brush: js">if (false)
+```js
+if (false)
 if (null)
 if (undefined)
 if (0)
 if (NaN)
 if ('')
-if (document.all) [1]</pre>
+if (document.all) [1]
+```
 
-<p>[1] <code>document.all </code>tem sido utilizado para a detecção do navegador no passado e a especificação <a href="https://html.spec.whatwg.org/multipage/obsolete.html#dom-document-all">HTML define uma violação intencional</a> do padrão ECMAScript aqui para manter a compatibilidade com código legado (<code>if (document.all) { // Internet Explorer code here }</code> ou usando <code>document.all</code> sem verificar sua presença em primeiro lugar: <code>document.all.foo</code>).</p>
+\[1] `document.all `tem sido utilizado para a detecção do navegador no passado e a especificação [HTML define uma violação intencional](https://html.spec.whatwg.org/multipage/obsolete.html#dom-document-all) do padrão ECMAScript aqui para manter a compatibilidade com código legado (`if (document.all) { // Internet Explorer code here }` ou usando `document.all` sem verificar sua presença em primeiro lugar: `document.all.foo`).
 
-<h2 id="Aprender_mais">Aprender mais</h2>
+## Aprender mais
 
-<ul>
- <li>{{Glossary("Truthy")}}</li>
- <li>{{Glossary("Type_Conversion", "Coercion")}}</li>
- <li>{{Glossary("Boolean")}}</li>
-</ul>
+- {{Glossary("Truthy")}}
+- {{Glossary("Type_Conversion", "Coercion")}}
+- {{Glossary("Boolean")}}

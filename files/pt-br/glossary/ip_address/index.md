@@ -9,14 +9,12 @@ tags:
 translation_of: Glossary/IP_Address
 original_slug: Glossario/Endereco_IP
 ---
-<p>Um endereço IP é um número atribuído a cada dispositivo conectado a uma rede que usa o protocolo de Internet.</p>
+Um endereço IP é um número atribuído a cada dispositivo conectado a uma rede que usa o protocolo de Internet.
 
-<p>"Endereço IP" geralmente refere-se a endereços  {{Glossary("IPv4")}} de 32 bits até que o {{Glossary("IPv6")}} seja implantado de forma mais ampla.</p>
+"Endereço IP" geralmente refere-se a endereços {{Glossary("IPv4")}} de 32 bits até que o {{Glossary("IPv6")}} seja implantado de forma mais ampla.
 
-<h2 id="Saiba_mais">Saiba mais</h2>
+## Saiba mais
 
-<h3 id="General_knowledge">General knowledge</h3>
+### General knowledge
 
-<ul>
- <li>{{interwiki("wikipedia", "Endereço IP", "Endereço IP")}} na Wikipedia</li>
-</ul>
+- {{interwiki("wikipedia", "Endereço IP", "Endereço IP")}} na Wikipedia

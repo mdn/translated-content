@@ -4,17 +4,16 @@ slug: Glossary/Grid
 translation_of: Glossary/Grid
 original_slug: Glossario/Grade
 ---
-<p>Uma <em>grade no CSS </em>é definida usando o valor <code>grid</code> da propriedade {{cssxref("display")}}; você pode definir colunas e linhas na sua grade usando as propridades {{cssxref("grid-template-rows")}} e {{cssxref("grid-template-columns")}}.</p>
+Uma _grade no CSS_ é definida usando o valor `grid` da propriedade {{cssxref("display")}}; você pode definir colunas e linhas na sua grade usando as propridades {{cssxref("grid-template-rows")}} e {{cssxref("grid-template-columns")}}.
 
-<p>A grade que você define usando essas propriedades é descrita como uma <em>grade explícita</em>.</p>
+A grade que você define usando essas propriedades é descrita como uma _grade explícita_.
 
-<p>Se você colocar o conteúdo fora dessa grade explícita ou se estiver utilizando o posicionamento automático e o algoritmo da grade precisar criar linhas ou colunas adicionais {{glossary("grid tracks", "tracks")}} para manter {{glossary("grid item", "grid items")}}, então serão criadas faixas extras na grade implícita. A <em>grade implícita</em> é a grade criada automaticamente devido ao conteúdo adicionado fora das faixas definidas.</p>
+Se você colocar o conteúdo fora dessa grade explícita ou se estiver utilizando o posicionamento automático e o algoritmo da grade precisar criar linhas ou colunas adicionais {{glossary("grid tracks", "tracks")}} para manter {{glossary("grid item", "grid items")}}, então serão criadas faixas extras na grade implícita. A _grade implícita_ é a grade criada automaticamente devido ao conteúdo adicionado fora das faixas definidas.
 
-<p>No exemplo abaixo, criamos uma <em>grade explícita</em> de três colunas e duas linhas. A terceira linha da grade é uma <em>faixa implícita de linha da grade</em>, formada por serem mais do que os seis os itens que preenchem as faixas explícitas.</p>
+No exemplo abaixo, criamos uma _grade explícita_ de três colunas e duas linhas. A terceira linha da grade é uma _faixa implícita de linha da grade_, formada por serem mais do que os seis os itens que preenchem as faixas explícitas.
 
-<div id="example">
-<div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -22,49 +21,43 @@ original_slug: Glossario/Grade
     background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
-</div>
+```
 
-<pre class="brush: css notranslate">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 100px 100px;
 }
-</pre>
+```
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
-&lt;div&gt; Um &lt;/div&gt;
-    &lt;div&gt; dois &lt;/div&gt;
-    &lt;div&gt; três &lt;/div&gt;
-    &lt;div&gt; quatro &lt;/div&gt;
-    &lt;div&gt; cinco &lt;/div&gt;
-    &lt;div&gt; seis &lt;/div&gt;
-    &lt;div&gt; sete &lt;/div&gt;
-    &lt;div&gt; oito &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+<div> Um </div>
+    <div> dois </div>
+    <div> três </div>
+    <div> quatro </div>
+    <div> cinco </div>
+    <div> seis </div>
+    <div> sete </div>
+    <div> oito </div>
 </div>
+```
 
-<p>{{ EmbedLiveSample('example', '500', '330') }}</p>
+{{ EmbedLiveSample('example', '500', '330') }}
 
-<section id="Quick_links">
-<ol>
- <li>CSS Grid Layout Guide:<br>
-  <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basic concepts of grid layout</a></em></li>
- <li>Property reference
-  <ol>
-   <li>{{cssxref("grid-template-columns")}}</li>
-   <li>{{cssxref("grid-template-rows")}}</li>
-   <li>{{cssxref("grid")}}</li>
-   <li>{{cssxref("grid-template")}}</li>
-  </ol>
- </li>
-</ol>
-</section>
+1.  CSS Grid Layout Guide:
+    _[Basic concepts of grid layout](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
+2.  Property reference
+
+    1.  {{cssxref("grid-template-columns")}}
+    2.  {{cssxref("grid-template-rows")}}
+    3.  {{cssxref("grid")}}
+    4.  {{cssxref("grid-template")}}

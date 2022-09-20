@@ -7,13 +7,11 @@ tags:
 translation_of: Glossary/ECMA
 original_slug: Glossario/ECMA
 ---
-<p><strong>Ecma International</strong> (oficialmente <em>Associação Européia dos Fabricantes de Computadores</em>) é uma organização sem fins lucrativos que desenvolve os padrões para hardware de computadores, comunicações e linguagens de programação.</p>
+**Ecma International** (oficialmente _Associação Européia dos Fabricantes de Computadores_) é uma organização sem fins lucrativos que desenvolve os padrões para hardware de computadores, comunicações e linguagens de programação.
 
-<p>Na web ela é famosa por ser a organização que mantém <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">a especificação ECMA-262</a> (também conhecida por {{Glossary("ECMAScript")}}), que é a especificação núcleo para a linguagem {{Glossary("JavaScript")}}.</p>
+Na web ela é famosa por ser a organização que mantém [a especificação ECMA-262](http://www.ecma-international.org/publications/standards/Ecma-262.htm) (também conhecida por {{Glossary("ECMAScript")}}), que é a especificação núcleo para a linguagem {{Glossary("JavaScript")}}.
 
-<h2 id="Aprenda_mais">Aprenda mais</h2>
+## Aprenda mais
 
-<ul>
- <li>{{interwiki("wikipedia", "Ecma_International", "Ecma International")}} na Wikipedia</li>
- <li><a href="http://www.ecma-international.org/">Site do Ecma International</a></li>
-</ul>
+- {{interwiki("wikipedia", "Ecma_International", "Ecma International")}} na Wikipedia
+- [Site do Ecma International](http://www.ecma-international.org/)

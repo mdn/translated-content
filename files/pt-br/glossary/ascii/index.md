@@ -10,10 +10,10 @@ tags:
 translation_of: Glossary/ASCII
 original_slug: Glossario/ASCII
 ---
-<p>ASCII (Código Padrão Americano para o Intercâmbio de Informação) é um dos mais populares métodos de codificação usado por computadores para converter letras, números, pontuações e códigos de controle dentro do formato digital. Desde 2007, <a href="/pt-BR/docs/Glossario/UTF-8">UTF-8</a> substituiu-o na web.</p>
+ASCII (Código Padrão Americano para o Intercâmbio de Informação) é um dos mais populares métodos de codificação usado por computadores para converter letras, números, pontuações e códigos de controle dentro do formato digital. Desde 2007, [UTF-8](/pt-BR/docs/Glossario/UTF-8) substituiu-o na web.
 
-<h2 id="Aprenda_mais">Aprenda mais</h2>
+## Aprenda mais
 
-<h3 id="Conhecimento_geral">Conhecimento geral</h3>
+### Conhecimento geral
 
-<p>{{Interwiki("wikipedia", "ASCII")}} no Wikipedia</p>
+{{Interwiki("wikipedia", "ASCII")}} no Wikipedia

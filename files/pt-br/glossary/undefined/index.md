@@ -4,18 +4,14 @@ slug: Glossary/undefined
 translation_of: Glossary/undefined
 original_slug: Glossario/undefined
 ---
-<p>Um valor  <strong>{{Glossary("primitive")}}</strong> automaticamente atribuido para <strong>variaveis</strong><strong> </strong>que foram recentemente declaradas ou para <strong>{{Glossary("Argument","arguments")}} formais</strong> para qual não existem <strong>argumentos atualmente</strong>.</p>
+Um valor **{{Glossary("primitive")}}** automaticamente atribuido para **variaveis\*\*** **que foram recentemente declaradas ou para **{{Glossary("Argument","arguments")}} formais** para qual não existem **argumentos atualmente\*\*.
 
-<h2 id="Aprenda_mais">Aprenda mais</h2>
+## Aprenda mais
 
-<h3 id="Conhecimentos_gerais">Conhecimentos gerais</h3>
+### Conhecimentos gerais
 
-<ul>
- <li>{{Interwiki("wikipedia", "Undefined value")}} no Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Undefined value")}} no Wikipedia
 
-<h3 id="Referência_Técnica">Referência Técnica</h3>
+### Referência Técnica
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures">JavaScript data types and data structures</a></li>
-</ul>
+- [JavaScript data types and data structures](/pt-BR/docs/Web/JavaScript/Data_structures)
