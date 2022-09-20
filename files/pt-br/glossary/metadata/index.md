@@ -9,18 +9,14 @@ tags:
 translation_of: Glossary/Metadata
 original_slug: Glossario/Metadata
 ---
-<p>Os<strong> metadados </strong>são — em sua definição mais simples — dados que descrevem dados. Por exemplo, um documento {{glossary("HTML")}} é um dado, mas o HTML, também, pode conter metadados em seu elemento {{htmlelement("head")}} que descreve o documento — por exemplo, quem o escreveu e seu resumo.</p>
+Os **metadados** são — em sua definição mais simples — dados que descrevem dados. Por exemplo, um documento {{glossary("HTML")}} é um dado, mas o HTML, também, pode conter metadados em seu elemento {{htmlelement("head")}} que descreve o documento — por exemplo, quem o escreveu e seu resumo.
 
-<h2 id="Saiba_mais">Saiba mais</h2>
+## Saiba mais
 
-<h3 id="Conhecimento_geral">Conhecimento geral</h3>
+### Conhecimento geral
 
-<ul>
- <li>{{interwiki("wikipedia", "metadata", "metadata")}} na Wikipedia</li>
-</ul>
+- {{interwiki("wikipedia", "metadata", "metadata")}} na Wikipedia
 
-<h3 id="Metadados_HTML">Metadados HTML</h3>
+### Metadados HTML
 
-<ul>
- <li>O elelmento {{htmlelement("meta")}} no MDN</li>
-</ul>
+- O elelmento {{htmlelement("meta")}} no MDN

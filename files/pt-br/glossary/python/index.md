@@ -10,13 +10,11 @@ tags:
 translation_of: Glossary/Python
 original_slug: Glossario/Python
 ---
-<p><span id="result_box" lang="pt"><span><strong>Python</strong> é uma linguagem de programação de alto nível e de uso geral.</span> <span>Ele usa uma abordagem multi-paradigma, o que significa que ele suporta procedural, orientação a objetos, e algumas construções de programação funcional.</span></span></p>
+**Python** é uma linguagem de programação de alto nível e de uso geral. Ele usa uma abordagem multi-paradigma, o que significa que ele suporta procedural, orientação a objetos, e algumas construções de programação funcional.
 
-<p><span id="result_box" lang="pt"><span>Ele foi criado por Guido van Rossum como sucessor de outra linguagem (chamado ABC) entre 1985 e 1990, e atualmente é usado em uma grande variedade de domínios, como desenvolvimento web, como linguagem de script para outras aplicações e para construir aplicações reais.</span></span></p>
+Ele foi criado por Guido van Rossum como sucessor de outra linguagem (chamado ABC) entre 1985 e 1990, e atualmente é usado em uma grande variedade de domínios, como desenvolvimento web, como linguagem de script para outras aplicações e para construir aplicações reais.
 
-<h2 id="Saiba_Mais">Saiba Mais</h2>
+## Saiba Mais
 
-<ul>
- <li>{{interwiki('wikipedia','Python (programming language)','Python')}} na Wikipedia</li>
- <li><a href="http://www.tutorialspoint.com/python/index.htm">Um tutorial python</a></li>
-</ul>
+- {{interwiki('wikipedia','Python (programming language)','Python')}} na Wikipedia
+- [Um tutorial python](http://www.tutorialspoint.com/python/index.htm)

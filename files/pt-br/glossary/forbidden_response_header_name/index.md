@@ -9,23 +9,10 @@ tags:
 translation_of: Glossary/Forbidden_response_header_name
 original_slug: Glossario/Forbidden_response_header_name
 ---
-<p><font><font>Um </font></font><dfn><font><font>nome de cabeçalho de resposta proibido</font></font></dfn><font><font> é um  </font><font>nome de</font></font> <a href="/en-US/docs/Web/HTTP/Headers">cabeçalho HTTP</a> <font><font> (ou `</font></font><code title="">Set-Cookie</code><font><font>` ou ` </font></font><code title="">Set-Cookie2</code><font><font>`) que não pode ser modificado programaticamente.</font></font></p>
+Um _nome de cabeçalho de resposta proibido_ é um nome de [cabeçalho HTTP](/pt-BR/docs/Web/HTTP/Headers) (ou \``Set-Cookie`\` ou \` `Set-Cookie2`\`) que não pode ser modificado programaticamente.
 
-<h2 id="Especificações">Especificações</h2>
+## Especificações
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Fetch','#forbidden-response-header-name','forbidden-response-header-name')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificação                                                                                                        | Status                   | Comentário |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | ---------- |
+| {{SpecName('Fetch','#forbidden-response-header-name','forbidden-response-header-name')}} | {{Spec2('Fetch')}} |            |

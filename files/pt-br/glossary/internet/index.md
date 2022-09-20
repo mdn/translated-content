@@ -13,12 +13,10 @@ tags:
 translation_of: Glossary/Internet
 original_slug: Glossario/Internet
 ---
-<p>A Internet é a rede mundial de redes que utiliza o conjunto de protocolos da Internet (também chamado {{glossary("TCP")}}/{{glossary("IPv6","IP")}} dos seus dois mais importantes {{glossary("protocol","protocolos")}}).</p>
+A Internet é a rede mundial de redes que utiliza o conjunto de protocolos da Internet (também chamado {{glossary("TCP")}}/{{glossary("IPv6","IP")}} dos seus dois mais importantes {{glossary("protocol","protocolos")}}).
 
-<h2 id="Aprenda_mais">Aprenda mais</h2>
+## Aprenda mais
 
-<h3 id="Saiba_mais_sobre_isso">Saiba mais sobre isso</h3>
+### Saiba mais sobre isso
 
-<ul>
- <li><a href="/en-US/Learn/How_the_Internet_works">How the Internet works</a> (Introdução para iniciantes)</li>
-</ul>
+- [How the Internet works](/en-US/Learn/How_the_Internet_works) (Introdução para iniciantes)

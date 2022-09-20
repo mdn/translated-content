@@ -10,32 +10,34 @@ tags:
 translation_of: Glossary/Preflight_request
 original_slug: Glossario/Preflight_request
 ---
-<p>Uma requisição <em>preflight</em> de <a href="/en-US/docs/Glossary/CORS">CORS</a> é uma requisição de {{Glossary ("CORS")}} que verifica se o protocolo {{Glossary ("CORS")}} é entendido e se o servidor aguarda o método e cabeçalhos('headers') especificados.</p>
+Uma requisição _preflight_ de [CORS](/pt-BR/docs/Glossary/CORS) é uma requisição de {{Glossary ("CORS")}} que verifica se o protocolo {{Glossary ("CORS")}} é entendido e se o servidor aguarda o método e cabeçalhos('headers') especificados.
 
-<p>É uma requisição {{HTTPMethod("OPTIONS")}}, que usa três cabeçalhos de solicitação HTTP: {{HTTPHeader("Access-Control-Request-Method")}}, {{HTTPHeader("Access-Control-Request-Headers")}}, e o cabeçalho {{HTTPHeader("Origin")}}.</p>
+É uma requisição {{HTTPMethod("OPTIONS")}}, que usa três cabeçalhos de solicitação HTTP: {{HTTPHeader("Access-Control-Request-Method")}}, {{HTTPHeader("Access-Control-Request-Headers")}}, e o cabeçalho {{HTTPHeader("Origin")}}.
 
-<p>Uma requisição <em>preflight</em> é emitida automaticamente por um navegador, quando necessário. Geralmente, os desenvolvedores front-end não precisam criar essas solicitações. Ela acontece quando a requisição é qualificada <a href="/en-US/docs/Web/HTTP/CORS#Preflighted_requests">"para ser preflighted"</a>  e omitida para <a href="/en-US/docs/Web/HTTP/CORS#Simple_requests">requisições simples</a>.</p>
+Uma requisição _preflight_ é emitida automaticamente por um navegador, quando necessário. Geralmente, os desenvolvedores front-end não precisam criar essas solicitações. Ela acontece quando a requisição é qualificada ["para ser preflighted"](/pt-BR/docs/Web/HTTP/CORS#Preflighted_requests) e omitida para [requisições simples](/pt-BR/docs/Web/HTTP/CORS#Simple_requests).
 
-<p>Por exemplo, o cliente pode perguntar ao servidor se este permitiria uma requisição {{HTTPMethod ("DELETE")}}, antes de enviá-la, usando uma requisição <em>preflight</em>:</p>
+Por exemplo, o cliente pode perguntar ao servidor se este permitiria uma requisição {{HTTPMethod ("DELETE")}}, antes de enviá-la, usando uma requisição _preflight_:
 
-<pre>OPTIONS /resource/foo
+```
+OPTIONS /resource/foo
 Access-Control-Request-Method: DELETE
 Access-Control-Request-Headers: origin, x-requested-with
-Origin: https://foo.bar.org</pre>
+Origin: https://foo.bar.org
+```
 
-<p>Se o servidor permitir, ele responderá à requisição <em>preflight</em>: com um cabeçalho de resposta {{HTTPHeader ("Access-Control-Allow-Methods")}}, que lista DELETE:</p>
+Se o servidor permitir, ele responderá à requisição _preflight_: com um cabeçalho de resposta {{HTTPHeader ("Access-Control-Allow-Methods")}}, que lista DELETE:
 
-<pre>HTTP/1.1 204 No Content
+```
+HTTP/1.1 204 No Content
 Connection: keep-alive
 Access-Control-Allow-Origin: https://foo.bar.org
 Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
-Access-Control-Max-Age: 86400</pre>
+Access-Control-Max-Age: 86400
+```
 
-<p>A resposta da requisição <em>preflight </em>pode ser opcionalmente cacheada para requisições realizadas na mesma url usando o cabeçalho <a href="/en-US/docs/Web/HTTP/Headers/Access-Control-Max-Age">Access-Control-Max-Age</a> como no exemplo acima.</p>
+A resposta da requisição _preflight_ pode ser opcionalmente cacheada para requisições realizadas na mesma url usando o cabeçalho [Access-Control-Max-Age](/pt-BR/docs/Web/HTTP/Headers/Access-Control-Max-Age) como no exemplo acima.
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li><a href="/en-US/docs/Glossary/CORS">CORS</a></li>
- <li>{{HTTPMethod("OPTIONS")}}</li>
-</ul>
+- [CORS](/pt-BR/docs/Glossary/CORS)
+- {{HTTPMethod("OPTIONS")}}

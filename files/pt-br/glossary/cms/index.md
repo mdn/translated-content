@@ -8,14 +8,10 @@ tags:
 translation_of: Glossary/CMS
 original_slug: Glossario/CMS
 ---
-<p>O CMS da sigla em inglês( Content Management System) ou seja, Sistema de Gerenciamento de Conteúdo, é um software que permite usuários publicar, organizar, mudar ou remover vários tipos de conteúdo, não apenas textos mas também incorporação de imagens, vídeos , aúdios e códigos interativos</p>
+O CMS da sigla em inglês( Content Management System) ou seja, Sistema de Gerenciamento de Conteúdo, é um software que permite usuários publicar, organizar, mudar ou remover vários tipos de conteúdo, não apenas textos mas também incorporação de imagens, vídeos , aúdios e códigos interativos
 
-<h2 id="Saiba_mais">Saiba mais</h2>
+## Saiba mais
 
-<h3 id="Conhecimento_Geral">Conhecimento Geral</h3>
+### Conhecimento Geral
 
-<ul>
- <li>{{Interwiki("wikipedia", "Sistema de gerenciamento de conteudo")}} no Wikipedia</li>
-</ul>
-
-<p> </p>
+- {{Interwiki("wikipedia", "Sistema de gerenciamento de conteudo")}} no Wikipedia

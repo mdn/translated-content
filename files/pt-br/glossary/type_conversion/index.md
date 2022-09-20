@@ -4,12 +4,10 @@ slug: Glossary/Type_Conversion
 translation_of: Glossary/Type_Conversion
 original_slug: Glossario/Conversao_de_Tipo
 ---
-<p><strong>Conversão de Tipo</strong> (ou <em>typecasting</em>) significa transferência de dados de um <strong>tipo de dado</strong> para o outro. A <strong>conversão implícita</strong><em> </em>ocorre quando o compilador atribui automaticamente os <strong>tipos de dados</strong>, mas o código fonte também pode <strong>explicitamente </strong>exigir uma conversão de tipo. Por exemplo, dada a instrução <code>5+2.0</code>, o <em>float</em> <code>2.0</code> será implicitamente convertido para <em>integer, </em>mas dada a instrução <code>Number("0x11")</code>, a <em>string  </em>"0x11" será explicitamente convertida para o número 17.</p>
+**Conversão de Tipo** (ou _typecasting_) significa transferência de dados de um **tipo de dado** para o outro. A **conversão implícita**\_ _ocorre quando o compilador atribui automaticamente os **tipos de dados**, mas o código fonte também pode **explicitamente** exigir uma conversão de tipo. Por exemplo, dada a instrução `5+2.0`, o \_float_ `2.0` será implicitamente convertido para _integer,_ mas dada a instrução `Number("0x11")`, a _string_ "0x11" será explicitamente convertida para o número 17.
 
-<h2 id="Aprender_mais">Aprender mais</h2>
+## Aprender mais
 
-<h3 id="Conhecimento_Geral" style="line-height: 24px;">Conhecimento Geral</h3>
+### Conhecimento Geral
 
-<ul>
- <li><a href="https://pt.wikipedia.org/wiki/Convers%C3%A3o_de_tipos">Conversão de Tipos</a> em Wikipedia</li>
-</ul>
+- [Conversão de Tipos](https://pt.wikipedia.org/wiki/Convers%C3%A3o_de_tipos) em Wikipedia

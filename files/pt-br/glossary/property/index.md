@@ -7,6 +7,6 @@ tags:
 translation_of: Glossary/property
 original_slug: Glossario/property
 ---
-<p>O termo <strong>propriedade</strong> <strong>(property)</strong> pode ter diversos siginificados depenedendo do contexto. Ele pode se referir a:</p>
+O termo **propriedade** **(property)** pode ter diversos siginificados depenedendo do contexto. Ele pode se referir a:
 
-<p>{{GlossaryDisambiguation}}</p>
+{{GlossaryDisambiguation}}

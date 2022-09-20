@@ -8,4 +8,4 @@ tags:
 translation_of: Glossary/Jank
 original_slug: Glossario/Jank
 ---
-<p><strong>Jank</strong> se refere à lentidão em uma interface de usuário, geralmente causado por execução de tarefas longas na Thread principal, o bloqueio de renderização, ou esforço demais do processador com processos em segundo plano.</p>
+**Jank** se refere à lentidão em uma interface de usuário, geralmente causado por execução de tarefas longas na Thread principal, o bloqueio de renderização, ou esforço demais do processador com processos em segundo plano.

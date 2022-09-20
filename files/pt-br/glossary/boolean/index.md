@@ -4,11 +4,10 @@ slug: Glossary/Boolean
 translation_of: Glossary/Boolean
 original_slug: Glossario/Booleano
 ---
-<p>Um <strong>booleano</strong>, em ciência da computação, é um tipo de dado lógico que pode ter apenas um de dois valores possíveis: <code>verdadeiro</code> ou <code>falso</code>. Por exemplo, em JavaScript, condicionais booleanas são usadas para decidir quais trechos do código serão executados ou repetidas.</p>
+Um **booleano**, em ciência da computação, é um tipo de dado lógico que pode ter apenas um de dois valores possíveis: `verdadeiro` ou `falso`. Por exemplo, em JavaScript, condicionais booleanas são usadas para decidir quais trechos do código serão executados ou repetidas.
 
-<p> </p>
-
-<pre><code>if (condicao booleana) {
+```
+if (condicao booleana) {
    // codigo a executar se o booleano for TRUE
 }
 
@@ -24,23 +23,18 @@ for (variavel de controle; condicao booleana; contador) {
   // codigo a se repetir se o booleano for TRUE
 }
 
-for (var i=0; i &lt; 4; i++) {
+for (var i=0; i < 4; i++) {
   console.log("codigo a executar se a condicao for verdadeira, ou seja até 'i' atingir o valor de 4 ");
-}</code></pre>
+}
+```
 
-<p> </p>
+## Veja mais
 
-<h2 id="Veja_mais">Veja mais</h2>
+### Referências externas
 
-<h3 id="Referências_externas">Referências externas</h3>
+- [Boolean on Wikipedia](http://en.wikipedia.org/wiki/Boolean_data_type) (em inglês)
+- [Booleano na Wikipedia](https://pt.wikipedia.org/wiki/Booliano)
 
-<ul>
- <li><a href="http://en.wikipedia.org/wiki/Boolean_data_type">Boolean on Wikipedia</a> (em inglês)</li>
- <li><a href="https://pt.wikipedia.org/wiki/Booliano">Booleano na Wikipedia</a></li>
-</ul>
+### Referência
 
-<h3 id="Referência">Referência</h3>
-
-<ul>
- <li>O objeto global JavaScript: {{jsxref("Boolean")}}</li>
-</ul>
+- O objeto global JavaScript: {{jsxref("Boolean")}}

@@ -4,10 +4,8 @@ slug: Glossary/Operand
 translation_of: Glossary/Operand
 original_slug: Glossario/Operando
 ---
-<p>An <strong>operand</strong> is the part of an instruction representing the data manipulated by the {{glossary("operator")}}. For example, when you add two numbers, the numbers are the operand and "+" is the operator.</p>
+An **operand** is the part of an instruction representing the data manipulated by the {{glossary("operator")}}. For example, when you add two numbers, the numbers are the operand and "+" is the operator.
 
-<h2 id="Learn_more">Learn more</h2>
+## Learn more
 
-<ul>
- <li>{{Interwiki("wikipedia", "Operand")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Operand")}} on Wikipedia

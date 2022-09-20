@@ -8,13 +8,14 @@ tags:
 translation_of: Glossary/Truthy
 original_slug: Glossario/Truthy
 ---
-<p>Em {{Glossary("JavaScript")}}, um valor <strong>truthy</strong> é um valor que se traduz em verdadeiro quando avaliado em um contexto {{Glossary("Booleano")}}. Todos os valores são <strong>truthy</strong> a menos que eles sejam definidos como {{Glossary("Falsy", "falsy")}} (ou seja., exceto para <code>false</code>, <code>0</code>, <code>""</code>, <code>null</code>, <code>undefined</code>, e <code>NaN</code>).</p>
+Em {{Glossary("JavaScript")}}, um valor **truthy** é um valor que se traduz em verdadeiro quando avaliado em um contexto {{Glossary("Booleano")}}. Todos os valores são **truthy** a menos que eles sejam definidos como {{Glossary("Falsy", "falsy")}} (ou seja., exceto para `false`, `0`, `""`, `null`, `undefined`, e `NaN`).
 
-<p>O {{Glossary("JavaScript")}} usa {{Glossary("Type_Conversion", "coerção")}} de tipo em contextos booleanos.</p>
+O {{Glossary("JavaScript")}} usa {{Glossary("Type_Conversion", "coerção")}} de tipo em contextos booleanos.
 
-<p>Exemplos de valores <em>truthy</em> em JavaScript (que se traduzirão em true, e então executar o bloco <code>if</code>):</p>
+Exemplos de valores _truthy_ em JavaScript (que se traduzirão em true, e então executar o bloco `if`):
 
-<pre><code>if (true)
+```
+if (true)
 if ({})
 if ([])
 if (42)
@@ -24,12 +25,11 @@ if (-42)
 if (3.14)
 if (-3.14)
 if (Infinity)
-if (-Infinity)</code></pre>
+if (-Infinity)
+```
 
-<h2 id="Veja_também">Veja também</h2>
+## Veja também
 
-<ul>
- <li>{{Glossary("Falsy")}}</li>
- <li>{{Glossary("Type_Conversion", "Coercion")}}</li>
- <li>{{Glossary("Boolean")}}</li>
-</ul>
+- {{Glossary("Falsy")}}
+- {{Glossary("Type_Conversion", "Coercion")}}
+- {{Glossary("Boolean")}}

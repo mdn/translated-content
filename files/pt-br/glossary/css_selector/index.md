@@ -4,11 +4,12 @@ slug: Glossary/CSS_Selector
 translation_of: Glossary/CSS_Selector
 original_slug: Glossario/CSS_Selector
 ---
-<p>O <strong>seletor CSS</strong> é parte da regra do CSS que lhe permite selecionar qual elemento(s) vai receber o estilo pela regra. Por exemplo:</p>
+O **seletor CSS** é parte da regra do CSS que lhe permite selecionar qual elemento(s) vai receber o estilo pela regra. Por exemplo:
 
-<pre><code>***HTML***
-&lt;div&gt; Eu estou dentro do elemento. &lt;/div&gt;
-&lt;p&gt; Eu estou dentro de um elemento de parágrafo. &lt;/p&gt;
+```
+***HTML***
+<div> Eu estou dentro do elemento. </div>
+<p> Eu estou dentro de um elemento de parágrafo. </p>
 
 
 ***CSS***
@@ -18,42 +19,36 @@ div {
 
 p {
  color: red;
-}</code>
-</pre>
+}
+```
 
-<p>Nessa primeira regra do CSS, eu estou selecionando o elemento da div estilizando-a colorindo o texto para verde. Na segunda regra do CSS, eu estou selecionando o elemento "p" e estilizando-a colorindo o texto para vermelho. Aqui estão os resultados:</p>
+Nessa primeira regra do CSS, eu estou selecionando o elemento da div estilizando-a colorindo o texto para verde. Na segunda regra do CSS, eu estou selecionando o elemento "p" e estilizando-a colorindo o texto para vermelho. Aqui estão os resultados:
 
-<p><img alt="CSS selector coding results" src="https://mdn.mozillademos.org/files/13941/cssSelectorMDNGlossary.jpg" style="border: 1px solid black; height: 101px; width: 343px;"></p>
+![CSS selector coding results](https://mdn.mozillademos.org/files/13941/cssSelectorMDNGlossary.jpg)
 
-<p> </p>
+## Aprenda mais
 
-<h2 id="Aprenda_mais">Aprenda mais</h2>
+### Conhecimento geral
 
-<h3 id="Conhecimento_geral">Conhecimento geral</h3>
+- Seletores básicos
 
-<ul>
- <li>Seletores básicos
-  <ul>
-   <li><a href="/en-US/docs/Web/CSS/Type_selectors">Tipos de seletores</a><code> elementname</code></li>
-   <li><a href="/en-US/docs/Web/CSS/Class_selectors">Classes seletoras</a> <code>.classname</code></li>
-   <li><a href="/en-US/docs/Web/CSS/ID_selectors">ID seletores</a> <code>#idname</code></li>
-   <li><a href="/en-US/docs/Web/CSS/Universal_selectors">Seletores universais</a><code> * ns|* *|*</code></li>
-   <li><a href="/en-US/docs/Web/CSS/Attribute_selectors">Seletores de atributos</a><code> [attr=value]</code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/Pseudo-classes">Seletores de estado</a> a:active, a:visited</code></li>
-  </ul>
- </li>
- <li>Combinadores
-  <ul>
-   <li><a href="/en-US/docs/Web/CSS/Adjacent_sibling_selectors">Seletores de irmão adjacentes</a> <code>A + B</code></li>
-   <li><a href="/en-US/docs/Web/CSS/General_sibling_selectors">Seletores de irmãos gerais</a> <code>A ~ B</code></li>
-   <li><a href="/en-US/docs/Web/CSS/Child_selectors">Seletores filhos</a> <code>A &gt; B</code></li>
-   <li><a href="/en-US/docs/Web/CSS/Descendant_selectors">Seletores descendentes</a> <code>A B</code></li>
-  </ul>
- </li>
- <li><a href="/en-US/docs/Web/CSS/Pseudo-elements">Pseudo-elementos</a></li>
- <li><a href="/en-US/docs/Web/CSS/Pseudo-classes">Pseudo-classes</a></li>
-</ul>
+  - [Tipos de seletores](/pt-BR/docs/Web/CSS/Type_selectors)` elementname`
+  - [Classes seletoras](/pt-BR/docs/Web/CSS/Class_selectors) `.classname`
+  - [ID seletores](/pt-BR/docs/Web/CSS/ID_selectors) `#idname`
+  - [Seletores universais](/pt-BR/docs/Web/CSS/Universal_selectors)` * ns|* *|*`
+  - [Seletores de atributos](/pt-BR/docs/Web/CSS/Attribute_selectors)` [attr=value]`
+  - `Seletores de estado a:active, a:visited`
 
-<h3 id="Referência_técnica">Referência técnica</h3>
+- Combinadores
 
-<p>{{SpecName("CSS3 Selectors")}}</p>
+  - [Seletores de irmão adjacentes](/pt-BR/docs/Web/CSS/Adjacent_sibling_selectors) `A + B`
+  - [Seletores de irmãos gerais](/pt-BR/docs/Web/CSS/General_sibling_selectors) `A ~ B`
+  - [Seletores filhos](/pt-BR/docs/Web/CSS/Child_selectors) `A > B`
+  - [Seletores descendentes](/pt-BR/docs/Web/CSS/Descendant_selectors) `A B`
+
+- [Pseudo-elementos](/pt-BR/docs/Web/CSS/Pseudo-elements)
+- [Pseudo-classes](/pt-BR/docs/Web/CSS/Pseudo-classes)
+
+### Referência técnica
+
+{{SpecName("CSS3 Selectors")}}

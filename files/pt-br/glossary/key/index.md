@@ -8,18 +8,14 @@ tags:
 translation_of: Glossary/Key
 original_slug: Glossario/Key
 ---
-<p><span class="seoSummary">Uma key é uma parte de informação utilizada por um {{Glossary("cipher")}} para {{Glossary("encryption")}} e/ou {{Glossary("decryption")}}.</span>Mensagens criptografadas devem permanecer seguras mesmo se tudo envolvendo o {{Glossary("cryptosystem")}}, com exceção da key, for de caráter público.</p>
+Uma key é uma parte de informação utilizada por um {{Glossary("cipher")}} para {{Glossary("encryption")}} e/ou {{Glossary("decryption")}}.Mensagens criptografadas devem permanecer seguras mesmo se tudo envolvendo o {{Glossary("cryptosystem")}}, com exceção da key, for de caráter público.
 
-<p>Em {{Glossary("symmetric-key cryptography")}}, a mesma chave é utilizada para criptografar e descriptografar. Em {{Glossary("public-key cryptography")}}, existem keys relacionadas conhecidas como keys públicas e keys privadas. A key pública é disponibilizada gratuitamente, enquanto, a key privada é mantida "em segredo". A key pública é capaz de criptografar mensagens as quais apenas a key privada correspondente é capaz de descriptografar, e vice-versa.</p>
+Em {{Glossary("symmetric-key cryptography")}}, a mesma chave é utilizada para criptografar e descriptografar. Em {{Glossary("public-key cryptography")}}, existem keys relacionadas conhecidas como keys públicas e keys privadas. A key pública é disponibilizada gratuitamente, enquanto, a key privada é mantida "em segredo". A key pública é capaz de criptografar mensagens as quais apenas a key privada correspondente é capaz de descriptografar, e vice-versa.
 
-<p> </p>
+## Aprenda mais
 
-<h2 id="Aprenda_mais">Aprenda mais</h2>
+- [Kerckhoffs's principle](http://en.wikipedia.org/wiki/Kerckhoffs%27s_principle) na Wikipedia
 
-<ul>
- <li><a href="http://en.wikipedia.org/wiki/Kerckhoffs%27s_principle">Kerckhoffs's principle</a> na Wikipedia</li>
-</ul>
+### Dicionário:
 
-<h3 id="Dicionário">Dicionário:</h3>
-
-<p>"Key": "Chave"</p>
+"Key": "Chave"
