@@ -9,6 +9,7 @@ tags:
   - Type
 translation_of: Web/API/Selection/type
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 La propriété en lecture simple **`type`** de l'interface {{domxref("Selection")}} retourne un {{domxref("DOMString")}} décrivant le type de la sélection courante.

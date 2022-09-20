@@ -8,6 +8,7 @@ tags:
   - Méthodes
 translation_of: Web/API/Element/setAttributeNodeNS
 ---
+
 {{ APIRef("DOM") }}
 
 `setAttributeNodeNS` ajoute un nouveau nœud attribut avec l'espace de noms et le nom spécifiés.

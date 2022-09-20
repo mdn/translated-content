@@ -6,6 +6,7 @@ tags:
   - Web Workers
 translation_of: Web/API/WorkerLocation
 ---
+
 {{APIRef("Web Workers API")}}
 
 L'interface **`WorkerLocation`** définit l'emplacement complet du script exécuté par le {{domxref("Worker")}}. Un tel objet est initialisé pour chaque _worker_ et est disponible via la propriété {{domxref("WorkerGlobalScope.location")}} récupérée par l'appel à `window.self.location`.

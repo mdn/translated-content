@@ -4,6 +4,7 @@ slug: Web/API/Element/compositionupdate_event
 translation_of: Web/API/Element/compositionupdate_event
 original_slug: Web/Events/compositionupdate
 ---
+
 L'événement **compositionupdate** est déclenché lorsqu'un caractère est ajouté à un passage de texte en train d'être composé (`démarre avec des caractères spéciaux qui nécessitent une sequence de touches et d'autres entrées telles que la reconnaissance vocale ou la suggestion de mots du mobile).`
 
 ## Informations générales

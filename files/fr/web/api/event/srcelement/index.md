@@ -9,6 +9,7 @@ tags:
   - Éléments SRC
 translation_of: Web/API/Event/srcElement
 ---
+
 {{ApiRef("DOM")}}
 
 {{ Non-standard_header() }}
