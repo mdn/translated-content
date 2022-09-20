@@ -1,7 +1,8 @@
 ---
-title: 空值合并运算符
+title: 空值合并运算符（??）
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 ---
+
 {{JSSidebar("Operators")}}
 
 **空值合并操作符**（**`??`**）是一个逻辑操作符，当左侧的操作数为 {{jsxref("null")}} 或者 {{jsxref("undefined")}} 时，返回其右侧操作数，否则返回左侧操作数。
@@ -12,7 +13,7 @@ slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 
 ## 语法
 
-```plain
+```js-nolint
 leftExpr ?? rightExpr
 ```
 
@@ -126,6 +127,6 @@ console.log(foo.someBarProp?.toUpperCase()); // undefined
 
 ## 参见
 
-- [可选链操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+- [可选链操作符（?.）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 - [逻辑或操作符（`||`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_OR)
 - [函数中的默认参数值](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)

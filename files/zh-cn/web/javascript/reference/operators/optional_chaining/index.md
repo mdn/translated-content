@@ -1,11 +1,12 @@
 ---
-title: 可选链操作符
+title: 可选链操作符（?.）
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
 original_slug: Web/JavaScript/Reference/Operators/可选链
 ---
+
 {{JSSidebar("Operators")}}
 
-**可选链**操作符 ( **`?.`** ) 允许读取位于连接对象链深处的属性的值，而不必明确验证链中的每个引用是否有效。`?.` 操作符的功能类似于 `.` 链式操作符，不同之处在于，在引用为空 ([nullish](/zh-CN/docs/Glossary/nullish) ) ({{JSxRef("null")}} 或者 {{JSxRef("undefined")}}) 的情况下不会引起错误，该表达式短路返回值是 `undefined`。与函数调用一起使用时，如果给定的函数不存在，则返回 `undefined`。
+**可选链操作符**（ **`?.`**） 允许读取位于连接对象链深处的属性的值，而不必明确验证链中的每个引用是否有效。`?.` 操作符的功能类似于 `.` 链式操作符，不同之处在于，在引用为空 ([nullish](/zh-CN/docs/Glossary/nullish) ) ({{JSxRef("null")}} 或者 {{JSxRef("undefined")}}) 的情况下不会引起错误，该表达式短路返回值是 `undefined`。与函数调用一起使用时，如果给定的函数不存在，则返回 `undefined`。
 
 当尝试访问可能不存在的对象属性时，可选链操作符将会使表达式更短、更简明。在探索一个对象的内容时，如果不能确定哪些属性必定存在，可选链操作符也是很有帮助的。
 
@@ -13,11 +14,10 @@ original_slug: Web/JavaScript/Reference/Operators/可选链
 
 ## 语法
 
-```plain
-obj?.prop
-obj?.[expr]
-arr?.[index]
-func?.(args)
+```js-nolint
+obj.val?.prop
+obj.val?.[expr]
+obj.func?.(args)
 ```
 
 ## 描述
@@ -178,5 +178,4 @@ console.log(customerCity); // “暗之城”
 
 ## 参见
 
-- {{JSxRef("Operators/Nullish_Coalescing_Operator", "空值合并操作符")}}
-- [TC39 提案](https://github.com/tc39/proposals)
+- [空值合并操作符（??）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
