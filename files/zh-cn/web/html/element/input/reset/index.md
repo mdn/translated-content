@@ -141,7 +141,7 @@ slug: Web/HTML/Element/Input/reset
 ## 参见
 
 - {{HTMLElement("input")}} 和 {{domxref("HTMLInputElement")}} 实现接口
-- [表单和按钮](/zh-CN/docs/Learn/HTML/Forms_and_buttons)
+- [表单和按钮](/zh-CN/docs/Learn/Forms/Basic_native_form_controls#按钮)
 - [无障碍表单](/zh-CN/docs/Web/Accessibility/ARIA/forms)
 - [HTML 表单](/zh-CN/docs/Learn/HTML/Forms)
 - {{HTMLElement("button")}} 元素
