@@ -43,7 +43,7 @@ animation-composition: unset;
 
 ## Description
 
-Chaque propriété ciblée par une règle @ [`@keyframes`](/fr/docs/Web/CSS/@keyframes) est associée avec une pile d'effets. La valeur de la pile d'effets en combinant la valeur _sous-jacente_ d'une propriété CSS dans une règle de style avec la valeur _d'effet_ de cette propriété dans l'image-clé (<i lang="en">keyframe</i>). La propriété `animation-composition` aide à indiquer la façon dont sont combinées la valeur sous-jacente et la valeur d'effet.
+Chaque propriété ciblée par une règle @ [`@keyframes`](/fr/docs/Web/CSS/@keyframes) est associée avec une pile d'effets. La valeur de la pile d'effets est calculée en combinant la valeur _sous-jacente_ d'une propriété CSS dans une règle de style avec la valeur _d'effet_ de cette propriété dans l'image-clé (<i lang="en">keyframe</i>). La propriété `animation-composition` aide à indiquer la façon dont sont combinées la valeur sous-jacente et la valeur d'effet.
 
 Par exemple, dans le fragment CSS qui suit, `blur(5px)` est la valeur sous-jacente, et `blur(10px)` est la valeur d'effet. La propriété `filter` est modifiée par les deux animations, `pulse` et `brightness-pulse`. La propriété `animation-composition` indique l'opération à réaliser afin de produire l'effet final, une fois avoir combiné l'effet de la valeur sous-jacente et celui de la valeur d'effet.
 
