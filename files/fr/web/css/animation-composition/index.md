@@ -39,7 +39,7 @@ animation-composition: unset;
 - `add`
   - : La valeur d'effet est construite à partir de la valeur sous-jacente de la propriété. L'opération produit un effet additif. Pour les types d'animation pour lesquels l'opération d'addition n'est pas commutative, le premier opérande est la valeur sous-jacente et le second opérande est la valeur d'effet.
 - `accumulate`
-  - : La valeur d'effet et la valeur sous-jacente sont combinés. Pour les types d'animation pour lesquels l'opération d'addition n'est pas commutative, le premier opérande est la valeur sous-jacente et le second opérande est la valeur d'effet.
+  - : La valeur d'effet et la valeur sous-jacente sont combinées. Pour les types d'animation où l'opération d'addition n'est pas commutative, le premier opérande est la valeur sous-jacente et le second opérande est la valeur d'effet.
 
 ## Description
 
