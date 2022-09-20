@@ -33,7 +33,7 @@ slug: Web/HTML/Element/dialog
       </td>
     </tr>
     <tr>
-      <th scope="row">Tag 是否可省略</th>
+      <th scope="row">标签是否可省略</th>
       <td>{{no_tag_omission}}</td>
     </tr>
     <tr>
