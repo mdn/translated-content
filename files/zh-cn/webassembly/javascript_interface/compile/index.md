@@ -1,6 +1,7 @@
 ---
 title: WebAssembly.compile()
-slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
+slug: WebAssembly/JavaScript_interface/compile
+original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 ---
 {{JSRef}} {{SeeCompatTable}}
 
