@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol
 original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol
 browser-compat: javascript.builtins.Symbol
 ---
+
 {{JSRef}}
 
 Un objet **`Symbol`** est un objet natif dont le constructeur renvoie une valeur [primitive](/fr/docs/Glossary/Primitive) de type `symbol`. On parle de **valeur symbole** ou de **symbole**&nbsp;: il s'agit d'une valeur dont l'unicité est garantie. Les symboles sont souvent utilisés pour ajouter des clés de propriétés uniques à un objet afin que celles-ci ne rentrent pas en conflit avec des clés ajoutées par un autre code. Les symboles sont masqués des mécanismes habituellement utilisés pour parcourir les propriétés d'un objet. Cela permet une sorte d'[encapsulation](/fr/docs/Glossary/Encapsulation) faible, ou une forme faible de [masquage de l'information](https://fr.wikipedia.org/wiki/Masquage_de_l'information).

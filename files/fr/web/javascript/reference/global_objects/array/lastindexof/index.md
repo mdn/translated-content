@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/lastIndexOf
 ---
+
 {{JSRef}}
 
 La méthode **`lastIndexOf()`** permet de renvoyer le dernier indice pour lequel une valeur donnée est présente dans un tableau. Si la valeur recherchée n'est pas présente, le résultat sera -1. Lors de la recherche, le tableau est parcouru dans le sens des index décroissants, à partir de l'index `indexDébut`.

@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/sub
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/sub
 ---
+
 {{JSRef}}{{deprecated_header}}
 
 La méthode **`sub()`** crée un élément HTML {{HTMLElement("sub")}} qui entraîne l'affichage de la chaîne en indice.

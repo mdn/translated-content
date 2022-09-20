@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/toLocaleUpperCase
 ---
+
 {{JSRef}}
 
 La méthode **`toLocaleUpperCase()`** renvoie la chaîne de caractères qui appelle la méthode en caractères majuscules, selon les correspondances de caractères propres aux différentes locales.

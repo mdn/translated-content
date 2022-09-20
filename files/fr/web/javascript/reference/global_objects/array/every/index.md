@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/every
 ---
+
 {{JSRef}}
 
 La méthode **`every()`** permet de tester si tous les éléments d'un tableau vérifient une condition donnée par une fonction en argument. Cette méthode renvoie un booléen pour le résultat du test.
