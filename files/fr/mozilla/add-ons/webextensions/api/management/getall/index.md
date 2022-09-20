@@ -11,6 +11,7 @@ tags:
   - management
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/getAll
 ---
+
 {{AddonSidebar()}}
 
 Récupère un ensemble d'objets {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}}, un pour chaque extension installé.

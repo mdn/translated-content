@@ -13,6 +13,7 @@ tags:
   - downloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/download
 ---
+
 {{AddonSidebar()}}
 
 La fonction **`download()`** de l'API {{WebExtAPIRef("downloads")}} télécharge le fichier, compte tenu de son URL et d'autres préférences optionnelles.

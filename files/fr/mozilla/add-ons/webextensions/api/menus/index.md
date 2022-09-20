@@ -13,6 +13,7 @@ tags:
   - menus
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus
 ---
+
 {{AddonSidebar}}
 
 Ajoutez des éléments au système de menus du navigateur.

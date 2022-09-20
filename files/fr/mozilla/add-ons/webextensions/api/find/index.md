@@ -10,6 +10,7 @@ tags:
   - find
 translation_of: Mozilla/Add-ons/WebExtensions/API/find
 ---
+
 {{AddonSidebar}}
 
 Trouve un texte dans une page web, et met en évidence les correspondances.
