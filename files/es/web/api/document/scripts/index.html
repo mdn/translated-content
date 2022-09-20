@@ -9,7 +9,7 @@ translation_of: Web/API/Document/scripts
 
 <h2 id="Syntax" name="Syntax">Sintáxis</h2>
 
-<pre class="syntaxbox"><code>var <em>scriptList</em></code> = document.scripts;
+<pre class="js"><code>var <em>scriptList</em></code> = document.scripts;
 </pre>
 
 <p>El objeto <code>scriptList</code> devuelto es una {{domxref("HTMLCollection")}}. Se puede utilizar como un array corriente para acceder a sus elementos.</p>
@@ -18,7 +18,7 @@ translation_of: Web/API/Document/scripts
 
 <p>Este ejemplo busca demostrar la existencia de objetos {{HTMLElement("script")}} en el documento.</p>
 
-<pre class="brush:js">var scripts = document.scripts;
+<pre class="js">var scripts = document.scripts;
 
 if (scripts.length) {
   alert("This page has scripts!");

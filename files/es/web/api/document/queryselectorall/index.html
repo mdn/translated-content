@@ -26,7 +26,7 @@ translation_of: Web/API/Document/querySelectorAll
 
 <h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox"><var>elementList</var> = <em>parentNode</em>.querySelectorAll(<var>selectors</var>);
+<pre class="js"><var>elementList</var> = <em>parentNode</em>.querySelectorAll(<var>selectors</var>);
 </pre>
 
 <h3 id="Parámetros" name="Parámetros">Parámetros</h3>
@@ -61,25 +61,25 @@ translation_of: Web/API/Document/querySelectorAll
 
 <p>Para obtener una {{domxref("NodeList")}} de todos los elementos {{HTMLElement("p")}} en el documento:</p>
 
-<pre class="brush: js">var matches = document.querySelectorAll('p');</pre>
+<pre class="js">var matches = document.querySelectorAll('p');</pre>
 
 <p>Este ejemplo devuelve una lista de todos los elementos {{HTMLElement("div")}} del documento con una clase "<code>nota</code>" o "<code>alerta</code>":</p>
 
-<pre class="brush: js">var matches = document.querySelectorAll('div.nota, div.alerta');
+<pre class="js">var matches = document.querySelectorAll('div.nota, div.alerta');
 </pre>
 
 <p>Aquí, se obtiene una lista de elementos <code>&lt;p&gt;</code> cuyo elemento padre inmediato es un {{domxref("div")}} con la clase <code>"highlighted"</code> y que está ubicado dentro de un contenedor cuyo ID es <code>"test"</code>.</p>
 
-<pre class="brush: js">var container = document.querySelector('#test');
+<pre class="js">var container = document.querySelector('#test');
 var matches = container.querySelectorAll('div.highlighted &gt; p');</pre>
 
 <p>Este ejemplo usa un <a href="es/docs/Web/CSS/Selectores_atributo">selector de atributos</a> para devolver una lista de elementos {{domxref("iframe")}} en el documento que contienen un atributo llamado <code>"data-src"</code>:</p>
 
-<pre class="brush: js">var matches = document.querySelectorAll('iframe[data-src]');</pre>
+<pre class="js">var matches = document.querySelectorAll('iframe[data-src]');</pre>
 
 <p>Aquí, un selector de atributo se utiliza para devolver una lista de los elementos de una lista cuyo ID es <code>"userlist"</code> que tiene un atributo <code>"data-active"</code> cuyo valor es <code>"1"</code>:</p>
 
-<pre class="brush: js">var container = document.querySelector('#userlist');
+<pre class="js">var container = document.querySelector('#userlist');
 var matches = container.querySelectorAll('li[data-active="1"]');</pre>
 
 <h3 id="Accediendo_a_las_coincidencias">Accediendo a las coincidencias</h3>
@@ -88,7 +88,7 @@ var matches = container.querySelectorAll('li[data-active="1"]');</pre>
 
 <p>En cualquier caso, se puede simplemente utilizar la notación estándar de los arrays para acceder al contenido de la lista. Se puede usar cualquier sentencia de iteración, como por ejemplo:</p>
 
-<pre class="brush: js">var highlightedItems = userList.querySelectorAll('.highlighted');
+<pre class="js">var highlightedItems = userList.querySelectorAll('.highlighted');
 
 highlightedItems.forEach(function(userItem) {
   deleteUser(userItem);
@@ -102,7 +102,7 @@ highlightedItems.forEach(function(userItem) {
 
 <p>Considere este HTML, con sus tres bloques anidados {{HTMLElement("div")}}.</p>
 
-<pre class="brush: html">&lt;div class="outer"&gt;
+<pre class="html">&lt;div class="outer"&gt;
   &lt;div class="select"&gt;
     &lt;div class="inner"&gt;
     &lt;/div&gt;
@@ -111,7 +111,7 @@ highlightedItems.forEach(function(userItem) {
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js">var select = document.querySelector('.select');
+<pre class="js">var select = document.querySelector('.select');
 var inner = select.querySelectorAll('.outer .inner');
 inner.length; // 1, not 0!
 </pre>
@@ -120,14 +120,14 @@ inner.length; // 1, not 0!
 
 <p>La pseudo-clase {{cssxref(":scope")}} recupera el comportamiento esperado, encontrando coincidencias sólo en selectores descendientes del elemento base:</p>
 
-<pre class="brush: js">var select = document.querySelector('.select');
+<pre class="js">var select = document.querySelector('.select');
 var inner = select.querySelectorAll(':scope .outer .inner');
 inner.length; // 0
 </pre>
 
 <h2 id="Especificaciones">Especificaciones</h2>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="col">Especificación</th>

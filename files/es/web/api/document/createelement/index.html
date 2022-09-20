@@ -17,21 +17,20 @@ translation_of: Web/API/Document/createElement
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="brush: js"><var>var <em>element</em></var> = <var>document</var>.createElement(<em><var>tagName, [options]</var></em>);
+<pre class="js"><var>var <em>element</em></var> = <var>document</var>.createElement(<em><var>tagName, [options]</var></em>);
 </pre>
 
 <h3 id="Parámetros">Parámetros</h3>
 
 <dl>
  <dt><code>tagName</code></dt>
-</dl>
+ <dd>Cadena que especifica el tipo de elemento a crear. El {{domxref("Node.nodeName", "nodeName")}} del elemento creado se inicializa con el valor de <code>tagName</code>. No utilizar nombres reservados (como "html:a") con este método. Al ser invocado en un documento HTML, <code>createElement()</code> convierte <code>tagName</code> a minúsculas antes de crear el elemento. En Firefox, Opera, y Chrome, <code>createElement(null)</code> funciona como <code>createElement("null")</code>.</dd>
 
-<p>Cadena que especifica el tipo de elemento a crear. El {{domxref("Node.nodeName", "nodeName")}} del elemento creado se inicializa con el valor de <code>tagName</code>. No utilizar nombres reservados (como "html:a") con este método. Al ser invocado en un documento HTML, <code>createElement()</code> convierte <code>tagName</code> a minúsculas antes de crear el elemento. En Firefox, Opera, y Chrome, <code>createElement(null)</code> funciona como <code>createElement("null")</code>.</p>
-
-<dl>
  <dt><code>options</code>{{optional_inline}}</dt>
- <dd>Un objeto opcional <code>ElementCreationOptions</code> que contiene una única propiedad llamada <code>is</code>, cuyo valor es el de la etiqueta name de un elemento personalizado definido previamente utilizando <code>customElements.define()</code>. Para compatibilidad con versiones anteriores de<a href="https://www.w3.org/TR/custom-elements/"> Elements specification</a>, algunos navegadores podrían permitir pasar una cadena aquí en vez de un objeto, donde el valor de la cadena es la etiqueta name del elemento creado. Ver <a href="https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml">Extending native HTML elements</a> para más información sobre como usar este parámetro.</dd>
- <dd>El nuevo elemento recibirá el atributo cuyo valor es la etiqueta name del elemento personalizado. Los elementos personalizados son una característica experimental solo disponible en algunos navegadores.</dd>
+ <dd>
+ <p>Un objeto opcional <code>ElementCreationOptions</code> que contiene una única propiedad llamada <code>is</code>, cuyo valor es el de la etiqueta name de un elemento personalizado definido previamente utilizando <code>customElements.define()</code>. Para compatibilidad con versiones anteriores de<a href="https://www.w3.org/TR/custom-elements/"> Elements specification</a>, algunos navegadores podrían permitir pasar una cadena aquí en vez de un objeto, donde el valor de la cadena es la etiqueta name del elemento creado. Ver <a href="https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml">Extending native HTML elements</a> para más información sobre como usar este parámetro.</p>
+ <p>El nuevo elemento recibirá el atributo cuyo valor es la etiqueta name del elemento personalizado. Los elementos personalizados son una característica experimental solo disponible en algunos navegadores.</p>
+ </dd>
 </dl>
 
 <h3 id="Retorna">Retorna</h3>
@@ -44,7 +43,7 @@ translation_of: Web/API/Document/createElement
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
+<pre class="html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;title&gt;||Trabajando con elementos||&lt;/title&gt;
@@ -57,7 +56,7 @@ translation_of: Web/API/Document/createElement
 
 <h3 id="JavaScript"><span style="line-height: normal;">JavaScript</span></h3>
 
-<pre class="brush:js">document.body.onload = addElement;
+<pre class="js">document.body.onload = addElement;
 
 function addElement () {
   // crea un nuevo div
@@ -75,7 +74,7 @@ function addElement () {
 
 <h2 id="Especificaciones">Especificaciones</h2>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="col">Especificación</th>

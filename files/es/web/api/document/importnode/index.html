@@ -9,7 +9,7 @@ translation_of: Web/API/Document/importNode
 
 <h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-<pre class="syntaxbox">var <em>node</em> = <em>document</em>.importNode(<em>externalNode</em>, <em>deep</em>);
+<pre class="js">var <em>node</em> = <em>document</em>.importNode(<em>externalNode</em>, <em>deep</em>);
 </pre>
 
 <dl>
@@ -29,7 +29,7 @@ translation_of: Web/API/Document/importNode
 
 <h2 id="Example" name="Example">Ejemplo</h2>
 
-<pre class="brush: js">var iframe = document.getElementsByTagName("iframe")[0];
+<pre class="js">var iframe = document.getElementsByTagName("iframe")[0];
 var oldNode = iframe.contentWindow.document.getElementById("myNode");
 var newNode = document.importNode(oldNode, true);
 document.getElementById("container").appendChild(newNode);
@@ -49,7 +49,7 @@ document.getElementById("container").appendChild(newNode);
 
 <h2 id="Especificaciones">Especificaciones</h2>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="col">Specification</th>

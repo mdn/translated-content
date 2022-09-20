@@ -9,7 +9,7 @@ translation_of: Web/API/Document/getElementsByClassName
 
 <h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-<pre class="syntaxbox"><var>var elementos</var> = document.getElementsByClassName(<em>nombres</em>); // ó :
+<pre class="js"><var>var elementos</var> = document.getElementsByClassName(<em>nombres</em>); // ó :
 <var>var elementos</var> = elementoRaiz.getElementsByClassName(<em>nombres</em>);</pre>
 
 <ul>
@@ -22,19 +22,19 @@ translation_of: Web/API/Document/getElementsByClassName
 
 <p>Obtener todos los elementos de la clase 'prueba'</p>
 
-<pre class="brush: js">document.getElementsByClassName('prueba');</pre>
+<pre class="js">document.getElementsByClassName('prueba');</pre>
 
 <p>Obtener todos los elementos que tengan al mismo tiempo las clases 'rojo' y 'prueba'</p>
 
-<pre class="brush: js">document.getElementsByClassName('rojo prueba');</pre>
+<pre class="js">document.getElementsByClassName('rojo prueba');</pre>
 
 <p>Obtener todos los elementos que tengan la clase 'prueba' y que estén dentro de un elemento de ID 'principal'</p>
 
-<pre class="brush: js">document.getElementById('principal').getElementsByClassName('prueba');</pre>
+<pre class="js">document.getElementById('principal').getElementsByClassName('prueba');</pre>
 
 <p>También podemos usar los metodos de Array.prototype en cualquier {{ domxref("HTMLCollection") }} pasando el <em>HTMLCollection</em> como el valor <em>this</em> del método. Aquí buscaremos todos los elementos div de la clase 'test':</p>
 
-<pre class="brush: js">var testElements = document.getElementsByClassName('test');
+<pre class="js">var testElements = document.getElementsByClassName('test');
 var testDivs = Array.prototype.filter.call(testElements, function(testElement){
     return testElement.nodeName === 'DIV';
 });</pre>

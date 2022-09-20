@@ -26,14 +26,14 @@ translation_of: Web/API/Document/readyState
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="brush: js"><em>var string</em> = document.readyState;
+<pre class="js"><em>var string</em> = document.readyState;
 </pre>
 
 <h2 id="Ejemplos"><span>Ejemplos</span></h2>
 
 <h3 id="Diferentes_estados_del_readyState">Diferentes estados del readyState</h3>
 
-<pre class="brush: js"><span>switch (document.readyState) {
+<pre class="js"><span>switch (document.readyState) {
   case "loading":
     // The document is still loading.
     break;
@@ -52,7 +52,7 @@ translation_of: Web/API/Document/readyState
 
 <h3 id="readystatechange_como_alternativa_al_evento_DOMContentLoaded">readystatechange como alternativa al evento DOMContentLoaded</h3>
 
-<pre class="brush:js">// alternative to DOMContentLoaded event
+<pre class="js">// alternative to DOMContentLoaded event
 document.onreadystatechange = function () {
   if (document.readyState == "interactive") {
     initApplication();
@@ -61,7 +61,7 @@ document.onreadystatechange = function () {
 
 <h3 id="readystatechange_como_alternativa_al_evento_load">readystatechange como alternativa al evento load</h3>
 
-<pre class="brush: js">// alternative to load event
+<pre class="js">// alternative to load event
 document.onreadystatechange = function () {
   if (document.readyState == "complete") {
     initApplication();
@@ -70,7 +70,7 @@ document.onreadystatechange = function () {
 
 <h2 id="Especificación">Especificación</h2>
 
-<table class="spectable standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="col">Especificación</th>

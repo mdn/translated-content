@@ -18,14 +18,14 @@ translation_of: Web/API/Document/write
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="brush: js">document.write(texto);
+<pre class="js">document.write(texto);
 </pre>
 
 <p><code>texto </code>es una cadena de texto que contiene el texto a ser impreso en el documento.</p>
 
 <h3 id="Example">Example</h3>
 
-<pre class="brush: html">&lt;html&gt;
+<pre class="html">&lt;html&gt;
 
 &lt;head&gt;
   &lt;title&gt;Ejemplo de write&lt;/title&gt;
@@ -52,7 +52,7 @@ translation_of: Web/API/Document/write
 
 <p>Si la llamada a document.write() se ejecuta dentro de una etiqueta <code>&lt;script&gt;</code> incluído en el HTML, entonces la llamada a document.open() nunca ocurrirá. Por ejemplo:</p>
 
-<pre class="brush: html">&lt;script&gt;
+<pre class="html">&lt;script&gt;
   document.write("&lt;h1&gt;Título Principal&lt;/h1&gt;")
 &lt;/script&gt;
 </pre>

@@ -20,7 +20,7 @@ translation_of: Web/API/Document/getElementById
 
 <h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-<pre class="brush: js">elemento = document.getElementById(<em>id</em>);
+<pre class="js">elemento = document.getElementById(<em>id</em>);
 </pre>
 
 <h3 id="Parámetros">Parámetros</h3>
@@ -30,17 +30,17 @@ translation_of: Web/API/Document/getElementById
  <dd>Es una cadena sensible a mayúsculas referida al ID único del elemento buscado.</dd>
 </dl>
 
-<h3 id="Valor_Retornado"><strong>Valor Retornado</strong></h3>
+<h3 id="Valor_Retornado">Valor Retornado</h3>
 
 <dl>
  <dt><code><strong>element</strong></code></dt>
  <dd>Es una referencia a un objeto {{domxref("Element")}}, o <code>null</code> si un elemento con el ID especificado no se encuentra en el documento.</dd>
- <dt>
+</dl>
  <h2 id="Ejemplo">Ejemplo</h2>
 
  <h3 id="HTML">HTML</h3>
 
- <pre class="brush: html">&lt;html&gt;
+ <pre class="html">&lt;html&gt;
 &lt;head&gt;
    &lt;title&gt;Ejemplo getElementById&lt;/title&gt;
 &lt;/head&gt;
@@ -54,7 +54,7 @@ translation_of: Web/API/Document/getElementById
 
  <h3 id="JavaScript">JavaScript</h3>
 
- <pre class="brush: js">function changeColor(newColor) {
+ <pre class="js">function changeColor(newColor) {
    var elem = document.getElementById('para');
    elem.style.color = newColor;
 }
@@ -63,8 +63,6 @@ translation_of: Web/API/Document/getElementById
  <h3 id="Resultado">Resultado</h3>
 
  <p>{{EmbedLiveSample('Ejemplo', 250, 100)}}</p>
- </dt>
-</dl>
 
 <h2 id="Notes" name="Notes">Notas</h2>
 
@@ -74,7 +72,7 @@ translation_of: Web/API/Document/getElementById
 
 <h2 id="Ejemplo_2">Ejemplo</h2>
 
-<pre class="brush: html">&lt;!doctype html&gt;
+<pre class="html">&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
@@ -101,7 +99,7 @@ translation_of: Web/API/Document/getElementById
 <p><strong>Elementos que no se encuentren</strong> en el documento no serán buscados por <code>getElementById()</code>. Cuando se cree un elemento y se le asigne un ID, debe insertar el elemento dentro del árbol del documento con {{domxref("Node.insertBefore()")}} u otro método similar antes de que se pueda acceder a el con <code>getElementById()</code>:</p>
 
 <div id="&lt;strong>m&lt;/strong>ain">
-<pre class="brush: js">var element = document.createElement("div");
+<pre class="js">var element = document.createElement("div");
 element.id = 'testqq';
 var el = document.getElementById('testqq'); // el será null!
 </pre>

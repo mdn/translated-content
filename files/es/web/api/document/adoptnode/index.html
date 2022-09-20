@@ -15,7 +15,7 @@ translation_of: Web/API/Document/adoptNode
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox"><em>node</em> = <em>document</em>.adoptNode(<em>externalNode</em>);
+<pre class="js"><em>node</em> = <em>document</em>.adoptNode(<em>externalNode</em>);
 </pre>
 
 <dl>
@@ -27,7 +27,7 @@ translation_of: Web/API/Document/adoptNode
 
 <h2 id="Ejemplo">Ejemplo</h2>
 
-<pre class="brush: js">var iframe = document.querySelector('iframe');
+<pre class="js">var iframe = document.querySelector('iframe');
 var iframeImages = iframe.contentDocument.querySelectorAll('img');
 var newParent = document.getElementById('images');
 

@@ -19,7 +19,7 @@ translation_of: Web/API/Document/querySelector
 
 <h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-<pre class="brush: js">element = document.querySelector(selectores);
+<pre class="js">element = document.querySelector(selectores);
 </pre>
 
 <p>Donde:</p>
@@ -33,14 +33,14 @@ translation_of: Web/API/Document/querySelector
 
 <p>En este ejemplo, obtendremos el primer elemento del documento con la clase "miClase":</p>
 
-<pre class="brush: js">var el = document.querySelector(".miClase");
+<pre class="js">var el = document.querySelector(".miClase");
 </pre>
 
 <h2 id="Notes" name="Notes">Ejemplo más útil</h2>
 
 <p>Los <em>Selectores</em> pueden ser muy útiles como se demostrará en el siguiente ejemplo. Aquí, será retornado el primer elemento <code>&lt;input name="login" /&gt;</code> dentro de <code>&lt;div class="user-panel main"&gt;</code>.</p>
 
-<pre class="brush: js">var el = document.querySelector("div.user-panel.main input[name='login']");</pre>
+<pre class="js">var el = document.querySelector("div.user-panel.main input[name='login']");</pre>
 
 <h2 id="Notes" name="Notes">Notas</h2>
 
@@ -54,7 +54,7 @@ translation_of: Web/API/Document/querySelector
  <li>Para que coincidan ID's o selectores que no siguen la sintáxis CSS (usando inapropiadamente dos puntos o un espacio por ejemplo), se debe 'escapar' el carácter con una barra invertida (\). Como la barra invertida es un carácter de 'escape' en JavaScript, si estás indicando una cadena de caracteres literal, debes 'escaparla' dos veces (una para la cadena de caracteres JavaScript y otra para el querySelector): </li>
 </ul>
 
-<pre class="brush: html">&lt;div id="foo\bar"&gt;&lt;/div&gt;
+<pre class="html">&lt;div id="foo\bar"&gt;&lt;/div&gt;
 &lt;div id="foo:bar"&gt;&lt;/div&gt;
 
 &lt;script&gt;
@@ -72,59 +72,12 @@ translation_of: Web/API/Document/querySelector
 
 <h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidad en los navegadores</h2>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Plataforma</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Soporte Basico</td>
-   <td>1</td>
-   <td>3.5 (1.9.1)<br>
-    {{bug(416317)}}</td>
-   <td>8</td>
-   <td>10</td>
-   <td>3.2 (525.3)<br>
-    {{Webkitbug("16587")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Plataforma</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Soporte Basico</td>
-   <td>2.1</td>
-   <td>Si</td>
-   <td>9</td>
-   <td>10.0</td>
-   <td>3.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="Specification" name="Specification">Especificaciones</h2>
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/selectors-api/">Selectors API</a></li>
-</ul>
+{{Specifications}}
+
 
 <h2 id="See_also" name="See_also">Vea también</h2>
 

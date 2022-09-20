@@ -11,7 +11,7 @@ translation_of: Web/API/Document/exitFullscreen
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox"><em>exitPromise</em> = <em>document</em>.exitFullscreen();
+<pre class="js"><em>exitPromise</em> = <em>document</em>.exitFullscreen();
 </pre>
 
 <h3 id="Parámetros">Parámetros</h3>
@@ -26,7 +26,7 @@ translation_of: Web/API/Document/exitFullscreen
 
 <p>Este ejemplo hace que el documento actual entre y salga de una presentación a pantalla completa cada vez que se hace clic dentro del botón del mouse.</p>
 
-<pre class="brush: js">document.onclick = function (event) {
+<pre class="js">document.onclick = function (event) {
   if (document.fullscreenElement) {
     document.exitFullscreen()
   } else {
@@ -40,7 +40,7 @@ translation_of: Web/API/Document/exitFullscreen
 
 <h2 id="Especificaciones">Especificaciones</h2>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Especificación</th>
