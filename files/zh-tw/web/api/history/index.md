@@ -2,6 +2,7 @@
 title: History
 slug: Web/API/History
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`History`** 介面允許操控瀏覽器的 _session history_ 紀錄，為當前面頁所在分頁中訪問、或於當前面頁中透過頁面框架（frame）所載入的頁面。

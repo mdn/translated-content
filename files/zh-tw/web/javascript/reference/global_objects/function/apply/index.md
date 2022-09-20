@@ -2,6 +2,7 @@
 title: Function.prototype.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
 ---
+
 {{JSRef}}
 
 `apply()` 方法會呼叫一個以 this 的代表值和一個陣列形式的值組(或是一個 [array-like object](/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects))為參數的函式。

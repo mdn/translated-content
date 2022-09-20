@@ -2,6 +2,7 @@
 title: ArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 ---
+
 {{JSRef}}
 
 **`ArrayBuffer`** 物件是一種表示通用、固定大小的原始二進制資料緩衝。想要直接操作一個 `ArrayBuffer` 物件的內容是不可能的。若要讀寫該緩衝的內容則必須透過視圖，可以選擇建立一個 {{jsxref("DataView")}} 視圖物件或是一個限定其成員為某種型別的 {{jsxref("TypedArray")}} 視圖物件，它們皆能以特定的型別解讀、修改 `ArrayBuffer`。

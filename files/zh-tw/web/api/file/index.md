@@ -2,6 +2,7 @@
 title: File
 slug: Web/API/File
 ---
+
 {{APIRef}}
 
 **`File`** 介面提供了檔案的資訊並且允許網頁中的 JavaScript 存取檔案的內容。

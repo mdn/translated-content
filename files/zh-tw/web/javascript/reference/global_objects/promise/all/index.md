@@ -2,6 +2,7 @@
 title: Promise.all()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/all
 ---
+
 {{JSRef}}
 
 **`Promise.all()`** 方法回傳一個 {{jsxref("Promise")}} 物件，當引數 `iterable` 中所有的 promises 都被實現（resolved），或引數 iterable 不含任何 promise 時，被實現。或以第一個被拒絕的 promise 的原因被拒絕。

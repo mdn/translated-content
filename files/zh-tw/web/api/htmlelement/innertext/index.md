@@ -3,6 +3,7 @@ title: Node.innerText
 slug: Web/API/HTMLElement/innerText
 original_slug: Web/API/Node/innerText
 ---
+
 {{APIRef("DOM")}}
 
 ## 概述

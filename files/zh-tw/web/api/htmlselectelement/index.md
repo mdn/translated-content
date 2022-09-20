@@ -2,6 +2,7 @@
 title: HTMLSelectElement
 slug: Web/API/HTMLSelectElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLSelectElement`** 介面代表了 {{HTMLElement("select")}} HTML 元素。此介面也自 {{domxref("HTMLElement")}} 介面繼承了所有 HTML 元素的屬性及方法。

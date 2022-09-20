@@ -2,6 +2,7 @@
 title: border
 slug: Web/CSS/border
 ---
+
 {{CSSRef("CSS Borders")}}
 
 **`border`** [shorthand](/zh-TW/docs/Web/CSS/Shorthand_properties) [CSS](/zh-TW/docs/CSS) 屬性可用來設定元素的邊框。它可以設定以下的值 {{Cssxref("border-width")}}、{{Cssxref("border-style")}} 以及 {{Cssxref("border-color")}}。

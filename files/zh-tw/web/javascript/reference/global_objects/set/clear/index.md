@@ -2,6 +2,7 @@
 title: Set.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Set/clear
 ---
+
 {{JSRef}}
 
 **`clear()`** 方法會從一個 `Set` 物件中移除其所有元素。

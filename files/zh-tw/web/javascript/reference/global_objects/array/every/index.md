@@ -2,6 +2,7 @@
 title: Array.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
 ---
+
 {{JSRef}}
 
 **`every()`** 方法會測試陣列中的所有元素是否都通過了由給定之函式所實作的測試。

@@ -2,6 +2,7 @@
 title: Navigator.registerProtocolHandler()
 slug: Web/API/Navigator/registerProtocolHandler
 ---
+
 {{APIRef("HTML DOM")}}
 
 In progress. Allows web sites to register themselves as possible handlers for particular protocols.

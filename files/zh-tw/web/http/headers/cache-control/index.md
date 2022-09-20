@@ -2,6 +2,7 @@
 title: Cache-Control
 slug: Web/HTTP/Headers/Cache-Control
 ---
+
 {{HTTPSidebar}}
 
 **`Cache-Control`** 標頭中的*指令*用來控制 HTTP 請求、回應的[快取](/zh-TW/docs/Web/HTTP/Caching)行為。HTTP 請求跟回應可以擁有不同的快取控制指令。

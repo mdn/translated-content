@@ -3,6 +3,7 @@ title: 關於 MDN
 slug: MDN/Writing_guidelines
 original_slug: MDN/About
 ---
+
 {{MDNSidebar}}
 
 MDN Web Docs 是個針對網路技術和基於網路的軟體，持續發展的學習平台。它包含了：

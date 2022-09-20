@@ -2,6 +2,7 @@
 title: document.querySelector
 slug: Web/API/Document/querySelector
 ---
+
 {{ApiRef()}}
 
 ## 摘要

@@ -2,6 +2,7 @@
 title: Element.attributes
 slug: Web/API/Element/attributes
 ---
+
 {{ APIRef("DOM") }}
 
 The **`Element.attributes`** property returns a live collection of all attribute nodes registered to the specified node. It is a {{domxref("NamedNodeMap")}}, not an `Array`, so it has no {{jsxref("Array")}} methods and the {{domxref("Attr")}} nodes' indexes may differ among browsers. To be more specific, `attributes` is a key/value pair of strings that represents any information regarding that attribute.
