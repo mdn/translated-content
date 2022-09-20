@@ -32,11 +32,11 @@ Si X o Y son positivos, desplazarán la página hacia la derecha o hacia abajo r
 
 \- or -
 
-- opciones es un objeto con tres posibles propiedades:
+- `opciones` es un objeto con tres posibles propiedades:
 
-  - top, que es lo mismo que Y
-  - left, que es lo mismo que X
-  - behavior, que es un string cuyo valor puede ser smooth, instant, or auto. Por defecto el valor es auto
+  - `top`, que es lo mismo que `Y`
+  - `left`, que es lo mismo que `X`
+  - `behavior`, que es un string cuyo valor puede ser smooth, instant, or auto. Por defecto el valor es `auto`
 
 ## Ejemplo
 
