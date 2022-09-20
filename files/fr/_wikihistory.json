@@ -25822,102 +25822,6 @@
     "modified": "2020-10-15T21:31:01.138Z",
     "contributors": ["SphinxKnight"]
   },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly": {
-    "modified": "2020-10-15T21:51:49.502Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError": {
-    "modified": "2020-10-15T21:52:19.327Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Global": {
-    "modified": "2020-10-15T22:09:51.143Z",
-    "contributors": ["Voulto", "fscholz", "SphinxKnight", "sideshowbarker"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance": {
-    "modified": "2020-10-15T21:52:19.575Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports": {
-    "modified": "2020-10-15T21:52:20.506Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError": {
-    "modified": "2020-10-15T21:52:20.645Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory": {
-    "modified": "2020-10-15T21:52:20.618Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer": {
-    "modified": "2020-10-15T21:52:20.680Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/grow": {
-    "modified": "2020-10-15T21:52:20.328Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Module": {
-    "modified": "2020-10-15T21:51:45.857Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/customSections": {
-    "modified": "2020-10-15T21:52:20.338Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/exports": {
-    "modified": "2020-10-15T21:52:21.568Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/imports": {
-    "modified": "2020-10-15T21:52:21.616Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError": {
-    "modified": "2020-10-15T21:52:23.811Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Table": {
-    "modified": "2020-10-15T21:52:22.381Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get": {
-    "modified": "2020-10-15T21:52:23.456Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow": {
-    "modified": "2020-10-15T21:52:21.173Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/length": {
-    "modified": "2020-10-15T21:52:22.116Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set": {
-    "modified": "2020-10-15T21:52:22.914Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/compile": {
-    "modified": "2020-10-15T21:52:23.421Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming": {
-    "modified": "2020-10-15T21:58:30.533Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate": {
-    "modified": "2020-10-15T21:52:23.620Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming": {
-    "modified": "2020-10-15T21:58:30.104Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/validate": {
-    "modified": "2020-10-15T21:52:22.760Z",
-    "contributors": ["SphinxKnight"]
-  },
   "Web/JavaScript/Reference/Global_Objects/decodeURI": {
     "modified": "2020-10-15T21:11:18.823Z",
     "contributors": [
@@ -28093,6 +27997,102 @@
   "WebAssembly/Exported_functions": {
     "modified": "2019-06-18T16:22:08.093Z",
     "contributors": ["BenoitDel"]
+  },
+  "WebAssembly/JavaScript_interface": {
+    "modified": "2020-10-15T21:51:49.502Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "WebAssembly/JavaScript_interface/CompileError": {
+    "modified": "2020-10-15T21:52:19.327Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "WebAssembly/JavaScript_interface/Global": {
+    "modified": "2020-10-15T22:09:51.143Z",
+    "contributors": ["Voulto", "fscholz", "SphinxKnight", "sideshowbarker"]
+  },
+  "WebAssembly/JavaScript_interface/Instance": {
+    "modified": "2020-10-15T21:52:19.575Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "WebAssembly/JavaScript_interface/Instance/exports": {
+    "modified": "2020-10-15T21:52:20.506Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "WebAssembly/JavaScript_interface/LinkError": {
+    "modified": "2020-10-15T21:52:20.645Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "WebAssembly/JavaScript_interface/Memory": {
+    "modified": "2020-10-15T21:52:20.618Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "WebAssembly/JavaScript_interface/Memory/buffer": {
+    "modified": "2020-10-15T21:52:20.680Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "WebAssembly/JavaScript_interface/Memory/grow": {
+    "modified": "2020-10-15T21:52:20.328Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "WebAssembly/JavaScript_interface/Module": {
+    "modified": "2020-10-15T21:51:45.857Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "WebAssembly/JavaScript_interface/Module/customSections": {
+    "modified": "2020-10-15T21:52:20.338Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "WebAssembly/JavaScript_interface/Module/exports": {
+    "modified": "2020-10-15T21:52:21.568Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "WebAssembly/JavaScript_interface/Module/imports": {
+    "modified": "2020-10-15T21:52:21.616Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "WebAssembly/JavaScript_interface/RuntimeError": {
+    "modified": "2020-10-15T21:52:23.811Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "WebAssembly/JavaScript_interface/Table": {
+    "modified": "2020-10-15T21:52:22.381Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "WebAssembly/JavaScript_interface/Table/get": {
+    "modified": "2020-10-15T21:52:23.456Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "WebAssembly/JavaScript_interface/Table/grow": {
+    "modified": "2020-10-15T21:52:21.173Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "WebAssembly/JavaScript_interface/Table/length": {
+    "modified": "2020-10-15T21:52:22.116Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "WebAssembly/JavaScript_interface/Table/set": {
+    "modified": "2020-10-15T21:52:22.914Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "WebAssembly/JavaScript_interface/compile": {
+    "modified": "2020-10-15T21:52:23.421Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "WebAssembly/JavaScript_interface/compileStreaming": {
+    "modified": "2020-10-15T21:58:30.533Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "WebAssembly/JavaScript_interface/instantiate": {
+    "modified": "2020-10-15T21:52:23.620Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "WebAssembly/JavaScript_interface/instantiateStreaming": {
+    "modified": "2020-10-15T21:58:30.104Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "WebAssembly/JavaScript_interface/validate": {
+    "modified": "2020-10-15T21:52:22.760Z",
+    "contributors": ["SphinxKnight"]
   },
   "WebAssembly/Loading_and_running": {
     "modified": "2019-06-18T08:32:36.065Z",
