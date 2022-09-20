@@ -90,7 +90,11 @@ Os keyframes são definidos utilizando-se as regras{{cssxref("@keyframes") }}. N
 O segundo (e último) keyframe ocorre na etapa 100% do progresso (ou seja, o último keyframe da animação, através do pseudônimo to). A margem esquerda está com valor de 0% e a largura do elemento está com valor de 100%. Isto resulta na animação do elemento {{ HTMLElement("p") }}, que entra gradativamente na área de conteúdo até atingir uma margem esquerda de 0%.
 
 ```html
-
+<p>
+A Lagarta e Alice olharam-se por algum tempo em silêncio:
+finalmente, a Lagarta tirou o narguilé da boca e dirigiu-se a
+ela com uma voz lânguida e sonolenta.
+</p>
 ```
 
 {{EmbedLiveSample("Making_text_slide_across_the_browser_window","100%","250")}}
@@ -106,8 +110,9 @@ Vamos adicionar outro keyframe à animação do exemplo anterior. Digamos que n�
   width: 150%;
 }
 ```
+O código completo fica da seguinte forma:
 
-```css hidden
+```css
 p {
   animation-duration: 3s;
   animation-name: slidein;
@@ -126,13 +131,17 @@ p {
 }
 ```
 
-```html hidden
-
+```html
+<p>
+A Lagarta e Alice olharam-se por algum tempo em silêncio:
+finalmente, a Lagarta tirou o narguilé da boca e dirigiu-se a
+ela com uma voz lânguida e sonolenta.
+</p>
 ```
 
 Isso indica ao navegador que até atingir a etapa 75% do progresso da sequência da animação o elemento deve ter 25% no valor da sua margem esquerda e sua largura deve ser de 150%.
 
-{{EmbedLiveSample("Adicionando_outro_keyframe","100%","250")}}
+{{EmbedLiveSample("Adding_another_keyframe","100%","250")}}
 
 ### Faça repetir-se
 
@@ -145,8 +154,9 @@ p {
   animation-iteration-count: infinite;
 }
 ```
+Adicionando ao código existente:
 
-```css hidden
+```css
 @keyframes slidein {
   from {
     margin-left: 100%;
@@ -160,11 +170,15 @@ p {
 }
 ```
 
-```html hidden
-
+```html
+<p>
+A Lagarta e Alice olharam-se por algum tempo em silêncio:
+finalmente, a Lagarta tirou o narguilé da boca e dirigiu-se a
+ela com uma voz lânguida e sonolenta.
+</p>
 ```
 
-{{EmbedLiveSample("Faça_repetir-se","100%","250")}}
+{{EmbedLiveSample("Repeating_the_animation","100%","250")}}
 
 ### Fazendo a animação se mover para trás e para frente
 
@@ -179,7 +193,7 @@ p {
 }
 ```
 
-```css hidden
+```css
 @keyframes slidein {
   from {
     margin-left: 100%;
@@ -193,13 +207,15 @@ p {
 }
 ```
 
-```
-<p> A Lagarta e Alice olharam-se por algum tempo em silêncio:
+```html
+<p>
+A Lagarta e Alice olharam-se por algum tempo em silêncio:
 finalmente, a Lagarta tirou o narguilé da boca e dirigiu-se a
-ela com uma voz lânguida e sonolenta.</p>
+ela com uma voz lânguida e sonolenta.
+</p>
 ```
 
-{{EmbedLiveSample("Fazendo_a_animação_se_mover_para_trás_e_para_frente","100%","250")}}
+{{EmbedLiveSample("Making_the_animation_move_back_and_forth","100%","250")}}
 
 ### Usando eventos de animação
 
@@ -319,14 +335,16 @@ Perceba que os tempos são bem próximos, mas não exatamente iguais, àqueles e
 Apenas por questão de completude, aqui está o HTML que exibe o conteúdo da pagina, incluindo a lista na qual o script insere informação sobre os eventos recebidos:
 
 ```html
-
+<h1 id="watchme">Veja-me mover</h1>
+<p>
+  Este exemplo mostra como usar animações CSS para fazer o elemento <code>h1</code>
+  se mover pela página
+</p>
+<p>
+  Além disso, emitimos algum texto sempre que um evento de animação dispara, para que você possa vê-los em ação.
+</p>
+<ul id="output"></ul>
 ```
-
-# Veja-me mover
-
-Este exemplo mostra como usar animações CSS para fazer o elemento `H1 `se mover pela página.
-
-Além disso, emitimos algum texto sempre que um evento de animação dispara, para que você possa vê-los em ação.
 
 {{EmbedLiveSample('Using_animation_events', '600', '300')}}
 
