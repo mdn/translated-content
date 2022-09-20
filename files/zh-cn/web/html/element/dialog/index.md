@@ -37,7 +37,7 @@ slug: Web/HTML/Element/dialog
       <td>{{no_tag_omission}}</td>
     </tr>
     <tr>
-      <th scope="row">Permitted parents</th>
+      <th scope="row">允许的父元素</th>
       <td>
         任何接受<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
           >流式元素</a
