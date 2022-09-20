@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/input/button
 ---
+
 {{HTMLRef}}
 
 Les éléments {{HTMLElement("input")}} de type **`button`** sont affichés comme des boutons poussoirs qui peuvent être programmés afin de contrôler des fonctionnalités de la page via un gestionnaire d'évènement (la plupart du temps pour l'évènement {{event("click")}}).

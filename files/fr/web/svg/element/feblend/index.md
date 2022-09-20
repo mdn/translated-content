@@ -7,6 +7,7 @@ tags:
   - SVG Filter
 translation_of: Web/SVG/Element/feBlend
 ---
+
 {{SVGRef}}
 
 La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feBlend>`** permet de combiner deux objets en utilisant un mode de fusion définit, un peu de la même manière que les logiciels de retouche d'image permettent de fusionner deux calques. Le mode à utiliser est définit par l'attribut {{SVGAttr("mode")}}.

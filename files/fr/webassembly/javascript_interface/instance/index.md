@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
 browser-compat: javascript.builtins.WebAssembly.Instance
 ---
+
 {{JSRef}}
 
 Un objet **`WebAssembly.Instance`** représente un objet exécutable, avec un état, qui est une instance d'un [module WebAssembly](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module). Un objet `Instance` contient l'ensemble [des fonctions WebAssembly exportées](/fr/docs/WebAssembly/Exported_functions) qui permettent d'invoquer du code WebAssembly depuis du code JavaScript.

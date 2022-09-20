@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/title
 original_slug: Web/HTML/Attributs_universels/title
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`title`** contient un texte d'information relatif à l'élément auquel il est rattaché.
