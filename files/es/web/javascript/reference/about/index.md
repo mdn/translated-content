@@ -30,18 +30,23 @@ Las siguientes extensiones para expresiones regulares han sido añadidas:
 - La bandera m ha sido añadida para especificar que la expresión regular deberá cotejarse sobre múltiples líneas.
 
 **Declaraciones condicionales de funciones**
+
 Las funciones ahora pueden ser declaradas al interior de una cláusula if.
 
 **Expresiones funcionales**
+
 Las funciones ahora pueden ser declaradas al interior de una expresión.
 
 **Cláusulas Catch múltiples**
+
 Las cláusulas Catch múltiples en una sentencia try...catch son soportadas.
 
 **Constantes**
+
 Constantes nominadas como sólo de lectura son soportadas. Esta característica está disponible únicamente en la implementación C de JavaScript.
 
 **Obtenedores y Modificadores (Getters and Setters)**
+
 Los editores de JavaScript ahora pueden añadir obtenedores {{ mediawiki.external('getters') }} y modificadores {{ mediawiki.external('setters') }} a sus objetos. Esta característica está disponible únicamente en la implementación C de JavaScript.
 
 ### Qué debería saberse ya
