@@ -3794,6 +3794,10 @@
     "modified": "2019-03-23T22:05:31.350Z",
     "contributors": ["arquigames"]
   },
+  "Web/API/Document/pointerlockchange_event": {
+    "modified": "2019-03-18T21:16:43.654Z",
+    "contributors": ["ExE-Boss", "fscholz", "arquigames"]
+  },
   "Web/API/Document/querySelector": {
     "modified": "2019-03-23T22:58:51.923Z",
     "contributors": ["BrodaNoel", "Luis_Calvo", "dannysalazar90"]
@@ -4102,10 +4106,6 @@
   "Web/API/Element/outerHTML": {
     "modified": "2019-03-23T22:32:38.203Z",
     "contributors": ["Grijander81"]
-  },
-  "Web/API/Element/pointerlockchange_event": {
-    "modified": "2019-03-18T21:16:43.654Z",
-    "contributors": ["ExE-Boss", "fscholz", "arquigames"]
   },
   "Web/API/Element/prefix": {
     "modified": "2019-03-23T22:25:56.753Z",
@@ -13106,10 +13106,6 @@
     "modified": "2019-03-23T22:06:27.270Z",
     "contributors": ["OliverAcosta", "roberbnd"]
   },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly": {
-    "modified": "2020-10-15T22:00:20.969Z",
-    "contributors": ["jvalencia"]
-  },
   "Web/JavaScript/Reference/Global_Objects/decodeURI": {
     "modified": "2020-03-12T19:36:57.753Z",
     "contributors": ["teoli", "SphinxKnight", "ADP13", "Mgjbot", "Sheppy"]
@@ -14416,6 +14412,10 @@
   "WebAssembly/Concepts": {
     "modified": "2020-12-06T14:14:45.486Z",
     "contributors": ["Sergio_Gonzalez_Collado", "mastertrooper"]
+  },
+  "WebAssembly/JavaScript_interface": {
+    "modified": "2020-10-15T22:00:20.969Z",
+    "contributors": ["jvalencia"]
   },
   "WebAssembly/Loading_and_running": {
     "modified": "2020-09-15T19:19:35.117Z",
