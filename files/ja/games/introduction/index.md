@@ -111,7 +111,7 @@ slug: Games/Introduction
   - : ユーザーのディスプレイサイズを気にすることなく、スムーズに拡大縮小するベクター画像を作ることができます。
 - [型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
   - : JavaScript の型付き配列は JavaScript から生のバイナリーデータに対するアクセスを提供します。GL テクスチャ、ゲームデータまたはその他のものを、ネイティブな JavaScript 形式でなくても操作することができます。
-- [Web Audio API](/ja/docs/Web/API/Web_Audio_API "/ja/docs/Web_Audio_API")
+- [Web Audio API](/ja/docs/Web/API/Web_Audio_API)
   - : JavaScript コードからオーディオの再生、合成、操作の制御するこの API を使うと、素晴らしい音声効果を作成したり、リアルタイムに音楽の再生、操作をすることができます。
 - [WebGL](/ja/docs/Web/API/WebGL_API)
   - : ウェブコンテンツからハイパフォーマンスで、ハードウェア・アクセラレーションを行う 3D（または 2D）グラフィックスを作成することができます。これはウェブでサポートされている [OpenGL ES](https://www.khronos.org/opengles/) 2.0 の実装です。

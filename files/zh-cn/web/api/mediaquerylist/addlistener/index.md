@@ -4,7 +4,7 @@ slug: Web/API/MediaQueryList/addListener
 ---
 {{APIRef("CSSOM")}}
 
-{{DOMxRef("MediaQueryList")}}接口的**`addListener()`**方法向`MediaQueryListener`添加一个侦听器，该侦听器将运行自定义回调函数以响应媒体查询状态的更改。
+{{DOMxRef("MediaQueryList")}}接口的 **`addListener()`** 方法向`MediaQueryListener`添加一个侦听器，该侦听器将运行自定义回调函数以响应媒体查询状态的更改。
 
 从本质上讲，这是{{DOMxRef("EventTarget.addEventListener()")}}的别名，用于向后兼容。 较旧的浏览器应使用`addListener`而不是`addEventListener`，因为 MediaQueryList 仅从较新的浏览器中的 EventTarget 继承。
 
@@ -53,8 +53,8 @@ mql.addListener(screenTest);
 
 ## 参见
 
-- [Media queries](/en-US/docs/CSS/Media_queries)
-- [Using media queries from code](/en-US/docs/CSS/Using_media_queries_from_code)
+- [Media queries](/zh-CN/docs/CSS/Media_queries)
+- [Using media queries from code](/zh-CN/docs/CSS/Using_media_queries_from_code)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

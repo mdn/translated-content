@@ -1,15 +1,6 @@
 ---
 title: Client.frameType
 slug: Web/API/Client/frameType
-tags:
-  - API
-  - Client
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - frameType
-translation_of: Web/API/Client/frameType
 ---
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 

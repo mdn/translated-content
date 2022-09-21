@@ -3,6 +3,7 @@ title: OscillatorNode
 slug: Web/API/OscillatorNode
 translation_of: Web/API/OscillatorNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 L'interface `OscillatorNode` représente un signal périodique, une sinusoïde par exemple. C'est un module de traitement audio {{domxref("AudioNode")}} qui crée un signal sinusoïdal à une fréquence donnée — c'est-à-dire génère une tonalité constante.

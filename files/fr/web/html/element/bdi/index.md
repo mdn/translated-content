@@ -24,6 +24,7 @@ tags:
 translation_of: Web/HTML/Element/bdi
 browser-compat: html.elements.bdi
 ---
+
 {{HTMLRef}}
 
 L'élément **`<bdi>`** (ou élément d'isolation de texte bidirectionnel) isole une portée (_span_) de texte pouvant être formatée dans une direction différente de celle du texte qui l'entoure. Cela permet, par exemple, de présenter correctement une citation en arabe (écrit de droite à gauche) au sein d'un texte écrit en français (écrit de gauche à droite).

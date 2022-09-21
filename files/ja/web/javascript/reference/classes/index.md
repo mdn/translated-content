@@ -1,16 +1,6 @@
 ---
 title: クラス
 slug: Web/JavaScript/Reference/Classes
-tags:
-  - クラス
-  - コンストラクター
-  - ECMAScript 2015
-  - ガイド
-  - 継承
-  - 中級者
-  - JavaScript
-browser-compat: javascript.classes
-translation_of: Web/JavaScript/Reference/Classes
 ---
 {{JsSidebar("Classes")}}
 

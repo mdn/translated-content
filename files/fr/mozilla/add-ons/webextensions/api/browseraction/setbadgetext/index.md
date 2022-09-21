@@ -13,6 +13,7 @@ tags:
   - setBadgeText
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeText
 ---
+
 {{AddonSidebar()}}
 
 Définit le texte du badge pour l'action du navigateur. Le badge est affiché en haut de l'icône.

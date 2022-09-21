@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/Value_definition_syntax
 original_slug: Web/CSS/Syntaxe_de_définition_des_valeurs
 ---
+
 {{CSSRef}}
 
 **La syntaxe de définition des valeurs CSS** est une grammaire formelle qui définit les règles pour créer des règles CSS valides. En plus de ces règles, il peut y avoir des contraintes sémantiques (ex. un nombre doit être positif pour une propriété donnée).

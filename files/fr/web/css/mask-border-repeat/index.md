@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/mask-border-repeat
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété CSS **`mask-border-repeat`** indique la façon dont les régions du bord du [masque](/fr/docs/Web/CSS/mask-border) sont ajustées pour correspondre aux dimensions de la bordure de l'élément.

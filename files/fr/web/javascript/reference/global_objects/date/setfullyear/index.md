@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setFullYear
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setFullYear
 ---
+
 {{JSRef}}
 
 La méthode **`setFullYear()`** définit l'année complête pour une date, d'après l'heure locale.

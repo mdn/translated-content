@@ -14,6 +14,7 @@ tags:
 translation_of: Web/HTML/Element/dl
 browser-compat: html.elements.dl
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<dl>`** représente une liste de descriptions sous la forme d'une liste de paires associant des termes (fournis par des éléments [`<dt>`](/fr/docs/Web/HTML/Element/dt)) et leurs descriptions ou définitions (fournies par des éléments [`<dd>`](/fr/docs/Web/HTML/Element/dd)). On utilisera par exemple cet élément pour implémenter un glossaire.

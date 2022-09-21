@@ -33,7 +33,7 @@ Content-Language: de-DE, en-CA
 
 ### 声明文档的书写语言
 
-全局的 [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) 属性使用在 HTML 元素去表达全部的 [HTML](/zh-CN/docs/Web/HTML)文档或者部分的语言。
+全局的 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes/lang) 属性使用在 HTML 元素去表达全部的 [HTML](/zh-CN/docs/Web/HTML)文档或者部分的语言。
 
 ```html
 <html lang="de">

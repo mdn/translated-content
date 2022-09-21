@@ -1,12 +1,6 @@
 ---
 title: XForms
 slug: Glossary/XForms
-tags:
-  - CodingScripting
-  - 用語集
-  - 非推奨
-  - XForms
-translation_of: Glossary/XForms
 ---
 **XForms** はウェブフォームを構築し、フォームのデータを {{glossary("XML")}} 形式で処理するための慣例です。
 

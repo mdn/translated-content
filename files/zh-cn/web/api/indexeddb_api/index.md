@@ -77,20 +77,6 @@ IndexedDB 是一个事务型数据库系统，类似于基于 SQL 的 RDBMS。 �
   - : 表示更改数据库版本的请求。改变数据库版本的方法已经改变了（通过调用{{domxref("IDBFactory.open")}} 而非{{domxref("IDBDatabase.setVersion")}}），接口{{domxref("IDBOpenDBRequest")}} 现在拥有{{domxref("IDBVersionChangeRequest")}}。
 - {{domxref("IDBDatabaseException")}} {{Deprecated_Inline}}
   - : 表示执行数据库操作时可能遇到的异常情况。
-- {{domxref("IDBTransactionSync")}} {{Deprecated_Inline}}
-  - : 同步版本的 {{domxref("IDBTransaction")}}。
-- {{domxref("IDBObjectStoreSync")}} {{Deprecated_Inline}}
-  - : 同步版本的 {{domxref("IDBObjectStore")}}。
-- {{domxref("IDBIndexSync")}} {{Deprecated_Inline}}
-  - : 同步版本的 {{domxref("IDBIndex")}}。
-- {{domxref("IDBFactorySync")}} {{Deprecated_Inline}}
-  - : 同步版本的 {{domxref("IDBFactory")}}。
-- {{domxref("IDBEnvironmentSync")}} {{Deprecated_Inline}}
-  - : 同步版本的 {{domxref("IDBEnvironment")}}。
-- {{domxref("IDBDatabaseSync")}} {{Deprecated_Inline}}
-  - : 同步版本的 {{domxref("IDBDatabase")}}。
-- {{domxref("IDBCursorSync")}} {{Deprecated_Inline}}
-  - : 同步版本的 {{domxref("IDBCursor")}}。
 
 ## 示例
 

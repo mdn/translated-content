@@ -37,7 +37,7 @@ Since the file system is ephemeral any temporary storage or services should be l
 This post covers how to modify the LocalLibrary application from the tutorial for deployment on PWS and Cloud Foundry. In doing so, it covers the basics of deploying any node.js application to PWS with the following steps.
 
 - Configuring the package.json file to run with the engines available on PWS.
-- Adding and installing the[ 'cfenv' node module](https://github.com/cloudfoundry-community/node-cfenv) to make working with services easier.
+- Adding and installing the ['cfenv' node module](https://github.com/cloudfoundry-community/node-cfenv) to make working with services easier.
 - Using the cfenv module to connect to a MongoDB instance from mLab that was created and bound using the PWS marketplace.
 - Using the [cf CLI](https://github.com/cloudfoundry/cli) tool to create a new mongoDB service instance and bind it to the local library application.
 - How to set environment variables for Node using the cf CLI.
@@ -125,13 +125,13 @@ If you cannot find that exact line, look for the blocks of 'requires' and look f
 var cfenv = require('cfenv');
 ```
 
-1.  To install the package, go to your terminal and make sure you are in the directory where the `package.json` file for LocalLibrary is. From the command line, type:
+1. To install the package, go to your terminal and make sure you are in the directory where the `package.json` file for LocalLibrary is. From the command line, type:
 
     ```bash
     npm install cfenv
     ```
 
-2.  Now that you have loaded the module, this next line will instantiate an object that will contain the app and services information required for deployment. Add the following after the line that contains `app.use(helmet());`
+2. Now that you have loaded the module, this next line will instantiate an object that will contain the app and services information required for deployment. Add the following after the line that contains `app.use(helmet());`
 
     ```js
     // Set up CF environment variables
@@ -140,19 +140,19 @@ var cfenv = require('cfenv');
 
     When this line executes, all the Cloud Foundry application environment information will become available to the application in the `appEnv` object.
 
-3.  Now it is time to update the application to use the database configured by the platform. Find the line that sets the mongoDB connection variable. It will look something like this:
+3. Now it is time to update the application to use the database configured by the platform. Find the line that sets the mongoDB connection variable. It will look something like this:
 
     ```js
     var mongoDB = process.env.MONGODB_URI || dev_db_url;
     ```
 
-4.  You will now modify the line with the following code `appEnv.getServiceURL('node-express-tutorial-mongodb')` to get the connection string from an environment variable that is being managed by the `cfenv` module. If no service has been created and bound it will use your own database URL you created as part of the tutorial instead of the one from the environment. So replace the line above with the following:
+4. You will now modify the line with the following code `appEnv.getServiceURL('node-express-tutorial-mongodb')` to get the connection string from an environment variable that is being managed by the `cfenv` module. If no service has been created and bound it will use your own database URL you created as part of the tutorial instead of the one from the environment. So replace the line above with the following:
 
     ```js
     var mongoDB = appEnv.getServiceURL('node-express-tutorial-mongodb') || dev_db_url;
     ```
 
-5.  Now run the site locally (see [Testing the routes](/ja/docs/Learn/Server-side/Express_Nodejs/routes#Testing_the_routes) for the relevant commands) and check that the site still behaves as you expect. At this point your app is ready to use with Cloud Foundry and Pivotal Web Services.
+5. Now run the site locally (see [Testing the routes](/ja/docs/Learn/Server-side/Express_Nodejs/routes#Testing_the_routes) for the relevant commands) and check that the site still behaves as you expect. At this point your app is ready to use with Cloud Foundry and Pivotal Web Services.
 
 ## Get a Pivotal Web Services account
 
@@ -204,32 +204,32 @@ Note the `-m` flag we added is not required. We just included it so that we only
 
 You will recall from a preceding section that we need to [set NODE_ENV to 'production'](#NODE_ENV) in order to improve our performance and generate less-verbose error messages.
 
-1.  Do this by entering the following command:
+1. Do this by entering the following command:
 
     ```bash
     cf set-env some-unique-name NODE_ENV production
     ```
 
-2.  We should also use a separate database for production. Cloud Foundry can take advantage of a marketplace to create a new service and automatically bind it to your app. Bind means place the service database credentials in the environment variable space of the container running your application for you to access. Enter the following commands:
+2. We should also use a separate database for production. Cloud Foundry can take advantage of a marketplace to create a new service and automatically bind it to your app. Bind means place the service database credentials in the environment variable space of the container running your application for you to access. Enter the following commands:
 
     ```bash
     cf create-service mlab sandbox node-express-tutorial-mongodb
     cf bind-service some-unique-name node-express-tutorial-mongodb
     ```
 
-3.  You can inspect your configuration variables at any time using the `cf env some-unique-name` command — try this now:
+3. You can inspect your configuration variables at any time using the `cf env some-unique-name` command — try this now:
 
     ```bash
     cf env some-unique-name
     ```
 
-4.  In order for your applications to use the new credentials you will have to restage your application, meaning that it will restart and apply the new environment variables. This can be done using the following — enter this command now:
+4. In order for your applications to use the new credentials you will have to restage your application, meaning that it will restart and apply the new environment variables. This can be done using the following — enter this command now:
 
     ```bash
     cf restage some-unique-name
     ```
 
-5.  If you check the home page now it should show zero values for your object counts, as the changes above mean that we're now using a new (empty) database.
+5. If you check the home page now it should show zero values for your object counts, as the changes above mean that we're now using a new (empty) database.
 
 ## Debugging
 

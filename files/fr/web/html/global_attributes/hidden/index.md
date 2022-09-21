@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/hidden
 original_slug: Web/HTML/Attributs_universels/hidden
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`hidden`** est un attribut booléen qui indique s'il n'est pas encore ou s'il n'est plus pertinent d'afficher l'élément courant. Cet attribut peut, par exemple, être utilisé afin de masquer des éléments tant que l'utilisateur ne s'est pas connecté. Le navigateur n'affichera pas les éléments masqués via cet attribut.
@@ -25,15 +26,11 @@ Par exemple, on peut utiliser l'attribut ARIA `aria-describedby` pour faire réf
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires                                                                        |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "interaction.html#the-hidden-attribute", "hidden")}} | {{Spec2('HTML WHATWG')}} | Aucune modification depuis {{SpecName('HTML5.1')}}                         |
-| {{SpecName('HTML WHATWG', "rendering.html#hiddenCSS", "Hidden elements")}}     | {{Spec2('HTML WHATWG')}} | Définit le rendu par défaut suggéré en CSS lorsque l'attribut `hidden` est utilisé. |
-| {{SpecName('HTML5.1', "editing.html#the-hidden-attribute", "hidden")}}             | {{Spec2('HTML5.1')}}     | Dérivée de {{SpecName('HTML WHATWG')}}. La définition initiale.            |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.hidden")}}
+{{Compat}}
 
 ## Voir aussi
 

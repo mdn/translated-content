@@ -1,12 +1,6 @@
 ---
 title: URIError() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/URIError/URIError
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - URIError
-translation_of: Web/JavaScript/Reference/Global_Objects/URIError/URIError
 ---
 {{JSRef}}
 

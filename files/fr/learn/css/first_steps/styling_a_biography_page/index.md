@@ -9,6 +9,7 @@ tags:
 translation_of: Learn/CSS/First_steps/Using_your_new_knowledge
 original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
 Le temps est venu d'évaluer tout ce que vous avez appris dans les leçons précécentes : vous savez comment mettre en forme des documents texte simples à l'aide de CSS.

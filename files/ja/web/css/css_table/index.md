@@ -1,13 +1,6 @@
 ---
 title: CSS 表
 slug: Web/CSS/CSS_Table
-tags:
-  - CSS
-  - CSS 表
-  - ガイド
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/CSS_Table
 ---
 {{CSSRef}}
 

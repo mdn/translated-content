@@ -4,6 +4,7 @@ slug: Web/CSS/cursor
 translation_of: Web/CSS/cursor
 browser-compat: css.properties.cursor
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`cursor`** définit la forme du curseur (s'il y en a un) lorsque le pointeur est au-dessus de l'élément.

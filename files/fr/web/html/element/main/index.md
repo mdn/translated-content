@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/main
 ---
+
 {{HTMLRef}}
 
 L’élément HTML **`<main>`** représente le contenu majoritaire du {{HTMLElement("body")}} du document. Le contenu principal de la zone est constitué de contenu directement en relation, ou qui étend le sujet principal du document ou de la fonctionnalité principale d'une application.
@@ -162,15 +163,11 @@ Les fonctionnalités « mode lecture » d'un navigateur vérifient la présence 
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires                                                                                                                                                                                                                                                                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML5.1', 'grouping-content.html#the-main-element', '&lt;main&gt;')}}     | {{Spec2('HTML5.1')}}     | Pas de changement de {{SpecName('HTML5 W3C')}}                                                                                                                                                                                                                                                                                                                                     |
-| {{SpecName('HTML WHATWG', '#semantics.html#the-main-element', '&lt;main&gt;')}}         | {{Spec2('HTML WHATWG')}} | Retrait de la restriction sur l'interdiction de l'utilisation de l'élément `<main>` comme descendant d'un élément {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, ou {{HTMLElement("nav")}}. Retrait de la restriction interdisant d'utiliser plusieurs fois `<main>` dans un document. |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-main-element', '&lt;main&gt;')}} | {{Spec2('HTML5 W3C')}}     | Définition intiale.                                                                                                                                                                                                                                                                                                                                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.main")}}
+{{Compat}}
 
 ## Voir aussi
 

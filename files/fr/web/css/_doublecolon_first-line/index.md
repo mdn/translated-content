@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/::first-line
 ---
+
 {{CSSRef}}
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) **`::first-line`** applique la décoration à la première ligne d'un élément. La quantité de texte sur la première ligne dépend de nombreux facteurs, comme la largeur des éléments ou du document, mais aussi de la taille du texte. Comme tous les pseudo-éléments, les sélecteurs contenant `::first-line` ne ciblent pas un élément HTML réel.

@@ -196,7 +196,7 @@ slug: Web/MathML/Authoring
 该网页包含了一些 [`script`](/zh-CN/docs/Web/HTML/Element/script) 标签。我们可以使用以下命令，利用 [Node.js](https://nodejs.org/) 和 [TeXZilla](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla#usage-from-the-command-line) 完成转换：
 
 ```bash
-$ cat input.html | node TeXZilla.js streamfilter > output.html
+cat input.html | node TeXZilla.js streamfilter > output.html
 ```
 
 在执行完成上述命令后，将创建一个包含 HTML 输出的 `output.html` 文件。以美元分隔的公式将转换为 MathML：

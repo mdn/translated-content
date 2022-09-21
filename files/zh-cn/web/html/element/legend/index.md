@@ -11,7 +11,7 @@ slug: Web/HTML/Element/legend
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">内容分类</a></th>
+   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容分类</a></th>
    <td>无。</td>
   </tr>
   <tr>

@@ -1,12 +1,6 @@
 ---
 title: Speed index (スピードインデックス)
 slug: Glossary/Speed_index
-tags:
-  - Glossary
-  - Performance
-  - Reference
-  - Web Performance
-translation_of: Glossary/Speed_index
 l10n:
   sourceCommit: d2a9f2e26a8139d4bb270d7dc3cddd8b848719fe
 ---

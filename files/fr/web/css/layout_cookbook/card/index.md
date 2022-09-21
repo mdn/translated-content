@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/Layout_cookbook/Card
 original_slug: Web/CSS/Layout_cookbook/Carte
 ---
+
 {{CSSRef}}
 
 Dans ce guide, nous verrons comment créer des cartes (_cards_ en anglais), disposant éventuellement d'un pied de page, qui peuvent être organisée en listes.

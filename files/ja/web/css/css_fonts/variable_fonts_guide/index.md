@@ -1,14 +1,6 @@
 ---
 title: 可変フォントガイド
 slug: Web/CSS/CSS_Fonts/Variable_Fonts_Guide
-tags:
-  - CSS
-  - Fonts
-  - Guide
-  - Text
-  - variable fonts
-  - web fonts
-translation_of: Web/CSS/CSS_Fonts/Variable_Fonts_Guide
 ---
 {{CSSRef}}
 

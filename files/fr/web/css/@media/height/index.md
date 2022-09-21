@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/height
 ---
+
 {{CSSRef}}
 
 **`height`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) dont la valeur représente la hauteur de la zone d'affichage (_viewport_) (ou de la boîte de page pour les média paginés).

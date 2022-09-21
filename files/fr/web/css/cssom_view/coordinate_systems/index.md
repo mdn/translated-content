@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/CSSOM_View/Coordinate_systems
 original_slug: Web/CSS/CSSOM_View/Systèmes_de_coordonnées
 ---
+
 {{cssref}}
 
 Lorsqu'on définit l'emplacement d'un pixel dans un contexte graphique, on indique les coordonnées de ce point par rapport à un point fixe du contexte qu'on appelle l'origine. La position du pixel est donc indiquée comme le décalage de ce pixel par rapport à l'origine, sur les deux axes du plan.
@@ -101,7 +102,7 @@ inner.addEventListener("mouseleave", update, false);
 
 Le gestionnaire d'évènement `update()` appelle `setCoords()` pour chacun des systèmes de coordonnées et lui repasse en argument l'évènement qui s'est produit.
 
-Les trois dernières lignes correspondent à l'enregistrement du gestionnaire d'évènements sur la boîte intérieure grâce aux appels de {{domxref("EventTarget.addEventListener", "addEventListener()")}} pour chaque type d'évènement : {{event("mouseenter")}}, {{event("mousemove")}} et {{event("mouseleave")}}.
+Les trois dernières lignes correspondent à l'enregistrement du gestionnaire d'évènements sur la boîte intérieure grâce aux appels de {{domxref("EventTarget.addEventListener", "addEventListener()")}} pour chaque type d'évènement : [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event), [`mousemove`](/fr/docs/Web/API/Element/mousemove_event) et {{event("mouseleave")}}.
 
 ### HTML
 

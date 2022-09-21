@@ -2,7 +2,7 @@
 title: 使用 aria-label 属性
 slug: Web/Accessibility/ARIA/Attributes/aria-label
 ---
-aria-label 属性用来给当前元素加上的标签描述，接受字符串作为参数。是用不可视的方式给元素加 label（如果被描述元素存在真实的描述元素，可使用 [aria-labelledby](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) 属性作为来绑定描述元素和被描述元素来代替）。
+aria-label 属性用来给当前元素加上的标签描述，接受字符串作为参数。是用不可视的方式给元素加 label（如果被描述元素存在真实的描述元素，可使用 [aria-labelledby](/zh-CN/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) 属性作为来绑定描述元素和被描述元素来代替）。
 
 aria-label 属性可以用在任何典型的 HTML 元素中，并不需要配合特定的 ARIA role 才能使用。
 
@@ -34,7 +34,7 @@ string
 
 ### ARIA 相关技术
 
-- [Using the aria-labelledby attribute](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)
+- [Using the aria-labelledby attribute](/zh-CN/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)
 
 ### 兼容性
 

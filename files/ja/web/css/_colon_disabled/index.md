@@ -1,15 +1,6 @@
 ---
 title: ':disabled'
 slug: Web/CSS/:disabled
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.disabled
-translation_of: Web/CSS/:disabled
 ---
 {{CSSRef}}
 

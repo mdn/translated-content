@@ -61,7 +61,7 @@ slug: Web/SVG/Tutorial/Getting_Started
   - 理论上同样可以使用 `img` 元素，但是在低于 4.0 版本的 Firefox 中不起作用。
   - 最后 SVG 可以通过 JavaScript 动态创建并注入到 HTML DOM 中。 这样具有一个优点，可以对浏览器使用替代技术，在不能解析 SVG 的情况下，可以替换创建的内容。
 
-  阅读[this dedicated article](/en/SVG_In_HTML_Introduction) 以深入了解该话题。
+  阅读[this dedicated article](/zh-CN/SVG_In_HTML_Introduction) 以深入了解该话题。
 
 - SVG 如何处理大小和单位将在[下一页](/zh-CN/docs/Web/SVG/Tutorial/Positions)详解。
 

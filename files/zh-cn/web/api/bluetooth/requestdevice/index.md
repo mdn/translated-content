@@ -4,7 +4,7 @@ slug: Web/API/Bluetooth/requestDevice
 ---
 {{APIRef()}}{{SeeCompatTable}}
 
-{{domxref("Bluetooth")}}接口的**`Bluetooth.requestDevice()`**方法返回一个带有对应 options 的{{domxref("BluetoothDevice")}}对象的{{jsxref("Promise")}}对象。如果没有蓝牙设备选择界面，则此方法返回与条件匹配的第一个设备。
+{{domxref("Bluetooth")}}接口的 **`Bluetooth.requestDevice()`** 方法返回一个带有对应 options 的{{domxref("BluetoothDevice")}}对象的{{jsxref("Promise")}}对象。如果没有蓝牙设备选择界面，则此方法返回与条件匹配的第一个设备。
 
 ## 语法
 

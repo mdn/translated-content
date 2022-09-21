@@ -4,6 +4,7 @@ slug: Web/HTML/Global_attributes/enterkeyhint
 translation_of: Web/HTML/Global_attributes/enterkeyhint
 browser-compat: html.global_attributes.enterkeyhint
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 [L'attribut universel](/fr/docs/Web/HTML/Global_attributes) **`enterkeyhint`**

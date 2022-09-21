@@ -1,12 +1,6 @@
 ---
 title: MDN에 피드백을 보내주세요!
 slug: MDN/Community
-tags:
-  - MDN
-  - MDN 메타
-  - 가이드
-  - 문서
-translation_of: MDN/Contribute/Feedback
 original_slug: MDN/Contribute/Feedback
 ---
 <div>{{MDNSidebar}}</div>

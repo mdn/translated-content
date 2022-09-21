@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Classes/constructor
 ---
 {{jsSidebar("Classes")}}
 
-**`constructor`** 是一种用于创建和初始化[`class`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class)创建的对象的特殊方法。
+**`constructor`** 是一种用于创建和初始化[`class`](/zh-CN/docs/Web/JavaScript/Reference/Statements/class)创建的对象的特殊方法。
 
 {{EmbedInteractiveExample("pages/js/classes-constructor.html")}}
 
@@ -106,7 +106,7 @@ constructor(...args) {
 
 ## 参阅
 
-- [super()](/en-US/docs/Web/JavaScript/Reference/Operators/super)
-- [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
-- [`class` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/class)
-- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
+- [super()](/zh-CN/docs/Web/JavaScript/Reference/Operators/super)
+- [`class` expression](/zh-CN/docs/Web/JavaScript/Reference/Operators/class)
+- [`class` declaration](/zh-CN/docs/Web/JavaScript/Reference/Statements/class)
+- [Classes](/zh-CN/docs/Web/JavaScript/Reference/Classes)

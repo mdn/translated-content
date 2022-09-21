@@ -1,17 +1,6 @@
 ---
 title: padding-block-end
 slug: Web/CSS/padding-block-end
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - padding-block
-  - padding-block-end
-  - recipe:css-property
-browser-compat: css.properties.padding-block-end
-translation_of: Web/CSS/padding-block-end
 ---
 {{CSSRef}}
 

@@ -1,12 +1,6 @@
 ---
 title: クラスセレクター
 slug: Web/CSS/Class_selectors
-tags:
-  - CSS
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.class
-translation_of: Web/CSS/Class_selectors
 ---
 {{CSSRef}}
 

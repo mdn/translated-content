@@ -1,14 +1,6 @@
 ---
 title: CSSValue.cssValueType
 slug: Web/API/CSSValue/cssValueType
-tags:
-  - API
-  - CSSValue
-  - Property
-  - Read-only
-  - Reference
-  - cssValueType
-translation_of: Web/API/CSSValue/cssValueType
 ---
 {{APIRef("DOM")}}
 

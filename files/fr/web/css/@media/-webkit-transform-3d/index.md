@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/-webkit-transform-3d
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **`-webkit-transform-3d`** est une [caractéristique média](/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries#Cibler_des_caractéristiques_média) booléenne non-standard qui indique si les transformations CSS en 3D (cf. {{cssxref("transform")}}) préfixées sont prises en charge par le navigateur.

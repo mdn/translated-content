@@ -1,10 +1,6 @@
 ---
 title: Compile (コンパイル)
 slug: Glossary/Compile
-tags:
-  - CodingScripting
-  - Glossary
-translation_of: Glossary/Compile
 ---
 コンパイルとは、特定の{{Glossary("computer programming", "プログラミング言語")}}を用いて記述されたコンピュータープログラムを他の言語 (普通はコンピューターが実行できるバイナリ言語) を用いて記述された同じプログラムに形を変えることである。コンパイラーはこのタスクを実行するソフトウェアです。時々、このタスクは "アセンブル" や "ビルド" とも呼ばれて、典型的には単なるコンパイルの完了以上のことを示します。例えば、あるバイナリーフォーマットにパッケージするなど。
 

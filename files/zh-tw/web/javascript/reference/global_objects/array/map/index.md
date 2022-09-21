@@ -2,6 +2,7 @@
 title: Array.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
 ---
+
 {{JSRef}}
 
 **`map()`** 方法會建立一個新的陣列，其內容為原陣列的每一個元素經由回呼函式運算後所回傳的結果之集合。

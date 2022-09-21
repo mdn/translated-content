@@ -1,7 +1,6 @@
 ---
 title: AudioContext()
 slug: Web/API/AudioContext/AudioContext
-translation_of: Web/API/AudioContext/AudioContext
 ---
 {{APIRef("Web Audio API")}}{{SeeCompatTable}}
 

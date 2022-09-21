@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/clear
 ---
+
 {{CSSRef}}
 
 La propriété **`clear`** indique si un élément peut être situé à côté d'éléments [flottants](/fr/docs/Web/CSS/float) qui le précèdent ou s'il doit être déplacé vers le bas pour être en dessous de ces éléments. La propriété `clear` s'applique aux éléments flottants comme aux éléments non-flottants.

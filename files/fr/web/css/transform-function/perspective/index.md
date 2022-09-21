@@ -5,6 +5,7 @@ translation_of: Web/CSS/transform-function/perspective()
 original_slug: Web/CSS/transform-function/perspective()
 browser-compat: css.types.transform-function.perspective
 ---
+
 {{CSSRef}}
 
 La fonction **`perspective()`** définit la distance entre le plan d'équation z = 0 et l'œil de l'utilisateur afin de fournir une perspective aux éléments positionnés dans l'espace (3D). Chaque élément pour lequel z est positif apparaîtra plus grand et chaque élément pour lequel z est négatif apparaîtra plus petit. La « force » de cet effet est déterminée par la valeur de cette propriété. La valeur obtenue comme résultat de cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).

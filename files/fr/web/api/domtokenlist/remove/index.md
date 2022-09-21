@@ -3,6 +3,7 @@ title: DOMTokenList.remove()
 slug: Web/API/DOMTokenList/remove
 translation_of: Web/API/DOMTokenList/remove
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`remove()`** de l'interface {{domxref("DOMTokenList")}} supprime sur la liste la marque (_token)_ spécifiée.

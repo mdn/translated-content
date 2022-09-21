@@ -1,14 +1,6 @@
 ---
 title: HTMLLabelElement
 slug: Web/API/HTMLLabelElement
-tags:
-  - API
-  - HTML DOM
-  - HTMLLabelElement
-  - インターフェイス
-  - リファレンス
-browser-compat: api.HTMLLabelElement
-translation_of: Web/API/HTMLLabelElement
 ---
 {{ APIRef("HTML DOM") }}
 

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/finally
 original_slug: Web/JavaScript/Reference/Objets_globaux/Promise/finally
 ---
+
 {{JSRef}}
 
 La méthode **`finally()`** renvoie un objet `Promise` et accepte en argument une fonction de _callback_ qui est appelée lorsque la promesse a été résolue (qu'elle ait été tenue ou rejetée). Cela permet d'exécuter du code une fois que la promesse a été traitée, quel que soit le résultat. On évite ainsi de dupliquer du code entre les gestionnaires {{jsxref("Promise.then", "then()")}} et {{jsxref("Promise.catch", "catch()")}}.

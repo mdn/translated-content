@@ -1,12 +1,6 @@
 ---
 title: Math.expm1()
 slug: Web/JavaScript/Reference/Global_Objects/Math/expm1
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/expm1
 ---
 {{JSRef}}
 

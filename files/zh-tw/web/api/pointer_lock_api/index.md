@@ -2,6 +2,7 @@
 title: Pointer Lock API
 slug: Web/API/Pointer_Lock_API
 ---
+
 {{ SeeCompatTable() }}
 
 **Pointer lock** (之前稱為 Mouse lock) 提供「隨時間經過所產生的滑鼠位移資訊 (即 deltas)」的輸入方法，而不只是滑鼠游標的絕對位置而已。此函式可存取基本的滑鼠位移、將滑鼠事件的目標鎖定至單一元素、讓滑鼠單一方向的位移距離不再受限、將游標移除到視點之外。
@@ -14,7 +15,7 @@ slug: Web/API/Pointer_Lock_API
 
 ## 基本概念
 
-Pointer lock 與 [mouse capture](/en/DOM/element.setCapture) 相關。在拖曳滑鼠時，Mouse capture 可持續向目標元素傳遞事件，且只要放開滑鼠按鈕隨即跟著停止。Pointer lock 與 mouse capture 不同之處在於：
+Pointer lock 與 [mouse capture](/zh-TW/DOM/element.setCapture) 相關。在拖曳滑鼠時，Mouse capture 可持續向目標元素傳遞事件，且只要放開滑鼠按鈕隨即跟著停止。Pointer lock 與 mouse capture 不同之處在於：
 
 - Pointer lock 屬持久性。除非發生顯式 (Explicit) API 呼叫，或使用者做出特定的釋放手勢，否則 Pointer lock 將不會釋放滑鼠。
 - Pointer lock 不侷限於螢幕或瀏覽器的範圍。

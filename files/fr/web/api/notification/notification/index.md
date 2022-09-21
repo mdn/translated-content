@@ -11,6 +11,7 @@ tags:
 translation_of: Web/API/Notification/Notification
 browser-compat: api.Notification.Notification
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 Le constructeur **`Notification()`** crée une nouvelle instance d'objet [`Notification`](/fr/docs/Web/API/notification), qui représente une notification utilisateur.

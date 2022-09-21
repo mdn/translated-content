@@ -58,5 +58,5 @@ The compatibility table on this page is generated from structured data. If you'd
 
 ## 参见
 
-- [Web media technologies](/en-US/docs/Web/Media)
+- [Web media technologies](/zh-CN/docs/Web/Media)
 - 实现了此接口的 HTML 元素：{{HTMLElement("audio")}}。

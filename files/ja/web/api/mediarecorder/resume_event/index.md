@@ -1,17 +1,6 @@
 ---
 title: MediaRecorder.onresume
 slug: Web/API/MediaRecorder/resume_event
-tags:
-  - API
-  - Audio
-  - Media Capture
-  - Media Recorder API
-  - MediaRecorder
-  - Property
-  - Reference
-  - Video
-  - onresume
-translation_of: Web/API/MediaRecorder/onresume
 original_slug: Web/API/MediaRecorder/onresume
 ---
 {{APIRef("Media Recorder API")}}

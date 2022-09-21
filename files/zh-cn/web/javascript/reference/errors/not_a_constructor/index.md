@@ -72,13 +72,13 @@ var mycar = new Car("Eagle", "Talon TSi", 1993);
 
 当返回了一个 immediately-resolved 或者 immediately-rejected Promise 的时候，你根本不需要去创建、操作一个新的 Promise 对象。
 
-这是不合法的（[Promise constructor](/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise#Constructor) 被错误的调用了）且会抛出一个 错误 `TypeError: this is not a constructor` exception:
+这是不合法的（[Promise constructor](/zh-CN/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise#Constructor) 被错误的调用了）且会抛出一个 错误 `TypeError: this is not a constructor` exception:
 
 ```js example-bad
 return new Promise.resolve(true);
 ```
 
-使用 [Promise.resolve()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) 或者 [Promise.reject()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject) 静态方法来代替：
+使用 [Promise.resolve()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) 或者 [Promise.reject()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject) 静态方法来代替：
 
 ```js
 // 这是合法的，但是没必要这么长：
@@ -92,4 +92,4 @@ return Promise.reject(false);
 ## 相关链接
 
 - {{Glossary("constructor")}}
-- [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new)
+- [`new` operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)

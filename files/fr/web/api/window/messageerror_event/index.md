@@ -9,6 +9,7 @@ tags:
   - Window
 translation_of: Web/API/Window/messageerror_event
 ---
+
 {{APIRef}}
 
 L'événement `messageerror` est déclenché sur un objet {{domxref('Window')}} lorsqu'il reçoit un message qui ne peut pas être désérialisé.

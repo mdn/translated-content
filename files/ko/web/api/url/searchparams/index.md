@@ -18,7 +18,9 @@ translation_of: Web/API/URL/searchParams
 
 ## 구문
 
-    const urlSearchParams = url.searchParams
+```js
+const urlSearchParams = url.searchParams
+```
 
 ### 값
 

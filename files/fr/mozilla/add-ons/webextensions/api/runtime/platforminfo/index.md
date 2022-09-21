@@ -13,6 +13,7 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformInfo
 ---
+
 {{AddonSidebar()}}
 
 Un objet contenant des informations sur la plate-forme actuelle.

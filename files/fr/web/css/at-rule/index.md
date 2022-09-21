@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/At-rule
 original_slug: Web/CSS/Règles_@
 ---
+
 {{cssref}}
 
 Une **règle @** est une [expression CSS](/fr/Apprendre/CSS/Introduction_à_CSS/La_syntaxe#Les_instructions_CSS) commençant par le symbole '@' (U+0040 COMMERCIAL AT), suivi d'un identifiant et qui contient tout ce qui se trouve jusqu'au prochain point-virgule, ';' (U+003B SEMICOLON), ou jusqu'au prochain [bloc CSS](/fr/Apprendre/CSS/Introduction_à_CSS/La_syntaxe#Les_blocs_CSS) trouvé en premier.

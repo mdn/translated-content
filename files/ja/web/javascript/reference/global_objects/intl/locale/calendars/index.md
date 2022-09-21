@@ -1,18 +1,6 @@
 ---
 title: Intl.Locale.prototype.calendars
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendars
-tags:
-  - 国際化
-  - Intl
-  - JavaScript
-  - プロパティ
-  - Locale
-  - ローカライズ
-  - プロトタイプ
-  - リファレンス
-  - Calendars
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendars
-browser-compat: javascript.builtins.Intl.Locale.calendars
 ---
 {{JSRef}}
 

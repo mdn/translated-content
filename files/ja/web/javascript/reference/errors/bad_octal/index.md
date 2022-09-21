@@ -1,13 +1,6 @@
 ---
 title: 'Warning: 08/09 is not a legal ECMA-262 octal constant'
 slug: Web/JavaScript/Reference/Errors/Bad_octal
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
-  - Warning
-translation_of: Web/JavaScript/Reference/Errors/Bad_octal
 ---
 {{jsSidebar("Errors")}}
 

@@ -1,20 +1,6 @@
 ---
 title: shape-image-threshold
 slug: Web/CSS/shape-image-threshold
-tags:
-  - 境界
-  - CSS
-  - CSS プロパティ
-  - CSS シェイプ
-  - 浮動領域
-  - Opacity
-  - プロパティ
-  - Reference
-  - シェイプ
-  - recipe:css-property
-  - shape-image-threshold
-browser-compat: css.properties.shape-image-threshold
-translation_of: Web/CSS/shape-image-threshold
 ---
 {{CSSRef}}
 

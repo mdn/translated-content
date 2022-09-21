@@ -1,17 +1,6 @@
 ---
 title: WindowEventHandlers.onmessage
 slug: Web/API/Window/message_event
-tags:
-  - API
-  - Event Handler
-  - HTML DOM
-  - Property
-  - Reference
-  - Window
-  - WindowEventHandlers
-  - events
-  - onmessage
-translation_of: Web/API/WindowEventHandlers/onmessage
 original_slug: Web/API/WindowEventHandlers/onmessage
 ---
 {{APIRef("HTML DOM")}}{{ SeeCompatTable() }}

@@ -11,6 +11,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/video
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<video>`** intègre un contenu vidéo dans un document.
@@ -343,13 +344,11 @@ Les sous-titres ne doivent pas masquer le sujet principal de la vidéo. Ils peuv
 
 ## Spécifications
 
-| Spécification                                                                                                        | Retours                                                                              |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#the-video-element', '&lt;video&gt;')}} | [Issues GitHub pour WHATWG HTML (en anglais)](https://github.com/whatwg/html/issues) |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.video")}}
+{{Compat}}
 
 ## Voir aussi
 

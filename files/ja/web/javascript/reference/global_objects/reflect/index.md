@@ -1,14 +1,6 @@
 ---
 title: Reflect
 slug: Web/JavaScript/Reference/Global_Objects/Reflect
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - 名前空間
-  - 概要
-  - Reflect
-browser-compat: javascript.builtins.Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 ---
 {{JSRef}}
 

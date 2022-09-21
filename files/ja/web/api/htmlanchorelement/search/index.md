@@ -1,14 +1,6 @@
 ---
 title: HTMLAnchorElement.search
 slug: Web/API/HTMLAnchorElement/search
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAnchorElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAnchorElement.search
-translation_of: Web/API/HTMLAnchorElement/search
 original_slug: Web/API/HTMLHyperlinkElementUtils/search
 ---
 {{ApiRef("URL API")}}

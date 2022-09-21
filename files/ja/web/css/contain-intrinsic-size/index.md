@@ -1,7 +1,6 @@
 ---
 title: contain-intrinsic-size
 slug: Web/CSS/contain-intrinsic-size
-translation_of: Web/CSS/contain-intrinsic-size
 ---
 {{CSSRef}}
 

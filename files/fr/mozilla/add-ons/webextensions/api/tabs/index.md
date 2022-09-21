@@ -14,6 +14,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
 ---
+
 {{AddonSidebar}}
 
 Permet d'interagir avec le système d'onglets du navigateur.

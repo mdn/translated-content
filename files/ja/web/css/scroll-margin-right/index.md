@@ -1,16 +1,6 @@
 ---
 title: scroll-margin-right
 slug: Web/CSS/scroll-margin-right
-tags:
-  - CSS
-  - CSS プロパティ
-  - Reference
-  - Web
-  - recipe:css-property
-  - scroll-margin
-  - scroll-margin-right
-browser-compat: css.properties.scroll-margin-right
-translation_of: Web/CSS/scroll-margin-right
 ---
 {{CSSRef}}
 

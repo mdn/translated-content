@@ -11,7 +11,7 @@ MathML 的顶级元素是`<math>`。所有有效的 MathML 实例必须被包括
 除了以下提到的属性， `<math>` 元素接受所有 {{ MathMLElement("mstyle") }} 元素的属性。
 
 - class, id, style
-  - : 用于配合[样式表](/en-US/docs/CSS)使用。
+  - : 用于配合[样式表](/zh-CN/docs/CSS)使用。
 - dir
   - : 公式的整体方向。取值可以是 `ltr` (从左到右) 或者 `rtl` (从右到左).
 - href
@@ -30,7 +30,7 @@ MathML 的顶级元素是`<math>`。所有有效的 MathML 实例必须被包括
     如果没有指定该属性值，默认值采用 `inline`。
 
 - mod {{deprecated_inline}}
-  - : 因为[display 属性](/en-US/docs/MathML/Element/math#attr-display)的出现而废弃。
+  - : 因为[display 属性](/zh-CN/docs/MathML/Element/math#attr-display)的出现而废弃。
     可用取值为：`display` (效果和`display="block"`一样) 和 and `inline`.
 - overflow
   - : 指定当该数学公式超过了其运行的范围时应该如何表现。

@@ -1,11 +1,6 @@
 ---
 title: CSS Grid Layout によるよくあるレイアウトの実現
 slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
-tags:
-  - CSS
-  - CSS Grids
-  - Guide
-translation_of: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
 ---
 {{CSSRef}}
 

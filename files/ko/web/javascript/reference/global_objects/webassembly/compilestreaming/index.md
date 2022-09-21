@@ -9,7 +9,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStrea
 
 ## Syntax
 
-    Promise<WebAssembly.Module> WebAssembly.compileStreaming(source);
+```js
+Promise<WebAssembly.Module> WebAssembly.compileStreaming(source);
+```
 
 ### Parameters
 
@@ -18,12 +20,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStrea
 
 ### Return value
 
-`Promise`는 컴파일 된 모듈로 표현된 [`WebAssembly.Module`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module "The documentation about this has not yet been written; please consider contributing!") 객체로 반환됩니다.
+`Promise`는 컴파일 된 모듈로 표현된 [`WebAssembly.Module`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module) 객체로 반환됩니다.
 
 ### Exceptions
 
 - `bufferSource`가 [typed array](/ko/docs/Web/JavaScript/Typed_arrays)가 아니면 [`TypeError`](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypeError)가 발생합니다.
-- 컴파일에 실패하면 promise는 [`WebAssembly.CompileError`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError "The documentation about this has not yet been written; please consider contributing!")와 함께 reject가 반환됩니다.
+- 컴파일에 실패하면 promise는 [`WebAssembly.CompileError`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError)와 함께 reject가 반환됩니다.
 
 ## Examples
 

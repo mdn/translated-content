@@ -13,11 +13,11 @@ AudioBuffer 接口表示存在内存里的一段短小的音频资源，利用{{
 - {{domxref("AudioBuffer.sampleRate")}} {{readonlyInline}}
   - : 存储在缓存区的 PCM 数据的采样率：浮点数，单位为 sample/s。
 - {{domxref("AudioBuffer.length")}} {{readonlyInline}}
-  - : 返回存储在缓存区的 PCM 数据的采样帧数：整形。
+  - : 返回存储在缓存区的 PCM 数据的采样帧数：整型。
 - {{domxref("AudioBuffer.duration")}} {{readonlyInline}}
   - : 返回存储在缓存区的 PCM 数据的时长：双精度型（单位为秒）。
 - {{domxref("AudioBuffer.numberOfChannels")}} {{readonlyInline}}
-  - : 返回存储在缓存区的 PCM 数据的通道数：整形。
+  - : 返回存储在缓存区的 PCM 数据的通道数：整型。
 
 ## 方法
 

@@ -7,6 +7,7 @@ tags:
   - Type
 translation_of: Web/CSS/frequency
 ---
+
 {{CSSRef}}
 
 Le type de donnée CSS **`<frequency>`** permet de représenter des fréquences (par exemple la hauteur d'une voie). Ce type n'est actuellement utilisé pour aucune propriété CSS.

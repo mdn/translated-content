@@ -11,6 +11,7 @@ tags:
   - delete
 translation_of: Web/API/CacheStorage/delete
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 La fonction **`delete()`** de l'interface {{domxref("CacheStorage")}} trouve l'objet {{domxref("Cache")}} correspondant à un `cacheName`, et si trouvé, supprime l'objet {{domxref("Cache")}} et retourne une {{jsxref("Promise", "Promesse")}} qui renvoie `true`. Si aucun objet {{domxref("Cache")}} n'est trouvé, elle retourne `false`.

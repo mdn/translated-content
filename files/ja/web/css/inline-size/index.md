@@ -1,14 +1,6 @@
 ---
 title: inline-size
 slug: Web/CSS/inline-size
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.inline-size
-translation_of: Web/CSS/inline-size
 ---
 {{CSSRef}}
 

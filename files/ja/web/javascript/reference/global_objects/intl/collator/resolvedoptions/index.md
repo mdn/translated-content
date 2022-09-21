@@ -1,17 +1,6 @@
 ---
 title: Intl.Collator.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
-tags:
-  - Collator
-  - 国際化
-  - Intl
-  - JavaScript
-  - ローカライズ
-  - メソッド
-  - プロトタイプ
-  - リファレンス
-browser-compat: javascript.builtins.Intl.Collator.resolvedOptions
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
 ---
 {{JSRef}}
 

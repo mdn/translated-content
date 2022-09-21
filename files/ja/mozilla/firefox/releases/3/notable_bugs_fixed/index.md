@@ -1,9 +1,6 @@
 ---
 title: Firefox 3 で修正された重要なバグ
 slug: Mozilla/Firefox/Releases/3/Notable_bugs_fixed
-tags:
-  - Firefox 3
-translation_of: Mozilla/Firefox/Releases/3/Notable_bugs_fixed
 original_slug: Notable_bugs_fixed_in_Firefox_3
 ---
 {{FirefoxSidebar}}

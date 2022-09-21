@@ -1,15 +1,6 @@
 ---
 title: WritableStreamDefaultController.error()
 slug: Web/API/WritableStreamDefaultController/error
-tags:
-  - API
-  - Error
-  - Experimental
-  - Method
-  - Reference
-  - Streams
-  - WritableStreamDefaultController
-translation_of: Web/API/WritableStreamDefaultController/error
 ---
 {{SeeCompatTable}}{{APIRef("Streams")}}
 

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/flex-flow
 ---
+
 {{ CSSRef}}
 
 La propriété CSS **`flex-flow`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) pour les propriétés {{cssxref("flex-direction")}} et {{cssxref("flex-wrap")}}.

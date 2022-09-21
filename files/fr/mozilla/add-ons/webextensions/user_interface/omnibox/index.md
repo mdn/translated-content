@@ -6,6 +6,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Omnibox
 ---
+
 {{AddonSidebar()}}
 
 En utilisant l'API {{WebExtAPIRef("omnibox")}}, WebExtensions peut personnaliser les suggestions proposées dans la liste déroulante de la barre d'adresse du navigateur lorsque l'utilisateur entre un mot-clé.
@@ -31,7 +32,7 @@ browser.omnibox.setDefaultSuggestion({
 });
 ```
 
-Vous pouvez ensuite ajouter le code pour fournir le contenu personnalisé en écoutant  {{WebExtAPIRef("omnibox.onInputStarted")}}, qui est envoyé lorsque l'utilisateur a tapé le mot-clé et un espace, et  {{WebExtAPIRef("omnibox.onInputChanged")}}, qui est expédié chaque fois que l'utilisateur met à jour l'entrée de la barre d'adresse. Vous pouvez ensuite remplir les suggestions, dans ce cas, créer une recherche de https\://searchfox.org/mozilla-central utilisant le terme entré par l'utilisateur :
+Vous pouvez ensuite ajouter le code pour fournir le contenu personnalisé en écoutant  {{WebExtAPIRef("omnibox.onInputStarted")}}, qui est envoyé lorsque l'utilisateur a tapé le mot-clé et un espace, et  {{WebExtAPIRef("omnibox.onInputChanged")}}, qui est expédié chaque fois que l'utilisateur met à jour l'entrée de la barre d'adresse. Vous pouvez ensuite remplir les suggestions, dans ce cas, créer une recherche de <https://searchfox.org/mozilla-central> utilisant le terme entré par l'utilisateur :
 
 ```js
 browser.omnibox.onInputChanged.addListener((text, addSuggestions) => {

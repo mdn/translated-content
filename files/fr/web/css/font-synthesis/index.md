@@ -10,6 +10,7 @@ tags:
   - 'recipe: css-property'
 translation_of: Web/CSS/font-synthesis
 ---
+
 {{CSSRef}}
 
 La propriété **`font-synthesis`** indique au navigateur s'il peut synthétiser la graisse ou la mise en italique des polices utilisées si ces variantes sont absentes.

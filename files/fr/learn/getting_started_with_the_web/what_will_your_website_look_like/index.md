@@ -11,6 +11,7 @@ tags:
 translation_of: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 original_slug: Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Installation_outils_de_base","Apprendre/Commencer_avec_le_web/Gérer_les_fichiers","Apprendre/Commencer_avec_le_web")}}
 

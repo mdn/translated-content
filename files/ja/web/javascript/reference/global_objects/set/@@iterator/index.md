@@ -1,16 +1,6 @@
 ---
 title: Set.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
-tags:
-  - ECMAScript 2015
-  - 反復子
-  - JavaScript
-  - メソッド
-  - プロトタイプ
-  - リファレンス
-  - set
-browser-compat: javascript.builtins.Set.@@iterator
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
 ---
 {{JSRef}}
 

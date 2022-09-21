@@ -1,15 +1,6 @@
 ---
 title: HTMLDialogElement
 slug: Web/API/HTMLDialogElement
-tags:
-  - API
-  - Experimental
-  - HTML DOM
-  - HTMLDialogElement
-  - Interface
-  - Reference
-  - インターフェイス
-translation_of: Web/API/HTMLDialogElement
 ---
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
@@ -102,7 +93,7 @@ _親である {{domxref("HTMLElement")}} からメソッドを継承していま
   </script>
 ```
 
-> **Note:** **メモ**: この例は GitHub 上の [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html) ([ライブで表示](https://mdn.github.io/dom-examples/htmldialogelement-basic/)) として見つけることができます。
+> **Note:**  この例は GitHub 上の [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html) ([ライブで表示](https://mdn.github.io/dom-examples/htmldialogelement-basic/)) として見つけることができます。
 
 ## 仕様書
 

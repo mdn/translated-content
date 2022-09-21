@@ -1,9 +1,6 @@
 ---
 title: 設定ページを実装する
 slug: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
 ---
 {{AddonSidebar}}
 

@@ -12,6 +12,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting
 ---
+
 {{AddonSidebar()}}
 
 Un `BrowserSetting` est un objet représentant un paramètre de navigateur.

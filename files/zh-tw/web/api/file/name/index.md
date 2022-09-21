@@ -3,6 +3,7 @@ title: File.fileName
 slug: Web/API/File/name
 original_slug: Web/API/File/fileName
 ---
+
 {{APIRef("File API")}}{{non-standard_header}}
 
 {{deprecated_header(7.0)}}

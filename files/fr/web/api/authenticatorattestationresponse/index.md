@@ -10,6 +10,7 @@ tags:
   - WebAuthn
 translation_of: Web/API/AuthenticatorAttestationResponse
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 L'interface **`AuthenticatorAttestationResponse`**, rattachée à l'[API Web Authentication](/fr/docs/Web/API/Web_Authentication_API), est renvoyée par un appel à {{domxref('CredentialsContainer.create()')}} lorsqu'un objet {{domxref('PublicKeyCredential')}} est passé à la méthode. Elle fournit une racine cryptographique de confiance pour la nouvelle paire de clés qui a été générée.

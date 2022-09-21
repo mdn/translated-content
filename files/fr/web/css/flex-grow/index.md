@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/flex-grow
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`flex-grow`** définit le facteur d'expansion d'un élément flexible selon sa dimension principale. Elle indique la quantité d'espace restant que l'élément devrait consommer dans un conteneur flexible relativement à la taille des autres éléments du même conteneur.

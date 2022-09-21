@@ -2,6 +2,7 @@
 title: Payment Request API
 slug: Web/API/Payment_Request_API
 ---
+
 {{DefaultAPISidebar("Payment Request API")}}{{securecontext_header}}
 
 Payment Request API 提供商家與用戶雙方一致的用戶體驗。它並不是嶄新的支付方式、而是讓用戶選擇偏好的支付方式、並把該方式提供給商家。

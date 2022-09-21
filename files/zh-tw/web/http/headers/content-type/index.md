@@ -2,6 +2,7 @@
 title: Content-Type
 slug: Web/HTTP/Headers/Content-Type
 ---
+
 {{HTTPSidebar}}
 
 **`Content-Type`** 用來表示資源的 {{Glossary("MIME type","media type")}} 。
