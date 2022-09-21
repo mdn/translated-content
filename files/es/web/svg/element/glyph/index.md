@@ -20,7 +20,7 @@ Un glifo define a un glifo en particular en una fuente SVG.
 
 | Categories         | Elemento de contenido de texto.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Permitted content  | Cualquier número de los siguientes elementos, en cualquier orden: [elementos de animación](/en/SVG/Element#Animation "en/SVG/Attribute#Animation") » [elementos descriptivos](/en/SVG/Element#Descriptive "en/SVG/Attribute#Descriptive") » [elementos de forma](/en/SVG/Element#Shape "en/SVG/Attribute#Shape") » [elementos estructurales](/en/SVG/Element#Structural "en/SVG/Attribute#Structural") » [elementos de gradiente](/en/SVG/Element#Gradient "en/SVG/Attribute#Gradient") » {{ SVGElement("a") }}, {{ SVGElement("altGlyphDef") }}, {{ SVGElement("clipPath") }}, {{ SVGElement("color-profile") }}, {{ SVGElement("cursor") }}, {{ SVGElement("filter") }}, {{ SVGElement("font") }}, {{ SVGElement("font-face") }}, {{ SVGElement("foreignObject") }}, {{ SVGElement("image") }}, {{ SVGElement("marker") }}, {{ SVGElement("mask") }}, {{ SVGElement("pattern") }}, {{ SVGElement("script") }}, {{ SVGElement("style") }}, {{ SVGElement("switch") }}, {{ SVGElement("text") }}, {{ SVGElement("view") }} |
+| Permitted content  | Cualquier número de los siguientes elementos, en cualquier orden: [elementos de animación](/en/SVG/Element#Animation) » [elementos descriptivos](/en/SVG/Element#Descriptive) » [elementos de forma](/en/SVG/Element#Shape) » [elementos estructurales](/en/SVG/Element#Structural) » [elementos de gradiente](/en/SVG/Element#Gradient) » {{ SVGElement("a") }}, {{ SVGElement("altGlyphDef") }}, {{ SVGElement("clipPath") }}, {{ SVGElement("color-profile") }}, {{ SVGElement("cursor") }}, {{ SVGElement("filter") }}, {{ SVGElement("font") }}, {{ SVGElement("font-face") }}, {{ SVGElement("foreignObject") }}, {{ SVGElement("image") }}, {{ SVGElement("marker") }}, {{ SVGElement("mask") }}, {{ SVGElement("pattern") }}, {{ SVGElement("script") }}, {{ SVGElement("style") }}, {{ SVGElement("switch") }}, {{ SVGElement("text") }}, {{ SVGElement("view") }} |
 | Normative document | [SVG 1.1 (Segunda edición)](http://www.w3.org/TR/SVG/fonts.html#GlyphElement)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
 ## Ejemplo
@@ -59,8 +59,8 @@ Un glifo define a un glifo en particular en una fuente SVG.
 
 ### Atributos globales
 
-- [Atributos centrales](/en/SVG/Attribute#Core "en/SVG/Attribute#Core")»
-- [Atributos de presentación](/en/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
+- [Atributos centrales](/en/SVG/Attribute#Core)»
+- [Atributos de presentación](/en/SVG/Attribute#Presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -79,10 +79,10 @@ Un glifo define a un glifo en particular en una fuente SVG.
 
 ## Interfaz DOM
 
-Este elemento implementa la interfaz [`SVGGlyphElement`](/en/DOM/SVGGlyphElement "en/DOM/SVGGlyphElement").
+Este elemento implementa la interfaz [`SVGGlyphElement`](/en/DOM/SVGGlyphElement).
 
 ## Relacionado
 
 - {{ SVGElement("font") }}
 - {{ SVGElement("missing-glyph") }}
-- [Tutorial SVG: Fuentes SVG](/en/SVG/Tutorial/SVG_fonts "en/SVG/Tutorial/SVG_Fonts")
+- [Tutorial SVG: Fuentes SVG](/en/SVG/Tutorial/SVG_fonts)

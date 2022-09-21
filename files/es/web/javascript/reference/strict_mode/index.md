@@ -15,15 +15,15 @@ El modo estricto de [ECMAScript 5](http://www.ecma-international.org/publication
 
 El modo estricto tiene varios cambios en la semántica normal de JavaScript:
 
-1.  Elimina algunos errores silenciosos de JavaScript cambiándolos para que lancen errores.
-2.  Corrige errores que hacen difícil para los motores de JavaScript realizar optimizaciones: a veces, el código en modo estricto puede correr más rápido que un código idéntico pero no estricto.
-3.  Prohíbe cierta sintaxis que probablemente sea definida en futuras versiones de ECMAScript.
+1. Elimina algunos errores silenciosos de JavaScript cambiándolos para que lancen errores.
+2. Corrige errores que hacen difícil para los motores de JavaScript realizar optimizaciones: a veces, el código en modo estricto puede correr más rápido que un código idéntico pero no estricto.
+3. Prohíbe cierta sintaxis que probablemente sea definida en futuras versiones de ECMAScript.
 
 Ve [transición a modo estricto](/es/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode), si deseas cambiar tu código para trabajar en la variante estricta de JavaScript.
 
 ## Invocar el modo estricto
 
-El modo estricto se aplica a un _script completo_ o a _funciones individuales_. No se aplica a bloques entre corchetes `{}`; intentar aplicarlo en tales contextos no hace nada. Código `eval`, código `Function`, atributos de controladores de eventos, cadenas pasadas a [`setTimeout`](/es/docs/Web/API/WindowTimers.setTimeout "es/DOM/window.setTimeout"), y similares son scripts enteros, de modo que invocar modo estricto en tales contextos funciona como se espera.
+El modo estricto se aplica a un _script completo_ o a _funciones individuales_. No se aplica a bloques entre corchetes `{}`; intentar aplicarlo en tales contextos no hace nada. Código `eval`, código `Function`, atributos de controladores de eventos, cadenas pasadas a [`setTimeout`](/es/docs/Web/API/WindowTimers.setTimeout), y similares son scripts enteros, de modo que invocar modo estricto en tales contextos funciona como se espera.
 
 ### Modo estricto para scripts
 
@@ -269,7 +269,7 @@ var f = function() { return arguments.callee; };
 f(); // lanza un TypeError
 ```
 
-###
+### "Securing" JavaScript
 
 El modo estricto hace más fácil el escribir código "seguro" en JavaScript. Algunos sitios web ofrecen ahora medios para que los usuarios codifiquen en JavaScript para que el código corra en el sitio en _beneficio de otros usuarios_. JavaScript en los navegadores puede acceder a la información privada del usuario, por lo que dicho JavaScript se debe transformar parcialmente antes de ejecutarse, para censurar el acceso a funciones prohibidas. La flexibilidad de JavaScript hace que efectivamente sea imposible hacer esto sin muchas comprobaciones en tiempo de ejecución. La flexibilidad de JavaScript hace casi imposible hacer esto sin hacer revisiones en tiempo de ejecución. Unos pocos ajustes del modo estricto, además de requerir que el JavaScript enviado por el usuario sea código de modo estricto y que se invoque de cierta manera, reducen sustancialmente la necesidad de esas comprobaciones en tiempo de ejecución.
 
@@ -359,7 +359,7 @@ Esta prohibición no es el modo estricto propiamente dicho porque tales declarac
 
 ## Modo estricto en navegadores
 
-La mayoría de los navegadores ya implementan el modo estricto. Sin embargo, no dependas ciegamente de él, ya que todavía hay numerosas [Versiones del navegador utilizadas en la naturaleza que solo tienen soporte parcial para el modo estricto](http://caniuse.com/use-strict "caniuse.com disponibilidad de modo estricto") o no lo admiten en absoluto (por ejemplo, Internet Explorer por debajo de la versión 10). _El modo estricto cambia la semántica_. Depender de esos cambios provocará equivocaciones y errores en los navegadores que no implementan el modo estricto. Ten cuidado al usar el modo estricto y respalda la dependencia del modo estricto con pruebas de funciones que comprueben si se implementan las partes relevantes del modo estricto. Finalmente, asegúrate de _probar tu código en navegadores que admitan y no admitan el modo estricto_. Si realizas tus pruebas solo en navegadores que no admiten el modo estricto, es muy probable que tengas problemas en los navegadores que sí lo hacen, y viceversa.
+La mayoría de los navegadores ya implementan el modo estricto. Sin embargo, no dependas ciegamente de él, ya que todavía hay numerosas [Versiones del navegador utilizadas en la naturaleza que solo tienen soporte parcial para el modo estricto](http://caniuse.com/use-strict) o no lo admiten en absoluto (por ejemplo, Internet Explorer por debajo de la versión 10). _El modo estricto cambia la semántica_. Depender de esos cambios provocará equivocaciones y errores en los navegadores que no implementan el modo estricto. Ten cuidado al usar el modo estricto y respalda la dependencia del modo estricto con pruebas de funciones que comprueben si se implementan las partes relevantes del modo estricto. Finalmente, asegúrate de _probar tu código en navegadores que admitan y no admitan el modo estricto_. Si realizas tus pruebas solo en navegadores que no admiten el modo estricto, es muy probable que tengas problemas en los navegadores que sí lo hacen, y viceversa.
 
 ## Especificaciones
 

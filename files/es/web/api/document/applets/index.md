@@ -24,7 +24,6 @@ nodeList = document.applets
 my_java_app = document.applets[1];
 ```
 
-
 ## Especificaciones
 
 {{Specifications}}
@@ -32,4 +31,3 @@ my_java_app = document.applets[1];
 ## Compatibilidad del Navegador
 
 {{Compat}}
-
