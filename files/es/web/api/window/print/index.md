@@ -9,6 +9,7 @@ tags:
   - Referencia
   - Window
   - metodo
+browser-compat: api.Window.print
 translation_of: Web/API/Window/print
 ---
 {{ ApiRef() }}
@@ -23,22 +24,28 @@ Abre el _Diálogo de Impresión_ para imprimir el documento actual.
 
 ## Sintaxis
 
-```js
-window.print()
+```js-nolint
+print()
 ```
 
-## Notas
+### Parameters
 
-Empezando con Chrome {{CompatChrome(46.0)}} este método esta bloqueado dentro de un {{htmlelement("iframe")}} a menos que el atributo del contenedor tenga el valor `allow-modal`.
+None.
 
-## Especificación
+### Return value
 
-| Especificación                                                                       | Estatus                                      | Comentario          |
-| ------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------- |
-| {{SpecName('HTML5 Web application', '#dom-print', 'print()')}} | {{Spec2('HTML5 Web application')}} | Initial definition. |
+None ({{jsxref("undefined")}}).
 
-## Ver también
+## Specifications
 
-- [Impresión](/en/Printing "en/Printing")
-- {{ domxref("window.onbeforeprint") }}
-- {{ domxref("window.onafterprint") }}
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- [Printing](/en-US/docs/Web/Guide/Printing)
+- {{ domxref("window.beforeprint_event", "beforeprint") }} event
+- {{ domxref("window.afterprint_event", "afterprint") }} event

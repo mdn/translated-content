@@ -29,18 +29,6 @@ translation_of: Web/API/Window/alert
 <pre class="brush: js">alert();
 </pre>
 
-<h2 id="Notes">Примечания</h2>
-
-<p>Этот диалог следует использовать для сообщений, которые не требуют никакого ответа от пользователя, кроме подтверждения самого сообщения.</p>
-
-<p>Окна сообщений - модальные, они препятствуют получению пользователем доступа к другим частям страницы до тех пор, пока окно не будет закрыто. По этой причине, вам не следует злоупотреблять этой функцией.</p>
-
-<p><span class="comment">The following text is shared between this article, DOM:window.prompt and DOM:window.confirm</span> Пользователи<a href="/en-US/Chrome" title="Chrome"> Mozilla Chrome</a> (например, расширения для Firefox) должны использовать метод <code>nsIPromptService</code>.</p>
-
-<p>Начиная с Chrome {{CompatChrome(46.0)}} этот метод заблокирован в {{htmlelement("iframe")}} пока атрибут sandbox не установлен в значение <code>allow-modal</code>.</p>
-
-<p>{{gecko_minversion_inline("23.0")}} Аргумент является опциональным и необязательным согласно спецификации.</p>
-
 <h2 id="Specification">Спецификации</h2>
 
 <table class="standard-table">

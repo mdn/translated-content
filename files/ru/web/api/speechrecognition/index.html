@@ -103,116 +103,12 @@ recognition.onresult = function(event) {
   bg.style.backgroundColor = color;
 }</pre>
 
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Speech API', '#speechreco-section', 'SpeechRecognition')}}</td>
-   <td>{{Spec2('Web Speech API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
-
-<div>Таблица совместимостей</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка</td>
-   <td>CompatChrome(33)}}property_prefix("webkit")<sup>[1]</sup></td>
-   <td>Не совместима<sup>[2]</sup></td>
-   <td>Не совместима</td>
-   <td>Не совместима</td>
-   <td>Не совместима</td>
-  </tr>
-  <tr>
-   <td><code>постоянная</code></td>
-   <td>CompatChrome(33) <sup>[1]</sup></td>
-   <td>Не совместима</td>
-   <td>Не совместима</td>
-   <td>Не совместима</td>
-   <td>Не совместима</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>Неизвестно</td>
-   <td>Неизвестная совместимая версия [1]</td>
-   <td>Совместим с GeckoMobile(44)</td>
-   <td>2.5</td>
-   <td>Не совместима</td>
-   <td>Не совместима</td>
-   <td>Не совместима</td>
-  </tr>
-  <tr>
-   <td><code>continuous</code></td>
-   <td>Неизвестно</td>
-   <td>Неизвестная совместимая версия[1]</td>
-   <td>Совместимость неизвестна</td>
-   <td>Не совместима</td>
-   <td>Не совместима</td>
-   <td>Не совместима</td>
-   <td>Не совместима</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<ul>
- <li>[1] Интерфейсы распознавания речи в настоящее время префиксные в Chrome, поэтому вам нужно указать имена интерфейсов, например, префикс. WebkitSpeechRecognition; вы также должны будете обслуживать свой код через веб-сервер для распознавания работы</li>
- <li>[2] Может быть активирована через <code>media.webspeech.recognition.enable</code> флаг в <a>about:config</a> на телефоне. Не реализовано вообще на рабочем столе Firefox - см.{{bug(1248897)}}.</li>
-</ul>
-
-<h3 id="Firefox_OS_разрешения">Firefox OS разрешения</h3>
-
-<p>Чтобы использовать распознавание речи в приложении, вам необходимо указать следующие разрешения в своём <a href="/en-US/docs/Web/Apps/Build/Manifest">manifest</a>:</p>
-
-<pre class="brush: json">"permissions": {
-  "audio-capture" : {
-    "description" : "Audio capture"
-  },
-  "speech-recognition" : {
-    "description" : "Speech recognition"
-  }
-}</pre>
-
-<p>Вам также нужно привилегированное приложение, поэтому вам необходимо также включить его:</p>
-
-<pre class="brush: json">  "type": "privileged"</pre>
+<!--
+  TODO: When converted to Markdown add the following frontmatter key: browser-compat: api.SpeechRecognition
+  And then add the compat table here with:
+  ## Browser compatibility
+  {{Compat}}
+-->
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

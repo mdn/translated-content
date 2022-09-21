@@ -1,6 +1,7 @@
 ---
 title: AudioBufferSourceNode
 slug: Web/API/AudioBufferSourceNode
+browser-compat: api.AudioBufferSourceNode
 ---
 {{APIRef("Web Audio API")}}
 
@@ -125,12 +126,9 @@ button.onclick = function() {
 
 ## ブラウザ互換性
 
-{{Compat("api.AudioBufferSourceNode")}}
-
-### Chrome notes
-
-The buffer property was removed in {{CompatChrome(44.0)}}.
+{{Compat}}
 
 ## 関連情報
 
-- [Using the Web Audio API](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)

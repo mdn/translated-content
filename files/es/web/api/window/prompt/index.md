@@ -4,6 +4,7 @@ slug: Web/API/Window/prompt
 tags:
   - Referencia
   - metodo
+browser-compat: api.Window.prompt
 translation_of: Web/API/Window/prompt
 ---
 {{ApiRef("Window")}}
@@ -42,29 +43,37 @@ El ejemplo anterior muestra el siguiente cuadro de diálogo (en Chrome en OS X):
 
 [![prompt() dialog in Chrome on OS X](https://mdn.mozillademos.org/files/11303/prompt.png)](https://mdn.mozillademos.org/files/11303/prompt.png)
 
-## Notas
+## Notes
 
-Un diálogo prompt contiene un cuadro de texto de una línea, un botón Cancel (Cancelar) un botón OK (Aceptar), y devuelve el texto (posiblemente vacío) que el usuario introdujo en el cuadro de texto.
+A prompt dialog contains a single-line textbox, a Cancel button, and an OK button, and
+returns the (possibly empty) text the user entered into that textbox.
 
-The following text is shared between this article, DOM:window\.confirm and DOM:window\.alertLos cuadros de diálogo son ventanas modales; previenen que el usuario acceda al resto de la interfaz del programa hasta que el cuadro de diálogo es cerrado. Por esta razón, no se debe abusar de cualquier función que crea un cuadro de diálogo (o ventana modal).
+Please note that result is a string. That means you should sometimes cast the value
+given by the user. For example, if their answer should be a Number, you should cast the
+value to Number.
 
-Nótese que el resultado es una cadena de texto. Esto significa que a veces se deberá hacer una conversión al valor introducido por el usuario. Por ejemplo, si la respuesta debe ser un valor numérico, se debe hacer la conversión del valor a tipo Number. `var aNumber = Number(window\.prompt("Type a number", ""))`;
+```js
+const aNumber = Number(window.prompt("Type a number", ""));
+```
 
-Usuarios de [Mozilla Chrome](/en-US/Chrome "Chrome") (p.ej. extensiones de Firefox) deben usar preferentemente métodos de `nsIPromptService`.
+Dialog boxes are modal windows; they
+prevent the user from accessing the rest of the program's interface until the dialog box
+is closed. For this reason, you should not overuse any function that creates a dialog
+box (or modal window).
 
-A partir de Chrome {{CompatChrome(46.0)}} este método está bloqueado para los elementos {{htmlelement("iframe")}}, , a menos que su atributo [sandbox](/es/docs/Web/HTML/Elemento/iframe#attr-sandbox) tenga el valor `allow-modal`.
+Alternatively {{HTMLElement("dialog")}} element can be used to take user inputs.
 
-En Safari, si el usuario presiona el botón Cancel, la función devuelve una cadena vacía. Por lo tanto, no se puede diferenciar si canceló o si mandó una cadena de texto vacía como valor del cuadro de texto.
+## Specifications
 
-Esta función no tiene efecto en la versión Modern UI/Metro de Internet Explorer para Windows 8. No se muestra un diálogo al usuario, y siempre devuelve `undefined`. No está claro si esto es un bug o un comportamiento previsto. Las versiones de escritorio de IE sí implementan esta función
+{{Specifications}}
 
-## Especificación
+## Browser compatibility
 
-| Especificación                                                                       | Estado                                       | Comentarios        |
-| ------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------ |
-| {{SpecName('HTML5 Web application', '#dom-prompt', 'prompt()')}} | {{Spec2('HTML5 Web application')}} | Definición inicial |
+{{Compat}}
 
-## Véase también
+## See also
 
+- {{HTMLElement("dialog")}} element
 - {{domxref("window.alert", "alert")}}
 - {{domxref("window.confirm", "confirm")}}
+
