@@ -2,6 +2,7 @@
 title: HTMLIFrameElement
 slug: Web/API/HTMLIFrameElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLIFrameElement`** 接口提供了除 {{domxref("HTMLElement")}} 之外的一些特殊属性和方法（当然也包括了继承自 {{domxref("HTMLElement")}} 的部分）。这些方法用于操作内联 frame 元素的布局和展示。

@@ -2,6 +2,7 @@
 title: PerformanceTiming.requestStart
 slug: Web/API/PerformanceTiming/requestStart
 ---
+
 {{ APIRef("PerformanceTiming") }}
 
 ## 概要

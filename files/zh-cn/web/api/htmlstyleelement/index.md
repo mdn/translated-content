@@ -2,6 +2,7 @@
 title: HTMLStyleElement
 slug: Web/API/HTMLStyleElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLStyleElement`** 接口表示 {{HTMLElement("style")}} 元素。它从 {{domxref("HTMLElement")}} 和 {{domxref("LinkStyle")}} 中继承属性和方法。

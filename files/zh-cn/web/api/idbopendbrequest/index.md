@@ -2,6 +2,7 @@
 title: IDBOpenDBRequest
 slug: Web/API/IDBOpenDBRequest
 ---
+
 {{APIRef("IndexedDB")}}
 
 IndexedDB API 的 **`IDBOpenDBRequest`** 接口提供了访问打开或删除数据库的请求的结果（通过调用 {{domxref("IDBFactory.open")}} and {{domxref("IDBFactory.deleteDatabase")}}），途径就是使用特殊的事件处理器属性。

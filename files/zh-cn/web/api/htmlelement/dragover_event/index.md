@@ -3,6 +3,7 @@ title: dragover
 slug: Web/API/HTMLElement/dragover_event
 original_slug: Web/API/Document/dragover_event
 ---
+
 {{APIRef}}
 
 当元素或者选择的文本被拖拽到一个有效的放置目标上时，触发 `dragover` 事件（每几百毫秒触发一次）。

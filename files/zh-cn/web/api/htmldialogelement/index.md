@@ -2,6 +2,7 @@
 title: HTMLDialogElement
 slug: Web/API/HTMLDialogElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 {{ SeeCompatTable() }}

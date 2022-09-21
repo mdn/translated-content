@@ -2,6 +2,7 @@
 title: FocusEvent
 slug: Web/API/FocusEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 **`FocusEvent`** 接口表示和焦点相关的事件比如 {{event("focus")}}, {{event("blur")}}, {{event("focusin")}}, 和 {{event("focusout")}}。

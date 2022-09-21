@@ -2,6 +2,7 @@
 title: 使用 Gamepad API
 slug: Web/API/Gamepad_API/Using_the_Gamepad_API
 ---
+
 {{DefaultAPISidebar("Gamepad API")}}{{ SeeCompatTable() }}
 
 HTML5 为丰富的交互式游戏开发引入了许多必要的组件。像 `<canvas>` 、WebGL、 `<audio>` 和 `<video>` 这样的技术，随着 JavaScript 的逐渐成熟，许多以前需要 native code 来实现的功能现在都可以实现了。Gamepad(手柄) API 是开发人员和设计者识别和使用游戏控制板和其他游戏控制器的一种方法。

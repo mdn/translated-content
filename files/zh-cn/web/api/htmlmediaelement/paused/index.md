@@ -2,6 +2,7 @@
 title: HTMLMediaElement.paused
 slug: Web/API/HTMLMediaElement/paused
 ---
+
 {{APIRef("HTML DOM")}}
 
 `属性 (只读)HTMLMediaElement.paused` 告诉视频是否正在暂停

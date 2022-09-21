@@ -2,6 +2,7 @@
 title: Coordinates
 slug: Web/API/GeolocationCoordinates
 ---
+
 {{APIRef("Geolocation API")}}
 
 **`Coordinates`** （坐标）接口表示设备在地球上的位置和海拔，以及计算这些属性的精确度。

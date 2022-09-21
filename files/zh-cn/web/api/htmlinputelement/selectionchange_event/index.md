@@ -2,6 +2,7 @@
 title: GlobalEventHandlers.onselectionchange
 slug: Web/API/HTMLInputElement/selectionchange_event
 ---
+
 {{ApiRef('DOM')}}{{SeeCompatTable}}
 
 **`GlobalEventHandlers.onselectionchange`** 属性表示当一个 {{event("selectstart")}} 事件被触发，比如在页面上选中文字变化时，会执行绑定的事件处理器

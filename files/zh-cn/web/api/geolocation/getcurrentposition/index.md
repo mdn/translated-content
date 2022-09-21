@@ -2,6 +2,7 @@
 title: Geolocation.getCurrentPosition()
 slug: Web/API/Geolocation/getCurrentPosition
 ---
+
 {{ APIRef("Geolocation API") }}
 
 **`Geolocation.getCurrentPosition()`** 方法用来获取设备当前位置。

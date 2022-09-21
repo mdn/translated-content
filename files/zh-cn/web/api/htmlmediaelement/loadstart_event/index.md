@@ -2,6 +2,7 @@
 title: 'HTMLMediaElement: loadstart event'
 slug: Web/API/HTMLMediaElement/loadstart_event
 ---
+
 {{APIRef}}
 
 **`loadstart`** 事件当浏览器开始载入一个资源文件时 fired.

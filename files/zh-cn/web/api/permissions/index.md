@@ -2,6 +2,7 @@
 title: Permissions
 slug: Web/API/Permissions
 ---
+
 {{APIRef("Permissions API")}}{{SeeCompatTable}}
 
 [Permissions API](Permissions_API)的 Permissions 接口提供核心 PermissionAPI 功能，例如查询和撤消权限的方法。

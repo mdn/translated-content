@@ -2,6 +2,7 @@
 title: InputEvent.dataTransfer
 slug: Web/API/InputEvent/dataTransfer
 ---
+
 {{SeeCompatTable}}{{APIRef("DOM Events")}}
 
 {{domxref("InputEvent")}} 接口中的只读属性 **`dataTransfer`** 返回一个 {{domxref("DataTransfer")}} 对象，该对象包含有关要添加到可编辑内容，或从可编辑内容中删除的富文本或纯文本数据的信息。

@@ -2,6 +2,7 @@
 title: HTMLMediaElement.buffered
 slug: Web/API/HTMLMediaElement/buffered
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.buffered`** 返回一个只读 {{domxref("TimeRanges")}} 对象 返回媒体已缓冲的区域

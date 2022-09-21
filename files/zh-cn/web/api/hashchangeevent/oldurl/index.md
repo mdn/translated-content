@@ -2,6 +2,7 @@
 title: HashChangeEvent.oldURL
 slug: Web/API/HashChangeEvent/oldURL
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`oldURL`** 为 {{domxref("HashChangeEvent")}} 接口的只读属性，其值为窗口导航改变前的 URL。

@@ -2,6 +2,7 @@
 title: Headers.keys()
 slug: Web/API/Headers/keys
 ---
+
 {{APIRef}}
 
 **`Headers.keys()`** 方法返回一个 headers(Object) 对象所有 key 组成的迭代器，通过迭代器可以遍历 headers 这个对象，返回的迭代器中的元素 key 都是字符串。

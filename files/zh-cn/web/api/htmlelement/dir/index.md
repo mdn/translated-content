@@ -2,6 +2,7 @@
 title: HTMLElement.dir
 slug: Web/API/HTMLElement/dir
 ---
+
 {{ APIRef("HTML DOM") }}
 
 ### 概述

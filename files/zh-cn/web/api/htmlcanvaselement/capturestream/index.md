@@ -2,6 +2,7 @@
 title: HTMLCanvasElement.captureStream()
 slug: Web/API/HTMLCanvasElement/captureStream
 ---
+
 {{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 
 该 **`HTMLCanvasElement.captureStream()`** 方法返回的 {{domxref("CanvasCaptureMediaStream")}} 是一个实时视频捕获的画布。

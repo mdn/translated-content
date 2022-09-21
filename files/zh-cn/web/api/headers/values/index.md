@@ -2,6 +2,7 @@
 title: Headers.values()
 slug: Web/API/Headers/values
 ---
+
 {{APIRef}}
 
 **`Headers.values()`** 方法返回一个可迭代数值，通过这个数值可以遍历 **`Headers`** 中键值对的 **`value`** 值。返回的 **`value`** 都是 **`ByteString`** 对象。

@@ -2,6 +2,7 @@
 title: FontFaceSet.check()
 slug: Web/API/FontFaceSet/check
 ---
+
 {{APIRef()}} {{SeeCompatTable}}
 
 {{domxref("FontFaceSet")}} 的`check()`方法会返回是否在给定的字体列表中的所有字体已经被加载并可用。

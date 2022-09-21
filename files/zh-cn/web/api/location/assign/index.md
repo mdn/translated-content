@@ -2,6 +2,7 @@
 title: Location.assign()
 slug: Web/API/Location/assign
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`Location.assign()`** 方法会触发窗口加载并显示指定的 URL 的内容。

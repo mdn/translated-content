@@ -2,6 +2,7 @@
 title: Geolocation
 slug: Web/API/Geolocation
 ---
+
 {{APIRef}}
 
 **`Geolocation`** 接口是一个用来获取设备地理位置的可编程的对象，它可以让 Web 内容访问到设备的地理位置，这将允许 Web 应用基于用户的地理位置提供定制的信息。说实话：其实**`Geolocation`** 就是用来获取到当前设备的经纬度（位置）

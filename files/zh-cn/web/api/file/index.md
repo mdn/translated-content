@@ -2,6 +2,7 @@
 title: File
 slug: Web/API/File
 ---
+
 {{APIRef}}
 
 文件（**`File`**）接口提供有关文件的信息，并允许网页中的 JavaScript 访问其内容。

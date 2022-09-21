@@ -2,6 +2,7 @@
 title: MediaSource
 slug: Web/API/MediaSource
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 **`MediaSource`** 是 [Media Source Extensions API](/zh-CN/docs/Web/API/Media_Source_Extensions_API) 表示媒体资源 {{domxref("HTMLMediaElement")}} 对象的接口。`MediaSource` 对象可以附着在 {{domxref("HTMLMediaElement")}} 在客户端进行播放。
