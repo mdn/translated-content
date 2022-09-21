@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/minimize
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/minimize
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.Locale.prototype.minimize()`** tente de retirer les informations qui auraient pu être ajoutée à une locale lors d'un appel à {{jsxref("Locale/maximize", "Locale.maximize()")}}.

@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/indexOf
 ---
+
 {{JSRef}}
 
 La méthode **`indexOf()`** renvoie le premier indice pour lequel on trouve un élément donné dans un tableau. Si l'élément cherché n'est pas présent dans le tableau, la méthode renverra -1.

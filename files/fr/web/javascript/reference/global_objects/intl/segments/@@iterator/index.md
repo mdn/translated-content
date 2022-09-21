@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Segments/@@iterator
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Segments/@@iterator
 browser-compat: javascript.builtins.Intl.Segments.@@iterator
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.Segments.@@iterator`** fait partie de l'implémentation [du protocole itérable](fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_») pour `Intl.Segments` et renvoie un nouvel objet itérateur qui permet de parcourir les éléments d'un objet `Intl.Segmenter`. Chaque élément est renvoyé sous la forme d'un objet.
