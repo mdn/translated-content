@@ -54,7 +54,7 @@ slug: Web/HTML/Element/Input/reset
 
 ### 省略 value 属性
 
-如果您未指定 `value`，则会获得一个带有默认标签的按钮（通常为“Reset”，但这将根据{{Glossary("user agent", "用户代理")}}而有所不同）：
+如果你未指定 `value`，则会获得一个带有默认标签的按钮（通常为“重置”，但这将根据{{Glossary("user agent", "用户代理")}}而有所不同）：
 
 ```html
 <input type="reset" />
@@ -112,13 +112,13 @@ slug: Web/HTML/Element/Input/reset
 
 ### 禁用和启用重置按钮
 
-要禁用重置按钮，只需在其上指定 {{htmlattrxref("disabled")}} 的全局属性，如下所示：
+要禁用重置按钮，只需在其上指定 {{htmlattrxref("disabled")}} 全局属性，如下所示：
 
 ```html
 <input type="reset" value="Disabled" disabled />
 ```
 
-您可以在运行时通过简单地将 `disable` 设置为 `true` 或 `false` 来启用和禁用按钮。在 JavaScript 中，使用 `btn.disabled = true` 或 `btn.disabled = false`。
+你可以在运行时通过简单地将 `disable` 设置为 `true` 或 `false` 来启用和禁用按钮。在 JavaScript 中，使用 `btn.disabled = true` 或 `btn.disabled = false`。
 
 > **备注：** 有关启用和禁用按钮的更多观念，请参见 [`<input type="button">`](/zh-CN/docs/Web/HTML/Element/input/button#启用与禁用按钮) 页面。
 
@@ -126,7 +126,7 @@ slug: Web/HTML/Element/Input/reset
 
 按钮并不参与约束性验证，它们并没有实际的约束价值。
 
-## 例子
+## 示例
 
 我们在上面已经提供了一些简单的示例。实际上关于重置按钮并没有更多的内容了。
 
