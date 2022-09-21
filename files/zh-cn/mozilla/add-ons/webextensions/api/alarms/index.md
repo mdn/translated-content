@@ -2,6 +2,7 @@
 title: alarms
 slug: Mozilla/Add-ons/WebExtensions/API/alarms
 ---
+
 {{AddonSidebar}}
 
 在未来一个特定的时间运行的计划任务代码。这很像[`setTimeout()`](/zh-CN/docs/Web/API/WindowTimers/setTimeout)和[`setInterval()`](/zh-CN/docs/Web/API/WindowTimers/setInterval)，不过这些函数仅可以按需使用而不能在后台页面工作。
