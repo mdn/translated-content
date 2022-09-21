@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/sub
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<sub>`** est utilisé, pour des raisons typographiques, afin d'afficher du texte souscrit (ou en indice) (plus bas et généralement plus petit) par rapport au bloc de texte environnant.

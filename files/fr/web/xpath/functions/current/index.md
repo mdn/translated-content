@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XPath/Functions/current
 original_slug: Web/XPath/Fonctions/current
 ---
+
 {{ XsltRef() }}
 
 La fonction `current` peut être utilisée pour obtenir le nœud courant dans une instruction XSLT.

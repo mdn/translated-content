@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/ge
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/getArg
 browser-compat: javascript.builtins.WebAssembly.Exception.getArg
 ---
+
 {{JSRef}}
 
 La méthode **`getArg()`**, rattachée au prototype d'un objet [`Exception`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception), permet d'obtenir la valeur d'un élément spécifique parmi les arguments de donnée d'une exception.

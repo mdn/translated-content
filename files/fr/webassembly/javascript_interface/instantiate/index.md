@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
 ---
+
 {{JSRef}}
 
 La fonction **`WebAssembly.instantiate()`** permet de compiler et d'instancier du code WebAssembly. Cette fonction possède deux formes :

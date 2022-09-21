@@ -10,6 +10,7 @@ tags:
   - shadow dom
 translation_of: Web/HTML/Element/slot
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<slot>`** représente un emplacement d'un composant web qu'on peut remplir avec son propre balisage. On peut ainsi obtenir un document construit avec différents arbres DOM. Cet élément fait partie des outils relatifs [aux composants web (Web Components)](/fr/docs/Web/Web_Components).
