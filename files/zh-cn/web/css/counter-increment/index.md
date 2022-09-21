@@ -2,6 +2,7 @@
 title: counter-increment
 slug: Web/CSS/counter-increment
 ---
+
 {{CSSRef}}
 
 ## 概要

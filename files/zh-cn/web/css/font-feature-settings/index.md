@@ -2,6 +2,7 @@
 title: font-feature-settings
 slug: Web/CSS/font-feature-settings
 ---
+
 {{CSSRef}}
 
 **`font-feature-settings`** 属性用于控制 OpenType 字体中的高级印刷功能。

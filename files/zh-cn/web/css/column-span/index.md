@@ -2,6 +2,7 @@
 title: column-span
 slug: Web/CSS/column-span
 ---
+
 {{ CSSRef("CSS Multi-columns") }}
 
 ## 概述

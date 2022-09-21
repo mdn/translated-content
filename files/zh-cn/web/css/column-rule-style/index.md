@@ -2,6 +2,7 @@
 title: column-rule-style
 slug: Web/CSS/column-rule-style
 ---
+
 {{ CSSRef("CSS Multi-columns") }}
 
 ## Summary

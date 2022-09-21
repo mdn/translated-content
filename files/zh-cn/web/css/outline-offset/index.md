@@ -2,6 +2,7 @@
 title: outline-offset
 slug: Web/CSS/outline-offset
 ---
+
 {{CSSRef}}
 
 ## 概要

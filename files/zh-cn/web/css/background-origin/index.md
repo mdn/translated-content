@@ -2,6 +2,7 @@
 title: background-origin
 slug: Web/CSS/background-origin
 ---
+
 {{CSSRef}}
 
 ## 摘要

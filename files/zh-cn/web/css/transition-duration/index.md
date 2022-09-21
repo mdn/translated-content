@@ -2,6 +2,7 @@
 title: transition-duration
 slug: Web/CSS/transition-duration
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## 概述

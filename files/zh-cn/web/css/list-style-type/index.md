@@ -2,6 +2,7 @@
 title: list-style-type
 slug: Web/CSS/list-style-type
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 `list-style-type` 可以设置列表元素的 marker（比如圆点、符号、或者自定义计数器样式）。
