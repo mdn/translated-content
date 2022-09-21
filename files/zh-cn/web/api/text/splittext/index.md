@@ -2,6 +2,7 @@
 title: Text.splitText()
 slug: Web/API/Text/splitText
 ---
+
 {{apiref("DOM")}}
 
 **`Text.splitText()`** 方法可以根据指定的偏移量将一个 {{domxref("Text")}} 节点分割成前后两个独立的兄弟节点。

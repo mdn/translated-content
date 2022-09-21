@@ -2,6 +2,7 @@
 title: WebSocket.send()
 slug: Web/API/WebSocket/send
 ---
+
 {{APIRef("Web Sockets API")}}
 
 **`WebSocket.send()`** 方法将需要通过 WebSocket 链接传输至服务器的数据排入队列，并根据所需要传输的 data bytes 的大小来增加 `bufferedAmount`的值 。若数据无法传输（例如数据需要缓存而缓冲区已满）时，套接字会自行关闭。

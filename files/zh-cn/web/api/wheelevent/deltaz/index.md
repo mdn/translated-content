@@ -2,6 +2,7 @@
 title: WheelEvent.deltaZ
 slug: Web/API/WheelEvent/deltaZ
 ---
+
 {{APIRef("DOM Events")}}
 
 **`WheelEvent.deltaZ`** 只读属性是一个 `double` 类型值，声明 Z 轴滚动量以[`WheelEvent.deltaMode`](/zh-CN/docs/Web/API/WheelEvent/deltaMode) 为单位。

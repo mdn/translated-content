@@ -2,6 +2,7 @@
 title: SpeechSynthesis.paused
 slug: Web/API/SpeechSynthesis/paused
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 {{domxref("SpeechSynthesis")}} 接口的只读属性 **`paused`** 是一个 {{domxref("Boolean")}} 值，当`SpeechSynthesis`对象处于暂停状态时，返回`true` ，否则返回 `false`。

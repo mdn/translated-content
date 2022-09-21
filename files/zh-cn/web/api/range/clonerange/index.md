@@ -2,6 +2,7 @@
 title: Range.cloneRange()
 slug: Web/API/Range/cloneRange
 ---
+
 {{ APIRef("DOM") }}
 
 **`Range.cloneRange()`**方法返回一个 range 对象，并且该对象的范围边界点与被克隆的 range 对象相同。

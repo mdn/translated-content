@@ -2,6 +2,7 @@
 title: Screen.orientation
 slug: Web/API/Screen/orientation
 ---
+
 {{APIRef("Screen Orientation API")}}{{SeeCompatTable}}
 
 **`orientation`** 是 {{DOMxRef("Screen")}} 接口的一个只读属性，返回屏幕当前的方向。

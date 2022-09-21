@@ -2,6 +2,7 @@
 title: ServiceWorkerRegistration.active
 slug: Web/API/ServiceWorkerRegistration/active
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 The **`active`** property of the {{domxref("ServiceWorkerRegistration")}} interface returns a service worker whose {{domxref("ServiceWorker.state")}} is `activating` or `activated`. This property is initially set to `null`.

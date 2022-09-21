@@ -2,6 +2,7 @@
 title: WEBGL_lose_context.restoreContext()
 slug: Web/API/WEBGL_lose_context/restoreContext
 ---
+
 {{APIRef("WebGL")}}
 
 **WEBGL_lose_context.restoreContext()** 属于 [WebGL API](/zh-CN/docs/Web/API/WebGL_API)。 ， 一般用来模拟 {{domxref("WebGLRenderingContext")}} 的上下文恢复。

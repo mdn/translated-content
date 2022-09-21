@@ -2,6 +2,7 @@
 title: window.clearImmediate
 slug: Web/API/Window/clearImmediate
 ---
+
 {{ ApiRef() }}
 
 ## 概述

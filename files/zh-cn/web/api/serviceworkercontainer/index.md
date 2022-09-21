@@ -2,6 +2,7 @@
 title: ServiceWorkerContainer
 slug: Web/API/ServiceWorkerContainer
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 `ServiceWorkerContainer`接口为 service worker 提供一个容器般的功能，包括对 service worker 的注册，卸载 ，更新和访问 service worker 的状态，以及他们的注册者

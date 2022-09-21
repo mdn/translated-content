@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.createRenderbuffer()
 slug: Web/API/WebGLRenderingContext/createRenderbuffer
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的**`WebGLRenderingContext.createRenderbuffer()`** 方法 创建并初始化一个 {{domxref("WebGLRenderbuffer")}} 对象。

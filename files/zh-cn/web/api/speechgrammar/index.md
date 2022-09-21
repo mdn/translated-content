@@ -2,6 +2,7 @@
 title: SpeechGrammar
 slug: Web/API/SpeechGrammar
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API) 的 **`SpeechGrammar`** 接口 表示了语音识别对象服务想要识别的一系列词语或模式。

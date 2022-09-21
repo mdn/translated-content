@@ -2,6 +2,7 @@
 title: RTCPeerConnection.addIceCandidate()
 slug: Web/API/RTCPeerConnection/addIceCandidate
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 当本机当前页面的 {{domxref("RTCPeerConnection")}} 接收到一个从远端页面通过信号通道发来的新的 ICE 候选地址信息，本机可以通过调用**`RTCPeerConnection.addIceCandidate()`** 来添加一个 {{Glossary("ICE")}} 代理。 This adds this new remote candidate to the `RTCPeerConnection`'s remote description, which describes the state of the remote end of the connection.

@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.depthFunc()
 slug: Web/API/WebGLRenderingContext/depthFunc
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.depthFunc()`** 方法，指定将输入像素深度与当前深度缓冲区值进行比较的函数。

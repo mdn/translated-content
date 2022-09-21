@@ -2,6 +2,7 @@
 title: XMLHttpRequestEventTarget
 slug: Web/API/XMLHttpRequestEventTarget
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 `XMLHttpRequestEventTarget` 是一个描述事件处理程序的接口，你可以在一个用于处理 {{ domxref("XMLHttpRequest") }} 事件的对象中使用到该事件处理程序。
