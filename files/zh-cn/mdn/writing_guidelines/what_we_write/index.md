@@ -3,6 +3,7 @@ title: MDN 收录规则
 slug: MDN/Writing_guidelines/What_we_write
 original_slug: MDN/Guidelines/Does_this_belong_on_MDN
 ---
+
 {{MDNSidebar}}
 
 在本文中，你将找到 MDN Web 文档收录规则的有关信息，我们将从主题和类型两方面告诉你什么样的内容是合适的。有些内容如果不适合放置在这里，我们将和你讨论它应该被放置在什么地方，尽管我们的讨论不会很深入。

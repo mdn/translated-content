@@ -2,6 +2,7 @@
 title: 扩展示例
 slug: Mozilla/Add-ons/WebExtensions/Examples
 ---
+
 {{AddonSidebar}}
 
 为帮助了解如何开发扩展，我们维护了一个包含简单扩展示例的代码仓库在<https://github.com/mdn/webextensions-examples>. 本文描述了仓库代码中所使用的 WebExtension APIs。

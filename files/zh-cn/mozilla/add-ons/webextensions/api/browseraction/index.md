@@ -2,6 +2,7 @@
 title: browserAction
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction
 ---
+
 {{AddonSidebar}}
 
 添加按钮到浏览器的工具栏。
