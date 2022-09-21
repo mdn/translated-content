@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/line-height-step
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La propriété **`line-height-step`** définit le pas de hauteur des boîtes de ligne. Quand le pas est positif, les hauteurs des boîtes de ligne sont arrondies au pas le plus proche. Les valeurs négatives sont invalides.

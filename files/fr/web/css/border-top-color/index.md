@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-top-color
 ---
+
 {{CSSRef}}
 
 La propriété **`border-top-color`** définit la couleur utilisée pour la bordure haute d'un élément.

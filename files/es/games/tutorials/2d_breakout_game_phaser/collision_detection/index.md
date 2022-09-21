@@ -45,7 +45,7 @@ function ballHitBrick(ball, brick) {
 
 Gracias a Phaser, se pasan dos parámetros a la función: el primero es la bola, que definimos explícitamente en el método de colisión, y el segundo es el único bloque del grupo de ladrillos con el que la bola está colisionando. Dentro de la función, eliminamos el bloque en cuestión de la pantalla ejecutando el método`kill()` en él.
 
-Seguro que esperarabas tener que escribir muchos más cálculos para implementar la detección de colisiones cuando se utiliza[ JavaScript](https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection) puro. Esa es la belleza de usar el marco: puedes dejar un montón de código aburrido a Phaser, y enfocarte en las partes más divertidas e interesantes de hacer un juego.
+Seguro que esperarabas tener que escribir muchos más cálculos para implementar la detección de colisiones cuando se utiliza [JavaScript](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection) puro. Esa es la belleza de usar el marco: puedes dejar un montón de código aburrido a Phaser, y enfocarte en las partes más divertidas e interesantes de hacer un juego.
 
 ## Compara tu código
 

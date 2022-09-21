@@ -1,15 +1,6 @@
 ---
 title: '<style>: スタイル情報要素'
 slug: Web/HTML/Element/style
-tags:
-  - CSS
-  - Element
-  - HTML
-  - HTML document metadata
-  - Reference
-  - Style
-  - Web
-translation_of: Web/HTML/Element/style
 ---
 {{HTMLRef}}
 
@@ -25,7 +16,7 @@ translation_of: Web/HTML/Element/style
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/HTML/Global_attributes "HTML/Global attributes")があります。
+この要素には[グローバル属性](/ja/docs/HTML/Global_attributes)があります。
 
 - {{htmlattrdef("type")}}
   - : この属性は、スタイル言語を MIME タイプで定義します (文字セットは指定すべきではありません)。この属性は省略可能であり、省略した場合の既定値は `text/css` です。空文字列と `text/css` 以外の値は使用されません。 **注:** 現代のウェブ文書では、この属性を含める理由はほとんどありません。

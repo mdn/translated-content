@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Bad_regexp_flag
 original_slug: Web/JavaScript/Reference/Erreurs/Bad_regexp_flag
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

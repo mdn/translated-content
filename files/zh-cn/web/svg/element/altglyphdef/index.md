@@ -16,7 +16,7 @@ slug: Web/SVG/Element/altGlyphDef
 
 ### 全局属性
 
-- [核心属性](/en/SVG/Attribute#Core) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
 
 ### 专有属性
 
@@ -24,7 +24,7 @@ _无_
 
 ## DOM 接口
 
-该元素实现了[`SVGAltGlyphDefElement`](/en/DOM/SVGAltGlyphDefElement)接口。
+该元素实现了[`SVGAltGlyphDefElement`](/zh-CN/DOM/SVGAltGlyphDefElement)接口。
 
 ## 参见
 

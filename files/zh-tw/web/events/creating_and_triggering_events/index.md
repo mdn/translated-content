@@ -3,6 +3,7 @@ title: 建立或觸發事件
 slug: Web/Events/Creating_and_triggering_events
 original_slug: Web/Guide/Events/Creating_and_triggering_events
 ---
+
 本文介紹如何建立和觸發事件。
 
 ## 建立自定義事件

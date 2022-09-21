@@ -36,9 +36,9 @@ slug: Web/SVG/Element/symbol
 
 ### 全局属性
 
-- [核心属性](/en/SVG/Attribute#Core) »
-- [图形事件属性](/en/SVG/Attribute#GraphicalEvent) »
-- [外观属性](/en/SVG/Attribute#Presentation) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [图形事件属性](/zh-CN/SVG/Attribute#GraphicalEvent) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -50,7 +50,7 @@ slug: Web/SVG/Element/symbol
 
 ## DOM 接口
 
-该元素实现了[`SVGSymbolElement`](/en/DOM/SVGSymbolElement)接口。
+该元素实现了[`SVGSymbolElement`](/zh-CN/DOM/SVGSymbolElement)接口。
 
 ## 浏览器兼容性
 

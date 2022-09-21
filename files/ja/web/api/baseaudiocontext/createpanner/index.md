@@ -1,16 +1,6 @@
 ---
 title: BaseAudioContext.createPanner()
 slug: Web/API/BaseAudioContext/createPanner
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - メソッド
-  - リファレンス
-  - ウェブ音声 API
-  - createPanner
-browser-compat: api.BaseAudioContext.createPanner
-translation_of: Web/API/BaseAudioContext/createPanner
 original_slug: Web/API/AudioContext/createPanner
 ---
 {{ APIRef("Web Audio API") }}

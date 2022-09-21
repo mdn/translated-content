@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/head
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **\<head>** fournit des informations générales (métadonnées) sur le document, incluant son titre et des liens ou des définitions vers des scripts et feuilles de style.
@@ -90,15 +91,11 @@ La plupart des navigateurs conformes à HTML5 construisent automatiquement l'él
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires                                       |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-head-element', '&lt;head&gt;')}}         | {{Spec2('HTML WHATWG')}} | Aucune modification depuis la dernière dérivation. |
-| {{SpecName('HTML5 W3C', 'document-metadata.html#the-head-element', '&lt;head&gt;')}} | {{Spec2('HTML5 W3C')}}     | L'attribut `profile` est désormais obsolète.       |
-| {{SpecName('HTML4.01', 'global.html#h-7.4.1', '&lt;head&gt;')}}                             | {{Spec2('HTML4.01')}}     |                                                    |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.head")}}
+{{Compat}}
 
 ## Voir aussi
 

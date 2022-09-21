@@ -73,7 +73,7 @@ class PopUpInfo extends HTMLElement {
 }
 ```
 
-上述代码片段中，类的构造函数{{jsxref("Classes.constructor","constructor")}}总是先调用[`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super)来建立正确的原型链继承关系。
+上述代码片段中，类的构造函数{{jsxref("Classes.constructor","constructor")}}总是先调用[`super()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super)来建立正确的原型链继承关系。
 
 在构造函数中，我们会定义元素实例所拥有的全部功能。作为示例，我们首先会将 shadow root 附加到 custom element 上，然后通过一系列 DOM 操作创建 custom element 的内部阴影 DOM（shadow DOM）结构，再将其附加到 shadow root 上，最后再将一些 CSS 附加到 shadow root 的 style 节点上。
 

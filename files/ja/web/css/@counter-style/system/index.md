@@ -1,15 +1,6 @@
 ---
 title: system
 slug: Web/CSS/@counter-style/system
-tags:
-  - '@counter-style'
-  - At-rule descriptor
-  - CSS
-  - CSS Counter Styles
-  - CSS Descriptor
-  - Reference
-browser-compat: css.at-rules.counter-style.system
-translation_of: Web/CSS/@counter-style/system
 ---
 {{CSSRef}}
 

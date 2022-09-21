@@ -3,6 +3,7 @@ title: scale
 slug: Web/CSS/scale
 translation_of: Web/CSS/scale
 ---
+
 {{CSSRef}}{{seecompattable}}
 
 La propriété **`scale`** permet de mise à l'échelle individuellement et indépendamment de la propriété {{cssxref("transform")}}. Cela peut être utile pour la construction d'une interface utilisateur et évite d'avoir à se souvenir de l'ordre exact des fonctions de transformations à indiquer pour `transform`.

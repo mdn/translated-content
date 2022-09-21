@@ -10,6 +10,7 @@ tags:
   - three.js
 translation_of: Games/Techniques/3D_on_the_web
 ---
+
 {{GamesSidebar}}
 
 Pour des expériences de jeu riches sur le Web, l'arme de choix est WebGL, qui est fourni sur HTML {{htmlelement ("canvas")}}. WebGL est essentiellement un OpenGL ES 2.0 pour le Web - c'est une API JavaScript fournissant des outils pour créer des animations interactives riches et bien sûr aussi des jeux. Vous pouvez générer et rendre des graphiques 3D dynamiques avec du JavaScript accéléré.

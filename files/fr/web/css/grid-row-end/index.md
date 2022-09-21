@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/grid-row-end
 ---
+
 {{CSSRef}}
 
 La propriété **`grid-row-end`** définit la position de la fin d'un élément de la grille dans une zone donnée ou sur un fragment de ligne donné.

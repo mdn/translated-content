@@ -6,11 +6,11 @@ translation_of: Web/API/WebRTC_API/Signaling_and_video_calling
 {{WebRTCSidebar}}
 
 > **참고:** s이 글은 편집 및 검토가 필요하다. [도움을 줄 수 있는 방법](https://developer.mozilla.org/docs/MDN/Contribute/Howto/Do_an_editorial_review)을 살펴보자.WebRTC는 아직까지 **실험적인 기술이다.**
-> 일부의 기술 스펙이 안정화가 되지 않았기 때문에 각 브라우져에서 사용가능한[ 호환성 정보](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling#Browser_compatibility)를 확인해야한다. 또한, 기술의 문법과 패턴들은 스펙이 바뀌는 것처럼 브라우져의 버전이 높아진다면 변경될 수 있다.
+> 일부의 기술 스펙이 안정화가 되지 않았기 때문에 각 브라우져에서 사용가능한 [호환성 정보](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling#Browser_compatibility)를 확인해야한다. 또한, 기술의 문법과 패턴들은 스펙이 바뀌는 것처럼 브라우져의 버전이 높아진다면 변경될 수 있다.
 
 ## Summary
 
-[WebRTC](/ko/docs/Web/API/WebRTC_API) 는 리얼 타임 음성, 영상, 데이터 교환을 할 수 있는 완전한 p2p 기술이다. [다른 곳에서 논의한 것 처럼 ](/ko/docs/Web/API/WebRTC_API/Session_lifetime#Establishing_a_connection)서로 다른 네트워크에 있는 2개의 디바이스들을 서로 위치시키기 위해서는, 각 디바이스들의 위치를 발견하는 방법과 미디어 포맷 협의가 필요하다. 이 프로세스를 **시그널링** **signaling** 이라 부르고 각 디바이스들을 상호간에 동의된 서버(socket.io 혹은 websocket을 이용한 서버)에 연결시킨다. 이 서버는 각 디바이스들이 **negotiation**(협의) 메세지들을 교환할 수 있도록 한다.
+[WebRTC](/ko/docs/Web/API/WebRTC_API) 는 리얼 타임 음성, 영상, 데이터 교환을 할 수 있는 완전한 p2p 기술이다. [다른 곳에서 논의한 것 처럼](/ko/docs/Web/API/WebRTC_API/Session_lifetime#Establishing_a_connection) 서로 다른 네트워크에 있는 2개의 디바이스들을 서로 위치시키기 위해서는, 각 디바이스들의 위치를 발견하는 방법과 미디어 포맷 협의가 필요하다. 이 프로세스를 **시그널링** **signaling** 이라 부르고 각 디바이스들을 상호간에 동의된 서버(socket.io 혹은 websocket을 이용한 서버)에 연결시킨다. 이 서버는 각 디바이스들이 **negotiation**(협의) 메세지들을 교환할 수 있도록 한다.
 
 이 글에서 우리는 더 나아가 유저들간에 양방향으로 화상 통화가 되는 예제인 [WebSocket chat](https://mdn-samples.mozilla.org/s/websocket-chat)(웹소켓 문서를 작성하기 위해 만들어졌으며, 링크는 곧 활성화 될 것이다. 아직은 온라인으로 테스트가 불가능하다.)을 작동이 되도록 만들 예정이다. 이것에 관해 [샘플](https://mdn-samples.mozilla.org/s/webrtc-from-chat) 을 확인해 보거나 Github에서 전체 [프로젝트](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat)를 확인해볼 수 있다.
 
@@ -594,10 +594,10 @@ function closeVideoCall() {
 
 2개의 [`<video>`](/ko/docs/Web/HTML/Element/video)element를 참조한 이후에, WebRTC 커넥션이 존재하는지 체크한다. 만약 있다면, call을 끊고 닫는다:
 
-1.  리모트와 로컬 비디오 stream에 대해서, 각 track들 마다 [`MediaTrack.stop()`](/ko/docs/Web/API/MediaTrack/stop)를 실행시킨다.
-2.  양 비디오의 [`HTMLMediaElement.srcObject`](/ko/docs/Web/API/HTMLMediaElement/srcObject)property를 `null`로 바꿔 stream에 관한 모든 참조를 푼다.
-3.  [`myPeerConnection.close()`](/ko/docs/Web/API/RTCPeerConnection/close)를 불러 [`RTCPeerConnection`](/ko/docs/Web/API/RTCPeerConnection)을 닫는다.
-4.  `myPeerConnection`변수의 값을 `null`로 바꿔서 계속 진행중인 call이 없다는 것을 전체 코드가 알게 한다. 이것은 유저가 유저 리스트에서 username을 클릭할 때 사용된다.
+1. 리모트와 로컬 비디오 stream에 대해서, 각 track들 마다 [`MediaTrack.stop()`](/ko/docs/Web/API/MediaTrack/stop)를 실행시킨다.
+2. 양 비디오의 [`HTMLMediaElement.srcObject`](/ko/docs/Web/API/HTMLMediaElement/srcObject)property를 `null`로 바꿔 stream에 관한 모든 참조를 푼다.
+3. [`myPeerConnection.close()`](/ko/docs/Web/API/RTCPeerConnection/close)를 불러 [`RTCPeerConnection`](/ko/docs/Web/API/RTCPeerConnection)을 닫는다.
+4. `myPeerConnection`변수의 값을 `null`로 바꿔서 계속 진행중인 call이 없다는 것을 전체 코드가 알게 한다. 이것은 유저가 유저 리스트에서 username을 클릭할 때 사용된다.
 
 마지막으로, "Hang Up" 버튼의 [`disabled`](/ko/docs/Web/API/HTMLElement/disabled) property를 `true`로 바꿔서 call이 없는 동안에는 클릭이 불가능하게 만든다. 그 다음에 더이상 통화를 하지 않으므로 `targetUsername`을 `null`로 바꾼다. 이것을 통해 또 다른 유저에게 call을 하거나 새로운 call을 받을 수 있다.
 

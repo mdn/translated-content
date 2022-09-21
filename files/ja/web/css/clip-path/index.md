@@ -1,16 +1,6 @@
 ---
 title: clip-path
 slug: Web/CSS/clip-path
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - Experimental
-  - リファレンス
-  - ウェブ
-  - recipe:css-property
-browser-compat: css.properties.clip-path
-translation_of: Web/CSS/clip-path
 ---
 {{CSSRef}}
 

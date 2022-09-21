@@ -1,11 +1,6 @@
 ---
 title: HTMLFormElement.method
 slug: Web/API/HTMLFormElement/method
-tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
-translation_of: Web/API/HTMLFormElement/method
 ---
 {{APIRef}}概要
 

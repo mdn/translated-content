@@ -1,11 +1,6 @@
 ---
 title: Truthy (真値)
 slug: Glossary/Truthy
-tags:
-  - CodingScripting
-  - 用語集
-  - JavaScript
-translation_of: Glossary/Truthy
 ---
 {{Glossary("JavaScript")}} において、**真値** (truthy) は{{Glossary("Boolean", "論理値")}}のコンテキストに現れた時に `true` とみなされる値のことです。{{Glossary("Falsy", "偽値 (falsy)")}} として定義された値 (つまり、`false`, `0`, `-0`, `0n`, `""`, `null`, `undefined`, `NaN`) を除くすべての値は真値です。
 

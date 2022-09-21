@@ -1,14 +1,6 @@
 ---
 title: WindowClient.focus()
 slug: Web/API/WindowClient/focus
-tags:
-  - API
-  - Focus
-  - Method
-  - Reference
-  - Service Workers
-  - WindowClient
-translation_of: Web/API/WindowClient/focus
 ---
 {{APIRef("Service Workers API")}}
 

@@ -11,6 +11,7 @@ tags:
   - Window
 translation_of: Web/API/Window/cut_event
 ---
+
 {{APIRef}}
 
 L'événement **`cut`** est déclenché lorsque l'utilisateur a lancé une action de "cut" via l'interface utilisateur du navigateur.
@@ -48,13 +49,11 @@ window.addEventListener('cut', (event) => {
 
 ## Spécifications
 
-| Spécification                                                            | Statut                               |
-| ------------------------------------------------------------------------ | ------------------------------------ |
-| {{SpecName('Clipboard API', '#clipboard-event-cut')}} | {{Spec2('Clipboard API')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.cut_event")}}
+{{Compat}}
 
 ## Voir aussi
 

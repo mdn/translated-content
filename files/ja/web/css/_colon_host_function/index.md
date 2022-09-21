@@ -1,17 +1,7 @@
 ---
 title: ':host()'
 slug: Web/CSS/:host_function
-tags:
-  - ':host()'
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
-translation_of: Web/CSS/:host()
 original_slug: Web/CSS/:host()
-browser-compat: css.selectors.hostfunction
 ---
 {{CSSRef}}
 

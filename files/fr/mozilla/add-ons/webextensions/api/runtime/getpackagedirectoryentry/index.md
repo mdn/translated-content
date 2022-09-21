@@ -13,6 +13,7 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getPackageDirectoryEntry
 ---
+
 {{AddonSidebar()}}
 
 Renvoie un objet `DirectoryEntry` représentant le répertoire du package.

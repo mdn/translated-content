@@ -1,14 +1,6 @@
 ---
 title: <display-outside>
 slug: Web/CSS/display-outside
-tags:
-  - CSS
-  - CSS データ型
-  - CSS 表示
-  - データ型
-  - リファレンス
-  - display-outside
-translation_of: Web/CSS/display-outside
 ---
 {{CSSRef}}
 

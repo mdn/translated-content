@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:nth-last-of-type
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/CSS/Pseudo-classes) **`:nth-last-of-type`** permet de cibler des éléments qui possèdent `an+b-1` nœud frères étant les mêmes éléments à partir de la fin de l'arbre et qui ont le même élément parent (l'indice `n` sera incrémenté à partir de 0). Autrement dit, la pseudo-classe parcourra les éléments d'un type donné en partant de la fin de l'élément parent, selon le motif passé en argument.

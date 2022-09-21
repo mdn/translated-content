@@ -1,14 +1,6 @@
 ---
 title: speak-as
 slug: Web/CSS/@counter-style/speak-as
-tags:
-  - '@counter-style'
-  - At-rule descriptor
-  - CSS
-  - CSS Descriptor
-  - Reference
-browser-compat: css.at-rules.counter-style.speak-as
-translation_of: Web/CSS/@counter-style/speak-as
 ---
 {{CSSRef}}
 

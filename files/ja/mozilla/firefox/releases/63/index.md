@@ -1,12 +1,6 @@
 ---
 title: Firefox 63 for developers
 slug: Mozilla/Firefox/Releases/63
-tags:
-  - '63'
-  - Firefox
-  - Mozilla
-  - Release
-translation_of: Mozilla/Firefox/Releases/63
 ---
 {{FirefoxSidebar}}
 

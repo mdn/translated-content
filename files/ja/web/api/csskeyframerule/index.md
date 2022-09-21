@@ -1,14 +1,6 @@
 ---
 title: CSSKeyframeRule
 slug: Web/API/CSSKeyframeRule
-tags:
-  - API
-  - CSS Animations
-  - CSSOM
-  - Experimental
-  - Interface
-  - Reference
-translation_of: Web/API/CSSKeyframeRule
 ---
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 

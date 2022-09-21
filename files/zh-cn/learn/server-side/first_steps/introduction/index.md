@@ -39,7 +39,7 @@ Web 服务器等待客户端的请求信息，在它们到达的时候处理它�
 
 ### 静态网站
 
-下面这张图展示了一个*静态网站*的基本架构。（静态网站是指无论何时当一个特定资源被请求的时候都返回相同的被硬编码的内容）当用户想要导航到某个页面时，浏览器会发送一个指定到这个页面的 URL 的 HTTP“GET”请求。服务器从它的文件系统中检索被请求的文件，然后返回一个 HTTP 回应，该回应包括被请求的文件和一个[状态码](/en-US/docs/Web/HTTP/Status#Successful_responses)（通常 200 代表操作成功）。如果出于某些原因被请求的文件无法检索到，就会返回错误码。（具体可以参照[客户端错误回应](/zh-CN/docs/Web/HTTP/Status#Client_error_responses)和[服务器错误回应](/zh-CN/docs/Web/HTTP/Status#Server_error_responses)）
+下面这张图展示了一个*静态网站*的基本架构。（静态网站是指无论何时当一个特定资源被请求的时候都返回相同的被硬编码的内容）当用户想要导航到某个页面时，浏览器会发送一个指定到这个页面的 URL 的 HTTP“GET”请求。服务器从它的文件系统中检索被请求的文件，然后返回一个 HTTP 回应，该回应包括被请求的文件和一个[状态码](/zh-CN/docs/Web/HTTP/Status#Successful_responses)（通常 200 代表操作成功）。如果出于某些原因被请求的文件无法检索到，就会返回错误码。（具体可以参照[客户端错误回应](/zh-CN/docs/Web/HTTP/Status#Client_error_responses)和[服务器错误回应](/zh-CN/docs/Web/HTTP/Status#Server_error_responses)）
 
 ![A simplified diagram of a static web server.](basic_static_app_server.png)
 
@@ -186,7 +186,7 @@ web 开发者无法控制用户可能会使用哪一种浏览器来浏览网站�
 
 ## 在这个模块中
 
-- [Introduction to the server side](/en-US/docs/Learn/Server-side/First_steps/Introduction)
-- [Client-Server overview](/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [Server-side web frameworks](/en-US/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security)
+- [Introduction to the server side](/zh-CN/docs/Learn/Server-side/First_steps/Introduction)
+- [Client-Server overview](/zh-CN/docs/Learn/Server-side/First_steps/Client-Server_overview)
+- [Server-side web frameworks](/zh-CN/docs/Learn/Server-side/First_steps/Web_frameworks)
+- [Website security](/zh-CN/docs/Learn/Server-side/First_steps/Website_security)

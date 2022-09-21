@@ -11,6 +11,7 @@ tags:
   - outils de développement
 translation_of: Web/API/Console/debug
 ---
+
 {{APIRef("Console API")}}
 
 Affiche un message dans la console web, avec le niveau de log "debug". Le message est affiché uniquement si la console est configurée pour afficher les messages de type debug.

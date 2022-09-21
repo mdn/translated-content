@@ -1,14 +1,6 @@
 ---
 title: page-break-before
 slug: Web/CSS/page-break-before
-tags:
-  - CSS
-  - CSS プロパティ
-  - 改ページ
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.page-break-before
-translation_of: Web/CSS/page-break-before
 ---
 {{CSSRef}}
 

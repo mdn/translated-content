@@ -1,13 +1,6 @@
 ---
 title: ReferenceError
 slug: Web/JavaScript/Reference/Global_Objects/ReferenceError
-tags:
-  - Class
-  - JavaScript
-  - Object
-  - Reference
-  - ReferenceError
-translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
 ---
 {{JSRef}}
 

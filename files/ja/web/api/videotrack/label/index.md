@@ -1,20 +1,6 @@
 ---
 title: VideoTrack.label
 slug: Web/API/VideoTrack/label
-tags:
-  - API
-  - HTML DOM
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Video
-  - Video Track
-  - VideoTrack
-  - label
-  - metadata
-  - track
-translation_of: Web/API/VideoTrack/label
 ---
 {{APIRef("HTML DOM")}}
 

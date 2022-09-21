@@ -12,7 +12,7 @@ slug: Web/HTML/Global_attributes/hidden
 
 比如说，用 `href` 标签链接到一个带有 `hidden` 标签的区块是不对的。 如果这个区块和这个页面不相干，或者这个区块不适用于这个页面，那没有任何理由需要链接到它。
 
-不过，你还是可以使用 ARIA ` aria-``describedby ` 标签去引用本身是隐藏的一些描述。
+不过，你还是可以使用 ARIA `aria-describedby` 标签去引用本身是隐藏的一些描述。
 
 类似的，你也可以将一个带有 hidden 标签的 canvas 元素作为屏幕外的缓存区域，或者在表单控件中引用一个已经隐藏的表单。
 

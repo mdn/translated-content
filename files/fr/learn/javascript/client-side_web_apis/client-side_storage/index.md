@@ -13,6 +13,7 @@ tags:
 translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 original_slug: Apprendre/JavaScript/Client-side_web_APIs/Client-side_storage
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -305,7 +306,7 @@ Voyons maintenant la première chose à faire, mettre en place la base de donné
     };
     ```
 
-    On écrira tout notre code dans le gestionnaire d'événement `window.onload`, appelé quand l'événement {{event("load")}} de la fenêtre est chargé, pour s'assurer qu'on n'essaiera pas d'utiliser IndexedDB avant que l'application ne soit complètement chargée (ça ne marcherait pas sinon).
+    On écrira tout notre code dans le gestionnaire d'événement `window.onload`, appelé quand l'événement [`load`](/fr//docs/Web/API/Window/load_event) de la fenêtre est chargé, pour s'assurer qu'on n'essaiera pas d'utiliser IndexedDB avant que l'application ne soit complètement chargée (ça ne marcherait pas sinon).
 
 3. À l'intérieur de `window.onload`, ajoutez ce qui suit :
 

@@ -4,6 +4,7 @@ slug: Web/HTTP/Headers/Content-Security-Policy/connect-src
 translation_of: Web/HTTP/Headers/Content-Security-Policy/connect-src
 browser-compat: http.headers.csp.Content-Security-Policy.connect-src
 ---
+
 {{HTTPSidebar}}
 
 La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`connect-src`** restreint les URL qui peuvent être chargées en utilisant des interfaces de programmation. Les API concernées sont&nbsp;:

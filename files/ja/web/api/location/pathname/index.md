@@ -1,13 +1,6 @@
 ---
 title: location.pathname
 slug: Web/API/Location/pathname
-tags:
-  - API
-  - Location
-  - プロパティ
-  - リファレンス
-browser-compat: api.Location.pathname
-translation_of: Web/API/Location/pathname
 ---
 {{ApiRef("Location")}}
 

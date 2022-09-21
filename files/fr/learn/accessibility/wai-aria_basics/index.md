@@ -15,6 +15,7 @@ tags:
 translation_of: Learn/Accessibility/WAI-ARIA_basics
 original_slug: Apprendre/a11y/WAI-ARIA_basics
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}
 
 Après l'article précédent, il peut être difficile de créer des contrôles UI complexes impliquant du code HTML non sémantique et du contenu dynamique mis à jour par JavaScript. WAI-ARIA est une technologie qui peut aider à résoudre de tels problèmes en ajoutant une sémantique supplémentaire que les navigateurs et les technologies d'assistance peuvent reconnaître et utiliser pour informer les utilisateurs de ce qui se passe. Nous montrerons ici comment l'utiliser au niveau de base pour améliorer l'accessibilité.

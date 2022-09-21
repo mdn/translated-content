@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-snap-stop
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`scroll-snap-stop`** définit la façon dont un conteneur de défilement peut « passer outre » certaines positions d'accroche.

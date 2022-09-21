@@ -1,9 +1,6 @@
 ---
 title: 拡張機能の中身
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 ---
 {{AddonSidebar}}
 

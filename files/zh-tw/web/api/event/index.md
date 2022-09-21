@@ -2,6 +2,7 @@
 title: Event
 slug: Web/API/Event
 ---
+
 {{APIRef("DOM")}}
 
 **`Event`** 介面表示了一個在 DOM 物件上所發生的事件。

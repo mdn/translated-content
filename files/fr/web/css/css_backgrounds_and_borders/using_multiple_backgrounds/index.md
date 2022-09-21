@@ -4,6 +4,7 @@ slug: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 original_slug: Web/CSS/CSS_Backgrounds_and_Borders/Utiliser_plusieurs_arrière-plans
 ---
+
 {{CSSRef}}
 
 Avec [CSS](/fr/docs/Web/CSS), on peut appliquer plusieurs arrière-plans à des éléments. Ceux-ci seront empilés les uns sur les autres (le premier de la liste étant le plus «&nbsp;haut&nbsp;» dans la pile et le dernier étant le plus «&nbsp;bas&nbsp;». Seul le dernier arrière-plan peut décrire une couleur.

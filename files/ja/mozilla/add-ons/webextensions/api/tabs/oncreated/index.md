@@ -1,7 +1,6 @@
 ---
 title: tabs.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onCreated
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onCreated
 ---
 {{AddonSidebar()}}
 

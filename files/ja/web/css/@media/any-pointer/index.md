@@ -1,13 +1,6 @@
 ---
 title: any-pointer
 slug: Web/CSS/@media/any-pointer
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - メディア特性
-  - リファレンス
-translation_of: Web/CSS/@media/any-pointer
 ---
 {{CSSRef}}
 

@@ -1,12 +1,6 @@
 ---
 title: <xsl:attribute>
 slug: Web/XSLT/Element/attribute
-tags:
-  - XSLT
-  - リファレンス
-  - 属性
-  - 要素
-translation_of: Web/XSLT/Element/attribute
 ---
 {{ XsltRef() }}
 
@@ -16,7 +10,7 @@ translation_of: Web/XSLT/Element/attribute
 
 ```
 <xsl:attribute name=NAME namespace=URI>
-	TEMPLATE
+  TEMPLATE
 </xsl:attribute>
 ```
 

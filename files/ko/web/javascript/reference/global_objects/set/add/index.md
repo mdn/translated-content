@@ -18,7 +18,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set/add
 
 ## 구문
 
-    mySet.add(value);
+```js
+mySet.add(value);
+```
 
 ### 매개변수
 

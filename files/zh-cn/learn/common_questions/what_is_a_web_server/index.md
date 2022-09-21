@@ -45,7 +45,7 @@ slug: Learn/Common_questions/What_is_a_web_server
 
 ## 自主学习
 
-_还没有可用的资料。请考虑为此投稿 \[[Please, consider contributing](/en-US/docs/MDN/Getting_started)]。_
+_还没有可用的资料。请考虑为此投稿 \[[Please, consider contributing](/zh-CN/docs/MDN/Getting_started)]。_
 
 ## 深入探索
 
@@ -62,7 +62,7 @@ _还没有可用的资料。请考虑为此投稿 \[[Please, consider contributi
 - 会一直拥有一样的 IP 地址（不是所有的 {{Glossary("ISP")}} 都会为家庭线提供一个固定的 IP 地址）
 - 由一个第三方提供者维护
 
-因为所有的这些原因，寻找一个优秀的托管提供者是建立你的网站的一个重要部分。比较不同公司提供的服务并选择一个适合你的需求和预算的服务（服务的价格从免费到每月上万美金不等）。你可以在这篇文章（[article](/en-US/Learn/How_much_does_it_cost#Hosting)）中找到更多的细节。
+因为所有的这些原因，寻找一个优秀的托管提供者是建立你的网站的一个重要部分。比较不同公司提供的服务并选择一个适合你的需求和预算的服务（服务的价格从免费到每月上万美金不等）。你可以在这篇文章（[article](/zh-CN/Learn/How_much_does_it_cost#Hosting)）中找到更多的细节。
 
 一旦你设置好一个网络托管解决方案，你只需要去[上传你的文件到你的 web 服务器](/zh-CN/docs/Learn/Common_questions/Upload_files_to_a_web_server)。
 
@@ -77,7 +77,7 @@ _还没有可用的资料。请考虑为此投稿 \[[Please, consider contributi
 - 无状态
   - : 无论是服务器还是客户都不会记住之前的交流。举个例子，仅依靠 HTTP，一个服务器不能记住你输入的密码或者你正处于业务中的哪一步。你需要一个应用服务器来进行这样的工作。（我们会在日后的文章中涵盖这类的技术。）
 
-HTTP 为客户和服务器间的如何沟通提供清晰的规则。我们会在日后的一篇[技术文章](/en-US/docs/Web/HTTP)中覆盖 HTTP 本身。就目前而言，只需要知道这几点：
+HTTP 为客户和服务器间的如何沟通提供清晰的规则。我们会在日后的一篇[技术文章](/zh-CN/docs/Web/HTTP)中覆盖 HTTP 本身。就目前而言，只需要知道这几点：
 
 - 只有*用户*可以制定 HTTP 请求，然后只会发送到*服务器*。服务器只能响应客户端的 HTTP 请求。
 - 当通过 HTTP 请求一个文件时，客户必须提供这个文件的{{Glossary("URL")}}。

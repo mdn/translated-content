@@ -2,6 +2,7 @@
 title: Geolocation
 slug: Web/API/Geolocation
 ---
+
 {{APIRef("Geolocation API")}}
 
 **`Geolocation`** 介面代表一個物件可以透過你的網頁程式去獲得你的裝置位置。這個介面提供了網站或應用程式根據使用者的位置去客製化呈現的內容。

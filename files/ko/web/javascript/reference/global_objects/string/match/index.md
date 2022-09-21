@@ -9,7 +9,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/match
 
 ## 문법
 
-    str.match(regexp)
+```js
+str.match(regexp)
+```
 
 ### 매개변수
 

@@ -41,8 +41,8 @@ slug: Web/SVG/Element/stop
 
 ### 全局属性
 
-- [核心属性](/en-US/docs/Web/SVG/Attribute#Core) »
-- [外观属性](/en-US/docs/Web/SVG/Attribute#Presentation) »
+- [核心属性](/zh-CN/docs/Web/SVG/Attribute#Core) »
+- [外观属性](/zh-CN/docs/Web/SVG/Attribute#Presentation) »
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 
@@ -54,7 +54,7 @@ slug: Web/SVG/Element/stop
 
 ## DOM 接口
 
-该元素实现了[`SVGStopElement`](/en-US/docs/Web/API/SVGStopElement)接口。
+该元素实现了[`SVGStopElement`](/zh-CN/docs/Web/API/SVGStopElement)接口。
 
 ## 浏览器兼容性
 

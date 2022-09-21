@@ -9,6 +9,7 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/uniform
 ---
+
 {{APIRef("WebGL")}}
 
 Les méthodes **`WebGLRenderingContext.uniform[1234][fi][v]()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) indiquent les valeurs des variables uniform.
@@ -64,14 +65,11 @@ gl.uniform1f(u_alpha, 0.8);
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                               | Commentaire               |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------------- |
-| {{SpecName('WebGL', "#5.14.10", "uniform")}}                     | {{Spec2('WebGL')}}             | Définition initiale.      |
-| {{SpecName('OpenGL ES 2.0', "glUniform.xml", "glUniform")}} | {{Spec2('OpenGL ES 2.0')}} | Page man de l'API OpenGL. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.uniform1f")}}
+{{Compat}}
 
 ## Voir aussi
 

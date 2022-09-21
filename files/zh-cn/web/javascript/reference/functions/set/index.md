@@ -60,7 +60,7 @@ console.log(language.log); // ['EN', 'FA']
 
 ### 用 `delete` 操作符移除一个 setter
 
-我们可以使用[`delete`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete)操作符移除 setter。
+我们可以使用[`delete`](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)操作符移除 setter。
 
 ```js
 delete language.current;
@@ -109,4 +109,4 @@ console.log(obj.baz); // "baz"
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.defineGetter", "__defineGetter__")}}
 - {{jsxref("Object.defineSetter", "__defineSetter__")}}
-- [Defining Getters and Setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters) in JavaScript Guide
+- [Defining Getters and Setters](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters) in JavaScript Guide

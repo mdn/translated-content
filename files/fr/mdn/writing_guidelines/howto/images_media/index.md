@@ -4,6 +4,7 @@ slug: MDN/Writing_guidelines/Howto/Images_media
 translation_of: MDN/Guidelines/Video
 original_slug: MDN/Guidelines/Video
 ---
+
 {{MDNSidebar}}
 
 MDN n'est pas un site contenant beaucoup de vidéos. Toutefois, certaines documentations sont propices à ce type de média. Dans cet article, nous verrons quand inclure des vidéos sur MDN et quelques conseils permettant de créer des vidéos simples et efficaces.

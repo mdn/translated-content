@@ -16,9 +16,11 @@ original_slug: Web/API/GlobalEventHandlers/onchange
 
 ## 구문
 
-    target.onchange = functionRef;
+```js
+target.onchange = functionRef;
+```
 
-functionRef는 `null` 또는 이벤트 핸들러를 지정하는 [JavaScript function](/ko/docs/Web/JavaScript/Reference/Functions "/en-US/docs/JavaScript/Reference/Functions_and_function_scope") 함수 중 하나여야 합니다.
+functionRef는 `null` 또는 이벤트 핸들러를 지정하는 [JavaScript function](/ko/docs/Web/JavaScript/Reference/Functions) 함수 중 하나여야 합니다.
 
 ## 예제
 

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/font-kerning
 ---
+
 {{CSSRef}}
 
 La propriété **`font-kerning`** contrôle le crénage de la police ; c'est-à-dire l'espace créé entre les lettres. L'information de crénage est stockée dans la police et si la police est *bien crénée*, cette caractéristique permet aux caractères, quels qu'ils soient, d'être espacés de manière semblable.![Exemple pour font-kerning](font-kerning.png)

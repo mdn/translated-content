@@ -1,12 +1,6 @@
 ---
 title: Promise
 slug: Glossary/Promise
-tags:
-  - Glossary
-  - Promise
-  - Promises
-  - asynchronous
-translation_of: Glossary/Promise
 ---
 **{{jsxref("Promise")}}** は、ある {{Glossary("function", "関数")}} が返す、呼び出された時点でまだ完了していない処理の結果をあらわす {{Glossary("object", "オブジェクト")}} です。その名のとおり、関数が `Promise` オブジェクトを経由して、最終的に何らかの結果を返すことを*約束*(Promise は約束の意味)するわけです。
 

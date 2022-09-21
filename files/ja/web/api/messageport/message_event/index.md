@@ -1,13 +1,6 @@
 ---
 title: MessagePort.onmessage
 slug: Web/API/MessagePort/message_event
-tags:
-  - API
-  - Channel messaging
-  - MessagePort
-  - Property
-  - Reference
-translation_of: Web/API/MessagePort/onmessage
 original_slug: Web/API/MessagePort/onmessage
 ---
 {{APIRef("HTML DOM")}}

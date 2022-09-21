@@ -2,6 +2,7 @@
 title: FileReader
 slug: Web/API/FileReader
 ---
+
 {{APIRef("File API")}}
 
 藉由 `FileReader` 物件，Web 應用程式能以非同步（asynchronously）方式讀取儲存在用戶端的檔案（或原始資料暫存）內容，可以使用 {{domxref("File")}} 或 {{domxref("Blob")}} 物件指定要讀取的資料。

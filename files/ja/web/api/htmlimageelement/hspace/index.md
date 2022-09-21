@@ -1,26 +1,6 @@
 ---
 title: HTMLImageElement.hspace
 slug: Web/API/HTMLImageElement/hspace
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Horizontal
-  - 画像
-  - Layout
-  - プロパティ
-  - リファレンス
-  - hspace
-  - img
-  - left
-  - margin
-  - right
-  - spacing
-  - 非推奨
-browser-compat: api.HTMLImageElement.hspace
-translation_of: Web/API/HTMLImageElement/hspace
 ---
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 

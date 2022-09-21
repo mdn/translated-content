@@ -35,7 +35,7 @@ For elements that normally take user input, such as a {{HTMLElement("textarea")}
 - enabled
   - : The element accepts user input. For textboxes, this is the default behavior.
 - disabled
-  - : The element does not accept user input. However, this is not the same as setting {{XULAttr("disabled")}} to true, in that the element is drawn normally.
+  - : The element does not accept user input. However, this is not the same as setting `disabled` to true, in that the element is drawn normally.
 
 ### Formal syntax
 

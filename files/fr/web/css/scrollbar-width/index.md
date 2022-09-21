@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/scrollbar-width
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`scrollbar-width`** permet à un auteur de définir l'épaisseur maximale à utiliser pour la barre de défilement si celle-ci est affichée.

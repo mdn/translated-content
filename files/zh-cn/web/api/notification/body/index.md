@@ -42,4 +42,4 @@ function spawnNotification(theBody,theIcon,theTitle) {
 
 ## 相关链接
 
-- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)

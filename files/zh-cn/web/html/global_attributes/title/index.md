@@ -4,7 +4,7 @@ slug: Web/HTML/Global_attributes/title
 ---
 {{HTMLSidebar("Global_attributes")}}
 
-**title** [全局属性](/en-US/docs/Web/HTML/Global_attributes) 包含了表示咨询信息文本，和它属于的元素相关。这个信息通常存在，但绝不必要，作为提示信息展示给用户。一些典型用例：
+**title** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 包含了表示咨询信息文本，和它属于的元素相关。这个信息通常存在，但绝不必要，作为提示信息展示给用户。一些典型用例：
 
 - 链接：被链接文档的标题或描述
 - 媒体元素，例如图像：描述或关联信息
@@ -34,5 +34,5 @@ multiline title">example</abbr>.</p>
 
 ## 另见
 
-- 所有[全局属性](/en-US/docs/Web/HTML/Global_attributes)
+- 所有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
 - 反映这个属性的 {{domxref("HTMLElement.title")}}

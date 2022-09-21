@@ -1,13 +1,6 @@
 ---
 title: HTMLShadowElement.getDistributedNodes()
 slug: Web/API/HTMLShadowElement/getDistributedNodes
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - Web Components
-translation_of: Web/API/HTMLShadowElement/getDistributedNodes
 ---
 {{APIRef("Web Components")}}
 

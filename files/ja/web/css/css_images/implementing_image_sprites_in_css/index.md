@@ -1,16 +1,6 @@
 ---
 title: CSS での画像スプライトの実装
 slug: Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS
-tags:
-  - 上級者
-  - CSS
-  - CSS 画像
-  - グラフィック
-  - ガイド
-  - NeedsContent
-  - スプライト
-  - ウェブ
-translation_of: Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS
 ---
 {{CSSRef}}
 

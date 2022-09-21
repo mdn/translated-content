@@ -1,11 +1,6 @@
 ---
 title: InputEvent
 slug: Web/API/InputEvent
-tags:
-  - API
-  - DOM
-  - Interface
-translation_of: Web/API/InputEvent
 ---
 {{APIRef("DOM Events")}}
 

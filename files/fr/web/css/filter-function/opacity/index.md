@@ -5,6 +5,7 @@ translation_of: Web/CSS/filter-function/opacity()
 original_slug: Web/CSS/filter-function/opacity()
 browser-compat: css.types.filter-function.opacity
 ---
+
 {{CSSRef}}
 
 La fonction CSS **`opacity()`** permet de modifier la transparence de l'image. Le résultat obtenu par cette fonction est une valeur [`<filter-function>`](/fr/docs/Web/CSS/filter-function).

@@ -1,14 +1,6 @@
 ---
 title: 'CookieStore: change event'
 slug: Web/API/CookieStore/change_event
-tags:
-  - API
-  - Reference
-  - Event
-  - change
-  - onchange
-  - CookieStore
-browser-compat: api.CookieStore.change_event
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
 

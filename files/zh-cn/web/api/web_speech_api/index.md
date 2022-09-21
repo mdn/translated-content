@@ -13,7 +13,7 @@ Web Speech API 使 Web 应用能够处理语音数据，该项 API 包含以下�
 - 语音识别通过 {{domxref("SpeechRecognition")}} 接口进行访问，它提供了识别从音频输入（通常是设备默认的语音识别服务）中识别语音情景的能力。一般来说，你将使用该接口的构造函数来构造一个新的 {{domxref("SpeechRecognition")}} 对象，该对象包含了一系列有效的对象处理函数来检测识别设备麦克风中的语音输入。{{domxref("SpeechGrammar")}} 接口则表示了你应用中想要识别的特定文法。文法则通过 [JSpeech Grammar Format](http://www.w3.org/TR/jsgf/) (**JSGF**.) 来定义。
 - 语音合成通过 {{domxref("SpeechSynthesis")}} 接口进行访问，它提供了文字到语音（TTS）的能力，这使得程序能够读出它们的文字内容（通常使用设备默认的语音合成器）。不同的声音类类型通过 {{domxref("SpeechSynthesisVoice")}} 对象进行表示，不同部分的文字则由 {{domxref("SpeechSynthesisUtterance")}} 对象来表示。你可以将它们传递给 {{domxref("SpeechSynthesis.speak()")}} 方法来产生语音。
 
-更多关于这些特性的细节请参考 [Using the Web Speech API](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API)。
+更多关于这些特性的细节请参考 [Using the Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API)。
 
 ## Web Speech 的 API 接口
 
@@ -65,7 +65,7 @@ GitHub 上的 [Web Speech API repo](https://github.com/mdn/web-speech-api/) 的�
 
 ## 相关链接
 
-- [Using the Web Speech API](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API)
+- [Using the Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API)
 - [SitePoint article](http://www.sitepoint.com/talking-web-pages-and-the-speech-synthesis-api/)
 - [HTML5Rocks article](http://updates.html5rocks.com/2014/01/Web-apps-that-talk---Introduction-to-the-Speech-Synthesis-API)
 - [Demo](http://aurelio.audero.it/demo/speech-synthesis-api-demo.html) \[aurelio.audero.it]

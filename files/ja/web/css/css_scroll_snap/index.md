@@ -1,13 +1,6 @@
 ---
 title: CSS スクロールスナップ
 slug: Web/CSS/CSS_Scroll_Snap
-tags:
-  - CSS
-  - CSS スクロールスナップ
-  - Guide
-  - 概要
-  - Reference
-translation_of: Web/CSS/CSS_Scroll_Snap
 ---
 {{CSSRef}}
 

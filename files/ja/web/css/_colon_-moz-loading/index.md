@@ -1,15 +1,6 @@
 ---
 title: ':-moz-loading'
 slug: Web/CSS/:-moz-loading
-tags:
-  - CSS
-  - CSS:Mozilla 拡張
-  - NeedsCompatTable
-  - 標準外
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-translation_of: Web/CSS/:-moz-loading
 ---
 {{CSSRef}}{{Non-standard_header}}
 

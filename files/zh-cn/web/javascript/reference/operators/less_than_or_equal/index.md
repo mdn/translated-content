@@ -16,7 +16,7 @@ The less than or equal operator (`<=`) returns `true` if the left operand is les
 
 ## Description
 
-The operands are compared using the [Abstract Relational Comparison](https://tc39.es/ecma262/#sec-abstract-relational-comparison) algorithm. See the documentation for the [Less than](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than) operator for a summary of this algorithm.
+The operands are compared using the [Abstract Relational Comparison](https://tc39.es/ecma262/#sec-abstract-relational-comparison) algorithm. See the documentation for the [Less than](/zh-CN/docs/Web/JavaScript/Reference/Operators/Less_than) operator for a summary of this algorithm.
 
 ## Examples
 
@@ -85,6 +85,6 @@ console.log(NaN <= 3);       // false
 
 ## See also
 
-- [Greater than operator](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than)
-- [Greater than or equal operator](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
-- [Less than operator](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than)
+- [Greater than operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Greater_than)
+- [Greater than or equal operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
+- [Less than operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Less_than)

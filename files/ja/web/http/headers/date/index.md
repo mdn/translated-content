@@ -1,15 +1,6 @@
 ---
 title: Date
 slug: Web/HTTP/Headers/Date
-tags:
-  - General Header
-  - HTTP
-  - Reference
-  - header
-  - リファレンス
-  - 一般ヘッダー
-  - 汎用ヘッダー
-translation_of: Web/HTTP/Headers/Date
 ---
 {{HTTPSidebar}}
 

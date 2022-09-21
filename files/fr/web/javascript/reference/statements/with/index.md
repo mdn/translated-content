@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/with
 original_slug: Web/JavaScript/Reference/Instructions/with
 ---
+
 {{jsSidebar("Statements")}}
 
 > **Attention :** Il n'est pas recommandé d'utiliser l'instruction `with`. En effet, elle est parfois source de problèmes de compatibilité ou de bogues. Se référer au paragraphe « Inconvénient : l'ambiguïté » de la section « Description » pour plus de détails.

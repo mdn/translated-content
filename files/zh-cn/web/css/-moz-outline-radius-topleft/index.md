@@ -4,7 +4,7 @@ slug: Web/CSS/-moz-outline-radius-topleft
 ---
 {{Non-standard_header}}{{CSSRef}}
 
-在 Mozilla 应用中， **`-moz-outline-radius-topleft`** [CSS](/en-US/docs/Web/CSS) 属性用于设置元素的左上角{{cssxref("outline")}} 圆角。
+在 Mozilla 应用中， **`-moz-outline-radius-topleft`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置元素的左上角{{cssxref("outline")}} 圆角。
 
 {{cssinfo}}
 

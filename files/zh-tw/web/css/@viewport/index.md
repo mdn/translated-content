@@ -2,11 +2,12 @@
 title: '@viewport'
 slug: Web/CSS/@viewport
 ---
+
 {{CSSRef}}
 
 ## Summary
 
-The** `@viewport`** [CSS](/en/CSS) [at-rule](/en/CSS/At-rule) contains a set of nested descriptors in a CSS block that is delimited by curly braces. These descriptors control viewport settings, primarily on mobile devices.
+The** `@viewport`** [CSS](/zh-TW/CSS) [at-rule](/zh-TW/CSS/At-rule) contains a set of nested descriptors in a CSS block that is delimited by curly braces. These descriptors control viewport settings, primarily on mobile devices.
 
 ## Syntax
 

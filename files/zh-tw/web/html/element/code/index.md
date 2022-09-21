@@ -2,6 +2,7 @@
 title: <code>
 slug: Web/HTML/Element/code
 ---
+
 _HTML Code 元素_（**\<code>**）表現出電腦程式碼的片段。通常，它會由瀏覽器預設的 monospace 字體顯示出來。
 
 | [內容分類](/zh-TW/docs/HTML/Content_categories) | [流內容](/zh-TW/docs/HTML/Content_categories#Flow_content)、[段落式内容](/zh-TW/docs/HTML/Content_categories#Phrasing_content)、捫及內容         |

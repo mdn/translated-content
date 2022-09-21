@@ -1,13 +1,6 @@
 ---
 title: Map
 slug: Web/JavaScript/Reference/Global_Objects/Map
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Map
 ---
 {{JSRef}}
 

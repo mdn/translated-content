@@ -237,4 +237,4 @@ function logData() {
 - [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest)
 - [Using XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - [AJAX](/zh-CN/docs/AJAX)
-- [`navigator.sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon)
+- [`navigator.sendBeacon`](/zh-CN/docs/Web/API/Navigator/sendBeacon)

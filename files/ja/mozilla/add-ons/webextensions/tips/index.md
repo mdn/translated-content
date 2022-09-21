@@ -1,7 +1,6 @@
 ---
 title: Tips and Tricks
 slug: Mozilla/Add-ons/WebExtensions/Tips
-translation_of: Mozilla/Add-ons/WebExtensions/Tips
 ---
 {{AddonSidebar}}
 

@@ -1,13 +1,6 @@
 ---
 title: CSS レイアウト料理帳
 slug: Web/CSS/Layout_cookbook
-tags:
-  - CSS
-  - ガイド
-  - レイアウト
-  - 料理帳
-  - レシピ
-translation_of: Web/CSS/Layout_cookbook
 ---
 {{CSSRef}}
 

@@ -3,6 +3,7 @@ title: AJAX
 slug: Web/Guide/AJAX
 translation_of: Web/Guide/AJAX
 ---
+
 ## Démarrer avec AJAX
 
 **AJAX (<i lang="en">Asynchronous JavaScript + XML</i>)** n'est pas une technologie en soi, mais un terme désignant une «&nbsp;nouvelle&nbsp;» approche utilisant un ensemble de technologies existantes, dont&nbsp;: [HTML](/fr/docs/Web/HTML) ou [XHTML](/fr/docs/Glossary/XHTML), [CSS](/fr/docs/Web/CSS), [JavaScript](/fr/docs/Web/JavaScript), [DOM](/fr/docs/Web/API/Document_Object_Model), [XML](/fr/docs/Web/XML), [XSLT](/fr/docs/Web/XSLT), et surtout [l'objet `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest). Lorsque ces technologies sont combinées dans le modèle AJAX, les applications web sont capables de réaliser des mises à jour rapides et incrémentales de l'interface utilisateur sans devoir recharger la page entière dans le navigateur. Les applications fonctionnent plus rapidement et sont plus réactives aux actions de l'utilisatrice ou de l'utilisateur.

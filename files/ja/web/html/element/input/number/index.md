@@ -1,17 +1,6 @@
 ---
 title: <input type="number">
 slug: Web/HTML/Element/input/number
-tags:
-  - 要素
-  - フォーム
-  - HTML
-  - HTML フォーム
-  - Input
-  - 入力要素
-  - 入力型
-  - Number
-  - リファレンス
-translation_of: Web/HTML/Element/input/number
 ---
 
 {{HTMLRef("Input_types")}}

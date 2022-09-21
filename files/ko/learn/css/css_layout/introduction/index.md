@@ -1,20 +1,6 @@
 ---
 title: CSS 레이아웃 입문서
 slug: Learn/CSS/CSS_layout/Introduction
-tags:
-  - 가변상자
-  - 격자
-  - 글
-  - 대열
-  - 부동체
-  - 씨에스에스
-  - 위치잡기
-  - 입문서
-  - 조판
-  - 초보용
-  - 테이블
-  - 학습
-translation_of: Learn/CSS/CSS_layout/Introduction
 ---
 {{LearnSidebar}}{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
 

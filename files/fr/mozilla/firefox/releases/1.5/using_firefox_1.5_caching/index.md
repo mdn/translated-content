@@ -10,6 +10,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 original_slug: Utilisation_du_cache_de_Firefox_1.5
 ---
+
 {{FirefoxSidebar}}
 
 ### Introduction

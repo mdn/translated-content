@@ -1,13 +1,6 @@
 ---
 title: 厳密不等価 (!==)
 slug: Web/JavaScript/Reference/Operators/Strict_inequality
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.strict_inequality
-translation_of: Web/JavaScript/Reference/Operators/Strict_inequality
 ---
 {{jsSidebar("Operators")}}
 

@@ -1,11 +1,6 @@
 ---
 title: Firefox の ICC カラーコレクション
 slug: Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox
-tags:
-  - Firefox
-  - Firefox 3
-  - Firefox 3.5
-translation_of: Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox
 ---
 {{FirefoxSidebar}}
 

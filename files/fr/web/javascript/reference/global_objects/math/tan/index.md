@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/tan
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/tan
 ---
+
 {{JSRef}}
 
 La fonction **`Math.tan()`** renvoie la tangente d'un nombre exprimant un angle en radians.

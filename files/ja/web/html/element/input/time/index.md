@@ -1,19 +1,6 @@
 ---
 title: <input type="time">
 slug: Web/HTML/Element/input/time
-tags:
-  - 要素
-  - フォーム
-  - HTML
-  - HTML 入力型
-  - HTML フォーム
-  - HTML 入力
-  - Input
-  - 入力要素
-  - 入力型
-  - リファレンス
-  - Time
-translation_of: Web/HTML/Element/input/time
 ---
 
 {{HTMLRef("Input_types")}}

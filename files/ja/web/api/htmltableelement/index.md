@@ -1,14 +1,6 @@
 ---
 title: HTMLTableElement
 slug: Web/API/HTMLTableElement
-page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - リファレンス
-browser-compat: api.HTMLTableElement
-translation_of: Web/API/HTMLTableElement
 ---
 {{APIRef("HTML DOM")}}
 

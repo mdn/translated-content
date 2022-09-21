@@ -1,16 +1,6 @@
 ---
 title: コンテンツセキュリティポリシー (CSP)
 slug: Web/HTTP/CSP
-tags:
-  - CSP
-  - Content Security Policy
-  - Example
-  - Guide
-  - access
-  - コンテンツセキュリティポリシー
-  - セキュリティ
-translation_of: Web/HTTP/CSP
-browser-compat: http.headers.csp
 ---
 {{HTTPSidebar}}
 
