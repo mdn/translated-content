@@ -2,6 +2,7 @@
 title: stroke-linejoin
 slug: Web/SVG/Attribute/stroke-linejoin
 ---
+
 {{SVGRef}}
 
 **`stroke-linejoin`** 属性指明路径的转角处使用的形状或者绘制的基础形状。

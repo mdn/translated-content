@@ -3,6 +3,7 @@ title: HTTP Strict Transport Security
 slug: Web/HTTP/Headers/Strict-Transport-Security
 original_slug: Web/HTTP/HTTP_Strict_Transport_Security
 ---
+
 {{HTTPSidebar}}
 
 **`HTTP-Strict-Transport-Security`**（通常简称为 {{Glossary("HSTS")}}）响应标头用来通知浏览器应该只通过 HTTPS 访问该站点，并且以后使用 HTTP 访问该站点的所有尝试都应自动转换为 HTTPS。

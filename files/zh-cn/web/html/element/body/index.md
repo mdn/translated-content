@@ -2,6 +2,7 @@
 title: <body>：文档主体元素
 slug: Web/HTML/Element/body
 ---
+
 {{HTMLRef}}
 
 **HTML `body` 元素**表示文档的内容。{{domxref("document.body")}} 属性提供了可以轻松访问文档的 body 元素的脚本。

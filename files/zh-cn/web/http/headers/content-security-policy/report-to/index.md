@@ -2,6 +2,7 @@
 title: report-to
 slug: Web/HTTP/Headers/Content-Security-Policy/report-to
 ---
+
 _`Report-To`_ HTTP 响应头部指示客户端存储特定域名的报告端点。
 
 ```plain

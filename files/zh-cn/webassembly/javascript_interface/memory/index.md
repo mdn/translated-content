@@ -3,6 +3,7 @@ title: WebAssembly.Memory()
 slug: WebAssembly/JavaScript_interface/Memory
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory
 ---
+
 {{JSRef}}
 
 **`WebAssembly.Memory()`** 构造函数创建一个新的 `Memory` 对象。该对象的 {{jsxref("WebAssembly/Memory/buffer","buffer")}} 属性是一个可调整大小的 [ArrayBuffer](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) ，其内存储的是 WebAssembly `实例` 所访问内存的原始字节码。

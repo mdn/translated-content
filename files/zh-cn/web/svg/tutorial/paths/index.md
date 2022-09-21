@@ -2,6 +2,7 @@
 title: 路径
 slug: Web/SVG/Tutorial/Paths
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
 
 如上一章所说，[`<path>`](/zh-CN/docs/Web/SVG/Element/path)元素是 SVG[基本形状](/zh-CN/docs/Web/SVG/Tutorial/Basic_Shapes)中最强大的一个。 你可以用它创建线条，曲线，弧形等等。

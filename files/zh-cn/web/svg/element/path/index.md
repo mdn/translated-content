@@ -2,6 +2,7 @@
 title: path
 slug: Web/SVG/Element/path
 ---
+
 {{SVGRef}}
 
 **[起步](/zh-CN/docs/Web/SVG/Tutorial/Paths)**

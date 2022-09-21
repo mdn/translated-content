@@ -2,6 +2,7 @@
 title: 编译 Rust 为 WebAssembly
 slug: WebAssembly/Rust_to_wasm
 ---
+
 {{WebAssemblySidebar}}
 
 如果你写了一些 Rust 代码，你可以把它编译成 WebAssembly！这份教程将带你编译 Rust 项目为 wasm 并在一个现存的 web 应用中使用它。

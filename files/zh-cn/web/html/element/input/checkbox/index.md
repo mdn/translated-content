@@ -2,6 +2,7 @@
 title: <input type="checkbox">
 slug: Web/HTML/Element/Input/checkbox
 ---
+
 HTML input 元素 **`<input type="checkbox">`** 允许你为表单中（或不在表单中）的提交项选择一个单一值。
 
 > **备注：** 若表单提交时，checkbox 未勾选，则提交的值并非为 value=unchecked；此时的值不会被提交到服务器。

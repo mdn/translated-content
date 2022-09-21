@@ -2,6 +2,7 @@
 title: Access-Control-Allow-Credentials
 slug: Web/HTTP/Headers/Access-Control-Allow-Credentials
 ---
+
 {{HTTPSidebar}}
 
 **`Access-Control-Allow-Credentials`** 响应头用于在请求要求包含 credentials（{{domxref("Request.credentials")}} 的值为 `include`）时，告知浏览器是否可以将对请求的响应暴露给前端 JavaScript 代码。
