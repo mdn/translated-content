@@ -2,6 +2,7 @@
 title: HTMLTemplateElement
 slug: Web/API/HTMLTemplateElement
 ---
+
 {{APIRef("Web Components")}}
 
 可以使用**`HTMLTemplateElement`** 接口来访问 HTML {{HTMLElement("template")}}元素的内容。

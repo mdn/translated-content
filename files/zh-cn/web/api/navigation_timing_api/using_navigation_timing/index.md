@@ -2,6 +2,7 @@
 title: Using Navigation Timing
 slug: Web/API/Navigation_timing_API/Using_Navigation_Timing
 ---
+
 {{DefaultAPISidebar("Navigation Timing")}}
 
 Navigation Timing 接口使你可以轻松获取详细且高度准确的计时信息，以帮助从你的网站代码或资源隔离出性能问题。与其他工具或库不同，Navigation Timing 接口使你可以收集这些只有浏览器才能提供的信息，其准确性要比其他技术大大提高。它还具有能够提供用户所感知的计时信息而不是与用户体验无关的数据的优势。

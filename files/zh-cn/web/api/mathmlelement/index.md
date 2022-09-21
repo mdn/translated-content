@@ -2,6 +2,7 @@
 title: MathMLElement
 slug: Web/API/MathMLElement
 ---
+
 {{APIRef("MathML")}}
 
 **`MathMLElement`** 接口表示任意 [MathML](/zh-CN/docs/Web/MathML) 元素。

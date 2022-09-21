@@ -2,6 +2,7 @@
 title: 'HTMLMediaElement: play event'
 slug: Web/API/HTMLMediaElement/play_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 当 `paused` 属性由 `true` 转换为 `false` 时触发 `play` 事件，事件触发原因一般为 `play()` 方法调用，或者 `autoplay` 标签设置。

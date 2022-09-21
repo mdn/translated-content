@@ -2,6 +2,7 @@
 title: HTMLElement.outerText
 slug: Web/API/HTMLElement/outerText
 ---
+
 {{APIRef("DOM")}}
 
 {{ Non-standard_header() }}

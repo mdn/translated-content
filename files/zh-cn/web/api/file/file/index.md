@@ -2,6 +2,7 @@
 title: File.File()
 slug: Web/API/File/File
 ---
+
 {{APIRef("File")}}
 
 **`File()`** 构造器创建新的 {{domxref("File")}} 对象实例。

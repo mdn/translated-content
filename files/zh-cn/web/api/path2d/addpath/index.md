@@ -2,6 +2,7 @@
 title: Path2D.addPath()
 slug: Web/API/Path2D/addPath
 ---
+
 {{APIRef("Canvas API")}}
 
 **`Path2D.addPath()`** 是 Canvas 2D API 根据指定路径变量添加路径的方法。

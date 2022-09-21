@@ -2,6 +2,7 @@
 title: HTMLMediaElement.audioTracks
 slug: Web/API/HTMLMediaElement/audioTracks
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.audioTracks`** 获得可用音频轨道的数量

@@ -2,6 +2,7 @@
 title: srcObject
 slug: Web/API/HTMLMediaElement/srcObject
 ---
+
 {{SeeCompatTable}}{{APIRef("")}}
 
 {{domxref("HTMLMediaElement")}} 接口的 **`srcObject`** 属性设定或返回一个对象，这个对象提供了一个与{{domxref("HTMLMediaElement")}}关联的媒体源，这个对象通常是 {{domxref("MediaStream")}} ，但根据规范可以是 {{domxref("MediaSource")}}， {{domxref("Blob")}} 或者 {{domxref("File")}}。

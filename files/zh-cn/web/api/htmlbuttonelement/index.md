@@ -2,6 +2,7 @@
 title: HTMLButtonElement
 slug: Web/API/HTMLButtonElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLButtonElement`** 接口提供操作 button 元素 （除了 {{HTMLElement("button")}} 对象，这个接口对继承了该对象的元素也有效）的属性和方法。

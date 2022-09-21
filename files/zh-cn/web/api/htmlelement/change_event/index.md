@@ -2,6 +2,7 @@
 title: change
 slug: Web/API/HTMLElement/change_event
 ---
+
 {{APIRef}}
 
 当用户更改{{HTMLElement("input")}}、{{HTMLElement("select")}}和{{HTMLElement("textarea")}} 元素的值并提交这个更改时，`change` 事件在这些元素上触发。和 {{domxref("HTMLElement/input_event", "input")}} 事件不一样，`change` 事件并不是每次元素的 `value` 改变时都会触发。

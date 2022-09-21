@@ -2,6 +2,7 @@
 title: 'Location: search'
 slug: Web/API/Location/search
 ---
+
 {{ApiRef("Location")}}
 
 {{domxref("Location")}} 接口的 **`search`** 属性会返回一段 {{domxref("USVString")}}，其中包含一个 URL 标识中的 `'?'` 以及跟随其后的一串 URL 查询参数。

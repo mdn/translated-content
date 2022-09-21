@@ -2,6 +2,7 @@
 title: HTMLElement.isContentEditable
 slug: Web/API/HTMLElement/isContentEditable
 ---
+
 {{ APIRef("HTML DOM") }}
 
 ## 概述

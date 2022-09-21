@@ -2,6 +2,7 @@
 title: MediaQueryListEvent()
 slug: Web/API/MediaQueryListEvent/MediaQueryListEvent
 ---
+
 {{APIRef("CSSOM")}}
 
 **`MediaQueryListEvent()`** 构造函数用于创建一个新的 {{DOMxRef("MediaQueryListEvent")}} 对象。

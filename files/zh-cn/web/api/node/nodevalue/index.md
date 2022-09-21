@@ -2,6 +2,7 @@
 title: Node.nodeValue
 slug: Web/API/Node/nodeValue
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Node")}} 的 **`nodeValue`** 属性返回或设置当前节点的值。

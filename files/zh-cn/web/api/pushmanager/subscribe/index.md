@@ -2,6 +2,7 @@
 title: PushManager.subscribe()
 slug: Web/API/PushManager/subscribe
 ---
+
 {{SeeCompatTable}}{{ApiRef("Push API")}}
 
 {{domxref("PushManager")}} 的 **`subscribe()`** 接口订阅了一个推送服务。
