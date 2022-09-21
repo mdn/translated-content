@@ -2,6 +2,7 @@
 title: 使用 Phaser 开发 2D breakout game
 slug: Games/Tutorials/2D_breakout_game_Phaser
 ---
+
 {{GamesSidebar}}
 
 {{Next("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework")}}

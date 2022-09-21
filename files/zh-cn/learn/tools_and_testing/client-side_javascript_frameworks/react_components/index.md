@@ -2,6 +2,7 @@
 title: 组件化我们的 React App
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 此时，我们的 App 是一个单体。在我们能使用它之前，我们需要把它分解成可管理的、可描述的组件。React 对于什么是组件和什么不是组件并没有任何硬性规定，这完全取决于你！在这篇文章，我们将向你展示一种合理分解 App 的方法。

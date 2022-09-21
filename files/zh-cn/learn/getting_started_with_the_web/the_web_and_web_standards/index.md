@@ -2,6 +2,7 @@
 title: Web 和 Web 标准
 slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
 ---
+
 {{learnsidebar}}
 
 这篇文章提供了一些有用的 Web 背景知识——它是如何产生的，什么是 Web 标准技术，它们是如何协同工作的，为什么“Web 开发人员”是一个很好的职业选择，以及您将在本课程中学习哪些最佳做法。

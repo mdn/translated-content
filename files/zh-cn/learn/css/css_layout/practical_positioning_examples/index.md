@@ -2,6 +2,7 @@
 title: 定位实例练习
 slug: Learn/CSS/CSS_layout/Practical_positioning_examples
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
 
 掌握了上一篇文章中的定位的基础知识，我们将着眼于实现一些现实中的例子，来演示你能用定位来做什么。
