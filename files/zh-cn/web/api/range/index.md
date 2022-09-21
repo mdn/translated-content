@@ -2,6 +2,7 @@
 title: Range
 slug: Web/API/Range
 ---
+
 {{ ApiRef() }}
 
 **`Range`** 接口表示一个包含节点与文本节点的一部分的文档片段。

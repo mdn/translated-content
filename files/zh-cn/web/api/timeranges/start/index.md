@@ -2,6 +2,7 @@
 title: TimeRanges.start()
 slug: Web/API/TimeRanges/start
 ---
+
 {{APIRef("DOM")}}
 
 返回指定时间范围的开始偏移量。

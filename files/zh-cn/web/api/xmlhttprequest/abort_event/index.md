@@ -2,6 +2,7 @@
 title: 'XMLHttpRequest: abort event'
 slug: Web/API/XMLHttpRequest/abort_event
 ---
+
 {{APIRef}}当一个请求终止时 `abort` 事件被触发，比如程序执行 {{domxref("XMLHttpRequest.abort()")}}。
 
 <table class="properties">

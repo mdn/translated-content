@@ -2,6 +2,7 @@
 title: Range.intersectsNode()
 slug: Web/API/Range/intersectsNode
 ---
+
 {{ApiRef("DOM")}} {{SeeCompatTable}}
 
 **`Range.intersectsNode()` **方法返回一个布尔值，表明其给定的 {{domxref("Node")}} 节点是否与{{domxref("Range")}}的范围相交

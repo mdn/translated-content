@@ -2,6 +2,7 @@
 title: 信令与视频通话
 slug: Web/API/WebRTC_API/Signaling_and_video_calling
 ---
+
 {{WebRTCSidebar}}
 
 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)允许在两个设备之间进行实时的对等媒体交换。通过称为**信令**的发现和协商过程建立连接。本教程将指导你构建双向视频通话。

@@ -2,6 +2,7 @@
 title: XMLHttpRequest.getResponseHeader()
 slug: Web/API/XMLHttpRequest/getResponseHeader
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 **XMLHttpRequest.getResponseHeader()**方法返回包含指定响应头文本的字符串。

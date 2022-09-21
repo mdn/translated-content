@@ -2,6 +2,7 @@
 title: WebSocket.binaryType
 slug: Web/API/WebSocket/binaryType
 ---
+
 {{APIRef("Web Sockets API")}}
 
 **`WebSocket.binaryType`** 返回 websocket 连接所传输二进制数据的类型。

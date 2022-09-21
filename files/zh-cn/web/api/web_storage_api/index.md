@@ -2,6 +2,7 @@
 title: Web Storage API
 slug: Web/API/Web_Storage_API
 ---
+
 {{DefaultAPISidebar("Web Storage API")}}
 
 **Web Storage API** 提供机制， 使浏览器能以一种比使用 Cookie 更直观的方式存储键/值对。
