@@ -35,7 +35,7 @@ animation-composition: unset;
 ### Valeurs
 
 - `replace`
-  - : La valeur d'effet surcharge la valeur sous-jacente de la propriété. Il s'agit de la valeur par défaut.
+  - : La valeur d'effet remplace la valeur sous-jacente de la propriété. Il s'agit de la valeur par défaut.
 - `add`
   - : La valeur d'effet est construite à partir de la valeur sous-jacente de la propriété. L'opération produit un effet additif. Pour les types d'animation pour lesquels l'opération d'addition n'est pas commutative, le premier opérande est la valeur sous-jacente et le second opérande est la valeur d'effet.
 - `accumulate`
