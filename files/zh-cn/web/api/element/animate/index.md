@@ -2,6 +2,7 @@
 title: Element.animate()
 slug: Web/API/Element/animate
 ---
+
 {{APIRef('Web Animations')}} {{SeeCompatTable}}
 
 {{domxref("Element")}} 接口的**`animate()`** 方法是一个创建新{{domxref("Animation")}}的便捷方法，将它应用于元素，然后运行动画。它将返回一个新建的 {{domxref("Animation")}} 对象实例

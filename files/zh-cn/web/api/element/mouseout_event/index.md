@@ -2,6 +2,7 @@
 title: 'Element: mouseout 事件'
 slug: Web/API/Element/mouseout_event
 ---
+
 当移动指针设备（通常是鼠标），使指针不再包含在这个元素或其子元素中时，**`mouseout`** 事件被触发。当指针从一个元素移入其子元素时，`mouseout` 也会被触发，因为子元素遮盖了父元素的可视区域。
 
 <table class="properties">

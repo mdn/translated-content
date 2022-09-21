@@ -2,6 +2,7 @@
 title: Document.createNodeIterator()
 slug: Web/API/Document/createNodeIterator
 ---
+
 {{APIRef("DOM")}}
 
 返回一个新的 [`NodeIterator`](/zh-CN/DOM/NodeIterator) 对象。

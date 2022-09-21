@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.save()
 slug: Web/API/CanvasRenderingContext2D/save
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.save()`** 是 Canvas 2D API 通过将当前状态放入栈中，保存 canvas 全部状态的方法。

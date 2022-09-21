@@ -2,6 +2,7 @@
 title: EventSource()
 slug: Web/API/EventSource/EventSource
 ---
+
 {{APIRef('WebSockets API')}}
 
 **`EventSource()`** 构造函数返回一个新建的{{domxref("EventSource")}}，它代表了一个远程资源。

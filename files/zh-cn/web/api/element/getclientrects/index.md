@@ -2,6 +2,7 @@
 title: Element.getClientRects()
 slug: Web/API/Element/getClientRects
 ---
+
 {{ APIRef("DOM") }}
 
 **`Element.getClientRects()`** 方法返回一个指向客户端中每一个盒子的边界矩形的矩形集合。

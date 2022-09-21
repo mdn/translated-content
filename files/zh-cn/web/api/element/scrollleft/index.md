@@ -2,6 +2,7 @@
 title: Element.scrollLeft
 slug: Web/API/Element/scrollLeft
 ---
+
 {{ APIRef("DOM") }}
 
 **`Element.scrollLeft`** 属性可以读取或设置元素滚动条到元素左边的距离。

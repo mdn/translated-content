@@ -2,6 +2,7 @@
 title: DOMRectReadOnly
 slug: Web/API/DOMRectReadOnly
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 **`DOMRectReadOnly`** 接口通过详细列出 {{domxref("DOMRect")}} 所使用的标准属性来定义一个属性不可变的矩形。

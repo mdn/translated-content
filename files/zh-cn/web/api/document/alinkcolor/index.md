@@ -2,6 +2,7 @@
 title: Document.alinkColor
 slug: Web/API/Document/alinkColor
 ---
+
 {{APIRef("DOM")}} {{ Deprecated_header() }}
 
 返回或设置文档体内的活动链接的颜色。mousedown 和 mouseup 事件之间的时间在一个链接是有效的。

@@ -2,6 +2,7 @@
 title: Document.onfullscreenerror
 slug: Web/API/Document/fullscreenerror_event
 ---
+
 {{ApiRef("Fullscreen API")}}
 
 Document.onfullscreenerror 属性是一个事件处理器用于处理 {{event("fullscreenchange")}} 事件，在当前文档不能进入全屏模式，即使它被请求时触发。

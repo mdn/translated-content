@@ -2,6 +2,7 @@
 title: CharacterData
 slug: Web/API/CharacterData
 ---
+
 {{APIRef("DOM")}}
 
 **`CharacterData`** 抽象接口（abstract interface）代表 {{domxref("Node")}} 对象包含的字符。这是一个抽象接口，意味着没有 `CharacterData` 类型的对象。 它是在其他接口中被实现的，如 {{domxref("Text")}}、{{domxref("Comment")}} 或 {{domxref("ProcessingInstruction")}} 这些非抽象接口。

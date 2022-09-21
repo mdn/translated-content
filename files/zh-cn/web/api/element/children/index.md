@@ -2,6 +2,7 @@
 title: Element.children
 slug: Web/API/Element/children
 ---
+
 {{ APIRef("DOM") }}
 
 **`Element.children`** 是一个只读属性，返回 一个 Node 的子{{domxref("Element","elements")}} ，是一个动态更新的 {{domxref("HTMLCollection")}}。

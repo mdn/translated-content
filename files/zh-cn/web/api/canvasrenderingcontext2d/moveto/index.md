@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.moveTo()
 slug: Web/API/CanvasRenderingContext2D/moveTo
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.moveTo()`** 是 Canvas 2D API 将一个新的子路径的起始点移动到 (x，y) 坐标的方法。

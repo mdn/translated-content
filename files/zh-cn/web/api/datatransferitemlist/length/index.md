@@ -2,6 +2,7 @@
 title: DataTransferItemList.length
 slug: Web/API/DataTransferItemList/length
 ---
+
 {{domxref("DataTransferItemList")}} 接口的只读属性**`length`** 返回当前拖动项列表中项目的数量。
 
 ## 语法

@@ -2,6 +2,7 @@
 title: AudioContext.resume()
 slug: Web/API/AudioContext/resume
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioContext") }} 的 `resume()` 方法，恢复之前暂停播放的音频。

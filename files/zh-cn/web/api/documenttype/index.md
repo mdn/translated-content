@@ -2,6 +2,7 @@
 title: DocumentType
 slug: Web/API/DocumentType
 ---
+
 {{APIRef("DOM")}}
 
 **`DocumentType`** 接口表示了一个包含文档类型的节点 {{domxref("Node")}} .

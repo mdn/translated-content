@@ -2,6 +2,7 @@
 title: AudioContext.createBufferSource()
 slug: Web/API/BaseAudioContext/createBufferSource
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `createBufferSource()` 方法用于创建一个新的{{ domxref("AudioBufferSourceNode") }}接口，该接口可以通过{{ domxref("AudioBuffer") }} 对象来播放音频数据。{{ domxref("AudioBuffer") }}对象可以通过{{domxref("AudioContext.createBuffer")}} 来创建或者通过 {{domxref("AudioContext.decodeAudioData")}}成功解码音轨后获取。

@@ -2,6 +2,7 @@
 title: Broadcast Channel API
 slug: Web/API/Broadcast_Channel_API
 ---
+
 {{DefaultAPISidebar("Broadcast Channel API")}}
 
 **Broadcast Channel API** 可以实现同 {{glossary("origin", "源")}} 下浏览器不同窗口，Tab 页，frame 或者 iframe 下的 {{glossary("browsing context", "浏览器上下文")}} (通常是同一个网站下不同的页面) 之间的简单通讯。

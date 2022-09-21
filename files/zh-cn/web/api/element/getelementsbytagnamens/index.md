@@ -2,6 +2,7 @@
 title: Element.getElementsByTagNameNS()
 slug: Web/API/Element/getElementsByTagNameNS
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.getElementsByTagNameNS()`** 方法返回在指定命名空间内带有指定名称的动态 HTML 元素集合（而不是快照），搜索范围限定于指定元素的后代，类似于{{Domxref("Document.getElementsByTagNameNS")}}。

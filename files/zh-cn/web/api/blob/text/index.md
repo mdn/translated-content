@@ -2,6 +2,7 @@
 title: Blob.text()
 slug: Web/API/Blob/text
 ---
+
 {{APIRef("File API")}}
 
 **`text()`** 方法返回一个 {{jsxref("Promise")}} 对象，包含 blob 中的内容，使用 UTF-8 格式编码。

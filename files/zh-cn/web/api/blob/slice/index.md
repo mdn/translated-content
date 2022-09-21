@@ -2,6 +2,7 @@
 title: Blob.slice
 slug: Web/API/Blob/slice
 ---
+
 {{APIRef("File API")}}
 
 **`Blob.slice()`** 方法用于创建一个包含源 {{domxref("Blob")}}的指定字节范围内的数据的新 {{domxref("Blob")}} 对象。

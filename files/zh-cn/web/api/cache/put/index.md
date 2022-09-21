@@ -2,6 +2,7 @@
 title: Cache.put()
 slug: Web/API/Cache/put
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 {{domxref("Cache")}} 接口的 **`put()`** 方法 允许将键/值对添加到当前的 {{domxref("Cache")}} 对象中。

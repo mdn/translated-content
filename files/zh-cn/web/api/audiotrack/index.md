@@ -2,6 +2,7 @@
 title: AudioTrack
 slug: Web/API/AudioTrack
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`AudioTrack`** 接口表示从 HTML 介质元件中的一个单一的音轨， {{HTMLElement("audio")}} 或 {{HTMLElement("video")}}. 访问`AudioTrack` 对象的最常见用途是切换其{{domxref("AudioTrack.enabled", "enabled")}} 属性，以使轨道静音和取消静音。

@@ -2,6 +2,7 @@
 title: document.mozFullScreenElement
 slug: Web/API/Document/fullscreenElement
 ---
+
 {{ ApiRef() }}
 
 ### 概述

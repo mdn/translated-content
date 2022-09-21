@@ -2,6 +2,7 @@
 title: console.group
 slug: Web/API/Console/group
 ---
+
 {{ ApiRef() }}
 
 ## 概述

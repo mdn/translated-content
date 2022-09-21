@@ -2,6 +2,7 @@
 title: Element：afterscriptexecute 事件
 slug: Web/API/Element/afterscriptexecute_event
 ---
+
 {{APIRef}}{{Non-standard_header}}
 
 > **警告：** 此事件是早期版本的规范中的一个提案。不要依赖它。

@@ -2,6 +2,7 @@
 title: DOMImplementation.createDocument()
 slug: Web/API/DOMImplementation/createDocument
 ---
+
 {{ApiRef("DOM")}}
 
 **`DOMImplementation.createDocument()`方法创建并返回一个** {{domxref("XMLDocument")}}对象。

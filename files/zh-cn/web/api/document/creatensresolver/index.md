@@ -2,6 +2,7 @@
 title: Document.createNSResolver()
 slug: Web/API/Document/createNSResolver
 ---
+
 {{ ApiRef("DOM") }}
 
 创建一个 `XPathNSResolver` which resolves namespaces with respect to the definitions in scope for 指定节点
