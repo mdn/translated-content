@@ -13,6 +13,7 @@ tags:
 translation_of: Learn/CSS/CSS_layout/Responsive_Design
 original_slug: Apprendre/CSS/CSS_layout/Responsive_Design
 ---
+
 {{learnsidebar}}{{PreviousMenuNext("Apprendre/CSS/CSS_layout/Multiple-column_Layout", "Apprendre/CSS/CSS_layout/Media_queries", "Apprendre/CSS/CSS_layout")}}
 
 Aux débuts de la conception Web, les pages étaient construites pour cibler une taille d'écran particulière. Si l'utilisateur avait un écran plus grand ou plus petit que celui du concepteur, les résultats attendus pouvaient aller de barres de défilement indésirables, à des longueurs de lignes trop longues, et à une mauvaise utilisation de l'espace. À mesure que des tailles d'écran plus variées devenaient disponibles, le concept de _responsive web design_ (RWD) est apparu, un ensemble de pratiques qui permet aux pages Web de modifier leur disposition et leur apparence pour s'adapter à différentes largeurs d'écran, résolutions, etc. C'est une idée qui a changé notre façon de concevoir pour un web multi-périphériques, et dans cet article nous vous aiderons à comprendre les principales techniques que vous devez connaître pour la maîtriser.

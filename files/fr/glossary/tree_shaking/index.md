@@ -7,6 +7,7 @@ tags:
 translation_of: Glossary/Tree_shaking
 original_slug: Glossaire/Tree_shaking
 ---
+
 **Tree shaking** est un terme couramment utilisé dans un contexte JavaScript pour décrire la suppression du code mort.
 
 Il repose sur les états [import](/fr/docs/Web/JavaScript/Reference/Instructions/import) et [export](/fr/docs/Web/JavaScript/Reference/Instructions/export) en ES6 pour détecter si les modules de code sont exportés et importés pour une utilisation entre des fichiers JavaScript.

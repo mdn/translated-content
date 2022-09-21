@@ -4,6 +4,7 @@ slug: Glossary/Deep_copy
 l10n:
   sourceCommit: 4cf1362de4a7634f5f21deba949973cc240f5fd4
 ---
+
 {{MDNSidebar}}
 
 Une **copie profonde** d'un objet est une copie dont les propriétés ne partagent pas les mêmes références (ne pointent pas vers les mêmes valeurs sous-jacentes) que celles de l'objet source de laquelle la copie a été faite. Par conséquent, lorsque vous modifiez la source ou la copie, vous pouvez être assuré que vous ne modifiez pas également l'autre objet&nbsp;; c'est-à-dire que vous ne provoquerez pas involontairement des modifications inattendues de la source ou de la copie. Ce comportement contraste avec celui d'une [copie superficielle](/fr/docs/Glossary/Shallow_copy), dans lequel les modifications apportées à la source ou à la copie peuvent également entraîner la modification de l'autre objet (car les deux objets partagent les mêmes références).
