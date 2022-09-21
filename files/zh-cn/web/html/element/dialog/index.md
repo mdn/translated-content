@@ -18,8 +18,7 @@ slug: Web/HTML/Element/dialog
       <td>
         <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
           >流式元素</a
-        >,
-        <a href="/zh-CN/docs/Web/HTML/Element/Heading_Elements#sectioning_roots"
+        >、<a href="/zh-CN/docs/Web/HTML/Element/Heading_Elements#sectioning_roots"
           >分段内容</a
         >
       </td>
@@ -80,13 +79,13 @@ slug: Web/HTML/Element/dialog
 
 确保给予用户关闭对话框的机制。最有力的方法是给用户提供一个明确的按钮，如确认、取消或关闭按钮。此外，对于那些使用键盘设备的人来说，<kbd>Escape</kbd> 键通常也会用来关闭模态对话框。默认情况下，一个由 `showModal()` 方法调用的 `<dialog>` 将允许其被 <kbd>Escape</kbd> 关闭。非模态对话框默认不会通过 <kbd>Escape</kbd> 键来关闭，而且根据非模态对话框所代表的内容，它可能不希望有这种行为。如果打开了多个模态对话框，<kbd>Escape</kbd> 只应该关闭最后一个可见对话框。
 
-浏览器使用 ARIA [role="dialog"](/zh-CN/docs/Web/Accessibility/ARIA/Roles/dialog_role) 属性对 `<dialog>` 元素进行了类似于自定义对话框的暴露。由 `showModal()` 方法调用的 `<dialog>` 元素将有一个隐含的 [aria-modal="true"](/zh-CN/docs/Web/Accessibility/ARIA/Atributes/aria-modal)。而由 `show()` 方法调用的 `<dialog>` 元素，或通过使用 `open` 属性，或改变 `<dialog>` 的默认 `display` 而呈现的，将被暴露为 `[aria-modal="false"]`。建议使用适当的 `showModal()` 或 `show()` 方法来渲染对话框。
+浏览器使用 ARIA [role="dialog"](/zh-CN/docs/Web/Accessibility/ARIA/Roles/dialog_role) 属性对 `<dialog>` 元素进行了类似于自定义对话框的暴露。由 `showModal()` 方法调用的 `<dialog>` 元素将有一个隐含的 [aria-modal="true"](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-modal)。而由 `show()` 方法调用的 `<dialog>` 元素，或通过使用 `open` 属性，或改变 `<dialog>` 的默认 `display` 而呈现的，将被暴露为 `[aria-modal="false"]`。建议使用适当的 `showModal()` 或 `show()` 方法来渲染对话框。
 
 确保你的对话框实现不会破坏预期的默认行为，并遵循正确的标签建议。
 
 ## 使用备注
 
-- {{HTMLElement("form")}} 元素可关闭含有属性 `method="dialog"` 的对话框。当提交表单时，对话框的 {{domxref("HTMLDialogElement.returnValue", "returnValue")}} 属性将会等于表单中被使用的提交按钮的 `value` 。
+- {{HTMLElement("form")}} 元素可关闭含有属性 `method="dialog"` 的对话框。当提交表单时，对话框的 {{domxref("HTMLDialogElement.returnValue", "returnValue")}} 属性将会等于表单中被使用的提交按钮的 `value`。
 - {{cssxref('::backdrop')}} CSS 伪元素可用于给使用 {{domxref("HTMLDialogElement.showModal()")}} 显示的 `<dialog>` 元素背景添加样式，例如在对话框被打开激活时，调暗背景中不可访问的内容。
 
 ## 示例
