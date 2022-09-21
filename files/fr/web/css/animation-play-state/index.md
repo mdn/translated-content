@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/animation-play-state
 ---
+
 {{CSSRef}}
 
 La propriété **`animation-play-state`** définit si une animation est en cours d'exécution ou si elle est en pause.

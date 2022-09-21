@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-snap-points-y
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 La propriété **`scroll-snap-points-y`** définit le positionnement vertical des points d'accroche dans le conteneur de défilement auquel ils s'appliquent.

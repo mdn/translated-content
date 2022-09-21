@@ -4,6 +4,7 @@ slug: Web/CSS/list-style-position
 translation_of: Web/CSS/list-style-position
 browser-compat: css.properties.list-style-position
 ---
+
 {{CSSRef}}
 
 La propriété **`list-style-position`** permet de définir la position du marqueur (cf. [`::marker`](/fr/docs/Web/CSS/::marker)) de liste par rapport à la boîte principale.

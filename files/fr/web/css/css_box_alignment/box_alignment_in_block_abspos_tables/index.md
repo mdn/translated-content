@@ -7,6 +7,7 @@ tags:
 translation_of: Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables
 original_slug: Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_bloc_absolue_tableau
 ---
+
 {{CSSRef}}
 
 Le module de spécification _[Box Alignment](/fr/docs/Web/CSS/CSS_Box_Alignment)_ détaille le fonctionnement de l'alignement selon les différentes méthodes de disposition. Dans cet article, nous verrons comment fonctionne l'alignement des boîtes dans une disposition en bloc, y compris pour les éléments flottants, les éléments positionnés et les tableaux. Cette page détaille les aspects spécifiques relatifs à l'alignement et à la disposition en bloc. Pour une description générale des fonctionnalités communes pour les différentes dispositions, voir [la page principale sur cette spécification](/fr/docs/Web/CSS/CSS_Box_Alignment).

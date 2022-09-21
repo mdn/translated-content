@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/line-break
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`line-break`** définit la façon dont les sauts de ligne sont gérés. Cette propriété affecte uniquement les textes en chinois, japonais ou coréen (CJK).

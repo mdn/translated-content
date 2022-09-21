@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/text-decoration-line
 ---
+
 {{CSSRef}}
 
 La propriété **`text-decoration-line`** définit la façon dont les décorations linéaires sont ajoutées à un élément et notamment leur position (sous le texte, au-dessus ou en travers de celui-ci).

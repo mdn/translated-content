@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/inverted-colors
 ---
+
 {{CSSRef}}
 
 **`inverted-colors`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui indique si l'agent utilisateur ou si le système d'exploitation sous-jacent inverse les couleurs.

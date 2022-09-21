@@ -6,6 +6,7 @@ browser-compat: css.properties.align-tracks
 l10n:
   sourceCommit: 02024642bdb12940509cb4c7e2e60cbc3d62bf21
 ---
+
 {{CSSRef}}
 
 {{SeeCompatTable}}

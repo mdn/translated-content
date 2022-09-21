@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:first-child
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:first-child`** permet de cibler un élément qui est le premier élément fils par rapport à son élément parent.

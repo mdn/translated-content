@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/::spelling-error
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 Le pseudo-élément **`::spelling-error`** représente une portion de texte que le navigateur signale comme étant mal orthographiée.

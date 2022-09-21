@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/CSS_Fonts/Variable_Fonts_Guide
 original_slug: Web/CSS/CSS_Fonts/Guide_polices_variables
 ---
+
 {{CSSRef}}
 
 **Les polices variables** sont une évolution de la spécification OpenType et qui permet d'activer différentes variations d'une police dans un seul fichier plutôt que d'avoir différents fichiers pour chaque taille, graisse ou style. En CSS, on peut accéder à l'ensemble des variations en utilisant une seule référence {{cssxref("@font-face")}}. Dans cet article, nous verrons tout ce qu'il faut savoir pour commencer à utiliser les polices variables.

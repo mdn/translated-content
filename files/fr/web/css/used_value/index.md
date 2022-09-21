@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/used_value
 original_slug: Web/CSS/Valeur_utilisée
 ---
+
 {{cssref}}
 
 La **valeur utilisée** de n'importe quelle propriété CSS est la valeur finale d'une propriété après que tous les calculs aient été réalisés.
