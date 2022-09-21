@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices
 
 如果 `d` 标志被使用，则 `RegExp.prototype.hasIndices` 的值是 `true`；否则是 `false`。`d` 标志表示正则表达式匹配的结果应该包含每个捕获组子字符串开始和结束的索引。它不会以任何方式改变正则表达式的解释或匹配行为，它只在匹配的结果中提供额外的信息。
 
-`hasIndices` 的集合访问器是 `undefined`。你不能直接改变此属性。
+`hasIndices` 的 set 访问器是 `undefined`。你不能直接修改此属性。
 
 ## 示例
 
