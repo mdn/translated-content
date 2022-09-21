@@ -40,7 +40,7 @@ typeof 1n === 'bigint'           // true
 typeof BigInt('1') === 'bigint'  // true
 ```
 
-BitInt の値は `Object` でラップすることができます。
+BigInt の値は `Object` でラップすることができます。
 
 ```js
 typeof Object(1n) === 'object'  // true
