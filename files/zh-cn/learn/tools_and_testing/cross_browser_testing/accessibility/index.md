@@ -3,6 +3,7 @@ title: 解决常见的无障碍问题
 slug: Learn/Tools_and_testing/Cross_browser_testing/Accessibility
 original_slug: Learn/Tools_and_testing/Cross_browser_testing/可访问性
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/JavaScript","Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 接下来，我们将关注无障碍，提供关于一些常见问题的信息，如何进行简单测试以及如何使用审核/自动化工具来查找无障碍问题。

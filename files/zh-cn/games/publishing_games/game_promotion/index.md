@@ -2,6 +2,7 @@
 title: Game promotion
 slug: Games/Publishing_games/Game_promotion
 ---
+
 {{GamesSidebar}}
 
 开发与发行你的游戏并不是全部.。你应该让大家知道你有个大家会喜欢玩的游戏。这儿有很多方法去推广你的游戏——大部分方法是免费的，所以即使即使你正努力以一名零预算的独立开发者的身份谋生，你也可以让人们知道你的新游戏.。推广游戏也对之后的[游戏收益化](/zh-CN/docs/Games/Techniques/Publishing_games/Game_monetization)大有裨益，所以正确地推广游戏是很重要的。

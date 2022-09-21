@@ -2,6 +2,7 @@
 title: 数组
 slug: Learn/JavaScript/First_steps/Arrays
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
 
 在本模块的最后一篇文章中，我们将看看数组 —— 一种将一组数据存储在单个变量名下的优雅方式。 现在我们看看它有什么用，然后探索如何来创建一个数组，检索、添加和删除存储在数组中的元素，以及其他更多的功能。

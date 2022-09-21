@@ -2,6 +2,7 @@
 title: 使用 Gamepad API 实现控制
 slug: Games/Techniques/Controls_Gamepad_API
 ---
+
 {{GamesSidebar}}
 
 这篇文章着眼于使用 Gamepad API 为网页游戏实现一个有效的跨浏览器控制系统，可以让你使用端游控制器来控制你的网页游戏。Hungry Fridge，就是 [Enclave Games](http://enclavegames.com/) 以此制作的游戏。
