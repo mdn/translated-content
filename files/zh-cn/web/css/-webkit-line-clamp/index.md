@@ -2,6 +2,7 @@
 title: '-webkit-line-clamp'
 slug: Web/CSS/-webkit-line-clamp
 ---
+
 {{CSSRef}}
 
 **`-webkit-line-clamp`** CSS 属性 可以把 {{Glossary("块容器")}} 中的内容限制为指定的行数。

@@ -3,6 +3,7 @@ title: min()
 slug: Web/CSS/min
 original_slug: Web/CSS/min()
 ---
+
 {{CSSRef}}
 
 **`min()`** [CSS](/zh-CN/docs/Web/CSS) 方法允许你从逗号分隔符表达式中选择一个最小值作为 CSS 的属性值。`min()` 方法可以用于以下任何属性中 {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}},{{CSSxRef("&lt;number&gt;")}}, 或者 {{CSSxRef("&lt;integer&gt;")}}。

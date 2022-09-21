@@ -2,6 +2,7 @@
 title: ':visited'
 slug: Web/CSS/:visited
 ---
+
 {{CSSRef}}
 
 ## 概述

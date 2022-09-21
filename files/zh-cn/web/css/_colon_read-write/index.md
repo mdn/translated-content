@@ -2,6 +2,7 @@
 title: ':read-write'
 slug: Web/CSS/:read-write
 ---
+
 {{CSSRef}}
 
 **`:read-write`** [`CSS`](/zh-CN/docs/Web/CSS) [`伪类`](/zh-CN/docs/Web/CSS/Pseudo-classes) 代表一个元素（例如可输入文本的 input 元素）可以被用户编辑。

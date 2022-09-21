@@ -2,6 +2,7 @@
 title: '@namespace'
 slug: Web/CSS/@namespace
 ---
+
 {{CSSRef}}
 
 ## 概述

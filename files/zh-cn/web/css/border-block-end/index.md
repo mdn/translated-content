@@ -2,6 +2,7 @@
 title: border-block-end
 slug: Web/CSS/border-block-end
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`border-block-end`** 属性是一个简写属性，用于在样式表中的单个位置设置各个逻辑块结尾边界属性值。

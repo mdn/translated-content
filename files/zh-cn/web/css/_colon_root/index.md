@@ -2,6 +2,7 @@
 title: ':root'
 slug: Web/CSS/:root
 ---
+
 {{CSSRef}}
 
 ## 概述

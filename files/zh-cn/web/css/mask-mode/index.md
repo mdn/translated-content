@@ -2,6 +2,7 @@
 title: mask-mode
 slug: Web/CSS/mask-mode
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`mask-mode`**[CSS](/zh-CN/docs/Web/CSS)属性指示由{{cssxref("mask-image")}} 指向的遮罩被视为亮度或阿尔法遮罩。

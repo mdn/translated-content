@@ -2,6 +2,7 @@
 title: writing-mode
 slug: Web/CSS/writing-mode
 ---
+
 {{CSSRef}}
 
 **`writing-mode`** 属性定义了文本水平或垂直排布以及在块级元素中文本的行进方向。为整个文档设置书时，应在根元素上设置它（对于 HTML 文档应该在 `html` 元素上设置）

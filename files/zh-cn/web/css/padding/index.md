@@ -2,6 +2,7 @@
 title: padding
 slug: Web/CSS/padding
 ---
+
 {{CSSRef}}
 
 **`padding`** [CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)控制元素所有四条边的[内边距区域](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#padding-area)。

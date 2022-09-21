@@ -2,6 +2,7 @@
 title: margin-top
 slug: Web/CSS/margin-top
 ---
+
 {{CSSRef}}
 
 ## Summary

@@ -2,6 +2,7 @@
 title: border-left-width
 slug: Web/CSS/border-left-width
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/CSS) 的 **`border-left-width`** 属性用来设置盒子的左边框的宽度。
