@@ -118,7 +118,6 @@ Los dibujos e imágenes SVG son creados utilizando una amplia variedad de elemen
 - {{SVGElement("svg")}}
 - {{SVGElement("switch")}}
 - {{SVGElement("symbol")}}
-- <
 
 ### T
 

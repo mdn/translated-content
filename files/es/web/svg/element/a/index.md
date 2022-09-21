@@ -9,6 +9,8 @@ El elemento SVG \<a> crea un hipervínculo a otras páginas web, archivos, ubica
 
 En SVG, el elemento \<a> es un contenedor, es decir, puede crear un enlace alrededor del texto, como en HTML, pero también puede crear un enlace alrededor de cualquier forma.
 
+## Ejemplo
+
 ```css hidden
 @namespace svgns url(http://www.w3.org/2000/svg);
 html,body,svg { height:100% }
