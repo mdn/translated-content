@@ -10,6 +10,7 @@ tags:
   - Window
 translation_of: Web/API/Window
 ---
+
 {{APIRef}}
 
 L'objet `window` représente une fenêtre contenant un document DOM ; la propriété `document` pointe vers le [document DOM](/fr-FR/docs/DOM/document) chargé dans cette fenêtre. Une fenêtre pour un document donné peut être obtenue en utilisant la propriété {{Domxref("document.defaultView")}}.

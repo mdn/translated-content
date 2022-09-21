@@ -9,6 +9,7 @@ tags:
   - Noeuds
 translation_of: Web/API/NodeIterator/previousNode
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`NodeIterator.previousNode()`** renvoie le noeud précédent dans l'ensemble représenté par le {{domxref("NodeIterator")}} et déplace la position de l'itérateur vers l'arrière à l'intérieur de cet ensemble.

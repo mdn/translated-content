@@ -8,6 +8,7 @@ tags:
   - Screen Orientation
 translation_of: Web/API/CSS_Object_Model/Managing_screen_orientation
 ---
+
 {{SeeCompatTable}}{{APIRef}}
 
 ## Sommaire

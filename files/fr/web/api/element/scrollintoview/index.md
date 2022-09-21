@@ -8,6 +8,7 @@ tags:
   - Méthodes
 translation_of: Web/API/Element/scrollIntoView
 ---
+
 {{ APIRef("DOM")}}{{SeeCompatTable}}
 
 La méthode **`Element.scrollIntoView()`** fait défiler la page de manière à rendre l'élément visible.
