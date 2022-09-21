@@ -1,24 +1,6 @@
 ---
 title: MediaDevices
 slug: Web/API/MediaDevices
-tags:
-  - API
-  - Audio
-  - Conference
-  - Devices
-  - インターフェイス
-  - メディア
-  - メディアキャプチャとストリーム API
-  - メディアストリーム API
-  - MediaDevices
-  - リファレンス
-  - 画面キャプチャ
-  - 画面キャプチャ API
-  - Sharing
-  - Video
-  - WebRTC
-browser-compat: api.MediaDevices
-translation_of: Web/API/MediaDevices
 ---
 {{APIRef("Media Capture and Streams")}}
 

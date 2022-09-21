@@ -116,14 +116,11 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 ## Spécifications
 
-| Spécification                                                                                        | État                             | Commentaires |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG','scripting.html#the-slot-element','&lt;slot&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('DOM WHATWG','#shadow-tree-slots','Slots')}}                             | {{Spec2('DOM WHATWG')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.slot")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -2,6 +2,7 @@
 title: CONNECT
 slug: Web/HTTP/Methods/CONNECT
 ---
+
 {{HTTPSidebar}}
 
 **HTTP `CONNECT`** 方法會利用請求資源啟動一個雙向通訊。這通常可用於建立隧道。

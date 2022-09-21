@@ -2,6 +2,7 @@
 title: Element.innerHTML
 slug: Web/API/Element/innerHTML
 ---
+
 {{APIRef("DOM")}}
 
 [Element](/zh-TW/docs/Glossary/Element) 的「innerHTML」屬性獲取或設置元素中包含的 HTML 或 XML 標記。

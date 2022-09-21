@@ -1,12 +1,6 @@
 ---
 title: SVG フォント
 slug: Web/SVG/Tutorial/SVG_fonts
-tags:
-  - Advanced
-  - NeedsUpdate
-  - SVG
-  - SVG:Tutorial
-translation_of: Web/SVG/Tutorial/SVG_fonts
 ---
 {{ PreviousNext("Web/SVG/Tutorial/Filter_effects", "Web/SVG/Tutorial/SVG_Image_Tag") }}
 

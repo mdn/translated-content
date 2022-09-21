@@ -13,7 +13,9 @@ translation_of: Web/API/Window/postMessage
 
 ## 문법
 
-    targetWindow.postMessage(message, targetOrigin, [transfer]);
+```js
+targetWindow.postMessage(message, targetOrigin, [transfer]);
+```
 
 - `targetWindow`
   - : 메세지를 전달 받을 window의 참조. 참조를 취득할 방법으로는 다음과 같은 것이 있습니다:\* {{domxref("Window.open")}} (새 창을 만들고 새 창을 참조할 때),

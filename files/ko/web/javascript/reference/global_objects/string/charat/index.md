@@ -17,7 +17,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charAt
 
 ## 구문
 
-    str.charAt(index)
+```js
+str.charAt(index)
+```
 
 ### 매개변수
 
@@ -33,7 +35,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charAt
 
 ## 설명
 
-문자열 내의 문자는 왼쪽에서 오른쪽으로 순번(인덱스)이 매겨집니다. 첫 번째 문자의 순번은 0, 그리고 `stringName` 이라는 이름을 가진 문자열의 마지막 문자 순번은 `stringName.length - 1 `입니다. `index`가 문자열 길이를 벗어나면 빈 문자열을 반환하게 됩니다.
+문자열 내의 문자는 왼쪽에서 오른쪽으로 순번(인덱스)이 매겨집니다. 첫 번째 문자의 순번은 0, 그리고 `stringName` 이라는 이름을 가진 문자열의 마지막 문자 순번은 `stringName.length - 1` 입니다. `index`가 문자열 길이를 벗어나면 빈 문자열을 반환하게 됩니다.
 
 `index`를 제공하지 않으면 기본값은 0입니다.
 

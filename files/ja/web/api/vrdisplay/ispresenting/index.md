@@ -1,19 +1,6 @@
 ---
 title: VRDisplay.isPresenting
 slug: Web/API/VRDisplay/isPresenting
-page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - isPresenting
-browser-compat: api.VRDisplay.isPresenting
-translation_of: Web/API/VRDisplay/isPresenting
 original_slug: Web/API/VRDevice/isPresenting
 ---
 {{APIRef("WebVR API")}}{{Deprecated_Header}}

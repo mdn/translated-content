@@ -1,12 +1,6 @@
 ---
 title: IMAP
 slug: Glossary/IMAP
-tags:
-  - Beginner
-  - Glossary
-  - Infrastructure
-  - MailNews
-translation_of: Glossary/IMAP
 ---
 IMAP (Internet Message Access Protocol) は、電子メールの取得と保存に使用される{{Glossary("protocol","プロトコル")}}です。 {{Glossary("POP3")}} より新しい IMAP では、サーバー上のフォルダとルールが可能です。
 

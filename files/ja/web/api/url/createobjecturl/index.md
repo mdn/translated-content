@@ -1,15 +1,6 @@
 ---
 title: URL.createObjectURL()
 slug: Web/API/URL/createObjectURL
-tags:
-  - API
-  - Blob
-  - DOM
-  - Reference
-  - URL
-  - URL API
-  - createObjectURL
-translation_of: Web/API/URL/createObjectURL
 ---
 **`URL.createObjectURL()`** 静的メソッドは、引数で指定されたオブジェクトを表す URL を含む {{domxref("DOMString")}} を生成します。 URL の寿命は、それを作成したウィンドウ内の {{domxref("document")}} と結び付けられています。 新しいオブジェクト URL は、指定された {{domxref("File")}} オブジェクトか {{domxref("Blob")}} オブジェクトを表します。
 

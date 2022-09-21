@@ -1,19 +1,6 @@
 ---
 title: 'Reason: CORS header ''Access-Control-Allow-Origin'' missing'
 slug: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
-tags:
-  - CORS
-  - CORSMissingAllowOrigin
-  - Cross-Origin
-  - Error
-  - HTTP
-  - HTTPS
-  - Messages
-  - Reasons
-  - Security
-  - console
-  - troubleshooting
-translation_of: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 ---
 {{HTTPSidebar}}
 
@@ -29,7 +16,7 @@ Reason: CORS header 'Access-Control-Allow-Origin' missing
 
 サーバーを自分で制御できる場合は、要求しているサイトのオリジンを `Access-Control-Allow-Origin` ヘッダーの値に追加して、アクセスが許可されているドメインの一覧に追加してください。
 
-例えば、 https\://amazing.site のサイトが CORS を使用したリソースにアクセスできるよう許可するためには、ヘッダーを以下のようにしてください。
+例えば、 `https://amazing.site` のサイトが CORS を使用したリソースにアクセスできるよう許可するためには、ヘッダーを以下のようにしてください。
 
 ```
 Access-Control-Allow-Origin: https://amazing.site

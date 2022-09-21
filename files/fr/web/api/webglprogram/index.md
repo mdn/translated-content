@@ -56,13 +56,11 @@ gl.deleteProgram(programme);
 
 ## Spécifications
 
-| Spécification                                                | Statut                   | Commentaire         |
-| ------------------------------------------------------------ | ------------------------ | ------------------- |
-| {{SpecName('WebGL', "#5.6", "WebGLProgram")}} | {{Spec2('WebGL')}} | Définition initale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLProgram")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,17 +1,7 @@
 ---
 title: polygon()
 slug: Web/CSS/basic-shape/polygon
-tags:
-  - CSS
-  - CSS データ型
-  - CSS シェイプ
-  - polygon
-  - CSS 関数
-  - データ型
-  - Reference
-translation_of: Web/CSS/basic-shape/polygon()
 original_slug: Web/CSS/basic-shape/polygon()
-browser-compat: css.types.basic-shape.polygon
 ---
 {{CSSRef}}
 

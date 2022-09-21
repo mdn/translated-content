@@ -89,7 +89,7 @@ Firefox 3.1 では、これを以下のように書き換える必要があり�
 
 ## JSON
 
-JSON.jsm JavaScript モジュールは Firefox 3.1 では削除され、ネイティブの JSON オブジェクトサポートに置き換えられました。 詳しくは、[Firefox で JSON を使用する](/ja/Using_JSON_in_Firefox "/ja/Using JSON in Firefox") をご覧ください。JSON のより一般的な概要と、各種バージョンの Firefox で JSON を使う方法については、[JSON](/ja/JSON) のページからリンクされている記事を参照してください。
+JSON.jsm JavaScript モジュールは Firefox 3.1 では削除され、ネイティブの JSON オブジェクトサポートに置き換えられました。 詳しくは、[Firefox で JSON を使用する](/ja/Using_JSON_in_Firefox) をご覧ください。JSON のより一般的な概要と、各種バージョンの Firefox で JSON を使う方法については、[JSON](/ja/JSON) のページからリンクされている記事を参照してください。
 
 Firefox 3 と Firefox 3.1 の両方について互換性を確保するには、以下のように記述します。
 

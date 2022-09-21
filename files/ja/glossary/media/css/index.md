@@ -1,12 +1,6 @@
 ---
 title: Media (CSS)
 slug: Glossary/Media/CSS
-tags:
-  - CSS
-  - Glossary
-  - Intro
-  - Media
-translation_of: Glossary/Media/CSS
 ---
 {{Glossary("CSS")}} (Cascading Style Sheets) の文脈において、**_メディア_**という用語は{{Glossary("rendering engine", "レンダリングエンジン")}}によって描画される文書の出力先を参照します。これはふつうは端末の画面ですが、プリンターや読み上げ装置、点字ディスプレイ、あるいはそのほかの装置の可能性もあります。
 

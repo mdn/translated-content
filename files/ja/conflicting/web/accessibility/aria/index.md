@@ -1,12 +1,6 @@
 ---
 title: アラート
 slug: conflicting/Web/Accessibility/ARIA
-tags:
-  - ARIA
-  - アクセシビリティ
-  - フォーム
-  - ウェブ
-translation_of: Web/Accessibility/ARIA/forms/alerts
 original_slug: Web/Accessibility/ARIA/forms/alerts
 ---
 ## 問題点

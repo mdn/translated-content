@@ -1,13 +1,6 @@
 ---
 title: テンプレートとスロットの使用
 slug: Web/Web_Components/Using_templates_and_slots
-tags:
-  - Template
-  - ウェブコンポーネント
-  - シャドウ DOM
-  - slot
-  - スロット
-translation_of: Web/Web_Components/Using_templates_and_slots
 ---
 {{DefaultAPISidebar("Web Components")}}
 

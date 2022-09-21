@@ -1,13 +1,6 @@
 ---
 title: 実例による WebGL
 slug: Web/API/WebGL_API/By_example
-tags:
-  - Beginner
-  - Example
-  - Graphics
-  - Learn
-  - WebGL
-translation_of: Web/API/WebGL_API/By_example
 ---
 {{learnsidebar}}
 

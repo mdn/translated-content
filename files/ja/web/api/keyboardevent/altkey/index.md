@@ -1,16 +1,6 @@
 ---
 title: KeyboardEvent.altKey
 slug: Web/API/KeyboardEvent/altKey
-page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
-browser-compat: api.KeyboardEvent.altKey
-translation_of: Web/API/KeyboardEvent/altKey
 ---
 {{APIRef("UI Events")}}
 

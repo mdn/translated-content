@@ -1,17 +1,6 @@
 ---
 title: WindowOrWorkerGlobalScope.btoa()
 slug: Web/API/btoa
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Web
-  - WindowOrWorkerGlobalScope
-  - btoa
-  - data
-  - strings
-translation_of: Web/API/WindowOrWorkerGlobalScope/btoa
 original_slug: Web/API/WindowOrWorkerGlobalScope/btoa
 ---
 {{APIRef("HTML DOM")}}

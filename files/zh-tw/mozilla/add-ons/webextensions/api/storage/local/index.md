@@ -2,6 +2,7 @@
 title: storage.local
 slug: Mozilla/Add-ons/WebExtensions/API/storage/local
 ---
+
 {{AddonSidebar()}}
 
 代表 `local` 儲存空間。通常 `local` 裡面的東西，會放在套件安裝的地方。

@@ -1,16 +1,6 @@
 ---
 title: margin-inline
 slug: Web/CSS/margin-inline
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - margin-inline
-  - recipe:css-shorthand-property
-browser-compat: css.properties.margin-inline
-translation_of: Web/CSS/margin-inline
 ---
 {{CSSRef}}
 

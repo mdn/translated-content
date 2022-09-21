@@ -1,12 +1,6 @@
 ---
 title: window.stop
 slug: Web/API/Window/stop
-tags:
-  - API
-  - DOM
-  - Gecko
-  - HTML DOM
-translation_of: Web/API/Window/stop
 original_slug: Web/API/window.stop
 ---
 {{ApiRef}}

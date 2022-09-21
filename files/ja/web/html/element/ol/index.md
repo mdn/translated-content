@@ -1,14 +1,6 @@
 ---
 title: '<ol>: 順序付きリスト要素'
 slug: Web/HTML/Element/ol
-tags:
-  - 要素
-  - HTML
-  - HTML コンテンツグループ化
-  - 'HTML:フローコンテンツ'
-  - リファレンス
-browser-compat: html.elements.ol
-translation_of: Web/HTML/Element/ol
 ---
 
 {{HTMLRef}}

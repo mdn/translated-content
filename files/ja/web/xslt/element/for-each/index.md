@@ -1,13 +1,6 @@
 ---
 title: <xsl:for-each>
 slug: Web/XSLT/Element/for-each
-tags:
-  - XSLT
-  - for
-  - for-each
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/for-each
 ---
 {{ XsltRef() }}
 
@@ -17,8 +10,8 @@ translation_of: Web/XSLT/Element/for-each
 
 ```
 <xsl:for-each select=EXPRESSION>
-	<xsl:sort> [optional]
-	TEMPLATE
+  <xsl:sort> [optional]
+  TEMPLATE
 </xsl:for-each>
 ```
 

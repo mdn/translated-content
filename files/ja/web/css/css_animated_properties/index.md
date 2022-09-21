@@ -1,16 +1,6 @@
 ---
 title: アニメーション可能な CSS プロパティ
 slug: Web/CSS/CSS_animated_properties
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Transitions
-  - CSS アニメーション
-  - CSS トランジション
-  - Guide
-  - Reference
-  - ガイド
-translation_of: Web/CSS/CSS_animated_properties
 ---
 {{CSSRef}}
 

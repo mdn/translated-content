@@ -18,10 +18,8 @@ Cet élément a été rendu obsolète à partir de la version HTML 4.01 et a ét
 
 ## Spécifications
 
-| Spécification                                                                | État                                 | Commentaires                                         |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ---------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#noembed', '&lt;noembed&gt;')}} | {{ Spec2('HTML WHATWG') }} | Indication que la fonctionnalité n'est pas conforme. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.noembed")}}
+{{Compat}}

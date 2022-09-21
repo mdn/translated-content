@@ -1,14 +1,6 @@
 ---
 title: WebSocket
 slug: Web/API/WebSocket
-tags:
-  - API
-  - インターフェイス
-  - NeedsContent
-  - WebSocket
-  - WebSockets
-browser-compat: api.WebSocket
-translation_of: Web/API/WebSocket
 ---
 {{APIRef("Web Sockets API")}}
 

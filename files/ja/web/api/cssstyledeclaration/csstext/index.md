@@ -1,13 +1,6 @@
 ---
 title: CSSStyleDeclaration.cssText
 slug: Web/API/CSSStyleDeclaration/cssText
-tags:
-  - API
-  - CSSOM
-  - NeedsSpecTable
-  - Reference
-translation_of: Web/API/CSSStyleDeclaration/cssText
-browser-compat: api.CSSStyleDeclaration.cssText
 ---
 {{APIRef("CSSOM")}}
 

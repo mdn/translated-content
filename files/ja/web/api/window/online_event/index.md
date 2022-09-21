@@ -1,13 +1,6 @@
 ---
 title: Document.ononline
 slug: Web/API/Window/online_event
-tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Reference
-translation_of: Web/API/Document/ononline
 original_slug: Web/API/Document/ononline
 ---
 {{APIRef("DOM")}}

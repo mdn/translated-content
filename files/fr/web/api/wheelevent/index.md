@@ -71,14 +71,11 @@ _Cette interface ne définit aucune méthode spécifique, mais hérite des méth
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName("UI Events", "#interface-wheelevent", "The <code>WheelEvent</code> interface")}} | {{Spec2("UI Events")}}     |                      |
-| {{SpecName('DOM3 Events', '#interface-wheelevent', 'WheelEvent')}}                                 | {{Spec2('DOM3 Events')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WheelEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

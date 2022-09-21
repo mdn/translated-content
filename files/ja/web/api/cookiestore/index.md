@@ -1,12 +1,6 @@
 ---
 title: CookieStore
 slug: Web/API/CookieStore
-tags:
-  - API
-  - Interface
-  - Reference
-  - CookieStore
-browser-compat: api.CookieStore
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
 

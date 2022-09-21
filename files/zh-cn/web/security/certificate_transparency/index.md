@@ -70,7 +70,7 @@ Public-Key-Pins:
   report-uri="https://www.example.org/hpkp-report"
 ```
 
-在此示例中，pin-sha256 =“cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2 + soZS7sWs =”固定服务器在生产中使用的公钥。 第二个引脚声明引脚-sha256 =“M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE =”也固定备份密钥。 max-age = 5184000 告诉客户端将此信息存储两个月，根据 IETF RFC，这是一个合理的时间限制。 此密钥固定也适用于所有子域，includeSubDomains 声明告知。 最后，report-uri =“https\://www\.example.net/hpkp-report”解释了报告引脚验证失败的位置。
+在此示例中，`pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs="` 固定服务器在生产中使用的公钥。 第二个引脚声明引脚- `sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE="` 也固定备份密钥。 `max-age=5184000` 告诉客户端将此信息存储两个月，根据 IETF RFC，这是一个合理的时间限制。 此密钥固定也适用于所有子域，includeSubDomains 声明告知。 最后，`report-uri="https://www.example.net/hpkp-report"` 解释了报告引脚验证失败的位置。
 
 ### Report-Only header
 

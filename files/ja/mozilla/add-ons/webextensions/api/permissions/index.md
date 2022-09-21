@@ -1,14 +1,6 @@
 ---
 title: permissions
 slug: Mozilla/Add-ons/WebExtensions/API/permissions
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Permissions
-  - Reference
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/permissions
 ---
 {{AddonSidebar}}拡張機能のインストール後、実行時に特別なパーミッションの要求を可能にする。
 

@@ -1,14 +1,6 @@
 ---
 title: ValidityState.badInput
 slug: Web/API/ValidityState/badInput
-tags:
-  - API
-  - 制約検証 API
-  - HTML DOM
-  - プロパティ
-  - 読み取り専用
-  - ValidityState
-translation_of: Web/API/ValidityState/badInput
 ---
 {{APIRef("HTML DOM")}}
 

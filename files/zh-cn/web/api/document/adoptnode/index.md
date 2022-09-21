@@ -4,7 +4,7 @@ slug: Web/API/Document/adoptNode
 ---
 {{ ApiRef("DOM") }}
 
-从其他的 document 文档中获取一个节点。 该节点以及它的子树上的所有节点都会从原文档删除 (如果有这个节点的话), 并且它的[`ownerDocument`](/en-US/docs/DOM/Node.ownerDocument) 属性会变成当前的 document 文档。 之后你可以把这个节点插入到当前文档中。
+从其他的 document 文档中获取一个节点。 该节点以及它的子树上的所有节点都会从原文档删除 (如果有这个节点的话), 并且它的[`ownerDocument`](/zh-CN/docs/DOM/Node.ownerDocument) 属性会变成当前的 document 文档。 之后你可以把这个节点插入到当前文档中。
 
 **从 Gecko 1.9 (Firefox 3) 开始支持**
 
@@ -87,4 +87,4 @@ In general the `adoptNode` call may fail due to the source node coming from a di
 
 ## 参见
 
-- [document.importNode](/en-US/docs/DOM/document.importNode)
+- [document.importNode](/zh-CN/docs/DOM/document.importNode)

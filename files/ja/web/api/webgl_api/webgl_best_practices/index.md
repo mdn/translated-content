@@ -1,9 +1,6 @@
 ---
 title: WebGL best practices
 slug: Web/API/WebGL_API/WebGL_best_practices
-tags:
-  - WebGL
-translation_of: Web/API/WebGL_API/WebGL_best_practices
 ---
 {{WebGLSidebar}}
 
@@ -32,4 +29,4 @@ translation_of: Web/API/WebGL_API/WebGL_best_practices
 
 ## 参照
 
-- [WebGL](/ja/WebGL "WebGL")
+- [WebGL](/ja/WebGL)

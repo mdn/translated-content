@@ -12,7 +12,7 @@ slug: Web/API/Document/createCDATASection
 var CDATASectionNode = document.createCDATASection(data);
 ```
 
-- _CDATASectionNode_ 是一个 [CDATA 片段](/en-US/docs/Web/API/CDATASection)节点。
+- _CDATASectionNode_ 是一个 [CDATA 片段](/zh-CN/docs/Web/API/CDATASection)节点。
 - _data_ 包含了要被添加至 CDATA 片段的数据的字符串。
 
 ## 示例

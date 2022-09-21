@@ -1,14 +1,6 @@
 ---
 title: background-clip
 slug: Web/CSS/background-clip
-tags:
-  - CSS
-  - CSS 背景
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.background-clip
-translation_of: Web/CSS/background-clip
 ---
 {{CSSRef}}
 

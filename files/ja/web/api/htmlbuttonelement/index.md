@@ -1,14 +1,6 @@
 ---
 title: HTMLButtonElement
 slug: Web/API/HTMLButtonElement
-tags:
-  - API
-  - HTML DOM
-  - HTMLButtonElement
-  - インターフェイス
-  - リファレンス
-browser-compat: api.HTMLButtonElement
-translation_of: Web/API/HTMLButtonElement
 ---
 {{APIRef("HTML DOM")}}
 

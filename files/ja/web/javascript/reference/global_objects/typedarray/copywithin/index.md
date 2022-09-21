@@ -1,14 +1,6 @@
 ---
 title: TypedArray.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - メソッド
-  - 型付き配列
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin
 ---
 {{JSRef}}
 

@@ -48,13 +48,11 @@ window.addEventListener('cut', (event) => {
 
 ## Spécifications
 
-| Spécification                                                            | Statut                               |
-| ------------------------------------------------------------------------ | ------------------------------------ |
-| {{SpecName('Clipboard API', '#clipboard-event-cut')}} | {{Spec2('Clipboard API')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.cut_event")}}
+{{Compat}}
 
 ## Voir aussi
 

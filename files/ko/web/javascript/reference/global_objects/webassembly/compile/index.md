@@ -9,7 +9,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 
 ## Syntax
 
-    Promise<WebAssembly.Module> WebAssembly.compile(bufferSource);
+```js
+Promise<WebAssembly.Module> WebAssembly.compile(bufferSource);
+```
 
 ### Parameters
 

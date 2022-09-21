@@ -1,14 +1,6 @@
 ---
 title: Content-Encoding
 slug: Web/HTTP/Headers/Content-Encoding
-tags:
-  - HTTP
-  - HTTP ヘッダー
-  - Reference
-  - エンティティヘッダー
-  - ヘッダー
-  - リファレンス
-translation_of: Web/HTTP/Headers/Content-Encoding
 ---
 {{HTTPSidebar}}
 

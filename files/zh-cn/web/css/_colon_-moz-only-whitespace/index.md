@@ -6,11 +6,11 @@ slug: Web/CSS/:-moz-only-whitespace
 
 **`:blank`** [CSS](/zh-CN/docs/Web/CSS) [伪类选择器](/zh-CN/docs/Web/CSS/Pseudo-classes) 用于匹配如下节点
 
-1\. 没有子节点;
+1. 没有子节点;
 
-2\. 仅有空的文本节点;
+2. 仅有空的文本节点;
 
-3\. 仅有空白符的文本节点。
+3. 仅有空白符的文本节点。
 
 ## 语法
 

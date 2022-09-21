@@ -1,11 +1,6 @@
 ---
 title: HTMLFormElement.action
 slug: Web/API/HTMLFormElement/action
-tags:
-  - DOM
-  - Forms
-  - Reference
-translation_of: Web/API/HTMLFormElement/action
 ---
 ## 概要
 

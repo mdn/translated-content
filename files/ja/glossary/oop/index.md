@@ -1,11 +1,6 @@
 ---
 title: OOP (オブジェクト指向プログラミング)
 slug: Glossary/OOP
-tags:
-  - Beginner
-  - CodingScripting
-  - Glossary
-translation_of: Glossary/OOP
 ---
 **OOP** (Object-Oriented Programming、オブジェクト指向プログラミングの略) はデータを **{{glossary("object","オブジェクト")}}** 内にカプセル化して、その構成部品ではなくてオブジェクト自体が操作される、プログラミングアプローチです。
 

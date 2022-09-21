@@ -32,9 +32,9 @@ _Cette interface hérite des propriétés de l'interface {{domxref("WorkerGlobal
 _Cette interface hérite des gestionnaires d'événement de l'interface {{domxref("WorkerGlobalScope")}}, et de son parent {{domxref("EventTarget")}}, et implémente ainsi les gestionnaires d'événement de {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, et {{domxref("WindowEventHandlers")}}._
 
 - {{domxref("DedicatedWorkerGlobalScope.onmessage")}}
-  - : C'est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsqu'un événement {{event("message")}} est déclenché. Ces événements sont du type {{domxref("MessageEvent")}} et sont appelés quand le worker reçoit un message du document qui l'a initialisé (i.e. à partir de la méthode {{domxref("Worker.postMessage")}}.)
+  - : C'est un gestionnaire d'évènement représentant le code à appeler lorsqu'un événement [`message`]/fr/docs/Web/API/DedicatedWorkerGlobalScope/message_event) est déclenché. Ces événements sont du type {{domxref("MessageEvent")}} et sont appelés quand le worker reçoit un message du document qui l'a initialisé (i.e. à partir de la méthode {{domxref("Worker.postMessage")}}.)
 - {{domxref("DedicatedWorkerGlobalScope.onmessageerror")}}
-  - : C'est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsqu'un événement {{event("messageerror")}} est déclenché.
+  - : C'est un gestionnaire d'évènement représentant le code à appeler lorsqu'un événement [`messageerror`](/fr/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event) est déclenché.
 
 ## Méthodes
 

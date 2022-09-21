@@ -17,7 +17,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/includes
 
 ## 구문
 
-    str.includes(searchString[, position])
+```js
+str.includes(searchString[, position])
+```
 
 ### 매개변수
 
@@ -89,7 +91,7 @@ if (!String.prototype.includes) {
 
 Firefox 18 - 39에서, `include()` 메서드의 이름은 `contains()`이었습니다. contains() 함수는 아래와 같은 이유로 {{bug(1102219)}}에서 `includes()`로 변경되었습니다:
 
-It's been [reported](https://bugzilla.mozilla.org/show_bug.cgi?id=789036) that some websites using MooTools 1.2 broke on Firefox 17. This version of MooTools checks whether `String.prototype.contains()` exists and, if it doesn't, MooTools adds its own function. With the introduction of this function in Firefox 17, the behavior of that check changed in a way that causes code based on MooTools' `String.prototype.contains()` implementation to break. As a result, the implementation was [disabled](https://hg.mozilla.org/releases/mozilla-aurora/rev/086db97198a8) in Firefox 17 and `String.prototype.contains()` was available one version later, in Firefox 18, when [outreach to MooTools ](https://bugzilla.mozilla.org/show_bug.cgi?id=789036#c32)was leading to the [release of MooTools version 1.2.6](http://mootools.net/blog/2013/02/19/mootools-1-2-6-released).
+It's been [reported](https://bugzilla.mozilla.org/show_bug.cgi?id=789036) that some websites using MooTools 1.2 broke on Firefox 17. This version of MooTools checks whether `String.prototype.contains()` exists and, if it doesn't, MooTools adds its own function. With the introduction of this function in Firefox 17, the behavior of that check changed in a way that causes code based on MooTools' `String.prototype.contains()` implementation to break. As a result, the implementation was [disabled](https://hg.mozilla.org/releases/mozilla-aurora/rev/086db97198a8) in Firefox 17 and `String.prototype.contains()` was available one version later, in Firefox 18, when [outreach to MooTools](https://bugzilla.mozilla.org/show_bug.cgi?id=789036#c32) was leading to the [release of MooTools version 1.2.6](http://mootools.net/blog/2013/02/19/mootools-1-2-6-released).
 
 MooTools 1.3 forces its own version of `String.prototype.contains()`, so websites relying on it should not break. However, you should note that [MooTools 1.3 signature](http://mootools.net/core/docs/1.3.2/Types/String#String-method:-contains) and ECMAScript 6 signatures for this method differ (on the second argument). Later, [MooTools 1.5+ changed the signature to match the ES6 standard.](https://github.com/mootools/mootools-core/blob/master/Docs/Types/String.md#note)
 

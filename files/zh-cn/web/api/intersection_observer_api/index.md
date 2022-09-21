@@ -509,8 +509,8 @@ There's an even more extensive example at [Timing element visibility with the In
 
 {{Compat("api.IntersectionObserver")}}
 
-## 更多参考
+## 参见
 
-- [Intersection Observer polyfill](https://github.com/w3c/IntersectionObserver/blob/master/polyfill/intersection-observer.js)
+- [Intersection Observer polyfill](https://github.com/w3c/IntersectionObserver)
 - [Timing element visibility with the Intersection Observer API](/zh-CN/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)
 - {{domxref("IntersectionObserver")}} and {{domxref("IntersectionObserverEntry")}}

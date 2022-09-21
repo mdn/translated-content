@@ -59,9 +59,7 @@ Vous pouvez obtenir plus d'informations sur le fonctionnement de ces démos dans
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName("HTML WHATWG", "workers.html#workers", "Web Workers")}} | {{Spec2("HTML WHATWG")}} | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

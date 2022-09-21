@@ -1,20 +1,6 @@
 ---
 title: HTMLImageElement.name
 slug: Web/API/HTMLImageElement/name
-page-type: web-api-instance-property
-tags:
-  - API
-  - 非推奨
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - 画像
-  - プロパティ
-  - リファレンス
-  - img
-  - name
-browser-compat: api.HTMLImageElement.name
-translation_of: Web/API/HTMLImageElement/name
 ---
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 

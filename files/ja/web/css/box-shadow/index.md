@@ -1,20 +1,6 @@
 ---
 title: box-shadow
 slug: Web/CSS/box-shadow
-tags:
-  - CSS
-  - CSS 背景と境界
-  - CSS プロパティ
-  - CSS スタイル
-  - HTML Colors
-  - リファレンス
-  - 影
-  - Styles
-  - Styling HTML
-  - box-shadow
-  - recipe:css-property
-browser-compat: css.properties.box-shadow
-translation_of: Web/CSS/box-shadow
 ---
 {{CSSRef}}
 

@@ -1,14 +1,6 @@
 ---
 title: Web Storage API の使用
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
-tags:
-  - API
-  - Guide
-  - Storage
-  - Web Storage API
-  - localStorage
-  - sessionStorage
-translation_of: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 ---
 {{DefaultAPISidebar("Web Storage API")}}
 
@@ -101,7 +93,7 @@ else {
 
 ![](event-output.png)
 
-> **Note:** **メモ**: 上記のリンクから実際のページを参照することができます。また、[ソースコードも確認できます](https://github.com/mdn/dom-examples/tree/master/web-storage)。
+> **Note:**  上記のリンクから実際のページを参照することができます。また、[ソースコードも確認できます](https://github.com/mdn/dom-examples/tree/master/web-storage)。
 
 ### ストレージが存在しているかを確認する
 

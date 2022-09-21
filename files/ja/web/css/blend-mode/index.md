@@ -1,17 +1,6 @@
 ---
 title: <blend-mode>
 slug: Web/CSS/blend-mode
-tags:
-  - 混合モード
-  - CSS
-  - CSS Data Type
-  - 合成
-  - Compositing and Blending
-  - Data Type
-  - Reference
-  - color
-browser-compat: css.types.blend-mode
-translation_of: Web/CSS/blend-mode
 ---
 {{CSSRef}}
 

@@ -1,12 +1,6 @@
 ---
 title: while
 slug: Web/JavaScript/Reference/Statements/while
-tags:
-  - JavaScript
-  - Language feature
-  - Statement
-  - while
-translation_of: Web/JavaScript/Reference/Statements/while
 ---
 {{jsSidebar("Statements")}}
 

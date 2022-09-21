@@ -1,15 +1,6 @@
 ---
 title: HTMLLinkElement.rel
 slug: Web/API/HTMLLinkElement/rel
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLLinkElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLLinkElement.rel
-translation_of: Web/API/HTMLLinkElement/rel
 ---
 {{ APIRef("HTML DOM") }}
 

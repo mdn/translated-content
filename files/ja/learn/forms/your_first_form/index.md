@@ -1,6 +1,8 @@
 ---
 title: 初めてのフォーム
 slug: Learn/Forms/Your_first_form
+l10n:
+  sourceCommit: 3c4825249f93a53f0fd2b0b6d0a371663086718e
 ---
 {{LearnSidebar}}{{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
 
@@ -107,7 +109,7 @@ slug: Learn/Forms/Your_first_form
 ユーザビリティとアクセシビリティのため、それぞれのフォームコントロールに明示的にラベルをつけます。
 [`for`](/ja/docs/Web/HTML/Attributes/for) 属性をすべての {{HTMLElement("label")}} 要素に使用し、その値として関連付けるフォームコントロールの [`id`](/ja/docs/Web/HTML/Global_attributes/id) を取ります。これで、フォームコントロールをラベルと関連付けることができます。
 
-これには利点があります — フォームコントロールにラベルを関連付けて、ユーザーがマウス、トラックパッド、タッチ端末でラベルをクリックすると、対応するウィジェットがアクティブになり、画面リーダーのユーザーに読み上げられるアクセシブルな名前が提供されます。この属性の利点をさらに知りたいのでしたら、 [HTML フォームの構築方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form) の記事ですべてを詳しく説明しています。
+これには利点があります — フォームコントロールにラベルを関連付けて、ユーザーがマウス、トラックパッド、タッチ端末でラベルをクリックすると、対応するウィジェットがアクティブになり、画面リーダーのユーザーに読み上げられるアクセシブルな名前が提供されます。この属性の利点をさらに知りたいのでしたら、 [ウェブフォームの構築方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form) の記事ですべてを詳しく説明しています。
 
 {{HTMLElement("input")}} 要素において、もっとも重要な属性は、`type` 属性です。
 この属性は {{HTMLElement("input")}} 要素の見た目や動作を定義するため、とても重要です。
@@ -124,7 +126,7 @@ slug: Learn/Forms/Your_first_form
 これは HTML の奇妙な点の 1 つです。
 `<input>` タグは空要素です。つまり、終了タグは不要です。
 一方 {{HTMLElement("textarea")}} は空要素ではないので、適切な終了タグで閉じる必要があります。これは HTML フォームの特定の機能、つまり既定値の定義方法に影響があります。
-{{HTMLElement("input")}} 要素の既定値を定義するには、次のように [`value`](/ja/docs/Web/HTML/Element/input#value) 属性を使う必要があります。
+{{HTMLElement("input")}} 要素の既定値を定義するには、次のように [`value`](/ja/docs/Web/HTML/Element/input#値) 属性を使う必要があります。
 
 ```html
 <input type="text" value="既定でこの要素にはこの文章が挿入されます">
@@ -247,7 +249,7 @@ button {
 
 > **Note:** Github の [first-form-styled.html](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html) にあります([ライブ版も確認](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html))。
 
-## データをウェブサーバーに送信する
+## ウェブサーバーへのデータの送信
 
 最後の、またもっともややこしいであろう部分が、サーバー側でのフォームデータの扱いです。
 {{HTMLElement("form")}} 要素は  [`action`](/ja/docs/Web/HTML/Element/form#attr-action) 属性と [`method`](/ja/docs/Web/HTML/Element/form#attr-method) 属性により、どこへどのようにデータを送信するかを定義できます。
@@ -393,11 +395,11 @@ button {
 - [フォームへのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)
 - [フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)
 - [UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)
-- [フォームデータの検証](/ja/docs/Learn/Forms/Form_validation)
+- [クライアントサイドのフォーム検証](/ja/docs/Learn/Forms/Form_validation)
 - [フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### 上級トピック
 
 - [カスタムフォームコントロールの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)
 - [JavaScript によるフォームの送信](/ja/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [フォームウィジェット向けプロパティ実装状況一覧](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [フォームコントロール向けの CSS プロパティの互換性一覧表](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

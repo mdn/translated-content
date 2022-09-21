@@ -1,11 +1,6 @@
 ---
 title: First-class Function (第一級関数)
 slug: Glossary/First-class_Function
-tags:
-  - CodingScripting
-  - Glossary
-  - JavaScript
-translation_of: Glossary/First-class_Function
 l10n:
   sourceCommit: fead53324d271aa05e93b369966a773bb328c64b
 ---

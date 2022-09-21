@@ -1,10 +1,6 @@
 ---
 title: WAI ARIA Live Regions/API サポート
 slug: Web/Guide/AJAX/WAI_ARIA_Live_Regions_API_Support
-tags:
-  - AJAX
-  - アクセシビリティ
-translation_of: Web/Guide/AJAX/WAI_ARIA_Live_Regions_API_Support
 ---
 > **Warning:** これらの注釈は、スクリーンリーダーの開発者向けです。 開発者は、[ARIA ライブリージョン開発者のドキュメント](/ja/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)を使用する必要があります。
 
@@ -67,4 +63,4 @@ Everything else, including focus changes, timer callbacks, XMLHttpRequest callba
 
 ## スクリーンリーダーが何を提示すべきか？
 
-Please read the live region section of the [WAI-ARIA Screen Reader Implementor's Guide](/ja/ARIA/ARIA_Screen_Reader_Implementors_Guide#Live_Regions "http://developer.mozilla.org/editor/fckeditor/core/editor/En/ARIA_Screen_Reader_Implementors_Guide#Live_Regions").
+Please read the live region section of the [WAI-ARIA Screen Reader Implementor's Guide](/ja/ARIA/ARIA_Screen_Reader_Implementors_Guide#Live_Regions).

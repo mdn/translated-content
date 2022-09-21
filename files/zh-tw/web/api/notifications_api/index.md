@@ -2,6 +2,7 @@
 title: Notifications API
 slug: Web/API/Notifications_API
 ---
+
 {{DefaultAPISidebar("Web Notifications")}}
 
 Notifications API 允許網頁控制向終端用戶顯示系統通知 — 它在網頁瀏覽器的視圖之外，因此使用者切換顯示卡或移至不同的應用程式也能顯示。此 API 設計為在相容於不同平台與現有的通知系統相容。

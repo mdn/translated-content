@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.bufferData()
 slug: Web/API/WebGLRenderingContext/bufferData
-translation_of: Web/API/WebGLRenderingContext/bufferData
 ---
 {{APIRef("WebGL")}}
 

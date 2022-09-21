@@ -36,14 +36,11 @@ L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`translate`** e
 
 ## Spécifications
 
-| Spécification                                                                                    | État                             | Commentaires                                                                    |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "dom.html#attr-translate", "translate")}}         | {{Spec2('HTML WHATWG')}} | Aucun changement depuis la dernière dérivation {{SpecName('HTML5.1')}} |
-| {{SpecName('HTML5.1', "dom.html#the-translate-attribute", "translate")}} | {{Spec2('HTML5.1')}}     | Dérivée de {{SpecName('HTML WHATWG')}}, définition initiale.           |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.translate")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,11 +1,6 @@
 ---
 title: marker-mid
 slug: Web/SVG/Attribute/marker-mid
-tags:
-  - SVG
-  - SVG Attribute
-  - SVG 属性
-translation_of: Web/SVG/Attribute/marker-mid
 ---
 {{SVGRef}}
 

@@ -1,15 +1,7 @@
 ---
 title: rotateZ()
 slug: Web/CSS/transform-function/rotateZ
-tags:
-  - CSS
-  - CSS 関数
-  - CSS 座標変換
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/transform-function/rotateZ()
 original_slug: Web/CSS/transform-function/rotateZ()
-browser-compat: css.types.transform-function.rotateZ
 ---
 {{CSSRef}}
 

@@ -72,9 +72,9 @@ Dans l'exemple suivant on a trois boîtes en ligne créées par un paragraphe av
 
 {{EmbedGHLiveSample("css-examples/flow/block-inline/inline.html", '100%', 500)}}
 
-Les boîtes autour des mots, avant et après l'élément {{HTMLElement("&lt;strong&gt;")}} sont qualifiées de boîtes _anonymes_. Ce sont des boîtes qui permettent que tout soit contenu dans une boîte mais on ne peut pas cibler ces boîtes spécifiquement.
+Les boîtes autour des mots, avant et après l'élément {{HTMLElement("strong")}} sont qualifiées de boîtes _anonymes_. Ce sont des boîtes qui permettent que tout soit contenu dans une boîte mais on ne peut pas cibler ces boîtes spécifiquement.
 
-La taille de la boîte de la ligne sur l'axe orthogonal à l'axe de lecture est définie avec la taille de la plus grande boîte qu'elle contient. Dans l'exemple suivant, on a un élément {{HTMLElement("&lt;strong&gt;")}} qui a une taille de 300% et c'est donc son contenu qui détermine la hauteur de la boîte de ligne pour cette ligne.
+La taille de la boîte de la ligne sur l'axe orthogonal à l'axe de lecture est définie avec la taille de la plus grande boîte qu'elle contient. Dans l'exemple suivant, on a un élément {{HTMLElement("strong")}} qui a une taille de 300% et c'est donc son contenu qui détermine la hauteur de la boîte de ligne pour cette ligne.
 
 {{EmbedGHLiveSample("css-examples/flow/block-inline/line-box.html", '100%', 500)}}
 

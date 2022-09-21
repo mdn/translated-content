@@ -1,15 +1,6 @@
 ---
 title: '-webkit-text-stroke-width'
 slug: Web/CSS/-webkit-text-stroke-width
-tags:
-  - CSS
-  - CSS プロパティ
-  - 標準外
-  - リファレンス
-  - WebKit
-  - recipe:css-property
-browser-compat: css.properties.-webkit-text-stroke-width
-translation_of: Web/CSS/-webkit-text-stroke-width
 ---
 {{CSSRef}}{{Non-standard_header}}
 

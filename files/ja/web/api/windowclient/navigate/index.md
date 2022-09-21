@@ -1,14 +1,6 @@
 ---
 title: WindowClient.navigate()
 slug: Web/API/WindowClient/navigate
-tags:
-  - API
-  - Method
-  - Navigate
-  - Reference
-  - Service Workers
-  - WindowClient
-translation_of: Web/API/WindowClient/navigate
 ---
 {{APIRef("Service Workers API")}}
 

@@ -1,15 +1,6 @@
 ---
 title: メディアコンテナ要素の幅と高さの属性をアスペクト比にマッピングする
 slug: Web/Media/images/aspect_ratio_mapping
-tags:
-  - CSS
-  - Images
-  - aspect ratio
-  - height
-  - jank
-  - responsive
-  - width
-translation_of: Web/Media/images/aspect_ratio_mapping
 ---
 This article explains a change that has occured in the way sizes are worked out on web documents when width and height attributes are set on them.
 
@@ -48,7 +39,7 @@ img, input[type="image"], video, embed, iframe, marquee, object, table {
 }
 ```
 
-This actually affects any element that acts as a container for complex or mixed visual media — {{htmlelement("embed")}}, {{htmlelement("iframe")}}, {{htmlelement("marquee")}}, {{htmlelement("object")}}, {{htmlelement("table")}}, and {{htmlelement("video")}}, in addition to actual images ({{htmlelement("img")}} and \*\*\*\*`<input type="image">`). When such an element has `width` and `height` attributes set on it, its aspect ratio will be calculated before load time, and be available to the browser.
+This actually affects any element that acts as a container for complex or mixed visual media — {{htmlelement("embed")}}, {{htmlelement("iframe")}}, {{htmlelement("marquee")}}, {{htmlelement("object")}}, {{htmlelement("table")}}, and {{htmlelement("video")}}, in addition to actual images ({{htmlelement("img")}} and `<input type="image">`). When such an element has `width` and `height` attributes set on it, its aspect ratio will be calculated before load time, and be available to the browser.
 
 > **Note:** Currently this effect is being limited to actual `<img>` elements, as applying to other such elements may have undesirable results. See ({{bug(1583980)}}).
 

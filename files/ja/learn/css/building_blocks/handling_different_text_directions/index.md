@@ -78,9 +78,9 @@ CSS レイアウト、特に新しいレイアウトメソッドを検討し始�
 
 以下の物理的特性と論理的特性の比較を見ることができます。
 
-\*\*`.box`の`writing-mode`プロパティを`vertical-rl`に切り替えてボックスの書き込みモードを変更すると、物理プロパティが物理方向にどのように関連付けられているかがわかりますが、論理プロパティは書き込みモードで切り替わります。
+`.box`の`writing-mode`プロパティを`vertical-rl`に切り替えてボックスの書き込みモードを変更すると、物理プロパティが物理方向にどのように関連付けられているかがわかりますが、論理プロパティは書き込みモードで切り替わります。
 
-また、 {{htmlelement("h2")}} には黒い `border-bottom`があることがわかります。両方のライティングモードで、下の境界線が常にテキストの下に来るようにする方法を見つけられますか？\*\*
+また、 {{htmlelement("h2")}} には黒い `border-bottom`があることがわかります。両方のライティングモードで、下の境界線が常にテキストの下に来るようにする方法を見つけられますか？
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/logical-mbp.html", '100%', 1200)}}
 
@@ -112,21 +112,21 @@ CSS レイアウト、特に新しいレイアウトメソッドを検討し始�
 
 ## このモジュール
 
-1.  [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
+1. [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [要素・クラス・ID によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [属性によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [擬似クラスおよび疑似要素によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [結合子](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [背景と枠線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [テキスト方向の操作](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [要素のはみ出し（オーバーフロー）](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [CSS の値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [CSS によるサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [画像・メディア・フォーム要素](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [背景と枠線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [テキスト方向の操作](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [要素のはみ出し（オーバーフロー）](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [CSS の値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [CSS によるサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [画像・メディア・フォーム要素](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [表のスタイリング](/ja/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [CSS のデバッグ](/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [CSS の整理](/ja/docs/Learn/CSS/Building_blocks/Organizing)

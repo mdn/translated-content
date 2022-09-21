@@ -1,11 +1,6 @@
 ---
 title: Other content in SVG
 slug: Web/SVG/Tutorial/Other_content_in_SVG
-tags:
-  - Intermediate
-  - SVG
-  - SVG:Tutorial
-translation_of: Web/SVG/Tutorial/Other_content_in_SVG
 ---
 {{ PreviousNext("Web/SVG/Tutorial/Clipping_and_masking", "Web/SVG/Tutorial/Filter_effects") }}
 

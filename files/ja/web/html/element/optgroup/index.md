@@ -1,15 +1,6 @@
 ---
 title: '<optgroup>: 選択肢グループ要素'
 slug: Web/HTML/Element/optgroup
-tags:
-  - 要素
-  - フォーム
-  - HTML
-  - HTML フォーム
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.optgroup
-translation_of: Web/HTML/Element/optgroup
 ---
 
 {{HTMLRef}}

@@ -133,14 +133,11 @@ La valeur par défaut sera différente selon l'élément et le navigateur :
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                             | Commentaires                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "interaction.html#spelling-and-grammar-checking", "spellcheck")}} | {{Spec2('HTML WHATWG')}} | Pas de changement depuis la dernière dérivation, {{SpecName('HTML5.1')}} |
-| {{SpecName('HTML5.1', "editing.html#spelling-and-grammar-checking", "spellcheck")}}         | {{Spec2('HTML5.1')}}     | Dérivée de {{SpecName('HTML WHATWG')}}, définition initiale.             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.global_attributes.spellcheck")}}
+{{Compat}}
 
 ## Voir aussi
 

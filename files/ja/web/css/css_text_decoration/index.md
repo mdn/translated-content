@@ -1,13 +1,6 @@
 ---
 title: CSS テキスト装飾
 slug: Web/CSS/CSS_Text_Decoration
-tags:
-  - CSS
-  - CSS Text Decoration
-  - Guide
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Text_Decoration
 ---
 {{CSSRef}}
 

@@ -1,12 +1,6 @@
 ---
 title: 206 Partial Content
 slug: Web/HTTP/Status/206
-tags:
-  - HTTP
-  - HTTP ステータスコード
-  - Range Requests
-  - Success
-translation_of: Web/HTTP/Status/206
 ---
 {{HTTPSidebar}}
 

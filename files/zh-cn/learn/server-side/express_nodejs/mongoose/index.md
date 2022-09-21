@@ -107,7 +107,7 @@ NPM 站点上有许多 ODM / ORM 解决方案（另请参阅 NPM 站点上的 [o
 Mongoose 像任何其他依赖项一样，使用 NPM 将其安装在您的项目（**package.json**）中。请在项目文件夹中运行下面的命令以完成安装：
 
 ```bash
-$ npm install mongoose
+npm install mongoose
 ```
 
 安装 Mongoose 会添加所有依赖项，包括 MongoDB 数据库驱动程序，但不会安装 MongoDB 本身。要安装 MongoDB 服务器，可以 [点击下载](https://www.mongodb.com/download-center) 各操作系统的安装程序在本地安装。也可以使用云端 MongoDB 实例。
@@ -557,7 +557,7 @@ SomeModel.find(callback_function);
 打开终端，并转到 [LocalLibrary 站点骨架](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website) 的目录。通过以下命令安装 Mongoose（及其依赖项），并将其添加至 **package.json** 文件，若你在阅读 **Mongoose 入门** 时已经完成这一操作，请忽略本段。
 
 ```bash
-$ npm install mongoose
+npm install mongoose
 ```
 
 ## 连接到 MongoDB
@@ -740,13 +740,13 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 2. 在项目根目录运行以下命令，以安装脚本所需的异步模块（后续教程再展开讲）
 
     ```bash
-    $ npm install async
+    npm install async
     ```
 
 3. 在命令提示符下用 node 运行此脚本，并以 MongoDB 数据库的 URL 作为参数（同 `app.js` 中替换 `insert_your_database_url_here` 占位符的 URL）：
 
     ```bash
-    $ node populatedb <mongodb url>​​​​
+    node populatedb <mongodb url>​​​​
     ```
 
 4. 该脚本应一路运行至完成，并在终端中记录所创建的项目。

@@ -4,7 +4,7 @@ slug: Web/API/PushManager/permissionState
 ---
 {{SeeCompatTable}}{{ApiRef("Push API")}}
 
-{{domxref("PushManager")}} インターフェースの **`permissionState()`** メソッドは、プッシュマネージャーの許可状態を示す {{domxref("DOMString")}} で解決される {{jsxref("Promise")}} を返します。許可状態は、`'prompt'` か ` 'denied'`、`'granted'` です。
+{{domxref("PushManager")}} インターフェースの **`permissionState()`** メソッドは、プッシュマネージャーの許可状態を示す {{domxref("DOMString")}} で解決される {{jsxref("Promise")}} を返します。許可状態は、`'prompt'` か `'denied'`、`'granted'` です。
 
 > **Note:** Firefox 44 では、[Notifications](/ja/docs/Web/API/Notifications_API) と [Push](/ja/docs/Web/API/Push_API) の許可は統合されています。notifications が許可された場合、 push も使用できます。
 

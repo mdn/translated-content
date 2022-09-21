@@ -44,13 +44,11 @@ _L'interface `WorkerLocation` n'hérite d'aucune méthode mais implémente les m
 
 ## Spécifications
 
-| Spécification                                                                        | Status                           | Comment |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', '#workerlocation', 'WorkerLocation')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WorkerLocation")}}
+{{Compat}}
 
 ## Voir aussi
 

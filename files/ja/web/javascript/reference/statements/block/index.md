@@ -1,14 +1,6 @@
 ---
 title: ブロック
 slug: Web/JavaScript/Reference/Statements/block
-tags:
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
-  - 文
-  - 言語機能
-translation_of: Web/JavaScript/Reference/Statements/block
 ---
 {{jsSidebar("Statements")}}
 

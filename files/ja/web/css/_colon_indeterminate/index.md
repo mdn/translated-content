@@ -1,19 +1,6 @@
 ---
 title: ':indeterminate'
 slug: Web/CSS/:indeterminate
-tags:
-  - ':indeterminate'
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-  - checkbox
-  - progress
-  - ラジオボタン
-browser-compat: css.selectors.indeterminate
-translation_of: Web/CSS/:indeterminate
 ---
 {{CSSRef}}
 

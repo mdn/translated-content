@@ -1,6 +1,6 @@
 ---
 title: Django Web 框架 (python)
-slug: learn/Server-side/Django
+slug: Learn/Server-side/Django
 ---
 {{LearnSidebar}}
 

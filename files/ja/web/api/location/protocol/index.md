@@ -1,13 +1,6 @@
 ---
 title: location.protocol
 slug: Web/API/Location/protocol
-tags:
-  - API
-  - Location
-  - プロパティ
-  - リファレンス
-browser-compat: api.Location.protocol
-tranalation_of: Web/API/Location/protocol
 ---
 {{ApiRef("Location")}}
 

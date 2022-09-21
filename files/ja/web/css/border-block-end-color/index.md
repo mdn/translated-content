@@ -1,19 +1,6 @@
 ---
 title: border-block-end-color
 slug: Web/CSS/border-block-end-color
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - border-block
-  - border-block-color
-  - border-block-end
-  - border-block-end-color
-  - recipe:css-property
-browser-compat: css.properties.border-block-end-color
-translation_of: Web/CSS/border-block-end-color
 ---
 {{CSSRef}}
 

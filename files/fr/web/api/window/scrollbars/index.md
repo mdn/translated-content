@@ -40,14 +40,11 @@ L'exemple HTML complet suivant montre comment la propriété `visible` de l'obje
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', 'browsers.html#dom-window-scrollbars', 'Window.scrollbars')}} | {{Spec2('HTML WHATWG')}} |             |
-| {{SpecName('HTML5 W3C', 'browsers.html#dom-window-scrollbars', 'Window.scrollbars')}}     | {{Spec2('HTML5 W3C')}}     |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.scrollbars")}}
+{{Compat}}
 
 ## Voir aussi
 

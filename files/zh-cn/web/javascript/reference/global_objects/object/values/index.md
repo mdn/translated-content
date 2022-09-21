@@ -79,7 +79,7 @@ if (!Object.values) Object.values = function(obj) {
 
 ## 相关链接
 
-- [Enumerability and ownership of properties](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.entries()")}} {{experimental_inline}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

@@ -1,20 +1,6 @@
 ---
 title: MediaTrackSupportedConstraints.height
 slug: Web/API/MediaTrackSupportedConstraints/height
-page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSupportedConstraints
-  - Property
-  - Reference
-  - Web
-  - WebRTC
-  - height
-browser-compat: api.MediaTrackSupportedConstraints.height
-translation_of: Web/API/MediaTrackSupportedConstraints/height
 ---
 {{DefaultAPISidebar("Media Capture and Streams")}}
 

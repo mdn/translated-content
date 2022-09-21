@@ -1,16 +1,6 @@
 ---
 title: HTMLLabelElement.form
 slug: Web/API/HTMLLabelElement/form
-tags:
-  - フォーム
-  - HTML DOM
-  - HTMLLabelElement
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - form
-browser-compat: api.HTMLLabelElement.form
-translation_of: Web/API/HTMLLabelElement/form
 ---
 {{APIRef("HTML DOM")}}
 

@@ -1,12 +1,6 @@
 ---
 title: 学習フォーラム
 slug: MDN/Community/Learn_forum
-page-type: mdn-community-guide
-tags:
-  - meta
-  - community-guidelines
-  - governance
-translation_of: MDN/Community/Learn_forum
 original_slug: MDN/Contribute/Help_beginners
 i10n:
   sourceCommit: 8dbe0b2acd7fdbf533a9bd2f517999cc2035d952

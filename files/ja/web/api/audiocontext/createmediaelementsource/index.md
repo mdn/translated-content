@@ -1,7 +1,6 @@
 ---
 title: AudioContext.createMediaElementSource()
 slug: Web/API/AudioContext/createMediaElementSource
-translation_of: Web/API/AudioContext/createMediaElementSource
 ---
 {{ APIRef("Web Audio API") }}
 

@@ -1,14 +1,6 @@
 ---
 title: CanvasRenderingContext2D.font
 slug: Web/API/CanvasRenderingContext2D/font
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - プロパティ
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.font
-translation_of: Web/API/CanvasRenderingContext2D/font
 ---
 {{APIRef}}
 

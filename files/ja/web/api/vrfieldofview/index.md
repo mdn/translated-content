@@ -1,7 +1,6 @@
 ---
 title: VRFieldOfView
 slug: Web/API/VRFieldOfView
-translation_of: Web/API/VRFieldOfView
 ---
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 

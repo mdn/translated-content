@@ -1,14 +1,6 @@
 ---
 title: パンくずリスト
 slug: Glossary/Breadcrumb
-tags:
-  - Accessibility
-  - Glossary
-  - Navigation
-  - Search
-  - Site map
-  - breadcrumb
-translation_of: Glossary/Breadcrumb
 ---
 **パンくずリスト** (_breadcrumb_, _breadcrumb trail_) は、ウェブサイトの各ページのヘッダーと本文の間に置かれることが多い構成要素です。パンくずリストを通じて、たとえばトップページからみて現在のページがどの階層に位置するかや、ユーザーが現在のページに至るまでどの順番でどのリンクをたどってきたのかを知ることができます。
 

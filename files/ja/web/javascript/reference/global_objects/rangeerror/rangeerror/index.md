@@ -1,11 +1,6 @@
 ---
 title: RangeError() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/RangeError/RangeError
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/RangeError/RangeError
 ---
 {{JSRef}}
 

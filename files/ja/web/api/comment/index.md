@@ -1,10 +1,6 @@
 ---
 title: Comment
 slug: Web/API/Comment
-tags:
-  - API
-  - DOM
-translation_of: Web/API/Comment
 ---
 {{ApiRef("DOM")}}
 
@@ -40,4 +36,4 @@ _このインターフェイスに固有のメソッドはありませんが、�
 
 ## 関連情報
 
-- [DOM インターフェイスの索引](/ja/docs/DOM/DOM_Reference "DOM/DOM_Reference")
+- [DOM インターフェイスの索引](/ja/docs/DOM/DOM_Reference)

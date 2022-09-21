@@ -1,14 +1,6 @@
 ---
 title: Port (ポート)
 slug: Glossary/Port
-tags:
-  - Glossary
-  - Intro
-  - Security
-  - computer network
-  - l10n:priority
-  - port
-translation_of: Glossary/Port
 ---
 **ポート**とは、{{Glossary("IP address","IP アドレス")}}を持ち、ネットワークに接続されているコンピューターの通信上のエンドポイントです。ポートは数字で指定され、特に 1024 より小さい (1023 以下の) ポート番号は特定の{{Glossary("protocol","プロトコル")}}にデフォルトで関連付けられています。
 

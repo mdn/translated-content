@@ -51,4 +51,4 @@ function raisePower(x,y) {
 - {{jsxref("Math.exp()")}}
 - {{jsxref("Math.log()")}}
 - {{jsxref("Math.sqrt()")}}
-- [Exponentiation operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation) {{experimental_inline}}
+- [Exponentiation operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation) {{experimental_inline}}

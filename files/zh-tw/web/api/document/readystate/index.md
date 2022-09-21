@@ -2,6 +2,7 @@
 title: Document.readyState
 slug: Web/API/Document/readyState
 ---
+
 {{APIRef("DOM")}}
 
 ## 總覽

@@ -30,7 +30,7 @@ slug: Learn/JavaScript/First_steps/Strings
 ## 字符串 — 基本知识
 
 字符串与数字的处理方式第一眼看上去十分相似，但是当您深入挖掘时，您将会看到一些显著的差异。让我们首先在一个控制台输入一些基本的行来熟悉一下。
-我们在下面提供了一个 (您也可以在一个单独的选项卡或窗口中[打开这个控制台](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html)，或者如果您愿意使用[浏览器开发人员控制台](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools))。
+我们在下面提供了一个 (您也可以在一个单独的选项卡或窗口中[打开这个控制台](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html)，或者如果您愿意使用[浏览器开发人员控制台](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools))。
 
 ```html hidden
 <!DOCTYPE html>
@@ -268,7 +268,7 @@ button.onclick = function() {
 
 这里我们使用的是第 4 行中的 {{domxref("window.prompt()", "window.prompt()")}} 函数，它要求用户通过一个弹出对话框回答一个问题然后将他们输入的文本存储在一个给定的变量中 — 在这个例子中是就是 `name` 变量。然后，我们在第 5 行中使用 {{domxref("window.alert()","window.alert()")}} 函数来显示另一个弹出窗口，其中包含一个字符串，我们用两个字符串常量和 name 变量通过连接进行组合。
 
-### 数字与字符
+### 数字与字符串
 
 1. 当我们尝试添加 (或连接) 一个字符串和一个数字时，会发生什么？
     让我们在我们的控制台中尝试一下：

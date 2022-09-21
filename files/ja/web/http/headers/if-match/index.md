@@ -1,13 +1,6 @@
 ---
 title: If-Match
 slug: Web/HTTP/Headers/If-Match
-tags:
-  - HTTP
-  - HTTP ヘッダー
-  - Reference
-  - リクエストヘッダー
-  - 条件付きリクエスト
-translation_of: Web/HTTP/Headers/If-Match
 ---
 {{HTTPSidebar}}
 
@@ -77,5 +70,5 @@ If-Match: *
 - {{HTTPHeader("If-Unmodified-Since")}}
 - {{HTTPHeader("If-Modified-Since")}}
 - {{HTTPHeader("If-None-Match")}}
-- {{HTTPStatus("416")}}` Range Not Satisfiable`
-- {{HTTPStatus("412")}}` Precondition Failed`
+- {{HTTPStatus("416")}} `Range Not Satisfiable`
+- {{HTTPStatus("412")}} `Precondition Failed`
