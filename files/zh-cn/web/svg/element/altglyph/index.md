@@ -2,6 +2,7 @@
 title: altGlyph
 slug: Web/SVG/Element/altGlyph
 ---
+
 {{SVGRef}}
 
 `altGlyph`元素允许符号的复杂选区，用来呈现它的子字符数据。

@@ -2,6 +2,7 @@
 title: translate
 slug: Web/HTML/Global_attributes/translate
 ---
+
 {{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
 
 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) **translate** 被用来规定对应元素的属性值及其子文本节点内容，是否跟随系统语言作出对应的翻译变化。Translate 属性可以有下面两个值：

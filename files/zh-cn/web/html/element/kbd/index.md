@@ -2,6 +2,7 @@
 title: <kbd>
 slug: Web/HTML/Element/kbd
 ---
+
 ## 摘要
 
 HTML 键盘输入元素 (**\<kbd>**) 用于表示用户输入，它将产生一个行内元素，以浏览器的默认 monospace 字体显示。

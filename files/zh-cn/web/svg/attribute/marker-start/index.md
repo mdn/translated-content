@@ -2,6 +2,7 @@
 title: marker-start
 slug: Web/SVG/Attribute/marker-start
 ---
+
 {{SVGRef}}
 
 **`marker-start`** 属性将在给定[形状](/zh-CN/docs/Web/SVG/Element#Shape_elements)的起始顶点绘制的箭头或者多边形标记

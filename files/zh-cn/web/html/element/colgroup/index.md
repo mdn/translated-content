@@ -2,6 +2,7 @@
 title: <colgroup>
 slug: Web/HTML/Element/colgroup
 ---
+
 {{HTMLRef}}
 
 HTML 中的 表格列组（_Column Group_ **\<colgroup>**）标签用来定义表中的一组列表。

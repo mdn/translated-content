@@ -2,6 +2,7 @@
 title: 使用 WebAssembly JavaScript API
 slug: WebAssembly/Using_the_JavaScript_API
 ---
+
 {{WebAssemblySidebar}}
 
 如果您已经使用 Emscripten 等工具编译了另一种语言的模块，或者自己加载并运行代码，那么下一步是了解如何使用 WebAssembly JavaScript API 的其他功能。这篇文章告诉你你需要知道什么。

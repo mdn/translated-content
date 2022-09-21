@@ -2,6 +2,7 @@
 title: mpath
 slug: Web/SVG/Element/mpath
 ---
+
 {{SVGRef}}
 
 {{ SVGElement("animateMotion") }} 元素的`mpath`子元素使{{ SVGElement("animateMotion") }} 元素能够引用一个外部的{{ SVGElement("path") }}元素作为运动路径的定义。

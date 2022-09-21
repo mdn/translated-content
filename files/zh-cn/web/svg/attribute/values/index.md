@@ -2,6 +2,7 @@
 title: values
 slug: Web/SVG/Attribute/values
 ---
+
 {{SVGRef}}
 
 values 属性具有不同的含义，具体取决于使用的上下文，它可以定义在动画过程中使用的值序列，或者它是颜色矩阵的数字列表，根据颜色类型的不同，它们的解释也不同。 要执行的颜色更改。

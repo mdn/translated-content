@@ -2,6 +2,7 @@
 title: feComposite
 slug: Web/SVG/Element/feComposite
 ---
+
 {{SVGRef}}
 
 该滤镜执行两个输入图像的智能像素组合，在图像空间中使用以下 Porter-Duff 合成操作之一：over、in、atop、xor。另外，还可以应用一个智能组件`arithmetic 操作（结果被压到 [0,1] 范围内）。`

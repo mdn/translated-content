@@ -2,6 +2,7 @@
 title: HTTP 身份验证
 slug: Web/HTTP/Authentication
 ---
+
 {{HTTPSidebar}}
 
 HTTP 提供一个用于权限控制和认证的通用框架。最常用的 HTTP 认证方案是 HTTP Basic authentication。本页介绍了通用的 HTTP 认证框架以及展示如何通过 HTTP Basic authentication 来限制权限访问您的服务器。
