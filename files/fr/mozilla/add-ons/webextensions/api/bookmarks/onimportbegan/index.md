@@ -13,6 +13,7 @@ tags:
   - onImportBegan
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportBegan
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsque le navigateur a commencé à importer un ensemble de signet.

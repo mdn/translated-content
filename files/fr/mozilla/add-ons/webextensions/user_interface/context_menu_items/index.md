@@ -6,6 +6,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 original_slug: Mozilla/Add-ons/WebExtensions/user_interface/elements_menu_contextuel
 ---
+
 {{AddonSidebar}}
 
 Cette option d'interface utilisateur ajoute un ou plusieurs éléments à un menu contextuel du navigateur. Il s'agit du menu contextuel disponible lorsqu'un utilisateur clique avec le bouton droit de la souris sur une page Web. Les onglets peuvent aussi avoir des menus contextuels, disponibles via l' API [browser.menus](/fr/Add-ons/WebExtensions/API/menus).

@@ -11,6 +11,7 @@ tags:
   - captivePortal
 translation_of: Mozilla/Add-ons/WebExtensions/API/captivePortal/getLastChecked
 ---
+
 {{AddonSidebar()}}
 
 Retourne le temps écoulé depuis que la dernière demande a été complétée.

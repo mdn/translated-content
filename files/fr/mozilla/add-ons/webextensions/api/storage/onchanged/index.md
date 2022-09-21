@@ -13,6 +13,7 @@ tags:
   - onChanged
 translation_of: Mozilla/Add-ons/WebExtensions/API/storage/onChanged
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsqu'un ou plusieurs éléments changent.

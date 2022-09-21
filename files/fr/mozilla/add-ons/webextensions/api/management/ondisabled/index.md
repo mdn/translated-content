@@ -11,6 +11,7 @@ tags:
   - onDisabled
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/onDisabled
 ---
+
 {{AddonSidebar()}}
 
 Action quand l'extension est désactivée.

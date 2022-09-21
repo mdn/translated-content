@@ -13,6 +13,7 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/ResourceType
 ---
+
 {{AddonSidebar()}}
 
 Ce type est une chaîne de caractères, qui représente le contexte dans lequel une ressource a été récupérée dans une requête web.

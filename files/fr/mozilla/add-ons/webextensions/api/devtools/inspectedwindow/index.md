@@ -11,6 +11,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow
 ---
+
 {{AddonSidebar}}
 
 > **Note :** Cette page décrit les API de développement de WebExtensions telles qu'elles existent dans Firefox 54. Bien que les API soient basées sur les [APIs de devtools de Chrome](https://developer.chrome.com/extensions/devtools), il existe encore de nombreuses fonctionnalités qui ne sont pas encore implémentées dans Firefox et ne sont donc pas documentées ici. Pour voir les fonctionnalités actuellement manquantes, regarder  [Limitations des APIs devtools](/fr/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs).

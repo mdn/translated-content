@@ -12,6 +12,7 @@ tags:
   - onShown
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/onShown
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsque le navigateur a montré un menu.

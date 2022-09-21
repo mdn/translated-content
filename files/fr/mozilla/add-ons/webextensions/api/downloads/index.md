@@ -12,6 +12,7 @@ tags:
   - downloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads
 ---
+
 {{AddonSidebar}}
 
 Permet aux extensions d'interagir avec le gestionnaire de téléchargement du navigateur. Vous pouvez utiliser ce module API pour télécharger des fichiers, annuler, suspendre, reprendre des téléchargements et afficher les fichiers téléchargés dans le gestionnaire de fichiers.

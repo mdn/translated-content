@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/3/Site_compatibility
 original_slug: Changements_dans_Gecko_1.9_affectant_les_sites_Web
 ---
+
 {{FirefoxSidebar}}
 
 Cette page essaie de donner un aperçu des changements entre [Gecko](fr/Gecko) 1.8 et Gecko 1.9 qui pourraient éventuellement affecter le comportement ou le rendu des sites Web.
