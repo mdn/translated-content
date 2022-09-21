@@ -2,6 +2,7 @@
 title: 'Warning: expression closures are deprecated'
 slug: Web/JavaScript/Reference/Errors/Deprecated_expression_closures
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误提示

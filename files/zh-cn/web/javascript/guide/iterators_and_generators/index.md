@@ -2,6 +2,7 @@
 title: 迭代器和生成器
 slug: Web/JavaScript/Guide/Iterators_and_Generators
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Meta_programming")}}
 
 处理集合中的每个项是很常见的操作。JavaScript 提供了许多迭代集合的方法，从简单的 {{jsxref("Statements/for","for")}} 循环到 {{jsxref("Global_Objects/Array/map","map()")}} 和 {{jsxref("Global_Objects/Array/filter","filter()")}}。迭代器和生成器将迭代的概念直接带入核心语言，并提供了一种机制来自定义 {{jsxref("Statements/for...of","for...of")}} 循环的行为。

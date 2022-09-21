@@ -2,6 +2,7 @@
 title: String.prototype.split()
 slug: Web/JavaScript/Reference/Global_Objects/String/split
 ---
+
 {{JSRef}}
 
 **`split()`** 方法使用指定的分隔符字符串将一个{{jsxref("String")}}对象分割成子字符串数组，以一个指定的分割字串来决定每个拆分的位置。

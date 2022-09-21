@@ -2,6 +2,7 @@
 title: Set.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
 ---
+
 {{JSRef("Global_Objects", "Set")}}
 
 ## 概述
