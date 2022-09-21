@@ -2,6 +2,7 @@
 title: mouseleave
 slug: Web/API/Element/mouseleave_event
 ---
+
 {{APIRef}}
 
 指点设备（通常是鼠标）的指针移出某个元素时，会触发`mouseleave`事件。

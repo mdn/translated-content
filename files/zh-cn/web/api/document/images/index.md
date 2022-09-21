@@ -2,6 +2,7 @@
 title: document.images
 slug: Web/API/Document/images
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Document")}} 接口的只读属性 images 返回当前文档中所有 [image](/zh-CN/DOM/Image) 元素的集合。

@@ -2,6 +2,7 @@
 title: CustomElementRegistry.define()
 slug: Web/API/CustomElementRegistry/define
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
 {{domxref("CustomElementRegistry")}}接口的 **`define()`** 方法定义了一个自定义元素。

@@ -2,6 +2,7 @@
 title: document.embeds
 slug: Web/API/Document/embeds
 ---
+
 {{ ApiRef() }}
 
 {{domxref("Document")}}接口的只读属性`embeds` 返回当前文档内的\<embed>**HTML** {{htmlelement("object")}}元素列表

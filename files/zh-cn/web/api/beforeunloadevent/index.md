@@ -2,6 +2,7 @@
 title: BeforeUnloadEvent
 slug: Web/API/BeforeUnloadEvent
 ---
+
 {{APIRef}}
 
 **`beforeunload`** 事件触发于 window、document 和它们的资源即将卸载时。

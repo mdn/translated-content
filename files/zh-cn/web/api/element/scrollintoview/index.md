@@ -2,6 +2,7 @@
 title: Element.scrollIntoView()
 slug: Web/API/Element/scrollIntoView
 ---
+
 {{APIRef("DOM")}}{{domxref("Element")}} 接口的 scrollIntoView() 方法会滚动元素的父容器，使被调用 scrollIntoView() 的元素对用户可见。
 
 ## 语法

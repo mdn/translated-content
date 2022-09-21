@@ -2,6 +2,7 @@
 title: ChannelMergerNode
 slug: Web/API/ChannelMergerNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 `ChannelMergerNode` 接口，经常与其对应的 {{domxref("ChannelSplitterNode")}} 接口一起使用，将不同的单声道输入重新组合成单个输出。每个输入用于填充输出的一个通道。这对于分别访问每个通道非常有用，例如，执行通道混合时，必须在每个信道上单独控制增益。

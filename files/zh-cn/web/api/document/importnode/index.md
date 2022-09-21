@@ -2,6 +2,7 @@
 title: document.importNode
 slug: Web/API/Document/importNode
 ---
+
 {{ ApiRef() }}
 
 ## 概述

@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.imageSmoothingEnabled
 slug: Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.imageSmoothingEnabled`** 是 Canvas 2D API 用来设置图片是否平滑的属性，true 表示图片平滑（默认值），false 表示图片不平滑。当我们获取 `imageSmoothingEnabled` 属性值时， 它会返回最新设置的值。

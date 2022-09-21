@@ -2,6 +2,7 @@
 title: DeviceMotionEvent.rotationRate
 slug: Web/API/DeviceMotionEvent/rotationRate
 ---
+
 {{ ApiRef("Device Orientation Events") }}
 
 返回设备围绕其每个轴（x、y、z）旋转的速率（单位：度/秒）。

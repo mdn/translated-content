@@ -2,6 +2,7 @@
 title: 'Element: contextmenu event'
 slug: Web/API/Element/contextmenu_event
 ---
+
 {{APIRef}}
 
 **`contextmenu`** 事件会在用户尝试打开上下文菜单时被触发。该事件通常在鼠标点击右键或者按下键盘上的菜单键时被触发，如果使用菜单键，该上下文菜单会被展示 到所聚焦元素的左下角，但是如果该元素是一棵 DOM 树的话，上下文菜单便会展示在当前这一行的左下角。

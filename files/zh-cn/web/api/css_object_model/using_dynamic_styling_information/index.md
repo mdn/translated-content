@@ -2,6 +2,7 @@
 title: 关于使用动态样式的信息
 slug: Web/API/CSS_Object_Model/Using_dynamic_styling_information
 ---
+
 {{DefaultAPISidebar("CSSOM")}}
 
 CSS 对象模型（CSSOM），是 DOM 的一部分，通过暴露一些接口，允许操作很多与 CSS 相关的信息。最初定义在 _DOM Level 2 Style_ 提议中，现在，这些接口形成了一个规范，_CSS 对象模型（CSSOM）_，旨在取代它。

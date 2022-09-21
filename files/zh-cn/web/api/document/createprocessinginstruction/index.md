@@ -2,6 +2,7 @@
 title: Document.createProcessingInstruction()
 slug: Web/API/Document/createProcessingInstruction
 ---
+
 {{APIRef("DOM")}}
 
 `createProcessingInstruction()` 创建一个新的处理指令节点，并返回。

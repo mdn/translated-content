@@ -2,6 +2,7 @@
 title: Document.timeline
 slug: Web/API/Document/timeline
 ---
+
 {{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
 {{domxref("Document")}} 接口的 `timeline` 只读属性表示当前文档的默认时间轴。 此时间轴是 {{domxref("DocumentTimeline")}} 的一个特殊实例，它会在网页加载时自动创建。

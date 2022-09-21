@@ -2,6 +2,7 @@
 title: DOMImplementation.hasFeature
 slug: Web/API/DOMImplementation/hasFeature
 ---
+
 {{ApiRef("DOMImplementation")}}
 
 The **`DOMImplementation.hasFeature()`** method returns a {{domxref("Boolean")}} flag indicating if a given feature is supported.

@@ -2,6 +2,7 @@
 title: 'Document: readystatechange 事件'
 slug: Web/API/Document/readystatechange_event
 ---
+
 {{APIRef}}
 
 当文档的 {{domxref("Document.readyState", "readyState")}} 属性发生改变时，会触发 `readystatechange` 事件。

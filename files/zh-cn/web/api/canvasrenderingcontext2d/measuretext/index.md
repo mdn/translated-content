@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.measureText()
 slug: Web/API/CanvasRenderingContext2D/measureText
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.measureText()`** 方法返回一个关于被测量文本{{domxref("TextMetrics")}} 对象包含的信息（例如它的宽度）。

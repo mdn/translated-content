@@ -2,6 +2,7 @@
 title: Element.attributes
 slug: Web/API/Element/attributes
 ---
+
 {{ APIRef("DOM") }}
 
 **`Element.attributes`** 属性返回该元素所有属性节点的一个实时集合。该集合是一个 {{domxref("NamedNodeMap")}} 对象，不是一个数组，所以它没有 {{jsxref("Array", "数组")}} 的方法，其包含的 {{domxref("Attr", "属性")}} 节点的索引顺序随浏览器不同而不同。更确切地说，`attributes` 是字符串形式的名/值对，每一对名/值对对应一个属性节点。

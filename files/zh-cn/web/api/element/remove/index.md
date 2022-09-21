@@ -2,6 +2,7 @@
 title: Element.remove()
 slug: Web/API/Element/remove
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.remove()`** 方法，把对象从它所属的 DOM 树中删除。

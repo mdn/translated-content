@@ -2,6 +2,7 @@
 title: DedicatedWorkerGlobalScope
 slug: Web/API/DedicatedWorkerGlobalScope
 ---
+
 {{APIRef("Web Workers API")}}
 
 **`DedicatedWorkerGlobalScope`** 对象（也就是 {{domxref("Worker")}} 全局作用域）可以通过 {{domxref("window.self","self")}} 关键字来访问。一些在 worker 全局作用域下不可用的全局函数、命名空间对象以及构造器，也可以通过此对象使用。在 [JavaScript 参考](/zh-CN/docs/Web/JavaScript/Reference)的 [Web Workers 可以使用的函数和类](/zh-CN/docs/Web/Guide/Needs_categorization/Functions_available_to_workers)页面中，有列举这些特性。

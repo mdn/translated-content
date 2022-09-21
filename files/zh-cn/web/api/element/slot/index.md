@@ -2,6 +2,7 @@
 title: Element.slot
 slug: Web/API/Element/slot
 ---
+
 {{APIRef("Shadow DOM")}}
 
 {{domxref("Element")}}接口的 **`slot`** 属性会返回已插入元素所在的 Shadow DOM slot 的名称。

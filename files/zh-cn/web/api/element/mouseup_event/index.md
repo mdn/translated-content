@@ -2,6 +2,7 @@
 title: mouseup
 slug: Web/API/Element/mouseup_event
 ---
+
 {{APIRef}}
 
 当指针在元素中时， `mouseup`事件在指针设备（如鼠标或触摸板）按钮放开时触发。`mouseup` 事件与{{domxref("Element.mousedown_event", "mousedown")}} 事件相反。

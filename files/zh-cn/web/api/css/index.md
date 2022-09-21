@@ -2,6 +2,7 @@
 title: CSS
 slug: Web/API/CSS
 ---
+
 {{APIRef("CSSOM")}}
 
 `CSS` 接口涵盖 CSS 相关的实用方法。尚且不存在实现这个接口的对象：它仅仅包含静态的方法，因此也是一个实用性的接口。

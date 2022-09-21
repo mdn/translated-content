@@ -2,6 +2,7 @@
 title: self.createImageBitmap()
 slug: Web/API/createImageBitmap
 ---
+
 {{APIRef("Canvas API")}}
 
 **`createImageBitmap`** 方法存在 windows 和 workers 中。它接受各种不同的图像来源，并返回一个{{domxref("Promise")}}, resolve 为{{domxref("ImageBitmap")}}. 可选地参数，图像被剪裁成自（sx，sy）且宽度为 sw，高度为 sh 的像素的矩形。
