@@ -50,7 +50,7 @@ El siguiente gráfico muestra un resumen de los eventos de *service worker* disp
 
 Para demostrar los conceptos básicos de registro e instalación de un servicio de trabajador, hemos creado una demostración simple llamada [Servicio de trabajador simple](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker), que es una simple galería de imágenes de Star Wars Lego. Utiliza una función impulsada por promesas para leer datos de imagen de un objeto JSON y cargar las imágenes usando Ajax, antes de mostrar las imágenes en una línea hacia abajo en la página. Hemos mantenido las cosas estáticas y simples por ahora. También registra, instala y activa un servicio de trabajador, y cuando los navegadores admiten más especificaciones, almacenará en caché todos los archivos necesarios para que funcione sin conexión.
 
-![Las palabras Star Wars seguidas de una imagen de una versión Lego del personaje de Darth Vader](demo-screenshot.png)
+![Las palabras Star Wars seguidas de una imagen de una versión Lego del personaje Darth Vader](demo-screenshot.png)
 
 Puedes ver el [código fuente en GitHub](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) y el [Sencillo servicio de trabajador ejecutándose en vivo](https://bncb2v.csb.app/).
 
@@ -66,11 +66,11 @@ const registerServiceWorker = async () => {
         scope: "/",
       });
       if (registration.installing) {
-        console.log("Service worker installing");
+        console.log("Instalando el Service worker");
       } else if (registration.waiting) {
-        console.log("Service worker installed");
+        console.log("Service worker instalado");
       } else if (registration.active) {
-        console.log("Service worker active");
+        console.log("Service worker activo");
       }
     } catch (error) {
       console.error(`Falló el registro con el ${error}`);
@@ -83,42 +83,42 @@ const registerServiceWorker = async () => {
 registerServiceWorker();
 ```
 
-1. The if-block performs a feature detection test to make sure service workers are supported before trying to register one.
-2. Next, we use the {{domxref("ServiceWorkerContainer.register()") }} function to register the service worker for this site, which is just a JavaScript file residing inside our app (note this is the file's URL relative to the origin, not the JS file that references it.)
-3. The `scope` parameter is optional, and can be used to specify the subset of your content that you want the service worker to control. In this case, we have specified '`'/'`, which means all content under the app's origin. If you leave it out, it will default to this value anyway, but we specified it here for illustration purposes.
+1. El bloque if realiza una prueba de detección de características para asegurarse de que el servicio de trabajadores sea compatible antes de intentar registrar uno.
+2. A continuación, usamos la función {{domxref("ServiceWorkerContainer.register()") }} para registrar el servicio de trabajadores para este sitio, que solo es un archivo JavaScript que reside dentro de nuestra aplicación (ten en cuenta que esta es la URL del archivo relativa al origen , no el archivo JS que hace referencia a él).
+3. El parámetro `scope` es opcional y se puede usar para especificar el subconjunto de tu contenido que deseas controle el servicio del trabajador. En este caso, hemos especificado '`'/'`, lo cual significa todo el contenido bajo el origen de la aplicación. Si lo omites, tendrá este valor predeterminado de todos modos, pero lo especificamos aquí con fines ilustrativos.
 
-This registers a service worker, which runs in a worker context, and therefore has no DOM access. You then run code in the service worker outside of your normal pages to control their loading.
+Esto registra un servicio de trabajador, que se ejecuta en un contexto de trabajador y, por lo tanto, no tiene acceso al DOM. Luego ejecuta el código en el servicio del trabajador fuera de tus páginas normales para controlar su carga.
 
-A single service worker can control many pages. Each time a page within your scope is loaded, the service worker is installed against that page and operates on it. Bear in mind therefore that you need to be careful with global variables in the service worker script: each page doesn't get its own unique worker.
+Un solo servicio de trabajador puede controlar muchas páginas. Cada vez que se carga una página dentro de su alcance, el servicio del trabajador se instala en esa página y opera en ella. Por lo tanto, ten en cuenta que debes tener cuidado con las variables globales en el script del servicio de trabajador: cada página no tiene su propio trabajador único.
 
-> **Note:** Your service worker functions like a proxy server, allowing you to modify requests and responses, replace them with items from its own cache, and more.
+> **Nota:** Tu servicio del trabajador funciona como un servidor proxy, lo que te permite modificar solicitudes y respuestas, reemplazarlas con elementos de su propio caché y más.
 
-> **Note:** One great thing about service workers is that if you use feature detection like we've shown above, browsers that don't support service workers can just use your app online in the normal expected fashion. Furthermore, if you use AppCache and SW on a page, browsers that don't support SW but do support AppCache will use that, and browsers that support both will ignore the AppCache and let SW take over.
+> **Nota:** Una gran cosa acerca del servicio de trabajadores es que si usas la detección de funciones como se muestra arriba, los navegadores que no son compatibles con los servicios de trabajadores pueden usar tu aplicación en línea de la manera normal esperada. Además, si usas AppCache y <abbr title="ServiceWorker">SW</abbr> en una página, los navegadores que no admiten <abbr title="ServiceWorker">SW</abbr> pero sí AppCache lo usarán, y los navegadores que admiten ambos ignorarán AppCache y dejarán que <abbr title="ServiceWorker">SW</abbr> tome el control.
 
-#### Why is my service worker failing to register?
+#### ¿Por qué mi servicio de trabajador no se registra?
 
-This could be for the following reasons:
+Esto se podría deber a las siguientes razones:
 
-1. You are not running your application through HTTPS.
-2. The path to your service worker file is not written correctly — it needs to be written relative to the origin, not your app's root directory. In our example, the worker is at `https://bncb2v.csb.app/sw.js`, and the app's root is `https://bncb2v.csb.app/`. But the path needs to be written as `/sw.js`.
-3. It is also not allowed to point to a service worker of a different origin than that of your app.
+1. No estás ejecutando tu aplicación a través de HTTPS.
+2. La ruta a tu archivo del servicio de trabajador no está escrita correctamente — se debe escribir en relación con el origen, no con el directorio raíz de tu aplicación. En nuestro ejemplo, el trabajador está en `https://bncb2v.csb.app/sw.js` y la raíz de la aplicación es `https://bncb2v.csb.app/`. Pero la ruta se debe escribir como `/sw.js`.
+3. Tampoco está permitido apuntar a un servicio de trabajador de un origen diferente al de tu aplicación.
 
 ![](important-notes.png)
 
-Also note:
+También ten en cuenta:
 
-- The service worker will only catch requests from clients under the service worker's scope.
-- The max scope for a service worker is the location of the worker.
-- If your service worker is active on a client being served with the `Service-Worker-Allowed` header, you can specify a list of max scopes for that worker.
-- In Firefox, Service Worker APIs are hidden and cannot be used when the user is in [private browsing mode](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history).
+- El servicio de trabajador solo capturará las solicitudes de los clientes bajo el alcance del servicio de trabajador.
+- El alcance máximo para un servicio de trabajador es la ubicación del trabajador.
+- Si tu servicio de trabajador está activo en un cliente al que se atiende con el encabezado `Service-Worker-Allowed", puedes especificar una lista de alcances máximos para ese trabajador.
+- En Firefox, las APIs de *Service Worker* están ocultas y no se pueden usar cuando el usuario está en [modo de navegación privada](https://support.mozilla.org/es/kb/private-browsing-use-firefox-without-history).
 
-### Install and activate: populating your cache
+### Instalar y activar: llena tu caché
 
-After your service worker is registered, the browser will attempt to install then activate the service worker for your page/site.
+Después de que tu servicio de trabajador esté registrado, el navegador intentará instalar y luego activar el servicio de trabajador para tu página/sitio.
 
-The install event is fired when an install is successfully completed. The install event is generally used to populate your browser's offline caching capabilities with the assets you need to run your app offline. To do this, we use Service Worker's storage API — {{domxref("cache")}} — a global object on the service worker that allows us to store assets delivered by responses, and keyed by their requests. This API works in a similar way to the browser's standard cache, but it is specific to your domain. It persists until you tell it not to — again, you have full control.
+El evento `install` se activa cuando una instalación se completa con éxito. El evento `install` generalmente se usa para llenar las capacidades de almacenamiento en caché sin conexión de tu navegador con los activos que necesita para ejecutar tu aplicación sin conexión. Para hacer esto, usamos la API de almacenamiento de *Service Worker*: {{domxref("cache")}} — un objeto global en *Service Worker* que nos permite almacenar los activos entregados por las respuestas y con clave de sus solicitudes. Esta API funciona de manera similar a la memoria caché estándar del navegador, pero es específica para tu dominio. Persiste hasta que le dices que no lo haga — nuevamente, tienes el control total.
 
-Here's how our service worker handles the `install` event:
+Así es como nuestro *service worker* maneja el evento `install`:
 
 ```js
 const addResourcesToCache = async (resources) => {
@@ -143,35 +143,35 @@ self.addEventListener("install", (event) => {
 });
 ```
 
-1. Here we add an `install` event listener to the service worker (hence `self`), and then chain a {{domxref("ExtendableEvent.waitUntil()") }} method onto the event — this ensures that the service worker will not install until the code inside `waitUntil()` has successfully occurred.
-2. Inside `addResourcesToCache` we use the [`caches.open()`](/en-US/docs/Web/API/CacheStorage/open) method to create a new cache called `v1`, which will be version 1 of our site resources cache. Then we call a function that calls `addAll()` on the created cache, which for its parameter takes an array of origin-relative URLs to all the resources you want to cache.
-3. If the promise is rejected, the install fails, and the worker won't do anything. This is OK, as you can fix your code and then try again the next time registration occurs.
-4. After a successful installation, the service worker activates. This doesn't have much of a distinct use the first time your service worker is installed/activated, but it means more when the service worker is updated (see the [Updating your service worker](#updating_your_service_worker) section later on.)
+1. Aquí agregamos un escucha de eventos `install` al servicio de trabajador (por lo tanto, `self`), y luego encadenamos un método {{domxref("ExtendableEvent.waitUntil()") }} al evento; esto garantiza que el servicio de trabajador no se instale hasta que el código dentro de `waitUntil()` haya ocurrido con éxito.
+2. Dentro de `addResourcesToCache` usamos el método [`caches.open()`](/es/docs/Web/API/CacheStorage/open) para crear un nuevo caché llamado `v1`, que será la versión 1 de nuestro caché de recursos del sitio. Luego llamamos a una función que llama a `addAll()` en el caché creado, que para su parámetro toma un arreglo de URLs relativas al origen de todos los recursos que deseas almacenar en caché.
+3. Si se rechaza la promesa, la instalación falla y el trabajador no hará nada. Esto está bien, ya que puedes corregir tu código y luego intentarlo de nuevo la próxima vez que se registre.
+4. Después de una instalación exitosa, el servicio de trabajador se activa. Esto no tiene mucho de un uso distinto la primera vez que se instala/activa tu servicio de trabajador, pero significa más cuando se actualiza el servicio de trabajador (consulta la sección [Actualización de tu servicio de trabajador](#actualizar_tu_servicio_de_trabajador) más adelante).
 
-> **Note:** [localStorage](/en-US/docs/Web/API/Web_Storage_API) works in a similar way to service worker cache, but it is synchronous, so not allowed in service workers.
+> **Nota:** [localStorage](/es/docs/Web/API/Web_Storage_API) funciona de manera similar a la memoria caché del servicio de trabajador, pero es síncrono, por lo que no está permitido en el servicio de trabajador.
 
-> **Note:** [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) can be used inside a service worker for data storage if you require it.
+> **Nota:** [IndexedDB](/es/docs/Web/API/IndexedDB_API) se puede usar dentro de un servicio de trabajador para el almacenamiento de datos si lo requieres.
 
-### Custom responses to requests
+### Respuestas personalizadas a solicitudes
 
-Now you've got your site assets cached, you need to tell service workers to do something with the cached content. This is easily done with the `fetch` event.
+Ahora que tienes los activos de tu sitio almacenados en caché, debe decir a al servicio de trabajador que haga algo con el contenido almacenado en caché. Esto se hace fácilmente con el evento `fetch`.
 
 ![](sw-fetch.png)
 
-A `fetch` event fires every time any resource controlled by a service worker is fetched, which includes the documents inside the specified scope, and any resources referenced in those documents (for example if `index.html` makes a cross origin request to embed an image, that still goes through its service worker.)
+Un evento `fetch` se activa cada vez que se recupera cualquier recurso controlado por un servicio de trabajador, lo que incluye los documentos dentro del alcance especificado y cualquier recurso al que se haga referencia en esos documentos (por ejemplo, si `index.html` hace una solicitud de origen cruzado para incrustar una imagen, que todavía pasa por su servicio de trabajador).
 
-You can attach a `fetch` event listener to the service worker, then call the `respondWith()` method on the event to hijack our HTTP responses and update them with your own magic.
+Puedes adjuntar un escucha de eventos `fetch` al servicio de trabajador, luego llamar al método `respondWith()` en el evento para capturar nuestras respuestas HTTP y actualizarlas con tu propia magia.
 
 ```js
 self.addEventListener("fetch", (event) => {
   event
     .respondWith
-    // magic goes here
+    // la magia va aquí
     ();
 });
 ```
 
-We could start by responding with the resource whose URL matches that of the network request, in each case:
+Podríamos empezar respondiendo con el recurso cuya URL coincida con la de la solicitud de red, en cada caso:
 
 ```js
 self.addEventListener("fetch", (event) => {
@@ -179,40 +179,40 @@ self.addEventListener("fetch", (event) => {
 });
 ```
 
-`caches.match(event.request)` allows us to match each resource requested from the network with the equivalent resource available in the cache, if there is a matching one available. The matching is done via URL and various headers, just like with normal HTTP requests.
+`caches.match(event.request)` nos permite hacer coincidir cada recurso solicitado de la red con el recurso equivalente disponible en caché, si hay uno coincidente disponible. La coincidencia se realiza a través de URL y varios encabezados, al igual que con las solicitudes HTTP normales.
 
-Let's look at a few other options we have when defining our magic (see our [Fetch API documentation](/en-US/docs/Web/API/Fetch_API) for more information about {{domxref("Request")}} and {{domxref("Response")}} objects.)
+Veamos algunas otras opciones que tenemos al definir nuestra magia (consulta nuestra [documentación de la API Fetch](/es/docs/Web/API/Fetch_API) para obtener más información sobre los objetos {{domxref("Request")}} y {{domxref("Respuesta")}}.)
 
-1. The {{domxref("Response.Response","Response()")}} constructor allows you to create a custom response. In this case, we are just returning a simple text string:
+1. El constructor {{domxref("Response.Response","Response()")}} te permite crear una respuesta personalizada. En este caso, solo estamos devolviendo una cadena de texto simple:
 
    ```js
-   new Response("Hello from your friendly neighborhood service worker!");
+   new Response("¡Hola desde tu amigable vecindario del servicio de trabajador!");
    ```
 
-2. This more complex `Response` below shows that you can optionally pass a set of headers in with your response, emulating standard HTTP response headers. Here we are just telling the browser what the content type of our synthetic response is:
+2. Esta `Response` más compleja a continuación muestra que, opcionalmente, puedes pasar un conjunto de encabezados con tu respuesta, emulando los encabezados de respuesta HTTP estándar. Aquí solo le estamos diciendo al navegador cuál es el tipo de contenido de nuestra respuesta sintética:
 
    ```js
    new Response(
-     "<p>Hello from your friendly neighborhood service worker!</p>",
+     "<p>¡Hola desde tu amigable vecindario del servicio de trabajador!</p>",
      {
        headers: { "Content-Type": "text/html" },
      }
    );
    ```
 
-3. If a match wasn't found in the cache, you could tell the browser to {{domxref("fetch()")}} the default network request for that resource, to get the new resource from the network if it is available:
+3. Si no se encontró una coincidencia en caché, le puedes decir al navegador que {{domxref("fetch()")}} la solicitud de red predeterminada para ese recurso, para obtener el nuevo recurso de la red si está disponible:
 
    ```js
    fetch(event.request);
    ```
 
-4. If a match wasn't found in the cache, and the network isn't available, you could just match the request with some kind of default fallback page as a response using {{domxref("CacheStorage.match","match()")}}, like this:
+4. Si no se encontró una coincidencia en caché y la red no está disponible, puedes hacer coincidir la solicitud con algún tipo de página de respaldo predeterminada como respuesta usando {{domxref("CacheStorage.match","match() ")}}, como esta:
 
    ```js
    caches.match("./fallback.html");
    ```
 
-5. You can retrieve a lot of information about each request by calling parameters of the {{domxref("Request")}} object returned by the {{domxref("FetchEvent")}}:
+5. Puedes recuperar mucha información sobre cada solicitud llamando a los parámetros del objeto {{domxref("Request")}} devuelto por {{domxref("FetchEvent")}}:
 
    ```js
    event.request.url;
@@ -221,11 +221,11 @@ Let's look at a few other options we have when defining our magic (see our [Fetc
    event.request.body;
    ```
 
-## Recovering failed requests
+## Recuperar solicitudes fallidas
 
-So `caches.match(event.request)` is great when there is a match in the service worker cache, but what about cases when there isn't a match? If we didn't provide any kind of failure handling, our promise would resolve with `undefined` and we wouldn't get anything returned.
+Entonces `caches.match(event.request)` es excelente cuando hay una coincidencia en caché del servicio de trabajador, pero ¿qué pasa con los casos en los que no hay una coincidencia? Si no proporcionamos ningún tipo de manejo de fallas, nuestra promesa se resolvería con `undefined` y no tendríamos nada devuelto.
 
-Fortunately, service workers' promise-based structure makes it trivial to provide further options towards success. We could do this:
+Afortunadamente, la estructura basada en promesas del servicio de trabajadores hace que sea trivial brindar más opciones hacia el éxito. Podríamos hacer esto:
 
 ```js
 const cacheFirst = async (request) => {
@@ -241,9 +241,9 @@ self.addEventListener("fetch", (event) => {
 });
 ```
 
-If the resources aren't in the cache, they are requested from the network.
+Si los recursos no están en la memoria caché, se solicitan desde la red.
 
-If we were being really clever, we would not only request the resource from the network; we would also save it into the cache so that later requests for that resource could be retrieved offline too! This would mean that if extra images were added to the Star Wars gallery, our app could automatically grab them and cache them. The following would do the trick:
+Si fuéramos realmente inteligentes, no solo solicitaríamos el recurso de la red; ¡también lo guardaríamos en caché para que las solicitudes posteriores de ese recurso también se puedan recuperar sin conexión! Esto significaría que si se agregaran imágenes adicionales a la galería de Star Wars, nuestra aplicación podría capturarlas automáticamente y almacenarlas en caché. Lo siguiente haría el truco:
 
 ```js
 const putInCache = async (request, response) => {
@@ -266,13 +266,13 @@ self.addEventListener("fetch", (event) => {
 });
 ```
 
-If the request URL is not available in the cache, we request the resource from the network request with `await fetch(request)`. After that, we put a clone of the response into the cache. The `putInCache` function uses `caches.open('v1')` and `cache.put()` to add the resource to the cache. The original response is returned to the browser to be given to the page that called it.
+Si la URL de la solicitud no está disponible en la memoria caché, solicitamos el recurso de la solicitud de red con `await fetch(request)`. Después de eso, colocamos en caché un clon de la respuesta. La función `putInCache` usa `caches.open('v1')` y `cache.put()` para agregar el recurso a la caché. La respuesta original se devuelve al navegador para que se proporcione a la página que la llamó.
 
-Cloning the response is necessary because request and response streams can only be read once. In order to return the response to the browser and put it in the cache we have to clone it. So the original gets returned to the browser and the clone gets sent to the cache. They are each read once.
+La clonación de la respuesta es necesaria porque los flujos de solicitud y respuesta solo se pueden leer una vez. Para devolver la respuesta al navegador y ponerla en caché la tenemos que clonar. Entonces, el original se devuelve al navegador y el clon se envía a caché. Cada uno se lee una vez.
 
-What might look a bit weird is that the promise returned by `putInCache` is not awaited. But the reason is that we don't want to wait until the response clone has been added to the cache before returning a response.
+Lo que puede parecer un poco extraño es que no se espera la promesa devuelta por `putInCache`. Pero la razón es que no queremos esperar hasta que el clon de respuesta se haya agregado a la caché antes de devolver una respuesta.
 
-The only trouble we have now is that if the request doesn't match anything in the cache, and the network is not available, our request will still fail. Let's provide a default fallback so that whatever happens, the user will at least get something:
+El único problema que tenemos ahora es que si la solicitud no coincide con nada en caché y la red no está disponible, nuestra solicitud seguirá fallando. Proporcionemos un respaldo predeterminado para que, pase lo que pase, el usuario al menos obtenga algo:
 
 ```js
 const putInCache = async (request, response) => {
@@ -281,18 +281,18 @@ const putInCache = async (request, response) => {
 };
 
 const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
-  // First try to get the resource from the cache
+  // Primero intenta obtener el recurso desde caché
   const responseFromCache = await caches.match(request);
   if (responseFromCache) {
     return responseFromCache;
   }
 
-  // Next try to get the resource from the network
+  // A continuación, intenta obtener el recurso desde la red
   try {
     const responseFromNetwork = await fetch(request);
-    // response may be used only once
-    // we need to save clone to put one copy in cache
-    // and serve second one
+    // la respuesta solo se puede usar una vez
+    // necesitamos guardar el clon para poner una copia en caché
+    // y servir el segundo
     putInCache(request, responseFromNetwork.clone());
     return responseFromNetwork;
   } catch (error) {
@@ -300,10 +300,10 @@ const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
     if (fallbackResponse) {
       return fallbackResponse;
     }
-    // when even the fallback response is not available,
-    // there is nothing we can do, but we must always
-    // return a Response object
-    return new Response("Network error happened", {
+    // cuando incluso la respuesta alternativa no está disponible,
+    // no hay nada que podamos hacer, pero siempre debemos
+    // devolver un objeto Response
+    return new Response("Ocurrió un error de red", {
       status: 408,
       headers: { "Content-Type": "text/plain" },
     });
@@ -320,20 +320,20 @@ self.addEventListener("fetch", (event) => {
 });
 ```
 
-We have opted for this fallback image because the only updates that are likely to fail are new images, as everything else is depended on for installation in the `install` event listener we saw earlier.
+Hemos optado por esta imagen alternativa porque las únicas actualizaciones que probablemente fallarán son las imágenes nuevas, ya que todo lo demás depende de la instalación en el escucha de eventos `install` que vimos anteriormente.
 
-## Service Worker Navigation Preload
+## Precarga de navegación del servicio de trabajador
 
-If enabled, the [navigation preload](/en-US/docs/Web/API/NavigationPreloadManager) feature starts downloading resources as soon as the fetch request is made, and in parallel with service worker bootup.
-This ensures that download starts immediately on navigation to a page, rather than having to wait until the service worker has booted.
-That delay happens relatively rarely, but is unavoidable when it does happen, and may be significant.
+Si está habilitada, la función [precarga de navegación](/es/docs/Web/API/NavigationPreloadManager) comienza a descargar recursos tan pronto como se realiza la solicitud de recuperación y en paralelo con el inicio del servicio de trabajador.
+Esto garantiza que la descarga comience de inmediato al navegar a una página, en lugar de tener que esperar hasta que se inicie el servicio de trabajador.
+Ese retraso ocurre en muy raras ocasiones, pero es inevitable cuando ocurre y puede ser significativo.
 
-First the feature must be enabled during service worker activation, using {{domxref("NavigationPreloadManager.enable()", "registration.navigationPreload.enable()")}}:
+Primero, la función debe estar habilitada durante la activación del servicio de trabajador, usando {{domxref("NavigationPreloadManager.enable()", "registration.navigationPreload.enable()")}}:
 
 ```js
 const enableNavigationPreload = async () => {
   if (self.registration.navigationPreload) {
-    // Enable navigation preloads!
+    // ¡Habilitar precargas de navegación!
     await self.registration.navigationPreload.enable();
   }
 };
@@ -343,16 +343,16 @@ self.addEventListener("activate", (event) => {
 });
 ```
 
-Then use {{domxref("FetchEvent.preloadResponse", "event.preloadResponse")}} to wait for the preloaded resource to finish downloading in the `fetch` event handler.
+Luego usa {{domxref("FetchEvent.preloadResponse", "event.preloadResponse")}} para esperar a que el recurso precargado se termine de descargar en el controlador de eventos `fetch`.
 
-Continuing the example from the previous sections, we insert the code to wait for the preloaded resource after the cache check, and before fetching from the network if that doesn't succeed.
+Continuando con el ejemplo de las secciones anteriores, insertamos el código para esperar el recurso precargado después de la verificación de la caché y antes de recuperarlo de la red si eso no tiene éxito.
 
-The new process is:
+El nuevo proceso es:
 
-1. Check cache
-2. Wait on `event.preloadResponse`, which is passed as `preloadResponsePromise` to the `cacheFirst` function.
-   Cache the result if it returns.
-3. If neither of these are defined then we go to the network.
+1. Comprobar la caché
+2. Esperar en `event.preloadResponse`, que se pasa como `preloadResponsePromise` a la función `cacheFirst`.
+   Guardar en caché el resultado si regresa.
+3. Si ninguno de estos está definido, vamos a la red.
 
 ```js
 const addResourcesToCache = async (resources) => {
@@ -366,13 +366,13 @@ const putInCache = async (request, response) => {
 };
 
 const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
-  // First try to get the resource from the cache
+  // Primero intenta obtener el recurso desde caché
   const responseFromCache = await caches.match(request);
   if (responseFromCache) {
     return responseFromCache;
   }
 
-  // Next try to use (and cache) the preloaded response, if it's there
+  // A continuación, intenta usar (y almacenar en caché) la respuesta precargada, si está allí
   const preloadResponse = await preloadResponsePromise;
   if (preloadResponse) {
     console.info("using preload response", preloadResponse);
@@ -380,12 +380,12 @@ const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
     return preloadResponse;
   }
 
-  // Next try to get the resource from the network
+  // A continuación, intenta obtener el recurso desde la red
   try {
     const responseFromNetwork = await fetch(request);
-    // response may be used only once
-    // we need to save clone to put one copy in cache
-    // and serve second one
+    // la respuesta solo se puede usar una vez
+    // necesitamos guardar el clon para poner una copia en caché
+    // y servir el segundo
     putInCache(request, responseFromNetwork.clone());
     return responseFromNetwork;
   } catch (error) {
@@ -393,20 +393,20 @@ const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
     if (fallbackResponse) {
       return fallbackResponse;
     }
-    // when even the fallback response is not available,
-    // there is nothing we can do, but we must always
-    // return a Response object
-    return new Response("Network error happened", {
+    // cuando incluso la respuesta alternativa no está disponible,
+    // no hay nada que podamos hacer, pero siempre debemos
+    // devolver un objeto Response
+    return new Response("Ocurrió un error de red", {
       status: 408,
       headers: { "Content-Type": "text/plain" },
     });
   }
 };
 
-// Enable navigation preload
+// Habilita la precarga de navegación
 const enableNavigationPreload = async () => {
   if (self.registration.navigationPreload) {
-    // Enable navigation preloads!
+    // ¡Habilitar precargas de navegación!
     await self.registration.navigationPreload.enable();
   }
 };
@@ -442,15 +442,15 @@ self.addEventListener("fetch", (event) => {
 });
 ```
 
-Note that in this example we download and cache the same data for the resource whether it is downloaded "normally" or preloaded.
-You can instead choose to download and cache a different resource on preload.
-For more information see [`NavigationPreloadManager` > Custom responses](/en-US/docs/Web/API/NavigationPreloadManager#custom_responses).
+Ten en cuenta que en este ejemplo descargamos y almacenamos en caché los mismos datos para el recurso, ya sea que se descargue "normalmente" o se precargue.
+En su lugar, puedes optar por descargar y almacenar en caché un recurso diferente en la precarga.
+Para obtener más información, consulta [`NavigationPreloadManager` > Respuestas personalizadas](/es/docs/Web/API/NavigationPreloadManager#respuestas_personalizadas).
 
-## Updating your service worker
+## Actualizar tu servicio de trabajador
 
-If your service worker has previously been installed, but then a new version of the worker is available on refresh or page load, the new version is installed in the background, but not yet activated. It is only activated when there are no longer any pages loaded that are still using the old service worker. As soon as there are no more such pages still loaded, the new service worker activates.
+Si tu servicio de trabajador se instaló anteriormente, pero luego está disponible una nueva versión del trabajador al actualizar o cargar la página, la nueva versión se instala en segundo plano, pero aún no está activada. Solo se activa cuando ya no hay páginas cargadas que todavía estén usando el antiguo servicio de trabajador. Tan pronto como no queden más páginas cargadas, se activa el nuevo servicio de trabajador.
 
-You'll want to update your `install` event listener in the new service worker to something like this (notice the new version number):
+Querrás actualizar tu escucha de eventos `install` en el nuevo servicio de trabajador a algo como esto (observa el nuevo número de versión):
 
 ```js
 const addResourcesToCache = async (resources) => {
@@ -469,21 +469,21 @@ self.addEventListener("install", (event) => {
 
       // ...
 
-      // include other new resources for the new version…
+      // incluir otros nuevos recursos para la nueva versión…
     ])
   );
 });
 ```
 
-While this happens, the previous version is still responsible for fetches. The new version is installing in the background. We are calling the new cache `v2`, so the previous `v1` cache isn't disturbed.
+Mientras esto sucede, la versión anterior sigue siendo responsable de las recuperaciones. La nueva versión se está instalando en segundo plano. Estamos llamando al nuevo caché `v2`, por lo que el caché anterior `v1` no se ve afectado.
 
-When no pages are using the current version, the new worker activates and becomes responsible for fetches.
+Cuando ninguna página está usando la versión actual, el nuevo trabajador se activa y se vuelve responsable de las recuperaciones.
 
-### Deleting old caches
+### Eliminar cachés antiguos
 
-You also get an `activate` event. This is generally used to do stuff that would have broken the previous version while it was still running, for example getting rid of old caches. This is also useful for removing data that is no longer needed to avoid filling up too much disk space — each browser has a hard limit on the amount of cache storage that a given service worker can use. The browser does its best to manage disk space, but it may delete the Cache storage for an origin. The browser will generally delete all of the data for an origin or none of the data for an origin.
+También obtienes un evento `activate`. Esto generalmente se usa para hacer cosas que habrían roto la versión anterior mientras aún se estaba ejecutando, por ejemplo, deshacerse de los cachés antiguos. Esto también es útil para eliminar datos que ya no se necesitan para evitar llenar demasiado espacio en disco: cada navegador tiene un límite estricto en la cantidad de almacenamiento en caché que puede usar un determinado servicio de trabajador. El navegador hace todo lo posible para administrar el espacio en disco, pero puede eliminar el almacenamiento en caché de un origen. El navegador, generalmente, eliminará todos los datos de un origen o ninguno de los datos de un origen.
 
-Promises passed into `waitUntil()` will block other events until completion, so you can rest assured that your clean-up operation will have completed by the time you get your first `fetch` event on the new service worker.
+Las promesas pasadas a `waitUntil()` bloquearán otros eventos hasta que se completen, por lo que puedes estar seguro de que tu operación de limpieza se habrá completado cuando obtengas tu primer evento `fetch` en el nuevo servicio de trabajador.
 
 ```js
 const deleteCache = async (key) => {
@@ -502,22 +502,22 @@ self.addEventListener("activate", (event) => {
 });
 ```
 
-## Developer tools
+## Herramientas de desarrollo
 
-Chrome has `chrome://inspect/#service-workers`, which shows current service worker activity and storage on a device, and `chrome://serviceworker-internals`, which shows more detail and allows you to start/stop/debug the worker process. In the future they will have throttling/offline modes to simulate bad or non-existent connections, which will be a really good thing.
+Chrome tiene `chrome://inspect/#service-workers`, que muestra la actividad actual de los servicios de trabajador y el almacenamiento en un dispositivo, y `chrome://serviceworker-internals`, que muestra más detalles y te permite iniciar/detener/depurar el proceso del trabajador. En el futuro, tendrán modos de limitación/desconexión para simular conexiones defectuosas o inexistentes, lo que será algo realmente bueno.
 
-Firefox has also started to implement some useful tools related to service workers:
+Firefox también ha comenzado a implementar algunas herramientas útiles relacionadas con los servicios de trabajador:
 
-- You can navigate to [`about:debugging`](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) to see what SWs are registered and update/remove them.
-- When testing you can get around the HTTPS restriction by checking the "Enable Service Workers over HTTP (when toolbox is open)" option in the [Firefox Developer Tools settings](https://firefox-source-docs.mozilla.org/devtools-user/settings/index.html).
-- The "Forget" button, available in Firefox's customization options, can be used to clear service workers and their caches ({{bug(1252998)}}).
+- Puedes navegar a [`about:debugging`](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) para ver qué <abbr title="Service Workers">SW</abbr>s están registrados y actualizarlos/eliminarlos.
+- Al realizar pruebas, puedes sortear la restricción de HTTPS marcando la opción "Habilitar servicio de trabajadores a través de HTTP (cuando la caja de herramientas está abierta)" en la [Configuración de herramientas de desarrollo de Firefox](https://firefox-source-docs.mozilla.org/devtools-user/settings/index.html).
+- El botón "Olvidar", disponible en las opciones de personalización de Firefox, se puede usar para borrar los servicios de trabajador y sus cachés ({{bug(1252998)}}).
 
-> **Note:** You may serve your app from `http://localhost` (e.g. using `me@localhost:/my/app$ python -m SimpleHTTPServer`) for local development. See [Security considerations](https://www.w3.org/TR/service-workers/#security-considerations)
+> **Nota:** Puedes servir tu aplicación desde `http://localhost` (por ejemplo, usando `me@localhost:/my/app$ python -m SimpleHTTPServer`) para el desarrollo local. Ve [Consideraciones de seguridad](https://www.w3.org/TR/service-workers/#security-considerations)
 
-## See also
+## Ve también
 
-- [The Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- Download the [Service Workers 101 cheatsheet](sw101.png).
-- [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [El manual del servicio de trabajador](https://github.com/mdn/serviceworker-cookbook)
+- [¿Está listo ServiceWorker?](https://jakearchibald.github.io/isserviceworkerready/)
+- Descarga la [hoja de trucos de Servicio de trabajador 101](sw101.png).
+- [Promesas](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [Usar trabajadores web](/es/docs/Web/API/Web_Workers_API/Using_web_workers)
