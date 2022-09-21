@@ -8,6 +8,7 @@ tags:
   - ServiceWorker
   - Workers
   - basics
+translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 ---
 
 {{ServiceWorkerSidebar}}
@@ -109,7 +110,7 @@ También ten en cuenta:
 
 - El servicio de trabajador solo capturará las solicitudes de los clientes bajo el alcance del servicio de trabajador.
 - El alcance máximo para un servicio de trabajador es la ubicación del trabajador.
-- Si tu servicio de trabajador está activo en un cliente al que se atiende con el encabezado `Service-Worker-Allowed", puedes especificar una lista de alcances máximos para ese trabajador.
+- Si tu servicio de trabajador está activo en un cliente al que se atiende con el encabezado `Service-Worker-Allowed`, puedes especificar una lista de alcances máximos para ese trabajador.
 - En Firefox, las APIs de *Service Worker* están ocultas y no se pueden usar cuando el usuario está en [modo de navegación privada](https://support.mozilla.org/es/kb/private-browsing-use-firefox-without-history).
 
 ### Instalar y activar: llena tu caché
