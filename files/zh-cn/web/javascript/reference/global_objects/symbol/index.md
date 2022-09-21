@@ -2,6 +2,7 @@
 title: Symbol
 slug: Web/JavaScript/Reference/Global_Objects/Symbol
 ---
+
 {{JSRef}}
 
 **symbol** 是一种基本数据类型（{{Glossary("Primitive", "primitive data type")}}）。`Symbol()` 函数会返回 **symbol** 类型的值，该类型具有静态属性和静态方法。它的静态属性会暴露几个内建的成员对象；它的静态方法会暴露全局的 symbol 注册，且类似于内建对象类，但作为构造函数来说它并不完整，因为它不支持语法："`new Symbol()`"。

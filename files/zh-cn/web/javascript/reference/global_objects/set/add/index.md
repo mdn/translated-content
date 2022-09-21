@@ -2,6 +2,7 @@
 title: Set.prototype.add()
 slug: Web/JavaScript/Reference/Global_Objects/Set/add
 ---
+
 {{JSRef}}
 
 **`add()`** 方法用来向一个 `Set` 对象的末尾添加一个指定的值。

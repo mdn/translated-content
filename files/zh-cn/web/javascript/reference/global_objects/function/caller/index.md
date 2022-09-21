@@ -2,6 +2,7 @@
 title: Function.caller
 slug: Web/JavaScript/Reference/Global_Objects/Function/caller
 ---
+
 {{JSRef("Global_Objects", "Function")}} {{non-standard_header}}
 
 ## 概述

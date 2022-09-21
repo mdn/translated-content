@@ -2,6 +2,7 @@
 title: RegExp.prototype.exec()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 ---
+
 {{JSRef}}
 
 **`exec()`** 方法在一个指定字符串中执行一个搜索匹配。返回一个结果数组或 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。

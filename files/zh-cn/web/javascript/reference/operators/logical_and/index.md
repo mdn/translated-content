@@ -3,6 +3,7 @@ title: 逻辑与 (&&)
 slug: Web/JavaScript/Reference/Operators/Logical_AND
 original_slug: Web/JavaScript/Reference/Operators/逻辑和
 ---
+
 {{jsSidebar("Operators")}}
 
 The logical AND (`&&`) operator (logical conjunction) for a set of operands is true if and only if all of its operands are true. It is typically used with {{jsxref("Boolean")}} (logical) values. When it is, it returns a Boolean value. However, the `&&` operator actually returns the value of one of the specified operands, so if this operator is used with non-Boolean values, it will return a non-Boolean value.

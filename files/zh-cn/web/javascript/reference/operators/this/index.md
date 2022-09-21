@@ -2,6 +2,7 @@
 title: this
 slug: Web/JavaScript/Reference/Operators/this
 ---
+
 {{jsSidebar("Operators")}}
 
 与其他语言相比，**函数的 `this` 关键字**在 JavaScript 中的表现略有不同，此外，在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)和非严格模式之间也会有一些差别。
