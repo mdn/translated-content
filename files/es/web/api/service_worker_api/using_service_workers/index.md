@@ -145,7 +145,7 @@ self.addEventListener("install", (event) => {
 ```
 
 1. Aquí agregamos un escucha de eventos `install` al *service worker* (por lo tanto, `self`), y luego encadenamos un método {{domxref("ExtendableEvent.waitUntil()") }} al evento; esto garantiza que el *service worker* no se instale hasta que el código dentro de `waitUntil()` haya ocurrido con éxito.
-2. Dentro de `addResourcesToCache` usamos el método caches.open() (en-US) para crear un nuevo caché llamado `v1`, que será la versión 1 de nuestro caché de recursos del sitio. Luego llamamos a una función que llama a `addAll()` en el caché creado, que para su parámetro toma un arreglo de URLs relativas al origen de todos los recursos que deseas almacenar en caché.
+2. Dentro de `addResourcesToCache` usamos el método <a href="/en-US/docs/Web/API/CacheStorage/open" class="only-in-en-us" title="Actualmente solo disponible en inglés (US)">caches.open() (en-US)</a> para crear un nuevo caché llamado `v1`, que será la versión 1 de nuestro caché de recursos del sitio. Luego llamamos a una función que llama a `addAll()` en el caché creado, que para su parámetro toma un arreglo de URLs relativas al origen de todos los recursos que deseas almacenar en caché.
 3. Si se rechaza la promesa, la instalación falla y el trabajador no hará nada. Esto está bien, ya que puedes corregir tu código y luego intentarlo de nuevo la próxima vez que se registre.
 4. Después de una instalación exitosa, el *service worker* se activa. Esto no tiene mucho de un uso distinto la primera vez que se instala/activa tu *service worker*, pero significa más cuando se actualiza el *service worker* (consulta la sección [Actualizar tu *service worker*](#actualizar_tu_service_worker) más adelante).
 
@@ -325,7 +325,7 @@ Hemos optado por esta imagen alternativa porque las únicas actualizaciones que 
 
 ## Precarga de navegación del *service worker*
 
-Si está habilitada, la función precarga de navegación (en-US) comienza a descargar recursos tan pronto como se realiza la solicitud de recuperación y en paralelo con el inicio del *service worker*.
+Si está habilitada, la función <a href="/en-US/docs/Web/API/NavigationPreloadManager" class="only-in-en-us" title="Actualmente solo disponible en inglés (US)">precarga de navegación (en-US)</a> comienza a descargar recursos tan pronto como se realiza la solicitud de recuperación y en paralelo con el inicio del *service worker*.
 Esto garantiza que la descarga comience de inmediato al navegar a una página, en lugar de tener que esperar hasta que se inicie el *service worker*.
 Ese retraso ocurre en muy raras ocasiones, pero es inevitable cuando ocurre y puede ser significativo.
 
@@ -445,7 +445,7 @@ self.addEventListener("fetch", (event) => {
 
 Ten en cuenta que en este ejemplo descargamos y almacenamos en caché los mismos datos para el recurso, ya sea que se descargue "normalmente" o se precargue.
 En su lugar, puedes optar por descargar y almacenar en caché un recurso diferente en la precarga.
-Para obtener más información, consulta NavigationPreloadManager > Respuestas personalizadas (en-US).
+Para obtener más información, consulta <a href="/en-US/docs/Web/API/NavigationPreloadManager#custom_responses" class="only-in-en-us" title="Actualmente solo disponible en inglés (US)">NavigationPreloadManager > Respuestas personalizadas (en-US)</a>.
 
 ## Actualizar tu *service worker*
 
