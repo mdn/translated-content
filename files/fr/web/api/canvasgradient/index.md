@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/CanvasGradient
 ---
+
 {{APIRef("Canvas API")}}
 
 L'interface **`CanvasGradient`**  représente un objet opaque décrivant un dégradé. Il est retourné par les méthodes {{domxref("CanvasRenderingContext2D.createLinearGradient()")}} ou {{domxref("CanvasRenderingContext2D.createRadialGradient()")}}.

@@ -7,6 +7,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 ---
+
 {{AddonSidebar}}
 
 Un script de contenu (_content script_ en anglais) est une partie de votre extension qui s’exécute dans le contexte d’une page web donnée (par opposition aux scripts d’arrière-plan qui font partie de l'extension, ou aux scripts qui font partie du site Web lui-même, tels que ceux chargés en utilisant l'élément {{HTMLElement("script")}}).

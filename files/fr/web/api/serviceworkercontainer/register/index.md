@@ -12,6 +12,7 @@ tags:
   - register
 translation_of: Web/API/ServiceWorkerContainer/register
 ---
+
 {{APIRef("Service Workers API")}}
 
 La méthode **`register()`** de l'interface {{domxref("ServiceWorkerContainer")}} crée ou met à jour un {{domxref("ServiceWorkerRegistration")}} pour la `scriptURL` donnée.

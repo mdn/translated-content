@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/tabindex
 original_slug: Web/HTML/Attributs_universels/tabindex
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`tabindex`** est un entier indiquant si l'élément peut capturer le focus et si c'est le cas, dans quel ordre il le capture lors de la navigation au clavier (généralement à l'aide de la touche <kbd>Tab</kbd>). Si plusieurs éléments partagent la même valeur d'attribut **`tabindex`**, leur ordre sera calculé en fonction de leur position dans le document.

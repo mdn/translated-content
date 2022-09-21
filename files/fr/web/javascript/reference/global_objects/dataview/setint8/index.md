@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setInt8
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/setInt8
 ---
+
 {{JSRef}}
 
 La méthode **`setInt8()`** permet d'enregister un entier signé sur 8 bits à l'octet indiqué par rapport au début de la {{jsxref("DataView")}}.

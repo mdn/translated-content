@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/padding-top
 ---
+
 {{CSSRef}}
 
 La propriété **`padding-top`** d'un élément ajuste la hauteur de la boîte de remplissage (_padding_) en haut de l'élément.

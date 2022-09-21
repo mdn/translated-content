@@ -15,6 +15,7 @@ tags:
 translation_of: Learn/Tools_and_testing
 original_slug: Apprendre/Outils_et_tests
 ---
+
 {{LearnSidebar}}
 
 Une fois que vous commencerez à être à l'aise avec les langages de programmation web (comme le HTML, le CSS, et le JavaScript), et acquerrez plus d'expérience, lirez plus de ressources, et apprendrez plus de choses, vous commencerez à tomber sur toute sorte d'outils, comme par exemple des scripts CSS et JavaScript, des outils de tests et d'automatisation, et bien plus encore. Au fur et à mesure que vos projets web deviendront de plus en plus grands et complexes, vous allez vouloir savoir comment utiliser certains de ces outils et élaborer des tests fiables pour votre code. Cette partie de la zone d'apprentissage cherche à vous donner tout ce dont vous avez besoin afin de commencer sur de bonnes bases et faire des choix informés.

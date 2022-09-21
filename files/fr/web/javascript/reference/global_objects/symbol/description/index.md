@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/description
 original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/description
 ---
+
 {{JSRef}}
 
 La propriété en lecture seule **`description`** est une chaîne de caractères qui renvoie la description optionnelle de l'objet {{jsxref("Symbol")}}.

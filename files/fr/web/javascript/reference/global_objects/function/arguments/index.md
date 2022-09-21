@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/arguments
 original_slug: Web/JavaScript/Reference/Objets_globaux/Function/arguments
 ---
+
 {{JSRef}} {{Deprecated_header}}
 
 La propriété **`function.arguments`** fait référence à un objet dont la structure est semblable à celle d'un tableau dont les éléments correspondent aux arguments passés à une fonction. En lieu et place, il faut désormais utiliser {{jsxref("Fonctions/arguments", "arguments")}}. Cette propriété est interdite en mode stricte à cause de [l'optimisation de la queue des appels (_tail call optimization_)](https://www.ecma-international.org/ecma-262/6.0/#sec-addrestrictedfunctionproperties).

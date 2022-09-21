@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XPath/Functions/key
 original_slug: Web/XPath/Fonctions/key
 ---
+
 {{ XsltRef() }}
 
 La fonction `key` retourne un ensemble de nœuds ayant la valeur donnée pour la clef donnée.

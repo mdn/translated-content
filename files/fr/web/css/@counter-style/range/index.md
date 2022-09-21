@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@counter-style/range
 ---
+
 {{CSSRef}}
 
 Le descripteur **`range`**, associé à la règle @ {{cssxref("@counter-style")}}, permet de définir l'intervalle de valeurs pris en compte par le compteur personnalisé. Si la valeur du compteur de la liste est en dehors de cet intervalle, ce sera la mise en forme de secours qui sera utilisée pour représenter le marqueur du compteur. La valeur de `range` peut être `auto` ou une liste de majorants/minorants, séparés par des virgules.

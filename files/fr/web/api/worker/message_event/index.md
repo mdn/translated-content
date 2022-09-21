@@ -8,6 +8,7 @@ tags:
 translation_of: Web/API/Worker/onmessage
 original_slug: Web/API/Worker/onmessage
 ---
+
 {{ APIRef("Web Workers API") }}
 
 La propriété **`onmessage`** de l'interface {{domxref("Worker")}} représente un {{event("Event_handlers", "event handler")}}, à savoir une fonction qui est appelée lorsque l'événement {{event("message")}} survient. Ces événements sont du type {{domxref("MessageEvent")}} et sont appelés quand le parent du worker reçoit un message (c’est-à-dire à partir de la méthode {{domxref("DedicatedWorkerGlobalScope.postMessage")}}).

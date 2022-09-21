@@ -4,6 +4,7 @@ slug: Web/API/WorkerGlobalScope/error_event
 translation_of: Web/API/WorkerGlobalScope/onerror
 original_slug: Web/API/WorkerGlobalScope/onerror
 ---
+
 {{APIRef("Web Workers API")}}
 
 La propriété **`onerror`** de l'interface {{domxref("WorkerGlobalScope")}} représente un {{event("Event_handlers", "event handler")}} à appeler lorsque l'événement {{event("error")}} survient et se propage à travers le {{domxref("Worker")}}.

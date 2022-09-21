@@ -14,6 +14,7 @@ translation_of: >-
 original_slug: >-
   Web/CSS/CSS_Flexible_Box_Layout/Contrôler_les_proportions_des_boîtes_flexibles_le_long_de_l_axe_principal
 ---
+
 {{CSSRef}}
 
 Dans ce guide, nous verrons les trois propriétés appliquées aux éléments flexibles qui permettent de contrôler leurs tailles et flexibilités le long de l'axe principal : {{cssxref("flex-grow")}}, {{cssxref("flex-shrink")}} et {{cssxref("flex-basis")}}. Comprendre le fonctionnement de ces propriétés est primordial pour maîtriser les boîtes flexibles.

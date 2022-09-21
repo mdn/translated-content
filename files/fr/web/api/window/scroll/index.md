@@ -4,6 +4,7 @@ slug: Web/API/Window/scroll
 translation_of: Web/API/Window/scroll
 browser-compat: api.Window.scroll
 ---
+
 {{APIRef}}
 
 La méthode **`Window.scroll()`** permet de faire défiler la fenêtre jusqu'à un endroit donné du document.

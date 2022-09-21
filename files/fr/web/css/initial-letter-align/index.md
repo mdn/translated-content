@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/initial-letter-align
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`initial-letter-align`** définit l'alignement des premières lettres d'un paragraphe lorsque celles-ci sont mises en avant grâce à {{cssxref("initial-letter")}} pour former une lettrine.

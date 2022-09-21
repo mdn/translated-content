@@ -13,6 +13,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/sendRequest
 ---
+
 {{AddonSidebar()}}
 
 > **Attention :** Cette méthode a été dépréciée. Utilisez {{WebExtAPIRef("tabs.sendMessage()")}} à la place.

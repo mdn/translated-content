@@ -11,6 +11,7 @@ tags:
   - direction
 translation_of: Web/API/Notification/dir
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 La propriété en lecture seule **`dir`** de l'interface {{domxref ("Notification")}} indique le sens du texte de la notification, définis à l'aide de l'option `dir` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification()" )}}.

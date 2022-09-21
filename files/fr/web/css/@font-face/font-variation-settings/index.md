@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@font-face/font-variation-settings
 ---
+
 {{CSSRef}}
 
 Le descripteur **`font-variation-settings`**, associé à la règle @ {{cssxref("@font-face")}} permet d'indiquer les variations de police de bas niveau pour les polices OpenType ou TrueType.

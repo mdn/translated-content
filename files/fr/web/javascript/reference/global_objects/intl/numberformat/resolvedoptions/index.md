@@ -13,6 +13,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/NumberFormat/resolvedOptions
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.NumberFormat.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés correspondent aux options de locales et de format calculées à l'initialisation de l'objet {{jsxref("NumberFormat", "Intl.NumberFormat")}}.

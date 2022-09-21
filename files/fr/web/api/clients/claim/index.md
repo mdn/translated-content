@@ -10,6 +10,7 @@ tags:
   - claim
 translation_of: Web/API/Clients/claim
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Worker Clients")}}
 
 La méthode **`claim()`** de l'interface {{domxref("Clients")}} permet à un service worker actif de se définir comme service worker actif de la page client quand le worker et la page sont dans le même scope. Ceci déclenche un évènement {{domxref("ServiceWorkerContainer.oncontrollerchange","oncontrollerchange")}} dans toutes les pages dans la portée du service worker.

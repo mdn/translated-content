@@ -8,6 +8,7 @@ tags:
 translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 original_slug: Contrôles_DHTML_personnalisés_navigables_au_clavier
 ---
+
 ### Le problème&nbsp;: les pages DHTML actuelles ne sont pas accessibles au clavier
 
 Un nombre croissant d'applications Web utilise [JavaScript](fr/JavaScript) pour imiter des contrôles (

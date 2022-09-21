@@ -13,6 +13,7 @@ tags:
   - setBadgeBackgroundColor
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeBackgroundColor
 ---
+
 {{AddonSidebar()}}
 
 Définit la couleur de fond du badge. Les onglets sans couleur de fond de badge spécifique hériteront de la couleur de fond de badge globale, qui par défaut est `[217, 0, 0, 255]` dans Firefox.

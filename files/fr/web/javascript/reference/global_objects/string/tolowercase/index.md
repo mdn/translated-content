@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/toLowerCase
 ---
+
 {{JSRef}}
 
 La méthode **`toLowerCase()`** retourne la chaîne de caractères courante en minuscules.

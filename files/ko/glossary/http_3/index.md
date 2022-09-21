@@ -1,10 +1,6 @@
 ---
 title: HTTP/3
 slug: Glossary/HTTP_3
-tags:
-  - HTTP
-  - Intro
-  - NeedsContent
 ---
 **HTTP/3**는 {{glossary("HTTP 2", "HTTP/2")}} 다음 [HTTP 네크워크 프로토콜](/ko/docs/Web/HTTP/Basics_of_HTTP)입니다.
 

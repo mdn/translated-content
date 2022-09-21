@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/fill-opacity
 ---
+
 {{SVGRef}}
 
 L'attribut **`fill-opacity`** définit l'opacité du remplissage (_couleur, dégradé, motif_, etc) appliqué à une forme.

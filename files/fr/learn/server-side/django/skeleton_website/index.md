@@ -13,6 +13,7 @@ tags:
   - django
 translation_of: Learn/Server-side/Django/skeleton_website
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 
 Ce second article de la série [didactique Django](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website) va décrire comment créer le squelette du site web du projet. Ensuite, vous pourrez paramètrer et développer les composants spécifiques comme les modèles de données, les vues, les gabarits, les formulaires...

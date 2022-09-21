@@ -13,6 +13,7 @@ tags:
   - Windows
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/create
 ---
+
 {{AddonSidebar()}}
 
 Crée une nouvelle fenêtre.

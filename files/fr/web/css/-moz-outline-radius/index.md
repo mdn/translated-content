@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/-moz-outline-radius
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 Dans les applications Mozilla (ex. Firefox), la propriété **`-moz-outline-radius`** peut être utilisée afin que le contour dessiné autour d'un élément ait des angles arrondis. Le contour ({{cssxref("outline")}}) est dessiné autour des éléments pour les faire ressortir.

@@ -9,6 +9,7 @@ tags:
   - offset-distance
 translation_of: Web/CSS/offset-distance
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`offset-distance`** définit une position le long d'un chemin {{CSSxRef("offset-path")}}.

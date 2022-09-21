@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/rotate
 ---
+
 {{CSSRef}}{{seecompattable}}
 
 La propriété **`rotate`** permet d'indiquer des rotations individuellement et indépendamment de la propriété {{cssxref("transform")}}. Cela peut être utile pour la construction d'une interface utilisateur et évite d'avoir à se souvenir de l'ordre exact des fonctions de transformations à indiquer pour `transform`.

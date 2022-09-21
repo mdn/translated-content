@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/column-span
 ---
+
 {{CSSRef}}
 
 La propriété **`column-span`** permet à un élément de s'étendre sur toutes les colonnes lorsque la valeur de cette propriété est `all`. Un élément qui s'étend sur plus d'une colonne est appelé un élément étendu (_spanning element_).

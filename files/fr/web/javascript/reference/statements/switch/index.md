@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/switch
 original_slug: Web/JavaScript/Reference/Instructions/switch
 ---
+
 {{jsSidebar("Statements")}}
 
 L'instruction **`switch`** évalue une expression et, selon le résultat obtenu et le cas associé, exécute les instructions correspondantes.

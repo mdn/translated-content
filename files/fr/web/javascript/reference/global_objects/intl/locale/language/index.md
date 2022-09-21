@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/language
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/language
 ---
+
 {{JSRef}}
 
 La propriété **`Intl.Locale.prototype.language`** est une propriété fournie via un accesseur qui renvoie la langue associée à la locale.

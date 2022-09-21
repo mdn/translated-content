@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/-webkit-text-stroke-color
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La propriété **`-webkit-text-stroke-color`** permet de définir la couleur de la ligne utilisée pour le contour du text. Si cette propriété n'est pas définie, c'est la valeur de {{cssxref("color")}} qui sera utilisée.

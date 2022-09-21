@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/tanh
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/tanh
 ---
+
 {{JSRef}}
 
 La fonction **`Math.tanh()`** renvoie la tangente hyperbolique d'un nombre définie par&nbsp;:

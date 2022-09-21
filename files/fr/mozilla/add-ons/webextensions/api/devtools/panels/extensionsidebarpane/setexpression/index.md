@@ -15,6 +15,7 @@ translation_of: >-
 original_slug: >-
   Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setExpression
 ---
+
 {{AddonSidebar()}}
 
 Evalue une expression dans le contexte de la page inspectée et affiche le résultat dans le volet de la barre latérale d'extension.
