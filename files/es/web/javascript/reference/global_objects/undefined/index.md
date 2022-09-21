@@ -28,7 +28,8 @@ Una variable a la que no se le ha asignado valor, o no se ha declarado en absolu
 
 > **Nota:** Ten en cuenta que si no se ha declarado una variable ni explícita ni implícitamente, no puedes compararla con **undefined** ya que obtendrías un **[ReferenceError](/es/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError),** pero puedes comparar su tipo con la cadena ([String](/es/docs/Web/JavaScript/Referencia/Objetos_globales/String)) "undefined". En el ejemplo más abajo se podrá ver cómo conseguir esto usando el operador [typeof](/es/docs/Web/JavaScript/Referencia/Operadores/typeof).
 
-> **Advertencia:** Aunque es posible usarlo como un {{Glossary("Identifier", "identificador")}} (nombre de variable) en cualquier otro ámbito que no sea el ámbito global (porque `undefined `no es una {{jsxref("Reserved_Words", "palabra reservada")}}), hacerlo es una mala idea que provocará que tú código sea difícil de mantener y depurar.```js
+> **Advertencia:** Aunque es posible usarlo como un {{Glossary("Identifier", "identificador")}} (nombre de variable) en cualquier otro ámbito que no sea el ámbito global (porque `undefined `no es una {{jsxref("Reserved_Words", "palabra reservada")}}), hacerlo es una mala idea que provocará que tú código sea difícil de mantener y depurar.
+> ```js
 > //NO HAGAS ESTO
 >
 > // registra "foo string"
@@ -36,9 +37,6 @@ Una variable a la que no se le ha asignado valor, o no se ha declarado en absolu
 >
 > // registra "foo string"
 > (function(undefined){ console.log(undefined, typeof undefined); })('foo');
->
-> ```
->
 > ```
 
 ## Ejemplos

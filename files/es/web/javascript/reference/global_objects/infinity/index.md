@@ -10,7 +10,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Infinity
 
 ## Resumen
 
-La propiedad global **`Infinity `**es un valor numérico que representa el infinito.
+La propiedad global **`Infinity `** es un valor numérico que representa el infinito.
 
 {{js_property_attributes(0,0,0)}}
 

@@ -27,7 +27,7 @@ Una {{jsxref("Promise")}} que se cumplirá cuando todas las promesas del argumen
 
 ## Descripción
 
-**`Promise.all` **se cumple cuando todas las promesas del iterable dado se han cumplido, o es rechazada si alguna promesa no se cumple. {{jsxref("Promise.resolve")}}.
+**`Promise.all`** se cumple cuando todas las promesas del iterable dado se han cumplido, o es rechazada si alguna promesa no se cumple. {{jsxref("Promise.resolve")}}.
 
 Si alguna de las promesas pasadas en el argumento iterable falla, la promesa `all` es rechazada inmediatamente con el valor de la promesa que fué rechazada, descartando todas las demás promesas hayan sido o no cumplidas. Si se pasa un array vacío a `all` , la promesa se cumple inmediatamente.
 

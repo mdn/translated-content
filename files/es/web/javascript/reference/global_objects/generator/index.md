@@ -20,13 +20,15 @@ El objeto `Generator` es retornado por una {{jsxref("Statements/function*", "fun
 
 Este objeto no puede ser instanciado directamente. En su lugar, una instancia del objeto `Generator` puede ser devuelta por una [función generator](/es/docs/Web/JavaScript/Referencia/Sentencias/function*):
 
-    	function* gen() {
-    	  yield 1;
-    	  yield 2;
-    	  yield 3;
-    	}
+```js
+function* gen() {
+    yield 1;
+    yield 2;
+    yield 3;
+}
 
-    	var g = gen(); // "Generator { }"
+var g = gen(); // "Generator { }"
+```
 
 ## Métodos de instanciación
 
@@ -54,18 +56,18 @@ _Tambien hereda propiedades de {{JSxRef("Iterator")}}_
 ### Un iterador infinito
 
 ```js
-	function* idMaker() {
-	    var index = 0;
-	    while(true)
-	        yield index++;
-	}
+function* idMaker() {
+  var index = 0;
+  while(true)
+    yield index++;
+}
 
-	var gen = idMaker(); // "Generator { }"
+var gen = idMaker(); // "Generator { }"
 
-	console.log(gen.next().value); // 0
-	console.log(gen.next().value); // 1
-	console.log(gen.next().value); // 2
-	// ...
+console.log(gen.next().value); // 0
+console.log(gen.next().value); // 1
+console.log(gen.next().value); // 2
+// ...
 ```
 
 ## Objetos generadores legados
@@ -75,34 +77,28 @@ Firefox(SpderMonkey) tambén implementa una versón mas temprana de generadores 
 ### Métodos de generadores legados
 
 - `Generator.prototype.next() `{{non-standard_inline}}
-
-  Retorna el valor ofrecido por la expresión {{jsxref("Operators/yield", "yield")}}. Esto se corresponde con el método next() en el objeto generador de ES2015.
-
-  `Generator.prototype.close()` {{non-standard_inline}}
-
-  - :
-    Cierra el generador. Sí el método next() es llamado por la expresión {{jsxref("StopIteration")}}, un error será lanzado. Esto se corresponde con el método return() del objeto generador de ES2015.
-
+  - : Retorna el valor ofrecido por la expresión {{jsxref("Operators/yield", "yield")}}. Esto se corresponde con el método next() en el objeto generador de ES2015.
+- `Generator.prototype.close()` {{non-standard_inline}}
+  - : Cierra el generador. Sí el método next() es llamado por la expresión {{jsxref("StopIteration")}}, un error será lanzado. Esto se corresponde con el método return() del objeto generador de ES2015.
 - `Generator.prototype.send()` {{non-standard_inline}}
   - : Utilizado para enviar un valor al generador. El valor es retornado por la expresion {{jsxref("Operators/yield", "yield")}}, y retorna el valor ofrecido por la siguiente expresion {{jsxref("Operators/yield", "yield")}}. `send(x)` Se corresponde a `next(x)` en el objeto generador de ECMAScript 2015.
-- **`Generator.`**`prototype.` **`throw()` **{{non-standard_inline}}
+- `Generator.prototype.throw()` {{non-standard_inline}}
   - : Lanza un error al generador. Esto se corresponde con el metodo throw() en el objeto genererador de ES2015.
 
 ### Ejemplo de generador legado
 
 ```js
-	function fibonacci() {
-	  var a = yield 1;
-	  yield a * 2;
-	}
+function fibonacci() {
+  var a = yield 1;
+  yield a * 2;
+}
 
-	var it = fibonacci();
-	console.log(it);          // "Generator {  }"
-	console.log(it.next());   // 1
-	console.log(it.send(10)); // 20
-	console.log(it.close());  // undefined
-	console.log(it.next());   // throws StopIteration (as the generator is now closed)
-
+var it = fibonacci();
+console.log(it);          // "Generator {  }"
+console.log(it.next());   // 1
+console.log(it.send(10)); // 20
+console.log(it.close());  // undefined
+console.log(it.next());   // throws StopIteration (as the generator is now closed)
 ```
 
 ## Especificaciones

@@ -10,17 +10,21 @@ El método **catch()** retorna una `Promise` y solo se ejecuta en los casos en l
 
 ## Síntaxis
 
-    p.catch(onRejected);
+```js
+p.catch(onRejected);
 
-    p.catch(function(reason) {
-       // rejection
-    });
+p.catch(function(reason) {
+  // rejection
+});
+```
 
 ### Parámetros
 
 - onRejected
-  - : Una {{jsxref("Function")}} llamada cuando la `Promise` es rechazada. Esta función tiene un argumento:_ `reason`
-    _ : La razón del rechazo.La promesa devuelta por `catch()` es rechazada si `onRejected` lanza un error o retorna una `Promise` que a su vez se rechaza, de cualquier otra manera la `Promise` es resuelta.
+  - : Una {{jsxref("Function")}} llamada cuando la `Promise` es rechazada. Esta función tiene un argumento:
+    - `reason`
+      - : La razón del rechazo.
+    La promesa devuelta por `catch()` es rechazada si `onRejected` lanza un error o retorna una `Promise` que a su vez se rechaza, de cualquier otra manera la `Promise` es resuelta.
 
 ### Valor de Retorno (Return)
 
@@ -31,21 +35,18 @@ Internamente llama a `Promise.prototype.then` en el objeto sobre el que se llama
 ```js
 // overriding original Promise.prototype.then/catch just to add some logs
 (function(Promise){
-    var originalThen = Promise.prototype.then;
-    var originalCatch = Promise.prototype.catch;
+  var originalThen = Promise.prototype.then;
+  var originalCatch = Promise.prototype.catch;
 
-    Promise.prototype.then = function(){
-        console.log('> > > > > > called .then on %o with arguments: %o', this, arguments);
-        return originalThen.apply(this, arguments);
-    };
-    Promise.prototype.catch = function(){
-        console.log('> > > > > > called .catch on %o with arguments: %o', this, arguments);
-        return originalCatch.apply(this, arguments);
-    };
-
+  Promise.prototype.then = function(){
+    console.log('> > > > > > called .then on %o with arguments: %o', this, arguments);
+    return originalThen.apply(this, arguments);
+  };
+  Promise.prototype.catch = function(){
+    console.log('> > > > > > called .catch on %o with arguments: %o', this, arguments);
+    return originalCatch.apply(this, arguments);
+  };
 })(this.Promise);
-
-
 
 // calling catch on an already resolved promise
 Promise.resolve().catch(function XXX(){});

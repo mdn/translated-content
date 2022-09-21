@@ -26,8 +26,9 @@ El método obsoleto **`compile()`** es usado para (re-)compilar una expresión r
 - `patrón`
   - : El texto de la expresión regular.
 - `flags`
-  - : Si es especificado, las flags pueden tener cualquier combinación de los siguientes valores:_ `g`
-    _ : búsqueda global (global match)
+  - : Si es especificado, las flags pueden tener cualquier combinación de los siguientes valores:
+    - `g`
+      - : búsqueda global (global match)
     - `i`
       - : ignorar mayúsculas o minúsculas
     - `m`
