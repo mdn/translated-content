@@ -38,7 +38,6 @@ console.log(mySet.delete("foo")); // 返回 true，删除成功
 console.log(mySet.has("foo"));    // 返回 false，"foo" 已经成功删除
 ```
 
-
 ### 从 Set 中删除对象
 
 因为对象是通过引用比较的，所以如果没有对原始对象的引用，就必须通过检查单个属性来删除它们。
