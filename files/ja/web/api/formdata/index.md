@@ -8,7 +8,7 @@ slug: Web/API/FormData
 
 `FormData` を実装したオブジェクトは、{{domxref('FormData.entries()', 'entries()')}} の代わりに {{jsxref("Statements/for...of", "for...of")}} 構造の内部で直接使用できます。`for (var p of myFormData)` は `for (var p of myFormData.entries())` と等価です。
 
-> **Note:** **注記**: この機能は [Web Workers](/ja/docs/Web/API/Web_Workers_API) で使用できます。
+> **Note:** この機能は [Web Workers](/ja/docs/Web/API/Web_Workers_API) で使用できます。
 
 ## コンストラクタ
 

@@ -23,9 +23,9 @@ Web Storage には、以下の 2 種類の仕組みがあります:
 
 これらの仕組みは {{domxref("Window.sessionStorage")}} および {{domxref("Window.localStorage")}} プロパティ (正確には、サポートするブラウザーは `Window` オブジェクトが `WindowLocalStorage` および `WindowSessionStorage` オブジェクトを実装しており、これらに `localStorage` および `sessionStorage` プロパティがあります) を通して使用でき、いずれかのプロパティを使用すると {{domxref("Storage")}} オブジェクトのインスタンスを生成して、データアイテムの保存、取り出し、削除ができます。 同じオリジンに対して `sessionStorage` と `localStorage` は、別の Storage オブジェクトを使用します。 これらは別々に制御されて機能します。
 
-> **Note:** **注記**: Firefox 45 より、ブラウザーがクラッシュまたは再起動したとき、オリジンごとに保存されるデータ量は 10MB に制限されます。 Web Storage の使用量が過大であることによって発生するメモリの問題を避けるために、制限を設定しました。
+> **Note:** Firefox 45 より、ブラウザーがクラッシュまたは再起動したとき、オリジンごとに保存されるデータ量は 10MB に制限されます。 Web Storage の使用量が過大であることによって発生するメモリの問題を避けるために、制限を設定しました。
 
-> **Note:** **注記**: ユーザーが[サードパーティのクッキーを禁止している](https://support.mozilla.org/kb/disable-third-party-cookies)（英語）場合は、サードパーティの iframe から Web Storage にアクセスできません ([Firefox 43](/ja/docs/Mozilla/Firefox/Releases/43) から、この動作を実装しています)。
+> **Note:** ユーザーが[サードパーティのクッキーを禁止している](https://support.mozilla.org/kb/disable-third-party-cookies)（英語）場合は、サードパーティの iframe から Web Storage にアクセスできません ([Firefox 43](/ja/docs/Mozilla/Firefox/Releases/43) から、この動作を実装しています)。
 
 > **Note:** **注記:** Web Storage は、[mozStorage](/ja/docs/Storage) (SQLite 用の、Mozilla の XPCOM インターフェイス) や [Session store API](/ja/docs/Session_store_API) (拡張機能で使用するための、[XPCOM](/ja/docs/XPCOM) ストレージユーティリティ) とは異なります。
 
