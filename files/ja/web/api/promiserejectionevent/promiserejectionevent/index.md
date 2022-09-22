@@ -2,6 +2,7 @@
 title: PromiseRejectionEvent()
 slug: Web/API/PromiseRejectionEvent/PromiseRejectionEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`PromiseRejectionEvent()`** コンストラクタは、JavaScript の {{jsxref("Promise")}} が拒否されたときに発火するイベントを表す {{domxref("PromiseRejectionEvent")}} を新しく生成し返します。

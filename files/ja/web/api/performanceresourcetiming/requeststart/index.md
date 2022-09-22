@@ -2,6 +2,7 @@
 title: PerformanceResourceTiming.requestStart
 slug: Web/API/PerformanceResourceTiming/requestStart
 ---
+
 {{APIRef("Resource Timing API")}}
 
 **`requestStart`** 読み取り専用プロパティは、ブラウザーがサーバ、キャッシュ、またはローカルリソースにリソースのリクエストを開始する直前の {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。トランスポート接続が失敗してブラウザーがリクエストを終了すると、返される値は再試行要求の開始になります。

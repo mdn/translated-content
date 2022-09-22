@@ -2,6 +2,7 @@
 title: KeyboardEvent.altKey
 slug: Web/API/KeyboardEvent/altKey
 ---
+
 {{APIRef("UI Events")}}
 
 **`KeyboardEvent.altKey`** は読み取り専用のプロパティで、イベント発生時に <kbd>alt</kbd> キー（macOS では <kbd>Option</kbd> または <kbd>⌥</kbd>）が押されたか (`true`) または押されていないか (`false`) を示す論理値です。

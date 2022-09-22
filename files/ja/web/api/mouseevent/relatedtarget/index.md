@@ -2,6 +2,7 @@
 title: MouseEvent.relatedTarget
 slug: Web/API/MouseEvent/relatedTarget
 ---
+
 {{APIRef("DOM Events")}}
 
 **`MouseEvent.relatedTarget`** は読み取り専用プロパティで、もしあれば、マウスイベントの副ターゲットを表します。
