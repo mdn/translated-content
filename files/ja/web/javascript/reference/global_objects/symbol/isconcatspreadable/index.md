@@ -2,6 +2,7 @@
 title: Symbol.isConcatSpreadable
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
 ---
+
 {{JSRef}}
 
 **`Symbol.isConcatSpreadable`** は、{{jsxref("Array.prototype.concat()")}} メソッドを使用してオブジェクトを配列の要素に平坦化する場合の設定として使用されます。

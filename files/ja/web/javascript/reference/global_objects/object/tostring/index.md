@@ -2,6 +2,7 @@
 title: Object.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toString
 ---
+
 {{JSRef}}
 
 **`toString()`** メソッドは、オブジェクトを表す文字列を返します。

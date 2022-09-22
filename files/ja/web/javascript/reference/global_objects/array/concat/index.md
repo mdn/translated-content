@@ -2,6 +2,7 @@
 title: Array.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/concat
 ---
+
 {{JSRef}}
 
 **`concat()`** メソッドは、2 つ以上の配列を結合するために使用します。このメソッドは既存の配列を変更せず、新しい配列を返します。

@@ -2,6 +2,7 @@
 title: Array.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 ---
+
 {{JSRef}}
 
 **`sort()`** メソッドは、配列の要素を _[in place](https://ja.wikipedia.org/wiki/In-place%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0)_ でソートします。既定のソート順は昇順で、要素を文字列に変換してから、UTF-16 コード単位の値の並びとして比較します。

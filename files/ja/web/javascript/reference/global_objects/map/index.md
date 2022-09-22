@@ -2,6 +2,7 @@
 title: Map
 slug: Web/JavaScript/Reference/Global_Objects/Map
 ---
+
 {{JSRef}}
 
 **`Map`** オブジェクトはキーと値のペアを保持し、キーが最初に挿入された順序を覚えています。キーや値には任意の値 (オブジェクトと{{glossary("Primitive", "プリミティブ値")}})を使用することができます。

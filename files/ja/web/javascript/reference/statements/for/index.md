@@ -2,6 +2,7 @@
 title: for
 slug: Web/JavaScript/Reference/Statements/for
 ---
+
 {{jsSidebar("Statements")}}
 
 **for 文**は、括弧で囲みセミコロンで区切った 3 つの引数と、続いてループ内で実行される文 (ふつうは[ブロック文](/ja/docs/Web/JavaScript/Reference/Statements/block)) から成るループを構成します。

@@ -2,6 +2,7 @@
 title: Function.prototype.call()
 slug: Web/JavaScript/Reference/Global_Objects/Function/call
 ---
+
 {{JSRef}}
 
 **`call()`** メソッドは、 `this` の値と、独立して提供された引数によって関数を呼び出します。

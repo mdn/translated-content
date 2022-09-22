@@ -2,6 +2,7 @@
 title: Date.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
 ---
+
 {{JSRef}}
 
 **`toLocaleString()`** メソッドは、言語に合わせた日時の文字列を返します。

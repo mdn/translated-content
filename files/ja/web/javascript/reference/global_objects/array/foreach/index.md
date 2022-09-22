@@ -2,6 +2,7 @@
 title: Array.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 ---
+
 {{JSRef}}
 
 **`forEach()`** メソッドは、与えられた関数を、配列の各要素に対して一度ずつ実行します。

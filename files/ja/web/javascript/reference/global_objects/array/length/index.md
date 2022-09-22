@@ -2,6 +2,7 @@
 title: Array.length
 slug: Web/JavaScript/Reference/Global_Objects/Array/length
 ---
+
 {{JSRef}}
 
 **`length`** は `Array` 型のインスタンスであるオブジェクトのプロパティで、配列の要素の数を設定または取得します。値は符号なし 32 ビット整数で、常に配列の最も大きなインデックスよりも数値的に大きくなります。

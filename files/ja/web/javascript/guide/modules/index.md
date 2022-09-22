@@ -2,6 +2,7 @@
 title: JavaScript モジュール
 slug: Web/JavaScript/Guide/Modules
 ---
+
 {{jsSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}
 
 本章では、JavaScript のモジュールを使い始めるために必要なことすべてを紹介します。

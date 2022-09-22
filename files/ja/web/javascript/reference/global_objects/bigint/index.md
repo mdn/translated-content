@@ -2,6 +2,7 @@
 title: BigInt
 slug: Web/JavaScript/Reference/Global_Objects/BigInt
 ---
+
 {{JSRef}}
 
 **`BigInt`** は[プリミティブラッパーオブジェクト](/ja/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript)で、{{Glossary("Primitive", "プリミティブ")}}の `bigint` 値、すなわち[大きすぎて](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) `number` {{Glossary("Primitive", "プリミティブ")}}で表すことができない数を、表現したり操作したりするために使用します。

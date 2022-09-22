@@ -2,6 +2,7 @@
 title: Array.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/Array/join
 ---
+
 {{JSRef}}
 
 **`join()`** メソッドは、配列 (または[配列風オブジェクト](/ja/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)) の全要素を順に連結した文字列を新たに作成して返します。区切り文字はカンマ、または指定された文字列です。配列にアイテムが一つしかない場合は、区切り文字を使用せずにアイテムが返されます。

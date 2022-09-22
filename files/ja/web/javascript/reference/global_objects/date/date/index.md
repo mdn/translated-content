@@ -2,6 +2,7 @@
 title: Date() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Date/Date
 ---
+
 {{JSRef}}
 
 JavaScript の **`Date`** インスタンスを生成し、これはプラットフォームに依存しない形式で単一の瞬間の時刻を表現します。 `Date` オブジェクトは 1970 年 1 月 1 日 (UTC) からの経過ミリ秒数を `Number` で保持します。

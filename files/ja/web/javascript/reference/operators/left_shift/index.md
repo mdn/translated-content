@@ -2,6 +2,7 @@
 title: 左シフト (<<)
 slug: Web/JavaScript/Reference/Operators/Left_shift
 ---
+
 {{jsSidebar("Operators")}}
 
 **左シフト演算子 (`<<`)** は、1 つ目のオペランドを指定されたビット数だけ左にずらします。左にずらしてあふれたビットは廃棄されます。0 のビットが右からずれて入ります。

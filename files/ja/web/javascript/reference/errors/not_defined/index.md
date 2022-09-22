@@ -2,6 +2,7 @@
 title: 'ReferenceError: "x" is not defined'
 slug: Web/JavaScript/Reference/Errors/Not_defined
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "_variable_ is not defined" は、どこかで参照している変数が存在しない場合に発生します。

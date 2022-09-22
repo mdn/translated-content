@@ -2,6 +2,7 @@
 title: キー付きコレクション
 slug: Web/JavaScript/Guide/Keyed_collections
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
 
 本章では、キーによって順序付けされたデータのコレクションを紹介します。Map および Set オブジェクトは挿入順に反復処理を行える要素を保持します。

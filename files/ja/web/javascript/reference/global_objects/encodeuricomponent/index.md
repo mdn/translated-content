@@ -2,6 +2,7 @@
 title: encodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 ---
+
 {{jsSidebar("Objects")}}
 
 **`encodeURIComponent()`** 関数は、 {{glossary("URI")}} (Uniform Resource Identifier) 構成要素を特定の文字を {{glossary("UTF-8")}} 文字エンコーディングで表された 1 個から 4 個のエスケープシーケンスに置き換えることでエンコードします (サロゲートペアで構成される文字のみ 4 個のエスケープシーケンスになります)。

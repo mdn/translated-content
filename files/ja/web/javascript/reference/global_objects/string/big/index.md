@@ -2,6 +2,7 @@
 title: String.prototype.big()
 slug: Web/JavaScript/Reference/Global_Objects/String/big
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`big()`** メソッドは、文字列が大きなフォントで表示されるように HTML の {{HTMLElement("big")}} 要素を生成します。

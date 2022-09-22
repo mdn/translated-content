@@ -2,6 +2,7 @@
 title: Array.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
 ---
+
 {{JSRef}}
 
 **`map()`** メソッドは、与えられた関数を配列のすべての要素に対して呼び出し、その結果からなる**新しい配列を生成します**。

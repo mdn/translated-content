@@ -2,6 +2,7 @@
 title: WeakRef
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef
 ---
+
 {{JSRef}}
 
 **`WeakRef`** オブジェクトにより、ガベージコレクションが行われることを妨げない他のオブジェクトへの弱い参照を保持します。

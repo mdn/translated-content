@@ -2,6 +2,7 @@
 title: Atomics.wait()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/wait
 ---
+
 {{JSRef}}
 
 **`Atomics.wait()`** は静的なメソッドで、 {{jsxref("Int32Array")}} 中の指定された位置に指定された値が保存されているかどうかを検証し、検証できるまでスリープ、もしくはタイムアウトします。返値は "`ok`", "`not-equal`", "`timed-out`" のいずれかです。

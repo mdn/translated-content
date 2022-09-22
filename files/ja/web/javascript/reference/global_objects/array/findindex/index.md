@@ -2,6 +2,7 @@
 title: Array.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 ---
+
 {{JSRef}}
 
 **`findIndex()`** メソッドは、配列内の**指定されたテスト関数に合格する**最初の要素の**位置**を返します。テスト関数に合格する要素がない場合を含め、それ以外の場合は `-1` を返します。

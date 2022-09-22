@@ -2,6 +2,7 @@
 title: Array.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
 ---
+
 {{JSRef}}
 
 **`some()`** メソッドは、配列の少なくとも一つの要素が、指定された関数で実装されたテストに合格するかどうかをテストします。これはブール値を返します。

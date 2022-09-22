@@ -2,6 +2,7 @@
 title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
 ---
+
 {{JSRef}}
 
 **`String`** オブジェクトは文字の並びを表したり操作したりするために使用されます。
