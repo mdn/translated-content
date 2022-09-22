@@ -9,20 +9,20 @@ slug: Mozilla/Firefox
 
 Firefox 是一个开源项目，许多代码都是由志愿者社群提供的。在此你将了解如何为 Firefox 项目做贡献，你也可以找到关于制作附加组件、使用 Firefox 开发者工具等内容。
 
-了解如何为 [Firefox](https://www.mozilla.org/firefox/) 添加插件，如何开发和构建 Firefox 自身，以及了解 Firefox 和其他子项目如何运作。
+了解如何为 [Firefox](https://www.mozilla.org/firefox/) 添加附加组件，如何开发和构建 Firefox 自身，以及了解 Firefox 和其他子项目如何运作。
 
 ## 主要资源
 
 - Firefox 开发者指南
-  - : 我们的 [开发者指南](https://firefox-source-docs.mozilla.org/contributing/index.html) 提供了关于获取 Firefox 源代码，在 Linux、macOS 和 Windows 中构建源代码，在代码中找到方向，以及为项目作贡献的详细说明。
+  - : 我们的[开发者指南](https://firefox-source-docs.mozilla.org/contributing/index.html)提供了关于获取 Firefox 源代码，在 Linux、macOS 和 Windows 中构建源代码，在代码中找到方向，以及为项目作贡献的详细说明。
 - Firefox 插件指引
-  - : [插件指南](zh-CN/docs/Mozilla/Add-ons)提供了开发和部署 Firefox 插件的指引。
+  - : [附件组件指南](zh-CN/docs/Mozilla/Add-ons)提供了开发和部署 Firefox 附加组件的指引。
 - 面向开发者的发布说明
   - : 在[面向开发者的发布说明](/zh-CN/docs/Mozilla/Firefox/Releases)中了解每一个 Firefox 新版本为网站开发者与拓展开发者带来的新功能。
 
 ## Firefox 发布频道
 
-Firefox 通过 5 个 **发布频道** 进行发布。
+Firefox 通过 5 个**发布频道**进行发布。
 
 ### Firefox Nightly
 
