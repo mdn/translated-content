@@ -2,6 +2,7 @@
 title: '<abbr>: 略語要素'
 slug: Web/HTML/Element/abbr
 ---
+
 {{HTMLRef}}
 
 **HTML の略語要素** (**`<abbr>`**) は略語や頭字語を表します。任意で {{htmlattrxref("title")}} 属性で、略語の完全形または説明を提供することができます。 `title` 属性はこの完全な説明のみを含み、それ以外を含んではいけません。

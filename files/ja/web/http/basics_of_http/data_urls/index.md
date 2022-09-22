@@ -3,6 +3,7 @@ title: データ URL
 slug: Web/HTTP/Basics_of_HTTP/Data_URLs
 original_slug: Web/HTTP/Basics_of_HTTP/Data_URIs
 ---
+
 {{HTTPSidebar}}
 
 **データ URL** は `data:` スキームが先頭についた URL で、小さなファイルをインラインで文書に埋め込むことができます。以前、 WHATWG で取り下げられるまでは "data URIs" と呼ばれていました。

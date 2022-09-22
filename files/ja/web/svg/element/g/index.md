@@ -2,6 +2,7 @@
 title: g
 slug: Web/SVG/Element/g
 ---
+
 {{SVGRef}}
 
 **`<g>`** [SVG](/ja/docs/Web/SVG) 要素は、他の SVG 要素をグループ化するために用いられるコンテナです。

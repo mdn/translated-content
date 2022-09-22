@@ -3,6 +3,7 @@ title: WebAssembly
 slug: WebAssembly/JavaScript_interface
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
 ---
+
 {{JSRef}}
 
 **`WebAssembly`** は JavaScript のオブジェクトで、 [WebAssembly](/ja/docs/WebAssembly) に関するすべての機能の名前空間の役割をします。

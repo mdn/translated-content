@@ -2,6 +2,7 @@
 title: 'Reason: CORS header ''Access-Control-Allow-Origin'' missing'
 slug: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 ---
+
 {{HTTPSidebar}}
 
 ## 理由

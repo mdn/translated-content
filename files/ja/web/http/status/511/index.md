@@ -2,6 +2,7 @@
 title: 511 Network Authentication Required
 slug: Web/HTTP/Status/511
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`511 Network Authentication Required`** レスポンスステータスコードは、クライアントがネットワークアクセスを取得するために認証する必要があることを示します。

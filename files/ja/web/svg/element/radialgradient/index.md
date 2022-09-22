@@ -2,6 +2,7 @@
 title: radialGradient
 slug: Web/SVG/Element/radialGradient
 ---
+
 {{SVGRef}}
 
 `radialGradient`要素はグラフィックス要素の塗りまたは線への放射状グラデーションを定義します。

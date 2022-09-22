@@ -2,6 +2,7 @@
 title: d
 slug: Web/SVG/Attribute/d
 ---
+
 {{SVGRef}}
 
 **`d`** 属性は描かれるパスを定義します。

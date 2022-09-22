@@ -2,6 +2,7 @@
 title: SVG フォント
 slug: Web/SVG/Tutorial/SVG_fonts
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Filter_effects", "Web/SVG/Tutorial/SVG_Image_Tag") }}
 
 SVG が規定された時点では、ブラウザーでウェブフォントの対応は普及していませんでした。しかし、テキストを正しく描画するためには、正しいフォントファイルへのアクセスが不可欠であるため、この機能を提供するためにフォント記述技術が SVG に追加されました。これは PostScript や OTF などの他のフォーマットとの互換性を目的としたものではなく、レンダリング時にグリフ情報を SVG に埋め込む簡単な手段です。
