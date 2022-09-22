@@ -2,6 +2,7 @@
 title: location.assign()
 slug: Web/API/Location/assign
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`Location.assign()`** メソッドは、指定された URL の文書をウィンドウに読み込んで表示します。移動した後、ユーザーは「戻る」ボタンを押すことによって `Location.assign()` を呼び出したページに戻ることができます。

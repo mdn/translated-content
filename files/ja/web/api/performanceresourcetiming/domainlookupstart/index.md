@@ -2,6 +2,7 @@
 title: PerformanceResourceTiming.domainLookupStart
 slug: Web/API/PerformanceResourceTiming/domainLookupStart
 ---
+
 {{APIRef("Resource Timing API")}}
 
 **`domainLookupStart`** 読み取り専用プロパティは、ブラウザーがリソースのドメイン名検索を開始する直前に {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。

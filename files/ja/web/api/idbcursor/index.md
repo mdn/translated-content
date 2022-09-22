@@ -2,6 +2,7 @@
 title: IDBCursor
 slug: Web/API/IDBCursor
 ---
+
 {{APIRef("IndexedDB")}}
 
 [IndexedDB API](/ja/docs/IndexedDB) の **`IDBCursor`** インターフェイスはデータベースの複数レコードを横断したり繰り返すための[カーソル](/ja/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_cursor)です。

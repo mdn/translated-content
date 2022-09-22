@@ -2,6 +2,7 @@
 title: IDBDatabase.name
 slug: Web/API/IDBDatabase/name
 ---
+
 {{ APIRef("IDBDatabase") }}
 
 `IDBDatabaseインターフェイスのnameプロパティは、接続しているデータベース名を含む` {{ domxref("DOMString")}}です。
