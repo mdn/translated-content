@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Statements/label
 
 {{EmbedInteractiveExample("pages/js/statement-label.html")}}
 
-> **Note:** **注:** ループやブロックに名前を付けることはめったにありません。ふつうは、ジャンプによるループの代わりに関数呼び出しを使用することができます。
+> **Note:** ループやブロックに名前を付けることはめったにありません。ふつうは、ジャンプによるループの代わりに関数呼び出しを使用することができます。
 
 ## 構文
 
