@@ -42,7 +42,7 @@ console.log(d.toString());     // logs Mon Jun 28 1993 14:39:07 GMT-0600 (PDT)
 console.log(d.toDateString()); // logs Mon Jun 28 1993
 ```
 
-> **Note:** **注:** {{jsxref("Date")}} の引数として使用する場合、月は 0 から始まります（よって、 0 は 1 月に、 11 は 12 月 に対応します）。
+> **Note:** {{jsxref("Date")}} の引数として使用する場合、月は 0 から始まります（よって、 0 は 1 月に、 11 は 12 月 に対応します）。
 
 ## 仕様書
 
