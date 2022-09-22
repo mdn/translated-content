@@ -2,6 +2,7 @@
 title: Array.prototype.flat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flat
 ---
+
 {{JSRef}}
 
 **`flat()`** メソッドは、すべてのサブ配列の要素を指定した深さで再帰的に結合した新しい配列を生成します。

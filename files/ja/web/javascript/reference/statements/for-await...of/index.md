@@ -2,6 +2,7 @@
 title: for await...of
 slug: Web/JavaScript/Reference/Statements/for-await...of
 ---
+
 {{jsSidebar("Statements")}}
 
 **`for await...of` 文**は非同期および同期の[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)を使用して、反復処理を行うループを作成します。たとえば、組込みの {{jsxref("String")}}, {{jsxref("Array")}}, 配列風オブジェクト (例えば {{jsxref("Functions/arguments", "arguments")}}, {{domxref("NodeList")}} など), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, さらに、ユーザー定義の非同期・同期の反復可能オブジェクトを使用することができます。これはオブジェクトのそれぞれの識別可能なプロパティの値に対して、実行される文を表す独自の反復フックを呼び出します。 {{jsxref("Operators/await", "await")}} 演算子と同様に、この分は{{jsxref("Statements/async_function", "非同期関数", "", 1)}}の中でのみ使用されます。

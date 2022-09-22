@@ -2,6 +2,7 @@
 title: Date.prototype.toDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toDateString
 ---
+
 {{JSRef}}
 
 **`toDateString()`** メソッドは、 {{jsxref("Date")}} オブジェクトの日付部分を英語の次の書式で空白区切りで返します。

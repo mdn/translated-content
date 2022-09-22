@@ -2,6 +2,7 @@
 title: Array.from()
 slug: Web/JavaScript/Reference/Global_Objects/Array/from
 ---
+
 {{JSRef}}
 
 **`Array.from()`** メソッドは、配列のようなオブジェクトや反復可能オブジェクトから、浅くコピーされた新しい `Array` インスタンスを生成します。

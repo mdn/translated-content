@@ -2,6 +2,7 @@
 title: return
 slug: Web/JavaScript/Reference/Statements/return
 ---
+
 {{jsSidebar("Statements")}}
 
 **`return` 文**は、関数の実行を終了して、関数の呼び出し元に返す値を指定します。

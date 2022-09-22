@@ -2,6 +2,7 @@
 title: WeakSet
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet
 ---
+
 {{JSRef}}
 
 **`WeakSet`** オブジェクトは、コレクションに弱く参照された*オブジェクト*を格納することができます。

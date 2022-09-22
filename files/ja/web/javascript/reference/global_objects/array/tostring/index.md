@@ -2,6 +2,7 @@
 title: Array.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toString
 ---
+
 {{JSRef}}
 
 **`toString()`** メソッドは、指定された配列とその要素を表す文字列を返します。

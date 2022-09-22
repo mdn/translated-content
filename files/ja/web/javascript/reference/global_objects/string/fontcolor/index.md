@@ -2,6 +2,7 @@
 title: String.prototype.fontcolor()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontcolor
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`fontcolor()`** メソッドは、文字列を指定された色で表示させる HTML の {{HTMLElement("font")}} 要素を生成します。

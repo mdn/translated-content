@@ -2,6 +2,7 @@
 title: テキスト処理
 slug: Web/JavaScript/Guide/Text_formatting
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
 
 本章では JavaScript で文字列やテキストを操作する方法を紹介します。

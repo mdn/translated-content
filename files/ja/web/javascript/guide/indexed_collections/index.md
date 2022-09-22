@@ -2,6 +2,7 @@
 title: インデックス付きコレクション
 slug: Web/JavaScript/Guide/Indexed_collections
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
 
 この節では、インデックス値により順序付けされたデータのコレクションを紹介します。これには配列と、 {{jsxref("Array")}} オブジェクトや {{jsxref("TypedArray")}} オブジェクトなどの配列風の構造物があります。

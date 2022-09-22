@@ -2,6 +2,7 @@
 title: Reflect.construct()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 ---
+
 {{JSRef}}
 
 静的な **`Reflect.construct()`** メソッドは {{jsxref("Operators/new", "new")}} 演算子のように、ただし関数として動作します。これは `new target(...args)` の呼び出しと同等です。このメソッドはオプションを追加することで、別なプロトタイプを指定することができます。

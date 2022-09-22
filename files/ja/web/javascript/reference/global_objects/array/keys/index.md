@@ -2,6 +2,7 @@
 title: Array.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Array/keys
 ---
+
 {{JSRef}}
 
 **`keys()`** メソッドは、配列内の各インデックスのキーを含む、新しい **Array Iterator** オブジェクトを返します。

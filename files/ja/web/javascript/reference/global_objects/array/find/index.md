@@ -2,6 +2,7 @@
 title: Array.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
 ---
+
 {{JSRef}}
 
 `find()` メソッドは、提供されたテスト関数を満たす配列内の最初の要素を返します。

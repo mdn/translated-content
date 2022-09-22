@@ -2,6 +2,7 @@
 title: Object.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 ---
+
 {{JSRef}}
 
 **`valueOf()`** メソッドは、指定されたオブジェクトのプリミティブな値を返します。

@@ -2,6 +2,7 @@
 title: Set.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
 ---
+
 {{JSRef}}
 
 **`has()`** メソッドは、特定の値をもつ要素が `Set` オブジェクト内に存在するかどうかを示す論理値を返します。

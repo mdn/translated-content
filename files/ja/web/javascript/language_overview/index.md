@@ -3,6 +3,7 @@ title: JavaScript 「再」入門
 slug: Web/JavaScript/Language_Overview
 original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
+
 {{jsSidebar}}
 
 なぜ「再」入門なのでしょうか。それは、 [JavaScript](/ja/docs/Glossary/JavaScript) が誤解されていることで有名だからです。しばしばおもちゃだと馬鹿にされながら、しかしその嘘のような単純さの下に、強力な言語機能が隠されているのです。 JavaScript はとても多くの著名なアプリケーションで使用されるようになっており、この技術の深い知識が、あらゆるウェブやモバイルの開発者にとって重要なスキルであることを示しています。

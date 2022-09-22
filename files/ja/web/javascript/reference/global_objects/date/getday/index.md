@@ -2,6 +2,7 @@
 title: Date.prototype.getDay()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDay
 ---
+
 {{JSRef}}
 
 **`getDay()`** メソッドは、地方時に基づき、指定された日付の「曜日」を返します。 0 は日曜日を表します。「日」を取得する方法は {{jsxref("Date.prototype.getDate()")}} をご覧ください。

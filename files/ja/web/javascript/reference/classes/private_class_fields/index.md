@@ -2,6 +2,7 @@
 title: プライベートクラス機能
 slug: Web/JavaScript/Reference/Classes/Private_class_fields
 ---
+
 {{JsSidebar("Classes")}}
 
 クラスのフィールドは既定で{{ jsxref('Classes/Public_class_fields','公開', '', 1) }}ですが、ハッシュ `#` 接頭辞を使ってプライベートクラスメンバーを生成することができます。これらのクラス機能のプライバシーのカプセル化は、JavaScript 自身によって行われます。

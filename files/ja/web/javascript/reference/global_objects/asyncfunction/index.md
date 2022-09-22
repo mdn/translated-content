@@ -2,6 +2,7 @@
 title: AsyncFunction
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 ---
+
 {{JSRef}}
 
 **`AsyncFunction` コンストラクター**は、新しい{{jsxref("Statements/async_function", "非同期関数", "", 1)}}オブジェクトを生成します。 JavaScript では、すべての非同期関数が実際に `AsyncFunction` オブジェクトです。

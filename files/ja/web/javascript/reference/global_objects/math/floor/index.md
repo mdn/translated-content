@@ -2,6 +2,7 @@
 title: Math.floor()
 slug: Web/JavaScript/Reference/Global_Objects/Math/floor
 ---
+
 {{JSRef}}
 
 **`Math.floor()`** 関数は与えられた数値以下の最大の整数を返します。

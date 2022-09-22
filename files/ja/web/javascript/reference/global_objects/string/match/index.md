@@ -2,6 +2,7 @@
 title: String.prototype.match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
 ---
+
 {{JSRef}}
 
 **`match()`** メソッドは、[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)に対する*文字列*の照合結果を受け取ります。

@@ -2,6 +2,7 @@
 title: String.prototype.charCodeAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 ---
+
 {{JSRef}}
 
 **`charCodeAt()`** メソッドは、指定された位置にある UTF-16 コードユニットを表す `0` から `65535` までの整数を返します。

@@ -2,6 +2,7 @@
 title: GeneratorFunction
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 ---
+
 {{JSRef}}
 
 **`GeneratorFunction` コンストラクター**は、新しい{{jsxref("Statements/function*", "ジェネレーター関数", "", 1)}}オブジェクトを生成します。 JavaScript では、すべてのジェネレーター関数が実際に `GeneratorFunction` オブジェクトです。

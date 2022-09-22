@@ -2,6 +2,7 @@
 title: get ArrayBuffer[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
 ---
+
 {{JSRef}}
 
 **`ArrayBuffer[@@species]`** アクセサープロパティは、`ArrayBuffer` コンストラクターを返します。

@@ -2,6 +2,7 @@
 title: String.prototype.fontsize()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontsize
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`fontsize()`** メソッドは、文字列を指定された大きさで表示させる HTML の {{HTMLElement("font")}} 要素を生成します。

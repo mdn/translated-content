@@ -2,6 +2,7 @@
 title: String.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 ---
+
 {{JSRef}}
 
 **`lastIndexOf()`** メソッドは、呼び出した {{jsxref("String")}} オブジェクトの中で、 `fromIndex` から前方向に検索を始め、指定された値が最後に現れたインデックスを返します。値が見つからない場合は `-1` を返します。
