@@ -2,6 +2,7 @@
 title: document.querySelector()
 slug: Web/API/Document/querySelector
 ---
+
 {{ ApiRef("DOM") }}
 
 文档对象模型{{domxref("Document")}}引用的 **`querySelector()`** 方法返回文档中与指定选择器或选择器组匹配的第一个 {{domxref("Element")}}对象。 如果找不到匹配项，则返回`null`。

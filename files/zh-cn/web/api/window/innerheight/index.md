@@ -2,6 +2,7 @@
 title: Window.innerHeight
 slug: Web/API/Window/innerHeight
 ---
+
 {{APIRef}}
 
 ## 概述

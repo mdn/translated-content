@@ -2,6 +2,7 @@
 title: yield
 slug: Web/JavaScript/Reference/Operators/yield
 ---
+
 {{jsSidebar("Operators")}}
 
 `yield` 关键字用来暂停和恢复一个生成器函数（({{jsxref("Statements/function*", "function*")}} 或[遗留的生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)）。

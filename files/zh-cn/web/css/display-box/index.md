@@ -2,6 +2,7 @@
 title: <display-box>
 slug: Web/CSS/display-box
 ---
+
 {{CSSRef}}
 
 这些关键词定义一个元素到底是否产生显示盒（display boxes）。

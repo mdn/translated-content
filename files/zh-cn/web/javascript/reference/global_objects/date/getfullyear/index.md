@@ -2,6 +2,7 @@
 title: Date.prototype.getFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
 ---
+
 {{JSRef}}
 
 **`getFullYear()`** 方法根据本地时间返回指定日期的年份。

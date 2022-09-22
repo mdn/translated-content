@@ -2,6 +2,7 @@
 title: ':lang'
 slug: Web/CSS/:lang
 ---
+
 {{CSSRef}}
 
 **`:lang()`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)基于元素语言来匹配页面元素。

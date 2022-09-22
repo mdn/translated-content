@@ -2,6 +2,7 @@
 title: HTTP 请求范围
 slug: Web/HTTP/Range_requests
 ---
+
 {{HTTPSidebar}}
 
 HTTP 协议范围请求允许服务器只发送 HTTP 消息的一部分到客户端。范围请求在传送大的媒体文件，或者与文件下载的断点续传功能搭配使用时非常有用。

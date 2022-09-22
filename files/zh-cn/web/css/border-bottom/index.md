@@ -2,6 +2,7 @@
 title: border-bottom
 slug: Web/CSS/border-bottom
 ---
+
 {{CSSRef}}
 
 border-bottom 简写属性把下边框的所有属性：{{Cssxref("border-bottom-color")}}，{{Cssxref("border-bottom-style")}} 与 {{Cssxref("border-bottom-width")}} 设置到了一个声明中。这些属性描述了元素的下边框样式。

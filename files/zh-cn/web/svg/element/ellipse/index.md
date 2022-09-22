@@ -2,6 +2,7 @@
 title: ellipse
 slug: Web/SVG/Element/ellipse
 ---
+
 {{SVGRef}}
 
 `ellipse`元素是一个 SVG 基本形状，用来创建一个椭圆，基于一个中心坐标以及它们的`x`半径和`y`半径。

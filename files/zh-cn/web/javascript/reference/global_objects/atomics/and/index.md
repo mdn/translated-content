@@ -2,6 +2,7 @@
 title: Atomics.and()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/and
 ---
+
 {{JSRef}} {{SeeCompatTable}}
 
 **`Atomics.and()`** 静态方法会将给定的值与数组上的值进行按位与操作，并将结果赋值给数组，然后返回数组该位置上的旧值。此原子操作保证在写上修改的值之前不会发生其他写操作。
@@ -50,6 +51,7 @@ Atomics.and(typedArray, index, value)
 5  0101
 1  0001
    ----
+
 1  0001
 ```
 

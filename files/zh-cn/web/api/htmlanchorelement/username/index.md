@@ -2,6 +2,7 @@
 title: HTMLHyperlinkElementUtils.username
 slug: Web/API/HTMLAnchorElement/username
 ---
+
 {{ApiRef("URL API")}}
 
 **`HTMLHyperlinkElementUtils.username`** 属性是一个 {{domxref("USVString")}}包含域名前面指定的用户名。

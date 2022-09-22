@@ -2,6 +2,7 @@
 title: IDBObjectStore.keyPath
 slug: Web/API/IDBObjectStore/keyPath
 ---
+
 {{ APIRef("IndexedDB") }}
 
 {{domxref("IDBObjectStore")}}的只读属性 keyPath 接口返回当前 objectStore 的[key path](/zh-CN/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keypath)。

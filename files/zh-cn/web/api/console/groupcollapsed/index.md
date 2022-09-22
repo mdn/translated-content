@@ -2,6 +2,7 @@
 title: console.groupCollapsed
 slug: Web/API/Console/groupCollapsed
 ---
+
 {{ ApiRef() }}
 
 ## 概述

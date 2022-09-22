@@ -2,6 +2,7 @@
 title: BeforeInstallPromptEvent.prompt()
 slug: Web/API/BeforeInstallPromptEvent/prompt
 ---
+
 {{APIRef("")}}
 
 {{SeeCompatTable}}

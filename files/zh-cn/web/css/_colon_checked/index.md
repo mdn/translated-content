@@ -2,6 +2,7 @@
 title: ':checked'
 slug: Web/CSS/:checked
 ---
+
 {{CSSRef}}
 
 **`:checked`** CSS [伪类](/zh-CN/docs/CSS/Pseudo-classes)选择器表示任何处于选中状态的**radio**(`<input type="radio">`), **checkbox** (`<input type="checkbox">`) 或 ("select") 元素中的**option** HTML 元素 ("option")。

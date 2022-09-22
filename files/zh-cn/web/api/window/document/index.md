@@ -2,6 +2,7 @@
 title: window.document
 slug: Web/API/Window/document
 ---
+
 {{ ApiRef() }}
 
 **`window.document`** 返回当前窗口内的文档节点（{{domxref("document")}}）

@@ -2,6 +2,7 @@
 title: Audio()
 slug: Web/API/HTMLAudioElement/Audio
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`Audio()`** 构造器创建并返回一个 {{domxref("HTMLAudioElement")}}，可以将它附加到文档中以供用户交互，也可以用于管理和播放背景音乐。

@@ -2,6 +2,7 @@
 title: HTMLElement.offsetTop
 slug: Web/API/HTMLElement/offsetTop
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.offsetTop`** 为只读属性，它返回当前元素相对于其 {{domxref("HTMLElement.offsetParent","offsetParent")}} 元素的顶部内边距的距离。

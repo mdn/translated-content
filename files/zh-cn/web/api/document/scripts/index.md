@@ -2,6 +2,7 @@
 title: Document.scripts
 slug: Web/API/Document/scripts
 ---
+
 {{ ApiRef() }}
 
 ### 概述

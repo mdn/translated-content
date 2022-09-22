@@ -2,6 +2,7 @@
 title: BaseAudioContext.createPeriodicWave()
 slug: Web/API/BaseAudioContext/createPeriodicWave
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("BaseAudioContext") }} 接口的 `createPeriodicWave()` 方法用于创建可对 {{ domxref("OscillatorNode") }} 输出进行整形的 {{domxref("PeriodicWave")}}（周期波）。

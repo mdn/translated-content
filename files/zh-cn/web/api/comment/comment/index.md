@@ -2,6 +2,7 @@
 title: Comment()
 slug: Web/API/Comment/Comment
 ---
+
 {{ApiRef("DOM")}}{{seeCompatTable}}
 
 构造函数 **`Comment()`** 创建一个 {{domxref("Comment")}} 对象并返回，这个对象以可选的 {{domxref("DOMString")}} 参数作为它的文本内容。

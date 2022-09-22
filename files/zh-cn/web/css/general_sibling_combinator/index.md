@@ -2,6 +2,7 @@
 title: 通用兄弟选择器
 slug: Web/CSS/General_sibling_combinator
 ---
+
 {{CSSRef}}
 
 ## 概述

@@ -2,6 +2,7 @@
 title: HTMLImageElement.referrerPolicy
 slug: Web/API/HTMLImageElement/referrerPolicy
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 **`HTMLImageElement.referrerPolicy`** 反映了 {{HTMLElement("img")}} 元素的 HTML 属性 {{htmlattrxref("referrerpolicy","img")}} 的定义，这个属性定义了{{HTMLElement("img")}} 元素在获取资源时的引用方式。

@@ -2,6 +2,7 @@
 title: text-size-adjust
 slug: Web/CSS/text-size-adjust
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`text-size-adjust`** [CSS](/zh-CN/docs/Web/API/CSS) 控制将一些手机或平板设备上使用的文本溢出算法（text inflation algorithm）。其他类型的设备上的浏览器会忽略此属性。

@@ -2,6 +2,7 @@
 title: Range.endOffset
 slug: Web/API/Range/endOffset
 ---
+
 {{ApiRef("DOM")}}
 
 只读属性 **`Range.endOffset`** 返回代表 `Range` 结束位置在 {{domxref("Range.endContainer")}} 中的偏移值的数字。

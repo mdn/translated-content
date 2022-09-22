@@ -2,6 +2,7 @@
 title: <big>
 slug: Web/HTML/Element/big
 ---
+
 {{deprecated_header}}
 
 ## 概要

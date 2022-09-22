@@ -2,6 +2,7 @@
 title: DeviceMotionEvent.DeviceMotionEvent()
 slug: Web/API/DeviceMotionEvent/DeviceMotionEvent
 ---
+
 {{APIRef("Device Orientation Events")}}{{Non-standard_header}}
 
 The **`DeviceMotionEvent`** constructor 会创建一个新的 {{DOMxRef("DeviceMotionEvent")}}.

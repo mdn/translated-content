@@ -2,6 +2,7 @@
 title: feComponentTransfer
 slug: Web/SVG/Element/feComponentTransfer
 ---
+
 {{SVGRef}}
 
 **`<feComponentTransfer>`** [SVG](/zh-CN/docs/Web/SVG)滤镜基元对每个像素执行颜色分量的数据重映射。它允许进行像亮度调整，对比度调整，色彩平衡或阈值的操作。

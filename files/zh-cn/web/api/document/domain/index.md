@@ -2,6 +2,7 @@
 title: Document.domain
 slug: Web/API/Document/domain
 ---
+
 {{ApiRef}}{{Deprecated_Header}}
 
 {{domxref("Document")}} 接口的 **`domain`** 属性获取/设置当前文档的原始域部分，常用于[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)。

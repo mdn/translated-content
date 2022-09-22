@@ -2,6 +2,7 @@
 title: CSSGroupingRule
 slug: Web/API/CSSGroupingRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 任何实现了 `CSSGroupingRule` 接口的对象表示任何可以包含或嵌套其他规则的的 CSS @ 规则。

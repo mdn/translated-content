@@ -2,6 +2,7 @@
 title: resize
 slug: Web/CSS/resize
 ---
+
 {{CSSRef}}
 
 ## 概述

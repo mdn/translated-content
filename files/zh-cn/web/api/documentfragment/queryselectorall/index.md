@@ -2,6 +2,7 @@
 title: DocumentFragment.querySelectorAll()
 slug: Web/API/DocumentFragment/querySelectorAll
 ---
+
 {{ApiRef("DOM")}}
 
 DocumentFragment.queryselectorall() 方法返回{{domxref("NodeList")}}中的元素{{domxref("DocumentFragment")}}(使用文档节点的深度优先顺序遍历) 匹配指定的选择器组。

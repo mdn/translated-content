@@ -2,6 +2,7 @@
 title: Request()
 slug: Web/API/Request/Request
 ---
+
 {{APIRef("Fetch")}}{{ SeeCompatTable() }}
 
 **`Request()`** 构造器创建一个新的{{domxref("Request")}} 对象。

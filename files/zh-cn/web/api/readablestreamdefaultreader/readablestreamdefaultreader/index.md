@@ -2,6 +2,7 @@
 title: ReadableStreamDefaultReader()
 slug: Web/API/ReadableStreamDefaultReader/ReadableStreamDefaultReader
 ---
+
 {{APIRef("Streams")}}
 
 **`ReadableStreamDefaultReader()`** 构造函数创建并返回一个 `ReadableStreamDefaultReader` 实例对象。

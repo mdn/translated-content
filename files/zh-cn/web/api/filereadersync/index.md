@@ -2,6 +2,7 @@
 title: FileReaderSync
 slug: Web/API/FileReaderSync
 ---
+
 {{APIRef("File API")}}
 
 `FileReaderSync`接口允许以同步的方式读取`File`或`Blob`对象中的内容。

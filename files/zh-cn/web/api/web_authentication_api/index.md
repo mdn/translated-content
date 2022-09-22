@@ -2,6 +2,7 @@
 title: Web Authentication API
 slug: Web/API/Web_Authentication_API
 ---
+
 {{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}
 
 Web Authentication API 继承自 [Credential Management API](/zh-CN/docs/Web/API/Credential_Management_API) ，使用公钥密码学使得验证更强壮，不需要 SMS 文本就能实现无密码验证和安全的双因素验证。

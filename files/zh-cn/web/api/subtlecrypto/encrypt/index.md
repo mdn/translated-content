@@ -2,6 +2,7 @@
 title: SubtleCrypto.encrypt()
 slug: Web/API/SubtleCrypto/encrypt
 ---
+
 {{APIRef("Web Crypto API")}}
 
 **`SubtleCrypto.encrypt()`** 方法以算法、密钥、明文为参数返回一个包含加密数据的 {{jsxref("Promise")}} 对象。

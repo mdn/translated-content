@@ -2,6 +2,7 @@
 title: <image>
 slug: Web/CSS/image
 ---
+
 {{ CSSRef() }}
 
 ## 综述：

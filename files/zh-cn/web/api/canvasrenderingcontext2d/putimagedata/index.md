@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.putImageData()
 slug: Web/API/CanvasRenderingContext2D/putImageData
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.putImageData()`** 是 Canvas 2D API 将数据从已有的 {{domxref("ImageData")}} 对象绘制到位图的方法。如果提供了一个绘制过的矩形，则只绘制该矩形的像素。此方法不受画布转换矩阵的影响。

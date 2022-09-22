@@ -2,6 +2,7 @@
 title: background-color
 slug: Web/CSS/background-color
 ---
+
 {{CSSRef}}
 
 ## 概览

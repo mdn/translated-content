@@ -2,6 +2,7 @@
 title: Intl.NumberFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 ---
+
 {{JSRef}}
 
 **`Intl.NumberFormat`** 是对语言敏感的格式化数字类的构造器类。

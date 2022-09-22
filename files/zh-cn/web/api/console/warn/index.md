@@ -2,6 +2,7 @@
 title: Console.warn()
 slug: Web/API/Console/warn
 ---
+
 {{APIRef("Console API")}}
 
 向 Web 控制台输出一条警告信息。

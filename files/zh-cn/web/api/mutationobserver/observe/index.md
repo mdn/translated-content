@@ -2,6 +2,7 @@
 title: MutationObserver.observe()
 slug: Web/API/MutationObserver/observe
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 {{domxref("MutationObserver")}} 的 **`observe()`** 方法配置了 `MutationObserver` 对象的回调方法以开始接收与给定选项匹配的 DOM 变化的通知。根据配置，观察者会观察 DOM 树中的单个 {{domxref("Node")}}，也可能会观察被指定节点的部分或者所有的子孙节点。

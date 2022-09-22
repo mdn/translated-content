@@ -2,6 +2,7 @@
 title: RegExp.prototype[@@matchAll]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll
 ---
+
 {{JSRef}}
 
 **`[@@matchAll]`**方法返回对字符串使用正则表达式的所有匹配项。

@@ -2,6 +2,7 @@
 title: ServiceWorkerRegistration
 slug: Web/API/ServiceWorkerRegistration
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 The `ServiceWorkerRegistration` interface of the [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API) represents the service worker registration. You register a service worker to control one or more pages that share the same origin.

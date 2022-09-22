@@ -2,6 +2,7 @@
 title: Notification.Notification()
 slug: Web/API/notification/Notification
 ---
+
 {{APIRef("Web Notifications")}}
 
 **Notification()** 构造函数创建一个新的{{domxref("Notification")}}对象实例。

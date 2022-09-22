@@ -2,6 +2,7 @@
 title: Window.scrollMaxX
 slug: Web/API/Window/scrollMaxX
 ---
+
 {{APIRef}} {{Non-standard_header}}
 
 **`Window.scrollMaxX`** 只读属性，返回有关文档可水平滚动的最大像素数。

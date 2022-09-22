@@ -2,6 +2,7 @@
 title: AudioNode.connect()
 slug: Web/API/AudioNode/connect
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioNode") }} 接口的 `connect()` 方法使你能将一个节点的输出连接到一个指定目标，这个指定的目标可能是另一个 `AudioNode`（从而将音频数据引导到下一个指定节点）或一个{{domxref("AudioParam")}}, 以便上一个节点的输出数据随着时间流逝能自动地对下一个参数值进行改变。

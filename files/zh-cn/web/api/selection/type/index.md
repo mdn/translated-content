@@ -2,6 +2,7 @@
 title: Selection.type
 slug: Web/API/Selection/type
 ---
+
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
 
 **`type`**是 {{domxref("Selection")}} 接口的只读属性，其返回的是{{domxref("DOMString")}}即描述当前选择的类型 。

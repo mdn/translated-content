@@ -2,6 +2,7 @@
 title: HTMLMediaElement.muted
 slug: Web/API/HTMLMediaElement/muted
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.muted`** 表示媒体元素是否被静音。

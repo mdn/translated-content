@@ -2,6 +2,7 @@
 title: FetchEvent
 slug: Web/API/FetchEvent
 ---
+
 {{APIRef("Service Workers API")}}
 
 这是会在 {{domxref("ServiceWorkerGlobalScope", "service worker 全局作用域", "", 1)}}中触发 `fetch` 事件的事件类型。它包含关于 fetch 的信息，包括 request 和接收方如何处理响应。它提供 {{domxref("FetchEvent.respondWith", "event.respondWith()")}} 方法，允许我们为此 fetch 提供一个响应。

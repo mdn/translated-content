@@ -2,6 +2,7 @@
 title: CSSRuleList
 slug: Web/API/CSSRuleList
 ---
+
 {{ APIRef("CSSOM") }}
 
 CSS 规则列表 `CSSRuleList` 是一个（只允许间接更改的）类数组对象，包含着一个 [`CSSRule`](/zh-CN/docs/Web/API/CSSRule) 对象的有序集合。

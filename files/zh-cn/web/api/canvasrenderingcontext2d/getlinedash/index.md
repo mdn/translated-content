@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.getLineDash()
 slug: Web/API/CanvasRenderingContext2D/getLineDash
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.getLineDash()`** 是 Canvas 2D API 获取当前线段样式的方法。

@@ -2,6 +2,7 @@
 title: document.compatMode
 slug: Web/API/Document/compatMode
 ---
+
 {{ ApiRef("DOM") }}
 
 表明当前文档的渲染模式是[怪异模式/混杂模式](/zh-CN/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)还是标准模式。

@@ -2,6 +2,7 @@
 title: WEBGL_lose_context.loseContext()
 slug: Web/API/WEBGL_lose_context/loseContext
 ---
+
 {{APIRef("WebGL")}}
 
 **WEBGL_lose_context.loseContext()**属于 [WebGL API](/zh-CN/docs/Web/API/WebGL_API)， 一般用来模拟 {{domxref("WebGLRenderingContext")}} 的上下文丢失。

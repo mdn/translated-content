@@ -2,6 +2,7 @@
 title: console.log
 slug: Web/API/Console/log
 ---
+
 {{ ApiRef() }}
 
 ## 概述

@@ -2,6 +2,7 @@
 title: Element.replaceChildren()
 slug: Web/API/Element/replaceChildren
 ---
+
 {{APIRef("DOM")}}{{seecompattable}}
 
 **`Element.replaceChildren()`** 方法将一个 {{domxref("Node")}} 的后代替换为指定的后代集合。这些新的后代可以为 {{domxref("DOMString")}} 或 {{domxref("Node")}} 对象。

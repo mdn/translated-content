@@ -2,6 +2,7 @@
 title: Node.replaceChild()
 slug: Web/API/Node/replaceChild
 ---
+
 {{APIRef("DOM")}}
 
 **`Node.replaceChild()`** 方法用指定的节点替换当前节点的一个子节点，并返回被替换掉的节点。

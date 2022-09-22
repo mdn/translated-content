@@ -2,6 +2,7 @@
 title: MimeType
 slug: Web/API/MimeType
 ---
+
 {{SeeCompatTable}}{{APIRef("HTML DOM")}}
 
 这 **`MimeType`** 接口提供了包含以下信息 MIME 与特定插件关联的类型。{{domxref("NavigatorPlugins.mimeTypes")}} 返回此对象的数组。

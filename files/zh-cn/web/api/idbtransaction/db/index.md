@@ -2,6 +2,7 @@
 title: IDBTransaction.db
 slug: Web/API/IDBTransaction/db
 ---
+
 {{ APIRef("IndexedDB") }}
 
 {{domxref("IDBTransaction")}} 的只读属性接口 **`db`**。返回该事务所属的数据库连接。

@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.shadowColor
 slug: Web/API/CanvasRenderingContext2D/shadowColor
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.shadowColor`** 是 Canvas 2D API 描述阴影颜色的属性。

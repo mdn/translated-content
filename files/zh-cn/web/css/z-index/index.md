@@ -2,6 +2,7 @@
 title: z-index
 slug: Web/CSS/z-index
 ---
+
 {{CSSRef}}
 
 `z-index` 属性设定了一个定位元素及其后代元素或 flex 项目的 z-order。当元素之间重叠的时候，z-index 较大的元素会覆盖较小的元素在上层进行显示。

@@ -2,6 +2,7 @@
 title: 优先级
 slug: Web/CSS/Specificity
 ---
+
 {{CSSRef}}
 
 浏览器通过**优先级**来判断哪些属性值与一个元素最为相关，从而在该元素上应用这些属性值。优先级是基于不同种类[选择器](/zh-CN/CSS/CSS_Reference#Selectors)组成的匹配规则。

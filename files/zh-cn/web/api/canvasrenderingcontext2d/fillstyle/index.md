@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.fillStyle
 slug: Web/API/CanvasRenderingContext2D/fillStyle
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.fillStyle`** 是 Canvas 2D API 使用内部方式描述颜色和样式的属性。默认值是 `#000` （黑色）。

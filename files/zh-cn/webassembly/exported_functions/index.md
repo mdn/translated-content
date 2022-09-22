@@ -2,6 +2,7 @@
 title: 导出的 WebAssembly 函数
 slug: WebAssembly/Exported_functions
 ---
+
 {{WebAssemblySidebar}}
 
 导出 WebAssembly 函数的过程，其实就是指这些函数在 JavaScript 中如何用表示。本文更详细的介绍它们。

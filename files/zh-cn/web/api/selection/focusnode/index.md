@@ -2,6 +2,7 @@
 title: Selection.focusNode
 slug: Web/API/Selection/focusNode
 ---
+
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
 
 **`Selection.focusNode`** 是只读的，返回所选内容的结束位置部分所属的节点。

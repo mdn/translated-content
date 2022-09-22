@@ -2,6 +2,7 @@
 title: 'FileReader: 中止事件 (abort)'
 slug: Web/API/FileReader/abort_event
 ---
+
 {{APIRef}}
 
 在中止读取时会触发 `abort` 事件：例如程序调用{{domxref("FileReader.abort()")}}.

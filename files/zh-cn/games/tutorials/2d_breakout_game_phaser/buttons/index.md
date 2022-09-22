@@ -2,6 +2,7 @@
 title: Buttons
 slug: Games/Tutorials/2D_breakout_game_Phaser/Buttons
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens", "Games/Workflows/2D_Breakout_game_Phaser/Randomizing_gameplay")}}

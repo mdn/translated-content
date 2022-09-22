@@ -2,6 +2,7 @@
 title: timeout
 slug: Web/API/XMLHttpRequest/timeout_event
 ---
+
 `当进度由于预定时间到期而终止时，会触发timeout` 事件。
 
 <table class="properties">

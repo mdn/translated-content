@@ -2,6 +2,7 @@
 title: MessagePort
 slug: Web/API/MessagePort
 ---
+
 {{APIRef("HTML DOM")}}
 
 [Channel Messaging API](/zh-CN/docs/Web/API/Channel_Messaging_API) 的 **`MessagePort`** 接口代表 {{domxref("MessageChannel")}} 的两个端口之一， 它可以让你从一个端口发送消息，并在消息到达的另一个端口监听它们。

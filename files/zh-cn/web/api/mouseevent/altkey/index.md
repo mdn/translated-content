@@ -2,6 +2,7 @@
 title: MouseEvent.altKey
 slug: Web/API/MouseEvent/altKey
 ---
+
 {{APIRef("DOM Events")}}
 
 **`MouseEvent.altKey`** 只读属性是一个{{jsxref("Boolean")}}变量。当事件触发时，如果<kbd>alt</kbd> 被按下，则返回 true，否则返回 false。

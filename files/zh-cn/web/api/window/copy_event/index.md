@@ -2,6 +2,7 @@
 title: 'Window: copy event'
 slug: Web/API/Window/copy_event
 ---
+
 {{APIRef}}
 
 当用户通过浏览器的用户界面启动复制操作时，将触发 **`copy`** 事件。

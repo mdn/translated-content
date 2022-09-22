@@ -2,6 +2,7 @@
 title: Range.setStart()
 slug: Web/API/Range/setStart
 ---
+
 {{ApiRef("DOM")}}
 
 **`Range.setStart()`** 方法用于设置 {{ domxref("Range") }}的开始位置。

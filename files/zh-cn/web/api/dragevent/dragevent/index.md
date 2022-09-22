@@ -2,6 +2,7 @@
 title: DragEvent()
 slug: Web/API/DragEvent/DragEvent
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 This constructor is used to create a synthetic {{domxref("DragEvent")}} object.

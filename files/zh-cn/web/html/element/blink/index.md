@@ -2,6 +2,7 @@
 title: <blink>
 slug: Web/HTML/Element/blink
 ---
+
 {{Deprecated_header}}
 
 HTML Blink Element (`<blink>`) 不是标准元素，它会使包含其中的文本闪烁。

@@ -2,6 +2,7 @@
 title: webNavigation.onDOMContentLoaded
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onDOMContentLoaded
 ---
+
 {{AddonSidebar()}}
 
 在页面中触发[DOMContentLoaded](/zh-CN/docs/Web/Events/DOMContentLoaded) 事件时触发。此时，文档被加载和解析，并且 DOM 被完全构造，但链接的资源（例如图像，样式表和子框架（subframes））可能尚未被加载。

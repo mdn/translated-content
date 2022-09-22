@@ -2,6 +2,7 @@
 title: document.body
 slug: Web/API/Document/body
 ---
+
 {{ApiRef}}
 
 ## 概述

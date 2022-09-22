@@ -2,6 +2,7 @@
 title: Clipboard.read()
 slug: Web/API/Clipboard/read
 ---
+
 {{APIRef("Clipboard API")}}
 
 The **`read()`** method of the {{domxref("Clipboard")}} interface requests a copy of the clipboard's contents, delivering the data to the returned {{jsxref("Promise")}} when the promise is resolved. Unlike {{domxref("Clipboard.readText", "readText()")}}, the `read()` method can return arbitrary data, such as images.

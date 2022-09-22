@@ -2,6 +2,7 @@
 title: PointerEvent
 slug: Web/API/PointerEvent
 ---
+
 {{ APIRef("Pointer Events") }}
 
 **PointerEvent** 接口代表了由 _指针_ 引发的 DOM 事件的状态，包括接触点的位置，引发事件的设备类型，接触表面受到的压力等。

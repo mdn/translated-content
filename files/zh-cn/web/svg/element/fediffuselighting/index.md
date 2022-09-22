@@ -2,6 +2,7 @@
 title: feDiffuseLighting
 slug: Web/SVG/Element/feDiffuseLighting
 ---
+
 {{SVGRef}}
 
 滤镜光照一个图像，使用 alpha 通道作为隆起映射。结果图像，是一个 RGBA 不透明图像，取决于光的颜色、光的位置以及输入隆起映射的表面几何形状。

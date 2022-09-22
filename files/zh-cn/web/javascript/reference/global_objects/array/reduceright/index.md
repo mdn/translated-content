@@ -2,6 +2,7 @@
 title: Array.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 ---
+
 {{JSRef}}
 
 **`reduceRight()`** 方法接受一个函数作为累加器（accumulator）和数组的每个值（从右到左）将其减少为单个值。

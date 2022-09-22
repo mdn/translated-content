@@ -3,6 +3,7 @@ title: var()
 slug: Web/CSS/var
 original_slug: Web/CSS/var()
 ---
+
 {{CSSRef}}
 
 ## 概述

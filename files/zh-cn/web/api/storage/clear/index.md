@@ -2,6 +2,7 @@
 title: Storage.clear()
 slug: Web/API/Storage/clear
 ---
+
 {{APIRef("Web Storage API")}}
 
 `clear()` 是 {{domxref("Storage")}} 接口的一个方法，调用它可以清空存储对象里所有的键值。

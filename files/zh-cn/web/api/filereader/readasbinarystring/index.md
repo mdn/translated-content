@@ -2,6 +2,7 @@
 title: FileReader.readAsBinaryString()
 slug: Web/API/FileReader/readAsBinaryString
 ---
+
 {{APIRef("File API")}} {{non-standard_header}}
 
 `readAsBinaryString` 方法会读取指定的 {{domxref("Blob")}} 或 {{domxref("File")}} 对象，当读取完成的时候，{{domxref("FileReader.readyState","readyState")}} 会变成`DONE`（已完成），并触发 {{event("loadend")}} 事件，同时 {{domxref("FileReader.result","result")}} 属性将包含所读取文件原始二进制格式。

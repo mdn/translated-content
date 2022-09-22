@@ -3,6 +3,7 @@ title: perspective()
 slug: Web/CSS/transform-function/perspective
 original_slug: Web/CSS/transform-function/perspective()
 ---
+
 {{CSSRef}}
 
 透视函数定义了到 z=0 的坐标轴，使用者能够得到 3D 定位元素的透视，每个 3D 元素在 Z 轴的位置大于零意味着离使用者更近，因此会变得更大，同理当元素 Z 周小于零时会变得 ge

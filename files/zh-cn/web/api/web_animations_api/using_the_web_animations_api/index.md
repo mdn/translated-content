@@ -2,6 +2,7 @@
 title: Using the Web Animations API
 slug: Web/API/Web_Animations_API/Using_the_Web_Animations_API
 ---
+
 {{DefaultAPISidebar("Web Animations")}}
 
 web 动画 API 可以让我们用 JavaScript 写动画并且控制动画。本文将通过有趣的 demo 和教学，以有趣的方式开启您对这片爱丽丝仙境的探索。

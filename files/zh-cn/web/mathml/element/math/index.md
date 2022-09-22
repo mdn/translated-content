@@ -2,6 +2,7 @@
 title: <math>
 slug: Web/MathML/Element/math
 ---
+
 {{MathMLRef}}
 
 MathML 的顶级元素是`<math>`。所有有效的 MathML 实例必须被包括在 `<math>` 标记中。另外不可以在一个 `<math>` 元素中嵌套第二个 `<math>` 元素，但是 `<math>` 元素中可以有任意多的子元素 。

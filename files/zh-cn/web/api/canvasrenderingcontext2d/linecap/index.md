@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.lineCap
 slug: Web/API/CanvasRenderingContext2D/lineCap
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.lineCap`** 是 Canvas 2D API 指定如何绘制每一条线段末端的属性。有 3 个可能的值，分别是：`butt`, `round` and `square`。默认值是 `butt`。

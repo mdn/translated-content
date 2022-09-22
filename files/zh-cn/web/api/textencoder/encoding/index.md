@@ -2,6 +2,7 @@
 title: TextEncoder.encoding
 slug: Web/API/TextEncoder/encoding
 ---
+
 {{APIRef("DOM")}}
 
 {{ SeeCompatTable }}

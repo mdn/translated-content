@@ -2,6 +2,7 @@
 title: Generator.prototype.next()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/next
 ---
+
 {{JSRef}}
 
 **`next()`** 方法返回一个包含属性 `done` 和 `value` 的对象。该方法也可以通过接受一个参数用以向生成器传值。

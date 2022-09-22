@@ -2,6 +2,7 @@
 title: 严格模式
 slug: Web/JavaScript/Reference/Strict_mode
 ---
+
 {{JsSidebar("More")}}
 
 > **备注：** 有时你会看到非严格模式，被称为“**[sloppy mode](/docs/Glossary/Sloppy_mode)**”。这不是一个官方术语，但以防万一，你应该意识到这一点。

@@ -2,6 +2,7 @@
 title: hidden
 slug: Web/HTML/Global_attributes/hidden
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) `hidden` 是一个布尔属性，表示一个元素尚未或者不再相关。例如，它可以被用来隐藏一个页面元素直到登录完毕。如果一个元素设置了这个属性，它就不会被显示。

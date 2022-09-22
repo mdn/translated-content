@@ -2,6 +2,7 @@
 title: AudioContext.state
 slug: Web/API/BaseAudioContext/state
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioContext") }}的`state属性是只读的，`返回`AudioContext`的当前状态。

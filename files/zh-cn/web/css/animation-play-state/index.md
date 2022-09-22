@@ -2,6 +2,7 @@
 title: animation-play-state
 slug: Web/CSS/animation-play-state
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## 概述

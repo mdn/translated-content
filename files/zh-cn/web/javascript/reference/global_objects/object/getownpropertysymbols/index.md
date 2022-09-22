@@ -2,6 +2,7 @@
 title: Object.getOwnPropertySymbols()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
 ---
+
 {{JSRef}}
 
 **`Object.getOwnPropertySymbols()`** 方法返回一个给定对象自身的所有 Symbol 属性的数组。

@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.uniformMatrix[234]fv()
 slug: Web/API/WebGLRenderingContext/uniformMatrix
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的**`WebGLRenderingContext.uniformMatrix[234]fv()`** 方法为 uniform variables 指定了矩阵值 .

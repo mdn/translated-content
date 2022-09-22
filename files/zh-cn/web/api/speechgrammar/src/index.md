@@ -2,6 +2,7 @@
 title: SpeechGrammar.src
 slug: Web/API/SpeechGrammar/src
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 **`src`** 属性是 {{domxref("SpeechGrammar")}} 接口设置并返回的一个字符串，包含了 `SpeechGrammar` 对象的文法。

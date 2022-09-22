@@ -2,6 +2,7 @@
 title: OES_vertex_array_object
 slug: Web/API/OES_vertex_array_object
 ---
+
 {{APIRef("WebGL")}}
 
 拓展**OES_vertex_array_object**是[WebGL API](/zh-CN/docs/Web/API/WebGL_API)的一部分，它提供了顶点数组对象 (VAOs) 可以用来封装顶点数组的状态。These objects keep pointers to vertex data and provide names for different sets of vertex data.

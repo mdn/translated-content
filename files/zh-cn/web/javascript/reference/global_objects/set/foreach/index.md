@@ -2,6 +2,7 @@
 title: Set.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Set/forEach
 ---
+
 {{JSRef}}
 
 `forEach` 方法会根据集合中元素的插入顺序，依次执行提供的回调函数。

@@ -2,6 +2,7 @@
 title: String.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/String/@@iterator
 ---
+
 {{JSRef}}
 
 **`[@@iterator]()`** 方法返回一个新的 Iterator 对象，它遍历字符串的代码点，返回每一个代码点的字符串值。

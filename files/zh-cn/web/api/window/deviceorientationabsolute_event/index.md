@@ -2,6 +2,7 @@
 title: Window.ondeviceorientationabsolute
 slug: Web/API/Window/deviceorientationabsolute_event
 ---
+
 {{ ApiRef() }}{{Non-standard_header}}
 
 ## 摘要

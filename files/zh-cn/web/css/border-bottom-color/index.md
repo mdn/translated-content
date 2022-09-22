@@ -2,6 +2,7 @@
 title: border-bottom-color
 slug: Web/CSS/border-bottom-color
 ---
+
 {{CSSRef}}
 
 ## 概述

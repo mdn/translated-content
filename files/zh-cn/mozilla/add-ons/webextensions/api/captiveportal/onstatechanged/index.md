@@ -2,6 +2,7 @@
 title: onStateChanged
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/onStateChanged
 ---
+
 {{AddonSidebar()}}
 
 Fires when the captive portal state changes.

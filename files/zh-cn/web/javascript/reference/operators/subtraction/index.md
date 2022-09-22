@@ -2,6 +2,7 @@
 title: Subtraction (-)
 slug: Web/JavaScript/Reference/Operators/Subtraction
 ---
+
 {{jsSidebar("Operators")}}
 
 The subtraction operator (`-`) subtracts the two operands, producing their difference.

@@ -2,6 +2,7 @@
 title: AudioContext.decodeAudioData()
 slug: Web/API/BaseAudioContext/decodeAudioData
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioContext") }}接口的`decodeAudioData()方法可用于异步解码`音频文件中的 {{domxref("ArrayBuffer")}}. `ArrayBuffer数据可以通过`{{domxref("XMLHttpRequest")}}和{{domxref("FileReader")}}来获取。AudioBuffer 是通过 AudioContext 采样率进行解码的，然后通过回调返回结果。
