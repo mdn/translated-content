@@ -269,7 +269,7 @@ var f = function() { return arguments.callee; };
 f(); // lanza un TypeError
 ```
 
-### "Securing" JavaScript
+### "Asegurando" JavaScript
 
 El modo estricto hace más fácil el escribir código "seguro" en JavaScript. Algunos sitios web ofrecen ahora medios para que los usuarios codifiquen en JavaScript para que el código corra en el sitio en _beneficio de otros usuarios_. JavaScript en los navegadores puede acceder a la información privada del usuario, por lo que dicho JavaScript se debe transformar parcialmente antes de ejecutarse, para censurar el acceso a funciones prohibidas. La flexibilidad de JavaScript hace que efectivamente sea imposible hacer esto sin muchas comprobaciones en tiempo de ejecución. La flexibilidad de JavaScript hace casi imposible hacer esto sin hacer revisiones en tiempo de ejecución. Unos pocos ajustes del modo estricto, además de requerir que el JavaScript enviado por el usuario sea código de modo estricto y que se invoque de cierta manera, reducen sustancialmente la necesidad de esas comprobaciones en tiempo de ejecución.
 
