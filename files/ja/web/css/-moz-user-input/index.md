@@ -2,6 +2,7 @@
 title: '-moz-user-input'
 slug: Web/CSS/-moz-user-input
 ---
+
 {{CSSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
 
 Mozilla アプリケーションでは、 **`-moz-user-input`** はある要素がユーザの入力を受け付けるかどうかを決定します。

@@ -2,6 +2,7 @@
 title: display
 slug: Web/CSS/display
 ---
+
 {{CSSRef}}
 
 **`display`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素を[ブロック要素とインライン要素](/ja/docs/Web/CSS/CSS_Flow_Layout)のどちらとして扱うか、およびその子要素のために使用されるレイアウト、例えば [フローレイアウト](/ja/docs/Web/CSS/CSS_Flow_Layout)、[グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)、[フレックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)などを設定します。

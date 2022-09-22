@@ -2,6 +2,7 @@
 title: overscroll-behavior-block
 slug: Web/CSS/overscroll-behavior-block
 ---
+
 {{CSSRef}}
 
 **`overscroll-behavior-block`** は CSS のプロパティで、スクロール領域のブロック方向の境界に達したときのブラウザーの挙動を設定します。

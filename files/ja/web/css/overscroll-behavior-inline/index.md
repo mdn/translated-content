@@ -2,6 +2,7 @@
 title: overscroll-behavior-inline
 slug: Web/CSS/overscroll-behavior-inline
 ---
+
 {{CSSRef}}
 
 **`overscroll-behavior-inline`** は CSS のプロパティで、スクロール領域のインライン方向の境界に達したときのブラウザーの挙動を設定します。
