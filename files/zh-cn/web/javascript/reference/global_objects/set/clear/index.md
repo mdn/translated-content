@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/clear
 
 {{JSRef}}
 
-**`clear()`** 方法将移除 `Set` 对象中所有元素。
+**`clear()`** 方法移除 `Set` 对象中所有元素。
 
 {{EmbedInteractiveExample("pages/js/set-prototype-clear.html")}}
 
