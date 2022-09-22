@@ -3,6 +3,7 @@ title: Microsummary XML grammar reference
 slug: orphaned/Microsummary_XML_grammar_reference
 original_slug: Microsummary_XML_grammar_reference
 ---
+
 ## はじめに
 
 マイクロサマリジェネレータとは、ウェブページから特定の情報を抜き出し、そのページの内容に基づいてそのタイトルが変わるブックマークとして概要を表示するための方法を記述した XML 文書のことです。

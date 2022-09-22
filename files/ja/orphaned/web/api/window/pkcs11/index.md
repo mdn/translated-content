@@ -3,6 +3,7 @@ title: Window.pkcs11
 slug: orphaned/Web/API/Window/pkcs11
 original_slug: Web/API/Window/pkcs11
 ---
+
 {{APIRef()}}{{deprecated_header}}
 
 ## 概要

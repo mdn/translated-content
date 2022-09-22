@@ -2,6 +2,7 @@
 title: マッチパターン
 slug: Mozilla/Add-ons/WebExtensions/Match_patterns
 ---
+
 {{AddonSidebar}}
 
 マッチパターンは URL のグループを指定する方法です。マッチパターンはいくつかの URL にマッチします。マッチパターンは WebExtensions API を使う拡張機能向けに、いくつかの場所で使用されます。特に[コンテンツスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)をロードする文書を指定するときや、[`webRequest`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) リスナーを追加する URL を指定する時に使用します。

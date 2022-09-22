@@ -3,6 +3,7 @@ title: ReadableStreamDefaultController.ReadableStreamDefaultController()
 slug: orphaned/Web/API/ReadableStreamDefaultController/ReadableStreamDefaultController
 original_slug: Web/API/ReadableStreamDefaultController/ReadableStreamDefaultController
 ---
+
 {{APIRef("Streams")}}
 
 **`ReadableStreamDefaultController()`** コンストラクターは、`ReadableStreamDefaultController` オブジェクトのインスタンスを作成して返します。

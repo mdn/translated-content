@@ -3,6 +3,7 @@ title: MDN コンテンツのバグ修正
 slug: MDN/Community/MDN_content
 original_slug: MDN/Contribute/Fixing_MDN_content_bugs
 ---
+
 {{MDNSidebar}}
 
 MDN の文書に関する問題は、[コンテンツリポジトリーの課題 (issue)](https://github.com/mdn/content/issues) として報告されます (また、以前の [sprints リポジトリー](https://github.com/mdn/sprints/issues)にも未解決の課題があります)。この記事では、あなたの専門知識と作業可能な時間に基づいて、作業するのに最適な問題を見つけ、それらを修正するための主な手順を概説します。

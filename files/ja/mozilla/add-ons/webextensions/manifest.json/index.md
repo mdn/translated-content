@@ -2,6 +2,7 @@
 title: manifest.json
 slug: Mozilla/Add-ons/WebExtensions/manifest.json
 ---
+
 {{AddonSidebar}}
 
 manifest.json ファイルは、WebExtension API を使う拡張機能に必ず含めなければならない唯一のファイルです。
