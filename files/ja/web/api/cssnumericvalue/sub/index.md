@@ -2,6 +2,7 @@
 title: CSSNumericValue.sub()
 slug: Web/API/CSSNumericValue/sub
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 **`sub()`** は {{domxref("CSSNumericValue")}} インターフェイスのメソッドで、この `CSSNumericValue` から指定された値を減算します。

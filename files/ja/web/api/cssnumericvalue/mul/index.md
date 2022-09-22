@@ -2,6 +2,7 @@
 title: CSSNumericValue.mul()
 slug: Web/API/CSSNumericValue/mul
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 **`mul()`** は {{domxref("CSSNumericValue")}} インターフェイスのメソッドで、この `CSSNumericValue` に指定された値を乗算します。

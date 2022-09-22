@@ -2,6 +2,7 @@
 title: ByteLengthQueuingStrategy.ByteLengthQueuingStrategy()
 slug: Web/API/ByteLengthQueuingStrategy/ByteLengthQueuingStrategy
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 **`ByteLengthQueuingStrategy()`** コンストラクターは、`ByteLengthQueuingStrategy` オブジェクトのインスタンスを作成して返します。

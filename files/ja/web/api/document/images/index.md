@@ -2,6 +2,7 @@
 title: document.images
 slug: Web/API/Document/images
 ---
+
 {{ApiRef}}
 
 ## 概要

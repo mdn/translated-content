@@ -2,6 +2,7 @@
 title: Crypto.getRandomValues()
 slug: Web/API/Crypto/getRandomValues
 ---
+
 {{APIRef("Web Crypto API")}}
 
 **`Crypto.getRandomValues()`** メソッドは、暗号強度の強い乱数値を取得します。

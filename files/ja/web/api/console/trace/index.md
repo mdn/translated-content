@@ -4,6 +4,7 @@ slug: Web/API/console/trace
 i10n:
   sourceCommit: 71aac3e50b8bc5afea791d69d232dab98e1c5c0d
 ---
+
 {{APIRef("Console API")}}
 
 **`console.trace()`** メソッドは、[ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)にスタックトレースを出力します。

@@ -2,6 +2,7 @@
 title: Document.title
 slug: Web/API/Document/title
 ---
+
 {{APIRef("DOM")}}
 
 **`document.title`** プロパティは、現在の文書の[題名](/ja/docs/Web/HTML/Element/title)を取得または設定します。
