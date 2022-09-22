@@ -1,5 +1,5 @@
 ---
-title: Mozilla 产品与私有技术
+title: Mozilla
 slug: Mozilla
 ---
 
