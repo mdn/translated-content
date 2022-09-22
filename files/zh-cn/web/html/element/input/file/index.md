@@ -75,7 +75,7 @@ slug: Web/HTML/Element/Input/file
 
 ### {{htmlattrdef("accept")}}
 
-[`accept`](/zh-CN/docs/Web/HTML/Attributes/accept) 属性是一个字符串，它定义了文件 input 应该接受的文件类型。这个字符串是一个以逗号为分隔的 **[唯一文件类型说明符](#唯一文件类型说明符)** 列表。由于给定的文件类型可以用多种方式指定，因此当你需要给定格式的文件时，提供一组完整的类型指定符是非常有用的。
+[`accept`](/zh-CN/docs/Web/HTML/Attributes/accept) 属性是一个字符串，它定义了文件 input 应该接受的文件类型。这个字符串是一个以逗号为分隔的[**唯一文件类型说明符**](#唯一文件类型说明符)列表。由于给定的文件类型可以用多种方式指定，因此当你需要给定格式的文件时，提供一组完整的类型指定符是非常有用的。
 
 例如，有许多方法可以识别 Microsoft Word 文件，所以接受 Word 文件的站点可以使用一个`<input>`：
 
