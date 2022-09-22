@@ -2,6 +2,7 @@
 title: Window.defaultStatus
 slug: Web/API/Window/defaultStatus
 ---
+
 {{APIRef()}}{{deprecated_header}}
 
 > **Note:** **注:**このメソッドは Firefox 23 以降で削除されました。

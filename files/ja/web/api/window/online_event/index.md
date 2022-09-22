@@ -3,6 +3,7 @@ title: Document.ononline
 slug: Web/API/Window/online_event
 original_slug: Web/API/Document/ononline
 ---
+
 {{APIRef("DOM")}}
 
 **`Document.online`** イベントは、ブラウザーがオンラインモードとオフラインモードの間で切り替わったときに、それぞれのページの {{HtmlElement("body")}} で発生します。加えて、イベントは `document.body` から `document` に向けて、 `window` までバブリングします。どちらのイベントもキャンセル不可能です (ユーザーがオンラインになったり、オフラインに移行したりするのを妨げることはできません)。

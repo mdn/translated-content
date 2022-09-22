@@ -2,6 +2,7 @@
 title: window.parent
 slug: Web/API/Window/parent
 ---
+
 {{ APIRef() }}
 
 ## 概要

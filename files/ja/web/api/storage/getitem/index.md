@@ -2,6 +2,7 @@
 title: Storage.getItem()
 slug: Web/API/Storage/getItem
 ---
+
 {{APIRef("Web Storage API")}}
 
 {{domxref("Storage")}} インターフェイスの `getItem()` メソッドはキーの名称を渡すと、そのキーに対する値を返します。

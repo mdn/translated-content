@@ -2,6 +2,7 @@
 title: '移動、向き、モーション: WebXR の例'
 slug: Web/API/WebXR_Device_API/Movement_and_motion
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}
 
 この記事では、[WebXR](/ja/docs/Web/API/WebXR_Device_API) チュートリアルシリーズの以前の記事で紹介した情報を利用して、ユーザーが VR ヘッドセット、キーボード、マウスを使用して自由に移動できる回転立方体をアニメーション化する例を作成します。 これは、3D グラフィックスと VR の幾何学がどのように機能するかについての理解を深めるのに役立つだけでなく、XR レンダリング中に使用される関数とデータがどのように連携するかを確実に理解するのに役立ちます。

@@ -2,6 +2,7 @@
 title: Window.screenX
 slug: Web/API/Window/screenX
 ---
+
 {{APIRef}}
 
 **`Window.screenX`** は読み取り専用のプロパティで、ユーザーのブラウザーのビューポートから画面の左端までの水平距離を CSS ピクセル数で返します。

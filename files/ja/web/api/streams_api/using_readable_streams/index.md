@@ -2,6 +2,7 @@
 title: 読み取り可能なストリームの使用
 slug: Web/API/Streams_API/Using_readable_streams
 ---
+
 {{apiref("Streams")}}
 
 JavaScript 開発者として、ネットワークを介して受信したデータのストリームをチャンクごとにプログラムで読み取り、操作することは非常に便利です！ しかし、Streams API の読み取り可能なストリームの機能はどのように使用するのでしょうか？ この記事では、その基本について説明します。

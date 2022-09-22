@@ -2,6 +2,7 @@
 title: Window.content
 slug: Web/API/Window/content
 ---
+
 {{APIRef}}{{non-standard_header}}
 
 > **Note:** **注**: Firefox 57 以降 (当初はナイトリーのみ)、 `content` および `_content` の変化形はクロームの (特権) コードでのみ利用可能となり、ウェブではどこでも利用できなくなりました。

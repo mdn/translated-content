@@ -2,6 +2,7 @@
 title: ReadableStream
 slug: Web/API/ReadableStream
 ---
+
 {{APIRef("Streams")}}
 
 [Streams API](/ja/docs/Web/API/Streams_API) の `ReadableStream` インターフェイスは、バイトデータの読み取り可能なストリームを表します。 [Fetch API](/ja/docs/Web/API/Fetch_API) は、{{domxref("Response")}} オブジェクトの {{domxref("Body.body", "body")}} プロパティを介して `ReadableStream` の具体的なインスタンスを提供します。

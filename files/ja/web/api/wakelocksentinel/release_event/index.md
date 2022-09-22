@@ -2,6 +2,7 @@
 title: 'WakeLockSentinel: release イベント'
 slug: Web/API/WakeLockSentinel/release_event
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
 
 **`release`** は {{domxref("WakeLockSentinel")}} インターフェイスのイベントで、この見張りオブジェクトのハンドルが解放されたときに発行されます。

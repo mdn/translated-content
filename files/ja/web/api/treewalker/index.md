@@ -2,6 +2,7 @@
 title: TreeWalker
 slug: Web/API/TreeWalker
 ---
+
 {{ APIRef("DOM") }}
 
 **`TreeWalker`** オブジェクトは、文書のサブツリーのノードおよびその位置を表します。

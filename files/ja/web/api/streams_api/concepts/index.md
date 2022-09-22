@@ -2,6 +2,7 @@
 title: Streams API の概念
 slug: Web/API/Streams_API/Concepts
 ---
+
 {{apiref("Streams")}}
 
 [Streams API](/ja/docs/Web/API/Streams_API) は、非常に便利なツールセットを Web プラットフォームに追加し、JavaScript がネットワーク経由で受信したデータのストリームにプログラムでアクセスし、開発者の希望どおりに処理できるようにするオブジェクトを提供します。 ストリームに関連する概念と用語の一部は、初めての場合もあります。 この記事では、それら知っておく必要のあるすべてを説明します。

@@ -2,6 +2,7 @@
 title: WritableStream.WritableStream()
 slug: Web/API/WritableStream/WritableStream
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 **`WritableStream()`** コンストラクターは、新しい {{domxref("WritableStream")}} オブジェクトのインスタンスを作成します。

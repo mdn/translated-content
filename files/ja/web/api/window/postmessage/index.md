@@ -2,6 +2,7 @@
 title: Window.postMessage()
 slug: Web/API/Window/postMessage
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`window.postMessage()`** は、 {{domxref("Window")}} オブジェクト間で安全にオリジン間通信を可能にするためのメソッドです。例えば、ポップアップとそれを表示したページの間や、iframe とそれが埋め込まれたページの間での通信に使うことができます。

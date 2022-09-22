@@ -2,6 +2,7 @@
 title: ServiceWorkerContainer.getRegistration()
 slug: Web/API/ServiceWorkerContainer/getRegistration
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("ServiceWorkerContainer")}} インターフェイスの **`getRegistration()`** メソッドは、スコープ URL が指定されたドキュメント URL と一致する {{domxref("ServiceWorkerRegistration")}} オブジェクトを取得します。 このメソッドは、{{domxref("ServiceWorkerRegistration")}} または `undefined` に解決される {{jsxref("Promise")}} を返します。

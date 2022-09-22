@@ -2,6 +2,7 @@
 title: Streams API
 slug: Web/API/Streams_API
 ---
+
 {{SeeCompatTable}}{{DefaultAPISidebar("Streams")}}
 
 Streams API を使用すると、JavaScript がネットワーク経由で受信したデータのストリームにプログラムでアクセスし、開発者の希望どおりに処理できます。
