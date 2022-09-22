@@ -2,6 +2,7 @@
 title: transform
 slug: Web/SVG/Attribute/transform
 ---
+
 {{SVGRef}}
 
 **`transform`** 属性は、要素とその要素の子に適用される変換定義のリストを定義します。

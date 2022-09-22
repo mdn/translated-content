@@ -2,6 +2,7 @@
 title: Access-Control-Allow-Credentials
 slug: Web/HTTP/Headers/Access-Control-Allow-Credentials
 ---
+
 {{HTTPSidebar}}
 
 **`Access-Control-Allow-Credentials`** レスポンスヘッダーは、リクエストの資格情報モード ({{domxref("Request.credentials")}}) が `include` である場合に、レスポンスをフロントエンドの JavaScript コードに公開するかどうかをブラウザーに指示します。

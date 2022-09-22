@@ -2,6 +2,7 @@
 title: '<button>: ボタン要素'
 slug: Web/HTML/Element/button
 ---
+
 {{HTMLRef}}
 
 **HTML の `<button>` 要素**はクリックできるボタンを表し、[フォーム](/ja/docs/Learn/Forms)や、文書で単純なボタン機能が必要なあらゆる場所で使用することができます。既定では、 HTML のボタンは {{Glossary("user agent", "ユーザーエージェント")}} が実行されているホストのプラットフォームのスタイルと似ていますが、 [CSS](/ja/docs/Web/CSS) を使用してボタンの外見を変更することができます。

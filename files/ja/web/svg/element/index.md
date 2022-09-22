@@ -2,6 +2,7 @@
 title: SVG 要素リファレンス
 slug: Web/SVG/Element
 ---
+
 « [SVG](/ja/docs/SVG) / [SVG 属性リファレンス](/ja/docs/SVG/Attribute) »
 
 SVG の描画と画像は、構築、描画、ベクター画像や図のレイアウトのための広範にわたる要素を使用して作成されます。ここではそれぞれの SVG 要素のリファレンス文書が見つかります。

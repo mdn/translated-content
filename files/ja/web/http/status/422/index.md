@@ -2,6 +2,7 @@
 title: 422 Unprocessable Entity
 slug: Web/HTTP/Status/422
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) の **`422 Unprocessable Entity`** 応答状態コードは、サーバーが要求本文のコンテンツ型を理解でき、要求本文の構文が正しいものの、中に含まれている指示が処理できなかったことを表します。
