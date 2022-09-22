@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/entries
 
 ## 语法
 
-```js
+```js-nolint
 entries()
 ```
 
