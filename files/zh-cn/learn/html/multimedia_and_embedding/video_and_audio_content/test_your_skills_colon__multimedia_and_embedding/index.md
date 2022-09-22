@@ -3,6 +3,7 @@ title: 'Test your skills: Multimedia and embedding'
 slug: >-
   Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding
 ---
+
 {{learnsidebar}}
 
 This aim of this skill test is to assess whether you've understood our [Video and audio content](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) and [From object to iframe — other embedding technologies](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies) articles.

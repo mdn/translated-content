@@ -2,6 +2,7 @@
 title: Accept-CH
 slug: Web/HTTP/Headers/Accept-CH
 ---
+
 {{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 
 **`Accept-CH`** 头由服务器设置，以指定客户端应在后续请求中应包含哪些客户端 [Client Hints](/zh-CN/docs/Glossary/Client_hints) 提示头。

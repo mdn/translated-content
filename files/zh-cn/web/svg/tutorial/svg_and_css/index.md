@@ -3,6 +3,7 @@ title: SVG and CSS
 slug: Web/SVG/Tutorial/SVG_and_CSS
 original_slug: Web/Guide/CSS/Getting_started/SVG_and_CSS
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Tools_for_SVG") }}
 
 本节将演示如何将 CSS 应用到 [SVG](/zh-CN/docs/SVG) 中。

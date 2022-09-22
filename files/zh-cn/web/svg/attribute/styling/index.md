@@ -3,6 +3,7 @@ title: SVG 样式属性
 slug: Web/SVG/Attribute/Styling
 original_slug: Web/SVG/Attribute/样式
 ---
+
 SVG 样式属性是所有可以在任何 SVG 元素上指定以应用 CSS 样式效果的属性。
 
 - [`class`](#attr-class)

@@ -3,6 +3,7 @@ title: WebAssembly.instantiate()
 slug: WebAssembly/JavaScript_interface/instantiate
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
 ---
+
 {{JSRef}}
 
 **`WebAssembly.instantiate()`** 允许你编译和实例化 WebAssembly 代码。这个方法有两个重载方式：

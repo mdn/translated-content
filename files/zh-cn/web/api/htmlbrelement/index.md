@@ -2,6 +2,7 @@
 title: HTMLBRElement
 slug: Web/API/HTMLBRElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLBRElement`** 接口代表一个 HTML 换行元素 ({{htmlelement("br")}})，它从 {{domxref("HTMLElement")}} 继承。

@@ -2,6 +2,7 @@
 title: clear()
 slug: Web/API/Console/clear
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 清空控制台。

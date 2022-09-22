@@ -2,6 +2,7 @@
 title: 触摸事件
 slug: Web/API/Touch_events
 ---
+
 {{DefaultAPISidebar("Touch Events")}}
 
 为了给基于触摸的用户界面提供高质量的支持，触摸事件提供了在触摸屏或触控板上解释手指（或触控笔）活动的能力。

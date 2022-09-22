@@ -3,6 +3,7 @@ title: WebAssembly.Table()
 slug: WebAssembly/JavaScript_interface/Table
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 ---
+
 {{JSRef}}
 
 **`WebAssembly.Table()`** 构造函数根据给定的大小和元素类型创建一个 Table 对象。

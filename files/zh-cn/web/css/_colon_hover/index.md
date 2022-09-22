@@ -2,6 +2,7 @@
 title: ':hover'
 slug: Web/CSS/:hover
 ---
+
 {{ CSSRef() }}
 
 ## 概要

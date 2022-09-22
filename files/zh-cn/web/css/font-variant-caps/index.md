@@ -2,6 +2,7 @@
 title: font-variant-caps
 slug: Web/CSS/font-variant-caps
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS)属性 **`font-variant-caps`** 使您可以控制大写字母特殊字符的使用。

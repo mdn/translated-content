@@ -2,6 +2,7 @@
 title: document.createTreeWalker()
 slug: Web/API/Document/createTreeWalker
 ---
+
 {{ApiRef("Document")}}
 
 **`document.createTreeWalker()`** 方法，能创建并返回一个 {{domxref("TreeWalker")}} 对象。
@@ -36,7 +37,7 @@ treeWalker = document.createTreeWalker(root, whatToShow, filter, entityReference
     | `NodeFilter.SHOW_PROCESSING_INSTRUCTION`                        | `64`                                            | 显示处理指令 {{ domxref("ProcessingInstruction") }}节点。                                                                                                                                                                                                                                                                                                                                                       |
     | `NodeFilter.SHOW_TEXT`                                          | `4`                                             | 顯示文字節點 ({{ domxref("Text") }} nodes).                                                                                                                                                                                                                                                                                                                                                                            |
 
-- _filter _{{optional_inline}}
+- _filter_ {{optional_inline}}
   - : 一个可选的 {{domxref("NodeFilter")}}，即一个具有 `acceptNode` 方法的对象，此方法被 {{domxref("TreeWalker")}} 调用以决定是否接受已通过 `whatToShow` 检查的节点。
 - _entityReferenceExpansion_ {{optional_inline}} {{Deprecated_Inline}}
   - : 一个 {{domxref("Boolean")}} 标识，指示当丢弃一个 {{domxref("EntityReference")}} 时是否同时丢弃其子树。

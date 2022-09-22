@@ -2,6 +2,7 @@
 title: Performance.onresourcetimingbufferfull
 slug: Web/API/Performance/resourcetimingbufferfull_event
 ---
+
 {{APIRef("Resource Timing API")}}
 
 **`onresourcetimingbufferfull`** 属性是一个在{{event("resourcetimingbufferfull")}}事件触发时会被调用的 {{domxref("EventHandler","event handler")}} 。这个事件当浏览器的资源时间性能缓冲区已满时会触发。

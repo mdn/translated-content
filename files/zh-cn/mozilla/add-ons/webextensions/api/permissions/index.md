@@ -2,6 +2,7 @@
 title: permissions
 slug: Mozilla/Add-ons/WebExtensions/API/permissions
 ---
+
 {{AddonSidebar}}Enables extensions to request extra permissions at runtime, after they have been installed.
 
 Extensions need permissions to access more powerful WebExtension APIs. They can ask for permissions at install time, by including the permissions they need in the [`permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) manifest.json key. The main advantages of asking for permissions at install time are:

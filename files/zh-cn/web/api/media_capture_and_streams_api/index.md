@@ -2,6 +2,7 @@
 title: MediaStream API
 slug: Web/API/Media_Capture_and_Streams_API
 ---
+
 {{SeeCompatTable}}
 
 媒体流处理 API（通常被称为媒体流 API 或流 API）是描述音频或视频数据流的 [WebRTC](/zh-CN/docs/WebRTC) 的一部分，处理它们的方法，与数据类型相关的约束，成功和错误 当异步使用数据时的回调以及在处理期间触发的事件。

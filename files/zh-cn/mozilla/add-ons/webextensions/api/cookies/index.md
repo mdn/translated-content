@@ -2,6 +2,7 @@
 title: cookies
 slug: Mozilla/Add-ons/WebExtensions/API/cookies
 ---
+
 {{AddonSidebar}}
 
 使用 WebExtensions 获取或设置 cookies, 并且在修改时能够获得通知。

@@ -2,6 +2,7 @@
 title: PositionError
 slug: Web/API/GeolocationPositionError
 ---
+
 {{APIRef("Geolocation API")}}
 
 **`PositionError`** 接口表示当定位设备位置时发生错误的原因。

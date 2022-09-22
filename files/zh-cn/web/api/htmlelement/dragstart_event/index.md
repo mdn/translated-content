@@ -3,6 +3,7 @@ title: dragstart
 slug: Web/API/HTMLElement/dragstart_event
 original_slug: Web/API/Document/dragstart_event
 ---
+
 当用户开始拖动一个元素或者一个选择文本的时候 `dragstart` 事件就会触发。
 
 ## 基本信息

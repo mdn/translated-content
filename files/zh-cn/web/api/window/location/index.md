@@ -2,6 +2,7 @@
 title: window.location
 slug: Web/API/Window/location
 ---
+
 {{ APIRef() }}
 
 **window\.location** 只读属性，返回一个 {{domxref("Location")}} 对象，其中包含有关文档当前位置的信息。

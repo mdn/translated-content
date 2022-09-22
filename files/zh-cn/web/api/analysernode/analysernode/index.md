@@ -2,6 +2,7 @@
 title: AnalyserNode.AnalyserNode()
 slug: Web/API/AnalyserNode/AnalyserNode
 ---
+
 {{APIRef("'Web Audio API'")}}
 
 The **`AnalyserNode`** constructor of the [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) creates a new {{domxref("AnalyserNode")}} object instance.

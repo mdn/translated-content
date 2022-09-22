@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.isProgram()
 slug: Web/API/WebGLRenderingContext/isProgram
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API)中的**`WebGLRenderingContext.isProgram()`** 函数 将会在{{domxref("WebGLProgram")}}是一个合法的着色器程序 (program) 时返回 `true` , 而在其他情况返回`false`

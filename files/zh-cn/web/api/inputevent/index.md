@@ -2,6 +2,7 @@
 title: InputEvent
 slug: Web/API/InputEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 {{SeeCompatTable}}<

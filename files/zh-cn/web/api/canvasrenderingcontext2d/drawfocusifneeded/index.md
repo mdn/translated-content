@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.drawFocusIfNeeded()
 slug: Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.drawFocusIfNeeded()`** 是 Canvas 2D API 用来给当前路径或特定路径绘制焦点的方法，如果给定的元素获取了焦点。

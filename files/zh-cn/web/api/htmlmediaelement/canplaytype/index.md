@@ -2,6 +2,7 @@
 title: HTMLMediaElement.canPlayType()
 slug: Web/API/HTMLMediaElement/canPlayType
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.canPlayType()`** 方法会判断传递的媒体格式参数是否能够被播放。

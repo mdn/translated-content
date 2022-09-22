@@ -2,6 +2,7 @@
 title: windows.WindowType
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowType
 ---
+
 {{AddonSidebar()}}
 
 浏览器窗口的类型。

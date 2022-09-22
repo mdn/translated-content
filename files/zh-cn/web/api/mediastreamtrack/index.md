@@ -2,6 +2,7 @@
 title: MediaStreamTrack
 slug: Web/API/MediaStreamTrack
 ---
+
 {{APIRef("WebRTC")}}
 
 ## 摘要

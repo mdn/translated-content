@@ -2,6 +2,7 @@
 title: Element.removeAttributeNode()
 slug: Web/API/Element/removeAttributeNode
 ---
+
 {{ APIRef("DOM") }}
 
 `removeAttributeNode` 从当前的 element(元素节点) 删除指定的属性

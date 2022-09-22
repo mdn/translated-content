@@ -2,6 +2,7 @@
 title: WebGLContextEvent
 slug: Web/API/WebGLContextEvent
 ---
+
 {{APIRef("WebGL")}}
 
 **WebContextEvent** 接口属于 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的一部分，同时也是生成用来对 WebGL 渲染上下文作响应的事件接口。

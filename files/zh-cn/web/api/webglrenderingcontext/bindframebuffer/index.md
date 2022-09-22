@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.bindFramebuffer()
 slug: Web/API/WebGLRenderingContext/bindFramebuffer
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.bindFramebuffer()`** 方法将给定的 {{domxref("WebGLFramebuffer")}} 绑定到目标。

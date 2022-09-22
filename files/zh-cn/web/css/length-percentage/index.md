@@ -2,6 +2,7 @@
 title: <length-percentage>
 slug: Web/CSS/length-percentage
 ---
+
 {{CSSRef}}
 
 The **`<length-percentage>`** [CSS](/zh-CN/docs/Web/CSS) [data type](/zh-CN/docs/Web/CSS/CSS_Types) represents a value that can be either a {{Cssxref("length")}} or a {{Cssxref("percentage")}}.

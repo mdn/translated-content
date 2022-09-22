@@ -2,6 +2,7 @@
 title: 标识互联网上的内容
 slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 ---
+
 {{HTTPSidebar}}
 
 HTTP 请求的内容通称为"资源"。”资源“这一概念非常宽泛，它可以是一份文档，一张图片，或所有其他你能够想到的格式。每个资源都由一个 ({{Glossary("URI")}}) 来进行标识。

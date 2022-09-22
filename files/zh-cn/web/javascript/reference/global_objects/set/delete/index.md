@@ -2,6 +2,7 @@
 title: Set.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Set/delete
 ---
+
 {{JSRef}}
 
 **`delete()`** 方法可以从一个 `Set` 对象中删除指定的元素。

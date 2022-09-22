@@ -2,6 +2,7 @@
 title: marker
 slug: Web/SVG/Element/marker
 ---
+
 {{SVGRef}}
 
 `marker`元素定义了在特定的{{ SVGElement("path") }}元素、{{ SVGElement("line") }}元素、{{ SVGElement("polyline") }}元素或者{{ SVGElement("polygon") }}元素上绘制的箭头或者多边标记图形。

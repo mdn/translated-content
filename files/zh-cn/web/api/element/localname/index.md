@@ -2,6 +2,7 @@
 title: Element.localName
 slug: Web/API/Element/localName
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.localName`** 只读属性，返回本地名称的。

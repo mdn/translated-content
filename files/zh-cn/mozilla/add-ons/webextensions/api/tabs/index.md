@@ -2,6 +2,7 @@
 title: tabs
 slug: Mozilla/Add-ons/WebExtensions/API/tabs
 ---
+
 {{AddonSidebar}}
 
 与浏览器标签系统进行交互。

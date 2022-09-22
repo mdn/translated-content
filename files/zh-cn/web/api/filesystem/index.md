@@ -2,6 +2,7 @@
 title: FileSystem
 slug: Web/API/FileSystem
 ---
+
 {{APIRef("File System API")}} {{non-standard_header}}
 
 在 [File System API](/zh-CN/DOM/File_API/File_System_API) 中，一个 [FileSystem 对象](/zh-CN/DOM/File_API/File_System_API/FileSystem)代表着一个文件系统。这个对象是调用 [requestFileSystem()](/zh-CN/docs/Web/API/LocalFileSystem#requestFileSystem) 成功的一个标志。FileSystem 对象有两个属性。

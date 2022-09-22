@@ -2,6 +2,7 @@
 title: ARIA
 slug: Web/Accessibility/ARIA
 ---
+
 **ARIA** (Accessible Rich Internet Applications) 是一组属性，用于定义使残障人士更容易访问 Web 内容和 Web 应用程序（尤其是使用 JavaScript 开发的应用程序）的方法。
 
 它补充了 HTML，以便在没有其他机制时可以将应用程序中常用的交互和小部件传递给辅助技术。例如，ARIA 支持 HTML4 中的可访问导航地标、JavaScript 小部件、表单提示和错误消息、实时内容更新等。

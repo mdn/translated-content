@@ -2,6 +2,7 @@
 title: padding-inline-start
 slug: Web/CSS/padding-inline-start
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## 概要

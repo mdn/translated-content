@@ -2,6 +2,7 @@
 title: letter-spacing
 slug: Web/CSS/letter-spacing
 ---
+
 {{CSSRef}}
 
 `CSS` 的 `letter-spacing` 属性用于设置文本字符的间距表现。

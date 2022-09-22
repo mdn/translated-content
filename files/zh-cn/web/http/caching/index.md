@@ -3,6 +3,7 @@ title: HTTP 缓存
 slug: Web/HTTP/Caching
 original_slug: Web/HTTP/Caching_FAQ
 ---
+
 {{HTTPSidebar}}
 
 ## 概览

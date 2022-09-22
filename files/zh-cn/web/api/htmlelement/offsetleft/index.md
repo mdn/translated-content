@@ -2,6 +2,7 @@
 title: HTMLElement.offsetLeft
 slug: Web/API/HTMLElement/offsetLeft
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.offsetLeft`** 是一个只读属性，返回当前元素*左上角*相对于 {{domxref("HTMLElement.offsetParent")}} 节点的左边界偏移的像素值。

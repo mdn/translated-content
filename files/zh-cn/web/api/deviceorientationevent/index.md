@@ -2,6 +2,7 @@
 title: DeviceOrientationEvent
 slug: Web/API/DeviceOrientationEvent
 ---
+
 {{apiref("Device Orientation Events")}}{{SeeCompatTable}}
 
 `DeviceOrientationEvent` 提供给网页开发者当设备（指手机，平板等移动设备）在浏览页面时物理旋转的信息。

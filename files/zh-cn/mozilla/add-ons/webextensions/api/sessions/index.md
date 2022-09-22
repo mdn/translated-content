@@ -2,6 +2,7 @@
 title: sessions
 slug: Mozilla/Add-ons/WebExtensions/API/sessions
 ---
+
 {{AddonSidebar}}
 
 Use the sessions API to list, and restore, tabs and windows that have been closed while the browser has been running.

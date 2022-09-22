@@ -2,6 +2,7 @@
 title: 如何存储你需要的信息 — 变量
 slug: Learn/JavaScript/First_steps/Variables
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
 
 在读完之前的一些文章之后，你现在应该大概知道了 JavaScript 是什么，你能用它干什么，它是怎么跟其他 web 技术（HTML，CSS）协同工作的，以及它有哪些主要特性。在本章节，我们将开始学习 JavaScript 的基础，了解如何使用 -- 变量。

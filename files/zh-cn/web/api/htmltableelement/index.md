@@ -2,6 +2,7 @@
 title: HTMLTableElement
 slug: Web/API/HTMLTableElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLTableElement`** 接口在常用的 {{DOMxRef("HTMLElement")}} 接口的基础上，提供了专门的属性和方法来处理 HTML 文档中表格的布局与展示。通过继承，它也可以访问父接口 {{DOMxRef("HTMLElement")}} 中的成员。

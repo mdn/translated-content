@@ -2,6 +2,7 @@
 title: AnimationEvent.animationName
 slug: Web/API/AnimationEvent/animationName
 ---
+
 {{SeeCompatTable}}{{ apiref("Web Animations API") }}
 
 The **`AnimationEvent.animationName`** read-only property is a {{domxref("DOMString")}} containing the value of the {{cssxref("animation-name")}} CSS property associated with the transition.

@@ -109,7 +109,7 @@ Les sites responsives ne se contentent pas de changer leur mise en page entre le
 
 En utilisant une grille flexible, vous n'avez qu'à ajouter un point d'arrêt et à modifier le design au moment où le contenu commence à avoir une piètre apparence. Par exemple, si la longueur des lignes devient illisible à mesure que la taille de l'écran augmente, ou si une boîte se retrouve écrasée avec deux mots sur chaque ligne lorsqu'elle se rétrécit.
 
-Aux débuts du responsive design, notre seule option pour réaliser la mise en page était d'utiliser [floats](/fr/docs/Apprendre/CSS/CSS_layout/Floats). Aux débuts du responsive design, notre seule option pour réaliser la mise en page était d'utiliser des flotteurs. Des mises en page flottantes flexibles ont été réalisées en donnant à chaque élément un pourcentage de largeur et en s'assurant que les totaux ne dépassent pas 100 % dans toute la mise en page. Dans sa publication originale sur les grilles fluides, Marcotte a détaillé une formule pour convertir en pourcentages une mise en page conçue à l'aide de pixels.
+Aux débuts du responsive design, notre seule option pour réaliser la mise en page était d'utiliser [des flotteurs](/fr/docs/Apprendre/CSS/CSS_layout/Floats). Des mises en page flottantes flexibles ont été réalisées en donnant à chaque élément un pourcentage de largeur et en s'assurant que les totaux ne dépassent pas 100 % dans toute la mise en page. Dans sa publication originale sur les grilles fluides, Marcotte a détaillé une formule pour convertir en pourcentages une mise en page conçue à l'aide de pixels.
 
 ```
 target / context = result

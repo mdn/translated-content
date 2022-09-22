@@ -2,6 +2,7 @@
 title: AudioContext.destination
 slug: Web/API/BaseAudioContext/destination
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioContext") }}的`destination属性返回一个`{{ domxref("AudioDestinationNode") }}表示 context 中所有音频（节点）的最终目标节点，一般是音频渲染设备，比如扬声器。

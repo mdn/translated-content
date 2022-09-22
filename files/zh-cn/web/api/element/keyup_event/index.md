@@ -2,6 +2,7 @@
 title: 'Element: keyup event'
 slug: Web/API/Element/keyup_event
 ---
+
 {{APIRef}}
 
 **`keyup`** 事件在按键被松开时触发。

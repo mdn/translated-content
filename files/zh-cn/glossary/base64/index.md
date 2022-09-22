@@ -3,6 +3,7 @@ title: Base64 的编码与解码
 slug: Glossary/Base64
 original_slug: Web/API/WindowBase64/Base64_encoding_and_decoding
 ---
+
 **Base64** 是一组相似的[二进制到文本](https://en.wikipedia.org/wiki/Binary-to-text_encoding)（binary-to-text）的编码规则，使得二进制数据在解释成 radix-64 的表现形式后能够用 ASCII 字符串的格式表示出来。_Base64_ 这个词出自一种 [MIME 数据传输编码](https://en.wikipedia.org/wiki/MIME#Content-Transfer-Encoding)。
 
 Base64 编码普遍应用于需要通过被设计为处理文本数据的媒介上储存和传输二进制数据而需要编码该二进制数据的场景。这样是为了保证数据的完整并且不用在传输过程中修改这些数据。Base64 也被一些应用（包括使用 [MIME](https://en.wikipedia.org/wiki/MIME) 的电子邮件）和在 [XML](/zh-CN/docs/Web/XML) 中储存复杂数据时使用。

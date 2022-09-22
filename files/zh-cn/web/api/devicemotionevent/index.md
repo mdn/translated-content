@@ -2,6 +2,7 @@
 title: DeviceMotionEvent
 slug: Web/API/DeviceMotionEvent
 ---
+
 {{apiref("Device Orientation Events")}}{{SeeCompatTable}}
 
 `DeviceMotionEvent` 为 web 开发者提供了关于设备的位置和方向的改变速度的信息。

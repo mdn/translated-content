@@ -2,6 +2,7 @@
 title: Document.createElement()
 slug: Web/API/Document/createElement
 ---
+
 {{APIRef("DOM")}}
 
 在 [HTML](/zh-CN/docs/Web/HTML) 文档中，**`Document.createElement()`** 方法用于创建一个由标签名称 _tagName_ 指定的 HTML 元素。如果用户代理无法识别 _tagName_，则会生成一个未知 HTML 元素 {{domxref("HTMLUnknownElement")}}。

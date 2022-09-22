@@ -4,6 +4,7 @@ title: >-
   deprecated
 slug: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误提示

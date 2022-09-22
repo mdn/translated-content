@@ -2,6 +2,7 @@
 title: background-blend-mode
 slug: Web/CSS/background-blend-mode
 ---
+
 {{CSSRef()}}
 
 ## 概述

@@ -2,6 +2,7 @@
 title: Arguments 对象
 slug: Web/JavaScript/Reference/Functions/arguments
 ---
+
 {{jsSidebar("Functions")}}
 
 **`arguments`** 是一个对应于传递给函数的参数的类数组对象。

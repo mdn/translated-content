@@ -2,6 +2,7 @@
 title: AudioBuffer
 slug: Web/API/AudioBuffer
 ---
+
 {{APIRef("Web Audio API")}}
 
 AudioBuffer 接口表示存在内存里的一段短小的音频资源，利用{{ domxref("AudioContext.decodeAudioData()") }}方法从一个音频文件构建，或者利用 {{ domxref("AudioContext.createBuffer()") }}从原始数据构建。把音频放入 AudioBuffer 后，可以传入到一个 {{ domxref("AudioBufferSourceNode") }}进行播放。

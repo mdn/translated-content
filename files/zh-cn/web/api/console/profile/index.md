@@ -2,6 +2,7 @@
 title: Console.profile()
 slug: Web/API/Console/profile
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 开始记录性能描述信息 (例如， [Firefox performance tool](/zh-CN/docs/Tools/Performance))。

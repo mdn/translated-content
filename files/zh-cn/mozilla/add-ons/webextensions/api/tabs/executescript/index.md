@@ -2,6 +2,7 @@
 title: tabs.executeScript()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
 ---
+
 {{AddonSidebar()}}
 
 将 JavaScript 代码注入页面。

@@ -2,6 +2,7 @@
 title: window.setTimeout
 slug: Web/API/setTimeout
 ---
+
 {{APIRef("HTML DOM")}}
 
 `WindowOrWorkerGlobalScope` 混合的 **`setTimeout()`**方法设置一个定时器，该定时器在定时器到期后执行一个函数或指定的一段代码。

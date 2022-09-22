@@ -2,6 +2,7 @@
 title: FormData.delete()
 slug: Web/API/FormData/delete
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 {{domxref("FormData")}} 接口的 **`delete()`** 方法会从 `FormData` 对象中删除指定键，即 key，和它对应的值，即 value。

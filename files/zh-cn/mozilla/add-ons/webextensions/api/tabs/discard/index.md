@@ -2,6 +2,7 @@
 title: tabs.discard()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/discard
 ---
+
 {{AddonSidebar()}}
 
 丢弃一个或多个标签页。

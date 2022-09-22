@@ -2,6 +2,7 @@
 title: orientationchange
 slug: Web/API/Window/orientationchange_event
 ---
+
 `orientationchange`事件在设备的纵横方向改变时触发。
 
 <table class="properties">

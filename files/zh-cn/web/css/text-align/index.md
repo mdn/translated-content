@@ -2,6 +2,7 @@
 title: text-align
 slug: Web/CSS/text-align
 ---
+
 {{CSSRef}}
 
 `text-align` CSS 属性定义行内内容（例如文字）如何相对它的块父元素对齐。`text-align` 并不控制块元素自己的对齐，只控制它的行内内容的对齐。

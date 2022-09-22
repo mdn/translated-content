@@ -2,6 +2,7 @@
 title: content
 slug: Web/CSS/content
 ---
+
 {{ CSSRef() }}
 
 ## 概要

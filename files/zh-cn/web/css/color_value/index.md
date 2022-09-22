@@ -2,6 +2,7 @@
 title: <color>
 slug: Web/CSS/color_value
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types) `<color>` 表示一种[标准 RGB 色彩空间（sRGB color space）](http://en.wikipedia.org/wiki/SRGB)的颜色。一个颜色可以包括一个[alpha 通道](https://en.wikipedia.org/wiki/Alpha_compositing)透明度值，来表明颜色如何与它的背景色[混合（composite）](http://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending)。

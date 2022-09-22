@@ -2,6 +2,7 @@
 title: <display-legacy>
 slug: Web/CSS/display-legacy
 ---
+
 {{CSSRef}}
 
 CSS 2 使用单个关键字来指定 display 的属性，对于相同布局模式的 block 级和 inline 级变体需要使用单独的关键字。本文详述这些关键字。

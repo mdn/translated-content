@@ -2,6 +2,7 @@
 title: input
 slug: Web/API/HTMLElement/input_event
 ---
+
 {{APIRef}}
 
 当一个 {{HTMLElement("input")}}, {{HTMLElement("select")}}, 或 {{HTMLElement("textarea")}} 元素的 `value` 被修改时，会触发 **`input`** 事件。

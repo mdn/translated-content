@@ -2,6 +2,7 @@
 title: Document.createCDATASection()
 slug: Web/API/Document/createCDATASection
 ---
+
 {{APIRef("DOM")}}
 
 **`createCDATASection()`** 创建并返回一个新的 CDATA 片段节点。

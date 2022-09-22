@@ -2,6 +2,7 @@
 title: Streams API 概念
 slug: Web/API/Streams_API/Concepts
 ---
+
 {{apiref("Streams")}}
 
 [Streams API](/zh-CN/docs/Web/API/Streams_API) 为 Web 平台提供了一组十分有用的工具，提供了一系列对象以允许 JavaScript 访问来自网络的数据流，并根据开发人员的需要对其进行处理。与流相关的一些概念和术语可能会令你感到陌生——本文将解释你需要了解的所有内容。

@@ -2,6 +2,7 @@
 title: Worker()
 slug: Web/API/Worker/Worker
 ---
+
 {{APIRef("Web Workers API")}}
 
 **`Worker()`** 构造函数创建一个 {{domxref("Worker")}} 对象，该对象执行指定的 URL 脚本。这个脚本必须遵守 [同源策略](/zh-CN/Same_origin_policy_for_JavaScript) 。

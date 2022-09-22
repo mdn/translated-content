@@ -2,6 +2,7 @@
 title: FormData.getAll()
 slug: Web/API/FormData/getAll
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 **`getAll()`** 方法会返回该 {{domxref("FormData")}} 对象指定 key 的所有值。

@@ -2,6 +2,7 @@
 title: column-count
 slug: Web/CSS/column-count
 ---
+
 {{CSSRef}}
 
 **column-count** CSS 属性，描述元素的列数。

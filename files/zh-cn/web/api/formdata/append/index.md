@@ -2,6 +2,7 @@
 title: FormData.append()
 slug: Web/API/FormData/append
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 {{domxref("FormData")}} 接口的**`append()`** 方法 会添加一个新值到 `FormData` 对象内的一个已存在的键中，如果键不存在则会添加该键。

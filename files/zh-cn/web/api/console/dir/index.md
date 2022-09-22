@@ -2,6 +2,7 @@
 title: console.dir
 slug: Web/API/Console/dir
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 在控制台中显示指定 JavaScript 对象的属性，并通过类似文件树样式的交互列表显示。

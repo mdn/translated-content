@@ -2,6 +2,7 @@
 title: Document.cookie
 slug: Web/API/Document/cookie
 ---
+
 {{APIRef("DOM")}}
 
 获取并设置与当前文档相关联的 [cookie](/zh-CN/docs/Web/HTTP/Cookies)。可以把它当成一个 `getter and setter`。

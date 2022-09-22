@@ -2,6 +2,7 @@
 title: word-break
 slug: Web/CSS/word-break
 ---
+
 {{CSSRef}}
 
 CSS 属性 `word-break` 指定了怎样在单词内断行。

@@ -2,6 +2,7 @@
 title: CDATASection
 slug: Web/API/CDATASection
 ---
+
 {{APIRef("DOM")}}
 
 **`CDATASection`** 接口用于表示 CDATA 片段（CDATA section）。在 XML 中， CDATA 可以直接包含未经转义的文本。比如 `<` 和 `&`，只要位于 CDATA 片段中，它们就不需要被转义，保持原样就可以了。

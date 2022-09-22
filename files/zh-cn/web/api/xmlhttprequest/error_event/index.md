@@ -2,6 +2,7 @@
 title: 'XMLHttpRequest: error 事件'
 slug: Web/API/XMLHttpRequest/error_event
 ---
+
 {{APIRef}}
 
 当请求遇到错误时，将触发`error` 事件。

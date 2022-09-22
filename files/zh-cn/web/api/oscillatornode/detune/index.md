@@ -2,6 +2,7 @@
 title: OscillatorNode.detune
 slug: Web/API/OscillatorNode/detune
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("OscillatorNode") }} 的 `detune 属性的接口`是 [a-rate](/zh-CN/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} ，代表振荡频率的失谐量（[cents](http://en.wikipedia.org/wiki/Cent_%28music%29)）。

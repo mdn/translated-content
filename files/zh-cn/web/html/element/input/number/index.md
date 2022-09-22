@@ -2,6 +2,7 @@
 title: <input type="number">
 slug: Web/HTML/Element/Input/number
 ---
+
 {{HTMLRef}}
 
 **`"number"`**类型的 {{HTMLElement("input")}} 元素用于让用户输入一个数字。其包括内置验证以拒绝非数字输入。浏览器可能会选择提供步进箭头，让用户可以使用鼠标增加和减少输入的值，或者只需用指尖敲击即可。

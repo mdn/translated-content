@@ -2,6 +2,7 @@
 title: element.getElementsByTagName
 slug: Web/API/Element/getElementsByTagName
 ---
+
 {{ APIRef("DOM") }}
 
 **`Element.getElementsByTagName()`** 方法返回一个动态的包含所有指定标签名的元素的 HTML 集合{{domxref("HTMLCollection")}}。指定的元素的子树会被搜索，不包括元素自己。返回的列表是动态的，这意味着它会随着 DOM 树的变化自动更新自身。所以，使用相同元素和相同参数时，没有必要多次的调用`Element.getElementsByTagName()` .

@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.lineDashOffset
 slug: Web/API/CanvasRenderingContext2D/lineDashOffset
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.lineDashOffset`** 是 Canvas 2D API 设置虚线偏移量的属性，例如可以实现“[蚂蚁线](http://en.wikipedia.org/wiki/Marching_ants)“ 的效果。

@@ -2,6 +2,7 @@
 title: AudioDestinationNode
 slug: Web/API/AudioDestinationNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 `AudioDestinationNode`接口表示音频图形在特定情况下的最终输出地址 - 通常为扬声器。当使用`OfflineAudioContext`时为音频记录节点。

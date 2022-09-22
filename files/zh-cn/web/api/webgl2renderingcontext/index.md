@@ -2,6 +2,7 @@
 title: WebGL2RenderingContext
 slug: Web/API/WebGL2RenderingContext
 ---
+
 {{APIRef("WebGL")}} {{SeeCompatTable}}
 
 **WebGL2RenderingContext** 接口在底层使用了 OpenGL ES 3.0 为 HTML 的 {{HTMLElement("canvas")}} 元素提供了绘图上下文。

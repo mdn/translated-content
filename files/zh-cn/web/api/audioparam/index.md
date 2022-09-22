@@ -2,6 +2,7 @@
 title: AudioParam
 slug: Web/API/AudioParam
 ---
+
 {{APIRef("Web Audio API")}}
 
 `AudioParam` 接口代表音频相关的参数， 通常是一个 {{domxref("AudioNode")}} (例如 {{ domxref("GainNode.gain") }}) 的参数。一个 `AudioParam` 可以被设置为一个具体的值或者数值的改变 ，可以被安排在在一个具体的时刻并且遵循一个特定的模式发生。

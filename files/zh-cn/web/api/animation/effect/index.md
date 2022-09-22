@@ -2,6 +2,7 @@
 title: Animation.effect
 slug: Web/API/Animation/effect
 ---
+
 {{ SeeCompatTable() }} {{ APIRef("Web Animations API") }}
 
 Animation.effect 属性可以获取或设置动画的目标效果。 目标效果可以是{{domxref("KeyframeEffect")}}对象或 null。

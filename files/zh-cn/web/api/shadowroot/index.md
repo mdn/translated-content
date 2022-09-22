@@ -2,6 +2,7 @@
 title: ShadowRoot
 slug: Web/API/ShadowRoot
 ---
+
 {{APIRef('Shadow DOM')}}
 
 Shadow DOM API 的 **`ShadowRoot`** 接口是一个 DOM 子树的根节点， 它与文档的主 DOM 树分开渲染。

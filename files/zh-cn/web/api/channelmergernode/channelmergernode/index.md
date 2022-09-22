@@ -2,6 +2,7 @@
 title: ChannelMergerNode()
 slug: Web/API/ChannelMergerNode/ChannelMergerNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 **`ChannelMergerNode()`** 构造函数生成新的 {{domxref("ChannelMergerNode")}} 对象实例。

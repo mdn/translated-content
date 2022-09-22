@@ -2,6 +2,7 @@
 title: DataTransferItem.webkitGetAsEntry()
 slug: Web/API/DataTransferItem/webkitGetAsEntry
 ---
+
 {{APIRef("HTML Drag and Drop API")}}{{Non-standard_header}}
 
 如果由文件描述的项目[`DataTransferItem`](/zh-CN/docs/Web/API/DataTransferItem)是文件，则`webkitGetAsEntry()`返回[`FileSystemFileEntry`](/zh-CN/docs/Web/API/FileSystemFileEntry)或[`FileSystemDirectoryEntry`](/zh-CN/docs/Web/API/FileSystemDirectoryEntry)表示它。如果该项不是文件，`null`则返回。

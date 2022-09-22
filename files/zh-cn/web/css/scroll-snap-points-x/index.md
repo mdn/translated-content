@@ -2,6 +2,7 @@
 title: scroll-snap-points-x
 slug: Web/CSS/scroll-snap-points-x
 ---
+
 {{CSSRef}}{{SeeCompatTable}}{{deprecated_header}}
 
 ## 摘要

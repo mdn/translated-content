@@ -2,6 +2,7 @@
 title: Cache.add()
 slug: Web/API/Cache/add
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 {{domxref("Cache")}}接口的 **`add()`** 方法接受一个 URL 作为参数，请求参数指定的 URL，并将返回的 response 对象添加到给定的 cache 中。 `add()` 方法在功能上等同于以下代码：

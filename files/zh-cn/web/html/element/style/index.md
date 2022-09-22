@@ -2,6 +2,7 @@
 title: <style>
 slug: Web/HTML/Element/style
 ---
+
 {{HTMLRef}}
 
 ## 概要

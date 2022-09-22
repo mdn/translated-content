@@ -2,6 +2,7 @@
 title: Game distribution
 slug: Games/Publishing_games/Game_distribution
 ---
+
 {{GamesSidebar}}
 
 你已经跟着一两个[教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript)做了一个 HTML5 游戏了——真棒 ! 这篇文章介绍了一些可以让你投放你的游戏的方式。 包括自己建立网站，在公开的应用市场上线，或是发布到 Google Play 或 IOS 的 App Store。

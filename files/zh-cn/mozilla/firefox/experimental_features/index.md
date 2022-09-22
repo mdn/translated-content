@@ -2,6 +2,7 @@
 title: Experimental features in Firefox
 slug: Mozilla/Firefox/Experimental_features
 ---
+
 {{FirefoxSidebar}}
 
 Mozilla 发布了测试的 nightly 版本，用于测试新的浏览器特性。实验性特性，例如所提议的可用的 Web 平台标准的实现。这个页面列出了 Firefox Nightly 中的一些新特性和启用方法等信息。在发布这些功能之前，你可以测试 Web 站点和应用程序，并确保一切都能与最新的 Web 技术功能协同工作。

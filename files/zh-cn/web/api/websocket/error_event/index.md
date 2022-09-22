@@ -2,6 +2,7 @@
 title: 'WebSocket: 错误事件'
 slug: Web/API/WebSocket/error_event
 ---
+
 {{APIRef}}
 
 当`websocket`的连接由于一些错误事件的发生 (例如无法发送一些数据) 而被关闭时，一个`error`事件将被引发。
