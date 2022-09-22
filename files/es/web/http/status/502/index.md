@@ -15,7 +15,9 @@ El código de respuesta de error del servidor de HTTP **`502 Bad Gateway`** indi
 
 ## Estado
 
-    502 Bad Gateway
+```
+502 Bad Gateway
+```
 
 ## Especificaciones
 

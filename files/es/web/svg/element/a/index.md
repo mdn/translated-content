@@ -68,7 +68,7 @@ svgns|a:hover, svgns|a:active {
   - : This attribute contains the URL or URL fragment that the hyperlink points to.
     _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **yes**
 - {{htmlattrxref("ping", "a")}} {{experimental_inline}}
-  - : Este atributo contiene una lista de direcciones URL separadas por espacios a las que, cuando se sigue el hipervínculo, las solicitudes [`POST`](/es/docs/Web/HTTP/Methods/POST "The HTTP POST method sends data to the server. The type of the body of the request is indicated by the Content-Type header.") con el cuerpo `PING` serán enviadas por el navegador (en segundo plano). Normalmente se utiliza para el seguimiento. Para obtener una característica más ampliamente admitida que aborde los mismos casos de uso, consulte [Navigator.sendBeacon()](/es/docs/Web/API/Navigator/sendBeacon).
+  - : Este atributo contiene una lista de direcciones URL separadas por espacios a las que, cuando se sigue el hipervínculo, las solicitudes [`POST`](/es/docs/Web/HTTP/Methods/POST) con el cuerpo `PING` serán enviadas por el navegador (en segundo plano). Normalmente se utiliza para el seguimiento. Para obtener una característica más ampliamente admitida que aborde los mismos casos de uso, consulte [Navigator.sendBeacon()](/es/docs/Web/API/Navigator/sendBeacon).
     _Value type_: **[\<list-of-URLs>](/docs/Web/SVG/Content_type#List-of-Ts)** ; _Default value_: _none_; _Animatable_: **no**
 - {{htmlattrxref("referrerpolicy", "a")}} {{experimental_inline}}
   - : Este atributo indica qué [referrer](/es/docs/Web/HTTP/Headers/Referer) se enviará al obtener {{Glossary("URL")}}.
