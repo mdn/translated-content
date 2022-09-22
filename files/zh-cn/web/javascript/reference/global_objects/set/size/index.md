@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/size
 
 ## 描述
 
-`size` 的值是一个整数，表示 `Set` 对象有多少条目。`size` 的集合访问函数是 `undefined`; 你不能改变这个属性。
+`size` 的值是一个整数，表示 `Set` 对象有多少条目。`size` 的 set 访问函数是 `undefined`；你不能改变这个属性。
 
 ## 示例
 
