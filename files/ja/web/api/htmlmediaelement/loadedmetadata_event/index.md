@@ -2,6 +2,7 @@
 title: 'HTMLMediaElement: loadedmetadata イベント'
 slug: Web/API/HTMLMediaElement/loadedmetadata_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `loadedmetadata` イベントは、メタデータが読み込まれたときに発生します。

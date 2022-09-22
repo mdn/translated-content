@@ -2,6 +2,7 @@
 title: FormData.values()
 slug: Web/API/FormData/values
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 **`FormData.values()`** メソッドは {{jsxref("Iteration_protocols",'iterator')}} を返し、このオブジェクトに含まれる全ての値を通過できるようにします。値は {{domxref("USVString")}} または {{domxref("Blob")}} オブジェクトです。

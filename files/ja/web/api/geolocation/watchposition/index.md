@@ -2,6 +2,7 @@
 title: Geolocation.watchPosition()
 slug: Web/API/Geolocation/watchPosition
 ---
+
 {{securecontext_header}}{{ APIref("Geolocation API") }}
 
 {{domxref("Geolocation")}} の **`watchPosition()`** メソッドは、端末の位置が変化するたびに自動的に呼び出されるハンドラー関数を登録するために用いられます。また必要に応じてエラー処理コールバック関数を指定することができます。

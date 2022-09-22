@@ -2,6 +2,7 @@
 title: HTMLBodyElement
 slug: Web/API/HTMLBodyElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLBodyElement`** インターフェイスは、（通常のオブジェクトである {{domxref("HTMLElement")}} が継承によって利用できるもの以外に） {{HtmlElement("body")}} 要素を操作するための特別なプロパティとメソッドを提供します。

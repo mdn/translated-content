@@ -2,6 +2,7 @@
 title: HTMLDataElement
 slug: Web/API/HTMLDataElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLDataElement`** インターフェースは{{HTMLElement("data")}}要素を扱うための（継承される通常の{{domxref("HTMLElement")}}より高度な）固有の属性を提供します。

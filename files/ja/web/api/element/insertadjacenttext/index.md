@@ -2,6 +2,7 @@
 title: Element.insertAdjacentText()
 slug: Web/API/Element/insertAdjacentText
 ---
+
 {{APIRef("DOM")}}
 
 `insertAdjacentText()` メソッドは、与えられたテキストノードを、メソッドを実行した要素に対する相対的な位置に挿入します。

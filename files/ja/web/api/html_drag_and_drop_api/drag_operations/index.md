@@ -3,6 +3,7 @@ title: ドラッグ操作
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 original_slug: DragDrop/Drag_Operations
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 以下は、ドラッグ＆ドロップ操作が行われる時の各段階についての解説です。

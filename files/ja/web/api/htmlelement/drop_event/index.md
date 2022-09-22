@@ -2,6 +2,7 @@
 title: 'HTMLElement: drop イベント'
 slug: Web/API/HTMLElement/drop_event
 ---
+
 {{APIRef}}
 
 **`drop`** イベントは、要素または選択されたテキストが、妥当なドロップターゲットにドロップされたときに発生します。

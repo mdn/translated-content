@@ -2,6 +2,7 @@
 title: element.setAttributeNS
 slug: Web/API/Element/setAttributeNS
 ---
+
 {{ ApiRef() }}
 
 ### 概要

@@ -2,6 +2,7 @@
 title: ExtendableMessageEvent.data
 slug: Web/API/ExtendableMessageEvent/data
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("ExtendableMessageEvent")}} インターフェイスの **`data`** 読み取り専用プロパティは、イベントのデータを返します。 任意のデータ型を使用できます。

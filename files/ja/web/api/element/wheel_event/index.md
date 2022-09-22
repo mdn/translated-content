@@ -2,6 +2,7 @@
 title: 'Element: wheel イベント'
 slug: Web/API/Element/wheel_event
 ---
+
 {{APIRef}}
 
 **`wheel`** イベントは、ユーザーがポインティングデバイス (通常はマウス) のホイールボタンを回転させたときに発行されます。

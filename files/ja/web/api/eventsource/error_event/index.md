@@ -3,6 +3,7 @@ title: 'EventSource: error イベント'
 slug: Web/API/EventSource/error_event
 original_slug: Web/API/EventSource/onerror
 ---
+
 {{APIRef}}
 
 {{domxref("EventSource")}} インターフェースの **`onerror`** プロパティは、エラーが発生し、`EventSource` オブジェクトに対して {{event("error")}} が送出されたときに呼び出される {{event("Event_handlers", "event handler")}} です。

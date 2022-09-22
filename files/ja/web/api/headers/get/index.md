@@ -2,6 +2,7 @@
 title: Headers.get()
 slug: Web/API/Headers/get
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Headers")}} インターフェイスの **`get()`** メソッドは、指定された名前の `Headers` オブジェクト内のヘッダーのすべての値の ByteString を返します。要求されたヘッダーが `Headers` オブジェクトに存在しない場合、`null` を返します。

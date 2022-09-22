@@ -2,6 +2,7 @@
 title: FormData オブジェクトの使用
 slug: Web/API/FormData/Using_FormData_Objects
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 [`FormData`](/ja/docs/Web/API/FormData) オブジェクトは、[`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) を使用して送信するためのキーと値のペアのセットを収集可能にします。本来はフォームデータの送信に使用することを想定していましたが、キーのついたデータを伝送するためにフォームとは独立して使用することもできます。伝送されるデータは、フォームのエンコードタイプが `multipart/form-data` に設定されている場合に、{{domxref("HTMLFormElement.submit","submit()")}} メソッドで送信する際に使用するデータと同じ形式です。

@@ -2,6 +2,7 @@
 title: 'HTMLFormElement: submit イベント'
 slug: Web/API/HTMLFormElement/submit_event
 ---
+
 {{APIRef}}
 
 **`submit`** イベントは {{HtmlElement("form")}} が送信されたときに発生します。
