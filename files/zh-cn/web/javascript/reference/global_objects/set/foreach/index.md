@@ -37,7 +37,7 @@ forEach(function(value, key, set) { /* ... */ }, thisArg)
   - : 为集合中每个元素执行的回调函数，该函数接收三个参数：
 
     - `value`、`key`
-      - : `Set` 中正在处理的当前元素。因为 `Set` 中没有键，所以两个参数的值都被传递。
+      - : `Set` 中正在处理的当前元素。因为 `Set` 中没有键，所以 `value` 会被共同传递给这两个参数。
     - `set`
       - : 调用 `forEach()` 的 `Set` 对象。
 
