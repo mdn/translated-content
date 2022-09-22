@@ -2,6 +2,7 @@
 title: HTMLCollection
 slug: Web/API/HTMLCollection
 ---
+
 {{APIRef("DOM")}}
 
 **`HTMLCollection`** インターフェイスは、 (文書内の順序における) 要素の一般的なコレクション ({{jsxref("Functions/arguments", "arguments")}} のような配列風のオブジェクト) を表し、リストから選択するためのメソッドとプロパティを提供します。

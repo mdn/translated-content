@@ -2,6 +2,7 @@
 title: element.hasAttributeNS
 slug: Web/API/Element/hasAttributeNS
 ---
+
 {{ ApiRef() }}
 
 ### 概要

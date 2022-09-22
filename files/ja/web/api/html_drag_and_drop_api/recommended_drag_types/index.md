@@ -3,6 +3,7 @@ title: 推奨されるドラッグのデータ型
 slug: Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
 original_slug: DragDrop/Recommended_Drag_Types
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 HTML Drag and Drop API は、プレーンテキスト、URL、HTML コード、ファイルなど、さまざまな形式のデータのドラッグをサポートしています。このドキュメントでは、一般的なドラッグ可能なデータ形式のベストプラクティスについて説明しています。

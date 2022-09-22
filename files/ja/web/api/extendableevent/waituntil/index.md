@@ -2,6 +2,7 @@
 title: ExtendableEvent.waitUntil()
 slug: Web/API/ExtendableEvent/waitUntil
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`ExtendableEvent.waitUntil()`** メソッドは、作業が進行中であることをイベントディスパッチャーに通知します。 また、その作業が成功したかどうかを検出するためにも使用できます。 サービスワーカーの場合、`waitUntil()` は、Promise が確定するまで作業が進行中であることをブラウザーに通知し、サービスワーカーがその作業を完了させたい場合にサービスワーカーを終了させません。

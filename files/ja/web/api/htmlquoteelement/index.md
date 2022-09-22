@@ -2,6 +2,7 @@
 title: HTMLQuoteElement
 slug: Web/API/HTMLQuoteElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLQuoteElement`** インターフェースは，引用要素を扱う為に（継承する{{domxref("HTMLElement")}}インターフェースを越えた）固有の属性を提供します。ここで引用要素とは{{HTMLElement("blockquote")}}や{{HTMLElement("q")}}といった要素であり，{{HTMLElement("cite")}}要素ではありません。

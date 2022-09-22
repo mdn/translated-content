@@ -2,6 +2,7 @@
 title: HTMLMediaElement.disableRemotePlayback
 slug: Web/API/HTMLMediaElement/disableRemotePlayback
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.disableRemotePlayback`** プロパティは、メディア要素がリモート再生 UI を持つことを許可するかどうかを決定します。

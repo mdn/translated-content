@@ -2,6 +2,7 @@
 title: 'Element: scroll イベント'
 slug: Web/API/Element/scroll_event
 ---
+
 {{APIRef}}
 
 **`scroll`** イベントは、要素がスクロールしたときに発行されます。

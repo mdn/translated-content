@@ -2,6 +2,7 @@
 title: HTMLLinkElement.rel
 slug: Web/API/HTMLLinkElement/rel
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLLinkElement.rel`** プロパティは {{htmlattrxref("rel", "link")}} 属性を反映しています。これは、空白で区切られた[リンク種別](/ja/docs/Web/HTML/Link_types)のリストの入った文字列であり、{{HTMLElement("link")}} 要素で表されるリソースと現在の文書との関係を示します。

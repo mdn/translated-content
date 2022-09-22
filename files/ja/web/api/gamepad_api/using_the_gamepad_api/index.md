@@ -3,6 +3,7 @@ title: ゲームパッド API の使用
 slug: Web/API/Gamepad_API/Using_the_Gamepad_API
 original_slug: Web/Guide/API/Gamepad
 ---
+
 {{DefaultAPISidebar("Gamepad API")}}
 
 HTML5 はリッチでインタラクティブなゲームを開発するために必要なコンポーネントを多く搭載しています。 `<canvas>` や WebGL、 `<audio>` に `<video>` などの技術は、今までネイティブコードを書く必要のあった機能をサポートできるほどに成長しました。ゲームパッド API は開発者とデザイナーにゲームパッドやコントローラーへのアクセスを提供するものです。

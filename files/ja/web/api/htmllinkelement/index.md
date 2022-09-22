@@ -2,6 +2,7 @@
 title: HTMLLinkElement
 slug: Web/API/HTMLLinkElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLLinkElement`** インターフェイスは、外部リソースの参照情報と、それらのリソースと文書の関係（またはその逆）を表します（[`<link>`](/ja/docs/Web/HTML/Element/link) 要素に対応します。 [`HTMLAnchorElement`](/ja/docs/Web/API/HTMLAnchorElement) で表される [`<a>`](/ja/docs/Web/HTML/Element/a) 要素と混同しないでください）。このオブジェクトは {{domxref("HTMLElement")}} インターフェイスのすべてのプロパティとメソッドを継承します。

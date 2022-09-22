@@ -2,6 +2,7 @@
 title: FormData
 slug: Web/API/FormData
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 **`FormData`** インターフェイスは、{{domxref("XMLHttpRequest.send()")}} メソッドを用いることで簡単に送信が可能な、フォームフィールドおよびそれらの値から表現されるキーと値のペアのセットを簡単に構築する手段を提供します。これは、エンコーディングタイプを `"multipart/form-data"` に設定した場合にフォームが使用するものと同じ形式を使用します。

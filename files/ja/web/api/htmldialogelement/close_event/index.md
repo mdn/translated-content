@@ -3,6 +3,7 @@ title: window.onclose
 slug: Web/API/HTMLDialogElement/close_event
 original_slug: Web/API/GlobalEventHandlers/onclose
 ---
+
 {{ApiRef("HTML DOM")}} {{SeeCompatTable}}
 
 **`onclose`** は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、ダイアログ要素に送信された {{event("close")}} イベントを処理するための {{domxref("EventHandler", "イベントハンドラー")}} です。

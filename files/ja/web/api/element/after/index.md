@@ -2,6 +2,7 @@
 title: Element.after()
 slug: Web/API/Element/after
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.after()`** は、一連の {{domxref("Node")}} または {{domxref("DOMString")}} オブジェクトをこの `Element` の親の子リストの、 `Element` の直後に挿入します。 {{domxref("DOMString")}} オブジェクトは {{domxref("Text")}} ノードと等価なノードとして挿入されます。

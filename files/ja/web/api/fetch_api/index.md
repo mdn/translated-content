@@ -2,6 +2,7 @@
 title: Fetch API
 slug: Web/API/Fetch_API
 ---
+
 <div>{{DefaultAPISidebar("Fetch API")}}</div>
 
 Fetch API は (ネットワーク越しの通信を含む) リソース取得のためのインターフェイスを提供しています。 {{DOMxRef("XMLHttpRequest")}} と似たものではありますが、より強力で柔軟な操作が可能です。

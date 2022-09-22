@@ -2,6 +2,7 @@
 title: ExtendableEvent
 slug: Web/API/ExtendableEvent
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`ExtendableEvent`** インターフェイスは、サービスワーカーのライフサイクルの一部として、グローバルスコープでディスパッチされた [`install`](/ja/docs/Web/API/ServiceWorkerGlobalScope/install) イベントと [`activate`](/ja/docs/Web/API/ServiceWorkerGlobalScope/activate) イベントの存続期間を延長します。 これにより、データベーススキーマがアップグレードされて古いキャッシュエントリが削除されるまで、機能イベント（{{domxref("FetchEvent")}} など）が送出されなくなります。
