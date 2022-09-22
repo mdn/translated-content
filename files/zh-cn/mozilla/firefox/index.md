@@ -9,7 +9,7 @@ slug: Mozilla/Firefox
 
 Firefox 是一个开源项目，许多代码都是由志愿者社群提供的。在此你将了解如何为 Firefox 项目做贡献，你也可以找到关于制作附加组件、使用 Firefox 开发者工具等内容。
 
-了解如何为 [Firefox](https://www.mozilla.org/firefox/)添加插件，如何开发和构建 Firefox 自身，以及了解 Firefox 和其他子项目如何运作。
+了解如何为 [Firefox](https://www.mozilla.org/firefox/) 添加插件，如何开发和构建 Firefox 自身，以及了解 Firefox 和其他子项目如何运作。
 
 ## 主要资源
 
