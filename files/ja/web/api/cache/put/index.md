@@ -40,7 +40,7 @@ cache.put(request, response).then(function() {
 
 `undefined` で解決する {{jsxref("Promise")}}。
 
-> **Note:** 注: URL スキームが `http` または `https` でない場合、Promise は `TypeError` で拒否します。
+> **Note:** URL スキームが `http` または `https` でない場合、Promise は `TypeError` で拒否します。
 
 ## 例
 

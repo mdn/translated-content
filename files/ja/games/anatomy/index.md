@@ -71,7 +71,7 @@ main(); //メインループ開始
 
 ブラウザーがこの IIFE に出くわすと、メインループを定義してすぐさま次のフレームにキューします。これで何のオブジェクトにもアタッチされなくなり、`main()` (もしくは `main()` のためのメソッド) は残りのアプリケーションで使用可能な未使用の名前になり、何か別に定義してもよくなりました。
 
-> **Note:** 注: 実際は、次の `requestAnimationFrame()` を if 構文で防ぐほうがより一般的で、`cancelAnimationFrame()` を呼ぶことはそれよりも一般的ではありません。
+> **Note:** 実際は、次の `requestAnimationFrame()` を if 構文で防ぐほうがより一般的で、`cancelAnimationFrame()` を呼ぶことはそれよりも一般的ではありません。
 
 2 つ目の問題 - つまり、メインループを止めるという問題に関しては、`main()` を `{{ domxref("window.cancelAnimationFrame()") }}` によって呼び出しをキャンセルする必要があるでしょう。あなたは一番最後に `requestAnimationFrame()` が呼ばれたときに `cancelAnimationFrame()` に `requestAnimationFrame()` で得た ID トークンを渡す必要があります。 こんな風な場合を想定してください - あなたのゲームの関数と変数が `MyGame` と呼ばれる名前空間に備え付けられています。先述の例を拡張すると、メインループはこんな風になります。
 
