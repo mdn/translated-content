@@ -2,6 +2,7 @@
 title: ウェブ NFC API
 slug: Web/API/Web_NFC_API
 ---
+
 {{DefaultAPISidebar("Web NFC API")}}{{SeeCompatTable}}
 
 ウェブ NFC API では、 NFC によるデータ交換を軽量な NFC Data Exchange Format (NDEF) メッセージにて行うことができます。

@@ -2,6 +2,7 @@
 title: VRFrameData.rightViewMatrix
 slug: Web/API/VRFrameData/rightViewMatrix
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`rightViewMatrix`** は {{domxref("VRFrameData")}} インターフェイスの読み取り専用プロパティで、 4 行 4 列の行列を表す {{jsxref("Float32Array")}} を返します。この行列は、右目の描画に利用されるビュー変換を表します。

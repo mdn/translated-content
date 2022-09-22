@@ -2,6 +2,7 @@
 title: Screen.unlockOrientation()
 slug: Web/API/Screen/unlockOrientation
 ---
+
 {{APIRef("Screen Orientation API")}}{{Deprecated_Header}}
 
 **`Screen.unlockOrientation()`** メソッドは、ページやアプリによって設定されているすべての画面のロックを除去します。代わりに {{DOMxRef("ScreenOrientation.unlock()")}} を使用してください。

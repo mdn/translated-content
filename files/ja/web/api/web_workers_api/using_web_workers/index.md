@@ -4,6 +4,7 @@ slug: Web/API/Web_Workers_API/Using_web_workers
 l10n:
   sourceCommit: 6fefcdd237a377af5c066dc2734c118feadbbef9
 ---
+
 {{DefaultAPISidebar("Web Workers API")}}
 
 ウェブワーカーは、ウェブコンテンツがスクリプトをバックグラウンドのスレッドで実行するためのシンプルな手段です。ワーカースレッドは、ユーザーインターフェイスを妨げることなくタスクを実行できます。加えて、 [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) （`responseXML` 属性や `channel` 属性は常に null ですが）または [`fetch`](/ja/docs/Web/API/Fetch_API) （そのような制約なし）を使用して入出力を行うこともできます。ワーカーが生成されると、それを作成した JavaScript コードが指定するイベントハンドラーにメッセージを投稿することで、そのコードにメッセージを送ることができます（逆も同様）。
