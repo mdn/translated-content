@@ -2,6 +2,7 @@
 title: transform-style
 slug: Web/CSS/transform-style
 ---
+
 {{CSSRef}}
 
 **`transform-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の子要素を 3D 空間に配置するのか、平面化して要素の平面に配置するのかを設定します。

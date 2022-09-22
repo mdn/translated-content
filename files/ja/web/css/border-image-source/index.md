@@ -2,6 +2,7 @@
 title: border-image-source
 slug: Web/CSS/border-image-source
 ---
+
 {{CSSRef}}
 
 **`border-image-source`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[境界画像](/ja/docs/Web/CSS/border-image)に使われる元の画像を設定します。

@@ -2,6 +2,7 @@
 title: pointer
 slug: Web/CSS/@media/pointer
 ---
+
 {{CSSRef}}
 
 **`pointer`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、ユーザーが（マウスなどの）ポインティングデバイスを持っているか、もしそうならば、*主要な*ポインティングデバイスにどれだけの正確性があるかを調べます。

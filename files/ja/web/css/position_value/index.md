@@ -2,6 +2,7 @@
 title: <position>
 slug: Web/CSS/position_value
 ---
+
 {{CSSRef}}
 
 **`<position>`** (または **`<bg-position>`**) は [CSS](/ja/docs/Web/CSS) の [データ型](/ja/docs/Web/CSS/CSS_Types)で、二次元の座標を表し、要素ボックスからの相対的な位置を示すために用いられます。 {{cssxref("background-position")}} および {{cssxref("offset-anchor")}} で使用されています。

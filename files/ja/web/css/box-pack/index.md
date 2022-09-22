@@ -2,6 +2,7 @@
 title: box-pack
 slug: Web/CSS/box-pack
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 > **Warning:** これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)を参照してください。

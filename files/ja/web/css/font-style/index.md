@@ -2,6 +2,7 @@
 title: font-style
 slug: Web/CSS/font-style
 ---
+
 {{CSSRef}}
 
 **`font-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{cssxref("font-family")}} の中で通常体 (normal)、筆記体 (italic)、斜体 (oblique) のどのスタイルにするか設定します。
