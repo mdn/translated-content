@@ -2,6 +2,7 @@
 title: AnalyserNode.getFloatFrequencyData()
 slug: Web/API/AnalyserNode/getFloatFrequencyData
 ---
+
 {{ APIRef("Web Audio API") }}
 
 **`getFloatFrequencyData()`** 作为{{domxref("AnalyserNode")}} 接口的方法能将当前分析节点（AnalyserNode）的频率数据拷贝进一个 {{domxref("Float32Array")}} 数组对象。

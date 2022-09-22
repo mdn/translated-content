@@ -2,6 +2,7 @@
 title: Text.wholeText
 slug: Web/API/Text/wholeText
 ---
+
 {{ apiref("DOM") }}
 
 该 **`Text.wholeText`** 只读属性返回[`Text`](/zh-CN/docs/Web/API/Text)逻辑上相邻的节点的所有文本。文本按文档顺序连接。这允许指定任何文本节点并获取所有相邻文本作为单个字符串。

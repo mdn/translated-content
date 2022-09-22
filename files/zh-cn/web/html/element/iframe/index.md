@@ -2,6 +2,7 @@
 title: <iframe>
 slug: Web/HTML/Element/iframe
 ---
+
 {{HTMLRef}}
 
 **HTML 内联框架元素 (`<iframe>`)** 表示嵌套的{{Glossary("browsing context")}}。它能够将另一个 HTML 页面嵌入到当前页面中。

@@ -2,6 +2,7 @@
 title: Symbol.matchAll
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
 ---
+
 {{JSRef}}
 
 **`Symbol.matchAll`** 返回一个迭代器，该迭代器根据字符串生成正则表达式的匹配项。此函数可以被 {{jsxref("String.prototype.matchAll()")}} 方法调用。

@@ -2,6 +2,7 @@
 title: MediaKeySession
 slug: Web/API/MediaKeySession
 ---
+
 {{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
 
 The **`MediaKeySession`** interface of the [EncryptedMediaExtensions API](/zh-CN/docs/Web/API/EncryptedMediaExtensions_API) represents a context for message exchange with a content decryption module (CDM).

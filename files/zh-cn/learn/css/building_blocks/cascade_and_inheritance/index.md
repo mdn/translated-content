@@ -2,6 +2,7 @@
 title: 层叠与继承
 slug: Learn/CSS/Building_blocks/Cascade_and_inheritance
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
 
 本文旨在让你理解 CSS 的一些最基本的概念——层叠、优先级和继承——这些概念决定着如何将 CSS 应用到 HTML 中，以及如何解决冲突。

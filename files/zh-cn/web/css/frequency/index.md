@@ -2,6 +2,7 @@
 title: <frequency>
 slug: Web/CSS/frequency
 ---
+
 {{CSSRef}}
 
 `<frequency>` [CSS](/zh-CN/docs/Web/CSS)数据类型表示频率维度，例如语音的音高。目前它未在任何 CSS 属性中被使用。

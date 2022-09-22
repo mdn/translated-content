@@ -2,6 +2,7 @@
 title: Element.scroll()
 slug: Web/API/Element/scroll
 ---
+
 {{APIRef}}
 
 **`scroll()`** 方法是用于在给定的元素中滚动到某个特定坐标的 {{domxref("Element")}} 接口。

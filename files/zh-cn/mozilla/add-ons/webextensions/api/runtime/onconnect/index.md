@@ -2,6 +2,7 @@
 title: runtime.onConnect
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onConnect
 ---
+
 {{AddonSidebar()}}
 
 当使用扩展处理或 content script 建立连接时触发。

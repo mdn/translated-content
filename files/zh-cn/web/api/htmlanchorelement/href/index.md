@@ -2,6 +2,7 @@
 title: HTMLHyperlinkElementUtils.href
 slug: Web/API/HTMLAnchorElement/href
 ---
+
 {{ApiRef("URL API")}}
 
 **`HTMLHyperlinkElementUtils.href`** 属性是一个包含整个 URL 的 {{domxref("USVString")}}。

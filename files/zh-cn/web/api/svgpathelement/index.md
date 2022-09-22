@@ -2,6 +2,7 @@
 title: SVGPathElement
 slug: Web/API/SVGPathElement
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG path interface

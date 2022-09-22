@@ -2,6 +2,7 @@
 title: window.mozAnimationStartTime
 slug: Web/API/Animation/startTime
 ---
+
 {{ ApiRef() }}
 
 {{ non-standard_header() }}

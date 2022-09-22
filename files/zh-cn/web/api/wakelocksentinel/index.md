@@ -2,6 +2,7 @@
 title: WakeLockSentinel
 slug: Web/API/WakeLockSentinel
 ---
+
 {{APIRef("Screen Wake Lock API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`WakeLockSentinel`** interface of Screen Wake Lock API provides a handle to a platform wake lock used to prevent screen from turning off, dimming, or displaying a screen saver.

@@ -2,6 +2,7 @@
 title: Animation
 slug: Web/API/Animation
 ---
+
 {{ APIRef("Web Animations") }}{{SeeCompatTable}}
 
 [Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)的**动画**接口表示一个单个动画播放器并且提供用于一个动画节点或源的回放控制和一个时间轴。

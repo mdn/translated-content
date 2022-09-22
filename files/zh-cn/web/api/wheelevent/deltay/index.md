@@ -2,6 +2,7 @@
 title: WheelEvent.deltaY
 slug: Web/API/WheelEvent/deltaY
 ---
+
 {{APIRef("DOM Events")}}
 
 **`WheelEvent.deltaY`** 只读属性是一个 `double` 类型值，声明垂直滚动量以 [`WheelEvent.deltaMode`](/zh-CN/docs/Web/API/WheelEvent/deltaMode) 为单位。

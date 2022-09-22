@@ -2,6 +2,7 @@
 title: Console.error()
 slug: Web/API/Console/error
 ---
+
 {{APIRef("Console API")}}
 
 向 Web 控制台输出一条错误消息。

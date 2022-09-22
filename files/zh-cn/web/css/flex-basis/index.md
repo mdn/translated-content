@@ -2,6 +2,7 @@
 title: flex-basis
 slug: Web/CSS/flex-basis
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/css) 属性 **`flex-basis`** 指定了 flex 元素在主轴方向上的初始大小。如果不使用 {{Cssxref("box-sizing")}} 改变盒模型的话，那么这个属性就决定了 flex 元素的内容盒（content-box）的尺寸。

@@ -2,6 +2,7 @@
 title: <code>
 slug: Web/HTML/Element/code
 ---
+
 ## 摘要
 
 **HTML `<code>` 元素**呈现一段计算机代码。默认情况下，它以浏览器的默认等宽字体显示。

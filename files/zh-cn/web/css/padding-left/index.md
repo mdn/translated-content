@@ -2,6 +2,7 @@
 title: padding-left
 slug: Web/CSS/padding-left
 ---
+
 {{CSSRef}}
 
 CSS 属性 **`padding-left`** 是指一个元素在内边距区域（padding area）中左边的宽度。内边距（padding）是指一个元素的内容和边框之间的区域。

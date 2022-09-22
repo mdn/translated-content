@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.createRadialGradient()
 slug: Web/API/CanvasRenderingContext2D/createRadialGradient
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.createRadialGradient()`** 是 Canvas 2D API 根据参数确定两个圆的坐标，绘制放射性渐变的方法。这个方法返回 {{domxref("CanvasGradient")}}。

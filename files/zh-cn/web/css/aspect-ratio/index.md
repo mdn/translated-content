@@ -2,6 +2,7 @@
 title: aspect-ratio
 slug: Web/CSS/aspect-ratio
 ---
+
 {{CSSRef}}
 
 **`aspect-ratio`** [CSS](/zh-CN/docs/CSS) 属性为 box 容器规定了一个**期待的纵横比**，这个纵横比可以用来计算自动尺寸以及为其他布局函数服务。

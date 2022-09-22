@@ -9,7 +9,9 @@ El código HTTP de redirección **`304 Not Modified`** en el response de la peti
 
 ## Status
 
-    304 Not Modified
+```
+304 Not Modified
+```
 
 ## Especificaciones
 

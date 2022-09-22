@@ -2,6 +2,7 @@
 title: '::slotted()'
 slug: Web/CSS/::slotted
 ---
+
 {{ CSSRef }}
 
 **`:slotted()`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) 用于选定那些被放在 HTML 模板中的元素 (更多请查看 [使用模板和插槽](/zh-CN/docs/Web/Web_Components/Using_templates_and_slots))。

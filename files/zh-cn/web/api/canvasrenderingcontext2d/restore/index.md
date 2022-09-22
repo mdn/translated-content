@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.restore()
 slug: Web/API/CanvasRenderingContext2D/restore
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.restore()`** 是 Canvas 2D API 通过在绘图状态栈中弹出顶端的状态，将 canvas 恢复到最近的保存状态的方法。如果没有保存状态，此方法不做任何改变。

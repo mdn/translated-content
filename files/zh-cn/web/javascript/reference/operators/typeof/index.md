@@ -2,6 +2,7 @@
 title: typeof
 slug: Web/JavaScript/Reference/Operators/typeof
 ---
+
 {{jsSidebar("Operators")}}
 
 **`typeof` **操作符返回一个字符串，表示未经计算的操作数的类型。

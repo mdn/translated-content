@@ -2,6 +2,7 @@
 title: XMLHttpRequest.send()
 slug: Web/API/XMLHttpRequest/send
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 **`XMLHttpRequest.send()`** 方法用于发送 HTTP 请求。如果是异步请求（默认为异步请求），则此方法会在请求发送后立即返回；如果是同步请求，则此方法直到响应到达后才会返回。`XMLHttpRequest.send()` 方法接受一个可选的参数，其作为请求主体；如果请求方法是 GET 或者 HEAD，则应将请求主体设置为 null。

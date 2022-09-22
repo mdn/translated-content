@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.createPattern()
 slug: Web/API/CanvasRenderingContext2D/createPattern
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.createPattern()`** 是 Canvas 2D API 使用指定的图像 ({{domxref("CanvasImageSource")}}) 创建模式的方法。它通过 repetition 参数在指定的方向上重复元图像。此方法返回一个{{domxref("CanvasPattern")}}对象。

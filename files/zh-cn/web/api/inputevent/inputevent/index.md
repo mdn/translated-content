@@ -2,6 +2,7 @@
 title: InputEvent()
 slug: Web/API/InputEvent/InputEvent
 ---
+
 {{APIRef("DOM Events")}}{{SeeCompatTable}}
 
 构造函数 **`InputEvent()`** 返回一个新创建的 {{domxref("InputEvent")}} 对象。

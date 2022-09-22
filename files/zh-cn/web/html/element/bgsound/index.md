@@ -2,6 +2,7 @@
 title: <bgsound>
 slug: Web/HTML/Element/bgsound
 ---
+
 {{non-standard_header}}
 
 ## 概要

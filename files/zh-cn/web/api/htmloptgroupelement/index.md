@@ -2,6 +2,7 @@
 title: HTMLOptGroupElement
 slug: Web/API/HTMLOptGroupElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLOptGroupElement`** 接口提供一些特别的属性和方法（除了从 {{domxref("HTMLElement")}} 对象接口中继承的以外）以调整 {{HTMLElement("optgroup")}} 元素的布局和显示。

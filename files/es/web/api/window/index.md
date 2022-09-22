@@ -12,7 +12,7 @@ translation_of: Web/API/Window
 
 El objeto `window` representa la ventana que contiene un documento DOM; la propiedad `document` apunta al [DOM document](/es/docs/DOM/document) cargado en esa ventana. El objeto window al que pertenece un documento puede ser obtenido usando la propiedad {{Domxref("document.defaultView")}}.
 
-Esta sección proporciona una pequeña referencia a todos los métodos, propiedades y eventos disponibles a través del objeto DOM `window`. El objeto `window` implementa la interfaz `Window` , que a su vez hereda de la interfaz [`AbstractView`](http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView). Algunas funciones como globales adicionales, espacios de nombres, interfaces, y constructores no típicamente asociados con el objeto window pero disponibles en éste, están listados en las [Referencia de JavaScript](/es/docs/Web/JavaScript/Referencia) y en el [Referencia DOM de Gecko](/es/docs/Referencia_DOM_de_Gecko "/en-US/docs/DOM/DOM_Reference").
+Esta sección proporciona una pequeña referencia a todos los métodos, propiedades y eventos disponibles a través del objeto DOM `window`. El objeto `window` implementa la interfaz `Window` , que a su vez hereda de la interfaz [`AbstractView`](http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView). Algunas funciones como globales adicionales, espacios de nombres, interfaces, y constructores no típicamente asociados con el objeto window pero disponibles en éste, están listados en las [Referencia de JavaScript](/es/docs/Web/JavaScript/Referencia) y en el [Referencia DOM de Gecko](/es/docs/Referencia_DOM_de_Gecko).
 
 En un navegador con pestañas, como Firefox, cada pestaña contine su propio `window` object (y si está escribiendo una extensión, la ventana del navegador es una ventana separada también - para más información vea [Trabajar con ventanas desde el código chrome](/es/docs/Trabajar_con_ventanas_desde_código_chrome#Content_windows)). Esto significa que el objeto `window` no se comparte entre diferentes pestañas de la misma ventana del navegador. Algunos métodos, como {{Domxref("window.resizeTo")}} y {{Domxref("window.resizeBy")}} se aplican sobre toda la ventana del navegador y no sobre una pestaña específica a la que pertenece el objeto `window`. Generalmente, cualquier cosa que razonablemente no pueda pertenecer a una pestaña, pertenece a la ventana.
 
@@ -75,7 +75,7 @@ Nota que la propiedades que son objetos (por ejemplo para sobreescribir los prot
   - : Returns an array of the subframes in the current window.
 - {{domxref("Window.fullScreen")}} {{gecko_minversion_inline("1.9")}}
   - : Esta propiedad indica si la ventana esta desplegada en pantalla completa o no.
-- `{{domxref("window.globalStorage")}} `{{gecko_minversion_inline("1.8.1")}} {{Non-standard_inline}} {{Obsolete_inline("gecko13")}}
+- `{{domxref("window.globalStorage")}}` {{gecko_minversion_inline("1.8.1")}} {{Non-standard_inline}} {{Obsolete_inline("gecko13")}}
   - : Unsupported since Gecko 13 (Firefox 13). Use {{domxref("Window.localStorage")}} instead.
     Was: Multiple storage objects that are used for storing data across multiple pages.
 - {{domxref("Window.history")}} {{ReadOnlyInline}}
@@ -164,7 +164,7 @@ Nota que la propiedades que son objetos (por ejemplo para sobreescribir los prot
   - : Returns a reference to the topmost window in the window hierarchy. This property is read only.
 - {{domxref("Window.window")}} {{ReadOnlyInline}}
   - : Returns a reference to the current window.
-- `window[0]`,` window[1]`, etc.
+- `window[0]`, `window[1]`, etc.
   - : Returns a reference to the `window` object in the frames. See {{domxref("Window.frames")}} for more details.
 
 ## Methods

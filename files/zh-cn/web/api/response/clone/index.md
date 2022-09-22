@@ -2,6 +2,7 @@
 title: Response.clone()
 slug: Web/API/Response/clone
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Response")}} 接口的 clone() 方法创建了一个响应对象的克隆，这个对象在所有方面都是相同的，但是存储在一个不同的变量中。

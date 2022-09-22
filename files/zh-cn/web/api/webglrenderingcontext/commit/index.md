@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.commit()
 slug: Web/API/WebGLRenderingContext/commit
 ---
+
 {{APIRef("WebGL")}} {{SeeCompatTable}}
 
 当上下文不是直接固定到一个特定的画布时，**`WebGLRenderingContext.commit()`** 方法将帧绘制到其原始的 {{domxref("HTMLCanvasElement")}} 上。

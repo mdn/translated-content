@@ -2,6 +2,7 @@
 title: HTMLInputElement.setSelectionRange()
 slug: Web/API/HTMLInputElement/setSelectionRange
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLInputElement.setSelectionRange` **方法用于设定{{HTMLElement("input")}} 或 {{HTMLElement("textarea")}} 元素中当前选中文本的起始和结束位置。

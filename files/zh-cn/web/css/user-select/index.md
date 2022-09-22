@@ -2,6 +2,7 @@
 title: user-select
 slug: Web/CSS/user-select
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`user-select`** 控制用户能否选中文本。除了文本框内，它对被载入为 {{Glossary("Chrome", "chrome")}} 的内容没有影响。

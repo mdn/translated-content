@@ -19,7 +19,7 @@ doc = window.document
 
 ### Parámetros
 
-- `doc` es una referencia al objeto del [document](/es/docs/DOM/document "DOM/document").
+- `doc` es una referencia al objeto del [document](/es/docs/DOM/document).
 
 ## Example
 

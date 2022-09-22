@@ -2,6 +2,7 @@
 title: Element.namespaceURI
 slug: Web/API/Element/namespaceURI
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.namespaceURI`** 是一个只读属性，它返回元素的命名空间，若该元素不在命名空间中则返回`null` .

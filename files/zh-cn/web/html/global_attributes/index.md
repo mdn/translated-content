@@ -2,6 +2,7 @@
 title: 全局属性
 slug: Web/HTML/Global_attributes
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **全局属性**是所有 HTML 元素共有的属性; 它们可以用于所有元素，即使属性可能对某些元素不起作用。

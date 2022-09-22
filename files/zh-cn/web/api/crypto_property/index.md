@@ -2,6 +2,7 @@
 title: Window.crypto
 slug: Web/API/crypto_property
 ---
+
 {{APIRef}}
 
 Window\.crypto 只读属性返回与全局对象关联的 {{domxref("Crypto")}}对象。此对象允许网页访问某些加密相关服务。

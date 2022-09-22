@@ -2,6 +2,7 @@
 title: DataTransfer.getData()
 slug: Web/API/DataTransfer/getData
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`DataTransfer.getData()`** 方法接受指定类型的拖放（以{{domxref("DOMString")}}的形式）数据。如果拖放行为没有操作任何数据，会返回一个空字符串。

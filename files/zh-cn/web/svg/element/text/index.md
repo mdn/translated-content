@@ -2,6 +2,7 @@
 title: text
 slug: Web/SVG/Element/text
 ---
+
 {{SVGRef}}
 
 `text`元素定义了一个由文字组成的图形。注意：我们可以将渐变、图案、剪切路径、遮罩或者滤镜应用到 text 上。

@@ -2,6 +2,7 @@
 title: CSS 分页规则
 slug: Web/API/CSSPageRule
 ---
+
 {{APIRef("CSSOM")}}
 
 **`CSSPageRule`** 是代表一个 css 接口 {{cssxref("@page")}} 规则。它实现了 {{domxref("CSSRule")}} 类型值为 6 的接口 (`CSSRule.PAGE_RULE`).

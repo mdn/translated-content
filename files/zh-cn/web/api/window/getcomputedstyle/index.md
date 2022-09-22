@@ -2,6 +2,7 @@
 title: Window.getComputedStyle()
 slug: Web/API/Window/getComputedStyle
 ---
+
 {{APIRef}}
 
 ## 摘要

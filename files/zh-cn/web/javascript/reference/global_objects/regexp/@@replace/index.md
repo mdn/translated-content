@@ -2,6 +2,7 @@
 title: RegExp.prototype[@@replace]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@replace
 ---
+
 {{JSRef}}
 
 **`[@@replace]()`** 方法会在一个字符串中用给定的替换器，替换所有符合正则模式的匹配项，并返回替换后的新字符串结果。用来替换的参数可以是一个字符串或是一个针对每次匹配的回调函数。

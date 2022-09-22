@@ -2,6 +2,7 @@
 title: ServiceWorkerGlobalScope
 slug: Web/API/ServiceWorkerGlobalScope
 ---
+
 {{APIRef("Service Workers API")}}
 
 [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API) 的`ServiceWorkerGlobalScope` 接口，代表一个 service worker 的全局执行上下文。

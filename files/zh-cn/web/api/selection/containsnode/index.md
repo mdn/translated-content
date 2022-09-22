@@ -2,6 +2,7 @@
 title: Selection.containsNode()
 slug: Web/API/Selection/containsNode
 ---
+
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
 
 **`Selection.containsNode()`** 判断指定的节点是否包含在 Selection 中 (是否被选中).

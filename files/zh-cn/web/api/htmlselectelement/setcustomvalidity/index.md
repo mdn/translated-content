@@ -2,6 +2,7 @@
 title: HTMLSelectElement.setCustomValidity()
 slug: Web/API/HTMLSelectElement/setCustomValidity
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLSelectElement.setCustomValidity()`** 方法设置指定的验证消息为选择元素的自定义验证消息。

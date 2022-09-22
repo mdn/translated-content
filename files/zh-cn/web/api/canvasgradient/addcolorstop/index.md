@@ -2,6 +2,7 @@
 title: CanvasGradient.addColorStop()
 slug: Web/API/CanvasGradient/addColorStop
 ---
+
 {{APIRef("Canvas")}}
 
 **`CanvasGradient.addColorStop()`** 方法添加一个由**偏移值**和**颜色值**指定的断点到渐变。如果偏移值不在`0`到`1`之间，将抛出`INDEX_SIZE_ERR`错误，如果颜色值不能被解析为有效的 CSS 颜色值 {{cssxref("&lt;color&gt;")}}，将抛出`SYNTAX_ERR`错误。

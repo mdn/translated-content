@@ -2,6 +2,7 @@
 title: AudioBufferSourceNode.start()
 slug: Web/API/AudioBufferSourceNode/start
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioBufferSourceNode") }} 接口的`start()`方法用于计划对缓冲区中包含的音频数据的回放，或者立即开始回放。

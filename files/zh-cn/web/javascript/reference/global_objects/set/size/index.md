@@ -2,6 +2,7 @@
 title: Set.prototype.size
 slug: Web/JavaScript/Reference/Global_Objects/Set/size
 ---
+
 {{JSRef}}
 
 **Size**属性将会返回{{jsxref("Set")}}对象中元素的个数。

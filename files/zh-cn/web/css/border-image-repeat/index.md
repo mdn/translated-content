@@ -2,6 +2,7 @@
 title: border-image-repeat
 slug: Web/CSS/border-image-repeat
 ---
+
 {{CSSRef}}
 
 ## Summary

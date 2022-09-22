@@ -2,6 +2,7 @@
 title: document.lastModified
 slug: Web/API/Document/lastModified
 ---
+
 {{ ApiRef() }}
 
 ### 概述

@@ -2,6 +2,7 @@
 title: URLSearchParams.keys()
 slug: Web/API/URLSearchParams/keys
 ---
+
 {{APIRef("URL API")}}{{SeeCompatTable}}
 
 URLSearchParams.keys() 返回一个{{jsxref("Iteration_protocols",'iterator')}}，遍历器允许遍历对象中包含的所有键。这些键都是{{domxref("USVString")}}对象。

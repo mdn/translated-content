@@ -2,6 +2,7 @@
 title: Document.querySelectorAll
 slug: Web/API/Document/querySelectorAll
 ---
+
 {{ ApiRef("DOM") }}
 
 ## 概述

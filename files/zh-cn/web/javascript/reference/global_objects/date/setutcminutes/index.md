@@ -2,6 +2,7 @@
 title: Date.prototype.setUTCMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMinutes
 ---
+
 {{JSRef}}
 
 **`setUTCMinutes()`**方法会根据世界协调时（UTC）来设置指定日期的分钟数。

@@ -2,6 +2,7 @@
 title: 元素选择器
 slug: Web/CSS/Type_selectors
 ---
+
 {{ CSSRef }}
 
 ## 概述

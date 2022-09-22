@@ -2,6 +2,7 @@
 title: ':default'
 slug: Web/CSS/:default
 ---
+
 {{CSSRef}}
 
 **`:default`** [CSS](/zh-CN/docs/Web/CSS) [pseudo-class](/zh-CN/docs/Web/CSS/Pseudo-classes) 表示一组相关元素中的默认表单元素。

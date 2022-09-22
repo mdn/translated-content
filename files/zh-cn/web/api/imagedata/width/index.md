@@ -2,6 +2,7 @@
 title: ImageData.width
 slug: Web/API/ImageData/width
 ---
+
 {{APIRef("Canvas API")}}
 
 只读的 **`ImageData.width`** 属性，返回在图像数据对象中每一行像素的数量。

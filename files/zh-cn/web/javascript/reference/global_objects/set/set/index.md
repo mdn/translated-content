@@ -2,6 +2,7 @@
 title: Set() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Set/Set
 ---
+
 {{JSRef}}
 
 **`Set` 构造函数**能让你创建 `Set` 对象，其可以存储任意类型的唯一值，无论是 [primitive values](/zh-CN/docs/Glossary/Primitive) 或者对象引用。

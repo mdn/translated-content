@@ -13,7 +13,9 @@ La función `true` devuelve un valor booleano de verdadero.
 
 ### Sintaxis
 
-    true()
+```
+true()
+```
 
 ### Devuelve
 

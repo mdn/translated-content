@@ -2,6 +2,7 @@
 title: Clipboard.writeText()
 slug: Web/API/Clipboard/writeText
 ---
+
 {{APIRef("Clipboard API")}}
 
 {{domxref("Clipboard")}} 接口的 **`writeText()`** 方法可以写入特定字符串到操作系统的剪切板。

@@ -2,6 +2,7 @@
 title: XMLHttpRequest.open()
 slug: Web/API/XMLHttpRequest/open
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 **XMLHttpRequest.open()** 方法初始化一个新创建的请求，或重新初始化一个请求。

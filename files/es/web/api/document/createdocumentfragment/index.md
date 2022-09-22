@@ -5,7 +5,7 @@ translation_of: Web/API/Document/createDocumentFragment
 ---
 {{ ApiRef("DOM") }}
 
-Crea un nuevo [`DocumentFragment`](/en-US/docs/DOM/DocumentFragment "DOM/DocumentFragment") vacio, dentro del cual un nodo del DOM puede ser adicionado para construir un nuevo arbol DOM fuera de pantalla.
+Crea un nuevo [`DocumentFragment`](/en-US/docs/DOM/DocumentFragment) vacio, dentro del cual un nodo del DOM puede ser adicionado para construir un nuevo arbol DOM fuera de pantalla.
 
 ## Sintaxis
 
@@ -13,11 +13,11 @@ Crea un nuevo [`DocumentFragment`](/en-US/docs/DOM/DocumentFragment "DOM/Documen
 var fragment = document.createDocumentFragment();
 ```
 
-Se crea un objeto[ DocumentFragment](/es/docs/DOM/DocumentFragment "DOM/DocumentFragment") vacio, el cual queda listo para que pueda insertarseles nodos en el.
+Se crea un objeto [DocumentFragment](/es/docs/DOM/DocumentFragment) vacio, el cual queda listo para que pueda insertarseles nodos en el.
 
 ## Notas de uso
 
-[`DocumentFragment`](/es/docs/DOM/DocumentFragment "DOM/DocumentFragment") son Nodos del DOM que nunca forman parte del arbol DOM. El caso de uso mas comun es crear un _document fragment_, agregar elementos al _document fragment_ y luego agregar dicho _document fragment_ al arbol del DOM. En el arbol del DOM, el _document fragment_ es remplazado por todos sus hijos.
+[`DocumentFragment`](/es/docs/DOM/DocumentFragment) son Nodos del DOM que nunca forman parte del arbol DOM. El caso de uso mas comun es crear un _document fragment_, agregar elementos al _document fragment_ y luego agregar dicho _document fragment_ al arbol del DOM. En el arbol del DOM, el _document fragment_ es remplazado por todos sus hijos.
 
 Dado que el _document fragment_ es generado en memoria y no como parte del arbol del DOM, agregar elementos al mismo no causan [reflow](http://code.google.com/speed/articles/reflow.html) (computo de la posicion y geometria de los elementos) en la pagina. Como consecuencia, usar _document fragments_ usualmente resultan en [mejor performance](http://ejohn.org/blog/dom-documentfragments/).
 

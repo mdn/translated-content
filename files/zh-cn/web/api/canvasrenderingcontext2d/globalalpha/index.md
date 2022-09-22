@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.globalAlpha
 slug: Web/API/CanvasRenderingContext2D/globalAlpha
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.globalAlpha`** 是 Canvas 2D API 用来描述在 canvas 上绘图之前，设置图形和图片透明度的属性。 数值的范围从 0.0（完全透明）到 1.0（完全不透明）。

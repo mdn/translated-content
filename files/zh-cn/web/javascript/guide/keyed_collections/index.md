@@ -2,6 +2,7 @@
 title: 带键的集合
 slug: Web/JavaScript/Guide/Keyed_collections
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
 
 这一章介绍由 key 值标记的数据容器；Map 和 Set 对象承载的数据元素可以按照插入时的顺序被迭代遍历。

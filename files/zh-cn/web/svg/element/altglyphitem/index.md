@@ -2,6 +2,7 @@
 title: altGlyphItem
 slug: Web/SVG/Element/altGlyphItem
 ---
+
 {{SVGRef}}
 
 `altGlyphItem`元素利用{{ SVGElement("altGlyph") }}元素提供了一组候选符号替换。

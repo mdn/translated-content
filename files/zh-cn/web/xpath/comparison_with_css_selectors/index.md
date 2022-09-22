@@ -3,6 +3,7 @@ title: Comparison of CSS Selectors and XPath
 slug: Web/XPath/Comparison_with_CSS_selectors
 original_slug: Web/CSS/CSS_Selectors/Comparison_with_XPath
 ---
+
 {{CSSRef("Selectors")}}{{QuickLinksWithSubpages("/en-US/docs/Web/XPath")}}
 
 本文旨在记录 CSS 选择器和 XPath 之间的区别，以便 Web 开发人员能够更好地为正确的工作选择合适的工具。

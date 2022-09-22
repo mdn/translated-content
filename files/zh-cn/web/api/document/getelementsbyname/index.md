@@ -2,6 +2,7 @@
 title: Document.getElementsByName()
 slug: Web/API/Document/getElementsByName
 ---
+
 {{APIRef("DOM")}}
 
 根据给定的{{domxref("element.name","name")}} 返回一个在 (X)HTML document 的节点列表集合。

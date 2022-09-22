@@ -2,6 +2,7 @@
 title: Node.getRootNode()
 slug: Web/API/Node/getRootNode
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Node")}} 接口的 **`getRootNode()`** 方法返回上下文中的根节点，如果 shadow DOM 可用，则对 shadow DOM 同样适用。

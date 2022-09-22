@@ -2,6 +2,7 @@
 title: 初始值
 slug: Web/CSS/@property/initial-value
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`initial-value`** [CSS](/zh-CN/docs/Web/CSS)描述符在使用{{cssxref("@property")}} {{cssxref("at-rule")}}的时候是必需的，除非 syntax 属性接受了任何有效的 token 流。 它为属性设置初始值。

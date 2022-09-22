@@ -2,6 +2,7 @@
 title: ':only-of-type'
 slug: Web/CSS/:only-of-type
 ---
+
 {{ CSSRef() }}
 
 ## 概述

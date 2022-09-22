@@ -2,6 +2,7 @@
 title: transition-delay
 slug: Web/CSS/transition-delay
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## 概要

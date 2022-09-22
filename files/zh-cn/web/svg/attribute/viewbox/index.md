@@ -2,6 +2,7 @@
 title: viewBox
 slug: Web/SVG/Attribute/viewBox
 ---
+
 « [SVG 属性参考](/zh-CN/SVG/Attribute)
 
 viewBox 属性允许指定一个给定的一组图形伸展以适应特定的容器元素。

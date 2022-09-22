@@ -2,6 +2,7 @@
 title: IdleDeadline.timeRemaining()
 slug: Web/API/IdleDeadline/timeRemaining
 ---
+
 {{APIRef("Background Tasks")}}{{SeeCompatTable}}
 
 The **`timeRemaining()`** method on the {{domxref("IdleDeadline")}} interface returns the estimated number of milliseconds remaining in the current idle period. The callback can call this method at any time to determine how much time it can continue to work before it must return. For example, if the callback finishes a task and has another one to begin, it can call `timeRemaining()` to see if there's enough time to complete the next task. If there isn't, the callback can just return immediately, or look for other work to do with the remaining time.

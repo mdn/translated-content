@@ -2,6 +2,7 @@
 title: <input type="search">
 slug: Web/HTML/Element/Input/search
 ---
+
 {{HTMLRef}}
 
 `{{HTMLElement("input")}}` 元素的 **`search`** 类型是 专为用户输入搜索查询而设计的文本字段。功能上与 [`text`](/zh-CN/docs/Web/HTML/Element/input/text) 输入相同，但是可以通过 `{{Glossary("user agent")}}` 进行不同样式的设置。

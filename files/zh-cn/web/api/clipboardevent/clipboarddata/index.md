@@ -2,6 +2,7 @@
 title: ClipboardEvent.clipboardData
 slug: Web/API/ClipboardEvent/clipboardData
 ---
+
 {{ apiref("Clipboard API") }} {{SeeCompatTable}}
 
 **`ClipboardEvent.clipboardData`** 属性保存了一个 {{domxref("DataTransfer")}} 对象，这个对象可用于：

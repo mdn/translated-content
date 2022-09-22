@@ -10,7 +10,9 @@ La función `substring` devuelve una parte de una cadena dada.
 
 ### Sintaxis
 
-    substring( string , start [, length] )
+```
+substring( string , start [, length] )
+```
 
 ### Argumentos
 

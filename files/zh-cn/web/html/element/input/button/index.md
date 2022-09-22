@@ -2,6 +2,7 @@
 title: <input type="button">
 slug: Web/HTML/Element/Input/button
 ---
+
 {{HTMLRef}}
 
 **`元素<input type="button">`** 是 **`<input>`** 元素的特殊版本，被用来创建一个没有默认值的可点击按钮。 它已经在 HTML5 被 **[\<button>](/zh-CN/docs/Web/HTML/Element/button)元素取代**

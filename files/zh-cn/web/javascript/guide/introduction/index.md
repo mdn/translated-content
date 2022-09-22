@@ -2,6 +2,7 @@
 title: 介绍
 slug: Web/JavaScript/Guide/Introduction
 ---
+
 {{jsSidebar("JavaScript 指南")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
 
 本章节介绍了 JavaScript，并且讨论了它的一些基本概念。

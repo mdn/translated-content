@@ -2,6 +2,7 @@
 title: 基本形状
 slug: Web/SVG/Tutorial/Basic_Shapes
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Positions", "Web/SVG/Tutorial/Paths") }}
 
 这里介绍的几个基本的形状用于大多数的 SVG 绘图。通过这些形状的命名可以知道其用途。给它们一些属性可以确定它们的位置和大小，但一个元素参考可能包含对元素属性的更准确和完整的描述，这里先不做介绍。然而，由于有些元素可以用在大多数 SVG 文档中，所以很有必要在这里介绍这部分元素。

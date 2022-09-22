@@ -2,6 +2,7 @@
 title: 致 Firefox 3 开发者
 slug: Mozilla/Firefox/Releases/3
 ---
+
 {{FirefoxSidebar}}
 
 如果你是一个 Web 开发人员，并且希望了解 Firefox 3 中所有的新特性，这里是一个很好的起点。这篇文章提供了一个覆盖所有 Firefox 3 新特性的列表。虽然他并不是能够包括所有微小的改动，但他能够帮助你学习到最主要的更新。

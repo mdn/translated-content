@@ -2,6 +2,7 @@
 title: 全屏指南
 slug: Web/API/Fullscreen_API/Guide
 ---
+
 {{DefaultAPISidebar("Fullscreen API")}}
 
 本文主要说明如何使用全屏 API 将给定元素设置为全屏模式，以及如何检测浏览器何时进入或退出全屏模式。

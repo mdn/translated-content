@@ -2,6 +2,7 @@
 title: storage
 slug: Mozilla/Add-ons/WebExtensions/API/storage
 ---
+
 {{AddonSidebar}}使浏览器扩展能够储存及获取数据，以及监听储存的数据的变化。
 
 此存储系统 API 基于 [Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API), 并有少许不同。

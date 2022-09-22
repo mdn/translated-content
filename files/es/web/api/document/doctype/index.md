@@ -40,6 +40,7 @@ console.log(
 La propiedad devuelve `null` si no hay DTD asociada al documento actual.
 
 El nivel 2 de DOM no soporta la edición de la declaración de tipo de documento.
+
 ## Especificaciones
 
 {{Specifications}}

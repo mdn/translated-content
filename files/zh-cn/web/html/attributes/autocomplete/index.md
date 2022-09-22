@@ -3,6 +3,7 @@ title: The HTML 自动完成属性
 slug: Web/HTML/Attributes/autocomplete
 original_slug: Web/HTML/Attributes/自动完成属性
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 HTML `autocomplete` 属性可用于以文本或数字值作为输入的 {{HTMLElement("input")}} 元素 ， {{HTMLElement("textarea")}} 元素，{{HTMLElement("select")}} 元素，和{{HTMLElement("form")}} 元素。 `autocomplete` 允许 web 开发人员指定，如果有任何权限 {{Glossary("user agent")}} 必须提供填写表单字段值的自动帮助，并为浏览器提供关于字段中所期望的信息类型的指导。

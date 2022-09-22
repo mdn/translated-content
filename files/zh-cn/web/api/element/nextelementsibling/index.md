@@ -2,6 +2,7 @@
 title: NonDocumentTypeChildNode.nextElementSibling
 slug: Web/API/Element/nextElementSibling
 ---
+
 {{ ApiRef() }}
 
 ## 概述

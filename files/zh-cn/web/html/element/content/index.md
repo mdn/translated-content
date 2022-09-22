@@ -2,6 +2,7 @@
 title: <content>
 slug: Web/HTML/Element/content
 ---
+
 {{Deprecated_header}}
 
 **HTML `<content>` 元素**— [Web 组件](/zh-CN/docs/Web/Web_Components) 的技术套件的废弃部分 — 用于 [Shadow DOM](/zh-CN/docs/Web/Web_Components/Shadow_DOM) 内部作为 {{glossary("insertion point")}}，并且不可用于任何正常的 HTML，现在已被 {{HTMLElement("slot")}} 元素代替，它在 DOM 中创建一个位置，Shadow DOM 会插入这里。

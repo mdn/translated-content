@@ -2,6 +2,7 @@
 title: GamepadButton.value
 slug: Web/API/GamepadButton/value
 ---
+
 {{APIRef("Gamepad API")}}
 
 {{domxref("GamepadButton")}}接口下的 **`GamepadButton.value`** 属性返回一个双精浮点值来表示许多现代控制器上的模拟按钮的状态，比如说扳机键。

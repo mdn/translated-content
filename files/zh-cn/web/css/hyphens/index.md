@@ -2,6 +2,7 @@
 title: hyphens
 slug: Web/CSS/hyphens
 ---
+
 {{CSSRef}}
 
 ## Summary

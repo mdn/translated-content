@@ -2,6 +2,7 @@
 title: AudioNode
 slug: Web/API/AudioNode
 ---
+
 {{ APIRef("Web Audio API") }} {{SeeCompatTable}}
 
 ![AudioNodes participating in an AudioContext create a audio routing graph.](webaudiobasics.png)**`AudioNode`** 接口是一个处理音频的通用模块，比如一个音频源 (e.g. 一个 HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} 元素), 一个音频地址或者一个中间处理模块 (e.g. 一个过滤器如 {{domxref("BiquadFilterNode")}}, 或一个音量控制器如 {{domxref("GainNode")}}).

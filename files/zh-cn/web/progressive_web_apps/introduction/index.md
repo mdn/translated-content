@@ -2,6 +2,7 @@
 title: 渐进式 Web 应用介绍
 slug: Web/Progressive_web_apps/Introduction
 ---
+
 {{NextMenu("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps")}}
 
 这篇文章将会为你介绍渐进式 Web 应用（PWA），讨论一下它们到底是什么；相比于常规的 Web 应用，它又带来了哪些优势。

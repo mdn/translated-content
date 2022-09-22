@@ -2,6 +2,7 @@
 title: Event.composed
 slug: Web/API/Event/composed
 ---
+
 {{APIRef("Shadow DOM")}}
 
 {{domxref("Event")}} 接口的只读属性 **`composed`** 返回一个 {{jsxref("Boolean")}} 值，用来指示该事件是否可以从 Shadow DOM 传递到一般的 DOM。

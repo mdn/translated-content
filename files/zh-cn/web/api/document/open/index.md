@@ -2,6 +2,7 @@
 title: Document.open()
 slug: Web/API/Document/open
 ---
+
 {{APIRef("DOM")}}
 
 **`Document.open()`** 方法打开一个要[写入](/zh-CN/docs/Web/API/Document/write)的文档。

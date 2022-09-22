@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.strokeText()
 slug: Web/API/CanvasRenderingContext2D/strokeText
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.strokeText()`** 是 Canvas 2D API 在给定的 _(x, y)_ 位置绘制文本的方法。如果提供了表示最大值的第四个参数，文本将会缩放适应宽度。
