@@ -3,6 +3,6 @@ title: Mozilla 产品与私有技术
 slug: Mozilla
 ---
 
-以下文章内容，与如何下载并组建 Mozilla 程式的代码相关。此外，也会收录一些有助理解代码如何运作、如何组建 Mozilla 程式的附加元件之类的文章。
+下面的文章中包含了下载并构建 Mozilla 程序代码的指引。此外，你也可以找到一些有助理解代码如何运作、如何构建 Mozilla 程序插件之类的文章。
 
 {{LandingPageListSubpages}}
