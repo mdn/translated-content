@@ -63,7 +63,7 @@ window.addEventListener('scroll', function(e) {
 });
 ```
 
-> **Note:** **注**: それ以外例が {{domxref("Document/resize_event", "resize")}} イベントページにあります。
+> **Note:** それ以外例が {{domxref("Document/resize_event", "resize")}} イベントページにあります。
 
 ## 仕様書
 
