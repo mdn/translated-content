@@ -2,6 +2,7 @@
 title: 配列
 slug: Learn/JavaScript/First_steps/Arrays
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
 
 このモジュールの最後に、配列について見ていきましょう。配列は 1 つの変数名でリスト形式のデータを保持するのに好都合です。ここでは、どう便利なのか、どのように作るのか、そして配列の項目を追加したり削除したり取得したりする方法について学びます。

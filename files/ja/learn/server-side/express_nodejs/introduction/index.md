@@ -2,6 +2,7 @@
 title: Express/Node のイントロダクション
 slug: Learn/Server-side/Express_Nodejs/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
 
 Express の最初の記事では ”Node って何だろう？”、”Express って何だろう？”という疑問に答え、なぜ Express ウェブフレームワークが特別なのかについて概要を説明します。主な特徴、Express アプリケーションの主な基本要素(テスト開発環境についてはここではまだ触れません) を大まかに説明します。

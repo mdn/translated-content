@@ -4,6 +4,7 @@ slug: Learn/Forms/HTML5_input_types
 l10n:
   sourceCommit: fead53324d271aa05e93b369966a773bb328c64b
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
 
 [前の記事では](/ja/docs/Learn/Forms/Basic_native_form_controls) {{htmlelement("input")}} 要素を見てきて、 HTML の初期から利用できる `type` 属性の値をカバーしてきました。ここでは最近のフォームコントロールの機能、特定のデータを集めるのに HTML5 で追加された、新しい入力型を詳しく見ていきましょう。

@@ -2,6 +2,7 @@
 title: Django 開発環境の設定
 slug: Learn/Server-side/Django/development_environment
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
 
 Django がどういうものか知ったので、Windows、Linux（Ubuntu）、および macOS で Django 開発環境をセットアップしてテストする方法を説明します。一般的なオペレーティングシステムを使っていれば、Django アプリケーションの開発を始められます。

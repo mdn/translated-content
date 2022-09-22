@@ -2,6 +2,7 @@
 title: オブジェクト構築の練習
 slug: Learn/JavaScript/Objects/Object_building_practice
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
 
 ここまでの記事で JavaScript オブジェクトの根幹部に関する理論と文法の詳細についてすべてを見てきて、始めていくのに十分な基礎固めをしました。この記事では実練習を行ない、独自の JavaScript オブジェクトを作っていくための実践をしていきましょう — 楽しくてカラフルなものを。

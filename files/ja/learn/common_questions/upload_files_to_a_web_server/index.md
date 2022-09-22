@@ -2,6 +2,7 @@
 title: ウェブサーバーにファイルをアップロードするには？
 slug: Learn/Common_questions/Upload_files_to_a_web_server
 ---
+
 この記事では、ファイル転送ツールを使用してオンラインでサイトを公開する方法を説明します。
 
 <table>

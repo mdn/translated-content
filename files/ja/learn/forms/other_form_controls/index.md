@@ -4,6 +4,7 @@ slug: Learn/Forms/Other_form_controls
 l10n:
   sourceCommit: 89175e6714699477a461efef4d3eddd9213cba86
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}
 
 ここでは、 `<input>` 以外のフォーム要素の機能を、ドロップダウンリストや複数行のテキストフィールドなどの他の操作型から、 {{htmlelement('output')}} 要素（前回の記事で実際に使用しました）やプログレスバーなどの他の便利なフォーム機能まで、詳しく見ていきましょう。

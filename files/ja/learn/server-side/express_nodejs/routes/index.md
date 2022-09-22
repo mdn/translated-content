@@ -2,6 +2,7 @@
 title: 'Express チュートリアル Part 4: ルートとコントローラ'
 slug: Learn/Server-side/Express_Nodejs/routes
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}
 
 このチュートリアルでは、地域図書館 Web サイトで最終的に必要となるすべてのリソースエンドポイントに対して、"ダミー" ハンドラ関数を使用してルート (URL 処理コード) を設定します。完成すると、ルート処理コードのためのモジュール構造が得られます。これは、次の記事の実際のハンドラ関数で拡張できます。Express を使ってモジュラールートを作成する方法についても、非常によく理解しています。

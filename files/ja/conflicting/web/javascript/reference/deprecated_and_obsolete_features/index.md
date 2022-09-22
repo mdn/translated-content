@@ -3,6 +3,7 @@ title: WeakMap.prototype.clear()
 slug: conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 original_slug: Web/JavaScript/Reference/Global_Objects/WeakMap/clear
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`clear()`** メソッドは、 `WeakMap` オブジェクトからすべての要素を削除するために使用されていましたが、もはや ECMAScript とその実装に含まれていません。

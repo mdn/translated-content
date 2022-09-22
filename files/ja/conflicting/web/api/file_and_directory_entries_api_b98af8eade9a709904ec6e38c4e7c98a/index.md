@@ -3,6 +3,7 @@ title: LocalFileSystemSync
 slug: conflicting/Web/API/File_and_Directory_Entries_API_b98af8eade9a709904ec6e38c4e7c98a
 original_slug: Web/API/LocalFileSystemSync
 ---
+
 {{APIRef("File System API")}}{{non-standard_header()}}
 
 The `LocalFileSystemSync` interface of the [File System API](/ja/DOM/File_API/File_System_API) gives you access to a sandboxed file system. It is intended to be used with [WebWorkers](/ja/DOM/Worker). The methods are implemented by [worker](/ja/DOM/Worker) objects.
