@@ -41,7 +41,7 @@ lastIndexOf(searchValue, fromIndex)
 'canal'.lastIndexOf('', 2);   // 2 を返す
 ```
 
-> **Note:** **注:** `'abab'.lastIndexOf('ab', 2)` は `2` を返し、 `0` にはなりません。 `fromIndex` は検索の開始位置を制約するものだからです。
+> **Note:** `'abab'.lastIndexOf('ab', 2)` は `2` を返し、 `0` にはなりません。 `fromIndex` は検索の開始位置を制約するものだからです。
 
 ### 大文字と小文字の区別
 

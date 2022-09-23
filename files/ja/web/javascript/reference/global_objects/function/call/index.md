@@ -20,7 +20,7 @@ func.call([thisArg[, arg1, arg2, ...argN]])
 
   - : `func` が呼び出されたときに `this` として使用される値です。
 
-    > **Note:** **注意:** 特定の場面では、 `thisArg` はメソッドから見える実際の値でない場合があります。
+    > **Note:** 特定の場面では、 `thisArg` はメソッドから見える実際の値でない場合があります。
     >
     > もし、そのメソッドが{{jsxref("Strict_mode", "厳格モード", "", 1)}}の関数ではなかった場合、 {{jsxref("Global_Objects/null", "null")}} と {{jsxref("Global_Objects/undefined", "undefined")}} はグローバルオブジェクトで置き換えられ、プリミティブ値はオブジェクトに変換されます。
 
@@ -37,7 +37,7 @@ func.call([thisArg[, arg1, arg2, ...argN]])
 
 `call()` は関数やメソッドに `this` の新しい値を提供します。 `call()` によって、いったんメソッドを書いてから、新しいオブジェクトへメソッドを描き直さずに他のオブジェクトへと継承することができます。
 
-> **Note:** **注:** このメソッドの構文は {{jsxref("Function.prototype.apply", "apply()")}} とほぼ同じですが、基本的な違いは `call()` が**引数リスト**を受け取るのに対して、 `apply()` は**引数の単一の配列**を受け取る点です。
+> **Note:** このメソッドの構文は {{jsxref("Function.prototype.apply", "apply()")}} とほぼ同じですが、基本的な違いは `call()` が**引数リスト**を受け取るのに対して、 `apply()` は**引数の単一の配列**を受け取る点です。
 
 ## 例
 
@@ -125,7 +125,7 @@ function display() {
 display.call();  // sData value is Wisen
 ```
 
-> **Note:** **注:** 厳格モードでは `this` の値は `undefined` になります。以下を参照してください。
+> **Note:** 厳格モードでは `this` の値は `undefined` になります。以下を参照してください。
 
 ```js
 'use strict';

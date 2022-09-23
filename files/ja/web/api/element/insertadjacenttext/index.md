@@ -48,7 +48,7 @@ foo
 <!-- afterend -->
 ```
 
-> **Note:** **注記:** `beforebegin` および `afterend` の positions が使えるのは、対象ノードがツリーの中にあって、親要素を持つ時に限られます。
+> **Note:** `beforebegin` および `afterend` の positions が使えるのは、対象ノードがツリーの中にあって、親要素を持つ時に限られます。
 
 ```js
 beforeBtn.addEventListener('click', function() {

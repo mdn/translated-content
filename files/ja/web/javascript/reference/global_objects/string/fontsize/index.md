@@ -6,7 +6,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/fontsize
 
 **`fontsize()`** メソッドは、文字列を指定された大きさで表示させる HTML の {{HTMLElement("font")}} 要素を生成します。
 
-> **Note:** **注:** \<font> 要素は [HTML5](/ja/docs/Glossary/HTML5) で廃止されており、今後使用するべきではありません。代わりにウェブ開発者は [CSS](/ja/docs/Web/CSS) プロパティを使用してください。
+> **Note:** \<font> 要素は [HTML5](/ja/docs/Glossary/HTML5) で廃止されており、今後使用するべきではありません。代わりにウェブ開発者は [CSS](/ja/docs/Web/CSS) プロパティを使用してください。
 
 ## 構文
 
