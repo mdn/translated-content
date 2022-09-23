@@ -90,9 +90,9 @@ var args = [...arguments];
 - [`arguments.length`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/length)
   - : 传递给函数的参数数量。
 - [`arguments[@@iterator]`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)
-  - : 返回一个新的{{jsxref("Array/@@iterator", "Array 迭代器", "", 0)}} 对象，该对象包含参数中每个索引的值。
+  - : 返回一个新的 {{jsxref("Array/@@iterator", "Array 迭代器", "", 0)}} 对象，该对象包含参数中每个索引的值。
 
-## 例子
+## 示例
 
 ### 遍历参数求和
 
