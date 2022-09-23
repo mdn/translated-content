@@ -2,12 +2,6 @@
 title: Usar Service Workers
 slug: Web/API/Service_Worker_API/Using_Service_Workers
 page-type: guide
-tags:
-  - Guía
-  - Service
-  - ServiceWorker
-  - Workers
-  - basics
 translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 ---
 
