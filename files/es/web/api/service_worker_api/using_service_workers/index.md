@@ -194,7 +194,7 @@ Veamos algunas otras opciones que tenemos al definir nuestra magia (consulta nue
 
    ```js
    new Response(
-     "<p>¡Hola desde tu amigable vecindario del *service worker*!</p>",
+     "<p>¡Hola desde tu amigable vecindario del service worker!</p>",
      {
        headers: { "Content-Type": "text/html" },
      }
