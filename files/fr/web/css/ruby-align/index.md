@@ -8,6 +8,7 @@ tags:
   - Ruby
 translation_of: Web/CSS/ruby-align
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`ruby-align`** définit la façon dont les éléments ruby sont distribués autour du texte de base.

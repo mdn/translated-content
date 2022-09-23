@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.clip()
 slug: Web/API/CanvasRenderingContext2D/clip
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.clip()`** 是 Canvas 2D API 将当前创建的路径设置为当前剪切路径的方法。

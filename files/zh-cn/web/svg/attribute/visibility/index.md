@@ -2,6 +2,7 @@
 title: visibility
 slug: Web/SVG/Attribute/visibility
 ---
+
 « [SVG 属性参考主页](/zh-CN/SVG/Attribute)
 
 `visibility`属性让你能够控制一个图形元素的可见性。用了值`hidden`或者值`collapse`，当前的图形元素将不可见。

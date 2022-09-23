@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/iterator
 ---
+
 {{JSRef}}
 
 Le symbole **`Symbol.iterator`** définit l'itérateur par défaut d'un objet. C'est l'itérateur qui sera utilisé par [`for...of`](/fr/docs/Web/JavaScript/Reference/Instructions/for...of).

@@ -2,6 +2,7 @@
 title: switch
 slug: Web/SVG/Element/switch
 ---
+
 {{SVGRef}}
 
 `switch`元素对它的直接子元素上的属性{{ SVGAttr("requiredFeatures") }}、属性{{ SVGAttr("requiredExtensions") }} 和 属性{{ SVGAttr("systemLanguage") }}按照顺序进行评估，然后处理和呈现第一个评估为`true`的子元素。 其他子元素会被绕过不会被呈现。如果某个子元素是容器元素比如说是一个{{ SVGElement("g") }}元素，那么整个子树会被处理呈现或者全部绕过不呈现。

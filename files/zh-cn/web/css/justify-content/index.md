@@ -2,6 +2,7 @@
 title: justify-content
 slug: Web/CSS/justify-content
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/CSS) **`justify-content`** 属性定义了浏览器之间，如何分配顺着弹性容器主轴 (或者网格行轴) 的元素之间及其周围的空间。

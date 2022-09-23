@@ -2,6 +2,7 @@
 title: storage
 slug: Web/API/Window/storage_event
 ---
+
 当存储区域（localStorage 或 sessionStorage）被修改时，将触发 storage 事件。查看 [Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API) 来获取更多信息。
 
 ## 常规信息

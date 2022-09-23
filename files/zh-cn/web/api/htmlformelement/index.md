@@ -2,6 +2,7 @@
 title: HTMLFormElement
 slug: Web/API/HTMLFormElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 HTMLFormElement 接口可以创建或者修改{{HTMLElement("form")}}对象;它继承了{{domxref("HTMLElement")}}接口的方法和属性。

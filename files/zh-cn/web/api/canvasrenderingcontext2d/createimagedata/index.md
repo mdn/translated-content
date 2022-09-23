@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.createImageData()
 slug: Web/API/CanvasRenderingContext2D/createImageData
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.createImageData()`** 是 Canvas 2D API 创建一个新的、空白的、指定大小的 {{domxref("ImageData")}} 对象。所有的像素在新对象中都是透明的。

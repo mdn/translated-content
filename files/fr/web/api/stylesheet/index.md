@@ -9,6 +9,7 @@ tags:
   - StyleSheet
 translation_of: Web/API/StyleSheet
 ---
+
 {{APIRef("CSSOM")}}
 
 Un objet qui implémente l'interface `StyleSheet` représente une seule feuille de style. Les feuilles de style CSS implémenteront également l'interface plus spécialisée {{domxref("CSSStyleSheet")}}.

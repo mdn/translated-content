@@ -2,6 +2,7 @@
 title: <number>
 slug: Web/CSS/number
 ---
+
 {{CSSRef}}
 
 ## 语法

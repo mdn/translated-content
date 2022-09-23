@@ -2,6 +2,7 @@
 title: cut
 slug: Web/API/Element/cut_event
 ---
+
 > **警告：** This page needs to be updated to match the currently specified behaviour. In the meantime please refer to the specification: [https://www.w3.org/TR/clipboard-apis/#the-cut-action](https://www.w3.org/TR/clipboard-apis/#the-paste-action)
 
 **`cut`** 事件在将选中内容从文档中删除并将其添加到剪贴板后触发。

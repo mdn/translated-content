@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-padding-block-end
 ---
+
 {{CSSRef}}
 
 La propriété **`scroll-padding-block-end`** est une propriété qui permet de définir le remplissage, à la fin de l'axe de bloc, entre l'élément et la zone de défilement.

@@ -2,6 +2,7 @@
 title: scroll-snap-type
 slug: Web/CSS/scroll-snap-type
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## 摘要

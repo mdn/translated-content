@@ -2,6 +2,7 @@
 title: ErrorEvent
 slug: Web/API/ErrorEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`ErrorEvent`** 介面是用來提供程式碼或是檔案的錯誤訊息的事件。

@@ -2,6 +2,7 @@
 title: 游戏结束
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}

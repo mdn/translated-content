@@ -2,6 +2,7 @@
 title: GlobalEventHandlers.onpointerdown
 slug: Web/API/Element/pointerdown_event
 ---
+
 {{ApiRef("HTML DOM")}}
 
 {{event("pointerdown")}} 事件的 {{domxref("GlobalEventHandlers","全局事件处理程序")}}

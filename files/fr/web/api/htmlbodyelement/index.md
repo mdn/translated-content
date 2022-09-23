@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/HTMLBodyElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface **`HTMLBodyElement`** des propriétés particulières (au-delà de celles de l'interface {{ domxref("HTMLElement") }} dont-elle hérite également) pour manipuler les éléments.

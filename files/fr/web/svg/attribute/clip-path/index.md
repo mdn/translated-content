@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/clip-path
 ---
+
 {{SVGRef}}
 
 L'attribut **`clip-path`** permet d'appliquer un détourage à un élément.

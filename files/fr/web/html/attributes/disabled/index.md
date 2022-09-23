@@ -9,6 +9,7 @@ tags:
   - required
 translation_of: Web/HTML/Attributes/disabled
 ---
+
 {{HTMLSidebar}}
 
 L'attribut booléen **`disabled`**, lorsqu'il est présent, rend l'élément non mutable, non focusable, ou même non soumis avec le formulaire. L'utilisateur ne peut ni modifier ni cibler le contrôle, ni les descendants du contrôle de formulaire. Si l'attribut `disabled` est spécifié sur un contrôle de formulaire, l'élément et ses descendants de contrôle de formulaire ne participent pas à la validation des contraintes. Souvent, les navigateurs grisent ces contrôles et ils ne reçoivent aucun événement de navigation, comme les clics de souris ou les événements liés au focus.

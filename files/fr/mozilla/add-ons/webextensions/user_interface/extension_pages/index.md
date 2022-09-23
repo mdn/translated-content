@@ -9,6 +9,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
 original_slug: Mozilla/Add-ons/WebExtensions/user_interface/pages_web_incluses
 ---
+
 {{AddonSidebar()}}
 
 Vous pouvez inclure des pages HTML dans votre extension sous la forme de formulaires, d’aide ou tout autre contenu dont votre extension a besoin.

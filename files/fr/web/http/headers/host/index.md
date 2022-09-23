@@ -7,6 +7,7 @@ tags:
   - en-tête
 translation_of: Web/HTTP/Headers/Host
 ---
+
 {{HTTPSidebar}}
 
 L'en-tête de requête **`Host`** spécifie le nom de domaine du serveur (pour de l'hébergement virtuel), et (optionnellement) le numéro du port TCP sur lequel le serveur écoute.

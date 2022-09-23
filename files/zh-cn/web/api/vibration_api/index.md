@@ -2,6 +2,7 @@
 title: Vibration API
 slug: Web/API/Vibration_API
 ---
+
 {{DefaultAPISidebar("Vibration API")}}
 
 大多数现代移动设备包括振动硬件，其允许软件代码通过使设备摇动来向用户提供物理反馈。Vibration API 为 Web 应用程序提供访问此硬件（如果存在）的功能，如果设备不支持此功能，则不会执行任何操作。

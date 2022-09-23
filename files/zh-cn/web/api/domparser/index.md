@@ -2,6 +2,7 @@
 title: DOMParser
 slug: Web/API/DOMParser
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMParser`** 可以将存储在字符串中的 {{Glossary("XML")}} 或 {{Glossary("HTML")}} 源代码解析为一个 DOM {{domxref("Document")}}。

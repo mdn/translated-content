@@ -2,6 +2,7 @@
 title: Window.ondragdrop
 slug: Web/API/Window/ondragdrop
 ---
+
 > **警告：** 在 Firefox 50 中已删除，并且从未在任何其他浏览器中实行。 请改用现代标准的[HTML5 拖放](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)功能。
 
 ## 摘要

@@ -2,6 +2,7 @@
 title: GlobalEventHandler.onanimationend
 slug: Web/API/Element/animationend_event
 ---
+
 ## 概述
 
 事件处理程序。 当 CSS 动画到达其活动期的结束时发送此事件

@@ -2,6 +2,7 @@
 title: DOM 中的空白符
 slug: Web/API/Document_Object_Model/Whitespace
 ---
+
 #### 问题说明
 
 [DOM](zh_tw/DOM) 中的空白符会让处理节点结构时增加不少麻烦。在 Mozilla 的软件中，原始文件里所有空白符都会在 DOM 中出现（不包括标签内含的空白符）。这样的处理方式有其必要之处，一方面编辑器中可迳行排列文字、二方面 [CSS](zh_tw/CSS) 里的 `white-space: pre` 也才能发挥作用。 如此一来就表示：

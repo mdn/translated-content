@@ -2,6 +2,7 @@
 title: document.mozFullScreenEnabled
 slug: Web/API/Document/fullscreenEnabled
 ---
+
 {{ ApiRef() }}
 
 ### 概述

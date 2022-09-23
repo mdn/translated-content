@@ -2,6 +2,7 @@
 title: <img>：图像嵌入元素
 slug: Web/HTML/Element/img
 ---
+
 {{HTMLRef}}
 
 **HTML `<img>` 元素**将一份图像嵌入文档。

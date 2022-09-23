@@ -2,6 +2,7 @@
 title: DOMTokenList.add()
 slug: Web/API/DOMTokenList/add
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("DOMTokenList")}} 接口的 **`add()`** 方法将给定的标记添加到列表中。

@@ -3,6 +3,7 @@ title: tabs.query()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/query
 original_slug: Mozilla/Add-ons/WebExtensions/API/tabs/查询
 ---
+
 \[阿登侧边栏（）]
 
 获取具有指定属性的所有选项卡，如果未指定任何属性，则获取所有选项卡。

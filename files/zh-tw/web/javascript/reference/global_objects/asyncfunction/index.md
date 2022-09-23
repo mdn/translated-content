@@ -2,6 +2,7 @@
 title: AsyncFunction
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 ---
+
 {{JSRef}}
 
 **`Async`**`Function` 建構子建立一個新的 {{jsxref("Statements/async_function", "async function")}} 物件。在 JavaScript 中，每一個非同步函數實際上是一個 `AsyncFunction` 物件。

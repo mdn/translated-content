@@ -2,6 +2,7 @@
 title: style
 slug: Web/API/CSSStyleRule/style
 ---
+
 {{ ApiRef() }}
 
 ### 概述

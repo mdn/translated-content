@@ -9,6 +9,7 @@ tags:
   - URL
 translation_of: Web/API/URL/search
 ---
+
 {{ApiRef("URL API")}}
 
 La propriété **`search`** de l'interface {{domxref("URL")}} est une chaine d'interrogation, aussi appellée une chaine de recherche, c'est un {{domxref("USVString")}} contenant le caractère `'?'` suivi des paramètres de l'URL.

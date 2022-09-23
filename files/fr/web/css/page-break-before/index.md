@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/page-break-before
 ---
+
 {{CSSRef}}
 
 > **Attention :** Cette propriété a été remplacée par la propriété {{cssxref("break-before")}}.

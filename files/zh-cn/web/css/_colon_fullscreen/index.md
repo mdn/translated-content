@@ -2,6 +2,7 @@
 title: ':fullscreen'
 slug: Web/CSS/:fullscreen
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## 总结

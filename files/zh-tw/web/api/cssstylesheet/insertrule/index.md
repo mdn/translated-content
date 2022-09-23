@@ -2,6 +2,7 @@
 title: CSSStyleSheet.insertRule()
 slug: Web/API/CSSStyleSheet/insertRule
 ---
+
 {{APIRef("CSSOM")}}
 
 **CSSStyleSheet.insertRule()** 方法新增一個新的 CSS 規則，到當前的樣式表，他伴隨著一些[限制](#Restrictions).

@@ -2,6 +2,7 @@
 title: AudioWorkletProcessor
 slug: Web/API/AudioWorkletProcessor
 ---
+
 {{APIRef("Web Audio API")}}
 
 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)的 **`AudioWorkletProcessor`** 接口代表了一个 自定义的音频处理代码 {{domxref("AudioWorkletNode")}}. 它身处于 {{domxref("AudioWorkletGlobalScope")}} 并运行在 Web Audio rendering 线程上。同时，一个建立在其基础上的 {{domxref("AudioWorkletNode")}} 运行在主线程上。

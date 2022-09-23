@@ -2,6 +2,7 @@
 title: Window.getDefaultComputedStyle()
 slug: Web/API/Window/getDefaultComputedStyle
 ---
+
 {{APIRef("CSSOM")}}{{Non-standard_header}}
 
 `getDefaultComputedStyle()` 给出元素的所有 CSS 属性的默认计算值 ([computed values](/zh-CN/docs/Web/CSS/computed_value) )，忽略作者样式。也就是说，只考虑用户代理和用户风格。

@@ -4,6 +4,7 @@ slug: Web/CSS/object-position
 translation_of: Web/CSS/object-position
 browser-compat: css.properties.object-position
 ---
+
 {{CSSRef}}
 
 La propriété **`object-position`** détermine l'alignement d'un [élément remplacé](/fr/docs/Web/CSS/Replaced_element) au sein de sa boîte. Les zones de la boîte qui ne sont pas recouvertes par le contenu de l'élément remplacé montreront l'arrière-plan de l'élément.

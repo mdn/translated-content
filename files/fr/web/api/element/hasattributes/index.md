@@ -10,6 +10,7 @@ tags:
   - polyfill
 translation_of: Web/API/Element/hasAttributes
 ---
+
 {{ApiRef("DOM")}}
 
 La méthode **`hasAttributes()`**, rattachée à l'interface {{domxref("Element")}}, renvoie une valeur booléenne indiquant si le nœud courant a au moins un attribut ou non.

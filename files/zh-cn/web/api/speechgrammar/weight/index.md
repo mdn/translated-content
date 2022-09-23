@@ -2,6 +2,7 @@
 title: SpeechGrammar.weight
 slug: Web/API/SpeechGrammar/weight
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 {{domxref("SpeechGrammar")}} 接口的可选属性 **`weight`** 设置并返回了一个 `SpeechGrammar` 对象的权重。

@@ -3,6 +3,7 @@ title: EventTarget.addEventListener()
 slug: Web/API/EventTarget/addEventListener
 translation_of: Web/API/EventTarget/addEventListener
 ---
+
 {{APIRef("DOM Events")}}
 
 \>La méthode **`addEventListener()`** de {{domxref("EventTarget")}} attache une fonction à appeler chaque fois que l'évènement spécifié est envoyé à la cible.

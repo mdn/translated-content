@@ -4,6 +4,7 @@ slug: Web/API/CSSRuleList
 translation_of: Web/API/CSSRuleList
 browser-compat: api.CSSRuleList
 ---
+
 {{ APIRef("CSSOM") }}
 
 A `CSSRuleList` est un objet de type tableau contenant une collection ordonnée d'objects [`CSSRule`](/en/DOM/cssRule).

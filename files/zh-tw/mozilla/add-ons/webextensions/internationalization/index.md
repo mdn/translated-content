@@ -2,6 +2,7 @@
 title: Internationalization
 slug: Mozilla/Add-ons/WebExtensions/Internationalization
 ---
+
 {{AddonSidebar}}
 
 [WebExtension](/zh-TW/docs/Mozilla/Add-ons/WebExtensions) API 有個相當方便、能用於國際化的模組：[i18n](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API/i18n)。我們將在這篇文章內探索本功能，並提供實際做動的範例。專供 extensions 組建所使用的 i18n 系統 API，用法與坊間諸如 [i18n.js](http://i18njs.com/) 的函式庫相似。

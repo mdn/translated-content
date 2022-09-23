@@ -2,6 +2,7 @@
 title: FormData.set()
 slug: Web/API/FormData/set
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 **`set()`** 方法会对 `FormData` 对象里的某个 `key` 设置一个新的值，如果该 `key` 不存在，则添加。

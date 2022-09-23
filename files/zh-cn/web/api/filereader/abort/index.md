@@ -2,6 +2,7 @@
 title: FileReader.abort()
 slug: Web/API/FileReader/abort
 ---
+
 {{APIRef("File API")}}
 
 该方法可以取消 FileReader 的读取操作，触发之后 {{domxref("FileReader.readyState","readyState")}} 为已完成（DONE）。

@@ -2,6 +2,7 @@
 title: Background Tasks API
 slug: Web/API/Background_Tasks_API
 ---
+
 {{DefaultAPISidebar("Background Tasks")}}
 
 **幕后任务协作调度 API** (也叫幕后任务 API 或者简单称为 `requestIdleCallback()` API) 提供了由用户代理决定，在空闲时间自动执行队列任务的能力。

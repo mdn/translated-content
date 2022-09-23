@@ -2,6 +2,7 @@
 title: WebGLRenderbuffer
 slug: Web/API/WebGLRenderbuffer
 ---
+
 {{APIRef("WebGL")}}
 
 **WebGLRenderbuffer** 接口是 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的一部分，它提供了一个用于保存一个图像的缓存，并且可以用于渲染操作的源或者目标。

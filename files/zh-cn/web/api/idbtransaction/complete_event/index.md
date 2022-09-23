@@ -2,6 +2,7 @@
 title: 'IDBTransaction: complete event'
 slug: Web/API/IDBTransaction/complete_event
 ---
+
 {{APIRef("IndexedDB")}}
 
 The `complete` handler is executed when a transaction successfully completed.

@@ -2,6 +2,7 @@
 title: 'Window: focus event'
 slug: Web/API/Window/focus_event
 ---
+
 {{APIRef}}
 
 当元素获得焦点时， **`focus`** 事件就会触发。

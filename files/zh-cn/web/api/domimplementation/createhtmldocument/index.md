@@ -2,6 +2,7 @@
 title: DOMImplementation.createHTMLDocument
 slug: Web/API/DOMImplementation/createHTMLDocument
 ---
+
 {{ApiRef("DOM")}}{{SeeCompatTable}}
 
 ### 概述

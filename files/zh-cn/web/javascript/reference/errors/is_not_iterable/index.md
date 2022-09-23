@@ -2,6 +2,7 @@
 title: 'TypeError: ''x'' is not iterable'
 slug: Web/JavaScript/Reference/Errors/is_not_iterable
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误信息

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:indeterminate
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:indeterminate`** permet de cibler un élément de formulaire dont l'état est indéterminé.

@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.scrollPathIntoView()
 slug: Web/API/CanvasRenderingContext2D/scrollPathIntoView
 ---
+
 {{APIRef}} {{SeeCompatTable}}
 
 **`CanvasRenderingContext2D.scrollPathIntoView()`** 是 Canvas 2D API 将当前或给定的路径滚动到窗口的方法。类似于 {{domxref("Element.scrollIntoView()")}}。

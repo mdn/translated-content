@@ -3,6 +3,7 @@ title: Applying color to HTML elements using CSS
 slug: Web/CSS/CSS_Colors/Applying_color
 original_slug: Web/HTML/Applying_color
 ---
+
 {{HTMLRef}}
 
 The use of color is a fundamental form of human expression. Children experiment with color before they even have the manual dexterity to draw. Maybe that's why color is one of the first things people often want to experiment with when learning to develop web sites. With [CSS](/zh-TW/docs/Web/CSS), there are lots of ways to add color to your [HTML](/zh-TW/docs/Web/HTML) [elements](/zh-TW/docs/Web/HTML/Element) to create just the look you want. This article is a primer introducing each of the ways CSS color can be used in HTML.

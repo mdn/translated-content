@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/extension/ViewType
 ---
+
 {{AddonSidebar()}}
 
 Le type de vue de l'extension.

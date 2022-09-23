@@ -2,6 +2,7 @@
 title: Source
 slug: Web/HTML/Element/source
 ---
+
 ## 概述
 
 **HTML `<source>` **元素为 {{HTMLElement("picture")}}, {{HTMLElement("audio")}} 或者 {{HTMLElement("video")}} 元素指定多个媒体资源。这是一个空元素。它通常用于以[不同浏览器支持的多种格式](/zh-CN/docs/Web/HTML/Supported_media_formats)提供相同的媒体内容。

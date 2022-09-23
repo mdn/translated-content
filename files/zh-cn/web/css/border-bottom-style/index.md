@@ -2,6 +2,7 @@
 title: border-bottom-style
 slug: Web/CSS/border-bottom-style
 ---
+
 {{CSSRef}}
 
 The **`border-bottom-style`** [CSS](/zh-CN/CSS) property sets the line style of an element's bottom {{cssxref("border")}}.

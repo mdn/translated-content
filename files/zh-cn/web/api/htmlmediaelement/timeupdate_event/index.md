@@ -2,6 +2,7 @@
 title: 'HTMLMediaElement: timeupdate'
 slug: Web/API/HTMLMediaElement/timeupdate_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 当`currentTime`更新时会触发`timeupdate`事件。

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/of
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/of
 ---
+
 {{JSRef}}
 
 La méthode **`TypedArray.of()`** crée un nouvel objet {{jsxref("TypedArray", "TypedArray", "#Les_objets_TypedArray")}} à partir d'un nombre variable d'arguments. Cette méthode est similaire à {{jsxref("Array.of()")}}.

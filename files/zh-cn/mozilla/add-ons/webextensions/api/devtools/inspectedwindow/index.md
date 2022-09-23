@@ -3,6 +3,7 @@ title: devtools.inspectedWindow
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow
 ---
+
 {{AddonSidebar}}
 
 > **备注：** This page describes the WebExtensions devtools APIs as they exist in Firefox 54. Although the APIs are based on the [Chrome devtools APIs](https://developer.chrome.com/extensions/devtools), there are still many features that are not yet implemented in Firefox, and therefore are not documented here. To see which features are currently missing please see [Limitations of the devtools APIs](/zh-CN/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs).

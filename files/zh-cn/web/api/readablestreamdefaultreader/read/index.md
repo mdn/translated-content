@@ -2,6 +2,7 @@
 title: ReadableStreamDefaultReader.read()
 slug: Web/API/ReadableStreamDefaultReader/read
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStreamDefaultReader")}} 接口的 **`read()`** 方法返回一个 {{jsxref("Promise")}}，这个 promise 提供流的内部队列中下一个分块（以供访问）。

@@ -2,6 +2,7 @@
 title: Proxy() 构造器
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 ---
+
 {{JSRef}}**`Proxy()`** 构造器用来创建 {{jsxref("Proxy")}} 对象。
 
 ## 语法

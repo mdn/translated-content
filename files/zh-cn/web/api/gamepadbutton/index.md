@@ -2,6 +2,7 @@
 title: GamepadButton
 slug: Web/API/GamepadButton
 ---
+
 {{APIRef("Gamepad API")}}
 
 **`GamepadButton`** 接口定义了在一个手柄或其他控制器的唯一的一个按键，允许访问不同控制器设备可用类型的按钮的当前状态。

@@ -4,6 +4,7 @@ slug: Web/API/Event
 translation_of: Web/API/Event
 browser-compat: api.Event
 ---
+
 {{APIRef("DOM")}}
 
 L'interface **`Event`** interface représente un évènement qui se produit dans le DOM.

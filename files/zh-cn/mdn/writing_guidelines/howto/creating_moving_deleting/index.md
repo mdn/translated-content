@@ -3,6 +3,7 @@ title: 如何创建及编辑页面
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
 original_slug: MDN/Contribute/Howto/Create_and_edit_pages
 ---
+
 {{MDNSidebar}}
 
 本文介绍了如何编辑现有页面或创建新页面以做出新的贡献。

@@ -2,6 +2,7 @@
 title: Document.caretRangeFromPoint()
 slug: Web/API/Document/caretRangeFromPoint
 ---
+
 {{APIRef("DOM")}}{{Non-standard_header}}
 
 {{domxref("Document")}} 的 **`caretRangeFromPoint()`** 方法返回一个 Range 对象（指定坐标的文档片段）。

@@ -2,6 +2,7 @@
 title: yield*
 slug: Web/JavaScript/Reference/Operators/yield*
 ---
+
 {{jsSidebar("Operators")}}
 
 **`yield*` 表达式**用于委托给另一个{{jsxref("Statements/function*", "generator")}} 或可迭代对象。

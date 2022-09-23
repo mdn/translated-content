@@ -2,6 +2,7 @@
 title: 你的網站看起來會是什麼樣子？
 slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
 
 *你的網站看起來會是什麼樣子？*會說明你該為網站做的規劃與設計，決定自己的「網站該提供哪些資訊？」、「該使用哪些字型與色彩？」，以及「網站又該達到哪些目的？」

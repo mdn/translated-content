@@ -2,6 +2,7 @@
 title: CanvasPattern
 slug: Web/API/CanvasPattern
 ---
+
 {{APIRef("Canvas")}}
 
 **`CanvasPattern`** 接口表示描述一个模板（基于 image, canvas 或 video）的不透明对象，通过 {{domxref("CanvasRenderingContext2D.createPattern()")}} 方法创建。

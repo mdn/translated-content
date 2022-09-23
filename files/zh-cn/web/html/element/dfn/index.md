@@ -2,6 +2,7 @@
 title: <dfn>
 slug: Web/HTML/Element/dfn
 ---
+
 ## 摘要
 
 _HTML 定义元素_ (**\<dfn>**) 表示术语的一个定义。

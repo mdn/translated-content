@@ -7,6 +7,7 @@ tags:
 translation_of: Glossary/XInclude
 original_slug: Glossaire/XInclude
 ---
+
 [XML Inclusions (XInclude)](http://www.w3.org/TR/xinclude/#text-included-items) est une recommandation du W3C pour permettre l'inclusion de différentes sources XML d'une manière plus pratique que les entités externes XML. Lorsqu'il est utilisé conjointement avec XPointer (Firefox prend en charge un sous-ensemble et est utilisé dans l'exemple de code ci-dessous), XInclude peut également cibler uniquement des portions spécifiques d'un document à inclure. Firefox ne le supporte pas nativement, mais la fonction suivante a pour but de permettre son utilisation avec les documents qui y sont passés.
 
 ### Exemple de code

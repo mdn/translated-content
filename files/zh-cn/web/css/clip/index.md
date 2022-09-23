@@ -2,6 +2,7 @@
 title: clip
 slug: Web/CSS/clip
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 ## 概述

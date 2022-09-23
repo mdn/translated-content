@@ -4,6 +4,7 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/detection_colisions", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}

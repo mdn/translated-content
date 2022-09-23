@@ -13,6 +13,7 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired
 ---
+
 {{AddonSidebar()}}
 
 Mise en place quand le serveur envoie un code status 401 ou 407 : c'est-à-dire lorsque le serveur demande au client de fournir des informations d'authentification telles qu'un nom d'utilisateur et un mot de passe.

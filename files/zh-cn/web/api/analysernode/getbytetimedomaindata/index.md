@@ -2,6 +2,7 @@
 title: AnalyserNode.getByteTimeDomainData()
 slug: Web/API/AnalyserNode/getByteTimeDomainData
 ---
+
 {{ APIRef("Mountain View APIRef Project") }}
 
 {{ domxref("AnalyserNode") }} 接口的 **`getByteTimeDomainData()`** 方法复制当前波形或时域数据到传递给它的 {{domxref("Uint8Array")}} (无符号字节数组) 中。

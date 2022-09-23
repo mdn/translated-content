@@ -2,6 +2,7 @@
 title: Blob()
 slug: Web/API/Blob/Blob
 ---
+
 {{APIRef("File API")}}
 
 **`Blob()`** 构造函数返回一个新的 {{domxref("Blob")}} 对象。blob 的内容由参数数组中给出的值的串联组成。

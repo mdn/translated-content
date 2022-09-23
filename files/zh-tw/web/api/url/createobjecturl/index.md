@@ -2,6 +2,7 @@
 title: URL.createObjectURL()
 slug: Web/API/URL/createObjectURL
 ---
+
 {{ApiRef("URL API")}}{{SeeCompatTable}}
 
 ## 摘要

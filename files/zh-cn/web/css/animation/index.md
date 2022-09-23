@@ -2,6 +2,7 @@
 title: animation
 slug: Web/CSS/animation
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) **animation** 属性是 {{cssxref("animation-name")}}，{{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}，{{cssxref("animation-delay")}}，{{cssxref("animation-iteration-count")}}，{{cssxref("animation-direction")}}，{{cssxref("animation-fill-mode")}} 和 {{cssxref("animation-play-state")}} 属性的一个简写属性形式。

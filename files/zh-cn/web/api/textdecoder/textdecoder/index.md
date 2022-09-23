@@ -2,6 +2,7 @@
 title: TextDecoder()
 slug: Web/API/TextDecoder/TextDecoder
 ---
+
 {{APIRef("Encoding API")}}
 
 **`TextDecoder()`** 构造函数使用参数中指定的编码返回一个新创建的 {{DOMxRef("TextDecoder")}} 对象。

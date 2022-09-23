@@ -2,6 +2,7 @@
 title: Math.max()
 slug: Web/JavaScript/Reference/Global_Objects/Math/max
 ---
+
 {{JSRef}}
 
 **`Math.max()`** 函式會回傳零或多個數字中的最大值。

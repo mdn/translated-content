@@ -2,6 +2,7 @@
 title: MouseEvent.shiftKey
 slug: Web/API/MouseEvent/shiftKey
 ---
+
 {{APIRef("DOM Events")}}
 
 **`MouseEvent.shiftKey`** 是只读属性，指出触发鼠标事件时是否按住了 `shift` 键

@@ -2,6 +2,7 @@
 title: GlobalEventHandlers.onauxclick
 slug: Web/API/Element/auxclick_event
 ---
+
 {{SeeCompatTable}}{{ ApiRef("HTML DOM") }}
 
 **onauxclick** 属性是一个 {{event("Event_handlers", "event handler")}}，当 {{event("auxclick")}} 事件发生时被调用，例如按下了输入设备上的非主按钮 (e.g. 鼠标中键)。

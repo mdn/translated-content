@@ -2,6 +2,7 @@
 title: Date
 slug: Web/HTTP/Headers/Date
 ---
+
 {{HTTPSidebar}}
 
 **`Date`** 是一个通用首部，其中包含了报文创建的日期和时间。

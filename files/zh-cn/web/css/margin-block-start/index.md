@@ -2,6 +2,7 @@
 title: margin-block-start
 slug: Web/CSS/margin-block-start
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`margin-block-start`** [CSS](/zh-CN/docs/Web/CSS) 属性定义了一个元素的逻辑块的开始边距，是用来根据元素的书写模式，方向和文本方向进行实际边界的衡量。

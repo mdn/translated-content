@@ -2,6 +2,7 @@
 title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
 ---
+
 {{JSRef}}
 
 **`String`** 全局对象是一个用于字符串或一个字符序列的构造函数。

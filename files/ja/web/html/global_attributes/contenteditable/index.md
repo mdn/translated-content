@@ -1,7 +1,10 @@
 ---
 title: contenteditable
 slug: Web/HTML/Global_attributes/contenteditable
+l10n:
+  sourceCommit: 775662998e66813a612e3ff27e02f2ada867bc17
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`contenteditable`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)は、ユーザーによる要素の編集が可能かを示す列挙型属性です。可能である場合、ブラウザーは要素のウィジェットを編集可能なものに変更します。
@@ -23,16 +26,11 @@ slug: Web/HTML/Global_attributes/contenteditable
 
 ## 仕様書
 
-| Specification                                                                                                                                                                | Status                           | Comment                                                                                                 |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| {{SpecName("HTML WHATWG", "editing.html#attr-contenteditable", "contenteditable")}}                                                             | {{Spec2("HTML WHATWG")}} | 最新のスナップショットである {{SpecName("HTML5.2")}} から変更なし。                            |
-| {{SpecName("HTML5.2", "editing.html#making-document-regions-editable-the-contenteditable-content-attribute", "contenteditable")}} | {{Spec2("HTML5.2")}}     | {{SpecName("HTML WHATWG")}} のスナップショット、 {{SpecName("HTML5.1")}} から変更なし |
-| {{SpecName("HTML5.1", "editing.html#making-document-regions-editable-the-contenteditable-content-attribute", "contenteditable")}} | {{Spec2("HTML5.1")}}     | {{SpecName("HTML WHATWG")}} のスナップショット、 {{SpecName("HTML5 W3C")}} から変更なし |
-| {{SpecName("HTML5 W3C", "editing.html#attr-contenteditable", "contenteditable")}}                                                                 | {{Spec2("HTML5 W3C")}}     | {{SpecName("HTML WHATWG")}} のスナップショット、初回定義。                                     |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("html.global_attributes.contenteditable")}}
+{{Compat}}
 
 ## 関連情報
 

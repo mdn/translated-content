@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.font
 slug: Web/API/CanvasRenderingContext2D/font
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.font`** 是 Canvas 2D API 描述绘制文字时，当前字体样式的属性。使用和 [CSS font](/zh-CN/docs/Web/CSS/font) 规范相同的字符串值。

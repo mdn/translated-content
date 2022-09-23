@@ -2,6 +2,7 @@
 title: SVGAnimateElement
 slug: Web/API/SVGAnimateElement
 ---
+
 {{APIRef("SVG")}}
 
 **`SVGAnimateElement`** 接口对应于 {{SVGElement("animate")}} 元素。

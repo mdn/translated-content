@@ -2,6 +2,7 @@
 title: Selection.anchorNode
 slug: Web/API/Selection/anchorNode
 ---
+
 {{ApiRef}}
 
 ## 概述

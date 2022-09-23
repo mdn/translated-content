@@ -2,6 +2,7 @@
 title: Animation.Animation()
 slug: Web/API/Animation/Animation
 ---
+
 {{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 
 Animation 构造函数返回一个新的 Animation 对象实例。

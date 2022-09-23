@@ -2,6 +2,7 @@
 title: DocumentFragment()
 slug: Web/API/DocumentFragment/DocumentFragment
 ---
+
 {{ApiRef("DOM")}}{{seeCompatTable}}
 
 **`DocumentFragment()`** 构造函数返回一个新创建的 {{domxref("DocumentFragment")}} 对象。

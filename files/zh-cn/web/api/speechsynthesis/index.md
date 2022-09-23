@@ -2,6 +2,7 @@
 title: SpeechSynthesis
 slug: Web/API/SpeechSynthesis
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 [网页语音 API](/zh-CN/docs/Web/API/Web_Speech_API) 的**`SpeechSynthesis`** 接口是语音服务的控制接口；它可以用于获取设备上关于可用的合成声音的信息，开始、暂停语音，或除此之外的其他命令。

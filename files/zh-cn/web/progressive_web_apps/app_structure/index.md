@@ -2,6 +2,7 @@
 title: PWA 结构
 slug: Web/Progressive_web_apps/App_structure
 ---
+
 {{PreviousMenuNext("Web/Progressive_web_apps/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}
 
 现在，我们已经知道了 PWA 背后的原理， 让我们来看一个推荐的 PWA 结构，这个案例来自一个真实的应用。我们从分析 [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) 这个应用开始：为什么它要这样构建？这样做又有什么好处？

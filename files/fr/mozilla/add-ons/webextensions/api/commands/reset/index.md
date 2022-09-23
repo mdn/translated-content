@@ -12,6 +12,7 @@ tags:
   - reset
 translation_of: Mozilla/Add-ons/WebExtensions/API/commands/reset
 ---
+
 {{AddonSidebar()}}
 
 Réinitialise la description de la commande donnée et le raccourci clavier aux valeurs indiquées dans [`commands` de la clé du manifest.json](/fr/Add-ons/WebExtensions/manifest.json/commands) de l'extension.

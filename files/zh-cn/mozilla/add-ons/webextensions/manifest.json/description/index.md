@@ -2,6 +2,7 @@
 title: 描述 - description
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/description
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

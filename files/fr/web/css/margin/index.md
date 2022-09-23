@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/margin
 translation_of_original: Web/CSS/margin-new
 ---
+
 {{CSSRef}}
 
 La propriété **`margin`** définit la taille des marges sur les quatre côtés de l'élément. C'est une propriété raccourcie qui permet de manipuler les autres propriétés de marges : {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} et {{cssxref("margin-left")}}.

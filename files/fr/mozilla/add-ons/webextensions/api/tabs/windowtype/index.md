@@ -13,6 +13,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/WindowType
 ---
+
 {{AddonSidebar()}}
 
 Le type de fenêtre qui héberge cet onglet.

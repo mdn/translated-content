@@ -2,6 +2,7 @@
 title: Window.outerWidth
 slug: Web/API/Window/outerWidth
 ---
+
 {{APIRef}}
 
 ## 概述

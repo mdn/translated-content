@@ -2,6 +2,7 @@
 title: BigUint64Array
 slug: Web/JavaScript/Reference/Global_Objects/BigUint64Array
 ---
+
 {{JSRef}}
 
 **`BigUint64Array`** 类型数组表示一个平台字节顺序的 64 位无符号整型数组。如果想要控制字符顺序，请使用 {{jsxref("DataView")}} 替代。内容初始化为 `0n`. 创建之后可以使用对象中的方法或使用标准数组索引语法 (括号表示法) 来获取数组中的元素。

@@ -2,6 +2,7 @@
 title: OscillatorNode()
 slug: Web/API/OscillatorNode/OscillatorNode
 ---
+
 {{APIRef("Web Audio API")}}{{SeeCompatTable}}
 
 **`OscillatorNode()`** 构造器创建了一个新的 {{domxref("OscillatorNode")}} 对象，也是 {{domxref("AudioNode")}} 类型，表示一个周期的波形，例如正弦波，用来在不同的对象中定义其可选属性的值

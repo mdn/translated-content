@@ -12,6 +12,7 @@ tags:
   - removeHistory
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeHistory
 ---
+
 {{AddonSidebar()}}
 
 Efface l'enregistrement des pages Web que l'utilisateur a visité (historique de navigation).

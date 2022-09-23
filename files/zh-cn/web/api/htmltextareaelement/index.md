@@ -2,6 +2,7 @@
 title: HTMLTextAreaElement
 slug: Web/API/HTMLTextAreaElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLTextAreaElement`** 接口提供了特殊的属性和方法，用于控制 {{HTMLElement("textarea")}} 元素的布局和展示。

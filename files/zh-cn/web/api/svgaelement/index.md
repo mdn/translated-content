@@ -2,6 +2,7 @@
 title: SVGAElement
 slug: Web/API/SVGAElement
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG a DOM 接口

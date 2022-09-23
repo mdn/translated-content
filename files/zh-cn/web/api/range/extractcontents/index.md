@@ -2,6 +2,7 @@
 title: Range.extractContents()
 slug: Web/API/Range/extractContents
 ---
+
 {{ApiRef("DOM")}}
 
 **`Range.extractContents()`** 方法移动了{{ domxref("Range") }} 中的内容从文档树到{{ domxref("DocumentFragment") }}（文档片段对象）。

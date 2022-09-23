@@ -2,6 +2,7 @@
 title: AudioContext.createMediaStreamSource()
 slug: Web/API/AudioContext/createMediaStreamSource
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioContext") }}接口的 `createMediaStreamSource()` 方法用于创建一个新的 {{ domxref("MediaStreamAudioSourceNode") }} 对象，需要传入一个媒体流对象 (MediaStream 对象)(可以从 {{ domxref("navigator.getUserMedia") }} 获得 MediaStream 对象实例), 然后来自 MediaStream 的音频就可以被播放和操作。

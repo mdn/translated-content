@@ -2,6 +2,7 @@
 title: dimension
 slug: Web/CSS/dimension
 ---
+
 {{CSSRef}}
 
 **`<dimension>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)是一个带有单位的{{CSSxRef("&lt;number&gt;")}}，例如：`10px`

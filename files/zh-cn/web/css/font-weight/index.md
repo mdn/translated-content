@@ -2,6 +2,7 @@
 title: font-weight
 slug: Web/CSS/font-weight
 ---
+
 {{CSSRef}}
 
 ## 概述

@@ -12,6 +12,7 @@ tags:
   - sessions
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/restore
 ---
+
 {{AddonSidebar()}}
 
 Restaure un onglet ou une fenêtre fermée. La restauration ne réouvre pas seulement l'onglet ou la fenêtre : elle rétablit également l'historique de navigation de l'onglet afin que les boutons arrière/avant fonctionnent. La restauration d'une fenêtre restaurera tous les onglets que la fenêtre contenait lors de sa fermeture.

@@ -3,6 +3,7 @@ title: homepage_url
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url
 original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/主页地址
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

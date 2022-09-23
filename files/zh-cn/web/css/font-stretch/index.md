@@ -2,6 +2,7 @@
 title: font-stretch
 slug: Web/CSS/font-stretch
 ---
+
 {{CSSRef}}
 
 ## Summary

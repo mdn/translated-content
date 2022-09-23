@@ -2,6 +2,7 @@
 title: <input>
 slug: Web/HTML/Element/input
 ---
+
 {{HTMLRef}}
 
 The **HTML `<input>` element** is used to create interactive controls for web-based forms in order to accept data from the user.

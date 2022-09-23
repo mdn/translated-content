@@ -2,6 +2,7 @@
 title: Set.prototype.add()
 slug: Web/JavaScript/Reference/Global_Objects/Set/add
 ---
+
 {{JSRef}}
 
 **`add()`** 會在一個 `Set` 物件的尾端加上一個指定 `value` 的新元素。

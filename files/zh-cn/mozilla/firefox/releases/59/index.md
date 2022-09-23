@@ -2,6 +2,7 @@
 title: Firefox 59 for developers
 slug: Mozilla/Firefox/Releases/59
 ---
+
 {{FirefoxSidebar}}
 
 本文提供了有关 Firefox 59 中会影响开发人员的更改的信息。Firefox 59 已于 2018 年 3 月 13 日发布。

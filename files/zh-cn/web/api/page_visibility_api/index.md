@@ -2,6 +2,7 @@
 title: 页面可见性 API
 slug: Web/API/Page_Visibility_API
 ---
+
 {{DefaultAPISidebar("Page Visibility API")}}
 
 使用选项卡式浏览，任何给定网页都有可能在后台，因此对用户不可见。页面可见性 API 提供了您可以观察的事件，以便了解文档何时可见或隐藏，以及查看页面当前可见性状态的功能。

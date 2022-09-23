@@ -2,6 +2,7 @@
 title: <meta>：文档级元数据元素
 slug: Web/HTML/Element/meta
 ---
+
 {{HTMLRef}}
 
 **HTML `<meta>` 元素**表示那些不能由其它 HTML 元相关（meta-related）元素（({{HTMLElement("base")}}、{{HTMLElement("link")}}, {{HTMLElement("script")}}、{{HTMLElement("style")}} 或 {{HTMLElement("title")}}）之一表示的任何{{Glossary("Metadata","元数据")}}信息。

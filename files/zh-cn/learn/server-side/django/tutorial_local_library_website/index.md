@@ -2,6 +2,7 @@
 title: 'Django Tutorial: The Local Library website'
 slug: Learn/Server-side/Django/Tutorial_local_library_website
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}
 
 我们实战教程系列的第一篇教程会解释你将学到什么。并提供一个“本地图书馆”的例子作为概述。在接下来的教程里，我们会不断完善和改进这个网站。

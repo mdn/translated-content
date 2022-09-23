@@ -2,6 +2,7 @@
 title: '-moz-outline-radius-bottomright'
 slug: Web/CSS/-moz-outline-radius-bottomright
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 在 Mozilla 应用中，**`-moz-outline-radius-bottomright`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置元素的左下角{{cssxref("outline")}} 圆角。

@@ -13,6 +13,7 @@ tags:
   - match
 translation_of: Web/API/Cache/match
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 La méthode **`match()`** de l'interface {{domxref("Cache")}} retourne une {{jsxref("Promise", "Promesse")}} qui est résolue en une {{domxref("Response", "Réponse")}} associée à la première requête qui match dans l'objet {{domxref("Cache")}}. Si aucune requête n'est trouvée, la {{jsxref("Promise", "Promesse")}} est résolue en {{jsxref("undefined")}}.

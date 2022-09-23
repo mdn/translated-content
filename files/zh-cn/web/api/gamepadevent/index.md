@@ -2,6 +2,7 @@
 title: GamepadEvent
 slug: Web/API/GamepadEvent
 ---
+
 {{APIRef("Gamepad API")}}
 
 Gamepad API 的 GamepadEvent 接口包含对连接到系统的控制器的引用，这也是 gamepad 事件 events {{domxref("Window.gamepadconnected")}} 与 {{domxref("Window.gamepaddisconnected")}} 被触发时响应的内容。

@@ -2,6 +2,7 @@
 title: 語法與型別
 slug: Web/JavaScript/Guide/Grammar_and_types
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
 
 本章討論 JavaScript 的基本語法與基礎資料類型、包括變數、常數、字元常數

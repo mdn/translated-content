@@ -2,6 +2,7 @@
 title: Document.createDocumentFragment()
 slug: Web/API/Document/createDocumentFragment
 ---
+
 {{ApiRef("DOM")}}
 
 建立新的 {{domxref("DocumentFragment")}}.

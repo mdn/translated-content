@@ -2,6 +2,7 @@
 title: Document.head
 slug: Web/API/Document/head
 ---
+
 {{APIRef}}
 
 ## 概述

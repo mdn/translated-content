@@ -2,6 +2,7 @@
 title: compositionupdate
 slug: Web/API/Element/compositionupdate_event
 ---
+
 **`compositionupdate`** 事件触发于字符被输入到一段文字的时候（这些可见字符的输入可能需要一连串的键盘操作、语音识别或者点击输入法的备选词）
 
 <table class="properties">

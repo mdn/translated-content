@@ -2,6 +2,7 @@
 title: Document.exitPointerLock()
 slug: Web/API/Document/exitPointerLock
 ---
+
 {{ apiref("DOM") }}
 
 {{ seeCompatTable }}

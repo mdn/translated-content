@@ -2,6 +2,7 @@
 title: 清除画布
 slug: Web/API/WebGL_API/By_example/Clearing_with_colors
 ---
+
 {{PreviousNext("Learn/WebGL/By_example/Detect_WebGL","Learn/WebGL/By_example/Clearing_by_clicking")}}
 
 这个例子将展示如何用一个单色清除画布

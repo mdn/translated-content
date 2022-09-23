@@ -2,6 +2,7 @@
 title: text-decoration-skip
 slug: Web/CSS/text-decoration-skip
 ---
+
 {{CSSRef}}
 
 CSS **`text-decoration-skip`** 属性定义了元素哪些部分的内容需要被文本修饰所跳过。它可以控制所有该元素或该元素的祖先所绘制的文本修饰线。

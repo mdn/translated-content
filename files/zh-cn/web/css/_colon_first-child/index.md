@@ -2,6 +2,7 @@
 title: ':first-child'
 slug: Web/CSS/:first-child
 ---
+
 {{CSSRef}}
 
 **`:first-child`** [CSS](/zh-CN/docs/Web/CSS) [pseudo-class](/zh-CN/docs/Web/CSS/Pseudo-classes) 表示在一组兄弟元素中的第一个元素。

@@ -2,6 +2,7 @@
 title: stroke-dashoffset
 slug: Web/SVG/Attribute/stroke-dashoffset
 ---
+
 « [SVG](/zh-CN/SVG/Attribute)属性参考主页
 
 `stroke-dashoffset` 属性指定了 dash 模式到路径开始的距离

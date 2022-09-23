@@ -2,6 +2,7 @@
 title: Coordinates.latitude
 slug: Web/API/GeolocationCoordinates/latitude
 ---
+
 {{APIRef("Geolocation API")}}
 
 **`Coordinates.latitude`** 是個唯讀十進位的複數用來代表裝置緯度的位置。

@@ -2,6 +2,7 @@
 title: document.hasFocus
 slug: Web/API/Document/hasFocus
 ---
+
 {{ ApiRef }}
 
 ### 概述

@@ -2,6 +2,7 @@
 title: box-orient
 slug: Web/CSS/box-orient
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 这是原始的 css 弹性布局草案的一个属性，已经被最新的标准替代。查看 [flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) 了解现行标准。

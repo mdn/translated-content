@@ -2,6 +2,7 @@
 title: StyleSheet.title
 slug: Web/API/StyleSheet/title
 ---
+
 {{APIRef("CSSOM")}}
 
 ## 概述

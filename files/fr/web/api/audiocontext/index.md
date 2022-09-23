@@ -10,6 +10,7 @@ tags:
   - Web Audio API
 translation_of: Web/API/AudioContext
 ---
+
 {{APIRef("Web Audio API")}}
 
 L'interface AudioContext représente un graphe de traitement audio fait de modules audio reliés entre eux, chaque module correspondant à un {{domxref ("AudioNode")}}. Un contexte audio contrôle à la fois la création des nœuds qu'il contient et l'exécution du traitement audio, ou du décodage. On commence toujours par créer un contexte audio, et tout ce qui va se passer ensuite se situera dans ce contexte.

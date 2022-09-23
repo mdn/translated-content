@@ -2,6 +2,7 @@
 title: CanvasGradient
 slug: Web/API/CanvasGradient
 ---
+
 {{APIRef("Canvas")}}
 
 **`CanvasGradient`** 接口表示描述渐变的不透明对象。通过 {{domxref("CanvasRenderingContext2D.createLinearGradient()")}} 或 {{domxref("CanvasRenderingContext2D.createRadialGradient()")}} 的返回值得到。

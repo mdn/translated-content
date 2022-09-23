@@ -7,6 +7,7 @@ tags:
   - SVG Description
 translation_of: Web/SVG/Element/desc
 ---
+
 {{SVGRef}}
 
 Tout élément graphique ou conteneur dans un dessin SVG peut définir une description en utilisant l'élément **`<desc>`**, cette description ne peut contenir que du texte.

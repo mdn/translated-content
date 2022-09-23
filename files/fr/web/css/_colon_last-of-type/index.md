@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:last-of-type
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:last-of-type`** cible un élément qui est le dernier enfant d'un type donné dans la liste des enfants de l'élément parent.

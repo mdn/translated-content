@@ -2,6 +2,7 @@
 title: XMLSerializer
 slug: Web/API/XMLSerializer
 ---
+
 {{APIRef("XMLSerializer")}}`XMLSerializer`接口提供{{domxref("XMLSerializer.serializeToString", "serializeToString()")}} 方法来构建一个代表 {{Glossary("DOM")}} 树的 XML 字符串。
 
 ## 方法

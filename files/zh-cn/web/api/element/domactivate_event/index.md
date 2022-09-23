@@ -2,6 +2,7 @@
 title: 'Element: DOMActivate event'
 slug: Web/API/Element/DOMActivate_event
 ---
+
 {{APIRef}}
 
 {{Deprecated_Header}}

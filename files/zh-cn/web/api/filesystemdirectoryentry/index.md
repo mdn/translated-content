@@ -2,6 +2,7 @@
 title: FileSystemDirectoryEntry
 slug: Web/API/FileSystemDirectoryEntry
 ---
+
 {{APIRef("File System API")}}{{Non-standard_header}}
 
 [文件和目录条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API) 的 **`FileSystemDirectoryEntry`** 接口表示文件系统中的目录。它提供了方法，使其能够访问和操作目录中的文件，以及访问目录中的条目。

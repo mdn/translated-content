@@ -2,6 +2,7 @@
 title: CSS.supports()
 slug: Web/API/CSS/supports
 ---
+
 {{APIRef("CSSOM")}}
 
 **`CSS.supports()`** 静态方法返回一个{{domxref("Boolean")}}值，用来校验浏览器是否支持一个给定的 CSS 特性。

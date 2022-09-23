@@ -2,6 +2,7 @@
 title: 语音识别
 slug: Web/API/SpeechRecognition
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 The **`SpeechRecognition`** interface of the [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API) is the controller interface for the recognition service; this also handles the {{domxref("SpeechRecognitionEvent")}} sent from the recognition service.

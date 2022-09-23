@@ -2,6 +2,7 @@
 title: DOMTokenList.item()
 slug: Web/API/DOMTokenList/item
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("DOMTokenList")}}接口的 **`item()`** 方法返回一个在列表中的索引的项。

@@ -2,6 +2,7 @@
 title: WindowClient
 slug: Web/API/WindowClient
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 The `WindowClient` interface of the [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API) represents the scope of a service worker client that is a document in a browser context, controlled by an active worker. The service worker client independently selects and uses a service worker for its own loading and sub-resources.

@@ -2,6 +2,7 @@
 title: SubtleCrypto
 slug: Web/API/SubtleCrypto
 ---
+
 {{APIRef("Web Crypto API")}}
 
 基于[Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API)的**SubtleCrypto** 接口提供了许多底层加密功能。它通过窗口上下文提供可用的{{domxref("Crypto.subtle")}} 属性来访问（通过{{domxref("Window.crypto")}}）。

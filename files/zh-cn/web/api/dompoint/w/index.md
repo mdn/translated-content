@@ -2,6 +2,7 @@
 title: DOMPoint.w
 slug: Web/API/DOMPoint/w
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMPoint`** 的 w 属性表示该点的空间透视值。

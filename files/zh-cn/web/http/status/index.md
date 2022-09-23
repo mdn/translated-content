@@ -2,6 +2,7 @@
 title: HTTP 响应状态码
 slug: Web/HTTP/Status
 ---
+
 {{HTTPSidebar}}
 
 HTTP 响应状态码用来表明特定 [HTTP](/zh-CN/docs/Web/HTTP) 请求是否成功完成。

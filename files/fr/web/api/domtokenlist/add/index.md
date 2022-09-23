@@ -3,6 +3,7 @@ title: DOMTokenList.add()
 slug: Web/API/DOMTokenList/add
 translation_of: Web/API/DOMTokenList/add
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`add()`** de l'interface {{domxref("DOMTokenList")}} ajoute le _token_ (_marque_) à la liste.

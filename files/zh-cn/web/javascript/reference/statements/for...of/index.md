@@ -2,6 +2,7 @@
 title: for...of
 slug: Web/JavaScript/Reference/Statements/for...of
 ---
+
 {{jsSidebar("Statements")}}
 
 **`for...of`语句**在[可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/iterable)（包括 {{jsxref("Array")}}，{{jsxref("Map")}}，{{jsxref("Set")}}，{{jsxref("String")}}，{{jsxref("TypedArray")}}，[arguments](/zh-CN/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) 对象等等）上创建一个迭代循环，调用自定义迭代钩子，并为每个不同属性的值执行语句

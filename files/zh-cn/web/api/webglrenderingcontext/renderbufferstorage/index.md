@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.renderbufferStorage()
 slug: Web/API/WebGLRenderingContext/renderbufferStorage
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.renderbufferStorage()`** 方法用来创建和初始化一个渲染缓冲区对象的数据存储。

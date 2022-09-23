@@ -2,6 +2,7 @@
 title: fePointLight
 slug: Web/SVG/Element/fePointLight
 ---
+
 {{SVGRef}}
 
 ## 用法

@@ -13,6 +13,7 @@ tags:
   - browserAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/ColorArray
 ---
+
 {{AddonSidebar()}}
 
 ## Type

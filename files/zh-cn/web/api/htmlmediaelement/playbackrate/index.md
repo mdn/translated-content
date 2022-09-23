@@ -2,6 +2,7 @@
 title: HTMLMediaElement.playbackRate
 slug: Web/API/HTMLMediaElement/playbackRate
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.playbackRate`** 属性设置媒体文件播放时的速率。这用于实现让用户控制快放、慢放等。 正常播放速率乘以该值表示当前的播放速率，所以 1.0 表示一个正常的播放速率。

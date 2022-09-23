@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.vertexAttrib[1234]f[v]()
 slug: Web/API/WebGLRenderingContext/vertexAttrib
 ---
+
 {{APIRef("WebGL")}}
 
 **`WebGLRenderingContext.vertexAttrib[1234]f[v]()`** 是 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的方法，可以为顶点 attibute 变量赋值。

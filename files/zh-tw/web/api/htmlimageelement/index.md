@@ -2,6 +2,7 @@
 title: HTMLImageElement
 slug: Web/API/HTMLImageElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLImageElement`** 介面提供了特殊的屬性及方法以用來操作 {{HTMLElement("img")}} 元素的畫面佈局與外觀呈現。

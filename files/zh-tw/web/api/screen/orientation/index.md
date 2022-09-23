@@ -2,6 +2,7 @@
 title: Screen.orientation
 slug: Web/API/Screen/orientation
 ---
+
 {{APIRef("CSSOM View")}}{{SeeCompatTable}}
 
 `Screen.orientation` 屬性可以取得螢幕目前的方向。

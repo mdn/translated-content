@@ -2,6 +2,7 @@
 title: AnimationEvent
 slug: Web/API/AnimationEvent
 ---
+
 {{SeeCompatTable}}{{APIRef("Web Animations API")}}
 
 ## Summary

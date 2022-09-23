@@ -2,6 +2,7 @@
 title: 图像文件类型与格式指南
 slug: Web/Media/Formats/Image_types
 ---
+
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}
 
 在本指南中，我们将介绍网页浏览器普遍支持的图像文件类型，并提供一些关于他们的信息与见解，帮助您为您的网站选择最合适的图像格式。

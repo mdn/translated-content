@@ -10,6 +10,7 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/close
 ---
+
 {{AddonSidebar()}}
 
 Ferme la demande. Après cet appel, aucune autre donnée de réponse ne sera transmise au moteur de rendu du navigateur et aucun autre événement de filtrage ne sera donné à l'extension.

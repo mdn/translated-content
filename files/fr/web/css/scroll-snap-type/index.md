@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-snap-type
 ---
+
 {{CSSRef}}
 
 La propriété **`scroll-snap-type`** définit la force d'adhérence aux points d'accroche en cas de défilement d'un conteneur.

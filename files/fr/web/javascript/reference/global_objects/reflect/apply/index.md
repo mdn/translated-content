@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/apply
 original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/apply
 ---
+
 {{JSRef}}
 
 La méthode statique **`Reflect.apply()`** permet d'appeler une fonction cible avec des arguments donnés.

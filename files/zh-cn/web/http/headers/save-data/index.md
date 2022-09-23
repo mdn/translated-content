@@ -2,6 +2,7 @@
 title: Save-Data
 slug: Web/HTTP/Headers/Save-Data
 ---
+
 {{HTTPSidebar}}
 
 Save-Data 请求头字段是一个布尔值，在请求中，表示客户端对减少数据使用量的偏好。 这可能是传输成本高，连接速度慢等原因。

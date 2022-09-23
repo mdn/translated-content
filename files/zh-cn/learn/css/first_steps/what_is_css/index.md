@@ -2,6 +2,7 @@
 title: 什么是 CSS?
 slug: Learn/CSS/First_steps/What_is_CSS
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
 
 **{{Glossary("CSS")}}** (层叠样式表) 让你可以创建好看的网页，但是它具体是怎么工作的呢？ 这篇文章通过一些很简单的例子，告诉我们什么是 CSS，同时还会涉及一些和 CSS 相关的专业术语。
