@@ -18,7 +18,7 @@ createTreeWalker(root, whatToShow, filter)
 ### 参数
 
 - `root`
-  - : 是遍历这个 {{domxref("TreeWalker")}} 的根节点（{{domxref("Node")}}）。通常这是文档的一个元素。
+  - : 遍历这个 {{domxref("TreeWalker")}} 的根节点（{{domxref("Node")}}）。通常这是文档的一个元素。
 - `whatToShow` {{optional_inline}}
 
   - : 一个无符号长整型，表示一个整合自 [`NodeFilter`](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter) 常量属性的位掩码。这是筛选特定类型节点的便捷方式。默认为 `0xFFFFFFFF`，表示 `SHOW_ALL` 常量。
