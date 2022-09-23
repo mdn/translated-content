@@ -13,6 +13,7 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/UploadData
 ---
+
 {{AddonSidebar()}}
 
 Contient les données téléchargées dans une requête URL..

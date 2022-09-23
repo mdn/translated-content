@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Display
 ---
+
 {{CSSRef}}
 
 **L'affichage CSS** (_CSS Display)_ est un module CSS qui définit la façon dont l'arbre des boîtes pour la mise en forme est généré à partir de l'arbre des éléments du document et qui définit les propriétés qui le contrôlent.

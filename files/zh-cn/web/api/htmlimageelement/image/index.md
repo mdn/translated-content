@@ -2,6 +2,7 @@
 title: Image()
 slug: Web/API/HTMLImageElement/Image
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`Image()`**函数将会创建一个新的{{domxref("HTMLImageElement")}}实例。

@@ -2,6 +2,7 @@
 title: HTMLImageElement.srcset
 slug: Web/API/HTMLImageElement/srcset
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLImageElement")}} 的 **`srcset`** 的值是一个字符串，用来定义一个或多个图像候选地址，以 `,`分割，每个候选地址将在特定条件下得以使用。候选地址包含图片 URL 和一个可选的宽度描述符和像素密度描述符，该候选地址用来在特定条件下替代原始地址成为 {{domxref("HTMLImageElement.src", "src")}} 的属性。

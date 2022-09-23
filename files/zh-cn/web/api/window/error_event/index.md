@@ -2,6 +2,7 @@
 title: 'Window: error event'
 slug: Web/API/Window/error_event
 ---
+
 {{APIRef}}
 
 当资源加载失败或无法使用时，会在{{domxref("Window")}}对象触发`error`事件。例如：script 执行时报错。

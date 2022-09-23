@@ -2,6 +2,7 @@
 title: MessageEvent.MessageEvent()
 slug: Web/API/MessageEvent/MessageEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`MessageEvent()`** 构造函数创建一个新的 {{domxref("MessageEvent")}} 对象实例。

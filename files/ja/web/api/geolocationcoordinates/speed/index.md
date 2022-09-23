@@ -2,6 +2,7 @@
 title: GeolocationCoordinates.speed
 slug: Web/API/GeolocationCoordinates/speed
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 **`GeolocationCoordinates.speed`** は読み取り専用のプロパティであり、 `double` 型で端末の移動速度をメートル毎秒で表します。実装でこれを計測することができなければ、この値は `null` になります。

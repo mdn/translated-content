@@ -2,6 +2,7 @@
 title: for...of
 slug: Web/JavaScript/Reference/Statements/for...of
 ---
+
 {{jsSidebar("Statements")}}
 
 **`for...of` 文**は、[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)、たとえば組込みの {{jsxref("String")}}, {{jsxref("Array")}}, 配列状オブジェクト (例えば {{jsxref("Functions/arguments", "arguments")}} や {{domxref("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, およびユーザー定義の反復可能オブジェクトなどに対して、反復的な処理をするループを作成します。これはオブジェクトのそれぞれの識別可能なプロパティの値に対して、実行される文を表す独自の反復フックを呼び出します。

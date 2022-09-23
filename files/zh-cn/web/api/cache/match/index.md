@@ -2,6 +2,7 @@
 title: Cache.match()
 slug: Web/API/Cache/match
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 {{domxref("Cache")}} 接口的 **`match()`** 方法，返回一个 {{jsxref("Promise")}} 解析为 (resolve to) 与 {{domxref("Cache")}} 对象中的第一个匹配请求相关联的{{domxref("Response")}} 。如果没有找到匹配，{{jsxref("Promise")}} 解析为 {{jsxref("undefined")}}。

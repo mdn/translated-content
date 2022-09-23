@@ -2,6 +2,7 @@
 title: GlobalEventHandlers.onpointercancel
 slug: Web/API/Element/pointercancel_event
 ---
+
 {{ApiRef("HTML DOM")}}
 
 A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("pointercancel")}} event.

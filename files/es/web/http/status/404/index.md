@@ -15,11 +15,15 @@ Un código de estado 404 no indica si el recurso está temporalmente o permanent
 
 ## Estado
 
-    404 Not Found
+```
+404 Not Found
+```
 
 En español:
 
-    404 No Encontrado
+```
+404 No Encontrado
+```
 
 ## Paginas de error personalizadas
 

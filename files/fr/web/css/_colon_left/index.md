@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/CSS/:left
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:left`**, liée à la règle {{cssxref("@page")}}, permet de cibler les pages de gauche lors d'une impression. Ceci permet de mettre en forme spécifiquement les pages de gauche.

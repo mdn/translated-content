@@ -2,6 +2,7 @@
 title: 使用 templates and slots
 slug: Web/Web_Components/Using_templates_and_slots
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 这篇文章阐述了如何使用 {{htmlelement("template")}} 和 {{htmlelement("slot")}} 元素创建一个可以用来灵活填充 Web 组件的 shadow DOM 的模板。

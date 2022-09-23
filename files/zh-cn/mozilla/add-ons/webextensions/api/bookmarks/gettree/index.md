@@ -2,6 +2,7 @@
 title: bookmarks.getTree()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getTree
 ---
+
 {{AddonSidebar()}}
 
 **`bookmarks.getTree()`** 返回一个数组，该数组每一项为{{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}对象，作为书签树的根节点。

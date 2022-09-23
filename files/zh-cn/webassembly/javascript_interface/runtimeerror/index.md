@@ -3,6 +3,7 @@ title: WebAssembly.RuntimeError()
 slug: WebAssembly/JavaScript_interface/RuntimeError
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError
 ---
+
 {{JSRef}}
 
 **`WebAssembly.RuntimeError()`**构造函数创建一个新的 WebAssembly RuntimeError 对象 --- 一个每当 WebAssembly 陷入指定陷阱时将抛出的类型。

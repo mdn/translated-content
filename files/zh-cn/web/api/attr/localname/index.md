@@ -2,6 +2,7 @@
 title: Attr.localName
 slug: Web/API/Attr/localName
 ---
+
 {{APIRef("DOM")}}
 
 **`Attr.localName`** 为只读属性，返回一个属性限定名称的本名部分（去除命名空间前缀的名字）。

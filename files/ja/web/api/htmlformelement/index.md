@@ -2,6 +2,7 @@
 title: HTMLFormElement
 slug: Web/API/HTMLFormElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFormElement`** インターフェイスは DOM 内で {{HTMLElement("form")}} 要素を表します。これは、フォームのコンポーネント要素へのアクセスだけでなく、フォームの様々な側面へのアクセスや、場合によっては変更を可能にします。

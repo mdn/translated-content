@@ -2,6 +2,7 @@
 title: '@property'
 slug: Web/CSS/@property
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`@property`** [CSS](/zh-CN/docs/Web/CSS) {{cssxref("at-rule")}}是[CSS Houdini](/zh-CN/docs/Web/Houdini) API 的一部分，它允许开发者显式地定义他们的{{cssxref('--*', 'CSS 自定义属性')}}, 允许进行属性类型检查、设定默认值以及定义该自定义属性是否可以被继承。

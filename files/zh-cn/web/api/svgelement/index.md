@@ -2,6 +2,7 @@
 title: SVGElement
 slug: Web/API/SVGElement
 ---
+
 {{APIRef("SVG")}}所有 SVG DOM 类的父类.
 
 {{InheritanceDiagram}}

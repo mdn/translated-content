@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.miterLimit
 slug: Web/API/CanvasRenderingContext2D/miterLimit
 ---
+
 {{APIRef}}
 
 The **`CanvasRenderingContext2D.miterLimit`** 是 Canvas 2D API 设置斜接面限制比例的属性。当获取属性值时，会返回当前的值（默认值是`10.0` ）。当给属性赋值时，0、负数、 {{jsxref("Infinity")}} 和 {{jsxref("NaN")}} 都会被忽略；除此之外都会被赋予一个新值。

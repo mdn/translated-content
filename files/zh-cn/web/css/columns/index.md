@@ -2,6 +2,7 @@
 title: columns
 slug: Web/CSS/columns
 ---
+
 {{CSSRef}}
 
 CSS 属性 **`columns`** 用来设置元素的列宽和列数。

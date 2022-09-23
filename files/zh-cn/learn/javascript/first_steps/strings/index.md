@@ -2,6 +2,7 @@
 title: 文本处理 — JavaScript 中的字符串
 slug: Learn/JavaScript/First_steps/Strings
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
 
 接下来，我们将把注意力转向文本片段——也就是编程中所说的**字符串**。在本文中，我们将了解在学习 JavaScript 时，您应该了解的关于字符串的所有常见事项，例如创建字符串、在字符串中转义引号，和连接字符串。

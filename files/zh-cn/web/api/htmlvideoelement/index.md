@@ -2,6 +2,7 @@
 title: HTMLVideoElement
 slug: Web/API/HTMLVideoElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLVideoElement`** 接口提供了用于操作视频对象的特殊属性和方法。它同时还继承了{{domxref("HTMLMediaElement")}} 和 {{domxref("HTMLElement")}} 的属性与方法。

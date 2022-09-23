@@ -2,6 +2,7 @@
 title: ':nth-last-of-type'
 slug: Web/CSS/:nth-last-of-type
 ---
+
 {{CSSRef}}
 
 ## 概述

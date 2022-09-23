@@ -2,6 +2,7 @@
 title: HTMLScriptElement
 slug: Web/API/HTMLScriptElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 HTML 脚本元素暴露 HTMLScriptElement 接口,它提供了特殊的属性和方法(超出了常规 HTMLElement 对象接口,他们也可以通过继承操纵<脚本>元素的布局和演示。）

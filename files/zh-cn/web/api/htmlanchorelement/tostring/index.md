@@ -2,6 +2,7 @@
 title: HTMLHyperlinkElementUtils.toString()
 slug: Web/API/HTMLAnchorElement/toString
 ---
+
 {{ApiRef("URL API")}}
 
 **`HTMLHyperlinkElementUtils.toString()`** 方法返回一个包含整个 URL 的 {{domxref("USVString")}} 。它是{{domxref("HTMLHyperlinkElementUtils.href")}} 的一个只读版本。

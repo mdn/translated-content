@@ -2,6 +2,7 @@
 title: isolation
 slug: Web/CSS/isolation
 ---
+
 {{CSSRef()}}
 
 ## 概述

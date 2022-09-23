@@ -5,6 +5,7 @@ translation_of: Web/API/GlobalEventHandlers/onfocus
 original_slug: Web/API/GlobalEventHandlers/onfocus
 browser-compat: api.GlobalEventHandlers.onfocus
 ---
+
 {{ApiRef("HTML DOM")}}
 
 La propriété **`onfocus`**, , rattachée au mixin [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers), est [un gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui permet de traiter les évènements [`focus`](/fr/docs/Web/API/Element/focus_event).

@@ -2,6 +2,7 @@
 title: <applet>
 slug: Web/HTML/Element/applet
 ---
+
 {{deprecated_header}}
 
 ## 概要

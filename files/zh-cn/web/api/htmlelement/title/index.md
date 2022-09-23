@@ -2,6 +2,7 @@
 title: HTMLElement.title
 slug: Web/API/HTMLElement/title
 ---
+
 {{ APIRef() }}
 
 **`HTMLElement.title`** 属性表示元素的 title。当鼠标移到节点上时，会以“工具提示”（tool tip）的弹出形式显示该属性的属性值文本。

@@ -2,6 +2,7 @@
 title: FormData.values()
 slug: Web/API/FormData/values
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 **`FormData.values()`** 方法返回一个允许遍历该对象中所有值的 {{jsxref("Iteration_protocols",'迭代器')}} 。这些值是 {{domxref("USVString")}} 或是{{domxref("Blob")}} 对象。

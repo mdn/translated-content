@@ -20,6 +20,7 @@ tags:
   - formats
 translation_of: Web/Media/Formats
 ---
+
 {{QuickLinksWithSubpages("/fr/docs/Web/Media")}}
 
 Depuis presque ses débuts, le web a inclus un support pour une certaine forme de présentation visuelle des médias. À l'origine, ces capacités étaient limitées et ont été développées de manière organique, les différents navigateurs trouvant leurs propres solutions aux problèmes liés à l'inclusion d'images fixes et vidéo sur le web. Le web moderne dispose de puissantes fonctionnalités pour prendre en charge la présentation et la manipulation des médias, avec plusieurs API liées aux médias prenant en charge divers types de contenu. En général, les formats de médias pris en charge par un navigateur sont entièrement laissés à la discrétion des créateurs du navigateur, ce qui peut compliquer le travail d'un développeur web.

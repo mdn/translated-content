@@ -2,6 +2,7 @@
 title: Worker.postMessage()
 slug: Web/API/Worker/postMessage
 ---
+
 {{APIRef("Web Workers API")}}
 
 {{domxref("Worker")}} 接口的 **`postMessage()`**方法向 worker 的内部作用域发送一个消息。这接受单个参数，这是要发送给 worker 的数据。数据可以是由[结构化克隆](/zh-CN/docs/Web/Guide/DOM/The_structured_clone_algorithm)算法处理的任何值或 JavaScript 对象，其包括循环引用。

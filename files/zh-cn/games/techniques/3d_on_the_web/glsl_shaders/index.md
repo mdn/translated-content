@@ -2,6 +2,7 @@
 title: GLSL 着色器
 slug: Games/Techniques/3D_on_the_web/GLSL_Shaders
 ---
+
 {{GamesSidebar}}
 
 使用 GLSL 的着色器 (shader), GLSL 是一门特殊的有着类似于 C 语言的语法，在图形管道 (graphic pipeline) 中直接可执行的 OpenGL 着色语言。着色器有两种类型 -- 顶点着色器 (Vertex Shader) 和片段着色器 (Fragment Shader). 前者是将形状转换到真实的 3D 绘制坐标中，后者是计算最终渲染的颜色和其他属性用的。

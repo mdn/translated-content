@@ -2,6 +2,7 @@
 title: 'FileReader: load event'
 slug: Web/API/FileReader/load_event
 ---
+
 {{APIRef}}
 
 当文件成功读取时，执行`load` 事件

@@ -2,6 +2,7 @@
 title: Element.setAttributeNode()
 slug: Web/API/Element/setAttributeNode
 ---
+
 {{ APIRef("DOM") }}
 
 `setAttributeNode()` 为指定的 Element 添加属性节点。

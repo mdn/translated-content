@@ -2,6 +2,7 @@
 title: CanvasCaptureMediaStream
 slug: Web/API/CanvasCaptureMediaStreamTrack
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 **`CanvasCaptureMediaStream`** 接口表示 {{domxref("MediaStream")}} 对 {{domxref("HTMLCanvasElement")}} 元素进行实时画面捕捉的内容。

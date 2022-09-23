@@ -2,6 +2,7 @@
 title: FileReader.readAsDataURL()
 slug: Web/API/FileReader/readAsDataURL
 ---
+
 {{APIRef("File API")}}
 
 `readAsDataURL` 方法会读取指定的 {{domxref("Blob")}} 或 {{domxref("File")}} 对象。读取操作完成的时候，{{domxref("FileReader.readyState","readyState")}} 会变成已完成`DONE`，并触发 {{event("loadend")}} 事件，同时 {{domxref("FileReader.result","result")}} 属性将包含一个`data:`URL 格式的字符串（base64 编码）以表示所读取文件的内容。

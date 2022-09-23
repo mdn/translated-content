@@ -2,6 +2,7 @@
 title: HTMLLabelElement
 slug: Web/API/HTMLLabelElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLLabelElement`** interface gives access to properties specific to {{HTMLElement("label")}} elements. It inherits from {{domxref("HTMLElement")}}.

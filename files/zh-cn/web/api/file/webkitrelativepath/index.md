@@ -2,6 +2,7 @@
 title: File.webkitRelativePath
 slug: Web/API/File/webkitRelativePath
 ---
+
 {{APIRef("File API")}}{{non-standard_header}}
 
 **`File.webkitRelativePath`** 是只读属性，包含 {{domxref("USVString")}}，它规定了文件的路径，相对于用户在 {{HTMLElement("input")}} 元素中选择的目录，这个元素设置了 {{htmlattrxref("webkitdirectory", "input")}} 属性。

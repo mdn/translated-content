@@ -8,6 +8,7 @@ tags:
   - système
 translation_of: Web/API/Notifications_API
 ---
+
 {{DefaultAPISidebar("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 L'API Notifications permet aux pages Web de contrôler l'affichage des notifications système de l'utilisateur final. Ceux-ci sont en dehors de la fenêtre du contexte de navigation de niveau supérieur, ils peuvent donc être affichés même lorsque l'utilisateur a changé d'onglet ou déplacé vers une autre application. L'API est conçue pour être compatible avec les systèmes de notification existants, sur différentes plates-formes.

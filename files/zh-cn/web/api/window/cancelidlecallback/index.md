@@ -2,6 +2,7 @@
 title: window.cancelIdleCallback()
 slug: Web/API/Window/cancelIdleCallback
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 ## 概述

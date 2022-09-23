@@ -2,6 +2,7 @@
 title: AudioBuffer.sampleRate
 slug: Web/API/AudioBuffer/sampleRate
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioBuffer") }} 接口的 `sampleRate` 属性返回一个以浮点数表示的采样率。该采样率是存储在缓冲区的 PCM 数据每秒钟的采样。

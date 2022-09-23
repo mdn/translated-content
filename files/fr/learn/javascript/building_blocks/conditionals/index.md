@@ -15,6 +15,7 @@ tags:
 translation_of: Learn/JavaScript/Building_blocks/conditionals
 original_slug: Apprendre/JavaScript/Building_blocks/conditionals
 ---
+
 {{LearnSidebar}}
 
 {{NextMenu("Apprendre/JavaScript/Building_blocks/Looping_code", "Apprendre/JavaScript/Building_blocks")}}

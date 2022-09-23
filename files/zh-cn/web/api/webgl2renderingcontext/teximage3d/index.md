@@ -2,6 +2,7 @@
 title: WebGL2RenderingContext.texImage3D()
 slug: Web/API/WebGL2RenderingContext/texImage3D
 ---
+
 {{APIRef("WebGL")}} {{SeeCompatTable}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.texImage3D()`**方法指定一个 3d（three-dimensional）纹理贴图。

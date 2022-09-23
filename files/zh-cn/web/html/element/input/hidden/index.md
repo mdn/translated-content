@@ -2,6 +2,7 @@
 title: <input type="hidden">
 slug: Web/HTML/Element/Input/hidden
 ---
+
 {{HTMLRef}}
 
 **`"hidden"`** 类型的 `{{HTMLElement("input")}}` 元素允许 Web 开发者存放一些用户不可见、不可改的数据，在用户提交表单时，这些数据会一并发送出。比如，正被请求或编辑的内容的 ID，或是一个唯一的安全令牌。这些隐藏的 [`<input>`](/zh-CN/docs/Web/HTML/Element/input)元素在渲染完成的页面中完全不可见，而且没有方法可以使它重新变为可见。

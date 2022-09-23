@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/log1p
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/log1p
 ---
+
 {{JSRef}}
 
 La fonction **`Math.log1p()`** renvoie le logarithme népérien (en base {{jsxref("Math/E","e")}}) d'un nombre +1, donné par la formule :

@@ -2,6 +2,7 @@
 title: NamedNodeMap
 slug: Web/API/NamedNodeMap
 ---
+
 {{APIRef}}
 
 **`NamedNodeMap`** 接口表示属性节点 {{domxref("Attr")}} 对象的集合。尽管在 `NamedNodeMap` 里面的对象可以像数组一样通过索引来访问，但是它和 {{ domxref("NodeList") }} 不一样，对象的顺序没有指定。

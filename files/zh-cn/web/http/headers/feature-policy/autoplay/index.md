@@ -2,6 +2,7 @@
 title: 'Feature-Policy: autoplay'
 slug: Web/HTTP/Headers/Feature-Policy/autoplay
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header `autoplay` directive controls whether the current document is allowed to autoplay media requested through the {{domxref("HTMLMediaElement")}} interface. When this policy is enabled and there were no user gestures, the {{domxref("Promise")}} returned by {{domxref("HTMLMediaElement.play()")}} will reject with a `DOMException`. The {{htmlattrxref("autoplay", "audio")}} attribute on {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements will be ignored.

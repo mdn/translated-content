@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.fill()
 slug: Web/API/CanvasRenderingContext2D/fill
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.fill()`** 是 Canvas 2D API 根据当前的填充样式，填充当前或已存在的路径的方法。采取非零环绕或者奇偶环绕规则。

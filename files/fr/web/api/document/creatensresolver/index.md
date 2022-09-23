@@ -8,6 +8,7 @@ tags:
   - XPath
 translation_of: Web/API/Document/createNSResolver
 ---
+
 {{ ApiRef("DOM") }}
 
 Crée un `XPathNSResolver` qui résout les espaces de noms en respectant les définitions dans la portée pour un noeud spécifié.

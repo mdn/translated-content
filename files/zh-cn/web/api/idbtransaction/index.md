@@ -2,6 +2,7 @@
 title: IDBTransaction
 slug: Web/API/IDBTransaction
 ---
+
 {{APIRef("IndexedDB")}}
 
 `IDBTransacation`接口由[IndexedDB API](/zh-CN/docs/IndexedDB)提供，异步事务使用数据库中的事件对象属性。所有的读取和写入数据均在事务中完成。由{{domxref("IDBDatabase")}}发起事务，通过{{domxref("IDBTransaction")}} 来设置事务的模式（例如：是否只读`readonly`或读写`readwrite`），以及通过{{domxref("IDBObjectStore")}}来发起一个请求。同时你也可以使用它来中止事务。

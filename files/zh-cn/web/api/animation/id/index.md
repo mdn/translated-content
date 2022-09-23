@@ -2,6 +2,7 @@
 title: Animation.id
 slug: Web/API/Animation/id
 ---
+
 {{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 
 [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API) 的 **`Animation.id`** 属性可返回或设置用于识别某个动画的唯一标识。

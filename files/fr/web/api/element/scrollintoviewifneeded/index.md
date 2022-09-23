@@ -8,6 +8,7 @@ tags:
   - Méthodes
 translation_of: Web/API/Element/scrollIntoViewIfNeeded
 ---
+
 {{APIRef("DOM")}}{{Non-standard_header}}
 
 La méthode **`Element.scrollIntoViewIfNeeded()`** fait défiler l'élément en cours dans la zone visible de la fenêtre du navigateur s'il n'y est pas déjà. Si l'élément est déjà dans la zone visible de la fenêtre du navigateur, aucun défilement n'a lieu. Cette méthode est une variante propriétaire de la méthode standard [`Element.scrollIntoView()`](/fr/docs/Web/API/Element/scrollIntoView).

@@ -40,7 +40,7 @@ El nuevo [`Elemento`](https://developer.mozilla.org/en-US/docs/Web/API/Element).
 
 ## Ejemplo
 
-El código siguiente crea un elemento \<div> nuevo en el namespace [XHTML](/es/docs/XHTML "XHTML") y lo agrega al elemento vbox. Aunque no es un documento [XUL](/es/docs/XUL "XUL") extremamente útil esto demuestra el uso de los elementos de dos namespaces distintos dentro de un solo documento:
+El código siguiente crea un elemento \<div> nuevo en el namespace [XHTML](/es/docs/XHTML) y lo agrega al elemento vbox. Aunque no es un documento [XUL](/es/docs/XUL) extremamente útil esto demuestra el uso de los elementos de dos namespaces distintos dentro de un solo documento:
 
 ```xml
 <?xml version="1.0"?>

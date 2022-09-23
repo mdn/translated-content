@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.disable()
 slug: Web/API/WebGLRenderingContext/disable
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.disable()`** method of the [WebGL API](/zh-CN/docs/Web/API/WebGL_API) disables specific WebGL capabilities for this context.

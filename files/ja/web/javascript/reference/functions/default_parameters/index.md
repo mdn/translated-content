@@ -2,6 +2,7 @@
 title: デフォルト引数
 slug: Web/JavaScript/Reference/Functions/Default_parameters
 ---
+
 {{jsSidebar("Functions")}}
 
 **関数のデフォルト引数**は、関数に値が渡されない場合や `undefined` が渡された場合に、デフォルト値で初期化される形式上の引数を指定することができます。

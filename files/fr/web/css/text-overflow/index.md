@@ -3,6 +3,7 @@ title: text-overflow
 slug: Web/CSS/text-overflow
 translation_of: Web/CSS/text-overflow
 ---
+
 {{CSSRef}}
 
 La propriété **`text-overflow`** définit la façon dont le contenu textuel qui dépasse d'une boîte est signalé pour les utilisateurs. Le texte peut être rogné (_clipping_), afficher une ellipse ('`…`', `U+2026 Horizontal Ellipsis`) ou afficher une chaîne de caractères choisie.

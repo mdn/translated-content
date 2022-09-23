@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/noembed
 ---
+
 {{HTMLRef}}{{Non-standard_header}}{{deprecated_header}}
 
 L'élément **`<noembed>`** est une façon obsolète et non standardisée de fournir une alternative de contenu pour les navigateurs ne supportant pas l'élément {{HTMLElement("embed")}} ou des [catégories de contenu](/fr/docs/Web/HTML/Catégorie_de_contenu) qu'un auteur aimerait utiliser.

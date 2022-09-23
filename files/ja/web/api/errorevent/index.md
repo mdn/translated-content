@@ -2,6 +2,7 @@
 title: ErrorEvent
 slug: Web/API/ErrorEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`ErrorEvent`** インターフェイスは、スクリプトまたはファイルのエラーに関連する情報を提供するイベントを表します。

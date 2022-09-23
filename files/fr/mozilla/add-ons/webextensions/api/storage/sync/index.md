@@ -4,6 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage/sync
 translation_of: Mozilla/Add-ons/WebExtensions/API/storage/sync
 browser-compat: webextensions.api.storage.sync
 ---
+
 {{AddonSidebar()}}
 
 Représente la zone de stockage `sync` (pour la synchronisation). Les éléments stockés dans le stockage `sync` sont synchronisés par le navigateur et disponibles sur toutes les instances de ce navigateur auxquelles l'utilisatrice ou l'utilisateur est connecté (par exemple via la synchronisation Firefox ou un compte Google), sur différents appareils.

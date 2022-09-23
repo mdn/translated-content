@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/MIN_VALUE
 ---
+
 {{JSRef}}
 
 La propriété **`Number.MIN_VALUE`** représente la plus petite valeur numérique positive qu'il est possible de représenter en JavaScript.

@@ -2,6 +2,7 @@
 title: <length>
 slug: Web/CSS/length
 ---
+
 {{CSSRef}}
 
 长度 **`<length>`** 是用于表示距离尺寸的 [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)。许多 CSS 属性会用到长度，比如 {{Cssxref("width")}}、{{Cssxref("margin")}}、{{Cssxref("padding")}}、{{Cssxref("font-size")}}、{{Cssxref("border-width")}} 和 {{Cssxref("text-shadow")}}。

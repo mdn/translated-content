@@ -2,6 +2,7 @@
 title: CacheStorage.has()
 slug: Web/API/CacheStorage/has
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 {{domxref("CacheStorage")}} 对象的 **`has()`**方法返回一个 {{jsxref("Promise")}} 对象，当 {{domxref("Cache")}} 对象有 `cacheName` 时被处理为 `true` 。

@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getFloat32
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/getFloat32
 ---
+
 {{JSRef}}
 
 La méthode **`getFloat32()`** permet de lire un nombre flottant signé sur 32 bits à l'octet donné par rapport au début de {{jsxref("DataView")}}.

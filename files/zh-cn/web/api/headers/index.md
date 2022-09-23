@@ -2,6 +2,7 @@
 title: Headers
 slug: Web/API/Headers
 ---
+
 {{ APIRef("Fetch") }}
 
 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 的 **Headers** 接口允许您对 HTTP 请求和响应头执行各种操作。 这些操作包括检索，设置，添加和删除。 一个 Headers 对象具有关联的头列表，它最初为空，由零个或多个键值对组成。你可以使用 {{domxref("Headers.append","append()")}} 方法添加 之类的方法添加到此 (参见 [示例](#示例))。在该接口的所有方法中，标题名称由不区分大小写的字节序列匹配。

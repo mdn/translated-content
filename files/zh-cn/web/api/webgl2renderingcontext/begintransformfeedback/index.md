@@ -2,6 +2,7 @@
 title: WebGL2RenderingContext.beginTransformFeedback()
 slug: Web/API/WebGL2RenderingContext/beginTransformFeedback
 ---
+
 {{APIRef("WebGL")}} {{SeeCompatTable}}
 
 [WebGL 2 API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGL2RenderingContext.beginTransformFeedback()`** 方法开始一个变换回传（Transform Feedback）操作。

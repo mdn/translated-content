@@ -12,6 +12,7 @@ tags:
   - keys
 translation_of: Web/API/FormData/keys
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 La méthode `FormData.keys()` renvoie une {{jsxref("Les_protocoles_iteration", "itération")}} permettant de parcourir toutes les clés contenues dans cet objet. Les clés sont des objets {{domxref("USVString")}}.

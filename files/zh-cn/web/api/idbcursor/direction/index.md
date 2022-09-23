@@ -2,6 +2,7 @@
 title: IDBCursor.direction
 slug: Web/API/IDBCursor/direction
 ---
+
 {{ APIRef("IDBCursor") }}
 
 {{domxref("IDBCursor")}} 的方向属性是一个 {{domxref("DOMString")}} ，表示游标遍历的方向， (比如可以通过 {{domxref("IDBObjectStore.openCursor")}} 设置). 查看下文中[取值](#取值)章节获取可取值。

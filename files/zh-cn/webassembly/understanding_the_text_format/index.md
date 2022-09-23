@@ -2,6 +2,7 @@
 title: 理解 WebAssembly 文本格式
 slug: WebAssembly/Understanding_the_text_format
 ---
+
 {{WebAssemblySidebar}}
 
 为了能够让人类阅读和编辑 WebAssembly，wasm 二进制格式提供了相应的文本表示。这是一种用来在文本编辑器、浏览器开发者工具等工具中显示的中间形式。本文用基本语法的方式解释了这种文本表示是如何工作的，以及它是如何与它表示的底层字节码，及在 JavaScript 中表示 wasm 的封装对象关联起来的。

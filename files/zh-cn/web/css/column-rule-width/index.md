@@ -2,6 +2,7 @@
 title: column-rule-width
 slug: Web/CSS/column-rule-width
 ---
+
 {{ CSSRef("CSS Multi-columns") }}
 
 ## Summary

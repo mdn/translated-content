@@ -2,6 +2,7 @@
 title: Tk
 slug: Web/HTTP/Headers/Tk
 ---
+
 {{HTTPSidebar}}
 
 **`Tk`** 响应首部显示了对相应请求的跟踪情况。

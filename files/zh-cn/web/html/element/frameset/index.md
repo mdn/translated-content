@@ -2,6 +2,7 @@
 title: <frameset>
 slug: Web/HTML/Element/frameset
 ---
+
 {{Deprecated_header}}
 
 ## 概述

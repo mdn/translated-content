@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/name
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/name
 ---
+
 {{JSRef}}
 
 La propriété **`TypedArray.name`** est une chaîne de caractères représentant le nom du constructeur du tableau typé.

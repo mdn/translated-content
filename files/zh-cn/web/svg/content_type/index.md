@@ -2,6 +2,7 @@
 title: Content type
 slug: Web/SVG/Content_type
 ---
+
 SVG 中使用了许多数据类型。本文列出了这些数据类型以及它们的语法和用途的描述。
 
 ## 角度

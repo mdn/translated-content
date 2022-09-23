@@ -2,6 +2,7 @@
 title: Attr.namespaceURI
 slug: Web/API/Attr/namespaceURI
 ---
+
 {{APIRef("DOM")}}
 
 **`Attr.namespaceURI`** 只读属性返回属性的命名空间 URI，如果该元素不在命名空间中，则返回 null。

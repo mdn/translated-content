@@ -2,6 +2,7 @@
 title: SVGGeometryElement.getPointAtLength()
 slug: Web/API/SVGGeometryElement/getPointAtLength
 ---
+
 {{APIRef("SVG")}}
 
 **`SVGGeometryElement.getPointAtLength()`** 方法沿路径返回给定距离的点。

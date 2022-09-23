@@ -2,6 +2,7 @@
 title: Intl.DateTimeFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions
 ---
+
 {{JSRef}}
 
 **`Intl.DateTimeFormat.prototype.resolvedOptions()`** メソッドは、この {{jsxref("Intl/DateTimeFormat")}} オブジェクトの初期化時に計算されたロケールや日付と時刻の整形オプションを反映したプロパティを持つ新しいオブジェクトを返します。

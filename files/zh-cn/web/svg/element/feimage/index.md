@@ -2,6 +2,7 @@
 title: feImage
 slug: Web/SVG/Element/feImage
 ---
+
 {{SVGRef}}
 
 `feImage 滤镜从外部来源取得图像数据，并提供像素数据作为输出（意味着如果外部来源是一个 SVG 图像，这个图像将被栅格化。）`

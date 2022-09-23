@@ -2,6 +2,7 @@
 title: '::-webkit-progress-inner-element'
 slug: Web/CSS/::-webkit-progress-inner-element
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **`::-webkit-progress-inner-element`** [CSS](/zh-CN/docs/Web/CSS) 伪元素选择了 {{HTMLElement("progress")}} 元素。他是 {{cssxref("::-webkit-progress-bar")}} 伪元素的父元素。

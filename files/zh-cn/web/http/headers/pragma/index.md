@@ -2,6 +2,7 @@
 title: Pragma
 slug: Web/HTTP/Headers/Pragma
 ---
+
 {{HTTPSidebar}}
 
 **`Pragma`** 是一个在 HTTP/1.0 中规定的通用首部，这个首部的效果依赖于不同的实现，所以在“请求 - 响应”链中可能会有不同的效果。它用来向后兼容只支持 HTTP/1.0 协议的缓存服务器，那时候 HTTP/1.1 协议中的 Cache-Control 还没有出来。

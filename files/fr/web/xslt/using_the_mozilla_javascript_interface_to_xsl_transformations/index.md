@@ -7,6 +7,7 @@ translation_of: Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transform
 original_slug: >-
   Web/XSLT/Utilisation_de_l'interface_JavaScript_de_Mozilla_pour_les_transformations_XSL
 ---
+
 Ce document décrit l'interface JavaScript pour le moteur de traitement XSLT (TransforMiiX) de Mozilla 1.2 et supérieur.
 
 ### Création de XSLTProcessor

@@ -2,6 +2,7 @@
 title: 'InternalError: too much recursion'
 slug: Web/JavaScript/Reference/Errors/Too_much_recursion
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外である "too much recursion" または "Maximum call stack size exceeded" は、関数の呼び出しが多すぎる場合や、関数に基礎ケースがない場合に発生します。

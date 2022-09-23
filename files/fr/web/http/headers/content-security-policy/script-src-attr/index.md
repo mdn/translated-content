@@ -4,6 +4,7 @@ slug: Web/HTTP/Headers/Content-Security-Policy/script-src-attr
 translation_of: Web/HTTP/Headers/Content-Security-Policy/script-src-attr
 browser-compat: http.headers.csp.Content-Security-Policy.script-src-attr
 ---
+
 {{HTTPSidebar}}
 
 La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`script-src-attr`** indique les sources valides pour les gestionnaires d'évènement déclarés dans le document HTML. Cela inclut les scripts déclarés à même les attributs comme `onclick`, mais pas les URL chargées directement par des éléments [`<script>`](/fr/docs/Web/HTML/Element/script) (voir [`script-src-elem`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-elem) pour ces derniers).

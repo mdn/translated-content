@@ -2,6 +2,7 @@
 title: 逻辑空赋值 (??=)
 slug: Web/JavaScript/Reference/Operators/Logical_nullish_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 逻辑空赋值运算符 (`x ??= y`) 仅在 `x` 是 {{Glossary("nullish")}} (`null` 或 `undefined`) 时对其赋值。

@@ -2,6 +2,7 @@
 title: Array.prototype.reduce()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 ---
+
 {{JSRef}}
 
 **`reduce()`** メソッドは、配列のそれぞれの要素に対して、順番通りに、ユーザーが提供した「縮小」コールバック関数を呼び出します。その際、直前の要素における計算結果の返値を渡します。配列のすべての要素に対して縮小関数を実行した結果が単一の値が最終結果になります。

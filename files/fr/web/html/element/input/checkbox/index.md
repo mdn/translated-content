@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/input/checkbox
 ---
+
 {{HTMLRef}}
 
 Les éléments {{htmlelement("input")}} de type **`checkbox`** sont affichés sous la forme de boîtes à cocher qui sont cochées lorsqu'elles sont activées. Elles permettent de sélectionner une ou plusieurs valeurs dans un formulaire.

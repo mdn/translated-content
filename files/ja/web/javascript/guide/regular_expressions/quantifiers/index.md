@@ -2,6 +2,7 @@
 title: 数量詞
 slug: Web/JavaScript/Guide/Regular_Expressions/Quantifiers
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 数量詞は、一致させる文字や式の数を示します。
@@ -10,7 +11,7 @@ slug: Web/JavaScript/Guide/Regular_Expressions/Quantifiers
 
 ## 種類
 
-> **Note:** **注:** 以下の表の中で、*項目*は単一の文字だけでなく、[文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)、[Unicode プロパティエスケープ](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)、[グループと範囲](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)を示すこともあります。
+> **Note:** 以下の表の中で、*項目*は単一の文字だけでなく、[文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)、[Unicode プロパティエスケープ](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)、[グループと範囲](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)を示すこともあります。
 
 <table class="standard-table">
   <thead>

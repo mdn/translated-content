@@ -2,6 +2,7 @@
 title: MediaList
 slug: Web/API/MediaList
 ---
+
 {{APIRef("CSSOM")}}
 
 **`MediaList`** 接口表示样式表的媒体查询，例如使用了 `media` 属性的{{htmlelement("link")}} 元素。

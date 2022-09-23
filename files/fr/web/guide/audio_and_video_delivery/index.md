@@ -3,6 +3,7 @@ title: Intégration audio et vidéo
 slug: Web/Guide/Audio_and_video_delivery
 translation_of: Web/Guide/Audio_and_video_delivery
 ---
+
 On peut distribuer de l'audio et de la vidéo sur le web de plusieurs manières, du fichier média statique au <i lang="en">live stream</i> (flux en direct) adaptatif. Cet article se veut être le point de départ pour explorer les différents mécanismes de diffusion de média sur le web et la compatiblité avec les navigateurs populaires.
 
 ## Les éléments audio et vidéo

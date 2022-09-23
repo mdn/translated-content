@@ -13,6 +13,7 @@ tags:
   - getAll
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/getAll
 ---
+
 {{AddonSidebar()}}
 
 La méthode **`getAll()`** de l'API {{WebExtAPIRef("cookies")}} récupère tous les cookies d'un seul cookie store qui correspondent aux informations fournies.

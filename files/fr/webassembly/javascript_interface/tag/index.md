@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag
 browser-compat: javascript.builtins.WebAssembly.Tag
 ---
+
 {{JSRef}}
 
 L'objet **`WebAssembly.Tag`** définit un _type_ d'exception WebAssembly qui peut être levée depuis ou vers du code WebAssembly.

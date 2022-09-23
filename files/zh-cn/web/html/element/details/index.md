@@ -2,6 +2,7 @@
 title: <details>：详细信息展现元素
 slug: Web/HTML/Element/details
 ---
+
 {{HTMLRef}}
 
 **HTML `<details>`元素**可创建一个挂件，仅在被切换成展开状态时，它才会显示内含的信息。{{HTMLElement("summary")}} 元素可为该部件提供概要或者标签。

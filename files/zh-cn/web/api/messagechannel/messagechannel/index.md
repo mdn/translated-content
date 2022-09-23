@@ -2,6 +2,7 @@
 title: MessageChannel()
 slug: Web/API/MessageChannel/MessageChannel
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("MessageChannel")}} 接口的 `MessageChannel()` 构造函数返回一个新的 {{domxref("MessageChannel")}} 对象，返回的对象中包含两个 {{domxref("MessagePort")}} 对象。

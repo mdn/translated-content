@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/40
 translation_of: Mozilla/Firefox/Releases/40
 original_slug: Mozilla/Firefox/Versions/40
 ---
+
 {{FirefoxSidebar}}
 
 ## Changements pour les développeurs Web

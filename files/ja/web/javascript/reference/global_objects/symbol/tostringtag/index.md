@@ -2,6 +2,7 @@
 title: Symbol.toStringTag
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
 ---
+
 {{JSRef}}
 
 **`Symbol.toStringTag`** ウェルノウンシンボルは、オブジェクトを説明する既定の文字列の作成に使用される文字列値のプロパティです。 {{jsxref("Object.prototype.toString()")}} メソッドによって内部的にアクセスされます。

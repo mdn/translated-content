@@ -2,6 +2,7 @@
 title: MediaDevices.getUserMedia()
 slug: Web/API/MediaDevices/getUserMedia
 ---
+
 {{APIRef("WebRTC")}}
 
 **`MediaDevices.getUserMedia()`** 会提示用户给予使用媒体输入的许可，媒体输入会产生一个{{domxref("MediaStream")}}，里面包含了请求的媒体类型的轨道。此流可以包含一个视频轨道（来自硬件或者虚拟视频源，比如相机、视频采集设备和屏幕共享服务等等）、一个音频轨道（同样来自硬件或虚拟音频源，比如麦克风、A/D 转换器等等），也可能是其它轨道类型。

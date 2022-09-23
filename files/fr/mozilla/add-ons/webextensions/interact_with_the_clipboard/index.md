@@ -4,6 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
 translation_of: Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
 original_slug: Mozilla/Add-ons/WebExtensions/interagir_avec_le_presse_papier
 ---
+
 {{AddonSidebar}}
 
 La gestion du presse-papier avec les extensions s'effectue avec l'objet [`navigator.clipboard`](/fr/docs/Web/API/Clipboard) (elle s'effectuait avant avec la méthode [`document.execCommand()`](/fr/docs/Web/API/Document/execCommand) qui est désormais dépréciée).

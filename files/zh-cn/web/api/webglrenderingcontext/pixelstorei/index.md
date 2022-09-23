@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.pixelStorei()
 slug: Web/API/WebGLRenderingContext/pixelStorei
 ---
+
 {{APIRef("WebGL")}}
 
 **`WebGLRenderingContext.pixelStorei()`** 是 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 中用于图像预处理的函数。

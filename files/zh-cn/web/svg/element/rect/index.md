@@ -2,6 +2,7 @@
 title: rect
 slug: Web/SVG/Element/rect
 ---
+
 {{SVGRef}}
 
 `rect`元素是 SVG 的一个基本形状，用来创建矩形，基于一个角位置以及它的宽和高。它还可以用来创建圆角矩形。

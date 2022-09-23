@@ -2,6 +2,7 @@
 title: mask
 slug: Web/SVG/Attribute/mask
 ---
+
 « [SVG 属性参考主页](/zh-CN/SVG/Attribute)
 
 `mask`属性绑定的元素将应用给定的{{ SVGElement("mask") }}元素。

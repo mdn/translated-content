@@ -15,7 +15,7 @@ Devuelve el estilo computado del elemento. Los estilos computados representan lo
 var style = window.getComputedStyle(element, pseudoElt);
 ```
 
-- `element` es un [element](/es/DOM/element "en/DOM/element").
+- `element` es un [element](/es/DOM/element).
 - `pseudoElt` es una cadena que especifica el pseudo elemento a tratar. Debería ser una cadena vacia para la mayoría de los elementos element.
 - `style` es un objeto del tipo [`CSSStyleDeclaration`](http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSview-getComputedStyle) .
 
@@ -28,7 +28,7 @@ var style = document.defaultView.getComputedStyle(element, pseudoElt);
 
 ### Descripción
 
-El objeto devuelto es del mismo tipo que el objeto devuelto por la propiedad [style](/es/DOM/element.style "es/DOM/element.style") del elemento, sin embargo ambos objetos tienen un propósito distinto. El objeto devuelto por `getComputedStyle` es de sólo lectura y puede usarse para inspeccionar el estilo del elemento (incluyendo los estilos de una etiqueta \<style> o una hoja de estlo). El objeto `elt.style` debería usarse para establecerel estilo de un elemento específico.
+El objeto devuelto es del mismo tipo que el objeto devuelto por la propiedad [style](/es/DOM/element.style) del elemento, sin embargo ambos objetos tienen un propósito distinto. El objeto devuelto por `getComputedStyle` es de sólo lectura y puede usarse para inspeccionar el estilo del elemento (incluyendo los estilos de una etiqueta \<style> o una hoja de estlo). El objeto `elt.style` debería usarse para establecerel estilo de un elemento específico.
 
 El primer argumento debe ser un Element, no un nodo (como en #texto Node).
 

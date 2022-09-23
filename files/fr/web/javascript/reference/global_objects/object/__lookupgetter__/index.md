@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/lookupGetter
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 La méthode **`__lookupGetter__`** renvoie la fonction liée comme accesseur d'une propriété donnée.

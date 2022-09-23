@@ -9,7 +9,9 @@ El caso de uso común de este código de estado es el resultado de una solicitud
 
 ## Status
 
-    201 Created
+```
+201 Created
+```
 
 ## Especificaciones
 

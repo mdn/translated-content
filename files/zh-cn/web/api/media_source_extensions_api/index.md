@@ -2,6 +2,7 @@
 title: Media Source Extensions API
 slug: Web/API/Media_Source_Extensions_API
 ---
+
 {{DefaultAPISidebar("Media Source Extensions")}}{{ SeeCompatTable() }}
 
 媒体源扩展 API（MSE）提供了实现无插件且基于 Web 的流媒体的功能。使用 MSE，媒体串流能够通过 JavaScript 创建，并且能通过使用 {{htmlelement("audio")}} 和 {{htmlelement("video")}} 元素进行播放。

@@ -1,11 +1,6 @@
 ---
 title: 함수
 slug: Glossary/Function
-tags:
-  - 익명함수
-  - 즉시 실행 함수
-  - 함수
-translation_of: Glossary/Function
 ---
 **함수**는 다른 코드에서 또는 자신에 의해 호출되거나 함수 레퍼런스를 저장한 {{Glossary("variable", "변수")}}에 의해 호출될 수 있는 코드조각이다. 함수가 호출될 때 함수의 입력으로 {{Glossary("Argument", "인수")}} 가 전달되고 함수는 선택적으로 출력값을 반환할 수 있다. 또한 {{glossary("JavaScript")}}에서 함수는 {{glossary("object", "객체")}}가 될 수도 있다.
 

@@ -2,6 +2,7 @@
 title: AudioContext.createScriptProcessor()
 slug: Web/API/BaseAudioContext/createScriptProcessor
 ---
+
 {{APIRef("Web Audio API")}}{{deprecated_header}}
 
 {{ domxref("AudioContext") }} 接口的`createScriptProcessor()` 方法创建一个{{domxref("ScriptProcessorNode")}} 用于通过 JavaScript 直接处理音频。

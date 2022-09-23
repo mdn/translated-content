@@ -2,6 +2,7 @@
 title: 101 Switching Protocol
 slug: Web/HTTP/Status/101
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`101 Switching Protocol`**（协议切换）状态码表示服务器应客户端升级协议的请求（{{HTTPHeader("Upgrade")}}请求头）正在切换协议。

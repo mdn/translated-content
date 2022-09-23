@@ -2,6 +2,7 @@
 title: 非同期関数
 slug: Web/JavaScript/Reference/Statements/async_function
 ---
+
 {{jsSidebar("Statements")}}
 
 非同期関数は `async` キーワードで宣言され、その中で `await` キーワードを使うことができます。 `async` および `await` キーワードを使用することで、プロミスベースの非同期の動作を、プロミスチェーンを明示的に構成する必要なく、よりすっきりとした方法で書くことができます。

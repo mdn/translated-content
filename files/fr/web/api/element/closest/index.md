@@ -4,6 +4,7 @@ slug: Web/API/Element/closest
 translation_of: Web/API/Element/closest
 browser-compat: api.Element.closest
 ---
+
 {{APIRef('DOM')}}
 
 La méthode **`closest()`** traverse [l'élément](/fr/docs/Web/API/Element) courant et ses parents (en direction de la racine) jusqu'à trouver un nœud qui correspond aux sélecteurs exprimés par la chaîne de caractères passée en argument. Elle renverra l'élément ou l'ancêtre le plus proche qui correspond. Si aucun élément ne correspond, la méthode renvoie `null`.

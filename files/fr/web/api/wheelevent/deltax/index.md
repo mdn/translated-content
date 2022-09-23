@@ -11,6 +11,7 @@ tags:
   - WheelEvent
 translation_of: Web/API/WheelEvent/deltaX
 ---
+
 {{APIRef("DOM Events")}}
 
 La propriété en lecture seule **`WheelEvent.deltaX`** est un `double` représentant la quantité de défilement horizontal dans l'unité {{domxref("WheelEvent.deltaMode")}}.

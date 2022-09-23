@@ -10,6 +10,7 @@ tags:
   - rel
 translation_of: Web/HTML/Attributes/rel
 ---
+
 {{HTMLSidebar}}
 
 L'attribut **`rel`** définit la relation entre une ressource liée et le document actuel. Valable sur [`<link>`](/fr/docs/Web/HTML/Element/link), [`<a>`](/fr/docs/Web/HTML/Element/a), [`<area>`](/fr/docs/Web/HTML/Element/area), et [`<form>`](/fr/docs/Web/HTML/Element/Form), les valeurs supportées dépendent de l'élément sur lequel se trouve l'attribut.

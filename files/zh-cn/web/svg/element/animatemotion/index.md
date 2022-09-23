@@ -2,6 +2,7 @@
 title: animateMotion
 slug: Web/SVG/Element/animateMotion
 ---
+
 {{SVGRef}}
 
 `<animateMotion>` 元素定义了一个元素如何沿着运动路径进行移动。

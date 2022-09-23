@@ -2,6 +2,7 @@
 title: 'SyntaxError: invalid regular expression flag "x"'
 slug: Web/JavaScript/Reference/Errors/Bad_regexp_flag
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "invalid regular expression flag" は、正規表現リテラルにおいて 2 番目のスラッシュの後に定義されたフラグが、 `g`, `i`, `m`, `s`, `u`, `y` のどれでもないときに発生します。

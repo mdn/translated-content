@@ -2,6 +2,7 @@
 title: デクリメント (--)
 slug: Web/JavaScript/Reference/Operators/Decrement
 ---
+
 {{jsSidebar("Operators")}}
 
 デクリメント演算子 (`--`) は、オペランドをデクリメント (1 を減算) して値を返します。

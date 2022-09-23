@@ -2,6 +2,7 @@
 title: Animation.cancel()
 slug: Web/API/Animation/cancel
 ---
+
 {{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
 {{domxref("Animation")}} 接口的 Web 动画 API 的 **`cancel()`** 方法将清除此动画造成的所有 {{domxref("KeyframeEffect")}}，并中止其播放。

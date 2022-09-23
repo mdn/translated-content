@@ -2,6 +2,7 @@
 title: Element.attachShadow()
 slug: Web/API/Element/attachShadow
 ---
+
 {{APIRef('Shadow DOM')}}
 
 **`Element.attachShadow()`** 方法给指定的元素挂载一个 Shadow DOM，并且返回对 [`ShadowRoot`](/zh-CN/docs/Web/API/ShadowRoot) 的引用。

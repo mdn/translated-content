@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.lineTo()
 slug: Web/API/CanvasRenderingContext2D/lineTo
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.lineTo()`** 是 Canvas 2D API 使用直线连接子路径的终点到 x，y 坐标的方法（并不会真正地绘制）。

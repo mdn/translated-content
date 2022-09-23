@@ -2,6 +2,7 @@
 title: HTMLHyperlinkElementUtils.search
 slug: Web/API/HTMLAnchorElement/search
 ---
+
 {{ApiRef("URL API")}}
 
 **`HTMLHyperlinkElementUtils.search`** 属性是一个搜索字符串，也叫做查询字符串， 它是一个 {{domxref("USVString")}} ，包含 `'?'` 和随后的 URL 参数。

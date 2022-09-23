@@ -2,6 +2,7 @@
 title: HTMLMediaElement.crossOrigin
 slug: Web/API/HTMLMediaElement/crossOrigin
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.crossOrigin`** 属性是当前图片元素的跨域资源共享 (CORS) 设置，详情可参考 [CORS](/zh-CN/docs/HTML/CORS_settings_attributes) 设置。

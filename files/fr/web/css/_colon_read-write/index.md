@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:read-write
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:read-write`** permet de cibler un élément lorsque celui-ci peut être édité par l'utilisateur (par exemple les champs texte d'un formulaire ou les éléments {{HTMLElement("textarea")}}).

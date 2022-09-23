@@ -2,6 +2,7 @@
 title: ErrorEvent
 slug: Web/API/ErrorEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`ErrorEvent`** 事件对象在脚本发生错误时产生，它可以提供发生错误的脚本文件的文件名，以及发生错误时所在的行号等信息。

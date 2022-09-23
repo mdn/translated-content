@@ -2,6 +2,7 @@
 title: IDBCursor
 slug: Web/API/IDBCursor
 ---
+
 {{APIRef("IndexedDB")}}
 
 [IndexedDB API](/zh-CN/docs/IndexedDB) 中的 `IDBCursor` 接口表示一个游标，用于遍历或迭代数据库中的多条记录。

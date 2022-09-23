@@ -2,6 +2,7 @@
 title: manifest.json
 slug: Mozilla/Add-ons/WebExtensions/manifest.json
 ---
+
 {{AddonSidebar}}
 
 > **备注：** 本文描述的是适用于 WebExtensions 的 manifest.json。若您正在寻找适用于 PWA 的 manifest.json 的有关信息，请参考这篇文章：[Web App Manifest](/zh-CN/docs/Web/Manifest)。

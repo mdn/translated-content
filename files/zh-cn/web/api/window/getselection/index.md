@@ -2,6 +2,7 @@
 title: Window.getSelection
 slug: Web/API/Window/getSelection
 ---
+
 {{ ApiRef() }}
 
 返回一个 {{domxref("Selection")}} 对象，表示用户选择的文本范围或光标的当前位置。

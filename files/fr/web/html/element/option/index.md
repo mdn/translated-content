@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/option
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<option>`**, utilisé dans un formulaire, permet de représenter un contrôle au sein d'un élément {{HTMLElement("select")}}, {{HTMLElement("optgroup")}} ou {{HTMLElement("datalist")}}. Cet élément peut donc représenter des éléments d'un menu dans un document HTML.

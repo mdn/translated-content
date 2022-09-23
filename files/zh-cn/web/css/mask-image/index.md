@@ -2,6 +2,7 @@
 title: mask-image
 slug: Web/CSS/mask-image
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## 概要

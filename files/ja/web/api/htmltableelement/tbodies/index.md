@@ -2,6 +2,7 @@
 title: HTMLTableElement.tBodies
 slug: Web/API/HTMLTableElement/tBodies
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLTableElement.tBodies`** は読み取り専用のプロパティで、生きた {{domxref("HTMLCollection")}} で {{htmlElement("table")}} の本体を返します。

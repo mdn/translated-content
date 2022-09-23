@@ -2,6 +2,7 @@
 title: PromiseRejectionEvent.PromiseRejectionEvent()
 slug: Web/API/PromiseRejectionEvent/PromiseRejectionEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`PromiseRejectionEvent()`** 构造器返回一个新创建的 {{domxref("PromiseRejectionEvent")}}，代表一个 JavaScript {{jsxref("Promise")}}被 rejected 时触发的事件。

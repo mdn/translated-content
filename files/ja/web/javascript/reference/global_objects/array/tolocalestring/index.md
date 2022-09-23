@@ -2,6 +2,7 @@
 title: Array.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 ---
+
 {{JSRef}}
 
 **`toLocaleString()`** メソッドは、配列の要素を表す文字列を返します。配列の要素は、それぞれの `toLocaleString` メソッドを使い、ロケール固有の文字列に変換されます (例えばカンマ “,”など)。

@@ -2,6 +2,7 @@
 title: Beacon API
 slug: Web/API/Beacon_API
 ---
+
 {{DefaultAPISidebar("Beacon")}}{{SeeCompatTable}}
 
 **`Beacon`** 接口用于将异步和非阻塞请求发送到服务器。信标（Beacon）请求使用 HTTP 协议中的 POST 方法，请求通常不需要响应。这个请求被保证在，页面的**unload**状态从发起到完成之前，被发送。而并不需要一个阻塞请求，例如 {{domxref("XMLHttpRequest")}} 。

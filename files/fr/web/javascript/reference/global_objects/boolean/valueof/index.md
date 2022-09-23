@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/Boolean/valueOf
 ---
+
 {{JSRef}}
 
 La méthode **`valueOf()`** renvoie la valeur primitive de l'objet {{jsxref("Boolean")}}.

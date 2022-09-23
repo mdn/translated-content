@@ -2,6 +2,7 @@
 title: ShadowRoot.delegatesFocus
 slug: Web/API/ShadowRoot/delegatesFocus
 ---
+
 {{APIRef("Shadow DOM")}}
 
 {{domxref("ShadowRoot")}} 接口中的只读属性 **`delegatesFocus`** 返回一个布尔值表明 delegatesFocus 是否在 shadow 被附加的时候设置了。

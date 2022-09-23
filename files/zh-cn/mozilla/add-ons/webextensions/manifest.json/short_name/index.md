@@ -2,6 +2,7 @@
 title: 短名称 - short_name
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/short_name
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

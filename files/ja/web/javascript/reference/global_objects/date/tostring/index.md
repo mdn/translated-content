@@ -2,6 +2,7 @@
 title: Date.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toString
 ---
+
 {{JSRef}}
 
 **`toString()`** メソッドは、指定した {{jsxref("Date")}} オブジェクトを表す文字列を返します。

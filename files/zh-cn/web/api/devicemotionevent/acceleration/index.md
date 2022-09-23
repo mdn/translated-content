@@ -2,6 +2,7 @@
 title: DeviceMotionEvent.acceleration
 slug: Web/API/DeviceMotionEvent/acceleration
 ---
+
 {{ ApiRef("Device Orientation Events") }}
 
 acceleration 属性会返回设备的加速度记录（单位：[m / s2](https://en.wikipedia.org/wiki/Meter_per_second_squared)）。

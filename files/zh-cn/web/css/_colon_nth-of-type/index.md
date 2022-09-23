@@ -2,6 +2,7 @@
 title: ':nth-of-type'
 slug: Web/CSS/:nth-of-type
 ---
+
 {{CSSRef}}
 
 **`:nth-of-type()`** 这个 [CSS 伪类](/zh-CN/docs/CSS/Pseudo-classes)是针对具有一组兄弟节点的标签，用 n 来筛选出在一组兄弟节点的位置。

@@ -2,6 +2,7 @@
 title: Object.prototype.hasOwnProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 ---
+
 {{JSRef}}
 
 **`hasOwnProperty()`** メソッドは、オブジェクト自身が（継承されていない）指定されたプロパティを持っているかどうかを示す真偽値を返します。

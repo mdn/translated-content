@@ -4,6 +4,7 @@ slug: Web/API/Navigator/language
 translation_of: Web/API/Navigator/language
 browser-compat: api.Navigator.language
 ---
+
 {{APIRef("HTML DOM")}}
 
 La propriété en lecture seule **`Navigator.language`** renvoie une chaîne de caractères qui représente la langue préférée de l'utilisatrice ou de l'utilisateur. Il s'agit généralement de la langue utilisée pour l'interface utilisateur du navigateur.

@@ -2,6 +2,7 @@
 title: Intl.Locale.prototype.calendars
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendars
 ---
+
 {{JSRef}}
 
 **`Intl.Locale.prototype.calendars`** プロパティは、 `Locale` のカレンダー識別子の配列を返すアクセサープロパティです。

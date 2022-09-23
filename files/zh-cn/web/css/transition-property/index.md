@@ -2,6 +2,7 @@
 title: transition-property
 slug: Web/CSS/transition-property
 ---
+
 {{CSSRef("CSS Transitions")}} {{SeeCompatTable}}
 
 ## 概述

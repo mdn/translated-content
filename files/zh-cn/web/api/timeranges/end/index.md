@@ -2,6 +2,7 @@
 title: TimeRanges.end()
 slug: Web/API/TimeRanges/end
 ---
+
 {{APIRef("DOM")}}
 
 返回指定时间范围的结束偏移量。

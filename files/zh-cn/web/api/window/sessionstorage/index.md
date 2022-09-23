@@ -2,6 +2,7 @@
 title: Window.sessionStorage
 slug: Web/API/Window/sessionStorage
 ---
+
 {{APIRef()}}
 
 `sessionStorage` 属性允许你访问一个，对应当前源的 session {{domxref("Storage")}} 对象。它与 {{domxref("Window.localStorage", "localStorage")}} 相似，不同之处在于 `localStorage` 里面存储的数据没有过期时间设置，而存储在 `sessionStorage` 里面的数据在页面会话结束时会被清除。

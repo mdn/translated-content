@@ -2,6 +2,7 @@
 title: Array.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Array/entries
 ---
+
 {{JSRef}}
 
 **`entries()`** メソッドは、配列内の各要素に対するキー/値のペアを含む新しい **Array イテレーター**オブジェクトを返します。

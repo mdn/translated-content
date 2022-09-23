@@ -9,6 +9,7 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/bufferData
 ---
+
 {{APIRef("WebGL")}}
 
 La méthode **`WebGLRenderingContext.bufferData()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) initialise et crée le magasin de données de l'objet tampon.

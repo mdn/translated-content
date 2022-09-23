@@ -2,6 +2,7 @@
 title: 语法和数据类型
 slug: Web/JavaScript/Guide/Grammar_and_types
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
 
 本章讨论 JavaScript 的基本语法，变量声明，数据类型 和 字面量。

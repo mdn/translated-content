@@ -2,6 +2,7 @@
 title: HTMLImageElement.decoding
 slug: Web/API/HTMLImageElement/decoding
 ---
+
 {{APIRef}}{{domxref("HTMLImageElement")}} 接口的 **`decoding`** 属性用于告诉浏览器使用何种方式解析图像数据。
 
 ## Syntax

@@ -2,6 +2,7 @@
 title: find
 slug: Mozilla/Add-ons/WebExtensions/API/find
 ---
+
 {{AddonSidebar}}
 
 在网页中查找文本，并突出显示匹配项。

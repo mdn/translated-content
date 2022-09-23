@@ -2,6 +2,7 @@
 title: MediaRecorder()
 slug: Web/API/MediaRecorder/MediaRecorder
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 **`MediaRecorder()`** 构造函数会创建一个对指定的 {{domxref("MediaStream")}} 进行录制的 {{domxref("MediaRecorder")}} 对象

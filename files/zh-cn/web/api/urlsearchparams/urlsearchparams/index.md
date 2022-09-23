@@ -2,6 +2,7 @@
 title: URLSearchParams()
 slug: Web/API/URLSearchParams/URLSearchParams
 ---
+
 {{ApiRef("URL API")}}{{SeeCompatTable}}
 
 **`URLSearchParams()`** 构造器创建并返回一个新的{{domxref("URLSearchParams")}} 对象。 开头的`'?'` 字符会被忽略。

@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBFactory/open
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`open()`** de l'interface {{domxref("IDBFactory")}} lance une requête pour ouvrir une [connexion à une base de données](/fr/docs/Web/API/API_IndexedDB#Se_connecter_à_la_base_de_données).

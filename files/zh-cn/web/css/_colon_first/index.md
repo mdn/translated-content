@@ -2,6 +2,7 @@
 title: ':first'
 slug: Web/CSS/:first
 ---
+
 {{CSSRef}}
 
 ## 简介

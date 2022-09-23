@@ -2,6 +2,7 @@
 title: Cache
 slug: Web/API/Cache
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 **`Cache`** 接口为缓存的 [`Request`](http://fetch.spec.whatwg.org/#request) / `Response` 对象对提供存储机制，例如，作为{{domxref("ServiceWorker")}} 生命周期的一部分。请注意，Cache 接口像 workers 一样，是暴露在 window 作用域下的。尽管它被定义在 service worker 的标准中， 但是它不必一定要配合 service worker 使用。

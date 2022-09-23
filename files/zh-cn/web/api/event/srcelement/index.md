@@ -2,6 +2,7 @@
 title: Event.srcElement
 slug: Web/API/Event/srcElement
 ---
+
 {{ApiRef("DOM")}}
 
 {{ Non-standard_header() }}

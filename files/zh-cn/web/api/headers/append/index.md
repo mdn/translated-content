@@ -2,6 +2,7 @@
 title: Headers.append()
 slug: Web/API/Headers/append
 ---
+
 {{APIRef("Fetch")}}
 
 在一个`Headers`对象内部，{{domxref("Headers")}}接口的 **`append()`** 方法可以追加一个新值到已存在的 headers 上，或者新增一个原本不存在的 header。
