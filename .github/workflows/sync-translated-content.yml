@@ -64,3 +64,4 @@ jobs:
           title: "[${{ matrix.lang }}] sync translated content"
           author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
           body: Yari generated sync
+          token: ${{ secrets.AUTOMERGE_TOKEN }}
