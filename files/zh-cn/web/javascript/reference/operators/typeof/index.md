@@ -24,17 +24,17 @@ typeof operand
 
 下表总结了 `typeof` 可能的返回值。有关类型和原始值的更多信息，可查看 [JavaScript 数据结构](/zh-CN/docs/Web/JavaScript/Data_structures) 页面。
 
-| 类型                                                                                                                                       | 结果                               |
-|------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
-| [Undefined](/zh-CN/docs/Glossary/undefined)                                                                                              | `"undefined"`                    |
-| [Null](/zh-CN/docs/Glossary/Null)                                                                                                        | `"object"` （见[下文](#typeof_null)） |
-| [Boolean](/zh-CN/docs/Glossary/Boolean)                                                                                                  | `"boolean"`                      |
-| [Number](/zh-CN/docs/Glossary/Number)                                                                                                    | `"number"`                       |
-| [BigInt](/zh-CN/docs/Glossary/BigInt)                                                                                                    | `"bigint"`                       |
-| [String](/zh-CN/docs/Glossary/String)                                                                                                    | `"string"`                       |
-| [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol)                                                                     | `"symbol"`                       |
-| [Function](/zh-CN/docs/Glossary/Function) (在 ECMA-262 中实现 [[Call]]；[classes](/zh-CN/docs/Web/JavaScript/Reference/Statements/class)也是函数) | `"function"`                     |
-| 其他任何对象                                                                                                                                   | `"object"`                       |
+| 类型                                                                                                                                      | 结果                              |
+|-----------------------------------------------------------------------------------------------------------------------------------------|---------------------------------|
+| [Undefined](/zh-CN/docs/Glossary/undefined)                                                                                             | `"undefined"`                   |
+| [Null](/zh-CN/docs/Glossary/Null)                                                                                                       | `"object"`（见[下文](#typeof_null)） |
+| [Boolean](/zh-CN/docs/Glossary/Boolean)                                                                                                 | `"boolean"`                     |
+| [Number](/zh-CN/docs/Glossary/Number)                                                                                                   | `"number"`                      |
+| [BigInt](/zh-CN/docs/Glossary/BigInt)                                                                                                   | `"bigint"`                      |
+| [String](/zh-CN/docs/Glossary/String)                                                                                                   | `"string"`                      |
+| [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol)                                                                    | `"symbol"`                      |
+| [Function](/zh-CN/docs/Glossary/Function)（在 ECMA-262 中实现 [[Call]]；[classes](/zh-CN/docs/Web/JavaScript/Reference/Statements/class)也是函数) | `"function"`                    |
+| 其他任何对象                                                                                                                                  | `"object"`                      |
 
 这个值列表是详尽的。没有符合规范的引擎报告产生（或历史上产生过）除列出的值之外的值。在规范删除 `typeof` 为不可调用的非标准外来对象返回实现定义的字符串的行为之前，旧的 Internet Explorer 是已知的唯一一个[实现附加返回值](https://github.com/tc39/ecma262/issues/1440#issuecomment-461963872)的浏览器。
 
@@ -52,7 +52,6 @@ typeof Infinity === 'number';
 typeof NaN === 'number'; // 尽管它是 "Not-A-Number" (非数值) 的缩写
 typeof Number(1) === 'number'; // Number 会尝试把参数解析成数值
 typeof Number("shoe") === 'number'; // 包括不能将类型强制转换为数字的值
-// 译注：Number("shoe") 会返回一个 NaN，而 typeof NaN === 'number'
 
 typeof 42n === 'bigint';
 
@@ -172,7 +171,7 @@ typeof document.all === 'undefined';
 
 ### 获取具体类型的自定义方法
 
-`typeof` 是非常有用的，但它不像需要的那样万能。 例如，`typeof []` 是 `"object"`，以及 `typeof new Date()`， `typeof /abc/` 等。
+`typeof` 是非常有用的，但它不像需要的那样万能。 例如，`typeof []` 是 `"object"`，以及 `typeof new Date()`、`typeof /abc/` 等。
 
 为了更明确地检查类型，在生成环境代码中使用的 `typeof` 包装器如下所示（前提是 `obj` 存在）：
 
@@ -187,7 +186,7 @@ function type(value) {
         return baseType;
     }
 
-    // Symbol.toStringTag 通常指定对象类的 “display name”
+    // Symbol.toStringTag 通常指定对象类的“display name”
     // 它在 Object.prototype.toString() 中使用。
     const tag = value[Symbol.toStringTag];
     if (typeof tag === "string") {
@@ -202,7 +201,7 @@ function type(value) {
         return "class";
     }
 
-    // 构造函数的名称；例如 `Array`，`GeneratorFunction`，`Number`，`String`，`Boolean` 或 `MyCustomClass`
+    // 构造函数的名称；例如 `Array`、`GeneratorFunction`、`Number`、`String`、`Boolean` 或 `MyCustomClass`
     const className = value.constructor.name;
     if (typeof className === "string" && className !== "") {
         return className;
