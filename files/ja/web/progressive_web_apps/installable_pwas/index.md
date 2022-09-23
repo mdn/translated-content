@@ -13,7 +13,7 @@ slug: Web/Progressive_web_apps/Installable_PWAs
 
 ウェブサイトをインストール可能にするには、以下のものが必要になります。
 
-- [正しくフィールドが入力された](/ja/docs/Web/Progressive_web_apps/Add_to_home_screen#Manifest)ウェブマニフェスト
+- [正しくフィールドが入力された](/ja/docs/Web/Progressive_web_apps/Add_to_home_screen#マニフェスト)ウェブマニフェスト
 - 安全な (HTTPS) ドメインから提供されるウェブサイト
 - 端末上のアプリを表すアイコン
 - アプリをオフラインで動作させるために登録された[service worker](/ja/docs/Web/API/Service_Worker_API) (現時点では Android の Chrome にのみ必要です)
