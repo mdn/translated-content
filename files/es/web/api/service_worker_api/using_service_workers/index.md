@@ -86,7 +86,7 @@ registerServiceWorker();
 
 1. El bloque if realiza una prueba de detección de características para asegurarse de que el *service worker* sea compatible antes de intentar registrar uno.
 2. A continuación, usamos la función {{domxref("ServiceWorkerContainer.register()") }} para registrar el *service worker* para este sitio, que solo es un archivo JavaScript que reside dentro de nuestra aplicación (ten en cuenta que esta es la URL del archivo relativa al origen , no el archivo JS que hace referencia a él).
-3. El parámetro `scope` es opcional y se puede usar para especificar el subconjunto de tu contenido que deseas controle el *service worker*. En este caso, hemos especificado '`'/'`, lo cual significa todo el contenido bajo el origen de la aplicación. Si lo omites, tendrá este valor predeterminado de todos modos, pero lo especificamos aquí con fines ilustrativos.
+3. El parámetro `scope` es opcional y se puede usar para especificar el subconjunto de tu contenido que deseas controle el *service worker*. En este caso, hemos especificado `'/'`, lo cual significa todo el contenido bajo el origen de la aplicación. Si lo omites, tendrá este valor predeterminado de todos modos, pero lo especificamos aquí con fines ilustrativos.
 
 Esto registra un *service worker*, que se ejecuta en un contexto de trabajador y, por lo tanto, no tiene acceso al DOM. Luego ejecuta el código en el *service worker* fuera de tus páginas normales para controlar su carga.
 
