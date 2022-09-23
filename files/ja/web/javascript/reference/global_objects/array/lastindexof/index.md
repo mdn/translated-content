@@ -2,6 +2,7 @@
 title: Array.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 ---
+
 {{JSRef}}
 
 **`lastIndexOf()`** メソッドは、配列中で与えられた要素が見つかった最後の添字を返します。もし存在しなければ -1 を返します。配列は `fromIndex` から逆向きに検索されます。

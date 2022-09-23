@@ -2,6 +2,7 @@
 title: Headers.append()
 slug: Web/API/Headers/append
 ---
+
 {{APIRef("Fetch")}}{{ SeeCompatTable() }}
 
 {{domxref("Headers")}} インターフェースの **`append()`** メソッドは、`Headers` オブジェクト内の既存のヘッダに新しい値を追加します。または、既存のヘッダがない場合には、ヘッダを追加します。

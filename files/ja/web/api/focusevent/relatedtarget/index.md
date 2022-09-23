@@ -2,6 +2,7 @@
 title: FocusEvent.relatedTarget
 slug: Web/API/FocusEvent/relatedTarget
 ---
+
 {{ apiref("DOM Events") }}
 
 **`FocusEvent.relatedTarget`** は読み取り専用プロパティで、イベントの種類に応じた副ターゲットを表します。

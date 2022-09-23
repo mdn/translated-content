@@ -2,6 +2,7 @@
 title: Array.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 ---
+
 {{JSRef}}
 
 **`indexOf()`** メソッドは引数に与えられた内容と同じ内容を持つ最初の配列要素の添字を返します。存在しない場合は -1 を返します。

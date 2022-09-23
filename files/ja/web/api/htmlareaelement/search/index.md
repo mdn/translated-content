@@ -3,6 +3,7 @@ title: HTMLAreaElement.search
 slug: Web/API/HTMLAreaElement/search
 original_slug: Web/API/HTMLHyperlinkElementUtils/search
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`HTMLAnchorElement.search`** プロパティは、*クエリー文字列*とも呼ばれる検索文字列、つまり `'?'` とその後に続く URL の引数の入った文字列です。

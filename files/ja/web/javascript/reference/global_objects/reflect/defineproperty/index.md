@@ -2,6 +2,7 @@
 title: Reflect.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
 ---
+
 {{JSRef}}
 
 静的な **`Reflect.defineProperty()`** メソッドは、{{jsxref("Object.defineProperty()")}} と似ていますが、 {{jsxref("Boolean")}} を返します。

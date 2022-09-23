@@ -2,6 +2,7 @@
 title: HTMLElement.offsetWidth
 slug: Web/API/HTMLElement/offsetWidth
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.offsetWidth`** は読み取り専用プロパティで、要素のレイアウト幅を整数として返します。

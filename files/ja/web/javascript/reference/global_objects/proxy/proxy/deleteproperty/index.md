@@ -2,6 +2,7 @@
 title: handler.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
 ---
+
 {{JSRef}}
 
 **`handler.deleteProperty()`** メソッドは、 {{jsxref("Operators/delete", "delete")}} 演算子のトラップです。

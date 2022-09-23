@@ -2,6 +2,7 @@
 title: Object.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 ---
+
 {{JSRef}}
 
 **`Object.setPrototypeOf()`** メソッドは、指定されたオブジェクトのプロトタイプ (つまり、内部の `[[Prototype]]` プロパティ) を、別のオブジェクトまたは {{jsxref("null")}} に設定します。

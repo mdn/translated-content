@@ -2,6 +2,7 @@
 title: Array.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
 ---
+
 {{JSRef}}
 
 **`every()`** メソッドは、列内のすべての要素が指定された関数で実装されたテストに合格するかどうかをテストします。これは論理値を返します。
@@ -38,7 +39,7 @@ arr.every(callback(element[, index[, array]])[, thisArg])
 
 `every` は、与えられた `callback` 関数を、配列に含まれる各要素に対して一度ずつ、`callback` が{{Glossary("falsy", "偽値")}}を返す要素が見つかるまで呼び出します。そのような要素が見つかると、`every` メソッドはただちに `false` を返します。`callback` がすべての要素に対して{{Glossary("truthy", "真値")}}を返した場合、`every` は `true` を返します。
 
-> **Note:** **注意**: このメソッドを空の配列に対して呼び出すと、無条件に `true` を返します。
+> **Note:** このメソッドを空の配列に対して呼び出すと、無条件に `true` を返します。
 
 `callback` は値が代入されている配列の要素に対してのみ呼び出されます。つまり、すでに削除された要素や、まだ値が代入されていない要素に対しては呼び出されません。
 

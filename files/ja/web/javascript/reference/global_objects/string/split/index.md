@@ -2,6 +2,7 @@
 title: String.prototype.split()
 slug: Web/JavaScript/Reference/Global_Objects/String/split
 ---
+
 {{JSRef}}
 
 **`split()`** メソッドは、 {{jsxref("String")}} を指定した区切り文字列で分割することにより、文字列の配列に分割します。

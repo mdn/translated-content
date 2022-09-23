@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array
 l10n:
   sourceCommit: 8eef3c0803bdbd1e911761742c0e05fa42b5395b
 ---
+
 {{JSRef}}
 
 **`Array`** オブジェクトは、他のプログラミング言語の配列と同様に、[複数の項目の集合を単一の変数名の下に格納](/ja/docs/Learn/JavaScript/First_steps/Arrays)することができ、[共通の配列操作を行う](#例)ためのメンバーを持っています。

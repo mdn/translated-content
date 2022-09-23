@@ -2,6 +2,7 @@
 title: Array.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 ---
+
 {{JSRef}}
 
 **`copyWithin()`** メソッドは、サイズを変更せずに、配列の一部を同じ配列内の別の場所にシャローコピーして返します。

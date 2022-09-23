@@ -2,6 +2,7 @@
 title: Array.prototype[@@unscopables]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
 ---
+
 {{JSRef}}
 
 **`@@unscopable`** シンボルプロパティには、 ES2015 以前の ECMAScript 標準には含まれていないプロパティ名があります。それらのプロパティは、[`with`](/ja/docs/Web/JavaScript/Reference/Statements/with) 文のバインディングから除外されます。

@@ -2,6 +2,7 @@
 title: Array.prototype.splice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/splice
 ---
+
 {{JSRef}}
 
 **`splice()`** メソッドは、[その場](https://ja.wikipedia.org/wiki/In-place%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0)で既存の要素を取り除いたり、置き換えたり、新しい要素を追加したりすることで、配列の内容を変更します。

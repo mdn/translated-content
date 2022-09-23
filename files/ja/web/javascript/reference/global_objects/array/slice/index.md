@@ -2,6 +2,7 @@
 title: Array.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/slice
 ---
+
 {{JSRef}}
 
 **`slice()`** メソッドは、`start` と `end` が配列の中の項目のインデックスを表している場合、`start` から `end` まで (`end` は含まれない) で選択された配列の一部の浅いコピーを新しい配列オブジェクトに作成して返します。元の配列は変更されません。

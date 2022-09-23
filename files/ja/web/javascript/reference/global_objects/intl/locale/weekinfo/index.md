@@ -2,6 +2,7 @@
 title: Intl.Locale.prototype.weekInfo
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/weekInfo
 ---
+
 {{JSRef}}
 
 **`Intl.Locale.prototype.weekInfo`** プロパティはアクセサープロパティで、関連する `Locale` の `firstDay`, `weekend`, `minimalDays` プロパティを持つ `weekInfo` オブジェクトを返します。

@@ -2,6 +2,7 @@
 title: Error.prototype.stack
 slug: Web/JavaScript/Reference/Global_Objects/Error/Stack
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 {{jsxref("Error")}} オブジェクトの標準外の **`stack`** プロパティは、呼び出された関数のトレース、つまり、その呼び出し順、呼び出したファイルの行番号、呼び出した関数の引数を提供します。スタック文字列は、最後の呼び出しから最初の呼び出しへ進み、元のグローバルスコープの呼び出しまで遡ります。

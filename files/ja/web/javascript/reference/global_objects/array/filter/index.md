@@ -2,6 +2,7 @@
 title: Array.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
 ---
+
 {{JSRef}}
 
 **`filter()`** メソッドは、与えられた関数によって実装されたテストに合格したすべての配列からなる**新しい配列を生成**します。

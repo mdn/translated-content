@@ -2,6 +2,7 @@
 title: FinalizationRegistry
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry
 ---
+
 {{JSRef}}
 
 **`FinalizationRegistry`** オブジェクトにより、オブジェクトがガベージコレクションで回収されるときにコールバックを要求することができます。
