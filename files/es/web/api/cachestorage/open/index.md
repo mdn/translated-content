@@ -74,11 +74,11 @@ self.addEventListener("install", (event) => {
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
 {{Compat}}
 
-## Ve también
+## Véase también
 
 - [Usar *Service Workers*](/es/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
