@@ -521,4 +521,4 @@ Firefox también ha comenzado a implementar algunas herramientas útiles relacio
 - [¿Está listo ServiceWorker?](https://jakearchibald.github.io/isserviceworkerready/)
 - Descarga la [hoja de trucos de *service worker* 101](sw101.png).
 - [Promesas](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [Usar trabajadores web](/es/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [Usar _web workers_](/es/docs/Web/API/Web_Workers_API/Using_web_workers)
