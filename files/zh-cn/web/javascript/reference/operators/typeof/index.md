@@ -51,8 +51,8 @@ typeof Math.LN2 === 'number';
 typeof Infinity === 'number';
 typeof NaN === 'number'; // 尽管它是 "Not-A-Number" (非数值) 的缩写
 typeof Number(1) === 'number'; // Number 会尝试把参数解析成数值
-typeof Number("shoe") === "number"; // 包括不能将类型强制转换为数字的值
-// 译注：Number("shoe") 会返回一个 NaN，而 typeof NaN === “number” 
+typeof Number("shoe") === 'number'; // 包括不能将类型强制转换为数字的值
+// 译注：Number("shoe") 会返回一个 NaN，而 typeof NaN === 'number'
 
 typeof 42n === 'bigint';
 
