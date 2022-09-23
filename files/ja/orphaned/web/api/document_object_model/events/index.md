@@ -44,7 +44,7 @@ function greet(event){
 
 HTML 属性に書かれたこの JavaScript コードには、 `event` 引数を通してイベントオブジェクトが渡されます。[返値は HTML の仕様で定義された特別な方法で処理されます](http://dev.w3.org/html5/spec/webappapis.html#the-event-handler-processing-algorithm)。
 
-> **Warning:** **警告:** この方法は避けてください。これはマークアップを増加させ、可読性を下げます。コンテンツと振る舞いが正しく分離されておらず、バグの発見が困難になります。
+> **Warning:** この方法は避けてください。これはマークアップを増加させ、可読性を下げます。コンテンツと振る舞いが正しく分離されておらず、バグの発見が困難になります。
 
 ### DOM 要素のプロパティ
 

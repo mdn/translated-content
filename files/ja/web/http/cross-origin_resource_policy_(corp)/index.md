@@ -32,7 +32,7 @@ CORP は既定で {{Glossary("same-origin policy")}} を超えた保護の追加
 
   - : 同じ _{{Glossary("Site")}}_ からのリクエストのみリソースを読み込めます。
 
-    > **Warning:** **警告:** これは{{Glossary("origin", "オリジン")}}よりも安全性が低いものです。[2 つのオリジンが同じサイトであるかどうかをチェックするアルゴリズム](https://html.spec.whatwg.org/multipage/origin.html#same-site)は HTML 標準で定義されており、*登録可能なドメイン*をチェックします。
+    > **Warning:** これは{{Glossary("origin", "オリジン")}}よりも安全性が低いものです。[2 つのオリジンが同じサイトであるかどうかをチェックするアルゴリズム](https://html.spec.whatwg.org/multipage/origin.html#same-site)は HTML 標準で定義されており、*登録可能なドメイン*をチェックします。
 
 - same-origin
   - : 同じ _{{Glossary("origin")}}_ (すなわち、スキーマ + ホスト + ポート) からのリクエストのみリソースを読み込めます。
