@@ -49,7 +49,7 @@ Para demostrar los conceptos básicos de registro e instalación de un *service 
 
 Puedes ver el [código fuente en GitHub](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) y el [Sencillo *service worker* ejecutándose en vivo](https://bncb2v.csb.app/).
 
-### Registra a tu trabajador
+### Registra a tu _worker_
 
 El primer bloque de código en el archivo JavaScript de nuestra aplicación, `app.js`, es el siguiente. Este es nuestro punto de entrada en el uso del *service worker*.
 
