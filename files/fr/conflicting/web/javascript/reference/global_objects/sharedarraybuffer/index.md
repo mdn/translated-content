@@ -1,9 +1,9 @@
 ---
 title: Changements prévus à propos de la mémoire partagée
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Planned_changes
-slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Planned_changes
+original_slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Planned_changes
 ---
-
 {{JSRef}}
 
 Un travail de standardisation est en cours afin de permettre à nouveau l'utilisation des objets [`SharedArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer), mais des modifications sont nécessaires afin que ceux-ci puissent être utilisés entre des <i lang="en">threads</i> (par défaut `postMessage()` lève une exception pour les objets `SharedArrayBuffer`). Ces modifications améliorent l'isolation entre les sites et aident à réduire l'impact des attaques utilisant des minuteurs à haute résolution, comme ceux pouvant être créés avec de la mémoire partagée.
