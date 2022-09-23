@@ -321,7 +321,7 @@ self.addEventListener("fetch", (event) => {
 });
 ```
 
-Hemos optado por esta imagen alternativa porque las únicas actualizaciones que probablemente fallarán son las imágenes nuevas, ya que todo lo demás depende de la instalación en el escucha de eventos `install` que vimos anteriormente.
+Hemos optado por esta imagen alternativa porque las únicas actualizaciones que probablemente fallarán son las imágenes nuevas, ya que todo lo demás depende de la instalación en el detector de eventos `install` que vimos anteriormente.
 
 ## Precarga de navegación del *service worker*
 
