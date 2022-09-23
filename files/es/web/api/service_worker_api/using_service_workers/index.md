@@ -187,7 +187,7 @@ Veamos algunas otras opciones que tenemos al definir nuestra magia (consulta nue
 1. El constructor {{domxref("Response.Response","Response()")}} te permite crear una respuesta personalizada. En este caso, solo estamos devolviendo una cadena de texto simple:
 
    ```js
-   new Response("¡Hola desde tu amigable vecindario del *service worker*!");
+   new Response("¡Hola desde tu amigable vecindario del service worker!");
    ```
 
 2. Esta `Response` más compleja a continuación muestra que, opcionalmente, puedes pasar un conjunto de encabezados con tu respuesta, emulando los encabezados de respuesta HTTP estándar. Aquí solo le estamos diciendo al navegador cuál es el tipo de contenido de nuestra respuesta sintética:
