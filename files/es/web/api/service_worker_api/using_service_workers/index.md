@@ -138,7 +138,7 @@ self.addEventListener("install", (event) => {
 });
 ```
 
-1. Aquí agregamos un escucha de eventos `install` al *service worker* (por lo tanto, `self`), y luego encadenamos un método {{domxref("ExtendableEvent.waitUntil()") }} al evento; esto garantiza que el *service worker* no se instale hasta que el código dentro de `waitUntil()` haya ocurrido con éxito.
+1. Aquí agregamos un detector de eventos `install` al *service worker* (por lo tanto, `self`), y luego encadenamos un método {{domxref("ExtendableEvent.waitUntil()") }} al evento; esto garantiza que el *service worker* no se instale hasta que el código dentro de `waitUntil()` haya ocurrido con éxito.
 2. Dentro de `addResourcesToCache` usamos el método [`caches.open()`](/es/docs/Web/API/CacheStorage/open) para crear un nuevo caché llamado `v1`, que será la versión 1 de nuestro caché de recursos del sitio. Luego llamamos a una función que llama a `addAll()` en el caché creado, que para su parámetro toma un arreglo de URLs relativas al origen de todos los recursos que deseas almacenar en caché.
 3. Si se rechaza la promesa, la instalación falla y el trabajador no hará nada. Esto está bien, ya que puedes corregir tu código y luego intentarlo de nuevo la próxima vez que se registre.
 4. Después de una instalación exitosa, el *service worker* se activa. Esto no tiene mucho de un uso distinto la primera vez que se instala/activa tu *service worker*, pero significa más cuando se actualiza el *service worker* (consulta la sección [Actualizar tu *service worker*](#actualizar_tu_service_worker) más adelante).
