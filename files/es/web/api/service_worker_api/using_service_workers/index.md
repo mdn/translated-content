@@ -161,7 +161,7 @@ Ahora que tienes los activos de tu sitio almacenados en caché, debes decir al *
 
 Un evento `fetch` se activa cada vez que se recupera cualquier recurso controlado por un *service worker*, lo que incluye los documentos dentro del alcance especificado y cualquier recurso al que se haga referencia en esos documentos (por ejemplo, si `index.html` hace una solicitud de origen cruzado para incrustar una imagen, que todavía pasa por su *service worker*).
 
-Puedes adjuntar un escucha de eventos `fetch` al *service worker*, luego llamar al método `respondWith()` en el evento para capturar nuestras respuestas HTTP y actualizarlas con tu propia magia.
+Puedes adjuntar un detector de eventos `fetch` al *service worker*, luego llamar al método `respondWith()` en el evento para capturar nuestras respuestas HTTP y actualizarlas con tu propia magia.
 
 ```js
 self.addEventListener("fetch", (event) => {
