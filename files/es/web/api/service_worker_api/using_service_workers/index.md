@@ -515,7 +515,7 @@ Firefox también ha comenzado a implementar algunas herramientas útiles relacio
 
 > **Nota:** Puedes servir tu aplicación desde `http://localhost` (por ejemplo, usando `me@localhost:/my/app$ python -m SimpleHTTPServer`) para el desarrollo local. Ve [Consideraciones de seguridad](https://www.w3.org/TR/service-workers/#security-considerations)
 
-## Ve también
+## Véase también
 
 - [El manual del *service worker*](https://github.com/mdn/serviceworker-cookbook)
 - [¿Está listo ServiceWorker?](https://jakearchibald.github.io/isserviceworkerready/)
