@@ -58,7 +58,7 @@ forEach(function(value, key, set) { /* ... */ }, thisArg)
 - **元素的键**
 - **被遍历的 `Set`**
 
-但是由于集合对象中没有索引（keys），所以前两个参数都是 {{domxref("Set")}} 中元素的值（**values**），之所以这样设计回调函数是为了和 {{jsxref("Map.foreach", "Map")}} 以及 {{jsxref("Array.forEach","Array")}} 的 `forEach()` 函数用法保持一致。
+但是由于 `Set` 对象中没有键（key），所以前两个参数都是 {{jsxref("Set")}} 中元素的值（**value**），之所以这样设计回调函数是为了和 {{jsxref("Map.foreach", "Map")}} 以及 {{jsxref("Array.forEach","Array")}} 的 `forEach()` 函数用法保持一致。
 
 如果提供了一个 `thisArg` 参数给 `forEach` 函数，则参数将会作为回调函数中的 `this`值。否则 `this` 值为 `undefined`。回调函数中 `this` 的绑定是根据[函数被调用时通用的 `this` 绑定规则来决定的](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)。
 

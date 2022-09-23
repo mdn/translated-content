@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/size
 
 {{JSRef}}
 
-**`size`** 属性将会返回 {{jsxref("Set")}} 对象中元素的个数。
+**`size`** 属性将会返回 {{jsxref("Set")}} 对象中（唯一的）元素的个数。
 
 {{EmbedInteractiveExample("pages/js/set-prototype-size.html")}}
 
