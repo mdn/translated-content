@@ -20,7 +20,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
 
 ## 瀏覽器相容性
 
-{{Compat("webextensions.api.cookies.CookieStore")}}
+{{Compat}}
 
 ## 示例
 

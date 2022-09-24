@@ -35,7 +35,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage/local
 
 ## 瀏覽器相容性
 
-{{Compat("webextensions.api.storage.local")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
