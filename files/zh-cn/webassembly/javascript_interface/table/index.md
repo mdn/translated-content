@@ -25,7 +25,7 @@ var myTable = new WebAssembly.Table(tableDescriptor);
   - : 该对象具有以下属性：
 
     - _element_
-      - : 一个表明储存在该 Table 中对象的类型。 目前只能是： `"anyfunc"` (函数)。
+      - : 一个表明储存在该 Table 中对象的类型。目前只能是： `"anyfunc"` (函数)。
     - _initial_
       - : 该 WebAssembly Table 初始大小。
     - _maximum {{optional_inline}}_
