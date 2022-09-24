@@ -109,7 +109,7 @@ IndexedDB 中的 **`IDBDatabase`** 接口提供一个到 [数据库的连接](/z
 
 ## 浏览器兼容性
 
-{{Compat("api.IDBDatabase")}}
+{{Compat}}
 
 ## See also
 

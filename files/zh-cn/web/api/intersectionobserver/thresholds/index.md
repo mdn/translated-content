@@ -33,4 +33,4 @@ If no `threshold` option was included when `IntersectionObserver()` was used to 
 
 ## Browser compatibility
 
-{{Compat("api.IntersectionObserver.thresholds")}}
+{{Compat}}

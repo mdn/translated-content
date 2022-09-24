@@ -39,7 +39,7 @@ window.addEventListener("keydown", function (event) {
 
 ## 浏览器兼容性
 
-{{Compat("api.KeyboardEvent.keyCode")}}
+{{Compat}}
 
 ## 键码值
 

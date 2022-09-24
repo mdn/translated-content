@@ -33,7 +33,7 @@ if(gp.buttons[0].pressed == true) {
 
 ## 浏览器兼容性
 
-{{Compat("api.GamepadButton.pressed")}}
+{{Compat}}
 
 ## 另请参阅
 

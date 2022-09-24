@@ -73,7 +73,7 @@ slug: Web/API/FileReader
 
 ## 浏览器兼容
 
-{{Compat("api.FileReader")}}
+{{Compat}}
 
 ## 相关链接
 

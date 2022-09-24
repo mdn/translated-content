@@ -53,7 +53,7 @@ formData.set('userpic', myFileInput.files[0], 'chris.jpg');
 
 ## 浏览器兼容性
 
-{{Compat("api.FormData.set")}}
+{{Compat}}
 
 ## 相关链接
 

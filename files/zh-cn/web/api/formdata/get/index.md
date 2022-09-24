@@ -51,7 +51,7 @@ formData.get('username'); // Returns "Chris"
 
 ## 浏览器兼容性
 
-{{Compat("api.FormData.get")}}
+{{Compat}}
 
 ## 相关链接
 

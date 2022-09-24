@@ -20,7 +20,7 @@ Currently drafted as a proposal in the [OffscreenCanvas](https://wiki.whatwg.org
 
 ## 浏览器兼容性
 
-{{Compat("api.ImageBitmapRenderingContext")}}
+{{Compat}}
 
 ## 相关链接
 

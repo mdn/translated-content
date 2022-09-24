@@ -23,7 +23,7 @@ A {{domxref("DOMTimeStamp")}} object instance.
 
 ## Browser compatibility
 
-{{Compat("api.GeolocationPosition.timestamp")}}
+{{Compat}}
 
 ## See also
 
