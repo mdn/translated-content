@@ -43,7 +43,7 @@ _從父代繼承的方法,_ _{{domxref("HTMLElement")}}._
 
 ## 瀏覽器相容性
 
-{{Compat("api.HTMLCanvasElement")}}
+{{Compat}}
 
 ## See also
 

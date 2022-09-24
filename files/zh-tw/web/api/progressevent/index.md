@@ -56,7 +56,7 @@ The following example adds a `ProgressEvent` to a new {{domxref("XMLHTTPRequest"
 
 ## 瀏覽器相容性
 
-{{Compat("api.ProgressEvent")}}
+{{Compat}}
 
 ## 參見
 
