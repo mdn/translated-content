@@ -102,7 +102,7 @@ button.onclick = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.BaseAudioContext.createBuffer")}}
+{{Compat}}
 
 ## 相关链接
 

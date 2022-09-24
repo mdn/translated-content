@@ -70,7 +70,7 @@ osc.stop(2);
 
 ## 浏览器兼容性
 
-{{Compat("api.BaseAudioContext.createPeriodicWave")}}
+{{Compat}}
 
 ## 参见
 

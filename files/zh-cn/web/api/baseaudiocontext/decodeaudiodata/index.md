@@ -126,7 +126,7 @@ ctx.decodeAudioData(compressedBuffer).then(function(decodedData) {
 
 ## 浏览器支持
 
-{{Compat("api.BaseAudioContext.decodeAudioData")}}
+{{Compat}}
 
 ## See also
 

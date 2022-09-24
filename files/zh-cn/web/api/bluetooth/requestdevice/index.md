@@ -76,4 +76,4 @@ navigator.bluetooth.requestDevice(options).then(function(device) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Bluetooth.requestDevice")}}
+{{Compat}}

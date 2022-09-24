@@ -35,7 +35,7 @@ bc.postMessage('New listening connected!');
 
 ## 浏览器兼容性
 
-{{Compat("api.BroadcastChannel.BroadcastChannel")}}
+{{Compat}}
 
 ## 另见
 

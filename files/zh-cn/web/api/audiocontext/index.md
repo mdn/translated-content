@@ -70,7 +70,7 @@ var finish = audioCtx.destination;
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioContext")}}
+{{Compat}}
 
 ## 相关链接
 

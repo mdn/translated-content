@@ -102,7 +102,7 @@ var finish = audioCtx.destination;
 
 ## Browser compatibility
 
-{{Compat("api.BaseAudioContext")}}
+{{Compat}}
 
 ## See also
 

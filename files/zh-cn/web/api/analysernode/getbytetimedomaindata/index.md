@@ -85,7 +85,7 @@ function draw() {
 
 ## 浏览器兼容性
 
-{{Compat("api.AnalyserNode.getByteTimeDomainData")}}
+{{Compat}}
 
 ## See also
 

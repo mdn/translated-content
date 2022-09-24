@@ -38,4 +38,4 @@ A new {{domxref("AnalyserNode")}} object instance.
 
 ## Browser Compatibility
 
-{{Compat("api.AnalyserNode.AnalyserNode")}}
+{{Compat}}

@@ -40,7 +40,7 @@ _Also inherits methods from its parent {{domxref("Event")}}_.
 
 ## Browser compatibility
 
-{{Compat("api.AnimationEvent")}}
+{{Compat}}
 
 ## See also
 

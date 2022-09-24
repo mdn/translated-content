@@ -48,7 +48,7 @@ DOM 本身不处理或强制命名空间验证。 DOM 应用程序需要做任�
 
 ## 浏览器兼容性
 
-{{Compat("api.Attr.namespaceURI")}}
+{{Compat}}
 
 ## 其他文章
 

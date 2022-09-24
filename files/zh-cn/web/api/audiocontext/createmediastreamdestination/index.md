@@ -88,7 +88,7 @@ From here, you can play and save the opus file.
 
 ## Browser compatibility
 
-{{Compat("api.AudioContext.createMediaStreamDestination")}}
+{{Compat}}
 
 ## See also
 

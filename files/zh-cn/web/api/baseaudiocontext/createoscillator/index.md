@@ -40,7 +40,7 @@ oscillator.start();
 
 ## Browser compatibility
 
-{{Compat("api.BaseAudioContext.createOscillator")}}
+{{Compat}}
 
 ## See also
 

@@ -58,7 +58,7 @@ elem.getAnimations().forEach(
 
 ## 浏览器兼容性
 
-{{Compat("api.Animation.finish")}}
+{{Compat}}
 
 ## 更多参考
 

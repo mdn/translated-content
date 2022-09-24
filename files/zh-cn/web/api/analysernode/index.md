@@ -148,7 +148,7 @@ draw();
 
 ## 浏览器兼容性
 
-{{Compat("api.AnalyserNode")}}
+{{Compat}}
 
 ## 相关内容
 
