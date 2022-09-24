@@ -282,7 +282,7 @@ You can use the {{cssxref("object-position")}} property to position the image wi
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.img")}}
+{{Compat}}
 
 ## 另见
 

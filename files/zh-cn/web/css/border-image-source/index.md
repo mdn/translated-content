@@ -54,4 +54,4 @@ border-image-source: unset;
 
 ## Browser compatibility
 
-{{Compat("css.properties.border-image-source")}}
+{{Compat}}

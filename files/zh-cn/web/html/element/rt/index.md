@@ -53,7 +53,7 @@ slug: Web/HTML/Element/rt
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.rt")}}
+{{Compat}}
 
 ## 另见
 

@@ -52,7 +52,7 @@ _没有专有属性_
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.defs")}}
+{{Compat}}
 
 ## 相关内容
 

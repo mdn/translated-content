@@ -130,7 +130,7 @@ fullscreenButton.addEventListener('click', enterFullscreen);
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.fullscreen")}}
+{{Compat}}
 
 ## 参见
 

@@ -62,7 +62,7 @@ animation-timing-function: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.animation-timing-function")}}
+{{Compat}}
 
 ## 参见
 

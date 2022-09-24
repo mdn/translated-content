@@ -70,7 +70,7 @@ col.selected || td {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.column")}}
+{{Compat}}
 
 ## 相关
 

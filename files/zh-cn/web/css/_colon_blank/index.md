@@ -22,7 +22,7 @@ original_slug: Web/CSS/:blank空白伪类
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.blank")}}
+{{Compat}}
 
 ## 参见
 

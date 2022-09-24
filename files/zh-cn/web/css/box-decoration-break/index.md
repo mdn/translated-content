@@ -121,7 +121,7 @@ box-decoration-break: clone;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.box-decoration-break")}}
+{{Compat}}
 
 ## 参见
 

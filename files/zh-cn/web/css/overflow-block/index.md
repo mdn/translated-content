@@ -105,7 +105,7 @@ The `overflow-block` property is specified as a single keyword chosen from the l
 
 ## Browser compatibility
 
-{{Compat("css.properties.overflow-block")}}
+{{Compat}}
 
 ## See also
 

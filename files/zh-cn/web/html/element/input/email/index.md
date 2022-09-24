@@ -285,7 +285,7 @@ As an added touch, the {{HTMLElement("label")}} element is used to establish a l
 
 ## Browser compatibility
 
-{{Compat("html.elements.input.input-email")}}
+{{Compat}}
 
 ## See also
 

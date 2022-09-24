@@ -31,4 +31,4 @@ Connection: close
 
 ## 浏览器兼容性
 
-{{Compat("http.headers.Connection")}}
+{{Compat}}

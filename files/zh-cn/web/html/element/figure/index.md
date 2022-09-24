@@ -127,7 +127,7 @@ Love is a spirit all compact of fire,
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.figure")}}
+{{Compat}}
 
 ## 参见
 

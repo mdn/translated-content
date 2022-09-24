@@ -68,7 +68,7 @@ This example uses a hidden {{HTMLElement("button")}} element in a repeating patt
 
 ## 浏览器兼容性
 
-{{Compat("css.types.image.element")}}
+{{Compat}}
 
 ## 参见
 

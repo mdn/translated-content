@@ -78,4 +78,4 @@ slug: Web/SVG/Element/svg
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.svg")}}
+{{Compat}}

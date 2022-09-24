@@ -107,7 +107,7 @@ HTML 中的 表格列组（_Column Group_ **\<colgroup>**）标签用来定义�
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.colgroup")}}
+{{Compat}}
 
 ## 参见
 

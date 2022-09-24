@@ -185,7 +185,7 @@ p:target i {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.target")}}
+{{Compat}}
 
 ## 参见
 

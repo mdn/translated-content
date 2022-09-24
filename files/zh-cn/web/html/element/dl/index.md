@@ -142,7 +142,7 @@ WHATWG HTML 允许在 {{HTMLElement("div")}} 元素中的 {{HTMLElement("dl")}} 
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.dl")}}
+{{Compat}}
 
 ## 相关内容
 

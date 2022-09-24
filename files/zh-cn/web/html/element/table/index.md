@@ -338,7 +338,7 @@ If the table cannot be broken apart, use a combination of the {{htmlattrxref("id
 
 ## Browser compatibility
 
-{{Compat("html.elements.table")}}
+{{Compat}}
 
 ## 相关
 

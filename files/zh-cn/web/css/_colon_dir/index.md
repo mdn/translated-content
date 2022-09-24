@@ -40,7 +40,7 @@ slug: Web/CSS/:dir
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.dir")}}
+{{Compat}}
 
 ## 参见
 

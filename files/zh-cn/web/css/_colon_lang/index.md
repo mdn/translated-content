@@ -59,7 +59,7 @@ p:lang(en) {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.lang")}}
+{{Compat}}
 
 ## 参见
 

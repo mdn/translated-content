@@ -69,7 +69,7 @@ _HTML `<area>` 元素 在图片上定义一个热点区域，可以关联一个�
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.area")}}
+{{Compat}}
 
 ## 注意
 

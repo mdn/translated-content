@@ -71,7 +71,7 @@ div {
 
 ## Browser compatibility
 
-{{Compat("css.properties.border-block-end")}}
+{{Compat}}
 
 ## See also
 

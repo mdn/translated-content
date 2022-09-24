@@ -48,7 +48,7 @@ span:nth-last-of-type(2) {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.nth-last-of-type")}}
+{{Compat}}
 
 ## 参见
 

@@ -80,7 +80,7 @@ This is the first sentence. This whole sentence is in small letters.
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.small")}}
+{{Compat}}
 
 ## 另请参考
 
