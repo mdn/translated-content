@@ -50,7 +50,7 @@ function init() {
 
 ## 浏览器支持情况
 
-{{Compat("api.GlobalEventHandlers.onpointerleave")}}
+{{Compat}}
 
 ## 参考
 

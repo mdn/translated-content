@@ -51,7 +51,7 @@ _`requestFullscreen()` 通过拒绝返回的 `Promise`来生成错误条件，�
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.requestFullscreen")}}
+{{Compat}}
 
 ## 参阅
 

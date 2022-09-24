@@ -99,7 +99,7 @@ console.log(p.nodeName);
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.outerHTML")}}
+{{Compat}}
 
 ## 相关链接
 

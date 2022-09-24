@@ -87,4 +87,4 @@ if (!Element.prototype.matches) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.matches")}}
+{{Compat}}

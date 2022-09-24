@@ -79,4 +79,4 @@ Array [ closed-shadow, body, html, HTMLDocument https://mdn.github.io/web-compon
 
 ## 浏览器兼容性
 
-{{Compat("api.Event.composedPath")}}
+{{Compat}}

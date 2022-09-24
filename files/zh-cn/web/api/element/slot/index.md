@@ -45,4 +45,4 @@ console.log(slottedSpan.slot); // logs 'my-text'
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.slot")}}
+{{Compat}}

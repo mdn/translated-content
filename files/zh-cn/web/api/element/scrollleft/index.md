@@ -79,7 +79,7 @@ button.onclick = function () {
 
 ## 浏览器兼容
 
-{{Compat("api.Element.scrollLeft")}}
+{{Compat}}
 
 ## 参见
 

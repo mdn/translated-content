@@ -19,7 +19,7 @@ var pxl = elt.scrollTopMax;
 
 ## 浏览器兼容
 
-{{Compat("api.Element.scrollTopMax")}}
+{{Compat}}
 
 ## See also
 

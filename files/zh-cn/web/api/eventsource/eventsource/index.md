@@ -49,7 +49,7 @@ evtSource.onmessage = function(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.EventSource.EventSource")}}
+{{Compat}}
 
 ## 相关链接
 

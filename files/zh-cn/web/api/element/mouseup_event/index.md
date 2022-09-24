@@ -40,7 +40,7 @@ slug: Web/API/Element/mouseup_event
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.mouseup_event")}}
+{{Compat}}
 
 ## 参见
 

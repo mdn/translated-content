@@ -80,7 +80,7 @@ input.onkeyup = logKey;
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.keyup_event")}}
+{{Compat}}
 
 ## 更多
 

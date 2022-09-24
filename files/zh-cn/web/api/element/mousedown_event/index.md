@@ -52,7 +52,7 @@ slug: Web/API/Element/mousedown_event
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.mousedown_event")}}
+{{Compat}}
 
 ## 参见
 

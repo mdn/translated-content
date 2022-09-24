@@ -113,7 +113,7 @@ imgError.addEventListener('click', () => {
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.error_event")}}
+{{Compat}}
 
 ## 参阅
 
