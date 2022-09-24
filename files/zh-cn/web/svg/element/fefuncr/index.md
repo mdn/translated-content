@@ -25,7 +25,7 @@ slug: Web/SVG/Element/feFuncR
 
 ## DOM 接口
 
-该元素实现了`SVGFEFuncRElement接口。`
+该元素实现了`SVGFEFuncRElement 接口。`
 
 ## 参见
 

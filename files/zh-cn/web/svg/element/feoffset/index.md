@@ -31,7 +31,7 @@ slug: Web/SVG/Element/feOffset
 
 ## DOM 接口
 
-该元素实现了`SVGFEOffsetElement接口。`
+该元素实现了`SVGFEOffsetElement 接口。`
 
 ## 参见
 

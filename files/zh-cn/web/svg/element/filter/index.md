@@ -35,7 +35,7 @@ slug: Web/SVG/Element/filter
 
 ## DOM 接口
 
-该元素实现了`SVGFilterElement接口。`
+该元素实现了`SVGFilterElement 接口。`
 
 ## 示例：
 

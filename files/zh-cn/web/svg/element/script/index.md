@@ -3,7 +3,7 @@ title: script
 slug: Web/SVG/Element/script
 ---
 
-一个 SVG 脚本元素等同于 HTML 中的`script元素，因此这个位置是面向脚本的（例如，ECMAScript）。`
+一个 SVG 脚本元素等同于 HTML 中的`script 元素，因此这个位置是面向脚本的（例如，ECMAScript）。`
 
 任何定义在`script`元素中的函数拥有一个跨当前文档的全局范围。
 
