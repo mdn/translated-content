@@ -84,5 +84,5 @@ console.log(object1 === object1);  // true
 ## 参见
 
 - [相等运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)
-- [不等于运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Inequality)
-- [严格不等于运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_inequality)
+- [不相等运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Inequality)
+- [严格不相等运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_inequality)
