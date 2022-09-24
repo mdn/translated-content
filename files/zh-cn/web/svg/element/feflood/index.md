@@ -30,7 +30,7 @@ slug: Web/SVG/Element/feFlood
 
 ## DOM 接口
 
-该元素实现了`SVGFEFloodElement 接口。`
+该元素实现了 `SVGFEFloodElement` 接口。
 
 ## 参见
 
