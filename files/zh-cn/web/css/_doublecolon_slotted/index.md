@@ -87,7 +87,7 @@ customElements.define('person-details',
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.slotted")}}
+{{Compat}}
 
 ## 参考
 

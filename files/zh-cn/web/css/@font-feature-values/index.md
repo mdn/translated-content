@@ -56,7 +56,7 @@ The `@font-feature-values` at-rule may be used at the top level of a CSS, but al
 
 ## Browser compatibility
 
-{{Compat("css.at-rules.font-feature-values")}}
+{{Compat}}
 
 ## See also
 

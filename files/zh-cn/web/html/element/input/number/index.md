@@ -335,7 +335,7 @@ After declaring a few variables, we add an event listener to the button to contr
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.input.input-number")}}
+{{Compat}}
 
 ## 相关链接
 

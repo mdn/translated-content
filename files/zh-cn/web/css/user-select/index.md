@@ -110,7 +110,7 @@ user-select: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.user-select")}}
+{{Compat}}
 
 ## 参见
 

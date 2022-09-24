@@ -38,4 +38,4 @@ slug: Web/SVG/Element/switch
 
 ## 浏览器支持
 
-{{Compat("svg.elements.switch")}}
+{{Compat}}

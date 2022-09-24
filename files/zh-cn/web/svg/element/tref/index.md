@@ -60,7 +60,7 @@ slug: Web/SVG/Element/tref
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.tref")}}
+{{Compat}}
 
 ## 参见
 

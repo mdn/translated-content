@@ -83,7 +83,7 @@ slug: Web/HTML/Element/address
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.address")}}
+{{Compat}}
 
 ## 另请参阅
 

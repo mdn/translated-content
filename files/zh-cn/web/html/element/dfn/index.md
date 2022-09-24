@@ -79,7 +79,7 @@ _HTML 定义元素_ (**\<dfn>**) 表示术语的一个定义。
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.dfn")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -121,4 +121,4 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 
 ## Browser compatibility
 
-{{Compat("css.properties.grid-template-columns.repeat")}}
+{{Compat}}

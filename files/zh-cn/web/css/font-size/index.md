@@ -151,4 +151,4 @@ span { font-size: 16px; }
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.font-size")}}
+{{Compat}}

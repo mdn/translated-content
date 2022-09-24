@@ -202,7 +202,7 @@ background-size: 50% 25%, contain, 3em;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.background-size")}}
+{{Compat}}
 
 ## Polyfills and Workarounds
 

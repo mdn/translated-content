@@ -40,7 +40,7 @@ slug: Web/CSS/:right
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.right")}}
+{{Compat}}
 
 ## 参见
 

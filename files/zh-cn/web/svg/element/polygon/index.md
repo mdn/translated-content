@@ -38,7 +38,7 @@ slug: Web/SVG/Element/polygon
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.polygon")}}
+{{Compat}}
 
 ## 相关内容
 

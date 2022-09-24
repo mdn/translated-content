@@ -113,7 +113,7 @@ table th, table td {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.border-collapse")}}
+{{Compat}}
 
 ## 参见
 

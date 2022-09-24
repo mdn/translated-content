@@ -227,7 +227,7 @@ th, p, td {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.perspective")}}
+{{Compat}}
 
 ## 相关连接
 

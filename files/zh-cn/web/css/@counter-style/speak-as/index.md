@@ -94,7 +94,7 @@ speak-as: <counter-style-name>;
 
 ## 浏览器兼容性
 
-{{Compat("css.at-rules.counter-style.speak-as")}}
+{{Compat}}
 
 ## 参考
 

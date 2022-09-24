@@ -191,7 +191,7 @@ In this example, screen reading technology would announce that there are two {{H
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.h1")}}
+{{Compat}}
 
 ## 参见
 

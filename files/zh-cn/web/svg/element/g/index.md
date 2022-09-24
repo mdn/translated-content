@@ -50,4 +50,4 @@ _没有专有属性。_
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.g")}}
+{{Compat}}

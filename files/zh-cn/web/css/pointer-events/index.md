@@ -117,7 +117,7 @@ Its extension to HTML elements, though present in early drafts of CSS Basic User
 
 ## 浏览器兼容
 
-{{Compat("css.properties.pointer-events")}}
+{{Compat}}
 
 ## 相关链接
 

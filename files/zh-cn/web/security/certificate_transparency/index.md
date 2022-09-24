@@ -135,7 +135,7 @@ Add the following line to the Web.config file to send the `Public-Key-Pins` head
 
 ## Browser compatibility
 
-{{Compat("http.headers.Public-Key-Pins")}}
+{{Compat}}
 
 ## See also
 

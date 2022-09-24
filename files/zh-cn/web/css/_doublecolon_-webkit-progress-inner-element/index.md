@@ -43,7 +43,7 @@ progress {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.-webkit-progress-inner-element")}}
+{{Compat}}
 
 ## 参考
 

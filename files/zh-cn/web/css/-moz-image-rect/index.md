@@ -145,4 +145,4 @@ This uses {{DOMxRef("window.getComputedStyle()")}} to fetch the style of each el
 
 ## Browser compatibility
 
-{{Compat("css.types.-moz-image-rect")}}
+{{Compat}}

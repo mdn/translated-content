@@ -59,7 +59,7 @@ additive-symbols: 3 "0", 2 url(symbol.png);
 
 ## 浏览器兼容性
 
-{{Compat("css.at-rules.counter-style.additive-symbols")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -49,7 +49,7 @@ slug: Web/SVG/Element/line
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.line")}}
+{{Compat}}
 
 ## 相关内容
 

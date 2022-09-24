@@ -101,4 +101,4 @@ span {
 
 ## Browser compatibility
 
-{{Compat("css.properties.outline-width")}}
+{{Compat}}

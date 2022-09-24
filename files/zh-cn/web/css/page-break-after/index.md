@@ -83,7 +83,7 @@ div.footnotes {
 
 ## Browser compatibility
 
-{{Compat("css.properties.page-break-after")}}
+{{Compat}}
 
 ## See also
 

@@ -88,4 +88,4 @@ scroll-snap-points-y: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.scroll-snap-points-y")}}
+{{Compat}}

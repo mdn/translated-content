@@ -77,7 +77,7 @@ p:first-child {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.widows")}}
+{{Compat}}
 
 ## 另请参见
 

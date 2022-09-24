@@ -106,7 +106,7 @@ slug: Web/HTML/Element/div
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.div")}}
+{{Compat}}
 
 ## 参见
 

@@ -63,7 +63,7 @@ slug: Web/SVG/Element/script
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.script")}}
+{{Compat}}
 
 ## 参见
 

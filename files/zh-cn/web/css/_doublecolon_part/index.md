@@ -93,7 +93,7 @@ globalThis.customElements.define(template.id, class extends HTMLElement {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.part")}}
+{{Compat}}
 
 ## 相关阅读
 

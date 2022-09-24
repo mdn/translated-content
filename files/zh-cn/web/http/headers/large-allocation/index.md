@@ -59,7 +59,7 @@ Large-Allocation: 500
 
 ## 浏览器兼容性
 
-{{Compat("http.headers.Large-Allocation")}}
+{{Compat}}
 
 ## 参见
 

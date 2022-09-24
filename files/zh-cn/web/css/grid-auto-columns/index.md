@@ -119,7 +119,7 @@ grid-auto-columns: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.grid-auto-columns")}}
+{{Compat}}
 
 ## 参见
 

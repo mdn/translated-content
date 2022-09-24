@@ -61,4 +61,4 @@ slug: Web/SVG/Element/a
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.a")}}
+{{Compat}}
