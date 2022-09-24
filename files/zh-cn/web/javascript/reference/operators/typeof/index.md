@@ -27,7 +27,7 @@ typeof operand
 | 类型                                                                                                                                      | 结果                              |
 |-----------------------------------------------------------------------------------------------------------------------------------------|---------------------------------|
 | [Undefined](/zh-CN/docs/Glossary/undefined)                                                                                             | `"undefined"`                   |
-| [Null](/zh-CN/docs/Glossary/Null)                                                                                                       | `"object"`（见[下文](#typeof_null)） |
+| [Null](/zh-CN/docs/Glossary/Null)                                                                                                       | `"object"`（[原因](#typeof_null)） |
 | [Boolean](/zh-CN/docs/Glossary/Boolean)                                                                                                 | `"boolean"`                     |
 | [Number](/zh-CN/docs/Glossary/Number)                                                                                                   | `"number"`                      |
 | [BigInt](/zh-CN/docs/Glossary/BigInt)                                                                                                   | `"bigint"`                      |
