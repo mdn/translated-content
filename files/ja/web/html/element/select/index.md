@@ -54,7 +54,7 @@ slug: Web/HTML/Element/select
 
 マウスを使用すると、 <kbd>Ctrl</kbd>, <kbd>Command</kbd>, <kbd>Shift</kbd> キー (オペレーティングシステムによって異なります) を押しながらクリックすることで、複数の項目を選択または解除することができます。
 
-> **Warning:** **警告**: キーボードから連続していない複数の項目を選択する仕組みは、今のところ Firefox でしか動作しないようです。
+> **Warning:** キーボードから連続していない複数の項目を選択する仕組みは、今のところ Firefox でしか動作しないようです。
 >
 > **注:** macOS では、 <kbd>Ctrl</kbd> + <kbd>↑</kbd> および <kbd>Ctrl</kbd> + <kbd>↓</kbd> のショートカットが、 OS 既定の _Mission Control_ および _Application windows_ のショートカットと競合するため、動作させるためにはこれらをオフにしなければならないでしょう。
 
