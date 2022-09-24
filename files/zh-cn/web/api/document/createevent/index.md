@@ -16,7 +16,7 @@ var event = document.createEvent(type);
 ```
 
 - `event` 就是被创建的 [Event](/zh-CN/docs/DOM/event) 对象。
-- `type` 是一个字符串，表示要创建的事件类型。事件类型可能包括`"UIEvents"`, `"MouseEvents"`, `"MutationEvents"`, 或者 `"HTMLEvents"`。请查看 [Notes](#notes) 章节获取详细信息 。
+- `type` 是一个字符串，表示要创建的事件类型。事件类型可能包括`"UIEvents"`, `"MouseEvents"`, `"MutationEvents"`, 或者 `"HTMLEvents"`。请查看 [Notes](#notes) 章节获取详细信息。
 
 ## 示例
 

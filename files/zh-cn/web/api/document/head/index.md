@@ -18,7 +18,7 @@ var objRef = document.head;
 ## 示例
 
 ```js
-// HTML 部分源码为: <head id="my-document-head">
+// HTML 部分源码为：<head id="my-document-head">
 var aHead = document.head;
 
 alert(aHead.id); // "my-document-head";
