@@ -99,7 +99,7 @@ This element includes the [global attributes](/zh-TW/docs/Web/HTML/Global_attrib
 
 ## Browser compatibility
 
-{{Compat("html.elements.form")}}
+{{Compat}}
 
 ## See also
 

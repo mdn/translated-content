@@ -172,7 +172,7 @@ If you need to support truly obsolete JavaScript engines that don't support [`Ob
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.find")}}
+{{Compat}}
 
 ## 參見
 

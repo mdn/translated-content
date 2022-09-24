@@ -343,7 +343,7 @@ var double = arr.map(v => v * 2);       // [10, 12, 26, 0, 2, 36, 46]
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.functions.arrow_functions")}}
+{{Compat}}
 
 ## 參閱
 

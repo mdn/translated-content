@@ -59,7 +59,7 @@ canvas 的大小設置可透過樣式表（stylesheet）被改變。可經由樣
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.canvas")}}
+{{Compat}}
 
 ## 延伸閱讀
 

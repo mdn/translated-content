@@ -64,7 +64,7 @@ USA
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.br")}}
+{{Compat}}
 
 ## 參見
 
