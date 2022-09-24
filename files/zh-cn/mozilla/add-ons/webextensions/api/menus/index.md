@@ -31,7 +31,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus
 
 ![](menus-3.png)
 
-## 例子
+## 示例
 
 下面是一个包含四个项目的菜单，他们分别是：一个普通选项，两个周围有分割线的单选，和一个复选框。单选框使用了自定义图标。
 

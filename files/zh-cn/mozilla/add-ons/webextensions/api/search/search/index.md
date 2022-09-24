@@ -42,7 +42,7 @@ browser.search.search(
 
 {{Compat}}
 
-## 例子
+## 示例
 
 使用默认搜索引擎进行搜索。结果显示在新选项卡中：
 

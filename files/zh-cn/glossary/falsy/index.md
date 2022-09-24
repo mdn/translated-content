@@ -22,7 +22,7 @@ slug: Glossary/Falsy
 | {{Glossary("undefined")}} | [undefined](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) - 原始值                                                                                                   |
 | {{Glossary("NaN")}}         | [NaN](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) - 非数值                                                                                                               |
 
-## 例子
+## 示例
 
 JavaScript 中 _falsy_ 值的例子 (在布尔值上下文中被转换为 false，从而*绕过*了 `if` 代码块):
 
