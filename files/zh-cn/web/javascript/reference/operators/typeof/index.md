@@ -36,7 +36,7 @@ typeof operand
 | [Function](/zh-CN/docs/Glossary/Function)（在 ECMA-262 中实现 [[Call]]；[classes](/zh-CN/docs/Web/JavaScript/Reference/Statements/class)也是函数) | `"function"`                    |
 | 其他任何对象                                                                                                                                  | `"object"`                      |
 
-这个值列表是详尽的。没有符合规范的引擎报告产生（或历史上产生过）除列出的值之外的值。在规范删除 `typeof` 为不可调用的非标准外来对象返回实现定义的字符串的行为之前，旧的 Internet Explorer 是已知的唯一一个[实现附加返回值](https://github.com/tc39/ecma262/issues/1440#issuecomment-461963872)的浏览器。
+这个值列表是详尽的。没有符合规范的引擎曾被报告过产生（或历史上产生过）除列出的值之外的值。在规范删除 `typeof` 为不可调用的非标准外来对象返回实现定义的字符串的行为之前，旧的 Internet Explorer 是已知的唯一一个[实现额外返回值](https://github.com/tc39/ecma262/issues/1440#issuecomment-461963872)的浏览器。
 
 ## 示例
 
