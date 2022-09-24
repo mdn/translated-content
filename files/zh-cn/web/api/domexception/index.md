@@ -100,7 +100,7 @@ slug: Web/API/DOMException
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMException")}}
+{{Compat}}
 
 ## 参见
 

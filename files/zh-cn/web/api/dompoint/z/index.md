@@ -23,7 +23,7 @@ var zPos = DOMPoint.z;
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMPointReadOnly.z")}}
+{{Compat}}
 
 ## 相关链接
 

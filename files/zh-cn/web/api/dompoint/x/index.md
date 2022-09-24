@@ -23,7 +23,7 @@ var xPos = DOMPoint.x;
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMPointReadOnly.x")}}
+{{Compat}}
 
 ## 相关链接
 

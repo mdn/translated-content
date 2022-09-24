@@ -146,7 +146,7 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html")
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMParser", 3)}}
+{{Compat}}
 
 ## 参见
 
