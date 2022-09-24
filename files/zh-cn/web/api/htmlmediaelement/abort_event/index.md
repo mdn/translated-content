@@ -53,7 +53,7 @@ video.appendChild(source);
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLMediaElement.abort_event")}}
+{{Compat}}
 
 ## 参阅
 

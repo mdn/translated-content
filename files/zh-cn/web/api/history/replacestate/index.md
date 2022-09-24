@@ -47,4 +47,4 @@ history.replaceState(stateObj, "", "bar2.html");
 
 ## 浏览器兼容性
 
-{{Compat("api.History.replaceState")}}
+{{Compat}}

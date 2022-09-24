@@ -30,7 +30,7 @@ console.log(obj.duration); // NaN
 
 ## 浏览器支持
 
-{{Compat("api.HTMLMediaElement.duration")}}
+{{Compat}}
 
 ## 相关内容
 

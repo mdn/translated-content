@@ -39,7 +39,7 @@ Xxx.xxx()
 
 ## 浏览器支持
 
-{{Compat("api.HTMLMediaElement.autoplay")}}
+{{Compat}}
 
 ## 看看这里
 

@@ -43,7 +43,7 @@ pc.addStream(stream);
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLCanvasElement.captureStream")}}
+{{Compat}}
 
 ## 看看其他
 

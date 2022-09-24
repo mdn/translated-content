@@ -26,7 +26,7 @@ _No specific methods, inherits methods from its parent, {{domxref("HTMLElement")
 
 ## Browser compatibility
 
-{{Compat("api.HTMLParagraphElement")}}
+{{Compat}}
 
 ## See also
 
