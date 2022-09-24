@@ -17,7 +17,7 @@ x === y
 
 ## 描述
 
-全等运算符（`===` 和 `!==`）使用[全等比较算法](http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.6)来比较两个操作数。
+全等运算符（`===` 和 `!==`）提供了[严格相等判定](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#严格相等)语义。
 
 - 如果操作数的类型不同，则返回 `false`。
 - 如果两个操作数都是对象，只有当它们指向同一个对象时才返回 `true`。
