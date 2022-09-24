@@ -51,4 +51,4 @@ navigator.mediaDevices.getUserMedia({audio: true, video: true})
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaStream.getAudioTracks")}}
+{{Compat}}

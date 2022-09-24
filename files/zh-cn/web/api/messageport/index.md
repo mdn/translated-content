@@ -77,7 +77,7 @@ function onMessage(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.MessagePort")}}
+{{Compat}}
 
 ## 参见
 

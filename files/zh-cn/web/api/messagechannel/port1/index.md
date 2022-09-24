@@ -50,7 +50,7 @@ function handleMessage(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.MessageChannel.port1")}}
+{{Compat}}
 
 ## 参考
 

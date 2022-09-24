@@ -75,4 +75,4 @@ setTimeout(function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Performance.measure")}}
+{{Compat}}

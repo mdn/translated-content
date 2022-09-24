@@ -128,7 +128,7 @@ document.getElementById("button").addEventListener('click', simulateClick);
 
 ## 浏览器兼容性
 
-{{Compat("api.MouseEvent")}}
+{{Compat}}
 
 ## 参考
 

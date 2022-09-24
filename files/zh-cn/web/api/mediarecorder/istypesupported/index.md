@@ -44,7 +44,7 @@ for (var i in types) {
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaRecorder.isTypeSupported")}}
+{{Compat}}
 
 ## 看过这个的用户还浏览了以下内容：
 

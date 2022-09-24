@@ -104,4 +104,4 @@ onconnect = function(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.MessageEvent")}}
+{{Compat}}

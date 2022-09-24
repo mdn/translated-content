@@ -59,7 +59,7 @@ DASH 的两个最常见的用例涉及“点播”或“直播”观看内容。
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaSource", 0)}}
+{{Compat}}
 
 ## 参见
 

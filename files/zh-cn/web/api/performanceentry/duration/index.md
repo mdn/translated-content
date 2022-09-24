@@ -85,4 +85,4 @@ function check_PerformanceEntry(obj) {
 
 ## Browser compatibility
 
-{{Compat("api.PerformanceEntry.duration")}}
+{{Compat}}

@@ -76,7 +76,7 @@ Cross-Origin-Embedder-Policy: require-corp
 
 ## 浏览器兼容性
 
-{{Compat("api.Performance.now")}}
+{{Compat}}
 
 ## 相关链接
 

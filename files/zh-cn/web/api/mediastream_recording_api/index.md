@@ -120,7 +120,7 @@ navigator.mediaDevices.enumerateDevices()
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaRecorder")}}
+{{Compat}}
 
 ## 参阅
 
