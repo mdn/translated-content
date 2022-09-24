@@ -7,7 +7,7 @@ slug: Web/API/Element/transitioncancel_event
 
 {{domxref("GlobalEventHandlers")}}混合 的 **`ontransitioncancel`** 属性 是处理 {{event("transitioncancel")}} 事件的手柄{{event("Event_handlers", "event handler")}}.
 
-> **备注：** domxref("GlobalEventHandlers") 与 event("Event_handlers", "event handler")： dom 修订版本的事件手柄。
+> **备注：** domxref("GlobalEventHandlers") 与 event("Event_handlers", "event handler")：dom 修订版本的事件手柄。
 >
 > event("transitioncancel")：transitioncancel 事件
 

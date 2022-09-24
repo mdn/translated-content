@@ -17,9 +17,9 @@ slug: Web/API/Element/getElementsByTagName
 elements = element.getElementsByTagName(tagName)
 ```
 
-- `elements 搜索到的元素的动态 HTML 集合`{{domxref("HTMLCollection")}}，它们的顺序是`在子树中出现的顺序`。 如果没有搜索到元素则这个集合为空。
+- `elements 搜索到的元素的动态 HTML 集合`{{domxref("HTMLCollection")}}，它们的顺序是`在子树中出现的顺序`。如果没有搜索到元素则这个集合为空。
 - `element` 搜索从 element 开始。请注意只有 element 的后代元素会被搜索，不包括元素自己。
-- `tagName` 要查找的限定名。 字符 `"*"` 代表所有元素。 考虑到兼容 XHTML，应该使用小写。
+- `tagName` 要查找的限定名。字符 `"*"` 代表所有元素。考虑到兼容 XHTML，应该使用小写。
 
 ## 实例
 

@@ -34,7 +34,7 @@ function getTime(event) {
 
 <body onkeypress="getTime(event)">
 
-<p>按下任意键获取 onkeypress 事件对象的 timestamp 属性值.</p>
+<p>按下任意键获取 onkeypress 事件对象的 timestamp 属性值。</p>
 <p>timeStamp: <span id="time">-</span></p>
 
 </body>

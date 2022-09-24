@@ -44,7 +44,7 @@ const refs = [...document.querySelectorAll(`[data-name*="funnel-chart-percent"]`
 // const refs = [...document.querySelectorAll(`[class~="funnel-chart-percent"]`)];
 ```
 
-下面的例子返回了 HTML 文档中的`body`元素的所有`p后代`元素：
+下面的例子返回了 HTML 文档中的`body`元素的所有`p 后代`元素：
 
 ```js
 var matches = document.body.querySelectorAll('p');
