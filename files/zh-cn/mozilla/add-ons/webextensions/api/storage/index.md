@@ -36,7 +36,7 @@ storage 有 3 个属性，每一个代表不同的存储区域。
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.storage")}}
+{{Compat}}
 
 > **备注：** "Chrome 不兼容"这部分来源于 [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities) 使用[WebExtChromeCompat](/zh-CN/docs/Template:WebExtChromeCompat) macro.
 >

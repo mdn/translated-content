@@ -30,7 +30,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.i18n")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

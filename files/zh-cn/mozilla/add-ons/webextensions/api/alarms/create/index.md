@@ -37,7 +37,7 @@ browser.alarms.create(
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.alarms.create")}}
+{{Compat}}
 
 ## 示例
 

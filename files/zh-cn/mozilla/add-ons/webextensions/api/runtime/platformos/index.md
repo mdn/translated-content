@@ -26,7 +26,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformOs
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.runtime.PlatformOs")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

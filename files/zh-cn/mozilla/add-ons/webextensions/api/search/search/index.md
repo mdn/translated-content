@@ -40,7 +40,7 @@ browser.search.search(
 
 ## 浏览器兼容
 
-{{Compat("webextensions.api.search.search", 10)}}
+{{Compat}}
 
 ## 例子
 

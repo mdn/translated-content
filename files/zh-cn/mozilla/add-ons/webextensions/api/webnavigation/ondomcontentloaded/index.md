@@ -58,7 +58,7 @@ browser.webNavigation.onDOMContentLoaded.hasListener(listener)
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.webNavigation.onDOMContentLoaded")}}
+{{Compat}}
 
 ## Examples
 

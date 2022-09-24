@@ -253,4 +253,4 @@ Firefox 中：
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.manifest.browser_action", 10)}}
+{{Compat}}

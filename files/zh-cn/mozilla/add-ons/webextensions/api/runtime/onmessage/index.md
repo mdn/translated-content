@@ -92,7 +92,7 @@ Events have three functions:
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.runtime.onMessage")}}
+{{Compat}}
 
 ## Examples
 

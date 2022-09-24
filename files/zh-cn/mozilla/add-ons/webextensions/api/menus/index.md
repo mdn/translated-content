@@ -125,7 +125,7 @@ browser.menus.create({
 
 ## 浏览器兼容性
 
-{{ Compat("webextensions.api.menus", 1, "true") }}
+{{ Compat }}
 
 {{WebExtExamples("h2")}}
 

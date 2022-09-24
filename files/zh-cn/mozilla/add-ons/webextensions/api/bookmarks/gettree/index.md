@@ -27,7 +27,7 @@ var gettingTree = browser.bookmarks.getTree()
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.bookmarks.getTree")}}
+{{Compat}}
 
 ## 示例
 
