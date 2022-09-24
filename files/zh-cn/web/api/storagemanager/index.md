@@ -22,4 +22,4 @@ slug: Web/API/StorageManager
 
 ## 浏览器兼容性
 
-{{Compat("api.StorageManager")}}
+{{Compat}}

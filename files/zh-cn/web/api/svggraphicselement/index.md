@@ -35,4 +35,4 @@ slug: Web/API/SVGGraphicsElement
 
 ## 浏览器兼容性
 
-{{Compat("api.SVGGraphicsElement")}}
+{{Compat}}

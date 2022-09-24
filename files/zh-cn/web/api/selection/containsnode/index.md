@@ -34,7 +34,7 @@ sel.containsNode(aNode,aPartlyContained)
 
 ## 浏览器兼容性
 
-{{Compat("api.Selection.containsNode")}}
+{{Compat}}
 
 ## 参考
 

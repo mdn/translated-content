@@ -41,7 +41,7 @@ document.onselectionchange = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Selection.type")}}
+{{Compat}}
 
 ## 参考
 

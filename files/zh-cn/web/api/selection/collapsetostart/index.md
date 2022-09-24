@@ -23,7 +23,7 @@ _无。_
 
 ## 浏览器兼容性
 
-{{Compat("api.Selection.collapseToStart")}}
+{{Compat}}
 
 ## 参见
 

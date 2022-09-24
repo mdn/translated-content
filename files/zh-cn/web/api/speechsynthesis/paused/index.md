@@ -35,7 +35,7 @@ var amIPaused = synth.paused; // 将返回 true
 
 ## 浏览器兼容性
 
-{{Compat("api.SpeechSynthesis.paused")}}
+{{Compat}}
 
 ## 请参阅
 

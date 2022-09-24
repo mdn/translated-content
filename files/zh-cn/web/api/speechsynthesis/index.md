@@ -104,7 +104,7 @@ inputForm.onsubmit = function(event) {
 
 ## 浏览器兼容性
 
-{{Compat("api.SpeechSynthesis")}}
+{{Compat}}
 
 ## 参见
 

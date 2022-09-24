@@ -38,7 +38,7 @@ alert(window.getSelection().toString())  // 真实情况
 
 ## 浏览器兼容性
 
-{{Compat("api.Selection.toString")}}
+{{Compat}}
 
 ## 参考
 

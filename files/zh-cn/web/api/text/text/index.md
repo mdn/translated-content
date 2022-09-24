@@ -26,7 +26,7 @@ text = new Text("Test");
 
 ## Browser compatibility
 
-{{Compat("api.Text.Text")}}
+{{Compat}}
 
 ## See also
 

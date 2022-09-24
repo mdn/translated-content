@@ -19,4 +19,4 @@ var targetElement = someElement.targetElement;
 
 ## 浏览器兼容性
 
-{{Compat("api.SVGAnimationElement.targetElement")}}
+{{Compat}}

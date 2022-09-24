@@ -117,7 +117,7 @@ _此接口不继承任何方法。_
 
 ## 浏览器支持
 
-{{Compat("api.SubtleCrypto")}}
+{{Compat}}
 
 ## 另见
 

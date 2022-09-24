@@ -59,7 +59,7 @@ navigator.storage.estimate().then(function(estimate) {
 
 ## 浏览器兼容性
 
-{{Compat("api.StorageManager.estimate")}}
+{{Compat}}
 
 ## 参见
 
