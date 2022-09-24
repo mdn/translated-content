@@ -32,7 +32,7 @@ var removingBookmark = browser.bookmarks.remove(
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.bookmarks.remove")}}
+{{Compat}}
 
 ## 例子
 

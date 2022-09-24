@@ -38,7 +38,7 @@ A [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.tabs.sendMessage")}}
+{{Compat}}
 
 ## Examples
 

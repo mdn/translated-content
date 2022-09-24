@@ -32,7 +32,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.bookmarks.BookmarkTreeNode", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}
 

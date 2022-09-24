@@ -21,7 +21,7 @@ var openingPage = browser.runtime.openOptionsPage()
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.runtime.openOptionsPage")}}
+{{Compat}}
 
 ## 例子
 

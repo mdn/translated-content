@@ -47,4 +47,4 @@ Chrome 浏览器提供了一个叫做`'proxy'的`api 扩展，它的功能跟这
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.proxy")}}
+{{Compat}}

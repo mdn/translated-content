@@ -64,7 +64,7 @@ var downloading = browser.downloads.download(
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.downloads.download")}}
+{{Compat}}
 
 ## 例子
 

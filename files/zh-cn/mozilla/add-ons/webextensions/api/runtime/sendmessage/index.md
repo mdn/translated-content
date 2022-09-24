@@ -58,7 +58,7 @@ var sending = browser.runtime.sendMessage(
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.runtime.sendMessage")}}
+{{Compat}}
 
 ## Examples
 

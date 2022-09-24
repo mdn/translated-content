@@ -26,7 +26,7 @@ var port = browser.runtime.connectNative(
 
 ## 浏览器的兼容性
 
-{{Compat("webextensions.api.runtime.connectNative")}}
+{{Compat}}
 
 ## 示例
 

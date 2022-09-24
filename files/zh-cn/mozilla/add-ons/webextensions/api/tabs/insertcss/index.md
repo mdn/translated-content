@@ -51,7 +51,7 @@ var inserting = browser.tabs.insertCSS(
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.tabs.insertCSS")}}
+{{Compat}}
 
 ## 例子
 
