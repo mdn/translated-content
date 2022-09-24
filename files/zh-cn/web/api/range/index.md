@@ -84,7 +84,7 @@ _该接口没有继承的方法。_
 - {{ domxref("Range.setStartBefore()")}}
   - : 以另一个{{ domxref("Node","节点") }}为基准，设置 `Range` 的起点位置。
 - {{ domxref("Range.surroundContents()")}}
-  - : 将 `Range` 中的内容移动到一个新的 {{ domxref("Node","节点") }}。
+  - : 将 `Range` 中的内容移动到一个新的{{ domxref("Node","节点") }}。
 - {{ domxref("Range.toString()")}}
   - : 返回 `Range` 中的文本
 
