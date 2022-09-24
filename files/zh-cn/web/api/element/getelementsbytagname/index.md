@@ -41,4 +41,4 @@ for (var i = 0; i < cells.length; i++) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.getElementsByTagName")}}
+{{Compat}}

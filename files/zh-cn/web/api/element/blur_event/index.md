@@ -65,7 +65,7 @@ form.addEventListener("blur", function( event ) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.blur_event")}}
+{{Compat}}
 
 ## 相关的事件
 

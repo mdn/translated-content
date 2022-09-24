@@ -73,7 +73,7 @@ var matches = el.querySelectorAll('iframe[data-src]');
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.querySelectorAll")}}
+{{Compat}}
 
 ## 规范
 

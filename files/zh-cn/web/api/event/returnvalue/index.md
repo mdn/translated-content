@@ -35,4 +35,4 @@ New projects should generally avoid using `returnValue`, although they may if th
 
 ## 浏览器兼容性
 
-{{Compat("api.Event.returnValue")}}
+{{Compat}}

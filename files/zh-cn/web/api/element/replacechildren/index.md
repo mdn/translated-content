@@ -139,7 +139,7 @@ noBtn.addEventListener('click', () => {
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.replaceChildren")}}
+{{Compat}}
 
 ## 相关链接
 

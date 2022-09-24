@@ -77,7 +77,7 @@ document.getElementById("tunnel").animate([
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.animate")}}
+{{Compat}}
 
 ## 更多
 

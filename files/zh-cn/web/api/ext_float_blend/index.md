@@ -49,7 +49,7 @@ gl.drawArrays(gl.POINTS, 0, 1);
 
 ## 浏览器兼容性
 
-{{Compat("api.EXT_float_blend")}}
+{{Compat}}
 
 ## 其它参考
 

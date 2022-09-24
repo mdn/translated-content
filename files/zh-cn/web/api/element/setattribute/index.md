@@ -76,7 +76,7 @@ b.setAttribute("disabled", "");
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.setAttribute")}}
+{{Compat}}
 
 ### Gecko 备注
 
