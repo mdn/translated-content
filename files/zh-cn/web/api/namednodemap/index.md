@@ -33,9 +33,9 @@ _该接口没有继承任何方法。_
 - {{domxref("NamedNodeMap.getNamedItemNS()")}}
   - : 根据给定的命名空间参数和 name 参数返回一个 {{domxref("Attr")}} 对象。
 - {{domxref("NamedNodeMap.setNamedItemNS()")}}
-  - : 替换、添加给定命名空间参数和 name 参数的 {{domxref("Attr")}} 对象 。
+  - : 替换、添加给定命名空间参数和 name 参数的 {{domxref("Attr")}} 对象。
 - {{domxref("NamedNodeMap.removeNamedItemNS()")}}
-  - : 删除给定命名空间参数和 name 参数的 {{domxref("Attr")}} 对象 。
+  - : 删除给定命名空间参数和 name 参数的 {{domxref("Attr")}} 对象。
 
 ## 规范
 
