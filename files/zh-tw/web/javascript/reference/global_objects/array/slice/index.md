@@ -188,7 +188,7 @@ Although host objects (such as DOM objects) are not required by spec to follow t
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.slice")}}
+{{Compat}}
 
 ## 參見
 

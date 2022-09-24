@@ -44,7 +44,7 @@ Promise.reject(new Error('fail')).then(function(error) {
 
 ## Browser compatibility
 
-{{Compat("javascript.builtins.Promise.reject")}}
+{{Compat}}
 
 ## See also
 

@@ -62,7 +62,7 @@ if (!Array.of) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.of")}}
+{{Compat}}
 
 ## 參見
 
