@@ -47,8 +47,8 @@ Firefox 15 shipped on August 28, 2012. This article lists key changes that are u
 
 - Support for the [`DataView`](/zh-CN/JavaScript_typed_arrays/DataView) interface from the Typed Arrays specification has been added. This provides low-level access to the data contained in an [`ArrayBuffer`](/zh-CN/JavaScript_typed_arrays/ArrayBuffer).
 - Support for new ECMAScript 2015 built-ins: [`Number.isNaN()`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Number/isNaN), [`Number.toInteger()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toInteger), [`Number.isInteger()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger), [`Number.isFinite()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/isFinite) has been added. ([bug 749818](https://bugzilla.mozilla.org/show_bug.cgi?id=749818), [bug 761495](https://bugzilla.mozilla.org/show_bug.cgi?id=749818), [bug 761480](https://bugzilla.mozilla.org/show_bug.cgi?id=749818)).
-- 添加了对`ES6中的默认参数`的支持。([bug 757676](https://bugzilla.mozilla.org/show_bug.cgi?id=757676))
-- 添加了对`ES6中的剩余参数`的支持.([bug 574132](https://bugzilla.mozilla.org/show_bug.cgi?id=574132))
+- 添加了对`ES6 中的默认参数`的支持。([bug 757676](https://bugzilla.mozilla.org/show_bug.cgi?id=757676))
+- 添加了对`ES6 中的剩余参数`的支持.([bug 574132](https://bugzilla.mozilla.org/show_bug.cgi?id=574132))
 
 ### WebGL
 

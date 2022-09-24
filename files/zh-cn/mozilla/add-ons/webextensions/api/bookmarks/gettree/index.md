@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getTree
 
 **`bookmarks.getTree()`** 返回一个数组，该数组每一项为{{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}对象，作为书签树的根节点。
 
-如果它们是文件夹的话，你可以通过其`children属性及其后代的children属性`递归地访问整个树。
+如果它们是文件夹的话，你可以通过其`children 属性及其后代的 children 属性`递归地访问整个树。
 
 这是一个异步的函数，返回`Promise。`
 

@@ -395,7 +395,7 @@ window.addEventListener("message", function(event) {
 </html>
 ```
 
-`这个脚本添加一个全局的属性到全局window`:
+`这个脚本添加一个全局的属性到全局 window`:
 
 ```js
 // main.js
@@ -528,7 +528,7 @@ window.wrappedJSObject.messenger = cloneInto(
   {cloneFunctions: true});
 ```
 
-`现在页面脚本将看到新的含有notify方法的属性`:
+`现在页面脚本将看到新的含有 notify 方法的属性`:
 
 ```js
 window.messenger.notify("Message from the page script!");
