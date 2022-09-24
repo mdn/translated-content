@@ -38,7 +38,7 @@ html,body,svg { height:100% }
 
 ## glyph
 
-> **Warning:** **警告:**SVG2 において、{{SVGElement('glyph')}}は非推奨であり、用いるべきではありません。
+> **Warning:** SVG2 において、{{SVGElement('glyph')}}は非推奨であり、用いるべきではありません。
 
 {{SVGElement('glyph')}}要素に対しては、`d`属性はグリフのアウトライン形状を定義するパスコマンドの並びを含む文字列です。
 
@@ -51,7 +51,7 @@ html,body,svg { height:100% }
 
 ## missing-glyph
 
-> **Warning:** **警告:**SVG2 において、{{SVGElement('missing-glyph')}}は非推奨であり、用いるべきではありません。
+> **Warning:** SVG2 において、{{SVGElement('missing-glyph')}}は非推奨であり、用いるべきではありません。
 
 {{SVGElement('missing-glyph')}}要素に対しては、`d`属性は、グリフのアウトライン形状を定義するパスコマンドの並びを含んだ文字列です。
 
