@@ -23,7 +23,7 @@ var openingPage = browser.runtime.openOptionsPage()
 
 {{Compat}}
 
-## 例子
+## 示例
 
 当用户点击浏览器行为图标时，打开一个设置页面。
 

@@ -39,7 +39,7 @@ void main() {
 
 计算结果包含 RGBA 颜色信息。
 
-## 例子
+## 示例
 
 让我们构建一个简单的例子来解释这些着色器的动作。假设你已经看过[Three.js 教程](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)并掌握了场景，物体和材质的基本概念。
 

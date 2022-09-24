@@ -62,7 +62,7 @@ Promise<WebAssembly.Instance> WebAssembly.instantiate(module, importObject);
 - 如果参数的类型或结构不正确，将抛出异常 {{jsxref("TypeError")}} 。
 - 如果操作失败，promise 将会被 reject 掉， 根据失败的原因不同，会抛出 3 种异常，{{jsxref("WebAssembly.CompileError")}}，{{jsxref("WebAssembly.LinkError")}}, 或{{jsxref("WebAssembly.RuntimeError")}}。
 
-## 例子
+## 示例
 
 **提示**: 在大多数情况下，您可能需要使用{{jsxref("WebAssembly.instantiateStreaming()")}}，因为它比`instantiate()`更具效率。
 

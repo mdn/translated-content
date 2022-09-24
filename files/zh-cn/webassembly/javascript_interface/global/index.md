@@ -32,7 +32,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
 - `Global.prototype.valueOf()`
   - : 旧式的方法，返回全局变量包含的值。
 
-## 例子
+## 示例
 
 ### 创建 Global 实例
 

@@ -66,7 +66,7 @@ var downloading = browser.downloads.download(
 
 {{Compat}}
 
-## 例子
+## 示例
 
 下面这段代码尝试下载一个 example 文件，同时指定文件名和保存位置，还有 `uniquify` `conflictAction` 选项。
 

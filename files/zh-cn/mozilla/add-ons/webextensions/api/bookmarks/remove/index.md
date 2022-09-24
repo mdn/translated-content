@@ -34,7 +34,7 @@ var removingBookmark = browser.bookmarks.remove(
 
 {{Compat}}
 
-## 例子
+## 示例
 
 ```js
 function onRemoved() {

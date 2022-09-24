@@ -56,7 +56,7 @@ var myTable = new WebAssembly.Table(tableDescriptor);
 - {{jsxref("WebAssembly/Table/set","Table.prototype.set()")}}
   - : Sets an element stored at a given index to a given value.
 
-## 例子
+## 示例
 
 The following example (see table2.html [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) and [live version](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html)) creates a new WebAssembly Table instance with an initial size of 2 elements. We then print out the table length and contents of the two indexes (retrieved via {{jsxref("WebAssembly/Table/get", "Table.prototype.get()")}} to show that the length is two and both elements are {{jsxref("null")}}.
 
