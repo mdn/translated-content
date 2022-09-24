@@ -32,4 +32,4 @@ var deviceMotionEvent = new DeviceMotionEvent(type[, options])
 
 ## 浏览器兼容
 
-{{Compat("api.DeviceMotionEvent.DeviceMotionEvent")}}
+{{Compat}}

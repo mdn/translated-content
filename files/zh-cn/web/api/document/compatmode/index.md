@@ -46,4 +46,4 @@ if (document.compatMode == "BackCompat") {
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.compatMode")}}
+{{Compat}}

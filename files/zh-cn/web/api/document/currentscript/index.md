@@ -35,7 +35,7 @@ if (document.currentScript.async) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.currentScript")}}
+{{Compat}}
 
 ## 相关链接
 

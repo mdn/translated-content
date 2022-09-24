@@ -19,7 +19,7 @@ var beta = instanceOfDeviceOrientationEvent.beta;
 
 ## 浏览器的兼容性
 
-{{Compat("api.DeviceOrientationEvent.beta")}}
+{{Compat}}
 
 ## 另请参阅
 

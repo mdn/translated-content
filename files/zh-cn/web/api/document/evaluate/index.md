@@ -86,7 +86,7 @@ Results of `NODE_SNAPSHOT` types are snapshots, which are essentially lists of m
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.evaluate")}}
+{{Compat}}
 
 ## 参见
 

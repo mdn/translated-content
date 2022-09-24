@@ -23,7 +23,7 @@ document.exitPointerLock();
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.exitPointerLock")}}
+{{Compat}}
 
 ## 参见
 

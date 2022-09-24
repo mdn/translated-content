@@ -36,4 +36,4 @@ document.addEventListener("visibilitychange", function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.visibilityState")}}
+{{Compat}}

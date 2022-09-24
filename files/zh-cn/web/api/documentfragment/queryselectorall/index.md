@@ -36,7 +36,7 @@ var matches = documentfrag.querySelectorAll("div.note, div.alert");
 
 ## 浏览器兼容性
 
-{{Compat("api.DocumentFragment.querySelectorAll")}}
+{{Compat}}
 
 ## 参阅
 

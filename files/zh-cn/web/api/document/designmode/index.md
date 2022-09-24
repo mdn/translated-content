@@ -28,7 +28,7 @@ iframeNode.contentDocument.designMode = "on";
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.designMode")}}
+{{Compat}}
 
 ## 参见
 

@@ -23,7 +23,7 @@ var perspective = DOMPoint.w;
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMPointReadOnly.w")}}
+{{Compat}}
 
 ## 相关链接
 

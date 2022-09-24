@@ -36,7 +36,7 @@ alert(d.doctype.publicId); // -//W3C//DTD SVG 1.1//EN
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMImplementation.createDocumentType")}}
+{{Compat}}
 
 ## 参见
 
