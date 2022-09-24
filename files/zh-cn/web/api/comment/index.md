@@ -26,7 +26,7 @@ _该接口没有特定的属性，但是从其父类 {{domxref("CharacterData")}
 
 ## 浏览器兼容性
 
-{{Compat("api.Comment")}}
+{{Compat}}
 
 ## 参见
 

@@ -102,7 +102,7 @@ img.onload = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.imageSmoothingEnabled")}}
+{{Compat}}
 
 ## 参见
 

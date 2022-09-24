@@ -61,7 +61,7 @@ addEventListener('notificationclick', event => {
 
 ## 浏览器兼容性
 
-{{Compat("api.Clients")}}
+{{Compat}}
 
 ## See also
 

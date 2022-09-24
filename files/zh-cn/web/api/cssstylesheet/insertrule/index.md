@@ -151,7 +151,7 @@ function addStylesheetRules (decls) {
 
 ## 浏览器兼容性
 
-{{Compat("api.CSSStyleSheet.insertRule")}}
+{{Compat}}
 
 ### 传统浏览器支持
 

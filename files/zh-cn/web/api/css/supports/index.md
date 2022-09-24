@@ -47,7 +47,7 @@ result = CSS.supports("( transform-style: preserve ) or ( -moz-transform-style: 
 
 ## 浏览器兼容性
 
-{{Compat("api.CSS.supports")}}
+{{Compat}}
 
 ## 参见
 

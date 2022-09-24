@@ -30,7 +30,7 @@ slug: Web/API/CSSSupportsRule
 
 ## 游览器兼容性
 
-{{Compat("api.CSSSupportsRule")}}
+{{Compat}}
 
 ## See also
 
