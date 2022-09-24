@@ -89,7 +89,7 @@ async function getClipboardContents() {
 
 ## Browser compatibility
 
-{{Compat("api.ClipboardItem")}}
+{{Compat}}
 
 > **备注：** Image format support varies by browser. See the browser compatibility table for the {{domxref("Clipboard")}} interface.
 

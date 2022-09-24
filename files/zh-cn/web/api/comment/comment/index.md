@@ -26,7 +26,7 @@ var comment = new Comment("Test");
 
 ## 浏览器兼容性
 
-{{Compat("api.Comment.Comment")}}
+{{Compat}}
 
 > **备注：** 对于不支持本构造函数的浏览器， {{domxref("Document.createComment()")}} 或许可以使用。
 

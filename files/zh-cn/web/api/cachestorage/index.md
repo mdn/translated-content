@@ -81,7 +81,7 @@ this.addEventListener('fetch', function(event) {
 
 ## 浏览器兼容
 
-{{Compat("api.CacheStorage")}}
+{{Compat}}
 
 ## 参见
 

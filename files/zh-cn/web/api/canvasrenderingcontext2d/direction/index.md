@@ -74,7 +74,7 @@ ctx.fillText('Hi!', 150, 130);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.direction")}}
+{{Compat}}
 
 ## 参见
 

@@ -61,7 +61,7 @@ _没有具体方法；从其父级继承方法，{{domxref("AudioNode")}}。_
 
 ## 浏览器兼容性
 
-{{Compat("api.ChannelMergerNode")}}
+{{Compat}}
 
 ## 参见
 

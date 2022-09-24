@@ -36,7 +36,7 @@ event.initCustomEvent(type, canBubble, cancelable, detail);
 
 ## Browser compatibility
 
-{{Compat("api.CustomEvent.initCustomEvent")}}
+{{Compat}}
 
 ## See also
 
