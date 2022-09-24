@@ -41,7 +41,7 @@ var metaKeyPressed = instanceOfKeyboardEvent.metaKey
 
 ## 浏览器兼容性
 
-{{Compat("api.KeyboardEvent.metaKey")}}
+{{Compat}}
 
 ## 相关链接
 

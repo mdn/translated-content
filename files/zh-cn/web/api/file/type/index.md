@@ -43,7 +43,7 @@ function showType(fileInput) {
 
 ## 浏览器兼容性
 
-{{Compat("api.File.type")}}
+{{Compat}}
 
 ## 另见
 

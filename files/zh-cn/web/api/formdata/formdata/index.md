@@ -67,7 +67,7 @@ formData = new FormData(myForm);
 
 ## 浏览器兼容性
 
-{{Compat("api.FormData.FormData")}}
+{{Compat}}
 
 ## 附注
 

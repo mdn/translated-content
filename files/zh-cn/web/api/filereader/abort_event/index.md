@@ -143,7 +143,7 @@ fileInput.addEventListener('change', handleSelected);返回返回发的
 
 ## 浏览器兼容性
 
-{{Compat("api.FileReader.abort_event")}}
+{{Compat}}
 
 ## 另请参见
 

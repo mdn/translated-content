@@ -116,7 +116,7 @@ DBOpenRequest.onsuccess = event => {
 
 ## Browser compatibility
 
-{{Compat("api.IDBTransaction.complete_event")}}
+{{Compat}}
 
 ## See also
 

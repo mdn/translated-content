@@ -52,4 +52,4 @@ var observer = new IntersectionObserver(callback[, options]);
 
 ## 浏览器兼容
 
-{{Compat("api.IntersectionObserver.IntersectionObserver")}}
+{{Compat}}

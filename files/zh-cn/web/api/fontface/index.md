@@ -48,4 +48,4 @@ _这个接口不继承任何方法_
 
 ## Browser compatibility
 
-{{Compat("api.FontFace")}}
+{{Compat}}

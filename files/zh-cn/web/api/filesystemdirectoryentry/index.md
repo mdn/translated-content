@@ -67,7 +67,7 @@ window.requestFileSystem(TEMPORARY, 1024*1024 /*1MB*/, onFs, onError);
 
 ## 浏览器兼容性
 
-{{Compat("api.FileSystemDirectoryEntry")}}
+{{Compat}}
 
 ## 另见
 
