@@ -1,0 +1,47 @@
+name: AutoCorrect Lint
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: "30"
+
+      - name: Config git core.quotePath
+        run: |
+          # If you don't do this, the get-diff-action won't be able to
+          # notice files that contain non-ascii characters.
+          # I.e.
+          #
+          #    ▶ git status
+          #    Changes not staged for commit:
+          #    ...
+          #   modified:   "files/en-us/glossary/b\303\251zier_curve/index.html"
+          #
+          # But after you set `core.quotePath` you get:
+          #
+          #    ▶ git status
+          #    Changes not staged for commit:
+          #    ...
+          #   modified:   "files/en-us/glossary/bézier_curve/index.html"
+          #
+          # Now, this gets used by the `git diff ...` inside get-diff-action.
+          git config --global core.quotePath false
+
+      - name: Get changed files
+        run: |
+          GIT_DIFF_FILTERED=$(git diff --diff-filter=AM --name-only ${{ github.event.pull_request.base.sha }} -- files/zh-cn/ | tr "\n" " ")
+          echo "GIT_DIFF_FILTERED=$GIT_DIFF_FILTERED" >> $GITHUB_ENV
+
+      - name: AutoCorrect changed content
+        if: ${{ env.GIT_DIFF_FILTERED }}
+        uses: huacnlee/autocorrect-action@v1.10.7
+        with:
+          args: ${{ env.GIT_DIFF_FILTERED }} --lint
