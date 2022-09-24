@@ -167,7 +167,7 @@ class newClass {}
 typeof document.all === 'undefined';
 ```
 
-虽然 `document.all`也是[假值](/zh-CN/docs/Glossary/falsy)，在 [相对等于](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality) 为 `undefined`，但它不是 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)。在 Web 标准中，`document.all` 具有 `“undefined”` 类型的情况被归类为“故意违反”原始 ECMAScript Web 兼容性标准。
+虽然 `document.all` 也是[假值](/zh-CN/docs/Glossary/falsy)，与 `undefined` [非严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)，但它不是 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)。在 Web 标准中，`document.all` 具有 `"undefined"` 类型的情况被归类为“故意违反”原始 ECMAScript Web 兼容性标准。
 
 ### 获取具体类型的自定义方法
 
