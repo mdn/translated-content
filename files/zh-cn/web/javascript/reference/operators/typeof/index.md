@@ -67,7 +67,7 @@ typeof String(1) === 'string'; // String 将任意值转换为字符串，比 to
 typeof true === 'boolean';
 typeof false === 'boolean';
 typeof Boolean(1) === 'boolean'; // Boolean() 会基于参数是真值还是虚值进行转换
-typeof !!(1) === 'boolean'; // 两次调用 ! (逻辑非) 操作符相当于 Boolean()
+typeof !!(1) === 'boolean'; // 两次调用 !（逻辑非）运算符相当于 Boolean()
 
 // Symbols
 typeof Symbol() === 'symbol';
