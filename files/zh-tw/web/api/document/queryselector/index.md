@@ -54,7 +54,7 @@ document.querySelector('#foo\\:bar')   // 選到第二個 div
 
 ## 瀏覽器相容性
 
-{{Compat("api.Document.querySelector")}}
+{{Compat}}
 
 ## 規格文件
 

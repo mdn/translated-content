@@ -106,4 +106,4 @@ For information about forEach see [Array.prototype.forEach()](/zh-TW/docs/Web/Ja
 
 ## 瀏覽器相容性
 
-{{Compat("api.NodeList")}}
+{{Compat}}

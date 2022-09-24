@@ -18,7 +18,7 @@ original_slug: WebSockets/WebSockets_reference/MessageEvent
 
 ## 瀏覽器兼容
 
-{{Compat("api.MessageEvent")}}
+{{Compat}}
 
 ## 參見
 

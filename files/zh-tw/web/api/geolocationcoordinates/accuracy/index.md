@@ -19,7 +19,7 @@ acc = coordinates.accuracy
 
 ## 瀏覽器的相容性
 
-{{Compat("api.GeolocationCoordinates.accuracy")}}
+{{Compat}}
 
 ## 請參考
 

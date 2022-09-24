@@ -203,7 +203,7 @@ slug: Web/API/HTMLInputElement
 
 ## 瀏覽器相容性
 
-{{Compat("api.HTMLInputElement")}}
+{{Compat}}
 
 ## 參見
 
