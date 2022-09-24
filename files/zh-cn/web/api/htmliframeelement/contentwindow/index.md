@@ -23,4 +23,4 @@ x.document.getElementsByTagName("body")[0].style.backgroundColor = "blue";
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLIFrameElement.contentWindow")}}
+{{Compat}}

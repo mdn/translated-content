@@ -48,7 +48,7 @@ node.onclick = function () {
 
 ## 浏览器兼容
 
-{{Compat("api.HTMLElement.accessKeyLabel")}}
+{{Compat}}
 
 ## See also
 

@@ -40,4 +40,4 @@ slots[1].addEventListener('slotchange', function(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLSlotElement.name")}}
+{{Compat}}

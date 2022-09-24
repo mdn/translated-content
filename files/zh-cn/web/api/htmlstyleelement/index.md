@@ -36,7 +36,7 @@ _No specific method; inherits properties from its parent, {{domxref("HTMLElement
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLStyleElement")}}
+{{Compat}}
 
 ## 参见
 

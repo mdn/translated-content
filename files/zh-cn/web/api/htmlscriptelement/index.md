@@ -178,7 +178,7 @@ importScript("myScript2.js", /* onload function: */ function () { alert("You rea
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLScriptElement")}}
+{{Compat}}
 
 ## See also
 

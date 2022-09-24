@@ -28,7 +28,7 @@ _没有明确的方法； 可从父项继承—— {{domxref("HTMLElement")}}。
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLHtmlElement")}}
+{{Compat}}
 
 ## 还可以看看
 

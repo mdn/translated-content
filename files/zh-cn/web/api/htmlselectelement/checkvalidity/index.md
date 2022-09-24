@@ -19,7 +19,7 @@ var result = selectElt.checkValidity();
 
 ## Browser compatibility
 
-{{Compat("api.HTMLSelectElement.checkValidity")}}
+{{Compat}}
 
 ## See also
 

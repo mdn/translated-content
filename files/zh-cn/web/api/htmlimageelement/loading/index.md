@@ -69,7 +69,7 @@ function addImageToList(url) {
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLImageElement.loading")}}
+{{Compat}}
 
 ## 参见
 

@@ -45,7 +45,7 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}_.
 
 ## Browser compatibility
 
-{{Compat("api.HTMLTableRowElement")}}
+{{Compat}}
 
 ## See also
 
