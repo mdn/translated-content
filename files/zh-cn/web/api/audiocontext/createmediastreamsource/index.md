@@ -97,7 +97,7 @@ pre.innerHTML = myScript.innerHTML;
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioContext.createMediaStreamSource")}}
+{{Compat}}
 
 ## 查看更多
 

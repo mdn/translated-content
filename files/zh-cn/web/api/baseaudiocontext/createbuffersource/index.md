@@ -72,7 +72,7 @@ button.onclick = function() {
 
 ## 浏览器支持
 
-{{Compat("api.BaseAudioContext.createBufferSource")}}
+{{Compat}}
 
 ## See also
 

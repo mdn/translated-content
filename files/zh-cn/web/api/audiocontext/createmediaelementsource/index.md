@@ -78,7 +78,7 @@ gainNode.connect(audioCtx.destination);
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioContext.createMediaElementSource")}}
+{{Compat}}
 
 ## 相关链接
 

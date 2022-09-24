@@ -75,7 +75,7 @@ button.onclick = function() {
 
 ## Browser compatibility
 
-{{Compat("api.AudioBuffer.getChannelData")}}
+{{Compat}}
 
 ## See also
 

@@ -61,7 +61,7 @@ ac.decodeAudioData(someStereoBuffer, function(data) {
 
 ## 浏览器兼容性
 
-{{Compat("api.BaseAudioContext.createChannelSplitter")}}
+{{Compat}}
 
 ## 另见
 

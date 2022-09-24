@@ -46,4 +46,4 @@ accelerometer.start();
 
 ## Browser compatibility
 
-{{Compat("api.Accelerometer")}}
+{{Compat}}
