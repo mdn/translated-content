@@ -1,17 +1,17 @@
 ---
-title: Strict equality (===)
+title: 全等运算符（===）
 slug: Web/JavaScript/Reference/Operators/Strict_equality
 ---
 
 {{jsSidebar("Operators")}}
 
-全等运算符 (===) 会检查它的两个操作数是否相等，并且返回一个布尔值结果。与相等运算符不同，全等运算符总是认为不同类型的操作数是不同的。
+全等运算符（`===`）会检查它的两个操作数是否相等，并且返回一个布尔值结果。与[相等运算符](/en-US/docs/Web/JavaScript/Reference/Operators/Equality)不同，全等运算符总是认为不同类型的操作数是不同的。
 
 {{EmbedInteractiveExample("pages/js/expressions-strict-equality.html")}}
 
 ## 语法
 
-```plain
+```js-nolint
 x === y
 ```
 
@@ -31,7 +31,7 @@ x === y
 
 全等运算符与[相等运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)（`==`）最显著的区别是，如果操作数的类型不同，`==` 运算符会在比较之前尝试将它们转换为相同的类型。
 
-## 例子
+## 示例
 
 ### 比较相同类型的操作数
 
@@ -73,7 +73,7 @@ console.log(object1 === object2);  // false
 console.log(object1 === object1);  // true
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
@@ -81,8 +81,8 @@ console.log(object1 === object1);  // true
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Equality operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)
-- [Inequality operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Inequality)
-- [Strict inequality operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_inequality)
+- [相等运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)
+- [不等于运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Inequality)
+- [严格不等于运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_inequality)
