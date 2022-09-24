@@ -137,7 +137,7 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
 
 ### `Document.visibilityState`
 
-{{Compat("api.Document.visibilityState")}}
+{{Compat}}
 
 ## 参考
 

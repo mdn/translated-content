@@ -41,7 +41,7 @@ Canvas 2D API 的接口 **`Path2D`** 用来声明路径，此路径稍后会被{
 
 ## 浏览器兼容性
 
-{{Compat("api.Path2D")}}
+{{Compat}}
 
 ## 参见
 

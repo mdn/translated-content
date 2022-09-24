@@ -50,7 +50,7 @@ mql.addListener(screenTest);
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaQueryList.addListener")}}
+{{Compat}}
 
 ## 参见
 

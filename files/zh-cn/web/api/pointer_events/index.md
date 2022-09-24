@@ -332,7 +332,7 @@ button#tiny {
 
 ## 浏览器兼容性
 
-{{Compat("api.PointerEvent")}}
+{{Compat}}
 
 在 [Pointer Events](https://w3c.github.io/pointerevents/) 规范中，{{cssxref("touch-action", "CSS touch-action")}} 定义了一些新的值，但目前支持这些新值的浏览器实现很有限。
 

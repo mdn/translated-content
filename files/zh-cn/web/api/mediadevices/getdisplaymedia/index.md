@@ -70,7 +70,7 @@ async function startCapture(displayMediaOptions) {
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaDevices.getDisplayMedia")}}
+{{Compat}}
 
 ## 参考
 

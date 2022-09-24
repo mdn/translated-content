@@ -106,7 +106,7 @@ function overListener(event) {
 
 ## 浏览器兼容性
 
-{{Compat("api.MouseEvent.relatedTarget")}}
+{{Compat}}
 
 ## 另见
 

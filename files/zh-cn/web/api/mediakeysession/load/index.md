@@ -28,4 +28,4 @@ mediaKeySession .load(sessionId).then(function(booleanValue){...});
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaKeySession.load")}}
+{{Compat}}
