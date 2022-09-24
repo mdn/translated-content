@@ -22,10 +22,10 @@ typeof operand
 
 ## 描述
 
-下表总结了 `typeof` 可能的返回值。有关类型和原始值的更多信息，可查看 [JavaScript 数据结构](/zh-CN/docs/Web/JavaScript/Data_structures) 页面。
+下表总结了 `typeof` 可能的返回值。有关类型和基本类型的更多信息，可查看 [JavaScript 数据结构](/zh-CN/docs/Web/JavaScript/Data_structures) 页面。
 
 | 类型                                                                                                                                      | 结果                              |
-|-----------------------------------------------------------------------------------------------------------------------------------------|---------------------------------|
+| ----------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
 | [Undefined](/zh-CN/docs/Glossary/undefined)                                                                                             | `"undefined"`                   |
 | [Null](/zh-CN/docs/Glossary/Null)                                                                                                       | `"object"`（[原因](#typeof_null)） |
 | [Boolean](/zh-CN/docs/Glossary/Boolean)                                                                                                 | `"boolean"`                     |
@@ -113,7 +113,7 @@ typeof null === "object";
 
 ### 使用 new 操作符
 
-所有使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用的构造函数都将返回非原语（`"object"` 或 `"function"`）。大多数返回对象，但值得注意的例外是 [`Function`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function)，它返回一个函数。
+所有使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用的构造函数都将返回非基本类型（`"object"` 或 `"function"`）。大多数返回对象，但值得注意的例外是 [`Function`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function)，它返回一个函数。
 
 ```js
 const str = new String("String");
@@ -173,7 +173,7 @@ typeof document.all === 'undefined';
 
 `typeof` 是非常有用的，但它不像需要的那样万能。 例如，`typeof []` 是 `"object"`，以及 `typeof new Date()`、`typeof /abc/` 等。
 
-为了更明确地检查类型，在生成环境代码中使用的 `typeof` 包装器如下所示（前提是 `obj` 存在）：
+为了更明确地检查类型，这里我们提供了一个自定义的 `type(value)` 函数，它主要模仿 `typeof` 的行为，但对于非基本类型（即对象和函数），它在可能的情况下返回更详细的类型名。
 
 ```js
 function type(value) {
@@ -212,7 +212,7 @@ function type(value) {
 }
 ```
 
-要检查不存在的变量，否则会抛出 {{JSxRef("ReferenceError")}}，请使用 `typeof nonExistentVar === 'undefined'`。
+要检查可能不存在的变量，否则会抛出 {{JSxRef("ReferenceError")}}，请使用 `typeof nonExistentVar === 'undefined'`，因为自定义代码无法模仿这种行为。
 
 ## 规范
 
