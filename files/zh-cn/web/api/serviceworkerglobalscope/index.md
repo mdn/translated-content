@@ -96,7 +96,7 @@ self.addEventListener('fetch', function(event) {
 
 ## 浏览器兼容性
 
-{{Compat("api.ServiceWorkerGlobalScope")}}
+{{Compat}}
 
 ## See also
 

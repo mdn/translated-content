@@ -25,7 +25,7 @@ float someElement.getTotalLength();
 
 ## 浏览器兼容性
 
-{{Compat("api.SVGPathElement.getTotalLength")}}
+{{Compat}}
 
 ## 另请参阅
 

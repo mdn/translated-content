@@ -75,7 +75,7 @@ myWorker.port.onmessage = function(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.SharedWorker.SharedWorker")}}
+{{Compat}}
 
 ## See also
 

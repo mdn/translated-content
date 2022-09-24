@@ -123,7 +123,7 @@ linkRef.onclick = function(){
 
 ## 浏览器兼容性
 
-{{Compat("api.SVGAElement")}}
+{{Compat}}
 
 ## 参见
 

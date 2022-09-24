@@ -23,4 +23,4 @@ var htmlSlotElement = text.assignedSlot
 
 ## Browser Compatibility
 
-{{Compat("api.Text.assignedSlot")}}
+{{Compat}}

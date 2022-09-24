@@ -48,7 +48,7 @@ window.setInterval(function () {
 
 ## Browser compatibility
 
-{{Compat("api.Selection.rangeCount")}}
+{{Compat}}
 
 ## See also
 
