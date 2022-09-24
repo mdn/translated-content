@@ -102,7 +102,7 @@ console.log(navigator);
 
 ## Browser compatibility
 
-{{Compat("api.WorkerGlobalScope")}}
+{{Compat}}
 
 ## See also
 

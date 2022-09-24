@@ -52,4 +52,4 @@ window.onorientationchange = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.orientationchange_event")}}
+{{Compat}}

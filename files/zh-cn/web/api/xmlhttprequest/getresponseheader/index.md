@@ -46,7 +46,7 @@ client.onreadystatechange = function() { //设定侦听器 onreadystatechange。
 
 ## 浏览器兼容性
 
-{{Compat("api.XMLHttpRequest.getResponseHeader")}}
+{{Compat}}
 
 ## 参见
 

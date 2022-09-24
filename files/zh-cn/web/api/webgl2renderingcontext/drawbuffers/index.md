@@ -43,7 +43,7 @@ gl.drawBuffers([gl.NONE, gl.COLOR_ATTACHMENT1]);
 
 ## 浏览器兼容性
 
-{{Compat("api/WebGL2RenderingContext", "WebGL2RenderingContext.drawBuffers")}}
+{{Compat}}
 
 ## 详见
 

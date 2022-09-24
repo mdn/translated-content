@@ -60,7 +60,7 @@ gl.isEnabled(gl.DITHER);
 
 ## Browser compatibility
 
-{{Compat("api.WebGLRenderingContext.disable")}}
+{{Compat}}
 
 ## See also
 

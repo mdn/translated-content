@@ -58,7 +58,7 @@ document.body.insertAdjacentHTML('afterbegin', inp_xmls);
 
 ## 浏览器兼容性
 
-{{Compat("api.XMLSerializer")}}
+{{Compat}}
 
 ## 参见
 

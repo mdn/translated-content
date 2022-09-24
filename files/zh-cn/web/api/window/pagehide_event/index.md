@@ -56,7 +56,7 @@ window.onpagehide = event => {
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.pagehide_event")}}
+{{Compat}}
 
 ## 了解更多
 
