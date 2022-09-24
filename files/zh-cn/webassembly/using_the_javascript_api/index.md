@@ -83,7 +83,7 @@ fetch('simple.wasm')
 
 ### 在开发者工具查看 wasm
 
-在 Firefox 54+, Developer Tool Debugger Panel 有用于公开网页中包含的任何 wasm 代码的文本表示的功能。为了查看它们，要查看它，您可以转到 Debugger Panel 然后单击“xxx > wasm” .
+在 Firefox 54+, Developer Tool Debugger Panel 有用于公开网页中包含的任何 wasm 代码的文本表示的功能。为了查看它们，要查看它，您可以转到 Debugger Panel 然后单击“xxx > wasm”。
 
 ![](wasm-debug.png)
 
@@ -91,7 +91,7 @@ fetch('simple.wasm')
 
 ## 内存
 
-在 WebAssembly 的底层内存模型中，内存被表示为称为 [线性内存](http://webassembly.org/docs/semantics/#linear-memory) 的无类型字节的连续范围，通过模块中的[加载和存储指令](http://webassembly.org/docs/semantics/#linear-memory-accesses)读取和写入。在这个内存模型中，任何加载或存储都可以访问整个线性存储器中的任何字节，这是忠实地表示 C / C ++概念（如指针）所必需的。
+在 WebAssembly 的底层内存模型中，内存被表示为称为 [线性内存](http://webassembly.org/docs/semantics/#linear-memory) 的无类型字节的连续范围，通过模块中的[加载和存储指令](http://webassembly.org/docs/semantics/#linear-memory-accesses)读取和写入。在这个内存模型中，任何加载或存储都可以访问整个线性存储器中的任何字节，这是忠实地表示 C/C++ 概念（如指针）所必需的。
 
 然后，和原生 C/C++ 程序不同的是可用内存范围跨越整个进程，特定 WebAssembly 实例可访问的内存被限制在由 WebAssembly Memory 对象包含的一个特定的 —— 可能非常小的范围内。
 
@@ -99,7 +99,7 @@ fetch('simple.wasm')
 
 我们通过一个快速的例子来开始探索。
 
-1. 创建另一个简单的 HTML 页面 (复制我们的 [simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)) 并且命名为 `memory.html。`添加一个 `<script></script>` 节点到页面中。
+1. 创建另一个简单的 HTML 页面 (复制我们的 [simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)) 并且命名为 `memory.html`。添加一个 `<script></script>` 节点到页面中。
 2. 在脚本的顶部添加下面的一行代码来创建一个内存实例：
 
     ```js
