@@ -129,4 +129,4 @@ oReq.send(null);
 
 ## Browser compatibility
 
-{{Compat("api.XMLHttpRequest")}}
+{{Compat}}

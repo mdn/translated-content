@@ -49,7 +49,7 @@ gl.getProgramParameter(program, gl.DELETE_STATUS);
 
 ## Browser compatibility
 
-{{Compat("api.WebGLRenderingContext.getProgramParameter")}}
+{{Compat}}
 
 ## See also
 

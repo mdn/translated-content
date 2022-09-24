@@ -44,7 +44,7 @@ window.addEventListener("rejectionhandled", event => {
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.rejectionhandled_event")}}
+{{Compat}}
 
 ## 参阅
 

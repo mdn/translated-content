@@ -37,7 +37,7 @@ var buffer = gl.createBuffer();
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.createBuffer")}}
+{{Compat}}
 
 ## See also
 

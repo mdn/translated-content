@@ -34,4 +34,4 @@ window.cancelIdleCallback(handle);
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.cancelIdleCallback")}}
+{{Compat}}

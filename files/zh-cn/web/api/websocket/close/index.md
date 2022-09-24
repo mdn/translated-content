@@ -35,4 +35,4 @@ WebSocket.close();
 
 ## Browser compatibility
 
-{{Compat("api.WebSocket.close")}}
+{{Compat}}

@@ -32,7 +32,7 @@ slug: Web/API/XMLHttpRequestEventTarget
 
 ## 浏览器兼容性
 
-{{Compat("api.XMLHttpRequestEventTarget")}}
+{{Compat}}
 
 ## 参见
 

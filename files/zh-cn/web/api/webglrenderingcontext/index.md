@@ -317,7 +317,7 @@ var gl = canvas.getContext('webgl');
 
 ## 浏览器兼容性
 
-{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext")}}
+{{Compat}}
 
 ## 相关内容
 

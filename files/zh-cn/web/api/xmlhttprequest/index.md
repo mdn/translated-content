@@ -135,7 +135,7 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
 
 ## 浏览器兼容性
 
-{{Compat("api.XMLHttpRequest")}}
+{{Compat}}
 
 ## 参见
 
