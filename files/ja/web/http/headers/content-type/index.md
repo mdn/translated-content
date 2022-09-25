@@ -44,7 +44,7 @@ Content-Type: multipart/form-data; boundary=something
 ## ディレクティブ
 
 - `media-type`
-  - : リソースやデータの [MIME タイプ](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)です。
+  - : リソースやデータの [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)です。
 - charset
   - : 標準の文字エンコーディングです。
 - boundary

@@ -601,7 +601,7 @@ var var2 = 4;
   <tbody>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">論理積 (AND)</a> (<code>&#x26;&#x26;</code>)
+        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Logical_AND">論理積 (AND)</a> (<code>&#x26;&#x26;</code>)
       </td>
       <td><code>expr1 &#x26;&#x26; expr2</code></td>
       <td>
@@ -611,7 +611,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR">論理和 (OR)</a> (<code>||</code>)
+        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR">論理和 (OR)</a> (<code>||</code>)
       </td>
       <td><code>expr1 || expr2</code></td>
       <td>
@@ -621,7 +621,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT">論理否定 (NOT)</a> (<code>!</code>)
+        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Logical_NOT">論理否定 (NOT)</a> (<code>!</code>)
       </td>
       <td><code>!expr</code></td>
       <td>

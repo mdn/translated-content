@@ -54,7 +54,7 @@ When changing the description by calling `setLocalDescription()` or `setRemoteDe
 
 > **Note:** The `pendingLocalDescription` contains not just the offer or answer under consideration, but any local ICE candidates which have already been gathered since the offer or answer was created. Similarly, `pendingRemoteDescription` includes any remote ICE candidates which have been provided by calls to {{domxref("RTCPeerConnection.addIceCandidate()")}}.
 
-See the individual articles on these properties and methods for more specifics, and [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs) for information about codecs supported by WebRTC and which are compatible with which browsers. The codecs guide also offers guidance to help you choose the best codecs for your needs.
+See the individual articles on these properties and methods for more specifics, and [Codecs used by WebRTC](/ja/docs/Web/Media/Formats/WebRTC_codecs) for information about codecs supported by WebRTC and which are compatible with which browsers. The codecs guide also offers guidance to help you choose the best codecs for your needs.
 
 ## ICE candidates
 
@@ -118,7 +118,7 @@ In addition, the ICE agent will automatically initiate a rollback when a peer th
 
 ### ICE restarts
 
-For now, see {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Session_lifetime", "ICE restart")}}.
+For now, see {{SectionOnPage("/ja/docs/Web/API/WebRTC_API/Session_lifetime", "ICE restart")}}.
 
 ## The entire exchange in a complicated diagram
 

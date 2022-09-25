@@ -77,6 +77,6 @@ WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)
 
 ## 関連情報
 
-- [WebAssembly](/en-US/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/en-US/docs/WebAssembly/Concepts)
-- [WebAssembly JavaScript API の使用](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly](/ja/docs/WebAssembly) 概要ページ
+- [WebAssembly の概念](/ja/docs/WebAssembly/Concepts)
+- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API)

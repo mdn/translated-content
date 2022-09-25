@@ -82,7 +82,7 @@ HTTP はクライアントとサーバーがどのように通信するかにつ
 2. もしあれば、ウェブサーバーはブラウザーにファイルを送り返します。なければ、アプリケーションサーバーが必要なファイルを作成します。
 3. どちらの処理もできない場合、ウェブサーバーは {{HTTPStatus("404", "404 Not Found")}} としてよく知られているエラーメッセージをブラウザーに返します。
     404 エラーはよく起こるので、多くのウェブデザイナーが 404 エラーページのデザインに時間を割いています。
-    [![The MDN 404 page as an example of such error page](mdn-404.jpg)](/en-US/docs/Web/HTTP/Status/404)
+    [![The MDN 404 page as an example of such error page](mdn-404.jpg)](/ja/docs/Web/HTTP/Status/404)
 
 ### 動的コンテンツと静的コンテンツ
 

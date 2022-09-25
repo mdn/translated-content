@@ -41,7 +41,7 @@ Apple には [Safari CSS リファレンス](https://developer.apple.com/library
 
 ## 関連情報
 
-- [`-webkit-transform-3d`](/en-US/docs/Web/CSS/@media/-webkit-transform-3d)
-- [`-webkit-transform-2d`](/en-US/docs/Web/CSS/@media/-webkit-transform-2d)
-- [`-webkit-transition`](/en-US/docs/Web/CSS/@media/-webkit-transition)
+- [`-webkit-transform-3d`](/ja/docs/Web/CSS/@media/-webkit-transform-3d)
+- [`-webkit-transform-2d`](/ja/docs/Web/CSS/@media/-webkit-transform-2d)
+- [`-webkit-transition`](/ja/docs/Web/CSS/@media/-webkit-transition)
 - [Test page at quirksmode.org](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
