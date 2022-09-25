@@ -1,81 +1,52 @@
 ---
 title: HTMLFormElement.requestSubmit()
 slug: Web/API/HTMLFormElement/requestSubmit
-page-type: web-api-instance-method
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLFormElement
-  - Input
-  - Method
-  - button
-  - form
-  - requestSubmit
-  - submit
-browser-compat: api.HTMLFormElement.requestSubmit
+l10n:
+  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
 ---
 
 {{APIRef("HTML DOM")}}
 
-The {{domxref("HTMLFormElement")}} method **`requestSubmit()`** requests
-that the form be submitted using a specific submit button.
+{{domxref("HTMLFormElement")}} の **`requestSubmit()`** メソッドは、特定の送信ボタンでフォームを送信することをリクエストします。
 
-## Syntax
+## 構文
 
 ```js-nolint
 requestSubmit()
 requestSubmit(submitter)
 ```
 
-### Parameters
+### 引数
 
 - `submitter` {{optional_inline}}
 
-  - : The submit button whose attributes describe the method by which the form is to be
-    submitted. This may be either an {{HTMLElement("input")}} or
-    {{HTMLElement("button")}} element whose `type` attribute
-    is `submit`.
+  - : フォームを送信するための方法を記述した属性がある送信ボタンです。これは {{HTMLElement("input")}} または {{HTMLElement("button")}} 要素で `type` 属性が `submit` のものです。
 
-    If you omit the `submitter` parameter, the form element
-    itself is used as the submitter.
+    `submitter` 引数を省略した場合、このフォーム要素自身が送信者として使用されます。
 
-### Return value
+### 返値
 
-None ({{jsxref("undefined")}}).
+なし ({{jsxref("undefined")}})。
 
-### Exceptions
+### 例外
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the specified `submitter` is not a submit button.
+  - : 指定された `submitter` が送信ボタンでない場合に発生します。
 - `NotFoundError` {{domxref("DOMException")}}
-  - : Thrown if the specified `submitter` isn't a member of the form on
-    which `requestSubmit()` was called. The submitter must be either a
-    descendant of the form element or must have a {{htmlattrxref("form", "input")}}
-    attribute referring to the form.
+  - : 指定された `submitter` が、 `requestSubmit()` が呼び出されたフォームのメンバーでない場合に発生します。submitter は form 要素の子孫であるか、フォームを参照する {{htmlattrxref("form", "input")}} 属性を持たなければなりません。
 
-## Usage notes
+## 使用上の注意
 
-The obvious question is: Why does this method exist, when we've had the
-{{domxref("HTMLFormElement.submit", "submit()")}} method since the dawn of time?
+明らかな疑問は、なぜこのメソッドが存在するのかということです。
+{{domxref("HTMLFormElement.submit", "submit()")}} メソッドがあったのに、なぜこのメソッドが存在するのでしょうか？
 
-The answer is simple. `submit()` submits the form, but that's all it
-does. `requestSubmit()`, on the other hand, acts as if a submit button were
-clicked. The form's content is validated, and the form is submitted only if validation
-succeeds. Once the form has been submitted, the
-{{domxref("HTMLFormElement.submit_event", "submit")}} event is sent back to the form
-object.
+答えは簡単です。`submit()` はフォームを送信しますが、それだけです。一方、`requestSubmit()` は、あたかも送信ボタンがクリックされたかのように動作します。フォームのコンテンツが検証され、検証が成功した場合にのみフォームが送信されます。フォームが送信されると、{{domxref("HTMLFormElement.submit_event", "submit")}} イベントがフォームオブジェクトに返送されます。
 
-## Examples
+## 例
 
-In the example below, the form is submitted by attempting to send the request using
-`requestSubmit()` if it's available. If a submit button with the
-ID `main-submit` is found, that's used to submit the form. Otherwise, the
-form is submitted with no `submitter` parameter, so it's submitted directly
-by the form itself.
+以下の例では、`requestSubmit()` が利用できる場合はそれを使用してリクエストの送信を試みることで、フォームを送信しています。 `main-submit` という ID の送信ボタンが得られた場合は、そのボタンを使用してフォームを送信します。そうでない場合は、 `submitter` 引数を指定せずに、フォーム自身から直接送信されます。
 
-If, on the other hand, `requestSubmit()` isn't available, this code falls
-back to calling the form's {{domxref("HTMLFormElement.submit", "submit()")}} method.
+一方で、 `requestSubmit()` が利用できない場合、このコードは代わりにフォームの {{domxref("HTMLFormElement.submit", "submit()")}} メソッドを呼び出すことで送信を行います。
 
 ```js
 let myForm = document.querySelector("form");
@@ -92,10 +63,10 @@ if (myForm.requestSubmit) {
 }
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
