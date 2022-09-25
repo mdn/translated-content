@@ -1,11 +1,11 @@
 ---
-title: 全等运算符（===）
+title: 严格相等运算符（===）
 slug: Web/JavaScript/Reference/Operators/Strict_equality
 ---
 
 {{jsSidebar("Operators")}}
 
-全等运算符（`===`）会检查它的两个操作数是否相等，并且返回一个布尔值结果。与[相等运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)不同，全等运算符总是认为不同类型的操作数是不同的。
+严格相等运算符（`===`）会检查它的两个操作数是否相等，并且返回一个布尔值结果。与[相等运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)不同，严格相等运算符总是认为不同类型的操作数是不同的。
 
 {{EmbedInteractiveExample("pages/js/expressions-strict-equality.html")}}
 
@@ -17,7 +17,7 @@ x === y
 
 ## 描述
 
-全等运算符（`===` 和 `!==`）提供了[严格相等判定](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#严格相等)语义。
+严格相等运算符（`===` 和 `!==`）提供了[严格相等判定](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#严格相等)语义。
 
 - 如果操作数的类型不同，则返回 `false`。
 - 如果两个操作数都是对象，只有当它们指向同一个对象时才返回 `true`。
@@ -29,7 +29,7 @@ x === y
   - 字符串类型必须拥有相同顺序的相同字符。
   - 布尔运算符必须同时为 `true` 或同时为 `false`。
 
-全等运算符与[相等运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)（`==`）最显著的区别是，如果操作数的类型不同，`==` 运算符会在比较之前尝试将它们转换为相同的类型。
+严格相等运算符与[相等运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)（`==`）最显著的区别是，如果操作数的类型不同，`==` 运算符会在比较之前尝试将它们转换为相同的类型。
 
 ## 示例
 
