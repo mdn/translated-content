@@ -1,13 +1,14 @@
 ---
 title: WebAssembly.Global
-slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
+slug: WebAssembly/JavaScript_interface/Global
 tags:
   - Class
   - JavaScript
   - Reference
   - WebAssembly
-browser-compat: javascript.builtins.WebAssembly.Global
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
+original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
+browser-compat: javascript.builtins.WebAssembly.Global
 ---
 {{JSRef}} **`WebAssembly.Global`** 객체는 전역 변수 인스턴스를 나타내며 JavaScript 및 하나 이상의 {{jsxref("WebAssembly.Module")}} 인스턴스에서 가져오거나 내보낼 수 있습니다. 이렇게 하면 여러 모듈을 동적으로 연결할 수 있습니다.
 
