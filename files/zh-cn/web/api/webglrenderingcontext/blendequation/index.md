@@ -68,7 +68,7 @@ gl.getParameter(gl.BLEND_EQUATION_ALPHA) === gl.FUNC_ADD;
 
 ## 浏览器兼容性
 
-{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.blendEquation")}}
+{{Compat}}
 
 ## 另见
 

@@ -51,4 +51,4 @@ img.decode()
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLImageElement.decode")}}
+{{Compat}}

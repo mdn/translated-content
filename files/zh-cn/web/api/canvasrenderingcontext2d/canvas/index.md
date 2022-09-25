@@ -35,7 +35,7 @@ ctx.canvas // HTMLCanvasElement
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.canvas")}}
+{{Compat}}
 
 ## 参见
 

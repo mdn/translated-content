@@ -43,4 +43,4 @@ Formal syntax: default | none
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.-webkit-touch-callout")}}
+{{Compat}}

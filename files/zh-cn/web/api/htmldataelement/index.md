@@ -26,7 +26,7 @@ _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}
 
 ## Browser compatibility
 
-{{Compat("api.HTMLDataElement")}}
+{{Compat}}
 
 ## See also
 

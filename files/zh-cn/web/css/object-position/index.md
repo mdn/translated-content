@@ -85,7 +85,7 @@ img {
 
 ## Browser compatibility
 
-{{Compat("css.properties.object-position")}}
+{{Compat}}
 
 ## 参见
 

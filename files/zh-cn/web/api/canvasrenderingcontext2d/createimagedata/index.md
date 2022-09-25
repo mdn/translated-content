@@ -62,7 +62,7 @@ console.log(ctx.createImageData(100, 100));
 
 ## 浏览器兼容
 
-{{Compat("api.CanvasRenderingContext2D.createImageData")}}
+{{Compat}}
 
 ### 兼容性注解
 

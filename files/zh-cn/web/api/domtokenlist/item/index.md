@@ -51,4 +51,4 @@ span.textContent = item;
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMTokenList.item")}}
+{{Compat}}

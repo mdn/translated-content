@@ -45,7 +45,7 @@ HTML 标记文本元素 (< Mark >) 表示为引用或符号目的而标记或突
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.mark")}}
+{{Compat}}
 
 ## 参见
 

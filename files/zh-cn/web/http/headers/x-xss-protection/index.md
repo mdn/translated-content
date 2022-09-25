@@ -63,7 +63,7 @@ add_header "X-XSS-Protection" "1; mode=block";
 
 ## 浏览器兼容性
 
-{{Compat("http.headers.X-XSS-Protection")}}
+{{Compat}}
 
 ## 了解更多
 

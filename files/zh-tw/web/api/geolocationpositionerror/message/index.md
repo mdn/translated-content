@@ -19,7 +19,7 @@ msg = positionError.message
 
 ## 瀏覽器的相容性
 
-{{Compat("api.GeolocationPositionError.message")}}
+{{Compat}}
 
 ## 請參考
 

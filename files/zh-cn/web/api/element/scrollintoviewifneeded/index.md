@@ -40,7 +40,7 @@ element.scrollIntoViewIfNeeded(false);
 
 ## 浏览器支持
 
-{{Compat("api.Element.scrollIntoViewIfNeeded")}}
+{{Compat}}
 
 ## 相关链接
 

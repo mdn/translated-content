@@ -38,7 +38,7 @@ gl.getExtension('WEBGL_lose_context').restoreContext();
 
 ## 浏览器兼容性
 
-{{Compat("api.WEBGL_lose_context.restoreContext")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -54,7 +54,7 @@ html,body,svg { height:100%; margin: 0; padding: 0; display:block; }
 
 ## DOM 接口
 
-该元素实现了`SVGAnimateMotionElement接口。`
+该元素实现了 `SVGAnimateMotionElement` 接口。
 
 ## 规范
 

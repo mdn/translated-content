@@ -31,7 +31,7 @@ gl.getShaderPrecisionFormat(gl.VERTEX_SHADER, gl.MEDIUM_FLOAT);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLShaderPrecisionFormat")}}
+{{Compat}}
 
 ## 另请参阅
 

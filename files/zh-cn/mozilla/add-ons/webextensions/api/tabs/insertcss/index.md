@@ -51,9 +51,9 @@ var inserting = browser.tabs.insertCSS(
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.tabs.insertCSS")}}
+{{Compat}}
 
-## 例子
+## 示例
 
 下面例子将通过字符串变量形式向当前活动标签注入一段 CSS 代码
 

@@ -207,7 +207,7 @@ inputElem.addEventListener('change', () => {
 
 ## 浏览器兼容性
 
-{{Compat("css.types.length")}}
+{{Compat}}
 
 ## 参见
 

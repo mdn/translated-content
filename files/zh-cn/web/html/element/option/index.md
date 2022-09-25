@@ -40,7 +40,7 @@ slug: Web/HTML/Element/option
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.option")}}
+{{Compat}}
 
 ## 另见
 

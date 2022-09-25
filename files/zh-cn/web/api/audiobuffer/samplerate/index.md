@@ -52,7 +52,7 @@ button.onclick = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioBuffer.sampleRate")}}
+{{Compat}}
 
 ## 相关链接
 

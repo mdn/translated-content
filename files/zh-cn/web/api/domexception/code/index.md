@@ -23,4 +23,4 @@ var domExceptionCode = domExceptionInstance.code;
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMException.code")}}
+{{Compat}}

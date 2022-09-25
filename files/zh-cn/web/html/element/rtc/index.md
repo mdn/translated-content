@@ -58,7 +58,7 @@ slug: Web/HTML/Element/rtc
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.rtc")}}
+{{Compat}}
 
 ## 另见
 

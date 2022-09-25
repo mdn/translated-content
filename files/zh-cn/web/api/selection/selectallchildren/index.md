@@ -32,7 +32,7 @@ window.getSelection().selectAllChildren(footer);
 
 ## 浏览器兼容性
 
-{{Compat("api.Selection.selectAllChildren")}}
+{{Compat}}
 
 ## 相关链接
 

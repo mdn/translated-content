@@ -38,4 +38,4 @@ img.src = 'img/logo.png';
 
 ## Browser compatibility
 
-{{Compat("api.HTMLImageElement.decoding")}}
+{{Compat}}

@@ -78,7 +78,7 @@ afterBtn.addEventListener('click', function() {
 
 ## 浏览器兼容
 
-{{Compat("api.Element.insertAdjacentElement")}}
+{{Compat}}
 
 ## 参见
 

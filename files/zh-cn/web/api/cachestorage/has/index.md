@@ -48,7 +48,7 @@ caches.has('v1').then(function(hasCache) {
 
 ## 浏览器兼容性
 
-{{Compat("api.CacheStorage.has")}}
+{{Compat}}
 
 ## 参考
 

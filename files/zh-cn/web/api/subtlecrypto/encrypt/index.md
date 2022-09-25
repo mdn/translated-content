@@ -208,7 +208,7 @@ function encryptMessage(key) {
 
 ## 浏览器兼容性
 
-{{Compat("api.SubtleCrypto.encrypt")}}
+{{Compat}}
 
 ## 另见
 

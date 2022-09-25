@@ -58,7 +58,7 @@ if (navigator.mediaDevices.getUserMedia) {
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaRecorder.MediaRecorder")}}
+{{Compat}}
 
 ## 更多信息
 

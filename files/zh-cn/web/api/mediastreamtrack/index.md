@@ -67,7 +67,7 @@ slug: Web/API/MediaStreamTrack
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaStreamTrack")}}
+{{Compat}}
 
 ## 相关内容
 

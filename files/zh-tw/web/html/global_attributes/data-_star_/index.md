@@ -32,7 +32,7 @@ slug: Web/HTML/Global_attributes/data-*
 
 ## 瀏覽器相容性
 
-{{Compat("html.global_attributes.data_attributes")}}
+{{Compat}}
 
 ## 參見
 

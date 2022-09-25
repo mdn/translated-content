@@ -134,7 +134,7 @@ for (i=0;i<7;i++){
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.globalAlpha")}}
+{{Compat}}
 
 ## 参见
 

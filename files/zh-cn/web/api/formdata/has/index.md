@@ -46,7 +46,7 @@ formData.has('username'); // Returns true
 
 ## 浏览器兼容性
 
-{{Compat("api.FormData.has")}}
+{{Compat}}
 
 ## 相关链接
 

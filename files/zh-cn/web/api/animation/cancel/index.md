@@ -33,7 +33,7 @@ Animation.cancel();
 
 ## 浏览器兼容
 
-{{Compat("api.Animation.cancel")}}
+{{Compat}}
 
 ## 相关内容
 

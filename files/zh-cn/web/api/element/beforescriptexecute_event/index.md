@@ -38,7 +38,7 @@ slug: Web/API/Element/beforescriptexecute_event
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.beforescriptexecute_event")}}
+{{Compat}}
 
 ## 参见
 

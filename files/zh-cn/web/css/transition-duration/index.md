@@ -305,7 +305,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.transition-duration")}}
+{{Compat}}
 
 ## 参考
 

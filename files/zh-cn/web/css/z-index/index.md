@@ -102,7 +102,7 @@ z-index: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.z-index")}}
+{{Compat}}
 
 ## 参阅
 

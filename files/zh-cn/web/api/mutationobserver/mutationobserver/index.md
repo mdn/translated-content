@@ -77,4 +77,4 @@ observer.observe(targetNode, observerOptions);
 
 ## 浏览器兼容性
 
-{{Compat("api.MutationObserver.MutationObserver")}}
+{{Compat}}

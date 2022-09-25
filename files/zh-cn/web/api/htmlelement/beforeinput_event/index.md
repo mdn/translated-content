@@ -76,7 +76,7 @@ function updateValue(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLElement.beforeinput_event")}}
+{{Compat}}
 
 ## 参见
 

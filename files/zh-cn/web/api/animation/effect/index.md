@@ -27,7 +27,7 @@ animation.effect = new KeyframeEffect({ opacity: [ 1, 0 ] }, 300);
 
 ## 浏览器支持
 
-{{Compat("api.Animation.effect")}}
+{{Compat}}
 
 ## 相关内容
 

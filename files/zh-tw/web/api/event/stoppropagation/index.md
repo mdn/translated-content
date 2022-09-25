@@ -23,7 +23,7 @@ event.stopPropagation();
 
 ## 瀏覽器相容性
 
-{{Compat("api.Event.stopPropagation")}}
+{{Compat}}
 
 ## 參見
 

@@ -42,7 +42,7 @@ slug: Web/API/DOMRectReadOnly
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMRectReadOnly")}}
+{{Compat}}
 
 ## 其他
 

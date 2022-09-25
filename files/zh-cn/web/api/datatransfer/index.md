@@ -90,7 +90,7 @@ slug: Web/API/DataTransfer
 
 ## 浏览器兼容性
 
-{{Compat("api.DataTransfer")}}
+{{Compat}}
 
 ## 参见
 

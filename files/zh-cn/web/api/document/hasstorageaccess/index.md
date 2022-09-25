@@ -42,7 +42,7 @@ The API is currently only at the proposal stage — the standardization process 
 
 ## Browser compatibility
 
-{{Compat("api.Document.hasStorageAccess")}}
+{{Compat}}
 
 ## See also
 

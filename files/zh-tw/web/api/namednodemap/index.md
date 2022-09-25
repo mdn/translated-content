@@ -43,7 +43,7 @@ _This interface doesn't inherit any method._
 
 ## 瀏覽器相容性
 
-{{Compat("api.NamedNodeMap")}}
+{{Compat}}
 
 ## 參見
 

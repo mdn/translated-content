@@ -178,7 +178,7 @@ If you want to know how to serialize and submit a form using the [`XMLHttpReques
 
 ## Browser compatibility
 
-{{Compat("api.HTMLFormElement")}}
+{{Compat}}
 
 ## See also
 

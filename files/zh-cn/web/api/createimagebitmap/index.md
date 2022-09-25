@@ -67,7 +67,7 @@ image.src = 'sprites.png';
 
 ## Browser compatibility
 
-{{Compat("api.createImageBitmap")}}
+{{Compat}}
 
 ## See also
 

@@ -251,7 +251,7 @@ var constraints = { video: { facingMode: (front? "user" : "environment") } };
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaDevices.getUserMedia")}}
+{{Compat}}
 
 ## 参考
 

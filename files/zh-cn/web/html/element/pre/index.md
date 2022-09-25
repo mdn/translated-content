@@ -105,7 +105,7 @@ A combination of the {{HTMLElement("figure")}} and {{HTMLElement("figcaption")}}
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.pre")}}
+{{Compat}}
 
 ## 参见
 

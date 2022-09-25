@@ -27,7 +27,7 @@ A {{domxref("ServiceWorker")}} object, if it is currently in an `activating` or 
 
 ## Browser compatibility
 
-{{Compat("api.ServiceWorkerRegistration.active")}}
+{{Compat}}
 
 ## See also
 

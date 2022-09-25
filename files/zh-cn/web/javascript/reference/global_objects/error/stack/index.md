@@ -109,7 +109,7 @@ try {
 
 ## 浏览器兼容性
 
-{{Compat("javascript.builtins.Error.stack")}}
+{{Compat}}
 
 ## 另请参阅
 

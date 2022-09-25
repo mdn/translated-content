@@ -52,7 +52,7 @@ set1.add({'key1': 1}); // now set1 contains 2 entries
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Set.has")}}
+{{Compat}}
 
 ## 另見
 

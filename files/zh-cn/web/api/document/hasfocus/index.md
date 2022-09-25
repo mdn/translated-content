@@ -61,4 +61,4 @@ focused = document.hasFocus();
 
 ### 浏览器兼容性
 
-{{Compat("api.Document.hasFocus")}}
+{{Compat}}

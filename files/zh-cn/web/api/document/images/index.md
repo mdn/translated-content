@@ -46,4 +46,4 @@ for(var i = 0; i < ilist.length; i++) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.images")}}
+{{Compat}}

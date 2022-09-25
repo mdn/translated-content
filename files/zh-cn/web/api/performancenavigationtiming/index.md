@@ -66,7 +66,7 @@ slug: Web/API/PerformanceNavigationTiming
 
 ## 浏览器兼容性
 
-{{Compat("api.PerformanceNavigationTiming")}}
+{{Compat}}
 
 ## 参见
 

@@ -41,7 +41,7 @@ var myMessage = new MessageEvent('worker', {
 
 ## 浏览器兼容性
 
-{{Compat("api.MessageEvent.MessageEvent")}}
+{{Compat}}
 
 ## 另见
 

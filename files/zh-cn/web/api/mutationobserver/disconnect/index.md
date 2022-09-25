@@ -52,4 +52,4 @@ observer.disconnect();
 
 ## 浏览器兼容性
 
-{{Compat("api.MutationObserver.disconnect")}}
+{{Compat}}

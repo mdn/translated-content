@@ -76,7 +76,7 @@ Ensure that elements set with a `max-height` are not truncated and/or do not obs
 
 ## Browser compatibility
 
-{{Compat("css.properties.max-height")}}
+{{Compat}}
 
 ## See also
 

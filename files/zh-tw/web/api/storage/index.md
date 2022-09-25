@@ -70,7 +70,7 @@ function setStyles() {
 
 ## 瀏覽器相容性
 
-{{Compat("api.Storage")}}
+{{Compat}}
 
 ## See also
 

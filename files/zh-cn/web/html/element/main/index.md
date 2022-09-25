@@ -101,7 +101,7 @@ HTML **`<main>` 元素**呈现了文档的 {{HTMLElement("body")}} 或应用的�
 </main>
 ```
 
-{{Compat("html.elements.main")}}
+{{Compat}}
 
 ## 参见
 

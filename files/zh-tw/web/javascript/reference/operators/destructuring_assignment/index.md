@@ -421,7 +421,7 @@ const {self, prot} = obj;
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.operators.destructuring")}}
+{{Compat}}
 
 ## 參見
 

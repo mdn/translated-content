@@ -64,7 +64,7 @@ function backwards() {
 
 ## 浏览器兼容性
 
-{{Compat("api.IDBCursor.direction")}}
+{{Compat}}
 
 ## 参考资料
 

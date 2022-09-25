@@ -57,7 +57,7 @@ document.getElementById("filepicker").addEventListener("change", function(event)
 
 ## 浏览器兼容性
 
-{{Compat("api.File.webkitRelativePath")}}
+{{Compat}}
 
 ## 另见
 

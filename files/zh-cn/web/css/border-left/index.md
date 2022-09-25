@@ -77,4 +77,4 @@ div {
 
 ## Browser compatibility
 
-{{Compat("css.properties.border-left")}}
+{{Compat}}

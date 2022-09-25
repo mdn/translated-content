@@ -55,7 +55,7 @@ biquadFilter.gain.value = 25;
 
 ## 浏览器兼容性
 
-{{Compat("api.BaseAudioContext.createBiquadFilter")}}
+{{Compat}}
 
 ## 相关
 

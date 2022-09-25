@@ -33,7 +33,7 @@ string = attribute.prefix
 
 ## 浏览器兼容性
 
-{{Compat("api.Attr.prefix")}}
+{{Compat}}
 
 ## 参考
 

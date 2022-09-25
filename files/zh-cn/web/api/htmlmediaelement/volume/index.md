@@ -31,7 +31,7 @@ obj.volume = 0.75;
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLMediaElement.volume")}}
+{{Compat}}
 
 ## 更多
 

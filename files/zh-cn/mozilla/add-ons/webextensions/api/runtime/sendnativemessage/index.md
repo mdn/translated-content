@@ -37,7 +37,7 @@ var sending = browser.runtime.sendNativeMessage(
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.runtime.sendNativeMessage")}}
+{{Compat}}
 
 ## 示例
 

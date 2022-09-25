@@ -21,7 +21,7 @@ _没有指定方法;继承来自父级的属性, {{domxref("HTMLElement")}}._
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLUnknownElement")}}
+{{Compat}}
 
 ## 相关内容
 

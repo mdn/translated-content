@@ -66,7 +66,7 @@ a:visited {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.visited")}}
+{{Compat}}
 
 ## 参见
 

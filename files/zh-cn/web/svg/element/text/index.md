@@ -93,7 +93,7 @@ SVG 文本还可以应用样式。
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.text")}}
+{{Compat}}
 
 ## 相关内容
 

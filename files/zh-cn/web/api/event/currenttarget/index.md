@@ -44,7 +44,7 @@ document.body.addEventListener('click', hide, false);
 
 ## 浏览器兼容性
 
-{{Compat("api.Event.currentTarget")}}
+{{Compat}}
 
 ## 参考
 

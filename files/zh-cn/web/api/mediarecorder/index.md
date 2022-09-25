@@ -153,7 +153,7 @@ if (navigator.mediaDevices) {
 
 ## Browser compatibility
 
-{{Compat("api.MediaRecorder")}}
+{{Compat}}
 
 ## See also
 

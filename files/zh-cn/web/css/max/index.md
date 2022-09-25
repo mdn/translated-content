@@ -98,7 +98,7 @@ This ensures a minimum size of _1rem_, with a text size that scales if the page 
 
 ## 浏览器兼容性
 
-{{Compat("css.types.max")}}
+{{Compat}}
 
 ## 也可以看看
 

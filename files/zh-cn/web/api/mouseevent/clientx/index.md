@@ -47,7 +47,7 @@ var x = instanceOfMouseEvent.clientX
 
 ## 浏览器兼容性
 
-{{Compat("api.MouseEvent.clientX")}}
+{{Compat}}
 
 ## 相关
 

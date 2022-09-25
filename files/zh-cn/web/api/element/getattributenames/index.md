@@ -32,4 +32,4 @@ for(let name of element.getAttributeNames())
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.getAttributeNames")}}
+{{Compat}}

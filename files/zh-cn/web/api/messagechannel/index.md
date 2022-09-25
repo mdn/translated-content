@@ -52,7 +52,7 @@ function handleMessage(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.MessageChannel")}}
+{{Compat}}
 
 ## 参见
 

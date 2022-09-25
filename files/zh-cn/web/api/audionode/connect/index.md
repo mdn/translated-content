@@ -112,7 +112,7 @@ Therefore, it is possible to choose the range in which an {{domxref("AudioParam"
 
 ## Browser compatibility
 
-{{Compat("api.AudioNode.connect")}}
+{{Compat}}
 
 ## See also
 

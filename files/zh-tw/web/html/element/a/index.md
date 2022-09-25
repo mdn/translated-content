@@ -216,7 +216,7 @@ Whether clicking on an {{HTMLElement("a")}} causes it to become focused varies b
 
 ## Browser compatibility
 
-{{Compat("html.elements.a")}}
+{{Compat}}
 
 ## See also
 

@@ -38,7 +38,7 @@ var myListener = audioCtx.listener;
 
 ## 浏览器兼容性
 
-{{Compat("api.BaseAudioContext.listener")}}
+{{Compat}}
 
 ## 另见
 

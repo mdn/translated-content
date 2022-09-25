@@ -29,7 +29,7 @@ var pageX = event.pageX;
 
 ## 浏览器兼容性
 
-{{Compat("api.MouseEvent.pageX")}}
+{{Compat}}
 
 ## 参考
 

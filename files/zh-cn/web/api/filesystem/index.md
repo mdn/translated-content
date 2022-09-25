@@ -31,7 +31,7 @@ slug: Web/API/FileSystem
 
 ## 浏览器兼容性
 
-{{Compat("api.FileSystem")}}
+{{Compat}}
 
 ## 相关链接
 

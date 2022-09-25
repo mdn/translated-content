@@ -25,4 +25,4 @@ An `unsigned long`.
 
 ## Browser compatibility
 
-{{Compat("api.WebSocket.bufferedAmount")}}
+{{Compat}}

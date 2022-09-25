@@ -65,7 +65,7 @@ formData.append('userpic[]', myFileInput2.files[0], 'chris2.jpg');
 
 ## 浏览器兼容性
 
-{{Compat("api.FormData.append")}}
+{{Compat}}
 
 ## 相关链接
 

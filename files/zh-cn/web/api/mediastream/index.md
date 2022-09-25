@@ -56,7 +56,7 @@ slug: Web/API/MediaStream
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaStream")}}
+{{Compat}}
 
 ## 相关内容
 

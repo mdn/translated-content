@@ -189,7 +189,7 @@ boxElem.addEventListener("mouseleave", logEvent);
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.innerHTML")}}
+{{Compat}}
 
 ## 相关链接
 

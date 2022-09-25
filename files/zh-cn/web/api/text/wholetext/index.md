@@ -73,7 +73,7 @@ para.firstChild.replaceWholeText("Thru-hiking is great, but ");
 
 ## Browser compatibility
 
-{{Compat("api.Text.wholeText")}}
+{{Compat}}
 
 ## See also
 

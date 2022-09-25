@@ -46,7 +46,7 @@ function showCoords(evt){
 
 ## 浏览器兼容性
 
-{{Compat("api.MouseEvent.clientY")}}
+{{Compat}}
 
 ## 查看更多
 

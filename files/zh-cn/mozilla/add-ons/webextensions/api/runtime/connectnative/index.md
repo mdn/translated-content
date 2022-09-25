@@ -18,7 +18,7 @@ var port = browser.runtime.connectNative(
 ### 参数
 
 - `application`
-  - : `值类型为string`. 该参数的值为要连接的本地应用程序的名称。必须要跟 [native application's manifest file](/zh-CN/Add-ons/WebExtensions/Native_messaging#App_manifest) 中的"name"特性的值一致。
+  - : 值类型为 `string`。该参数的值为要连接的本地应用程序的名称。必须要跟 [native application's manifest file](/zh-CN/Add-ons/WebExtensions/Native_messaging#App_manifest) 中的"name"特性的值一致。
 
 ### 返回值
 
@@ -26,7 +26,7 @@ var port = browser.runtime.connectNative(
 
 ## 浏览器的兼容性
 
-{{Compat("webextensions.api.runtime.connectNative")}}
+{{Compat}}
 
 ## 示例
 

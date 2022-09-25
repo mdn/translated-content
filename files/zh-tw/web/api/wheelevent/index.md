@@ -45,7 +45,7 @@ _該介面本身未定義方法，但繼承了父介面{{domxref("MouseEvent")}}
 
 ## 瀏覽器相容性
 
-{{Compat("api.WheelEvent")}}
+{{Compat}}
 
 ## 參見
 

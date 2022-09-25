@@ -23,7 +23,7 @@ var error = instanceOfFileReader.error
 
 ## 浏览器兼容性
 
-{{Compat("api.FileReader.error")}}
+{{Compat}}
 
 ## 相关链接
 

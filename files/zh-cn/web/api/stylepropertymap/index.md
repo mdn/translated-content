@@ -32,4 +32,4 @@ _从其父级 {{DOMxRef("StylePropertyMapReadOnly")}} 继承方法。_
 
 ## 浏览器兼容性
 
-{{Compat("api.StylePropertyMap")}}
+{{Compat}}

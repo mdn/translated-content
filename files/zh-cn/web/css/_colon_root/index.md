@@ -30,4 +30,4 @@ slug: Web/CSS/:root
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.root")}}
+{{Compat}}

@@ -57,7 +57,7 @@ text-size-adjust: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.text-size-adjust")}}
+{{Compat}}
 
 \[1] There is a bug in older WebKit-based desktop browsers. If `-webkit-text-size-adjust` is explicitly set to `none`, older Webkit-based desktop browsers, instead of ignoring the property, will prevent the user from zooming in or out of the web page. See [Bug 56543](https://bugs.webkit.org/show_bug.cgi?id=56543) (affected Safari≤5 & Chrome≤26), [Bug 163359](https://code.google.com/p/chromium/issues/detail?id=163359), and [Bug 84186](https://bugs.webkit.org/show_bug.cgi?id=84186).
 

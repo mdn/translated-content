@@ -69,4 +69,4 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 ## 浏览器兼容性
 
-{{Compat("api.CustomElementRegistry")}}
+{{Compat}}

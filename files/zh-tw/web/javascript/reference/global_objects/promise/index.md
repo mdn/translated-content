@@ -203,7 +203,7 @@ if ("Promise" in window) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Promise")}}
+{{Compat}}
 
 ## 參見
 

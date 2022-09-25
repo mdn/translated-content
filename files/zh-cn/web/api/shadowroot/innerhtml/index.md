@@ -28,4 +28,4 @@ shadowRoot.innerHTML = domString;
 
 ## 浏览器兼容性
 
-{{Compat("api.ShadowRoot.innerHTML")}}
+{{Compat}}

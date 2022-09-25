@@ -168,7 +168,7 @@ flex-basis: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.flex-basis")}}
+{{Compat}}
 
 ## 参见
 

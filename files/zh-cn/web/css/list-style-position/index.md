@@ -88,7 +88,7 @@ list-style-position: unset;
 
 ## Browser compatibility
 
-{{Compat("css.properties.list-style-position")}}
+{{Compat}}
 
 ## See also
 

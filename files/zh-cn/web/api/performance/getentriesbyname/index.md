@@ -84,4 +84,4 @@ function use_PerformanceEntry_methods() {
 
 ## Browser compatibility
 
-{{Compat("api.Performance.getEntriesByName")}}
+{{Compat}}

@@ -31,7 +31,7 @@ document.fonts.ready.then(function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.fonts")}}
+{{Compat}}
 
 ## 参考资料
 

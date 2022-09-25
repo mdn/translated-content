@@ -5,7 +5,7 @@ slug: Web/API/ShadowRoot
 
 {{APIRef('Shadow DOM')}}
 
-Shadow DOM API 的 **`ShadowRoot`** 接口是一个 DOM 子树的根节点， 它与文档的主 DOM 树分开渲染。
+Shadow DOM API 的 **`ShadowRoot`** 接口是一个 DOM 子树的根节点，它与文档的主 DOM 树分开渲染。
 
 你可以通过使用一个元素的 {{domxref("Element.shadowRoot")}} 属性来检索它的参考，假设它是由 {{domxref("Element.attachShadow()")}} 创建的并使 `mode` 设置为 `open`.
 
@@ -85,4 +85,4 @@ function updateStyle(elem) {
 
 ## 浏览器兼容性
 
-{{Compat("api.ShadowRoot")}}
+{{Compat}}

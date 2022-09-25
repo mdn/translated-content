@@ -79,7 +79,7 @@ Every method and property listed in this document has its own reference page and
 
 ## 瀏覽器相容性
 
-{{Compat("api.DataTransfer")}}
+{{Compat}}
 
 ## 參見
 

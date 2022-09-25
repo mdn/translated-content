@@ -68,7 +68,7 @@ _滚轮事件实现了以下事件的方法： {{domxref("WheelEvent")}}, {{domx
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.wheel_event")}}
+{{Compat}}
 
 ### 跨浏览器监听滚动事件
 

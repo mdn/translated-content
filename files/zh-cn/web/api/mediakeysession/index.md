@@ -50,4 +50,4 @@ The **`MediaKeySession`** interface of the [EncryptedMediaExtensions API](/zh-CN
 
 ## Browser compatibility
 
-{{Compat("api.MediaKeySession")}}
+{{Compat}}

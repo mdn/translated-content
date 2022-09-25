@@ -42,7 +42,7 @@ DOM 本身不处理或执行名称空间验证。 它由 DOM 应用程序完成�
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.namespaceURI")}}
+{{Compat}}
 
 ## See also
 

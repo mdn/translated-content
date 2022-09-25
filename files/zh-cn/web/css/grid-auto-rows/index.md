@@ -115,7 +115,7 @@ grid-auto-rows: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.grid-auto-rows")}}
+{{Compat}}
 
 ## 相关链接
 

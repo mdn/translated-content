@@ -255,7 +255,7 @@ mediaRecorder.onstop = function(e) {
 
 ## Browser compatibility
 
-{{Compat("api.MediaRecorder")}}
+{{Compat}}
 
 ## See also
 

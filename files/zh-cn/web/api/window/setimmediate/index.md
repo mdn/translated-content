@@ -37,7 +37,7 @@ var immediateID = setImmediate(func);
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.setImmediate")}}
+{{Compat}}
 
 ## 相关链接
 

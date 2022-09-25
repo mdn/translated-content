@@ -52,7 +52,7 @@ gl.getExtension('WEBGL_lose_context').loseContext();
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLCanvasElement.webglcontextlost_event")}}
+{{Compat}}
 
 ## 请参阅
 

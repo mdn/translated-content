@@ -350,4 +350,4 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 ## 浏览器兼容性
 
-{{Compat("api.Element")}}
+{{Compat}}

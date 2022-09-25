@@ -69,7 +69,7 @@ myHeaders.get('Content-Type');
 
 ## 浏览器兼容性
 
-{{Compat("api.Headers")}}
+{{Compat}}
 
 ## 相关链接
 

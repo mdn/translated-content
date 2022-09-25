@@ -49,7 +49,7 @@ document.querySelector("output").textContent = result.snapshotLength;
 
 ## 浏览器兼容性
 
-{{Compat("api.XPathEvaluator")}}
+{{Compat}}
 
 ## 相关链接
 

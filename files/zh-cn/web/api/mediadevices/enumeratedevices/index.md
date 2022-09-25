@@ -65,7 +65,7 @@ audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaDevices.enumerateDevices")}}
+{{Compat}}
 
 ## See also
 

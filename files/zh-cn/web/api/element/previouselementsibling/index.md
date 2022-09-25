@@ -48,4 +48,4 @@ Siblings of div-03
 
 ### 浏览器兼容性
 
-{{Compat("api.Element.previousElementSibling")}}
+{{Compat}}

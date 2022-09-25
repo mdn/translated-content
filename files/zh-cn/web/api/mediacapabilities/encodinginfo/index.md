@@ -46,7 +46,7 @@ navigator.mediaCapabilities.decodingInfo(mediaConfig).then(result => { // result
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaCapabilitiesInfo")}}
+{{Compat}}
 
 ## 参考
 

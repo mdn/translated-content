@@ -51,7 +51,7 @@ _集成其父类方法，{{domxref("AudioNode")}}。_
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaElementAudioSourceNode")}}
+{{Compat}}
 
 ## 相关页面
 

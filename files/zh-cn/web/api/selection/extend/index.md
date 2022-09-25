@@ -26,7 +26,7 @@ sel.extend(node, offset)
 
 ## 浏览器兼容性
 
-{{Compat("api.Selection.extend")}}
+{{Compat}}
 
 ## 相关链接
 

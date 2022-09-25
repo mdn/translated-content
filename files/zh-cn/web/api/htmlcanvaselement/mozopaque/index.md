@@ -39,7 +39,7 @@ canvas.mozOpaque = false;
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLCanvasElement.mozOpaque")}}
+{{Compat}}
 
 ## 参考
 

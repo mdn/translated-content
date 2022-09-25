@@ -41,7 +41,7 @@ MediaStream 对象有着单一的输入和输出。由 [`getUserMedia()`](/zh-CN
 
 ## 浏览器支持
 
-{{Compat("api.MediaStream")}}
+{{Compat}}
 
 ## See Also
 

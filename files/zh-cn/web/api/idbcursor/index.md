@@ -74,7 +74,7 @@ function displayData() {
 
 ## Browser compatibility
 
-{{Compat("api.IDBCursor")}}
+{{Compat}}
 
 ## See also
 

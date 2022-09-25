@@ -103,7 +103,7 @@ if (window.Element && !Element.prototype.closest) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.closest")}}
+{{Compat}}
 
 ### 兼容性说明
 

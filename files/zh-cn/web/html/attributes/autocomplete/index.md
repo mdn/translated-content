@@ -197,7 +197,7 @@ TN99 8ZZ
 
 ## 浏览器兼容性
 
-{{Compat("html.global_attributes.autocomplete")}}
+{{Compat}}
 
 ## 另请详见
 

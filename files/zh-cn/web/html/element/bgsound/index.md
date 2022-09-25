@@ -38,7 +38,7 @@ slug: Web/HTML/Element/bgsound
 
 ## 浏览器兼容
 
-{{Compat("html.elements.bgsound")}}
+{{Compat}}
 
 ## 参见
 

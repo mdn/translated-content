@@ -62,7 +62,7 @@ console.log(foo.firstElementChild.textContent);
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.firstElementChild")}}
+{{Compat}}
 
 ## 参见
 

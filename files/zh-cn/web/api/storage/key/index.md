@@ -44,7 +44,7 @@ function populateStorage() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Storage.key")}}
+{{Compat}}
 
 ## 相关链接
 
