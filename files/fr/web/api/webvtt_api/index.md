@@ -3,6 +3,7 @@ title: Format Web Video Text Tracks (WebVTT)
 slug: Web/API/WebVTT_API
 translation_of: Web/API/WebVTT_API
 ---
+
 {{DefaultAPISidebar("WebVTT")}}
 
 Le **format Web Video Text Tracks** (**WebVTT**) est un format qui permet d'afficher des pistes de texte qui varient avec le temps (comme des sous-titres) et qui est utilisé par l'élément HTML [`<track>`](/fr/docs/Web/HTML/Element/track). L'objectif principal des fichiers WebVTT est d'ajouter un calque de texte à une vidéo (représentée en HTML par [`<video>`](/fr/docs/Web/HTML/Element/video)). WebVTT est un format texte et les données doivent être encodées en [UTF-8](/fr/docs/Glossary/UTF-8). Les espaces et les tabulations peuvent être utilisés sans distinction. Il existe également une API qui permet de représenter ces pistes et les données nécessaires à la lecture du texte au bon moment.

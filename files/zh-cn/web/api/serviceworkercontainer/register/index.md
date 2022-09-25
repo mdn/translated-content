@@ -2,6 +2,7 @@
 title: ServiceWorkerContainer.register()
 slug: Web/API/ServiceWorkerContainer/register
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 {{domxref("ServiceWorkerContainer")}} 接口的 **`register()`**方法创建或更新一个给定 scriptURL 的[`ServiceWorkerRegistration`](/zh-CN/docs/Web/API/ServiceWorkerRegistration)。
@@ -62,4 +63,4 @@ if ('serviceWorker' in navigator) {
 
 ## 浏览器兼容性
 
-{{Compat("api.ServiceWorkerContainer.register")}}
+{{Compat}}

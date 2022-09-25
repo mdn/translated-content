@@ -2,6 +2,7 @@
 title: HTMLDialogElement
 slug: Web/API/HTMLDialogElement
 ---
+
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 **`HTMLDialogElement`** インターフェイスは {{HTMLElement("dialog")}} 要素を操作するメソッドを提供します。 {{domxref("HTMLElement")}} インターフェースからプロパティとメソッドを継承しています。
@@ -93,7 +94,7 @@ _親である {{domxref("HTMLElement")}} からメソッドを継承していま
   </script>
 ```
 
-> **Note:** **メモ**: この例は GitHub 上の [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html) ([ライブで表示](https://mdn.github.io/dom-examples/htmldialogelement-basic/)) として見つけることができます。
+> **Note:**  この例は GitHub 上の [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html) ([ライブで表示](https://mdn.github.io/dom-examples/htmldialogelement-basic/)) として見つけることができます。
 
 ## 仕様書
 

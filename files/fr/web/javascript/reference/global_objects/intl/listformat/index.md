@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/ListFormat
 browser-compat: javascript.builtins.Intl.ListFormat
 ---
+
 {{JSRef}}
 
 L'objet **`Intl.ListFormat`** permet de formater des listes de façon différente selon la locale utilisée.

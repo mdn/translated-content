@@ -2,6 +2,7 @@
 title: grid-row
 slug: Web/CSS/grid-row
 ---
+
 {{CSSRef}}
 
 ## Summary
@@ -101,7 +102,7 @@ grid-row: unset;
 
 ## Browser compatibility
 
-{{Compat("css.properties.grid-row")}}
+{{Compat}}
 
 ## See also
 

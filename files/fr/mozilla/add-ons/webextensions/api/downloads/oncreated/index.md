@@ -13,6 +13,7 @@ tags:
   - onCreated
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/onCreated
 ---
+
 {{AddonSidebar()}}
 
 L'événement **`onCreated()`** de l'API {{WebExtAPIRef("downloads")}} se déclenche lorsqu'un téléchargement commence, c'est à dire lorsque quand {{WebExtAPIRef("downloads.download()")}} est appelé avec succès.

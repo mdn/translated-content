@@ -2,6 +2,7 @@
 title: Math
 slug: Web/JavaScript/Reference/Global_Objects/Math
 ---
+
 {{JSRef}}
 
 **`Math`** 是一個擁有數學常數及數學函數（非函式物件）屬性及方法的內建物件。
@@ -148,7 +149,7 @@ console.log(Math.gcd(20, 30, 15, 70, 40)); // `5`
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Math")}}
+{{Compat}}
 
 ## 參見
 

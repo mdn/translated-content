@@ -2,6 +2,7 @@
 title: overflow-x
 slug: Web/CSS/overflow-x
 ---
+
 {{ CSSRef() }}
 
 {{ SeeCompatTable() }}

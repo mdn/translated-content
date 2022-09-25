@@ -2,6 +2,7 @@
 title: 出了什麼問題？JavaScript 疑難排解
 slug: Learn/JavaScript/First_steps/What_went_wrong
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
 
 當你在練習撰寫上一節的「猜數字」遊戲時，你可能會發現它無法運作。不用擔心，本文將會把你從快被拔光的頭髮中拯救出來，並且給你一些小提示，讓你知道怎麼找出及修正 Javascript 的程式運行錯誤。

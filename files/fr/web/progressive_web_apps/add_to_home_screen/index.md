@@ -9,6 +9,7 @@ tags:
 translation_of: Web/Progressive_web_apps/Add_to_home_screen
 original_slug: Web/Progressive_web_apps/ajouter_a_lecran_daccueil_a2hs
 ---
+
 Ajouter à l’écran d’accueil (A2HS en abrégé) est une fonctionnalité disponible dans les navigateurs pour smartphones modernes qui permet aux développeurs d’ajouter facilement et rapidement un raccourci à leur écran d’accueil, représentant leur application Web. Ce guide explique comment utiliser A2HS et ce que vous devez faire en tant que développeur pour permettre à vos utilisateurs d’en tirer parti.
 
 ## Pourquoi A2HS?

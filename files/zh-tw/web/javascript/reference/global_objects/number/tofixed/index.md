@@ -2,6 +2,7 @@
 title: Number.prototype.toFixed()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toFixed
 ---
+
 {{JSRef}}
 
 **`toFixed()`** 方法會使用定點小數表示法（fixed-point notation）來格式化數字。
@@ -58,7 +59,7 @@ numObj.toFixed(6);      // Returns '12345.678900': note added zeros
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Number.toFixed")}}
+{{Compat}}
 
 ## 參見
 

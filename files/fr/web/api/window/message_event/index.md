@@ -6,6 +6,7 @@ tags:
   - Window
 translation_of: Web/API/Window/message_event
 ---
+
 {{APIRef}}
 
 L'événement `message` est déclenché sur un objet {{domxref('Window')}} lorsque la fenêtre reçoit un message, par exemple d'un appel a [`Window.postMessage()`](/fr/docs/Web/API/Window/postMessage) depuis un autre contexte de navigation.

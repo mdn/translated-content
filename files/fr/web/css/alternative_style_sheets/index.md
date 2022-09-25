@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/Alternative_style_sheets
 original_slug: Web/CSS/Feuilles_de_style_alternatives
 ---
+
 {{CSSRef}}
 
 En proposant **des feuilles de style alternatives**, une page web permet à ses utilisateurs de pouvoir choisir parmi différentes version d'une page selon leurs besoins ou leurs préférences.

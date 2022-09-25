@@ -2,6 +2,7 @@
 title: tabindex
 slug: Web/HTML/Global_attributes/tabindex
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **tabindex** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 指示其元素是否可以聚焦，以及它是否/在何处参与顺序键盘导航（通常使用<kbd>Tab</kbd>键，因此得名）。

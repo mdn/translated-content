@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.beginPath()
 slug: Web/API/CanvasRenderingContext2D/beginPath
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.beginPath()`** 是 Canvas 2D API 通过清空子路径列表开始一个新路径的方法。 当你想创建一个新的路径时，调用此方法。
@@ -103,7 +104,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.beginPath")}}
+{{Compat}}
 
 ## 参见
 

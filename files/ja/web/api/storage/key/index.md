@@ -33,7 +33,7 @@ function forEachKey(callback) {
 }
 ```
 
-> **Note:** **注記**: 実際の例として、[Web Storage Demo](https://github.com/mdn/web-storage-demo) をご覧ください。
+> **Note:** 実際の例として、[Web Storage Demo](https://github.com/mdn/web-storage-demo) をご覧ください。
 
 ## 仕様
 

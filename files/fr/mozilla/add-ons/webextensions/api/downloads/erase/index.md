@@ -14,6 +14,7 @@ tags:
   - erase
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/erase
 ---
+
 {{AddonSidebar()}}
 
 La fonction **`erase()`** de l'API {{WebExtAPIRef("downloads")}} efface la correspondance {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} de l'historique de téléchargement du navigateur sans supprimer les fichiers téléchargés du disque.

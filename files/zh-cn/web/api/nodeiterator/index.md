@@ -2,6 +2,7 @@
 title: NodeIterator
 slug: Web/API/NodeIterator
 ---
+
 {{APIRef("DOM")}}
 
 **`NodeIterator`** 接口表示一个遍历 DOM 子树中节点列表的成员的迭代器。节点将按照文档顺序返回。

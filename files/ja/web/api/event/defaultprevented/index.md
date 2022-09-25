@@ -2,6 +2,7 @@
 title: Event.defaultPrevented
 slug: Web/API/Event/defaultPrevented
 ---
+
 {{ APIRef("DOM") }}
 
 **`defaultPrevented`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、論理値で {{ domxref("Event.preventDefault()") }} の呼び出しがイベントをキャンセルしたかどうかを示す値を返します。

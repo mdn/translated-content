@@ -4,6 +4,7 @@ slug: Web/HTTP/Status/307
 translation_of: Web/HTTP/Status/307
 browser-compat: http.status.307
 ---
+
 {{HTTPSidebar}}
 
 Le code de statut de réponse de redirection **`307 Temporary Redirect`** indique que la ressource demandée est temporairement déplacée vers l'URL contenue dans l'en-tête [`Location`](/fr/docs/Web/HTTP/Headers/Location). Un navigateur redirige vers cette page mais les moteurs de recherche ne mettent pas à jour leurs liens vers la ressource (en termes de référencement, cela indique que le flux de référencement n'est pas envoyé vers la nouvelle URL).

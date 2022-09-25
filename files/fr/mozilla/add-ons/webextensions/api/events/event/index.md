@@ -13,6 +13,7 @@ tags:
   - events
 translation_of: Mozilla/Add-ons/WebExtensions/API/events/Event
 ---
+
 {{AddonSidebar()}}
 
 Un objet qui permet l'ajout et la suppression d'écouteurs pour un événement de navigateur.

@@ -2,6 +2,7 @@
 title: WWW-Authenticate
 slug: Web/HTTP/Headers/WWW-Authenticate
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`WWW-Authenticate`** 响应头定义了使用何种验证方式去获取对资源的连接。

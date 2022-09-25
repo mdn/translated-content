@@ -12,6 +12,7 @@ tags:
   - XSLT
 translation_of: Web/XPath
 ---
+
 {{XSLTRef}}
 
 XPath est une abréviation pour _XML Path Language_ (qu'on pourrait traduire en français par « langage de chemin XML »). Ce langage utilise une syntaxe non-XML pour cibler différentes parties d'un document [XML](/fr/docs/Web/XML/XML_introduction). Il peut aussi être utilisé pour tester certains nœuds d'un document afin de déterminer s'ils suivent un motif particulier.

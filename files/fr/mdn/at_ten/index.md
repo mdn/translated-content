@@ -7,6 +7,7 @@ tags:
 translation_of: MDN_at_ten
 original_slug: MDN_a_dix_ans
 ---
+
 Fêtons 10 années passées à documenter votre Web.
 
 ## L'histoire de MDN

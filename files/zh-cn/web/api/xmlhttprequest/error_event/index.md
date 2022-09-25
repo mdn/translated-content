@@ -2,6 +2,7 @@
 title: 'XMLHttpRequest: error 事件'
 slug: Web/API/XMLHttpRequest/error_event
 ---
+
 {{APIRef}}
 
 当请求遇到错误时，将触发`error` 事件。
@@ -114,7 +115,7 @@ xhrButtonAbort.addEventListener('click', () => {
 
 ## 浏览器兼容性
 
-{{Compat("api.XMLHttpRequest.error_event")}}
+{{Compat}}
 
 ## 其他
 

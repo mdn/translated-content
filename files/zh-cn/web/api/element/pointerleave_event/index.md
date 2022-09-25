@@ -2,6 +2,7 @@
 title: GlobalEventHandlers.onpointerleave
 slug: Web/API/Element/pointerleave_event
 ---
+
 {{APIRef("HTML DOM")}}
 
 就像在{{domxref("Element")}}或{{domxref("Window")}}中点击类似，在某目标区域内，发生触点（鼠标指针，触摸等）行为时会触发源于{{event("pointerleave")}}事件{{domxref("GlobalEventHandlers","global event handler", "", 1)}}行为。 这个事件本身属于 [Pointer Events API](/zh-CN/docs/Web/API/Pointer_events) 的一部分。
@@ -49,7 +50,7 @@ function init() {
 
 ## 浏览器支持情况
 
-{{Compat("api.GlobalEventHandlers.onpointerleave")}}
+{{Compat}}
 
 ## 参考
 

@@ -9,6 +9,7 @@ tags:
   - Noeuds
 translation_of: Web/API/TreeWalker/firstChild
 ---
+
 {{ APIRef("DOM") }}
 
 La méthode **`TreeWalker.firstChild()`** déplace le {{domxref("Node")}} courant vers le premier enfant _visible_ du noeud courant et renvoie l'enfant trouvé. Il déplace aussi le noeud courant vers cet enfant. Si aucun enfant n'existe, elle renvoie `null` et le noeud courant n'est pas modifié.

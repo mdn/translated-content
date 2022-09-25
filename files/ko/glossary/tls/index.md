@@ -1,7 +1,6 @@
 ---
 title: 전송 계층 보안 (TLS)
 slug: Glossary/TLS
-translation_of: Glossary/TLS
 ---
 이전에 {{Glossary("SSL", "Secure Sockets Layer (SSL)")}}로 알려진 **Transport Layer Security (TLS)**는 어플리케이션들이 네트워크 상에서 안전하게 통신하기 위해 사용된 {{Glossary("protocol")}}이며, 이메일, 웹 브라우징, 메세징, 그리고 다른 프로토코들의 감청을 통한 정보의 변형을 방지한다. SSL과 TLS 모두 네트워크 상에서 보안을 제공하는 cryptographic 프로토콜을 사용한 클라이언트 / 서버 프로토콜이다. 서버와 클라이언트가 TLS로 통신을 할때, 어떠한 제 3자도 메세지를 변형시키거나 감청할 수 없도록 한다.
 

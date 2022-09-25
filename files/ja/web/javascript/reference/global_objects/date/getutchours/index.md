@@ -2,6 +2,7 @@
 title: Date.prototype.getUTCHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCHours
 ---
+
 {{JSRef}}
 
 **`getUTCHours()`** メソッドは、協定世界時に基づき、指定された日時の「時」を返します。

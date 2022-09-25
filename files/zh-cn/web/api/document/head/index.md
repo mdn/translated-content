@@ -2,6 +2,7 @@
 title: Document.head
 slug: Web/API/Document/head
 ---
+
 {{APIRef}}
 
 ## 概述
@@ -31,7 +32,7 @@ alert( document.head === document.querySelector("head") ); // true
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.head")}}
+{{Compat}}
 
 ## 规范
 

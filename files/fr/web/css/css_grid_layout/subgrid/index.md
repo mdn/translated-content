@@ -8,6 +8,7 @@ tags:
   - subgrid
 translation_of: Web/CSS/CSS_Grid_Layout/Subgrid
 ---
+
 {{CSSRef}}
 
 La valeur **`subgrid`** a été ajoutée par le module de spécification _CSS Grid Layout_ de niveau 2 pour les propriétés {{cssxref("grid-template-columns")}} et {{cssxref("grid-template-rows")}}. Dans ce guide, nous verrons comment utiliser cette valeur ainsi que les cas d'utilisation ou patrons de conception qui peuvent en bénéficier.

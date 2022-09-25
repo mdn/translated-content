@@ -41,7 +41,7 @@ Access-Control-Allow-Origin: null
 
   - : オリジンを "null" に指定します。
 
-    > **Note:** **注:** `null` は[使用しないでください](https://w3c.github.io/webappsec-cors-for-developers/#avoid-returning-access-control-allow-origin-null)。「`Access-Control-Allow-Origin: "null"` を返すと安全であるように見えますが、リソースのオリジンが階層的ではないスキーム (例えば `data:` や `file:`) を使用しており、サンドボックス化された文書はすべて "null" となるように定義されています。多くのユーザーエージェントはそのような文書に `Access-Control-Allow-Origin: "null"` ヘッダーが付いているとアクセスを許可するので、あらゆるオリジンが "null" を持つ悪意のある文書を生成することができます。したがって、 ACAO ヘッダーで "null" 値を使用することは避けるべきです。」
+    > **Note:** `null` は[使用しないでください](https://w3c.github.io/webappsec-cors-for-developers/#avoid-returning-access-control-allow-origin-null)。「`Access-Control-Allow-Origin: "null"` を返すと安全であるように見えますが、リソースのオリジンが階層的ではないスキーム (例えば `data:` や `file:`) を使用しており、サンドボックス化された文書はすべて "null" となるように定義されています。多くのユーザーエージェントはそのような文書に `Access-Control-Allow-Origin: "null"` ヘッダーが付いているとアクセスを許可するので、あらゆるオリジンが "null" を持つ悪意のある文書を生成することができます。したがって、 ACAO ヘッダーで "null" 値を使用することは避けるべきです。」
 
 ## 例
 

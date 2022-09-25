@@ -6,7 +6,7 @@ slug: Web/API/WritableStreamDefaultWriter/WritableStreamDefaultWriter
 
 **`WritableStreamDefaultWriter()`** コンストラクターは、新しい {{domxref("WritableStreamDefaultWriter")}} オブジェクトのインスタンスを作成します。
 
-> **Note:** **注**: 通常、このコンストラクターを手動で使用することはありません。 代わりに、{{domxref("WritableStream.getWriter()")}} メソッドを使用します。
+> **Note:** 通常、このコンストラクターを手動で使用することはありません。 代わりに、{{domxref("WritableStream.getWriter()")}} メソッドを使用します。
 
 ## 構文
 

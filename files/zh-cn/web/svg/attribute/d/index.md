@@ -2,6 +2,7 @@
 title: d
 slug: Web/SVG/Attribute/d
 ---
+
 {{SVGRef}}
 
 **`d`** 属性定义了一个要绘制的路径。

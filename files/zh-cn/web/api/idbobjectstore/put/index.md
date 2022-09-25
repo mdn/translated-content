@@ -2,6 +2,7 @@
 title: IDBObjectStore.put()
 slug: Web/API/IDBObjectStore/put
 ---
+
 {{ APIRef("IndexedDB") }}
 
 {{domxref("IDBObjectStore")}} 接口的 **`put()`** 方法更新一条给定的数据库记录，如果给出的值不存在，则插入一个新的记录

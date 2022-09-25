@@ -2,6 +2,7 @@
 title: HTTP Headers
 slug: Web/HTTP/Headers
 ---
+
 {{ HTTPSidebar }}
 
 **HTTP 消息头**允许客户端和服务器通过 **request**和 **response**传递附加信息。一个请求头由名称（不区分大小写）后跟一个冒号 (`:`)，冒号后跟具体的值（不带换行符）组成。该值前面的引导空白会被忽略。

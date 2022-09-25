@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/overflow-inline
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`overflow-inline`** est une propriété logique qui définit ce qu'il faut afficher quand le contenu dépasse d'une boîte sur les bords en ligne (ceux parallèles au sens d'écriture). On peut choisir d'afficher rien, une barre de défilement ou de laisser le contenu dépasser.

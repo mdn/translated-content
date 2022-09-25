@@ -2,6 +2,7 @@
 title: Element.setAttributeNodeNS()
 slug: Web/API/Element/setAttributeNodeNS
 ---
+
 {{ APIRef("DOM") }}
 
 `setAttributeNodeNS` 可以给一个元素添加一个新的命名空间的属性节点。

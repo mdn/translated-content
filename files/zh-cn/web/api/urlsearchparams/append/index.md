@@ -2,6 +2,7 @@
 title: URLSearchParams.append()
 slug: Web/API/URLSearchParams/append
 ---
+
 {{ApiRef("URL API")}}{{SeeCompatTable}}
 
 **append()** 是 {{domxref("URLSearchParams")}} 接口的一个方法。可以插入一个新搜索参数。

@@ -2,6 +2,7 @@
 title: HTMLAreaElement
 slug: Web/API/HTMLAreaElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLAreaElement`** インターフェイスは、（通常のオブジェクトである {{domxref("HTMLElement")}} が継承によって利用できるもの以外に） {{HtmlElement("area")}} 要素のレイアウトと表示を操作するための特別なプロパティとメソッドを提供します。

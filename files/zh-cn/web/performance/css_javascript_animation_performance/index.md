@@ -2,6 +2,7 @@
 title: CSS and JavaScript animation performance
 slug: Web/Performance/CSS_JavaScript_animation_performance
 ---
+
 对众多应用程序而言，动画对提供友好的用户体验有着关键的作用，我们有很多方式生成 web 动画，比如 CSS {{cssxref("transition","transitions")}}/{{cssxref("animation","animations")}} 或者 JavaScript 动画 (使用 {{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}}).
 
 在这篇文章中，我们分析 CSS 动画和 JavaScript 动画的性能差异
@@ -11,7 +12,7 @@ slug: Web/Performance/CSS_JavaScript_animation_performance
 CSS 中过渡和动画都可以用于编写动画，它们都有各自的使用场景：
 
 - CSS {{cssxref("transition","transitions")}} 提供了一个简单的的方式去创造当前样式与结束状态样式之间的动画，比如一个 button 的普通状态和 hover 状态。尽管一个元素处于过渡状态中，新的过渡动画也会立即从当前样式开始，而不是直接跳转到 CSS 的最终状态。浏览 [Using CSS transitions](/zh-CN/docs/Web/Guide/CSS/Using_CSS_transitions) 以获取更多细节。
-- 另一方面，CSS {{cssxref("animation","animations")}}, 允许开发者去通过一个初始状态属性值集合与最终状态属性值集合创造动画，而不是单单的初始和最终状态。 CSS animations 由两部分组成：一个描述 CSS 动画的样式，以及一个指定动画初始状态，中间状态以及最终状态样式的关键帧集合。浏览 [Using CSS animations](/zh-CN/docs/Web/Guide/CSS/Using_CSS_animations) 以获取更多细节。
+- 另一方面，CSS {{cssxref("animation","animations")}}, 允许开发者去通过一个初始状态属性值集合与最终状态属性值集合创造动画，而不是单单的初始和最终状态。CSS animations 由两部分组成：一个描述 CSS 动画的样式，以及一个指定动画初始状态，中间状态以及最终状态样式的关键帧集合。浏览 [Using CSS animations](/zh-CN/docs/Web/Guide/CSS/Using_CSS_animations) 以获取更多细节。
 
 就性能方面来说，无论通过 CSS animations 还是 transitions 创造动画，都没有区别。在这篇文章中二者都归类为基于 CSS 的动画。
 

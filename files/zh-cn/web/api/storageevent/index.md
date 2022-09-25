@@ -2,6 +2,7 @@
 title: StorageEvent
 slug: Web/API/StorageEvent
 ---
+
 {{APIRef("Web Storage API")}}
 
 当前页面使用的 storage 被其他页面修改时会触发 StorageEvent 事件.

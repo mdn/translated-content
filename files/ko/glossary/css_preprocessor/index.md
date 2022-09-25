@@ -1,10 +1,6 @@
 ---
 title: CSS 전처리기
 slug: Glossary/CSS_preprocessor
-tags:
-  - CSS
-  - Glossary
-translation_of: Glossary/CSS_preprocessor
 ---
 {{QuickLinksWithSubpages("/ko/docs/Glossary")}}
 

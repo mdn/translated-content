@@ -27,8 +27,6 @@ El [atributo global](/es/docs/Web/HTML/Atributos_Globales) **translate** es un a
 
 {{Compat("html.global_attributes.translate")}}
 
-##
-
 ## Ver también
 
 - [atributos globales](/es/docs/Web/HTML/Atributos_Globales)

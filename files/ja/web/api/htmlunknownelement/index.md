@@ -2,6 +2,7 @@
 title: HTMLUnknownElement
 slug: Web/API/HTMLUnknownElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLUnknownElement`** インターフェイスは不正な HTML 要素である事を表します。{{domxref("HTMLElement")}} インターフェイスを継承しますが、追加のメソッドやプロパティは実装しません。

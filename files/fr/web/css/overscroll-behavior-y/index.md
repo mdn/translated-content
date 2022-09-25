@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/overscroll-behavior-y
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`overscroll-behavior-y`** permet de contrôler le comportement de l'agent utilisateur lorsqu'on atteint la limite de la zone de défilement sur l'axe vertical.

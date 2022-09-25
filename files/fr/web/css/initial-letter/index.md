@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/initial-letter
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`initial-letter`** permet de définir la mise en forme pour les lettrines (qu'elles soient abaissées, surélevées ou autre).

@@ -2,6 +2,7 @@
 title: element.innerHTML
 slug: Web/API/Element/innerHTML
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.innerHTML`** 属性设置或获取 HTML 语法表示的元素的后代。
@@ -188,7 +189,7 @@ boxElem.addEventListener("mouseleave", logEvent);
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.innerHTML")}}
+{{Compat}}
 
 ## 相关链接
 

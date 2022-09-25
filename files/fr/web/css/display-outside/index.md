@@ -7,6 +7,7 @@ tags:
   - Type de donnée
 translation_of: Web/CSS/display-outside
 ---
+
 {{CSSRef}}
 
 Les mots-clés de type `<display-outside>` définissent le mode de disposition extérieure de l'élément. Autrement dit, ces mots-clés précisent le rôle de l'élément dans le flux. Ces valeurs peuvent être utilisées pour la propriété `display`. La syntaxe historique (avant CSS 3) prendra une seule valeur et la nouvelle syntaxe combinera cette valeur avec une valeur {{CSSxRef("&lt;display-inside&gt;")}}.

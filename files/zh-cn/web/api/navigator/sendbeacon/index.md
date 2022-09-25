@@ -2,6 +2,7 @@
 title: Navigator.sendBeacon()
 slug: Web/API/Navigator/sendBeacon
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`navigator.sendBeacon()`** 方法可用于通过 [HTTP POST](/zh-CN/docs/Web/HTTP/Methods/POST) 将少量数据 {{glossary("Asynchronous", "异步")}} 传输到 Web 服务器。

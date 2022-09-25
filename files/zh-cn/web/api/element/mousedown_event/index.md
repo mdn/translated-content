@@ -2,6 +2,7 @@
 title: mousedown
 slug: Web/API/Element/mousedown_event
 ---
+
 {{APIRef}}
 
 `mousedown` 事件在指针设备按钮按下时触发。
@@ -51,7 +52,7 @@ slug: Web/API/Element/mousedown_event
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.mousedown_event")}}
+{{Compat}}
 
 ## 参见
 

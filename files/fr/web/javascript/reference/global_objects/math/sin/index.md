@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/sin
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/sin
 ---
+
 {{JSRef}}
 
 La fonction **`Math.sin()`** renvoie le sinus d'un nombre.

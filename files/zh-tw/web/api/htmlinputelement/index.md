@@ -2,6 +2,7 @@
 title: HTMLInputElement
 slug: Web/API/HTMLInputElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLInputElement`** 介面提供了特殊的屬性及方法以操作 `input` 元素的顯示與佈局。
@@ -202,7 +203,7 @@ slug: Web/API/HTMLInputElement
 
 ## 瀏覽器相容性
 
-{{Compat("api.HTMLInputElement")}}
+{{Compat}}
 
 ## 參見
 

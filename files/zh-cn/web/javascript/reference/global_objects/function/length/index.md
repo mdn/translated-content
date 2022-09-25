@@ -2,6 +2,7 @@
 title: Function.length
 slug: Web/JavaScript/Reference/Global_Objects/Function/length
 ---
+
 {{JSRef}}
 
 **`length`** 属性指明函数的形参个数。

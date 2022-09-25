@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:required
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:required`** permet de cibler un élément {{HTMLElement("input")}} pour lequel l'attribut {{htmlattrxref("required", "input")}} est activé. Cela permet de mettre en forme les éléments obligatoires pour remplir correctement un formulaire.

@@ -2,6 +2,7 @@
 title: baseline-shift
 slug: Web/SVG/Attribute/baseline-shift
 ---
+
 « [SVG 属性参考主页](/zh-CN/SVG/Attribute)
 
 属性`baseline-shift`允许相对于父文本内容元素的`dominant-baseline`重定位`dominant-baseline`。该切换对象必须是一个下标或上标。

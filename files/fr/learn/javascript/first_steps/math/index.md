@@ -3,6 +3,7 @@ title: Mathématiques de base en JavaScript — nombres et opérateurs
 slug: Learn/JavaScript/First_steps/Math
 translation_of: Learn/JavaScript/First_steps/Math
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
 
 À ce point du didacticiel, nous parlerons des mathématiques en JavaScript, de comment utiliser les [opérateurs](/fr/docs/Glossary/Operator) et d'autres fonctionnalités pour manipuler les nombres à notre guise.

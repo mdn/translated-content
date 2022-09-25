@@ -2,6 +2,7 @@
 title: Styling Vue components with CSS
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties","Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 现在终于到了使我们的应用程序看起来更好的时候了。在本文中，我们将探讨使用 CSS 样式 Vue 组件的不同方法。

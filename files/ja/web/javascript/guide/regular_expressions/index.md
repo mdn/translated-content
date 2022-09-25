@@ -2,6 +2,7 @@
 title: 正規表現
 slug: Web/JavaScript/Guide/Regular_Expressions
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
 
 正規表現とは、文字列内で文字の組み合わせを照合するために用いられるパターンです。 JavaScript では、正規表現はオブジェクトでもあります。これらのパターンは {{jsxref("RegExp")}} の {{jsxref("RegExp.exec", "exec()")}} および {{jsxref("RegExp.test", "test()")}} メソッドや、{{jsxref("String")}} の {{jsxref("String.match", "match()")}}、 {{jsxref("String.matchAll", "matchAll()")}}、{{jsxref("String.replace", "replace()")}}、{{jsxref("String.replaceAll", "replaceAll()")}}、{{jsxref("String.search", "search()")}}、{{jsxref("String.split", "split()")}} メソッドで使用できます。本章では、 JavaScript の正規表現について説明します。
@@ -384,7 +385,7 @@ Unicode 正規表現と非 Unicode 正規表現との間には、他にも注意
 
 - Unicode の正規表現はいわゆる "identity escapes" に対応していません。つまり、バックスラッシュをエスケープする必要がなく、事実上無視されるパターンです。例えば、 `/\a/` は文字 'a' に一致する有効な正規表現ですが、 `/\a/u` はそうではありま せん。
 
-- 波括弧は[数量詞](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)として使用されない場合は、エスケープする必要がありま す。例えば、`/{/` は中括弧 '{' に一致する有効な正規表現ですが、`/{/u` はそうではありません - 代わりに、中括弧をエスケープして `/\{/u` を使用しなければなりません。
+- 波括弧は[数量詞](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)として使用されない場合は、エスケープする必要がありま す。例えば、`/{/` は中括弧 '{' に一致する有効な正規表現ですが、`/{/u` はそうではありません - 代わりに、中括弧をエスケープして `/\\{/u` を使用しなければなりません。
 
 - `-` の文字は文字クラスの中では異なった解釈をされます。特に、 Unicode の正規表現では、 `-` はパターンの先頭または末尾に現れた場合にのみリテラルの `-` として解釈されます（範囲指定はできません）。例えば、 `/[\w-:]/` は単語、`-`、または `:` に一致する有効な正規表現ですが、 `/\w-:/u` は無効な正規表現です。なぜなら `\w` から `:` という範囲は文字の範囲としてきちんと定義されていないので、無効な正規表現だからです。
 

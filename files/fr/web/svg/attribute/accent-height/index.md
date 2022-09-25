@@ -4,6 +4,7 @@ slug: Web/SVG/Attribute/accent-height
 translation_of: Web/SVG/Attribute/accent-height
 browser-compat: svg.elements.font-face.accent-height
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 L'attribut **`accent-height`** définit la distance entre l'origine et le haut des accents placés sur les caractères. Cette distance est mesurée dans le système de coordonnées de la police.

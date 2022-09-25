@@ -2,6 +2,7 @@
 title: Document.createElementNS()
 slug: Web/API/Document/createElementNS
 ---
+
 {{ApiRef("DOM")}}
 
 创建一个具有指定的命名空间 URI 和限定名称的元素。
@@ -79,7 +80,7 @@ document.createElementNS(namespaceURI, qualifiedName[, options]);
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.createElementNS")}}
+{{Compat}}
 
 ## 相关链接
 

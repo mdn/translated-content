@@ -2,6 +2,7 @@
 title: Math.expm1()
 slug: Web/JavaScript/Reference/Global_Objects/Math/expm1
 ---
+
 {{JSRef}}
 
 **`Math.expm1()`** 関数は `ex - 1` (`x` は引数、 {{jsxref("Math.E", "e", "", 1)}} は自然対数の底) を返します。

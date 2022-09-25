@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwn
 l10n:
   sourceCommit: ae586f9996f622b40379283f727febe94258b8c0
 ---
+
 {{JSRef}}
 
 **`Object.hasOwn()`** 静的メソッドは、指定されたオブジェクトが、指定されたプロパティを自身のプロパティとして持っている場合に `true` を返します。そのプロパティが継承されている場合、または存在しない場合、このメソッドは `false` を返します。

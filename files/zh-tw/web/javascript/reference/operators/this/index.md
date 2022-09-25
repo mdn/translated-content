@@ -2,6 +2,7 @@
 title: this
 slug: Web/JavaScript/Reference/Operators/this
 ---
+
 {{jsSidebar("Operators")}}
 
 JavaScript **函式內的 `this` 關鍵字**表現，和其他語言相比略有差異。在[嚴格模式](/zh-TW/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)與非嚴格模式下也有所不同。
@@ -356,7 +357,7 @@ for(var i=0 ; i<elements.length ; i++){
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.operators.this")}}
+{{Compat}}
 
 ## 參見
 

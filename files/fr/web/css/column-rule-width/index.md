@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/column-rule-width
 ---
+
 {{CSSRef}}
 
 La propriété **`column-rule-width`** permet de définir la largeur du trait tracé entre les colonnes lorsqu'on utilise une disposition en colonnes.

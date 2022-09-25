@@ -2,6 +2,7 @@
 title: 'CSP: worker-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/worker-src
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`worker-src`** directive specifies valid sources for {{domxref("Worker")}}, {{domxref("SharedWorker")}}, or {{domxref("ServiceWorker")}} scripts.

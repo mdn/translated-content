@@ -2,6 +2,7 @@
 title: オプショナルチェーン (?.)
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
 ---
+
 {{JSSidebar("Operators")}}
 
 **オプショナルチェーン** (optional chaining) 演算子 (**`?.`**) は、接続されたオブジェクトチェーンの深くに位置するプロパティの値を、チェーン内の各参照が正しいかどうかを明示的に確認せずに読み込むことを可能にします。

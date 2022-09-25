@@ -9,6 +9,7 @@ tags:
   - referrer
 translation_of: Web/HTTP/Headers/Referer
 ---
+
 {{HTTPSidebar}}
 
 L'en-tête de requête **`Referer`** contient l'adresse de la page web précédente à partir de laquelle un lien a été suivi pour demander la page courante. L'en-tête `Referer` permet aux serveurs d'identifier la provenance des visiteurs d'une page et cette information peut être utilisée à des fins d'analyse, de journalisation ou pour améliorer la politique de cache par exemple.

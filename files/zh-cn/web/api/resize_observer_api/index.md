@@ -2,6 +2,7 @@
 title: Resize Observer API
 slug: Web/API/Resize_Observer_API
 ---
+
 {{DefaultAPISidebar("Resize Observer API")}}
 
 Resize Observer API 提供了一种高性能的机制，通过该机制，代码可以监视元素的大小更改，并且每次大小更改时都会向观察者传递通知。

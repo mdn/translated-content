@@ -14,6 +14,7 @@ tags:
   - diffusion
 translation_of: Web/API/WebRTC_API
 ---
+
 {{APIRef("WebRTC")}}
 
 **WebRTC** (Web Real-Time Communications) est une technologie qui permet aux applications et sites web de capturer et éventuellement de diffuser des médias audio et/ou vidéo, ainsi que d'échanger des données arbitraires entre les navigateurs sans passer par un intermédiaire.

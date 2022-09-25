@@ -2,6 +2,7 @@
 title: background-size
 slug: Web/CSS/background-size
 ---
+
 {{CSSRef}}
 
 `background-size` 设置背景图片大小。图片可以保有其原有的尺寸，或者拉伸到新的尺寸，或者在保持其原有比例的同时缩放到元素的可用空间的尺寸。
@@ -201,7 +202,7 @@ background-size: 50% 25%, contain, 3em;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.background-size")}}
+{{Compat}}
 
 ## Polyfills and Workarounds
 

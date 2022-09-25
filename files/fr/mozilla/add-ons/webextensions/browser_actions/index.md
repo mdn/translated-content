@@ -5,6 +5,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Browser_actions
 ---
+
 {{AddonSidebar}}
 
 Une action du navigateur est un bouton que vous pouvez ajouter à la barre d'outils du navigateur. Les utilisateurs peuvent cliquer sur le bouton pour interagir avec votre extension.

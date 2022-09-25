@@ -2,6 +2,7 @@
 title: MediaQueryList.addListener()
 slug: Web/API/MediaQueryList/addListener
 ---
+
 {{APIRef("CSSOM")}}
 
 {{DOMxRef("MediaQueryList")}}接口的 **`addListener()`** 方法向`MediaQueryListener`添加一个侦听器，该侦听器将运行自定义回调函数以响应媒体查询状态的更改。
@@ -49,7 +50,7 @@ mql.addListener(screenTest);
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaQueryList.addListener")}}
+{{Compat}}
 
 ## 参见
 

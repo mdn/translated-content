@@ -2,6 +2,7 @@
 title: DataView.prototype.setBigUint64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setBigUint64
 ---
+
 {{JSRef}}
 
 **`setBigUint64()` **方法在距 DataView 的起始位置的指定字节偏移处存储一个无符号的 64 位整数（unsigned long long 类型）值。

@@ -2,6 +2,7 @@
 title: FormData.get()
 slug: Web/API/FormData/get
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 {{domxref("FormData")}}的`get()方法用于返回FormData对象中和指定的键关联的第一个值，如果你想要返回和指定键关联的全部值，那么可以使用`{{domxref("FormData.getAll()","getAll()")}}方法。
@@ -50,7 +51,7 @@ formData.get('username'); // Returns "Chris"
 
 ## 浏览器兼容性
 
-{{Compat("api.FormData.get")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/font-family
 ---
+
 {{CSSRef}}
 
 La propriété **`font-family`** permet de définir une liste, ordonnée par priorité, de polices à utiliser pour mettre en forme le texte de l'élément ciblé.

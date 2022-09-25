@@ -2,6 +2,7 @@
 title: 入門編
 slug: Web/JavaScript/Guide/Introduction
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
 
 本章では JavaScript について紹介し、その基本的な概念について説明します。

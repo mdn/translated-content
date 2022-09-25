@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/font-variant-east-asian
 ---
+
 {{CSSRef}}
 
 La propriété **`font-variant-east-asian`** contrôle l'utilisation des glyphes alternatifs pour les scripts japonais, chinois et d'Asie orientale.

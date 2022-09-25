@@ -10,6 +10,7 @@ tags:
 translation_of: Web/API/WebGLRenderingContext/enable
 original_slug: Web/API/WebGLRenderingContext/activer
 ---
+
 {{APIRef("WebGL")}}
 
 La méthode `WebGLRenderingContext.enable()` de l'API WebGL active des fonctionnalités WebGL particulières pour ce contexte.

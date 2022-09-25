@@ -12,6 +12,7 @@ tags:
   - instructions
 translation_of: Web/API/Document/createProcessingInstruction
 ---
+
 {{APIRef("DOM")}}
 
 `createProcessingInstruction()` crée un nouveau noeud d'instruction de traitement et le renvoie.

@@ -2,6 +2,7 @@
 title: Headers()
 slug: Web/API/Headers/Headers
 ---
+
 {{APIRef("Fetch")}}
 
 **`Headers()`** コンストラクターは新しい {{domxref("Headers")}} オブジェクトを生成します。

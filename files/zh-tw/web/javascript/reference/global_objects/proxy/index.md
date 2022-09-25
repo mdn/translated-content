@@ -2,6 +2,7 @@
 title: Proxy
 slug: Web/JavaScript/Reference/Global_Objects/Proxy
 ---
+
 {{JSRef}}
 
 **Proxy** 物件被使用於定義基本操作的自定行為（例如：尋找屬性、賦值、列舉、函式調用等等）。
@@ -357,7 +358,7 @@ console.log(docCookies.my_cookie1);
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Proxy", 2)}}
+{{Compat}}
 
 ## Gecko specific notes
 

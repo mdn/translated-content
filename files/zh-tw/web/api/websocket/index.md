@@ -3,6 +3,7 @@ title: WebSocket
 slug: Web/API/WebSocket
 original_slug: WebSockets/WebSockets_reference/WebSocket
 ---
+
 {{ SeeCompatTable() }}
 
 `WebSocket` 物件提供了建立、管理 [WebSocket](/zh_tw/WebSockets) 伺服器連線的 API，它也有在連線中傳送、接收資料的能力。
@@ -109,4 +110,4 @@ void send(
 
 ## 瀏覽器兼容
 
-{{Compat("api.WebSocket")}}
+{{Compat}}

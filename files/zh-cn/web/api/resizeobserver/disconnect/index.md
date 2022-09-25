@@ -2,6 +2,7 @@
 title: ResizeObserver.disconnect()
 slug: Web/API/ResizeObserver/disconnect
 ---
+
 {{APIRef("Resize Observer API")}}{{SeeCompatTable}}
 
 The **`disconnect()`** method of the {{domxref("ResizeObserver")}} interface unobserves all observed {{domxref('Element')}} or {{domxref('SVGElement')}} targets.

@@ -1,9 +1,6 @@
 ---
 title: 배열
 slug: Glossary/array
-tags:
-  - 배열
-translation_of: Glossary/array
 original_slug: Glossary/배열
 ---
 배열은 데이터의 순서가 있는 집합 ( 언어어 따라 {{Glossary("primitive")}} 또는 {{Glossary("object")}}) 이다. 배열은 하나의 변수의 여러개의 값들을 저장하는데 사용된다. 이것은 단 하나의 값을 저장하는 변수와 비교된다.

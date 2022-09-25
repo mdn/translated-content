@@ -2,6 +2,7 @@
 title: Firefox 8 技術文件
 slug: Mozilla/Firefox/Releases/8
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 8 was released on November 8, 2011. This article provides information both for [web developers](/zh-TW/Firefox_8_for_developers#Changes_for_web_developers) and for add-on and [Mozilla project developers](/zh-TW/Firefox_8_for_developers#Changes_for_Mozilla_and_add-on_developers) to help take full advantage of the features of this release.

@@ -13,6 +13,7 @@ tags:
   - getVisits
 translation_of: Mozilla/Add-ons/WebExtensions/API/history/getVisits
 ---
+
 {{AddonSidebar()}}
 
 Récupère des informations sur toutes les visites de l'URL donnée.

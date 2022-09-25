@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/stroke-linejoin
 ---
+
 {{SVGRef}}
 
 L'attribut **`stroke-linejoin`** définit la manière de dessiner la liaison entre deux segments de ligne.

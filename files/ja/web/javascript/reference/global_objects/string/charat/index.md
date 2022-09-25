@@ -2,6 +2,7 @@
 title: String.prototype.charAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charAt
 ---
+
 {{JSRef}}
 
 {{jsxref("String")}} オブジェクトの **`charAt()`** メソッドは、文字列の中の指定された位置にある単一の UTF-16 コードユニットからなる新しい文字列を返します。

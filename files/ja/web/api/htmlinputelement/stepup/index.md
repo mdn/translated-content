@@ -2,6 +2,7 @@
 title: HTMLInputElement.stepUp()
 slug: Web/API/HTMLInputElement/stepUp
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLInputElement.stepUp()`** メソッドは、数値型の {{HTMLElement("input")}} 要素の値を

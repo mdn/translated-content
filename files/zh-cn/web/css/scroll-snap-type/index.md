@@ -2,6 +2,7 @@
 title: scroll-snap-type
 slug: Web/CSS/scroll-snap-type
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## 摘要
@@ -225,4 +226,4 @@ html, body, .holster {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.scroll-snap-type")}}
+{{Compat}}

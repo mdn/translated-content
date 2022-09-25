@@ -9,6 +9,7 @@ tags:
 translation_of: Web/API/Fullscreen_API
 original_slug: Web/Guide/DOM/Using_full_screen_mode
 ---
+
 {{DefaultAPISidebar("Fullscreen API")}}
 
 L'**API Fullscreen** _(plein écran)_ fournit un moyen simple de présenter du contenu web en utilisant l'ensemble de l'écran de l'utilisateur. L'API vous permet de diriger facilement le navigateur pour faire en sorte qu'un élément et ses enfants, le cas échéant, occupent entièrement l'écran, éliminant toute l'interface utilisateur du navigateur et les autres applications de l'écran pendant ce temps.

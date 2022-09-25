@@ -3,6 +3,7 @@ title: repeat()
 slug: Web/CSS/repeat
 original_slug: Web/CSS/repeat()
 ---
+
 {{cssref}}
 
 [CSS](/zh-CN/docs/Web/CSS) **`repeat()`** 函数表示轨道列表的重复片段，允许以更紧凑的形式写入大量显示重复模式的列或行。
@@ -120,4 +121,4 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 
 ## Browser compatibility
 
-{{Compat("css.properties.grid-template-columns.repeat")}}
+{{Compat}}

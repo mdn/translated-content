@@ -2,6 +2,7 @@
 title: RTCPeerConnection.addTrack()
 slug: Web/API/RTCPeerConnection/addTrack
 ---
+
 {{APIRef("WebRTC")}}
 
 {{domxref("RTCPeerConnection")}} 对象的 **`addTrack()`** 方法将一个新的媒体音轨添加到一组音轨中，这些音轨将被传输给另一个对等点。

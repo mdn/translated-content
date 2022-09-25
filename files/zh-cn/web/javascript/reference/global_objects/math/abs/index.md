@@ -2,6 +2,7 @@
 title: Math.abs()
 slug: Web/JavaScript/Reference/Global_Objects/Math/abs
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 **`Math.abs(x)`** 函数返回指定数字 “x“ 的绝对值。如下：

@@ -2,6 +2,7 @@
 title: CSSMathSum
 slug: Web/API/CSSMathSum
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 {{domxref('CSS Typed Object Model API','','',' ')}} 的 **`CSSMathSum`** 接口通过调用{{domxref('CSSNumericValue')}} 的 {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, 或 {{domxref('CSSNumericValue.toSum','toSum()')}} 方法获得结果。
@@ -30,4 +31,4 @@ None.
 
 ## 浏览器兼容性
 
-{{Compat("api.CSSMathSum")}}
+{{Compat}}

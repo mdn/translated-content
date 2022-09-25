@@ -2,6 +2,7 @@
 title: 滚轮事件
 slug: Web/API/Element/wheel_event
 ---
+
 当滚动鼠标滚轮或操作其它类似输入设备时会触发**滚轮事件**。滚轮事件替换了已被弃用的非标准{{domxref("mousewheel")}}事件。
 
 > **备注：** 请勿想当然依据滚轮方向（即该事件的各 delta 属性值）来推断文档内容的滚动方向，因标准未定义滚轮事件具体会引发什么样的行为，引发的行为实际上是各浏览器自行定义的。即便滚轮事件引发了文档内容的滚动行为，也不表示滚轮方向和文档内容的滚动方向一定相同。因而通过该滚轮事件获知文档内容滚动方向的方法并不可靠。要获取文档内容的滚动方向，可在文档内容滚动事件（{{event("scroll")}}）中监视{{domxref("Element.scrollLeft", "scrollLeft")}}和{{domxref("Element.scrollTop", "scrollTop")}}二值变化情况，即可推断出滚动方向了。
@@ -67,7 +68,7 @@ _滚轮事件实现了以下事件的方法： {{domxref("WheelEvent")}}, {{domx
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.wheel_event")}}
+{{Compat}}
 
 ### 跨浏览器监听滚动事件
 

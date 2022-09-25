@@ -2,6 +2,7 @@
 title: JavaScript中的基本數學 - 數字和運算符
 slug: Learn/JavaScript/First_steps/Math
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
 
 在本課程的這一點上，我們將討論 JavaScript 中的數學 - 我們如何使用{{Glossary("Operator","operators")}} 和其他功能來成功操縱數字來進行我們的出價。

@@ -4,6 +4,7 @@ slug: Web/HTML/Element/meta/name
 translation_of: Web/HTML/Element/meta/name
 browser-compat: html.elements.meta.name
 ---
+
 {{HTMLRef}}
 
 L'élément [`<meta>`](/fr/docs/Web/HTML/Element/meta) permet de fournir des métadonnées sous forme de paires clé/valeur où l'attribut [`name`](/fr/docs/Web/HTML/Element/meta#attr-name) représente le nom et où l'attribut [`content`](/fr/docs/Web/HTML/Element/meta#attr-content) fournit la valeur.

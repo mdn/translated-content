@@ -2,6 +2,7 @@
 title: プロパティアクセサー
 slug: Web/JavaScript/Reference/Operators/Property_Accessors
 ---
+
 {{jsSidebar("Operators")}}
 
 **プロパティアクセサー**はオブジェクトのプロパティへのアクセスを提供するもので、ドット表記法またはブラケット表記法を使用します。

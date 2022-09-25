@@ -2,6 +2,7 @@
 title: 陳述式與宣告
 slug: Web/JavaScript/Reference/Statements
 ---
+
 {{jsSidebar("Statements")}}
 
 JavaScript 應用程式由適當的陳述式組成。一個單一的陳述式可以跨用好幾行。 多個陳述式也可以藉由分號分隔來寫在同一行。 這不是一個關鍵字，而是一群關鍵字。
@@ -81,7 +82,7 @@ For an alphabetical listing see the sidebar on the left.
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.statements")}}
+{{Compat}}
 
 ## 參見
 

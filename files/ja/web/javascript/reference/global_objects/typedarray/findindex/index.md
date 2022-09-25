@@ -2,6 +2,7 @@
 title: TypedArray.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex
 ---
+
 {{JSRef}}
 
 **`findIndex()`** メソッドは、型付き配列内の要素が与えられたテスト関数を満たす場合、型付き配列内の**位置**を返します。さもなければ、 -1 が返されます。

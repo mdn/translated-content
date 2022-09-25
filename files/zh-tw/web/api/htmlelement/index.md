@@ -2,6 +2,7 @@
 title: HTMLElement
 slug: Web/API/HTMLElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement`** 介面表示了所有的 [HTML](/docs/Web/HTML) 元素。部分元素直接實作了此介面，其它則是實作繼承自 `HTMLElement` 的子介面。
@@ -111,7 +112,7 @@ _Inherits methods from its parent, {{domxref("Element")}}._
 
 ## 瀏覽器相容性
 
-{{Compat("api.HTMLElement")}}
+{{Compat}}
 
 ## 參見
 

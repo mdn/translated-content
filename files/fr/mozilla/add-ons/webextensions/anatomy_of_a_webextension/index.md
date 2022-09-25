@@ -5,6 +5,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 ---
+
 {{AddonSidebar}}
 
 Une extension se compose de plusieurs fichiers, packagés pour la distribution et l'installation. Dans cet article, nous allons rapidement passer par les fichiers qui pourraient être présents dans une extension.

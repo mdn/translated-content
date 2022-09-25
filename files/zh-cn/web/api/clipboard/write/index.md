@@ -2,6 +2,7 @@
 title: Clipboard.write()
 slug: Web/API/Clipboard/write
 ---
+
 {{APIRef("Clipboard API")}}
 
 {{domxref("Clipboard")}} 的方法 **`write()`** 写入图片等任意的数据到剪贴板。 这个方法可以用于实现剪切和复制的功能。
@@ -50,4 +51,4 @@ function setClipboard(text) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Clipboard.write")}}
+{{Compat}}

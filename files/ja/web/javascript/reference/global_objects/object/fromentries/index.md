@@ -2,6 +2,7 @@
 title: Object.fromEntries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 ---
+
 {{JSRef}}
 
 **`Object.fromEntries()`** メソッドは、キーと値の組み合わせのリストをオブジェクトに変換します。

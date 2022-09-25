@@ -2,6 +2,7 @@
 title: title
 slug: Web/HTML/Global_attributes/title
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **title** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 包含了表示咨询信息文本，和它属于的元素相关。这个信息通常存在，但绝不必要，作为提示信息展示给用户。一些典型用例：

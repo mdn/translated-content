@@ -2,6 +2,7 @@
 title: 建立自己的功能函數
 slug: Learn/JavaScript/Building_blocks/Build_your_own_function
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
 
 通過前一篇文章中討論的大部分基本理論，本文提供了實踐經驗。 在這裡，您將學習構建自己的自定義功能函數。 在此過程中，我們還將解釋處理函數的一些有用細節。

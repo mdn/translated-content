@@ -2,6 +2,7 @@
 title: Array.of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
 ---
+
 {{JSRef}}
 
 **`Array.of()`** 方法會由引數（arguments）的數量來建立一個新的 `Array` 實體，而不管引數的數量或類型為何。
@@ -61,7 +62,7 @@ if (!Array.of) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.of")}}
+{{Compat}}
 
 ## 參見
 

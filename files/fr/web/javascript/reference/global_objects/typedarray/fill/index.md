@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/fill
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/fill
 ---
+
 {{JSRef}}
 
 La méthode **`fill()`** remplit les éléments d'un tableau typé contenu entre un indice de début et un indice de fin avec une valeur statique. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.fill()")}}. Dans le reste de cet article, _TypedArray_ correspond à l'un des [types de tableaux typés](/fr/docs/Web/JavaScript/Tableaux_typés#Les_objets_TypedArray).

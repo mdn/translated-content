@@ -2,6 +2,7 @@
 title: RTCPeerConnection
 slug: Web/API/RTCPeerConnection
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 **`RTCPeerConnection`** 接口代表一个由本地计算机到远端的 WebRTC 连接。该接口提供了创建，保持，监控，关闭连接的方法的实现。

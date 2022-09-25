@@ -6,7 +6,7 @@ slug: Web/API/Document/write
 
 **`Document.write()`** メソッドは、テキストの文字列を {{domxref("document.open()")}} で開かれた文書ストリームに書き込みます。
 
-> **Note:** 注: `document.write()` は文書の**ストリーム**に書き込みを行うため、閉じられた (読み込み済みの) 文書で `document.write()` を呼び出すと、自動的に `document.open()` が呼び出され、[文書はクリアされます](/ja/docs/Web/API/document.open#Notes)。
+> **Note:** `document.write()` は文書の**ストリーム**に書き込みを行うため、閉じられた (読み込み済みの) 文書で `document.write()` を呼び出すと、自動的に `document.open()` が呼び出され、[文書はクリアされます](/ja/docs/Web/API/document.open#Notes)。
 
 ## 構文
 

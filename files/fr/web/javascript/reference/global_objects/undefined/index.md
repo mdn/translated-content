@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/undefined
 original_slug: Web/JavaScript/Reference/Objets_globaux/undefined
 browser-compat: javascript.builtins.undefined
 ---
+
 {{jsSidebar("Objects")}}
 
 La propriété globale **`undefined`** représente la valeur primitive [`undefined`](/fr/docs/Glossary/undefined). Cette valeur est l'[un des types primitifs](/fr/docs/Web/JavaScript/Data_structures#le_type_indéfini) de JavaScript.

@@ -2,6 +2,7 @@
 title: Selection.modify()
 slug: Web/API/Selection/modify
 ---
+
 {{ ApiRef("DOM") }}{{non-standard_header}}
 
 **`Selection.modify()`** 方法可以通过简单的文本命令来改变当前选区或光标位置。
@@ -40,7 +41,7 @@ _无_
 
 ## 浏览器兼容性
 
-{{Compat("api.Selection.modify")}}
+{{Compat}}
 
 ## 相关链接
 

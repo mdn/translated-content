@@ -2,6 +2,7 @@
 title: JavaScript について
 slug: Web/JavaScript/About_JavaScript
 ---
+
 {{JsSidebar}}
 
 ## JavaScript とは何か?

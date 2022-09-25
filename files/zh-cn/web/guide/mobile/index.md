@@ -2,6 +2,7 @@
 title: 手机网页开发
 slug: Web/Guide/Mobile
 ---
+
 本文主要是给出了网站开发所需的主要技术，这同样适用于手机设备。如果你正在寻找 Mozilla 火狐系统相关的项目，请参考[Firefox OS](/zh-CN/Mozilla/Firefox_OS) 。或者你可能会对[Firefox for Android](/zh-CN/Mozilla/Firefox_for_Android)感兴趣。
 
 我们准备用两个章节来组织本文的内容，[designing for mobile devices](#Designing_for_mobile_devices) 和[cross-browser compatibility](#Cross-browser_development)。另外，这还有一篇 Jason Grlick 为 web 开发者写的指南 [mobile-friendliness](/zh-CN/docs/Web_Development/Mobile/Mobile-friendliness)。
@@ -33,7 +34,7 @@ slug: Web/Guide/Mobile
 
 ### 移动 APIs
 
-最后，你可以利用移动设备提供的新可能性， 例如 [orientation](/zh-CN/Detecting_device_orientation) 和 [geolocation](/En/Using_geolocation)。
+最后，你可以利用移动设备提供的新可能性，例如 [orientation](/zh-CN/Detecting_device_orientation) 和 [geolocation](/En/Using_geolocation)。
 
 ## 跨浏览器开发
 
@@ -49,7 +50,7 @@ slug: Web/Guide/Mobile
 
 请查看 [list of Gecko-specific properties](/zh-CN/CSS/CSS_Reference/Mozilla_Extensions) 以及 [WebKit-specific properties](/zh-CN/CSS/CSS_Reference/Webkit_Extensions) 这两个针对 Gecko 和 Webkit 浏览器的特殊前缀列表，以及这个由 Peter Beverloo 整理的 [table of vendor-specific properties](http://peter.sh/experiments/vendor-prefixed-css-property-overview/).
 
-使用诸如 [CSS Lint](http://csslint.net/) 这样的工具可以帮助你查找这些问题， 诸如 [SASS](http://sass-lang.com/) 和 [LESS](http://lesscss.org/) 之类的预处理器可以帮助你处理这样的跨浏览器样式。
+使用诸如 [CSS Lint](http://csslint.net/) 这样的工具可以帮助你查找这些问题，诸如 [SASS](http://sass-lang.com/) 和 [LESS](http://lesscss.org/) 之类的预处理器可以帮助你处理这样的跨浏览器样式。
 
 ### 注意用户代理嗅探
 
