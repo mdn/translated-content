@@ -5,7 +5,7 @@ translation_of: Web/API/Worker
 ---
 {{APIRef("Web Workers API")}}
 
-A interface **Worker** da [API do Web Worker](/pt-BR/docs/Web/API/Web_Workers_API) representa uma tarefa em background (segundo plano)\_ \_que pode ser facilmente criada e emitir mensagens de volta ao seu criador. Criar um worker é possível chamando o construtor `Worker("path/to/worker/script")` e especificando um script para ser executado em sua própria thread.
+A interface **Worker** da [API do Web Worker](/pt-BR/docs/Web/API/Web_Workers_API) representa uma tarefa em background (segundo plano) que pode ser facilmente criada e emitir mensagens de volta ao seu criador. Criar um worker é possível chamando o construtor `Worker("path/to/worker/script")` e especificando um script para ser executado em sua própria thread.
 
 Um worker pode, por sua vez, gerar outros workers, contanto que estes estejam hospedados na mesma [origem](/pt-BR/docs/Web/Security/Same-origin_policy) da página principal (Nota: workers aninhados [não estão atualmente implementados no Blink](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/5R3B4RN4GHU)). Além disso, workers podem utilizar [XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest) para E/S de rede, desde que seja estipulado que os atributos `responseXML` e `channel` em `XMLHttpRequest` retornem sempre `null`.
 
@@ -36,7 +36,7 @@ _Os métodos são herdados de seu pai. {{domxref("EventTarget")}}, e implementa 
 - {{domxref("Worker.postMessage()")}}
   - : Envia uma mensagem — qual pode consistir de qualquer objeto do JavaScript — para o escopo interno do worker.
 - {{domxref("Worker.terminate()")}}
-  - : Imediatamente encerra o worker. Isso não oferece ao worker a oportunidade de concluir suas operações; imediatamente o interrompe. `ServiceWorker `não suportam esse método.
+  - : Imediatamente encerra o worker. Isso não oferece ao worker a oportunidade de concluir suas operações; imediatamente o interrompe. `ServiceWorker` não suportam esse método.
 
 ## Eventos
 
@@ -84,7 +84,7 @@ Support varies for different types of workers. See each worker type's page for s
 
 ## See also
 
-- [Using web workers](/En/Using_web_workers "en/Using DOM workers")
-- [Functions available to workers](/En/DOM/Worker/Functions_available_to_workers "https://developer.mozilla.org/En/DOM/Worker/Functions_available_to_workers")
+- [Using web workers](/En/Using_web_workers)
+- [Functions available to workers](/En/DOM/Worker/Functions_available_to_workers)
 - Other kind of workers: {{ domxref("SharedWorker") }} and [ServiceWorker](/pt-BR/docs/Web/API/ServiceWorker_API).
 - Non-standard, Gecko-specific workers: {{ domxref("ChromeWorker") }}, used by extensions.

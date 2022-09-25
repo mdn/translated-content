@@ -508,7 +508,7 @@ div {
 </div>
 ```
 
-The full path of the URL will be displayed over the mouse, and the screen will be printed as follows: https\://developer.mozilla.org/pt-BR/...
+The full path of the URL will be displayed over the mouse, and the screen will be printed as follows: `https://developer.mozilla.org/pt-BR/`...
 
 ## Specifications
 
