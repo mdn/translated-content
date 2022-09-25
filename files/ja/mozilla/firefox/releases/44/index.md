@@ -1,6 +1,8 @@
 ---
 title: Firefox 44 for developers
 slug: Mozilla/Firefox/Releases/44
+l10n:
+  sourceCommit: 1ee49b729dc4cd02b862d910f279861f4b30e704
 ---
 
 {{FirefoxSidebar}}
@@ -15,7 +17,7 @@ slug: Mozilla/Firefox/Releases/44
 
 - [メモリーツール](https://firefox-source-docs.mozilla.org/devtools-user/memory/index.html)
 - [アニメーションインスペクターの改良](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html)
-- [新しいウォーターフォールマーカー: DomContentLoaded、load、ワーカーメッセージ](https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html#markers)
+- [新しいウォーターフォールマーカー: DomContentLoaded、load、ワーカーメッセージ](https://web.archive.org/web/20211207010020/https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html#markers)
 
 [Firefox 43 と Firefox 44 の間で修正された開発ツールのすべてのバグ。](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2015-11-03&query_format=advanced&chfield=resolution&chfieldfrom=2015-09-19&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&list_id=12582678)
 
@@ -90,7 +92,7 @@ slug: Mozilla/Firefox/Releases/44
 #### 廃止
 
 - 非標準の [`let` ブロック](/ja/docs/Web/JavaScript/Reference/Statements/let#let_blocks)を廃止しました ({{bug(1167029)}})。
-- 非標準かつ非推奨である {{jsxref("Object.noSuchMethod", "Object.prototype.__noSuchMethod__")}} プロパティを削除しました ({{bug(683218)}})。
+- 非標準かつ非推奨である `Object.prototype.__noSuchMethod__` プロパティを削除しました ({{bug(683218)}})。
 
 ### インターフェイス/API/DOM
 
@@ -209,7 +211,7 @@ _変更なし。_
 
 ### XPCOM
 
-- `nsIDOMWindow` インターフェイスが空になりました。存在していたアイテムは使用されない、他のインターフェイスに移転、あるいは C++ に限り使用するものになりました。C++ コードから利用できるアイテムは、`{{source("dom/base/nsPIDOMWindow.h", "nsPIDOMWindow")}}` インターフェイスに存在しています ({{bug(1216401)}})。
+- `nsIDOMWindow` インターフェイスが空になりました。存在していたアイテムは使用されない、他のインターフェイスに移転、あるいは C++ に限り使用するものになりました。C++ コードから利用できるアイテムは、[nsPIDOMWindow](https://dxr.mozilla.org/mozilla-central/source/dom/base/nsPIDOMWindow.h) インターフェイスに存在しています ({{bug(1216401)}})。
 
 ### その他
 
