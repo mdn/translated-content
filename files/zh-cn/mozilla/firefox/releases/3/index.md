@@ -20,11 +20,11 @@ slug: Mozilla/Firefox/Releases/3
 - [交错格式样表](/zh-CN/%E4%BA%A4%E9%94%99%E6%A0%BC%E5%BC%8F%E6%A0%B7%E8%A1%A8)
   - : Firefox 3 支持 CSS 层叠式样式表 API.
 - [基于 web 的协议处理](/zh-CN/DOM/window.navigator.registerProtocolHandler)
-  - : 你现在可以使用`navigator.registerProtocolHandler() 方法`注册 web 应用
+  - : 你现在可以使用 `navigator.registerProtocolHandler()` 方法注册 web 应用
 - [在画布（canvas）中“绘”出文字](/zh-CN/%E5%9C%A8%E7%94%BB%E7%94%BB%E5%B8%83%EF%BC%88canvas%EF%BC%89%E4%B8%AD%E2%80%9C%E7%BB%98%E2%80%9D%E5%87%BA%E6%96%87%E5%AD%97)
   - : 您可以使用 Firefox 3 支持的非标准 API 在 canvas 上绘制文字。
 - [支持画布变换](/zh-CN/Canvas_tutorial/Transformations#Transforms)
-  - : Firefox 现在的 canvas 支持`transform()`和`setTransform() 方法。`
+  - : Firefox 现在的 canvas 支持 `transform()` 和 `setTransform()` 方法。
 - [使用微格式](/zh-CN/%E4%BD%BF%E7%94%A8%E5%BE%AE%E6%A0%BC%E5%BC%8F)
   - : Firefox 现在有一组微格式的 API。
 - [拖放事件](/zh-CN/%E6%8B%96%E6%94%BE%E4%BA%8B%E4%BB%B6)

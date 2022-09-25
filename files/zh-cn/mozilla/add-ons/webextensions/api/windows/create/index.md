@@ -44,7 +44,7 @@ var creating = browser.windows.create(
     - `focused`{{optional_inline}}
       - : `boolean`.如果 为`true`, 新窗口将获取焦点。否则新窗口当在后台打开并且当前焦点窗口继续保持焦点。默认为 true
     - `incognito`{{optional_inline}}
-      - : `boolean`. 是否打开为一个隐私窗口。`如果设定为隐私窗口并且引入了 tabId`, 则 tabId 对应的标签必须是一个隐私标签— 即不能把一个不是隐私标签的标签页移动到隐私窗口中。
+      - : `boolean`。是否打开为一个隐私窗口。如果设定为隐私窗口并且引入了 `tabId`, 则 tabId 对应的标签必须是一个隐私标签— 即不能把一个不是隐私标签的标签页移动到隐私窗口中。
     - `type`{{optional_inline}}
       - : 一{{WebExtAPIRef('windows.CreateType')}} 值，表示创建窗口的类型。`panel` 或者`popup` 样式将打开一个没有默认浏览器样式的窗口 (地址栏，工具栏等）。
     - `state`{{optional_inline}}
