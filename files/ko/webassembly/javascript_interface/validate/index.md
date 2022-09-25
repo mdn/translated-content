@@ -1,7 +1,8 @@
 ---
 title: WebAssembly.validate()
-slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/validate
+slug: WebAssembly/JavaScript_interface/validate
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/validate
+original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/validate
 ---
 {{JSRef}}
 

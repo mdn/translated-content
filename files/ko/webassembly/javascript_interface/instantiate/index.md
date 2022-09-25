@@ -1,7 +1,8 @@
 ---
 title: WebAssembly.instantiate()
-slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
+slug: WebAssembly/JavaScript_interface/instantiate
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
+original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
 ---
 {{JSRef}}
 
