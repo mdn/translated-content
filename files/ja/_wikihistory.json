@@ -31498,10 +31498,6 @@
       "Norah"
     ]
   },
-  "orphaned/Web/API/Document/tooltipNode": {
-    "modified": "2020-10-15T21:21:36.814Z",
-    "contributors": ["mfuji09", "fscholz", "AshfaqHossain", "ethertank"]
-  },
   "orphaned/Web/API/Document_Object_Model/Events": {
     "modified": "2020-09-27T12:30:54.835Z",
     "contributors": ["mfuji09", "dskmori", "keeponbeat", "mikamikuh"]
