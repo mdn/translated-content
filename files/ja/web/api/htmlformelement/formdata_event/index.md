@@ -11,7 +11,7 @@ l10n:
 
 このイベントはキャンセル不可で、バブリングしません。
 
-## コウブン
+## 構文
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを使用するかしてください。
 
