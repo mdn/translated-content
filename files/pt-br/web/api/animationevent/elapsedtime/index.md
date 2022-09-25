@@ -15,7 +15,7 @@ translation_of: Web/API/AnimationEvent/elapsedTime
 
 ## Sumário
 
-O **`AnimationEvent.elapsedTime`** é uma propriedade só de leitura com um ponto flutuante dando a quantidade de tempo que animação esteve rodando, em segundos, quando o evento termina, excluirá o tempo em que ela esteve em pausa. Para um evento `"animationstart" `, `elapsedTime` é `0.0` a não ser que tenha um valor negativo para {{cssxref("animation-delay")}}, nesse caso o evento irá terminar com `elapsedTime` contendo `(-1 * `_delay_`)`.
+O **`AnimationEvent.elapsedTime`** é uma propriedade só de leitura com um ponto flutuante dando a quantidade de tempo que animação esteve rodando, em segundos, quando o evento termina, excluirá o tempo em que ela esteve em pausa. Para um evento `"animationstart"`, `elapsedTime` é `0.0` a não ser que tenha um valor negativo para {{cssxref("animation-delay")}}, nesse caso o evento irá terminar com `elapsedTime` contendo `(-1 * delay)`.
 
 ## Síntaxe
 
@@ -32,8 +32,6 @@ time = AnimationEvent.elapsedTime
 ## Compatibilidade com navegadores
 
 {{Compat("api.AnimationEvent.elapsedTime")}}
-
-##
 
 ## Veja também
 

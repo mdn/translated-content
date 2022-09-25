@@ -18,7 +18,7 @@ Because event handling and screen updates are two of the most obvious ways users
 Because idle callbacks are intended to give your code a way to cooperate with the event loop to ensure that the system is utilized to its full potential without over-tasking it, resulting in lag or other performance problems, you should be thoughtful about how you go about using them.
 
 - **Use idle callbacks for tasks which don't have high priority.** Because you don't know how many callbacks have been established, and you don't know how busy the user's system is, you don't know how often your callback will be run (unless you specify a `timeout`. There's no guarantee that every pass through the event loop (or even every screen update cycle) will include any idle callbacks being executed; if the event loop uses all available time, you're out of luck (again, unless you've used a `timeout`).
-- **Idle callbacks should do their best not to overrun the time allotted.** While the browser, your code, and the Web in general will continue to run normally if you go over the specified time limit (even if you go\*\* \*\*_way_ over it), the time restriction is intended to ensure that you leave the system enough time to finish the current pass through the event loop and get on to the next one without causing other code to stutter or animation effects to lag. Currently, {{domxref("IdleDeadline.timeRemaining", "timeRemaining()")}} has an upper limit of 50 milliseconds, but in reality you will often have less time than that, since the event loop may already be eating into that time on complex sites, with browser extensions needing processor time, and so forth.
+- **Idle callbacks should do their best not to overrun the time allotted.** While the browser, your code, and the Web in general will continue to run normally if you go over the specified time limit (even if you go _way_ over it), the time restriction is intended to ensure that you leave the system enough time to finish the current pass through the event loop and get on to the next one without causing other code to stutter or animation effects to lag. Currently, {{domxref("IdleDeadline.timeRemaining", "timeRemaining()")}} has an upper limit of 50 milliseconds, but in reality you will often have less time than that, since the event loop may already be eating into that time on complex sites, with browser extensions needing processor time, and so forth.
 - **Avoid making changes to the DOM within your idle callback.** By the time your callback is run, the current frame has already finished drawing, and all layout updates and computations have been completed. If you make changes that affect layout, you may force a situation in which the browser has to stop and do recalculations that would otherwise be unnecessary. If your callback needs to change the DOM, it should use {{domxref("Window.requestAnimationFrame()")}} to schedule that.
 - **Avoid tasks whose run time can't be predicted.** Your idle callback should avoid doing anything that could take an unpredictable amount of time. For example, anything which might affect layout should be avoided. You should also avoid resolving or rejecting {{domxref("Promise")}}s, since that would invoke the handler for that promise's resolution or rejection as soon as your callback returns.
 - **Use timeouts when you need to, but only when you need to.** Using timeouts can ensure that your code runs in a timely manner, but it can also allow you to cause lag or animation stutters by mandating that the browser call you when there's not enough time left for you to run without disrupting performance.
@@ -44,7 +44,7 @@ window.requestIdleCallback = window.requestIdleCallback || function(handler) {
 
 If {{domxref("Window.requestIdleCallback", "window.requestIdleCallback")}} is undefined, we create it here. The function begins by recording the time at which our implementation was called. We'll be using that to compute the value returned by our shim for {{domxref("IdleDeadline.timeRemaining()", "timeRemaining()")}}.
 
-Then we call {{domxref("WindowTimers.setTimeout", "setTimeout()")}}, passing into it a function which runs the callback passed into our implementation of `requestIdleCallback()`. The callback is passed an object which conforms to {{domxref("IdleDeadline")}}, with {{domxref("IdleDeadline.didTimeout", "didTimeout")}} set to `false` and a` `{{domxref("IdleDeadline.timeRemaining", "timeRemaining()")}} method which is implemented to give the callback 50 milliseconds of time to begin with. Each time `timeRemaining()` is called, it subtracts the elapsed time from the original 50 milliseconds to determine the amount of time left.
+Then we call {{domxref("WindowTimers.setTimeout", "setTimeout()")}}, passing into it a function which runs the callback passed into our implementation of `requestIdleCallback()`. The callback is passed an object which conforms to {{domxref("IdleDeadline")}}, with {{domxref("IdleDeadline.didTimeout", "didTimeout")}} set to `false` and a {{domxref("IdleDeadline.timeRemaining", "timeRemaining()")}} method which is implemented to give the callback 50 milliseconds of time to begin with. Each time `timeRemaining()` is called, it subtracts the elapsed time from the original 50 milliseconds to determine the amount of time left.
 
 As a result, while our shim doesn't constrain itself to the amount of idle time left in the current event loop pass like the true `requestIdleCallback()`, it does at least limit the callback to no more than 50 milliseconds of run time per pass.
 
@@ -306,10 +306,10 @@ function runTaskQueue(deadline) {
 
 For each task in the queue that we have time to execute, we do the following:
 
-1.  We [remove the task object from the queue](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/shift).
-2.  We increment `currentTaskNumber` to track how many tasks we've executed.
-3.  We call the task's handler, `task.handler`, passing into it the task's data object (`task.data`).
-4.  We call a function, `scheduleStatusRefresh()`, to handle scheduling a screen update to reflect changes to our progress.
+1. We [remove the task object from the queue](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/shift).
+2. We increment `currentTaskNumber` to track how many tasks we've executed.
+3. We call the task's handler, `task.handler`, passing into it the task's data object (`task.data`).
+4. We call a function, `scheduleStatusRefresh()`, to handle scheduling a screen update to reflect changes to our progress.
 
 When time runs out, if there are still tasks left in the list, we call {{domxref("Window.requestIdleCallback", "requestIdleCallback()")}} again so that we can continue to process the tasks the next time there's idle time available. If the queue is empty, we set taskHandle to 0 to indicate that we don't have a callback scheduled. That way, we'll know to request a callback next time `enqueueTask()` is called.
 
@@ -369,8 +369,8 @@ First, `scrolledToEnd` is set to `true` if the text in the log is scrolled to th
 
 Next, we update the progress and status information if any tasks have been enqueued.
 
-1.  If the current maximum value of the progress bar is different from the current total number of enqueued tasks (`totalTaskCount`), then we update the contents of the displayed total number of tasks (`totalTaskCountElem`) and the maximum value of the progress bar, so that it scales properly.
-2.  We do the same thing with the number of tasks processed so far; if `progressBarElem.value` is different from the task number currently being processed (`currentTaskNumber`), then we update the displayed value of the currently-being-processed task and the current value of the progress bar.
+1. If the current maximum value of the progress bar is different from the current total number of enqueued tasks (`totalTaskCount`), then we update the contents of the displayed total number of tasks (`totalTaskCountElem`) and the maximum value of the progress bar, so that it scales properly.
+2. We do the same thing with the number of tasks processed so far; if `progressBarElem.value` is different from the task number currently being processed (`currentTaskNumber`), then we update the displayed value of the currently-being-processed task and the current value of the progress bar.
 
 Then, if there's text waiting to be added to the log (that is, if `logFragment` isn't `null`), we append it to the log element using {{domxref("Node.appendChild", "Element.appendChild()")}} and set `logFragment` to `null` so we don't add it again.
 
