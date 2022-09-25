@@ -34,7 +34,7 @@ Base64 编码普遍应用于需要通过被设计为处理文本数据的媒介�
 - {{domxref("WindowBase64.btoa","btoa()")}}
   - : 从一个字符串或者二进制数据编码一个 Base64 字符串。
 - ["Unicode 问题"](#The_.22Unicode_Problem.22)
-  - : 在大多数浏览器里里，在一个 Unicode 字符串上调用 btoa() 会造成一个`Character Out Of Range 异常。这一段写了一些解决方案。`
+  - : 在大多数浏览器里里，在一个 Unicode 字符串上调用 btoa() 会造成一个`Character Out Of Range` 异常。这一段写了一些解决方案。
 - [URIScheme](/zh-CN/docs/URIScheme)
   - : Mozilla 支持的 URI schemes 列表。
 - [`StringView`](/zh-CN/docs/Web/JavaScript/Typed_arrays/StringView)
@@ -43,7 +43,7 @@ Base64 编码普遍应用于需要通过被设计为处理文本数据的媒介�
 
     - 为字符串创建一个类 C 接口 (i.e. array of characters codes — [`ArrayBufferView`](/zh-CN/docs/Web/API/ArrayBufferView) in JavaScript) ，基于 JavaScript [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) 接口。
     - 为类字符串对象 (目前为止为：`stringView`s) 创建一系列方法，它们**严格按照数字数组**工作，而不是不可变的字符串。
-    - 可用于其它 Unicode 编码，和默认的 `DOMStrings 不同。`
+    - 可用于其它 Unicode 编码，和默认的 `DOMStrings` 不同。
 
 ## 工具
 
