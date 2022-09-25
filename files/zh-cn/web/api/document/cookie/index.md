@@ -165,7 +165,7 @@ docCookies.setItem(name, value[, end[, path[, domain[, secure]]]])
 - `path` _(可选)_
   - : 例如 '/', '/mydir'。如果没有定义，默认为当前文档位置的路径。([`string`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String) or [`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null))。路径必须为绝对路径（参见 [RFC 2965](http://www.ietf.org/rfc/rfc2965.txt)）。关于如何在这个参数使用相对路径的方法请参见[这段](#Using_relative_URLs_in_the_path_parameter)。
 - `domain` _(可选)_
-  - : 例如 'example.com'， '.example.com' (包括所有子域名), 'subdomain.example.com'。如果没有定义，默认为当前文档位置的路径的域名部分 (`string 或`[`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null))。
+  - : 例如 'example.com'，'.example.com' (包括所有子域名), 'subdomain.example.com'。如果没有定义，默认为当前文档位置的路径的域名部分 (`string` 或 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null))。
 - `secure` _(可选)_
   - : cookie 只会被 https 传输 ([`boolean`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Boolean)或[`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null))。
 
@@ -205,7 +205,7 @@ docCookies.removeItem(name[, path],domain)
 - `path` *(*可选*)*
   - : 例如 '/', '/mydir'。如果没有定义，默认为当前文档位置的路径。([`string`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String) or [`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null))。路径必须为绝对路径（参见 [RFC 2965](http://www.ietf.org/rfc/rfc2965.txt)）。关于如何在这个参数使用相对路径的方法请参见[这段](#Using_relative_URLs_in_the_path_parameter)。
 - `domain` (可选)
-  - : 例如 'example.com'， '.example.com' (包括所有子域名), 'subdomain.example.com'。如果没有定义，默认为当前文档位置的路径的域名部分 (`string 或`[`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null))。
+  - : 例如 'example.com'， '.example.com' (包括所有子域名), 'subdomain.example.com'。如果没有定义，默认为当前文档位置的路径的域名部分 (`string` 或 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null))。
 
 ### 检测 cookie
 

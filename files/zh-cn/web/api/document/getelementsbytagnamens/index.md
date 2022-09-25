@@ -23,7 +23,7 @@ elements = document.getElementsByTagNameNS(namespace, name)
 - `namespace` 是所要查询的元素的命名空间 URL(参考 [`element.namespaceURI`](/zh-CN/DOM/Node.namespaceURI))。
 - `name` 是所要查询的元素的名称。其中特殊字符 "\*" 代表所有元素 (参考 [`element.localName`](/zh-CN/DOM/Node.localName))。
 
-> **备注：** 在 W3C 文档中，`elements`是一个 `NodeList`，而该方法在 Gecko 内核的浏览器和 IE 中返回的是 HTML 集合`HTMLCollection.` Opera 返回的也是一个 `NodeList`，但通过 `namedItem`方法，使得它类似于一个`HTMLCollection` . 截止 2012 年 1 月，只有 WebKit 内核的浏览器返回的值是一个纯 `NodeList`. 详情请参考 [bug 14869](https://bugzilla.mozilla.org/show_bug.cgi?id=14869) .
+> **备注：** 在 W3C 文档中，`elements` 是一个 `NodeList`，而该方法在 Gecko 内核的浏览器和 IE 中返回的是 HTML 集合 `HTMLCollection`。Opera 返回的也是一个 `NodeList`，但通过 `namedItem`方法，使得它类似于一个`HTMLCollection`。截止 2012 年 1 月，只有 WebKit 内核的浏览器返回的值是一个纯 `NodeList`。详情请参考 [bug 14869](https://bugzilla.mozilla.org/show_bug.cgi?id=14869)。
 
 ## 示例
 

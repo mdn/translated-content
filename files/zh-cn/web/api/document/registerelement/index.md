@@ -20,7 +20,7 @@ var constructor = document.registerElement(tag-name, options);
 ### 参数
 
 - _tag-name_
-  - : 自定义标签的名字。必须含有一个连字符（-），例如 `my-tag。`
+  - : 自定义标签的名字。必须含有一个连字符（-），例如 `my-tag`。
 - _options {{optional_inline}}_
   - : 这个参数是一个用于添加描述自定义元素原型属性和扩展的对象，以扩展现有标签。这个参数是可选的。
 

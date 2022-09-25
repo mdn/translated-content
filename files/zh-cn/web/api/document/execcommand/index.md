@@ -69,9 +69,9 @@ bool = document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 - `forwardDelete`
   - : 删除光标所在位置的字符。和按下删除键一样。
 - `heading`
-  - : 添加一个标题标签在光标处或者所选文字上。需要提供标签名称字符串作为参数 (例如。"H1", "H6"). (IE 和 Safari 不支持)
+  - : 添加一个标题标签在光标处或者所选文字上。需要提供标签名称字符串作为参数（例如："H1"、"H6"）（IE 和 Safari 不支持）
 - `hiliteColor`
-  - : 更改选择或插入点的背景颜色。需要一个颜色值字符串作为值参数传递。UseCSS 必须开启此功能。(IE 浏览器不支持)
+  - : 更改选择或插入点的背景颜色。需要一个颜色值字符串作为值参数传递。UseCSS 必须开启此功能。（IE 浏览器不支持）
 - `increaseFontSize`
   - : 在选择或插入点周围添加一个 BIG 标签。(IE 浏览器不支持)
 - `indent`
@@ -125,7 +125,7 @@ bool = document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 - `unlink`
   - : 去除所选的锚链接的\<a>标签
 - `useCSS` {{Deprecated_inline}}
-  - : 切换使用 HTML tags 还是 CSS 来生成标记。要求一个布尔值 true/false 作为参数。注：这个属性是逻辑上的倒退 (例如。use false to use CSS, true to use HTML).(IE 不支持)
+  - : 切换使用 HTML tags 还是 CSS 来生成标记。要求一个布尔值 true/false 作为参数。注：这个属性是逻辑上的倒退（例如：use false to use CSS, true to use HTML）。（IE 不支持）
     该属性已经废弃，使用 styleWithCSS 代替。
 - `styleWithCSS`
   - : 用这个取代 useCSS 命令。参数如预期的那样工作，i.e. true modifies/generates 风格的标记属性，false 生成格式化元素。
