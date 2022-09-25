@@ -8,11 +8,11 @@ slug: Web/HTTP/CORS
 
 オリジン間リクエストとは、例えば `https://domain-a.com` で提供されているウェブアプリケーションのフロントエンド JavaScript コードが {{domxref("XMLHttpRequest")}} を使用して `https://domain-b.com/data.json` へリクエストを行うような場合です。
 
-セキュリティ上の理由から、ブラウザーは、スクリプトによって開始されるオリジン間 HTTP リクエストを制限しています。例えば、 `XMLHttpRequest`や [Fetch API](/en-US/docs/Web/API/Fetch_API) は[同一オリジンポリシー](/en-US/docs/Web/Security/Same-origin_policy) (same-origin policy) に従います。つまり、これらの API を使用するウェブアプリケーションは、そのアプリケーションが読み込まれたのと同じオリジンに対してのみリソースのリクエストを行うことができ、それ以外のオリジンからの場合は正しい CORS ヘッダーを含んでいることが必要です。
+セキュリティ上の理由から、ブラウザーは、スクリプトによって開始されるオリジン間 HTTP リクエストを制限しています。例えば、 `XMLHttpRequest`や [Fetch API](/ja/docs/Web/API/Fetch_API) は[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy) (same-origin policy) に従います。つまり、これらの API を使用するウェブアプリケーションは、そのアプリケーションが読み込まれたのと同じオリジンに対してのみリソースのリクエストを行うことができ、それ以外のオリジンからの場合は正しい CORS ヘッダーを含んでいることが必要です。
 
 ![](cors_principle.png)
 
-CORS の仕組みは、安全なオリジン間のリクエストとブラウザー・サーバー間のデータ転送を支援します。最近のブラウザーは CORS を `XMLHttpRequest` や [Fetch](/en-US/docs/Web/API/Fetch_API) などの API で使用して、オリジン間 HTTP リクエストのリスクの緩和に役立てています。
+CORS の仕組みは、安全なオリジン間のリクエストとブラウザー・サーバー間のデータ転送を支援します。最近のブラウザーは CORS を `XMLHttpRequest` や [Fetch](/ja/docs/Web/API/Fetch_API) などの API で使用して、オリジン間 HTTP リクエストのリスクの緩和に役立てています。
 
 ## この記事を読むべき人
 
@@ -24,16 +24,16 @@ CORS の仕組みは、安全なオリジン間のリクエストとブラウザ
 
 この [cross-origin sharing standard](https://fetch.spec.whatwg.org/#http-cors-protocol) では、以下についてサイト間の HTTP リクエストができるようにしています。
 
-- 前述のような {{domxref("XMLHttpRequest")}} または [Fetch API](/en-US/docs/Web/API/Fetch_API) の呼び出し。
+- 前述のような {{domxref("XMLHttpRequest")}} または [Fetch API](/ja/docs/Web/API/Fetch_API) の呼び出し。
 - ウェブフォント (CSS の `@font-face` で別ドメインのフォントを利用するため)。[これによりサーバーは、許可したウェブサイトのみから読み込みんで利用できる TrueType フォントを提供することができます。](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)
-- [WebGL テクスチャ](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)。
-- [画像から生成した CSS シェイプ](/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)。
+- [WebGL テクスチャ](/ja/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)。
+- [画像から生成した CSS シェイプ](/ja/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)。
 
 この記事では、 HTTP ヘッダーの要件を含むオリジン間リソース共有の全般的な説明を行います。
 
 ## 機能概要
 
-オリジン間リソース共有の仕様は、ウェブブラウザーから情報を読み取ることを許可されているオリジンをサーバーが記述することができる、新たな [HTTP ヘッダー](/en-US/docs/Web/HTTP/Headers)を追加することで作用します。加えて仕様書では、サーバーの情報に副作用を引き起こすことがある HTTP のリクエストメソッド (特に {{HTTPMethod("GET")}} 以外の HTTP メソッドや、特定の [MIME タイプ](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)を伴う {{HTTPMethod("POST")}}) のために、ブラウザーが HTTP の {{HTTPMethod("OPTIONS")}} リクエストメソッドを用いて、あらかじめリクエストの「プリフライト」 (サーバーから対応するメソッドの一覧を収集すること) を行い、サーバーの「認可」のもとに実際のリクエストを送信することを指示しています。サーバーはリクエスト時に「資格情報」 ([Cookie](/en-US/docs/Web/HTTP/Cookies) や [HTTP 認証](/en-US/docs/Web/HTTP/Authentication)など) を送信するべきかをクライアントに伝えることもできます。
+オリジン間リソース共有の仕様は、ウェブブラウザーから情報を読み取ることを許可されているオリジンをサーバーが記述することができる、新たな [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)を追加することで作用します。加えて仕様書では、サーバーの情報に副作用を引き起こすことがある HTTP のリクエストメソッド (特に {{HTTPMethod("GET")}} 以外の HTTP メソッドや、特定の [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)を伴う {{HTTPMethod("POST")}}) のために、ブラウザーが HTTP の {{HTTPMethod("OPTIONS")}} リクエストメソッドを用いて、あらかじめリクエストの「プリフライト」 (サーバーから対応するメソッドの一覧を収集すること) を行い、サーバーの「認可」のもとに実際のリクエストを送信することを指示しています。サーバーはリクエスト時に「資格情報」 ([Cookie](/ja/docs/Web/HTTP/Cookies) や [HTTP 認証](/ja/docs/Web/HTTP/Authentication)など) を送信するべきかをクライアントに伝えることもできます。
 
 CORS は様々なエラーで失敗することがありますが、セキュリティ上の理由から、エラーについて *JavaScript から知ることができない*よう定められています。コードからはエラーが発生したということしか分かりません。何が悪かったのかを具体的に知ることができる唯一の方法は、ブラウザーのコンソールで詳細を見ることです。
 
@@ -203,7 +203,7 @@ Access-Control-Max-Age: 86400
 
 またサーバーは、 `Access-Control-Allow-Headers` を "`X-PINGOTHER, Content-Type`" の値で送信し、実際のリクエストで使用されるヘッダーを承認しています。 `Access-Control-Allow-Methods` と同様に、 `Access-Control-Allow-Headers` は受け入れ可能なヘッダーをカンマ区切りのリストで表します。
 
-最後に {{HTTPHeader("Access-Control-Max-Age")}} は、プリフライトリクエストを再び送らなくてもいいように、プリフライトのレスポンスをキャッシュしてよい時間を秒数で与えます。この例では 86400 秒、つまり 24 時間です。なお、ブラウザーはそれぞれ[内部的な上限値](/en-US/docs/Web/HTTP/Headers/Access-Control-Max-Age)を持っており、 `Access-Control-Max-Age` が上回った場合に制限を行います。
+最後に {{HTTPHeader("Access-Control-Max-Age")}} は、プリフライトリクエストを再び送らなくてもいいように、プリフライトのレスポンスをキャッシュしてよい時間を秒数で与えます。この例では 86400 秒、つまり 24 時間です。なお、ブラウザーはそれぞれ[内部的な上限値](/ja/docs/Web/HTTP/Headers/Access-Control-Max-Age)を持っており、 `Access-Control-Max-Age` が上回った場合に制限を行います。
 
 プリフライトリクエストが完了したら、実際のリクエストを送ります。
 
@@ -264,7 +264,7 @@ Content-Type: text/plain
 
 > **Note:** 資格情報を含むリクエストを異なるドメインに行う場合、サードパーティクッキーポリシーも適用されます。このポリシーは、この章で説明しているように、サーバーやクライアントでの設定とは無関係に常に実施されます。
 
-{{domxref("XMLHttpRequest")}} や [Fetch](/en-US/docs/Web/API/Fetch_API) と CORS の両方によって明らかになる最も興味深い機能は、[HTTP クッキー](/en-US/docs/Web/HTTP/Cookies)と HTTP 資格情報によってわかる「資格情報を含む」リクエストを作成することができることです。既定では、サイト間の `XMLHttpRequest` または [Fetch](/en-US/docs/Web/API/Fetch_API) の呼び出しにおいて、ブラウザーは資格情報を送信**しません**。 `XMLHttpRequest` オブジェクトまたは {{domxref("Request")}} のコンストラクターの呼び出し時に、特定のフラグを設定する必要があります。
+{{domxref("XMLHttpRequest")}} や [Fetch](/ja/docs/Web/API/Fetch_API) と CORS の両方によって明らかになる最も興味深い機能は、[HTTP クッキー](/ja/docs/Web/HTTP/Cookies)と HTTP 資格情報によってわかる「資格情報を含む」リクエストを作成することができることです。既定では、サイト間の `XMLHttpRequest` または [Fetch](/ja/docs/Web/API/Fetch_API) の呼び出しにおいて、ブラウザーは資格情報を送信**しません**。 `XMLHttpRequest` オブジェクトまたは {{domxref("Request")}} のコンストラクターの呼び出し時に、特定のフラグを設定する必要があります。
 
 以下の例では `https://foo.example` から読み込まれた元のコンテンツが、 `https://bar.other` にあるリソースに対してクッキーを設定したシンプルな GET リクエストを行います。 foo.example のコンテンツは以下のような JavaScript を含んでいるかもしれません。
 
@@ -350,7 +350,7 @@ CORS のレスポンスに設定されたクッキーは、サードパーティ
 
 リクエスト中のクッキー (10 行目) は、通常のサードパーティクッキーポリシーでも抑制されることがあります。したがって、クッキーポリシーが強制されていると、この章で説明されている機能が無効になり、事実上、認証されたリクエストを行うことができなくなるかもしれません。
 
-[SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) 属性に関するクッキーポリシーは適用されます。
+[SameSite](/ja/docs/Web/HTTP/Headers/Set-Cookie/SameSite) 属性に関するクッキーポリシーは適用されます。
 
 ## HTTP レスポンスヘッダー
 

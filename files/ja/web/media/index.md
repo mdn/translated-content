@@ -27,7 +27,7 @@ slug: Web/Media
   - : Media Capabilities API を使用すると、アプリやサイトが実行されているデバイスのエンコーディングとデコーディングの能力を判断できます。これにより、どのフォーマットをいつ使用するかをリアルタイムで判断することができます。
 - [メディアキャプチャと Streams API](/ja/docs/Web/API/Media_Streams_API)
   - : ローカルおよび、ネットワークを介したメディアのストリーミング、記録、操作を可能にする API のリファレンスです。これには、ビデオ、オーディオおよび、静止画をキャプチャするためのローカルカメラとマイクの使用が含まれます。
-- [Media Session API](/en-US/docs/Web/API/Media_Session_API)
+- [Media Session API](/ja/docs/Web/API/Media_Session_API)
   - : Media Session API は、メディア通知をカスタマイズする方法を提供します。Media Session API は、ウェブアプリが再生しているメディアのユーザーエージェントが表示するためのメタデータを提供します。また、キーボード、ヘッドセット、リモコンなどにあるハードウェアキーや、モバイル機器の通知領域やロック画面にあるソフトウェアキーなどのプラットフォームメディアキーにアクセスするためのアクションハンドラーも提供しています。
 - [MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API)
   - : MediaStream Recording API を使用すると、メディアストリームをキャプチャしてデータ処理または、フィルターリングを行ったり、ディスクに記録したりすることができます。

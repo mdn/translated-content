@@ -12,7 +12,7 @@ slug: Web/HTTP/Caching
 
 キャッシュにはさまざまな種類があり、これらはプライベートキャッシュと共有キャッシュの 2 つのカテゴリーに大きく分類できます。*共有キャッシュ*は、複数のユーザーが再使用するためにレスポンスを保存するキャッシュです。*プライベートキャッシュ*は、ひとりのユーザーのためのキャッシュです。このページでは主にブラウザーのキャッシュとプロキシのキャッシュを扱いますが、ウェブサイトやウェブアプリケーションの信頼性、パフォーマンス、規模を向上するためにウェブサーバーで展開されるゲートウェイのキャッシュ、CDN、リバースプロキシのキャッシュ、ロードバランサーも存在します。
 
-![What a cache provide, advantages/disadvantages of shared/private caches.](/en-US/docs/Web/HTTP/Caching/http_cache_type.png)
+![What a cache provide, advantages/disadvantages of shared/private caches.](/ja/docs/Web/HTTP/Caching/http_cache_type.png)
 
 ### プライベートなブラウザーのキャッシュ
 

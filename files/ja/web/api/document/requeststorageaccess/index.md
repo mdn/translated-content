@@ -104,4 +104,4 @@ Privacy CG](https://github.com/privacycg/storage-access) で見ることがで�
 
 ## 関連情報
 
-[Storage Access API](/en-US/docs/Web/API/Storage_Access_API)
+[Storage Access API](/ja/docs/Web/API/Storage_Access_API)

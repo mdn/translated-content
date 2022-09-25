@@ -16,4 +16,4 @@ slug: Web/API/MediaStreamTrack/remote
 
 ## 関連情報
 
-- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- [WebRTC](/ja/docs/Web/API/WebRTC_API)

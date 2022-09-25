@@ -36,7 +36,7 @@ slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 
 ## アクセシビリティの考慮
 
-[`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性および [`aria-current`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-current) 属性を使用して、このナビゲーションが何であるか、そして現在のページが構造のどこにあるのかをユーザーが理解できるようにしています。 詳細については関連リンクを参照してください。
+[`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性および [`aria-current`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-current) 属性を使用して、このナビゲーションが何であるか、そして現在のページが構造のどこにあるのかをユーザーが理解できるようにしています。 詳細については関連リンクを参照してください。
 
 ## ブラウザーの互換性
 
