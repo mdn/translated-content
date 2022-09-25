@@ -97,7 +97,7 @@ See {{domxref("HTMLAnchorElement.href")}}
 
 ## 方法
 
-`该 SVGAElement 接口没有提供任何专有的方法。`
+该 `SVGAElement` 接口没有提供任何专有的方法。
 
 ## 示例
 

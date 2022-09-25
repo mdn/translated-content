@@ -34,7 +34,7 @@ ServiceWorkerContainer.register(scriptURL, options)
 
 ### 返回
 
-返回一个 {{domxref("Promise")}} 对象，值是 {{domxref("ServiceWorkerRegistration")}} .
+返回一个 {{domxref("Promise")}} 对象，值是 {{domxref("ServiceWorkerRegistration")}}。
 
 ## 示例
 
