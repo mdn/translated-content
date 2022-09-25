@@ -116,7 +116,7 @@ The `RTCIceTransportPolicy` enum defines string constants which can be used to l
 | Constant                            | Description                                                                                                                     |
 | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | `"all"`                             | All ICE candidates will be considered.                                                                                          |
-| `"public" `{{obsolete_inline}} | Only ICE candidates with public IP addresses will be considered. _Removed from the specification's May 13, 2016 working draft._ |
+| `"public"` {{obsolete_inline}} | Only ICE candidates with public IP addresses will be considered. _Removed from the specification's May 13, 2016 working draft._ |
 | `"relay"`                           | Only ICE candidates whose IP addresses are being relayed, such as those being passed through a TURN server, will be considered. |
 
 ### RTCPeerConnectionState enum

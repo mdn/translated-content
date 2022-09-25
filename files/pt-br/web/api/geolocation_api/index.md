@@ -11,7 +11,7 @@ A **API geolocation** permite que o usuário forneça sua localização a aplica
 
 ## O objeto geolocation
 
-O aplicativo de geolocalização é utilizado através de um objeto filho chamado `geolocation `localizado dentro do objeto `navigator`. Se o objeto existe, os serviços de geolocalização estarão disponíveis. Você pode adicionalmente testar a presença da geolocalização:
+O aplicativo de geolocalização é utilizado através de um objeto filho chamado `geolocation` localizado dentro do objeto `navigator`. Se o objeto existe, os serviços de geolocalização estarão disponíveis. Você pode adicionalmente testar a presença da geolocalização:
 
 ```js
 if ("geolocation" in navigator) {
@@ -46,7 +46,7 @@ O exemplo acima irá fazer a função the `do_something()` executar quando a loc
 
 ### Verificando a posição atual
 
-Se os dados de posição mudam (sejam pelo movimento do dispositivo ou se uma informação mais precisa for recebida), se pode configurar um retorno que é feito com esta informação de posição atual. Isto é feito usando a função `watchPosition(), `a qual tem os mesmos parâmetros de entrada da função `getCurrentPosition()`. Seu retorno é chamada múltiplas vezes, permitindo que o navegador ou atualize sua posição enquanto você se move, ou forneça uma localização mais precisa enquanto diferentes técnicas são usadas para localizar sua posição. O erro do retorno, o qual é opcional assim como no `getCurrentPosition()`, é chamado uma única vez, se nenhum resultado válido retornar.
+Se os dados de posição mudam (sejam pelo movimento do dispositivo ou se uma informação mais precisa for recebida), se pode configurar um retorno que é feito com esta informação de posição atual. Isto é feito usando a função `watchPosition()`, a qual tem os mesmos parâmetros de entrada da função `getCurrentPosition()`. Seu retorno é chamada múltiplas vezes, permitindo que o navegador ou atualize sua posição enquanto você se move, ou forneça uma localização mais precisa enquanto diferentes técnicas são usadas para localizar sua posição. O erro do retorno, o qual é opcional assim como no `getCurrentPosition()`, é chamado uma única vez, se nenhum resultado válido retornar.
 
 O `watchPosition()` pode ser usado sem que não haja a chamada inicial de `getCurrentPosition()`.
 
@@ -77,8 +77,6 @@ var wpid = navigator.geolocation.watchPosition(geo_success, geo_error, {enableHi
 
 Exemplo de watchPosition em uso: [thedotproduct.org/posts/a-simple-example-of-navigatorgeolocationwatchposition](https://www.thedotproduct.org/posts/a-simple-example-of-navigatorgeolocationwatchposition.html)
 
-
-
 ## Imprimindo uma posição
 
 A localização do usuário é impressa usando o objeto Position, que tem os seguintes campos:
@@ -86,7 +84,7 @@ A localização do usuário é impressa usando o objeto Position, que tem os seg
 - timestamp
   - : Momento em que a leitura foi feita, como `DOMTimeStamp`.
 - coords
-  - : Objecto [`nsIDOMGeoPositionCoords`](/en/XPCOM_Interface_Reference/NsIDOMGeoPositionCoords "En/NsIDOMGeoPositionCoords") indicando a localização.
+  - : Objecto [`nsIDOMGeoPositionCoords`](/en/XPCOM_Interface_Reference/NsIDOMGeoPositionCoords) indicando a localização.
 - address {{ gecko_minversion_inline("1.9.2") }} {{obsolete_inline("14.0")}}
   - : `nsIDOMGeoPositionAddress` objeto especificando o endereço correspondente, se disponível.
 
@@ -202,4 +200,4 @@ prompt(window,
 - `nsIDOMGeoPositionOptions`
 - `nsIDOMNavigatorGeolocation`
 - [Geolocation API on w3.org](http://dev.w3.org/geo/api/spec-source.html)
-- [Demos about the Geolocation API](/en-US/demos/tag/tech:geolocation "en-US/demos/tag/tech:geolocation/")
+- [Demos about the Geolocation API](/en-US/demos/tag/tech:geolocation)
