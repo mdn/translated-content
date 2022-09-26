@@ -2,6 +2,7 @@
 title: 'TypeError: invalid arguments'
 slug: orphaned/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments
 ---
+
 {{jsSidebar("Errors")}}
 
 ## メッセージ

@@ -2,6 +2,7 @@
 title: windows
 slug: Mozilla/Add-ons/WebExtensions/API/windows
 ---
+
 {{AddonSidebar}}
 
 ブラウザーウィンドウと相互作用します。この API を使って開いているウィンドウの情報を取得したり、ウィンドウを開き、修正し、閉じることができます。ウィンドウのオープン、クローズ、アクティベートのイベントをリッスンすることもできます。

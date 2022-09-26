@@ -3,6 +3,7 @@ title: jQuery
 slug: orphaned/Glossary/jQuery
 original_slug: Glossary/jQuery
 ---
+
 **jQuery** は {{Glossary("JavaScript")}} {{Glossary("Library", "ライブラリー")}} であり、{{Glossary("DOM")}} 操作を簡単にすること、{{Glossary("AJAX")}} 呼び出し、{{Glossary("Event", "イベント")}} ハンドリングに注力しています。
 
 jQuery は `$(selector).action()` というフォーマットを使って要素をイベントに割り当てます。詳しく説明すると、`$(selector)` が jQuery を呼び出して `selector` 要素を選択し、 `.action()`というイベント {{Glossary("API")}} に割り当てます。

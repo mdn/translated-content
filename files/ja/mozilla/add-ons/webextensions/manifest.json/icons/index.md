@@ -2,6 +2,7 @@
 title: icons
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/icons
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
