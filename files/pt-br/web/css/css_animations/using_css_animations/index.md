@@ -110,6 +110,7 @@ Vamos adicionar outro keyframe à animação do exemplo anterior. Digamos que n�
   width: 150%;
 }
 ```
+
 O código completo fica da seguinte forma:
 
 ```css
@@ -154,6 +155,7 @@ p {
   animation-iteration-count: infinite;
 }
 ```
+
 Adicionando ao código existente:
 
 ```css
