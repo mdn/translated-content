@@ -53,7 +53,6 @@ As técnicas abaixo descrevem cada função composta, bem como suas funções fi
 
 ### Funções da estrutura de documento
 
--
 - [application](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Application_Role)
 - [article](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Article_Role "en/Accessibility/ARIA/ARIA_Techniques/Using_the_article_role")
 - [cell](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Cell_Role)
