@@ -35,18 +35,18 @@ Date.UTC(ano, mês[, dia[, hora[, minuto[, segundo[, milisegundo]]]]])
 
 ## Descrição
 
-**`UTC() `**recebe argumentos de uma data separados por vírgula e retorna um número representando o total de milisegundos entre o dia 1º de Janeiro de 1970 às 00:00:00 (horário universal) e a data e hora que você especificou.
+**`UTC()`** recebe argumentos de uma data separados por vírgula e retorna um número representando o total de milisegundos entre o dia 1º de Janeiro de 1970 às 00:00:00 (horário universal) e a data e hora que você especificou.
 
 Você deve especificar o ano completo para o argumento ano. Por exemplo, 1998. Se o ano fornecido for um valor entre 0 e 99 o método irá converter este valor para o século 20 (1900 + ano); Por exemplo, se você utilizar 95, então o ano 1995 será utilizado.
 
-O método `UTC() `se diferencia do construtor de {{jsxref("Date")}} de duas maneiras:
+O método `UTC()` se diferencia do construtor de {{jsxref("Date")}} de duas maneiras:
 
 - `Date.UTC()` utiliza o horário universal em vez do horário local.
-- `Date.UTC() `retorna um valor inteiro em vez de uma instância de {{jsxref("Date")}}.
+- `Date.UTC()` retorna um valor inteiro em vez de uma instância de {{jsxref("Date")}}.
 
 Se você fornecer um argumento fora do intervalo esperado, o método UTC() atualiza os demais argumentos para permitir este valor. Por exemplo, se você utilizar 15 para mês, será adicionado 1 ao argumento ano (ano + 1) e será utilizado 3 para o argumento mês.
 
-`UTC() `é um método estático, por conta disto você sempre irá chamar `Date.UTC()` em vez de chamar um método de um objeto {{jsxref("Date")}} que você tenha criado.
+`UTC()` é um método estático, por conta disto você sempre irá chamar `Date.UTC()` em vez de chamar um método de um objeto {{jsxref("Date")}} que você tenha criado.
 
 ## Exemplos
 
