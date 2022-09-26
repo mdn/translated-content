@@ -36,7 +36,7 @@ translation_of: Web/JavaScript/Reference/Operators
   - : Пауза и продолжение выполнения асинхронной функции и ожидание [Promise](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise) (результата выполнения) с результатом разрешено/отклонено.
 - {{jsxref("Global_Objects/Array", "[]")}}
   - : Синтаксис создания инициализатора/литерала массива.
-- {{jsxref("Operators/Object\_initializer", "{}")}}
+- {{jsxref("Operators/Object_initializer", "{}")}}
   - : Синтаксис создания инициализатора/литерала объекта
 - {{jsxref("Global_Objects/RegExp", "/ab+c/i")}}
   - : Синтаксис создания литерала регулярного выражения.
@@ -205,7 +205,7 @@ translation_of: Web/JavaScript/Reference/Operators
 - {{jsxref("Operators/Assignment_Operators", "|=", "#Bitwise_OR_assignment")}}
   - : Оператор присваивания с побитовым ИЛИ.
 - {{jsxref("Operators/Destructuring_assignment", "[a, b] = [1, 2]")}}
-  {{jsxref("Operators/Destructuring\_assignment", "{a, b} = {a:1, b:2}")}}
+  {{jsxref("Operators/Destructuring_assignment", "{a, b} = {a:1, b:2}")}}
   - : Деструктурирующее присваивание позволяет вам присваивать свойства массива или объекта переменным с использованием синтаксиса, очень похожего на объявление литералов массива или объекта.
 
 ### Оператор запятая
