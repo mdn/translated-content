@@ -27,7 +27,7 @@ x == y
    - BigInt：仅当两个操作数值相同时返回 `true`。
    - Symbol：仅当两个操作数引用相同的符号时返回 `true`。
 2. 如果其中一个操作数为 `null` 或 `undefined`，另一个操作数也必须为 `null` 或 `undefined` 以返回 `true`。否则返回 `false`。
-3. 如果其中一个操作数是对象，另一个是原语，按此顺序使用对象的 [`@@toPrimitive()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（以 `"default"` 作为提示），[`valueOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/object/valueOf) 和 [`toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/object/toString) 方法将对象转换为原语。（这个原语转换与[相加](/zh-CN/docs/Web/JavaScript/Reference/Operators/add)中使用的转换相同。）
+3. 如果其中一个操作数是对象，另一个是基本类型，按此顺序使用对象的 [`@@toPrimitive()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（以 `"default"` 作为提示），[`valueOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/object/valueOf) 和 [`toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/object/toString) 方法将对象转换为基本类型。（这个基本类型转换与[相加](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)中使用的转换相同。）
 4. 在这一步，两个操作数都被转换为基本类型（String、Number、Boolean、Symbol 和 BigInt 中的一个）。其余的转换是逐个进行的。
    - 如果是相同的类型，使用步骤 1 进行比较。
    - 如果其中一个操作数是 Symbol 而另一个不是，返回 `false`。
