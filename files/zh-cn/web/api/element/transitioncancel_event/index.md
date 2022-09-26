@@ -1,17 +1,13 @@
 ---
-title: GlobalEventHandlers.ontransitioncancel
+title: Element：transitioncancel 事件
 slug: Web/API/Element/transitioncancel_event
 ---
 
 {{APIRef("CSS3 Transitions")}}
 
-{{domxref("GlobalEventHandlers")}}混合 的 **`ontransitioncancel`** 属性 是处理 {{event("transitioncancel")}} 事件的手柄{{event("Event_handlers", "event handler")}}.
+**`transitioncancel`** 事件在 [CSS 转换](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)被取消时触发。
 
-> **备注：** domxref("GlobalEventHandlers") 与 event("Event_handlers", "event handler")：dom 修订版本的事件手柄。
->
-> event("transitioncancel")：transitioncancel 事件
-
-当 CSS 转换被取消时，transitioncancel 事件被触发。当以下情况时，过渡被取消::
+当以下情况时，过渡被取消：
 
 - 应用于目标的{{cssxref("transition-property")}}属性的值被更改
 - {{cssxref("display")}}属性被设置为"none"。
