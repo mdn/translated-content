@@ -40,7 +40,7 @@ formData.set(name, value, filename);
 var formData = new FormData(); // Currently empty
 ```
 
-使用 {{domxref("FormData.set")}} 设置键/值 ：
+使用 {{domxref("FormData.set")}} 设置键/值：
 
 ```js
 formData.set('username', 'Chris');
