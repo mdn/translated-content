@@ -78,7 +78,7 @@ Feature Policy を使用する 2 つ目の方法は、iframe 内のコンテン�
 <iframe src="https://example.com..." allow="fullscreen"></iframe>
 ```
 
-`<iframe>` がデフォルトで許可している [allowlist](/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy$edit#allowlist) の値は `'src'` です。したがって、以下のようにも書いても同じとなります。
+`<iframe>` がデフォルトで許可している [allowlist](/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy#allowlist) の値は `'src'` です。したがって、以下のようにも書いても同じとなります。
 
 ```html
 <iframe src="https://example.com..." allow="fullscreen 'src'"></iframe>
