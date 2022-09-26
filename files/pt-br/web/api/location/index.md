@@ -28,7 +28,7 @@ _A inteface `Location` não herda nenhuma propriedade, mas implementa as proprie
 - {{domxref("URLUtils.port")}}
   - : É uma {{domxref("DOMString")}} que contém o número da porta da URL.
 - {{domxref("URLUtils.pathname")}}
-  - : É uma {{domxref("DOMString")}} que contém `'/', como `caractere inicial`,` seguido do caminho da URL.
+  - : É uma {{domxref("DOMString")}} que contém `'/'`, como caractere inicial, seguido do caminho da URL.
 - {{domxref("URLUtils.search")}}
   - : É uma {{domxref("DOMString")}} que contém um `'?'` seguido dos parâmetros da URL.
 - {{domxref("URLUtils.hash")}}
