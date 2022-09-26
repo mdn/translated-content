@@ -3,47 +3,47 @@ title: Element.hasAttributes()
 slug: Web/API/Element/hasAttributes
 translation_of: Web/API/Element/hasAttributes
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>Метод <code><strong>Element</strong></code><strong><code>.hasAttributes()</code></strong> возвращает <strong>Boolean</strong> значение, указывая содержит данный элемент какие-либо атрибуты или нет.</p>
+Метод **`Element`\*\***`.hasAttributes()`** возвращает **Boolean\*\* значение, указывая содержит данный элемент какие-либо атрибуты или нет.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre>var<em><var> result</var></em> = <em><var>element</var></em>.hasAttributes();</pre>
+```
+var result = element.hasAttributes();
+```
 
-<dl>
- <dt><code>result</code></dt>
- <dd>содержит возвращаемое значение <code>true</code> или <code>false</code>.</dd>
-</dl>
+- `result`
+  - : содержит возвращаемое значение `true` или `false`.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush:js">var foo = document.getElementById("foo");
+```js
+var foo = document.getElementById("foo");
 if (foo.hasAttributes()) {
     // do something with 'foo.attributes'
 }
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush:js">;(function(prototype) {
+```js
+;(function(prototype) {
     prototype.hasAttributes = prototype.hasAttributes || function() {
-        return (this.attributes.length &gt; 0);
+        return (this.attributes.length > 0);
     }
 })(Element.prototype);
-</pre>
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("Element.attributes")}}</li>
- <li>{{domxref("Element.hasAttribute()")}}</li>
-</ul>
+- {{domxref("Element.attributes")}}
+- {{domxref("Element.hasAttribute()")}}

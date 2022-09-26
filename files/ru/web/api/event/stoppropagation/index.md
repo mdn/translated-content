@@ -10,60 +10,33 @@ tags:
   - метод
 translation_of: Web/API/Event/stopPropagation
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Прекращает дальнейшую передачу текущего события.</p>
+Прекращает дальнейшую передачу текущего события.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>event</em>.stopPropagation();</pre>
+```
+event.stopPropagation();
+```
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<p>См. Пример 5: <a href="https://developer.mozilla.org/en-US/docs/DOM/DOM_Reference/Examples#Example_5:_Event_Propagation" title="Gecko_DOM_Reference/Examples#Example_5:_Event_Propagation">Event Propagation</a>  для более детального объяснения данного метода и всего механизма передачи событий в DOM документе.</p>
+См. Пример 5: [Event Propagation](/ru/docs/DOM/DOM_Reference/Examples#Example_5:_Event_Propagation "Gecko_DOM_Reference/Examples#Example_5:_Event_Propagation") для более детального объяснения данного метода и всего механизма передачи событий в DOM документе.
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-event-stoppropagation', 'Event.stopPropagation()')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM4', '#dom-event-stoppropagation', 'Event.stopPropagation()')}}</td>
-   <td>{{ Spec2('DOM4') }}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Events', '#Events-Event-stopPropagation', 'Event.stopPropagation()')}}</td>
-   <td>{{ Spec2('DOM2 Events') }}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                                         | Статус                               | Комментарии              |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------ |
+| {{SpecName('DOM WHATWG', '#dom-event-stoppropagation', 'Event.stopPropagation()')}}     | {{ Spec2('DOM WHATWG') }}     |                          |
+| {{SpecName('DOM4', '#dom-event-stoppropagation', 'Event.stopPropagation()')}}             | {{ Spec2('DOM4') }}             |                          |
+| {{SpecName('DOM2 Events', '#Events-Event-stopPropagation', 'Event.stopPropagation()')}} | {{ Spec2('DOM2 Events') }} | Изначальное определение. |
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div id="compat-mobile">
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>
-  <p>Смотрите <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture">DOM specification</a> для понимания потока событий. (<a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-flow">DOM Level 3 Events draft</a> содержит иллюстрации.)</p>
- </li>
- <li>
-  <p>{{domxref("Event.preventDefault()")}} – это дополнительный метод, который запрещает исполнение метода по умолчанию, предназначенного для данного события.</p>
- </li>
-</ul>
+- Смотрите [DOM specification](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture) для понимания потока событий. ([DOM Level 3 Events draft](http://www.w3.org/TR/DOM-Level-3-Events/#event-flow) содержит иллюстрации.)
+- {{domxref("Event.preventDefault()")}} – это дополнительный метод, который запрещает исполнение метода по умолчанию, предназначенного для данного события.

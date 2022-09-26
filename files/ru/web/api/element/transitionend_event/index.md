@@ -6,75 +6,37 @@ tags:
 translation_of: Web/API/HTMLElement/transitionend_event
 original_slug: Web/API/HTMLElement/transitionend_event
 ---
-<p>Событие <code style="font-style: normal; line-height: 1.5;">transitionend</code> срабатывает, когда <a href="/en-US/docs/CSS/Using_CSS_transitions" style="line-height: 1.5;">CSS transition</a> закончил своё выполнение. В случае, когда анимация удаляется до её завершения(например, если <a href="/en-US/docs/Web/CSS/transition-property">transition-property [en-US]</a> удаляется), то событие не срабатывает.</p>
+Событие `transitionend` срабатывает, когда [CSS transition](/ru/docs/CSS/Using_CSS_transitions) закончил своё выполнение. В случае, когда анимация удаляется до её завершения(например, если [transition-property \[en-US\]](/ru/docs/Web/CSS/transition-property) удаляется), то событие не срабатывает.
 
-<h2 id="Общая_информация">Общая информация</h2>
+## Общая информация
 
-<dl>
- <dt style="float: left; text-align: right; width: 120px;">Интерфейс</dt>
- <dd style="margin: 0 0 0 120px;">{{domxref("TransitionEvent")}}</dd>
- <dt style="float: left; text-align: right; width: 120px;">Всплывает</dt>
- <dd style="margin: 0 0 0 120px;">Да</dd>
- <dt style="float: left; text-align: right; width: 120px;">Отменяемое</dt>
- <dd style="margin: 0 0 0 120px;">Да</dd>
- <dt style="float: left; text-align: right; width: 120px;">Элемент</dt>
- <dd style="margin: 0 0 0 120px;">{{domxref("document")}}, {{domxref("element")}}</dd>
- <dt style="float: left; text-align: right; width: 120px;">Действие по умолчанию</dt>
- <dd style="margin: 0 0 0 120px;">Нет</dd>
-</dl>
+- Интерфейс
+  - : {{domxref("TransitionEvent")}}
+- Всплывает
+  - : Да
+- Отменяемое
+  - : Да
+- Элемент
+  - : {{domxref("document")}}, {{domxref("element")}}
+- Действие по умолчанию
+  - : Нет
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>The event target (the topmost target in the DOM tree).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>The type of event.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event normally bubbles or not.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event is cancellable or not.</td>
-  </tr>
-  <tr>
-   <td><code>propertyName</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>The name of the CSS property associated with the transition.</td>
-  </tr>
-  <tr>
-   <td><code>elapsedTime</code> {{readonlyInline}}</td>
-   <td>Float</td>
-   <td>The amount of time the transition has been running, in seconds, as of the time the event was generated. This value is not affected by the value of <code>transition-delay</code>.</td>
-  </tr>
-  <tr>
-   <td><code>pseudoElement</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>The name (beginning with two colons) of the CSS pseudo-element on which the transition occured (in which case the target of the event is that pseudo-element's corresponding element), or the empty string if the transition occurred on an element (which means the target of the event is that element).</td>
-  </tr>
- </tbody>
-</table>
+| Property                                 | Type                                 | Description                                                                                                                                                                                                                                                                                                |
+| ---------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `target` {{readonlyInline}}        | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree).                                                                                                                                                                                                                                                     |
+| `type` {{readonlyInline}}          | {{domxref("DOMString")}}     | The type of event.                                                                                                                                                                                                                                                                                         |
+| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.                                                                                                                                                                                                                                                                 |
+| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.                                                                                                                                                                                                                                                                   |
+| `propertyName` {{readonlyInline}}  | {{domxref("DOMString")}}     | The name of the CSS property associated with the transition.                                                                                                                                                                                                                                               |
+| `elapsedTime` {{readonlyInline}}   | Float                                | The amount of time the transition has been running, in seconds, as of the time the event was generated. This value is not affected by the value of `transition-delay`.                                                                                                                                     |
+| `pseudoElement` {{readonlyInline}} | {{domxref("DOMString")}}     | The name (beginning with two colons) of the CSS pseudo-element on which the transition occured (in which case the target of the event is that pseudo-element's corresponding element), or the empty string if the transition occurred on an element (which means the target of the event is that element). |
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">/*
+```js
+/*
  * Обрабатывать событие transitionend на определённом элементе, т.е. #slidingMenu
  * Затем, вызвать определённую функцию, т.е. showMessage()
  */
@@ -84,18 +46,16 @@ function showMessage() {
 
 var element = document.getElementById("slidingMenu");
 element.addEventListener("transitionend", showMessage, false);
-</pre>
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Также">Также</h2>
+## Также
 
-<ul>
- <li>The {{ domxref("TransitionEvent") }} interface and the <a href="/en-US/docs/Mozilla_event_reference/transitionend" title="The 'transitionend' event"><code>transitionend</code></a> event.</li>
-</ul>
+- The {{ domxref("TransitionEvent") }} interface and the [`transitionend`](/ru/docs/Mozilla_event_reference/transitionend "The 'transitionend' event") event.

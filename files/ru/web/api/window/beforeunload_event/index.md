@@ -3,76 +3,75 @@ title: 'Window: beforeunload event'
 slug: Web/API/Window/beforeunload_event
 translation_of: Web/API/Window/beforeunload_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Событие <strong>beforeunload </strong>запускается, когда окно, документ и его ресурсы вот-вот будут выгружены. Документ все ещё виден, и событие в этот момент может быть отменено.</p>
+Событие **beforeunload** запускается, когда окно, документ и его ресурсы вот-вот будут выгружены. Документ все ещё виден, и событие в этот момент может быть отменено.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Всплываемость</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">Отменяемость</th>
-   <td>Да</td>
-  </tr>
-  <tr>
-   <th scope="row">Интерфейс</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Свойство обработчика событий</th>
-   <td>{{domxref("WindowEventHandlers/onbeforeunload", "onbeforeunload")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Всплываемость</th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th scope="row">Отменяемость</th>
+      <td>Да</td>
+    </tr>
+    <tr>
+      <th scope="row">Интерфейс</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Свойство обработчика событий</th>
+      <td>
+        {{domxref("WindowEventHandlers/onbeforeunload", "onbeforeunload")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Это событие позволяет веб-странице вызвать диалоговое окно подтверждения, спрашивающее пользователя, действительно ли он хочет покинуть страницу. Если пользователь подтверждает, браузер переходит на новую страницу, в противном случае он отменяет навигацию.</p>
+Это событие позволяет веб-странице вызвать диалоговое окно подтверждения, спрашивающее пользователя, действительно ли он хочет покинуть страницу. Если пользователь подтверждает, браузер переходит на новую страницу, в противном случае он отменяет навигацию.
 
-<p>В соответствии со спецификацией, для отображения диалогового окна подтверждения обработчик события должен вызвать{{domxref("Event.preventDefault()", "preventDefault()")}} по событию.</p>
+В соответствии со спецификацией, для отображения диалогового окна подтверждения обработчик события должен вызвать{{domxref("Event.preventDefault()", "preventDefault()")}} по событию.
 
-<p>Однако обратите внимание, что не все браузеры поддерживают этот метод, а некоторые требуют от обработчика событий реализации одного из двух старых методов:</p>
+Однако обратите внимание, что не все браузеры поддерживают этот метод, а некоторые требуют от обработчика событий реализации одного из двух старых методов:
 
-<ul>
- <li>назначение строки свойству returnValue события</li>
- <li>возвращающий строку из обработчика событий.</li>
-</ul>
+- назначение строки свойству returnValue события
+- возвращающий строку из обработчика событий.
 
-<p>Некоторые браузеры используют для отображения возвращаемой строки в диалоге подтверждения, позволяя обработчику события отображать пользователю пользовательское сообщение. Однако это устарело и больше не поддерживается в большинстве браузеров.</p>
+Некоторые браузеры используют для отображения возвращаемой строки в диалоге подтверждения, позволяя обработчику события отображать пользователю пользовательское сообщение. Однако это устарело и больше не поддерживается в большинстве браузеров.
 
-<p>Для борьбы с нежелательными всплывающими окнами браузеры могут не отображать подсказки, созданные в обработчиках событий <strong>beforeunload</strong>, за исключением случаев, когда страница была обработана или даже не отображается вообще.</p>
+Для борьбы с нежелательными всплывающими окнами браузеры могут не отображать подсказки, созданные в обработчиках событий **beforeunload**, за исключением случаев, когда страница была обработана или даже не отображается вообще.
 
-<p>Прикрепление обработчика событий к <code>window</code> или <code>document</code> <code>beforeunload</code> событие не позволяет браузерам использовать кеш навигации по страницам в памяти, наподобие <a href="/en-US/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching">Firefox's Back-Forward cache</a> or <a href="https://webkit.org/blog/516/webkit-page-cache-ii-the-unload-event/">WebKit's Page Cache</a>.</p>
+Прикрепление обработчика событий к `window` или `document` `beforeunload` событие не позволяет браузерам использовать кеш навигации по страницам в памяти, наподобие [Firefox's Back-Forward cache](/ru/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching) or [WebKit's Page Cache](https://webkit.org/blog/516/webkit-page-cache-ii-the-unload-event/).
 
-<p>В спецификации HTML указано, что вызовы {{domxref("window.alert()")}}, {{domxref("window.confirm()")}}, и {{domxref("window.prompt()")}} методы могут быть проигнорированы во время этого события. Посмотреть <a href="https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#user-prompts" lang="ru">HTML specification</a> для более подробной информации.</p>
+В спецификации HTML указано, что вызовы {{domxref("window.alert()")}}, {{domxref("window.confirm()")}}, и {{domxref("window.prompt()")}} методы могут быть проигнорированы во время этого события. Посмотреть [HTML specification](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#user-prompts) для более подробной информации.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>В HTML-спецификации указано, что авторы должны использовать метод {{domxref("Event.preventDefault()")}}, а не {{domxref("Event.returnValue")}}. Однако, это поддерживается не всеми браузерами.</p>
+В HTML-спецификации указано, что авторы должны использовать метод {{domxref("Event.preventDefault()")}}, а не {{domxref("Event.returnValue")}}. Однако, это поддерживается не всеми браузерами.
 
-<pre class="brush: js">window.addEventListener('beforeunload', (event) =&gt; {
+```js
+window.addEventListener('beforeunload', (event) => {
   // Отмените событие, как указано в стандарте.
   event.preventDefault();
   // Chrome требует установки возвратного значения.
   event.returnValue = '';
 });
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>Смотрите <a href="/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload#Browser_compatibility">WindowEventHandlers/onbeforeunload</a> для получения более подробной информации о том, как различные браузеры обрабатывают это событие.</p>
+Смотрите [WindowEventHandlers/onbeforeunload](/ru/docs/Web/API/WindowEventHandlers/onbeforeunload#Browser_compatibility) для получения более подробной информации о том, как различные браузеры обрабатывают это событие.
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Related events: {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}, {{domxref("Document/readystatechange_event", "readystatechange")}}, {{domxref("Window/load_event", "load")}}, {{domxref("Window/unload_event", "unload")}}</li>
- <li><a href="https://html.spec.whatwg.org/#prompt-to-unload-a-document">Unloading Documents — Prompt to unload a document</a></li>
- <li><a href="https://developers.google.com/web/updates/2016/04/chrome-51-deprecations?hl=en#remove_custom_messages_in_onbeforeunload_dialogs">Remove Custom Messages in onbeforeload Dialogs after Chrome 51</a></li>
-</ul>
+- Related events: {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}, {{domxref("Document/readystatechange_event", "readystatechange")}}, {{domxref("Window/load_event", "load")}}, {{domxref("Window/unload_event", "unload")}}
+- [Unloading Documents — Prompt to unload a document](https://html.spec.whatwg.org/#prompt-to-unload-a-document)
+- [Remove Custom Messages in onbeforeload Dialogs after Chrome 51](https://developers.google.com/web/updates/2016/04/chrome-51-deprecations?hl=en#remove_custom_messages_in_onbeforeunload_dialogs)

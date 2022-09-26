@@ -3,22 +3,24 @@ title: Console.trace()
 slug: Web/API/Console/trace
 translation_of: Web/API/Console/trace
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>Выводит стэк трэйс в  <a href="/en-US/docs/Tools/Web_Console">Веб Консоль</a>.</p>
+Выводит стэк трэйс в [Веб Консоль](/ru/docs/Tools/Web_Console).
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p>Посмотрите <a href="/en-US/docs/Web/API/console#Stack_traces">Стэк трэйсы</a> в документации {{domxref("console")}} с деталями и примерами.</p>
+Посмотрите [Стэк трэйсы](/ru/docs/Web/API/console#Stack_traces) в документации {{domxref("console")}} с деталями и примерами.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">console.trace();
-</pre>
+```
+console.trace();
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">function foo() {
+```js
+function foo() {
   function bar() {
     console.trace();
   }
@@ -26,26 +28,24 @@ translation_of: Web/API/Console/trace
 }
 
 foo();
-</pre>
+```
 
-<p>В консоли следующий трэйс будет отображён так:</p>
+В консоли следующий трэйс будет отображён так:
 
-<pre>bar
+```
+bar
 foo
-&lt;anonymous&gt;</pre>
+<anonymous>
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
+## Браузерная совместимость
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a class="external" href="http://www.opera.com/dragonfly/documentation/console/">Документация Opera Dragonfly: Консоль</a></li>
-</ul>
+- [Документация Opera Dragonfly: Консоль](http://www.opera.com/dragonfly/documentation/console/)

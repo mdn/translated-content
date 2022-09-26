@@ -7,20 +7,22 @@ tags:
   - Property
 translation_of: Web/API/Document/defaultView
 ---
-<div>{{ ApiRef() }}</div>
+{{ ApiRef() }}
 
-<p>В браузерах возвращает объект <a href="/en-US/docs/DOM/window" title="DOM/window">window</a>, который связан с document текущей страницы или <code>null</code> если document не доступен.</p>
+В браузерах возвращает объект [window](/ru/docs/DOM/window "DOM/window"), который связан с document текущей страницы или `null` если document не доступен.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var win = document.defaultView;</pre>
+```
+var win = document.defaultView;
+```
 
-<p>Это свойство доступно только для чтения.</p>
+Это свойство доступно только для чтения.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Браузерная_поддержка">Браузерная поддержка</h2>
+## Браузерная поддержка
 
-<p>{{Compat}}</p>
+{{Compat}}

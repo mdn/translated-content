@@ -9,36 +9,38 @@ tags:
   - Reference
 translation_of: Web/API/DOMImplementation/createHTMLDocument
 ---
-<p>{{ApiRef("DOM")}}</p>
+{{ApiRef("DOM")}}
 
-<p>Метод <strong><code>DOMImplementation.createHTMLDocument()</code></strong> создаёт новый HTML {{ domxref("Document") }}.</p>
+Метод **`DOMImplementation.createHTMLDocument()`** создаёт новый HTML {{ domxref("Document") }}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">const <var>newDoc</var> = document.implementation.createHTMLDocument(<var>title</var>)</pre>
+```
+const newDoc = document.implementation.createHTMLDocument(title)
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code><var>title</var></code>  {{optional_inline}} (except in IE)</dt>
- <dd>{{domxref("DOMString")}}, содержащий заголовок для создания нового HTML-документа.</dd>
-</dl>
+- `title` {{optional_inline}} (except in IE)
+  - : {{domxref("DOMString")}}, содержащий заголовок для создания нового HTML-документа.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>В этом примере создаётся новый HTML-документ и вставляется в {{HTMLElement("iframe")}} текущего документа.</p>
+В этом примере создаётся новый HTML-документ и вставляется в {{HTMLElement("iframe")}} текущего документа.
 
-<p>Вот HTML для этого примера:</p>
+Вот HTML для этого примера:
 
-<pre class="brush: html">&lt;body&gt;
-  &lt;p&gt;Click &lt;a href="javascript:makeDocument()"&gt;here&lt;/a&gt; to create a new document and insert it below.&lt;/p&gt;
-  &lt;iframe id="theFrame" src="about:blank" /&gt;
-&lt;/body&gt;
-</pre>
+```html
+<body>
+  <p>Click <a href="javascript:makeDocument()">here</a> to create a new document and insert it below.</p>
+  <iframe id="theFrame" src="about:blank" />
+</body>
+```
 
-<p>Реализация JavaScript <code>makeDocument()</code> выглядит следующим образом:</p>
+Реализация JavaScript `makeDocument()` выглядит следующим образом:
 
-<pre class="brush: js">function makeDocument() {
+```js
+function makeDocument() {
   let frame = document.getElementById("theFrame");
 
   let doc = document.implementation.createHTMLDocument("New Document");
@@ -59,38 +61,35 @@ translation_of: Web/API/DOMImplementation/createHTMLDocument
 
   destDocument.replaceChild(newNode, destDocument.documentElement);
 }
-</pre>
+```
 
-<p>Код в строках 4-12 обрабатывает создание нового HTML-документа и вставку в него некоторого содержимого. Строка 4 использует <code>createHTMLDocument()</code> для создания нового HTML-документа, чей {{ HTMLElement("title") }} это <code>"New Document"</code>. Строки 5 и 6 создают новый элемент абзаца с некоторым простым содержимым, а затем строки 8-12 обрабатывают вставку нового абзаца в новый документ.</p>
+Код в строках 4-12 обрабатывает создание нового HTML-документа и вставку в него некоторого содержимого. Строка 4 использует `createHTMLDocument()` для создания нового HTML-документа, чей {{ HTMLElement("title") }} это `"New Document"`. Строки 5 и 6 создают новый элемент абзаца с некоторым простым содержимым, а затем строки 8-12 обрабатывают вставку нового абзаца в новый документ.
 
-<p>Строка 16 вытягивает <code>contentDocument</code> фрейма; это документ, в который мы будем вводить новое содержимое. Следующие две строки обрабатывают импорт содержимого нашего нового документа в контекст нового документа. Наконец, строка 20 фактически заменяет содержимое фрейма содержимым нового документа.</p>
+Строка 16 вытягивает `contentDocument` фрейма; это документ, в который мы будем вводить новое содержимое. Следующие две строки обрабатывают импорт содержимого нашего нового документа в контекст нового документа. Наконец, строка 20 фактически заменяет содержимое фрейма содержимым нового документа.
 
-<p><a href="/samples/domref/createHTMLDocument.html">Смотреть Видео Примеры</a></p>
+[Смотреть Видео Примеры](/samples/domref/createHTMLDocument.html)
 
-<p>Возвращаемый документ предварительно сконструирован со следующим HTML-кодом:</p>
+Возвращаемый документ предварительно сконструирован со следующим HTML-кодом:
 
-<pre class="brush: html">&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;<var>title</var>&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+```html
+<!doctype html>
+<html>
+<head>
+<title>title</title>
+</head>
+<body>
+</body>
+</html>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Интерфейс {{domxref("DOMImplementation")}}, к которому он принадлежит.</li>
-</ul>
+- Интерфейс {{domxref("DOMImplementation")}}, к которому он принадлежит.

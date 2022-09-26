@@ -3,50 +3,48 @@ title: Element.querySelector()
 slug: Web/API/Element/querySelector
 translation_of: Web/API/Element/querySelector
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Возвращает первый элемент, являющийся потомком элемента, на который применено правило указанной группы селекторов.</p>
+Возвращает первый элемент, являющийся потомком элемента, на который применено правило указанной группы селекторов.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>element</var> = baseElement.querySelector(<em>selector</em>s);
-</pre>
+```
+element = baseElement.querySelector(selectors);
+```
 
-<ul>
- <li><code>element</code> и <code>baseElement</code> это {{domxref("element")}} объекты.</li>
- <li><code>selectors</code> - это группа <a href="/ru-RU/docs/Web/Guide/CSS/Getting_Started/Selectors">селекторов</a> для поиска совпадения.</li>
-</ul>
+- `element` и `baseElement` это {{domxref("element")}} объекты.
+- `selectors` - это группа [селекторов](/ru/docs/Web/Guide/CSS/Getting_Started/Selectors) для поиска совпадения.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<p>Данный пример получает первый элемент style, который не имеет атрибута type или этот атрибут равен text/css, в теле (body) HTML документа:</p>
+Данный пример получает первый элемент style, который не имеет атрибута type или этот атрибут равен text/css, в теле (body) HTML документа:
 
-<pre class="brush:js">var el = document.body.querySelector("style[type='text/css'], style:not([type])");
-</pre>
+```js
+var el = document.body.querySelector("style[type='text/css'], style:not([type])");
+```
 
-<h2 id="Notes">Примечания</h2>
+## Примечания
 
-<p>Возвращает null если совпадения не найдены, иначе первый найденный элемент.</p>
+Возвращает null если совпадения не найдены, иначе первый найденный элемент.
 
-<p>Генерирует исключение <code>SYNTAX_ERR</code>  если указанная группа селекторов не корректна.</p>
+Генерирует исключение `SYNTAX_ERR` если указанная группа селекторов не корректна.
 
-<p><code>querySelector()</code> был представлен в WebApps API.</p>
+`querySelector()` был представлен в WebApps API.
 
-<p>Строка аргументов передаваемая <code>querySelector()</code> должна удовлетворять синтаксису CSS. Более подробные примеры смотрите в {{domxref("document.querySelector")}}.</p>
+Строка аргументов передаваемая `querySelector()` должна удовлетворять синтаксису CSS. Более подробные примеры смотрите в {{domxref("document.querySelector")}}.
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("element.querySelectorAll()")}}</li>
- <li>{{domxref("document.querySelector()")}}</li>
- <li>{{domxref("document.querySelectorAll()")}}</li>
- <li><a href="/ru-RU/docs/Code_snippets/QuerySelector">Фрагменты кода для querySelector</a></li>
-</ul>
+- {{domxref("element.querySelectorAll()")}}
+- {{domxref("document.querySelector()")}}
+- {{domxref("document.querySelectorAll()")}}
+- [Фрагменты кода для querySelector](/ru/docs/Code_snippets/QuerySelector)

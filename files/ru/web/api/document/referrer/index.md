@@ -7,31 +7,26 @@ tags:
   - Property
 translation_of: Web/API/Document/referrer
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Возвращает <a href="http://www.w3.org/Addressing/#background">URI</a> страницы, с которой был совершён переход на текущую.</p>
+Возвращает [URI](http://www.w3.org/Addressing/#background) страницы, с которой был совершён переход на текущую.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre>var <var>referrer</var> = <var>document</var>.referrer;
-</pre>
+```
+var referrer = document.referrer;
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p>Вернёт пустую строку, если пользователь попал на страницу напрямую (не через ссылку, а, например, через закладку). Т.к. свойство возвращает строку, это не даёт вам доступ к DOM ссылающейся страницы.</p>
+Вернёт пустую строку, если пользователь попал на страницу напрямую (не через ссылку, а, например, через закладку). Т.к. свойство возвращает строку, это не даёт вам доступ к DOM ссылающейся страницы.
 
-<p>Внутри элемента {{HTMLElement("iframe")}}, <code>Document.referrer</code> первоначально будет установлен в тоже значение, что и {{domxref("HTMLHyperlinkElementUtils/href", "href")}} объекта {{domxref("Window/location", "Window.location")}} родительского окна.</p>
+Внутри элемента {{HTMLElement("iframe")}}, `Document.referrer` первоначально будет установлен в тоже значение, что и {{domxref("HTMLHyperlinkElementUtils/href", "href")}} объекта {{domxref("Window/location", "Window.location")}} родительского окна.
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-95229140">DOM Level 2: referrer</a></li>
-</ul>
+- [DOM Level 2: referrer](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-95229140)
 
-<p> </p>
+## Браузерная поддержка
 
-<h2 id="Браузерная_поддержка">Браузерная поддержка</h2>
-
-<p>{{Compat}}</p>
-
-<p> </p>
+{{Compat}}

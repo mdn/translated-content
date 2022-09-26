@@ -3,64 +3,43 @@ title: Window.self
 slug: Web/API/Window/self
 translation_of: Web/API/Window/self
 ---
-<p>{{ APIRef() }}</p>
+{{ APIRef() }}
 
-<p>Свойство <code><strong>Window.self</strong></code> доступно только для чтения и возвращает объект window в виде объекта {{domxref("WindowProxy")}}. Для доступа к данному свойству возможно использовать точечную нотацию и объект <code>window</code> (<code>window.self</code>) или переменную <code>self</code>. Преимущество доступа через переменную <code>self</code> заключается в том, что её можно использовать в окружениях, в которых нет window, например {{domxref("Worker", "Web Workers")}}. Использование <code>self</code> даёт возможность обращаться к глобальному объекту не только в окружениях где есть window (в таком случае <code>self</code> эквивалентна <code>window.self</code>), но также в воркерах (в случае воркера <code>self</code> эквивалентна {{domxref("WorkerGlobalScope.self")}}).</p>
+Свойство **`Window.self`** доступно только для чтения и возвращает объект window в виде объекта {{domxref("WindowProxy")}}. Для доступа к данному свойству возможно использовать точечную нотацию и объект `window` (`window.self`) или переменную `self`. Преимущество доступа через переменную `self` заключается в том, что её можно использовать в окружениях, в которых нет window, например {{domxref("Worker", "Web Workers")}}. Использование `self` даёт возможность обращаться к глобальному объекту не только в окружениях где есть window (в таком случае `self` эквивалентна `window.self`), но также в воркерах (в случае воркера `self` эквивалентна {{domxref("WorkerGlobalScope.self")}}).
 
-<h2 id="Notes">Пример</h2>
+## Пример
 
-<p>В следующем примере <code>window.self</code> точно также может быть заменено на <code>window</code>.</p>
+В следующем примере `window.self` точно также может быть заменено на `window`.
 
-<pre class="brush:js">if (window.parent.frames[0] != window.self) {
+```js
+if (window.parent.frames[0] != window.self) {
     // этот window не является первым frame в списке
 }
-</pre>
+```
 
-<p>Кроме того, когда код выполняется в активном документе браузера, объект <code>window</code> является ссылкой на текущий глобальный объект и таким образом:</p>
+Кроме того, когда код выполняется в активном документе браузера, объект `window` является ссылкой на текущий глобальный объект и таким образом:
 
-<pre class="brush:js">var w1 = window;
+```js
+var w1 = window;
 var w2 = self;
 var w3 = window.window;
 var w4 = window.self;
 // Значения переменных w1, w2, w3, w4 строго равны между собой
 // Но только переменная w2 будет работать в workers
-</pre>
+```
 
-<h2 id="Specification">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-self', 'Window.self')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No difference from the latest snapshot {{SpecName("HTML5.1")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'browsers.html#dom-self', 'Window.self')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>No difference from the {{SpecName("HTML5 W3C")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'browsers.html#dom-self', 'Window.self')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>First snapshot containing the definition of <code>Window.self</code>.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                           | Comment                                                                 |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', '#dom-self', 'Window.self')}}                 | {{Spec2('HTML WHATWG')}} | No difference from the latest snapshot {{SpecName("HTML5.1")}} |
+| {{SpecName('HTML5.1', 'browsers.html#dom-self', 'Window.self')}}     | {{Spec2('HTML5.1')}}     | No difference from the {{SpecName("HTML5 W3C")}}                 |
+| {{SpecName('HTML5 W3C', 'browsers.html#dom-self', 'Window.self')}} | {{Spec2('HTML5 W3C')}}     | First snapshot containing the definition of `Window.self`.              |
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p> </p>
+## Смотрите также
 
-<h2 class="noinclude" id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Its <code>Worker</code> equivalent, {{domxref("WorkerGlobalScope.self")}}.</li>
-</ul>
+- Its `Worker` equivalent, {{domxref("WorkerGlobalScope.self")}}.

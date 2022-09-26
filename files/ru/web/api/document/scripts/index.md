@@ -3,45 +3,36 @@ title: Document.scripts
 slug: Web/API/Document/scripts
 translation_of: Web/API/Document/scripts
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Возвращает список элементов {{HTMLElement("script")}} в документ. Возвращаемый объект является {{domxref("HTMLCollection")}}.</p>
+Возвращает список элементов {{HTMLElement("script")}} в документ. Возвращаемый объект является {{domxref("HTMLCollection")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><code>var <em>scriptList</em></code> = document.scripts;
-</pre>
+```
+var scriptList = document.scripts;
+```
 
-<p>Возвращаемый <code>scriptList</code> является {{domxref("HTMLCollection")}}. Вы можете использовать его как массив для получения всех элементов в списке.</p>
+Возвращаемый `scriptList` является {{domxref("HTMLCollection")}}. Вы можете использовать его как массив для получения всех элементов в списке.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Этот пример показывает есть ли на странице элементы {{HTMLElement("script")}}.</p>
+Этот пример показывает есть ли на странице элементы {{HTMLElement("script")}}.
 
-<pre class="brush:js">var scripts = document.scripts;
+```js
+var scripts = document.scripts;
 
 if (scripts.length) {
   alert("This page has scripts!");
 }
-</pre>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-document-scripts', 'Document.scripts')}}</td>
-   <td>{{ Spec2('HTML WHATWG') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                               | Comment |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------- |
+| {{SpecName('HTML WHATWG', '#dom-document-scripts', 'Document.scripts')}} | {{ Spec2('HTML WHATWG') }} |         |

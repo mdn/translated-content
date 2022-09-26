@@ -3,79 +3,62 @@ title: Notifications API
 slug: Web/API/Notifications_API
 translation_of: Web/API/Notifications_API
 ---
-<p>{{DefaultAPISidebar("Web Notifications")}}</p>
+{{DefaultAPISidebar("Web Notifications")}}
 
-<p class="summary">Notifications API позволяют web-страницам контролировать отображение системных уведомлений для конечного пользователя — они находятся вне контекста окна браузера верхнего уровня, поэтому могут отображаться даже если пользователь сменил вкладку или перешёл к другому приложению. API были разработаны таким образом, чтобы поддерживать совместимость с существующими системами уведомлений на различных платформах.</p>
+Notifications API позволяют web-страницам контролировать отображение системных уведомлений для конечного пользователя — они находятся вне контекста окна браузера верхнего уровня, поэтому могут отображаться даже если пользователь сменил вкладку или перешёл к другому приложению. API были разработаны таким образом, чтобы поддерживать совместимость с существующими системами уведомлений на различных платформах.
 
-<h2 id="Концепция_и_использование">Концепция и использование</h2>
+## Концепция и использование
 
-<p>На поддерживаемых платформах, отображение системных уведомлений обычно включает две вещи. Во-первых, пользователь должен разрешить текущему источнику отображать уведомления, что, как правило, происходит, при первичной загрузке приложения или сайта, используя метод  {{domxref("Notification.requestPermission()")}}. Далее будет вызван диалог со следующим текстом:</p>
+На поддерживаемых платформах, отображение системных уведомлений обычно включает две вещи. Во-первых, пользователь должен разрешить текущему источнику отображать уведомления, что, как правило, происходит, при первичной загрузке приложения или сайта, используя метод {{domxref("Notification.requestPermission()")}}. Далее будет вызван диалог со следующим текстом:
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10819/notification-bubble.png" style="display: block; height: 205px; margin: 0 auto; width: 453px;"></p>
+![](https://mdn.mozillademos.org/files/10819/notification-bubble.png)
 
-<p>Здесь пользователь может выбрать разрешить уведомления от источника, заблокировать их или решить позже. Как только выбор будет сделан, для текущей сессии будут установлены настройки. </p>
+Здесь пользователь может выбрать разрешить уведомления от источника, заблокировать их или решить позже. Как только выбор будет сделан, для текущей сессии будут установлены настройки.
 
-<div class="note">
-<p><strong>Примечание</strong>: Для Firefox 44, разрешения для Notifications и <a href="/en-US/docs/Web/API/Push_API">Push</a> объединяются. Если было установлено разрешение для уведомлений, push так же будут разрешены .</p>
-</div>
+> **Примечание:** Для Firefox 44, разрешения для Notifications и [Push](/ru/docs/Web/API/Push_API) объединяются. Если было установлено разрешение для уведомлений, push так же будут разрешены .
 
-<p>Затем создаётся новое уведомление с помощью конструктора  {{domxref("Notification.Notification","Notification()")}}. В функцию должен быть передан аргумент заголовка и, по желанию, объект настроек, чтобы определить опции, такие как направление и тело текста, иконка, звук уведомления и т.д.</p>
+Затем создаётся новое уведомление с помощью конструктора {{domxref("Notification.Notification","Notification()")}}. В функцию должен быть передан аргумент заголовка и, по желанию, объект настроек, чтобы определить опции, такие как направление и тело текста, иконка, звук уведомления и т.д.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p>В дополнение, спецификация Notifications API определить несколько дополнений для <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a>, чтобы позволить им отправлять уведомления.</p>
+В дополнение, спецификация Notifications API определить несколько дополнений для [ServiceWorker API](/ru/docs/Web/API/ServiceWorker_API), чтобы позволить им отправлять уведомления.
 
-<div class="note">
-<p><strong>Примечание</strong>: Чтобы найти больше об использовании уведомлений в вашем приложении, читайте <a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Использование Notifications API</a>.</p>
-</div>
+> **Примечание:** Чтобы найти больше об использовании уведомлений в вашем приложении, читайте [Использование Notifications API](/ru/docs/Web/API/Notifications_API/Using_the_Notifications_API).
 
-<h2 id="Интерфейс_уведомлений">Интерфейс уведомлений</h2>
+## Интерфейс уведомлений
 
-<dl>
- <dt>{{domxref("Notification")}}</dt>
- <dd>Определяет объект уведомления.</dd>
-</dl>
+- {{domxref("Notification")}}
+  - : Определяет объект уведомления.
 
-<h3 id="Дополнение_для_Service_worker">Дополнение для Service worker</h3>
+### Дополнение для Service worker
 
-<dl>
- <dt>{{domxref("ServiceWorkerRegistration")}}</dt>
- <dd>Включает {{domxref("ServiceWorkerRegistration.showNotification()")}} и {{domxref("ServiceWorkerRegistration.getNotifications()")}} методы для контролирования отображения уведомлений.</dd>
- <dt>{{domxref("ServiceWorkerGlobalScope")}}</dt>
- <dd>Включает обработчик {{domxref("ServiceWorkerGlobalScope.onnotificationclick")}} для вызова встроенных функций, когда был выполнен клик на уведомлении.</dd>
- <dt>{{domxref("NotificationEvent")}}</dt>
- <dd>Особый тип объекта событий, основанный на {{domxref("ExtendableEvent")}}, который представляет уведомление, которое было вызвано.</dd>
-</dl>
+- {{domxref("ServiceWorkerRegistration")}}
+  - : Включает {{domxref("ServiceWorkerRegistration.showNotification()")}} и {{domxref("ServiceWorkerRegistration.getNotifications()")}} методы для контролирования отображения уведомлений.
+- {{domxref("ServiceWorkerGlobalScope")}}
+  - : Включает обработчик {{domxref("ServiceWorkerGlobalScope.onnotificationclick")}} для вызова встроенных функций, когда был выполнен клик на уведомлении.
+- {{domxref("NotificationEvent")}}
+  - : Особый тип объекта событий, основанный на {{domxref("ExtendableEvent")}}, который представляет уведомление, которое было вызвано.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table>
-  <thead>
-    <tr>
-      <th>Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="https://notifications.spec.whatwg.org/">Notifications API Living Standard</a></td>
-    </tr>
-  </tbody>
-</table>
+| Specification                                                               |
+| --------------------------------------------------------------------------- |
+| [Notifications API Living Standard](https://notifications.spec.whatwg.org/) |
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat("api.Notification")}}</p>
+{{Compat("api.Notification")}}
 
-<h2 id="Firefox_OS_разрешения">Firefox OS разрешения</h2>
+## Firefox OS разрешения
 
-<p>Когда используете уведомления в приложении на Firefox OS, убедитесь, что <code>desktop-notification</code> установленно в вашем фаине манифеста. Уведомления могут быть использованы для любомого уровня разрешения, равного или выше:</p>
+Когда используете уведомления в приложении на Firefox OS, убедитесь, что `desktop-notification` установленно в вашем фаине манифеста. Уведомления могут быть использованы для любомого уровня разрешения, равного или выше:
 
-<pre class="brush: json">"permissions": {
+```json
+"permissions": {
   "desktop-notification": {}
-}</pre>
+}
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Использование Notifications API</a></li>
-</ul>
+- [Использование Notifications API](/ru/docs/Web/API/Notifications_API/Using_the_Notifications_API)

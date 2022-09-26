@@ -3,48 +3,33 @@ title: FileReader.readAsText()
 slug: Web/API/FileReader/readAsText
 translation_of: Web/API/FileReader/readAsText
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<p>Метод <strong><code>readAsText()</code></strong> используется для чтения содержимого указанного {{domxref("Blob")}} или {{domxref("File")}}. Когда операция закончится, {{domxref("FileReader.readyState","readyState")}} примет значение <code>DONE</code>  и будет вызвано событие {{event("loadend")}}. В то же время, атрибут {{domxref("FileReader.result","result")}} будет содержать данные файла как строку.</p>
+Метод **`readAsText()`** используется для чтения содержимого указанного {{domxref("Blob")}} или {{domxref("File")}}. Когда операция закончится, {{domxref("FileReader.readyState","readyState")}} примет значение `DONE` и будет вызвано событие {{event("loadend")}}. В то же время, атрибут {{domxref("FileReader.result","result")}} будет содержать данные файла как строку.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>instanceOfFileReader</em>.readAsText(blob[, encoding]);</pre>
+```
+instanceOfFileReader.readAsText(blob[, encoding]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>blob</code></dt>
- <dd>{{domxref("Blob")}} или {{domxref("File")}} которые следует прочитать.</dd>
- <dt><code>encoding</code> {{optional_inline}}</dt>
- <dd>Строка, обозначающая кодировку используемую для возвращаемых данных. По умолчанию используется UTF-8, если параметр не указан.</dd>
-</dl>
+- `blob`
+  - : {{domxref("Blob")}} или {{domxref("File")}} которые следует прочитать.
+- `encoding` {{optional_inline}}
+  - : Строка, обозначающая кодировку используемую для возвращаемых данных. По умолчанию используется UTF-8, если параметр не указан.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("File API", "#FileReader-interface", "FileReader")}}</td>
-   <td>{{Spec2("File API")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                        | Status                       | Comment            |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
+| {{SpecName("File API", "#FileReader-interface", "FileReader")}} | {{Spec2("File API")}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("FileReader")}}</li>
-</ul>
+- {{domxref("FileReader")}}

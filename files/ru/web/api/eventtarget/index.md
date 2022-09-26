@@ -6,60 +6,37 @@ tags:
   - Interface
 translation_of: Web/API/EventTarget
 ---
-<p>{{ ApiRef("DOM Events") }}</p>
+{{ ApiRef("DOM Events") }}
 
-<p><strong><code>EventTarget</code></strong> - это интерфейс, реализуемый объектами, которые могут генерировать события и могут иметь подписчиков на эти события.</p>
+**`EventTarget`** - это интерфейс, реализуемый объектами, которые могут генерировать события и могут иметь подписчиков на эти события.
 
-<p>Наиболее частые генераторы событий - {{domxref("Element")}}, {{domxref("document")}}, и {{domxref("window")}},  но другие объекты так же могут использоваться в качестве источников событий , например {{domxref("XMLHttpRequest")}}, {{domxref("AudioNode")}}, {{domxref("AudioContext")}}, и другие.</p>
+Наиболее частые генераторы событий - {{domxref("Element")}}, {{domxref("document")}}, и {{domxref("window")}}, но другие объекты так же могут использоваться в качестве источников событий , например {{domxref("XMLHttpRequest")}}, {{domxref("AudioNode")}}, {{domxref("AudioContext")}}, и другие.
 
-<p>Многие источники событий (включая элементы, документ и окно) также поддерживают установку <a href="/en-US/docs/Web/Guide/DOM/Events/Event_handlers" title="/en-US/docs/Web/Guide/DOM/Events/Event_handlers">обработчиков событий</a> с помощью on<code>...</code> свойств и атрибутов.</p>
+Многие источники событий (включая элементы, документ и окно) также поддерживают установку [обработчиков событий](/ru/docs/Web/Guide/DOM/Events/Event_handlers) с помощью on`...` свойств и атрибутов.
 
-<h2 id="Methods">Методы</h2>
+## Методы
 
-<dl>
- <dt>{{domxref("EventTarget.addEventListener()")}}</dt>
- <dd>Регистрирует обработчик событий указанного типа на объекте.</dd>
- <dt>{{domxref("EventTarget.removeEventListener()")}}</dt>
- <dd>Удаляет обработчик события.</dd>
- <dt>{{domxref("EventTarget.dispatchEvent()")}}</dt>
- <dd>Генерирует событие на объекте <code>EventTarget</code>.</dd>
-</dl>
+- {{domxref("EventTarget.addEventListener()")}}
+  - : Регистрирует обработчик событий указанного типа на объекте.
+- {{domxref("EventTarget.removeEventListener()")}}
+  - : Удаляет обработчик события.
+- {{domxref("EventTarget.dispatchEvent()")}}
+  - : Генерирует событие на объекте `EventTarget`.
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#interface-eventtarget', 'EventTarget')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Без изменений.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events', 'DOM3-Events.html#interface-EventTarget', 'EventTarget')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>Несколько параметров теперь являются необязательными (<code>listener</code>), или принимают нулевое значение (<code>useCapture</code>).</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Events', 'events.html#Events-EventTarget', 'EventTarget')}}</td>
-   <td>{{Spec2('DOM2 Events')}}</td>
-   <td>Начальное определение.</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                                     | Статус                           | Комментарий                                                                                                       |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('DOM WHATWG', '#interface-eventtarget', 'EventTarget')}}                         | {{Spec2('DOM WHATWG')}} | Без изменений.                                                                                                    |
+| {{SpecName('DOM3 Events', 'DOM3-Events.html#interface-EventTarget', 'EventTarget')}} | {{Spec2('DOM3 Events')}} | Несколько параметров теперь являются необязательными (`listener`), или принимают нулевое значение (`useCapture`). |
+| {{SpecName('DOM2 Events', 'events.html#Events-EventTarget', 'EventTarget')}}             | {{Spec2('DOM2 Events')}} | Начальное определение.                                                                                            |
 
-<h2 id="Browser_Compatibility">Браузерная совместимость</h2>
+## Браузерная совместимость
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/Reference/Events" title="/en-US/docs/Web/Reference/Events">Event reference</a> - доступные события на платформе.</li>
- <li><a href="/en-US/docs/Web/Guide/DOM/Events" title="/en-US/docs/Web/Guide/DOM/Events">Event developer guide</a></li>
- <li>{{domxref("Event")}} interface</li>
-</ul>
+- [Event reference](/ru/docs/Web/Reference/Events) - доступные события на платформе.
+- [Event developer guide](/ru/docs/Web/Guide/DOM/Events)
+- {{domxref("Event")}} interface

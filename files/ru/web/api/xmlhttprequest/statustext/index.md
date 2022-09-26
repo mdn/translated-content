@@ -11,17 +11,16 @@ tags:
   - XMLHttpRequest Status
 translation_of: Web/API/XMLHttpRequest/statusText
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<div>
-<p>Свойство <code><strong>XMLHttpRequest.statusText</strong></code>, доступное только для чтения, возвращает строку <code>DOMString</code>, содержащую сообщение о состоянии ответа, возвращаемое HTTP-сервером. В отличие от <code>XMLHTTPRequest.status</code>, который указывает числовой код состояния, это свойство содержит текст состояния ответа, например «OK» или «Not Found». Если запрос <code>readyState </code>находится в состоянии <code>UNSENT </code>или <code>OPENED</code>, значением <code>statusText </code>будет пустая строка.</p>
+Свойство **`XMLHttpRequest.statusText`**, доступное только для чтения, возвращает строку `DOMString`, содержащую сообщение о состоянии ответа, возвращаемое HTTP-сервером. В отличие от `XMLHTTPRequest.status`, который указывает числовой код состояния, это свойство содержит текст состояния ответа, например «OK» или «Not Found». Если запрос `readyState `находится в состоянии `UNSENT `или `OPENED`, значением `statusText `будет пустая строка.
 
-<p>Если в ответе сервера явно не указан текст состояния, для <code>statusText </code>будет принято значение по умолчанию «ОК».</p>
-</div>
+Если в ответе сервера явно не указан текст состояния, для `statusText `будет принято значение по умолчанию «ОК».
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 console.log('0 UNSENT', xhr.statusText);
 
 xhr.open('GET', '/server', true);
@@ -45,18 +44,17 @@ xhr.send(null);
  * 3 LOADING OK
  * 4 DONE OK
  */
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_браузера">Совместимость браузера</h2>
-<p>{{Compat}}</p>
+## Совместимость браузера
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>Список <a href="/en-US/docs/Web/HTTP/Response_codes">HTTP response codes</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+## Смотрите также
+
+- Список [HTTP response codes](/ru/docs/Web/HTTP/Response_codes)
+- [HTTP](/ru/docs/Web/HTTP)

@@ -6,42 +6,41 @@ tags:
   - Экспериментально
 translation_of: Web/API/AbortSignal/aborted
 ---
-<div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
-<p>Свойство <strong><code>aborted</code></strong> только для чтения, оно возвращает {{domxref("Boolean")}}, который указывает прерван(<code>true</code>) DOM запрос(ы), с которым связан сигнал, или нет(<code>false</code>).</p>
+Свойство **`aborted`** только для чтения, оно возвращает {{domxref("Boolean")}}, который указывает прерван(`true`) DOM запрос(ы), с которым связан сигнал, или нет(`false`).
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">var isAborted = abortSignal.aborted;</pre>
+```js
+var isAborted = abortSignal.aborted;
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p>{{domxref("Boolean")}}</p>
+{{domxref("Boolean")}}
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>В следующем фрагменте мы создаём новый объект {{domxref("AbortController")}}, и получаем его {{domxref("AbortSignal")}} (доступно в свойстве <code>signal</code>). Позже мы проверяем, был ли прерван сигнал, используя свойство <code>aborted</code>, и выводим соответствующее сообщение в консоль.</p>
+В следующем фрагменте мы создаём новый объект {{domxref("AbortController")}}, и получаем его {{domxref("AbortSignal")}} (доступно в свойстве `signal`). Позже мы проверяем, был ли прерван сигнал, используя свойство `aborted`, и выводим соответствующее сообщение в консоль.
 
-<pre class="brush: js">var controller = new AbortController();
+```js
+var controller = new AbortController();
 var signal = controller.signal;
 
 // ...
 
 signal.aborted ? console.log('Запрос был отменён') : console.log('Запрос не отменён');
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
-</ul>
+- [Fetch API](/ru/docs/Web/API/Fetch_API)

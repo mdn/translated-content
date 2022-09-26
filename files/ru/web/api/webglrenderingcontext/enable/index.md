@@ -3,133 +3,70 @@ title: WebGLRenderingContext.enable()
 slug: Web/API/WebGLRenderingContext/enable
 translation_of: Web/API/WebGLRenderingContext/enable
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>Метод <strong><code>WebGLRenderingContext.enable()</code></strong> из <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> активирует определённые возможности WebGL для текущего контекста.</p>
+Метод **`WebGLRenderingContext.enable()`** из [WebGL API](/ru/docs/Web/API/WebGL_API) активирует определённые возможности WebGL для текущего контекста.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">void <var>gl</var>.enable(<var>cap</var>);
-</pre>
+```
+void gl.enable(cap);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>cap</code></dt>
- <dd><p>A {{domxref("GLenum")}} specifying which WebGL capability to enable. Possible values:</p>
- <table class="standard-table">
-  <thead>
-   <tr>
-    <th scope="col">Константа</th>
-    <th scope="col">Описание</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>gl.BLEND</code></td>
-    <td>Активирует смешение значений цветов вычисленного фрагмента. Смотри {{domxref("WebGLRenderingContext.blendFunc()")}}.</td>
-   </tr>
-   <tr>
-    <td><code>gl.CULL_FACE</code></td>
-    <td>Активирует отбраковку полигонов. Смотри {{domxref("WebGLRenderingContext.cullFace()")}}.</td>
-   </tr>
-   <tr>
-    <td><code>gl.DEPTH_TEST</code></td>
-    <td>Активирует сравнения глубин и обновления для буфера глубины. Смотри {{domxref("WebGLRenderingContext.depthFunc()")}}.</td>
-   </tr>
-   <tr>
-    <td><code>gl.DITHER</code></td>
-    <td>Activates dithering of color components before they get written to the color buffer.</td>
-   </tr>
-   <tr>
-    <td><code>gl.POLYGON_OFFSET_FILL</code></td>
-    <td>Activates adding an offset to depth values of polygon's fragments. See {{domxref("WebGLRenderingContext.polygonOffset()")}}.</td>
-   </tr>
-   <tr>
-    <td><code>gl.SAMPLE_ALPHA_TO_COVERAGE</code></td>
-    <td>Activates the computation of a temporary coverage value determined by the alpha value.</td>
-   </tr>
-   <tr>
-    <td><code>gl.SAMPLE_COVERAGE</code></td>
-    <td>Activates ANDing the fragment's coverage with the temporary coverage value. See {{domxref("WebGLRenderingContext.sampleCoverage()")}}.</td>
-   </tr>
-   <tr>
-    <td><code>gl.SCISSOR_TEST</code></td>
-    <td>Activates the scissor test that discards fragments that are outside of the scissor rectangle. See {{domxref("WebGLRenderingContext.scissor()")}}.</td>
-   </tr>
-   <tr>
-    <td><code>gl.STENCIL_TEST</code></td>
-    <td>Activates stencil testing and updates to the stencil buffer. See {{domxref("WebGLRenderingContext.stencilFunc()")}}.</td>
-   </tr>
-  </tbody>
- </table>
- <p>When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:</p>
+- `cap`
 
- <table class="standard-table">
-  <thead>
-   <tr>
-    <th scope="col">Constant</th>
-    <th scope="col">Description</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>gl.RASTERIZER_DISCARD</code></td>
-    <td>Primitives are discarded immediately before the rasterization stage, but after the optional transform feedback stage. <code>gl.clear()</code> commands are ignored.</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
-</dl>
+  - : A {{domxref("GLenum")}} specifying which WebGL capability to enable. Possible values:
 
-<h3 id="Return_value">Return value</h3>
+    | Константа                     | Описание                                                                                                                                                        |
+    | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `gl.BLEND`                    | Активирует смешение значений цветов вычисленного фрагмента. Смотри {{domxref("WebGLRenderingContext.blendFunc()")}}.                            |
+    | `gl.CULL_FACE`                | Активирует отбраковку полигонов. Смотри {{domxref("WebGLRenderingContext.cullFace()")}}.                                                       |
+    | `gl.DEPTH_TEST`               | Активирует сравнения глубин и обновления для буфера глубины. Смотри {{domxref("WebGLRenderingContext.depthFunc()")}}.                           |
+    | `gl.DITHER`                   | Activates dithering of color components before they get written to the color buffer.                                                                            |
+    | `gl.POLYGON_OFFSET_FILL`      | Activates adding an offset to depth values of polygon's fragments. See {{domxref("WebGLRenderingContext.polygonOffset()")}}.                    |
+    | `gl.SAMPLE_ALPHA_TO_COVERAGE` | Activates the computation of a temporary coverage value determined by the alpha value.                                                                          |
+    | `gl.SAMPLE_COVERAGE`          | Activates ANDing the fragment's coverage with the temporary coverage value. See {{domxref("WebGLRenderingContext.sampleCoverage()")}}.       |
+    | `gl.SCISSOR_TEST`             | Activates the scissor test that discards fragments that are outside of the scissor rectangle. See {{domxref("WebGLRenderingContext.scissor()")}}. |
+    | `gl.STENCIL_TEST`             | Activates stencil testing and updates to the stencil buffer. See {{domxref("WebGLRenderingContext.stencilFunc()")}}.                          |
 
-<p>None.</p>
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
 
-<h2 id="Examples">Examples</h2>
+    | Constant                | Description                                                                                                                                              |
+    | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `gl.RASTERIZER_DISCARD` | Primitives are discarded immediately before the rasterization stage, but after the optional transform feedback stage. `gl.clear()` commands are ignored. |
 
-<pre class="brush: js">gl.enable(gl.DITHER);
-</pre>
+### Return value
 
-<p>To check if a capability is enabled, use the {{domxref("WebGLRenderingContext.isEnabled()")}} method:</p>
+None.
 
-<pre class="brush: js">gl.isEnabled(gl.DITHER);
+## Examples
+
+```js
+gl.enable(gl.DITHER);
+```
+
+To check if a capability is enabled, use the {{domxref("WebGLRenderingContext.isEnabled()")}} method:
+
+```js
+gl.isEnabled(gl.DITHER);
 // true
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL', "#5.14.3", "enable")}}</td>
-   <td>{{Spec2('WebGL')}}</td>
-   <td>Initial definition for WebGL.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('OpenGL ES 2.0', "glEnable.xml", "glEnable")}}</td>
-   <td>{{Spec2('OpenGL ES 2.0')}}</td>
-   <td>Man page of the OpenGL ES 2.0 API.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('OpenGL ES 3.0', "glEnable.xhtml", "glEnable")}}</td>
-   <td>{{Spec2('OpenGL ES 3.0')}}</td>
-   <td>Man page of the OpenGL ES 3.0 API.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                    | Status                               | Comment                            |
+| -------------------------------------------------------------------------------- | ------------------------------------ | ---------------------------------- |
+| {{SpecName('WebGL', "#5.14.3", "enable")}}                         | {{Spec2('WebGL')}}             | Initial definition for WebGL.      |
+| {{SpecName('OpenGL ES 2.0', "glEnable.xml", "glEnable")}}     | {{Spec2('OpenGL ES 2.0')}} | Man page of the OpenGL ES 2.0 API. |
+| {{SpecName('OpenGL ES 3.0', "glEnable.xhtml", "glEnable")}} | {{Spec2('OpenGL ES 3.0')}} | Man page of the OpenGL ES 3.0 API. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.disable()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isEnabled()")}}</li>
-</ul>
+## See also
+
+- {{domxref("WebGLRenderingContext.disable()")}}
+- {{domxref("WebGLRenderingContext.isEnabled()")}}

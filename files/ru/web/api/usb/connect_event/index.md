@@ -12,20 +12,20 @@ tags:
 translation_of: Web/API/USB/onconnect
 original_slug: Web/API/USB/onconnect
 ---
-<p>{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}</p>
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-<p>Свойство <strong><code>onconnect</code></strong> интерфейса {{DOMxRef("USB")}} является обработчиком события, который вызывается всегда, когда сопряжённое устройство подключается.</p>
+Свойство **`onconnect`** интерфейса {{DOMxRef("USB")}} является обработчиком события, который вызывается всегда, когда сопряжённое устройство подключается.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>USB</em>.onconnect = <em>connectFunction</em></pre>
+```
+USB.onconnect = connectFunction
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

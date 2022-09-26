@@ -12,44 +12,44 @@ tags:
 translation_of: Web/API/XMLHttpRequest/onreadystatechange
 original_slug: Web/API/XMLHttpRequest/onreadystatechange
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventHandler" title="A possible way to get notified of Events of a particular type (such as click) for a given object is to specify an event handler using:"><code>Обработчик события (EventHandler)</code></a>, который вызывается всякий раз, когда изменяется состояние свойства <code>readyState</code>. Свойство <strong><code>XMLHttpRequest.onreadystatechange</code></strong> содержит обработчик события, вызываемый когда происходит событие {{event("readystatechange")}}, всякий раз  когда свойство {{domxref("XMLHttpRequest.readyState", "readyState")}} запроса {{domxref("XMLHttpRequest")}} изменяется. Колбэк-функция запускается из потока пользовательского интерфейса.</p>
+[`Обработчик события (EventHandler)`](/ru/docs/Web/API/EventHandler "A possible way to get notified of Events of a particular type (such as click) for a given object is to specify an event handler using:"), который вызывается всякий раз, когда изменяется состояние свойства `readyState`. Свойство **`XMLHttpRequest.onreadystatechange`** содержит обработчик события, вызываемый когда происходит событие {{event("readystatechange")}}, всякий раз когда свойство {{domxref("XMLHttpRequest.readyState", "readyState")}} запроса {{domxref("XMLHttpRequest")}} изменяется. Колбэк-функция запускается из потока пользовательского интерфейса.
 
-<div class="warning">
-<p><strong>Внимание:</strong> Не должно использоваться при синхронных запросах  и из исходного кода (native code).</p>
-</div>
+> **Предупреждение:** **Внимание:** Не должно использоваться при синхронных запросах и из исходного кода (native code).
 
-<p>Событие <code>readystatechange</code> не произойдёт если запрос <code>XMLHttpRequest</code> отменён методом <a href="/en-US/docs/Web/API/XMLHttpRequest/abort">abort()</a>.</p>
+Событие `readystatechange` не произойдёт если запрос `XMLHttpRequest` отменён методом [abort()](/ru/docs/Web/API/XMLHttpRequest/abort).
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>XMLHttpRequest</em>.onreadystatechange = <em>callback</em>;</pre>
+```
+XMLHttpRequest.onreadystatechange = callback;
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<ul>
- <li><code><em>callback</em></code> - это функция, которая будет вызываться при изменении свойства <code>readyState</code>.</li>
-</ul>
+- `callback` - это функция, которая будет вызываться при изменении свойства `readyState`.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush: js">var xhr = new XMLHttpRequest(),
+```js
+var xhr = new XMLHttpRequest(),
     method = "GET",
     url = "https://developer.mozilla.org/";
 
-xhr.open(<em>method</em>, <em>url</em>, true);
+xhr.open(method, url, true);
 xhr.onreadystatechange = function () {
-        if(xhr.readyState === XMLHttpRequest.DONE &amp;&amp; xhr.status === 200) {
+        if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
             console.log(xhr.responseText);
         };
     };
-xhr.send();</pre>
+xhr.send();
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+## Совместимость браузеров
 
-<p>{{Compat}}</p>
+{{Compat}}

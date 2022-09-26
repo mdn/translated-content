@@ -10,68 +10,61 @@ tags:
   - аудио
 translation_of: Web/API/MediaSource
 ---
-<p>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</p>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-<p><strong><code>MediaSource</code></strong> – это интерфейс <a href="/en-US/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions API</a> для предоставления интерактивного источника медиаданных объектам типа {{domxref("HTMLMediaElement")}}.</p>
+**`MediaSource`** – это интерфейс [Media Source Extensions API](/ru/docs/Web/API/Media_Source_Extensions_API) для предоставления интерактивного источника медиаданных объектам типа {{domxref("HTMLMediaElement")}}.
 
-<h2 id="Конструктор">Конструктор</h2>
+## Конструктор
 
-<dl>
- <dt>{{domxref("MediaSource.MediaSource", "MediaSource()")}}</dt>
- <dd>Создаёт и возвращает новый объект <code>MediaSource</code> не имеющий подключённых буферов данных.</dd>
-</dl>
+- {{domxref("MediaSource.MediaSource", "MediaSource()")}}
+  - : Создаёт и возвращает новый объект `MediaSource` не имеющий подключённых буферов данных.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Наследует свойства родительского интерфейса , {{domxref("EventTarget")}}.</em></p>
+_Наследует свойства родительского интерфейса , {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("MediaSource.sourceBuffers")}} {{readonlyInline}}</dt>
- <dd>Возвращает объект типа {{domxref("SourceBufferList")}}  содержащий список объектов типа {{domxref("SourceBuffer")}} , связанных непосредственно с текущим <code>MediaSource</code>.</dd>
- <dt>{{domxref("MediaSource.activeSourceBuffers")}} {{readonlyInline}}</dt>
- <dd>Возвращает объект типа {{domxref("SourceBufferList")}} содержащий подмножество объектов типа {{domxref("SourceBuffer")}} хранящих в себе другие объекты типа {{domxref("SourceBuffers")}} — список объектов, предоставляющих доступ к выбранному видео, доступным аудиодорожкам, текстовым данным и тд.</dd>
- <dt>{{domxref("MediaSource.readyState")}} {{readonlyInline}}</dt>
- <dd>Возвращает enum, отображающий состояние текущего <code>MediaSource-объекта</code>, будь то отсутствие подключения к медиа-элементу(<code>closed</code>), подключённый и готовый к передаче объектов типа {{domxref("SourceBuffer")}} (open), или подключённый, но с завершённым потоком {{domxref("MediaSource.endOfStream()")}} (<code>ended</code>.)</dd>
- <dt>{{domxref("MediaSource.duration")}}</dt>
- <dd>Возвращает или устанавливает продолжительность предоставляемых медиаданных.</dd>
-</dl>
+- {{domxref("MediaSource.sourceBuffers")}} {{readonlyInline}}
+  - : Возвращает объект типа {{domxref("SourceBufferList")}} содержащий список объектов типа {{domxref("SourceBuffer")}} , связанных непосредственно с текущим `MediaSource`.
+- {{domxref("MediaSource.activeSourceBuffers")}} {{readonlyInline}}
+  - : Возвращает объект типа {{domxref("SourceBufferList")}} содержащий подмножество объектов типа {{domxref("SourceBuffer")}} хранящих в себе другие объекты типа {{domxref("SourceBuffers")}} — список объектов, предоставляющих доступ к выбранному видео, доступным аудиодорожкам, текстовым данным и тд.
+- {{domxref("MediaSource.readyState")}} {{readonlyInline}}
+  - : Возвращает enum, отображающий состояние текущего `MediaSource-объекта`, будь то отсутствие подключения к медиа-элементу(`closed`), подключённый и готовый к передаче объектов типа {{domxref("SourceBuffer")}} (open), или подключённый, но с завершённым потоком {{domxref("MediaSource.endOfStream()")}} (`ended`.)
+- {{domxref("MediaSource.duration")}}
+  - : Возвращает или устанавливает продолжительность предоставляемых медиаданных.
 
-<dl>
-</dl>
+<!---->
 
-<dl>
-</dl>
+<!---->
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em>Наследует свойства родительского интерфейса, {{domxref("EventTarget")}}.</em></p>
+_Наследует свойства родительского интерфейса, {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("MediaSource.addSourceBuffer()")}}</dt>
- <dd>Создаёт новый объект типа {{domxref("SourceBuffer")}}, с указанным  MIME-типом и добавляет в список <code>MediaSource</code>'s {{domxref("SourceBuffers")}}.</dd>
- <dt>{{domxref("MediaSource.removeSourceBuffer()")}}</dt>
- <dd>Удаляет указанный {{domxref("SourceBuffer")}} из списка {{domxref("SourceBuffers")}}, связанного с текущим <code>MediaSource-объектом</code>.</dd>
- <dt>{{domxref("MediaSource.endOfStream()")}}</dt>
- <dd>Сигнализирует об окончании потока.</dd>
- <dt>
- <h2 id="Статичные_методы">Статичные методы</h2>
- </dt>
- <dt>{{domxref("MediaSource.isTypeSupported()")}}</dt>
- <dd>Возвращает значение {{domxref("Boolean")}}, поясняющее, поддерживается ли клиентом полученный MIME-тип  — если это так, то можно успешно создать объект типа {{domxref("SourceBuffer")}} для этого MIME-типа.</dd>
-</dl>
+- {{domxref("MediaSource.addSourceBuffer()")}}
+  - : Создаёт новый объект типа {{domxref("SourceBuffer")}}, с указанным MIME-типом и добавляет в список `MediaSource`'s {{domxref("SourceBuffers")}}.
+- {{domxref("MediaSource.removeSourceBuffer()")}}
+  - : Удаляет указанный {{domxref("SourceBuffer")}} из списка {{domxref("SourceBuffers")}}, связанного с текущим `MediaSource-объектом`.
+- {{domxref("MediaSource.endOfStream()")}}
+  - : Сигнализирует об окончании потока.
+- ## Статичные методы
 
-<h2 id="Примеры">Примеры</h2>
+  {{domxref("MediaSource.isTypeSupported()")}}
 
-<p>Нижеприведённый простой пример подгружает видео фрагмент за фрагментом так скоро, как может, воспроизводя их "как только так сразу". Этот пример был написан Nick Desaulniers и может быть <a href="http://nickdesaulniers.github.io/netfix/demo/bufferAll.html">просмотрен здесь в виде демо</a> (также вы можете <a href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">загрузить исходный код</a> для дальнейшего изучения.)</p>
+  - : Возвращает значение {{domxref("Boolean")}}, поясняющее, поддерживается ли клиентом полученный MIME-тип — если это так, то можно успешно создать объект типа {{domxref("SourceBuffer")}} для этого MIME-типа.
 
-<pre class="brush: js">var video = document.querySelector('video');
+## Примеры
+
+Нижеприведённый простой пример подгружает видео фрагмент за фрагментом так скоро, как может, воспроизводя их "как только так сразу". Этот пример был написан Nick Desaulniers и может быть [просмотрен здесь в виде демо](http://nickdesaulniers.github.io/netfix/demo/bufferAll.html) (также вы можете [загрузить исходный код](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) для дальнейшего изучения.)
+
+```js
+var video = document.querySelector('video');
 
 var assetURL = 'frag_bunny.mp4';
 // Need to be specific for Blink regarding codecs
 // ./mp4info frag_bunny.mp4 | grep Codec
 var mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 
-if ('MediaSource' in window &amp;&amp; MediaSource.isTypeSupported(mimeCodec)) {
+if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
   var mediaSource = new MediaSource();
   //console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
@@ -103,32 +96,20 @@ function fetchAB (url, cb) {
     cb(xhr.response);
   };
   xhr.send();
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Source Extensions', '#mediasource', 'MediaSource')}}</td>
-   <td>{{Spec2('Media Source Extensions')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                                           | Comment             |
+| -------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------- |
+| {{SpecName('Media Source Extensions', '#mediasource', 'MediaSource')}} | {{Spec2('Media Source Extensions')}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("SourceBuffer")}}</li>
- <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("SourceBuffer")}}
+- {{domxref("SourceBufferList")}}

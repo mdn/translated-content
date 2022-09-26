@@ -10,34 +10,31 @@ tags:
   - Экспериментальный
 translation_of: Web/API/Document/origin
 ---
-<div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
-<div> </div>
+**Document.origin —** это свойство, доступное только для чтения, которое возвращает **origin** документа. В большинстве случаев это свойство эквивалентно `document.defaultView.location.origin.`
 
-<p><strong>Document.origin — </strong>это свойство, доступное только для чтения, которое возвращает <strong>origin </strong>документа. В большинстве случаев это свойство эквивалентно  <code><strong>document.defaultView.location.origin</strong>.</code></p>
+## Примеры
 
-<h2 id="Примеры">Примеры</h2>
-
-<pre class="brush: js">var origin = document.origin;
+```js
+var origin = document.origin;
 // На этой странице вернёт:'https://developer.mozilla.org'
 
 var origin = document.origin;
 // Для "about:blank" вернёт:'null'
 
 var origin = document.origin;
-// Для "data:text/html,&lt;b&gt;foo&lt;/b&gt;" вернёт:'null'
-</pre>
+// Для "data:text/html,<b>foo</b>" вернёт:'null'
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Свойство {{domxref("URLUtils.origin")}}.</li>
-</ul>
+- Свойство {{domxref("URLUtils.origin")}}.

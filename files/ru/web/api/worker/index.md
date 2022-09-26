@@ -3,93 +3,72 @@ title: Worker
 slug: Web/API/Worker
 translation_of: Web/API/Worker
 ---
-<p>{{APIRef("Web Workers API")}}</p>
+{{APIRef("Web Workers API")}}
 
-<p>Интерфейс <strong><code>Worker</code></strong> из <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers API</a> является представителем фоновой задачи, которая легко может быть создана и может передавать сообщения обратно создателю. Создание worker  - это вызов конструктора <code>Worker()</code> и задание скрипта, выполняемого в потоке worker.</p>
+Интерфейс **`Worker`** из [Web Workers API](/ru/docs/Web/API/Web_Workers_API) является представителем фоновой задачи, которая легко может быть создана и может передавать сообщения обратно создателю. Создание worker - это вызов конструктора `Worker()` и задание скрипта, выполняемого в потоке worker.
 
-<p>Workers могут, в свою очередь, порождать новые workers, если эти workers расположены в одном каталоге с родительской страницей (Примечание: вложенные workers в настоящее время <a href="https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/5R3B4RN4GHU">не поддерживаются в Blink</a>).  Кроме того, workers могут использовать <a class="internal" href="/en/DOM/XMLHttpRequest" title="En/XMLHttpRequest"><code>XMLHttpRequest</code></a> для network I/O, при условии, что атрибуты <code>responseXML</code> и <code>channel</code> <code>XMLHttpRequest</code> всегда возвращают<code> null</code>.</p>
+Workers могут, в свою очередь, порождать новые workers, если эти workers расположены в одном каталоге с родительской страницей (Примечание: вложенные workers в настоящее время [не поддерживаются в Blink](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/5R3B4RN4GHU)). Кроме того, workers могут использовать [`XMLHttpRequest`](/en/DOM/XMLHttpRequest "En/XMLHttpRequest") для network I/O, при условии, что атрибуты `responseXML` и `channel` `XMLHttpRequest` всегда возвращают` null`.
 
-<p>Не <a href="/En/DOM/Worker/Functions_available_to_workers" title="En/DOM/Worker/Functions available to workers">все интерфейсы и функции могут быть использованы</a> в скрипте, ассоциированном с <code>Worker</code>.</p>
+Не [все интерфейсы и функции могут быть использованы](/En/DOM/Worker/Functions_available_to_workers "En/DOM/Worker/Functions available to workers") в скрипте, ассоциированном с `Worker`.
 
-<p>В Firefox, если вы хотите использовать workers в расширениях и хотели бы иметь доступ к <a href="/en/js-ctypes" title="en/js-ctypes">js-ctypes</a>, вам нужно использовать объект {{ domxref("ChromeWorker") }}.</p>
+В Firefox, если вы хотите использовать workers в расширениях и хотели бы иметь доступ к [js-ctypes](/en/js-ctypes "en/js-ctypes"), вам нужно использовать объект {{ domxref("ChromeWorker") }}.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Наследует свойства родителя, {{domxref("EventTarget")}}, и поддерживает свойства из {{domxref("AbstractWorker")}}.</em></p>
+_Наследует свойства родителя, {{domxref("EventTarget")}}, и поддерживает свойства из {{domxref("AbstractWorker")}}._
 
-<h3 id="Обработчики_событий">Обработчики событий</h3>
+### Обработчики событий
 
-<dl>
- <dt>{{domxref("AbstractWorker.onerror")}}</dt>
- <dd>{{ domxref("EventListener") }} вызываемый каждый раз, когда из воркера приходит {{domxref("ErrorEvent")}} с типом <code>error</code>. Это событие унаследовано от {{domxref("AbstractWorker")}}.</dd>
- <dt>{{domxref("Worker.onmessage")}}</dt>
- <dd>{{ domxref("EventListener") }} вызываемый каждый раз, когда из воркера приходит {{domxref("MessageEvent")}} с типом <code>message</code> — то есть когда сообщение было отправлено воркером в родительский документ с помощью {{domxref("DedicatedWorkerGlobalScope.postMessage")}}. Сообщение передаётся в свойстве объекта события {{domxref("MessageEvent.data", "data")}}.</dd>
-</dl>
+- {{domxref("AbstractWorker.onerror")}}
+  - : {{ domxref("EventListener") }} вызываемый каждый раз, когда из воркера приходит {{domxref("ErrorEvent")}} с типом `error`. Это событие унаследовано от {{domxref("AbstractWorker")}}.
+- {{domxref("Worker.onmessage")}}
+  - : {{ domxref("EventListener") }} вызываемый каждый раз, когда из воркера приходит {{domxref("MessageEvent")}} с типом `message` — то есть когда сообщение было отправлено воркером в родительский документ с помощью {{domxref("DedicatedWorkerGlobalScope.postMessage")}}. Сообщение передаётся в свойстве объекта события {{domxref("MessageEvent.data", "data")}}.
 
-<h2 id="Конструкторы">Конструкторы</h2>
+## Конструкторы
 
-<dl>
- <dt>{{domxref("Worker.Worker", "Worker()")}}</dt>
- <dd>Создаёт dedicated web worker, выполняющий скрипт, расположенный по указанному URL. Воркеры также могут быть созданы с использованием <a href="/en-US/docs/Web/API/Blob">Blobs</a>.</dd>
-</dl>
+- {{domxref("Worker.Worker", "Worker()")}}
+  - : Создаёт dedicated web worker, выполняющий скрипт, расположенный по указанному URL. Воркеры также могут быть созданы с использованием [Blobs](/ru/docs/Web/API/Blob).
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em>Наследует методы своего родителя, {{domxref("EventTarget")}}, а также реализует методы {{domxref("AbstractWorker")}}.</em></p>
+_Наследует методы своего родителя, {{domxref("EventTarget")}}, а также реализует методы {{domxref("AbstractWorker")}}._
 
-<dl>
- <dt>{{domxref("Worker.postMessage()")}}</dt>
- <dd>Отправляет сообщение — которое может являться <code>любым</code> JavaScript объектом — во внутреннюю область видимости воркера.</dd>
- <dt>{{domxref("Worker.terminate()")}}</dt>
- <dd>Немедленно завершает выполнение воркера. Не даёт воркеру возможности завершить выполняемые операции; просто сразу останавливается. Экземпляры ServiceWorker не поддерживают этот метод.</dd>
-</dl>
+- {{domxref("Worker.postMessage()")}}
+  - : Отправляет сообщение — которое может являться `любым` JavaScript объектом — во внутреннюю область видимости воркера.
+- {{domxref("Worker.terminate()")}}
+  - : Немедленно завершает выполнение воркера. Не даёт воркеру возможности завершить выполняемые операции; просто сразу останавливается. Экземпляры ServiceWorker не поддерживают этот метод.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Представленный фрагмент кода показывает создание объекта {{domxref("Worker")}} с помощью конструктора {{domxref("Worker.Worker", "Worker()")}}, а также его использование:</p>
+Представленный фрагмент кода показывает создание объекта {{domxref("Worker")}} с помощью конструктора {{domxref("Worker.Worker", "Worker()")}}, а также его использование:
 
-<pre class="brush: js">var myWorker = new Worker("worker.js");
+```js
+var myWorker = new Worker("worker.js");
 
 first.onchange = function() {
   myWorker.postMessage([first.value,second.value]);
   console.log('Message posted to worker');
-}</pre>
+}
+```
 
-<p>For a full example, see our<a class="external external-icon" href="https://github.com/mdn/simple-web-worker">Basic dedicated worker example</a> (<a class="external external-icon" href="http://mdn.github.io/simple-web-worker/">run dedicated worker</a>).</p>
+For a full example, see our[Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](http://mdn.github.io/simple-web-worker/)).
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#worker", "Worker")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change from {{SpecName("Web Workers")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Workers', "#worker", "Worker")}}</td>
-   <td>{{Spec2('Web Workers')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                    | Status                           | Comment                                              |
+| ---------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "#worker", "Worker")}} | {{Spec2('HTML WHATWG')}} | No change from {{SpecName("Web Workers")}}. |
+| {{SpecName('Web Workers', "#worker", "Worker")}} | {{Spec2('Web Workers')}} | Изначальное определение.                             |
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>Поддержка варьируется для разных видов воркеров. Для уточнения смотрите статьи по каждому типу воркеров.</p>
+Поддержка варьируется для разных видов воркеров. Для уточнения смотрите статьи по каждому типу воркеров.
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a class="internal" href="/En/Using_web_workers" title="en/Using DOM workers">Using web workers</a></li>
- <li><a href="/En/DOM/Worker/Functions_available_to_workers" title="https://developer.mozilla.org/En/DOM/Worker/Functions_available_to_workers">Functions available to workers</a></li>
- <li>Другие типы воркеров: {{ domxref("SharedWorker") }} и <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker</a>.</li>
- <li>Non-standard, Gecko-specific workers: {{ domxref("ChromeWorker") }}, used by extensions.</li>
-</ul>
+- [Using web workers](/En/Using_web_workers "en/Using DOM workers")
+- [Functions available to workers](/En/DOM/Worker/Functions_available_to_workers "https://developer.mozilla.org/En/DOM/Worker/Functions_available_to_workers")
+- Другие типы воркеров: {{ domxref("SharedWorker") }} и [ServiceWorker](/ru/docs/Web/API/ServiceWorker_API).
+- Non-standard, Gecko-specific workers: {{ domxref("ChromeWorker") }}, used by extensions.

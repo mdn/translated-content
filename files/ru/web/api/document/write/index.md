@@ -3,77 +3,74 @@ title: Document.write()
 slug: Web/API/Document/write
 translation_of: Web/API/Document/write
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<p>Пишет строку в поток документа, открытый с помощью <a href="/en-US/docs/Web/API/document.open">document.open()</a>.</p>
+Пишет строку в поток документа, открытый с помощью [document.open()](/ru/docs/Web/API/document.open).
 
-<div class="note">Замечание: поскольку <code>document.write</code> пишет строку в <strong>поток</strong> документа, вызов <code>document.write</code> для закрытого (но загруженного) документа автоматически вызовет <code>document.open</code>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/document.open#Notes">который очистит документ</a>.</div>
+> **Примечание:** Замечание: поскольку `document.write` пишет строку в **поток** документа, вызов `document.write` для закрытого (но загруженного) документа автоматически вызовет `document.open`, [который очистит документ](/ru/docs/Web/API/document.open#Notes).
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">document.write(<em>разметка</em>);
-</pre>
+```js
+document.write(разметка);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><em>разметка</em></dt>
- <dd>Строка, содержащая текст для записи в документ.</dd>
-</dl>
+- _разметка_
+  - : Строка, содержащая текст для записи в документ.
 
-<h3 id="Пример">Пример</h3>
+### Пример
 
-<pre class="brush: html">&lt;html&gt;
+```html
+<html>
 
-&lt;head&gt;
-  &lt;title&gt;write example&lt;/title&gt;
+<head>
+  <title>write example</title>
 
-  &lt;script&gt;
+  <script>
     function newContent() {
       alert("загрузка нового контента");
       document.open();
-      document.write("&lt;h1&gt;Долой старое, да здравствует новое!&lt;/h1&gt;");
+      document.write("<h1>Долой старое, да здравствует новое!</h1>");
       document.close();
     }
-  &lt;/script&gt;
-&lt;/head&gt;
+  </script>
+</head>
 
-&lt;body onload="newContent();"&gt;
-  &lt;p&gt;Какой-то оригинальный контент.&lt;/p&gt;
-&lt;/body&gt;
+<body onload="newContent();">
+  <p>Какой-то оригинальный контент.</p>
+</body>
 
-&lt;/html&gt;
-</pre>
+</html>
+```
 
-<h2 id="Замечания">Замечания</h2>
+## Замечания
 
-<p>Запись в документ, загруженный без вызова <code><a href="/en-US/docs/Web/API/document.open">document.open()</a>,</code> автоматически вызовет <code>document.open</code>. По окончании записи рекомендуется вызвать <code><a href="/en-US/docs/Web/API/document.close">document.close()</a>,</code> чтобы браузер  завершил загрузку страницы. Записываемый текст разбирается в структурную модель документа. В примере выше элемент <code>h1</code> становится узлом документа.</p>
+Запись в документ, загруженный без вызова `document.open(),` автоматически вызовет `document.open`. По окончании записи рекомендуется вызвать `document.close(),` чтобы браузер завершил загрузку страницы. Записываемый текст разбирается в структурную модель документа. В примере выше элемент `h1` становится узлом документа.
 
-<p>Если вызов <code>document.write()</code> производится во встроенном HTML теге <code>&lt;script&gt;</code> , вызов <code>document.open() не будет выполнен</code>. Например:</p>
+Если вызов `document.write()` производится во встроенном HTML теге `<script>` , вызов `document.open() не будет выполнен`. Например:
 
-<pre class="brush: html"><code>&lt;script&gt;
-  document.write("&lt;h1&gt;Основной заголовок&lt;/h1&gt;")
-&lt;/script&gt;</code>
-</pre>
+```html
+<script>
+  document.write("<h1>Основной заголовок</h1>")
+</script>
+```
 
-<div class="note"><strong>Замечание:</strong> <code>document.write</code> и <code>document.writeln</code> <a href="/en-US/docs/Archive/Web/Writing_JavaScript_for_HTML">не работают в XHTML документах</a> (выводится сообщение "Операция не поддерживается" [<code>NS_ERROR_DOM_NOT_SUPPORTED_ERR</code>] в консоли ошибок). Это случается при открытии локального файла с расширением .xhtml или для любых документов, обрабатываемых с <a href="/en-US/docs/Glossary/MIME_type">типом MIME</a> - <code>application/xhtml+xml</code> . Больше информации доступно по адресу <a class="external" href="http://www.w3.org/MarkUp/2004/xhtml-faq#docwrite">W3C XHTML FAQ</a>.</div>
+> **Примечание:** **Замечание:** `document.write` и `document.writeln` [не работают в XHTML документах](/ru/docs/Archive/Web/Writing_JavaScript_for_HTML) (выводится сообщение "Операция не поддерживается" \[`NS_ERROR_DOM_NOT_SUPPORTED_ERR`] в консоли ошибок). Это случается при открытии локального файла с расширением .xhtml или для любых документов, обрабатываемых с [типом MIME](/ru/docs/Glossary/MIME_type) - `application/xhtml+xml` . Больше информации доступно по адресу [W3C XHTML FAQ](http://www.w3.org/MarkUp/2004/xhtml-faq#docwrite).
 
-<div class="note"><strong>Замечание:</strong> <code>document.write</code> в <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-defer">отложенных</a> или <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-async">асинхронных</a> сценариях игнорируется и выводится сообщение типа "Проигнорирован вызов <code>document.write()</code> из асинхронно загруженного внешнего сценария" в консоли ошибок.</div>
+> **Примечание:** **Замечание:** `document.write` в [отложенных](/ru/docs/Web/HTML/Element/script#attr-defer) или [асинхронных](/ru/docs/Web/HTML/Element/script#attr-async) сценариях игнорируется и выводится сообщение типа "Проигнорирован вызов `document.write()` из асинхронно загруженного внешнего сценария" в консоли ошибок.
 
-<div class="note"><strong>Замечание:</strong> В Edge  вызов <code>document.write в </code>iframe более одного раза  приводит к ошибке SCRIPT70: Доступ запрещён.</div>
+> **Примечание:** **Замечание:** В Edge вызов `document.write в `iframe более одного раза приводит к ошибке SCRIPT70: Доступ запрещён.
 
-<div class="note"><strong>Замечание:</strong> Начиная с версии 55, Chrome не исполняет элементы <code>&lt;script&gt;</code>  вставленные посредством <code>document.write()</code> в случае отсутствия кеша HTTP для пользователей 2G подключения.</div>
+> **Примечание:** **Замечание:** Начиная с версии 55, Chrome не исполняет элементы `<script>` вставленные посредством `document.write()` в случае отсутствия кеша HTTP для пользователей 2G подключения.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-75233634">DOM Level 2 HTML: <code>write()</code> Method</a></li>
- <li><a class="external" href="http://www.w3.org/TR/2011/WD-html5-author-20110705/apis-in-html-documents.html#dynamic-markup-insertion">Dynamic markup insertion in HTML</a></li>
-</ul>
+- [DOM Level 2 HTML: `write()` Method](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-75233634)
+- [Dynamic markup insertion in HTML](http://www.w3.org/TR/2011/WD-html5-author-20110705/apis-in-html-documents.html#dynamic-markup-insertion)
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{ domxref("element.innerHTML") }}</li>
- <li>{{ domxref("document.createElement()") }}</li>
-</ul>
+- {{ domxref("element.innerHTML") }}
+- {{ domxref("document.createElement()") }}

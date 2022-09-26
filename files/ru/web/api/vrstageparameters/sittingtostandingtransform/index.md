@@ -5,35 +5,35 @@ tags:
   - Виртуальная реальность
 translation_of: Web/API/VRStageParameters/sittingToStandingTransform
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-<p>Постоянное свойство <strong><code>sittingToStandingTransform</code></strong> (read-only, только для чтения ) интерфейса {{domxref("VRStageParameters")}} содержит матрицу, которая преобразует матрицы горизонтального вида {{domxref("VRFrameData")}} в вертикальный.</p>
+Постоянное свойство **`sittingToStandingTransform`** (read-only, только для чтения ) интерфейса {{domxref("VRStageParameters")}} содержит матрицу, которая преобразует матрицы горизонтального вида {{domxref("VRFrameData")}} в вертикальный.
 
-<p>В основном, это может быть передано в ваш кроссплатформенный WebGL-код для преобразования визуализированного вида из горизонтального в вертикальный.</p>
+В основном, это может быть передано в ваш кроссплатформенный WebGL-код для преобразования визуализированного вида из горизонтального в вертикальный.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">var myTransform = vrStageParametersInstance.<code>sittingToStandingTransform</code>;</pre>
+```js
+var myTransform = vrStageParametersInstance.sittingToStandingTransform;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>16-значный элемент {{domxref ("Float32Array")}}, содержащий компоненты матрицы преобразования вида 4 × 4.</p>
+16-значный элемент {{domxref ("Float32Array")}}, содержащий компоненты матрицы преобразования вида 4 × 4.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>{{page("/Web/API/VRStageParameters", "Examples")}}</p>
+{{page("/Web/API/VRStageParameters", "Examples")}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Режим_совместимости_браузера">Режим совместимости браузера</h2>
+## Режим совместимости браузера
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Дополнительно">Дополнительно</h2>
+## Дополнительно
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
- <li><a href="http://mozvr.com/">MozVr.com</a> — демонстрационные, доступные для загрузки и другие материалы команды Mozilla VR team.</li>
-</ul>
+- [WebVR API homepage](/ru/docs/Web/API/WebVR_API)
+- [MozVr.com](http://mozvr.com/) — демонстрационные, доступные для загрузки и другие материалы команды Mozilla VR team.

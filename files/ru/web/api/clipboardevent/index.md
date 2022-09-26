@@ -10,40 +10,34 @@ tags:
   - Буфер обмена
 translation_of: Web/API/ClipboardEvent
 ---
-<p>{{APIRef("Clipboard API")}} {{SeeCompatTable}}</p>
+{{APIRef("Clipboard API")}} {{SeeCompatTable}}
 
-<p>Интерфейс <strong><code>ClipboardEvent</code></strong> представляет события, предоставляющие информацию,  связанную с изменением буфера обмена, этими события являются {{event("cut")}}, {{event("copy")}} и {{event("paste")}}.</p>
+Интерфейс **`ClipboardEvent`** представляет события, предоставляющие информацию, связанную с изменением буфера обмена, этими события являются {{event("cut")}}, {{event("copy")}} и {{event("paste")}}.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Интерфейс наследует свойства от родителя {{domxref("Event")}}</em>.</p>
+_Интерфейс наследует свойства от родителя {{domxref("Event")}}_.
 
-<dl>
- <dt>{{domxref("ClipboardEvent.clipboardData")}} {{readonlyInline}}</dt>
- <dd>Является {{domxref("DataTransfer")}} объектом, который содержит данные, полученные от совершения пользователем операции {{event("cut")}}, {{event("copy")}} или {{event("paste")}}, а также их MIME тип.</dd>
-</dl>
+- {{domxref("ClipboardEvent.clipboardData")}} {{readonlyInline}}
+  - : Является {{domxref("DataTransfer")}} объектом, который содержит данные, полученные от совершения пользователем операции {{event("cut")}}, {{event("copy")}} или {{event("paste")}}, а также их MIME тип.
 
-<h2 id="Конструктор">Конструктор</h2>
+## Конструктор
 
-<dl>
- <dt>{{domxref("ClipboardEvent.ClipboardEvent", "ClipboardEvent()")}}</dt>
- <dd>Создаёт <code>ClipboardEvent</code> событие с переданными параметрами.</dd>
-</dl>
+- {{domxref("ClipboardEvent.ClipboardEvent", "ClipboardEvent()")}}
+  - : Создаёт `ClipboardEvent` событие с переданными параметрами.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em>Нет специальных методов; Этот интерфейс наследует методы от своего родителя {{domxref("Event")}}</em>.</p>
+_Нет специальных методов; Этот интерфейс наследует методы от своего родителя {{domxref("Event")}}_.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+## Совместимость браузеров
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>События, связанные с копированием в буфер: {{event("copy")}}, {{event("cut")}}, {{event("paste")}}</li>
-</ul>
+- События, связанные с копированием в буфер: {{event("copy")}}, {{event("cut")}}, {{event("paste")}}

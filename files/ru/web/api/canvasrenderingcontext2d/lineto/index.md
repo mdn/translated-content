@@ -7,69 +7,73 @@ tags:
   - Method
 translation_of: Web/API/CanvasRenderingContext2D/lineTo
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>lineTo()</strong></code> - метод {{domxref("CanvasRenderingContext2D")}}, часть Canvas 2D API, добавляет линию к текущему под пути с конечной точкой с координатами <code>(x, y)</code>.</p>
+**`lineTo()`** - метод {{domxref("CanvasRenderingContext2D")}}, часть Canvas 2D API, добавляет линию к текущему под пути с конечной точкой с координатами `(x, y)`.
 
-<p>Сам метод ничего не рисует, он лишь добавляет подпуть к текущему пути, предоставляя его таким методам, как {{domxref("CanvasRenderingContext2D.fill", "fill()")}} и {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}}, отрисовывающим сам путь.</p>
+Сам метод ничего не рисует, он лишь добавляет подпуть к текущему пути, предоставляя его таким методам, как {{domxref("CanvasRenderingContext2D.fill", "fill()")}} и {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}}, отрисовывающим сам путь.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>ctx</em>.lineTo(<em>x</em>, <em>y</em>);
-</pre>
+```
+ctx.lineTo(x, y);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>x</code></dt>
- <dd>OX значение конца линии.</dd>
- <dt><code>y</code></dt>
- <dd>OY значение конца линии.</dd>
-</dl>
+- `x`
+  - : OX значение конца линии.
+- `y`
+  - : OY значение конца линии.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>{{jsxref("undefined")}}.</p>
+{{jsxref("undefined")}}.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Рисование_прямых_линий">Рисование прямых линий</h3>
+### Рисование прямых линий
 
-<p>Этот пример рисует прямую линию используя метод <code>lineTo()</code>.</p>
+Этот пример рисует прямую линию используя метод `lineTo()`.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<p>Линия начинается в точке (30, 50), а заканчивается в точке (150, 100).</p>
+Линия начинается в точке (30, 50), а заканчивается в точке (150, 100).
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.beginPath();       // Начинает новый путь
 ctx.moveTo(30, 50);    // Передвигает перо в точку (30, 50)
 ctx.lineTo(150, 100);  // Рисует линию до точки (150, 100)
-ctx.stroke();          // Отображает путь</pre>
+ctx.stroke();          // Отображает путь
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{ EmbedLiveSample('Рисование_прямых_линий', 700, 180) }}</p>
+{{ EmbedLiveSample('Рисование_прямых_линий', 700, 180) }}
 
-<h3 id="Рисование_соединённых_линий">Рисование соединённых линий</h3>
+### Рисование соединённых линий
 
-<p>Каждый вызов <code>lineTo()</code> автоматически добавляет текущий подпуть, это означает, что все линии будут обведены и закрашены вместе. Этот пример рисует букву 'M' линиями одного пути.</p>
+Каждый вызов `lineTo()` автоматически добавляет текущий подпуть, это означает, что все линии будут обведены и закрашены вместе. Этот пример рисует букву 'M' линиями одного пути.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.moveTo(90, 130);
@@ -78,26 +82,23 @@ ctx.lineTo(150, 80);
 ctx.lineTo(205, 25);
 ctx.lineTo(210, 130);
 ctx.lineWidth = 15;
-ctx.stroke();</pre>
+ctx.stroke();
+```
 
-<h4 id="Результаты">Результаты</h4>
+#### Результаты
 
-<p>{{ EmbedLiveSample('Рисование_соединённых_линий', 700, 180) }}</p>
+{{ EmbedLiveSample('Рисование_соединённых_линий', 700, 180) }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Интерфейс, определяющий этот метод: {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.moveTo()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.stroke()")}}</li>
-</ul>
+- Интерфейс, определяющий этот метод: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.moveTo()")}}
+- {{domxref("CanvasRenderingContext2D.stroke()")}}

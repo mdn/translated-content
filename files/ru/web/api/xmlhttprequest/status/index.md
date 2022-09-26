@@ -12,15 +12,16 @@ tags:
   - status
 translation_of: Web/API/XMLHttpRequest/status
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p>Доступное только для чтения свойство <code><strong>XMLHttpRequest.status</strong></code>, возвращает числовой <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">код состояния</a> HTTP ответа <code>XMLHttpRequest</code>.</p>
+Доступное только для чтения свойство **`XMLHttpRequest.status`**, возвращает числовой [код состояния](/ru/docs/Web/HTTP/Status) HTTP ответа `XMLHttpRequest`.
 
-<p>До завершения запроса значение <code>status</code> равно 0. Браузеры также сообщают о состоянии 0 в случае ошибок <code>XMLHttpRequest</code>.</p>
+До завершения запроса значение `status` равно 0. Браузеры также сообщают о состоянии 0 в случае ошибок `XMLHttpRequest`.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">var xhr = new XMLHttpRequest;
+```js
+var xhr = new XMLHttpRequest;
 console.log('UNSENT: ', xhr.status);
 
 xhr.open('GET', '/server');
@@ -44,18 +45,17 @@ xhr.send();
  * LOADING: 200
  * DONE: 200
  */
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_браузера">Совместимость браузера</h2>
-<p>{{Compat}}</p>
+## Совместимость браузера
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>Список <a href="/en-US/docs/Web/HTTP/Response_codes">HTTP response codes</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+## Смотрите также
+
+- Список [HTTP response codes](/ru/docs/Web/HTTP/Response_codes)
+- [HTTP](/ru/docs/Web/HTTP)

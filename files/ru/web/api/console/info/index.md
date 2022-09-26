@@ -6,42 +6,39 @@ tags:
   - Web Development
 translation_of: Web/API/Console/info
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>Выводит сообщения, содержащие некоторую информацию, в Веб-консоль.  В Firefox и Chrome, рядом с этими элементами в консоли отображается маленькая иконка "i".</p>
+Выводит сообщения, содержащие некоторую информацию, в Веб-консоль. В Firefox и Chrome, рядом с этими элементами в консоли отображается маленькая иконка "i".
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">console.info(<em>obj1</em> [, <em>obj2</em>, ..., <em>objN</em>]);
-console.info(<em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]);
-</pre>
+```
+console.info(obj1 [, obj2, ..., objN]);
+console.info(msg [, subst1, ..., substN]);
+```
 
-<h2 id="Параметры">Параметры</h2>
+## Параметры
 
-<dl>
- <dt><code>obj1</code> ... <code>objN</code></dt>
- <dd>Список объектов JavaScript, для вывода. Строковое представление каждого из них добавляется в указанном порядке вывода.</dd>
- <dt><code>msg</code></dt>
- <dd>Строка, содержащая 0 или более масок для замены.</dd>
- <dt><code>subst1</code> ... <code>substN</code></dt>
- <dd>Объекты JavaScript, которыми заменятся маски в строке <code>msg</code>. Так можно дополнительно контролировать формат вывода. Например, <code>console.info('Output %f', 234); </code>выведет в консоль: <code>Output 234.000000</code></dd>
-</dl>
+- `obj1` ... `objN`
+  - : Список объектов JavaScript, для вывода. Строковое представление каждого из них добавляется в указанном порядке вывода.
+- `msg`
+  - : Строка, содержащая 0 или более масок для замены.
+- `subst1` ... `substN`
+  - : Объекты JavaScript, которыми заменятся маски в строке `msg`. Так можно дополнительно контролировать формат вывода. Например, `console.info('Output %f', 234); `выведет в консоль: `Output 234.000000`
 
-<p>Смотрите <a href="/ru/docs/Web/API/console#Outputting_text_to_the_console">Вывод текста в консоль</a> в документации {{domxref("console")}} для получения подробностей.</p>
+Смотрите [Вывод текста в консоль](/ru/docs/Web/API/console#Outputting_text_to_the_console) в документации {{domxref("console")}} для получения подробностей.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a class="external" href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
- <li><a class="external" href="http://msdn.microsoft.com/library/gg589530">MSDN: Using the F12 Tools Console to View Errors and Status</a></li>
-</ul>
+- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)

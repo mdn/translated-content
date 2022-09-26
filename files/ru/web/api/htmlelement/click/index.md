@@ -3,37 +3,24 @@ title: HTMLElement.click()
 slug: Web/API/HTMLElement/click
 translation_of: Web/API/HTMLElement/click
 ---
-<div>
-<div>{{ APIRef("HTML DOM") }}</div>
-</div>
+{{ APIRef("HTML DOM") }}
 
-<p>Метод <code><strong>HTMLElement.click()</strong></code> имитирует клик мышкой по элементу.</p>
+Метод **`HTMLElement.click()`** имитирует клик мышкой по элементу.
 
-<p>Когда <code>click()</code> используется с поддерживающими его элементами (такими, например, как {{HTMLElement("input")}}), он вызывает срабатывание события клика мышкой. Это событие затем всплывает вверх по дереву элементов (или цепочке событий) и вызывает срабатывание уже их событий по клику мышкой.</p>
+Когда `click()` используется с поддерживающими его элементами (такими, например, как {{HTMLElement("input")}}), он вызывает срабатывание события клика мышкой. Это событие затем всплывает вверх по дереву элементов (или цепочке событий) и вызывает срабатывание уже их событий по клику мышкой.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>element</em>.click()</pre>
+```
+element.click()
+```
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-2651361')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                    | Status                       | Comment             |
+| ---------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('DOM2 HTML', 'html.html#ID-2651361')}} | {{Spec2('DOM2 HTML')}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

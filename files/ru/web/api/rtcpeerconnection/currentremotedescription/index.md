@@ -3,29 +3,30 @@ title: RTCPeerConnection.currentRemoteDescription
 slug: Web/API/RTCPeerConnection/currentRemoteDescription
 translation_of: Web/API/RTCPeerConnection/currentRemoteDescription
 ---
-<p>{{WebRTCSidebar}}</p>
+{{WebRTCSidebar}}
 
-<p>Только для чтения свойство <code><strong>RTCPeerConnection.currentRemoteDescription</strong></code> возвращает объект  {{domxref("RTCSessionDescription")}} , представляющий удалённую сторону соединения, как последний, успешно согласованный объект данных, с момента завершения согласования и установки соединения объектом {{domxref("RTCPeerConnection")}} с удалённым пиром. </p>
+Только для чтения свойство **`RTCPeerConnection.currentRemoteDescription`** возвращает объект {{domxref("RTCSessionDescription")}} , представляющий удалённую сторону соединения, как последний, успешно согласованный объект данных, с момента завершения согласования и установки соединения объектом {{domxref("RTCPeerConnection")}} с удалённым пиром.
 
-<p>Для изменения значения свойства <code>currentRemoteDescription</code>, вызовите метод {{domxref("RTCPeerConnection.setRemoteDescription()")}}, который запускает серию событий, приводящих к установке нового значения. Подробнее о том, что точно происходит и почему изменение значения не происходит немедленно, смотрите {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Ожидающие и текущие объекты описания")}}.</p>
+Для изменения значения свойства `currentRemoteDescription`, вызовите метод {{domxref("RTCPeerConnection.setRemoteDescription()")}}, который запускает серию событий, приводящих к установке нового значения. Подробнее о том, что точно происходит и почему изменение значения не происходит немедленно, смотрите {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Ожидающие и текущие объекты описания")}}.
 
-<div class="note">
-<p>В отличии от {{domxref("RTCPeerConnection.remoteDescription")}}, это значение действительный текущий статус соединения; <code>remoteDescription</code> может указывать на объект описания, на который соединение находиться в процессе перехода..</p>
-</div>
+> **Примечание:** В отличии от {{domxref("RTCPeerConnection.remoteDescription")}}, это значение действительный текущий статус соединения; `remoteDescription` может указывать на объект описания, на который соединение находиться в процессе перехода..
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>sessionDescription</em> = <em>RTCPeerConnection</em>.currentRemoteDescription;</pre>
+```
+sessionDescription = RTCPeerConnection.currentRemoteDescription;
+```
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Текущий объект описания, представляющий удалённую сторону соединения, если она присутствует. Если ни один объект описания не установлен, значением будет <code>null</code>.</p>
+Текущий объект описания, представляющий удалённую сторону соединения, если она присутствует. Если ни один объект описания не установлен, значением будет `null`.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Пример рассматривает свойство  <code>currentRemoteDescription</code> и отображает предупреждение, содержащее значения свойств  <code>type</code> и <code>sdp</code> ,объекта {{domxref("RTCSessionDescription")}}.</p>
+Пример рассматривает свойство `currentRemoteDescription` и отображает предупреждение, содержащее значения свойств `type` и `sdp` ,объекта {{domxref("RTCSessionDescription")}}.
 
-<pre class="brush: js">var pc = new RTCPeerConnection();
+```js
+var pc = new RTCPeerConnection();
 …
 var sd = pc.currentRemoteDescription;
 if (sd) {
@@ -36,22 +37,18 @@ if (sd) {
 else {
   alert("No local session yet.");
 }
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{domxref("RTCPeerConnection.setRemoteDescription()")}}, {{domxref("RTCPeerConnection.pendingRemoteDescription")}}, {{domxref("RTCPeerConnection.remoteDescription")}}</li>
- <li>{{domxref("RTCPeerConnection.setRemoteDescription()")}}, {{domxref("RTCPeerConnection.remoteDescription")}}, {{domxref("RTCPeerConnection.pendingRemoteDescription")}}, {{domxref("RTCPeerConnection.currentRemoteDescription")}}</li>
- <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
-</ul>
+- {{domxref("RTCPeerConnection.setRemoteDescription()")}}, {{domxref("RTCPeerConnection.pendingRemoteDescription")}}, {{domxref("RTCPeerConnection.remoteDescription")}}
+- {{domxref("RTCPeerConnection.setRemoteDescription()")}}, {{domxref("RTCPeerConnection.remoteDescription")}}, {{domxref("RTCPeerConnection.pendingRemoteDescription")}}, {{domxref("RTCPeerConnection.currentRemoteDescription")}}
+- [WebRTC](/ru/docs/Web/Guide/API/WebRTC)

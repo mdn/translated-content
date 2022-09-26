@@ -8,75 +8,78 @@ tags:
   - Холст
 translation_of: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 ---
-<div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}</div>
+{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}
 
-<div class="summary">
-<p>До сих пор мы не смотрели на фактические пиксели нашего объекта canvas (далее "холст"). С объектом <code>ImageData</code> вы можете напрямую читать и писать массив данных для управления пиксельными данными. Мы также рассмотрим, как можно сгладить сглаживание изображения (сглаживание) и как сохранить изображения с вашего холста.</p>
-</div>
+До сих пор мы не смотрели на фактические пиксели нашего объекта canvas (далее "холст"). С объектом `ImageData` вы можете напрямую читать и писать массив данных для управления пиксельными данными. Мы также рассмотрим, как можно сгладить сглаживание изображения (сглаживание) и как сохранить изображения с вашего холста.
 
-<h2 id="Объект_ImageData">Объект <code>ImageData</code></h2>
+## Объект `ImageData`
 
-<p>Объект {{domxref ("ImageData")}} представляет базовые пиксельные данные области объекта холста. Он содержит следующие атрибуты только для чтения:</p>
+Объект {{domxref ("ImageData")}} представляет базовые пиксельные данные области объекта холста. Он содержит следующие атрибуты только для чтения:
 
-<dl>
- <dt><code>width</code></dt>
- <dd>Ширина изображения в пикселях.</dd>
- <dt><code>height</code></dt>
- <dd>Высота изображения в пикселях.</dd>
- <dt><code>data</code></dt>
- <dd>A {{jsxref ("Uint8ClampedArray")}} представляет собой одномерный массив, содержащий данные в порядке RGBA, с целыми значениями от <code>0</code> до <code>255</code> (в комплекте).</dd>
-</dl>
+- `width`
+  - : Ширина изображения в пикселях.
+- `height`
+  - : Высота изображения в пикселях.
+- `data`
+  - : A {{jsxref ("Uint8ClampedArray")}} представляет собой одномерный массив, содержащий данные в порядке RGBA, с целыми значениями от `0` до `255` (в комплекте).
 
-<p>Свойство <code>data</code> возвращает {{jsxref ("Uint8ClampedArray")}}, к которому можно получить доступ, чтобы посмотреть на необработанные пиксельные данные; каждый пиксель представлен четырьмя однобайтовыми значениями (красный, зелёный, синий и альфа в этом порядке, то есть формат «RGBA»). Каждый компонент цвета представлен целым числом от 0 до 255. Каждому компоненту присваивается последовательный индекс внутри массива, причём красный компонент верхнего левого пикселя находится в индексе 0 внутри массива. Затем пиксели идут слева направо, затем вниз, по всему массиву.</p>
+Свойство `data` возвращает {{jsxref ("Uint8ClampedArray")}}, к которому можно получить доступ, чтобы посмотреть на необработанные пиксельные данные; каждый пиксель представлен четырьмя однобайтовыми значениями (красный, зелёный, синий и альфа в этом порядке, то есть формат «RGBA»). Каждый компонент цвета представлен целым числом от 0 до 255. Каждому компоненту присваивается последовательный индекс внутри массива, причём красный компонент верхнего левого пикселя находится в индексе 0 внутри массива. Затем пиксели идут слева направо, затем вниз, по всему массиву.
 
-<p>{{Jsxref ("Uint8ClampedArray")}} содержит высоту × ширину × 4 байта данных, значения индекса варьируются от 0 до (высота × ширина × 4) -1.</p>
+{{Jsxref ("Uint8ClampedArray")}} содержит высоту × ширину × 4 байта данных, значения индекса варьируются от 0 до (высота × ширина × 4) -1.
 
-<p>Например, чтобы прочитать значение синего компонента из пикселя в столбце 200, строка 50 на изображении, вы должны сделать следующее:</p>
+Например, чтобы прочитать значение синего компонента из пикселя в столбце 200, строка 50 на изображении, вы должны сделать следующее:
 
-<pre class="brush: js">blueComponent = imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 2];</pre>
+```js
+blueComponent = imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 2];
+```
 
-<p>Вы можете получить доступ к размеру массива пикселей в байтах, прочитав атрибут <code>Uint8ClampedArray.length</code>:</p>
+Вы можете получить доступ к размеру массива пикселей в байтах, прочитав атрибут `Uint8ClampedArray.length`:
 
-<pre class="brush: js">var numBytes = imageData.data.length;
-</pre>
+```js
+var numBytes = imageData.data.length;
+```
 
-<h2 id="Создание_объекта_ImageData">Создание объекта <code>ImageData</code></h2>
+## Создание объекта `ImageData`
 
-<p>Чтобы создать новый пустой объект <code>ImageData</code> , вы должны использовать метод {{domxref ("CanvasRenderingContext2D.createImageData", "createImageData ()")}}. Существуют две версии метода <code>createImageData()</code> :</p>
+Чтобы создать новый пустой объект `ImageData` , вы должны использовать метод {{domxref ("CanvasRenderingContext2D.createImageData", "createImageData ()")}}. Существуют две версии метода `createImageData()` :
 
-<pre class="brush: js">var myImageData = ctx.createImageData(width, height);</pre>
+```js
+var myImageData = ctx.createImageData(width, height);
+```
 
-<p>Это создаёт новый объект <code>ImageData</code> с указанными параметрами. Все пиксели заданы прозрачным черным.</p>
+Это создаёт новый объект `ImageData` с указанными параметрами. Все пиксели заданы прозрачным черным.
 
-<p>Вы также можете создать новый объект <code>ImageData</code> ImageData с теми же размерами, что и объект, заданный <code>anotherImageData</code> . Все пиксели нового объекта установлены на прозрачный чёрный. <strong>Это не копирует данные изображения!</strong></p>
+Вы также можете создать новый объект `ImageData` ImageData с теми же размерами, что и объект, заданный `anotherImageData` . Все пиксели нового объекта установлены на прозрачный чёрный. **Это не копирует данные изображения!**
 
-<pre class="brush: js">var myImageData = ctx.createImageData(anotherImageData);</pre>
+```js
+var myImageData = ctx.createImageData(anotherImageData);
+```
 
-<h2 id="Получение_пиксельных_данных_для_контекста">Получение пиксельных данных для контекста</h2>
+## Получение пиксельных данных для контекста
 
-<p>Чтобы получить объект <code>ImageData</code> , содержащий копию пиксельных данных для контекста холста, вы можете использовать метод <code>getImageData()</code> :</p>
+Чтобы получить объект `ImageData` , содержащий копию пиксельных данных для контекста холста, вы можете использовать метод `getImageData()` :
 
-<pre class="brush: js">var myImageData = ctx.getImageData(left, top, width, height);</pre>
+```js
+var myImageData = ctx.getImageData(left, top, width, height);
+```
 
-<p>Этот метод возвращает объект <code>ImageData</code> , представляющий пиксельные данные для области холста, углы которого представлены точками (<code>left</code> , <code>top</code>), (<code>left+width</code> , <code>top</code>), (<code>left</code> , <code>top+height</code>) и (<code>left+width</code> , <code>top+height</code>). Координаты задаются в единицах пространства координат холста.</p>
+Этот метод возвращает объект `ImageData` , представляющий пиксельные данные для области холста, углы которого представлены точками (`left` , `top`), (`left+width` , `top`), (`left` , `top+height`) и (`left+width` , `top+height`). Координаты задаются в единицах пространства координат холста.
 
-<div class="note">
-<p><strong>Примечание:</strong> Любые пиксели за пределами холста возвращаются как прозрачный чёрный цвет в результирующий объект <code>ImageData</code> .</p>
-</div>
+> **Примечание:** Любые пиксели за пределами холста возвращаются как прозрачный чёрный цвет в результирующий объект `ImageData` .
 
-<p>Этот метод также показан в статье <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas">Manipulating video using canvas</a>.</p>
+Этот метод также показан в статье [Manipulating video using canvas](/ru/docs/Web/API/Canvas_API/Manipulating_video_using_canvas).
 
-<h3 id="Выбор_цвета">Выбор цвета</h3>
+### Выбор цвета
 
-<p>В этом примере мы используем метод <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData">getImageData() </a> для отображения цвета под курсором мыши. Для этого нам нужна текущая позиция мыши с <code>layerX</code> и <code>layerY</code>, затем мы просматриваем пиксельные данные в этой позиции в массиве пикселей, который предоставляет нам <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData">getImageData() </a> . Наконец, мы используем данные массива для установки цвета фона и текста <code>&lt;div&gt;</code> для отображения цвета.</p>
+В этом примере мы используем метод [getImageData() ](/ru/docs/Web/API/CanvasRenderingContext2D/getImageData)для отображения цвета под курсором мыши. Для этого нам нужна текущая позиция мыши с `layerX` и `layerY`, затем мы просматриваем пиксельные данные в этой позиции в массиве пикселей, который предоставляет нам [getImageData() ](/ru/docs/Web/API/CanvasRenderingContext2D/getImageData). Наконец, мы используем данные массива для установки цвета фона и текста `<div>` для отображения цвета.
 
-<div class="hidden">
-<pre class="brush: html;">&lt;canvas id="canvas" width="300" height="227" style="float:left"&gt;&lt;/canvas&gt;
-&lt;div id="color" style="width:200px;height:50px;float:left"&gt;&lt;/div&gt;
-</pre>
-</div>
+```html hidden
+<canvas id="canvas" width="300" height="227" style="float:left"></canvas>
+<div id="color" style="width:200px;height:50px;float:left"></div>
+```
 
-<pre class="brush: js;">var img = new Image();
+```js
+var img = new Image();
 img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
@@ -96,38 +99,40 @@ function pick(event) {
   color.textContent = rgba;
 }
 canvas.addEventListener('mousemove', pick);
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Выбор_цвета', 610, 240) }}</p>
+{{ EmbedLiveSample('Выбор_цвета', 610, 240) }}
 
-<h2 id="Отображение_пиксельных_данных_в_контекст">Отображение пиксельных данных в контекст</h2>
+## Отображение пиксельных данных в контекст
 
-<p>Вы можете использовать метод <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/putImageData">putImageData()</a> для рисования пиксельных данных в контексте:</p>
+Вы можете использовать метод [putImageData()](/ru/docs/Web/API/CanvasRenderingContext2D/putImageData) для рисования пиксельных данных в контексте:
 
-<pre class="brush: js">ctx.putImageData(myImageData, dx, dy);
-</pre>
+```js
+ctx.putImageData(myImageData, dx, dy);
+```
 
-<p>Параметры <code>dx</code>и <code>dy</code>указывают координаты устройства в контексте, в котором будет отображаться верхний левый угол пиксельных данных, которые вы хотите нарисовать.</p>
+Параметры `dx`и `dy`указывают координаты устройства в контексте, в котором будет отображаться верхний левый угол пиксельных данных, которые вы хотите нарисовать.
 
-<p>Например, чтобы нарисовать все изображение, представленное <code>myImageData</code>, в верхнем левом углу контекста, вы можете просто сделать следующее:</p>
+Например, чтобы нарисовать все изображение, представленное `myImageData`, в верхнем левом углу контекста, вы можете просто сделать следующее:
 
-<pre class="brush: js">ctx.putImageData(myImageData, 0, 0);
-</pre>
+```js
+ctx.putImageData(myImageData, 0, 0);
+```
 
-<h3 id="Оттенки_серого_цвета_и_инвертирование_цветов">Оттенки серого цвета и инвертирование цветов</h3>
+### Оттенки серого цвета и инвертирование цветов
 
-<p>В этом примере мы перебираем все пиксели для изменения их значений, а затем помещаем модифицированный массив пикселей обратно в canvas с помощью <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/putImageData">putImageData()</a>. Функция инвертирования просто вычитает каждый цвет из максимального значения 255. Функция оттенков серого просто использует среднее значение красного, зелёного и синего. Вы также можете использовать средневзвешенное значение, заданное формулой <code>x = 0.299r + 0.587g + 0.114b</code>, например. Для дополнительной информации см. <a href="http://en.wikipedia.org/wiki/Grayscale">Grayscale</a> в Википедии.</p>
+В этом примере мы перебираем все пиксели для изменения их значений, а затем помещаем модифицированный массив пикселей обратно в canvas с помощью [putImageData()](/ru/docs/Web/API/CanvasRenderingContext2D/putImageData). Функция инвертирования просто вычитает каждый цвет из максимального значения 255. Функция оттенков серого просто использует среднее значение красного, зелёного и синего. Вы также можете использовать средневзвешенное значение, заданное формулой `x = 0.299r + 0.587g + 0.114b`, например. Для дополнительной информации см. [Grayscale](http://en.wikipedia.org/wiki/Grayscale) в Википедии.
 
-<div class="hidden">
-<pre class="brush: html;">&lt;canvas id="canvas" width="300" height="227"&gt;&lt;/canvas&gt;
-&lt;div&gt;
-  &lt;input id="grayscalebtn" value="Grayscale" type="button"&gt;
-  &lt;input id="invertbtn" value="Invert" type="button"&gt;
-&lt;/div&gt;
-</pre>
+```html hidden
+<canvas id="canvas" width="300" height="227"></canvas>
+<div>
+  <input id="grayscalebtn" value="Grayscale" type="button">
+  <input id="invertbtn" value="Invert" type="button">
 </div>
+```
 
-<pre class="brush: js">var img = new Image();
+```js
+var img = new Image();
 img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
 img.onload = function() {
   draw(this);
@@ -142,7 +147,7 @@ function draw(img) {
   var data = imageData.data;
 
   var invert = function() {
-    for (var i = 0; i &lt; data.length; i += 4) {
+    for (var i = 0; i < data.length; i += 4) {
       data[i]     = 255 - data[i];     // red
       data[i + 1] = 255 - data[i + 1]; // green
       data[i + 2] = 255 - data[i + 2]; // blue
@@ -151,7 +156,7 @@ function draw(img) {
   };
 
   var grayscale = function() {
-    for (var i = 0; i &lt; data.length; i += 4) {
+    for (var i = 0; i < data.length; i += 4) {
       var avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
       data[i]     = avg; // red
       data[i + 1] = avg; // green
@@ -165,35 +170,37 @@ function draw(img) {
   var grayscalebtn = document.getElementById('grayscalebtn');
   grayscalebtn.addEventListener('click', grayscale);
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Оттенки_серого_цвета_и_инвертирование_цветов', 330, 270) }}</p>
+{{ EmbedLiveSample('Оттенки_серого_цвета_и_инвертирование_цветов', 330, 270) }}
 
-<h2 id="Масштабирование_и_сглаживание">Масштабирование и сглаживание</h2>
+## Масштабирование и сглаживание
 
-<p>С помощью метода                                                             {{domxref ("CanvasRenderingContext2D.drawImage", "drawImage ()")}}, второго холста и свойства {{domxref ("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} мы способны увеличить изображение и посмотреть его более детально.</p>
+С помощью метода {{domxref ("CanvasRenderingContext2D.drawImage", "drawImage ()")}}, второго холста и свойства {{domxref ("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} мы способны увеличить изображение и посмотреть его более детально.
 
-<p>Мы получаем положение мыши и обрезаем изображение на 5 пикселей левее и выше и на 5 пикселей правее и ниже положения мыши. Затем мы копируем его на другой холст и изменяем размер изображения до размера, который мы хотим. При масштабировании мы изменяем холст с исходного размера 10×10 пикселей до 200×200.</p>
+Мы получаем положение мыши и обрезаем изображение на 5 пикселей левее и выше и на 5 пикселей правее и ниже положения мыши. Затем мы копируем его на другой холст и изменяем размер изображения до размера, который мы хотим. При масштабировании мы изменяем холст с исходного размера 10×10 пикселей до 200×200.
 
-<pre class="brush: js">zoomctx.drawImage(canvas,
+```js
+zoomctx.drawImage(canvas,
                   Math.abs(x - 5), Math.abs(y - 5),
-                  10, 10, 0, 0, 200, 200);</pre>
+                  10, 10, 0, 0, 200, 200);
+```
 
-<p>Поскольку по умолчанию включено сглаживание, мы можем захотеть отключить сглаживание, чтобы увидеть чёткие пиксели. Вы можете переключить флажок, чтобы увидеть эффект свойства <code>imageSmoothingEnabled</code> (которому нужны префиксы для разных браузеров).</p>
+Поскольку по умолчанию включено сглаживание, мы можем захотеть отключить сглаживание, чтобы увидеть чёткие пиксели. Вы можете переключить флажок, чтобы увидеть эффект свойства `imageSmoothingEnabled` (которому нужны префиксы для разных браузеров).
 
-<div class="hidden">
-<pre class="brush: html;">&lt;canvas id="canvas" width="300" height="227"&gt;&lt;/canvas&gt;
-&lt;canvas id="zoom" width="300" height="227"&gt;&lt;/canvas&gt;
-&lt;div&gt;
-&lt;label for="smoothbtn"&gt;
-  &lt;input type="checkbox" name="smoothbtn" checked="checked" id="smoothbtn"&gt;
+```html hidden
+<canvas id="canvas" width="300" height="227"></canvas>
+<canvas id="zoom" width="300" height="227"></canvas>
+<div>
+<label for="smoothbtn">
+  <input type="checkbox" name="smoothbtn" checked="checked" id="smoothbtn">
   Enable image smoothing
-&lt;/label&gt;
-&lt;/div&gt;
-</pre>
+</label>
 </div>
+```
 
-<pre class="brush: js">var img = new Image();
+```js
+var img = new Image();
 img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
 img.onload = function() {
   draw(this);
@@ -227,39 +234,35 @@ function draw(img) {
   };
 
   canvas.addEventListener('mousemove', zoom);
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Масштабирование_и_сглаживание', 620, 490) }}</p>
+{{ EmbedLiveSample('Масштабирование_и_сглаживание', 620, 490) }}
 
-<h2 id="Сохранение_изображений">Сохранение изображений</h2>
+## Сохранение изображений
 
-<p>{{Domxref ("HTMLCanvasElement")}} предоставляет метод <code>toDataURL()</code>, который полезен при сохранении изображений. Он возвращает <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/data_URIs">data URI</a>, содержащий представление изображения в формате, заданном параметром <code>type</code> (по умолчанию используется в <a class="external external-icon" href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a> ). Возвращаемое изображение имеет разрешение 96 точек на дюйм.</p>
+{{Domxref ("HTMLCanvasElement")}} предоставляет метод `toDataURL()`, который полезен при сохранении изображений. Он возвращает [data URI](/ru/docs/Web/HTTP/data_URIs), содержащий представление изображения в формате, заданном параметром `type` (по умолчанию используется в [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics) ). Возвращаемое изображение имеет разрешение 96 точек на дюйм.
 
-<dl>
- <dt><strong>Примечание:</strong> </dt>
- <dd>Имейте в виду, что если холст содержит пиксели, полученные из другого {{Glossary ("origin")}} без использования CORS, холст будет <strong>испорчен</strong>, и его содержимое больше не будет считываться и сохраняться. Смотрите {{SectionOnPage ("/en-US/docs/Web/HTML/CORS_enabled_image", "Безопасность и испорченные холсты")}}</dd>
- <dt></dt>
- <dt>{{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}</dt>
- <dd>Настройки по умолчанию. Создаёт изображение в формате PNG.</dd>
- <dt>{{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/jpeg', quality)")}}</dt>
- <dd>Создаёт изображение в формате JPG. Дополнительно вы можете задать параметр "качество" (quality) в диапазоне от 0 до 1, причём единица задаёт лучшее качество и 0 -  почти не распознаваемый, но небольшой по размеру файл.</dd>
-</dl>
+- **Примечание:**
+  - : Имейте в виду, что если холст содержит пиксели, полученные из другого {{Glossary ("origin")}} без использования CORS, холст будет **испорчен**, и его содержимое больше не будет считываться и сохраняться. Смотрите {{SectionOnPage ("/en-US/docs/Web/HTML/CORS_enabled_image", "Безопасность и испорченные холсты")}}
+- {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}
 
-<p>После того как вы создали URI данные из своего холста, вы можете использовать его как источник любого {{HTMLElement ("image")}} или поместить его в гиперссылку с <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-download">download attribute</a>, чтобы сохранить его на диске, например.</p>
+  - : Настройки по умолчанию. Создаёт изображение в формате PNG.
 
-<p>Вы также можете создать {{domxref ("Blob")}} из холста.</p>
+- {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/jpeg', quality)")}}
+  - : Создаёт изображение в формате JPG. Дополнительно вы можете задать параметр "качество" (quality) в диапазоне от 0 до 1, причём единица задаёт лучшее качество и 0 - почти не распознаваемый, но небольшой по размеру файл.
 
-<dl>
- <dt>{{domxref("HTMLCanvasElement.toBlob", "canvas.toBlob(callback, type, encoderOptions)")}}</dt>
- <dd>Создаёт объект <code>Blob</code>, представляющий изображение, содержащееся в холсте.</dd>
-</dl>
+После того как вы создали URI данные из своего холста, вы можете использовать его как источник любого {{HTMLElement ("image")}} или поместить его в гиперссылку с [download attribute](/ru/docs/Web/HTML/Element/a#attr-download), чтобы сохранить его на диске, например.
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+Вы также можете создать {{domxref ("Blob")}} из холста.
 
-<ul>
- <li>{{domxref("ImageData")}}</li>
- <li><a href="/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas">Manipulating video using canvas</a></li>
- <li><a href="https://codepo8.github.io/canvas-images-and-pixels/">Canvas, images and pixels – by Christian Heilmann</a></li>
-</ul>
+- {{domxref("HTMLCanvasElement.toBlob", "canvas.toBlob(callback, type, encoderOptions)")}}
+  - : Создаёт объект `Blob`, представляющий изображение, содержащееся в холсте.
 
-<p>{{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}</p>
+## Смотрите также
+
+- {{domxref("ImageData")}}
+- [Manipulating video using canvas](/ru/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
+- [Canvas, images and pixels – by Christian Heilmann](https://codepo8.github.io/canvas-images-and-pixels/)
+
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}

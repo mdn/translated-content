@@ -11,148 +11,117 @@ tags:
   - TopicStub
 translation_of: Web/API/Selection
 ---
-<div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
+{{ ApiRef("DOM") }}{{SeeCompatTable}}A **`Selection`** object represents the range of text selected by the user or the current position of the caret. To obtain a Selection object for examination or modification, call {{domxref("window.getSelection()")}}.
 
-<div>A <code><strong>Selection</strong></code> object represents the range of text selected by the user or the current position of the caret. To obtain a Selection object for examination or modification, call {{domxref("window.getSelection()")}}.</div>
+## Свойства
 
-<div> </div>
+- {{domxref("Selection.anchorNode")}}
+  - : Returns the {{domxref("Node")}} in which the selection begins.
+- {{domxref("Selection.anchorOffset")}}
+  - : Returns a number representing the offset of the selection's anchor within the anchorNode. If anchorNode is a text node, this is the number of characters within anchorNode preceding the anchor. If anchorNode is an element, this is the number of child nodes of the anchorNode preceding the anchor.
+- {{domxref("Selection.focusNode")}}
+  - : Returns the {{domxref("Node")}} in which the selection ends.
+- {{domxref("Selection.focusOffset")}}
+  - : Returns a number representing the offset of the selection's anchor within the focusNode. If focusNode is a text node, this is the number of characters within focusNode preceding the focus. If focusNode is an element, this is the number of child nodes of the focusNode preceding the focus.
+- {{domxref("Selection.isCollapsed")}}
+  - : Returns a Boolean indicating whether the selection's start and end points are at the same position.
+- {{domxref("Selection.rangeCount")}}
+  - : Returns the number of ranges in the selection.
 
-<h2 id="Properties">Свойства</h2>
+## Методы
 
-<dl>
- <dt>{{domxref("Selection.anchorNode")}}</dt>
- <dd>Returns the {{domxref("Node")}} in which the selection begins.</dd>
- <dt>{{domxref("Selection.anchorOffset")}}</dt>
- <dd>Returns a number representing the offset of the selection's anchor within the anchorNode. If anchorNode is a text node, this is the number of characters within anchorNode preceding the anchor. If anchorNode is an element, this is the number of child nodes of the anchorNode preceding the anchor.</dd>
- <dt>{{domxref("Selection.focusNode")}}</dt>
- <dd>Returns the {{domxref("Node")}} in which the selection ends.</dd>
- <dt>{{domxref("Selection.focusOffset")}}</dt>
- <dd>Returns a number representing the offset of the selection's anchor within the focusNode. If focusNode is a text node, this is the number of characters within focusNode preceding the focus. If focusNode is an element, this is the number of child nodes of the focusNode preceding the focus.</dd>
- <dt>{{domxref("Selection.isCollapsed")}}</dt>
- <dd>Returns a Boolean indicating whether the selection's start and end points are at the same position.</dd>
- <dt>{{domxref("Selection.rangeCount")}}</dt>
- <dd>Returns the number of ranges in the selection.</dd>
-</dl>
+- {{domxref("Selection.getRangeAt()")}}
+  - : Returns a {{domxref("Range")}} object representing one of the ranges currently selected.
+- {{domxref("Selection.collapse()")}}
+  - : Collapses the current selection to a single point.
+- {{domxref("Selection.extend()")}}
+  - : Moves the focus of the selection to a specified point.
+- {{domxref("Selection.modify()")}}{{non-standard_inline}}
+  - : Changes the current selection.
+- {{domxref("Selection.collapseToStart()")}}
+  - : Collapses the selection to the start of the first range in the selection.
+- {{domxref("Selection.collapseToEnd()")}}
+  - : Collapses the selection to the end of the last range in the selection.
+- {{domxref("Selection.selectAllChildren()")}}
+  - : Adds all the children of the specified node to the selection.
+- {{domxref("Selection.addRange()")}}
+  - : A {{domxref("Range")}} object that will be added to the selection.
+- {{domxref("Selection.removeRange()")}}
+  - : Removes a range from the selection.
+- {{domxref("Selection.removeAllRanges()")}}
+  - : Removes all ranges from the selection.
+- {{domxref("Selection.deleteFromDocument()")}}
+  - : Deletes the selection's content from the document.
+- {{domxref("Selection.toString()")}}
+  - : Returns a string currently being represented by the selection object, i.e. the currently selected text.
+- {{domxref("Selection.containsNode()")}}
+  - : Indicates if a certain node is part of the selection.
 
-<h2 id="Methods">Методы</h2>
+## Notes
 
-<dl>
- <dt>{{domxref("Selection.getRangeAt()")}}</dt>
- <dd>Returns a {{domxref("Range")}} object representing one of the ranges currently selected.</dd>
- <dt>{{domxref("Selection.collapse()")}}</dt>
- <dd>Collapses the current selection to a single point.</dd>
- <dt>{{domxref("Selection.extend()")}}</dt>
- <dd>Moves the focus of the selection to a specified point.</dd>
- <dt>{{domxref("Selection.modify()")}}{{non-standard_inline}}</dt>
- <dd>Changes the current selection.</dd>
- <dt>{{domxref("Selection.collapseToStart()")}}</dt>
- <dd>Collapses the selection to the start of the first range in the selection.</dd>
- <dt>{{domxref("Selection.collapseToEnd()")}}</dt>
- <dd>Collapses the selection to the end of the last range in the selection.</dd>
- <dt>{{domxref("Selection.selectAllChildren()")}}</dt>
- <dd>Adds all the children of the specified node to the selection.</dd>
- <dt>{{domxref("Selection.addRange()")}}</dt>
- <dd>A {{domxref("Range")}} object that will be added to the selection.</dd>
- <dt>{{domxref("Selection.removeRange()")}}</dt>
- <dd>Removes a range from the selection.</dd>
- <dt>{{domxref("Selection.removeAllRanges()")}}</dt>
- <dd>Removes all ranges from the selection.</dd>
- <dt>{{domxref("Selection.deleteFromDocument()")}}</dt>
- <dd>Deletes the selection's content from the document.</dd>
- <dt>{{domxref("Selection.toString()")}}</dt>
- <dd>Returns a string currently being represented by the selection object, i.e. the currently selected text.</dd>
- <dt>{{domxref("Selection.containsNode()")}}</dt>
- <dd>Indicates if a certain node is part of the selection.</dd>
-</dl>
+### String representation of a selection
 
-<h2 id="Notes">Notes</h2>
+Calling the {{domxref("Selection.toString()")}} method returns the text contained in the selection, e.g.:
 
-<h3 id="String_representation_of_a_selection">String representation of a selection</h3>
-
-<p>Calling the {{domxref("Selection.toString()")}} method returns the text contained in the selection, e.g.:</p>
-
-<pre class="brush: js">var selObj = window.getSelection();
+```js
+var selObj = window.getSelection();
 window.alert(selObj);
-</pre>
+```
 
-<p>Note that using a selection object as the argument to <code>window.alert</code> will call the object's <code>toString</code> method.</p>
+Note that using a selection object as the argument to `window.alert` will call the object's `toString` method.
 
-<h3 id="Multiple_ranges_in_a_selection">Multiple ranges in a selection</h3>
+### Multiple ranges in a selection
 
-<p>A selection object represents the {{domxref("range","ranges")}} that the user has selected. Typically, it holds only one range, accessed as follows:</p>
+A selection object represents the {{domxref("range","ranges")}} that the user has selected. Typically, it holds only one range, accessed as follows:
 
-<div style="overflow: hidden;">
-<pre class="brush:js">var selObj = window.getSelection();
-var range  = selObj.getRangeAt(0);</pre>
-</div>
+```js
+var selObj = window.getSelection();
+var range  = selObj.getRangeAt(0);
+```
 
-<ul>
- <li><code>selObj</code> is a Selection object</li>
- <li><code>range</code> is a {{domxref("Range")}} object</li>
-</ul>
+- `selObj` is a Selection object
+- `range` is a {{domxref("Range")}} object
 
-<p>As the <a href="http://www.w3.org/TR/selection-api/#h_note_15">Selection API specification notes</a>, the Selection API was initially created by Netscape and used multiple ranges, for instance, to allow the user to select a column from a {{HTMLElement("table")}}. However browsers other than Gecko did not implement multiple ranges, and the specification also requires the selection to always have a single range.</p>
+As the [Selection API specification notes](http://www.w3.org/TR/selection-api/#h_note_15), the Selection API was initially created by Netscape and used multiple ranges, for instance, to allow the user to select a column from a {{HTMLElement("table")}}. However browsers other than Gecko did not implement multiple ranges, and the specification also requires the selection to always have a single range.
 
-<h3 id="Selection_and_input_focus">Selection and input focus</h3>
+### Selection and input focus
 
-<p>Selection and input focus (indicated by {{domxref("Document.activeElement")}}) have a complex relation, that depends on the browser. In cross-browser compatible code it's better to handle them separately.</p>
+Selection and input focus (indicated by {{domxref("Document.activeElement")}}) have a complex relation, that depends on the browser. In cross-browser compatible code it's better to handle them separately.
 
-<p>Safari and Chrome (unlike Firefox) historically focus the element containing selection when modifying the selection programmatically, but this might change in the future (see <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383">W3C bug 14383</a> and {{webkitbug("38696")}}).</p>
+Safari and Chrome (unlike Firefox) historically focus the element containing selection when modifying the selection programmatically, but this might change in the future (see [W3C bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383) and {{webkitbug("38696")}}).
 
-<h3 id="Glossary">Glossary</h3>
+### Glossary
 
-<p>Other key terms used in this section.</p>
+Other key terms used in this section.
 
-<dl>
- <dt>anchor</dt>
- <dd>The anchor of a selection is the beginning point of the selection. When making a selection with a mouse, the anchor is where in the document the mouse button is initially pressed. As the user changes the selection using the mouse or the keyboard, the anchor does not move.</dd>
- <dt>focus of a selection</dt>
- <dd>The focus of a selection is the end point of the selection. When making a selection with a mouse, the focus is where in the document the mouse button is released. As the user changes the selection using the mouse or the keyboard, the focus is the end of the selection that moves.<strong> Note:</strong> This is not the same as the focused <em>element</em> of the document, as returned by {{domxref("document.activeElement")}}.</dd>
- <dt>range</dt>
- <dd>A range is a contiguous part of a document. A range can contain entire nodes as well as portions of nodes, such as a portion of a text node. A user will normally only select a single range at a time, but it's possible for a user to select multiple ranges (e.g. by using the Control key). A range can be retrieved from a selection as a {{domxref("range")}} object. Range objects can also be created via the DOM and programmatically added or removed from a selection.</dd>
-</dl>
+- anchor
+  - : The anchor of a selection is the beginning point of the selection. When making a selection with a mouse, the anchor is where in the document the mouse button is initially pressed. As the user changes the selection using the mouse or the keyboard, the anchor does not move.
+- focus of a selection
+  - : The focus of a selection is the end point of the selection. When making a selection with a mouse, the focus is where in the document the mouse button is released. As the user changes the selection using the mouse or the keyboard, the focus is the end of the selection that moves. **Note:** This is not the same as the focused _element_ of the document, as returned by {{domxref("document.activeElement")}}.
+- range
+  - : A range is a contiguous part of a document. A range can contain entire nodes as well as portions of nodes, such as a portion of a text node. A user will normally only select a single range at a time, but it's possible for a user to select multiple ranges (e.g. by using the Control key). A range can be retrieved from a selection as a {{domxref("range")}} object. Range objects can also be created via the DOM and programmatically added or removed from a selection.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML Editing', '#selection', 'Selection')}}</td>
-   <td>{{Spec2('HTML Editing')}}</td>
-   <td>Initial (older) definition</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Selection API', '#definition', 'Selection')}}</td>
-   <td>{{Spec2('Selection API')}}</td>
-   <td>The Selection API specification is based on the HTML Editing APIs specification and focuses on the Selection-related functionality.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                | Status                               | Comment                                                                                                                             |
+| ---------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML Editing', '#selection', 'Selection')}}     | {{Spec2('HTML Editing')}}     | Initial (older) definition                                                                                                          |
+| {{SpecName('Selection API', '#definition', 'Selection')}} | {{Spec2('Selection API')}} | The Selection API specification is based on the HTML Editing APIs specification and focuses on the Selection-related functionality. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("Window.getSelection")}}, {{domxref("Document.getSelection")}}, {{domxref("Range")}}</li>
- <li>HTML inputs provide simpler helper APIs for working with selection (see {{domxref("HTMLInputElement.setSelectionRange()")}})</li>
- <li>{{domxref("Document.activeElement")}}, {{domxref("HTMLElement.focus()")}}, and {{domxref("HTMLElement.blur()")}}</li>
-</ul>
+- {{domxref("Window.getSelection")}}, {{domxref("Document.getSelection")}}, {{domxref("Range")}}
+- HTML inputs provide simpler helper APIs for working with selection (see {{domxref("HTMLInputElement.setSelectionRange()")}})
+- {{domxref("Document.activeElement")}}, {{domxref("HTMLElement.focus()")}}, and {{domxref("HTMLElement.blur()")}}
 
-<h2 id="Gecko_notes">Gecko notes</h2>
+## Gecko notes
 
-<ul>
- <li>Gecko/Firefox provide additional features, available to chrome (internal and add-on) code only. These are defined in <code>nsISelectionPrivate</code>.</li>
- <li>Mozilla source code: {{source("dom/webidl/Selection.webidl")}}</li>
- <li>{{obsolete_inline("gecko29")}} {{domxref("Selection.selectionLanguageChange()")}} used to be exposed to the web content until Firefox 29</li>
-</ul>
+- Gecko/Firefox provide additional features, available to chrome (internal and add-on) code only. These are defined in `nsISelectionPrivate`.
+- Mozilla source code: {{source("dom/webidl/Selection.webidl")}}
+- {{obsolete_inline("gecko29")}} {{domxref("Selection.selectionLanguageChange()")}} used to be exposed to the web content until Firefox 29
 
-<dl>
-</dl>
+<!---->

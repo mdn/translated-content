@@ -9,46 +9,41 @@ tags:
   - Свойство
 translation_of: Web/API/Document/location
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>Доступное только для чтения свойство <strong><code>Document.location</code></strong> возвращает объект {{domxref("Location")}}, который содержит информацию о URL страницы и предоставляет методы для изменения этого URL и загрузки другого URL.</p>
+Доступное только для чтения свойство **`Document.location`** возвращает объект {{domxref("Location")}}, который содержит информацию о URL страницы и предоставляет методы для изменения этого URL и загрузки другого URL.
 
-<p>Хотя <code>Document.location</code> это <em>read-only</em> объект <code>Location</code>, вы всё же можете присвоить ему {{domxref("DOMString")}}. Это означает, что в большинстве случаев вы можете работать с document.location так, будто это строка: <code>document.location = 'http://www.example.com'</code> фактически то же, что и <code>document.location.href = 'http://www.example.com'</code>.</p>
+Хотя `Document.location` это _read-only_ объект `Location`, вы всё же можете присвоить ему {{domxref("DOMString")}}. Это означает, что в большинстве случаев вы можете работать с document.location так, будто это строка: `document.location = 'http://www.example.com'` фактически то же, что и `document.location.href = 'http://www.example.com'`.
 
-<p>Чтобы получить URL как строку, вы можете использовать <em>read-only</em> свойство {{domxref("document.URL")}}.</p>
+Чтобы получить URL как строку, вы можете использовать _read-only_ свойство {{domxref("document.URL")}}.
 
-<p>Если страница находится вне текущего контекста, вернётся <code>null</code>.</p>
+Если страница находится вне текущего контекста, вернётся `null`.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre><em>locationObj</em> = document.location
+```
+locationObj = document.location
 document.location = 'http://www.mozilla.org' // Эквиваленто след.
-document.location.href = 'http://www.mozilla.org'</pre>
+document.location.href = 'http://www.mozilla.org'
+```
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush: js">dump(document.location);
+```js
+dump(document.location);
 // Выведет строку
 // "http://www.example.com/juicybits.html" в консоли
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p> </p>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## Смотрите также
 
-<p> </p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Интерфейс возвращаемого значения, {{domxref("Location")}}.</li>
- <li>Похожая информация, но привязанная к контексту, {{domxref("Window.location")}}</li>
-</ul>
-
-<p> </p>
+- Интерфейс возвращаемого значения, {{domxref("Location")}}.
+- Похожая информация, но привязанная к контексту, {{domxref("Window.location")}}

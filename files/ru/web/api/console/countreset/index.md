@@ -3,55 +3,63 @@ title: Console.countReset()
 slug: Web/API/Console/countReset
 translation_of: Web/API/Console/countReset
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>Сбрасывает значение счётчика. Эта функция также принимает необязательный аргумент <code>label</code>.</p>
+Сбрасывает значение счётчика. Эта функция также принимает необязательный аргумент `label`.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p>Если аргумент <code>label</code> передан, то функция сбросит счётчик связанный с этим аргументом.</p>
+Если аргумент `label` передан, то функция сбросит счётчик связанный с этим аргументом.
 
-<p>Если значение <code>label</code> опущено, то функция сбросит счётчик, заданий по умолчанию.</p>
+Если значение `label` опущено, то функция сбросит счётчик, заданий по умолчанию.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">console.countReset([label]);
-</pre>
+```
+console.countReset([label]);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>label</code></dt>
- <dd>Строка.<br>
- Если аргумент label был передан, <code>countReset()</code> сбросит к 0 счётчик для этого label.<br>
- Если нет, <code>count()</code> сбросит к 0 счётчик, заданий по умолчанию.</dd>
-</dl>
+- `label`
+  - : Строка.
+    Если аргумент label был передан, `countReset()` сбросит к 0 счётчик для этого label.
+    Если нет, `count()` сбросит к 0 счётчик, заданий по умолчанию.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Если аргумент label был передан:</p>
+Если аргумент label был передан:
 
-<pre> counter-name: 0</pre>
+```
+ counter-name: 0
+```
 
-<p>Если аргумент label не был определён:</p>
+Если аргумент label не был определён:
 
-<pre>default: 0</pre>
+```
+default: 0
+```
 
-<h3 id="Исключения">Исключения</h3>
+### Исключения
 
-<p>Если аргумент <code>label</code> был передан, но такого счётчика не существует <code>countReset</code> вернёт предупреждение:</p>
+Если аргумент `label` был передан, но такого счётчика не существует `countReset` вернёт предупреждение:
 
-<pre><code>Counter "counter-name" doesn’t exist.</code></pre>
+```
+Counter "counter-name" doesn’t exist.
+```
 
-<p>Если аргумент <code>label</code> не был передан и <code>count()</code> не был вызван ранее, <code>countReset</code> вернёт предупреждение:</p>
+Если аргумент `label` не был передан и `count()` не был вызван ранее, `countReset` вернёт предупреждение:
 
-<pre><code>Counter "default" doesn’t exist.</code></pre>
+```
+Counter "default" doesn’t exist.
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Например, при таком коде:</p>
+Например, при таком коде:
 
-<pre class="brush: js">var user = "";
+```js
+var user = "";
 
 function greet() {
   console.count();
@@ -64,22 +72,25 @@ user = "alice";
 greet();
 greet();
 console.count();
-console.countReset();</pre>
+console.countReset();
+```
 
-<p>Вывод консоли будет примерно таким:</p>
+Вывод консоли будет примерно таким:
 
-<pre class="eval">"default: 1"
+```
+"default: 1"
 "default: 2"
 "default: 3"
 "default: 1"
 "default: 0"
-</pre>
+```
 
-<p>Заметьте, что вызов console.counterReset() сбросил до 0 значение счётчика заданного по умолчанию.</p>
+Заметьте, что вызов console.counterReset() сбросил до 0 значение счётчика заданного по умолчанию.
 
-<p>Если мы присвоим переменную <code>user</code> как аргумент <code>label</code> при первом вызове <code>count()</code>, и строку "alice" при втором:</p>
+Если мы присвоим переменную `user` как аргумент `label` при первом вызове `count()`, и строку "alice" при втором:
 
-<pre class="brush: js">var user = "";
+```js
+var user = "";
 
 function greet() {
   console.count(user);
@@ -92,24 +103,25 @@ user = "alice";
 greet();
 greet();
 console.countReset("bob");
-console.count("alice");</pre>
+console.count("alice");
+```
 
-<p>Вывод будет примерно таким:</p>
+Вывод будет примерно таким:
 
-<pre class="eval">"bob: 1"
+```
+"bob: 1"
 "alice: 1"
 "alice: 2"
 "bob: 0"
-"alice: 3"</pre>
+"alice: 3"
+```
 
-<p>Сброс счётчика "bob" изменил значение только этого счётчика. Значение счётчика "alice" осталось неизменно.</p>
+Сброс счётчика "bob" изменил значение только этого счётчика. Значение счётчика "alice" осталось неизменно.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

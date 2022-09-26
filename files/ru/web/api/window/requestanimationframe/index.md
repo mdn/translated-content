@@ -6,87 +6,70 @@ tags:
 translation_of: Web/API/window/requestAnimationFrame
 original_slug: DOM/window.requestAnimationFrame
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>window.requestAnimationFrame</strong></code> указывает браузеру на то, что вы хотите произвести анимацию, и просит его запланировать перерисовку на следующем кадре анимации. В качестве параметра метод получает функцию, которая будет вызвана перед перерисовкой.</p>
+**`window.requestAnimationFrame`** указывает браузеру на то, что вы хотите произвести анимацию, и просит его запланировать перерисовку на следующем кадре анимации. В качестве параметра метод получает функцию, которая будет вызвана перед перерисовкой.
 
-<div class="note"><strong>Примечание:</strong> Ваш callback метод сам должен вызвать <code>requestAnimationFrame()</code> иначе анимация остановится.</div>
+> **Примечание:** Ваш callback метод сам должен вызвать `requestAnimationFrame()` иначе анимация остановится.
 
-<p>Вы должны вызывать этот метод всякий раз, когда готовы обновить анимацию на экране, чтобы запросить планирование анимации. Обычно запросы происходят 60 раз в секунду, но чаще всего совпадают с частотой обновления экрана. В большинстве браузеров в фоновых вкладках или скрытых <code>&lt;iframe&gt;</code>, вызовы <code>requestAnimationFrame()</code> приостанавливаются, для того, чтобы повысить производительность и время работы батареи.</p>
+Вы должны вызывать этот метод всякий раз, когда готовы обновить анимацию на экране, чтобы запросить планирование анимации. Обычно запросы происходят 60 раз в секунду, но чаще всего совпадают с частотой обновления экрана. В большинстве браузеров в фоновых вкладках или скрытых `<iframe>`, вызовы `requestAnimationFrame()` приостанавливаются, для того, чтобы повысить производительность и время работы батареи.
 
-<p>Callback методу передаётся один аргумент, {{domxref("DOMHighResTimeStamp")}}, который содержит текущее время (количество миллисекунд, прошедших с момента <a href="/en-US/docs/Web/API/DOMHighResTimeStamp#The_time_origin">time origin</a>). Когда колбэки, отправленные в очередь с помощью <code>requestAnimationFrame()</code> начинают вызывать несколько колбэков в одном кадре, каждый получает одинаковый timestamp, хотя для вычисления каждого callback было затрачено время. Этот timestamp - десятичное число в миллисекундах, но с минимальной точностью в 1ms (1000 µs).</p>
+Callback методу передаётся один аргумент, {{domxref("DOMHighResTimeStamp")}}, который содержит текущее время (количество миллисекунд, прошедших с момента [time origin](/ru/docs/Web/API/DOMHighResTimeStamp#The_time_origin)). Когда колбэки, отправленные в очередь с помощью `requestAnimationFrame()` начинают вызывать несколько колбэков в одном кадре, каждый получает одинаковый timestamp, хотя для вычисления каждого callback было затрачено время. Этот timestamp - десятичное число в миллисекундах, но с минимальной точностью в 1ms (1000 µs).
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">window.requestAnimationFrame(callback);</pre>
+```js
+window.requestAnimationFrame(callback);
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>Функция, которая будет вызвана, когда придёт время обновить вашу анимацию на следующей перерисовке.</dd>
- <dt><code>element</code> {{ optional_inline() }}</dt>
- <dd>Необязательный параметр (не используется в Firefox или IE), определяющий элемент, который визуально содержит всю анимацию. Для canvas'а и WebGL'a им должен быть {{ HTMLElement("canvas") }}. Для других элементов вы можете опустить этот параметр для чуть лучшего пользовательского опыта.</dd>
-</dl>
+- `callback`
+  - : Функция, которая будет вызвана, когда придёт время обновить вашу анимацию на следующей перерисовке.
+- `element` {{ optional_inline() }}
+  - : Необязательный параметр (не используется в Firefox или IE), определяющий элемент, который визуально содержит всю анимацию. Для canvas'а и WebGL'a им должен быть {{ HTMLElement("canvas") }}. Для других элементов вы можете опустить этот параметр для чуть лучшего пользовательского опыта.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p><code>requestID</code> — длинное целое, являющееся уникальным идентификатором для записи, содержащей callback. Оно не равно нулю, но других предположений о его значении делать не следует. Вы можете передать его в {{ domxref("window.cancelAnimationFrame()") }} для отмены вызова.</p>
+`requestID` — длинное целое, являющееся уникальным идентификатором для записи, содержащей callback. Оно не равно нулю, но других предположений о его значении делать не следует. Вы можете передать его в {{ domxref("window.cancelAnimationFrame()") }} для отмены вызова.
 
-<h2 id="Notes">Пример</h2>
+## Пример
 
-<pre class="brush: js">var start = null;
+```js
+var start = null;
 var element = document.getElementById('SomeElementYouWantToAnimate');
 
 function step(timestamp) {
   if (!start) start = timestamp;
   var progress = timestamp - start;
   element.style.transform = 'translateX(' + Math.min(progress / 10, 200) + 'px)';
-  if (progress &lt; 2000) {
+  if (progress < 2000) {
     window.requestAnimationFrame(step);
   }
 }
 
-window.requestAnimationFrame(step);</pre>
+window.requestAnimationFrame(step);
+```
 
-<h2 id="Примечание">Примечание</h2>
+## Примечание
 
-<p>В Edge версиях младше 17 и в Internet Explorer не надёжно запускать <code>requestAnimationFrame</code> перед циклом рисования.</p>
+В Edge версиях младше 17 и в Internet Explorer не надёжно запускать `requestAnimationFrame` перед циклом рисования.
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#animation-frames', 'requestAnimationFrame')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Без изменений, заменяет предыдущую.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('RequestAnimationFrame', '#dom-windowanimationtiming-requestanimationframe', 'requestAnimationFrame')}}</td>
-   <td>{{Spec2('RequestAnimationFrame')}}</td>
-   <td>Первоначальное описание.</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                                                                             | Статус                                       | Комментарий                         |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ----------------------------------- |
+| {{SpecName('HTML WHATWG', '#animation-frames', 'requestAnimationFrame')}}                                                         | {{Spec2('HTML WHATWG')}}             | Без изменений, заменяет предыдущую. |
+| {{SpecName('RequestAnimationFrame', '#dom-windowanimationtiming-requestanimationframe', 'requestAnimationFrame')}} | {{Spec2('RequestAnimationFrame')}} | Первоначальное описание.            |
 
-<h2 id="Browser_compatibility">Браузерная совместимость</h2>
+## Браузерная совместимость
 
-<p id="Specification">{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{ domxref("window.mozAnimationStartTime") }}</li>
- <li>{{ domxref("window.cancelAnimationFrame()") }}</li>
- <li><a class="external" href="http://weblogs.mozillazine.org/roc/archives/2010/08/mozrequestanima.html">mozRequestAnimationFrame</a> - Blog post</li>
- <li><a class="external" href="http://paulirish.com/2011/requestanimationframe-for-smart-animating/">requestAnimationFrame for smart animating</a> - Blog post</li>
- <li><a class="external" href="http://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/">Animating with javascript: from setInterval to requestAnimationFrame</a> - Blog post</li>
-</ul>
+- {{ domxref("window.mozAnimationStartTime") }}
+- {{ domxref("window.cancelAnimationFrame()") }}
+- [mozRequestAnimationFrame](http://weblogs.mozillazine.org/roc/archives/2010/08/mozrequestanima.html) - Blog post
+- [requestAnimationFrame for smart animating](http://paulirish.com/2011/requestanimationframe-for-smart-animating/) - Blog post
+- [Animating with javascript: from setInterval to requestAnimationFrame](http://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) - Blog post

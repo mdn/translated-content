@@ -7,39 +7,38 @@ tags:
   - метод
 translation_of: Web/API/Element/hasAttribute
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><strong><code>Element.hasAttribute()</code></strong> метод возвращает {{Glossary("Boolean")}} значение указывающее, имеет ли указанный элемент указанный атрибут или нет.</p>
+**`Element.hasAttribute()`** метод возвращает {{Glossary("Boolean")}} значение указывающее, имеет ли указанный элемент указанный атрибут или нет.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>var <em>result</em></var> = <em><var>element</var></em>.hasAttribute(<em><var>attName</var></em>);
-</pre>
+```
+var result = element.hasAttribute(attName);
+```
 
-<ul>
- <li><code>Переменная result</code> хранит возвращённое значение <code>true</code> или <code>false</code>.</li>
- <li><code>attName</code> это  {{Glossary("String")}} представляющая имя атрибута.</li>
-</ul>
+- `Переменная result` хранит возвращённое значение `true` или `false`.
+- `attName` это {{Glossary("String")}} представляющая имя атрибута.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush:js">// проверка, существует ли атрибут, перед тем как задать значение
+```js
+// проверка, существует ли атрибут, перед тем как задать значение
 var d = document.getElementById("div1");
 
 if (d.hasAttribute("align")) {
   d.setAttribute("align", "center");
-}</pre>
+}
+```
 
-<h2 id="Замечания">Замечания</h2>
+## Замечания
 
-<div>{{DOMAttributeMethods}}</div>
+{{DOMAttributeMethods}}
 
-<div> </div>
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

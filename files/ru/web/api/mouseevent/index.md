@@ -10,112 +10,125 @@ tags:
   - Reference
 translation_of: Web/API/MouseEvent
 ---
-<p id="Summary">{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>Интерфейс <code><strong>MouseEvent</strong></code> представляет собой событие, которое происходит в результате взаимодействия пользователя с  манипулятором ( например, мышью). Наиболее частые из таких событий: {{event("click")}}, {{event("dblclick")}}, {{event("mouseup")}}, {{event("mousedown")}}.</p>
+Интерфейс **`MouseEvent`** представляет собой событие, которое происходит в результате взаимодействия пользователя с манипулятором ( например, мышью). Наиболее частые из таких событий: {{event("click")}}, {{event("dblclick")}}, {{event("mouseup")}}, {{event("mousedown")}}.
 
-<p><code>MouseEvent</code> выводится из метода {{domxref("UIEvent")}}, который в свою очередь происходит из метода {{domxref("Event")}}. Метод {{domxref("MouseEvent.initMouseEvent()")}} допустимо использовать для лучшей совместимости с предыдущими версиями, однако, для создания  <code>MouseEvent </code>рекомендуется использовать конструктор метода  {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}.</p>
+`MouseEvent` выводится из метода {{domxref("UIEvent")}}, который в свою очередь происходит из метода {{domxref("Event")}}. Метод {{domxref("MouseEvent.initMouseEvent()")}} допустимо использовать для лучшей совместимости с предыдущими версиями, однако, для создания `MouseEvent `рекомендуется использовать конструктор метода {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}.
 
-<p>Несколько более конкретные события, производные от события mouseevent: {{domxref("WheelEvent")}} and {{domxref("DragEvent")}}.</p>
+Несколько более конкретные события, производные от события mouseevent: {{domxref("WheelEvent")}} and {{domxref("DragEvent")}}.
 
-<h2 id="Конструктор">Конструктор</h2>
+## Конструктор
 
-<dl>
- <dt>{{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}</dt>
- <dd>Создаёт объект <code>MouseEvent</code>.</dd>
-</dl>
+- {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}
+  - : Создаёт объект `MouseEvent`.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Данный интерфейс наследует свойства от родителей {{domxref("UIEvent")}} и {{domxref("Event")}}.</em></p>
+_Данный интерфейс наследует свойства от родителей {{domxref("UIEvent")}} и {{domxref("Event")}}._
 
-<dl>
- <dt>{{domxref("MouseEvent.altKey")}} {{readonlyinline}}</dt>
- <dd>Возвращает значение <code>true,</code> если клавиша  <kbd>alt</kbd> была нажата во время движения мыши.</dd>
- <dt>{{domxref("MouseEvent.button")}} {{readonlyinline}}</dt>
- <dd>Представляет код клавиши, нажатой в то время, когда произошло событие мыши.</dd>
- <dt>{{domxref("MouseEvent.buttons")}} {{readonlyinline}} {{gecko_minversion_inline("15.0")}}</dt>
- <dd>
- <p>Отображает, какие клавиши были нажаты во время движения мыши.</p>
- </dd>
- <dt>{{domxref("MouseEvent.clientX")}} {{readonlyinline}}</dt>
- <dd>Отображение X координат курсора мыши в локальной системе координат (DOM контент).</dd>
- <dt>{{domxref("MouseEvent.clientY")}} {{readonlyinline}}</dt>
- <dd>Отображение Y координат курсора мыши в локальной системе координат (DOM контент).</dd>
- <dt>{{domxref("MouseEvent.ctrlKey")}} {{readonlyinline}}</dt>
- <dd>Возвращает значение <code>true,</code> если клавиша <kbd>control</kbd> была нажата во время движения мыши.</dd>
- <dt>{{domxref("MouseEvent.metaKey")}} {{readonlyinline}}</dt>
- <dd>Возвращает значение <code>true,</code> если клавиша <kbd>meta</kbd> была нажата во время движения мыши.</dd>
- <dt>{{domxref("MouseEvent.movementX")}} {{readonlyinline}}</dt>
- <dd>Отображает X координат указателя мыши относительно позиции последнего {{event("mousemove")}} события.</dd>
- <dt>{{domxref("MouseEvent.movementY")}} {{readonlyinline}}</dt>
- <dd>Отображает Y координат указателя мыши относительно позиции последнего {{event("mousemove")}} события.</dd>
- <dt>{{domxref("MouseEvent.offsetX")}} {{readonlyinline}}{{experimental_inline}}</dt>
- <dd>Отображает X координат указателя мыши относительно позиции границы отступа целевого узла.</dd>
- <dt>{{domxref("MouseEvent.offsetY")}} {{readonlyinline}}{{experimental_inline}}</dt>
- <dd>Отображает Y координат указателя мыши относительно позиции границы отступа целевого узла.</dd>
- <dt>{{domxref("MouseEvent.pageX")}} {{readonlyinline}}{{experimental_inline}}</dt>
- <dd>Отображает X координат указателя мыши относительно всего документа.</dd>
- <dt>{{domxref("MouseEvent.pageY")}} {{readonlyinline}}{{experimental_inline}}</dt>
- <dd>Отображает Y координат указателя мыши относительно всего документа.</dd>
- <dt>{{domxref("MouseEvent.region")}} {{readonlyinline}}</dt>
- <dd>Возвращает id затронутого событием региона. Если ни какой регион затронут не был, возвращает null.</dd>
- <dt>{{domxref("MouseEvent.relatedTarget")}} {{readonlyinline}}</dt>
- <dd>Второстепенная цель события, если таковая есть.</dd>
- <dt>{{domxref("MouseEvent.screenX")}} {{readonlyinline}}</dt>
- <dd>Отображает X координат указателя мыши в пространстве экрана.</dd>
- <dt>{{domxref("MouseEvent.screenY")}} {{readonlyinline}}</dt>
- <dd>Отображает Y координат указателя мыши в пространстве экрана.</dd>
- <dt>{{domxref("MouseEvent.shiftKey")}} {{readonlyinline}}</dt>
- <dd>Возвращает true если клавиша <kbd>shift</kbd> была нажата, когда произошло событие мыши.</dd>
- <dt>{{domxref("MouseEvent.which")}} {{non-standard_inline}} {{readonlyinline}}</dt>
- <dd>Возвращает код последней нажатой клавиши, когда произошло событие мыши.</dd>
- <dt>{{domxref("MouseEvent.mozPressure")}} {{non-standard_inline()}} {{readonlyinline}}</dt>
- <dd>Отображает давление которое было осуществлено при нажатии. Значение будет между <code>0.0</code> (минимальное давление) и <code>1.0</code> (максимальное давление).</dd>
- <dt>{{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{readonlyinline}}</dt>
- <dd>
- <p>The type of device that generated the event (one of the <code>MOZ_SOURCE_*</code> constants listed below). This lets you, for example, determine whether a mouse event was generated by an actual mouse or by a touch event (which might affect the degree of accuracy with which you interpret the coordinates associated with the event).</p>
- </dd>
- <dt>{{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{readonlyinline}}</dt>
- <dd>Отображает количество приложенного давления при клике.</dd>
- <dt>{{domxref("MouseEvent.x")}} {{experimental_inline}}{{readonlyinline}}</dt>
- <dd>Alias для {{domxref("MouseEvent.clientX")}}.</dd>
- <dt>{{domxref("MouseEvent.y")}} {{experimental_inline}}{{readonlyinline}}</dt>
- <dd>Alias для {{domxref("MouseEvent.clientY")}}</dd>
-</dl>
+- {{domxref("MouseEvent.altKey")}} {{readonlyinline}}
 
-<h2 id="Константы">Константы</h2>
+  - : Возвращает значение `true,` если клавиша&#x20;
 
-<dl>
- <dt>{{domxref("MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN")}} {{non-standard_inline}}{{readonlyinline}}</dt>
- <dd>Минимальная необходимая сила для обычного клика</dd>
- <dt>{{domxref("MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN")}} {{non-standard_inline}}{{readonlyinline}}</dt>
- <dd>Минимальная необходимая сила для усиленного клика</dd>
-</dl>
+    <kbd>alt</kbd>
 
-<h2 id="Методы">Методы</h2>
+    &#x20;была нажата во время движения мыши.
 
-<p><em>Данный интерфейс наследует свойства от родителей, {{domxref("UIEvent")}} and {{domxref("Event")}}.</em></p>
+- {{domxref("MouseEvent.button")}} {{readonlyinline}}
+  - : Представляет код клавиши, нажатой в то время, когда произошло событие мыши.
+- {{domxref("MouseEvent.buttons")}} {{readonlyinline}} {{gecko_minversion_inline("15.0")}}
+  - : Отображает, какие клавиши были нажаты во время движения мыши.
+- {{domxref("MouseEvent.clientX")}} {{readonlyinline}}
+  - : Отображение X координат курсора мыши в локальной системе координат (DOM контент).
+- {{domxref("MouseEvent.clientY")}} {{readonlyinline}}
+  - : Отображение Y координат курсора мыши в локальной системе координат (DOM контент).
+- {{domxref("MouseEvent.ctrlKey")}} {{readonlyinline}}
 
-<dl>
- <dt>{{domxref("MouseEvent.getModifierState()")}}</dt>
- <dd>Returns the current state of the specified modifier key. See the {{domxref("KeyboardEvent.getModifierState")}}() for details.</dd>
- <dt>{{domxref("MouseEvent.initMouseEvent()")}} {{deprecated_inline}}</dt>
- <dd>Initializes the value of a <code>MouseEvent</code> created. If the event has already being dispatched, this method does nothing.</dd>
-</dl>
+  - : Возвращает значение `true,` если клавиша&#x20;
 
-<h2 id="Пример">Пример</h2>
+    <kbd>control</kbd>
 
-<p>Данный пример демонстрирует симуляцию нажатия левой клавиши мыши (событие мыши генерируется программно) по чекбоксу используя методы DOM.</p>
+    &#x20;была нажата во время движения мыши.
 
-<pre class="brush: js">function simulateClick() {
-  var evt = new <a href="/en-US/docs/Web/API/MouseEvent">MouseEvent</a>("click", {
+- {{domxref("MouseEvent.metaKey")}} {{readonlyinline}}
+
+  - : Возвращает значение `true,` если клавиша&#x20;
+
+    <kbd>meta</kbd>
+
+    &#x20;была нажата во время движения мыши.
+
+- {{domxref("MouseEvent.movementX")}} {{readonlyinline}}
+  - : Отображает X координат указателя мыши относительно позиции последнего {{event("mousemove")}} события.
+- {{domxref("MouseEvent.movementY")}} {{readonlyinline}}
+  - : Отображает Y координат указателя мыши относительно позиции последнего {{event("mousemove")}} события.
+- {{domxref("MouseEvent.offsetX")}} {{readonlyinline}}{{experimental_inline}}
+  - : Отображает X координат указателя мыши относительно позиции границы отступа целевого узла.
+- {{domxref("MouseEvent.offsetY")}} {{readonlyinline}}{{experimental_inline}}
+  - : Отображает Y координат указателя мыши относительно позиции границы отступа целевого узла.
+- {{domxref("MouseEvent.pageX")}} {{readonlyinline}}{{experimental_inline}}
+  - : Отображает X координат указателя мыши относительно всего документа.
+- {{domxref("MouseEvent.pageY")}} {{readonlyinline}}{{experimental_inline}}
+  - : Отображает Y координат указателя мыши относительно всего документа.
+- {{domxref("MouseEvent.region")}} {{readonlyinline}}
+  - : Возвращает id затронутого событием региона. Если ни какой регион затронут не был, возвращает null.
+- {{domxref("MouseEvent.relatedTarget")}} {{readonlyinline}}
+  - : Второстепенная цель события, если таковая есть.
+- {{domxref("MouseEvent.screenX")}} {{readonlyinline}}
+  - : Отображает X координат указателя мыши в пространстве экрана.
+- {{domxref("MouseEvent.screenY")}} {{readonlyinline}}
+  - : Отображает Y координат указателя мыши в пространстве экрана.
+- {{domxref("MouseEvent.shiftKey")}} {{readonlyinline}}
+
+  - : Возвращает true если клавиша&#x20;
+
+    <kbd>shift</kbd>
+
+    &#x20;была нажата, когда произошло событие мыши.
+
+- {{domxref("MouseEvent.which")}} {{non-standard_inline}} {{readonlyinline}}
+  - : Возвращает код последней нажатой клавиши, когда произошло событие мыши.
+- {{domxref("MouseEvent.mozPressure")}} {{non-standard_inline()}} {{readonlyinline}}
+  - : Отображает давление которое было осуществлено при нажатии. Значение будет между `0.0` (минимальное давление) и `1.0` (максимальное давление).
+- {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{readonlyinline}}
+  - : The type of device that generated the event (one of the `MOZ_SOURCE_*` constants listed below). This lets you, for example, determine whether a mouse event was generated by an actual mouse or by a touch event (which might affect the degree of accuracy with which you interpret the coordinates associated with the event).
+- {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{readonlyinline}}
+  - : Отображает количество приложенного давления при клике.
+- {{domxref("MouseEvent.x")}} {{experimental_inline}}{{readonlyinline}}
+  - : Alias для {{domxref("MouseEvent.clientX")}}.
+- {{domxref("MouseEvent.y")}} {{experimental_inline}}{{readonlyinline}}
+  - : Alias для {{domxref("MouseEvent.clientY")}}
+
+## Константы
+
+- {{domxref("MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN")}} {{non-standard_inline}}{{readonlyinline}}
+  - : Минимальная необходимая сила для обычного клика
+- {{domxref("MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN")}} {{non-standard_inline}}{{readonlyinline}}
+  - : Минимальная необходимая сила для усиленного клика
+
+## Методы
+
+_Данный интерфейс наследует свойства от родителей, {{domxref("UIEvent")}} and {{domxref("Event")}}._
+
+- {{domxref("MouseEvent.getModifierState()")}}
+  - : Returns the current state of the specified modifier key. See the {{domxref("KeyboardEvent.getModifierState")}}() for details.
+- {{domxref("MouseEvent.initMouseEvent()")}} {{deprecated_inline}}
+  - : Initializes the value of a `MouseEvent` created. If the event has already being dispatched, this method does nothing.
+
+## Пример
+
+Данный пример демонстрирует симуляцию нажатия левой клавиши мыши (событие мыши генерируется программно) по чекбоксу используя методы DOM.
+
+```js
+function simulateClick() {
+  var evt = new MouseEvent("click", {
     bubbles: true,
     cancelable: true,
     view: window
   });
   var cb = document.getElementById("checkbox"); //element to click on
-  var canceled = !cb.<a href="/en-US/docs/Web/API/EventTarget.dispatchEvent" rel="internal" title="en/DOM/element.dispatchEvent">dispatchEvent</a>(evt);
+  var canceled = !cb.dispatchEvent(evt);
   if(canceled) {
     // A handler called preventDefault
     alert("canceled");
@@ -124,26 +137,26 @@ translation_of: Web/API/MouseEvent
     alert("not canceled");
   }
 }
-document.getElementById("button").addEventListener('click', simulateClick);</pre>
+document.getElementById("button").addEventListener('click', simulateClick);
+```
 
-<pre class="brush: html">&lt;p&gt;&lt;label&gt;&lt;input type="checkbox" id="checkbox"&gt; Checked&lt;/label&gt;
-&lt;p&gt;&lt;button id="button"&gt;Click me&lt;/button&gt;
-</pre>
+```html
+<p><label><input type="checkbox" id="checkbox"> Checked</label>
+<p><button id="button">Click me</button>
+```
 
-<p>Нажмите на кнопку, чтобы посмотреть, как работает пример.</p>
+Нажмите на кнопку, чтобы посмотреть, как работает пример.
 
-<p>{{ EmbedLiveSample('Пример', '', '', '') }}</p>
+{{ EmbedLiveSample('Пример', '', '', '') }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Посмотрите_также">Посмотрите также</h2>
+## Посмотрите также
 
-<ul>
- <li>Its direct parent, {{domxref("UIEvent")}}.</li>
-</ul>
+- Its direct parent, {{domxref("UIEvent")}}.

@@ -3,31 +3,30 @@ title: ServiceWorker.scriptURL
 slug: Web/API/ServiceWorker/scriptURL
 translation_of: Web/API/ServiceWorker/scriptURL
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>Возвращает URL, указывающий на скрипт данного Service Worker, определённый с помощью <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration" title="ServiceWorkerRegistion is an interface object representing the service worker registration. You register a service worker to control one or more pages that share the same origin."><code>ServiceWorkerRegistration</code></a>. URL должен находиться в том же домене, что и документ, регистрирующий <code>ServiceWorker</code>.</p>
+Возвращает URL, указывающий на скрипт данного Service Worker, определённый с помощью [`ServiceWorkerRegistration`](/ru/docs/Web/API/ServiceWorkerRegistration "ServiceWorkerRegistion is an interface object representing the service worker registration. You register a service worker to control one or more pages that share the same origin."). URL должен находиться в том же домене, что и документ, регистрирующий `ServiceWorker`.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">someURL = ServiceWorker.scriptURL
-</pre>
+```
+someURL = ServiceWorker.scriptURL
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p>{{domxref("USVString")}} (см. <a href="http://heycam.github.io/webidl/#idl-USVString">WebIDL-определение USVString</a>.)</p>
+{{domxref("USVString")}} (см. [WebIDL-определение USVString](http://heycam.github.io/webidl/#idl-USVString).)
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">TBD</pre>
+```js
+TBD
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_в_браузерах">Поддержка в браузерах</h2>
+## Поддержка в браузерах
 
-<div>
-
-
-<p>{{Compat}}</p>
-</div>
+{{Compat}}

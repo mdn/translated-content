@@ -7,64 +7,51 @@ tags:
   - Справка
 translation_of: Web/API/Storage/removeItem
 ---
-<p>{{APIRef("Web Storage API")}}</p>
+{{APIRef("Web Storage API")}}
 
-<p>Если методу <code>removeItem()</code> интерфейса {{domxref("Storage")}} передать ключ, то из хранилища будет удалён элемент с указанным ключом. </p>
+Если методу `removeItem()` интерфейса {{domxref("Storage")}} передать ключ, то из хранилища будет удалён элемент с указанным ключом.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>storage</em>.removeItem(<em>keyName</em>);</pre>
+```
+storage.removeItem(keyName);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><em><u>название Ключа</u></em></dt>
- <dd>{{domxref("DOMString")}} содержит в себе название ключа.</dd>
-</dl>
+- _**название Ключа**_
+  - : {{domxref("DOMString")}} содержит в себе название ключа.
 
-<h3 id="Возвращает">Возвращает</h3>
+### Возвращает
 
-<p><em>Метод не возвращает значений.</em></p>
+_Метод не возвращает значений._
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Следующая функция создаёт три элемента внутри локального хранилища и потом удаляет элемент с ключом <em>image</em>.</p>
+Следующая функция создаёт три элемента внутри локального хранилища и потом удаляет элемент с ключом _image_.
 
-<pre class="brush: js">function populateStorage() {
+```js
+function populateStorage() {
   localStorage.setItem('bgcolor', 'red');
   localStorage.setItem('font', 'Helvetica');
   localStorage.setItem('image', 'myCat.png');
 
   localStorage.removeItem('image');
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Примечание: </strong> чтобы увидеть использование этой функции на реальном примере, загляните в <a href="https://mdn.github.io/dom-examples/web-storage/">Web Storage Demo</a>.</p>
-</div>
+> **Примечание:**чтобы увидеть использование этой функции на реальном примере, загляните в [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
-<h2 id="Стандарты">Стандарты</h2>
+## Стандарты
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Стандарт</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Storage', '#dom-storage-removeitem', 'removeItem()')}}</td>
-   <td>{{Spec2('Web Storage')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Стандарт                                                                                     | Статус                           | Комментарий |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('Web Storage', '#dom-storage-removeitem', 'removeItem()')}} | {{Spec2('Web Storage')}} |             |
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<p><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a></p>
+[Using the Web Storage API](/ru/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

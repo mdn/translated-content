@@ -12,33 +12,33 @@ tags:
   - Узлы
 translation_of: Web/API/Node/nextSibling
 ---
-<div>
-<div>{{APIRef("DOM")}}</div>
-</div>
+{{APIRef("DOM")}}
 
-<p>Свойство <code><strong>Node.nextSibling</strong></code> используется только для чтения и возвращает узел, непосредственно следующий за данным узлом в списке  {{domxref("Node.childNodes","childNodes")}} его родительского элемента, или <code>null</code> если данный узел последний в этом списке.</p>
+Свойство **`Node.nextSibling`** используется только для чтения и возвращает узел, непосредственно следующий за данным узлом в списке {{domxref("Node.childNodes","childNodes")}} его родительского элемента, или `null` если данный узел последний в этом списке.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>nextNode</var> = <var>node</var>.nextSibling
-</pre>
+```
+nextNode = node.nextSibling
+```
 
-<h2 id="Notes">Примечания</h2>
+## Примечания
 
-<div><p>Браузеры, основанные на Gecko, вставляют текстовые узлы в документ для представления пробелов в разметке.
-    Поэтому узел, полученный, например, при использовании <a href="/ru/docs/Web/API/Node/firstChild" title="Свойство Node.firstChild только для чтения, возвращающее первый потомок узла в древе или null, если узел является бездетным. Если узел это документ, он возвращает первый узел в списке своих прямых детей."><code>Node.firstChild</code></a> или <a href="/ru/docs/Web/API/Node/previousSibling" title="Свойство Node.previousSibling используется только для чтения, оно возвращает узел предшедствующий указанному в родительском элементе childNodes, или null,  если указанный узел первый в своём родителе."><code>Node.previousSibling</code></a> может относиться к
-    пробелу, а не к тому элементу, который автор хотел получить.</p>
+Браузеры, основанные на Gecko, вставляют текстовые узлы в документ для представления пробелов в разметке.
+Поэтому узел, полученный, например, при использовании [`Node.firstChild`](/ru/docs/Web/API/Node/firstChild "Свойство Node.firstChild только для чтения, возвращающее первый потомок узла в древе или null, если узел является бездетным. Если узел это документ, он возвращает первый узел в списке своих прямых детей.") или [`Node.previousSibling`](/ru/docs/Web/API/Node/previousSibling "Свойство Node.previousSibling используется только для чтения, оно возвращает узел предшедствующий указанному в родительском элементе childNodes, или null,  если указанный узел первый в своём родителе.") может относиться к
+пробелу, а не к тому элементу, который автор хотел получить.
 
-    <p>Смотрите <a class="new" href="/ru/docs/Web/Guide/DOM/Whitespace_in_the_DOM" rel="nofollow">Пробел в DOM</a> и
-    <a class="external" href="http://www.w3.org/DOM/faq.html#emptytext" rel="noopener">W3C DOM 3 FAQ: Почему некоторые текстовые узлы пустые?</a>
-    для дополнительной информации.</p></div>
+Смотрите [Пробел в DOM](/ru/docs/Web/Guide/DOM/Whitespace_in_the_DOM) и
+[W3C DOM 3 FAQ: Почему некоторые текстовые узлы пустые?](http://www.w3.org/DOM/faq.html#emptytext)
+для дополнительной информации.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush:html">&lt;div id="div-01"&gt;Вот div-01&lt;/div&gt;
-&lt;div id="div-02"&gt;Вот div-02&lt;/div&gt;
+```html
+<div id="div-01">Вот div-01</div>
+<div id="div-02">Вот div-02</div>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 var el = document.getElementById('div-01').nextSibling,
     i = 1;
 
@@ -50,7 +50,7 @@ while (el) {
   i++;
 }
 
-&lt;/script&gt;
+</script>
 
 /**************************************************
   Следующий пример напишет в консоль:
@@ -63,21 +63,17 @@ while (el) {
       4. SCRIPT
 
 **************************************************/
-</pre>
+```
 
-<p>В приведённом выше примере вы можете видеть, что <code>#text</code> узлы вставляются в DOM, где между тегами встречаются пробелы (т.е. после закрывающего тега элемента и до открывающего тега рядом). Не создаётся пробелов между элементами, вставленных с помощью <code>document.write</code></p>
+В приведённом выше примере вы можете видеть, что `#text` узлы вставляются в DOM, где между тегами встречаются пробелы (т.е. после закрывающего тега элемента и до открывающего тега рядом). Не создаётся пробелов между элементами, вставленных с помощью `document.write`
 
-<p>Возможность включения текстовых узлов в DOM должна быть разрешена, когда DOM обходится с помощью <code>nextSibling</code>. Смотрите раздел "Примечания".</p>
+Возможность включения текстовых узлов в DOM должна быть разрешена, когда DOM обходится с помощью `nextSibling`. Смотрите раздел "Примечания".
 
-<h2 id="Specification">Спецификации</h2>
+## Спецификации
 
-<ul>
- <li><a href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-nextSibling">DOM Level 1 Core: nextSibling</a></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6AC54C2F">DOM Level 2 Core: nextSibling</a></li>
-</ul>
+- [DOM Level 1 Core: nextSibling](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-nextSibling)
+- [DOM Level 2 Core: nextSibling](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6AC54C2F)
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("Element.nextElementSibling")}}</li>
-</ul>
+- {{domxref("Element.nextElementSibling")}}

@@ -11,29 +11,26 @@ tags:
   - метод
 translation_of: Web/API/BroadcastChannel/postMessage
 ---
-<p>{{APIRef("BroadCastChannel API")}}</p>
+{{APIRef("BroadCastChannel API")}}
 
-<p><strong><code>BroadcastChannel.postMessage()</code></strong> отправляет сообщение, которое может быть любым {{jsxref("Object", "объектом")}}, каждому обработчику в {{glossary("browsing context", "контексте браузера")}} с тем же {{glossary("origin")}}. Сообщение передаётся в виде события {{event("message")}} к каждому <code>BroadcastChannel</code>, привязанному к данному каналу.</p>
+**`BroadcastChannel.postMessage()`** отправляет сообщение, которое может быть любым {{jsxref("Object", "объектом")}}, каждому обработчику в {{glossary("browsing context", "контексте браузера")}} с тем же {{glossary("origin")}}. Сообщение передаётся в виде события {{event("message")}} к каждому `BroadcastChannel`, привязанному к данному каналу.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <em>str</em> = <em>channe<code>l</code></em><code>.postMessage(<em>object</em>);</code>
-</pre>
+```
+var str = channel.postMessage(object);
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость">Совместимость</h2>
+## Совместимость
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{domxref("BroadcastChannel")}}, интерфейс, к которому относится <strong><code>postMessage</code></strong>.</li>
-</ul>
+- {{domxref("BroadcastChannel")}}, интерфейс, к которому относится **`postMessage`**.

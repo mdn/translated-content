@@ -3,39 +3,37 @@ title: PushManager.subscribe()
 slug: Web/API/PushManager/subscribe
 translation_of: Web/API/PushManager/subscribe
 ---
-<p>{{SeeCompatTable}}{{ApiRef("Push API")}}</p>
+{{SeeCompatTable}}{{ApiRef("Push API")}}
 
-<p>Метод <strong><code>subscribe()</code></strong></cod> интерфейса {{domxref("PushManager")}} позволяет осуществлять подписку на push-уведомления.</p>
+Метод **`subscribe()`** интерфейса {{domxref("PushManager")}} позволяет осуществлять подписку на push-уведомления.
 
-<p>Возвращает {{jsxref("Promise")}}, который разрешается в объект {{domxref("PushSubscription")}}, содержащий детали push-подписки. Новая push-подписка создаётся в случае, если сервис-воркер не имеет существующей подписки.</p>
+Возвращает {{jsxref("Promise")}}, который разрешается в объект {{domxref("PushSubscription")}}, содержащий детали push-подписки. Новая push-подписка создаётся в случае, если сервис-воркер не имеет существующей подписки.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">PushManager.subscribe(options).then(function(pushSubscription) { ... } );</pre>
+```
+PushManager.subscribe(options).then(function(pushSubscription) { ... } );
+```
 
-<h3 id="Свойства">Свойства</h3>
+### Свойства
 
-<dl>
- <dt><code>options {{optional_inline}}</code></dt>
- <dd>Объект, содержащий необязательные параметры конфигурации. Может иметь следующие свойства:
- <ul>
-  <li><code>userVisibleOnly</code>: Булевое значение, указывающее на то, будет ли возвращаемая подписка использоваться для сообщений, чей эффект может быть видим для пользователя.</li>
-  <li><code>applicationServerKey</code>: открытый ключ ECDSA P-256, закодированный в Base64 {{domxref ('DOMString')}} или {{domxref ('ArrayBuffer')}}}, содержащий , который push-сервер будет использовать для аутентификации сервера приложений. Если указано, все сообщения с сервера вашего приложения должны использовать схему аутентификации VAPID и включать JWT, подписанный соответствующим закрытым ключом. Этот ключ <strong><em>НЕ </em></strong>тот же ключ ECDH, который вы используете для шифрования данных. Для получения дополнительной информации см. «<a href="https://blog.mozilla.org/services/2016/04/04/using-vapid-with-webpush/">Using VAPID with WebPush</a>».</li>
- </ul>
+- `options {{optional_inline}}`
 
- <div class="note">
- <p><strong>Примечание: </strong>Свойство, требуемое некоторыми браузерами, например Chrome и Edge.</p>
- </div>
- </dd>
-</dl>
+  - : Объект, содержащий необязательные параметры конфигурации. Может иметь следующие свойства:
 
-<h3 id="Возвращает">Возвращает</h3>
+    - `userVisibleOnly`: Булевое значение, указывающее на то, будет ли возвращаемая подписка использоваться для сообщений, чей эффект может быть видим для пользователя.
+    - `applicationServerKey`: открытый ключ ECDSA P-256, закодированный в Base64 {{domxref ('DOMString')}} или {{domxref ('ArrayBuffer')}}}, содержащий , который push-сервер будет использовать для аутентификации сервера приложений. Если указано, все сообщения с сервера вашего приложения должны использовать схему аутентификации VAPID и включать JWT, подписанный соответствующим закрытым ключом. Этот ключ **_НЕ_ **тот же ключ ECDH, который вы используете для шифрования данных. Для получения дополнительной информации см. «[Using VAPID with WebPush](https://blog.mozilla.org/services/2016/04/04/using-vapid-with-webpush/)».
 
-<p>{{jsxref("Promise")}} который разрешается в объект {{domxref("PushSubscription")}}.</p>
+    > **Примечание:**Свойство, требуемое некоторыми браузерами, например Chrome и Edge.
 
-<h2 id="Пример">Пример</h2>
+### Возвращает
 
-<pre class="brush: js">this.onpush = function(event) {
+{{jsxref("Promise")}} который разрешается в объект {{domxref("PushSubscription")}}.
+
+## Пример
+
+```js
+this.onpush = function(event) {
   console.log(event.data);
   // Отсюда можно записывать данные в IndexedDB, отправлять их в любое
   // открытое окно, отображать уведомление и т. д.
@@ -57,19 +55,18 @@ navigator.serviceWorker.register('serviceworker.js').then(
         console.log(error);
       }
     );
-  });</pre>
+  });
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Push_API/Using_the_Push_API">Using the Push API</a></li>
- <li><a href="http://updates.html5rocks.com/2015/03/push-notificatons-on-the-open-web">Push Notifications on the Open Web</a>, Matt Gaunt</li>
-</ul>
+- [Using the Push API](/ru/docs/Web/API/Push_API/Using_the_Push_API)
+- [Push Notifications on the Open Web](http://updates.html5rocks.com/2015/03/push-notificatons-on-the-open-web), Matt Gaunt

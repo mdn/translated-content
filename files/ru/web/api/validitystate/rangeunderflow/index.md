@@ -9,30 +9,30 @@ tags:
   - Справочник
 browser-compat: api.ValidityState.rangeUnderflow
 ---
-<p>Доступное только для чтения свойство <strong><code>rangeUnderflow</code></strong> объекта <strong><code><a href="/ru/docs/Web/API/ValidityState">ValidityState</a></code></strong> указывает, соответствует ли значение {{HTMLElement("input")}} после изменения пользователем ограничениям, установленным атрибутом <code><a href="/en-US/docs/Web/HTML/Attributes/min">min</a></code>.</p>
+Доступное только для чтения свойство **`rangeUnderflow`** объекта **[`ValidityState`](/ru/docs/Web/API/ValidityState)** указывает, соответствует ли значение {{HTMLElement("input")}} после изменения пользователем ограничениям, установленным атрибутом [`min`](/en-US/docs/Web/HTML/Attributes/min).
 
-<p>Если поле является числовым, включая типы {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}}, {{HTMLElement("input/range", "range")}} и заданно значение атрибута <code>min</code>, если содержимое поля не соответствует ограничению атрибута <code><a href="/en-US/docs/Web/HTML/Attributes/step">min</a></code>, свойство <code>rangeUnderflow</code> будет true.</p>
+Если поле является числовым, включая типы {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}}, {{HTMLElement("input/range", "range")}} и заданно значение атрибута `min`, если содержимое поля не соответствует ограничению атрибута [`min`](/en-US/docs/Web/HTML/Attributes/step), свойство `rangeUnderflow` будет true.
 
-<p>Учитывая следующее:</p>
+Учитывая следующее:
 
-<pre class="brush: html">&lt;input type="number" min="20" max="40" step="2"/&gt;</pre>
+```html
+<input type="number" min="20" max="40" step="2"/>
+```
 
-<p>если <code>value &lt; 20</code>, <code>rangeUnderflow</code> будет true. Если <code>true</code>, элемент соответствует CSS-псевдоклассам {{cssxref(":invalid")}} и {{cssxref(":out-of-range")}}.</p>
+если `value < 20`, `rangeUnderflow` будет true. Если `true`, элемент соответствует CSS-псевдоклассам {{cssxref(":invalid")}} и {{cssxref(":out-of-range")}}.
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("ValidityState.rangeOverflow")}}</li>
- <li><a href="/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation">Валидация ограничений</a></li>
- <li><a href="/ru/docs/Learn/Forms/Form_validation">Валидация форм на стороне клиента</a></li>
- <li><a href="/en-US/docs/Web/HTML/Attributes/step">Атрибут <code>step</code></a></li>
- <li><a href="/en-US/docs/Web/HTML/Attributes/max">Атрибут <code>max</code></a></li>
-</ul>
+- {{domxref("ValidityState.rangeOverflow")}}
+- [Валидация ограничений](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [Валидация форм на стороне клиента](/ru/docs/Learn/Forms/Form_validation)
+- [Атрибут `step`](/ru/docs/Web/HTML/Attributes/step)
+- [Атрибут `max`](/ru/docs/Web/HTML/Attributes/max)

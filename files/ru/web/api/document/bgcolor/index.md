@@ -7,35 +7,33 @@ tags:
   - Property
 translation_of: Web/API/Document/bgColor
 ---
-<p>{{APIRef("DOM")}} {{ Deprecated_header() }}</p>
+{{APIRef("DOM")}} {{ Deprecated_header() }}
 
-<p>Устаревшее свойство <code>bgColor</code> возвращает или устанавливает цвет фона текущего документа.</p>
+Устаревшее свойство `bgColor` возвращает или устанавливает цвет фона текущего документа.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>color</em> = document.bgColor
-document.bgColor =<em>color</em>
-</pre>
+```
+color = document.bgColor
+document.bgColor =color
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<ul>
- <li><code>color</code> это строка представляющая цвет или в виде слова (например <code>red</code>) или шестнадцатеричного значения (т.е. "<code>#ff0000</code>").</li>
-</ul>
+- `color` это строка представляющая цвет или в виде слова (например `red`) или шестнадцатеричного значения (т.е. "`#ff0000`").
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="eval">document.bgColor = "darkblue";
-</pre>
+```
+document.bgColor = "darkblue";
+```
 
-<h2 id="Примечание">Примечание</h2>
+## Примечание
 
-<p>В Firefox это поле по умолчанию содержит белый цвет (<code>#ffffff</code> в шестнадцатеричном виде).</p>
+В Firefox это поле по умолчанию содержит белый цвет (`#ffffff` в шестнадцатеричном виде).
 
-<p><code>Поле document.bgColor</code> признано устаревшим в <a class="external" href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268">DOM Level 2 HTML</a>. В качестве альтернативы рекомендуется использовать CSS стиль {{Cssxref("background-color")}} который доступен через DOM как <code>document.body.style.backgroundColor</code>. Другой альтернативой доступа является <code>document.body.bgColor</code>, хотя этот вариант также признан устаревшим в HTML 4.01 и также рекомендуется использовать CSS.</p>
+`Поле document.bgColor` признано устаревшим в [DOM Level 2 HTML](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268). В качестве альтернативы рекомендуется использовать CSS стиль {{Cssxref("background-color")}} который доступен через DOM как `document.body.style.backgroundColor`. Другой альтернативой доступа является `document.body.bgColor`, хотя этот вариант также признан устаревшим в HTML 4.01 и также рекомендуется использовать CSS.
 
-<h2 id="Браузерная_поддержка">Браузерная поддержка</h2>
+## Браузерная поддержка
 
-<p>{{Compat}}</p>
-
-<p> </p>
+{{Compat}}

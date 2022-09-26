@@ -11,42 +11,39 @@ tags:
   - data
 translation_of: Web/API/Storage
 ---
-<p>{{APIRef("Web Storage API")}}</p>
+{{APIRef("Web Storage API")}}
 
-<p><code>Интерфейс Storage</code> из Web Storage API предоставляет доступ для session storage или local storage для конкретного домена, позволяя вам к примеру добавлять, изменять или удалять сохранённые элементы данных.</p>
+`Интерфейс Storage` из Web Storage API предоставляет доступ для session storage или local storage для конкретного домена, позволяя вам к примеру добавлять, изменять или удалять сохранённые элементы данных.
 
-<p>Если вы хотите управлять session storage для домена, вы вызываете {{domxref("Window.sessionStorage")}} метод; Если вы хотите управлять local storage домена, вы вызываете {{domxref("Window.localStorage")}}.</p>
+Если вы хотите управлять session storage для домена, вы вызываете {{domxref("Window.sessionStorage")}} метод; Если вы хотите управлять local storage домена, вы вызываете {{domxref("Window.localStorage")}}.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<dl>
- <dt>{{domxref("Storage.length")}} {{readonlyInline}}</dt>
- <dd>Возвращает число, представляющее количество элементов в объекте <code>Storage</code>.</dd>
-</dl>
+- {{domxref("Storage.length")}} {{readonlyInline}}
+  - : Возвращает число, представляющее количество элементов в объекте `Storage`.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<dl>
- <dt>{{domxref("Storage.key()")}}</dt>
- <dd>Приняв число n, метод вернёт имя n-ного ключа в Storage</dd>
-</dl>
+- {{domxref("Storage.key()")}}
+  - : Приняв число n, метод вернёт имя n-ного ключа в Storage
 
-<dl>
- <dt>{{domxref("Storage.getItem()")}}</dt>
- <dd>Приняв имя ключа, метод вернёт для него значение.</dd>
- <dt>{{domxref("Storage.setItem()")}}</dt>
- <dd>Приняв имя ключа и значение, метод добавит этот ключ в Storage или обновит его значение, если ключ уже существовал.</dd>
- <dt>{{domxref("Storage.removeItem()")}}</dt>
- <dd>Приняв имя ключа, метод удалит этот ключ из Storage</dd>
- <dt>{{domxref("Storage.clear()")}}</dt>
- <dd>При вызове метод удалит все ключи из Storage.</dd>
-</dl>
+<!---->
 
-<h2 id="Примеры">Примеры</h2>
+- {{domxref("Storage.getItem()")}}
+  - : Приняв имя ключа, метод вернёт для него значение.
+- {{domxref("Storage.setItem()")}}
+  - : Приняв имя ключа и значение, метод добавит этот ключ в Storage или обновит его значение, если ключ уже существовал.
+- {{domxref("Storage.removeItem()")}}
+  - : Приняв имя ключа, метод удалит этот ключ из Storage
+- {{domxref("Storage.clear()")}}
+  - : При вызове метод удалит все ключи из Storage.
 
-<p>В данном примере мы получаем доступ к объекту Storage вызывая localStorage. Для начала мы проверяем содержит ли local storage элементы данных используя <code>!localStorage.getItem('bgcolor')</code>. Если да, мы вызываем функцию <code>setStyles()</code> которая получает элементы данных используя {{domxref("localStorage.getItem()")}} и использует их значения для обновления стилей на странице. Если нет, мы вызывает другую функцию, <code>populateStorage()</code>, которая использует {{domxref("localStorage.setItem()")}} что бы установить значения для элементов,  потом вызываем <code>setStyles()</code>.</p>
+## Примеры
 
-<pre class="brush: js">if(!localStorage.getItem('bgcolor')) {
+В данном примере мы получаем доступ к объекту Storage вызывая localStorage. Для начала мы проверяем содержит ли local storage элементы данных используя `!localStorage.getItem('bgcolor')`. Если да, мы вызываем функцию `setStyles()` которая получает элементы данных используя {{domxref("localStorage.getItem()")}} и использует их значения для обновления стилей на странице. Если нет, мы вызывает другую функцию, `populateStorage()`, которая использует {{domxref("localStorage.setItem()")}} что бы установить значения для элементов, потом вызываем `setStyles()`.
+
+```js
+if(!localStorage.getItem('bgcolor')) {
   populateStorage();
 } else {
   setStyles();
@@ -72,20 +69,19 @@ function setStyles() {
   htmlElem.style.backgroundColor = '#' + currentColor;
   pElem.style.fontFamily = currentFont;
   imgElem.setAttribute('src', currentImage);
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Важно</strong>: Если хотите увидеть данный пример в работе, посмотрите наше <a href="https://mdn.github.io/dom-examples/web-storage/">Web Storage Demo</a>.</p>
-</div>
+> **Примечание:** **Важно**: Если хотите увидеть данный пример в работе, посмотрите наше [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<p><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Используя Web Storage API</a></p>
+[Используя Web Storage API](/ru/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

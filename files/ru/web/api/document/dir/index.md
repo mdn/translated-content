@@ -7,38 +7,30 @@ tags:
   - Property
 translation_of: Web/API/Document/dir
 ---
-<p>{{ApiRef("")}}</p>
+{{ApiRef("")}}
 
-<p>Свойство<strong> </strong><code><strong>Document.dir</strong></code> является строкой {{domxref("DOMString")}} показывает направление текста на странице (слева направо или справа налево).</p>
+Свойство** \*\***`Document.dir`\*\* является строкой {{domxref("DOMString")}} показывает направление текста на странице (слева направо или справа налево).
 
-<p><u>Возможные значения:</u></p>
+**Возможные значения:**
 
-<ul>
- <li><code>'ltr'</code> - слева направо</li>
- <li>
-  <p><code>'rtl'</code> - справа налево</p>
- </li>
-</ul>
+- `'ltr'` - слева направо
+- `'rtl'` - справа налево
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js"><em>dirStr</em> = <em>document.</em>dir;
-<em>document.dir</em> = <em>dirStr;</em></pre>
+```js
+dirStr = document.dir;
+document.dir = dirStr;
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p> </p>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## Связанные события
 
-<p> </p>
-
-<h2 id="Связанные_события">Связанные события</h2>
-
-<ul>
- <li><a class="external" href="http://msdn.microsoft.com/en-us/library/ms533731.aspx" rel="freelink">http://msdn.microsoft.com/en-us/library/ms533731.aspx</a></li>
-</ul>
+- <http://msdn.microsoft.com/en-us/library/ms533731.aspx>

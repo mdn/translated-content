@@ -10,172 +10,60 @@ tags:
   - TopicStub
 translation_of: Web/API/HTMLSelectElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>HTMLSelectElement</strong></code> interface represents a {{HTMLElement("select")}} HTML Element. These elements also share all of the properties and methods of other HTML elements via the {{domxref("HTMLElement")}} interface.</p>
+The **`HTMLSelectElement`** interface represents a {{HTMLElement("select")}} HTML Element. These elements also share all of the properties and methods of other HTML elements via the {{domxref("HTMLElement")}} interface.
 
-<h2 id="Properties"> Properties</h2>
+## Properties
 
-<p><em>This interface inherits the properties of {{domxref("HTMLElement")}}, and of {{domxref("Element")}} and {{domxref("Node")}}.</em></p>
+_This interface inherits the properties of {{domxref("HTMLElement")}}, and of {{domxref("Element")}} and {{domxref("Node")}}._
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Name</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{domxref("HTMLSelectElement.autofocus", "autofocus")}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Reflects the {{htmlattrxref("autofocus", "select")}} HTML attribute, which indicates whether the control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form-associated element in a document can have this attribute specified. {{gecko_minversion_inline("2.0")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLSelectElement.disabled", "disabled")}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Reflects the {{htmlattrxref("disabled", "select")}} HTML attribute, which indicates whether the control is disabled. If it is disabled, it does not accept clicks.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLSelectElement.form", "form")}} {{readonlyInline}}</td>
-   <td>{{domxref("HTMLFormElement")}}</td>
-   <td>Returns the form that this element is associated with. If the element is not associated with of a {{HTMLElement("form")}} element, then it returns <code>null</code>.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLSelectElement.labels", "labels")}} {{readonlyInline}}</td>
-   <td>{{domxref("NodeList")}}</td>
-   <td>Returns a list of label elements associated with this select element.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLSelectElement.length", "length")}}</td>
-   <td><code>unsigned long</code></td>
-   <td>The number of {{HTMLElement("option")}} elements in this <code>select</code> element.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLSelectElement.multiple", "multiple")}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Reflects the {{htmlattrxref("multiple", "select")}} HTML attribute, which indicates whether multiple items can be selected.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLSelectElement.name", "name")}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>Reflects the {{htmlattrxref("name", "select")}} HTML attribute, containing the name of this control used by servers and DOM search functions.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLSelectElement.options", "options")}} {{readonlyInline}}</td>
-   <td>{{domxref("HTMLOptionsCollection")}}</td>
-   <td>The set of {{HTMLElement("option")}} elements contained by this element.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLSelectElement.required", "required")}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Reflects the {{htmlattrxref("required", "select")}} HTML attribute, which indicates whether the user is required to select a value before submitting the form. {{gecko_minversion_inline("2.0")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLSelectElement.selectedIndex", "selectedIndex")}}</td>
-   <td><code>long</code></td>
-   <td>Reflects the index of the first selected {{HTMLElement("option")}} element. The value <code>-1</code> indicates no element is selected.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLSelectElement.selectedOptions", "selectedOptions")}} {{readonlyInline}}</td>
-   <td>{{domxref("HTMLCollection")}}</td>
-   <td>Set of options that are selected.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLSelectElement.size", "size")}}</td>
-   <td><code>long</code></td>
-   <td>Reflects the {{htmlattrxref("size", "select")}} HTML attribute, which contains the number of visible items in the control. The default is 1, unless <code>multiple</code> is true, in which case it is 4.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLSelectElement.type", "type")}} {{readonlyInline}}</td>
-   <td><br>
-    {{domxref("DOMString")}}</td>
-   <td>The form control's type. When <code>multiple</code> is <code>true</code>, it returns <code>"select-multiple"</code>; otherwise, it returns <code>"select-one"</code>.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLSelectElement.validationMessage", "validationMessage")}} {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>Localized message that describes the validation constraints that the control does not satisfy (if any). This attribute is the empty string if the control is not a candidate for constraint validation (<code>willValidate</code> is false), or it satisfies its constraints.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLSelectElement.validity", "validity")}} {{readonlyInline}}</td>
-   <td>{{domxref("ValidityState")}}</td>
-   <td>The validity state that this control is in.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLSelectElement.value", "value")}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>The value of the form control (the first selected option).</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLSelectElement.willValidate", "willValidate")}}{{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Indicates whether the button is a candidate for constraint validation. It is false if any conditions bar it from constraint validation.</td>
-  </tr>
- </tbody>
-</table>
+| Name                                                                                                                      | Type                                             | Description                                                                                                                                                                                                                                                                                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{domxref("HTMLSelectElement.autofocus", "autofocus")}}                                                  | {{jsxref("Boolean")}}                     | Reflects the {{htmlattrxref("autofocus", "select")}} HTML attribute, which indicates whether the control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form-associated element in a document can have this attribute specified. {{gecko_minversion_inline("2.0")}} |
+| {{domxref("HTMLSelectElement.disabled", "disabled")}}                                                  | {{jsxref("Boolean")}}                     | Reflects the {{htmlattrxref("disabled", "select")}} HTML attribute, which indicates whether the control is disabled. If it is disabled, it does not accept clicks.                                                                                                                                                                                              |
+| {{domxref("HTMLSelectElement.form", "form")}} {{readonlyInline}}                                     | {{domxref("HTMLFormElement")}}         | Returns the form that this element is associated with. If the element is not associated with of a {{HTMLElement("form")}} element, then it returns `null`.                                                                                                                                                                                                           |
+| {{domxref("HTMLSelectElement.labels", "labels")}} {{readonlyInline}}                                 | {{domxref("NodeList")}}                 | Returns a list of label elements associated with this select element.                                                                                                                                                                                                                                                                                                         |
+| {{domxref("HTMLSelectElement.length", "length")}}                                                          | `unsigned long`                                  | The number of {{HTMLElement("option")}} elements in this `select` element.                                                                                                                                                                                                                                                                                             |
+| {{domxref("HTMLSelectElement.multiple", "multiple")}}                                                  | {{jsxref("Boolean")}}                     | Reflects the {{htmlattrxref("multiple", "select")}} HTML attribute, which indicates whether multiple items can be selected.                                                                                                                                                                                                                                     |
+| {{domxref("HTMLSelectElement.name", "name")}}                                                              | {{domxref("DOMString")}}                 | Reflects the {{htmlattrxref("name", "select")}} HTML attribute, containing the name of this control used by servers and DOM search functions.                                                                                                                                                                                                                       |
+| {{domxref("HTMLSelectElement.options", "options")}} {{readonlyInline}}                             | {{domxref("HTMLOptionsCollection")}} | The set of {{HTMLElement("option")}} elements contained by this element.                                                                                                                                                                                                                                                                                               |
+| {{domxref("HTMLSelectElement.required", "required")}}                                                  | {{jsxref("Boolean")}}                     | Reflects the {{htmlattrxref("required", "select")}} HTML attribute, which indicates whether the user is required to select a value before submitting the form. {{gecko_minversion_inline("2.0")}}                                                                                                                                                     |
+| {{domxref("HTMLSelectElement.selectedIndex", "selectedIndex")}}                                      | `long`                                           | Reflects the index of the first selected {{HTMLElement("option")}} element. The value `-1` indicates no element is selected.                                                                                                                                                                                                                                           |
+| {{domxref("HTMLSelectElement.selectedOptions", "selectedOptions")}} {{readonlyInline}}         | {{domxref("HTMLCollection")}}         | Set of options that are selected.                                                                                                                                                                                                                                                                                                                                             |
+| {{domxref("HTMLSelectElement.size", "size")}}                                                              | `long`                                           | Reflects the {{htmlattrxref("size", "select")}} HTML attribute, which contains the number of visible items in the control. The default is 1, unless `multiple` is true, in which case it is 4.                                                                                                                                                                      |
+| {{domxref("HTMLSelectElement.type", "type")}} {{readonlyInline}}                                     | {{domxref("DOMString")}}                 | The form control's type. When `multiple` is `true`, it returns `"select-multiple"`; otherwise, it returns `"select-one"`.                                                                                                                                                                                                                                                     |
+| {{domxref("HTMLSelectElement.validationMessage", "validationMessage")}} {{readonlyInline}} | {{domxref("DOMString")}}                 | Localized message that describes the validation constraints that the control does not satisfy (if any). This attribute is the empty string if the control is not a candidate for constraint validation (`willValidate` is false), or it satisfies its constraints.                                                                                                            |
+| {{domxref("HTMLSelectElement.validity", "validity")}} {{readonlyInline}}                         | {{domxref("ValidityState")}}             | The validity state that this control is in.                                                                                                                                                                                                                                                                                                                                   |
+| {{domxref("HTMLSelectElement.value", "value")}}                                                          | {{domxref("DOMString")}}                 | The value of the form control (the first selected option).                                                                                                                                                                                                                                                                                                                    |
+| {{domxref("HTMLSelectElement.willValidate", "willValidate")}}{{readonlyInline}}                  | {{jsxref("Boolean")}}                     | Indicates whether the button is a candidate for constraint validation. It is false if any conditions bar it from constraint validation.                                                                                                                                                                                                                                       |
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface inherits the methods of {{domxref("HTMLElement")}}, and of {{domxref("Element")}} and {{domxref("Node")}}.</em></p>
+_This interface inherits the methods of {{domxref("HTMLElement")}}, and of {{domxref("Element")}} and {{domxref("Node")}}._
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Name</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{domxref("HTMLSelectElement.add()", "add()")}}</td>
-   <td>Adds an element to the collection of <code>option</code> elements for this <code>select</code> element.</td>
-  </tr>
-  <tr>
-   <td>blur() {{obsolete_inline}}</td>
-   <td>Removes input focus from this element. <em>This method is now implemented on {{domxref("HTMLElement")}}</em>.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLSelectElement.checkValidity()", "checkValidity()")}}</td>
-   <td>Checks whether the element has any constraints and whether it satisfies them. If the element fails its constraints, the browser fires a cancelable {{event("invalid")}} event at the element (and returns <code>false</code>).</td>
-  </tr>
-  <tr>
-   <td>focus() {{obsolete_inline}}</td>
-   <td>Gives input focus to this element. <em>This method is now implemented on {{domxref("HTMLElement")}}</em>.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLSelectElement.item()", "item()")}}</td>
-   <td>Gets an item from the options collection for this {{HTMLElement("select")}} element. You can also access an item by specifying the index in array-style brackets or parentheses, without calling this method explicitly.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLSelectElement.namedItem()", "namedItem()")}}</td>
-   <td>Gets the item in the options collection with the specified name. The name string can match either the <code>id</code> or the <code>name</code> attribute of an option node. You can also access an item by specifying the name in array-style brackets or parentheses, without calling this method explicitly.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLSelectElement.remove()", "remove()")}}</td>
-   <td>Removes the element at the specified index from the options collection for this select element.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("HTMLSelectElement.setCustomValidity()", "setCustomValidity()")}}</td>
-   <td>Sets the custom validity message for the selection element to the specified message. Use the empty string to indicate that the element does <em>not</em> have a custom validity error.</td>
-  </tr>
- </tbody>
-</table>
+| Name                                                                                                 | Description                                                                                                                                                                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{domxref("HTMLSelectElement.add()", "add()")}}                                     | Adds an element to the collection of `option` elements for this `select` element.                                                                                                                                                                                                        |
+| blur() {{obsolete_inline}}                                                                      | Removes input focus from this element. _This method is now implemented on {{domxref("HTMLElement")}}_.                                                                                                                                                                         |
+| {{domxref("HTMLSelectElement.checkValidity()", "checkValidity()")}}             | Checks whether the element has any constraints and whether it satisfies them. If the element fails its constraints, the browser fires a cancelable {{event("invalid")}} event at the element (and returns `false`).                                                              |
+| focus() {{obsolete_inline}}                                                                     | Gives input focus to this element. _This method is now implemented on {{domxref("HTMLElement")}}_.                                                                                                                                                                             |
+| {{domxref("HTMLSelectElement.item()", "item()")}}                                     | Gets an item from the options collection for this {{HTMLElement("select")}} element. You can also access an item by specifying the index in array-style brackets or parentheses, without calling this method explicitly.                                                          |
+| {{domxref("HTMLSelectElement.namedItem()", "namedItem()")}}                     | Gets the item in the options collection with the specified name. The name string can match either the `id` or the `name` attribute of an option node. You can also access an item by specifying the name in array-style brackets or parentheses, without calling this method explicitly. |
+| {{domxref("HTMLSelectElement.remove()", "remove()")}}                             | Removes the element at the specified index from the options collection for this select element.                                                                                                                                                                                          |
+| {{domxref("HTMLSelectElement.setCustomValidity()", "setCustomValidity()")}} | Sets the custom validity message for the selection element to the specified message. Use the empty string to indicate that the element does _not_ have a custom validity error.                                                                                                          |
 
-<dl>
-</dl>
+## Example
 
-<h2 id="Example">Example</h2>
+### Get information about the selected option
 
-<h3 id="Get_information_about_the_selected_option">Get information about the selected option</h3>
-
-<pre class="brush: js">/* assuming we have the following HTML
-&lt;select id='s'&gt;
-    &lt;option&gt;First&lt;/option&gt;
-    &lt;option selected&gt;Second&lt;/option&gt;
-    &lt;option&gt;Third&lt;/option&gt;
-&lt;/select&gt;
+```js
+/* assuming we have the following HTML
+<select id='s'>
+    <option>First</option>
+    <option selected>Second</option>
+    <option>Third</option>
+</select>
 */
 
 var select = document.getElementById('s');
@@ -185,52 +73,23 @@ console.log(select.selectedIndex); // 1
 
 // return the value of the selected option
 console.log(select.options[select.selectedIndex].value) // Second
-</pre>
+```
 
-<p>A better way to track changes to the user's selection is to watch for the {{event("change")}} event to occur on the <code>&lt;select&gt;</code>. This will tell you when the value changes, and you can then update anything you need to. See <a href="/en-US/docs/Web/Events/change#Example_Change_event_on_a_select">the example provided</a> in the documentation for the <code>change</code> event for details.</p>
+A better way to track changes to the user's selection is to watch for the {{event("change")}} event to occur on the `<select>`. This will tell you when the value changes, and you can then update anything you need to. See [the example provided](/ru/docs/Web/Events/change#Example_Change_event_on_a_select) in the documentation for the `change` event for details.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#htmlselectelement', 'HTMLSelectElement')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Since the latest snapshot, {{SpecName('HTML5 W3C')}}, it adds the <code>autocomplete</code> property and the <code>reportValidity()</code> method.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#htmlselectelement', 'HTMLSelectElement')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Is a snapshot of {{SpecName("HTML WHATWG")}}.<br>
-    It adds the <code>autofocus</code>, <code>form</code>, <code>required</code>, <code>labels</code>, <code>selectedOptions</code>, <code>willValidate</code>, <code>validity</code> and <code>validationMessage</code> properties.<br>
-    The <code>tabindex</code> property and the <code>blur()</code> and <code>focus()</code> methods have been moved to {{domxref("HTMLElement")}}.<br>
-    The methods <code>item()</code>, <code>namedItem()</code>, <code>checkValidity()</code> and <code>setCustomValidity()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-94282980', 'HTMLSelectElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td><code>options</code> now returns an {{domxref("HTMLOptionsCollection")}}.<br>
-    <code>length</code> now returns an <code>unsigned long</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-94282980', 'HTMLSelectElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                            | Status                           | Comment                                                                                                                                                                                                                                                                                                                                                                                                   |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', '#htmlselectelement', 'HTMLSelectElement')}}             | {{Spec2('HTML WHATWG')}} | Since the latest snapshot, {{SpecName('HTML5 W3C')}}, it adds the `autocomplete` property and the `reportValidity()` method.                                                                                                                                                                                                                                                                       |
+| {{SpecName('HTML5 W3C', 'forms.html#htmlselectelement', 'HTMLSelectElement')}} | {{Spec2('HTML5 W3C')}}     | Is a snapshot of {{SpecName("HTML WHATWG")}}. It adds the `autofocus`, `form`, `required`, `labels`, `selectedOptions`, `willValidate`, `validity` and `validationMessage` properties. The `tabindex` property and the `blur()` and `focus()` methods have been moved to {{domxref("HTMLElement")}}. The methods `item()`, `namedItem()`, `checkValidity()` and `setCustomValidity()`. |
+| {{SpecName('DOM2 HTML', 'html.html#ID-94282980', 'HTMLSelectElement')}}         | {{Spec2('DOM2 HTML')}}     | `options` now returns an {{domxref("HTMLOptionsCollection")}}. `length` now returns an `unsigned long`.                                                                                                                                                                                                                                                                                       |
+| {{SpecName('DOM1', 'level-one-html.html#ID-94282980', 'HTMLSelectElement')}}     | {{Spec2('DOM1')}}         | Initial definition.                                                                                                                                                                                                                                                                                                                                                                                       |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{HTMLElement("select")}} HTML element, which implements this interface.</li>
-</ul>
+- The {{HTMLElement("select")}} HTML element, which implements this interface.

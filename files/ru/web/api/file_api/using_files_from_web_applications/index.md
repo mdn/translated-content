@@ -4,127 +4,140 @@ slug: Web/API/File_API/Using_files_from_web_applications
 translation_of: Web/API/File/Using_files_from_web_applications
 original_slug: Web/API/File/Using_files_from_web_applications
 ---
-<p>Используя File API, добавленный к DOM в HTML5, в веб-приложениях теперь можно запрашивать пользователя выбрать локальные файлы и затем читать содержимое этих файлов. Выбор файлов может осуществляться с помощью элемента {{ HTMLElement("input") }} или drag and drop.<br>
- <br>
- Если вы хотите использовать DOM File API в расширениях или коде Chrome, используйте. На самом деле, в таком случае вам необходимо ознакомиться с дополнительными нюансами. См. статью <a href="/en/Extensions/Using_the_DOM_File_API_in_chrome_code" title="en/Extensions/Using the DOM File API in chrome code">Using the DOM File API in chrome code</a> для подробностей.</p>
+Используя File API, добавленный к DOM в HTML5, в веб-приложениях теперь можно запрашивать пользователя выбрать локальные файлы и затем читать содержимое этих файлов. Выбор файлов может осуществляться с помощью элемента {{ HTMLElement("input") }} или drag and drop.
 
-<h2 id="Доступ_к_выбранным_файлам">Доступ к выбранным файлам</h2>
+Если вы хотите использовать DOM File API в расширениях или коде Chrome, используйте. На самом деле, в таком случае вам необходимо ознакомиться с дополнительными нюансами. См. статью [Using the DOM File API in chrome code](/en/Extensions/Using_the_DOM_File_API_in_chrome_code "en/Extensions/Using the DOM File API in chrome code") для подробностей.
 
-<p>Рассмотрим следующий код:</p>
+## Доступ к выбранным файлам
 
-<pre class="brush: html">&lt;input type="file" id="input" multiple&gt;</pre>
+Рассмотрим следующий код:
 
-<p>File API делает возможным доступ к {{ domxref("FileList") }}, который содержит объекты {{ domxref("File") }}, которым соответствуют файлы, выбранные пользователем.</p>
+```html
+<input type="file" id="input" multiple>
+```
 
-<p>Атрибут <code>multiple</code> элемента <code>input</code> позволяет пользователю выбрать несколько файлов.</p>
+File API делает возможным доступ к {{ domxref("FileList") }}, который содержит объекты {{ domxref("File") }}, которым соответствуют файлы, выбранные пользователем.
 
-<p>Обращение к одному выбранному файлу с использованием классической DOM-модели:</p>
+Атрибут `multiple` элемента `input` позволяет пользователю выбрать несколько файлов.
 
-<pre class="brush: js">const selectedFile = document.getElementById('input').files[0];</pre>
+Обращение к одному выбранному файлу с использованием классической DOM-модели:
 
-<p>Обращение к одному выбранному файлу через <a href="http://jquery.com/">jQuery</a>:</p>
+```js
+const selectedFile = document.getElementById('input').files[0];
+```
 
-<pre class="brush: js">var selectedFile = $('#input').get(0).files[0];
+Обращение к одному выбранному файлу через [jQuery](http://jquery.com/):
 
-var selectedFile = $('#input')[0].files[0];</pre>
+```js
+var selectedFile = $('#input').get(0).files[0];
 
-<div class="note">
-<p>Ошибка "files is undefined" означает что был выбран не один HTML-элемент, а список элементов, возвращаемый jQuery. Необходимо уточнить, у какого именно элемента требуется вызвать метод "files"</p>
-</div>
+var selectedFile = $('#input')[0].files[0];
+```
 
-<h3 id="Доступ_к_выбранным_файлам_через_событие_change">Доступ к выбранным файлам через событие change</h3>
+> **Примечание:** Ошибка "files is undefined" означает что был выбран не один HTML-элемент, а список элементов, возвращаемый jQuery. Необходимо уточнить, у какого именно элемента требуется вызвать метод "files"
 
-<p>Также возможно (но не обязательно) получить доступ к {{DOMxRef("FileList")}} через событие <code>change</code>. Нужно использовать {{DOMxRef("EventTarget.addEventListener()")}} чтобы добавить обработчик события <code>change</code>, как показано здесь:</p>
+### Доступ к выбранным файлам через событие change
 
-<pre class="brush: js">const inputElement = document.getElementById("input");
+Также возможно (но не обязательно) получить доступ к {{DOMxRef("FileList")}} через событие `change`. Нужно использовать {{DOMxRef("EventTarget.addEventListener()")}} чтобы добавить обработчик события `change`, как показано здесь:
+
+```js
+const inputElement = document.getElementById("input");
 inputElement.addEventListener("change", handleFiles, false);
 function handleFiles() {
   const fileList = this.files; /* now you can work with the file list */
-}</pre>
+}
+```
 
-<p>Обработчик события <code>change</code> можно назначить атрибутом элемента:</p>
+Обработчик события `change` можно назначить атрибутом элемента:
 
-<pre class="brush: html">&lt;input type="file" id="input" onchange="handleFiles(this.files)"&gt;</pre>
+```html
+<input type="file" id="input" onchange="handleFiles(this.files)">
+```
 
-<p>Когда пользователь выбирает файл, функция handleFiles() будет вызвана с объектом {{ domxref("FileList") }}, который состоит из объектов {{ domxref("File") }}, представляющих файлы, выбранные пользователем.</p>
+Когда пользователь выбирает файл, функция handleFiles() будет вызвана с объектом {{ domxref("FileList") }}, который состоит из объектов {{ domxref("File") }}, представляющих файлы, выбранные пользователем.
 
-<h2 id="Получение_информации_о_выделенных_файлах">Получение информации о выделенных файлах</h2>
+## Получение информации о выделенных файлах
 
-<p>Объект {{ domxref("FileList") }} предоставляемый классическим DOM содержит все файлы выбранные пользователем, каждый из которых представляет собой объект {{ domxref("File") }}. Вы можете определить сколько файлов выбрал пользователь проверяя значение атрибута длины (<code>length</code>) списка файлов:</p>
+Объект {{ domxref("FileList") }} предоставляемый классическим DOM содержит все файлы выбранные пользователем, каждый из которых представляет собой объект {{ domxref("File") }}. Вы можете определить сколько файлов выбрал пользователь проверяя значение атрибута длины (`length`) списка файлов:
 
-<pre class="brush: js"><code>var numFiles = files.length;</code></pre>
+```js
+var numFiles = files.length;
+```
 
-<p>Конкретные объекты {{ domxref("File") }} могут быть получены обращением к списку файлов как к массиву:</p>
+Конкретные объекты {{ domxref("File") }} могут быть получены обращением к списку файлов как к массиву:
 
-<pre class="brush: js">for (var i = 0, numFiles = files.length; i &lt; numFiles; i++) {
+```js
+for (var i = 0, numFiles = files.length; i < numFiles; i++) {
   var file = files[i];
   ..
 }
-</pre>
+```
 
-<p>Этот цикл проходит по всем файлам в списке файлов.</p>
+Этот цикл проходит по всем файлам в списке файлов.
 
-<p>Всего существует три атрибута, предоставляемых объектом {{ domxref("File") }}, которые содержат полезную информацию о файле.</p>
+Всего существует три атрибута, предоставляемых объектом {{ domxref("File") }}, которые содержат полезную информацию о файле.
 
-<dl>
- <dt><code>name</code></dt>
- <dd>Имя файла как строка доступная только для чтения. Это просто имя файла и оно не включает в себя информацию о пути.</dd>
- <dt><code>size</code></dt>
- <dd>Размер файла в байтах, как 64-битное целое число (возможно только чтение).</dd>
- <dt><code>type</code></dt>
- <dd>MIME тип файла, как строка доступная только для чтения, или пустая строка (<code>"") </code>если тип файла не может быть определён.</dd>
-</dl>
+- `name`
+  - : Имя файла как строка доступная только для чтения. Это просто имя файла и оно не включает в себя информацию о пути.
+- `size`
+  - : Размер файла в байтах, как 64-битное целое число (возможно только чтение).
+- `type`
+  - : MIME тип файла, как строка доступная только для чтения, или пустая строка (`"") `если тип файла не может быть определён.
 
-<h3 id="Пример_Отображение_размера_файлаов">Пример: Отображение размера файла(ов)</h3>
+### Пример: Отображение размера файла(ов)
 
-<p>Следующий пример показывает возможное использование свойства <code>size</code>:</p>
+Следующий пример показывает возможное использование свойства `size`:
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8"&gt;
-&lt;title&gt;File(s) size&lt;/title&gt;
-&lt;script&gt;
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>File(s) size</title>
+<script>
 function updateSize() {
   var nBytes = 0,
       oFiles = document.getElementById("uploadInput").files,
       nFiles = oFiles.length;
-  for (var nFileId = 0; nFileId &lt; nFiles; nFileId++) {
+  for (var nFileId = 0; nFileId < nFiles; nFileId++) {
     nBytes += oFiles[nFileId].size;
   }
   var sOutput = nBytes + " bytes";
   // optional code for multiples approximation
-  for (var aMultiples = ["KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"], nMultiple = 0, nApprox = nBytes / 1024; nApprox &gt; 1; nApprox /= 1024, nMultiple++) {
+  for (var aMultiples = ["KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"], nMultiple = 0, nApprox = nBytes / 1024; nApprox > 1; nApprox /= 1024, nMultiple++) {
     sOutput = nApprox.toFixed(3) + " " + aMultiples[nMultiple] + " (" + nBytes + " bytes)";
   }
   // end of optional code
   document.getElementById("fileNum").innerHTML = nFiles;
   document.getElementById("fileSize").innerHTML = sOutput;
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body onload="updateSize();"&gt;
-&lt;form name="uploadForm"&gt;
-&lt;p&gt;&lt;input id="uploadInput" type="file" name="myFiles" onchange="updateSize();" multiple&gt; selected files: &lt;span id="fileNum"&gt;0&lt;/span&gt;; total size: &lt;span id="fileSize"&gt;0&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;input type="submit" value="Send file"&gt;&lt;/p&gt;
-&lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<body onload="updateSize();">
+<form name="uploadForm">
+<p><input id="uploadInput" type="file" name="myFiles" onchange="updateSize();" multiple> selected files: <span id="fileNum">0</span>; total size: <span id="fileSize">0</span></p>
+<p><input type="submit" value="Send file"></p>
+</form>
+</body>
+</html>
+```
 
-<h2 id="Использование_метода_click_скрытых_элементов_выбора_файла">Использование метода click() скрытых элементов выбора файла</h2>
+## Использование метода click() скрытых элементов выбора файла
 
-<p>Начиная с Gecko 2.0 {{ geckoRelease("2.0") }}, вы можете скрыть непривлекательный элемент {{ HTMLElement("input") }} и предоставить свой собственный интерфейс для открытия диалогового окна выбора и отображения файла или файлов, выбранных пользователем. Вы можете сделать это, присвоив свойству display элемента input  значение none (display:none) и вызывая метод {{ domxref("element.click","click()") }} скрытого элемента {{ HTMLElement("input") }}.</p>
+Начиная с Gecko 2.0 {{ geckoRelease("2.0") }}, вы можете скрыть непривлекательный элемент {{ HTMLElement("input") }} и предоставить свой собственный интерфейс для открытия диалогового окна выбора и отображения файла или файлов, выбранных пользователем. Вы можете сделать это, присвоив свойству display элемента input значение none (display:none) и вызывая метод {{ domxref("element.click","click()") }} скрытого элемента {{ HTMLElement("input") }}.
 
-<p>Рассмотрим следующую разметку HTML:</p>
+Рассмотрим следующую разметку HTML:
 
-<pre class="brush: html"><code>&lt;input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)"&gt;
-&lt;a href="#" id="fileSelect"&gt;Select some files&lt;/a&gt;</code></pre>
+```html
+<input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
+<a href="#" id="fileSelect">Select some files</a>
+```
 
-<p>Код, обрабатывающий событие click, может выглядеть следующим образом:</p>
+Код, обрабатывающий событие click, может выглядеть следующим образом:
 
-<pre class="brush: js">var fileSelect = document.getElementById("fileSelect"),
+```js
+var fileSelect = document.getElementById("fileSelect"),
   fileElem = document.getElementById("fileElem");
 
 fileSelect.addEventListener("click", function (e) {
@@ -133,40 +146,44 @@ fileSelect.addEventListener("click", function (e) {
   }
   e.preventDefault(); // предотвращает перемещение к "#"
 }, false);
-</pre>
+```
 
-<p>Таким образом, вы можете стилизовать новую кнопку открытия диалога выбора файла так, как пожелаете.</p>
+Таким образом, вы можете стилизовать новую кнопку открытия диалога выбора файла так, как пожелаете.
 
-<h2 id="Использование_элемента_label_скрытого_элемента_input">Использование элемента label скрытого элемента input</h2>
+## Использование элемента label скрытого элемента input
 
-<p>Для того, чтобы открыть диалог выбора файла без использования JavaScript (метода click()), можно воспользоваться элементом {{ HTMLElement("label") }}.</p>
+Для того, чтобы открыть диалог выбора файла без использования JavaScript (метода click()), можно воспользоваться элементом {{ HTMLElement("label") }}.
 
-<p>Рассмотрим следующую разметку HTML:</p>
+Рассмотрим следующую разметку HTML:
 
-<pre class="brush: html"><code>&lt;input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)"&gt;
-&lt;label for="fileElem"&gt;Select some files&lt;/label&gt;</code></pre>
+```html
+<input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
+<label for="fileElem">Select some files</label>
+```
 
-<p>В данном случае нет необходимости добавлять код JavaScript для того, чтобы вызвать <code>fileElem.click()</code>. Также в данном случае вы можете стилизовать элемент label так, как пожелаете.</p>
+В данном случае нет необходимости добавлять код JavaScript для того, чтобы вызвать `fileElem.click()`. Также в данном случае вы можете стилизовать элемент label так, как пожелаете.
 
-<h2 id="Выбор_файлов_с_использованием_технологии_drag_and_drop">Выбор файлов с использованием технологии drag and drop</h2>
+## Выбор файлов с использованием технологии drag and drop
 
-<p>Также вы можете предоставить пользователю возможность непосредственно перетаскивать файлы в ваше веб-приложение.</p>
+Также вы можете предоставить пользователю возможность непосредственно перетаскивать файлы в ваше веб-приложение.
 
-<p>На первом шаге необходимо определить зону, в которую будут перетаскиваться файлы. В каждом конкретном случае часть содержимого вашей страницы, ответственная за приёмку перетаскиваемых файлов, может варьироваться в зависимости от дизайна приложения, тем не менее, заставить элемент воспринимать события перетаскивания достаточно просто:</p>
+На первом шаге необходимо определить зону, в которую будут перетаскиваться файлы. В каждом конкретном случае часть содержимого вашей страницы, ответственная за приёмку перетаскиваемых файлов, может варьироваться в зависимости от дизайна приложения, тем не менее, заставить элемент воспринимать события перетаскивания достаточно просто:
 
-<pre class="brush: js">var dropbox;
+```js
+var dropbox;
 
 dropbox = document.getElementById("dropbox");
 dropbox.addEventListener("dragenter", dragenter, false);
 dropbox.addEventListener("dragover", dragover, false);
 dropbox.addEventListener("drop", drop, false);
-</pre>
+```
 
-<p>В данном примере мы превращаем элемент с ID, равным <code>dropbox, в нашу зону перетаскивания при помощи добавления обработчиков для событий </code><code>dragenter</code>, <code>dragover и</code> <code>drop</code>.</p>
+В данном примере мы превращаем элемент с ID, равным ` dropbox, в нашу зону перетаскивания при помощи добавления обработчиков для событий ``dragenter `, `dragover и` `drop`.
 
-<p>В нашем случае нет необходимости делать что-то особенное при обработке событий <code>dragenter</code> и <code>dragover</code>, таким образом, обе функции, ответственные за обработку данных событий, довольно просты. Они останавливают распространение события и предотвращают возникновение действия по умолчанию:</p>
+В нашем случае нет необходимости делать что-то особенное при обработке событий `dragenter` и `dragover`, таким образом, обе функции, ответственные за обработку данных событий, довольно просты. Они останавливают распространение события и предотвращают возникновение действия по умолчанию:
 
-<pre class="brush: js">function dragenter(e) {
+```js
+function dragenter(e) {
   e.stopPropagation();
   e.preventDefault();
 }
@@ -175,11 +192,12 @@ function dragover(e) {
   e.stopPropagation();
   e.preventDefault();
 }
-</pre>
+```
 
-<p>Вся настоящая магия происходит в функции <code>drop()</code>:</p>
+Вся настоящая магия происходит в функции `drop()`:
 
-<pre class="brush: js">function drop(e) {
+```js
+function drop(e) {
   e.stopPropagation();
   e.preventDefault();
 
@@ -188,16 +206,17 @@ function dragover(e) {
 
   handleFiles(files);
 }
-</pre>
+```
 
-<p>Здесь мы извлекаем из события поле <code>dataTransfer</code>, затем вытаскиваем из него список файлов и передаём этот список в <code>handleFiles()</code>. После этого процесс обработки файлов одинаков вне зависимости от того, использовал ли пользователь для их выбора элемент <code>input</code> или технологию drag and drop.</p>
+Здесь мы извлекаем из события поле `dataTransfer`, затем вытаскиваем из него список файлов и передаём этот список в `handleFiles()`. После этого процесс обработки файлов одинаков вне зависимости от того, использовал ли пользователь для их выбора элемент `input` или технологию drag and drop.
 
-<h2 id="Пример_Отображение_эскизов_изображений_выбранных_пользователем">Пример: Отображение эскизов изображений, выбранных пользователем</h2>
+## Пример: Отображение эскизов изображений, выбранных пользователем
 
-<p>Представим, что вы разрабатываете очередной веб-сайт для обмена фотографиями и вы хотите использовать возможности HTML5 для предварительного просмотра изображений перед тем, как пользователь загрузит их. Вы можете создать <code>input</code> элемент или зону перетаскивания, как обсуждалось ранее, и вызвать такую функцию, как <code>handleFiles()</code> ниже.</p>
+Представим, что вы разрабатываете очередной веб-сайт для обмена фотографиями и вы хотите использовать возможности HTML5 для предварительного просмотра изображений перед тем, как пользователь загрузит их. Вы можете создать `input` элемент или зону перетаскивания, как обсуждалось ранее, и вызвать такую функцию, как `handleFiles()` ниже.
 
-<pre class="brush: js">function handleFiles(files) {
-  for (var i = 0; i &lt; files.length; i++) {
+```js
+function handleFiles(files) {
+  for (var i = 0; i < files.length; i++) {
     var file = files[i];
 
     if (!file.type.startsWith('image/')){ continue }
@@ -212,44 +231,50 @@ function dragover(e) {
     reader.readAsDataURL(file);
   }
 }
-</pre>
+```
 
-<p>Здесь наш цикл обрабатывает выбранные пользователем файлы, проверяя атрибут <code>type</code> у каждого файла, чтобы определить является ли файл изображением (выполняется регулярное выражение в строке "<code>image.*</code>"). Для каждого файла, который является изображением, мы создаём новый <code>img</code> элемент. Можно использовать CSS для установки красивых рамок, теней, и указания размеров изображения, но здесь нет нужды делать этого.</p>
+Здесь наш цикл обрабатывает выбранные пользователем файлы, проверяя атрибут `type` у каждого файла, чтобы определить является ли файл изображением (выполняется регулярное выражение в строке "`image.*`"). Для каждого файла, который является изображением, мы создаём новый `img` элемент. Можно использовать CSS для установки красивых рамок, теней, и указания размеров изображения, но здесь нет нужды делать этого.
 
-<p>Каждое изображение имеет CSS класс <code>obj</code> добавленный к нему для упрощения его поиска в DOM дереве. Мы также добавили атрибут <code>file</code> к каждому изображению, указав {{ domxref("File") }} ; это позволит нам получить изображения для фактической загрузки позже. Наконец, мы используем {{ domxref("Node.appendChild()") }} для того, чтобы добавить новый эскиз в область предпросмотра нашего документа.</p>
+Каждое изображение имеет CSS класс `obj` добавленный к нему для упрощения его поиска в DOM дереве. Мы также добавили атрибут `file` к каждому изображению, указав {{ domxref("File") }} ; это позволит нам получить изображения для фактической загрузки позже. Наконец, мы используем {{ domxref("Node.appendChild()") }} для того, чтобы добавить новый эскиз в область предпросмотра нашего документа.
 
-<p>Затем мы устанавливаем {{ domxref("FileReader") }} для обработки асинхронной загрузки изображения и прикрепления его к <code>img</code> элементу. После создания нового объекта <code>FileReader</code>, мы настраиваем его функцию <code>onload</code>, затем вызываем <code>readAsDataURL()</code> для запуска операции чтения в фоновом режиме. Когда всё содержимое файла изображения загружено, они преобразуют его в <code>data:</code> URL, который передаётся в колбэк <code>onload</code> . Наша реализация этой процедуры просто устанавливает атрибут <code>src</code> у элемента <code>img</code> загруженного изображения, в результате чего миниатюра изображения появляется на экране пользователя.</p>
+Затем мы устанавливаем {{ domxref("FileReader") }} для обработки асинхронной загрузки изображения и прикрепления его к `img` элементу. После создания нового объекта `FileReader`, мы настраиваем его функцию `onload`, затем вызываем `readAsDataURL()` для запуска операции чтения в фоновом режиме. Когда всё содержимое файла изображения загружено, они преобразуют его в `data:` URL, который передаётся в колбэк `onload` . Наша реализация этой процедуры просто устанавливает атрибут `src` у элемента `img` загруженного изображения, в результате чего миниатюра изображения появляется на экране пользователя.
 
-<h2 id="Использование_URLs_объектов">Использование URLs объектов</h2>
+## Использование URLs объектов
 
-<p>Gecko 2.0 {{ geckoRelease("2.0") }} представляет поддержку для методов DOM {{ domxref("window.URL.createObjectURL()") }} и {{ domxref("window.URL.revokeObjectURL()") }}. Они позволяют создавать простые строки URL, которые могут быть использованы для обращения к любым данным, на которые можно ссылаться, используя объект DOM {{ domxref("File") }}, включая локальные файлы на компьютере пользователя.</p>
+Gecko 2.0 {{ geckoRelease("2.0") }} представляет поддержку для методов DOM {{ domxref("window.URL.createObjectURL()") }} и {{ domxref("window.URL.revokeObjectURL()") }}. Они позволяют создавать простые строки URL, которые могут быть использованы для обращения к любым данным, на которые можно ссылаться, используя объект DOM {{ domxref("File") }}, включая локальные файлы на компьютере пользователя.
 
-<p>Когда у вас есть объект {{ domxref("File") }}, на который вы хотите ссылаться по URL из HTML, вы можете создать для этого объект URL, такой как этот:</p>
+Когда у вас есть объект {{ domxref("File") }}, на который вы хотите ссылаться по URL из HTML, вы можете создать для этого объект URL, такой как этот:
 
-<pre class="brush: js"><code>var objectURL = window.URL.createObjectURL(fileObj);</code></pre>
+```js
+var objectURL = window.URL.createObjectURL(fileObj);
+```
 
-<p>URL объекта – это строка, идентифицирующая объект файла {{ domxref("File") }}. Каждый раз при вызове {{ domxref("window.URL.createObjectURL()") }}, создаётся новый уникальный объект URL, даже если вы уже создали объект URL для этого файла. Каждый из них должен быть освобождён. В то время как они освобождаются автоматически когда документ выгружается, если ваша страница использует их динамически, вы должны освободить их явно вызовом {{ domxref("window.URL.revokeObjectURL()") }}:</p>
+URL объекта – это строка, идентифицирующая объект файла {{ domxref("File") }}. Каждый раз при вызове {{ domxref("window.URL.createObjectURL()") }}, создаётся новый уникальный объект URL, даже если вы уже создали объект URL для этого файла. Каждый из них должен быть освобождён. В то время как они освобождаются автоматически когда документ выгружается, если ваша страница использует их динамически, вы должны освободить их явно вызовом {{ domxref("window.URL.revokeObjectURL()") }}:
 
-<pre class="brush: js"><code>window.URL.revokeObjectURL(objectURL);</code></pre>
+```js
+window.URL.revokeObjectURL(objectURL);
+```
 
-<h2 id="Пример_Использование_URL_объектов_для_отображения_изображений">Пример: Использование URL объектов для отображения изображений</h2>
+## Пример: Использование URL объектов для отображения изображений
 
-<p>Этот пример использует URL объектов для отображения эскизов изображений. Кроме этого, оно показывает другую информацию о файлах, включая их имена и размеры. Вы можете <a href="/samples/domref/file-click-demo.html" title="https://developer.mozilla.org/samples/domref/file-click-demo.html">посмотреть работающий пример</a>.</p>
+Этот пример использует URL объектов для отображения эскизов изображений. Кроме этого, оно показывает другую информацию о файлах, включая их имена и размеры. Вы можете [посмотреть работающий пример](/samples/domref/file-click-demo.html "https://developer.mozilla.org/samples/domref/file-click-demo.html").
 
-<p>HTML, который представляет интерфейс, выглядит так:</p>
+HTML, который представляет интерфейс, выглядит так:
 
-<pre class="brush: html">&lt;input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)"&gt;
-&lt;a href="#" id="fileSelect"&gt;Select some files&lt;/a&gt;
-&lt;div id="fileList"&gt;
-  &lt;p&gt;No files selected!&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
+<a href="#" id="fileSelect">Select some files</a>
+<div id="fileList">
+  <p>No files selected!</p>
+</div>
+```
 
-<p>Здесь определяется элемент файла {{ HTMLElement("input") }}, а также ссылка, которая вызывает окно выбора файла, т.к. мы сделали элемент ввода файла скрытым, чтобы этот не слишком привлекательный элемент интерфейса не отображался. Об этом рассказывается в разделе <a href="#использование_метода_click_скрытых_элементов_выбора_файла">Использование метода click() скрытых элементов выбора файла</a>, как о методе вызова окна выбора файла.</p>
+Здесь определяется элемент файла {{ HTMLElement("input") }}, а также ссылка, которая вызывает окно выбора файла, т.к. мы сделали элемент ввода файла скрытым, чтобы этот не слишком привлекательный элемент интерфейса не отображался. Об этом рассказывается в разделе [Использование метода click() скрытых элементов выбора файла](#использование_метода_click_скрытых_элементов_выбора_файла), как о методе вызова окна выбора файла.
 
-<p>Метод <code>handleFiles()</code> может быть реализован таким образом:</p>
+Метод `handleFiles()` может быть реализован таким образом:
 
-<pre class="brush: js">window.URL = window.URL || window.webkitURL;
+```js
+window.URL = window.URL || window.webkitURL;
 
 var fileSelect = document.getElementById("fileSelect"),
     fileElem = document.getElementById("fileElem"),
@@ -264,18 +289,18 @@ fileSelect.addEventListener("click", function (e) {
 
 function handleFiles(files) {
   if (!files.length) {
-    fileList.innerHTML = "&lt;p&gt;No files selected!&lt;/p&gt;";
+    fileList.innerHTML = "<p>No files selected!</p>";
   } else {
     var list = document.createElement("ul");
-    for (var i = 0; i &lt; files.length; i++) {
+    for (var i = 0; i < files.length; i++) {
       var li = document.createElement("li");
       list.appendChild(li);
 
       var img = document.createElement("img");
-      img.src = window.URL.<strong>createObjectURL</strong>(files[i]);
+      img.src = window.URL.createObjectURL(files[i]);
       img.height = 60;
       img.onload = function() {
-        window.URL.<strong>revokeObjectURL</strong>(this.src);
+        window.URL.revokeObjectURL(this.src);
       }
       li.appendChild(img);
       var info = document.createElement("span");
@@ -284,51 +309,49 @@ function handleFiles(files) {
     }
   }
 }
-</pre>
+```
 
-<p>Он начинается с получения элемента {{ HTMLElement("div") }} с ID <code>fileList</code>. Это блок, в который мы вставим наш список файлов, включая эскизы..</p>
+Он начинается с получения элемента {{ HTMLElement("div") }} с ID `fileList`. Это блок, в который мы вставим наш список файлов, включая эскизы..
 
-<p>Если объект {{ domxref("FileList") }}, передаваемый в <code>handleFiles()</code> является <code>null</code>, то мы просто устанавливаем внутренний HTML блока в отображение текста "No files selected!". Иначе мы начинаем строить список файлов таким образом:</p>
+Если объект {{ domxref("FileList") }}, передаваемый в `handleFiles()` является `null`, то мы просто устанавливаем внутренний HTML блока в отображение текста "No files selected!". Иначе мы начинаем строить список файлов таким образом:
 
-<ol>
- <li>Создаётся новый элемент - неупорядоченный список ({{ HTMLElement("ul") }}).</li>
- <li>Этот новый элемент вставляется в блок {{ HTMLElement("div") }} с помощью вызова его метода {{ domxref("element.appendChild()") }}.</li>
- <li>Для каждого {{ domxref("File") }} в {{ domxref("FileList") }}, представляемого <code>files</code>:
-  <ol>
-   <li>Создаём новый элемент пункта списка ({{ HTMLElement("li") }}) и вставляем его в список.</li>
-   <li>Создаём новый элемент изображения ({{ HTMLElement("img") }}).</li>
-   <li>Устанавливаем источник изображения в новый URL объекта, представляющий файл, используя {{ domxref("window.URL.createObjectURL()") }} для создания URL на двоичный объект.</li>
-   <li>Устанавливаем высоту изображения в 60 пикселей.</li>
-   <li>Устанавливаем обработчик события загрузки изображения для освобождения URL объекта, т.к. после загрузки изображения он больше не нужен. Это делается вызовом метода {{ domxref("window.URL.revokeObjectURL()") }}, передавая в него строку URL объекта, которая указана в <code>img.src</code>.</li>
-   <li>Добавляем новый элемент в список.</li>
-  </ol>
- </li>
-</ol>
+1.  Создаётся новый элемент - неупорядоченный список ({{ HTMLElement("ul") }}).
+2.  Этот новый элемент вставляется в блок {{ HTMLElement("div") }} с помощью вызова его метода {{ domxref("element.appendChild()") }}.
+3.  Для каждого {{ domxref("File") }} в {{ domxref("FileList") }}, представляемого `files`:
 
-<h2 id="Пример_Загрузка_файла_выбранного_пользователем">Пример: Загрузка файла, выбранного пользователем</h2>
+    1.  Создаём новый элемент пункта списка ({{ HTMLElement("li") }}) и вставляем его в список.
+    2.  Создаём новый элемент изображения ({{ HTMLElement("img") }}).
+    3.  Устанавливаем источник изображения в новый URL объекта, представляющий файл, используя {{ domxref("window.URL.createObjectURL()") }} для создания URL на двоичный объект.
+    4.  Устанавливаем высоту изображения в 60 пикселей.
+    5.  Устанавливаем обработчик события загрузки изображения для освобождения URL объекта, т.к. после загрузки изображения он больше не нужен. Это делается вызовом метода {{ domxref("window.URL.revokeObjectURL()") }}, передавая в него строку URL объекта, которая указана в `img.src`.
+    6.  Добавляем новый элемент в список.
 
-<p>Ещё одна вещь, которую вы можете захотеть сделать – это позволить пользователю загрузить выбранный файл или файлы (такие, как изображения из предыдущего примера) на сервер. Это можно сделать асинхронно довольно просто.</p>
+## Пример: Загрузка файла, выбранного пользователем
 
-<h3 id="Создание_заданий_на_загрузку">Создание заданий на загрузку</h3>
+Ещё одна вещь, которую вы можете захотеть сделать – это позволить пользователю загрузить выбранный файл или файлы (такие, как изображения из предыдущего примера) на сервер. Это можно сделать асинхронно довольно просто.
 
-<p>Продолжая пример с кодом, который строил эскизы в предыдущем примере, напомним, что каждому изображению эскиза присвоен класс CSS class <code>obj</code>, с соответствующим {{ domxref("File") }}, прикреплённым в атрибут <code>file</code>. Это позволяет нам очень просто выбрать все изображения, которые пользователь выбрал для загрузки используя {{ domxref("Document.querySelectorAll()") }}, как показано здесь:</p>
+### Создание заданий на загрузку
 
-<pre class="brush: js">function sendFiles() {
+Продолжая пример с кодом, который строил эскизы в предыдущем примере, напомним, что каждому изображению эскиза присвоен класс CSS class `obj`, с соответствующим {{ domxref("File") }}, прикреплённым в атрибут `file`. Это позволяет нам очень просто выбрать все изображения, которые пользователь выбрал для загрузки используя {{ domxref("Document.querySelectorAll()") }}, как показано здесь:
+
+```js
+function sendFiles() {
   var imgs = document.querySelectorAll(".obj");
 
-  for (var i = 0; i &lt; imgs.length; i++) {
+  for (var i = 0; i < imgs.length; i++) {
     new FileUpload(imgs[i], imgs[i].file);
   }
 }
-</pre>
+```
 
-<p>Строка 2 получает {{ domxref("NodeList") }} в переменную <code style="font-size: 14px;">imgs</code> со всеми элементами документа, имеющих класс CSS <code style="font-size: 14px;">obj</code>. В нашем случае все они будут эскизами изображений. Как только мы получим этот список, можно просто пройти по нему, создавая для каждого элемента новый экземпляр <code style="font-size: 14px;">FileUpload</code>. Каждый из них отвечает за загрузку соответствующего файла.</p>
+Строка 2 получает {{ domxref("NodeList") }} в переменную `imgs` со всеми элементами документа, имеющих класс CSS `obj`. В нашем случае все они будут эскизами изображений. Как только мы получим этот список, можно просто пройти по нему, создавая для каждого элемента новый экземпляр `FileUpload`. Каждый из них отвечает за загрузку соответствующего файла.
 
-<h3 id="Управление_процессом_загрузки_файла">Управление процессом загрузки файла</h3>
+### Управление процессом загрузки файла
 
-<p>Функция <code>FileUpload</code> принимает на вход 2 параметра: элемент изображения и файл, из которого нужно читать данные изображения.</p>
+Функция `FileUpload` принимает на вход 2 параметра: элемент изображения и файл, из которого нужно читать данные изображения.
 
-<pre class="brush: js">function FileUpload(img, file) {
+```js
+function FileUpload(img, file) {
   const reader = new FileReader();
   this.ctrl = createThrobber(img);
   const xhr = new XMLHttpRequest();
@@ -353,35 +376,35 @@ function handleFiles(files) {
     xhr.send(evt.target.result);
   };
   reader.readAsBinaryString(file);
-}</pre>
+}
+```
 
-<p>Функция <code>FileUpload()</code>, показанная выше, создаёт объект Throbber, который используется для отображения хода загрузки, а затем создаёт {{ domxref("XMLHttpRequest") }} для управления загрузкой данных.</p>
+Функция `FileUpload()`, показанная выше, создаёт объект Throbber, который используется для отображения хода загрузки, а затем создаёт {{ domxref("XMLHttpRequest") }} для управления загрузкой данных.
 
-<p>Перед началом загрузки данных выполняются несколько шагов для подготовки:</p>
+Перед началом загрузки данных выполняются несколько шагов для подготовки:
 
-<ol>
- <li>На <code>XMLHttpRequest</code> устанавливается обработчик события <code>progress</code> для обновления индикатора хода загрузки новыми значениями процента выполнения, так что по мере хода загрузки, индикатор будет обновляться, отображая последнюю информацию.</li>
- <li>На <code>XMLHttpRequest</code>'s устанавливается обработчик события <code>load</code> для установки индикатора загрузки в значение 100%, чтобы убедиться, что индикатор действительно установлен в 100% (в случае проблем детализации в ходе процесса). Затем обработчик удаляет индикатор загрузки, т.к. он более не нужен. Поэтому индикатор исчезает как только загрузка завершена.</li>
- <li>Запрос на загрузку файла изображения открывается вызовом метода <code>XMLHttpRequest</code>'s <code>open()</code> для начала создания POST-запроса.</li>
- <li>Тип MIME для загрузки устанавливается вызовом функции <code>XMLHttpRequest</code> <code>overrideMimeType()</code>. В этом случае мы используем общий тип MIME type; вам может быть нужно или не нужно вообще устанавливать тип MIME в зависимости от вашего случая.</li>
- <li>Объект <code>FileReader</code> используется для преобразования файла в двоичную строку.</li>
- <li>И в завершение, когда содержимое загружено, вызывается функция <code>XMLHttpRequest</code> <code>send()</code> для отправки содержимого файла.</li>
-</ol>
+1.  На `XMLHttpRequest` устанавливается обработчик события `progress` для обновления индикатора хода загрузки новыми значениями процента выполнения, так что по мере хода загрузки, индикатор будет обновляться, отображая последнюю информацию.
+2.  На `XMLHttpRequest`'s устанавливается обработчик события `load` для установки индикатора загрузки в значение 100%, чтобы убедиться, что индикатор действительно установлен в 100% (в случае проблем детализации в ходе процесса). Затем обработчик удаляет индикатор загрузки, т.к. он более не нужен. Поэтому индикатор исчезает как только загрузка завершена.
+3.  Запрос на загрузку файла изображения открывается вызовом метода `XMLHttpRequest`'s `open()` для начала создания POST-запроса.
+4.  Тип MIME для загрузки устанавливается вызовом функции `XMLHttpRequest` `overrideMimeType()`. В этом случае мы используем общий тип MIME type; вам может быть нужно или не нужно вообще устанавливать тип MIME в зависимости от вашего случая.
+5.  Объект `FileReader` используется для преобразования файла в двоичную строку.
+6.  И в завершение, когда содержимое загружено, вызывается функция `XMLHttpRequest` `send()` для отправки содержимого файла.
 
-<h3 id="Асинхронная_обработка_процесса_загрузки">Асинхронная обработка процесса загрузки</h3>
+### Асинхронная обработка процесса загрузки
 
-<pre class="brush: js">&lt;?php
+```js
+<?php
 if (isset($_FILES['myFile'])) {
     // Example:
     move_uploaded_file($_FILES['myFile']['tmp_name'], "uploads/" . $_FILES['myFile']['name']);
     exit;
 }
-?&gt;&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;dnd binary upload&lt;/title&gt;
-    &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
-    &lt;script type="text/javascript"&gt;
+?><!DOCTYPE html>
+<html>
+<head>
+    <title>dnd binary upload</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript">
         function sendFile(file) {
             var uri = "/index.php";
             var xhr = new XMLHttpRequest();
@@ -389,7 +412,7 @@ if (isset($_FILES['myFile'])) {
 
             xhr.open("POST", uri, true);
             xhr.onreadystatechange = function() {
-                if (xhr.readyState == 4 &amp;&amp; xhr.status == 200) {
+                if (xhr.readyState == 4 && xhr.status == 200) {
                     // Handle response.
                     alert(xhr.responseText); // handle response.
                 }
@@ -411,63 +434,64 @@ if (isset($_FILES['myFile'])) {
                 event.preventDefault();
 
                 var filesArray = event.dataTransfer.files;
-                for (var i=0; i&lt;filesArray.length; i++) {
+                for (var i=0; i<filesArray.length; i++) {
                     sendFile(filesArray[i]);
                 }
             }
         }
-    &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div&gt;
-        &lt;div id="dropzone" style="margin:30px; width:500px; height:300px; border:1px dotted grey;"&gt;Drag &amp; drop your file here...&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+    </script>
+</head>
+<body>
+    <div>
+        <div id="dropzone" style="margin:30px; width:500px; height:300px; border:1px dotted grey;">Drag & drop your file here...</div>
+    </div>
+</body>
+</html>
+```
 
-<h2 id="Пример_Использование_URL_объектов_для_отображения_PDF">Пример: Использование URL объектов для отображения PDF</h2>
+## Пример: Использование URL объектов для отображения PDF
 
-<p>URL объектов могут быть использованы не только для изображений! Также этот приём можно использовать и для других ресурсов, которые могут отображаться браузером, например, файлы PDF.</p>
+URL объектов могут быть использованы не только для изображений! Также этот приём можно использовать и для других ресурсов, которые могут отображаться браузером, например, файлы PDF.
 
-<p>В Firefox, для того чтобы файл PDF появился в iframe и не предлагался для загрузки, нужно установить <code>pdfjs.disabled</code> в значение <code>false</code> {{non-standard_inline()}}.</p>
+В Firefox, для того чтобы файл PDF появился в iframe и не предлагался для загрузки, нужно установить `pdfjs.disabled` в значение `false` {{non-standard_inline()}}.
 
-<pre class="brush: html">&lt;iframe id="viewer"&gt;
-</pre>
+```html
+<iframe id="viewer">
+```
 
-<p>А здесь изменение атрибута <code>src</code>:</p>
+А здесь изменение атрибута `src`:
 
-<pre class="brush: js">var obj_url = window.URL.createObjectURL(blob);
+```js
+var obj_url = window.URL.createObjectURL(blob);
 var iframe = document.getElementById('viewer');
 iframe.setAttribute('src', obj_url);
-window.URL.revokeObjectURL(obj_url);</pre>
+window.URL.revokeObjectURL(obj_url);
+```
 
-<h2 id="Пример_Использование_URL_объектов_с_другими_типами_файлов">Пример: Использование URL объектов с другими типами файлов</h2>
+## Пример: Использование URL объектов с другими типами файлов
 
-<p>Вы можете таким же образом работать с файлами в других форматах. Ниже приведён пример как загружается видео:</p>
+Вы можете таким же образом работать с файлами в других форматах. Ниже приведён пример как загружается видео:
 
-<pre class="brush: js">var video = document.getElementById('video');
+```js
+var video = document.getElementById('video');
 var obj_url = window.URL.createObjectURL(blob);
 video.src = obj_url;
 video.play()
-window.URL.revokeObjectURL(obj_url);</pre>
+window.URL.revokeObjectURL(obj_url);
+```
 
-<h2 id="Specification">Спецификации</h2>
+## Спецификации
 
-<ul>
- <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#file-upload-state-%28type=file%29" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/number-state.html#concept-input-type-file-selected">File upload state</a> (Рабочие материалы HTML 5)</li>
- <li><a href="http://www.w3.org/TR/FileAPI/">File API</a></li>
-</ul>
+- [File upload state](http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#file-upload-state-%28type=file%29 "http://www.whatwg.org/specs/web-apps/current-work/multipage/number-state.html#concept-input-type-file-selected") (Рабочие материалы HTML 5)
+- [File API](http://www.w3.org/TR/FileAPI/)
 
-<h2 id="Дополнительные_ссылки">Дополнительные ссылки</h2>
+## Дополнительные ссылки
 
-<ul>
- <li>{{ domxref("File") }}</li>
- <li>{{ domxref("FileList") }}</li>
- <li>{{ domxref("FileReader") }}</li>
- <li>{{DOMxRef("URL")}}</li>
- <li>{{DOMxRef("XMLHttpRequest")}}</li>
- <li><a href="/en/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="En/Using XMLHttpRequest">Using XMLHttpRequest</a></li>
- <li><a href="/en/Extensions/Using_the_DOM_File_API_in_chrome_code" title="en/Extensions/Using the DOM File API in chrome code">Using the DOM File API in chrome code</a></li>
- <li><a class="external" href="http://www.jquery.com/">jQuery</a> JavaScript library</li>
-</ul>
+- {{ domxref("File") }}
+- {{ domxref("FileList") }}
+- {{ domxref("FileReader") }}
+- {{DOMxRef("URL")}}
+- {{DOMxRef("XMLHttpRequest")}}
+- [Using XMLHttpRequest](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest "En/Using XMLHttpRequest")
+- [Using the DOM File API in chrome code](/en/Extensions/Using_the_DOM_File_API_in_chrome_code "en/Extensions/Using the DOM File API in chrome code")
+- [jQuery](http://www.jquery.com/) JavaScript library

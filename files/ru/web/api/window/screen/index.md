@@ -3,26 +3,30 @@ title: Window.screen
 slug: Web/API/Window/screen
 translation_of: Web/API/Window/screen
 ---
-<p>{{APIRef("CSSOM")}}</p>
+{{APIRef("CSSOM")}}
 
-<p>Свойство <strong><code>screen</code></strong> объекта {{DOMxRef("Window")}} возвращает ссылку на экран объекта, который содержит информацию об экране пользователя. Похожий по смыслу, объект <code>screen</code>, который имплементирует интерфейс  {{DOMxRef("Screen")}}   представляет собой совокупность свойств экрана пользователя.</p>
+Свойство **`screen`** объекта {{DOMxRef("Window")}} возвращает ссылку на экран объекта, который содержит информацию об экране пользователя. Похожий по смыслу, объект `screen`, который имплементирует интерфейс {{DOMxRef("Screen")}} представляет собой совокупность свойств экрана пользователя.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">let <var>screenObj</var> = <var>window</var>.screen;</pre>
+```
+let screenObj = window.screen;
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js;">if (screen.pixelDepth &lt; 8) {
+```js
+if (screen.pixelDepth < 8) {
   // uиспользовать пониженную глубину пикселей
 } else {
   // Использовать стандартную глубину пикселей(24)
 }
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
+
+{{Compat}}

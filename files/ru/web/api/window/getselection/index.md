@@ -3,70 +3,72 @@ title: Window.getSelection()
 slug: Web/API/Window/getSelection
 translation_of: Web/API/Window/getSelection
 ---
-<div>{{ ApiRef() }}</div>
+{{ ApiRef() }}
 
-<h2 id="Summary">Коротко</h2>
+## Коротко
 
-<p>Метод возвращает объект {{domxref("Selection")}}, представленный в виде диапазона текста, который пользователь выделил на странице.</p>
+Метод возвращает объект {{domxref("Selection")}}, представленный в виде диапазона текста, который пользователь выделил на странице.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>selection</em> = <em>window</em>.getSelection();</pre>
+```
+selection = window.getSelection();
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p>Объект {{domxref("Selection")}}.</p>
+Объект {{domxref("Selection")}}.
 
-<p>При добавлении в параметр пустую строку или воспользовавшись методом {{jsxref("Selection.toString()")}} вам вернут строку, которую выделил пользователь.</p>
+При добавлении в параметр пустую строку или воспользовавшись методом {{jsxref("Selection.toString()")}} вам вернут строку, которую выделил пользователь.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush:js">function foo() {
+```js
+function foo() {
     var selObj = window.getSelection();
     alert(selObj);
     var selRange = selObj.getRangeAt(0);
     // вернёт диапазон Range
-}</pre>
+}
+```
 
-<h2 id="Notes">Примечания</h2>
+## Примечания
 
-<h3 id="String_representation_of_the_Selection_object">String representation of the Selection object</h3>
+### String representation of the Selection object
 
-<p>В JavaScript при попытке передать в функцию, принимающую строку (как на пример {{ Domxref("window.alert()") }} или же {{ Domxref("document.write()") }}), функция попробует сделать из любого параметра строку, даже если этот параметр является объектом, функцией со своими методами и свойствами.</p>
+В JavaScript при попытке передать в функцию, принимающую строку (как на пример {{ Domxref("window.alert()") }} или же {{ Domxref("document.write()") }}), функция попробует сделать из любого параметра строку, даже если этот параметр является объектом, функцией со своими методами и свойствами.
 
-<p>В приведённом выше примере <code>selObj.toString() автоматически задействуется, когда мы передаём в </code>{{domxref("window.alert()")}} переменную selObj как параметр, который должен быть строкой. Однако мы не можем использовать свойства и метода объекта String, как на пример : <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length" title="JS/String.length">length</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr" title="JS/String.substr">substr</a></code>. В следствии чего, вам необходимо будет применить вручную метод   <code>toString(), как тут:</code></p>
+В приведённом выше примере `selObj.toString() автоматически задействуется, когда мы передаём в `{{domxref("window.alert()")}} переменную selObj как параметр, который должен быть строкой. Однако мы не можем использовать свойства и метода объекта String, как на пример : [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length "JS/String.length"), [`substr`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr "JS/String.substr"). В следствии чего, вам необходимо будет применить вручную метод `toString(), как тут:`
 
-<pre class="brush:js">var selectedText = selObj.toString();</pre>
+```js
+var selectedText = selObj.toString();
+```
 
-<ul>
- <li><code>selObj</code> это объект <code>Selection</code>.</li>
- <li><code>selectedText</code> это строка  (Выделенный текст).</li>
-</ul>
+- `selObj` это объект `Selection`.
+- `selectedText` это строка (Выделенный текст).
 
-<h3 id="Родственные_объекты">Родственные объекты</h3>
+### Родственные объекты
 
-<p>Вы так же можете использовать такой способ вызова {{domxref("Document.getSelection()")}}, который работает идентично {{domxref("Window.getSelection()")}}.</p>
+Вы так же можете использовать такой способ вызова {{domxref("Document.getSelection()")}}, который работает идентично {{domxref("Window.getSelection()")}}.
 
-<p>Поля ввода HTML (inputs) предоставляют более удобный API для работы с выделенным текстом (смотрите {{domxref("HTMLInputElement.setSelectionRange()")}}).</p>
+Поля ввода HTML (inputs) предоставляют более удобный API для работы с выделенным текстом (смотрите {{domxref("HTMLInputElement.setSelectionRange()")}}).
 
-<p>На заметку, разница между <em>selection</em> и <em>focus</em>. {{domxref("Document.activeElement")}}  - это то, что вернётся элемент, который выделен (focused) .</p>
+На заметку, разница между _selection_ и _focus_. {{domxref("Document.activeElement")}} - это то, что вернётся элемент, который выделен (focused) .
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузером">Совместимость с браузером</h2>
+## Совместимость с браузером
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also"></h2>
+##
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Selection_API">Selection API</a></li>
- <li>{{domxref("Selection")}}</li>
- <li>{{domxref("Range")}}</li>
- <li>{{domxref("Document.getSelection()")}}</li>
- <li>{{domxref("HTMLInputElement.setSelectionRange()")}}</li>
-</ul>
+- [Selection API](/ru/docs/Web/API/Selection_API)
+- {{domxref("Selection")}}
+- {{domxref("Range")}}
+- {{domxref("Document.getSelection()")}}
+- {{domxref("HTMLInputElement.setSelectionRange()")}}

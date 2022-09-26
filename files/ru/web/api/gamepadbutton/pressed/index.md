@@ -3,49 +3,40 @@ title: GamepadButton.pressed
 slug: Web/API/GamepadButton/pressed
 translation_of: Web/API/GamepadButton/pressed
 ---
-<p>{{APIRef("Gamepad API")}}</p>
+{{APIRef("Gamepad API")}}
 
-<p>Свойство <code><strong>GamepadButton.pressed</strong></code> интерфейса {{domxref("GamepadButton")}} возвращает <code>boolean</code>, указывающий, нажата ли текущая кнопка (<code>true</code>), или нет (<code>false</code>).</p>
+Свойство **`GamepadButton.pressed`** интерфейса {{domxref("GamepadButton")}} возвращает `boolean`, указывающий, нажата ли текущая кнопка (`true`), или нет (`false`).
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var isPressed = navigator.getGamepads()[0].pressed;</pre>
+```
+var isPressed = navigator.getGamepads()[0].pressed;
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">var gp = navigator.getGamepads()[0]; // Get the first gamepad object
+```js
+var gp = navigator.getGamepads()[0]; // Get the first gamepad object
 
 if(gp.buttons[0].pressed == true) {
   // respond to button being pressed
-}</pre>
+}
+```
 
-<h2 id="Значение">Значение</h2>
+## Значение
 
-<p> {{domxref("boolean")}}.</p>
+{{domxref("boolean")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Gamepad", "#dom-gamepadbutton-pressed", "GamepadButton.pressed")}}</td>
-   <td>{{Spec2("Gamepad")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                            | Status                       | Comment            |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName("Gamepad", "#dom-gamepadbutton-pressed", "GamepadButton.pressed")}} | {{Spec2("Gamepad")}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/API/Gamepad">Using the Gamepad API</a></li>
-</ul>
+- [Using the Gamepad API](/ru/docs/Web/Guide/API/Gamepad)

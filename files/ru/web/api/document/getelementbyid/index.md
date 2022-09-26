@@ -3,104 +3,78 @@ title: document.getElementById()
 slug: Web/API/Document/getElementById
 translation_of: Web/API/Document/getElementById
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<div> </div>
+Возвращает ссылку на элемент по его идентификатору ([ID](/ru/docs/DOM/element.id "en-US/docs/DOM/element.id")); идентификатор является строкой, которая может быть использована для идентификации элемента; она может быть определена при помощи атрибута `id` в HTML или из скрипта.
 
-<p>Возвращает ссылку на элемент по его идентификатору (<a href="/en-US/docs/DOM/element.id" title="en-US/docs/DOM/element.id">ID</a>); идентификатор является строкой, которая может быть использована для идентификации элемента; она может быть определена при помощи атрибута <code>id</code> в HTML или из скрипта.</p>
+## Синтаксис
 
-<h2 id="Syntax">Синтаксис</h2>
+```
+element = document.getElementById(id);
+```
 
-<pre class="eval"><em>element</em> = document.getElementById(<em>id</em>);
-</pre>
+### Параметры
 
-<h3 id="Параметры">Параметры</h3>
+- **`id`**
+  - : чувствительная к регистру строка, являющаяся уникальным идентификатором искомого элемента.
 
-<dl>
- <dt><strong><code>id </code></strong></dt>
- <dd>чувствительная к регистру строка, являющаяся уникальным идентификатором искомого элемента.</dd>
-</dl>
+### Возвращаемое значение
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+ссылка на объект типа {{domxref("Element")}} соответствующий указанному ID или `null`, если элемент с указанным ID не найден в документе.
 
-<p>ссылка на объект типа {{domxref("Element")}} соответствующий указанному ID или <code>null</code>, если элемент с указанным ID не найден в документе.</p>
+## Пример
 
-<h2 id="Example">Пример</h2>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;getElementById example&lt;/title&gt;
-  &lt;script&gt;
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>getElementById example</title>
+  <script>
   function changeColor(newColor) {
     var elem = document.getElementById("para1");
     elem.style.color = newColor;
   }
-  &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p id="para1"&gt;Some text here&lt;/p&gt;
-  &lt;button onclick="changeColor('blue');"&gt;blue&lt;/button&gt;
-  &lt;button onclick="changeColor('red');"&gt;red&lt;/button&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </script>
+</head>
+<body>
+  <p id="para1">Some text here</p>
+  <button onclick="changeColor('blue');">blue</button>
+  <button onclick="changeColor('red');">red</button>
+</body>
+</html>
+```
 
-<h2 id="Notes">Замечания</h2>
+## Замечания
 
-<p>Начинающим следует знать, что верхний регистр в части имени метода 'Id' <em>должен </em>быть точным для корректного вызова функции; "getElementByID" будет <em>не корректно</em>, как бы естественно это ни казалось.</p>
+Начинающим следует знать, что верхний регистр в части имени метода 'Id' _должен_ быть точным для корректного вызова функции; "getElementByID" будет _не корректно_, как бы естественно это ни казалось.
 
-<p><code>Если элементы с указанным id отсутствуют</code>, функция вернёт null. Заметьте, что параметр id чувствителен к регистру, так <code>document.getElementById("<strong>M</strong>ain")</code> вернёт <code>null</code> вместо элемента <code>&lt;div id="<strong>m</strong>ain"&gt;</code>, потому что "M" и "m" различны для этого метода.</p>
+`Если элементы с указанным id отсутствуют`, функция вернёт null. Заметьте, что параметр id чувствителен к регистру, так `document.getElementById("Main")` вернёт `null` вместо элемента `<div id="main">`, потому что "M" и "m" различны для этого метода.
 
-<p><strong>Элементы вне документа</strong> не ищутся <code>getElementById()</code>. При создании элемента и назначении ему ID, вам следует вставить элемент в дерево документа с помощью {{domxref("Node.insertBefore()")}} или подобным методом, до того как вы сможете получить к нему доступ при помощи <code>getElementById()</code>:</p>
+**Элементы вне документа** не ищутся `getElementById()`. При создании элемента и назначении ему ID, вам следует вставить элемент в дерево документа с помощью {{domxref("Node.insertBefore()")}} или подобным методом, до того как вы сможете получить к нему доступ при помощи `getElementById()`:
 
-<pre class="brush: js">var element = document.createElement("div");
+```js
+var element = document.createElement("div");
 element.id = 'testqq';
 var el = document.getElementById('testqq'); // el will be null!
-</pre>
+```
 
-<p><strong>Не-HTML документы</strong>. Релизация DOM должна содержать информацию, сообщающую о том, какие атрибуты являются идентификаторами. Атрибуты с именем "id" не являются идентификаторами только если это не указано в описании типа документа (DTD). Атрибут "id" определён в качестве идентификатора в общих случаях <a href="/en-US/docs/XHTML" title="en-US/docs/XHTML">XHTML</a>, <a href="/en-US/docs/XUL" title="en-US/docs/XUL">XUL</a>, и других. От реализаций, которые не знают, какой атрибут является идентификатором, ожидается возврат null.</p>
+**Не-HTML документы**. Релизация DOM должна содержать информацию, сообщающую о том, какие атрибуты являются идентификаторами. Атрибуты с именем "id" не являются идентификаторами только если это не указано в описании типа документа (DTD). Атрибут "id" определён в качестве идентификатора в общих случаях [XHTML](/ru/docs/XHTML "en-US/docs/XHTML"), [XUL](/ru/docs/XUL "en-US/docs/XUL"), и других. От реализаций, которые не знают, какой атрибут является идентификатором, ожидается возврат null.
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1','level-one-html.html#method-getElementById','getElementById')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Исходное определение интерфейса</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core','core.html#ID-getElBId','getElementById')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>Заменяет DOM 1</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core','core.html#ID-getElBId','getElementById')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Заменяет DOM 2</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#interface-nonelementparentnode','getElementById')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Должен заменить DOM 3</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                                 | Статус                           | Комментарий                     |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------- |
+| {{SpecName('DOM1','level-one-html.html#method-getElementById','getElementById')}} | {{Spec2('DOM1')}}         | Исходное определение интерфейса |
+| {{SpecName('DOM2 Core','core.html#ID-getElBId','getElementById')}}                     | {{Spec2('DOM2 Core')}}     | Заменяет DOM 1                  |
+| {{SpecName('DOM3 Core','core.html#ID-getElBId','getElementById')}}                     | {{Spec2('DOM3 Core')}}     | Заменяет DOM 2                  |
+| {{SpecName('DOM WHATWG','#interface-nonelementparentnode','getElementById')}}     | {{Spec2('DOM WHATWG')}} | Должен заменить DOM 3           |
 
-<h2 id="Browser_Compatibility">Совместимость в браузерах</h2>
+## Совместимость в браузерах
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("Document")}} ссылка для иных методов и свойств которые вы можете использовать для получения ссылок на иные элементы.</li>
- <li>{{domxref("Document.querySelector()")}} для выборки по таким запросам, как <code>'div.myclass'</code></li>
- <li><a href="/en-US/docs/xml/xml:id" title="en-US/docs/xml/id">xml:id</a> - имеет метод, позволяющий getElementById() получать «xml: id» в XML-документах (например, возвращаемые вызовами Ajax)</li>
-</ul>
+- {{domxref("Document")}} ссылка для иных методов и свойств которые вы можете использовать для получения ссылок на иные элементы.
+- {{domxref("Document.querySelector()")}} для выборки по таким запросам, как `'div.myclass'`
+- [xml:id](/ru/docs/xml/xml:id "en-US/docs/xml/id") - имеет метод, позволяющий getElementById() получать «xml: id» в XML-документах (например, возвращаемые вызовами Ajax)

@@ -3,51 +3,45 @@ title: Window.matchMedia()
 slug: Web/API/Window/matchMedia
 translation_of: Web/API/Window/matchMedia
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Возвращает новый объект {{domxref("MediaQueryList")}}, использующийся для определения соответствия документа переданной строке <a href="/en-US/docs/CSS/Media_queries" title="CSS/Media queries">медиавыражения</a>.</p>
+Возвращает новый объект {{domxref("MediaQueryList")}}, использующийся для определения соответствия документа переданной строке [медиавыражения](/ru/docs/CSS/Media_queries "CSS/Media queries").
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>mql</em> = window.matchMedia(<em>mediaQueryString</em>)</pre>
+```
+mql = window.matchMedia(mediaQueryString)
+```
 
-<p>где <code>mediaQueryString</code> является строкой медиавыражения, для которой будет возвращён новый объект {{domxref("MediaQueryList")}}.</p>
+где `mediaQueryString` является строкой медиавыражения, для которой будет возвращён новый объект {{domxref("MediaQueryList")}}.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush: js">if (window.matchMedia("(min-width: 400px)").matches) {
+```js
+if (window.matchMedia("(min-width: 400px)").matches) {
   /* the viewport is at least 400 pixels wide */
 } else {
   /* the viewport is less than 400 pixels wide */
-}</pre>
+}
+```
 
-<p>Данный код позволяет обрабатывать поведение по другому, когда размер окна очень узкий.</p>
+Данный код позволяет обрабатывать поведение по другому, когда размер окна очень узкий.
 
-<p>Смотрите <a href="/en-US/docs/DOM/Using_media_queries_from_code" title="CSS/Using media queries from code">Использование медиавыражений из кода</a> для дополнительных примеров.</p>
+Смотрите [Использование медиавыражений из кода](/ru/docs/DOM/Using_media_queries_from_code "CSS/Using media queries from code") для дополнительных примеров.
 
-<h2 id="Browser_compatibility">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p> </p>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## Спецификация
 
-<p> </p>
+- [The CSSOM View Module: The MediaQueryList Interface](http://dev.w3.org/csswg/cssom-view/#the-mediaquerylist-interface)
 
-<div id="compat-mobile"> </div>
+## Смотрите также
 
-<h2 id="Specification">Спецификация</h2>
-
-<ul>
- <li><a class="external" href="http://dev.w3.org/csswg/cssom-view/#the-mediaquerylist-interface">The CSSOM View Module: The MediaQueryList Interface</a></li>
-</ul>
-
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li><a href="/en-US/docs/CSS/Media_queries" title="CSS/Media queries">Media queries</a></li>
- <li><a href="/en-US/docs/DOM/Using_media_queries_from_code" title="CSS/Using media queries from code">Using media queries from code</a></li>
- <li>{{domxref("MediaQueryList")}}</li>
- <li>{{domxref("MediaQueryListListener")}}</li>
-</ul>
+- [Media queries](/ru/docs/CSS/Media_queries "CSS/Media queries")
+- [Using media queries from code](/ru/docs/DOM/Using_media_queries_from_code "CSS/Using media queries from code")
+- {{domxref("MediaQueryList")}}
+- {{domxref("MediaQueryListListener")}}

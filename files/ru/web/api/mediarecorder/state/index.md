@@ -3,44 +3,30 @@ title: MediaRecorder.state
 slug: Web/API/MediaRecorder/state
 translation_of: Web/API/MediaRecorder/state
 ---
-<div>{{APIRef("MediaStream Recording")}}</div>
+{{APIRef("MediaStream Recording")}}
 
-<p>Свойство только для чтения <strong><code>MediaRecorder.state</code></strong> возвращает текущее состояние определённого объекта <code>MediaRecorder</code>.</p>
+Свойство только для чтения **`MediaRecorder.state`** возвращает текущее состояние определённого объекта `MediaRecorder`.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <em>state</em> = MediaRecorder.state</pre>
+```
+var state = MediaRecorder.state
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<p>Объект <a href="http://w3c.github.io/web-animations/#enumdef-animationplaystate">AnimationPlayState</a> содержит одно из нижеперечисленных значений:</p>
+Объект [AnimationPlayState](http://w3c.github.io/web-animations/#enumdef-animationplaystate) содержит одно из нижеперечисленных значений:
 
-<table>
- <thead>
-  <tr>
-   <th scope="row">Значение</th>
-   <th scope="col">Описание</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row"><code id="idl-def-RecordingStateEnum.inactive">inactive</code></th>
-   <td>Запись не ведётся — она ещё не была начата или уже была осуществлена и остановлена.</td>
-  </tr>
-  <tr>
-   <th scope="row"><code id="idl-def-RecordingStateEnum.recording">recording</code></th>
-   <td>Запись начата и UA собирает данные.</td>
-  </tr>
-  <tr>
-   <th scope="row"><code id="idl-def-RecordingStateEnum.paused">paused</code></th>
-   <td>Запись была начата, но поставлена на паузу, не остановлена и ещё не возобновлена.</td>
-  </tr>
- </tbody>
-</table>
+| Значение    | Описание                                                                            |
+| ----------- | ----------------------------------------------------------------------------------- |
+| `inactive`  | Запись не ведётся — она ещё не была начата или уже была осуществлена и остановлена. |
+| `recording` | Запись начата и UA собирает данные.                                                 |
+| `paused`    | Запись была начата, но поставлена на паузу, не остановлена и ещё не возобновлена.   |
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">...
+```js
+...
 
   record.onclick = function() {
     mediaRecorder.start();
@@ -49,23 +35,20 @@ translation_of: Web/API/MediaRecorder/state
     console.log("захват начат");
   }
 
-...</pre>
+...
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/ru/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API">Использование MediaRecorder API</a></li>
- <li><a href="http://mdn.github.io/web-dictaphone/">Веб-диктофон</a>: MediaRecorder + getUserMedia + Web Audio API от <a href="https://twitter.com/chrisdavidmills">Chris Mills</a> (<a href="https://github.com/mdn/web-dictaphone/">исходники на Github</a>.)</li>
- <li><a href="http://simpl.info/mediarecorder/">simpl.info Демонстрация MediaStream Recording</a> от <a href="https://twitter.com/sw12">Sam Dutton</a>.</li>
- <li>{{domxref("Navigator.getUserMedia")}}</li>
-</ul>
+- [Использование MediaRecorder API](/ru/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API)
+- [Веб-диктофон](http://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API от [Chris Mills](https://twitter.com/chrisdavidmills) ([исходники на Github](https://github.com/mdn/web-dictaphone/).)
+- [simpl.info Демонстрация MediaStream Recording](http://simpl.info/mediarecorder/) от [Sam Dutton](https://twitter.com/sw12).
+- {{domxref("Navigator.getUserMedia")}}

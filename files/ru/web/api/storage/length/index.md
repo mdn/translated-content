@@ -8,42 +8,44 @@ tags:
   - Справка
 translation_of: Web/API/Storage/length
 ---
-<p>{{APIRef("Web Storage API")}}</p>
+{{APIRef("Web Storage API")}}
 
-<p>Свойство length интерфейса {{domxref("Storage")}} доступно только для чтения и возвращает число с количеством элементов, которые хранятся в объекте Storage на данный момент.</p>
+Свойство length интерфейса {{domxref("Storage")}} доступно только для чтения и возвращает число с количеством элементов, которые хранятся в объекте Storage на данный момент.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <em>aLength</em> = <em>storage</em>.length;</pre>
+```
+var aLength = storage.length;
+```
 
-<h3 id="Возвращаемые_значения">Возвращаемые значения</h3>
+### Возвращаемые значения
 
-<p>Число</p>
+Число
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Следующая функция добавляет три элемента с данными в локальное хранилище для домена, на котором выполняется код и возвращает число элементов в хранилище:</p>
+Следующая функция добавляет три элемента с данными в локальное хранилище для домена, на котором выполняется код и возвращает число элементов в хранилище:
 
-<pre class="brush: js">function populateStorage() {
+```js
+function populateStorage() {
   localStorage.setItem('bgcolor', 'yellow');
   localStorage.setItem('font', 'Helvetica');
   localStorage.setItem('image', 'cats.png');
 
   localStorage.length; // return 3
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Примечание</strong>: чтобы посмотреть выполнение кода вживую, посетите страницу <a href="https://github.com/mdn/web-storage-demo">Web Storage Demo</a>.</p>
-</div>
+> **Примечание:** чтобы посмотреть выполнение кода вживую, посетите страницу [Web Storage Demo](https://github.com/mdn/web-storage-demo).
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<p><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Использование Web Storage API</a></p>
+[Использование Web Storage API](/ru/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

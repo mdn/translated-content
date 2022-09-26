@@ -3,58 +3,54 @@ title: FormData.has()
 slug: Web/API/FormData/has
 translation_of: Web/API/FormData/has
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p>Метод <code><strong>has()</strong></code> из интерфейса {{domxref("FormData")}} возвращает логическое значение, указывающее, содержит ли объект <code>FormData</code> указанный ключ.</p>
+Метод **`has()`** из интерфейса {{domxref("FormData")}} возвращает логическое значение, указывающее, содержит ли объект `FormData` указанный ключ.
 
-<div class="note">
-<p>Примечание: Этот метод доступен в <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Примечание:** Примечание: Этот метод доступен в [Web Workers](/ru/docs/Web/API/Web_Workers_API).
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">formData.has(name);</pre>
+```js
+formData.has(name);
+```
 
-<h3 id="append_Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>name</code></dt>
- <dd>{{domxref("USVString")}} представляет собой имя ключа, которое вы хотите проверить.</dd>
-</dl>
+- `name`
+  - : {{domxref("USVString")}} представляет собой имя ключа, которое вы хотите проверить.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>{{domxref("Boolean")}}.</p>
+{{domxref("Boolean")}}.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Следующий код создаёт пустой объект <code>FormData</code>:</p>
+Следующий код создаёт пустой объект `FormData`:
 
-<pre class="brush: js">var formData = new FormData();</pre>
+```js
+var formData = new FormData();
+```
 
-<p>В следующем коде показаны результаты проверки существования  <code>username</code> в объекте <code>FormData</code>, до и после добавления значения <code>username</code> в {{domxref("FormData.append")}}:</p>
+В следующем коде показаны результаты проверки существования `username` в объекте `FormData`, до и после добавления значения `username` в {{domxref("FormData.append")}}:
 
-<pre class="brush: js">formData.has('username'); // Returns false
+```js
+formData.has('username'); // Returns false
 formData.append('username', 'Chris');
 formData.has('username'); // Returns true
+```
 
-</pre>
-
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="Using XMLHttpRequest">Использование XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects" title="DOM/XMLHttpRequest/FormData/Using_FormData_objects">Использование объекта FormData</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Использование XMLHttpRequest](/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Использование объекта FormData](/ru/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
+- {{HTMLElement("Form")}}

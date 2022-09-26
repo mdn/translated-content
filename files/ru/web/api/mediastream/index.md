@@ -11,107 +11,94 @@ tags:
   - Интерфейс
 translation_of: Web/API/MediaStream
 ---
-<p>{{APIRef("Media Capture and Streams")}}</p>
+{{APIRef("Media Capture and Streams")}}
 
-<p>Интерфейс <strong><code>MediaStream</code></strong> представляет поток медиа данных. Поток состоит из нескольких <strong>треков</strong>, таких как видео и аудио треки. Каждый трек является экземпляром {{domxref("MediaStreamTrack")}}. MediaStream можно получить либо с помощью конструктора, либо вызовом {{domxref("MediaDevices.getUserMedia()")}}.</p>
+Интерфейс **`MediaStream`** представляет поток медиа данных. Поток состоит из нескольких **треков**, таких как видео и аудио треки. Каждый трек является экземпляром {{domxref("MediaStreamTrack")}}. MediaStream можно получить либо с помощью конструктора, либо вызовом {{domxref("MediaDevices.getUserMedia()")}}.
 
-<p>Некоторые агенты предоставляют подклассы, чтобы привести более точную информацию или расширить функциональность, например {{domxref("CanvasCaptureMediaStream")}}.</p>
+Некоторые агенты предоставляют подклассы, чтобы привести более точную информацию или расширить функциональность, например {{domxref("CanvasCaptureMediaStream")}}.
 
-<h2 id="Конструктор">Конструктор</h2>
+## Конструктор
 
-<dl>
- <dt>{{domxref("MediaStream.MediaStream", "MediaStream()")}}</dt>
- <dd>Создаёт и возвращает новый объект MediaStream. Можно создать пустой поток, поток, основанный на существующем или содержащий указанный список треков (массив объектов {{domxref("MediaStreamTrack")}}).</dd>
-</dl>
+- {{domxref("MediaStream.MediaStream", "MediaStream()")}}
+  - : Создаёт и возвращает новый объект MediaStream. Можно создать пустой поток, поток, основанный на существующем или содержащий указанный список треков (массив объектов {{domxref("MediaStreamTrack")}}).
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Этот интерфейс наследует свойства своего родителя, </em><em>{{domxref("EventTarget")}}.</em></p>
+_Этот интерфейс наследует свойства своего родителя,_ _{{domxref("EventTarget")}}._
 
-<dl>
-</dl>
+<!---->
 
-<dl>
- <dt>{{domxref("MediaStream.active")}} {{readonlyinline}}</dt>
- <dd>Возвращает <code>true</code>, если <code>MediaStream</code> активен, иначе <code>false</code>.</dd>
- <dt>{{domxref("MediaStream.ended")}} {{readonlyInline}} {{obsolete_inline()}}</dt>
- <dd>Возвращает <code style="font-size: 14px;">true</code>, если достигнут конец потока. Это свойство удалено из спецификации; следует проверять свойство {{domxref("MediaStreamTrack.readyState")}}, которое имеет значение <code>"ended"</code> у завершённых треков.</dd>
-</dl>
+- {{domxref("MediaStream.active")}} {{readonlyinline}}
+  - : Возвращает `true`, если `MediaStream` активен, иначе `false`.
+- {{domxref("MediaStream.ended")}} {{readonlyInline}} {{obsolete_inline()}}
+  - : Возвращает `true`, если достигнут конец потока. Это свойство удалено из спецификации; следует проверять свойство {{domxref("MediaStreamTrack.readyState")}}, которое имеет значение `"ended"` у завершённых треков.
 
-<dl>
- <dt>{{domxref("MediaStream.id")}} {{readonlyInline}}</dt>
- <dd>Объект {{domxref("DOMString")}}, содержащий 36 символов универсального уникального идентификатора (UUID) потока.</dd>
-</dl>
+<!---->
 
-<h3 id="Обработчики_событий">Обработчики событий</h3>
+- {{domxref("MediaStream.id")}} {{readonlyInline}}
+  - : Объект {{domxref("DOMString")}}, содержащий 36 символов универсального уникального идентификатора (UUID) потока.
 
-<dl>
- <dt>{{domxref("MediaStream.onaddtrack")}}</dt>
- <dd>Объект {{event("Event_handlers", "event handler")}}, содержащий действие, которое должно выполняться, когда случается событие {{event("addtrack")}} при добавлении нового объекта {{domxref("MediaStreamTrack")}}.</dd>
- <dt>{{domxref("MediaStream.onremovetrack")}}</dt>
- <dd>Объект {{event("Event_handlers", "event handler")}}, содержащий действие, которое должно выполняться, когда случается событие {{event("removetrack")}} при удалении объекта  {{domxref("MediaStreamTrack")}}.</dd>
-</dl>
+### Обработчики событий
 
-<h2 id="Методы">Методы</h2>
+- {{domxref("MediaStream.onaddtrack")}}
+  - : Объект {{event("Event_handlers", "event handler")}}, содержащий действие, которое должно выполняться, когда случается событие {{event("addtrack")}} при добавлении нового объекта {{domxref("MediaStreamTrack")}}.
+- {{domxref("MediaStream.onremovetrack")}}
+  - : Объект {{event("Event_handlers", "event handler")}}, содержащий действие, которое должно выполняться, когда случается событие {{event("removetrack")}} при удалении объекта {{domxref("MediaStreamTrack")}}.
 
-<p><em>Этот интерфейс наследует методы своего родителя, </em><em>{{domxref("EventTarget")}}.</em></p>
+## Методы
 
-<dl>
- <dt>{{domxref("MediaStream.addTrack()")}}</dt>
- <dd>Сохраняет копию данного объекта {{domxref("MediaStreamTrack")}}. Если данный трек добавлялся в <code>MediaStream</code> ранее, ничего не происходит.</dd>
-</dl>
+_Этот интерфейс наследует методы своего родителя,_ _{{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("MediaStream.clone()")}}</dt>
- <dd>Возвращает точную копию объекта <code>MediaStream</code>. Исключение составляет значение {{domxref("MediaStream.id", "id")}}, которое изменится на новое уникальное.</dd>
-</dl>
+- {{domxref("MediaStream.addTrack()")}}
+  - : Сохраняет копию данного объекта {{domxref("MediaStreamTrack")}}. Если данный трек добавлялся в `MediaStream` ранее, ничего не происходит.
 
-<dl>
- <dt>{{domxref("MediaStream.getAudioTracks()")}}</dt>
- <dd>Возвращает список объектов {{domxref("MediaStreamTrack")}}, хранимых в объекте <code style="font-size: 14px;">MediaStream</code> с атрибутом <code style="font-size: 14px;">kind</code> имеющим значение <code style="font-size: 14px;">"audio"</code>. Порядок не определён и может меняться между браузерами, а также между вызовами.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt>{{domxref("MediaStream.getTrackById()")}}</dt>
- <dd>Возвращает трек с <code style="font-size: 14px;">trackid</code> соответствующем данному. Если в метод не передано аргументов или трека с данным ID нет, возвращает <code>null</code>. Если несколько треков имеют одинаковый ID, возвращает первый из них.</dd>
- <dt>{{domxref("MediaStream.getTracks()")}}</dt>
- <dd>Возвращает список всех объектов {{domxref("MediaStreamTrack")}}, сохранённых в объекте <code>MediaStream</code>, вне зависимости от значения их свойства <code>kind</code>. Порядок не определён и может меняться между браузерами, а также между вызовами.</dd>
-</dl>
+- {{domxref("MediaStream.clone()")}}
+  - : Возвращает точную копию объекта `MediaStream`. Исключение составляет значение {{domxref("MediaStream.id", "id")}}, которое изменится на новое уникальное.
 
-<dl>
- <dt>{{domxref("MediaStream.getVideoTracks()")}}</dt>
- <dd>Возвращает список объектов {{domxref("MediaStreamTrack")}}, хранимых в объекте <code style="font-size: 14px;">MediaStream</code> с атрибутом <code style="font-size: 14px;">kind</code> имеющим значение <code style="font-size: 14px;">"video"</code>. Порядок не определён и может меняться между браузерами, а также между вызовами.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt>{{domxref("MediaStream.removeTrack()")}}</dt>
- <dd>Удаляет данный объект {{domxref("MediaStreamTrack")}}. Если данный трек не сохранён в объекте <code style="font-size: 14px;">MediaStream</code>, ничего не происходит.</dd>
-</dl>
+- {{domxref("MediaStream.getAudioTracks()")}}
+  - : Возвращает список объектов {{domxref("MediaStreamTrack")}}, хранимых в объекте `MediaStream` с атрибутом `kind` имеющим значение `"audio"`. Порядок не определён и может меняться между браузерами, а также между вызовами.
 
-<h2 id="События">События</h2>
+<!---->
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/API/MediaStream/addtrack_event">addtrack</a></code></dt>
- <dd>Вызывается при добавлении нового объекта {{domxref("MediaStreamTrack")}}.<br>
- Также доступно как свойство <code><a href="/en-US/docs/Web/API/MediaStream/onaddtrack">onaddtrack</a></code>.</dd>
- <dt><code><a href="/en-US/docs/Web/API/MediaStream/removetrack_event">removetrack</a></code></dt>
- <dd>Вызывается при удалении объекта {{domxref("MediaStreamTrack")}}.<br>
- Также доступно как свойство <code><a href="/en-US/docs/Web/API/MediaStream/onremovetrack">onremovetrack</a></code>.</dd>
-</dl>
+- {{domxref("MediaStream.getTrackById()")}}
+  - : Возвращает трек с `trackid` соответствующем данному. Если в метод не передано аргументов или трека с данным ID нет, возвращает `null`. Если несколько треков имеют одинаковый ID, возвращает первый из них.
+- {{domxref("MediaStream.getTracks()")}}
+  - : Возвращает список всех объектов {{domxref("MediaStreamTrack")}}, сохранённых в объекте `MediaStream`, вне зависимости от значения их свойства `kind`. Порядок не определён и может меняться между браузерами, а также между вызовами.
 
-<h2 id="Спецификации">Спецификации</h2>
+<!---->
+
+- {{domxref("MediaStream.getVideoTracks()")}}
+  - : Возвращает список объектов {{domxref("MediaStreamTrack")}}, хранимых в объекте `MediaStream` с атрибутом `kind` имеющим значение `"video"`. Порядок не определён и может меняться между браузерами, а также между вызовами.
+
+<!---->
+
+- {{domxref("MediaStream.removeTrack()")}}
+  - : Удаляет данный объект {{domxref("MediaStreamTrack")}}. Если данный трек не сохранён в объекте `MediaStream`, ничего не происходит.
+
+## События
+
+- [`addtrack`](/en-US/docs/Web/API/MediaStream/addtrack_event)
+  - : Вызывается при добавлении нового объекта {{domxref("MediaStreamTrack")}}.
+    Также доступно как свойство [`onaddtrack`](/en-US/docs/Web/API/MediaStream/onaddtrack).
+- [`removetrack`](/en-US/docs/Web/API/MediaStream/removetrack_event)
+  - : Вызывается при удалении объекта {{domxref("MediaStreamTrack")}}.
+    Также доступно как свойство [`onremovetrack`](/en-US/docs/Web/API/MediaStream/onremovetrack).
+
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Использование интерфейса MediaStream</li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
- <li>{{domxref("MediaStreamTrack")}}</li>
-</ul>
+- Использование интерфейса MediaStream
+- [WebRTC API](/ru/docs/Web/API/WebRTC_API)
+- [Web Audio API](/ru/docs/Web/API/Web_Audio_API)
+- {{domxref("MediaStreamTrack")}}

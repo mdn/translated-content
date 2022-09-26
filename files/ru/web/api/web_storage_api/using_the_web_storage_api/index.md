@@ -3,41 +3,39 @@ title: Использование Web Storage API
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 translation_of: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 ---
-<div class="summary">
-<p>Web Storage API предоставляет механизм, при помощи которого браузер может безопасно хранить пары ключей/значений в намного более интуитивной форме, чем используя cookies. Эта статья предоставляет пошаговое руководство о том, как использовать эту простую технологию.</p>
-</div>
+Web Storage API предоставляет механизм, при помощи которого браузер может безопасно хранить пары ключей/значений в намного более интуитивной форме, чем используя cookies. Эта статья предоставляет пошаговое руководство о том, как использовать эту простую технологию.
 
-<h2 id="Основные_концепции">Основные концепции</h2>
+## Основные концепции
 
-<p>Storage объекты простые хранилища вида ключ-значение, похожие чем-то на объекты, но они остаются неизменными при загрузке страницы.  Ключи и значения всегда являются строками (обратите внимание, что числовые ключи будут автоматически конвертироваться в строку, точно также как объекты).  Вы можете получить доступ к этим значениям как в объектах, или getItem() и setItem() методами.  Все три строки ниже устанавливают одинаковое значение в  colorSetting:</p>
+Storage объекты простые хранилища вида ключ-значение, похожие чем-то на объекты, но они остаются неизменными при загрузке страницы. Ключи и значения всегда являются строками (обратите внимание, что числовые ключи будут автоматически конвертироваться в строку, точно также как объекты). Вы можете получить доступ к этим значениям как в объектах, или getItem() и setItem() методами. Все три строки ниже устанавливают одинаковое значение в colorSetting:
 
-<pre style="white-space: pre;">localStorage.colorSetting = '#a4509b';
+```
+localStorage.colorSetting = '#a4509b';
 localStorage['colorSetting'] = '#a4509b';
 localStorage.setItem('colorSetting', '#a4509b');
-</pre>
+```
 
-<p>В основе Веб хранилища лежат два механизма:</p>
+В основе Веб хранилища лежат два механизма:
 
-<ul>
- <li><code>(sessionStorage)</code> обслуживает область хранения данных для каждого домена, доступное на протяжении сессии. (пока браузер открыт, даже в случае перезагрузки страницы)</li>
- <li><code>(localStorage)</code> делает то же самое, но сохраняет данные даже в случае, если переоткрыть браузер. </li>
-</ul>
+- `(sessionStorage)` обслуживает область хранения данных для каждого домена, доступное на протяжении сессии. (пока браузер открыт, даже в случае перезагрузки страницы)
+- `(localStorage)` делает то же самое, но сохраняет данные даже в случае, если переоткрыть браузер.
 
-<p>Оба механизма доступны через  {{domxref("Window.sessionStorage")}} и {{domxref("Window.localStorage")}} свойства (если быть более точным, в броузерах, поддерживающих хранилища объект <code>Window</code>  выполняет объекты <code>WindowLocalStorage</code>и <code>WindowSessionStorage</code>, которые содержат свойства <code>localStorage</code>и <code>sessionStorage</code>) — вызов одного из них создаёт экземпляр объекта Storage, через который можно устанавливать, редактировать и удалять данные. Разные Storage объекты будут использовать <code>sessionStorage</code> и <code>localStorage поэтому они используются и управляются раздельно </code></p>
+Оба механизма доступны через {{domxref("Window.sessionStorage")}} и {{domxref("Window.localStorage")}} свойства (если быть более точным, в броузерах, поддерживающих хранилища объект `Window` выполняет объекты `WindowLocalStorage`и `WindowSessionStorage`, которые содержат свойства `localStorage`и `sessionStorage`) — вызов одного из них создаёт экземпляр объекта Storage, через который можно устанавливать, редактировать и удалять данные. Разные Storage объекты будут использовать `sessionStorage` и `localStorage поэтому они используются и управляются раздельно`
 
-<p>Так, например, изначально вызов <code>localStorage</code> в документе возвращает {{domxref("Storage")}} объект; вызов <code>sessionStorage</code> в документе возвращает другой {{domxref("Storage")}} объект. Оба объекта могут управляться одинаково, но отдельно.</p>
+Так, например, изначально вызов `localStorage` в документе возвращает {{domxref("Storage")}} объект; вызов `sessionStorage` в документе возвращает другой {{domxref("Storage")}} объект. Оба объекта могут управляться одинаково, но отдельно.
 
-<h2 id="Функция_обнаружения_localStorage">Функция обнаружения localStorage</h2>
+## Функция обнаружения localStorage
 
-<p>Чтобы использовать localStorage, мы должны сперва проверить, что localStorage поддерживается и доступно в текущем браузере.</p>
+Чтобы использовать localStorage, мы должны сперва проверить, что localStorage поддерживается и доступно в текущем браузере.
 
-<h3 id="Проверка_на_наличие">Проверка на наличие</h3>
+### Проверка на наличие
 
-<p>Браузеры поддерживаемые localStorage будут иметь свойство localStorage объекта window. Тем не менее по различным причинам, простое утверждение, что это свойство существует, может вызывать исключение. Если localStorage существует это ещё не даёт гарантии, что оно доступно,  т.к. различные броузеры обладают настройками которые отключают его. Поэтому браузер может поддерживать localStorage, но не делает его доступным для скриптов на странице. Один из таких примеров браузер Safari, который в Private Browsing mode возвращает нам пустой localStorage объект, фактически делая его непригодным для использования . Наша функция должна принимать во внимание этот сценарий. </p>
+Браузеры поддерживаемые localStorage будут иметь свойство localStorage объекта window. Тем не менее по различным причинам, простое утверждение, что это свойство существует, может вызывать исключение. Если localStorage существует это ещё не даёт гарантии, что оно доступно, т.к. различные броузеры обладают настройками которые отключают его. Поэтому браузер может поддерживать localStorage, но не делает его доступным для скриптов на странице. Один из таких примеров браузер Safari, который в Private Browsing mode возвращает нам пустой localStorage объект, фактически делая его непригодным для использования . Наша функция должна принимать во внимание этот сценарий.
 
-<p>Функция, которая проверяет браузеры на поддержку и доступность localStorage:</p>
+Функция, которая проверяет браузеры на поддержку и доступность localStorage:
 
-<pre class="brush: js">function storageAvailable(type) {
+```js
+function storageAvailable(type) {
 	try {
 		var storage = window[type],
 			x = '__storage_test__';
@@ -48,52 +46,55 @@ localStorage.setItem('colorSetting', '#a4509b');
 	catch(e) {
 		return false;
 	}
-}</pre>
+}
+```
 
-<p>Вот как вы бы могли использовать это:</p>
+Вот как вы бы могли использовать это:
 
-<pre class="brush: js">if (storageAvailable('localStorage')) {
+```js
+if (storageAvailable('localStorage')) {
 	// Yippee! We can use localStorage awesomeness
 }
 else {
 	// Too bad, no localStorage for us
-}</pre>
+}
+```
 
-<p>Вы можете протестировать sessionStorage вместо этого используйте <code>storageAvailable('sessionStorage')</code>Смотрите здесь <a href="https://gist.github.com/paulirish/5558557">краткую историю функции-обнаружения localStorage</a></p>
+Вы можете протестировать sessionStorage вместо этого используйте `storageAvailable('sessionStorage')`Смотрите здесь [краткую историю функции-обнаружения localStorage](https://gist.github.com/paulirish/5558557)
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Чтобы проиллюстрировать типичное использование Web storage, мы создали простой пример, назвав его <strong>Web Storage Demo. </strong>На <a href="https://mdn.github.io/dom-examples/web-storage/">целевой странице</a> представлены элементы управления, которые можно использовать для настройки цвета, шрифта и декоративного изображения:</p>
+Чтобы проиллюстрировать типичное использование Web storage, мы создали простой пример, назвав его **Web Storage Demo.** На [целевой странице](https://mdn.github.io/dom-examples/web-storage/) представлены элементы управления, которые можно использовать для настройки цвета, шрифта и декоративного изображения:
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/9685/landing.png" style="display: block; height: 482px; margin: 0px auto; width: 700px;">Когда вы выбираете различные опции, страница немедленно перезагружается; в дополнение, ваш выбор сохраняется в localStorage, таким образом когда вы покидаете страницу и загружаете её снова спустя некоторое время, ваши параметры сохраняются.</p>
+![](https://mdn.mozillademos.org/files/9685/landing.png)Когда вы выбираете различные опции, страница немедленно перезагружается; в дополнение, ваш выбор сохраняется в localStorage, таким образом когда вы покидаете страницу и загружаете её снова спустя некоторое время, ваши параметры сохраняются.
 
-<p>Мы также предоставили <a href="https://mdn.github.io/dom-examples/web-storage/event.html">страницу вывода событий</a> - если вы загрузите эту страницу в другой вкладке, затем сделаете некоторые изменения в landing page, вы увидите обновлённую информацию о хранилище.</p>
+Мы также предоставили [страницу вывода событий](https://mdn.github.io/dom-examples/web-storage/event.html) - если вы загрузите эту страницу в другой вкладке, затем сделаете некоторые изменения в landing page, вы увидите обновлённую информацию о хранилище.
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/9687/event-output.png" style="display: block; height: 482px; margin: 0px auto; width: 700px;"></p>
+![](https://mdn.mozillademos.org/files/9687/event-output.png)
 
-<div class="note">
-<p><strong>Примечание</strong>: Помимо просмотра примеров выше, используя приведённые ссылки выше , вы можете также <a href="https://github.com/mdn/dom-examples/tree/master/web-storage">просмотреть исходный код</a>.</p>
-</div>
+> **Примечание:** Помимо просмотра примеров выше, используя приведённые ссылки выше , вы можете также [просмотреть исходный код](https://github.com/mdn/dom-examples/tree/master/web-storage).
 
-<h2 id="Проверка_на_заполненность_хранилища">Проверка на заполненность хранилища</h2>
+## Проверка на заполненность хранилища
 
-<p>Начнём с main.js, мы проверим был ли уже заполнен объект Storage (т.е страница была ранее доступна)</p>
+Начнём с main.js, мы проверим был ли уже заполнен объект Storage (т.е страница была ранее доступна)
 
-<pre class="brush: js">if(!localStorage.getItem('bgcolor')) {
+```js
+if(!localStorage.getItem('bgcolor')) {
   populateStorage();
 } else {
   setStyles();
 }
-</pre>
+```
 
-<p>Метод {{domxref("Storage.getItem()")}} используется для получения данных из storage; в этом примере мы проверяем, чтобы увидеть существует ли bgcolor; если нет, мы запускаем <code>populateStorage(), чтобы добавить значение по умолчанию в storage. Если значения уже есть там, мы запускаем setStyles(), для обновления стиля страница с сохранёнными значениями.</code><br>
- <strong>Примечание</strong>: вы можете также использовать {{domxref("Storage.length")}} для проверки storage object.</p>
+Метод {{domxref("Storage.getItem()")}} используется для получения данных из storage; в этом примере мы проверяем, чтобы увидеть существует ли bgcolor; если нет, мы запускаем `populateStorage(), чтобы добавить значение по умолчанию в storage. Если значения уже есть там, мы запускаем setStyles(), для обновления стиля страница с сохранёнными значениями.`
+**Примечание**: вы можете также использовать {{domxref("Storage.length")}} для проверки storage object.
 
-<h2 id="Получение_данных_из_Storage">Получение данных из Storage</h2>
+## Получение данных из Storage
 
-<p>Как было отмечено выше, значения хранилища могут быть извлечены используя {{domxref("Storage.getItem()")}}. В качестве аргумента функция принимает значение ключа элемента хранилища, а возвращает значение этого элемента. Например:</p>
+Как было отмечено выше, значения хранилища могут быть извлечены используя {{domxref("Storage.getItem()")}}. В качестве аргумента функция принимает значение ключа элемента хранилища, а возвращает значение этого элемента. Например:
 
-<pre class="brush: js">function setStyles() {
+```js
+function setStyles() {
   var currentColor = localStorage.getItem('bgcolor');
   var currentFont = localStorage.getItem('font');
   var currentImage = localStorage.getItem('image');
@@ -105,86 +106,78 @@ else {
   htmlElem.style.backgroundColor = '#' + currentColor;
   pElem.style.fontFamily = currentFont;
   imgElem.setAttribute('src', currentImage);
-}</pre>
+}
+```
 
-<p>Первые три строки извлекают значения элементов локального хранилища. Next, we set the values displayed in the form elements to those values, so that they keep in sync when you reload the page. Finally, we update the styles/decorative image on the page, so your customization options come up again on reload.</p>
+Первые три строки извлекают значения элементов локального хранилища. Next, we set the values displayed in the form elements to those values, so that they keep in sync when you reload the page. Finally, we update the styles/decorative image on the page, so your customization options come up again on reload.
 
-<h2 id="Setting_values_in_storage">Setting values in storage</h2>
+## Setting values in storage
 
-<p>{{domxref("Storage.setItem()")}} is used both to create new data items, and (if the data item already exists) update existing values. This takes two arguments — the key of the data item to create/modify, and the value to store in it.</p>
+{{domxref("Storage.setItem()")}} is used both to create new data items, and (if the data item already exists) update existing values. This takes two arguments — the key of the data item to create/modify, and the value to store in it.
 
-<pre class="brush: js">function populateStorage() {
+```js
+function populateStorage() {
   localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
   localStorage.setItem('font', document.getElementById('font').value);
   localStorage.setItem('image', document.getElementById('image').value);
 
   setStyles();
-}</pre>
+}
+```
 
-<p>The <code>populateStorage()</code> function sets three items in local storage — the background color, font, and image path. It then runs the <code>setStyles()</code> function to update the page styles, etc.</p>
+The `populateStorage()` function sets three items in local storage — the background color, font, and image path. It then runs the `setStyles()` function to update the page styles, etc.
 
-<p>We've also included an <code>onchange</code> handler on each form element, so that the data and styling is updated whenever a form value is changed:</p>
+We've also included an `onchange` handler on each form element, so that the data and styling is updated whenever a form value is changed:
 
-<pre class="brush: js">bgcolorForm.onchange = populateStorage;
+```js
+bgcolorForm.onchange = populateStorage;
 fontForm.onchange = populateStorage;
-imageForm.onchange = populateStorage;</pre>
+imageForm.onchange = populateStorage;
+```
 
-<h2 id="Responding_to_storage_changes_with_the_StorageEvent">Responding to storage changes with the StorageEvent</h2>
+## Responding to storage changes with the StorageEvent
 
-<p>The {{domxref("StorageEvent")}} is fired whenever a change is made to the {{domxref("Storage")}} object. This won't work on the same page that is making the changes — it is really a way for other pages on the domain using the storage to sync any changes that are made. Pages on other domains can't access the same storage objects.</p>
+The {{domxref("StorageEvent")}} is fired whenever a change is made to the {{domxref("Storage")}} object. This won't work on the same page that is making the changes — it is really a way for other pages on the domain using the storage to sync any changes that are made. Pages on other domains can't access the same storage objects.
 
-<p>On the events page (see <a href="https://github.com/mdn/web-storage-demo/blob/gh-pages/event.js">events.js</a>) the only JavaScript is as follows:</p>
+On the events page (see [events.js](https://github.com/mdn/web-storage-demo/blob/gh-pages/event.js)) the only JavaScript is as follows:
 
-<pre class="brush: js">window.addEventListener('storage', function(e) {
+```js
+window.addEventListener('storage', function(e) {
   document.querySelector('.my-key').textContent = e.key;
   document.querySelector('.my-old').textContent = e.oldValue;
   document.querySelector('.my-new').textContent = e.newValue;
   document.querySelector('.my-url').textContent = e.url;
   document.querySelector('.my-storage').textContent = e.storageArea;
-});</pre>
+});
+```
 
-<p>Here we add an event listener to the <code>window</code> object that fires when the {{domxref("Storage")}} object associated with the current origin is changed. As you can see above, the event object associated with this event has a number of properties containing useful information — the key of the data that changed, the old value before the change, the new value after that change, the URL of the document that changed the storage, and the storage object itself.</p>
+Here we add an event listener to the `window` object that fires when the {{domxref("Storage")}} object associated with the current origin is changed. As you can see above, the event object associated with this event has a number of properties containing useful information — the key of the data that changed, the old value before the change, the new value after that change, the URL of the document that changed the storage, and the storage object itself.
 
-<h2 id="Удаление_записанных_данных">Удаление записанных данных</h2>
+## Удаление записанных данных
 
-<p>Web Storage также предоставляет несколько простых методов для удаления данных. Мы не используем эти методы в нашем дёма, но они очень простые, чтобы добавить их в проект:</p>
+Web Storage также предоставляет несколько простых методов для удаления данных. Мы не используем эти методы в нашем дёма, но они очень простые, чтобы добавить их в проект:
 
-<ul>
- <li>{{domxref("Storage.removeItem()")}} принимает единственный аргумент - ключ элемента данных, который вы хотите удалить - и удаляет его из объекта хранения для этого домена. </li>
- <li>{{domxref("Storage.clear()")}} не принимает аргументов, полностью очищает объекта storage  для данного домена.</li>
-</ul>
+- {{domxref("Storage.removeItem()")}} принимает единственный аргумент - ключ элемента данных, который вы хотите удалить - и удаляет его из объекта хранения для этого домена.
+- {{domxref("Storage.clear()")}} не принимает аргументов, полностью очищает объекта storage для данного домена.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Storage')}}</td>
-   <td>{{Spec2('Web Storage')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                        | Status                           | Comment |
+| ------------------------------------ | -------------------------------- | ------- |
+| {{SpecName('Web Storage')}} | {{Spec2('Web Storage')}} |         |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="Window.localStorage"><code>Window.localStorage</code></h3>
+### `Window.localStorage`
 
-<p>{{Compat("api.Window.localStorage")}}</p>
+{{Compat("api.Window.localStorage")}}
 
-<h3 id="Window.sessionStorage"><code>Window.sessionStorage</code></h3>
+### `Window.sessionStorage`
 
-<p>{{Compat("api.Window.sessionStorage")}}</p>
+{{Compat("api.Window.sessionStorage")}}
 
-<p>All browsers have varying capacity levels for both localStorage and sessionStorage. Here is a <a href="http://dev-test.nemikor.com/web-storage/support-test/">detailed rundown of all the storage capacities for various browsers</a>.</p>
+All browsers have varying capacity levels for both localStorage and sessionStorage. Here is a [detailed rundown of all the storage capacities for various browsers](http://dev-test.nemikor.com/web-storage/support-test/).
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage API landing page</a></li>
-</ul>
+- [Web Storage API landing page](/ru/docs/Web/API/Web_Storage_API)

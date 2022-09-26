@@ -3,45 +3,41 @@ title: VRDisplay.requestPresent()
 slug: Web/API/VRDisplay/requestPresent
 translation_of: Web/API/VRDisplay/requestPresent
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-<p>Метод <code><strong>requestPresent()</strong></code> объекта реализующего интерфейс {{domxref("VRDisplay")}} отвечает за начало отображения сцены на VR устройстве, которое представлено этим объектом.</p>
+Метод **`requestPresent()`** объекта реализующего интерфейс {{domxref("VRDisplay")}} отвечает за начало отображения сцены на VR устройстве, которое представлено этим объектом.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">vrDisplayInstance.requestPresent(<em>layers</em>).then(function() {
+```js
+vrDisplayInstance.requestPresent(layers).then(function() {
   //Действия после начала отображения сцены
 });
-</pre>
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>layers</dt>
- <dd>Массив объектов типа {{domxref("VRLayerInit")}}, представляющих собой сцену, которую вы хотите отобразить. На данный момент может быть минимум 0 элементов, максимум - 1.</dd>
-</dl>
+- layers
+  - : Массив объектов типа {{domxref("VRLayerInit")}}, представляющих собой сцену, которую вы хотите отобразить. На данный момент может быть минимум 0 элементов, максимум - 1.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Объект типа <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>, переходящий в состояние "выполнено" в момент начала отображения сцены. Существует ряд правил, касающийся перехода Promise в состояние "выполнено" и в состояние "отклонено":</p>
+Объект типа [Promise](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise), переходящий в состояние "выполнено" в момент начала отображения сцены. Существует ряд правил, касающийся перехода Promise в состояние "выполнено" и в состояние "отклонено":
 
-<div>
-<ul>
- <li>Если {{domxref("VRDisplayCapabilities.canPresent")}} ложно или если массив объектов VRLayer содержит более чем {{domxref("VRDisplayCapabilities.maxLayers")}} слоёв, произойдёт переход в состояние "отклонено".</li>
- <li>Если объект {{domxref("VRDisplay")}} уже отображает сцену, то вызов его метода <code>requestPresent()</code> обновит массив отображаемых <code>VRLayer</code> объектов.</li>
- <li>Если объект <code>VRDisplay</code> уже отображает сцену, а вызов метода <code>requestPresent()</code> приведёт к возврату Promise в состоянии "отклонено", то отображение сцены прекратится.</li>
- <li>If <code>requestPresent()</code> is called outside of an engagement gesture the promise will be rejected unless the <code>VRDisplay</code> was already presenting. This engagement gesture is also sufficient to allow <code><a href="/en-US/docs/Web/API/Element/requestPointerLock">requestPointerLock()</a></code> calls until presentation has ended.</li>
-</ul>
-</div>
+- Если {{domxref("VRDisplayCapabilities.canPresent")}} ложно или если массив объектов VRLayer содержит более чем {{domxref("VRDisplayCapabilities.maxLayers")}} слоёв, произойдёт переход в состояние "отклонено".
+- Если объект {{domxref("VRDisplay")}} уже отображает сцену, то вызов его метода `requestPresent()` обновит массив отображаемых `VRLayer` объектов.
+- Если объект `VRDisplay` уже отображает сцену, а вызов метода `requestPresent()` приведёт к возврату Promise в состоянии "отклонено", то отображение сцены прекратится.
+- If `requestPresent()` is called outside of an engagement gesture the promise will be rejected unless the `VRDisplay` was already presenting. This engagement gesture is also sufficient to allow [`requestPointerLock()`](/en-US/docs/Web/API/Element/requestPointerLock) calls until presentation has ended.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">if(navigator.getVRDisplays) {
+```js
+if(navigator.getVRDisplays) {
   console.log('WebVR 1.1 supported');
   // Then get the displays attached to the computer
   navigator.getVRDisplays().then(function(displays) {
     // If a display is available, use it to present the scene
-    if(displays.length &gt; 0) {
+    if(displays.length > 0) {
       vrDisplay = displays[0];
       console.log('Display found');
       // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
@@ -77,36 +73,22 @@ translation_of: Web/API/VRDisplay/requestPresent
       });
     }
   });
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note</strong>: You can see this complete code at <a href="https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js">raw-webgl-example</a>.</p>
-</div>
+> **Примечание:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR 1.1', '#dom-vrdisplay-requestpresent', 'requestPresent()')}}</td>
-   <td>{{Spec2('WebVR 1.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                            | Status                       | Comment            |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('WebVR 1.1', '#dom-vrdisplay-requestpresent', 'requestPresent()')}} | {{Spec2('WebVR 1.1')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
- <li><a href="http://mozvr.com/">MozVr.com</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
-</ul>
+- [WebVR API homepage](/ru/docs/Web/API/WebVR_API)
+- [MozVr.com](http://mozvr.com/) — demos, downloads, and other resources from the Mozilla VR team.

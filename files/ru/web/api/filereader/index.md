@@ -9,110 +9,92 @@ tags:
   - Файлы
 translation_of: Web/API/FileReader
 ---
-<p>{{ APIRef("File API") }}</p>
+{{ APIRef("File API") }}
 
-<h2 id="Общая_информация">Общая информация</h2>
+## Общая информация
 
-<p>Объект <code>FileReader</code> позволяет веб-приложениям асинхронно читать содержимое файлов (или буферы данных), хранящиеся на компьютере пользователя, используя объекты {{domxref("File")}} или {{domxref("Blob")}}, с помощью которых задаётся файл или данные для чтения.</p>
+Объект `FileReader` позволяет веб-приложениям асинхронно читать содержимое файлов (или буферы данных), хранящиеся на компьютере пользователя, используя объекты {{domxref("File")}} или {{domxref("Blob")}}, с помощью которых задаётся файл или данные для чтения.
 
-<p>Объекты <code>File</code> можно получить через объект {{domxref("FileList")}}, который возвращается как результат при выборе файлов пользователем с помощью элемента {{HTMLElement("input")}}, через drag and drop из объекта {{domxref("DataTransfer")}}, или с помощью <code>mozGetAsFile()</code>, метода доступного в API элемента {{domxref("HTMLCanvasElement")}}.</p>
+Объекты `File` можно получить через объект {{domxref("FileList")}}, который возвращается как результат при выборе файлов пользователем с помощью элемента {{HTMLElement("input")}}, через drag and drop из объекта {{domxref("DataTransfer")}}, или с помощью `mozGetAsFile()`, метода доступного в API элемента {{domxref("HTMLCanvasElement")}}.
 
-<div class="blockIndicator warning">
-<p>Важное замечание: <code>FileReader</code> используется только для безопасным образом чтения содержимого файла из пользовательской (удалённой) системы. Его нельзя использовать для простого чтения файла по пути из файловой системы. Для чтения файла по пути в JavaScript следует использовать стандартное решение Ajax для чтения файла на стороне сервера с разрешение CORS при кроссдоменном чтении.</p>
-</div>
+> **Предупреждение:** Важное замечание: `FileReader` используется только для безопасным образом чтения содержимого файла из пользовательской (удалённой) системы. Его нельзя использовать для простого чтения файла по пути из файловой системы. Для чтения файла по пути в JavaScript следует использовать стандартное решение Ajax для чтения файла на стороне сервера с разрешение CORS при кроссдоменном чтении.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Конструктор">Конструктор</h2>
+## Конструктор
 
-<pre class="syntaxbox">FileReader FileReader();</pre>
+```
+FileReader FileReader();
+```
 
-<p>Более детально, с примерами см. <a href="/ru/Using_files_from_web_applications" title="ru/Using files from web applications">использование файлов в веб-приложениях</a>.</p>
+Более детально, с примерами см. [использование файлов в веб-приложениях](/ru/Using_files_from_web_applications "ru/Using files from web applications").
 
-<h2 id="Properties">Свойства</h2>
+## Свойства
 
-<dl>
- <dt>{{domxref("FileReader.error")}} {{readonlyinline}}</dt>
- <dd>{{domxref("DOMError")}} представляет собой ошибку, происходящую при чтении файла.</dd>
- <dt>{{domxref("FileReader.readyState")}} {{readonlyinline}}</dt>
- <dd>Число обозначающее состояние объекта <code>FileReader</code>. Принимает одно из значений <a href="#state_constants">State constants</a>.</dd>
- <dt>{{domxref("FileReader.result")}} {{readonlyinline}}</dt>
- <dd>Данные из файла. Значение свойства действительно только когда завершится операция чтения, причём формат данных зависит от способа, с помощью которого процесс был вызван.</dd>
-</dl>
+- {{domxref("FileReader.error")}} {{readonlyinline}}
+  - : {{domxref("DOMError")}} представляет собой ошибку, происходящую при чтении файла.
+- {{domxref("FileReader.readyState")}} {{readonlyinline}}
+  - : Число обозначающее состояние объекта `FileReader`. Принимает одно из значений [State constants](#state_constants).
+- {{domxref("FileReader.result")}} {{readonlyinline}}
+  - : Данные из файла. Значение свойства действительно только когда завершится операция чтения, причём формат данных зависит от способа, с помощью которого процесс был вызван.
 
-<h3 id="Обработка_событий">Обработка событий</h3>
+### Обработка событий
 
-<dl>
- <dt>{{domxref("FileReader.onabort")}}</dt>
- <dd>Обработчик для события {{event("abort")}}. Это событие срабатывает каждый раз, когда прерывается операция чтения.</dd>
- <dt>{{domxref("FileReader.onerror")}}</dt>
- <dd>Обработчик для события {{event("error")}}. Это событие срабатывает каждый раз, когда при чтении возникает ошибка.</dd>
- <dt>{{domxref("FileReader.onload")}}</dt>
- <dd>Обработчик для события {{event("load")}}. Это событие срабатывает при каждом успешном завершении операции чтения.</dd>
- <dt>{{domxref("FileReader.onloadstart")}}</dt>
- <dd>Обработчик для события {{event("loadstart")}}. Это событие срабатывает каждый раз, при запуске процесса чтения.</dd>
- <dt>{{domxref("FileReader.onloadend")}}</dt>
- <dd>Обработчик для события {{event("loadend")}}. Это событие срабатывает каждый раз по окончании процесса чтения (не важно, успешном или нет).</dd>
- <dt>{{domxref("FileReader.onprogress")}}</dt>
- <dd>Обработчик для события {{event("progress")}}. Это событие срабатывает во время чтения данных из {{domxref("Blob")}}.</dd>
-</dl>
+- {{domxref("FileReader.onabort")}}
+  - : Обработчик для события {{event("abort")}}. Это событие срабатывает каждый раз, когда прерывается операция чтения.
+- {{domxref("FileReader.onerror")}}
+  - : Обработчик для события {{event("error")}}. Это событие срабатывает каждый раз, когда при чтении возникает ошибка.
+- {{domxref("FileReader.onload")}}
+  - : Обработчик для события {{event("load")}}. Это событие срабатывает при каждом успешном завершении операции чтения.
+- {{domxref("FileReader.onloadstart")}}
+  - : Обработчик для события {{event("loadstart")}}. Это событие срабатывает каждый раз, при запуске процесса чтения.
+- {{domxref("FileReader.onloadend")}}
+  - : Обработчик для события {{event("loadend")}}. Это событие срабатывает каждый раз по окончании процесса чтения (не важно, успешном или нет).
+- {{domxref("FileReader.onprogress")}}
+  - : Обработчик для события {{event("progress")}}. Это событие срабатывает во время чтения данных из {{domxref("Blob")}}.
 
-<div class="note">
-<p>Замечание: т.к. <code>FileReader</code> унаследован от {{domxref("EventTarget")}}, на все перечисленные события можно подписаться, используя метод {{domxref("EventTarget.addEventListener()","addEventListener")}}.</p>
-</div>
+> **Примечание:** Замечание: т.к. `FileReader` унаследован от {{domxref("EventTarget")}}, на все перечисленные события можно подписаться, используя метод {{domxref("EventTarget.addEventListener()","addEventListener")}}.
 
-<h3 id="State_constants">Константы состояния</h3>
+### Константы состояния
 
-<ul>
- <li><code>EMPTY </code> : <code>0</code> : Данные ещё не были загружены.</li>
- <li><code>LOADING</code> : <code>1</code> : Данные в данный момент загружаются.</li>
- <li><code>DONE </code> : <code>2</code> : Операция чтения была завершена.</li>
-</ul>
+- `EMPTY `: `0` : Данные ещё не были загружены.
+- `LOADING` : `1` : Данные в данный момент загружаются.
+- `DONE `: `2` : Операция чтения была завершена.
 
-<h2 id="Methods">Методы</h2>
+## Методы
 
-<dl>
- <dt>{{domxref("FileReader.abort()")}}</dt>
- <dd>Отмена операции чтения. После вызова, значение <code>readyState</code> станет равным <code>DONE</code>.</dd>
- <dt>{{domxref("FileReader.readAsArrayBuffer()")}} {{ gecko_minversion_inline("7.0") }}</dt>
- <dd>Запускает процесс чтения данных указанного {{ domxref("Blob") }}, по завершении, атрибут <code>result</code> будет содержать данные файла в виде {{domxref("ArrayBuffer")}}.</dd>
- <dt>{{domxref("FileReader.readAsBinaryString()")}}</dt>
- <dd>Запускает процесс чтения данных указанного {{ domxref("Blob") }}, по завершении, атрибут <code style="font-style: normal;">result</code> будет содержать бинарные данные файла в виде строки.</dd>
- <dt>{{domxref("FileReader.readAsDataURL()")}}</dt>
- <dd>Запускает процесс чтения данных указанного {{ domxref("Blob") }}, по завершении, атрибут <code style="font-style: normal;">result</code> будет содержать данные файла в виде <code>data:</code> URL.</dd>
- <dt>{{domxref("FileReader.readAsText()")}}</dt>
- <dd>Запускает процесс чтения данных указанного {{ domxref("Blob") }}, по завершении, атрибут <code style="font-style: normal;">result</code> будет содержать данные файла в виде текста.</dd>
-</dl>
+- {{domxref("FileReader.abort()")}}
+  - : Отмена операции чтения. После вызова, значение `readyState` станет равным `DONE`.
+- {{domxref("FileReader.readAsArrayBuffer()")}} {{ gecko_minversion_inline("7.0") }}
+  - : Запускает процесс чтения данных указанного {{ domxref("Blob") }}, по завершении, атрибут `result` будет содержать данные файла в виде {{domxref("ArrayBuffer")}}.
+- {{domxref("FileReader.readAsBinaryString()")}}
+  - : Запускает процесс чтения данных указанного {{ domxref("Blob") }}, по завершении, атрибут `result` будет содержать бинарные данные файла в виде строки.
+- {{domxref("FileReader.readAsDataURL()")}}
+  - : Запускает процесс чтения данных указанного {{ domxref("Blob") }}, по завершении, атрибут `result` будет содержать данные файла в виде `data:` URL.
+- {{domxref("FileReader.readAsText()")}}
+  - : Запускает процесс чтения данных указанного {{ domxref("Blob") }}, по завершении, атрибут `result` будет содержать данные файла в виде текста.
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div id="compat-mobile"></div>
+### Примечания по реализации
 
-<h3 id="Примечания_по_реализации">Примечания по реализации</h3>
+- Для IE9 есть [File API Lab](http://html5labs.interoperabilitybridges.com/prototypes/fileapi/fileapi/info).
+- Opera предоставляет [частичную поддержку](http://www.opera.com/docs/specs/presto28/file/) в версии 11.1.
 
-<ul>
- <li>Для IE9 есть <a href="http://html5labs.interoperabilitybridges.com/prototypes/fileapi/fileapi/info">File API Lab</a>.</li>
- <li>Opera предоставляет <a href="http://www.opera.com/docs/specs/presto28/file/">частичную поддержку</a> в версии 11.1.</li>
-</ul>
+#### Относительно движка Gecko
 
-<h4 id="Относительно_движка_Gecko">Относительно движка Gecko</h4>
+- В версиях Gecko ниже 2.0 beta 7 (Firefox 4.0 beta 7), все параметры {{ domxref("Blob") }} были параметрами {{ domxref("File") }}; в последствии это было изменено, для соответствия спецификации.
+- В версиях Gecko ниже 13.0 {{ geckoRelease("13.0") }} свойство `FileReader.error` возвращало объект {{ domxref("FileError") }}. Этот интерфейс был упразднён и теперь свойство `FileReader.error` возвращает объект {{ domxref("DOMError") }}, что соответствует определению FileAPI последней спецификации.
 
-<ul>
- <li>В версиях Gecko ниже 2.0 beta 7 (Firefox 4.0 beta 7), все параметры {{ domxref("Blob") }} были параметрами {{ domxref("File") }}; в последствии это было изменено, для соответствия спецификации.</li>
- <li>В версиях Gecko ниже 13.0 {{ geckoRelease("13.0") }} свойство <code>FileReader.error</code> возвращало объект {{ domxref("FileError") }}. Этот интерфейс был упразднён и теперь свойство <code>FileReader.error</code> возвращает объект {{ domxref("DOMError") }}, что соответствует определению FileAPI последней спецификации.</li>
-</ul>
+## Смотрите также
 
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li><a href="/ru/Using_files_from_web_applications" title="ru/Using files from web applications">Использование файлов в веб-приложениях</a></li>
- <li>{{ domxref("File") }}</li>
- <li>{{ domxref("Blob") }}</li>
- <li><a href="/ru/docs/nsIDOMFileReader">nsIDOMFileReader</a> - For addons/privileged scope</li>
-</ul>
+- [Использование файлов в веб-приложениях](/ru/Using_files_from_web_applications "ru/Using files from web applications")
+- {{ domxref("File") }}
+- {{ domxref("Blob") }}
+- [nsIDOMFileReader](/ru/docs/nsIDOMFileReader) - For addons/privileged scope

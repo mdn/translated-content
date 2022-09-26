@@ -3,45 +3,45 @@ title: RTCPeerConnection.connectionState
 slug: Web/API/RTCPeerConnection/connectionState
 translation_of: Web/API/RTCPeerConnection/connectionState
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>Только для чтения свойство  <strong><code>connectionState</code></strong> интерфейса {{domxref("RTCPeerConnection")}} указывает на текущее состояние соединения, возвращая одно из строковых значений, определяемых в перечислении <code><a href="#RTCPeerConnectionState_enum">RTCPeerConnectionState</a></code>.</p>
+Только для чтения свойство **`connectionState`** интерфейса {{domxref("RTCPeerConnection")}} указывает на текущее состояние соединения, возвращая одно из строковых значений, определяемых в перечислении [`RTCPeerConnectionState`](#RTCPeerConnectionState_enum).
 
-<p>Когда значение свойство изменяется, возникает событие   {{event("connectionstatechange")}} на объекте интерфейса {{domxref("RTCPeerConnection")}} .</p>
+Когда значение свойство изменяется, возникает событие {{event("connectionstatechange")}} на объекте интерфейса {{domxref("RTCPeerConnection")}} .
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <em>connectionState</em> = <em>RTCPeerConnection</em>.connectionState;</pre>
+```
+var connectionState = RTCPeerConnection.connectionState;
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p>Текущий статус соединения представлен одним из значений перечисления  <code><a href="#RTCPeerConnectionState_enum">RTCPeerConnectionState</a></code>.</p>
+Текущий статус соединения представлен одним из значений перечисления [`RTCPeerConnectionState`](#RTCPeerConnectionState_enum).
 
-<p>{{page("/en-US/docs/Web/API/RTCPeerConnection", "RTCPeerConnectionState enum", 0, 1)}}</p>
+{{page("/en-US/docs/Web/API/RTCPeerConnection", "RTCPeerConnectionState enum", 0, 1)}}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">var pc = new RTCPeerConnection(configuration);
+```js
+var pc = new RTCPeerConnection(configuration);
 
 /* ... */
 
-var connectionState = pc.connectionState;</pre>
+var connectionState = pc.connectionState;
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Жизненный цикл сессии WebRTC</a></li>
- <li>{{domxref("RTCPeerConnection")}}</li>
- <li>{{event("connectionstatechange")}}</li>
- <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
-</ul>
+- [Жизненный цикл сессии WebRTC](/ru/docs/Web/API/WebRTC_API/Session_lifetime)
+- {{domxref("RTCPeerConnection")}}
+- {{event("connectionstatechange")}}
+- [WebRTC](/ru/docs/Web/Guide/API/WebRTC)

@@ -3,133 +3,104 @@ title: Streams API
 slug: Web/API/Streams_API
 translation_of: Web/API/Streams_API
 ---
-<div>{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p class="summary">Streams API (API обработки потоков) позволяет программно получить доступ с помощью JavaScript к полученным по сети потокам данных и обработать их по желанию разработчика.</p>
+Streams API (API обработки потоков) позволяет программно получить доступ с помощью JavaScript к полученным по сети потокам данных и обработать их по желанию разработчика.
 
-<h2 id="Концепция_и_использование">Концепция и использование</h2>
+## Концепция и использование
 
-<p>Потоковая передача данных предполагает разбивку ресурса, который вы хотите получить через сеть, на мелкие кусочки и затем их обработку часть за частью. Это то, что браузеры делают в любом случае получения ассетов, чтобы показать их на страницах — видео буфер и другие ресурсы доступные для воспроизведения, и иногда это заметно на изображениях, загружающихся частями.</p>
+Потоковая передача данных предполагает разбивку ресурса, который вы хотите получить через сеть, на мелкие кусочки и затем их обработку часть за частью. Это то, что браузеры делают в любом случае получения ассетов, чтобы показать их на страницах — видео буфер и другие ресурсы доступные для воспроизведения, и иногда это заметно на изображениях, загружающихся частями.
 
-<p>Но методы работы с этим и данные никогда прежде не были доступны для JavaScript. Раньше, если мы хотели обработать часть ресурса, нам всё равно пришлось бы загрузить весь файл (будь то видео, текстовый файл и т.п.), мы были бы обязаны скачать файл целиком, дождаться пока он будет приведён к необходимому формату и только потом работать с файлом после его полной загрузки.</p>
+Но методы работы с этим и данные никогда прежде не были доступны для JavaScript. Раньше, если мы хотели обработать часть ресурса, нам всё равно пришлось бы загрузить весь файл (будь то видео, текстовый файл и т.п.), мы были бы обязаны скачать файл целиком, дождаться пока он будет приведён к необходимому формату и только потом работать с файлом после его полной загрузки.
 
-<p>С помощью потоков доступных в JavaScript меняется все — вы можете начать обрабатывать данные бит за битом как только данные появляются на стороне клиента, без необходимости генерировать буфер, строку или какой либо объект из потока.</p>
+С помощью потоков доступных в JavaScript меняется все — вы можете начать обрабатывать данные бит за битом как только данные появляются на стороне клиента, без необходимости генерировать буфер, строку или какой либо объект из потока.
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15817/Concept.png" style="display: block; height: 382px; margin: 0px auto; width: 1000px;"></p>
+![](https://mdn.mozillademos.org/files/15817/Concept.png)
 
-<p>Но это не все преимущества — вы можете отловить процессы старта и завершения потока, связывать потоки в цепочки, обрабатывать ошибки или прерывать их если это необходимо, реагировать на скорость с которой поток считывается.</p>
+Но это не все преимущества — вы можете отловить процессы старта и завершения потока, связывать потоки в цепочки, обрабатывать ошибки или прерывать их если это необходимо, реагировать на скорость с которой поток считывается.
 
-<p>Основное использование потоков крутиться вокруг создания ответов доступными в виде потоков. Например, тело ответа {{domxref("Body")}} возвращённого успешным <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch запросом</a> может быть представлено как {{domxref("ReadableStream")}}, и вы можете прочитать его используя ридер полученный методом {{domxref("ReadableStream.getReader()")}}, отменить его с помощью {{domxref("ReadableStream.cancel()")}}, и тп.</p>
+Основное использование потоков крутиться вокруг создания ответов доступными в виде потоков. Например, тело ответа {{domxref("Body")}} возвращённого успешным [fetch запросом](/ru/docs/Web/API/WindowOrWorkerGlobalScope/fetch) может быть представлено как {{domxref("ReadableStream")}}, и вы можете прочитать его используя ридер полученный методом {{domxref("ReadableStream.getReader()")}}, отменить его с помощью {{domxref("ReadableStream.cancel()")}}, и тп.
 
-<p>Более сложные примеры задействуют создание ваших собственных  потоков с помощью конструктора {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}}, например чтобы обработать данные внутри <a href="/en-US/docs/Web/API/Service_Worker_API">service worker</a>.</p>
+Более сложные примеры задействуют создание ваших собственных потоков с помощью конструктора {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}}, например чтобы обработать данные внутри [service worker](/ru/docs/Web/API/Service_Worker_API).
 
-<p>Вы также можете записывать данные в потоки используя {{domxref("WritableStream")}}.</p>
+Вы также можете записывать данные в потоки используя {{domxref("WritableStream")}}.
 
-<div class="note">
-<p><strong>Примечание</strong>: вы можете найти больше информации о теории и практике использования потоков в следующих статьях — <a href="/en-US/docs/Web/API/Streams_API/Concepts">Концепты API потоков</a> , <a href="/en-US/docs/Web/API/Streams_API/Using_readable_streams">Использование потоков на чтение</a>, и <a href="/en-US/docs/Web/API/Streams_API/Using_writable_streams">Использование потоков на запись</a>.</p>
-</div>
+> **Примечание:** вы можете найти больше информации о теории и практике использования потоков в следующих статьях — [Концепты API потоков](/ru/docs/Web/API/Streams_API/Concepts) , [Использование потоков на чтение](/ru/docs/Web/API/Streams_API/Using_readable_streams), и [Использование потоков на запись](/ru/docs/Web/API/Streams_API/Using_writable_streams).
 
-<h2 id="Интерфейсы">Интерфейсы</h2>
+## Интерфейсы
 
-<h3 id="Потоки_чтения_данных">Потоки чтения данных</h3>
+### Потоки чтения данных
 
-<dl>
- <dt>{{domxref("ReadableStream")}}</dt>
- <dd>Представляет собой считываемый поток данных. Он может быть использован чтобы обработать потоки ответов от <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>, или созданный разработчиком поток (например произвольный {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}}).</dd>
- <dt>{{domxref("ReadableStreamDefaultReader")}}</dt>
- <dd>Представляет собой считывателя, который может быть использован чтобы считать данные поставляемые из сети (например fetch запрос).</dd>
- <dt>{{domxref("ReadableStreamDefaultController")}}</dt>
- <dd>Представляет собой контроллер позволяющий контролировать состояние {{domxref("ReadableStream")}} и очереди внутри него. Является контроллером по умолчанию для не байтовых потоков.</dd>
-</dl>
+- {{domxref("ReadableStream")}}
+  - : Представляет собой считываемый поток данных. Он может быть использован чтобы обработать потоки ответов от [Fetch API](/ru/docs/Web/API/Fetch_API), или созданный разработчиком поток (например произвольный {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}}).
+- {{domxref("ReadableStreamDefaultReader")}}
+  - : Представляет собой считывателя, который может быть использован чтобы считать данные поставляемые из сети (например fetch запрос).
+- {{domxref("ReadableStreamDefaultController")}}
+  - : Представляет собой контроллер позволяющий контролировать состояние {{domxref("ReadableStream")}} и очереди внутри него. Является контроллером по умолчанию для не байтовых потоков.
 
-<h3 id="Writable_streams">Writable streams</h3>
+### Writable streams
 
-<dl>
- <dt>{{domxref("WritableStream")}}</dt>
- <dd>Предоставляет стандартную абстракцию, известную как раковина, для записи потоков по месту назначения. Этот объект идёт вместе со встроенными методами контроля обратного потока и созданием очередей.</dd>
- <dt>{{domxref("WritableStreamDefaultWriter")}}</dt>
- <dd>Представляет запись потока по умолчанию, которая может использоваться для записи фрагментов данных в записываемый поток.</dd>
- <dt>{{domxref("WritableStreamDefaultController")}}</dt>
- <dd>Представляет собой контроллер состояния {{domxref("WritableStream")}}. При создании <code>WritableStream</code>, создаётся также соответствующий экземпляр <code>WritableStreamDefaultController</code>.</dd>
-</dl>
+- {{domxref("WritableStream")}}
+  - : Предоставляет стандартную абстракцию, известную как раковина, для записи потоков по месту назначения. Этот объект идёт вместе со встроенными методами контроля обратного потока и созданием очередей.
+- {{domxref("WritableStreamDefaultWriter")}}
+  - : Представляет запись потока по умолчанию, которая может использоваться для записи фрагментов данных в записываемый поток.
+- {{domxref("WritableStreamDefaultController")}}
+  - : Представляет собой контроллер состояния {{domxref("WritableStream")}}. При создании `WritableStream`, создаётся также соответствующий экземпляр `WritableStreamDefaultController`.
 
-<h3 id="Дополнительные_API_и_операции_по_работе_с_потоками">Дополнительные API и операции по работе с потоками</h3>
+### Дополнительные API и операции по работе с потоками
 
-<dl>
- <dt>{{domxref("ByteLengthQueuingStrategy")}}</dt>
- <dd>Предоставляет встроенную стратегию длины байт-очереди, которая может быть использована при построении потоков.</dd>
- <dt>{{domxref("CountQueuingStrategy")}}</dt>
- <dd>Предоставляет встроенную стратегию организации очередей подсчёта чанков, которая может использоваться при построении потоков.</dd>
-</dl>
+- {{domxref("ByteLengthQueuingStrategy")}}
+  - : Предоставляет встроенную стратегию длины байт-очереди, которая может быть использована при построении потоков.
+- {{domxref("CountQueuingStrategy")}}
+  - : Предоставляет встроенную стратегию организации очередей подсчёта чанков, которая может использоваться при построении потоков.
 
-<h3 id="Дополнения_к_другим_API">Дополнения к другим API</h3>
+### Дополнения к другим API
 
-<dl>
- <dt>{{domxref("Request")}}</dt>
- <dd>При создании нового объекта типа <code>Request</code>, вы можете добавить {{domxref("ReadableStream")}} в свойство <code>body</code> его словаря <code>RequestInit</code>.  Этот объект типа <code>Request</code> может быть отправлен в  {{domxref("WindowOrWorkerGlobalScope.fetch()")}}, чтобы начать загрузку потока.</dd>
- <dt>{{domxref("Body")}}</dt>
- <dd>Ответ {{domxref("Body")}} возвращённый успешному <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch запросу</a> вывешивается по умолчанию как {{domxref("ReadableStream")}}, и может иметь получателя прикреплённого к нему и тп.</dd>
-</dl>
+- {{domxref("Request")}}
+  - : При создании нового объекта типа `Request`, вы можете добавить {{domxref("ReadableStream")}} в свойство `body` его словаря `RequestInit`. Этот объект типа `Request` может быть отправлен в {{domxref("WindowOrWorkerGlobalScope.fetch()")}}, чтобы начать загрузку потока.
+- {{domxref("Body")}}
+  - : Ответ {{domxref("Body")}} возвращённый успешному [fetch запросу](/ru/docs/Web/API/WindowOrWorkerGlobalScope/fetch) вывешивается по умолчанию как {{domxref("ReadableStream")}}, и может иметь получателя прикреплённого к нему и тп.
 
-<h3 id="Интерфейсы_в_дополнение_к_ByteStream">Интерфейсы в дополнение к ByteStream</h3>
+### Интерфейсы в дополнение к ByteStream
 
-<div class="warning">
-<p><strong>Важно</strong>: данные интерфейсы пока не реализованы, и были подняты вопросы о том, находятся ли детали спецификации в достаточно законченном состоянии для их реализации. Со временем это может измениться</p>
-</div>
+> **Предупреждение:** **Важно**: данные интерфейсы пока не реализованы, и были подняты вопросы о том, находятся ли детали спецификации в достаточно законченном состоянии для их реализации. Со временем это может измениться
 
-<dl>
- <dt>{{domxref("ReadableStreamBYOBReader")}}</dt>
- <dd>Represents a BYOB ("bring your own buffer") reader that can be used to read stream data supplied by the developer (e.g. a custom {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor).</dd>
- <dt>{{domxref("ReadableByteStreamController")}}</dt>
- <dd>Контроллер позволяющий обрабатывать состояние {{domxref("ReadableStream")}} и внутреннюю очередь. Байтовые контроллеры для байтовых потоков.</dd>
- <dt>{{domxref("ReadableStreamBYOBRequest")}}</dt>
- <dd>Represents a pull into request in a {{domxref("ReadableByteStreamController")}}.</dd>
-</dl>
+- {{domxref("ReadableStreamBYOBReader")}}
+  - : Represents a BYOB ("bring your own buffer") reader that can be used to read stream data supplied by the developer (e.g. a custom {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor).
+- {{domxref("ReadableByteStreamController")}}
+  - : Контроллер позволяющий обрабатывать состояние {{domxref("ReadableStream")}} и внутреннюю очередь. Байтовые контроллеры для байтовых потоков.
+- {{domxref("ReadableStreamBYOBRequest")}}
+  - : Represents a pull into request in a {{domxref("ReadableByteStreamController")}}.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Мы создали папку с примерами, которые идут вместе с документацией к API потоков — смотрите <a href="https://github.com/mdn/dom-examples/tree/master/streams">mdn/dom-examples/streams</a>. Можно найти такие примеры как:</p>
+Мы создали папку с примерами, которые идут вместе с документацией к API потоков — смотрите [mdn/dom-examples/streams](https://github.com/mdn/dom-examples/tree/master/streams). Можно найти такие примеры как:
 
-<ul>
- <li><a href="http://mdn.github.io/dom-examples/streams/simple-pump/">Simple stream pump</a>: Этот пример показывает как использовать поток чтения данных и передавать его данные в другой поток.</li>
- <li><a href="http://mdn.github.io/dom-examples/streams/grayscale-png/">Сделать черно-белый PNG</a>: Пример показывает конвертацию потока данных PNG изображения в черно-белый формат.</li>
- <li><a href="http://mdn.github.io/dom-examples/streams/simple-random-stream/">Простой произвольный поток</a>: В этом примере показано, как использовать пользовательский поток для создания случайных строк, помещать их в очередь как блоки, а затем считывать их обратно.</li>
- <li><a href="http://mdn.github.io/dom-examples/streams/simple-tee-example/">Simple tee example</a>: Этот пример расширяет первый пример, показывая как поток может быть связан, и оба результирующих потока будут прочитаны независимо.</li>
- <li><a href="http://mdn.github.io/dom-examples/streams/simple-writer/">Simple writer</a>: This example shows how to to write to a writable stream, then decode the stream and write the contents to the UI.</li>
- <li><a href="http://mdn.github.io/dom-examples/streams/png-transform-stream/">Unpack chunks of a PNG</a>: This example shows how <a href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/pipeThrough"><code>pipeThrough()</code></a> can be used to transform a ReadableStream into a stream of other data types by transforming a data of a PNG file into a stream of PNG chunks.</li>
-</ul>
+- [Simple stream pump](http://mdn.github.io/dom-examples/streams/simple-pump/): Этот пример показывает как использовать поток чтения данных и передавать его данные в другой поток.
+- [Сделать черно-белый PNG](http://mdn.github.io/dom-examples/streams/grayscale-png/): Пример показывает конвертацию потока данных PNG изображения в черно-белый формат.
+- [Простой произвольный поток](http://mdn.github.io/dom-examples/streams/simple-random-stream/): В этом примере показано, как использовать пользовательский поток для создания случайных строк, помещать их в очередь как блоки, а затем считывать их обратно.
+- [Simple tee example](http://mdn.github.io/dom-examples/streams/simple-tee-example/): Этот пример расширяет первый пример, показывая как поток может быть связан, и оба результирующих потока будут прочитаны независимо.
+- [Simple writer](http://mdn.github.io/dom-examples/streams/simple-writer/): This example shows how to to write to a writable stream, then decode the stream and write the contents to the UI.
+- [Unpack chunks of a PNG](http://mdn.github.io/dom-examples/streams/png-transform-stream/): This example shows how [`pipeThrough()`](/ru/docs/Web/API/ReadableStream/pipeThrough) can be used to transform a ReadableStream into a stream of other data types by transforming a data of a PNG file into a stream of PNG chunks.
 
-<p>Примеры от других разработчиков:</p>
+Примеры от других разработчиков:
 
-<ul>
- <li><a href="https://fetch-progress.anthum.com/">Progress Indicators with Streams, Service Workers, &amp; Fetch</a>.</li>
-</ul>
+- [Progress Indicators with Streams, Service Workers, & Fetch](https://fetch-progress.anthum.com/).
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table>
-  <thead>
-    <tr>
-      <th>Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="https://streams.spec.whatwg.org/">Streams Living Standard</a></td>
-    </tr>
-  </tbody>
-</table>
+| Specification                                               |
+| ----------------------------------------------------------- |
+| [Streams Living Standard](https://streams.spec.whatwg.org/) |
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<h3 id="Поток_записи_данных">Поток записи данных</h3>
+### Поток записи данных
 
-<p>{{Compat("api.ReadableStream")}}</p>
+{{Compat("api.ReadableStream")}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Streams_API/Concepts">Streams API концепт</a></li>
- <li><a href="/en-US/docs/Web/API/Streams_API/Using_readable_streams">Использование потоков чтения</a></li>
- <li><a href="/en-US/docs/Web/API/Streams_API/Using_writable_streams">Использование потоков записи</a></li>
-</ul>
+- [Streams API концепт](/ru/docs/Web/API/Streams_API/Concepts)
+- [Использование потоков чтения](/ru/docs/Web/API/Streams_API/Using_readable_streams)
+- [Использование потоков записи](/ru/docs/Web/API/Streams_API/Using_writable_streams)

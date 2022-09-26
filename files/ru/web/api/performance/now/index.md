@@ -7,46 +7,45 @@ tags:
   - Web Performance API
 translation_of: Web/API/Performance/now
 ---
-<p>{{APIRef("Navigation Timing")}}</p>
+{{APIRef("Navigation Timing")}}
 
-<h2 id="Краткое_описание">Краткое описание</h2>
+## Краткое описание
 
-<p>Метод <code><strong>performance.now()</strong></code> возвращает временную метку {{domxref("DOMHighResTimeStamp")}}, измеряемую в миллисекундах, с точностью до одной тысячной миллисекунды.</p>
+Метод **`performance.now()`** возвращает временную метку {{domxref("DOMHighResTimeStamp")}}, измеряемую в миллисекундах, с точностью до одной тысячной миллисекунды.
 
-<p>Значение, представленное типом {{domxref("DOMHighResTimeStamp")}}, изменяется в зависимости от контекста. Стоит иметь ввиду следующее:</p>
+Значение, представленное типом {{domxref("DOMHighResTimeStamp")}}, изменяется в зависимости от контекста. Стоит иметь ввиду следующее:
 
-<ul>
- <li>в разделяемых или выделенных потоках выполнения, началом эпохи считается момент начала работы потока.</li>
- <li>вне потоков выполнения, или в выделенных потоках, созданных в контексте {{domxref("Window")}}, началом эпохи считается значение свойства {{domxref("PerformanceTiming.navigationStart")}}.</li>
- <li>в выделенных потоках выполнения, созданных из другого потока, началом эпохи устанавливается начало эпохи этого самого потока.</li>
-</ul>
+- в разделяемых или выделенных потоках выполнения, началом эпохи считается момент начала работы потока.
+- вне потоков выполнения, или в выделенных потоках, созданных в контексте {{domxref("Window")}}, началом эпохи считается значение свойства {{domxref("PerformanceTiming.navigationStart")}}.
+- в выделенных потоках выполнения, созданных из другого потока, началом эпохи устанавливается начало эпохи этого самого потока.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>t</em> = <em>performance</em>.now();</pre>
+```
+t = performance.now();
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">var t0 = performance.now();
+```js
+var t0 = performance.now();
 doSomething();
 var t1 = performance.now();
 console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.")
-</pre>
+```
 
-<p>В отличие от других временны́х типов данных, доступных в JavaScript (таких как <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Date/now" title="/en-US/docs/JavaScript/Reference/Global_Objects/Date/now"><code>Date.now</code></a>), метки времени, возвращённые из <code>performance.now(),</code> не ограничены кратностью в одну миллисекунду, а представляют значение времени как число с плавающей запятой, с точностью до микросекунд.</p>
+В отличие от других временны́х типов данных, доступных в JavaScript (таких как [`Date.now`](/ru/docs/JavaScript/Reference/Global_Objects/Date/now)), метки времени, возвращённые из `performance.now(),` не ограничены кратностью в одну миллисекунду, а представляют значение времени как число с плавающей запятой, с точностью до микросекунд.
 
-<p>Также, в противоположность <code>Date.now</code>, значение, возвращаемое из <code>performance.now(), всегда возрастает с постоянной скоростью, независимо от системного времени </code>(которое может быть установлено вручную или изменено программами наподобие NTP).</p>
+Также, в противоположность `Date.now`, значение, возвращаемое из `performance.now(), всегда возрастает с постоянной скоростью, независимо от системного времени `(которое может быть установлено вручную или изменено программами наподобие NTP).
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now">When milliseconds are not enough: performance.now() </a>от HTML5 Rocks.</li>
-</ul>
+- [When milliseconds are not enough: performance.now() ](http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now)от HTML5 Rocks.

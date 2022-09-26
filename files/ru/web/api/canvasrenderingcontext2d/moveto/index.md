@@ -9,64 +9,64 @@ tags:
   - Reference
 translation_of: Web/API/CanvasRenderingContext2D/moveTo
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Метод <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.moveTo()</code></strong>, предоставляемый Canvas 2D API, перемещает начальную точку нового фрагмента контура в координаты <code>(x, y)</code>.</p>
+Метод **`CanvasRenderingContext2D`\*\***`.moveTo()`\*\*, предоставляемый Canvas 2D API, перемещает начальную точку нового фрагмента контура в координаты `(x, y)`.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">void <var><em>ctx</em>.moveTo(x, y);</var>
-</pre>
+```
+void ctx.moveTo(x, y);
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Координата точки по оси x.</dd>
- <dt><code>y</code></dt>
- <dd>Координата точки по оси y.</dd>
-</dl>
+- `x`
+  - : Координата точки по оси x.
+- `y`
+  - : Координата точки по оси y.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_метода_moveTo">Использование метода <code>moveTo</code></h3>
+### Использование метода `moveTo`
 
-<p>Ниже представлен простой фрагмент кода, использующий метод <code>moveTo</code> для того, чтобы переместить указатель в начальную позицию для рисования линии.</p>
+Ниже представлен простой фрагмент кода, использующий метод `moveTo` для того, чтобы переместить указатель в начальную позицию для рисования линии.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.moveTo(50,50);
 ctx.lineTo(200, 50);
 ctx.stroke();
-</pre>
+```
 
-<p>Вы можете редактировать код, представленный ниже, и сделанные вами изменения отобразятся на холсте в режиме реального времени:</p>
+Вы можете редактировать код, представленный ниже, и сделанные вами изменения отобразятся на холсте в режиме реального времени:
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.beginPath();
 ctx.moveTo(50,50);
 ctx.lineTo(200, 50);
-ctx.stroke()&lt;/textarea&gt;
-</pre>
+ctx.stroke()</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -89,23 +89,20 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Интерфейс, предоставляющий данный метод: {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.lineTo()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.stroke()")}}</li>
-</ul>
+- Интерфейс, предоставляющий данный метод: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.lineTo()")}}
+- {{domxref("CanvasRenderingContext2D.stroke()")}}

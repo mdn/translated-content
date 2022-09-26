@@ -3,22 +3,24 @@ title: ServiceWorkerContainer.controller
 slug: Web/API/ServiceWorkerContainer/controller
 translation_of: Web/API/ServiceWorkerContainer/controller
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>Свойство <strong><code>controller</code></strong> интерфейса {{domxref("ServiceWorkerContainer")}} возвращает объект {{domxref("ServiceWorker")}}, в случае, если service worker активирован. Данное свойство возвращает <code>null</code>, если страница была обновлена с помощью <em>Shift</em> + refresh или на ней отсутствует активный service worker.</p>
+Свойство **`controller`** интерфейса {{domxref("ServiceWorkerContainer")}} возвращает объект {{domxref("ServiceWorker")}}, в случае, если service worker активирован. Данное свойство возвращает `null`, если страница была обновлена с помощью _Shift_ + refresh или на ней отсутствует активный service worker.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var myController = navigator.serviceWorker.controller;
-</pre>
+```
+var myController = navigator.serviceWorker.controller;
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p>Объект {{domxref("ServiceWorker")}}.</p>
+Объект {{domxref("ServiceWorker")}}.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">if ('serviceWorker' in navigator) {
+```js
+if ('serviceWorker' in navigator) {
   // Проверяем, находится ли данная страница под управлением service worker.
   if (navigator.serviceWorker.controller) {
     console.log(`Эта страница сейчас контролируется ${navigator.serviceWorker.controller}`);
@@ -27,16 +29,13 @@ translation_of: Web/API/ServiceWorkerContainer/controller
   }
 } else {
   console.log('Данный браузер не поддерживает Service Worker API.');
-}</pre>
+}
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость">Совместимость</h2>
+## Совместимость
 
-<div>
-
-
-<p>{{Compat}}</p>
-</div>
+{{Compat}}

@@ -12,92 +12,75 @@ tags:
   - iframe
 translation_of: Web/API/Document/domain
 ---
-<div>{{ApiRef}}</div>
+{{ApiRef}}Свойство `domain` у {{domxref("Document")}} интерфейса получает/устанавливает доменную часть источника происхождения (origin) текущего документа, используется в [политике ограничения домена (same origin policy)](/ru/docs/Same_origin_policy_for_JavaScript "Same origin policy for JavaScript").
 
-<div>Свойство <code>domain</code> у {{domxref("Document")}} интерфейса получает/устанавливает доменную часть источника происхождения (origin) текущего документа, используется в <a href="https://developer.mozilla.org/en-US/docs/Same_origin_policy_for_JavaScript" title="Same origin policy for JavaScript">политике ограничения домена (same origin policy)</a>.</div>
+## Синтаксис
 
-<h2 id="Summary">Синтаксис</h2>
+```
+var domainString = document.domain;
+document.domain = string;
+```
 
-<pre class="syntaxbox">var <var>domainString</var> = document.domain;
-document.domain = <var>string</var>;</pre>
+### Значение
 
-<h3 id="Значение">Значение</h3>
+Доменная часть источника происхождения (origin) текущего документа.
 
-<p>Доменная часть источника происхождения (origin) текущего документа.</p>
+### Исключения
 
-<h3 id="Исключения">Исключения</h3>
+- `SecurityError`
 
-<dl>
- <dt><code>SecurityError</code></dt>
- <dd>An attempt has been made to set <code>domain</code> under one of the following conditions:
- <ul>
-  <li>The document is inside a sandboxed {{htmlelement("iframe")}}</li>
-  <li>The document has no browsing context</li>
-  <li>The document's <a href="https://html.spec.whatwg.org/multipage/origin.html#concept-origin-effective-domain">effective domain</a> is <code>null</code></li>
-  <li>The given value is not equal to the document's effective domain (or it is not a registerable domain suffix of it)</li>
-  <li>The {{httpheader('Feature-Policy/document-domain','document-domain')}} {{HTTPHeader("Feature-Policy")}} is enabled</li>
- </ul>
- </dd>
-</dl>
+  - : An attempt has been made to set `domain` under one of the following conditions:
 
-<h2 id="Examples">Examples</h2>
+    - The document is inside a sandboxed {{htmlelement("iframe")}}
+    - The document has no browsing context
+    - The document's [effective domain](https://html.spec.whatwg.org/multipage/origin.html#concept-origin-effective-domain) is `null`
+    - The given value is not equal to the document's effective domain (or it is not a registerable domain suffix of it)
+    - The {{httpheader('Feature-Policy/document-domain','document-domain')}} {{HTTPHeader("Feature-Policy")}} is enabled
 
-<h3 id="Getting_the_domain">Getting the domain</h3>
+## Examples
 
-<p>For the URI <code>http://developer.mozilla.org/en-US/docs/Web</code>, this example sets <code>currentDomain</code> to the string "<code>developer.mozilla.org</code>".</p>
+### Getting the domain
 
-<pre><code>var currentDomain = document.domain;</code></pre>
+For the URI `http://developer.mozilla.org/en-US/docs/Web`, this example sets `currentDomain` to the string "`developer.mozilla.org`".
 
-<h3 id="Closing_a_window">Closing a window</h3>
+```
+var currentDomain = document.domain;
+```
 
-<p>If a document, such as <code>www.example.xxx/good.html</code>, has the domain of <code>"www.example.xxx"</code>, this example attempts to close the window.</p>
+### Closing a window
 
-<pre><code>var badDomain = "www.example.xxx";
+If a document, such as `www.example.xxx/good.html`, has the domain of `"www.example.xxx"`, this example attempts to close the window.
+
+```
+var badDomain = "www.example.xxx";
 
 if (document.domain == badDomain) {
   // Just an example: window.close() sometimes has no effect
   window.close();
-}</code></pre>
+}
+```
 
-<h2 id="Notes">Замечания</h2>
+## Замечания
 
-<p>Свойство возвращает <code>null</code> если домен документа не может быть идентифицирован, хотя теперь это изменилось с Firefox 62 - смотри обсуждение в {{bug(819475)}}.</p>
+Свойство возвращает `null` если домен документа не может быть идентифицирован, хотя теперь это изменилось с Firefox 62 - смотри обсуждение в {{bug(819475)}}.
 
-<p>Mozilla позволит вам установить его в супердомен текущего значения, ограниченный его  <a href="/en-US/docs/XPCOM_Interface_Reference/nsIEffectiveTLDService#getBaseDomain.28.29">базовым доменом</a>. Например, на developer.mozilla.org возможно установить его как "mozilla.org" но не как  "mozilla.com" или "org".</p>
+Mozilla позволит вам установить его в супердомен текущего значения, ограниченный его [базовым доменом](/ru/docs/XPCOM_Interface_Reference/nsIEffectiveTLDService#getBaseDomain.28.29). Например, на developer.mozilla.org возможно установить его как "mozilla.org" но не как "mozilla.com" или "org".
 
-<p>Если это свойство успешно установлено, портовая часть источника так же устанавливается на нуль.</p>
+Если это свойство успешно установлено, портовая часть источника так же устанавливается на нуль.
 
-<p>Mozilla отличает свойство <code>document.domain</code>, которое никогда не было установлено от явно установленного такого же домена как в URL документа, хотя свойство возвращает одинаковое значение в обоих случаях. Один документ разрешает доступ к другому, если они оба установили <code>document.domain</code> в одинаковое значение, указывая тем самым на их намерение сотрудничать или ни один из них не установил <code>document.domain</code>, а домены в URL-адресах одинаковые (<a class="link-https" href="https://mxr.mozilla.org/mozilla-central/source/caps/nsPrincipal.cpp?rev=ecb7068b07a1&amp;mark=199-215#199" title="https://mxr.mozilla.org/mozilla-central/source/caps/src/nsScriptSecurityManager.cpp#1003">реализация</a>). Если бы не эта специальная политика, то каждый сайт будет подвержен XSS от своих поддоменов (для примера <a class="link-https" href="https://bugzilla.mozilla.org" rel="freelink">https://bugzilla.mozilla.org</a> может быть атакован с помощью заведения багов (bug attachments) на <a class="link-https" href="https://bug*.bugzilla.mozilla.org" rel="freelink">https://bug*.bugzilla.mozilla.org</a>).</p>
+Mozilla отличает свойство `document.domain`, которое никогда не было установлено от явно установленного такого же домена как в URL документа, хотя свойство возвращает одинаковое значение в обоих случаях. Один документ разрешает доступ к другому, если они оба установили `document.domain` в одинаковое значение, указывая тем самым на их намерение сотрудничать или ни один из них не установил `document.domain`, а домены в URL-адресах одинаковые ([реализация](https://mxr.mozilla.org/mozilla-central/source/caps/nsPrincipal.cpp?rev=ecb7068b07a1&mark=199-215#199 "https://mxr.mozilla.org/mozilla-central/source/caps/src/nsScriptSecurityManager.cpp#1003")). Если бы не эта специальная политика, то каждый сайт будет подвержен XSS от своих поддоменов (для примера <https://bugzilla.mozilla.org> может быть атакован с помощью заведения багов (bug attachments) на <https://bug*.bugzilla.mozilla.org>).
 
-<h2 id="Specification">Спецификации</h2>
+## Спецификации
 
-<table>
- <thead>
-  <tr>
-   <th scope="col"><strong>Спецификация</strong></th>
-   <th scope="col"><strong>Статус</strong></th>
-   <th scope="col"><strong>Комментарий</strong></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','origin.html#relaxing-the-same-origin-restriction','Document.domain')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML 5.2','browsers.html#relaxing-the-same-origin-restriction','Document.domain')}}</td>
-   <td>{{Spec2('HTML 5.2')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| **Спецификация**                                                                                                                 | **Статус**                       | **Комментарий** |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------- |
+| {{SpecName('HTML WHATWG','origin.html#relaxing-the-same-origin-restriction','Document.domain')}} | {{Spec2('HTML WHATWG')}} |                 |
+| {{SpecName('HTML 5.2','browsers.html#relaxing-the-same-origin-restriction','Document.domain')}} | {{Spec2('HTML 5.2')}}     |                 |
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="See_also">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/Same_origin_policy_for_JavaScript" title="Same origin policy for JavaScript">Политика ограничения домена для JavaScriptHTML</a></li>
-</ul>
+## Смотрите также
+
+- [Политика ограничения домена для JavaScriptHTML](/ru/docs/Same_origin_policy_for_JavaScript "Same origin policy for JavaScript")

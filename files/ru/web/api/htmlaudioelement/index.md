@@ -3,79 +3,51 @@ title: HTMLAudioElement
 slug: Web/API/HTMLAudioElement
 translation_of: Web/API/HTMLAudioElement
 ---
-<div>
-<div>{{APIRef("HTML DOM")}}</div>
-</div>
+{{APIRef("HTML DOM")}}
 
-<div> </div>
+**`HTMLAudioElement`** позволяет получить доступ к элементу {{HTMLElement("audio")}} и имеет DOM-элемент {{domxref("HTMLMediaElement")}}.
 
-<p><strong><code>HTMLAudioElement</code></strong> позволяет получить доступ к элементу  {{HTMLElement("audio")}} и имеет DOM-элемент {{domxref("HTMLMediaElement")}}.</p>
+## Свойства
 
-<h2 id="Properties">Свойства</h2>
+_Не имеет своих свойств; наследует свойства от родителя {{domxref("HTMLMediaElement")}} и от {{domxref("HTMLElement")}}._
 
-<p><em>Не имеет своих свойств; наследует свойства от родителя {{domxref("HTMLMediaElement")}} и от {{domxref("HTMLElement")}}.</em></p>
+## Методы
 
-<h2 id="Methods">Методы</h2>
+_Наследует методы от родителя {{domxref("HTMLMediaElement")}} и от {{domxref("HTMLElement")}}._
 
-<p><em>Наследует методы от родителя {{domxref("HTMLMediaElement")}} и от {{domxref("HTMLElement")}}.</em></p>
+### Конструктор
 
-<h3 id="Конструктор">Конструктор</h3>
+#### Синтаксис
 
-<h4 id="Синтаксис">Синтаксис</h4>
+```
+mySound = new Audio([URLString]);
+```
 
-<pre class="syntaxbox">mySound = new Audio([<em>URLString</em>]);
-</pre>
+#### Описание
 
-<h4 id="Описание">Описание</h4>
+Конструктор audio элемента. Свойство `preload` по умолчанию задано как `auto`, а `src` равно значению аргумента _URLString._ Перед воспроизведением, браузер асинхронно загружает объект в кеш и впоследствии берёт данные оттуда.
 
-<p>Конструктор audio элемента. Свойство <code>preload</code> по умолчанию задано как <code>auto</code>, а <code>src</code> равно значению аргумента <em>URLString.</em> Перед воспроизведением, браузер асинхронно загружает объект в кеш и впоследствии берёт данные оттуда.</p>
+Параметры
 
-<p>Параметры</p>
+- `URLString` (expected type: {{domxref("DOMString")}}; optional)
+  - : 'src' для 'audio' тега. (URL , с которого должен получать mp3 файл)
 
-<dl>
- <dt><code>URLString</code> (expected type: {{domxref("DOMString")}}; optional)</dt>
- <dd>'src' для 'audio' тега. (URL , с которого должен получать mp3 файл)</dd>
-</dl>
+### Регулярные методы
 
-<h3 id="Регулярные_методы">Регулярные методы</h3>
+| Name & Arguments                                                                    | Return               | Description                                                                                                                                                                          |
+| ----------------------------------------------------------------------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `mozCurrentSampleOffset()` {{non-standard_inline}}                         | `unsigned long long` | `Отображает текущую нагрузку аудиострима, который был создан методом mozWriteAudio()`. Эта цифра отражает количество сэмплов с момента начала стрима                                 |
+| `mozSetup(in PRUint32 channels, in PRUint32 rate)` {{non-standard_inline}} | `void`               | Создаёт аудиострима для записи. Вы можете указать такие параметры, как количество каналов (`1` for mono or `2` for stereo), так и частота сэмпла (`44100` for 44.1kHz, for example). |
+| `mozWriteAudio(in jsval data) `{{non-standard_inline}}                     | `unsigned long`      | Запускает аудио стрим на текущую частоту. Возвращает количество байтов, которые записаны в стрим                                                                                     |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Name &amp; Arguments</th>
-   <th scope="col">Return</th>
-   <th scope="col">Description</th>
-  </tr>
-  <tr>
-   <td><code>mozCurrentSampleOffset()</code> {{non-standard_inline}}</td>
-   <td><code>unsigned long long</code></td>
-   <td><code>Отображает текущую нагрузку аудиострима, который был создан методом mozWriteAudio()</code>. Эта цифра отражает количество сэмплов с момента начала стрима</td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>mozSetup(in PRUint32 channels, in PRUint32 rate)</code> {{non-standard_inline}}</p>
-   </td>
-   <td><code>void</code></td>
-   <td>Создаёт аудиострима для записи. Вы можете указать такие параметры, как количество каналов  (<code>1</code> for mono or <code>2</code> for stereo), так и частота сэмпла (<code>44100</code> for 44.1kHz, for example).</td>
-  </tr>
-  <tr>
-   <td><code>mozWriteAudio(in jsval data) </code>{{non-standard_inline}}</td>
-   <td><code>unsigned long</code></td>
-   <td>Запускает аудио стрим на текущую частоту. Возвращает количество байтов, которые записаны в стрим</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузеров">Поддержка браузеров</h2>
+## Поддержка браузеров
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>HTML element implementing this interface: {{HTMLElement("audio")}}.</li>
-</ul>
+- HTML element implementing this interface: {{HTMLElement("audio")}}.

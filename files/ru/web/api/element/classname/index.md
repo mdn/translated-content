@@ -3,58 +3,50 @@ title: Element.className
 slug: Web/API/Element/className
 translation_of: Web/API/Element/className
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<h2 id="Summary">Описание</h2>
+## Описание
 
-<p>Свойство<strong> className</strong> отвечает за значение атрибута <strong>class</strong> элемента.</p>
+Свойство **className** отвечает за значение атрибута **class** элемента.
 
-<div class="note">
-<p>Кстати, у <strong>className</strong> есть большой брат. Его зовут {{domxref("element.classList")}} - более мощный и функциональный метод для работы с классами элемента.</p>
-</div>
+> **Примечание:** Кстати, у **className** есть большой брат. Его зовут {{domxref("element.classList")}} - более мощный и функциональный метод для работы с классами элемента.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>var cName</var> = <var>elem</var>.className;
-<var>elem</var>.className = <var>cName</var>;</pre>
+```
+var cName = elem.className;
+elem.className = cName;
+```
 
-<ul>
- <li><strong><var>cName</var></strong> - строка. Если нужно указать несколько классов, они указываются через пробел.</li>
-</ul>
+- **_cName_** - строка. Если нужно указать несколько классов, они указываются через пробел.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre>&lt;div class="booble example"&gt; &lt;/div&gt;
-</pre>
+```
+<div class="booble example"> </div>
+```
 
-<pre class="brush: js">var elm = document.querySelector("div");
+```js
+var elm = document.querySelector("div");
 
 alert(elm.className); //"booble example"
 
 elm.className = "class1 class2 class3";
 alert(elm.className); //"class1 class2 class3"
-</pre>
+```
 
-<div class="note">
-<h5 id="Notes"><strong>Примечание:</strong></h5>
+> **Примечание:** ##### Примечание:Свойство получило необычное название **`className`** из-за того, что во многих языках, работающих с DOM, слово _class_ является зарезервированным*.*
 
-<p>  Свойство получило необычное название <strong><code>className</code></strong> из-за того, что во многих языках, работающих с DOM, слово <em>class </em>является зарезервированным<em>.</em></p>
-</div>
+## Поддержка браузерами
 
-<h2 id="Поддержка_браузерами" style="line-height: 24px;">Поддержка браузерами</h2>
+{{Compat}}
 
-<p>{{Compat}}</p>
+##
 
-<h2 id="Specification"> </h2>
+## Спецификация
 
-<h2 id="Specification">Спецификация</h2>
+- [DOM Level 2 HTML: className](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-95362176)
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-95362176">DOM Level 2 HTML: className</a></li>
-</ul>
+## Смотрите также
 
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{domxref("element.classList")}}</li>
-</ul>
+- {{domxref("element.classList")}}

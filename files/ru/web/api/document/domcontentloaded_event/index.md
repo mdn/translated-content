@@ -5,62 +5,67 @@ tags:
   - Событие
 translation_of: Web/API/Document/DOMContentLoaded_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Событие <strong><code>DOMContentLoaded</code></strong>  запускается когда первоначальный HTML документ будет полностью загружен и разобран, без ожидания полной загрузки таблиц стилей, изображений и фреймов.</p>
+Событие **`DOMContentLoaded`** запускается когда первоначальный HTML документ будет полностью загружен и разобран, без ожидания полной загрузки таблиц стилей, изображений и фреймов.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Всплытие</th>
-   <td>да</td>
-  </tr>
-  <tr>
-   <th scope="row">Отменяемый</th>
-   <td>Да (хотя указано как простое событие, которое не может быть отменено)</td>
-  </tr>
-  <tr>
-   <th scope="row">Интерфейс</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Свойство обработчика событий</th>
-   <td>нет</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Всплытие</th>
+      <td>да</td>
+    </tr>
+    <tr>
+      <th scope="row">Отменяемый</th>
+      <td>
+        Да (хотя указано как простое событие, которое не может быть отменено)
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Интерфейс</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Свойство обработчика событий</th>
+      <td>нет</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Разные события,<code><a href="/en-US/docs/Web/API/Window/load_event">load</a></code>, должны быть использованы только для обнаружения полностью загруженной страницы. Это распространённая ошибка в использовании <code>load</code>, там где <code>DOMContentLoaded</code> было бы более уместным.</p>
+Разные события,[`load`](/en-US/docs/Web/API/Window/load_event), должны быть использованы только для обнаружения полностью загруженной страницы. Это распространённая ошибка в использовании `load`, там где `DOMContentLoaded` было бы более уместным.
 
-<p>Синхронный JavaScript останавливает разбор DOM. Если вы хотите что бы DOM был разобран как можно быстрее после того как пользователь запросит страницу, вы должны сделать ваш <a href="/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests">JavaScript асинхронным </a>and <a href="https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery">оптимизировать загрузку таблиц стилей</a>. Если загружать как обычно, таблицы стилей  тормозят разбор DOM так как они загружаются параллельно, "крадя" трафик у основного HTML документа.</p>
+Синхронный JavaScript останавливает разбор DOM. Если вы хотите что бы DOM был разобран как можно быстрее после того как пользователь запросит страницу, вы должны сделать ваш [JavaScript асинхронным ](/ru/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)and [оптимизировать загрузку таблиц стилей](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery). Если загружать как обычно, таблицы стилей тормозят разбор DOM так как они загружаются параллельно, "крадя" трафик у основного HTML документа.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Основное_применение">Основное применение</h3>
+### Основное применение
 
-<pre class="brush: js">document.addEventListener('DOMContentLoaded', (event) =&gt; {
+```js
+document.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM полностью загружен и разобран');
 });
-</pre>
+```
 
-<h3 id="Отложенный_DOMContentLoaded">Отложенный DOMContentLoaded</h3>
+### Отложенный DOMContentLoaded
 
-<pre class="brush: html">&lt;script&gt;
-  document.addEventListener('DOMContentLoaded', (event) =&gt; {
+```html
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM полностью загружен и разобран');
   });
 
-for( let i = 0; i &lt; 1000000000; i++)
+for( let i = 0; i < 1000000000; i++)
 {} // Этот синхронный скрипт откладывает разбор DOM,
    // так что событие DOMContentLoaded будет запущено позже.
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h3 id="Проверка_того_завершена_ли_загрузка">Проверка того, завершена ли загрузка</h3>
+### Проверка того, завершена ли загрузка
 
-<p><code>DOMContentLoaded</code> может сработать до того, как ваш скрипт будет запущен, поэтому разумно это проверить, перед добавлением обработчика.</p>
+`DOMContentLoaded` может сработать до того, как ваш скрипт будет запущен, поэтому разумно это проверить, перед добавлением обработчика.
 
-<pre class="brush: js">function doSomething() {
+```js
+function doSomething() {
   console.info('DOM загружен');
 }
 
@@ -69,25 +74,25 @@ if (document.readyState === 'loading') {  // Загрузка ещё не зак
 } else {  // `DOMContentLoaded` Уже сработал
   doSomething();
 }
-</pre>
+```
 
-<h3 id="Живые_примеры">Живые примеры</h3>
+### Живые примеры
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="controls"&gt;
-  &lt;button id="reload" type="button"&gt;Reload&lt;/button&gt;
-&lt;/div&gt;
+```html
+<div class="controls">
+  <button id="reload" type="button">Reload</button>
+</div>
 
-&lt;div class="event-log"&gt;
-  &lt;label&gt;Event log:&lt;/label&gt;
-  &lt;textarea readonly class="event-log-contents" rows="8" cols="30"&gt;&lt;/textarea&gt;
-&lt;/div&gt;</pre>
+<div class="event-log">
+  <label>Event log:</label>
+  <textarea readonly class="event-log-contents" rows="8" cols="30"></textarea>
+</div>
+```
 
-<div class="hidden">
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css">body {
+```css hidden
+body {
   display: grid;
   grid-template-areas: "control  log";
 }
@@ -114,50 +119,47 @@ label, button {
 #reload {
   height: 2rem;
 }
+```
 
-</pre>
-</div>
+#### JS
 
-<h4 id="JS">JS</h4>
-
-<pre class="brush: js">const log = document.querySelector('.event-log-contents');
+```js
+const log = document.querySelector('.event-log-contents');
 const reload = document.querySelector('#reload');
 
-reload.addEventListener('click', () =&gt; {
+reload.addEventListener('click', () => {
   log.textContent ='';
-  window.setTimeout(() =&gt; {
+  window.setTimeout(() => {
       window.location.reload(true);
   }, 200);
 });
 
-window.addEventListener('load', (event) =&gt; {
+window.addEventListener('load', (event) => {
     log.textContent = log.textContent + 'load\n';
 });
 
-document.addEventListener('readystatechange', (event) =&gt; {
+document.addEventListener('readystatechange', (event) => {
     log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
 });
 
-document.addEventListener('DOMContentLoaded', (event) =&gt; {
+document.addEventListener('DOMContentLoaded', (event) => {
     log.textContent = log.textContent + `DOMContentLoaded\n`;
 });
+```
 
-</pre>
+#### Result
 
-<h4 id="Result">Result</h4>
+{{ EmbedLiveSample('Живые_примеры', '100%', '160px') }}
 
-<p>{{ EmbedLiveSample('Живые_примеры', '100%', '160px') }}</p>
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
-<p>{{Compat}}</p>
+## Браузерная совместимость
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>События связанные с: <code><a href="/en-US/docs/Web/API/Window/load_event">load</a></code>, <code><a href="/en-US/docs/Web/API/Document/readystatechange_event">readystatechange</a></code>, <code><a href="/en-US/docs/Web/API/Window/beforeunload_event">beforeunload</a></code>, <code><a href="/en-US/docs/Web/API/Window/unload_event">unload</a></code></li>
- <li>Это событие <code><a href="/en-US/docs/Web/API/Window">Window</a></code> нацеленное на: <code><a href="/en-US/docs/Web/API/Window/DOMContentLoaded_event">DOMContentLoaded</a></code></li>
-</ul>
+## Смотрите также
+
+- События связанные с: [`load`](/en-US/docs/Web/API/Window/load_event), [`readystatechange`](/en-US/docs/Web/API/Document/readystatechange_event), [`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event), [`unload`](/en-US/docs/Web/API/Window/unload_event)
+- Это событие [`Window`](/en-US/docs/Web/API/Window) нацеленное на: [`DOMContentLoaded`](/en-US/docs/Web/API/Window/DOMContentLoaded_event)

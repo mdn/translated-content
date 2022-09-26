@@ -3,78 +3,72 @@ title: HTMLBodyElement
 slug: Web/API/HTMLBodyElement
 translation_of: Web/API/HTMLBodyElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>HTMLBodyElement</code></strong> интерфейс предоставляющий специальные свойства (помимо этого, они постоянно наследуют {{ domxref("HTMLElement") }} интерфейс) для манипуляции элементами тела.</p>
+**`HTMLBodyElement`** интерфейс предоставляющий специальные свойства (помимо этого, они постоянно наследуют {{ domxref("HTMLElement") }} интерфейс) для манипуляции элементами тела.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Наследует свойства о его родителя, {{domxref("HTMLElement")}} и от {{domxref("WindowEventHandlers")}}.</em></p>
+_Наследует свойства о его родителя, {{domxref("HTMLElement")}} и от {{domxref("WindowEventHandlers")}}._
 
-<dl>
- <dt>{{domxref("HTMLBodyElement.aLink")}} {{obsolete_inline}}</dt>
- <dd>Это {{ domxref("DOMString") }} который представляет цвет активных гиперссылок.</dd>
- <dt>{{domxref("HTMLBodyElement.background")}} {{obsolete_inline}}</dt>
- <dd>Это {{ domxref("DOMString") }} который представляет собой описание расположения фонового изображения ресурса. Обратите внимание, что это не URI, хотя в некоторых старых версиях некоторых браузеров ожидается именно это.</dd>
- <dt>{{domxref("HTMLBodyElement.bgColor")}} {{obsolete_inline}}</dt>
- <dd>Это {{ domxref("DOMString") }} который представляет собой цвет фона для документа.</dd>
- <dt>{{domxref("HTMLBodyElement.link")}} {{obsolete_inline}}</dt>
- <dd>Это {{ domxref("DOMString") }} который представляет собой цвет непосещенных ссылок.</dd>
- <dt>{{domxref("HTMLBodyElement.text")}} {{obsolete_inline}}</dt>
- <dd>Это {{ domxref("DOMString") }} который представляет собой основной цвет текста.</dd>
- <dt>{{domxref("HTMLBodyElement.vLink")}} {{obsolete_inline}}</dt>
- <dd>Это {{ domxref("DOMString") }} который представляет собой цвет посещённых ссылок.</dd>
-</dl>
+- {{domxref("HTMLBodyElement.aLink")}} {{obsolete_inline}}
+  - : Это {{ domxref("DOMString") }} который представляет цвет активных гиперссылок.
+- {{domxref("HTMLBodyElement.background")}} {{obsolete_inline}}
+  - : Это {{ domxref("DOMString") }} который представляет собой описание расположения фонового изображения ресурса. Обратите внимание, что это не URI, хотя в некоторых старых версиях некоторых браузеров ожидается именно это.
+- {{domxref("HTMLBodyElement.bgColor")}} {{obsolete_inline}}
+  - : Это {{ domxref("DOMString") }} который представляет собой цвет фона для документа.
+- {{domxref("HTMLBodyElement.link")}} {{obsolete_inline}}
+  - : Это {{ domxref("DOMString") }} который представляет собой цвет непосещенных ссылок.
+- {{domxref("HTMLBodyElement.text")}} {{obsolete_inline}}
+  - : Это {{ domxref("DOMString") }} который представляет собой основной цвет текста.
+- {{domxref("HTMLBodyElement.vLink")}} {{obsolete_inline}}
+  - : Это {{ domxref("DOMString") }} который представляет собой цвет посещённых ссылок.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em>Не имеет специфичных методов; наследует методы от его родителя, {{domxref("HTMLElement")}} и от {{domxref("WindowEventHandlers")}}</em><em>.</em></p>
+_Не имеет специфичных методов; наследует методы от его родителя, {{domxref("HTMLElement")}} и от {{domxref("WindowEventHandlers")}}\_\_._
 
-<h2 id="Обработчики_событий">Обработчики событий</h2>
+## Обработчики событий
 
-<p><em>Не имеет специфичных обработчиков событий; наследует обработчики событий от его родителя, {{domxref("HTMLElement")}} и от {{domxref("WindowEventHandlers")}}</em><em>.</em></p>
+_Не имеет специфичных обработчиков событий; наследует обработчики событий от его родителя, {{domxref("HTMLElement")}} и от {{domxref("WindowEventHandlers")}}\_\_._
 
-<dl>
- <dt>{{domxref("WindowEventHandlers.onafterprint")}}</dt>
- <dd>Это {{event("Event_handlers", "event handler")}} представляющий собой код который будет вызван когда {{event("afterprint")}} событие будет вызвано.</dd>
- <dt>{{domxref("WindowEventHandlers.onbeforeprint")}}</dt>
- <dd>Это {{event("Event_handlers", "event handler")}}  представляющее собой код который будет вызван когда событие {{event("beforeprint")}} вызвано.</dd>
- <dt>{{domxref("WindowEventHandlers.onbeforeunload")}}</dt>
- <dd>Это {{event("Event_handlers", "event handler")}} представляющее собой код который будет вызван когда событие {{event("beforeunload")}} вызвано.</dd>
- <dt>{{domxref("WindowEventHandlers.onhashchange")}}</dt>
- <dd>Это {{event("Event_handlers", "event handler")}}  представляющее собой код который будет вызван когда событие {{event("hashchange")}} вызвано.</dd>
- <dt>{{domxref("WindowEventHandlers.onlanguagechange")}} {{experimental_inline}}</dt>
- <dd>Это {{event("Event_handlers", "event handler")}}  представляющее собой код который будет вызван когда событие {{event("languagechange")}} вызвано.</dd>
- <dt>{{domxref("WindowEventHandlers.onmessage")}}</dt>
- <dd>Это {{event("Event_handlers", "event handler")}}  представляющее собой код который будет вызван когда событие {{event("message")}} вызвано.</dd>
- <dt>{{domxref("WindowEventHandlers.onoffline")}}</dt>
- <dd>Это {{event("Event_handlers", "event handler")}}  представляющее собой код который будет вызван когда событие {{event("offline")}} вызвано.</dd>
- <dt>{{domxref("WindowEventHandlers.ononline")}}</dt>
- <dd>Это {{event("Event_handlers", "event handler")}}  представляющее собой код который будет вызван когда событие {{event("online")}} вызвано.</dd>
- <dt>{{domxref("WindowEventHandlers.onpagehide")}}</dt>
- <dd>Это {{event("Event_handlers", "event handler")}}  представляющее собой код который будет вызван когда событие {{event("pagehide")}} вызвано.</dd>
- <dt>{{domxref("WindowEventHandlers.onpageshow")}}</dt>
- <dd>Это {{event("Event_handlers", "event handler")}}  представляющее собой код который будет вызван когда событие {{event("pageshow")}} вызвано.</dd>
- <dt>{{domxref("WindowEventHandlers.onpopstate")}}</dt>
- <dd>Это {{event("Event_handlers", "event handler")}}  представляющее собой код который будет вызван когда событие {{event("popstate")}} вызвано.</dd>
- <dt>{{domxref("WindowEventHandlers.onresize")}}</dt>
- <dd>Это {{event("Event_handlers", "event handler")}}  представляющее собой код который будет вызван когда событие {{event("resize")}} вызвано.</dd>
- <dt>{{domxref("WindowEventHandlers.onstorage")}}</dt>
- <dd>Это {{event("Event_handlers", "event handler")}}  представляющее собой код который будет вызван когда событие {{event("storage")}} вызвано.</dd>
- <dt>{{domxref("WindowEventHandlers.onunload")}}</dt>
- <dd>Это {{event("Event_handlers", "event handler")}}  представляющее собой код который будет вызван когда событие {{event("unload")}} вызвано.</dd>
-</dl>
+- {{domxref("WindowEventHandlers.onafterprint")}}
+  - : Это {{event("Event_handlers", "event handler")}} представляющий собой код который будет вызван когда {{event("afterprint")}} событие будет вызвано.
+- {{domxref("WindowEventHandlers.onbeforeprint")}}
+  - : Это {{event("Event_handlers", "event handler")}} представляющее собой код который будет вызван когда событие {{event("beforeprint")}} вызвано.
+- {{domxref("WindowEventHandlers.onbeforeunload")}}
+  - : Это {{event("Event_handlers", "event handler")}} представляющее собой код который будет вызван когда событие {{event("beforeunload")}} вызвано.
+- {{domxref("WindowEventHandlers.onhashchange")}}
+  - : Это {{event("Event_handlers", "event handler")}} представляющее собой код который будет вызван когда событие {{event("hashchange")}} вызвано.
+- {{domxref("WindowEventHandlers.onlanguagechange")}} {{experimental_inline}}
+  - : Это {{event("Event_handlers", "event handler")}} представляющее собой код который будет вызван когда событие {{event("languagechange")}} вызвано.
+- {{domxref("WindowEventHandlers.onmessage")}}
+  - : Это {{event("Event_handlers", "event handler")}} представляющее собой код который будет вызван когда событие {{event("message")}} вызвано.
+- {{domxref("WindowEventHandlers.onoffline")}}
+  - : Это {{event("Event_handlers", "event handler")}} представляющее собой код который будет вызван когда событие {{event("offline")}} вызвано.
+- {{domxref("WindowEventHandlers.ononline")}}
+  - : Это {{event("Event_handlers", "event handler")}} представляющее собой код который будет вызван когда событие {{event("online")}} вызвано.
+- {{domxref("WindowEventHandlers.onpagehide")}}
+  - : Это {{event("Event_handlers", "event handler")}} представляющее собой код который будет вызван когда событие {{event("pagehide")}} вызвано.
+- {{domxref("WindowEventHandlers.onpageshow")}}
+  - : Это {{event("Event_handlers", "event handler")}} представляющее собой код который будет вызван когда событие {{event("pageshow")}} вызвано.
+- {{domxref("WindowEventHandlers.onpopstate")}}
+  - : Это {{event("Event_handlers", "event handler")}} представляющее собой код который будет вызван когда событие {{event("popstate")}} вызвано.
+- {{domxref("WindowEventHandlers.onresize")}}
+  - : Это {{event("Event_handlers", "event handler")}} представляющее собой код который будет вызван когда событие {{event("resize")}} вызвано.
+- {{domxref("WindowEventHandlers.onstorage")}}
+  - : Это {{event("Event_handlers", "event handler")}} представляющее собой код который будет вызван когда событие {{event("storage")}} вызвано.
+- {{domxref("WindowEventHandlers.onunload")}}
+  - : Это {{event("Event_handlers", "event handler")}} представляющее собой код который будет вызван когда событие {{event("unload")}} вызвано.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>HTML-элемент реализующий этот интерфейс: {{ HTMLElement("body") }}</li>
-</ul>
+- HTML-элемент реализующий этот интерфейс: {{ HTMLElement("body") }}

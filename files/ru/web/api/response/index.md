@@ -10,107 +10,102 @@ tags:
   - Response
 translation_of: Web/API/Response
 ---
-<div>{{APIRef("Fetch API")}}</div>
+{{APIRef("Fetch API")}}
 
-<p>Интерфейс <strong><code>Response</code></strong> из <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> представляет собой ответ на запрос.</p>
+Интерфейс **`Response`** из [Fetch API](/ru/docs/Web/API/Fetch_API) представляет собой ответ на запрос.
 
-<p>Вы можете создать новый экземпляр объекта <code>Response</code> используя конструктор {{domxref("Response.Response()")}}, но скорее всего вы столкнётесь с объектом <code>Response</code>, как результат какой-нибудь API операции — например, service worker {{domxref("Fetchevent.respondWith")}}, или {{domxref("WindowOrWorkerGlobalScope.fetch()")}}.</p>
+Вы можете создать новый экземпляр объекта `Response` используя конструктор {{domxref("Response.Response()")}}, но скорее всего вы столкнётесь с объектом `Response`, как результат какой-нибудь API операции — например, service worker {{domxref("Fetchevent.respondWith")}}, или {{domxref("WindowOrWorkerGlobalScope.fetch()")}}.
 
-<h2 id="Конструктор">Конструктор</h2>
+## Конструктор
 
-<dl>
- <dt>{{domxref("Response.Response","Response()")}}</dt>
- <dd>Создаёт новый экземпляр объекта <code>Response</code>.</dd>
-</dl>
+- {{domxref("Response.Response","Response()")}}
+  - : Создаёт новый экземпляр объекта `Response`.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<dl>
- <dt>{{domxref("Response.headers")}} {{readonlyinline}}</dt>
- <dd>Объект {{domxref("Headers")}}, который описывает заголовок ответа.</dd>
- <dt>{{domxref("Response.ok")}} {{readonlyinline}}</dt>
- <dd>Булевское значение, которое указывает, выполнился ли запрос успешно или нет (то есть находится ли код ответа в диапазоне <code>200</code>–<code>299</code>).</dd>
- <dt>{{domxref("Response.redirected")}} {{ReadOnlyInline}}</dt>
- <dd>Указывает, является ли результат запроса перенаправлением.</dd>
- <dt>{{domxref("Response.status")}} {{readonlyinline}}</dt>
- <dd>Код ответа.</dd>
- <dt>{{domxref("Response.statusText")}} {{readonlyinline}}</dt>
- <dd>Строка, соответствующая коду ответа (например, <code>OK</code> для кода <code>200</code>).</dd>
- <dt>{{domxref("Response.trailers")}}</dt>
- <dd>A {{domxref("Promise")}} resolving to a {{domxref("Headers")}} object, associated with the response with {{domxref("Response.headers")}} for values of the HTTP {{HTTPHeader("Trailer")}} header.</dd>
- <dt>{{domxref("Response.type")}} {{readonlyinline}}</dt>
- <dd>The type of the response (e.g., <code>basic</code>, <code>cors</code>).</dd>
- <dt>{{domxref("Response.url")}} {{readonlyinline}}</dt>
- <dd>The URL of the response.</dd>
- <dt>{{domxref("Response.useFinalURL")}}</dt>
- <dd>A boolean indicating whether this is the final URL of the response.</dd>
-</dl>
+- {{domxref("Response.headers")}} {{readonlyinline}}
+  - : Объект {{domxref("Headers")}}, который описывает заголовок ответа.
+- {{domxref("Response.ok")}} {{readonlyinline}}
+  - : Булевское значение, которое указывает, выполнился ли запрос успешно или нет (то есть находится ли код ответа в диапазоне `200`–`299`).
+- {{domxref("Response.redirected")}} {{ReadOnlyInline}}
+  - : Указывает, является ли результат запроса перенаправлением.
+- {{domxref("Response.status")}} {{readonlyinline}}
+  - : Код ответа.
+- {{domxref("Response.statusText")}} {{readonlyinline}}
+  - : Строка, соответствующая коду ответа (например, `OK` для кода `200`).
+- {{domxref("Response.trailers")}}
+  - : A {{domxref("Promise")}} resolving to a {{domxref("Headers")}} object, associated with the response with {{domxref("Response.headers")}} for values of the HTTP {{HTTPHeader("Trailer")}} header.
+- {{domxref("Response.type")}} {{readonlyinline}}
+  - : The type of the response (e.g., `basic`, `cors`).
+- {{domxref("Response.url")}} {{readonlyinline}}
+  - : The URL of the response.
+- {{domxref("Response.useFinalURL")}}
+  - : A boolean indicating whether this is the final URL of the response.
 
-<h3 id="Body_Interface_Properties">Body Interface Properties</h3>
+### Body Interface Properties
 
-<p><code>Response</code> implements {{domxref("Body")}}, so it also has the following properties available to it:</p>
+`Response` implements {{domxref("Body")}}, so it also has the following properties available to it:
 
-<dl>
- <dt>{{domxref("Body.body")}} {{readonlyInline}}</dt>
- <dd>A simple getter exposing a {{domxref("ReadableStream")}} of the body contents.</dd>
- <dt>{{domxref("Body.bodyUsed")}} {{readonlyInline}}</dt>
- <dd>Stores a {{domxref("Boolean")}} that declares whether the body has been used in a response yet.</dd>
-</dl>
+- {{domxref("Body.body")}} {{readonlyInline}}
+  - : A simple getter exposing a {{domxref("ReadableStream")}} of the body contents.
+- {{domxref("Body.bodyUsed")}} {{readonlyInline}}
+  - : Stores a {{domxref("Boolean")}} that declares whether the body has been used in a response yet.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<dl>
- <dt>{{domxref("Response.clone()")}}</dt>
- <dd>Creates a clone of a <code>Response</code> object.</dd>
- <dt>{{domxref("Response.error()")}}</dt>
- <dd>Returns a new <code>Response</code> object associated with a network error.</dd>
- <dt>{{domxref("Response.redirect()")}}</dt>
- <dd>Creates a new response with a different URL.</dd>
-</dl>
+- {{domxref("Response.clone()")}}
+  - : Creates a clone of a `Response` object.
+- {{domxref("Response.error()")}}
+  - : Returns a new `Response` object associated with a network error.
+- {{domxref("Response.redirect()")}}
+  - : Creates a new response with a different URL.
 
-<h3 id="Body_Interface_Methods">Body Interface Methods</h3>
+### Body Interface Methods
 
-<p><code>Response</code> implements {{domxref("Body")}}, so it also has the following methods available to it:</p>
+`Response` implements {{domxref("Body")}}, so it also has the following methods available to it:
 
-<dl>
- <dt>{{domxref("Body.arrayBuffer()")}}</dt>
- <dd>Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with an {{domxref("ArrayBuffer")}}.</dd>
- <dt>{{domxref("Body.blob()")}}</dt>
- <dd>Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with a {{domxref("Blob")}}.</dd>
- <dt>{{domxref("Body.formData()")}}</dt>
- <dd>Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with a {{domxref("FormData")}} object.</dd>
- <dt>{{domxref("Body.json()")}}</dt>
- <dd>Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with the result of parsing the body text as {{jsxref("JSON")}}, which is a JavaScript value of datatype object, string, etc.</dd>
- <dt>{{domxref("Body.text()")}}</dt>
- <dd>Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with a {{domxref("USVString")}} (text).</dd>
-</dl>
+- {{domxref("Body.arrayBuffer()")}}
+  - : Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with an {{domxref("ArrayBuffer")}}.
+- {{domxref("Body.blob()")}}
+  - : Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with a {{domxref("Blob")}}.
+- {{domxref("Body.formData()")}}
+  - : Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with a {{domxref("FormData")}} object.
+- {{domxref("Body.json()")}}
+  - : Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with the result of parsing the body text as {{jsxref("JSON")}}, which is a JavaScript value of datatype object, string, etc.
+- {{domxref("Body.text()")}}
+  - : Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with a {{domxref("USVString")}} (text).
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Fetching_an_image">Fetching an image</h3>
+### Fetching an image
 
-<p>In our <a href="https://github.com/mdn/fetch-examples/tree/master/basic-fetch">basic fetch example</a> (<a href="http://mdn.github.io/fetch-examples/basic-fetch/">run example live</a>) we use a simple <code>fetch()</code> call to grab an image and display it in an {{htmlelement("img")}} element. The <code>fetch()</code> call returns a promise, which resolves to the <code>Response</code> object associated with the resource fetch operation.</p>
+In our [basic fetch example](https://github.com/mdn/fetch-examples/tree/master/basic-fetch) ([run example live](http://mdn.github.io/fetch-examples/basic-fetch/)) we use a simple `fetch()` call to grab an image and display it in an {{htmlelement("img")}} element. The `fetch()` call returns a promise, which resolves to the `Response` object associated with the resource fetch operation.
 
-<p>You'll notice that since we are requesting an image, we need to run {{domxref("Body.blob")}} ({{domxref("Response")}} implements Body) to give the response its correct MIME type.</p>
+You'll notice that since we are requesting an image, we need to run {{domxref("Body.blob")}} ({{domxref("Response")}} implements Body) to give the response its correct MIME type.
 
-<pre class="brush: js">const image = document.querySelector('.my-image');
+```js
+const image = document.querySelector('.my-image');
 fetch('flowers.jpg').then(function(response) {
   return response.blob();
 }).then(function(blob) {
   const objectURL = URL.createObjectURL(blob);
   image.src = objectURL;
-});</pre>
+});
+```
 
-<p>You can also use the {{domxref("Response.Response()")}} constructor to create your own custom <code>Response</code> object:</p>
+You can also use the {{domxref("Response.Response()")}} constructor to create your own custom `Response` object:
 
-<pre class="brush: js">const response = new Response();</pre>
+```js
+const response = new Response();
+```
 
-<h3 id="Ajax_запрос">Ajax запрос</h3>
+### Ajax запрос
 
-<p>Здесь мы с помощью функции doAjax вызываем PHP скрипт, который генерирует JSON строку, и возвращает распарсенный JSON в виде JavaScript объекта. Также реализована простая обработка ошибок.</p>
+Здесь мы с помощью функции doAjax вызываем PHP скрипт, который генерирует JSON строку, и возвращает распарсенный JSON в виде JavaScript объекта. Также реализована простая обработка ошибок.
 
-<pre class="brush: js">// Функция, которая делает Ajax запрос
-const doAjax = async () =&gt; {
+```js
+// Функция, которая делает Ajax запрос
+const doAjax = async () => {
     const response = await fetch('Ajax.php'); // Генерируем объект Response
     if (response.ok) {
         const jVal = await response.json(); // Парсим тело ответа
@@ -123,37 +118,20 @@ const doAjax = async () =&gt; {
 
 // Вызываем doAjax и выводим результат в консоль
 doAjax().then(console.log).catch(console.log);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Fetch','#response-class','Response')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                        | Status                   | Comment            |
+| -------------------------------------------------------------------- | ------------------------ | ------------------ |
+| {{SpecName('Fetch','#response-class','Response')}} | {{Spec2('Fetch')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/ru/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/ru/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/ru/docs/Web/HTTP)

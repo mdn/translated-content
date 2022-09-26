@@ -3,25 +3,26 @@ title: Document.documentURI
 slug: Web/API/Document/documentURI
 translation_of: Web/API/Document/documentURI
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>Свойство <code><strong>documentURI</strong></code> интерфейса {{domxref("Document")}} возвращает строку с текущим адресом документа.</p>
+Свойство **`documentURI`** интерфейса {{domxref("Document")}} возвращает строку с текущим адресом документа.
 
-<p>Первоначально определено в DOM3 как атрибут для чтения и записи. В спецификации DOM4 это свойство доступно только для чтения.</p>
+Первоначально определено в DOM3 как атрибут для чтения и записи. В спецификации DOM4 это свойство доступно только для чтения.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js"><code>var string = document.documentURI;</code>
-</pre>
+```js
+var string = document.documentURI;
+```
 
-<h2 id="Примечание">Примечание</h2>
+## Примечание
 
-<p>HTML документы содержат свойство {{domxref("document.URL")}} которое возвращает то же значение. Но в отличие от  <code>URL</code>, свойство <code>documentURI</code> доступно для всех типов документов.</p>
+HTML документы содержат свойство {{domxref("document.URL")}} которое возвращает то же значение. Но в отличие от `URL`, свойство `documentURI` доступно для всех типов документов.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

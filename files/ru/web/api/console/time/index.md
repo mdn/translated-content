@@ -9,51 +9,37 @@ tags:
   - console
 translation_of: Web/API/Console/time
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>Запускает таймер, который вы можете использовать для определения, сколько времени занимает выполнение той или иной операции. Вы должны назначить каждому таймеру уникальное имя и таким образом можете запустить до 10000 таймеров на одной странице. Когда вы вызовете {{ domxref("console.timeEnd()") }} с именем, которое использовалось при запуске таймера, браузер отобразит в консоли время (в миллисекундах), прошедшее с момента запуска таймера.</p>
+Запускает таймер, который вы можете использовать для определения, сколько времени занимает выполнение той или иной операции. Вы должны назначить каждому таймеру уникальное имя и таким образом можете запустить до 10000 таймеров на одной странице. Когда вы вызовете {{ domxref("console.timeEnd()") }} с именем, которое использовалось при запуске таймера, браузер отобразит в консоли время (в миллисекундах), прошедшее с момента запуска таймера.
 
-<p>Примеры и более детальная информация находятся в разделе <a href="/ru/docs/DOM/console#Timers" title="DOM/console#Timers">Таймеры</a> документации к {{ domxref("console") }}</p>
+Примеры и более детальная информация находятся в разделе [Таймеры](/ru/docs/DOM/console#Timers "DOM/console#Timers") документации к {{ domxref("console") }}
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre>console.time(<var>label</var>);</pre>
+```
+console.time(label);
+```
 
-<h2 id="Параметры">Параметры</h2>
+## Параметры
 
-<dl>
- <dt><code>label</code></dt>
- <dd>Название нового таймера. Оно однозначно идентифицирует таймер. Используйте то же самое название таймера, когда вызываете {{ domxref("console.timeEnd()") }} для остановки и отображения времени выполнения таймера.</dd>
-</dl>
+- `label`
+  - : Название нового таймера. Оно однозначно идентифицирует таймер. Используйте то же самое название таймера, когда вызываете {{ domxref("console.timeEnd()") }} для остановки и отображения времени выполнения таймера.
 
-<h2 id="Документация">Документация</h2>
+## Документация
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#time", "console.time()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>Первоначальное определение</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                            | Status                           | Comment                    |
+| ------------------------------------------------------------------------ | -------------------------------- | -------------------------- |
+| {{SpecName("Console API", "#time", "console.time()")}} | {{Spec2("Console API")}} | Первоначальное определение |
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{ domxref("Console.timeEnd()") }}</li>
- <li>{{ domxref("Console.timeLog()") }}</li>
- <li><a class="external" href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
-</ul>
+## Смотрите также
+
+- {{ domxref("Console.timeEnd()") }}
+- {{ domxref("Console.timeLog()") }}
+- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)

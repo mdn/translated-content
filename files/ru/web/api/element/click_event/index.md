@@ -4,33 +4,31 @@ slug: Web/API/Element/click_event
 translation_of: Web/API/GlobalEventHandlers/onclick
 original_slug: Web/API/GlobalEventHandlers/onclick
 ---
-<div>
-<div>{{ ApiRef("HTML DOM") }}</div>
-</div>
+{{ ApiRef("HTML DOM") }}
 
+Свойство **onclick** возвращает обработчик события `click` на текущем элементе.
 
+> **Примечание:** При использовании обработчика события `click` для вызова любого действия, убедитесь, что событие `keydown` имеет такое же действие. Это нужно для того, чтобы пользователи, которые не используют мышь или тачскрин могли использовать то же действие.
 
-<p>Свойство <strong>onclick</strong> возвращает обработчик события <code>click</code> на текущем элементе.</p>
+## Синтаксис
 
-<div class="note"><strong>Note:</strong> При использовании обработчика события <code>click</code> для вызова любого действия, убедитесь, что событие <code>keydown</code> имеет такое же действие. Это нужно для того, чтобы пользователи, которые не используют мышь или тачскрин могли использовать то же действие.</div>
+```
+element.onclick = functionRef;
+```
 
-<h2 id="Syntax">Синтаксис</h2>
+где _functionRef_ это функция - зачастую это имя функции, которая объявлена где-то в другом месте или же _функциональное выражение_. См. "[JavaScript Guide:Functions](/ru/docs/JavaScript/Guide/Functions)".
 
-<pre class="syntaxbox"><var>element</var>.onclick = <var>functionRef</var>;
-</pre>
+Единственный аргумент, переданный в определённую функцию обработчик события это {{domxref("MouseEvent")}} объект. `this` внутри обработчика будет указывать на элемент, на котором было вызвано событие.
 
-<p>где <em>functionRef</em> это функция - зачастую это имя функции, которая объявлена где-то в другом месте или же <em>функциональное выражение</em>. См. "<a href="/en-US/docs/JavaScript/Guide/Functions">JavaScript Guide:Functions</a>".</p>
+## Пример
 
-<p>Единственный аргумент, переданный в определённую функцию обработчик события это {{domxref("MouseEvent")}} объект. <code>this</code> внутри обработчика будет указывать на элемент, на котором было вызвано событие.</p>
-
-<h2 id="Example">Пример</h2>
-
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-  &lt;head&gt;
-    &lt;meta charset="UTF-8" /&gt;
-    &lt;title&gt;onclick event example&lt;/title&gt;
-    &lt;script&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>onclick event example</title>
+    <script>
       function initElement() {
         var p = document.getElementById("foo");
         // NOTE: showAlert(); или showAlert(param); так НЕ сработает.
@@ -41,64 +39,46 @@ original_slug: Web/API/GlobalEventHandlers/onclick
       function showAlert(event) {
         alert("onclick Event detected!");
       }
-    &lt;/script&gt;
-    &lt;style&gt;
+    </script>
+    <style>
       #foo {
         border: solid blue 2px;
       }
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body onload="initElement();"&gt;
-    &lt;span id="foo"&gt;My Event Element&lt;/span&gt;
-    &lt;p&gt;click on the above element.&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+    </style>
+  </head>
+  <body onload="initElement();">
+    <span id="foo">My Event Element</span>
+    <p>click on the above element.</p>
+  </body>
+</html>
+```
 
-<p>Или же вы можете использовать анонимную функцию, как здесь:</p>
+Или же вы можете использовать анонимную функцию, как здесь:
 
-<pre class="brush:js">p.onclick = function(event) { alert("moot!"); };
-</pre>
+```js
+p.onclick = function(event) { alert("moot!"); };
+```
 
-<h2 id="Notes">Примечания</h2>
+## Примечания
 
-<p>Событие <code>click</code> возникает, когда пользователь кликает на элемент. Событие <code>click</code> возникнет после событий <code>mousedown</code> и <code>mouseup</code>.</p>
+Событие `click` возникает, когда пользователь кликает на элемент. Событие `click` возникнет после событий `mousedown` и `mouseup`.
 
-<p>С данным свойством только один обработчик события <code>click</code> может быть назначен объекту. Возможно, вместо данного метода, вам стоит обратить внимание на метод {{domxref("EventTarget.addEventListener()")}}, т.к. он более гибкий и является частью спецификации DOM Events.</p>
+С данным свойством только один обработчик события `click` может быть назначен объекту. Возможно, вместо данного метода, вам стоит обратить внимание на метод {{domxref("EventTarget.addEventListener()")}}, т.к. он более гибкий и является частью спецификации DOM Events.
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onclick','onclick')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                     | Статус                           | Комментарий |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG','webappapis.html#handler-onclick','onclick')}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<div>
-<ul>
- <li>
-  <p id="event(click)_event">{{event("click")}} event</p>
- </li>
- <li>Related event handlers
-  <ul>
-   <li>{{domxref("GlobalEventHandlers.onauxclick")}}</li>
-   <li>{{domxref("GlobalEventHandlers.ondblclick")}}</li>
-  </ul>
- </li>
-</ul>
-</div>
+- {{event("click")}} event
+- Related event handlers
+
+  - {{domxref("GlobalEventHandlers.onauxclick")}}
+  - {{domxref("GlobalEventHandlers.ondblclick")}}

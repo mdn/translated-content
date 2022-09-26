@@ -10,33 +10,33 @@ tags:
 translation_of: Web/API/HTMLHyperlinkElementUtils/pathname
 original_slug: Web/API/HTMLHyperlinkElementUtils/pathname
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("URL API")}}
 
-<p>Свойство <strong><code>HTMLHyperlinkElementUtils.pathname</code></strong> – это {{domxref("USVString")}}, содержащий первый <code>'/'</code> после хоста с последующим текстом URL.</p>
+Свойство **`HTMLHyperlinkElementUtils.pathname`** – это {{domxref("USVString")}}, содержащий первый `'/'` после хоста с последующим текстом URL.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.pathname;
-<em>object</em>.pathname = <em>string</em>;
-</pre>
+```
+string = object.pathname;
+object.pathname = string;
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">// Допустим, что документ содержит элемент &lt;a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.pathname"&gt;
+```js
+// Допустим, что документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.pathname">
 var anchor = document.getElementById("myAnchor");
 var result = anchor.pathname; // Вернёт: '/en-US/docs/HTMLHyperlinkElementUtils.pathname'
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит это свойство.</li>
-</ul>
+- Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит это свойство.

@@ -8,33 +8,32 @@ tags:
   - метод
 translation_of: Web/API/Document/hasFocus
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}Метод **`Document.hasFocus()`** возвращает значение {{jsxref("Boolean")}}, указывающее имеет ли документ или любой элемент внутри документа фокус. Этот метод может быть использован, чтобы определить, имеет ли активный элемент в документе фокус.
 
-<div>Метод <code><strong>Document.hasFocus()</strong></code> возвращает значение {{jsxref("Boolean")}}, указывающее имеет ли документ или любой элемент внутри документа фокус. Этот метод может быть использован, чтобы определить, имеет ли активный элемент в документе фокус.</div>
+> **Примечание:** При просмотре документа элемент с фокусом всегда является активным элементом документа, но активный элемент не обязательно должен иметь фокус. Например, активный элемент внутри всплывающего окна, которое находится не на переднем плане, не имеет фокус.
 
-<div class="note">
-<p>При просмотре документа элемент с фокусом всегда является активным элементом документа, но активный элемент не обязательно должен иметь фокус. Например, активный элемент внутри всплывающего окна, которое находится не на переднем плане, не имеет фокус.</p>
-</div>
+## Синтаксис
 
-<h2 id="Syntax">Синтаксис</h2>
+```
+focused = document.hasFocus();
+```
 
-<pre class="syntaxbox">focused = document.hasFocus();</pre>
+### Возвращаемое значение
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+`false` если активный элемент в документе не имеет фокуса; `true` если активный элемент в документе имеет фокус.
 
-<p><code>false</code> если активный элемент в документе не имеет фокуса; <code>true</code> если активный элемент в документе имеет фокус.</p>
+## Пример
 
-<h2 id="Example">Пример</h2>
-
-<pre class="brush:html;">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8" /&gt;
-&lt;title&gt;TEST&lt;/title&gt;
-&lt;style&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>TEST</title>
+<style>
 #message { font-weight: bold; }
-&lt;/style&gt;
-&lt;script&gt;
+</style>
+<script>
 setInterval( checkPageFocus, 200 );
 
 function checkPageFocus() {
@@ -57,40 +56,26 @@ function openWindow() {
     top=260"
   );
 }
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;JavaScript hasFocus пример&lt;/h1&gt;
-  &lt;div id="message"&gt;Ожидание действий со стороны пользователя&lt;/div&gt;
-  &lt;div&gt;&lt;button onclick="openWindow()"&gt;Открыть новое окно&lt;/button&gt;&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</script>
+</head>
+<body>
+  <h1>JavaScript hasFocus пример</h1>
+  <div id="message">Ожидание действий со стороны пользователя</div>
+  <div><button onclick="openWindow()">Открыть новое окно</button></div>
+</body>
+</html>
+```
 
-<h2 id="Specification">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'interaction.html#dom-document-hasfocus', 'Document.hasFocus()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                | Status                           | Comment            |
+| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('HTML WHATWG', 'interaction.html#dom-document-hasfocus', 'Document.hasFocus()')}} | {{Spec2('HTML WHATWG')}} | Initial definition |
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API">Using the Page Visibility API</a></li>
-</ul>
+- [Using the Page Visibility API](/ru/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API)

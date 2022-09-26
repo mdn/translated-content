@@ -3,68 +3,60 @@ title: DocumentFragment
 slug: Web/API/DocumentFragment
 translation_of: Web/API/DocumentFragment
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p>Интерфейс DocumentFragment представляет собой минимальный объект документа, который не имеет родителя. Он используется как лёгкая версия  {{domxref ("Document")}}, чтобы хранить хорошо сформированные или потенциально не хорошо формированные фрагменты XML.</p>
+Интерфейс DocumentFragment представляет собой минимальный объект документа, который не имеет родителя. Он используется как лёгкая версия {{domxref ("Document")}}, чтобы хранить хорошо сформированные или потенциально не хорошо формированные фрагменты XML.
 
-<p>Различные другие методы могут взять document fragment в качестве аргумента (например, любые методы интерфейса Node, такие как Node.appendChild и Node.insertBefore), в этом случае прикрепляются или вставляются  дети фрагмента, а не сам фрагмент.</p>
+Различные другие методы могут взять document fragment в качестве аргумента (например, любые методы интерфейса Node, такие как Node.appendChild и Node.insertBefore), в этом случае прикрепляются или вставляются дети фрагмента, а не сам фрагмент.
 
-<p>Этот интерфейс также хорошо используется с веб-компонентами: {{HTMLElement ( "template")}}  элементы содержат <code>DocumentFragment</code> в их {{domxref ("HTML Template Element.content")}} свойствах.</p>
+Этот интерфейс также хорошо используется с веб-компонентами: {{HTMLElement ( "template")}} элементы содержат `DocumentFragment` в их {{domxref ("HTML Template Element.content")}} свойствах.
 
-<p>Пустой <code>DocumentFragment</code> может быть создан с помощью метода {{domxref("document.createDocumentFragment")}}  или конструктора.</p>
+Пустой `DocumentFragment` может быть создан с помощью метода {{domxref("document.createDocumentFragment")}} или конструктора.
 
-<h2 id="Specification">Свойства</h2>
+## Свойства
 
-<p><em>Этот интерфейс не имеет определённых свойств помимо наследуемых от его родителя, {{domxref("Node")}}, и реализует их из интерфейса {{domxref("ParentNode")}}.</em></p>
+_Этот интерфейс не имеет определённых свойств помимо наследуемых от его родителя, {{domxref("Node")}}, и реализует их из интерфейса {{domxref("ParentNode")}}._
 
-<dl>
- <dt>{{ domxref("ParentNode.children") }} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Возвращает динамическую {{domxref("HTMLCollection")}} содержащую все объекты типа {{domxref("Element")}}, которые являются потомками объекта <code>DocumentFragment</code>.</dd>
- <dt>{{ domxref("ParentNode.firstElementChild") }} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Возвращает {{domxref("Element")}}, который является первым потомком объекта <code>DocumentFragment</code>, или <code>null</code>, если такого нет.</dd>
- <dt>{{ domxref("ParentNode.lastElementChild") }} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Возвращает {{domxref("Element")}}, который является последним потомком объекта <code>DocumentFragment</code>, или <code>null</code>, если такого нет.</dd>
- <dt>{{ domxref("ParentNode.childElementCount") }} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Возвращает <code>unsigned long</code> - число потомков объекта <code>DocumentFragment</code>.</dd>
-</dl>
+- {{ domxref("ParentNode.children") }} {{readonlyInline}}{{experimental_inline}}
+  - : Возвращает динамическую {{domxref("HTMLCollection")}} содержащую все объекты типа {{domxref("Element")}}, которые являются потомками объекта `DocumentFragment`.
+- {{ domxref("ParentNode.firstElementChild") }} {{readonlyInline}}{{experimental_inline}}
+  - : Возвращает {{domxref("Element")}}, который является первым потомком объекта `DocumentFragment`, или `null`, если такого нет.
+- {{ domxref("ParentNode.lastElementChild") }} {{readonlyInline}}{{experimental_inline}}
+  - : Возвращает {{domxref("Element")}}, который является последним потомком объекта `DocumentFragment`, или `null`, если такого нет.
+- {{ domxref("ParentNode.childElementCount") }} {{readonlyInline}}{{experimental_inline}}
+  - : Возвращает `unsigned long` - число потомков объекта `DocumentFragment`.
 
-<h2 id="Конструктор">Конструктор</h2>
+## Конструктор
 
-<dl>
- <dt>{{ domxref("DocumentFragment.DocumentFragment()", "DocumentFragment()") }} {{experimental_inline}}</dt>
- <dd>Возвращает пустой объект <code>DocumentFragment</code>.</dd>
-</dl>
+- {{ domxref("DocumentFragment.DocumentFragment()", "DocumentFragment()") }} {{experimental_inline}}
+  - : Возвращает пустой объект `DocumentFragment`.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em>Этот интерфейс наследует методы его родителя, {{domxref("Node")}}<em>, и реализует их из интерфейса {{domxref("ParentNode")}}</em></em><em>.</em></p>
+_Этот интерфейс наследует методы его родителя, {{domxref("Node")}}_, и реализует их из интерфейса {{domxref("ParentNode")}}_\_\_._
 
-<dl>
- <dt>{{domxref("DocumentFragment.find()")}} {{experimental_inline}}</dt>
- <dd>Возвращает первое совпадение {{domxref("Element")}} в дереве <code>DocumentFragment</code>.</dd>
- <dt>{{domxref("DocumentFragment.findAll()")}} {{experimental_inline}}</dt>
- <dd>Возвращает список {{domxref("NodeList")}} найденных {{domxref("Element")}} в дереве <code>DocumentFragment</code>.</dd>
- <dt>{{domxref("DocumentFragment.querySelector()")}}</dt>
- <dd>Возвращает первый узел {{domxref("Element")}} в <code>DocumentFragment</code>, в порядке документа, который совпадает с заданным селектором.</dd>
- <dt>{{domxref("DocumentFragment.querySelectorAll()")}}</dt>
- <dd>Возвращает список {{domxref("NodeList")}} всех узлов {{domxref("Element")}} в <code>DocumentFragment</code> которые совпадают с заданным селектором.</dd>
-</dl>
+- {{domxref("DocumentFragment.find()")}} {{experimental_inline}}
+  - : Возвращает первое совпадение {{domxref("Element")}} в дереве `DocumentFragment`.
+- {{domxref("DocumentFragment.findAll()")}} {{experimental_inline}}
+  - : Возвращает список {{domxref("NodeList")}} найденных {{domxref("Element")}} в дереве `DocumentFragment`.
+- {{domxref("DocumentFragment.querySelector()")}}
+  - : Возвращает первый узел {{domxref("Element")}} в `DocumentFragment`, в порядке документа, который совпадает с заданным селектором.
+- {{domxref("DocumentFragment.querySelectorAll()")}}
+  - : Возвращает список {{domxref("NodeList")}} всех узлов {{domxref("Element")}} в `DocumentFragment` которые совпадают с заданным селектором.
 
-<dl>
- <dt>{{domxref("DocumentFragment.getElementById()")}}</dt>
- <dd>Возвращает первый узел {{domxref("Element")}} в <code style="font-size: 14px;">DocumentFragment</code>, в порядке документа, который совпадает с заданным ID.</dd>
-</dl>
+<!---->
 
-<h2 id="Specifications">Спецификации</h2>
+- {{domxref("DocumentFragment.getElementById()")}}
+  - : Возвращает первый узел {{domxref("Element")}} в `DocumentFragment`, в порядке документа, который совпадает с заданным ID.
+
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">Интерфейсы DOM.</a></li>
-</ul>
+- [Интерфейсы DOM.](/ru/docs/DOM/DOM_Reference)

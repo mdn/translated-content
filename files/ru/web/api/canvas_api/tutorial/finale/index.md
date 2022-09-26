@@ -3,49 +3,41 @@ title: Finale
 slug: Web/API/Canvas_API/Tutorial/Finale
 translation_of: Web/API/Canvas_API/Tutorial/Finale
 ---
-<div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}</div>
+{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
 
-<div class="summary">
-<p>Поздравляем! Вы завершили <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas tutorial</a>! Эти знания помогут вам создавать великолепную 2d графику в сети.</p>
-</div>
+Поздравляем! Вы завершили [Canvas tutorial](/ru/docs/Web/API/Canvas_API/Tutorial)! Эти знания помогут вам создавать великолепную 2d графику в сети.
 
-<h2 id="Больше_примеров_и_учебных_материалов">Больше примеров и учебных материалов</h2>
+## Больше примеров и учебных материалов
 
-<p>Различные демки и дополнительные разъяснения о canvas расположены на этих сайтах:</p>
+Различные демки и дополнительные разъяснения о canvas расположены на этих сайтах:
 
-<dl>
- <dt><a href="http://codepen.io/search?q=canvas">Codepen.io</a></dt>
- <dd>Песочница для фронтенд разработчика и редактор кода в браузере.</dd>
- <dt><a href="http://www.canvasdemos.com/">Canvasdemos.com</a></dt>
- <dd>Приложения, игры, инструменты и учебные пособия для HTML5 canvas элементов.</dd>
- <dt><a href="http://www.html5canvastutorials.com/">HTML5CanvasTutorials</a></dt>
- <dd>Примеры для большинства canvas APIs.</dd>
- <dt><a href="http://creativejs.com/2011/08/31-days-of-canvas-tutorials/">31 days of Canvas tutorials</a></dt>
- <dd>Прекрасное введение в разработку графики на JavaScript.</dd>
- <dt><a href="/en-US/docs/Games">Game development</a></dt>
- <dd>Игры - одна из наиболее популярных  действий на компьютере. Постоянно появляются новые технологии, делающих возможным разработку более лучших и мощных игр, чем те, которые могли быть созданы стандартными средствами веб браузеров.</dd>
-</dl>
+- [Codepen.io](http://codepen.io/search?q=canvas)
+  - : Песочница для фронтенд разработчика и редактор кода в браузере.
+- [Canvasdemos.com](http://www.canvasdemos.com/)
+  - : Приложения, игры, инструменты и учебные пособия для HTML5 canvas элементов.
+- [HTML5CanvasTutorials](http://www.html5canvastutorials.com/)
+  - : Примеры для большинства canvas APIs.
+- [31 days of Canvas tutorials](http://creativejs.com/2011/08/31-days-of-canvas-tutorials/)
+  - : Прекрасное введение в разработку графики на JavaScript.
+- [Game development](/ru/docs/Games)
+  - : Игры - одна из наиболее популярных действий на компьютере. Постоянно появляются новые технологии, делающих возможным разработку более лучших и мощных игр, чем те, которые могли быть созданы стандартными средствами веб браузеров.
 
-<h2 id="Другие_Web_API">Другие Web API</h2>
+## Другие Web API
 
-<p>Эти APIs могут быть полезны  в дальнейшей работе с canvas и графикой:</p>
+Эти APIs могут быть полезны в дальнейшей работе с canvas и графикой:
 
-<dl>
- <dt><a href="/en-US/docs/Web/WebGL">WebGL</a></dt>
- <dd>API для отображения интерактивной 3D графики.</dd>
- <dt><a href="/en-US/docs/Web/SVG">SVG</a></dt>
- <dd>Масштабируемая Векторная Графика (Scalable Vector Graphics) позволяет описывать картинки в виде набора векторов (линий) и  форм, позволяющих плавно изменять размер вне зависимости от размера в котором они нарисованы.</dd>
- <dt><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio</a></dt>
- <dd>Web Audio API представляет мощную и универсальную систему контроля аудио в сети, позволяющая разработчикам получить аудио ресурсы, добавлять эффекты аудио, создавать аудио визуализацию,  применять пространственные эффекты (такие как сдвиг) и многое другое.</dd>
-</dl>
+- [WebGL](/ru/docs/Web/WebGL)
+  - : API для отображения интерактивной 3D графики.
+- [SVG](/ru/docs/Web/SVG)
+  - : Масштабируемая Векторная Графика (Scalable Vector Graphics) позволяет описывать картинки в виде набора векторов (линий) и форм, позволяющих плавно изменять размер вне зависимости от размера в котором они нарисованы.
+- [Web Audio](/ru/docs/Web/API/Web_Audio_API)
+  - : Web Audio API представляет мощную и универсальную систему контроля аудио в сети, позволяющая разработчикам получить аудио ресурсы, добавлять эффекты аудио, создавать аудио визуализацию, применять пространственные эффекты (такие как сдвиг) и многое другое.
 
-<h2 id="Вопросы">Вопросы</h2>
+## Вопросы
 
-<dl>
- <dt><a href="http://stackoverflow.com/questions/tagged/canvas">Stackoverflow</a></dt>
- <dd>Вопросы с тегом "canvas".</dd>
- <dt><a href="/en-US/docs/MDN">Comments about this tutorial – the MDN documentation community</a></dt>
- <dd>Если у вас остались вопросы об этом учебнике или вы хотите поблагодарить нас, не стесняйтесь обращаться к нам!</dd>
-</dl>
+- [Stackoverflow](http://stackoverflow.com/questions/tagged/canvas)
+  - : Вопросы с тегом "canvas".
+- [Comments about this tutorial – the MDN documentation community](/ru/docs/MDN)
+  - : Если у вас остались вопросы об этом учебнике или вы хотите поблагодарить нас, не стесняйтесь обращаться к нам!
 
-<p>{{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}</p>
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}

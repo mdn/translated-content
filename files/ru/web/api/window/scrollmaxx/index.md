@@ -3,37 +3,35 @@ title: Window.scrollMaxX
 slug: Web/API/Window/scrollMaxX
 translation_of: Web/API/Window/scrollMaxX
 ---
-<div>{{APIRef}} {{Non-standard_header}}</div>
+{{APIRef}} {{Non-standard_header}}
 
-<p>Свойство <code><strong>Window.scrollMaxX</strong></code> (только для чтения) возвращает максимальное количество пикселей в документе, которые могут быть прокручены по горизонтали.</p>
+Свойство **`Window.scrollMaxX`** (только для чтения) возвращает максимальное количество пикселей в документе, которые могут быть прокручены по горизонтали.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>xMax</em> = window.scrollMaxX
-</pre>
+```
+xMax = window.scrollMaxX
+```
 
-<ul>
- <li><code>xMax</code> количество пикселей.</li>
-</ul>
+- `xMax` количество пикселей.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush:js">// Прокрутка к правому краю страницы
+```js
+// Прокрутка к правому краю страницы
 let maxX = window.scrollMaxX;
 
 window.scrollTo(maxX, 0);
-</pre>
+```
 
-<h2 id="Примечания">Примечания</h2>
+## Примечания
 
-<p>Не используйте это свойство для получения ширины документа с помощью <a href="/en-US/docs/DOM/window.innerWidth" title="DOM/window.innerWidth">window.innerWidth</a> + window.scrollMaxX. Это не равнозначно всей ширине документа, потому что {{domxref("window.innerWidth")}} включает в себя ширину полосы прокрутки, таким образом результат будет включать себя ширину документа с шириной полосы прокрутки. Вместо этого используйте {{domxref("element.scrollWidth","document.body.scrollWidth")}}. Смотрите также {{domxref("window.scrollMaxY")}}.</p>
+Не используйте это свойство для получения ширины документа с помощью [window.innerWidth](/ru/docs/DOM/window.innerWidth "DOM/window.innerWidth") + window\.scrollMaxX. Это не равнозначно всей ширине документа, потому что {{domxref("window.innerWidth")}} включает в себя ширину полосы прокрутки, таким образом результат будет включать себя ширину документа с шириной полосы прокрутки. Вместо этого используйте {{domxref("element.scrollWidth","document.body.scrollWidth")}}. Смотрите также {{domxref("window.scrollMaxY")}}.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<p id="comment_text_2">Не является частью спецификации.</p>
+Не является частью спецификации.
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

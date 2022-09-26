@@ -13,114 +13,87 @@ tags:
   - TopicStub
 translation_of: Web/API/File_and_Directory_Entries_API
 ---
-<p>{{DefaultAPISidebar("File System API")}}</p>
+{{DefaultAPISidebar("File System API")}}
 
-<p>{{Non-standard_Header}}</p>
+{{Non-standard_Header}}
 
-<p>API доступа к файлам и директориям имитирует локальную файловую систему, в которой веб-приложения могут перемещаться и получать доступ к файлам. Вы можете разрабатывать приложения, которые читают, записывают и создают файлы и/или каталоги в виртуальной изолированной файловой системе. </p>
+API доступа к файлам и директориям имитирует локальную файловую систему, в которой веб-приложения могут перемещаться и получать доступ к файлам. Вы можете разрабатывать приложения, которые читают, записывают и создают файлы и/или каталоги в виртуальной изолированной файловой системе.
 
-<div class="note">
-<p>Поскольку это нестандартный API, спецификация которого в настоящее время не входит в стандарт, важно помнить, что не все браузеры реализуют его, а те, которые поддерживают, могут реализовывать только небольшие его части. Дополнительные сведения в разделе <a href="#browser_compatibility">Browser compatibility</a> </p>
-</div>
+> **Примечание:** Поскольку это нестандартный API, спецификация которого в настоящее время не входит в стандарт, важно помнить, что не все браузеры реализуют его, а те, которые поддерживают, могут реализовывать только небольшие его части. Дополнительные сведения в разделе [Browser compatibility](#browser_compatibility)
 
-<p>Существуют два очень похожих API в зависимости от того, хотите ли вы асинхронного или синхронного поведения. Синхронный API предназначен для использования внутри {{domxref("Worker")}} и будет возвращать желаемые значения. Асинхронный API не будет блокировать выполнение кода, а API не будет возвращать значения; вместо этого вам нужно будет предоставить колбэк-функцию для обработки одного или нескольких ответов.</p>
+Существуют два очень похожих API в зависимости от того, хотите ли вы асинхронного или синхронного поведения. Синхронный API предназначен для использования внутри {{domxref("Worker")}} и будет возвращать желаемые значения. Асинхронный API не будет блокировать выполнение кода, а API не будет возвращать значения; вместо этого вам нужно будет предоставить колбэк-функцию для обработки одного или нескольких ответов.
 
-<div class="warning">
-<p>Firefox реализация File System API очень ограничена: не поддерживается создание файлов. Доступ к файлам осуществляется только через {{HTMLElement("input")}} элемент (см. так же {{domxref("HTMLInputElement")}}) или путём перетаскивания файла/папки (<a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API">drag and drop</a>). Firefox также не реализует синхронный API. Внимательно проверьте совместимость браузера для любой части API, которую вы используете. ( см. <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Firefox_support">Поддержка File System API в Firefox</a>)</p>
-</div>
+> **Предупреждение:** Firefox реализация File System API очень ограничена: не поддерживается создание файлов. Доступ к файлам осуществляется только через {{HTMLElement("input")}} элемент (см. так же {{domxref("HTMLInputElement")}}) или путём перетаскивания файла/папки ([drag and drop](/ru/docs/Web/API/HTML_Drag_and_Drop_API)). Firefox также не реализует синхронный API. Внимательно проверьте совместимость браузера для любой части API, которую вы используете. ( см. [Поддержка File System API в Firefox](/ru/docs/Web/API/File_and_Directory_Entries_API/Firefox_support))
 
-<h2 id="Получение_доступа_к_файловой_системе">Получение доступа к файловой системе</h2>
+## Получение доступа к файловой системе
 
-<p>Есть два способа получить доступ к файловой системе, определённым в текущем проекте спецификации:</p>
+Есть два способа получить доступ к файловой системе, определённым в текущем проекте спецификации:
 
-<ul>
- <li>При обработке события {{event("drop")}} вы можете вызвать {{domxref("DataTransferItem.webkitGetAsEntry()")}} что бы получить {{domxref("FileSystemEntry")}} для "брошенного" элемента. Если результат не <code>null</code>, то это брошенный файл или каталог, и вы можете использовать вызовы файловой системы для работы с ним.</li>
- <li>Свойство {{domxref("HTMLInputElement.webkitEntries")}} позволяет получить объект {{domxref("FileSystemFileEntry")}} для выбранного файла, но только если они перетаскиваются в <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1326031" rel="noopener">средство выбора</a> файлов ( <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1326031" rel="noopener">баг 1326031</a> ). Если {{domxref("HTMLInputElement.webkitdirectory")}} является <code>true</code>, то {{HTMLElement("input")}} работает для выбора директорий, и вы можете получить объект {{domxref("FileSystemDirectoryEntry")}} для каждой выбранной директории.</li>
-</ul>
+- При обработке события {{event("drop")}} вы можете вызвать {{domxref("DataTransferItem.webkitGetAsEntry()")}} что бы получить {{domxref("FileSystemEntry")}} для "брошенного" элемента. Если результат не `null`, то это брошенный файл или каталог, и вы можете использовать вызовы файловой системы для работы с ним.
+- Свойство {{domxref("HTMLInputElement.webkitEntries")}} позволяет получить объект {{domxref("FileSystemFileEntry")}} для выбранного файла, но только если они перетаскиваются в [средство выбора](https://bugzilla.mozilla.org/show_bug.cgi?id=1326031) файлов ( [баг 1326031](https://bugzilla.mozilla.org/show_bug.cgi?id=1326031) ). Если {{domxref("HTMLInputElement.webkitdirectory")}} является `true`, то {{HTMLElement("input")}} работает для выбора директорий, и вы можете получить объект {{domxref("FileSystemDirectoryEntry")}} для каждой выбранной директории.
 
-<h2 id="Асинхронный_API">Асинхронный API</h2>
+## Асинхронный API
 
-<p>Асинхронный API следует использовать для большинства операций, чтобы доступ к файловой системе не блокировал весь браузер, если он используется в основном потоке. Он включает в себя следующие интерфейсы:</p>
+Асинхронный API следует использовать для большинства операций, чтобы доступ к файловой системе не блокировал весь браузер, если он используется в основном потоке. Он включает в себя следующие интерфейсы:
 
-<dl>
- <dt>{{domxref("FileSystem")}}</dt>
- <dd>Представляет файловую систему.</dd>
- <dt>{{domxref("FileSystemEntry")}}</dt>
- <dd>Базовый интерфейс, представляющий одну запись в файловой системе. Это реализуется другими интерфейсами, которые представляют файлы или каталоги.</dd>
- <dt>{{domxref("FileSystemFileEntry")}}</dt>
- <dd>Представляет отдельный файл в файловой системе.</dd>
- <dt>{{domxref("FileSystemDirectoryEntry")}}</dt>
- <dd>Представляет отдельный каталог в файловой системе.</dd>
- <dt>{{domxref("FileSystemDirectoryReader")}}</dt>
- <dd>Созданный путём вызова {{domxref("FileSystemDirectoryEntry.createReader()")}}, этот интерфейс предоставляет функции, которые позволяют вам читать содержимое каталога.</dd>
- <dt>{{domxref("FileSystemFlags")}}</dt>
- <dd>Определяет набор значений, которые используются при указании флагов опций при вызове определённых методов в <a href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">File System API</a>.</dd>
- <dt>{{domxref("FileError")}}</dt>
- <dd>Представляет ошибку, которая возникает при вызовах асинхронной файловой системы.</dd>
-</dl>
+- {{domxref("FileSystem")}}
+  - : Представляет файловую систему.
+- {{domxref("FileSystemEntry")}}
+  - : Базовый интерфейс, представляющий одну запись в файловой системе. Это реализуется другими интерфейсами, которые представляют файлы или каталоги.
+- {{domxref("FileSystemFileEntry")}}
+  - : Представляет отдельный файл в файловой системе.
+- {{domxref("FileSystemDirectoryEntry")}}
+  - : Представляет отдельный каталог в файловой системе.
+- {{domxref("FileSystemDirectoryReader")}}
+  - : Созданный путём вызова {{domxref("FileSystemDirectoryEntry.createReader()")}}, этот интерфейс предоставляет функции, которые позволяют вам читать содержимое каталога.
+- {{domxref("FileSystemFlags")}}
+  - : Определяет набор значений, которые используются при указании флагов опций при вызове определённых методов в [File System API](/ru/docs/Web/API/File_and_Directory_Entries_API).
+- {{domxref("FileError")}}
+  - : Представляет ошибку, которая возникает при вызовах асинхронной файловой системы.
 
-<p>Также есть две глобальные функции (которые в настоящее время не являются частью спецификации и реализуются только в Google Chrome). Они доступны внутри объекта {{domxref("Window")}} и реализованы в {{domxref("LocalFileSystem")}}: <code>requestFileSystem()</code> и <code>resolveLocalFileSystemURL()</code>.</p>
+Также есть две глобальные функции (которые в настоящее время не являются частью спецификации и реализуются только в Google Chrome). Они доступны внутри объекта {{domxref("Window")}} и реализованы в {{domxref("LocalFileSystem")}}: `requestFileSystem()` и `resolveLocalFileSystemURL()`.
 
-<h2 id="Синхронный_API">Синхронный API</h2>
+## Синхронный API
 
-<p>Синхронный API следует использовать только в {{domxref("Worker")}}-ах; эти вызовы блокируются до тех пор, пока не закончат своё выполнение, и просто возвращают результаты вместо использования колбэков. Использование их в основном потоке заблокирует браузер, что непослушно. В противном случае интерфейсы ниже отражают интерфейсы асинхронного API.</p>
+Синхронный API следует использовать только в {{domxref("Worker")}}-ах; эти вызовы блокируются до тех пор, пока не закончат своё выполнение, и просто возвращают результаты вместо использования колбэков. Использование их в основном потоке заблокирует браузер, что непослушно. В противном случае интерфейсы ниже отражают интерфейсы асинхронного API.
 
-<dl>
- <dt>{{domxref("FileSystemSync")}}</dt>
- <dd>Представляет файловую систему.</dd>
- <dt>{{domxref("FileSystemEntrySync")}}</dt>
- <dd>Базовый интерфейс, представляющий одну запись в файловой системе. Это реализуется другими интерфейсами, которые представляют файлы или каталоги. {{domxref("EntrySync")}}</dd>
- <dt>{{domxref("FileSystemFileEntrySync")}}</dt>
- <dd>Представляет отдельный файл в файловой системе.</dd>
- <dt>{{domxref("FileSystemDirectoryEntrySync")}}</dt>
- <dd>Представляет отдельный каталог в файловой системе.</dd>
- <dt>{{domxref("FileSystemDirectoryReaderSync")}}</dt>
- <dd>Созданный путём вызова {{domxref("FileSystemDirectoryEntrySync.createReader()")}}, этот интерфейс предоставляет функции, которые позволяют вам читать содержимое каталога.</dd>
- <dt>{{domxref("FileException")}}</dt>
- <dd>Представляет ошибку, которая возникает при вызовах синхронной файловой системы.</dd>
-</dl>
+- {{domxref("FileSystemSync")}}
+  - : Представляет файловую систему.
+- {{domxref("FileSystemEntrySync")}}
+  - : Базовый интерфейс, представляющий одну запись в файловой системе. Это реализуется другими интерфейсами, которые представляют файлы или каталоги. {{domxref("EntrySync")}}
+- {{domxref("FileSystemFileEntrySync")}}
+  - : Представляет отдельный файл в файловой системе.
+- {{domxref("FileSystemDirectoryEntrySync")}}
+  - : Представляет отдельный каталог в файловой системе.
+- {{domxref("FileSystemDirectoryReaderSync")}}
+  - : Созданный путём вызова {{domxref("FileSystemDirectoryEntrySync.createReader()")}}, этот интерфейс предоставляет функции, которые позволяют вам читать содержимое каталога.
+- {{domxref("FileException")}}
+  - : Представляет ошибку, которая возникает при вызовах синхронной файловой системы.
 
-<p>Также есть две глобальные функции (которые в настоящее время не являются частью спецификации и реализуются только в Google Chrome). Они доступны в объекте {{domxref("Worker")}} и реализованы в{{domxref("LocalFileSystemSync")}}: <code>requestFileSystemSync()</code> и <code>resolveLocalFileSystemSyncURL()</code>.</p>
+Также есть две глобальные функции (которые в настоящее время не являются частью спецификации и реализуются только в Google Chrome). Они доступны в объекте {{domxref("Worker")}} и реализованы в{{domxref("LocalFileSystemSync")}}: `requestFileSystemSync()` и `resolveLocalFileSystemSyncURL()`.
 
-<h2 id="Другие_интерфейсы">Другие интерфейсы</h2>
+## Другие интерфейсы
 
-<dl>
- <dt>{{domxref("LocalFileSystem")}}</dt>
- <dd>Предоставляет вам доступ к изолированной файловой системе.</dd>
- <dt>{{domxref("LocalFileSystemSync")}} {{domxref("LockedFile")}}</dt>
- <dd>Предоставляет инструменты для работы с данным файлом со всеми необходимыми блокировками.</dd>
-</dl>
+- {{domxref("LocalFileSystem")}}
+  - : Предоставляет вам доступ к изолированной файловой системе.
+- {{domxref("LocalFileSystemSync")}} {{domxref("LockedFile")}}
+  - : Предоставляет инструменты для работы с данным файлом со всеми необходимыми блокировками.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('File System API')}}</td>
-   <td>{{Spec2('File System API')}}</td>
-   <td>Draft of proposed API</td>
-  </tr>
- </tbody>
-</table>
+| Specification                            | Status                               | Comment               |
+| ---------------------------------------- | ------------------------------------ | --------------------- |
+| {{SpecName('File System API')}} | {{Spec2('File System API')}} | Draft of proposed API |
 
-<p>Этот API не имеет официальной спецификации W3C или WHATWG.</p>
+Этот API не имеет официальной спецификации W3C или WHATWG.
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{Compat("api.FileSystemSync", 0)}}</p>
+{{Compat("api.FileSystemSync", 0)}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction to the File and Directory Entries API</a></li>
- <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Firefox_support">File and Directory Entries API support in Firefox</a></li>
-</ul>
+- [Introduction to the File and Directory Entries API](/ru/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API support in Firefox](/ru/docs/Web/API/File_and_Directory_Entries_API/Firefox_support)

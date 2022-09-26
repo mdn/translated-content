@@ -3,37 +3,39 @@ title: Gamepad.timestamp
 slug: Web/API/Gamepad/timestamp
 translation_of: Web/API/Gamepad/timestamp
 ---
-<div>{{APIRef("Gamepad API")}}</div>
+{{APIRef("Gamepad API")}}
 
-<p>Свойство <strong><code>Gamepad.timestamp</code></strong> интерфейса {{domxref("Gamepad")}} возвращает {{domxref("DOMHighResTimeStamp")}}, представляющий собой время последнего обновления геймпада.</p>
+Свойство **`Gamepad.timestamp`** интерфейса {{domxref("Gamepad")}} возвращает {{domxref("DOMHighResTimeStamp")}}, представляющий собой время последнего обновления геймпада.
 
-<p>Идея состоит в том, чтобы позволить разработчику определить, были ли изменены данные для <code>axes</code> и <code>button</code> на аппаратном обеспечении. Значение должно быть установлено относительно атрибута <code>navigationStart</code> интерфейса <code>{{domxref("PerformanceTiming")}}</code>. Значения монотонно увеличиваются, поэтому их можно сравнивать, чтобы определить порядок изменений, т.к. новые значения всегда будут больше или равны старым.</p>
+Идея состоит в том, чтобы позволить разработчику определить, были ли изменены данные для `axes` и `button` на аппаратном обеспечении. Значение должно быть установлено относительно атрибута `navigationStart` интерфейса `{{domxref("PerformanceTiming")}}`. Значения монотонно увеличиваются, поэтому их можно сравнивать, чтобы определить порядок изменений, т.к. новые значения всегда будут больше или равны старым.
 
-<div class="note">
-<p><strong>Примечание</strong>: В данный момент, это свойство нигде не поддерживается.</p>
-</div>
+> **Примечание:** В данный момент, это свойство нигде не поддерживается.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">readonly    attribute DOMHighResTimeStamp timestamp;</pre>
+```
+readonly    attribute DOMHighResTimeStamp timestamp;
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">var gp = navigator.getGamepads()[0];
-console.log(gp.timestamp);</pre>
+```js
+var gp = navigator.getGamepads()[0];
+console.log(gp.timestamp);
+```
 
-<h2 id="Значение">Значение</h2>
+## Значение
 
-<p>{{domxref("DOMHighResTimeStamp")}}.</p>
+{{domxref("DOMHighResTimeStamp")}}.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<p><a href="/en-US/docs/Web/Guide/API/Gamepad">Using the Gamepad API</a></p>
+[Using the Gamepad API](/ru/docs/Web/Guide/API/Gamepad)

@@ -9,46 +9,46 @@ tags:
   - метод
 translation_of: Web/API/XMLHttpRequest/getResponseHeader
 ---
-<p>{{APIRef('XMLHttpRequest')}}</p>
+{{APIRef('XMLHttpRequest')}}
 
-<p>Метод <strong>XMLHttpRequest.getResponseHeader()</strong> возвращает строку, содержащую текст определённого хэдера (header). Если в наличии несколько хэдеров с одинаковыми именами, то они возвращаются в виде одной строки, где значения отделены друг от друга парой "запятая + пробел". Метод <code>getResponseHeader()</code> возвращает значение в кодировке UTF.</p>
+Метод **XMLHttpRequest.getResponseHeader()** возвращает строку, содержащую текст определённого хэдера (header). Если в наличии несколько хэдеров с одинаковыми именами, то они возвращаются в виде одной строки, где значения отделены друг от друга парой "запятая + пробел". Метод `getResponseHeader()` возвращает значение в кодировке UTF.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre>var myHeader = getResponseHeader(name);</pre>
+```
+var myHeader = getResponseHeader(name);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>name</dt>
- <dd>Строка {{domxref("ByteString")}}, представляющая имя хэдера, значение которого необходимо возвратить в виде текста.</dd>
-</dl>
+- name
+  - : Строка {{domxref("ByteString")}}, представляющая имя хэдера, значение которого необходимо возвратить в виде текста.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Строка {{domxref("ByteString")}}, представляющее текстовое значение хэдера или null, если ответ ещё не был получен или хэдер с именем name отсутствует в ответе.</p>
+Строка {{domxref("ByteString")}}, представляющее текстовое значение хэдера или null, если ответ ещё не был получен или хэдер с именем name отсутствует в ответе.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">var client = new XMLHttpRequest();
+```js
+var client = new XMLHttpRequest();
 client.open("GET", "unicorns-are-teh-awesome.txt", true);
 client.send();
 client.onreadystatechange = function() {
   if(this.readyState == this.HEADERS_RECEIVED) {
     console.log(client.getResponseHeader("Content-Type"));
   }
-}</pre>
+}
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+## Совместимость браузеров
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Использование XMLHttpRequest</a></li>
-</ul>
+- [Использование XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)

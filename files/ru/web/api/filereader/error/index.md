@@ -3,33 +3,30 @@ title: FileReader.error
 slug: Web/API/FileReader/error
 translation_of: Web/API/FileReader/error
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<h2 id="Сводка">Сводка</h2>
+## Сводка
 
-<p>Возвращает ошибку, произошедшую во время чтения файла.</p>
+Возвращает ошибку, произошедшую во время чтения файла.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <var>error</var> = <em>instanceOfFileReader</em>.error
-</pre>
+```
+var error = instanceOfFileReader.error
+```
 
-<h2 id="Значение">Значение</h2>
+## Значение
 
-<p>{{domxref("DOMError")}} содержит соответствующую ошибку. В Chrome 48+/Firefox 58+ значение возвращает {{domxref("DOMException")}} так как <code>DOMError</code> был удалён из DOM-стандарта.</p>
+{{domxref("DOMError")}} содержит соответствующую ошибку. В Chrome 48+/Firefox 58+ значение возвращает {{domxref("DOMException")}} так как `DOMError` был удалён из DOM-стандарта.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_браузера">Совместимость браузера</h2>
+## Совместимость браузера
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{domxref("FileReader")}}</li>
-</ul>
+- {{domxref("FileReader")}}

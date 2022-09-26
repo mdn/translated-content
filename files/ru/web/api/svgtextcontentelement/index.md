@@ -6,101 +6,68 @@ tags:
   - Справка
 translation_of: Web/API/SVGTextContentElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>Интерфейс <strong><code>SVGTextContentElement</code></strong> реализуется элементами, которые поддерживают рендеринг дочернего текстового содержимого. Он наследуется различными текстовыми интерфейсами, такими как {{domxref("SVGTextElement")}}, {{domxref("SVGTSpanElement")}}, {{domxref("SVGTRefElement")}}, {{domxref("SVGAltGlyphElement")}} и {{domxref("SVGTextPathElement")}}.</p>
+Интерфейс **`SVGTextContentElement`** реализуется элементами, которые поддерживают рендеринг дочернего текстового содержимого. Он наследуется различными текстовыми интерфейсами, такими как {{domxref("SVGTextElement")}}, {{domxref("SVGTSpanElement")}}, {{domxref("SVGTRefElement")}}, {{domxref("SVGAltGlyphElement")}} и {{domxref("SVGTextPathElement")}}.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Константы">Константы</h2>
+## Константы
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td>Константа</td>
-   <td>Значение </td>
-   <td>Описание</td>
-  </tr>
-  <tr>
-   <td>LENGTHADJUST_UNKNOWN</td>
-   <td>0</td>
-   <td>Иная ценность.</td>
-  </tr>
-  <tr>
-   <td>LENGTHADJUST_SPACING</td>
-   <td>1</td>
-   <td><code>spacing</code> дескриптор.</td>
-  </tr>
-  <tr>
-   <td>LENGTHADJUST_SPACINGANDGLYPHS</td>
-   <td>2</td>
-   <td><code>spacingAndGlyphs</code> дескриптор.</td>
-  </tr>
- </tbody>
-</table>
+| Константа                     | Значение | Описание                       |
+| ----------------------------- | -------- | ------------------------------ |
+| LENGTHADJUST_UNKNOWN          | 0        | Иная ценность.                 |
+| LENGTHADJUST_SPACING          | 1        | `spacing` дескриптор.          |
+| LENGTHADJUST_SPACINGANDGLYPHS | 2        | `spacingAndGlyphs` дескриптор. |
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Этот интерфейс также наследует свойства от его родителя,<br>
- {{domxref("SVGGraphicsElement")}}. </em></p>
+_Этот интерфейс также наследует свойства от его родителя,
+{{domxref("SVGGraphicsElement")}}._
 
-<dl>
- <dt>{{domxref("SVGTextContentElement.textLength")}} {{ReadOnlyInline}}</dt>
- <dd>{{domxref("SVGAnimatedLength")}}, отражает атрибут {{SVGAttr("textLength")}} данного элемента.</dd>
- <dt>{{domxref("SVGTextContentElement.lengthAdjust")}} {{ReadOnlyInline}}</dt>
- <dd>{{domxref("SVGAnimatedEnumeration")}}, отражает атрибут {{SVGAttr("lengthAdjust")}} данного элемента. Значения числового типа представляют одно из значений константы выше.</dd>
-</dl>
+- {{domxref("SVGTextContentElement.textLength")}} {{ReadOnlyInline}}
+  - : {{domxref("SVGAnimatedLength")}}, отражает атрибут {{SVGAttr("textLength")}} данного элемента.
+- {{domxref("SVGTextContentElement.lengthAdjust")}} {{ReadOnlyInline}}
+  - : {{domxref("SVGAnimatedEnumeration")}}, отражает атрибут {{SVGAttr("lengthAdjust")}} данного элемента. Значения числового типа представляют одно из значений константы выше.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em>Этот интерфейс также наследует методы от его родителя, {{domxref("SVGGraphicsElement")}}</em></p>
+_Этот интерфейс также наследует методы от его родителя, {{domxref("SVGGraphicsElement")}}_
 
-<dl>
- <dt>{{domxref("SVGTextContentElement.getNumberOfChars()")}}</dt>
- <dd>Возвращает длину, представляющую общее количество адресуемых символов, доступных для рендеринга в текущем элементе, независимо от того, будут ли они отображаться.</dd>
- <dt>{{domxref("SVGTextContentElement.getComputedTextLength()")}}</dt>
- <dd>Возвращает float, представляющий вычисленную длину для текста внутри элемента.</dd>
- <dt>{{domxref("SVGTextContentElement.getSubStringLength()")}}</dt>
- <dd>Возвращает float, представляющий вычисленную длину форматированного расстояния продвижения текста для подстроки текста внутри элемента. Обратите внимание, что этот метод учитывает только ширину глифов в подстроке и любые дополнительные интервалы, вставленные свойствами CSS «letter-spacing» и «word-spacing». Настройки визуального интервала, сделанные атрибутом «x», игнорируются.</dd>
- <dt>{{domxref("SVGTextContentElement.getStartPositionOfChar()")}}</dt>
- <dd>Возвращает {{domxref("DOMPoint")}}, представляющий позицию типографического символа после выполнения макета текста.
- <p class="note"><strong>Примечание:</strong> В SVG 1.1 этот метод вернул {{domxref("SVGPoint")}}.</p>
- </dd>
- <dt>{{domxref("SVGTextContentElement.getEndPositionOfChar()")}}</dt>
- <dd>Возвращает {{domxref("DOMPoint")}}, представляющий конечную позицию типографического символа после выполнения макета текста.
- <p class="note"><strong>Примечание:</strong> В SVG 1.1 этот метод вернул {{domxref("SVGPoint")}}.</p>
- </dd>
- <dt>{{domxref("SVGTextContentElement.getExtentOfChar()")}}</dt>
- <dd>Возвращает {{domxref("DOMRect")}}, представляющий вычисляемые габариты ячейки глифа, соответствующие заданному типографическому символу.</dd>
- <dt>{{domxref("SVGTextContentElement.getRotationOfChar()")}}</dt>
- <dd>Возвращает поплавок <code>float</code>, представляющий поворот типографического символа.</dd>
- <dt>{{domxref("SVGTextContentElement.getCharNumAtPosition()")}}</dt>
- <dd>Возвращает длину символа, заставляющего текстовый глиф отображаться в заданной позиции в системе координат. Поскольку связь между символами и глифами не является взаимно однозначной, возвращается только первый символ соответствующего типографического символа. </dd>
- <dt>{{domxref("SVGTextContentElement.selectSubString()")}} {{deprecated_inline}}</dt>
- <dd>Выбирает текст внутри элемента.</dd>
-</dl>
+- {{domxref("SVGTextContentElement.getNumberOfChars()")}}
+  - : Возвращает длину, представляющую общее количество адресуемых символов, доступных для рендеринга в текущем элементе, независимо от того, будут ли они отображаться.
+- {{domxref("SVGTextContentElement.getComputedTextLength()")}}
+  - : Возвращает float, представляющий вычисленную длину для текста внутри элемента.
+- {{domxref("SVGTextContentElement.getSubStringLength()")}}
+  - : Возвращает float, представляющий вычисленную длину форматированного расстояния продвижения текста для подстроки текста внутри элемента. Обратите внимание, что этот метод учитывает только ширину глифов в подстроке и любые дополнительные интервалы, вставленные свойствами CSS «letter-spacing» и «word-spacing». Настройки визуального интервала, сделанные атрибутом «x», игнорируются.
+- {{domxref("SVGTextContentElement.getStartPositionOfChar()")}}
 
-<h2 id="Характеристики">Характеристики</h2>
+  - : Возвращает {{domxref("DOMPoint")}}, представляющий позицию типографического символа после выполнения макета текста.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Коммент</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "text.html#InterfaceSVGTextContentElement", "SVGTextContentElement")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Изменённое наследование от {{domxref("SVGElement")}} до {{domxref("SVGGraphicsElement")}} и <code>getStartPositionOfChar()</code> удалённых реализаций {{domxref("SVGTests")}}, {{domxref("SVGLangSpace" )}}, {{domxref("SVGExternalResourcesRequired")}}, {{domxref("SVGStylable")}} интерфейсов и <code>getEndPositionOfChar()</code>, чтобы вернуть {{domxref("DOMPoint")}} вместо {{domxref( "SVGPoint")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "text.html#InterfaceSVGTextContentElement", "SVGTextContentElement")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Начальное определение</td>
-  </tr>
- </tbody>
-</table>
+    > **Примечание:** В SVG 1.1 этот метод вернул {{domxref("SVGPoint")}}.
 
-<h2 id="Совместимость_с_браузером">Совместимость с браузером</h2>
-<p>{{Compat}}</p>
+- {{domxref("SVGTextContentElement.getEndPositionOfChar()")}}
+
+  - : Возвращает {{domxref("DOMPoint")}}, представляющий конечную позицию типографического символа после выполнения макета текста.
+
+    > **Примечание:** В SVG 1.1 этот метод вернул {{domxref("SVGPoint")}}.
+
+- {{domxref("SVGTextContentElement.getExtentOfChar()")}}
+  - : Возвращает {{domxref("DOMRect")}}, представляющий вычисляемые габариты ячейки глифа, соответствующие заданному типографическому символу.
+- {{domxref("SVGTextContentElement.getRotationOfChar()")}}
+  - : Возвращает поплавок `float`, представляющий поворот типографического символа.
+- {{domxref("SVGTextContentElement.getCharNumAtPosition()")}}
+  - : Возвращает длину символа, заставляющего текстовый глиф отображаться в заданной позиции в системе координат. Поскольку связь между символами и глифами не является взаимно однозначной, возвращается только первый символ соответствующего типографического символа.
+- {{domxref("SVGTextContentElement.selectSubString()")}} {{deprecated_inline}}
+  - : Выбирает текст внутри элемента.
+
+## Характеристики
+
+| Спецификация                                                                                                             | Статус                   | Коммент                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName("SVG2", "text.html#InterfaceSVGTextContentElement", "SVGTextContentElement")}} | {{Spec2("SVG2")}} | Изменённое наследование от {{domxref("SVGElement")}} до {{domxref("SVGGraphicsElement")}} и `getStartPositionOfChar()` удалённых реализаций {{domxref("SVGTests")}}, {{domxref("SVGLangSpace" )}}, {{domxref("SVGExternalResourcesRequired")}}, {{domxref("SVGStylable")}} интерфейсов и `getEndPositionOfChar()`, чтобы вернуть {{domxref("DOMPoint")}} вместо {{domxref( "SVGPoint")}}. |
+| {{SpecName("SVG1.1", "text.html#InterfaceSVGTextContentElement", "SVGTextContentElement")}} | {{Spec2("SVG1.1")}} | Начальное определение                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+
+## Совместимость с браузером
+
+{{Compat}}

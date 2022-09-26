@@ -3,73 +3,58 @@ title: Window.alert()
 slug: Web/API/Window/alert
 translation_of: Web/API/Window/alert
 ---
-<p>{{ APIRef }}</p>
+{{ APIRef }}
 
-<p>Метод <strong><code>Window.alert()</code></strong> показывает диалоговое окно с опциональным (необязательным) сообщением и кнопкой OK.</p>
+Метод **`Window.alert()`** показывает диалоговое окно с опциональным (необязательным) сообщением и кнопкой OK.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">window.alert(<em>message</em>);</pre>
+```
+window.alert(message);
+```
 
-<ul>
- <li><code>message </code>это опциональная (необязательная) строка текста, которую вы хотите отобразить в диалоговом окне, или же объект, который будет преобразован в строку и отображён.</li>
-</ul>
+- `message `это опциональная (необязательная) строка текста, которую вы хотите отобразить в диалоговом окне, или же объект, который будет преобразован в строку и отображён.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush: js">window.alert("Hello world!");
-</pre>
+```js
+window.alert("Hello world!");
+```
 
-<p>покажет:</p>
+покажет:
 
-<p><img alt="Image:AlertHelloWorld.png" src="/files/130/AlertHelloWorld.png"></p>
+![Image:AlertHelloWorld.png](/files/130/AlertHelloWorld.png)
 
-<h2 id="More_JS">Больше JS</h2>
+## Больше JS
 
-<pre class="brush: js">alert();
-</pre>
+```js
+alert();
+```
 
-<h2 id="Notes">Примечания</h2>
+## Примечания
 
-<p>Этот диалог следует использовать для сообщений, которые не требуют никакого ответа от пользователя, кроме подтверждения самого сообщения.</p>
+Этот диалог следует использовать для сообщений, которые не требуют никакого ответа от пользователя, кроме подтверждения самого сообщения.
 
-<p>Окна сообщений - модальные, они препятствуют получению пользователем доступа к другим частям страницы до тех пор, пока окно не будет закрыто. По этой причине, вам не следует злоупотреблять этой функцией.</p>
+Окна сообщений - модальные, они препятствуют получению пользователем доступа к другим частям страницы до тех пор, пока окно не будет закрыто. По этой причине, вам не следует злоупотреблять этой функцией.
 
-<p>The following text is shared between this article, DOM:window.prompt and DOM:window.confirm Пользователи<a href="/en-US/Chrome" title="Chrome"> Mozilla Chrome</a> (например, расширения для Firefox) должны использовать метод <code>nsIPromptService</code>.</p>
+The following text is shared between this article, DOM:window\.prompt and DOM:window\.confirm Пользователи[ Mozilla Chrome](/en-US/Chrome "Chrome") (например, расширения для Firefox) должны использовать метод `nsIPromptService`.
 
-<p>Начиная с Chrome {{CompatChrome(46.0)}} этот метод заблокирован в {{htmlelement("iframe")}} пока атрибут sandbox не установлен в значение <code>allow-modal</code>.</p>
+Начиная с Chrome {{CompatChrome(46.0)}} этот метод заблокирован в {{htmlelement("iframe")}} пока атрибут sandbox не установлен в значение `allow-modal`.
 
-<p>{{gecko_minversion_inline("23.0")}} Аргумент является опциональным и необязательным согласно спецификации.</p>
+{{gecko_minversion_inline("23.0")}} Аргумент является опциональным и необязательным согласно спецификации.
 
-<h2 id="Specification">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'timers-and-user-prompts.html#dom-alert', 'alert()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>
-    <p> </p>
-   </td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                                 | Статус                           | Комментарий |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', 'timers-and-user-prompts.html#dom-alert', 'alert()')}} | {{Spec2('HTML WHATWG')}} |             |
 
-<p> </p>
+## Совместимость с браузерами
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## Смотрите также
 
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li>Элемент {{HTMLElement("dialog")}}</li>
- <li>{{domxref("window.confirm","confirm")}}</li>
- <li>{{domxref("window.prompt","prompt")}}</li>
-</ul>
+- Элемент {{HTMLElement("dialog")}}
+- {{domxref("window.confirm","confirm")}}
+- {{domxref("window.prompt","prompt")}}

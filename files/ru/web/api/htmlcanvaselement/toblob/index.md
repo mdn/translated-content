@@ -3,43 +3,39 @@ title: HTMLCanvasElement.toBlob()
 slug: Web/API/HTMLCanvasElement/toBlob
 translation_of: Web/API/HTMLCanvasElement/toBlob
 ---
-<div>
-<div>
-<div>{{APIRef("Canvas API")}}</div>
-</div>
-</div>
+{{APIRef("Canvas API")}}
 
-<p>Метод <strong><code>HTMLCanvasElement.toBlob()</code></strong> создаёт объект {{domxref("Blob")}} представляющий изображение, содержащееся в <code>canvas</code>; этот файл может быть закеширован на диске или храниться в памяти на усмотрение пользователя (<em>at the discretion of the user agent</em>). Если параметр <code>mimeType</code> не определён, типом изображения считается <code>image/png</code>. Созданное изображение имеет разрешение 96dpi.</p>
+Метод **`HTMLCanvasElement.toBlob()`** создаёт объект {{domxref("Blob")}} представляющий изображение, содержащееся в `canvas`; этот файл может быть закеширован на диске или храниться в памяти на усмотрение пользователя (_at the discretion of the user agent_). Если параметр `mimeType` не определён, типом изображения считается `image/png`. Созданное изображение имеет разрешение 96dpi.
 
-<p>Третий аргумент используется для изображений с MIME-типом <code>image/jpeg</code> для определения его качества.</p>
+Третий аргумент используется для изображений с MIME-типом `image/jpeg` для определения его качества.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">void <var>canvas</var>.toBlob(<var>callback</var>, <var>mimeType</var>, <var>qualityArgument</var>);
-</pre>
+```
+void canvas.toBlob(callback, mimeType, qualityArgument);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>callback</dt>
- <dd>Callback-функция с результирующим объектом {{domxref("Blob")}} в качестве единственного аргумента.</dd>
- <dt><code>mimeType</code> {{optional_inline}}</dt>
- <dd>Аргумент типа {{domxref("DOMString")}} определяющий формат изображения. По умолчанию <code>image/png</code>.</dd>
- <dt><code>qualityArgument</code> {{optional_inline}}</dt>
- <dd>Аргумент типа {{jsxref("Number")}} со значением от <code>0</code> до <code>1</code>, определяющий качество изображения, если заявлен MIME-тип <code>image/jpeg</code> или <code>image/webp</code>. Если этот аргумент содержит нечто иное, для определения качества изображения будет использовано значение по умолчанию. Остальные аргументы проигнорируются.</dd>
-</dl>
+- callback
+  - : Callback-функция с результирующим объектом {{domxref("Blob")}} в качестве единственного аргумента.
+- `mimeType` {{optional_inline}}
+  - : Аргумент типа {{domxref("DOMString")}} определяющий формат изображения. По умолчанию `image/png`.
+- `qualityArgument` {{optional_inline}}
+  - : Аргумент типа {{jsxref("Number")}} со значением от `0` до `1`, определяющий качество изображения, если заявлен MIME-тип `image/jpeg` или `image/webp`. Если этот аргумент содержит нечто иное, для определения качества изображения будет использовано значение по умолчанию. Остальные аргументы проигнорируются.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Не возвращает ничего.</p>
+Не возвращает ничего.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Получение_файла_представленного_в_canvas">Получение файла, представленного в canvas</h3>
+### Получение файла, представленного в canvas
 
-<p>Как только вы нарисовали содержимое в <code>canvas</code>, вы можете сконвертировать его в файл изображения любого поддерживаемого формата. Ниже приведён фрагмент кода, для примера, принимает изображение в элементе {{HTMLElement("canvas")}} с ID = "canvas" и получает его копию в виде PNG изображения, затем добавляет в документ новый элемент {{HTMLElement("img")}}, исходное изображение которого создано с помощью холста.</p>
+Как только вы нарисовали содержимое в `canvas`, вы можете сконвертировать его в файл изображения любого поддерживаемого формата. Ниже приведён фрагмент кода, для примера, принимает изображение в элементе {{HTMLElement("canvas")}} с ID = "canvas" и получает его копию в виде PNG изображения, затем добавляет в документ новый элемент {{HTMLElement("img")}}, исходное изображение которого создано с помощью холста.
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 
 canvas.toBlob(function(blob) {
   var newImg = document.createElement('img'),
@@ -53,18 +49,20 @@ canvas.toBlob(function(blob) {
   newImg.src = url;
   document.body.appendChild(newImg);
 });
-</pre>
+```
 
-<p>Обратите внимание, что здесь мы создаём изображение PNG; если вы добавите второй параметр в вызов <code>toBlob()</code>, вы сможете определить тип необходимого изображения. Например, чтобы получить изображение в формате JPEG:</p>
+Обратите внимание, что здесь мы создаём изображение PNG; если вы добавите второй параметр в вызов `toBlob()`, вы сможете определить тип необходимого изображения. Например, чтобы получить изображение в формате JPEG:
 
-<pre class="brush: js"> canvas.toBlob(function(blob){...}, 'image/jpeg', 0.95); // JPEG в 95% качестве</pre>
+```js
+ canvas.toBlob(function(blob){...}, 'image/jpeg', 0.95); // JPEG в 95% качестве
+```
 
-<div>
-<h3 id="A_way_to_convert_a_canvas_to_an_ico_Mozilla_only">A way to convert a canvas to an ico (Mozilla only)</h3>
+### A way to convert a canvas to an ico (Mozilla only)
 
-<p>Это использует <code>-moz-parse</code> для преобразования cnavas в ICO. Windows XP не поддерживает преобразование из PNG в ico, поэтому вместо этого использует bmp. Ссылка для загрузки создаётся путём установки атрибута загрузки. Значение атрибута загрузки - это имя, которое он будет использовать в качестве имени файла.</p>
+Это использует `-moz-parse` для преобразования cnavas в ICO. Windows XP не поддерживает преобразование из PNG в ico, поэтому вместо этого использует bmp. Ссылка для загрузки создаётся путём установки атрибута загрузки. Значение атрибута загрузки - это имя, которое он будет использовать в качестве имени файла.
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var d = canvas.width;
 ctx = canvas.getContext('2d');
 ctx.beginPath();
@@ -86,16 +84,15 @@ function blobCallback(iconName) {
   }
 }
 canvas.toBlob(blobCallback('passThisString'), 'image/vnd.microsoft.icon',
-              '-moz-parse-options:format=bmp;bpp=32');</pre>
-</div>
+              '-moz-parse-options:format=bmp;bpp=32');
+```
 
-<h3 id="Сохранение_toBlob_на_диске_ОСchromeadd-on_context_only">Сохранение toBlob на диске ОС(chrome/add-on context only)</h3>
+### Сохранение toBlob на диске ОС(chrome/add-on context only)
 
-<div class="note">
-<p>Этот метод сохраняет его на рабочем столе и полезен только в контексте Firefox chrome или дополнительном коде, поскольку API ОС не присутствуют на веб-сайтах.</p>
-</div>
+> **Примечание:** Этот метод сохраняет его на рабочем столе и полезен только в контексте Firefox chrome или дополнительном коде, поскольку API ОС не присутствуют на веб-сайтах.
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var d = canvas.width;
 ctx = canvas.getContext('2d');
 ctx.beginPath();
@@ -130,21 +127,23 @@ function blobCallback(iconName) {
 }
 
 canvas.toBlob(blobCallback('passThisString'), 'image/vnd.microsoft.icon',
-              '-moz-parse-options:format=bmp;bpp=32');</pre>
+              '-moz-parse-options:format=bmp;bpp=32');
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Полифил">Полифил</h2>
+## Полифил
 
-<p>Полифил, основанный на toDataURL, со слабой производительностью.</p>
+Полифил, основанный на toDataURL, со слабой производительностью.
 
-<pre>if (!HTMLCanvasElement.prototype.toBlob) {
+```
+if (!HTMLCanvasElement.prototype.toBlob) {
   Object.defineProperty(HTMLCanvasElement.prototype, 'toBlob', {
     value: function (callback, type, quality) {
       var dataURL = this.toDataURL(type, quality).split(',')[1];
@@ -154,7 +153,7 @@ canvas.toBlob(blobCallback('passThisString'), 'image/vnd.microsoft.icon',
             len = binStr.length,
             arr = new Uint8Array(len);
 
-        for (var i = 0; i &lt; len; i++ ) {
+        for (var i = 0; i < len; i++ ) {
           arr[i] = binStr.charCodeAt(i);
         }
 
@@ -163,11 +162,10 @@ canvas.toBlob(blobCallback('passThisString'), 'image/vnd.microsoft.icon',
       });
     }
   });
-}</pre>
+}
+```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>The interface defining it, {{domxref("HTMLCanvasElement")}}.</li>
- <li>{{domxref("Blob")}}</li>
-</ul>
+- The interface defining it, {{domxref("HTMLCanvasElement")}}.
+- {{domxref("Blob")}}

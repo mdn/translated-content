@@ -10,35 +10,35 @@ tags:
 translation_of: Web/API/HTMLHyperlinkElementUtils/port
 original_slug: Web/API/HTMLHyperlinkElementUtils/port
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("URL API")}}
 
-<p>Свойство <strong><code>HTMLHyperlinkElementUtils.port</code></strong> – это {{domxref("USVString")}}, содержащий номер порта.</p>
+Свойство **`HTMLHyperlinkElementUtils.port`** – это {{domxref("USVString")}}, содержащий номер порта.
 
-<p>При значении <code>'' будет использоваться</code> порт по умолчанию для указанного протокола (не <code>0</code>).</p>
+При значении `'' будет использоваться` порт по умолчанию для указанного протокола (не `0`).
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.port;
-<em>object</em>.port = <em>string</em>;
-</pre>
+```
+string = object.port;
+object.port = string;
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">// Допустим, что документ содержит элемент &lt;a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.port"&gt;
+```js
+// Допустим, что документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.port">
 var anchor = document.getElementByID("myAnchor");
 var result = anchor.port; // Вернёт: '80'
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит это свойство.</li>
-</ul>
+- Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит это свойство.

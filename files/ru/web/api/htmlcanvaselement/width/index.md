@@ -1,56 +1,53 @@
 ---
 title: HTMLCanvasElement.width
 slug: Web/API/HTMLCanvasElement/width
-translation_of: Web/API/HTMLCanvasElement/width
 tags:
-- API
-- Canvas
-- HTMLCanvasElement
-- Свойство
+  - API
+  - Canvas
+  - HTMLCanvasElement
+  - Свойство
+translation_of: Web/API/HTMLCanvasElement/width
 ---
-<div>
-    <div>
-        <div>{{APIRef("Canvas API")}}</div>
-    </div>
-</div>
+{{APIRef("Canvas API")}}
 
-<p>Свойство <strong><code>HTMLCanvasElement.width</code></strong>  — это положительное
-    <code>целое число</code>, отображающее значение HTML атрибута {{htmlattrxref("width", "canvas")}} элемента {{HTMLElement("canvas")}} в CSS пикселях.
-    Если атрибут не указан или для него задано недопустимое значение, например отрицательное, то используется значение по умолчанию <code>300</code>.</p>
+Свойство **`HTMLCanvasElement.width`** — это положительное
+`целое число`, отображающее значение HTML атрибута {{htmlattrxref("width", "canvas")}} элемента {{HTMLElement("canvas")}} в CSS пикселях.
+Если атрибут не указан или для него задано недопустимое значение, например отрицательное, то используется значение по умолчанию `300`.
 
-<p>Одно из двух свойств (другое — {{domxref("HTMLCanvasElement.height")}}), контролирующих размер холста.</p>
+Одно из двух свойств (другое — {{domxref("HTMLCanvasElement.height")}}), контролирующих размер холста.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js"><var>var <em>pxl</em> = <em>canvas</em></var>.width;
-<em>canvas</em>.width = <em>pxl</em>;
-</pre>
+```js
+var pxl = canvas.width;
+canvas.width = pxl;
+```
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<p>Возьмём следующий {{HTMLElement("canvas")}} элемент:</p>
+Возьмём следующий {{HTMLElement("canvas")}} элемент:
 
-<pre class="brush: html">&lt;canvas id="canvas" width="300" height="300"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas" width="300" height="300"></canvas>
+```
 
-<p>Вы можете получить ширину холста следующим образом:</p>
+Вы можете получить ширину холста следующим образом:
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 console.log(canvas.width); // 300
-</pre>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
-    <li>Интерфейс {{domxref("HTMLCanvasElement")}}.</li>
-    <li>Другое свойство, контролирующее размер холста,
-        {{domxref("HTMLCanvasElement.height")}}.</li>
-</ul>
+- Интерфейс {{domxref("HTMLCanvasElement")}}.
+- Другое свойство, контролирующее размер холста,
+  {{domxref("HTMLCanvasElement.height")}}.

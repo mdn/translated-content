@@ -3,31 +3,35 @@ title: Node.isConnected
 slug: Web/API/Node/isConnected
 translation_of: Web/API/Node/isConnected
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>isConnected</code></strong> read-only property of the {{domxref("Node")}} interface returns a boolean indicating whether the Node is connected (directly or indirectly) to the context object, for example the {{domxref("Document")}} object in the case of the normal DOM, or the {{domxref("ShadowRoot")}} in the case of a shadow DOM.</p>
+The **`isConnected`** read-only property of the {{domxref("Node")}} interface returns a boolean indicating whether the Node is connected (directly or indirectly) to the context object, for example the {{domxref("Document")}} object in the case of the normal DOM, or the {{domxref("ShadowRoot")}} in the case of a shadow DOM.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var isItConnected = nodeObjectInstance.isConnected</pre>
+```
+var isItConnected = nodeObjectInstance.isConnected
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("Boolean")}} that is <code>true</code> if the node is connected to its relevant context object, and <code>false</code> if not.</p>
+A {{domxref("Boolean")}} that is `true` if the node is connected to its relevant context object, and `false` if not.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Стандартный DOM пример:</p>
+Стандартный DOM пример:
 
-<pre class="brush: js">let test = document.createElement('p');
+```js
+let test = document.createElement('p');
 console.log(test.isConnected); // returns false
 document.body.appendChild(test);
 console.log(test.isConnected); // returns true
-</pre>
+```
 
-<p>A shadow DOM example:</p>
+A shadow DOM example:
 
-<pre class="brush: js">// Create a shadow root
+```js
+// Create a shadow root
 var shadow = this.attachShadow({mode: 'open'});
 
 // Create some CSS to apply to the shadow dom
@@ -57,18 +61,13 @@ style.textContent = '.wrapper {' +
 // attach the created style element to the shadow dom
 
 shadow.appendChild(style);
-console.log(style.isConnected); // returns true</pre>
+console.log(style.isConnected); // returns true
+```
 
-<p> </p>
-
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Поддержка_Браузерами">Поддержка Браузерами</h2>
+## Поддержка Браузерами
 
-<div>
-
-
-<p>{{Compat}}</p>
-</div>
+{{Compat}}

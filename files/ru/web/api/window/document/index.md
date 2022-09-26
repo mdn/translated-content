@@ -3,43 +3,43 @@ title: Window.document
 slug: Web/API/Window/document
 translation_of: Web/API/Window/document
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p><code>window.document</code> возвращает ссылку на документ, содержащийся в окне.</p>
+`window.document` возвращает ссылку на документ, содержащийся в окне.
 
-<div class="note"><strong>Note:</strong> Firefox 3 вносит изменения в правила безопасности для windows' документов, чтобы только домен, на котором они расположены, имел доступ к документам. И хотя это может сломать некоторые существующие сайты, Firefox 3 и Internet Explorer 7 сделали этот шаг, что приводит к улучшению безопасности.</div>
+> **Примечание:** Firefox 3 вносит изменения в правила безопасности для windows' документов, чтобы только домен, на котором они расположены, имел доступ к документам. И хотя это может сломать некоторые существующие сайты, Firefox 3 и Internet Explorer 7 сделали этот шаг, что приводит к улучшению безопасности.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>doc</var> = window.document
-</pre>
+```
+doc = window.document
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<ul>
- <li><code>doc</code> является ссылкой на объект <a href="/en-US/docs/DOM/document" title="DOM/document">document</a>.</li>
-</ul>
+- `doc` является ссылкой на объект [document](/ru/docs/DOM/document "DOM/document").
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-   &lt;title&gt;Hello, World!&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
+```html
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Hello, World!</title>
+</head>
+<body>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
    var doc = window.document;
    console.log(doc.title); // Hello, World!
-&lt;/script&gt;
+</script>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}

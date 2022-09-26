@@ -3,77 +3,85 @@ title: Document.getElementsByClassName()
 slug: Web/API/Document/getElementsByClassName
 translation_of: Web/API/Document/getElementsByClassName
 ---
-<p id="Summary">{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>Возвращает массивоподобный (итерируемый) объект всех дочерних элементов, соответствующих всем из указанных имён классов. В случае вызова по отношению к объекту 'document', поиск происходит по всему документу, включая корневой элемент. Вызывать {{domxref("Element.getElementsByClassName", "getElementsByClassName()")}} можно также применительно к любому элементу: возвращены будут лишь те элементы, которые являются потомками указанного корневого элемента и имеют при этом указанные классы.</p>
+Возвращает массивоподобный (итерируемый) объект всех дочерних элементов, соответствующих всем из указанных имён классов. В случае вызова по отношению к объекту 'document', поиск происходит по всему документу, включая корневой элемент. Вызывать {{domxref("Element.getElementsByClassName", "getElementsByClassName()")}} можно также применительно к любому элементу: возвращены будут лишь те элементы, которые являются потомками указанного корневого элемента и имеют при этом указанные классы.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>var elements</var> = document.getElementsByClassName(<em>names</em>); // или:
-<var>var elements</var> = rootElement.getElementsByClassName(<em>names</em>);</pre>
+```
+var elements = document.getElementsByClassName(names); // или:
+var elements = rootElement.getElementsByClassName(names);
+```
 
-<ul>
- <li><var>В "elements"</var> будет текущая  {{ domxref("HTMLCollection") }} найденных элементов.</li>
- <li><var>"names"</var> - строка, состоящая из списка имён искомых классов; имена классов разделяют пробелами.</li>
- <li>getElementsByClassName может быть вызвана по отношению к любому элементу, не только для документа целиком. ("document"). Элемент, по отношению к которому осуществляется вызов, используется для целей поиска в качестве корневого элемента.</li>
-</ul>
+- _В "elements"_ будет текущая {{ domxref("HTMLCollection") }} найденных элементов.
+- _"names"_ - строка, состоящая из списка имён искомых классов; имена классов разделяют пробелами.
+- getElementsByClassName может быть вызвана по отношению к любому элементу, не только для документа целиком. ("document"). Элемент, по отношению к которому осуществляется вызов, используется для целей поиска в качестве корневого элемента.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<p>Получить все элементы класса 'test':</p>
+Получить все элементы класса 'test':
 
-<pre class="brush: js">document.getElementsByClassName('test');</pre>
+```js
+document.getElementsByClassName('test');
+```
 
-<p>Получить все элементы, для которых заданы класс 'red' и класс 'test':</p>
+Получить все элементы, для которых заданы класс 'red' и класс 'test':
 
-<pre class="brush: js">document.getElementsByClassName('red test');</pre>
+```js
+document.getElementsByClassName('red test');
+```
 
-<p>Получить все элементы класса 'test', являющиеся дочерними для элемента с ID 'main':</p>
+Получить все элементы класса 'test', являющиеся дочерними для элемента с ID 'main':
 
-<pre class="brush: js">document.getElementById('main').getElementsByClassName('test');</pre>
+```js
+document.getElementById('main').getElementsByClassName('test');
+```
 
-<p>Мы также можем использовать методы из Array.prototype по отношению к любой {{ domxref("HTMLCollection") }}, передавая коллекцию в качестве значения <em>this</em> метода. Код в примере найдёт все элементы 'div' с классом 'test':</p>
+Мы также можем использовать методы из Array.prototype по отношению к любой {{ domxref("HTMLCollection") }}, передавая коллекцию в качестве значения _this_ метода. Код в примере найдёт все элементы 'div' с классом 'test':
 
-<pre class="brush: js">var testElements = document.getElementsByClassName('test');
+```js
+var testElements = document.getElementsByClassName('test');
 var testDivs = Array.prototype.filter.call(testElements, function(testElement){
     return testElement.nodeName === 'DIV';
-});</pre>
+});
+```
 
-<h2 id="Получение_элементов_класса_'test'">Получение элементов класса 'test'</h2>
+## Получение элементов класса 'test'
 
-<p>Ниже приведён пример наиболее употребительного способа использования данного метода.</p>
+Ниже приведён пример наиболее употребительного способа использования данного метода.
 
-<pre>&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Document&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div id="parent-id"&gt;
-        &lt;p&gt;hello word1&lt;/p&gt;
-        &lt;p class="test"&gt;hello word2&lt;/p&gt;
-        &lt;p &gt;hello word3&lt;/p&gt;
-        &lt;p&gt;hello word4&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;script&gt;
+```
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent-id">
+        <p>hello word1</p>
+        <p class="test">hello word2</p>
+        <p >hello word3</p>
+        <p>hello word4</p>
+    </div>
+    <script>
         var parentDOM = document.getElementById("parent-id");
 
         var test=parentDOM.getElementsByClassName("test");//test is not target element
         console.log(test);//HTMLCollection[1]
 
         var testTarget=parentDOM.getElementsByClassName("test")[0];//hear , this element is target
-        console.log(testTarget);//&lt;p class="test"&gt;hello word2&lt;/p&gt;
-    &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+        console.log(testTarget);//<p class="test">hello word2</p>
+    </script>
+</body>
+</html>
+```
 
-<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+## Совместимость браузеров
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<ul>
- <li><a href="https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-document-getelementsbyclassname">W3C: getElementsByClassName</a></li>
-</ul>
+- [W3C: getElementsByClassName](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-document-getelementsbyclassname)

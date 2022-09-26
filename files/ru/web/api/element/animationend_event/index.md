@@ -4,50 +4,38 @@ slug: Web/API/Element/animationend_event
 translation_of: Web/API/GlobalEventHandlers/onanimationend
 original_slug: Web/API/GlobalEventHandlers/onanimationend
 ---
-<div>{{APIRef("CSS3 Animations")}}</div>
+{{APIRef("CSS3 Animations")}}
 
-<p>Обработчик события {{event("animationend")}}. Это событие вызывается когда <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS-анимация</a> достигает конца своего активного периода, который вычисляется как ({{cssxref("animation-duration")}} * {{cssxref("animation-iteration-count")}}) + {{cssxref("animation-delay")}}.</p>
+Обработчик события {{event("animationend")}}. Это событие вызывается когда [CSS-анимация](/ru/docs/Web/CSS/CSS_Animations) достигает конца своего активного периода, который вычисляется как ({{cssxref("animation-duration")}} \* {{cssxref("animation-iteration-count")}}) + {{cssxref("animation-delay")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <em>animEndHandler</em> = <em>target</em>.onanimationend;
+```
+var animEndHandler = target.onanimationend;
 
-<em>target</em>.onanimationend = <em>{{jsxref("Function")}}</em>
-</pre>
+target.onanimationend = {{jsxref("Function")}}
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p>A {{jsxref ("Function")}} вызывается, когда происходит событие {{event ("animationend")}}, указывающее, что анимация CSS начинается с цели, где целевой объект является HTML-элементом ({{ Domxref ("HTMLElement")}}), документ ({{domxref ("Document")}}) или окно ({{domxref ("Window")}}). Функция получает в качестве входного параметра один параметр: {{domxref ("AnimationEvent")}} объект, описывающий событие, которое произошло.</p>
+A {{jsxref ("Function")}} вызывается, когда происходит событие {{event ("animationend")}}, указывающее, что анимация CSS начинается с цели, где целевой объект является HTML-элементом ({{ Domxref ("HTMLElement")}}), документ ({{domxref ("Document")}}) или окно ({{domxref ("Window")}}). Функция получает в качестве входного параметра один параметр: {{domxref ("AnimationEvent")}} объект, описывающий событие, которое произошло.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>{{Page("/en-US/docs/Web/API/GlobalEventHandlers/onanimationstart", "Example")}}</p>
+{{Page("/en-US/docs/Web/API/GlobalEventHandlers/onanimationstart", "Example")}}
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Animations','#eventdef-animationevent-animationend','onanimationend')}}</td>
-   <td>{{Spec2('CSS3 Animations')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                        | Status                               | Comment |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
+| {{SpecName('CSS3 Animations','#eventdef-animationevent-animationend','onanimationend')}} | {{Spec2('CSS3 Animations')}} |         |
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>The {{event("animationend")}} event this event handler is triggered by</li>
- <li>{{domxref("AnimationEvent")}}</li>
- <li>The {{event("animationstart")}} event</li>
-</ul>
+- The {{event("animationend")}} event this event handler is triggered by
+- {{domxref("AnimationEvent")}}
+- The {{event("animationstart")}} event

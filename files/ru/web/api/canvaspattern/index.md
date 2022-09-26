@@ -3,42 +3,34 @@ title: CanvasPattern
 slug: Web/API/CanvasPattern
 translation_of: Web/API/CanvasPattern
 ---
-<div>{{APIRef("Canvas API")}}</div>
+{{APIRef("Canvas API")}}
 
-<p><code><strong>CanvasPattern</strong></code> представляет собой интерфейс <a href="https://en.wikipedia.org/wiki/Opaque_data_type">непрозрачного объекта</a>, описывающего шаблон, который может быть представлен как картинка, canvas или видео.</p>
+**`CanvasPattern`** представляет собой интерфейс [непрозрачного объекта](https://en.wikipedia.org/wiki/Opaque_data_type), описывающего шаблон, который может быть представлен как картинка, canvas или видео.
 
-<p><code><strong>CanvasPattern</strong></code> создаётся с помощью метода {{domxref("CanvasRenderingContext2D.createPattern()")}}.</p>
+**`CanvasPattern`** создаётся с помощью метода {{domxref("CanvasRenderingContext2D.createPattern()")}}.
 
-<p>Может быть использован как {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} или {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}.</p>
+Может быть использован как {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} или {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Не имеет доступных свойств.</em></p>
+_Не имеет доступных свойств._
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em>Не имеет унаследованных методов.</em></p>
+_Не имеет унаследованных методов._
 
-<dl>
- <dt>{{domxref("CanvasPattern.setTransform()")}} {{experimental_inline}}</dt>
- <dd>Используется в качестве {{domxref("SVGMatrix")}} представления линейной трансформации.</dd>
-</dl>
+- {{domxref("CanvasPattern.setTransform()")}} {{experimental_inline}}
+  - : Используется в качестве {{domxref("SVGMatrix")}} представления линейной трансформации.
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
+## Браузерная совместимость
 
-<div>
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{domxref("CanvasRenderingContext2D.createPattern()")}}</li>
- <li>{{HTMLElement("canvas")}} тег и связанный с ним интерфейс - {{domxref("HTMLCanvasElement")}}</li>
-</ul>
+- {{domxref("CanvasRenderingContext2D.createPattern()")}}
+- {{HTMLElement("canvas")}} тег и связанный с ним интерфейс - {{domxref("HTMLCanvasElement")}}

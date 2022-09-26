@@ -3,83 +3,53 @@ title: NamedNodeMap
 slug: Web/API/NamedNodeMap
 translation_of: Web/API/NamedNodeMap
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Интерфейс <code><strong>NamedNodeMap</strong></code> представляет собой коллекцию объектов {{domxref("Attr")}}. Объекты внутри <code>NamedNodeMap</code> не находятся в каком-либо определённом порядке, в отличие от {{domxref("NodeList")}}, хотя они могут быть доступны при использовании индекса, как в массиве.</p>
+Интерфейс **`NamedNodeMap`** представляет собой коллекцию объектов {{domxref("Attr")}}. Объекты внутри `NamedNodeMap` не находятся в каком-либо определённом порядке, в отличие от {{domxref("NodeList")}}, хотя они могут быть доступны при использовании индекса, как в массиве.
 
-<p>Объект NamedNodeMap является "живым" и, таким образом, будет автоматически обновляться, если изменения будут внесены в его содержимое внутри или в другом месте.</p>
+Объект NamedNodeMap является "живым" и, таким образом, будет автоматически обновляться, если изменения будут внесены в его содержимое внутри или в другом месте.
 
-<div class="note">
-<p>Хотя данный интерфейс и  называется <code>NamedNodeMap</code> , он не имеет ничего общего с объектом {{domxref("Node")}}, но до сих пор связан с объектом {{domxref(" Attr ")}}, который изначально был специализированным классом {{domxref("Node")}}.</p>
-</div>
+> **Примечание:** Хотя данный интерфейс и называется `NamedNodeMap` , он не имеет ничего общего с объектом {{domxref("Node")}}, но до сих пор связан с объектом {{domxref(" Attr ")}}, который изначально был специализированным классом {{domxref("Node")}}.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p>Этот интерфейс не наследует никаких свойств.</p>
+Этот интерфейс не наследует никаких свойств.
 
-<dl>
- <dt>{{domxref("NamedNodeMap.length")}} {{ReadOnlyInline}}</dt>
- <dd>Возвращает количество объектов внутри объекта NamedNodeMap.</dd>
-</dl>
+- {{domxref("NamedNodeMap.length")}} {{ReadOnlyInline}}
+  - : Возвращает количество объектов внутри объекта NamedNodeMap.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p>Этот интерфейс не наследует никакого метода.</p>
+Этот интерфейс не наследует никакого метода.
 
-<dl>
- <dt>{{domxref("NamedNodeMap.getNamedItem()")}}</dt>
- <dd>Возвращает значение {{domxref ("Attr")}}, соответствующее данному имени.</dd>
- <dt>{{domxref("NamedNodeMap.setNamedItem()")}}</dt>
- <dd>Заменяет или добавляет {{domxref ("Attr")}}, обозначенный в объекте NamedNodeMap  заданным именем.</dd>
- <dt>{{domxref("NamedNodeMap.removeNamedItem()")}}</dt>
- <dd>Удаляет {{domxref ("Attr")}}, идентифицированный объектом NamedNodeMap .</dd>
- <dt>{{domxref("NamedNodeMap.item()")}}</dt>
- <dd>Возвращает значение {{domxref ("Attr")}} по заданному индексу или null, если индекс больше или равен числу узлов.</dd>
- <dt>{{domxref("NamedNodeMap.getNamedItemNS()")}}</dt>
- <dd>Возвращает {{domxref ("Attr")}}, идентифицированный пространством имён и связанным локальным именем.</dd>
- <dt>{{domxref("NamedNodeMap.setNamedItemNS()")}}</dt>
- <dd>Заменяет или добавляет {{domxref ("Attr")}}, идентифицированный в объекте NamedNodeMap данным пространством имён и связанным локальным именем.</dd>
- <dt>{{domxref("NamedNodeMap.removeNamedItemNS()")}}</dt>
- <dd>Удаляет {{domxref ("Attr")}}, идентифицированный данным пространством имён и связанным локальным именем.</dd>
-</dl>
+- {{domxref("NamedNodeMap.getNamedItem()")}}
+  - : Возвращает значение {{domxref ("Attr")}}, соответствующее данному имени.
+- {{domxref("NamedNodeMap.setNamedItem()")}}
+  - : Заменяет или добавляет {{domxref ("Attr")}}, обозначенный в объекте NamedNodeMap заданным именем.
+- {{domxref("NamedNodeMap.removeNamedItem()")}}
+  - : Удаляет {{domxref ("Attr")}}, идентифицированный объектом NamedNodeMap .
+- {{domxref("NamedNodeMap.item()")}}
+  - : Возвращает значение {{domxref ("Attr")}} по заданному индексу или null, если индекс больше или равен числу узлов.
+- {{domxref("NamedNodeMap.getNamedItemNS()")}}
+  - : Возвращает {{domxref ("Attr")}}, идентифицированный пространством имён и связанным локальным именем.
+- {{domxref("NamedNodeMap.setNamedItemNS()")}}
+  - : Заменяет или добавляет {{domxref ("Attr")}}, идентифицированный в объекте NamedNodeMap данным пространством имён и связанным локальным именем.
+- {{domxref("NamedNodeMap.removeNamedItemNS()")}}
+  - : Удаляет {{domxref ("Attr")}}, идентифицированный данным пространством имён и связанным локальным именем.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#interface-namednodemap', 'NamedNodeMap')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Имеет дело с {{domxref("Attr")}} вместо {{domxref("Node")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-1780488922', 'NamedNodeMap')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>No change from {{SpecName('DOM2 Core')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-1780488922', 'NamedNodeMap')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>Added <code>getNamedItemNS()</code>, <code>setNamedItemNS()</code> and <code>removeNamedItemNS()</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'core.html#ID-1780488922', 'NamedNodeMap')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                           | Comment                                                                |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------- |
+| {{SpecName('DOM WHATWG', '#interface-namednodemap', 'NamedNodeMap')}} | {{Spec2('DOM WHATWG')}} | Имеет дело с {{domxref("Attr")}} вместо {{domxref("Node")}}  |
+| {{SpecName('DOM3 Core', 'core.html#ID-1780488922', 'NamedNodeMap')}} | {{Spec2('DOM3 Core')}}     | No change from {{SpecName('DOM2 Core')}}                        |
+| {{SpecName('DOM2 Core', 'core.html#ID-1780488922', 'NamedNodeMap')}} | {{Spec2('DOM2 Core')}}     | Added `getNamedItemNS()`, `setNamedItemNS()` and `removeNamedItemNS()` |
+| {{SpecName('DOM1', 'core.html#ID-1780488922', 'NamedNodeMap')}}         | {{Spec2('DOM1')}}         | Initial definition                                                     |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li>{{domxref("Element.attributes")}}</li>
-</ul>
+## See also
+
+- {{domxref("Element.attributes")}}

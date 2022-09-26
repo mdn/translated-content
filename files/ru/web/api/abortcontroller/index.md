@@ -3,42 +3,37 @@ title: AbortController
 slug: Web/API/AbortController
 translation_of: Web/API/AbortController
 ---
-<div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
-<p>Интерфейс <strong><code>AbortController</code></strong> представляет объект контроллера, который позволяет вам при необходимости обрывать один и более DOM запросов.</p>
+Интерфейс **`AbortController`** представляет объект контроллера, который позволяет вам при необходимости обрывать один и более DOM запросов.
 
-<p>Вы можете создать новый объект <code>AbortController</code> используя конструктор {{domxref("AbortController.AbortController()")}}. Взаимодействие с DOM запросами сделано с использованием объекта {{domxref("AbortSignal")}}.</p>
+Вы можете создать новый объект `AbortController` используя конструктор {{domxref("AbortController.AbortController()")}}. Взаимодействие с DOM запросами сделано с использованием объекта {{domxref("AbortSignal")}}.
 
-<h2 id="Конструктор">Конструктор</h2>
+## Конструктор
 
-<dl>
- <dt>{{domxref("AbortController.AbortController()")}}</dt>
- <dd>Создаёт новый экземпляр <code>AbortController</code>.</dd>
-</dl>
+- {{domxref("AbortController.AbortController()")}}
+  - : Создаёт новый экземпляр `AbortController`.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<dl>
- <dt>{{domxref("AbortController.signal")}} {{readonlyInline}}</dt>
- <dd>Возвращает экземпляр {{domxref("AbortSignal")}}, который может быть использован для коммуникаций/останова DOM запросов.</dd>
-</dl>
+- {{domxref("AbortController.signal")}} {{readonlyInline}}
+  - : Возвращает экземпляр {{domxref("AbortSignal")}}, который может быть использован для коммуникаций/останова DOM запросов.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<dl>
- <dt>{{domxref("AbortController.abort()")}}</dt>
- <dd>Прерывает DOM запрос до момента его завершения. Это даёт возможность обрывать <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch запросы</a>, потребителей любых ответов с {{domxref("Body")}} и потоки.</dd>
-</dl>
+- {{domxref("AbortController.abort()")}}
+  - : Прерывает DOM запрос до момента его завершения. Это даёт возможность обрывать [fetch запросы](/ru/docs/Web/API/WindowOrWorkerGlobalScope/fetch), потребителей любых ответов с {{domxref("Body")}} и потоки.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>В текущем фрагменте мы пытаемся скачать видео используя <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>.</p>
+В текущем фрагменте мы пытаемся скачать видео используя [Fetch API](/ru/docs/Web/API/Fetch_API).
 
-<p>Для начала мы создадим контроллер используя конструктор {{domxref("AbortController.AbortController","AbortController()")}}, затем возьмём ссылку на ассоциированный с ним объект {{domxref("AbortSignal")}} используя свойство {{domxref("AbortController.signal")}}.</p>
+Для начала мы создадим контроллер используя конструктор {{domxref("AbortController.AbortController","AbortController()")}}, затем возьмём ссылку на ассоциированный с ним объект {{domxref("AbortSignal")}} используя свойство {{domxref("AbortController.signal")}}.
 
-<p>При инициализации <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch запроса</a>, мы передаём <code>AbortSignal</code> в качестве параметра (смотрите ниже <code>{signal}</code>). Это ассоциирует сигнал и контроллер с fetch запросом и даёт нам возможность остановить запрос вызовом метода {{domxref("AbortController.abort()")}}, что можно увидеть во втором addEventListener.</p>
+При инициализации [fetch запроса](/ru/docs/Web/API/WindowOrWorkerGlobalScope/fetch), мы передаём `AbortSignal` в качестве параметра (смотрите ниже `{signal}`). Это ассоциирует сигнал и контроллер с fetch запросом и даёт нам возможность остановить запрос вызовом метода {{domxref("AbortController.abort()")}}, что можно увидеть во втором addEventListener.
 
-<pre class="brush: js">var controller = new AbortController();
+```js
+var controller = new AbortController();
 var signal = controller.signal;
 
 var downloadBtn = document.querySelector('.download');
@@ -58,27 +53,22 @@ function fetchVideo() {
   }).catch(function(e) {
     reports.textContent = 'Download error: ' + e.message;
   })
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Примечание</strong>: При вызове <code>abort()</code>, промис <code>fetch()</code> будет отклонён с <code>AbortError</code>.</p>
-</div>
+> **Примечание:** При вызове `abort()`, промис `fetch()` будет отклонён с `AbortError`.
 
-<p>Вы можете найти полный рабочий пример на GitHub — смотрите <a href="https://github.com/mdn/dom-examples/tree/master/abort-api">abort-api</a> (<a href="https://mdn.github.io/dom-examples/abort-api/">и живой пример</a>).</p>
+Вы можете найти полный рабочий пример на GitHub — смотрите [abort-api](https://github.com/mdn/dom-examples/tree/master/abort-api) ([и живой пример](https://mdn.github.io/dom-examples/abort-api/)).
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
- <li><a href="https://developers.google.com/web/updates/2017/09/abortable-fetch">Abortable Fetch</a> от Jake Archibald</li>
-</ul>
+- [Fetch API](/ru/docs/Web/API/Fetch_API)
+- [Abortable Fetch](https://developers.google.com/web/updates/2017/09/abortable-fetch) от Jake Archibald

@@ -12,20 +12,20 @@ tags:
 translation_of: Web/API/USB/ondisconnect
 original_slug: Web/API/USB/ondisconnect
 ---
-<p>{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}</p>
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-<p>Свойство <strong><code>ondisconnect</code></strong> интерфейса {{domxref("USB")}} является обработчиком события, который вызывается всегда, когда сопряжённое устройство отключается.</p>
+Свойство **`ondisconnect`** интерфейса {{domxref("USB")}} является обработчиком события, который вызывается всегда, когда сопряжённое устройство отключается.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">USB.ondisconnect = <em>disconnectFunction</em></pre>
+```
+USB.ondisconnect = disconnectFunction
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

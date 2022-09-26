@@ -3,63 +3,54 @@ title: Request.mode
 slug: Web/API/Request/mode
 translation_of: Web/API/Request/mode
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
+Read-only свойство **`mode`** интерфейса {{domxref("Request")}} описывает режим запроса (например, `cors`, `no-cors`, `same-origin` или `navigate`.) Используется для проверки, вызывает ли кросс-доменный запрос корректный ответ, и какие свойства ответа доступны для чтения.
 
+## Синтаксис
 
-<p>Read-only свойство <strong><code>mode</code></strong> интерфейса {{domxref("Request")}} описывает режим запроса (например, <code>cors</code>, <code>no-cors</code>, <code>same-origin</code> или <code>navigate</code>.) Используется для проверки, вызывает ли кросс-доменный запрос корректный ответ, и какие свойства ответа доступны для чтения.</p>
+```
+var myMode = request.mode;
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+### Значения
 
-<pre class="syntaxbox">var <var>myMode</var> = <var>request</var>.mode;</pre>
+- Значения `RequestMode`.
 
-<h3 id="Значения">Значения</h3>
+  - : Соответствующие доступные значения:
 
-<dl>
- <dt>
- <p>Значения <code>RequestMode</code>.</p>
- </dt>
- <dd>
- <p>Соответствующие доступные значения:</p>
+    - `same-origin` — Если запрос сделан к другому origin в этом режиме, то это вызовет ошибку. Можно использовать этот режим, чтобы проверить, что запрос всегда будет обращён к тому же origin, что и текущий.
+    - `no-cors` — Разрешает использование только `HEAD`, `GET` или `POST` методов и [простых заголовков](https://fetch.spec.whatwg.org/#simple-header) (т.е. разрешены только простые запросы). Если какой-либо ServiceWorkers перехватит запрос, то он не сможет добавить или изменить заголовки, кроме [простых](https://fetch.spec.whatwg.org/#simple-header). Также, для JavaScript может быть ограничен доступ к любому свойству объекта ответа {{domxref("Response")}}. Это позволяет наверняка знать, что ServiceWorkers не изменили семантику и предотвратить проблемы безопасности и конфиденциальности, возникающие при утечке данных между доменами.
+    - `cors` — Разрешает кросс-доменные запросы. Например, чтобы получить доступ к некому API, предоставляемое третей стороной. Ожидается, что запрос в этом режиме будет придерживаться [CORS протокола](/ru/docs/Web/HTTP/Access_control_CORS). В объекте ответа {{domxref("Response")}} доступен [ограниченный набор](https://fetch.spec.whatwg.org/#concept-filtered-response-cors) заголовков, но тело доступно для чтения.
+    - `navigate` — Режим, поддерживающий навигацию. Значение `navigate` предназначено только для использования в HTML навигации. Запрос в этом режиме создаётся только во время навигации между страницами.
 
- <ul>
-  <li><code>same-origin</code> — Если запрос сделан к другому origin в этом режиме, то это вызовет ошибку. Можно использовать этот режим, чтобы проверить, что запрос всегда будет обращён к тому же origin, что  и текущий.</li>
-  <li><code>no-cors</code> — Разрешает использование только <code>HEAD</code>, <code>GET</code> или <code>POST</code> методов и <a href="https://fetch.spec.whatwg.org/#simple-header">простых заголовков</a> (т.е. разрешены только простые запросы). Если какой-либо ServiceWorkers перехватит запрос, то он не сможет добавить или изменить заголовки, кроме <a href="https://fetch.spec.whatwg.org/#simple-header">простых</a>. Также, для JavaScript может быть ограничен доступ к любому свойству объекта ответа {{domxref("Response")}}. Это позволяет наверняка знать, что ServiceWorkers не изменили семантику и предотвратить проблемы безопасности и конфиденциальности, возникающие при утечке данных между доменами.</li>
-  <li><code>cors</code> — Разрешает кросс-доменные запросы. Например, чтобы получить доступ к некому API, предоставляемое третей стороной. Ожидается, что запрос в этом режиме будет придерживаться <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">CORS протокола</a>. В объекте ответа {{domxref("Response")}} доступен <a href="https://fetch.spec.whatwg.org/#concept-filtered-response-cors">ограниченный набор</a> заголовков, но тело доступно для чтения.</li>
-  <li><code>navigate</code> — Режим, поддерживающий навигацию. Значение <code>navigate</code> предназначено только для использования в HTML навигации. Запрос в этом режиме создаётся только во время навигации между страницами.</li>
- </ul>
- </dd>
-</dl>
+#### Default mode
 
-<h4 id="Default_mode">Default mode</h4>
+Запрос может быть создан разными способами и режим запроса зависит от конкретных средств, с помощью которых он был инициирован.
 
-<p>Запрос может быть создан разными способами и режим запроса зависит от конкретных средств, с помощью которых он был инициирован.</p>
+Например, когда объект `Request` создаётся с помощью конструктора {{domxref("Request.Request")}}, свойство `mode` этого `Request` будет иметь значение `cors`.
 
-<p>Например, когда объект <code>Request</code> создаётся с помощью конструктора {{domxref("Request.Request")}}, свойство <code>mode</code> этого <code>Request</code> будет иметь значение <code>cors</code>.</p>
+Однако, запросы созданные не конструктором {{domxref("Request.Request")}}, будут использовать режим `no-cors`. Например, для встроенных ресурсов, где запрос инициируется из разметки, если отсутствует атрибут [`crossorigin`](/en-US/docs/Web/HTML/CORS_settings_attributes), то запрос в большинстве случаев будет выполнен в режиме `no-cors` — то есть для элементов {{HTMLElement("link")}} или {{HTMLElement("script")}} (кроме использования с модулями), или {{HTMLElement("img")}}, {{HTMLElement("audio")}}, {{HTMLElement("video")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, или {{HTMLElement("iframe")}}.
 
-<p>Однако, запросы созданные не конструктором {{domxref("Request.Request")}}, будут использовать режим <code>no-cors</code>. Например, для встроенных ресурсов, где запрос инициируется из разметки, если отсутствует атрибут <code><a href="/en-US/docs/Web/HTML/CORS_settings_attributes">crossorigin</a></code>, то запрос в большинстве случаев будет выполнен в режиме <code>no-cors</code> — то есть для элементов {{HTMLElement("link")}} или {{HTMLElement("script")}} (кроме использования с модулями), или {{HTMLElement("img")}}, {{HTMLElement("audio")}}, {{HTMLElement("video")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, или {{HTMLElement("iframe")}}.</p>
+## Пример
 
-<h2 id="Пример">Пример</h2>
+В этой части кода создаётся новый запрос (для взятия файла картинки) через конструктор {{domxref("Request.Request()")}}, затем полученный режим сохраняется в переменной:
 
-<p>В этой части кода создаётся новый запрос (для взятия файла картинки) через конструктор {{domxref("Request.Request()")}}, затем полученный режим сохраняется в переменной:</p>
+```js
+var myRequest = new Request('flowers.jpg');
+var myMode = myRequest.mode; // вернёт "cors" по умолчанию
+```
 
-<pre class="brush: js">var myRequest = new Request('flowers.jpg');
-var myMode = myRequest.mode; // вернёт "cors" по умолчанию</pre>
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/ru/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/ru/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/ru/docs/Web/HTTP)

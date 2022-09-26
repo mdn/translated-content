@@ -3,58 +3,54 @@ title: Элемент.scrollTop
 slug: Web/API/Element/scrollTop
 translation_of: Web/API/Element/scrollTop
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p><code>Свойство<strong> scrollTop</strong></code> считывает или устанавливает количество пикселей, прокрученных от верха элемента. <code>scrollTop</code> измеряет дистанцию от верха элемента до верхней точки видимого контента. Когда контент элемента не создаёт вертикальную прокрутку, его <code>scrollTop</code> равно <code>0</code>.</p>
+`Свойство scrollTop` считывает или устанавливает количество пикселей, прокрученных от верха элемента. `scrollTop` измеряет дистанцию от верха элемента до верхней точки видимого контента. Когда контент элемента не создаёт вертикальную прокрутку, его `scrollTop` равно `0`.
 
-<h2 id="Syntax_and_values">Синтаксис</h2>
+## Синтаксис
 
-<pre class="eval">//Получаем количество прокрученных пикселей
-var <var> intElemScrollTop</var> = someElement.scrollTop;
-</pre>
+```
+//Получаем количество прокрученных пикселей
+var  intElemScrollTop = someElement.scrollTop;
+```
 
-<p><var>После выполнения этого кода, </var><code><var>intElemScrollTop</var></code> - целое число пикселей, на которое контент {{domxref("element")}} был прокручен от верха.</p>
+_После выполнения этого кода, _`intElemScrollTop` - целое число пикселей, на которое контент {{domxref("element")}} был прокручен от верха.
 
-<pre class="eval">// Устанавливаем количество прокрученных пикселей
-<var>element</var>.scrollTop = <var>intValue</var>;
-</pre>
+```
+// Устанавливаем количество прокрученных пикселей
+element.scrollTop = intValue;
+```
 
-<p><code>scrollTop</code> может быть любым целым числом, с определёнными оговорками:</p>
+`scrollTop` может быть любым целым числом, с определёнными оговорками:
 
-<ul>
- <li>Если элемент не может быть прокручен (т.е. у него нет переполнения или если элемент <strong>не прокручиваем</strong>), <code>scrollTop</code> устанавливается в <code>0</code>.</li>
- <li>Если значение меньше <code>0</code>, <code>scrollTop</code> устанавливается в <code>0</code>.</li>
- <li>Если установлено значение больше, чем максимум прокручиваемого контента, <code>scrollTop</code> устанавливается в максимум.</li>
-</ul>
+- Если элемент не может быть прокручен (т.е. у него нет переполнения или если элемент **не прокручиваем**), `scrollTop` устанавливается в `0`.
+- Если значение меньше `0`, `scrollTop` устанавливается в `0`.
+- Если установлено значение больше, чем максимум прокручиваемого контента, `scrollTop` устанавливается в максимум.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<div id="offsetContainer" style="margin: 40px 50px 50px; background-color: rgb(255, 255, 204); border: 4px dashed black; color: black; position: relative; display: inline-block;">
-<div id="idDiv" style="margin: 24px 29px; border: 24px black solid; padding: 0px 28px; width: 199px; height: 102px; overflow: auto; background-color: white; font-size: 13px!important; font-family: Arial, sans-serif;">
-<p id="PaddingTopLabel" style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">padding-top</p>
+padding-top
 
-<p>Бла-бла-бла, бла-бла-бла.Бла-бла-бла, бла-бла-бла.Бла-бла-бла, бла-бла-бла.</p>
+Бла-бла-бла, бла-бла-бла.Бла-бла-бла, бла-бла-бла.Бла-бла-бла, бла-бла-бла.
 
-<p>Кот Василий ел картошку.Бла-бла-бла, бла-бла-бла.Бла-бла-бла, бла-бла-бла.</p>
+Кот Василий ел картошку.Бла-бла-бла, бла-бла-бла.Бла-бла-бла, бла-бла-бла.
 
-<p id="PaddingBottomLabel" style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">padding-bottom</p>
-</div>
-<strong style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: -32px; position: absolute; top: 85px;">Left</strong> <strong style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 170px; position: absolute; top: -24px;">Top</strong> <strong style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 370px; position: absolute; top: 85px;">Right</strong> <strong style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 164px; position: absolute; top: 203px;">Bottom</strong> <em>margin-top</em> <em>margin-bottom</em> <em>border-top</em> <em>border-bottom</em></div>
+padding-bottom
 
-<p><img alt="Image:scrollTop.png" class="internal" src="/@api/deki/files/842/=ScrollTop.png"></p>
+**Left** **Top** **Right** **Bottom** _margin-top_ _margin-bottom_ _border-top_ _border-bottom_
 
-<h2 id="Спецификации">Спецификации</h2>
+![Image:scrollTop.png](/@api/deki/files/842/=ScrollTop.png)
+
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Ссылки">Ссылки</h2>
+## Ссылки
 
-<ul>
- <li><a class="external" href="http://dev.w3.org/csswg/cssom-view/#dom-element-scrolltop">W3C Draft CSSOM View Module</a></li>
- <li><a class="external" href="http://msdn.microsoft.com/en-us/library/ms534618(VS.85).aspx">MSDN's scrollTop definition</a></li>
- <li><a href="http://msdn.microsoft.com/en-us/library/hh781509(v=vs.85).aspx">MSDN's Measuring Element Dimension and Location</a></li>
-</ul>
+- [W3C Draft CSSOM View Module](http://dev.w3.org/csswg/cssom-view/#dom-element-scrolltop)
+- [MSDN's scrollTop definition](<http://msdn.microsoft.com/en-us/library/ms534618(VS.85).aspx>)
+- [MSDN's Measuring Element Dimension and Location](<http://msdn.microsoft.com/en-us/library/hh781509(v=vs.85).aspx>)

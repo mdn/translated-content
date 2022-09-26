@@ -11,54 +11,54 @@ tags:
   - Read-only
 translation_of: Web/API/MouseEvent/clientX
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p><strong><code>MouseEvent.clientX</code></strong> свойство доступное только для чтения. Это свойство является горизонтальной координатой в пределах клиентской области приложения, на которой произошло событие (в отличие от координат внутри страницы). Для примера, нажатие в верхнем левом углу клиентской области будет всегда приводить к событию со значением свойства <code>clientX </code>равным 0, независимо от того, прокручена страницы по горизонтали или нет.</p>
+**`MouseEvent.clientX`** свойство доступное только для чтения. Это свойство является горизонтальной координатой в пределах клиентской области приложения, на которой произошло событие (в отличие от координат внутри страницы). Для примера, нажатие в верхнем левом углу клиентской области будет всегда приводить к событию со значением свойства `clientX `равным 0, независимо от того, прокручена страницы по горизонтали или нет.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <em>x</em> = <em>instanceOfMouseEvent</em>.clientX
-</pre>
+```
+var x = instanceOfMouseEvent.clientX
+```
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Числовое значение горизонтальной координаты</p>
+Числовое значение горизонтальной координаты
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;Пример для clientX\clientY&lt;/title&gt;
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Пример для clientX\clientY</title>
 
-&lt;script&gt;
+<script>
 function showCoords(evt){
   alert(
     "clientX value: " + evt.clientX + "\n" +
     "clientY value: " + evt.clientY + "\n"
   );
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body onmousedown="showCoords(event)"&gt;
-&lt;p&gt;Для показа координат мышки нажмите в любом месте страницы.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<body onmousedown="showCoords(event)">
+<p>Для показа координат мышки нажмите в любом месте страницы.</p>
+</body>
+</html>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also"><strong>Смотрите также</strong></h2>
+## Смотрите также
 
-<ul>
- <li>{{ domxref("MouseEvent") }}</li>
- <li>{{domxref("MouseEvent.clientY","clientY")}}</li>
- <li>{{domxref("MouseEvent.screenX","screenX")}} / {{domxref("MouseEvent.screenY","screenY")}}</li>
-</ul>
+- {{ domxref("MouseEvent") }}
+- {{domxref("MouseEvent.clientY","clientY")}}
+- {{domxref("MouseEvent.screenX","screenX")}} / {{domxref("MouseEvent.screenY","screenY")}}

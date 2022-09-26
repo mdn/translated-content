@@ -3,39 +3,31 @@ title: HTMLBaseElement
 slug: Web/API/HTMLBaseElement
 translation_of: Web/API/HTMLBaseElement
 ---
-<div>
-<div>{{APIRef("HTML DOM")}}</div>
-</div>
+{{APIRef("HTML DOM")}}
 
-<div> </div>
+**`HTMLBaseElement`** интерфейс содержит базовый URI для документа. Этот объект наследует все свойства и методы которые описаны в {{domxref("HTMLElement")}} интерфейсе.
 
-<p><strong><code>HTMLBaseElement</code></strong> интерфейс содержит базовый URI для документа. Этот объект наследует все свойства и методы которые описаны в {{domxref("HTMLElement")}} интерфейсе.</p>
+## Свойства
 
-<h2 id="Свойства">Свойства</h2>
+_Наследует свойства от его родителя, {{domxref("HTMLElement")}}._
 
-<p><em>Наследует свойства от его родителя, {{domxref("HTMLElement")}}.</em></p>
+- {{domxref("HTMLBaseElement.href")}}
+  - : Это {{domxref("DOMString")}} которая отображает {{htmlattrxref("href", "base")}} HTML атрибут, содержащий базовый URL относительно URLs ы документе.
+- {{domxref("HTMLBaseElement.target")}}
+  - : Это {{domxref("DOMString")}} которое отображает {{htmlattrxref("target", "base")}} HTML атрибут, содержащий контекст цели просмотра по умолчанию или фрейм для элементов которые не имеют указанную целевую ссылку.
 
-<dl>
- <dt>{{domxref("HTMLBaseElement.href")}}</dt>
- <dd>Это {{domxref("DOMString")}} которая отображает {{htmlattrxref("href", "base")}} HTML атрибут, содержащий базовый URL относительно URLs ы документе.</dd>
- <dt>{{domxref("HTMLBaseElement.target")}}</dt>
- <dd>Это {{domxref("DOMString")}} которое отображает {{htmlattrxref("target", "base")}} HTML атрибут, содержащий контекст цели просмотра по умолчанию или фрейм для элементов которые не имеют указанную целевую ссылку.</dd>
-</dl>
+## Методы
 
-<h2 id="Методы">Методы</h2>
+_Не имеет специфичных методов; наследует атрибуты от своего родителя, {{domxref("HTMLElement")}}._
 
-<p><em>Не имеет специфичных методов; наследует атрибуты от своего родителя, {{domxref("HTMLElement")}}.</em></p>
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>HTML-элемент реализующий этот интерфейс: {{ HTMLElement("base") }}</li>
-</ul>
+- HTML-элемент реализующий этот интерфейс: {{ HTMLElement("base") }}

@@ -3,22 +3,24 @@ title: HTMLFormElement.reset()
 slug: Web/API/HTMLFormElement/reset
 translation_of: Web/API/HTMLFormElement/reset
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>Метод <strong><code>HTMLFormElement.reset()</code></strong> восстанавливает стандартные значения всем элементам формы. Данный метод выполняет действие идентичное нажатию кнопки имеющей тип reset.</p>
+Метод **`HTMLFormElement.reset()`** восстанавливает стандартные значения всем элементам формы. Данный метод выполняет действие идентичное нажатию кнопки имеющей тип reset.
 
-<p>Если элемент управления формы (такой как кнопка типа reset) имеет имя или идентификатор reset, это маскирует метод <strong><code>HTMLFormElement.reset()</code></strong>. Это не сбрасывает другие атрибуты, такие как <strong>disabled</strong>.</p>
+Если элемент управления формы (такой как кнопка типа reset) имеет имя или идентификатор reset, это маскирует метод **`HTMLFormElement.reset()`**. Это не сбрасывает другие атрибуты, такие как **disabled**.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="eval"><em>HTMLFormElement</em>.reset()
-</pre>
+```
+HTMLFormElement.reset()
+```
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="eval">document.getElementById('myform').reset();
-</pre>
+```
+document.getElementById('myform').reset();
+```
 
-<h2 id="Specifications">Спецификация</h2>
+## Спецификация
 
-<p><a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#resetting-a-form">HTML 5.1 Nightly: Resetting a form</a></p>
+[HTML 5.1 Nightly: Resetting a form](http://www.w3.org/html/wg/drafts/html/master/semantics.html#resetting-a-form)

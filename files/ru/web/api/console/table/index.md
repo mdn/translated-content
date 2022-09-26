@@ -7,29 +7,32 @@ tags:
   - консоль
 translation_of: Web/API/Console/table
 ---
-<div>{{APIRef("Console API")}}{{Non-standard_header}}</div>
+{{APIRef("Console API")}}{{Non-standard_header}}
 
-<p>Отображает наборы данных в виде таблицы.</p>
+Отображает наборы данных в виде таблицы.
 
-<p><code>Данная функция принимает один обязательный аргумент data</code>, который должен быть представлен в виде массива или объекта, и один дополнительный параметр <code>columns</code>.</p>
+`Данная функция принимает один обязательный аргумент data`, который должен быть представлен в виде массива или объекта, и один дополнительный параметр `columns`.
 
-<p>функция логирует аргумент <code>data</code> в виде таблицы. Каждый элемент массива (или каждое свойство, если <code>data -</code> это объект) будет представлять строку таблицы.</p>
+функция логирует аргумент `data` в виде таблицы. Каждый элемент массива (или каждое свойство, если `data -` это объект) будет представлять строку таблицы.
 
-<p>Первая колонка таблицы будет озаглавлена как <code>(index)</code>. Если <code>data</code> представлена массивом, тогда значения первой колонки будут представлять индексы массива. Если <code>data -</code><code> объект</code>, тогда значения первой колонки будут представлять свойства объекта.</p>
+Первая колонка таблицы будет озаглавлена как `(index)`. Если `data` представлена массивом, тогда значения первой колонки будут представлять индексы массива. Если ` data -`` объект `, тогда значения первой колонки будут представлять свойства объекта.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h3 id="Простые_наборы">Простые наборы</h3>
+### Простые наборы
 
-<p>Аргумент <code>data</code> может быть массивом или объектом.</p>
+Аргумент `data` может быть массивом или объектом.
 
-<pre class="brush: js">// массив строк
+```js
+// массив строк
 
-console.table(["apples", "oranges", "bananas"]);</pre>
+console.table(["apples", "oranges", "bananas"]);
+```
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/8567/console-table-array.png"></p>
+![](https://mdn.mozillademos.org/files/8567/console-table-array.png)
 
-<pre class="brush: js">// объект, чьи свойства содержат строки
+```js
+// объект, чьи свойства содержат строки
 
 function Person(firstName, lastName) {
   this.firstName = firstName;
@@ -38,22 +41,26 @@ function Person(firstName, lastName) {
 
 var me = new Person("John", "Smith");
 
-console.table(me);</pre>
+console.table(me);
+```
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/8559/console-table-simple-object.png"></p>
+![](https://mdn.mozillademos.org/files/8559/console-table-simple-object.png)
 
-<h3 id="Наборы_смешанных_типов">Наборы смешанных типов</h3>
+### Наборы смешанных типов
 
-<p>Если элементы массива, либо свойства объекта, в свою очередь сами являются массивами или объектами, тогда эти элементы или свойства перечисляются построчно, перечисляя вложенные элементы/свойства в колонках:</p>
+Если элементы массива, либо свойства объекта, в свою очередь сами являются массивами или объектами, тогда эти элементы или свойства перечисляются построчно, перечисляя вложенные элементы/свойства в колонках:
 
-<pre class="brush: js">// массив массивов
+```js
+// массив массивов
 
 var people = [["John", "Smith"], ["Jane", "Doe"], ["Emily", "Jones"]]
-console.table(people);</pre>
+console.table(people);
+```
 
-<p><img alt="Table displaying array of arrays" src="https://mdn.mozillademos.org/files/8561/console-table-array-of-array.png"></p>
+![Table displaying array of arrays](https://mdn.mozillademos.org/files/8561/console-table-array-of-array.png)
 
-<pre class="brush: js">// массив объектов
+```js
+// массив объектов
 
 function Person(firstName, lastName) {
   this.firstName = firstName;
@@ -64,13 +71,15 @@ var john = new Person("John", "Smith");
 var jane = new Person("Jane", "Doe");
 var emily = new Person("Emily", "Jones");
 
-console.table([john, jane, emily]);</pre>
+console.table([john, jane, emily]);
+```
 
-<p>Обратите внимание,  что если массив состоит из объектов, колонки таблицы будут озаглавлены названиями свойств объекта.</p>
+Обратите внимание, что если массив состоит из объектов, колонки таблицы будут озаглавлены названиями свойств объекта.
 
-<p><img alt="Table displaying array of objects" src="https://mdn.mozillademos.org/files/8563/console-table-array-of-objects.png"></p>
+![Table displaying array of objects](https://mdn.mozillademos.org/files/8563/console-table-array-of-objects.png)
 
-<pre class="brush: js">// объект, свойства которого являются объектами
+```js
+// объект, свойства которого являются объектами
 
 var family = {};
 
@@ -78,15 +87,17 @@ family.mother = new Person("Jane", "Smith");
 family.father = new Person("John", "Smith");
 family.daughter = new Person("Emily", "Smith");
 
-console.table(family);</pre>
+console.table(family);
+```
 
-<p><img alt="Table displaying object of objects" src="https://mdn.mozillademos.org/files/8565/console-table-object-of-objects.png"></p>
+![Table displaying object of objects](https://mdn.mozillademos.org/files/8565/console-table-object-of-objects.png)
 
-<h3 id="Ограничение_видимости_колонок">Ограничение видимости колонок</h3>
+### Ограничение видимости колонок
 
-<p>По умолчанию, <code>console.table()</code> отображает все элементы в каждой строке. Вы можете использовать опциональный параметр <code>columns</code> чтобы указать набор отображаемых колонок:</p>
+По умолчанию, `console.table()` отображает все элементы в каждой строке. Вы можете использовать опциональный параметр `columns` чтобы указать набор отображаемых колонок:
 
-<pre class="brush: js">// массив объектов, логируется только свойство firstName
+```js
+// массив объектов, логируется только свойство firstName
 
 function Person(firstName, lastName) {
   this.firstName = firstName;
@@ -97,32 +108,32 @@ var john = new Person("John", "Smith");
 var jane = new Person("Jane", "Doe");
 var emily = new Person("Emily", "Jones");
 
-console.table([john, jane, emily], ["firstName"]);</pre>
+console.table([john, jane, emily], ["firstName"]);
+```
 
-<p><img alt="Table displaying array of objects with filtered output" src="https://mdn.mozillademos.org/files/8569/console-table-array-of-objects-firstName-only.png"></p>
+![Table displaying array of objects with filtered output](https://mdn.mozillademos.org/files/8569/console-table-array-of-objects-firstName-only.png)
 
-<h3 id="Сортировка_колонок">Сортировка колонок</h3>
+### Сортировка колонок
 
-<p>Вы можете отсортировать необходимую колонку, кликнув по её заголовку.</p>
+Вы можете отсортировать необходимую колонку, кликнув по её заголовку.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">console.table(data [, <em>columns</em>]);
-</pre>
+```
+console.table(data [, columns]);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>data</code></dt>
- <dd>Данные для отображения. Могут быть представлены массивом или объектом.</dd>
- <dt><code>columns</code></dt>
- <dd>Массив названий колонок, которые следует отобразить.</dd>
-</dl>
+- `data`
+  - : Данные для отображения. Могут быть представлены массивом или объектом.
+- `columns`
+  - : Массив названий колонок, которые следует отобразить.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

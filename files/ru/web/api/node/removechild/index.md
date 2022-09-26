@@ -8,69 +8,68 @@ tags:
   - Method
 translation_of: Web/API/Node/removeChild
 ---
-<div>{{ApiRef}}</div>
+{{ApiRef}}
 
-<h2 id="Summary">Аннотация</h2>
+## Аннотация
 
-<p>Удаляет дочерний элемент из DOM. Возвращает удалённый элемент.</p>
+Удаляет дочерний элемент из DOM. Возвращает удалённый элемент.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>var oldChild</em> = <em>element</em>.removeChild(<em>child</em>);
-<em>element</em>.removeChild(<em>child</em>);
-</pre>
+```
+var oldChild = element.removeChild(child);
+element.removeChild(child);
+```
 
-<ul>
- <li><code>child</code> дочерний элемент который будет удалён из DOM.</li>
- <li><code>element</code> родительский элемент удаляемого <code>child</code>.</li>
- <li><code>oldChild</code> ссылка на удаляемый дочерний элемент. <code>oldChild</code> === <code>child</code>.</li>
-</ul>
+- `child` дочерний элемент который будет удалён из DOM.
+- `element` родительский элемент удаляемого `child`.
+- `oldChild` ссылка на удаляемый дочерний элемент. `oldChild` === `child`.
 
-<p>Удалённый дочерний элемент остаётся в памяти, но больше не является частью DOM. Вы можете повторно использовать удалённый элемент с помощью ссылки на объект - <code>oldChild</code>.</p>
+Удалённый дочерний элемент остаётся в памяти, но больше не является частью DOM. Вы можете повторно использовать удалённый элемент с помощью ссылки на объект - `oldChild`.
 
-<p>Если <code>child</code> не является дочерним элементом <code>element</code>, тогда метод генерирует исключение. Также это происходит если <code>child</code> является дочерним элементом <code>element</code> во время вызова метода, но был удалён во время вызова обработчика событий удаляющего элемент(т.e при удалении элемента непосредственно перед вызовом обработчика событий).</p>
+Если `child` не является дочерним элементом `element`, тогда метод генерирует исключение. Также это происходит если `child` является дочерним элементом `element` во время вызова метода, но был удалён во время вызова обработчика событий удаляющего элемент(т.e при удалении элемента непосредственно перед вызовом обработчика событий).
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre>&lt;!-- Пример --&gt;
+```
+<!-- Пример -->
 
-&lt;div id="top" align="center"&gt;
-  &lt;div id="nested"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+<div id="top" align="center">
+  <div id="nested"></div>
+</div>
+```
 
-<pre class="brush:js">// <em>Удаление элемента с известным родителем</em>
+```js
+// Удаление элемента с известным родителем
 var d = document.getElementById("top");
 var d_nested = document.getElementById("nested");
 var throwawayNode = d.removeChild(d_nested);
-</pre>
+```
 
-<pre class="brush:js">// Удаление элемента без указания его родителя
+```js
+// Удаление элемента без указания его родителя
 var node = document.getElementById("nested");
 if (node.parentNode) {
   node.parentNode.removeChild(node);
 }
-</pre>
+```
 
-<pre class="brush:js">// Удаление всех дочерних элементов
+```js
+// Удаление всех дочерних элементов
 var element = document.getElementById("top");
 while (element.firstChild) {
   element.removeChild(element.firstChild);
 }
-</pre>
+```
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<ul>
- <li><a href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeChild">DOM Level 1 Core: removeChild</a></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1734834066">DOM Level 2 Core: removeChild</a></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1734834066">DOM Level 3 Core: removeChild</a></li>
-</ul>
+- [DOM Level 1 Core: removeChild](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeChild)
+- [DOM Level 2 Core: removeChild](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1734834066)
+- [DOM Level 3 Core: removeChild](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1734834066)
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("Node.replaceChild")}}</li>
- <li>{{domxref("Node.parentNode")}}</li>
- <li>{{domxref("ChildNode.remove")}}</li>
-</ul>
+- {{domxref("Node.replaceChild")}}
+- {{domxref("Node.parentNode")}}
+- {{domxref("ChildNode.remove")}}

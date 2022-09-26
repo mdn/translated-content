@@ -8,17 +8,18 @@ tags:
   - Ссылка
 translation_of: Web/API/XMLHttpRequest/timeout
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p>Свойство <code><strong>XMLHttpRequest.timeout</strong></code> определяет количество миллисекунд, которое запрос будет выполняться, до того, как будет автоматически прерван. Имеет размер <code>unsigned long.</code> Значение по умолчанию - 0, определяет, что таймаута нет. Таймаут не должен быть использован в синхронных запросах XMLHttpRequests  в {{Glossary('среде документа')}}, или будет вызвано исключение <code>InvalidAccessError</code>. Когда случается таймаут - вызывается событие <a href="/en-US/docs/Web/Events/timeout">timeout</a>. {{gecko_minversion_inline("12.0")}}</p>
+Свойство **`XMLHttpRequest.timeout`** определяет количество миллисекунд, которое запрос будет выполняться, до того, как будет автоматически прерван. Имеет размер `unsigned long.` Значение по умолчанию - 0, определяет, что таймаута нет. Таймаут не должен быть использован в синхронных запросах XMLHttpRequests в {{Glossary('среде документа')}}, или будет вызвано исключение `InvalidAccessError`. Когда случается таймаут - вызывается событие [timeout](/ru/docs/Web/Events/timeout). {{gecko_minversion_inline("12.0")}}
 
-<div class="note"><strong>Примечание:</strong> вы не можете использовать таймаут для синхронных запросов с окном - владельцем.<a href="/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests#Example_using_a_timeout">Использование таймаута с асинхронными запросами</a></div>
+> **Примечание:** вы не можете использовать таймаут для синхронных запросов с окном - владельцем.[Использование таймаута с асинхронными запросами](/ru/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests#Example_using_a_timeout)
 
-<p>В  Internet Explorer, свойство timeout может быть установлено только после вызова метода <a href="/en-US/docs/Web/API/XMLHttpRequest/open">open()</a> и до вызова метода <a href="/en-US/docs/Web/API/XMLHttpRequest/send">send()</a>.</p>
+В Internet Explorer, свойство timeout может быть установлено только после вызова метода [open()](/ru/docs/Web/API/XMLHttpRequest/open) и до вызова метода [send()](/ru/docs/Web/API/XMLHttpRequest/send).
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 xhr.open('GET', '/server', true);
 
 xhr.timeout = 2000; // time in milliseconds
@@ -31,8 +32,9 @@ xhr.ontimeout = function (e) {
   // Таймаут. Здесь можно выполнить что-нибудь..
 };
 
-xhr.send(null);</pre>
+xhr.send(null);
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}

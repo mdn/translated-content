@@ -3,62 +3,62 @@ title: CanvasRenderingContext2D.stroke()
 slug: Web/API/CanvasRenderingContext2D/stroke
 translation_of: Web/API/CanvasRenderingContext2D/stroke
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Метод <strong><code>CanvasRenderingContext2D.stroke()</code></strong> Canvas 2D API обводит текущий или данный контур цветом <code>strokeStyle</code>.</p>
+Метод **`CanvasRenderingContext2D.stroke()`** Canvas 2D API обводит текущий или данный контур цветом `strokeStyle`.
 
-<p>Обводка выравнивается по центру контура, другими словами, половина линии обводки рисуется с внутренней стороны контура, и половина с внешней.</p>
+Обводка выравнивается по центру контура, другими словами, половина линии обводки рисуется с внутренней стороны контура, и половина с внешней.
 
-<p>Обводка отрисовывается согласно правилу ненулевого индекса, а значит, пересекающиеся части контура также будут обведены.</p>
+Обводка отрисовывается согласно правилу ненулевого индекса, а значит, пересекающиеся части контура также будут обведены.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">void <var><em>ctx</em>.stroke();</var>
-void <var><em>ctx</em>.stroke(path);</var>
-</pre>
+```
+void ctx.stroke();
+void ctx.stroke(path);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>path</code></dt>
- <dd>{{domxref ("Path2D")}} - контур, который нужно обвести.</dd>
-</dl>
+- `path`
+  - : {{domxref ("Path2D")}} - контур, который нужно обвести.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_метода_stroke()">Использование метода <code>stroke()</code></h3>
+### Использование метода `stroke()`
 
-<p>В этом примере с помощью метода <code>rect()</code> создаётся прямоугольник, и затем с помощью <code>stroke()</code> отрисовывается на холсте.</p>
+В этом примере с помощью метода `rect()` создаётся прямоугольник, и затем с помощью `stroke()` отрисовывается на холсте.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 ctx.rect(10, 10, 100, 100);
 ctx.stroke();
-</pre>
+```
 
-<p>Отредактируйте приведённый ниже код и посмотрите, как обновляется рисунок на холсте:</p>
+Отредактируйте приведённый ниже код и посмотрите, как обновляется рисунок на холсте:
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.rect(10, 10, 100, 100);
-ctx.stroke();&lt;/textarea&gt;
-</pre>
+ctx.stroke();</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -81,23 +81,18 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузеров">Поддержка браузеров</h2>
+## Поддержка браузеров
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Интерфейс, предоставляющий этот метод - {{domxref("CanvasRenderingContext2D")}}.</li>
-</ul>
+- Интерфейс, предоставляющий этот метод - {{domxref("CanvasRenderingContext2D")}}.

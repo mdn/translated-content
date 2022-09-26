@@ -3,30 +3,26 @@ title: HTMLUnknownElement
 slug: Web/API/HTMLUnknownElement
 translation_of: Web/API/HTMLUnknownElement
 ---
-<div>
-<div>{{ APIRef("HTML DOM") }}</div>
-</div>
+{{ APIRef("HTML DOM") }}
 
-<p>Интерфейс <strong><code>HTMLUnknownElement</code></strong> предоставляет недопустимый HTML-элемент и происходит от интерфейса {{domxref("HTMLElement")}}, но без каких либо дополнительных свойств и методов.</p>
+Интерфейс **`HTMLUnknownElement`** предоставляет недопустимый HTML-элемент и происходит от интерфейса {{domxref("HTMLElement")}}, но без каких либо дополнительных свойств и методов.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Нет специфичных свойств; наследует свойства от его родителя {{domxref("HTMLElement")}}.</em></p>
+_Нет специфичных свойств; наследует свойства от его родителя {{domxref("HTMLElement")}}._
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em>Нет специфичных методов; наследует методы от его потомка, {{domxref("HTMLElement")}}.</em></p>
+_Нет специфичных методов; наследует методы от его потомка, {{domxref("HTMLElement")}}._
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Устаревшие или нестандартные HTML-элементы реализующие этот интерфейс: {{HTMLElement("bgsound")}}, {{HTMLElement("blink")}}, {{HTMLElement("isindex")}}, {{HTMLElement("multicol")}}, {{HTMLElement("nextid")}}, {{HTMLElement("rb")}}, {{HTMLElement("spacer")}}</li>
-</ul>
+- Устаревшие или нестандартные HTML-элементы реализующие этот интерфейс: {{HTMLElement("bgsound")}}, {{HTMLElement("blink")}}, {{HTMLElement("isindex")}}, {{HTMLElement("multicol")}}, {{HTMLElement("nextid")}}, {{HTMLElement("rb")}}, {{HTMLElement("spacer")}}

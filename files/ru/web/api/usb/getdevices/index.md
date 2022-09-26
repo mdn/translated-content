@@ -11,40 +11,42 @@ tags:
   - getDevices()
 translation_of: Web/API/USB/getDevices
 ---
-<p>{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}</p>
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-<p>Метод<strong> <code>getDevices</code> </strong>интерфейса {{DOMxRef("USB")}} возвращает {{JSxRef("Promise")}}, который разрешается с массивом {{DOMxRef("USBDevice")}} объектов сопряжённых подключённых устройств. Для информации о сопряжённых устройствах, смотрите {{DOMxRef("USB.requestDevice()")}}.</p>
+Метод** `getDevices` **интерфейса {{DOMxRef("USB")}} возвращает {{JSxRef("Promise")}}, который разрешается с массивом {{DOMxRef("USBDevice")}} объектов сопряжённых подключённых устройств. Для информации о сопряжённых устройствах, смотрите {{DOMxRef("USB.requestDevice()")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>USB</em>.getDevices()</pre>
+```
+USB.getDevices()
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<p>Нет.</p>
+Нет.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>{{JSxRef("Promise")}}, который разрешается с массивом объектов {{DOMxRef("USBDevice")}}.</p>
+{{JSxRef("Promise")}}, который разрешается с массивом объектов {{DOMxRef("USBDevice")}}.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>В следующем примере имена продуктов и серийные номера сопряжённых устройств выводятся в консоль. Для информации о сопряжённых устройствах, смотрите {{DOMxRef("USB.requestDevice","USB.requestDevice()")}}.</p>
+В следующем примере имена продуктов и серийные номера сопряжённых устройств выводятся в консоль. Для информации о сопряжённых устройствах, смотрите {{DOMxRef("USB.requestDevice","USB.requestDevice()")}}.
 
-<pre class="brush: js">navigator.usb.getDevices()
-.then(devices =&gt; {
+```js
+navigator.usb.getDevices()
+.then(devices => {
   console.log("Total devices: " + devices.length);
-  devices.forEach(device =&gt; {
+  devices.forEach(device => {
     console.log("Product name: " + device.productName + ", serial number " + device.serialNumber);
   });
-});</pre>
+});
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

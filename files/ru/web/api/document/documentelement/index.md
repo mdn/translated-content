@@ -2,43 +2,44 @@
 title: Document.documentElement
 slug: Web/API/Document/documentElement
 tags:
-  - 'API,'
+  - API,
   - DOM
   - Свойство
   - Ссылка
   - Только для чтения
 translation_of: Web/API/Document/documentElement
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<p> <code><strong>Document.documentElement</strong></code> - свойство только для чтения, которое возвращает элемент <a href="/en-US/docs/DOM/element"><code>Element</code></a> , который является коренным элементом документа  <a href="/en-US/docs/DOM/document"><code>document</code></a> (например элемент <code>&lt;html&gt;</code> для HTML документов).</p>
+**`Document.documentElement`** - свойство только для чтения, которое возвращает элемент [`Element`](/ru/docs/DOM/element) , который является коренным элементом документа [`document`](/ru/docs/DOM/document) (например элемент `<html>` для HTML документов).
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <em>element</em> = document.documentElement;
-</pre>
+```
+var element = document.documentElement;
+```
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush:js">var rootElement = document.documentElement;
+```js
+var rootElement = document.documentElement;
 var firstTier = rootElement.childNodes;
 
 // firstTier -переменная объекта NodeList непосредственных потомков корневого элемента
-for (var i = 0; i &lt; firstTier.length; i++) {
+for (var i = 0; i < firstTier.length; i++) {
    // что-то делает с каждым прямым потомком корневого элемента
    // как и firstTier[i]
-}</pre>
+}
+```
 
-<h2 id="Notes">Примечания</h2>
+## Примечания
 
-<p>Это свойство удобно только для чтения для получения корневого элемента, связанного с любым документом.</p>
+Это свойство удобно только для чтения для получения корневого элемента, связанного с любым документом.
 
-<p>HTML документ обычно содержит один дочерний узел - <code>&lt;html&gt;</code>,  возможно с объявлением  DOCTYPE перед ним. XML документы часто содержат множественные  дочерние узлы: корневой элемент, объявление DOCTYPE, и <a href="/en-US/docs/DOM/ProcessingInstruction"> инструкции по обработке</a>.</p>
+HTML документ обычно содержит один дочерний узел - `<html>`, возможно с объявлением DOCTYPE перед ним. XML документы часто содержат множественные дочерние узлы: корневой элемент, объявление DOCTYPE, и [инструкции по обработке](/ru/docs/DOM/ProcessingInstruction).
 
-<p>Поэтому вам стоит использовать <code>document.documentElement</code> вместо {{Domxref("document.firstChild")}} для доступа к корневому элементу.</p>
+Поэтому вам стоит использовать `document.documentElement` вместо {{Domxref("document.firstChild")}} для доступа к корневому элементу.
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-87CD092">DOM Level 2 Core: Document.documentElement</a></li>
-</ul>
+- [DOM Level 2 Core: Document.documentElement](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-87CD092)

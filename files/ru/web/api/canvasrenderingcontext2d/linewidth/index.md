@@ -3,37 +3,39 @@ title: CanvasRenderingContext2D.lineWidth
 slug: Web/API/CanvasRenderingContext2D/lineWidth
 translation_of: Web/API/CanvasRenderingContext2D/lineWidth
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code>Свойство<strong> CanvasRenderingContext2D</strong></code><strong><code>.lineWidth</code></strong>, предоставляемое Canvas 2D API задаёт толщину линий в пикселах. При получении свойства возвращается его текущее значение. При задании свойства, присваиваемое значение должно быть положительным числом, ноль, отрицательные числа, {{jsxref("Infinity")}} и {{jsxref("NaN")}} игнорируются.</p>
+`Свойство CanvasRenderingContext2D`**`.lineWidth`**, предоставляемое Canvas 2D API задаёт толщину линий в пикселах. При получении свойства возвращается его текущее значение. При задании свойства, присваиваемое значение должно быть положительным числом, ноль, отрицательные числа, {{jsxref("Infinity")}} и {{jsxref("NaN")}} игнорируются.
 
-<p>Смотрите также главу  <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</a> в <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</a>.</p>
+Смотрите также главу [Applying styles and color](/ru/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) в [Canvas Tutorial](/ru/docs/Web/API/Canvas_API/Tutorial).
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var><em>ctx</em>.lineWidth = value;</var></pre>
+```
+ctx.lineWidth = value;
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>value</code></dt>
- <dd>Число, задающее толщину линии в пикселах. Ноль, отрицательные числа, {{jsxref("Infinity")}} и {{jsxref("NaN")}} игнорируются.</dd>
-</dl>
+- `value`
+  - : Число, задающее толщину линии в пикселах. Ноль, отрицательные числа, {{jsxref("Infinity")}} и {{jsxref("NaN")}} игнорируются.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Using_the_lineWidth_property">Использование свойства lineWidth</h3>
+### Использование свойства lineWidth
 
-<p>Ниже представлен простой фрагмент кода, использующий lineWidth.</p>
+Ниже представлен простой фрагмент кода, использующий lineWidth.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.beginPath();
@@ -41,27 +43,26 @@ ctx.moveTo(0,0);
 ctx.lineWidth = 15;
 ctx.lineTo(100, 100);
 ctx.stroke();
-</pre>
+```
 
-<p>Вы можете редактировать код, представленный ниже, и сделанные вами изменения отобразятся на холсте в режиме реального времени:</p>
+Вы можете редактировать код, представленный ниже, и сделанные вами изменения отобразятся на холсте в режиме реального времени:
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.beginPath();
 ctx.moveTo(0,0);
 ctx.lineWidth = 15;
 ctx.lineTo(100, 100);
-ctx.stroke();&lt;/textarea&gt;
-</pre>
+ctx.stroke();</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -84,35 +85,28 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Особенности_WebKitBlink">Особенности WebKit/Blink</h2>
+## Особенности WebKit/Blink
 
-<ul>
- <li>В браузерах на базе WebKit и Blink, помимо этого свойства также поддерживается нестандартный метод <code>ctx.setLineWidth()</code>.</li>
-</ul>
+- В браузерах на базе WebKit и Blink, помимо этого свойства также поддерживается нестандартный метод `ctx.setLineWidth()`.
 
-<h2 id="Особенности_Gecko">Особенности Gecko</h2>
+## Особенности Gecko
 
-<ul>
- <li>В Gecko ниже 2.0 версии, при задании lineWidth отрицательного значения выбрасывалось исключение.</li>
-</ul>
+- В Gecko ниже 2.0 версии, при задании lineWidth отрицательного значения выбрасывалось исключение.
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Интерфейс, предоставляющий это свойство: {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.lineCap")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.lineJoin")}}</li>
-</ul>
+- Интерфейс, предоставляющий это свойство: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.lineCap")}}
+- {{domxref("CanvasRenderingContext2D.lineJoin")}}

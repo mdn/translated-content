@@ -7,46 +7,45 @@ tags:
   - Property
 translation_of: Web/API/Document/URL
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Возвращает строку URL документа HTML.</p>
+Возвращает строку URL документа HTML.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>string</em> = document.URL
-</pre>
+```
+string = document.URL
+```
 
-<p> </p>
+## Пример
 
-<h2 id="Пример">Пример</h2>
+### JavaScript
 
-<h3 id="JavaScript">JavaScript</h3>
+```
+document.getElementById("url").textContent = document.URL;
+```
 
-<pre><code>document.getElementById("url").textContent = document.URL;</code></pre>
+### HTML
 
-<h3 id="HTML">HTML</h3>
+```html
+<p id="urlText">
+  URL:<br/>
+  <span id="url">URL goes here</span>
+</p>
+```
 
-<pre class="brush: html">&lt;p id="urlText"&gt;
-  URL:&lt;br/&gt;
-  &lt;span id="url"&gt;URL goes here&lt;/span&gt;
-&lt;/p&gt;</pre>
+### Результат
 
-<h3 id="Результат">Результат</h3>
+{{EmbedLiveSample("Пример", "100%", 100)}}
 
-<p>{{EmbedLiveSample("Пример", "100%", 100)}}</p>
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Браузерная_поддержка">Браузерная поддержка</h2>
+## Браузерная поддержка
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("HTMLDocument")}}</li>
-</ul>
-
-<p> </p>
+- {{domxref("HTMLDocument")}}

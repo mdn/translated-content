@@ -4,18 +4,18 @@ slug: Web/API/Document_Object_Model/Examples
 translation_of: Web/API/Document_Object_Model/Examples
 original_slug: DOM/DOM_Reference/Examples
 ---
-<p>В этой главе представлены более длинные примеры разработки веб-сайтов и XML с использованием DOM. По возможности, примеры используют общие API, трюки и шаблоны в JavaScript для управления объектом документа.</p>
+В этой главе представлены более длинные примеры разработки веб-сайтов и XML с использованием DOM. По возможности, примеры используют общие API, трюки и шаблоны в JavaScript для управления объектом документа.
 
-<h2 id="Example_1_height_and_width">Пример 1: высота и ширина</h2>
+## Пример 1: высота и ширина
 
-<p>В следующем примере показано использование свойств высоты и ширины для изображений разных размеров:<br>
-  </p>
+В следующем примере показано использование свойств высоты и ширины для изображений разных размеров:
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;title&gt;width/height example&lt;/title&gt;
-&lt;script&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>width/height example</title>
+<script>
 function init() {
   var arrImages = new Array(3);
 
@@ -24,150 +24,157 @@ function init() {
   arrImages[2] = document.getElementById("image3");
 
   var objOutput = document.getElementById("output");
-  var strHtml = "&lt;ul&gt;";
+  var strHtml = "<ul>";
 
-  for (var i = 0; i &lt; arrImages.length; i++) {
-    strHtml += "&lt;li&gt;image" + (i+1) +
+  for (var i = 0; i < arrImages.length; i++) {
+    strHtml += "<li>image" + (i+1) +
             ": height=" + arrImages[i].height +
             ", width=" + arrImages[i].width +
             ", style.height=" + arrImages[i].style.height +
             ", style.width=" + arrImages[i].style.width +
-            "&lt;\/li&gt;";
+            "<\/li>";
   }
 
-  strHtml += "&lt;\/ul&gt;";
+  strHtml += "<\/ul>";
 
   objOutput.innerHTML = strHtml;
 }
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body onload="init();"&gt;
+</script>
+</head>
+<body onload="init();">
 
-&lt;p&gt;Image 1: no height, width, or style
-  &lt;img id="image1" src="http://www.mozilla.org/images/mozilla-banner.gif"&gt;
-&lt;/p&gt;
+<p>Image 1: no height, width, or style
+  <img id="image1" src="http://www.mozilla.org/images/mozilla-banner.gif">
+</p>
 
-&lt;p&gt;Image 2: height="50", width="500", but no style
-  &lt;img id="image2"
+<p>Image 2: height="50", width="500", but no style
+  <img id="image2"
        src="http://www.mozilla.org/images/mozilla-banner.gif"
-       height="50" width="500"&gt;
-&lt;/p&gt;
+       height="50" width="500">
+</p>
 
-&lt;p&gt;Image 3: no height, width, but style="height: 50px; width: 500px;"
-  &lt;img id="image3"
+<p>Image 3: no height, width, but style="height: 50px; width: 500px;"
+  <img id="image3"
        src="http://www.mozilla.org/images/mozilla-banner.gif"
-       style="height: 50px; width: 500px;"&gt;
-&lt;/p&gt;
+       style="height: 50px; width: 500px;">
+</p>
 
-&lt;div id="output"&gt; &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<div id="output"> </div>
+</body>
+</html>
+```
 
-<h2 id="Example_2_Image_Attributes">Пример 2: Атрибуты Изображения</h2>
+## Пример 2: Атрибуты Изображения
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;title&gt;Modifying an image border&lt;/title&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Modifying an image border</title>
 
-&lt;script&gt;
+<script>
 function setBorderWidth(width) {
   document.getElementById("img1").style.borderWidth = width + "px";
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body&gt;
-&lt;p&gt;
-  &lt;img id="img1"
+<body>
+<p>
+  <img id="img1"
        src="image1.gif"
        style="border: 5px solid green;"
-       width="100" height="100" alt="border test"&gt;
-&lt;/p&gt;
+       width="100" height="100" alt="border test">
+</p>
 
-&lt;form name="FormName"&gt;
-  &lt;input type="button" value="Make border 20px-wide" onclick="setBorderWidth(20);" /&gt;
-  &lt;input type="button" value="Make border 5px-wide"  onclick="setBorderWidth(5);" /&gt;
-&lt;/form&gt;
+<form name="FormName">
+  <input type="button" value="Make border 20px-wide" onclick="setBorderWidth(20);" />
+  <input type="button" value="Make border 5px-wide"  onclick="setBorderWidth(5);" />
+</form>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h2 id="Example_3_Manipulating_Styles">Пример 3: Управление Стилями</h2>
+## Пример 3: Управление Стилями
 
-<p>В этом простом примере, некоторые базовые свойства стиля элемента абзаца HTML доступны с помощью объекта стиля элемента и свойств стиля CSS этого объекта, который можно получить и установить из DOM. В этом случае вы напрямую управляете отдельными стилями. В следующем примере (см. Пример 4), вы можете использовать таблицы стилей и их правила для изменения стилей для целых документов.</p>
+В этом простом примере, некоторые базовые свойства стиля элемента абзаца HTML доступны с помощью объекта стиля элемента и свойств стиля CSS этого объекта, который можно получить и установить из DOM. В этом случае вы напрямую управляете отдельными стилями. В следующем примере (см. Пример 4), вы можете использовать таблицы стилей и их правила для изменения стилей для целых документов.
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;title&gt;Changing color and font-size example&lt;/title&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Changing color and font-size example</title>
 
-&lt;script&gt;
+<script>
 function changeText() {
   var p = document.getElementById("pid");
 
   p.style.color = "blue"
   p.style.fontSize = "18pt"
 }
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
+</script>
+</head>
+<body>
 
-&lt;p id="pid" onclick="window.location.href = 'http://www.cnn.com/';"&gt;linker&lt;/p&gt;
+<p id="pid" onclick="window.location.href = 'http://www.cnn.com/';">linker</p>
 
-&lt;form&gt;
-  &lt;p&gt;&lt;input value="rec" type="button" onclick="changeText();" /&gt;&lt;/p&gt;
-&lt;/form&gt;
+<form>
+  <p><input value="rec" type="button" onclick="changeText();" /></p>
+</form>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h2 id="Example_4_Using_Stylesheets">Пример 4: Использование Стилей</h2>
+## Пример 4: Использование Стилей
 
-<p>Свойство styleSheets объекта документа возвращает список таблиц стилей, которые были загружены в этот документ. Вы можете получить доступ к этим таблицам стилей и их правилам индивидуально, используя объекты таблицы стилей, стилей и CSS-правил объекта, как показано в этом примере, который выводит все селектора правил стиля в консоль.</p>
+Свойство styleSheets объекта документа возвращает список таблиц стилей, которые были загружены в этот документ. Вы можете получить доступ к этим таблицам стилей и их правилам индивидуально, используя объекты таблицы стилей, стилей и CSS-правил объекта, как показано в этом примере, который выводит все селектора правил стиля в консоль.
 
-<pre class="brush:js">var ss = document.styleSheets;
+```js
+var ss = document.styleSheets;
 
-for(var i = 0; i &lt; ss.length; i++) {
-  for(var j = 0; j &lt; ss[i].cssRules.length; j++) {
+for(var i = 0; i < ss.length; i++) {
+  for(var j = 0; j < ss[i].cssRules.length; j++) {
     dump( ss[i].cssRules[j].selectorText + "\n" );
   }
-}</pre>
+}
+```
 
-<p>Для документа с единой таблицей стилей, в которой определены следующие три правила:</p>
+Для документа с единой таблицей стилей, в которой определены следующие три правила:
 
-<pre class="brush:css">body { background-color: darkblue; }
+```css
+body { background-color: darkblue; }
 p { font-face: Arial; font-size: 10pt; margin-left: .125in; }
 #lumpy { display: none; }
-</pre>
+```
 
-<p>Этот скрипт выводит следующее:</p>
+Этот скрипт выводит следующее:
 
-<pre>BODY
+```
+BODY
 P
 #LUMPY
-</pre>
+```
 
-<h2 id="Example_5_Event_Propagation">Пример 5: Распространение Событий</h2>
+## Пример 5: Распространение Событий
 
-<p>Этот пример демонстрирует, как события срабатывают и обрабатываются в DOM очень простым путём. Когда загружается BODY в составе HTML-документа, обработчик событий регистрируется в верхней строке таблицы TABLE. Обработчик событий реагирует на событие запуском функции stopEvent, изменяющей значение в нижней ячейке.</p>
+Этот пример демонстрирует, как события срабатывают и обрабатываются в DOM очень простым путём. Когда загружается BODY в составе HTML-документа, обработчик событий регистрируется в верхней строке таблицы TABLE. Обработчик событий реагирует на событие запуском функции stopEvent, изменяющей значение в нижней ячейке.
 
-<p>Однако, stopEvent также вызывает метод объекта событий, {{domxref("event.stopPropagation")}}, что препятствует дальнейшему всплытию события в DOM. Обратите внимание, что сама таблица имеет {{domxref("element.onclick","onclick")}} обработчик событий, который должен отображать сообщение при нажатии на таблицу. Но метод stopEvent метод прекратил распространение, и поэтому после обновления данных в таблице фаза события эффективно завершается, и отображается окно предупреждения для подтверждения.</p>
+Однако, stopEvent также вызывает метод объекта событий, {{domxref("event.stopPropagation")}}, что препятствует дальнейшему всплытию события в DOM. Обратите внимание, что сама таблица имеет {{domxref("element.onclick","onclick")}} обработчик событий, который должен отображать сообщение при нажатии на таблицу. Но метод stopEvent метод прекратил распространение, и поэтому после обновления данных в таблице фаза события эффективно завершается, и отображается окно предупреждения для подтверждения.
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;title&gt;Event Propagation&lt;/title&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Event Propagation</title>
 
-&lt;style&gt;
+<style>
 #t-daddy { border: 1px solid red }
 #c1 { background-color: pink; }
-&lt;/style&gt;
+</style>
 
-&lt;script&gt;
+<script>
 function stopEvent(ev) {
   c2 = document.getElementById("c2");
   c2.innerHTML = "hello";
@@ -181,37 +188,38 @@ function load() {
   elem = document.getElementById("tbl1");
   elem.addEventListener("click", stopEvent, false);
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body onload="load();"&gt;
+<body onload="load();">
 
-&lt;table id="t-daddy" onclick="alert('hi');"&gt;
-  &lt;tr id="tbl1"&gt;
-    &lt;td id="c1"&gt;one&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td id="c2"&gt;two&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
+<table id="t-daddy" onclick="alert('hi');">
+  <tr id="tbl1">
+    <td id="c1">one</td>
+  </tr>
+  <tr>
+    <td id="c2">two</td>
+  </tr>
+</table>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h2 id="Example_6_getComputedStyle">Пример 6: getComputedStyle</h2>
+## Пример 6: getComputedStyle
 
-<p>Этот пример показывает как {{domxref("window.getComputedStyle")}} метод может использоваться для получения стилей элемента, которые не заданы с помощью атрибута style или с помощью JavaScript (e.g., <code>elt.style.backgroundColor="rgb(173, 216, 230)"</code>). Эти последние типы стилей можно получить с помощью более прямых {{domxref("element.style", "elt.style")}} свойств, которые указаны в <a href="/en-US/docs/Web/CSS/Reference">DOM CSS Properties List</a>.</p>
+Этот пример показывает как {{domxref("window.getComputedStyle")}} метод может использоваться для получения стилей элемента, которые не заданы с помощью атрибута style или с помощью JavaScript (e.g., `elt.style.backgroundColor="rgb(173, 216, 230)"`). Эти последние типы стилей можно получить с помощью более прямых {{domxref("element.style", "elt.style")}} свойств, которые указаны в [DOM CSS Properties List](/ru/docs/Web/CSS/Reference).
 
-<p>getComputedStyle () возвращает объект ComputedCSSStyleDeclaration, свойства индивидуального стиля которого могут ссылаться на метод getPropertyValue () этого объекта, как показано в следующем примере документа.</p>
+getComputedStyle () возвращает объект ComputedCSSStyleDeclaration, свойства индивидуального стиля которого могут ссылаться на метод getPropertyValue () этого объекта, как показано в следующем примере документа.
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-&lt;title&gt;getComputedStyle example&lt;/title&gt;
+<title>getComputedStyle example</title>
 
-&lt;script&gt;
+<script>
 function cStyles() {
   var RefDiv = document.getElementById("d1");
   var txtHeight = document.getElementById("t1");
@@ -229,64 +237,61 @@ function cStyles() {
 
   txtBackgroundColor.value = b_style;
 }
-&lt;/script&gt;
+</script>
 
-&lt;style&gt;
+<style>
 #d1 {
   margin-left: 10px;
   background-color: rgb(173, 216, 230);
   height: 20px;
   max-width: 20px;
 }
-&lt;/style&gt;
+</style>
 
-&lt;/head&gt;
+</head>
 
-&lt;body&gt;
+<body>
 
-&lt;div id="d1"&gt;&amp;nbsp;&lt;/div&gt;
+<div id="d1">&nbsp;</div>
 
-&lt;form action=""&gt;
-  &lt;p&gt;
-    &lt;button type="button" onclick="cStyles();"&gt;getComputedStyle&lt;/button&gt;
-    height&lt;input id="t1" type="text" value="1" /&gt;
-    max-width&lt;input id="t2" type="text" value="2" /&gt;
-    bg-color&lt;input id="t3" type="text" value="3" /&gt;
-  &lt;/p&gt;
-&lt;/form&gt;
+<form action="">
+  <p>
+    <button type="button" onclick="cStyles();">getComputedStyle</button>
+    height<input id="t1" type="text" value="1" />
+    max-width<input id="t2" type="text" value="2" />
+    bg-color<input id="t3" type="text" value="3" />
+  </p>
+</form>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h2 id="Example_7_Displaying_Event_Object_Properties">Пример 7: Отображение Свойств Событий Объекта</h2>
+## Пример 7: Отображение Свойств Событий Объекта
 
+В этом примере используются методы DOM для отображения всех свойств объекта {{domxref ("window.onload")}} {{domxref ("event")}} и их значений в таблице. Он также показывает полезный метод использования цикла for..in для итерации по свойствам объекта для получения их значений.
 
+Свойства объектов событий сильно различаются между браузерами, WHATWG DOM Standard перечисляет стандартные свойства, однако многие браузеры значительно расширили их.
 
-<p>В этом примере используются методы DOM для отображения всех свойств объекта {{domxref ("window.onload")}} {{domxref ("event")}} и их значений в таблице. Он также показывает полезный метод использования цикла for..in для итерации по свойствам объекта для получения их значений.</p>
+Поместите следующий код в пустой текстовый файл и загрузите его в различные браузеры, вы будете удивлены различным количеством и именами свойств. Вы также можете добавить некоторые элементы на страницу и вызвать эту функцию из разных обработчиков событий.
 
-<p>Свойства объектов событий сильно различаются между браузерами, WHATWG DOM Standard перечисляет стандартные свойства, однако многие браузеры значительно расширили их.</p>
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Show Event properties</title>
 
-<p>Поместите следующий код в пустой текстовый файл и загрузите его в различные браузеры, вы будете удивлены различным количеством и именами свойств. Вы также можете добавить некоторые элементы на страницу и вызвать эту функцию из разных обработчиков событий.</p>
-
-
-
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;meta charset="utf-8"/&gt;
-&lt;title&gt;Show Event properties&lt;/title&gt;
-
-&lt;style&gt;
+<style>
 table { border-collapse: collapse; }
 thead { font-weight: bold; }
 td { padding: 2px 10px 2px 10px; }
 
 .odd { background-color: #efdfef; }
 .even { background-color: #ffffff; }
-&lt;/style&gt;
+</style>
 
-&lt;script&gt;
+<script>
 
 function showEventProperties(e) {
   function addCell(row, text) {
@@ -303,7 +308,7 @@ function showEventProperties(e) {
   var lableList = ['#', 'Property', 'Value'];
   var len = lableList.length;
 
-  for (var i=0; i&lt;len; i++) {
+  for (var i=0; i<len; i++) {
     addCell(row, lableList[i]);
   }
 
@@ -324,60 +329,53 @@ function showEventProperties(e) {
 window.onload = function(event){
   showEventProperties(event);
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body&gt;
-&lt;h1&gt;Properties of the DOM &lt;span id="eventType"&gt;&lt;/span&gt; Event Object&lt;/h1&gt;
-&lt;/body&gt;
+<body>
+<h1>Properties of the DOM <span id="eventType"></span> Event Object</h1>
+</body>
 
-&lt;/html&gt;
-</pre>
+</html>
+```
 
-<h2 id="Example_8_Using_the_DOM_Table_Interface">Пример 8: Использование интерфейса таблицы DOM</h2>
+## Пример 8: Использование интерфейса таблицы DOM
 
+Интерфейс DOM HTMLTableElement предоставляет некоторые удобные методы для создания и управления таблицами. Два часто используемых метода: {{domxref ("HTMLTableElement.insertRow")}} и {{domxref ("tableRow.insertCell")}}.
 
+Чтобы добавить строку и некоторые ячейки в существующую таблицу:
 
-<p>Интерфейс DOM HTMLTableElement предоставляет некоторые удобные методы для создания и управления таблицами. Два часто используемых метода: {{domxref ("HTMLTableElement.insertRow")}} и {{domxref ("tableRow.insertCell")}}.</p>
+```html
+<table id="table0">
+ <tr>
+  <td>Row 0 Cell 0</td>
+  <td>Row 0 Cell 1</td>
+ </tr>
+</table>
 
-<p>Чтобы добавить строку и некоторые ячейки в существующую таблицу:</p>
-
-
-
-<pre class="brush:html">&lt;table id="table0"&gt;
- &lt;tr&gt;
-  &lt;td&gt;Row 0 Cell 0&lt;/td&gt;
-  &lt;td&gt;Row 0 Cell 1&lt;/td&gt;
- &lt;/tr&gt;
-&lt;/table&gt;
-
-&lt;script&gt;
+<script>
 var table = document.getElementById('table0');
 var row = table.insertRow(-1);
 var cell,
     text;
 
-for (var i = 0; i &lt; 2; i++) {
+for (var i = 0; i < 2; i++) {
   cell = row.insertCell(-1);
   text = 'Row ' + row.rowIndex + ' Cell ' + i;
   cell.appendChild(document.createTextNode(text));
 }
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h3 id="Notes">Примечания</h3>
+### Примечания
 
-<ul>
- <li>Свойство таблицы {{domxref ("element.innerHTML", "innerHTML")}} никогда не должно использоваться для изменения таблицы, хотя вы можете использовать её для записи всей таблицы или содержимого ячейки.</li>
- <li>Если для создания строк и ячеек используются методы DOM Core {{domxref ("document.createElement")}} и {{domxref ("Node.appendChild")}}, IE требует, чтобы они были добавлены к элементу tbody, тогда как другие браузеры позволят добавлять к элементу таблицы (строки будут добавлены к последнему элементу tbody).</li>
- <li>Существует ряд других методов, относящихся к интерфейсу таблицы, которые могут использоваться для создания и изменения таблиц.</li>
-</ul>
+- Свойство таблицы {{domxref ("element.innerHTML", "innerHTML")}} никогда не должно использоваться для изменения таблицы, хотя вы можете использовать её для записи всей таблицы или содержимого ячейки.
+- Если для создания строк и ячеек используются методы DOM Core {{domxref ("document.createElement")}} и {{domxref ("Node.appendChild")}}, IE требует, чтобы они были добавлены к элементу tbody, тогда как другие браузеры позволят добавлять к элементу таблицы (строки будут добавлены к последнему элементу tbody).
+- Существует ряд других методов, относящихся к интерфейсу таблицы, которые могут использоваться для создания и изменения таблиц.
 
-<h2 id="Subnav">Subnav</h2>
+## Subnav
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Document_Object_Model">DOM Reference</a></li>
- <li><a href="/en-US/docs/Web/API/Document_Object_Model/Introduction">Introduction to the DOM</a></li>
- <li><a href="/en-US/docs/Web/API/Document_Object_Model/Events">Events and the DOM</a></li>
- <li><a href="/en-US/docs/Web/API/Document_Object_Model/Examples">Examples</a></li>
-</ul>
+- [DOM Reference](/ru/docs/Web/API/Document_Object_Model)
+- [Introduction to the DOM](/ru/docs/Web/API/Document_Object_Model/Introduction)
+- [Events and the DOM](/ru/docs/Web/API/Document_Object_Model/Events)
+- [Examples](/ru/docs/Web/API/Document_Object_Model/Examples)

@@ -4,29 +4,29 @@ slug: Web/API/clearTimeout
 translation_of: Web/API/WindowOrWorkerGlobalScope/clearTimeout
 original_slug: Web/API/WindowOrWorkerGlobalScope/clearTimeout
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>clearTimeout()</code></strong> метод {{domxref("WindowOrWorkerGlobalScope")}} отменяет таймаут, ранее установленный вызовом {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}}.</p>
+**`clearTimeout()`** метод {{domxref("WindowOrWorkerGlobalScope")}} отменяет таймаут, ранее установленный вызовом {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}}.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>scope</em>.clearTimeout(<em>timeoutID</em>)
-</pre>
+```
+scope.clearTimeout(timeoutID)
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code><em>timeoutID</em></code></dt>
- <dd>Идентификатор таймаута, который вы хотите отменить. Этот идентификатор был возвращён соответствующим вызовом <code>setTimeout()</code>.</dd>
-</dl>
+- `timeoutID`
+  - : Идентификатор таймаута, который вы хотите отменить. Этот идентификатор был возвращён соответствующим вызовом `setTimeout()`.
 
-<p>It's worth noting that the pool of IDs used by {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} and {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}} are shared, which means you can technically use <code>clearTimeout()</code> and {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}} interchangeably. However, for clarity, you should avoid doing so.</p>
+It's worth noting that the pool of IDs used by {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} and {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}} are shared, which means you can technically use `clearTimeout()` and {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}} interchangeably. However, for clarity, you should avoid doing so.
 
-<h2 id="Example">Пример использования:</h2>
+## Пример использования:
 
-<p>Запустите приведённый ниже скрипт в контакте веб-страницы и кликните один раз. Вы увидите всплывающее сообщение через 1 секунду. Если вы щёлкните страницу несколько раз за одну секунду, предупреждение появится только один раз.</p>
+Запустите приведённый ниже скрипт в контакте веб-страницы и кликните один раз. Вы увидите всплывающее сообщение через 1 секунду. Если вы щёлкните страницу несколько раз за одну секунду, предупреждение появится только один раз.
 
-<pre class="brush: js">var alarm = {
+```js
+var alarm = {
   remind: function(aMessage) {
     alert(aMessage);
     this.timeoutID = undefined;
@@ -47,48 +47,27 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/clearTimeout
   }
 };
 window.onclick = function() { alarm.setup(); };
-</pre>
+```
 
-<h2 id="Notes">Примечания</h2>
+## Примечания
 
-<p>Передача недействительного ID <code>clearTimeout()</code> ни к чему не приведёт. Исключение не создается.</p>
+Передача недействительного ID `clearTimeout()` ни к чему не приведёт. Исключение не создается.
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webappapis.html#dom-cleartimeout', 'WindowOrWorkerGlobalScope.clearTimeout()')}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Method moved to the <code>WindowOrWorkerGlobalScope</code> mixin in the latest spec.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webappapis.html#dom-cleartimeout', 'clearTimeout()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                                    | Status                           | Comment                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', 'webappapis.html#dom-cleartimeout', 'WindowOrWorkerGlobalScope.clearTimeout()')}} | {{Spec2("HTML WHATWG")}} | Method moved to the `WindowOrWorkerGlobalScope` mixin in the latest spec. |
+| {{SpecName('HTML WHATWG', 'webappapis.html#dom-cleartimeout', 'clearTimeout()')}}                                     | {{Spec2('HTML WHATWG')}} |                                                                           |
 
-<h2 id="Совместимость_с_браузером">Совместимость с браузером</h2>
+## Совместимость с браузером
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}</li>
- <li>{{domxref("WindowOrWorkerGlobalScope.setInterval()")}}</li>
- <li>{{domxref("WindowOrWorkerGlobalScope.clearInterval()")}}</li>
- <li>{{domxref("Window.requestAnimationFrame()")}}</li>
- <li><a href="/en-US/docs/JavaScript/Timers/Daemons" title="JavaScript/Timers/Daemons"><em>Daemons</em> management</a></li>
-</ul>
+- {{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}
+- {{domxref("WindowOrWorkerGlobalScope.setInterval()")}}
+- {{domxref("WindowOrWorkerGlobalScope.clearInterval()")}}
+- {{domxref("Window.requestAnimationFrame()")}}
+- [_Daemons_ management](/ru/docs/JavaScript/Timers/Daemons "JavaScript/Timers/Daemons")

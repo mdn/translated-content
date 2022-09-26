@@ -14,50 +14,43 @@ tags:
   - TopicStub
 translation_of: Web/API/PushManager
 ---
-<p>{{SeeCompatTable}}{{ApiRef("Push API")}}</p>
+{{SeeCompatTable}}{{ApiRef("Push API")}}
 
-<p>Интерфейс <code>PushManager</code> из <a href="/en-US/docs/Web/API/Push_API">Push API</a> предоставляет возможность получать уведомления от сторонних серверов, а также запрашивать URL для push уведомлений.</p>
+Интерфейс `PushManager` из [Push API](/ru/docs/Web/API/Push_API) предоставляет возможность получать уведомления от сторонних серверов, а также запрашивать URL для push уведомлений.
 
-<p>Этот интерфейс доступен через свойство {{domxref("ServiceWorkerRegistration.pushManager")}}.</p>
+Этот интерфейс доступен через свойство {{domxref("ServiceWorkerRegistration.pushManager")}}.
 
-<div class="note">
-<p><strong>Примечание</strong>: Этот интерфейс заменил функциональность, предлагаемую устаревшим {{domxref("PushRegistrationManager")}}.</p>
-</div>
+> **Примечание:** Этот интерфейс заменил функциональность, предлагаемую устаревшим {{domxref("PushRegistrationManager")}}.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<dl>
- <dt>{{domxref("PushManager.supportedContentEncodings")}}</dt>
- <dd>Возвращает массив со списком возможных алгоритмов кодирования, которые могут быть использованы для шифрования полезной нагрузки пуш-уведомления.</dd>
-</dl>
+- {{domxref("PushManager.supportedContentEncodings")}}
+  - : Возвращает массив со списком возможных алгоритмов кодирования, которые могут быть использованы для шифрования полезной нагрузки пуш-уведомления.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<dl>
- <dt>{{domxref("PushManager.subscribe()")}}</dt>
- <dd>Подписка на пуш сервис. Возвращает промис, который разрешается в {{domxref("PushSubscription")}} объект, содержащий детали новой push подписки.</dd>
- <dt>{{domxref("PushManager.getSubscription()")}}</dt>
- <dd>Извлекает существующую push подписку. Возвращает промис, который разрешается в {{domxref("PushSubscription")}} объект, содержащий детали существующей подписки.</dd>
- <dt>{{domxref("PushManager.permissionState()")}}</dt>
- <dd>Возвращает {{jsxref("Promise")}}, который разрешается в состояние доступа текущего {{domxref("PushManager")}}, которое может быть одним из <code>'granted'</code>, <code>'denied'</code>, или <code>'default'</code>.</dd>
-</dl>
+- {{domxref("PushManager.subscribe()")}}
+  - : Подписка на пуш сервис. Возвращает промис, который разрешается в {{domxref("PushSubscription")}} объект, содержащий детали новой push подписки.
+- {{domxref("PushManager.getSubscription()")}}
+  - : Извлекает существующую push подписку. Возвращает промис, который разрешается в {{domxref("PushSubscription")}} объект, содержащий детали существующей подписки.
+- {{domxref("PushManager.permissionState()")}}
+  - : Возвращает {{jsxref("Promise")}}, который разрешается в состояние доступа текущего {{domxref("PushManager")}}, которое может быть одним из `'granted'`, `'denied'`, или `'default'`.
 
-<h3 id="Устаревшие_методы">Устаревшие методы</h3>
+### Устаревшие методы
 
-<dl>
- <dt>{{domxref("PushManager.hasPermission()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} that resolves to the <code>PushPermissionStatus</code> of the requesting webapp, which will be one of <code>granted</code>, <code>denied</code>, or <code>default</code>. Replaced by {{domxref("PushManager.permissionState()")}}.</dd>
- <dt>{{domxref("PushManager.register()")}}</dt>
- <dd>Subscribes to a push subscription. Replaced by {{domxref("PushManager.subscribe()")}}.</dd>
- <dt>{{domxref("PushManager.registrations()")}}</dt>
- <dd>Retrieves existing push subscriptions. Replaced by {{domxref("PushManager.getSubscription()")}}.</dd>
- <dt>{{domxref("PushManager.unregister()")}}</dt>
- <dd>Unregisters and deletes a specified subscription endpoint. In the updated API, a subscription is can be unregistered via the {{domxref("PushSubscription.unsubscribe()")}} method.</dd>
-</dl>
+- {{domxref("PushManager.hasPermission()")}}
+  - : Returns a {{jsxref("Promise")}} that resolves to the `PushPermissionStatus` of the requesting webapp, which will be one of `granted`, `denied`, or `default`. Replaced by {{domxref("PushManager.permissionState()")}}.
+- {{domxref("PushManager.register()")}}
+  - : Subscribes to a push subscription. Replaced by {{domxref("PushManager.subscribe()")}}.
+- {{domxref("PushManager.registrations()")}}
+  - : Retrieves existing push subscriptions. Replaced by {{domxref("PushManager.getSubscription()")}}.
+- {{domxref("PushManager.unregister()")}}
+  - : Unregisters and deletes a specified subscription endpoint. In the updated API, a subscription is can be unregistered via the {{domxref("PushSubscription.unsubscribe()")}} method.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">this.onpush = function(event) {
+```js
+this.onpush = function(event) {
   console.log(event.data);
   // From here we can write the data to IndexedDB, send it to any open
   // windows, display a notification, etc.
@@ -80,23 +73,18 @@ navigator.serviceWorker.register('serviceworker.js').then(
         console.log(error);
       }
     );
-  });</pre>
+  });
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Push_API/Using_the_Push_API">Использование Push API</a></li>
- <li><a href="http://updates.html5rocks.com/2015/03/push-notificatons-on-the-open-web">Push сообщения в Open Web</a>, Matt Gaunt</li>
-</ul>
+- [Использование Push API](/ru/docs/Web/API/Push_API/Using_the_Push_API)
+- [Push сообщения в Open Web](http://updates.html5rocks.com/2015/03/push-notificatons-on-the-open-web), Matt Gaunt

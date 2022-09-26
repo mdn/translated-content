@@ -10,33 +10,33 @@ tags:
 translation_of: Web/API/HTMLHyperlinkElementUtils/search
 original_slug: Web/API/HTMLHyperlinkElementUtils/search
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("URL API")}}
 
-<p>Свойство <strong><code>HTMLHyperlinkElementUtils.search</code></strong> – это {{domxref("USVString")}}, содержащий <code>'?'</code> с последующими параметрами URL.</p>
+Свойство **`HTMLHyperlinkElementUtils.search`** – это {{domxref("USVString")}}, содержащий `'?'` с последующими параметрами URL.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.search;
-<em>object</em>.search = <em>string</em>;
-</pre>
+```
+string = object.search;
+object.search = string;
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">// Допустим, что документ содержит элемент &lt;a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.search?q=123"&gt;
+```js
+// Допустим, что документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.search?q=123">
 var anchor = document.getElementById("myAnchor");
 var result = anchor.search; // Вернёт: '?q=123'
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит это свойство.</li>
-</ul>
+- Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит это свойство.

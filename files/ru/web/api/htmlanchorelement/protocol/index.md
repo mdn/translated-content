@@ -10,33 +10,33 @@ tags:
 translation_of: Web/API/HTMLHyperlinkElementUtils/protocol
 original_slug: Web/API/HTMLHyperlinkElementUtils/protocol
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("URL API")}}
 
-<p>Свойство <strong><code>HTMLHyperlinkElementUtils.protocol</code></strong> – это {{domxref("USVString")}}, содержащий протокол URL включая <code>':'</code> в конце.</p>
+Свойство **`HTMLHyperlinkElementUtils.protocol`** – это {{domxref("USVString")}}, содержащий протокол URL включая `':'` в конце.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.protocol;
-<em>object</em>.protocol = <em>string</em>;
-</pre>
+```
+string = object.protocol;
+object.protocol = string;
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">// Допустим, что документ содержит элемент &lt;a id="myAnchor" href="https://developer.mozilla.org/en-US/HTMLHyperlinkElementUtils.protocol"&gt;
+```js
+// Допустим, что документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/en-US/HTMLHyperlinkElementUtils.protocol">
 var anchor = document.getElementByID("myAnchor");
 var result = anchor.protocol; // Вернёт: 'https:'
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит это свойство.</li>
-</ul>
+- Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит это свойство.

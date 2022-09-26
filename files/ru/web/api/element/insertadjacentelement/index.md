@@ -11,70 +11,59 @@ tags:
   - insertAdjacentElement
 translation_of: Web/API/Element/insertAdjacentElement
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>Метод <strong><code>insertAdjacentElement()</code></strong> добавляет переданный элемент в DOM-дерево относительно элемента, вызвавшего метод.</p>
+Метод **`insertAdjacentElement()`** добавляет переданный элемент в DOM-дерево относительно элемента, вызвавшего метод.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre><em>targetElement</em>.insertAdjacentElement(<em>position</em>, <em>element</em>);</pre>
+```
+targetElement.insertAdjacentElement(position, element);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>position</dt>
- <dd>{{domxref("DOMString")}} - определяет позицию добавляемого элемента относительно элемента, вызвавшего метод. Должно соответствовать одному из следующих значений (чувствительно к регистру):
- <ul>
-  <li><code style="color: red;">'beforebegin'</code>: перед самим элементом <code>targetElement</code>.</li>
-  <li><code style="color: green;">'afterbegin'</code>: внутри элемента <code>targetElement</code>, перед его первым потомком.</li>
-  <li><code style="color: blue;">'beforeend'</code>: внутри элемента <code>targetElement</code>, после его последнего потомка.</li>
-  <li><code style="color: magenta;">'afterend'</code>: после самого элемента <code>targetElement</code>.</li>
- </ul>
- </dd>
- <dt>element</dt>
- <dd>Элемент, добавляемый в DOM-дерево.</dd>
-</dl>
+- position
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+  - : {{domxref("DOMString")}} - определяет позицию добавляемого элемента относительно элемента, вызвавшего метод. Должно соответствовать одному из следующих значений (чувствительно к регистру):
 
-<p>Метод возвращает добавляемый элемент, либо <code>null</code>, если добавление элемента завершилось ошибкой.</p>
+    - `'beforebegin'`: перед самим элементом `targetElement`.
+    - `'afterbegin'`: внутри элемента `targetElement`, перед его первым потомком.
+    - `'beforeend'`: внутри элемента `targetElement`, после его последнего потомка.
+    - `'afterend'`: после самого элемента `targetElement`.
 
-<h3 id="Исключения">Исключения</h3>
+- element
+  - : Элемент, добавляемый в DOM-дерево.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Исключение</th>
-   <th scope="col">Пояснение</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>SyntaxError</code></td>
-   <td>Переданное значение <code>position</code> не соответствует ни одному из допустимых.</td>
-  </tr>
-  <tr>
-   <td><code>TypeError</code></td>
-   <td>Передаваемый <code>element</code> не является валидным.</td>
-  </tr>
- </tbody>
-</table>
+### Возвращаемое значение
 
-<h3 id="Наглядное_отображение_параметра_position">Наглядное отображение параметра position</h3>
+Метод возвращает добавляемый элемент, либо `null`, если добавление элемента завершилось ошибкой.
 
-<pre>&lt;!-- <strong><code style="color: red;">beforebegin</code></strong> --&gt;
-<code style="font-weight: bold;">&lt;p&gt;</code>
-&lt;!-- <strong><code style="color: green;">afterbegin</code></strong> --&gt;
+### Исключения
+
+| Исключение    | Пояснение                                                                |
+| ------------- | ------------------------------------------------------------------------ |
+| `SyntaxError` | Переданное значение `position` не соответствует ни одному из допустимых. |
+| `TypeError`   | Передаваемый `element` не является валидным.                             |
+
+### Наглядное отображение параметра position
+
+```
+<!-- beforebegin -->
+<p>
+<!-- afterbegin -->
 foo
-&lt;!-- <strong><code style="color: blue;">beforeend</code></strong> --&gt;
-<code style="font-weight: bold;">&lt;/p&gt;</code>
-&lt;!-- <strong><code style="color: magenta;">afterend</code></strong> --&gt;</pre>
+<!-- beforeend -->
+</p>
+<!-- afterend -->
+```
 
-<div class="note"><strong>Примечание:</strong> значения <code>beforebegin</code> и <code>afterend</code> работают только если targetElement находится в DOM-дереве и имеет родительский элемент.</div>
+> **Примечание:** значения `beforebegin` и `afterend` работают только если targetElement находится в DOM-дереве и имеет родительский элемент.
 
-<h2 id="Example">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">beforeBtn.addEventListener('click', function() {
+```js
+beforeBtn.addEventListener('click', function() {
   var tempDiv = document.createElement('div');
   tempDiv.style.backgroundColor = randomColor();
   if (activeElem) {
@@ -90,40 +79,24 @@ afterBtn.addEventListener('click', function() {
     activeElem.insertAdjacentElement('afterend',tempDiv);
   }
   setListener(tempDiv);
-});</pre>
+});
+```
 
-<p>Посмотрите наше демо <a href="https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentElement.html">insertAdjacentElement.html</a> на Github (так же посмотрите <a href="https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentElement.html">исходный код</a>). В этом демо мы имеем последовательность {{htmlelement("div")}} элементов внутри контейнера. При выборе одного из них можно нажать кнопку <em>Insert before</em> или <em>Insert after</em> и добавить новые div до или после выбранного  элемента используя метод <code>insertAdjacentElement()</code>.</p>
+Посмотрите наше демо [insertAdjacentElement.html](https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentElement.html) на Github (так же посмотрите [исходный код](https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentElement.html)). В этом демо мы имеем последовательность {{htmlelement("div")}} элементов внутри контейнера. При выборе одного из них можно нажать кнопку _Insert before_ или _Insert after_ и добавить новые div до или после выбранного элемента используя метод `insertAdjacentElement()`.
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-element-insertadjacentelement', 'insertAdjacentElement()')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                                             | Статус                           | Комментарий |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
+| {{SpecName('DOM WHATWG', '#dom-element-insertadjacentelement', 'insertAdjacentElement()')}} | {{ Spec2('DOM WHATWG') }} |             |
 
-<h2 id="Browser_Compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div id="compat-desktop"></div>
+## Смотрите также
 
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{domxref("Element.insertAdjacentHTML()")}}</li>
- <li>{{domxref("Element.insertAdjacentText()")}}</li>
- <li>{{domxref("Node.insertBefore()")}}</li>
- <li>{{domxref("Node.appendChild()")}} (такой же эффект со значением position <code>beforeend</code>)</li>
-</ul>
+- {{domxref("Element.insertAdjacentHTML()")}}
+- {{domxref("Element.insertAdjacentText()")}}
+- {{domxref("Node.insertBefore()")}}
+- {{domxref("Node.appendChild()")}} (такой же эффект со значением position `beforeend`)

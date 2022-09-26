@@ -13,34 +13,33 @@ tags:
   - Window
 translation_of: Web/API/Window/parent
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>Ссылка на родительский объект window или родительский iframe.</p>
+Ссылка на родительский объект window или родительский iframe.
 
-<p>Если у объекта window нет родителя, то свойство parent данного объекта будет ссылаться на сам объект.</p>
+Если у объекта window нет родителя, то свойство parent данного объекта будет ссылаться на сам объект.
 
-<p>Если window загружен внутри {{htmlelement("iframe")}}, {{htmlelement("object")}}, или {{htmlelement("frame")}}, то его parent - это объект window с элементом содержащим данный window.</p>
+Если window загружен внутри {{htmlelement("iframe")}}, {{htmlelement("object")}}, или {{htmlelement("frame")}}, то его parent - это объект window с элементом содержащим данный window.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>parentWindow</var> = window.parent;
-</pre>
+```
+parentWindow = window.parent;
+```
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush:js">if (window.parent != window.top) {
+```js
+if (window.parent != window.top) {
   // мы находимся глубже чем один уровень
-}</pre>
+}
+```
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<ul>
- <li><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#dom-parent">HTML5</a></li>
-</ul>
+- [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#dom-parent)
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("window.frameElement")}} возвращает элемент (например <code>&lt;iframe&gt;</code>), который содержит объект  window.</li>
- <li>{{domxref("window.top")}} возвращает ссылку на объект window самого верхнего уровня.</li>
-</ul>
+- {{domxref("window.frameElement")}} возвращает элемент (например `<iframe>`), который содержит объект window.
+- {{domxref("window.top")}} возвращает ссылку на объект window самого верхнего уровня.

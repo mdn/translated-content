@@ -3,33 +3,33 @@ title: Navigator.doNotTrack
 slug: Web/API/Navigator/doNotTrack
 translation_of: Web/API/Navigator/doNotTrack
 ---
-<p>{{ ApiRef("HTML DOM") }}{{SeeCompatTable}}</p>
+{{ ApiRef("HTML DOM") }}{{SeeCompatTable}}
 
-<p>Возвращает настройки пользователя  do-not-track. Будет "yes" если пользователь попросил не отслеживать его на веб-сайтах, контенте, рекламе.</p>
+Возвращает настройки пользователя do-not-track. Будет "yes" если пользователь попросил не отслеживать его на веб-сайтах, контенте, рекламе.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="eval"><em>dnt</em> = <em>navigator</em>.doNotTrack;
-</pre>
+```
+dnt = navigator.doNotTrack;
+```
 
-<p>Значение отражает , что в заголовке do-not-track header, т.е. значения {"1", "0", "unspecified" }.Примечание: до  Gecko 32, Gecko были использованы значения { "yes", "no", "unspecified"} (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=887703">bug 887703</a>).</p>
+Значение отражает , что в заголовке do-not-track header, т.е. значения {"1", "0", "unspecified" }.Примечание: до Gecko 32, Gecko были использованы значения { "yes", "no", "unspecified"} ([bug 887703](https://bugzilla.mozilla.org/show_bug.cgi?id=887703)).
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="eval">dump(window.navigator.doNotTrack);
+```
+dump(window.navigator.doNotTrack);
 // prints "1" if DNT is enabled; "0" if the user opted-in for tracking; otherwise this is "unspecified"
-</pre>
+```
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<p><a class="external" href="http://www.w3.org/TR/tracking-dnt/">Tracking Preference Expression</a> (Working проект) основан на более ранней версии этой спецификации, где <code>navigator.doNotTrack</code> <strong>это </strong>значение<strong> </strong> посланное заголовком do-not-track.</p>
+[Tracking Preference Expression](http://www.w3.org/TR/tracking-dnt/) (Working проект) основан на более ранней версии этой спецификации, где `navigator.doNotTrack` **это** значение\*\* \*\*посланное заголовком do-not-track.
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en/The_Do_Not_Track_Field_Guide" title="https://developer.mozilla.org/en/The_Do_Not_Track_Field_Guide">The Do Not Track field guide</a></li>
-</ul>
+- [The Do Not Track field guide](/en/The_Do_Not_Track_Field_Guide "https://developer.mozilla.org/en/The_Do_Not_Track_Field_Guide")
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

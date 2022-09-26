@@ -10,35 +10,35 @@ tags:
 translation_of: Web/API/HTMLHyperlinkElementUtils/password
 original_slug: Web/API/HTMLHyperlinkElementUtils/password
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("URL API")}}
 
-<p>Свойство <strong><code>HTMLHyperlinkElementUtils.password</code></strong> – это {{domxref("USVString")}}, содержащий пароль, указанный перед именем домена.</p>
+Свойство **`HTMLHyperlinkElementUtils.password`** – это {{domxref("USVString")}}, содержащий пароль, указанный перед именем домена.
 
-<p><code>password</code> игнорируется без предупреждения, если свойство <code><a href="/en-US/docs/Web/API/HTMLHyperlinkElementUtils/username">username</a></code> не установлено.</p>
+`password` игнорируется без предупреждения, если свойство [`username`](/en-US/docs/Web/API/HTMLHyperlinkElementUtils/username) не установлено.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.password;
-<em>object</em>.password = <em>string</em>;
-</pre>
+```
+string = object.password;
+object.password = string;
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">// Допустим, что документ содержит элемент &lt;a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.username"&gt;
+```js
+// Допустим, что документ содержит элемент <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.username">
 var anchor = document.getElementByID("myAnchor");
 var result = anchor.password; // Вернёт: 'flabada'
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит это свойство.</li>
-</ul>
+- Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит это свойство.

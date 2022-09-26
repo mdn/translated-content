@@ -3,16 +3,12 @@ title: Node.lookupNamespaceURI()
 slug: Web/API/Node/lookupNamespaceURI
 translation_of: Web/API/Node/lookupNamespaceURI
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Метод <code><strong>Node.lookupNamespaceURI()</strong></code> берёт префикс и возвращает пространство имён URI связанное с ним в данном узле, если найден (и <code>null</code> если нет). Устанавливает <code>null</code> для префикса который возвращает пространство имён по умолчанию.</p>
+Метод **`Node.lookupNamespaceURI()`** берёт префикс и возвращает пространство имён URI связанное с ним в данном узле, если найден (и `null` если нет). Устанавливает `null` для префикса который возвращает пространство имён по умолчанию.
 
-<p>Из-за ошибки <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=312019">bug 312019</a>, этот метод не работает с динамическим назначением пространства имён (т.е., с уставленным тем же <a href="/en/DOM/Node.prefix" title="En/DOM/Node.prefix">Node.prefix</a>).</p>
+Из-за ошибки [bug 312019](https://bugzilla.mozilla.org/show_bug.cgi?id=312019), этот метод не работает с динамическим назначением пространства имён (т.е., с уставленным тем же [Node.prefix](/en/DOM/Node.prefix "En/DOM/Node.prefix")).
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-lookupNamespaceURI" rel="freelink">http://www.w3.org/TR/DOM-Level-3-Cor...upNamespaceURI</a></li>
-</ul>
-
-<p> </p>
+- [http://www.w3.org/TR/DOM-Level-3-Cor...upNamespaceURI](http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-lookupNamespaceURI)

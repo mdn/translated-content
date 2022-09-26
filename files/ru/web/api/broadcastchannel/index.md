@@ -3,59 +3,50 @@ title: BroadcastChannel
 slug: Web/API/BroadcastChannel
 translation_of: Web/API/BroadcastChannel
 ---
-<p>{{APIRef("Broadcast Channel API")}}</p>
+{{APIRef("Broadcast Channel API")}}
 
-<p>Интерфейс <code><strong>BroadcastChannel</strong></code> представляет собой именованный канал, на который можно подписаться из любого {{glossary("browsing context","контекста просмотра")}} данного {{glossary("origin","источника")}}. Это позволяет настроить коммуникацию между разными документами (в разных окнах, вкладках, фреймах и т.д.) одного источника. Сообщения распространяются с помощью события {{event("message")}}, выстреливающего для всех объектов <code>BroadcastChannel</code>, слушающих этот канал.</p>
+Интерфейс **`BroadcastChannel`** представляет собой именованный канал, на который можно подписаться из любого {{glossary("browsing context","контекста просмотра")}} данного {{glossary("origin","источника")}}. Это позволяет настроить коммуникацию между разными документами (в разных окнах, вкладках, фреймах и т.д.) одного источника. Сообщения распространяются с помощью события {{event("message")}}, выстреливающего для всех объектов `BroadcastChannel`, слушающих этот канал.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Конструктор">Конструктор</h2>
+## Конструктор
 
-<dl>
- <dt>{{domxref("BroadcastChannel.BroadcastChannel", "BroadcastChannel()")}}</dt>
- <dd>Создаёт объект, связанный с именованным каналом.</dd>
-</dl>
+- {{domxref("BroadcastChannel.BroadcastChannel", "BroadcastChannel()")}}
+  - : Создаёт объект, связанный с именованным каналом.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Этот интерфейс также наследует свойства от своего родителя, {{domxref("EventTarget")}}.</em></p>
+_Этот интерфейс также наследует свойства от своего родителя, {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("BroadcastChannel.name")}}</dt>
- <dd>Возвращает {{domxref("DOMString")}}, имя канала.</dd>
- <dt>
- <h3 id="Обработчики_событий">Обработчики событий</h3>
- </dt>
- <dt>{{domxref("BroadcastChannel.onmessage")}}</dt>
- <dd>{{event("Event_handlers", "event handler")}} свойство, определяющее функцию, которая будет запущена, когда произойдёт вызов события {{event("message")}} на этом объекте.</dd>
- <dt>{{domxref("BroadcastChannel.onmessageerror")}}</dt>
- <dd>{{event("Event_handlers", "event handler")}}, который вызывается, когда приходит {{domxref("MessageEvent")}} типа {{domxref("MessageError")}} — когда приходит сообщение, которое не может быть десереализовано.</dd>
-</dl>
+- {{domxref("BroadcastChannel.name")}}
+  - : Возвращает {{domxref("DOMString")}}, имя канала.
+- ### Обработчики событий
 
-<h2 id="Методы">Методы</h2>
+  {{domxref("BroadcastChannel.onmessage")}}
 
-<p><em>Этот интерфейс также наследует свойства от своего родителя,{{domxref("EventTarget")}}.</em></p>
+  - : {{event("Event_handlers", "event handler")}} свойство, определяющее функцию, которая будет запущена, когда произойдёт вызов события {{event("message")}} на этом объекте.
 
-<dl>
- <dt>{{domxref("BroadcastChannel.postMessage()")}}</dt>
- <dd>Отправляет сообщение любого типа объекта всем объектам <code>BroadcastChannel</code>, прослушивающим данный канал.</dd>
- <dt>{{domxref("BroadcastChannel.close()")}}</dt>
- <dd>Закрывает объект канала, указывая, что тот больше не будет получать новые сообщения, и позволяет сборщику мусора уничтожить его.</dd>
-</dl>
+- {{domxref("BroadcastChannel.onmessageerror")}}
+  - : {{event("Event_handlers", "event handler")}}, который вызывается, когда приходит {{domxref("MessageEvent")}} типа {{domxref("MessageError")}} — когда приходит сообщение, которое не может быть десереализовано.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Методы
+
+_Этот интерфейс также наследует свойства от своего родителя,{{domxref("EventTarget")}}._
+
+- {{domxref("BroadcastChannel.postMessage()")}}
+  - : Отправляет сообщение любого типа объекта всем объектам `BroadcastChannel`, прослушивающим данный канал.
+- {{domxref("BroadcastChannel.close()")}}
+  - : Закрывает объект канала, указывая, что тот больше не будет получать новые сообщения, и позволяет сборщику мусора уничтожить его.
+
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
+## Браузерная совместимость
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Another, more heavyweight, way of communicating between browser contexts: {{domxref("ServiceWorker")}}.</li>
- <li><a href="/en-US/docs/Web/API/Broadcast_Channel_API">Broadcast Channel API overview</a></li>
-</ul>
+- Another, more heavyweight, way of communicating between browser contexts: {{domxref("ServiceWorker")}}.
+- [Broadcast Channel API overview](/ru/docs/Web/API/Broadcast_Channel_API)

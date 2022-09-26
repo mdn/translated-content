@@ -9,48 +9,49 @@ tags:
   - Reference
 translation_of: Web/API/CanvasRenderingContext2D/bezierCurveTo
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<h2 id="Summary">Сводка</h2>
+## Сводка
 
-<p>Метод <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.bezierCurveTo()</code></strong>, предоставляемый Canvas 2D API, добавляет кубическую кривую Безье к контуру. Для построения требуются три точки. Первые две точки являются контрольными, а третья - конечной. Начальной точкой является последняя точка в текущем контуре, и она может быть изменена методом {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} перед созданием кривой Безье.</p>
+Метод **`CanvasRenderingContext2D`\*\***`.bezierCurveTo()`\*\*, предоставляемый Canvas 2D API, добавляет кубическую кривую Безье к контуру. Для построения требуются три точки. Первые две точки являются контрольными, а третья - конечной. Начальной точкой является последняя точка в текущем контуре, и она может быть изменена методом {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} перед созданием кривой Безье.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">void <var><em>ctx</em>.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y);</var>
-</pre>
+```
+void ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y);
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>cp1x</code></dt>
- <dd>Координата первой контрольной точки по оси x.</dd>
- <dt><code>cp1y</code></dt>
- <dd>Координата первой контрольной точки по оси y.</dd>
- <dt><code>cp2x</code></dt>
- <dd>Координата второй контрольной точки по оси x.</dd>
- <dt><code>cp2y</code></dt>
- <dd>Координата второй контрольной точки по оси y.</dd>
- <dt><code>x</code></dt>
- <dd>Координата конечной точки по оси x.</dd>
- <dt><code>y</code></dt>
- <dd>Координата конечной точки по оси y.</dd>
-</dl>
+- `cp1x`
+  - : Координата первой контрольной точки по оси x.
+- `cp1y`
+  - : Координата первой контрольной точки по оси y.
+- `cp2x`
+  - : Координата второй контрольной точки по оси x.
+- `cp2y`
+  - : Координата второй контрольной точки по оси y.
+- `x`
+  - : Координата конечной точки по оси x.
+- `y`
+  - : Координата конечной точки по оси y.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_метода_bezierCurveTo">Использование метода <code>bezierCurveTo</code></h3>
+### Использование метода `bezierCurveTo`
 
-<p>Ниже представлен простой фрагмент кода, рисующий кривую Безье. Контрольные точки нарисованы красным цветом, а начальная и конечная точки - синим.</p>
+Ниже представлен простой фрагмент кода, рисующий кривую Безье. Контрольные точки нарисованы красным цветом, а начальная и конечная точки - синим.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.beginPath();
@@ -68,27 +69,29 @@ ctx.fillStyle = 'red';
 // первая контрольная точка
 ctx.fillRect(230, 30, 10, 10);
 // вторая контрольная точка
-ctx.fillRect(150, 70, 10, 10);</pre>
+ctx.fillRect(150, 70, 10, 10);
+```
 
-<p>{{ EmbedLiveSample('Использование_метода_bezierCurveTo', 315, 165) }}</p>
+{{ EmbedLiveSample('Использование_метода_bezierCurveTo', 315, 165) }}
 
-<h3 id="Практическое_применение_bezierCurveTo">Практическое применение <code>bezierCurveTo</code></h3>
+### Практическое применение `bezierCurveTo`
 
-<p>Вы можете редактировать код, представленный ниже, и внесённые вами изменения отобразятся на холсте в режиме реального времени:</p>
+Вы можете редактировать код, представленный ниже, и внесённые вами изменения отобразятся на холсте в режиме реального времени:
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.beginPath();
 ctx.bezierCurveTo(50, 100, 180, 10, 20, 10);
-ctx.stroke();&lt;/textarea&gt;
-</pre>
+ctx.stroke();</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -111,22 +114,19 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Практическое_применение_bezierCurveTo', 700, 360) }}</p>
+{{ EmbedLiveSample('Практическое_применение_bezierCurveTo', 700, 360) }}
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Интерфейс, предоставляющий данный метод: {{domxref("CanvasRenderingContext2D")}}</li>
- <li><a href="https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D0%B8%D0%B2%D0%B0%D1%8F_%D0%91%D0%B5%D0%B7%D1%8C%D0%B5">Статья в Википедии про кривые Безье</a>.</li>
-</ul>
+- Интерфейс, предоставляющий данный метод: {{domxref("CanvasRenderingContext2D")}}
+- [Статья в Википедии про кривые Безье](https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D0%B8%D0%B2%D0%B0%D1%8F_%D0%91%D0%B5%D0%B7%D1%8C%D0%B5).

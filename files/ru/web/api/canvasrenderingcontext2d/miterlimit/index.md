@@ -3,50 +3,47 @@ title: CanvasRenderingContext2D.miterLimit
 slug: Web/API/CanvasRenderingContext2D/miterLimit
 translation_of: Web/API/CanvasRenderingContext2D/miterLimit
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Свойство <strong>CanvasRenderingContext2D.miterLimit</strong> устанавливает/возвращает максимальную длину среза.</p>
+Свойство **CanvasRenderingContext2D.miterLimit** устанавливает/возвращает максимальную длину среза.
 
-<p>Длина среза это расстояние между внутренним и внешнем углом, образованным пересечением двух линий.</p>
+Длина среза это расстояние между внутренним и внешнем углом, образованным пересечением двух линий.
 
-<div class="note">
-<p>For more info about miters, see <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</a> in the <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas tutorial</a>.</p>
+> **Примечание:** For more info about miters, see [Applying styles and color](/ru/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas tutorial](/ru/docs/Web/API/Canvas_API/Tutorial).
+
+## Синтаксис
+
+```
+ctx.miterLimit = число;
+```
+
+### Options
+
+- `число`
+  - : Положительное число, определяющее максимальную длину среза. Если текущая длина среза будет превышать заданное значение, то угол будет отображаться как при значении `bevel` свойства `lineJoin`.
+
+## Примеры
+
+### Using the `miterLimit` property
+
+See the chapter [Applying styles and color](/ru/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#A_demo_of_the_miterLimit_property) in the [Canvas tutorial](/ru/docs/Web/API/Canvas_API/Tutorial) for more information.
+
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
-
-<h2 id="Синтаксис">Синтаксис</h2>
-
-<pre class="syntaxbox"><em>ctx</em>.miterLimit = <em>число</em>;</pre>
-
-<h3 id="Options">Options</h3>
-
-<dl>
- <dt><code>число</code></dt>
- <dd>Положительное число, определяющее максимальную длину среза. Если текущая длина среза будет превышать заданное значение, то угол будет отображаться как при значении <code>bevel</code> свойства <code>lineJoin</code>.</dd>
-</dl>
-
-<h2 id="Примеры">Примеры</h2>
-
-<h3 id="Using_the_miterLimit_property">Using the <code>miterLimit</code> property</h3>
-
-<p>See the chapter <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#A_demo_of_the_miterLimit_property">Applying styles and color</a> in the <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas tutorial</a> for more information.</p>
-
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+<textarea id="code" class="playable-code">
 ctx.beginPath();
 ctx.moveTo(0,0);
 ctx.lineWidth = 15;
 ctx.lineTo(100, 100);
-ctx.stroke();&lt;/textarea&gt;
-</pre>
+ctx.stroke();</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -69,37 +66,28 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample("Демонстрация_свойства_miterLimit", "400", "180", "https://mdn.mozillademos.org/files/240/Canvas_miterlimit.png", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}</p>
+{{EmbedLiveSample("Демонстрация_свойства_miterLimit", "400", "180", "https://mdn.mozillademos.org/files/240/Canvas_miterlimit.png", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+### WebKit/Blink-specific notes
 
-<p>{{Compat}}</p>
+- In WebKit- and Blink-based Browsers, a non-standard and deprecated method `ctx.setMiterLimit()` is implemented in addition to this property.
 
-<h3 id="WebKitBlink-specific_notes">WebKit/Blink-specific notes</h3>
+### Gecko-specific notes
 
-<ul>
- <li>In WebKit- and Blink-based Browsers, a non-standard and deprecated method <code>ctx.setMiterLimit()</code> is implemented in addition to this property.</li>
-</ul>
+- Starting Gecko 2.0 {{geckoRelease("2.0")}}, setting `miterLimit` to a negative value no longer throws an exception; instead, it properly ignores non-positive values.
 
-<h3 id="Gecko-specific_notes">Gecko-specific notes</h3>
+## See also
 
-<ul>
- <li>Starting Gecko 2.0 {{geckoRelease("2.0")}}, setting <code>miterLimit</code> to a negative value no longer throws an exception; instead, it properly ignores non-positive values.</li>
-</ul>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>Интерфейс, определяющий это свойство: {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.lineCap")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.lineJoin")}}</li>
-</ul>
+- Интерфейс, определяющий это свойство: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.lineCap")}}
+- {{domxref("CanvasRenderingContext2D.lineJoin")}}

@@ -5,49 +5,43 @@ tags:
   - Виртуальная реальность
 translation_of: Web/API/VRFrameData
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-<p>Интерфейс VRFrameData API WebVR представляет всю информацию, необходимую для визуализации одного кадра сцены Виртуальной реальности; сконструирован с помощью {{domxref ("VRDisplay.getFrameData ()")}}.</p>
+Интерфейс VRFrameData API WebVR представляет всю информацию, необходимую для визуализации одного кадра сцены Виртуальной реальности; сконструирован с помощью {{domxref ("VRDisplay.getFrameData ()")}}.
 
-<h2 id="Конструктор">Конструктор</h2>
+## Конструктор
 
-<dl>
- <dt>{{domxref("VRFrameData.VRFrameData()")}}</dt>
- <dd>Создаёт экземпляр объекта VRFrameData.</dd>
-</dl>
+- {{domxref("VRFrameData.VRFrameData()")}}
+  - : Создаёт экземпляр объекта VRFrameData.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<dl>
- <dt>{{domxref("VRFrameData.leftProjectionMatrix")}} {{readonlyInline}}</dt>
- <dd>Параметр {{Domxref ("Float32Array")}}, представляющий матрицу 4x4, которая описывает проекцию, которая будет использоваться для рендеринга левого глаза.</dd>
- <dt>{{domxref("VRFrameData.leftViewMatrix")}} {{readonlyInline}}</dt>
- <dd>Параметр {{Domxref ("Float32Array")}}, представляющий матрицу 4x4, которая описывает преобразование вида, которое будет использоваться для визуализации для левого глаза.</dd>
- <dt>{{domxref("VRFrameData.pose")}} {{readonlyInline}}</dt>
- <dd>Параметр {{Domxref ("VRPose")}} {{domxref ("VRDisplay")}} в текущем {{domxref ("VRFrameData.timestamp")}}.</dd>
- <dt>{{domxref("VRFrameData.rightProjectionMatrix")}} {{readonlyInline}}</dt>
- <dd>Параметр {{Domxref ("Float32Array")}}, представляющий матрицу 4x4, которая описывает проекцию, которая будет использоваться для рендеринга для правого глаза.</dd>
- <dt>{{domxref("VRFrameData.rightViewMatrix")}} {{readonlyInline}}</dt>
- <dd>{{Domxref ("Float32Array")}}, представляющий матрицу 4x4, которая описывает преобразование вида, которое будет использоваться для визуализации для правого глаза.</dd>
- <dt>{{domxref("VRFrameData.timestamp")}} {{readonlyInline}}</dt>
- <dd>Постоянно увеличивающееся значение отметки времени, представляющее время, когда произошло обновление кадра.</dd>
-</dl>
+- {{domxref("VRFrameData.leftProjectionMatrix")}} {{readonlyInline}}
+  - : Параметр {{Domxref ("Float32Array")}}, представляющий матрицу 4x4, которая описывает проекцию, которая будет использоваться для рендеринга левого глаза.
+- {{domxref("VRFrameData.leftViewMatrix")}} {{readonlyInline}}
+  - : Параметр {{Domxref ("Float32Array")}}, представляющий матрицу 4x4, которая описывает преобразование вида, которое будет использоваться для визуализации для левого глаза.
+- {{domxref("VRFrameData.pose")}} {{readonlyInline}}
+  - : Параметр {{Domxref ("VRPose")}} {{domxref ("VRDisplay")}} в текущем {{domxref ("VRFrameData.timestamp")}}.
+- {{domxref("VRFrameData.rightProjectionMatrix")}} {{readonlyInline}}
+  - : Параметр {{Domxref ("Float32Array")}}, представляющий матрицу 4x4, которая описывает проекцию, которая будет использоваться для рендеринга для правого глаза.
+- {{domxref("VRFrameData.rightViewMatrix")}} {{readonlyInline}}
+  - : {{Domxref ("Float32Array")}}, представляющий матрицу 4x4, которая описывает преобразование вида, которое будет использоваться для визуализации для правого глаза.
+- {{domxref("VRFrameData.timestamp")}} {{readonlyInline}}
+  - : Постоянно увеличивающееся значение отметки времени, представляющее время, когда произошло обновление кадра.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>{{page("/Web/API/VRDisplay/getFrameData", "Examples")}}</p>
+{{page("/Web/API/VRDisplay/getFrameData", "Examples")}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_браузера">Совместимость браузера</h2>
+## Совместимость браузера
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Дополнительно">Дополнительно</h2>
+## Дополнительно
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
- <li><a href="http://mozvr.com/">MozVr.com</a> — демонстрационные материалы, материалы доступные для загрузки и другие ресурсы команды Mozilla VR team.</li>
-</ul>
+- [WebVR API homepage](/ru/docs/Web/API/WebVR_API)
+- [MozVr.com](http://mozvr.com/) — демонстрационные материалы, материалы доступные для загрузки и другие ресурсы команды Mozilla VR team.

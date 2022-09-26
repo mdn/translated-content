@@ -3,54 +3,52 @@ title: CanvasRenderingContext2D.measureText()
 slug: Web/API/CanvasRenderingContext2D/measureText
 translation_of: Web/API/CanvasRenderingContext2D/measureText
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Метод <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.measureText(),</code></strong> предоставляемый Canvas 2D API, возвращает объект {{domxref("TextMetrics")}}, содержащий информацию об измеренном тексте (например, ширину).</p>
+Метод **`CanvasRenderingContext2D`\*\***`.measureText(),`\*\* предоставляемый Canvas 2D API, возвращает объект {{domxref("TextMetrics")}}, содержащий информацию об измеренном тексте (например, ширину).
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>ctx</em>.measureText(<em>text</em>);</pre>
+```
+ctx.measureText(text);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>text</code></dt>
- <dd>Строка {{jsxref("String")}} для измерения.</dd>
-</dl>
+- `text`
+  - : Строка {{jsxref("String")}} для измерения.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Объект {{domxref("TextMetrics")}}.</p>
+Объект {{domxref("TextMetrics")}}.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Используя элемент {{HTMLElement("canvas")}}:</p>
+Используя элемент {{HTMLElement("canvas")}}:
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<p>... вы можете получить объект {{domxref("TextMetrics")}}, используя следующий код:</p>
+... вы можете получить объект {{domxref("TextMetrics")}}, используя следующий код:
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 let text = ctx.measureText('Hello world');
 console.log(text.width);  // 56;
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Интерфейс, определяющий этот метод: {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("TextMetrics")}}</li>
-</ul>
+- Интерфейс, определяющий этот метод: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("TextMetrics")}}

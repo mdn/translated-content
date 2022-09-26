@@ -9,38 +9,26 @@ tags:
 translation_of: Web/API/Window/crypto
 original_slug: Web/API/Window/crypto
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>{{domxref("Window.crypto")}} даёт доступ к интерфейсу {{domxref("Crypto")}}. Этот интерфейс предоставляет веб-странице доступ к встроенным в браузер возможностям криптографии.</p>
+{{domxref("Window.crypto")}} даёт доступ к интерфейсу {{domxref("Crypto")}}. Этот интерфейс предоставляет веб-странице доступ к встроенным в браузер возможностям криптографии.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <em>cryptoObj</em> = window.crypto || window.msCrypto; // для IE 11
-</pre>
+```
+var cryptoObj = window.crypto || window.msCrypto; // для IE 11
+```
 
-<h2 id="Specification">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Crypto API')}}</td>
-   <td>{{Spec2('Web Crypto API')}}</td>
-   <td>Стабильное API</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                             | Статус                               | Комментарий    |
+| ---------------------------------------- | ------------------------------------ | -------------- |
+| {{SpecName('Web Crypto API')}} | {{Spec2('Web Crypto API')}} | Стабильное API |
 
-<h2 id="Реализация_в_браузерах">Реализация в браузерах</h2>
+## Реализация в браузерах
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>глобальный объект {{domxref("Window")}} </li>
-</ul>
+- глобальный объект {{domxref("Window")}}

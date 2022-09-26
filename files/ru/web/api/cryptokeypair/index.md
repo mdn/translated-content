@@ -7,63 +7,44 @@ tags:
   - Web Crypto API
 translation_of: Web/API/CryptoKeyPair
 ---
-<div>{{APIRef("Web Crypto API")}}</div>
+{{APIRef("Web Crypto API")}}
 
-<p><strong><code>CryptoKeyPair</code></strong> из <a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API </a>представляет собой пару ключей для ассиметричных криптографических алгоритмов, также известных как алгоритмы с публичным-приватным ключом.</p>
+**`CryptoKeyPair`** из [Web Crypto API ](/ru/docs/Web/API/Web_Crypto_API)представляет собой пару ключей для ассиметричных криптографических алгоритмов, также известных как алгоритмы с публичным-приватным ключом.
 
-<p>Объект <code>CryptoKeyPair</code> может быть получен с помощью {{domxref("SubtleCrypto.generateKey()")}}, используя один из следующих алгоритмов: RSASSA-PKCS1-v1_5, RSA-PSS, RSA-OAEP, ECDSA, или ECDH.</p>
+Объект `CryptoKeyPair` может быть получен с помощью {{domxref("SubtleCrypto.generateKey()")}}, используя один из следующих алгоритмов: RSASSA-PKCS1-v1_5, RSA-PSS, RSA-OAEP, ECDSA, или ECDH.
 
-<p>У него всего два свойства, оба объекты <code><a href="/en-US/docs/Web/API/CryptoKey">CryptoKey</a></code>: свойства <code>privateKey</code>, содержащее приватный ключ, и <code>publicKey</code> с публичным ключом.</p>
+У него всего два свойства, оба объекты [`CryptoKey`](/en-US/docs/Web/API/CryptoKey): свойства `privateKey`, содержащее приватный ключ, и `publicKey` с публичным ключом.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<dl>
- <dt><code>CryptoKeyPair.privateKey</code></dt>
- <dd>Объект <code><a href="/en-US/docs/Web/API/CryptoKey">CryptoKey</a></code>, представляющее приватный ключ. В криптографических алгоритмах используется для расшифровывания и подписи.</dd>
- <dt><code>CryptoKeyPair.publicKey</code></dt>
- <dd>Объект <code><a href="/en-US/docs/Web/API/CryptoKey">CryptoKey</a></code>, представляющее публичный ключ. В криптографических алгоритмах используется для зашифровывания и проверки подлинности подписи.</dd>
-</dl>
+- `CryptoKeyPair.privateKey`
+  - : Объект [`CryptoKey`](/en-US/docs/Web/API/CryptoKey), представляющее приватный ключ. В криптографических алгоритмах используется для расшифровывания и подписи.
+- `CryptoKeyPair.publicKey`
+  - : Объект [`CryptoKey`](/en-US/docs/Web/API/CryptoKey), представляющее публичный ключ. В криптографических алгоритмах используется для зашифровывания и проверки подлинности подписи.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Методы <code>SubtleCrypto</code> обычно используют объекты <code>CryptoKeyPair</code>. Примеры:</p>
+Методы `SubtleCrypto` обычно используют объекты `CryptoKeyPair`. Примеры:
 
-<ul>
- <li><code><a href="/en-US/docs/Web/API/SubtleCrypto/generateKey">SubtleCrypto.generateKey()</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey">SubtleCrypto.deriveKey()</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey()</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/SubtleCrypto/exportKey">SubtleCrypto.exportKey()</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/SubtleCrypto/wrapKey">SubtleCrypto.wrapKey()</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/SubtleCrypto/unwrapKey">SubtleCrypto.unwrapKey()</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/SubtleCrypto/encrypt">SubtleCrypto.encrypt()</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/SubtleCrypto/decrypt">SubtleCrypto.decrypt()</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/SubtleCrypto/sign">SubtleCrypto.sign()</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/SubtleCrypto/verify">SubtleCrypto.verify()</a></code></li>
-</ul>
+- [`SubtleCrypto.generateKey()`](/en-US/docs/Web/API/SubtleCrypto/generateKey)
+- [`SubtleCrypto.deriveKey()`](/en-US/docs/Web/API/SubtleCrypto/deriveKey)
+- [`SubtleCrypto.importKey()`](/en-US/docs/Web/API/SubtleCrypto/importKey)
+- [`SubtleCrypto.exportKey()`](/en-US/docs/Web/API/SubtleCrypto/exportKey)
+- [`SubtleCrypto.wrapKey()`](/en-US/docs/Web/API/SubtleCrypto/wrapKey)
+- [`SubtleCrypto.unwrapKey()`](/en-US/docs/Web/API/SubtleCrypto/unwrapKey)
+- [`SubtleCrypto.encrypt()`](/en-US/docs/Web/API/SubtleCrypto/encrypt)
+- [`SubtleCrypto.decrypt()`](/en-US/docs/Web/API/SubtleCrypto/decrypt)
+- [`SubtleCrypto.sign()`](/en-US/docs/Web/API/SubtleCrypto/sign)
+- [`SubtleCrypto.verify()`](/en-US/docs/Web/API/SubtleCrypto/verify)
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table>
-  <thead>
-    <tr>
-      <th>Specification</th>
-      <th>Status</th>
-      <th>Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Web Crypto API')}}</td>
-      <td>{{Spec2('Web Crypto API')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+| Specification                            | Status                               | Comment |
+| ---------------------------------------- | ------------------------------------ | ------- |
+| {{SpecName('Web Crypto API')}} | {{Spec2('Web Crypto API')}} |         |
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("SubtleCrypto.generateKey")}}.</li>
- <li>{{domxref("SubtleCrypto.sign")}} and {{domxref("SubtleCrypto.verify")}}.</li>
- <li>{{domxref("SubtleCrypto.encrypt")}} and {{domxref("SubtleCrypto.decrypt")}}.</li>
-</ul>
+- {{domxref("SubtleCrypto.generateKey")}}.
+- {{domxref("SubtleCrypto.sign")}} and {{domxref("SubtleCrypto.verify")}}.
+- {{domxref("SubtleCrypto.encrypt")}} and {{domxref("SubtleCrypto.decrypt")}}.

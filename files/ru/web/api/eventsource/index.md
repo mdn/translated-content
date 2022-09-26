@@ -3,119 +3,63 @@ title: EventSource
 slug: Web/API/EventSource
 translation_of: Web/API/EventSource
 ---
-<p>{{APIRef("Websockets API")}}</p>
+{{APIRef("Websockets API")}}
 
-<p><code>Интерфейс EventSource</code> используется для получения серверных событий (Server-sent events). Он устанавливает соединение с сервером по HTTP и получает события в формате text/event-stream без закрытия соединения.</p>
+`Интерфейс EventSource` используется для получения серверных событий (Server-sent events). Он устанавливает соединение с сервером по HTTP и получает события в формате text/event-stream без закрытия соединения.
 
-<p>Вы можете присвоить атрибуту <code>onmessage</code> JavaScript-функцию для получения нетипизированных сообщений (то есть сообщений без поля <code style="font-size: 14px;">event</code>). Вы так же можете вызвать функцию <code style="font-size: 14px;">addEventListener()</code> для обработки событий так же, как для любого другого источника событий.</p>
+Вы можете присвоить атрибуту `onmessage` JavaScript-функцию для получения нетипизированных сообщений (то есть сообщений без поля `event`). Вы так же можете вызвать функцию `addEventListener()` для обработки событий так же, как для любого другого источника событий.
 
-<p>См. <a href="/en/Server-sent_events/Using_server-sent_events" title="en/Server-sent events/Using server-sent events">Using server-sent events</a> для более детальной информации </p>
+См. [Using server-sent events](/en/Server-sent_events/Using_server-sent_events "en/Server-sent events/Using server-sent events") для более детальной информации
 
-<h2 id="Method_overview">Методы</h2>
+## Методы
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td><code>void <a href="#close()">close</a>();</code></td>
-  </tr>
- </tbody>
-</table>
+| `void close();` |
+| --------------- |
 
-<h2 id="Attributes">Свойства</h2>
+## Свойства
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Attribute</td>
-   <td class="header">Type</td>
-   <td class="header">Description</td>
-  </tr>
-  <tr>
-   <td><code>onerror</code></td>
-   <td><code>nsIDOMEventListener</code></td>
-   <td>JavaScript-функция, вызываемая при появлении ошибки</td>
-  </tr>
-  <tr>
-   <td><code>onmessage</code></td>
-   <td><code>nsIDOMEventListener</code></td>
-   <td>JavaScript-функция, вызываемая при приходе сообщения без поля <code>event</code></td>
-  </tr>
-  <tr>
-   <td><code>onopen</code></td>
-   <td><code>nsIDOMEventListener</code></td>
-   <td>JavaScript-функция, вызываемая после открытия соединения</td>
-  </tr>
-  <tr>
-   <td><code>readyState</code></td>
-   <td><code><a href="/en/long" title="en/long">long</a></code></td>
-   <td>Состояние соединения, должно иметь одно из значений <code>CONNECTING</code>, <code>OPEN</code>, или <code>CLOSED</code>. <strong>Только для чтения</strong></td>
-  </tr>
-  <tr>
-   <td><code>url</code></td>
-   <td>{{ domxref("DOMString") }}</td>
-   <td><strong>Только для чтения</strong></td>
-  </tr>
- </tbody>
-</table>
+| Attribute    | Type                                 | Description                                                                                                   |
+| ------------ | ------------------------------------ | ------------------------------------------------------------------------------------------------------------- |
+| `onerror`    | `nsIDOMEventListener`                | JavaScript-функция, вызываемая при появлении ошибки                                                           |
+| `onmessage`  | `nsIDOMEventListener`                | JavaScript-функция, вызываемая при приходе сообщения без поля `event`                                         |
+| `onopen`     | `nsIDOMEventListener`                | JavaScript-функция, вызываемая после открытия соединения                                                      |
+| `readyState` | [`long`](/en/long "en/long")         | Состояние соединения, должно иметь одно из значений `CONNECTING`, `OPEN`, или `CLOSED`. **Только для чтения** |
+| `url`        | {{ domxref("DOMString") }} | **Только для чтения**                                                                                         |
 
-<p>В дополнение к открытым атрибутам два внутренних атрибута, которые не открыты напрямую:</p>
+В дополнение к открытым атрибутам два внутренних атрибута, которые не открыты напрямую:
 
-<dl>
- <dt>reconnection time</dt>
- <dd>Это время в миллисекундах, используемое для определения продолжительности ожидания после неудачной попытки соединения до повторного соединения</dd>
- <dt>last event ID string</dt>
- <dd>По умолчанию пустая строка. Сервер может отправлять сообщение с полем <code>id </code>для установки этого значения.</dd>
-</dl>
+- reconnection time
+  - : Это время в миллисекундах, используемое для определения продолжительности ожидания после неудачной попытки соединения до повторного соединения
+- last event ID string
+  - : По умолчанию пустая строка. Сервер может отправлять сообщение с полем `id `для установки этого значения.
 
-<h2 id="Constants">Константы</h2>
+## Константы
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Constant</td>
-   <td class="header">Value</td>
-   <td class="header">Description</td>
-  </tr>
-  <tr>
-   <td><code>CONNECTING</code></td>
-   <td><code>0</code></td>
-   <td>Соединение устанавливается</td>
-  </tr>
-  <tr>
-   <td><code>OPEN</code></td>
-   <td><code>1</code></td>
-   <td>Соединение открыто, получение событий</td>
-  </tr>
-  <tr>
-   <td><code>CLOSED</code></td>
-   <td><code>2</code></td>
-   <td>Соединение не устанавливается, закрыто, или произошла фатальная ошибка</td>
-  </tr>
- </tbody>
-</table>
+| Constant     | Value | Description                                                            |
+| ------------ | ----- | ---------------------------------------------------------------------- |
+| `CONNECTING` | `0`   | Соединение устанавливается                                             |
+| `OPEN`       | `1`   | Соединение открыто, получение событий                                  |
+| `CLOSED`     | `2`   | Соединение не устанавливается, закрыто, или произошла фатальная ошибка |
 
-<h2 id="Methods">Методы</h2>
+## Методы
 
-<h3 id="close">close()</h3>
+### close()
 
-<p>Закрывает соединение, если оно существует и устанавливает атрибут <code>readyState </code>в значение <code>CLOSED</code>. Если соединение уже закрыто, этот метод ничего не делает. </p>
+Закрывает соединение, если оно существует и устанавливает атрибут `readyState `в значение `CLOSED`. Если соединение уже закрыто, этот метод ничего не делает.
 
-<pre class="eval">void close();
-</pre>
+```
+void close();
+```
 
-<h6 id="Parameters">Параметры</h6>
+###### Параметры
 
-<p>Нет</p>
+Нет
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{ spec("https://html.spec.whatwg.org/multipage/comms.html#the-eventsource-interface","Server-Sent Events: The EventSource Interface","CR") }}</li>
- <li><a href="/en/Server-sent_events/Using_server-sent_events" title="en/Server-sent events/Using server-sent events">Using server-sent events</a></li>
-</ul>
+- {{ spec("https://html.spec.whatwg.org/multipage/comms.html#the-eventsource-interface","Server-Sent Events: The EventSource Interface","CR") }}
+- [Using server-sent events](/en/Server-sent_events/Using_server-sent_events "en/Server-sent events/Using server-sent events")
 
-<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+## Совместимость браузеров
 
-<p>{{Compat}}</p>
-
-<div id="compat-mobile"></div>
+{{Compat}}

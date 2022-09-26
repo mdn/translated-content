@@ -6,45 +6,44 @@ tags:
   - Property
 translation_of: Web/API/Document/readyState
 ---
-<div>
-<p>{{APIRef("DOM")}}{{gecko_minversion_header("1.9.2")}}</p>
+{{APIRef("DOM")}}{{gecko_minversion_header("1.9.2")}}
 
-<p>Свойство<strong> <code>Document.readyState</code></strong> описывает состояние загрузки {{domxref("document")}}.</p>
+Свойство** `Document.readyState`** описывает состояние загрузки {{domxref("document")}}.
 
-<p>Когда значение этого свойства изменяется, в объекте {{domxref("document")}} запускается событие {{event("readystatechange")}}.</p>
-</div>
+Когда значение этого свойства изменяется, в объекте {{domxref("document")}} запускается событие {{event("readystatechange")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre>var <var>string</var> = <var>document</var>.readyState;</pre>
+```
+var string = document.readyState;
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<p>Свойство <strong>readyState</strong> объекта document может иметь одно из следующих значений:</p>
+Свойство **readyState** объекта document может иметь одно из следующих значений:
 
-<dl>
- <dt><code>loading</code></dt>
- <dd>Страница все ещё загружается.</dd>
- <dt><code>interactive</code></dt>
- <dd>Страница уже загружена и <a href="/en-US/docs/Glossary/DOM">DOM</a> дерево построено, но дополнительные ресурсы, такие как изображения и <a href="/en-US/docs/Web/HTML/Element/iframe">iframe</a>, все ещё загружаются.</dd>
- <dt><code>complete</code></dt>
- <dd>Страница и все дополнительные ресурсы уже загружены. Это состояние указывает, что событие {{event("load")}} уже вызвано.</dd>
-</dl>
+- `loading`
+  - : Страница все ещё загружается.
+- `interactive`
+  - : Страница уже загружена и [DOM](/ru/docs/Glossary/DOM) дерево построено, но дополнительные ресурсы, такие как изображения и [iframe](/ru/docs/Web/HTML/Element/iframe), все ещё загружаются.
+- `complete`
+  - : Страница и все дополнительные ресурсы уже загружены. Это состояние указывает, что событие {{event("load")}} уже вызвано.
 
-<p>При изменении значения, данного свойства, вызывается событие {{event("readystatechange")}} на объекте {{ domxref("document") }}.</p>
+При изменении значения, данного свойства, вызывается событие {{event("readystatechange")}} на объекте {{ domxref("document") }}.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Разные_состояния_загрузки_страницы">Разные состояния загрузки страницы</h3>
+### Разные состояния загрузки страницы
 
-<pre class="brush: js">switch (document.readyState) {
+```js
+switch (document.readyState) {
   case "loading":
     // Страница все ещё загружается
     break;
   case "interactive":
     // Страница уже загружена. Теперь мы можем получить доступ к DOM объектам.
     var span = document.createElement("span");
-    span.textContent = "A &lt;span&gt; element.";
+    span.textContent = "A <span> element.";
     document.body.appendChild(span);
     break;
   case "complete":
@@ -52,38 +51,40 @@ translation_of: Web/API/Document/readyState
     console.log("The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText);
     break;
 }
-</pre>
+```
 
-<h3 id="readystatechange_как_альтернатива_событию_DOMContentLoaded">readystatechange как альтернатива событию DOMContentLoaded</h3>
+### readystatechange как альтернатива событию DOMContentLoaded
 
-<pre class="brush:js">// альтернатива событию DOMContentLoaded
+```js
+// альтернатива событию DOMContentLoaded
 document.onreadystatechange = function () {
   if (document.readyState == "interactive") {
     initApplication();
   }
-}</pre>
+}
+```
 
-<h3 id="readystatechange_как_альтернатива_событию_load">readystatechange как альтернатива событию load</h3>
+### readystatechange как альтернатива событию load
 
-<pre class="brush: js">// альтернатива событию load
+```js
+// альтернатива событию load
 document.onreadystatechange = function () {
   if (document.readyState == "complete") {
     initApplication();
   }
-}</pre>
+}
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Браузерная_поддержка">Браузерная поддержка</h2>
+## Браузерная поддержка
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Событие {{event("readystatechange")}}</li>
- <li>Событие {{event("DOMContentLoaded")}}</li>
- <li>Событие {{event("load")}}</li>
-</ul>
+- Событие {{event("readystatechange")}}
+- Событие {{event("DOMContentLoaded")}}
+- Событие {{event("load")}}

@@ -4,48 +4,44 @@ slug: Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 translation_of: Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 original_slug: DOM/DOM_Reference/Locating_DOM_elements_using_selectors
 ---
-<div>{{ gecko_minversion_header("1.9.1") }}</div>
+{{ gecko_minversion_header("1.9.1") }}Selectors API предоставляет методы, с помощью которых можно быстро и просто получить доступ к узлам [`Element`](/en-US/docs/DOM/element) из DOM путём сопоставления с набором селекторов. Это намного быстрее, чем прошлые техники, где надо было, например, использовать цикл в JS-коде, чтобы найти конкретные элементы.
 
-<div>Selectors API предоставляет методы, с помощью которых можно быстро и просто получить доступ к узлам <code><a href="/en-US/docs/DOM/element">Element</a></code> из DOM путём сопоставления с набором селекторов. Это намного быстрее, чем прошлые техники, где надо было, например, использовать цикл в JS-коде, чтобы найти конкретные элементы.</div>
+## Интерфейс NodeSelector (The NodeSelector interface)
 
-<div> </div>
+Эта спецификация добавляет два новых метода к любым объектам, реализующим интерфейс [`Document`](/ru/docs/DOM/document "en-US/docs/DOM/Document"), [`DocumentFragment`](/ru/docs/DOM/DocumentFragment "en-US/docs/DOM/DocumentFragment"), или [`Element`](/ru/docs/DOM/element "en-US/docs/DOM/Element"):
 
-<h2 id="Интерфейс_NodeSelector_(The_NodeSelector_interface)">Интерфейс NodeSelector (The NodeSelector interface)</h2>
+- `querySelector`
+  - : Возвращает первый совпадающий узел [`Element`](/ru/docs/DOM/element "en-US/docs/DOM/Element") внутри поддерева. Если совпадающих узлов нет, будет возвращён `null`.
+- `querySelectorAll`
+  - : Возвращает [`NodeList`](/ru/docs/DOM/NodeList "en-US/docs/DOM/NodeList")`, `содержащий все подходящие узлы `Element` внутри поддерева узлов. Или возвращает пустой `NodeList`, если совпадений не найдено.
 
-<p>Эта спецификация добавляет два новых метода к любым объектам, реализующим интерфейс <a class="internal" href="/en-US/docs/DOM/document" title="en-US/docs/DOM/Document"><code>Document</code></a>, <a class="internal" href="/en-US/docs/DOM/DocumentFragment" title="en-US/docs/DOM/DocumentFragment"><code>DocumentFragment</code></a>, или <a class="internal" href="/en-US/docs/DOM/element" title="en-US/docs/DOM/Element"><code>Element</code></a>:</p>
+> **Примечание:** **Замечание:** [`NodeList`](/en-US/docs/DOM/NodeList "en-US/docs/DOM/NodeList"), возвращаемый методом `querySelectorAll(), `не настоящий. Этот список отличается от других методов поиска DOM, которые возвращают настоящие (живые) узлы.
 
-<dl>
- <dt><code>querySelector</code></dt>
- <dd>Возвращает первый совпадающий узел <a class="internal" href="/en-US/docs/DOM/element" title="en-US/docs/DOM/Element"><code>Element</code></a> внутри поддерева. Если совпадающих узлов нет, будет возвращён <code>null</code>.</dd>
- <dt><code>querySelectorAll</code></dt>
- <dd>Возвращает <a class="internal" href="/en-US/docs/DOM/NodeList" title="en-US/docs/DOM/NodeList"><code>NodeList</code></a><code>, </code>содержащий все подходящие узлы <code>Element</code> внутри поддерева узлов. Или возвращает пустой <code>NodeList</code>, если совпадений не найдено.</dd>
-</dl>
+Вы можете найти примеры и детали, прочитав документацию для методов [`querySelector()`](/ru/docs/DOM/Element.querySelector "en-US/docs/DOM/Element.querySelector") и [`querySelectorAll()`](/ru/docs/DOM/Element.querySelectorAll "en-US/docs/DOM/Element.querySelectorAll")`, `а также в статье [Code snippets for querySelector](/ru/docs/Code_snippets/QuerySelector "en-US/docs/Code snippets/QuerySelector").
 
-<div class="note"><strong>Замечание: </strong><code><a class="internal" href="/en-US/docs/DOM/NodeList" title="en-US/docs/DOM/NodeList">NodeList</a></code>, возвращаемый методом <code><a class="internal" href="/en-US/docs/DOM/Element.querySelectorAll" title="en-US/docs/DOM/Element.querySelectorAll">querySelectorAll()</a>, </code>не настоящий. Этот список отличается от других методов поиска DOM, которые возвращают настоящие (живые) узлы.</div>
+## Selectors
 
-<p>Вы можете найти примеры и детали, прочитав документацию для методов <a class="internal" href="/en-US/docs/DOM/Element.querySelector" title="en-US/docs/DOM/Element.querySelector"><code>querySelector()</code></a> и <a class="internal" href="/en-US/docs/DOM/Element.querySelectorAll" title="en-US/docs/DOM/Element.querySelectorAll"><code>querySelectorAll()</code></a><code>, </code>а также в статье <a class="internal" href="/en-US/docs/Code_snippets/QuerySelector" title="en-US/docs/Code snippets/QuerySelector">Code snippets for querySelector</a>.</p>
+Селекторные методы принимают один или больше селекторов, разделённых запятыми, чтобы определить, какие элементы должны быть возвращены. Например, чтобы все параграфы в документе, которые имеют классы `warning `или `note`, можно сделать следующее:
 
-<h2 id="Selectors">Selectors</h2>
+```
+var special = document.querySelectorAll( "p.warning, p.note" );
+```
 
-<p>Селекторные методы принимают один или больше селекторов, разделённых запятыми, чтобы определить, какие элементы должны быть возвращены. Например, чтобы все параграфы в документе, которые имеют классы <code>warning </code>или <code>note</code>, можно сделать следующее:</p>
+Также можно искать по ID. Например:
 
-<pre><code>var special = document.querySelectorAll( "p.warning, p.note" );</code></pre>
+```
+var el = document.querySelector( "#main, #basic, #exclamation" );
+```
 
-<p>Также можно искать по ID. Например:</p>
+После выполнения кода выше, `el` будет содержать первый элемент в документе, чей ID `main, basic` или `exclamation`
 
-<pre><code>var el = document.querySelector( "#main, #basic, #exclamation" );</code></pre>
+Вы можете использовать любые CSS-селекторы в методах `querySelector(), querySelectorAll()`
 
-<p>После выполнения кода выше, <code>el</code> будет содержать первый элемент в документе, чей ID <code>main, basic</code> или <code>exclamation</code></p>
+## See also
 
-<p>Вы можете использовать любые CSS-селекторы в методах <code>querySelector(), querySelectorAll()</code></p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/selectors-api/">Selectors API</a></li>
- <li><a href="/en-US/docs/DOM/Element.querySelector" title="en-US/docs/DOM/Element.querySelector"><code>element.querySelector</code></a></li>
- <li><a href="/en-US/docs/DOM/Element.querySelectorAll" title="en-US/docs/DOM/element.querySelectorAll"><code>element.querySelectorAll</code></a></li>
- <li><a href="/en-US/docs/DOM/Document.querySelector" title="en-US/docs/DOM/document.querySelector"><code>document.querySelector</code></a></li>
- <li><a href="/en-US/docs/DOM/Document.querySelectorAll" title="en-US/docs/DOM/document.querySelectorAll"><code>document.querySelectorAll</code></a></li>
- <li><a href="/en-US/docs/Code_snippets/QuerySelector" title="en-US/docs/Code_snippets/QuerySelector">Code snippets for querySelector</a></li>
-</ul>
+- [Selectors API](http://www.w3.org/TR/selectors-api/)
+- [`element.querySelector`](/ru/docs/DOM/Element.querySelector "en-US/docs/DOM/Element.querySelector")
+- [`element.querySelectorAll`](/ru/docs/DOM/Element.querySelectorAll "en-US/docs/DOM/element.querySelectorAll")
+- [`document.querySelector`](/ru/docs/DOM/Document.querySelector "en-US/docs/DOM/document.querySelector")
+- [`document.querySelectorAll`](/ru/docs/DOM/Document.querySelectorAll "en-US/docs/DOM/document.querySelectorAll")
+- [Code snippets for querySelector](/ru/docs/Code_snippets/QuerySelector "en-US/docs/Code_snippets/QuerySelector")

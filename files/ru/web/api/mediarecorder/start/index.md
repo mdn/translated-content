@@ -3,78 +3,63 @@ title: MediaRecorder.start()
 slug: Web/API/MediaRecorder/start
 translation_of: Web/API/MediaRecorder/start
 ---
-<div>{{APIRef("Media Recorder API")}}</div>
+{{APIRef("Media Recorder API")}}
 
-<p>Метод <strong><code>MediaRecorder.start()</code></strong> (часть <a href="/en-US/docs/Web/API/MediaRecorder_API">MediaRecorder API</a>) используется для начала захвата медиа {{domxref("Blob")}}.</p>
+Метод **`MediaRecorder.start()`** (часть [MediaRecorder API](/ru/docs/Web/API/MediaRecorder_API)) используется для начала захвата медиа {{domxref("Blob")}}.
 
-<p>When the <code>start()</code> method is invoked, the UA queues a task that runs the following steps:</p>
+When the `start()` method is invoked, the UA queues a task that runs the following steps:
 
-<ol>
- <li>If the {{domxref("MediaRecorder.state")}} is not "inactive", raise a DOM <code>InvalidState</code> error and terminate these steps. if the {{domxref("MediaRecorder.state")}} is "inactive", continue on to the next step.</li>
- <li>Set the {{domxref("MediaRecorder.state")}} to "recording" and wait until media becomes available from the <code>stream</code> passed into {{domxref("Navigator.getUserMedia")}}.</li>
- <li>Once data becomes available, raise a {{domxref("MediaRecorder.start")}} event and start gathering the data into a {{domxref("Blob")}} (see <a href="https://dvcs.w3.org/hg/dap/raw-file/default/media-stream-capture/MediaRecorder.html#bib-FILE-API">FILE-API</a>).</li>
- <li>If the <code>timeSlice</code> argument has been provided, once that many milliseconds of data have been collected — or a minimum time slice imposed by the UA, whichever is greater — raise a {{domxref("MediaRecorder.dataavailable")}} event containing the Blob of collected data, and start gathering a new Blob of data. If <code>timeSlice</code> has not been provided, continue gathering data into the original Blob.</li>
- <li>When the <code>stream</code> is ended, set {{domxref("MediaRecorder.state")}} to "inactive" and stop gathering data.</li>
- <li>Raise a {{domxref("MediaRecorder.dataavailable")}} event containing the Blob of data.</li>
- <li>Raise a {{domxref("MediaRecorder.stop")}} event.</li>
-</ol>
+1.  If the {{domxref("MediaRecorder.state")}} is not "inactive", raise a DOM `InvalidState` error and terminate these steps. if the {{domxref("MediaRecorder.state")}} is "inactive", continue on to the next step.
+2.  Set the {{domxref("MediaRecorder.state")}} to "recording" and wait until media becomes available from the `stream` passed into {{domxref("Navigator.getUserMedia")}}.
+3.  Once data becomes available, raise a {{domxref("MediaRecorder.start")}} event and start gathering the data into a {{domxref("Blob")}} (see [FILE-API](https://dvcs.w3.org/hg/dap/raw-file/default/media-stream-capture/MediaRecorder.html#bib-FILE-API)).
+4.  If the `timeSlice` argument has been provided, once that many milliseconds of data have been collected — or a minimum time slice imposed by the UA, whichever is greater — raise a {{domxref("MediaRecorder.dataavailable")}} event containing the Blob of collected data, and start gathering a new Blob of data. If `timeSlice` has not been provided, continue gathering data into the original Blob.
+5.  When the `stream` is ended, set {{domxref("MediaRecorder.state")}} to "inactive" and stop gathering data.
+6.  Raise a {{domxref("MediaRecorder.dataavailable")}} event containing the Blob of data.
+7.  Raise a {{domxref("MediaRecorder.stop")}} event.
 
-<div class="note">
-<p><strong>Note</strong>: If the browser is unable to start recording or continue recording, it<em> will</em> raise a {{domxref("DOMError")}} event, followed by a {{domxref("MediaRecorder.dataavailable")}} event containing the Blob it has gathered, followed by the {{domxref("MediaRecorder.stop")}} event.</p>
-</div>
+> **Примечание:** If the browser is unable to start recording or continue recording, it _will_ raise a {{domxref("DOMError")}} event, followed by a {{domxref("MediaRecorder.dataavailable")}} event containing the Blob it has gathered, followed by the {{domxref("MediaRecorder.stop")}} event.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">MediaRecorder.start(timeslice)</pre>
+```
+MediaRecorder.start(timeslice)
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>timeslice</code> {{optional_inline}}</dt>
- <dd>Этот параметр принимает значение в миллисекундах, и переопределяет длину куска захвата медиа для возвращения в каждом Blob. Если не указан, то все медиа данные будут занесены в один Blob, только если не был вызван метод {{domxref("MediaRecorder.requestData")}}.</dd>
-</dl>
+- `timeslice` {{optional_inline}}
+  - : Этот параметр принимает значение в миллисекундах, и переопределяет длину куска захвата медиа для возвращения в каждом Blob. Если не указан, то все медиа данные будут занесены в один Blob, только если не был вызван метод {{domxref("MediaRecorder.requestData")}}.
 
-<h3 id="Ошибки">Ошибки</h3>
+### Ошибки
 
-<p>An <code>InvalidState</code> error is raised if the <code>start()</code> method is called while the <code>MediaRecorder</code> object’s {{domxref("MediaRecorder.state")}} is not "inactive" — it makes no sense to start media capture if it is already happening.</p>
+An `InvalidState` error is raised if the `start()` method is called while the `MediaRecorder` object’s {{domxref("MediaRecorder.state")}} is not "inactive" — it makes no sense to start media capture if it is already happening.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">...
+```js
+...
 
   record.onclick = function() {
     mediaRecorder.start();
     console.log("рекордер запущен");
   }
 
-...</pre>
+...
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("MediaStream Recording", "#widl-MediaRecorder-start-void-long-timeslice", "MediaRecorder.start()")}}</td>
-   <td>{{Spec2("MediaStream Recording")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                                        | Status                                       | Comment            |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------ |
+| {{SpecName("MediaStream Recording", "#widl-MediaRecorder-start-void-long-timeslice", "MediaRecorder.start()")}} | {{Spec2("MediaStream Recording")}} | Initial definition |
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API">Использование MediaRecorder API</a></li>
- <li><a href="http://mdn.github.io/web-dictaphone/">Веб-диктофон</a>: MediaRecorder + getUserMedia + Web Audio API от <a href="https://twitter.com/chrisdavidmills">Chris Mills</a> (<a href="https://github.com/mdn/web-dictaphone/">исходники на Github</a>.)</li>
- <li><a href="http://simpl.info/mediarecorder/">simpl.info Пример использования MediaStream</a> от <a href="https://twitter.com/sw12">Sam Dutton</a>.</li>
- <li>{{domxref("Navigator.getUserMedia")}}</li>
-</ul>
+- [Использование MediaRecorder API](/ru/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API)
+- [Веб-диктофон](http://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API от [Chris Mills](https://twitter.com/chrisdavidmills) ([исходники на Github](https://github.com/mdn/web-dictaphone/).)
+- [simpl.info Пример использования MediaStream](http://simpl.info/mediarecorder/) от [Sam Dutton](https://twitter.com/sw12).
+- {{domxref("Navigator.getUserMedia")}}

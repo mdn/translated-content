@@ -3,28 +3,27 @@ title: Gamepad.buttons
 slug: Web/API/Gamepad/buttons
 translation_of: Web/API/Gamepad/buttons
 ---
-<p>{{APIRef("Gamepad API")}}</p>
+{{APIRef("Gamepad API")}}
 
+Свойство **`Gamepad.buttons`** интерфейса {{domxref("Gamepad") }} возвращает массив, состоящий из объектов {{domxref("gamepadButton")}}, представляющие кнопки, представленные на устройстве (геймпаде).
 
+Каждый элемент в массиве равен 0 если кнопка не нажата, и не-нуль (обычно 1.0) если нажата. Каждый объект {{domxref("gamepadButton")}} содержит два параметра: `pressed` и `value`:
 
-<p>Свойство <code><strong>Gamepad.buttons</strong></code> интерфейса {{domxref("Gamepad") }} возвращает массив, состоящий из объектов {{domxref("gamepadButton")}}, представляющие кнопки, представленные на устройстве (геймпаде). </p>
+- Свойство `pressed` - boolean индикатор, показывающий, нажата ли кнопка (`true`) или нет (`false`).
+- Свойство `value` - число с плавающей точкой, показывающая степень нажатия на аналоговую кнопку (как триггеры на многих современных геймпадах). Значение нормализованное в диапазоне 0.0 – 1.0, где 0.0 указывает, что кнопка не нажата, а 1.0 - что нажата полностью.
 
-<p>Каждый элемент в массиве равен 0 если кнопка не нажата, и не-нуль (обычно 1.0) если нажата. Каждый объект {{domxref("gamepadButton")}} содержит два параметра: <code>pressed</code> и <code>value</code>:</p>
+## Синтаксис
 
-<ul>
- <li>Свойство <code>pressed</code>  - boolean индикатор, показывающий, нажата ли кнопка (<code>true</code>) или нет (<code>false</code>).</li>
- <li>Свойство <code>value</code> - число с плавающей точкой, показывающая степень нажатия на аналоговую кнопку (как триггеры на многих современных геймпадах). Значение нормализованное в диапазоне 0.0 – 1.0, где 0.0 указывает, что кнопка не нажата, а 1.0 - что нажата полностью.</li>
-</ul>
+```
+readonly    attribute GamepadButton[]     buttons;
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Пример
 
-<pre class="syntaxbox">readonly    attribute GamepadButton[]     buttons;</pre>
+Приведённый код взят из моего _(автора статьи)_ демо Gamepad API button (вы можете [Посмотреть демо](http://chrisdavidmills.github.io/gamepad-buttons/), и [посмотреть исходники на GitHub](https://github.com/chrisdavidmills/gamepad-buttons/tree/master)). Важно — в Chrome [`Navigator.getGamepads`](/ru/docs/Web/API/Navigator/getGamepads) необходимо установить префикс `webkit`, и значения кнопки будут представлять из себя массив дробных чисел, тогда как в Firefox [`Navigator.getGamepads`](/ru/docs/Web/API/Navigator/getGamepads) нет необходимости устанавливать префикс, и значения будут представлять собой массив объектов [`GamepadButton`](/ru/docs/Web/API/GamepadButton); Свойство [`GamepadButton.value`](/ru/docs/Web/API/GamepadButton/value) или [`GamepadButton.pressed`](/ru/docs/Web/API/GamepadButton/pressed) необходимо для получения состояния кнопки, в зависимости от от типа кнопки. В данном простом примере обрабатывается оба вида кнопок.
 
-<h2 id="Пример">Пример</h2>
-
-<p>Приведённый код взят из моего<em> (автора статьи)</em> демо Gamepad API button (вы можете  <a href="http://chrisdavidmills.github.io/gamepad-buttons/" rel="noopener">Посмотреть демо</a>, и <a href="https://github.com/chrisdavidmills/gamepad-buttons/tree/master" rel="noopener">посмотреть исходники на GitHub</a>). Важно — в Chrome <a href="https://developer.mozilla.org/ru/docs/Web/API/Navigator/getGamepads"><code>Navigator.getGamepads</code></a> необходимо установить префикс <code>webkit</code>, и значения кнопки будут представлять из себя массив дробных чисел, тогда как в  Firefox <a href="https://developer.mozilla.org/ru/docs/Web/API/Navigator/getGamepads"><code>Navigator.getGamepads</code></a> нет необходимости устанавливать префикс, и значения будут представлять собой массив  объектов <a href="https://developer.mozilla.org/ru/docs/Web/API/GamepadButton"><code>GamepadButton</code></a>; Свойство <a href="https://developer.mozilla.org/ru/docs/Web/API/GamepadButton/value" rel="nofollow"><code>GamepadButton.value</code></a> или <a href="https://developer.mozilla.org/ru/docs/Web/API/GamepadButton/pressed" rel="nofollow"><code>GamepadButton.pressed</code></a> необходимо для получения состояния кнопки, в зависимости от от типа кнопки. В данном простом примере обрабатывается оба вида кнопок.</p>
-
-<pre class="brush: js">function gameLoop() {
+```js
+function gameLoop() {
   if(navigator.webkitGetGamepads) {
     var gp = navigator.webkitGetGamepads()[0];
 
@@ -40,13 +39,13 @@ translation_of: Web/API/Gamepad/buttons
   } else {
     var gp = navigator.getGamepads()[0];
 
-    if(gp.buttons[0].value &gt; 0 || gp.buttons[0].pressed == true) {
+    if(gp.buttons[0].value > 0 || gp.buttons[0].pressed == true) {
       b--;
-    } else if(gp.buttons[1].value &gt; 0 || gp.buttons[1].pressed == true) {
+    } else if(gp.buttons[1].value > 0 || gp.buttons[1].pressed == true) {
       a++;
-    } else if(gp.buttons[2].value &gt; 0 || gp.buttons[2].pressed == true) {
+    } else if(gp.buttons[2].value > 0 || gp.buttons[2].pressed == true) {
       b++;
-    } else if(gp.buttons[3].value &gt; 0 || gp.buttons[3].pressed == true) {
+    } else if(gp.buttons[3].value > 0 || gp.buttons[3].pressed == true) {
       a--;
     }
   }
@@ -55,37 +54,23 @@ translation_of: Web/API/Gamepad/buttons
   ball.style.top = b*2 + "px";
 
   var start = window.requestAnimationFrame(gameLoop);
-};</pre>
+};
+```
 
-<h2 id="Значение">Значение</h2>
+## Значение
 
-<p>Массив из объектов {{domxref("gamepadButton")}}</p>
+Массив из объектов {{domxref("gamepadButton")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Gamepad", "#dom-gamepad-buttons", "Gamepad.buttons")}}</td>
-   <td>{{Spec2("Gamepad")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                       | Comment            |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName("Gamepad", "#dom-gamepad-buttons", "Gamepad.buttons")}} | {{Spec2("Gamepad")}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<div id="compat-mobile"></div>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<p><a href="/en-US/docs/Web/Guide/API/Gamepad">Using the Gamepad API</a></p>
+[Using the Gamepad API](/ru/docs/Web/Guide/API/Gamepad)

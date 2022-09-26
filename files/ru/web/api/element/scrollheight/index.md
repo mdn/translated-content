@@ -3,54 +3,54 @@ title: Element.scrollHeight
 slug: Web/API/Element/scrollHeight
 translation_of: Web/API/Element/scrollHeight
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p>Свойство <strong><code>Element.scrollHeight</code></strong> (только чтение) - измерение высоты контента в элементе, включая содержимое, невидимое из-за прокрутки. Значение <code>scrollHeight</code>  равно минимальному <code>clientHeight</code>, которое потребуется элементу для того, чтобы поместить всё содержимое в видимую область (viewport), не используя вертикальную полосу прокрутки. Оно включает в себя padding элемента, но не его margin.</p>
+Свойство **`Element.scrollHeight`** (только чтение) - измерение высоты контента в элементе, включая содержимое, невидимое из-за прокрутки. Значение `scrollHeight` равно минимальному `clientHeight`, которое потребуется элементу для того, чтобы поместить всё содержимое в видимую область (viewport), не используя вертикальную полосу прокрутки. Оно включает в себя padding элемента, но не его margin.
 
-<div class="note">
-<p>Это свойство округляет значение до целого числа. Если вам нужно дробное значение, используйте {{ domxref("Element.getBoundingClientRect()") }}.</p>
-</div>
+> **Примечание:** Это свойство округляет значение до целого числа. Если вам нужно дробное значение, используйте {{ domxref("Element.getBoundingClientRect()") }}.
 
-<h2 id="Syntax_and_values">Синтаксис</h2>
+## Синтаксис
 
-<pre class="eval">var <em>intElemScrollHeight</em> = document.getElementById(<em>id_attribute_value</em>).scrollHeight;
-</pre>
+```
+var intElemScrollHeight = document.getElementById(id_attribute_value).scrollHeight;
+```
 
-<p><em>intElemScrollHeight</em> - переменная, хранящая целое число, соответствующее пиксельному значению scrollHeight элемента. scrollHeight является свойством только для чтения.</p>
+_intElemScrollHeight_ - переменная, хранящая целое число, соответствующее пиксельному значению scrollHeight элемента. scrollHeight является свойством только для чтения.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<div id="offsetContainer" style="margin: 40px 50px 50px; background-color: rgb(255, 255, 204); border: 4px dashed black; color: black; position: relative; display: inline-block;">
-<div id="idDiv" style="margin: 24px 29px; border: 24px black solid; padding: 0px 28px; width: 199px; height: 102px; overflow: auto; background-color: white; font-size: 13px!important; font-family: Arial, sans-serif;">
-<p id="PaddingTopLabel" style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">padding-top</p>
+padding-top
 
-<p>Бла-бла-бла, бла-бла-бла.Бла-бла-бла, бла-бла-бла.Бла-бла-бла, бла-бла-бла.</p>
+Бла-бла-бла, бла-бла-бла.Бла-бла-бла, бла-бла-бла.Бла-бла-бла, бла-бла-бла.
 
-<p>Кот Василий ел картошку.Бла-бла-бла, бла-бла-бла.Бла-бла-бла, бла-бла-бла.</p>
+Кот Василий ел картошку.Бла-бла-бла, бла-бла-бла.Бла-бла-бла, бла-бла-бла.
 
-<p id="PaddingBottomLabel" style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">padding-bottom</p>
-</div>
-<strong style="">Left</strong> <strong style="">Top</strong> <strong style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 370px; position: absolute; top: 85px;">Right</strong> <strong style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 164px; position: absolute; top: 203px;">Bottom</strong> <em>margin-top</em> <em>margin-bottom</em> <em>border-top</em> <em>border-bottom</em></div>
+padding-bottom
 
-<p><img alt="Image:scrollHeight.png" class="internal" src="/@api/deki/files/840/=ScrollHeight.png"></p>
+**Left** **Top** **Right** **Bottom** _margin-top_ _margin-bottom_ _border-top_ _border-bottom_
 
-<h2 id="Проблемы_и_решения">Проблемы и решения</h2>
+![Image:scrollHeight.png](/@api/deki/files/840/=ScrollHeight.png)
 
-<h3 id="Определить_был_ли_элемент_полностью_прокручен.">Определить, был ли элемент полностью прокручен.</h3>
+## Проблемы и решения
 
-<p>Следующее выражение возвращает <code>true</code>, если элемент был прокручен до конца, <code>false</code> если это не так.</p>
+### Определить, был ли элемент полностью прокручен.
 
-<pre class="syntaxbox">element.scrollHeight - element.scrollTop === element.clientHeight</pre>
+Следующее выражение возвращает `true`, если элемент был прокручен до конца, `false` если это не так.
 
-<h2 id="scrollHeight_Demo">Пример работы scrollHeight</h2>
+```
+element.scrollHeight - element.scrollTop === element.clientHeight
+```
 
-<p>Если объединить это выражение с событием <code><a href="/en-US/docs/DOM/element.onscroll" title="en-US/docs/DOM/element.onscroll">onscroll</a></code>, оно может быть использовано для того, чтобы определить, прочитал ли пользователь текст, или нет (см. также свойства <code><a href="/en-US/docs/DOM/element.scrollTop" title="en-US/docs/DOM/element.scrollTop">element.scrollTop</a></code> и <code><a href="/en-US/docs/DOM/element.clientHeight" title="en-US/docs/DOM/element.clientHeight">element.clientHeight</a></code>). Например:</p>
+## Пример работы scrollHeight
 
-<h3 id="HTML">HTML</h3>
+Если объединить это выражение с событием [`onscroll`](/en-US/docs/DOM/element.onscroll "en-US/docs/DOM/element.onscroll"), оно может быть использовано для того, чтобы определить, прочитал ли пользователь текст, или нет (см. также свойства [`element.scrollTop`](/en-US/docs/DOM/element.scrollTop "en-US/docs/DOM/element.scrollTop") и [`element.clientHeight`](/en-US/docs/DOM/element.clientHeight "en-US/docs/DOM/element.clientHeight")). Например:
 
-<pre class="brush: html">&lt;form name="registration"&gt;
-  &lt;p&gt;
-    &lt;textarea id="rules"&gt;
+### HTML
+
+```html
+<form name="registration">
+  <p>
+    <textarea id="rules">
 Регистрируясь на сайте любителей котиков я соглашаюсь со следующими условиями:
 - покупать kitekat бездомным;
 - делиться последним куском мяса;
@@ -70,18 +70,20 @@ translation_of: Web/API/Element/scrollHeight
 - загрузить в качестве аватарки фото с Простоквашино;
 - другими словами, всегда любить и уважать кошек и ненавидеть собак.
 Условия могут быть изменены в любое время, незнание не освобождает от ответственности.
-    &lt;/textarea&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;input type="checkbox" name="accept" id="agree" /&gt;
-    &lt;label for="agree"&gt;Я согласен&lt;/label&gt;
-    &lt;input type="submit" id="nextstep" value="Далее" /&gt;
-  &lt;/p&gt;
-&lt;/form&gt;</pre>
+    </textarea>
+  </p>
+  <p>
+    <input type="checkbox" name="accept" id="agree" />
+    <label for="agree">Я согласен</label>
+    <input type="submit" id="nextstep" value="Далее" />
+  </p>
+</form>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#notice {
+```css
+#notice {
   display: inline-block;
   margin-bottom: 12px;
   border-radius: 5px;
@@ -96,11 +98,13 @@ translation_of: Web/API/Element/scrollHeight
   padding: 5px;
   border: #2A9F00 solid 2px;
   border-radius: 5px;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function checkReading () {
+```js
+function checkReading () {
   if (checkReading.read) {
     return;
   }
@@ -118,61 +122,31 @@ onload = function () {
   oToBeRead.parentNode.insertBefore(document.createElement("br"), oToBeRead);
   oToBeRead.onscroll = checkReading;
   checkReading.call(oToBeRead);
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('scrollHeight_Demo', '640', '400') }}</p>
+{{ EmbedLiveSample('scrollHeight_Demo', '640', '400') }}
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Спецификация</th>
-   <th>Статус</th>
-   <th>Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSSOM View", "#dom-element-scrollheight", "Element.scrollHeight")}}</td>
-   <td>{{Spec2("CSSOM View")}}</td>
-   <td>Изначальное определение</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                             | Статус                           | Комментарий             |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------- |
+| {{SpecName("CSSOM View", "#dom-element-scrollheight", "Element.scrollHeight")}} | {{Spec2("CSSOM View")}} | Изначальное определение |
 
-<h2 id="Supported">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Браузеры</th>
-   <th>Начальная версия</th>
-  </tr>
-  <tr>
-   <td>Internet Explorer</td>
-   <td><strong>8.0</strong></td>
-  </tr>
-  <tr>
-   <td>Firefox (Gecko)</td>
-   <td><strong>3.0</strong> (1.9)</td>
-  </tr>
-  <tr>
-   <td>Opera</td>
-   <td>?</td>
-  </tr>
-  <tr>
-   <td>Safari | Chrome | WebKit</td>
-   <td><strong>4.0</strong> | <strong>4.0</strong> | ?</td>
-  </tr>
- </tbody>
-</table>
+| Браузеры                   | Начальная версия        |
+| -------------------------- | ----------------------- |
+| Internet Explorer          | **8.0**                 |
+| Firefox (Gecko)            | **3.0** (1.9)           |
+| Opera                      | ?                       |
+| Safari \| Chrome \| WebKit | **4.0** \| **4.0** \| ? |
 
-<p><strong>В версиях Firefox до 21-й:</strong> когда контент элемента не создаёт вертикальную полосу прокрутки, его свойство <code style="font-size: 14px;">scrollHeight</code> равно значению <code style="font-size: 14px;">clientHeight</code>. Это может означать либо то, что контента слишком мало, чтобы ему потребовалась полоса прокрутки, либо то, что у элемента значение CSS-свойства overflow равно visible (в этом случае прокрутка отсутствует).</p>
+**В версиях Firefox до 21-й:** когда контент элемента не создаёт вертикальную полосу прокрутки, его свойство `scrollHeight` равно значению `clientHeight`. Это может означать либо то, что контента слишком мало, чтобы ему потребовалась полоса прокрутки, либо то, что у элемента значение CSS-свойства overflow равно visible (в этом случае прокрутка отсутствует).
 
-<h2 id="See_Also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)">MSDN Измерение размера и положения элемента с помощью CSSOM в Internet Explorer 9</a></li>
- <li>{{domxref("Element.clientHeight")}}</li>
- <li>{{domxref("HTMLElement.offsetHeight")}}</li>
- <li><a href="/en-US/docs/Determining_the_dimensions_of_elements" title="en/Determining_the_dimensions_of_elements">Определение размеров элементов</a></li>
-</ul>
+- [MSDN Измерение размера и положения элемента с помощью CSSOM в Internet Explorer 9](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)
+- {{domxref("Element.clientHeight")}}
+- {{domxref("HTMLElement.offsetHeight")}}
+- [Определение размеров элементов](/ru/docs/Determining_the_dimensions_of_elements "en/Determining_the_dimensions_of_elements")

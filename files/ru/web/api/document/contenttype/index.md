@@ -3,21 +3,22 @@ title: Document.contentType
 slug: Web/API/Document/contentType
 translation_of: Web/API/Document/contentType
 ---
-<p>{{ ApiRef("DOM") }}{{Non-standard_header}}</p>
+{{ ApiRef("DOM") }}{{Non-standard_header}}
 
-<p>Возвращает MIME-тип при рендеринге страницы. Информация может поступать из заголовка HTTP или других ресурсов MIME.</p>
+Возвращает MIME-тип при рендеринге страницы. Информация может поступать из заголовка HTTP или других ресурсов MIME.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="eval"><var>contentType</var> = <var>document</var>.contentType;
-</pre>
+```
+contentType = document.contentType;
+```
 
-<p>Свойство contentType доступно только для чтения.</p>
+Свойство contentType доступно только для чтения.
 
-<h2 id="Notes">Примечания</h2>
+## Примечания
 
-<p>Свойство не влияет на МЕТА теги.</p>
+Свойство не влияет на МЕТА теги.
 
-<h2 id="Specification">Спецификации</h2>
+## Спецификации
 
-<p>Не является стандартом, поддерживается только <a href="/en-US/docs/Gecko/Embedding_Mozilla/FAQ/Embedding_Gecko">Gecko</a>. Для использования только в отладчике chrome (<a href="/en/Extensions">Extensions</a> и XUL Mozilla Firefox).</p>
+Не является стандартом, поддерживается только [Gecko](/ru/docs/Gecko/Embedding_Mozilla/FAQ/Embedding_Gecko). Для использования только в отладчике chrome ([Extensions](/en/Extensions) и XUL Mozilla Firefox).

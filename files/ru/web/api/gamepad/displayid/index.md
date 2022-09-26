@@ -5,54 +5,45 @@ tags:
   - Виртуальная реальность
 translation_of: Web/API/Gamepad/displayId
 ---
-<p>{{DefaultAPISidebar("WebVR API")}}{{SeeCompatTable}}</p>
+{{DefaultAPISidebar("WebVR API")}}{{SeeCompatTable}}
 
-<p>Свойство <strong>displayId</strong> только для чтения {{domxref("Gamepad")}} возвращаемый интерфейс<dfn> {{domxref("VRDisplay.displayId")}} связанный с {{domxref("VRDisplay")}} —  <code>VRDisplay</code>  (дисплей виртуальной реальности) в котором геймпад управляет отображаемой сценой.</dfn></p>
+Свойство **displayId** только для чтения {{domxref("Gamepad")}} возвращаемый интерфейс* {{domxref("VRDisplay.displayId")}} связанный с {{domxref("VRDisplay")}} — `VRDisplay` (дисплей виртуальной реальности) в котором геймпад управляет отображаемой сценой.*
 
-<p>Геймпад считается связанным с {{domxref("VRDisplay")}} если он сообщает о позиции, которая находится в том же месте, что и {{domxref("VRDisplay.pose")}}.</p>
+Геймпад считается связанным с {{domxref("VRDisplay")}} если он сообщает о позиции, которая находится в том же месте, что и {{domxref("VRDisplay.pose")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myDisplayId = gamepadInstance.displayId;</pre>
+```js
+var myDisplayId = gamepadInstance.displayId;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>Число, представляющее связанный интерфейс {{domxref("VRDisplay.displayId")}}.Если число равно 0, то геймпад не связан с дисплеем VR( виртуальной реальности).</p>
+Число, представляющее связанный интерфейс {{domxref("VRDisplay.displayId")}}.Если число равно 0, то геймпад не связан с дисплеем VR( виртуальной реальности).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">window.addEventListener("gamepadconnected", function(e) {
+```js
+window.addEventListener("gamepadconnected", function(e) {
   if(!e.gamepad.displayId) {
     console.log('Gamepad connected');
   } else {
     console.log('Gamepad connected, associated with VR display ' + e.gamepad.displayId);
   }
-});</code></pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR 1.1', '#gamepad-getvrdisplays-attribute', 'displayId')}}</td>
-   <td>{{Spec2('WebVR 1.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                       | Comment            |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('WebVR 1.1', '#gamepad-getvrdisplays-attribute', 'displayId')}} | {{Spec2('WebVR 1.1')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
- <li><a href="http://mozvr.com/">MozVr.com</a> — демосцены, материалы, доступные для скачивания и другие материалы команды the Mozilla VR team.</li>
-</ul>
+- [WebVR API homepage](/ru/docs/Web/API/WebVR_API)
+- [MozVr.com](http://mozvr.com/) — демосцены, материалы, доступные для скачивания и другие материалы команды the Mozilla VR team.

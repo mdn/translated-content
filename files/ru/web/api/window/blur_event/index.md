@@ -4,37 +4,38 @@ slug: Web/API/Window/blur_event
 translation_of: Web/API/GlobalEventHandlers/onblur
 original_slug: Web/API/GlobalEventHandlers/onblur
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>Свойство <code><strong>onblur</strong></code> из {{domxref("GlobalEventHandlers")}} событий {{event("Event_handlers", "event handler")}} для {{event("blur")}} события. Оно доступно для{{domxref("Element")}}, {{domxref("Document")}} и {{domxref("Window")}}.</p>
+Свойство **`onblur`** из {{domxref("GlobalEventHandlers")}} событий {{event("Event_handlers", "event handler")}} для {{event("blur")}} события. Оно доступно для{{domxref("Element")}}, {{domxref("Document")}} и {{domxref("Window")}}.
 
-<p>Событие <code>blur</code> возникает когда элемент теряет фокус.</p>
+Событие `blur` возникает когда элемент теряет фокус.
 
-<div class="note">
-<p><strong>Note:</strong> Обратным <code>onblur</code> является {{domxref("GlobalEventHandlers.onfocus", "onfocus")}}.</p>
-</div>
+> **Примечание:** Обратным `onblur` является {{domxref("GlobalEventHandlers.onfocus", "onfocus")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>target</em>.onblur = <em>functionRef</em>;
-</pre>
+```
+target.onblur = functionRef;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>functionRef</code>  - это имя функции или <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function expression</a>. Функция получает объект {{domxref("FocusEvent")}} в качестве единственного аргумента.</p>
+`functionRef` - это имя функции или [function expression](/ru/docs/Web/JavaScript/Reference/Operators/function). Функция получает объект {{domxref("FocusEvent")}} в качестве единственного аргумента.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>В этом примере <code>onblur</code> и {{domxref("GlobalEventHandlers.onfocus", "onfocus")}} используются для изменения текста в элементе {{HtmlElement("input")}}.</p>
+В этом примере `onblur` и {{domxref("GlobalEventHandlers.onfocus", "onfocus")}} используются для изменения текста в элементе {{HtmlElement("input")}}.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;input type="text" value="CLICK HERE"&gt;
-</pre>
+```html
+<input type="text" value="CLICK HERE">
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">let input = document.querySelector('input');
+```js
+let input = document.querySelector('input');
 
 input.onblur = inputBlur;
 input.onfocus = inputFocus;
@@ -45,42 +46,28 @@ function inputBlur() {
 
 function inputFocus() {
   input.value = 'Focus is here';
-}</pre>
+}
+```
 
-<h3 id="Result_2">Result</h3>
+### Result
 
-<p>Нажимайте внутри и вне поля формы. Содержимое будет изменятся.</p>
+Нажимайте внутри и вне поля формы. Содержимое будет изменятся.
 
-<p id="Result">{{EmbedLiveSample('Example')}}</p>
+{{EmbedLiveSample('Example')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onblur','onblur')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                           | Comment |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG','webappapis.html#handler-onblur','onblur')}} | {{Spec2('HTML WHATWG')}} |         |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+In contrast to IE, in which almost all kinds of elements receive the `blur` event, only a few kinds of elements on Gecko browsers work with this event.
 
-<p>{{Compat}}</p>
+## See also
 
-<p>In contrast to IE, in which almost all kinds of elements receive the <code>blur</code> event, only a few kinds of elements on Gecko browsers work with this event.</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{event("blur")}} event</li>
- <li>Related event handler: {{domxref("GlobalEventHandlers.onfocus")}}</li>
-</ul>
+- {{event("blur")}} event
+- Related event handler: {{domxref("GlobalEventHandlers.onfocus")}}

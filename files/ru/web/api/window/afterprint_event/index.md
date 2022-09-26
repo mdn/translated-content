@@ -4,35 +4,32 @@ slug: Web/API/Window/afterprint_event
 translation_of: Web/API/WindowEventHandlers/onafterprint
 original_slug: Web/API/WindowEventHandlers/onafterprint
 ---
-<div>{{ApiRef}}</div>
+{{ApiRef}}
 
-<p>Свойство <code>WindowEventHandlers.onafterprint</code> устанавливает и возвращает обработчик {{event("Event_handlers", "event handler")}} события {{event("afterprint")}} в текущем окне.</p>
+Свойство `WindowEventHandlers.onafterprint` устанавливает и возвращает обработчик {{event("Event_handlers", "event handler")}} события {{event("afterprint")}} в текущем окне.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>window</em>.onafterprint = <em>код обработки события</em>
-</pre>
+```
+window.onafterprint = код обработки события
+```
 
-<h2 id="Примечания">Примечания</h2>
+## Примечания
 
-<p>Некоторые браузеры (включая Firefox 6 и его более поздние версии, и Internet Explorer) генерируют события <code>beforeprint</code> и <code>afterprint</code>, чтобы дать сигнал о процессе распечатки страницы. Вы можете использовать эти события, чтобы повлиять на интерфейс пользователя во время печати (например, показать или скрыть отдельные его части).</p>
+Некоторые браузеры (включая Firefox 6 и его более поздние версии, и Internet Explorer) генерируют события `beforeprint` и `afterprint`, чтобы дать сигнал о процессе распечатки страницы. Вы можете использовать эти события, чтобы повлиять на интерфейс пользователя во время печати (например, показать или скрыть отдельные его части).
 
-<p>Событие <code>afterprint</code> генерируется когда пользователь закончил печать или отменил её.</p>
+Событие `afterprint` генерируется когда пользователь закончил печать или отменил её.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{domxref("window.print")}}</li>
- <li>{{domxref("window.onbeforeprint")}}</li>
- <li><a href="/en-US/docs/Printing" title="Printing">Printing</a></li>
-</ul>
+- {{domxref("window.print")}}
+- {{domxref("window.onbeforeprint")}}
+- [Printing](/ru/docs/Printing "Printing")

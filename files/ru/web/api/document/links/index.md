@@ -9,42 +9,36 @@ tags:
   - Reference
 translation_of: Web/API/Document/links
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p>Возвращает объект всех элементов {{HTMLElement("area")}} и {{HTMLElement("a")}}, присутствующих на странице с значением атрибута <a href="/en-US/docs/Web/API/URLUtils.href">href</a>.</p>
+Возвращает объект всех элементов {{HTMLElement("area")}} и {{HTMLElement("a")}}, присутствующих на странице с значением атрибута [href](/ru/docs/Web/API/URLUtils.href).
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="eval"><em>nodeList</em> = document.links
-</pre>
+```
+nodeList = document.links
+```
 
-<p> </p>
+### Значение
 
-<h3 id="Значение">Значение</h3>
+{{domxref("HTMLCollection")}}.
 
-<p>{{domxref("HTMLCollection")}}.</p>
+## Пример
 
-<p> </p>
-
-<h2 id="Example">Пример</h2>
-
-<pre class="brush: js">var links = document.links;
-for(var i = 0; i &lt; links.length; i++) {
+```js
+var links = document.links;
+for(var i = 0; i < links.length; i++) {
   var linkHref = document.createTextNode(links[i].href);
   var lineBreak = document.createElement("br");
   document.body.appendChild(linkHref);
   document.body.appendChild(lineBreak);
 }
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p> </p>
-
-<p>{{Compat}}</p>
-
-<p> </p>
+{{Compat}}

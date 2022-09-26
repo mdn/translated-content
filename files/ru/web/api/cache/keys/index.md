@@ -3,65 +3,61 @@ title: Cache.keys()
 slug: Web/API/Cache/keys
 translation_of: Web/API/Cache/keys
 ---
-<p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-<p>Метод <strong><code>keys()</code></strong> интерфейса {{domxref("Cache")}} возвращает {{jsxref("Promise")}}, который разрешается в массив ключей {{domxref("Cache")}}.</p>
+Метод **`keys()`** интерфейса {{domxref("Cache")}} возвращает {{jsxref("Promise")}}, который разрешается в массив ключей {{domxref("Cache")}}.
 
-<p>Запросы возвращаются в том же порядке, в котором были добавлены.</p>
+Запросы возвращаются в том же порядке, в котором были добавлены.
 
-<div class="note">
-<p><strong>Замечание</strong>: Запросы с дублирующимися URL, но с разными заголовками, могут быть возвращены, если в ответах на них установлен заголовок <code>VARY</code>.</p>
-</div>
+> **Примечание:** **Замечание**: Запросы с дублирующимися URL, но с разными заголовками, могут быть возвращены, если в ответах на них установлен заголовок `VARY`.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">cache.keys(request,{options}).then(function(keys) {
+```js
+cache.keys(request,{options}).then(function(keys) {
   // сделать что-нибудь с вашим массивом запросов
 });
-</pre>
+```
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>{{jsxref("Promise")}}, который разрешается в массив ключей {{domxref("Cache")}}.</p>
+{{jsxref("Promise")}}, который разрешается в массив ключей {{domxref("Cache")}}.
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>request {{optional_inline}}</dt>
- <dd>{{domxref("Request")}} который будет возвращён, если найден указанный ключ.</dd>
- <dt>options {{optional_inline}}</dt>
- <dd>Объект, чьи свойства контролируют то, как выполняется сопоставление ключей для операции <code>keys</code>. Допустимые параметры:
- <ul>
-  <li><code>ignoreSearch</code>: Булево значение {{domxref("Boolean")}}, которое определяет должен ли процесс сопоставления игнорировать строку запроса в url.  Если установлено в <code>true</code>, часть <code>?value=bar</code> запроса <code>http://foo.com/?value=bar</code> будет проигнорирована при сопоставлении. По умолчанию установлено в <code>false</code>.</li>
-  <li><code>ignoreMethod</code>: Булево значение {{domxref("Boolean")}}, которое, когда равно <code>true</code>, предотвращает проверку {{domxref("Request")}}, при сопоставлении ключей, на <code>HTTP</code> метод (обычно допускаются только <code>GET</code> и <code>HEAD</code>). По умолчанию установлено в <code>false</code>.</li>
-  <li><code>ignoreVary</code>: Булево значение {{domxref("Boolean")}}, которое, когда равно <code>true,</code> указывает операции сопоставления ключей не проводить проверку заголовка <code>VARY</code>.  Другими словами, если URL совпадает, вы получите соответствие, независимо от того, есть ли заголовок <code>VARY </code>на объекте запроса {{domxref("Response")}}. По умолчанию установлено в <code>false</code>.</li>
-  <li><code>cacheName</code>: Строка {{domxref("DOMString")}}, которая представляет собой определённый кеш, в котором нужно вести поиск. Заметьте, что этот параметр игнорируется методом <code>Cache.keys()</code>.</li>
- </ul>
- </dd>
-</dl>
+- request {{optional_inline}}
+  - : {{domxref("Request")}} который будет возвращён, если найден указанный ключ.
+- options {{optional_inline}}
 
-<h2 id="Примеры" style="line-height: 30px; font-size: 2.14285714285714rem;">Примеры</h2>
+  - : Объект, чьи свойства контролируют то, как выполняется сопоставление ключей для операции `keys`. Допустимые параметры:
 
-<pre class="brush: js">caches.open('v1').then(function(cache) {
+    - `ignoreSearch`: Булево значение {{domxref("Boolean")}}, которое определяет должен ли процесс сопоставления игнорировать строку запроса в url. Если установлено в `true`, часть `?value=bar` запроса `http://foo.com/?value=bar` будет проигнорирована при сопоставлении. По умолчанию установлено в `false`.
+    - `ignoreMethod`: Булево значение {{domxref("Boolean")}}, которое, когда равно `true`, предотвращает проверку {{domxref("Request")}}, при сопоставлении ключей, на `HTTP` метод (обычно допускаются только `GET` и `HEAD`). По умолчанию установлено в `false`.
+    - `ignoreVary`: Булево значение {{domxref("Boolean")}}, которое, когда равно `true,` указывает операции сопоставления ключей не проводить проверку заголовка `VARY`. Другими словами, если URL совпадает, вы получите соответствие, независимо от того, есть ли заголовок `VARY `на объекте запроса {{domxref("Response")}}. По умолчанию установлено в `false`.
+    - `cacheName`: Строка {{domxref("DOMString")}}, которая представляет собой определённый кеш, в котором нужно вести поиск. Заметьте, что этот параметр игнорируется методом `Cache.keys()`.
+
+## Примеры
+
+```js
+caches.open('v1').then(function(cache) {
   cache.keys().then(function(keys) {
     keys.forEach(function(request, index, array) {
       cache.delete(request);
     });
   });
-})</pre>
+})
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Использование сервис воркеров</a></li>
- <li>{{domxref("Cache")}}</li>
- <li>{{domxref("WorkerGlobalScope.caches")}}</li>
-</ul>
+- [Использование сервис воркеров](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("WorkerGlobalScope.caches")}}

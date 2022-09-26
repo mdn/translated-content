@@ -1,19 +1,18 @@
 ---
-title: 'WebGLRenderingContext.uniform[1234][fi][v]()'
+title: WebGLRenderingContext.uniform[1234][fi][v]()
 slug: Web/API/WebGLRenderingContext/uniform
 translation_of: Web/API/WebGLRenderingContext/uniform
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><strong><code>WebGLRenderingContext.uniform[1234][fi][v]()</code></strong> метод <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> устанавливает значение для постоянных переменных Uniform.</p>
+**`WebGLRenderingContext.uniform[1234][fi][v]()`** метод [WebGL API](/ru/docs/Web/API/WebGL_API) устанавливает значение для постоянных переменных Uniform.
 
-<div class="note">
-<p>Многие из описанных в этом разделе функцию имеют расширенные интерфейсы WebGL 2, которые можно найти {{domxref("WebGL2RenderingContext.uniform","WebGL2RenderingContext.uniform[1234][uif][v]()")}}.</p>
-</div>
+> **Примечание:** Многие из описанных в этом разделе функцию имеют расширенные интерфейсы WebGL 2, которые можно найти {{domxref("WebGL2RenderingContext.uniform","WebGL2RenderingContext.uniform[1234][uif][v]()")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre>gl.uniform1f (floatUniformLoc, v); // для float
+```
+gl.uniform1f (floatUniformLoc, v); // для float
 gl.uniform1fv(floatUniformLoc, [v]); // для float или массива float
 gl.uniform2f (vec2UniformLoc, v0, v1); // для vec2
 gl.uniform2fv(vec2UniformLoc, [v0, v1]); // для vec2 или массива vec2
@@ -38,42 +37,39 @@ gl.uniform1iv(sampler2DUniformLoc, [v]); // для sampler2D или массив
 
 gl.uniform1i (samplerCubeUniformLoc, v); // для samplerCube (текстуры)
 gl.uniform1iv(samplerCubeUniformLoc, [v]); // для samplerCube или массива samplerCube
-</pre>
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>location</dt>
- <dd>{{domxref("WebGLUniformLocation")}} объект содержащий uniform атрибут для его изменения.</dd>
- <dt><code>value, v0, v1, v2, v3</code></dt>
- <dd>Новое значение для uniform переменной. Допустимые типы:
- <ul>
-  <li>Тип float {{jsxref("Number")}} для этого типа (методы с "f").</li>
-  <li>Последовательность чисел с плавающей точкой (пример {{jsxref("Float32Array")}} или {{jsxref("Array")}} чисел) для векторных методов с плавающей точкой (методы с "fv").</li>
-  <li>Тип  {{jsxref("Number")}} для этого типа (методы с "i").</li>
-  <li>{{jsxref("Int32Array")}} вектор чисел {{jsxref("Number")}} (методы с "iv").</li>
- </ul>
- </dd>
-</dl>
+- location
+  - : {{domxref("WebGLUniformLocation")}} объект содержащий uniform атрибут для его изменения.
+- `value, v0, v1, v2, v3`
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение </h3>
+  - : Новое значение для uniform переменной. Допустимые типы:
 
-<p>None.</p>
+    - Тип float {{jsxref("Number")}} для этого типа (методы с "f").
+    - Последовательность чисел с плавающей точкой (пример {{jsxref("Float32Array")}} или {{jsxref("Array")}} чисел) для векторных методов с плавающей точкой (методы с "fv").
+    - Тип {{jsxref("Number")}} для этого типа (методы с "i").
+    - {{jsxref("Int32Array")}} вектор чисел {{jsxref("Number")}} (методы с "iv").
 
-<h2 id="Примеры">Примеры</h2>
+### Возвращаемое значение
 
-<pre class="brush: js">GL.uniform1f(GL.getUniformLocation(PROGRAM,'u_time'), timeStamp/1000.0)</pre>
+None.
 
-<h2 id="Спецификация">Спецификация</h2>
+## Примеры
+
+```js
+GL.uniform1f(GL.getUniformLocation(PROGRAM,'u_time'), timeStamp/1000.0)
+```
+
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.uniformMatrix()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.uniformMatrix()")}}

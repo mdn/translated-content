@@ -3,343 +3,57 @@ title: Функции и классы доступные для Web Workers
 slug: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 translation_of: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 ---
-<p>In addition to the standard <a href="/en-US/docs/Web/JavaScript">JavaScript</a> set of functions (such as {{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("Object")}}, {{jsxref("JSON")}} etc), there are a variety of functions available from the DOM to workers. This article provides a list of those.</p>
+In addition to the standard [JavaScript](/ru/docs/Web/JavaScript) set of functions (such as {{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("Object")}}, {{jsxref("JSON")}} etc), there are a variety of functions available from the DOM to workers. This article provides a list of those.
 
-<p><strong>Workers run in another global context, {{domxref("DedicatedWorkerGlobalScope")}} different from the current window</strong>. By default methods and properties of {{domxref("Window")}} are not available to them, but {{domxref("DedicatedWorkerGlobalScope")}}, like <code>Window</code>, implements {{domxref("WindowTimers")}} and {{domxref("WindowBase64")}}.</p>
+**Workers run in another global context, {{domxref("DedicatedWorkerGlobalScope")}} different from the current window**. By default methods and properties of {{domxref("Window")}} are not available to them, but {{domxref("DedicatedWorkerGlobalScope")}}, like `Window`, implements {{domxref("WindowTimers")}} and {{domxref("WindowBase64")}}.
 
-<h2 id="Сравнение_свойств_и_методов_различных_типов_worker'ов">Сравнение свойств и методов различных типов воркеров</h2>
+## Сравнение свойств и методов различных типов воркеров
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Функция</td>
-   <td class="header">Выделенные worker'ы</td>
-   <td class="header">Общие worker'ы</td>
-   <td class="header">Сервис worker'ы</td>
-   <td class="header">Chrome worker'ы {{Non-standard_inline}}</td>
-   <td class="header">Внешние worker'ы</td>
-  </tr>
-  <tr>
-   <td>{{domxref("WindowBase64.atob", "atob()")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("Window")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("WindowBase64.btoa", "btoa()")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("Window")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("WindowTimers.clearInterval", "clearInterval()")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("Window")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("WindowTimers.clearTimeout", "clearTimeout()")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("Window")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Window.dump()", "dump()")}} {{non-standard_inline}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("Window")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("WindowTimers.setInterval", "setInterval()")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("Window")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("WindowTimers.setTimeout", "setTimeout()")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("Window")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("WorkerGlobalScope.importScripts", "importScripts()")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>no</td>
-  </tr>
-  <tr>
-   <td>{{domxref("WorkerGlobalScope.close", "close()")}} {{non-standard_inline}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, on {{domxref("WorkerGlobalScope")}}</td>
-   <td>yes, but is a no-op.</td>
-   <td>Unknown</td>
-   <td>no</td>
-  </tr>
-  <tr>
-   <td>{{domxref("DedicatedWorkerGlobalScope.postMessage", "postMessage()")}}</td>
-   <td>yes, on {{domxref("DedicatedWorkerGlobalScope")}}</td>
-   <td>no</td>
-   <td>no</td>
-   <td>Unknown</td>
-   <td>no</td>
-  </tr>
- </tbody>
-</table>
+| Функция                                                                                           | Выделенные worker'ы                                              | Общие worker'ы                                       | Сервис worker'ы                                      | Chrome worker'ы {{Non-standard_inline}}     | Внешние worker'ы                     |
+| ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------- | ------------------------------------ |
+| {{domxref("WindowBase64.atob", "atob()")}}                                          | yes, on {{domxref("WorkerGlobalScope")}}             | yes, on {{domxref("WorkerGlobalScope")}} | yes, on {{domxref("WorkerGlobalScope")}} | yes, on {{domxref("WorkerGlobalScope")}} | yes, on {{domxref("Window")}} |
+| {{domxref("WindowBase64.btoa", "btoa()")}}                                          | yes, on {{domxref("WorkerGlobalScope")}}             | yes, on {{domxref("WorkerGlobalScope")}} | yes, on {{domxref("WorkerGlobalScope")}} | yes, on {{domxref("WorkerGlobalScope")}} | yes, on {{domxref("Window")}} |
+| {{domxref("WindowTimers.clearInterval", "clearInterval()")}}                  | yes, on {{domxref("WorkerGlobalScope")}}             | yes, on {{domxref("WorkerGlobalScope")}} | yes, on {{domxref("WorkerGlobalScope")}} | yes, on {{domxref("WorkerGlobalScope")}} | yes, on {{domxref("Window")}} |
+| {{domxref("WindowTimers.clearTimeout", "clearTimeout()")}}                      | yes, on {{domxref("WorkerGlobalScope")}}             | yes, on {{domxref("WorkerGlobalScope")}} | yes, on {{domxref("WorkerGlobalScope")}} | yes, on {{domxref("WorkerGlobalScope")}} | yes, on {{domxref("Window")}} |
+| {{domxref("Window.dump()", "dump()")}} {{non-standard_inline}}             | yes, on {{domxref("WorkerGlobalScope")}}             | yes, on {{domxref("WorkerGlobalScope")}} | yes, on {{domxref("WorkerGlobalScope")}} | yes, on {{domxref("WorkerGlobalScope")}} | yes, on {{domxref("Window")}} |
+| {{domxref("WindowTimers.setInterval", "setInterval()")}}                      | yes, on {{domxref("WorkerGlobalScope")}}             | yes, on {{domxref("WorkerGlobalScope")}} | yes, on {{domxref("WorkerGlobalScope")}} | yes, on {{domxref("WorkerGlobalScope")}} | yes, on {{domxref("Window")}} |
+| {{domxref("WindowTimers.setTimeout", "setTimeout()")}}                          | yes, on {{domxref("WorkerGlobalScope")}}             | yes, on {{domxref("WorkerGlobalScope")}} | yes, on {{domxref("WorkerGlobalScope")}} | yes, on {{domxref("WorkerGlobalScope")}} | yes, on {{domxref("Window")}} |
+| {{domxref("WorkerGlobalScope.importScripts", "importScripts()")}}          | yes, on {{domxref("WorkerGlobalScope")}}             | yes, on {{domxref("WorkerGlobalScope")}} | yes, on {{domxref("WorkerGlobalScope")}} | yes, on {{domxref("WorkerGlobalScope")}} | no                                   |
+| {{domxref("WorkerGlobalScope.close", "close()")}} {{non-standard_inline}} | yes, on {{domxref("WorkerGlobalScope")}}             | yes, on {{domxref("WorkerGlobalScope")}} | yes, but is a no-op.                                 | Unknown                                              | no                                   |
+| {{domxref("DedicatedWorkerGlobalScope.postMessage", "postMessage()")}}      | yes, on {{domxref("DedicatedWorkerGlobalScope")}} | no                                                   | no                                                   | Unknown                                              | no                                   |
 
-<h2 id="Доступное_worker'ам_API">Доступное worker'ам API</h2>
+## Доступное worker'ам API
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Функция</td>
-   <td class="header">Функционал</td>
-   <td class="header">Поддержка Gecko (Firefox)</td>
-   <td class="header">Поддержка IE</td>
-   <td class="header">Поддержка Blink (Chrome and Opera)</td>
-   <td class="header">Поддержка WebKit (Safari)</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Broadcast_Channel_API","Broadcast Channel API")}}</td>
-   <td>Allows simple communication between {{glossary("browsing context", "browsing contexts")}} (that is <em>windows</em>, <em>tabs</em>, <em>frames</em>, or <em>iframes</em>) with the same {{glossary("origin")}} (usually pages from the same site).</td>
-   <td>{{ CompatGeckoDesktop(38)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Cache", "Cache")}}</td>
-   <td>Cache API provides the ability to programmatically control cache storage associated with current origin.</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatChrome(43) }}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Channel_Messaging_API", "Channel Messaging API")}}</td>
-   <td>Allows two separate scripts running in different browsing contexts attached to the same document (e.g., two IFrames, or the main document and an IFrame, two documents via a {{domxref("SharedWorker")}}, or two workers) to communicate directly via two ports.</td>
-   <td>{{ CompatGeckoDesktop(41)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Console", "Console API")}}</td>
-   <td>Provides access to the browser's debugging console (e.g., the <a href="/en-US/docs/Tools/Web_Console">Web Console</a> in Firefox). The specifics of how it works vary from browser to browser, but there is a <em>de facto</em> set of features that are typically provided.</td>
-   <td>{{ CompatGeckoDesktop(38)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("CustomEvent")}}</td>
-   <td>The <strong><code>CustomEvent</code></strong> interface represents events initialized by an application for any purpose.</td>
-   <td>{{ CompatGeckoDesktop(48)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Data_Store_API", "Data Store")}}</td>
-   <td>A powerful, flexible storage mechanism for multiple Firefox OS applications to use to store and share data between one another quickly, efficiently, and securely.</td>
-   <td>Only in Firefox OS internal (certified) applications, since v1.0.1.</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("DOMRequest")}} and {{domxref("DOMCursor")}}</td>
-   <td>Respectively, these objects represents an ongoing operation (with listeners for reacting to the operation completely successfully, or failing, for example), and an ongoing operation over a list of results.</td>
-   <td>{{ CompatGeckoDesktop(41)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Fetch_API", "Fetch")}}</td>
-   <td>The Fetch spec provides an up-to-date definition of, and API for, fetching resources (e.g. across the network.)</td>
-   <td>Mostly in {{ CompatGeckoDesktop(34)}} behind pref, although a few features are later.</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatChrome(42) }}<br>
-    {{ CompatChrome(41) }} behind pref</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("FileReader")}}</td>
-   <td>This API allows asynchronous read of {{domxref("Blob")}} and {{domxref("File")}} objects.</td>
-   <td>{{CompatGeckoDesktop(46)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("FileReaderSync")}}</td>
-   <td>This API allows synchronous read of {{domxref("Blob")}} and {{domxref("File")}} objects. This is an API that works only in workers.</td>
-   <td>{{CompatGeckoDesktop(8)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("FormData")}}</td>
-   <td><code>FormData</code> objects provide a way to easily construct a set of key/value pairs representing form fields and their values, which can then be easily sent using the XMLHttpRequest <a href="/en-US/docs/DOM/XMLHttpRequest#send()" title="XMLHttpRequest#send()"><code>send()</code></a> method.</td>
-   <td>{{CompatUnknown}} (should be in {{CompatGeckoDesktop(39)}})</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("ImageData")}}</td>
-   <td>The underlying pixel data of an area of a {{domxref("canvas")}} element. Manipulating such data can be a complex task better suited to be delegated to a Web Worker.</td>
-   <td>{{CompatGeckoDesktop(25)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("IndexedDB_API", "IndexedDB")}}</td>
-   <td>Database to store records holding simple values and hierarchical objects.</td>
-   <td>{{CompatGeckoDesktop(37)}},  {{CompatGeckoDesktop(42)}} for {{domxref("IDBCursorWithValue")}}.</td>
-   <td>10.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Notifications_API", "Notifications")}}</td>
-   <td>Allows web pages to control the display of system notifications to the end user</td>
-   <td>{{CompatGeckoDesktop(41)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Performance")}}</td>
-   <td>The <strong><code>Performance</code></strong> interface represents timing-related performance information for the given page.</td>
-   <td>{{ CompatGeckoDesktop("34.0") }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatChrome("33.0") }}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Promise")}}</td>
-   <td>JavaScript objects that allow you to write asynchronous functions.</td>
-   <td>{{CompatGeckoDesktop(28)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("ServiceWorkerRegistration")}}</td>
-   <td>You can register a service worker from inside a standard worker, and use associated functionality.</td>
-   <td>{{CompatGeckoDesktop(40)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("TextEncoder")}} and {{domxref("TextDecoder")}}</td>
-   <td>Create and return a new {{domxref("TextEncoder")}}, or respectively {{domxref("TextDecoder")}}, allowing to encode or decode strings into specific encodings.</td>
-   <td>{{CompatGeckoDesktop(20)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>{{ domxref("URL") }}</td>
-   <td>Workers can use the static methods <a href="/en-US/docs/DOM/window.URL.createObjectURL" title="/en-US/docs/DOM/window.URL.createObjectURL">URL.createObjectURL</a> and <a href="/en-US/docs/DOM/window.URL.revokeObjectURL" title="/en-US/docs/DOM/window.URL.revokeObjectURL">URL.revokeObjectURL</a> with {{domxref("Blob")}} objects accesible to the worker.<br>
-    Workers can also create a new URL using the {{domxref("URL.URL", "URL()")}} constructor and call any normal method on the returned object.</td>
-   <td>{{CompatGeckoDesktop(21)}} and {{CompatGeckoDesktop(26)}} for URL() constructor</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> with {{domxref("OffscreenCanvas")}}</td>
-   <td>WebGL (Web Graphics Library) is a JavaScript API for rendering interactive 3D and 2D graphics within any compatible web browser without the use of plug-ins.</td>
-   <td>{{CompatGeckoDesktop(44)}} behind a feature preference setting. In <code>about:config</code>, set <code>gfx.offscreencanvas.enabled</code> to true.</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("WebSocket")}}</td>
-   <td>Creates and returns a new {{domxref("WebSocket")}}  object; this mimics the behavior of the standard <code>WebSocket()</code> constructor.</td>
-   <td>{{CompatGeckoDesktop(37)}}</td>
-   <td>11.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Worker")}}</td>
-   <td>Creates a new {{ domxref("Worker") }}. Yes, workers can spawn more workers.</td>
-   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
-   <td>10.0</td>
-   <td>{{CompatNo}} See <a class="external" href="https://code.google.com/p/chromium/issues/detail?id=31666" rel="external">crbug.com/31666</a></td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("WorkerGlobalScope")}}</td>
-   <td>The global scope of workers. This objects defines <a href="#workerscope">worker-specific functions</a>.</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>10.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("WorkerLocation")}}</td>
-   <td>The subset of the {{domxref("Location")}} interface available to workers.</td>
-   <td>{{CompatGeckoDesktop(1.9.2)}}</td>
-   <td>10.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("WorkerNavigator")}}</td>
-   <td>The subset of the {{domxref("Navigator")}} interface available to workers.</td>
-   <td>Basic implementation {{CompatVersionUnknown}}<br>
-    {{domxref("NavigatorID.appCodeName", "appCodeName")}}, {{domxref("NavigatorID.product", "product")}}, {{domxref("NavigatorID.taintEnabled", "taintEnabled()")}}: {{CompatGeckoDesktop(28)}}<br>
-    {{domxref("WorkerNavigator.onLine", "onLine")}}: {{CompatGeckoDesktop(29)}}<br>
-    {{domxref("NavigatorLanguage")}}: {{CompatVersionUnknown}}</td>
-   <td>{{domxref("NavigatorID.appName", "appName")}}, {{domxref("NavigatorID.appVersion", "appVersion")}}, {{domxref("WorkerNavigator.onLine", "onLine")}}, {{domxref("NavigatorID.platform", "platform")}}, {{domxref("NavigatorID.userAgent", "userAgent")}}: 10.0<br>
-    Other: {{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("XMLHttpRequest")}}</td>
-   <td>Creates and returns a new {{domxref("XMLHttpRequest")}}  object; this mimics the behavior of the standard <code>XMLHttpRequest()</code> constructor. Note that the <code>responseXML</code> and <code>channel</code> attributes on <code>XMLHttpRequest</code> always return <code>null</code>.</td>
-   <td>
-    <p>Basic: {{CompatGeckoDesktop("1.9.1")}}</p>
+| Функция                                                                           | Функционал                                                                                                                                                                                                                                                                                                                                                                              | Поддержка Gecko (Firefox)                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Поддержка IE                                                                                                                                                                                                                                                                                                                                                           | Поддержка Blink (Chrome and Opera)                                                                | Поддержка WebKit (Safari)        |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | -------------------------------- |
+| {{domxref("Broadcast_Channel_API","Broadcast Channel API")}}  | Allows simple communication between {{glossary("browsing context", "browsing contexts")}} (that is _windows_, _tabs_, _frames_, or _iframes_) with the same {{glossary("origin")}} (usually pages from the same site).                                                                                                                                         | {{ CompatGeckoDesktop(38)}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | {{CompatNo}}                                                                                                                                                                                                                                                                                                                                                       | {{CompatNo}}                                                                                  | {{CompatNo}}                 |
+| {{domxref("Cache", "Cache")}}                                          | Cache API provides the ability to programmatically control cache storage associated with current origin.                                                                                                                                                                                                                                                                                | {{CompatVersionUnknown}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | {{CompatNo}}                                                                                                                                                                                                                                                                                                                                                       | {{ CompatChrome(43) }}                                                                      | {{CompatUnknown}}         |
+| {{domxref("Channel_Messaging_API", "Channel Messaging API")}}  | Allows two separate scripts running in different browsing contexts attached to the same document (e.g., two IFrames, or the main document and an IFrame, two documents via a {{domxref("SharedWorker")}}, or two workers) to communicate directly via two ports.                                                                                                               | {{ CompatGeckoDesktop(41)}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | {{CompatVersionUnknown}}                                                                                                                                                                                                                                                                                                                                       | {{CompatVersionUnknown}}                                                                  | {{CompatVersionUnknown}} |
+| {{domxref("Console", "Console API")}}                                  | Provides access to the browser's debugging console (e.g., the [Web Console](/ru/docs/Tools/Web_Console) in Firefox). The specifics of how it works vary from browser to browser, but there is a _de facto_ set of features that are typically provided.                                                                                                                                 | {{ CompatGeckoDesktop(38)}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | {{CompatVersionUnknown}}                                                                                                                                                                                                                                                                                                                                       | {{CompatVersionUnknown}}                                                                  | {{CompatVersionUnknown}} |
+| {{domxref("CustomEvent")}}                                              | The **`CustomEvent`** interface represents events initialized by an application for any purpose.                                                                                                                                                                                                                                                                                        | {{ CompatGeckoDesktop(48)}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | {{CompatVersionUnknown}}                                                                                                                                                                                                                                                                                                                                       | {{CompatVersionUnknown}}                                                                  | {{CompatVersionUnknown}} |
+| {{domxref("Data_Store_API", "Data Store")}}                          | A powerful, flexible storage mechanism for multiple Firefox OS applications to use to store and share data between one another quickly, efficiently, and securely.                                                                                                                                                                                                                      | Only in Firefox OS internal (certified) applications, since v1.0.1.                                                                                                                                                                                                                                                                                                                                                                                                                                    | {{CompatNo}}                                                                                                                                                                                                                                                                                                                                                       | {{CompatNo}}                                                                                  | {{CompatNo}}                 |
+| {{domxref("DOMRequest")}} and {{domxref("DOMCursor")}}             | Respectively, these objects represents an ongoing operation (with listeners for reacting to the operation completely successfully, or failing, for example), and an ongoing operation over a list of results.                                                                                                                                                                           | {{ CompatGeckoDesktop(41)}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | {{CompatUnknown}}                                                                                                                                                                                                                                                                                                                                               | {{CompatUnknown}}                                                                          | {{CompatUnknown}}         |
+| {{domxref("Fetch_API", "Fetch")}}                                      | The Fetch spec provides an up-to-date definition of, and API for, fetching resources (e.g. across the network.)                                                                                                                                                                                                                                                                         | Mostly in {{ CompatGeckoDesktop(34)}} behind pref, although a few features are later.                                                                                                                                                                                                                                                                                                                                                                                                         | {{CompatNo}}                                                                                                                                                                                                                                                                                                                                                       | {{ CompatChrome(42) }} {{ CompatChrome(41) }} behind pref                             | {{CompatNo}}                 |
+| {{domxref("FileReader")}}                                                  | This API allows asynchronous read of {{domxref("Blob")}} and {{domxref("File")}} objects.                                                                                                                                                                                                                                                                                     | {{CompatGeckoDesktop(46)}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | {{CompatNo}}                                                                                                                                                                                                                                                                                                                                                       | {{CompatVersionUnknown}}                                                                  | {{CompatNo}}                 |
+| {{domxref("FileReaderSync")}}                                          | This API allows synchronous read of {{domxref("Blob")}} and {{domxref("File")}} objects. This is an API that works only in workers.                                                                                                                                                                                                                                           | {{CompatGeckoDesktop(8)}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | {{CompatNo}}                                                                                                                                                                                                                                                                                                                                                       | {{CompatNo}}                                                                                  | {{CompatNo}}                 |
+| {{domxref("FormData")}}                                                  | `FormData` objects provide a way to easily construct a set of key/value pairs representing form fields and their values, which can then be easily sent using the XMLHttpRequest [`send()`](</ru/docs/DOM/XMLHttpRequest#send()> "XMLHttpRequest#send()") method.                                                                                                                        | {{CompatUnknown}} (should be in {{CompatGeckoDesktop(39)}})                                                                                                                                                                                                                                                                                                                                                                                                                           | {{CompatUnknown}}                                                                                                                                                                                                                                                                                                                                               | {{CompatVersionUnknown}}                                                                  | {{CompatUnknown}}         |
+| {{domxref("ImageData")}}                                                  | The underlying pixel data of an area of a {{domxref("canvas")}} element. Manipulating such data can be a complex task better suited to be delegated to a Web Worker.                                                                                                                                                                                                             | {{CompatGeckoDesktop(25)}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | {{CompatNo}}                                                                                                                                                                                                                                                                                                                                                       | {{CompatNo}}                                                                                  | {{CompatNo}}                 |
+| {{domxref("IndexedDB_API", "IndexedDB")}}                          | Database to store records holding simple values and hierarchical objects.                                                                                                                                                                                                                                                                                                               | {{CompatGeckoDesktop(37)}}, {{CompatGeckoDesktop(42)}} for {{domxref("IDBCursorWithValue")}}.                                                                                                                                                                                                                                                                                                                                                                           | 10.0                                                                                                                                                                                                                                                                                                                                                                   | {{CompatVersionUnknown}}                                                                  | {{CompatNo}}                 |
+| {{domxref("Notifications_API", "Notifications")}}                  | Allows web pages to control the display of system notifications to the end user                                                                                                                                                                                                                                                                                                         | {{CompatGeckoDesktop(41)}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | {{CompatUnknown}}                                                                                                                                                                                                                                                                                                                                               | {{CompatUnknown}}                                                                          | {{CompatUnknown}}         |
+| {{domxref("Performance")}}                                              | The **`Performance`** interface represents timing-related performance information for the given page.                                                                                                                                                                                                                                                                                   | {{ CompatGeckoDesktop("34.0") }}                                                                                                                                                                                                                                                                                                                                                                                                                                                           | {{CompatUnknown}}                                                                                                                                                                                                                                                                                                                                               | {{ CompatChrome("33.0") }}                                                              | {{CompatUnknown}}         |
+| {{jsxref("Promise")}}                                                      | JavaScript objects that allow you to write asynchronous functions.                                                                                                                                                                                                                                                                                                                      | {{CompatGeckoDesktop(28)}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | {{CompatVersionUnknown}}                                                                                                                                                                                                                                                                                                                                       | {{CompatVersionUnknown}}                                                                  | {{CompatVersionUnknown}} |
+| {{domxref("ServiceWorkerRegistration")}}                              | You can register a service worker from inside a standard worker, and use associated functionality.                                                                                                                                                                                                                                                                                      | {{CompatGeckoDesktop(40)}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | {{CompatNo}}                                                                                                                                                                                                                                                                                                                                                       | {{CompatVersionUnknown}}                                                                  | {{CompatNo}}                 |
+| {{domxref("TextEncoder")}} and {{domxref("TextDecoder")}}     | Create and return a new {{domxref("TextEncoder")}}, or respectively {{domxref("TextDecoder")}}, allowing to encode or decode strings into specific encodings.                                                                                                                                                                                                       | {{CompatGeckoDesktop(20)}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | {{CompatNo}}                                                                                                                                                                                                                                                                                                                                                       | {{CompatNo}}                                                                                  | {{CompatNo}}                 |
+| {{ domxref("URL") }}                                                      | Workers can use the static methods [URL.createObjectURL](/ru/docs/DOM/window.URL.createObjectURL) and [URL.revokeObjectURL](/ru/docs/DOM/window.URL.revokeObjectURL) with {{domxref("Blob")}} objects accesible to the worker. Workers can also create a new URL using the {{domxref("URL.URL", "URL()")}} constructor and call any normal method on the returned object. | {{CompatGeckoDesktop(21)}} and {{CompatGeckoDesktop(26)}} for URL() constructor                                                                                                                                                                                                                                                                                                                                                                                                    | {{CompatNo}}                                                                                                                                                                                                                                                                                                                                                       | {{CompatNo}}                                                                                  | {{CompatNo}}                 |
+| [WebGL](/ru/docs/Web/API/WebGL_API) with {{domxref("OffscreenCanvas")}} | WebGL (Web Graphics Library) is a JavaScript API for rendering interactive 3D and 2D graphics within any compatible web browser without the use of plug-ins.                                                                                                                                                                                                                            | {{CompatGeckoDesktop(44)}} behind a feature preference setting. In `about:config`, set `gfx.offscreencanvas.enabled` to true.                                                                                                                                                                                                                                                                                                                                                                | {{CompatNo}}                                                                                                                                                                                                                                                                                                                                                       | {{CompatNo}}                                                                                  | {{CompatNo}}                 |
+| {{domxref("WebSocket")}}                                                  | Creates and returns a new {{domxref("WebSocket")}} object; this mimics the behavior of the standard `WebSocket()` constructor.                                                                                                                                                                                                                                                  | {{CompatGeckoDesktop(37)}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | 11.0                                                                                                                                                                                                                                                                                                                                                                   | {{CompatVersionUnknown}}                                                                  | {{CompatVersionUnknown}} |
+| {{domxref("Worker")}}                                                      | Creates a new {{ domxref("Worker") }}. Yes, workers can spawn more workers.                                                                                                                                                                                                                                                                                                    | {{CompatGeckoDesktop("1.9.1")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                               | 10.0                                                                                                                                                                                                                                                                                                                                                                   | {{CompatNo}} See [crbug.com/31666](https://code.google.com/p/chromium/issues/detail?id=31666) | {{CompatNo}}                 |
+| {{domxref("WorkerGlobalScope")}}                                      | The global scope of workers. This objects defines [worker-specific functions](#workerscope).                                                                                                                                                                                                                                                                                            | {{CompatVersionUnknown}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | 10.0                                                                                                                                                                                                                                                                                                                                                                   | {{CompatVersionUnknown}}                                                                  | {{CompatVersionUnknown}} |
+| {{domxref("WorkerLocation")}}                                          | The subset of the {{domxref("Location")}} interface available to workers.                                                                                                                                                                                                                                                                                                      | {{CompatGeckoDesktop(1.9.2)}}                                                                                                                                                                                                                                                                                                                                                                                                                                                               | 10.0                                                                                                                                                                                                                                                                                                                                                                   | {{CompatVersionUnknown}}                                                                  | {{CompatVersionUnknown}} |
+| {{domxref("WorkerNavigator")}}                                          | The subset of the {{domxref("Navigator")}} interface available to workers.                                                                                                                                                                                                                                                                                                      | Basic implementation {{CompatVersionUnknown}} {{domxref("NavigatorID.appCodeName", "appCodeName")}}, {{domxref("NavigatorID.product", "product")}}, {{domxref("NavigatorID.taintEnabled", "taintEnabled()")}}: {{CompatGeckoDesktop(28)}} {{domxref("WorkerNavigator.onLine", "onLine")}}: {{CompatGeckoDesktop(29)}} {{domxref("NavigatorLanguage")}}: {{CompatVersionUnknown}} | {{domxref("NavigatorID.appName", "appName")}}, {{domxref("NavigatorID.appVersion", "appVersion")}}, {{domxref("WorkerNavigator.onLine", "onLine")}}, {{domxref("NavigatorID.platform", "platform")}}, {{domxref("NavigatorID.userAgent", "userAgent")}}: 10.0 Other: {{CompatNo}} | {{CompatVersionUnknown}}                                                                  | {{CompatVersionUnknown}} |
+| {{domxref("XMLHttpRequest")}}                                          | Creates and returns a new {{domxref("XMLHttpRequest")}} object; this mimics the behavior of the standard `XMLHttpRequest()` constructor. Note that the `responseXML` and `channel` attributes on `XMLHttpRequest` always return `null`.                                                                                                                                      | Basic: {{CompatGeckoDesktop("1.9.1")}}{{domxref("XMLHttpRequest.response", "response")}} and {{domxref("XMLHttpRequest.responseType", "responseType")}} are available since {{CompatGeckoDesktop("10")}}{{domxref("XMLHttpRequest.timeout", "timeout")}} and {{domxref("XMLHttpRequest.ontimeout", "ontimeout")}} are available since {{CompatGeckoDesktop("13")}}                                        | {{CompatVersionUnknown}}                                                                                                                                                                                                                                                                                                                                       | {{CompatVersionUnknown}}                                                                  | {{CompatVersionUnknown}} |
 
-    <p>{{domxref("XMLHttpRequest.response", "response")}} and {{domxref("XMLHttpRequest.responseType", "responseType")}} are available since {{CompatGeckoDesktop("10")}}</p>
+## Смотрите также
 
-    <p>{{domxref("XMLHttpRequest.timeout", "timeout")}} and {{domxref("XMLHttpRequest.ontimeout", "ontimeout")}} are available since {{CompatGeckoDesktop("13")}}</p>
-   </td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</a></li>
- <li>{{domxref("Worker")}}</li>
-</ul>
+- [Using web workers](/ru/docs/Web/API/Web_Workers_API/Using_web_workers)
+- {{domxref("Worker")}}

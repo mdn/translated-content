@@ -3,43 +3,34 @@ title: Window.stop()
 slug: Web/API/Window/stop
 translation_of: Web/API/Window/stop
 ---
-<div> {{APIRef}}</div>
+{{APIRef}}
 
-<h2 id="Summary">Аннотация</h2>
+## Аннотация
 
-<p>Этот метод прекращает загрузку страницы.</p>
+Этот метод прекращает загрузку страницы.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">window.stop()
-</pre>
+```
+window.stop()
+```
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush:js">window.stop();
-</pre>
+```js
+window.stop();
+```
 
-<h2 id="Notes">Примечания</h2>
+## Примечания
 
-<p>Метод stop() равноценный клику кнопки стоп в браузере. Из-за порядка в котором загружаются скрипты, этот метод не может остановить загрузку документа в котором он вызывается, но он остановит загрузку больших картинок, новых окон и остальных объектов загрузка которых отложена.</p>
+Метод stop() равноценный клику кнопки стоп в браузере. Из-за порядка в котором загружаются скрипты, этот метод не может остановить загрузку документа в котором он вызывается, но он остановит загрузку больших картинок, новых окон и остальных объектов загрузка которых отложена.
 
-<h2 id="Specification">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','browsers.html#dom-window-stop','Window.stop()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                           | Comment |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG','browsers.html#dom-window-stop','Window.stop()')}} | {{Spec2('HTML WHATWG')}} |         |
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>Метод stop() не поддерживается в Internet Explorer.</p>
+Метод stop() не поддерживается в Internet Explorer.

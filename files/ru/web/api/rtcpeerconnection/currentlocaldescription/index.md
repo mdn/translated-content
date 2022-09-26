@@ -3,29 +3,30 @@ title: RTCPeerConnection.currentLocalDescription
 slug: Web/API/RTCPeerConnection/currentLocalDescription
 translation_of: Web/API/RTCPeerConnection/currentLocalDescription
 ---
-<p>{{WebRTCSidebar}} </p>
+{{WebRTCSidebar}}
 
-<p>Только для чтения свойство  <code><strong>RTCPeerConnection.currentLocalDescription</strong></code> возвращает объект  {{domxref("RTCSessionDescription")}} , описывающий локальную сторону соединения, как  самый последний, удачно согласованный объект описания, с момента последнего завершения согласования  {{domxref("RTCPeerConnection")}} и соединения с удалённым пиром (участником соединения) . </p>
+Только для чтения свойство **`RTCPeerConnection.currentLocalDescription`** возвращает объект {{domxref("RTCSessionDescription")}} , описывающий локальную сторону соединения, как самый последний, удачно согласованный объект описания, с момента последнего завершения согласования {{domxref("RTCPeerConnection")}} и соединения с удалённым пиром (участником соединения) .
 
-<p>Для изменения <code>currentLocalDescription</code>, вызовите метод {{domxref("RTCPeerConnection.setLocalDescription()")}}, который запускает серию событий, приводящих к присвоению значения. Более подробно о том, что точно происходит и почему изменения происходят не сразу, смотрите   {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Ожидающие и текущие объекты описания")}}.</p>
+Для изменения `currentLocalDescription`, вызовите метод {{domxref("RTCPeerConnection.setLocalDescription()")}}, который запускает серию событий, приводящих к присвоению значения. Более подробно о том, что точно происходит и почему изменения происходят не сразу, смотрите {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Ожидающие и текущие объекты описания")}}.
 
-<div class="note">
-<p>В отличие от  {{domxref("RTCPeerConnection.localDescription")}}, это значение представляет актуальный, текущий статус локальной стороны соединения; <code>localDescription</code> может устанавливать описание, на которое соединение находится в процессе перехода.</p>
-</div>
+> **Примечание:** В отличие от {{domxref("RTCPeerConnection.localDescription")}}, это значение представляет актуальный, текущий статус локальной стороны соединения; `localDescription` может устанавливать описание, на которое соединение находится в процессе перехода.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>sessionDescription</em> = <em>RTCPeerConnection</em>.currentLocalDescription;</pre>
+```
+sessionDescription = RTCPeerConnection.currentLocalDescription;
+```
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Текущий объект описания локальной стороны соединения. Если установка значения не удалась, значением станет <code>null</code>.</p>
+Текущий объект описания локальной стороны соединения. Если установка значения не удалась, значением станет `null`.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>В этом примере рассматривается свойство <code>currentLocalDescription</code>  и отображается предупреждение, содержащее свойства объекта {{domxref("RTCSessionDescription")}}  <code>type</code> и <code>sdp</code> .</p>
+В этом примере рассматривается свойство `currentLocalDescription` и отображается предупреждение, содержащее свойства объекта {{domxref("RTCSessionDescription")}} `type` и `sdp` .
 
-<pre class="brush: js">var pc = new RTCPeerConnection();
+```js
+var pc = new RTCPeerConnection();
 …
 var sd = pc.currentLocalDescription;
 if (sd) {
@@ -36,26 +37,20 @@ if (sd) {
 else {
   alert("Локальной сессии ещё нет.");
 }
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+> **Примечание:** The addition of `currentLocalDescription` and {{domxref("RTCPeerConnection.pendingLocalDescription", "pendingLocalDescription")}} to the WebRTC spec is relatively recent. In browsers which don't support them, just use {{domxref("RTCPeerConnection.localDescription", "localDescription")}}.
 
-<p>{{Compat}}</p>
+## See also
 
-<div class="note">
-<p>The addition of <code>currentLocalDescription</code> and {{domxref("RTCPeerConnection.pendingLocalDescription", "pendingLocalDescription")}} to the WebRTC spec is relatively recent. In browsers which don't support them, just use {{domxref("RTCPeerConnection.localDescription", "localDescription")}}.</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("RTCPeerConnection.setLocalDescription()")}}, {{domxref("RTCPeerConnection.pendingLocalDescription")}}, {{domxref("RTCPeerConnection.localDescription")}}</li>
- <li>{{domxref("RTCPeerConnection.setRemoteDescription()")}}, {{domxref("RTCPeerConnection.remoteDescription")}}, {{domxref("RTCPeerConnection.pendingRemoteDescription")}}, {{domxref("RTCPeerConnection.currentRemoteDescription")}}</li>
- <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
-</ul>
+- {{domxref("RTCPeerConnection.setLocalDescription()")}}, {{domxref("RTCPeerConnection.pendingLocalDescription")}}, {{domxref("RTCPeerConnection.localDescription")}}
+- {{domxref("RTCPeerConnection.setRemoteDescription()")}}, {{domxref("RTCPeerConnection.remoteDescription")}}, {{domxref("RTCPeerConnection.pendingRemoteDescription")}}, {{domxref("RTCPeerConnection.currentRemoteDescription")}}
+- [WebRTC](/ru/docs/Web/Guide/API/WebRTC)

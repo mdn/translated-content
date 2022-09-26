@@ -7,104 +7,106 @@ tags:
   - Property
 translation_of: Web/API/CanvasRenderingContext2D/fillStyle
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Свойство <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.fillStyle</code></strong>, предоставляемое <a href="/ru/docs/Web/API/Canvas_API">Canvas 2D API</a>, задаёт цвет или стиль, используемый при заливке фигур. По умолчанию установлено значение <code>#000</code> (чёрный цвет).</p>
+Свойство **`CanvasRenderingContext2D`\*\***`.fillStyle`\*\*, предоставляемое [Canvas 2D API](/ru/docs/Web/API/Canvas_API), задаёт цвет или стиль, используемый при заливке фигур. По умолчанию установлено значение `#000` (чёрный цвет).
 
-<div class="note">
-<p>Смотрите также главу <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</a> в <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</a>.</p>
-</div>
+> **Примечание:** Смотрите также главу [Applying styles and color](/ru/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) в [Canvas Tutorial](/ru/docs/Web/API/Canvas_API/Tutorial).
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var><em>ctx</em>.fillStyle = color;
-</var><var><em>ctx</em>.fillStyle = gradient;
-</var><var><em>ctx</em>.fillStyle = pattern;</var>
-</pre>
+```
+ctx.fillStyle = color;
+ctx.fillStyle = gradient;
+ctx.fillStyle = pattern;
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<dl>
- <dt><code>color</code></dt>
- <dd>{{domxref("DOMString")}} строка, содержащая цвет в формате, поддерживающимся стандартом CSS ({{cssxref("&lt;color&gt;")}}).</dd>
- <dt><code>gradient</code></dt>
- <dd>Объект класса {{domxref("CanvasGradient")}} (линейный или круговой градиент ).</dd>
- <dt><code>pattern</code></dt>
- <dd>Объект класса {{domxref("CanvasPattern")}} (повторяющееся изображение).</dd>
-</dl>
+- `color`
+  - : {{domxref("DOMString")}} строка, содержащая цвет в формате, поддерживающимся стандартом CSS ({{cssxref("&lt;color&gt;")}}).
+- `gradient`
+  - : Объект класса {{domxref("CanvasGradient")}} (линейный или круговой градиент ).
+- `pattern`
+  - : Объект класса {{domxref("CanvasPattern")}} (повторяющееся изображение).
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Изменение_цвета_заливки_фигуры">Изменение цвета заливки фигуры</h3>
+### Изменение цвета заливки фигуры
 
-<p>Ниже представлен простой фрагмент кода, использующий <code>fillStyle</code> с цветом.</p>
+Ниже представлен простой фрагмент кода, использующий `fillStyle` с цветом.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.fillStyle = 'blue';
-ctx.fillRect(10, 10, 100, 100);</pre>
+ctx.fillRect(10, 10, 100, 100);
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{ EmbedLiveSample('Изменение_цвета_заливки_фигуры', 700, 160) }}</p>
+{{ EmbedLiveSample('Изменение_цвета_заливки_фигуры', 700, 160) }}
 
-<h3 id="Использование_fillStyle_в_циклах_for">Использование fillStyle в циклах for</h3>
+### Использование fillStyle в циклах for
 
-<p>В этом примере мы используем два цикла для рисования сетки из прямоугольников, каждый из которых будет закрашен разным цветом. Получившееся изображение должно выглядеть как на скриншоте . Здесь нет ничего сложного. Мы используем две переменные <code>i</code> и <code>j</code>, чтобы создать уникальный цвет для каждого квадрата, смешивая красный и зелёный цвета. Значение синего цвета изменяться не будет. Изменяя значения цветов, вы можете создать все цвета. Увеличив количество шагов, вы сможете создать цветовую палитру, наподобие той, которая используется в Photoshop.</p>
+В этом примере мы используем два цикла для рисования сетки из прямоугольников, каждый из которых будет закрашен разным цветом. Получившееся изображение должно выглядеть как на скриншоте . Здесь нет ничего сложного. Мы используем две переменные `i` и `j`, чтобы создать уникальный цвет для каждого квадрата, смешивая красный и зелёный цвета. Значение синего цвета изменяться не будет. Изменяя значения цветов, вы можете создать все цвета. Увеличив количество шагов, вы сможете создать цветовую палитру, наподобие той, которая используется в Photoshop.
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
-</div>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
-for (let i = 0; i &lt; 6; i++) {
-  for (let j = 0; j &lt; 6; j++) {
+for (let i = 0; i < 6; i++) {
+  for (let j = 0; j < 6; j++) {
     ctx.fillStyle = `rgb(
         ${Math.floor(255 - 42.5 * i)},
         ${Math.floor(255 - 42.5 * j)},
         0)`;
     ctx.fillRect(j * 25, i * 25, 25, 25);
   }
-}</pre>
+}
+```
 
-<h4 id="Результат_2">Результат:</h4>
+#### Результат:
 
-<p>{{EmbedLiveSample("Использование_fillStyle_в_циклах_for", 160, 160, "https://mdn.mozillademos.org/files/5417/Canvas_fillstyle.png")}}</p>
+{{EmbedLiveSample("Использование_fillStyle_в_циклах_for", 160, 160, "https://mdn.mozillademos.org/files/5417/Canvas_fillstyle.png")}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость">Совместимость</h2>
+## Совместимость
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>В браузерах на основе WebKit и Blink реализован устаревший и нестандартный метод <code>ctx.setFillColor()</code> в дополнение к этому.</p>
+В браузерах на основе WebKit и Blink реализован устаревший и нестандартный метод `ctx.setFillColor()` в дополнение к этому.
 
-<h3 id="Особенности_WebKitBlink">Особенности WebKit/Blink</h3>
+### Особенности WebKit/Blink
 
-<p>В браузерах на базе Webkit и Blink помимо этого свойства, также поддерживается нестандартный метод <code>ctx.setFillColor()</code>.</p>
+В браузерах на базе Webkit и Blink помимо этого свойства, также поддерживается нестандартный метод `ctx.setFillColor()`.
 
-<pre class="brush: js">setFillColor(color, optional alpha);
+```js
+setFillColor(color, optional alpha);
 setFillColor(grayLevel, optional alpha);
 setFillColor(r, g, b, a);
 setFillColor(c, m, y, k, a);
-</pre>
+```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</a></li>
- <li>Интерфейс предоставляющий данное свойство: {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasGradient")}}</li>
- <li>{{domxref("CanvasPattern")}}</li>
-</ul>
+- [Canvas API](/ru/docs/Web/API/Canvas_API)
+- Интерфейс предоставляющий данное свойство: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasGradient")}}
+- {{domxref("CanvasPattern")}}

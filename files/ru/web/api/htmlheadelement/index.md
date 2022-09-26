@@ -3,33 +3,29 @@ title: HTMLHeadElement
 slug: Web/API/HTMLHeadElement
 translation_of: Web/API/HTMLHeadElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>Интерфейс <strong><code>HTMLHeadElement</code></strong> содержит описательную информацию, или метаданные, для документа. Этот объект наследует все свойства и методы описанные в {{domxref("HTMLElement")}} интерфейсе.</p>
+Интерфейс **`HTMLHeadElement`** содержит описательную информацию, или метаданные, для документа. Этот объект наследует все свойства и методы описанные в {{domxref("HTMLElement")}} интерфейсе.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Наследует свойства от родителя, {{domxref("HTMLElement")}}.</em></p>
+_Наследует свойства от родителя, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLHeadElement.profile")}} {{obsolete_inline}}</dt>
- <dd>Это {{domxref("DOMString")}} представляющая URI одного или более профилей метаданных (через запятую).</dd>
-</dl>
+- {{domxref("HTMLHeadElement.profile")}} {{obsolete_inline}}
+  - : Это {{domxref("DOMString")}} представляющая URI одного или более профилей метаданных (через запятую).
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em>Не имеет специфичных методов; наследует методы от родителя, {{domxref("HTMLElement")}}.</em></p>
+_Не имеет специфичных методов; наследует методы от родителя, {{domxref("HTMLElement")}}._
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>HTML-элемент реализующий этот интерфейс: {{HTMLElement("head")}}</li>
-</ul>
+- HTML-элемент реализующий этот интерфейс: {{HTMLElement("head")}}

@@ -7,38 +7,38 @@ tags:
   - метод
 translation_of: Web/API/Window/clearImmediate
 ---
-<p>{{ Apiref() }}</p>
+{{ Apiref() }}
 
-<p>Данный метод очищает действие, определённое {{ domxref("window.setImmediate") }}.</p>
+Данный метод очищает действие, определённое {{ domxref("window.setImmediate") }}.
 
-<div class="note"><strong>Note:</strong> На текущий момент данный метод находится на стадии предложения на внедрение, не является стандартом и имплементирован только в последних сборках Internet Explorer.</div>
+> **Примечание:** На текущий момент данный метод находится на стадии предложения на внедрение, не является стандартом и имплементирован только в последних сборках Internet Explorer.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre>window.clearImmediate(immediateID)
-</pre>
+```
+window.clearImmediate(immediateID)
+```
 
-<p>где immediateID это идентификатор, возвращаемый из {{ domxref("window.setImmediate") }}.</p>
+где immediateID это идентификатор, возвращаемый из {{ domxref("window.setImmediate") }}.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre>var immediateID = setImmediate(function () {
+```
+var immediateID = setImmediate(function () {
   // Выполнение некоего кода
 }
 
 document.getElementById("button").addEventListener(function () {
   clearImmediate(immediateID);
 }, false);
-</pre>
+```
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
+{{ domxref("window.setImmediate") }}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<p>{{ domxref("window.setImmediate") }}</p>
-
-<p>{{ spec("https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/setImmediate/Overview.html", "Specification: Efficient Script Yielding") }}</p>
+{{ spec("https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/setImmediate/Overview.html", "Specification: Efficient Script Yielding") }}

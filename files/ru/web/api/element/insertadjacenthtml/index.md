@@ -3,68 +3,71 @@ title: Element.insertAdjacentHTML()
 slug: Web/API/Element/insertAdjacentHTML
 translation_of: Web/API/Element/insertAdjacentHTML
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p><strong><code>insertAdjacentHTML()</code></strong> разбирает указанный текст как HTML или XML и вставляет полученные узлы (nodes) в DOM дерево в указанную позицию. Данная функция не переписывает имеющиеся элементы, что предотвращает дополнительную сериализацию и поэтому работает быстрее, чем манипуляции с {{domxref("Element.innerHTML", "innerHTML")}}.</p>
+**`insertAdjacentHTML()`** разбирает указанный текст как HTML или XML и вставляет полученные узлы (nodes) в DOM дерево в указанную позицию. Данная функция не переписывает имеющиеся элементы, что предотвращает дополнительную сериализацию и поэтому работает быстрее, чем манипуляции с {{domxref("Element.innerHTML", "innerHTML")}}.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre><em>targetElement</em>.insertAdjacentHTML(<em>position</em>, <em>text</em>);</pre>
+```
+targetElement.insertAdjacentHTML(position, text);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>position</code></dt>
- <dd>{{domxref("DOMString")}} - определяет позицию добавляемого элемента относительно элемента, вызвавшего метод. Должно соответствовать одному из следующих значений (чувствительно к регистру):
- <ul>
-  <li><code style="color: red;">'beforebegin'</code>: до самого <code>element</code> (до открывающего тега).</li>
-  <li><code style="color: green;">'afterbegin'</code>: сразу после открывающего тега  <code>element </code>(перед первым потомком).</li>
-  <li><code style="color: blue;">'beforeend'</code>: сразу перед закрывающим тегом <code>element</code> (после последнего потомка).</li>
-  <li><code style="color: magenta;">'afterend'</code>: после <code>element</code> (после закрывающего тега).</li>
- </ul>
- </dd>
- <dt><code>text</code></dt>
- <dd>Строка, которая будет проанализирована как HTML или XML и вставлена в DOM дерево документа.</dd>
-</dl>
+- `position`
 
-<h3 id="Наглядное_отображение_параметра_position">Наглядное отображение параметра position</h3>
+  - : {{domxref("DOMString")}} - определяет позицию добавляемого элемента относительно элемента, вызвавшего метод. Должно соответствовать одному из следующих значений (чувствительно к регистру):
 
+    - `'beforebegin'`: до самого `element` (до открывающего тега).
+    - `'afterbegin'`: сразу после открывающего тега `element `(перед первым потомком).
+    - `'beforeend'`: сразу перед закрывающим тегом `element` (после последнего потомка).
+    - `'afterend'`: после `element` (после закрывающего тега).
 
-<pre>&lt;!-- <strong><code style="color: red;">beforebegin</code></strong> --&gt;
-<strong><code>&lt;p&gt;</code></strong>
-&lt;!-- <strong><code style="color: green;">afterbegin</code></strong> --&gt;
+- `text`
+  - : Строка, которая будет проанализирована как HTML или XML и вставлена в DOM дерево документа.
+
+### Наглядное отображение параметра position
+
+```
+<!-- beforebegin -->
+<p>
+<!-- afterbegin -->
 foo
-&lt;!-- <strong><code style="color: blue;">beforeend</code></strong> --&gt;
-<strong><code>&lt;/p&gt;</code></strong>
-&lt;!-- <strong><code style="color: magenta;">afterend</code></strong> --&gt;</pre>
+<!-- beforeend -->
+</p>
+<!-- afterend -->
+```
 
-<div class="note"><strong>Примечание:</strong>  позиции <code>beforebegin</code> и <code>afterend</code> работают только если узел имеет родительский элемент.</div>
+> **Примечание:** позиции `beforebegin` и `afterend` работают только если узел имеет родительский элемент.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush: js">// &lt;div id="one"&gt;one&lt;/div&gt;
+```js
+// <div id="one">one</div>
 var d1 = document.getElementById('one');
-d1.insertAdjacentHTML('afterend', '&lt;div id="two"&gt;two&lt;/div&gt;');
+d1.insertAdjacentHTML('afterend', '<div id="two">two</div>');
 
 // At this point, the new structure is:
-// &lt;div id="one"&gt;one&lt;/div&gt;&lt;div id="two"&gt;two&lt;/div&gt;</pre>
+// <div id="one">one</div><div id="two">two</div>
+```
 
-<h2 id="Примечания">Примечания</h2>
+## Примечания
 
-<h3 id="Соображения_безопасности">Соображения безопасности</h3>
+### Соображения безопасности
 
-<p>Будьте осторожны при использовании вставки HTML на страницу с помощью <code>insertAdjacentHTML()</code>, не используете пользовательский ввод, который не был экранирован.</p>
+Будьте осторожны при использовании вставки HTML на страницу с помощью `insertAdjacentHTML()`, не используете пользовательский ввод, который не был экранирован.
 
-<p>Не рекомендуется использовать <code>insertAdjacentHTML()</code>, когда требуется ввести простой текст. Используйте для этого свойство {{domxref("Node.textContent")}} или метод {{domxref("Element.insertAdjacentText()")}}. Они не будут интерпретировать текст как HTML, а вставят необработанный текст.</p>
+Не рекомендуется использовать `insertAdjacentHTML()`, когда требуется ввести простой текст. Используйте для этого свойство {{domxref("Node.textContent")}} или метод {{domxref("Element.insertAdjacentText()")}}. Они не будут интерпретировать текст как HTML, а вставят необработанный текст.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Specification">Смотрите также</h2>
+## Смотрите также
 
-<p><a class="external" href="http://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/">hacks.mozilla.org guest post by Henri Sivonen including benchmark showing that insertAdjacentHTML can be way faster in some cases.</a></p>
+[hacks.mozilla.org guest post by Henri Sivonen including benchmark showing that insertAdjacentHTML can be way faster in some cases.](http://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/)

@@ -3,58 +3,60 @@ title: window.getComputedStyle()
 slug: Web/API/Window/getComputedStyle
 translation_of: Web/API/Window/getComputedStyle
 ---
-<p class="summary">Метод <strong><code>Window.getComputedStyle()</code></strong> возвращает объект, содержащий значения всех CSS-свойств элемента, полученных после применения всех активных таблиц стилей, и завершения базовых вычислений значений, которые они могут содержать. Некоторые CSS-свойства доступны через API, предоставляемые объектом, или индексацию по именам CSS-свойств.</p>
+Метод **`Window.getComputedStyle()`** возвращает объект, содержащий значения всех CSS-свойств элемента, полученных после применения всех активных таблиц стилей, и завершения базовых вычислений значений, которые они могут содержать. Некоторые CSS-свойства доступны через API, предоставляемые объектом, или индексацию по именам CSS-свойств.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <em>style</em> = window.getComputedStyle(<em>element</em> [, <em>pseudoElt</em>]);
-</pre>
+```
+var style = window.getComputedStyle(element [, pseudoElt]);
+```
 
-<dl>
- <dt><code>element</code></dt>
- <dd>{{domxref("Element")}}, свойства которого необходимо получить.</dd>
- <dt><code>pseudoElt</code> {{optional_inline}}</dt>
- <dd>Строка указывающая на найденный псевдо-элемент. Опускается (или <code>null</code>) для не псевдо-элементов.</dd>
-</dl>
+- `element`
+  - : {{domxref("Element")}}, свойства которого необходимо получить.
+- `pseudoElt` {{optional_inline}}
+  - : Строка указывающая на найденный псевдо-элемент. Опускается (или `null`) для не псевдо-элементов.
 
-<p>Возвращённый <code>style</code> живой {{domxref("CSSStyleDeclaration")}} объект, который обновляется автоматически когда элемент стилей изменяется.</p>
+Возвращённый `style` живой {{domxref("CSSStyleDeclaration")}} объект, который обновляется автоматически когда элемент стилей изменяется.
 
-<h2 id="Выводы">Выводы</h2>
+## Выводы
 
-<p>Метод <code>Window.getComputedStyle()</code> предоставляет все значения CSS-свойств элементов после применения текущей таблицы стилей или базового расчёта каких-либо значений, которые могут быть.</p>
+Метод `Window.getComputedStyle()` предоставляет все значения CSS-свойств элементов после применения текущей таблицы стилей или базового расчёта каких-либо значений, которые могут быть.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">var elem1 = document.getElementById("elemId");
+```js
+var elem1 = document.getElementById("elemId");
 var style = window.getComputedStyle(elem1, null);
 
 // this is equivalent:
 // var style = document.defaultView.getComputedStyle(elem1, null);
-</pre>
+```
 
-<pre class="brush: js">&lt;style&gt;
+```js
+<style>
  #elem-container{
    position: absolute;
    left:     100px;
    top:      200px;
    height:   100px;
  }
-&lt;/style&gt;
+</style>
 
-&lt;div id="elem-container"&gt;dummy&lt;/div&gt;
-&lt;div id="output"&gt;&lt;/div&gt;
+<div id="elem-container">dummy</div>
+<div id="output"></div>
 
-&lt;script&gt;
+<script>
   function getTheStyle(){
     var elem = document.getElementById("elem-container");
     var theCSSprop = window.getComputedStyle(elem,null).getPropertyValue("height");
     document.getElementById("output").innerHTML = theCSSprop;
    }
   getTheStyle();
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<pre class="brush: js">function dumpComputedStyles(elem,prop) {
+```js
+function dumpComputedStyles(elem,prop) {
 
   var cs = window.getComputedStyle(elem,null);
   if (prop) {
@@ -62,69 +64,66 @@ var style = window.getComputedStyle(elem1, null);
     return;
   }
   var len = cs.length;
-  for (var i=0;i&lt;len;i++) {
+  for (var i=0;i<len;i++) {
 
     var style = cs[i];
     console.log(style+" : "+cs.getPropertyValue(style));
   }
 
 }
-</pre>
+```
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Возвращённый объект - это такой же объект, который возвращается из свойства элемента {{domxref("HTMLElement.style", "style")}}; Так или иначе, эти два объекта имеют разные назначения. Объект который возвращается из <code>getComputedStyle</code> только для чтения и может быть использован для инспектирования стиля элемента (включая описание из <code>&lt;style&gt;</code> элемента или внешней таблицы стилей). Объект <code>element.style</code> следует использовать для установки стилей на специфических элементах.</p>
+Возвращённый объект - это такой же объект, который возвращается из свойства элемента {{domxref("HTMLElement.style", "style")}}; Так или иначе, эти два объекта имеют разные назначения. Объект который возвращается из `getComputedStyle` только для чтения и может быть использован для инспектирования стиля элемента (включая описание из `<style>` элемента или внешней таблицы стилей). Объект `element.style` следует использовать для установки стилей на специфических элементах.
 
-<p>Первый аргумент должен быть элементом (вставка узлов которые не являются элементами, например <code>#text</code> выдаст ошибку).</p>
+Первый аргумент должен быть элементом (вставка узлов которые не являются элементами, например `#text` выдаст ошибку).
 
-<h2 id="defaultView"><code>defaultView</code></h2>
+## `defaultView`
 
-<p>Во многих примерах кода, <code>getComputedStyle</code> используется из объекта <code>document.defaultView</code>. Почти во всех случаях это не нужно, поскольку <code>getComputedStyle</code> существует в объекте <code>window</code>. Это что-то на подобии шаблона defaultView который был некой прослойкой. Люди не хотели писать спецификацию для <code>window</code> и создавали <code>API</code>  которое также могло использоваться для Java. Так или иначе <a class="link-https" href="https://github.com/jquery/jquery/pull/524#issuecomment-2241183">есть только один случай</a> когда метод <code>defaultView</code> должен использоваться: когда вы используете Firefox 3.6 чтобы получить доступ к вычисленным стилям.</p>
+Во многих примерах кода, `getComputedStyle` используется из объекта `document.defaultView`. Почти во всех случаях это не нужно, поскольку `getComputedStyle` существует в объекте `window`. Это что-то на подобии шаблона defaultView который был некой прослойкой. Люди не хотели писать спецификацию для `window` и создавали `API` которое также могло использоваться для Java. Так или иначе [есть только один случай](https://github.com/jquery/jquery/pull/524#issuecomment-2241183) когда метод `defaultView` должен использоваться: когда вы используете Firefox 3.6 чтобы получить доступ к вычисленным стилям.
 
-<h2 id="Использования_с_псевдо-элементами">Использования с псевдо-элементами</h2>
+## Использования с псевдо-элементами
 
-<p><code>getComputedStyle</code> может получить информацию о стилях из псевдо-элемента (например - <code>::after</code>, <code>::before</code>, <code>::marker</code>, <code>::line-marker</code> - <a class="external" href="https://www.w3.org/TR/css-pseudo-4/">спецификация</a>).</p>
+`getComputedStyle` может получить информацию о стилях из псевдо-элемента (например - `::after`, `::before`, `::marker`, `::line-marker` - [спецификация](https://www.w3.org/TR/css-pseudo-4/)).
 
-<pre class="brush: html">&lt;style&gt;
+```html
+<style>
  h3::after {
    content: 'rocks!';
  }
-&lt;/style&gt;
+</style>
 
-&lt;h3&gt;generated content&lt;/h3&gt;
+<h3>generated content</h3>
 
-&lt;script&gt;
+<script>
   var h3 = document.querySelector('h3');
   var result = getComputedStyle(h3, ':after').content;
 
   console.log('the generated content is: ', result); // возвратит 'rocks!'
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>The values returned by <code>getComputedStyle</code> are known as {{cssxref("resolved_value", "resolved values")}}. These are usually the same as the CSS 2.1 {{cssxref("computed_value","computed values")}}, but for some older properties like <code>width</code>, <code>height</code> or <code>padding</code>, they are instead the {{cssxref("used_value","used values")}}. Originally, CSS 2.0 defined the computed values to be the "ready to be used" final values of properties after cascading and inheritance, but CSS 2.1 redefined computed values as pre-layout, and used values as post-layout. For CSS 2.0 properties, the <code>getComputedStyle</code> function returns the old meaning of computed values, now called <strong>used values</strong>. An example of difference between pre- and post-layout values includes the resolution of percentages that represent the width or the height of an element (also known as its layout), as those will be replaced by their pixel equivalent only in the used value case.</p>
+The values returned by `getComputedStyle` are known as {{cssxref("resolved_value", "resolved values")}}. These are usually the same as the CSS 2.1 {{cssxref("computed_value","computed values")}}, but for some older properties like `width`, `height` or `padding`, they are instead the {{cssxref("used_value","used values")}}. Originally, CSS 2.0 defined the computed values to be the "ready to be used" final values of properties after cascading and inheritance, but CSS 2.1 redefined computed values as pre-layout, and used values as post-layout. For CSS 2.0 properties, the `getComputedStyle` function returns the old meaning of computed values, now called **used values**. An example of difference between pre- and post-layout values includes the resolution of percentages that represent the width or the height of an element (also known as its layout), as those will be replaced by their pixel equivalent only in the used value case.
 
-<p>The returned value is, in certain known cases, expressly inaccurate by deliberate intent. In particular, to avoid the so called CSS History Leak security issue, browsers may expressly "lie" about the used value for a link and always return values as if a user has never visited the linked site. See <a class="external" href="http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/">http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/</a> and <a class="external" href="http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/">http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/</a> for details of the examples of how this is implemented. Most other modern browsers have applied similar changes to the application of pseudo-selector styles and the values returned by <code>getComputedStyle</code>.</p>
+The returned value is, in certain known cases, expressly inaccurate by deliberate intent. In particular, to avoid the so called CSS History Leak security issue, browsers may expressly "lie" about the used value for a link and always return values as if a user has never visited the linked site. See <http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/> and <http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/> for details of the examples of how this is implemented. Most other modern browsers have applied similar changes to the application of pseudo-selector styles and the values returned by `getComputedStyle`.
 
-<p>During a CSS transition, <code>getComputedStyle</code> returns the original property value in Firefox, but the final property value in WebKit.</p>
+During a CSS transition, `getComputedStyle` returns the original property value in Firefox, but the final property value in WebKit.
 
-<p>In Firefox, properties with the value <code>auto</code> return the used value, not the value <code>auto</code>. So if you apply <code>top:auto;</code> and <code>bottom:0</code>; on an element with <code>height:30px</code> and its containing block is <code>height:100px;</code>, upon requesting the computed style for <code>top</code>, Firefox will return <code>top:70px</code>, as <code>100px-30px=70px</code>.</p>
+In Firefox, properties with the value `auto` return the used value, not the value `auto`. So if you apply `top:auto;` and `bottom:0`; on an element with `height:30px` and its containing block is `height:100px;`, upon requesting the computed style for `top`, Firefox will return `top:70px`, as `100px-30px=70px`.
 
-<h2 id="Браузерная_поддержка">Браузерная поддержка</h2>
+## Браузерная поддержка
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<ul>
- <li><a class="external" href="https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSview-getComputedStyle">DOM Level 2 Style: getComputedStyle</a></li>
- <li><a href="https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle">CSS Object Model specification</a></li>
-</ul>
+- [DOM Level 2 Style: getComputedStyle](https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSview-getComputedStyle)
+- [CSS Object Model specification](https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle)
 
-<h2 id="See_also">Смотреть также</h2>
+## Смотреть также
 
-<ul>
- <li>{{domxref("window.getDefaultComputedStyle")}}</li>
- <li>{{cssxref("resolved_value", "Resolved Value")}}</li>
-</ul>
+- {{domxref("window.getDefaultComputedStyle")}}
+- {{cssxref("resolved_value", "Resolved Value")}}

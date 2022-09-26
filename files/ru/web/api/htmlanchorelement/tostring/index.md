@@ -12,31 +12,32 @@ tags:
 translation_of: Web/API/HTMLHyperlinkElementUtils/toString
 original_slug: Web/API/HTMLHyperlinkElementUtils/toString
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("URL API")}}
 
-<p>Метод <strong><code>HTMLHyperlinkElementUtils.toString()</code></strong> возвращает {{domxref("USVString")}}, содержащий URL целиком. Это версия {{domxref("HTMLHyperlinkElementUtils.href")}} только для чтения.</p>
+Метод **`HTMLHyperlinkElementUtils.toString()`** возвращает {{domxref("USVString")}}, содержащий URL целиком. Это версия {{domxref("HTMLHyperlinkElementUtils.href")}} только для чтения.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.toString();</pre>
+```
+string = object.toString();
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">// Допустим, что документ содержит элемент &lt;a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils/toString"&gt;
+```js
+// Допустим, что документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils/toString">
 var anchor = document.getElementById("myAnchor");
 var result = anchor.toString(); // Вернёт: 'https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils/toString'
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит этот метод.</li>
-</ul>
+- Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит этот метод.

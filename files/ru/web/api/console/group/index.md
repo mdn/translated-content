@@ -3,33 +3,31 @@ title: Console.group()
 slug: Web/API/Console/group
 translation_of: Web/API/Console/group
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}Создаёт новую группу сообщений в [веб-консоли](/ru/docs/Tools/Web_Console). После вызова последующие сообщения, выводимые в консоль, будут иметь дополнительный уровень отступа, до тех пор пока не будет вызван метод {{domxref("console.groupEnd()")}}.
 
-<div>Создаёт новую группу сообщений в <a href="/en-US/docs/Tools/Web_Console">веб-консоли</a>. После вызова последующие сообщения, выводимые в консоль, будут иметь дополнительный уровень отступа, до тех пор пока не будет вызван метод {{domxref("console.groupEnd()")}}.</div>
+{{AvailableInWorkers}}
 
-<p>{{AvailableInWorkers}}</p>
+## Синтаксис
 
-<h2 id="Синтаксис">Синтаксис</h2>
+```
+console.group([label]);
+```
 
-<pre class="syntaxbox">console.group([label]);
-</pre>
+## Аргументы
 
-<h2 id="Аргументы">Аргументы</h2>
+- `label`
+  - : Опциональный заголовок группы. (Протестировано в Chrome 59). Не работает с `console.groupEnd()`.
 
-<dl>
- <dt><code>label</code></dt>
- <dd>Опциональный заголовок группы. (Протестировано в Chrome 59). Не работает с <code>console.groupEnd()</code>.</dd>
-</dl>
+### Использование в веб-консоли
 
-<h3>Использование в веб-консоли</h3>
+Использование групп помогает упорядочить вывод в консоль благодаря визуальной группировке связанных сообщений. Чтобы начать новый блок нужно вызвать `console.group()`. Метод `console.groupCollapsed()` работает аналогичным образом, но выведенная группа будет свёрнута до тех пор, пока не будет развёрнута по клику.
 
-<p>Использование групп помогает упорядочить вывод в консоль благодаря визуальной группировке связанных сообщений. Чтобы начать новый блок нужно вызвать <code>console.group()</code>. Метод <code>console.groupCollapsed()</code> работает аналогичным образом, но выведенная группа будет свёрнута до тех пор, пока не будет развёрнута по клику.</p>
+**Примечание:** Начиная с 9 по 51 версию Gecko, метод `groupCollapsed()` работал как метод `group()`. Свёрнутые группы поддерживаются с версии Gecko 52. См. {{bug("1088360")}}.
 
-<p><strong>Примечание:</strong>  Начиная с 9 по 51 версию Gecko, метод <code>groupCollapsed()</code> работал как метод <code>group()</code>. Свёрнутые группы поддерживаются с версии Gecko 52. См. {{bug("1088360")}}.</p>
+Чтобы прекратить вывод в группу, требуется вызвать `console.groupEnd()`. К примеру, следующий код:
 
-<p>Чтобы прекратить вывод в группу, требуется вызвать <code>console.groupEnd()</code>. К примеру, следующий код:</p>
-
-<pre class="brush: js">console.log("This is the outer level");
+```js
+console.log("This is the outer level");
 console.group();
 console.log("Level 2");
 console.group();
@@ -39,24 +37,22 @@ console.groupEnd();
 console.log("Back to level 2");
 console.groupEnd();
 console.log("Back to the outer level");
-</pre>
+```
 
-<p>выведет следующий результат:</p>
+выведет следующий результат:
 
-<p><img alt="A screenshot of messages nested in the console output." src="/@api/deki/files/6082/=nesting.png"></p>
+![A screenshot of messages nested in the console output.](/@api/deki/files/6082/=nesting.png)
 
-<p>Для дополнительной информации смотрите <a href="/en-US/docs/Web/API/console#Using_groups_in_the_console">Использование групп в консоли</a>.</p>
+Для дополнительной информации смотрите [Использование групп в консоли](/ru/docs/Web/API/console#Using_groups_in_the_console).
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Поддержка_в_браузерах">Поддержка в браузерах</h2>
+## Поддержка в браузерах
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a class="external" href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
-</ul>
+- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)

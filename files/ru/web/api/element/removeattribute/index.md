@@ -3,34 +3,34 @@ title: Element.removeAttribute()
 slug: Web/API/Element/removeAttribute
 translation_of: Web/API/Element/removeAttribute
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p><code>removeAttribute</code> удаляет атрибут с элемента.</p>
+`removeAttribute` удаляет атрибут с элемента.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="eval"><em>element</em>.removeAttribute(<em>attrName</em>);
-</pre>
+```
+element.removeAttribute(attrName);
+```
 
-<ul>
- <li><code>attrName</code> строка, имя атрибута который должен быть удалён с <em>element</em>.</li>
-</ul>
+- `attrName` строка, имя атрибута который должен быть удалён с _element_.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre>// &lt;div id="div1" align="left" width="200px"&gt;
+```
+// <div id="div1" align="left" width="200px">
 document.getElementById("div1").removeAttribute("align");
-// now: &lt;div id="div1" width="200px"&gt;
-</pre>
+// now: <div id="div1" width="200px">
+```
 
-<h2 id="Notes">Примечания</h2>
+## Примечания
 
-<p>Вы должны использовать removeAttribute вместо того, чтобы устанавливать значение атрибута в null, используя <a href="/en/DOM/element.setAttribute" title="en/DOM/element.setAttribute">setAttribute</a>.</p>
+Вы должны использовать removeAttribute вместо того, чтобы устанавливать значение атрибута в null, используя [setAttribute](/en/DOM/element.setAttribute "en/DOM/element.setAttribute").
 
-<p>Попытка удаления атрибута, которого нет на элементе не вызывает ошибки.</p>
+Попытка удаления атрибута, которого нет на элементе не вызывает ошибки.
 
-<p>{{ DOMAttributeMethods() }}</p>
+{{ DOMAttributeMethods() }}
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6D6AC0F9">DOM Level 2 Core: removeAttribute</a> (introduced in <a class="external" href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeAttribute">DOM Level 1 Core</a>)</p>
+[DOM Level 2 Core: removeAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6D6AC0F9) (introduced in [DOM Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeAttribute))

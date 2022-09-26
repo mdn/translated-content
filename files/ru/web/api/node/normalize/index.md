@@ -3,20 +3,20 @@ title: Node.normalize()
 slug: Web/API/Node/normalize
 translation_of: Web/API/Node/normalize
 ---
-<div>
-<div>{{APIRef("DOM")}}</div>
-</div>
+{{APIRef("DOM")}}
 
-<p>Метод <code><strong>Node.normalize()</strong></code> преобразует указанный узел и все его под-деревья в "нормализованный" вид. В нормализованном под-дереве нет ни пустых, ни смежных текстовых узлов.</p>
+Метод **`Node.normalize()`** преобразует указанный узел и все его под-деревья в "нормализованный" вид. В нормализованном под-дереве нет ни пустых, ни смежных текстовых узлов.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>element</em>.normalize();
-</pre>
+```
+element.normalize();
+```
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush:js">var wrapper = document.createElement("div");
+```js
+var wrapper = document.createElement("div");
 
 wrapper.appendChild( document.createTextNode("Part 1 ") );
 wrapper.appendChild( document.createTextNode("Part 2 ") );
@@ -28,16 +28,13 @@ wrapper.appendChild( document.createTextNode("Part 2 ") );
 wrapper.normalize();
 
 // Now, wrapper.childNodes.length === 1
-// wrapper.childNodes[0].textContent === "Part 1 Part 2 "</pre>
+// wrapper.childNodes[0].textContent === "Part 1 Part 2 "
+```
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-normalize">DOM Level 2 Core: Node.normalize</a></li>
-</ul>
+- [DOM Level 2 Core: Node.normalize](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-normalize)
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/DOM/Text.splitText" title="DOM/Text.splitText"><code>Text.splitText</code></a></li>
-</ul>
+- [`Text.splitText`](/ru/docs/DOM/Text.splitText "DOM/Text.splitText")

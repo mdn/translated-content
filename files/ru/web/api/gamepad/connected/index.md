@@ -3,33 +3,37 @@ title: Gamepad.connected
 slug: Web/API/Gamepad/connected
 translation_of: Web/API/Gamepad/connected
 ---
-<p>{{APIRef("Gamepad API")}}</p>
+{{APIRef("Gamepad API")}}
 
-<p>Свойство <code><strong>Gamepad.connected</strong></code> интерфейса {{domxref("Gamepad") }} возвращает логическое значение того, подключён ли всё ещё геймпад к системе.</p>
+Свойство **`Gamepad.connected`** интерфейса {{domxref("Gamepad") }} возвращает логическое значение того, подключён ли всё ещё геймпад к системе.
 
-<p>Если геймпад подключён - значение равно <code>true</code>; если нет - <code>false</code>.</p>
+Если геймпад подключён - значение равно `true`; если нет - `false`.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"> readonly    attribute boolean             connected;</pre>
+```
+ readonly    attribute boolean             connected;
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">var gp = navigator.getGamepads()[0];
-console.log(gp.connected);</pre>
+```js
+var gp = navigator.getGamepads()[0];
+console.log(gp.connected);
+```
 
-<h2 id="Значение">Значение</h2>
+## Значение
 
-<p>{{jsxref("Boolean")}}.</p>
+{{jsxref("Boolean")}}.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<p><a href="/en-US/docs/Web/Guide/API/Gamepad">Using the Gamepad API</a></p>
+[Using the Gamepad API](/ru/docs/Web/Guide/API/Gamepad)

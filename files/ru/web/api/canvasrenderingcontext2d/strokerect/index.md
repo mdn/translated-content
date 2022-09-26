@@ -9,64 +9,64 @@ tags:
   - Reference
 translation_of: Web/API/CanvasRenderingContext2D/strokeRect
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Метод <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.strokeRect()</code></strong>, предоставляемый Canvas 2D API, рисует на холсте прямоугольник, имеющий начальную точку с координатами <em>(x, y)</em>, а так же ширину<em> w</em> и высоту <em>h</em>, используя текущий стиль линий.</p>
+Метод **`CanvasRenderingContext2D`\*\***`.strokeRect()`\*\*, предоставляемый Canvas 2D API, рисует на холсте прямоугольник, имеющий начальную точку с координатами _(x, y)_, а так же ширину _w_ и высоту _h_, используя текущий стиль линий.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">void <var><em>ctx</em>.strokeRect(x, y, width, height);</var>
-</pre>
+```
+void ctx.strokeRect(x, y, width, height);
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Координата начальной точки прямоугольника по оси x.</dd>
- <dt><code>y</code></dt>
- <dd>Координата начальной точки прямоугольника по оси y.</dd>
- <dt><code>width</code></dt>
- <dd>Ширина прямоугольника.</dd>
- <dt><code>height</code></dt>
- <dd>Высота прямоугольника.</dd>
-</dl>
+- `x`
+  - : Координата начальной точки прямоугольника по оси x.
+- `y`
+  - : Координата начальной точки прямоугольника по оси y.
+- `width`
+  - : Ширина прямоугольника.
+- `height`
+  - : Высота прямоугольника.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_метода_strokeRect">Использование метода <code>strokeRect</code></h3>
+### Использование метода `strokeRect`
 
-<p>Ниже представлен простой фрагмент кода, использующий метод <code>strokeRect</code>.</p>
+Ниже представлен простой фрагмент кода, использующий метод `strokeRect`.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.strokeStyle = "green";
 ctx.strokeRect(10, 10, 100, 100);
-</pre>
+```
 
-<p>Вы можете редактировать код, представленный ниже, и сделанные вами изменения отобразятся на холсте в режиме реального времени:</p>
+Вы можете редактировать код, представленный ниже, и сделанные вами изменения отобразятся на холсте в режиме реального времени:
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.strokeStyle = "green";
-ctx.strokeRect(10, 10, 100, 100);&lt;/textarea&gt;
-</pre>
+ctx.strokeRect(10, 10, 100, 100);</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -89,24 +89,21 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Интерфейс, предоставляющий данный метод: {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.strokeStyle")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.clearRect()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.fillRect()")}}</li>
-</ul>
+- Интерфейс, предоставляющий данный метод: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.strokeStyle")}}
+- {{domxref("CanvasRenderingContext2D.clearRect()")}}
+- {{domxref("CanvasRenderingContext2D.fillRect()")}}

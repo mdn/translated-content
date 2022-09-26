@@ -10,25 +10,26 @@ tags:
   - XMLHttpRequest API
 translation_of: Web/API/FormData/entries
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p>Метод <code><strong>FormData.entries()</strong></code> возвращает {{jsxref("Iteration_protocols",'iterator')}}, позволяя пройтись по всем ключам/значениям в этом объекте. Ключ каждой пары - это объект {{domxref("USVString")}}, значение - это {{domxref("USVString")}} или {{domxref("Blob")}}.</p>
+Метод **`FormData.entries()`** возвращает {{jsxref("Iteration_protocols",'iterator')}}, позволяя пройтись по всем ключам/значениям в этом объекте. Ключ каждой пары - это объект {{domxref("USVString")}}, значение - это {{domxref("USVString")}} или {{domxref("Blob")}}.
 
-<div class="note">
-<p><strong>Примечание</strong>: Метод доступен в <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Примечание:** Метод доступен в [Web Workers](/ru/docs/Web/API/Web_Workers_API).
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">formData.entries();</pre>
+```
+formData.entries();
+```
 
-<h3 id="Возвращаемые_значения">Возвращаемые значения</h3>
+### Возвращаемые значения
 
-<p>Возвращает {{jsxref("Iteration_protocols","iterator")}}.</p>
+Возвращает {{jsxref("Iteration_protocols","iterator")}}.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js;">// Create a test FormData object
+```js
+// Create a test FormData object
 var formData = new FormData();
 formData.append('key1', 'value1');
 formData.append('key2', 'value2');
@@ -37,26 +38,26 @@ formData.append('key2', 'value2');
 for(var pair of formData.entries()) {
    console.log(pair[0]+ ', '+ pair[1]);
 }
-</pre>
+```
 
-<p>Результат:</p>
+Результат:
 
-<pre>key1, value1
-key2, value2</pre>
+```
+key1, value1
+key2, value2
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="Using XMLHttpRequest">Using XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects" title="DOM/XMLHttpRequest/FormData/Using_FormData_objects">Using FormData objects</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Using XMLHttpRequest](/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Using FormData objects](/ru/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
+- {{HTMLElement("Form")}}

@@ -6,34 +6,29 @@ tags:
   - DOM
 translation_of: Web/API/Console/timeStamp
 ---
-<p>{{APIRef("Console API")}}{{Non-standard_header}}</p>
+{{APIRef("Console API")}}{{Non-standard_header}}
 
-<p>Добавляет маркер в браузерные инструменты <a href="https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference">Performance</a> или <a href="https://developer.mozilla.org/en-US/docs/Tools/Performance/Waterfall">Waterfall</a>. Это помогает соотнести точку в вашем коде с другими записанными событиями.</p>
+Добавляет маркер в браузерные инструменты [Performance](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference) или [Waterfall](/ru/docs/Tools/Performance/Waterfall). Это помогает соотнести точку в вашем коде с другими записанными событиями.
 
+{{AvailableInWorkers}}
 
+## Синтаксис
 
-<p>{{AvailableInWorkers}}</p>
+```
+console.timeStamp(label);
+```
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Параметры
 
-<pre>console.timeStamp(<code><em>label</em></code>);
-</pre>
+- `label`
+  - : Название метки. Необязательный параметр.
 
-<h2 id="Параметры">Параметры</h2>
+## Совместимость с браузерами
 
-<dl>
- <dt><code>label</code></dt>
- <dd>Название метки. Необязательный параметр.</dd>
-</dl>
+{{Compat}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{domxref("Console.time()")}}</li>
- <li>{{domxref("Console.timeEnd()")}}</li>
- <li><a href="/en-US/docs/Tools/Performance/Waterfall#Timestamp_markers">Adding timestamps to the Waterfall</a></li>
-</ul>
+- {{domxref("Console.time()")}}
+- {{domxref("Console.timeEnd()")}}
+- [Adding timestamps to the Waterfall](/ru/docs/Tools/Performance/Waterfall#Timestamp_markers)

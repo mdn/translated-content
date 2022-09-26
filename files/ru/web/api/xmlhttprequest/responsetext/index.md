@@ -3,34 +3,33 @@ title: XMLHttpRequest.responseText
 slug: Web/API/XMLHttpRequest/responseText
 translation_of: Web/API/XMLHttpRequest/responseText
 ---
-<div></div>
+{{APIRef('XMLHttpRequest')}}
 
-<div>{{APIRef('XMLHttpRequest')}}</div>
+Только для чтения {{domxref("XMLHttpRequest")}} свойство **`responseText`** возвращает текст ответа от сервера на отправленный запрос.
 
-<p>Только для чтения {{domxref("XMLHttpRequest")}} свойство <strong><code>responseText</code></strong> возвращает текст ответа от сервера на отправленный запрос.</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```
+var resultText = XMLHttpRequest.responseText;
+```
 
-<pre class="syntaxbox">var <var>resultText</var> = <var>XMLHttpRequest</var>.responseText;</pre>
+### Значение
 
-<h3 id="Значение">Значение</h3>
+Строка {{domxref("DOMString")}} содержащая либо `текстовые данные, `полученные при использовании `XMLHttpRequest, либо` `null` в случае, когда вопрос возвратил ошибку, или же ещё не был отослан на сервер вызовом функции {{domxref("XMLHttpRequest.send", "send()")}}.
 
-<p>Строка {{domxref("DOMString")}} содержащая либо <code>текстовые данные, </code>полученные при использовании <code>XMLHttpRequest, либо</code> <code>null</code> в случае, когда вопрос возвратил ошибку, или же ещё не был  отослан на сервер вызовом функции {{domxref("XMLHttpRequest.send", "send()")}}.</p>
+Во время выполнения асинхронных запросов, в значении `responseText` всегда находится текущее содержимое, полученное от сервера, даже если запрос ещё не завершён, и данные от сервера не получены полностью.
 
-<p>Во время выполнения асинхронных запросов, в значении <code>responseText</code> всегда находится текущее содержимое, полученное от сервера, даже если запрос ещё не завершён, и данные от сервера не получены полностью.</p>
+Понять, что ответ получен полностью, можно когда значение {{domxref("XMLHttpRequest.readyState", "readyState")}} становится {{domxref("XMLHttpRequest.DONE", "XMLHttpRequest.DONE")}} (`4`), а значение {{domxref("XMLHttpRequest.status", "status")}} становится 200 (`"OK"`).
 
-<p>Понять, что ответ получен полностью, можно когда значение {{domxref("XMLHttpRequest.readyState", "readyState")}} становится {{domxref("XMLHttpRequest.DONE", "XMLHttpRequest.DONE")}} (<code>4</code>), а значение {{domxref("XMLHttpRequest.status", "status")}} становится 200 (<code>"OK"</code>).</p>
+### Исключения
 
-<h3 id="Исключения">Исключения</h3>
+- `InvalidStateError`
+  - : Возникает, когда значению {{domxref("XMLHttpRequest.responseType")}} не присвоена либо пустая строка, либо "text". Поскольку свойство `responseText` предназначено только для текстового содержимого, любое другое значение вызовет ошибку.
 
-<dl>
- <dt><code>InvalidStateError</code></dt>
- <dd>Возникает, когда значению {{domxref("XMLHttpRequest.responseType")}} не присвоена либо пустая строка, либо "text". Поскольку свойство <code>responseText</code> предназначено только для текстового содержимого, любое другое значение вызовет ошибку.</dd>
-</dl>
+## Пример
 
-<h2 id="Пример">Пример</h2>
-
-<pre class="brush: js">var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 xhr.open('GET', '/server', true);
 
 // responseType должно быть пустой строкой, либо "text"
@@ -45,31 +44,15 @@ xhr.onload = function () {
     }
 };
 
-xhr.send(null);</pre>
+xhr.send(null);
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<p> </p>
+| Спецификация                                                                     | Статус                               | Comment                |
+| -------------------------------------------------------------------------------- | ------------------------------------ | ---------------------- |
+| {{SpecName('XMLHttpRequest', '#the-responsetext-attribute')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация </th>
-   <th scope="col">Статус</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#the-responsetext-attribute')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>WHATWG living standard</td>
-  </tr>
- </tbody>
-</table>
+## Браузерная совместимость
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
-
-
-
-<p>{{Compat}}</p>
+{{Compat}}

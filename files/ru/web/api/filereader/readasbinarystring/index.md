@@ -3,26 +3,27 @@ title: FileReader.readAsBinaryString()
 slug: Web/API/FileReader/readAsBinaryString
 translation_of: Web/API/FileReader/readAsBinaryString
 ---
-<div>{{APIRef("File API")}} {{non-standard_header}}</div>
+{{APIRef("File API")}} {{non-standard_header}}
 
-<p>Метод <code>readAsBinaryString</code> используется для начала считывания содержимого определённого как {{domxref("Blob")}} или {{domxref("File")}}. Когда операция чтения завершится {{domxref("FileReader.readyState","readyState")}} становится <code>DONE</code>, и срабатывает {{event("loadend")}} . В это время атрибут {{domxref("FileReader.result","result")}} содержит сырые бинарные данные из файла.</p>
+Метод `readAsBinaryString` используется для начала считывания содержимого определённого как {{domxref("Blob")}} или {{domxref("File")}}. Когда операция чтения завершится {{domxref("FileReader.readyState","readyState")}} становится `DONE`, и срабатывает {{event("loadend")}} . В это время атрибут {{domxref("FileReader.result","result")}} содержит сырые бинарные данные из файла.
 
-<p>Заметьте, что этот метод  устарел (12 July 2012 Working Draft from the W3C.)</p>
+Заметьте, что этот метод устарел (12 July 2012 Working Draft from the W3C.)
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>instanceOfFileReader</em>.readAsBinaryString(blob);</pre>
+```
+instanceOfFileReader.readAsBinaryString(blob);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>blob</code></dt>
- <dd>The {{domxref("Blob")}} or {{domxref("File")}} from which to read.</dd>
-</dl>
+- `blob`
+  - : The {{domxref("Blob")}} or {{domxref("File")}} from which to read.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">var canvas = document.createElement('canvas');
+```js
+var canvas = document.createElement('canvas');
 var height = 200;
 var width  = 200;
 
@@ -44,18 +45,17 @@ canvas.toBlob(function (blob) {
   }
 
   reader.readAsBinaryString(blob);
-});</pre>
+});
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<p>Этот метод был удалён из стандарта FileAPI. Вместо него следует использовать {{domxref("FileReader.readAsArrayBuffer()")}}.</p>
+Этот метод был удалён из стандарта FileAPI. Вместо него следует использовать {{domxref("FileReader.readAsArrayBuffer()")}}.
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("FileReader")}}</li>
-</ul>
+- {{domxref("FileReader")}}

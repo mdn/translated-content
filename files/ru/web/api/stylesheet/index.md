@@ -8,57 +8,38 @@ tags:
   - Таблицы стилей
 translation_of: Web/API/StyleSheet
 ---
-<div>{{APIRef("CSSOM")}} Объектная модель CSS</div>
+{{APIRef("CSSOM")}} Объектная модель CSS
 
-<p>Объект, реализующий интерфейс <code>StyleSheet</code>, представляет отдельную таблицу стилей. Таблица стилей CSS далее будет представлена более специализированным интерфейсом  {{domxref("CSSStyleSheet")}}.</p>
+Объект, реализующий интерфейс `StyleSheet`, представляет отдельную таблицу стилей. Таблица стилей CSS далее будет представлена более специализированным интерфейсом {{domxref("CSSStyleSheet")}}.
 
-<h2 id="Properties">Свойства</h2>
+## Свойства
 
-<dl>
- <dt>{{domxref("StyleSheet.disabled")}}</dt>
- <dd>Свойство имеет тип {{domxref("Boolean")}}, принимающий одно из двух значений и определяющий, применяется или нет текущая таблица стилей.</dd>
- <dt>{{domxref("StyleSheet.href")}} {{readonlyInline}}</dt>
- <dd>Свойство возвращает строку {{domxref("DOMString")}}, указывающую расположение таблицы стилей. Свойство не изменяется.</dd>
- <dt>{{domxref("StyleSheet.media")}} {{readonlyInline}}</dt>
- <dd>Свойство содержит список медиа-установок{{domxref("MediaList")}} таблицы стилей и определяет медиа-устройства, для отображения на которых предназначена данная таблица. Свойство не изменяется.</dd>
- <dt>{{domxref("StyleSheet.ownerNode")}} {{readonlyInline}}</dt>
- <dd>Свойство возвращает ссылку на объект (узел){{domxref("Node")}}, ссылающийся на данную таблицу стилей текущего документа. Свойство не изменяется.</dd>
- <dt>{{domxref("StyleSheet.parentStyleSheet")}} {{readonlyInline}}</dt>
- <dd>Свойство возвращает ссылку на родительскую таблицу стилей {{domxref("StyleSheet")}}, включающую данную таблицу стилей; если таковой нет, возвращает значение <code>null</code>. Свойство не изменяется.</dd>
- <dt>{{domxref("StyleSheet.title")}} {{readonlyInline}}</dt>
- <dd>Свойство возвращает строку {{domxref("DOMString")}}, указывающую на заголовок  текущей таблицы стилей. Свойство не изменяется.</dd>
- <dt>{{domxref("StyleSheet.type")}}{{readonlyInline}}</dt>
- <dd>Свойство возвращает строку {{domxref("DOMString")}}, указывающую на язык, используемый таблицей стилей. Свойство не изменяется.</dd>
-</dl>
+- {{domxref("StyleSheet.disabled")}}
+  - : Свойство имеет тип {{domxref("Boolean")}}, принимающий одно из двух значений и определяющий, применяется или нет текущая таблица стилей.
+- {{domxref("StyleSheet.href")}} {{readonlyInline}}
+  - : Свойство возвращает строку {{domxref("DOMString")}}, указывающую расположение таблицы стилей. Свойство не изменяется.
+- {{domxref("StyleSheet.media")}} {{readonlyInline}}
+  - : Свойство содержит список медиа-установок{{domxref("MediaList")}} таблицы стилей и определяет медиа-устройства, для отображения на которых предназначена данная таблица. Свойство не изменяется.
+- {{domxref("StyleSheet.ownerNode")}} {{readonlyInline}}
+  - : Свойство возвращает ссылку на объект (узел){{domxref("Node")}}, ссылающийся на данную таблицу стилей текущего документа. Свойство не изменяется.
+- {{domxref("StyleSheet.parentStyleSheet")}} {{readonlyInline}}
+  - : Свойство возвращает ссылку на родительскую таблицу стилей {{domxref("StyleSheet")}}, включающую данную таблицу стилей; если таковой нет, возвращает значение `null`. Свойство не изменяется.
+- {{domxref("StyleSheet.title")}} {{readonlyInline}}
+  - : Свойство возвращает строку {{domxref("DOMString")}}, указывающую на заголовок текущей таблицы стилей. Свойство не изменяется.
+- {{domxref("StyleSheet.type")}}{{readonlyInline}}
+  - : Свойство возвращает строку {{domxref("DOMString")}}, указывающую на язык, используемый таблицей стилей. Свойство не изменяется.
 
-<h2 id="Specification">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSSOM', '#stylesheet', 'StyleSheet') }}</td>
-   <td>{{ Spec2('CSSOM') }}</td>
-   <td>Без изменений с {{ SpecName('DOM2 Style') }}.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('DOM2 Style', 'stylesheets.html#StyleSheets-StyleSheet', 'StyleSheet') }}</td>
-   <td>{{ Spec2('DOM2 Style') }}</td>
-   <td>Первоначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                                     | Статус                           | Комментарий                                           |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------- |
+| {{ SpecName('CSSOM', '#stylesheet', 'StyleSheet') }}                                             | {{ Spec2('CSSOM') }}     | Без изменений с {{ SpecName('DOM2 Style') }}. |
+| {{ SpecName('DOM2 Style', 'stylesheets.html#StyleSheets-StyleSheet', 'StyleSheet') }} | {{ Spec2('DOM2 Style') }} | Первоначальное определение.                           |
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
+## Браузерная совместимость
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("CSSStyleSheet")}}</li>
-</ul>
+- {{domxref("CSSStyleSheet")}}

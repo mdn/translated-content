@@ -10,70 +10,68 @@ tags:
   - Text Field Selection API
 translation_of: Web/API/HTMLInputElement/setSelectionRange
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>Метод <strong><code>HTMLInputElement.setSelectionRange()</code></strong> устанавливает начальное и конечное положение выделения текста в элементе {{HTMLElement("input")}}.</p>
+Метод **`HTMLInputElement.setSelectionRange()`** устанавливает начальное и конечное положение выделения текста в элементе {{HTMLElement("input")}}.
 
-<p>В более новых версиях браузеров, можно дополнительно установить направление выделения текста, что позволит, например, определить, что выделение сделано нажатием и перетаскиванием курсора мыши от конца выделенного текста до начала.</p>
+В более новых версиях браузеров, можно дополнительно установить направление выделения текста, что позволит, например, определить, что выделение сделано нажатием и перетаскиванием курсора мыши от конца выделенного текста до начала.
 
-<p>Этот метод позволяет одним вызовом обновить свойства <code>HTMLInputElement.selectionStart</code>, <code>selectionEnd</code>, и <code>selectionDirection</code>.</p>
+Этот метод позволяет одним вызовом обновить свойства `HTMLInputElement.selectionStart`, `selectionEnd`, и `selectionDirection`.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">inputElement.setSelectionRange(<var>selectionStart</var>, <var>selectionEnd</var>, [optional] <var>selectionDirection</var>);
-</pre>
+```
+inputElement.setSelectionRange(selectionStart, selectionEnd, [optional] selectionDirection);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><em>selectionStart</em></dt>
- <dd>Индекс первого выделенного символа.</dd>
- <dt><em>selectionEnd</em></dt>
- <dd>Индекс символа <em>после</em> последнего выделенного символа.</dd>
- <dt><em>selectionDirection</em> {{optional_inline}}</dt>
- <dd>Строка, определяющая направления произведённого выделения. Принимаются значения "forward", "backward" или "none", если направление выделение неизвестно или неважно.</dd>
-</dl>
+- _selectionStart_
+  - : Индекс первого выделенного символа.
+- _selectionEnd_
+  - : Индекс символа _после_ последнего выделенного символа.
+- _selectionDirection_ {{optional_inline}}
+  - : Строка, определяющая направления произведённого выделения. Принимаются значения "forward", "backward" или "none", если направление выделение неизвестно или неважно.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Следующий код:</p>
+Следующий код:
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta charset=utf-8&gt;
-&lt;title&gt;JS Bin&lt;/title&gt;
-&lt;script&gt;
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8>
+<title>JS Bin</title>
+<script>
 function SelectText () {
         var input = document.getElementById("mytextbox");
             input.focus();
             input.setSelectionRange(2,5);
 }
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;&lt;input type="text" id="mytextbox" size="20" value="Mozilla"/&gt;&lt;/p&gt;
-  &lt;p&gt;&lt;button onclick="SelectText()"&gt;Select text&lt;/button&gt;&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+</head>
+<body>
+  <p><input type="text" id="mytextbox" size="20" value="Mozilla"/></p>
+  <p><button onclick="SelectText()">Select text</button></p>
+</body>
+</html>
+```
 
-<p>приведёт к следующему результату:</p>
+приведёт к следующему результату:
 
-<p><img alt="example.png" class="default internal" src="/@api/deki/files/6104/=example.png"></p>
+![example.png](/@api/deki/files/6104/=example.png)
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{HTMLElement("input")}}</li>
- <li>{{domxref("HTMLInputElement")}}</li>
- <li>{{domxref("Selection")}}</li>
-</ul>
+- {{HTMLElement("input")}}
+- {{domxref("HTMLInputElement")}}
+- {{domxref("Selection")}}

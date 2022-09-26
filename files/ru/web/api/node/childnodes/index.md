@@ -3,66 +3,64 @@ title: Node.childNodes
 slug: Web/API/Node/childNodes
 translation_of: Web/API/Node/childNodes
 ---
-<div>
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}`Доступный для чтения аттрибут Node.childNodes` возвращает _коллекцию_ дочерних элементов данного элемента.
 
-<div><code>Доступный для чтения аттрибут <strong>Node.childNodes</strong></code> возвращает <em>коллекцию</em> дочерних элементов данного элемента.</div>
-</div>
+## Синтаксис
 
-<h2 id="Syntax">Синтаксис</h2>
+```
+var ndList = elementNodeReference.childNodes;
+```
 
-<pre class="syntaxbox">var <var>ndList</var> = elementNodeReference.childNodes;
-</pre>
+_ndList_ -- упорядоченная коллекция объектов элементов, которые являются детьми данного элемента. Если у элемента нет детей, *ndList *пуст.
 
-<p><var>ndList</var> -- упорядоченная коллекция объектов элементов, которые являются детьми данного элемента. Если у элемента нет детей, <var>ndList </var>пуст.</p>
+_ndList_ -- переменная, хранящая список дочерних элементов. Тип этого списка -- {{domxref("NodeList")}}.
 
-<p><var>ndList</var> -- переменная, хранящая список дочерних элементов. Тип этого списка --  {{domxref("NodeList")}}.</p>
+## Пример
 
-<h2 id="Example">Пример</h2>
-
-<pre class="brush:js">// parg -- ссылка на элемент &lt;p&gt;
+```js
+// parg -- ссылка на элемент <p>
 
 if (parg.hasChildNodes()) {
   // Таким образом, сначала мы проверяем, не пуст ли объект, есть ли у него дети
   var children = parg.childNodes;
 
-  for (var i = 0; i &lt; children.length; ++i) {
+  for (var i = 0; i < children.length; ++i) {
     // сделать что-то с каждым внутренним элементом через children[i]
     // ПРИМЕЧАНИЕ: Список является ссылкой, Добавление или удаление дочерних элементов изменит список
   }
-}</pre>
+}
+```
 
-<hr>
-<pre class="brush:js">// Это один из способов удалить все дочерние элементы из элемента
+---
+
+```js
+// Это один из способов удалить все дочерние элементы из элемента
 // box -- ссылка на элемент с детьми
 
 while (box.firstChild) {
     //Список является ссылкой, то есть он будет переиндексирован перед каждым вызовом
     box.removeChild(box.firstChild);
-}</pre>
+}
+```
 
-<h2 id="Notes">Примечания</h2>
+## Примечания
 
-<p>Элементы в коллекции -- объекты, а не строки. Чтобы получить данные из этих объектов, вы должны использовать их свойства (например, <code>elementNodeReference.childNodes[1].nodeName</code> чтобы получить имя, и т. д.).</p>
+Элементы в коллекции -- объекты, а не строки. Чтобы получить данные из этих объектов, вы должны использовать их свойства (например, `elementNodeReference.childNodes[1].nodeName` чтобы получить имя, и т. д.).
 
-<p>Объект <code>document</code> обладает 2-мя детьми: декларацией Doctype и корневым элементов, к которому как правило обращаются как <code>documentElement</code>. (В (X)HTML документах это HTML-элемент.)</p>
+Объект `document` обладает 2-мя детьми: декларацией Doctype и корневым элементов, к которому как правило обращаются как `documentElement`. (В (X)HTML документах это HTML-элемент.)
 
-<p><code>childNodes</code> также включают, например, текстовые узлы и комментарии. Чтобы пропустить их, используйте {{ domxref("ParentNode.children") }} взамен.</p>
+`childNodes` также включают, например, текстовые узлы и комментарии. Чтобы пропустить их, используйте {{ domxref("ParentNode.children") }} взамен.
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-1451460987">W3C DOM 2 Core: childNodes</a></li>
- <li><a class="external" href="http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/core.html#ID-1451460987">W3C DOM 3 Core: childNodes</a></li>
- <li><a class="external" href="http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/core.html#ID-536297177">W3C DOM 3 NodeList interface</a></li>
-</ul>
+- [W3C DOM 2 Core: childNodes](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-1451460987)
+- [W3C DOM 3 Core: childNodes](http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/core.html#ID-1451460987)
+- [W3C DOM 3 NodeList interface](http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/core.html#ID-536297177)
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{ domxref("Node.firstChild") }}</li>
- <li>{{ domxref("Node.lastChild") }}</li>
- <li>{{ domxref("Node.nextSibling") }}</li>
- <li>{{ domxref("Node.previousSibling") }}</li>
- <li>{{ domxref("ParentNode.children") }}</li>
-</ul>
+- {{ domxref("Node.firstChild") }}
+- {{ domxref("Node.lastChild") }}
+- {{ domxref("Node.nextSibling") }}
+- {{ domxref("Node.previousSibling") }}
+- {{ domxref("ParentNode.children") }}

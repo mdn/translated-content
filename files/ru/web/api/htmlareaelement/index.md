@@ -3,88 +3,80 @@ title: HTMLAreaElement
 slug: Web/API/HTMLAreaElement
 translation_of: Web/API/HTMLAreaElement
 ---
-<div>
-<div>{{APIRef("HTML DOM")}}</div>
-</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>HTMLAreaElement</code></strong> интерфейс предоставляющий специальные свойства и методы (помимо тех, постоянных объектов {{domxref("HTMLElement")}} интерфейса, также доступных ему по наследству) для манипуляции расположением и представлением пространством элементов.</p>
+**`HTMLAreaElement`** интерфейс предоставляющий специальные свойства и методы (помимо тех, постоянных объектов {{domxref("HTMLElement")}} интерфейса, также доступных ему по наследству) для манипуляции расположением и представлением пространством элементов.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Наследует свойства от его родителя, {{domxref("HTMLElement")}}, и реализует те из {{domxref("URLUtils")}}.</em></p>
+_Наследует свойства от его родителя, {{domxref("HTMLElement")}}, и реализует те из {{domxref("URLUtils")}}._
 
-<dl>
- <dt>{{domxref("HTMLAreaElement.accessKey")}}</dt>
- <dd>Это {{domxref("DOMString")}} содержащий единственный символ, который переключает фокус ввода для управления.</dd>
- <dt>{{domxref("HTMLAreaElement.alt")}}</dt>
- <dd>Это {{domxref("DOMString")}} которое отображает {{ htmlattrxref("alt", "area") }} HTML атрибут, содержащий альтернативный текст для элемента.</dd>
- <dt>{{domxref("HTMLAreaElement.coords")}}</dt>
- <dd>Это {{domxref("DOMString")}} который отображает {{ htmlattrxref("coords", "area") }} HTML атрибут, содержащий координаты активного участка региона.</dd>
- <dt>{{domxref("HTMLAreaElement.download")}} {{experimental_inline}}</dt>
- <dd>Это {{domxref("DOMString")}} показывает что связанный ресурс предназначен для загрузки, а не для отображения в браузере. Значение представляет собой предполагаемое имя файла. Если имя не является допустимым именем файла в данной ОС, браузер будет адаптировать его.</dd>
- <dt>{{domxref("URLUtils.hash")}}</dt>
- <dd>Это {{domxref("DOMString")}} содержащий идентификатор фрагмента (включая начальный hash mark (#)), если таковые имеются, в указанном URL.</dd>
- <dt>{{domxref("URLUtils.host")}}</dt>
- <dd>Это {{domxref("DOMString")}} содержащий имя хоста и порт (если это не порт по умолчанию) в указанном URL.</dd>
- <dt>{{domxref("URLUtils.hostname")}}</dt>
- <dd>Это {{domxref("DOMString")}} содержащий имя хоста в указанном URL.</dd>
- <dt>{{domxref("URLUtils.href")}}</dt>
- <dd>Это {{domxref("DOMString")}} содержание которого отображает {{ htmlattrxref("href", "area") }} HTML атрибут, содержащий действительный URL связанного с ним ресурса.</dd>
- <dt>{{domxref("HTMLAreaElement.hreflang")}}</dt>
- <dd>Это {{domxref("DOMString")}} содержание которого отображает {{ htmlattrxref("hreflang", "area") }} HTML атрибут, показывающий язык связанного с ним ресурса.</dd>
- <dt>{{domxref("HTMLAreaElement.media")}}</dt>
- <dd>Это {{domxref("DOMString")}} содержание которого отображает {{ htmlattrxref("media", "area") }} HTML атрибут, показывающий целевое media, связанного с ним ресурса.</dd>
- <dt>{{domxref("HTMLAreaElement.noHref")}} {{obsolete_inline}}</dt>
- <dd>Это {{domxref("Boolean")}} флаг показывающий, если зона неактивна (<code>true</code>) или активна (<code>false</code>).</dd>
- <dt>{{domxref("URLUtils.password")}}</dt>
- <dd>Это {{domxref("DOMString")}} содержащий пароль указанный перед именем домена.</dd>
- <dt>{{domxref("URLUtils.origin")}} {{readonlyInline}}</dt>
- <dd>Возвращает {{domxref("DOMString")}} содержащий изначальный URL, то есть его схема, его домен, его порт.</dd>
- <dt>{{domxref("URLUtils.pathname")}}</dt>
- <dd>Это {{domxref("DOMString")}} содержащий составную часть пути имени, если таковые имеются в указанном URL.</dd>
- <dt>{{domxref("URLUtils.port")}}</dt>
- <dd>Это {{domxref("DOMString")}} содержащий компонент порта , если таковой имеется в указанном URL.</dd>
- <dt>{{domxref("URLUtils.protocol")}}</dt>
- <dd>Это {{domxref("DOMString")}} содержащий компоненту протокола (в том числе двоеточия <code>':'</code>), в указанном URL.</dd>
- <dt>{{domxref("HTMLAreaElement.referrer")}} {{experimental_inline}}</dt>
- <dd>Это {{domxref("DOMString")}} который отображает {{htmlattrxref("referrer", "area")}} HTML атрибут,  показывающий какой referrer используется когда извлекается связанны с ним ресурс.</dd>
- <dt>{{domxref("HTMLAreaElement.rel")}}</dt>
- <dd>Это {{domxref("DOMString")}} который отображает {{ htmlattrxref("rel", "area") }} HTML атрибут,показывая отношения текущего документа со связанным с ним ресурсом.</dd>
- <dt>{{domxref("HTMLAreaElement.relList")}} {{readOnlyInline}}</dt>
- <dd>Возвращает {{domxref("DOMTokenList")}} который отображает {{ htmlattrxref("rel", "area") }} HTML атрибут, показывая отношения текущего документа к связанному с ним ресурса, как список токенов.</dd>
- <dt>{{domxref("HTMLAreaElement.search")}}</dt>
- <dd>Это {{domxref("DOMString")}} содержащий найденный элемент (включая начальный знак вопроса<code>'?'</code>), если таковой имеется, в указанном URL.</dd>
- <dt>{{domxref("HTMLAreaElement.shape")}}</dt>
- <dd>Это {{domxref("DOMString")}} который отображается {{ htmlattrxref("shape", "area") }} HTML атрибут, включающий вид активного участка, ограниченный известными значениями.</dd>
- <dt>{{domxref("HTMLAreaElement.tabIndex")}}</dt>
- <dd>Как <code>long </code>содержащий положение элемента в порядке табуляции.</dd>
- <dt>{{domxref("HTMLAreaElement.target")}}</dt>
- <dd>Это  {{domxref("DOMString")}} которое отображает {{ htmlattrxref("target", "area") }} HTML атрибут, включая контекст просмотра, в котором открыт связанный с ним ресурс.</dd>
- <dt>{{domxref("HTMLAreaElement.type")}}</dt>
- <dd>Это {{domxref("DOMString")}} которое отображает {{ htmlattrxref("type", "area") }} HTML атрибут, показывающий MIME тип связанного с ним ресурса.</dd>
- <dt>{{domxref("URLUtils.username")}}</dt>
- <dd>Это {{domxref("DOMString")}} содержащий имя пользователя. определённое перед доменным именем.</dd>
-</dl>
+- {{domxref("HTMLAreaElement.accessKey")}}
+  - : Это {{domxref("DOMString")}} содержащий единственный символ, который переключает фокус ввода для управления.
+- {{domxref("HTMLAreaElement.alt")}}
+  - : Это {{domxref("DOMString")}} которое отображает {{ htmlattrxref("alt", "area") }} HTML атрибут, содержащий альтернативный текст для элемента.
+- {{domxref("HTMLAreaElement.coords")}}
+  - : Это {{domxref("DOMString")}} который отображает {{ htmlattrxref("coords", "area") }} HTML атрибут, содержащий координаты активного участка региона.
+- {{domxref("HTMLAreaElement.download")}} {{experimental_inline}}
+  - : Это {{domxref("DOMString")}} показывает что связанный ресурс предназначен для загрузки, а не для отображения в браузере. Значение представляет собой предполагаемое имя файла. Если имя не является допустимым именем файла в данной ОС, браузер будет адаптировать его.
+- {{domxref("URLUtils.hash")}}
+  - : Это {{domxref("DOMString")}} содержащий идентификатор фрагмента (включая начальный hash mark (#)), если таковые имеются, в указанном URL.
+- {{domxref("URLUtils.host")}}
+  - : Это {{domxref("DOMString")}} содержащий имя хоста и порт (если это не порт по умолчанию) в указанном URL.
+- {{domxref("URLUtils.hostname")}}
+  - : Это {{domxref("DOMString")}} содержащий имя хоста в указанном URL.
+- {{domxref("URLUtils.href")}}
+  - : Это {{domxref("DOMString")}} содержание которого отображает {{ htmlattrxref("href", "area") }} HTML атрибут, содержащий действительный URL связанного с ним ресурса.
+- {{domxref("HTMLAreaElement.hreflang")}}
+  - : Это {{domxref("DOMString")}} содержание которого отображает {{ htmlattrxref("hreflang", "area") }} HTML атрибут, показывающий язык связанного с ним ресурса.
+- {{domxref("HTMLAreaElement.media")}}
+  - : Это {{domxref("DOMString")}} содержание которого отображает {{ htmlattrxref("media", "area") }} HTML атрибут, показывающий целевое media, связанного с ним ресурса.
+- {{domxref("HTMLAreaElement.noHref")}} {{obsolete_inline}}
+  - : Это {{domxref("Boolean")}} флаг показывающий, если зона неактивна (`true`) или активна (`false`).
+- {{domxref("URLUtils.password")}}
+  - : Это {{domxref("DOMString")}} содержащий пароль указанный перед именем домена.
+- {{domxref("URLUtils.origin")}} {{readonlyInline}}
+  - : Возвращает {{domxref("DOMString")}} содержащий изначальный URL, то есть его схема, его домен, его порт.
+- {{domxref("URLUtils.pathname")}}
+  - : Это {{domxref("DOMString")}} содержащий составную часть пути имени, если таковые имеются в указанном URL.
+- {{domxref("URLUtils.port")}}
+  - : Это {{domxref("DOMString")}} содержащий компонент порта , если таковой имеется в указанном URL.
+- {{domxref("URLUtils.protocol")}}
+  - : Это {{domxref("DOMString")}} содержащий компоненту протокола (в том числе двоеточия `':'`), в указанном URL.
+- {{domxref("HTMLAreaElement.referrer")}} {{experimental_inline}}
+  - : Это {{domxref("DOMString")}} который отображает {{htmlattrxref("referrer", "area")}} HTML атрибут, показывающий какой referrer используется когда извлекается связанны с ним ресурс.
+- {{domxref("HTMLAreaElement.rel")}}
+  - : Это {{domxref("DOMString")}} который отображает {{ htmlattrxref("rel", "area") }} HTML атрибут,показывая отношения текущего документа со связанным с ним ресурсом.
+- {{domxref("HTMLAreaElement.relList")}} {{readOnlyInline}}
+  - : Возвращает {{domxref("DOMTokenList")}} который отображает {{ htmlattrxref("rel", "area") }} HTML атрибут, показывая отношения текущего документа к связанному с ним ресурса, как список токенов.
+- {{domxref("HTMLAreaElement.search")}}
+  - : Это {{domxref("DOMString")}} содержащий найденный элемент (включая начальный знак вопроса`'?'`), если таковой имеется, в указанном URL.
+- {{domxref("HTMLAreaElement.shape")}}
+  - : Это {{domxref("DOMString")}} который отображается {{ htmlattrxref("shape", "area") }} HTML атрибут, включающий вид активного участка, ограниченный известными значениями.
+- {{domxref("HTMLAreaElement.tabIndex")}}
+  - : Как `long `содержащий положение элемента в порядке табуляции.
+- {{domxref("HTMLAreaElement.target")}}
+  - : Это {{domxref("DOMString")}} которое отображает {{ htmlattrxref("target", "area") }} HTML атрибут, включая контекст просмотра, в котором открыт связанный с ним ресурс.
+- {{domxref("HTMLAreaElement.type")}}
+  - : Это {{domxref("DOMString")}} которое отображает {{ htmlattrxref("type", "area") }} HTML атрибут, показывающий MIME тип связанного с ним ресурса.
+- {{domxref("URLUtils.username")}}
+  - : Это {{domxref("DOMString")}} содержащий имя пользователя. определённое перед доменным именем.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em>наследует методы от его родителя, {{domxref("HTMLElement")}} и реализует те из {{domxref("URLUtils")}}.</em></p>
+_наследует методы от его родителя, {{domxref("HTMLElement")}} и реализует те из {{domxref("URLUtils")}}._
 
-<dl>
- <dt>{{domxref("URLUtils.toString()")}}</dt>
- <dd>Возвращает {{domxref("DOMString")}} содержащий весь URL скрипта, выполняемого в {{domxref("Worker")}}. Это синоним для {{domxref("URLUtils.href")}}.</dd>
-</dl>
+- {{domxref("URLUtils.toString()")}}
+  - : Возвращает {{domxref("DOMString")}} содержащий весь URL скрипта, выполняемого в {{domxref("Worker")}}. Это синоним для {{domxref("URLUtils.href")}}.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>HTML-элемент реализующий этот интерфейс: {{ HTMLElement("area") }}.</li>
-</ul>
+- HTML-элемент реализующий этот интерфейс: {{ HTMLElement("area") }}.

@@ -7,50 +7,49 @@ tags:
   - Property
 translation_of: Web/API/CanvasRenderingContext2D/lineJoin
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Свойство <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.lineJoin</code></strong> предоставляемое Canvas 2D API определяет форму вершин в которых линии сходятся. Длина линий должна быть ненулевой.</p>
+Свойство **`CanvasRenderingContext2D`\*\***`.lineJoin`\*\* предоставляемое Canvas 2D API определяет форму вершин в которых линии сходятся. Длина линий должна быть ненулевой.
 
-<p>Смотрите также главу <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</a> в <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</a>.</p>
+Смотрите также главу [Applying styles and color](/ru/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) в [Canvas Tutorial](/ru/docs/Web/API/Canvas_API/Tutorial).
 
-<div class="note">
-<p><strong>Note:</strong> Lines can be drawn with the {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}}, and {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.</p>
-</div>
+> **Примечание:** Lines can be drawn with the {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}}, and {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre><em>ctx</em>.lineJoin = "bevel" || "round" || "miter";</pre>
+```
+ctx.lineJoin = "bevel" || "round" || "miter";
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<p>Свойство может принимать три значения: <code>round</code>, <code>bevel</code> и <code>miter</code>. По умолчанию установлено значение <code>miter</code>. Имейте ввиду, что свойство никак не повлияет на линии направленные в одну сторону, потому что не будет создана зона пересечения.</p>
+Свойство может принимать три значения: `round`, `bevel` и `miter`. По умолчанию установлено значение `miter`. Имейте ввиду, что свойство никак не повлияет на линии направленные в одну сторону, потому что не будет создана зона пересечения.
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/237/Canvas_linejoin.png" style="float: right; height: 190px; width: 190px;"></p>
+![](https://mdn.mozillademos.org/files/237/Canvas_linejoin.png)
 
-<dl>
- <dt><code>round</code></dt>
- <dd>Скругляет углы за счёт добавления сектора с центром в точке пересечения линий и радиусом равным толщине линии.</dd>
- <dt><code>bevel</code></dt>
- <dd>"Срезает" угол, рисуя треугольник с вершинами в точке пересечения линий и крайних точках каждой линии.</dd>
- <dt><code>miter</code></dt>
- <dd>Соединяет линии в одной точке, расширяя для этого их границы и заполняя пространство ромбами . Установка этого эффекта осуществляется свойством {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}.</dd>
-</dl>
+- `round`
+  - : Скругляет углы за счёт добавления сектора с центром в точке пересечения линий и радиусом равным толщине линии.
+- `bevel`
+  - : "Срезает" угол, рисуя треугольник с вершинами в точке пересечения линий и крайних точках каждой линии.
+- `miter`
+  - : Соединяет линии в одной точке, расширяя для этого их границы и заполняя пространство ромбами . Установка этого эффекта осуществляется свойством {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_свойства_lineJoin">Использование свойства lineJoin</h3>
+### Использование свойства lineJoin
 
-<p>Ниже представлен простой фрагмент кода, использующий <code>lineJoin</code> для скругления места соединения линий.</p>
+Ниже представлен простой фрагмент кода, использующий `lineJoin` для скругления места соединения линий.
 
-<p> </p>
+#### HTML
 
-<h4 id="HTML">HTML</h4>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
+#### JavaScript
 
-<h4 id="JavaScript">JavaScript</h4>
-
-<pre class="brush: html">const canvas = document.getElementById('canvas');
+```html
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.lineWidth = 20;
@@ -60,29 +59,27 @@ ctx.moveTo(20, 20);
 ctx.lineTo(190, 100);
 ctx.lineTo(280, 20);
 ctx.lineTo(280, 150);
-ctx.stroke();</pre>
+ctx.stroke();
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Использование_свойства_lineJoin', 700, 180) }}</p>
+{{ EmbedLiveSample('Использование_свойства_lineJoin', 700, 180) }}
 
-<p> </p>
+### Разница между значениями lineJoin
 
-<h3 id="Разница_между_значениями_lineJoin">Разница между значениями lineJoin</h3>
+Пример ниже наглядно демонстрирует разницу между значениями свойства `lineJoin.`
 
-<p>Пример ниже наглядно демонстрирует разницу между значениями свойства <code>lineJoin.</code></p>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<p> </p>
-
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
-</div>
-
-<pre class="brush: html">var ctx = document.getElementById('canvas').getContext('2d');
+```html
+var ctx = document.getElementById('canvas').getContext('2d');
 var lineJoin = ['round', 'bevel', 'miter'];
 ctx.lineWidth = 10;
 
-for (let i = 0; i &lt; lineJoin.length; i++) {
+for (let i = 0; i < lineJoin.length; i++) {
   ctx.lineJoin = lineJoin[i];
   ctx.beginPath();
   ctx.moveTo(-5, 5 + i * 40);
@@ -91,36 +88,25 @@ for (let i = 0; i &lt; lineJoin.length; i++) {
   ctx.lineTo(115, 45 + i * 40);
   ctx.lineTo(155, 5 + i * 40);
   ctx.stroke();
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Разница_между_значениями_lineJoin", "180", "180", "https://mdn.mozillademos.org/files/237/Canvas_linejoin.png")}}</p>
+{{EmbedLiveSample("Разница_между_значениями_lineJoin", "180", "180", "https://mdn.mozillademos.org/files/237/Canvas_linejoin.png")}}
 
-<p> </p>
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p> </p>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## Особенность WebKit/Blink
 
-<p> </p>
+- В браузерах на базе Webkit и Blink помимо этого свойства, также поддерживается нестандартный метод `ctx.setLineJoin()`.
 
-<h2 id="Особенность_WebKitBlink">Особенность WebKit/Blink</h2>
+## Смотрите также
 
-<ul>
- <li>
-  <p>В  браузерах на базе Webkit и Blink помимо этого свойства, также поддерживается нестандартный метод <code>ctx.setLineJoin()</code>.</p>
- </li>
-</ul>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Интерфейс, предоставляющий данное свойство: {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.lineCap")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.lineWidth")}}</li>
-</ul>
+- Интерфейс, предоставляющий данное свойство: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.lineCap")}}
+- {{domxref("CanvasRenderingContext2D.lineWidth")}}

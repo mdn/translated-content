@@ -4,20 +4,23 @@ slug: Web/API/ServiceWorker/statechange_event
 translation_of: Web/API/ServiceWorker/onstatechange
 original_slug: Web/API/ServiceWorker/onstatechange
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>Обработчик события, вызываемый при срабатывании события <code>statechange</code>; по сути, срабатывает при изменении {{domxref("ServiceWorker.state")}}.</p>
+Обработчик события, вызываемый при срабатывании события `statechange`; по сути, срабатывает при изменении {{domxref("ServiceWorker.state")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">ServiceWorker.onstatechange = function(statechangeevent) { ... }
-ServiceWorker.addEventListener('statechange', function(statechangeevent) { ... } )</pre>
+```
+ServiceWorker.onstatechange = function(statechangeevent) { ... }
+ServiceWorker.addEventListener('statechange', function(statechangeevent) { ... } )
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Данный фрагмент кода из <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html">примера событий service worker</a> (<a href="https://googlechrome.github.io/samples/service-worker/registration-events/">демо</a>) возвращает состояние при каждом его изменении.</p>
+Данный фрагмент кода из [примера событий service worker](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([демо](https://googlechrome.github.io/samples/service-worker/registration-events/)) возвращает состояние при каждом его изменении.
 
-<pre class="brush: js">var serviceWorker;
+```js
+var serviceWorker;
 if (registration.installing) {
   serviceWorker = registration.installing;
   document.querySelector('#kind').textContent = 'installing';
@@ -34,11 +37,13 @@ if (serviceWorker) {
   serviceWorker.addEventListener('statechange', function(e) {
   logState(e.target.state);
   });
-}</pre>
+}
+```
 
-<p>Обратите внимание, что при срабатывании <code>statechange</code>, ссылки на service worker могли измениться. Например:</p>
+Обратите внимание, что при срабатывании `statechange`, ссылки на service worker могли измениться. Например:
 
-<pre class="brush: js">navigator.serviceWorker.register(..).then(function(swr) {
+```js
+navigator.serviceWorker.register(..).then(function(swr) {
   swr.installing.state == "installing"
   swr.installing.onstatechange = function() {
     swr.installing == null;
@@ -46,16 +51,13 @@ if (serviceWorker) {
     // event gets queued, meanwhile the underlying worker may have gone into the waiting
     // state and will be immediately activated if possible.
   }
-})</pre>
+})
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость">Совместимость</h2>
+## Совместимость
 
-<div>
-
-
-<p>{{Compat}}</p>
-</div>
+{{Compat}}

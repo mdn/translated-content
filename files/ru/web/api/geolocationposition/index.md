@@ -6,38 +6,32 @@ tags:
   - местонахождение
 translation_of: Web/API/GeolocationPosition
 ---
-<div>{{securecontext_header}}{{APIRef("Geolocation API")}}</div>
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-<p>Интерфейс <strong><code>GeolocationPosition</code></strong> представляет положение соответствующего устройства в данный момент времени. Положение, представленное объектом {{domxref("GeolocationCoordinates")}},  отражает двумерное положение устройства на сфероиде, представляющем землю, а также его высоту и скорость..</p>
+Интерфейс **`GeolocationPosition`** представляет положение соответствующего устройства в данный момент времени. Положение, представленное объектом {{domxref("GeolocationCoordinates")}}, отражает двумерное положение устройства на сфероиде, представляющем землю, а также его высоту и скорость..
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Интерфейс <code>GeolocationPosition</code> не наследует свойства</em>.</p>
+_Интерфейс `GeolocationPosition` не наследует свойства_.
 
-<dl>
- <dt>{{domxref("GeolocationPosition.coords")}} {{readonlyInline}} {{securecontext_inline}}</dt>
- <dd>Возвращает объект {{domxref("GeolocationCoordinates")}} определяющий текущую локацию.</dd>
- <dt>{{domxref("GeolocationPosition.timestamp")}} {{readonlyInline}} {{securecontext_inline}}</dt>
- <dd>Возвращает {{domxref("DOMTimeStamp")}}, представляющий время, в которое была получена локация.</dd>
-</dl>
+- {{domxref("GeolocationPosition.coords")}} {{readonlyInline}} {{securecontext_inline}}
+  - : Возвращает объект {{domxref("GeolocationCoordinates")}} определяющий текущую локацию.
+- {{domxref("GeolocationPosition.timestamp")}} {{readonlyInline}} {{securecontext_inline}}
+  - : Возвращает {{domxref("DOMTimeStamp")}}, представляющий время, в которое была получена локация.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em><em>Интерфейс </em><code>GeolocationPosition</code><em> </em></em>не имеет и не наследует методы.</p>
+**Интерфейс* `GeolocationPosition`* **не имеет и не наследует методы.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
+## Браузерная совместимость
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Geolocation_API/Using">Using the Geolocation API</a></li>
- <li>{{domxref("Geolocation")}}</li>
-</ul>
+- [Using the Geolocation API](/ru/docs/Web/API/Geolocation_API/Using)
+- {{domxref("Geolocation")}}

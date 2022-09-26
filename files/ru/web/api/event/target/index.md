@@ -5,23 +5,26 @@ tags:
   - Событие
 translation_of: Web/API/Event/target
 ---
-<p>{{ApiRef("DOM")}}</p>
+{{ApiRef("DOM")}}
 
-<p>Свойство <code><strong>target</strong></code> интерфейса {{domxref ("Event")}} является ссылкой на объект, который был инициатором события. Он отличается от {{domxref ("Event.currentTarget")}}, если обработчик события вызывается во время всплытия (bubbling) или захвата события.</p>
+Свойство **`target`** интерфейса {{domxref ("Event")}} является ссылкой на объект, который был инициатором события. Он отличается от {{domxref ("Event.currentTarget")}}, если обработчик события вызывается во время всплытия (bubbling) или захвата события.
 
-<p id="Синтаксис">Синтаксис</p>
+Синтаксис
 
-<pre class="syntaxbox">theTarget = event.target</pre>
+```
+theTarget = event.target
+```
 
-<p>Значение:</p>
+Значение:
 
-<p>{{domxref("EventTarget")}}</p>
+{{domxref("EventTarget")}}
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Свойство <code>event.target</code> может быть использовано для реализации <strong>делегирования событий</strong>.</p>
+Свойство `event.target` может быть использовано для реализации **делегирования событий**.
 
-<pre>// Создадим список
+```
+// Создадим список
 var ul = document.createElement('ul');
 document.body.appendChild(ul);
 
@@ -31,36 +34,36 @@ ul.appendChild(li1);
 ul.appendChild(li2);
 
 function hide(e){
-  // e.target ссылается на кликнутый &lt;li&gt; элемент
-  // Он отличается от e.currentTarget который будет ссылаться на родительский &lt;ul&gt; в этом контексте
+  // e.target ссылается на кликнутый <li> элемент
+  // Он отличается от e.currentTarget который будет ссылаться на родительский <ul> в этом контексте
   e.target.style.visibility = 'hidden';
 }
 
 // Назначим обработчик к списку
-// Он будет вызван когда кликнут на любой &lt;li&gt;
-ul.addEventListener('click', hide, false);</pre>
+// Он будет вызван когда кликнут на любой <li>
+ul.addEventListener('click', hide, false);
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузеров">Поддержка браузеров</h2>
+## Поддержка браузеров
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Примечания">Примечания</h2>
+## Примечания
 
-<p>В IE 6-8 модель событий отличается. Обработчики событий назначаются с помощью нестандартного {{domxref('EventTarget.attachEvent')}} метода. При этом в объекте события есть свойство {{domxref('Event.srcElement')}}, вместо <code>target</code> свойства, но по смыслу оно идентично <code>event.target</code>.</p>
+В IE 6-8 модель событий отличается. Обработчики событий назначаются с помощью нестандартного {{domxref('EventTarget.attachEvent')}} метода. При этом в объекте события есть свойство {{domxref('Event.srcElement')}}, вместо `target` свойства, но по смыслу оно идентично `event.target`.
 
-<pre class="brush: js">function hide(e) {
+```js
+function hide(e) {
   // Поддержка IE 6-8
   var target = e.target || e.srcElement;
   target.style.visibility = 'hidden';
 }
-</pre>
+```
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Event/Comparison_of_Event_Targets">Comparison of Event Targets</a></li>
-</ul>
+- [Comparison of Event Targets](/ru/docs/Web/API/Event/Comparison_of_Event_Targets)

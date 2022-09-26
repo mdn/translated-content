@@ -8,59 +8,56 @@ tags:
   - метод
 translation_of: Web/API/CanvasRenderingContext2D/createLinearGradient
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Метод <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.createLinearGradient()</code></strong>, предоставляемый Canvas 2D API, создаёт градиент вдоль линии, соединённой двумя точками с заданными координатами.</p>
+Метод **`CanvasRenderingContext2D`\*\***`.createLinearGradient()`\*\*, предоставляемый Canvas 2D API, создаёт градиент вдоль линии, соединённой двумя точками с заданными координатами.
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14681/mdn-canvas-linearGradient.png" style="height: 121px; width: 264px;"></p>
+![](https://mdn.mozillademos.org/files/14681/mdn-canvas-linearGradient.png)
 
-<p>Этот метод возвращает линейный {{domxref("CanvasGradient")}}. Для того, чтобы быть добавленным к фигуре, градиент должен быть задан свойством {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} или {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}.</p>
+Этот метод возвращает линейный {{domxref("CanvasGradient")}}. Для того, чтобы быть добавленным к фигуре, градиент должен быть задан свойством {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} или {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}.
 
-<div class="note">
-<p><strong>Примечание:</strong> Координаты градиента глобальны, т.е. относятся к текущему пространству координат. При добавлении градиента, его координаты определяются НЕ относительно координат фигур.</p>
-</div>
+> **Примечание:** Координаты градиента глобальны, т.е. относятся к текущему пространству координат. При добавлении градиента, его координаты определяются НЕ относительно координат фигур.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">CanvasGradient <var>ctx</var>.createLinearGradient(<var>x0</var>, <var>y0</var>, <var>x1</var>, <var>y1</var>);
-</pre>
+```
+CanvasGradient ctx.createLinearGradient(x0, y0, x1, y1);
+```
 
-<p>Метод <code>createLinearGradient()</code> принимает четыре аргумента для определения начала и конца точек линии градиента.</p>
+Метод `createLinearGradient()` принимает четыре аргумента для определения начала и конца точек линии градиента.
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>x0</code></dt>
- <dd>Координата по оси X начальной точки.</dd>
- <dt><code>y0</code></dt>
- <dd>Координата по оси Y начальной точки.</dd>
- <dt><code>x1</code></dt>
- <dd>Координата по оси X конечной точки.</dd>
- <dt><code>y1</code></dt>
- <dd>Координата по оси Y конечной точки.</dd>
-</dl>
+- `x0`
+  - : Координата по оси X начальной точки.
+- `y0`
+  - : Координата по оси Y начальной точки.
+- `x1`
+  - : Координата по оси X конечной точки.
+- `y1`
+  - : Координата по оси Y конечной точки.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<dl>
- <dt>{{domxref("CanvasGradient")}}</dt>
- <dd>Линейный <code>CanvasGradient</code>, определённый линией.</dd>
-</dl>
+- {{domxref("CanvasGradient")}}
+  - : Линейный `CanvasGradient`, определённый линией.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Заполнение_прямоугольника_с_линейным_градиентом">Заполнение прямоугольника с линейным градиентом</h3>
+### Заполнение прямоугольника с линейным градиентом
 
-<p>В примере создаётся и добавляется линейный градиент, используя метод <code>createLinearGradient()</code>. Градиент имеет три точки остановки цвета между созданными начальной и конечной точками линии.</p>
+В примере создаётся и добавляется линейный градиент, используя метод `createLinearGradient()`. Градиент имеет три точки остановки цвета между созданными начальной и конечной точками линии.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 // Создание линейного градиента
@@ -76,31 +73,25 @@ gradient.addColorStop(1, 'green');
 // Установка стиля заливки и отрисовка прямоугольника градиента
 ctx.fillStyle = gradient;
 ctx.fillRect(20, 20, 200, 100);
-</pre>
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{ EmbedLiveSample('Заполнение_прямоугольника_с_линейным_градиентом', 700, 180) }}</p>
+{{ EmbedLiveSample('Заполнение_прямоугольника_с_линейным_градиентом', 700, 180) }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+### Специфично для Gecko
 
-<p>{{Compat}}</p>
+- Начиная с Gecko 2.0 {{geckoRelease("2.0")}}, указание не конечных значений выбрасывает `NOT_SUPPORTED_ERR` вместо `SYNTAX_ERR`.
 
-<h3 id="Специфично_для_Gecko">Специфично для Gecko</h3>
+## Смотрите также
 
-<ul>
- <li>Начиная с Gecko 2.0 {{geckoRelease("2.0")}}, указание не конечных значений выбрасывает <code>NOT_SUPPORTED_ERR</code> вместо <code>SYNTAX_ERR</code>.</li>
-</ul>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Интерфейс, предоставляющий данный метод: {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.createRadialGradient()")}}</li>
-</ul>
+- Интерфейс, предоставляющий данный метод: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.createRadialGradient()")}}

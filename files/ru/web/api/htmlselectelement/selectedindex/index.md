@@ -6,49 +6,53 @@ tags:
   - HTMLSelectElement
 translation_of: Web/API/HTMLSelectElement/selectedIndex
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><code><strong>HTMLSelectElement.selectedIndex </strong></code>показывает порядковый номер первого выбранного элемента <code>{{HTMLElement("option")}}</code>. Значение -1 означает, что ни один из элементов не выбран.</p>
+**`HTMLSelectElement.selectedIndex `**показывает порядковый номер первого выбранного элемента `{{HTMLElement("option")}}`. Значение -1 означает, что ни один из элементов не выбран.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <var>index</var> = <var>selectElem</var>.selectedIndex;
-<em>selectElem<code>.selectedIndex = </code>index;</em>
-</pre>
+```
+var index = selectElem.selectedIndex;
+selectElem.selectedIndex = index;
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p id="p"&gt;Индекс выбранного элемента: 0&lt;/p&gt;
+```html
+<p id="p">Индекс выбранного элемента: 0</p>
 
-&lt;select id="select"&gt;
-  &lt;option selected&gt;Option A&lt;/option&gt;
-  &lt;option&gt;Option B&lt;/option&gt;
-  &lt;option&gt;Option C&lt;/option&gt;
-  &lt;option&gt;Option D&lt;/option&gt;
-  &lt;option&gt;Option E&lt;/option&gt;
-&lt;/select&gt;
-</pre>
+<select id="select">
+  <option selected>Option A</option>
+  <option>Option B</option>
+  <option>Option C</option>
+  <option>Option D</option>
+  <option>Option E</option>
+</select>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var selectElem = document.getElementById('select')
+```js
+var selectElem = document.getElementById('select')
 var pElem = document.getElementById('p')
 
-// Когда выбран новый элемент &lt;option&gt;
+// Когда выбран новый элемент <option>
 selectElem.addEventListener('change', function() {
   var index = selectElem.selectedIndex;
-  // Добавить данные в &lt;p&gt;
+  // Добавить данные в <p>
   pElem.innerHTML = 'selectedIndex: ' + index;
-})</pre>
+})
+```
 
-<p>{{EmbedLiveSample("Пример", "200px", "80px")}}</p>
+{{EmbedLiveSample("Пример", "200px", "80px")}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

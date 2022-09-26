@@ -7,54 +7,49 @@ tags:
   - Property
 translation_of: Web/API/Document/head
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>Возвращает элемент {{HTMLElement("head")}} текущего документа. Если имеется более одного элемента <code>&lt;head&gt;</code>, будет возвращён первый из них.</p>
+Возвращает элемент {{HTMLElement("head")}} текущего документа. Если имеется более одного элемента `<head>`, будет возвращён первый из них.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>var objRef</em> = document.head;
-</pre>
+```
+var objRef = document.head;
+```
 
+### Значение
 
+{{domxref("HTMLHeadElement")}}.
 
-<h3 id="Значение">Значение</h3>
+## Пример
 
-<p>{{domxref("HTMLHeadElement")}}.</p>
+```
+<!doctype html>
+<head id="my-document-head">
+  <title>Example: using document.head</title>
+</head>
 
-
-
-<h2 id="Пример">Пример</h2>
-
-<pre><code>&lt;!doctype html&gt;
-&lt;head id="my-document-head"&gt;
-  &lt;title&gt;Example: using document.head&lt;/title&gt;
-&lt;/head&gt;
-
-&lt;script&gt;
+<script>
   var theHead = document.head;
 
   console.log(theHead.id); // "my-document-head";
 
   console.log( theHead === document.querySelector("head") ); // true
-&lt;/script&gt;</code></pre>
+</script>
+```
 
-<h2 id="Примечание">Примечание</h2>
+## Примечание
 
-<p><code>document.head</code> доступно только для чтения. Присвоить значение этому свойству нельзя. При попытке это сделать ошибка вызвана не будет, только если вы не используете <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">Strict Mode</a>. В данном случае будет вызвано {{jsxref("TypeError")}} .</p>
+`document.head` доступно только для чтения. Присвоить значение этому свойству нельзя. При попытке это сделать ошибка вызвана не будет, только если вы не используете [Strict Mode](/ru/docs/Web/JavaScript/Reference/Strict_mode). В данном случае будет вызвано {{jsxref("TypeError")}} .
 
-
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Браузерная_поддержка">Браузерная поддержка</h2>
+## Браузерная поддержка
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("document.body")}}</li>
-</ul>
+- {{domxref("document.body")}}

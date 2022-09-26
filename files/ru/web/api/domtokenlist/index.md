@@ -3,105 +3,94 @@ title: DOMTokenList
 slug: Web/API/DOMTokenList
 translation_of: Web/API/DOMTokenList
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><strong>DOMTokenList </strong>интерфейс представляет собой набор разделённых пробелами токенов. Такой набор возвращается от {{domxref("Element.classList")}}, {{domxref("HTMLLinkElement.relList")}}, {{domxref("HTMLAnchorElement.relList")}}, {{domxref("HTMLAreaElement.relList")}}, {{domxref("HTMLIframeElement.sandbox")}}, или {{domxref("HTMLOutputElement.htmlFor")}}. Он в начале индексируется 0 как в объектах JavaScript.  DOMTokenList всегда чувствителен к регистру.</p>
+**DOMTokenList** интерфейс представляет собой набор разделённых пробелами токенов. Такой набор возвращается от {{domxref("Element.classList")}}, {{domxref("HTMLLinkElement.relList")}}, {{domxref("HTMLAnchorElement.relList")}}, {{domxref("HTMLAreaElement.relList")}}, {{domxref("HTMLIframeElement.sandbox")}}, или {{domxref("HTMLOutputElement.htmlFor")}}. Он в начале индексируется 0 как в объектах JavaScript. DOMTokenList всегда чувствителен к регистру.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<dl>
- <dt>{{domxref("DOMTokenList.length")}} {{ReadOnlyInline}}</dt>
- <dd>- целое число, которое представляет собой число объектов хранящееся в объекте</dd>
- <dt>{{domxref("DOMTokenList.value")}}</dt>
- <dd>Список значений  {{domxref("DOMString")}}.</dd>
-</dl>
+- {{domxref("DOMTokenList.length")}} {{ReadOnlyInline}}
+  - : - целое число, которое представляет собой число объектов хранящееся в объекте
+- {{domxref("DOMTokenList.value")}}
+  - : Список значений {{domxref("DOMString")}}.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<dl>
- <dt>{{domxref("DOMTokenList.item()")}}</dt>
- <dd>Возвращает элемент из списка по индексу (возвращает <code>undefined</code> если число больше или равно длине списка).</dd>
- <dt>{{domxref("DOMTokenList.contains()")}}</dt>
- <dd>Возвращает <code>true</code> если список содержит отданный <em>токен</em>, иначе <code>false</code>.</dd>
- <dt>{{domxref("DOMTokenList.add()")}}</dt>
- <dd>Добавляет отданный <em>токен</em> в список.</dd>
- <dt>{{domxref("DOMTokenList.remove()")}}</dt>
- <dd>Удаляет указанный <em>токен</em> из списка.</dd>
- <dt>{{domxref("DOMTokenList.replace()")}}</dt>
- <dd>Заменяет существующий <em>токен</em> новым.</dd>
- <dt>{{domxref("DOMTokenList.supports()")}}</dt>
- <dd>Возвращает <code>true</code> если отданный <em>токен </em>поддерживается токенами в связанном атрибуте</dd>
- <dt>{{domxref("DOMTokenList.toggle()")}}</dt>
- <dd><code>Удаляет отданный <em>токен</em> из списка и возвращает false</code>. Если <em>токена</em> не существует, то он добавляется и функция возвращает <code>true</code>.</dd>
- <dt>{{domxref("DOMTokenList.entries()")}}</dt>
- <dd>Возвращает {{jsxref("Iteration_protocols","iterator")}} позволяя пройтись по всем парам ключ/значение хранящимся в объекте.</dd>
- <dt>{{domxref("DOMTokenList.forEach()")}}</dt>
- <dd>Выполняет предусмотренную функцию к каждому элементу <code>DOMTokenList</code>.</dd>
- <dt>{{domxref("DOMTokenList.keys()")}}</dt>
- <dd>Возвращает {{jsxref("Iteration_protocols", "iterator")}} позволяя пройтись по всем ключам всех пар ключ/значение, хранящихся в объекте.</dd>
- <dt>{{domxref("DOMTokenList.values()")}}</dt>
- <dd>Возвращает {{jsxref("Iteration_protocols", "iterator")}} позволяя пройтись по всем значениям пар ключ/значение, хранящихся в объектах.</dd>
-</dl>
+- {{domxref("DOMTokenList.item()")}}
+  - : Возвращает элемент из списка по индексу (возвращает `undefined` если число больше или равно длине списка).
+- {{domxref("DOMTokenList.contains()")}}
+  - : Возвращает `true` если список содержит отданный _токен_, иначе `false`.
+- {{domxref("DOMTokenList.add()")}}
+  - : Добавляет отданный _токен_ в список.
+- {{domxref("DOMTokenList.remove()")}}
+  - : Удаляет указанный _токен_ из списка.
+- {{domxref("DOMTokenList.replace()")}}
+  - : Заменяет существующий _токен_ новым.
+- {{domxref("DOMTokenList.supports()")}}
+  - : Возвращает `true` если отданный _токен_ поддерживается токенами в связанном атрибуте
+- {{domxref("DOMTokenList.toggle()")}}
+  - : `Удаляет отданный токен из списка и возвращает false`. Если _токена_ не существует, то он добавляется и функция возвращает `true`.
+- {{domxref("DOMTokenList.entries()")}}
+  - : Возвращает {{jsxref("Iteration_protocols","iterator")}} позволяя пройтись по всем парам ключ/значение хранящимся в объекте.
+- {{domxref("DOMTokenList.forEach()")}}
+  - : Выполняет предусмотренную функцию к каждому элементу `DOMTokenList`.
+- {{domxref("DOMTokenList.keys()")}}
+  - : Возвращает {{jsxref("Iteration_protocols", "iterator")}} позволяя пройтись по всем ключам всех пар ключ/значение, хранящихся в объекте.
+- {{domxref("DOMTokenList.values()")}}
+  - : Возвращает {{jsxref("Iteration_protocols", "iterator")}} позволяя пройтись по всем значениям пар ключ/значение, хранящихся в объектах.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>В следующем простом примере мы извлекаем список классов установленных в элементе {{htmlelement("p")}} как <code>DOMTokenList</code> используя {{domxref("Element.classList")}}, добавляем класс используя {{domxref("DOMTokenList.add()")}}, затем обновляем {{domxref("Node.textContent")}} в элементе <code>&lt;p&gt;</code> чтобы уравнять с <code>DOMTokenList</code>.</p>
+В следующем простом примере мы извлекаем список классов установленных в элементе {{htmlelement("p")}} как `DOMTokenList` используя {{domxref("Element.classList")}}, добавляем класс используя {{domxref("DOMTokenList.add()")}}, затем обновляем {{domxref("Node.textContent")}} в элементе `<p>` чтобы уравнять с `DOMTokenList`.
 
-<p>Сперва HTML:</p>
+Сперва HTML:
 
-<pre class="brush: html">&lt;p class="a b c"&gt;&lt;/p&gt;</pre>
+```html
+<p class="a b c"></p>
+```
 
-<p>Теперь JavaScript:</p>
+Теперь JavaScript:
 
-<pre class="brush: js">var para = document.querySelector("p");
+```js
+var para = document.querySelector("p");
 var classes = para.classList;
 para.classList.add("d");
-para.textContent = 'paragraph classList is "' + classes + '"';</pre>
+para.textContent = 'paragraph classList is "' + classes + '"';
+```
 
-<p>Результат выглядит так:</p>
+Результат выглядит так:
 
-<p>{{ EmbedLiveSample('Примеры', '100%', 60) }}</p>
+{{ EmbedLiveSample('Примеры', '100%', 60) }}
 
-<h2 id="Обрезка_пробелов_и_удаление_дубликатов">Обрезка пробелов и удаление дубликатов</h2>
+## Обрезка пробелов и удаление дубликатов
 
-<p>Метод, который модифицирует <code>DOMTokenList</code> (как {{domxref("DOMTokenList.add()")}}) автоматически обрезает все излишки {{Glossary("Whitespace")}} и удаляет значения дубликатов из списка. Пример: </p>
+Метод, который модифицирует `DOMTokenList` (как {{domxref("DOMTokenList.add()")}}) автоматически обрезает все излишки {{Glossary("Whitespace")}} и удаляет значения дубликатов из списка. Пример:
 
-<pre class="brush: html">&lt;span class="    d   d e f"&gt;&lt;/span&gt;</pre>
+```html
+<span class="    d   d e f"></span>
+```
 
-<pre class="brush: js">var span = document.querySelector("span");
+```js
+var span = document.querySelector("span");
 var classes = span.classList;
 span.classList.add("x");
-span.textContent = 'span classList is "' + classes + '"';</pre>
+span.textContent = 'span classList is "' + classes + '"';
+```
 
-<p>Результат выглядит так:</p>
+Результат выглядит так:
 
-<p>{{ EmbedLiveSample('Обрезка_пробелов_и_удаление_дубликатов', '100%', 60) }}</p>
+{{ EmbedLiveSample('Обрезка_пробелов_и_удаление_дубликатов', '100%', 60) }}
 
-<h2 id="Характеристики">Характеристики</h2>
+## Характеристики
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Характеристики</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#interface-domtokenlist", "DOMTokenList")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>Начальное определение</td>
-  </tr>
- </tbody>
-</table>
+| Характеристики                                                                               | Статус                           | Комментарий           |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | --------------------- |
+| {{SpecName("DOM WHATWG", "#interface-domtokenlist", "DOMTokenList")}} | {{Spec2("DOM WHATWG")}} | Начальное определение |
 
-<h2 id="Совместимость_браузера">Совместимость браузера</h2>
+## Совместимость браузера
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также:</h2>
+## Смотрите также:
 
-<ul>
- <li>{{domxref("DOMSettableTokenList")}} (объект который расширяет <code>DOMTokenList</code> с установленным <em>.value</em> параметром)</li>
-</ul>
+- {{domxref("DOMSettableTokenList")}} (объект который расширяет `DOMTokenList` с установленным _.value_ параметром)

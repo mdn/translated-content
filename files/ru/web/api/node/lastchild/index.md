@@ -3,30 +3,30 @@ title: Node.lastChild
 slug: Web/API/Node/lastChild
 translation_of: Web/API/Node/lastChild
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h2 id="Summary">Основная информация</h2>
+## Основная информация
 
-<p><strong>lastChild</strong> возвращает последнего потомка в узле.</p>
+**lastChild** возвращает последнего потомка в узле.
 
-<h2 id="Syntax_and_Values">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var last_child = element.lastChild
-</pre>
+```
+var last_child = element.lastChild
+```
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Возвращаемый элемент <code>last_child</code> является узлом. Если его родитель является элементом, то возвращаемый узел является узлом типа Элемент, Текст, или же узлом комментария. Если в опрашиваемом узле нет дочерних элементов, <strong>lastChild </strong>возвращает <code>null</code> .</p>
+Возвращаемый элемент `last_child` является узлом. Если его родитель является элементом, то возвращаемый узел является узлом типа Элемент, Текст, или же узлом комментария. Если в опрашиваемом узле нет дочерних элементов, **lastChild** возвращает `null` .
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush: js">var tr = document.getElementById("row1");
+```js
+var tr = document.getElementById("row1");
 var corner_td = tr.lastChild;
-</pre>
+```
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<ul>
- <li>{{Spec("http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-61AD09FB", "DOM Level 2: lastChild", "REC")}}</li>
- <li>{{Spec("http://dom.spec.whatwg.org/#dom-node-lastchild", "DOM Standard: lastChild")}}</li>
-</ul>
+- {{Spec("http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-61AD09FB", "DOM Level 2: lastChild", "REC")}}
+- {{Spec("http://dom.spec.whatwg.org/#dom-node-lastchild", "DOM Standard: lastChild")}}

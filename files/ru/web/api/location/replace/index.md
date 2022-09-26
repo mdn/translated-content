@@ -9,42 +9,41 @@ tags:
   - Reference
 translation_of: Web/API/Location/replace
 ---
-<p>{{ APIRef("HTML DOM") }}</p>
+{{ APIRef("HTML DOM") }}
 
-<p>Метод <code><strong>Location</strong></code><strong><code>.replace()</code></strong> заменяет текущий ресурс на новый по URL, указанному в качестве параметра. Отличие от {{domxref("Location.assign","assign()")}} в том, что при использовании <code>replace()</code> текущая страница не будет сохранена в {{domxref("History")}}, и пользователь не сможет использовать кнопку <em>назад</em>, чтобы вернуться к ней.</p>
+Метод **`Location`\*\***`.replace()`\*\* заменяет текущий ресурс на новый по URL, указанному в качестве параметра. Отличие от {{domxref("Location.assign","assign()")}} в том, что при использовании `replace()` текущая страница не будет сохранена в {{domxref("History")}}, и пользователь не сможет использовать кнопку _назад_, чтобы вернуться к ней.
 
-<p>Если условия вызова метода не удовлетворяют требованиям безопасности, выбрасывается {{domxref("DOMException")}} с типом <code>SECURITY_ERROR</code>. Это случается, если домен скрипта, вызывающего метод, не совпадает с доменом страницы, изначально содержащимся в {{domxref("Location")}}.</p>
+Если условия вызова метода не удовлетворяют требованиям безопасности, выбрасывается {{domxref("DOMException")}} с типом `SECURITY_ERROR`. Это случается, если домен скрипта, вызывающего метод, не совпадает с доменом страницы, изначально содержащимся в {{domxref("Location")}}.
 
-<p>Если новый URL некорректен, выбрасывается {{domxref("DOMException")}} с типом <code>SYNTAX_ERROR</code>.</p>
+Если новый URL некорректен, выбрасывается {{domxref("DOMException")}} с типом `SYNTAX_ERROR`.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>object</em>.replace(<em>url</em>);
-</pre>
+```
+object.replace(url);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><em>url</em></dt>
- <dd>{{domxref("DOMString")}} , содержащий URL страницы, на которую нужно перейти.</dd>
-</dl>
+- _url_
+  - : {{domxref("DOMString")}} , содержащий URL страницы, на которую нужно перейти.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">// Перейти на статью Location.reload, заменив текущую страницу
-document.location.replace('https://developer.mozilla.org/en-US/docs/Web/API/Location.reload');</pre>
+```js
+// Перейти на статью Location.reload, заменив текущую страницу
+document.location.replace('https://developer.mozilla.org/en-US/docs/Web/API/Location.reload');
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div id="compat-mobile">{{Compat}}</div>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Интерфейс {{domxref("Location")}}, к которому принадлежит этот метод.</li>
- <li>Похожие методы: {{domxref("Location.assign()")}} и {{domxref("Location.reload()")}}.</li>
-</ul>
+- Интерфейс {{domxref("Location")}}, к которому принадлежит этот метод.
+- Похожие методы: {{domxref("Location.assign()")}} и {{domxref("Location.reload()")}}.

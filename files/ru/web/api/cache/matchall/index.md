@@ -3,63 +3,59 @@ title: Cache.matchAll()
 slug: Web/API/Cache/matchAll
 translation_of: Web/API/Cache/matchAll
 ---
-<p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-<p>Метод <strong><code>matchAll()</code></strong> интерфейса {{domxref("Cache")}} возвращает {{jsxref("Promise")}}, который разрешается в массив всех совпадающих запросов в объекте {{domxref("Cache")}}.</p>
+Метод **`matchAll()`** интерфейса {{domxref("Cache")}} возвращает {{jsxref("Promise")}}, который разрешается в массив всех совпадающих запросов в объекте {{domxref("Cache")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">cache.matchAll(request,{options}).then(function(response) {
+```js
+cache.matchAll(request,{options}).then(function(response) {
   // сделать что-нибудь с массивом ответов
 });
-</pre>
+```
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>{{jsxref("Promise")}}, который разрешается в массив всех совпадающих запросов в объекте {{domxref("Cache")}}.</p>
+{{jsxref("Promise")}}, который разрешается в массив всех совпадающих запросов в объекте {{domxref("Cache")}}.
 
-<div class="note">
-<p><strong>Замечание</strong>: {{domxref("Cache.match()")}} в основном идентичен <code>Cache.matchAll()</code>, за исключением того, что последний разрешается с <code>response[0]</code> (т.е., первым совпадающим ответом) вместо <code>response</code> (всех совпадающих ответов в массиве).</p>
-</div>
+> **Примечание:** **Замечание**: {{domxref("Cache.match()")}} в основном идентичен `Cache.matchAll()`, за исключением того, что последний разрешается с `response[0]` (т.е., первым совпадающим ответом) вместо `response` (всех совпадающих ответов в массиве).
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt>request</dt>
- <dd>Запрос {{domxref("Request")}}, который вы пытаетесь найти в {{domxref("Cache")}}.</dd>
- <dt>options {{optional_inline}}</dt>
- <dd>Объект options, разрешающий вам установить особые команды контроля поиска соответствий ключа, выполняемого операцией <code>match</code>. Доступные параметры:
- <ul>
-  <li><code>ignoreSearch</code>: Булево значение {{domxref("Boolean")}}, которое говорит должен ли  процесс сопоставления ключей игнорировать строку запроса в url.  Если равно <code>true</code>, часть <code>?value=bar</code> запроса <code>http://foo.com/?value=bar</code> будет игнорироваться при поиске соответствий ключа . По умолчанию равно <code>false</code>.</li>
-  <li><code>ignoreMethod</code>: Булево значение {{domxref("Boolean")}}, которое, если равно <code>true</code>, предотвращает проверку метода <code>http</code> для запроса {{domxref("Request")}} (обычно разрешены лишь <code>GET и</code> <code>HEAD</code>). По умолчанию равно <code>false</code>.</li>
-  <li><code>ignoreVary</code>: Булево значение {{domxref("Boolean")}}, которое, когда равно <code>true,</code> говорит процессу сопоставления ключей не проверять соответствие заголовка <code>VARY</code> — т.е., если URL совпадает, то вы получите соответствие независимо от того, содержит ли объект {{domxref("Response")}} заголовок <code>VARY, или нет</code>. По умолчанию равно <code>false</code>.</li>
-  <li><code>cacheName</code>: Строка {{domxref("DOMString")}}, которая представляет собой имя кеша для поиска. <strong>Заметьте, что этот параметр игнорируется методом <code>Cache.matchAll()</code>.</strong></li>
- </ul>
- </dd>
-</dl>
+- request
+  - : Запрос {{domxref("Request")}}, который вы пытаетесь найти в {{domxref("Cache")}}.
+- options {{optional_inline}}
 
-<h2 id="Примеры" style="line-height: 30px; font-size: 2.14285714285714rem;">Примеры</h2>
+  - : Объект options, разрешающий вам установить особые команды контроля поиска соответствий ключа, выполняемого операцией `match`. Доступные параметры:
 
-<pre class="brush: js">caches.open('v1').then(function(cache) {
+    - `ignoreSearch`: Булево значение {{domxref("Boolean")}}, которое говорит должен ли процесс сопоставления ключей игнорировать строку запроса в url. Если равно `true`, часть `?value=bar` запроса `http://foo.com/?value=bar` будет игнорироваться при поиске соответствий ключа . По умолчанию равно `false`.
+    - `ignoreMethod`: Булево значение {{domxref("Boolean")}}, которое, если равно `true`, предотвращает проверку метода `http` для запроса {{domxref("Request")}} (обычно разрешены лишь `GET и` `HEAD`). По умолчанию равно `false`.
+    - `ignoreVary`: Булево значение {{domxref("Boolean")}}, которое, когда равно `true,` говорит процессу сопоставления ключей не проверять соответствие заголовка `VARY` — т.е., если URL совпадает, то вы получите соответствие независимо от того, содержит ли объект {{domxref("Response")}} заголовок `VARY, или нет`. По умолчанию равно `false`.
+    - `cacheName`: Строка {{domxref("DOMString")}}, которая представляет собой имя кеша для поиска. **Заметьте, что этот параметр игнорируется методом `Cache.matchAll()`.**
+
+## Примеры
+
+```js
+caches.open('v1').then(function(cache) {
   cache.matchAll('/images/').then(function(response) {
     response.forEach(function(element, index, array) {
       cache.delete(element);
     });
   });
-})</pre>
+})
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Использование сервис воркеров</a></li>
- <li>{{domxref("Cache")}}</li>
- <li>{{domxref("WorkerGlobalScope.caches")}}</li>
-</ul>
+- [Использование сервис воркеров](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("WorkerGlobalScope.caches")}}

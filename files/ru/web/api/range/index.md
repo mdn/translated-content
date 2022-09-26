@@ -6,139 +6,105 @@ tags:
   - DOM
 translation_of: Web/API/Range
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p><strong><code>Range(диапазон)</code></strong> интерфейс предоставляет фрагмент документа который может содержать узлы и части текстовых узлов  данного документа. </p>
+**`Range(диапазон)`** интерфейс предоставляет фрагмент документа который может содержать узлы и части текстовых узлов данного документа.
 
-<p>Range может быть создан с помощью метода {{ domxref("Document.createRange", "createRange") }}, у объекта {{ domxref("Document") }}. Или объект Range можно получить с помощью метода {{ domxref("Selection/getRangeAt", "getRangeAt") }}, у объекта {{ domxref("Selection") }}. А также с помощью конструктора {{domxref("Range.Range()", "Range()")}}.</p>
+Range может быть создан с помощью метода {{ domxref("Document.createRange", "createRange") }}, у объекта {{ domxref("Document") }}. Или объект Range можно получить с помощью метода {{ domxref("Selection/getRangeAt", "getRangeAt") }}, у объекта {{ domxref("Selection") }}. А также с помощью конструктора {{domxref("Range.Range()", "Range()")}}.
 
-<h2 id="Properties">Свойства</h2>
+## Свойства
 
-<p>Нет унаследованных свойств.</p>
+Нет унаследованных свойств.
 
-<p><strong>{{domxref("Range.collapsed")}} {{readonlyInline}}</strong><br>
- Возвращает {{domxref("Boolean")}} указывающий, находятся ли начало и конец диапазона<br>
- на одной и той же позиции.</p>
+**{{domxref("Range.collapsed")}} {{readonlyInline}}**
+Возвращает {{domxref("Boolean")}} указывающий, находятся ли начало и конец диапазона
+на одной и той же позиции.
 
-<dl>
- <dt>{{domxref("Range.startContainer")}} {{readonlyInline}}</dt>
- <dd>Возвращает {{ domxref("Node") }} внутри которого <code>Range</code> начинается.</dd>
- <dt>{{domxref("Range.endContainer")}} {{readonlyInline}}</dt>
- <dd>Возвращает {{ domxref("Node") }} внутри которого <code>Range</code> заканчивается .</dd>
- <dt>{{domxref("Range.commonAncestorContainer")}} {{readonlyInline}}</dt>
- <dd>Возвращает самый глубокий {{ domxref("Node") }} который содержит узлы <code>startContainer</code> и <code>endContainer</code>.</dd>
- <dt>{{domxref("Range.endOffset")}} {{readonlyInline}}</dt>
- <dd>Возвращает число равное расположению <code>endContainer</code> в <code>Range</code> .</dd>
- <dt></dt>
- <dt>{{domxref("Range.startOffset")}} {{readonlyInline}}</dt>
- <dd>Returns a number representing where in the <code>startContainer</code> the <code>Range</code> starts.</dd>
-</dl>
+- {{domxref("Range.startContainer")}} {{readonlyInline}}
+  - : Возвращает {{ domxref("Node") }} внутри которого `Range` начинается.
+- {{domxref("Range.endContainer")}} {{readonlyInline}}
+  - : Возвращает {{ domxref("Node") }} внутри которого `Range` заканчивается .
+- {{domxref("Range.commonAncestorContainer")}} {{readonlyInline}}
+  - : Возвращает самый глубокий {{ domxref("Node") }} который содержит узлы `startContainer` и `endContainer`.
+- {{domxref("Range.endOffset")}} {{readonlyInline}}
+  - : Возвращает число равное расположению `endContainer` в `Range` .
+- {{domxref("Range.startOffset")}} {{readonlyInline}}
 
-<h2 id="Конструктор">Конструктор</h2>
+  - : Returns a number representing where in the `startContainer` the `Range` starts.
 
-<dl>
- <dt>{{ domxref("Range.Range()", "Range()") }} {{experimental_inline}}</dt>
- <dd>Возвращают объект <code>Range</code> с глобальным  {{domxref("Document")}} как начало и конец.</dd>
-</dl>
+## Конструктор
 
-<h2 id="Methods">Методы</h2>
+- {{ domxref("Range.Range()", "Range()") }} {{experimental_inline}}
+  - : Возвращают объект `Range` с глобальным {{domxref("Document")}} как начало и конец.
 
-<p><em>Не имеют унаследованных свойств.</em></p>
+## Методы
 
-<dl>
- <dt>{{ domxref("Range.setStart()")}}</dt>
- <dd>Назначают начальную позицию <code>Range</code>.</dd>
- <dt>{{ domxref("Range.setEnd()")}}</dt>
- <dd>Назначает конечную позицию <code>Range</code>.</dd>
- <dt>{{ domxref("Range.setStartBefore()")}}</dt>
- <dd>Устанавливает начальную позицию <code>Range</code> относительно другого {{ domxref("Node") }} пред ним.</dd>
- <dt>{{ domxref("Range.setStartAfter()")}}</dt>
- <dd>Устанавливает начальную позицию <code>Range</code> относительно другого {{ domxref("Node") }} после него.</dd>
- <dt>{{ domxref("Range.setEndBefore()")}}</dt>
- <dd>Устанавливает конечную позицию <code>Range</code> относительно другого {{ domxref("Node") }} перед ним.</dd>
- <dt>{{ domxref("Range.setEndAfter()")}}</dt>
- <dd>Устанавливает конечную позицию <code>Range</code> относительно другого {{ domxref("Node") }} после него.</dd>
- <dt>{{ domxref("Range.selectNode()")}}</dt>
- <dd>Выбирает <code>Range</code> to содержащий {{ domxref("Node") }} и его контент.</dd>
- <dt>{{ domxref("Range.selectNodeContents()")}}</dt>
- <dd>Выбирает <code>Range</code> содержащий контент {{ domxref("Node") }}.</dd>
- <dt>{{ domxref("Range.collapse()")}}</dt>
- <dd>Схлопывает <code>Range</code> до одной из граничных точек.</dd>
- <dt>{{ domxref("Range.cloneContents()")}}</dt>
- <dd>Возвращает {{ domxref("DocumentFragment") }} содержащийся в узле <code>Range</code>.</dd>
- <dt>{{ domxref("Range.deleteContents()")}}</dt>
- <dd>Удаляет содержимое <code>Range</code> из{{ domxref("Document") }}.</dd>
- <dt>{{ domxref("Range.extractContents()")}}</dt>
- <dd>Переносит содержимое <code>Range</code> из дерева документа в {{ domxref("DocumentFragment") }}.</dd>
- <dt>{{ domxref("Range.insertNode()")}}</dt>
- <dd>Вставляет a {{ domxref("Node") }} в начало <code>Range</code>.</dd>
- <dt>{{ domxref("Range.surroundContents()")}}</dt>
- <dd>Переносит содержимое <code>Range</code> в новый {{ domxref("Node") }}.</dd>
- <dt>{{ domxref("Range.compareBoundaryPoints()")}}</dt>
- <dd>Сравнивает граничные точки <code>Range</code> с другим <code>Range</code>.</dd>
- <dt>{{ domxref("Range.cloneRange()")}}</dt>
- <dd>Возвращает  объект из <code>Range</code> с граничными точками идентичными клонированному <code>Range</code>.</dd>
- <dt>{{ domxref("Range.detach()")}}</dt>
- <dd><code>Освобождает Range</code> от использования для улучшения производительности .</dd>
- <dt>{{ domxref("Range.toString()")}}</dt>
- <dd>Возвращает текст в <code>Range</code>.</dd>
- <dt>{{ domxref("Range.compareNode()")}} {{ Obsolete_inline }}{{non-standard_inline}}</dt>
- <dd>Возвращает константу, представляющую, находится ли {{domxref("Node")}} до, после, внутри или вокруг  range.</dd>
- <dt>{{ domxref("Range.comparePoint()")}} {{experimental_inline}}</dt>
- <dd>Возвращает -1, 0, или 1 в зависимости от того, находиться ли referenceNode перед, внутри, или после  <code>Range</code>.</dd>
- <dt>{{ domxref("Range.createContextualFragment()")}}{{experimental_inline}}</dt>
- <dd>Возвращает {{ domxref("DocumentFragment") }} созданный из полученной строки с кодом.</dd>
- <dt>{{ domxref("Range.getBoundingClientRect()") }} {{experimental_inline}}</dt>
- <dd>Возвращает объект {{ domxref("ClientRect") }} object which bounds the entire contents of the <code>Range</code>; this would be the union of all the rectangles returned by {{ domxref("range.getClientRects()") }}.</dd>
- <dt>{{ domxref("Range.getClientRects()") }} {{experimental_inline}}</dt>
- <dd>Returns a list of {{ domxref("ClientRect") }} objects that aggregates the results of {{ domxref("Element.getClientRects()") }} for all the elements in the <code>Range</code>.</dd>
- <dt>{{ domxref("Range.intersectsNode()")}} {{experimental_inline}}</dt>
- <dd>Возвращает <code>boolean</code> указывающий, пересекает ли данный узел <code>Range</code>.</dd>
- <dt>{{ domxref("Range.isPointInRange()")}} {{experimental_inline}}</dt>
- <dd>Returns a <code>boolean</code> indicating whether the given point is in the <code>Range</code>.</dd>
-</dl>
+_Не имеют унаследованных свойств._
 
-<h2 id="Specifications">Specifications</h2>
+- {{ domxref("Range.setStart()")}}
+  - : Назначают начальную позицию `Range`.
+- {{ domxref("Range.setEnd()")}}
+  - : Назначает конечную позицию `Range`.
+- {{ domxref("Range.setStartBefore()")}}
+  - : Устанавливает начальную позицию `Range` относительно другого {{ domxref("Node") }} пред ним.
+- {{ domxref("Range.setStartAfter()")}}
+  - : Устанавливает начальную позицию `Range` относительно другого {{ domxref("Node") }} после него.
+- {{ domxref("Range.setEndBefore()")}}
+  - : Устанавливает конечную позицию `Range` относительно другого {{ domxref("Node") }} перед ним.
+- {{ domxref("Range.setEndAfter()")}}
+  - : Устанавливает конечную позицию `Range` относительно другого {{ domxref("Node") }} после него.
+- {{ domxref("Range.selectNode()")}}
+  - : Выбирает `Range` to содержащий {{ domxref("Node") }} и его контент.
+- {{ domxref("Range.selectNodeContents()")}}
+  - : Выбирает `Range` содержащий контент {{ domxref("Node") }}.
+- {{ domxref("Range.collapse()")}}
+  - : Схлопывает `Range` до одной из граничных точек.
+- {{ domxref("Range.cloneContents()")}}
+  - : Возвращает {{ domxref("DocumentFragment") }} содержащийся в узле `Range`.
+- {{ domxref("Range.deleteContents()")}}
+  - : Удаляет содержимое `Range` из{{ domxref("Document") }}.
+- {{ domxref("Range.extractContents()")}}
+  - : Переносит содержимое `Range` из дерева документа в {{ domxref("DocumentFragment") }}.
+- {{ domxref("Range.insertNode()")}}
+  - : Вставляет a {{ domxref("Node") }} в начало `Range`.
+- {{ domxref("Range.surroundContents()")}}
+  - : Переносит содержимое `Range` в новый {{ domxref("Node") }}.
+- {{ domxref("Range.compareBoundaryPoints()")}}
+  - : Сравнивает граничные точки `Range` с другим `Range`.
+- {{ domxref("Range.cloneRange()")}}
+  - : Возвращает объект из `Range` с граничными точками идентичными клонированному `Range`.
+- {{ domxref("Range.detach()")}}
+  - : `Освобождает Range` от использования для улучшения производительности .
+- {{ domxref("Range.toString()")}}
+  - : Возвращает текст в `Range`.
+- {{ domxref("Range.compareNode()")}} {{ Obsolete_inline }}{{non-standard_inline}}
+  - : Возвращает константу, представляющую, находится ли {{domxref("Node")}} до, после, внутри или вокруг range.
+- {{ domxref("Range.comparePoint()")}} {{experimental_inline}}
+  - : Возвращает -1, 0, или 1 в зависимости от того, находиться ли referenceNode перед, внутри, или после `Range`.
+- {{ domxref("Range.createContextualFragment()")}}{{experimental_inline}}
+  - : Возвращает {{ domxref("DocumentFragment") }} созданный из полученной строки с кодом.
+- {{ domxref("Range.getBoundingClientRect()") }} {{experimental_inline}}
+  - : Возвращает объект {{ domxref("ClientRect") }} object which bounds the entire contents of the `Range`; this would be the union of all the rectangles returned by {{ domxref("range.getClientRects()") }}.
+- {{ domxref("Range.getClientRects()") }} {{experimental_inline}}
+  - : Returns a list of {{ domxref("ClientRect") }} objects that aggregates the results of {{ domxref("Element.getClientRects()") }} for all the elements in the `Range`.
+- {{ domxref("Range.intersectsNode()")}} {{experimental_inline}}
+  - : Возвращает `boolean` указывающий, пересекает ли данный узел `Range`.
+- {{ domxref("Range.isPointInRange()")}} {{experimental_inline}}
+  - : Returns a `boolean` indicating whether the given point is in the `Range`.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#interface-range', 'Range')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Do not use <code>RangeException</code> anymore, use <code>DOMException</code> instead.<br>
-    Made the second parameter of <code>collapse()</code> optional.<br>
-    Added the methods <code>isPointInRange()</code>, <code>comparePoint()</code>, and <code>intersectsNode()</code>.<br>
-    Added the constructor <code>Range()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM Parsing', '#extensions-to-the-range-interface', 'Extensions to Range')}}</td>
-   <td>{{Spec2('DOM Parsing')}}</td>
-   <td>Added the method <code>createContextualFragment()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#extensions-to-the-range-interface', 'Extensions to Range')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td>Added the methods <code>getClientRects()</code> and <code>getBoundingClientRect()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Traversal_Range', 'ranges.html#Level-2-Range-Interface', 'Range')}}</td>
-   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+## Specifications
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+| Specification                                                                                                        | Status                                       | Comment                                                                                                                                                                                                                               |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('DOM WHATWG', '#interface-range', 'Range')}}                                             | {{Spec2('DOM WHATWG')}}             | Do not use `RangeException` anymore, use `DOMException` instead. Made the second parameter of `collapse()` optional. Added the methods `isPointInRange()`, `comparePoint()`, and `intersectsNode()`. Added the constructor `Range()`. |
+| {{SpecName('DOM Parsing', '#extensions-to-the-range-interface', 'Extensions to Range')}} | {{Spec2('DOM Parsing')}}             | Added the method `createContextualFragment()`.                                                                                                                                                                                        |
+| {{SpecName('CSSOM View', '#extensions-to-the-range-interface', 'Extensions to Range')}} | {{Spec2('CSSOM View')}}             | Added the methods `getClientRects()` and `getBoundingClientRect()`.                                                                                                                                                                   |
+| {{SpecName('DOM2 Traversal_Range', 'ranges.html#Level-2-Range-Interface', 'Range')}}     | {{Spec2('DOM2 Traversal_Range')}} | Initial specification.                                                                                                                                                                                                                |
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
-</ul>
+## See also
+
+- [The DOM interfaces index](/ru/docs/DOM/DOM_Reference)

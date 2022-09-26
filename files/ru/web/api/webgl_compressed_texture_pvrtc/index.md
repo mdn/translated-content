@@ -3,60 +3,56 @@ title: WEBGL_compressed_texture_pvrtc
 slug: Web/API/WEBGL_compressed_texture_pvrtc
 translation_of: Web/API/WEBGL_compressed_texture_pvrtc
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>Расширение <code><strong>WEBGL_compressed_texture_pvrtc</strong></code> часть <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> и представляет четыре <a href="https://en.wikipedia.org/wiki/PVRTC">сжатых формата текстур PVRTC</a>.</p>
+Расширение **`WEBGL_compressed_texture_pvrtc`** часть [WebGL API](/ru/docs/Web/API/WebGL_API) и представляет четыре [сжатых формата текстур PVRTC](https://en.wikipedia.org/wiki/PVRTC).
 
-<p>Сжатые текстуры уменьшают количество памяти, используемые в GPU для хранения, позволяя большее разрешение для текстур или большее количество текстур с одинаковым разрешением.</p>
+Сжатые текстуры уменьшают количество памяти, используемые в GPU для хранения, позволяя большее разрешение для текстур или большее количество текстур с одинаковым разрешением.
 
-<p>WebGL расширения доступны через метод {{domxref("WebGLRenderingContext.getExtension()")}}. Для подробностей смотри также <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Использование расширений</a> в <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">туториале по WebGL.</a></p>
+WebGL расширения доступны через метод {{domxref("WebGLRenderingContext.getExtension()")}}. Для подробностей смотри также [Использование расширений](/ru/docs/Web/API/WebGL_API/Using_Extensions) в [туториале по WebGL.](/ru/docs/Web/API/WebGL_API/Tutorial)
 
-<div class="note">
-<p><strong>Доступность:  </strong>Обычно PVRTC доступен только на мобильных устройствах с чипсетом PowerVR. Используется во всех поколениях iPhone, iPod Touch и iPad и поддерживается на определённых Android устройствах, использующих PowerVR GPU.</p>
+> **Примечание:** **Доступность:** Обычно PVRTC доступен только на мобильных устройствах с чипсетом PowerVR. Используется во всех поколениях iPhone, iPod Touch и iPad и поддерживается на определённых Android устройствах, использующих PowerVR GPU.
+>
+> Версии контекста, поддерживающие расширение: {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} , и {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}.
 
-<p>Версии контекста, поддерживающие расширение:   {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} , и {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}.</p>
-</div>
+## Константы
 
-<h2 id="Константы">Константы</h2>
+Форматы сжатых текстур представлены четырьмя константами и могут быть использованы в двух функциях:
+{{domxref("WebGLRenderingContext.compressedTexImage2D", "compressedTexImage2D()")}} — параметры высота и ширина должны соответствовать степени 2
+{{domxref("WebGLRenderingContext.compressedTexSubImage2D", "compressedTexSubImage2D()")}} — параметры высоты и ширины должны быть равны размеру текстуры, а значения параметров `xoffset` и `yoffset` должны быть 0.
 
-<p>Форматы сжатых текстур представлены четырьмя константами и могут быть использованы в двух функциях:<br>
- {{domxref("WebGLRenderingContext.compressedTexImage2D", "compressedTexImage2D()")}} — параметры высота и ширина должны соответствовать степени 2<br>
- {{domxref("WebGLRenderingContext.compressedTexSubImage2D", "compressedTexSubImage2D()")}} — параметры высоты и ширины должны быть равны размеру текстуры, а значения параметров <code>xoffset</code> и <code>yoffset</code> должны быть 0.</p>
+- `ext.COMPRESSED_RGB_PVRTC_4BPPV1_IMG`
+  - : RGB сжатие в 4-битном режиме. Один блок на каждые 4×4 пикселей.
+- `ext.COMPRESSED_RGBA_PVRTC_4BPPV1_IMG`
+  - : RGBA сжатие в 4-битном режиме. Один блок на каждые 4×4 пикселей.
+- `ext.COMPRESSED_RGB_PVRTC_2BPPV1_IMG`
+  - : RGB сжатие в 2-битном режиме. Один блок на каждые 8×4 пикселей.
+- `ext.COMPRESSED_RGBA_PVRTC_2BPPV1_IMG`
+  - : RGBA сжатие в 2-битном режиме. Один блок на каждые 8×4 пикселей.
 
-<dl>
- <dt><code>ext.COMPRESSED_RGB_PVRTC_4BPPV1_IMG</code></dt>
- <dd>RGB сжатие в 4-битном режиме. Один блок на каждые 4×4 пикселей.</dd>
- <dt><code>ext.COMPRESSED_RGBA_PVRTC_4BPPV1_IMG</code></dt>
- <dd>RGBA сжатие в 4-битном режиме. Один блок на каждые 4×4 пикселей.</dd>
- <dt><code>ext.COMPRESSED_RGB_PVRTC_2BPPV1_IMG</code></dt>
- <dd>RGB сжатие в 2-битном режиме. Один блок на каждые 8×4 пикселей.</dd>
- <dt><code>ext.COMPRESSED_RGBA_PVRTC_2BPPV1_IMG</code></dt>
- <dd>RGBA сжатие в 2-битном режиме. Один блок на каждые 8×4 пикселей.</dd>
-</dl>
+## Примеры
 
-<h2 id="Примеры">Примеры</h2>
-
-<pre class="brush:js">var ext = gl.getExtension('WEBGL_compressed_texture_pvrtc');
+```js
+var ext = gl.getExtension('WEBGL_compressed_texture_pvrtc');
 
 var texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);
 
 gl.compressedTexImage2D(gl.TEXTURE_2D, 0, ext.COMPRESSED_RGB_PVRTC_4BPPV1_IMG, 512, 512, 0, textureData);
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
-<p>{{Compat}}</p>
+## Браузерная совместимость
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li><a href="https://en.wikipedia.org/wiki/PVRTC">PVRTC Texture Compression – Wikipedia</a></li>
- <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
- <li>{{domxref("WebGLRenderingContext.compressedTexImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getParameter()")}}</li>
-</ul>
+## Смотрите также
+
+- [PVRTC Texture Compression – Wikipedia](https://en.wikipedia.org/wiki/PVRTC)
+- {{domxref("WebGLRenderingContext.getExtension()")}}
+- {{domxref("WebGLRenderingContext.compressedTexImage2D()")}}
+- {{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}
+- {{domxref("WebGLRenderingContext.getParameter()")}}

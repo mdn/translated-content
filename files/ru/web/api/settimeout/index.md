@@ -4,46 +4,47 @@ slug: Web/API/setTimeout
 translation_of: Web/API/WindowOrWorkerGlobalScope/setTimeout
 original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
 ---
-<div>{{ APIRef() }}</div>
+{{ APIRef() }}
 
-<h2 id="Summary">Краткое изложение</h2>
+## Краткое изложение
 
-<p>Вызов функции или выполнение фрагмента кода после указанной задержки.</p>
+Вызов функции или выполнение фрагмента кода после указанной задержки.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>var timeoutID</em> = window.setTimeout(<em>func</em>, [, <em>delay</em>, <em>param1</em>, <em>param2</em>, ...]);
-<em>var timeoutID</em> = window.setTimeout(<em>code </em>[, <em>delay]</em>);
-</pre>
+```
+var timeoutID = window.setTimeout(func, [, delay, param1, param2, ...]);
+var timeoutID = window.setTimeout(code [, delay]);
+```
 
-<p>где</p>
+где
 
-<ul>
- <li><code>timeoutID -</code> это <em>числовой</em> ID, который может быть использован позже с {{domxref("window.clearTimeout()")}}.</li>
- <li><code>func -</code> это <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function" title="en-US/docs/Core_JavaScript_1.5_Reference/Global_Objects/Function">функция</a>, которую требуется вызвать после <code>delay</code> миллисекунд.</li>
- <li><code>code</code> - в альтернативном варианте применения это строка, содержащая код, который вы хотите выполнить после <code>delay</code> миллисекунд (использовать этот метод <strong>не рекомендуется</strong> по тем же причинам, что и <a href="/en-US/docs/JavaScript/Reference/Global_Objects/eval#Don%27t_use_eval!" title="en-US/docs/Core JavaScript 1.5 Reference/Global Functions/Eval#Don't use eval!">eval()</a>)</li>
- <li><code>delay</code>  {{optional_inline}} -  задержка в миллисекундах (тысячных долях секунды), после которой будет выполнен вызов функции. Реальная задержка может быть больше; см. <a href="#notes">Notes</a> ниже.</li>
-</ul>
+- `timeoutID -` это _числовой_ ID, который может быть использован позже с {{domxref("window.clearTimeout()")}}.
+- `func -` это [функция](/ru/docs/JavaScript/Reference/Global_Objects/Function "en-US/docs/Core_JavaScript_1.5_Reference/Global_Objects/Function"), которую требуется вызвать после `delay` миллисекунд.
+- `code` - в альтернативном варианте применения это строка, содержащая код, который вы хотите выполнить после `delay` миллисекунд (использовать этот метод **не рекомендуется** по тем же причинам, что и [eval()](/ru/docs/JavaScript/Reference/Global_Objects/eval#Don%27t_use_eval! "en-US/docs/Core JavaScript 1.5 Reference/Global Functions/Eval#Don't use eval!"))
+- `delay` {{optional_inline}} - задержка в миллисекундах (тысячных долях секунды), после которой будет выполнен вызов функции. Реальная задержка может быть больше; см. [Notes](#notes) ниже.
 
-<p>Необходимо принять во внимание, что передача дополнительных параметров функции в первом варианте не работает в Internet Explorer 9 и ниже. Для использования этой функциональности в таких браузерах, необходимо использовать код для совместимости (см. раздел <a href="#Аргументы_колбэк-функции">Аргументы колбэк-функции</a>).</p>
+Необходимо принять во внимание, что передача дополнительных параметров функции в первом варианте не работает в Internet Explorer 9 и ниже. Для использования этой функциональности в таких браузерах, необходимо использовать код для совместимости (см. раздел [Аргументы колбэк-функции](#Аргументы_колбэк-функции)).
 
-<div class="warning"><strong>Important:</strong> Prior to Gecko 13 {{ geckoRelease("13.0") }}, Gecko passed an extra parameter to the callback routine, indicating the "actual lateness" of the timeout in milliseconds. This non-standard parameter is no longer passed.</div>
+> **Предупреждение:** **Important:** Prior to Gecko 13 {{ geckoRelease("13.0") }}, Gecko passed an extra parameter to the callback routine, indicating the "actual lateness" of the timeout in milliseconds. This non-standard parameter is no longer passed.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<p>В следующем примере на веб странице создаются две простые кнопки, к которым привязываются действия setTimeout и clearTimeout. Нажатие на первую кнопку установит таймаут, который вызовет диалоговое окно через две секунды. Также будет сохранён id для clearTimeout. Таймаут также может быть отменён по нажатию на вторую кнопку.</p>
+В следующем примере на веб странице создаются две простые кнопки, к которым привязываются действия setTimeout и clearTimeout. Нажатие на первую кнопку установит таймаут, который вызовет диалоговое окно через две секунды. Также будет сохранён id для clearTimeout. Таймаут также может быть отменён по нажатию на вторую кнопку.
 
-<h3 id="HTML_Content">HTML Content</h3>
+### HTML Content
 
-<pre class="brush: html">&lt;p&gt;Live Example&lt;/p&gt;
-&lt;button onclick="delayedAlert();"&gt;Show an alert box after two seconds&lt;/button&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;button onclick="clearAlert();"&gt;Cancel alert before it happens&lt;/button&gt;
-</pre>
+```html
+<p>Live Example</p>
+<button onclick="delayedAlert();">Show an alert box after two seconds</button>
+<p></p>
+<button onclick="clearAlert();">Cancel alert before it happens</button>
+```
 
-<h3 id="JavaScript_Content">JavaScript Content</h3>
+### JavaScript Content
 
-<pre class="brush: js">var timeoutID;
+```js
+var timeoutID;
 
 function delayedAlert() {
   timeoutID = window.setTimeout(slowAlert, 2000);
@@ -56,17 +57,18 @@ function slowAlert() {
 function clearAlert() {
   window.clearTimeout(timeoutID);
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Example') }}</p>
+{{ EmbedLiveSample('Example') }}
 
-<p>Смотрите также <a href="/en-US/docs/DOM/window.clearTimeout#Example" title="en-US/docs/DOM/window.clearTimeout#Example"><code>пример clearTimeout()</code></a>.</p>
+Смотрите также [`пример clearTimeout()`](/ru/docs/DOM/window.clearTimeout#Example "en-US/docs/DOM/window.clearTimeout#Example").
 
-<h2 id="Аргументы_колбэк-функции">Аргументы колбэк-функции</h2>
+## Аргументы колбэк-функции
 
-<p>Если вам нужно передать аргумент в вашу callback функцию, но нужно, чтобы это работало в Internet Explorer 9 и ниже, который не поддерживает передачу дополнительных параметров (ни с <code>setTimeout()</code> или <code>setInterval()</code>), то вы можете прописать специальный код для <em>совместимости с IE, </em>вставив этот код в начало ваших скриптов, который включит функцию передачи стандартных параметров HTML5 в Internet Explorer для обоих таймеров.</p>
+Если вам нужно передать аргумент в вашу callback функцию, но нужно, чтобы это работало в Internet Explorer 9 и ниже, который не поддерживает передачу дополнительных параметров (ни с `setTimeout()` или `setInterval()`), то вы можете прописать специальный код для _совместимости с IE,_ вставив этот код в начало ваших скриптов, который включит функцию передачи стандартных параметров HTML5 в Internet Explorer для обоих таймеров.
 
-<pre class="brush: js">/*\
+```js
+/*\
 |*|
 |*|  IE-specific polyfill which enables the passage of arbitrary arguments to the
 |*|  callback functions of JavaScript timers (HTML5 standard syntax).
@@ -81,7 +83,7 @@ function clearAlert() {
 |*|
 \*/
 
-if (document.all &amp;&amp; !window.setTimeout.isPolyfill) {
+if (document.all && !window.setTimeout.isPolyfill) {
   var __nativeST__ = window.setTimeout;
   window.setTimeout = function (vCallback, nDelay /*, argumentToPass1, argumentToPass2, etc. */) {
     var aArgs = Array.prototype.slice.call(arguments, 2);
@@ -92,7 +94,7 @@ if (document.all &amp;&amp; !window.setTimeout.isPolyfill) {
   window.setTimeout.isPolyfill = true;
 }
 
-if (document.all &amp;&amp; !window.setInterval.isPolyfill) {
+if (document.all && !window.setInterval.isPolyfill) {
   var __nativeSI__ = window.setInterval;
   window.setInterval = function (vCallback, nDelay /*, argumentToPass1, argumentToPass2, etc. */) {
     var aArgs = Array.prototype.slice.call(arguments, 2);
@@ -102,56 +104,61 @@ if (document.all &amp;&amp; !window.setInterval.isPolyfill) {
   };
   window.setInterval.isPolyfill = true;
 }
-</pre>
+```
 
-<h2 id="Правка_только_для_IE">Правка только для IE</h2>
+## Правка только для IE
 
-<p>If you want a completely unobtrusive hack for every other mobile or desktop browser, including IE 9 and below, you can either use JavaScript conditional comments:</p>
+If you want a completely unobtrusive hack for every other mobile or desktop browser, including IE 9 and below, you can either use JavaScript conditional comments:
 
-<pre class="brush: js">/*@cc_on
-  // conditional IE &lt; 9 only fix
-  @if (@_jscript_version &lt;= 6)
+```js
+/*@cc_on
+  // conditional IE < 9 only fix
+  @if (@_jscript_version <= 6)
   (function(f){
      window.setTimeout =f(window.setTimeout);
      window.setInterval =f(window.setInterval);
   })(function(f){return function(c,t){var a=[].slice.call(arguments,2);return f(function(){c.apply(this,a)},t)}});
   @end
 @*/
-</pre>
+```
 
-<p>Или используйте очень чистый подход, основанный на условном свойстве IE HTML:</p>
+Или используйте очень чистый подход, основанный на условном свойстве IE HTML:
 
-<pre class="brush: html">&lt;!--[if lte IE 9]&gt;&lt;script&gt;
+```html
+<!--[if lte IE 9]><script>
 (function(f){
 window.setTimeout =f(window.setTimeout);
 window.setInterval =f(window.setInterval);
 })(function(f){return function(c,t){
 var a=[].slice.call(arguments,2);return f(function(){c.apply(this,a)},t)}
 });
-&lt;/script&gt;&lt;![endif]--&gt;
-</pre>
+</script><![endif]-->
+```
 
-<p>Another possibility is to use an anonymous function to call your callback, but this solution is a bit more expensive. Example:</p>
+Another possibility is to use an anonymous function to call your callback, but this solution is a bit more expensive. Example:
 
-<pre class="brush: js">var intervalID = setTimeout(function() { myFunc("one", "two", "three"); }, 1000);
-</pre>
+```js
+var intervalID = setTimeout(function() { myFunc("one", "two", "three"); }, 1000);
+```
 
-<p>Yet another possibility is to use <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind" title="/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind">function's bind</a>. Example:</p>
+Yet another possibility is to use [function's bind](/ru/docs/JavaScript/Reference/Global_Objects/Function/bind "/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind"). Example:
 
-<pre class="brush: js">setTimeout(function(arg1){}.bind(undefined, 10));
-</pre>
+```js
+setTimeout(function(arg1){}.bind(undefined, 10));
+```
 
-<h2 id="Проблема_с_this">Проблема с "<code>this</code>"</h2>
+## Проблема с "`this`"
 
-<p>Когда вы передаёте метод в <code>setTimeout()</code> (или в любую другую функцию, если на то пошло), то вызов будет осуществлён с неправильным значением <code>this</code>. Эта проблема разъясняется детально в <a href="/en-US/docs/JavaScript/Reference/Operators/this#Method_binding" title="en-US/docs/Core_JavaScript_1.5_Reference/Operators/Special_Operators/this_Operator#Method_binding">JavaScript reference</a>.</p>
+Когда вы передаёте метод в `setTimeout()` (или в любую другую функцию, если на то пошло), то вызов будет осуществлён с неправильным значением `this`. Эта проблема разъясняется детально в [JavaScript reference](/ru/docs/JavaScript/Reference/Operators/this#Method_binding "en-US/docs/Core_JavaScript_1.5_Reference/Operators/Special_Operators/this_Operator#Method_binding").
 
-<h3 id="Объяснение">Объяснение</h3>
+### Объяснение
 
-<p>Code executed by <code>setTimeout()</code> is run in a separate execution context to the function from which it was called. As a consequence, the <code>this</code> keyword for the called function will be set to the <code>window</code> (or <code>global</code>) object; it will not be the same as the <code>this</code> value for the function that called <code>setTimeout</code>. See the following example:</p>
+Code executed by `setTimeout()` is run in a separate execution context to the function from which it was called. As a consequence, the `this` keyword for the called function will be set to the `window` (or `global`) object; it will not be the same as the `this` value for the function that called `setTimeout`. See the following example:
 
-<pre class="brush: js">myArray = ["zero", "one", "two"];
+```js
+myArray = ["zero", "one", "two"];
 myArray.myMethod = function (sProperty) {
-    alert(arguments.length &gt; 0 ? this[sProperty] : this);
+    alert(arguments.length > 0 ? this[sProperty] : this);
 };
 
 myArray.myMethod(); // prints "zero,one,two"
@@ -160,15 +167,17 @@ setTimeout(myArray.myMethod, 1000); // prints "[object Window]" after 1 second
 setTimeout(myArray.myMethod, 1500, "1"); // prints "undefined" after 1.5 seconds
 // let's try to pass the 'this' object
 setTimeout.call(myArray, myArray.myMethod, 2000); // error: "NS_ERROR_XPC_BAD_OP_ON_WN_PROTO: Illegal operation on WrappedNative prototype object"
-setTimeout.call(myArray, myArray.myMethod, 2500, 2); // same error</pre>
+setTimeout.call(myArray, myArray.myMethod, 2500, 2); // same error
+```
 
-<p>Как видите, нет способов передать объект <code>this</code> в колбэк-функцию..</p>
+Как видите, нет способов передать объект `this` в колбэк-функцию..
 
-<h3 id="Возможное_решение">Возможное решение</h3>
+### Возможное решение
 
-<p>A possible way to solve the "<code>this</code>" problem is to replace the two native <code>setTimeout()</code> or <code>setInterval()</code> global functions with two <em>non-native</em> ones which will enable their invocation through the <a href="en-US/docs/JavaScript/Reference/Global_Objects/Function/call" title="en-US/docs/JavaScript/Reference/Global_Objects/Function/call"><code>Function.prototype.call</code></a> method. The following example shows a possible replacement:</p>
+A possible way to solve the "`this`" problem is to replace the two native `setTimeout()` or `setInterval()` global functions with two _non-native_ ones which will enable their invocation through the [`Function.prototype.call`](en-US/docs/JavaScript/Reference/Global_Objects/Function/call) method. The following example shows a possible replacement:
 
-<pre class="brush: js">// Enable the passage of the 'this' object through the JavaScript timers
+```js
+// Enable the passage of the 'this' object through the JavaScript timers
 
 var __nativeST__ = window.setTimeout, __nativeSI__ = window.setInterval;
 
@@ -184,78 +193,78 @@ window.setInterval = function (vCallback, nDelay /*, argumentToPass1, argumentTo
   return __nativeSI__(vCallback instanceof Function ? function () {
     vCallback.apply(oThis, aArgs);
   } : vCallback, nDelay);
-};</pre>
+};
+```
 
-<div class="note"><strong>Note:</strong> These two replacements will also enable the HTML5 standard passage of arbitrary arguments to the callback functions of timers in IE. So they can be used as polyfills also. See the <a href="#Аргументы_колбэк-функции">Callback arguments</a> paragraph.</div>
+> **Примечание:** These two replacements will also enable the HTML5 standard passage of arbitrary arguments to the callback functions of timers in IE. So they can be used as polyfills also. See the [Callback arguments](#Аргументы_колбэк-функции) paragraph.
 
-<p>Новая тестируемая особенность:</p>
+Новая тестируемая особенность:
 
-<pre class="brush: js">myArray = ["zero", "one", "two"];
+```js
+myArray = ["zero", "one", "two"];
 myArray.myMethod = function (sProperty) {
-    alert(arguments.length &gt; 0 ? this[sProperty] : this);
+    alert(arguments.length > 0 ? this[sProperty] : this);
 };
 
 setTimeout(alert, 1500, "Hello world!"); // the standard use of setTimeout and setInterval is preserved, but...
 setTimeout.call(myArray, myArray.myMethod, 2000); // prints "zero,one,two" after 2 seconds
 setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2.5 seconds
-</pre>
+```
 
-<p>Это не нативные решения <em>ad hoc</em> для этой проблемы.</p>
+Это не нативные решения _ad hoc_ для этой проблемы.
 
-<div class="note"><strong>Note:</strong> JavaScript 1.8.5 introduces the <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind" title="en-US/docs/JavaScript/Reference/Global Objects/Function/bind">Function.prototype.bind()</a></code> method, which lets you specify the value that should be used as <code>this</code> for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called.</div>
+> **Примечание:** JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind "en-US/docs/JavaScript/Reference/Global Objects/Function/bind") method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called.
 
-<h2 id="Замечания">Замечания</h2>
+## Замечания
 
-<p>Отложенное выполнение кода можно отменить, используя <code><a href="/en-US/docs/DOM/window.clearTimeout" title="en-US/docs/DOM/window.clearTimeout">window.clearTimeout()</a></code>. Если функция должна вызываться неоднократно (например, каждые N миллисекунд), необходимо использовать <code><a href="/en-US/docs/DOM/window.setInterval" title="en-US/docs/DOM/window.setInterval">window.setInterval()</a></code>.</p>
+Отложенное выполнение кода можно отменить, используя [`window.clearTimeout()`](/en-US/docs/DOM/window.clearTimeout "en-US/docs/DOM/window.clearTimeout"). Если функция должна вызываться неоднократно (например, каждые N миллисекунд), необходимо использовать [`window.setInterval()`](/en-US/docs/DOM/window.setInterval "en-US/docs/DOM/window.setInterval").
 
-<p>Важно заметить, что функция или код не могут быть выполнены, пока не завершится поток, вызвавший <code>setTimeout()</code>.</p>
+Важно заметить, что функция или код не могут быть выполнены, пока не завершится поток, вызвавший `setTimeout()`.
 
-<h3 id="Passing_string_literals">Passing string literals</h3>
+### Passing string literals
 
-<p>Передача строки вместо функции в <code>setTimeout()</code> сопряжена с теми же опасностями, что и использование <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/eval#Don.27t_use_eval.21" title="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/eval">eval</a>. </code></p>
+Передача строки вместо функции в `setTimeout()` сопряжена с теми же опасностями, что и использование `eval.`
 
-<pre class="brush: js">// Правильно
+```js
+// Правильно
 window.setTimeout(function() {
     alert("Hello World!");
 }, 500);
 
 // Неправильно
 window.setTimeout("alert(\"Hello World!\");", 500);
+```
 
-</pre>
+String literals are evaluated in the global context, so local symbols in the context where `setTimeout()` was called will not be available when the string is evaluated as code.
 
-<p>String literals are evaluated in the global context, so local symbols in the context where <code>setTimeout()</code> was called will not be available when the string is evaluated as code.</p>
+### Минимальная/ максимальная задержка и вложенность таймаута
 
-<h3 id="Минимальная_максимальная_задержка_и_вложенность_таймаута">Минимальная/ максимальная задержка и вложенность таймаута</h3>
+[Historically](http://code.google.com/p/chromium/issues/detail?id=792#c10) browsers implement `setTimeout()` "clamping": successive `setTimeout()` calls with `delay` smaller than the "minimum delay" limit are forced to use at least the minimum delay. The minimum delay, `DOM_MIN_TIMEOUT_VALUE`, is 4 ms (stored in a preference in Firefox: `dom.min_timeout_value`), with a `DOM_CLAMP_TIMEOUT_NESTING_LEVEL` of 5ms.
 
-<p><a class="external" href="http://code.google.com/p/chromium/issues/detail?id=792#c10">Historically</a> browsers implement <code>setTimeout()</code> "clamping": successive <code>setTimeout()</code> calls with <code>delay</code> smaller than the "minimum delay" limit are forced to use at least the minimum delay. The minimum delay, <code>DOM_MIN_TIMEOUT_VALUE</code>, is 4 ms (stored in a preference in Firefox: <code>dom.min_timeout_value</code>), with a <code>DOM_CLAMP_TIMEOUT_NESTING_LEVEL</code> of 5ms.</p>
+In fact, 4ms is [specified by the HTML5 spec](http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers) and is consistent across browsers released in 2010 and onward. Prior to {{ geckoRelease("5.0") }}, the minimum timeout value for nested timeouts was 10 ms.
 
-<p>In fact, 4ms is <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers">specified by the HTML5 spec</a> and is consistent across browsers released in 2010 and onward. Prior to {{ geckoRelease("5.0") }}, the minimum timeout value for nested timeouts was 10 ms.</p>
+In addition to "clamping", the timeout can also fire later when the page (or the OS/browser itself) is busy with other tasks.
 
-<p>In addition to "clamping", the timeout can also fire later when the page (or the OS/browser itself) is busy with other tasks.</p>
+To implement a 0 ms timeout in a modern browser, you can use {{ domxref("window.postMessage()") }} as [described here](http://dbaron.org/log/20100309-faster-timeouts).
 
-<p>To implement a 0 ms timeout in a modern browser, you can use {{ domxref("window.postMessage()") }} as <a class="external" href="http://dbaron.org/log/20100309-faster-timeouts">described here</a>.</p>
+Browsers including Internet Explorer, Chrome, Safari, and Firefox store the delay as a 32-bit signed Integer internally. This causes an Integer overflow when using delays larger than 2147483647, resulting in the timeout being executed immediately.
 
-<p>Browsers including Internet Explorer, Chrome, Safari, and Firefox store the delay as a 32-bit signed Integer internally. This causes an Integer overflow when using delays larger than 2147483647, resulting in the timeout being executed immediately.</p>
+#### Неактивные вкладки
 
-<h4 id="Неактивные_вкладки">Неактивные вкладки</h4>
+In {{ geckoRelease("5.0") }} and Chrome 11, timeouts are clamped to firing no more often than once per second (1000ms) in inactive tabs; see {{ bug(633421) }} for more information about this in Mozilla or [crbug.com/66078](http://crbug.com/66078) for details about this in Chrome.
 
-<p>In {{ geckoRelease("5.0") }} and Chrome 11, timeouts are clamped to firing no more often than once per second (1000ms) in inactive tabs; see {{ bug(633421) }} for more information about this in Mozilla or <a class="external" href="http://crbug.com/66078">crbug.com/66078</a> for details about this in Chrome.</p>
+## Совместимость с браузерами
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## Спецификация
 
-<h2 id="Specification">Спецификация</h2>
+Part of DOM level 0, as specified in [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#timers).
 
-<p>Part of DOM level 0, as specified in <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#timers">HTML5</a>.</p>
+## Также интересно
 
-<h2 id="See_also">Также интересно</h2>
-
-<ul>
- <li><a href="/en-US/docs/JavaScript/Timers" title="/en-US/docs/JavaScript/Timers">JavaScript timers</a></li>
- <li><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Timer.jsm" title="/en-US/docs/Mozilla/JavaScript_code_modules/Timer.jsm">Timer.jsm</a></li>
- <li>{{domxref("window.setInterval")}}</li>
- <li>{{domxref("window.requestAnimationFrame")}}</li>
- <li><a href="/en-US/docs/JavaScript/Timers/Daemons" title="/en-US/docs/JavaScript/Timers/Daemons"><em>Daemons</em> management</a></li>
-</ul>
+- [JavaScript timers](/ru/docs/JavaScript/Timers)
+- [Timer.jsm](/ru/docs/Mozilla/JavaScript_code_modules/Timer.jsm)
+- {{domxref("window.setInterval")}}
+- {{domxref("window.requestAnimationFrame")}}
+- [_Daemons_ management](/ru/docs/JavaScript/Timers/Daemons)

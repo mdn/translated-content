@@ -3,66 +3,54 @@ title: FormData.delete()
 slug: Web/API/FormData/delete
 translation_of: Web/API/FormData/delete
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p>Метод <code><strong>delete()</strong></code> интерфейса {{domxref("FormData")}} удаляет ключ и его значение(-ия) из объекта <code>FormData</code>.</p>
+Метод **`delete()`** интерфейса {{domxref("FormData")}} удаляет ключ и его значение(-ия) из объекта `FormData`.
 
-<div class="note">
-<p><strong>Note</strong>: Этот метод доступен в <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Примечание:** Этот метод доступен в [Web Workers](/ru/docs/Web/API/Web_Workers_API).
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">formData.delete(name);</pre>
+```js
+formData.delete(name);
+```
 
-<h3 id="append()_Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>name</code></dt>
- <dd>Имя ключа для удаления.</dd>
-</dl>
+- `name`
+  - : Имя ключа для удаления.
 
-<h3 id="Возвращает">Возвращает</h3>
+### Возвращает
 
-<p>Нет.</p>
+Нет.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Следующий код создаёт объект <code>FormData</code> и заполняет его парами "ключ"/"значение" из формы:</p>
+Следующий код создаёт объект `FormData` и заполняет его парами "ключ"/"значение" из формы:
 
-<pre class="brush: js">var formData = new FormData(myForm);</pre>
+```js
+var formData = new FormData(myForm);
+```
 
-<p>Вы можете удалить пару "ключ"/"значение" используя <code>delete()</code>:</p>
+Вы можете удалить пару "ключ"/"значение" используя `delete()`:
 
-<pre class="brush: js">formData.delete('username');
-</pre>
+```js
+formData.delete('username');
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest','#dom-formdata-delete','delete()')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                        | Status                               | Comment |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | ------- |
+| {{SpecName('XMLHttpRequest','#dom-formdata-delete','delete()')}} | {{Spec2('XMLHttpRequest')}} |         |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="Using XMLHttpRequest">Using XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects" title="DOM/XMLHttpRequest/FormData/Using_FormData_objects">Using FormData objects</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Using XMLHttpRequest](/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Using FormData objects](/ru/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
+- {{HTMLElement("Form")}}

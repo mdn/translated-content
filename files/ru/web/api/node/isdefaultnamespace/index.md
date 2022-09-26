@@ -3,32 +3,29 @@ title: Node.isDefaultNamespace()
 slug: Web/API/Node/isDefaultNamespace
 translation_of: Web/API/Node/isDefaultNamespace
 ---
-<div>
-<div>{{APIRef("DOM")}}</div>
-</div>
+{{APIRef("DOM")}}
 
-<p>Метод <strong><code>Node.isDefaultNamespace()</code></strong> принимает URI пространства имён в качестве аргумента и возвращает {{jsxref("Boolean")}} со значением <code>true</code> если пространство имён является пространством имён данного узла по умолчанию или <code>false</code> если нет.</p>
+Метод **`Node.isDefaultNamespace()`** принимает URI пространства имён в качестве аргумента и возвращает {{jsxref("Boolean")}} со значением `true` если пространство имён является пространством имён данного узла по умолчанию или `false` если нет.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>result</em> = <em>node</em>.isDefaultNamespace(<em>namespaceURI</em>)
-</pre>
+```
+result = node.isDefaultNamespace(namespaceURI)
+```
 
-<ul>
- <li><code>result</code> содержит в себе возвращаемое значение <code>true</code> или <code>false</code>.</li>
- <li><code>namespaceURI</code> это строка представляющая собой пространство имён, на которое элемент будет проверен.</li>
-</ul>
+- `result` содержит в себе возвращаемое значение `true` или `false`.
+- `namespaceURI` это строка представляющая собой пространство имён, на которое элемент будет проверен.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush:js">var XULNS = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+```js
+var XULNS = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 var el = document.getElementsByTagNameNS(XULNS, 'textbox')[0];
 
-alert(el.isDefaultNamespace(XULNS)); // true</pre>
+alert(el.isDefaultNamespace(XULNS)); // true
+```
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-isDefaultNamespace">DOM Level 3 Core: isDefaultNamespace</a></li>
- <li><a href="/en-US/docs/Code_snippets/IsDefaultNamespace" title="Code_snippets/IsDefaultNamespace">Code snippets: isDefaultNamespace</a></li>
-</ul>
+- [DOM Level 3 Core: isDefaultNamespace](http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-isDefaultNamespace)
+- [Code snippets: isDefaultNamespace](/ru/docs/Code_snippets/IsDefaultNamespace "Code_snippets/IsDefaultNamespace")

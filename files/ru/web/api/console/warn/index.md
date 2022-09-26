@@ -3,49 +3,37 @@ title: Console.warn()
 slug: Web/API/Console/warn
 translation_of: Web/API/Console/warn
 ---
-<div>
-<article class="text-content" id="wikiArticle">
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}Выводит предупреждение в веб-консоль.
 
-<div>Выводит предупреждение в веб-консоль.</div>
+{{AvailableInWorkers}}{{Note("В Firefox, предупреждения имеют небольшое изображение восклицательного знака перед сообщением.")}}
 
+## Синтаксис
 
+```
+console.warn(obj1 [, obj2, ..., objN]);
+console.warn(msg [, subst1, ..., substN]);
+```
 
+## Параметры
 
-<p>{{AvailableInWorkers}}{{Note("В Firefox, предупреждения имеют небольшое изображение восклицательного знака перед сообщением.")}}</p>
+- `obj1` ... `objN`
+  - : Список объектов JavaScript для вывода. Строковые представления каждого из этих объектов соединяются вместе в указанном порядке и выводятся.
+- `msg`
+  - : Строка JavaScript, содержащая 0 и более [подстановочных символов](/ru/docs/Web/API/console#Using_string_substitutions) для замен.
+- `subst1` ... `substN`
+  - : JavaScript-объекты, с помощью которых произойдёт замена подстановочных символов в `msg`. Это даст вам дополнительный контроль над форматом вывода.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+Больше подробностей смотрите в разделе [Вывод текста в консоль](/ru/docs/Web/API/Console#Outputting_text_to_the_console) документации {{domxref("console")}}.
 
-<pre class="syntaxbox">console.warn(<em>obj1</em> [, <em>obj2</em>, ..., <em>objN</em>]);
-console.warn(<em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]);
-</pre>
-
-<h2 id="Параметры">Параметры</h2>
-
-<dl>
- <dt><code>obj1</code> ... <code>objN</code></dt>
- <dd>Список объектов JavaScript для вывода. Строковые представления каждого из этих объектов соединяются вместе в указанном порядке и выводятся.</dd>
- <dt><code>msg</code></dt>
- <dd>Строка JavaScript, содержащая 0 и более <a href="https://developer.mozilla.org/ru/docs/Web/API/console#Using_string_substitutions">подстановочных символов</a> для замен.</dd>
- <dt><code>subst1</code> ... <code>substN</code></dt>
- <dd>JavaScript-объекты, с помощью которых произойдёт замена подстановочных символов в <code>msg</code>. Это даст вам дополнительный контроль над форматом вывода.</dd>
-</dl>
-
-<p>Больше подробностей смотрите в разделе <a href="/ru/docs/Web/API/Console#Outputting_text_to_the_console">Вывод текста в консоль</a> документации {{domxref("console")}}.</p>
-
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a class="external external-icon" href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
- <li><a class="external external-icon" href="http://msdn.microsoft.com/library/gg589530">MSDN: Using the F12 Tools Console to View Errors and Status</a></li>
-</ul>
-</article>
-</div>
+- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)

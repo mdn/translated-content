@@ -6,66 +6,66 @@ tags:
   - Окно
 translation_of: Web/API/BeforeUnloadEvent
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>Событие <strong><code>beforeunload </code></strong>  (en: перед_выгрузкой) происходит (непосредственно) перед выгрузкой окна, документа и их ресурсов.</p>
+Событие **`beforeunload `**(en: перед_выгрузкой) происходит (непосредственно) перед выгрузкой окна, документа и их ресурсов.
 
-<p>Если присвоено ненулевое значение свойству <code>returnValue</code> Event, всплывает диалоговое окно: "Вы действительно хотите покинуть эту страницу?" (см. пример ниже). Если значение не присвоено, то событие не отображается. В некоторых случаях диалоговое окно всплывает только после взаимодействия пользователя с фреймом или любым встроенным фреймом. См. детали  <a href="#browser_compatibility">Browser compatibility</a> </p>
+Если присвоено ненулевое значение свойству `returnValue` Event, всплывает диалоговое окно: "Вы действительно хотите покинуть эту страницу?" (см. пример ниже). Если значение не присвоено, то событие не отображается. В некоторых случаях диалоговое окно всплывает только после взаимодействия пользователя с фреймом или любым встроенным фреймом. См. детали [Browser compatibility](#browser_compatibility)
 
 <table class="properties">
- <tbody>
-  <tr>
-   <td>Всплывающие окна</td>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <td>Возможность отмены</td>
-   <td>Да</td>
-  </tr>
-  <tr>
-   <td>Целевые Объекты</td>
-   <td>defaultView</td>
-  </tr>
-  <tr>
-   <td>Интерфейс</td>
-   <td>{{domxref("Event")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td>Всплывающие окна</td>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <td>Возможность отмены</td>
+      <td>Да</td>
+    </tr>
+    <tr>
+      <td>Целевые Объекты</td>
+      <td>defaultView</td>
+    </tr>
+    <tr>
+      <td>Интерфейс</td>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush:js;">window.addEventListener("beforeunload", function( event ) {
+```js
+window.addEventListener("beforeunload", function( event ) {
   event.returnValue = "\o/";
 });
 
 //is equivalent to
 window.addEventListener("beforeunload", function( event ) {
   event.preventDefault();
-});</pre>
+});
+```
 
-<p>Webkit-based browsers не следуют спецификации диалоговых окон . Самый кросс-браузерный работающий пример выглядит примерно так: см. ниже.</p>
+Webkit-based browsers не следуют спецификации диалоговых окон . Самый кросс-браузерный работающий пример выглядит примерно так: см. ниже.
 
-<pre class="brush: js">window.addEventListener("beforeunload", function (e) {
+```js
+window.addEventListener("beforeunload", function (e) {
   var confirmationMessage = "\o/";
 
   (e || window.event).returnValue = confirmationMessage;     //Gecko + IE
   return confirmationMessage;                                //Webkit, Safari, Chrome etc.
-});</pre>
+});
+```
 
-<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+## Совместимость браузеров
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{Event("DOMContentLoaded")}}</li>
- <li>{{Event("readystatechange")}}</li>
- <li>{{Event("load")}}</li>
- <li>{{Event("beforeunload")}}</li>
- <li>{{Event("unload")}}</li>
- <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document">Выгрузка Документов - Запрос на выгрузку документа</a> </li>
-</ul>
+- {{Event("DOMContentLoaded")}}
+- {{Event("readystatechange")}}
+- {{Event("load")}}
+- {{Event("beforeunload")}}
+- {{Event("unload")}}
+- [Выгрузка Документов - Запрос на выгрузку документа](http://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document)

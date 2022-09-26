@@ -3,35 +3,39 @@ title: Gamepad.index
 slug: Web/API/Gamepad/index
 translation_of: Web/API/Gamepad/index
 ---
-<div>{{APIRef("Gamepad API")}}</div>
+{{APIRef("Gamepad API")}}
 
-<p>Свойство <code><strong>Gamepad.index</strong></code> интерфейса {{domxref("Gamepad") }} возвращает целое автоинкрементируемое значение, уникальное для каждого устройства, подключённого к системе.</p>
+Свойство **`Gamepad.index`** интерфейса {{domxref("Gamepad") }} возвращает целое автоинкрементируемое значение, уникальное для каждого устройства, подключённого к системе.
 
-<p>Это может быть полезно для распознавания нескольких контроллеров; отключённый, и подключённый заново геймпад, будет иметь тот же индекс.</p>
+Это может быть полезно для распознавания нескольких контроллеров; отключённый, и подключённый заново геймпад, будет иметь тот же индекс.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">readonly    attribute long                index;</pre>
+```
+readonly    attribute long                index;
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">window.addEventListener("gamepadconnected", function() {
+```js
+window.addEventListener("gamepadconnected", function() {
   var gp = navigator.getGamepads()[0];
   gamepadInfo.innerHTML = "Gamepad connected at index " + gp.index + ": " + gp.id + ".";
-});</pre>
+});
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p>{{jsxref("Number") }}.</p>
+{{jsxref("Number") }}.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<p><a href="/en-US/docs/Web/Guide/API/Gamepad">Using the Gamepad API</a></p>
+[Using the Gamepad API](/ru/docs/Web/Guide/API/Gamepad)

@@ -3,68 +3,52 @@ title: Window.confirm()
 slug: Web/API/Window/confirm
 translation_of: Web/API/Window/confirm
 ---
-<div>{{ApiRef("Window")}}</div>
+{{ApiRef("Window")}}
 
-<p><code>Метод <strong>Window.confirm() </strong></code>отображает диалоговое окно, которое содержит две кнопки (OK и Cancel), а так же опциональное (необязательное) текстовое сообщение.</p>
+`Метод Window.confirm() `отображает диалоговое окно, которое содержит две кнопки (OK и Cancel), а так же опциональное (необязательное) текстовое сообщение.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre><em>result</em> = window.confirm(<em>message</em>);
-</pre>
+```
+result = window.confirm(message);
+```
 
-<ul>
- <li><code>message</code> опциональная (необязательная) строка, которая будет отображена в диалоговом окне.</li>
- <li><code>result</code> булево значение, указывающее на нажатую кнопку OK или Cancel (<code>true</code> означает OK).</li>
-</ul>
+- `message` опциональная (необязательная) строка, которая будет отображена в диалоговом окне.
+- `result` булево значение, указывающее на нажатую кнопку OK или Cancel (`true` означает OK).
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre>if (window.confirm("Do you really want to leave?")) {
+```
+if (window.confirm("Do you really want to leave?")) {
   window.open("exit.html", "Thanks for Visiting!");
 }
-</pre>
+```
 
-<p>Результат:</p>
+Результат:
 
-<p><img alt="firefox confirm" src="https://mdn.mozillademos.org/files/7163/firefoxcomfirmdialog_zpsf00ec381.png" style="height: 119px; width: 354px;"><br>
-  </p>
+![firefox confirm](https://mdn.mozillademos.org/files/7163/firefoxcomfirmdialog_zpsf00ec381.png)
 
-<h2 id="Notes">Примечания</h2>
+## Примечания
 
-<p>Окна сообщений - модальные, они препятствуют получению пользователем доступа к другим частям страницы до тех пор, пока окно не будет закрыто. По этой причине, вам не следует злоупотреблять этой функцией. Более того, существуют более веские причины <a href="http://alistapart.com/article/neveruseawarning">избегать использования диалоговых окон для подтверждения действий пользователя</a>.</p>
+Окна сообщений - модальные, они препятствуют получению пользователем доступа к другим частям страницы до тех пор, пока окно не будет закрыто. По этой причине, вам не следует злоупотреблять этой функцией. Более того, существуют более веские причины [избегать использования диалоговых окон для подтверждения действий пользователя](http://alistapart.com/article/neveruseawarning).
 
-<p>Пользователям <a href="/en-US/Chrome" title="Chrome">Mozilla Chrome</a> (например, расширений Firefox) следует использовать методы <code>nsIPromptService</code> как альтернативу.</p>
+Пользователям [Mozilla Chrome](/en-US/Chrome "Chrome") (например, расширений Firefox) следует использовать методы `nsIPromptService` как альтернативу.
 
-<p>Начиная с Chrome {{CompatChrome(46.0)}} этот метод заблокирован в {{htmlelement("iframe")}} до тех пор, пока атрибут sandbox не установлен в значение <code>allow-modal</code>.</p>
+Начиная с Chrome {{CompatChrome(46.0)}} этот метод заблокирован в {{htmlelement("iframe")}} до тех пор, пока атрибут sandbox не установлен в значение `allow-modal`.
 
-<p>{{gecko_minversion_inline("23.0")}} Аргумент является опциональным и необязательным согласно спецификации.</p>
+{{gecko_minversion_inline("23.0")}} Аргумент является опциональным и необязательным согласно спецификации.
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'timers-and-user-prompts.html#dom-confirm', 'confirm()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                    | Status                           | Comment |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', 'timers-and-user-prompts.html#dom-confirm', 'confirm()')}} | {{Spec2('HTML WHATWG')}} |         |
 
-<p> </p>
+## Совместимость с браузерами
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## Смотрите также
 
-<h2 id="See_also">Смотрите также</h2>
-
-<ul>
- <li>{{domxref("window.alert","alert")}}</li>
- <li>{{domxref("window.prompt","prompt")}}</li>
-</ul>
+- {{domxref("window.alert","alert")}}
+- {{domxref("window.prompt","prompt")}}

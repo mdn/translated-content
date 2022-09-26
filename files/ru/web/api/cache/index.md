@@ -3,68 +3,57 @@ title: Cache
 slug: Web/API/Cache
 translation_of: Web/API/Cache
 ---
-<p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-<p>Интерфейс <strong><code>Cache</code></strong> представляет собой механизм хранения пары объектов <code><a href="http://fetch.spec.whatwg.org/#request">Request</a></code> / <code><a href="http://fetch.spec.whatwg.org/#response">Response</a>,</code> которые кешируются, например, как часть жизненного цикла {{domxref("ServiceWorker")}}. Заметьте, что интерфейс Cache доступен как в области видимости окна, так и в области видимости воркеров. Не обязательно использовать его вместе с сервис воркерами, даже если интерфейс определён в их спецификации.</p>
+Интерфейс **`Cache`** представляет собой механизм хранения пары объектов [`Request`](http://fetch.spec.whatwg.org/#request) / `Response,` которые кешируются, например, как часть жизненного цикла {{domxref("ServiceWorker")}}. Заметьте, что интерфейс Cache доступен как в области видимости окна, так и в области видимости воркеров. Не обязательно использовать его вместе с сервис воркерами, даже если интерфейс определён в их спецификации.
 
-<p>Для вызывающего скрипта может быть множество именованных объектов <code>Cache</code>. Разработчик сам определяет реализацию того, как скрипт (например, в  {{domxref("ServiceWorker")}}) управляет обновлением <code>Cache</code>. Записи в <code>Cache</code> не будут обновлены, пока не будет выполнен явный запрос; их время жизни не истечёт до момента удаления. Используйте {{domxref("CacheStorage.open", "CacheStorage.open(cacheName)")}}, чтобы открыть определённый именованный объект <code>Cache </code>и затем вызывайте любые методы<code> Cache </code>для управления его состоянием.</p>
+Для вызывающего скрипта может быть множество именованных объектов `Cache`. Разработчик сам определяет реализацию того, как скрипт (например, в {{domxref("ServiceWorker")}}) управляет обновлением `Cache`. Записи в `Cache` не будут обновлены, пока не будет выполнен явный запрос; их время жизни не истечёт до момента удаления. Используйте {{domxref("CacheStorage.open", "CacheStorage.open(cacheName)")}}, чтобы открыть определённый именованный объект `Cache `и затем вызывайте любые методы` Cache `для управления его состоянием.
 
-<p>Вы также ответственны за периодическую очистку записей кеша. Каждый браузер имеет жёсткие ограничения на объем хранилища кеша, доступный для исходного кода. Браузер делает все, чтобы как можно лучше использовать дисковое пространство, но он может удалить хранилище кеша для скрипта. В основном, браузер либо удаляет все данные из кеша для скрипта, либо не удаляет ничего. Устанавливайте версии кеша в имени и используйте кеш только той версии, которая безопасна для использования. Смотрите <a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers#Deleting_old_caches">Удаление старого кеша</a>.</p>
+Вы также ответственны за периодическую очистку записей кеша. Каждый браузер имеет жёсткие ограничения на объем хранилища кеша, доступный для исходного кода. Браузер делает все, чтобы как можно лучше использовать дисковое пространство, но он может удалить хранилище кеша для скрипта. В основном, браузер либо удаляет все данные из кеша для скрипта, либо не удаляет ничего. Устанавливайте версии кеша в имени и используйте кеш только той версии, которая безопасна для использования. Смотрите [Удаление старого кеша](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers#Deleting_old_caches).
 
-<div class="note">
-<p><strong>Замечание</strong>: {{domxref("Cache.put")}}, {{domxref("Cache.add")}} и {{domxref("Cache.addAll")}} допускают сохранение в кеш только <code>GET</code> запросов.</p>
-</div>
+> **Примечание:** **Замечание**: {{domxref("Cache.put")}}, {{domxref("Cache.add")}} и {{domxref("Cache.addAll")}} допускают сохранение в кеш только `GET` запросов.
 
-<div class="note">
-<p><strong>Замечание</strong>: Изначально, реализация Cache (как в Blink, так и в Gecko) возвращала успешное завершение для промисов {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}} и {{domxref("Cache.put")}}, когда тело ответа было полностью помещено в хранилище. Более поздние версии используют новейший язык, утверждая, что браузер может разрешить промис как только запись будет записана в базу данных, даже если тело ответа все ещё загружается в потоке.</p>
-</div>
+> **Примечание:** **Замечание**: Изначально, реализация Cache (как в Blink, так и в Gecko) возвращала успешное завершение для промисов {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}} и {{domxref("Cache.put")}}, когда тело ответа было полностью помещено в хранилище. Более поздние версии используют новейший язык, утверждая, что браузер может разрешить промис как только запись будет записана в базу данных, даже если тело ответа все ещё загружается в потоке.
 
-<div class="note">
-<p><strong>Замечание:</strong> Начиная с Chrome 46, Cache API будут хранить запросы только от безопасных источников, то есть, доступных через HTTPS.</p>
-</div>
+> **Примечание:** **Замечание:** Начиная с Chrome 46, Cache API будут хранить запросы только от безопасных источников, то есть, доступных через HTTPS.
 
-<div class="note">
-<p><strong>Замечание</strong>: Алгоритм сопоставления ключей зависит от заголовка <a href="https://www.fastly.com/blog/best-practices-for-using-the-vary-header">VARY</a> хранимого значения. Таким образом, сопоставление нового ключа требует одновременно как проверки самого ключа, так и значений для записей в Cache.</p>
-</div>
+> **Примечание:** **Замечание**: Алгоритм сопоставления ключей зависит от заголовка [VARY](https://www.fastly.com/blog/best-practices-for-using-the-vary-header) хранимого значения. Таким образом, сопоставление нового ключа требует одновременно как проверки самого ключа, так и значений для записей в Cache.
 
-<div class="note">
-<p><strong>Замечание:</strong> Кеширующие API не приветствуют заголовки кеширования HTTP.</p>
-</div>
+> **Примечание:** **Замечание:** Кеширующие API не приветствуют заголовки кеширования HTTP.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<dl>
- <dt>{{domxref("Cache.match", "Cache.match(request, options)")}}</dt>
- <dd>Возвращает {{jsxref("Promise")}}, который успешно завершается с нахождением первого совпадения для данного запроса в объекте {{domxref("Cache")}}.</dd>
- <dt>{{domxref("Cache.matchAll", "Cache.matchAll(request, options)")}}</dt>
- <dd>Возвращает {{jsxref("Promise")}}, который успешно завершается и возвращает массив всех найденных совпадений для данного запроса в объекте  {{domxref("Cache")}}.</dd>
- <dt>{{domxref("Cache.add", "Cache.add(request)")}}</dt>
- <dd>Принимает в качестве параметра URL, получает данные по нему и добавляет полученный объект ответа в заданный кеш. Функциональный эквивалент  вызову fetch() с последующим вызовом Cache.put() для добавления результата в кеш.</dd>
- <dt>{{domxref("Cache.addAll", "Cache.addAll(requests)")}}</dt>
- <dd>Принимает массив URL в качестве параметра, получает данные по ним, добавляет полученные объекты ответов в заданный кеш.</dd>
- <dt>{{domxref("Cache.put", "Cache.put(request, response)")}}</dt>
- <dd>Принимает запрос и ответ на него и добавляет их в заданный кеш.</dd>
- <dt>{{domxref("Cache.delete", "Cache.delete(request, options)")}}</dt>
- <dd>Находит запись {{domxref("Cache")}}, чей ключ является запросом, и, в случае нахождения, удаляет запись {{domxref("Cache")}}  и возвращает {{jsxref("Promise")}}, успешно завершающийся со значением <code>true</code>. Если же запись  {{domxref("Cache")}} не найдена, возвращается <code>false</code>.</dd>
- <dt>{{domxref("Cache.keys", "Cache.keys(request, options)")}}</dt>
- <dd>Возвращает {{jsxref("Promise")}}, который отдаёт массив ключей {{domxref("Cache")}}.</dd>
-</dl>
+- {{domxref("Cache.match", "Cache.match(request, options)")}}
+  - : Возвращает {{jsxref("Promise")}}, который успешно завершается с нахождением первого совпадения для данного запроса в объекте {{domxref("Cache")}}.
+- {{domxref("Cache.matchAll", "Cache.matchAll(request, options)")}}
+  - : Возвращает {{jsxref("Promise")}}, который успешно завершается и возвращает массив всех найденных совпадений для данного запроса в объекте {{domxref("Cache")}}.
+- {{domxref("Cache.add", "Cache.add(request)")}}
+  - : Принимает в качестве параметра URL, получает данные по нему и добавляет полученный объект ответа в заданный кеш. Функциональный эквивалент вызову fetch() с последующим вызовом Cache.put() для добавления результата в кеш.
+- {{domxref("Cache.addAll", "Cache.addAll(requests)")}}
+  - : Принимает массив URL в качестве параметра, получает данные по ним, добавляет полученные объекты ответов в заданный кеш.
+- {{domxref("Cache.put", "Cache.put(request, response)")}}
+  - : Принимает запрос и ответ на него и добавляет их в заданный кеш.
+- {{domxref("Cache.delete", "Cache.delete(request, options)")}}
+  - : Находит запись {{domxref("Cache")}}, чей ключ является запросом, и, в случае нахождения, удаляет запись {{domxref("Cache")}} и возвращает {{jsxref("Promise")}}, успешно завершающийся со значением `true`. Если же запись {{domxref("Cache")}} не найдена, возвращается `false`.
+- {{domxref("Cache.keys", "Cache.keys(request, options)")}}
+  - : Возвращает {{jsxref("Promise")}}, который отдаёт массив ключей {{domxref("Cache")}}.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Этот пример кода из <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js">примера выборочного кеширования сервис воркера</a>. (смотрите <a href="https://googlechrome.github.io/samples/service-worker/selective-caching/">работа выборочного кеширования</a>). В коде используется {{domxref("CacheStorage.open", "CacheStorage.open(cacheName)")}} для открытия любых объектов {{domxref("Cache")}} с заголовком Content-Type, начинающимся с <code>font/</code>.</p>
+Этот пример кода из [примера выборочного кеширования сервис воркера](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js). (смотрите [работа выборочного кеширования](https://googlechrome.github.io/samples/service-worker/selective-caching/)). В коде используется {{domxref("CacheStorage.open", "CacheStorage.open(cacheName)")}} для открытия любых объектов {{domxref("Cache")}} с заголовком Content-Type, начинающимся с `font/`.
 
-<p>Далее используется {{domxref("Cache.match", "Cache.match(request, options)")}} для определения того, находится ли уже совпадающий шрифт в кеше, и, если так, то возвращает его. Если же совпадающего шрифта нет, код получает этот шрифт по сети и использует {{domxref("Cache.put","Cache.put(request, response)")}} для кеширования полученного ресурса.</p>
+Далее используется {{domxref("Cache.match", "Cache.match(request, options)")}} для определения того, находится ли уже совпадающий шрифт в кеше, и, если так, то возвращает его. Если же совпадающего шрифта нет, код получает этот шрифт по сети и использует {{domxref("Cache.put","Cache.put(request, response)")}} для кеширования полученного ресурса.
 
-<p>Код обрабатывает исключения, возможные при операции {{domxref("Globalfetch.fetch","fetch()")}}. Заметьте, что HTTP-ответ с ошибкой  (например, 404) не будет вызывать исключения. Будет возвращён нормальный объект ответа с установленным соответствующим кодом ошибки.</p>
+Код обрабатывает исключения, возможные при операции {{domxref("Globalfetch.fetch","fetch()")}}. Заметьте, что HTTP-ответ с ошибкой (например, 404) не будет вызывать исключения. Будет возвращён нормальный объект ответа с установленным соответствующим кодом ошибки.
 
-<p>Также, пример описывает лучшие практики по заданию версий кеша при работе с сервис воркерами. И хотя в примере лишь один кеш, тот же подход может быть использован для множества кешей. Он сравнивает сокращённый идентификатор кеша с определённым, версионным именем кеша. Код также удаляет весь кеш, для которого не определено имя <code>CURRENT_CACHES</code>.</p>
+Также, пример описывает лучшие практики по заданию версий кеша при работе с сервис воркерами. И хотя в примере лишь один кеш, тот же подход может быть использован для множества кешей. Он сравнивает сокращённый идентификатор кеша с определённым, версионным именем кеша. Код также удаляет весь кеш, для которого не определено имя `CURRENT_CACHES`.
 
-<p>В примере кода "кеш" это атрибут WorkerGlobalScope сервис воркеров. Он содержит объект CacheStorage, через который можно получить доступ к <a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage">CacheStorage</a>  API.</p>
+В примере кода "кеш" это атрибут WorkerGlobalScope сервис воркеров. Он содержит объект CacheStorage, через который можно получить доступ к [CacheStorage](/ru/docs/Web/API/CacheStorage) API.
 
-<div class="note"><strong>Замечание:</strong> В Chrome, откройте chrome://inspect/#service-workers и кликните по ссылке "inspect" под зарегистрированным сервис воркером чтобы увидеть записи журнала по различным действиям выполняемым скриптом <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js">service-worker.js</a>.</div>
+> **Примечание:** **Замечание:** В Chrome, откройте chrome://inspect/#service-workers и кликните по ссылке "inspect" под зарегистрированным сервис воркером чтобы увидеть записи журнала по различным действиям выполняемым скриптом [service-worker.js](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js).
 
-<pre class="brush: js">var CACHE_VERSION = 1;
+```js
+var CACHE_VERSION = 1;
 
 // Сокращённый идентификатор привязанный к определённой версии кеша.
 var CURRENT_CACHES = {
@@ -114,22 +103,21 @@ self.addEventListener('fetch', function(event) {
       });
     })
   );
-});</pre>
+});
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Использование Сервис Воркеров</a></li>
- <li><a class="external external-icon" href="https://github.com/mdn/sw-test">Базовый пример кода для Сервис воркеров</a></li>
- <li><a class="external external-icon" href="https://jakearchibald.github.io/isserviceworkerready/">Готов ли Сервис Воркер?</a></li>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Performance/Using_web_workers">Использование web воркеров</a></li>
-</ul>
+- [Использование Сервис Воркеров](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Базовый пример кода для Сервис воркеров](https://github.com/mdn/sw-test)
+- [Готов ли Сервис Воркер?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Использование web воркеров](/ru/docs/Web/Guide/Performance/Using_web_workers)

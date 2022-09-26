@@ -3,56 +3,39 @@ title: Range.collapsed
 slug: Web/API/Range/collapsed
 translation_of: Web/API/Range/collapsed
 ---
-<div>
-<p>{{ APIRef("DOM") }}</p>
-</div>
+{{ APIRef("DOM") }}
 
-<p>Доступное только для чтения свойство <code><strong>Range.collapsed</strong></code> возвращает флаг {{domxref("Boolean")}}, который указывает, в одной ли и той же позиции находятся начало и конец диапазона {{domxref("Range")}}. Оно возвращает <code>true</code>, если начало и конец граничных точек диапазона {{domxref("Range")}} являются одной и той же точкой в DOM, <code>false</code> – в противном случае.</p>
+Доступное только для чтения свойство **`Range.collapsed`** возвращает флаг {{domxref("Boolean")}}, который указывает, в одной ли и той же позиции находятся начало и конец диапазона {{domxref("Range")}}. Оно возвращает `true`, если начало и конец граничных точек диапазона {{domxref("Range")}} являются одной и той же точкой в DOM, `false` – в противном случае.
 
-<p>Свёрнутый диапазон {{domxref("Range")}} является пустым, не имеет содержимого, определяет единую точку в древе DOM. Для того, чтобы свернуть диапазон, смотрите метод {{domxref("Range.collapse()")}}.</p>
+Свёрнутый диапазон {{domxref("Range")}} является пустым, не имеет содержимого, определяет единую точку в древе DOM. Для того, чтобы свернуть диапазон, смотрите метод {{domxref("Range.collapse()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>isCollapsed</em> = <em>range</em>.collapsed;
-</pre>
+```
+isCollapsed = range.collapsed;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">var range = document.createRange();
+```js
+var range = document.createRange();
 
 range.setStart(startNode,startOffset);
 range.setEnd(endNode,endOffset);
 isCollapsed = range.collapsed;
-</pre>
+```
 
-<h2 id="Specification">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-range-collapsed', 'Range.collapsed')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Traversal_Range', 'ranges.html#Level-2-Range-attr-collapsed', 'Range.collapsed')}}</td>
-   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                        | Status                                       | Comment                |
+| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ---------------------- |
+| {{SpecName('DOM WHATWG', '#dom-range-collapsed', 'Range.collapsed')}}                                         | {{Spec2('DOM WHATWG')}}             | No change.             |
+| {{SpecName('DOM2 Traversal_Range', 'ranges.html#Level-2-Range-attr-collapsed', 'Range.collapsed')}} | {{Spec2('DOM2 Traversal_Range')}} | Initial specification. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/ru/docs/DOM/DOM_Reference)

@@ -3,52 +3,51 @@ title: Element.scrollTo()
 slug: Web/API/Element/scrollTo
 translation_of: Web/API/Element/scrollTo
 ---
-<div>{{ APIRef }}</div>
+{{ APIRef }}
 
-<p><code><strong>scrollTo()</strong></code> метод интерфейса  {{domxref("Element")}}, осуществляет прокрутку по заданному набору координат внутри данного элемента. </p>
+**`scrollTo()`** метод интерфейса {{domxref("Element")}}, осуществляет прокрутку по заданному набору координат внутри данного элемента.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">element.scrollTo(<em>x-coord</em>, <em>y-coord</em>)
-element.scrollTo(<em>options</em>)
-</pre>
+```
+element.scrollTo(x-coord, y-coord)
+element.scrollTo(options)
+```
 
-<h3 id="Parameters">Параметры</h3>
+### Параметры
 
-<ul>
- <li><code>x-coord</code> координаты пикселя по горизонтальной оси элемента, который необходимо отобразить вверху слева.</li>
- <li><code>y-coord</code> координаты пикселя по вертикальной оси элемента, который необходимо отобразить вверху слева.</li>
-</ul>
+- `x-coord` координаты пикселя по горизонтальной оси элемента, который необходимо отобразить вверху слева.
+- `y-coord` координаты пикселя по вертикальной оси элемента, который необходимо отобразить вверху слева.
 
-<p>- or -</p>
+\- or -
 
-<ul>
- <li><code>options</code> как объект {{domxref("ScrollToOptions")}}, с тремя свойствами.</li>
-</ul>
+- `options` как объект {{domxref("ScrollToOptions")}}, с тремя свойствами.
 
-<h2 id="Example">Примеры</h2>
+## Примеры
 
-<pre class="brush:js">element.scrollTo(0, 1000);
-</pre>
+```js
+element.scrollTo(0, 1000);
+```
 
-<p>С помощью <code>options</code>:</p>
+С помощью `options`:
 
-<pre class="brush: js">element.scrollTo({
+```js
+element.scrollTo({
   top: 100,
   left: 100,
   behavior: 'smooth'
-});</pre>
+});
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
-<p>{{Compat}}</p>
+## Браузерная совместимость
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{domxref("Element.scrollTop")}}, {{domxref("Element.scrollLeft")}}</li>
- <li>{{domxref("Window.scrollTo()")}}</li>
-</ul>
+## Смотрите также
+
+- {{domxref("Element.scrollTop")}}, {{domxref("Element.scrollLeft")}}
+- {{domxref("Window.scrollTo()")}}

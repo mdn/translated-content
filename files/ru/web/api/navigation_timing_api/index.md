@@ -9,103 +9,78 @@ tags:
   - Производительность
 translation_of: Web/API/Navigation_timing_API
 ---
-<p>{{DefaultAPISidebar("Navigation Timing")}}</p>
+{{DefaultAPISidebar("Navigation Timing")}}
 
-<p><strong>Navigation Timing API </strong>предоставляет данные, которые могут быть использованы для измерения производительности веб-сайта. В отличие от других механизмов на основе JavaScript, которые были использованы с той же целью, этот API может предоставить полную и точную информацию о задержке в получении данных. </p>
+**Navigation Timing API** предоставляет данные, которые могут быть использованы для измерения производительности веб-сайта. В отличие от других механизмов на основе JavaScript, которые были использованы с той же целью, этот API может предоставить полную и точную информацию о задержке в получении данных.
 
-<p>Следующий пример демонстрирует как можно измерить время загрузки страницы с точки зрения пользователя:</p>
+Следующий пример демонстрирует как можно измерить время загрузки страницы с точки зрения пользователя:
 
-<pre>function onLoad() {
+```
+function onLoad() {
   var now = new Date().getTime();
   var page_load_time = now - performance.timing.navigationStart;
   console.log("User-perceived page loading time: " + page_load_time);
 }
-</pre>
+```
 
-<p>Есть много событий, измеренных в миллисекундах, которые могут быть доступны через {{domxref("PerformanceTiming")}} интерфейс. Список событий в хронологическом порядке:</p>
+Есть много событий, измеренных в миллисекундах, которые могут быть доступны через {{domxref("PerformanceTiming")}} интерфейс. Список событий в хронологическом порядке:
 
-<ul>
- <li>navigationStart</li>
- <li>unloadEventStart</li>
- <li>unloadEventEnd</li>
- <li>redirectStart</li>
- <li>redirectEnd</li>
- <li>fetchStart</li>
- <li>domainLookupStart</li>
- <li>domainLookupEnd</li>
- <li>connectStart</li>
- <li>connectEnd</li>
- <li>secureConnectionStart</li>
- <li>requestStart</li>
- <li>responseStart</li>
- <li>responseEnd</li>
- <li>domLoading</li>
- <li>domInteractive</li>
- <li>domContentLoadedEventStart</li>
- <li>domContentLoadedEventEnd</li>
- <li>domComplete</li>
- <li>loadEventStart</li>
- <li>loadEventEnd</li>
-</ul>
+- navigationStart
+- unloadEventStart
+- unloadEventEnd
+- redirectStart
+- redirectEnd
+- fetchStart
+- domainLookupStart
+- domainLookupEnd
+- connectStart
+- connectEnd
+- secureConnectionStart
+- requestStart
+- responseStart
+- responseEnd
+- domLoading
+- domInteractive
+- domContentLoadedEventStart
+- domContentLoadedEventEnd
+- domComplete
+- loadEventStart
+- loadEventEnd
 
-<p>Объект <code>window.performance.navigation</code> хранит два атрибута, которые могут быть использованы, для определения была ли страница загружена в последствии перенаправления, использования навигации по страницам в браузере или обычной загрузки по ссылке.</p>
+Объект `window.performance.navigation` хранит два атрибута, которые могут быть использованы, для определения была ли страница загружена в последствии перенаправления, использования навигации по страницам в браузере или обычной загрузки по ссылке.
 
-<p>window.performance.navigation.type:</p>
+window\.performance.navigation.type:
 
-<table class="standard-table" style="font-size: 14px;">
- <thead>
-  <tr>
-   <th scope="col">Флаг</th>
-   <th scope="col">Значение</th>
-   <th scope="col">Описание</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a name="const_next"><code>TYPE_NAVIGATE</code></a></td>
-   <td>0</td>
-   <td>Навигация началась после нажатия на ссылку, ввода URL в адресную строку браузера, подтверждения формы или после выполнения действия, отличного от действий описанных в флагах TYPE_RELOAD и TYPE_BACK_FORWARD.</td>
-  </tr>
-  <tr>
-   <td><a name="const_next_no_duplicate"><code>TYPE_RELOAD</code></a></td>
-   <td>1</td>
-   <td>Навигация путём перегрузки страницы или выполнения метода location.reload().</td>
-  </tr>
-  <tr>
-   <td><a name="const_prev"><code>TYPE_BACK_FORWARD</code></a></td>
-   <td>2</td>
-   <td>Навигация по истории переходов по страницам в браузере.</td>
-  </tr>
-  <tr>
-   <td><a name="const_prev_no_duplicate"><code>TYPE_UNDEFINED</code></a></td>
-   <td>255</td>
-   <td>Любой другой тип навигации не описанный выше.</td>
-  </tr>
- </tbody>
-</table>
+| Флаг                | Значение | Описание                                                                                                                                                                                                       |
+| ------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `TYPE_NAVIGATE`     | 0        | Навигация началась после нажатия на ссылку, ввода URL в адресную строку браузера, подтверждения формы или после выполнения действия, отличного от действий описанных в флагах TYPE_RELOAD и TYPE_BACK_FORWARD. |
+| `TYPE_RELOAD`       | 1        | Навигация путём перегрузки страницы или выполнения метода location.reload().                                                                                                                                   |
+| `TYPE_BACK_FORWARD` | 2        | Навигация по истории переходов по страницам в браузере.                                                                                                                                                        |
+| `TYPE_UNDEFINED`    | 255      | Любой другой тип навигации не описанный выше.                                                                                                                                                                  |
 
-<p><code>window.performance.navigation.redirectCount</code> отображает количество переадресаций до последней страницы, если они происходили.</p>
+`window.performance.navigation.redirectCount` отображает количество переадресаций до последней страницы, если они происходили.
 
-<p>Navigation Timing API может быть использован для сбора данных о производительности на стороне клиента при отправке асинхронных запросов на сервер, а также для получения данных, которые нельзя получить с помощью других средств, таких как время выгрузки предыдущей страницы, время DNS запроса, время полной загрузки страницы.</p>
+Navigation Timing API может быть использован для сбора данных о производительности на стороне клиента при отправке асинхронных запросов на сервер, а также для получения данных, которые нельзя получить с помощью других средств, таких как время выгрузки предыдущей страницы, время DNS запроса, время полной загрузки страницы.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Вычисление времени полной загрузки страницы:</p>
+Вычисление времени полной загрузки страницы:
 
-<pre>var perfData = window.performance.timing;
+```
+var perfData = window.performance.timing;
 var pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
-</pre>
+```
 
-<p>Вычисление времени выполнения запроса:</p>
+Вычисление времени выполнения запроса:
 
-<pre>var connectTime = perfData.responseEnd - perfData.requestStart;</pre>
+```
+var connectTime = perfData.responseEnd - perfData.requestStart;
+```
 
-<h3 id="Browser_Compatibility">Ссылки</h3>
+### Ссылки
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/navigation-timing/">http://www.w3.org/TR/navigation-timing/</a></li>
-</ul>
+- <http://www.w3.org/TR/navigation-timing/>
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat("api.PerformanceTiming")}}</p>
+{{Compat("api.PerformanceTiming")}}

@@ -8,35 +8,35 @@ tags:
   - Свойство
 translation_of: Web/API/Window/scrollMaxY
 ---
-<div>{{APIRef}} {{Non-standard_header}}</div>
+{{APIRef}} {{Non-standard_header}}
 
-<p>Свойство <code><strong>Window.scrollMaxY</strong></code> возвращает максимальное число пикселей по вертикали, доступных для прокрутки в документе. Только для чтения.</p>
+Свойство **`Window.scrollMaxY`** возвращает максимальное число пикселей по вертикали, доступных для прокрутки в документе. Только для чтения.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>yMax</var> = window.scrollMaxY
-</pre>
+```
+yMax = window.scrollMaxY
+```
 
-<ul>
- <li><code>yMax</code> - число пикселей.</li>
-</ul>
+- `yMax` - число пикселей.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush:js">// Пролистать в самый низ
+```js
+// Пролистать в самый низ
 var maxY = window.scrollMaxY;
 
 window.scrollTo(0,maxY);
-</pre>
+```
 
-<h2 id="Notes">Примечания </h2>
+## Примечания
 
-<p>Не используйте это свойство для получения общей высоты документа, так как оно не равнозначно {{domxref("window.innerHeight")}} + window.scrollMaxY, потому что {{domxref("window.innerHeight")}} включает ещё ширину любой видимой горизонтальной полосы прокрутке. Вместо этого применяйте {{domxref("element.scrollHeight","document.body.scrollHeight")}}. Смотрите также {{domxref("window.scrollMaxX")}} и {{domxref("window.scrollTo")}}.</p>
+Не используйте это свойство для получения общей высоты документа, так как оно не равнозначно {{domxref("window.innerHeight")}} + window\.scrollMaxY, потому что {{domxref("window.innerHeight")}} включает ещё ширину любой видимой горизонтальной полосы прокрутке. Вместо этого применяйте {{domxref("element.scrollHeight","document.body.scrollHeight")}}. Смотрите также {{domxref("window.scrollMaxX")}} и {{domxref("window.scrollTo")}}.
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<p>Не является частью какой-либо спецификации.</p>
+Не является частью какой-либо спецификации.
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

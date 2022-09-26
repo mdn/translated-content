@@ -3,49 +3,30 @@ title: HTMLBRElement
 slug: Web/API/HTMLBRElement
 translation_of: Web/API/HTMLBRElement
 ---
-<div>
-<div>{{APIRef("HTML DOM")}}</div>
-</div>
+{{APIRef("HTML DOM")}}
 
-<div> </div>
+**`HTMLBRElement`** интерфейс представляющий HTML-элемент линии разрыва ({{htmlelement("br")}}). Это унаследовано от {{domxref("HTMLElement")}}.
 
-<p><strong><code>HTMLBRElement</code></strong> интерфейс представляющий HTML-элемент линии разрыва ({{htmlelement("br")}}). Это унаследовано от {{domxref("HTMLElement")}}.</p>
+## Свойства
 
-<h2 id="Свойства">Свойства</h2>
+_Наследует свойства от его родителя, {{domxref("HTMLElement")}}._
 
-<p><em>Наследует свойства от его родителя, {{domxref("HTMLElement")}}.</em></p>
+| Имя                              | Тип                              | Описание                                             |
+| -------------------------------- | -------------------------------- | ---------------------------------------------------- |
+| `clear` {{obsolete_inline}} | {{domxref("DOMString")}} | Отображает поток текста, вокруг обтекаемого объекта. |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Имя</th>
-   <th scope="col">Тип</th>
-   <th scope="col">Описание</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>clear</code> {{obsolete_inline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>Отображает поток текста, вокруг обтекаемого объекта.</td>
-  </tr>
- </tbody>
-</table>
+## Методы
 
-<h2 id="Методы">Методы</h2>
+_Нет специфичных методов;_ _наследует методы от его родителя, {{domxref("HTMLElement")}}_.
 
-<p><em>Нет специфичных методов; </em><em>наследует методы от его родителя, {{domxref("HTMLElement")}}</em>.</p>
-
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>HTML-элемент реализующий этот интерфейс: {{HTMLElement("br")}}</li>
-</ul>
+- HTML-элемент реализующий этот интерфейс: {{HTMLElement("br")}}

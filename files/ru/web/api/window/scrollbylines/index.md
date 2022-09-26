@@ -3,44 +3,41 @@ title: Window.scrollByLines()
 slug: Web/API/Window/scrollByLines
 translation_of: Web/API/Window/scrollByLines
 ---
-<div>{{ ApiRef() }}</div>
+{{ ApiRef() }}
 
-<div>
-<p id="comment_text_2">{{Non-standard_header}}</p>
-</div>
+{{Non-standard_header}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>Прокручивает документ на заданное число строк.</p>
+Прокручивает документ на заданное число строк.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">window.scrollByLines(<var>lines</var>)
-</pre>
+```
+window.scrollByLines(lines)
+```
 
-<h2 id="Parameters">Parameters</h2>
+## Parameters
 
-<ul>
- <li><code>lines</code> — число линий, на которое надо прокрутить документ.</li>
- <li><code>lines</code> может быть положительным или отрицательным целым числом.</li>
-</ul>
+- `lines` — число линий, на которое надо прокрутить документ.
+- `lines` может быть положительным или отрицательным целым числом.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:html">&lt;!-- прокручивает страницу вниз на 5 линий. --&gt;
-&lt;button onclick="scrollByLines(5);"&gt;down 5 lines&lt;/button&gt;
-</pre>
+```html
+<!-- прокручивает страницу вниз на 5 линий. -->
+<button onclick="scrollByLines(5);">down 5 lines</button>
+```
 
-<pre class="brush:html">&lt;!-- прокручивает страницу вверх на 5 линий. --&gt;
-&lt;button onclick="scrollByLines(-5);"&gt;up 5 lines&lt;/button&gt;
-</pre>
+```html
+<!-- прокручивает страницу вверх на 5 линий. -->
+<button onclick="scrollByLines(-5);">up 5 lines</button>
+```
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<p id="comment_text_2">Не является частью спецификации</p>
+Не является частью спецификации
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("window.scrollBy")}}, {{domxref("window.scrollByPages")}}</li>
-</ul>
+- {{domxref("window.scrollBy")}}, {{domxref("window.scrollByPages")}}

@@ -6,21 +6,20 @@ tags:
   - Document
 translation_of: Web/API/Document/embeds
 ---
-<p> </p>
+{{ApiRef}}
 
-<p>{{ApiRef}}</p>
+The **`embeds`** read-only property of the {{domxref("Document")}} interface returns a list of the embedded {{htmlelement("object")}} elements within the current document.
 
-<p>The <strong><code>embeds</code></strong> read-only property of the {{domxref("Document")}} interface returns a list of the embedded {{htmlelement("object")}} elements within the current document.</p>
+## Синтаксис
 
-<h2 id="Синтаксис">Синтаксис</h2>
+```
+nodeList = document.embeds
+```
 
-<pre><var>nodeList</var> = document.embeds
-</pre>
+### Значение
 
-<h3 id="Значение">Значение</h3>
+{{domxref("HTMLCollection")}}.
 
-<p>{{domxref("HTMLCollection")}}.</p>
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}

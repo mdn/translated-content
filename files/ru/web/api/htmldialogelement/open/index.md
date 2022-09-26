@@ -9,53 +9,54 @@ tags:
   - open
 translation_of: Web/API/HTMLDialogElement/open
 ---
-<div>
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>{{ SeeCompatTable() }}</p>
+{{ SeeCompatTable() }}
 
-<p><strong><code>open</code></strong> - свойство интерфейса взаимодействия {{domxref("HTMLDialogElement")}}, является {{domxref("Boolean")}} значением и отражает HTML атрибут {{htmlattrxref("open", "dialog")}} этого элемента, указывающий, доступен ли {{htmlelement("dialog")}} для взаимодействия.</p>
-</div>
+**`open`** - свойство интерфейса взаимодействия {{domxref("HTMLDialogElement")}}, является {{domxref("Boolean")}} значением и отражает HTML атрибут {{htmlattrxref("open", "dialog")}} этого элемента, указывающий, доступен ли {{htmlelement("dialog")}} для взаимодействия.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">dialogInstance.open = true;
-var myOpenValue = dialogInstance.open;</pre>
+```
+dialogInstance.open = true;
+var myOpenValue = dialogInstance.open;
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p>{{domxref("Boolean")}} значение отражает состояние HTML атрибута {{htmlattrxref("open", "dialog")}}. <code>true</code> значит, что значение установлено и диалоговое окно показывается в настоящий момент. <code>false</code> указывает, что значение не установлено и диалоговое окно не показывается.</p>
+{{domxref("Boolean")}} значение отражает состояние HTML атрибута {{htmlattrxref("open", "dialog")}}. `true` значит, что значение установлено и диалоговое окно показывается в настоящий момент. `false` указывает, что значение не установлено и диалоговое окно не показывается.
 
-<p>Свойство доступно только для чтения — значение можно установить программно методы show и hide элемента {{htmlelement("dialog")}}.</p>
+Свойство доступно только для чтения — значение можно установить программно методы show и hide элемента {{htmlelement("dialog")}}.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<p>Примеры ниже показывают простую кнопку, которая по нажатию открывает {{htmlelement("dialog")}}, содержащий {{htmlelement("form")}}, используя <code>showModal()</code> метод. Вы можете нажать кнопку <em>Отмена</em> для закрытия (используя {{domxref("HTMLDialogElement.close()")}} метод) или принять {{htmlelement("form")}}, нажав на кнопку <em>Принять</em>.</p>
+Примеры ниже показывают простую кнопку, которая по нажатию открывает {{htmlelement("dialog")}}, содержащий {{htmlelement("form")}}, используя `showModal()` метод. Вы можете нажать кнопку _Отмена_ для закрытия (используя {{domxref("HTMLDialogElement.close()")}} метод) или принять {{htmlelement("form")}}, нажав на кнопку _Принять_.
 
-<pre class="brush: html">  &lt;!-- Simple pop-up dialog box, containing a form --&gt;
-  &lt;dialog id="favDialog"&gt;
-    &lt;form method="dialog"&gt;
-      &lt;section&gt;
-        &lt;p&gt;&lt;label for="favAnimal"&gt;Favorite animal:&lt;/label&gt;
-        &lt;select id="favAnimal" name="favAnimal"&gt;
-          &lt;option&gt;&lt;/option&gt;
-          &lt;option&gt;Brine shrimp&lt;/option&gt;
-          &lt;option&gt;Red panda&lt;/option&gt;
-          &lt;option&gt;Spider monkey&lt;/option&gt;
-        &lt;/select&gt;&lt;/p&gt;
-      &lt;/section&gt;
-      &lt;menu&gt;
-        &lt;button id="cancel" type="reset"&gt;Cancel&lt;/button&gt;
-        &lt;button type="submit"&gt;Confirm&lt;/button&gt;
-      &lt;/menu&gt;
-    &lt;/form&gt;
-  &lt;/dialog&gt;
+```html
+  <!-- Simple pop-up dialog box, containing a form -->
+  <dialog id="favDialog">
+    <form method="dialog">
+      <section>
+        <p><label for="favAnimal">Favorite animal:</label>
+        <select id="favAnimal" name="favAnimal">
+          <option></option>
+          <option>Brine shrimp</option>
+          <option>Red panda</option>
+          <option>Spider monkey</option>
+        </select></p>
+      </section>
+      <menu>
+        <button id="cancel" type="reset">Cancel</button>
+        <button type="submit">Confirm</button>
+      </menu>
+    </form>
+  </dialog>
 
-  &lt;menu&gt;
-    &lt;button id="updateDetails"&gt;Update details&lt;/button&gt;
-  &lt;/menu&gt;
+  <menu>
+    <button id="updateDetails">Update details</button>
+  </menu>
 
-  &lt;script&gt;
+  <script>
     (function() {
       var updateButton = document.getElementById('updateDetails');
       var cancelButton = document.getElementById('cancel');
@@ -83,24 +84,19 @@ var myOpenValue = dialogInstance.open;</pre>
       });
 
     })();
-  &lt;/script&gt;</pre>
+  </script>
+```
 
-<div class="note">
-<p><strong>Примечание</strong>: вы можете найти данный пример на <a href="https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html">htmldialogelement-basic</a> (<a href="https://mdn.github.io/dom-examples/htmldialogelement-basic/">see it live also</a>).</p>
-</div>
+> **Примечание:** вы можете найти данный пример на [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html) ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>HTML-элемент, использующий данный интерфейс взаимодействия: {{ HTMLElement("dialog") }}.</li>
-</ul>
+- HTML-элемент, использующий данный интерфейс взаимодействия: {{ HTMLElement("dialog") }}.

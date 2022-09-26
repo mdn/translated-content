@@ -12,39 +12,37 @@ tags:
 translation_of: Web/API/HTMLHyperlinkElementUtils/origin
 original_slug: Web/API/HTMLHyperlinkElementUtils/origin
 ---
-<p>{{APIRef("URL API")}}</p>
+{{APIRef("URL API")}}
 
-<p>Свойство только для чтения <strong><code>HTMLHyperlinkElementUtils.origin</code></strong> – это {{domxref("USVString")}}, содержащий сериализованные в Unicode протокол, хост и порт, а именно:</p>
+Свойство только для чтения **`HTMLHyperlinkElementUtils.origin`** – это {{domxref("USVString")}}, содержащий сериализованные в Unicode протокол, хост и порт, а именно:
 
-<ul>
- <li>для URL, начинающегося с <code>http</code> или <code>https</code>, – протокол, <code>'://'</code>, домен, <code>':'</code>, порт (порт по умолчанию, <code>80</code> и <code>443</code> соответственно, если указаны явно);</li>
- <li>для URL, начинающегося с <code>file:</code>, – значение зависит от браузера;</li>
- <li>для URL, начинающегося с <code>blob:</code>, – основа URL следующего за <code>blob:</code>. Т.е. для <code>"blob:https://mozilla.org"</code> будет <code>"https://mozilla.org".</code></li>
-</ul>
+- для URL, начинающегося с `http` или `https`, – протокол, `'://'`, домен, `':'`, порт (порт по умолчанию, `80` и `443` соответственно, если указаны явно);
+- для URL, начинающегося с `file:`, – значение зависит от браузера;
+- для URL, начинающегося с `blob:`, – основа URL следующего за `blob:`. Т.е. для `"blob:https://mozilla.org"` будет `"https://mozilla.org".`
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.origin;
-</pre>
+```
+string = object.origin;
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">// На этой странице
+```js
+// На этой странице
 var result = window.location.origin; // Вернёт: 'https://developer.mozilla.org'
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит это свойство.</li>
-</ul>
+- Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит это свойство.

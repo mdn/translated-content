@@ -3,30 +3,29 @@ title: Navigator.mediaDevices
 slug: Web/API/Navigator/mediaDevices
 translation_of: Web/API/Navigator/mediaDevices
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>Свойство <strong><code>Navigator.mediaDevices</code></strong> только для чтения, возвращает объект {{domxref("MediaDevices")}}, который предоставляет доступ к подключённым медиа-устройствам ввода, таким как камера и микрофон, а также совместное использование экрана.</p>
+Свойство **`Navigator.mediaDevices`** только для чтения, возвращает объект {{domxref("MediaDevices")}}, который предоставляет доступ к подключённым медиа-устройствам ввода, таким как камера и микрофон, а также совместное использование экрана.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <em>mediaDevices</em> = navigator.mediaDevices;
-</pre>
+```
+var mediaDevices = navigator.mediaDevices;
+```
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>{{domxref("MediaDevices")}} объект синглтон. Как правило, вы просто используете элементы этого объекта напрямую, например с помощью вызова {{domxref("navigator.mediaDevices.getUserMedia()")}}.</p>
+{{domxref("MediaDevices")}} объект синглтон. Как правило, вы просто используете элементы этого объекта напрямую, например с помощью вызова {{domxref("navigator.mediaDevices.getUserMedia()")}}.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>: The entry point to the documentation about the entire media stream API.</li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a>: Documentation about the WebRTC API, which is closely related.</li>
-</ul>
+- [Media Capture and Streams API](/ru/docs/Web/API/Media_Streams_API): The entry point to the documentation about the entire media stream API.
+- [WebRTC API](/ru/docs/Web/API/WebRTC_API): Documentation about the WebRTC API, which is closely related.

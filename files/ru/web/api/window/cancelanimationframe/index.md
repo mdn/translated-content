@@ -3,25 +3,25 @@ title: window.cancelAnimationFrame()
 slug: Web/API/Window/cancelAnimationFrame
 translation_of: Web/API/Window/cancelAnimationFrame
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Метод <code><strong>window.cancelAnimationFrame()</strong></code> останавливает анимацию, запланированную с помощью {{domxref("window.requestAnimationFrame()")}}.</p>
+Метод **`window.cancelAnimationFrame()`** останавливает анимацию, запланированную с помощью {{domxref("window.requestAnimationFrame()")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">window.cancelAnimationFrame(<em>requestID</em>);
-</pre>
+```
+window.cancelAnimationFrame(requestID);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>requestID</code></dt>
- <dd>Значение, которое возвращает {{domxref("window.requestAnimationFrame()")}} при запросе callback.</dd>
-</dl>
+- `requestID`
+  - : Значение, которое возвращает {{domxref("window.requestAnimationFrame()")}} при запросе callback.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+```js
+var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
                             window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
 var cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
@@ -33,7 +33,7 @@ var myReq;
 function step(timestamp) {
   var progress = timestamp - start;
   d.style.left = Math.min(progress / 10, 200) + 'px';
-  if (progress &lt; 2000) {
+  if (progress < 2000) {
     // Важно обновлять requestId при каждом запросе requestAnimationFrame
     myReq = requestAnimationFrame(step);
   }
@@ -41,25 +41,17 @@ function step(timestamp) {
 myReq = requestAnimationFrame(step);
 // остановка с использованием последнего requestId
 cancelAnimationFrame(myReq);
-</pre>
+```
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>
+{{Compat}}
 
+## Спецификация
 
-<p>{{Compat}}</p>
-</div>
+- {{spec("https://www.w3.org/TR/html51/webappapis.html#animation-frames", "Timing control for script-based animations: cancelAnimationFrame", "WD")}}
 
-<h2 id="Спецификация">Спецификация</h2>
+## Смотрите также
 
-<ul>
- <li>{{spec("https://www.w3.org/TR/html51/webappapis.html#animation-frames", "Timing control for script-based animations: cancelAnimationFrame", "WD")}}</li>
-</ul>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>{{domxref("window.mozAnimationStartTime")}}</li>
- <li>{{domxref("window.requestAnimationFrame()")}}</li>
-</ul>
+- {{domxref("window.mozAnimationStartTime")}}
+- {{domxref("window.requestAnimationFrame()")}}

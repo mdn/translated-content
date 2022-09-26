@@ -3,34 +3,38 @@ title: CanvasRenderingContext2D.getLineDash()
 slug: Web/API/CanvasRenderingContext2D/getLineDash
 translation_of: Web/API/CanvasRenderingContext2D/getLineDash
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Метод <strong><code>CanvasRenderingContect2D.getLineDash()</code></strong>, предоставляемый Canvas 2D API который возвращает текущий паттерн штриховки линии.</p>
+Метод **`CanvasRenderingContect2D.getLineDash()`**, предоставляемый Canvas 2D API который возвращает текущий паттерн штриховки линии.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>ctx</em>.getLineDash();</pre>
+```
+ctx.getLineDash();
+```
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>{{jsxref("Array")}} (массив) чисел которые обозначают расстояния рисования линий и разрывов (в единицах пространства координат). Если число заданных элементов нечётное, то заданные элементы массива копируются и суммируются. Например, установив штрихи линии как <code>[5, 15, 25]</code> в результате мы получим <code>[5, 15, 25, 5, 15, 25]</code>.</p>
+{{jsxref("Array")}} (массив) чисел которые обозначают расстояния рисования линий и разрывов (в единицах пространства координат). Если число заданных элементов нечётное, то заданные элементы массива копируются и суммируются. Например, установив штрихи линии как `[5, 15, 25]` в результате мы получим `[5, 15, 25, 5, 15, 25]`.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Получение_текущей_настройки_штриховки_линии">Получение текущей настройки штриховки линии</h3>
+### Получение текущей настройки штриховки линии
 
-<p>Этот пример демонстрирует метод <code>getLineDash()</code>.</p>
+Этот пример демонстрирует метод `getLineDash()`.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<p>Используя {{domxref("CanvasRenderingContext2D.setLineDash()", "setLineDash()")}} задано, что штрихи состоят из отрезков в 10 единиц и разрывами между ними в 20 единиц.</p>
+Используя {{domxref("CanvasRenderingContext2D.setLineDash()", "setLineDash()")}} задано, что штрихи состоят из отрезков в 10 единиц и разрывами между ними в 20 единиц.
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.setLineDash([10, 20]);
@@ -41,26 +45,22 @@ ctx.beginPath();
 ctx.moveTo(0, 50);
 ctx.lineTo(300, 50);
 ctx.stroke();
-</pre>
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{ EmbedLiveSample('Получение_текущей_настройки_штриховки_линии', 700, 180) }}</p>
+{{ EmbedLiveSample('Получение_текущей_настройки_штриховки_линии', 700, 180) }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Интерфейс, предоставляющий данный метод: {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.setLineDash()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.lineDashOffset")}}</li>
-</ul>
+- Интерфейс, предоставляющий данный метод: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.setLineDash()")}}
+- {{domxref("CanvasRenderingContext2D.lineDashOffset")}}

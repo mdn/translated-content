@@ -7,30 +7,29 @@ tags:
   - Property
 translation_of: Web/API/Document/alinkColor
 ---
-<p>{{APIRef("DOM")}} {{ Deprecated_header() }}</p>
+{{APIRef("DOM")}} {{ Deprecated_header() }}
 
-<p>Возвращает или задаёт цвет активной ссылки в теле документа. Ссылка активна в течение времени между событиями mousedown и mouseup.</p>
+Возвращает или задаёт цвет активной ссылки в теле документа. Ссылка активна в течение времени между событиями mousedown и mouseup.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="eval"><em>color</em> = document.alinkColor
-document.alinkColor = <em>color</em>
-</pre>
+```
+color = document.alinkColor
+document.alinkColor = color
+```
 
-<p>Color - строка, содержащая имя цвета (например, <code>blue</code>, <code>dark blue</code> и т.д.) или шестнадцатеричное значение цвета(<code>#0000FF</code>)</p>
+Color - строка, содержащая имя цвета (например, `blue`, `dark blue` и т.д.) или шестнадцатеричное значение цвета(`#0000FF`)
 
-<h2 id="Notes">Примечание</h2>
+## Примечание
 
-<p>Значение по умолчанию для этого свойства в Mozilla Firefox является красным (<code>#ee0000</code> в шестнадцатеричном формате).</p>
+Значение по умолчанию для этого свойства в Mozilla Firefox является красным (`#ee0000` в шестнадцатеричном формате).
 
-<p><code>document.alinkColor</code> устарел в <a class="external" href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268">DOM Level 2 HTML</a>. Одним из вариантов является CSS-селектор {{ Cssxref(":active") }}.</p>
+`document.alinkColor` устарел в [DOM Level 2 HTML](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268). Одним из вариантов является CSS-селектор {{ Cssxref(":active") }}.
 
-<p>Другой альтернативой является document.body.aLink, хотя это <a href="http://www.w3.org/TR/html401/struct/global.html#adef-alink">устарело в HTML 4.01</a> в пользу альтернативы CSS.</p>
+Другой альтернативой является document.body.aLink, хотя это [устарело в HTML 4.01](http://www.w3.org/TR/html401/struct/global.html#adef-alink) в пользу альтернативы CSS.
 
-<p><a href="en/Gecko">Gecko</a> поддерживает оба варианта <code>alinkColor</code>/<code>:active</code> and {{ Cssxref(":focus") }}. Internet Explorer 6 и 7 поддерживает <code>alinkColor</code>/<code>:active</code> только для<a href="en/HTML/Element/a"> HTML ссылок с якорем (&lt;a&gt;)</a>  и поведение у них такое же, как <code>:focus</code> в Gecko. В IE нет поддержки :focus.</p>
+[Gecko](en/Gecko) поддерживает оба варианта `alinkColor`/`:active` and {{ Cssxref(":focus") }}. Internet Explorer 6 и 7 поддерживает `alinkColor`/`:active` только для[ HTML ссылок с якорем (\<a>)](en/HTML/Element/a) и поведение у них такое же, как `:focus` в Gecko. В IE нет поддержки :focus.
 
-<h2 id="Браузерная_поддержка">Браузерная поддержка</h2>
+## Браузерная поддержка
 
-<p>{{Compat}}</p>
-
-<p> </p>
+{{Compat}}

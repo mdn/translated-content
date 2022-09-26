@@ -3,56 +3,59 @@ title: FormData.get()
 slug: Web/API/FormData/get
 translation_of: Web/API/FormData/get
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p>Метод get() из интерфейса {{domxref("FormData")}} возвращает первое значение, связанное с переданным ключом из объекта FormData. Если вы ожидаете множественные значения и хотите получить их все, используйте метод getAll().</p>
+Метод get() из интерфейса {{domxref("FormData")}} возвращает первое значение, связанное с переданным ключом из объекта FormData. Если вы ожидаете множественные значения и хотите получить их все, используйте метод getAll().
 
-<div class="note">
-<p>Примечание: Этот метод доступен в <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Примечание:** Примечание: Этот метод доступен в [Web Workers](/ru/docs/Web/API/Web_Workers_API).
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">formData.get(name);</pre>
+```
+formData.get(name);
+```
 
-<h3 id="append()_Parameters">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>name</code></dt>
- <dd>{{domxref("USVString")}} строка, являющаяся именем ключа, значение которого вы хотите получить.</dd>
-</dl>
+- `name`
+  - : {{domxref("USVString")}} строка, являющаяся именем ключа, значение которого вы хотите получить.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Значение из {{domxref("FormDataEntryValue")}}.</p>
+Значение из {{domxref("FormDataEntryValue")}}.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Следующий код создаёт пустой объект <code>FormData</code>:</p>
+Следующий код создаёт пустой объект `FormData`:
 
-<pre class="brush: js">var formData = new FormData();</pre>
+```js
+var formData = new FormData();
+```
 
-<p>Если мы добавим два значения  <code>username,</code> используя {{domxref("FormData.append")}}:</p>
+Если мы добавим два значения `username,` используя {{domxref("FormData.append")}}:
 
-<pre class="brush: js">formData.append('username', 'Борис');
-formData.append('username', 'Кирилл');</pre>
+```js
+formData.append('username', 'Борис');
+formData.append('username', 'Кирилл');
+```
 
-<p>То метод <code>get()</code> вернёт только первое добавленное значение <code>username</code>:</p>
+То метод `get()` вернёт только первое добавленное значение `username`:
 
-<pre class="brush: js">formData.get('username'); // Вернёт "Борис"</pre>
+```js
+formData.get('username'); // Вернёт "Борис"
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="Using XMLHttpRequest">Использование XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects" title="DOM/XMLHttpRequest/FormData/Using_FormData_objects">Использование FormData objects</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+## Смотрите также
+
+- {{domxref("XMLHTTPRequest")}}
+- [Использование XMLHttpRequest](/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Использование FormData objects](/ru/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
+- {{HTMLElement("Form")}}

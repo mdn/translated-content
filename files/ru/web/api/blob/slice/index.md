@@ -3,57 +3,42 @@ title: Blob.slice()
 slug: Web/API/Blob/slice
 translation_of: Web/API/Blob/slice
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<p>Метод <strong><code>Blob.slice()</code></strong> используется для создания нового объекта  {{domxref("Blob")}}, содержащего данные в указанном диапазоне байтов исходника {{domxref("Blob")}}.</p>
+Метод **`Blob.slice()`** используется для создания нового объекта {{domxref("Blob")}}, содержащего данные в указанном диапазоне байтов исходника {{domxref("Blob")}}.
 
-<div class="note"><strong>Примечание:</strong> Помните, что метод  <code>slice()</code> имеет префиксы в некоторых браузерах и версиях: <code>blob.mozSlice()</code> для Firefox 12  и ранних, и <code>blob.webkitSlice()</code> для Safari. Старая версия метода <code>slice()</code> без префиксов, имела разную семантику, и устарела.</div>
+> **Примечание:** Помните, что метод `slice()` имеет префиксы в некоторых браузерах и версиях: `blob.mozSlice()` для Firefox 12 и ранних, и `blob.webkitSlice()` для Safari. Старая версия метода `slice()` без префиксов, имела разную семантику, и устарела.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var blob = instanceOfBlob.slice([start [, end [, contentType]]]);</pre>
+```
+var blob = instanceOfBlob.slice([start [, end [, contentType]]]);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>start</code> {{optional_inline}}</dt>
- <dd>Индекс в {{domxref("Blob")}} указывающий первый байт, включённый в новый {{domxref("Blob")}}. Если указать отрицательное значение, это будет рассматриваться, как смещение с конца строки к началу. К примеру, -10 будет 10-ым от последнего байта {{domxref("Blob")}}. Значение по умолчанию равно 0. Если указать значение <code>start</code>, которое больше размера источника {{domxref("Blob")}}, размер возвращаемого {{domxref("Blob")}} будет равен 0 и не будет содержать данных.</dd>
- <dt><code>end</code> {{optional_inline}}</dt>
- <dd>Индекс в {{domxref("Blob")}} указывающий первый байт, который <strong>не</strong> будет включён в новый {{domxref("Blob")}} (т.е. байт с этим индексом не будет включён). Если указать отрицательное значение, это будет рассматриваться, как смещение с конца строки к началу. К примеру, -10 будет 10-ым от последнего байта {{domxref("Blob")}}. Значение по умолчанию равно <code>size</code>.</dd>
- <dt><code>contentType</code> {{optional_inline}}</dt>
- <dd>Тип содержимого нового {{domxref("Blob")}}; это будет значение его свойства <code>type</code>. Значение по умолчанию - пустая строка.</dd>
-</dl>
+- `start` {{optional_inline}}
+  - : Индекс в {{domxref("Blob")}} указывающий первый байт, включённый в новый {{domxref("Blob")}}. Если указать отрицательное значение, это будет рассматриваться, как смещение с конца строки к началу. К примеру, -10 будет 10-ым от последнего байта {{domxref("Blob")}}. Значение по умолчанию равно 0. Если указать значение `start`, которое больше размера источника {{domxref("Blob")}}, размер возвращаемого {{domxref("Blob")}} будет равен 0 и не будет содержать данных.
+- `end` {{optional_inline}}
+  - : Индекс в {{domxref("Blob")}} указывающий первый байт, который **не** будет включён в новый {{domxref("Blob")}} (т.е. байт с этим индексом не будет включён). Если указать отрицательное значение, это будет рассматриваться, как смещение с конца строки к началу. К примеру, -10 будет 10-ым от последнего байта {{domxref("Blob")}}. Значение по умолчанию равно `size`.
+- `contentType` {{optional_inline}}
+  - : Тип содержимого нового {{domxref("Blob")}}; это будет значение его свойства `type`. Значение по умолчанию - пустая строка.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Новый {{domxref("Blob")}} объект содержит данные, указанные в источнике {{domxref("Blob")}}.</p>
+Новый {{domxref("Blob")}} объект содержит данные, указанные в источнике {{domxref("Blob")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("File API", "#dfn-slice", "Blob.slice()")}}</td>
-   <td>{{Spec2("File API")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                            | Status                       | Comment            |
+| ------------------------------------------------------------------------ | ---------------------------- | ------------------ |
+| {{SpecName("File API", "#dfn-slice", "Blob.slice()")}} | {{Spec2("File API")}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("Blob")}}</li>
- <li>{{domxref("BlobBuilder")}}</li>
-</ul>
+- {{domxref("Blob")}}
+- {{domxref("BlobBuilder")}}

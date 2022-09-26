@@ -7,33 +7,36 @@ tags:
   - Method
 translation_of: Web/API/CanvasRenderingContext2D/closePath
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.closePath()</code></strong> - метод из Canvas 2D API, добавляет в путь линию от текущей до первоначальной точки под пути и закрывает сам путь (давая возможность инициализировать новый). Если путь пустой или содержит одну точку, этот метод ничего не делает.</p>
+**`CanvasRenderingContext2D`\*\***`.closePath()`\*\* - метод из Canvas 2D API, добавляет в путь линию от текущей до первоначальной точки под пути и закрывает сам путь (давая возможность инициализировать новый). Если путь пустой или содержит одну точку, этот метод ничего не делает.
 
-<p>Сама функция ничего не рисует. Он лишь позволяет отрисовывать путь таким методам, как {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} и {{domxref("CanvasRenderingContext2D.fill()", "fill()")}}.</p>
+Сама функция ничего не рисует. Он лишь позволяет отрисовывать путь таким методам, как {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} и {{domxref("CanvasRenderingContext2D.fill()", "fill()")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">void <em>ctx</em>.closePath();
-</pre>
+```
+void ctx.closePath();
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Замкнутый_треугольник">Замкнутый треугольник</h3>
+### Замкнутый треугольник
 
-<p>В этом примере создаются две первые линии  сторон треугольника с использованием метода <code>lineTo()</code>. После чего метод <code>closePath()</code> заканчивает рисование треугольника, автоматически соединяя первую и последнюю точки фигуры (в данном случае треугольника).</p>
+В этом примере создаются две первые линии сторон треугольника с использованием метода `lineTo()`. После чего метод `closePath()` заканчивает рисование треугольника, автоматически соединяя первую и последнюю точки фигуры (в данном случае треугольника).
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<p>Точки треугольника находятся в координатах (20, 150), (120, 20),и (220, 150).</p>
+Точки треугольника находятся в координатах (20, 150), (120, 20),и (220, 150).
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.beginPath();
@@ -42,30 +45,30 @@ ctx.lineTo(120, 10);   // Рисует линию к верхнему углу
 ctx.lineTo(220, 140);  // Рисует линию к нижнему правому углу
 ctx.closePath();       // Рисует линию к нижнему левому углу
 ctx.stroke();
-</pre>
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{ EmbedLiveSample('Замкнутый_треугольник', 700, 180) }}</p>
+{{ EmbedLiveSample('Замкнутый_треугольник', 700, 180) }}
 
-<h3 id="Закрытие_пути_один_раз">Закрытие пути один раз</h3>
+### Закрытие пути один раз
 
-<p>Этот пример рисует смайлик, состоящий из трёх не соединённых дуг (под путей).</p>
+Этот пример рисует смайлик, состоящий из трёх не соединённых дуг (под путей).
 
-<div class="note">
-<p>Хотя <code>closePath()</code> вызывается после создания всех дуг, закрывается только последняя.</p>
-</div>
+> **Примечание:** Хотя `closePath()` вызывается после создания всех дуг, закрывается только последняя.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<p>Первые две дуги создают глаза, последняя создаёт рот.</p>
+Первые две дуги создают глаза, последняя создаёт рот.
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.beginPath();
@@ -77,25 +80,21 @@ ctx.arc(150, 80, 65, 0, Math.PI);
 ctx.closePath();
 ctx.lineWidth = 6;
 ctx.stroke();
-</pre>
+```
 
-<h4 id="Результат_2">Результат</h4>
+#### Результат
 
-<p>{{ EmbedLiveSample('Закрытие_пути_один_раз', 700, 180) }}</p>
+{{ EmbedLiveSample('Закрытие_пути_один_раз', 700, 180) }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Интерфейс, определяющий этот метод: {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.beginPath()")}}</li>
-</ul>
+- Интерфейс, определяющий этот метод: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.beginPath()")}}

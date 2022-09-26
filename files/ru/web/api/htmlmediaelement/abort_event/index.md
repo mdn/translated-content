@@ -3,37 +3,40 @@ title: 'HTMLMediaElement: abort event'
 slug: Web/API/HTMLMediaElement/abort_event
 translation_of: Web/API/HTMLMediaElement/abort_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Событие <strong><code>abort</code></strong> запускается, когда ресурс не был полностью загружен, но не в результате ошибки.</p>
+Событие **`abort`** запускается, когда ресурс не был полностью загружен, но не в результате ошибки.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Всплываемость</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Отменяемость</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Интерфейс</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Свойство обработчика событий</th>
-   <td>{{domxref("GlobalEventHandlers/onabort", "onabort")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Всплываемость</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Отменяемость</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Интерфейс</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Свойство обработчика событий</th>
+      <td>
+        {{domxref("GlobalEventHandlers/onabort", "onabort")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">const video = document.querySelector('video');
+```js
+const video = document.querySelector('video');
 const videoSrc = 'https://path/to/video.webm';
 
-video.addEventListener('abort', () =&gt; {
+video.addEventListener('abort', () => {
   console.log(`Abort loading: ${videoSrc}`);
 });
 
@@ -41,21 +44,20 @@ const source = document.createElement('source');
 source.setAttribute('src', videoSrc);
 source.setAttribute('type', 'video/webm');
 
-video.appendChild(source);</pre>
+video.appendChild(source);
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("HTMLAudioElement")}}</li>
- <li>{{domxref("HTMLVideoElement")}}</li>
- <li>{{HTMLElement("audio")}}</li>
- <li>{{HTMLElement("video")}}</li>
-</ul>
+- {{domxref("HTMLAudioElement")}}
+- {{domxref("HTMLVideoElement")}}
+- {{HTMLElement("audio")}}
+- {{HTMLElement("video")}}

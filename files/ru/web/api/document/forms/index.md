@@ -9,98 +9,100 @@ tags:
   - Property
 translation_of: Web/API/Document/forms
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><code>forms</code> возвращает коллекцию ({{domxref("HTMLCollection")}}) форм в текущем документе</p>
+`forms` возвращает коллекцию ({{domxref("HTMLCollection")}}) форм в текущем документе
 
-<div class="note">
-<p><strong>На заметку:</strong> Точно также Вы можете получить список элементов выбранной формы, используя свойство {{domxref("HTMLFormElement.elements")}}.</p>
-</div>
+> **Примечание:** **На заметку:** Точно также Вы можете получить список элементов выбранной формы, используя свойство {{domxref("HTMLFormElement.elements")}}.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>collection</var> = document.forms;</pre>
+```
+collection = document.forms;
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p>Объект {{domxref("HTMLCollection")}} содержит все формы, имеющиеся на странице. Каждый элемент этой коллекции - это {{domxref("HTMLFormElement")}}, представленный отдельным тегом <code>&lt;form&gt;</code>.</p>
+Объект {{domxref("HTMLCollection")}} содержит все формы, имеющиеся на странице. Каждый элемент этой коллекции - это {{domxref("HTMLFormElement")}}, представленный отдельным тегом `<form>`.
 
-<p>Если на странице форм нет, тогда возвращённый результат будет пустым, а длина коллекции равна нулю.</p>
+Если на странице форм нет, тогда возвращённый результат будет пустым, а длина коллекции равна нулю.
 
-<h2 id="Example">Примеры</h2>
+## Примеры
 
-<h3 id="Получение_информации_с_формы">Получение информации с формы</h3>
+### Получение информации с формы
 
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
+```
+<!DOCTYPE html>
+<html lang="en">
 
-&lt;head&gt;
-&lt;title&gt;document.forms example&lt;/title&gt;
-&lt;/head&gt;
+<head>
+<title>document.forms example</title>
+</head>
 
-&lt;body&gt;
+<body>
 
-&lt;form id="robby"&gt;
-  &lt;input type="button" onclick="alert(document.forms[0].id);" value="robby's form" /&gt;
-&lt;/form&gt;
+<form id="robby">
+  <input type="button" onclick="alert(document.forms[0].id);" value="robby's form" />
+</form>
 
-&lt;form id="dave"&gt;
-  &lt;input type="button" onclick="alert(document.forms[1].id);" value="dave's form" /&gt;
-&lt;/form&gt;
+<form id="dave">
+  <input type="button" onclick="alert(document.forms[1].id);" value="dave's form" />
+</form>
 
-&lt;form id="paul"&gt;
-  &lt;input type="button" onclick="alert(document.forms[2].id);" value="paul's form" /&gt;
-&lt;/form&gt;
+<form id="paul">
+  <input type="button" onclick="alert(document.forms[2].id);" value="paul's form" />
+</form>
 
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+</body>
+</html>
+```
 
-<h3 id="Получение_элемента_формы">Получение элемента формы</h3>
+### Получение элемента формы
 
-<pre><code>var selectForm = document.forms[index];
-var selectFormElement = document.forms[index].elements[index];</code></pre>
+```
+var selectForm = document.forms[index];
+var selectFormElement = document.forms[index].elements[index];
+```
 
-<h3 id="Обращение_к_форме_по_её_имени">Обращение к форме по её имени</h3>
+### Обращение к форме по её имени
 
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;title&gt;document.forms example&lt;/title&gt;
-&lt;/head&gt;
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>document.forms example</title>
+</head>
 
-&lt;body&gt;
+<body>
 
-&lt;form name="login"&gt;
-  &lt;input name="email" type="email"&gt;
-  &lt;input name="password" type="password"&gt;
-  &lt;button type="submit"&gt;Log in&lt;/button&gt;
-&lt;/form&gt;
+<form name="login">
+  <input name="email" type="email">
+  <input name="password" type="password">
+  <button type="submit">Log in</button>
+</form>
 
-&lt;script&gt;
+<script>
   var loginForm = document.forms.login; // Or document.forms['login']
   loginForm.elements.email.placeholder = 'test@example.com';
   loginForm.elements.password.placeholder = 'password';
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+</script>
+</body>
+</html>
+```
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="See_Also">Браузерная поддержка</h2>
+## Браузерная поддержка
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_Also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms">HTML forms</a></li>
- <li>{{HTMLElement("form")}} и интерфейс {{domxref("HTMLFormElement")}}</li>
-</ul>
+- [HTML forms](/ru/docs/Learn/HTML/Forms)
+- {{HTMLElement("form")}} и интерфейс {{domxref("HTMLFormElement")}}
 
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<ul>
- <li></li>
-</ul>
+-

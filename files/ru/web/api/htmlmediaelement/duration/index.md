@@ -3,54 +3,38 @@ title: HTMLMediaElement.duration
 slug: Web/API/HTMLMediaElement/duration
 translation_of: Web/API/HTMLMediaElement/duration
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>HTMLMediaElement.duration</code></strong> свойство возвращает длину медиа в секундах или ноль, если данные по медиа недоступны.</p>
+**`HTMLMediaElement.duration`** свойство возвращает длину медиа в секундах или ноль, если данные по медиа недоступны.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">var <em>myDuration</em> = <em>audioOrVideo</em>.duration</pre>
+```js
+var myDuration = audioOrVideo.duration
+```
 
-<h3 id="Значения">Значения</h3>
+### Значения
 
-<p><code>Double</code>. Если медиа данные доступны, но длина неизвестна, то duration будет <code>NaN</code>. Если медиа загружается в фоновом режиме и не имеет заранее определённой длины, значение равно <code>Inf</code>.</p>
+`Double`. Если медиа данные доступны, но длина неизвестна, то duration будет `NaN`. Если медиа загружается в фоновом режиме и не имеет заранее определённой длины, значение равно `Inf`.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">var obj = document.createElement('video');
+```js
+var obj = document.createElement('video');
 console.log(obj.duration); // NaN
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#dom-media-duration", "HTMLMediaElement.duration")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#htmlmediaelement", "HTMLMediaElement.duration")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                        | Status                           | Comment             |
+| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
+| {{SpecName('HTML WHATWG', "#dom-media-duration", "HTMLMediaElement.duration")}}                             | {{Spec2('HTML WHATWG')}} |                     |
+| {{SpecName('HTML5 W3C', "embedded-content-0.html#htmlmediaelement", "HTMLMediaElement.duration")}} | {{Spec2('HTML5 W3C')}}     | Initial definition. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="See_Also">Смотрите также</h2>
-
-<ul>
- <li>The interface defining it, {{domxref("HTMLMediaElement")}}.</li>
-</ul>
+- The interface defining it, {{domxref("HTMLMediaElement")}}.

@@ -3,53 +3,53 @@ title: Node.firstChild
 slug: Web/API/Node/firstChild
 translation_of: Web/API/Node/firstChild
 ---
-<div>
-<div>{{APIRef("DOM")}}</div>
-</div>
+{{APIRef("DOM")}}
 
-<p>Свойство <code><strong>Node.firstChild</strong></code> только для чтения, возвращающее первый потомок узла в древе или <code>null</code>, если узел является бездетным. Если узел это <code>документ</code>, он возвращает первый узел в списке своих прямых детей.</p>
+Свойство **`Node.firstChild`** только для чтения, возвращающее первый потомок узла в древе или `null`, если узел является бездетным. Если узел это `документ`, он возвращает первый узел в списке своих прямых детей.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>var childNode</em> = <em>node</em>.firstChild;
-</pre>
+```
+var childNode = node.firstChild;
+```
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p><code>childNode</code> это ссылка на первый потомок <code>node,</code> если таковой имеется, в противном случае это <code>null</code>.</p>
+`childNode` это ссылка на первый потомок `node,` если таковой имеется, в противном случае это `null`.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<p>Этот пример демонстрирует использование <code>firstChild</code> и как этому свойству могут мешать пробелы. Смотрите раздел <a href="#notes">Notes</a> для получения дополнительной информации о обработке пробелов в Gecko DOM.</p>
+Этот пример демонстрирует использование `firstChild` и как этому свойству могут мешать пробелы. Смотрите раздел [Notes](#notes) для получения дополнительной информации о обработке пробелов в Gecko DOM.
 
-<pre class="brush:html">&lt;p id="para-01"&gt;
-  &lt;span&gt;First span&lt;/span&gt;
-&lt;/p&gt;
+```html
+<p id="para-01">
+  <span>First span</span>
+</p>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
   var p01 = document.getElementById('para-01');
   alert(p01.firstChild.nodeName)
-&lt;/script&gt;</pre>
+</script>
+```
 
-<p>В данном примере alert выведет '#text', потому что текстовый узел вставлен для сохранения пробела между концом открытого &lt;p&gt; и тега &lt;span&gt;. <strong>Любое </strong>пустое пространство между элементами является причиной вставки узла #text, начиная от единичного пробела, разрыва строки, отступа и так далее.</p>
+В данном примере alert выведет '#text', потому что текстовый узел вставлен для сохранения пробела между концом открытого \<p> и тега \<span>. **Любое** пустое пространство между элементами является причиной вставки узла #text, начиная от единичного пробела, разрыва строки, отступа и так далее.
 
-<p>Другой #text узел вставляется между закрывающими тегами &lt;/span&gt; и &lt;/p&gt;.</p>
+Другой #text узел вставляется между закрывающими тегами \</span> и \</p>.
 
-<p>Если эти пробелы удаляются из источника,  #text узлы не вставляются и элемент span становится первым потомком абзаца.</p>
+Если эти пробелы удаляются из источника, #text узлы не вставляются и элемент span становится первым потомком абзаца.
 
-<pre class="brush:html">&lt;p id="para-01"&gt;&lt;span&gt;First span&lt;/span&gt;&lt;/p&gt;
+```html
+<p id="para-01"><span>First span</span></p>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
   var p01 = document.getElementById('para-01');
   alert(p01.firstChild.nodeName)
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<p>Теперь alert будет показывать 'SPAN'.</p>
+Теперь alert будет показывать 'SPAN'.
 
-<h2 id="Specification">Спецификации</h2>
+## Спецификации
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-firstChild">DOM Level 1 Core: firstChild</a></li>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-169727388">DOM Level 2 Core: firstChild</a></li>
-</ul>
+- [DOM Level 1 Core: firstChild](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-firstChild)
+- [DOM Level 2 Core: firstChild](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-169727388)

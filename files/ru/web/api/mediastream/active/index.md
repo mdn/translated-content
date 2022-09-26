@@ -3,23 +3,26 @@ title: active
 slug: Web/API/MediaStream/active
 translation_of: Web/API/MediaStream/active
 ---
-<p>{{APIRef("Media Capture and Streams")}}</p>
+{{APIRef("Media Capture and Streams")}}
 
-<p>Свойство только для чтения <strong><code>active</code></strong> интерфейса {{domxref("MediaStream")}} возвращает логическое значение, которое может быть <code>true</code>, если стрим активен; во всех остальных случаях, будет возвращён <code>false</code>. Стрим считается <strong>активным,</strong> если хотя бы один из {{domxref("MediaStreamTrack")}} не находится в состоянии {{domxref("MediaStreamTrack.ended")}}. Как только все track завершатся, свойство <code>active</code> переключится в состояние <code>false</code>.</p>
+Свойство только для чтения **`active`** интерфейса {{domxref("MediaStream")}} возвращает логическое значение, которое может быть `true`, если стрим активен; во всех остальных случаях, будет возвращён `false`. Стрим считается **активным,** если хотя бы один из {{domxref("MediaStreamTrack")}} не находится в состоянии {{domxref("MediaStreamTrack.ended")}}. Как только все track завершатся, свойство `active` переключится в состояние `false`.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <em>isActive</em> = <em>MediaStream</em>.active;</pre>
+```
+var isActive = MediaStream.active;
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p>Логическое значение равно <code>true</code>, если стрим активен; в противном случае, возвращается <code>false</code>.</p>
+Логическое значение равно `true`, если стрим активен; в противном случае, возвращается `false`.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>В этом примере, стрим ведётся с пользовательского микрофона и веб-камеры, запрошенных с помощью {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}. Когда стрим становится активным (а это тогда, когда выполнен {{jsxref("Promise")}}, кнопка на странице обновляется, опираясь на состояние стрима, активен он или же нет.</p>
+В этом примере, стрим ведётся с пользовательского микрофона и веб-камеры, запрошенных с помощью {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}. Когда стрим становится активным (а это тогда, когда выполнен {{jsxref("Promise")}}, кнопка на странице обновляется, опираясь на состояние стрима, активен он или же нет.
 
-<pre class="brush: js">var promise = navigator.mediaDevices.getUserMedia({
+```js
+var promise = navigator.mediaDevices.getUserMedia({
   audio: true,
   video: true
 });
@@ -27,14 +30,13 @@ translation_of: Web/API/MediaStream/active
 promise.then(function(stream) {
   var startBtn = document.querySelector('#startBtn');
   startBtn.disabled = stream.active;
-};)</pre>
+};)
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

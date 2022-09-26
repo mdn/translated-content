@@ -8,37 +8,38 @@ tags:
   - Ссылка
 translation_of: Web/API/FileReader/FileReader
 ---
-<p>Конструктор <strong><code>FileReader()</code></strong> создаёт новый FileReader.</p>
+Конструктор **`FileReader()`** создаёт новый FileReader.
 
-<p>Дополнительные сведения об использовании <code>FileReader</code>, смотрите в разделе <a href="/ru/docs/Web/API/File/Using_files_from_web_applications">Использование файлов из веб-приложений</a>.</p>
+Дополнительные сведения об использовании `FileReader`, смотрите в разделе [Использование файлов из веб-приложений](/ru/docs/Web/API/File/Using_files_from_web_applications).
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">var reader = new FileReader();</pre>
+```js
+var reader = new FileReader();
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<p>Отсутствуют.</p>
+Отсутствуют.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Следующий объект кода показывает объект <code><a href="/ru/docs/Web/API/FileReader">FileReader</a></code> использующий конструктор <code>FileReader()</code> и последующее использование объекта:</p>
+Следующий объект кода показывает объект [`FileReader`](/ru/docs/Web/API/FileReader) использующий конструктор `FileReader()` и последующее использование объекта:
 
-<pre class="brush: js">function printFile(file) {
+```js
+function printFile(file) {
   var reader = new FileReader();
   reader.onload = function(evt) {
     console.log(evt.target.result);
   };
   reader.readAsText(file);
 }
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Смотреть_также">Смотреть также</h2>
+## Смотреть также
 
-<ul>
- <li><a href="/ru/docs/Web/API/File/Using_files_from_web_applications">Использование файлов из веб-приложений</a></li>
-</ul>
+- [Использование файлов из веб-приложений](/ru/docs/Web/API/File/Using_files_from_web_applications)

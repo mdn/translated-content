@@ -3,101 +3,117 @@ title: Визуализация с Web Audio API
 slug: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
 translation_of: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
 ---
-<div class="summary">
-<p>Одна из самых интересных фич Web Audio API — возможность извлекать частоту, форму волны и другие данные из звукового источника, которые могут быть использованы для создания визуализаций. Эта статья объясняет, как это можно сделать, и приводит несколько базовых примеров использования.</p>
-</div>
+Одна из самых интересных фич Web Audio API — возможность извлекать частоту, форму волны и другие данные из звукового источника, которые могут быть использованы для создания визуализаций. Эта статья объясняет, как это можно сделать, и приводит несколько базовых примеров использования.
 
-<div class="note">
-<p><strong>Примечание</strong>: вы можете найти рабочие примеры всех фрагментов кода в нашей демонстрации <a href="https://mdn.github.io/voice-change-o-matic/">автоизменения голоса</a>.</p>
-</div>
+> **Примечание:** вы можете найти рабочие примеры всех фрагментов кода в нашей демонстрации [автоизменения голоса](https://mdn.github.io/voice-change-o-matic/).
 
-<h2 id="Основные_концепции">Основные концепции</h2>
+## Основные концепции
 
-<p>Чтобы извлечь данные из вашего источника звука, вам понадобится {{ domxref("AnalyserNode") }}, созданный при помощи метода {{ domxref("AudioContext.createAnalyser()") }}, например:</p>
+Чтобы извлечь данные из вашего источника звука, вам понадобится {{ domxref("AnalyserNode") }}, созданный при помощи метода {{ domxref("AudioContext.createAnalyser()") }}, например:
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
-</pre>
+```
 
-<p>Затем этот узел подключается к вашему источнику звука где-то между получением звука и его обработкой, например:</p>
+Затем этот узел подключается к вашему источнику звука где-то между получением звука и его обработкой, например:
 
-<pre class="brush: js">source = audioCtx.createMediaStreamSource(stream);
+```js
+source = audioCtx.createMediaStreamSource(stream);
 source.connect(analyser);
 analyser.connect(distortion);
-distortion.connect(audioCtx.destination);</pre>
+distortion.connect(audioCtx.destination);
+```
 
-<div class="note">
-<p><strong>Примечание</strong>: вам не нужно подключать вывод анализатора к другому узлу для его работы, пока его ввод подключён к источнику, либо напрямую, либо через другой узел.</p>
-</div>
+> **Примечание:** вам не нужно подключать вывод анализатора к другому узлу для его работы, пока его ввод подключён к источнику, либо напрямую, либо через другой узел.
 
-<p>Затем анализатор захватит аудиоданные, используя быстрое преобразование Фурье (БПФ) в определённой частотной области, в зависимости от того, что вы укажете как значение свойства {{ domxref("AnalyserNode.fftSize") }} (если свойство не задано, то значение по умолчанию равно 2048).</p>
+Затем анализатор захватит аудиоданные, используя быстрое преобразование Фурье (БПФ) в определённой частотной области, в зависимости от того, что вы укажете как значение свойства {{ domxref("AnalyserNode.fftSize") }} (если свойство не задано, то значение по умолчанию равно 2048).
 
-<div class="note">
-<p><strong>Примечание</strong>: вы так же можете указать значения минимума и максимума для диапазона масштабирования данных БПФ, используя {{ domxref("AnalyserNode.minDecibels") }} и {{ domxref("AnalyserNode.maxDecibels") }}, и разные константы усреднения данных с помощью {{ domxref("AnalyserNode.smoothingTimeConstant") }}. Прочтите эти страницы, чтобы получить больше информации о том как их использовать.</p>
-</div>
+> **Примечание:** вы так же можете указать значения минимума и максимума для диапазона масштабирования данных БПФ, используя {{ domxref("AnalyserNode.minDecibels") }} и {{ domxref("AnalyserNode.maxDecibels") }}, и разные константы усреднения данных с помощью {{ domxref("AnalyserNode.smoothingTimeConstant") }}. Прочтите эти страницы, чтобы получить больше информации о том как их использовать.
 
-<p>Чтобы получить данные, вам нужно использовать методы {{ domxref("AnalyserNode.getFloatFrequencyData()") }} и {{ domxref("AnalyserNode.getByteFrequencyData()") }}, чтобы получить данные о частоте, и {{ domxref("AnalyserNode.getByteTimeDomainData()") }} и {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} чтобы получить данные о форме волны.</p>
+Чтобы получить данные, вам нужно использовать методы {{ domxref("AnalyserNode.getFloatFrequencyData()") }} и {{ domxref("AnalyserNode.getByteFrequencyData()") }}, чтобы получить данные о частоте, и {{ domxref("AnalyserNode.getByteTimeDomainData()") }} и {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} чтобы получить данные о форме волны.
 
-<p>Эти методы копируют данные в указанный массив, поэтому вам необходимо создать новый массив для хранения данных, прежде чем вызывать эти функции . Результат первой из них - числа типа float32, второй и третьей - uint8, поэтому стандартный массив JavaScript не подойдёт для их хранения — следует использовать массивы {{ domxref("Float32Array") }} или {{ domxref("Uint8Array") }}, в зависимости от нужных вам данных.</p>
+Эти методы копируют данные в указанный массив, поэтому вам необходимо создать новый массив для хранения данных, прежде чем вызывать эти функции . Результат первой из них - числа типа float32, второй и третьей - uint8, поэтому стандартный массив JavaScript не подойдёт для их хранения — следует использовать массивы {{ domxref("Float32Array") }} или {{ domxref("Uint8Array") }}, в зависимости от нужных вам данных.
 
-<p>Например, если параметр AnalyserNode.fftSize установлен на 2048, мы возвращаем значение {{ domxref("AnalyserNode.frequencyBinCount") }}, равное половине fft, затем вызываем Uint8Array() с frequencyBinCount в качестве длины — столько измерений мы произведём для данного размера fft.</p>
+Например, если параметр AnalyserNode.fftSize установлен на 2048, мы возвращаем значение {{ domxref("AnalyserNode.frequencyBinCount") }}, равное половине fft, затем вызываем Uint8Array() с frequencyBinCount в качестве длины — столько измерений мы произведём для данного размера fft.
 
-<pre class="brush: js">analyser.fftSize = 2048;
+```js
+analyser.fftSize = 2048;
 var bufferLength = analyser.frequencyBinCount;
-var dataArray = new Uint8Array(bufferLength);</pre>
+var dataArray = new Uint8Array(bufferLength);
+```
 
-<p>Чтобы собрать данные и копировать их в массив, мы вызываем подходящий метод сбора данных, с массивом в качестве аргумента. Например:</p>
+Чтобы собрать данные и копировать их в массив, мы вызываем подходящий метод сбора данных, с массивом в качестве аргумента. Например:
 
-<pre class="brush: js">analyser.getByteTimeDomainData(dataArray);</pre>
+```js
+analyser.getByteTimeDomainData(dataArray);
+```
 
-<p>Теперь в массиве хранятся данные, описывающие звук в данный момент времени, и мы можем визуализировать их любым удобным образом, например с помощью холста HTML5: {{ htmlelement("canvas") }}.</p>
+Теперь в массиве хранятся данные, описывающие звук в данный момент времени, и мы можем визуализировать их любым удобным образом, например с помощью холста HTML5: {{ htmlelement("canvas") }}.
 
-<p>Давайте рассмотрим конкретные примеры:</p>
+Давайте рассмотрим конкретные примеры:
 
-<h2 id="Создание_формы_волныосциллографа">Создание формы волны/осциллографа</h2>
+## Создание формы волны/осциллографа
 
-<p>Чтобы визуализировать осциллограф (спасибо <a href="http://soledadpenades.com/">Soledad Penadés</a> за код в <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167">Voice-change-O-matic</a>), мы сначала следуем шаблону, описанному в предыдущей секции, для создания буфера:</p>
+Чтобы визуализировать осциллограф (спасибо [Soledad Penadés](http://soledadpenades.com/) за код в [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167)), мы сначала следуем шаблону, описанному в предыдущей секции, для создания буфера:
 
-<pre class="brush: js">analyser.fftSize = 2048;
+```js
+analyser.fftSize = 2048;
 var bufferLength = analyser.frequencyBinCount;
-var dataArray = new Uint8Array(bufferLength);</pre>
+var dataArray = new Uint8Array(bufferLength);
+```
 
-<p>Затем, мы очищаем холст:</p>
+Затем, мы очищаем холст:
 
-<pre class="brush: js">canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);</pre>
+```js
+canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
+```
 
-<p>И определяем функцию <code>draw()</code>:</p>
+И определяем функцию `draw()`:
 
-<pre class="brush: js">function draw() {</pre>
+```js
+function draw() {
+```
 
-<p>Здесь мы используем <code>requestAnimationFrame()</code> чтобы многократно вызывать эту функцию:</p>
+Здесь мы используем `requestAnimationFrame()` чтобы многократно вызывать эту функцию:
 
-<pre class="brush: js">      drawVisual = requestAnimationFrame(draw);</pre>
+```js
+      drawVisual = requestAnimationFrame(draw);
+```
 
-<p>Затем мы копируем данные в наш массив:</p>
+Затем мы копируем данные в наш массив:
 
-<pre class="brush: js">      analyser.getByteTimeDomainData(dataArray);</pre>
+```js
+      analyser.getByteTimeDomainData(dataArray);
+```
 
-<p>Устанавливаем заливку холста</p>
+Устанавливаем заливку холста
 
-<pre class="brush: js">      canvasCtx.fillStyle = 'rgb(200, 200, 200)';
-      canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);</pre>
+```js
+      canvasCtx.fillStyle = 'rgb(200, 200, 200)';
+      canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+```
 
-<p>Затем устанавливаем ширину линий и цвет волны, которую мы хотим нарисовать, и начинаем рисовать путь</p>
+Затем устанавливаем ширину линий и цвет волны, которую мы хотим нарисовать, и начинаем рисовать путь
 
-<pre class="brush: js">      canvasCtx.lineWidth = 2;
+```js
+      canvasCtx.lineWidth = 2;
       canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
 
-      canvasCtx.beginPath();</pre>
+      canvasCtx.beginPath();
+```
 
-<p>Мы определяем ширину каждого отрезка в линии, деля длину холста на длину массива (равную FrequencyBinCount), затем определяем переменную x, задающую позицию, в которую необходимо перенести каждый отрезок.</p>
+Мы определяем ширину каждого отрезка в линии, деля длину холста на длину массива (равную FrequencyBinCount), затем определяем переменную x, задающую позицию, в которую необходимо перенести каждый отрезок.
 
-<pre class="brush: js">      var sliceWidth = WIDTH * 1.0 / bufferLength;
-      var x = 0;</pre>
+```js
+      var sliceWidth = WIDTH * 1.0 / bufferLength;
+      var x = 0;
+```
 
-<p>В цикле, мы задаём позицию небольшого отрезка волны для каждой точки в буфере на высоте, основанной на значении массива в этой точке, а затем перемещаем линию туда, где должен быть нарисован следующий отрезок:</p>
+В цикле, мы задаём позицию небольшого отрезка волны для каждой точки в буфере на высоте, основанной на значении массива в этой точке, а затем перемещаем линию туда, где должен быть нарисован следующий отрезок:
 
-<pre class="brush: js">      for(var i = 0; i &lt; bufferLength; i++) {
+```js
+      for(var i = 0; i < bufferLength; i++) {
 
         var v = dataArray[i] / 128.0;
         var y = v * HEIGHT/2;
@@ -109,58 +125,70 @@ var dataArray = new Uint8Array(bufferLength);</pre>
         }
 
         x += sliceWidth;
-      }</pre>
+      }
+```
 
-<p>Наконец, мы заканчиваем линию в середине правой стороны холста и рисуем, используя установленные цвет и ширину линий:</p>
+Наконец, мы заканчиваем линию в середине правой стороны холста и рисуем, используя установленные цвет и ширину линий:
 
-<pre class="brush: js">      canvasCtx.lineTo(canvas.width, canvas.height/2);
+```js
+      canvasCtx.lineTo(canvas.width, canvas.height/2);
       canvasCtx.stroke();
-    };</pre>
+    };
+```
 
-<p>В конце концов, мы вызываем функцию <code>draw()</code> , запускающую весь процесс:</p>
+В конце концов, мы вызываем функцию `draw()` , запускающую весь процесс:
 
-<pre class="brush: js">    draw();</pre>
+```js
+    draw();
+```
 
-<p>Мы получаем изображение волны, обновляющееся несколько раз в секунду:</p>
+Мы получаем изображение волны, обновляющееся несколько раз в секунду:
 
-<p><img alt="a black oscilloscope line, showing the waveform of an audio signal" src="https://mdn.mozillademos.org/files/7977/wave.png" style="display: block; height: 96px; margin: 0px auto; width: 640px;"></p>
+![a black oscilloscope line, showing the waveform of an audio signal](https://mdn.mozillademos.org/files/7977/wave.png)
 
-<h2 id="Создание_частотной_гистограммы">Создание частотной гистограммы</h2>
+## Создание частотной гистограммы
 
-<p>Ещё одна визуализация, которую можно создать, - это частотные диаграммы (такие, как строит Winamp). В проекте Voice-change-O-matic есть реализация такой диаграммы. Давайте посмотрим на неё.</p>
+Ещё одна визуализация, которую можно создать, - это частотные диаграммы (такие, как строит Winamp). В проекте Voice-change-O-matic есть реализация такой диаграммы. Давайте посмотрим на неё.
 
-<p>Сначала мы снова создаём анализатор и массив для данных, затем очищаем холст при помощи <code>clearRect()</code>. Единственное отличие от того, что мы делали раньше - ы том, что мы можем установить намного меньший размер fft. Таким образом, каждый столбец в диаграмме будет выглядеть как столбец, а не как тонкая полоска.</p>
+Сначала мы снова создаём анализатор и массив для данных, затем очищаем холст при помощи `clearRect()`. Единственное отличие от того, что мы делали раньше - ы том, что мы можем установить намного меньший размер fft. Таким образом, каждый столбец в диаграмме будет выглядеть как столбец, а не как тонкая полоска.
 
-<pre class="brush: js">    analyser.fftSize = 256;
+```js
+    analyser.fftSize = 256;
     var bufferLength = analyser.frequencyBinCount;
     console.log(bufferLength);
     var dataArray = new Uint8Array(bufferLength);
 
-    canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);</pre>
+    canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
+```
 
-<p>Затем мы запускаем функцию <code>draw()</code>  и задаём цикл при помощи <code>requestAnimationFrame()</code> таким образом, чтобы в каждом кадре анимации данные обновлялись.</p>
+Затем мы запускаем функцию `draw()` и задаём цикл при помощи `requestAnimationFrame()` таким образом, чтобы в каждом кадре анимации данные обновлялись.
 
-<pre class="brush: js">    function draw() {
+```js
+    function draw() {
       drawVisual = requestAnimationFrame(draw);
 
       analyser.getByteFrequencyData(dataArray);
 
       canvasCtx.fillStyle = 'rgb(0, 0, 0)';
-      canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);</pre>
+      canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+```
 
-<p>Затем мы устанавливаем значение <code>barWidth</code> , равное ширине холста, делённой на количество столбцов (длину буфера). Однако, мы домножаем ширину на 2.5, поскольку на большинстве частот звука не будет, поскольку большинство звуков, которые мы слышим в повседневной жизни, находятся в определённых, достаточно низких, диапазонах частот. Нам нет смысла показывать множество пустых частот, поэтому мы просто сдвигаем столбцы, соответствующие наиболее распространённым частотам.</p>
+Затем мы устанавливаем значение `barWidth` , равное ширине холста, делённой на количество столбцов (длину буфера). Однако, мы домножаем ширину на 2.5, поскольку на большинстве частот звука не будет, поскольку большинство звуков, которые мы слышим в повседневной жизни, находятся в определённых, достаточно низких, диапазонах частот. Нам нет смысла показывать множество пустых частот, поэтому мы просто сдвигаем столбцы, соответствующие наиболее распространённым частотам.
 
-<p>Мы также устанавливаем значение переменных <code>barHeight</code> и <code>x</code> , задающей то, где на холсте должен быть размещён каждый столбец.</p>
+Мы также устанавливаем значение переменных `barHeight` и `x` , задающей то, где на холсте должен быть размещён каждый столбец.
 
-<pre class="brush: js">      var barWidth = (WIDTH / bufferLength) * 2.5;
+```js
+      var barWidth = (WIDTH / bufferLength) * 2.5;
       var barHeight;
-      var x = 0;</pre>
+      var x = 0;
+```
 
-<p>Как и раньше, мы в цикле проходим по каждому значению в  <code>dataArray</code>. Для каждого значения мы устанавливаем высоту <code>barHeight</code> на уровне значения в массиве, устанавливаем заливку в зависимости от <code>barHeight</code> (Чем выше столбец, тем он ярче), и рисуем столбец в <code>x</code> пикселях от левой стороны холста. Ширина столбца равна <code>barWidth</code> , а высота - <code>barHeight/2</code> (чтобы столбцы помещались на холсте, мы уменьшили высоту в два раза)</p>
+Как и раньше, мы в цикле проходим по каждому значению в `dataArray`. Для каждого значения мы устанавливаем высоту `barHeight` на уровне значения в массиве, устанавливаем заливку в зависимости от `barHeight` (Чем выше столбец, тем он ярче), и рисуем столбец в `x` пикселях от левой стороны холста. Ширина столбца равна `barWidth` , а высота - `barHeight/2` (чтобы столбцы помещались на холсте, мы уменьшили высоту в два раза)
 
-<p>Одна переменная, требующая объяснения, - это вертикальный сдвиг, с которым мы рисуем каждый столбец: <code>HEIGHT-barHeight/2</code>. Это делается для того, чтобы столбцы начинались в нижней части холста, а не в верхней, как было бы, если бы вертикальное положение было установлена в 0 0. Поэтому мы каждый раз устанавливаем вертикальное положение в разность высоты холста и <code>barHeight/2</code>, чтобы столбцы начинались где-то между верхом и низом холста и заканчивались снизу.</p>
+Одна переменная, требующая объяснения, - это вертикальный сдвиг, с которым мы рисуем каждый столбец: `HEIGHT-barHeight/2`. Это делается для того, чтобы столбцы начинались в нижней части холста, а не в верхней, как было бы, если бы вертикальное положение было установлена в 0 0. Поэтому мы каждый раз устанавливаем вертикальное положение в разность высоты холста и `barHeight/2`, чтобы столбцы начинались где-то между верхом и низом холста и заканчивались снизу.
 
-<pre class="brush: js">      for(var i = 0; i &lt; bufferLength; i++) {
+```js
+      for(var i = 0; i < bufferLength; i++) {
         barHeight = dataArray[i]/2;
 
         canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
@@ -168,16 +196,17 @@ var dataArray = new Uint8Array(bufferLength);</pre>
 
         x += barWidth + 1;
       }
-    };</pre>
+    };
+```
 
-<p>Снова, мы вызываем функцию draw() в конце кода, чтобы запустить процесс.</p>
+Снова, мы вызываем функцию draw() в конце кода, чтобы запустить процесс.
 
-<pre class="brush: js">    draw();</pre>
+```js
+    draw();
+```
 
-<p>Этот код даёт нам следующий результат:</p>
+Этот код даёт нам следующий результат:
 
-<p><img alt="a series of red bars in a bar graph, showing intensity of different frequencies in an audio signal" src="https://mdn.mozillademos.org/files/7975/bar-graph.png" style="height: 157px; width: 1260px;"></p>
+![a series of red bars in a bar graph, showing intensity of different frequencies in an audio signal](https://mdn.mozillademos.org/files/7975/bar-graph.png)
 
-<div class="note">
-<p><strong>Примечание</strong>: Примеры, используемые в данной статье, используют {{ domxref("AnalyserNode.getByteFrequencyData()") }} и {{ domxref("AnalyserNode.getByteTimeDomainData()") }}. Примеры работы с {{ domxref("AnalyserNode.getFloatFrequencyData()") }} и {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} можно найти в демо <a href="http://mdn.github.io/voice-change-o-matic-float-data/">Voice-change-O-matic-float-data</a> (Вы также можете посмотреть <a href="https://github.com/mdn/voice-change-o-matic-float-data">исходный код</a>) — это то же самое, что и <a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a>, но здесь используются данные типа float, а не unsigned vyte.</p>
-</div>
+> **Примечание:** Примеры, используемые в данной статье, используют {{ domxref("AnalyserNode.getByteFrequencyData()") }} и {{ domxref("AnalyserNode.getByteTimeDomainData()") }}. Примеры работы с {{ domxref("AnalyserNode.getFloatFrequencyData()") }} и {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} можно найти в демо [Voice-change-O-matic-float-data](http://mdn.github.io/voice-change-o-matic-float-data/) (Вы также можете посмотреть [исходный код](https://github.com/mdn/voice-change-o-matic-float-data)) — это то же самое, что и [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/), но здесь используются данные типа float, а не unsigned vyte.

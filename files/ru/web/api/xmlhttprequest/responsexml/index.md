@@ -12,35 +12,33 @@ tags:
   - загрузка
 translation_of: Web/API/XMLHttpRequest/responseXML
 ---
-<p>{{APIRef('XMLHttpRequest')}}</p>
+{{APIRef('XMLHttpRequest')}}
 
-<p><code>Свойство <strong>XMLHttpRequest.responseXML</strong></code> это доступное только для чтения значение, которое содержит {{domxref("Document")}} содержащий HTML или XML полученный запросом, или <code>null</code> в случае, если запрос не был успешен, ещё не был отправлен или полученные данные не могут быть корректно обработаны как XML или HTML. Ответ обрабатывается так, как если бы это был <code>"text/xml"</code>. В случае, если {{domxref("XMLHttpRequest.responseType", "responseType")}} установлен как <code>"document"</code> и запрос был осуществлён асинхронно, ответ обрабатывается как <code>"text/html"</code>. <code>responseXML</code> содержит <code>null</code> для любых других типов данных так же, как и для <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs"><code>data:</code> URLs</a>.</p>
+`Свойство XMLHttpRequest.responseXML` это доступное только для чтения значение, которое содержит {{domxref("Document")}} содержащий HTML или XML полученный запросом, или `null` в случае, если запрос не был успешен, ещё не был отправлен или полученные данные не могут быть корректно обработаны как XML или HTML. Ответ обрабатывается так, как если бы это был `"text/xml"`. В случае, если {{domxref("XMLHttpRequest.responseType", "responseType")}} установлен как `"document"` и запрос был осуществлён асинхронно, ответ обрабатывается как `"text/html"`. `responseXML` содержит `null` для любых других типов данных так же, как и для [`data:` URLs](/ru/docs/Web/HTTP/Basics_of_HTTP/Data_URIs).
 
-<div class="note">
-<p>Название <code>responseXML</code> это наследие истории этого свойства, на самом деле оно работает как для HTML, так и для XML.</p>
-</div>
+> **Примечание:** Название `responseXML` это наследие истории этого свойства, на самом деле оно работает как для HTML, так и для XML.
 
-<p>Если сервер не определяет заголовок {{HTTPHeader("Content-Type")}} как <code>"text/xml"</code> или <code>"application/xml"</code>, вы в любом случае можете использовать {{domxref("XMLHttpRequest.overrideMimeType()")}} чтобы заставить <code>XMLHttpRequest</code> обрабатывать ответ как XML.</p>
+Если сервер не определяет заголовок {{HTTPHeader("Content-Type")}} как `"text/xml"` или `"application/xml"`, вы в любом случае можете использовать {{domxref("XMLHttpRequest.overrideMimeType()")}} чтобы заставить `XMLHttpRequest` обрабатывать ответ как XML.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <em>data</em> = <em>XMLHttpRequest</em>.responseXML;
-</pre>
+```
+var data = XMLHttpRequest.responseXML;
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p>{{domxref("Document")}} содержащий древовидный результат обработки XML или HTML, полученных с использованием {{domxref("XMLHttpRequest")}}, или <code>null</code>, если данные не были получены или содержат другой тип данных.</p>
+{{domxref("Document")}} содержащий древовидный результат обработки XML или HTML, полученных с использованием {{domxref("XMLHttpRequest")}}, или `null`, если данные не были получены или содержат другой тип данных.
 
-<h3 id="Исключения">Исключения</h3>
+### Исключения
 
-<dl>
- <dt><code>InvalidStateError</code></dt>
- <dd>{{domxref("XMLHttpRequest.responseType", "responseType")}} не является <code>"document"</code> или пустой строкой (каждый из которых указывает, что принятые данные это XML или HTML).</dd>
-</dl>
+- `InvalidStateError`
+  - : {{domxref("XMLHttpRequest.responseType", "responseType")}} не является `"document"` или пустой строкой (каждый из которых указывает, что принятые данные это XML или HTML).
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 xhr.open('GET', '/server', true);
 
 // Значение responseType, если указано, должно быть пустой строкой или "document"
@@ -58,20 +56,19 @@ xhr.onload = function () {
   }
 };
 
-xhr.send(null);</pre>
+xhr.send(null);
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
+## Браузерная совместимость
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("XMLHttpRequest")}}</li>
- <li>{{domxref("XMLHttpRequest.response")}}</li>
- <li>{{domxref("XMLHttpRequest.responseType")}}</li>
-</ul>
+- {{domxref("XMLHttpRequest")}}
+- {{domxref("XMLHttpRequest.response")}}
+- {{domxref("XMLHttpRequest.responseType")}}

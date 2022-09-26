@@ -7,42 +7,43 @@ tags:
   - Property
 translation_of: Web/API/CanvasRenderingContext2D/lineCap
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Свойство <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.lineCap</code></strong> предоставляемое Canvas 2D API определяет, как будут выглядеть концы нарисованных линий. </p>
+Свойство **`CanvasRenderingContext2D`\*\***`.lineCap`\*\* предоставляемое Canvas 2D API определяет, как будут выглядеть концы нарисованных линий.
 
-<div class="note">
-<p><strong>Примечание:</strong> Линии могут быть нарисованы с помощью методов {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}}, и {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.</p>
-</div>
+> **Примечание:** Линии могут быть нарисованы с помощью методов {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}}, и {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre><em>ctx</em>.lineCap = "butt" || "round" || "square";</pre>
+```
+ctx.lineCap = "butt" || "round" || "square";
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>butt</code></dt>
- <dd>Концы линий прямые.</dd>
- <dt><code>round</code></dt>
- <dd>Концы линий скруглённые.</dd>
- <dt><code>square</code></dt>
- <dd>Концы линий прямые, но к ней с обоих концов добавляется поле с шириной равной толщине линии и высотой равной половине от толщины линии.</dd>
-</dl>
+- `butt`
+  - : Концы линий прямые.
+- `round`
+  - : Концы линий скруглённые.
+- `square`
+  - : Концы линий прямые, но к ней с обоих концов добавляется поле с шириной равной толщине линии и высотой равной половине от толщины линии.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Использование_свойства_lineCap">Использование свойства lineCap</h3>
+### Использование свойства lineCap
 
-<p>Ниже представлен простой фрагмент кода, использующий <code>lineCap.</code></p>
+Ниже представлен простой фрагмент кода, использующий `lineCap.`
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.beginPath();
@@ -50,23 +51,25 @@ ctx.moveTo(20, 20);
 ctx.lineWidth = 15;
 ctx.lineCap = 'round';
 ctx.lineTo(100, 100);
-ctx.stroke();</pre>
+ctx.stroke();
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{ EmbedLiveSample('Использование_свойства_lineCap', 700, 180) }}</p>
+{{ EmbedLiveSample('Использование_свойства_lineCap', 700, 180) }}
 
-<h3 id="Разница_между_значениями_lineCap">Разница между значениями lineCap</h3>
+### Разница между значениями lineCap
 
-<p>В примере нарисованы три линии с разными значениями <code>lineCap</code>. Для наглядности мы добавим две направляющие. Каждая линия будет начинаться и заканчиваться этими направляющими.</p>
+В примере нарисованы три линии с разными значениями `lineCap`. Для наглядности мы добавим две направляющие. Каждая линия будет начинаться и заканчиваться этими направляющими.
 
-<p>Левая линия будет использовать значение lineCap <code>"butt"</code>. Она не будет выходить за направляющие. Средняя линия будет нарисована со значением lineCap <code>"round"</code>. За направляющие будут выходить полукруги с диаметром равным толщине линии. Правая линия будет использовать значение <code>"square"</code>. Она будет выходить за направляющие на поля с шириной равной толщине линии и высотой равной половине толщины.</p>
+Левая линия будет использовать значение lineCap `"butt"`. Она не будет выходить за направляющие. Средняя линия будет нарисована со значением lineCap `"round"`. За направляющие будут выходить полукруги с диаметром равным толщине линии. Правая линия будет использовать значение `"square"`. Она будет выходить за направляющие на поля с шириной равной толщине линии и высотой равной половине толщины.
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
-</div>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const lineCap = ['butt', 'round', 'square'];
 
@@ -81,35 +84,32 @@ ctx.stroke();
 
 // Draw lines
 ctx.strokeStyle = 'black';
-for (let i = 0; i &lt; lineCap.length; i++) {
+for (let i = 0; i < lineCap.length; i++) {
   ctx.lineWidth = 15;
   ctx.lineCap = lineCap[i];
   ctx.beginPath();
   ctx.moveTo(25 + i * 50, 10);
   ctx.lineTo(25 + i * 50, 140);
   ctx.stroke();
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Разница_между_значениями_lineCap", "180", "180", "https://mdn.mozillademos.org/files/236/Canvas_linecap.png")}}</p>
+{{EmbedLiveSample("Разница_между_значениями_lineCap", "180", "180", "https://mdn.mozillademos.org/files/236/Canvas_linecap.png")}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Особенности_WebKitBlink">Особенности WebKit/Blink</h3>
+### Особенности WebKit/Blink
 
-<ul>
- <li>В браузерах на базе Webkit и Blink помимо этого свойства, также поддерживается нестандартный метод <code>ctx.setLineCap()</code>.</li>
-</ul>
+- В браузерах на базе Webkit и Blink помимо этого свойства, также поддерживается нестандартный метод `ctx.setLineCap()`.
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Интерфейс, предоставляющий данное свойство {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.lineWidth")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.lineJoin")}}</li>
-</ul>
+- Интерфейс, предоставляющий данное свойство {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.lineWidth")}}
+- {{domxref("CanvasRenderingContext2D.lineJoin")}}

@@ -10,43 +10,46 @@ tags:
   - shadow dom
 translation_of: Web/API/Element/slot
 ---
-<p>{{APIRef("Shadow DOM")}}</p>
+{{APIRef("Shadow DOM")}}
 
-<p>Свойство <strong><code>slot</code></strong> интерфейса {{domxref("Element")}} возвращает имя слота теневого DOM, в который вставлен элемент.</p>
+Свойство **`slot`** интерфейса {{domxref("Element")}} возвращает имя слота теневого DOM, в который вставлен элемент.
 
-<p>Слот slot это заполнитель внутри <a href="/en-US/docs/Web/Web_Components">веб компонента</a>, который пользователи могут заполнить собственной разметкой (смотри <a href="/en-US/docs/Web/Web_Components/Using_templates_and_slots">Использование шаблонов и слотов</a> для получения дополнительной информации).</p>
+Слот slot это заполнитель внутри [веб компонента](/ru/docs/Web/Web_Components), который пользователи могут заполнить собственной разметкой (смотри [Использование шаблонов и слотов](/ru/docs/Web/Web_Components/Using_templates_and_slots) для получения дополнительной информации).
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <em>aString</em> = <em>element</em>.slot
-<em>element</em>.slot = <em>aString</em>
-</pre>
+```
+var aString = element.slot
+element.slot = aString
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p>{{domxref("DOMString")}}.</p>
+{{domxref("DOMString")}}.
 
-<h2 id="Example">Примеры</h2>
+## Примеры
 
-<p>В нашем <a href="https://github.com/mdn/web-components-examples/tree/master/simple-template">примере простого шаблона</a> (<a href="https://mdn.github.io/web-components-examples/simple-template/">смотри в прямом эфире</a>), мы создаём тривиальный пример пользовательского элемента с именем <code>&lt;my-paragraph&gt;</code>, в котором прикрепляется теневой корень, а затем заполняется с использованием содержимого шаблона, содержащего слот с именем <code>my-text</code>.</p>
+В нашем [примере простого шаблона](https://github.com/mdn/web-components-examples/tree/master/simple-template) ([смотри в прямом эфире](https://mdn.github.io/web-components-examples/simple-template/)), мы создаём тривиальный пример пользовательского элемента с именем `<my-paragraph>`, в котором прикрепляется теневой корень, а затем заполняется с использованием содержимого шаблона, содержащего слот с именем `my-text`.
 
-<p>Когда в документе используется <code>&lt;my-paragraph&gt;</code>, слот заполняется слот-элементом, включая его в элемент с атрибутом <code><a href="/en-US/docs/Web/HTML/Global_attributes/slot">slot</a></code> со значением <code>my-text</code>. Вот один из таких примеров:</p>
+Когда в документе используется `<my-paragraph>`, слот заполняется слот-элементом, включая его в элемент с атрибутом [`slot`](/en-US/docs/Web/HTML/Global_attributes/slot) со значением `my-text`. Вот один из таких примеров:
 
-<pre class="brush: html">&lt;my-paragraph&gt;
-  &lt;span slot="my-text"&gt;Let's have some different text!&lt;/span&gt;
-&lt;/my-paragraph&gt;</pre>
+```html
+<my-paragraph>
+  <span slot="my-text">Let's have some different text!</span>
+</my-paragraph>
+```
 
-<p>В нашем JavaScript файле мы получаем ссылку {{htmlelement("span")}}, показанную выше, а затем регистрируем ссылку на имя соответствующего элемента <code>&lt;slot&gt;</code>.</p>
+В нашем JavaScript файле мы получаем ссылку {{htmlelement("span")}}, показанную выше, а затем регистрируем ссылку на имя соответствующего элемента `<slot>`.
 
-<pre class="brush: js">let slottedSpan = document.querySelector('my-paragraph span')
-console.log(slottedSpan.slot); // logs 'my-text'</pre>
+```js
+let slottedSpan = document.querySelector('my-paragraph span')
+console.log(slottedSpan.slot); // logs 'my-text'
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}

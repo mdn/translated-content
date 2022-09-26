@@ -6,61 +6,51 @@ tags:
   - Шрифты
 translation_of: Web/API/FontFace
 ---
-<p>{{APIRef("CSS Font Loading API")}}{{SeeCompatTable}}</p>
+{{APIRef("CSS Font Loading API")}}{{SeeCompatTable}}
 
-<p>Интерфейс <code><strong>FontFace</strong></code> представляет единый используемый шрифт. Он позволяет контролировать источник шрифта, являющийся URL-адресом внешнего ресурса или буфера; а также контролировать момент загрузки шрифта и его текущее состояние.</p>
+Интерфейс **`FontFace`** представляет единый используемый шрифт. Он позволяет контролировать источник шрифта, являющийся URL-адресом внешнего ресурса или буфера; а также контролировать момент загрузки шрифта и его текущее состояние.
 
-<h2 id="Конструктор">Конструктор</h2>
+## Конструктор
 
-<dl>
- <dt>{{domxref("FontFace.FontFace", "FontFace()")}}</dt>
- <dd>Создаёт и возвращает новый объект <code>FontFace</code>, созданный из внешнего ресурса, описанного  URL-адресом или из {{domxref("ArrayBuffer")}}.</dd>
-</dl>
+- {{domxref("FontFace.FontFace", "FontFace()")}}
+  - : Создаёт и возвращает новый объект `FontFace`, созданный из внешнего ресурса, описанного URL-адресом или из {{domxref("ArrayBuffer")}}.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Этот интерфейс не наследует свойства.</em></p>
+_Этот интерфейс не наследует свойства._
 
-<dl>
- <dt>{{domxref("FontFace.display")}}</dt>
- <dd>{{domxref("CSSOMString")}} определяет способ отображения шрифта, основываясь на информации о статусе его загрузки и готовности к использованию.</dd>
- <dt>{{domxref("FontFace.family")}}</dt>
- <dd>{{domxref("CSSOMString")}} получает или устанавливает <em>семейство</em> шрифта. Эквивалентен дескриптору {{cssxref("@font-face/font-family", "font-family")}}.</dd>
- <dt>{{domxref("FontFace.featureSettings")}}</dt>
- <dd>{{domxref("CSSOMString")}} получает или устанавливает редко используемые возможности шрифта. Эквивалентен дескриптору {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}}.</dd>
- <dt>{{domxref("FontFace.loaded")}} {{readonlyinline}}</dt>
- <dd>Возвращает {{domxref("Promise")}}, которое выполняется для текущего объекта  <code>FontFace</code>, когда специфичный шрифт, указанный в конструкторе объекта, завершает загрузку, либо отклоняется с помощью <code>SyntaxError</code>.</dd>
- <dt>{{domxref("FontFace.status")}} {{readonlyinline}}</dt>
- <dd>Возвращает перечисляемое значение, указывающее на состояние шрифта : <code>"unloaded"</code>, <code>"loading"</code>, <code>"loaded"</code>, или <code>"error"</code>.</dd>
- <dt>{{domxref("FontFace.stretch")}}</dt>
- <dd>{{domxref("CSSOMString")}} получает или устанавливает свойство <em>растягивания </em>шрифта. Эквивалентен дескриптору {{cssxref("@font-face/font-stretch", "font-stretch")}}.</dd>
- <dt>{{domxref("FontFace.style")}}</dt>
- <dd>{{domxref("CSSOMString")}} получает или устанавливает <em>стиль</em> шрифта. Эквивалентен дескриптору {{cssxref("@font-face/font-style", "font-style")}}.</dd>
- <dt>{{domxref("FontFace.unicodeRange")}}</dt>
- <dd>{{domxref("CSSOMString")}} получает или устанавливает<em> диапазон точек кодирования Юникод</em>, охватывающих шрифт. Эквивалентен дескриптору {{cssxref("@font-face/unicode-range", "unicode-range")}}.</dd>
- <dt>{{domxref("FontFace.variant")}}</dt>
- <dd>{{domxref("CSSOMString")}} получает или устанавливает <em>вариант</em> шрифта. Эквивалентен дескриптору {{cssxref("@font-face/font-variant", "font-variant")}}.</dd>
- <dt>{{domxref("FontFace.weight")}}</dt>
- <dd>{{domxref("CSSOMString")}} содержит <em>толщину</em> шрифта. Эквивалентен дескриптору {{cssxref("@font-face/font-weight", "font-weight")}}.</dd>
-</dl>
+- {{domxref("FontFace.display")}}
+  - : {{domxref("CSSOMString")}} определяет способ отображения шрифта, основываясь на информации о статусе его загрузки и готовности к использованию.
+- {{domxref("FontFace.family")}}
+  - : {{domxref("CSSOMString")}} получает или устанавливает _семейство_ шрифта. Эквивалентен дескриптору {{cssxref("@font-face/font-family", "font-family")}}.
+- {{domxref("FontFace.featureSettings")}}
+  - : {{domxref("CSSOMString")}} получает или устанавливает редко используемые возможности шрифта. Эквивалентен дескриптору {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}}.
+- {{domxref("FontFace.loaded")}} {{readonlyinline}}
+  - : Возвращает {{domxref("Promise")}}, которое выполняется для текущего объекта `FontFace`, когда специфичный шрифт, указанный в конструкторе объекта, завершает загрузку, либо отклоняется с помощью `SyntaxError`.
+- {{domxref("FontFace.status")}} {{readonlyinline}}
+  - : Возвращает перечисляемое значение, указывающее на состояние шрифта : `"unloaded"`, `"loading"`, `"loaded"`, или `"error"`.
+- {{domxref("FontFace.stretch")}}
+  - : {{domxref("CSSOMString")}} получает или устанавливает свойство _растягивания_ шрифта. Эквивалентен дескриптору {{cssxref("@font-face/font-stretch", "font-stretch")}}.
+- {{domxref("FontFace.style")}}
+  - : {{domxref("CSSOMString")}} получает или устанавливает _стиль_ шрифта. Эквивалентен дескриптору {{cssxref("@font-face/font-style", "font-style")}}.
+- {{domxref("FontFace.unicodeRange")}}
+  - : {{domxref("CSSOMString")}} получает или устанавливает _диапазон точек кодирования Юникод_, охватывающих шрифт. Эквивалентен дескриптору {{cssxref("@font-face/unicode-range", "unicode-range")}}.
+- {{domxref("FontFace.variant")}}
+  - : {{domxref("CSSOMString")}} получает или устанавливает _вариант_ шрифта. Эквивалентен дескриптору {{cssxref("@font-face/font-variant", "font-variant")}}.
+- {{domxref("FontFace.weight")}}
+  - : {{domxref("CSSOMString")}} содержит _толщину_ шрифта. Эквивалентен дескриптору {{cssxref("@font-face/font-weight", "font-weight")}}.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em>Этот интерфейс не наследует методы.</em></p>
+_Этот интерфейс не наследует методы._
 
-<dl>
- <dt>{{domxref("FontFace.load()")}}</dt>
- <dd>Загружает шрифт, основываясь на переданных требованиях конструктора текущего объекта, включая расположение или ресурсный буфер, и возвращает {{jsxref('Promise')}}, которое выполняется для текущего объекта FontFace.</dd>
-</dl>
+- {{domxref("FontFace.load()")}}
+  - : Загружает шрифт, основываясь на переданных требованиях конструктора текущего объекта, включая расположение или ресурсный буфер, и возвращает {{jsxref('Promise')}}, которое выполняется для текущего объекта FontFace.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<div>
-
-
-<p>{{Compat}}</p>
-</div>
+{{Compat}}

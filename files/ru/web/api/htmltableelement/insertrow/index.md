@@ -9,36 +9,32 @@ tags:
   - Reference
 translation_of: Web/API/HTMLTableElement/insertRow
 ---
-<div>
-<div>
-<div>{{APIRef("HTML DOM")}}</div>
-</div>
-</div>
+{{APIRef("HTML DOM")}}
 
-<p>Метод <strong><code>HTMLTableElement.insertRow()</code></strong><code>добавляет новую строку в таблицу и возвращает на неё ссылку.</code></p>
+Метод **`HTMLTableElement.insertRow()`**`добавляет новую строку в таблицу и возвращает на неё ссылку.`
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <em>row</em> = <em>HTMLTableElement</em>.insertRow(<em>optional index = -1</em>);</pre>
+```
+var row = HTMLTableElement.insertRow(optional index = -1);
+```
 
-<ul>
- <li><a href="/en-US/docs/DOM/HTMLTableElement"><code>HTMLTableElement</code></a> — ссылка на <em>HTML table</em> элемент.</li>
- <li><code>index</code> — индекс новой строки</li>
- <li><code>row</code> присваивается ссылка на новую строку. Ссылка на <a href="/en-US/docs/Web/API/HTMLTableRowElement">HTMLTableRowElement</a>.<br>
-  Если значение <code>index</code> равно -1 или количеству строк, то строка добавляется как последняя. Если значение <code>index</code> превышает количество строк, <em>выбрасывается</em> исключение IndexSizeError. Если аргумент index пропущен, он равен значению по умолчанию — -1.</li>
- <li>Если таблица содержит несколько элементов <code>tbody</code>, то, по умолчанию, новая строка будет добавлена в последний элемент <code>tbody</code>. Добавить строку в определённый элемент <code>tbody</code>:<br>
-  <code>var <em>specific_tbody</em>=document.getElementById(<em>tbody_id</em>);<br>
-  var <em>row</em>=specific_tbody.insertRow(<em>index</em>)</code></li>
-</ul>
+- [`HTMLTableElement`](/ru/docs/DOM/HTMLTableElement) — ссылка на _HTML table_ элемент.
+- `index` — индекс новой строки
+- `row` присваивается ссылка на новую строку. Ссылка на [HTMLTableRowElement](/ru/docs/Web/API/HTMLTableRowElement).
+  Если значение `index` равно -1 или количеству строк, то строка добавляется как последняя. Если значение `index` превышает количество строк, _выбрасывается_ исключение IndexSizeError. Если аргумент index пропущен, он равен значению по умолчанию — -1.
+- Если таблица содержит несколько элементов `tbody`, то, по умолчанию, новая строка будет добавлена в последний элемент `tbody`. Добавить строку в определённый элемент `tbody`:
+  `var specific_tbody=document.getElementById(tbody_id); var row=specific_tbody.insertRow(index)`
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush:html">&lt;table id="TableA"&gt;
-&lt;tr&gt;
-&lt;td&gt;Old top row&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-&lt;script type="text/javascript"&gt;
+```html
+<table id="TableA">
+<tr>
+<td>Old top row</td>
+</tr>
+</table>
+<script type="text/javascript">
 
 function addRow(tableID) {
   // Get a reference to the table
@@ -58,22 +54,21 @@ function addRow(tableID) {
 // Call addRow() with the ID of a table
 addRow('TableA');
 
-&lt;/script&gt;</pre>
+</script>
+```
 
-<p>Чтобы быть валидным HTML документом, элемент TR должен содержать хотя бы один TD элемент.</p>
+Чтобы быть валидным HTML документом, элемент TR должен содержать хотя бы один TD элемент.
 
-<p>Обратите внимание, что <code>insertRow</code> добавляет строку непосредственно в таблицу и возвращает ссылку на эту строку. Строку не нужно добавлять отдельно, как в случае с методом<code><a href="/en-US/docs/DOM/document.createElement">document.createElement()</a>,</code> для создания нового TR элемента.</p>
+Обратите внимание, что `insertRow` добавляет строку непосредственно в таблицу и возвращает ссылку на эту строку. Строку не нужно добавлять отдельно, как в случае с методом`document.createElement(),` для создания нового TR элемента.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("HTMLTableRowElement.insertCell()")}}</li>
-</ul>
+- {{domxref("HTMLTableRowElement.insertCell()")}}

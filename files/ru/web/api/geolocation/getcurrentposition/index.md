@@ -3,33 +3,33 @@ title: Geolocation.getCurrentPosition()
 slug: Web/API/Geolocation/getCurrentPosition
 translation_of: Web/API/Geolocation/getCurrentPosition
 ---
-<p>{{securecontext_header}}{{ APIRef("Geolocation API") }}Метод <strong><code>Geolocation.getCurrentPosition()</code></strong> используется для получения текущего местоположения устройства.</p>
+{{securecontext_header}}{{ APIRef("Geolocation API") }}Метод **`Geolocation.getCurrentPosition()`** используется для получения текущего местоположения устройства.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">navigator.geolocation.getCurrentPosition(<em>success[</em>, <em>error[</em>, <em>options]]</em>)</pre>
+```
+navigator.geolocation.getCurrentPosition(success[, error[, options]])
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code><var>success</var></code></dt>
- <dd>Колбэк-функция, которая принимает объект {{domxref("Position")}} в качестве единственного входного параметра.</dd>
- <dt><code><var>error</var></code> {{optional_inline}}</dt>
- <dd>Необязательная колбэк-функция, принимающая объект {{domxref("PositionError")}} как единственный входной параметр.</dd>
- <dt><code><var>options</var></code> {{optional_inline}}</dt>
- <dd>Необязательный объект {{domxref("PositionOptions")}}.<br>
- Включает в себя
- <ul>
-  <li><code>maximumAge</code>: целое число (миллисекунды) | infinity - максимальное время кеширования позиции.</li>
-  <li><code>timeout</code>: целое число (миллисекунды) - количество времени до вызова callback ошибки. Если 0, вызов не происходит.</li>
-  <li><code>enableHighAccuracy</code>: false | true</li>
- </ul>
- </dd>
-</dl>
+- `success`
+  - : Колбэк-функция, которая принимает объект {{domxref("Position")}} в качестве единственного входного параметра.
+- `error` {{optional_inline}}
+  - : Необязательная колбэк-функция, принимающая объект {{domxref("PositionError")}} как единственный входной параметр.
+- `options` {{optional_inline}}
 
-<h2 id="Пример">Пример</h2>
+  - : Необязательный объект {{domxref("PositionOptions")}}.
+    Включает в себя
 
-<pre class="brush: js">var options = {
+    - `maximumAge`: целое число (миллисекунды) | infinity - максимальное время кеширования позиции.
+    - `timeout`: целое число (миллисекунды) - количество времени до вызова callback ошибки. Если 0, вызов не происходит.
+    - `enableHighAccuracy`: false | true
+
+## Пример
+
+```js
+var options = {
   enableHighAccuracy: true,
   timeout: 5000,
   maximumAge: 0
@@ -49,19 +49,17 @@ function error(err) {
 };
 
 navigator.geolocation.getCurrentPosition(success, error, options);
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/en-US/docs/WebAPI/Using_geolocation" title="/en-US/docs/WebAPI/Using_geolocation">Using geolocation</a></li>
- <li>{{domxref("Navigator.geolocation")}}</li>
-</ul>
+- [Using geolocation](/ru/docs/WebAPI/Using_geolocation)
+- {{domxref("Navigator.geolocation")}}

@@ -9,40 +9,41 @@ tags:
   - Справка
 translation_of: Web/API/Document/doctype
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>Возвращает Описание Типа Документа (Document Type Declaration, DTD) относительно текущего документа. Возвращаемый объект обеспечивает выполнение {{domxref("DocumentType")}} интерфейса. Используйте {{domxref("DOMImplementation.createDocumentType()")}} для создания <code>DocumentType</code>.</p>
+Возвращает Описание Типа Документа (Document Type Declaration, DTD) относительно текущего документа. Возвращаемый объект обеспечивает выполнение {{domxref("DocumentType")}} интерфейса. Используйте {{domxref("DOMImplementation.createDocumentType()")}} для создания `DocumentType`.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>doctype</var> = <var>document</var>.doctype;
-</pre>
+```
+doctype = document.doctype;
+```
 
-<ul>
- <li><code>doctype</code> - свойство только для чтения.</li>
-</ul>
+- `doctype` - свойство только для чтения.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush:js">var doctypeObj = document.doctype;
+```js
+var doctypeObj = document.doctype;
 
 console.log(
   "doctypeObj.name: "           + doctypeObj.name            + "\n" +
   "doctypeObj.internalSubset: " + doctypeObj.internalSubset  + "\n" +
   "doctypeObj.publicId: "       + doctypeObj.publicId        + "\n" +
   "doctypeObj.systemId: "       + doctypeObj.systemId
-);</pre>
+);
+```
 
-<h2 id="Примечания">Примечания</h2>
+## Примечания
 
-<p>Свойство возвращает <code>null</code>, если не существует DTD связанного с текущим документом.</p>
+Свойство возвращает `null`, если не существует DTD связанного с текущим документом.
 
-<p>DOM уровня 2 не поддерживает редактирование описания типа документа.</p>
+DOM уровня 2 не поддерживает редактирование описания типа документа.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

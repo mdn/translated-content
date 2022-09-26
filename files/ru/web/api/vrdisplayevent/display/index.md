@@ -5,32 +5,32 @@ tags:
   - Виртуальная реальность
 translation_of: Web/API/VRDisplayEvent/display
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}<br>
- Свойство  <strong><code>display</code></strong>только для чтения интерфейса {{domxref ("VRDisplayEvent")}} возвращает параметр {{domxref ("VRDisplay")}}, связанный с этим событием.</div>
+{{APIRef("WebVR API")}}{{SeeCompatTable}}
+Свойство **`display`**только для чтения интерфейса {{domxref ("VRDisplayEvent")}} возвращает параметр {{domxref ("VRDisplay")}}, связанный с этим событием.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">var myDisplay = vrDisplayEventInstance.display;</pre>
+```js
+var myDisplay = vrDisplayEventInstance.display;
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p>A {{domxref("VRDisplay")}} object.</p>
+A {{domxref("VRDisplay")}} object.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>{{page("/Web/API/VRDisplayEvent", "Examples")}}</p>
+{{page("/Web/API/VRDisplayEvent", "Examples")}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_браузера">Совместимость браузера</h2>
+## Совместимость браузера
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Дополнительно">Дополнительно</h2>
+## Дополнительно
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
- <li><a href="http://mozvr.com/">MozVr.com</a> — демонстрационные материалы,материалы для загрузки и другие ресурсы команды Mozilla VR team.</li>
-</ul>
+- [WebVR API homepage](/ru/docs/Web/API/WebVR_API)
+- [MozVr.com](http://mozvr.com/) — демонстрационные материалы,материалы для загрузки и другие ресурсы команды Mozilla VR team.

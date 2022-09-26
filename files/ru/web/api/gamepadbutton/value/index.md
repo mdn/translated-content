@@ -3,49 +3,42 @@ title: GamepadButton.value
 slug: Web/API/GamepadButton/value
 translation_of: Web/API/GamepadButton/value
 ---
-<p>{{APIRef("Gamepad API")}}</p>
+{{APIRef("Gamepad API")}}
 
-<p>Свойство <code><strong>GamepadButton.value</strong></code>  интерфейса {{domxref("GamepadButton")}} возвращает состояние аналоговой клавиши геймпада, такой, как, например триггеры. </p>
+Свойство **`GamepadButton.value`** интерфейса {{domxref("GamepadButton")}} возвращает состояние аналоговой клавиши геймпада, такой, как, например триггеры.
 
-<p>Представляет собой дробное число в диапазоне  <code>0.0</code> — <code>1.0</code>,  где <code>0.0</code> показывает, что кнопка не нажата, а 1.0 - что нажата полностью.</p>
+Представляет собой дробное число в диапазоне `0.0` — `1.0`, где `0.0` показывает, что кнопка не нажата, а 1.0 - что нажата полностью.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">    readonly    attribute double  value;</pre>
+```
+    readonly    attribute double  value;
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">var gp = navigator.getGamepads()[0];
+```js
+var gp = navigator.getGamepads()[0];
 
-if(gp.buttons[0].value &gt; 0) {
+if(gp.buttons[0].value > 0) {
   // respond to analog button being pressed in
-} </pre>
+}
+```
 
-<h2 id="Значение">Значение</h2>
+## Значение
 
-<p> {{domxref("double")}}.</p>
+{{domxref("double")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Gamepad", "#dom-gamepadbutton-value", "GamepadButton.value")}}</td>
-   <td>{{Spec2("Gamepad")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                       | Comment            |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName("Gamepad", "#dom-gamepadbutton-value", "GamepadButton.value")}} | {{Spec2("Gamepad")}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<p><a href="/en-US/docs/Web/Guide/API/Gamepad">Using the Gamepad API</a></p>
+[Using the Gamepad API](/ru/docs/Web/Guide/API/Gamepad)

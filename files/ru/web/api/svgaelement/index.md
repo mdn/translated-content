@@ -3,51 +3,50 @@ title: SVGAElement
 slug: Web/API/SVGAElement
 translation_of: Web/API/SVGAElement
 ---
-<p>{{APIRef("SVG")}}</p>
+{{APIRef("SVG")}}
 
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<p>Интерфейс <strong><code>SVGAElement</code></strong><code> предоставляет доступ к свойствам </code> {{ SVGElement("a") }} элемента а также к методам манипулирования ими.</p>
+Интерфейс **`SVGAElement`**` предоставляет доступ к свойствам `{{ SVGElement("a") }} элемента а также к методам манипулирования ими.
 
-<p>Интерфейс наследует следующие интерфейсы: {{ domxref("SVGElement") }}, {{ domxref("SVGURIReference") }}, {{ domxref("SVGTests") }}, {{ domxref("SVGLangSpace") }}, {{ domxref("SVGExternalResourcesRequired") }}, {{ domxref("SVGStylable") }}, {{ domxref("SVGTransformable") }}.</p>
+Интерфейс наследует следующие интерфейсы: {{ domxref("SVGElement") }}, {{ domxref("SVGURIReference") }}, {{ domxref("SVGTests") }}, {{ domxref("SVGLangSpace") }}, {{ domxref("SVGExternalResourcesRequired") }}, {{ domxref("SVGStylable") }}, {{ domxref("SVGTransformable") }}.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Этот интерфейс также наследует свойства от его родителя, {{domxref("SVGGraphicsElement")}} и реализует свойства из {{domxref("SVGURIReference")}} и {{domxref("HTMLHyperlinkElementUtils")}}.</em></p>
+_Этот интерфейс также наследует свойства от его родителя, {{domxref("SVGGraphicsElement")}} и реализует свойства из {{domxref("SVGURIReference")}} и {{domxref("HTMLHyperlinkElementUtils")}}._
 
-<dl>
- <dt>{{domxref("SVGAElement.download")}}</dt>
- <dd>См. {{domxref("HTMLAnchorElement.download")}}.</dd>
- <dt>{{domxref("SVGAElement.href")}}</dt>
- <dd>См. {{domxref("HTMLAnchorElement.href")}}.</dd>
- <dt>{{domxref("SVGAElement.hreflang")}}</dt>
- <dd>Является {{domxref("DOMString")}}, который отражает атрибут <code>hreflang</code>, указывающий язык связанного ресурса.</dd>
- <dt>{{domxref("SVGAElement.ping")}}</dt>
- <dd>Является {{domxref("DOMString")}}, отражая атрибут ping, содержащий список URL-адресов, разделённых пробелами, к которым, когда выполняется гиперссылка, {{HTTPMethod("POST")}} запрос с телом <code>PING</code> будет отправлен браузером (в фоновом режиме). Обычно используется для отслеживания.</dd>
- <dt>{{domxref("SVGAElement.referrerPolicy")}}</dt>
- <dd>См. {{domxref("HTMLAnchorElement.referrerPolicy")}}.</dd>
- <dt>{{domxref("SVGAElement.rel")}}</dt>
- <dd>См. {{domxref("HTMLAnchorElement.rel")}}.</dd>
- <dt>{{domxref("SVGAElement.relList")}}</dt>
- <dd>См. {{domxref("HTMLAnchorElement.relList")}}.</dd>
- <dt>{{domxref("SVGAElement.target")}} {{readonlyInline}}</dt>
- <dd>соответствует атрибуту {{SVGAttr("target")}} данного элемента. </dd>
- <dt>{{domxref("SVGAElement.text")}}</dt>
- <dd>Является {{domxref("DOMString")}} синонимом свойства {{domxref("Node.textContent")}}. </dd>
- <dt>{{domxref("SVGAElement.type")}}</dt>
- <dd>Is a that reflects theattribute, indicating the MIME type of the linked resource. <br>
- Является {{domxref("DOMString")}}, который отражает атрибут <code>type</code> , указывающий тип MIME связанного ресурса.</dd>
-</dl>
+- {{domxref("SVGAElement.download")}}
+  - : См. {{domxref("HTMLAnchorElement.download")}}.
+- {{domxref("SVGAElement.href")}}
+  - : См. {{domxref("HTMLAnchorElement.href")}}.
+- {{domxref("SVGAElement.hreflang")}}
+  - : Является {{domxref("DOMString")}}, который отражает атрибут `hreflang`, указывающий язык связанного ресурса.
+- {{domxref("SVGAElement.ping")}}
+  - : Является {{domxref("DOMString")}}, отражая атрибут ping, содержащий список URL-адресов, разделённых пробелами, к которым, когда выполняется гиперссылка, {{HTTPMethod("POST")}} запрос с телом `PING` будет отправлен браузером (в фоновом режиме). Обычно используется для отслеживания.
+- {{domxref("SVGAElement.referrerPolicy")}}
+  - : См. {{domxref("HTMLAnchorElement.referrerPolicy")}}.
+- {{domxref("SVGAElement.rel")}}
+  - : См. {{domxref("HTMLAnchorElement.rel")}}.
+- {{domxref("SVGAElement.relList")}}
+  - : См. {{domxref("HTMLAnchorElement.relList")}}.
+- {{domxref("SVGAElement.target")}} {{readonlyInline}}
+  - : соответствует атрибуту {{SVGAttr("target")}} данного элемента.
+- {{domxref("SVGAElement.text")}}
+  - : Является {{domxref("DOMString")}} синонимом свойства {{domxref("Node.textContent")}}.
+- {{domxref("SVGAElement.type")}}
+  - : Is a that reflects theattribute, indicating the MIME type of the linked resource.
+    Является {{domxref("DOMString")}}, который отражает атрибут `type` , указывающий тип MIME связанного ресурса.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em>Этот интерфейс не имеет методов, но наследует методы от его родителя, {{domxref ("SVGGraphicsElement")}}. </em></p>
+_Этот интерфейс не имеет методов, но наследует методы от его родителя, {{domxref ("SVGGraphicsElement")}}._
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>В примере ниже, атрибуту {{SVGAttr("target")}} элемента {{SVGElement('a')}} присвоено значение <em>_blank</em> и при клике по ссылке, при соблюдении условий, выведется сообщение в модальном окне. </p>
+В примере ниже, атрибуту {{SVGAttr("target")}} элемента {{SVGElement('a')}} присвоено значение _\_blank_ и при клике по ссылке, при соблюдении условий, выведется сообщение в модальном окне.
 
-<pre class="brush: js">var linkRef = document.querySelector('a');
+```js
+var linkRef = document.querySelector('a');
 linkRef.target ='_self';
 
 linkRef.onclick = function(){
@@ -57,36 +56,20 @@ linkRef.onclick = function(){
     }
     else
         alert("SORRY! not _blank");
-} </pre>
+}
+```
 
-<h2 id="Характеристики">Характеристики</h2>
+## Характеристики
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td>Спецификация</td>
-   <td>Статус</td>
-   <td>Коммент</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "linking.html#InterfaceSVGAElement")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Заменено наследование от {{domxref("SVGElement")}} {{domxref("SVGGraphicsElement")}} и удалены реализации интерфейса {{domxref("SVGTests")}}, {{domxref("SVGLangSpace")}}, {{domxref("SVGExternalResourcesRequired")}}, {{domxref("SVGStylable")}} и {{domxref("SVGTransformable")}} {{domxref ("HTMLHyperlinkElementUI")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'linking.html#InterfaceSVGAElement')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Начальное определение</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                     | Статус                   | Коммент                                                                                                                                                                                                                                                                                                                                                                                                       |
+| -------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName("SVG2", "linking.html#InterfaceSVGAElement")}}     | {{Spec2("SVG2")}} | Заменено наследование от {{domxref("SVGElement")}} {{domxref("SVGGraphicsElement")}} и удалены реализации интерфейса {{domxref("SVGTests")}}, {{domxref("SVGLangSpace")}}, {{domxref("SVGExternalResourcesRequired")}}, {{domxref("SVGStylable")}} и {{domxref("SVGTransformable")}} {{domxref ("HTMLHyperlinkElementUI")}} |
+| {{SpecName('SVG1.1', 'linking.html#InterfaceSVGAElement')}} | {{Spec2('SVG1.1')}} | Начальное определение                                                                                                                                                                                                                                                                                                                                                                                         |
 
-<h2 id="Browser_compatibility">Совместимость с браузером</h2>
+## Совместимость с браузером
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>SVG {{SVGElement("a")}} элемент</li>
-</ul>
+- SVG {{SVGElement("a")}} элемент

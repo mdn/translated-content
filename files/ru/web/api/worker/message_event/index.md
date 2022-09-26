@@ -4,23 +4,24 @@ slug: Web/API/Worker/message_event
 translation_of: Web/API/Worker/onmessage
 original_slug: Web/API/Worker/onmessage
 ---
-<p>{{APIRef("Web Workers API")}}</p>
+{{APIRef("Web Workers API")}}
 
-<p>Свойство <strong><code>onmessage</code></strong>  интерфейса {{domxref("Worker")}} представляет собой обработчик {{event("Event_handlers", "event handler")}}, который будет вызван когда произойдёт событие {{event("message")}}. Тип этого события {{domxref("MessageEvent")}} и оно будет вызвано когда worker-объект получит сообщение из выполняемого им кода (т.е из метода {{domxref("DedicatedWorkerGlobalScope.postMessage")}} .</p>
+Свойство **`onmessage`** интерфейса {{domxref("Worker")}} представляет собой обработчик {{event("Event_handlers", "event handler")}}, который будет вызван когда произойдёт событие {{event("message")}}. Тип этого события {{domxref("MessageEvent")}} и оно будет вызвано когда worker-объект получит сообщение из выполняемого им кода (т.е из метода {{domxref("DedicatedWorkerGlobalScope.postMessage")}} .
 
-<div class="note">
-<p><strong>Примечание</strong>: Данные события доступны в свойстве data события {{event("message")}}.</p>
-</div>
+> **Примечание:** Данные события доступны в свойстве data события {{event("message")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">myWorker.onmessage = function(e) { ... }</pre>
+```js
+myWorker.onmessage = function(e) { ... }
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Следующий пример кода показывает создание объекта {{domxref("Worker")}} используя конструктор {{domxref("Worker.Worker", "Worker()")}}. События попадают в объект, когда значение внутри поля ввода формы <code>first</code> изменяется. Обработчик onmessage указан для обработки сообщений, которые приходят назад из кода объекта в текущий контекст выполнения.</p>
+Следующий пример кода показывает создание объекта {{domxref("Worker")}} используя конструктор {{domxref("Worker.Worker", "Worker()")}}. События попадают в объект, когда значение внутри поля ввода формы `first` изменяется. Обработчик onmessage указан для обработки сообщений, которые приходят назад из кода объекта в текущий контекст выполнения.
 
-<pre class="brush: js">var myWorker = new Worker("worker.js");
+```js
+var myWorker = new Worker("worker.js");
 
 first.onchange = function() {
   myWorker.postMessage([first.value,second.value]);
@@ -31,29 +32,31 @@ myWorker.onmessage = function(e) {
   result.textContent = e.data;
   console.log('Сообщение полученное из worker-объекта');
 }
-</pre>
+```
 
-<p>В скрипте <code>worker.js</code>, обработчик <code>onmessage</code> используется для обработки событий, полученных из главного скрипта:</p>
+В скрипте `worker.js`, обработчик `onmessage` используется для обработки событий, полученных из главного скрипта:
 
-<pre class="brush: js">onmessage = function(e) {
+```js
+onmessage = function(e) {
   console.log('Сообщение полученное из главного скрипта');
   var workerResult = 'Результат: ' + (e.data[0] * e.data[1]);
   console.log('Отправка сообщения назад в главный скрипт');
   postMessage(workerResult);
-}</pre>
+}
+```
 
-<p>Посмотрите как в скрипте <code>worker.js</code> вызывается обработчик <code>onmessage</code><code>.</code> В нем присутствует только глобальное свойство <code>onmessage,</code> потому что worker-объект фактически является областью видимости ({{domxref("DedicatedWorkerGlobalScope")}}).</p>
+Посмотрите как в скрипте `worker.js` вызывается обработчик ` onmessage``. ` В нем присутствует только глобальное свойство `onmessage,` потому что worker-объект фактически является областью видимости ({{domxref("DedicatedWorkerGlobalScope")}}).
 
-<p>Для полного примера смотрите наш <a class="external external-icon" href="https://github.com/mdn/simple-web-worker">Basic dedicated worker example</a> (<a class="external external-icon" href="http://mdn.github.io/simple-web-worker/">run dedicated worker</a>).</p>
+Для полного примера смотрите наш [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](http://mdn.github.io/simple-web-worker/)).
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<p>Интерфейс {{domxref("Worker")}}, которому принадлежит этот обработчик.</p>
+Интерфейс {{domxref("Worker")}}, которому принадлежит этот обработчик.

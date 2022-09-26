@@ -3,43 +3,38 @@ title: ServiceWorker
 slug: Web/API/ServiceWorker
 translation_of: Web/API/ServiceWorker
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
+Интерфейс `ServiceWorker`, являющийся частью [ServiceWorker API](/ru/docs/Web/API/ServiceWorker_API), позволяет взаимодействовать с Service Worker. К одному Service Worker могут быть привязаны несколько контекстов (например страниц, Web Workers, и т.д.), каждый с использованием собственного объекта `ServiceWorker`.
 
+Объект `ServiceWorker` можно получить через свойства {{domxref("ServiceWorkerRegistration.active")}} и {{domxref("ServiceWorkerContainer.controller")}} — это Service Worker, который активировал и контролирует текущую страницу (в случае, если Service Worker был успешно зарегистрирован и страница была обновлена)
 
-<p>Интерфейс <code>ServiceWorker</code>, являющийся частью <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a>, позволяет взаимодействовать с Service Worker. К одному Service Worker могут быть привязаны несколько контекстов (например страниц, Web Workers, и т.д.), каждый с использованием собственного объекта <code>ServiceWorker</code>.</p>
+Интерфейс `ServiceWorker` обрабатывает события жизненного цикла: `install` и `activate` и функциональные события, например `fetch`. Объект `ServiceWorker` также содержит опцию {{domxref("ServiceWorker.state")}}, отражающую его состояние.
 
-<p>Объект <code>ServiceWorker</code> можно получить через свойства {{domxref("ServiceWorkerRegistration.active")}} и {{domxref("ServiceWorkerContainer.controller")}} — это Service Worker, который активировал и контролирует текущую страницу (в случае, если Service Worker был успешно зарегистрирован и страница была обновлена)</p>
+## Свойства
 
-<p>Интерфейс <code>ServiceWorker</code> обрабатывает события жизненного цикла: <code>install</code> и <code>activate</code> и функциональные события, например <code>fetch</code>. Объект <code>ServiceWorker</code> также содержит опцию {{domxref("ServiceWorker.state")}}, отражающую его состояние.</p>
+_Интерфейс `ServiceWorker` наследует свойства {{domxref("Worker")}}._
 
-<h2 id="Свойства">Свойства</h2>
+- {{domxref("ServiceWorker.scriptURL")}} {{readonlyinline}}
+  - : URL кода для данного Service Worker. URL должен находиться в том же домене, что и документ, регистрирующий `ServiceWorker`.
+- {{domxref("ServiceWorker.state")}} {{readonlyinline}}
+  - : Состояние данного Service Worker. Может иметь следующие значения: `installing`, `installed,` `activating`, `activated` или `redundant`.
 
-<p><em>Интерфейс <code>ServiceWorker</code> наследует свойства {{domxref("Worker")}}.</em></p>
+### Обработчики событий
 
-<dl>
- <dt>{{domxref("ServiceWorker.scriptURL")}} {{readonlyinline}}</dt>
- <dd>URL кода для данного Service Worker. URL должен находиться в том же домене, что и документ, регистрирующий <code>ServiceWorker</code>.</dd>
- <dt>{{domxref("ServiceWorker.state")}} {{readonlyinline}}</dt>
- <dd>Состояние данного Service Worker. Может иметь следующие значения: <code>installing</code>, <code>installed,</code> <code>activating</code>, <code>activated</code> или <code>redundant</code>.</dd>
-</dl>
+- {{domxref("ServiceWorker.onstatechange")}} {{readonlyinline}}
+  - : Срабатывает при срабатывании события `statechange`; По сути, срабатывает при каждом изменении {{domxref("ServiceWorker.state")}}.
 
-<h3 id="Обработчики_событий">Обработчики событий</h3>
+## Методы
 
-<dl>
- <dt>{{domxref("ServiceWorker.onstatechange")}} {{readonlyinline}}</dt>
- <dd>Срабатывает при срабатывании события <code>statechange</code>; По сути, срабатывает при каждом изменении {{domxref("ServiceWorker.state")}}.</dd>
-</dl>
+_Интерфейс `ServiceWorker` наследует все методы интерфейса {{domxref("Worker")}}, кроме {{domxref("Worker.terminate")}}, который не должен быть доступен для Service Worker._
 
-<h2 id="Методы">Методы</h2>
+## Примеры
 
-<p><em>Интерфейс <code>ServiceWorker</code> наследует все методы интерфейса {{domxref("Worker")}}, кроме {{domxref("Worker.terminate")}}, который не должен быть доступен для Service Worker.</em></p>
+Этот фрагмент кода из [примера событий Service Worker](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([демо](https://googlechrome.github.io/samples/service-worker/registration-events/)). Данный код возвращает значение {{domxref("ServiceWorker.state")}} при каждом изменении состояния.
 
-<h2 id="Примеры">Примеры</h2>
-
-<p>Этот фрагмент кода из <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html">примера событий Service Worker</a> (<a href="https://googlechrome.github.io/samples/service-worker/registration-events/">демо</a>). Данный код возвращает значение {{domxref("ServiceWorker.state")}} при каждом изменении состояния.</p>
-
-<pre class="brush: js">if ('serviceWorker' in navigator) {
+```js
+if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js', {
         scope: './'
     }).then(function (registration) {
@@ -66,40 +61,24 @@ translation_of: Web/API/ServiceWorker
     });
 } else {
     // Данный браузер не поддерживает Service Worker.
-}</pre>
+}
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#serviceworker', 'ServiceWorker')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                             | Статус                               | Комментарии              |
+| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------ |
+| {{SpecName('Service Workers', '#serviceworker', 'ServiceWorker')}} | {{Spec2('Service Workers')}} | Изначальное определение. |
 
-<h2 id="Поддержка">Поддержка</h2>
+## Поддержка
 
-<div>
+{{Compat}}
 
+## Смотрите Также
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="Смотрите_Также">Смотрите Также</h2>
-
-<ul>
- <li><a href="https://serviceworke.rs">ServiceWorker Cookbook</a></li>
- <li><a href="/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers">Использование Service Workers</a></li>
- <li><a href="https://github.com/mdn/sw-test">Базовый пример для Service Worker</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Поддержка ServiceWorker браузерами</a></li>
- <li>{{jsxref("Promise", "Promises")}}</li>
- <li><a href="/ru/docs/DOM/Using_web_workers">Использование Web Workers</a></li>
-</ul>
+- [ServiceWorker Cookbook](https://serviceworke.rs)
+- [Использование Service Workers](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Базовый пример для Service Worker](https://github.com/mdn/sw-test)
+- [Поддержка ServiceWorker браузерами](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise", "Promises")}}
+- [Использование Web Workers](/ru/docs/DOM/Using_web_workers)

@@ -3,36 +3,34 @@ title: Event.cancelable
 slug: Web/API/Event/cancelable
 translation_of: Web/API/Event/cancelable
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<h2 id="Summary">Описание</h2>
+## Описание
 
-<p>Указывает, является ли событие отменяемым.</p>
+Указывает, является ли событие отменяемым.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>bool</var> = <em>event</em>.cancelable
-</pre>
+```
+bool = event.cancelable
+```
 
-<ul>
- <li>Возвращает булево значение <code>true</code>, если событие может быть отменено.</li>
-</ul>
+- Возвращает булево значение `true`, если событие может быть отменено.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush:js">var <var>bool</var> = <em>event</em>.cancelable;
-</pre>
+```js
+var bool = event.cancelable;
+```
 
-<p><code>bool</code> содержит <code>true</code> или <code>false</code> в зависимости от того, можно ли предотвратить действие события по умолчанию или нет.</p>
+`bool` содержит `true` или `false` в зависимости от того, можно ли предотвратить действие события по умолчанию или нет.
 
-<h2 id="Notes">Примечание</h2>
+## Примечание
 
-<p>Независимо от того, может событие быть отменено или нет, свойство определяется при инициализации события.</p>
+Независимо от того, может событие быть отменено или нет, свойство определяется при инициализации события.
 
-<p>Вызов на событии метода {{domxref("event.preventDefault", "preventDefault()")}} отменяет событие. При этом действие по умолчанию, связанное с событием, не выполняется.</p>
+Вызов на событии метода {{domxref("event.preventDefault", "preventDefault()")}} отменяет событие. При этом действие по умолчанию, связанное с событием, не выполняется.
 
-<h2 id="Specification">Спецификации</h2>
+## Спецификации
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-canCancel">DOM Level 2 Events: cancelable</a></li>
-</ul>
+- [DOM Level 2 Events: cancelable](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-canCancel)

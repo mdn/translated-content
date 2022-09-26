@@ -4,26 +4,28 @@ slug: Web/API/caches
 translation_of: Web/API/WindowOrWorkerGlobalScope/caches
 original_slug: Web/API/WindowOrWorkerGlobalScope/caches
 ---
-<div>{{APIRef()}}{{SeeCompatTable}}</div>
+{{APIRef()}}{{SeeCompatTable}}
 
-<p><code><strong>caches</strong></code> {{domxref("WindowOrWorkerGlobalScope")}}  свойство только для чтения интерфейса возвращающее  объект ассоциированный с текущим контекстом {{domxref("CacheStorage")}}.</p>
+**`caches`** {{domxref("WindowOrWorkerGlobalScope")}} свойство только для чтения интерфейса возвращающее объект ассоциированный с текущим контекстом {{domxref("CacheStorage")}}.
 
-<p>Этот объект реализует такую  функциональность как строгое соответствие для офлайн-использования  и генерирование пользовательских ответов на запросы.</p>
+Этот объект реализует такую функциональность как строгое соответствие для офлайн-использования и генерирование пользовательских ответов на запросы.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <em>myCacheStorage</em> = self.caches; // or just caches
-</pre>
+```
+var myCacheStorage = self.caches; // or just caches
+```
 
-<h3 id="Значение">Значение</h3>
+### Значение
 
-<p>Возвращает значение {{domxref("CacheStorage")}} .</p>
+Возвращает значение {{domxref("CacheStorage")}} .
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Данный пример показывает как надо использовать кеш в контексте <a href="/en-US/docs/Web/API/Service_Worker_API">service worker</a> для хранения в автономном режиме</p>
+Данный пример показывает как надо использовать кеш в контексте [service worker](/ru/docs/Web/API/Service_Worker_API) для хранения в автономном режиме
 
-<pre class="brush: js">this.addEventListener('install', function(event) {
+```js
+this.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
       return cache.addAll([
@@ -40,23 +42,20 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/caches
       ]);
     })
   );
-});</pre>
+});
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Также смотрите
 
-<p>{{Compat}}</p>
-
-<h2 id="Также_смотрите">Также смотрите</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">Service Workers</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a></li>
- <li>{{domxref("CacheStorage")}}</li>
- <li>{{domxref("Cache")}}</li>
-</ul>
+- [Service Workers](/ru/docs/Web/API/ServiceWorker_API)
+- [Web Workers](/ru/docs/Web/API/Web_Workers_API)
+- {{domxref("CacheStorage")}}
+- {{domxref("Cache")}}

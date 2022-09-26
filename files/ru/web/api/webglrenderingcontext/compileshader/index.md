@@ -3,59 +3,57 @@ title: WebGLRenderingContext.compileShader()
 slug: Web/API/WebGLRenderingContext/compileShader
 translation_of: Web/API/WebGLRenderingContext/compileShader
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><strong>WebGLRenderingContext.compileShader() </strong>метод <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> компилирующий исходный код GLSL шейдера в бинарные данные для использования программой  {{domxref("WebGLProgram")}}.</p>
+**WebGLRenderingContext.compileShader()** метод [WebGL API](/ru/docs/Web/API/WebGL_API) компилирующий исходный код GLSL шейдера в бинарные данные для использования программой {{domxref("WebGLProgram")}}.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">void <var><em>gl</em>.compileShader</var><var>(shader);</var>
-</pre>
+```
+void gl.compileShader(shader);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>shader</code></dt>
- <dd>Вершинный или фрагментный шейдер {{domxref("WebGLShader")}}.</dd>
-</dl>
+- `shader`
+  - : Вершинный или фрагментный шейдер {{domxref("WebGLShader")}}.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">var shader = gl.createShader(gl.VERTEX_SHADER);
+```js
+var shader = gl.createShader(gl.VERTEX_SHADER);
 gl.shaderSource(shader, shaderSource);
 gl.compileShader(shader);
-</pre>
+```
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("WebGLProgram")}}</li>
- <li>{{domxref("WebGLShader")}}</li>
- <li>{{domxref("WebGLRenderingContext.attachShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.createProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.createShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.detachShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getAttachedShaders()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getProgramParameter()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getProgramInfoLog()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getShaderParameter()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getShaderInfoLog()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getShaderSource()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.linkProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.shaderSource()")}}</li>
- <li>{{domxref("WebGLRenderingContext.useProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.validateProgram()")}}</li>
-</ul>
+- {{domxref("WebGLProgram")}}
+- {{domxref("WebGLShader")}}
+- {{domxref("WebGLRenderingContext.attachShader()")}}
+- {{domxref("WebGLRenderingContext.createProgram()")}}
+- {{domxref("WebGLRenderingContext.createShader()")}}
+- {{domxref("WebGLRenderingContext.deleteProgram()")}}
+- {{domxref("WebGLRenderingContext.deleteShader()")}}
+- {{domxref("WebGLRenderingContext.detachShader()")}}
+- {{domxref("WebGLRenderingContext.getAttachedShaders()")}}
+- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
+- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}
+- {{domxref("WebGLRenderingContext.getShaderParameter()")}}
+- {{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}
+- {{domxref("WebGLRenderingContext.getShaderInfoLog()")}}
+- {{domxref("WebGLRenderingContext.getShaderSource()")}}
+- {{domxref("WebGLRenderingContext.isProgram()")}}
+- {{domxref("WebGLRenderingContext.isShader()")}}
+- {{domxref("WebGLRenderingContext.linkProgram()")}}
+- {{domxref("WebGLRenderingContext.shaderSource()")}}
+- {{domxref("WebGLRenderingContext.useProgram()")}}
+- {{domxref("WebGLRenderingContext.validateProgram()")}}

@@ -3,78 +3,42 @@ title: PositionError
 slug: Web/API/GeolocationPositionError
 translation_of: Web/API/GeolocationPositionError
 ---
-<div>{{securecontext_header}}{{APIRef("Geolocation API")}}</div>
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-<p>Интерфейс <strong>PositionError</strong> представляет причину ошибки, возникающую при использовании устройства геолокации.</p>
+Интерфейс **PositionError** представляет причину ошибки, возникающую при использовании устройства геолокации.
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Интерфейс <strong>PositionError</strong> не наследует никаких свойств.</em></p>
+_Интерфейс **PositionError** не наследует никаких свойств._
 
-<dl>
- <dt>{{domxref("PositionError.code")}} {{readonlyInline}} {{securecontext_inline}}</dt>
- <dd>Возвращает <em>unsigned short,</em> представляющий код ошибки. Возможны следующие значения:
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <th scope="col">Значение</th>
-    <th scope="col">Связанная константа</th>
-    <th scope="col">Описание</th>
-   </tr>
-   <tr>
-    <td><code>1</code></td>
-    <td><code>PERMISSION_DENIED</code></td>
-    <td>Не удалось получить информацию о геолокации, поскольку у страницы не было разрешения на это.</td>
-   </tr>
-   <tr>
-    <td><code>2</code></td>
-    <td><code>POSITION_UNAVAILABLE</code></td>
-    <td>Не удалось получить геолокацию, поскольку по крайней мере один внутренний источник позиции вернул внутреннюю ошибку.</td>
-   </tr>
-   <tr>
-    <td><code>3</code></td>
-    <td><code>TIMEOUT</code></td>
-    <td>Время, разрешённое для получения геолокации, определяется {{domxref ("PositionOptions.timeout")}} информация была достигнута до получения информации.</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt>{{domxref("PositionError.message")}} {{readonlyInline}} {{securecontext_inline}}</dt>
- <dd>Returns a human-readable {{domxref("DOMString")}} describing the details of the error. Specifications note that this is primarily intended for debugging use and not to be shown directly in a user interface.</dd>
-</dl>
+- {{domxref("PositionError.code")}} {{readonlyInline}} {{securecontext_inline}}
 
-<h2 id="Methods">Methods</h2>
+  - : Возвращает _unsigned short,_ представляющий код ошибки. Возможны следующие значения:
 
-<p><em><em>The <code>PositionError</code> interface <em>neither implements nor inherits any method.</em></em></em></p>
+    | Значение | Связанная константа    | Описание                                                                                                                                                           |
+    | -------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+    | `1`      | `PERMISSION_DENIED`    | Не удалось получить информацию о геолокации, поскольку у страницы не было разрешения на это.                                                                       |
+    | `2`      | `POSITION_UNAVAILABLE` | Не удалось получить геолокацию, поскольку по крайней мере один внутренний источник позиции вернул внутреннюю ошибку.                                               |
+    | `3`      | `TIMEOUT`              | Время, разрешённое для получения геолокации, определяется {{domxref ("PositionOptions.timeout")}} информация была достигнута до получения информации. |
 
-<h2 id="Specifications">Specifications</h2>
+- {{domxref("PositionError.message")}} {{readonlyInline}} {{securecontext_inline}}
+  - : Returns a human-readable {{domxref("DOMString")}} describing the details of the error. Specifications note that this is primarily intended for debugging use and not to be shown directly in a user interface.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Geolocation', '#position_error_interface', 'PositionError')}}</td>
-   <td>{{Spec2('Geolocation')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+## Methods
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+**The `PositionError` interface _neither implements nor inherits any method._**
 
+## Specifications
 
+| Specification                                                                                    | Status                           | Comment                |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------- |
+| {{SpecName('Geolocation', '#position_error_interface', 'PositionError')}} | {{Spec2('Geolocation')}} | Initial specification. |
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/WebAPI/Using_geolocation">Using geolocation</a></li>
- <li>The {{domxref("Geolocation")}} interface that use it.</li>
-</ul>
+## See also
+
+- [Using geolocation](/ru/docs/WebAPI/Using_geolocation)
+- The {{domxref("Geolocation")}} interface that use it.

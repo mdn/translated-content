@@ -10,23 +10,26 @@ tags:
   - prompt
 translation_of: Web/API/BeforeInstallPromptEvent/prompt
 ---
-<div>Метод <strong><code>prompt()</code></strong> интерфейса {{domxref("BeforeInstallPromptEvent")}} позволяет разработчику показывать подсказку об установке в любое время по своему выбору. </div>
+Метод **`prompt()`** интерфейса {{domxref("BeforeInstallPromptEvent")}} позволяет разработчику показывать подсказку об установке в любое время по своему выбору.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">BeforeInstallPromptEvent.prompt()</pre>
+```
+BeforeInstallPromptEvent.prompt()
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<p>None.</p>
+None.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Пустой {{jsxref("Promise")}}.</p>
+Пустой {{jsxref("Promise")}}.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre>var isTooSoon = true;
+```
+var isTooSoon = true;
 window.addEventListener("beforeinstallprompt", function(e) {
   if (isTooSoon) {
     e.preventDefault(); // Предотвращает быстрое отображение
@@ -39,10 +42,9 @@ window.addEventListener("beforeinstallprompt", function(e) {
 
   // Событие было повторно отправлено в ответ на наш запрос
   // ...
-});</pre>
+});
+```
 
-<h2 id="Совместимость_с_браузером">Совместимость с браузером</h2>
+## Совместимость с браузером
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

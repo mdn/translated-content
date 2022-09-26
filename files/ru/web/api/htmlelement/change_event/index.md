@@ -10,47 +10,31 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onchange
 original_slug: Web/API/GlobalEventHandlers/onchange
 ---
-<div>
-<div>{{ ApiRef("HTML DOM") }}</div>
+{{ ApiRef("HTML DOM") }}
 
-<div> </div>
-</div>
+Свойство `onchange` (Дословно "На изменение") устанавливает и возвращает [обработчик события](/docs/Web/Guide/Events/Event_handlers), для события {{event("change")}} (Изменение чего-либо).
 
-<p>Свойство <code>onchange</code> (Дословно "На изменение") устанавливает и возвращает <a href="/docs/Web/Guide/Events/Event_handlers">обработчик события</a>, для события {{event("change")}} (Изменение чего-либо).</p>
+## Синтаксис
 
-<h2 id="Syntax">Синтаксис</h2>
+```
+element.onchange = handlerFunction; // handlerFunction - ссылка на функцию обработчик, установленная как свойство onchange, для элемента element
+var handlerFunction = element.onchange;
+```
 
-<pre class="syntaxbox"><em><var>element</var></em>.onchange = <em>handlerFunction</em>; // handlerFunction - ссылка на функцию обработчик, установленная как свойство <code>onchange, для элемента element</code>
-var <em>handlerFunction</em> = <em><var>element</var></em>.onchange;
-</pre>
+`handlerFunction` должна быть либо [функцией](/ru/docs/Web/JavaScript/Reference/Functions) определяющей обработчик события, либо `null` .
 
-<p><code><em>handlerFunction</em></code>  должна быть либо <a href="/en-US/docs/Web/JavaScript/Reference/Functions">функцией</a> определяющей обработчик события, либо <code>null</code> .</p>
+## Примечания
 
-<h2 id="Notes">Примечания</h2>
+Почитайте страницу [DOM обработчики события](/ru/docs/Web/Guide/Events/Event_handlers) , там содержится вся информация о работе с `on...` обработчиками.
 
-<p>Почитайте  страницу <a href="/en-US/docs/Web/Guide/Events/Event_handlers">DOM обработчики события</a> , там содержится вся информация о работе с  <code>on...</code>  обработчиками.</p>
+Документация по событию {{event("change")}}.
 
-<p>Документация по событию {{event("change")}}.</p>
+## Спецификация
 
-<h2 id="Specification">Спецификация</h2>
+| Спецификация                                                                                     | Статус                           | Комментарий |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG','webappapis.html#handler-onchange','onchange')}} | {{Spec2('HTML WHATWG')}} |             |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onchange','onchange')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Совместимость с браузерами
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}

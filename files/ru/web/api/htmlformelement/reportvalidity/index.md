@@ -3,29 +3,32 @@ title: HTMLFormElement.reportValidity()
 slug: Web/API/HTMLFormElement/reportValidity
 translation_of: Web/API/HTMLFormElement/reportValidity
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>Метод <strong><code>HTMLFormElement.reportValidity()</code></strong> возвращает <strong><code style="font-style: normal; line-height: 1.5;">true</code></strong> если все дочерние элементы прошли проверку. Когда возвращается <strong><code style="font-style: normal; line-height: 1.5;">false</code></strong>, по каждому дочернему элементу не прошедшему проверку генерируется событие <code><a href="https://developer.mozilla.org/en-US/docs/Web/Events/invalid" title="/en-US/docs/Web/Events/invalid">invalid</a></code> и пользователю сообщаются проблемы проверки.</p>
+Метод **`HTMLFormElement.reportValidity()`** возвращает **`true`** если все дочерние элементы прошли проверку. Когда возвращается **`false`**, по каждому дочернему элементу не прошедшему проверку генерируется событие [`invalid`](https://developer.mozilla.org/en-US/docs/Web/Events/invalid "/en-US/docs/Web/Events/invalid") и пользователю сообщаются проблемы проверки.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="eval"><em>HTMLFormElement</em>.reportValidity()
-</pre>
+```
+HTMLFormElement.reportValidity()
+```
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="eval">document.forms["myform"].addEventListener('invalid', function() {
+```
+document.forms["myform"].addEventListener('invalid', function() {
   //Опциональный ответ здесь.
 }, false);
 
 document.forms["myform"].addEventListener('submit', function() {
   document.forms["myform"].reportValidity();
-}, false);</pre>
+}, false);
+```
 
-<h2 id="Specifications">Спецификация</h2>
+## Спецификация
 
-<p><a class="external" href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-constraint-validation-api">HTML 5.1 Forms: The Constraint Validation API</a></p>
+[HTML 5.1 Forms: The Constraint Validation API](http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-constraint-validation-api)
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

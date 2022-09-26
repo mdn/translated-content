@@ -3,41 +3,41 @@ title: ServiceWorkerContainer.register()
 slug: Web/API/ServiceWorkerContainer/register
 translation_of: Web/API/ServiceWorkerContainer/register
 ---
-<p>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</p>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p><strong><code>register()</code></strong> метод {{domxref("ServiceWorkerContainer")}} интерфейса который создаёт и обновляет <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration" title="The ServiceWorkerRegistion interface of the ServiceWorker API represents the service worker registration. You register a service worker to control one or more pages that share the same origin."><code>ServiceWorkerRegistration</code></a>  для указанного <code>URL js скрипта</code>.</p>
+**`register()`** метод {{domxref("ServiceWorkerContainer")}} интерфейса который создаёт и обновляет [`ServiceWorkerRegistration`](/ru/docs/Web/API/ServiceWorkerRegistration "The ServiceWorkerRegistion interface of the ServiceWorker API represents the service worker registration. You register a service worker to control one or more pages that share the same origin.") для указанного `URL js скрипта`.
 
-<p>Если удачно, service worker registration связывается по указанному URL js скрипта , который соответственно используется для проверки совпадения при навигации по URL. Если метод не возвращает <code>ServiceWorkerRegistration</code>, он возвращает <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object is used for deferred and asynchronous computations. A Promise is in one of the three states:"><code>Promise</code></a>. Есть возможность вызвать этот метод без проверки на условие, т.е. нет необходимости сначала проверять существует ли активная регистрация в данный момент или нет.</p>
+Если удачно, service worker registration связывается по указанному URL js скрипта , который соответственно используется для проверки совпадения при навигации по URL. Если метод не возвращает `ServiceWorkerRegistration`, он возвращает [`Promise`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object is used for deferred and asynchronous computations. A Promise is in one of the three states:"). Есть возможность вызвать этот метод без проверки на условие, т.е. нет необходимости сначала проверять существует ли активная регистрация в данный момент или нет.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js">ServiceWorkerContainer.register(scriptURL, options)
-  .then(function(ServiceWorkerRegistration) { ... });</pre>
+```js
+ServiceWorkerContainer.register(scriptURL, options)
+  .then(function(ServiceWorkerRegistration) { ... });
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<dl>
- <dt><code>scriptURL</code></dt>
- <dd>URL скрипта service worker - а.</dd>
- <dt><code>options</code> <code>{{optional_inline}}</code></dt>
- <dd>Опции — это объект  необходимый для регистрации service worker-a. В данный момент доступные опции:
- <ul>
-  <li><code>scope</code>: {{domxref("USVString")}} представляет собой URL, который определяет scope service worker-a; Какой диапазон URL может контролировать service worker. Это обычно относительный URL. Значение по умолчанию — это URL,  который соответствует корню, т.е. './', используя директорию расположения js скрипта service worker-а как основу.</li>
- </ul>
- </dd>
-</dl>
+- `scriptURL`
+  - : URL скрипта service worker - а.
+- `options` `{{optional_inline}}`
 
-<h3 id="Возвращает">Возвращает</h3>
+  - : Опции — это объект необходимый для регистрации service worker-a. В данный момент доступные опции:
 
-<p>{{domxref("Promise")}} который резолвится в {{domxref("ServiceWorkerRegistration")}} объект.</p>
+    - `scope`: {{domxref("USVString")}} представляет собой URL, который определяет scope service worker-a; Какой диапазон URL может контролировать service worker. Это обычно относительный URL. Значение по умолчанию — это URL, который соответствует корню, т.е. './', используя директорию расположения js скрипта service worker-а как основу.
 
-<h2 id="Пример_использования">Пример использования</h2>
+### Возвращает
 
-<p>Примеры кода, приведённые ниже, должны рассматриваться вместе для лучшего понимания того, как применяется scope service worker-ов к конкретной странице.</p>
+{{domxref("Promise")}} который резолвится в {{domxref("ServiceWorkerRegistration")}} объект.
 
-<p>Следующий пример использует дефолтный scope (не указывая его прямо). Service worker в этом случае будет контролировать <code>example.com/index.html</code> и страницы, расположенные "глубже", например <code>example.com/product/description.html</code>.</p>
+## Пример использования
 
-<pre class="brush: js">if ('serviceWorker' in navigator) {
+Примеры кода, приведённые ниже, должны рассматриваться вместе для лучшего понимания того, как применяется scope service worker-ов к конкретной странице.
+
+Следующий пример использует дефолтный scope (не указывая его прямо). Service worker в этом случае будет контролировать `example.com/index.html` и страницы, расположенные "глубже", например `example.com/product/description.html`.
+
+```js
+if ('serviceWorker' in navigator) {
   // Регистрация service worker-а, расположенного в корне сайта
   // за счёт использования дефолтного scope (не указывая его)
   navigator.serviceWorker.register('/sw.js').then(function(registration) {
@@ -48,11 +48,13 @@ translation_of: Web/API/ServiceWorkerContainer/register
 } else {
   // Текущий браузер не поддерживает service worker-ы.
   console.log('Текущий браузер не поддерживает service worker-ы');
-}</pre>
+}
+```
 
-<p>Следующий пример, если он размещён на странице корня сайта, будет применён ровно к тем же страницам, что и пример выше. Помните, scope, если он указан, использует path страницы в качестве своей базы. Это значит, что, если следующий пример будет использоваться на странице <code>example.com/product/description.html</code>, то scope <code>./</code> будет означать, что service worker работает только со страницами внутри <code>example.com/product</code>. Если необходимо зарегистрировать service worker на <code>example.com/product/description.html</code>, и вы хотите, чтобы он обслуживал и корень, <code>example.com</code>, то scope лучше не указывать совсем, как в примере выше.</p>
+Следующий пример, если он размещён на странице корня сайта, будет применён ровно к тем же страницам, что и пример выше. Помните, scope, если он указан, использует path страницы в качестве своей базы. Это значит, что, если следующий пример будет использоваться на странице `example.com/product/description.html`, то scope `./` будет означать, что service worker работает только со страницами внутри `example.com/product`. Если необходимо зарегистрировать service worker на `example.com/product/description.html`, и вы хотите, чтобы он обслуживал и корень, `example.com`, то scope лучше не указывать совсем, как в примере выше.
 
-<pre class="brush: js">if ('serviceWorker' in navigator) {
+```js
+if ('serviceWorker' in navigator) {
   // Регистрация service worker-а, расположенного в корне сайта
   // с указанием более строгого scope
   navigator.serviceWorker.register('/sw.js', {scope: './'}).then(function(registration) {
@@ -62,14 +64,13 @@ translation_of: Web/API/ServiceWorkerContainer/register
   });
 } else {
   console.log('Текущий браузер не поддерживает service worker-ы.');
-}</pre>
+}
+```
 
-
-
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
 {{Specifications}}
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
+## Браузерная совместимость
 
-<p>{{Compat}}</p>
+{{Compat}}

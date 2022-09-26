@@ -11,41 +11,39 @@ tags:
   - Узлы
 translation_of: Web/API/Node/previousSibling
 ---
-<div>
-<div>{{APIRef("DOM")}}</div>
-</div>
+{{APIRef("DOM")}}
 
-<p>Свойство <code><strong>Node.previousSibling</strong></code> используется только для чтения, оно возвращает узел предшествующий указанному в родительском элементе {{domxref("Node.childNodes", "childNodes")}}, или <code>null</code>,  если указанный узел первый в своём родителе.</p>
+Свойство **`Node.previousSibling`** используется только для чтения, оно возвращает узел предшествующий указанному в родительском элементе {{domxref("Node.childNodes", "childNodes")}}, или `null`, если указанный узел первый в своём родителе.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><var>previousNode</var> = <em>node</em>.previousSibling;
-</pre>
+```
+previousNode = node.previousSibling;
+```
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush:js">// &lt;a&gt;&lt;b1 id="b1"/&gt;&lt;b2 id="b2"/&gt;&lt;/a&gt;
+```js
+// <a><b1 id="b1"/><b2 id="b2"/></a>
 
 alert(document.getElementById("b1").previousSibling); // null
 alert(document.getElementById("b2").previousSibling.id); // "b1"
-</pre>
+```
 
-<h2 id="Notes">Примечание</h2>
+## Примечание
 
-<div><p>Браузеры, основанные на Gecko, вставляют текстовые узлы в документ для представления пробелов в разметке.
-    Поэтому узел, полученный, например, при использовании <a href="/ru/docs/Web/API/Node/firstChild" title="Свойство Node.firstChild только для чтения, возвращающее первый потомок узла в древе или null, если узел является бездетным. Если узел это документ, он возвращает первый узел в списке своих прямых детей."><code>Node.firstChild</code></a> или <a href="/ru/docs/Web/API/Node/previousSibling" title="Свойство Node.previousSibling используется только для чтения, оно возвращает узел предшествующий указанному в родительском элементе childNodes, или null,  если указанный узел первый в своём родителе."><code>Node.previousSibling</code></a> может относиться к
-    пробелу, а не к тому элементу, который автор хотел получить.</p>
+Браузеры, основанные на Gecko, вставляют текстовые узлы в документ для представления пробелов в разметке.
+Поэтому узел, полученный, например, при использовании [`Node.firstChild`](/ru/docs/Web/API/Node/firstChild "Свойство Node.firstChild только для чтения, возвращающее первый потомок узла в древе или null, если узел является бездетным. Если узел это документ, он возвращает первый узел в списке своих прямых детей.") или [`Node.previousSibling`](/ru/docs/Web/API/Node/previousSibling "Свойство Node.previousSibling используется только для чтения, оно возвращает узел предшествующий указанному в родительском элементе childNodes, или null,  если указанный узел первый в своём родителе.") может относиться к
+пробелу, а не к тому элементу, который автор хотел получить.
 
-    <p>Смотрите <a class="new" href="/ru/docs/Web/Guide/DOM/Whitespace_in_the_DOM" rel="nofollow">Пробел в DOM</a> и
-    <a class="external" href="http://www.w3.org/DOM/faq.html#emptytext" rel="noopener">W3C DOM 3 FAQ: Почему некоторые текстовые узлы пустые?</a>
-    для дополнительной информации.</p></div>
+Смотрите [Пробел в DOM](/ru/docs/Web/Guide/DOM/Whitespace_in_the_DOM) и
+[W3C DOM 3 FAQ: Почему некоторые текстовые узлы пустые?](http://www.w3.org/DOM/faq.html#emptytext)
+для дополнительной информации.
 
-<p>Для навигации через список дочерних узлов в обратном порядке используйте <a href="/en-US/docs/Web/API/Node.nextSibling" title="DOM/Node.nextSibling">Node.nextSibling</a>.</p>
+Для навигации через список дочерних узлов в обратном порядке используйте [Node.nextSibling](/ru/docs/Web/API/Node.nextSibling "DOM/Node.nextSibling").
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<ul>
- <li><a href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-previousSibling">DOM Level 1 Core: previousSibling</a></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-640FB3C8">DOM Level 2 Core: previousSibling</a></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-640FB3C8">DOM Level 3 Core: previousSibling</a></li>
-</ul>
+- [DOM Level 1 Core: previousSibling](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-previousSibling)
+- [DOM Level 2 Core: previousSibling](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-640FB3C8)
+- [DOM Level 3 Core: previousSibling](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-640FB3C8)

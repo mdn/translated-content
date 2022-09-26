@@ -3,65 +3,70 @@ title: MouseEvent.screenX
 slug: Web/API/MouseEvent/screenX
 translation_of: Web/API/MouseEvent/screenX
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p><strong><code>screenX</code></strong> - read-only свойство интерфейса события {{domxref("MouseEvent")}}, соответствующее горизонтальной координате (смещению) указателя мыши в глобальных (экранных) координатах.</p>
+**`screenX`** - read-only свойство интерфейса события {{domxref("MouseEvent")}}, соответствующее горизонтальной координате (смещению) указателя мыши в глобальных (экранных) координатах.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <em>x</em> = <em>instanceOfMouseEvent</em>.screenX
-</pre>
+```
+var x = instanceOfMouseEvent.screenX
+```
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p>Значение с плавающей точкой типа <code>double</code>. В ранних версиях этой спецификации определялось как целое число, соответствующее количеству пикселей. Подробнее см. раздел "Совместимость с браузерами". </p>
+Значение с плавающей точкой типа `double`. В ранних версиях этой спецификации определялось как целое число, соответствующее количеству пикселей. Подробнее см. раздел "Совместимость с браузерами".
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Этом примере демонстрирует координаты вашей мыши в случае получения события {{Event("mousemove")}}.</p>
+Этом примере демонстрирует координаты вашей мыши в случае получения события {{Event("mousemove")}}.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;Подвигайте мышью, чтобы увидеть положение её курсора.&lt;/p&gt;
-&lt;p id="screen-log"&gt;&lt;/p&gt;</pre>
+```html
+<p>Подвигайте мышью, чтобы увидеть положение её курсора.</p>
+<p id="screen-log"></p>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">let screenLog = document.querySelector('#screen-log');
+```js
+let screenLog = document.querySelector('#screen-log');
 document.addEventListener('mousemove', logKey);
 
 function logKey(e) {
   screenLog.innerText = `
     Screen X/Y: ${e.screenX}, ${e.screenY}
     Client X/Y: ${e.clientX}, ${e.clientY}`;
-}</pre>
-
-<h4 id="Результат_выполнения">Результат выполнения</h4>
-
-<p>{{EmbedLiveSample("Пример")}}</p>
-
-<h3 id="Обработка_события">Обработка события</h3>
-
-<p>Когда вы отлавливаете события на окне, документе или других элементах, имеющих размер, вы можете получить координаты этого события (например, клика), и обработать его соответствующим образом, например, так, как в этом примере:</p>
-
-<pre class="brush: js">function checkClickMap(e) {
-  if (e.screenX &lt; 50) doRedButton();
-  if (50 &lt;= e.screenX &amp;&amp; e.screenX &lt; 100) doYellowButton();
-  if (e.screenX &gt;= 100) doRedButton();
 }
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+#### Результат выполнения
+
+{{EmbedLiveSample("Пример")}}
+
+### Обработка события
+
+Когда вы отлавливаете события на окне, документе или других элементах, имеющих размер, вы можете получить координаты этого события (например, клика), и обработать его соответствующим образом, например, так, как в этом примере:
+
+```js
+function checkClickMap(e) {
+  if (e.screenX < 50) doRedButton();
+  if (50 <= e.screenX && e.screenX < 100) doYellowButton();
+  if (e.screenX >= 100) doRedButton();
+}
+```
+
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{ domxref("MouseEvent") }}</li>
- <li>{{ domxref("MouseEvent.screenY","screenY") }}</li>
- <li>{{ domxref("MouseEvent.clientX","clientX") }} / {{ domxref("MouseEvent.clientY", "clientY") }}</li>
-</ul>
+## Смотрите также
+
+- {{ domxref("MouseEvent") }}
+- {{ domxref("MouseEvent.screenY","screenY") }}
+- {{ domxref("MouseEvent.clientX","clientX") }} / {{ domxref("MouseEvent.clientY", "clientY") }}

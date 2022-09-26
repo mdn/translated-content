@@ -3,24 +3,24 @@ title: Document.all
 slug: Web/API/Document/all
 translation_of: Web/API/Document/all
 ---
-<div>{{APIRef("DOM")}}{{Deprecated_Header("HTML5")}}</div>
+{{APIRef("DOM")}}{{Deprecated_Header("HTML5")}}
 
-<p>The {{DOMxRef("Document")}} Свойство <strong><code>all</code></strong> только для чтения интерфейса возвращает: {{DOMxRef("HTMLAllCollection")}} С корнем в узле документа. Другими словами, он возвращает все содержимое страницы.</p>
+The {{DOMxRef("Document")}} Свойство **`all`** только для чтения интерфейса возвращает: {{DOMxRef("HTMLAllCollection")}} С корнем в узле документа. Другими словами, он возвращает все содержимое страницы.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <var>htmlAllCollection</var> = document.all;</pre>
+```
+var htmlAllCollection = document.all;
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<p>В {{DOMxRef("HTMLAllCollection")}} содержится все узлы в документе.</p>
+В {{DOMxRef("HTMLAllCollection")}} содержится все узлы в документе.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

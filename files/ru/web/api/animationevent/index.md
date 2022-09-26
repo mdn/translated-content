@@ -3,69 +3,46 @@ title: AnimationEvent
 slug: Web/API/AnimationEvent
 translation_of: Web/API/AnimationEvent
 ---
-<p>{{SeeCompatTable}}{{APIRef("Web Animations API")}}</p>
+{{SeeCompatTable}}{{APIRef("Web Animations API")}}
 
-<p>AnimationEvent - это интерфейс представляющий события, содержащие информацию, связанную с анимацией.</p>
+AnimationEvent - это интерфейс представляющий события, содержащие информацию, связанную с анимацией.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Также свойства наследуются от родителя {{domxref("Event")}}.</em></p>
+_Также свойства наследуются от родителя {{domxref("Event")}}._
 
-<dl>
- <dt>{{domxref("AnimationEvent.animationName")}} {{readonlyInline}}</dt>
- <dd>Является {{domxref("DOMString")}} содержащей значения {{cssxref("animation-name")}} CSS-свойств связанных с <strong>transition.</strong></dd>
- <dt>{{domxref("AnimationEvent.elapsedTime")}} {{readonlyInline}}</dt>
- <dd>Является числом с плавающей точкой, которое задаёт количество времени от начала анимации в секундах, когда это событие отклонено, несмотря на какое-либо время анимация была остановлена.Для события   "animationstart" , elapsedTime равно  <code>0.0 если не было заданно отрицательное значение для </code>{{cssxref("animation-delay")}}, в этом случае событие будет срабатывать с  elapsedTime содержащим <code>(-1 * </code><em>delay</em><code>)</code>.</dd>
- <dt>{{domxref("AnimationEvent.pseudoElement")}} {{readonlyInline}}</dt>
- <dd>Является  {{domxref("DOMString")}}, начинающийся с '::', содержащий имя <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">псевдо-элемента </a> ,на котором работает анимация.Если анимация не работает на псевдо-элементе, но работает на элементе,значит указанна пустая строка ' '. </dd>
-</dl>
+- {{domxref("AnimationEvent.animationName")}} {{readonlyInline}}
+  - : Является {{domxref("DOMString")}} содержащей значения {{cssxref("animation-name")}} CSS-свойств связанных с **transition.**
+- {{domxref("AnimationEvent.elapsedTime")}} {{readonlyInline}}
+  - : Является числом с плавающей точкой, которое задаёт количество времени от начала анимации в секундах, когда это событие отклонено, несмотря на какое-либо время анимация была остановлена.Для события "animationstart" , elapsedTime равно `0.0 если не было заданно отрицательное значение для `{{cssxref("animation-delay")}}, в этом случае событие будет срабатывать с elapsedTime содержащим `(-1 * `_delay_`)`.
+- {{domxref("AnimationEvent.pseudoElement")}} {{readonlyInline}}
+  - : Является {{domxref("DOMString")}}, начинающийся с '::', содержащий имя [псевдо-элемента ](/ru/docs/Web/CSS/Pseudo-elements),на котором работает анимация.Если анимация не работает на псевдо-элементе, но работает на элементе,значит указанна пустая строка ' '.
 
-<h2 id="Конструктор">Конструктор</h2>
+## Конструктор
 
-<dl>
- <dt>{{domxref("AnimationEvent.AnimationEvent", "AnimationEvent()")}}</dt>
- <dd>Создаёт событие AnimationEvent с передачей параметров.</dd>
-</dl>
+- {{domxref("AnimationEvent.AnimationEvent", "AnimationEvent()")}}
+  - : Создаёт событие AnimationEvent с передачей параметров.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em>Также наследуют методы от родителя {{domxref("Event")}}</em>.</p>
+_Также наследуют методы от родителя {{domxref("Event")}}_.
 
-<dl>
- <dt>{{domxref("AnimationEvent.initAnimationEvent()")}} {{non-standard_inline}}{{deprecated_inline}}</dt>
- <dd>Инициализирует AnimationEvent созданную используя резко суждённый метод {{domxref("Document.createEvent()", "Document.createEvent(\"AnimationEvent\")")}}.</dd>
-</dl>
+- {{domxref("AnimationEvent.initAnimationEvent()")}} {{non-standard_inline}}{{deprecated_inline}}
+  - : Инициализирует AnimationEvent созданную используя резко суждённый метод {{domxref("Document.createEvent()", "Document.createEvent(\"AnimationEvent\")")}}.
 
-<h2 id="Спецификация">Спецификация</h2>
+## Спецификация
 
- <table>
-  <thead>
-   <tr>
-    <th scope="col">Спецификация</th>
-    <th scope="col">Статус</th>
-    <th scope="col">Комментарий</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td>{{ SpecName('CSS3 Animations', '#AnimationEvent-interface', 'AnimationEvent') }}</td>
-    <td>{{ Spec2('CSS3 Animations') }}</td>
-    <td>
-     <p>Определяет инициализацию</p>
-    </td>
-   </tr>
-  </tbody>
- </table>
+| Спецификация                                                                                                 | Статус                                   | Комментарий              |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------ |
+| {{ SpecName('CSS3 Animations', '#AnimationEvent-interface', 'AnimationEvent') }} | {{ Spec2('CSS3 Animations') }} | Определяет инициализацию |
 
-<h2 id="Поддержка_браузерами"> Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_animations">Использование CSS-анимации</a></li>
- <li>Анимация связанных CSS-свойств и по правилам: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.</li>
-</ul>
+- [Использование CSS-анимации](/ru/docs/CSS/Using_CSS_animations)
+- Анимация связанных CSS-свойств и по правилам: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.

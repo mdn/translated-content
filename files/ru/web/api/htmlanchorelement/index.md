@@ -3,99 +3,93 @@ title: HTMLAnchorElement
 slug: Web/API/HTMLAnchorElement
 translation_of: Web/API/HTMLAnchorElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>Интерфейс <strong><code>HTMLAnchorElement</code></strong> представляет элементы гиперссылки и предоставляет специальные свойства и методы (помимо обычного объектного интерфейса {{domxref("HTMLElement")}}, который они наследуют) для управления макетом и представлением таких элементов.<br>
- Этот интерфейс соответствует элементу &lt;a&gt;; не путать с &lt; link&gt;, который представлен HTMLLinkElement.</p>
+Интерфейс **`HTMLAnchorElement`** представляет элементы гиперссылки и предоставляет специальные свойства и методы (помимо обычного объектного интерфейса {{domxref("HTMLElement")}}, который они наследуют) для управления макетом и представлением таких элементов.
+Этот интерфейс соответствует элементу \<a>; не путать с < link>, который представлен HTMLLinkElement.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Наследует свойства от его родителя,</em><em>{{domxref("HTMLElement")}}, и реализует те из {{domxref("URLUtils")}}.</em></p>
+_Наследует свойства от его родителя,\_\_{{domxref("HTMLElement")}}, и реализует те из {{domxref("URLUtils")}}._
 
-<dl>
- <dt>{{domxref("HTMLAnchorElement.accessKey")}}</dt>
- <dd>Это {{domxref("DOMString")}} отображает собой единичный символ, который переключает фокус ввода на гиперссылку.</dd>
- <dt>{{domxref("HTMLAnchorElement.charset")}} {{obsolete_inline}}</dt>
- <dd>Это {{domxref("DOMString")}} отображает кодировку символов связанного ресурса.</dd>
- <dt>{{domxref("HTMLAnchorElement.coords")}} {{obsolete_inline}}</dt>
- <dd>Это {{domxref("DOMString")}} отображает список координат разделённый запятыми.</dd>
- <dt>{{domxref("HTMLAnchorElement.download")}} {{experimental_inline}}</dt>
- <dd>Это {{domxref("DOMString")}} показывать что связанный ресурс предназначен для загрузки, а не для отображения в браузере. Значение представляет предполагаемое имя файла. Если имя не является допустимым именем файла нижележащей ОС, браузер будет адаптировать его. Значение это URL по схеме <code>http:</code>, <code>file:</code>, <code>data:</code> или даже <code>blob:</code> (созданный с помощью {{domxref("URL.createObjectURL")}}).</dd>
- <dt>{{domxref("URLUtils.hash")}}</dt>
- <dd>Это {{domxref("DOMString")}} отображает фрагмент идентификатора, включая ведущий hash mark ('<code>#</code>'), если, указан в URL.</dd>
- <dt>{{domxref("URLUtils.host")}}</dt>
- <dd>Это {{domxref("DOMString")}} отображает имя хоста порт (если это не порт по умолчанию) в указанном URL.</dd>
- <dt>{{domxref("URLUtils.hostname")}}</dt>
- <dd>Это {{domxref("DOMString")}} отображает имя хоста в указанном URL.</dd>
- <dt>{{domxref("URLUtils.href")}}</dt>
- <dd>Это {{domxref("DOMString")}} что отображает {{htmlattrxref("href", "a")}} HTML атрибут, содержащий действительный URL связанного ресурса.</dd>
- <dt>{{domxref("HTMLAnchorElement.hreflang")}}</dt>
- <dd>Это {{domxref("DOMString")}} что отображает HTML атрибут {{htmlattrxref("hreflang", "a")}}, показывающий язык связанного ресурса.</dd>
- <dt>{{domxref("HTMLAnchorElement.media")}}</dt>
- <dd>Это {{domxref("DOMString")}} что отображает {{htmlattrxref("media", "a")}} HTML атрибут, с указанием предполагаемого media для связанного ресурса.</dd>
- <dt>{{domxref("HTMLAnchorElement.name")}} {{obsolete_inline}}</dt>
- <dd>Это {{domxref("DOMString")}} отображает имя якоря.</dd>
- <dt>{{domxref("URLUtils.password")}}</dt>
- <dd>Это {{domxref("DOMString")}} содержащий пароль, указанный перед именем домена.</dd>
- <dt>{{domxref("URLUtils.origin")}} {{readonlyInline}}</dt>
- <dd>Возвращает {{domxref("DOMString")}} содержащий источник, то есть его схему, его домен и его порт.</dd>
- <dt>{{domxref("URLUtils.pathname")}}</dt>
- <dd>Это {{domxref("DOMString")}} отображающий составную часть пути имени, любого, ссылающегося URL.</dd>
- <dt>{{domxref("URLUtils.port")}}</dt>
- <dd>Это {{domxref("DOMString")}} отображающий составную часть порта, любого, ссылающегося URL.</dd>
- <dt>{{domxref("URLUtils.protocol")}}</dt>
- <dd>Is a {{domxref("DOMString")}} отображающий составную часть протокола, включая двоеточия ('<code>:</code>'), ссылающегося URL.</dd>
- <dt>{{domxref("HTMLAnchorElement.referrer")}} {{experimental_inline}}</dt>
- <dd>Это {{domxref("DOMString")}} что отображает {{htmlattrxref("referrer", "a")}} HTML атрибут, показывающий какой referrer используется, когда выбрано изображение.</dd>
- <dt>{{domxref("HTMLAnchorElement.rel")}}</dt>
- <dd>Это {{domxref("DOMString")}} что отображает {{htmlattrxref("rel", "a")}} HTML атрибут, уточняя взаимоотношения целевого объекта к связанному объекту.</dd>
- <dt>{{domxref("HTMLAnchorElement.relList")}} {{readonlyInline}}</dt>
- <dd>Возвращает {{domxref("DOMTokenList")}} который отображает {{htmlattrxref("rel", "a")}} HTML атрибут, как список токенов.</dd>
- <dt>{{domxref("HTMLAnchorElement.rev")}} {{obsolete_inline}}</dt>
- <dd>Это {{domxref("DOMString")}} отображающий как {{htmlattrxref("rev", "a")}} HTML атрибут, уточняя взаимоотношения связанного объекта к целевому объекту</dd>
- <dt>{{domxref("URLUtils.search")}}</dt>
- <dd>Это {{domxref("DOMString")}} отображающий искомый элемент, включая ведущий знак вопроса ('<code>?</code>'), если таковой имеется, в ссылающемся URL.</dd>
- <dt>{{domxref("HTMLAnchorElement.shape")}} {{obsolete_inline}}</dt>
- <dd>Это {{domxref("DOMString")}} отображающий вид активной области.</dd>
- <dt>{{domxref("HTMLAnchorElement.tabindex")}}</dt>
- <dd>Это <code>long</code> содержащий положение элемента в порядке навигационного переключения для текущего документа.</dd>
- <dt>{{domxref("HTMLAnchorElement.target")}}</dt>
- <dd>Это {{domxref("DOMString")}} который отображает {{htmlattrxref("target", "a")}} HTML атрибут, указывая где отображается связанный ресурс.</dd>
- <dt>{{domxref("HTMLAnchorElement.text")}}</dt>
- <dd>Это {{domxref("DOMString")}} является синонимом {{domxref("Node.textContent")}} свойства.</dd>
- <dt>{{domxref("HTMLAnchorElement.type")}}</dt>
- <dd>Это {{domxref("DOMString")}} которое отображает {{htmlattrxref("type", "a")}} HTML атрибут, показывающий MIME тип связанного ресурса.</dd>
- <dt>{{domxref("URLUtils.username")}}</dt>
- <dd>Это {{domxref("DOMString")}} содержащий имя пользователя определённое перед именем домена.</dd>
-</dl>
+- {{domxref("HTMLAnchorElement.accessKey")}}
+  - : Это {{domxref("DOMString")}} отображает собой единичный символ, который переключает фокус ввода на гиперссылку.
+- {{domxref("HTMLAnchorElement.charset")}} {{obsolete_inline}}
+  - : Это {{domxref("DOMString")}} отображает кодировку символов связанного ресурса.
+- {{domxref("HTMLAnchorElement.coords")}} {{obsolete_inline}}
+  - : Это {{domxref("DOMString")}} отображает список координат разделённый запятыми.
+- {{domxref("HTMLAnchorElement.download")}} {{experimental_inline}}
+  - : Это {{domxref("DOMString")}} показывать что связанный ресурс предназначен для загрузки, а не для отображения в браузере. Значение представляет предполагаемое имя файла. Если имя не является допустимым именем файла нижележащей ОС, браузер будет адаптировать его. Значение это URL по схеме `http:`, `file:`, `data:` или даже `blob:` (созданный с помощью {{domxref("URL.createObjectURL")}}).
+- {{domxref("URLUtils.hash")}}
+  - : Это {{domxref("DOMString")}} отображает фрагмент идентификатора, включая ведущий hash mark ('`#`'), если, указан в URL.
+- {{domxref("URLUtils.host")}}
+  - : Это {{domxref("DOMString")}} отображает имя хоста порт (если это не порт по умолчанию) в указанном URL.
+- {{domxref("URLUtils.hostname")}}
+  - : Это {{domxref("DOMString")}} отображает имя хоста в указанном URL.
+- {{domxref("URLUtils.href")}}
+  - : Это {{domxref("DOMString")}} что отображает {{htmlattrxref("href", "a")}} HTML атрибут, содержащий действительный URL связанного ресурса.
+- {{domxref("HTMLAnchorElement.hreflang")}}
+  - : Это {{domxref("DOMString")}} что отображает HTML атрибут {{htmlattrxref("hreflang", "a")}}, показывающий язык связанного ресурса.
+- {{domxref("HTMLAnchorElement.media")}}
+  - : Это {{domxref("DOMString")}} что отображает {{htmlattrxref("media", "a")}} HTML атрибут, с указанием предполагаемого media для связанного ресурса.
+- {{domxref("HTMLAnchorElement.name")}} {{obsolete_inline}}
+  - : Это {{domxref("DOMString")}} отображает имя якоря.
+- {{domxref("URLUtils.password")}}
+  - : Это {{domxref("DOMString")}} содержащий пароль, указанный перед именем домена.
+- {{domxref("URLUtils.origin")}} {{readonlyInline}}
+  - : Возвращает {{domxref("DOMString")}} содержащий источник, то есть его схему, его домен и его порт.
+- {{domxref("URLUtils.pathname")}}
+  - : Это {{domxref("DOMString")}} отображающий составную часть пути имени, любого, ссылающегося URL.
+- {{domxref("URLUtils.port")}}
+  - : Это {{domxref("DOMString")}} отображающий составную часть порта, любого, ссылающегося URL.
+- {{domxref("URLUtils.protocol")}}
+  - : Is a {{domxref("DOMString")}} отображающий составную часть протокола, включая двоеточия ('`:`'), ссылающегося URL.
+- {{domxref("HTMLAnchorElement.referrer")}} {{experimental_inline}}
+  - : Это {{domxref("DOMString")}} что отображает {{htmlattrxref("referrer", "a")}} HTML атрибут, показывающий какой referrer используется, когда выбрано изображение.
+- {{domxref("HTMLAnchorElement.rel")}}
+  - : Это {{domxref("DOMString")}} что отображает {{htmlattrxref("rel", "a")}} HTML атрибут, уточняя взаимоотношения целевого объекта к связанному объекту.
+- {{domxref("HTMLAnchorElement.relList")}} {{readonlyInline}}
+  - : Возвращает {{domxref("DOMTokenList")}} который отображает {{htmlattrxref("rel", "a")}} HTML атрибут, как список токенов.
+- {{domxref("HTMLAnchorElement.rev")}} {{obsolete_inline}}
+  - : Это {{domxref("DOMString")}} отображающий как {{htmlattrxref("rev", "a")}} HTML атрибут, уточняя взаимоотношения связанного объекта к целевому объекту
+- {{domxref("URLUtils.search")}}
+  - : Это {{domxref("DOMString")}} отображающий искомый элемент, включая ведущий знак вопроса ('`?`'), если таковой имеется, в ссылающемся URL.
+- {{domxref("HTMLAnchorElement.shape")}} {{obsolete_inline}}
+  - : Это {{domxref("DOMString")}} отображающий вид активной области.
+- {{domxref("HTMLAnchorElement.tabindex")}}
+  - : Это `long` содержащий положение элемента в порядке навигационного переключения для текущего документа.
+- {{domxref("HTMLAnchorElement.target")}}
+  - : Это {{domxref("DOMString")}} который отображает {{htmlattrxref("target", "a")}} HTML атрибут, указывая где отображается связанный ресурс.
+- {{domxref("HTMLAnchorElement.text")}}
+  - : Это {{domxref("DOMString")}} является синонимом {{domxref("Node.textContent")}} свойства.
+- {{domxref("HTMLAnchorElement.type")}}
+  - : Это {{domxref("DOMString")}} которое отображает {{htmlattrxref("type", "a")}} HTML атрибут, показывающий MIME тип связанного ресурса.
+- {{domxref("URLUtils.username")}}
+  - : Это {{domxref("DOMString")}} содержащий имя пользователя определённое перед именем домена.
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em>Наследует методы от его родителя, {{domxref("HTMLElement")}}, </em><em>и реализует те из {{domxref("URLUtils")}}</em><em>.</em></p>
+_Наследует методы от его родителя, {{domxref("HTMLElement")}},_ _и реализует те из {{domxref("URLUtils")}}\_\_._
 
-<dl>
- <dt>{{domxref("HTMLElement.blur()")}}</dt>
- <dd>Удаляет фокус клавиатуры из текущего элемента.</dd>
- <dt>{{domxref("HTMLElement.focus()")}}</dt>
- <dd>Даёт фокус клавиатуры на текущий элемент.</dd>
- <dt>{{domxref("URLUtils.toString()")}}</dt>
- <dd>Возвращает {{domxref("DOMString")}} содержащий весь URl. Это синоним {{domxref("URLUtils.href")}}, хотя он не может быть использован для изменения значения.</dd>
-</dl>
+- {{domxref("HTMLElement.blur()")}}
+  - : Удаляет фокус клавиатуры из текущего элемента.
+- {{domxref("HTMLElement.focus()")}}
+  - : Даёт фокус клавиатуры на текущий элемент.
+- {{domxref("URLUtils.toString()")}}
+  - : Возвращает {{domxref("DOMString")}} содержащий весь URl. Это синоним {{domxref("URLUtils.href")}}, хотя он не может быть использован для изменения значения.
 
-<p><code>blur()</code> и <code>focus()</code> методы наследуемые от {{domxref("HTMLElement")}} для HTML5, но они были определены в <code>HTMLAnchorElement</code> в DOM Level 2 HTML и более ранней спецификации.</p>
+`blur()` и `focus()` методы наследуемые от {{domxref("HTMLElement")}} для HTML5, но они были определены в `HTMLAnchorElement` в DOM Level 2 HTML и более ранней спецификации.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>HTML-элемент реализующий это интерфейс: {{HTMLElement("a")}}</li>
-</ul>
+- HTML-элемент реализующий это интерфейс: {{HTMLElement("a")}}

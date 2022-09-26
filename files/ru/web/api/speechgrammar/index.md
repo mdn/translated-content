@@ -11,31 +11,28 @@ tags:
   - речь
 translation_of: Web/API/SpeechGrammar
 ---
-<p>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>Интерфейс <strong><code>SpeechGrammar</code></strong> <a href="/ru/docs/Web/API/Web_Speech_API">Web Speech API</a> представляет собой набор слов или шаблонов слов, которые мы хотим, чтобы служба распознавания распознавала.</p>
+Интерфейс **`SpeechGrammar`** [Web Speech API](/ru/docs/Web/API/Web_Speech_API) представляет собой набор слов или шаблонов слов, которые мы хотим, чтобы служба распознавания распознавала.
 
-<p>Грамматика определяется с использованием <a class="external external-icon" href="http://www.w3.org/TR/jsgf/">JSpeech Grammar Format</a> (<strong>JSGF</strong>.) Другие форматы также могут поддерживаться в будущем.</p>
+Грамматика определяется с использованием [JSpeech Grammar Format](http://www.w3.org/TR/jsgf/) (**JSGF**.) Другие форматы также могут поддерживаться в будущем.
 
-<h2 id="Конструктор">Конструктор</h2>
+## Конструктор
 
-<dl>
- <dt>{{domxref("SpeechGrammar.SpeechGrammar()")}}</dt>
- <dd>Создаёт новый объект <code>SpeechGrammar</code> .</dd>
-</dl>
+- {{domxref("SpeechGrammar.SpeechGrammar()")}}
+  - : Создаёт новый объект `SpeechGrammar` .
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<dl>
- <dt>{{domxref("SpeechGrammar.src")}}</dt>
- <dd>Устанавливает и возвращает строку, содержащую грамматику, внутри экземпляра объекта <code>SpeechGrammar</code> .</dd>
- <dt>{{domxref("SpeechGrammar.weight")}} {{optional_inline}}</dt>
- <dd>Устанавливает и возвращает вес объекта <code>SpeechGrammar</code> .</dd>
-</dl>
+- {{domxref("SpeechGrammar.src")}}
+  - : Устанавливает и возвращает строку, содержащую грамматику, внутри экземпляра объекта `SpeechGrammar` .
+- {{domxref("SpeechGrammar.weight")}} {{optional_inline}}
+  - : Устанавливает и возвращает вес объекта `SpeechGrammar` .
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: js">var grammar = '#JSGF V1.0; grammar colors; public &lt;color&gt; = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
+```js
+var grammar = '#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
 var recognition = new SpeechRecognition();
 var speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);
@@ -44,18 +41,16 @@ recognition.grammars = speechRecognitionList;
 
 console.log(speechRecognitionList[0].src); // должно вернуть то же, что и содержимое переменной gramar
 console.log(speechRecognitionList[0].weight); // должно вернуть 1 - столько же, сколько указано в 4-й строчке.
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/ru/docs/Web/API/Web_Speech_API)

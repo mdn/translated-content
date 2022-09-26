@@ -3,64 +3,45 @@ title: Selection.toString()
 slug: Web/API/Selection/toString
 translation_of: Web/API/Selection/toString
 ---
-<div>
-<div>
-<div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
-</div>
-</div>
+{{ ApiRef("DOM") }}{{SeeCompatTable}}
 
-<p>Метод <strong><code>Selection.toString()</code></strong> возвращает строку, содержащуюся в выделенном объекте, т.е. выделенный текст.</p>
+Метод **`Selection.toString()`** возвращает строку, содержащуюся в выделенном объекте, т.е. выделенный текст.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>str</em> =<em> sel</em>.toString()
-</pre>
+```
+str = sel.toString()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<ul>
- <li><em><code>str</code></em> -- это строка, содержащаяся в выделении.</li>
-</ul>
+- _`str`_ -- это строка, содержащаяся в выделении.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p><em>None (отсутствуют).</em></p>
+_None (отсутствуют)._
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Этот метод возвращает выделенный текст.</p>
+Этот метод возвращает выделенный текст.
 
-<p>В <a href="en/JavaScript">JavaScript</a>, этот метод вызывается автоматически, когда функция, которой он передаётся, требует строку:</p>
+В [JavaScript](en/JavaScript), этот метод вызывается автоматически, когда функция, которой он передаётся, требует строку:
 
-<pre class="brush: js">alert(window.getSelection()) // What is called
+```js
+alert(window.getSelection()) // What is called
 alert(window.getSelection().toString())  // What is actually being effectively called.
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML Editing', '#dom-selection-stringifier', 'Selection.toString()')}}</td>
-   <td>{{Spec2('HTML Editing')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                | Status                           | Comment            |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
+| {{SpecName('HTML Editing', '#dom-selection-stringifier', 'Selection.toString()')}} | {{Spec2('HTML Editing')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("Selection")}}, the interface it belongs to.</li>
-</ul>
+- {{domxref("Selection")}}, the interface it belongs to.

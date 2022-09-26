@@ -7,50 +7,49 @@ tags:
   - Method
 translation_of: Web/API/Node/parentNode
 ---
-<div>{{ApiRef}}</div>
+{{ApiRef}}
 
-<h2 id="Summary">Аннотация</h2>
+## Аннотация
 
-<p>Возвращает родителя определённого элемента DOM дерева.</p>
+Возвращает родителя определённого элемента DOM дерева.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>parentNode</em> = <em>node</em>.parentNode
-</pre>
+```
+parentNode = node.parentNode
+```
 
-<p><code>parentNode</code> родитель текущего элемента. Родитель элемента является <code>Element</code> узлом, <code>Document</code> узлом, или <code>DocumentFragment</code> узлом.</p>
+`parentNode` родитель текущего элемента. Родитель элемента является `Element` узлом, `Document` узлом, или `DocumentFragment` узлом.
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush:js">if (node.parentNode) {
+```js
+if (node.parentNode) {
   // удаляем элемент из дерева
   node.parentNode.removeChild(node);
-}</pre>
+}
+```
 
-<h2 id="Notes">Примечание</h2>
+## Примечание
 
-<p><code>Document</code> и <code>DocumentFragment</code> <a href="/en-US/docs/DOM/Node.nodeType" title="DOM/Node.nodeType">nodes</a> <em> могут не иметь родителя</em>, в этом случае <code>parentNode</code> всегда возвращает <code>null</code>.</p>
+`Document` и `DocumentFragment` [nodes](/ru/docs/DOM/Node.nodeType "DOM/Node.nodeType") _могут не иметь родителя_, в этом случае `parentNode` всегда возвращает `null`.
 
-<p>Так же возвращает <code>null</code> если элемент только был создан и ещё не добавлен в DOM дерево.</p>
+Так же возвращает `null` если элемент только был создан и ещё не добавлен в DOM дерево.
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Specification">Спецификация</h2>
+## Спецификация
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1060184317">DOM Level 2 Core: Node.parentNode</a></li>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1060184317">DOM Level 3 Core: Node.parentNode</a></li>
-</ul>
+- [DOM Level 2 Core: Node.parentNode](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1060184317)
+- [DOM Level 3 Core: Node.parentNode](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1060184317)
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{Domxref("Node.firstChild")}}</li>
- <li>{{Domxref("Node.lastChild")}}</li>
- <li>{{Domxref("Node.childNodes")}}</li>
- <li>{{Domxref("Node.nextSibling")}}</li>
- <li>{{Domxref("Node.previousSibling")}}</li>
- <li>{{Domxref("Node.removeChild")}}</li>
-</ul>
+- {{Domxref("Node.firstChild")}}
+- {{Domxref("Node.lastChild")}}
+- {{Domxref("Node.childNodes")}}
+- {{Domxref("Node.nextSibling")}}
+- {{Domxref("Node.previousSibling")}}
+- {{Domxref("Node.removeChild")}}

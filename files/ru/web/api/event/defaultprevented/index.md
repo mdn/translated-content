@@ -3,29 +3,32 @@ title: Event.defaultPrevented
 slug: Web/API/Event/defaultPrevented
 translation_of: Web/API/Event/defaultPrevented
 ---
-<div>{{ APIRef("DOM") }}</div>
+{{ APIRef("DOM") }}
 
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p>Возвращает boolean-значение, информирующее о том, был ли вызван {{ domxref("event.preventDefault()") }} в текущем обработчике события.</p>
+Возвращает boolean-значение, информирующее о том, был ли вызван {{ domxref("event.preventDefault()") }} в текущем обработчике события.
 
-<div class="note"><strong>Note:</strong> Используйте это свойство вместо <code>устаревшего метода getPreventDefault()</code> (смотри {{ bug(691151) }}).</div>
+> **Примечание:** Используйте это свойство вместо `устаревшего метода getPreventDefault()` (смотри {{ bug(691151) }}).
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js"><code>var defaultWasPrevented = event.defaultPrevented;</code></pre>
+```js
+var defaultWasPrevented = event.defaultPrevented;
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre> if (e.defaultPrevented) {
+```
+ if (e.defaultPrevented) {
    /* по умолчанию не выполнится */
  }
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

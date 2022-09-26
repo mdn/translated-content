@@ -3,25 +3,25 @@ title: XMLHttpRequest.responseURL
 slug: Web/API/XMLHttpRequest/responseURL
 translation_of: Web/API/XMLHttpRequest/responseURL
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p>Свойство <code><strong>XMLHttpRequest.responseURL</strong></code> доступно только для чтения, возвращает сериализованный URL ответа или пустую строку,  если URL равен <code>null</code>. Если URL возвращён, любой URL фрагмент в URL будет стёрт. Значение <code>responseURL</code> станет окончательным URL, получаемым после любых редиректов.</p>
+Свойство **`XMLHttpRequest.responseURL`** доступно только для чтения, возвращает сериализованный URL ответа или пустую строку, если URL равен `null`. Если URL возвращён, любой URL фрагмент в URL будет стёрт. Значение `responseURL` станет окончательным URL, получаемым после любых редиректов.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 xhr.open('GET', 'http://example.com/test', true);
 xhr.onload = function () {
   console.log(xhr.responseURL); // http://example.com/test
 };
-xhr.send(null);</pre>
+xhr.send(null);
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
+## Браузерная совместимость
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

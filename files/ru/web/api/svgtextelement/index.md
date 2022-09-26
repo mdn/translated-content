@@ -7,53 +7,31 @@ tags:
   - Текст
 translation_of: Web/API/SVGTextElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>Интерфейс <strong><code>SVGTextElement</code></strong> соответствует элементам {{SVGElement("text")}}.</p>
+Интерфейс **`SVGTextElement`** соответствует элементам {{SVGElement("text")}}.
 
-<div style="margin-left: 4px; padding: 4px;">{{InheritanceDiagram(600, 120)}}</div>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p><em>Этот интерфейс не реализует никаких конкретных свойств, но наследует свойства от его родительского интерфейса, {{domxref("SVGTextPositioningElement")}}. </em></p>
+_Этот интерфейс не реализует никаких конкретных свойств, но наследует свойства от его родительского интерфейса, {{domxref("SVGTextPositioningElement")}}._
 
-<h2 id="Методы">Методы</h2>
+## Методы
 
-<p><em>Этот интерфейс не реализует никаких конкретных методов, но наследует методы от его родительского интерфейса, {{domxref("SVGTextPositioningElement")}}.</em></p>
+_Этот интерфейс не реализует никаких конкретных методов, но наследует методы от его родительского интерфейса, {{domxref("SVGTextPositioningElement")}}._
 
-<h2 id="Характеристики">Характеристики</h2>
+## Характеристики
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Коммент</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "text.html#InterfaceSVGTextElement", "SVGTextElement")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>
-    <p>Удалён реализованный<br>
-     интерфейс {{domxref("SVGTransformable")}}.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "text.html#InterfaceSVGTextElement", "SVGTextElement")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Начальное определение</td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                             | Статус                   | Коммент                                                                  |
+| -------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------ |
+| {{SpecName("SVG2", "text.html#InterfaceSVGTextElement", "SVGTextElement")}}     | {{Spec2("SVG2")}} | Удалён реализованный интерфейс {{domxref("SVGTransformable")}}. |
+| {{SpecName("SVG1.1", "text.html#InterfaceSVGTextElement", "SVGTextElement")}} | {{Spec2("SVG1.1")}} | Начальное определение                                                    |
 
-<h2 id="Совместимость_с_браузером">Совместимость с браузером</h2>
+## Совместимость с браузером
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{SVGElement("text")}}</li>
-</ul>
+- {{SVGElement("text")}}

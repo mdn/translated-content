@@ -7,48 +7,49 @@ tags:
   - Property
 translation_of: Web/API/CanvasRenderingContext2D/textBaseline
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.textBaseline</code></strong> - свойство Canvas 2D API, указывающее на текущую базовую линию при рисовании текста.</p>
+**`CanvasRenderingContext2D`\*\***`.textBaseline`\*\* - свойство Canvas 2D API, указывающее на текущую базовую линию при рисовании текста.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>ctx</em>.textBaseline = "top" || "hanging" || "middle" || "alphabetic" || "ideographic" || "bottom";
-</pre>
+```
+ctx.textBaseline = "top" || "hanging" || "middle" || "alphabetic" || "ideographic" || "bottom";
+```
 
-<h3 id="Опции">Опции</h3>
+### Опции
 
-<p>Возможные значения:</p>
+Возможные значения:
 
-<dl>
- <dt><code>"top"</code></dt>
- <dd>The text baseline is the top of the em square.</dd>
- <dt><code>"hanging"</code></dt>
- <dd>The text baseline is the hanging baseline. (Used by Tibetan and other Indic scripts.)</dd>
- <dt><code>"middle"</code></dt>
- <dd>The text baseline is the middle of the em square.</dd>
- <dt><code>"alphabetic"</code></dt>
- <dd>The text baseline is the normal alphabetic baseline. Значение по умолчанию.</dd>
- <dt><code>"ideographic"</code></dt>
- <dd>The text baseline is the ideographic baseline; this is the bottom of the body of the characters, if the main body of characters protrudes beneath the alphabetic baseline. (Used by Chinese, Japanese, and Korean scripts.)</dd>
- <dt><code>"bottom"</code></dt>
- <dd>The text baseline is the bottom of the bounding box. This differs from the ideographic baseline in that the ideographic baseline doesn't consider descenders.</dd>
-</dl>
+- `"top"`
+  - : The text baseline is the top of the em square.
+- `"hanging"`
+  - : The text baseline is the hanging baseline. (Used by Tibetan and other Indic scripts.)
+- `"middle"`
+  - : The text baseline is the middle of the em square.
+- `"alphabetic"`
+  - : The text baseline is the normal alphabetic baseline. Значение по умолчанию.
+- `"ideographic"`
+  - : The text baseline is the ideographic baseline; this is the bottom of the body of the characters, if the main body of characters protrudes beneath the alphabetic baseline. (Used by Chinese, Japanese, and Korean scripts.)
+- `"bottom"`
+  - : The text baseline is the bottom of the bounding box. This differs from the ideographic baseline in that the ideographic baseline doesn't consider descenders.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Сравнение_значений_свойства">Сравнение значений свойства</h3>
+### Сравнение значений свойства
 
-<p>Этот пример демонстрирует различные значения свойства <code>textBaseline</code> и отображение линий при их применениях.</p>
+Этот пример демонстрирует различные значения свойства `textBaseline` и отображение линий при их применениях.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas" width="550" height="500"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas" width="550" height="500"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 const baselines = ['top', 'hanging', 'middle', 'alphabetic', 'ideographic', 'bottom'];
@@ -64,24 +65,20 @@ baselines.forEach(function (baseline, index) {
   ctx.stroke();
   ctx.fillText('Abcdefghijklmnop (' + baseline + ')', 0, y);
 });
-</pre>
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{ EmbedLiveSample('Сравнение_значений_свойства', 700, 550) }}</p>
+{{ EmbedLiveSample('Сравнение_значений_свойства', 700, 550) }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Интерфейс определяющий это свойство: {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- Интерфейс определяющий это свойство: {{domxref("CanvasRenderingContext2D")}}

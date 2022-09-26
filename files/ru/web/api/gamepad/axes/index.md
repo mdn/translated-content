@@ -3,19 +3,22 @@ title: Gamepad.axes
 slug: Web/API/Gamepad/axes
 translation_of: Web/API/Gamepad/axes
 ---
-<p>{{APIRef("Gamepad API")}}</p>
+{{APIRef("Gamepad API")}}
 
-<p>Свойство <code><strong>Gamepad.axes</strong></code> интерфейса {{domxref("Gamepad") }} возвращает массив, показывающий состояние элементов управления, имеющих оси направления, такие как джойстики на геймпаде.</p>
+Свойство **`Gamepad.axes`** интерфейса {{domxref("Gamepad") }} возвращает массив, показывающий состояние элементов управления, имеющих оси направления, такие как джойстики на геймпаде.
 
-<p>Каждый элемент массива - дробное число в диапазоне от -1.0 до 1.0, показывающий состояние от самого маленького значения (-1.0) до самого высокого (1.0).</p>
+Каждый элемент массива - дробное число в диапазоне от -1.0 до 1.0, показывающий состояние от самого маленького значения (-1.0) до самого высокого (1.0).
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">readonly    attribute double[]            axes;</pre>
+```
+readonly    attribute double[]            axes;
+```
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: js">function gameLoop() {
+```js
+function gameLoop() {
   if(navigator.webkitGetGamepads) {
     var gp = navigator.webkitGetGamepads()[0];
   } else {
@@ -36,35 +39,23 @@ translation_of: Web/API/Gamepad/axes
   ball.style.top = b*2 + "px";
 
   var start = rAF(gameLoop);
-};</pre>
+};
+```
 
-<h2 id="Значение">Значение</h2>
+## Значение
 
-<p>Массив значений {{domxref("double") }} </p>
+Массив значений {{domxref("double") }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Gamepad", "#dom-gamepad-axes", "Gamepad.axes")}}</td>
-   <td>{{Spec2("Gamepad")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                    | Status                       | Comment            |
+| -------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName("Gamepad", "#dom-gamepad-axes", "Gamepad.axes")}} | {{Spec2("Gamepad")}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<p><a href="/en-US/docs/Web/Guide/API/Gamepad">Using the Gamepad API</a></p>
+[Using the Gamepad API](/ru/docs/Web/Guide/API/Gamepad)

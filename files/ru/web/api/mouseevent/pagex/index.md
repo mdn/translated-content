@@ -3,30 +3,31 @@ title: MouseEvent.pageX
 slug: Web/API/MouseEvent/pageX
 translation_of: Web/API/MouseEvent/pageX
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p><strong><code>MouseEvent.pageX</code></strong> - это свойство {{domxref("MouseEvent")}} доступное только для чтения. Данное свойство возвращает значение равное горизонтальной координате, относительно всего документа. Это свойство учитывает любую горизонтальную прокрутку страницы. Первоначально это свойство было определено как длинное целое число. Модуль просмотра CSSOM переопределил его как double float. Подробнее см. Раздел «Совместимость с браузером».</p>
+**`MouseEvent.pageX`** - это свойство {{domxref("MouseEvent")}} доступное только для чтения. Данное свойство возвращает значение равное горизонтальной координате, относительно всего документа. Это свойство учитывает любую горизонтальную прокрутку страницы. Первоначально это свойство было определено как длинное целое число. Модуль просмотра CSSOM переопределил его как double float. Подробнее см. Раздел «Совместимость с браузером».
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox">var <em>pos</em> = <em>event</em>.pageX</pre>
+```
+var pos = event.pageX
+```
 
-<h2 id="Syntax">Примеры</h2>
+## Примеры
 
-<pre><em>var pageX</em> = <em>event</em>.pageX;
+```
+var pageX = event.pageX;
 pageX === event.clientX + (window.pageYOffset || document.body.scrollTop);
-</pre>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также"><strong>Смотрите также</strong></h2>
+## Смотрите также
 
-<ul>
- <li>{{domxref("UIEvent.pageX")}}</li>
-</ul>
+- {{domxref("UIEvent.pageX")}}

@@ -3,38 +3,39 @@ title: ExtendableEvent.waitUntil()
 slug: Web/API/ExtendableEvent/waitUntil
 translation_of: Web/API/ExtendableEvent/waitUntil
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>Метод <code><strong>ExtendableEvent.waitUntil()</strong></code> сообщает диспетчеру событий, что выполняется действие. Также этот метод может быть использован, для того чтобы определить было ли то действие успешным. В рамках service workers, <code>waitUntil()</code> сообщает браузеру, что действие продолжается пока промис не завершится (<em>promise settles</em>) и браузер не должен прерывать service worker если он хочет, чтобы это действие завершилось.</p>
+Метод **`ExtendableEvent.waitUntil()`** сообщает диспетчеру событий, что выполняется действие. Также этот метод может быть использован, для того чтобы определить было ли то действие успешным. В рамках service workers, `waitUntil()` сообщает браузеру, что действие продолжается пока промис не завершится (_promise settles_) и браузер не должен прерывать service worker если он хочет, чтобы это действие завершилось.
 
-<p>События <code>install</code> в {{domxref("ServiceWorkerGlobalScope", "service workers")}} используют <code>waitUntil()</code> чтобы задержать service worker в {{domxref("ServiceWorkerRegistration.installing", "installing")}} фазе пока не завершатся задачи. Если промис, переданный в <code>waitUntil()</code>, отклоняется, установка считается неудачной и устанавливаемый service worker отбрасывается.  В первую очередь это используется для гарантии того, что service worker не рассматривается как установленный (installed), пока все основные кеши на которые он зависит успешно не заполнены.</p>
+События `install` в {{domxref("ServiceWorkerGlobalScope", "service workers")}} используют `waitUntil()` чтобы задержать service worker в {{domxref("ServiceWorkerRegistration.installing", "installing")}} фазе пока не завершатся задачи. Если промис, переданный в `waitUntil()`, отклоняется, установка считается неудачной и устанавливаемый service worker отбрасывается. В первую очередь это используется для гарантии того, что service worker не рассматривается как установленный (installed), пока все основные кеши на которые он зависит успешно не заполнены.
 
-<p>События <code>activate</code> в {{domxref("ServiceWorkerGlobalScope", "service workers")}} используют <code>waitUntil()</code> для размещения в буфере функциональных событий таких как <code>fetch</code> и <code>push</code> пока промис, переданный в <code>waitUntil()</code>, не завершится успешно. Это даёт service worker время, чтобы обновить схемы базы данных и удалить устаревшие {{domxref("Cache", "caches")}}, таким образом другие события могут полагаться на полностью обновлённое состояние.</p>
+События `activate` в {{domxref("ServiceWorkerGlobalScope", "service workers")}} используют `waitUntil()` для размещения в буфере функциональных событий таких как `fetch` и `push` пока промис, переданный в `waitUntil()`, не завершится успешно. Это даёт service worker время, чтобы обновить схемы базы данных и удалить устаревшие {{domxref("Cache", "caches")}}, таким образом другие события могут полагаться на полностью обновлённое состояние.
 
-<p>Метод <code>waitUntil()</code> должен быть изначально вызван внутри колбэка события (<em>event callback</em>), но после этого он может быть вызван множество раз, до тех пор пока все промисы, переданные в него, не завершатся успешно.</p>
+Метод `waitUntil()` должен быть изначально вызван внутри колбэка события (_event callback_), но после этого он может быть вызван множество раз, до тех пор пока все промисы, переданные в него, не завершатся успешно.
 
-<div class="note">
-<p><strong>Примечание</strong>: Поведение описанное в параграфе выше, было исправлено в Firefix 43 (смотрите {{bug(1180274)}}).</p>
-</div>
+> **Примечание:** Поведение описанное в параграфе выше, было исправлено в Firefix 43 (смотрите {{bug(1180274)}}).
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox"><em>extendableEvent</em>.waitUntil(<em>promise</em>);</pre>
+```
+extendableEvent.waitUntil(promise);
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<p>{{jsxref("Promise")}}.</p>
+{{jsxref("Promise")}}.
 
-<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+### Возвращаемое значение
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Использование <code>waitUntil()</code> внутри события <code>install</code> в service worker:</p>
+Использование `waitUntil()` внутри события `install` в service worker:
 
-<pre class="brush: js;">addEventListener('install', event =&gt; {
-  const preCache = async () =&gt; {
+```js
+addEventListener('install', event => {
+  const preCache = async () => {
     const cache = await caches.open('static-v1');
     return cache.addAll([
       '/',
@@ -43,19 +44,19 @@ translation_of: Web/API/ExtendableEvent/waitUntil
     ]);
   };
   event.waitUntil(preCache());
-});</pre>
+});
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Использование Service Workers</a></li>
- <li><a class="external external-icon" href="https://jakearchibald.github.io/isserviceworkerready/">Готов ли ServiceWorker?</a></li>
- <li>{{jsxref("Promise")}}</li>
-</ul>
+## Смотрите также
+
+- [Использование Service Workers](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Готов ли ServiceWorker?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}

@@ -3,27 +3,29 @@ title: Window.name
 slug: Web/API/Window/name
 translation_of: Web/API/Window/name
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<h2 id="Summary">Описание</h2>
+## Описание
 
-<p>Свойство <code>name</code> может использоваться для установки и получения имени текущего окна. Оно становится доступным после его создания.</p>
+Свойство `name` может использоваться для установки и получения имени текущего окна. Оно становится доступным после его создания.
 
-<h2 id="Syntax">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: js"><var>// получение значения
-string</var> = window.name;
+```js
+// получение значения
+string = window.name;
 // установка значения
-window.name = <var>string</var>;
-</pre>
+window.name = string;
+```
 
-<h2 id="Example">Пример</h2>
+## Пример
 
-<pre class="brush:js">window.name = "lab_view";
-</pre>
+```js
+window.name = "lab_view";
+```
 
-<h2 id="Notes">Замечания</h2>
+## Замечания
 
-<p>Имя окна используется, в основном, для задания свойства <code>target</code> гиперссылок и форм.</p>
+Имя окна используется, в основном, для задания свойства `target` гиперссылок и форм.
 
-<p>Также оно может использоваться в фреймворках для предоставления кросс-доменного обмена сообщениями (например, <a href="http://www.thomasfrank.se/sessionvars.html">SessionVars</a> и <a href="http://www.sitepen.com/blog/2008/07/22/windowname-transport/">dojox.io.windowName</a> из Dojo) как более безопасная альтернатива JSONP.</p>
+Также оно может использоваться в фреймворках для предоставления кросс-доменного обмена сообщениями (например, [SessionVars](http://www.thomasfrank.se/sessionvars.html) и [dojox.io.windowName](http://www.sitepen.com/blog/2008/07/22/windowname-transport/) из Dojo) как более безопасная альтернатива JSONP.

@@ -3,31 +3,32 @@ title: ServiceWorkerRegistration.update()
 slug: Web/API/ServiceWorkerRegistration/update
 translation_of: Web/API/ServiceWorkerRegistration/update
 ---
-<div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p>Метод <code><strong>update</strong></code> интерфейса {{domxref("ServiceWorkerRegistration")}} предназначен для обновления service worker. Он обращается по URL service worker-a, и если новый worker побайтно не совпадает с текущим, инсталлирует новую версию. Обращение за новой версией worker обходит любые кеши браузера, если предыдущее обращение произошло более 24 часов назад..</p>
+Метод **`update`** интерфейса {{domxref("ServiceWorkerRegistration")}} предназначен для обновления service worker. Он обращается по URL service worker-a, и если новый worker побайтно не совпадает с текущим, инсталлирует новую версию. Обращение за новой версией worker обходит любые кеши браузера, если предыдущее обращение произошло более 24 часов назад..
 
-<div class="note">
-<p><strong>Примечание</strong>: Эта возможность доступна в <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Примечание:** Эта возможность доступна в [Web Workers](/ru/docs/Web/API/Web_Workers_API).
 
-<h2 id="Syntax" style="line-height: 30px; font-size: 2.14285714285714rem;">Синтаксис</h2>
+## Синтаксис
 
-<pre class="syntaxbox" style="font-size: 14px;">ServiceWorkerRegistration.update();</pre>
+```
+ServiceWorkerRegistration.update();
+```
 
-<h3 id="Параметры">Параметры</h3>
+### Параметры
 
-<p>Нет.</p>
+Нет.
 
-<h3 id="Возвращает">Возвращает</h3>
+### Возвращает
 
-<p>{{domxref("Промис")}}, который разрешается в объект {{domxref("ServiceWorkerRegistration")}}.</p>
+{{domxref("Промис")}}, который разрешается в объект {{domxref("ServiceWorkerRegistration")}}.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>В следующем простом примере регистрируется service worker, а затем добавляется обработчик события клика по кнопке, так что вы можете явно обновить service worker по необходимости:</p>
+В следующем простом примере регистрируется service worker, а затем добавляется обработчик события клика по кнопке, так что вы можете явно обновить service worker по необходимости:
 
-<pre class="brush: js">if ('serviceWorker' in navigator) {
+```js
+if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw-test/sw.js', {scope: 'sw-test'}).then(function(registration) {
     // Регистрация произошла
     console.log('Registration succeeded.');
@@ -38,21 +39,21 @@ translation_of: Web/API/ServiceWorkerRegistration/update
     // Ошибка при регистрации
     console.log('Registration failed with ' + error);
   });
-};</pre>
+};
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Использование Service Workers</a></li>
- <li><a href="https://github.com/mdn/sw-test">Service workers базовый пример кода</a> </li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Готов ли ServiceWorker?</a></li>
- <li>{{jsxref("Промисы")}}</li>
- <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Использование web workers</a></li>
-</ul>
+## Смотрите также
+
+- [Использование Service Workers](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Service workers базовый пример кода](https://github.com/mdn/sw-test)
+- [Готов ли ServiceWorker?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Промисы")}}
+- [Использование web workers](/ru/docs/Web/Guide/Performance/Using_web_workers)
