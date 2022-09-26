@@ -10,6 +10,7 @@ tags:
   - Workers
 translation_of: Web/API/WorkerGlobalScope
 ---
+
 {{APIRef("Web Workers API")}}
 
 L'interface **`WorkerGlobalScope`** de l'[API Web Workers](/fr/docs/Web/API/Web_Workers_API) est une interface représentant la portée de tout worker. Les Workers n'ont pas de contexte de navigation; cette portée contient les informations généralement véhiculées par les objets {{domxref("Window")}} — dans ce cas les gestionnaires d'événements, la console ou l'objet {{domxref("WorkerNavigator")}} associé. Chaque `WorkerGlobalScope` a sa propre boucle d'événements.

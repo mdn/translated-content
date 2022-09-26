@@ -25,7 +25,7 @@ Em um nível fundamental, a propriedade {{cssxref("color")}} define a cor do pri
 Sempre que um elemento é renderizado, essas propriedades são usadas para determinar a cor do texto, seu plano de fundo, e quaisquer decorações no texto.
 
 - {{cssxref("color")}}
-  - : A cor usada para desenhar o texto e quaisquer[ decorações de texto](/pt-BR/docs/Learn/CSS/Styling_text/Fundamentals#Font_style_font_weight_text_transform_and_text_decoration) (como a adição de sublinhados ou tachados e assim por diante).
+  - : A cor usada para desenhar o texto e quaisquer [decorações de texto](/pt-BR/docs/Learn/CSS/Styling_text/Fundamentals#Font_style_font_weight_text_transform_and_text_decoration) (como a adição de sublinhados ou tachados e assim por diante).
 - {{cssxref("background-color")}}
   - : A cor do plano de fundo do texto.
 - {{cssxref("text-shadow")}}
@@ -52,7 +52,7 @@ Todo elemento é uma caixa com algum tipo de conteúdo, e tem um plano de fundo 
 
 ### Bordas
 
-Qualquer elemento pode ter uma [borda](/pt-BR/docs/Learn/CSS/Styling_boxes/Borders) desenhada em torno dele. Uma borda básica de elemento é uma linha desenhada em torno dos cantos do conteúdo do elemento. Veja {{SectionOnPage("/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model", "Box properties")}} para aprender sobre a relação entre elementos e suas bordas, e o artigo [Estilizando bordas usando CSS ](/pt-BR/docs/Learn/CSS/Styling_boxes/Borders)para descobrir mais sobre como aplicar estilo em bordas.
+Qualquer elemento pode ter uma [borda](/pt-BR/docs/Learn/CSS/Styling_boxes/Borders) desenhada em torno dele. Uma borda básica de elemento é uma linha desenhada em torno dos cantos do conteúdo do elemento. Veja {{SectionOnPage("/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model", "Box properties")}} para aprender sobre a relação entre elementos e suas bordas, e o artigo [Estilizando bordas usando CSS](/pt-BR/docs/Learn/CSS/Styling_boxes/Borders) para descobrir mais sobre como aplicar estilo em bordas.
 
 Você pode usar a propriedade abreviada de {{cssxref("border")}}, que permite configurar tudo sobre a borda de uma só vez (incluindo características que não são a cor, como sua largura, estilo (sólido, tracejado, etc), e assim por diante).
 
@@ -74,7 +74,7 @@ CSS não é a única tecnologia web que suporta cor. Há tecnologias de gráfico
 - [SVG](/pt-BR/docs/Web/SVG) (Scalable Vector Graphics)
   - : Permite desenhar imagens usando comandos que criam formas, padrões e linhas específicas para produzir uma figura. Comandos SVG são formatados como XML, e podem ser embedados diretamente em uma página web ou colocados na página usando o elemento {{HTMLElement("img")}}, como qualquer outro tipo de imagem.
 - [WebGL](/pt-BR/docs/Web/API/WebGL_API)
-  - : A Web Graphics Library é uma API OpenGL e ES-based para desenhar gráficos 2D e 3D de alta performance na web. Veja[ Aprenda WebGL para gráficos 2D e 3D](/pt-BR/docs/Learn/WebGL) para descobrir mais.
+  - : A Web Graphics Library é uma API OpenGL e ES-based para desenhar gráficos 2D e 3D de alta performance na web. Veja [Aprenda WebGL para gráficos 2D e 3D](/pt-BR/docs/Learn/WebGL) para descobrir mais.
 
 ## Como descrever uma cor
 
@@ -135,9 +135,9 @@ O componente saturation/saturação (S) da cor especifica qual porcentagem da co
 
 Pense como se você fosse criar a cor perfeita de tinta:
 
-1.  Você começa com uma tinta de base que tenha a intensidade máxima possível de uma cor dada, como o azul mais intenso que pode ser representado pela tela do usuário. Esse é o componente hue/matiz (H): um valor que representa o ângulo no círculo de cor para a matiz vívida que queremos usar como base.
-2.  Então, seleciona uma tinta na escala de cinza que corresponde a quão clara você quer que a cor seja; essa é a luminance/luminosidade (L). Você quer que seja muito clara e quase branca, ou muito escura e perto do preto, ou algo no meio do caminho? Isso é especificado usando uma porcentagem, onde 0% é perfeitamente preto e 100% é perfeitamente branco (independente da saturação ou matiz). Os valores no meio são a área cinza.
-3.  Agora que você tem uma tinta cinza e uma cor perfeitamente vívida, você precisa misturar as duas. O componente saturation/saturação (S) da cor indica qual porcentagem da cor final deve ser composta dessa cor perfeitamente vívida. O resto da cor final é feito da tinta cinza que representa a saturação.
+1. Você começa com uma tinta de base que tenha a intensidade máxima possível de uma cor dada, como o azul mais intenso que pode ser representado pela tela do usuário. Esse é o componente hue/matiz (H): um valor que representa o ângulo no círculo de cor para a matiz vívida que queremos usar como base.
+2. Então, seleciona uma tinta na escala de cinza que corresponde a quão clara você quer que a cor seja; essa é a luminance/luminosidade (L). Você quer que seja muito clara e quase branca, ou muito escura e perto do preto, ou algo no meio do caminho? Isso é especificado usando uma porcentagem, onde 0% é perfeitamente preto e 100% é perfeitamente branco (independente da saturação ou matiz). Os valores no meio são a área cinza.
+3. Agora que você tem uma tinta cinza e uma cor perfeitamente vívida, você precisa misturar as duas. O componente saturation/saturação (S) da cor indica qual porcentagem da cor final deve ser composta dessa cor perfeitamente vívida. O resto da cor final é feito da tinta cinza que representa a saturação.
 
 Você também pode opcionalmente incluir um canal alpha, para tornar a cor menos que 100% opaca.
 

@@ -2,6 +2,7 @@
 title: Number.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
 ---
+
 {{JSRef("Global_Objects", "Number")}}
 
 ## 概述

@@ -2,6 +2,7 @@
 title: Intl.Locale.prototype.region
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/region
 ---
+
 {{JSRef}}
 
 **`Intl.Locale.prototype.region`** プロパティは、ロケールに関連付けられた世界の地域（ふつうは国）を返すアクセサープロパティです。

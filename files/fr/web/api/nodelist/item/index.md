@@ -9,6 +9,7 @@ tags:
   - Noeuds
 translation_of: Web/API/NodeList/item
 ---
+
 {{APIRef("DOM")}}
 
 Renvoie un noeud depuis une [`NodeList`](/fr/docs/Web/API/NodeList) par l'index. Cette méthode ne lance pas d'exceptions tant que vous fournissez des arguments. Une valeur `null` est renvoyée si l'index est hors des limites et une `TypeError` est lancée si aucun argument n'est fourni.

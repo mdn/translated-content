@@ -2,6 +2,7 @@
 title: HTMLElement：dragleave 事件
 slug: Web/API/HTMLElement/dragleave_event
 ---
+
 {{APIRef}}
 
 `dragleave` 事件在拖动的元素或选中的文本离开一个有效的放置目标时被触发。

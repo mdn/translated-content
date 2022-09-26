@@ -2,6 +2,7 @@
 title: String.prototype.big()
 slug: Web/JavaScript/Reference/Global_Objects/String/big
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`big()`**方法的作用是创建一个使字符串显示大号字体的{{HTMLElement("big")}}标签。

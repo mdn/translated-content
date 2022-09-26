@@ -4,6 +4,7 @@ slug: Web/API/HTMLElement/drag_event
 translation_of: Web/API/Document/drag_event
 original_slug: Web/API/Document/drag_event
 ---
+
 {{APIRef}}
 
 L'événement drag est déclenché lorsqu'un élément ou une section de texte est glissé (toutes les quelques centaines de milisecondes)

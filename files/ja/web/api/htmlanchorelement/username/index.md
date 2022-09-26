@@ -3,6 +3,7 @@ title: HTMLAnchorElement.username
 slug: Web/API/HTMLAnchorElement/username
 original_slug: Web/API/HTMLHyperlinkElementUtils/username
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`HTMLAnchorElement.username`** プロパティは、ドメイン名の前で指定されたユーザー名の入った文字列です。

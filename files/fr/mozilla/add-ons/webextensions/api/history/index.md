@@ -12,6 +12,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/history
 ---
+
 {{AddonSidebar}}
 
 Utilisez l'API `historique` pour interargir avec l'historique du navigateur.

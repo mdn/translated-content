@@ -2,6 +2,7 @@
 title: CryptoKey
 slug: Web/API/CryptoKey
 ---
+
 {{APIRef("Web Crypto API")}}
 
 **`CryptoKey`** 接口表示从特定的密钥算法导出的{{glossary("密钥")}}。
@@ -31,7 +32,7 @@ _这个接口既不继承也不实现任何方法。_
 
 ## 浏览器兼容性
 
-{{Compat("api.CryptoKey")}}
+{{Compat}}
 
 ## 其它相关
 

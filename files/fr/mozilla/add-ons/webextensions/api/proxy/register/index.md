@@ -13,6 +13,7 @@ tags:
   - registerProxyScript
 translation_of: Mozilla/Add-ons/WebExtensions/API/proxy/register
 ---
+
 {{AddonSidebar()}} {{deprecated_header}}
 
 Cette méthode était obsolète dans Firefox 68 et sera supprimée de Firefox 71. Dans Firefox 68 ou une version ultérieure, l'appel de cette méthode enregistre un message d'erreur sur la console :

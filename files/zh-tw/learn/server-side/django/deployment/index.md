@@ -2,6 +2,7 @@
 title: 'Django Tutorial Part 11: Deploying Django to production'
 slug: Learn/Server-side/Django/Deployment
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
 現在，您已經創建（並測試）了一個令人敬畏的 [LocalLibrary](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站，如果您希望將其安裝在公共 Web 服務器上，以便圖書館工作人員、和成員，可以通過 Internet 訪問它。本文概述如何找到主機來部署您的網站，以及您需要做什麼，才能讓您的網站準備好生產環境。

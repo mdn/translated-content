@@ -2,6 +2,7 @@
 title: 後裔選擇器
 slug: Web/CSS/Descendant_combinator
 ---
+
 {{CSSRef("Selectors")}}
 
 ## 簡介
@@ -38,4 +39,4 @@ div span { background-color: DodgerBlue; }
 
 ## Browser compatibility
 
-{{Compat("css.selectors.descendant")}}
+{{Compat}}

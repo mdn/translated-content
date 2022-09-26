@@ -2,6 +2,7 @@
 title: Object.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 ---
+
 {{JSRef}}
 
 **`valueOf()`** メソッドは、指定されたオブジェクトのプリミティブな値を返します。
@@ -46,7 +47,7 @@ MyNumberType.prototype.valueOf = function() { return customPrimitiveValue; };
 myNumberType.valueOf()
 ```
 
-> **Note:** **注:**文字列型の文脈にあるオブジェクトは {{jsxref("Object.toString", "toString()")}} メソッドを通じて変換されますが、これは {{jsxref("String")}} オブジェクトが `valueOf` を使って文字列型に変換されるのとは違います。すべてのオブジェクトは、 "`[object type]`" としか出力されないかもしれませんが、文字列変換できます。しかし多くのオブジェクトは数値や真偽値や関数には変換できません。
+> **Note:** 文字列型の文脈にあるオブジェクトは {{jsxref("Object.toString", "toString()")}} メソッドを通じて変換されますが、これは {{jsxref("String")}} オブジェクトが `valueOf` を使って文字列型に変換されるのとは違います。すべてのオブジェクトは、 "`[object type]`" としか出力されないかもしれませんが、文字列変換できます。しかし多くのオブジェクトは数値や真偽値や関数には変換できません。
 
 ## 例
 

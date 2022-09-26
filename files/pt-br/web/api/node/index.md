@@ -64,9 +64,10 @@ _Herda propriedades de seus pais, {{domxref("EventTarget")}}_.\[1]
 
 - {{domxref("Node.rootNode")}} {{readOnlyInline}} {{deprecated_inline}}
   - : Retorna um objeto {{domxref("Node")}} representando o nó mais alto em uma árvore, ou o nó atual, se ele for o mais alto da árvore. Isso foi substituído por {{domxref("Node.getRootNode()")}}.
-- ### Propriedades obsoletas
 
-  {{domxref("Node.localName")}} {{obsolete_inline}}{{readonlyInline}}
+### Propriedades obsoletas
+
+- {{domxref("Node.localName")}} {{obsolete_inline}}{{readonlyInline}}
 
   - : Retorna um {{domxref("DOMString")}} representando a parte local do nome qualificado de um elemento.
 
@@ -153,14 +154,14 @@ DOMComb(parentNode, callbackFunction);
 
 #### Descrição
 
-Percorre todos os nós filhos de `parentNode` recursivamente e o próprio `parentNode` e executa a `callbackFunction` em cada um deles como [`this`](/pt-BR/docs/JavaScript/Reference/Operators/this "en-US/docs/JavaScript/Reference/Operators/this").
+Percorre todos os nós filhos de `parentNode` recursivamente e o próprio `parentNode` e executa a `callbackFunction` em cada um deles como [`this`](/pt-BR/docs/JavaScript/Reference/Operators/this).
 
 #### Parâmetros
 
 - `parentNode`
-  - : O nó pai ([`Object`](/en-US/docs/JavaScript/Reference/Global_Objects/Object "en-US/docs/JavaScript/Reference/Global_Objects/Object")` do tipo Node`).
+  - : O nó pai ([`Object`](/en-US/docs/JavaScript/Reference/Global_Objects/Object)`do tipo Node`).
 - `callbackFunction`
-  - : A função de callback ([`Function`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Function "en-US/docs/JavaScript/Reference/Global_Objects/Function")).
+  - : A função de callback ([`Function`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Function)).
 
 #### Exemplo de uso
 

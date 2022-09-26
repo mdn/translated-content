@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/LN10
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/LN10
 ---
+
 {{JSRef}}
 
 La propriété **`Math.LN10`** représente la valeur du logarithme naturel de 10, environ 2.302 :

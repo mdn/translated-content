@@ -2,6 +2,7 @@
 title: NodeList
 slug: Web/API/NodeList
 ---
+
 {{APIRef("DOM")}}
 
 **`NodeList`** 物件是節點的集合，可藉由 {{domxref("Node.childNodes")}} 屬性以及 {{domxref("document.querySelectorAll()")}} 方法取得。
@@ -105,4 +106,4 @@ For information about forEach see [Array.prototype.forEach()](/zh-TW/docs/Web/Ja
 
 ## 瀏覽器相容性
 
-{{Compat("api.NodeList")}}
+{{Compat}}

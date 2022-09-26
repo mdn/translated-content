@@ -2,6 +2,7 @@
 title: Mozilla 醒目页面
 slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 
 在这个测验中，我们将测试你对于本模块文章所讨论的技术的掌握程度，让你将一些有关于 Mozilla 的图片和视频添加到一个漂亮的页面上！

@@ -2,6 +2,7 @@
 title: function
 slug: Web/JavaScript/Reference/Statements/function
 ---
+
 {{jsSidebar("Statements")}}
 
 **函数声明**定义一个具有指定参数的函数。

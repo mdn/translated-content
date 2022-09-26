@@ -2,6 +2,7 @@
 title: 優雅的使用 Promises 來處理非同步操作
 slug: Learn/JavaScript/Asynchronous/Promises
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous/Async_await", "Learn/JavaScript/Asynchronous")}}
 
 **Promises** 是在 Javascript 語言中相對較新的功能，它能夠讓你延遲活動直到先前的活動回報完成或失敗。這方法對設置一連串的操作並讓其正確的循序執行相當有用。本篇文章向您展示 promises 是如何運作，您將會看到如何被使用在 WebAPIs，以及如何寫出屬於自己的 promises。

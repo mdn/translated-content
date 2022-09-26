@@ -2,6 +2,7 @@
 title: <form>
 slug: Web/HTML/Element/form
 ---
+
 {{HTMLRef}}
 
 HTML **`<form>`** 元素表示提交訊息的區塊，此區塊含有許多可互動的控制項。
@@ -98,7 +99,7 @@ This element includes the [global attributes](/zh-TW/docs/Web/HTML/Global_attrib
 
 ## Browser compatibility
 
-{{Compat("html.elements.form")}}
+{{Compat}}
 
 ## See also
 

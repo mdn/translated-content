@@ -2,6 +2,7 @@
 title: 'HTMLFormElement: reset イベント'
 slug: Web/API/HTMLFormElement/reset_event
 ---
+
 {{APIRef}}
 
 **`reset`** イベントは {{HTMLElement("form")}} がリセットされたときに発行されます。

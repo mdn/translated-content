@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/line-height
 ---
+
 {{CSSRef}}
 
 La propriété **`line-height`** définit la hauteur de la boîte d'une ligne.

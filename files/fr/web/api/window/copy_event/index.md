@@ -12,6 +12,7 @@ tags:
   - copy
 translation_of: Web/API/Window/copy_event
 ---
+
 {{APIRef}}
 
 L'événement **`copy`** se déclenche lorsque l'utilisateur lance une action de copie via l'interface utilisateur du nagivateur.

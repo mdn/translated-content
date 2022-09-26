@@ -2,6 +2,7 @@
 title: '@media'
 slug: Web/CSS/@media
 ---
+
 {{CSSRef}}
 
 ## 概要
@@ -91,7 +92,7 @@ Each _media feature_ tests for one specific feature of the browser or device.
 
 ## Browser compatibility
 
-{{Compat("css.at-rules.media")}}
+{{Compat}}
 
 ## See also
 

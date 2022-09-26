@@ -2,6 +2,7 @@
 title: Range.deleteContents()
 slug: Web/API/Range/deleteContents
 ---
+
 {{ApiRef("DOM")}}
 
 **`Range.deleteContents()`** 移除来自 {{ domxref("Document") }}的{{ domxref("Range") }} 内容。

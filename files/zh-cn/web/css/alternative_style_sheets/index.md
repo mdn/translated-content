@@ -2,6 +2,7 @@
 title: Alternative style sheets
 slug: Web/CSS/Alternative_style_sheets
 ---
+
 {{cssref}}
 
 Specifying **alternative style sheets** in a web page provides a way for users to see multiple versions of a page, based on their needs or preferences.

@@ -9,6 +9,7 @@ tags:
   - required
 translation_of: Web/HTML/Attributes/readonly
 ---
+
 {{HTMLSidebar}}
 
 L'attribut booléen **`readonly`**, lorsqu'il est présent, rend l'élément non mutable, ce qui signifie que l'utilisateur ne peut pas modifier le contrôle. Si l'attribut `readonly` est spécifié sur un élément de saisie, comme l'utilisateur ne peut pas modifier la saisie, l'élément ne participe pas à la validation des contraintes.

@@ -2,6 +2,7 @@
 title: 'URIError: malformed URI sequence'
 slug: Web/JavaScript/Reference/Errors/Malformed_URI
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "malformed URI sequence" は、 URI エンコードまたはデコードに失敗したときに発生します。

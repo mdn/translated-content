@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/bottom
 ---
+
 {{CSSRef}}
 
 La propriété **`bottom`** contribue à la définition de l'emplacement vertical des [éléments positionnés](/fr/docs/Web/CSS/position). Elle n'a aucun effet pour les éléments non-positionnés.

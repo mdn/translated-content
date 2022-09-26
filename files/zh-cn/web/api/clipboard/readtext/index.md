@@ -2,6 +2,7 @@
 title: Clipboard.readText()
 slug: Web/API/Clipboard/readText
 ---
+
 {{APIRef("Clipboard API")}}
 
 **{{domxref("Clipboard")}}** 接口的 **`readText()`** 方法解析系统剪贴板的文本内容返回一个{{jsxref("Promise")}} 。
@@ -37,7 +38,7 @@ navigator.clipboard.readText().then(
 
 ## 浏览器兼容性
 
-{{Compat("api.Clipboard.readText")}}
+{{Compat}}
 
 ## See also
 

@@ -2,6 +2,7 @@
 title: Intersection Observer API
 slug: Web/API/Intersection_Observer_API
 ---
+
 {{DefaultAPISidebar("Intersection Observer API")}}
 
 Intersection Observer API 提供了一种异步检测目标元素与祖先元素或 {{Glossary("viewport")}} 相交情况变化的方法。
@@ -507,7 +508,7 @@ There's an even more extensive example at [Timing element visibility with the In
 
 ## 浏览器兼容性
 
-{{Compat("api.IntersectionObserver")}}
+{{Compat}}
 
 ## 参见
 

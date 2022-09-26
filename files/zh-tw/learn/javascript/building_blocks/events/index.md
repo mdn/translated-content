@@ -3,6 +3,7 @@ title: Event attributes
 slug: Learn/JavaScript/Building_blocks/Events
 original_slug: Web/Guide/HTML/Event_attributes
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
 
 每一個 HTML 元素都可以放置事件屬性，以藉此於事件發生時能執行 JavaScript 程式。事件屬性的名稱都有一個前綴「on」，例如當使用者點選元素時要執行指定的 JavaScript，可以使用 `onclick` 屬性並把要執行的 JavaScript 當成屬性值。

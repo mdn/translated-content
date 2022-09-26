@@ -2,6 +2,7 @@
 title: 链接类型
 slug: Web/HTML/Link_types
 ---
+
 {{HTMLSidebar}}
 
 在超文本标记语言中，在两种文档之间可以指定{{HTMLElement("a")}}, {{HTMLElement("area")}}或{{HTMLElement("link")}} 元素使一个页面链接到另一个页面。

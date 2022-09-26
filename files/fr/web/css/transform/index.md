@@ -8,6 +8,7 @@ tags:
   - Transformations CSS
 translation_of: Web/CSS/transform
 ---
+
 {{CSSRef}}
 
 La propriété **`transform`** modifie l'espace de coordonnées utilisé pour la mise en forme visuelle. Grâce à cette propriété, il est possible de translater les éléments, de les tourner, d'appliquer des homothéties, de les distordre pour en changer la perspective.

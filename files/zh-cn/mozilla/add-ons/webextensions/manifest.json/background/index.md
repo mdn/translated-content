@@ -2,6 +2,7 @@
 title: 后台 - background
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/background
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -96,4 +97,4 @@ background 键最多只能拥有以下的两个属性，两个属性都是可选
 
 ## Browser compatibility
 
-{{Compat("webextensions.manifest.background", 10)}}
+{{Compat}}

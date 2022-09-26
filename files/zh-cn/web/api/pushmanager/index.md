@@ -2,6 +2,7 @@
 title: PushManager
 slug: Web/API/PushManager
 ---
+
 {{ApiRef("Push API")}}
 
 [Push API](/zh-CN/docs/Web/API/Push_API) 的`PushManager`接口提供了从第三方服务器接收消息通知的能力。
@@ -63,7 +64,7 @@ navigator.serviceWorker.register('serviceworker.js').then(
 
 ## Browser compatibility
 
-{{Compat("api.PushManager")}}
+{{Compat}}
 
 ## See also
 

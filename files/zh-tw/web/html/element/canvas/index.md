@@ -2,6 +2,7 @@
 title: <canvas>
 slug: Web/HTML/Element/canvas
 ---
+
 這個 **HTML `<canvas>` 元素** 可以被使用於對腳本程式(JaveScript) 繪圖 .舉例來說, 它能用來畫圖,組合照片,甚至作動畫. 你也許(應該) 在\<canvas>區段內提供替代方案的內容 .這內容將能被一些不支援\<canvas>以及無法使用 Javescript 功能的瀏覽器所渲染 .
 
 更多文章關於 canvas, 請參考 [canvas 主題](/zh-TW/docs/Web/API/Canvas_API)
@@ -58,7 +59,7 @@ canvas 的大小設置可透過樣式表（stylesheet）被改變。可經由樣
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.canvas")}}
+{{Compat}}
 
 ## 延伸閱讀
 

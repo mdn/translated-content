@@ -2,6 +2,7 @@
 title: 原因：CORS 头 'Access-Control-Allow-Origin'与'xyz'不匹配
 slug: Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin
 ---
+
 {{HTTPSidebar}}
 
 ## 原因

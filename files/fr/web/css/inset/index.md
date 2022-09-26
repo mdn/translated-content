@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/inset
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`inset`** définit les décalages physiques d'un élément. Bien qu'elle fasse partie de la spécification sur les propriétés logiques, sa valeur ne dépend pas du mode d'écriture de l'élément, de sa direction ou de l'orientation du texte. La syntaxe de cette propriété suit la même structure que {{cssxref("margin")}}, `inset` est une propriété raccourcie permettant de définir les propriétés {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} et/ou {{cssxref("left")}}.

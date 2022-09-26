@@ -2,6 +2,7 @@
 title: 'CSP: require-sri-for'
 slug: Web/HTTP/Headers/Content-Security-Policy/require-sri-for
 ---
+
 {{HTTPSidebar}}
 
 HTTP 协议 {{HTTPHeader("Content-Security-Policy")}}头部的 require-sri-for 指令指示客户端在页面上对脚本或样式使用子资源完整性策略。

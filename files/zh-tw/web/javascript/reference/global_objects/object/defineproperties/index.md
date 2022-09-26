@@ -2,6 +2,7 @@
 title: Object.defineProperties()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 ---
+
 {{JSRef}}
 
 **`Object.defineProperties()`** 函式可定義新的或是修改已存在的物件屬性，並回傳修改後的物件。

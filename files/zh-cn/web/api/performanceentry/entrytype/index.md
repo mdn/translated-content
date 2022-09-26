@@ -2,6 +2,7 @@
 title: PerformanceEntry.entryType
 slug: Web/API/PerformanceEntry/entryType
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`entryType`** 返回一个代表 performance metric 类型的{{domxref("DOMString")}} , 例如被 performance.mark("begin") 所创建的 entry 的 entryType 就是 "`mark`". 此属性只读。

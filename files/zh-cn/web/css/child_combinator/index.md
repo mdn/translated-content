@@ -2,6 +2,7 @@
 title: 子选择器
 slug: Web/CSS/Child_combinator
 ---
+
 {{ CSSRef() }}
 
 ## 概述
@@ -45,6 +46,6 @@ Span 3. Not in a div at all.
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.child")}}
+{{Compat}}
 
 ## 相关

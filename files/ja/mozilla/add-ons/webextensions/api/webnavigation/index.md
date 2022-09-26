@@ -2,6 +2,7 @@
 title: webNavigation
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation
 ---
+
 {{AddonSidebar}}
 
 ナビゲーションのいろいろな段階でイベントリスナーを追加します。ナビゲーションにはある URL から他に移動するブラウザーフレームにより成り立っていて、それは(いつもではなく)通常はリンクのクリックやロケーションバーへの URL 入力といったユーザー操作の応答として発生します。

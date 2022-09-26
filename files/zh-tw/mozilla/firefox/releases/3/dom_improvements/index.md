@@ -2,6 +2,7 @@
 title: Firefox 3 Dom Improvements
 slug: Mozilla/Firefox/Releases/3/DOM_improvements
 ---
+
 {{FirefoxSidebar}}
 
 ### Firefox 3 對 DOM 的改善

@@ -76,4 +76,4 @@ Passar um _ID_ inválido para `clearTimeout` não causa nenhum efeito (não lan�
 - {{domxref("WindowOrWorkerGlobalScope.setInterval()")}}
 - {{domxref("WindowOrWorkerGlobalScope.clearInterval()")}}
 - {{domxref("Window.requestAnimationFrame()")}}
-- [_Daemons_ management](/pt-BR/docs/JavaScript/Timers/Daemons "JavaScript/Timers/Daemons")
+- [_Daemons_ management](/pt-BR/docs/JavaScript/Timers/Daemons)

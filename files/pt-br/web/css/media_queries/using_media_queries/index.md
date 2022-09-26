@@ -149,8 +149,8 @@ A maioria das _media features_ podem ter prefixo “min-” ou “max-“ para e
 ### cor
 
 **Valor:** {{cssxref("&lt;color&gt;")}}
-**Mídia\*\***:** {{cssxref("Media/Visual")}}
-**Aceita prefixos min/max:\*\* sim
+**Mídia:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:** sim
 
 Indica o número de bits por componente de cor no dispositivo de saída. Se o dispositivo não é um dispositivo de cor, o valor é zero.
 
@@ -173,8 +173,8 @@ Aplicar uma folha de estilo a todos dispositivos com no mínimo 4 bits de color 
 ### color-index
 
 **Valor:** {{cssxref("&lt;integer&gt;")}}
-**Mídia\*\***:** {{cssxref("Media/Visual")}}
-**Aceita prefixos min/max:\*\* Sim
+**Mídia:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:** Sim
 
 Indica o número de entradas na tabela de consulta de cores para o dispositivo de saída.
 
@@ -195,8 +195,8 @@ Para aplicar uma folha de estilo em um dispositivo com cores indexadas menor que
 ### aspect-ratio
 
 **Valor:** {{cssxref("&lt;ratio&gt;")}}
-**Mídia\*\***:** {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}
-**Aceita prefixos min/max:\*\* sim
+**Mídia:** {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}
+**Aceita prefixos min/max:** sim
 
 Descreve o aspecto da relação da área do display do dispositivo de saída. Este valor consiste de dois inteiros positivos separados por um caractere barra (“/”). Isto representa a relação entre pixels horizontais (primeiro termo) para pixels verticais (segundo termo).
 
@@ -213,8 +213,8 @@ Isto seleciona o estilo quando a relação de aspecto seja 1:1 ou maior. Em outr
 ### device-aspect-ratio
 
 **Valor:** {{cssxref("&lt;ratio&gt;")}}
-**Mídia\*\***:** {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}
-**Aceita prefixos min/max:\*\* sim
+**Mídia:** {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}
+**Aceita prefixos min/max:** sim
 
 Descreve a relação de aspecto do dispositivo de saída. Este valor consiste de dois inteiros positivos separados pelo carácter barra (“/”). Isto representa a relação de pixels horizontais (primeiro termo) por pixels verticais (segundo termo).
 
@@ -231,8 +231,8 @@ Isso seleciona o estilo quando a relação de aspecto é 16:9 ou 16:10.
 ### device-height
 
 **Valor:** {{cssxref("&lt;length&gt;")}}
-**Mídia\*\***:** {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}
-**Aceita prefixos min/max:\*\* sim
+**Mídia:** {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}
+**Aceita prefixos min/max:** sim
 
 Descreve a altura do dispositivo de saída( ou seja, toda a tela ou página, em vez de apenas a área de renderização, tal como a janela do documento).
 
@@ -247,8 +247,8 @@ Para aplicar uma folha de estilo a um documento quando exibido em uma tela menor
 ### device-width
 
 **Valor:** {{cssxref("&lt;length&gt;")}}
-**Mídia\*\***:** {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}
-**Aceita prefixos min/max:\*\* sim
+**Mídia:** {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}
+**Aceita prefixos min/max:** sim
 
 Descreve a largura do dispositivo e saída (ou seja, toda a tela ou página, em vez de apenas a área de renderização, tal como a janela do documento).
 
@@ -263,8 +263,8 @@ Para aplicar uma folha de estilo a um documento quando exibido em uma tela menor
 ### grid
 
 **Valor:** {{cssxref("&lt;integer&gt;")}}
-**Mídia\*\***:** todas
-**Aceita prefixos min/max:\*\* não
+**Mídia:** todas
+**Aceita prefixos min/max:** não
 
 Determina se o dispositivo de saída é um dispositivo grade ou um dispositivo bitmap. Se o dispositivo é baseado em grade(tal como um terminal TTY ou uma tela de telefone com apenas um tipo de letra), o valor é 1. De outro modo é zero.
 
@@ -281,8 +281,8 @@ Para aplicar um estilo a dispositivos postáteis com 15-carácteres ou uma tela 
 ### height
 
 **Valor:** {{cssxref("&lt;length&gt;")}}
-**Mídia\*\***:** {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}
-**Aceita prefixos min/max:\*\* yes
+**Mídia:** {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}
+**Aceita prefixos min/max:** yes
 
 A característica `height` descreve a altura da superfície de renderização do dispositivo de saída (tal como a altura do viewport ou da caixa de página em uma impressora).
 
@@ -291,8 +291,8 @@ A característica `height` descreve a altura da superfície de renderização do
 ### monochrome
 
 **Valor:** {{cssxref("&lt;integer&gt;")}}
-**Mídia\*\***:** {{cssxref("Media/Visual")}}
-**Aceita prefixos min/max:\*\* sim
+**Mídia:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:** sim
 
 Indica o número de bits por pixel em um dispositivo monocromático (greyscale). Se o dispositivo não for monocromático, o valor é 0.
 
@@ -313,8 +313,8 @@ Para aplicar uma folha de estilo em dispositivos monocromáticos com pelo menos 
 ### orientation
 
 **Valor:** `landscape` | `portrait`
-**Mídia\*\***:** {{cssxref("Media/Visual")}}
-**Aceita prefixos min/max:\*\* não
+**Mídia:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:** não
 
 Indica se o _viewport_ é modo _landscape_ (o visor é mais largo do que mais alto) ou _portrait_ (o visor é mais alto do que mais largo).
 
@@ -331,8 +331,8 @@ Para aplicar a folha de estilo apenas em orientação _portrait_:
 ### resolution
 
 **Valor:** {{cssxref("&lt;resolution&gt;")}}
-**Mídia\*\***:** {{cssxref("Media/Bitmap", "bitmap")}}
-**Aceita prefixos min/max:\*\* sim
+**Mídia:** {{cssxref("Media/Bitmap", "bitmap")}}
+**Aceita prefixos min/max:** sim
 
 Indica a resolução (densidade de pixel) da saída do dispositivo. A resolução pode ser especificada em pontos por inch(dpi) ou pontos por centímetro(dpcm).
 
@@ -353,8 +353,8 @@ Para substituir a antiga sintaxe (min-device-pixel-ratio: 2):
 ### scan
 
 **Valor:** `progressive` | `interlace`
-**Mídia\*\***:** {{cssxref("Media/TV")}}
-**Aceita prefixos min/max:\*\* não
+**Mídia:** {{cssxref("Media/TV")}}
+**Aceita prefixos min/max:** não
 
 Descreve o processo de digitalização de dispositivos saída de televisão.
 
@@ -369,10 +369,10 @@ Para aplicar uma folha de estilo apenas para televisores de varredura progressiv
 ### width
 
 **Valor:** {{cssxref("&lt;length&gt;")}}
-**Mídia\*\***:** {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}
-**Aceita prefixos min/max:\*\* sim
+**Mídia:** {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}
+**Aceita prefixos min/max:** sim
 
-A _media feature_ `width `descreve a largura da superficie de renderização do dispositivo de saída (tal como a largura da janela do documento, ou a largura da caixa de página em uma impressora).
+A _media feature_ `width` descreve a largura da superficie de renderização do dispositivo de saída (tal como a largura da janela do documento, ou a largura da caixa de página em uma impressora).
 
 **Nota:**
 Como o usuário redimensiona a janela, o Firefox muda as folhas de estilos como apropriado baseado em _media queries_ usando media features `width` e `height`.
@@ -405,36 +405,36 @@ Mozilla oferece várias _media features_ para específicos _Gecko_ . Algumas des
 ### -moz-images-in-menus
 
 **Valor:** {{cssxref("&lt;integer&gt;")}}
-**Mídia\*\***:** {{cssxref("Media/Visual")}}
-**Aceita prefixos min/max:\*\* não
+**Mídia:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:** não
 
-Se o dispositivo permite aparecer imagens nos menus, o valor é 1; caso contrário, o valor é 0. Isto corresponde ao {{ cssxref(":-moz-system-metric(images-in-menus)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
+Se o dispositivo permite aparecer imagens nos menus, o valor é 1; caso contrário, o valor é 0. Isto corresponde ao {{ cssxref(":-moz-system-metric(images-in-menus)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
 
 ### -moz-mac-graphite-theme
 
 **Valor:** {{cssxref("&lt;integer&gt;")}}
-**Mídia\*\***:** {{cssxref("Media/Visual")}}
-**Aceita prefixos min/max:\*\*no
+**Mídia:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:**no
 
 Se o usuário tenha configurado seu dispositivo para usar a aparência _"Graphite"_ no _Mac OS X_, o valor é 1. Se o usuário está usando a aparência padrão _blue_, ou não está num _Mac OS X_, o valor é 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(mac-graphite-theme)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
+Isto corresponde ao {{ cssxref(":-moz-system-metric(mac-graphite-theme)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
 
 ### -moz-maemo-classic
 
 **Valor:** {{cssxref("&lt;integer&gt;")}}
-**Mídia\*\***:** {{cssxref("Media/Visual")}}
-**Aceita prefixos min/max:\*\* não
+**Mídia:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:** não
 
 Se o usuário está usando _Maemo_ com o tema original, o valor é 1; Se está usando o mais novo tema _Fremantle_, o valor é 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(maemo-classic)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
+Isto corresponde ao {{ cssxref(":-moz-system-metric(maemo-classic)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
 
 ### -moz-device-pixel-ratio
 
 **Valor:** {{cssxref("&lt;number&gt;")}}
-**Mídia\*\***:** {{cssxref("Media/Visual")}}
-**Aceita prefixos min/max:\*\* sim
+**Mídia:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:** sim
 
 Dar o número de pixels do dispositivo por pixels do CSS.
 
@@ -460,8 +460,8 @@ Veja este artigo [CSSWG](http://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-d
 ### -moz-os-version
 
 **Valor:** `windows-xp` | `windows-vista` | `windows-win7` | `windows-win8`
-**Mídia\*\***:** {{cssxref("Media/Visual")}}
-**Aceita prefixos min/max:\*\* não
+**Mídia:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:** não
 
 Indica qual versão do sistema operacional está sendo usado atualmente. Atualmente apenas implementada no Windows. Possíveis valores são:
 
@@ -475,62 +475,62 @@ Isto é fornecido pelas _skins das aplicações_ e outros códigos do chrome par
 ### -moz-scrollbar-end-backward
 
 **Valor:** {{cssxref("&lt;integer&gt;")}}
-**Mídia\*\***:** {{cssxref("Media/Visual")}}
-**Aceita prefixos min/max:\*\* não
+**Mídia:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:** não
 
 Se a interface do usuário do dispositivo exibe uma seta para trás no final da barra de rolagem, o valor é 1. Caso contrário, é 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-end-backward)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
+Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-end-backward)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
 
 ### -moz-scrollbar-end-forward
 
 **Valor:** {{cssxref("&lt;integer&gt;")}}
-**Mídia\*\***:** {{cssxref("Media/Visual")}}
-**Aceita prefixos min/max:\*\* não
+**Mídia:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:** não
 
 Se a interface do usuário do dispositivo a forward arrow button at the end of scrollbars, this is 1. Otherwise it's 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-end-forward)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
+Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-end-forward)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
 
 ### -moz-scrollbar-start-backward
 
 **Valor:** {{cssxref("&lt;integer&gt;")}}
-**Mídia\*\***:** {{cssxref("Media/Visual")}}
-**Aceita prefixos min/max:\*\* não
+**Mídia:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:** não
 
 Se a interface do usuário do dispositivo a backward arrow button at the beginning of scrollbars, this is 1. Otherwise it's 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-start-backward)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
+Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-start-backward)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
 
 ### -moz-scrollbar-start-forward
 
 **Valor:** {{cssxref("&lt;integer&gt;")}}
-**Mídia\*\***:** {{cssxref("Media/Visual")}}
-**Aceita prefixos min/max:\*\* não
+**Mídia:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:** não
 
 Se a interface do usuário do dispositivo a forward arrow button at the beginning of scrollbars, this is 1. Otherwise it's 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-start-forward)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
+Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-start-forward)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
 
 ### -moz-scrollbar-thumb-proportional
 
 **Valor:** {{cssxref("&lt;integer&gt;")}}
-**Mídia\*\***:** {{cssxref("Media/Visual")}}
-**Aceita prefixos min/max:\*\* não
+**Mídia:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:** não
 
 Se a interface do usuário do dispositivo the thumb of scrollbars proportionally (that is, sized based on the percentage of the document that is visible), this is 1. Otherwise it's 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-thumb-proportional)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
+Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-thumb-proportional)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
 
 ### -moz-touch-enabled
 
 **Valor:** {{cssxref("&lt;integer&gt;")}}
-**Mídia\*\***:** {{cssxref("Media/Visual")}}
-**Aceita prefixos min/max:\*\* não
+**Mídia:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:** não
 
 If the device supports touch events (for a touch screen), this is 1. Otherwise it's 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(touch-enabled)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
+Isto corresponde ao {{ cssxref(":-moz-system-metric(touch-enabled)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
 
 #### Exemplo
 
@@ -539,46 +539,46 @@ You might use this to render your buttons slightly larger, for example, if the u
 ### -moz-windows-classic
 
 **Valor:** {{cssxref("&lt;integer&gt;")}}
-**Mídia\*\***:** {{cssxref("Media/Visual")}}
-**Aceita prefixos min/max:\*\* não
+**Mídia:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:** não
 
 If the user is using Windows unthemed (in classic mode instead of using uxtheme), this is 1; otherwise it's 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(windows-classic)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
+Isto corresponde ao {{ cssxref(":-moz-system-metric(windows-classic)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
 
 ### -moz-windows-compositor
 
 **Valor:** {{cssxref("&lt;integer&gt;")}}
-**Mídia\*\***:** {{cssxref("Media/Visual")}}
-**Aceita prefixos min/max:\*\* não
+**Mídia:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:** não
 
 If the user is using Windows with the DWM compositor, this is 1; otherwise it's 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(windows-compositor)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
+Isto corresponde ao {{ cssxref(":-moz-system-metric(windows-compositor)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
 
 ### -moz-windows-default-theme
 
 **Valor:** {{cssxref("&lt;integer&gt;")}}
-**Mídia\*\***:** {{cssxref("Media/Visual")}}
-**Aceita prefixos min/max:\*\* não
+**Mídia:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:** não
 
 If the user is currently using one of the default Windows themes (Luna, Royale, Zune, or Aero (including Vista Basic, Vista Advanced, and Aero Glass), this is 1. Otherwise it's 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(windows-default-theme)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes "Pseudo-classes").
+Isto corresponde ao {{ cssxref(":-moz-system-metric(windows-default-theme)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
 
 ### -moz-windows-glass
 
 **Valor:** {{cssxref("&lt;integer&gt;")}}
-**Mídia\*\***:** {{cssxref("Media/Visual")}}
-**Aceita prefixos min/max:\*\* não
+**Mídia:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:** não
 
 If the user is using Windows Glass theme, this is 1; otherwise it's 0. Note that this only exists for Windows 7 and earlier.
 
 ### -moz-windows-theme
 
 **Valor:** `aero` | `luna-blue` | `luna-olive` | `luna-silver` | `royale` | `generic` | `zune`
-**Mídia\*\***:** {{cssxref("Media/Visual")}}
-**Aceita prefixos min/max:\*\* não
+**Mídia:** {{cssxref("Media/Visual")}}
+**Aceita prefixos min/max:** não
 
 Indicates which Windows theme is currently being used. Only available on Windows. Possible values are:
 
@@ -595,7 +595,7 @@ Isto é previsto para _skins_ de aplicativo e outro código de aplicações de c
 ## See also
 
 - [CSS 3 media query specification](http://www.w3.org/TR/css3-mediaqueries/)
-- [Media types](/pt-BR/docs/CSS/@media "En/CSS/@media")
-- [Using media queries from code](/pt-BR/docs/CSS/Using_media_queries_from_code "en/CSS/Using media queries from code")
+- [Media types](/pt-BR/docs/CSS/@media)
+- [Using media queries from code](/pt-BR/docs/CSS/Using_media_queries_from_code)
 - [List of mobile and tablet viewport sizes with pixel ratios and physical sizes](http://i-skool.co.uk/mobile-development/web-design-for-mobiles-and-tablets-viewport-sizes/)
 - [CSS Animations Between Media Queries](http://davidwalsh.name/animate-media-queries) by David Walsh

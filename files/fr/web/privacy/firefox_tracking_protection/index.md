@@ -9,6 +9,7 @@ tags:
 translation_of: Web/Privacy/Tracking_Protection
 original_slug: Web/Privacy/Tracking_Protection
 ---
+
 ## La protection contre le pistage, qu'est-ce que c'est ?
 
 Firefox Desktop et Firefox pour Android intègrent des protections natives contre le pistage. Dans les fenêtres de navigation privée (des onglets dans Firefox pour Android), Firefox bloquera le contenu provenant de domaines qui pistent les utilisateurs sur différents sites.

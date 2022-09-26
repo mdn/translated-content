@@ -2,6 +2,7 @@
 title: document.mozFullScreen
 slug: Web/API/Document/fullscreen
 ---
+
 {{APIRef("Fullscreen API")}}{{Deprecated_Header}}
 
 过时的{{domxref("Document")}}接口的 **`fullscreen`** 只读属性报告文档当前是否以全屏模式显示内容。
@@ -36,4 +37,4 @@ function isDocumentInFullScreenMode() {
 
 ### 浏览器兼容性
 
-{{Compat("api.Document.fullscreen")}}
+{{Compat}}

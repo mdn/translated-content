@@ -76,7 +76,7 @@ _The `Performance` interface doesn't inherit any properties._
 | {{SpecName('Resource Timing', '#extensions-performance-interface', 'Performance extensions')}}                                         | {{Spec2('Resource Timing')}}                     | Defines `clearResourceTimings()` and `setResourceTimingBufferSize()` methods and the `onresourcetimingbufferfull` property. |
 | {{SpecName('User Timing Level 2', '#extensions-performance-interface', 'Performance extensions')}}                                 | {{Spec2('User Timing Level 2')}}             | Clarifies `mark()`, `clearMark()`, `measure()` and `clearMeasure()` methods.                                                |
 | {{SpecName('User Timing', '#extensions-performance-interface', 'Performance extensions')}}                                             | {{Spec2('User Timing')}}                         | Defines `mark()`, `clearMark()`, `measure()` and `clearMeasure()` methods.                                                  |
-| {{SpecName('<span style="line-height: 1.5;">Frame Timing', '#extensions-performance-interface','Performance extensions')}} | {{Spec2('User Timing')}}                         | Defines `clearFrameTimings()`, `setFrameTimingBufferSize()`, and `onframetimingbufferfull` methods.                         |
+| {{SpecName('Frame Timing', '#extensions-performance-interface','Performance extensions')}} | {{Spec2('User Timing')}}                         | Defines `clearFrameTimings()`, `setFrameTimingBufferSize()`, and `onframetimingbufferfull` methods.                         |
 
 ## Compatibilidade com navegadores
 

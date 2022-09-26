@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/Document/preferredStyleSheetSet
 ---
+
 {{APIRef("DOM")}}
 
 Retourne la feuille de style préférée, telle que définie par l'auteur de la page.

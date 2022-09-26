@@ -1378,7 +1378,6 @@
 /zh-CN/docs/Web/API/Document/ononline	/zh-CN/docs/Web/API/Window/online_event
 /zh-CN/docs/Web/API/Document/onreadystatechange	/en-US/docs/Web/API/Document/readystatechange_event
 /zh-CN/docs/Web/API/Document/onvisibilitychange	/zh-CN/docs/Web/API/Document/visibilitychange_event
-/zh-CN/docs/Web/API/Document/pointerlockchange_event	/zh-CN/docs/Web/API/Element/pointerlockchange_event
 /zh-CN/docs/Web/API/Document/rouchmove_event	/zh-CN/docs/conflicting/Web/API/Element/touchmove_event
 /zh-CN/docs/Web/API/Document/selectstart_event	/zh-CN/docs/Web/API/Node/selectstart_event
 /zh-CN/docs/Web/API/Document/touchcancel_event	/zh-CN/docs/conflicting/Web/API/Element/touchcancel_event
@@ -1435,6 +1434,7 @@
 /zh-CN/docs/Web/API/Element/onfullscreenchange	/zh-CN/docs/Web/API/Element/fullscreenchange_event
 /zh-CN/docs/Web/API/Element/onfullscreenerror	/zh-CN/docs/Web/API/Element/fullscreenerror_event
 /zh-CN/docs/Web/API/Element/onpaste	/zh-CN/docs/Web/API/HTMLElement/paste_event
+/zh-CN/docs/Web/API/Element/pointerlockchange_event	/zh-CN/docs/Web/API/Document/pointerlockchange_event
 /zh-CN/docs/Web/API/Element/removeAttributre	/zh-CN/docs/Web/API/Element/removeAttribute
 /zh-CN/docs/Web/API/Element/select_event	/zh-CN/docs/Web/API/HTMLInputElement/select_event
 /zh-CN/docs/Web/API/Event/CustomEvent	/zh-CN/docs/Web/API/CustomEvent
@@ -1587,7 +1587,7 @@
 /zh-CN/docs/Web/API/HTMLHyperlinkElementUtils/search	/zh-CN/docs/Web/API/HTMLAnchorElement/search
 /zh-CN/docs/Web/API/HTMLHyperlinkElementUtils/toString	/zh-CN/docs/Web/API/HTMLAnchorElement/toString
 /zh-CN/docs/Web/API/HTMLHyperlinkElementUtils/username	/zh-CN/docs/Web/API/HTMLAnchorElement/username
-/zh-CN/docs/Web/API/HTMLMediaElement/onerror	/zh-CN/docs/conflicting/Web/API/HTMLMediaElement/error_event
+/zh-CN/docs/Web/API/HTMLMediaElement/onerror	/zh-CN/docs/Web/API/HTMLMediaElement/error_event
 /zh-CN/docs/Web/API/HTMLTableElement.deleteTHead	/zh-CN/docs/Web/API/HTMLTableElement/deleteTHead
 /zh-CN/docs/Web/API/Headers/getAll	/zh-CN/docs/Web/API/Headers/get
 /zh-CN/docs/Web/API/IDBCursor.direction	/zh-CN/docs/Web/API/IDBCursor/direction
@@ -2439,6 +2439,19 @@
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear	/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly	/zh-CN/docs/WebAssembly/JavaScript_interface
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError	/zh-CN/docs/WebAssembly/JavaScript_interface/CompileError
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global	/zh-CN/docs/WebAssembly/JavaScript_interface/Global
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance	/zh-CN/docs/WebAssembly/JavaScript_interface/Instance
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory	/zh-CN/docs/WebAssembly/JavaScript_interface/Memory
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module	/zh-CN/docs/WebAssembly/JavaScript_interface/Module
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError	/zh-CN/docs/WebAssembly/JavaScript_interface/RuntimeError
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table	/zh-CN/docs/WebAssembly/JavaScript_interface/Table
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compile	/zh-CN/docs/WebAssembly/JavaScript_interface/compile
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming	/zh-CN/docs/WebAssembly/JavaScript_interface/compileStreaming
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate	/zh-CN/docs/WebAssembly/JavaScript_interface/instantiate
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming	/zh-CN/docs/WebAssembly/JavaScript_interface/instantiateStreaming
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/validate	/zh-CN/docs/WebAssembly/JavaScript_interface/validate
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null	/zh-CN/docs/Web/JavaScript/Reference/Operators/null
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/uneval	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/生成器函数	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction

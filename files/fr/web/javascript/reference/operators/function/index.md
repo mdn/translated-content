@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/function
 original_slug: Web/JavaScript/Reference/Opérateurs/L_opérateur_function
 ---
+
 {{jsSidebar("Operators")}}
 
 Le mot-clé **`function`** permet de définir une fonction à l'intérieur d'une expression.

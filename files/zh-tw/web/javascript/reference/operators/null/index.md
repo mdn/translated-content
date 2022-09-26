@@ -3,6 +3,7 @@ title: 'null'
 slug: Web/JavaScript/Reference/Operators/null
 original_slug: Web/JavaScript/Reference/Global_Objects/null
 ---
+
 {{jsSidebar("Objects")}}
 
 The value `null` represents the intentional absence of any object value. It is one of JavaScript's {{Glossary("Primitive", "primitive values")}}.

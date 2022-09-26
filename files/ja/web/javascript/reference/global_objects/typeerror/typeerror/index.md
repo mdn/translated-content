@@ -2,6 +2,7 @@
 title: TypeError() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/TypeError/TypeError
 ---
+
 {{JSRef}}
 
 **`TypeError()`** コンストラクターは、演算が実行できなくなった時の新しいエラーを生成します。特に値が期待された型ではなかった場合です (ただし、それに限りません)。

@@ -2,6 +2,7 @@
 title: 什么是 CSS?
 slug: Learn/CSS/First_steps/What_is_CSS
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
 
 **{{Glossary("CSS")}}** (层叠样式表) 让你可以创建好看的网页，但是它具体是怎么工作的呢？ 这篇文章通过一些很简单的例子，告诉我们什么是 CSS，同时还会涉及一些和 CSS 相关的专业术语。
@@ -108,7 +109,7 @@ CSS 也不例外——它是由 W3C(万维网联盟) 中的一个名叫 [CSS Wor
 
 以下是 CSS [`font-family`](/zh-CN/docs/Web/CSS/font-family) 属性的兼容数据表。
 
-{{Compat("css.properties.font-family")}}
+{{Compat}}
 
 ## 下一步
 

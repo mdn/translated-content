@@ -2,6 +2,7 @@
 title: String.prototype.blink()
 slug: Web/JavaScript/Reference/Global_Objects/String/blink
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`blink()`** メソッドは、文字列を点滅させる HTML の {{HTMLElement("blink")}} 要素を生成します。

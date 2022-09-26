@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 original_slug: Web/JavaScript/Reference/Opérateurs/Nullish_coalescing_operator
 ---
+
 {{JSSidebar("Operators")}}
 
 L'**opérateur de coalescence des nuls** (`??`), est un opérateur logique qui renvoie son opérande de droite lorsque son opérande de gauche vaut `{{jsxref("null")}}` ou `{{jsxref("undefined")}}` et qui renvoie son opérande de gauche sinon.

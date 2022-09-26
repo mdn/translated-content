@@ -2,6 +2,7 @@
 title: Headers.set()
 slug: Web/API/Headers/set
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Headers")}} 接口中 **`set()`** 方法在可以在已经声明中的 **`headers`** 对象修改已有的一组键值对或者创建一个新的键值对。
@@ -58,7 +59,7 @@ myHeaders.get('Accept-Encoding'); // Returns 'gzip'
 
 ## Browser compatibility
 
-{{Compat("api.Headers.set")}}
+{{Compat}}
 
 ## See also
 

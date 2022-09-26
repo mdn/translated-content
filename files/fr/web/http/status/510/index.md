@@ -3,6 +3,7 @@ title: 510 Not Extended
 slug: Web/HTTP/Status/510
 translation_of: Web/HTTP/Status/510
 ---
+
 {{HTTPSidebar}}
 
 Le code de statut de réponse HTTP **`510 Not Extended`** est envoyé dans le contexte du «&nbsp;<i lang="en">HTTP Extension Framework</i>&nbsp;», defini dans la [RFC 2774](https://tools.ietf.org/html/rfc2774).

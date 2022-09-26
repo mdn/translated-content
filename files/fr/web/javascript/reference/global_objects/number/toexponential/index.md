@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/toExponential
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/toExponential
 ---
+
 {{JSRef}}
 
 La méthode **`toExponential()`** renvoie une chaîne de caractères, représentant l'objet Number en notation exponentielle.

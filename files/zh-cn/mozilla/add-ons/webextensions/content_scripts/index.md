@@ -2,6 +2,7 @@
 title: Content scripts
 slug: Mozilla/Add-ons/WebExtensions/Content_scripts
 ---
+
 {{AddonSidebar}}
 
 Content script 是你扩展的一部分，运行于一个特定的网页环境（而并不是后台脚本，后台脚本是扩展的一部分，也不是该网页利用 {{HTMLElement("script")}} 加载的一个脚本，{{HTMLElement("script")}} 加载的脚本是网页的一部分）。
@@ -394,7 +395,7 @@ window.addEventListener("message", function(event) {
 </html>
 ```
 
-`这个脚本添加一个全局的属性到全局window`:
+这个脚本添加一个全局的属性到全局 `window`：
 
 ```js
 // main.js
@@ -527,7 +528,7 @@ window.wrappedJSObject.messenger = cloneInto(
   {cloneFunctions: true});
 ```
 
-`现在页面脚本将看到新的含有notify方法的属性`:
+现在页面脚本将看到新的含有 `notify` 方法的属性：
 
 ```js
 window.messenger.notify("Message from the page script!");

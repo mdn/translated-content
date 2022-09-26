@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/AbortSignal
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 L'interface **`AbortSignal`** représente un objet signal qui vous permet de communiquer avec une requête DOM (telle que Fetch) et de l'annuler si nécessaire par un objet {{domxref("AbortController")}}.

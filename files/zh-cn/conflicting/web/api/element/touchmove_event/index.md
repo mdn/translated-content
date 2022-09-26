@@ -3,6 +3,7 @@ title: touchmove
 slug: conflicting/Web/API/Element/touchmove_event
 original_slug: Web/API/Document/touchmove_event
 ---
+
 {{APIRef}}
 
 当触点在触控平面上移动时触发 `touchmove` 事件。

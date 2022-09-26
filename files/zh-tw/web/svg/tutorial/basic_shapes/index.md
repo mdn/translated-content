@@ -3,6 +3,7 @@ title: 基本形状
 slug: Web/SVG/Tutorial/Basic_Shapes
 original_slug: SVG/Tutorial/Basic_Shapes
 ---
+
 {{ PreviousNext("SVG/Tutorial/Positions", "SVG/Tutorial/Paths") }}
 
 下面将介绍一些 SVG 绘图常用的形状命令，通过它们名字，你可以很轻易的看出它们可以画出什么。这里也会给出一些定义位置和尺寸的属性，但不会介绍如何将元素定义得更准确更完善。在这里我们只介绍必须的基本功能，因为它们会被广泛应用在 SVG 文件里。

@@ -2,6 +2,7 @@
 title: dur
 slug: Web/SVG/Attribute/dur
 ---
+
 « [SVG 属性参考主页](/zh-CN/SVG/Attribute)
 
 该属性标识了动画的简单持续时间。

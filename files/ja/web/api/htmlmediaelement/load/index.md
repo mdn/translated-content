@@ -2,6 +2,7 @@
 title: HTMLMediaElement.load()
 slug: Web/API/HTMLMediaElement/load
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLMediaElement")}} の **`load()`** メソッドは、メディア要素をその初期状態にリセットし、再生を開始する準備としてメディアソースを選択してメディアを読み込むプロセスを開始します。

@@ -2,6 +2,7 @@
 title: <input type="datetime-local">
 slug: Web/HTML/Element/Input/datetime-local
 ---
+
 {{HTMLRef("Input_types")}}
 
 {{htmlelement("input")}} 元素的 **`datetime-local`** 类型创建让用户便捷输入日期和时间的输入控件，包括“年”、“月”、“日”，以及“时”和“分”。

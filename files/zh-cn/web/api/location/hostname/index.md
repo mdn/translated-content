@@ -2,6 +2,7 @@
 title: 'Location: hostname'
 slug: Web/API/Location/hostname
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("Location")}}的 **`hostname`** 属性是包含了域名的一段 {{domxref("USVString")}}。

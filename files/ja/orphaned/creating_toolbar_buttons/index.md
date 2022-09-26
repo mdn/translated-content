@@ -3,6 +3,7 @@ title: Creating toolbar buttons
 slug: orphaned/Creating_toolbar_buttons
 original_slug: Creating_toolbar_buttons
 ---
+
 この記事ではツールキットアプリケーション（Firefox、Thunderbird、Nvu など）に [オーバレイ](ja/XUL_Overlays) を使用してツールバーボタンを追加する方法を説明します。[XUL](ja/XUL) と [CSS](ja/CSS) の基礎知識を備えた [拡張機能](ja/Extension) の開発者が対象です。
 
 また、Firefox の拡張機能の作り方の基礎に通じており、[Hello World 拡張機能](ja/Building_an_Extension) を動作させられることも前提です。別のチュートリアルも [利用可能](ja/Custom_Toolbar_Button) です。そちらは全体の過程を最初から見ていく形式です。
@@ -13,7 +14,7 @@ original_slug: Creating_toolbar_buttons
 
 文書をオーバレイするには、その文書の URI を知らなければなりません。よくオーバレイされる文書の URI は [このページの最後](#.E3.82.88.E3.81.8F.E3.82.AA.E3.83.BC.E3.83.90.E3.83.AC.E3.82.A4.E3.81.95.E3.82.8C.E3.82.8B.E3.83.84.E3.83.BC.E3.83.AB.E3.83.90.E3.83.BC.E3.82.92.E6.8C.81.E3.81.A4.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.81.AE.E3.83.AA.E3.82.B9.E3.83.88) にあります。
 
-> **Note:** 注意：
+> **Note:** 
 > _chrome://messenger/content/mailWindowOverlay.xul_
 > にオーバレイする人がいます。これによって mailWindowOverlay.xul が適用されるすべてのウィンドウ（たとえばメインウィンドウやメッセージ表示ウィンドウ）にボタンが現れます。確認してください。
 

@@ -2,6 +2,7 @@
 title: HTMLFormElement
 slug: Web/API/HTMLFormElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 HTMLFormElement 接口可以创建或者修改{{HTMLElement("form")}}对象;它继承了{{domxref("HTMLElement")}}接口的方法和属性。
@@ -177,7 +178,7 @@ If you want to know how to serialize and submit a form using the [`XMLHttpReques
 
 ## Browser compatibility
 
-{{Compat("api.HTMLFormElement")}}
+{{Compat}}
 
 ## See also
 

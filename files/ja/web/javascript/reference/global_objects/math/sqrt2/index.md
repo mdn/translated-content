@@ -2,6 +2,7 @@
 title: Math.SQRT2
 slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
 ---
+
 {{JSRef}}
 
 **`Math.SQRT2`** プロパティは、 2 の平方根、約 1.414 を表します。

@@ -2,6 +2,7 @@
 title: Request.mode
 slug: Web/API/Request/mode
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Request")}} 接口的 **`mode`** 只读属性包含请求的模式（例如：`cors` 、 `no-cors` 、 `cors-with-forced-preflight` 、 `same-origin` 或 `navigate` 。）这用于确定跨域请求是否能得到有效的响应，以及响应的哪些属性是可读的。

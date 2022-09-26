@@ -7,6 +7,7 @@ tags:
   - Règle @
 translation_of: Web/CSS/@font-feature-values
 ---
+
 {{CSSRef}}
 
 La [règle @](/fr/docs/Web/CSS/At-rule) **`@font-feature-values`** permet aux auteurs d'utiliser un nom personnalisé dans une règle utilisant la propriété {{cssxref("font-variant-alternates")}} afin de régler finement les caractéristiques OpenType. Elle permet de simplifier les feuilles de style lorsqu'on utilise plusieurs polices.

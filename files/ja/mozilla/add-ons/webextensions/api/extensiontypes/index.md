@@ -2,6 +2,7 @@
 title: extensionTypes
 slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes
 ---
+
 {{AddonSidebar}}
 
 その他の WebExtension API で使われる共通な型

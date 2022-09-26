@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/rp
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<rp>`** est utilisé pour fournir ce qui fera office de parenthèse aux navigateurs qui ne prennent pas en charge les annotations Ruby.

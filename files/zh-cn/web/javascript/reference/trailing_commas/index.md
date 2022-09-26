@@ -2,6 +2,7 @@
 title: 尾后逗号
 slug: Web/JavaScript/Reference/Trailing_commas
 ---
+
 {{JsSidebar("More")}}
 
 **尾后逗号** （有时叫做“终止逗号”）在向 JavaScript 代码添加元素、参数、属性时十分有用。如果你想要添加新的属性，并且上一行已经使用了尾后逗号，你可以仅仅添加新的一行，而不需要修改上一行。这使得版本控制的代码比较（diff）更加清晰，代码编辑过程中遇到的麻烦更少。

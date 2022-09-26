@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/CSS_Logical_Properties/Sizing
 original_slug: Web/CSS/CSS_Logical_Properties/Dimensionnement
 ---
+
 {{CSSRef}}
 
 Dans ce guide, nous verrons les correspondances entre les propriétés physiques et les propriétés logiques qui peuvent être utilisées afin de dimensionner des éléments au sein d'un document.

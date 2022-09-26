@@ -2,6 +2,7 @@
 title: display
 slug: Web/CSS/display
 ---
+
 {{CSSRef}}
 
 **`display`** 属性可以设置元素的内部和外部显示类型 _display types_。元素的外部显示类型 _outer display types_ 将决定该元素在[流式布局](/zh-CN/docs/Web/CSS/CSS_Flow_Layout)中的表现（[块级或内联元素](/zh-CN/docs/Web/CSS/CSS_Flow_Layout)）；元素的内部显示类型 _inner display types_ 可以控制其子元素的布局（例如：[flow layout](/zh-CN/docs/Web/CSS/CSS_Flow_Layout)，[grid](/zh-CN/docs/Web/CSS/CSS_Grid_Layout) 或 [flex](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout)）。
@@ -146,7 +147,7 @@ display: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.display", 10)}}
+{{Compat}}
 
 ## 参见
 

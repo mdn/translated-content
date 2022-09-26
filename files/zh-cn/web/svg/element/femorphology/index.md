@@ -2,6 +2,7 @@
 title: feMorphology
 slug: Web/SVG/Element/feMorphology
 ---
+
 {{SVGRef}}
 
 该滤镜用来侵蚀或扩张输入的图像。它在增肥或瘦身效果方面特别有用。

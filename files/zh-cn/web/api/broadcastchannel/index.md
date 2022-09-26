@@ -2,6 +2,7 @@
 title: BroadcastChannel
 slug: Web/API/BroadcastChannel
 ---
+
 {{APIRef("Broadcast Channel API")}}
 
 **`BroadcastChannel`** 接口代理了一个命名频道，可以让指定 {{glossary("origin")}} 下的任意 {{glossary("browsing context")}} 来订阅它。它允许同源的不同浏览器窗口，Tab 页，frame 或者 iframe 下的不同文档之间相互通信。通过触发一个 {{event("message")}} 事件，消息可以广播到所有监听了该频道的 `BroadcastChannel` 对象。
@@ -53,7 +54,7 @@ _该接口会从它的父级 {{domxref("EventTarget")}} 继承方法。_
 
 ## 浏览器兼容性
 
-{{Compat("api.BroadcastChannel")}}
+{{Compat}}
 
 ## 另见
 

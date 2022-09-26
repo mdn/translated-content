@@ -3,6 +3,7 @@ title: 传统的布局方法
 slug: Learn/CSS/CSS_layout/Legacy_Layout_Methods
 original_slug: Learn/CSS/CSS_layout/传统的布局方法
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-Column_Layout", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}

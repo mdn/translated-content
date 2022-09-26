@@ -2,6 +2,7 @@
 title: ':not()'
 slug: Web/CSS/:not
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) **`:not()`** 用来匹配不符合一组选择器的元素。由于它的作用是防止特定的元素被选中，它也被称为*反选伪类*（_negation pseudo-class_）。

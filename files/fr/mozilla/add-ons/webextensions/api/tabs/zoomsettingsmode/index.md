@@ -13,6 +13,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/ZoomSettingsMode
 ---
+
 {{AddonSidebar()}}
 
 Définit comment les modifications de zoom sont gérées. Les extensions peuvent transférer cette valeur dans {{WebExtAPIRef("tabs.setZoomSettings()")}} pour contrôler la façon dont le navigateur gère les tentatives de modification des paramètres de zoom pour un onglet. Par défaut à "automatique".

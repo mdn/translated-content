@@ -2,6 +2,7 @@
 title: letter-spacing
 slug: Web/CSS/letter-spacing
 ---
+
 {{CSSRef}}
 
 `CSS` 的 `letter-spacing` 属性用于设置文本字符的间距表现。
@@ -85,7 +86,7 @@ Legible letter-spacing must be determined on a case-by-case basis, as different 
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.letter-spacing")}}
+{{Compat}}
 
 ## 参见
 

@@ -2,6 +2,7 @@
 title: CustomElementRegistry.get()
 slug: Web/API/CustomElementRegistry/get
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
 {{domxref("CustomElementRegistry")}} 的 **`get()`** 方法返回以前定义自定义元素的构造函数。
@@ -46,4 +47,4 @@ let ctor = customElements.get('my-paragraph');
 
 ## 浏览器兼容性
 
-{{Compat("api.CustomElementRegistry.get")}}
+{{Compat}}

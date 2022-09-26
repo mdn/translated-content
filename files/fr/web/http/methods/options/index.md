@@ -4,6 +4,7 @@ slug: Web/HTTP/Methods/OPTIONS
 translation_of: Web/HTTP/Methods/OPTIONS
 original_slug: Web/HTTP/Méthode/OPTIONS
 ---
+
 {{HTTPSidebar}}
 
 La **méthode HTTP `OPTIONS`** est utilisée pour décrire les options de communication pour la ressource ciblée. Le client peut renseigner une URL spécifique pour la méthode OPTIONS, ou une astérisque (\*) pour interroger le serveur dans sa globalité.

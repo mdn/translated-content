@@ -2,6 +2,7 @@
 title: Using the aria-labelledby attribute
 slug: Web/Accessibility/ARIA/Attributes/aria-labelledby
 ---
+
 ### **描述**
 
 [`aria-labelledby`](http://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby)属性用来表明某些元素的 id 是某一对象的标签。它被用来确定控件或控件组与它们标签之间的联系。使用诸如屏幕阅读器等辅助技术的用户通常使用 tabbing 在页面的不同区域间进行导航。如果一个输入元素、控件或控件组没有被分配一个 label 标签，那么屏幕阅读器就无法对其进行阅读。
@@ -20,7 +21,7 @@ slug: Web/Accessibility/ARIA/Attributes/aria-labelledby
 
 ### 对于用户代理和辅助技术的可能影响
 
-当 `aria-labelledby` 和 `aria-label` 都被使用时, 用户代理在生成可访问的名称属性时将为 `aria-labelledby` 分配更高的优先级。
+当 `aria-labelledby` 和 `aria-label` 都被使用时，用户代理在生成可访问的名称属性时将为 `aria-labelledby` 分配更高的优先级。
 
 **注意：** 由于不同的辅助技术对于这一技术的处理可能不同，以上提供的信息尽是诸多可能的一种，而非一般情况。
 

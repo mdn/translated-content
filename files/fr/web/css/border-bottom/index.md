@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-bottom
 ---
+
 {{CSSRef}}
 
 La propriété **`border-bottom`** est une propriété raccourcie qui définit la bordure du côté bas d'un élément.

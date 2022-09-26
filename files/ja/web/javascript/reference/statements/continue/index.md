@@ -2,6 +2,7 @@
 title: continue
 slug: Web/JavaScript/Reference/Statements/continue
 ---
+
 {{jsSidebar("Statements")}}
 
 **`continue` 文**は、現在のループまたはラベル付きループの現在反復処理中の文の実行を終了して、次の反復処理でループの実行を続けます。

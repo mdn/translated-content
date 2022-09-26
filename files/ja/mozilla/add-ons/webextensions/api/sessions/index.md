@@ -2,6 +2,7 @@
 title: sessions
 slug: Mozilla/Add-ons/WebExtensions/API/sessions
 ---
+
 {{AddonSidebar}}
 
 セッション API を使ってブラウザーが動作している間に閉じたタブやウィンドウを一覧、復帰します。
